@@ -1,9 +1,9 @@
 # Bluemix security
-*Last Updated: 8/3/2015*
+*Last Updated: 9/7/2015*
 
 Designed with secure engineering practices, the IBM® Bluemix™ platform has layered security controls across network and infrastructure. IBM Bluemix also provides a suite of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make IBM Bluemix a platform with clear choices for secure application development.
 
-Bluemix ensures security readiness by adhering to security policies that are driven by best practices in IBM for systems, networking, and secure engineering. These policies include practices such as source code scanning, dynamic scanning, threat modeling, and penetration testing. Bluemix follows the IBM Product Security Incident Response Team (PSIRT) process for security incident management. See the IBM Security Vulnerability Management (PSIRT) site for details.
+Bluemix ensures security readiness by adhering to security policies that are driven by best practices in IBM for systems, networking, and secure engineering. These policies include practices such as source code scanning, dynamic scanning, threat modeling, and penetration testing. Bluemix follows the IBM Product Security Incident Response Team (PSIRT) process for security incident management. See the [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) site for details.
 
 Bluemix uses IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and takes full advantage of its security architecture. SoftLayer IaaS provides multiple, overlapping tiers of protection for your applications and data. In addition, Bluemix adds security capabilities at the Platform as a Service layer in different categories: platform, data, and application.
 
@@ -83,18 +83,18 @@ Bluemix builds upon Cloud Foundry to provide a robust foundation for running you
 <dd> Development and production environments are segregated from each other to improve application stability and security.
 </dd>
 
-<dt>Firewalls
+<dt>Firewalls</dt>
 <dd> Firewalls are in place to restrict access to the Bluemix network.</dd>
 
 <dt>Intrusion protection</dt>
 <dd>Bluemix enables intrusion protection to discover threats so that they can be addressed. Intrusion protection policies are enabled on firewalls.
 </dd>
 
-<dt>Secure application container management
+<dt>Secure application container management</dt>
 <dd>Each Bluemix application is isolated and runs in its own container that has specific resource limits for processor, memory, and disk.
 </dd>
 
-<dt>Operating system security hardening
+<dt>Operating system security hardening</dt>
 <dd>IBM administrators perform network and operating system hardening regularly by using tools such as IBM Endpoint Manager.
 </dd>
 
@@ -117,7 +117,7 @@ Bluemix provides a robust operational security environment with the following co
 <dt>User access management</dt>
 <dd>Within Bluemix, Segregation of Duties guidelines are followed to assign granular access privileges to users, and to ensure that users have only the access that is required to perform their jobs according to the principle of least privilege.
 
-Within a Bluemix dedicated environment, assigned administrators can manage roles and permissions for Bluemix user in their organization by using the Admin Console. See Managing your dedicated instance with the Admin Console for details.
+Within a Bluemix dedicated environment, assigned administrators can manage roles and permissions for Bluemix user in their organization by using the Admin Console. See [Managing your dedicated instance with the Admin Console](mngdedicated.html#mngdedicated) for details.
 </dd>
 
 ### Physical security
@@ -165,7 +165,7 @@ The Single Sign On service supports several identity sources where your users' c
 <dd>A user registry with an exchange of SAML tokens that completes the authentication.</dd>
 
 <dt>Cloud Directory</dt>
-</dd>A user registry that is hosted in IBM Cloud.</dd>
+<dd>A user registry that is hosted in IBM Cloud.</dd>
 
 <dt>Social identity sources</dt>
 <dd> The user registries that are maintained by Google, Facebook, and LinkedIn.</dd>
@@ -269,3 +269,8 @@ In addition to users described in these paths, an authorized IBM security operat
  * Management of risks with intrusion protection.
  * Security monitoring with QRadar.
  * For Bluemix Dedicated, making security reports available through the Admin Console.
+
+# rellinks
+## general 
+* [Soflayer Security Compliance](http://www.softlayer.com/security)
+* [Getting started with Single Sign On](../services/SingleSignOn/index.html)
