@@ -2,7 +2,7 @@
 
 # Getting started with IoT Real-Time Insights  {: #getting-started-with-iot-real-time-insights}
 
-IBM&reg; IoT Real-Time Insights enables you to perform analytics on real-time data from your IoT devices to gain insights about their health and the overall state of your operations.
+IBM&reg; IoT Real-Time Insights enables you to perform analytics on real-time data from your IoT devices to gain insights about their health and the overall state of your operations. 
 {: shortdesc}
 
 ## IoT Real-Time Insights overview {: #overview}
