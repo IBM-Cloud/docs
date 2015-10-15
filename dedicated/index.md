@@ -58,7 +58,6 @@ Customer roles:
 <dt>**DevOps focal**</dt>
 <dd>Works with the IBM representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with the IBM representative on the configuration of your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</dd>
 </dl>
-
 IBM roles:
 <dl>
 <dt>**IBM provisioning manager**</dt>
