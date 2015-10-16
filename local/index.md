@@ -46,7 +46,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	2. Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.
 4. After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For each role, there is a corresponding IBM representative.<br />
 <br />
-Customer roles:
+<p>Customer roles:</p>
 <dl>
 <dt>**Procurement focal**</dt>
 <dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Local environment, including identifying the right people in your organization to work on any aspect of the project. This role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the local instance.</dd>
@@ -57,7 +57,7 @@ Customer roles:
 <dt>**DevOps focal**</dt>
 <dd>Works with the IBM representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with the IBM representative on the configuration of your {{site.data.keyword.Bluemix_notm}} Local instance.</dd>
 </dl>
-IBM roles:
+<p>IBM roles:</p>
 <dl>
 <dt>**IBM provisioning manager**</dt>
 <dd>Works with the customer procurement focal to establish the customer environment.</dd>
