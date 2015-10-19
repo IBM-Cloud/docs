@@ -1,9 +1,12 @@
-{:new_window: target="_blank"}
+{:new_window: target="_blank"} {:shortdesc: .shortdesc}
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
 *Last updated: 15 October 2015*
 
-{{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
+{{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
+{.shortdesc}
+
+IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
 
 {{site.data.keyword.Bluemix_notm}} Local includes a private, syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public.
 
@@ -11,7 +14,7 @@
 
 Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver updates to all local deployments, so that you always have an up-to-date, stable, and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. The traffic on this tunnel is Urban Code Deployer automation for serving and maintaining the platform, compute resources, and services for your instance.
 
-![Bluemix Local overview](images/bluemixlocalarchitecture.png)
+![{{site.data.keyword.Bluemix_notm}} Local overview](images/bluemixlocalarchitecture.png "Bluemix Local overview")
 
 *Figure 1. {{site.data.keyword.Bluemix_notm}} Local detailed overview*
 
@@ -39,13 +42,16 @@ IBM provides you access to {{site.data.keyword.Bluemix_notm}} Local by using a p
 
 To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
-1. Review the [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](index.html#localinfra) for setting up your local instance.
-2. Contact your IBM designated account representative or contact [{{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window} to get started.
-3. Establish your {{site.data.keyword.Bluemix_notm}} Local agreement with IBM that includes milestone dates for delivery.
-	1. Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.
-	2. Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.
-4. After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For each role, there is a corresponding IBM representative.<br />
-<br />
+<ol>
+<li>Review the [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](index.html#localinfra) for setting up your local instance.</li>
+<li>Contact your IBM designated account representative or contact [{{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window} to get started.</li>
+<li>Establish your {{site.data.keyword.Bluemix_notm}} Local agreement with IBM that includes milestone dates for delivery.
+<ol type="a">
+	<li>Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
+	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.</li>
+	</ol>
+	</li>
+<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For each role, there is a corresponding IBM representative.<br />
 <p>Customer roles:</p>
 <dl>
 <dt>**Procurement focal**</dt>
@@ -68,10 +74,15 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <dt>**IBM DevOps focal**</dt>
 <dd>Works with the customer DevOps focal on installation and ongoing maintenance of the deployment topology. This role works with the customer to plan and perform the updates needed for the platform and services.</dd>
 </dl>
-5. You provide the hardware, and IBM helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Local instance. For more information about infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](index.html#localinfra).
-	1. IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing.
-	2. IBM sets up a syndicated catalog in your local environment to show your local services and many of the public {{site.data.keyword.Bluemix_notm}} services.
-	3. You validate network and firewall configuration and the LDAP endpoint and access.
+</li>
+<li>You provide the hardware, and IBM helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Local instance. For more information about infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](index.html#localinfra).
+<ol type="a">
+	<li>IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing.</li>
+	<li>IBM sets up a syndicated catalog in your local environment to show your local services and many of the public {{site.data.keyword.Bluemix_notm}} services.</li>
+	<li>You validate network and firewall configuration and the LDAP endpoint and access.</li>
+	</ol>
+</li>
+</ol>
 	
 ##{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
 {: #localinfra}
@@ -181,3 +192,4 @@ Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unava
 </dl>
 
 To set up maintenance of your local instance, work with your IBM designated account representative to identify an agreed upon window for the standard maintenance.
+   
