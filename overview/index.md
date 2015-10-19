@@ -79,7 +79,7 @@ All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the foll
 
 IBM uses relay technology to securely monitor and maintain your environment, so that you can keep focus on the business. Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver updates, so that you always have an up-to-date, stable, and secure system. Relay achieves connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine. Through this tunnel, IBM serves and maintains the platform, compute resources, and services for your instance. See [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local).
 
-![{{site.data.keyword.Bluemix_notm}} Local](images/localarch.png)
+![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
 
 *Figure 4. {{site.data.keyword.Bluemix_notm}} Local*
 
@@ -228,12 +228,20 @@ A buildpack is a collection of scripts that prepare your code for execution on t
 If you do not specify a buildpack when you deploy your app to {{site.data.keyword.Bluemix_notm}}, built-in buildpacks are used by default.
 
 <dl class="dl"><dt class="dt dlterm">Built-in {{site.data.keyword.IBM_notm}} buildpacks</dt>
-<dd class="dd"><div class="p">The following shows the list of built-in buildpacks that
-are created by {{site.data.keyword.IBM_notm}}. 
-<ul>
-<li>Liberty for Java</li>
-<li>Node.js</li>
-</ul>
+<dd class="dd"><div class="p">The following table shows the list of built-in buildpacks that
+are created by {{site.data.keyword.IBM_notm}}. <span class="ph"></span><div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" rules="all" frame="border" border="1"><caption><span class="tablecap">Table 2. <span class="keyword">Bluemix</span> built-in
+buildpacks</span></caption><thead class="thead" align="left"><tr class="row" valign="bottom"><th class="entry thleft thbot" valign="bottom" id="d68e443">Name</th>
+<th class="entry thleft thbot" valign="bottom" id="d68e445">Git repository URL</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry" valign="top" headers="d68e443 ">Liberty for Java</td>
+<td class="entry" valign="top" headers="d68e445 "><a class="xref" href="https://github.rtp.raleigh.ibm.com/bluemix/liberty-buildpack.git" target="_blank" title="(Opens in a new tab or window)">https://github.rtp.raleigh.ibm.com/bluemix/liberty-buildpack.git</a><span class="ph"</span></td>
+</tr>
+<tr class="row"><td class="entry" valign="top" headers="d68e443 ">Node.js</td>
+<td class="entry" valign="top" headers="d68e445 "><a class="xref" href="https://github.rtp.raleigh.ibm.com/oeruntime/ibm-buildpack-nodejs.git" target="_blank" title="(Opens in a new tab or window)">https://github.rtp.raleigh.ibm.com/oeruntime/ibm-buildpack-nodejs.git</a><span class="ph"></span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </dd>
@@ -327,3 +335,5 @@ The following table lists the supported national languages and language codes fo
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, an {{site.data.keyword.IBM_notm}} Company](http://www.softlayer.com/)
+
+
