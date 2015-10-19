@@ -79,7 +79,7 @@ All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the foll
 
 IBM uses relay technology to securely monitor and maintain your environment, so that you can keep focus on the business. Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver updates, so that you always have an up-to-date, stable, and secure system. Relay achieves connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine. Through this tunnel, IBM serves and maintains the platform, compute resources, and services for your instance. See [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local).
 
-![{{site.data.keyword.Bluemix_notm}} Local](images/local_arch.png)
+![{{site.data.keyword.Bluemix_notm}} Local](images/localarch.png)
 
 *Figure 4. {{site.data.keyword.Bluemix_notm}} Local*
 

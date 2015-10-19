@@ -11,7 +11,7 @@
 
 Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver updates to all local deployments, so that you always have an up-to-date, stable, and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. The traffic on this tunnel is Urban Code Deployer automation for serving and maintaining the platform, compute resources, and services for your instance.
 
-![Bluemix Local overview](images/bluemix_localarchitecture.png)
+![Bluemix Local overview](images/bluemixlocalarchitecture.png)
 
 *Figure 1. {{site.data.keyword.Bluemix_notm}} Local detailed overview*
 

@@ -10,7 +10,7 @@
 
 {{site.data.keyword.Bluemix_notm}} Dedicated is built on SoftLayer so that you have the highest performing cloud infrastructure available to you. Each data center has 24 hour, 7 days a week security, and rigorous controls. You and IBM access your {{site.data.keyword.Bluemix_notm}} dedicated instance through a VPN tunnel and a private VLAN.
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detailed_dedicated.png)
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png)
 
 *Figure 1. Detailed {{site.data.keyword.Bluemix_notm}} Dedicated diagram*
 
