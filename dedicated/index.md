@@ -1,16 +1,17 @@
-{:new_window: target="_blank"}
+{:new_window: target="_blank"} {:shortdesc: .shortdesc}
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
 *Last updated: 15 October 2015*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}—in your own dedicated SoftLayer environment that’s securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the dedicated services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public.
 
 {{site.data.keyword.Bluemix_notm}} Dedicated is built on SoftLayer so that you have the highest performing cloud infrastructure available to you. Each data center has 24 hour, 7 days a week security, and rigorous controls. You and IBM access your {{site.data.keyword.Bluemix_notm}} dedicated instance through a VPN tunnel and a private VLAN.
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png)
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
 *Figure 1. Detailed {{site.data.keyword.Bluemix_notm}} Dedicated diagram*
 
@@ -40,13 +41,16 @@ IBM provides you access to {{site.data.keyword.Bluemix_notm}} Dedicated by using
 
 To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
-1. Contact your IBM designated account representative or contact [{{site.data.keyword.Bluemix_notm}} sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs){: new_window} to get started.
-2. The monthly recurring fee is based on the dedicated services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.
-	1. Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
-	The monthly recurring fee is based on the dedicated services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.
-	2. Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
-3. You select the [SoftLayer data center location](https://www.softlayer.com/data-centers){: new_window} for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For each role, there is a corresponding IBM representative.<br />
-<br />
+<ol>
+<li>Contact your IBM designated account representative or contact [{{site.data.keyword.Bluemix_notm}} sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs){: new_window} to get started.</li>
+<li>The monthly recurring fee is based on the dedicated services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.
+<ol type="a">
+	<li>Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
+	The monthly recurring fee is based on the dedicated services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
+	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</li>
+	</ol>
+	</li>
+<li>You select the [SoftLayer data center location](https://www.softlayer.com/data-centers){: new_window} for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For each role, there is a corresponding IBM representative.<br />
 <p>Customer roles:</p>
 <dl>
 <dt>**Procurement focal**</dt>
@@ -69,14 +73,22 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <dt>**IBM DevOps focal**</dt>
 <dd>Works with the customer DevOps focal on installation and ongoing maintenance of the deployment topology. This role works with the customer to plan and perform the updates needed for the platform and services.</dd>
 </dl>
-4. Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
-	1. IBM installs monitoring and security infrastructure for the dedicated instance.
-	2. IBM installs the single tenant dedicated services that you selected.
-	3. You provide network configuration and endpoints for things such as IP addresses or firewalls and access to your LDAP for integration into {{site.data.keyword.Bluemix_notm}}.
-5. Identify and assign roles for your administrative team of the environment.
-	1. IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing. 
-	2. IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services and many of the public {{site.data.keyword.Bluemix_notm}} services.
-	3. You validate network and firewall configuration and the LDAP endpoint and access.
+</li>
+<li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
+<ol type="a">
+	<li>IBM installs monitoring and security infrastructure for the dedicated instance.</li>
+	<li>IBM installs the single tenant dedicated services that you selected.</li>
+	<li>You provide network configuration and endpoints for things such as IP addresses or firewalls and access to your LDAP for integration into {{site.data.keyword.Bluemix_notm}}.</li>
+</ol>
+</li>
+<li>Identify and assign roles for your administrative team of the environment.
+<ol type="a">
+	<li>IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing. </li>
+	<li>IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services and many of the public {{site.data.keyword.Bluemix_notm}} services.</li>
+	<li>You validate network and firewall configuration and the LDAP endpoint and access.</li>
+</ol>
+</li>
+</ol>
 
 ##Maintaining your dedicated instance
 {: #maintaindedicated}
