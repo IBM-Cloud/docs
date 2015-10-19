@@ -75,7 +75,7 @@ If you created a new IoT Foundation service, you must now create API keys to con
     - Authentication Token
   4. Click ![Create icon.](images/create.png "Create icon") to create the data source and connect to it.
 4. Start using IoT Real-Time Insights.  
-You can now start using IoT Real-Time Insights by adding users, connecting your devices, configure dashboards to view relevant device data, and set up alerts.
+You can now start using IoT Real-Time Insights by adding users, connecting your devices, configuring dashboards to view relevant device data, and setting up alerts.
 
 
 ># Related Links {:class="linklist"}
