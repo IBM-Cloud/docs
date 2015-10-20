@@ -55,10 +55,10 @@ dates. If you approve, the update is applied during the scheduled update window.
 notification when the update deployment starts and ends.</li>
 </ol>
 </li>
-<li>To import your scheduled updates to a calendar app, complete the following steps:
+<li>To import your scheduled updates to a calendar app of your choice, complete the following steps:
 <ol type="a">
 <li>Open your calendar app.</li>
-<li>Import the updates calendar using the Calendar URL.</li>
+<li>Import the updates calendar using the **Calendar URL** listed on the System Information page. Or, download the calendar file by clicking the Calendar URL, and then import to your calendar app using the `.ics` file</li>
 <li>Enter your credentials.</li>
 <li>View your scheduled updates.</li>
 </ol>
