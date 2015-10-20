@@ -58,7 +58,7 @@ notification when the update deployment starts and ends.</li>
 <li>To import your scheduled updates to a calendar app of your choice, complete the following steps:
 <ol type="a">
 <li>Open your calendar app.</li>
-<li>Import the updates calendar using the **Calendar URL** listed on the System Information page. Or, download the calendar file by clicking the Calendar URL, and then import to your calendar app using the `.ics` file</li>
+<li>Import the updates calendar by pasting the **Calendar URL** listed on the System Information page in your app. Or, download the calendar file by clicking the Calendar URL, and then import it to your calendar app using the `.ics` file.</li>
 <li>Enter your credentials.</li>
 <li>View your scheduled updates.</li>
 </ol>
