@@ -228,20 +228,12 @@ A buildpack is a collection of scripts that prepare your code for execution on t
 If you do not specify a buildpack when you deploy your app to {{site.data.keyword.Bluemix_notm}}, built-in buildpacks are used by default.
 
 <dl class="dl"><dt class="dt dlterm">Built-in {{site.data.keyword.IBM_notm}} buildpacks</dt>
-<dd class="dd"><div class="p">The following table shows the list of built-in buildpacks that
-are created by {{site.data.keyword.IBM_notm}}. <span class="ph"></span><div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" rules="all" frame="border" border="1"><caption><span class="tablecap">Table 2. <span class="keyword">Bluemix</span> built-in
-buildpacks</span></caption><thead class="thead" align="left"><tr class="row" valign="bottom"><th class="entry thleft thbot" valign="bottom" id="d68e443">Name</th>
-<th class="entry thleft thbot" valign="bottom" id="d68e445">Git repository URL</th>
-</tr>
-</thead>
-<tbody class="tbody"><tr class="row"><td class="entry" valign="top" headers="d68e443 ">Liberty for Java</td>
-<td class="entry" valign="top" headers="d68e445 "><a class="xref" href="https://github.rtp.raleigh.ibm.com/bluemix/liberty-buildpack.git" target="_blank" title="(Opens in a new tab or window)">https://github.rtp.raleigh.ibm.com/bluemix/liberty-buildpack.git</a><span class="ph"</span></td>
-</tr>
-<tr class="row"><td class="entry" valign="top" headers="d68e443 ">Node.js</td>
-<td class="entry" valign="top" headers="d68e445 "><a class="xref" href="https://github.rtp.raleigh.ibm.com/oeruntime/ibm-buildpack-nodejs.git" target="_blank" title="(Opens in a new tab or window)">https://github.rtp.raleigh.ibm.com/oeruntime/ibm-buildpack-nodejs.git</a><span class="ph"></span></td>
-</tr>
-</tbody>
-</table>
+<dd class="dd"><div class="p">The following list is the built-in buildpacks that
+are created by {{site.data.keyword.IBM_notm}}. 
+<ul>
+<li>Liberty for Java</li>
+<li>Node.js</li>
+</ol>
 </div>
 </div>
 </dd>
