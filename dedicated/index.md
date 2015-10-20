@@ -1,4 +1,6 @@
-{:new_window: target="_blank"} {:shortdesc: .shortdesc}
+{:new_window: target="_blank"} 
+{:shortdesc: .shortdesc}
+
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
