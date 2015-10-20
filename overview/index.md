@@ -233,7 +233,7 @@ are created by {{site.data.keyword.IBM_notm}}.
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
-</ol>
+</ul>
 </div>
 </div>
 </dd>
