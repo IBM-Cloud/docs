@@ -147,7 +147,7 @@ Pricing varies depending on the chosen plan. For more pricing information, refer
 >
 ># Related Links {:class="linklist"}
 >## Tutorials and Samples {:id="samples"}
->* [Bluemix Object Storage Community](https://www.ibm.com/developerworks/community/blogs/1b48459f-4091-43cb-bca4-37863606d989/?lang=en)
+>* [Bluemix Object Storage Community](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=1b48459f-4091-43cb-bca4-37863606d989)
 >
 ># Related Links {:class="linklist"}
 >## Compatible Runtimes {:id="buildpacks"}
