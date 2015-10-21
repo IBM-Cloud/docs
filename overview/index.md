@@ -228,12 +228,15 @@ A buildpack is a collection of scripts that prepare your code for execution on t
 If you do not specify a buildpack when you deploy your app to {{site.data.keyword.Bluemix_notm}}, built-in buildpacks are used by default.
 
 <dl class="dl"><dt class="dt dlterm">Built-in {{site.data.keyword.IBM_notm}} buildpacks</dt>
-<dd class="dd"><div class="p">The following list is the built-in buildpacks that
+<dd class="dd"><div class="p">
+<!-- begin PRODUCTION ONLY -->
+The following list is the built-in buildpacks that
 are created by {{site.data.keyword.IBM_notm}}. 
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
 </ul>
+<!-- end PRODUCTION ONLY -->
 </div>
 </div>
 </dd>
