@@ -153,10 +153,12 @@ If you are using the Eclipse tools, you must connect to the {{site.data.keyword.
 
 A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} provides the following regions and region prefixes. 
 
+<!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
+
 | **Region name** | **Region prefix** | **cf API endpoint** | **UI console** |       
 |-----------------|-------------------|---------------------|----------------|
-| US South region | us-south | api.stage1.ng.{{site.data.keyword.Bluemix_notm}}.net | console.stage1.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| Europe United Kingdom region | eu-gb | api.stage1.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.stage1.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
+| US South region | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
+| Europe United Kingdom region | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
 
 *Table 1. {{site.data.keyword.Bluemix_notm}} region list*
 
@@ -330,5 +332,3 @@ The following table lists the supported national languages and language codes fo
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, an {{site.data.keyword.IBM_notm}} Company](http://www.softlayer.com/)
-
-
