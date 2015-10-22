@@ -21,7 +21,7 @@ The probabilistic matching approach can be used to improve the accuracy of suspe
 * Score with the POST /score API:  Assigns scores to records and is similar to the POST /compare API but without the match type.
 * Search with the POST /search API that can return both match type and score: Looks across your persisted entity records by name, address, phone number, or other attributes. Returns search results that are close matches, each one ranked by a matching score. Your data is from your app, and you bind your app to the service. Then, your app uses the API to persist your entity records into the service, where the searches are run. You must format your request according to the JSON schema that is defined in the Swagger API documentation.
 
-Refer to the [Swagger API documentation](../../api/content/api/probabilisticmatch/rest-api/index.html), where you can see the model schema that you must use for your data. 
+Refer to the [Swagger API documentation](https://www.ng.bluemix.net/docs/api/content/api/probabilisticmatch/rest-api/index.html), where you can see the model schema that you must use for your data. 
 
 ### Supported runtimes
 
@@ -37,7 +37,7 @@ The IBM Probabilistic Match service supports the IBM Bluemix runtime environment
 
 2. On your local system, embed the APIs into your app. If you want to use sample code as a starting point, download it and review the readme file for instructions.
    1. Download the code for your app to your local development system.
-   2. Embed the API calls into your app, either by starting with the sample code or by referring to the [Swagger API documentation](../../api/content/api/probabilisticmatch/rest-api/index.html). Swagger helps construct your API calls and related JSON. Keep in mind that each app is unique in terms of which API calls you use to meet your needs. 
+   2. Embed the API calls into your app, either by starting with the sample code or by referring to the [Swagger API documentation](https://www.ng.bluemix.net/docs/api/content/api/probabilisticmatch/rest-api/index.html). Swagger helps construct your API calls and related JSON. Keep in mind that each app is unique in terms of which API calls you use to meet your needs. 
         1. To get started, you can index records or only compare and score records:
             * Index your data, by using the PUT /person or /organization APIs. 
             * Only compare and score records with the POST /compare API and POST /score API, by using a list of records without initially indexing your data. Skip the next two steps.
@@ -176,7 +176,7 @@ searchPerson: POST    https://pme.mybluemix.net/mdmcloud/pme/search/person
 >
 ># Related Links {:class="linklist"}
 >## API REFERENCE {:id="api"}
->* [REST API for IBM Probabilistic Match](../../api/content/api/probabilisticmatch/rest-api/index.html)
+>* [REST API for IBM Probabilistic Match](https://www.ng.bluemix.net/docs/api/content/api/probabilisticmatch/rest-api/index.html)
 >
 ># Related Links {:class="linklist"}
 >## COMPATIBLE RUNTIMES {:id="buildpacks"}
