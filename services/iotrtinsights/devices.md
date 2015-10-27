@@ -16,12 +16,13 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
 2. Configure your device in IoT Real-Time Insights.  
   1. Log in to the IoT Real-Time Insights console as an administrator user.
   9. Go to **Devices > Browse devices** and verify that your newly added device is listed.
+  > **Tip:** The devices list is refreshed from you data source once per minute. Click **Refresh** to update the devices list right away.
   3. Go to **Devices > Manage Schemas** and click **Add new message schema**.  
   4. Enter a name for the message schema, for example:  
   `New message schema`.
   5. Click **Link new data source** and select the data source and device type that corresponds to your IoT Foundation instance and device. Optionally, enter an event name to collect data for that event only, or leave the `+` wild card to collect all events. More information about how to identify event types for your device is [here](#identify-datapoints "Identify datapoints.").
-  6. Add one or more data points that you want to show up in the device dashboards.  
-    You can select data points from a connected device, or add data points manually.  
+  6. Add one or more data points that you want to include in the device dashboards.  
+    You can select data points from a connected device, or add data points manually. The available data points are defined in the payload of the messages that are sent by a device. For information about the IoT Foundation payload format, see the [Message Payload](https://docs.internetofthings.ibmcloud.com/messaging/payload.html "Message Payload.") topic in the IoT Foundation documentation.   
   <dl>
   <dt>Select from connected device</dt>
   <dd>
@@ -53,8 +54,7 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
     </dd>
   </dl>
    8. Click ![Create icon.](images/create.png "Create icon") to create the message schema.
-   9. Go to **Devices > Browse devices** and click your newly added device to  
-  verify that real-time device data is displayed and that the data points are correctly mapped.
+   9. Go to **Devices > Browse devices** and click your newly added device to verify that real-time device data is displayed and that the data points are correctly mapped.
 
 ## Identifying data points and events in the IoT Foundation dashboard. {: #identify-datapoints}
 The data points and event types for a device can be found in the IoT Foundation dashboard.
