@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 20 October 2015*
+*Last updated: 28 October 2015*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}—in your own dedicated SoftLayer environment that’s securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -120,3 +120,30 @@ Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unava
 </dl>
 
 To set up maintenance of your dedicated instance, work with your IBM designated account representative to identify an agreed up on window for the standard maintenance.
+
+##Restoring your dedicated instance
+{: #restorededicated}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated settings and configurations are backed up regularly to guard against any unplanned outages in the environment.
+
+As part of the backup of your data, IBM completes the following tasks:
+
+<ul>
+<li>Encrypts all backup copies and manages encryption keys</li>
+<li>Monitors and manages backup activity</li>
+<li>Moves a copy of your encrypted backup data offsite to a selected vault location once daily</li>
+<li>Restores the requested data</li>
+<li>Retains inactive versions of backed up flat files for 30 days</li>
+<li>Performs administration, tuning, optimization, planning, maintenance, and operations management for backup and restore</li>
+<li>Provides and installs additional infrastructure capacity for backup and restore, as required and as determined by IBM</li>
+<li>Manages scheduling conflicts between backup and fix management</li>
+</ul>
+
+In the event that your dedicated instance needs to be restored due to an outage, complete the following steps to restore your dedicated instance:
+
+1. Open a request to restore data from backup media in a support ticket. For more information, see [Contacting support for Bluemix Dedicated](../troubleshoot/getting_customer_support.html#bluemix_support).
+2. Provide all logical database administration and physical database administration, excluding backup and restore, in your support ticket request.
+
+# rellinks
+## general 
+* [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
