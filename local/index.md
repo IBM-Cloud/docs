@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 20 October 2015*
+*Last updated: 28 October 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
 {:shortdesc}
@@ -194,4 +194,30 @@ Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unava
 </dl>
 
 To set up maintenance of your local instance, work with your IBM designated account representative to identify an agreed upon window for the standard maintenance.
+
+##Restoring your local instance
+{: #restorelocal}
+
+{{site.data.keyword.Bluemix_notm}} Local settings and configurations are backed up regularly to guard against any unplanned outages in the environment.
+
+As part of the backup of your data, IBM completes the following tasks:
+
+<ul>
+<li>Encrypts all backup copies and manages encryption keys</li>
+<li>Monitors and manages backup activity</li>
+<li>Moves a copy of your encrypted backup data offsite to a selected vault location once daily</li>
+<li>Restores the requested data</li>
+<li>Retains inactive versions of backed up flat files for 30 days</li>
+<li>Performs administration, tuning, optimization, planning, maintenance, and operations management for backup and restore</li>
+<li>Provides and installs additional infrastructure capacity for backup and restore, as required and as determined by IBM</li>
+<li>Manages scheduling conflicts between backup and fix management</li>
+</ul>
+
+In the event that your local instance needs to be restored due to an outage, complete the following steps to restore your local instance:
+
+1. Open a request to restore data from backup media in a support ticket. For more information, see [Contacting support for Bluemix Local](../troubleshoot/getting_customer_support.html#bluemix_support).
+2. Provide all logical database administration and physical database administration, excluding backup and restore, in your support ticket request.
    
+# rellinks
+## general 
+* [Discover: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
