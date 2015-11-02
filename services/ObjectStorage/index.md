@@ -2,7 +2,7 @@
 
 IBM® Object Storage for Bluemix™ provides you with access to a fully provisioned Swift Object Storage account to manage your data. Swift provides a fully distributed, API-accessible storage platform. You can use it directly in your applications or for backups, making it ideal for cost effective, scale-out storage.
 
-IBM Object Storage for Bluemix uses OpenStack Identity (Keystone) v3 for authentication and can be accessed directly by using OpenStack Object Storage (Swift) API v1 calls. IBM Object Storage can be bound to a Bluemix application or accessed from outside a Bluemix application. IBM Object Storage for Bluemix creates a public cloud project (tenant) and Swift account for your Bluemix account. All public cloud projects for your Bluemix account are contained within a single OpenStack domain that is unique to your account. OpenStack domains provide an added layer of privacy for securing your data.
+IBM Object Storage for Bluemix uses OpenStack Identity (Keystone) for authentication and can be accessed directly by using OpenStack Object Storage (Swift) API v1 calls. IBM Object Storage can be bound to a Bluemix application or accessed from outside a Bluemix application. IBM Object Storage for Bluemix creates a public cloud project (tenant) and Swift account for your Bluemix account. All public cloud projects for your Bluemix account are contained within a single OpenStack domain that is unique to your account. OpenStack domains provide an added layer of privacy for securing your data.
 
 **Note:** Provider side encryption is not provided. It is the responsibility of the client application to encrypt data before uploading.
 
