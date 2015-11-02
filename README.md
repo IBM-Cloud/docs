@@ -1,7 +1,7 @@
 # docs
 IBM Bluemix product documentation.
 
-The docs repo is for the product content for IBM Bluemix. The Bluemix *production* doc app builds from this location for all regions.
+The docs repo is for the product content for IBM Bluemix that is authored in Markdown. The Bluemix *production* doc app builds all Markdown source from this location for all regions.
 
 Each directory in the docs repo must synch with the overall architecture of the Bluemix doc app.
 
