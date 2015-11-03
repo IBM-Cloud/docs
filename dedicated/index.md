@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 29 October 2015*
+*Last updated: 3 November 2015*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}—in your own dedicated SoftLayer environment that’s securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -52,8 +52,8 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</li>
 	</ol>
 	</li>
-<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For each role, there is a corresponding IBM representative.<br />
-<p>Customer roles:</p>
+<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running.<br />
+<br />
 <dl>
 <dt>**Procurement focal**</dt>
 <dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Dedicated environment, including identifying the right people in your organization to work on any aspect of the project. This role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the dedicated instance.</dd>
@@ -63,17 +63,6 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <dd>Works with the IBM representative on the network plans for the {{site.data.keyword.Bluemix_notm}} deployment. This role provides the requirements to the IBM representative and works together on an implementation plan. At the end of the installation and verification phase, this role will "sign-off" that the network configuration is in compliance with corporate standards.</dd>
 <dt>**DevOps focal**</dt>
 <dd>Works with the IBM representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with the IBM representative on the configuration of your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</dd>
-</dl>
-<p>IBM roles:</p>
-<dl>
-<dt>**IBM provisioning manager**</dt>
-<dd>Works with the customer procurement focal to establish the customer environment.</dd>
-<dt>**IBM compliance consultant**</dt>
-<dd>Works with the customer compliance officer to select a topology and deployment option that meets your security requirements.</dd>
-<dt>**IBM network specialist**</dt>
-<dd>Works with the customer network specialist to establish the network plans for the deployment. This role works with the customer to collect requirements, and create an implementation plan. This role also performs automated tests to verify the physical result of the implementation plan.</dd>	
-<dt>**IBM DevOps focal**</dt>
-<dd>Works with the customer DevOps focal on installation and ongoing maintenance of the deployment topology. This role works with the customer to plan and perform the updates needed for the platform and services.</dd>
 </dl>
 </li>
 <li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
