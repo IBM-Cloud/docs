@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 29 October 2015*
+*Last updated: 3 November 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
 {:shortdesc}
@@ -53,8 +53,8 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.</li>
 	</ol>
 	</li>
-<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For each role, there is a corresponding IBM representative.<br />
-<p>Customer roles:</p>
+<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running.<br />
+<br />
 <dl>
 <dt>**Procurement focal**</dt>
 <dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Local environment, including identifying the right people in your organization to work on any aspect of the project. This role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the local instance.</dd>
@@ -64,17 +64,6 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <dd>Works with the IBM representative on the network plans for the {{site.data.keyword.Bluemix_notm}} deployment. This role provides the requirements to the IBM representative and works together on an implementation plan. At the end of the installation and verification phase, this role will "sign-off" that the network configuration is in compliance with corporate standards.</dd>
 <dt>**DevOps focal**</dt>
 <dd>Works with the IBM representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with the IBM representative on the configuration of your {{site.data.keyword.Bluemix_notm}} Local instance.</dd>
-</dl>
-<p>IBM roles:</p>
-<dl>
-<dt>**IBM provisioning manager**</dt>
-<dd>Works with the customer procurement focal to establish the customer environment.</dd>
-<dt>**IBM compliance consultant**</dt>
-<dd>Works with the customer compliance officer to select a topology and deployment option that meets your security requirements.</dd>
-<dt>**IBM network specialist**</dt>
-<dd>Works with the customer network specialist to establish the network plans for the deployment. This role works with the customer to collect requirements, and create an implementation plan. This role also performs automated tests to verify the physical result of the implementation plan.</dd>	
-<dt>**IBM DevOps focal**</dt>
-<dd>Works with the customer DevOps focal on installation and ongoing maintenance of the deployment topology. This role works with the customer to plan and perform the updates needed for the platform and services.</dd>
 </dl>
 </li>
 <li>You provide the hardware, and IBM helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Local instance. For more information about infrastructure requirements, see <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.
