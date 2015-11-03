@@ -5,9 +5,22 @@ The docs repo is for the product content for IBM Bluemix that is authored in Mar
 
 Each directory in the docs repo must synch with the overall architecture of the Bluemix doc app.
 
-**To suggest changes or updates:** fork the project, make your edits, and then create a pull request.
+##How to suggest changes or updates to Bluemix documentation
 
-Authoring Bluemix content in Markdown
+All you need is a GitHub ID, and you can suggest edits and changes to Bluemix docs. A Bluemix team member will review any pull requests, and merge all or parts of your suggested changes as quickly as possible.
+To make your changes:
+
+    1. Fork the project or create a branch right from the repository.
+    2. Edit files.
+    3. When your changes are complete, send a pull request from your branch with your changes.
+    4. Wait for a Bluemix team member to review your changes and merge all or parts of your suggested changes
+    5. After you are notified of your changes, tidy up your branches using the delete button in the pull request or on the branches page.
+
+For more detailed information on how to contribute content to Bluemix documentation, see the following flow:
+https://help.github.com/articles/github-flow-in-the-browser/
+
+
+##Authoring Bluemix content in Markdown
 ===============
 
 Purpose
