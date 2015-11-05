@@ -4,7 +4,7 @@
 # Glossary terms for {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
 
-*Last updated: 28 October 2015*
+*Last updated: 5 November 2015*
 
 This glossary provides terms and definitions for {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -16,7 +16,7 @@ The following cross-references are used in this glossary:
 
 For other terms and definitions, see the [IBM Terminology website](http://www.ibm.com/software/globalization/terminology/){: new_window} (Opens in a new window).
 
-[A](#gloss_A) [B](#gloss_B) [C](#gloss_C) [D](#gloss_D) [E](#gloss_E) [F](#gloss_F) [G](#gloss_G) [H](#gloss_H) [I](#gloss_I) [J](#gloss_J) [L](#gloss_L) [M](#gloss_M) [O](#gloss_O) [P](#gloss_P) [R](#gloss_R) [S](#gloss_S) [T](#gloss_T) [U](#gloss_U) [V](#gloss_V) [W](#gloss_W) 
+[A](#gloss_A) [B](#gloss_B) [C](#gloss_C) [D](#gloss_D) [E](#gloss_E) [F](#gloss_F) [G](#gloss_G) [H](#gloss_H) [I](#gloss_I) [J](#gloss_J) [L](#gloss_L) [M](#gloss_M) [N](#gloss_N) [O](#gloss_O) [P](#gloss_P) [R](#gloss_R) [S](#gloss_S) [T](#gloss_T) [U](#gloss_U) [V](#gloss_V) [W](#gloss_W) 
 
 ## A
 {: #gloss_A}
@@ -58,8 +58,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dt class="dt dlterm"><a name="gloss_A__x7344035"><!-- --></a>auto-complete</dt>
 <dd class="dd">See <a class="xref" href="#gloss_C__x7344030">code completion</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7494379"><!-- --></a>auto-deploy</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">An automated process that retrieves and packages build output, and then moves that output to another location so that users can run or test it.</li>
-<li class="li">To automatically retrieve and package build output, then move that output to another location for users to run or test it.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">To automatically retrieve and package build output, then move that output to another location for users to run or test it.</li>
+<li class="li">An automated process that retrieves and packages build output, and then moves that output to another location so that users can run or test it.</li>
 </ol>
 </dd>
 </dl>
@@ -69,6 +69,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
   
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_B__x2315215"><!-- --></a>backlog</dt>
 <dd class="dd">In agile development, a list of features or technical tasks that are necessary for a project or release that the development team assesses and prioritizes to assign work.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x5366487"><!-- --></a>base image</dt>
+<dd class="dd">An image that has no parent image. See also <a class="xref" href="#gloss_I__x2024928">image</a>, <a class="xref" href="#gloss_P__x8439210">parent image</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7470455"><!-- --></a>beta service</dt>
 <dd class="dd">A service that is not production-ready and is in a trial stage of development. See also <a class="xref" href="#gloss_E__x7470450">experimental service</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2000361"><!-- --></a>bind</dt>
@@ -76,14 +78,16 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dt class="dt dlterm"><a name="gloss_B__x7470463"><!-- --></a>BLU Acceleration</dt>
 <dd class="dd">A collection of IBM DB2 technologies designed to work primarily with read-mostly business intelligence query processing. BLU Acceleration consists of four major database design advances: dynamic in-memory columnar processing, actionable compression, parallel vector processing, and data skipping.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7807335"><!-- --></a>blue-green deployment</dt>
-<dd class="dd">A deployment technique that enables continuous delivery and minimizes downtime by running two nearly identical production environments called Blue and Green. While one of the environments (for example, Blue) is the live production environment, the other (for example, Green) can be used for final testing and deployment. After the application is deployed in Green, Green becomes the production environment and Blue becomes idle.</dd>
+<dd class="dd">A deployment technique that enables continuous delivery and minimizes downtime by running two nearly identical production environments called Blue and Green. While one of the environments (for example, Blue) is the live production environment, the other (for example, Green) can be used for final testing and deployment. After the application is deployed in Green, Green becomes the production environment and Blue becomes idle. See also <a class="xref" href="#gloss_R__x8439181">red-black deployment</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
 <dd class="dd">An open-standards, cloud-based platform for building, managing, and running apps of all types, such as web, mobile, big data, and smart devices. Capabilities include Java, mobile back-end development, and application monitoring, as well as features from ecosystem partners and open source—all provided as-a-service in the cloud.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>boilerplate</dt>
 <dd class="dd">A template that includes one application and its associated runtime environment and predefined services for a particular domain.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>borderless</dt>
+<dd class="dd">Pertaining to an open, non-proprietary development platform that includes public cloud, dedicated cloud, and local cloud deployment models. See also <a class="xref" href="#gloss_D__x8439199">dedicated cloud</a>, <a class="xref" href="#gloss_L__x8439194">local cloud</a>, <a class="xref" href="#gloss_P__x4585370">public cloud</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>branch</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">To create a stream for parallel or insulated development.</li>
-<li class="li">A stream for insulated or parallel development.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">A stream for insulated or parallel development.</li>
+<li class="li">To create a stream for parallel or insulated development.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_B__x2197543"><!-- --></a>builder</dt>
@@ -113,28 +117,30 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">A software program or computer that requests services from a server. See also <a class="xref" href="#gloss_H__x2002243">host</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x3877850"><!-- --></a>cloud computing</dt>
 <dd class="dd">A computing platform where users can have access to applications or computing resources, as services, from anywhere through their connected devices. A simplified user interface or application programming interface (API), or both, makes the infrastructure supporting such services transparent to users.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x4585297"><!-- --></a>cloud portability</dt>
+<dd class="dd">The ability to move applications and services across public or private cloud computing environments, or from different cloud providers.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x7344030"><!-- --></a>code completion</dt>
 <dd class="dd">A feature of many IDEs and text editors that predictively completes content (words, phrases, tags, and so on) while the user types.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2051424"><!-- --></a>command-line interface (CLI)</dt>
 <dd class="dd">A computer interface in which the input and output are text based.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2000758"><!-- --></a>commit</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">To store a snapshot of the current state of a project.</li>
-<li class="li">A snapshot of the current state of a project in a repository. A project's history is defined by a series of commits.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">A snapshot of the current state of a project in a repository. A project's history is defined by a series of commits.</li>
+<li class="li">To store a snapshot of the current state of a project.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>component</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">In configuration management, a unit of organization for a reusable set of engineering artifacts. Components often correspond to project areas. Global configurations exist within a component. See also <a class="xref" href="#gloss_A__x2262995">artifact</a>.</li>
-<li class="li">In source control management, a grouping of related artifacts in a stream or repository workspace. A component can contain any number of folders and files.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">In source control management, a grouping of related artifacts in a stream or repository workspace. A component can contain any number of folders and files.</li>
+<li class="li">In configuration management, a unit of organization for a reusable set of engineering artifacts. Components often correspond to project areas. Global configurations exist within a component. See also <a class="xref" href="#gloss_A__x2262995">artifact</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>container</dt>
-<dd class="dd">A virtual software object that encompasses all of the elements that are needed for an application to run within an operating system. See also <a class="xref" href="#gloss_I__x2024928">image</a>, <a class="xref" href="#gloss_R__x2064940">registry</a>.</dd>
+<dd class="dd">A system construct that allows users to simultaneously run separate logical operating system instances. Containers use layers of file systems to minimize image sizes and promote reuse. See also <a class="xref" href="#gloss_I__x2024928">image</a>, <a class="xref" href="#gloss_L__x2028320">layer</a>, <a class="xref" href="#gloss_R__x2064940">registry</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x7233913"><!-- --></a>continuous delivery (CD)</dt>
 <dd class="dd">A software development practice that employs techniques such as continuous testing, continuous integration, and continuous deployment so that new features and fixes are packaged and deployed rapidly and at low risk to test environments and then to customers.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>credential</dt>
 <dd class="dd">Information acquired during authentication that describes a user, group associations, or other security-related identity attributes, and that is used to perform services such as authorization, auditing, or delegation. For example, a user ID and password are credentials that allow access to network and system resources.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>custom domain</dt>
-<dd class="dd">The customized portion of the URL selected by the user to direct requests to the application. A custom domain makes up part of the route. A custom domain can be a shared domain, a shared subdomain, or a shared domain and host. See also <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>.</dd>
+<dd class="dd">The customized portion of the URL selected by the user to direct requests to the application. A custom domain makes up part of the route. A custom domain can be a shared domain, a shared subdomain, or a shared domain and host. See also <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 </dl>
 
 ## D
@@ -150,17 +156,19 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">A place (such as a database system, file, or directory) where data is stored.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2019805"><!-- --></a>DEA</dt>
 <dd class="dd">See <a class="xref" href="#gloss_D__x7470348">Droplet Execution Agent</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x8439199"><!-- --></a>dedicated cloud</dt>
+<dd class="dd">A private cloud computing environment that provides infrastructure with single-tenant hardware. See also <a class="xref" href="#gloss_B__x8439189">borderless</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>defect</dt>
 <dd class="dd">A project element that allows stakeholders to track bugs and bug fixes.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>deployment</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">A process that retrieves the output of a build, packages the output with configuration properties, and installs the package in a pre-defined location so that it can be tested or run. See also <a class="xref" href="#gloss_S__x2067189">stage</a>.</li>
-<li class="li">The process of moving an application (such as a report or model) to a different instance. For example, reports are often created in a test environment and then deployed to production. When an application is deployed, it is exported, transferred, and imported.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">The process of moving an application (such as a report or model) to a different instance. For example, reports are often created in a test environment and then deployed to production. When an application is deployed, it is exported, transferred, and imported.</li>
+<li class="li">A process that retrieves the output of a build, packages the output with configuration properties, and installs the package in a pre-defined location so that it can be tested or run. See also <a class="xref" href="#gloss_S__x2067189">stage</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_D__x5784896"><!-- --></a>DevOps</dt>
 <dd class="dd">A software methodology that integrates application development and IT operations.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2021210"><!-- --></a>domain</dt>
-<dd class="dd">Part of a naming hierarchy that specifies the route. For example, example.com. In Bluemix, domains are associated with orgs. Domain objects are not directly bound to apps. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_O__x2032585">organization</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>.</dd>
+<dd class="dd">Part of a naming hierarchy that specifies the route. For example, example.com. In Bluemix, domains are associated with orgs. Domain objects are not directly bound to apps. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_O__x2032585">organization</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x3744906"><!-- --></a>DQM</dt>
 <dd class="dd">See <a class="xref" href="#gloss_D__x5390841">dynamic query mode</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x7470343"><!-- --></a>droplet</dt>
@@ -188,8 +196,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 {: #gloss_F}
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_F__x2023301"><!-- --></a>fork</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">To create a project and Git repository that contain all of the repository content and history of another project.</li>
-<li class="li">In Git, a divergent copy of a repository that can be modified without affecting or having to synchronize with the original.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">In Git, a divergent copy of a repository that can be modified without affecting or having to synchronize with the original.</li>
+<li class="li">To create a project and Git repository that contain all of the repository content and history of another project.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_F__x2023472"><!-- --></a>framework</dt>
@@ -215,7 +223,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_H__x7690468"><!-- --></a>heavy API call</dt>
 <dd class="dd">A client operation that writes, deletes, or inserts data. Heavy API calls consume more resources than light API calls because they are affecting the data. See also <a class="xref" href="#gloss_L__x7690463">light API call</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_H__x2002243"><!-- --></a>host</dt>
-<dd class="dd">A computer that is connected to a network and that provides an access point to that network. The host can be a client, a server, or both a client and server simultaneously. See also <a class="xref" href="#gloss_C__x2000644">client</a>, <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>.</dd>
+<dd class="dd">A computer that is connected to a network and that provides an access point to that network. The host can be a client, a server, or both a client and server simultaneously. See also <a class="xref" href="#gloss_C__x2000644">client</a>, <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_H__x2024674"><!-- --></a>HTTP method</dt>
 <dd class="dd">An action that is used by the Hypertext Transfer Protocol. HTTP methods include GET, POST, and PUT.</dd>
 <dt class="dt dlterm"><a name="gloss_H__x2193603"><!-- --></a>HTTPS</dt>
@@ -234,7 +242,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dt class="dt dlterm"><a name="gloss_I__x2115755"><!-- --></a>IDE</dt>
 <dd class="dd">See <a class="xref" href="#gloss_I__x2116934">integrated development environment</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>image</dt>
-<dd class="dd">A read-only template that is used to create containers. See also <a class="xref" href="#gloss_C__x2010901">container</a>, <a class="xref" href="#gloss_R__x2064940">registry</a>.</dd>
+<dd class="dd">A complete runtime that can be used to run applications. Images are used to create containers and can contain multiple parent images (layers). See also <a class="xref" href="#gloss_B__x5366487">base image</a>, <a class="xref" href="#gloss_C__x2010901">container</a>, <a class="xref" href="#gloss_L__x2028320">layer</a>, <a class="xref" href="#gloss_N__x2031005">namespace</a>, <a class="xref" href="#gloss_P__x8439210">parent image</a>, <a class="xref" href="#gloss_P__x8439215">private image repository</a>, <a class="xref" href="#gloss_R__x2064940">registry</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4015600"><!-- --></a>impediment</dt>
 <dd class="dd">An item that prevents progress or a work item to track something that prevents progress.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4585332"><!-- --></a>infrastructure as a service (IaaS)</dt>
@@ -267,7 +275,9 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 ## L
 {: #gloss_L}
     
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_L__x2481619"><!-- --></a>LDAP</dt>
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_L__x2028320"><!-- --></a>layer</dt>
+<dd class="dd">A changed version of a parent image. Images consist of layers, where the changed version is layered on top of the parent image to create the new image. See also <a class="xref" href="#gloss_C__x2010901">container</a>, <a class="xref" href="#gloss_I__x2024928">image</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x2481619"><!-- --></a>LDAP</dt>
 <dd class="dd">See <a class="xref" href="#gloss_L__x2028538">Lightweight Directory Access Protocol</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_L__x2804840"><!-- --></a>license key</dt>
 <dd class="dd">An authorization that regulates the use of software licensed programs. Software license keys need to be installed on the system when software is upgraded or moved, the hardware processor group is changed, additional license usage is added, or new software that requires license keys is purchased.</dd>
@@ -275,6 +285,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">A client operation that only reads data. Light API calls use fewer resources than heavy API calls because they are performing a single function. See also <a class="xref" href="#gloss_H__x7690468">heavy API call</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_L__x2028538"><!-- --></a>Lightweight Directory Access Protocol (LDAP)</dt>
 <dd class="dd">An open protocol that uses TCP/IP to provide access to directories that support an X.500 model and that does not incur the resource requirements of the more complex X.500 Directory Access Protocol (DAP). For example, LDAP can be used to locate people, organizations, and other resources in an Internet or intranet directory.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x8439194"><!-- --></a>local cloud</dt>
+<dd class="dd">A cloud computing environment within the client's data center. The local cloud is on-premises, providing improved latency and security. See also <a class="xref" href="#gloss_B__x8439189">borderless</a>.</dd>
 </dl>
 
 ## M
@@ -306,6 +318,13 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">A physical or business representation of the structure of the data from one or more data sources. A model describes data objects, structure, and grouping, as well as relationships and security. In Cognos BI, a model is created and maintained in Framework Manager. The model or a subset of the model must be published to the Cognos server as a package for users to create and run reports.</dd>
 </dl>
 
+## N
+{: #gloss_N}
+
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_N__x2031005"><!-- --></a>namespace</dt>
+<dd class="dd">A unique name that identifies your organization's image repository within the Bluemix registry. See also <a class="xref" href="#gloss_I__x2024928">image</a>, <a class="xref" href="#gloss_P__x8439215">private image repository</a>.</dd>
+</dl>
+
 ## O
 {: #gloss_O}
     
@@ -330,6 +349,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_P__x2029790"><!-- --></a>PaaS</dt>
 <dd class="dd">See <a class="xref" href="#gloss_P__x2029786">platform as a service</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_P__x8439210"><!-- --></a>parent image</dt>
+<dd class="dd">An image that provides a base for another image. For example, Ubuntu Linux is the parent image of the IBM Liberty image. See also <a class="xref" href="#gloss_B__x5366487">base image</a>, <a class="xref" href="#gloss_I__x2024928">image</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2238121"><!-- --></a>payload</dt>
 <dd class="dd">The body of a message that holds content.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2029786"><!-- --></a>platform as a service (PaaS)</dt>
@@ -340,6 +361,10 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">An operating state where internal testers use all data-collection features to provide detailed information regarding an app's behavior and performance. See also <a class="xref" href="#gloss_P__x7290106">preproduction library</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2090430"><!-- --></a>priority</dt>
 <dd class="dd">In software and systems development, a rank assigned to requirements or work items to determine the order in which they are worked on.</dd>
+<dt class="dt dlterm"><a name="gloss_P__x4585362"><!-- --></a>private cloud</dt>
+<dd class="dd">A cloud computing environment in which access is limited to members of an enterprise and partner networks. See also <a class="xref" href="#gloss_P__x4585370">public cloud</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_P__x8439215"><!-- --></a>private image repository</dt>
+<dd class="dd">The combination of an organization's Bluemix registry and its namespace. The private image repository is used when referencing an image in a command. See also <a class="xref" href="#gloss_I__x2024928">image</a>, <a class="xref" href="#gloss_N__x2031005">namespace</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2034701"><!-- --></a>private key</dt>
 <dd class="dd">In secure communication, an algorithmic pattern used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7690456"><!-- --></a>private service</dt>
@@ -350,6 +375,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">An operating state where customers use a limited set of data-collection features to provide information regarding an app's behavior and performance. See also <a class="xref" href="#gloss_P__x2034919">production library</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035151"><!-- --></a>project</dt>
 <dd class="dd">An organized collection used to group folders or packages. Projects are used for building, version management, sharing, and organizing resources related to a single work effort.</dd>
+<dt class="dt dlterm"><a name="gloss_P__x4585370"><!-- --></a>public cloud</dt>
+<dd class="dd">A cloud computing environment in which access to standardized resources, such as infrastructure, multi-tenant hardware, and services, is available to subscribers on a pay-per-use basis. See also <a class="xref" href="#gloss_B__x8439189">borderless</a>, <a class="xref" href="#gloss_P__x4585362">private cloud</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035465"><!-- --></a>push</dt>
 <dd class="dd">To send information from a server to a client. When a server pushes content, it is the server that initiates the transaction, not a request from the client.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x5599582"><!-- --></a>push notification</dt>
@@ -361,6 +388,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>read-mostly</dt>
 <dd class="dd">Pertaining to data that changes dynamically.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>red-black deployment</dt>
+<dd class="dd">A deployment technique that drives continuous delivery by enabling synchronized test, development, and deployment. Initially, development is done on an inactive environment (black) while the active environment continues to take traffic (red). Once deployment starts, both environments go live (red-red) until routing is disabled on the formerly active, previous version environment, then subsequently removed (black) while the new environment serves as the only active environment. See also <a class="xref" href="#gloss_B__x7807335">blue-green deployment</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>region</dt>
 <dd class="dd">A defined geographic territory. A region could be a specific postal code area, a town, a city, a state, a group of states, or even a group of countries. Each region can itself be a set of other regions or a set of postal codes that form the region.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>registry</dt>
@@ -382,7 +411,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dt class="dt dlterm"><a name="gloss_R__x7494440"><!-- --></a>retrospective</dt>
 <dd class="dd">In agile development, a meeting or a work item that evaluates successes and needed improvements after a sprint.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2037338"><!-- --></a>route</dt>
-<dd class="dd">The URL used to direct requests to an application. A route is made up of an optional host (or subdomain) and a domain that are specified when an application is pushed. For example, in the route myapp.example.com, myapp is the host and example.com is the domain. A route can be associated with one or more applications. Unless a custom domain is specified, Bluemix uses a default shared domain in the route to your application. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>.</dd>
+<dd class="dd">The URL used to direct requests to an application. A route is made up of an optional host (or subdomain) and a domain that are specified when an application is pushed. For example, in the route myapp.example.com, myapp is the host and example.com is the domain. A route can be associated with one or more applications. Unless a custom domain is specified, Bluemix uses a default shared domain in the route to your application. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2037526"><!-- --></a>rule</dt>
 <dd class="dd">A set of conditional statements that enable computer systems to identify relationships and run automated responses accordingly.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x4106478"><!-- --></a>RuleApp</dt>
@@ -445,8 +474,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">See <a class="xref" href="#gloss_S__x2213318">single sign-on</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2067189"><!-- --></a>stage</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">To deploy an application, service, or instance to a pre-defined location  for running or testing before deployment to a production environment. See also <a class="xref" href="#gloss_D__x2104544">deployment</a>.</li>
-<li class="li">To mark a set of file changes as being ready for Git commit.</li>
 <li class="li">A group of jobs within a shared execution context that consists of source input, environment variables, and a defined order of execution.</li>
+<li class="li">To mark a set of file changes as being ready for Git commit.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_S__x2094743"><!-- --></a>stanza</dt>
@@ -456,7 +485,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dt class="dt dlterm"><a name="gloss_S__x5027530"><!-- --></a>story</dt>
 <dd class="dd">A development work item that defines part of a use case or a specific contribution to the value of the overall product.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2040080"><!-- --></a>subdomain</dt>
-<dd class="dd">A domain that makes up a part of a larger domain. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>.</dd>
+<dd class="dd">A domain that makes up a part of a larger domain. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7290136"><!-- --></a>symbolication</dt>
 <dd class="dd">The process by which symbols that are excluded during app compilation are inserted into stack traces to make the traces readable for testers and developers.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7344042"><!-- --></a>syntax checking</dt>
@@ -496,7 +525,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_U__x2116436"><!-- --></a>Uniform Resource Identifier (URI)</dt>
 <dd class="dd">A unique address that is used to identify content on the web, such as a page of text, a video or sound clip, a still or animated image, or a program. The most common form of URI is the web page address, which is a particular form or subset of URI called a Uniform Resource Locator (URL). A URI typically describes how to access the resource, the computer that contains the resource, and the name of the resource (a file name) on the computer.</dd>
 <dt class="dt dlterm"><a name="gloss_U__x2042491"><!-- --></a>Uniform Resource Locator (URL)</dt>
-<dd class="dd">The unique address of an information resource that is accessible in a network such as the Internet. The URL includes the abbreviated name of the protocol used to access the information resource and the information used by the protocol to locate the information resource.</dd>
+<dd class="dd">The unique address of an information resource that is accessible in a network such as the Internet. The URL includes the abbreviated name of the protocol used to access the information resource and the information used by the protocol to locate the information resource. See also <a class="xref" href="#gloss_C__x5728384">custom domain</a>, <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_U__x2116461"><!-- --></a>URI</dt>
 <dd class="dd">See <a class="xref" href="#gloss_U__x2116436">Uniform Resource Identifier</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_U__x2042718"><!-- --></a>URL</dt>
