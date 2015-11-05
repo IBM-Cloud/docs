@@ -17,7 +17,7 @@ And finally, real-time data is also displayed in a configurable dashboard for an
 ![The IoT Real-Time Insights architecture.](images/iota.svg "IoT Real-Time Insights architecture")
 
 # Up and running {: #up-and-running}
-IoT Real-Time Insights requires the Internet of Things service (IoT Foundation) to connect your analytics engine to your devices.  You can use an existing IoT Foundation service or create a new one. To quickly get up and running your can deploy the Internet of Things phone application and its associated IoT Foundation service to your organization, see step 2 below. 
+IoT Real-Time Insights requires the Internet of Things service (IoT Foundation) to connect your analytics engine to your devices.  You can use an existing IoT Foundation service or create a new one. To quickly get up and running your can deploy the Internet of Things phone application and its associated IoT Foundation service to your organization, see step 2 below.
 
 1. Deploy the IoT Real-Time Insights service to your Bluemix organization.
   1. From your Bluemix account Dashboard, click **Use services or APIs**.
@@ -75,7 +75,7 @@ If you created a new IoT Foundation service, you must now create API keys to con
     - Authentication Token
   4. Click ![Create icon.](images/create.png "Create icon") to create the data source and connect to it.
 4. Start using IoT Real-Time Insights.  
-You can now start using IoT Real-Time Insights by adding users, connecting your devices, configure dashboards to view relevant device data, and set up alerts.
+You can now start using IoT Real-Time Insights by adding users, connecting your devices, configuring dashboards to view relevant device data, and setting up alerts.
 
 
 ># Related Links {:class="linklist"}
