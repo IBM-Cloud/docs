@@ -49,27 +49,12 @@ Parameter | Description
 ---|---
 Name | The name of the action as it will appear in the alerts dashboard.
 Description | A brief description of the action.
-URL | The URL of the target Webhook enabled server. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data with the URL.
+URL | The URL of the target webhook enabled server. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data with the URL.
 Method | The type of webhook call to execute. The type can be either of the following: GET/HEAD/OPTIONS/PATCH/PUT/POST/DELETE.
 User name | Include if required by the web service.
 Password | Include if required by the web service. **Important:** The password is sent in clear text.
 Header | Headers are made up from key and value pairs. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data with the header.
-Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POST, and DELETE methods. The body is prepopulated with all variables that are listed in [variable substitution](#variable_substitution).
-
-### Variable substitution {: #variable_substitution}
-Include the following variable substitutions in the URL, Header, or Body parameters to dynamically include device data. The variable must be wrapped in double curly brackets.
-
-Variable | Description
----|---
-**URL, Head, and Body** |
-`{{timestamp}}` | The timestamp from the Message
-`{{tenantId}}` | The ID of the Real-Time Insights service
-`{{deviceId}}` | The ID of the device
-`{{ruleName}}` | The name of the rule that includes the action
-**Body only** |
-`{{ruleDescription}}`| The description of the rule that includes the action
-`{{ruleCondition}}` | The the rule condition that triggered the action
-`{{message}}` | The raw device message payload that included the data point value that triggered the rule
+Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POST, and DELETE methods. The body is pre-populated with all variables that are listed in [variable substitution](#variable_substitution).
 
 
 ## Node-RED {: #nodered}
@@ -93,5 +78,20 @@ Parameter | Description
 Name | The name of the action as it will appear in the alerts dashboard.
 Description | A brief description of the action.
 Key | The Maker Channel key to use to trigger the event.
-Event | The event name that you have configured as a trigger for the Maker Event. You can create multiple recipes wih different triggers, each with a different event name.
-Value 1-3 | You can pass any content in these parameters, which will be passed on to the action in your IFTTT recipe.
+Event | The event name that you have configured as a trigger for the Maker Event. You can create multiple recipes with different triggers, each with a different event name.
+Value 1-3 | You can pass any content in these parameters, which will be passed on to the action in your IFTTT recipe. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data with the header.
+
+## Variable substitution {: #variable_substitution}
+Include the following variable substitutions to dynamically include device data. The variable must be wrapped in double curly brackets.
+
+Variable | Description
+---|---
+**URL, Head, and Body** |
+`{{timestamp}}` | The timestamp from the Message
+`{{tenantId}}` | The ID of the Real-Time Insights service
+`{{deviceId}}` | The ID of the device
+`{{ruleName}}` | The name of the rule that includes the action
+**Body only** |
+`{{ruleDescription}}`| The description of the rule that includes the action
+`{{ruleCondition}}` | The the rule condition that triggered the action
+`{{message}}` | The raw device message payload that included the data point value that triggered the rule
