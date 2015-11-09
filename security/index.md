@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 15 October 2015*
+*Last updated: 9 November 2015*
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} also provides a suite of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
@@ -238,9 +238,9 @@ The premium plan for this service also includes data encryption. For more inform
 
 ### dashDB
 
-The dashDB service uses IBM Directory Server LDAP for user authentication and IBM InfoSphere Guardium Data Activity Monitor to protect the database that is accessed by applications. The connection between applications and the database is protected by SSL certificates. This service uses the DB2® native encryption capability to automatically encrypt your deployed database and database backups. Master key rotation is automatic and happens every 90 days.
+The dashDB service uses an embedded LDAP server for user authentication. The connection between applications and the database is protected by SSL certificates. This service uses the DB2® native encryption capability to automatically encrypt your deployed database and database backups. Master key rotation is automatic and happens every 90 days.
 
-For more information, see [Getting started with dashDB](services/dashDB/index.html).
+For more information, see [Getting started with dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 
