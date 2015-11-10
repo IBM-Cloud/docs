@@ -147,6 +147,8 @@ Pricing varies depending on the chosen plan. For more pricing information, refer
 >
 ># Related Links {:class="linklist"}
 >## Tutorials and Samples {:id="samples"}
+>* [Connecting to IBM Object Storage for Bluemix with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/)
+>* [Use Python to access your Bluemix Object Storage](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/)
 >* [Bluemix Object Storage Community](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=1b48459f-4091-43cb-bca4-37863606d989)
 >
 ># Related Links {:class="linklist"}
