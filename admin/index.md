@@ -6,7 +6,7 @@
 # Managing {{site.data.keyword.Bluemix_notm}}
 {: #mng}
 
-*Last updated: 15 October 2015*
+*Last updated: 13 November 2015*
 
 Use the Admin Console to manage resources, monitor usage, administer user permissions, and view security
 reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bluemix}} Local or Dedicated environment. 
@@ -17,7 +17,7 @@ reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bl
 
 You can access the Admin Console by entering the following URL:
 
-`https://opsconsole.<subdomain>.bluemix.net/`. 
+`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`. 
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -659,7 +659,7 @@ Complete the following steps to add the repository and install the plug-in:
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://opsconsole.<subdomain>;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://opsconsole.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
@@ -691,7 +691,7 @@ you are not already.
 <ol>
 <li>To connect to the {{site.data.keyword.Bluemix_notm}}> API endpoint, run the following command:<br/><br/>
 <code>
-cf api https://api.<subdomain>.bluemix.net
+cf api https://api.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
