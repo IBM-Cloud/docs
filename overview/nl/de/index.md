@@ -27,7 +27,7 @@ Durch das breite Angebot an Services und Laufzeiten in {{site.data.keyword.Bluem
 
 {{site.data.keyword.Bluemix_notm}} stellt die folgenden Funktionen bereit:
 
-- Eine Auswahl von Services, das eine schnelle Erstellung und Erweiterung von mobilen Apps und Web-Apps ermöglichen
+- Eine Auswahl von Services, die eine schnelle Erstellung und Erweiterung von mobilen Apps und Web-Apps ermöglichen
 - Verarbeitungskapazität, die eine kontinuierliche Bereitstellung von Anwendungsänderungen ermöglicht
 - Zweckmäßige Programmiermodelle und Services
 - Verwaltungskomfort für Services und Apps
