@@ -19,7 +19,7 @@ Download and install command line interfaces to support your {{site.data.keyword
 
 | *Cloud Foundry: cf* |	*{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}: ice* | *{{site.data.keyword.Bluemix_notm}} Live Sync: bl* |
 |---------------------|---------------|---------------|
-| [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](#.//reference/cfcommands/index.html) |[Download Docker](https://docs.docker.com/installation/){: new_window} <br> [ice Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [ice Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [ice Linux Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [View Docs](../containers/container_cli_ice_ov.html) | [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [View Docs](./reference/bl/index.html) |
+| [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |[Download Docker](https://docs.docker.com/installation/){: new_window} <br> [ice Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [ice Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [ice Linux Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [View Docs](../containers/container_cli_ice_ov.html) | [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [View Docs](./reference/bl/index.html) |
 
 
 ## ![Command line interface plug-ins](./images/CLI_Plugin.png) Command line interface plug-ins
@@ -28,7 +28,7 @@ Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface wit
 
 1. To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.{DomainName}
+cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 ```
 2. Run the following command to install a plug-in:
 ```
