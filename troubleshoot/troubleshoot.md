@@ -1,0 +1,9 @@
+{:new_window: target="_blank"}
+
+
+
+# Troubleshooting
+
+If you experience problems with {{site.data.keyword.Bluemix}}, you can perform troubleshooting tasks to determine the corrective action to take.
+
+From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.png) in the upper right of the Dashboard to open Account and Support. You can view the status of the running services and runtimes and view notifications. In addition, you can select **Get help**, where you can search documentation and Stack Overflow for answers, or contact Support.
