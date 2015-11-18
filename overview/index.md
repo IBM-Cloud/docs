@@ -167,7 +167,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 ### Infrastructure
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}} offers three ways for you to run your code: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers, and virtual machines. You can pick the right infrastructure for deploying your apps.
+{{site.data.keyword.Bluemix_notm}} offers three ways for you to run your code: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers, and Virtual Machines. The {{site.data.keyword.IBM_notm}} Containers and Virtual Machines are available in only the US South and Europe United Kingdom region. You can pick the right infrastructure for deploying your apps. 
 
 <dl>
 <dt>Cloud Foundry</dt>
