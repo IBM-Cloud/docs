@@ -1,13 +1,14 @@
 # IBM VPN Command Line Interface
-You can use the command line interface (CLI) to configure and manage your IBM® Virtual Private Network (VPN) service. The IBM VPN CLI is a plug-in that is used with the Cloud Foundry CLI plug-in. The plug-in is available for Windows, MAC, and Linux operating systems. Ensure you use the one that is applicable to you.
+You can use the command line interface (CLI) to configure and manage your IBM® Virtual Private Network (VPN) service. The IBM VPN CLI is a plug-in that is used with the Cloud Foundry CLI plug-in. The plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
 Before you begin, install the Cloud Foundry CLI. See [Cloud Foundry command line interface](https://www.ng.bluemix.net/docs/cli/downloads.html) for details. 
 
 ##Install IBM VPN CLI Plug-in
-**Note:** If you have a previous version of the IBM VPN CLI plug-in installed, you must first uninstall it. Use the command: 
-	```
-	cf uninstall-plugin vpn
-	```  
+**Note:** If you have a previous version of the IBM VPN CLI plug-in that is installed, you must first uninstall it. Use the command: 
+
+```
+cf uninstall-plugin vpn
+```  
 
 **Install Locally**
 
@@ -64,7 +65,7 @@ Before you begin, install the Cloud Foundry CLI. See [Cloud Foundry command line
 
 ### cf vpn-create connection
 
-Creates a new VPN connection.
+Creates a VPN connection.
 
 ```
 cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> -subnets ["<subnet/mask>"] -cip <customer gateway IP address> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
@@ -105,7 +106,7 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPsec policy.
+**-ipsec:** Name of the IPSec policy.
 
 
 ### cf vpn-create ike
@@ -135,14 +136,14 @@ Name of the gateway.
 
 ### cf vpn-create ipsec
 
-Creates an IPsec policy.
+Creates an IPSec policy.
 
 ```
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
 **policy name:** 
-Name of the IPsec policy. 
+Name of the IPSec policy. 
 
 **gateway name:** 
 Name of the gateway. 
@@ -159,7 +160,7 @@ Name of the gateway.
 
 ### cf vpn-create gateway
 
-Creates a new VPN gateway.
+Creates a VPN gateway.
 
 ```
 cf vpn-create gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets <subnet address>
@@ -176,7 +177,7 @@ Name of the gateway.
 IP address of the gateway. 
 
 **-subnets:** 
-Subnet address(es) in CIDR format. 
+Subnet address in CIDR format. 
 
 ### cf vpn-show gateways
 
@@ -194,7 +195,7 @@ cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-Displays information about the current IPsec connections.
+Displays information about the current IPSec connections.
 
 ```
 cf vpn-show ipsecs
@@ -215,7 +216,7 @@ cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-Displays information about an IPsec connection.
+Displays information about an IPSec connection.
 
 ```
 cf vpn-show ipsec <policy name>
@@ -293,13 +294,13 @@ Preshared key.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Timeout value in seconds after which the session is terminated.  Range: 30 - 86400 seconds. Default value: 120 seconds
+**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 30 - 86400 seconds. Default value: 120 seconds
 
 **-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 15-86400 seconds. Default value: 15 seconds
 
 **-ike:** Name of the IKE policy.
 
-**-ipsec:** Name of the IPsec policy.
+**-ipsec:** Name of the IPSec policy.
 
 
 ### cf vpn-update ike
@@ -328,14 +329,14 @@ Name of the IKE policy.
 
 ### cf vpn-update ipsec
 
-Updates an IPsec policy.
+Updates an IPSec policy.
 
 ```
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
 **policy name:** 
-Name of the IPsec policy.
+Name of the IPSec policy.
 
 
 ##### Optional Parameters:
@@ -370,4 +371,4 @@ Name of the gateway.
 IP address of the gateway. 
 
 **-subnets:** 
-Subnet address(es) in CIDR format. 
+Subnet address in CIDR format. 
