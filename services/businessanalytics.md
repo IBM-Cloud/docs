@@ -2,9 +2,13 @@
 {:shortdesc: .shortdesc} 
 
 # Business Analytics
+{: #businessanalytics}
+
+*Last updated: 19 November 2015*
 
 With these services, you can embed business intelligence into your applications to uncover insights more quickly and more easily from all types of data.
 {:shortdesc}
+
 
 Embed business intelligence into applications | API-driven service | Cloud-based Cognos BI content
 --- | --- | ---
