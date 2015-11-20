@@ -52,7 +52,7 @@ The following figure shows the high-level {{site.data.keyword.Bluemix_notm}} arc
 
 *Figure 1. {{site.data.keyword.Bluemix_notm}} architecture*
 
-You can deploy your apps to different {{site.data.keyword.Bluemix_notm}} regions, for latency or security considerations. You can choose to deploy either to one region or across multiple regions. For more information, see [Regions](overview.html#ov_intro__reg).
+You can deploy your apps to different {{site.data.keyword.Bluemix_notm}} regions, for latency or security considerations. You can choose to deploy either to one region or across multiple regions. For more information, see [Regions](#ov_intro__reg).
 
 ![Multi-region application development](images/multi-region.png)
 
