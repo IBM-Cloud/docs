@@ -3,6 +3,9 @@
 
 # Debugging
 {: #debugging}
+
+*Last updated: 19 November 2015*
+
 If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors. 
 {:shortdesc}
 
@@ -21,7 +24,7 @@ The following procedure shows how you can use the `cf logs` command to debug sta
 
   1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the cf command line interface:
      ```
-	 cf api https://api.{{site.data.keyword.domainname}}
+	 cf api https://api.{DomainName}
 	 ```
 	 
   2. Log in to {{site.data.keyword.Bluemix_notm}} by entering `cf login`.
@@ -91,12 +94,12 @@ Specifically, logging to stdout and stderr can be enabled. For more information 
   
 When you enter `cf logs appname --recent` in the cf command line interface, only the most recent logs are displayed. To view the logs for errors that occurred earlier, you must retrieve all the logs and search for the errors. To retrieve all the logs for your application, use one of the following methods:
 <dl> 
-<dt>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</dt> 
-<dd>The integrated log file search and analysis capabilities of the Monitoring and Analytics Service can help you to quickly identify errors. For more information, see [Monitoring and Analytics](../services/monana/index.html#gettingstartedtemplate).</dd> 
-<dt>Third-party tools</dt> 
-<dd>You can collect and export the logs from your application to a third-party log management service. For more information, see [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html).</dd> 
-<dt>Scripts to collect and export the logs </dt> 
-<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} server from your computer, and you must have enough space on your computer to download the logs. For more information, see [Collecting diagnostic information](../support/index.html#collecting-diagnostic-information). </dd>
+<dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</strong></dt> 
+<dd>The integrated log file search and analysis capabilities of the Monitoring and Analytics Service can help you to quickly identify errors. For more information, see <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd> 
+<dt><strong>Third-party tools</strong></dt> 
+<dd>You can collect and export the logs from your application to a third-party log management service. For more information, see <a href="http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">Configuring Selected Third-Party Log Management Services</a>.</dd> 
+<dt><strong>Scripts to collect and export the logs </strong></dt> 
+<dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} server from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
 </dl>
 
 The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files and Logs** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files and Logs** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using. 
@@ -110,6 +113,8 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
 
 # rellinks
 {: #rellinks}
+
+## general
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Getting started with IBM Monitoring and Analytics for Bluemix service](../services/monana/index.html#gettingstartedtemplate){: new_window}

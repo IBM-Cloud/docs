@@ -3,6 +3,9 @@
 
 
 # Troubleshooting
+{: #troubleshooting}
+
+*Last updated: 19 November 2015*
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can perform troubleshooting tasks to determine the corrective action to take.
 
