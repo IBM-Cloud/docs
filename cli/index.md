@@ -35,9 +35,23 @@ cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 cf install-plugin plugin_name -r bluemix-cf-staging
 ```
 
-| *Active Deploy* |  *Development Mode* | {{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}} |
-|-----------------|-----------------|--------------------|----------------------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | Plug-in name: ibm-containers <br> [View Docs](../containers/container_cli_cfic.html#container_cli_cfic) |
+| *Active Deploy* |  *Development Mode* | 
+|-----------------|-----------------|
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
+
+### Extend your {{site.data.keyword.Bluemix_notm}} command line interface:bx
+1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
+```
+bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+```
+2. Run the following command to install a plug-in:
+```
+bluemix plugin install plugin_name -r bluemix-bx-staging
+```
+
+| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
+|-----|
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![Integrated development tools](./images/Integrated_Dev_Tools.png) Integrated development tools
 
