@@ -16,7 +16,7 @@ Action types:
  - [Send email](#email "Send email")
  - [Webhook](#webhook "Webhook")
  - [Node-RED](#nodered "Node-RED")
- - [IFTTT](#IFTTT "IFTTT")
+ - [IFTTT](#ifttt "IFTTT")
 4. Click **OK** to create the new action.
 
 The action is now available in the [rules editor](rules.html#rules "Rules editor").
@@ -58,7 +58,7 @@ Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POS
 
 
 ## Node-RED {: #nodered}
-Use the Node-RED action to connect to a Node-RED application when a rule is triggered. For more information about using Node-RED, see [Creating apps with the Internet of Things starter application](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html#iot500) on the IFTTT site.
+Use the Node-RED action to connect to a Node-RED application when a rule is triggered. For more information about using Node-RED, see [Creating apps with the Internet of Things starter application](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html#iot500).
 
 The following parameters are used to configure a Node-RED action:
 
