@@ -301,7 +301,7 @@ To use a service instance from another service, complete the following steps:
 
 1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click
 the tile for the service that you want to access. The dashboard for the service is displayed.
-2. In the left navigation pane, 8Manage* to authorize the binding from other service instances by using the console of the service instance.
+2. In the left navigation pane, click *Manage* to authorize the binding from other service instances by using the console of the service instance.
 3. If you want to deny other services access to the service instance, click *Service Access Authorization* in the left navigation pane and then use *Revoke* to remove the service binding. 
 
 # rellinks
