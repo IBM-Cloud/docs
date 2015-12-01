@@ -17,7 +17,7 @@ reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bl
 
 You can access the Admin Console by entering the following URL:
 
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`. 
+`https://opsconsole.<subdomain>.bluemix.net/`. 
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
