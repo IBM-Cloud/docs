@@ -6,7 +6,7 @@
 # Managing {{site.data.keyword.Bluemix_notm}}
 {: #mng}
 
-*Last updated: 13 November 2015*
+*Last updated: 1 December 2015*
 
 Use the Admin Console to manage resources, monitor usage, administer user permissions, and view security
 reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bluemix}} Local or Dedicated environment. 
@@ -17,7 +17,7 @@ reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bl
 
 You can access the Admin Console by entering the following URL:
 
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`. 
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>

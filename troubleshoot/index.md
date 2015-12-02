@@ -629,7 +629,7 @@ Use one of the following methods to solve the problem:
   
   
 ## Organizations cannot be found on {{site.data.keyword.Bluemix_notm}}
-{: #ts_push}
+{: #ts_orgs}
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
   

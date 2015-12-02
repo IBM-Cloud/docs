@@ -143,7 +143,6 @@ You can select the service that you need when you develop applications. Upon you
 
 You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.Bluemix_notm}} services](#accser_external).
 
-If you want to add a service to the {{site.data.keyword.Bluemix_notm}} service catalog for {{site.data.keyword.Bluemix_notm}} applications to use, you can build your own service and integrate it with {{site.data.keyword.Bluemix_notm}}. For more information, see [Integrating a service with {{site.data.keyword.Bluemix_notm}}](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}.
 
 ## Requesting a new service instance
 {: #req_instance}
@@ -302,7 +301,7 @@ To use a service instance from another service, complete the following steps:
 
 1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click
 the tile for the service that you want to access. The dashboard for the service is displayed.
-2. In the left navigation pane, 8Manage* to authorize the binding from other service instances by using the console of the service instance.
+2. In the left navigation pane, click *Manage* to authorize the binding from other service instances by using the console of the service instance.
 3. If you want to deny other services access to the service instance, click *Service Access Authorization* in the left navigation pane and then use *Revoke* to remove the service binding. 
 
 # rellinks
