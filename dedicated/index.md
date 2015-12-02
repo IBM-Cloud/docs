@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 1 December 2015*
+*Last updated: 2 December 2015*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}—in your own dedicated SoftLayer environment that’s securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -164,7 +164,7 @@ These technologies include the following:
 <dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
 </dd>
 <dt>SoftLayer redundancy</dt>
-<dd>With SoftLayer in dedicated environments, data in each cloud storage cluster are written multiple times, and storage clusters are configured with auto-healing capabilities in case of drive failure. If there is a problem with a virtual machine, SoftLayer tries to restart the virtual machine on another host.</dd>
+<dd>With SoftLayer in dedicated environments, data in each cloud storage cluster is written multiple times, and storage clusters are configured with auto-healing capabilities in case of drive failure. If there is a problem with a virtual machine, SoftLayer tries to restart the virtual machine on another host.</dd>
 <dt>Metadata backup</dt>
 <dd>Metadata is backed up using SoftLayer EVault Backup to a location that is a minimum of 200 km away.</dd>
 </dl>
