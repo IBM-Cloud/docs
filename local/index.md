@@ -80,6 +80,122 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	</ol>
 </li>
 </ol>
+
+##Roles and responsibilities
+{: #rolesresponsibilities}
+
+If you set up a {{site.data.keyword.Bluemix_notm}} Local account, you identify the people in your organization for the roles that are needed to get your instance up and running.
+
+###Roles
+
+The following list shows the customer roles and responsibilities that you assign:
+
+<dl>
+<dt>**Procurement focal**</dt>
+<dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Local environment, including identifying the right people in your organization to work on any aspect of the project. The person assigned to this role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the local instance.</dd>
+<dt>**Compliance officer**</dt>
+<dd>Works with the IBM representative to select a topology and deployment option that meets your security requirements. The person assigned to this role works with the IBM compliance consultant to determine which deployment patterns achieve the compliance goals.</dd>
+<dt>**Network specialist**</dt>
+<dd>Works with the IBM representative on the network plans for the {{site.data.keyword.Bluemix_notm}} deployment. The person assigned to this role reviews the required networking specifications required by IBM and works together with IBM on an implementation plan. At the end of the installation and verification phase, the person assigned to this role approves that the network configuration is in compliance with corporate standards.</dd>
+<dt>**DevOps focal**</dt>
+<dd>Works with the IBM representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. The person assigned to this role also works with the IBM representative on the configuration of your {{site.data.keyword.Bluemix_notm}} Local instance.</dd>
+<dt>**IaaS specialist**</dt>
+<dd>Works with the IBM representatives on the deployment plan for VMware. Typically, this is someone who is a VMware administrator in the data center. The person assigned to this role reviews the <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a> and works together with IBM on an implementation plan. At the end of deployment, the person assigned to this role approves that the deployment is in compliance with the corporate standards at the IaaS layer.</dd>
+</dl>
+
+Your customer representatives work with a dedicated client success manager (CSM) and other IBM specialists that work together to ensure that you always have the support that you need. The CSM is provided for 6 months at no charge. The CSM completes the following tasks:
+
+<ul>
+<li>Provides technical coordination between you and IBM.</li>
+<li>Coordinates updates, upgrades, expert help from IBM, and initial enablement from a {{site.data.keyword.Bluemix_notm}} support engineer.</li>
+<li>Provides information about the types of support that are available.</li>
+<li>Acts as initial escalation point, if needed.</li>
+</ul>
+
+The {{site.data.keyword.Bluemix_notm}} support and operations team that works with you on your {{site.data.keyword.Bluemix_notm}} instance might access your local environment, but does so only for the following reasons.
+
+<ul>
+<li>To respond to alerts and perform operational maintenance</li>
+<li>To attempt to reproduce a problem that is reported on a support ticket</li>
+</ul>
+
+###Responsibilities
+
+From setting up your environment to continued maintenance, a variety of tasks must be completed by both you and IBM. The following tables outline the required tasks and the owners for completing the task throughout the inception, progression, and completion phases.
+
+The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} Local environment. At this point, you have already reviewed the [Local infrastructure requirements](../local/index.html#localinfra) requirements. The primary goals of this phase include the following:
+
+- Review the financial agreement, and establish the milestone dates for delivery.
+- Create the {{site.data.keyword.Bluemix_notm}} platform, and provide access to runtimes and services.
+- Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
+- Identify and assign roles for your administrative team.
+
+*Table 1. Inception phase tasks*
+
+| **Task** | **Task details** | **Responsible party** |
+|----------|------------------|-----------------------|
+|Set compliance standards | Identify government, industry, and proprietary corporate standards that are required for the environment. | Customer |
+|Create security and compliance integration plan | Create security and integration plan that includes costs, scheduling, and resources that are required to achieve security compliance. | IBM |
+|Compliance plan approval | Approve the compliance plan. | Customer |
+|Create sizing for environment |  	Create environment sizing based on predefined choices that take into consideration the high availability and disaster recovery goals, as well as initial DEA and service provisioning that is necessary to support the apps created with the platform. You and IBM work together to define, for example, what databases are needed, what services are offered in the customer's syndicated catalog, and more. | IBM and customer share responsibility |
+|Select architecture | Select architecture based on predefined choices that take into account high availability and disaster recovery requirements. | IBM |
+|Define disaster recovery goals | Define the disaster recovery requirements for the environment. | Customer |
+|Create disaster recovery plan | Consult and define the disaster recovery plan. IBM creates a disaster recovery model, and consults with you where you provide feedback and approve the plan. | IBM and customer share responsibility |
+|Create backup and recovery plan | Create a backup and recovery plan that defines the frequency and the requirements for on-and-off site distribution of the backup. IBM backs up fabric components, IBM services, service metadata including user roles, and more. You back up any application-specific data that you are responsible for. | IBM and customer share responsibility |
+|Identify tools for event detection and problem determination | Identify IBM and third-party tools used for event detection and problem determination at the {{site.data.keyword.Bluemix_notm}} platform level. | IBM |
+|Define escalation plan | Define the escalation plan to triage and resolve events detected from the monitoring components. | IBM |
+|Sign infrastructure, platform, and support agreements | Sign the subscription agreement including the financial terms and conditions for the environment. Sign network and security monitoring agreement. Sign support subscription. | Customer |
+|Procure environment | Procure compute resources, network, and storage. For more information about the infrastructure requirements for the environment, see [Local infrastructure requirements](../local/index.html#localinfra). | Customer |
+|Install VPN solution | Install bidirectional VPN solution. | IBM |
+|Install fabric, application, and monitoring and management components | Install, configure, and verify fabric components, such as BOSH Director, Cloud Controller, Health Manager, messaging, routers, DEAs and service providers, and the monitoring components that are defined in the escalation and problem detection plan. | IBM |
+|Install and configure security components | Install and configure security components that are tied into the monitoring and escalation plan including IBM QRadar, credential vault, intrusion prevention system, IBM BigFix, and IBM Security Privileged Identity Management. | IBM |
+|Configure login server | Configure the login server for use with the corporate LDAP. | IBM |
+|Install and configure custom components |  	Install and configure custom components that reside outside the scope of the {{site.data.keyword.Bluemix_notm}} product and services. | Customer |
+|Connect {{site.data.keyword.Bluemix_notm}} pipeline | Connect {{site.data.keyword.Bluemix_notm}} continuous integration and continuous delivery pipeline with IBM repositories. | IBM |
+|Customize external solution components | Customize load balancers for disaster recovery scenarios. | Customer |
+|Track status for security, compliance, and audit controls  | Track status up to the point where all tools and processes are in place to achieve identified compliance. | Customer |
+|Review physical infrastructure | Review physical premises that host the solution components for threats and review of security controls to protect the data center. | Customer |
+|Inspect monitoring software | Inspect monitoring and management components as defined in the escalation and problem determination plan. | Customer |
+|Inspect OS | Inspect to ensure that the operating system image meets compliance standards. IBM provides access to the OS image. | IBM and customer share responsibility |
+
+Next is the progression phase. The progression phase describes the on-going, collaborative relationship between you and IBM. The primary goals for this phase include the following:
+
+- Review capacity and coordinate necessary adjustments.
+- Review maintenance and platform improvements.
+- Coordinate the activities for problem resolution and root cause analysis.
+
+*Table 2. Progression phase tasks*
+
+| **Task** | **Task details** | **Responsible party** |
+|----------|------------------|-----------------------|
+|Review weekly capacity reports | Review the weekly capacity reports and take corrective action, if needed. | Customer |
+|Create month-to-month projections | Collect information and create a month-to-month projection of capacity and consumption. | IBM and customer share responsibility |
+|Review capacity projections | Review the capacity projections as they relate to external events that might impact capacity as well as anticipated new deployments of apps. Work with IBM to review the projections and plan accordingly. | IBM and customer share responsibility |
+|Adjust capacity |  Add or remove capacity as your needs change. | IBM |
+|Publish upcoming updates and maintenance | Create documentation for the required maintenance of IBM components. | IBM |
+|Perform maintenance | Work with IBM to schedule required maintenance within a 30-day window. You can provide dates that might not work for you in the 30-day window, and IBM works to schedule the maintenance accordingly. | IBM and customer share responsibility |
+|Address provisioning failures | Fix provisioning failures, if they occur, for customer-created services that are deployed to the Catalog. | IBM |
+|Perform network and IP scans | Perform daily and monthly network and IP scans. | IBM and customer share responsibility |
+|Provide access to audit logs | Provide access to all security and administrative audit logs.   | IBM and customer share responsibility |
+|Conduct testing | Conduct periodic Key Controls over Operations testing and third-party penetration testing. | IBM and customer share responsibility |
+|Status reporting, audit coordination, and compliance meetings  | Complete status reporting, external audit coordination, and representation at compliance review status meetings. | IBM |
+|Employment and business need verification | Complete quarterly employment verification and verification of continued business need for IBM representatives that have access to the customer environment. | IBM |
+|Resolution of security vulnerabilities | Resolve reported security vulnerabilities in the platform. | IBM |
+
+The final stage of completion represents the end of the relationship between you and IBM {{site.data.keyword.Bluemix_notm}}. The primary tasks for this phase include the following:
+
+* Ending of the financial agreement
+* Removing all network connections
+* Recycling infrastructure
+
+*Table 3. Completion phase tasks*
+
+| **Task** | **Task details** | **Responsible party** |
+|----------|------------------|-----------------------|
+|End financial agreement | Discuss and agree to an end to the financial agreement contract. | IBM and customer share responsibility |
+|Decommission environment | Shut down access to and credentials for the environment. | IBM and customer share responsibility |
+|Shut down Relay | Terminate the Relay connection. | IBM |
+|Recycle infrastructure | Recycle your infrastructure according to company guidelines. | Customer |
 	
 ##{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
 {: #localinfra}
