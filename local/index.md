@@ -86,7 +86,7 @@ While there are requirements for the type and size of available hardware, you ca
 <dd>
 ESXi is a virtualization layer that runs on physical servers and that abstracts processor, memory, storage, and resources into multiple virtual machines. Choose any combination that meets the following resource totals, on the condition that minimum physical core count per ESXi is eight. The following specifications are for the {{site.data.keyword.Bluemix_notm}} core runtime only.
 <ul>
-<li>48 Physical cores at 2.0 of more GHz each</li>
+<li>48 Physical cores at 2.0 or more GHz each</li>
 <li>756 GB of physical RAM</li>
 </li>Total datastore size of 7.5 TB 
 <ul>
