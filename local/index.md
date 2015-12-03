@@ -3,18 +3,16 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 1 December 2015*
+*Last updated: 3 December 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
 {:shortdesc}
 
 IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
 
-{{site.data.keyword.Bluemix_notm}} Local includes a private, syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public.
+{{site.data.keyword.Bluemix_notm}} Local includes a private, syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public. The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.
 
 {{site.data.keyword.Bluemix_notm}} Local sits on a virtual machine that is behind your company firewall, so that you have the highest performing and most secure cloud infrastructure available to you. IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through IBM's relay technology.
-
-Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver updates to all local deployments, so that you always have an up-to-date, stable, and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. The traffic on this tunnel is Urban Code Deployer automation for serving and maintaining the platform, compute resources, and services for your instance.
 
 ![{{site.data.keyword.Bluemix_notm}} Local overview](images/bluemixlocalarchitecture.png "Bluemix Local overview")
 
@@ -34,6 +32,14 @@ In addition, there is a set of services available for {{site.data.keyword.Bluemi
 |Optional | {{site.data.keyword.APIM}} | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
 
 *Table 1. Local Services*
+
+### Relay
+
+Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual machine, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual machine, and once a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, we can check for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begin deploying updates.
+
+The traffic on this tunnel is automation for serving and maintaining the platform, compute resources, and services for your instance. The inbound web port 443 is used for this connection. Relay is restricted to automation agent-only access. IBM uses the relay capability to deliver platform updates through a consistent testing and validation process to ensure that all deployments pushed to your local environments are stable and secure.
+
+You have complete visibility of the environment for incident, problem, change, capacity, and security management as an administrator.  Administrators access the information about their environment by using the Administration console. Relay technology keeps the Administration console current with the latest data. For more information about user access, security logs, syndicated catalog control, and communication for updates and problem repair, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
 
 ##Setting up your {{site.data.keyword.Bluemix_notm}} Local instance
 {: #setuplocal}
