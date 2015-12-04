@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 3 December 2015*
+*Last updated: 4 December 2015*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}—in your own dedicated SoftLayer environment that’s securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -287,9 +287,9 @@ These technologies include the following:
 ##Restoring your dedicated instance
 {: #restorededicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated settings and configurations are backed up regularly to prepare for any unplanned outages in the environment.
+{{site.data.keyword.Bluemix_notm}} Dedicated settings, metadata, and configurations are backed up regularly to prepare for any unplanned outages in the environment. Your data that you are responsible for backing up includes application data, cloud database services data, and object stores.
 
-As part of the backup of your data, IBM completes the following tasks:
+As part of the data backup, which includes system metadata and configurations, IBM completes the following tasks:
 
 <ul>
 <li>Encrypts all backup copies and manages encryption keys</li>
