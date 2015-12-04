@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 3 December 2015*
+*Last updated: 4 December 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
 {:shortdesc}
@@ -369,9 +369,9 @@ These technologies include the following:
 ##Restoring your local instance
 {: #restorelocal}
 
-{{site.data.keyword.Bluemix_notm}} Local settings and configurations are backed up regularly to prepare for any unplanned outages in the environment.
+{{site.data.keyword.Bluemix_notm}} Local settings, metadata, and configurations are backed up regularly to prepare for any unplanned outages in the environment. Your data that you are responsible for backing up includes application data, cloud database services data, and object stores.
 
-As part of the backup of your data, IBM completes the following tasks:
+As part of the data backup, which includes system metadata and configurations, IBM completes the following tasks:
 
 <ul>
 <li>Encrypts all backup copies and manages encryption keys</li>
