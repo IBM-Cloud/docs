@@ -4,7 +4,7 @@
 # Glossary terms for {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
 
-*Last updated: 5 November 2015*
+*Last updated: 7 December 2015*
 
 This glossary provides terms and definitions for {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -102,11 +102,13 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd">See <a class="xref" href="#gloss_C__x2016383">certificate authority</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd">See <a class="xref" href="#gloss_C__x2016783">cipher block chaining</a>.</dd>
+<dd class="dd">See <a class="xref" href="#gloss_C__x2016383">certificate authority</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd">See <a class="xref" href="#gloss_C__x7233913">continuous delivery</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>certificate authority (CA)</dt>
 <dd class="dd">A trusted third-party organization or company that issues the digital certificates. The certificate authority typically verifies the identity of the individuals who are granted the unique certificate. See also <a class="xref" href="#gloss_I__x3753781">intermediate certificate</a>, <a class="xref" href="#gloss_S__x2038004">Secure Sockets Layer</a>, <a class="xref" href="#gloss_T__x2042234">trusted root</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521">certificate signing request (CSR)</dt>
+<dd class="dd">An electronic message that an organization sends to a certificate authority (CA) to obtain a certificate. The request includes a public key and is signed with a private key; the CA returns the certificate after signing with its own private key.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>change set</dt>
 <dd class="dd">A group of related changes to artifacts in a workspace or stream.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>cipher block chaining (CBC)</dt>
@@ -139,6 +141,8 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">A software development practice that employs techniques such as continuous testing, continuous integration, and continuous deployment so that new features and fixes are packaged and deployed rapidly and at low risk to test environments and then to customers.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>credential</dt>
 <dd class="dd">Information acquired during authentication that describes a user, group associations, or other security-related identity attributes, and that is used to perform services such as authorization, auditing, or delegation. For example, a user ID and password are credentials that allow access to network and system resources.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">See <a class="xref" href="#gloss_C__x3530521">certificate signing request</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>custom domain</dt>
 <dd class="dd">The customized portion of the URL selected by the user to direct requests to the application. A custom domain makes up part of the route. A custom domain can be a shared domain, a shared subdomain, or a shared domain and host. See also <a class="xref" href="#gloss_D__x2021210">domain</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">route</a>, <a class="xref" href="#gloss_S__x2040080">subdomain</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 </dl>
