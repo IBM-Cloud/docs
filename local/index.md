@@ -5,7 +5,7 @@
 {: #local}
 *Last updated: 4 December 2015*
 
-{{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public. 
+{{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
 
 IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
@@ -59,18 +59,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.</li>
 	</ol>
 	</li>
-<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running.<br />
-<br />
-<dl>
-<dt>**Procurement focal**</dt>
-<dd>Works with IBM representatives on establishing your {{site.data.keyword.Bluemix_notm}} Local environment, including identifying the right people in your organization to work on any aspect of the project. This role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the local instance.</dd>
-<dt>**Compliance officer**</dt>
-<dd>Works with IBM representatives to select a topology and deployment option that meets your security requirements. This role works with the IBM compliance consultants to determine which deployment patterns acheive the compliance goals and objectives.</dd>
-<dt>**Network Specialist**</dt>
-<dd>Works with IBM representatives on the network plans for the {{site.data.keyword.Bluemix_notm}} deployment. This role provides the requirements to the IBM representatives and works with the representatives on an implementation plan. At the end of the installation and verification phase, this role will "sign-off" that the network configuration is in compliance with corporate standards.</dd>
-<dt>**DevOps focal**</dt>
-<dd>Works with IBM representatives to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with the IBM representatives on the configuration of your {{site.data.keyword.Bluemix_notm}} Local instance.</dd>
-</dl>
+<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For more information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Local roles and responsibilities</a>.
 </li>
 <li>You provide the hardware, and IBM helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Local instance. For more information about infrastructure requirements, see <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.
 <ol type="a">
@@ -196,7 +185,7 @@ The final stage of completion represents the end of the relationship between you
 |Decommission environment | Shut down access to and credentials for the environment. | IBM and customer share responsibility |
 |Shut down Relay | Terminate the Relay connection. | IBM |
 |Recycle infrastructure | Recycle your infrastructure according to company guidelines. | Customer |
-	
+
 ##{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
 {: #localinfra}
 
@@ -210,7 +199,7 @@ ESXi is a virtualization layer that runs on physical servers and that abstracts 
 <ul>
 <li>48 Physical cores at 2.0 or more GHz each</li>
 <li>756 GB of physical RAM</li>
-</li>Total datastore size of 7.5 TB 
+</li>Total datastore size of 7.5 TB
 <ul>
 <li>7 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB datastore to hold the inception virtual machine</li>
@@ -387,9 +376,9 @@ Because protection of private data is critical, IBM needs your collaboration whe
 <li>Move a copy of your encrypted backup data off-site, just as you would for any other backup data that you manage.</li>
 <li>Provide the backup files for the IBM operator in case of any need to restore.</li>
 </ul>
-   
+
 # rellinks
-## general 
+## general
 * [Discover: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
 * [Contacting support](../troubleshoot/getting_customer_support.html#bluemix_support)

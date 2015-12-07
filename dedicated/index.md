@@ -1,4 +1,4 @@
-{:new_window: target="_blank"} 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
@@ -21,7 +21,7 @@
 
 {{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 128 GB of application memory.
 
-In addition, there is a set of included services by default and optional ones that you can choose for your dedicated instance. 
+In addition, there is a set of included services by default and optional ones that you can choose for your dedicated instance.
 
 | **Type**        | **Name**            | **Description** |      
 |-----------------|-------------------|-------------------|
@@ -52,18 +52,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</li>
 	</ol>
 	</li>
-<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running.<br />
-<br />
-<dl>
-<dt>**Procurement focal**</dt>
-<dd>Works with IBM representatives on establishing your {{site.data.keyword.Bluemix_notm}} Dedicated environment, including identifying the right people in your organization to work on any aspect of the project. This role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the dedicated instance.</dd>
-<dt>**Compliance officer**</dt>
-<dd>Works with IBM representatives to select a topology and deployment option that meets your security requirements. This role works with the IBM compliance consultants to determine which deployment patterns acheive the compliance goals and objectives.</dd>
-<dt>**Network Specialist**</dt>
-<dd>Works with IBM representatives on the network plans for the {{site.data.keyword.Bluemix_notm}} deployment. This role provides the requirements to the IBM representatives and works with the representatives on an implementation plan. At the end of the installation and verification phase, this role will "sign-off" that the network configuration is in compliance with corporate standards.</dd>
-<dt>**DevOps focal**</dt>
-<dd>Works with IBM representatives to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. This role also works with IBM representatives on the configuration of your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</dd>
-</dl>
+<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For more information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.
 </li>
 <li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
 	<ol type="a">
@@ -218,7 +207,7 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 **Note:** If you do not request a specific time for the update, the maintenance is automatically applied at the end of the window.<br />
 <br />
 Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unavailable dates, and approve updates. For more information about notifications and scheduling pending updates, see <a href="../admin/index.html#oc_system">Viewing system information</a>.</dd>
-	
+
 <dt>**Other**</dt>
 <dd>IBM intends to confine all maintenance that might affect your services, in particular the availability of your {{site.data.keyword.Bluemix_notm}} Dedicated environment, runtimes, and services, to the standard and monthly updates. Other change windows might be used on an exception basis for management of the environment. IBM will make reasonable efforts to minimize the impact to you during such change windows and will notify you in advance.</dd>
 </dl>
@@ -307,7 +296,7 @@ Because protection of private data is critical, IBM needs your collaboration whe
 </ul>
 
 # rellinks
-## general 
+## general
 * [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
 * [Contacting support](../troubleshoot/getting_customer_support.html#bluemix_support)
