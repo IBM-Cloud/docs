@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 19 November 2015*
+*Last updated: 4 December 2015*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -64,7 +64,7 @@ To subscribe, follow these steps:
 
   1. Download and install an RSS reader.
   2. Use your reader to subscribe to the feed with one of the following methods:
-       * Drag the ![RSS](images/updates_rss.jpg) icon into your RSS reader.
+       * Drag the ![RSS](images/rss.svg) icon into your RSS reader.
        * Right-click the RSS icon, select **Copy link address**, and paste the URL into your RSS reader.
 
 	See your reader's **Help** section for more information. 	   
@@ -115,7 +115,7 @@ You can also use a third-party service to automatically send an email for each R
 
 You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. {{site.data.keyword.Bluemix_notm}} Dedicated or {{site.data.keyword.Bluemix_notm}} Local customers also get an option to purchase additional premium support that enables remote access to a named support lead, who is a {{site.data.keyword.Bluemix_notm}} technical advisor and product specialist. All {{site.data.keyword.Bluemix_notm}} customers can also contact IBM for registration or billing questions.
 
-### Contacting {{site.data.keyword.Bluemix_notm}} support
+### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
 If you were unable to resolve your problem with troubleshooting and help options, you can ask for support.
@@ -127,6 +127,7 @@ To open a support ticket, use one of the following methods:
      1. First, ensure that you check {{site.data.keyword.Bluemix_notm}} status by clicking **Status**.
 	 2. Then, if the problem is not due to an outage, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
 
+  * Use the [{{site.data.keyword.Bluemix_notm}} Support ticket](http://ibm.biz/bluemixsupport){: new_window} form. For technical questions, ID questions, and billing questions, contact support by opening a new ticket.	 
   * From the [IBM® Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. Support is available through the IBM Client Success Portal with the following options:
 
      * Initial 30-day trial subscription (complimentary)
@@ -139,59 +140,20 @@ To open a support ticket, use one of the following methods:
 
 When opening a support ticket, ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities.
 
-You can also contact IBM when you have problems with registering or questions about your bill. Select from the following options:
 
-  * To use Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.png) in the upper right of the Dashboard. Then, click **GET IN TOUCH**. Fill in the form to contact Sales or get help with your account or bill.
-  * To directly contact IBM for problems when registering with {{site.data.keyword.Bluemix_notm}}, you can send an email to <a href="mailto:id@bluemix.net" target="_blank">ID support</a>.
-  * To directly contact IBM for questions about your bill for using {{site.data.keyword.Bluemix_notm}} services, you can send an email to [Billing support](mailto:billing@bluemix.net).
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
+{: #contacting-bluemix-support-dedicated}
 
 If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
 
-<!-- MEK: change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might even remove it. I'll confirm with Dan Julin. -->
-
-<ul>
-<li>For questions, administrative requests, or minor problems, contact support by opening a new ticket using the
-<a href="http://ibm.biz/bluemixsupport.com" target="_blank">Open new ticket to {{site.data.keyword.Bluemix_notm}} Support form</a>. You can use an email address or your IBM ID for this form. Select the **Dedicated** option for the {{site.data.keyword.Bluemix_notm}} region field.
-<p>These channels are monitored during normal business hours, 7:00 am UTC to 1:00 am UTC on weekdays. Do not use this option for high severity issues.</p>
-</li>
-<li>Send an email to the custom support address that was assigned to your organization when your dedicated environment was set up. To send an email to the support address, from the {{site.data.keyword.Bluemix_notm}} user interface in the dedicated environment, click the **Profile Settings** icon in the upper right of the Dashboard, then click **Support**. The page that is displayed contains an email link that you can use to send the email to the custom support address. If you have access to the {{site.data.keyword.Bluemix_notm}} Public environment, you can also open high severity items using the following methods with your IBM ID.</li>
-<li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, you can open a support ticket by using one of the following methods:
-<ul>
-<li>From the public {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon <img src="images/account_support.png" alt="Account and Support" /> in the upper right of the Dashboard, then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
-<li>Go to the
-<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>, and enter your IBM ID and password. Your IBM ID serves as your service credentials. Click **Open a support ticket** on the menu. Ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled.</li>
-</ul>
-</li>
-<li>If you don't have an IBM ID, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p>
-</li>
-</ul>
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Local
+{: #contacting-bluemix-support-local}
 
 If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
-
-<!-- change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might remove this. I will confirm with Dan Julin. -->
-
-  * For questions, administrative requests, or minor problems, you can send an email to the custom support address that was assigned to your organization when your local environment was set up. To send an email to the support address, from the {{site.data.keyword.Bluemix_notm}} user interface in the local environment, click the **Profile Settings** icon in the upper right of the Dashboard, then click Support. The page that is displayed contains an email link that you can use to send the email to the custom support address.
-
-   The mailbox is monitored during normal business hours, 7:00 am UTC to 1:00 am UTC on weekdays. Do not use this option for high severity issues.
-
-  * Open a new ticket using the [Open new ticket to {{site.data.keyword.Bluemix_notm}} Support form](https://ibm.biz/bluemixsupport.com){: new_window}. You can use an email address or your IBM ID this form.
-
-  * If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, you can open a support ticket by using one of the following methods:
-
-     * From the public {{site.data.keyword.Bluemix_notm}} user interface, click the Account and Support icon ![Account and Support](./images/account_support.png) in the upper right of the Dashboard, then click Get help. On the page that is displayed, click GET IN TOUCH.
-
-     * Go to the [IBM Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}, and enter your IBM ID and password. Your IBM ID serves as your service credentials. Click Open a support ticket on the menu. Ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled.
-
-  * If you don't have an IBM ID, you can contact someone in your organization who does have one, or work with your IBM representative.
-
-  **Note:** At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.
 
 
 
@@ -205,6 +167,7 @@ Severity 1 | <ul><li>Your application is not accessible by your clients</li><li>
 Severity 2 | <ul><li>Application errors that are impacting multiple users</li><li>Individual user cannot log in</li></ul>
 Severity 3 | <ul><li>General issues</li><li>Application errors or that are impacting individual users</li></ul>
 Severity 4 | <ul><li>Minor application issues</li><li>How to questions</li><li>Enhancements</li></ul>
+*Table 1. Severity examples*
 
 Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed during normal business hours, 7:00 am UTC to 1:00 am UTC on weekdays.
 
@@ -242,6 +205,5 @@ The scripts use the cf command line interface to extract the following informati
 
 ## general
   * [Bluemix support portal](https://support.ibmcloud.com){: new_window}
-  * [Bluemix Developers Community](https://developer.ibm.com/bluemix/){: new_window}
   * [Installing the cf command tool](../starters/install_cli.html){: new_window}
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}

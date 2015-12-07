@@ -5,7 +5,7 @@
 
 #Services
 {: #services}
-*Last updated: 11 November 2015*
+*Last updated: 7 December 2015*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -28,22 +28,22 @@ Predefined services are available in {{site.data.keyword.Bluemix_notm}} for mobi
 </dd>
 </dl>
 
-*Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
+
 
 |Type	|Description	|Support details|
 |:------|:--------------|:--------------|
-|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting {{site.data.keyword.Bluemix_notm}} support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
 |Third Party	|A service that is provided by a company other than IBM.	|Support for third-party services is provided by the service provider. If a problem is investigated by IBM and the problem is determined to be a defect in a third-party service, IBM is not obligated to provide a fix. IBM will share analysis with the third-party service provider if needed.|
-|Community	|A service that is provided by an open source community.	|Support for community services is provided by the {{site.data.keyword.Bluemix_notm}} Developers [Community](https://developer.ibm.com/bluemix/), through the {{site.data.keyword.Bluemix_notm}} Developers Community [Forum](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}. If a problem is investigated by IBM and the problem is determined to be a defect in a community service, IBM is not obligated to provide a fix.|
-|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting {{site.data.keyword.Bluemix_notm}} support](../support/index.html#contacting-bluemix-support){: new_window}.|
-
+|Community	|A service that is provided by an open source community.	|Support for community services is provided by the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in a community service, IBM is not obligated to provide a fix.|
+|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
+*Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
 
 
 
 
 {{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the bottom of the Catalog, and then click **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
 
-Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community [Forum](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
+Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
 
 To use a service in the {{site.data.keyword.Bluemix_notm}} user interface, cf command line interface, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services, or any supported tools, take the following steps:
 
@@ -57,7 +57,7 @@ To use a service in the {{site.data.keyword.Bluemix_notm}} user interface, cf co
 
 Not all services are available in every {{site.data.keyword.Bluemix_notm}} region. The following table shows the services that are provided by IBM.
 
-*Table 2. Service availability*
+
 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Austrilian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -123,6 +123,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.workflow}}			|Yes		|Yes		|No|
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|No|
 |{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
+*Table 2. Service availability*
 
 
 # Adding a service to your application
@@ -143,6 +144,7 @@ You can select the service that you need when you develop applications. Upon you
 
 You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.Bluemix_notm}} services](#accser_external).
 
+If you want to add a service to the {{site.data.keyword.Bluemix_notm}} service catalog for {{site.data.keyword.Bluemix_notm}} applications to use, you can build your own service and integrate it with {{site.data.keyword.Bluemix_notm}}. For more information, see [Integrating a service with {{site.data.keyword.Bluemix_notm}}](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}.
 
 ## Requesting a new service instance
 {: #req_instance}
@@ -290,7 +292,7 @@ Assume that you are starting in the region where you want to use the service ins
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## Using services in another region
+## Using services in another service
 {: #s2s_binding}
 
 Service access authorization provides a way for one service to access another service
