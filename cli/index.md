@@ -39,7 +39,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 |-----------------|-----------------|
 | Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
 
-### Extend your {{site.data.keyword.Bluemix_notm}} command line interface:bx
+### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
 bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net

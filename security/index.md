@@ -1,16 +1,16 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 9 November 2015*
+*Last updated: 7 December 2015*
 
-Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} also provides a suite of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
+Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} ensures security readiness by adhering to security policies that are driven by best practices in IBM for systems, networking, and secure engineering. These policies include practices such as source code scanning, dynamic scanning, threat modeling, and penetration testing. {{site.data.keyword.Bluemix_notm}} follows the IBM Product Security Incident Response Team (PSIRT) process for security incident management. See the [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) site for details.
+{{site.data.keyword.Bluemix_notm}} ensures security readiness by adhering to security policies that are driven by best practices in IBM for systems, networking, and secure engineering. These policies include practices such as source code scanning, dynamic scanning, threat modeling, and penetration testing. {{site.data.keyword.Bluemix_notm}} follows the IBM Product Security Incident Response Team (PSIRT) process for security incident management. See the [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} site for details.
 
-{{site.data.keyword.Bluemix_notm}} Public and Dedicated use IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and take full advantage of its security architecture. SoftLayer IaaS provides multiple, overlapping tiers of protection for your applications and data. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and provide the infrastructure by hosting {{site.data.keyword.Bluemix_notm}} Local in your own data center behind a company firewall. In addition, {{site.data.keyword.Bluemix_notm}} adds security capabilities at the Platform as a Service layer in different categories: platform, data, and application.
+{{site.data.keyword.Bluemix_notm}} Public and Dedicated use IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and takes full advantage of its security architecture. SoftLayer IaaS provides multiple, overlapping tiers of protection for your applications and data. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and provide the infrastructure by hosting {{site.data.keyword.Bluemix_notm}} Local in your own data center behind a company firewall. In addition, {{site.data.keyword.Bluemix_notm}} adds security capabilities at the Platform as a Service layer in different categories: platform, data, and application.
 
 ## Security of the {{site.data.keyword.Bluemix_notm}} platform
 {: #platform-security}
@@ -27,15 +27,17 @@ Network, data encryption, and access control
  * Denial of service and systematic attacks detection
  * Security incident response
 
-![Bluemix platform security overview](images/platform_sec.png)
+![Bluemix platform security overview](images/platform_sec.svg)
 
 *Figure 1. {{site.data.keyword.Bluemix_notm}} platform security overview*
 
-The security for {{site.data.keyword.Bluemix_notm}} Local differs because you own specific pieces of security by hosting Bluemix behind your company firewall and in your data center. The following image details which parts of security are customer-owned and which parts of security are managed and maintained by IBM.
+With {{site.data.keyword.Bluemix_notm}} Local, you host {{site.data.keyword.Bluemix_notm}} behind your company firewall and in your data center. Therefore, you are responsible for certain aspects of security. The following image details which parts of security are customer-owned and which parts of security are managed and maintained by IBM.
 
-![Bluemix Local platform security overview](images/security_local_platform.png)
+![Bluemix Local platform security overview](images/security_local_platform.svg)
 
 *Figure 2. {{site.data.keyword.Bluemix_notm}} Local platform security overview*
+
+IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through Relay, a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local. Relay connects securely with certificates specific to each {{site.data.keyword.Bluemix_notm}} Local instance. For more information about {{site.data.keyword.Bluemix_notm}} Local and Relay, see [Bluemix Local](../local/index.html).
 
 ### Functional security
 
@@ -220,7 +222,7 @@ For more information, see [Getting started with IBM Static Analyzer for Bluemix]
 
 The IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} plug-in enables you to run security scans on your web or Android apps that are hosted on {{site.data.keyword.Bluemix_notm}}. This plug-in is developed and supported by the IBM UrbanCode™ Deploy Community on the IBM Bluemix DevOps Services platform.
 
-For more information, go to [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/).
+For more information, go to [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
 ### SQL Database
 
@@ -254,32 +256,42 @@ The Secure Gateway service enables you to securely connect {{site.data.keyword.B
 
 For more information, see [Getting started with Secure Gateway](../services/SecureGateway/index.html).
 
+### Security information and event management
+
+You can use security information and event management (SIEM) tools to analyze security alerts in application logs. One such tool is IBM Security QRadar&reg; SIEM, which provides security intelligence in cloud environments. For information, see [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+
 ## {{site.data.keyword.Bluemix_notm}} security deployment
 {: #security-deployment}
 
 {{site.data.keyword.Bluemix_notm}} security deployment architecture includes different information flows for app users and developers to ensure secure access.
 
-![Bluemix security deployment architecture](images/sec_deployment.png)
+![Bluemix security deployment architecture](images/sec_deployment.svg)
 
 *Figure 3. Bluemix security deployment architecture*
 
-The information flow for {{site.data.keyword.Bluemix_notm}} *app users* is as follows:
+For {{site.data.keyword.Bluemix_notm}} *app users*, the **app user flow** is as follows:
  1. Through a firewall, with intrusion prevention and network security in place.
  2. Through the IBM DataPower Gateway with reverse proxy and SSL termination proxy.
  3. Through the network router.
  4. Reaches the application runtime in the droplet execution agent (DEA).
 
 The {{site.data.keyword.Bluemix_notm}} *developer* follows two main flows, for login and for development and deployment.
- * The developer flow for login includes the following:
+ * The **developer login flow** includes the following:
     * For developers who are logging in to {{site.data.keyword.Bluemix_notm}} Public, the flow is as follows:
       1. Through the IBM Single Sign On service.
       2. Through IBM web identity.
     * For developers who are logging in to {{site.data.keyword.Bluemix_notm}} Dedicated or Local, the flow is through the enterprise LDAP.
- * The developer flow for app development and deployment is as follows:
+ * The **development and deployment flow** is as follows:
     1. Through a firewall, with intrusion prevention and network security in place. This applies to {{site.data.keyword.Bluemix_notm}} Dedicated only.
     2. Through the IBM DataPower Gateway with reverse proxy and SSL termination proxy.
     3. Through the network router.
     4. Through authorization by using Cloud Foundry cloud controller, to ensure access to only apps and service instances that are created by the developer.
+  
+For {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local *administrators*, the **administrator flow** is as follows:
+ 1. Through a firewall, with intrusion prevention and network security in place.
+ 2. Through the IBM DataPower Gateway with reverse proxy and SSL termination proxy.
+ 3. Through the network router.
+ 4. Reaches the Administration page in the {{site.data.keyword.Bluemix_notm}} user interface.
 
 In addition to users described in these paths, an authorized IBM security operations team performs various operational security tasks, such as the following:
  * Vulnerability scans. For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and any scans within your firewall.
@@ -288,6 +300,35 @@ In addition to users described in these paths, an authorized IBM security operat
  * Management of risks with intrusion protection.
  * Security monitoring with QRadar.
  * Security reports available through the Admin Console.
+
+## Security reports
+{: #reports}
+
+With {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated, {{site.data.keyword.Bluemix_notm}} generates various security reports and logs that you can view through the Administration page. For instructions for viewing and using the reports, see [Viewing reports](../admin/index.html#oc_report).
+
+The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
+
+| **Category** | **Report** | **Description** |      
+|-----------------|-------------------|---------------------|
+| Firewall | Firewall logins | Events related to administrator login to the Vyatta firewall devices. |
+| Firewall | Firewall denies | Events generated by the Vyatta firewall devices when a request to access is denied according to the firewall rules that are in place. |
+| {{site.data.keyword.Bluemix_notm}} administrator login events | {{site.data.keyword.Bluemix_notm}} administrators login | Events generated by the operating system when an administrator starts an SSH session on every {{site.data.keyword.Bluemix_notm}} system. |
+| {{site.data.keyword.Bluemix_notm}} application developer login events | {{site.data.keyword.Bluemix_notm}} application developers login | Events generated by the {{site.data.keyword.Bluemix_notm}} platform login component when a {{site.data.keyword.Bluemix_notm}} platform user starts a session by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
+| {{site.data.keyword.Bluemix_notm}} administrator administrative events | {{site.data.keyword.Bluemix_notm}} administrators operating system administrative events | Events generated by the operating system when an administrator performs action within a current working session. |
+| {{site.data.keyword.Bluemix_notm}} application developer administrative events | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) administrative events | Events related to operations performed by the {{site.data.keyword.Bluemix_notm}} platform user by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
+| {{site.data.keyword.Bluemix_notm}} administrator database administrative events | Database administrative events | Events related to operations performed by a database administrator on the {{site.data.keyword.Bluemix_notm}} internal databases. |
+| Administration events | User management events | Events related to user management actions performed on the Administration page. |
+| Administration events | Catalog | Events related to services Catalog changes. |
+| Administration events | Security reports management events | Events related to security reports management actions performed on the Administration page. |
+| Access reviews | Access reviews report | Reviews for privileged accesses. |
+| Change management | Management of software changes | Change management activity. |
+| Key management | Management of custom SSL certificates | Custom SSL certifications that were uploaded and stored. |
+| Encryption | Data-in-transit encryption | Data-in-transit encryption that is configured. |
+| Anti-virus | Anti-virus scan report | Anti-virus software that is in place. |
+| Software fix management | Patch application report | Software fixes that were applied. |
+| Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
+
+*Table 1. {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated security report list*
 
 # rellinks
 ## general 

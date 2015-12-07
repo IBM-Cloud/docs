@@ -237,6 +237,63 @@ General problems with managing applications might include applications can't be 
 
 
 
+## Unable to perform requested actions
+{: #ts_authority}
+
+You might not be able to complete actions without appropriate access authority.
+
+ 
+
+When you try to perform actions for a service instance or an app instance, you can't complete the requested actions and see one of the following error messages: 
+{: tsSymptoms}
+
+`BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
+
+
+`Server error, status code: 403, error code: 10003, message: You are not authorized to perform the requested action.`
+
+ 
+
+You do not have the appropriate level of authority that is required to perform the actions. 
+{: tsCauses}
+
+  
+
+To obtain the appropriate authority level, use one of the following methods: 
+{: tsResolve}
+ * Select another organization and space for which you have the developer role. 
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organization](../acctmgmt/index.html#mngorg){: new_window} for details.
+ 
+
+
+
+ 
+
+
+## Unable to access {{site.data.keyword.Bluemix_notm}} services because of authorization errors
+{: #ts_vcap}
+
+Authorization errors might occur when your app accesses a {{site.data.keyword.Bluemix_notm}} service if the service credentials are hardcoded in your app. 
+
+After you configure your app to communicate with a {{site.data.keyword.Bluemix_notm}} service, you deploy the app to {{site.data.keyword.Bluemix_notm}}. However, you can't use the app to access the {{site.data.keyword.Bluemix_notm}} service and receive an authorization error.
+{: tsSymptoms}
+
+The hardcoded credentials in the app might not be correct. Every time that the service is recreated, the credentials to access it change.
+{: tsCauses}
+
+
+Instead of hardcoding the credentials in your app, use connection parameters from the VCAP_SERVICES environment variable. The methods to use connection parameters from the VCAP_SERVICES environment variable vary depending on program languages. For example, for Node.js apps, you can use the following command: 
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+For more information about the commands that you can use in other program languages, see [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
+
+ 
+ 
+
 
 
 
@@ -572,7 +629,7 @@ Use one of the following methods to solve the problem:
   
   
 ## Organizations cannot be found on {{site.data.keyword.Bluemix_notm}}
-{: #ts_push}
+{: #ts_orgs}
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
   
