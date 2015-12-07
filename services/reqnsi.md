@@ -5,7 +5,7 @@
 
 #Services
 {: #services}
-*Last updated: 11 November 2015*
+*Last updated: 7 December 2015*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -290,7 +290,7 @@ Assume that you are starting in the region where you want to use the service ins
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## Using services in another region
+## Using services in another service
 {: #s2s_binding}
 
 Service access authorization provides a way for one service to access another service
