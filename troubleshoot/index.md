@@ -77,13 +77,13 @@ If your account is pending, you cannot log in to {{site.data.keyword.Bluemix_not
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you might not be able to log in to {{site.data.keyword.Bluemix_notm}}. Instead, you see the following message:
 {: tsSymptoms}
 
-`Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact id@bluemix.net to get help.`
+<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>.</code>
 
 
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [ID support](mailto:id@bluemix.net).
+The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -237,6 +237,7 @@ General problems with managing applications might include applications can't be 
 
 
 
+
 ## Unable to perform requested actions
 {: #ts_authority}
 
@@ -264,8 +265,6 @@ To obtain the appropriate authority level, use one of the following methods:
  * Select another organization and space for which you have the developer role. 
  * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organization](../acctmgmt/index.html#mngorg){: new_window} for details.
  
-
-
 
  
 
@@ -300,7 +299,7 @@ For more information about the commands that you can use in other program langua
 ## Unable to deploy apps by using IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to Bluemix™ by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to {{site.data.keyword.Bluemix_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -958,7 +957,7 @@ If you find that the DevOps Services project cannot be created, your IBM {{site.
 
 
 
-You click the **Deploy to Bluemix** button, but the **Creating project** step does not complete successfully.
+You click the **Deploy to Bluemix** button, but the "Creating project" step does not complete successfully.
 {: tsSymptoms} 
 
 
@@ -979,7 +978,7 @@ If you find that the Git repository is not cloned, an issue might exist with the
 
 
 
-You click the **Deploy to Bluemix** button, but the Git repository is not found and cannot be cloned in DevOps Services. The **Cloning repository** step does not complete successfully. Therefore, the app cannot be deployed to {{site.data.keyword.Bluemix_notm}}. 
+You click the **Deploy to Bluemix** button, but the Git repository is not found and cannot be cloned in DevOps Services. The "Cloning repository" step does not complete successfully. Therefore, the app cannot be deployed to {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 This problem might occur because of the following reasons:
@@ -993,8 +992,8 @@ Use one of the following methods to fix the problem:
 {: tsResolve}
 
   * Verify that your Git repository exists, is publicly accessible, and that the URL is correct.
-  * Verify that the snippet does not contain any HTML or markdown mistakes.
-  * If special characters, query parameters, or fragments cause an issue with the URL to the Git repository, encode the URL in the button snippet.
+  * Verify that the snippet does not contain any HTML or markdown errors.
+  * If special characters, query parameters, or fragments cause an issue with the Git repository URL, encode the URL in the button snippet.
   
 
   
@@ -1006,18 +1005,18 @@ If you find that the app is not deployed, issues might exist with the code in th
      
 
 
-You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}. The **Deploying to Bluemix** step does not complete successfully.
+You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}. The "Deploying to Bluemix" step does not complete successfully.
 {: tsSymptoms} 
 
 This problem might occur because of the following reasons:
 {: tsCauses}  
 
   * There might not be enough space in your {{site.data.keyword.Bluemix_notm}} space to deploy an app. 
-  * A required service might not be declared in the manifest.yml file.
-  * A required service might be declared in the manifest.yml file, but the service is already in the target space.
+  * A required service might not be declared in the `manifest.yml` file.
+  * A required service might be declared in the `manifest.yml` file, but the service is already in the target space.
   * An issue might exist with the code in the repository.
 To diagnose the issue, review the build and deploy logs from the deployment:
-  1. When the **Deploying to Bluemix** step does not complete successfully, click the link in the previous Configuring pipeline step to open the Delivery Pipeline.
+  1. When the "Deploying to Bluemix" step does not complete successfully, click the link in the previous "Configuring pipeline" step to open the Delivery Pipeline.
   2. Identify the failed build or deploy stage.
   3. In the failed stage, click **View logs and history**.
   4. Locate the error message.
@@ -1026,7 +1025,7 @@ Use one of the following methods to fix the problem:
 {: tsResolve}
 
   * If the error message indicates that there is not enough space in the {{site.data.keyword.Bluemix_notm}} space to deploy the app, target another space.
-  * If the error message indicates that a required service is not declared in the manifest.yml file, notify the repository owner that the required service must be added.
+  * If the error message indicates that a required service is not declared in the `manifest.yml` file, notify the repository owner that the required service must be added.
   * If the error message indicates that a required service already exists in the target space, select a different space to use.
   * If the error message indicates that an issue exists with the build, fix any issues with the code that are preventing the app from being built. To verify that the code does not contain any issues, build the code by using Git commands:
     1. Clone the Git repository:
@@ -1070,7 +1069,7 @@ You might experience problems when you manage your account, such as different ap
 ## Account is inactive
 {: #ts_accnt_inactive}
 
-You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your account is inactive. You must contact the ID support team to fix this problem.
+You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your account is inactive. You must contact the support team to fix this problem.
 
 
 
@@ -1085,11 +1084,11 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 
  
 
-To reactivate your account, send an email to [ID support](mailto:id@bluemix.net). In the email, you must include the following information:
+To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
   * The IBM ID that you use to log in to {{site.data.keyword.Bluemix_notm}}.
-  * The name of the organization in which your app is being created. This information can help the ID support team determine whether you are assigned the correct roles or membership within your organization.
+  * The name of the organization in which your app is being created. This information can help the support team determine whether you are assigned the correct roles or membership within your organization.
 
 
 
@@ -1448,7 +1447,6 @@ You can resolve this issue by using one of the following methods:
 	```
 	
 	
-
 
 
 
