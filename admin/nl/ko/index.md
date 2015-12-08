@@ -3,21 +3,242 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} 관리
-{: #mng}
+#{{site.data.keyword.Bluemix_notm}} 관리
+{: #administer}
+*마지막 업데이트 날짜: 2015년 11월 18일*
 
-*마지막 업데이트 날짜: 2015년 10월 15일*
+**계정 및 지원** &gt; **조직 관리**를 클릭하여 조직, 영역 및 지정된 사용자를 관리합니다. {{site.data.keyword.Bluemix_notm}} Local 또는 {{site.data.keyword.Bluemix_notm}} Dedicated 사용자인 경우, 로컬 또는 전용 인스턴스 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](index.html#mng)를 참조하십시오. {:shortdesc}
+
+##계정 관리
+{: #mngacct}
+
+{{site.data.keyword.Bluemix}}에서 사용자 인터페이스의 대시보드를 통해 사용자 액세스 권한을 비롯한 모든 조직 및 영역을 관리할 수 있습니다. 사용량 및 청구 정보를 모니터링할 수도 있습니다. {:shortdesc}
+
+###조직 및 영역
+{: #orgsandspaces}
+
+조직 관리자 또는 계정 소유자는 조직 관리 페이지에서 사용자 액세스 권한을 비롯한 조직 또는 영역 설정을 확인하고 관리할 수 있습니다. 조직 관리 페이지를 열려면 메뉴에서 *계정 및 지원* &gt; **조직 관리**로 이동하십시오.
+
+####조직
+
+조직은 다음과 같은 항목으로 정의됩니다. 
+
+<dl>
+<dt>사용자</dt>
+<dd>조직과 영역에 대한 기본 권한이 있는 역할입니다. 먼저
+관리자가 조직에 지정되어 있어야 조직 내의 영역에 대한 다른
+권한을 부여받을 수 있습니다. 자세한 정보는
+[사용자 및
+역할](index.html#userroles)을 참조하십시오.</dd>
+<dt>도메인</dt>
+<dd>조직에 할당된 인터넷 라우트를 제공합니다. 라우트는 하위 도메인과 도메인으로
+구성됩니다. 하위 도메인은 보통 애플리케이션 이름입니다. 도메인은 애플리케이션에 대해 등록한 시스템 도메인 또는 사용자 정의 도메인일 수 있습니다.<br/>
+<p>**참고**: 사용자 정의 도메인을 추가하는 경우, 사용자 정의 도메인을 분석하여 {{site.data.keyword.Bluemix_notm}} 시스템 도메인을 가리키도록 DNS 서버를 구성해야 합니다. 이런 방법으로
+{{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인에
+대한 요청을 수신하면 이 요청을 적절하게 애플리케이션에 전달할 수 있습니다. </p></dd>
+<dt>할당량</dt>
+<dd>조직에서 사용하기 위해 할당할 수 있는 서비스의
+수와 메모리 양을 비롯한 조직의 자원 한계를
+나타냅니다. 조직이 작성되면 할당량이
+지정됩니다. 조직의 영역에 있는 모든 애플리케이션이나
+서비스가 할당량의 사용에 영향을 미칩니다. 종량과금제 또는 구독 요금제를
+사용하면 조직의 요구사항이 변경됨에 따라 Cloud Foundry 애플리케이션과
+컨테이너의 할당량을 조정할 수 있습니다. </dd>
+</dl>
+
+{{site.data.keyword.Bluemix_notm}}에서는
+조직을 사용하여 사용자 간 협업을 지원하고, 다음과 같은 방식으로 프로젝트 자원의
+논리적 그룹화를 손쉽게 수행할 수 있습니다. 
+
+<ul>
+<li>조직에서 영역, 애플리케이션, 서비스, 도메인, 라우트, 사용자를 함께 그룹화할
+수 있습니다. </li>
+<li>사용자별로 영역 및 조직에 대한 액세스를 관리할 수 있습니다.
+</li>
+</ul>
+
+조직을 작성하는 경우 조직 이름은 {{site.data.keyword.Bluemix_notm}}에서
+고유해야 합니다. 조직을 작성한 사용자에게 자동으로 *조직 관리자* 권한이 지정되므로, 조직 이름 편집, 조직 삭제 및 조직에 영역 작성 등을 수행할 수 있습니다.
+
+조직을 삭제하면 조직 내에 있는 영역, 애플리케이션 및
+서비스도 모두 삭제됩니다. 
+
+{{site.data.keyword.Bluemix_notm}}에서는
+조직 및 조직 내의 영역에 사용자를 지정하여 프로젝트에 대한 협업을 지원합니다.
+**사용자** 탭을 사용하여 조직의 사용자를 표시하고 관리할 수
+있습니다. **사용자** 탭에서 **새 사용자 초대** 링크를 클릭하여 조직에 사용자를 초대할 수도 있습니다. 조직 내의 사용자에게 지정할 수 있는 권한은 다음과 같습니다. 
+
+<ul>
+<li>조직 사용자</li>
+<li>조직 관리자</li>
+<li>조직의 청구 관리자</li>
+<li>조직 감사자</li>
+</ul>
+
+####영역
+
+조직 내에서는 영역을 사용하여 애플리케이션, 서비스
+및 사용자를 그룹화할 수 있습니다. 
+
+조직에 사용자를 추가한 후에는
+조직 내의 영역에 대한 권한을 사용자에게 부여할 수 있습니다. 조직과 마찬가지로,
+영역의 경우도 사용자에게 지정할 수 있는 권한이 있습니다. 
+
+<ul>
+<li>영역 관리자</li>
+<li>영역 개발자</li>
+<li>영역 감사자</li>
+</ul>
+
+**참고**: 영역에서 사용자에게 적어도 하나의 권한이 지정되어 있어야 합니다. 
+
+영역의 **도메인** 탭은 영역에 지정된
+도메인의 읽기 전용 목록입니다. 시스템 도메인은 항상 영역에 사용할 수 있으며,
+사용자 정의 도메인도 영역에 할당할 수 있습니다. 영역에 작성된 애플리케이션은
+영역에 대해 나열된 도메인을 사용할 수 있습니다. 
+
+###사용자 및 역할
+{: #userroles}
+
+계정 소유자는 조직 및 영역에 대한 모든 오퍼레이션을 수행합니다. 
+
+####사용자 유형
+
+계정의 구성원이거나
+협업자일 수 있습니다.
+
+<dl>
+<dt>구성원</dt>
+<dd>사용자가 {{site.data.keyword.Bluemix_notm}}
+계정을 작성했거나 {{site.data.keyword.Bluemix_notm}}의
+첫 경험으로 계정을 사용하도록 초대되어 이 초대를 통해 가입한 경우 사용자는
+이 계정의 구성원입니다.</dd>
+<dt>협업자</dt>
+<dd>이전에 다른 계정으로 {{site.data.keyword.Bluemix_notm}}를
+사용했지만 {{site.data.keyword.Bluemix_notm}}
+계정을 사용하도록 초대되고 초대를 허용한 경우 사용자는 이 계정의
+협업자입니다. </dd>
+</dl>
+
+####사용자 역할
+
+조직이나 영역에서
+다른 사용자 역할을 수행하도록 사용자에게 다음 권한이 지정될 수 있습니다.
+
+<dl>
+<dt>조직 관리자</dt>
+<dd>조직 구성원에게 다음 권한이 있습니다.<ul>
+<li>조직 내 영역 작성 또는 삭제</li>
+<li>조직의 구성원 또는 계정 소유자이기도 한 경우
+조직에 사용자 초대</li>
+<li>조직에 이미 있는 기존 사용자 관리</li>
+<li>조직의 도메인 관리</li>
+</ul>
+<p>**참고**: 협업자 유형의 사용자이고 이전에 다른 계정으로 {{site.data.keyword.Bluemix_notm}}를 사용한 적이 있으면 조직 관리자 역할이 지정되어도 조직에 사용자를 초대할 수 없습니다. 사용자를 초대하려면 사용자 유형이
+구성원이어야 합니다. 이 문제점에 대한 해결 방법은
+<a href="../troubleshoot/accessing.html#tr_adduser">조직에
+사용자를 추가할 수 없음</a>을 참조하십시오. </p>
+</dd>
+<dt>청구 관리자</dt>
+<dd>청구 관리자는 조직의 런타임 및 서비스 사용량 정보를
+볼 권한이 있습니다. </dd>
+<dt>조직 감사자</dt>
+<dd>조직 감사자는 영역에 있는 애플리케이션 및 서비스
+컨텐츠를 볼 권한이 있습니다.</dd>
+<dt>영역 관리자</dt>
+<dd>영역 관리자는 다음 권한이 있습니다.
+<ul>
+<li>영역에 사용자 추가 및 사용자 관리</li>
+<li>영역에 대한 기능 사용 설정</li>
+</ul>
+</dd>
+<dt>영역 개발자</dt>
+<dd>영역 개발자는 다음 권한이 있습니다.<ul>
+<li>영역 내에서 애플리케이션 및 서비스 작성, 삭제 및 관리</li>
+<li>영역 내에서 로그에 대한 액세스</li>
+</ul>
+</dd>
+<dt>영역 감사자</dt>
+<dd>영역 감시자는 영역에 대한 모든 정보(예: 애플리케이션 및
+서비스, 설정, 보고서, 로그에 대한 정보)에 대한 읽기 전용 액세스 권한이
+있습니다. </dd>
+</dl>
+
+###조직 관리
+{: #orgmng}
+
+조직 관리자 또는 계정 소유자는 조직을
+관리할 수 있습니다. 관리 태스크에는 조직 작성, 조직 이름 바꾸기, 영역 작성,
+영역에 사용자 초대 및 기존 조직 삭제가 포함됩니다.
+
+<ul>
+<li>조직 작성<p>지불 계정을 가진 사용자만
+조직을 작성할 수 있습니다. 지불 계정을 사용하여
+다음 단계에 따라 조직을 작성할 수 있습니다.</p>
+<ol>
+<li>{{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 오른쪽 상단에서 아이콘을 클릭한 후 **조직 관리**를 선택하십시오.</li>
+<li>**조직 작성**을 클릭하고
+프롬프트에 따라 조직을 작성하십시오.</li>
+</ol>
+</li>
+<li>조직 이름 바꾸기<p>조직의 이름을 바꾸려면
+다음 단계를 수행하십시오.</p>
+<ol>
+<li>{{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 오른쪽 상단에서 아이콘을 클릭한 후 **조직 관리**를 선택하십시오.</li>
+<li>이름을 바꿀 조직을 선택하십시오.</li>
+<li>**조직** 필드에 새 이름을 입력하고
+**저장**을 클릭하십시오.</li>
+</ol>
+</li>
+<li>구성원 나열<p>사용자 조직이나 영역의 구성원을 나열하려면 다음 단계를 수행하십시오. </p>
+<ol>
+<li>{{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 오른쪽 상단에서 아이콘을 클릭한 후 **조직 관리**를 선택하십시오.**사용자** 탭에서 사용자 조직의 구성원과 이들의 역할을 확인할 수 있습니다. </li>
+<li>이 영역의 구성원과 이들의 역할을 보려면 조직의 영역 이름을 클릭하십시오. </li>
+</ol>
+</li>
+<li>영역 작성<p>조직에서 영역을 작성할 수 있습니다.
+예를 들어, *dev* 영역은 개발 환경으로,
+*test* 영역은 테스트 환경으로, *production*
+영역은 프로덕션 환경으로 작성할 수 있습니다.
+그런 다음 앱을 영역과 연관시킵니다. 영역을 작성하려면
+다음 단계를 수행하십시오.</p>
+<ol>
+<li>{{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 오른쪽 상단에서 아이콘을 클릭한 후 **조직 관리**를 선택하십시오.</li>
+<li>조직 이름 아래의 **영역 작성**을 클릭하고
+지시에 따라 영역을 작성하십시오.</li>
+</ol>
+</li>
+<li>영역에 사용자 초대<p>조직에 사용자를 협업자로
+초대할 수 있습니다. 조직의 사용자를 다른 영역에
+추가할 수도 있습니다. 사용자는 자신에게 추가된 영역에만
+액세스할 수 있습니다. 사용자를 영역에 추가하려면
+다음 단계를 수행하십시오.</p>
+<ol>
+<li>{{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 오른쪽 상단에서 아이콘을 클릭한 후 **조직 관리**를 선택하십시오.그런 다음 조직에서 **사용자 추가**를 클릭하고 지시에 따라 사용자를 조직에 추가하십시오.</li>
+<li>사용자를 영역에 추가하십시오. 왼쪽 탐색 분할창에서 영역을 선택하고
+**사용자 추가**를 클릭한 다음 프롬프트에 따라
+사용자를 영역에 추가하십시오.</li>
+</ol>
+</li>
+<li>기존 조직 삭제<p>조직을 삭제하려면 {{site.data.keyword.Bluemix_notm}} 등록 및 ID 지원에 문의하십시오.</p>
+<p>**참고**: 삭제 오퍼레이션은 되돌릴 수 없습니다. 조직과 연관된 애플리케이션 및
+서비스가 모두 손실됩니다.</p>
+</li>
+</ul>
+
+## {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리
+{: #mng}
 
 관리 콘솔을 사용하여 {{site.data.keyword.Bluemix}} Local 또는 Dedicated 환경에서
 자원을 관리하고 사용법을 모니터하고 사용자 권한을 관리하며 보안 보고서, 로그, 상태 및 업그레이드 알림을 확인합니다. {:shortdesc}
 
-## 관리 콘솔에 액세스
+### 관리 콘솔에 액세스
 {: #oc_access}
 
 다음 URL을 입력하여 관리 콘솔에 액세스할 수 있습니다.
 
 
-`https://opsconsole.<subdomain>.bluemix.net/`.  
+`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`. 
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -25,19 +246,19 @@
 온보딩 중에 지정되었습니다. </dd>
 </dl>
 
-## 시스템 정보 보기
+### 시스템 정보 보기
 {: #oc_system}
 
-관리 콘솔을 사용하여 시스템 정보를 모니터할 수 있습니다.  
+관리 콘솔을 사용하여 시스템 정보를 모니터할 수 있습니다. 
 
 시스템 정보를 보려면 **관리 &gt; 시스템 정보**를 클릭하십시오.
 
 보류 중인 업데이트, 일반 시스템 정보 및 LDAP 구성 세부사항에 대한
-다양한 섹션을 펼치고 볼 수 있습니다.  
+다양한 섹션을 펼치고 볼 수 있습니다. 
 
 * 업데이트 섹션에서 사용자 파트에서 조치가 필요한
 보류 중인 업데이트를 볼 수 있습니다. 또한 달력 앱에 스케줄된 업데이트를 가져오기 위해
-달력 링크를 사용하여 업데이트를 쉽게 추적할 수도 있습니다. 
+달력 링크를 사용하여 업데이트를 쉽게 추적할 수도 있습니다.
 
 <ol>
 <li>특정 업데이트에 대한 조치를 취하려면 다음 단계를 완료하십시오. <ol type="a">
@@ -64,19 +285,19 @@
 </li>
 </ol>
 
-* 일반 정보 섹션에서 다음 정보를 볼 수 있습니다.  
+* 일반 정보 섹션에서 다음 정보를 볼 수 있습니다. 
     * {{site.data.keyword.Bluemix_notm}} 빌드에 대한 기본 정보
     * 버전, URL 지역 및 CLI 문서에 대한 링크를 포함한 API 정보
     * 사용자의 시스템 및 서비스에 대한 공유 도메인 정보
     * 애플리케이션, 사용자 및 조직의 총 수에 대한 통계
 * LDAP 구성 세부사항 섹션에서 LDAP 서버를 선택하면 사용자 및
 그룹 맵핑에 대한 정보를 볼 수 있습니다. {{site.data.keyword.IBM}} WebID를 사용 중인 경우에는
-LDAP 구성 세부사항 섹션에 표시됩니다.  
+LDAP 구성 세부사항 섹션에 표시됩니다. 
 
-## 사용법 정보 보기
+### 사용법 정보 보기
 {: #oc_resource}
 
-관리 콘솔을 사용하여 자원 및 네트워크 사용량을 모니터할 수 있습니다.  
+관리 콘솔을 사용하여 자원 및 네트워크 사용량을 모니터할 수 있습니다. 
 
 자원 정보를 보려면 **관리 &gt; 사용법**을 클릭하십시오.
 
@@ -92,7 +313,7 @@ LDAP 구성 세부사항 섹션에 표시됩니다.
 * 지난 10분, 시간, 일에 대한 {{site.data.keyword.Bluemix_notm}}의 평균 응답 시간
 * 지난 10분, 시간, 일에 대한 {{site.data.keyword.Bluemix_notm}}의 초당 평균 트랜잭션 수
 
-## 보고서 보기
+### 보고서 보기
 {: #oc_report}
 
 {{site.data.keyword.Bluemix_notm}} 인스턴스에 대한 DataPower&trade;, 방화벽 및 로그인 감사 등의
@@ -109,11 +330,11 @@ LDAP 구성 세부사항 섹션에 표시됩니다.
 보고서**, **방화벽** 및 **로그인 감사**를 기준으로 검색을 필터링할 수도 있습니다. 
 * 보고서 또는 로그를 표시할 때 보고서의 상단 오른쪽에 있는 ![다운로드](images/icon_download.png) 아이콘을 클릭하여 이를 다운로드할 수 있습니다.
 
-## 상태 보기
+### 상태 보기
 {: #oc_status}
 
 관리 콘솔을 통해 {{site.data.keyword.Bluemix_notm}} 인스턴스에 대한 상태를 모니터링할 수
-있습니다. 또한 알림에 대한 RSS 피드를 구독하면 따로 확인할 필요가 없습니다.  
+있습니다. 또한 알림에 대한 RSS 피드를 구독하면 따로 확인할 필요가 없습니다. 
 
 {{site.data.keyword.Bluemix_notm}} 인스턴스의 상태를 보려면 다음 단계를 완료하십시오. 
 
@@ -127,17 +348,17 @@ LDAP 구성 세부사항 섹션에 표시됩니다.
 오른쪽 분할창은 알림을 표시합니다. 
 
 3. RSS 피드에 대해 브라우저를 구성한 경우에는 알림의 RSS 피드를 구독할 수 있습니다. 알림 목록의
-왼쪽 맨 위에서 **업데이트**의 오른쪽에 있는 ![RSS](images/icon_RSS.png) 아이콘을 찾아서 다음 조치 중 하나를 선택하십시오.  
+왼쪽 맨 위에서 **업데이트**의 오른쪽에 있는 ![RSS](images/icon_RSS.png) 아이콘을 찾아서 다음 조치 중 하나를 선택하십시오. 
 
 * ![RSS](images/icon_RSS.png) 아이콘을 RSS 리더로 끄십시오. 
 * 마우스 오른쪽 단추로 RSS 아이콘을 클릭하고 **링크 주소 복사**를 선택한 다음 URL을
-RSS 리더에 붙여넣으십시오.  
+RSS 리더에 붙여넣으십시오. 
 
 4. 표시되는 알림을 필터링합니다. 알림 목록의 오른쪽 맨 위에 있는 **필터**를 클릭하십시오. 그리고 알림에서 찾고자 하는 단어(예: "유지보수")를 입력함으로써
 알림의 목록을 검색하고 좁힐 수 있습니다. 또는 **유형**, **지역**, **카테고리**,
-**시작 날짜** 또는 **종료 날짜**별로 표시할 알림을 선택하도록 클릭할 수 있습니다.  
+**시작 날짜** 또는 **종료 날짜**별로 표시할 알림을 선택하도록 클릭할 수 있습니다. 
 
-## 카탈로그 관리
+### 카탈로그 관리
 {: #oc_catalog}
 
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 사용자에게 표시되는 {{site.data.keyword.Bluemix_notm}} 서비스 및 스타터를 관리할 수 있습니다.
@@ -153,7 +374,7 @@ RSS 리더에 붙여넣으십시오.
 * 개별 플랜의 가시성을 제어하려면 플랜 이름을 선택한 후 드롭 다운 메뉴를 사용하여 **모든 조직에 대해 사용**,
 **모든 조직에 대해 사용 안함** 또는 **특정 조직에 대해 플랜 사용**을 선택하십시오. 
 
-## 조직 관리
+### 조직 관리
 {: #oc_organizations}
 
 조직을 작성 및 삭제하고 조직에 관리자를 추가하고 할당 사용량을 모니터링하여 조직을 관리할 수 있습니다. 
@@ -164,7 +385,7 @@ RSS 리더에 붙여넣으십시오.
 
 * 새 조직을 작성하고 관리자를 추가하려면 <strong>조직 작성</strong>을 클릭하십시오. 조직의 이름을 입력한 후
 관리자로 추가할 사용자의 이름 또는 이메일을 입력하십시오. 여러 이름을 입력하고 선택하여
-둘 이상의 관리자를 추가할 수 있습니다. <strong>조직 작성</strong>을 클릭하여 변경사항을 저장하고 조직을 작성하십시오.  
+둘 이상의 관리자를 추가할 수 있습니다. <strong>조직 작성</strong>을 클릭하여 변경사항을 저장하고 조직을 작성하십시오. 
 * 할당량 모니터링 섹션에서 해당 섹션을 펼치고
 다음 정보를 볼 수 있습니다. 
     * 환경 메모리 사용량. 이 섹션에는 전체 시스템 환경에 대한 메모리 사용량 세부사항이 있습니다.
@@ -209,7 +430,7 @@ RSS 리더에 붙여넣으십시오.
 	* 조직의 할당량 플랜을 보고 편집하려면 목록에서 해당 조직의 이름을 클릭하십시오. 
 	* 조직의 이름을 편집하고 관리자를 추가 또는 제거하려면 목록에서 조직의 이름을 클릭하십시오. 
 
-## 사용자 및 권한 관리
+### 사용자 및 권한 관리
 {: #oc_useradmin}
 LDAP를 통해 회사의 사용자 레지스트리에서 {{site.data.keyword.Bluemix_notm}} 인스턴스에 사용자를 추가할 수 있습니다. 
 사용자를 단독으로 또는 그룹으로 추가하고 사용자 권한을 볼 수 있습니다. 
@@ -223,7 +444,7 @@ LDAP를 통해 회사의 사용자 레지스트리에서 {{site.data.keyword.Blu
 `보고서` 및 `사용자`일 수 있습니다. 권한을 사용으로 설정하거나
 사용자에게 아이콘에 의해 표시되는 대로 해당 권한에 대한 `보기` 또는 `쓰기` 능력을
 지정할 수 있습니다. 각 유형 및 아이콘에 대한 설명은
-[권한](#permissions)의 내용을 참조하십시오.  
+[권한](#permissions)의 내용을 참조하십시오. 
 
 다음 옵션에서 선택하십시오.
 * 사용자를 찾으십시오. 맨 위의 **검색** 필드를 사용하여 테이블에서 사용자를
@@ -252,15 +473,15 @@ LDAP를 통해 회사의 사용자 레지스트리에서 {{site.data.keyword.Blu
 `사용자` 권한(`쓰기` 능력 포함)이 있으면 사용자를 제거할 수 있습니다.
 사용자를 제거하려면 사용자를 찾고 ![삭제](images/icon_trash.png) 아이콘을 클릭한 후 **제거**를 클릭하십시오.
 
-### 권한
+#### 권한
 {: #permissions}
 
 사용자에게 다음 권한을 지정할 수 있습니다. 
 
-| **사용자 권한** | **설명** |       
+| **사용자 권한** | **설명** |
 |-----------------|-------------------|
-| 관리 | `관리` 권한이 있는 사용자는 다른 사용자의 권한을 편집할 수 있습니다.  | 
-| 카탈로그 | `카탈로그` 권한이 있는 사용자에게는 로컬 또는 전용 인스턴스에서 사용 가능한 서비스에 대한 `보기` 또는 `쓰기`(수정) 능력이 지정될 수 있습니다.  |  
+| 관리 | `관리` 권한이 있는 사용자는 다른 사용자의 권한을 편집할 수 있습니다.  |
+| 카탈로그 | `카탈로그` 권한이 있는 사용자에게는 로컬 또는 전용 인스턴스에서 사용 가능한 서비스에 대한 `보기` 또는 `쓰기`(수정) 능력이 지정될 수 있습니다.  |
 | 로그인 | `로그인` 권한이 있는 사용자는 관리 콘솔에 로그인할 수 있습니다. 
 이 권한이 없으면 사용자가 로그인할 수 없습니다.  |
 | 보고서 | `보고서` 권한이 있는 사용자에게는 보안 보고서에 대한
@@ -282,7 +503,7 @@ LDAP를 통해 회사의 사용자 레지스트리에서 {{site.data.keyword.Blu
 능력을
 갖고 있음을 의미합니다.
 
-## Admin REST API를 통해 사용자 관리
+### Admin REST API를 통해 사용자 관리
 {: #usingadminapi}
 
 `Admin` REST API를 사용하여
@@ -301,7 +522,7 @@ LDAP를 통해 회사의 사용자 레지스트리에서 {{site.data.keyword.Blu
 JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합니다.
 [Python 다운로드 사이트](https://www.python.org/downloads){: new_window}에서 Python을 다운로드할 수 있습니다.
 
-### 관리 콘솔에 로그인
+#### 관리 콘솔에 로그인
 
 `Admin` API 요청을 실행하기 전에
 관리 콘솔에 로그인해야 합니다. `관리` 권한 또는
@@ -350,7 +571,7 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 ```
 {: screen}
 
-### 조직 나열
+#### 조직 나열
 {: #listingorg}
 
 사용자를 추가할 때 조직을 지정해야 합니다. `Admin` REST API를
@@ -371,11 +592,11 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 
 </dl>
 
-각 조직마다 결과에 다음 정보가 포함됩니다.  
+각 조직마다 결과에 다음 정보가 포함됩니다. 
 * `"guid"`: 조직의 GUID입니다.
 * `"name"`: 조직의 이름입니다.
 
-다음은 이 명령의 출력을 표시하는 예입니다.``` 
+다음은 이 명령의 출력을 표시하는 예입니다.```
 {
      "resources": [
          {
@@ -386,16 +607,16 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
              "guid": "5129a5a8-37c2-4ee4-a9b2-bebae3531db5",
              "name": "org-2"
          },
- 
+
 		 		 ....
-		 		 
+
 		 ],
 		 "total_results": 284
 }
 ```
 {: screen}
 
-### 사용자 나열
+#### 사용자 나열
 {: #listingusr}
 
 `Admin` REST API를 사용하여 등록된 사용자를 나열함으로써
@@ -414,7 +635,7 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 전달합니다.</dd>
 </dl>
 
-각 등록된 사용자마다 결과에 다음 정보가 포함되어 있습니다.  
+각 등록된 사용자마다 결과에 다음 정보가 포함되어 있습니다. 
 * `"first_name"`(이름) 및 `"last_name"`(성)
 * `"user_id"`: 사용자 ID 및 이메일 주소입니다.
 * `"guid"`: 조직의 GUID입니다.
@@ -463,8 +684,8 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
             "user_id": "someid@us.ibm.com"
         },
 		 		 ...
-		 		 
-		 		 
+
+
      }
     ],
     "total_pages": 395,
@@ -474,7 +695,7 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 ```
 {: screen}
 
-### 사용자 추가
+#### 사용자 추가
 
 `Admin` REST API를 사용하여
 {{site.data.keyword.Bluemix_notm}} 인스턴스에 사용자를 추가할 수 있습니다. 사용자를 추가하려면 `사용자`
@@ -559,7 +780,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 다음은 이 명령의 출력을 표시하는 예입니다.
 
-``` 
+```
 * Connected to localhost (127.0.0.1) port 3000 (#0)
  
  > POST /codi/v1/users HTTP/1.1
@@ -569,7 +790,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  > Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
  > Content-Type: application/json
  > Content-Length: 333
- > 
+ >
  * upload completely sent off: 333 out of 333 bytes
  &lt; HTTP/1.1 201 Created
  &lt; x-powered-by: Express
@@ -579,10 +800,10 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  &lt; connection: close
  &lt; transfer-encoding: chunked
  &lt; X-Time_Check: Proxy Time: 5612 msec
- ``` 
+ ```
 {: screen}
 
-### 사용자 제거
+#### 사용자 제거
 
 `Admin` REST API를 사용하여
 {{site.data.keyword.Bluemix_notm}} 인스턴스에서 사용자를 제거할 수 있습니다. 사용자를 제거하려면 `사용자`
@@ -619,10 +840,10 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  &lt; transfer-encoding: chunked
  &lt; X-Time_Check: Proxy Time: 1922 msec
  &lt; 
- ``` 
+ ```
 {: screen}
 
-## cf CLI를 사용하여 사용자 관리
+### cf CLI를 사용하여 사용자 관리
 {: #usingadmincli}
 
 {{site.data.keyword.Bluemix_notm}}
@@ -637,19 +858,19 @@ CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다.[Cloud Foundry
 Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 명령행 창에서 Cloud Foundry 명령행 인터페이스를 사용하십시오.
 
-### {{site.data.keyword.Bluemix_notm}} 관리
+#### {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인 추가
 
 cf 명령행 인터페이스가 설치된 후에 {{site.data.keyword.Bluemix_notm}}
 관리 CLI 플러그인을 추가할 수 있습니다.
 
-다음 단계를 완료하여 저장소를 추가하고 플러그인을 설치하십시오. 
+다음 단계를 완료하여 저장소를 추가하고 플러그인을 설치하십시오.
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오. <br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://opsconsole.<subdomain>;.bluemix.net/cli
-</code><br/><br/> 명령을 실행하십시오.
+cf add-plugin-repo BluemixAdmin https://opsconsole.&lt;subdomain&gt;.bluemix.net/cli
+</code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.</dd>
@@ -662,7 +883,7 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-### {{site.data.keyword.Bluemix_notm}} 관리
+#### {{site.data.keyword.Bluemix_notm}} 관리
 CLI 플러그인 사용
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI
@@ -681,7 +902,7 @@ CLI 플러그인 사용
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}}> API 엔드포인트를 연결하려면 <br/><br/>
 <code>
-cf api https://api.<subdomain>.bluemix.net
+cf api https://api.&lt;subdomain&gt;.bluemix.net
 </code> 명령을 실행하십시오.
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
@@ -702,7 +923,7 @@ cf login
 
 LDAP 레지스트리에서
 {{site.data.keyword.Bluemix_notm}} 환경에
-사용자를 추가할 수 있습니다. 다음 명령을 입력하십시오.  
+사용자를 추가할 수 있습니다. 다음 명령을 입력하십시오. 
 
 `cf bluemix-admin-add-user <user_name> <organization>`
 {: codeblock}
@@ -722,7 +943,7 @@ LDAP 레지스트리에서
 
 다음 명령을 입력하여
 {{site.data.keyword.Bluemix_notm}} 환경에서
-사용자를 제거할 수 있습니다.  
+사용자를 제거할 수 있습니다. 
 
 `cf bluemix-admin-remove-user <user_name>`
 {: codeblock}
@@ -773,7 +994,7 @@ LDAP 레지스트리에서
 
 {{site.data.keyword.Bluemix_notm}} 환경에서
 사용자를 특정 조직에 지정할 수
-있습니다. 다음 명령을 입력하십시오.  
+있습니다. 다음 명령을 입력하십시오. 
 
 `cf bluemix-admin-set-org <user_name> <organization> [<role>]`
 {: codeblock}
@@ -796,7 +1017,7 @@ LDAP 레지스트리에서
 
 {{site.data.keyword.Bluemix_notm}} 환경에서
 사용자를 특정 조직에서 지정 취소할 수
-있습니다. 다음 명령을 입력하십시오.  
+있습니다. 다음 명령을 입력하십시오. 
 
 `cf bluemix-admin-unset-org <user_name> <organization> [<role>]`
 {: codeblock}
@@ -815,7 +1036,7 @@ LDAP 레지스트리에서
 **팁:** 또한 긴 **bluemix-admin-unset-org** 명령어에 대한
 별명으로 **bauo**를 사용할 수 있습니다.
 
-### 역할
+#### 역할
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -832,9 +1053,9 @@ LDAP 레지스트리에서
 애플리케이션 및 서비스 컨텐츠를 볼 수 있습니다.</dd>
 </dl>
 
-### 조직에 할당량 설정
+#### 조직에 할당량 설정
 
-특정 조직에 사용 할당량을 설정할 수 있습니다.  
+특정 조직에 사용 할당량을 설정할 수 있습니다. 
 
 `cf bluemix-admin-set-quota <organization> <plan>`
 {: codeblock}
@@ -849,9 +1070,9 @@ LDAP 레지스트리에서
 **팁:** 또한 긴 **bluemix-admin-set-quota** 명령어에 대한
 별명으로 **basq**를 사용할 수 있습니다.
 
-### 보고서 추가, 삭제 및 검색
+#### 보고서 추가, 삭제 및 검색
 
-보안 보고서를 추가, 삭제 및 검색할 수 있습니다.  
+보안 보고서를 추가, 삭제 및 검색할 수 있습니다. 
 * 보고서를 추가하려면 다음 명령을 입력하십시오. 
 
 `cf bluemix-admin-add-report <category> <date> <PDF|TXT|LOG> <RTF>`
@@ -905,7 +1126,7 @@ LDAP 레지스트리에서
 
 **팁:** 또한 긴 **bluemix-admin-retrieve-report** 명령어에 대한 별명으로 **barr**를 사용할 수 있습니다.
 
-### 모든 조직에 대해 서비스 사용 또는 사용 안함
+#### 모든 조직에 대해 서비스 사용 또는 사용 안함
 
 모든 조직에 대해 {{site.data.keyword.Bluemix_notm}} 카탈로그에
 서비스를 표시하거나 표시하지 않을 수 있습니다. 
@@ -940,12 +1161,12 @@ LDAP 레지스트리에서
 **팁:** 또한 긴 **bluemix-admin-disable-service-plan** 명령어에 대한 별명으로
 **badsp**를 사용할 수 있습니다.
 
-### 조직에 대한 서비스 가시성 추가, 제거 및 편집
+#### 조직에 대한 서비스 가시성 추가, 제거 및 편집
 
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
 특정 서비스를 볼 수 있는 조직의 목록에 조직을 추가하거나 제거할 수 있습니다. 또한
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
-특정 조직이 볼 수 있는 서비스의 목록을 편집하거나 대체할 수도 있습니다.  
+특정 조직이 볼 수 있는 서비스의 목록을 편집하거나 대체할 수도 있습니다. 
 
 * 조직이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서
 특정 서비스를 볼 수 있도록 허용하려면 다음 명령을 입력하십시오. 

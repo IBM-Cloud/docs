@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} - Übersicht
 {: #overview}
 
-*Letzte Aktualisierung: 15. Oktober 2015*
+*Letzte Aktualisierung: 22. Oktober 2015*
 
 {{site.data.keyword.Bluemix}} ist die offene {{site.data.keyword.IBM}} Cloudplattform, die Entwicklern von mobilen Anwendungen und Webanwendungen Zugriff auf {{site.data.keyword.IBM_notm}} Software für Integration, Sicherheit, Transaktion und andere Schlüsselfunktionen sowie auf Software von Geschäftspartnern zur Verfügung stellt. {:shortdesc}
 
@@ -25,9 +25,9 @@ von {{site.data.keyword.IBM_notm}} verwaltet und Sie erhalten nur eine Rechnung 
 
 Durch das breite Angebot an Services und Laufzeiten in {{site.data.keyword.Bluemix_notm}} gewinnt der Entwickler mehr Steuerungsmöglichkeiten und Flexibilität. Er erhält Zugang zu verschiedenen Datenoptionen, von Vorhersageanalysen bis hin zu Big Data. 
 
-{{site.data.keyword.Bluemix_notm}} stellt die folgenden Funktionen bereit:
+{{site.data.keyword.Bluemix_notm}} stellt die folgenden Funktionen bereit: 
 
-- Eine Auswahl von Services, die eine schnelle Erstellung und Erweiterung von mobilen Apps und Web-Apps ermöglichen
+- Eine Auswahl von Services, die eine schnelle Erstellung und Erweiterung von mobilen Apps und Web-Apps ermöglichen 
 - Verarbeitungskapazität, die eine kontinuierliche Bereitstellung von Anwendungsänderungen ermöglicht
 - Zweckmäßige Programmiermodelle und Services
 - Verwaltungskomfort für Services und Apps
@@ -132,7 +132,7 @@ verfügbar sind, Sie können jedoch eine Verbindung zu allen öffentlichen Servi
 Alle Laufzeiten sind in der dedizierten Umgebung verfügbar. Alle dedizierten Bereitstellungen
 von {{site.data.keyword.Bluemix_notm}} beinhalten
 die folgenden Leistungen und Funktionen ohne gesonderte Berechnung: VPN, privates VLAN,
-Firewall, Konntektivität mit Ihrem LDAP, Möglichkeit zur Nutzung lokal (d. h. am eigenen Standort)
+Firewall, Konnektivität mit Ihrem LDAP, Möglichkeit zur Nutzung lokal (d. h. am eigenen Standort)
 vorhandener Datenbanken und Apps, 24/7-Sicherheit vor Ort, dedizierte Hardware und Standardunterstützung.  
 
 ![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png)
@@ -312,20 +312,19 @@ stehen die folgenden Regionen und Regionspräfixe zur Verfügung.
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Regionsname** | **Regionspräfix** | **cf API endpoint** | **Benutzerschnittstellenkonsole** |       
+| **Regionsname** | **Regionspräfix** | **cf-API-Endpunkt** | **Benutzerschnittstellenkonsole** |       
 |-----------------|-------------------|---------------------|----------------|
-| Region 'Vereinigte Staaten (Süden)' | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| Region 'Europa Vereinigtes Königreich' | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| Region 'Australien Sydney' | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| Region 'Vereinigte Staaten (Süden)' | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| Region 'Europa Vereinigtes Königreich' | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Region 'Australien Sydney' | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *Tabelle 1. Liste der {{site.data.keyword.Bluemix_notm}}-Regionen*
 
 ### Infrastruktur
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}}
-bietet Ihnen drei Möglichkeiten zur Ausführung Ihres Codes: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers
-und virtuelle Maschinen. Sie können die richtige Infrastruktur für die Bereitstellung Ihrer Apps auswählen. 
+{{site.data.keyword.Bluemix_notm}} bietet Ihnen drei Möglichkeiten zur Ausführung Ihres Codes: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers und Virtual Machines. {{site.data.keyword.IBM_notm}} Containers und Virtual Machines sind nur im Süden der USA (US South) und in der Region 'Europa Vereinigtes Königreich' (Europe United Kingdom) verfügbar. Sie können die richtige Infrastruktur für die Bereitstellung Ihrer Apps auswählen.  
 
 <dl>
 <dt>Cloud Foundry</dt>
@@ -607,7 +606,7 @@ unterstützt neben Englisch noch weitere Landessprachen. Es sind jedoch nicht al
 * [Voraussetzungen für {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Bekannte Probleme in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}}-Glossar](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}}-Glossar](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps-Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

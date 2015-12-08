@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2015년 10월 15일*
+*마지막 업데이트 날짜: 2015년 11월 9일*
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
@@ -299,11 +299,11 @@ SQL을 사용하여 데이터를 마스킹하기 위해
 
 ### dashDB
 
-dashDB 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 사용자 인증용 IBM Directory Server LDAP와 IBM InfoSphere Guardium Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
+dashDB 서비스는 사용자 인증을 위한 내장된 LDAP 서버를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
 SSL 인증서에 의해 보호됩니다. 이 서비스는 배치된 데이터베이스와 데이터베이스 백업을 자동으로 암호화하기 위해 DB2® 원시 암호화 기능을 사용합니다. 마스터 키 회전은 자동이고 90일마다
 수행됩니다.
 
-자세한 정보는 [dashDB 시작하기](services/dashDB/index.html)를 참조하십시오.
+자세한 정보는 [dashDB 시작하기](../services/dashDB/index.html)를 참조하십시오.
 
 ### Cloud Integration
 

@@ -1,20 +1,20 @@
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.Bluemix_notm}} 安全性
+# {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2015 年 10 月 15 日*
+*上次更新时间：2015 年 11 月 9 日*
 
-{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全性进行控制。{{site.data.keyword.Bluemix_notm}} 还提供了一套安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
+{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 还提供了一套安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 遵循由 IBM 中的最佳做法驱动的系统、网络和安全工程方面的安全策略，从而确保安全就绪性。这些策略包括源代码扫描、动态扫描、威胁建模和渗透测试等做法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM 产品安全事件响应小组 (PSIRT) 的安全事件管理流程。有关详细信息，请参阅 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) 站点。
 
-{{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 使用 IBM SoftLayer 基础架构即服务 (IaaS) 云服务，并充分利用了其安全体系结构。SoftLayer IaaS 提供了多个重叠层来保护应用程序和数据。对于 {{site.data.keyword.Bluemix_notm}} Local，通过在位于公司防火墙后的自己的数据中心托管 {{site.data.keyword.Bluemix_notm}} Local，您可拥有物理安全性并提供基础架构。此外，{{site.data.keyword.Bluemix_notm}} 还在“平台即服务”层添加了不同类别（平台、数据和应用程序）的安全功能。
+{{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 使用 IBM SoftLayer 基础架构即服务 (IaaS) 云服务，并充分利用了其安全体系结构。SoftLayer IaaS 提供了多个重叠层来保护应用程序和数据。对于 {{site.data.keyword.Bluemix_notm}} Local，通过在位于公司防火墙后您自己的数据中心托管 {{site.data.keyword.Bluemix_notm}} Local，您可以拥有物理安全并提供基础架构。此外，{{site.data.keyword.Bluemix_notm}} 还在“平台即服务”层添加了不同类别（平台、数据和应用程序）的安全功能。
 
-## {{site.data.keyword.Bluemix_notm}} 平台安全性
+## {{site.data.keyword.Bluemix_notm}} 平台安全
 {: #platform-security}
 
-{{site.data.keyword.Bluemix_notm}} 为核心平台提供了功能性、基础架构、操作和物理安全（通过 IBM SoftLayer）。但是，{{site.data.keyword.Bluemix_notm}} Local 的独特之处在于客户会提供基础架构和数据中心，并拥有物理安全性。
+{{site.data.keyword.Bluemix_notm}} 为核心平台提供了功能性、基础架构、操作和物理安全（通过 IBM SoftLayer）。但是，{{site.data.keyword.Bluemix_notm}} Local 的独特之处在于客户会提供基础架构和数据中心，并拥有物理安全。
 
 基于 SoftLayer 的 {{site.data.keyword.Bluemix_notm}} 环境符合最严格的 IBM 信息技术 (IT) 安全标准，该标准已达到或超过业界标准。这些标准包括以下方面：网络、数据加密和访问控制
  * 应用程序 ACL、许可权和渗透测试
@@ -25,15 +25,15 @@
  * 拒绝服务和系统化攻击检测
  * 安全事件响应
 
-![Bluemix 平台安全性概况](images/platform_sec.png)
+![Bluemix 平台安全概况](images/platform_sec.png)
 
-*图 1. {{site.data.keyword.Bluemix_notm}} 平台安全性概况*
+*图 1. {{site.data.keyword.Bluemix_notm}} 平台安全概况*
 
-{{site.data.keyword.Bluemix_notm}} Local 的安全性因您拥有的通过在公司防火墙后的数据中心托管 Bluemix 的特定安全性部分而不同。下图详细描述了哪些安全性部分是客户拥有的，哪些安全性部分是由 IBM 管理并维护的。
+因为通过在公司防火墙后的数据中心托管 Bluemix，您可以拥有特定的安全机制，所以 {{site.data.keyword.Bluemix_notm}} Local 的安全会有所不同。下图详细描述了哪些安全机制是客户拥有的，哪些是由 IBM 管理和维护的。
 
-![Bluemix Local 平台安全性概况](images/security_local_platform.png)
+![Bluemix Local 平台安全概况](images/security_local_platform.png)
 
-*图 2. {{site.data.keyword.Bluemix_notm}} Local 平台安全性概况*
+*图 2. {{site.data.keyword.Bluemix_notm}} Local 平台安全概况*
 
 ### 功能性安全
 
@@ -89,7 +89,7 @@ HTTP 不活动超时为 2 分钟。
 
 <dl>
 <dt>环境隔离</dt>
-<dd> 对于 {{site.data.keyword.Bluemix_notm}} Public，开发环境和生产环境彼此隔离，可提高应用程序稳定性和安全性。</dd>
+<dd> 对于 {{site.data.keyword.Bluemix_notm}} Public，开发环境和生产环境彼此隔离，可提高应用程序稳定性和安全。</dd>
 
 <dt>防火墙</dt>
 <dd> 防火墙已落实到位，可限制对 {{site.data.keyword.Bluemix_notm}} 网络的访问。对于 {{site.data.keyword.Bluemix_notm}} Local，公司防火墙会将您的 {{site.data.keyword.Bluemix_notm}} 实例与网络中的其余部分隔离开。</dd>
@@ -100,8 +100,8 @@ HTTP 不活动超时为 2 分钟。
 <dt>安全应用程序容器管理</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 应用程序彼此是隔开的，每个应用程序都在其自己的容器中运行，而每个容器都具有特定的处理器、内存和磁盘资源限制。</dd>
 
-<dt>加强操作系统安全性</dt>
-<dd>IBM 管理员使用多种工具（例如 IBM Endpoint Manager）定期加强网络和操作系统安全性。</dd>
+<dt>加强操作系统安全</dt>
+<dd>IBM 管理员使用多种工具（例如 IBM Endpoint Manager）定期加强网络和操作系统安全。</dd>
 </dl>
 
 ### 操作安全
@@ -125,13 +125,13 @@ HTTP 不活动超时为 2 分钟。
 
 ### 物理安全
 
-{{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 依赖 SoftLayer 的网中网拓扑来确保物理网络安全。此网中网体系结构可确保只有经过授权的人员才能对系统进行完全访问。对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有本地实例的物理安全性。您的数据中心位于公司防火墙后，受到防火墙的保护。
+{{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 依赖 SoftLayer 的网中网拓扑来确保物理网络安全。此网中网体系结构可确保只有经过授权的人员才能对系统进行完全访问。对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有本地实例的物理安全。您的数据中心位于公司防火墙后，受到防火墙的保护。
 
 在 SoftLayer 网中网内，公用网络层会处理受托管 Web 站点或联机资源的公共流量。专用网络层允许通过不同的独立第三方运营商经由 SSL、PPTP 或 IPSec VPN 网关进行真正的带外管理。数据中心到数据中心网络层会为位于不同 SoftLayer 设施中的服务器提供免费、安全的连接。
 
 每个 SoftLayer 数据中心都通过符合 SSAE 16 和业界公认要求的控件进行全面保护，无一例外。有关更多信息，请参阅“SoftLayer 安全合规性”页面。
 
-## 数据安全性
+## 数据安全
 {: #data-security}
 
 使用 {{site.data.keyword.Bluemix_notm}} 时，需要您与 {{site.data.keyword.Bluemix_notm}} 共同努力来保护数据，以防止未经授权的访问。
@@ -149,13 +149,13 @@ HTTP 不活动超时为 2 分钟。
 <dd>当前未存储但在某个端点上正在使用的数据。</dd>
 </dl>
 
-在规划数据安全性时，每种类型的数据都需要考虑到。
+在规划数据安全时，每种类型的数据都需要考虑到。
 
 {{site.data.keyword.Bluemix_notm}} 平台使用 SSL 来确保最终用户能够以安全方式访问应用程序，从而确保传输中的数据能够经由网络安全地到达位于 {{site.data.keyword.Bluemix_notm}} 内部网络边界上的 IBM DataPower Gateway。IBM DataPower Gateway 起到逆向代理的作用，可提供 SSL 终止功能。
 
-对于使用中的数据和静态数据，其安全性由您负责，因为您在开发应用程序。您可以利用 {{site.data.keyword.Bluemix_notm}} 目录中提供的几个数据相关服务来帮助您解决这些问题。
+对于使用中的数据和静态数据，其安全由您负责，因为您在开发应用程序。您可以利用 {{site.data.keyword.Bluemix_notm}}“目录”中提供的几个数据相关服务来帮助您解决这些问题。
 
-## {{site.data.keyword.Bluemix_notm}} 应用程序安全性
+## {{site.data.keyword.Bluemix_notm}} 应用程序安全
 {: #application-security}
 
 作为应用程序开发者，您必须为 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序启用安全配置，包括应用程序数据保护。
@@ -177,7 +177,7 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 <dt>Cloud Directory</dt>
 <dd>在 IBM Cloud 中托管的用户注册表。</dd>
 
-<dt>社会身份源</dt>
+<dt>社交身份源</dt>
 <dd> 由 Google、Facebook 和 LinkedIn 维护的用户注册表。</dd>
 </dl>
 
@@ -185,39 +185,39 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 ### AppScan Mobile Analyzer
 
-此服务提供对 Android 移动应用程序的安全性分析。要使用此服务，必须将编译的 Android 应用程序以 APK 文件形式进行上传。安全性分析扫描完成后，即可下载报告。
+此服务提供对 Android 移动应用程序的安全分析。要使用此服务，必须将编译的 Android 应用程序以 APK 文件形式进行上传。安全分析扫描完成后，即可下载报告。
 
 有关更多信息，请参阅 [AppScan Mobile Analyzer 入门](../services/AppScanMobileAnalyzer/index.html)。
 
 ### AppScan Dynamic Analyzer
 
-此服务通过动态分析工具提供对 Web 应用程序的安全性分析。此工具用于处理已部署的 Web 应用程序，而不是应用程序源代码，并且可以扫描任何 {{site.data.keyword.Bluemix_notm}} Web 应用程序，与其语言或技术无关。您只能扫描所属组织的应用程序。要创建扫描，必须配置 Web 应用程序 URL 和登录凭证（如果有的话）。扫描完成后，即可下载报告。
+此服务通过动态分析工具提供对 Web 应用程序的安全分析。此工具用于处理已部署的 Web 应用程序，而不是应用程序源代码，并且可以扫描任何 {{site.data.keyword.Bluemix_notm}} Web 应用程序，与其语言或技术无关。您只能扫描所属组织的应用程序。要创建扫描，必须配置 Web 应用程序 URL 和登录凭证（如果有的话）。扫描完成后，即可下载报告。
 
 有关更多信息，请参阅 [AppScan Dynamic Analyzer 入门](../services/AppScanDynamicAnalyzer/index.html)。
 
 ### Mobile Analyzer for iOS (Beta)
 
-Mobile Analyzer for iOS 服务提供对 iOS 移动应用程序的 AppScan 动态安全性分析。可帮助您识别 iOS 移动应用程序中的身份安全性问题。
+Mobile Analyzer for iOS 服务提供对 iOS 移动应用程序的 AppScan 动态安全分析。可帮助您识别 iOS 移动应用程序中的身份安全问题。
 
 有关更多信息，请参阅 [Mobile Analyzer for iOS 入门](../services/AppScanIOS/index.html)。
 
 ### Static Analyzer (Beta)
 
-Static Analyzer 服务支持在云上执行静态应用程序安全性测试。可帮助您在软件开发生命周期的早期找出源代码漏洞，以便在部署之前修复这些漏洞。
+Static Analyzer 服务支持在云上执行静态应用程序安全测试。可帮助您在软件开发生命周期的早期找出源代码漏洞，以便在部署之前修复这些漏洞。
 
 通过 Static Analyzer，可以使用命令行界面 (CLI) 在本地磁盘上扫描 Java 和 Java Web 内容。此外，还可以运行一个小型安装程序，以将 Static Analyzer 插件添加到 Eclipse 或 Maven 中。您可以使用客户机实用程序来扫描和收集有关文件的信息，这会生成一个归档文件，将该归档文件提交到云上之后，即可获取扫描结果。
 
 有关更多信息，请参阅 [IBM Static Analyzer for Bluemix 入门](../services/StaticAnalyzer/index.html)。
 
-### 用于应用程序安全性测试的 IBM UrbanCode 插件
+### 用于应用程序安全测试的 IBM UrbanCode 插件
 
-通过 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 插件，可以对在 {{site.data.keyword.Bluemix_notm}} 上托管的 Web 或 Android 应用程序运行安全性扫描。此插件由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上开发并提供支持。
+通过 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 插件，可以对在 {{site.data.keyword.Bluemix_notm}} 上托管的 Web 或 Android 应用程序运行安全扫描。此插件由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上开发并提供支持。
 
 有关更多信息，请转至 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/)。
 
 ### SQL Database
 
-SQL Database 服务会将完全配置且运行正常的关系数据库添加到您的应用程序中。此服务使用 IBM Directory Server LDAP 进行认证，并使用 IBM InfoSphere® Guardium® Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 DigiCert 签署的 SSL 证书保护。
+SQL Database 服务会将完整配置的关系数据库添加到您的应用程序。此服务使用 IBM Directory Server LDAP 进行认证，并使用 IBM InfoSphere® Guardium® Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 DigiCert 签署的 SSL 证书保护。
 
 在包含此服务的某些套餐中，可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 数据库控制台来获取包含以下信息的报告：
 
@@ -231,9 +231,9 @@ SQL Database 服务会将完全配置且运行正常的关系数据库添加到�
 
 ### dashDB
 
-dashDB 服务使用 IBM Directory Server LDAP 进行用户认证，并使用 IBM InfoSphere Guardium Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 SSL 证书保护。此服务使用 DB2® 本机加密功能，以自动加密已部署的数据库和数据库备份。主密钥轮替每 90 天自动执行一次。
+dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和数据库之间的连接由 SSL 证书保护。此服务使用 DB2® 本机加密功能，以自动加密已部署的数据库和数据库备份。主密钥轮替每 90 天自动执行一次。
 
-有关更多信息，请参阅 [dashDB 入门](services/dashDB/index.html)。
+有关更多信息，请参阅 [dashDB 入门](../services/dashDB/index.html)。
 
 ### Cloud Integration
 
@@ -252,12 +252,12 @@ dashDB 服务使用 IBM Directory Server LDAP 进行用户认证，并使用 IBM
 
 为了确保访问安全，{{site.data.keyword.Bluemix_notm}} 安全部署体系结构包含适用于应用程序用户和开发者的不同信息流。
 
-![Bluemix 安全性部署体系结构](images/sec_deployment.png)
+![Bluemix 安全部署体系结构](images/sec_deployment.png)
 
-*图 3. Bluemix 安全性部署体系结构*
+*图 3. Bluemix 安全部署体系结构*
 
 适用于 {{site.data.keyword.Bluemix_notm}} *应用程序用户*的信息流如下所示：
- 1. 经过具有适当入侵防御功能和网络安全性的防火墙。
+ 1. 经过具有适当入侵防御功能和网络安全的防火墙。
  2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
  3. 经过网络路由器。
  4. 到达 Droplet Execution Agent (DEA) 中的应用程序运行时。
@@ -269,17 +269,17 @@ dashDB 服务使用 IBM Directory Server LDAP 进行用户认证，并使用 IBM
       2. 经过 IBM Web 身份。
     * 对于要登录到 {{site.data.keyword.Bluemix_notm}} Dedicated 或 Local 的开发者，信息流将经过企业 LDAP。
  * 用于应用程序开发和部署的开发者信息流如下所示：
-    1. 经过具有适当入侵防御功能和网络安全性的防火墙。这仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated。
+    1. 经过具有适当入侵防御功能和网络安全的防火墙。这仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated。
     2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
     3. 经过网络路由器。
     4. 经过授权（通过使用 Cloud Foundry 云控制器），以确保仅访问开发者创建的应用程序和服务实例。
 
 除了这些方法中描述的用户，经过授权的 IBM 安全操作团队还会执行各种操作安全任务，例如：
- * 漏洞扫描。对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有防火墙内的物理安全性和任何扫描。
+ * 漏洞扫描。对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有防火墙内的物理安全和任何扫描。
  * 用户访问管理。
- * 通过使用 IBM Endpoint Manager 定期应用修订，加强操作系统安全性。
+ * 通过使用 IBM Endpoint Manager 定期应用修订，加强操作系统安全。
  * 通过入侵防御来管理风险。
- * 使用 QRadar 监视安全性。
+ * 使用 QRadar 监视安全。
  * 通过管理控制台提供安全报告。
 
 # 相关链接

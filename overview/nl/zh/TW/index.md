@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} 概觀
 {: #overview}
 
-*前次更新：2015 年 10 月 15 日*
+*前次更新：2015 年 10 月 22 日*
 
 {{site.data.keyword.Bluemix}} 是一種 {{site.data.keyword.IBM}} 開放雲端平台，提供 {{site.data.keyword.IBM_notm}} 軟體的存取權給行動式和 Web 開發人員，以使用整合、安全、交易以及其他關鍵功能，還可以存取事業夥伴提供的軟體。{:shortdesc}
 
@@ -17,7 +17,7 @@
 {{site.data.keyword.Bluemix_notm}} 提供下列特性：
 
 - 一系列服務，可讓您快速建置和延伸 Web 應用程式和行動式應用程式。
-- 強大的處理能力，以持續交付應用程式變更。
+- 強大的處理能力，以讓您連續地交付應用程式變更。
 - 針對目標的程式設計模型和服務。
 - 服務和應用程式可管理性。
 - 最佳化的彈性工作量。
@@ -29,7 +29,7 @@
 
 {{site.data.keyword.Bluemix_notm}} 還提供應用中介軟體服務供應用程式使用。{{site.data.keyword.Bluemix_notm}} 會在佈建新服務實例並將這些服務連結到應用程式時，代表應用程式執行操作。您的應用程式可以執行實際的工作，並將服務的管理作業保留給基礎架構。
 
-一般而言，您在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時不必擔心作業系統及基礎架構層。例如根檔案系統及中介軟體元件等層會抽象化，因此您可以專注於應用程式碼。不過，如果您需要應用程式執行處的特性，可以進一步瞭解這些層。如需詳細資料，請參閱[檢視 {{site.data.keyword.Bluemix_notm}} 基礎架構層](../cli/viewinfra.html#viewinfra)。 
+一般而言，您在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時不必擔心作業系統及基礎架構層。例如根檔案系統及中介軟體元件等層會抽象化，因此您可以專注於應用程式碼。不過，如果您需要應用程式執行位置的明確資訊，可以進一步瞭解這些層。如需詳細資料，請參閱[檢視 {{site.data.keyword.Bluemix_notm}} 基礎架構層](../cli/viewinfra.html#viewinfra)。 
 
 ## {{site.data.keyword.Bluemix_notm}} 架構
 {: #ov_arch}
@@ -43,7 +43,8 @@
 
 身為開發人員，您可以利用以瀏覽器為基礎的使用者介面，來與 {{site.data.keyword.Bluemix_notm}} 基礎架構互動。您也可以使用 Cloud Foundry 指令行介面（稱為 cf）來部署 Web 應用程式。
 
-用戶端（可以是行動式應用程式、外部執行的應用程式、建置在 {{site.data.keyword.Bluemix_notm}} 上的應用程式，或使用瀏覽器的開發人員）可以與 {{site.data.keyword.Bluemix_notm}} 管理的應用程式互動。用戶端會使用 REST 或 HTTP API，透過 {{site.data.keyword.Bluemix_notm}} 將要求遞送到其中一個應用程式實例或複合式服務。
+用戶端（可以是行動式應用程式、外部執行的應用程式、以 {{site.data.keyword.Bluemix_notm}}
+為建置基礎的應用程式，或使用瀏覽器的開發人員）可以與 {{site.data.keyword.Bluemix_notm}} 管理的應用程式互動。用戶端會使用 REST 或 HTTP API，透過 {{site.data.keyword.Bluemix_notm}} 將要求遞送到其中一個應用程式實例或複合式服務。
 
 下圖顯示高階 {{site.data.keyword.Bluemix_notm}} 架構。
 
@@ -60,9 +61,9 @@
 ### {{site.data.keyword.Bluemix_notm}} 專用
 {: #dedicated}
 
-「{{site.data.keyword.Bluemix_notm}} 專用」是您專屬的專用 SoftLayer 環境，此環境會安全地連接至公用 {{site.data.keyword.Bluemix_notm}} 及您的專屬網路。「{{site.data.keyword.Bluemix_notm}} 專用」位於透過 VPN 或直接網路連線的網路。您的單一承租戶硬體可以設定於全球的任何 SoftLayer 資料中心。{{site.data.keyword.IBM_notm}} 會管理專用平台及專用服務，因此您可以專注於建置自訂應用程式。此外，{{site.data.keyword.IBM_notm}} 還會在您選取的維護時間期間執行專用實例的所有維護。
+「{{site.data.keyword.Bluemix_notm}} 專用」是您專用的 SoftLayer 環境，此環境同時安全地連接至公用 {{site.data.keyword.Bluemix_notm}} 及您自己的網路。「{{site.data.keyword.Bluemix_notm}} 專用」位於透過 VPN 或直接網路連線的網路。您的單一承租戶硬體可以設定於全球的任何 SoftLayer 資料中心。{{site.data.keyword.IBM_notm}} 會管理專用平台及專用服務，因此您可以專注於建置自訂應用程式。此外，{{site.data.keyword.IBM_notm}} 還會在您選取的維護時間範圍執行專用實例的所有維護。
 
-{{site.data.keyword.IBM_notm}} 具有可用於您專用環境的數種服務，但您可以連接至所有公用服務。所有執行時期都可用於專用環境。{{site.data.keyword.Bluemix_notm}} 的所有專用部署都包括下列好處及特性，而且沒有額外成本：VPN、專用 VLAN、防火牆、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力、 24 小時全年無休的現場安全、專用硬體及標準支援。 
+{{site.data.keyword.IBM_notm}} 具有可用於您專用環境的數種服務，但您可以連接至所有公用服務。所有執行時期都可用於專用環境。{{site.data.keyword.Bluemix_notm}} 的所有專用部署都包括下列好處及特性，而且不需額外付費：VPN、專用 VLAN、防火牆、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力、24 小時全年無休的現場安全防護、專用硬體及標準支援。 
 
 ![{{site.data.keyword.Bluemix_notm}} 專用](images/dedicated.png)
 
@@ -71,11 +72,13 @@
 ### {{site.data.keyword.Bluemix_notm}} 本端
 {: #local}
 
-「{{site.data.keyword.Bluemix_notm}} 本端」是您在資料中心中部署並受公司防火牆保護的專屬 {{site.data.keyword.Bluemix_notm}} 實例。使用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以安全地連接「{{site.data.keyword.Bluemix_notm}} 公用」並與之同步。
+「{{site.data.keyword.Bluemix_notm}} 本端」是您自己的 {{site.data.keyword.Bluemix_notm}} 實例，它部署在資料中心內，並受公司防火牆保護。使用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以安全地連接「{{site.data.keyword.Bluemix_notm}} 公用」並與它同步。
 
-「{{site.data.keyword.Bluemix_notm}} 本端」包括專用同步型錄，其顯示只供您使用的本端服務。它也包括從中同步而且可讓您從「{{site.data.keyword.Bluemix_notm}} 公用」中使用的服務。所有執行時期都可用於本端環境。{{site.data.keyword.Bluemix_notm}} 的本端部署包括下列好處及特性，而且沒有額外成本：轉遞管理技術、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力，以及標準支援。
+「{{site.data.keyword.Bluemix_notm}} 本端」包含一份專用聯合型錄，它會顯示只供您使用的本端服務。它也包含來自「{{site.data.keyword.Bluemix_notm}}
+公用」，用來形成聯合組織且可供您使用的服務。所有執行時期都可用於本端環境。{{site.data.keyword.Bluemix_notm}} 的本端部署包括下列好處及特性，而且不需額外付費：轉遞管理技術、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力，以及標準支援。
 
-IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專注於事業。轉遞是一個「{{site.data.keyword.Bluemix_notm}} 本端」所含的交付功能，讓 IBM 自動且一致地遞送更新項目，因些您一律保有最新、穩定且安全的系統。轉遞會透過源自初始虛擬機器的開放式、出埠 SSL、VPN 通道來達成連線功能。透過此通道，IBM 可提供及維護您實例的平台、計算資源及服務。請參閱 [{{site.data.keyword.Bluemix_notm}} 本端](../local/index.html#local)。
+IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專注於事業。轉遞是「{{site.data.keyword.Bluemix_notm}} 本端」所含的交付功能，讓 IBM
+能自動且一致地交付更新項目，讓您始終保有最新、穩定且安全的系統。轉遞會透過源自初始虛擬機器的開放式、出埠 SSL、VPN 通道來達成連線功能。透過此通道，IBM 可以為您的實例提供及維護平台、運算資源及服務。請參閱 [{{site.data.keyword.Bluemix_notm}} 本端](../local/index.html#local)。
 
 ![{{site.data.keyword.Bluemix_notm}} 本端。](images/localarch.png "Bluemix 本端")
 
@@ -126,7 +129,7 @@ IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專�
 您的應用程式可以有一個以上的實例處於執行中狀態。一個應用程式有多個實例時，該應用程式只會上傳一次。不過，{{site.data.keyword.Bluemix_notm}} 會部署所要求的應用程式實例數，並將它們盡可能地分散在眾多 VM。
 
 您必須將所有持續資料儲存在應用程式之外的有狀態資料儲存庫，例如 {{site.data.keyword.Bluemix_notm}} 所提供的其中一個資料儲存庫服務上。因為記憶體中或磁碟上快取的任何內容可能無法使用（即使是重新啟動之後），所以您可以使用單一
-{{site.data.keyword.Bluemix_notm}} 實例的記憶體空間或檔案系統，作為簡要的單一交易快取記憶體。使用單一實例設定，對您應用程式的要求可能會因為 {{site.data.keyword.Bluemix_notm}} 的無狀態本質而岔斷。最佳作法是針對每一個應用程式至少使用三個實例，以確保應用程式的可用性。
+{{site.data.keyword.Bluemix_notm}} 實例的記憶體空間或檔案系統，作為簡要的單一交易快取記憶體。使用單一實例設定，對您應用程式的要求可能會因為 {{site.data.keyword.Bluemix_notm}} 的無狀態本質而受到中斷。最佳作法是針對每個應用程式至少使用三個實例，以確保應用程式的可用性。
 
 所有 {{site.data.keyword.Bluemix_notm}} 基礎架構、Cloud Foundry 元件及 {{site.data.keyword.IBM_notm}} 特有的管理元件都具有高可用性。使用基礎架構的多個實例來平衡負載。
 
@@ -138,7 +141,8 @@ IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專�
 ### 地區
 {: #ov_intro__reg}
 
-{{site.data.keyword.Bluemix_notm}} 地區是您可以在其中部署應用程式的已定義地理區。您可以使用進行應用程式管理的相同 {{site.data.keyword.Bluemix_notm}} 基礎架構，以及使用進行計費的相同使用詳細資料視圖，以在不同的地區中建立應用程式及服務實例。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以讓應用程式的延遲時間較短。您也可以選取要保留應用程式資料的地區來處理安全問題。在多個地區中建置應用程式時，如果關閉某個地區，則位於其他地區中的應用程式會繼續執行。您使用的每一個地區的資源額度都相同。
+{{site.data.keyword.Bluemix_notm}} 地區是您可以在其中部署應用程式的已定義地理區。您可以在不同地區建立應用程式及服務實例，使用相同
+{{site.data.keyword.Bluemix_notm}} 基礎架構以進行應用程式管理，以及使用相同的用量詳細資料視圖來處理計費。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以縮短應用程式的延遲時間。您也可以選取要保留應用程式資料的地區來處理安全問題。在多個地區中建置應用程式時，如果關閉某個地區，則位於其他地區中的應用程式會繼續執行。您使用的每一個地區的資源額度都相同。
 
 如果您使用的是 {{site.data.keyword.Bluemix_notm}} 使用者介面，則可以切換至不同地區，以使用該地區中的空間。
 
@@ -156,37 +160,38 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 | **地區名稱** | **地區字首** | **cf API 端點** | **使用者介面主控台** |       
 |-----------------|-------------------|---------------------|----------------|
-| 美國南部地區 | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| 歐洲英國地區 | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| 澳洲雪梨地區 | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| 美國南部地區 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| 歐洲英國地區 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| 澳洲雪梨地區 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *表 1. {{site.data.keyword.Bluemix_notm}} 地區清單*
 
 ### 基礎架構
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}} 提供三種執行程式碼的方式：Cloud Foundry、{{site.data.keyword.IBM_notm}} Containers 及虛擬機器。您可以挑選用於部署應用程式的正確基礎架構。
+{{site.data.keyword.Bluemix_notm}} 提供三種執行程式碼的方式：Cloud Foundry、{{site.data.keyword.IBM_notm}} Containers 及 Virtual Machines。{{site.data.keyword.IBM_notm}} Containers 及 Virtual Machines 只能在美國南部及歐洲英國地區使用。您可以挑選用於部署應用程式的正確基礎架構。 
 
 <dl>
 <dt>Cloud Foundry</dt>
     <dd>Cloud Foundry 基礎架構中所執行的應用程式可與現有 Cloud Foundry 應用程式搭配運作，而且可以連結至 {{site.data.keyword.Bluemix_notm}} 的「型錄」中可用的任何服務。使用此基礎架構，您可以開發及管理應用程式碼，而且 {{site.data.keyword.Bluemix_notm}} 會負責管理及維護讓那些應用程式功能更強大的基礎架構。</dd>
 <dt>{{site.data.keyword.IBM_notm}}Containers</dt>
-    <dd>使用 {{site.data.keyword.IBM_notm}} Containers 基礎架構，您可以在支援儲存器部署的任何位置執行 Web 應用程式。*儲存器* 是一個物件，可保留應用程式執行所需的所有項目。此基礎架構包括信任映像檔的專用登錄，所以您可以上傳、儲存及擷取它們。然後，您可以在 {{site.data.keyword.Bluemix_notm}} 中使用那些映像檔，以及管理平台中的儲存器。{{site.data.keyword.IBM_notm}} Containers 基礎架構會水平及垂直進行擴充。您可以使用公用「Docker 中心」中提供的所有映像檔，以及使用 Docker API
+    <dd>使用 {{site.data.keyword.IBM_notm}} Containers 基礎架構，您可以在支援儲存器部署的任何位置執行 Web 應用程式。*儲存器* 是一個物件，可保留應用程式執行所需的所有項目。此基礎架構包括信任映像檔的專用登錄，以便您可以上傳、儲存及擷取這些映像檔。然後，您可以在 {{site.data.keyword.Bluemix_notm}} 中使用那些映像檔，以及管理平台中的儲存器。{{site.data.keyword.IBM_notm}} Containers 基礎架構可進行水平及垂直擴充。您可以使用公用「Docker 中心」中提供的所有映像檔，以及使用 Docker API
 及指令行介面來管理 {{site.data.keyword.Bluemix_notm}} 上的儲存器。{{site.data.keyword.IBM_notm}} 也在「Containers 登錄」中提供部分公用映像檔，您可以使用並擴充。
     {{site.data.keyword.IBM_notm}} Containers 用來在受管理的雲端環境中執行 Docker 儲存器。Docker 會新增引擎，該引擎會將應用程式部署至用於執行儲存器的虛擬環境。Docker 也提供可用來執行程式碼的環境。在您備妥時，會提供各種方法，讓您可以將程式碼從開發環境傳送至測試環境，然後再傳送至正式作業環境。
 
     若要進一步瞭解 {{site.data.keyword.IBM_notm}} Containers，請參閱「建立 Web 應用程式」文件中的 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
-<dt>虛擬機器（測試版）</dt>
-    <dd>{{site.data.keyword.Bluemix_notm}} 虛擬機器基礎架構讓您能夠在 {{site.data.keyword.IBM_notm}} 公用雲端上建立及管理虛擬機器群組。您也可以在專用 {{site.data.keyword.IBM_notm}} 雲端（已選擇提供給 {{site.data.keyword.Bluemix_notm}} 使用者）上建立及管理 VM 群組。基礎架構包括連接內部部署基礎架構的引導式體驗。{{site.data.keyword.Bluemix_notm}} 中整合了對於監視及記載的支援。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或雲端的 OpenStack API，部署及管理您的虛擬機器。
-    {{site.data.keyword.Bluemix_notm}} 上的虛擬機器支援虛擬機器群組佈建，且具有自動擴充的功能。透過這項支援，實例數可以根據 CPU 負載或實例的失敗而自動增加或減少。此外，也支援負載平衡，可以視需要指派虛擬 IP（浮動 IP）位址。
+<dt>Virtual Machines（測試版）</dt>
+    <dd>{{site.data.keyword.Bluemix_notm}} 虛擬機器基礎架構讓您能夠在 {{site.data.keyword.IBM_notm}} 公用雲端上建立及管理虛擬機器群組。您也可以在專用 {{site.data.keyword.IBM_notm}} 雲端（已選擇提供給 {{site.data.keyword.Bluemix_notm}} 使用者）上建立及管理 VM 群組。基礎架構包含連接到內部部署基礎架構的引導式體驗。{{site.data.keyword.Bluemix_notm}} 中整合了對於監視及記載的支援。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或雲端的 OpenStack API，部署及管理您的虛擬機器。
+    {{site.data.keyword.Bluemix_notm}} 上的虛擬機器，能支援佈建具有自動擴充功能的虛擬機器群組。透過這項支援，實例數可以根據 CPU 負載或實例的失敗而自動增加或減少。此外，也支援負載平衡，可以視需要指派虛擬 IP（浮動 IP）位址。
 
-    若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} 虛擬機器，請參閱「建立 Web 應用程式」文件中的[虛擬機器](../virtualmachines/vm_index.html)。</dd>
+    若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} 虛擬機器，請參閱「建立 Web 應用程式」文件中的 [Virtual Machines](../virtualmachines/vm_index.html)。</dd>
 </dl>
 
 ### 應用程式
 {: #applications}
 
-在 {{site.data.keyword.Bluemix_notm}} 中，*應用程式* 代表開發人員正在建置的構件。{{site.data.keyword.Bluemix_notm}} 與 Cloud Foundry 中的應用程式生命週期完全相同，且與您將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 的方式無關。如需相關資訊，請參閱[應用程式編譯打包方式](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html)。
+在 {{site.data.keyword.Bluemix_notm}} 中，應用程式（或 *app*）代表開發人員正在建置的構件。{{site.data.keyword.Bluemix_notm}} 與 Cloud Foundry 中的應用程式生命週期完全相同，且與您將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 的方式無關。如需相關資訊，請參閱[應用程式編譯打包方式](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html)。
 
 <dl>
 <dt>行動式應用程式</dt>
@@ -200,7 +205,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ### 服務
 {: #services}
 
-*服務* 是一種由 {{site.data.keyword.Bluemix_notm}} 管理的雲端延伸。服務會提供已準備好供應用程式執行中程式碼使用的功能。{{site.data.keyword.Bluemix_notm}} 提供的預先定義服務包括資料庫、傳訊、用於行動式應用程式的推送通知，以及用於 Web 應用程式的彈性快取。
+*服務* 是一種由 {{site.data.keyword.Bluemix_notm}} 管理的雲端延伸。服務提供的功能可供應用程式的執行程式碼隨時使用。{{site.data.keyword.Bluemix_notm}} 提供的預先定義服務包括資料庫、傳訊、用於行動式應用程式的推送通知，以及用於 Web 應用程式的彈性快取。
 
 您可以在 {{site.data.keyword.Bluemix_notm}} 中建立自己的服務。這些服務的複雜性可能各不相同。它們可以是簡單的公用程式（例如，可在執行時期程式庫中看到的函數）。也可以是可在商業處理程序建模服務或資料庫中看到的複雜商業邏輯。
 
@@ -224,7 +229,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ### 建置套件
 {: #buildpacks}
 
-建置套件是 Script 的集合，用於準備好程式碼以在目標 PaaS 上執行。建置套件會收集應用程式的執行時期及架構相依關係。然後，將它們與應用程式一起包裝成可以部署至雲端的 Droplet。
+建置套件是 Script 的集合，能準備您的程式碼以在目標 PaaS 上執行。建置套件會收集應用程式的執行時期及架構相依關係。然後，將它們與應用程式一起包裝成可以部署至雲端的 Droplet。
 
 如果將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時未指定建置套件，則預設會使用內建建置套件。
 
@@ -255,24 +260,24 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 在雲端環境中，{{site.data.keyword.Bluemix_notm}} 可以透過連接以下兩個廣義種類的系統，來協助開發人員：記錄系統和參與系統。
 
-*記錄系統* 包括用於儲存商業記錄及自動執行標準化處理程序的應用程式及資料庫。*參與系統* 功能會延伸記錄系統的實用性，並使其更吸引使用者。透過整合記錄系統與在 {{site.data.keyword.Bluemix_notm}} 中建立的應用程式，您可以執行下列動作：
+*記錄系統* 包括用於儲存商業記錄及自動執行標準化處理程序的應用程式及資料庫。*參與系統* 是指延伸記錄系統的實用性並使其更吸引使用者的功能。透過整合記錄系統與在 {{site.data.keyword.Bluemix_notm}} 中建立的應用程式，您可以執行下列動作：
 
  * 透過下載並安裝內部部署的安全連接器，讓應用程式與後端資料庫之間能安全地通訊。
  * 以安全的方式呼叫資料庫。
  * 從含有資料庫及後端系統（例如客戶關係管理系統）的整合流程中建立 API。
  * 僅公開要向應用程式公開的綱目及表格。
- * {{site.data.keyword.Bluemix_notm}} 組織管理員可以將 API 發佈為只有組織成員才能看到的專屬服務。
+ * {{site.data.keyword.Bluemix_notm}} 組織管理員可以將 API 發佈為只有組織成員才能看到的專用服務。
 
-若要整合記錄系統與在 {{site.data.keyword.Bluemix_notm}} 中建立的應用程式，請使用 Cloud Integration 服務。利用 Cloud Integration 服務，您可以建立 Cloud Integration API 並將 API 發佈為組織的專屬服務。
+若要整合記錄系統與在 {{site.data.keyword.Bluemix_notm}} 中建立的應用程式，請使用 Cloud Integration 服務。利用 Cloud Integration 服務，您可以建立 Cloud Integration API 並將 API 發佈為組織的專用服務。
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>Cloud Integration API 透過 Web API 提供對防火牆內記錄系統的安全存取。建立 Cloud Integration API 時，您可以選擇要透過 Web API 存取的資源、指定允許的作業，以及包括 SDK 和範例來存取 API。如需如何建立 Cloud Integration API 的相關資訊，請參閱[建立 Cloud Integration API](../services/CloudIntegration/index.html#cloudint_add_service)。</dd>
-<dt>專屬服務</dt>
-    <dd>專屬服務包含 Cloud Integration API、SDK 及授權原則。此外，專屬服務可能包含來自服務提供者的文件或其他項目。只有組織管理員才能將 Cloud Integration API 發佈為專屬服務。若要查看您可以使用的專屬服務，請選取 {{site.data.keyword.Bluemix_notm}} 的「型錄」中的「專用」勾選框。您可以選取專屬服務，並將其連結至應用程式，而不需要連接至 Cloud Integration 服務。將專屬服務連結至應用程式的方式與其他 {{site.data.keyword.Bluemix_notm}} 服務相同。如需如何將 API 發佈為專屬服務的相關資訊，請參閱「將 API 發佈為專屬服務」。</dd>
+    <dd>使用 Cloud Integration API，可以透過 Web API 對位於防火牆後方的記錄系統進行安全存取。建立 Cloud Integration API 時，您可以選擇要透過 Web API 存取的資源、指定允許的作業，以及包括 SDK 和範例來存取 API。如需如何建立 Cloud Integration API 的相關資訊，請參閱[建立 Cloud Integration API](../services/CloudIntegration/index.html#cloudint_add_service)。</dd>
+<dt>專用服務</dt>
+    <dd>專用服務包含 Cloud Integration API、SDK 及授權原則。此外，專用服務可能包含來自服務提供者的文件或其他項目。只有組織管理員才能將 Cloud Integration API 發佈為專用服務。若要查看您可以使用的專用服務，請選取 {{site.data.keyword.Bluemix_notm}} 的「型錄」中的「專用」勾選框。您可以選取專用服務，並將其連結至應用程式，而不需要連接至 Cloud Integration 服務。將專用服務連結至應用程式的方式與其他 {{site.data.keyword.Bluemix_notm}} 服務相同。如需如何將 API 發佈為專用服務的相關資訊，請參閱「將 API 發佈為專用服務」。</dd>
 	</dl>
 
-### 實務範例：建立複合的行動式應用程式以與記錄系統相連接
+### 情境：建立複合的行動式應用程式以與記錄系統相連接
 {: #scenario}
 
 {{site.data.keyword.Bluemix_notm}} 提供了一個平台，您可以在該平台中整合行動式應用程式、雲端服務及企業記錄系統，以提供與內部部署資料互動的應用程式。
@@ -285,12 +290,12 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 整合開發人員會新增 Push 服務，以提供行動式通知給有興趣的客戶。此外，他還會新增事業夥伴服務，以在使用 Twitter API 建立新的客戶記錄後發佈推文。
 
-接著，身為應用程式開發人員，您可以登入 {{site.data.keyword.Bluemix_notm}}，下載 Android 開發工具箱，然後開發用於呼叫整合開發人員所建立 API 的程式碼。您可以開發一個行動式應用程式，讓使用者可以在其行動式裝置上輸入資訊。接著，行動式應用程式會在客戶管理系統中建立客戶記錄。建立記錄後，該應用程式會向行動式裝置推送通知，並起始關於新記錄的推文。
+接著，身為應用程式開發人員，您可以登入 {{site.data.keyword.Bluemix_notm}}，下載 Android 開發工具箱，然後開發用於呼叫整合開發人員所建立 API 的程式碼。您可以開發一個行動式應用程式，讓使用者可以在其行動式裝置上輸入資訊。接著，行動式應用程式會在客戶管理系統中建立客戶記錄。建立記錄後，該應用程式會向行動式裝置推送通知，並開始一則關於新記錄的推文。
 
 ## {{site.data.keyword.Bluemix_notm}} 的國家語言支援
 {: #lang}
 
-{{site.data.keyword.Bluemix_notm}} 支援英文以外的國家語言。不過，並未轉換 {{site.data.keyword.Bluemix_notm}} 隨附的所有內容。下表列出 {{site.data.keyword.Bluemix_notm}} 支援的國家語言及語言碼。
+{{site.data.keyword.Bluemix_notm}} 支援英文以外的國家語言。不過，{{site.data.keyword.Bluemix_notm}} 隨附的所有內容並未全部翻譯。下表列出 {{site.data.keyword.Bluemix_notm}} 支援的國家語言及語言碼。
 
 | **國家語言** | **語言碼** |
 |-------------------|---------------|
@@ -312,7 +317,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 * [{{site.data.keyword.Bluemix_notm}} 必要條件](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 已知問題](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} 名詞解釋](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

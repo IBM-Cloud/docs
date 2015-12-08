@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2015 年 10 月 15 日*
+*最終更新日: 2015 年 11 月 9 日*
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できるセキュリティー・サービス・スイートも備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。{:shortdesc}
 
@@ -42,7 +42,7 @@ SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制�
 
 <dl>
 <dt>認証</dt>
-<dd>アプリケーション開発者は、IBM Web ID を使用することで {{site.data.keyword.Bluemix_notm}} に対して認証されます。{{site.data.keyword.Bluemix_notm}} Dedicated および Local の場合、デフォルトで、LDAP を介した認証がサポートされます。ご要望に応じて、 {{site.data.keyword.Bluemix_notm}} に対して、代わりに IBM Web ID を介した認証をセットアップできます。
+<dd>アプリケーション開発者は、IBM Web ID を使用することで {{site.data.keyword.Bluemix_notm}} に対して認証されます。{{site.data.keyword.Bluemix_notm}} (Dedicated および Local) の場合、デフォルトで、LDAP を介した認証がサポートされます。ご要望に応じて、 {{site.data.keyword.Bluemix_notm}} に対して、代わりに IBM Web ID を介した認証をセットアップできます。
 </dd>
 
 <dt>許可</dt>
@@ -233,9 +233,9 @@ SQL を使用してデータをマスクするには、データベースと共�
 
 ### dashDB
 
-dashDB サービスでは、IBM Directory Server LDAP を使用してユーザー認証を行い、IBM InfoSphere Guardium Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、SSL 証明書によって保護されます。このサービスでは、DB2® 固有の暗号化機能を使用して、デプロイ済みのデータベースおよびデータベース・バックアップを自動的に暗号化します。マスター鍵のローテーションは、90 日ごとに自動で実施されます。
+dashDB サービスは、ユーザー認証に組み込み LDAP サーバーを使用します。アプリケーションとデータベースの間の接続は、SSL 証明書によって保護されます。このサービスでは、DB2® 固有の暗号化機能を使用して、デプロイ済みのデータベースおよびデータベース・バックアップを自動的に暗号化します。マスター鍵のローテーションは、90 日ごとに自動で実施されます。
 
-詳しくは、『[dashDB 入門 (Getting started with dashDB)](services/dashDB/index.html)』を参照してください。
+詳しくは、『[dashDB 入門 (Getting started with dashDB)](../services/dashDB/index.html)』を参照してください。
 
 ### Cloud Integration
 

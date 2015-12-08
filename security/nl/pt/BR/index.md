@@ -3,7 +3,7 @@
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última atualização: 15 de outubro de 2015* 
+*Última atualização: 9 de novembro de 2015*
 
 Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na
 rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} também
@@ -18,9 +18,7 @@ práticas, como varredura do código-fonte, varredura dinâmica, modelagem de am
 {{site.data.keyword.Bluemix_notm}} segue o processo IBM Product
 Security Incident Response Team (PSIRT) para gerenciamento de incidentes de segurança. Consulte o site [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) para obter detalhes.
 
-Os {{site.data.keyword.Bluemix_notm}} Public e
-Dedicated usam o serviço de nuvem IBM SoftLayer
-Infrastructure-as-a-Service (IaaS) e aproveita ao máximo sua arquitetura de segurança. O SoftLayer IaaS fornece várias camadas de sobreposição de
+{{site.data.keyword.Bluemix_notm}} Public e Dedicated usam s serviços de nuvem de Infraestrutura como Serviço (IaaS) do IBM SoftLayer e aproveitam ao máximo sua arquitetura de segurança. O SoftLayer IaaS fornece várias camadas de sobreposição de
 proteção para aplicativos e dados. Para {{site.data.keyword.Bluemix_notm}} Local, você possui a segurança física e fornece
 a infraestrutura hospedando o {{site.data.keyword.Bluemix_notm}} Local em seu próprio datacenter sob um firewall da empresa. Além disso, o {{site.data.keyword.Bluemix_notm}} inclui recursos de segurança na
 camada Plataforma como serviço em diferentes categorias: plataforma, dados e aplicativo.
@@ -77,6 +75,7 @@ autorização de acesso, auditoria de operações críticas e proteção de dado
 <dt>Autenticação</dt>
 <dd>Os desenvolvedores de aplicativos são autenticados no
 {{site.data.keyword.Bluemix_notm}} usando o IBM Web identity.
+
 Para {{site.data.keyword.Bluemix_notm}} Dedicado e Local,
 a autenticação por meio de LDAP é suportada por padrão. Sob solicitação, a autenticação por meio do
 IBM Web identity pode ser configurada em vez de {{site.data.keyword.Bluemix_notm}}.
@@ -387,11 +386,11 @@ O plano completo para esse serviço também inclui criptografia de dados. Para o
 
 ### dashDB
 
-O serviço dashDB usa o IBM Directory Server LDAP para autenticação do usuário e o IBM InfoSphere Guardium Data Activity Monitor para proteger o banco de dados que é acessado por aplicativos. A conexão entre
+O serviço dashDB usa um servidor LDAP integrado para autenticação do usuário. A conexão entre
 os aplicativos e o banco de dados é protegida pelos certificados SSL. Esse serviço usa o recurso de criptografia nativa do DB2® para criptografar automaticamente seu banco de dados implementado e os backups de banco de dados. A rotação da chave mestra é automática
 e acontece a cada 90 dias.
 
-Para obter mais informações, consulte [Introdução ao dashDB](services/dashDB/index.html).
+Para obter mais informações, consulte [Introdução ao dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 

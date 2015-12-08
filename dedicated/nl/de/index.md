@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Letzte Aktualisierung: 20. Oktober 2015*
+*Letzte Aktualisierung: 3. November 2015*
 
 {{site.data.keyword.Bluemix}} ist eine cloudbasierte
 Plattform mit offenen Standards für das Erstellen, Ausführen und Verwalten von Anwendungen. Mit
@@ -100,34 +100,18 @@ ein Abonnement für alle {{site.data.keyword.Bluemix_notm}} Public-Services. Sie
 	</li>
 <li>Sie wählen den <a href="http://www.softlayer.com/data-centers" target="_blank">Standort
 des SoftLayer-Rechenzentrums</a> für Ihre dedizierte Instanz aus. Anschließend werden Ihre dedizierte Plattform und Ihr Konto erstellt. Für Ihr Konto ermitteln Sie die Personen in Ihrer Organisation für die Rollen,
-die benötigt werden, um Ihre dedizierte Instanz betriebsbereit zu machen. Für jede Rolle gibt es einen entsprechenden IBM Ansprechpartner. <br />
-<p>Kundenrollen:</p>
+die benötigt werden, um Ihre dedizierte Instanz betriebsbereit zu machen. <br />
+<br />
 <dl>
 <dt>**Zentraler Ansprechpartner für das Beschaffungswesen**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an der Einrichtung Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung. Dazu gehört
-das Ermitteln geeigneter Personen in Ihrer Organisation für die Arbeit an den einzelnen Aspekten des Projekts. Diese Rolle überwacht die Musterauswahl, geschäftliche Vereinbarungen und die Regelung für den Zugang zu Kundenressourcen. Dieser zentraler Ansprechpartner ist der allgemeine Ansprechpartner für die Einrichtung der dedizierten Instanz. </dd>
+<dd>Arbeitet mit den IBM Ansprechpartnern zusammen an der Einrichtung Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung. Dazu gehört das Ermitteln geeigneter Personen in Ihrer Organisation für die Arbeit an den einzelnen Aspekten des Projekts. Diese Rolle überwacht die Musterauswahl, geschäftliche Vereinbarungen und die Regelung für den Zugang zu Kundenressourcen. Dieser zentraler Ansprechpartner ist der allgemeine Ansprechpartner für die Einrichtung der dedizierten Instanz. </dd>
 <dt>**Compliance-Manager**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um eine Topologie
-und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. Zudem legt der Compliance-Manager gemeinsam mit dem IBM Compliance-Berater fest, mit welchen Implementierungsmustern die Compliance-Ziele und -Zielsetzungen erreicht werden. </dd>
+<dd>Arbeitet mit den IBM Ansprechpartnern zusammen, um eine Topologie und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. Zudem legt der Compliance-Manager gemeinsam mit den IBM Compliance-Beratern fest, mit welchen Implementierungsmustern die Compliance-Ziele und -Zielsetzungen erreicht werden. </dd>
 <dt>**Netzspezialist**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an den Netzplänen für die {{site.data.keyword.Bluemix_notm}}-Bereitstellung.
-Diese Rolle stellt dem IBM Ansprechpartner die Anforderungen zur Verfügung
-und arbeitet am Implementierungsplan mit. Am Ende der Installations- und Verifizierungsphase zeichnet diese Rolle ab, dass die Netzkonfiguration im Einklang mit den Unternehmensstandards ist. </dd>
+<dd>Arbeitet mit den IBM Ansprechpartnern zusammen an den Netzplänen für die {{site.data.keyword.Bluemix_notm}}-Bereitstellung.
+Diese Rolle stellt den IBM Ansprechpartnern die Anforderungen zur Verfügung und arbeitet am Implementierungsplan mit. Am Ende der Installations- und Verifizierungsphase zeichnet diese Rolle ab, dass die Netzkonfiguration im Einklang mit den Unternehmensstandards ist. </dd>
 <dt>**Zentraler DevOps-Ansprechpartner**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um die für die {{site.data.keyword.Bluemix_notm}}-Plattform, -Services und -Laufzeiten benötigten Wartungsaktualisierungen zu planen und anzuwenden. Diese Rolle arbeitet auch mit dem
-IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zusammen. </dd>
-</dl>
-<p>IBM Rollen:</p>
-<dl>
-<dt>**IBM Bereitstellungsmanager**</dt>
-<dd>Arbeitet gemeinsam mit dem zentralen Ansprechpartner für das Beschaffungswesen des Kunden an der Erstellung der Umgebung des Kunden. </dd>
-<dt>**IBM Compliance-Berater**</dt>
-<dd>Arbeitet mit dem Compliance-Manager des Kunden zusammen, um eine Topologie
-und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. </dd>
-<dt>**IBM Netzspezialist**</dt>
-<dd>Arbeitet mit dem Netzspezialisten des Kunden zusammen an den Netzplänen für die Implementierung. Diese Rolle arbeitet gemeinsam mit dem Kunden, um anhand zusammengetragener Anforderungen einen Implementierungsplan zu erstellen. Zudem führt der Netzspezialist automatisierte Tests durch, um das physische Ergebnis des Implementierungsplans zu überprüfen. </dd>	
-<dt>**Zentraler IBM DevOps-Ansprechpartner**</dt>
-<dd>Arbeitet mit dem zentralen DevOps-Ansprechpartner des Kunden an der Installation und ständigen Wartung der Implementierungstopologie. Diese Rolle arbeitet mit dem Kunden zusammen, um die für die Plattform und Services erforderlichen Aktualisierungen zu planen und durchzuführen. </dd>
+<dd>Arbeitet mit den IBM Ansprechpartnern zusammen, um die für die {{site.data.keyword.Bluemix_notm}}-Plattform, -Services und -Laufzeiten benötigten Wartungsaktualisierungen zu planen und anzuwenden. Diese Rolle arbeitet auch mit den IBM Ansprechpartnern an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zusammen. </dd>
 </dl>
 </li>
 <li>Definieren Sie die Netzkonnektivität zwischen Ihrem Unternehmensnetz und Ihrer
@@ -188,3 +172,29 @@ und Sie im Voraus benachrichtigen. </dd>
 
 Arbeiten Sie mit Ihrem von IBM zugewiesenen Kundenbeauftragten zusammen, um die Wartung Ihrer dedizierten
 Instanz festzulegen und sich auf ein Fenster für die Standardwartung zu einigen. 
+
+##Dedizierte Instanz wiederherstellen
+{: #restorededicated}
+
+Die Einstellungen und Konfigurationen von {{site.data.keyword.Bluemix_notm}} Dedicated werden für den Fall von ungeplanten Ausfällen in der Umgebung regelmäßig gesichert. 
+
+Im Rahmen der Sicherung Ihrer Daten führt IBM die folgenden Tasks durch: 
+
+<ul>
+<li>Verschlüsselung aller Sicherungskopien und Verwaltung von Verschlüsselungsschlüsseln</li>
+<li>Überwachung und Verwaltung der Sicherungsaktivität</li>
+<li>Bereitstellung der verschlüsselten Sicherungsdateien</li>
+<li>Wiederherstellen der angeforderten Daten</li>
+<li>Beheben von Planungskonflikten beim Optionen des Sicherungs- und Fixmanagements</li>
+</ul>
+
+Da der Schutz privater Daten kritisch ist, ist IBM beim Umgang mit dem Sicherungsdateimanagement auf Ihre Kooperation angewiesen, damit die Dateien nicht an einen Ort außerhalb der Rechenzentren verschoben werden können. Deswegen fordert Sie IBM auf, die folgenden Tasks auszuführen: 
+
+<ul>
+<li>Lagern Sie eine Kopie Ihrer verschlüsselten Sicherungsdaten analog zur Vorgehensweise für alle anderen von Ihnen verwalteten Sicherungsdaten aus. </li>
+<li>Stellen Sie die Sicherungsdateien für den IBM Operator bereit, falls eine Wiederherstellung erforderlich sein sollte. </li>
+</ul>
+
+# Zugehörige Links
+## Allgemein 
+* [Entdecken Sie: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)

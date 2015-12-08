@@ -3,13 +3,13 @@
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2015 年 10 月 15 日*
+*前次更新：2015 年 11 月 9 日*
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 也提供一套安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) 網站。
 
-「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用 IBM SoftLayer 的「基礎架構即服務 (IaaS)」雲端服務，並充分利用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
+「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用 IBM SoftLayer 的「基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
 
 ## {{site.data.keyword.Bluemix_notm}} 平台的安全
 {: #platform-security}
@@ -33,7 +33,7 @@ SoftLayer 的 {{site.data.keyword.Bluemix_notm}} 環境符合最嚴格的 IBM �
 
 ![Bluemix 本端平台安全概觀](images/security_local_platform.png)
 
-*圖 2. 「{{site.data.keyword.Bluemix_notm}} 本端」平台安全概觀*
+*圖 2.「{{site.data.keyword.Bluemix_notm}} 本端」平台安全概觀*
 
 ### 功能安全
 
@@ -51,7 +51,7 @@ SoftLayer 的 {{site.data.keyword.Bluemix_notm}} 環境符合最嚴格的 IBM �
 <dd>對應用程式開發人員的所有鑑別嘗試，不論成功或失敗，都會建立審核日誌。對於管理 {{site.data.keyword.Bluemix_notm}} 應用程式執行所在儲存器的 Linux 系統，其特許存取也會建立審核日誌。</dd>
 
 <dt>資料保護</dt>
-<dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。接受下列 HTTP 方法：
+<dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。以下是允許使用的 HTTP 方法：
  * DELETE
  * GET
  * HEAD
@@ -98,7 +98,7 @@ HTTP 閒置逾時為 2 分鐘。
 <dd>「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」能促成侵入防禦，以便發現威脅，進而解決這些威脅。防火牆上已啟用侵入防禦原則。</dd>
 
 <dt>安全應用程式儲存器管理</dt>
-<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在其專屬的儲存器中隔離及執行，而儲存器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
+<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在自己的儲存器中隔離和執行，而儲存器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
 
 <dt>強化作業系統安全</dt>
 <dd>IBM 管理者會利用 IBM Endpoint Manager 等工具，定期執行網路及作業系統的強化作業。</dd>
@@ -231,9 +231,9 @@ SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料�
 
 ### dashDB
 
-dashDB 服務使用 IBM Directory Server LDAP 進行使用者鑑別，並使用 IBM InfoSphere Guardium Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
+dashDB 服務使用內嵌式 LDAP 伺服器進行使用者鑑別。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
 
-如需相關資訊，請參閱[開始使用 dashDB](services/dashDB/index.html)。
+如需相關資訊，請參閱[開始使用 dashDB](../services/dashDB/index.html)。
 
 ### Cloud Integration
 

@@ -3,7 +3,7 @@
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 15 octobre 2015*
+*Dernière mise à jour : 9 novembre 2015*
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
 possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
@@ -13,10 +13,8 @@ proposant des choix clairs pour le développement d'applications sécurisé.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} assure la sécurité en appliquant des règles de sécurité respectant les meilleurs pratiques d'IBM en matière de systèmes, de réseau et d'ingénierie
-sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. 
-{{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. 
-Pour plus de détails, voir le site [IBM Security Vulnerability Management
-(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html). 
+sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus de détails, voir le site [IBM Security Vulnerability Management
+(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html).
 
 Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de service
 (IaaS) IBM SoftLayer et profitent pleinement de son architecture sécurisée.
@@ -36,7 +34,7 @@ de service (PaaS) dans différentes catégories : plateforme, données et applic
 données, et est en charge de la sécurité physique.
 
 L'environnement {{site.data.keyword.Bluemix_notm}} sur SoftLayer est conforme aux normes IBM de sécurité en matière de technologie de l'information, qui répondent et dépassent les
-valeurs standard de l'industrie. Ces normes incluent les éléments suivants : Réseau, chiffrement de données et contrôle d'accès 
+valeurs standard de l'industrie. Ces normes incluent les éléments suivants : Réseau, chiffrement de données et contrôle d'accès
  * Listes de contrôle d'accès, droits et tests de pénétration
  * Identification, authentification et autorisation
  * Protection des informations et des données
@@ -53,7 +51,6 @@ La sécurité de l'environnement {{site.data.keyword.Bluemix_notm}} local est di
 sécurité en hébergeant Bluemix derrière le pare-feu de votre société et dans votre centre de données. L'image ci-dessous indique quelles sont les parties
 de la sécurité qui appartiennent au client et quelles sont celles qui sont gérées et mises à jour par IBM.
 
-
 ![Présentation de la sécurité de la plateforme Bluemix locale](images/security_local_platform.png)
 
 *Figure 2. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}} locale*
@@ -64,10 +61,12 @@ de la sécurité qui appartiennent au client et quelles sont celles qui sont gé
 
 <dl>
 <dt>Authentification</dt>
-<dd>Les développeurs d'applications sont authentifiés auprès de {{site.data.keyword.Bluemix_notm}} via l'identité Web IBM. Pour
+<dd>Les développeurs d'applications sont authentifiés auprès de {{site.data.keyword.Bluemix_notm}} via l'identité Web IBM.
+
+Pour
 les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, l'authentification via LDAP est
 prise en charge par défaut. A la demande, l'authentification via l'identité Web IBM peut être configurée à la place pour
-{{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}}.
 </dd>
 
 <dt>Autorisation</dt>
@@ -76,11 +75,12 @@ prise en charge par défaut. A la demande, l'authentification via l'identité We
 <dt>Audit</dt>
 <dd>Des journaux d'audit sont créés pour toutes les tentatives d'authentification, réussies ou non, des développeurs d'application. Des journaux d'audit
 sont également créés pour les accès privilégiés aux systèmes Linux qui hébergent les conteneurs où sont exécutées les applications
-{{site.data.keyword.Bluemix_notm}}. </dd>
+{{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protection des données</dt>
 <dd> L'ensemble du trafic {{site.data.keyword.Bluemix_notm}} passe par les produits IBM WebSphere® DataPower® SOA Appliances, qui offrent des fonctions de proxy inverse, de terminaison SSL et
-d'équilibrage de charge. Les méthodes HTTP suivantes sont autorisées :
+d'équilibrage de charge.
+Les méthodes HTTP suivantes sont autorisées :
  * DELETE
  * GET
  * HEAD
@@ -114,7 +114,7 @@ sécurité sont effectuées sur divers
 composants {{site.data.keyword.Bluemix_notm}} avec les offres IBM Security AppScan® Dynamic Analyzer et Static Analyzer. La modélisation des
 menaces et des tests de pénétration sont effectués pour détecter et traiter les vulnérabilités potentielles pour tous les types de déploiement
 {{site.data.keyword.Bluemix_notm}}. De plus, les développeurs d'applications peuvent utiliser le service AppScan Dynamic Analyzer afin de sécuriser
-leurs applications Web qui sont déployées dans {{site.data.keyword.Bluemix_notm}}. </dd>
+leurs applications Web qui sont déployées dans {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 
 ### Sécurité de l'infrastructure
@@ -158,18 +158,19 @@ Security, pour détecter les anomalies liées au réseau et aux configurations h
 systèmes d'exploitation sont appliqués à une fréquence appropriée. Les correctifs automatisés sont activés avec IBM Endpoint Manager.</dd>
 
 <dt>Analyse et consolidation des journaux d'audit</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBMSecurity QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. 
-{{site.data.keyword.Bluemix_notm}} utilise également les informations de sécurité et la gestion des événements (SIEM) d'IBM QRadar pour surveiller
+<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBMSecurity QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. {{site.data.keyword.Bluemix_notm}} utilise également les informations de sécurité et la gestion des événements (SIEM) d'IBM QRadar pour surveiller
 les tentatives de connexion, réussies ou
 non, des développeurs d'applications.</dd>
 
 <dt>Gestion de l'accès utilisateur</dt>
 <dd>Dans {{site.data.keyword.Bluemix_notm}}, les instructions de répartition des tâches sont suivies pour affecter des privilèges d'accès
 granulaire aux utilisateurs et pour assurer que les utilisateurs n'ont accès qu'aux éléments dont ils ont besoin pour accomplir leurs tâches selon le
-principe du moindre privilège. Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
+principe du moindre privilège.
+
+Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
 gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Voir
-[Gestion de {{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng) pour des détails. 
+[Gestion de {{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng) pour des détails.
 </dd>
 </dl>
 
@@ -213,24 +214,22 @@ Vous devez prendre en compte chaque type de données lorsque vous planifiez la s
 
 La plateforme {{site.data.keyword.Bluemix_notm}} sécurise les données transférées en sécurisant l'accès de l'utilisateur final à l'application via SSL sur le réseau, jusqu'à ce que
 les données atteignent IBM DataPower Gateway à la frontière du réseau interne de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway sert de
-proxy inverse et fournit la terminaison SSL. 
+proxy inverse et fournit la terminaison SSL.
 
 La sécurité des données utilisées et des données au repos vous incombe lorsque vous développez votre application. Vous pouvez tirer profit de
-plusieurs services liés aux données qui sont disponibles dans le catalogue {{site.data.keyword.Bluemix_notm}} pour traiter ces questions. 
+plusieurs services liés aux données qui sont disponibles dans le catalogue {{site.data.keyword.Bluemix_notm}} pour traiter ces questions.
 
 ## Sécurité des applications {{site.data.keyword.Bluemix_notm}}
 {: #application-security}
 
 En tant que développeur, vous devez activer la configuration des paramètres de sécurité, y compris la protection des données d'application, pour vos applications exécutées sur {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez utiliser les fonctions de sécurité fournies par plusieurs services {{site.data.keyword.Bluemix_notm}} pour sécuriser vos applications. 
-Tous les services {{site.data.keyword.Bluemix_notm}} qui sont produits par IBM suivent les pratiques de développement d'ingénierie sécurisée d'IBM.
+Vous pouvez utiliser les fonctions de sécurité fournies par plusieurs services {{site.data.keyword.Bluemix_notm}} pour sécuriser vos applications. Tous les services {{site.data.keyword.Bluemix_notm}} qui sont produits par IBM suivent les pratiques de développement d'ingénierie sécurisée d'IBM.
 
 **Remarque :** il se peut que certains services décrits ici ne soient pas applicables dans les instances Bluemix
 dédiées ou locales.
 
-
-### Service SSO 
+### Service SSO
 
 IBM Single Sign On for {{site.data.keyword.Bluemix_notm}} est un service d'authentification reposant sur des règles qui fournit une fonction de connexion unique facile à intégrer pour les applications Node.js ou
 Liberty for Java.. Pour permettre à
@@ -266,7 +265,7 @@ Ce service fournit une analyse de sécurité des applications Web via un outil d
 Pour plus d'informations, voir [Initiation à AppScan Dynamic
 Analyzer](../services/AppScanDynamicAnalyzer/index.html).
 
-### Mobile Analyzer for iOS (bêta) 
+### Mobile Analyzer for iOS (bêta)
 
 Le service Mobile Analyzer for iOS permet l'analyse de sécurité dynamique AppScan pour les applications mobiles iOS. Il permet d'identifier les problèmes de sécurité dans vos applications
 mobiles iOS.
@@ -286,8 +285,7 @@ Pour plus d'informations, voir [Initiation à IBM Static Analyzer for Bluemix](.
 ### Plug-in IBM UrbanCode pour le test de la sécurité des applications
 
 Le plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} vous permet d'exécuter des analyses de sécurité pour vos
-applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemix_notm}}.
-Il est développé par la communauté IBM UrbanCode. Deploy Community, qui assure son support, sur la plateforme IBM Bluemix DevOps Services. 
+applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemix_notm}}. Il est développé par la communauté IBM UrbanCode. Deploy Community, qui assure son support, sur la plateforme IBM Bluemix DevOps Services.
 
 Pour plus d'informations, voir [IBM
 Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/).
@@ -308,7 +306,7 @@ d'obtenir des rapports contenant les informations suivantes :
 Pour masquer les données via SQL, les applications peuvent appeler les fonctions de masquage
 définies par l'utilisateur (UDF)
 qui sont déployées avec la base de données. Par exemple, vous pouvez masquer les données que vous voulez utiliser pour effectuer des tests dans un autre
-contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim.. 
+contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim..
 
 Le
 plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
@@ -316,13 +314,10 @@ plan premium pour ce service inclut également le chiffrement de données. Pour 
 
 ### dashDB
 
-Le service dashDB utilise le protocole LDAP d'IBM Directory Server pour l'authentification d'utilisateur et IBM InfoSphere Guardium Data Activity
-Monitor
-pour protéger la base de données à laquelle accèdent des applications. La connexion entre les applications et la base de données est protégée par des certificats SSL. 
-Ce service utilise la capacité de chiffrement native de DB2® pour chiffrer automatiquement votre base de données déployée et vos sauvegardes de base de
+Le service dashDB utilise un serveur LDAP imbriqué pour l'authentification d'utilisateur. La connexion entre les applications et la base de données est protégée par des certificats SSL. Ce service utilise la capacité de chiffrement native de DB2® pour chiffrer automatiquement votre base de données déployée et vos sauvegardes de base de
 données. La rotation de clé principale automatique a lieu tous les 90 jours.
 
-Pour plus d'informations, voir [Initiation à dashDB](services/dashDB/index.html).
+Pour plus d'informations, voir [Initiation à dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 
@@ -354,7 +349,7 @@ flux d'informations pour les utilisateurs et les développeurs d'applications af
 
 *Figure 3. Architecture de déploiement de la sécurité Bluemix*
 
-Le flux d'informations pour les *utilisateurs d'applications* {{site.data.keyword.Bluemix_notm}} est le suivant : 
+Le flux d'informations pour les *utilisateurs d'applications* {{site.data.keyword.Bluemix_notm}} est le suivant :
  1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau.
  2. Via IBM DataPower Gateway avec proxy inverse et proxy de terminaison SSL.
  3. Via le routeur réseau.
@@ -380,7 +375,7 @@ créées par le développeur.
 En plus des utilisateurs décrits dans ces scénarios, une équipe autorisée en charge des opérations de sécurité IBM effectue diverses tâches de
 sécurité opérationnelles, par exemple :
  * Des analyses de vulnérabilités. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité
-physique et des analyses au sein de votre pare-feu. 
+physique et des analyses au sein de votre pare-feu.
  * La gestion de l'accès utilisateur.
  * Le renforcement du système d'exploitation en appliquant des correctifs régulièrement avec IBM Endpoint Manager.
  * La gestion des risques avec protection contre les intrusions.

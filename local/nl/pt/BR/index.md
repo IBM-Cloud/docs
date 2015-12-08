@@ -3,13 +3,13 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 20 de outubro de 2015* 
+*Última atualização: 13 de novembro de 2015*
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
 {{site.data.keyword.Bluemix_notm}} Local, é possível proteger
 suas cargas de trabalho mais sensíveis no firewall de sua empresa,
 enquanto permanece estavelmente conectado e em sincronia
-com o {{site.data.keyword.Bluemix_notm}} Public.
+com o {{site.data.keyword.Bluemix_notm}} Public. 
 {:shortdesc}
 
 A IBM® utiliza operações em nuvem como um serviço para
@@ -134,46 +134,21 @@ instância do {{site.data.keyword.Bluemix_notm}} Local.</li>
 <li>Depois que sua plataforma e conta forem criadas,
 identifique as pessoas em sua organização para as funções
 que são necessárias para que sua instância local esteja ativa e
-executando. Para cada função, há um representante IBM correspondente.<br />
-<p>Funções do cliente:</p>
+executando.<br />
+<br />
 <dl>
 <dt>**Focal em compras**</dt>
-<dd>Trabalha com o representante IBM no estabelecimento de seu
-ambiente do {{site.data.keyword.Bluemix_notm}} Local,
-incluindo a identificação da pessoa certa em sua organização para
-trabalhar em qualquer aspecto do projeto. Essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O
+<dd>Trabalha com os representantes IBM no estabelecimento de seu ambiente do {{site.data.keyword.Bluemix_notm}} Local, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. Essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O
 focal em compras é o contato geral para configurar a instância local.</dd>
 <dt>**Executivo de conformidade**</dt>
-<dd>Trabalha com o representante IBM para selecionar uma opção de topologia e de implementação que atenda aos requisitos de segurança. Essa
-função trabalha com o consultor de conformidade IBM para determinar
-quais padrões de implementação alcançam as metas de conformidade e
-objetivos.</dd>
+<dd>Trabalha com os representantes IBM para selecionar uma opção de topologia e implementação que atenda aos requisitos de segurança. Essa função trabalha com o consultores de conformidade IBM para determinar quais padrões de implementação alcançam as metas e os objetivos de conformidade.</dd>
 <dt>**Especialista em rede**</dt>
-<dd>Trabalha com o representante IBM nos planos de rede para a
-implementação do {{site.data.keyword.Bluemix_notm}}. Essa função fornece os requisitos para o representante IBM e trabalha junto em um plano de implementação. No
+<dd>Trabalha com os representantes IBM nos planos de rede para a implementação do {{site.data.keyword.Bluemix_notm}}. Essa função fornece os requisitos para os representantes IBM e trabalha com os representantes em um plano de implementação. No
 final da fase de instalação e verificação, esta função será "sign
 off", quando a configuração da rede está em conformidade com os
 padrões corporativos.</dd>
 <dt>**DevOps focal**</dt>
-<dd>Trabalha com o representante IBM para planejar e aplicar as
-atualizações de manutenção que são necessárias para a plataforma,
-serviços e tempos de execução do
-{{site.data.keyword.Bluemix_notm}}. Essa função também trabalha com o representante IBM na configuração da instância do {{site.data.keyword.Bluemix_notm}} Local.</dd>
-</dl>
-<p>Funções IBM:</p>
-<dl>
-<dt>**Gerenciador de fornecimento IBM**</dt>
-<dd>Trabalha com o focal de compra do cliente para estabelecer o
-ambiente
-de cliente. </dd>
-<dt>**Consultor de conformidade IBM**</dt>
-<dd>Trabalha com o executivo de conformidade do cliente para selecionar
-uma opção de topologia e implementação que atenda aos requisitos de segurança.</dd>
-<dt>**Especialista em rede IBM**</dt>
-<dd>Trabalha com o especialista da rede do cliente para estabelecer os planos de rede para a implementação. Essa função trabalha com o cliente para coletar requisitos e criar um plano de implementação. Essa função também executa testes automatizados para verificar o resultado físico do plano de implementação.</dd>	
-<dt>**Focal IBM DevOps**</dt>
-<dd>Trabalha com o focal DevOps do cliente na instalação e
-manutenção contínua do topologia de implementação. Essa função trabalha com o cliente para planejar e executar as atualizações necessárias para a plataforma e serviços.</dd>
+<dd>Trabalha com os representantes IBM para planejar e aplicar as atualizações de manutenção que são necessárias para a plataforma, os serviços e os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Essa função também trabalha com os representantes IBM na configuração da instância do {{site.data.keyword.Bluemix_notm}} Local.</dd>
 </dl>
 </li>
 <li>Você fornece o hardware e a IBM ajuda a definir e estabelecer
@@ -183,7 +158,8 @@ obter mais informações sobre os requisitos de infraestrutura,
 consulte
 <a href="index.html#localinfra">requisitos de
 infraestrutura do {{site.data.keyword.Bluemix_notm}}
-Local</a>. <ol type="a">
+Local</a>.
+<ol type="a">
 	<li>A IBM configura o acesso à rede e LDAP baseado no que foi
 fornecido. É fornecido
 acesso administrativo aos contatos designados. Deve-se também
@@ -215,10 +191,11 @@ seguintes especificações são apenas para o tempo de execução
 principal do {{site.data.keyword.Bluemix_notm}}.
 <ul>
 <li>48 núcleos físicos a 2.0 GHz ou mais cada</li>
-<li>756 GB de RAM física </li>
-</li>Tamanho total de armazenamento de dados de 7.5 TB <ul>
+<li>756 GB de RAM física</li>
+</li>Tamanho total de armazenamento de dados de 7.5 TB 
+<ul>
 <li>Armazenamento de dados de 7 TB para manter
-{{site.data.keyword.Bluemix_notm}} </li>
+{{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB de armazenamento de dados para suspender a máquina virtual de concepção</li>
 </ul>
 </ul>
@@ -245,6 +222,9 @@ de datacenter, de conjunto de recursos e de armazenamento de dados.
 <dl>
 <dt>**Versões suportadas de VMware**</dt>
 <dd>vCenter e ESXi 5.1 e 5.5</dd>
+<dt>**Tipos de VMware suportados**</dt>
+<dd>vSphere Enterprise<br />
+Enterprise vSphere plus, se você planeja usar os comutadores virtuais distribuídos</dd>
 <dt>**Datacenter**</dt>
 <dd>Crie um datacenter, se não existir um.</dd>
 <dt>**Pasta do Datacenter**</dt>
@@ -257,7 +237,7 @@ de datacenter, de conjunto de recursos e de armazenamento de dados.
 recursos é `local`.</dd>
 </dt>**Armazenamento de dados**</dt>
 <dd>Requer 7.5 TB para a implementação inicial de
-{{site.data.keyword.Bluemix_notm}}. <br />
+{{site.data.keyword.Bluemix_notm}}.<br />
 <br />
 **Nota**: Ao usar mais de um armazenamento de
 dados, assegure-se de que cada um deles comece com o mesmo prefixo. Os exemplos de múltiplos nomes de
@@ -359,4 +339,29 @@ durante essas janelas de mudanças e notificará você com antecedência.</dd>
 Para configurar a manutenção de sua instância local, trabalhe
 com seu representante de conta designado da IBM para identificar uma janela acordada para a
 manutenção padrão.
+
+##Restaurando sua instância local
+{: #restorelocal}
+
+É feito backup regularmente de definições e configurações do {{site.data.keyword.Bluemix_notm}} Local para preparar-se para quaisquer indisponibilidades não planejadas no ambiente.
+
+Como parte do backup de seus dados, a IBM conclui as tarefas a seguir:
+
+<ul>
+<li>Criptografa todas as cópias de backup e gerencia chaves de criptografia</li>
+<li>Monitora e gerencia a atividade de backup</li>
+<li>Fornece os arquivos de backup criptografados</li>
+<li>Restaura os dados solicitados</li>
+<li>Gerencia conflitos de planejamento entre as operações de gerenciamento de backup e correção</li>
+</ul>
+
+Como a proteção de dados privados é crítica, a IBM precisa da sua colaboração ao lidar com o gerenciamento de arquivo de backup, de modo que os arquivos não sejam movidos para fora dos datacenters. Especificamente, a IBM solicita que você conclua as tarefas a seguir:
+
+<ul>
+<li>Mova uma cópia dos dados de backup criptografados externos, exatamente como faria para quaisquer outros dados de backup gerenciados.</li>
+<li>Forneça os arquivos de backup para o operador da IBM no caso de qualquer necessidade de restauração.</li>
+</ul>
    
+# rellinks
+## general 
+* [Descobrir: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)

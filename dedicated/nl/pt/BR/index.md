@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicado
 {: #dedicated}
 
-*Última atualização: 20 de outubro de 2015* 
+*Última atualização: 3 de novembro de 2015*
 
 {{site.data.keyword.Bluemix}} é
 uma plataforma de padrão aberto, baseada em nuvem para construir, executar e
@@ -114,53 +114,21 @@ da instância do {{site.data.keyword.Bluemix_notm}} Dedicated.</li>
 <li>Selecione o <a href="http://www.softlayer.com/data-centers" target="_blank">local do datacenter do SoftLayer</a> para a instância dedicada. Em seguida, sua plataforma e conta dedicadas
 são criadas. Para a conta, identifique as pessoas de sua organização
 para as funções que são necessárias para tornar a instância dedicada
-operacional. Para cada função, há um representante IBM correspondente.<br />
-<p>Funções do cliente:</p>
+operacional.<br />
+<br />
 <dl>
 <dt>**Focal em compras**</dt>
-<dd>Trabalha com o representante IBM no estabelecimento do
-ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. 
-Essa função supervisiona a seleção padrão, acordos comerciais e a
-disposição de acesso aos recursos do cliente. O focal em compras é o
+<dd>Trabalha com os representantes IBM no estabelecimento do ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. Essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O focal em compras é o
 contato geral para configurar a instância dedicada.</dd>
 <dt>**Executivo de conformidade**</dt>
-<dd>Trabalha com o representante IBM para selecionar uma opção de topologia e de implementação que atenda aos requisitos de segurança. 
-Essa função trabalha com o consultor de conformidade IBM para
-determinar quais padrões de implementação alcançam as metas de
-conformidade e objetivos.</dd>
+<dd>Trabalha com os representantes IBM para selecionar uma opção de topologia e implementação que atenda aos requisitos de segurança. Essa função trabalha com o consultores de conformidade IBM para determinar quais padrões de implementação alcançam as metas e os objetivos de conformidade.</dd>
 <dt>**Especialista em rede**</dt>
-<dd>Trabalha com o representante IBM nos planos de rede para a
-implementação do {{site.data.keyword.Bluemix_notm}}. Essa função fornece os requisitos para o representante IBM e trabalha junto em um plano de implementação. 
-No final da fase de instalação e verificação, esta função será "sign
+<dd>Trabalha com os representantes IBM nos planos de rede para a implementação do {{site.data.keyword.Bluemix_notm}}. Essa função fornece os requisitos para os representantes IBM e trabalha com os representantes em um plano de implementação. No
+final da fase de instalação e verificação, esta função será "sign
 off", quando a configuração da rede está em conformidade com os
 padrões corporativos.</dd>
 <dt>**DevOps focal**</dt>
-<dd>Trabalha com o representante IBM para planejar e aplicar as
-atualizações de manutenção que são necessárias para a plataforma,
-serviços e tempos de execução do
-{{site.data.keyword.Bluemix_notm}}. Essa função também
-trabalha com o representante IBM na configuração de sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated.</dd>
-</dl>
-<p>Funções IBM:</p>
-<dl>
-<dt>**Gerenciador de fornecimento IBM**</dt>
-<dd>Trabalha com o focal de compra do cliente para estabelecer o
-ambiente de cliente. </dd>
-<dt>**Consultor de conformidade IBM**</dt>
-<dd>Trabalha com o executivo de conformidade do cliente para
-selecionar uma opção de topologia e implementação que atenda aos
-requisitos de segurança.</dd>
-<dt>**Especialista em rede IBM**</dt>
-<dd>Trabalha com o especialista da rede do cliente para estabelecer
-os planos de rede para a implementação. Essa função trabalha com o
-cliente para coletar requisitos e criar um plano de implementação. 
-Essa função também executa testes automatizados para verificar o
-resultado físico do plano de implementação.</dd>	
-<dt>**Focal IBM DevOps**</dt>
-<dd>Trabalha com o focal DevOps do cliente na instalação e manutenção
-contínua do topologia de implementação. Essa função trabalha com o
-cliente para planejar e executar as atualizações necessárias para a
-plataforma e serviços.</dd>
+<dd>Trabalha com os representantes IBM para planejar e aplicar as atualizações de manutenção que são necessárias para a plataforma, os serviços e os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Essa função também trabalha com os representantes IBM na configuração de sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated.</dd>
 </dl>
 </li>
 <li>Defina e estabeleça conectividade de rede entre a
@@ -197,18 +165,14 @@ do terminal LDAP, e acessa.</li>
 A IBM mantém e instala atualizações e correções conforme
 julga adequado para a plataforma, tempos de execução e serviços do {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-**Importante**: A IBM se reserva o direito
-de interromper os serviços para aplicar manutenção emergencial,
-conforme necessário. A IBM pode mudar os horários de manutenção planejados, mas o notificará sobre essas mudanças, bem como sobre quaisquer informações de manutenção emergencial.
+**Importante**: A IBM se reserva o direito de interromper os serviços para aplicar manutenção emergencial, conforme necessário. A IBM pode mudar os horários de manutenção planejados, mas o notificará sobre essas mudanças, bem como sobre quaisquer informações de manutenção emergencial.
 
 Os tipos de
 manutenção a seguir são necessários para o {{site.data.keyword.Bluemix_notm}} Dedicated:
 <dl>
 <dt>**Janelas de manutenção padrão**</dt>
-<dd>Os serviços utilizam janelas de manutenção predefinidas padrão, o
-que pode fazer com que os serviços fiquem indisponíveis. A IBM não
-requer aprovação do cliente para executar manutenção, mas tenta
-minimizar o impacto em seus serviços.<br />
+<dd>Os serviços utilizam janelas de manutenção predefinidas padrão,
+o que pode fazer com que os serviços fiquem indisponíveis. A IBM não requer aprovação do cliente para executar manutenção, mas tenta minimizar o impacto em seus serviços.<br />
 <br />
 A IBM envia mensagens transmitidas das mudanças que estão planejadas para cada janela de manutenção, por meio de email, telefone ou outros métodos.<br />
 <br />
@@ -220,21 +184,21 @@ disponível durante o período de manutenção.</dd>
 entre você e a IBM em uma janela de 21 dias. É possível fornecer à
 IBM datas ou horas específicas dentro da janela de 21 dias, o que
 pode não funcionar para você. A IBM tenta planejar atualizações
-nesses momentos. Com base nas solicitações, a IBM comunica a janela
-de manutenção planejada para você. Não se espera que as janelas de
+nesses momentos. Com base nas solicitações, a IBM
+comunica a janela de manutenção planejada para você. Não se espera que as janelas de
 mudança mensal causem impacto no ambiente do Bluemix Dedicated em
 execução.<br />
 <br />
 **Nota:** Se você não solicita um momento específico
 para a atualização, a manutenção é aplicada automaticamente no final
-da janela. <br />
+da janela.<br />
 <br />
 Acesse **ADMINISTRAÇÃO > INFORMAÇÕES DO SISTEMA**
 para visualizar atualizações pendentes, configurar datas
 indisponíveis e aprovar atualizações. Para obter mais informações
-sobre notificações e planejamento de atualizações pendentes, consulte
-<a href="../admin/index.html#oc_system">Visualizando informações do
-sistema</a>.</dd>
+sobre notificações e planejamento de atualizações pendentes,
+consulte <a href="../admin/index.html#oc_system">Visualizando
+informações do sistema</a>.</dd>
 	
 <dt>**Outro**</dt>
 <dd>A IBM pretende limitar toda a manutenção que possa afetar seus
@@ -246,3 +210,29 @@ do ambiente. A IBM fará esforços razoáveis para minimizar o impacto a você d
 </dl>
 
 Para configurar a manutenção de sua instância dedicada, trabalhe com seu representante de conta designado pela IBM para identificar uma janela acordada para a manutenção padrão.
+
+##Restaurando sua instância dedicada
+{: #restorededicated}
+
+É feito backup regularmente das definições e configurações do {{site.data.keyword.Bluemix_notm}} Dedicated para preparar-se para quaisquer indisponibilidades não planejadas no ambiente.
+
+Como parte do backup de seus dados, a IBM conclui as tarefas a seguir:
+
+<ul>
+<li>Criptografa todas as cópias de backup e gerencia chaves de criptografia</li>
+<li>Monitora e gerencia a atividade de backup</li>
+<li>Fornece os arquivos de backup criptografados</li>
+<li>Restaura os dados solicitados</li>
+<li>Gerencia conflitos de planejamento entre as operações de gerenciamento de backup e correção</li>
+</ul>
+
+Como a proteção de dados privados é crítica, a IBM precisa da sua colaboração ao lidar com o gerenciamento de arquivo de backup, de modo que os arquivos não sejam movidos para fora dos datacenters. Especificamente, a IBM solicita que você conclua as tarefas a seguir:
+
+<ul>
+<li>Mova uma cópia dos dados de backup criptografados externos, exatamente como faria para quaisquer outros dados de backup gerenciados.</li>
+<li>Forneça os arquivos de backup para o operador da IBM no caso de qualquer necessidade de restauração.</li>
+</ul>
+
+# rellinks
+## general 
+* [Descobrir: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)

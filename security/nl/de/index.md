@@ -3,7 +3,7 @@
 
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Letzte Aktualisierung: 15. Oktober 2015*
+*Letzte Aktualisierung: 9. November 2015*
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren
 für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet
@@ -38,7 +38,7 @@ zeichnet sich jedoch dadurch aus, dass die Infrastruktur und das Rechenzentrum v
 wird und die
 physische Sicherheit dem Kunden obliegt. 
 
-Die auf Softlayer beruhende {{site.data.keyword.Bluemix_notm}}-Umgebung ist konform mit den strengsten Sicherheitsstandards der IBM Informationstechnologie, die den Branchenstandards entsprechen oder diese auch überschreiten. Diese
+Die auf SoftLayer beruhende {{site.data.keyword.Bluemix_notm}}-Umgebung ist konform mit den strengsten Sicherheitsstandards der IBM Informationstechnologie, die den Branchenstandards entsprechen oder diese auch überschreiten. Diese
 Standards umfassen Folgendes:
 Netz-, Datenverschlüsselungs- und Zugriffskontrolle
  * Testen von Anwendungs-ACLs, Berechtigungen und unbefugtem Zugriff
@@ -349,22 +349,19 @@ Zum Maskieren von Daten
 mit SQL können Anwendungen die benutzerdefinierten Funktionen (User-Defined Functions, UDF)
 zum Maskieren aufrufen, die zusammen mit der Datenbank bereitgestellt wurden. So können Sie
 beispielsweise die Daten maskieren, die Sie an anderer Stelle zum Testen verwenden möchten. Die UDFs implementieren die
-Algorithmen zur Datenmaskierung aus IBM Infosphere Optim™. 
+Algorithmen zur Datenmaskierung aus IBM InfoSphere Optim™. 
 
 Der Premiumplan dieses Service umfasst auch die Verschlüsselung von Daten. Weitere Informationen
 zu diesem Service finden Sie in [Einführung in SQL Database](../services/SQLDB/index.html).
 
 ### dashDB
 
-Der Service 'dashDB'
-nutzt IBM Directory Server LDAP zur Benutzerauthentifizierung
-und IBM InfoSphere Guardium Data Activity Monitor
-zum Schutz der Datenbank, auf die Anwendungen zugreifen. Die Verbindung zwischen Anwendungen und der
+Vom Service 'dashDB' wird ein eingebetteter LDAP-Server für die Benutzerauthentifizierung verwendet. Die Verbindung zwischen Anwendungen und der
 Datenbank wird über SSL-Zertifikate geschützt. Dieser Service nutzt die native
 DB2®-Verschlüsselungsfunktion, um Ihre bereitgestellte Datenbank und die
 Datenbankbackups automatisch zu verschlüsseln. Die Rotation der Masterschlüssel geschieht automatisch und wird alle 90 Tage durchgeführt.
 
-Weitere Informationen finden Sie in [Einführung in dashDB](services/dashDB/index.html).
+Weitere Informationen finden Sie in [Einführung in dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 
