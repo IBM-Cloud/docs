@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 7 December 2015*
+*Last updated: 8 December 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -297,6 +297,8 @@ Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unava
 </dl>
 
 To set up maintenance of your local instance, work with your IBM designated account representative to identify an agreed upon window for the standard maintenance.
+
+If there is a reported issue following a maintenance update, you agree with your IBM representative if it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
 
 ## Disaster recovery
 {: #dr}
