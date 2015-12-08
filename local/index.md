@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 4 December 2015*
+*Last updated: 7 December 2015*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -322,7 +322,7 @@ By default, {{site.data.keyword.Bluemix_notm}} Public deploys to multiple geogra
 To deploy into a second location or multiple locations, you must follow a process similar to the one you took to enable your primary geographic location:
 
 1. Enable a new local environment to host additional instances of your applications. To create a new environment, contact your IBM sales team to initiate the process. For more information about setting up a local instance, see [Setting up {{site.data.keyword.Bluemix_notm}} Local](../local/index.html#setuplocal). You must log in separately to access each environment. Each physical location for the hosted environments should be a minimum of 200 km away from the original location to ensure availability.
-2. Obtain the unique domain name where your new deployed app will be hosted. For example, if your original domain is *mycompany.caeast.bluemix.net*, then you can create a new local environment with a new domain such as *mycompany.cawest.bluemix.net*, and deploy to the new domain.
+2. Obtain the unique domain name where your new deployed app will be hosted. For example, if your original domain is *mycompany.east.bluemix.net*, then you can create a new local environment with a new domain such as *mycompany.west.bluemix.net*, and deploy to the new domain.
 3. Deploy to the new location each time you deploy your original app. For more information about deploying, see [Uploading your app](../starters/upload_app.html).
 
 
