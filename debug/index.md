@@ -1,5 +1,8 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # Debugging
 {: #debugging}
@@ -56,6 +59,8 @@ The following example shows a log that is displayed after you enter `cf logs app
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
+{: screen}
+
 
 The first error in the log shows the reason why the staging fails. In the example, the first error is an output from the DEA component during the staging phase.
 ```
@@ -70,6 +75,9 @@ For a Node.js application, the DEA uses the information in the `package.json` fi
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 You can see that a comma is placed at the end of line 17, therefore, a key-value pair on line 18 is expected. To fix the problem, remove the comma:
 
 ```
@@ -78,6 +86,8 @@ You can see that a comma is placed at the end of line 17, therefore, a key-value
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## Debugging runtime errors
 {: #debugging-runtime-errors}
