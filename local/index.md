@@ -54,7 +54,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>Review the <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a> for setting up your local instance.</li>
 <li>Contact your IBM designated account representative or contact <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> to get started.</li>
 <li>Establish your {{site.data.keyword.Bluemix_notm}} Local agreement with IBM that includes milestone dates for delivery.
-<ol type="a">
+	<ol type="a">
 	<li>Work with IBM on your fee for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Local instance.</li>
 	</ol>
@@ -62,7 +62,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For more information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Local roles and responsibilities</a>.
 </li>
 <li>You provide the hardware, and IBM helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Local instance. For more information about infrastructure requirements, see <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.
-<ol type="a">
+	<ol type="a">
 	<li>IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing.</li>
 	<li>IBM sets up a syndicated catalog in your local environment to show your local services and many of the public {{site.data.keyword.Bluemix_notm}} services.</li>
 	<li>You validate network and firewall configuration and the LDAP endpoint and access.</li>
