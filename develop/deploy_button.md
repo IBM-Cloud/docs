@@ -53,25 +53,13 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button:
 
 <ol>
 <li> Copy and modify one of the following snippet templates and include a public Git repository.
-<!-- audience blue staging only begin comment -->
-<p>
-<strong>Tip</strong>: If you want to specify the build input for a DevOps Services project, add a branch parameter to the Git URL. When you add a branch parameter, the original public Git repository, including all of its branches, is cloned into a new, private DevOps Services project with a new Git repository. The specified Git branch is set as the input for the build job. If you don't specify a branch, the input for the build job is set to the master branch by default.
-</p>
-<!-- audience blue staging only end comment -->
+
 <ul>
 <li>HTML:
 Default master branch:
 <pre class="codeblock">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
-<!-- audience blue staging only begin comment -->
-<p>
-Specified Git branch:
-</p>
-<pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
-</pre>
-<!-- audience blue staging only end comment -->
 </li>
 <li>Markdown:
 <p>
@@ -80,13 +68,6 @@ Default master branch:
 <pre class="codeblock">
 [&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
 </pre>
-<!-- audience blue staging only begin comment -->
-<p>Specified Git branch:
-</p>
-<pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required]&#41;
-</pre>
-<!-- audience blue staging only end comment -->
 </li>
 </ul>
 </li>
