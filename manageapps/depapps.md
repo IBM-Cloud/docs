@@ -72,8 +72,8 @@ If you use an external buildpack, you must specify the URL of the buildpack by u
   cf push appname
   ```
   
-  A `package.json` file must be in your Node.js application for the application to be recognized by the Node.js buildpack. The `app.js` file is the entry script for the application, and can be specified in the `package.json` file. The following example shows a simple `package.json` file:
-  
+A `package.json` file must be in your Node.js application for the application to be recognized by the Node.js buildpack. The `app.js` file is the entry script for the application, and can be specified in the `package.json` file. The following example shows a simple `package.json` file:
+
   ```
   {
         "name": "MyUniqueNodejs01",
@@ -110,6 +110,7 @@ An app is specific to the space where it is deployed. You can't move or copy an 
   ```
   cf target -s <space_name>
   ```
+  
   2. Deploy your app by using the **cf push** command, where appname must be unique within your domain.
   
   ```
@@ -182,20 +183,15 @@ Environment variables contain the environment information of a deployed applicat
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
 
   * User-defined variables that are specific for an application. You can set application-specific variables by using the **cf set-env** command, or by configuring value pairs in the [`manifest.yml` file](#appmanifest) as follows:
+
   ```
   env:
     VAR1:value1
     VAR2:value2
   ```
-  
-    <!-- begin STAGING ONLY --> 
-	
-  * User-defined variables that are specific for an application. For information on how to add a user-defined variable to an app, see [Adding user-defined environment variables}(#ud_env){:new_window}.
-    
-	<!-- begin STAGING ONLY --> 
-	
-  
+   
   * The VCAP_SERVICES variable, which contains connection information to access a service instance. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance. For example:
+  
   ```
   {
    "VCAP_SERVICES": {
@@ -263,7 +259,8 @@ You can access environment variables set by the DEA and buildpacks.
   <dd>The IP address of the DEA host.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>A JSON string that contains information about the deployed application. The information includes the application name, URIs, memory limits, time stamp at which the application achieved its current state, and so on. For example: 
-  <pre class="pre codeblock"><code>{
+  <pre class="pre codeblock"><code>
+  {
     "limits": {
         "mem": 512,
         "disk": 1024,
@@ -291,10 +288,12 @@ You can access environment variables set by the DEA and buildpacks.
     "started_at_timestamp": 1421391051,
     "start": "2015-01-16 06:50:51 +0000",
     "state_timestamp": 1421391051
-}</code></pre></dd>
+}
+</code></pre></dd>
   <dt><strong>VCAP_SERVICES</strong></dt>
   <dd>A JSON string that contains information of the service that is bound to the deployed application. For example:
-  <pre class="pre codeblock"><code>{
+  <pre class="pre codeblock"><code>
+  {
     "mysql-5.5": [
         {
             "name": "mysql-ix",
@@ -318,7 +317,8 @@ You can access environment variables set by the DEA and buildpacks.
             }
         }
     ]
-}</code></pre></dd>
+}
+</code></pre></dd>
 
   </dl>
 </li>
@@ -377,36 +377,7 @@ To specify start commands for your application, you can use one of the following
   ```
   command: node app.js
   ```
-
   
-<!-- begin STAGING ONLY --> 
-
-  
-### Adding user-defined environment variables
-{: #ud_env}
-
-User-defined environment variables are specific for an application. You have the following options to add a user-defined environment variable to a running app:
-
-  * Use the {{site.data.keyword.Bluemix_notm}} user interafce. Complete the following steps:
-    1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click your app tile. The App details page is displayed.
-	2. On the left navigation pane, click **Environment Variables**.
-	3. Click **USER-DEFINED**, then click **ADD**.
-	4. Fill in the required fields, then click **SAVE**.
-  * Use the cf command line interface. Add a user-defined variable by using the `cf set-env` command. For example: 
-    ```
-    cf set-env appname env_var_name env_var_value
-    ```
-  * Use the `manifest.yml` file. Add value pairs in the file. For example: 
-    ```
-	env:
-      VAR1:value1
-      VAR2:value2
-    ```
-	{:codeblock}
-	
-<!-- end STAGING ONLY -->
-
-	
 ### Configuring the startup environment
 
 To configure the startup environment for your application, you can add shell scripts into the `/.profile.d` directory. The `/.profile.d` directory is under the build directory of your application. Scripts in the `/.profile.d` directory are run by {{site.data.keyword.Bluemix_notm}} before the application is run. For example, you can set the NODE_ENV environment variable to **production** by putting a `node_env.sh` file that contains the following content under the `/.profile.d` directory:
@@ -427,7 +398,6 @@ The `.cfignore` file contains the names of files and directories that you want t
 *.swp
 tmp/
 ```
-{:codeblock}
 
 # rellinks
 ## general 

@@ -50,7 +50,6 @@ The methods for creating a CSR vary depending on your operating system. The foll
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
-{:codeblock}
 
 **Note:** OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for applications that have compatibility issues with the SHA-256 certificate.
 
@@ -63,8 +62,6 @@ For every organization in {{site.data.keyword.Bluemix_notm}} with an account own
 
 Before you can upload certificates, you must create a certificate signing request. See [Creating certificate signing requests](#ssl_csr).
 
-<!--Production only start-->
-
 To properly serve the SSL certificate, you must use the following IP addresses to configure the DNS or a hosts file when creating a custom domain to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}.
 
 * US-SOUTH: 75.126.81.68
@@ -74,8 +71,6 @@ To properly serve the SSL certificate, you must use the following IP addresses t
 The IP addresses that you use for dedicated environments are different. Contact your IBM representative to get the IP address for a dedicated environment.
 
 For more information about creating a custom domain, see [Creating and using a custom domain](updapps.html#domain).
-
-<!--Production only end-->
 
 To upload a certificate for your application:
 

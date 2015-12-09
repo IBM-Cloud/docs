@@ -6,7 +6,7 @@
 #App Management
 {: #app_management}
 
-*Last updated: 4 December 2015*
+*Last updated: 8 December 2015*
 
 App Management is a set of development and debugging utilities that can be enabled for your Liberty and Node.js applications on {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -24,6 +24,7 @@ These utilities support both Liberty and Node.js.
     ```
     http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
+	
     Using the development console, users can restart, stop, or suspend their applications. Users can also enable or access the shell and inspector utilities.
 
     The devconsole utility also starts *proxy*.
@@ -86,8 +87,8 @@ These utilities support Node.js only.
     
 	```
     cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    
-	```
+    ```
+	
     3. Install the [StrongLoop npm module](https://www.npmjs.com/package/strongloop){:new_window} on your local workstation.
     
 	```

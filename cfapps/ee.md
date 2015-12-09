@@ -65,7 +65,6 @@ Click **Environment Variables** on the app Overview page to see the whole list o
    ]
 }
 ```
-{:codeblock}
 
 **Note:** This environment variable is the serialization of a JSON object with one entry for each service instance that the app is bound to. The amount and type of data that each service instance provides are service-specific. When your app does not use any service, VCAP_SERVICES is an empty JSON object. This environment variable is used only when you add a service to your app.
 
@@ -116,7 +115,7 @@ Click **Environment Variables** on the app Overview page to see the whole list o
   6. Now, you can access the app by entering the following app URL in a browser:
   ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 You can also choose other tools to build your app, such as Eclipse tools. For more information, see the Start Coding page of your app on {{site.data.keyword.Bluemix_notm}} user interface.
 
@@ -178,7 +177,7 @@ To use the {{site.data.keyword.cloudant}} service within your app, you need to c
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **Note:** As the sample code shows, to connect to a {{site.data.keyword.cloudant}} service instance, you can check whether the VCAP_SERVICES environment variable exists first. If it exists, the application can use the cloudant variable's properties to access the database. However, if the VCAP_SERVICES environment variable is not present, the local {{site.data.keyword.cloudant}} service instance is used with the default values that are provided.
   
@@ -205,7 +204,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Optional:** Unbind or delete a service instance.
   

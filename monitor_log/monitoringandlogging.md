@@ -6,7 +6,7 @@
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 4 December 2015*
+*Last updated: 8 December 2015*
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -175,6 +175,7 @@ To view logs that you are interested in or exclude the content that you don't wa
 ```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
+
 For more information about the **grep** option, type cut --help.
 * To display log entries that contain certain keywords, use the **grep** option. For example, to display log entries that contain the keyword [APP, you can use the follow command:
 ```
