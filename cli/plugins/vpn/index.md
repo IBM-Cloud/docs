@@ -100,9 +100,9 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Timeout value in seconds after which the session is terminated.  Range: 30 - 86400 seconds. Default value: 120 seconds
+**-dpd-timeout:** Timeout value in seconds after which the session is terminated.  Range: 6 - 86400 seconds. Default value: 120 seconds
 
-**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 15-86400 seconds. Default value: 15 seconds
+**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
 
 **-ike:** Name of the IKE policy.
 
@@ -127,7 +127,7 @@ Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group14 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -152,7 +152,7 @@ Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group14  
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2  
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -294,9 +294,9 @@ Preshared key.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
-**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 30 - 86400 seconds. Default value: 120 seconds
+**-dpd-timeout:** Timeout value in seconds after which the session is terminated. Range: 6 - 86400 seconds. Default value: 120 seconds
 
-**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 15-86400 seconds. Default value: 15 seconds
+**-dpd-interval:** Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Range: 5-86399 seconds. Default value: 15 seconds
 
 **-ike:** Name of the IKE policy.
 
@@ -320,7 +320,7 @@ Name of the IKE policy.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group14 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -346,7 +346,7 @@ Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group14 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
