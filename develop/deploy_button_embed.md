@@ -70,7 +70,7 @@ To view the source for this sample, click <a class="xref" href="https://hub.jazz
 <dd class="pd">The ID of the default target region. For example: <code>ibm:yp:us-south</code>. This value is optional.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">The guid of the default target org. To find this value, click <stong>Manage Organizations</strong> > <i>organization_name</i>. The URL for the org contains the guid for that org. This value is optional.</dd>
+<dd class="pd">The guid of the default target org. To find this value, click <strong>Manage Organizations</strong> > <i>organization_name</i>. The URL for the org contains the guid for that org. This value is optional.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">The guid of the default target space. To find this value, click <strong>Manage Organizations</strong> > <i>space_name</i>. The URL for the space contains the guid for that space. This value is optional.</dd>
