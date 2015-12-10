@@ -8,7 +8,7 @@
 # General services problems
 {: #general}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 {{site.data.keyword.Bluemix}} services problems might include a gateway time out error that occurs when you delete a service instance. However, in many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}

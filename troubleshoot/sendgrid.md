@@ -7,7 +7,7 @@
 # SendGrid troubleshooting
 {: #ts_sendgrid}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 Here is the answer to a question about using SendGrid in {{site.data.keyword.Bluemix}}.
 {:shortdesc}

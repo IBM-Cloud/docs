@@ -9,7 +9,7 @@
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
