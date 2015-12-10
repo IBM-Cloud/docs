@@ -100,7 +100,7 @@ Users can be assigned the following permissions to take different user roles in 
 <li>Manage existing users who are already in the organization.</li>
 <li>Manage domains of the organization.</li>
 </ul>
-<p>**Note**: If you have the user type of collaborator, and previously used {{site.data.keyword.Bluemix_notm}} with a different account, you cannot invite users to the organization even if you are assigned the organization manager role. You must have the user type of member to invite users. See <a href="../troubleshoot/accessing.html#tr_adduser">Unable to add users to an organization</a> for information about how to work around this problem.</p>
+<p>**Note**: If you have the user type of collaborator, and previously used {{site.data.keyword.Bluemix_notm}} with a different account, you cannot invite users to the organization even if you are assigned the organization manager role. You must have the user type of member to invite users. See <a href="../troubleshoot/index.html#ts_adduser">Unable to add users to an organization</a> for information about how to work around this problem.</p>
 </dd>
 <dt>Billing managers</dt>
 <dd>Billing managers have permissions to view runtime and service usage information for the organization.</dd>
