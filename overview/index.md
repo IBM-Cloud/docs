@@ -30,7 +30,7 @@ You can use {{site.data.keyword.Bluemix_notm}} to quickly develop apps in the mo
 
 {{site.data.keyword.Bluemix_notm}} also provides middleware services for your apps to use. {{site.data.keyword.Bluemix_notm}} acts on the app's behalf when it provisions new service instances, and then binds those services to the app. Your app can perform its real job, leaving the management of the services to the infrastructure.
 
-In general, you don't have to worry about the operating system and infrastructure layers when running apps on {{site.data.keyword.Bluemix_notm}}. Layers such as root filesystems and middleware components are abstracted so that you can focus on your application code. However, you can learn more about these layers if you need specifics on where your app is running. See [Viewing {{site.data.keyword.Bluemix_notm}} infrastructure layers](../cli/viewinfra.html#viewinfra) for details. 
+In general, you don't have to worry about the operating system and infrastructure layers when running apps on {{site.data.keyword.Bluemix_notm}}. Layers such as root filesystems and middleware components are abstracted so that you can focus on your application code. However, you can learn more about these layers if you need specifics on where your app is running. See [Viewing {{site.data.keyword.Bluemix_notm}} infrastructure layers](../cli/vcapsvc.html#viewinfra) for details. 
 
 ## {{site.data.keyword.Bluemix_notm}} architecture
 {: #ov_arch}
@@ -322,7 +322,7 @@ The following table lists the supported national languages and language codes fo
 | Simplified Chinese | zh_CN |
 | Traditional Chinese | zh_TW |
 
-*Table 3. Supported national languages and language codes*
+*Table 2. Supported national languages and language codes*
 
 # rellinks
 ## general 
