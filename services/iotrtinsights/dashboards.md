@@ -57,7 +57,7 @@ The following table summarizes the visualization options that are available to d
 
 Data point sensor type | Visualization options | Details | Supported data type
 ------------- | ------------- | -------------
-No selection | Plain value | - | Real/Integer/Float
+No selection | Plain value | - | String/Integer/Float
 Light on/off | Plain light indicator (on/off) | 0=off | Integer
 Switch on/off | Plain switch indicator (on/off) | 0=off | Integer
 Temperature sensor | Generic temperature gauge | N/A | Integer/Float
@@ -161,7 +161,7 @@ To modify a predefined template:
 2.	In the Manage Templates panel, find the template tile, and click ![Configure icon.](images/gear.png "Configure icon")** > Change layout** to open the template for editing.  
 3.	Add widgets to the template.
  1.	Click **Add new template component** to add an initial template widget.
- 2.	Select a component to add, then select further component attributes, and, if needed, select display properties.
+ 2.	Select a component to add, then select further component attributes, and, if needed, select display properties.  
  3.	Click ![Create icon.](images/create.png "Create icon") to add the widget to the template.
 4.	Edit existing widgets.
  1.	Hover over a template widget, and click ![Configure icon.](images/gear.png "Configure icon").
