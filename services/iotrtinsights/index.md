@@ -10,7 +10,7 @@ IoT Real-Time Insights provides a real-time analytics engine and analytics autho
 
 IoT Real-Time Insights connects to the Bluemix Internet of Things (IoT Foundation) service for real-time device data feeds. The incoming data is interpreted through a virtual data model that can be augmented with asset master data from an asset management system, such as IBM Maximo&reg; Asset Management.
 
-In addition, user defined rules are applied to the real-time streaming data to identify conditions that need attention. The action engine lets you define automated responses to the detected conditions, such as sending a text message or email or creating a work order in Maximo Asset Management.  
+In addition, user defined rules are applied to the real-time streaming data to identify conditions that need attention. The action engine lets you define automated responses to the detected conditions, such as sending an email, triggering an IFTTT recipe, executing a Node-RED workflow, or using webhooks to connect to a wide variety of web services.  
 
 And finally, real-time data is also displayed in a configurable dashboard for an at-a-glance view of the location, data, metrics, and alerts for your IoT devices.
 
@@ -68,7 +68,7 @@ If you created a new IoT Foundation service, you must now create API keys to con
 4. Connect your IoT Foundation service and IoT Real-Time Insights service.
   1. From the Bluemix dashboard, click the IoT Real-Time Insights tile.  
   2. In the service page, click **Add a data source**.
-  2. In the IoT Real-Time Insights console Connect to Data Source page, click **Add New Data Source**.
+  2. In the IoT Real-Time Insights console Manage Data Sources page, click **Add New Data Source**.
   3. Give the data source a descriptive name and provide the following information that you collected earlier:
     - Organization ID
     - API Key
@@ -76,6 +76,7 @@ If you created a new IoT Foundation service, you must now create API keys to con
   4. Click ![Create icon.](images/create.png "Create icon") to create the data source and connect to it.
 4. Start using IoT Real-Time Insights.  
 You can now start using IoT Real-Time Insights by adding users, connecting your devices, configuring dashboards to view relevant device data, and setting up alerts.
+>**Selecting your Real-Time Insights instance:** If you have been granted access to any additional Real-Time Insights instances as an operator or administrator you can quickly switch between these instances. In the Real-Time Insights console, click your user name and select the instance that you want to access.  
 
 
 ># Related Links {:class="linklist"}
