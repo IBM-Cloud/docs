@@ -17,7 +17,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="iota.svg">
+   sodipodi:docname="iota.svg"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\docs-staging\services\iotrtinsights\images\text8442-4-4.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <marker
@@ -95,6 +98,21 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="scale(0.8,0.8)" />
     </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-5-2-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path8264-9-3-3"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.8,0.8)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -104,7 +122,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="352.63545"
+     inkscape:cx="222.63545"
      inkscape:cy="154.47862"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -222,66 +240,56 @@
          style="font-size:15px;text-align:center;text-anchor:middle"
          id="tspan8446">data</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5)"
-       d="m 643.57143,453.79077 c 60,0 60,0 60,0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.40102077;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5)"
+       d="m 643.57143,453.79077 c 86.47351,0 86.47351,0 86.47351,0"
        id="path7316-1"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="659.172"
-       y="475.21933"
+       x="682.74341"
+       y="481.21933"
        id="text8442-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="659.172"
-         y="475.21933"
+         x="682.74341"
+         y="481.21933"
          style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan8446-8">SMS</tspan></text>
+         id="tspan8446-8">Node-RED</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5-0)"
-       d="m 643.57143,417.3622 c 60,0 60,0 60,0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.38425636;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5-0)"
+       d="m 643.57143,417.3622 c 85.27017,0 85.27017,0 85.27017,0"
        id="path7316-1-8"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="662.73157"
-       y="438.79074"
+       x="680.58868"
+       y="443.79074"
        id="text8442-4-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="662.73157"
-         y="438.79074"
+         x="680.58868"
+         y="443.79074"
          style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan8446-8-5">Email</tspan></text>
+         id="tspan8446-8-5">IFTTT</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5-2)"
-       d="m 643.57143,490.93363 c 60,0 60,0 60,0"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.40935922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5-2)"
+       d="m 643.57143,490.93363 c 87.07518,0 87.07518,0 87.07518,0"
        id="path7316-1-1"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="671.27161"
-       y="512.36218"
+       x="679.12878"
+       y="516.07648"
        id="text8442-4-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="671.27161"
-         y="512.36218"
+         x="679.12878"
+         y="516.07648"
          style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan8446-8-2">Maximo</tspan><tspan
-         sodipodi:role="line"
-         x="671.27161"
-         y="531.11218"
-         style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan4778">work</tspan><tspan
-         sodipodi:role="line"
-         x="671.27161"
-         y="549.86218"
-         style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan4780">order</tspan></text>
+         id="tspan4780">Webhooks</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4782"
@@ -305,15 +313,15 @@
          id="flowPara4796" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="662.01727"
-       y="402.36218"
+       x="679.87439"
+       y="408.79077"
        id="text8442-4-1-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="662.01727"
-         y="402.36218"
+         x="679.87439"
+         y="408.79077"
          style="font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan8446-8-5-8">Pager</tspan></text>
+         id="tspan8446-8-5-8">Email</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -325,7 +333,7 @@
          x="671.72015"
          y="379.50507"
          style="font-weight:bold;font-size:15px;text-align:center;text-anchor:middle"
-         id="tspan8446-2">Rules and actions</tspan></text>
+         id="tspan8446-2">Rules and Actions</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -336,7 +344,7 @@
          sodipodi:role="line"
          id="tspan4249"
          x="700"
-         y="292.36221"></tspan></text>
+         y="292.36221" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -413,5 +421,10 @@
            height="100%" />
       </g>
     </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.40935922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-5-2-9)"
+       d="m 642.14286,523.79077 c 87.07518,0 87.07518,0 87.07518,0"
+       id="path7316-1-1-2"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
