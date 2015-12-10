@@ -750,14 +750,14 @@ command:
  > Content-Length: 333
  >
  * upload completely sent off: 333 out of 333 bytes
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; vary: X-HTTP-Method-Override
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 19:32:54 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 5612 msec
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < vary: X-HTTP-Method-Override
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 19:32:54 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 5612 msec
  ```
 {: screen}
 
@@ -784,20 +784,20 @@ command:
  * connect to ::1 port 3000 failed: Connection refused
  *   Trying 127.0.0.1...
  * Connected to localhost (127.0.0.1) port 3000 (#0)
- &gt; DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
- &gt; User-Agent: curl/7.37.1
- &gt; Host: localhost:3000
- &gt; Accept: */*
- &gt; Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
- &gt;
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 21:01:09 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 1922 msec
- &lt;
+ > DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
+ > User-Agent: curl/7.37.1
+ > Host: localhost:3000
+ > Accept: */*
+ > Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
+ >
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 21:01:09 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 1922 msec
+ <
  ```
 {: screen}
 
