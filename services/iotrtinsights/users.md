@@ -26,3 +26,4 @@ To add a new user:
   3. Click **Add new user**.
   4. Enter the email address of the user you want to invite, select a role for the user, and click ![Create icon.](images/create.png "Create icon").  
 An email that contains the web console link is sent to the user. If the email address is already associated with an IBM ID, the user can log in and access the console directly. If not, the user is prompted to create a free IBM ID before accessing the console.  
+>**Selecting your Real-Time Insights instance:** Users that have access to multiple Real-Time Insights instances as operators or administrators can quickly switch between these instances. In the Real-Time Insights console, they can click their user name and select the instance that they want to access.  
