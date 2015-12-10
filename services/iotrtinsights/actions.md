@@ -26,6 +26,8 @@ The action is now available in the [rules editor](rules.html#rules "Rules editor
 ## Send email {: #email}
 Use the send email action to send an email to one or more recipients when a rule is triggered.
 
+Example: [Send email](action_examples.html#emailex).
+
 The following parameters are used to configure the send email action:
 
 Parameter | Description
@@ -42,6 +44,8 @@ The body of the email is automatically created from the message of the device at
 
 ## Webhook {: #webhook}
 Use the webhook action to make an HTTP request to a webhook-enabled web service when an alert is triggered. For example, a webhook could be used to open a service request for an asset if a sensor in the device reports an abnormal reading.
+
+Example: [Use webhook to post on Slack](action_examples.html#webhookex).
 
 The following parameters are used to configure a webhook action:
 
@@ -60,6 +64,8 @@ Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POS
 ## Node-RED {: #nodered}
 Use the Node-RED action to connect to a Node-RED application when a rule is triggered. For more information about using Node-RED, see [Creating apps with the Internet of Things starter application](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html#iot500).
 
+Example: [Use Node-RED to send a text message](action_examples.html#noderedex).
+
 The following parameters are used to configure a Node-RED action:
 
 Parameter | Description
@@ -70,6 +76,8 @@ URL | The URL of the target Node-RED HTTP input node.
 
 ## IFTTT {: #ifttt}
 Use the IFTTT action to trigger an IFTTT recipe when a rule is triggered. For more information about triggering Real-Time Insights actions as IFTTT recipes, see [Maker Channel](https://ifttt.com/maker) on the IFTTT site.
+
+Example: [Use IFTTT to post a Trello card](action_examples.html#iftttex).
 
 The following parameters are used to configure an IFTTT action:
 
