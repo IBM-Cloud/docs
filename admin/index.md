@@ -686,7 +686,7 @@ option in the file to the HTTP server as a cookie.</dd>
 <li>Create a JSON file that contains the information in a proper JSON format.
 <p>For example, create a file that is named `user.json` that has the
 following content:</p>
-<code>
+<pre>
 {
     "members": [
         {
@@ -704,7 +704,7 @@ following content:</p>
         }
     ]
 }
-</code><br/><br/>
+</pre>
 </li>
 <li>Post the content of the JSON file to the user's endpoint by running the following
 command:<br/><br/>
