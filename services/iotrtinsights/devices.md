@@ -24,7 +24,7 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
   >**Important:** Each message schema must have a unique combination of data source, device type, and event name. To create more than one schema for a specific data source and device type combination, specify a unique event name for each message schema instead of the default `+` wild card.   
   6. Add one or more data points that you want to include in the device dashboards.  
     You can select data points from a connected device, or add data points manually. The available data points are defined in the payload of the messages that are sent by a device. For information about the IoT Foundation payload format, see the [Message Payload](https://docs.internetofthings.ibmcloud.com/messaging/payload.html "Message Payload.") topic in the IoT Foundation documentation.   
-    > **Tip:** You can manually create virtual data points that modify or combine existing data points of the type integer or float. For example, if the data point ax consistently returns a value that is slightly too high, you can create a virtual data point ax_adj that adjusts the value of ax. You can then use the virtual ax_adj data point instead of the real-time ax data point in your dashboards and rules. Virtual data points are identified by a dashed underline.    
+    > **Tip:** You can manually create virtual data points that modify or combine existing data points of the type integer or float. For example, if the device data point temp returns a temperature value in Fahrenheit, and you want to use Celsius instead, you can create a virtual data point *temp_c* with the following function *temp_c=(temp-32)/1.8*. You can then use the virtual *temp_c* data point instead of the real-time *temp* data point in your rule conditions. Virtual data points are identified by a dashed underline.    
 
   <dl>
   <dt>Select from connected device</dt>
@@ -47,7 +47,7 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
     <li> Data point - The data point identifier that you [located in the IoT Foundation dashboard](#identify-datapoints "Identify datapoints."). For example:  
    `id`, `ts`, `lat`  </li>
    <li>Description - A short description of the data point. This description is used when displaying the data points in dashboards.</li>
-   <li>Virtual data point function - Add one or more components to define a valid function. You can use data points, numerical values, and mathematical operators such as +, -, \* to build your function. </li>
+   <li>Virtual data point function - Add one or more components to define a valid function. You can use data points, numerical values, and mathematical operators such as +, -, \*, /, (, and ) to build your function. </li>
    <li>Data type - The type of data of the data point:  
    `String`, `Integer`, `Float`, or `Parent`.</li>
      <li>Sensor type - Optionally select how to interpret the data point in the dashboards. Depending on the type and sensor type combination, additional visualization options might be available for your dashboard widgets. For more information about sensor types and visualization options, see [Dashboard widgets](dashboards.html#dashboard-widget "Dashboard widgets").</li>
