@@ -73,7 +73,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 You can expect a process similar to the following list for the initial deployment and configuration of your environment. For details about who is responsible for each task, see [Roles and responsibilities](../local/index.html#rolesresponsibilities).
 
 <ol>
-<li>You provide the VMware configuration that meets the specifications for compute resources, networking, and storage. For more information about the infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).</li>
+<li>You provide the VMware configuration that meets the specifications for compute resources, networking, and storage. For more information about the infrastructure requirements, see <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.</li>
 <li>You provide the vCenter cluster credentials to be used by the inception virtual machine. You must provide the following information:
 <ul>
 <li>Name of the VMware cluster</li>
