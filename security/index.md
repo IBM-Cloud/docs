@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 7 December 2015*
+*Last updated: 15 December 2015*
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
@@ -303,8 +303,6 @@ In addition to users described in these paths, an authorized IBM security operat
 
 ## Security compliance
 {: #compliance}
-
-*Last Updated: 15 December 2015*
 
 {{site.data.keyword.Bluemix}} provides a secure cloud platform that you can trust. The Bluemix platform and services are built on best-in-industry standards, including ISO 27001 and ISO 27002.
 {:shortdesc}
