@@ -88,7 +88,7 @@ You can expect a process similar to the following list for the initial deploymen
 <p>**Note**: If your web proxy is not secure, then you do not need to provide the credentials. Also, note that not all {{site.data.keyword.Bluemix_notm}} Local customers use a web proxy.</p></li>
 <li>IBM provides a whitelist of URLs that must be allowed through your web proxy before starting the deployment.</li>
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.
-<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains.</p></li>
+<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the IBM operations center.</li>
 <li>IBM installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an IBM representative helps your customer representative to complete this task.</li>
 <li>IBM configures the Relay to communicate back to the IBM operations center.</li>
