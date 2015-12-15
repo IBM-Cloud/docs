@@ -301,6 +301,22 @@ In addition to users described in these paths, an authorized IBM security operat
  * Security monitoring with QRadar.
  * Security reports available through the Admin Console.
 
+## Security compliance
+{: #compliance}
+
+*Last Updated: 15 December 2015*
+
+{{site.data.keyword.Bluemix}} provides a secure cloud platform that you can trust. The Bluemix platform and services are built on best-in-industry standards, including ISO 27001 and ISO 27002.
+{:shortdesc}
+
+![EU Data Protection Model Clause](images/icon_eumc.png) A **European Union (EU) Model Clause** is an agreement to protect personal data that is transferred from the EU or European Economic Area (EEA) to a third country. The EU Model Clause is signed between the client located in the EU or EEA as the data exporter, and the IBM data processor located in the third country as the data importer. The [IBM SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contains the rights and obligations of the data exporter and the data importer, and the rights of the data subjects. The IBM SaaS EU Model Clause ensures that personal data, when processed in a third country, is under protection that is similar to the protection available within the EU or EEA.
+
+![Financial Industry Information Systems](images/FISC.gif)  For banking and related financial institutions in Japan, computer systems must have security procedures in place that are based on the Center for Financial Industry Information Systems (FISC) security guidelines. **FISC** security guidelines are enforced by the Japan Financial Services Agency (FSA), Bank of Japan (BOJ), and FISC.
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  Bluemix is certified under the **International Organization for Standardization (ISO) 27001 and 27002 standards**, which define the best practices for information security management processes. The ISO 27001 standard specifies the requirements for establishing, implementing, and documenting Information Security Management Systems (ISMS) and the requirements for implementing security controls, according to the needs of individual organizations. The ISO 27002 standard explains each security control of ISO 27001 in detail. The ISO 27000 family of standards incorporates a process of scaling risk and valuation of assets, with the goal of safeguarding the confidentiality, integrity, and availability of the written, oral, and electronic information. 
+
+Bluemix is audited by a third-party security firm and meets all of the requirements for ISO 27001: [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
 ## Security reports
 {: #reports}
 
