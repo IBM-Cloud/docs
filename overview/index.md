@@ -157,8 +157,8 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
 | **Region name** | **Region prefix** | **cf API endpoint** | **UI console** |       
 |-----------------|-------------------|---------------------|----------------|
-| US South region | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Europe United Kingdom region | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| US South region | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| United Kingdom region | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Australia Sydney region | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
