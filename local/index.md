@@ -70,6 +70,39 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 </li>
 </ol>
 
+You can expect a process similar to the following list for the initial deployment and configuration of your environment. For details about who is responsible for each task, see [Roles and responsibilities](../local/index.html#rolesresponsibilities).
+
+<ol>
+<li>You provide the VMware configuration that meets the specifications for compute resources, networking, and storage. For more information about the infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).</li>
+<li>You provide the vCenter cluster credentials to be used by the inception virtual machine. You must provide the following information:
+<ul>
+<li>Name of the VMware cluster</li>
+<li>vCenter cluster credentials including the user ID and password</li>
+<li>Datastore name or names (storage LUN name)</li>
+<li>VLAN ID/VMware port group</li>
+<li>Resource pool name</li>
+</ul>
+</li>
+<li>You and IBM work together to validate the credentials that you provided in the previous task.</li>
+<li>You provide 7 IP addresses on your network. If you have a secured web proxy for allowing outbound access to the Internet for internal {{site.data.keyword.Bluemix_notm}} components, then you must provide the credentials to connect to it.
+<p>**Note**: If your web proxy is not secure, then you do not need to provide the credentials. Also, note that not all {{site.data.keyword.Bluemix_notm}} Local customers use a web proxy.</p></li>
+<li>IBM provides a whitelist of URLs that must be allowed through your web proxy before starting the deployment.</li>
+<li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.
+<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains.</p></li>
+<li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the IBM operations center.</li>
+<li>IBM installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an IBM representative helps your customer representative to complete this task.</li>
+<li>IBM configures the Relay to communicate back to the IBM operations center.</li>
+<li>The inception virtual machine repository pulls in the updated build artifacts.</li>
+<li>You provide the credentials for IBM to connect to the corporate LDAP directory instance.</li>
+<li>IBM uses automation to deploy the core {{site.data.keyword.Bluemix_notm}} platform.</li>
+<li>IBM deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
+<li>IBM configures your administrative access to the environment.</li>
+<li>IBM links your syndicated catalog from your local deployment to a Public {{site.data.keyword.Bluemix_notm}} instance for use of public services. A set of public services are available in your local instance by default. You can use the administration page for catalog management to turn the services on or off for your local instance.</li>
+<li>You can start using your local instance that is monitored by the IBM operations team in order to respond to alerts.</li>
+</ol>
+
+After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../administer/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
+
 ##Roles and responsibilities
 {: #rolesresponsibilities}
 
