@@ -6,7 +6,7 @@
 # CLI and Dev Tools
 {: #cli}
 
-*Last updated: 10 November 2015*
+*Last updated: 15 December 2015*
 
 Powerful tools for {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
@@ -35,9 +35,9 @@ cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 cf install-plugin plugin_name -r bluemix-cf-staging
 ```
 
-| *Active Deploy* |  *Development Mode* | 
-|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
+| *Active Deploy* | *Admin Console* | *Development Mode* | 
+|-----------------|-----------------|-----------------|
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
 
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
