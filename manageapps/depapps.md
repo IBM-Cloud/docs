@@ -182,14 +182,8 @@ Environment variables contain the environment information of a deployed applicat
 
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
 
-  * User-defined variables that are specific for an application. You can set application-specific variables by using the **cf set-env** command, or by configuring value pairs in the [`manifest.yml` file](#appmanifest) as follows:
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * User-defined variables that are specific for an application. For information about how to add a user-defined variable to an app, see [Adding user-defined environment variables](#ud_env){:new_window}.
+	  
   * The VCAP_SERVICES variable, which contains connection information to access a service instance. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance. For example:
   
   ```
@@ -377,6 +371,33 @@ To specify start commands for your application, you can use one of the following
   ```
   command: node app.js
   ```
+  
+  
+  
+### Adding user-defined environment variables
+{: #ud_env}
+
+User-defined environment variables are specific for an application. You have the following options to add a user-defined environment variable to a running app:
+
+  * Use the {{site.data.keyword.Bluemix_notm}} user interafce. Complete the following steps:
+    1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click your app tile. The App details page is displayed.
+	2. On the left navigation pane, click **Environment Variables**.
+	3. Click **USER-DEFINED**, then click **ADD**.
+	4. Fill in the required fields, then click **SAVE**.
+  * Use the cf command line interface. Add a user-defined variable by using the `cf set-env` command. For example: 
+    ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * Use the `manifest.yml` file. Add value pairs in the file. For example: 
+    ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### Configuring the startup environment
 
