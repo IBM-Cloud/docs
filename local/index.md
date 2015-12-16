@@ -248,7 +248,7 @@ To support a single node failure, you must have n+1 ESXi. For example, if two ES
 <dt>**Network**</dt>
 <dd>
 Recommended requirements include a customer accessible port group with 7 customer network IP addresses that have outbound internet access in the same subnet. Then, define a second private VLAN between only the ESXis being used for {{site.data.keyword.Bluemix_notm}} Local. This VLAN is shown as a port group in VMware. {{site.data.keyword.Bluemix_notm}} Local uses it for the private subnet, which is more secure and can help avoid routing issues.<br />
-<p>**Note**: IBM can detect if the network connection is lost. In the event that network connection is lost, IBM contacts you and works with your network specialist to resolve the issue.</p>
+<p>**Note**: If IBM detects a loss of network connection, IBM contacts you and works with your network specialist to resolve the issue.</p>
 </dd>
 </dl>
 
