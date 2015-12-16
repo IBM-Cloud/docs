@@ -21,10 +21,10 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
   4. Enter a name for the message schema, for example:  
   `New message schema`.
   5. Click **Link new data source** and select the data source and device type that corresponds to your IoT Foundation instance and device. Optionally, enter an event name to collect data for that event only, or leave the `+` wild card to collect all events. More information about how to identify event types for your device is [here](#identify-datapoints "Identify datapoints.").  
-  >**Important:** Each message schema must have a unique combination of data source, device type, and event name. To create more than one schema for a specific data source and device type combination, specify a unique event name for each message schema instead of the default `+` wild card.   
+  >**Important:** Each message schema must have a unique combination of data source, device type, and event name. To create more than one schema for a specific data source and device type combination, specify a unique event name for each message schema instead of using the default `+` wild card.   
   6. Add one or more data points that you want to include in the device dashboards.  
     You can select data points from a connected device, or add data points manually. The available data points are defined in the payload of the messages that are sent by a device. For information about the IoT Foundation payload format, see the [Message Payload](https://docs.internetofthings.ibmcloud.com/messaging/payload.html "Message Payload.") topic in the IoT Foundation documentation.   
-    > **Tip:** You can manually create virtual data points that modify or combine existing data points of the type integer or float. For example, if the device data point temp returns a temperature value in Fahrenheit, and you want to use Celsius instead, you can create a virtual data point *temp_c* with the following function *temp_c=(temp-32)/1.8*. You can then use the virtual *temp_c* data point instead of the real-time *temp* data point in your rule conditions. Virtual data points are identified by a dashed underline.    
+    > **Tip:** You can manually create virtual data points that modify or combine existing data points that are type integer or float. For example, if the device data point temp returns a temperature value in Fahrenheit, and you want to use Celsius instead, you can create a virtual data point *temp_c* with the following function *temp_c=(temp-32)/1.8*. You can then use the virtual *temp_c* data point instead of the real-time *temp* data point in your rule conditions. In the dashboards, virtual data points are identified by a dashed underline.    
 
   <dl>
   <dt>Select from connected device</dt>
@@ -36,7 +36,7 @@ Adding a new device is a two-step process. First, you add the device to IoT Foun
   </ol>
   </dd>
   <dt>Add manually</dt>
-  <p><b>Tip:</b> To create a [nested data point structure](schemas.html), first add a data point with the data type Parent. In the data points table you can then click ![Add child icon.](images/add_child.png "Add child") to add one or more child data points.</p>
+  <p><b>Tip:</b> To create a [nested data point structure](schemas.html), first add a data point that has the data type Parent. In the data points table, you can then click ![Add child icon.](images/add_child.png "Add child") to add one or more child data points.</p>
   <dd>
   <ol>
     <li>Click **Add manually**.</li>

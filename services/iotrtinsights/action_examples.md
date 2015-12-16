@@ -2,20 +2,20 @@
 
 # Action Examples
 
-The action types Send email, IFTTT, Node-RED, and webhooks open up a whole universe of options for executing tasks, only limited by your imagination and the connectors used by the other tools. For example, actions can be to post device status messages on Slack, send text messages to service personnel, create device service requests, and much more.
+The Send email, IFTTT, Node-RED, and webhooks action types open up a whole universe of options for executing tasks, which is limited only by your imagination and the connectors that are used by the other tools. For example, actions to post device status messages on Slack, send text messages to service personnel, create device service requests, and much more.
 {: shortdesc}
 
-The examples below all represent an action that notifies a service engineer when the temperature represented by the temp data point of a device exceeds 100 degrees, with a rule condition like this:
+The examples below all represent an action that notifies a service engineer when the temperature, which is represented by the temp data point of a device, exceeds 100 degrees, by using the following rule condition:
 `temp >= 100`
 
-Example by action type:  
+You can trigger one or more of the following action types when the rule condition occurs:  
  - [Send email](#emailex "Send email")
  - [Webhook](#webhookex "Webhook")
  - [Node-RED](#noderedex "Node-RED")
  - [IFTTT](#iftttex "IFTTT")
 
-## Send email {: #emailex}
-In this example, we configure the action to use the Real-Time Insights email feature to send an email to the main service engineer, with a backup email to his manager.
+## Use send email {: #emailex}
+In this example, the action is configured to use the Real-Time Insights Send email feature to send an email to the main service engineer, and also send a backup email to his manager.
 
 To create the email action:
 1. In Real-Time Insights, go to **Analytics > Actions**.
@@ -27,19 +27,19 @@ To create the email action:
 7. In the CC field, enter: `service.manager@company.com`.
 8. In the subject line, enter: `Service required.`
 9. Select to prepend with "IoT Real-Time Insights alert" to clarify where the email comes from.
-10. To include the device data in the email, deselect **Do not include device data in the email message**.
+10. To include the device data in the email, clear the **Do not include device data in the email message** check box.
 11. Click **OK** to save the action.  
 
 
 
 
-## Use webhook to post on Slack {: #webhookex}
+## Use a webhook to post on Slack {: #webhookex}
 
-In this example, we configure the action to use a webhook to post a message to our #service-requests Slack channel.
+In this example, the action is configured to use a webhook to post a message to our #service-requests Slack channel.
 
 To create the post to slack action:
-1. In Slack, set up Incoming Webhooks integration for the channel #service-requests. Make a note of the webhooks URL. For more information, see the [Slack documentation](https://api.slack.com/incoming-webhooks).
-2. In Real-Time Insights, go to **Analytics > Actions** and create a new action with the following parameters:
+1. In Slack, set up the Incoming Webhooks integration for the channel #service-requests. Make a note of the webhooks URL. For more information, see the [Slack documentation](https://api.slack.com/incoming-webhooks).
+2. In Real-Time Insights, go to **Analytics > Actions** and create a new action that has the following parameters:
  - Type - **Webhook**
  - Name - `Post service request on Slack`
  - URL - `Your Slack webhooks URL`
@@ -48,27 +48,30 @@ To create the post to slack action:
 
 ## Use Node-RED to send a text message {: #noderedex}
 
-In this example, we configure the action to use Node-RED with a Twilio node to send a text message to the service engineer.
+In this example, the action is configured to use Node-RED with a Twilio node to send a text message to the service engineer.
 
 To create the send text message action:
 1. In Twilio, locate or create a new Messaging Service to use to send text messages from your Twilio account. For information, see the [Twilio documentation](https://www.twilio.com/help).
-1. In Bluemix, set up and access your Node-RED account with Node-RED URL `http://mynodered.mybluemix.net/red/`. More information [here](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html).
-2. In Node-RED, create a simple two node flow such as:   [RTI-alert]->[SMS].  
-Where the first node is an http node, and the second a twilio node.
- 1. Place the "http" input node and configure it with the following attributes:
+1. In Bluemix, set up and access your Node-RED account with the Node-RED URL `http://mynodered.mybluemix.net/red/`. For more information, see the [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) topic in the Bluemix documentation.
+2. In Node-RED, create a simple two node flow such as [RTI-alert]->[SMS].  
+Where the first node is an http node, and the second is a twilio node.
+ 1. Add the "http" input node and configure it with the following attributes:
   <ul>
   <li>Method - POST</li>
   <li>URL - `RTI-alert`</li>
   <li>Name - RTI Action</li>
   </ul>
-  2. Place a "twilio" output node and configure the it with the following attributes:
+  2. Add a "twilio" output node and configure the it with the following attributes:
   <ul>
   <li>Service - **External service**</li>
   <li>Twilio - Add new twilio-api</li>
   <li>SMS to - `Phone number for the service engineer`</li>
   <li>Name - **SMS**</li>
   </ul>
-3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action with the following parameters:
+  3. Wire the nodes together  
+  Connect the http and twilio nodes together by dragging between the output port of one to the input port of the other.
+  4. Click the **Deploy** button to deploy the flow to the server
+3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action that has the following parameters:
  <ul>
  <li>Type - **Node-RED**</li>
  <li>Name - `Send text using Node-RED and Twilio`</li>
@@ -83,7 +86,7 @@ In this example, we configure the action to use IFTTT to post a card to a servic
 
 To create the post a card on Trello action:
 1.	In IFTTT, connect to the Trello channel.
-2.	In IFTTT, connect to the Maker channel. Make a note of your key.
+2.	In IFTTT, connect to the Maker channel. Make a note of your IFTTT key. You need this to connect to IFTTT from Real-Time Insights.
 5.	In IFTTT, create a recipe:
  1. Click **THIS**.
  2. Select the **Maker** channel.  
@@ -93,10 +96,10 @@ To create the post a card on Trello action:
  5. Select the **Trello** channel.
  6. Select the Trello board in which to create the card.
  7. Enter a list name in which to add the cards.
- 8. Edit the title and description as needed.
+ 8. Edit the title and description.
  9. Assign the @service.engineer and @service.manager members.
  8. Click **Create Action**.   
-3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action with the following parameters:
+3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action that has the following parameters:
 <ul>
 <li>Type - **IFTTT**</li>
 <li>Name - `Post service request card`</li>
