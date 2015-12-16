@@ -5,7 +5,7 @@
 
 #Administering {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Last updated: 15 December 2015*
+*Last updated: 16 December 2015*
 
 Manage your orgs, spaces, and assigned users by clicking **Account and Support** &gt; **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) for more information about administering your local or dedicated instance.
 {:shortdesc}
@@ -799,6 +799,204 @@ command:
  < X-Time_Check: Proxy Time: 1922 msec
  <
  ```
+{: screen}
+
+### Custom service API
+{: #servicebrokerapi}
+
+There are three APIs that you can use to register or create a new service, update a service, and delete a service.
+
+All APIs are relative to <code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>.
+
+<dl>
+<dt><strong>&lt;subdomain&gt;</strong></dt>
+<dd>This value is the name of your local or dedicated instance. The subdomain name for your {{site.data.keyword.Bluemix}} instance was
+assigned during onboarding.</dd>
+</dl>
+
+### Registering a new service
+
+Use the following API and code examples to register a new service.
+
+#### Route
+
+```
+POST /codi/v1/serviceBrokers
+```
+{: screen}
+
+#### Request
+
+*Table 3. Fields*
+
+| **Name** | **Description** |
+|-----------------|-------------------|
+| name | Name of the service broker. |
+| auth_username | User name used to connect with the service broker. |
+| auth_password | Password used to connect with the service broker. |
+| broker_url | URL used to connect to the service broker. |
+| owningOrganization | Initial organization to whitelist the service with. |
+
+##### Body
+
+```
+{
+  "name" : "Service broker's name",
+  "auth_username" : "username",
+  "auth_password" : "password",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### Headers
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### Status
+
+```
+201 Created
+```
+{: screen}
+
+##### Body
+
+```
+{
+  "entity": {
+    "name": "Service broker's name",
+    "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
+    "created_at": "2015-12-07T19:51:50Z",
+    "updated_at": null,
+    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
+  }
+}
+```
+{: screen}
+
+### Updating a service
+
+Use the following API and code examples to update a service.
+
+#### Route
+
+`PUT /codi/v1/serviceBrokers`
+{: screen}
+
+#### Request
+
+*Table 4. Fields*
+
+| **Name** | **Description** |
+|-----------------|-------------------|
+| name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
+| auth_username | User name used to connect with the service broker. |
+| auth_password | Password used to connect with the service broker. |
+| broker_url | URL used to connect to the service broker. |
+| owningOrganization | Initial organization to whitelist the service with. |
+
+##### Body
+
+```
+{
+  "name" : "Service Broker's name",
+  "auth_username" : "username",
+  "auth_password" : "newPassword",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### Headers
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### Status
+
+```
+201 Created
+```
+{: screen}
+
+##### Body
+
+```
+{
+  "entity": {
+    "name": "Service Broker's name",
+    "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
+    "created_at": "2015-12-07T20:11:08Z",
+    "updated_at": "2015-12-07T20:11:19Z",
+    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
+  }
+}
+```
+{: screen}
+
+### Deleting a service
+
+Use the following API and code examples to delete a service.
+
+*Table 5. Parameter*
+
+| **Name** | **Description** |
+|-----------------|-------------------|
+| name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
+
+#### Route
+
+```
+DELETE /codi/v1/serviceBrokers?name=name of service broker
+```
+{: screen}
+
+#### Request
+
+##### Headers
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### Status
+
+```
+204 No Content
+```
 {: screen}
 
 ### Managing users with the cf CLI
