@@ -35,7 +35,7 @@ The following examples illustrate supported nested message formats:
 }
 ```  
 
->**Important:** Nested JSON messages must contain the d element which is where you include all data for the event being transmitted in the message.
+>**Important:** Nested JSON messages must contain the d element, which is where you include all data for the event that is transmitted in the message.
 - The element is required for your message to meet the IoT Foundation message specification.
-- The element must always be a JSON object (not an array)
-- In the case where you wish to send no data the d element should still be present, but contain an empty object.
+- The element must always be a JSON object and not an array.
+- If you want to send no data, ensure that the d element is used and that it contains an empty object.

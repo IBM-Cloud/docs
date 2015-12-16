@@ -10,7 +10,7 @@ IoT Real-Time Insights provides a real-time analytics engine and analytics autho
 
 IoT Real-Time Insights connects to the Bluemix Internet of Things (IoT Foundation) service for real-time device data feeds. The incoming data is interpreted through a virtual data model that can be augmented with asset master data from an asset management system, such as IBM Maximo&reg; Asset Management.
 
-In addition, user defined rules are applied to the real-time streaming data to identify conditions that need attention. The action engine lets you define automated responses to the detected conditions, such as sending an email, triggering an IFTTT recipe, executing a Node-RED workflow, or using webhooks to connect to a wide variety of web services.  
+In addition, user-defined rules are applied to the real-time streaming data to identify conditions that need attention. The action engine lets you define automated responses to the detected conditions, such as sending an email, triggering an IFTTT recipe, executing a Node-RED workflow, or using webhooks to connect to a variety of web services.  
 
 And finally, real-time data is also displayed in a configurable dashboard for an at-a-glance view of the location, data, metrics, and alerts for your IoT devices.
 
