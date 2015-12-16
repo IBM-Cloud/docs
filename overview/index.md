@@ -155,11 +155,11 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Region name** | **Region prefix** | **cf API endpoint** | **UI console** |       
-|-----------------|-------------------|---------------------|----------------|
-| US South region | ng | api.ng.bluemix.net | console.ng.bluemix.net |
-| United Kingdom region | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Sydney region | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Region name** | **Geographic location** | **Region prefix** | **cf API endpoint** | **UI console** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Table 1. {{site.data.keyword.Bluemix_notm}} region list*
