@@ -61,7 +61,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Austrilian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.alchemyapishort}} 		|Ye	   	|Yes  		|Yes|
+|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
 |{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
