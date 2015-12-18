@@ -122,7 +122,7 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.png) in the upper right of the Dashboard, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the upper right of the Dashboard, and select **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
@@ -164,10 +164,10 @@ When you use the {{site.data.keyword.Bluemix_notm}} user interface, you might no
 You might see one of the following error messages when you use the {{site.data.keyword.Bluemix_notm}} user interface:
 {: tsSymptoms}
 
-`BXNUI0001E: Could not determine whether a session exists. Try to reload the browser.`
+`BXNUI0001E: The page wasn't loaded because Bluemix didn't detect whether a session exists.`
 
 
-`BXNUI0016E: Applications and services could not be retrieved.`
+`BXNUI0016E: The apps and services weren't retrieved because a Bluemix page didn't load.`
 
  
 
@@ -206,23 +206,6 @@ Use the side drawer menu in the upper left corner instead.
 
 
 
-
-## The {{site.data.keyword.Bluemix_notm}} Dashboard can't load apps or services
-{: #ts_dashboard}
-
-The {{site.data.keyword.Bluemix_notm}} Dashboard might not display any app or service information because your organization or space cannot access it. 
- 
-
-When you log into the {{site.data.keyword.Bluemix_notm}} user interface, there is nothing available on your Dashboard even though you have created apps and used some services before.
-{: tsSymptoms}
- 
-
-This problem might happen when you bind a service instance to your app, but the service is no longer accessible because the service privileges are changed for your organization or space. 
-{: tsCauses}
-  	
-
-To resolve the problem, type `cf services` in the cf command line interface to list your service instances and identify the service. Then, use the `cf delete-service` command to delete the service instance that is no longer accessible.
-{: tsResolve}
 
 
 
@@ -443,7 +426,7 @@ If you are a trial account user, you might be unable to create an application in
 When you try to create an application in {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
 {: tsSymptoms}
 
-`BXNUI2032E: An error occurred when contacting Cloud Foundry to create a resource. Resource: service_instances. Cloud Foundry message: "You have exceeded your organization's services limit."`
+`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
 
 
@@ -621,7 +604,7 @@ Use one of the following methods to solve the problem:
   
   
   
-  
+ 
   
   
 
@@ -1076,7 +1059,7 @@ You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your ac
 When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
 {: tsSymptoms} 
 
-`BXNUI0096E: The application could not be created. Your account is inactive because it was cancelled or suspended.`
+`BXNUI0096E: The app wasn't created. Your account is inactive because it was canceled or suspended.`
 
 
 The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive when the account is cancelled or suspended.
@@ -1103,7 +1086,7 @@ When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the
 {: tsSymptoms} 
 
 
-`BXNUI0097E: The new application could not be added. There is no space associated with the current organization and region. On the Dashboard, click Create a Space. When the space is created, try again.`
+`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click **Create a Space**. When the space is created, try again.`
 
 
 
@@ -1447,17 +1430,6 @@ You can resolve this issue by using one of the following methods:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
 
 
 
