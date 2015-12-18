@@ -40,7 +40,7 @@ For the CSR to be valid, the following information must be entered when generati
 
   The branch name of your company that is ordering the certificate, such as Accounting or Marketing.
   
-**Common aame**
+**Common name**
 
   The fully qualified domain name (FQDN) for which you are requesting the SSL certificate.
   
