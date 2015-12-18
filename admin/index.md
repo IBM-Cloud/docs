@@ -127,7 +127,7 @@ Users can be assigned the following permissions to take different user roles in 
 ###Managing your organization
 {: #orgmng}
 
-As an organization manager or account owner, you can manage your organizations. Management tasks include creating an organization, renaming an organization, creating a space, inviting users to a space, and deleting an existing organization.
+As an organization manager or account owner, you can manage your organizations. Management tasks include creating an organization, renaming an organization, creating a space, inviting users to a space, changing user roles, and deleting an existing organization.
 
 <ul>
 <li>Creating an organization
@@ -164,6 +164,14 @@ As an organization manager or account owner, you can manage your organizations. 
 <ol>
 <li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
 <li>Add the user to a space. Select the space from the left navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
+</ol>
+</li>
+<li>Changing user roles
+<p>Take the following steps to change user roles:</p>
+<ol>
+<li>From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the upper-right of the Dashboard, and then select **Manage Organizations**.</li>
+<li>Select the **MANAGER**, **BILLING MANAGER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in your organization. Or select a space from the left navigation pane, and then select the **MANAGER**, **DEVELOPER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in the space. </li>
+<li>Click **SAVE**.</li>
 </ol>
 </li>
 <li>Deleting an existing organization
