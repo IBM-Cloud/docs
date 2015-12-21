@@ -39,7 +39,7 @@
 # Pricing
 {: #pricing}
 
-*Last updated: 09 November 2015*
+*Last updated: 21 December 2015*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage details view for you to check the actual cost after you build your apps.
 {:shortdesc}
@@ -54,12 +54,11 @@ Your account is provided with the following resources, free of charge:
 * 10 services
 * 1 SSL certificate
 
-Your free trial expires 30 days after you sign up. After your 30-day trial expires, the applications in your account are stopped. You will not be able to sign up for another trial on Bluemix. However, you can still access your account and the accounts that you are invited to. To restart your applications, you must either provide your credit card information for a Pay-As-You-Go account or create a Subscription account. After you convert your account, you can continue to use free compute and service allowances. You pay only for the usage of services, containers, and runtimes that is not included as part of your free monthly allowance.
+Your free trial expires 30 days after you sign up. After your 30-day trial expires, the applications in your account are stopped. You will not be able to sign up for another trial on {{site.data.keyword.Bluemix_notm}}. However, you can still access your account and the accounts that you are invited to. To restart your applications, you must either provide your credit card information for a Pay-As-You-Go account or create a Subscription account. After you convert your account, you can continue to use free compute and service allowances. You pay only for the usage of services, containers, and runtimes that is not included as part of your free monthly allowance.
 
-If you do not convert your account after your free trial expires, you will receive email notifications about your account status after the trial expires. The notifications remind you to create your pay account so that your application settings and configurations will not be lost. If you do not want to receive these notifications from Bluemix, you can unsubscribe at anytime.
-One month after the trial expiration, your applications and service configurations are removed. The following figure shows the general process of Bluemix account management.
-Figure 1. Process flowchart of Bluemix account management
-Process flowchart of Bluemix account management
+If you do not convert your account after your free trial expires, you will receive email notifications about your account status after the trial expires. The notifications remind you to create your pay account so that your application settings and configurations will not be lost. If you do not want to receive these notifications from {{site.data.keyword.Bluemix_notm}}, you can unsubscribe at anytime.
+One month after the trial expiration, your applications and service configurations are removed. The following figure shows the general process of {{site.data.keyword.Bluemix_notm}} account management.
+
 
 ![Process flowchart of {{site.data.keyword.Bluemix_notm}} account management](acctmgmt600.png)
 
@@ -72,7 +71,7 @@ If you convert your account during your free trial, your free allowances are lim
 ##What it costs
 {: #what_it_costs}
 
-Charges vary depending on the resources used by a particular service, runtime, container, virtual machine, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. Bluemix also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage details* view. For more detailed information about charges, see [How you are charged](index.html#charges).
+Charges vary depending on the resources used by a particular service, runtime, container, virtual machine, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage details* view. For more detailed information about charges, see [How you are charged](index.html#charges).
  
 
 ##Promo code
@@ -94,15 +93,15 @@ To use a promo code, click the **Profile Settings** icon, select **Account**, th
 ##How you are billed
 {: #pay-accounts}
 
-When you sign up for a Bluemix billable plan, you can select from the following accounts:
+When you sign up for a {{site.data.keyword.Bluemix_notm}} billable plan, you can select from the following accounts:
 * Pay-As-You-Go
 * Subscription
-* Bluemix Dedicated
-* Bluemix Local
+* {{site.data.keyword.Bluemix_notm}} Dedicated
+* {{site.data.keyword.Bluemix_notm}} Local
 
-With a Pay-As-You-Go account, you are charged based on your use of {{site.data.keyword.Bluemix_notm}} compute and services. With a Subscription account, you can get a monthly discount based on a minimum monthly spending commitment. Bluemix Dedicated and Bluemix Local are charged by annual contracts.
+With a Pay-As-You-Go account, you are charged based on your use of {{site.data.keyword.Bluemix_notm}} compute and services. With a Subscription account, you can get a monthly discount based on a minimum monthly spending commitment. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local are charged by annual contracts.
 
-You can convert your free trail into a billable account at any time. All of your free trial non-billable account information and Bluemix solutions will be seamlessly merged into the new billable account.
+You can convert your free trail into a billable account at any time. All of your free trial non-billable account information and {{site.data.keyword.Bluemix_notm}} solutions will be seamlessly merged into the new billable account.
 
 After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon** in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface, then click **Account &gt; Account Type** to edit your information.
 
@@ -155,16 +154,16 @@ With {{site.data.keyword.Bluemix_notm}} Local, you must sign up for a one year m
 ##How you are charged
 {: #charges}
 
-With a {{site.data.keyword.Bluemix_notm}} billable account, you are charged for the compute, containers, and services that are used in your organization. You might be invited by other {{site.data.keyword.Bluemix_notm}} users to participate in organizations under a different account. If you create applications or use services in the organizations that you are invited to, the usage incurred is charged to the account that contains those organizations. You can see more information about a specific charges on a resource details page from the Bluemix Catalog, or on the price calculator from the {{site.data.keyword.Bluemix_notm}} Pricing page.
+With a {{site.data.keyword.Bluemix_notm}} billable account, you are charged for the compute, containers, and services that are used in your organization. You might be invited by other {{site.data.keyword.Bluemix_notm}} users to participate in organizations under a different account. If you create applications or use services in the organizations that you are invited to, the usage incurred is charged to the account that contains those organizations. You can see more information about a specific charges on a resource details page from the {{site.data.keyword.Bluemix_notm}} Catalog, or on the price calculator from the {{site.data.keyword.Bluemix_notm}} Pricing page.
 
-Different types of charges apply depending on the features of Bluemix you are using. The following table provides a high-level overview:
+Different types of charges apply depending on the features of {{site.data.keyword.Bluemix_notm}} you are using. The following table provides a high-level overview:
 
-| Type of charge | Description | Bluemix features that use this type of charge | Example |
+| Type of charge | Description | {{site.data.keyword.Bluemix_notm}} features that use this type of charge | Example |
 |------------------|------------------|--------------------------|--------------------------|
 | Fixed | Fixed-rate pricing is based on an agreed upon monthly charge that is not adjusted. | Services  | Data Cache has a fixed plan that is charged at a fixed monthly rate. |
 | Metered | Metered-usage pricing is based on the number of GB-hours consumed for runtimes, and on the number of GB-hours consumed and the number of IP addresses and storage for containers. | Services, Compute, and Containers | For the Push service, any usage over the free monthly allowance is charged. |
 |  Tiered   |  Some pricing plans are based on a tiered pricing model, so you can get a volume-based discount according to your actual usage. Services might offer simple, graduated, or block tier pricing plans. | Services | Tiered pricing is typically used for charge metrics that are expected to have very high quantities per month, such as API calls. |
-| Reserved | Reserved pricing is based on a long-term commitment for a service, so you can get a discounted price. With a reserved plan, you get a dedicated service instance that is easy to set up, deploy, and deliver in the public Bluemix environment. | Services | DB2 on Cloud has reserved plans.|
+| Reserved | Reserved pricing is based on a long-term commitment for a service, so you can get a discounted price. With a reserved plan, you get a dedicated service instance that is easy to set up, deploy, and deliver in the public {{site.data.keyword.Bluemix_notm}} environment. | Services | DB2 on Cloud has reserved plans.|
 
 ###Charges for compute resources
 {: #compute}
@@ -189,9 +188,9 @@ Many services include monthly free allowances. Usage of services that is not inc
     <dd>You pay based on your runtime and service consumption. For example, with the Push service, any usage over the free monthly allowance is charged.</dd>
 <dt>Reserved charges</dt>
     <dd><p>As the account owner of a Pay As You Go account or a Subscription account, you can reserve a service instance, with a long-term commitment, for a discounted price. For example, you can reserve the standard large DB2 on Cloud offering for 12 months.</p> 
-    <p>Some Bluemix services offer reserved plans. You can request a reserved plan from the Bluemix <strong>Catalog</strong> by clicking the tile of the service. Then, select the service plan that best meets your needs. If a reserved plan is available, click <strong>Request</strong>, and follow the prompts to send your request. You will receive an email that contains the price information of the reserved plan. A Bluemix sales representative will also contact you soon to complete the purchase.</p></dd>
+    <p>Some {{site.data.keyword.Bluemix_notm}} services offer reserved plans. You can request a reserved plan from the {{site.data.keyword.Bluemix_notm}} <strong>Catalog</strong> by clicking the tile of the service. Then, select the service plan that best meets your needs. If a reserved plan is available, click <strong>Request</strong>, and follow the prompts to send your request. You will receive an email that contains the price information of the reserved plan. A {{site.data.keyword.Bluemix_notm}} sales representative will also contact you soon to complete the purchase.</p></dd>
 <dt>Tiered charges</dt>
-    <dd>Similar to metered charges, you pay based based on your runtime and service consumption. However, Tiered charges add additional pricing tiers, often offering discounted charges in tiers with larger consuption. Tiered pricing is offered in simple, graduated, or block.</dd>
+    <dd>Similar to metered charges, you pay based based on your runtime and service consumption. However, Tiered charges add additional pricing tiers, often offering discounted charges in tiers with larger consumption. Tiered pricing is offered in simple, graduated, or block.</dd>
 </dl>
 
 
@@ -423,5 +422,5 @@ cf update-service <service_name> [-p <new_plan>]
 ## general 
 * [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
-* [Getting online help](https://www.stage1.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)
-* [Contact us](https://ace.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)
+* [Getting online help](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
+* [Contact us](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)
