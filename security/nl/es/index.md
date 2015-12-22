@@ -3,12 +3,12 @@
 
 # Seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última actualización: 15 de octubre de 2015*
+*Última actualización: 9 de noviembre de 2015*
 
-Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} también ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de aplicaciones para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de aplicaciones seguras.{:shortdesc}
+Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} también ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de aplicaciones para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de aplicaciones seguras.
+{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} garantiza la seguridad mediante el cumplimiento con las políticas de seguridad derivadas de prácticas recomendadas en IBM para sistemas, redes e ingeniería segura. Estas políticas incluyen prácticas como exploración de código, exploración dinámica, modelado de amenazas y pruebas de penetración.
-{{site.data.keyword.Bluemix_notm}} sigue el proceso IBM Product Security Incident Response Team (PSIRT) en cuanto a la gestión de incidentes relacionados con la seguridad. Consulte el sitio [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) para ver detalles.
+{{site.data.keyword.Bluemix_notm}} garantiza la seguridad mediante el cumplimiento con las políticas de seguridad derivadas de prácticas recomendadas en IBM para sistemas, redes e ingeniería segura. Estas políticas incluyen prácticas como exploración de código, exploración dinámica, modelado de amenazas y pruebas de penetración. {{site.data.keyword.Bluemix_notm}} sigue el proceso IBM Product Security Incident Response Team (PSIRT) en cuanto a la gestión de incidentes relacionados con la seguridad. Consulte el sitio [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) para ver detalles.
 
 {{site.data.keyword.Bluemix_notm}} público y dedicado utiliza los servicios de nube de IBM SoftLayer Infrastructure-as-a-Service (IaaS) y aprovecha su arquitectura de seguridad. SoftLayer IaaS proporciona varias capas de protección solapadas para sus aplicaciones y datos. En {{site.data.keyword.Bluemix_notm}} local, usted es el propietario de la seguridad física y proporciona
 la infraestructura alojando {{site.data.keyword.Bluemix_notm}} local en su propio centro de datos detrás de un cortafuegos de la empresa. Además, {{site.data.keyword.Bluemix_notm}} incorpora funciones de seguridad en la capa de Plataforma como servicio en distintas categorías: plataforma, datos y aplicación.
@@ -16,16 +16,16 @@ la infraestructura alojando {{site.data.keyword.Bluemix_notm}} local en su propi
 ## Seguridad de la plataforma {{site.data.keyword.Bluemix_notm}}
 {: #platform-security}
 
-{{site.data.keyword.Bluemix_notm}} proporciona seguridad funcional, de infraestructura, operativa y física para la plataforma (a través de IBM SoftLayer) para la plataforma principal. Sin embargo, {{site.data.keyword.Bluemix_notm}} local es exclusivo en el sentido de que el cliente proporciona la infraestructura y el centro de datos, a la vez que es propietario de la seguridad física. 
+{{site.data.keyword.Bluemix_notm}} proporciona seguridad funcional, de infraestructura, operativa y física para la plataforma (a través de IBM SoftLayer) para la plataforma principal. Sin embargo, {{site.data.keyword.Bluemix_notm}} local es exclusivo en el sentido de que el cliente proporciona la infraestructura y el centro de datos, a la vez que es propietario de la seguridad física.
 
 El entorno {{site.data.keyword.Bluemix_notm}} en SoftLayer cumple con los estándares de seguridad de tecnología de la información (TI) más restrictivos de IBM, que se ajustan o superan los estándares del sector. Estos estándares incluyen lo siguiente:
 Red, cifrado de datos y control de acceso
- * ACL de aplicación, permisos y pruebas de penetración 
+ * ACL de aplicación, permisos y pruebas de penetración
  * Identificación, autenticación y autorización
- * Información y protección de datos 
- * Integridad y disponibilidad de servicios 
- * Gestión de puntos vulnerables y de arreglos 
- * Denegación de servicio y detección de ataques sistemáticos 
+ * Información y protección de datos
+ * Integridad y disponibilidad de servicios
+ * Gestión de puntos vulnerables y de arreglos
+ * Denegación de servicio y detección de ataques sistemáticos
  * Respuesta ante incidencias de seguridad
 
 ![Visión general de la seguridad de la plataforma Bluemix](images/platform_sec.png)
@@ -50,14 +50,15 @@ Para {{site.data.keyword.Bluemix_notm}} dedicado y local, la autenticación a tr
 </dd>
 
 <dt>Autorización</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} utiliza mecanismos de Cloud Foundry para asegurarse de que cada desarrollador de aplicaciones tiene acceso únicamente a las aplicaciones e instancias de servicio que ha creado. La autorización sobre los servicios de {{site.data.keyword.Bluemix_notm}} se basa en OAuth. El acceso a los puntos finales internos de la plataforma {{site.data.keyword.Bluemix_notm}} está restringido para los usuarios externos. </dd>
+<dd>{{site.data.keyword.Bluemix_notm}} utiliza mecanismos de Cloud Foundry para asegurarse de que cada desarrollador de aplicaciones tiene acceso únicamente a las aplicaciones e instancias de servicio que ha creado. La autorización sobre los servicios de {{site.data.keyword.Bluemix_notm}} se basa en OAuth. El acceso a los puntos finales internos de la plataforma {{site.data.keyword.Bluemix_notm}} está restringido para los usuarios externos.</dd>
 
 <dt>Auditoría</dt>
 <dd>Se crean registros de auditoría sobre todos los intentos correctos o erróneos de autenticación por parte de los desarrolladores de aplicaciones. También se crean registros de auditoría sobre el acceso privilegiado a los sistemas Linux que alojan los contenedores donde se ejecutan las aplicaciones {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protección de los datos</dt>
 <dd> Todo el tráfico de {{site.data.keyword.Bluemix_notm}} pasa por IBM WebSphere® DataPower® SOA Appliances, que ofrece funciones de proxy inverso, terminación de SSL y equilibrio de cargas.
-Se permiten los siguientes métodos HTTP: * DELETE
+Se permiten los siguientes métodos HTTP:
+ * DELETE
  * GET
  * HEAD
  * OPTIONS
@@ -101,7 +102,7 @@ DataPower rellena las siguientes cabeceras:
 local, el cortafuegos de su empresa segrega el resto de la red desde la instancia de {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protección frente a intrusiones</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} público y dedicado permiten la protección frente a intrusiones con el fin de descubrir amenazas para que se puedan solucionar. En los cortafuegos se han activado políticas de protección frente a intrusiones. </dd>
+<dd>{{site.data.keyword.Bluemix_notm}} público y dedicado permiten la protección frente a intrusiones con el fin de descubrir amenazas para que se puedan solucionar. En los cortafuegos se han activado políticas de protección frente a intrusiones.</dd>
 
 <dt>Gestión segura de contenedores de aplicaciones</dt>
 <dd>Cada aplicación {{site.data.keyword.Bluemix_notm}} está aislada y se ejecuta en su propio contenedor, que tiene límites específicos de recursos de procesador, memoria y disco.</dd>
@@ -135,7 +136,7 @@ En un entorno {{site.data.keyword.Bluemix_notm}} dedicado y local, los administr
 
 ### Seguridad física
 
-{{site.data.keyword.Bluemix_notm}} público y dedicado se basa en la topología de red dentro de red de SoftLayer para la seguridad de la red física. Esta arquitectura de red dentro de red garantiza que sólo el personal autorizado pueda acceder a los sistemas.En {{site.data.keyword.Bluemix_notm}} local, usted es
+{{site.data.keyword.Bluemix_notm}} público y dedicado se basa en la topología de red dentro de red de SoftLayer para la seguridad de la red física. Esta arquitectura de red dentro de red garantiza que sólo el personal autorizado pueda acceder a los sistemas. En {{site.data.keyword.Bluemix_notm}} local, usted es
 el propietario de la seguridad física de la instancia local. El centro de datos está protegido detrás del cortafuegos de la compañía.
 
 En la topología de red dentro de red de SoftLayer, la capa de red pública controla el tráfico público a los sitios web alojados o a los recursos en línea. La capa de red privada permite una verdadera gestión fuera de banda a través de un operador autónomo sobre SSL, PPTP o pasarelas IPSec VPN. La capa de red entre centros de datos proporciona conectividad segura y gratuita entre servidores distribuidos en distintas instalaciones de SoftLayer.
@@ -149,7 +150,7 @@ está completamente protegido mediante controles que se ajustan, sin excepción,
 
 Con {{site.data.keyword.Bluemix_notm}}, proteger sus datos frente a un acceso no autorizado constituye un esfuerzo conjunto entre {{site.data.keyword.Bluemix_notm}} y usted.
 
-Los datos que asociados a una aplicación en ejecución pueden estar en uno de estos tres estados: data-in-transit (datos en tránsito), data-at-rest (datos en reposo) y data-in-use (datos en uso). 
+Los datos que asociados a una aplicación en ejecución pueden estar en uno de estos tres estados: data-in-transit (datos en tránsito), data-at-rest (datos en reposo) y data-in-use (datos en uso).
 
 <dl>
 <dt>Data-in-transit</dt>
@@ -173,10 +174,9 @@ La seguridad de los datos de tipo data-in-use y data-at-rest es responsabilidad 
 ## Seguridad de las aplicaciones de {{site.data.keyword.Bluemix_notm}}
 {: #application-security}
 
-Como desarrollador de aplicaciones, debe habilitar las configuraciones de seguridad, incluida la protección de los datos de la aplicación, para las aplicaciones que se ejecutan en {{site.data.keyword.Bluemix_notm}}. 
+Como desarrollador de aplicaciones, debe habilitar las configuraciones de seguridad, incluida la protección de los datos de la aplicación, para las aplicaciones que se ejecutan en {{site.data.keyword.Bluemix_notm}}.
 
-Puede utilizar las funciones de seguridad que proporcionan diversos servicios de {{site.data.keyword.Bluemix_notm}} para proteger las aplicaciones.
-Todos los servicios de {{site.data.keyword.Bluemix_notm}} que genera IBM siguen las recomendaciones de desarrollo de ingeniería segura de IBM.
+Puede utilizar las funciones de seguridad que proporcionan diversos servicios de {{site.data.keyword.Bluemix_notm}} para proteger las aplicaciones. Todos los servicios de {{site.data.keyword.Bluemix_notm}} que genera IBM siguen las recomendaciones de desarrollo de ingeniería segura de IBM.
 
 **Nota:** Algunos de los servicios que se describen aquí puede que no se apliquen a las instancias dedicadas o locales de Bluemix.
 
@@ -202,7 +202,7 @@ Para obtener más información, consulte [Guía de iniciación a Single Sign On]
 
 ### AppScan Mobile Analyzer
 
-Este servicio proporciona un análisis de seguridad para las aplicaciones móviles de Android.                                 Para utilizar este servicio, debe cargar una app de Android compilada como un archivo APK. Una vez realizada la exploración del análisis de seguridad, puede descargar un informe.
+Este servicio proporciona un análisis de seguridad para las aplicaciones móviles de Android. Para utilizar este servicio, debe cargar una app de Android compilada como un archivo APK. Una vez realizada la exploración del análisis de seguridad, puede descargar un informe.
 
 Para obtener más información, consulte [Guía de iniciación a AppScan Mobile Analyzer](../services/AppScanMobileAnalyzer/index.html).
 
@@ -224,8 +224,7 @@ Para obtener más información, consulte [Guía de iniciación a Mobile Analyzer
 El servicio Static Analyzer habilita las pruebas de seguridad estática de aplicaciones en la nube. Le ayuda a encontrar vulnerabilidades del código fuente
 en las primeras fases del ciclo de vida del desarrollo de software, para que se puedan arreglar antes del despliegue.
 
-Static Analyzer le permite explorar contenido Java y Java web mediante una interfaz de línea de mandatos (CLI) en el disco local. Además, puede ejecutar un pequeño programa de instalación que añade plug-ins del analizador a Eclipse o Maven.
-Puede utilizar el programa de utilidad cliente para explorar y recopilar información acerca de los archivos en un archivo que luego puede enviar a la nube para explorar resultados. 
+Static Analyzer le permite explorar contenido Java y Java web mediante una interfaz de línea de mandatos (CLI) en el disco local. Además, puede ejecutar un pequeño programa de instalación que añade plug-ins del analizador a Eclipse o Maven. Puede utilizar el programa de utilidad cliente para explorar y recopilar información acerca de los archivos en un archivo que luego puede enviar a la nube para explorar resultados.
 
 Para obtener más información, consulte [Guía de iniciación a IBM Static Analyzer for Bluemix](../services/StaticAnalyzer/index.html).
 
@@ -239,7 +238,7 @@ Para obtener más información, vaya a [IBM Application Security Testing for Blu
 
 El servicio SQL Database incorpora a la app una base de datos relacional con todas sus funciones. Este servicio utiliza IBM Directory Server LDAP para la autenticación e IBM InfoSphere® Guardium® Data Activity Monitor para proteger la base de datos a la que acceden las aplicaciones. La conexión entre
 las aplicaciones y la base de datos está protegida mediante el certificado SSL
-firmado por DigiCert. 
+firmado por DigiCert.
 
 En determinados planes con este servicio, puede utilizar la consola de SQL Database en {{site.data.keyword.Bluemix_notm}} para obtener informes que contienen la siguiente información:
 
@@ -254,14 +253,14 @@ El plan premium de este servicio también incluye cifrado de datos. Para obtener
 
 ### dashDB
 
-El servicio de dashDB utiliza IBM Directory Server LDAP para la autenticación de usuarios e IBM InfoSphere Guardium Data Activity Monitor para proteger la base de datos a la que acceden las aplicaciones. La conexión entre
+El servicio de dashDB utiliza un servidor LDAP incorporado para la autenticación de usuario. La conexión entre
 las aplicaciones y la base de datos está protegida mediante certificados SSL. Este servicio utiliza la capacidad de cifrado nativo de DB2® para cifrar de forma automática la base de datos desplegada y las copias de seguridad de la base de datos. La rotación de claves maestras se ejecuta automáticamente cada 90 días.
 
-Para obtener más información, consulte [Guía de iniciación a dashDB](services/dashDB/index.html).
+Para obtener más información, consulte [Guía de iniciación a dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 
-El servicio Cloud Integration le permite integrar datos de la nube y locales. Puede añadir un servicio para que interactúe con las bases de datos de fondo, como por ejemplo DB2, Oracle y SAP. A continuación, puede mover datos o crear API REST para que las aplicaciones de {{site.data.keyword.Bluemix_notm}} accedan a ellos y los utilicen. El servicio permite establecer una comunicación segura con conectores seguros locales y deja al descubierto sistemas de fondo de registro como API REST para que los puedan utilizar las aplicaciones. 
+El servicio Cloud Integration le permite integrar datos de la nube y locales. Puede añadir un servicio para que interactúe con las bases de datos de fondo, como por ejemplo DB2, Oracle y SAP. A continuación, puede mover datos o crear API REST para que las aplicaciones de {{site.data.keyword.Bluemix_notm}} accedan a ellos y los utilicen. El servicio permite establecer una comunicación segura con conectores seguros locales y deja al descubierto sistemas de fondo de registro como API REST para que los puedan utilizar las aplicaciones.
 
 Para obtener más información, consulte [Guía de iniciación a Cloud Integration](../services/CloudIntegration/index.html).
 
@@ -287,13 +286,13 @@ El flujo de información de los *usuarios de apps* de {{site.data.keyword.Bluemi
  4. Alcanza el tiempo de ejecución de la aplicación en el agente de ejecución de droplet (DEA).
 
 El *desarrollador de* {{site.data.keyword.Bluemix_notm}} sigue dos flujos principales, para inicio de sesión y para desarrollo y despliegue.
- * El flujo del desarrollador para inicio de sesión incluye: 
+ * El flujo del desarrollador para inicio de sesión incluye:
     * Para los desarrolladores que han iniciado una sesión en {{site.data.keyword.Bluemix_notm}} público, el flujo es el siguiente:
       1. A través del servicio IBM Single Sign On.
       2. A través de la identidad web de IBM.
     * Para los desarrolladores que han iniciado una sesión en {{site.data.keyword.Bluemix_notm}} dedicado o local, el flujo se realiza a través de LDAP de empresa.
- * El flujo del desarrollador para el desarrollo y despliegue de apps es el siguiente: 
-    1. A través de un cortafuegos, con prevención de intrusiones y seguridad de la red.Esto se aplica únicamente a {{site.data.keyword.Bluemix_notm}} dedicado.
+ * El flujo del desarrollador para el desarrollo y despliegue de apps es el siguiente:
+    1. A través de un cortafuegos, con prevención de intrusiones y seguridad de la red. Esto se aplica únicamente a {{site.data.keyword.Bluemix_notm}} dedicado.
     2. A través de IBM DataPower Gateway, con proxy inverso y proxy de terminación de SSL.
     3. A través del direccionador de la red.
     4. A través de autorización mediante el controlador de nube de Cloud Foundry, para garantizar el acceso solo a las apps e instancias de servicio que ha creado el desarrollador.

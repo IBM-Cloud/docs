@@ -62,7 +62,7 @@ bluemix plugin install nom_plug-in -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| Nom du plug-in : ibm-containers <br> [Afficher la documentation](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| Nom du plug-in : ibm-containers <br> [Afficher la documentation](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![Outils de développement intégrés](./images/Integrated_Dev_Tools.png) Outils de développement intégrés 
 

@@ -49,7 +49,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![整合式開發工具](./images/Integrated_Dev_Tools.png) 整合式開發工具
 

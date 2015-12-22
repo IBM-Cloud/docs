@@ -49,7 +49,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| プラグイン名: ibm-containers<br> [資料の表示](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| プラグイン名: ibm-containers<br> [資料の表示](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![統合開発ツール](./images/Integrated_Dev_Tools.png) 統合開発ツール
 

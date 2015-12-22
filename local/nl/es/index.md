@@ -3,9 +3,9 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última actualización: 20 de octubre de 2015*
+*Última actualización: 13 de noviembre de 2015*
 
-{{site.data.keyword.Bluemix}} local proporciona la potencia y la agilidad de la plataforma basada en nubes de {{site.data.keyword.Bluemix_notm}} para el centro de datos. Con {{site.data.keyword.Bluemix_notm}} local, puede proteger las cargas de trabajo más sensibles detrás del cortafuegos de la empresa, mientras que permanecen conectadas de forma segura y en sincronización con {{site.data.keyword.Bluemix_notm}} público.
+{{site.data.keyword.Bluemix}} local proporciona la potencia y la agilidad de la plataforma basada en nubes de {{site.data.keyword.Bluemix_notm}} para el centro de datos. Con {{site.data.keyword.Bluemix_notm}} local, puede proteger las cargas de trabajo más sensibles detrás del cortafuegos de la empresa, mientras que permanecen conectadas de forma segura y en sincronización con {{site.data.keyword.Bluemix_notm}} público. 
 {:shortdesc}
 
 IBM® utiliza operaciones de nube como un servicio para supervisar y mantener el entorno, de modo que puede centrarse en la construcción de aplicaciones y servicios que se ejecutan en la parte superior del entorno. IBM también maneja actualizaciones a la plataforma, de modo que puede centrarse en la empresa.
@@ -54,33 +54,22 @@ Para configurar su versión privada de {{site.data.keyword.Bluemix_notm}}:
 	<li>Identifique los plazos límite para cada fase de la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} local.</li>
 	</ol>
 	</li>
-<li>Una vez que se cree la plataforma y la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia local. Para cada rol hay un representante de IBM correspondiente.<br />
-<p>Roles del cliente:</p>
+<li>Una vez que se cree la plataforma y la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia local.<br />
+<br />
 <dl>
 <dt>**Contacto de suministro**</dt>
-<dd>Trabaja con el representante de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} local, incluida la identificación de las personas adecuadas de la organización que trabajarán en cualquier aspecto del proyecto. Este rol supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia local.</dd>
+<dd>Trabaja con los representantes de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} local, incluida la identificación de las personas adecuadas en la organización que trabajarán en cualquier aspecto del proyecto. Este rol supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia local.</dd>
 <dt>**Responsable de suministro**</dt>
-<dd>Trabaja con el representante de IBM para seleccionar una topología y opción de despliegue que se ajuste a sus requisitos de seguridad. Este rol funciona con el asesor de suministro de IBM para determinar qué patrones de despliegue consiguen los objetivos y las metas de conformidad.</dd>
+<dd>Trabaja con los representantes de IBM para seleccionar una topología y una opción de despliegue que se ajuste a sus requisitos de seguridad. Este rol trabaja con los IBM asesores de conformidad para determinar qué patrones de despliegue consiguen los objetivos y las metas de conformidad.</dd>
 <dt>**Especialista de red**</dt>
-<dd>Trabaja con el representante de IBM en los planes de red para el despliegue de {{site.data.keyword.Bluemix_notm}}. Este rol proporciona los requisitos al representante de IBM y trabaja con él en un plan de implementación. Al final de la fase de instalación y de verificación, este rol "concluirá" que la configuración de red está en conformidad con los estándares corporativos.</dd>
+<dd>Trabaja con los representantes de IBM en los planes de red para el despliegue de {{site.data.keyword.Bluemix_notm}}. Este rol proporciona los requisitos a los representantes de IBM y trabaja con los representantes en un plan de implementación. Al final de la fase de instalación y de verificación, este rol "concluirá" que la configuración de red está en conformidad con los estándares corporativos.</dd>
 <dt>**Contacto de DevOps**</dt>
-<dd>Trabaja con el representante de IBM para planificar y aplicar las actualizaciones de mantenimiento necesarias para la plataforma, servicios y tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Este rol también trabaja con el representante de IBM en la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} local.</dd>
-</dl>
-<p>Roles de IBM:</p>
-<dl>
-<dt>**Gestor de suministro de IBM**</dt>
-<dd>Trabaja con el contacto de suministro del cliente para establecer el entorno del cliente.</dd>
-<dt>**Asesor de conformidad de IBM**</dt>
-<dd>Trabaja con el representante de conformidad de cliente para seleccionar una topología y una opción de despliegue que cumpla los requisitos de seguridad.</dd>
-<dt>**Especialista de red de IBM**</dt>
-<dd>Trabaja con el especialista de red de cliente para establecer los planes de red para el despliegue. Este rol funciona con el cliente para recopilar requisitos y crear un plan de implementación. Este rol también realiza las pruebas automatizadas para verificar el resultado físico del plan de implementación.</dd>	
-<dt>**Contacto de DevOps de IBM**</dt>
-<dd>Trabaja con el contacto de DevOps del cliente en la instalación y en el mantenimiento en curso de la topología de despliegue. Este rol funciona con el cliente para planificar y llevar a cabo las actualizaciones necesarias para la plataforma y los servicios.</dd>
+<dd>Trabaja con los representantes de IBM para planificar y aplicar las actualizaciones de mantenimiento necesarias para la plataforma, servicios y tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Este rol también trabaja con los representantes de IBM en la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} Local.</dd>
 </dl>
 </li>
 <li>El usuario proporciona el hardware, e IBM le ayuda a definir y a establecer la conectividad de red entre su red corporativa y la instancia de {{site.data.keyword.Bluemix_notm}} local. Para obtener más información sobre los requisitos de la infraestructura, consulte requisitos de la infraestructura de <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} local</a>.
 <ol type="a">
-	<li>IBM configura el acceso a la red y LDAP en función de lo que proporcione el usuario. Se ofrece acceso de administración a los contactos que designe el cliente. También debe designar un contacto para soporte y facturación. </li>
+	<li>IBM configura el acceso a la red y LDAP en función de lo que proporcione el usuario. Se ofrece acceso de administración a los contactos que designe el cliente. También debe designar un contacto para soporte y facturación.</li>
 	<li>IBM configura un catálogo sindicado en el entorno local para mostrar los servicios locales y muchos de los servicios públicos de {{site.data.keyword.Bluemix_notm}}.</li>
 	<li>El cliente debe validar la configuración de la red y del cortafuegos, además del punto final LDAP y el acceso.</li>
 	</ol>
@@ -103,7 +92,7 @@ la memoria, el almacenamiento y los recursos en varias máquinas virtuales. Elij
 <ul>
 <li>48 núcleos físicos a 2,0 de más GHz cada uno</li>
 <li>756 GB de memoria RAM física</li>
-</li>Tamaño total de almacenes de datos: 7,5 TB
+</li>Tamaño total de almacenes de datos: 7,5 TB 
 <ul>
 <li>7 TB de almacén de datos para alojar {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB de almacén de datos para alojar la máquina virtual inicial</li>
@@ -113,15 +102,16 @@ la memoria, el almacenamiento y los recursos en varias máquinas virtuales. Elij
 </dd>
 <dt>**Alta disponibilidad**</dt>
 <dd>
-Para poder dar soporte a un solo error de nodo debe tener n+1 ESXi. Por ejemplo, si se utilizan dos ESXi (es decir, 16x núcleos cada uno), se necesita un tercero.<p><strong>Nota:</strong> El administrador de VMware del cliente puede optar por aplicar
+Para poder dar soporte a un solo error de nodo debe tener n+1 ESXi. Por ejemplo, si se utilizan dos ESXi (es decir, 16x núcleos cada uno), se necesita un tercero.
+<p><strong>Nota:</strong> El administrador de VMware del cliente puede optar por aplicar
 una migración tras error estricta de alta disponibilidad en el clúster para garantizar los recursos.</p>
 </dd>
 <dt>**Red**</dt>
 <dd>
 Entre los requisitos recomendados se incluye un grupo de puertos accesibles para el cliente con 10 direcciones IP de red del cliente
-que tengan acceso saliente a Internet. A continuación, defina una segunda VLAN privada solo entre los ESXi utilizados para {{site.data.keyword.Bluemix_notm}} local.
-Esta VLAN se muestra como un grupo de puertos en VMware. {{site.data.keyword.Bluemix_notm}} local lo utiliza para la subred privada,
-que es más segura y puede ayudar a evitar problemas de direccionamiento.</dd>
+que tengan acceso saliente a Internet. A continuación, defina una segunda VLAN privada solo entre los ESXi utilizados para {{site.data.keyword.Bluemix_notm}} local. Esta VLAN se muestra como un grupo de puertos en VMware. {{site.data.keyword.Bluemix_notm}} local lo utiliza para la subred privada,
+que es más segura y puede ayudar a evitar problemas de direccionamiento.
+</dd>
 </dl>
 
 ###Configuración de servidor de vCenter
@@ -129,6 +119,9 @@ Revise los siguientes requisitos relacionados con la versión, el centro de dato
 <dl>
 <dt>**Versiones soportadas de VMware**</dt>
 <dd>vCenter y ESXi 5.1 y 5.5</dd>
+<dt>**Tipos soportados de VMware**</dt>
+<dd>vSphere Enterprise<br />
+vSphere Enterprise más, si tiene pensado utilizar conmutadores virtuales distribuidos</dd>
 <dt>**Centro de datos**</dt>
 <dd>Cree un centro de datos (si no hay ninguno).</dd>
 <dt>**Carpeta del centro de datos**</dt>
@@ -202,8 +195,33 @@ IBM envía mensajes de difusión general de los cambios planificados para cada v
 Vaya a **ADMINISTRACIÓN > INFORMACIÓN DEL SISTEMA** para ver las actualizaciones pendientes, establecer fechas no disponibles y aprobar actualizaciones. Para obtener más información sobre las notificaciones y la planificación de actualizaciones pendientes, consulte <a href="../admin/index.html#oc_system">Visualización de información del sistema</a>.</dd>
 
 <dt>**Otro**</dt>
-<dd>IBM intenta limitar todo el mantenimiento que pueda afectar a los servicios, en particular a la disponibilidad del entorno, los tiempos de ejecución y los servicios de Bluemix local, a las ventanas estándares y mensuales. Es posible que, de forma excepcional, se utilicen otras ventanas de cambios para la gestión del entorno. IBM hará todo lo posible para minimizar el impacto en su entorno durante estas ventanas de cambios y se lo notificará por adelantado. </dd>
+<dd>IBM intenta limitar todo el mantenimiento que pueda afectar a los servicios, en particular a la disponibilidad del entorno, los tiempos de ejecución y los servicios de Bluemix local, a las ventanas estándares y mensuales. Es posible que, de forma excepcional, se utilicen otras ventanas de cambios para la gestión del entorno. IBM hará todo lo posible para minimizar el impacto en su entorno durante estas ventanas de cambios y se lo notificará por adelantado.</dd>
 </dl>
 
 Para configurar el mantenimiento de la instancia local, póngase en contacto con el representante designado de su cuenta de IBM para identificar una ventana acordada para el mantenimiento estándar.
+
+##Restauración de la instancia local
+{: #restorelocal}
+
+Se hace una copia de seguridad de forma regular de los valores y las configuraciones de {{site.data.keyword.Bluemix_notm}} local para prepararse ante cualquier interrupción no planificada del entorno.
+
+Como parte de la copia de seguridad de los datos, IBM lleva a cabo las tareas siguientes:
+
+<ul>
+<li>Cifra todas las copias de seguridad y gestiona las claves de cifrado</li>
+<li>Supervisa y gestiona la actividad de copia de seguridad</li>
+<li>Proporciona los archivos de copia de seguridad cifrados</li>
+<li>Restaura los datos solicitados</li>
+<li>Gestiona conflictos de planificación entre operaciones de copia de seguridad y de gestión de arreglos</li>
+</ul>
+
+Puesto que la protección de datos privados es crítica, IBM necesita su colaboración cuando se trabaja con la gestión de archivos de copia de seguridad, de modo que los archivos no se traspasen fuera de sus centros de datos. Específicamente, IBM le solicita que complete las tareas siguientes:
+
+<ul>
+<li>Mover una copia de los datos de copia de seguridad cifrados fuera del sitio, como lo haría para cualesquiera otros datos de copia de seguridad que gestione.</li>
+<li>Proporcionar los archivos de copia de seguridad para el operador de IBM en caso de cualquier necesidad de restauración.</li>
+</ul>
    
+# rellinks
+## general 
+* [Descubrir: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)

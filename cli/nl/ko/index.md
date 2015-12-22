@@ -51,7 +51,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![통합 개발 도구](./images/Integrated_Dev_Tools.png) 통합 개발 도구
 
