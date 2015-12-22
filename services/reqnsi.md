@@ -63,6 +63,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
+|{{site.data.keyword.alertnotificationshort}}|Yes		|No			|No		|
 |{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
