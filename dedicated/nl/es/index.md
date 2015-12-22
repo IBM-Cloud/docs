@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} dedicado
 {: #dedicated}
 
-*Última actualización: 20 de octubre de 2015*
+*Última actualización: 3 de noviembre de 2015*
 
 {{site.data.keyword.Bluemix}} es una plataforma de estándares abiertos basada en la nube para crear, ejecutar y gestionar aplicaciones. {{site.data.keyword.Bluemix_notm}} dedicado le ofrece la potencia y simplicidad de {{site.data.keyword.Bluemix_notm}} en su propio entorno SoftLayer dedicado, que se conecta de forma segura tanto al entorno público de {{site.data.keyword.Bluemix_notm}} como a su propia red.
 {:shortdesc}
@@ -22,12 +22,12 @@ Los entornos de {{site.data.keyword.Bluemix_notm}} dedicado tiene los mismos est
 {{site.data.keyword.Bluemix_notm}} dedicado se suministra con todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}} incluidos y
 128 GB de memoria de aplicación.
 
-Además, hay un conjunto de servicios incluidos de forma predeterminada y servicios opcionales que puede elegir para su instancia dedicada.  
+Además, hay un conjunto de servicios incluidos de forma predeterminada y servicios opcionales que puede elegir para su instancia dedicada. 
 
 | **Tipo**        | **Nombre**            | **Descripción** |      
 |-----------------|-------------------|-------------------|
-| Incluido | {{site.data.keyword.autoscaling}} | Aumente o reduzca de forma dinámica la capacidad de cálculo de la aplicación en función de políticas. Con este servicio, dispone de un uso ilimitado del entorno {{site.data.keyword.Bluemix_notm}} dedicado.  |
-| Incluido | {{site.data.keyword.datacshort}} | Este servicio proporciona una cuadrícula de datos en memoria que da soporte a casos de ejemplo de memoria caché distribuidos para las apps. Incluye 50 GB de memoria caché en memoria.  |
+| Incluido | {{site.data.keyword.autoscaling}} | Aumente o reduzca de forma dinámica la capacidad de cálculo de la aplicación en función de políticas. Con este servicio, dispone de un uso ilimitado del entorno {{site.data.keyword.Bluemix_notm}} dedicado. |
+| Incluido | {{site.data.keyword.datacshort}} | Este servicio proporciona una cuadrícula de datos en memoria que da soporte a casos de ejemplo de memoria caché distribuidos para las apps. Incluye 50 GB de memoria caché en memoria. |
 | Incluido | {{site.data.keyword.cloudant}} | La base de datos NoSQL de IBM
 que ofrece una capa de datos JSON de alto rendimiento (compatible
 con CouchDB). Incluye 1,6 TB y un máximo de 3.000 solicitudes de API por segundo. |
@@ -48,44 +48,36 @@ Para configurar su versión privada de {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
 <li>Póngase en contacto con el representante designado de la cuenta de IBM o con el equipo de <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> para empezar a trabajar.</li>
-<li>El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.<ol type="a">
+<li>El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.
+	<ol type="a">
 	<li>Trabaje con IBM, a cargo del cliente, para configurar la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.
 	El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.</li>
 	<li>Identifique plazos límite para cada fase de la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.</li>
 	</ol>
 	</li>
-<li>Seleccione la <a href="http://www.softlayer.com/data-centers" target="_blank">ubicación del centro de datos SoftLayer</a> para su instancia dedicada. A partir de aquí se crea la plataforma dedicada y la cuenta. Para la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia dedicada. Para cada rol hay un representante de IBM correspondiente.<br />
-<p>Roles del cliente:</p>
+<li>Seleccione la <a href="http://www.softlayer.com/data-centers" target="_blank">ubicación del centro de datos SoftLayer</a> para su instancia dedicada. A partir de aquí se crea la plataforma dedicada y la cuenta. Para la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia dedicada.<br />
+<br />
 <dl>
 <dt>**Contacto de suministro**</dt>
-<dd>Trabaja con el representante de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} dedicado, incluida la identificación de las personas adecuadas de la organización que trabajarán en cualquier aspecto del proyecto. Este rol supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia dedicada.</dd>
+<dd>Trabaja con los representantes de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} dedicado, incluida la identificación de las personas adecuadas de la organización que trabajarán en cualquier aspecto del proyecto. Este rol supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia dedicada.</dd>
 <dt>**Responsable de suministro**</dt>
-<dd>Trabaja con el representante de IBM para seleccionar una topología y opción de despliegue que se ajuste a sus requisitos de seguridad. Este rol funciona con el asesor de suministro de IBM para determinar qué patrones de despliegue consiguen los objetivos y las metas de conformidad.</dd>
+<dd>Trabaja con los representantes de IBM para seleccionar una topología y una opción de despliegue que se ajuste a sus requisitos de seguridad. Este rol trabaja con los IBM asesores de conformidad para determinar qué patrones de despliegue consiguen los objetivos y las metas de conformidad.</dd>
 <dt>**Especialista de red**</dt>
-<dd>Trabaja con el representante de IBM en los planes de red para el despliegue de {{site.data.keyword.Bluemix_notm}}. Este rol proporciona los requisitos al representante de IBM y trabaja con él en un plan de implementación. Al final de la fase de instalación y de verificación, este rol "concluirá" que la configuración de red está en conformidad con los estándares corporativos.</dd>
+<dd>Trabaja con los representantes de IBM en los planes de red para el despliegue de {{site.data.keyword.Bluemix_notm}}. Este rol proporciona los requisitos a los representantes de IBM y trabaja con los representantes en un plan de implementación. Al final de la fase de instalación y de verificación, este rol "concluirá" que la configuración de red está en conformidad con los estándares corporativos.</dd>
 <dt>**Contacto de DevOps**</dt>
-<dd>Trabaja con el representante de IBM para planificar y aplicar las actualizaciones de mantenimiento necesarias para la plataforma, servicios y tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Este rol también trabaja con el representante de IBM en la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.</dd>
-</dl>
-<p>Roles de IBM:</p>
-<dl>
-<dt>**Gestor de suministro de IBM**</dt>
-<dd>Trabaja con el contacto de suministro del cliente para establecer el entorno del cliente.</dd>
-<dt>**Asesor de conformidad de IBM**</dt>
-<dd>Trabaja con el representante de conformidad de cliente para seleccionar una topología y una opción de despliegue que cumpla los requisitos de seguridad.</dd>
-<dt>**Especialista de red de IBM**</dt>
-<dd>Trabaja con el especialista de red de cliente para establecer los planes de red para el despliegue. Este rol funciona con el cliente para recopilar requisitos y crear un plan de implementación. Este rol también realiza las pruebas automatizadas para verificar el resultado físico del plan de implementación.</dd>	
-<dt>**Contacto de DevOps de IBM**</dt>
-<dd>Trabaja con el contacto de DevOps del cliente en la instalación y en el mantenimiento en curso de la topología de despliegue. Este rol funciona con el cliente para planificar y llevar a cabo las actualizaciones necesarias para la plataforma y los servicios.</dd>
+<dd>Trabaja con los representantes de IBM para planificar y aplicar las actualizaciones de mantenimiento necesarias para la plataforma, servicios y tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Este rol también trabaja con los representantes de IBM en la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.</dd>
 </dl>
 </li>
-<li>Defina y establezca la conectividad de red entre su red corporativa y la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.<ol type="a">
+<li>Defina y establezca la conectividad de red entre su red corporativa y la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.
+	<ol type="a">
 	<li>IBM instala la infraestructura de supervisión y seguridad para la instancia dedicada.</li>
 	<li>IBM instala los servicios dedicados de arrendatario único que seleccione.</li>
 	<li>El cliente proporciona la configuración de la red y puntos finales para elementos tales como direcciones IP o cortafuegos y acceso a LDAP para la integración en {{site.data.keyword.Bluemix_notm}}.</li>
 	</ol>
 </li>
-<li>Identifique y asigne roles para el equipo de administración del entorno.<ol type="a">
-	<li>IBM configura el acceso a la red y LDAP en función de lo que proporcione el usuario. Se ofrece acceso de administración a los contactos que designe el cliente. También debe designar un contacto para soporte y facturación. </li>
+<li>Identifique y asigne roles para el equipo de administración del entorno.
+	<ol type="a">
+	<li>IBM configura el acceso a la red y LDAP en función de lo que proporcione el usuario. Se ofrece acceso de administración a los contactos que designe el cliente. También debe designar un contacto para soporte y facturación.</li>
 	<li>IBM configura un catálogo sindicado en el entorno dedicado para mostrar los servicios dedicados y muchos de los servicios públicos de {{site.data.keyword.Bluemix_notm}}.</li>
 	<li>El cliente debe validar la configuración de la red y del cortafuegos, además del punto final LDAP y el acceso.</li>
 	</ol>
@@ -116,7 +108,33 @@ IBM envía mensajes de difusión general de los cambios planificados para cada v
 Vaya a **ADMINISTRACIÓN > INFORMACIÓN DEL SISTEMA** para ver las actualizaciones pendientes, establecer fechas no disponibles y aprobar actualizaciones. Para obtener más información sobre las notificaciones y la planificación de actualizaciones pendientes, consulte <a href="../admin/index.html#oc_system">Visualización de información del sistema</a>.</dd>
 	
 <dt>**Otro**</dt>
-<dd>IBM intenta limitar todo el mantenimiento que pueda afectar a los servicios, en particular a la disponibilidad del entorno {{site.data.keyword.Bluemix_notm}} dedicado, los tiempos de ejecución y los servicios, a las actualizaciones estándar y mensuales. Es posible que, de forma excepcional, se utilicen otras ventanas de cambios para la gestión del entorno. IBM hará todo lo posible para minimizar el impacto en su entorno durante estas ventanas de cambios y se lo notificará por adelantado. </dd>
+<dd>IBM intenta limitar todo el mantenimiento que pueda afectar a los servicios, en particular a la disponibilidad del entorno {{site.data.keyword.Bluemix_notm}} dedicado, los tiempos de ejecución y los servicios, a las actualizaciones estándar y mensuales. Es posible que, de forma excepcional, se utilicen otras ventanas de cambios para la gestión del entorno. IBM hará todo lo posible para minimizar el impacto en su entorno durante estas ventanas de cambios y se lo notificará por adelantado.</dd>
 </dl>
 
 Para configurar el mantenimiento de la instancia dedicada, póngase en contacto con el representante designado de su cuenta de IBM para identificar una ventana acordada para el mantenimiento estándar.
+
+##Restauración de la instancia dedicada
+{: #restorededicated}
+
+Se hace una copia de seguridad de forma regular de los valores y las configuraciones de {{site.data.keyword.Bluemix_notm}} dedicado para prepararse ante cualquier interrupción no planificada del entorno.
+
+Como parte de la copia de seguridad de los datos, IBM lleva a cabo las tareas siguientes:
+
+<ul>
+<li>Cifra todas las copias de seguridad y gestiona las claves de cifrado</li>
+<li>Supervisa y gestiona la actividad de copia de seguridad</li>
+<li>Proporciona los archivos de copia de seguridad cifrados</li>
+<li>Restaura los datos solicitados</li>
+<li>Gestiona conflictos de planificación entre operaciones de copia de seguridad y de gestión de arreglos</li>
+</ul>
+
+Puesto que la protección de datos privados es crítica, IBM necesita su colaboración cuando se trabaja con la gestión de archivos de copia de seguridad, de modo que los archivos no se traspasen fuera de sus centros de datos. Específicamente, IBM le solicita que complete las tareas siguientes:
+
+<ul>
+<li>Mover una copia de los datos de copia de seguridad cifrados fuera del sitio, como lo haría para cualesquiera otros datos de copia de seguridad que gestione.</li>
+<li>Proporcionar los archivos de copia de seguridad para el operador de IBM en caso de cualquier necesidad de restauración.</li>
+</ul>
+
+# rellinks
+## general 
+* [Descubrir: {{site.data.keyword.Bluemix_notm}} dedicado](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)

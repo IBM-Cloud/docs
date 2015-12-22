@@ -4,7 +4,7 @@
 # Visión general de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última actualización: 15 de octubre de 2015*
+*Última actualización: 22 de octubre de 2015*
 
 {{site.data.keyword.Bluemix}} es la plataforma de nube abierta de {{site.data.keyword.IBM}} que proporciona a los desarrolladores de apps para móvil y web acceso al software de {{site.data.keyword.IBM_notm}} para funciones de integración, seguridad, transacción y otras funciones clave, así como a software de terceros.
 {:shortdesc}
@@ -12,8 +12,7 @@
 Basado en la tecnología de código abierto de [Cloud
 Foundry](https://www.cloudfoundry.org/){: new_window}, {{site.data.keyword.Bluemix_notm}} facilita el desarrollo de aplicaciones con su oferta Plataforma como servicio
 (PaaS). {{site.data.keyword.Bluemix_notm}} también ofrece funciones incorporadas de Programa de fondo móvil como servicio
-(MBaaS).
-El objetivo es simplificar la entrega de una aplicación proporcionando servicios que estén preparados para su uso inmediato y tengan capacidad para permitir el desarrollo a nivel de Internet.
+(MBaaS). El objetivo es simplificar la entrega de una aplicación proporcionando servicios que estén preparados para su uso inmediato y tengan capacidad para permitir el desarrollo a nivel de Internet.
 
 {{site.data.keyword.Bluemix_notm}} también tiene despliegues de nube que se adaptan a sus necesidades. Tanto si pertenece a una empresa pequeña con perspectivas de crecimiento como si es miembro de una gran empresa que requiere aislamiento, disponemos la oferta adecuada, desarrolle en la nube sin límites, donde puede conectar sus dispositivos dedicados a los servicios {{site.data.keyword.Bluemix_notm}} públicos que ponen a su disponibilidad {{site.data.keyword.IBM_notm}} y otros proveedores. {{site.data.keyword.IBM_notm}} gestiona todas las instancias de servicio. El usuario recibirá una factura sólo por lo que utilice.
 
@@ -28,8 +27,7 @@ Con la amplia gama de servicios y tiempos de ejecución que se ofrece en {{site.
 - Cargas de trabajo optimizadas y elásticas.
 - Disponibilidad continua.
 
-{{site.data.keyword.Bluemix_notm}} abstrae y oculta la mayoría de las complejidades asociadas con el alojamiento y la gestión de aplicaciones basadas en la nube. Como desarrollador de aplicaciones, puede centrarse en desarrollar la aplicación sin tener que gestionar la infraestructura necesaria para alojarla. En el caso de apps para móvil y web, puede utilizar los servicios incorporados que proporciona {{site.data.keyword.Bluemix_notm}}.
-Puede cargar la app en {{site.data.keyword.Bluemix_notm}} e indicar el número de instancias que desee tener en ejecución. Una vez desplegadas las apps, puede fácilmente escalarlas al alza o a la baja cuando cambie el uso o la carga de las apps.
+{{site.data.keyword.Bluemix_notm}} abstrae y oculta la mayoría de las complejidades asociadas con el alojamiento y la gestión de aplicaciones basadas en la nube. Como desarrollador de aplicaciones, puede centrarse en desarrollar la aplicación sin tener que gestionar la infraestructura necesaria para alojarla. En el caso de apps para móvil y web, puede utilizar los servicios incorporados que proporciona {{site.data.keyword.Bluemix_notm}}. Puede cargar la app en {{site.data.keyword.Bluemix_notm}} e indicar el número de instancias que desee tener en ejecución. Una vez desplegadas las apps, puede fácilmente escalarlas al alza o a la baja cuando cambie el uso o la carga de las apps.
 
 Puede utilizar {{site.data.keyword.Bluemix_notm}} para desarrollar rápidamente apps en los lenguajes de programación más utilizados. Puede desarrollar apps para móvil en iOS, Android y HTML con JavaScript. Para las apps web, puede utilizar lenguajes como Ruby, PHP, Java&trade;, Go y Python. También puede migrar las apps existentes a {{site.data.keyword.Bluemix_notm}} y utilizar los tiempos de ejecución que proporciona {{site.data.keyword.Bluemix_notm}} para ejecutar sus apps.
 
@@ -47,7 +45,7 @@ Con {{site.data.keyword.Bluemix_notm}}, puede acceder a la plataforma pública d
 {: #public}
 
 Básicamente, {{site.data.keyword.Bluemix_notm}} es un entorno para que el usuario desarrolle apps y utilice servicios que ofrecen funciones fáciles de utilizar. {{site.data.keyword.Bluemix_notm}} también ofrece un entorno para alojar artefactos de aplicaciones que se ejecutan en un
-servidor de aplicaciones, como por ejemplo Liberty. Mediante el uso de SoftLayer, {{site.data.keyword.Bluemix_notm}} despliega contenedores virtuales que contienen cada app desplegada. En este entorno, la app puede utilizar servicios incorporados (incluidos servicios de terceros) para facilitar el ensamblaje de la app. 
+servidor de aplicaciones, como por ejemplo Liberty. Mediante el uso de SoftLayer, {{site.data.keyword.Bluemix_notm}} despliega contenedores virtuales que contienen cada app desplegada. En este entorno, la app puede utilizar servicios incorporados (incluidos servicios de terceros) para facilitar el ensamblaje de la app.
 
 Como desarrollador, puede interactuar con la infraestructura de {{site.data.keyword.Bluemix_notm}} mediante una interfaz de usuario basada en navegador. También puede utilizar una interfaz de línea de mandatos de Cloud Foundry, denominada cf, para desplegar apps web.
 
@@ -68,10 +66,10 @@ Puede desplegar sus apps en distintas regiones de {{site.data.keyword.Bluemix_no
 ### {{site.data.keyword.Bluemix_notm}} dedicado
 {: #dedicated}
 
-{{site.data.keyword.Bluemix_notm}} dedicado es su entorno de SoftLayer exclusivo que se conecta de forma segura a {{site.data.keyword.Bluemix_notm}} público y en su propia red. {{site.data.keyword.Bluemix_notm}} dedicado forma parte de su red con una conexión de red directa o VPN.
-El hardware de un solo arrendatario se puede configurar en cualquier centro de datos de SoftLayer que exista. {{site.data.keyword.IBM_notm}} gestiona la plataforma dedicada y los servicios dedicados, de esta manera puede centrarse en crear apps personalizadas. Además, {{site.data.keyword.IBM_notm}} realiza todo el mantenimiento a instancias dedicadas durante una ventana de mantenimiento que haya seleccionado.
+{{site.data.keyword.Bluemix_notm}} dedicado es su entorno de SoftLayer exclusivo que se conecta de forma segura a {{site.data.keyword.Bluemix_notm}} público y en su propia red. {{site.data.keyword.Bluemix_notm}} dedicado forma parte de su red con una conexión de red directa o VPN. El hardware de un solo arrendatario se puede configurar en cualquier centro de datos de SoftLayer que exista. {{site.data.keyword.IBM_notm}} gestiona la plataforma dedicada y los servicios dedicados, de esta manera puede centrarse en crear apps personalizadas. Además, {{site.data.keyword.IBM_notm}} realiza todo el mantenimiento a instancias dedicadas durante una ventana de mantenimiento que haya seleccionado.
 
-{{site.data.keyword.IBM_notm}} tiene varios servicios disponibles para su entorno dedicado pero puede conectarse a todos los servicios públicos. Todos los tiempos de ejecución están disponibles en el entorno dedicado.Los despliegues dedicados de {{site.data.keyword.Bluemix_notm}} incluyen los siguientes beneficios y características sin ningún coste adicional: VPN, VLAN privada, cortafuegos, conectividad con LDAP, optimización de las apps y bases de datos locales existentes, seguridad local 24 horas al día/7 días por semana, hardware dedicado y soporte estándar.  
+{{site.data.keyword.IBM_notm}} tiene varios servicios disponibles para su entorno dedicado pero puede conectarse a todos los servicios públicos. Todos los tiempos de ejecución están disponibles en el entorno dedicado.
+Los despliegues dedicados de {{site.data.keyword.Bluemix_notm}} incluyen los siguientes beneficios y características sin ningún coste adicional: VPN, VLAN privada, cortafuegos, conectividad con LDAP, optimización de las apps y bases de datos locales existentes, seguridad local 24 horas al día/7 días por semana, hardware dedicado y soporte estándar. 
 
 ![{{site.data.keyword.Bluemix_notm}} dedicado](images/dedicated.png)
 
@@ -93,30 +91,27 @@ IBM utiliza tecnología de relé para supervisar y mantener de forma segura el e
 ### Funcionamiento de {{site.data.keyword.Bluemix_notm}}
 {: #howwork}
 
-Cuando despliega una app en {{site.data.keyword.Bluemix_notm}}, debe configurar {{site.data.keyword.Bluemix_notm}} con suficiente información para dar soporte a la app. 
+Cuando despliega una app en {{site.data.keyword.Bluemix_notm}}, debe configurar {{site.data.keyword.Bluemix_notm}} con suficiente información para dar soporte a la app.
 
-* En el caso de una app para móvil, {{site.data.keyword.Bluemix_notm}} contiene un artefacto que representa el proceso de las apps para móvil, como por ejemplo los servicios que utiliza la app para móvil para comunicarse con un servidor. 
+* En el caso de una app para móvil, {{site.data.keyword.Bluemix_notm}} contiene un artefacto que representa el proceso de las apps para móvil, como por ejemplo los servicios que utiliza la app para móvil para comunicarse con un servidor.
 * En el caso de una app web, debe asegurarse de que esta información sobre el tiempo de ejecución y la infraestructura adecuados se comunique a {{site.data.keyword.Bluemix_notm}},
-para que pueda configurar el entorno de ejecución correcto para ejecutar la app. 
+para que pueda configurar el entorno de ejecución correcto para ejecutar la app.
 
-Cada entorno de ejecución, que incluye tanto móvil como web, se aísla del entorno de ejecución de otras apps. Los entornos de ejecución se aíslan aunque estas apps estén en la misma máquina física. La figura siguiente muestra el flujo básico de cómo {{site.data.keyword.Bluemix_notm}} gestiona el despliegue de apps:  
+Cada entorno de ejecución, que incluye tanto móvil como web, se aísla del entorno de ejecución de otras apps. Los entornos de ejecución se aíslan aunque estas apps estén en la misma máquina física. La figura siguiente muestra el flujo básico de cómo {{site.data.keyword.Bluemix_notm}} gestiona el despliegue de apps: 
 
 ![Despliegue de una app](images/deploy.png)
 
 *Figura 5. Despliegue de una app*
 
-Cuando crea una app y la despliega en {{site.data.keyword.Bluemix_notm}}, el entorno de {{site.data.keyword.Bluemix_notm}} determina una máquina virtual (VM) adecuada a la que se envía la app o los artefactos que representa la app. En el caso de una app para móvil, se crea una proyección de proceso en {{site.data.keyword.Bluemix_notm}}.
-Cualquier código de la app para móvil de la nube en principio se ejecuta en el entorno de {{site.data.keyword.Bluemix_notm}}.
-En el caso de una app web, el código que se ejecuta en la nube es la propia app que el desarrollador despliega en {{site.data.keyword.Bluemix_notm}}.
-La determinación de la VM se basa en varios factores, que incluyen los siguientes: 
+Cuando crea una app y la despliega en {{site.data.keyword.Bluemix_notm}}, el entorno de {{site.data.keyword.Bluemix_notm}} determina una máquina virtual (VM) adecuada a la que se envía la app o los artefactos que representa la app. En el caso de una app para móvil, se crea una proyección de proceso en {{site.data.keyword.Bluemix_notm}}. Cualquier código de la app para móvil de la nube en principio se ejecuta en el entorno de {{site.data.keyword.Bluemix_notm}}. En el caso de una app web, el código que se ejecuta en la nube es la propia app que el desarrollador despliega en {{site.data.keyword.Bluemix_notm}}. La determinación de la VM se basa en varios factores, que incluyen los siguientes:
 
 * La carga que ya soporta la máquina
-* Los tiempos de ejecución o infraestructuras que soporta esta VM. 
+* Los tiempos de ejecución o infraestructuras que soporta esta VM.
 
 Después de seleccionar una VM, un gestor de aplicaciones de cada VM instala la infraestructura y el tiempo de ejecución adecuados para la app. A partir de entonces la app se puede desplegar en la infraestructura. Cuando se completa el despliegue, se inician los artefactos de la aplicación.
 
 La siguiente figura
-muestra la estructura de una VM, también conocida como agente de ejecución de gotas (DEA), en la que se han desplegado varias apps:  
+muestra la estructura de una VM, también conocida como agente de ejecución de gotas (DEA), en la que se han desplegado varias apps: 
 
 ![Diseño de una VM](images/container.png)
 
@@ -130,8 +125,7 @@ Cuando se despliega la app, si tiene una interfaz web (como por ejemplo una app 
 
 *Figura 7. Invocación de una app de {{site.data.keyword.Bluemix_notm}}*
 
-Cada app puede tener uno o varios URL asociados, pero todos deben apuntar al punto final de {{site.data.keyword.Bluemix_notm}}.
-Cuando entra una solicitud, {{site.data.keyword.Bluemix_notm}} la examina, determina la app a la que va destinada y a continuación selecciona una de las instancias de la app para que reciba la solicitud.  
+Cada app puede tener uno o varios URL asociados, pero todos deben apuntar al punto final de {{site.data.keyword.Bluemix_notm}}. Cuando entra una solicitud, {{site.data.keyword.Bluemix_notm}} la examina, determina la app a la que va destinada y a continuación selecciona una de las instancias de la app para que reciba la solicitud. 
 
 ### Resiliencia de {{site.data.keyword.Bluemix_notm}}
 {: #resiliency}
@@ -149,14 +143,12 @@ a través del mayor número posible de máquinas virtuales.
 
 Debe guardar todos los datos persistentes
 en un almacén de datos con estado que se encuentre fuera de la app,
-como por ejemplo en uno de los servicios de almacenamiento de datos proporcionados por {{site.data.keyword.Bluemix_notm}}.
-Dado que es posible que algún elemento almacenado en la memoria caché o en el disco no esté disponible
+como por ejemplo en uno de los servicios de almacenamiento de datos proporcionados por {{site.data.keyword.Bluemix_notm}}. Dado que es posible que algún elemento almacenado en la memoria caché o en el disco no esté disponible
 incluso después de reiniciar, puede utilizar el espacio de memoria o sistema de archivos de una instancia
 de {{site.data.keyword.Bluemix_notm}}
 como caché rápida de transacción única. Con una sola configuración de instancia,
 la solicitud a su app puede interrumpirse debido a la naturaleza sin estado
-de {{site.data.keyword.Bluemix_notm}}.
-Se recomienda utilizar como mínimo tres instancias para cada app
+de {{site.data.keyword.Bluemix_notm}}. Se recomienda utilizar como mínimo tres instancias para cada app
 para garantizar la disponibilidad de la app.
 
 La infraestructura de {{site.data.keyword.Bluemix_notm}}, todos los componentes de Cloud Foundry y los componentes de gestión específicos de {{site.data.keyword.IBM_notm}} tienen una alta disponibilidad. Se utilizan varias instancias de la infraestructura
@@ -170,8 +162,7 @@ para equilibrar la carga.
 ### Regiones
 {: #ov_intro__reg}
 
-Una región de {{site.data.keyword.Bluemix_notm}} es un territorio geográfico definido en el que puede desplegar sus apps. Puede crear apps e instancias de servicios en distintas regiones con la misma infraestructura de {{site.data.keyword.Bluemix_notm}} para la gestión de aplicaciones y la misma vista de detalles de uso para la facturación. Puede seleccionar la región se esté más cerca de sus clientes y desplegar sus apps a esta región para obtener una latencia baja de la aplicación. También puede seleccionar la región en la que desea conservar los datos de aplicación para solucionar los problemas de seguridad. Cuando crea apps en varias regiones, si una región queda fuera de servicio, las apps que están en las otras regiones seguirán funcionando.
-Su concesión de recursos es la misma para cada región que utilice.
+Una región de {{site.data.keyword.Bluemix_notm}} es un territorio geográfico definido en el que puede desplegar sus apps. Puede crear apps e instancias de servicios en distintas regiones con la misma infraestructura de {{site.data.keyword.Bluemix_notm}} para la gestión de aplicaciones y la misma vista de detalles de uso para la facturación. Puede seleccionar la región se esté más cerca de sus clientes y desplegar sus apps a esta región para obtener una latencia baja de la aplicación. También puede seleccionar la región en la que desea conservar los datos de aplicación para solucionar los problemas de seguridad. Cuando crea apps en varias regiones, si una región queda fuera de servicio, las apps que están en las otras regiones seguirán funcionando. Su concesión de recursos es la misma para cada región que utilice.
 
 Si está utilizando la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede cambiar a una región distinta para trabajar con los espacios de esa región.
 
@@ -188,22 +179,23 @@ con la que desea trabajar creando un servidor {{site.data.keyword.Bluemix_notm}}
 y especificando el punto final API de la región. Para obtener más información
 sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con {{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#toolsinstall).
 
-Cada región tienen asignado un prefijo exclusivo. {{site.data.keyword.Bluemix_notm}} proporciona las siguientes regiones y prefijos.  
+Cada región tienen asignado un prefijo exclusivo. {{site.data.keyword.Bluemix_notm}} proporciona las siguientes regiones y prefijos. 
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
 | **Nombre de la región** | **Prefijo de la región** | **Punto final cf API** | **Consola de interfaz de usuario** |       
 |-----------------|-------------------|---------------------|----------------|
-| Región EE.UU. sur | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| Región Europa Reino Unido | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| Región Australia Sídney | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| Región EE.UU. sur | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| Región Europa Reino Unido | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Región Australia Sídney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *Tabla 1. Lista de regiones de {{site.data.keyword.Bluemix_notm}}*
 
 ### Infraestructura
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}} ofrece tres maneras de ejecutar el código: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers y máquinas virtuales. Puede seleccionar la infraestructura derecha para desplegar sus apps.
+{{site.data.keyword.Bluemix_notm}} ofrece tres maneras de ejecutar el código: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers y máquinas virtuales. {{site.data.keyword.IBM_notm}} Containers y máquinas virtuales sólo están disponibles en la región Estados Unidos sur y Europa Reino Unido. Puede seleccionar la infraestructura derecha para desplegar sus apps. 
 
 <dl>
 <dt>Cloud
@@ -217,8 +209,9 @@ añade un motor para desplegar una app al entorno virtual para ejecutar los cont
 
     Para obtener más información sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) en la documentación Creación de apps web.</dd>
 <dt>Máquinas virtuales (BETA)</dt>
-    <dd>La infraestructura de máquinas virtuales de {{site.data.keyword.Bluemix_notm}} le facilita la creación y gestión de grupos de máquinas virtuales en la nube pública de {{site.data.keyword.IBM_notm}}. También puede crear y gestionar grupos de máquinas virtuales en aquellas nubes privadas de {{site.data.keyword.IBM_notm}} que haya decidido compartir con usuarios de {{site.data.keyword.Bluemix_notm}}. La infraestructura incluye instrucciones para conectarse a las infraestructuras locales. El soporte de supervisión y registro está integrado en {{site.data.keyword.Bluemix_notm}}.
-Puede desplegar y gestionar sus máquinas virtuales mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o bien con las API de OpenStack en la nube.     Las máquinas virtuales de {{site.data.keyword.Bluemix_notm}} da soporte al suministro de grupos de máquinas virtuales con escalado automático. Gracias a este soporte, se puede aumentar o disminuir automáticamente el número de instancias en función de la carga del CPU del error de una instancia. Además, también se da soporte al equilibrio de carga, que habilita la asignación de direcciones IP virtuales (IP flotantes) según se necesite.
+    <dd>La infraestructura de máquinas virtuales de {{site.data.keyword.Bluemix_notm}} le facilita la creación y gestión de grupos de máquinas virtuales en la nube pública de {{site.data.keyword.IBM_notm}}. También puede crear y gestionar grupos de máquinas virtuales en aquellas nubes privadas de {{site.data.keyword.IBM_notm}} que haya decidido compartir con usuarios de {{site.data.keyword.Bluemix_notm}}. La infraestructura incluye instrucciones para conectarse a las infraestructuras locales. El soporte de supervisión y registro está integrado en {{site.data.keyword.Bluemix_notm}}. Puede desplegar y gestionar sus máquinas virtuales mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o bien con las API de OpenStack en la nube.
+
+    Las máquinas virtuales de {{site.data.keyword.Bluemix_notm}} da soporte al suministro de grupos de máquinas virtuales con escalado automático. Gracias a este soporte, se puede aumentar o disminuir automáticamente el número de instancias en función de la carga del CPU del error de una instancia. Además, también se da soporte al equilibrio de carga, que habilita la asignación de direcciones IP virtuales (IP flotantes) según se necesite.
 
     Para obtener más información sobre las máquinas virtuales de {{site.data.keyword.Bluemix_notm}}, consulte [Máquinas virtuales](../virtualmachines/vm_index.html) en la documentación Creación de apps web.</dd>
 </dl>
@@ -227,14 +220,13 @@ Puede desplegar y gestionar sus máquinas virtuales mediante la interfaz de usua
 {: #applications}
 
 En {{site.data.keyword.Bluemix_notm}},
-una aplicación o *app* representa el artefacto que está creando un desarrollador. El ciclo de vida de una aplicación en {{site.data.keyword.Bluemix_notm}} y en Cloud Foundry es idéntico, independientemente de cómo envíe la app a {{site.data.keyword.Bluemix_notm}}.
-Para obtener más información, consulte [Cómo se transfieren las aplicaciones](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html).
+una aplicación o *app* representa el artefacto que está creando un desarrollador. El ciclo de vida de una aplicación en {{site.data.keyword.Bluemix_notm}} y en Cloud Foundry es idéntico, independientemente de cómo envíe la app a {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Cómo se transfieren las aplicaciones](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html).
 
 <dl>
 <dt>Apps para móvil</dt>
     <dd>Las apps para móvil se ejecutan fuera del entorno de {{site.data.keyword.Bluemix_notm}} y utilizan los servicios a los que están expuestas las apps para móviles. Estos servicios generalmente actúan en sintonía y representan la proyección del proceso de dicha app. {{site.data.keyword.Bluemix_notm}} también puede alojar el código de la app que el desarrollador preferiría ejecutar en un servidor de proceso en un entorno basado en contenedor.</dd>
 <dt>Apps web</dt>
-    <dd>Las apps web constan de todo el código que se tiene que ejecutar o hacer referencia al mismo en el momento de la ejecución. Las apps web se cargan en {{site.data.keyword.Bluemix_notm}} para alojar la app. </dd>
+    <dd>Las apps web constan de todo el código que se tiene que ejecutar o hacer referencia al mismo en el momento de la ejecución. Las apps web se cargan en {{site.data.keyword.Bluemix_notm}} para alojar la app.</dd>
 </dl>
 
 En el caso de lenguajes como Java, donde el código fuente se compila en archivos binarios de tiempo de ejecución, sólo es necesario cargar los archivos binarios.
@@ -242,19 +234,16 @@ En el caso de lenguajes como Java, donde el código fuente se compila en archivo
 ### Servicios
 {: #services}
 
-Un *servicio* es una extensión de la nube alojada en {{site.data.keyword.Bluemix_notm}}.
-El servicio proporciona funciones preparadas para que las utilice el código en ejecución de la app. Los servicios predefinidos que proporciona {{site.data.keyword.Bluemix_notm}} incluyen base de datos, mensajería, notificaciones push para apps para móvil y almacenamiento elástico en caché de apps web.
+Un *servicio* es una extensión de la nube alojada en {{site.data.keyword.Bluemix_notm}}. El servicio proporciona funciones preparadas para que las utilice el código en ejecución de la app. Los servicios predefinidos que proporciona {{site.data.keyword.Bluemix_notm}} incluyen base de datos, mensajería, notificaciones push para apps para móvil y almacenamiento elástico en caché de apps web.
 
-Puede crear sus propios servicios en {{site.data.keyword.Bluemix_notm}}.
-La complejidad de estos servicios puede variar. Pueden ser sencillos programas de utilidad, como por ejemplo las funciones que puede ver en una biblioteca de tiempo de ejecución. También pueden ser una compleja lógica empresarial que puede ver en un servicio o base de datos de modelado de procesos empresariales.
+Puede crear sus propios servicios en {{site.data.keyword.Bluemix_notm}}. La complejidad de estos servicios puede variar. Pueden ser sencillos programas de utilidad, como por ejemplo las funciones que puede ver en una biblioteca de tiempo de ejecución. También pueden ser una compleja lógica empresarial que puede ver en un servicio o base de datos de modelado de procesos empresariales.
 
-{{site.data.keyword.Bluemix_notm}} simplifica el uso de servicios al suministrar nuevas instancias del servicio y enlazar dichas instancias del servicio con la app. {{site.data.keyword.Bluemix_notm}} maneja automáticamente la gestión del servicio.
-Para ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}}, consulte el catálogo en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix_notm}} simplifica el uso de servicios al suministrar nuevas instancias del servicio y enlazar dichas instancias del servicio con la app. {{site.data.keyword.Bluemix_notm}} maneja automáticamente la gestión del servicio. Para ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}}, consulte el catálogo en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
 
 ### Iniciadores
 {: #starters}
 
-Un *iniciador* es una plantilla que incluye servicios predefinidos y código de la app configurado con un determinado paquete de compilación. Hay dos tipos de iniciadores: contenedores modelo y tiempos de ejecución.Un iniciador puede ser código de app que se escribe en un lenguaje de programación específico, o una combinación de código de app y conjunto de servicios. 
+Un *iniciador* es una plantilla que incluye servicios predefinidos y código de la app configurado con un determinado paquete de compilación. Hay dos tipos de iniciadores: contenedores modelo y tiempos de ejecución. Un iniciador puede ser código de app que se escribe en un lenguaje de programación específico, o una combinación de código de app y conjunto de servicios.
 
 ### Contenedores modelo
 {: #boilerplates}
@@ -277,7 +266,7 @@ Si no especifica un paquete de compilación al desplegar la app en {{site.data.k
 <dd class="dd"><div class="p">
 <!-- begin PRODUCTION ONLY -->
 La lista siguiente son las compilaciones incorporadas que ha creado
-{{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.IBM_notm}}. 
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
@@ -304,13 +293,14 @@ Cloud Foundry para obtener soporte.</div>
 
 {{site.data.keyword.Bluemix_notm}} puede ayudar a los desarrolladores ya que conecta dos amplias categorías de sistemas en un entorno de nube: sistemas de registros y sistemas colaborativos.
 
-Los *sistemas de registro* incluyen apps y bases de datos que almacenan registros empresariales y automatizan los procesos estandarizados. Los *sistemas colaborativos* ofrecen prestaciones que amplían la utilidad de los sistemas de registros y facilitan la colaboración por parte de los usuarios. Mediante la integración de un sistema de registros con la app que cree en {{site.data.keyword.Bluemix_notm}}, puede llevar a cabo estas acciones:
+Los *sistemas de registro* incluyen apps y bases de datos que almacenan registros empresariales y automatizan los procesos estandarizados. Los *sistemas colaborativos* ofrecen prestaciones que amplían la utilidad de los sistemas de registros y facilitan la colaboración por parte de los usuarios.
+Mediante la integración de un sistema de registros con la app que cree en {{site.data.keyword.Bluemix_notm}}, puede llevar a cabo estas acciones:
 
  * Permitir una comunicación segura entre la aplicación y la base de datos de fondo descargando e instalando un conector seguro local.
  * Invocar una base de datos de forma segura.
  * Crear API a partir de flujos de integración con bases de datos y sistemas de fondo, como por ejemplo un sistema de gestión de relaciones con los clientes.
  * Exponer únicamente los esquemas y las tablas que desea exponer a la aplicación.
- * Como gestor de la organización de {{site.data.keyword.Bluemix_notm}}, publicar una API como servicio privado que sea visible sólo para los miembros de su organización. 
+ * Como gestor de la organización de {{site.data.keyword.Bluemix_notm}}, publicar una API como servicio privado que sea visible sólo para los miembros de su organización.
 
 Para integrar un sistema de registros con las aplicaciones que cree en {{site.data.keyword.Bluemix_notm}}, utilice el servicio de Cloud Integration. Utilizando el servicio de Cloud Integration, puede crear una API de Cloud Integration y publicar la API como un servicio privado para su organización.
 
@@ -318,8 +308,7 @@ Para integrar un sistema de registros con las aplicaciones que cree en {{site.da
 <dt>API de Cloud Integration</dt>
     <dd>Una API de Cloud Integration proporciona un acceso seguro a los sistemas de registro que residen detrás de un cortafuegos mediante las API web. Al crear la API de Cloud Integration, debe elegir el recurso al que desea acceder mediante la API web, especificar las operaciones que se permiten e incluye los SDK y ejemplos para acceder a la API. Para obtener más información sobre cómo crear una API de Cloud Integration, consulte [Creación de API de Cloud Integration](../services/CloudIntegration/index.html#cloudint_add_service).</dd>
 <dt>Servicio privado</dt>
-    <dd>Un servicio privado consiste en una API de Cloud Integration, los SDK y políticas de titularidad. Además, el servicio privado puede contener documentación u otros elementos del proveedor de servicios.
-Sólo el gestor de la organización puede publicar una API de Cloud Integration como un servicio privado. Para ver los servicios privados que tiene disponibles, marque el recuadro de selección Privado en el catálogo de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar y enlazar un servicio privado a una app sin conectarse al servicio de Cloud Integration. Los servicios privados se enlazan a su aplicación de la misma forma en que se hace en otros servicios de {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo publicar una API como un servicio privado, consulte Publicación de una API como un servicio privado.</dd>
+    <dd>Un servicio privado consiste en una API de Cloud Integration, los SDK y políticas de titularidad. Además, el servicio privado puede contener documentación u otros elementos del proveedor de servicios. Sólo el gestor de la organización puede publicar una API de Cloud Integration como un servicio privado. Para ver los servicios privados que tiene disponibles, marque el recuadro de selección Privado en el catálogo de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar y enlazar un servicio privado a una app sin conectarse al servicio de Cloud Integration. Los servicios privados se enlazan a su aplicación de la misma forma en que se hace en otros servicios de {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo publicar una API como un servicio privado, consulte Publicación de una API como un servicio privado.</dd>
 	</dl>
 
 ### Caso de ejemplo: creación de una potente aplicación móvil para conectar con su sistema de registros
@@ -331,7 +320,7 @@ Por ejemplo, puede crear una app para móvil para interactuar con el sistema de 
 
 En primer lugar, el desarrollador de integración crea la aplicación móvil de fondo en {{site.data.keyword.Bluemix_notm}}. Utiliza el contenedor modelo de Mobile Cloud que usa el tiempo de ejecución Node.js con el que está más familiarizado.
 
-A continuación, mediante el uso del servicio Cloud Integration en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, expone una API a través de un conector seguro. El desarrollador de integración descarga el conector seguro y lo instala de forma local para permitir la comunicación segura entre su API y la base de datos. Después de crear el punto final de la base de datos, examina todos los esquemas y extrae las tablas que desea exponer como API ante la aplicación. 
+A continuación, mediante el uso del servicio Cloud Integration en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, expone una API a través de un conector seguro. El desarrollador de integración descarga el conector seguro y lo instala de forma local para permitir la comunicación segura entre su API y la base de datos. Después de crear el punto final de la base de datos, examina todos los esquemas y extrae las tablas que desea exponer como API ante la aplicación.
 
 El desarrollador de integración añade el servicio Push para enviar notificaciones móviles a los consumidores interesados. También añade un servicio de un business partner para iniciar un tweet cuando se crea un nuevo registro de cliente con una API
 de Twitter.
@@ -344,7 +333,8 @@ descargar el kit de herramientas de desarrollo de Android y desarrollar código 
 
 {{site.data.keyword.Bluemix_notm}} da soporte a idiomas nacionales que no sean el inglés. Sin embargo, no todo el contenido que se suministra
 con {{site.data.keyword.Bluemix_notm}} está
-traducido.La siguiente tabla lista los idiomas nacionales soportados y los códigos de idiomas de {{site.data.keyword.Bluemix_notm}}.
+traducido.
+La siguiente tabla lista los idiomas nacionales soportados y los códigos de idiomas de {{site.data.keyword.Bluemix_notm}}.
 
 | **Idioma nacional** | **Código de idioma** |
 |-------------------|---------------|
@@ -366,7 +356,7 @@ traducido.La siguiente tabla lista los idiomas nacionales soportados y los códi
 * Requisitos previos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Novedades de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * Problemas conocidos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
-* Glosario de [{{site.data.keyword.Bluemix_notm}}](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} glosario](glossary/index.html)
 * Hoja de precios de [{{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud
