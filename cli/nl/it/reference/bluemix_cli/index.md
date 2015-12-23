@@ -88,7 +88,8 @@ bluemix api api.ng.bluemix.net
 Visualizzare l'endpoint API corrente:
 
 ```
-bluemix api```
+bluemix api
+```
 
 Annullare l'impostazione dell'endpoint API:
 
@@ -98,7 +99,7 @@ bluemix api --unset
 
 
 ## bluemix login
-Eseguire l'accesso dell'utente. Questo comando include il comando `cf login`.Le opzioni di comando sono le stesse del comando `cf login`.
+Eseguire l'accesso dell'utente. Questo comando include il comando `cf login`. Le opzioni di comando sono le stesse del comando `cf login`.
 
 ```
 bluemix login [OPZIONI...]
@@ -133,7 +134,7 @@ bluemix target [-o NOME_ORGANIZZAZIONE] [-s NOME_SPAZIO]
 
 -o *NOME_ORGANIZZAZIONE*  (facoltativo): il nome dell'organizzazione di destinazione.
 
--s *NOME_SPAZIO*  (facoltativo): il nome dello spazio di destinazione. 
+-s *NOME_SPAZIO*  (facoltativo): il nome dello spazio di destinazione.
 
 Se non viene specificata né l'opzione -o *NOME_ORGANIZZAZIONE* né quella -s *NOME_SPAZIO*, vengono visualizzati l'organizzazione e lo spazio correnti.
 
@@ -247,7 +248,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 
 
 ## bluemix curl
-Eseguire una richiesta HTTP raw per {{site.data.keyword.Bluemix_notm}}. Per impostazione predefinita, "Content-Type" è "application/json". Questo comando invia una richiesta al server della console {{site.data.keyword.Bluemix_notm}} (ad esempio https://console.ng.bluemix.net) invece che all'endpoint API cf (ad esempio https://api.ng.bluemix.net).
+Eseguire una richiesta HTTP raw per {{site.data.keyword.Bluemix_notm}}. Per impostazione predefinita, "Content-Type" è "application/json".Questo comando invia una richiesta al server della console {{site.data.keyword.Bluemix_notm}} (ad esempio https://console.ng.bluemix.net) invece che all'endpoint API cf (ad esempio https://api.ng.bluemix.net).
 
 ```
 bluemix curl PERCORSO [OPZIONI...]
@@ -538,7 +539,8 @@ Questo comando ha la stessa funzione e le stesse opzioni del comando `cf delete-
 Elencare i repository di plugin registrati nella CLI {{site.data.keyword.Bluemix_notm}}.
 
 ```
-bluemix plugin repos```
+bluemix plugin repos
+```
 
 **Prerequisiti**:  Nessuno
 

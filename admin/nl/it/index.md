@@ -5,7 +5,7 @@
 
 #Amministrazione di {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Ultimo aggiornamento: 18 novembre 2015*
+*Ultimo aggiornamento: 8 dicembre 2015*
 
 Gestisci le tue organizzazioni, i tuoi spazi e i tuoi utenti assegnati facendo clic su **Account e supporto** &gt; **Gestisci organizzazioni**. Se sei un utente {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato](index.html#mng) per ulteriori informazioni sull'amministrazione della tua istanza locale o dedicata.
 {:shortdesc}
@@ -19,8 +19,7 @@ In {{site.data.keyword.Bluemix}}, puoi gestire organizzazioni e spazi, compreso 
 ###Organizzazioni e spazi
 {: #orgsandspaces}
 
-In qualità di gestore dell'organizzazione o proprietario dell'account, puoi utilizzare la pagina Gestisci organizzazioni per visualizzare e gestire le impostazioni dell'organizzazione o dello spazio, incluso l'accesso degli utenti.
-Per aprire la pagina Gestisci organizzazioni, nel menu vai a *Account e supporto* &gt; **Gestisci organizzazioni**.
+In qualità di gestore dell'organizzazione o proprietario dell'account, puoi utilizzare la pagina Gestisci organizzazioni per visualizzare e gestire le impostazioni dell'organizzazione o dello spazio, incluso l'accesso degli utenti. Per aprire la pagina Gestisci organizzazioni, nel menu vai a *Account e supporto* &gt; **Gestisci organizzazioni**.
 
 ####Organizzazioni
 
@@ -62,8 +61,7 @@ spazi e i servizi e tutte le applicazioni al suo interno vengono eliminati.
 
 {{site.data.keyword.Bluemix_notm}} consente la collaborazione sui progetti assegnando utenti all'interno di un'organizzazione e all'interno degli
 spazi nell'organizzazione. Puoi utilizzare la scheda **Utenti** per
-visualizzare e gestire gli utenti dell'organizzazione. Puoi anche invitare gli utenti alla tua organizzazione facendo clic sul link **Invita un nuovo utente** nella scheda **Utenti**.
-Agli utenti in un'organizzazione possono essere assegnate le seguenti autorizzazioni:
+visualizzare e gestire gli utenti dell'organizzazione. Puoi anche invitare gli utenti alla tua organizzazione facendo clic sul link **Invita un nuovo utente** nella scheda **Utenti**. Agli utenti in un'organizzazione possono essere assegnate le seguenti autorizzazioni:
 
 <ul>
 <li>Utente organizzazione</li>
@@ -192,7 +190,7 @@ clic su **Salva**.</li>
 <li>Elenco dei membri
 <p>Attieniti alla seguente procedura per elencare i membri della tua organizzazione o del tuo spazio:</p>
 <ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona nell'angolo superiore destro e seleziona **Gestisci organizzazioni**.Puoi visualizzare i membri
+<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona nell'angolo superiore destro e seleziona **Gestisci organizzazioni**. Puoi visualizzare i membri
 della tua organizzazione e i loro ruolo nella scheda **Utenti**.</li>
 <li>Fai clic sul nome dello spazio nella tua organizzazione per visualizzare i membri di questo spazio e i loro ruoli.</li>
 </ol>
@@ -214,7 +212,7 @@ ti vengono presentate per creare il tuo spazio.</li>
 degli utenti della tua organizzazione a spazi differenti. Gli utenti possono accedere solo allo
 spazio al quale sono stati aggiunti. Per aggiungere un utente a uno spazio, attieniti alla seguente procedura:</p>
 <ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona nell'angolo superiore destro e seleziona **Gestisci organizzazioni**.Fai quindi clic su **Aggiungi utente** nella tua organizzazione e attieniti alle richieste che ti vengono presentate per aggiungere l'utente alla tua organizzazione.</li>
+<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona nell'angolo superiore destro e seleziona **Gestisci organizzazioni**. Fai quindi clic su **Aggiungi utente** nella tua organizzazione e attieniti alle richieste che ti vengono presentate per aggiungere l'utente alla tua organizzazione.</li>
 <li>Aggiungi l'utente a uno spazio. Seleziona lo spazio dal riquadro di navigazione di sinistra,
 fai clic su **Aggiungi utente** e attieniti alle richieste che ti vengono
 presentate per aggiungere l'utente allo spazio.</li>
@@ -237,7 +235,7 @@ Utilizza la Console di gestione per gestire risorse, monitorare l'utilizzo, ammi
 
 Puoi accedere alla Console di gestione immettendo il seguente URL:
 
-`https://opsconsole.&lt;dominiosecondario&gt;.bluemix.net/`.
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;dominiosecondario&gt;</strong></dt>
@@ -326,6 +324,10 @@ all'interno di report e log. Puoi anche scegliere di filtrare la ricerca in base
 agli **Eventi di amministrazione**, ai **Report DataPower**, al **Firewall** e al **Controllo accessi**.
 * Durante la visualizzazione di un report o log, puoi fare clic sull'icona ![Scarica](images/icon_download.png) nell'angolo superiore destro del report per scaricarlo.
 
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+Per ulteriori informazioni sui tipi di report di sicurezza, vedi [Report Sicurezza](../security/index.html#reports).
+
 ### Visualizzazione dello stato
 {: #oc_status}
 
@@ -397,11 +399,11 @@ Immetti un nome per l'organizzazione, quindi immetti il nome o l'email della per
 	<dd>La somma di memoria assegnata per tutte le applicazioni distribuite, su tutte le organizzazioni. La somma
 	della quota distribuita può superare la memoria totale di sistema fisica per il tuo ambiente. Ad esempio,
 se disponi di una memoria totale di sistema pari a 16 GB e assegni 4 GB di memoria ciascuna per un totale di cinque diverse organizzazioni, la quota totale supera la
-memoria di sistema totale che ti è stata assegnata per tutte le organizzazioni.  Tuttavia, in molti casi,
+memoria di sistema totale che ti è stata assegnata per tutte le organizzazioni. Tuttavia, in molti casi,
 è possibile che le organizzazioni non utilizzino la quota totale assegnata singolarmente a ciascuna di esse. Inoltre, è possibile che le organizzazioni non utilizzino contemporaneamente
-la propria assegnazione di quota totale della memoria.</dd>
+la propria assegnazione di quota totale della memoria. </dd>
 	<dt><strong>Quota totale</strong></dt>
-	<dd>    La memoria totale assegnata su tutte le organizzazioni.</dd>
+	<dd>La memoria totale assegnata su tutte le organizzazioni.</dd>
 	</dl>
 	* Utilizzo della memoria dell'organizzazione. Questa sezione mostra in dettaglio l'utilizzo della memoria a livello di organizzazione. Puoi visualizzare
 la quota totale consentita e la quota che viene distribuita per ogni organizzazione. Il grafico fornisce informazioni che vengono elencate
@@ -479,7 +481,7 @@ Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/ico
 |-----------------|-------------------|
 | Ammin | Gli utenti con l'autorizzazione `ammin` possono
 modificare le autorizzazioni per gli altri utenti. |
-| Catalogo | Agli utenti con l'autorizzazione `catalogo` può essere assegnata la capacità di `visualizzare` o `scrivere` (modificare) quali servizi sono disponibili nell'istanza locale o dedicata.  |
+| Catalogo | Agli utenti con l'autorizzazione `catalogo` può essere assegnata la capacità di `visualizzare` o `scrivere` (modificare) quali servizi sono disponibili nell'istanza locale o dedicata. |
 | Accesso | Agli utenti con l'autorizzazione `accesso` è consentito accedere alla Console di gestione. Senza questa autorizzazione, gli utenti non possono accedere. |
 | Report | Agli utenti con l'autorizzazione `report` può essere assegnata la capacità di
 `visualizzare` o `scrivere` (modificare) i report di sicurezza. |
@@ -844,7 +846,7 @@ Dopo aver installato l'interfaccia riga di comandi cf, puoi
 aggiungere il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI.
 
-Completa la seguente procedura per aggiungere il repository e installare
+Completa la seguente procedura per aggiungere il deposito e installare
 il plug-in:
 
 <ol>
@@ -920,7 +922,7 @@ Puoi aggiungere un utente al tuo ambiente {{site.data.keyword.Bluemix_notm}} da 
 #### Rimozione di un utente
 
 Puoi rimuovere un utente dal tuo ambiente {{site.data.keyword.Bluemix_notm}}
-immettendo il seguente comando: 
+immettendo il seguente comando:
 
 `cf bluemix-admin-remove-user <nome_utente>`
 {: codeblock}

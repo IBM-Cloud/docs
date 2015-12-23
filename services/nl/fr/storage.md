@@ -1,6 +1,6 @@
 {:shortdesc: .shortdesc} 
 
-# Stockage 
+# Stockage
 {: #storage}
 
 *Dernière mise à jour : 19 novembre 2015*

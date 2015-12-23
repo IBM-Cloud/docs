@@ -384,7 +384,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-基于“rubyHelloWorld”模板创建应用程序“my-ruby-app”，路径为“myrubyapp.ng.bluemix.net”，描述为“My first ruby app on {{site.data.keyword.Bluemix_notm}}.”：
+基于“rubyHelloWorld”模板创建应用程序“my-ruby-app”，路径为“myrubyapp.ng.bluemix.net”，描述为“My first ruby app on {{site.data.keyword.Bluemix_notm}}.”:
 
 ```
 bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."

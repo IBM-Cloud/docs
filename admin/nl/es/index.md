@@ -5,7 +5,7 @@
 
 #Administración de {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Última actualización: 18 de noviembre de 2015*
+*Última actualización: 8 de diciembre de 2015*
 
 Gestione sus organizaciones, espacios y usuarios asignados pulsando el botón **Cuenta y soporte** &gt; **Gestionar organizaciones**. Si es un usuario de {{site.data.keyword.Bluemix_notm}} local o un usuario de {{site.data.keyword.Bluemix_notm}} dedicado, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado](index.html#mng) para obtener más información sobre la administración de su instancia local o dedicada.
 {:shortdesc}
@@ -31,23 +31,23 @@ Una organización está definida por los elementos siguientes:
 para que se le puedan otorgar otros permisos a los espacios en el seno de la organización. Para ver información detallada,
 consulte [Usuarios y roles](index.html#userroles).</dd>
 <dt>Dominios</dt>
-<dd>Proporciona la ruta en Internet que se asigna a la organización. Una ruta tiene un subdominio y un dominio. Un subdominio suele ser el nombre de la aplicación. Un dominio puede ser un dominio del sistema o un dominio personalizado que ha registrado para la aplicación.<br/>
-<p>**Nota**: Si añade un dominio personalizado, debe configurar el servidor DNS para resolver el dominio personalizado para que apunte al dominio del sistema de {{site.data.keyword.Bluemix_notm}}. De este modo, cuando {{site.data.keyword.Bluemix_notm}} recibe una solicitud para el dominio personalizado, puede direccionarlo correctamente a la aplicación.</p></dd>
+<dd>Proporciona la ruta en Internet que se asigna a la organización. Una ruta tiene un subdominio y un dominio. Un subdominio suele ser el nombre de la app. Un dominio puede ser un dominio del sistema o un dominio personalizado que ha registrado para la app.<br/>
+<p>**Nota**: Si añade un dominio personalizado, debe configurar el servidor DNS para resolver el dominio personalizado para que apunte al dominio del sistema de {{site.data.keyword.Bluemix_notm}}. De este modo, cuando {{site.data.keyword.Bluemix_notm}} recibe una solicitud para el dominio personalizado, puede direccionarlo correctamente a la app.</p></dd>
 <dt>Cuota</dt>
-<dd>Representa los límites de recursos para la organización, incluido el número de servicios y la cantidad de memoria que se puede asignar para que la utilice la organización. Las cuotas se asignan cuando se crean organizaciones. Cualquier aplicación o servicio en un espacio de la organización contribuye al uso de la cuota. Con los planes Pague según uso o Subscription, puede ajustar su cuota para los contenedores y aplicaciones de Cloud Foundry a medida que cambien las necesidades de su organización.</dd>
+<dd>Representa los límites de recursos para la organización, incluido el número de servicios y la cantidad de memoria que se puede asignar para que la utilice la organización. Las cuotas se asignan cuando se crean organizaciones. Cualquier app o servicio en un espacio de la organización contribuye al uso de la cuota. Con los planes Pague según uso o Subscription, puede ajustar su cuota para los contenedores y apps de Cloud Foundry a medida que cambien las necesidades de su organización.</dd>
 </dl>
 
 En {{site.data.keyword.Bluemix_notm}},
 puede utilizar organizaciones para habilitar la colaboración entre usuarios y para facilitar la agrupación lógica de recursos del proyecto de las maneras siguientes:
 
 <ul>
-<li>Puede agrupar un conjunto de espacios, aplicaciones, servicios, dominios, rutas y usuarios conjuntamente en organizaciones.</li>
+<li>Puede agrupar un conjunto de espacios, apps, servicios, dominios, rutas y usuarios conjuntamente en organizaciones.</li>
 <li>Puede gestionar el acceso a los espacios y a las organizaciones usuario a usuario.</li>
 </ul>
 
 Cuando se crea una organización, el nombre de la organización debe ser exclusivo en {{site.data.keyword.Bluemix_notm}}. Después de crear la organización, se le asigna automáticamente el permiso de *Gestor de organizaciones*, que le permite editar el nombre de la organización, suprimir la organización y crear espacios en la organización.
 
-Cuando se suprime una organización, todos los espacios, aplicaciones y servicios dentro de la organización se suprimen.
+Cuando se suprime una organización, todos los espacios, apps y servicios dentro de la organización se suprimen.
 
 {{site.data.keyword.Bluemix_notm}} habilita la colaboración en proyectos asignando usuarios en el seno de una organización y en el seno de los espacios en la organización. Puede utilizar el separador **Usuarios** para mostrar y gestionar usuarios de la organización. También puede invitar a usuarios a su organización pulsando el enlace **Invitar a un nuevo usuario** del separador **Usuarios**. Se pueden asignar los permisos siguientes a usuarios de una organización:
 
@@ -60,7 +60,7 @@ Cuando se suprime una organización, todos los espacios, aplicaciones y servicio
 
 ####Espacios
 
-En el seno de una organización, podrá utilizar espacios para agrupar un conjunto de aplicaciones, servicios y usuarios.
+En el seno de una organización, podrá utilizar espacios para agrupar un conjunto de apps, servicios y usuarios.
 
 Tras añadir usuarios a una organización, puede otorgarles permisos a los espacios en el seno de la organización. Similar a las organizaciones, los espacios también tienen un conjunto de permisos que se pueden asignar a los usuarios:
 
@@ -111,7 +111,7 @@ siguientes para que asuman distintos roles de usuario en una organización o esp
 <dt>Gestores de facturación</dt>
 <dd>Los Gestores de facturación tienen permiso para ver información de uso de tiempo de ejecución y servicio para la organización.</dd>
 <dt>Auditores de la organización</dt>
-<dd>Los Auditores de la organización tienen permiso para ver el contenido de la aplicación y el servicio en el espacio.</dd>
+<dd>Los Auditores de la organización tienen permiso para ver el contenido de la app y el servicio en el espacio.</dd>
 <dt>Gestores de espacios</dt>
 <dd>Los gestores de espacios tienen los permisos siguientes:
 <ul>
@@ -122,12 +122,12 @@ siguientes para que asuman distintos roles de usuario en una organización o esp
 <dt>Desarrolladores de espacios</dt>
 <dd>Los Desarrolladores de espacios tienen los permisos siguientes:
 <ul>
-<li>Crean, suprimen y gestionan aplicaciones y servicios en el espacio.</li>
+<li>Crean, suprimen y gestionan apps y servicios en el espacio.</li>
 <li>Tienen acceso a registros en el espacio</li>
 </ul>
 </dd>
 <dt>Auditores de espacios</dt>
-<dd>Los Auditores de espacios tienen acceso de sólo lectura a toda la información acerca del espacio como, por ejemplo, información sobre aplicaciones y servicios, valores, informes y registros.</dd>
+<dd>Los Auditores de espacios tienen acceso de sólo lectura a toda la información acerca del espacio como, por ejemplo, información sobre apps y servicios, valores, informes y registros.</dd>
 </dl>
 
 ###Gestión de la organización
@@ -174,7 +174,7 @@ Como gestor de la organización o propietario de la cuenta, puede gestionar sus 
 </li>
 <li>Supresión de una organización existente
 <p>Póngase en contacto con el soporte de registros y de ID de {{site.data.keyword.Bluemix_notm}} para suprimir la organización.</p>
-<p>**Nota**: La supresión de operaciones no se puede invertir. Perderá todas las aplicaciones y servicios asociados a la aplicación.</p>
+<p>**Nota**: La supresión de operaciones no se puede invertir. Perderá todas las apps y servicios asociados a la app.</p>
 </li>
 </ul>
 
@@ -190,8 +190,7 @@ registros, estado y notificaciones de actualización para el entorno local o ded
 
 Puede acceder a la Consola de administración especificando el siguiente URL:
 
-
-`https://opsconsole.&lt;subdominio&gt;.bluemix.net/`.
+<code>https://opsconsole.&lt;subdominio&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdominio&gt;</strong></dt>
@@ -239,7 +238,7 @@ notificación cuando se inicie y se detenga el despliegue de actualización.</li
     * Información básica sobre el build de {{site.data.keyword.Bluemix_notm}}.
     * Información de API (versión, URL, región y enlace a la documentación de CLI).
     * Información de dominio compartido sobre el sistema y el servicio.
-    * Estadísticas sobre el número total de aplicaciones, usuarios y organizaciones.
+    * Estadísticas sobre el número total de apps, usuarios y organizaciones.
 * En la sección Detalles de la configuración de LDAP, puede seleccionar el servidor de LDAP
 y ver información sobre las correlaciones de usuarios y grupos. Si utiliza {{site.data.keyword.IBM}} Web ID, se especifica en la sección Detalles de la configuración de LDAP.
 
@@ -278,6 +277,10 @@ Seleccione una de las opciones siguientes:
 la búsqueda por **Sucesos de administración**, **Informes de DataPower**, **Cortafuegos** y **Auditoría
 de inicio de sesión**.
 * Cuando visualice un informe o registro, puede pulsar el icono ![Descargar](images/icon_download.png) de la esquina superior derecha del informe para descargarlo.
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+Para obtener más información sobre los tipos de informes de seguridad, consulte [Informes de seguridad](../security/index.html#reports).
 
 ### Visualización del estado
 {: #oc_status}
@@ -336,7 +339,7 @@ Especifique un nombre para la organización, e indique el nombre o el correo ele
 	<dt><strong>Memoria total del sistema</strong></dt>
 	<dd>Memoria física total disponible en el entorno.</dd>
 	<dt><strong>Cuota desplegada</strong></dt>
-	<dd>La suma de la memoria asignada para todas las aplicaciones desplegadas en todas las organizaciones. La suma de
+	<dd>La suma de la memoria asignada para todas las apps desplegadas en todas las organizaciones. La suma de
 	la cuota desplegada puede superar la memoria física total del sistema de su entorno. Por ejemplo, si tiene una memoria total del sistema de 16 GB y asigna 4 GB de memoria para cinco organizaciones distintas, la cuota total excede la memoria total del sistema que se ha asignado a todas las organizaciones. Sin embargo, en muchos casos las organizaciones no utilizan la cuota total que se ha asignado a cada una de ellas. Además, es posible que las organizaciones no utilicen su asignación de memoria de cuota total al mismo tiempo. </dd>
 	<dt><strong>Cuota total</strong></dt>
 	<dd>La memoria total asignada en todas las organizaciones.</dd>
@@ -913,7 +916,7 @@ determinada organización. Escriba este mandato:
 <dt class="pt dlterm">BillingManager</dt>
 <dd class="pd">Gestor de facturación. Un gestor de facturación puede ver información de uso de tiempo de ejecución y servicio para la organización.</dd>
 <dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la aplicación y el servicio en el espacio.</dd>
+<dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la app y el servicio en el espacio.</dd>
 </dl>
 
 #### Configuración de una cuota para una organización

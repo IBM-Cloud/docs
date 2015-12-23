@@ -4,7 +4,7 @@
 # Présentation de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Dernière mise à jour : 22 octobre 2015*
+*Dernière mise à jour : 20 novembre 2015*
 
 {{site.data.keyword.Bluemix}} est la plateforme de cloud ouverte d'{{site.data.keyword.IBM}} qui offre aux développeurs
 d'applications mobiles et Web un accès aux logiciels {{site.data.keyword.IBM_notm}} proposant des fonctions d'intégration, de sécurité, de
@@ -100,7 +100,7 @@ La figure suivante présente l'architecture de haut niveau {{site.data.keyword.B
 Vous pouvez déployer vos
 applications dans différentes régions {{site.data.keyword.Bluemix_notm}}, pour des raisons de sécurité ou pour
 réduire le temps d'attente. Vous pouvez procéder au déploiement dans une région ou dans plusieurs régions. Pour plus d'informations, voir
-[Régions](overview.html#ov_intro__reg).
+[Régions](#ov_intro__reg).
 
 ![Développement d'applications dans plusieurs régions](images/multi-region.png)
 
@@ -279,7 +279,7 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 |-----------------|-------------------|---------------------|----------------|
 | Région Sud des Etats-Unis | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
 | Région Europe et Royaume-Uni | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Région Australie Sydney  | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| Région Australie Sydney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tableau 1. Liste des régions {{site.data.keyword.Bluemix_notm}}*
@@ -463,7 +463,7 @@ Integration, voir [Création d'une API Cloud Integration](../services/CloudInteg
     <dd>Un service privé est composé d'une API Cloud Integration, de logiciels SDK et de règles de droits. De plus, le service privé peut contenir de la documentation ou d'autres éléments appartenant au fournisseur de services. Seul le responsable de l'organisation peut publier une API Cloud Integration en tant que service privé. Pour connaître les services privés à votre
 disposition, cochez la case Privé dans le catalogue {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner et lier un service privé à une application sans vous connecter au service Cloud Integration. Pour lier un service privé à votre
 application, procédez de la même façon que pour les services {{site.data.keyword.Bluemix_notm}}. Pour des informations sur la publication d'une API en tant que service privé, voir Publication d'une API en tant que service privé.</dd>
-	</dl>
+</dl>
 
 ### Scénario : Création d'une application mobile riche pour la connexion avec votre système d'enregistrement
 {: #scenario}

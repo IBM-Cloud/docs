@@ -41,12 +41,11 @@
 
 *Última actualización: 09 de noviembre de 2015*
 
-Puede ejecutar aplicaciones en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. {{site.data.keyword.Bluemix_notm}} proporciona una calculadora de costes para estimar los costes y una vista de detalles de uso para comprobar el coste real después de crear las apps.
-{:shortdesc}
+Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista de detalles de uso para comprobar el coste real después de crear las apps.{:shortdesc}
 
 ## Prueba gratuita
 {: #trial}
-Puede realizar una prueba gratuita de 30 días con su ID de {{site.data.keyword.IBM}}. Durante el periodo de prueba, puede desarrollar aplicaciones y utilizar servicios en {{site.data.keyword.Bluemix_notm}}.
+Puede realizar una prueba gratuita de 30 días con su ID de {{site.data.keyword.IBM}}. Durante el periodo de prueba, puede desarrollar apps y utilizar servicios en Bluemix.
 
 Su cuenta se proporciona con los recursos siguientes, sin coste adicional alguno:
 
@@ -54,13 +53,11 @@ Su cuenta se proporciona con los recursos siguientes, sin coste adicional alguno
 * 10 servicios
 * 1 certificado SSL
 
-El periodo de prueba gratuito vence 30 días después de registrarse. Cuando venza el periodo de prueba de 30 días, las aplicaciones de la cuenta se detendrán. No podrá registrarse para otra prueba en {{site.data.keyword.Bluemix_notm}}. No obstante, podrá seguir accediendo a su cuenta y a las demás cuentas a las que ha sido invitado. Para reiniciar las aplicaciones, debe proporcionar la información de su tarjeta de crédito para una cuenta de pago según uso o crear una cuenta de Suscripción. Tras convertir la cuenta, puede continuar utilizando concesiones y servicio gratuitos. Sólo paga por el uso de servicios, contenedores y tiempos de ejecución que no están incluidos como parte de la concesión mensual gratuita.
+El periodo de prueba gratuito vence 30 días después de registrarse. Cuando venza el periodo de prueba de 30 días, las apps de la cuenta se detendrán. No podrá registrarse para disponer de otra prueba en Bluemix.
+No obstante, podrá seguir accediendo a su cuenta y a las demás cuentas a las que ha sido invitado. Para reiniciar las apps, debe proporcionar la información de su tarjeta de crédito para una cuenta de pago según uso o crear una cuenta de Suscripción. Tras convertir la cuenta, puede continuar utilizando concesiones y servicio gratuitos. Sólo paga por el uso de servicios, contenedores y tiempos de ejecución que no están incluidos como parte de la concesión mensual gratuita.
 
-Si no convierte la cuenta una vez que venza el periodo de prueba gratuito, recibirá notificaciones por correo electrónico sobre el estado de su cuenta después del vencimiento del periodo de prueba. Las notificaciones le recuerdan que debe crear la cuenta de pago para que los valores de la aplicación y las configuraciones no se pierdan. Si no desea recibir estas notificaciones de {{site.data.keyword.Bluemix_notm}},
-puede anular la suscripción en cualquier momento.
-Un mes después del vencimiento del periodo de prueba, las configuraciones de las aplicaciones y el servicio se eliminarán. En la figura siguiente se muestra el proceso general de gestión de cuentas de {{site.data.keyword.Bluemix_notm}}.
-Figura 1. Diagrama de flujo del proceso de gestión de cuentas de {{site.data.keyword.Bluemix_notm}}
-Diagrama de flujo del proceso de gestión de cuentas de {{site.data.keyword.Bluemix_notm}}
+Si no convierte la cuenta una vez que venza el periodo de prueba gratuito, recibirá notificaciones por correo electrónico sobre el estado de su cuenta después del vencimiento del periodo de prueba. Las notificaciones le recuerdan que debe crear la cuenta de pago para que los valores de la app y las configuraciones no se pierdan. Si no desea recibir estas notificaciones de Bluemix,
+puede anular la suscripción en cualquier momento. Un mes después del vencimiento del periodo de prueba, las configuraciones de las apps y el servicio se eliminarán. En la figura siguiente se muestra el proceso general de gestión de cuentas de Bluemix .Figura 1. Diagrama de flujo del proceso de gestión de cuentas de Bluemix
 
 ![Diagrama de flujo del proceso de gestión de cuentas de {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
 
@@ -74,7 +71,7 @@ Si convierte la cuenta durante el periodo de prueba gratuito, las concesiones gr
 {: #what_it_costs}
 
 Los cargos varían en función de los recursos utilizados por un servicio concreto, el tiempo de ejecución, el contenedor, la máquina virtual o la opción de soporte. Los recursos pueden ser el número de llamadas de API, el número de instancias,
-memoria, almacenamiento, etc. {{site.data.keyword.Bluemix_notm}} también proporciona estimadores de coste detallado, y una calculadora de coste hasta el último céntimo para ayudarle a planificar los cargos. Puede comprobar el coste real tras crear las apps utilizando la vista *Detalles de uso*. Para obtener información más detallada sobre los cargos, consulte [Cómo se le carga](index.html#charges).
+memoria, almacenamiento, etc. Bluemix también proporciona estimadores de coste detallado, y una calculadora de coste hasta el último céntimo para ayudarle a planificar los cargos. Puede comprobar el coste real tras crear las apps utilizando la vista *Detalles de uso*. Para obtener información más detallada sobre los cargos, consulte [Cómo se le carga](index.html#charges).
  
 
 ##Código promocional
@@ -96,15 +93,15 @@ Para utilizar un código promocional, pulse el icono **Configuración de perfil*
 ##Cómo se le factura
 {: #pay-accounts}
 
-Cuando se registra en un plan facturable de {{site.data.keyword.Bluemix_notm}}, puede seleccionar a partir de las cuentas siguientes:
+Cuando se registra en un plan facturable de Bluemix, puede seleccionar a partir de las cuentas siguientes:
 * Pago según uso
 * Suscripción
-* {{site.data.keyword.Bluemix_notm}} dedicado
-* {{site.data.keyword.Bluemix_notm}} local
+* Bluemix dedicado
+* Bluemix local
 
-Con una cuenta Pago según uso, se le factura en función del uso del cálculo y los servicios de {{site.data.keyword.Bluemix_notm}}. Con una cuenta de Suscripción, puede obtener un descuento mensual en función del compromiso de gasto mensual mínimo. {{site.data.keyword.Bluemix_notm}} Dedicado y {{site.data.keyword.Bluemix_notm}} Local se cargarán por contratos anuales.
+Con una cuenta Pago según uso, se le factura en función del uso del cálculo y los servicios de {{site.data.keyword.Bluemix_notm}}. Con una cuenta de Suscripción, puede obtener un descuento mensual en función del compromiso de gasto mensual mínimo. Bluemix dedicado y Bluemix local se cargarán por contratos anuales.
 
-Puede convertir la cuenta gratuita en una cuenta facturable en cualquier momento. Toda la información de la cuenta no facturable de prueba gratuita y las soluciones de {{site.data.keyword.Bluemix_notm}} se fusionarán de forma transparente en la nueva cuenta facturable.
+Puede convertir la cuenta gratuita en una cuenta facturable en cualquier momento. Toda la información de la cuenta no facturable de prueba gratuita y las soluciones de Bluemix se fusionarán de forma transparente en la nueva cuenta facturable.
 
 Tras crear una cuenta facturable, puede editar la información que ha proporcionado. Pulse el **icono Configuración de perfil** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Cuenta &gt; Tipo de cuenta** para editar la información.
 
@@ -115,16 +112,16 @@ Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utiliza
 
 Si se registra para una cuenta Pago según uso, sólo pagará por los recursos de {{site.data.keyword.Bluemix_notm}} que utilice. También puede optar a concesiones de tiempo de ejecución y de servicio gratuitas.
 
-En muchos países, puede registrarse para una cuenta Pago según uso desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Prueba gratuita** y, a continuación, pulse **Confirmar cuenta gratuita** y seleccione **Opción 1**. Especifique el país y pulse **Añadir mi tarjeta de crédito** para proporcionar la información de la tarjeta de crédito. Tras proporcionar la información de la tarjeta de crédito y la facturación, aceptar los términos y condiciones y enviar una solicitud de cuenta, la tarjeta de crédito será validada. También se envía un correo electrónico de confirmación de la información de la cuenta. Transcurridos algunos minutos tras la recepción del correo electrónico de confirmación, puede volver a {{site.data.keyword.Bluemix_notm}} para continuar creando sus apps. Si {{site.data.keyword.Bluemix_notm}} no puede procesar la solicitud en línea para su país, puede ponerse en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página de [{{site.data.keyword.Bluemix_notm}} Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para registrar su cuenta Pago según uso.
+En muchos países, puede registrarse para una cuenta Pago según uso desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Prueba gratuita** y, a continuación, pulse **Confirmar cuenta gratuita** y seleccione **Opción 1**. Especifique el país y pulse **Añadir mi tarjeta de crédito** para proporcionar la información de la tarjeta de crédito. Tras proporcionar la información de la tarjeta de crédito y la facturación, aceptar los términos y condiciones y enviar una solicitud de cuenta, la tarjeta de crédito será validada. También se envía un correo electrónico de confirmación de la información de la cuenta. Transcurridos algunos minutos tras la recepción del correo electrónico de confirmación, puede volver a {{site.data.keyword.Bluemix_notm}} para continuar creando sus apps. Si {{site.data.keyword.Bluemix_notm}} no puede procesar la solicitud en línea para su país, puede ponerse en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página de [ Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para registrar su cuenta Pago según uso.
 
-Puede convertir la cuenta Pago según uso en una cuenta Suscripción en cualquier momento. Con una cuenta Suscripción, se compromete a gastar una cantidad mínima cada mes. Si desea convertir en una cuenta Suscripción, póngase en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página [{{site.data.keyword.Bluemix_notm}} Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+Puede convertir la cuenta Pago según uso en una cuenta Suscripción en cualquier momento. Con una cuenta Suscripción, se compromete a gastar una cantidad mínima cada mes. Si desea convertir en una cuenta Suscripción, póngase en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página [ Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Cuenta de suscripción
 {: #subscription}
 
 Si se registra para una cuenta Suscripción, se compromete a una cantidad de gasto mínimo al mes y recibirá un descuento de suscripción que se aplica a dicho cargo mínimo. También puede pagar cualquier uso que exceda la cantidad de gasto mínimo.
 
-Para registrarse para una cuenta Suscripción y para obtener más información sobre tarifas y descuentos de suscripción, debe ponerse en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página de [{{site.data.keyword.Bluemix_notm}} Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+Para registrarse para una cuenta Suscripción y para obtener más información sobre las tarifas y descuentos de suscripción, debe ponerse en contacto con el equipo de ventas de {{site.data.keyword.Bluemix_notm}}, utilizando el enlace listado en la página de [ Póngase en contacto con nosotros](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Cuenta dedicada a {{site.data.keyword.Bluemix_notm}}
 {: #dedicated}
@@ -138,9 +135,9 @@ Para registrarse para una cuenta Suscripción y para obtener más información s
 * Soporte de {{site.data.keyword.Bluemix_notm}} estándar
 
 También puede pedir elementos opcionales como
-SoftLayer DirectLink u opciones de soporte premium. Póngase en contacto con el Equipo de ventas de [{{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obtener más información.
+SoftLayer DirectLink u opciones de soporte premium. Póngase en contacto con el [equipo de ventas de Bluemix](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obtener más información.
 
-Con {{site.data.keyword.Bluemix_notm}} dedicado, debe registrarse para un plazo mínimo de un año. Lo que deberá abonar cada mes durante dicho plazo dependerá de los servicios dedicados que desee, más una cuenta de suscripción que le ofrece acceso a todos los servicios públicos. Los cargos por uso de los servicios de {{site.data.keyword.Bluemix_notm}} público se calculan en función del acuerdo de la cuenta de suscripción. Recibirá una factura correspondiente a los servicios que utilice por encima del acuerdo de suscripción. Póngase en contacto con el representante designado de la cuenta de IBM o póngase en contacto con el equipo de ventas de [{{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para empezar a trabajar en su acuerdo.
+Con {{site.data.keyword.Bluemix_notm}} dedicado, debe registrarse para un plazo mínimo de un año. Lo que deberá abonar cada mes durante dicho plazo dependerá de los servicios dedicados que desee, más una cuenta de suscripción que le ofrece acceso a todos los servicios públicos. Los cargos por uso de los servicios de {{site.data.keyword.Bluemix_notm}} público se calculan en función del acuerdo de la cuenta de suscripción. Recibirá una factura correspondiente a los servicios que utilice por encima del acuerdo de suscripción. Póngase en contacto con el representante designado de la cuenta de IBM o con el [equipo de ventas de Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para empezar a trabajar en su acuerdo.
 
 
 ###Cuenta local de {{site.data.keyword.Bluemix_notm}}
@@ -158,21 +155,21 @@ Con {{site.data.keyword.Bluemix_notm}} local, debe registrarse para un plazo mí
 ##Cómo se le carga
 {: #charges}
 
-Con una cuenta facturable de {{site.data.keyword.Bluemix_notm}}, se le facturará por el cálculo, los contenedores y los servicios que se utilicen en su organización. Es posible que otros usuarios de {{site.data.keyword.Bluemix_notm}} le inviten a participar en organizaciones en una cuenta diferente. Si crea aplicaciones o utiliza servicios en las organizaciones las que está invitado, el uso que se produce se factura a la cuenta que contenga dichas organizaciones. Puede ver más información sobre unos cargos específicos en una página de detalles de recurso en {{site.data.keyword.Bluemix_notm}} Catálogo, o en la calculadora de precio en la página {{site.data.keyword.Bluemix_notm}} Precios.
+Con una cuenta facturable de {{site.data.keyword.Bluemix_notm}}, se le facturará por el cálculo, los contenedores y los servicios que se utilicen en su organización. Es posible que otros usuarios de {{site.data.keyword.Bluemix_notm}} le inviten a participar en organizaciones en una cuenta diferente. Si crea apps o utiliza servicios en las organizaciones las que está invitado, el uso que se produce se factura a la cuenta que contenga dichas organizaciones. Puede ver más información sobre unos cargos específicos en una página de detalles de recurso en el Catálogo de Bluemix, o en la calculadora de precio en la página {{site.data.keyword.Bluemix_notm}} Precios.
 
-Se aplicarán distintos tipos de cargos en función de las características de {{site.data.keyword.Bluemix_notm}} que utilice. En la tabla siguiente se proporciona una visión general de alto nivel:
+Se aplicarán distintos tipos de cargos en función de las características de Bluemix que utilice. En la tabla siguiente se proporciona una visión general de alto nivel:
 
-| Tipo de cargo | Descripción | Características de {{site.data.keyword.Bluemix_notm}} que utilizan este tipo de cargo | Ejemplo |
+| Tipo de cargo | Descripción | Características de Bluemix que utilizan este tipo de cargo | Ejemplo |
 |------------------|------------------|--------------------------|--------------------------|
 | Corregido | El precio de tasa fija se basa en un acuerdo sobre el cargo mensual que no está ajustado. | Servicios  | La memoria caché de datos tiene un plan fijo que se cargará en una tasa mensual fija. |
-| Medido | El precio de uso medido se basa en el número de GB hora consumidos para los entornos de ejecución, y en el número de GB hora consumidos y en el número de direcciones IP y el almacenamiento para contenedores. | Servicios, cálculo y contenedores | Para el servicio Push, cualquier uso que supere la concesión mensual gratuita se factura.  |
+| Medido | El precio de uso medido se basa en el número de GB hora consumidos para los entornos de ejecución, y en el número de GB hora consumidos y en el número de direcciones IP y el almacenamiento para contenedores. | Servicios, cálculo y contenedores | Para el servicio Push, cualquier uso que supere la concesión mensual gratuita se factura. |
 |  Por niveles   |  Algunos planes también están basados en un modelo de precios por niveles, para poder acceder a descuentos por volumen, según su uso actual. Los servicios pueden ofrecer planes de precios de capas de bloques, graduados y simples. | Servicios | El precio escalonado se utiliza normalmente para medidas de carga que tienen previsto tener cantidades muy altas por mes, tales como llamadas a la API. |
-| Reservado | El precio reservado se basa en un compromiso a largo plazo para un servicio, por lo que puede obtener un precio de descuento. Con un plan reservado, obtiene una instancia de servicio dedicada que es fácil de configurar, desplegar y entregar en el entorno {{site.data.keyword.Bluemix_notm}} público. | Servicios | DB2 on Cloud tiene planes reservados.|
+| Reservado | El precio reservado se basa en un compromiso a largo plazo para un servicio, por lo que puede obtener un precio de descuento. Con un plan reservado, obtiene una instancia de servicio dedicada que es fácil de configurar, desplegar y entregar en el entorno Bluemix público. | Servicios | DB2 on Cloud tiene planes reservados.|
 
 ###Cargos por recursos de cálculo
 {: #compute}
 
-Se le facturará por el tiempo que las aplicaciones se ejecuten y la memoria que se utilice, calculados como *GB por hora*. GB por hora es el cálculo del número de instancias de la aplicación, multiplicado por la memoria por instancia, multiplicado por las horas que se ejecutaron las instancias. Puede personalizar el número de instancias y la cantidad de memoria por instancia según sus necesidades. Posteriormente puede añadir memoria o instancias para escalar a más usuarios. La carga final es por GB por hora: las instancias de aplicación, multiplicado por memoria por instancia, multiplicado por horas de ejecución.
+Se le facturará por el tiempo que las apps se ejecuten y la memoria que se utilice, calculados como *GB por hora*. GB por hora es el cálculo del número de instancias de la app, multiplicado por la memoria por instancia, multiplicado por las horas que se ejecutaron las instancias. Puede personalizar el número de instancias y la cantidad de memoria por instancia según sus necesidades. Posteriormente puede añadir memoria o instancias para escalar a más usuarios. La carga final es por GB por hora: las instancias de app, multiplicado por memoria por instancia, multiplicado por horas de ejecución.
 
 Por ejemplo, supongamos que tenemos un tiempo de ejecución que cuesta 0,07 dólares por GB por hora en dos instancias de 512 MB que se ejecutan durante 30 días (720 horas). Estos recursos costarían unos 24,15 dólares, incluida la concesión gratuita de 375 GB por hora, según el siguiente cálculo: 
 
@@ -192,7 +189,7 @@ Muchos servicios incluyen concesiones gratuitas mensuales. El uso de servicios q
     <dd>Paga en función del consumo de tiempo de ejecución y de servicio. Por ejemplo, con el servicio Push, cualquier uso que supere la concesión mensual gratuita se factura.</dd>
 <dt>Cargos reservados</dt>
     <dd><p>Como propietario de la cuenta de una cuenta de Pago según uso o una cuenta de Suscripción, puede reservar una instancia de servicio, con un compromiso a largo plazo, para obtener un precio con descuento. Por ejemplo, puede reservar la oferta de DB2 on Cloud grande estándar para 12 meses.</p> 
-    <p>Algunos servicios de {{site.data.keyword.Bluemix_notm}} ofrecen planes reservados. Puede solicitar un plan reservado desde el {{site.data.keyword.Bluemix_notm}} <strong>Catálogo</strong> pulsando el mosaico del servicio. A continuación, seleccione el plan de servicio que se ajuste mejor a sus necesidades. Si hay disponible un plan reservado, pulse <strong>Solicitud</strong>, y siga las instrucciones para enviar la solicitud. Recibirá un correo electrónico que contiene la información del precio del plan reservado. Un representantes de ventas de {{site.data.keyword.Bluemix_notm}} también se pondrá en contacto con usted pronto para finalizar la compra.</p></dd>
+    <p>Algunos servicios de Bluemix ofrecen planes reservados. Puede solicitar un plan reservado desde el <strong>Catálogo</strong> de Bluemix pulsando el mosaico del servicio. A continuación, seleccione el plan de servicio que se ajuste mejor a sus necesidades. Si hay disponible un plan reservado, pulse <strong>Solicitud</strong>, y siga las instrucciones para enviar la solicitud. Recibirá un correo electrónico que contiene la información del precio del plan reservado. Un representante de ventas de Bluemix también se pondrá en contacto con usted pronto para finalizar la compra.</p></dd>
 <dt>Cargos escalonados</dt>
     <dd>De forma similar a los cargos con medición, pagará en función del consumo de servicios y de tiempo de ejecución. Sin embargo, los cargos por capas añaden capas de precios adicionales, ofreciendo a menudo cargos descontados en capas con un consumo más grande. El precio por niveles se ofrece de forma simple, graduada o de bloque.</dd>
 </dl>
@@ -328,7 +325,7 @@ Es posible que desee calcular los costes {{site.data.keyword.Bluemix_notm}} uste
 ###Ejemplo: Cálculo de precios de una app de muestra
 {: #sample}
 
-Suponga que tiene una aplicación web de Node.js con prestaciones de escalabilidad y que la aplicación utilizar varios servicios que suministra {{site.data.keyword.Bluemix_notm}}. En este ejemplo, podrá aprender a calcular el coste real de la aplicación. La aplicación web utilizar los servicios y elementos de {{site.data.keyword.Bluemix_notm}} siguientes:
+Suponga que tiene una app web de Node.js con prestaciones de escalabilidad y que la app utilizar varios servicios que suministra {{site.data.keyword.Bluemix_notm}}. En este ejemplo, podrá aprender a calcular el coste real de la app. La app web utilizar los servicios y elementos de {{site.data.keyword.Bluemix_notm}} siguientes:
 
 * Cuatro instancias de tiempo de ejecución de 256 MB de Node.js.
 * Dos políticas, un procesador y una memoria de {{site.data.keyword.autoscaling}}.
@@ -353,13 +350,13 @@ Para dar un ejemplo sencillo, suponga que los precios en la tabla siguiente no f
 |SQL Database 	| 2 GB gratuitos por instancia<br/>Un máximo de 10 GB por instancia |	30,00 USD/instancia |
 *Tabla 7. Hoja de precios*
 
-###Cálculo del precio de la aplicación
+###Cálculo del precio de la app
 
-El precio de la aplicación se puede calcular de la forma siguiente:
+El precio de la app se puede calcular de la forma siguiente:
 
 <dl>
 <dt>Cuatro instancias de tiempo de ejecución de 256 MB de Node.js.</dt>
-<dd>Cargos de {{site.data.keyword.Bluemix_notm}} para un tiempo de ejecución por GB por hora. El número de GB utilizados al mes es de <code>4 x 256 = 1024 MB o 1 GB al mes</code>. Suponga que hay <code>24 x 30 = 720 horas en un mes</code>, por consiguiente la aplicación ha facturado <code>1 x 720 = 720 GB por hora</code>.
+<dd>Cargos de Bluemix para un tiempo de ejecución por GB por hora. El número de GB utilizados al mes es de <code>4 x 256 = 1024 MB o 1 GB al mes</code>. Suponga que hay <code>24 x 30 = 720 horas en un mes</code>, por consiguiente la app ha facturado <code>1 x 720 = 720 GB por hora</code>.
 <p>
 375 GB por hora están incluidos en la concesión gratuita al mes, compartidos en todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Por consiguiente, el coste total para el tiempo de ejecución es de
                      <code>0,07 dólares x (720-375) = 24,15 dólares</code>.</p></dd>
@@ -393,7 +390,7 @@ El precio total es 148 + 13.5 + 13.5 = 175 dólares.</p></dd>
 
 </dl>
 
-Cuando se añaden todos los elementos, el precio total de la aplicación es de 384,15 dólares.
+Cuando se añaden todos los elementos, el precio total de la app es de 384,15 dólares.
 
 ##Detalles de uso
 {: #usage}

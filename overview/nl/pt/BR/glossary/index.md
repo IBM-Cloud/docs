@@ -4,7 +4,7 @@
 # Termos do glossário para {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
 
-*Última atualização: 5 de novembro de 2015*
+*Última atualização: 7 de dezembro de 2015*
 
 Este glossário fornece termos e definições para o {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -108,7 +108,7 @@ do IBM Mobile Quality Assurance.</dd>
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd">Consulte a <a class="xref" href="#gloss_C__x2016383">autoridade de certificação</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd">Veja <a class="xref" href="#gloss_C__x2016783">encadeamento de blocos cifrados</a>.</dd>
+<dd class="dd">Consulte a <a class="xref" href="#gloss_C__x2016383">autoridade de certificação</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd">Consulte <a class="xref" href="#gloss_C__x7233913">entrega contínua</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>Certificate Authority (CA)</dt>
@@ -116,6 +116,11 @@ do IBM Mobile Quality Assurance.</dd>
 certificação geralmente verifica a identidade dos indivíduos que recebem o certificado exclusivo. Consulte também
 <a class="xref" href="#gloss_I__x3753781">certificado intermediário</a>, <a class="xref" href="#gloss_S__x2038004">Secure Sockets Layer</a>,
 <a class="xref" href="#gloss_T__x2042234">raiz confiável</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>certificate signing request (CSR)</dt>
+<dd class="dd">Uma mensagem eletrônica que uma organização envia para uma autoridade de
+certificação (CA) para obter um certificado. O pedido inclui uma chave
+pública e recebe uma chave privada; o CA retorna o certificado depois de assinar
+com sua própria chave privada.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>conjunto de mudanças</dt>
 <dd class="dd">Um grupo de mudanças relacionadas para artefatos em uma área de trabalho ou fluxo.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>encadeamento de blocos cifrados (CBC)</dt>
@@ -151,6 +156,8 @@ certificação geralmente verifica a identidade dos indivíduos que recebem o ce
 <dd class="dd">Uma prática de desenvolvimento de software que usa técnicas, como teste contínuo, integração contínua e implementação contínua para que novos recursos e correções sejam empacotados e implementados rapidamente e a um baixo risco em ambientes de teste e, em seguida, para os clientes.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>credencial</dt>
 <dd class="dd">Informações adquiridas durante a autenticação, que descrevem um usuário, associações de grupos ou outros atributos de identidade relacionados à segurança, e que são usadas para executar serviços, como autorização, auditoria ou delegação. Por exemplo, um ID de usuário e uma senha são credenciais que permitem o acesso à rede e aos recursos do sistema.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">Consulte <a class="xref" href="#gloss_C__x3530521">certificate signing request</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>domínio customizado</dt>
 <dd class="dd">A parte customizada da URL selecionada pelo usuário para direcionar solicitações para o aplicativo. Um domínio customizado faz parte da rota. Um domínio customizado pode ser um domínio compartilhado, um subdomínio compartilhado ou um domínio compartilhado e host. Veja também <a class="xref" href="#gloss_D__x2021210">domínio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">rota</a>, <a class="xref" href="#gloss_S__x2040080">subdomínio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador Uniforme de Recursos</a>.</dd>
 </dl>

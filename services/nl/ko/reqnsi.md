@@ -5,7 +5,7 @@
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2015년 11월 11일*
+*마지막 업데이트 날짜: 2015년 12월 7일*
 
 {{site.data.keyword.Bluemix}} 사용자 인터페이스의
 **서비스** 아래에 있는 **카탈로그**에서 사용 가능한 서비스를
@@ -42,24 +42,20 @@ IBM에서 작성된 서비스, 써드파티 서비스, 커뮤니티 서비스가
 다음 표에는 {{site.data.keyword.Bluemix_notm}} 서비스에 대한 일반적인 지원 정보가 나와 있습니다.</dd>
 </dl>
 
-*표 1. {{site.data.keyword.Bluemix_notm}} 서비스 지원 정보*
+
 
 |유형	|설명	|지원 세부사항|
 |:------|:--------------|:--------------|
 |IBM	|IBM에서 제공하는 GA(Generally Available)된 서비스입니다. 	|GA(Generally Available)된 IBM 제공 서비스에서 결함으로
 판별된 문제점은 지원됩니다. 제공되는 지원은 설정한 심각도에 따라 다릅니다.
-티켓 심각도에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오. |
+티켓 심각도에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
 |써드파티	|IBM이 아닌 다른 회사에서 제공하는 서비스입니다. 	|써드파티 서비스에 대한 지원은 해당 서비스 제공업체에서 제공합니다.
 IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다. IBM은 필요한 경우 해당 써드파티 서비스 제공업체와 분석 내용을 공유합니다.|
-|커뮤니티	|오픈 소스 커뮤니티에서 제공하는 서비스입니다. 	|커뮤니티 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}}
-개발자 커뮤니티 [포럼](https://developer.ibm.com/answers/smartspace/bluemix/)을 통해
-{{site.data.keyword.Bluemix_notm}} 개발자
-[커뮤니티](https://developer.ibm.com/bluemix/){: new_window}에서
-제공합니다. IBM에서 문제점을 조사한 결과 커뮤니티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.|
+|커뮤니티	|오픈 소스 커뮤니티에서 제공하는 서비스입니다. 	|보안 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티에서 제공합니다. IBM에서 문제점을 조사한 결과 커뮤니티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.|
 |베타	|프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. 베타 서비스는 개발 및 마케팅 팀이 서비스를 GA(Generally Available)하기 전에
 서비스의 가치를 평가하는 데 도움이 됩니다. 	|IBM에서 제공한 베타 서비스의 결함으로 판별된 문제점은 지원되지만, IBM이 수정사항을 제공할 의무는 없습니다. 또한 문제점 티켓에 심각도 3 또는 4가 지정됩니다(해당하는 경우).
-티켓 심각도에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오. |
-
+티켓 심각도에 대한 정보는 [지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
+*표 1. {{site.data.keyword.Bluemix_notm}} 서비스 지원 정보*
 
 
 
@@ -70,10 +66,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 시범 서비스는
 안정적이지 않을 수 있으며 이전 버전과 호환 가능하지 않은 방식으로
 변경될 수 있습니다. 프로덕션 환경에서는 이러한 서비스를 사용하지
-않는 것이 좋습니다. 시범 서비스에 대한 지원은
-{{site.data.keyword.Bluemix_notm}} 개발자
-커뮤니티 [포럼](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}을
-통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의
+않는 것이 좋습니다. 시범 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티를 통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의
 결함으로 판별될 경우 IBM이 수정사항을
 제공할 의무는 없습니다.
 
@@ -92,7 +85,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 지역에서 모든 서비스를 사용할 수 있는 것은 아닙니다.
 다음 표는 IBM에서 제공하는 서비스를 보여줍니다. 
 
-*표 2. 서비스 공급 여부*
+
 
 |서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -158,6 +151,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 |{{site.data.keyword.workflow}}			|예		|예		|아니오|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|아니오|
 |{{site.data.keyword.xpagesservice_short}}	|예		|예		|아니오|
+*표 2. 서비스 공급 여부*
 
 
 # 애플리케이션에 서비스 추가
@@ -196,11 +190,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다.
 자세한 정보는 [외부 애플리케이션 및 써드파티 도구가 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external)을 참조하십시오.
 
-사용할 {{site.data.keyword.Bluemix_notm}} 애플리케이션의
-{{site.data.keyword.Bluemix_notm}} 서비스 카탈로그에
-서비스를 추가하려는 경우 사용자 고유의 서비스를 빌드한 다음
-{{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있습니다.
-자세한 정보는 [{{site.data.keyword.Bluemix_notm}}와 서비스 통합](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}을 참조하십시오.
+
 
 ## 새 서비스 인스턴스 요청
 {: #req_instance}
@@ -409,7 +399,7 @@ cups** 명령을 사용하여 사용자 제공 서비스 인스턴스를
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## 다른 지역에서 서비스 사용
+## 다른 서비스에서 서비스 사용
 {: #s2s_binding}
 
 서비스 액세스 권한은 한 서비스가 다른 서비스에 직접 액세스하는 방법을 제공합니다. {{site.data.keyword.Bluemix_notm}} 대시보드에서 다른 서비스 인스턴스에 대한 서비스 인스턴스의 액세스 권한을 부여하고 구성할 수 있습니다. 
@@ -417,7 +407,7 @@ cups** 명령을 사용하여 사용자 제공 서비스 인스턴스를
 다른 서비스의 서비스 인스턴스를 사용하려면 다음 단계를 수행하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 액세스할 서비스의 타일을 클릭하십시오. 서비스의 대시보드가 표시됩니다. 
-2. 왼쪽 분할창에서 서비스 인스턴스의 콘솔을 사용하여 다른 서비스 인스턴스의 바인딩에 권한을 부여하려면 관리하십시오. 
+2. 왼쪽 분할창에서 서비스 인스턴스의 콘솔을 사용하여 다른 서비스 인스턴스의 바인딩에 권한을 부여하려면 *관리*를 클릭하십시오.
 3. 서비스 인스턴스에 대한 다른 서비스 액세스를 거부하려면 왼쪽 분할창에서 *서비스 액세스 권한 부여*를 클릭한 다음 *취소*를 사용하여 서비스 바인딩을 제거하십시오.  
 
 # rellinks

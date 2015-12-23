@@ -5,7 +5,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} の管理
 {: #administer}
-*最終更新日: 2015 年 11 月 18 日*
+*最終更新日: 2015 年 12 月 8 日*
 
 **「アカウントおよびサポート」** &gt; **「組織の管理」**をクリックして、組織、スペース、および割り当てられたユーザーを管理します。{{site.data.keyword.Bluemix_notm}} Local ユーザーまたは {{site.data.keyword.Bluemix_notm}} Dedicated ユーザーの場合、ローカル・インスタンスおよび専用インスタンスの管理に関する詳細について、[{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](index.html#mng)を参照してください。
 {:shortdesc}
@@ -204,9 +204,9 @@ and roles)](index.html#userroles)』を参照してください。</dd>
 ### 管理コンソールへのアクセス
 {: #oc_access}
 
-URL 
+以下の URL を入力して、管理コンソールにアクセスできます。
 
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/` を入力して、管理コンソールにアクセスできます。
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -279,6 +279,10 @@ URL
 * 左ナビゲーション・ペインから各種レポートを展開および表示できます。
 * レポートおよびログのコレクション内で検索できます。検索は、レポート名に加え、レポートおよびログ内に含まれているテキスト・コンテンツにも適用されます。**「管理イベント (Administration Events)」**、**「DataPower レポート (DataPower Reports)」**、**「ファイアウォール (Firewall)」**、および**「ログイン監査 (Login Audit)」**によって検索をフィルターに掛けることもできます。
 * レポートまたはログを表示した場合、レポートの右上にある ![ダウンロード](images/icon_download.png) アイコンをクリックすると、対象をダウンロードできます。
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+セキュリティー・レポートのタイプについて詳しくは、『[セキュリティー・レポート](../security/index.html#reports)』を参照してください。
 
 ### 状況の表示
 {: #oc_status}

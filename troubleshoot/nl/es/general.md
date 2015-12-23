@@ -30,7 +30,7 @@ Este problema sucede si la instancia de servicio ya se ha suprimido desde el con
 {: tsCauses}
 
 
-Para resolver este problema, cree una instancia de servicio con el mismo nombre de servicio y luego enlácela a las aplicaciones. Después puede suprimir la instancia de servicio y las aplicaciones que utilizan el servicio.   
+Para resolver este problema, cree una instancia de servicio con el mismo nombre de servicio y luego enlácela a las apps. Después puede suprimir la instancia de servicio y las apps que utilizan el servicio.   
 {: tsResolve}
 
 

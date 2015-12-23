@@ -88,7 +88,8 @@ bluemix api api.ng.bluemix.net
 Visualice el punto final de la API actual:
 
 ```
-api de bluemix```
+api de bluemix
+```
 
 Desestablecer el punto final de la API:
 
@@ -107,7 +108,7 @@ bluemix login [OPTIONS...]
 **Prerrequisitos**:  Punto final
 
 **Opciones de mandato**:
-Para obtener información sobre las opciones soportadas por el mandato `login`, consulte la información de uso del mandato `cf login` para que los mandatos cf gestionen aplicaciones.
+Para obtener información sobre las opciones soportadas por el mandato `login`, consulte la información de uso del mandato `cf login` para que los mandatos cf gestionen apps.
 
 
 ## cierre de sesión de bluemix
@@ -133,7 +134,7 @@ destino bluemix [-o ORG_NAME] [-s SPACE_NAME]
 
 -o *ORG_NAME*  (opcional):  El nombre de la organización a la que va dirigida.
 
--s *SPACE_NAME*  (opcional):  El nombre del espacio al que va dirigido. 
+-s *SPACE_NAME*  (opcional):  El nombre del espacio al que va dirigido.
 
 Si no se especifica -o *ORG_NAME* ni -s *SPACE_NAME*, se mostrará el espacio y la organización actuales.
 
@@ -163,7 +164,7 @@ información de bluemix
 
 
 ## lista de bluemix
-Lista todas las aplicaciones cf, los contenedores, los grupos de contenedor y los grupos de máquinas virtuales en el espacio actual.
+Lista todas las apps cf, los contenedores, los grupos de contenedor y los grupos de máquinas virtuales en el espacio actual.
 
 ```
 lista de bluemix [apps|contenedores|container-groups|vm-groups]
@@ -173,7 +174,7 @@ lista de bluemix [apps|contenedores|container-groups|vm-groups]
 
 **Opciones de mandatos**:
 
-apps  (opcional):  Visualizar sólo la información de las aplicaciones.
+apps  (opcional):  Visualizar sólo la información de las apps.
 
 containers  (opcional):  Visualizar sólo la información de los contenedores.
 
@@ -185,7 +186,7 @@ Sólo puede especificarse una de los `apps`, `containers`, `container-groups` o 
 
 **Ejemplos**:
 
-Listar todas las aplicaciones de cf:
+Listar todas las apps de cf:
 
 ```
 lista de apps de bluemix
@@ -205,9 +206,9 @@ lista de bluemix
 
 
 ## escala bluemix
-Escala verticalmente u horizontalmente la aplicación cf o el grupo de contenedores a un recuento de instancias, cuota de disco y tamaño de memoria específicos. 
+Escala verticalmente u horizontalmente la app cf o el grupo de contenedores a un recuento de instancias, cuota de disco y tamaño de memoria específicos.
 
-**Nota:** Solo puede especificarse un número de instancias para escalar un grupo de contenedor. Si no se especifica ninguna opción, este mandato lista la instancia actual para el grupo de contenedores, y también la cuota de disco y el tamaño de memoria para la aplicación cf.
+**Nota:** Solo puede especificarse un número de instancias para escalar un grupo de contenedor. Si no se especifica ninguna opción, este mandato lista la instancia actual para el grupo de contenedores, y también la cuota de disco y el tamaño de memoria para la app cf.
 
 ```
 escala bluemix CF_APP_NAME|NOMBRE_GRUPO_CONTENEDOR [-i RECUENTO_INSTANCIA] [-k CUOTA_DISCO] [-m TAMAÑO_MEMORIA]
@@ -217,13 +218,13 @@ escala bluemix CF_APP_NAME|NOMBRE_GRUPO_CONTENEDOR [-i RECUENTO_INSTANCIA] [-
 
 **Opciones de mandato**:
 
-*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (necesario):  El nombre de la aplicación o del grupo de contenedores de cf que se va a escalar.
+*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (necesario):  El nombre de la app o del grupo de contenedores de cf que se va a escalar.
 
--i *INSTANCE_COUNT*  (opcional):  El nuevo número de instancia de la aplicación o del grupo de contenedores cf que se va a escalar. Esta opción es la única opción válida para grupos de contenedores que se van a escalar.
+-i *INSTANCE_COUNT*  (opcional):  El nuevo número de instancia de la app o del grupo de contenedores cf que se va a escalar. Esta opción es la única opción válida para grupos de contenedores que se van a escalar.
 
--k *DISK_QUOTA*  (opcional):  La nueva cuota de disco de la aplicación cf. No es válida para escalar un grupo de contenedores.
+-k *DISK_QUOTA*  (opcional):  La nueva cuota de disco de la app cf. No es válida para escalar un grupo de contenedores.
 
--m *MEMORY_SIZE*  (opcional):  El nuevo tamaño de memoria para la aplicación cf. No es válido para escalar un grupo de contenedores.
+-m *MEMORY_SIZE*  (opcional):  El nuevo tamaño de memoria para la app cf. No es válido para escalar un grupo de contenedores.
 
 **Ejemplos**:
 
@@ -357,7 +358,7 @@ plantillas de catálogo de bluemix [-d]
 
 
 ## bluemix catalog template-run
-Crea una aplicación cf que se base en la plantilla específica con la URL y la descripción especificadas. De forma predeterminada, la nueva app se iniciará automáticamente.
+Crea una app cf que se base en la plantilla específica con la URL y la descripción especificadas. De forma predeterminada, la nueva app se iniciará automáticamente.
 
 ```
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
@@ -367,31 +368,31 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
 
 **Opciones de mandato**:
 
-*TEMPLATE_ID*  (necesario):  La plantilla en la que se basará la aplicación cuando se cree. Utilice 'plantillas bluemix' para ver todas las ID de plantillas.
+*TEMPLATE_ID*  (necesario):  La plantilla en la que se basará la app cuando se cree. Utilice 'plantillas bluemix' para ver todas las ID de plantillas.
 
-*CF_APP_NAME*  (obligatorio):  el nombre de la aplicación cf que se creará.
+*CF_APP_NAME*  (obligatorio):  el nombre de la app cf que se creará.
 
--u *URL*  (opcional):  La ruta de la aplicación. Si no se especifica, la ruta se establece mediante {{site.data.keyword.Bluemix_notm}} que se basa automáticamente en el nombre de la app y en el dominio predeterminado.
+-u *URL*  (opcional):  La ruta de la app. Si no se especifica, la ruta se establece mediante {{site.data.keyword.Bluemix_notm}} que se basa automáticamente en el nombre de la app y en el dominio predeterminado.
 
--d *DESCRIPTION*  (opcional):  descripción de la aplicación.
+-d *DESCRIPTION*  (opcional):  descripción de la app.
 
---no-start  (opcional):  no inicie la aplicación automáticamente después de crearla. Si no se especifica, la aplicación se iniciará automáticamente una vez que se haya creado.
+--no-start  (opcional):  no inicie la app automáticamente después de crearla. Si no se especifica, la app se iniciará automáticamente una vez que se haya creado.
 
 **Ejemplos**:
 
-Crea una aplicación cf 'my-app' basada en la plantilla 'javaHelloWorld':
+Crea una app cf 'my-app' basada en la plantilla 'javaHelloWorld':
 
 ```
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-Crea una aplicación 'my-ruby-app' basada en la plantilla 'rubyHelloWorld' con la ruta 'myrubyapp.ng.bluemix.net' y la descripción 'Mi primera aplicación ruby en {{site.data.keyword.Bluemix_notm}}'.:
+Crea una app 'my-ruby-app' basada en la plantilla 'rubyHelloWorld' con la ruta 'myrubyapp.ng.bluemix.net' y la descripción 'Mi primera app ruby en {{site.data.keyword.Bluemix_notm}}'.:
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "Mi primera aplicación ruby en {{site.data.keyword.Bluemix_notm}}".
+bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "Mi primera app ruby en {{site.data.keyword.Bluemix_notm}}".
 ```
 
-Crea una aplicación 'my-python-app' basada en la plantilla 'pythonHelloWorld' sin inicio automático:
+Crea una app 'my-python-app' basada en la plantilla 'pythonHelloWorld' sin inicio automático:
 
 ```
 bluemix catalog template-run pythonHelloWorld my-python-app --no-start
@@ -439,7 +440,7 @@ Este mandato tiene la misma función y opciones que el mandato `cf check-route`.
 
 
 ## bluemix network route-map
-Correlacione una ruta a una aplicación cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
+Correlacione una ruta a una app cf o grupo de contenedores que tenga un dominio y nombre de host específicos.
 
 ```
 bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
@@ -449,11 +450,11 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
 
 **Opciones de mandatos**:
 
-*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (obligatorio):  El nombre de la aplicación o grupo de contenedores cf que se va a correlacionar con una ruta.
+*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (obligatorio):  El nombre de la app o grupo de contenedores cf que se va a correlacionar con una ruta.
 
 *DOMAIN*  (obligatorio):  El dominio de la ruta. Por ejemplo, mybluemix.net o ng.bluemix.net. 
 
--n *HOST_NAME*  (opcional):  El nombre de host de la ruta. Si no se facilita, el nombre de host se establece en el nombre de la aplicación o grupo de contenedores de forma predeterminada.
+-n *HOST_NAME*  (opcional):  El nombre de host de la ruta. Si no se facilita, el nombre de host se establece en el nombre de la app o grupo de contenedores de forma predeterminada.
 
 **Ejemplos**:
 
@@ -471,7 +472,7 @@ bluemix network route-map my-container-group ng.bluemix.net -n abc
 
 
 ## bluemix network route-unmap
-Elimina la correlación entre la ruta específica y una aplicación cf existente o grupo de contenedores.
+Elimina la correlación entre la ruta específica y una app cf existente o grupo de contenedores.
 
 ```
 bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
@@ -481,11 +482,11 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HO
 
 **Opciones de mandatos**:
 
-*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (obligatorio):  el nombre de la aplicación cf o grupo de contenedores.
+*CF_APP_NAME*|*CONTAINER_GROUP_NAME*  (obligatorio):  el nombre de la app cf o grupo de contenedores.
 
 *DOMAIN*  (obligatorio):  el dominio de la ruta (por ejemplo, mybluemix.net o ng.bluemix.net). 
 
--n *HOST_NAME*  (opcional):  El nombre de host de la ruta. Si no se proporciona, el nombre de host se establece en el nombre de la aplicación o en el nombre de grupo de contenedores de forma predeterminada.
+-n *HOST_NAME*  (opcional):  El nombre de host de la ruta. Si no se proporciona, el nombre de host se establece en el nombre de la app o en el nombre de grupo de contenedores de forma predeterminada.
 
 **Ejemplos**:
 

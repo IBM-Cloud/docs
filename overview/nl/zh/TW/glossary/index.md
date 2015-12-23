@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} 的名詞解釋 
 {: #glossary}
 
-*前次更新：2015 年 11 月 5 日*
+*前次更新：2015 年 12 月 7 日*
 
 本名詞解釋提供 {{site.data.keyword.Bluemix}} 的術語和定義。
 {:shortdesc}
@@ -38,7 +38,7 @@
 <dt class="dt dlterm"><a name="gloss_A__x2008805"><!-- --></a> API</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_A__x2000186">應用程式設計介面 (application programming interface)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_A__x4281528"><!-- --></a>應用程式 (app)</dt>
-<dd class="dd">一種 Web 或行動式裝置應用程式。另請參閱 <a class="xref" href="#gloss_M__x4258535">行動式應用程式 (mobile application)</a>、<a class="xref" href="#gloss_W__x2116500">Web 應用程式 (web application)</a>。</dd>
+<dd class="dd">一種 Web 或行動式裝置應用程式。另請參閱<a class="xref" href="#gloss_M__x4258535">行動式應用程式 (mobile application)</a>、<a class="xref" href="#gloss_W__x2116500">Web 應用程式 (web application)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7909906"><!-- --></a>應用程式 ID (app ID)</dt>
 <dd class="dd">指派給 Bluemix 行動式應用程式的 GUID。另請參閱<a class="xref" href="#gloss_G__x2390455">廣域唯一 ID (globally unique identifier)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7290111"><!-- --></a>應用程式索引鍵 (application key)</dt>
@@ -75,9 +75,9 @@
 <dt class="dt dlterm"><a name="gloss_B__x7470455"><!-- --></a>測試版服務 (beta service)</dt>
 <dd class="dd">尚未準備好進入正式作業且目前處於開發試用階段的服務。另請參閱<a class="xref" href="#gloss_E__x7470450">實驗性服務 (experimental service)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2000361"><!-- --></a>連結 (bind)</dt>
-<dd class="dd">使用經過協議的通訊協定，在網路上的軟體元件之間建立連線。在 Web 服務中，當服務要求者在執行時期透過使用服務說明中的連結詳細資料來尋找、聯絡和呼叫服務的方式，來呼叫或起始與服務的互動時，就會進行連結作業。</dd>
+<dd class="dd">使用經過協議的通訊協定，在網路上的軟體元件之間建立連線。在 Web 服務中，當服務要求者在執行時期，透過使用服務說明中的連結詳細資料來尋找、聯絡和呼叫服務的方式，呼叫或起始與服務的互動時，就會進行連結作業。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7470463"><!-- --></a>BLU Acceleration</dt>
-<dd class="dd">IBM DB2 技術的集合，其設計主要用於執行主要讀取的商業智慧查詢處理。BLU Acceleration 包含四項主要的資料庫設計進步：動態記憶體內直欄式處理、可行性壓縮、平行向量處理和資料忽略。</dd>
+<dd class="dd">IBM DB2 技術的集合，其設計主要用於執行主要讀取的商業智慧查詢處理。BLU Acceleration 包含四項主要的先進資料庫設計：動態記憶體內直欄式處理、可行性壓縮、平行向量處理和資料忽略。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7807335"><!-- --></a>藍綠部署 (blue-green deployment)</dt>
 <dd class="dd">促成持續交付且將中斷時間減到最少的部署技術，這是藉由執行兩個接近相同的正式作業環境，分別稱為 Blue 和 Green。當其中一個環境（例如，Blue）是活躍的正式作業環境時，另一個環境（例如，Green）可以用來進行最終測試及部署。
 在 Green 中部署應用程式之後，Green 便成為正式作業環境，而 Blue 則開始閒置。另請參閱<a class="xref" href="#gloss_R__x8439181">紅黑部署 (red-black deployment)</a>。</dd>
@@ -104,13 +104,15 @@
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心 (certificate authority)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd">請參閱<a class="xref" href="#gloss_C__x2016783">密碼區塊鏈接 (cipher block chaining)</a>。</dd>
+<dd class="dd">請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心 (certificate authority)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_C__x7233913">持續交付 (continuous delivery)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>憑證管理中心 (certificate authority, CA)</dt>
 <dd class="dd">受信任的第三方組織或公司，負責發出數位憑證。憑證管理中心通常會驗證被授與唯一憑證之個人的身分。
 另請參閱<a class="xref" href="#gloss_I__x3753781">中繼憑證 (intermediate certificate)</a>、<a class="xref" href="#gloss_S__x2038004">Secure Sockets Layer</a>、<a class="xref" href="#gloss_T__x2042234">授信主要憑證 (trusted
 root)</a>。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>憑證簽署要求 (certificate signing request, CSR)</dt>
+<dd class="dd">組織傳送至憑證管理中心 (CA) 以取得憑證的電子訊息。此要求包括公開金鑰，而且是使用私密金鑰進行簽署；CA 會在使用其專屬私密金鑰進行簽署之後傳回憑證。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>變更集 (change set)</dt>
 <dd class="dd">對工作區或串流中的構件所進行的一組相關變更。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>密碼區塊鏈接 (cipher block chaining, CBC)</dt>
@@ -144,6 +146,8 @@ root)</a>。</dd>
 <dd class="dd">一種軟體開發作法，利用持續測試、持續整合和持續部署等技術，使新特性和修正程式能夠在低風險的情況下迅速包裝並部署到測試環境，然後再部署給客戶。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>認證 (credential)</dt>
 <dd class="dd">鑑別期間所獲得的資訊，用於說明使用者、群組關聯或其他安全相關的身分屬性，且用來執行如授權、審核或委派等服務。例如，使用者 ID 及密碼是容許存取網路及系統資源的認證。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">請參閱<a class="xref" href="#gloss_C__x3530521">憑證簽署要求 (certificate signing request, CSR)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>自訂網域 (custom domain)</dt>
 <dd class="dd">使用者所選取 URL 中的自訂部分，可以將要求導向到應用程式。
 自訂網域會構成路徑的一部分。
@@ -390,7 +394,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x4585370"><!-- --></a>公用雲端 (public cloud)</dt>
 <dd class="dd">一種雲端運算環境，其中可根據每次使用付款來訂閱標準化資源（例如基礎架構、多方承租戶硬體及服務）的存取權。另請參閱<a class="xref" href="#gloss_B__x8439189">無國界 (borderless)</a>、<a class="xref" href="#gloss_P__x4585362">專用雲端 (private cloud)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035465"><!-- --></a>推送 (push)</dt>
-<dd class="dd">將資訊從伺服器傳送到用戶端。伺服器推送內容時，會由伺服器負責起始交易，而不是由來自用戶端的要求負責起始交易。</dd>
+<dd class="dd">將資訊從伺服器傳送到用戶端。伺服器推送內容時，會由伺服器主動起始交易，而不是因為來自用戶端的要求而起始交易。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x5599582"><!-- --></a>推送通知 (push notification)</dt>
 <dd class="dd">顯示在行動式應用程式圖示上的警示，用於指示變更或更新。</dd>
 </dl>
@@ -401,9 +405,9 @@ root)</a>。</dd>
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>主要讀取 (read-mostly)</dt>
 <dd class="dd">與動態變更的資料有關。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>紅黑部署 (red-black deployment)</dt>
-<dd class="dd">一種部署技術，透過啟用同步化測試、開發及部署來驅動持續交付。一開始，開發是在非作用中環境中進行（黑色），而作用中環境會持續取得資料流量（紅色）。部署啟動之後，在先前作用中舊版環境上停用遞送之前，兩個環境都會變成進行中（紅-紅），隨後予以移除（黑），而新的環境會作為唯一的作用中環境。另請參閱<a class="xref" href="#gloss_B__x7807335">藍綠部署 (blue-green deployment)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>區域 (region)</dt>
-<dd class="dd">已定義的地理區域。區域可以是特定的郵遞區號區域、鄉鎮、縣/市、州/省、一組州/省，甚至是一組國家/地區。每一個區域本身可以是一組其他區域，或是一組形成區域的郵遞區號。</dd>
+<dd class="dd">一種部署技術，透過啟用同步化測試、開發及部署來推動持續交付。一開始，開發是在非作用中環境中進行（黑色），而作用中環境會持續取得資料流量（紅色）。部署啟動之後，在先前作用中舊版環境上停用遞送之前，兩個環境都會變成進行中（紅-紅），隨後予以移除（黑），而新的環境會作為唯一的作用中環境。另請參閱<a class="xref" href="#gloss_B__x7807335">藍綠部署 (blue-green deployment)</a>。</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>地區 (region)</dt>
+<dd class="dd">已定義的地理區域。地區可以是特定的郵遞區號區域、鄉鎮、縣/市、州/省、一組州/省，甚至是一組國家/地區。每一個地區本身可以是一組其他地區，或是一組形成地區的郵遞區號。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>登錄 (registry)</dt>
 <dd class="dd">包含用來建立儲存器之映像檔的公用或專用儲存庫。
 另請參閱<a class="xref" href="#gloss_C__x2010901">儲存器 (container)</a>、<a class="xref" href="#gloss_I__x2024928">映像檔 (image)</a>。</dd>
@@ -414,9 +418,9 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2036865"><!-- --></a>儲存庫 (repository, repo)</dt>
 <dd class="dd">資料和其他應用程式資源的持續性儲存區。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3889804"><!-- --></a>儲存庫工作區 (repository workspace)</dt>
-<dd class="dd">包含一個以上元件的儲存庫物件。儲存庫工作區通常是由各團隊成員用來容納進行中的變更。團隊成員會將他們的變更從他們的儲存庫工作區遞送到串流中，也接受串流中其他團隊成員的變更進入他們的儲存庫工作區中。每個儲存庫工作區都有擁有者，而且只有擁有者才能在工作區中進行變更。另請參閱<a class="xref" href="#gloss_W__x2096037">工作區 (workspace)</a>。</dd>
+<dd class="dd">包含一個以上元件的儲存庫物件。儲存庫工作區通常是由各團隊成員用來容納進行中的變更。團隊成員會將他們的變更從他們的儲存庫工作區交付到串流中，也接受串流中其他團隊成員的變更進入他們的儲存庫工作區中。每個儲存庫工作區都有擁有者，而且只有擁有者才能在工作區中進行變更。另請參閱<a class="xref" href="#gloss_W__x2096037">工作區 (workspace)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3220976"><!-- --></a>具象狀態傳輸 (Representational State Transfer, REST)</dt>
-<dd class="dd">分散式超媒體系統（如全球資訊網）的軟體架構樣式。這個術語通常也用來說明任何透過 HTTP 使用 XML（或 YAML、JSON、純文字），且沒有其他傳訊層（如 SOAP）的簡式介面。</dd>
+<dd class="dd">分散式超媒體系統（如全球資訊網）的軟體架構樣式。這個術語通常也用來說明任何透過 HTTP 使用 XML（或 YAML、JSON、純文字），且沒有其他傳訊層（如 SOAP）的簡單介面。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2004267"><!-- --></a>資源 (resource)</dt>
 <dd class="dd">可以針對應用程式或服務實例佈建或保留的實體或邏輯元件。資源的範例包括資料庫、帳戶，以及處理器、記憶體和儲存體限制。</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3220987"><!-- --></a>REST</dt>
@@ -535,12 +539,9 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
 <dt class="dt dlterm"><a name="gloss_T__x7494456"><!-- --></a>追蹤建置項目 (track build item)</dt>
 <dd class="dd">一種開發工作項目，用於追蹤建置失敗之後所需的修正程式。</dd>
 <dt class="dt dlterm"><a name="gloss_T__x2239009"><!-- --></a>信任關聯攔截程式 (trust association interceptor, TAI)</dt>
-<dd class="dd">在正式作業環境中，針對 Proxy 伺服器收到的每個要求驗證信任用的機制。
-驗證的方法由 Proxy 伺服器和攔截程式共同同意。
-</dd>
+<dd class="dd">在正式作業環境中，針對 Proxy 伺服器收到的每個要求驗證信任時所使用的機制。驗證的方法由 Proxy 伺服器和攔截程式共同同意。</dd>
 <dt class="dt dlterm"><a name="gloss_T__x2042234"><!-- --></a>授信主要憑證 (trusted root)</dt>
-<dd class="dd">由授信憑證管理中心 (CA) 簽署的憑證。另請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心
-(certificate authority)</a>、<a class="xref" href="#gloss_I__x3753781">中繼憑證 (intermediate certificate)</a>。</dd>
+<dd class="dd">由授信憑證管理中心 (CA) 簽署的憑證。另請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心 (certificate authority)</a>、<a class="xref" href="#gloss_I__x3753781">中繼憑證 (intermediate certificate)</a>。</dd>
 </dl>
 
 ## 使用者
@@ -583,7 +584,7 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
 <dt class="dt dlterm"><a name="gloss_W__x7636628"><!-- --></a>Web 應用程式 (web app)</dt>
 <dd class="dd">請參閱 <a class="xref" href="#gloss_W__x2116500">Web 應用程式 (web application)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2116500"><!-- --></a>Web 應用程式 (web application, web app)</dt>
-<dd class="dd">可供 Web 瀏覽器存取的應用程式，除了靜態顯示資訊，還提供一些功能，例如可讓使用者查詢資料庫。Web 應用程式的一般元件，包括 HTML 頁面、JSP 頁面及 Servlet。另請參閱<a class="xref" href="#gloss_A__x4281528">應用程式 (app)</a>。</dd>
+<dd class="dd">可供 Web 瀏覽器存取的應用程式，除了靜態顯示資訊，還提供一些功能，例如可讓使用者查詢資料庫。Web 應用程式的常見元件包括 HTML 頁面、JSP 頁面及 Servlet。另請參閱<a class="xref" href="#gloss_A__x4281528">應用程式 (app)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2116506"><!-- --></a>Web 保存檔 (web archive, WAR)</dt>
 <dd class="dd">這是 Java EE 標準所定義的一種壓縮檔格式，用來將安裝和執行 Web 應用程式時所需的所有資源儲存在單一檔案中。</dd>
 <dt class="dt dlterm"><a name="gloss_W__x7494461"><!-- --></a>Web IDE</dt>

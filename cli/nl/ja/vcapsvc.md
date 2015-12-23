@@ -6,7 +6,8 @@
 *最終更新日: 2015 年 11 月 9 日*
 
 
-VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスと対話するために使用できる情報が格納された JSON オブジェクトです。{:shortdesc}
+VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスと対話するために使用できる情報が格納された JSON オブジェクトです。
+{:shortdesc}
 
 
 ## VCAP_SERVICES 環境変数の値の取得
@@ -14,15 +15,20 @@ VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービ
 
 VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスと対話するために使用できる情報が格納された JSON オブジェクトです。この情報には、サービス・インスタンス名、資格情報、およびサービス・インスタンスへの接続 URL が含まれています。これらの値は、アプリケーションが {{site.data.keyword.Bluemix_notm}} でサービス・インスタンスにバインドされると VCAP_SERVICES 環境変数に取り込まれます。
 
-VCAP_SERVICES 環境変数の値は、サービス・インスタンスをアプリケーションにバインドしたときにのみ使用可能です。アプリケーション環境変数は、
-WebSocket コンソール・ドライバーを使用して表示できます。以下の例は、WebSocket コンソール・ドライバーを使用して、Node.js アプリケーションの環境変数を表示する方法を示しています。
+VCAP_SERVICES 環境変数の値は、サービス・インスタンスをアプリケーションにバインドしたときにのみ使用可能です。アプリケーション環境変数は、WebSocket コンソール・ドライバーを使用して表示できます。以下の例は、WebSocket コンソール・ドライバーを使用して、Node.js アプリケーションの環境変数を表示する方法を示しています。
 
-最初に、コマンドを実行して Node.js アプリケーションを再プッシュします。```
-cf push -c "curl -s https://raw.githubusercontent.com/dmikusa-pivotal/cf-debug-tools/master/debug-console.sh | bash" yourapp```
-次に、以下の URL を入力します。```
+最初に、コマンドを実行して Node.js アプリケーションを再プッシュします。
+```
+cf push -c "curl -s https://raw.githubusercontent.com/dmikusa-pivotal/cf-debug-tools/master/debug-console.sh | bash" yourapp
+```
+次に、以下の URL を入力します。
+```
 https://yourapp.{APPDomain}/bash.sh
 ```
-表示されるページで、ツールに接続するためのチェック・マークをクリックしてから、env コマンドを発行してアプリケーションの環境変数を表示します。cf-debug-tools の詳細については、「[Debug Tools for Cloud Foundry](https://github.com/dmikusa-pivotal/cf-debug-tools)」を参照してください。## Bluemix インフラストラクチャー・レイヤーの表示
+表示されるページで、ツールに接続するためのチェック・マークをクリックしてから、env コマンドを発行してアプリケーションの環境変数を表示します。cf-debug-tools の詳細については、「[Debug Tools for Cloud Foundry](https://github.com/dmikusa-pivotal/cf-debug-tools)」を参照してください。
+
+
+## Bluemix インフラストラクチャー・レイヤーの表示
 {:viewinfra}
 
 

@@ -5,50 +5,44 @@
 
 #服務
 {: #services}
-*前次更新：2015 年 11 月 11 日*
+*前次更新：2015 年 12 月 7 日*
 
-您可以在 {{site.data.keyword.Bluemix}} 使用者介面的「**服務**」下，在「**型錄**」中找到可用的服務。{:shortdesc}
-
-
-{{site.data.keyword.Bluemix_notm}} 中為行動式應用程式提供了預先定義的服務。{{site.data.keyword.Bluemix_notm}}
-讓您能輕鬆地為您的行動式應用程式實作、管理及延展這些行動式服務。
-您可以將焦點放在應用程式邏輯和應用程式設計。
+您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
+{:shortdesc}
 
 
-{{site.data.keyword.Bluemix_notm}}
-會管理 Web 應用程式的中介軟體服務。應用程式開發人員可以指定他們需要的中介軟體服務。{{site.data.keyword.Bluemix_notm}}
-接著會自動佈建指定中介軟體服務的新實例，並將服務實例連結至應用程式。
+{{site.data.keyword.Bluemix_notm}} 中為行動式應用程式提供了預先定義的服務。{{site.data.keyword.Bluemix_notm}} 讓您能輕鬆地為您的行動式應用程式實作、管理及擴充這些行動式服務。您可以將焦點放在應用程式邏輯和應用程式設計。
 
+{{site.data.keyword.Bluemix_notm}} 會管理 Web 應用程式的中介軟體服務。應用程式開發人員可以指定他們需要的中介軟體服務。{{site.data.keyword.Bluemix_notm}} 接著會自動佈建指定中介軟體服務的新實例，並將服務實例連結至應用程式。
 
-{{site.data.keyword.Bluemix_notm}} 以兩種方式顯示服務：依服務種類及依服務支援類型。
+{{site.data.keyword.Bluemix_notm}} 以兩種方式顯示服務：依服務種類，以及依服務支援類型。
 
 
 
 <dl>
 <dt><strong>種類</strong></dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 服務組織成為不同的種類。在每一個服務種類中，IBM 建立的服務會先行列出，接著是協力廠商服務，再來是社群服務。
+<dd>{{site.data.keyword.Bluemix_notm}} 服務會組織成為不同的種類。在每一個服務種類中，IBM 建立的服務會先列出，接著是協力廠商服務，再來則是社群服務。
 </dd>
 <dt><strong>支援</strong></dt>
-<dd>針對 {{site.data.keyword.Bluemix_notm}} 服務提供了多種層次的支援。
-下表說明 {{site.data.keyword.Bluemix_notm}} 服務的一般支援資訊：</dd>
+<dd>針對 {{site.data.keyword.Bluemix_notm}} 服務提供了多種層次的支援。下表說明 {{site.data.keyword.Bluemix_notm}} 服務的一般支援資訊：</dd>
 </dl>
 
-*表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
+
 
 |類型	|說明	|支援詳細資料|
 |:------|:--------------|:--------------|
-|IBM	|IBM 所提供且正式發行的服務。	|支援在 IBM 所提供且正式發行的服務中判定為錯誤的問題。會根據您設定的嚴重性來提供支援。如需問題單嚴重性的相關資訊，請參閱[聯絡 {{site.data.keyword.Bluemix_notm}} 支援](../support/index.html#contacting-bluemix-support){: new_window}。|
-|協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，則 IBM 不負責提供修正程式。必要的話，IBM 會與協力廠商服務提供者分享分析資訊。|
-|社群	|開放程式碼社群所提供的服務。	|社群服務支援是由 {{site.data.keyword.Bluemix_notm}} Developers [社群](https://developer.ibm.com/bluemix/)透過 {{site.data.keyword.Bluemix_notm}} Developers 社群[討論區](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，則 IBM 不負責提供修正程式。|
-|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|將支援在 IBM 所提供的測試版服務中判定為錯誤的問題，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[聯絡 {{site.data.keyword.Bluemix_notm}} 支援](../support/index.html#contacting-bluemix-support){: new_window}。|
-
+|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。|
+|協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
+|社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
+|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。|
+*表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
 
 
 
 
 {{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及執行時期，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至「型錄」底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
 
-實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過 {{site.data.keyword.Bluemix_notm}} Developers 社群[討論區](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
+實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
 若要在 {{site.data.keyword.Bluemix_notm}} 使用者介面、cf 指令行介面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支援的工具中使用服務，請採取下列步驟：
 
@@ -60,13 +54,13 @@
 
 3. 在應用程式中撰寫自己的程式碼，以便與服務互動。
 
-##各區域的服務
+##各地區的服務
 
-並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 區域使用。下表顯示 IBM 所提供的服務。
+並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 地區使用。下表顯示 IBM 所提供的服務。
 
-*表 2. 服務可用性*
 
-|服務	|可在美國南部區域使用	|可在歐洲英國區域使用 |可在澳洲雪梨區域使用|
+
+|服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.appsecshort}}		|是		|否		|否|
@@ -130,14 +124,14 @@
 |{{site.data.keyword.workflow}}			|是		|是		|否|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|否|
 |{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
+*表 2. 服務可用性*
 
 
-# 新增服務至您的應用程式
+# 將服務新增至您的應用程式
 {: #add_service}
 *前次更新：2015 年 11 月 19 日*
 
-{{site.data.keyword.Bluemix}} 有一份服務清單，並代表開發人員管理它們。
-若要新增服務以供應用程式使用，您必須要求此服務的實例，並配置應用程式以與服務互動。
+{{site.data.keyword.Bluemix}} 有一份服務清單，並代表開發人員管理它們。若要新增服務以供應用程式使用，您必須要求此服務的實例，並配置應用程式以與服務互動。
 
 您可以用下列方式查看 {{site.data.keyword.Bluemix_notm}} 中可用的所有服務：
 
@@ -153,10 +147,9 @@
 
 {{site.data.keyword.Bluemix_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-如果在其他區域中管理的服務能用於那些區域，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.Bluemix_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。
-如需相關資訊，請參閱[讓外部應用程式及協力廠商工具能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external)。
+如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.Bluemix_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[讓外部應用程式及協力廠商工具能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external)。
 
-如果您要將服務新增至 {{site.data.keyword.Bluemix_notm}} 服務型錄，以供 {{site.data.keyword.Bluemix_notm}} 應用程式使用，則可以建置專屬服務，並將它與 {{site.data.keyword.Bluemix_notm}} 整合。如需相關資訊，請參閱[整合服務與 {{site.data.keyword.Bluemix_notm}}](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}。
+
 
 ## 要求新的服務實例
 {: #req_instance}
@@ -216,30 +209,24 @@
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成識別停止、異常狀況和連線失敗並從其中回復。
-如需相關資訊，請參閱[應用程式不會自動重新啟動](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}疑難排解主題。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}疑難排解主題。
 
 
 ## 讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務
 {: #accser_external}
 
-您可能有在 {{site.data.keyword.Bluemix_notm}} 之外建立和執行的應用程式，或是您可能使用協力廠商工具。如果
-{{site.data.keyword.Bluemix_notm}} 服務提供可從網際網路存取的端點，您可以使用那些服務來搭配本端應用程式或協力廠商工具。
-
+您可能有在 {{site.data.keyword.Bluemix_notm}} 之外建立和執行的應用程式，或是您可能使用協力廠商工具。如果 {{site.data.keyword.Bluemix_notm}} 服務提供可從網際網路存取的端點，您可以使用那些服務來搭配本端應用程式或協力廠商工具。
 
 若要讓外部應用程式或協力廠商工具能使用 {{site.data.keyword.Bluemix_notm}} 服務，請完成下列步驟：
-
 
 1. 要求服務的實例。
     1. 在 {{site.data.keyword.Bluemix_notm}} 使用者介面的「儀表板」上，按一下**使用服務或 API**。即會顯示「型錄」。
     2. 從「型錄」中，按一下服務磚以選取您想要的服務。即會開啟「服務詳細資料」頁面。
-    3. 在「新增服務」視窗中，將「**應用程式**：」清單選項保持為**維持不連結**。這個選項表示服務將不會連接至
-{{site.data.keyword.Bluemix_notm}} 應用程式。
+    3. 在「新增服務」視窗中，將**應用程式：**清單選項保持為**維持不連結**。這個選項表示服務將不會連接至 {{site.data.keyword.Bluemix_notm}} 應用程式。
     4. 視需要進行任何其他選擇。然後按一下**建立**。即會建立服務實例，且會顯示服務「儀表板」。
 2. 在服務「儀表板」的左導覽窗格中，您可以選取**服務認證**，以使用 JSON 格式檢視或新增認證。使用顯示為認證的 API 金鑰來連接至服務實例。
 
-在 {{site.data.keyword.Bluemix_notm}} 外執行的應用程式現在可以存取
-{{site.data.keyword.Bluemix_notm}} 服務。
+在 {{site.data.keyword.Bluemix_notm}} 外執行的應用程式現在可以存取 {{site.data.keyword.Bluemix_notm}} 服務。
 
 **附註：**如果您要刪除服務實例或檢查計費資訊，您必須回到使用者介面中的「儀表板」才能管理服務實例。
 
@@ -299,26 +286,23 @@
 
 您現在可以將應用程式配置成使用外部資源。如需如何配置應用程式與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](#config){: new_window}。
 
-## 在另一個區域使用服務
+## 在另一個地區使用服務
 {: #cross_region_service}
 
-如果您的服務實例建立並連結到一個區域中的應用程式，您可以藉由建立使用者提供的服務，在另一個區域中使用這個服務實例。
+如果您的服務實例建立並連結到一個地區中的應用程式，您可以藉由建立使用者提供的服務，在另一個地區中使用這個服務實例。
 
 
-假設您從想要使用服務實例的區域中開始。
-若要使用存在於另一個區域的服務實例，請完成下列步驟：
+假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
 
-1. 切換至服務實例存在的區域。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**區域**或按一下**區域**圖示，然後選取服務實例存在的區域。
+1. 切換至服務實例存在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
 
-2. 在服務存在的區域中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
+2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
 
 
 	1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式磚。即會顯示「概觀」頁面。
-	2. 在左導覽窗格中，按一下**環境變數**。
-右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。
-請記錄服務實例的 JSON 內容。
+	2. 在左導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
 
-3. 切換至您從想要使用服務實例的區域。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**區域**或按一下**區域**圖示，然後選取您想要使用服務實例的區域。
+3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取您想要使用服務實例的地區。
 
 4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services){: new_window}。
 
@@ -328,7 +312,7 @@
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## 在另一個區域使用服務
+## 在另一個服務中使用服務
 {: #s2s_binding}
 
 服務存取授權提供一種方法，讓某個服務直接存取另一個服務。您可以在 {{site.data.keyword.Bluemix_notm}}「儀表板」上授權及配置服務實例對其他服務實例的存取權。
@@ -336,8 +320,8 @@
 若要使用另一個服務中的服務實例，請完成下列步驟：
 
 1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，按一下您要存取的服務磚。即會顯示服務的儀表板。
-2. 在左導覽窗格中，使用服務實例的主控台，授權從其他服務實例的連結的*管理*。
-3. 如果您要拒絕其他服務對服務實例的存取權，請按一下左導覽窗格中的*服務存取授權*，然後使用*撤銷*以移除服務連結。 
+2. 在左導覽窗格中，使用服務實例的主控台，按一下*管理*以授權來自其他服務實例的連結。
+3. 如果您要拒絕其他服務對服務實例的存取權，請按一下左導覽窗格中的*服務存取授權*，然後使用*撤銷* 以移除服務連結。 
 
 # 相關鏈結
 {: #rellinks}

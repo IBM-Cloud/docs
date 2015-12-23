@@ -5,7 +5,7 @@
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 11 novembre 2015*
+*Ultimo aggiornamento: 7 dicembre 2015*
 
 I servizi disponibili sono elencati nel **catalogo** sotto **Servizi**
 nell'interfaccia utente
@@ -41,34 +41,29 @@ dai servizi della community.</dd>
 </dd>
 </dl>
 
-*Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
+
 
 |Tipo	|Descrizione	|Dettagli sul supporto|
 |:------|:--------------|:--------------|
 |IBM	|Un servizio fornito da IBM e che è generalmente disponibile.	|Viene fornito supporto per i problemi considerati come un difetto
-in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità impostata. Per ulteriori informazioni sulla gravità del ticket, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window}.|
+in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità impostata. Per ulteriori informazioni sulla gravità del ticket, vedi [Come contattare il supporto](../support/index.html#contacting-bluemix-support){: new_window}.|
 |Terze parti	|Un servizio fornito da un'azienda diversa da IBM.	|Il supporto per i servizi di terze parti è fornito dal
 fornitore del servizio. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di terze parti, IBM non è tenuto a fornire una correzione. IBM condividerà l'analisi con il fornitore del servizio di terze parti laddove necessario.|
 |Community	|Un servizio fornito da una community
-open source.	|Il supporto per i servizi di community viene fornito dalla
-[Community](https://developer.ibm.com/bluemix/) di sviluppatori {{site.data.keyword.Bluemix_notm}}
-attraverso il [Forum](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window} di tale community
-{{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di community, IBM non è tenuto a fornire una correzione.|
+open source.	|Il supporto per i servizi di community viene fornito dalla Community di sviluppatori {{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di community, IBM non è tenuto a fornire una correzione.|
 |Beta	|Un servizio che non è pronto per la produzione e che è un una
 fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
-laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla gravità del ticket, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window}.|
-
+laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla gravità del ticket, vedi [Come contattare il supporto](../support/index.html#contacting-bluemix-support){: new_window}.|
+*Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
 
 
 
 
 {{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla parte inferiore del Catalogo e fai quindi clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}**.
 
-I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo modalità non compatibili con le versioni precedenti. L'uso di questi servizi negli ambienti di produzione è sconsigliato. Il supporto per i servizi sperimentali viene fornito
-tramite il [Forum](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window} della community di sviluppatori
-{{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM
+I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo modalità non compatibili con le versioni precedenti. L'uso di questi servizi negli ambienti di produzione è sconsigliato. Il supporto per i servizi sperimentali viene fornito tramite la Community di sviluppatori {{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM
 e tale problema viene considerato come un difetto in un servizio sperimentale,
 IBM non è tenuto a fornire una correzione.
 
@@ -88,7 +83,7 @@ servizio.
 Non tutti i servizi sono
 disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabella mostra i servizi forniti da IBM.
 
-*Tabella 2. Disponibilità dei servizi*
+
 
 |Servizio	|Disponibile nella regione Stati Uniti Sud	|Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -154,6 +149,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.workflow}}			|Sì		|Sì		|No|
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|No|
 |{{site.data.keyword.xpagesservice_short}}	|Sì		|Sì		|No|
+*Tabella 2. Disponibilità dei servizi*
 
 
 # Aggiunta di un servizio alla tua applicazione
@@ -187,8 +183,7 @@ servizi. Questi servizi devono essere accessibili da Internet e avere degli endp
 questi servizi, devi codificare manualmente l'applicazione nello stesso modo in cui codifichi le applicazioni
 esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Abilitazione di applicazioni esterne e strumenti di terze parti all'utilizzo di servizi {{site.data.keyword.Bluemix_notm}}](#accser_external).
 
-Per aggiungere un servizio al catalogo di servizi {{site.data.keyword.Bluemix_notm}} per le applicazioni {{site.data.keyword.Bluemix_notm}} da utilizzare, puoi creare
-il tuo proprio servizio e integrarlo con {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Integrazione di un servizio con {{site.data.keyword.Bluemix_notm}}](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}.
+
 
 ## Richiesta di una nuova istanza del servizio
 {: #req_instance}
@@ -394,7 +389,7 @@ utilizzando il seguente comando:
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## Utilizzo dei servizi in un'altra regione
+## Utilizzo di servizi in un altro servizio
 {: #s2s_binding}
 
 Autorizzazione accesso al servizio consente a un servizio di accedere a un altro servizio direttamente. Puoi autorizzare e configurare l'accesso di un'istanza del servizio ad altre istanze del servizio sul Dashboard {{site.data.keyword.Bluemix_notm}}.
@@ -403,7 +398,7 @@ Per utilizzare un'istanza del servizio da un altro servizio, completa la seguent
 
 1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile per il servizio a
 cui vuoi accedere. Viene visualizzato il dashboard per il servizio.
-2. Nel riquadro di navigazione a sinistra, fai clic su Gestisci per autorizzare il binding da altre istanze del servizio utilizzando la console dell'istanza del servizio.
+2. Nel riquadro di navigazione a sinistra,  fai clic su *Gestisci* per autorizzare il binding da altre istanze del servizio utilizzando la console dell'istanza del servizio.
 3. Se vuoi negare ad altri servizi l'accesso all'istanza del servizio, fai clic su *Autorizzazione accesso al servizio* nel riquadro di navigazione a sinistra e utilizza quindi *Revoca* per rimuovere il binding di servizio. 
 
 # rellinks

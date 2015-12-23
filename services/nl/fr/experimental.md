@@ -5,7 +5,8 @@
 
 *Dernière mise à jour : 19 novembre 2015*
 
-Consultez le catalogue {{site.data.keyword.Bluemix_notm}} Labs pour essayer des contextes d'exécution et des services expérimentaux.{: shortdesc} 
+Consultez le catalogue {{site.data.keyword.Bluemix_notm}} Labs pour essayer des contextes d'exécution et des services expérimentaux.
+{: shortdesc} 
 
 
 

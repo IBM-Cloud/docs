@@ -11,7 +11,8 @@ de gestion et organiser vos règles et processus métier.
 {:shortdesc}
 
 
-Accroissement de la productivité | Gestion simplifiée | Orchestration des processus et règles métier--- | --- | ---
+Accroissement de la productivité | Gestion simplifiée | Orchestration des processus et règles métier
+--- | --- | ---
 Développez des applications Web dans le cloud à l'aide d'un environnement de développement intégré Web simple et complet, et composez rapidement les
 applications avec des services. Ajoutez et retirez des fonctions, notamment open source, avec des services middleware composables tels que des données, la mise en
 cache, la messagerie, des règles, un flux de travail et le géocodage. | Réduisez considérablement le nombre de tâches de gestion et de configuration informatiques et automatisez-les, rapidement. Traitez les incidents liés

@@ -1,14 +1,14 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2015 年 11 月 9 日*
+*最終更新日: 2015 年 12 月 7 日*
 
-{{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できるセキュリティー・サービス・スイートも備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。{:shortdesc}
+{{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
+{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} は、システム、ネットワーキング、およびセキュア・エンジニアリングに関する IBM のベスト・プラクティスに基づいたセキュリティー・ポリシーに準拠することで、セキュリティーが確保されている状態にします。これらのポリシーには、ソース・コード・スキャン、動的スキャン、脅威のモデル化、侵入テストなどのプラクティスが含まれます。
-{{site.data.keyword.Bluemix_notm}} は、セキュリティー・インシデントの管理について、IBM Product Security Incident Response Team (PSIRT) プロセスに従います。詳しくは、[IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) のサイトを参照してください。
+{{site.data.keyword.Bluemix_notm}} は、システム、ネットワーキング、およびセキュア・エンジニアリングに関する IBM のベスト・プラクティスに基づいたセキュリティー・ポリシーに準拠することで、セキュリティーが確保されている状態にします。これらのポリシーには、ソース・コード・スキャン、動的スキャン、脅威のモデル化、侵入テストなどのプラクティスが含まれます。{{site.data.keyword.Bluemix_notm}} は、セキュリティー・インシデントの管理について、IBM Product Security Incident Response Team (PSIRT) プロセスに従います。詳しくは、[IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} のサイトを参照してください。
 
 {{site.data.keyword.Bluemix_notm}} Public および Dedicated では、IBM SoftLayer Infrastructure-as-a-Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。SoftLayer IaaS は、ご使用のアプリケーションとデータに対して何重にも重ねた層の保護を提供します。{{site.data.keyword.Bluemix_notm}} Local の場合、企業ファイアウォールの背後にあるお客様自身のデータ・センターに {{site.data.keyword.Bluemix_notm}} Local をホストすることで、お客様が物理的セキュリティーを所有し、インフラストラクチャーを提供します。さらに、{{site.data.keyword.Bluemix_notm}} は、Platform as a Service 層で各種カテゴリー (プラットフォーム、データ、およびアプリケーション) のセキュリティー機能を追加します。
 
@@ -17,7 +17,8 @@
 
 {{site.data.keyword.Bluemix_notm}} は、(IBM SoftLayer を介して) コア・プラットフォームに対して機能、インフラストラクチャー、運用、および物理的なセキュリティーを提供します。ただし、{{site.data.keyword.Bluemix_notm}} Local は、お客様がインフラストラクチャーとデータ・センターを提供し、物理的セキュリティーを所有するという点で独自です。
 
-SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制約的な IBM 情報技術 (IT) セキュリティー標準 (業界標準に適合しているか業界標準を上回る) に準拠しています。これらの標準には、ネットワーク、データ暗号化、アクセス制御が含まれています。
+SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制約的な IBM 情報技術 (IT) セキュリティー標準 (業界標準に適合しているか業界標準を上回る) に準拠しています。これらの標準には、
+ネットワーク、データ暗号化、アクセス制御が含まれています。
  * アプリケーション ACL、アクセス権、侵入テスト
  * 識別、認証、許可
  * 情報とデータの保護
@@ -26,15 +27,17 @@ SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制�
  * サービス妨害と組織的攻撃の検出
  * セキュリティー・インシデント対応
 
-![Bluemix プラットフォーム・セキュリティーの概要](images/platform_sec.png)
+![Bluemix プラットフォーム・セキュリティーの概要](images/platform_sec.svg)
 
 *図 1. {{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー概要*
 
-{{site.data.keyword.Bluemix_notm}} Local のセキュリティーは異なりますが、それは、お客様が、自社のファイアウォールの内側とデータ・センター内で Bluemix をホストすることで、セキュリティーの一端を担っているためです。下図は、セキュリティーのうち、どの部分をお客様が担い、どの部分を IBM が管理、保守するかについての詳細です。
+{{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールの背後で、データセンター内に {{site.data.keyword.Bluemix_notm}} をホストします。そのため、特定のセキュリティーの側面についてはお客様の責任となります。下図は、セキュリティーのうち、どの部分をお客様が担い、どの部分を IBM が管理、保守するかについての詳細です。
 
-![Bluemix Local プラットフォームのセキュリティー概要](images/security_local_platform.png)
+![Bluemix Local プラットフォームのセキュリティー概要](images/security_local_platform.svg)
 
 *図 2. {{site.data.keyword.Bluemix_notm}} Local プラットフォームのセキュリティー概要*
+
+IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリバリー機能) を使用して、お客様のデータ・センターに対して {{site.data.keyword.Bluemix_notm}} Local のインストール、リモート・モニター、および管理を行います。リレーは、各 {{site.data.keyword.Bluemix_notm}} Local インスタンスに固有の証明書にセキュアに接続します。{{site.data.keyword.Bluemix_notm}} Local およびリレーについて詳しくは、[Bluemix Local](../local/index.html) を参照してください。
 
 ### 機能セキュリティー
 
@@ -42,7 +45,9 @@ SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制�
 
 <dl>
 <dt>認証</dt>
-<dd>アプリケーション開発者は、IBM Web ID を使用することで {{site.data.keyword.Bluemix_notm}} に対して認証されます。{{site.data.keyword.Bluemix_notm}} (Dedicated および Local) の場合、デフォルトで、LDAP を介した認証がサポートされます。ご要望に応じて、 {{site.data.keyword.Bluemix_notm}} に対して、代わりに IBM Web ID を介した認証をセットアップできます。
+<dd>アプリケーション開発者は、IBM Web ID を使用することで {{site.data.keyword.Bluemix_notm}} に対して認証されます。
+
+{{site.data.keyword.Bluemix_notm}} Dedicated および Local の場合、デフォルトで、LDAP を介した認証がサポートされます。ご要望に応じて、 {{site.data.keyword.Bluemix_notm}} に対して、代わりに IBM Web ID を介した認証をセットアップできます。
 </dd>
 
 <dt>許可</dt>
@@ -52,7 +57,9 @@ SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制�
 <dd>アプリケーション開発者の認証については、成功か失敗かに関わらずすべての試行に対して監査ログが作成されます。また、 {{site.data.keyword.Bluemix_notm}} アプリケーションが実行されるコンテナーをホストする Linux システムへの特権アクセスについても、監査ログが作成されます。</dd>
 
 <dt>データの保護</dt>
-<dd> すべての  {{site.data.keyword.Bluemix_notm}} トラフィックは、リバース・プロキシー、SSL 終了、およびロード・バランシング機能を提供する IBM WebSphere® DataPower® SOA アプライアンスを経由します。以下の HTTP メソッドを使用できます。 * DELETE
+<dd> すべての  {{site.data.keyword.Bluemix_notm}} トラフィックは、リバース・プロキシー、SSL 終了、およびロード・バランシング機能を提供する IBM WebSphere® DataPower® SOA アプライアンスを経由します。
+以下の HTTP メソッドを使用できます。
+ * DELETE
  * GET
  * HEAD
  * OPTIONS
@@ -120,6 +127,7 @@ HTTP の非活動タイムアウトは 2 分です。
 
 <dt>ユーザー・アクセス管理</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 内では職務分離ガイドラインに従い、ユーザーに細かいアクセス特権を割り当てて、ユーザーが持っているのは、最小特権の原則に基づいた、ジョブの実行に必要なアクセス権限のみであることを保証します。
+
 {{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} の管理](../admin/index.html#mng)』を参照してください。
 </dd>
 </dl>
@@ -214,12 +222,11 @@ Static Analyzer では、ローカル・ディスクでコマンド・ライン�
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラグインを使用すれば、{{site.data.keyword.Bluemix_notm}} でホストされている Web アプリや Android アプリに対してセキュリティー・スキャンを実行できるようになります。このプラグインは、IBM UrbanCode™ Deploy Community が IBM Bluemix DevOps Services プラットフォーム上で開発とサポートを行っています。
 
-詳しくは、[IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/) にアクセスしてください。
+詳しくは、[IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。
 
 ### SQL Database
 
-SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory
-Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
+SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
 
 このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}}x で SQL Database コンソールを使用して、以下の情報を含むレポートを取得できます。
 
@@ -249,32 +256,44 @@ Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm
 
 詳しくは、『[Secure Gateway 入門 (Getting started with Secure Gateway)](../services/SecureGateway/index.html)』を参照してください。
 
+### SIEM (Security Information and Event Management)
+
+SIEM (Security Information and Event Management) ツールを使用して、アプリケーション・ログ内のセキュリティー・アラートを分析できます。そのようなツールの 1 つに、IBM Security QRadar&reg; SIEM があります。このツールは、クラウド環境でセキュリティー・インテリジェンスを提供します。
+詳しくは、
+[IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window} を参照してください。
+
 ## {{site.data.keyword.Bluemix_notm}} セキュリティー・デプロイメント
 {: #security-deployment}
 
 {{site.data.keyword.Bluemix_notm}} セキュリティー・デプロイメント・アーキテクチャーには、セキュア・アクセスを確保するために、アプリのユーザーと開発者に対して異なる情報フローが含まれています。
 
-![Bluemix セキュリティー・デプロイメント・アーキテクチャー](images/sec_deployment.png)
+![Bluemix セキュリティー・デプロイメント・アーキテクチャー](images/sec_deployment.svg)
 
 *図 3. Bluemix セキュリティー・デプロイメント・アーキテクチャー*
 
-{{site.data.keyword.Bluemix_notm}} *アプリ・ユーザー*の情報フローは、以下のとおりです。
+{{site.data.keyword.Bluemix_notm}} *アプリ・ユーザー* の場合、**アプリ・ユーザーのフロー** は次のとおりです。
  1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。
  2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
  3. ネットワーク・ルーターを介します。
  4. ドロップレット実行エージェント (DEA) のアプリケーション・ランタイムに到達します。
 
 {{site.data.keyword.Bluemix_notm}} *開発者*は、ログイン用と開発およびデプロイ用の 2 つのメイン・フローに従います。
- * ログイン用の開発者フローには、以下が含まれます。
-    * {{site.data.keyword.Bluemix_notm}} Public にログインする開発者の場合、フローは以下のとおりです。
+ * **開発者のログイン・フロー**には、以下が含まれます。
+    * {{site.data.keyword.Bluemix_notm}} (パブリック) にログインする開発者の場合、フローは以下のとおりです。
       1. IBM シングル・サインオン・サービスを介します。
       2. IBM Web ID を介します。
     * {{site.data.keyword.Bluemix_notm}} Dedicated または Local にログインする開発者の場合、フローは企業 LDAP を介します。
- * アプリの開発およびデプロイ用の開発者フローは、以下のとおりです。
+ * **開発およびデプロイメントのフロー**は、以下のとおりです。
     1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。これは、{{site.data.keyword.Bluemix_notm}} Dedicated にのみ適用されます。
     2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
     3. ネットワーク・ルーターを介します。
     4. Cloud Foundry クラウド・コントローラーを使用した許可を介します。これにより、開発者によって作成されたアプリおよびサービス・インスタンスにのみアクセスが確保されます。
+  
+{{site.data.keyword.Bluemix_notm}} Dedicated および {{site.data.keyword.Bluemix_notm}} Local *管理者* の場合、**管理者のフロー**は、以下のとおりです。
+ 1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。
+ 2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
+ 3. ネットワーク・ルーターを介します。
+ 4. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの「管理」ページにアクセスします。
 
 上記のパスで説明したユーザーに加え、権限がある IBM セキュリティー運用チームが、以下に示すものなど、各種運用セキュリティー・タスクを実行します。
  * 脆弱点スキャン。{{site.data.keyword.Bluemix_notm}} Local では、お客様がファイアウォール内にある物理的セキュリティーとあらゆるスキャンを所有します。
@@ -283,6 +302,35 @@ Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm
  * 侵入防止によるリスク管理。
  * QRadar を使用したセキュリティー・モニター。
  * 管理コンソールで使用可能なセキュリティー・レポート。
+
+## セキュリティー・レポート
+{: #reports}
+
+{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated では、{{site.data.keyword.Bluemix_notm}} は各種セキュリティー・レポートおよびログを生成します。これらは、「管理」ページから表示できます。レポートの表示および使用の説明については、『[レポートの表示](../admin/index.html#oc_report)』を参照してください。
+
+以下の表では、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 用に生成されるセキュリティー・レポートのリストを示します。
+
+| **カテゴリー** | **レポート** | **説明** |      
+|-----------------|-------------------|---------------------|
+| ファイアウォール | ファイアウォールのログイン | Vyatta ファイアウォール・デバイスへの管理者のログインに関するイベント。 |
+| ファイアウォール | ファイアウォールの拒否 | 設定されているファイアウォール・ルールに従ってアクセス要求が拒否された場合に Vyatta ファイアウォール・デバイスによって生成されるイベント。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者のログイン・イベント | {{site.data.keyword.Bluemix_notm}} 管理者のログイン | 管理者が各 {{site.data.keyword.Bluemix_notm}} システム上で SSH セッションを開始したときにオペレーティング・システムによって生成されるイベント。 |
+| {{site.data.keyword.Bluemix_notm}} アプリケーション開発者のログイン・イベント | {{site.data.keyword.Bluemix_notm}} アプリケーション開発者のログイン | コマンド・ライン、REST API、または {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} プラットフォーム・ユーザーがセッションを開始したときに {{site.data.keyword.Bluemix_notm}} プラットフォーム・ログイン・コンポーネントによって生成されるイベント。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者の管理イベント | {{site.data.keyword.Bluemix_notm}} 管理者のオペレーティング・システム管理イベント | 管理者が現行作業セッション内でアクションを実行したときにオペレーティング・システムによって生成されるイベント。 |
+| {{site.data.keyword.Bluemix_notm}} アプリケーション開発者の管理イベント | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理イベント | コマンド・ライン、REST API、または {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} プラットフォーム・ユーザーによって実行された操作に関連するイベント。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者のデータベース管理イベント | データベース管理イベント | {{site.data.keyword.Bluemix_notm}} 内部データベースでデータベース管理者によって実行された操作に関連するイベント。 |
+| 管理イベント | ユーザー管理イベント | 「管理」ページで実行されたユーザー管理アクションに関連するイベント。 |
+| 管理イベント | catalog | サービス・カタログの変換に関連するイベント。 |
+| 管理イベント | セキュリティー・レポート管理イベント | 「管理」ページで実行されたセキュリティー・レポート管理アクションに関連するイベント。 |
+| アクセス・レビュー | アクセス・レビュー・レポート | 特権アクセスのレビュー。 |
+| 変更管理 | ソフトウェア変更管理 | 変更管理アクティビティー。 |
+| 鍵管理 | カスタム SSL 証明書の管理 | アップロードおよび保管されたカスタム SSL 証明書。 |
+| 暗号化 | 転送中のデータ暗号化 | 構成されている転送中のデータ暗号化。 |
+| アンチウィルス | アンチウィルス・スキャン・レポート | 配置されているアンチウィルス・ソフトウェア。 |
+| ソフトウェア・フィックス管理 | パッチ適用レポート | 適用されたソフトウェア・フィックス。 |
+| セキュリティー・インシデント管理 | セキュリティー・インシデント修復レポート | セキュリティー・インシデント管理のセキュリティー・インシデントのエビデンス。 |
+
+*表 1. {{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated のセキュリティー・レポートのリスト*
 
 # 関連リンク
 ## 一般 

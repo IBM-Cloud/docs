@@ -1,5 +1,8 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # Depurando
 {: #debugging}
@@ -82,6 +85,8 @@ assume que os erros de preparação ocorreram para o aplicativo Node.js:
 2014-08-11T14:20:52.78+0100 [STG] ERR Erro de análise: Esperado outro par de valores de chave na linha 18, coluna 3
 2014-08-11T14:20:52.79+0100 [STG] OUT 0 informações de que funcionou se terminar com ok
 ```
+{: screen}
+
 
 O primeiro erro no log mostra o motivo  porquê a preparação
 falha. No exemplo, o primeiro erro é uma saída do
@@ -102,6 +107,9 @@ revisar a 18º linha do arquivo `package.json`.
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 É possível ver que uma vírgula é colocada no
 final da linha 17, portanto, um par de valores de chave na linha 18 e
 esperado. Para corrigir o problema, remova a vírgula:
@@ -112,6 +120,8 @@ esperado. Para corrigir o problema, remova a vírgula:
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## Depurando erros de tempo de execução
 {: #debugging-runtime-errors}

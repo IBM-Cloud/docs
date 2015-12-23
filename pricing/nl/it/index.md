@@ -42,13 +42,12 @@
 *Ultimo aggiornamento: 09 novembre 2015*
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
-e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. {{site.data.keyword.Bluemix_notm}} fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la
-vista Dettagli di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
+e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. Bluemix fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la vista Dettagli di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
 {:shortdesc}
 
 ## Versione di prova gratuita
 {: #trial}
-Puoi anche registrarti per una versione di prova di 30 giorni gratuita con il tuo ID {{site.data.keyword.IBM}}. Durante tale periodo di prova, puoi sviluppare applicazioni e utilizzare servizi in {{site.data.keyword.Bluemix_notm}}.
+Puoi anche registrarti per una versione di prova di 30 giorni gratuita con il tuo ID {{site.data.keyword.IBM}}. Durante tale periodo di prova, puoi sviluppare applicazioni e utilizzare servizi in Bluemix.
 
 Il tuo account viene fornito con le seguenti risorse, senza alcun costo:
 
@@ -58,18 +57,17 @@ Il tuo account viene fornito con le seguenti risorse, senza alcun costo:
 
 La versione di prova gratuita scade 30 giorni dopo la tua registrazione. Una volta scaduto
 il periodo di prova di 30 giorni, le applicazioni nel tuo account vengono
-arrestate. Non potrai registrati per un'altra versione di prova gratuita in {{site.data.keyword.Bluemix_notm}}. Puoi tuttavia ancora accedere al tuo account e agli account ai quali sei invitato. Per riavviare le tue applicazioni, devi fornire le informazioni della tua carta di credito per un account Pagamento a consumo oppure creare un account Sottoscrizione. Dopo che hai  convertito il
+arrestate. Non potrai registrati per un'altra versione di prova gratuita in Bluemix. Puoi tuttavia ancora accedere al tuo account e agli account ai quali sei invitato. Per riavviare le tue applicazioni, devi fornire le informazioni della tua carta di credito per un account Pagamento a consumo oppure creare un account Sottoscrizione. Dopo che hai  convertito il
 tuo account, puoi continuare a utilizzare le franchigie relative a elaborazione e servizi. Paghi solo per l'utilizzo di servizi, contenitori e runtime che non è incluso come parte della tua franchigia mensile.
 
 Se non converti il tuo account dopo che è scaduta la versione di prova gratuita, riceverai delle notifiche
 email sullo stato del tuo account dopo che il periodo di prova sarà scaduto. Le notifiche ti rammentano di creare il
 tuo account a pagamento in modo da non perdere le impostazioni e le configurazioni da te scelte per le
-applicazioni. Se non desideri ricevere tali notifiche da {{site.data.keyword.Bluemix_notm}},
-puoi annullare la sottoscrizione in qualsiasi momento.
+applicazioni. Se non desideri ricevere tali notifiche da Bluemix, puoi annullare la sottoscrizione in qualsiasi momento.
 All'incirca un mese dopo la scadenza del periodo di prova, le tue configurazioni dei servizi e le tue applicazioni
-vengono rimosse. La seguente figura mostra il processo generale di gestione degli account {{site.data.keyword.Bluemix_notm}}.
-Figura 1. Diagramma di flusso dei processi della gestione degli account {{site.data.keyword.Bluemix_notm}}
-Diagramma di flusso dei processi della gestione degli account {{site.data.keyword.Bluemix_notm}}
+vengono rimosse. La seguente figura mostra il processo generale di gestione degli account Bluemix.
+Figura 1. Diagramma di flusso dei processi della gestione degli account Bluemix
+Diagramma di flusso dei processi della gestione degli account Bluemix
 
 ![Diagramma di flusso dei processi della gestione degli account {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
 
@@ -84,7 +82,7 @@ normalmente fornite da ciascun servizio. Le franchigie non sono più quelle di u
 {: #what_it_costs}
 
 Gli addebiti variano a seconda delle risorse utilizzate da una specifica opzione di servizio, runtime, contenitore, macchina virtuale o supporto. Le risorse possono essere il numero di chiamate API, il numero di istanze, la
-memoria, l'archiviazione e così via. {{site.data.keyword.Bluemix_notm}} fornisce anche degli stimatori del costo dettagliati e un calcolatore dei costi accurato per aiutarti a pianificare i tuoi addebiti. Puoi controllare il costo effettivo dopo che hai creato le tue applicazioni utilizzando la vista *Dettagli di utilizzo*. Per informazioni più dettagliate sugli addebiti, vedi [Modalità di addebito](index.html#charges).
+memoria, l'archiviazione e così via. Bluemix fornisce anche degli stimatori del costo dettagliati e un calcolatore dei costi accurato per aiutarti a pianificare i tuoi addebiti. Puoi controllare il costo effettivo dopo che hai creato le tue applicazioni utilizzando la vista *Dettagli di utilizzo*. Per informazioni più dettagliate sugli addebiti, vedi [Modalità di addebito](index.html#charges).
  
 
 ##Codice promozionale
@@ -110,16 +108,16 @@ Per utilizzare un codice promozionale, fai clic sull'icona **Impostazioni profil
 ##Modalità di fatturazione
 {: #pay-accounts}
 
-Quando ti registri per un piano fatturabile {{site.data.keyword.Bluemix_notm}}, puoi selezionare dai seguenti account:
+Quando ti registri per un piano fatturabile Bluemix, puoi scegliere uno dei seguenti account:
 * Pagamento a consumo
 * Sottoscrizione
-* {{site.data.keyword.Bluemix_notm}} dedicato
-* {{site.data.keyword.Bluemix_notm}} locale
+* Bluemix dedicato
+* Bluemix locale
 
 Con un account Pagamento a consumo, gli addebiti a tuo carico sono basati sull'utilizzo che fai di elaborazione e servizi {{site.data.keyword.Bluemix_notm}}. Con
-un account Sottoscrizione, puoi ottenere uno sconto mensile basato su un impegno di spesa mensile minimo. Gli addebiti per {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale sono basati su contratti annuali.
+un account Sottoscrizione, puoi ottenere uno sconto mensile basato su un impegno di spesa mensile minimo. Bluemix dedicato e Bluemix locale sono basati su contratti annuali. 
 
-Puoi convertire il tuo account di prova gratuito in un account fatturabile in qualsiasi momento. Tutte le tue soluzioni {{site.data.keyword.Bluemix_notm}} e le informazioni sul tuo account di prova gratuito non fatturabile saranno inglobate senza soluzione di continuità nel nuovo account fatturabile.
+Puoi convertire il tuo account di prova gratuito in un account fatturabile in qualsiasi momento. Tutte le soluzioni Bluemix e le informazioni sul tuo account di prova gratuito non fatturabile saranno inglobate senza soluzione di continuità nel nuovo account fatturabile.
 
 Dopo che hai creato un account fatturabile, puoi modificare le informazioni da te fornite. Fai clic sull'**icona Impostazioni profilo**
 nell'angolo superiore destro dell'interfaccia utente {{site.data.keyword.Bluemix_notm}} e fai quindi clic su **Account &gt; Tipo di account** per
@@ -137,12 +135,10 @@ tuo paese e fai clic su **Aggiungi la mia carta di credito** per fornire le info
 alla tua carta di credito, accettato i termini e le condizioni e inoltrato la richiesta di account, la tua carta di credito
 verrà convalidata. Viene inviata anche una email di conferma delle informazioni sull'account. Qualche minuto dopo che hai ricevuto
 la email di conferma, puoi ritornare a {{site.data.keyword.Bluemix_notm}} per continuare
-a creare le tue applicazioni. Se {{site.data.keyword.Bluemix_notm}} non è in grado di elaborare la richiesta online per il tuo paese, puoi
-contattare il settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elencato nella pagina [Contatti {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) per registrare il tuo account Pagamento a consumo.
+a creare le tue applicazioni. Se {{site.data.keyword.Bluemix_notm}} non è in grado di elaborare la richiesta online per il tuo paese, puoi contattare il settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elencato nella pagina [Contatti Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) per registrare il tuo account Pagamento a consumo.
 
 Puoi convertire il tuo account Pagamento a consumo in un account Sottoscrizione in qualsiasi momento. Con un account Sottoscrizione, ti impegni a spendere un importo minimo ogni
-mese. Se vuoi effettuare la conversione a un account Sottoscrizione, contatta il settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il
-link elencato nella pagina [Contatti di {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+mese. Se vuoi effettuare la conversione a un account Sottoscrizione, contatta il settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elencato nella pagina [Contatti Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Account Sottoscrizione
 {: #subscription}
@@ -150,8 +146,7 @@ link elencato nella pagina [Contatti di {{site.data.keyword.Bluemix_notm}}](http
 Se ti registri per un account Sottoscrizione, ti impegni a un importo di spesa minimo ogni mese e ricevi uno sconto sulla sottoscrizione che viene applicato a tale addebito minimo. Puoi anche pagare per qualsiasi
 utilizzo che ecceda l'importo di spesa minimo.
 
-Per registrarti per un account Sottoscrizione, e per ulteriori informazioni sulle tariffe di sottoscrizione e sugli sconti, devi contattare il
-settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elencato nella pagina [Contatti di {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+Per registrarti per un account Sottoscrizione, e per ulteriori informazioni sulle tariffe di sottoscrizione e sugli sconti, devi contattare il settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elencato nella pagina [Contatti Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Account {{site.data.keyword.Bluemix_notm}} dedicato
 {: #dedicated}
@@ -164,15 +159,14 @@ settore Vendite di {{site.data.keyword.Bluemix_notm}} utilizzando il link elenca
 * Tutti i servizi dedicati da te selezionati e tutti i servizi {{site.data.keyword.Bluemix_notm}} pubblici
 * Supporto {{site.data.keyword.Bluemix_notm}} standard
 
-Puoi anche ordinare elementi facoltativi quali SoftLayer DirectLink oppure opzioni di supporto premium. Per ulteriori informazioni, contatta
-il settore [Vendite di {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs).
+Puoi anche ordinare elementi facoltativi quali SoftLayer DirectLink oppure opzioni di supporto premium. Per ulteriori informazioni, contatta il settore [Vendite Bluemix](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs).
 
 Con {{site.data.keyword.Bluemix_notm}} dedicato,
 devi registrarti per un periodo minimo di un anno. Quello che paghi ogni mese durante questo
 periodo è basato sui servizi dedicati che vuoi, più un account di sottoscrizione che ti
 dà accesso a tutti i servizi pubblici. Gli addebiti di utilizzo dei servizi in {{site.data.keyword.Bluemix_notm}} pubblico
 sono calcolati sulla base del tuo accordo per l'account di sottoscrizione. Ricevi una fattura per tutti i servizi che utilizzi
-oltre i limiti previsti da tale accordo di sottoscrizione. Contatta il rappresentante dell'account designato IBM oppure contatta il settore [Vendite di {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) per un'introduzione al tuo accordo.
+oltre i limiti previsti da tale accordo di sottoscrizione. Contatta il tuo rappresentante dell'account designato IBM oppure il settore [Vendite Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) per un'introduzione al tuo accordo.
 
 
 ###Account {{site.data.keyword.Bluemix_notm}} locale
@@ -199,19 +193,17 @@ oltre i limiti previsti da tale accordo di sottoscrizione. Contatta il rappresen
 Con un account fatturabile {{site.data.keyword.Bluemix_notm}}, gli addebiti a tuo carico sono basati sull'elaborazione, sui contenitori e sui servizi utilizzati nella tua organizzazione. Potresti essere invitato da altri utenti {{site.data.keyword.Bluemix_notm}}
 a partecipare ad organizzazioni sotto un account differente. Se crei delle applicazioni
 o utilizzi dei servizi nelle organizzazioni alle quali sei invitato, l'utilizzo che ne consegue
-viene addebitato all'account che contiene tali organizzazioni. Puoi trovare ulteriori informazioni su uno specifico piano su una pagina dei dettagli di
-una risorsa dal catalogo {{site.data.keyword.Bluemix_notm}} o nel calcolatore dei prezzi nella pagina Prezzi {{site.data.keyword.Bluemix_notm}}.
+viene addebitato all'account che contiene tali organizzazioni. Per ulteriori informazioni su uno specifico piano puoi utilizzare la pagina dei dettagli di una risorsa dal catalogo Bluemix o il calcolatore dei prezzi nella pagina Prezzi {{site.data.keyword.Bluemix_notm}}.
 
-Si applicano diversi tipi di addebiti a seconda delle funzioni di {{site.data.keyword.Bluemix_notm}} che stai utilizzando. La seguente tabella fornisce una panoramica di alto livello:
+Vengono applicati diversi tipi di addebiti a seconda delle funzioni di Bluemix che stai utilizzando. La seguente tabella fornisce una panoramica di alto livello:
 
-| Tipo di addebito | Descrizione | Funzioni {{site.data.keyword.Bluemix_notm}} che utilizzano questi tipo di addebito | Esempio |
+| Tipo di addebito | Descrizione | Funzioni Bluemix che utilizzano questo tipo di addebito | Esempio |
 |------------------|------------------|--------------------------|--------------------------|
 | Fisso | Il prezzo forfettario è basato su un addebito mensile concordato che non viene adeguato. | Servizi  | Data Cache ha un piano fisso che viene addebitato a una tariffa mensile fissa. |
 | Misurato | Il prezzo a utilizzo misurato è basato sul numero di GB-ore consumate per i runtime e sul numero di GB-ore e sulla quantità di indirizzi IP e archiviazione per i contenitori. | Servizi, elaborazione e contenitori | Per il servizio Push, la quota di utilizzo che supera la franchigia mensile viene addebitata. |
 |  A livelli   |  Alcuni piani di prezzo sono basati su un modello di prezzi a livelli, quindi puoi ottenere uno sconto basato sui
 volumi in base al tuo utilizzo effettivo. I servizi possono offrire dei piani di prezzo di livello a blocchi, graduale o semplice. | Servizi | Il prezzo a livelli viene di norma utilizzato per le metriche di addebito di cui è prevista una quantità molto elevata al mese, come le chiamate API. |
-| Riservato | Il prezzo riservato è basato su un impegno a lungo termine per un servizio, in modo da consentirti di ottenere un prezzo scontato. Con un piano riservato, ottieni
-un'istanza del servizio dedicata che è facile da configurare, distribuire e distribuire nell'ambiente {{site.data.keyword.Bluemix_notm}} pubblico. | Servizi | DB2 su Cloud ha dei piani riservati.|
+| Riservato | Il prezzo riservato è basato su un impegno a lungo termine per un servizio, in modo da consentirti di ottenere un prezzo scontato. Con un piano riservato, ottieni un'istanza del servizio dedicato facile da configurare, distribuire e consegnare in ambiente Bluemix pubblico. | Servizi | DB2 su Cloud ha dei piani riservati.|
 
 ###Addebiti per le risorse di elaborazione
 {: #compute}
@@ -246,9 +238,9 @@ servizio Push, la quota di utilizzo che supera la franchigia mensile viene
 addebitata.</dd>
 <dt>Addebiti riservati</dt>
     <dd><p>In quanto proprietario di un account Pagamento a consumo o di un account Sottoscrizione, puoi riservare un'istanza del servizio, con un impegno a lungo termine, per un prezzo scontato. Ad esempio, puoi riservare l'offerta standard DB2 on Cloud di grandi dimensioni per 12 mesi.</p> 
-    <p>Alcuni servizi {{site.data.keyword.Bluemix_notm}} offrono dei piani riservati. Puoi richiedere un piano riservato dal <strong>Catalogo</strong> {{site.data.keyword.Bluemix_notm}} facendo clic sul tile del servizio. Seleziona quindi il piano di servizio che meglio soddisfa le tue esigenze. Se è disponibile un piano riservato, fai clic su <strong>Richiesta</strong> e attieniti alle richieste che ti vengono presentate per inviare la tua richiesta. Riceverai un'email che contiene le informazioni sul prezzo del piano riservato. Verrai anche contattato a stretto giro da un rappresentante del settore Vendite di {{site.data.keyword.Bluemix_notm}} per completare l'acquisto.</p></dd>
+    <p>Alcuni servizi Bluemix offrono dei piani riservati. Puoi richiedere un piano riservato dal <strong>Catalogo</strong> Bluemix facendo clic sul tile del servizio. Seleziona quindi il piano di servizio che meglio soddisfa le tue esigenze. Se è disponibile un piano riservato, fai clic su <strong>Richiesta</strong> e attieniti alle richieste che ti vengono presentate per inviare la tua richiesta. Riceverai un'email che contiene le informazioni sul prezzo del piano riservato. Verrai anche contattato al più presto da un rappresentante del settore Vendite di Bluemix per completare l'acquisto.</p></dd>
 <dt>Addebiti a livelli</dt>
-    <dd>Analogamente agli addebiti misurati, paghi in base al tuo consumo di runtime e servizi. Tuttavia, gli addebiti a livelli aggiungono degli ulteriori livelli di prezzo, spesso offrendo degli addebiti scontati nei livelli con il consumo più elevato. Il prezzo a livelli è offerto in modalità semplice, graduale o a blocchi.</dd>
+    <dd>Analogamente agli addebiti misurati, paghi in base al tuo consumo di runtime e servizi. Tuttavia, gli addebiti a livelli aggiungono degli ulteriori livelli di prezzo, spesso offrendo degli addebiti scontati nei livelli con un più ampio consumo. Il prezzo a livelli è offerto in modalità semplice, graduale o a blocchi.</dd>
 </dl>
 
 
@@ -416,7 +408,7 @@ sono in dollari statunitensi.
 
 |Servizio |	Funzioni |	Prezzo |
 |--------|-----------|--------|
-|SDK per Node.js |	375 GB-ore gratuiti al mese (condivise tra tutti i runtime) |	$0,07 USD/GB-ora|
+|SDK for Node.js |	375 GB-ore gratuiti al mese (condivise tra tutti i runtime) |	$0,07 USD/GB-ora|
 |Auto-Scaling |	Piano di servizio gratuito per il servizio Auto-Scaling |	Libero|
 |Data Cache - Starter |	1 GB di spazio di cache e una
                                 replica |	$55,00 USD/istanza |
@@ -436,8 +428,7 @@ essere calcolato nel seguente modo:
 
 <dl>
 <dt>Quattro istanze di runtime Node.js di 256 MB</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} addebita per
-un runtime in base ai GB-ore. Il numero di GB utilizzati al mese è <code>4 x 256 = 1024 MB o 1 GB al mese</code>. Presumi che ci siano <code>24 x 30 = 720 ore in un mese</code>; l'applicazione viene quindi addebitata per <code>1 x 720 = 720 GB-ore</code>.
+<dd>Bluemix addebita un runtime in base ai GB-ore. Il numero di GB utilizzati al mese è <code>4 x 256 = 1024 MB o 1 GB al mese</code>. Presumi che ci siano <code>24 x 30 = 720 ore in un mese</code>; l'applicazione viene quindi addebitata per <code>1 x 720 = 720 GB-ore</code>.
 <p>
 375 GB-ore sono inclusi in una franchigia
 al mese, condivisi tra tutti i runtime {{site.data.keyword.Bluemix_notm}}. Il costo totale per il runtime è pertanto <code>$0,07 x (720-375) = $24,15</code>.</p></dd>

@@ -4,7 +4,7 @@
 # Visão geral do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última atualização: 22 de outubro de 2015*
+*Última atualização: 20 de novembro de 2015*
 
 {{site.data.keyword.Bluemix}} é a plataforma em nuvem
 aberta da {{site.data.keyword.IBM}} que fornece aos
@@ -109,7 +109,7 @@ do {{site.data.keyword.Bluemix_notm}}](images/arch.png)
 *Figura 1.
 Arquitetura do {{site.data.keyword.Bluemix_notm}}*
 
-É possível implementar seus apps em diferentes regiões do {{site.data.keyword.Bluemix_notm}}, para considerações de latência ou segurança. É possível optar por implementar para uma região ou entre várias regiões. Para obter mais informações, consulte [Regiões](overview.html#ov_intro__reg).
+É possível implementar seus apps em diferentes regiões do {{site.data.keyword.Bluemix_notm}}, para considerações de latência ou segurança. É possível optar por implementar para uma região ou entre várias regiões. Para obter mais informações, consulte [Regiões](#ov_intro__reg).
 
 ![Desenvolvimento de
 aplicativo multiregion](images/multi-region.png)
@@ -516,7 +516,7 @@ possível selecionar e ligar um serviço privado a um app sem se conectar ao ser
 liga serviços privados ao seu app da mesma maneira que faz com outros
 serviços {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como publicar uma API como um serviço privado,
 consulte Publicando uma API como um serviço privado.</dd>
-	</dl>
+</dl>
 
 ### Cenário: Criando um app móvel avançado para conexão
 com o sistema de registro

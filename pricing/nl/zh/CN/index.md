@@ -41,22 +41,22 @@
 
 *上次更新时间：2015 年 11 月 9 日*
 
-您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。{{site.data.keyword.Bluemix_notm}} 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况详细信息”视图，可用于检查构建应用程序后的实际成本。{:shortdesc}
+您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况详细信息”视图，可用于在构建应用程序后检查实际成本。{:shortdesc}
 
 ## 免费试用
 {: #trial}
-使用您的 {{site.data.keyword.IBM}} 标识进行注册后，即可享受 30 天的免费试用。试用期间，您可以在 {{site.data.keyword.Bluemix_notm}} 上开发应用程序和使用服务。
+使用您的 {{site.data.keyword.IBM}} 标识进行注册后，即可享受 30 天的免费试用。试用期间，您可以在 Bluemix 上开发应用程序和使用服务。
 
 免费为您的帐户提供以下资源：
 
 * 最大值 2 GB 内存
 * 10 个服务
-* 1 SSL 证书
+* 1 个 SSL 证书
 
-免费试用会在您注册后的 30 天到期。30 天试用到期后，您帐户中的应用程序将停止。您将无法在 {{site.data.keyword.Bluemix_notm}} 上注册获取另一次试用。然而，您仍可以访问您的帐户和您收到邀请的帐户。要重新启动应用程序，必须提供现买现付帐户的信用卡信息，或创建预订帐户。转换帐户之后，可以继续使用免费的计算和服务限额。您只需要为每月免费限额中不包括的服务、容器和运行时的使用量付费。
+免费试用会在您注册后的 30 天到期。30 天试用到期后，您帐户中的应用程序将停止。您将无法在 Bluemix 上注册获取另一次试用。然而，您仍可以访问您的帐户和您收到邀请的帐户。要重新启动应用程序，必须提供现买现付帐户的信用卡信息，或创建预订帐户。转换帐户之后，可以继续使用免费的计算和服务限额。您只需要为每月免费限额中不包括的服务、容器和运行时的使用量付费。
 
-如果您的免费试用到期后未转换帐户，那么在试用到期后，会收到有关帐户状态的电子邮件通知。通知会提示您创建付费帐户，这样您的应用程序设置和配置不会丢失。如果您不想从 {{site.data.keyword.Bluemix_notm}} 收到这些通知，可以随时取消预订。试用到期后 1 个月，会除去您的应用程序和服务配置。下图显示 {{site.data.keyword.Bluemix_notm}} 帐户管理的一般流程。图 1. {{site.data.keyword.Bluemix_notm}} 帐户管理流程图
-{{site.data.keyword.Bluemix_notm}} 帐户管理流程图
+如果您的免费试用到期后未转换帐户，那么在试用到期后，会收到有关帐户状态的电子邮件通知。通知会提示您创建付费帐户，这样您的应用程序设置和配置不会丢失。如果您不想从 Bluemix 收到这些通知，可以随时取消预订。试用到期后 1 个月，会除去您的应用程序和服务配置。下图显示了 Bluemix 帐户管理的一般流程。图 1. Bluemix 帐户管理流程图
+Bluemix 帐户管理流程图
 
 ![{{site.data.keyword.Bluemix_notm}} 帐户管理流程图](acctmgmt600.png)
 
@@ -69,7 +69,7 @@
 ##成本
 {: #what_it_costs}
 
-费用根据特定服务、运行时、容器、虚拟机或支持选项所使用的资源而定。资源可以是 API 调用数、实例数、内存、存储器等。{{site.data.keyword.Bluemix_notm}} 还提供了详细的成本估算工具和精确到分的成本计算器，帮助您规划费用。您可以使用*使用情况详细信息*视图来检查构建应用程序后的实际成本。有关费用的更多详细信息，请参阅[收费方式](index.html#charges)。
+费用根据特定服务、运行时、容器、虚拟机或支持选项所使用的资源而定。资源可以是 API 调用数、实例数、内存、存储器等。Bluemix 还提供了详细的成本估算工具和精确到分的成本计算器，帮助您规划费用。您可以使用*使用情况详细信息*视图来检查构建应用程序后的实际成本。有关费用的更多详细信息，请参阅[收费方式](index.html#charges)。
  
 
 ##促销码
@@ -90,15 +90,15 @@
 ##计费方式
 {: #pay-accounts}
 
-注册 {{site.data.keyword.Bluemix_notm}} 计费套餐时，可以选择以下帐户：
+注册 Bluemix 计费套餐时，可以选择以下帐户：
 * 现买现付
 * 预订
-* {{site.data.keyword.Bluemix_notm}} Dedicated
-* {{site.data.keyword.Bluemix_notm}} Local
+* Bluemix Dedicated
+* Bluemix Local
 
-使用现买现付帐户时，将根据您所使用的 {{site.data.keyword.Bluemix_notm}} 计算和服务来收费。使用预订帐户时，可享受基于每月最低花费承诺的每月折扣。{{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local 按一年期合同收费。
+使用现买现付帐户时，将根据您所使用的 {{site.data.keyword.Bluemix_notm}} 计算和服务来收费。使用预订帐户时，可享受基于每月最低花费承诺的每月折扣。Bluemix Dedicated 和 Bluemix Local 按一年期合同收费。
 
-您可以随时将免费试用帐户转换为计费帐户。所有免费试用的非计费帐户信息和 {{site.data.keyword.Bluemix_notm}} 解决方案都将无缝合并到新的计费帐户中。
+您可以随时将免费试用帐户转换为计费帐户。所有免费试用的非计费帐户信息和 Bluemix 解决方案都将无缝合并到新的计费帐户中。
 
 创建计费帐户后，您可以编辑所提供的信息。单击 {{site.data.keyword.Bluemix_notm}} 用户界面右上角的**概要文件设置**图标，然后单击**帐户 &gt; 帐户类型**来编辑您的信息。
 
@@ -109,16 +109,16 @@
 
 如果注册现买现付帐户，那么只需要为您所使用的 {{site.data.keyword.Bluemix_notm}} 资源付费。您还有资格获取免费运行时和服务限额。
 
-在许多国家或地区，都可以从 {{site.data.keyword.Bluemix_notm}} 用户界面注册现买现付帐户。单击**免费试用**图标，然后单击**确认您的免费帐户**并选择**选项 1**。输入您所在的国家或地区，然后单击**添加我的信用卡**，以提供您的信用卡信息。在您提供帐单和信用卡信息，接受条款和条件并提交帐户请求之后，将验证您的信用卡。还会发送帐户信息的确认电子邮件。接收确认电子邮件之后的数分钟，您可以返回到 {{site.data.keyword.Bluemix_notm}}，以继续构建您的应用程序。如果 {{site.data.keyword.Bluemix_notm}} 无法处理您所在国家或地区的在线请求，那么您可以使用 [{{site.data.keyword.Bluemix_notm}} 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接联系 {{site.data.keyword.Bluemix_notm}} 销售人员来注册您的现买现付帐户。
+在许多国家或地区，都可以从 {{site.data.keyword.Bluemix_notm}} 用户界面注册现买现付帐户。单击**免费试用**图标，然后单击**确认您的免费帐户**并选择**选项 1**。输入您所在的国家或地区，然后单击**添加我的信用卡**，以提供您的信用卡信息。在您提供帐单和信用卡信息，接受条款和条件并提交帐户请求之后，将验证您的信用卡。还会发送帐户信息的确认电子邮件。接收确认电子邮件之后的数分钟，您可以返回到 {{site.data.keyword.Bluemix_notm}}，以继续构建您的应用程序。如果 {{site.data.keyword.Bluemix_notm}} 无法处理您所在国家或地区的在线请求，那么您可以使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接联系 {{site.data.keyword.Bluemix_notm}} 销售人员来注册您的现买现付帐户。
 
-您可以随时将现买现付帐户转换为预订帐户。使用预订帐户时，需要承诺每月最低花费量。如果想要转换为预订帐户，请使用 [{{site.data.keyword.Bluemix_notm}} 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接来联系 {{site.data.keyword.Bluemix_notm}} 销售人员。
+您可以随时将现买现付帐户转换为预订帐户。使用预订帐户时，需要承诺每月最低花费量。如果想要转换为预订帐户，请使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接来联系 {{site.data.keyword.Bluemix_notm}} 销售人员。
 
 ###预订帐户
 {: #subscription}
 
 如果注册预订帐户，那么需要承诺每月最低花费量，您可享受适用于该最低费用的预订折扣。此外，您需要为超出最小花费量的任何使用量付费。
 
-要注册预订帐户以及了解有关预订费率和折扣的更多信息，必须使用 [{{site.data.keyword.Bluemix_notm}} 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接来联系 {{site.data.keyword.Bluemix_notm}} 销售人员。
+要注册预订帐户以及了解有关预订费率和折扣的更多信息，必须使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接来联系 {{site.data.keyword.Bluemix_notm}} 销售人员。
 
 ###{{site.data.keyword.Bluemix_notm}} Dedicated 帐户
 {: #dedicated}
@@ -131,9 +131,9 @@
 * 所有您选择的专用服务以及所有公共 {{site.data.keyword.Bluemix_notm}} 服务
 * 标准 {{site.data.keyword.Bluemix_notm}} 支持
 
-您还可订购可选项（例如，SoftLayer DirectLink）或高级支持选项。有关更多信息，请与 [{{site.data.keyword.Bluemix_notm}} 销售人员](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)联系。
+您还可订购可选项（例如，SoftLayer DirectLink）或高级支持选项。有关更多信息，请与 [Bluemix 销售人员](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)联系。
 
-使用 {{site.data.keyword.Bluemix_notm}} Dedicated 时，必须至少注册为期一年的使用期限。在该期限内，您每月所支付的费用取决于所需的专用服务以及预订帐户（通过该帐户，您可以访问所有公共服务）。{{site.data.keyword.Bluemix_notm}} Public 中服务的使用量费用按照您的预订帐户协议进行计算。如果使用了超过该预订协议的服务，那么您会收到相应发票。请联系 IBM 专用帐户代表或联系 [{{site.data.keyword.Bluemix_notm}} 销售人员](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)来着手处理您的协议。
+使用 {{site.data.keyword.Bluemix_notm}} Dedicated 时，必须至少注册为期一年的使用期限。在该期限内，您每月所支付的费用取决于所需的专用服务以及预订帐户（通过该帐户，您可以访问所有公共服务）。{{site.data.keyword.Bluemix_notm}} Public 中服务的使用量费用按照您的预订帐户协议进行计算。如果使用了超过该预订协议的服务，那么您会收到相应发票。请联系 IBM 指定的客户代表或联系 [Bluemix 销售人员](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)来着手处理您的协议。
 
 
 ###{{site.data.keyword.Bluemix_notm}} Local 帐户
@@ -141,26 +141,26 @@
 
 {{site.data.keyword.Bluemix_notm}} 需要以下项的至少一年使用期限：
 
-* 称为中继设备的交付功能，它能够将 IBM 连接到本地部署，并自动地持续交付更新
+* 一项称为“中继”的交付功能，它能够使 IBM 连接到您的本地部署，并以一致的方式自动交付更新
 * 所有受支持的运行时（IBM Java Liberty、Node.js 和内置开放式源代码运行时）
 * 所有您选择的本地服务以及所有公共 {{site.data.keyword.Bluemix_notm}} 服务的访问权
 * 标准 {{site.data.keyword.Bluemix_notm}} 支持
 
-使用 {{site.data.keyword.Bluemix_notm}} Local 时，必须至少注册为期一年的使用期限。在该期限内，您每月所支付的费用取决于所需的本地服务以及预订帐户（通过该帐户，您可以访问所有公共服务）。{{site.data.keyword.Bluemix_notm}} Public 中服务的使用量费用按照您的预订帐户协议进行计算。如果使用了超过该预订协议的服务，那么您会收到相应发票。请联系 IBM 专用帐户代表或联系 [{{site.data.keyword.Bluemix_notm}} 销售人员](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)来着手处理您的协议。
+使用 {{site.data.keyword.Bluemix_notm}} Local 时，必须至少注册为期一年的使用期限。在该期限内，您每月所支付的费用取决于所需的本地服务以及预订帐户（通过该帐户，您可以访问所有公共服务）。{{site.data.keyword.Bluemix_notm}} Public 中服务的使用量费用按照您的预订帐户协议进行计算。如果使用了超过该预订协议的服务，那么您会收到相应发票。请联系 IBM 指定的客户代表或联系 [{{site.data.keyword.Bluemix_notm}} 销售人员](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)来着手处理您的协议。
 
 ##收费方式
 {: #charges}
 
-使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您所在组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。您可以在 {{site.data.keyword.Bluemix_notm}}“目录”中的“资源详细信息”页面上，或在 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器中，查看有关特定费用的更多信息。
+使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您所在组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。您可以在 Bluemix“目录”中的“资源详细信息”页面上，或在 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器中，查看有关特定费用的更多信息。
 
-根据您所使用的 {{site.data.keyword.Bluemix_notm}} 功能，应用不同的费用类型。下表提供了高级概述：
+根据您所使用的 Bluemix 功能，应用不同的费用类型。下表提供了高层次的概述：
 
-| 费用类型 | 描述 | 使用此类型费用的 {{site.data.keyword.Bluemix_notm}} 功能 | 示例 |
+| 费用类型 | 描述 | 使用此类型费用的 Bluemix 功能 | 示例 |
 |------------------|------------------|--------------------------|--------------------------|
 | 固定 | 固定费率定价基于约定的每月费用，此费用不可调整。 | 服务  | Data Cache 具有按每月固定费率收费的固定套餐。 |
 | 计量 | 按使用量计量的定价基于运行时的所使用 GB-小时数以及容器的所使用 GB-小时数和 IP 地址数及存储量。 | 服务、计算和容器 | 对于 Push 服务，会对超出每月免费限额的任何使用量收费。 |
 |  分层   |  某些定价套餐基于分层定价模型，会根据您的实际使用量为您提供数量折扣。服务可能会提供简单层、累进层或包量层定价套餐。 | 服务 | 分层定价通常用于每月数量预计会非常高的费用度量值，例如 API 调用数。 |
-| 保留 | 保留定价基于服务的长期承诺，会为您提供折扣价格。使用保留套餐时，您会得到一个易于在公共 {{site.data.keyword.Bluemix_notm}} 环境中设置、部署和交付的专用服务实例。 | 服务 | DB2 on Cloud 具有保留套餐。|
+| 保留 | 保留定价基于服务的长期承诺，会为您提供折扣价格。使用保留套餐时，您会得到一个易于在公共 Bluemix 环境中设置、部署和交付的专用服务实例。 | 服务 | DB2 on Cloud 具有保留套餐。|
 
 ###计算资源的费用
 {: #compute}
@@ -183,7 +183,7 @@
     <dd>根据运行时和服务的使用量付费。例如，通过使用 Push 服务，对超出每月免费限额的任何使用量收费。</dd>
 <dt>保留费用</dt>
     <dd><p>作为现买现付帐户或预订帐户的帐户所有者，您可以保留服务实例，享受基于长期承诺的折扣价格。例如，可以将标准大型 DB2 on Cloud 产品保留 12 个月。</p> 
-    <p>某些 {{site.data.keyword.Bluemix_notm}} 服务提供保留套餐。您可以在 {{site.data.keyword.Bluemix_notm}}“<strong>目录</strong>”中通过单击服务磁贴来请求保留套餐。然后，选择最适合您需求的服务套餐。如果保留套餐可用，请单击<strong>请求</strong>，然后遵循提示发送请求。您将收到一封电子邮件，其中包含保留套餐的价格信息。{{site.data.keyword.Bluemix_notm}} 销售代表也会尽快与您联系以完成购买。</p></dd>
+    <p>某些 Bluemix 服务提供保留套餐。您可以在 Bluemix <strong>目录</strong>中通过单击服务磁贴来请求保留套餐。然后，选择最适合您需求的服务套餐。如果保留套餐可用，请单击<strong>请求</strong>，然后遵循提示发送请求。您将收到一封电子邮件，其中包含保留套餐的价格信息。Bluemix 销售代表也会尽快与您联系以完成购买。</p></dd>
 <dt>分层费用</dt>
     <dd>与计量费用类似，分层费用也是根据运行时和服务的使用量付费。不过，分层费用会另添加额外的定价层，通常在使用量较大的层中提供折扣费用。分层定价以简单层、累进层或包量层形式提供。</dd>
 </dl>
@@ -243,7 +243,7 @@
 ####包量层
 {: #block_tier}
 
-在包量层模型中，对于在使用量级别范围内的使用量，价格是固定费用。总价等于使用量级别的费用，与实际使用量无关。后续每一层的价格与数量比率都比前一层低。例如：
+在包量层模型中，对于在使用量级别范围内的使用量，价格是固定费用。总价等于使用量级别的费用（无论实际使用量是多少）。后续每一层的价格与数量比率都比前一层低。例如：
 
 |项数 |	所有项的总价|
 |------------------|-----------------------------|
@@ -277,13 +277,13 @@
 * 200 GB 块存储器
 * 4 个公共 IP 地址
 
-此外，还可以使用虚拟机基础架构在您的 {{site.data.keyword.Bluemix_notm}} 私有云中供应虚拟机，具体仅受您私有云的限制和配额影响。
+此外，还可以使用虚拟机基础架构在您的 {{site.data.keyword.Bluemix_notm}} 私有云中供应虚拟机，具体情况仅受您私有云的限制和配额的影响。
 
 
 ##成本估算方法
 {: #cost}
 
-您可以使用不同方法来了解使用 {{site.data.keyword.Bluemix_notm}} 来构建和托管应用程序需要支付多少费用。
+您可以使用不同的方法来了解通过 {{site.data.keyword.Bluemix_notm}} 构建和托管应用程序所需的费用。
 
 * {{site.data.keyword.Bluemix_notm}}“定价”页面上的成本估算工具根据您应用程序的大小来提供粗略的成本估算。
 * {{site.data.keyword.Bluemix_notm}}“定价”页面上的成本计算器根据您输入的运行时和服务使用量来提供准确的应用程序价格。
@@ -316,13 +316,13 @@
 ###{{site.data.keyword.Bluemix_notm}} 资源的价格
 {: #sample_resources}
 
-为了使示例简单，假设下表中的价格在时间范围内不波动，例如，月。此示例中的所有定价使用美元。
+为简化示例，假设下表中的价格在某个时间范围（例如，一个月）内不波动。此示例中的所有定价使用美元。
 
 |服务 |	功能 |	价格 |
 |--------|-----------|--------|
 |SDK for Node.js |	每月 375 GB-小时可用（在所有运行时共享） |	0.07 美元/GB-小时|
 |Auto-Scaling |	Auto-Scaling 服务的免费服务套餐 |	免费|
-|Data Cache - 入门模板 |	1 GB 高速缓存空间和副本 |	55.00 美元/实例 |
+|Data Cache - 入门级 |	1 GB 高速缓存空间和副本 |	55.00 美元/实例 |
 |Data Cache - 标准 |	5 GB 高速缓存空间和副本 |	155.00 美元/实例 |
 |Data Cache - 高级 |	25 GB 高速缓存空间和副本 |	505.00 美元/实例|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 免费数据存储<br/>50,000 个免费稀少 API 调用/月<br/>10,000 个免费频繁 API 调用/月 | 1.00 美元/GB<br/>0.03 美元/1000 个稀少 API 调用<br/>0.15 美元/1000 个频繁 API 调用 |
@@ -335,7 +335,7 @@
 
 <dl>
 <dt>四个 256 MB Node.js 运行时实例</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。<p>
+<dd>Bluemix 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。<p>
 375 GB-小时包括在每月免费限额中，在所有 {{site.data.keyword.Bluemix_notm}} 运行时共享。因此，运行时的总成本为 <code>0.07 美元 x (720-375) = 24.15 美元</code>。</p></dd>
 
 <dt>两个 Auto-Scaling 策略（处理器和内存）</dt>
@@ -394,7 +394,7 @@
 
 您可以在 {{site.data.keyword.Bluemix_notm}} 的服务“仪表板”中更改服务套餐，前提是该服务支持套餐更改。
 
-只有特定服务才提供更改服务套餐的功能。如果服务支持套餐更改，那么服务“仪表板”的左侧导航中会显示**套餐**选项。每个服务在套餐更改后都有不同的后续步骤要执行。
+只有特定服务才提供更改服务套餐的功能。如果服务支持套餐更改，那么服务“仪表板”的左侧导航中会显示**套餐**选项。每个服务在套餐更改后都有一组不同的后续步骤要执行。
 
 1. 要更改套餐，请在服务“仪表板”中单击**套餐**。通常，可以升级套餐或降级套餐。
 2. 更改套餐后，必须完成一组后续步骤。步骤根据套餐更改和服务的类型而有所不同。例如，如果降级了套餐，那么可能需要重新编译打包应用程序。或者，如果升级了套餐，那么可能需要重新编译打包应用程序以及执行其他操作。<br/><br/>要重新编译打包应用程序，请转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，然后找到与服务绑定的应用程序。在应用程序菜单中，选择**重新启动应用程序**。<br/><br/>其他后续步骤操作根据服务而定。请参阅下表以了解具体的操作。

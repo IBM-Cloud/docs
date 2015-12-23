@@ -3,7 +3,7 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Mandatos cf para gestionar aplicaciones
+# Mandatos cf para gestionar apps
 
 *Última actualización: 10 de noviembre de 2015*
 
@@ -36,25 +36,25 @@ no tiene que especificar este parámetro para el mandato cf api.</dd>
 ## cf apps
 
 Lista todas las
-aplicaciones desplegadas en el espacio actual. También se visualiza el estado
-de cada aplicación.
+apps desplegadas en el espacio actual. También se visualiza el estado
+de cada app.
 
-Suponga que tiene una instancia para una app, en la columna instancias de la respuesta desde el mandato cf apps, verá 1/1 si la aplicación está activa y 0/1 si la aplicación está desactivada. Si ve ?/1, indicará que el estado de la instancia de la app es desconocido; puede copiar el URL de la app en su navegador para comprobar si la app responde, o puede poner el registro en cola mediante el mandato `cf logs nombre_aplicación` para ver si la app está generando contenido de registro.
+Suponga que tiene una instancia para una app, en la columna instancias de la respuesta desde el mandato cf apps, verá 1/1 si la app está activa y 0/1 si la app está desactivada. Si ve ?/1, indicará que el estado de la instancia de la app es desconocido; puede copiar el URL de la app en su navegador para comprobar si la app responde, o puede poner el registro en cola mediante el mandato `cf logs nombre_app` para ver si la app está generando contenido de registro.
 
 ## cf bind-service
 
 Enlaza
-una instancia de servicio existente a su aplicación.
+una instancia de servicio existente a su app.
 ```
 cf bind-service nombre_app instancia_servicio
 ```
 
 Por ejemplo, si tiene una instancia de servicio llamada `my_dataworks` en la organización y espacio actuales, puede utilizar `cf bind-service my_app
-my_dataworks` para enlazar esta instancia del servicio a la aplicación.
+my_dataworks` para enlazar esta instancia del servicio a la app.
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>instancia_servicio</dt>
 <dd>El nombre de la instancia de servicio existente.</dd>
 </dl>
@@ -93,18 +93,18 @@ cf create-space nombre_espacio
 
 ## cf delete
 
-Suprima una aplicación existente.
+Suprima una app existente.
 ```
 cf delete nombre_app
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.<dd>
+<dd>El nombre de la app.<dd>
 <dt>*-f*</dt>
-<dd>Fuerza la supresión de la aplicación sin ninguna confirmación. Este
+<dd>Fuerza la supresión de la app sin ninguna confirmación. Este
 parámetro es opcional.</dd>
 <dt>*-r*</dt>
-<dd>Suprime todos los nombres de dominio asociados a la aplicación . Este
+<dd>Suprime todos los nombres de dominio asociados a la app . Este
 parámetro es opcional.</dd>
 </dl>
 
@@ -125,13 +125,13 @@ parámetro es opcional.</dd>
 
 ## cf events
 
-Muestra los sucesos de tiempo de ejecución relacionados con una aplicación.
+Muestra los sucesos de tiempo de ejecución relacionados con una app.
 ```
 cf events nombre_app
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 </dl>
 
 ## cf help
@@ -184,13 +184,13 @@ y lo vean otros usuarios del sistema operativo local.
 ## cf logs
 
 Visualiza las
-corrientes de anotaciones cronológicas STDOUT y STDERR de una aplicación.
+corrientes de anotaciones cronológicas STDOUT y STDERR de una app.
 ```
 cf logs nombre_app
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*--recent*</dt>
 <dd>Recupera los registros recientes.</dd>
 </dl>
@@ -205,18 +205,18 @@ cf marketplace
 
 ## cf push
 
-Despliega una aplicación nueva en Bluemix, o actualiza una aplicación existente en Bluemix.
+Despliega una app nueva en Bluemix, o actualiza una app existente en Bluemix.
 ```
-cf push nombre_app
+cf push nombre_app 
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*-b*nombre_paquete_compilación</dt>
 <dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede
 ser un paquete de compilación personalizado por nombre o URL Git, como por ejemplo mi_paquete-compilación o https://github.com/heroku/heroku-buildpack-play.git.</dd>
 <dt>*-c*mandato_inicio</dt>
-<dd>El mandato de inicio de la aplicación. Para utilizar el mandato de inicio predeterminado
+<dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. Por ejemplo:</dd>
 <dd>```
 cf push nombre_app -c null
@@ -226,55 +226,55 @@ cf push nombre_app -c null
 cf push nombre_app -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f* manifest_path</dt>
-<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la aplicación.</dd>
+<dd>La vía de acceso al archivo de manifiesto. El archivo de manifiesto predeterminado es manifest.yml y se encuentra en el directorio raíz de la app.</dd>
 <dt>*-i*número_instancia</dt>
 <dd>El número de instancias.</dd>
 <dt>*-k*límite_disco</dt>
-<dd>El límite de disco de la aplicación, como por ejemplo *256M*, *1024M*
+<dd>El límite de disco de la app, como por ejemplo *256M*, *1024M*
 o *1G*.</dd>
 <dt>*-m*límite_memoria</dt>
-<dd>El límite de memoria de la aplicación, como por ejemplo *256M*, *1024M*
+<dd>El límite de memoria de la app, como por ejemplo *256M*, *1024M*
 o *1G*.</dd>
 <dt>*-n*nombre_host</dt>
-<dd>El nombre de host de la aplicación, como por ejemplo *mi-subdominio*.</dd>
+<dd>El nombre de host de la app, como por ejemplo *mi-subdominio*.</dd>
 <dt>*-p*vía_acceso_app</dt>
-<dd>La vía de acceso al directorio de la aplicación o el archivo de archivado de la aplicación.</dd>
+<dd>La vía de acceso al directorio de la app o el archivo de archivado de la app.</dd>
 <dt>*-t*tiempo_espera</dt>
-<dd>Tiempo máximo en segundos para que se inicie la aplicación. Es posible que otros tiempos de espera de lado del servidor
+<dd>Tiempo máximo en segundos para que se inicie la app. Es posible que otros tiempos de espera de lado del servidor
 sustituyan este valor.</dd>
 <dt>*-s* nombrepila</dt>
 <dd>La pila para ejecutar las apps. Una pila es un sistema de archivos preconstruido, incluido el sistema operativo. Utilice `cf stacks` para ver las pilas disponibles en {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
-<dd>Correlaciona el dominio de sistema de Bluemix a esta aplicación.</dd>
+<dd>Correlaciona el dominio de sistema de Bluemix a esta app.</dd>
 <dt>*--no-manifest*</dt>
 <dd>Ignora el archivo de manifiesto predeterminado.</dd>
 <dt>*--no-route*</dt>
-<dd>No correlaciona ninguna ruta a esta aplicación.</dd>
+<dd>No correlaciona ninguna ruta a esta app.</dd>
 <dt>*--no-start*</dt>
-<dd>No inicia la aplicación tras desplegarse.</dd>
+<dd>No inicia la app tras desplegarse.</dd>
 <dt>*--random-route*</dt>
-<dd>Crea una ruta aleatoria para la aplicación.</dd>
+<dd>Crea una ruta aleatoria para la app.</dd>
 </dl>
 
 ## cf scale
 
-Muestra o cambia el número de instancia, el límite de espacio de disco y el límite de memoria de una aplicación.
+Muestra o cambia el número de instancia, el límite de espacio de disco y el límite de memoria de una app.
 ```
 cf scale nombre_app -i número_instancia -k límite_disco -m límite_memoria
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>*-i*número_instancia</dt>
 <dd>El número de instancias</dd>
 <dt>*-k*límite_disco</dt>
-<dd>El límite de disco de la aplicación, como por ejemplo *256M*, *1024M*
+<dd>El límite de disco de la app, como por ejemplo *256M*, *1024M*
 o *1G*.</dd>
 <dt>*-m*límite_memoria</dt>
-<dd>El límite de memoria de la aplicación, como por ejemplo *256M*, *1024M*
+<dd>El límite de memoria de la app, como por ejemplo *256M*, *1024M*
 o *1G*.</dd>
 <dt>*-f*</dt>
-<dd>Fuerza el reinicio de la aplicación sin ninguna solicitud.</dd>
+<dd>Fuerza el reinicio de la app sin ninguna solicitud.</dd>
 </dl>
 
 ## cf services
@@ -287,13 +287,13 @@ cf services
 
 ## cf set-env
 
-Establece una variable de entorno para una aplicación.
+Establece una variable de entorno para una app.
 ```
 cf set-env nombre_app nombre_variable valor_variable
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 <dt>nombre_variable</dt>
 <dd>El nombre de la variable de entorno.</dd>
 <dt>valor_variable</dt>
@@ -309,13 +309,13 @@ cf stacks
 
 ## cf stop
 
-Detiene una aplicación.
+Detiene una app.
 ```
 cf stop nombre_app
 ```
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la aplicación.</dd>
+<dd>El nombre de la app.</dd>
 </dl>
 
 ## cf -v

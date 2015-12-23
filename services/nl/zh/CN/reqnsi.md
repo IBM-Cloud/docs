@@ -5,7 +5,7 @@
 
 #服务
 {: #services}
-*上次更新时间：2015 年 11 月 11 日*
+*上次更新时间：2015 年 12 月 7 日*
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。{:shortdesc}
 
@@ -25,22 +25,22 @@
 <dd>系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：</dd>
 </dl>
 
-*表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息*
+
 
 |类型	|描述	|支持详细信息|
 |:------|:--------------|:--------------|
-|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持](../support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
 |第三方	|非 IBM 公司提供的服务。	|对第三方服务的支持由服务提供者提供。如果 IBM 调查的某个问题确定为第三方服务中的缺陷，那么 IBM 没有义务提供修订。如果需要，IBM 将与第三方服务提供者共享分析。|
-|社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者[社区](https://developer.ibm.com/bluemix/)通过 {{site.data.keyword.Bluemix_notm}} 开发者社区[论坛](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
-|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持](../support/index.html#contacting-bluemix-support){: new_window}。|
-
+|社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
+|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
+*表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息*
 
 
 
 
 {{site.data.keyword.Bluemix_notm}} 还包含可供您试用的试验性服务。要查看所有可用的试验性服务、样板和运行时，请登录到 {{site.data.keyword.Bluemix_notm}}，滚动到“目录”的底部，然后单击 **{{site.data.keyword.Bluemix_notm}} Lab Catalog**。
 
-试验性服务可能不稳定，并且可能会发生变化而与较早版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持通过 {{site.data.keyword.Bluemix_notm}} 开发者社区[论坛](https://developer.ibm.com/answers/smartspace/bluemix/){: new_window}提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
+试验性服务可能不稳定，并且可能会发生变化而与较早版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
 
 要在 {{site.data.keyword.Bluemix_notm}} 用户界面、cf 命令行界面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支持的工具中使用服务，请执行以下步骤：
 
@@ -54,7 +54,7 @@
 
 不是所有的服务都可以在每个 {{site.data.keyword.Bluemix_notm}} 区域中使用。下表显示 IBM 提供的服务。
 
-*表 2. 服务可用性*
+
 
 |服务	|在美国南部区域中可用	|在欧洲英国区域中可用 |在澳洲悉尼区域中可用|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -120,6 +120,7 @@
 |{{site.data.keyword.workflow}}			|是		|是		|否|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|否|
 |{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
+*表 2. 服务可用性*
 
 
 # 将服务添加到应用程序
@@ -140,7 +141,7 @@
 
 您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照与编码外部应用程序或第三方工具以使用 {{site.data.keyword.Bluemix_notm}} 服务相同的方式来手动编码应用程序以使用这些服务。有关更多信息，请参阅[允许外部应用程序和第三方工具使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external)。
 
-如果您希望将服务添加到 {{site.data.keyword.Bluemix_notm}} 服务目录以供 {{site.data.keyword.Bluemix_notm}} 应用程序使用，那么可构建自己的服务，并将其与 {{site.data.keyword.Bluemix_notm}} 集成。有关更多信息，请参阅[将服务与 {{site.data.keyword.Bluemix_notm}} 集成](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}。
+
 
 ## 请求新的服务实例
 {: #req_instance}
@@ -199,7 +200,7 @@
 1. 请求服务的实例。
     1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中的“仪表板”上，单击**使用服务或 API**。这将显示“目录”。
     2. 在“目录”中，通过单击服务磁贴来选择所需的服务。这将打开服务详细信息页面。
-    3. 在“添加服务”窗口中，将**应用程序：**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
+    3. 在“添加服务”窗口中，将**应用程序**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
     4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务“仪表板”。
 2. 在服务“仪表板”的左侧导航窗格中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。使用显示的 API 密钥作为凭证来连接到服务实例。
 
@@ -286,15 +287,15 @@
 	cf bind-service myapp user-provided_service_instance
 	```
 
-## 在另一个区域使用服务
+## 在其他服务中使用服务
 {: #s2s_binding}
 
 通过服务访问授权，一个服务可以直接访问另一个服务。在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，可以授权和配置某个服务实例对其他服务实例的访问权。
 
 要从另一个服务使用某个服务实例，请完成以下步骤：
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击要访问的服务的磁贴。这将显示该服务的仪表板。
-2. 在左侧导航窗格中，单击“管理”以允许使用服务实例的控制台从其他服务实例进行绑定。
+1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要访问的服务的磁贴。这将显示该服务的仪表板。
+2. 在左侧导航窗格中，单击*管理*，通过使用该服务实例的控制台来授权其他服务实例绑定该服务实例。
 3. 如果想要拒绝其他服务访问该服务实例，请单击左侧导航窗格中的*服务访问授权*，然后使用*撤销*来除去服务绑定。 
 
 # 相关链接

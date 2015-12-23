@@ -1,12 +1,15 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # Debug
 {: #debugging}
 
 *Ultimo aggiornamento: 19 novembre 2015*
 
-Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori.
+Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori. 
 {:shortdesc}
 
 I log forniscono informazioni quali la corretta esecuzione di un lavoro o la sua mancata riuscita. Forniscono anche informazioni pertinenti che possono essere utilizzate per eseguire il debug e determinare la causa di un problema.
@@ -59,6 +62,8 @@ si suppone che si siano verificati errori di preparazione per un'applicazione No
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
+{: screen}
+
 
 Il primo errore nel log mostra il motivo per cui la preparazione non riesce. Nell'esempio, il primo errore è un output del componente DEA durante la fase di preparazione.
 ```
@@ -74,6 +79,9 @@ che l'errore si verifica per il modulo. Pertanto, potresti dover riesaminare la 
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 Puoi notare che viene inserita una virgola alla fine della riga 17 e quindi è prevista una coppia chiave-valore alla riga 18. Per correggere il problema, rimuovi la virgola:
 
 ```
@@ -82,6 +90,8 @@ Puoi notare che viene inserita una virgola alla fine della riga 17 e quindi è p
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## Debug degli errori di runtime
 {: #debugging-runtime-errors}

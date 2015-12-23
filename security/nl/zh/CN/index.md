@@ -1,13 +1,13 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2015 年 11 月 9 日*
+*上次更新时间：2015 年 12 月 7 日*
 
-{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 还提供了一套安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
+{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 遵循由 IBM 中的最佳做法驱动的系统、网络和安全工程方面的安全策略，从而确保安全就绪性。这些策略包括源代码扫描、动态扫描、威胁建模和渗透测试等做法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM 产品安全事件响应小组 (PSIRT) 的安全事件管理流程。有关详细信息，请参阅 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) 站点。
+{{site.data.keyword.Bluemix_notm}} 遵循由 IBM 中的最佳做法驱动的系统、网络和安全工程方面的安全策略，从而确保安全就绪性。这些策略包括源代码扫描、动态扫描、威胁建模和渗透测试等做法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM 产品安全事件响应小组 (PSIRT) 的安全事件管理流程。有关详细信息，请参阅 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 站点。
 
 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 使用 IBM SoftLayer 基础架构即服务 (IaaS) 云服务，并充分利用了其安全体系结构。SoftLayer IaaS 提供了多个重叠层来保护应用程序和数据。对于 {{site.data.keyword.Bluemix_notm}} Local，通过在位于公司防火墙后您自己的数据中心托管 {{site.data.keyword.Bluemix_notm}} Local，您可以拥有物理安全并提供基础架构。此外，{{site.data.keyword.Bluemix_notm}} 还在“平台即服务”层添加了不同类别（平台、数据和应用程序）的安全功能。
 
@@ -25,15 +25,17 @@
  * 拒绝服务和系统化攻击检测
  * 安全事件响应
 
-![Bluemix 平台安全概况](images/platform_sec.png)
+![Bluemix 平台安全概况](images/platform_sec.svg)
 
 *图 1. {{site.data.keyword.Bluemix_notm}} 平台安全概况*
 
-因为通过在公司防火墙后的数据中心托管 Bluemix，您可以拥有特定的安全机制，所以 {{site.data.keyword.Bluemix_notm}} Local 的安全会有所不同。下图详细描述了哪些安全机制是客户拥有的，哪些是由 IBM 管理和维护的。
+通过 {{site.data.keyword.Bluemix_notm}} Local，可在公司防火墙后和数据中心内托管 {{site.data.keyword.Bluemix_notm}}。因此，某些方面的安全性将由您来负责。下图详细描述了哪些安全机制是客户拥有的，哪些是由 IBM 管理和维护的。
 
-![Bluemix Local 平台安全概况](images/security_local_platform.png)
+![Bluemix Local 平台安全概况](images/security_local_platform.svg)
 
 *图 2. {{site.data.keyword.Bluemix_notm}} Local 平台安全概况*
+
+IBM 通过中继（{{site.data.keyword.Bluemix_notm}} Local 随附的一种交付功能）对您数据中心内的 {{site.data.keyword.Bluemix_notm}} Local 进行安装、远程监视和管理。中继通过特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书进行安全连接。有关 {{site.data.keyword.Bluemix_notm}} Local 和中继的更多信息，请参阅 [Bluemix Local](../local/index.html)。
 
 ### 功能性安全
 
@@ -153,7 +155,7 @@ HTTP 不活动超时为 2 分钟。
 
 {{site.data.keyword.Bluemix_notm}} 平台使用 SSL 来确保最终用户能够以安全方式访问应用程序，从而确保传输中的数据能够经由网络安全地到达位于 {{site.data.keyword.Bluemix_notm}} 内部网络边界上的 IBM DataPower Gateway。IBM DataPower Gateway 起到逆向代理的作用，可提供 SSL 终止功能。
 
-对于使用中的数据和静态数据，其安全由您负责，因为您在开发应用程序。您可以利用 {{site.data.keyword.Bluemix_notm}}“目录”中提供的几个数据相关服务来帮助您解决这些问题。
+对于使用中的数据和静态数据，其安全由您负责，因为应用程序由您开发。您可以利用 {{site.data.keyword.Bluemix_notm}}“目录”中提供的几个数据相关服务来帮助您解决这些问题。
 
 ## {{site.data.keyword.Bluemix_notm}} 应用程序安全
 {: #application-security}
@@ -191,7 +193,7 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 ### AppScan Dynamic Analyzer
 
-此服务通过动态分析工具提供对 Web 应用程序的安全分析。此工具用于处理已部署的 Web 应用程序，而不是应用程序源代码，并且可以扫描任何 {{site.data.keyword.Bluemix_notm}} Web 应用程序，与其语言或技术无关。您只能扫描所属组织的应用程序。要创建扫描，必须配置 Web 应用程序 URL 和登录凭证（如果有的话）。扫描完成后，即可下载报告。
+此服务通过动态分析工具提供对 Web 应用程序的安全分析。此工具用于处理已部署的 Web 应用程序，而不是应用程序源代码，并且可以扫描任何 {{site.data.keyword.Bluemix_notm}} Web 应用程序（无论其使用何种语言或技术）。您只能扫描所属组织的应用程序。要创建扫描，必须配置 Web 应用程序 URL 和登录凭证（如果有的话）。扫描完成后，即可下载报告。
 
 有关更多信息，请参阅 [AppScan Dynamic Analyzer 入门](../services/AppScanDynamicAnalyzer/index.html)。
 
@@ -213,7 +215,7 @@ Static Analyzer 服务支持在云上执行静态应用程序安全测试。可�
 
 通过 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 插件，可以对在 {{site.data.keyword.Bluemix_notm}} 上托管的 Web 或 Android 应用程序运行安全扫描。此插件由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上开发并提供支持。
 
-有关更多信息，请转至 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/)。
+有关更多信息，请转至 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
 ### SQL Database
 
@@ -247,32 +249,42 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 
 有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/index.html)。
 
+### 安全信息和事件管理
+
+您可以使用安全信息和事件管理 (SIEM) 工具来分析应用程序日志中的安全警报。其中一个此类工具是 IBM Security QRadar&reg; SIEM，该工具在云环境中提供安全智能。有关信息，请参阅 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}。
+
 ## {{site.data.keyword.Bluemix_notm}} 安全部署
 {: #security-deployment}
 
-为了确保访问安全，{{site.data.keyword.Bluemix_notm}} 安全部署体系结构包含适用于应用程序用户和开发者的不同信息流。
+{{site.data.keyword.Bluemix_notm}} 安全部署体系结构包含适用于应用程序用户和开发者的不同信息流，可确保访问安全。
 
-![Bluemix 安全部署体系结构](images/sec_deployment.png)
+![Bluemix 安全部署体系结构](images/sec_deployment.svg)
 
 *图 3. Bluemix 安全部署体系结构*
 
-适用于 {{site.data.keyword.Bluemix_notm}} *应用程序用户*的信息流如下所示：
+对于 {{site.data.keyword.Bluemix_notm}} *应用程序用户*，**应用程序用户流**如下所示：
  1. 经过具有适当入侵防御功能和网络安全的防火墙。
  2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
  3. 经过网络路由器。
  4. 到达 Droplet Execution Agent (DEA) 中的应用程序运行时。
 
 适用于 {{site.data.keyword.Bluemix_notm}} *开发者*的信息流主要有两个，一个用于登录，一个用于开发和部署。
- * 用于登录的开发者信息流包含以下内容：
+ * **开发者登录流**包含以下内容：
     * 对于要登录到 {{site.data.keyword.Bluemix_notm}} Public 的开发者，信息流如下所示：
       1. 经过 IBM Single Sign On 服务。
       2. 经过 IBM Web 身份。
     * 对于要登录到 {{site.data.keyword.Bluemix_notm}} Dedicated 或 Local 的开发者，信息流将经过企业 LDAP。
- * 用于应用程序开发和部署的开发者信息流如下所示：
+ * **开发和部署流**如下所示：
     1. 经过具有适当入侵防御功能和网络安全的防火墙。这仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated。
     2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
     3. 经过网络路由器。
     4. 经过授权（通过使用 Cloud Foundry 云控制器），以确保仅访问开发者创建的应用程序和服务实例。
+  
+对于 {{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local *管理员*，**管理员流**如下所示：
+ 1. 经过具有适当入侵防御功能和网络安全的防火墙。
+ 2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
+ 3. 经过网络路由器。
+ 4. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中访问“管理”页面。
 
 除了这些方法中描述的用户，经过授权的 IBM 安全操作团队还会执行各种操作安全任务，例如：
  * 漏洞扫描。对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有防火墙内的物理安全和任何扫描。
@@ -281,6 +293,35 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
  * 通过入侵防御来管理风险。
  * 使用 QRadar 监视安全。
  * 通过管理控制台提供安全报告。
+
+## 安全报告
+{: #reports}
+
+通过 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated，{{site.data.keyword.Bluemix_notm}} 会生成各种安全报告和日志，您可以通过“管理”页面进行查看。有关查看和使用报告的指示信息，请参阅[查看报告](../admin/index.html#oc_report)。
+
+下表显示了为 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 生成的安全报告的列表。
+
+| **类别** | **报告** | **描述** |      
+|-----------------|-------------------|---------------------|
+| 防火墙 | 防火墙登录 | 与管理员登录到 Vyatta 防火墙设备相关的事件。 |
+| 防火墙 | 防火墙拒绝 | 根据适用的防火墙规则，访问请求被拒绝时，Vyatta 防火墙设备生成的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理员登录事件 | {{site.data.keyword.Bluemix_notm}} 管理员登录 | 管理员在每个 {{site.data.keyword.Bluemix_notm}} 系统上启动 SSH 会话时，操作系统生成的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 应用程序开发者登录事件 | {{site.data.keyword.Bluemix_notm}} 应用程序开发者登录 | {{site.data.keyword.Bluemix_notm}} 平台用户使用命令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 用户界面启动会话时，{{site.data.keyword.Bluemix_notm}} 平台登录组件生成的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理员管理事件 | {{site.data.keyword.Bluemix_notm}} 管理员操作系统管理事件 | 管理员在当前工作会话中执行操作时，操作系统生成的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 应用程序开发者管理事件 | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理事件 | 与 {{site.data.keyword.Bluemix_notm}} 平台用户使用命令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 用户界面执行的操作相关的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理员数据库管理事件 | 数据库管理事件 | 与数据库管理员在 {{site.data.keyword.Bluemix_notm}} 内部数据库上执行的操作相关的事件。 |
+| 管理事件 | 用户管理事件 | 与在“管理”页面上执行的用户管理操作相关的事件。 |
+| 管理事件 | 目录 | 与服务“目录”更改相关的事件。 |
+| 管理事件 | 安全报告管理事件 | 与在“管理”页面上执行的安全报告管理操作相关的事件。 |
+| 访问审核 | 访问审核报告 | 对特权访问的审核。 |
+| 变更管理 | 软件变更管理 | 变更管理活动。 |
+| 密钥管理 | 定制 SSL 证书管理 | 已上传并存储的定制 SSL 证书。 |
+| 加密 | 传输中的数据加密 | 已配置的传输中的数据加密。 |
+| 防病毒 | 防病毒扫描报告 | 已就位的防病毒软件。 |
+| 软件修订管理 | 补丁安装报告 | 已应用的软件修订。 |
+| 安全事件管理 | 安全事件补救报告 | 用于安全事件管理的安全事件证据。 |
+
+*表 1. {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 安全报告列表*
 
 # 相关链接
 ## 常规 

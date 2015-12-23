@@ -1,5 +1,8 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # 调试
 {: #debugging}
@@ -53,6 +56,8 @@
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
+{: screen}
+
 
 日志中的第一个错误显示编译打包失败的原因。在该示例中，第一个错误是编译打包阶段中 DEA 组件的输出。```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
@@ -65,6 +70,9 @@
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 您会看到第 17 行的结尾有逗号，因此预期第 18 行上存在键值对。要解决问题，请除去逗号：
 
 ```
@@ -73,6 +81,8 @@
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## 调试运行时错误
 {: #debugging-runtime-errors}

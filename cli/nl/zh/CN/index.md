@@ -46,7 +46,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| 插件名称：ibm-containers<br> [查看文档](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| 插件名称：ibm-containers<br> [查看文档](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![集成开发工具](./images/Integrated_Dev_Tools.png) 集成开发工具
 

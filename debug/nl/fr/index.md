@@ -1,5 +1,8 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # Débogage
 {: #debugging}
@@ -14,7 +17,8 @@ appropriées qui peuvent être utilisées pour le débogage et la détermination
 
 Les journaux ont un format fixe. Les journaux prolixe peuvent être filtrés ; des services de consignation tiers peuvent être utilisés pour
 les stocker et les traiter. Pour plus d'informations sur les formats des journaux, leur affichage et leur filtrage, ainsi que sur la consignation tierce, voir
-[Logging for apps running on Cloud Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+[Journalisation pour les applications qui s'exécutent dans Cloud
+Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Débogage des erreurs de constitution
@@ -25,8 +29,7 @@ plug-in {{site.data.keyword.Bluemix_notm}} afin de déterminer l'origine de l'er
 
 Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'une application](../manageapps/deployingapps.html#appdeploy){: new_window}.
 
-La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. 
-Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf](../starters/install_cli.html){: new_window}.
+La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf](../starters/install_cli.html){: new_window}.
 
   1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant la commande suivante sur l'interface de ligne de commande cf :
      ```
@@ -42,14 +45,13 @@ Pour plus d'informations sur l'installation de l'interface de ligne de commande 
   4. Regardez la première erreur qui apparaît dans le journal.
   
 Si vous utilisez le plug-in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, l'onglet **Console** de l'outil Eclipse affiche des journaux
-semblables à la sortie de cf logs.
-Vous pouvez également ouvrir une fenêtre Eclipse distincte pour contrôler `les journaux` au cours du déploiement de l'application.
+semblables à la sortie de cf logs. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour contrôler `les journaux` au cours du déploiement de l'application.
 
 En complément de la commande `cf logs`, vous pouvez également utiliser le service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics pour collecter des détails de journaux. Ce service contrôle également la performance, la santé et la disponibilité de vos applications. Il fournit également des analyses de journaux pour les applications de contexte d'exécution Node.js et Liberty.  
 
 ### Débogage des erreurs de constitution pour une application Node.js
 
-Vous trouverez ci-après un exemple de journal qui s'affiche suite à l'entrée de la commande `cf logs nom_app --recent`.  On
+Vous trouverez ci-après un exemple de journal qui s'affiche suite à l'entrée de la commande `cf logs nom_app --recent`. On
 présuppose que des erreurs de constitution se sont produites pour une application Node.js :
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
@@ -65,6 +67,8 @@ présuppose que des erreurs de constitution se sont produites pour une applicati
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
+{: screen}
+
 
 La première erreur du journal indique la raison pour laquelle la constitution a échoué. Dans cet exemple, la première erreur correspond à une
 sortie du composant DEA au cours de la phase de constitution.
@@ -80,6 +84,9 @@ Pour une application Node.js, le composant DEA utilise les informations du fichi
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 Une virgule figure à la fin de la ligne 17, une paire clé-valeur est donc attendue en ligne 18. Pour corriger le problème, supprimez la virgule :
 
 ```
@@ -88,6 +95,8 @@ Une virgule figure à la fin de la ligne 17, une paire clé-valeur est donc atte
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## Débogage d'erreurs d'exécution
 {: #debugging-runtime-errors}
@@ -107,8 +116,7 @@ HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
 [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
   
 Lorsque vous entrez la commande `cf logs nom_app --recent` dans l'interface de ligne de commande cf, seuls les journaux les plus
-récents s'affichent.
-Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
+récents s'affichent. Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
 <dl> 
 <dt><strong>Service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics</strong></dt> 
 <dd>Les fonctionnalités intégrées de recherche et d'analyse de fichier journal du service Monitoring and Analytics permettent d'identifier rapidement les erreurs. Pour plus d'informations, voir <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Contrôle et analyse</a>.</dd> 
@@ -120,10 +128,9 @@ Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. 
 
 Auparavant, les fichiers `stdout.log` et `stderr.log` étaient accessibles par défaut via la vue d'application dans le
 tableau de bord {{site.data.keyword.Bluemix_notm}}, sous **Fichiers et
-journaux** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. 
-Pour que la journalisation de sortie standard et d'erreur standard reste accessible via le tableau de bord {{site.data.keyword.Bluemix_notm}} sous **Fichiers et journaux** > **journaux**, vous pouvez rediriger la journalisation vers d'autres fichiers du système de fichiers {{site.data.keyword.Bluemix_notm}}, selon le
+journaux** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. Pour que la journalisation de sortie standard et d'erreur standard reste accessible via le tableau de bord {{site.data.keyword.Bluemix_notm}} sous **Fichiers et journaux** > **journaux**, vous pouvez rediriger la journalisation vers d'autres fichiers du système de fichiers {{site.data.keyword.Bluemix_notm}}, selon le
 contexte d'exécution
-que vous utilisez.  
+que vous utilisez. 
 
   * Pour les applications Liberty for Java, la sortie dirigée vers stdout et stderr se trouve déjà dans le fichier `messages.log` situé dans le
 répertoire logs. Recherchez les entrées portant respectivement le préfixe SystemOut et SystemErr.

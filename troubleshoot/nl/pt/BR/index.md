@@ -1,9 +1,10 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
@@ -91,8 +92,7 @@ Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_n
 talvez você não possa efetuar login no {{site.data.keyword.Bluemix_notm}}. Em vez disso, você verá a mensagem a seguir:
 {: tsSymptoms}
 
-`Sua conta está pendente. Aguarde até 24 horas pela confirmação por email e verifique também sua pasta de spam. Se você ainda não recebeu sua confirmação por email,
-entre em contato com id@bluemix.net para obter ajuda.`
+<code>Sua conta está pendente. Aguarde até 24 horas pela confirmação por email e verifique também sua pasta de spam. Se você ainda não recebeu sua confirmação por e-mail, entre em contato com <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Suporte Bluemix</a>.</code>
 
 
 Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}},
@@ -100,7 +100,7 @@ você receberá um email de confirmação. Deve-se clicar no link
 que está no email de confirmação para concluir o processo de registro.
 {: tsCauses} 
 
-O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido seu email de confirmação, entre em contato com o [Suporte de ID](mailto:id@bluemix.net).
+O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido o e-mail de confirmação, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -300,12 +300,68 @@ problemas seguindo algumas etapas simples.
 
 
 
+## Não é possível executar as ações solicitadas
+{: #ts_authority}
+
+Pode ser que você não consiga concluir as ações sem autoridade de acesso apropriada.
+
+ 
+
+Ao tentar executar ações para uma instância de serviço ou uma instância de app, não é possível concluir as ações solicitadas e ver uma das mensagens de erro a seguir:
+{: tsSymptoms}
+
+`BXNUI0514E: você não é um desenvolvedor para nenhum dos espaços na organização <orgName>.`
+
+
+`Erro do servidor, código de status: 403, código de erro: 10003, mensagem: você não tem autorização para executar a ação solicitada.`
+
+ 
+
+Você não possui o nível apropriado de autoridade necessário para executar as ações.
+{: tsCauses}
+
+  
+
+Para obter o nível de autoridade apropriado, use um dos métodos a seguir:
+{: tsResolve}
+ * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando sua organização](../acctmgmt/index.html#mngorg){: new_window} para obter detalhes.
+ 
+
+ 
+
+
+## Não é possível acessar serviços do {{site.data.keyword.Bluemix_notm}} em razão de erros de autorização
+{: #ts_vcap}
+
+Poderão ocorrer erros de autorização quando seu app acessar um serviço {{site.data.keyword.Bluemix_notm}} se as credenciais de serviço estiverem codificadas permanentemente no app. 
+
+Depois de configurar seu app para se comunicar com um serviço {{site.data.keyword.Bluemix_notm}}, você implementará o app no {{site.data.keyword.Bluemix_notm}}. No entanto, não é possível usar o app para acessar o serviço {{site.data.keyword.Bluemix_notm}} e receber um erro de autorização.
+{: tsSymptoms}
+
+As credenciais codificadas permanentemente no app podem não estar corretas. Toda vez que o serviço for recriado, as credenciais para acessá-lo mudarão.
+{: tsCauses}
+
+
+Em vez de codificar permanentemente as credenciais no app, use parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES. Os métodos para usar parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES variam, dependendo das linguagens do programa. Por exemplo, para apps Node.js, é possível usar o comando a seguir:
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
+
+ 
+ 
+
+
 
 
 ## Não é possível implementar apps usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-Quando uma máscara não suportada é aplicada a seu projeto Eclipse, você talvez não consiga implementar seus apps no Bluemix™ usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+Quando uma máscara não suportada é aplicada ao projeto Eclipse, talvez você não consiga implementar os apps no {{site.data.keyword.Bluemix_notm}} usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -718,7 +774,7 @@ mesmo diretório que seu app.
   
   
 ## As organizações não podem ser localizadas no {{site.data.keyword.Bluemix_notm}}
-{: #ts_push}
+{: #ts_orgs}
 
 Talvez você não consiga localizar sua organização no {{site.data.keyword.Bluemix_notm}} ao trabalhar em uma região {{site.data.keyword.Bluemix_notm}}.
   
@@ -1092,7 +1148,7 @@ Se você descobrir que o projeto DevOps Services não pode ser criado, conta do 
 
 
 
-Você clica no botão **Implementar no Bluemix**, mas a etapa **Criar projeto** não é concluída com êxito.
+Você clica no botão **Implementar no Bluemix**, mas a etapa "Criando projeto" não é concluída com êxito.
 {: tsSymptoms} 
 
 
@@ -1116,7 +1172,7 @@ com o repositório ou com o fragmento do botão.
 
 
 
-Você clica no botão **Implementar no Bluemix**, mas o repositório Git não é localizado e não pode ser clonado no DevOps Services. A etapa **Repositório de clonagem** não é concluída com êxito. Portanto, o app não pode ser implementado no {{site.data.keyword.Bluemix_notm}}. 
+Você clica no botão **Implementar no Bluemix**, mas o repositório Git não é localizado e não pode ser clonado no DevOps Services. A etapa "Clonando repositório" não é concluída com êxito. Portanto, o app não pode ser implementado no {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Esse problema pode ocorrer pelas razões a seguir:
@@ -1133,11 +1189,8 @@ Use um dos métodos a seguir para corrigir o problema:
 
   * Verifique se seu repositório Git existe, está acessível publicamente
 e se a URL está correta.
-  * Verifique se o fragmento não contém quaisquer erros de HTML ou redução
-de preço.
-  * Se caracteres especiais, parâmetros de consulta ou fragmentos causarem um
-problema com a URL para o repositório Git, codifique a URL no fragmento do
-botão.
+  * Verifique se o fragmento não contém erros de HTML ou de redução de preço.
+  * Se caracteres especiais, parâmetros de consulta ou fragmentos causarem um problema com a URL do repositório Git, codifique a URL no fragmento do botão.
   
 
   
@@ -1150,21 +1203,20 @@ com o código no repositório.
      
 
 
-Você clica no botão **Implementar no Bluemix** e o repositório Git é clonado no DevOps Services, mas o app não é implementado no {{site.data.keyword.Bluemix_notm}}. A etapa **Implementando
-no Bluemix** não é concluída com êxito.
-{: tsSymptoms} 
+Você clica no botão **Implementar no Bluemix** e o repositório Git é clonado no DevOps Services, mas o app não é implementado no {{site.data.keyword.Bluemix_notm}}. A etapa "Implementando no Bluemix" não é concluída com êxito.{: tsSymptoms} 
 
 Esse problema pode ocorrer pelas razões a seguir:
 {: tsCauses}  
 
   * Pode não haver espaço suficiente no espaço do {{site.data.keyword.Bluemix_notm}}
 para implementar um aplicativo. 
-  * É possível que um serviço necessário não esteja declarado no arquivo manifest.yml.
-  * É possível que um serviço necessário esteja declarado no arquivo manifest.yml, mas o serviço já está no espaço de destino.
+  * Um serviço necessário pode não estar declarado no arquivo `manifest.yml`.
+  * Um serviço necessário pode estar declarado no arquivo `manifest.yml`,
+mas o serviço já está no espaço de destino.
   * Pode existir um problema com o código no repositório.
 Para diagnosticar o problema, revise a construção e implemente logs
 a partir da implementação:
-  1. Quando a etapa **Implementando no Bluemix** não for concluída com êxito, clique no link na etapa Configurando pipeline anterior para abrir o Delivery Pipeline.
+  1. Quando a etapa "Implementando no Bluemix" não for concluída com êxito, clique no link na etapa anterior "Configurando pipeline" para abrir o Delivery Pipeline.
   2. Identifique a construção com falha ou o estágio de implementação.
   3. No estágio com falha, clique em **Visualizar logs e histórico**.
   4. Localize a mensagem de erro.
@@ -1175,7 +1227,7 @@ Use um dos métodos a seguir para corrigir o problema:
   * Se a mensagem de erro indicar que não há espaço suficiente no espaço
 do {{site.data.keyword.Bluemix_notm}}
 para implementar o app, destine outro espaço.
-  * Se a mensagem de erro indica que um serviço necessário não está declarado no arquivo manifest.yml, notifique o proprietário do repositório de que o serviço necessário deve ser incluído.
+  * Se a mensagem de erro indicar que um serviço necessário não está declarado no arquivo `manifest.yml`, notifique o proprietário do repositório de que o serviço necessário deve ser incluído.
   * Se a mensagem de erro indicar que um serviço necessário já existe
 no espaço de destino, selecione um espaço diferente para ser usado.
   * Se a mensagem de erro indicar que existe um problema com a construção,
@@ -1224,8 +1276,7 @@ problemas seguindo algumas etapas simples.
 ## A conta está inativa
 {: #ts_accnt_inactive}
 
-Não é possível criar um app no {{site.data.keyword.Bluemix_notm}} se a sua conta estiver inativa. Deve-se entrar em contato com a equipe de suporte de ID para
-corrigir esse problema.
+Não é possível criar um app no {{site.data.keyword.Bluemix_notm}} se a sua conta estiver inativa. Deve-se entrar em contato com a equipe de suporte para corrigir esse problema.
 
 
 
@@ -1241,12 +1292,11 @@ O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo qua
 
  
 
-Para reativar a conta, envie um email para o [Suporte de ID](mailto:id@bluemix.net). No email, deve-se incluir as informações a seguir:
+Para reativar sua conta, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
 {: tsResolve}
 
   * O ID IBM usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.
-  * O nome da organização em que seu app está sendo criado. Essas informações podem ajudar a equipe de suporte de ID a determinar se
-você está designado às funções ou associação corretas em sua organização.
+  * O nome da organização em que seu app está sendo criado. Essas informações podem ajudar a equipe de suporte a determinar se você está designado às funções ou associação corretas em sua organização.
 
 
 
@@ -1671,7 +1721,6 @@ a entrada a seguir no manifest de implementação:
 	```
 	
 	
-
 
 
 

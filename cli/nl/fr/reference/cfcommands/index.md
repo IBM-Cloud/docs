@@ -42,10 +42,9 @@ Répertorie toutes les applications que vous avez déployées dans l'espace en c
 chaque application est également affiché.
 
 Supposez que vous disposez d'une instance pour une application. La colonne des instances de la réponse générée par la commande cf apps comporte la
-valeur 1/1 si votre application est en cours d'exécution et 0/1 si elle est arrêtée.
-Si elle comporte ?/1, qui indique que l''état de l'instance d'application est inconnu, vous pouvez copier l'adresse URL de l'application dans votre
+valeur 1/1 si votre application est en cours d'exécution et 0/1 si elle est arrêtée. Si elle comporte ?/1, qui indique que l''état de l'instance d'application est inconnu, vous pouvez copier l'adresse URL de l'application dans votre
 navigateur afin de vérifier si votre application répond, ou n'afficher que les derniers lignes du journal avec la commande `cf logs
-nom_app` pour déterminer si l'application génère un contenu de journal. 
+nom_app` pour déterminer si l'application génère un contenu de journal.
 
 ## cf bind-service
 
@@ -77,7 +76,7 @@ Par exemple, vous pouvez utiliser `cf create-service DataWorks free mon_datawork
 <dl>
 <dt>nom_service</dt>
 <dd>Nom du service.</dd>
-<dt>plan_ service </dt>
+<dt>plan_ service</dt>
 <dd>Nom du plan de service.</dd>
 <dt>instance_service</dt>
 <dd>Nom à utiliser pour la nouvelle instance de service que vous créez.</dd>
@@ -91,11 +90,11 @@ cf create-space nom_espace
 ```
 <dl>
 <dt>nom_espace</dt>
-<dd>Nom de l'espace. </dd>
+<dd>Nom de l'espace.</dd>
 <dt>*-o*</dt>
-<dd>Nom de l'organisation dans laquelle créer un espace. </dd>
+<dd>Nom de l'organisation dans laquelle créer un espace.</dd>
 <dt>*-q*</dt>
-<dd>Quota à affecter au nouvel espace. S'il n'est pas spécifié, un quota par défaut est affecté automatiquement. </dd>
+<dd>Quota à affecter au nouvel espace. S'il n'est pas spécifié, un quota par défaut est affecté automatiquement.</dd>
 </dl>
 
 ## cf delete
@@ -121,7 +120,7 @@ cf delete-space nom_espace
 ```
 <dl>
 <dt>nom_espace</dt>
-<dd>Nom de l'espace. </dd>
+<dd>Nom de l'espace.</dd>
 <dt>*-f*</dt>
 <dd>Force la suppression de l'espace sans confirmation. Ce paramètre est facultatif.</dd>
 *Remarque :* la suppression d'un espace est une opération irréversible.
@@ -140,7 +139,8 @@ cf events nom_app
 
 ## cf help
 
-Affiche les informations d'aide pour toutes les commandes cf ou pour une commande cf spécifique si le paramètre nom_commande est utilisé.```
+Affiche les informations d'aide pour toutes les commandes cf ou pour une commande cf spécifique si le paramètre nom_commande est utilisé.
+```
 cf help nom_commande
 ```
 <dl>
@@ -165,8 +165,7 @@ Vous pouvez utiliser un ou plusieurs des paramètres suivants lorsque vous émet
 <dt>*-p*mot_de_passe</dt>
 <dd>Votre mot de passe.</dd>
 <dd>*Important :* si vous indiquez un mot de passe avec le paramètre *-p* dans l'interface de ligne de commande, le mot
-de passe peut être enregistré dans l'historique de la ligne de commande.
-Pour des raisons de sécurité, évitez de fournir le mot de passe
+de passe peut être enregistré dans l'historique de la ligne de commande. Pour des raisons de sécurité, évitez de fournir le mot de passe
 avec le paramètre -p. A la place,
 entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</dd>
 <dt>*-o*nom_organisation</dt>
@@ -198,14 +197,17 @@ cf logs nom_app
 ## cf marketplace
 
 Répertorie tous les services disponibles sur la place de marché. Les services répertoriés par cette commande apparaissent également dans le catalogue
-{{site.data.keyword.Bluemix_notm}}. ```
+{{site.data.keyword.Bluemix_notm}}.
+```
 cf marketplace
 ```
 
 ## cf push
 
-Déploie une nouvelle application dans Bluemix ou met à jour une application existante dans Bluemix. ```
-cf push nom_app ```
+Déploie une nouvelle application dans Bluemix ou met à jour une application existante dans Bluemix.
+```
+cf push nom_app 
+```
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
@@ -213,15 +215,15 @@ cf push nom_app ```
 <dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un pack de construction personnalisé ou une adresse URL Git, par exemple
 mon-pack_construction ou https://github.com/heroku/heroku-buildpack-play.git.</dd>
 <dt>*-c*commande_démarrage</dt>
-<dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option.
-Par exemple :</dd>
+<dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. Par exemple :</dd>
 <dd>```
-cf push nom_app -c null```</dd>
+cf push nom_app -c null
+```</dd>
 <dd>Vous pouvez aussi utiliser cette option pour exécuter des fichiers script. Par exemple :
 ```
 cf push nom_app -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f* chemin_manifeste </dt>
+<dt>*-f* chemin_manifeste</dt>
 <dd>Chemin d'accès au fichier manifeste. Le fichier manifeste par défaut est manifest.yml sous le répertoire racine de votre application.</dd>
 <dt>*-i*nombre_instances</dt>
 <dd>Nombre d'instances.</dd>
@@ -236,11 +238,11 @@ cf push nom_app -c “bash ./<run.sh>"
 <dd>Chemin d'accès au répertoire de l'application ou au fichier archive de l'application.</dd>
 <dt>*-t*délai_attente</dt>
 <dd>Délai maximal de démarrage de l'application, en secondes. Il se peut que d'autres délais d'attente côté serveur remplacent cette valeur.</dd>
-<dt>*-s* nom_pile </dt>
+<dt>*-s* nom_pile</dt>
 <dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf
 stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
-<dd>Mappe le domaine de système Bluemix à cette application. </dd>
+<dd>Mappe le domaine de système Bluemix à cette application.</dd>
 <dt>*--no-manifest*</dt>
 <dd>Ignore le fichier manifeste par défaut.</dd>
 <dt>*--no-route*</dt>
@@ -255,7 +257,8 @@ stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_not
 
 Affiche ou change le nombre d'instances, la limite d'espace disque et la limite de mémoire pour une application.
 ```
-cf scale nom_app -i nombre_instances -k limite_disque -m limite_mémoire```
+cf scale nom_app -i nombre_instances -k limite_disque -m limite_mémoire
+```
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
@@ -281,13 +284,14 @@ cf services
 
 Définit une variable d'environnement pour une application.
 ```
-cf set-env nom_app nom_var valeur_var```
+cf set-env nom_app nom_var valeur_var
+```
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
 <dt>nom_var</dt>
 <dd>Nom de la variable d'environnement.</dd>
-<dt>valeur_var </dt>
+<dt>valeur_var</dt>
 <dd>Valeur de la variable d'environnement.</dd>
 </dl>
 
@@ -303,7 +307,8 @@ cf stacks
 
 Arrête une application.
 ```
-cf stop nom_app```
+cf stop nom_app
+```
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>

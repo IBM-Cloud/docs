@@ -42,13 +42,11 @@
 *Última atualização: 09 de novembro de 2015*
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
-experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O {{site.data.keyword.Bluemix_notm}} fornece uma calculadora de custo para que você estime o custo antecipadamente e a visualização de detalhes de Uso para verificar o custo real após a construção de seus apps.
-{:shortdesc}
+experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O Bluemix fornece uma calculadora de custo para estimar o custo antecipadamente e a visualização Detalhes de uso para verificar o custo real após a construção de apps.{:shortdesc}
 
 ## Avaliação grátis
 {: #trial}
-É possível inscrever-se para uma avaliação grátis de 30 dias com seu ID {{site.data.keyword.IBM}}. Durante a avaliação, é possível desenvolver aplicativos
-e usar serviços no {{site.data.keyword.Bluemix_notm}}.
+É possível inscrever-se para uma avaliação grátis de 30 dias com seu ID {{site.data.keyword.IBM}}. Durante a avaliação, é possível desenvolver aplicativos e usar serviços no Bluemix.
 
 Sua conta é fornecida com os recursos a seguir, livre de encargo:
 
@@ -57,18 +55,15 @@ Sua conta é fornecida com os recursos a seguir, livre de encargo:
 * 1 certificado SSL
 
 Sua avaliação grátis expira em 30 dias após sua inscrição. Após a expiração da avaliação de 30 dias, os
-aplicativos em sua conta serão interrompidos. Você não poderá se inscrever para outra avaliação em
-{{site.data.keyword.Bluemix_notm}}. Porém, ainda é possível acessar sua conta e as contas para as quais é convidado. Para reiniciar seus aplicativos, deve-se fornecer as informações de cartão de crédito para uma conta de Pagamento por uso ou criar uma conta de Assinatura. Depois de converter sua conta, é possível continuar a usar abonos grátis de cálculo e serviço. Você paga somente pelo uso dos serviços, contêineres e tempos de execução que não estiverem incluídos como parte de seu abono mensal grátis.
+aplicativos em sua conta serão interrompidos. Você não poderá se inscrever para outra avaliação no Bluemix. Porém, ainda é possível acessar sua conta e as contas para as quais é convidado. Para reiniciar seus aplicativos, deve-se fornecer as informações de cartão de crédito para uma conta de Pagamento por uso ou criar uma conta de Assinatura. Depois de converter sua conta, é possível continuar a usar abonos grátis de cálculo e serviço. Você paga somente pelo uso dos serviços, contêineres e tempos de execução que não estiverem incluídos como parte de seu abono mensal grátis.
 
 Se você não converter sua conta após a expiração da sua avaliação gratuita. As notificações
 lembram você de criar sua conta de pagamento para que as definições e configurações do
-seu aplicativo não sejam perdidas. Se não desejar receber essas notificações do {{site.data.keyword.Bluemix_notm}},
-é possível cancelar a inscrição a qualquer momento.
+seu aplicativo não sejam perdidas. Se não desejar receber essas notificações do Bluemix, será possível cancelar a assinatura a qualquer momento.
 Um mês após a expiração da avaliação, seus aplicativos e configurações de serviço são
-removidos. A figura a seguir mostra o processo geral de gerenciamento de conta do
-{{site.data.keyword.Bluemix_notm}}.
-Figura 1. Fluxograma do processo de gerenciamento de conta do {{site.data.keyword.Bluemix_notm}}
-Fluxograma do processo de gerenciamento de conta do {{site.data.keyword.Bluemix_notm}}
+removidos. A figura a seguir mostra o processo geral de gerenciamento de conta do Bluemix.
+Figura 1. Fluxograma do processo de gerenciamento de conta do Bluemix
+Fluxograma do processo de gerenciamento de conta do Bluemix
 
 ![Fluxograma do processo de gerenciamento de conta do {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
 
@@ -84,7 +79,7 @@ avaliação grátis.
 {: #what_it_costs}
 
 Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner, máquina virtual ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória,
-o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus apps usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
+o armazenamento e assim por diante. O Bluemix também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar a planejar os encargos. É possível verificar o custo real após a construção de seus apps usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
  
 
 ##Código promocional
@@ -107,15 +102,15 @@ Para usar um código promocional, clique no ícone **Configurações do perfil**
 ##Como você é faturado
 {: #pay-accounts}
 
-Ao inscrever-se para um plano faturável do {{site.data.keyword.Bluemix_notm}}, é possível selecionar a partir das contas a seguir:
+Ao inscrever-se para um plano faturável do Bluemix, é possível selecionar a partir das contas a seguir:
 * Pagamento por uso
 * Inscrição
-* {{site.data.keyword.Bluemix_notm}} Dedicado
-* {{site.data.keyword.Bluemix_notm}} Local
+* Bluemix Dedicated
+* Bluemix Local
 
-Com uma conta de Pagamento por uso, você é cobrado com base no uso de cálculo e serviços do {{site.data.keyword.Bluemix_notm}}. Com uma conta de Assinatura, é possível obter um desconto mensal com base no compromisso de gasto mensal mínimo. O {{site.data.keyword.Bluemix_notm}} Dedicated e o {{site.data.keyword.Bluemix_notm}} Local são cobrados por contratos anuais.
+Com uma conta de Pagamento por uso, você é cobrado com base no uso de cálculo e serviços do {{site.data.keyword.Bluemix_notm}}. Com uma conta de Assinatura, é possível obter um desconto mensal com base no compromisso de gasto mensal mínimo. O Bluemix Dedicated e o Bluemix Local são cobrados por contratos anuais.
 
-É possível converter a sua avaliação grátis em uma conta faturável a qualquer momento. Todos os seus dados da conta não faturável de avaliação grátis e as soluções do {{site.data.keyword.Bluemix_notm}} serão facilmente mescladas na nova conta faturável.
+É possível converter a sua avaliação grátis em uma conta faturável a qualquer momento. Todos seus dados da conta não faturável de avaliação grátis e as soluções do Bluemix serão perfeitamente mescladas na nova conta faturável.
 
 Depois de criar uma conta faturável, é possível editar as informações fornecidas. Clique no **ícone de Configurações de perfil** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, em seguida, clique em **Conta e tipo de conta** para editar suas informações.
 
@@ -133,9 +128,9 @@ condições e envie sua solicitação de conta; seu cartão de crédito será va
 de confirmação dos dados da conta também será enviado. Alguns minutos após o recebimento
 do e-mail de confirmação, é possível retornar ao
 {{site.data.keyword.Bluemix_notm}} para
-continuar construindo seus apps. Se o {{site.data.keyword.Bluemix_notm}} não puder processar sua solicitação on-line para o seu país, é possível entrar em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [{{site.data.keyword.Bluemix_notm}} Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para se inscrever em sua conta de Pagamento por uso.
+continuar construindo seus apps. Se o {{site.data.keyword.Bluemix_notm}} não puder processar sua solicitação on-line em seu país, será possível entrar em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [Bluemix - Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para se inscrever em sua conta de Pagamento por uso.
 
-É possível converter a sua conta de Pagamento por uso em uma conta de Assinatura a qualquer momento. Com uma conta de Assinatura, você se compromete a gastar uma quantia mínima por mês. Se você desejar converter para uma conta de Assinatura, entre em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [{{site.data.keyword.Bluemix_notm}} Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+É possível converter a sua conta de Pagamento por uso em uma conta de Assinatura a qualquer momento. Com uma conta de Assinatura, você se compromete a gastar uma quantia mínima por mês. Se desejar converter em uma conta Assinatura, entre em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [Bluemix - Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Conta Assinatura
 {: #subscription}
@@ -143,7 +138,7 @@ continuar construindo seus apps. Se o {{site.data.keyword.Bluemix_notm}} não pu
 Se você se inscrever para uma conta de Assinatura, se comprometerá a gastar uma quantia mínima todo mês e receberá um desconto na assinatura que será aplicado a esse encargo mínimo. Você
 também paga por qualquer uso que exceda a quantia mínima de gasto.
 
-Para inscrever-se para uma conta de Assinatura e para obter mais informações sobre taxas e descontos da assinatura, deve-se entrar em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [{{site.data.keyword.Bluemix_notm}} Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
+Para se inscrever em uma conta de Assinatura e para obter mais informações sobre taxas e descontos da assinatura, deve-se entrar em contato com o {{site.data.keyword.Bluemix_notm}} Sales usando o link listado na página [Bluemix - Entre em contato conosco](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs).
 
 ###Conta dedicada do {{site.data.keyword.Bluemix_notm}}
 {: #dedicated}
@@ -158,7 +153,7 @@ inclui:
 * Suporte {{site.data.keyword.Bluemix_notm}} padrão
 
 Também é possível pedir itens opcionais, tais como
-o SoftLayer DirectLink ou opções de suporte premium. Entre em contato com o [{{site.data.keyword.Bluemix_notm}} Sales](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter mais informações.
+o SoftLayer DirectLink ou opções de suporte premium. Entre em contato com o [Bluemix Sales](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter mais informações.
 
 Com o {{site.data.keyword.Bluemix_notm}} Dedicated,
 deve-se inscrever para um prazo de um ano, no mínimo. O que é pago todos os meses
@@ -166,7 +161,7 @@ durante esse prazo baseia-se nos serviços dedicados desejados,
 além de uma conta de assinatura que fornece acesso a todos os serviços públicos. Os encargos de uso dos serviços no {{site.data.keyword.Bluemix_notm}} Public
 são calculados com base em seu contrato da conta de assinatura. Você recebe
 uma fatura para os serviços usados, além desse contrato de
-assinatura. Entre em contato com o representante de conta designado pela IBM ou com o [{{site.data.keyword.Bluemix_notm}} Sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para iniciar seu contrato.
+assinatura. Entre em contato com o representante de conta designado pela IBM ou com o [Bluemix Sales](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) para iniciar seu contrato.
 
 
 ###Conta do {{site.data.keyword.Bluemix_notm}} Local
@@ -195,16 +190,16 @@ assinatura. Entre em contato com o representante de conta designado pela IBM ou 
 Com uma conta faturável do {{site.data.keyword.Bluemix_notm}}, você é cobrado pelo cálculo, os contêineres e os serviços que são usados em sua organização. Você poderá ser convidado por outros usuários do {{site.data.keyword.Bluemix_notm}} a participar
 em organizações em uma conta diferente. Se você criar aplicativos ou usar
 serviços nas organizações para as quais foi convidado, o uso incorrido será
-cobrado na conta que contém essas organizações. É possível obter informações adicionais sobre um encargo específico em uma página de detalhes do recurso a partir do Catálogo do {{site.data.keyword.Bluemix_notm}} ou na calculadora de preços a partir da página Precificação do {{site.data.keyword.Bluemix_notm}}.
+cobrado na conta que contém essas organizações. É possível ver mais informações sobre um encargo específico em uma página de detalhes do recurso a partir do Catálogo do Bluemix ou na calculadora de preços a partir da página Precificação do {{site.data.keyword.Bluemix_notm}}.
 
-Tipos diferentes de encargos se aplicam, dependendo dos recursos do {{site.data.keyword.Bluemix_notm}} que você estiver usando. A tabela a seguir fornece uma visão geral resumida:
+Tipos diferentes de encargos se aplicam, dependendo dos recursos do Bluemix que estiver sendo usado. A tabela a seguir fornece uma visão geral resumida:
 
-| Tipo de encargo | Descrição | Recursos do {{site.data.keyword.Bluemix_notm}} que usam esse tipo de encargo | Exemplo |
+| Tipo de encargo | Descrição | Recursos do Bluemix que usam esse tipo de encargo | Exemplo |
 |------------------|------------------|--------------------------|--------------------------|
 | Ajustado | A precificação com taxa fixa é baseada em um encargo mensal acordado que não é ajustado. | Serviços  | O Cache de Dados tem um plano fixo que é cobrado em uma taxa mensal fixa. |
 | Medido | A precificação com uso medido é baseada no número de GB/horas consumidas para tempos de execução e no número de GB/horas consumidas e no número de endereços IP e armazenamento para contêineres. | Serviços, cálculo e contêineres | Para o serviço de Push, todo uso acima do abono mensal grátis é cobrado. |
 |  Disposto em camadas   |  Alguns planos de precificação são baseados em um modelo de precificação em camadas, de modo que seja possível obter um desconto baseado em volume de acordo com o seu uso real. O serviços podem oferecer planos de precificação simples, graduados ou de camada de bloco. | Serviços | A precificação em camadas é geralmente usada para métricas de encargo que terão quantidades muito altas por mês, como chamadas API. |
-| Reserved | A precificação reservada é baseada em um compromisso a longo prazo para um serviço, portanto, é possível obter um preço com desconto. Com um plano reservado, você obtém uma instância de serviço dedicado que é fácil configurar, implementar e entregar no ambiente público do {{site.data.keyword.Bluemix_notm}}. | Serviços | O DB2 on Cloud tem planos reservados.|
+| Reserved | A precificação reservada é baseada em um compromisso a longo prazo para um serviço, portanto, é possível obter um preço com desconto. Com um plano reservado, você obtém uma instância de serviço dedicado de fácil configuração, implementação e entrega no ambiente público do Bluemix. | Serviços | O DB2 on Cloud tem planos reservados.|
 
 ###Encargos para recursos de cálculo
 {: #compute}
@@ -242,7 +237,7 @@ seguir:
 Push, qualquer uso acima do abono grátis mensal é cobrado.</dd>
 <dt>Encargos reservados</dt>
     <dd><p>Como o proprietário da conta de uma conta Pagamento por uso ou uma conta de Assinatura, é possível reservar uma instância de serviço, com um compromisso a longo prazo, para um preço com desconto. Por exemplo, é possível reservar a grande oferta padrão do DB2 on Cloud para 12 meses.</p> 
-    <p>Alguns serviços do {{site.data.keyword.Bluemix_notm}} oferecem planos reservados. É possível solicitar um plano reservado a partir do <strong>Catálogo</strong> do {{site.data.keyword.Bluemix_notm}}, clicando no ladrilho do serviço. Em seguida, selecione o plano de serviço que atenda melhor às suas necessidades. Se um plano reservado estiver disponível, clique em <strong>Solicitar</strong> e siga os prompts para enviar sua solicitação. Você receberá um e-mail que contém as informações de preços do plano reservado. Um representante de vendas do {{site.data.keyword.Bluemix_notm}} entrará em contato com você em breve para concluir a compra.</p></dd>
+    <p>Alguns serviços do Bluemix oferecem planos reservados. É possível solicitar um plano reservado a partir do <strong>Catálogo</strong> do Bluemix clicando no quadrado do serviço. Em seguida, selecione o plano de serviço que atenda melhor às suas necessidades. Se um plano reservado estiver disponível, clique em <strong>Solicitar</strong> e siga os prompts para enviar sua solicitação. Você receberá um e-mail que contém as informações de preços do plano reservado. Um representante de vendas do Bluemix também entrará em contato com você em breve para concluir a compra.</p></dd>
 <dt>Encargos em camadas</dt>
     <dd>Semelhante a encargos medidos, você paga com base em seu consumo de tempo de execução e de serviço. No entanto, os encargos em camadas incluem camadas de precificação adicionais, geralmente oferecendo encargos com desconto em camadas com maior consumo. A precificação em camadas é oferecida em simples, graduada ou bloco.</dd>
 </dl>
@@ -434,9 +429,7 @@ preço do aplicativo pode ser calculado da maneira a seguir:
 
 <dl>
 <dt>Quatro instâncias de tempo de execução do Node.js de 256 MB</dt>
-<dd>O
-{{site.data.keyword.Bluemix_notm}} cobra por
-um tempo de execução por GB/horas. O número de GB usado por mês é <code>4 x 256 = 1024 MB ou 1 GB por mês</code>. Suponha que haja <code>24 x 30 = 720 horas em um mês</code>, portanto, o aplicativo é cobrado por <code>1 x 720 = 720 GB/horas</code>.
+<dd>O Bluemix cobra por tempo de execução por GB/horas. O número de GB usado por mês é <code>4 x 256 = 1024 MB ou 1 GB por mês</code>. Suponha que haja <code>24 x 30 = 720 horas em um mês</code>, portanto, o aplicativo é cobrado por <code>1 x 720 = 720 GB/horas</code>.
 <p>
 375 GB/horas são incluídos em um abono grátis por mês,
 compartilhados entre todos os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Assim, o custo total para o tempo de execução é <code>$0,07 x (720-375) = $24,15</code>.</p></dd>
