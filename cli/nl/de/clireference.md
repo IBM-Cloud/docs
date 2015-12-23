@@ -8,6 +8,5 @@
 
 *Letzte Aktualisierung: 9. November 2015*
 
-In {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} wird zum Ändern von Anwendungen, Serviceinstanzen und Servicebindungen die Befehlszeilenschnittstelle Cloud Foundry ('cf') verwendet.
-In IBM Containers wird darüber hinaus die ice-Befehlszeilenschnittstelle zur Containerverwaltung verwendet.
+In {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} wird zum Ändern von Anwendungen, Serviceinstanzen und Servicebindungen die Befehlszeilenschnittstelle Cloud Foundry ('cf') verwendet. In IBM Containers wird darüber hinaus die ice-Befehlszeilenschnittstelle zur Containerverwaltung verwendet.
 {:shortdesc}

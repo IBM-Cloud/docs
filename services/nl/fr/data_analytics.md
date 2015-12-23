@@ -11,5 +11,6 @@ orientées données et analyser vos données, le tout depuis un seul emplacement
 {:shortdesc}
 
 
-Construire plus | Se développer | Dormir plus---- | ---- | ----
+Construire plus | Se développer | Dormir plus
+---- | ---- | ----
 Restez concentré sur les choses amusantes... comme la création de nouvelles applications, et non l'administration de système. | Mettez à l'échelle vos importants volumes de données sur le cloud IBM. | Reposez-vous pendant que les experts IBM continuent à exécuter vos données 24 heures sur 24, 7 jours sur 7.

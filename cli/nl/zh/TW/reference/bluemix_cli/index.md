@@ -3,16 +3,16 @@
 # bx 指令（用於與 {{site.data.keyword.Bluemix_notm}} 互動）
 {: #bluemix_cli}
 
-*前次更新：*2015 年 10 月 19 日
+*前次更新：2015 年 10 月 19 日*
 
 {{site.data.keyword.Bluemix}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。部分 {{site.data.keyword.Bluemix_notm}} CLI 指令（稱為 bx 指令）是現有 cf 指令的封套，其他則是 {{site.data.keyword.Bluemix_notm}} 獨有的。下列資訊列出 {{site.data.keyword.Bluemix_notm}} CLI 支援的所有指令，並包括其名稱、選項、使用情形、必要條件、說明及範例。
 {:shortdesc}
  
-**附註：***必要條件*列出使用該指令之前所需的動作。沒有必備動作的指令會列出**無**。否則，必要條件可能包括下列其中一個以上動作：
+**附註：***必要條件* 列出使用該指令之前所需的動作。沒有必備動作的指令會列出**無**。否則，必要條件可能包括下列其中一個以上動作：
 <dl>
 <dt>**端點**</dt>
 <dd>使用此指令之前，必須透過 `bluemix api` 設定 API 端點。</dd>
-<dt>**Login**</dt>
+<dt>**登入**</dt>
 <dd>使用此指令之前，需要使用 `bluemix login` 指令的登入。</dd>
 <dt>**目標**</dt>
 <dd>使用此指令之前，必須使用 `bluemix target` 指令來設定組織及空間。</dd>
@@ -153,7 +153,7 @@ bluemix target
 
 
 ## bluemix info
-檢視基本 {{site.data.keyword.Bluemix_notm}} 資訊，包括現行區域、雲端控制器版本以及部分有用端點（例如用於登入及交換存取記號的端點）。
+檢視基本 {{site.data.keyword.Bluemix_notm}} 資訊，包括現行地區、雲端控制器版本以及部分有用端點（例如用於登入及交換存取記號的端點）。
 
 ```
 bluemix info
@@ -181,7 +181,7 @@ container-groups（選用）：僅顯示儲存器群組資訊。
 
 vm-groups（選用）：僅顯示 VM 群組資訊。
 
-一次只能指定一個 'apps'、'containers'、'container-groups' 或 'vm-groups'。如果未指定任何一個，則會列出所有 cf 應用程式、儲存器、儲存器群組及 VM 群組。
+一次只能指定 'apps'、'containers'、'container-groups' 或 'vm-groups' 等的其中一個。如果皆未指定，則會列出所有 cf 應用程式、儲存器、儲存器群組及 VM 群組。
 
 **範例**：
 
@@ -247,7 +247,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 
 
 ## bluemix curl
-對 {{site.data.keyword.Bluemix_notm}} 執行原始 HTTP 要求。"Content-Type" 預設為 "application/json"。此指令會對 {{site.data.keyword.Bluemix_notm}} 主控台伺服器（例如，https://console.ng.bluemix.net）傳送要求，而不是 cf API 端點（例如，https://api.ng.bluemix.net）。
+對 {{site.data.keyword.Bluemix_notm}} 執行原始 HTTP 要求。"Content-Type" 預設為 "application/json"。此指令會對 {{site.data.keyword.Bluemix_notm}} 主控台伺服器（例如，https://console.ng.bluemix.net）傳送要求，而不是對 cf API 端點（例如，https://api.ng.bluemix.net）傳送要求。
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -399,7 +399,7 @@ bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 
 
 ## bluemix network regions
-檢視 {{site.data.keyword.Bluemix_notm}} 上所有區域的資訊。
+檢視 {{site.data.keyword.Bluemix_notm}} 上所有地區的資訊。
 
 ```
 bluemix network regions
@@ -409,7 +409,7 @@ bluemix network regions
 
 
 ## bluemix network region-set
-切換至指定的區域。此指令會自動將目標重設為新區域中的相同組織及空間（可能的話），或者，如果使用者已登入，則會提示使用者選取新組織及空間。從而變更 API 端點。
+切換至指定的地區。此指令會自動將目標重設為新地區中的相同組織及空間（可能的話），或者，如果使用者已登入，則會提示使用者選取新組織及空間。從而變更 API 端點。
 
 ```
 bluemix network region-set REGION_NAME
@@ -419,11 +419,11 @@ bluemix network region-set REGION_NAME
 
 **指令選項**：
 
-*REGION_NAME*（必要）：您要切換至之區域的名稱。您可以使用 `bluemix regions` 指令來查看所有區域名稱。
+*REGION_NAME*（必要）：您要切換至之地區的名稱。您可以使用 `bluemix regions` 指令來查看所有地區名稱。
 
 **範例**：
 
-將現行區域設定為 'eu-gb'：
+將現行地區設定為 'eu-gb'：
 
 ```
 bluemix network region-set eu-gb
@@ -555,7 +555,7 @@ bluemix plugin repo-add REPO_NAME REPO_URL
 
 **指令選項**：
 
-*REPO_NAME*（必要）：要新增之儲存庫的名稱。您可以為每一個儲存庫定義專屬的名稱。
+*REPO_NAME*（必要）：要新增之儲存庫的名稱。您可以為每一個儲存庫定義自己的名稱。
 
 *REPO_URL*（必要）：要新增之儲存庫的 URL。儲存庫 URL 必須包含通訊協定（例如，http://plugins.ng.bluemix.net，而非 plugins.ng.bluemix.net）。http://plugins.ng.bluemix.net 是 {{site.data.keyword.Bluemix_notm}} CLI 的正式外掛程式儲存庫。
 

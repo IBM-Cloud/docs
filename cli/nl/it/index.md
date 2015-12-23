@@ -29,7 +29,8 @@ bl* |
 Estendi facilmente la tua interfaccia riga di comando {{site.data.keyword.Bluemix_notm}} con più comandi. Per accedere ai plug-in di interfaccia
 riga di comando {{site.data.keyword.Bluemix_notm}}, vedi [{{site.data.keyword.Bluemix_notm}} CLI Plug-in Repository](http://plugins.{DomainName}/){: new_window}.
 
-1. Per installare i plug-in CLI dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:```
+1. Per installare i plug-in CLI dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+```
 cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 ```
 2. Esegui il seguente comando per installare un plug-in:
@@ -39,10 +40,11 @@ cf install-plugin nome_plugin -r bluemix-cf-staging
 
 | *Active Deploy* |  *Modalità di sviluppo* | 
 |-----------------|-----------------|
-| Nome del plug-in: active-deploy <br>  [Visualizza documenti](../services/ActiveDeploy/index.html#cli) |  Nome del plug-in: development-name<br> [Visualizza documenti](./plugins/dev_mode/index.html) | 
+| Nome del plug-in: active-deploy <br>  [Visualizza documenti](../services/ActiveDeploy/index.html#cli) |  Nome del plug-in: development-name <br> [Visualizza documenti](./plugins/dev_mode/index.html) | 
 
 ### Estendi la tua interfaccia riga di comando {{site.data.keyword.Bluemix_notm}}: bx
-1. Per installare i plug-in CLI {{site.data.keyword.Bluemix_notm}} dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:```
+1. Per installare i plug-in CLI {{site.data.keyword.Bluemix_notm}} dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+```
 bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
 ```
 2. Esegui il seguente comando per installare un plug-in:
@@ -52,7 +54,7 @@ bluemix plugin install nome_plugin -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| Nome del plug-in: ibm-containers <br> [Visualizza documenti](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| Nome del plug-in: ibm-containers <br> [Visualizza documenti](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![Strumenti di sviluppo integrati](./images/Integrated_Dev_Tools.png) Strumenti di sviluppo integrati
 

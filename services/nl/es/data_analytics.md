@@ -12,4 +12,4 @@ para insertar datos en los servicios, crear apps controladas por datos y analiza
 
 Crear más | Crecer más | Dormir más
 ---- | ---- | ----
-Manténgase centrado en lo divertido... creación de nuevas aplicaciones, no administración de sistema. | Escale los datos enormemente en IBM Cloud. | Descanse tranquilo mientras los expertos de IBM mantienen sus datos ejecutándose 24 horas al día, siete días a la semana.
+Manténgase centrado en lo divertido... creación de nuevas apps, no administración de sistema. | Escale los datos enormemente en IBM Cloud. | Descanse tranquilo mientras los expertos de IBM mantienen sus datos ejecutándose 24 horas al día, siete días a la semana.

@@ -30,6 +30,6 @@
 若要檢查剩餘的所容許電子郵件數目，請從 {{site.data.keyword.Bluemix_notm}} 儀表板按一下 SendGrid 服務實例，然後按一下**開啟 SendGrid 儀表板**。您可以在**剩餘額度**欄位中看到該數目。
 
 
-如果在達到每個服務實例每月 25,000 封電子郵件的限制之後，還想要傳送更多電子郵件，則可以新增另一個服務實例。如需 SendGrid 的相關資訊，請參閱[開始使用 SendGrid](https://sendgrid.com/docs/index.html){: new_window}。    
+如果在達到每個服務實例每月 25,000 封電子郵件的限制之後，還想要傳送更多電子郵件，您可以新增另一個服務實例。如需 SendGrid 的相關資訊，請參閱[開始使用 SendGrid](https://sendgrid.com/docs/index.html){: new_window}。    
 {: tsResolve}
 

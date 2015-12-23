@@ -5,7 +5,7 @@
 
 #管理 {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*上次更新时间：2015 年 11 月 18 日*
+*上次更新时间：2015 年 12 月 8 日*
 
 单击**帐户和支持** &gt; **管理组织**可管理组织、空间和分配的用户。如果您是 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 用户，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng)，以了解有关管理本地或专用实例的更多信息。{:shortdesc}
 
@@ -171,7 +171,7 @@
 
 您可以通过输入以下 URL 来访问管理控制台：
 
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`。
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -241,6 +241,10 @@
 * 可以从左侧导航窗格中展开并查看各种报告。
 * 可以在报告和日志集合中进行搜索。搜索既适用于报告名称，也适用于报告和日志内包含的文本内容。您还可以选择按**管理事件**、**DataPower 报告**、**防火墙**和**登录审计**来过滤搜索。
 * 显示报告或日志时，可以单击报告右上方的 ![下载](images/icon_download.png) 图标进行下载。
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+有关安全报告类型的更多信息，请参阅[安全报告](../security/index.html#reports)。
 
 ### 查看状态
 {: #oc_status}
@@ -313,7 +317,7 @@
 
 ### 管理用户和许可权
 {: #oc_useradmin}
-您可以通过 LDAP 将公司用户注册表中的用户添加到 {{site.data.keyword.Bluemix_notm}} 实例。您可以添加单个用户或添加用户组，还可以查看用户许可权。如果分配给您的权限是 `admin` 许可权，那么您还可以设置和管理其他用户的许可权。
+您可以通过 LDAP 将公司用户注册表中的用户添加到 {{site.data.keyword.Bluemix_notm}} 实例。您可以添加单个用户或添加用户组，还可以查看用户许可权。如果分配给您的是 `admin` 许可权，那么您还可以设置和管理其他用户的许可权。
 
 要使用管理控制台来管理用户，请单击**管理 &gt; 用户管理**。
 
@@ -647,7 +651,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} 环境的用户。例如，可以从 LDAP 注册表添加用户。
 
-开始之前，请先安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
+开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 

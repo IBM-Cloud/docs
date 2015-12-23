@@ -1,9 +1,10 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
@@ -97,9 +98,8 @@ nslookup stage1.mybluemix.net
 로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`사용자 계정이 보류 중입니다. 여러분 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다.
-스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면 id@bluemix.net에 문의하여
-도움을 요청하십시오.`
+<code>사용자 계정이 보류 중입니다. 여러분 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다.
+스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원</a>에 문의하십시오.</code>
 
 
 {{site.data.keyword.Bluemix_notm}}
@@ -109,7 +109,7 @@ nslookup stage1.mybluemix.net
 
 확인 이메일이
 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를
-확인하십시오. 확인 이메일을 받지 못한 경우 [ID 지원 부서](mailto:id@bluemix.net)에 문의하십시오.
+확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} 지원](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
 {: tsResolve}
 
 
@@ -310,12 +310,71 @@ cf 명령행 인터페이스에 `cf services`를 입력하여 서비스 인스�
 
 
 
+## 요청된 조치를 수행할 수 없음
+{: #ts_authority}
+
+해당 액세스 권한이 없으면 조치를 완료하지 못할 수 있습니다.
+
+ 
+
+서비스 인스턴스 또는 앱 인스턴스에 대해 조치를 수행하려 할 때 요청된 조치를 완료할 수 없고 다음 오류 메시지 중 하나가 표시됩니다. 
+{: tsSymptoms}
+
+`BXNUI0514E: <orgName> 조직의 영역에 대한 개발자가 아닙니다.`
+
+
+`서버 오류, 상태 코드: 403, 오류 코드: 10003, 메시지: 요청된 조치를 수행할 권한이 없습니다.`
+
+ 
+
+조치 수행에 필요한 적절한 수준의 권한이 없습니다. 
+{: tsCauses}
+
+  
+
+해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오. 
+{: tsResolve}
+ * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오. 
+ * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 관리](../acctmgmt/index.html#mngorg){: new_window}를 참조하십시오.
+ 
+
+ 
+
+
+## 권한 오류로 인해 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 없습니다.
+{: #ts_vcap}
+
+사용자 앱에서 서비스 신임 정보가 하드 코딩된 경우 사용자 앱이 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스하려 하면 권한 오류가 발생합니다. 
+
+{{site.data.keyword.Bluemix_notm}} 서비스와 통신하도록 사용자 앱을 구성한 다음 {{site.data.keyword.Bluemix_notm}}에 앱을 배치하십시오. 그러나 앱을 사용하여 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수는 없으며 권한 오류가 수신됩니다.
+{: tsSymptoms}
+
+앱에 하드 코딩된 신임 정보가 올바르지 않습니다. 서비스가 다시 작성될 때마다 이에 액세스하기 위한 신임 정보가 변경됩니다.
+{: tsCauses}
+
+
+앱에서 신임 정보를 하드 코딩하는 대신 VCAP_SERVICES 환경 변수의 연결 매개변수를 사용하십시오. VCAP_SERVICES 환경 변수를 통해 연결 매개변수를 사용하는 메소드는 프로그램 언어마다 다릅니다. 예를 들어, Node.js 앱의 경우에는 다음 명령을 사용할 수 있습니다. 
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및
+[Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오. 
+ 
+
+ 
+ 
+
+
 
 
 ## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없음
 {: #ts_bm_tools_facet}
 
-지원되지 않는 패싯이 Eclipse 프로젝트에 적용되는 경우 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 사용자 앱을 Bluemix™에 배치할 수 없습니다. 
+지원되지 않는 패싯이 Eclipse 프로젝트에 적용되는 경우
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여
+사용자 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다. 
 
  
 
@@ -727,7 +786,7 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
   
   
 ## {{site.data.keyword.Bluemix_notm}}에서 조직을 찾을 수 없음
-{: #ts_push}
+{: #ts_orgs}
 
 {{site.data.keyword.Bluemix_notm}} 지역에서 작업할 때
 {{site.data.keyword.Bluemix_notm}}에서
@@ -1002,16 +1061,12 @@ for Java를 사용하여 앱 작성](../starters/liberty/index.html#liberty){: n
 {: tsSymptoms} 
 
 
-이 문제점은
-발견 스크립트, 컴파일 스크립트, 릴리스 스크립트 등의 스크립트가 실행 가능하지 않을 경우에
-발생합니다.
+이 문제점은 발견 스크립트, 컴파일 스크립트, 릴리스 스크립트 등의 스크립트가 실행 가능하지 않을 경우에 발생합니다.
 {: tsCauses}
 
  
 
-[git
-update](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로
-변경할 수 있습니다. 예를 들어 `git update --chmod=+x script.sh`를 입력합니다.
+[git update](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어 `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 	
 	
@@ -1033,10 +1088,7 @@ update](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용
 
  
 
-이 문제점을 해결하려면
-`manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는
-[애플리케이션
-Manifest](../manageapps/deployingapps.html#appmanifest){: new_window}를 참조하십시오.
+이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](../manageapps/deployingapps.html#appmanifest){: new_window}를 참조하십시오.
 {: tsResolve}	
 	
 
@@ -1046,9 +1098,7 @@ Manifest](../manageapps/deployingapps.html#appmanifest){: new_window}를 참조�
 ## Meteor 앱을 푸시할 수 없음
 {: #ts_meteor}
 
-빌드팩을 올바르게 지정하지 않은 경우 Meteor 애플리케이션을
-{{site.data.keyword.Bluemix_notm}}로
-푸시할 수 없습니다.
+빌드팩을 올바르게 지정하지 않은 경우 Meteor 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시할 수 없습니다.
 
  
 
@@ -1069,9 +1119,7 @@ Meteor 앱에 대해 사용자 정의 빌드팩을 사용하려면 다음 방법
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
-  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf
-push` 명령을 사용하되 **-b** 옵션을 사용하여 사용자 정의 빌드팩을
-지정하십시오. 예:
+  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf push` 명령을 사용하되 **-b** 옵션을 사용하여 사용자 정의 빌드팩을 지정하십시오. 예:
     ```
 	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1079,13 +1127,10 @@ push` 명령을 사용하되 **-b** 옵션을 사용하여 사용자 정의 빌�
   
 
     
-## {{site.data.keyword.Bluemix_notm}}에 배치 단추로
-앱이 배치되지 않음
+## {{site.data.keyword.Bluemix_notm}}에 배치 단추로 앱이 배치되지 않음
 {: #deploytobluemixbuttondoesntdeployanapp}
 
-{{site.data.keyword.Bluemix_notm}}에 배치 단추를
-클릭해도 Git 저장소가 복제되지 않거나 앱이 배치되지 않는 경우
-다음 문제에 대한 문제점 해결 방법을 사용해 보십시오.
+{{site.data.keyword.Bluemix_notm}}에 배치 단추를 클릭해도 Git 저장소가 복제되지 않거나 앱이 배치되지 않는 경우 다음 문제에 대한 문제점 해결 방법을 사용해 보십시오.
   * [Bluemix DevOps Services 프로젝트를 작성할 수 없음](#project-cannot-be-created)
   * [Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음](#repo-not-found)
   * [Git 저장소가 DevOps Services에 복제되었지만 앱이 {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)에 배치되지 않음.
@@ -1098,12 +1143,11 @@ DevOps Services 프로젝트를 작성할 수 없다면 IBM {{site.data.keyword.
 
 
 
-**Bluemix에 배치** 단추를 클릭했지만 **프로젝트 작성** 단계가 성공적으로 완료되지 않았습니다.
+**Bluemix에 배치** 단추를 클릭했지만 "프로젝트 작성" 단계가 성공적으로 완료되지 않았습니다.
 {: tsSymptoms} 
 
 
-{{site.data.keyword.Bluemix_notm}} 계정이
-만료되었을 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 계정이 만료되었을 수 있습니다.
 {: tsCauses} 
 
 다음 방법 중 하나를 사용하여 문제점을 수정하십시오.
@@ -1117,12 +1161,11 @@ DevOps Services 프로젝트를 작성할 수 없다면 IBM {{site.data.keyword.
 ### Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음
 {: #repo-not-found}
 
-Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 관련 문제일
-수 있습니다.
+Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 관련 문제일 수 있습니다.
 
 
 
-**Bluemix에 배치** 단추를 클릭했지만 Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없습니다. **저장소 복제** 단계가 성공적으로 완료되지 않았습니다. 따라서 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다. 
+**Bluemix에 배치** 단추를 클릭했지만 Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없습니다. "저장소 복제" 단계가 성공적으로 완료되지 않았습니다. 따라서 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다. 
 {: tsSymptoms} 
 
 이 문제점은 다음과 같은 이유로 발생할 수 있습니다.
@@ -1130,16 +1173,14 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 
   * Git 저장소가 없거나 Git 저장소에 액세스할 수 없습니다.
   * 단추 스니펫에 대한 HTML 또는 마크다운에 문제가 있을 수 있습니다.
-  * 특수 문자, 조회 매개변수 또는 URL의 단편으로 인해 Git 저장소에 올바르게
-액세스할 수 없는 문제가 있을 수 있습니다.
+  * 특수 문자, 조회 매개변수 또는 URL의 단편으로 인해 Git 저장소에 올바르게 액세스할 수 없는 문제가 있을 수 있습니다.
 
 다음 방법 중 하나를 사용하여 문제점을 수정하십시오.
 {: tsResolve}
 
   * Git 저장소가 있고, 공개적으로 액세스할 수 있으며, URL이 올바른지 확인하십시오.
-  * 스니펫에 HTML 또는 마크다운 실수가 있지 않은지 확인하십시오.
-  * 특수 문자, 조회 매개변수 또는 단편으로 인해 Git 저장소 URL에 문제가 있는 경우
-단추 스니펫에서 URL을 인코딩하십시오.
+  * 스니펫에 HTML 또는 마크다운 오류가 있지 않은지 확인하십시오.
+  * 특수 문자, 조회 매개변수 또는 단편으로 인해 Git 저장소 URL에 문제가 있는 경우, 단추 스니펫에서 URL을 인코딩하십시오.
   
 
   
@@ -1151,7 +1192,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
      
 
 
-**Bluemix에 배치** 배치 단추를 클릭한 후 Git 저장소가 DevOps Services에 복제되었지만, 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않았습니다. **Bluemix 배치** 단계가 성공적으로 완료되지 않았습니다.
+**Bluemix에 배치** 배치 단추를 클릭한 후 Git 저장소가 DevOps Services에 복제되었지만, 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않았습니다. "Bluemix에 배치" 단계가 성공적으로 완료되지 않았습니다.
 {: tsSymptoms} 
 
 이 문제점은 다음과 같은 이유로 발생할 수 있습니다.
@@ -1159,12 +1200,13 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 
   * {{site.data.keyword.Bluemix_notm}} 영역에 앱 배치에 필요한
 충분한 공간이 없을 수 있습니다. 
-  * 필수 서비스가 manifest.yml 파일에서 선언되지 않았을 수 있습니다.
-  * 필수 서비스가 manifest.yml 파일에서 선언되었지만 해당 서비스가 이미 대상 영역에 있습니다.
+  * 필수 서비스가 `manifest.yml` 파일에서 선언되지 않았을 수 있습니다.
+  * 필수 서비스가 `manifest.yml` 파일에서 선언되었지만
+해당 서비스가 이미 대상 영역에 있을 수 있습니다.
   * 저장소의 코드에 문제가 있을 수 있습니다.
 문제를 진단하려면
 배치에서 빌드 및 배치 로그를 검토하십시오.
-  1. **Bluemix에 배치** 배치 단계가 성공적으로 완료되지 않은 경우 이전 파이프라인 구성 단계에 있는 링크를 클릭하여 Delivery Pipeline을 여십시오.
+  1. "Bluemix에 배치" 단계가 성공적으로 완료되지 않은 경우, 이전 "파이프라인 구성" 단계에 있는 링크를 클릭하여 Delivery Pipeline을 여십시오.
   2. 실패한 빌드 또는 배치 단계를 식별하십시오.
   3. 실패한 단계에서 **로그 및 히스토리 보기**를 클릭하십시오.
   4. 오류 메시지를 찾으십시오.
@@ -1174,7 +1216,9 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 
   * {{site.data.keyword.Bluemix_notm}} 영역에
 앱 배치에 필요한 충분한 공간이 없다고 오류 메시지에 표시된 경우 다른 영역을 대상으로 지정하십시오.
-  * 필수 서비스가 manifest.yml 파일에서 선언되지 않았다고 오류 메시지에 표시된 경우 필수 서비스를 추가해야 한다는 사실을 저장소 소유자에게 알리십시오.
+  * 필수 서비스가 `manifest.yml` 파일에서 선언되지
+않았다고 오류 메시지에 표시된 경우 필수 서비스를 추가해야 한다는 사실을 저장소 소유자에게
+알리십시오.
   * 필수 서비스가 이미 대상 영역에 있다고 오류 메시지에 표시된 경우 다른 영역을 사용하도록
 선택하십시오.
   * 빌드와 관련하여 문제가 있다고 오류 메시지에 표시된 경우 앱 빌드를 방해하는
@@ -1222,8 +1266,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 ## 계정이 비활성화됨
 {: #ts_accnt_inactive}
 
-계정이 비활성 상태일 경우 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다. 이 문제점을 해결하려면
-ID 지원 팀에 문의해야 합니다.
+계정이 비활성 상태일 경우 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다. 이 문제점을 해결하려면 지원 팀에 문의해야 합니다.
 
 
 
@@ -1239,12 +1282,11 @@ ID 지원 팀에 문의해야 합니다.
 
  
 
-계정을 다시 활성화하려면 [ID 지원](mailto:id@bluemix.net)으로 이메일을 보내십시오. 이메일에 다음 정보를 포함해야 합니다.
+계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 센터](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용할 IBM ID
-  * 작성하는 앱이 속할 조직의 이름. 이 정보는 ID 지원 팀이 조직 내 사용자에게 올바른 역할 또는 멤버십이
-지정되었는지 판별하는 데 도움이 됩니다.
+  * 작성하는 앱이 속할 조직의 이름. 이 정보는 지원 팀이 조직 내 사용자에게 올바른 역할 또는 멤버십이 지정되었는지 판별하는 데 도움이 됩니다.
 
 
 
@@ -1260,10 +1302,7 @@ ID 지원 팀에 문의해야 합니다.
 {: tsSymptoms} 
 
 
-`BXNUI0097E: 새 애플리케이션을
-추가할 수 없습니다. 현재 조직 및 지역과
-연관된 영역이 없습니다. 대시보드에서
-영역 작성을 클릭하십시오. 영역이 작성되면 다시 시도하십시오.`
+`BXNUI0097E: 새 애플리케이션을 추가할 수 없습니다. 현재 조직 및 지역과 연관된 영역이 없습니다. 대시보드에서 영역 작성을 클릭하십시오. 영역이 작성되면 다시 시도하십시오.`
 
 
 
@@ -1272,8 +1311,7 @@ ID 지원 팀에 문의해야 합니다.
 
  
 
-영역을 작성하려면 다음 방법 중 하나를
-사용하십시오. 
+영역을 작성하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} 대시보드에서 영역을 작성할 조직을 선택한 다음 **영역 작성**을 클릭하십시오.
@@ -1290,19 +1328,14 @@ ID 지원 팀에 문의해야 합니다.
 
  
 
-이 문제점은
-한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에
-발생할 수 있습니다.
+이 문제점은 한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에 발생할 수 있습니다.
 {: tsCauses}
 
 예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
 
  
 
-이는
-{{site.data.keyword.Bluemix_notm}}의 지원되는
-동작이므로 이 동작을 사용하여 애플리케이션 업그레이드 시 무중단을 실현할 수
-있습니다. 자세한 정보는 Blue-Green 배치를 참조하십시오.
+이는 {{site.data.keyword.Bluemix_notm}}의 지원되는 동작이므로 이 동작을 사용하여 애플리케이션 업그레이드 시 무중단을 실현할 수 있습니다. 자세한 정보는 Blue-Green 배치를 참조하십시오.
 {: tsResolve}
   
 	
@@ -1315,8 +1348,7 @@ ID 지원 팀에 문의해야 합니다.
 ## 신용카드를 추가할 수 없음
 {: #ts_addcc}
 
-평가판 계정을 종량과금제 계정으로 변환하기 위해 신용카드 정보를
-제출할 수 없습니다.
+평가판 계정을 종량과금제 계정으로 변환하기 위해 신용카드 정보를 제출할 수 없습니다.
 
  
 
@@ -1334,11 +1366,8 @@ ID 지원 팀에 문의해야 합니다.
 {: tsResolve}
 
   1. 신용카드 추가 페이지에서 연락처 정보, 연락처 주소, 청구 주소 섹션에 있는 모든 필수 필드에 정보를 입력하십시오.
-  2. **IBM 이용 약관을 읽고 동의함**을 선택한 다음
-**제출**을 클릭하십시오. **지불 방법** 섹션이
-표시됩니다.
-  3. 신용카드 번호, 카드 만기 날짜 및 카드 상의 보안 코드를 입력하십시오. 그런 다음
-**제출**을 클릭하십시오.
+  2. **IBM 이용 약관을 읽고 동의함**을 선택한 다음 **제출**을 클릭하십시오. **지불 방법** 섹션이 표시됩니다.
+  3. 신용카드 번호, 카드 만기 날짜 및 카드 상의 보안 코드를 입력하십시오. 그런 다음 **제출**을 클릭하십시오.
 
 
 
@@ -1347,8 +1376,7 @@ ID 지원 팀에 문의해야 합니다.
 # 런타임 문제점 해결
 {: #runtimes}
 
-IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 
@@ -1356,68 +1384,39 @@ IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니
 {: #ts_loading_bp}
 
 
-앱을 푸시할 때 최신 빌드팩 컴포넌트를 사용하지
-못할 수 있습니다. 더 이상 사용되지 않는 컴포넌트가 로드되지
-않도록 기본 제공되는 메커니즘이 있는 빌드팩을 사용하거나, 앱을 푸시하거나
-다시 스테이징하기 전에 앱의 캐시 디렉토리에서 컨텐츠를 삭제할 수 있습니다. 
+앱을 푸시할 때 최신 빌드팩 컴포넌트를 사용하지 못할 수 있습니다. 더 이상 사용되지 않는 컴포넌트가 로드되지 않도록 기본 제공되는 메커니즘이 있는 빌드팩을 사용하거나, 앱을 푸시하거나 다시 스테이징하기 전에 앱의 캐시 디렉토리에서 컨텐츠를 삭제할 수 있습니다. 
 
  
 
-빌드팩을 업데이트한 후
-앱을 푸시하거나 다시 스테이징할 때 최신 빌드팩 컴포넌트가 자동으로 로드되지 않습니다. 결과적으로 앱에서 더 이상 사용되지 않는 빌드팩 컴포넌트를 사용합니다. 앱을
-마지막으로 푸시한 후 빌드팩에 적용한 업데이트는 구현되지
-않습니다. 
+빌드팩을 업데이트한 후 앱을 푸시하거나 다시 스테이징할 때 최신 빌드팩 컴포넌트가 자동으로 로드되지 않습니다. 결과적으로 앱에서 더 이상 사용되지 않는 빌드팩 컴포넌트를 사용합니다. 앱을 마지막으로 푸시한 후 빌드팩에 적용한 업데이트는 구현되지 않습니다. 
 {: tsSymptoms}
 
 
 
-사용자가
-항상 최신 버전을 사용하도록 일부 빌드팩은 인터넷에서
-업데이트된 모든 컴포넌트를 자동으로 다운로드하도록 구성되지
-않았습니다.
+사용자가 항상 최신 버전을 사용하도록 일부 빌드팩은 인터넷에서 업데이트된 모든 컴포넌트를 자동으로 다운로드하도록 구성되지 않았습니다.
 {: tsCauses} 
 
  
 
-더 이상 사용되지 않는 컴포넌트를 로드하지 않도록
-기본 제공 메커니즘이 있는 빌드팩을 사용할 수 있습니다. 두 가지 예로
-다음 빌드팩이 있습니다. 
+더 이상 사용되지 않는 컴포넌트를 로드하지 않도록 기본 제공 메커니즘이 있는 빌드팩을 사용할 수 있습니다. 두 가지 예로 다음 빌드팩이 있습니다. 
 {: tsResolve}
 
-  * [Cloud
-Foundry Java 빌드팩](https://github.com/cloudfoundry/java-buildpack){: new_window}. 최신 버전의 빌드팩을 사용하도록
-이 빌드팩에는 기본 메커니즘이 포함되어 있습니다. 이 메커니즘의
-작동 방식에 대한 자세한 정보는
-[extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}를 참조하십시오. 
-  * [Cloud
-Foundry Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. 이 빌드팩은 환경 변수를 사용하여
-비슷한 기능을 수행합니다. Node.js 빌드팩이 항상 인터넷에서
-노드 모듈을 다운로드하게 하려면 cf 명령행 인터페이스에서 다음
-명령을 입력하십시오. 	
+  * [Cloud Foundry Java 빌드팩](https://github.com/cloudfoundry/java-buildpack){: new_window}. 최신 버전의 빌드팩을 사용하도록 이 빌드팩에는 기본 메커니즘이 포함되어 있습니다. 이 메커니즘의 작동 방식에 대한 자세한 정보는 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}를 참조하십시오. 
+  * [Cloud Foundry Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. 이 빌드팩은 환경 변수를 사용하여 비슷한 기능을 수행합니다. Node.js 빌드팩이 항상 인터넷에서 노드 모듈을 다운로드하게 하려면 cf 명령행 인터페이스에서 다음 명령을 입력하십시오. 	
   ```
   set NODE_MODULES_CACHE=false
   ```
-사용 중인 빌드팩에서 자동으로 최신 컴포넌트를
-로드하는 메커니즘을 제공하지 않는 경우 수동으로 캐시
-디렉토리에서 컨텐츠를 삭제하고 다음 단계를 수행하여 앱을
-푸시할 수 있습니다.
-  1. 널 빌드팩의 분기를 체크아웃합니다(예: https://github.com/ryandotsmith/null-buildpack). 분기를 체크아웃하는 방법에 대한 정보는
-[Git 기본 - Git 저장소 가져오기](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
-  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고
-변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는
-[Git 기본 - 저장소에 변경사항
-기록](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}을 참조하십시오.
+사용 중인 빌드팩에서 자동으로 최신 컴포넌트를 로드하는 메커니즘을 제공하지 않는 경우 수동으로 캐시 디렉토리에서 컨텐츠를 삭제하고 다음 단계를 수행하여 앱을 푸시할 수 있습니다.
+  1. 널 빌드팩의 분기를 체크아웃합니다(예: https://github.com/ryandotsmith/null-buildpack). 분기를 체크아웃하는 방법에 대한 정보는 [Git 기본 - Git 저장소 가져오기](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
+  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는 [Git 기본 - 저장소에 변경사항 기록](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}을 참조하십시오.
   ```
   rm -rfv $2/*
   ```
-  3. 다음 명령을 사용하여 캐시를 삭제하기 위해 수정한 널 빌드팩으로
-앱을 푸시합니다. 이 단계를 완료하고 나면
-앱의 캐시 디렉토리에 있는 모든 컨텐츠가 삭제됩니다.
+  3. 다음 명령을 사용하여 캐시를 삭제하기 위해 수정한 널 빌드팩으로 앱을 푸시합니다. 이 단계를 완료하고 나면 앱의 캐시 디렉토리에 있는 모든 컨텐츠가 삭제됩니다.
   ```
   cf push appname -b <modified_null_buildpack>
   ```
-  4. 다음 명령을 사용하여 사용할 최신 빌드팩으로 앱을
-푸시합니다. 
+  4. 다음 명령을 사용하여 사용할 최신 빌드팩으로 앱을 푸시합니다. 
   ```
   cf push appname -b <latest_buildpack>
   ```
@@ -1444,12 +1443,7 @@ PHP 빌드팩을 사용하여 애플리케이션을 Bluemix로 푸시할 때 `NO
 
 
 
-PHP 빌드팩에서 error_log 매개변수는 로깅 레벨을 정의하는 데 사용됩니다. 기본적으로 `error_log` 매개변수의 값은
-**stderr notice**입니다. 다음 예에서는 Cloud Foundry에서 제공하는
-PHP 빌드팩의 `nginx-defaults.conf` 파일에 있는 기본
-로깅 레벨 구성을 보여줍니다. 자세한 정보는
-[cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}을
-참조하십시오.
+PHP 빌드팩에서 error_log 매개변수는 로깅 레벨을 정의하는 데 사용됩니다. 기본적으로 `error_log` 매개변수의 값은 **stderr notice**입니다. 다음 예에서는 Cloud Foundry에서 제공하는 PHP 빌드팩의 `nginx-defaults.conf` 파일에 있는 기본 로깅 레벨 구성을 보여줍니다. 자세한 정보는 [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}을 참조하십시오.
 {: tsCauses} 
 
 ```
@@ -1460,8 +1454,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-`NOTICE` 메시지는
-정보 메시지일 뿐 반드시 문제점이 발생했음을 의미하는 것은 아닙니다. 빌드팩의 nginx-defaults.conf 파일에서 로깅 레벨을 stderr notice에서 stderr error로 변경하여 메시지 로깅을 중지할 수 있습니다. 예를 들어, 다음과 같습니다. 	
+`NOTICE` 메시지는 정보 메시지일 뿐 반드시 문제점이 발생했음을 의미하는 것은 아닙니다. 빌드팩의 nginx-defaults.conf 파일에서 로깅 레벨을 stderr notice에서 stderr error로 변경하여 메시지 로깅을 중지할 수 있습니다. 예를 들어, 다음과 같습니다. 	
 {: tsResolve}
 
 ```
@@ -1469,30 +1462,22 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-기본 로깅 구성을 변경하는 방법에 대한
-자세한 정보는 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}를
-참조하십시오.
+기본 로깅 구성을 변경하는 방법에 대한 자세한 정보는 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}를 참조하십시오.
 	
 
-## 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로
-가져올 수 없음
+## 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 없음
 {: #ts_importpylib}
 
-써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로
-가져오지 못할 수 있습니다. Python 애플리케이션의 루트 디렉토리에 구성 파일을 추가하여
-이 문제를 해결할 수 있습니다.
+써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져오지 못할 수 있습니다. Python 애플리케이션의 루트 디렉토리에 구성 파일을 추가하여 이 문제를 해결할 수 있습니다.
 
 
-써드파티 Python 라이브러리(예:
-`web.py` 라이브러리)를 가져오려고 하면 `cf push` 명령이
-실패합니다.
+써드파티 Python 라이브러리(예: `web.py` 라이브러리)를 가져오려고 하면 `cf push` 명령이 실패합니다.
 {: tsSymptoms}
 
 
  
 
-이 문제점은
-Python 애플리케이션에 대한 구성 정보가 누락된 경우에 발생합니다.
+이 문제점은 Python 애플리케이션에 대한 구성 정보가 누락된 경우에 발생합니다.
 {: tsCauses}
 
 
@@ -1502,15 +1487,12 @@ Python 애플리케이션에 대한 구성 정보가 누락된 경우에 발생�
 {: tsResolve}
 
   1. `requirements.txt` 파일을 Python 앱의 루트 디렉토리에 추가하십시오.
-     `requirements.txt` 파일에는 Python 애플리케이션에
-필요한 라이브러리 패키지와 패키지 버전이 지정되어 있습니다. 다음 예에서는 `requirements.txt` 파일의 컨텐츠를 보여줍니다. 여기서 `web.py==0.37`은 다운로드할 `web.py` 라이브러리의 버전이 0.37임을 나타내고, `wsgiref==0.1.2`는 web.py 라이브러리에 필요한 웹 서버 게이트웨이 인터페이스가 0.1.2임을 나타냅니다.
+     `requirements.txt` 파일에는 Python 애플리케이션에 필요한 라이브러리 패키지와 패키지 버전이 지정되어 있습니다. 다음 예에서는 `requirements.txt` 파일의 컨텐츠를 보여줍니다. 여기서 `web.py==0.37`은 다운로드할 `web.py` 라이브러리의 버전이 0.37임을 나타내고, `wsgiref==0.1.2`는 web.py 라이브러리에 필요한 웹 서버 게이트웨이 인터페이스가 0.1.2임을 나타냅니다.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	`requirements.txt` 파일을 구성하는
-방법에 대한 자세한 정보는 [Requirements
-files](https://pip.readthedocs.org/en/1.1/requirements.html)를 참조하십시오. 
+	`requirements.txt` 파일을 구성하는 방법에 대한 자세한 정보는 [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)를 참조하십시오. 
 	 
   2. `Procfile` 파일을 Python 애플리케이션의 루트 디렉토리에
 추가하십시오.
@@ -1535,8 +1517,7 @@ Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로
 
  
 
-이 문제점은 다음과 같은 이유로
-발생합니다.
+이 문제점은 다음과 같은 이유로 발생합니다.
 {: tsCauses}
 
   * 애플리케이션이 Java™ 웹 애플리케이션이 아닙니다. RMU(Runtime Management Utilities)에서는 Liberty 빌드팩을 사용하여 배치된 웹 애플리케이션만
@@ -1546,8 +1527,7 @@ Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로
 
 
 
-이전 버전의 Liberty 빌드팩으로 인해 문제점이 발생한 경우 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 다시 배치하십시오. 그렇지 않은
-경우 다음과 같은 클라이언트 애플리케이션 로그 파일을 지원 팀에 제공하십시오.
+이전 버전의 Liberty 빌드팩으로 인해 문제점이 발생한 경우 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 다시 배치하십시오. 그렇지 않은 경우 다음과 같은 클라이언트 애플리케이션 로그 파일을 지원 팀에 제공하십시오.
 {: tsResolve} 
 
   * logs/messages.log
@@ -1688,7 +1668,6 @@ Instance 4: Trace specification is set successfully
 	```
 	
 	
-
 
 
 

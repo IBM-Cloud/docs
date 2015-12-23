@@ -39,7 +39,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 |-----------------|-----------------|
 | 플러그인 이름: active-deploy<br>  [문서 보기](../services/ActiveDeploy/index.html#cli) |  플러그인 이름: development-name <br> [문서 보기](./plugins/dev_mode/index.html) | 
 
-### {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 확장:bx
+### {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 확장: bx
 1. {{site.data.keyword.Bluemix_notm}} 레지스트리에서 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
 ```
 bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
@@ -51,7 +51,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![통합 개발 도구](./images/Integrated_Dev_Tools.png) 통합 개발 도구
 

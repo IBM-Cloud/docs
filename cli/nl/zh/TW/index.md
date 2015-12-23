@@ -19,7 +19,7 @@
 
 | *Cloud Foundry：cf* |	*{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}：ice* | *{{site.data.keyword.Bluemix_notm}} Live Sync：bl* |
 |---------------------|---------------|---------------|
-| [下載 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [檢視文件](./reference/cfcommands/index.html) |[下載 Docker](https://docs.docker.com/installation/){: new_window} <br> [ice Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [ice Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [ice Linux Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [檢視文件](../containers/container_cli_ice_ov.html) | [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [檢視文件](./reference/bl/index.html) |
+| [下載 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [檢視文件](./reference/cfcommands/index.html) |[下載 Docker](https://docs.docker.com/installation/){: new_window} <br> [ice Mac 安裝程式](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [ice Windows 安裝程式](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [ice Linux 安裝程式](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [檢視文件](../containers/container_cli_ice_ov.html) | [Mac 安裝程式](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows 安裝程式](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [檢視文件](./reference/bl/index.html) |
 
 
 ## ![指令行介面外掛程式](./images/CLI_Plugin.png) 指令行介面外掛程式
@@ -49,7 +49,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![整合式開發工具](./images/Integrated_Dev_Tools.png) 整合式開發工具
 

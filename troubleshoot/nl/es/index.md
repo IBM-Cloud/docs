@@ -1,9 +1,10 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
@@ -31,7 +32,7 @@ El ID y contraseña de IBM que utiliza para iniciar una sesión en {{site.data.k
 
 Para obtener un ID y contraseña de IBM válidos, vaya a la página Mi perfil de IBM y siga los pasos siguientes:
 {: tsResolve}
-  * Si ya ha registrado un ID de IBM y desea comprobar si el ID y la contraseña son válidos, pulse **Iniciar sesión** y especifique la contraseña y el ID de IBM en la página Iniciar sesión. Si ha olvidado su contraseña, pulse **¿Ha olvidado su contraseña?** en la parte derecha de la página Iniciar sesión para restablecer la contraseña. Si ha olvidado el ID de IBM o sigue teniendo problemas con su contraseña, póngase en contacto con el centro de atención al cliente de registro de IBM a nivel mundial para obtener ayuda.  
+  * Si ya ha registrado un ID de IBM y desea comprobar si el ID y la contraseña son válidos, pulse **Iniciar sesión** y especifique la contraseña y el ID de IBM en la página Iniciar sesión. Si ha olvidado su contraseña, pulse **¿Ha olvidado su contraseña?** en la parte derecha de la página Iniciar sesión para restablecer la contraseña. Si ha olvidado el ID de IBM o sigue teniendo problemas con su contraseña, póngase en contacto con el centro de atención al cliente de registro de IBM a nivel mundial para obtener ayuda. 
   * Si no tiene un ID de IBM, pulse **Registrar** para registrar un ID y una contraseña de IBM. 
   
 **Nota:** Para los empleados de IBM es posible que el ID de IBM no coincida con el ID de inicio de sesión en la intranet. 
@@ -49,7 +50,7 @@ Para obtener un ID y contraseña de IBM válidos, vaya a la página Mi perfil de
 No puede utilizar la migración tras error automática entre regiones de {{site.data.keyword.Bluemix_notm}}. Sin embargo, puede utilizar un proveedor de DNS que dé soporte a la migración tras error entre varias direcciones IP como solución temporal.
  
 
-Cuando una región de {{site.data.keyword.Bluemix_notm}} deja de estar disponible, las aplicaciones que se ejecutan en dicha región tampoco están disponibles, aunque las mismas aplicaciones se estén ejecutando en otra región de {{site.data.keyword.Bluemix_notm}}.
+Cuando una región de {{site.data.keyword.Bluemix_notm}} deja de estar disponible, las apps que se ejecutan en dicha región tampoco están disponibles, aunque las mismas apps se estén ejecutando en otra región de {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
@@ -60,7 +61,7 @@ Cuando una región de {{site.data.keyword.Bluemix_notm}} deja de estar disponibl
 Puede utilizar un proveedor de DNS que dé soporte a la migración tras error inteligente entre varias direcciones IP y configurar manualmente los valores de DNS para habilitar la migración tras error automática entre regiones de {{site.data.keyword.Bluemix_notm}}. Disponen de esta función los proveedores de DNS NSONE, Akamai, Dyn.
 {: tsResolve}
 
-Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.Bluemix_notm}} en la que se ejecutan sus aplicaciones. Para obtener la dirección IP pública de una región de {{site.data.keyword.Bluemix_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una ventana de línea de mandatos:
+Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.Bluemix_notm}} en la que se ejecutan sus apps. Para obtener la dirección IP pública de una región de {{site.data.keyword.Bluemix_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una ventana de línea de mandatos:
 ```
 nslookup stage1.mybluemix.net
 ```
@@ -76,13 +77,10 @@ Si la cuenta está pendiente, no puede iniciar una sesión en {{site.data.keywor
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}. Verá en su lugar el siguiente mensaje:
 {: tsSymptoms}
 
-`Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con id@bluemix.net para obtener ayuda.`
-
-
-Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
+<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">soporte de Bluemix</a>.</code>Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
 {: tsCauses} 
 
-El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el [ID de soporte](mailto:id@bluemix.net).
+El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -192,7 +190,7 @@ Puede llevar a cabo una o varias de estas acciones si es necesario:
   * Borre las cookies y la memoria caché del navegador.
   * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte Requisitos previos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf
-apps` para ver si la aplicación se está ejecutando.
+apps` para ver si la app se está ejecutando.
   
   
   
@@ -223,14 +221,14 @@ Utilice en su lugar el menú lateral de la esquina superior izquierda.
 ## El Panel de control de {{site.data.keyword.Bluemix_notm}} no puede cargar apps ni servicios
 {: #ts_dashboard}
 
-Es posible que el Panel de control de {{site.data.keyword.Bluemix_notm}} no muestre información sobre aplicaciones o servicios porque la organización o el espacio no pueden acceder a la misma. 
+Es posible que el Panel de control de {{site.data.keyword.Bluemix_notm}} no muestre información sobre apps o servicios porque la organización o el espacio no pueden acceder a la misma. 
  
 
-Cuando inicie una sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, no hay nada disponible en el Panel de control, aunque antes haya creado aplicaciones y haya utilizado algunos servicios.
+Cuando inicie una sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, no hay nada disponible en el Panel de control, aunque antes haya creado apps y haya utilizado algunos servicios.
 {: tsSymptoms}
  
 
-Este problema puede producirse cuando se enlaza una instancia de servicio a la aplicación, pero ya no se puede acceder al servicio porque los privilegios del servicio se han modificado para la organización o el espacio.
+Este problema puede producirse cuando se enlaza una instancia de servicio a la app, pero ya no se puede acceder al servicio porque los privilegios del servicio se han modificado para la organización o el espacio. 
 {: tsCauses}
   	
 
@@ -243,7 +241,7 @@ Para solucionar el problema, escriba `cf services` en la interfaz de línea de m
 # Resolución de problemas de gestión de apps
 {: #managingapps}
 
-Entre los problemas generales relacionados con la gestión de aplicaciones se pueden incluir
+Entre los problemas generales relacionados con la gestión de apps se pueden incluir
 las aplicaciones que no se pueden actualizar y los caracteres de doble byte que no se visualizan. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {:shortdesc}
 
@@ -252,12 +250,68 @@ las aplicaciones que no se pueden actualizar y los caracteres de doble byte que 
 
 
 
+## No se pueden efectuar las acciones solicitadas
+{: #ts_authority}
+
+Es posible que no pueda efectuar acciones sin la autoridad de acceso adecuada.
+
+
+ 
+
+Cuando intenta llevar a cabo acciones para una instancia de servicio o una instancia de app, no puede completar las acciones solicitadas y ve uno de los siguientes mensajes de error:
+{: tsSymptoms}
+
+`BXNUI0514E: No es desarrollador de ningún espacio de la organización <NombreOrg>.`
+
+
+`Error de servidor, código de estado: 403, código de error: 10003, mensaje: No tiene autorización para efectuar la acción solicitada.`
+
+ 
+
+No tiene el nivel adecuado de autorización necesario para realizar las acciones.
+{: tsCauses}
+
+  
+
+Para obtener el nivel de autorización adecuado, utilice uno de estos métodos:{: tsResolve}
+ * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
+ * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de la organización](../acctmgmt/index.html#mngorg){: new_window} para obtener detalles.
+ 
+
+ 
+
+
+## No se puede acceder a los servicios de {{site.data.keyword.Bluemix_notm}} debido a errores de autorización
+{: #ts_vcap}
+
+Se pueden producir errores de autorización cuando la app accede a un servicio de {{site.data.keyword.Bluemix_notm}} y las credenciales del servicio están codificadas en la app. 
+
+Después de configurar su app para comunicarse con un servicio de {{site.data.keyword.Bluemix_notm}}, despliega la app en {{site.data.keyword.Bluemix_notm}}. Sin embargo, no puede utilizar la app para acceder al servicio de {{site.data.keyword.Bluemix_notm}} y recibe un error de autorización.
+{: tsSymptoms}
+
+Las credenciales codificadas de la app podrían no ser correctas. Cada vez que el servicio se vuelve a crear, las credenciales para acceder a él cambian.
+{: tsCauses}
+
+
+En lugar de codificar las credenciales en la app, utilice parámetros de conexión de la variable de entorno VCAP_SERVICES. Los métodos para utilizar los parámetros de conexión de la variable de entorno VCAP_SERVICES varían en función de los lenguajes de programación. Por ejemplo, para las apps Node.js, puede utilizar el siguiente mandato: {: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+Para obtener más información sobre los mandatos que puede utilizar en otros lenguages de programación, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
+
+ 
+ 
+
+
 
 
 ## No se pueden desplegar apps utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-Cuando se aplica una faceta no soportada en el proyecto de Eclipse, no podrá desplegar las apps en Bluemix™ utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+Cuando se aplica una faceta no soportada en el proyecto de Eclipse,
+no podrá desplegar las apps en {{site.data.keyword.Bluemix_notm}} utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -399,10 +453,10 @@ Como método alternativo, utilice servicios de terceros que no dependan del serv
 ## El límite de servicios de la organización se ha excedido
 {: #ts_servicelimit}
 
-Si es usuario de una cuenta de prueba, es posible que no pueda crear una aplicación en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de servicios de su organización.
+Si es usuario de una cuenta de prueba, es posible que no pueda crear una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de servicios de su organización.
  
 
-Cuando intenta crear una aplicación en {{site.data.keyword.Bluemix_notm}},
+Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}},
 ve el siguiente mensaje de error: 
 {: tsSymptoms}
 
@@ -423,12 +477,12 @@ Suprima las instancias del servicio que no sean necesarias, o elimine el límite
     Para utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para suprimir una instancia de servicio, siga los siguientes pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse **SERVICIOS** en el panel de la izquierda. Se muestran los títulos de servicios. 
 	  2. En el título de servicio que quiera suprimir, pulse en el icono **Menú**.
-	  3. Pulse **Suprimir servicio**. Después de suprimir la instancia de servicio, se le solicitará que vuelva a transferir aplicación a la cual estaba enlazada la instancia de servicio. 
+	  3. Pulse **Suprimir servicio**. Después de suprimir la instancia de servicio, se le solicitará que vuelva a transferir app a la cual estaba enlazada la instancia de servicio. 
     Para utilizar la interfaz de línea de mandatos para suprimir una instancia de servicio, siga los pasos siguientes:
-	  1. Desenlace la instancia de servicio de la aplicación escribiendo `cf
+	  1. Desenlace la instancia de servicio de la app escribiendo `cf
 unbind-service <nombre_app> <nombre_instancia_servicio>`.
 	  2. Suprima la instancia de servicio escribiendo `cf delete-service <nombre_instancia_servicio>`.
-	  3. Después de suprimir la instancia de servicio, vuelva a transferir la aplicación a la cual estaba enlazada la instancia de servicio escribiendo `cf
+	  3. Después de suprimir la instancia de servicio, vuelva a transferir la app a la cual estaba enlazada la instancia de servicio escribiendo `cf
 restage <nombre_app>`.
   * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
 
@@ -467,41 +521,41 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ## El límite memoria de la organización se ha excedido
 {: #ts_outofmemory}
 
-Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una aplicación en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. 
+Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. 
 
 
 
-Al desplegar una aplicación en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
+Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
 {: tsSymptoms} 
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
  
 
-Este error se produce cuando la cantidad de memoria que queda para la organización es menos que la cantidad de memoria que la aplicación que quiere desplegar necesita. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB.
+Este error se produce cuando la cantidad de memoria que queda para la organización es menos que la cantidad de memoria que la app que quiere desplegar necesita. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB.
 {: tsCauses}
 
 
 
-Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las aplicaciones.
+Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps.
 {: tsResolve} 
 
   * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
-  * Para reducir la memoria que utilizan las aplicaciones, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
+  * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
     Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
-	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la aplicación. Se abre la página de detalles de la aplicación.
-	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la aplicación, o ambos, para la aplicación que desee.
+	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
+	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. 
 	Si utiliza la interfaz de línea de mandatos cf, siga estos pasos:
-	  1. Compruebe cuánta memoria están utilizando las aplicaciones:
+	  1. Compruebe cuánta memoria están utilizando las apps:
 	  ```
 	  cf apps
 	  ```
-	     El mandato cf apps lista todas las aplicaciones desplegadas en el espacio actual. También se visualiza el estado de cada aplicación.
-      2. Para reducir la cantidad de memoria que utiliza la aplicación, puede reducir el número de instancias de la aplicación, el límite máximo de memoria o ambos:
+	     El mandato cf apps lista todas las apps desplegadas en el espacio actual. También se visualiza el estado de cada app.
+      2. Para reducir la cantidad de memoria que utiliza la app, puede reducir el número de instancias de la app, el límite máximo de memoria o ambos:
 	  ```
 	  cf push <nombre_app> -i <número_instancia> -m <límite_memoria>
       ```
-	  3. Reinicie la aplicación para que se apliquen los cambios.
+	  3. Reinicie la app para que se apliquen los cambios.
 
 
 
@@ -510,11 +564,11 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 {: #ts_apps_not_auto_restarted}
 
 
-Una aplicación no se reinicia automáticamente si el servicio que ha enlazado a la aplicación deja de funcionar.	  
+Una app no se reinicia automáticamente si el servicio que ha enlazado a la app deja de funcionar.	  
 	  
  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
 {: tsSymptoms}
 
 
@@ -524,25 +578,25 @@ Este comportamiento se debe al diseño de Cloud Foundry.
 
  
 
-Puede reiniciar la aplicación manualmente si escribe el mandato siguiente en la interfaz de línea de mandatos:
+Puede reiniciar la app manualmente si escribe el mandato siguiente en la interfaz de línea de mandatos:
 {: tsResolve}
 
 ```
 cf push <nombre_app>
 ```
-Además, puede codificar la aplicación para identificar y recuperarse de problemas como paradas, excepciones o intentos de reconexión.  
+Además, puede codificar la app para identificar y recuperarse de problemas como paradas, excepciones o intentos de reconexión. 
 
 	  
 
-## Se pierden las variables definidas por el usuario al enviar por push una aplicación
+## Se pierden las variables definidas por el usuario al enviar por push una app
 {: #ts_varsnotretained}
 
-Al enviar por push una aplicación a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, se restablecen las variables especificadas, a menos que las guarde
+Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, se restablecen las variables especificadas, a menos que las guarde
 en el archivo de manifiesto.
 
 
 
-Las variables especificadas se pierden tras enviar por push una aplicación a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Las variables especificadas se pierden tras enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms} 
 
 
@@ -552,10 +606,10 @@ en el archivo de manifiesto.
 
  
 
-Al enviar por push una aplicación a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleccione el recuadro de verificación **Guardar en el archivo de manifiesto** en la página Detalles de aplicación del asistente Aplicación. Posteriormente,
+Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleccione el recuadro de verificación **Guardar en el archivo de manifiesto** en la página Detalles de aplicación del asistente Aplicación. Posteriormente,
 las variables especificadas
 en el asistente
-se guardan en el archivo de manifiesto de su aplicación. La próxima vez que abra el asistente, las variables se visualizarán automáticamente.
+se guardan en el archivo de manifiesto de su app. La próxima vez que abra el asistente, las variables se visualizarán automáticamente.
 {: tsResolve}
 
 
@@ -580,13 +634,13 @@ Los iconos no están disponibles en estas circunstancias:
   * La app no contiene un archivo `package.json`.
 
 
-Utilice uno de los métodos siguientes para resolver el problema:
+Utilice uno de los métodos siguientes para resolver el problema: 
 {: tsResolve} 
 
   * Si el archivo `manifest.yml` no está almacenado en el nivel superior del proyecto, guárdelo aquí.
   * Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`.
   ```
-   path: vía_acceso_a_aplicación
+   path: vía_acceso_a_app
    ```
   * Cree un archivo `package.json` que esté en el directorio de la app.
 
@@ -600,7 +654,7 @@ Utilice uno de los métodos siguientes para resolver el problema:
   
   
 ## No se encuentran las organizaciones en {{site.data.keyword.Bluemix_notm}}
-{: #ts_push}
+{: #ts_orgs}
 
 Es posible que no encuentre su organización en {{site.data.keyword.Bluemix_notm}} al
 trabajar en una región de {{site.data.keyword.Bluemix_notm}}.
@@ -610,7 +664,7 @@ trabajar en una región de {{site.data.keyword.Bluemix_notm}}.
 Puede iniciar sesión correctamente en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pero no puede enviar por push apps utilizando la interfaz de línea de mandatos cf o el plug-in de Eclipse.
 {: tsSymptoms}
 
-Al intentar enviar por push una aplicación
+Al intentar enviar por push una app
 a {{site.data.keyword.Bluemix_notm}} utilizando
 la interfaz de línea de mandatos cf, ve uno de los siguientes mensajes de error con el nombre de la organización especificado en el mensaje: 
 
@@ -619,7 +673,7 @@ la interfaz de línea de mandatos cf, ve uno de los siguientes mensajes de error
 `No se ha encontrado la organización`
 
 
-Al intentar enviar por push una aplicación
+Al intentar enviar por push una app
 a {{site.data.keyword.Bluemix_notm}} utilizando
 el plug-in de Eclipse de Cloud Foundry, ve el siguiente mensaje de error:
 
@@ -634,14 +688,14 @@ puede encontrarse en otra región.
 
    
   
-Si envía por push su aplicación a {{site.data.keyword.Bluemix_notm}} utilizando la interfaz de línea de mandatos cf, introduzca el mandato cf api y especifique el punto final API de la región. Por ejemplo, escriba el siguiente mandato para conectarse a la región {{site.data.keyword.Bluemix_notm}} de Europa - Reino Unido:
+Si envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando la interfaz de línea de mandatos cf, introduzca el mandato cf api y especifique el punto final API de la región. Por ejemplo, escriba el siguiente mandato para conectarse a la región {{site.data.keyword.Bluemix_notm}} de Europa - Reino Unido:
 {: tsResolve}
 
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
 Si
-envía por push su aplicación a {{site.data.keyword.Bluemix_notm}} utilizando
+envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando
 las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}}
 y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}}
 en la que se ha creado su organización. Para obtener más información
@@ -650,14 +704,14 @@ sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IB
   
 
 
-## No se puede crear una ruta de aplicación
+## No se puede crear una ruta de app
 {: #ts_hostistaken}
 
-Al desplegar una aplicación en {{site.data.keyword.Bluemix_notm}}, no se puede crear la ruta de la aplicación si el nombre de host especificado ya está en uso.
+Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, no se puede crear la ruta de la app si el nombre de host especificado ya está en uso.
 
 
 
-Al desplegar una aplicación en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
+Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error: 
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
@@ -674,25 +728,25 @@ El nombre de host especificado debe ser exclusivo en el dominio
 que está utilizando. Para especificar otro nombre de host debe utilizar uno de los siguientes métodos:
 {: tsResolve} 
 
-  * Si despliega su aplicación utilizando el archivo `manifest.yml`, especifique el nombre de host en la opción host.	
+  * Si despliega su app utilizando el archivo `manifest.yml`, especifique el nombre de host en la opción host.	 
     ```
     host: <hostname>	
 	```
-  * Si despliega su aplicación desde el indicador de mandatos, utilice el mandato `cf
+  * Si despliega su app desde el indicador de mandatos, utilice el mandato `cf
 push` con la opción **-n**. 
     ```
     cf push <appname> -n <hostname>
     ```
 
 
-## Una aplicación WAR no se puede enviar mediante el mandato cf push
+## Una app WAR no se puede enviar mediante el mandato cf push
 {: #ts_cf_war}
 
-Es posible que no pueda utilizar el mandato cf push para desplegar una aplicación web archivada a {{site.data.keyword.Bluemix_notm}} si la ubicación de la aplicación no se especifica correctamente.
+Es posible que no pueda utilizar el mandato cf push para desplegar una app web archivada a {{site.data.keyword.Bluemix_notm}} si la ubicación de la app no se especifica correctamente.
 	
 
 
-Si carga una aplicación WAR en {{site.data.keyword.Bluemix_notm}} mediante el mandato `cf push`, verá el mensaje de error `Error de transferencia: no se pueden obtener instancias porque la transferencia ha fallado.`
+Si carga una app WAR en {{site.data.keyword.Bluemix_notm}} mediante el mandato `cf push`, verá el mensaje de error `Error de transferencia: no se pueden obtener instancias porque la transferencia ha fallado.`
 {: tsSymptoms} 
 
  
@@ -720,14 +774,14 @@ push -h`.
 
 
 
-## Los caracteres de doble byte no se visualizan correctamente cuando se envían aplicaciones Liberty a {{site.data.keyword.Bluemix_notm}} aplicaciones
+## Los caracteres de doble byte no se visualizan correctamente cuando se envían apps Liberty a {{site.data.keyword.Bluemix_notm}} aplicaciones
 {: #ts_doublebytes}
 
 Es posible que los caracteres de doble byte no se visualicen correctamente si el soporte de Unicode no está configurado correctamente para el servlet o los archivos JSP.
 
  
 
-Cuando se envía una aplicación Liberty a {{site.data.keyword.Bluemix_notm}}, los caracteres de doble byte especificados dentro de la aplicación no se visualizan correctamente.
+Cuando se envía una app Liberty a {{site.data.keyword.Bluemix_notm}}, los caracteres de doble byte especificados dentro de la app no se visualizan correctamente.
 {: tsSymptoms}
 
  
@@ -830,40 +884,40 @@ Node.js para permitir que el paquete de compilación Node.js reconozca la app. A
  }
     ```
 	
-Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las aplicaciones Node.js](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las apps Node.js](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
 
-## Aparecen errores de configuración en el archivo `server.xml` después de importar una aplicación {{site.data.keyword.Bluemix_notm}} Liberty de Bluemix DevOps Services en Eclipse
+## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de Bluemix DevOps Services en Eclipse
 {: #ts_eclipse}
 
-Si ve errores de configuración en el archivo `server.xml` después de importar una aplicación {{site.data.keyword.Bluemix_notm}} Liberty de IBM Bluemix DevOps Services en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
+Si ve errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de IBM Bluemix DevOps Services en Eclipse, es posible que tenga que eliminar el archivo `server.xml` del proyecto. 
 
  
 
-Después de importar una aplicación {{site.data.keyword.Bluemix_notm}} Liberty de {{site.data.keyword.Bluemix_notm}} DevOps Services en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse.
+Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty de {{site.data.keyword.Bluemix_notm}} DevOps Services en Eclipse, verá errores de configuración en el archivo `server.xml` en la vista Problemas de Eclipse. 
 {: tsSymptoms}
 
  
 
-El paquete de compilación de Liberty utiliza el archivo `server.xml` para configurar la aplicación y genera un archivo `runtime-vars.xml` cuando la aplicación Liberty se envía a {{site.data.keyword.Bluemix_notm}}. Cuando importa la aplicación en Eclipse, el archivo `runtime-vars.xml` no existe en el entorno local.
+El paquete de compilación de Liberty utiliza el archivo `server.xml` para configurar la app y genera un archivo `runtime-vars.xml` cuando la app Liberty se envía a {{site.data.keyword.Bluemix_notm}}. Cuando importa la app en Eclipse, el archivo `runtime-vars.xml` no existe en el entorno local.
 {: tsCauses}
 
  
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la aplicación como una aplicación WAR. Para obtener más información, consulte [Creación de apps con Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Creación de apps con Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
 {: tsResolve}
 	
 	
-## No se puede transferir una aplicación mediante un paquete de compilación personalizado
+## No se puede transferir una app mediante un paquete de compilación personalizado
 {: #ts_bp_compilation}
 
-Es posible que no pueda desplegar una aplicación en {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación personalizado si los scripts del paquete de compilación no son ejecutables.
+Es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación personalizado si los scripts del paquete de compilación no son ejecutables.
 
 
 
-Si despliega una aplicación en {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación personalizado, verá el mensaje de error `La aplicación no se ha podido transferir, por lo que no hay instancias que mostrar.`
+Si despliega una app en {{site.data.keyword.Bluemix_notm}} utilizando un paquete de compilación personalizado, verá el mensaje de error `La app no se ha podido transferir, por lo que no hay instancias que mostrar.`
 {: tsSymptoms} 
 
 
@@ -881,21 +935,21 @@ update](http://git-scm.com/docs/git-update-index){: new_window} para cambiar el 
 ## Una app no se puede desplegar desde DevOps Services a {{site.data.keyword.Bluemix_notm}}
 {: #ts_devops_to_bm}
 
-Es posible que no pueda enviar por push la aplicación de IBM Bluemix DevOps Services a {{site.data.keyword.Bluemix_notm}} si la aplicación no contiene el archivo `manifest.yml`.
+Es posible que no pueda enviar por push la app de IBM Bluemix DevOps Services a {{site.data.keyword.Bluemix_notm}} si la app no contiene el archivo `manifest.yml`.
 
  
 
-Cuando se despliega una aplicación desde DevOps Services en {{site.data.keyword.Bluemix_notm}}, es posible que se visualice el mensaje de error `No se ha detectado ningún tipo de aplicación soportado`.
+Cuando se despliega una app desde DevOps Services en {{site.data.keyword.Bluemix_notm}}, es posible que se visualice el mensaje de error `No se ha detectado ningún tipo de app soportado`.
 {: tsSymptoms}
 
  
 
-Este problema puede deberse a que DevOps Services necesita un archivo `manifest.yml` para desplegar una aplicación en {{site.data.keyword.Bluemix_notm}}.
+Este problema puede deberse a que DevOps Services necesita un archivo `manifest.yml` para desplegar una app en {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  
 
-Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la aplicación](../manageapps/deployingapps.html#appmanifest){: new_window}.
+Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](../manageapps/deployingapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -905,28 +959,28 @@ Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtene
 ## No se pueden enviar por push las apps de Meteor
 {: #ts_meteor}
 
-Es posible que no pueda enviar por push una aplicación de Meteor a {{site.data.keyword.Bluemix_notm}} si no se ha especificado correctamente el paquete de compilación.
+Es posible que no pueda enviar por push una app de Meteor a {{site.data.keyword.Bluemix_notm}} si no se ha especificado correctamente el paquete de compilación.
 
  
 
-Al desplegar una aplicación de Meteor en {{site.data.keyword.Bluemix_notm}}, es posible que vea el mensaje de error `La aplicación no se ha podido transferir, por lo que no hay instancias que mostrar.`
+Al desplegar una app de Meteor en {{site.data.keyword.Bluemix_notm}}, es posible que vea el mensaje de error `La app no se ha podido transferir, por lo que no hay instancias que mostrar.`
 {: tsSymptoms}
 
 
-Este problema se produce porque no se ha proporcionado ningún paquete de compilación incorporado para las aplicaciones de Meteor. Debe utilizar un paquete de compilación personalizado.
+Este problema se produce porque no se ha proporcionado ningún paquete de compilación incorporado para las apps de Meteor. Debe utilizar un paquete de compilación personalizado.
 {: tsCauses} 
 
 
  
 
-Para utilizar un paquete de compilación personalizado para las aplicaciones de Meteor, debe utilizar uno de los siguientes métodos:
+Para utilizar un paquete de compilación personalizado para las apps de Meteor, debe utilizar uno de los siguientes métodos:
 {: tsResolve}
 
-  * Si despliega su aplicación mediante el archivo `manifest.yml`, especifique el URL o el nombre del paquete de compilación personalizado mediante la opción buildpack. Por ejemplo:
+  * Si despliega su app mediante el archivo `manifest.yml`, especifique el URL o el nombre del paquete de compilación personalizado mediante la opción buildpack. Por ejemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
-  * Si despliega su aplicación desde un indicador de mandatos, utilice el mandato `cf
+  * Si despliega su app desde un indicador de mandatos, utilice el mandato `cf
 push` y especifique el paquete de compilación personalizado mediante la opción
 **-b**. Por ejemplo:
     ```
@@ -952,7 +1006,7 @@ Si no se puede crear el proyecto DevOps Services, es posible que su cuenta de IB
 
 
 
-Pulsa el botón **Desplegar en Bluemix**, pero el paso **Creando proyecto** no se completa correctamente.
+Pulsa el botón **Desplegar en Bluemix**, pero el paso "Creando proyecto" no se completa correctamente.
 {: tsSymptoms} 
 
 
@@ -973,7 +1027,8 @@ Si se encuentra con que el repositorio Git no está clonando, es posible que hay
 
 
 
-Pulsa el botón **Desplegar en Bluemix**, pero el repositorio Git no se encuentra y no se puede clonar en DevOps Services. El paso **Clonando repositorio** no se completa correctamente. Por lo tanto, la app no se puede desplegar en {{site.data.keyword.Bluemix_notm}}. 
+Pulsa el botón **Desplegar en Bluemix**, pero el repositorio Git no se encuentra y no se puede clonar en DevOps Services. El paso "Clonando repositorio" no se completa correctamente.
+Por lo tanto, la app no se puede desplegar en {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Este problema se podría producir por las siguientes razones:
@@ -987,8 +1042,8 @@ Utilice uno de los métodos siguientes para arreglar el problema:
 {: tsResolve}
 
   * Compruebe que el repositorio Git exista, se pueda acceder públicamente y que el URL sea correcto.
-  * Compruebe que el fragmento de código no contenga errores de HTML o markdown.
-  * Si hay caracteres especiales, parámetros de consulta o fragmentos del URL que causen un problema con el URL del repositorio Git, codifique el URL del fragmento de código del botón.
+  * Compruebe que el fragmento de código no contenga errores de HTML ni markdown.
+  * Si hay caracteres especiales, parámetros de consulta o fragmentos que causan algún problema con el URL del repositorio Git, codifique el URL del fragmento de código del botón.
   
 
   
@@ -1000,18 +1055,17 @@ Si detecta que la app no se ha desplegado, es posible que haya algún problema c
      
 
 
-Pulsa el botón **Desplegar en Bluemix** y el repositorio Git se clona en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}. El paso **Desplegando en Bluemix** no se completa correctamente.
-{: tsSymptoms} 
+Pulsa el botón **Desplegar en Bluemix** y el repositorio Git se clona en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}. El paso "Desplegando en Bluemix" no se completa correctamente.{: tsSymptoms} 
 
 Este problema se podría producir por las siguientes razones:
 {: tsCauses}  
 
   * Puede que no haya suficiente espacio en el espacio de {{site.data.keyword.Bluemix_notm}} para desplegar una app. 
-  * Puede que un servicio necesario no se haya declarado en el archivo manifest.yml.
-  * Puede que un servicio necesario se haya declarado en el archivo manifest.yml, pero que el servicio ya exista en el espacio de destino.
+  * Puede que un servicio necesario no se haya declarado en el archivo `manifest.yml`.
+  * Puede que un servicio necesario se haya declarado en el archivo `manifest.yml`, pero que el servicio ya exista en el espacio de destino.
   * Puede que haya algún problema con el código del repositorio.
 Para diagnosticar el problema, revise los registros de compilación y despliegue del despliegue:
-  1. Cuando el paso **Desplegando en Bluemix** no se complete correctamente, pulse el enlace del paso Configurando la pipeline anterior para abrir la Delivery Pipeline.
+  1. Cuando el paso "Desplegando en Bluemix" no se complete correctamente, pulse el enlace del paso anterior "Configurando el conducto" para abrir Delivery Pipeline.
   2. Identifique la compilación o la etapa de despliegue anómala.
   3. En la etapa anómala, pulse **Ver registros e historial**.
   4. Localice el mensaje de error.
@@ -1020,7 +1074,7 @@ Utilice uno de los métodos siguientes para arreglar el problema:
 {: tsResolve}
 
   * Si el mensaje de error indica que no hay suficiente espacio en el espacio de {{site.data.keyword.Bluemix_notm}} para desplegar la app, seleccione otro espacio.
-  * Si el mensaje de error indica que un servicio necesario no se ha declarado en el archivo manifest.yml, notifique al propietario del repositorio que se debe añadir el servicio.
+  * Si el mensaje de error indica que un servicio necesario no se ha declarado en el archivo `manifest.yml`, notifique al propietario del repositorio que se debe añadir el servicio.
   * Si el mensaje de error indica que un servicio necesario ya existe en el espacio de destino, seleccione un espacio diferente.
   * Si el mensaje de error indica que existe un problema con la compilación, solucione los problemas con el código que impiden que la app se compile. Para verificar que el código no contiene ningún problema, compile el código utilizando mandatos Git:
     1. Clone el repositorio Git:
@@ -1058,7 +1112,7 @@ Utilice uno de los métodos siguientes para arreglar el problema:
 {: #managingaccounts}
 
 Puede experimentar problemas con la gestión de la cuenta; por ejemplo si distintas
-aplicaciones comparten el mismo nombre de dominio, los administradores que no pueden ver
+apps comparten el mismo nombre de dominio, los administradores que no pueden ver
 todas las organizaciones. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {:shortdesc}
 
@@ -1066,14 +1120,14 @@ todas las organizaciones. Sin embargo, en muchos de los casos, puede solucionar 
 ## La cuenta está inactiva
 {: #ts_accnt_inactive}
 
-No puede crear una aplicación en {{site.data.keyword.Bluemix_notm}} si la cuenta está inactiva. Debe ponerse en contacto con el equipo de soporte de su ID para solucionar este problema.
+No puede crear una app en {{site.data.keyword.Bluemix_notm}} si la cuenta está inactiva. Debe ponerse en contacto con el equipo de soporte para solucionar este problema.
 
 
 
-Cuando intenta crear una aplicación en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error:
+Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error:
 {: tsSymptoms} 
 
-`BXNUI0096E: No se ha podido crear la aplicación. La cuenta está inactiva porque se ha cancelado o suspendido.`
+`BXNUI0096E: No se ha podido crear la app. La cuenta está inactiva porque se ha cancelado o suspendido.`
 
 
 El estado de la cuenta de {{site.data.keyword.Bluemix_notm}} pasa a ser inactivo si la cuenta se cancela o se suspende.
@@ -1081,26 +1135,26 @@ El estado de la cuenta de {{site.data.keyword.Bluemix_notm}} pasa a ser inactivo
 
  
 
-Para reactivar la cuenta, envíe un correo electrónico al [equipo de soporte de su ID](mailto:id@bluemix.net). En el correo incluya la siguiente información:
+Para volver a activar la cuenta, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. En el correo incluya la siguiente información:
 {: tsResolve}
 
   * El ID de IBM que utiliza para iniciar la sesión en {{site.data.keyword.Bluemix_notm}}.
-  * El nombre de la organización en la que se está creando la aplicación. Esta información puede ayudar al equipo de soporte de su ID a determinar si se le han asignado los roles o pertenencia a grupos correctos en la organización.
+  * El nombre de la organización en la que se está creando la app. Esta información puede ayudar al equipo de soporte a determinar si se le han asignado los roles o pertenencia a grupos correctos en la organización.
 
 
 
 ## No hay espacio asociado a la organización actual
 {: #ts_no_space}
 
-No puede crear una aplicación si no hay ningún espacio asociado a la organización actual.
+No puede crear una app si no hay ningún espacio asociado a la organización actual.
 
 
 
-Cuando intenta crear una aplicación en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error:
+Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error:
 {: tsSymptoms} 
 
 
-`BXNUI0097E: No se ha podido añadir la nueva aplicación. No hay espacio asociado a la organización y región actuales. En el Panel de control, pulse Crear un espacio. Cuando se cree el espacio, vuélvalo a intentar.`
+`BXNUI0097E: No se ha podido añadir la nueva app. No hay espacio asociado a la organización y región actuales. En el Panel de control, pulse Crear un espacio. Cuando se cree el espacio, vuélvalo a intentar.`
 
 
 
@@ -1118,21 +1172,21 @@ Para crear un espacio, utilice uno de estos métodos:
   
   
   
-## Los nombres de dominio de distintas aplicaciones coinciden
+## Los nombres de dominio de distintas apps coinciden
 {: #ts_domain_diff}
 
-Puede que observe que varias aplicaciones comparten el mismo URL en {{site.data.keyword.Bluemix_notm}}.
+Puede que observe que varias apps comparten el mismo URL en {{site.data.keyword.Bluemix_notm}}.
 
  
 
-Este problema puede producirse cuando se asigna la misma ruta de URL a distintas aplicaciones de un espacio.
+Este problema puede producirse cuando se asigna la misma ruta de URL a distintas apps de un espacio.
 {: tsCauses}
 
-Por ejemplo, supongamos que envía la aplicación myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.stage1.mybluemix.net". Luego envía otra aplicación myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.stage1.mybluemix.net". Ahora la ruta está correlacionada a ambas aplicaciones.
+Por ejemplo, supongamos que envía la app myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.stage1.mybluemix.net". Luego envía otra app myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.stage1.mybluemix.net". Ahora la ruta está correlacionada a ambas apps.
 
  
 
-Este es el comportamiento soportado de {{site.data.keyword.Bluemix_notm}} y puede utilizar este procedimiento para conseguir un tiempo de inactividad cero para la actualización de la aplicación. Para obtener más información, consulte Despliegues Blue-Green.
+Este es el comportamiento soportado de {{site.data.keyword.Bluemix_notm}} y puede utilizar este procedimiento para conseguir un tiempo de inactividad cero para la actualización de la app. Para obtener más información, consulte Despliegues Blue-Green.
 {: tsResolve}
   
 	
@@ -1228,7 +1282,7 @@ Puede que vea mensajes que contengan AVISOS procedentes de los registros. Puede 
 	
  
 
-Al enviar por push una aplicación a Bluemix utilizando un paquete de compilación PHP, es posible que vea mensajes que contengan `AVISOS`:
+Al enviar por push una app a Bluemix utilizando un paquete de compilación PHP, es posible que vea mensajes que contengan `AVISOS`:
 {: tsSymptoms}
 
 ```
@@ -1266,7 +1320,7 @@ Para obtener más información sobre cómo cambiar la configuración de registro
 ## No se puede importar una biblioteca Python de terceros en {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-Es posible que no pueda importar una biblioteca Python de terceros en {{site.data.keyword.Bluemix_notm}}. Puede solucionar el problema añadiendo archivos de configuración al directorio raíz de su aplicación Python.
+Es posible que no pueda importar una biblioteca Python de terceros en {{site.data.keyword.Bluemix_notm}}. Puede solucionar el problema añadiendo archivos de configuración al directorio raíz de su app Python.
 
 
 Cuando intenta importar una biblioteca Python de terceros, como por ejemplo la biblioteca `web.py`, el mandato `cf push` falla.
@@ -1275,25 +1329,25 @@ Cuando intenta importar una biblioteca Python de terceros, como por ejemplo la b
 
  
 
-Este problema se produce cuando falta la información de configuración de la aplicación Python.
+Este problema se produce cuando falta la información de configuración de la app Python.
 {: tsCauses}
 
 
  
 
-Para solucionar el problema, añada un archivo `requirements.txt` y un archivo `Procfile` al directorio raíz de la aplicación Python. La información siguiente da por supuesto que está importando una biblioteca web.py:
+Para solucionar el problema, añada un archivo `requirements.txt` y un archivo `Procfile` al directorio raíz de la app Python. La información siguiente da por supuesto que está importando una biblioteca web.py:
 {: tsResolve}
 
-  1. Añada un archivo `requirements.txt` al directorio raíz de la aplicación Python.
-     El archivo `requirements.txt` especifica los paquetes de la biblioteca que la aplicación Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
+  1. Añada un archivo `requirements.txt` al directorio raíz de la app Python.
+     El archivo `requirements.txt` especifica los paquetes de la biblioteca que la app Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
 	Para obtener más información sobre cómo configurar el archivo `requirements.txt`, consulte [Archivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
-  2. Añada un archivo `Procfile` al directorio raíz de la aplicación Python.
-	El archivo `Procfile` debe contener el mandato de inicio de la aplicación Python. En el mandato siguiente, *nombreapp* es el nombre de la aplicación Python, y *PUERTO* es el número de puerto que la aplicación Python debe utilizar para recibir solicitudes de los usuarios de la aplicación. *$PORT* es opcional. Si no especifica PUERTO en el mandato de inicio, se utilizará el número de puerto bajo la variable de entorno `VCAP_APP_PORT` de la aplicación.
+  2. Añada un archivo `Procfile` al directorio raíz de la app Python.
+	El archivo `Procfile` debe contener el mandato de inicio de la app Python. En el mandato siguiente, *nombreapp* es el nombre de la app Python, y *PUERTO* es el número de puerto que la app Python debe utilizar para recibir solicitudes de los usuarios de la app. *$PORT* es opcional. Si no especifica PUERTO en el mandato de inicio, se utilizará el número de puerto bajo la variable de entorno `VCAP_APP_PORT` de la app. 
 	```
 	web: python <nombreapp>.py $PORT
 	```
@@ -1314,14 +1368,14 @@ El botón Acciones de la página Detalles de la instancia está inhabilitado.
 Este problema se produce por las siguientes razones:
 {: tsCauses}
 
-  * La aplicación no es una aplicación web Java™. Runtime Management Utilities (RMU) solo da soporte a las aplicaciones web que se despliegan con paquetes de
+  * La app no es una app web Java™. Runtime Management Utilities (RMU) solo da soporte a las apps web que se despliegan con paquetes de
 compilación Liberty.
-  * La aplicación no se ha desplegada con el paquete de compilación Liberty integrado.
-  * La aplicación se ha desplegado con una versión anterior del paquete de compilación de Liberty.
+  * La app no se ha desplegada con el paquete de compilación Liberty integrado.
+  * La app se ha desplegado con una versión anterior del paquete de compilación de Liberty.
 
 
 
-Si el problema se debe a una versión anterior del paquete de compilación de Liberty, vuelva a desplegar la aplicación en {{site.data.keyword.Bluemix_notm}}. De lo contrario, puede proporcionar los siguientes archivos de registro de la aplicación del cliente al equipo de soporte:
+Si el problema se debe a una versión anterior del paquete de compilación de Liberty, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}}. De lo contrario, puede proporcionar los siguientes archivos de registro de la app del cliente al equipo de soporte:
 {: tsResolve} 
 
   * logs/messages.log
@@ -1364,7 +1418,7 @@ Se muestra un mensaje de error mientras se están ejecutando las operaciones de 
 ```
 Instancia 0: la especificación de rastreo se ha establecido correctamente
 Instancia 2: la especificación de rastreo se ha establecido correctamente
-Instancia 1: la instancia de destino 1 para la aplicación abcd no se encuentra en el estado de ejecución.
+Instancia 1: la instancia de destino 1 para la app abcd no se encuentra en el estado de ejecución.
 Instancia 3: la especificación de rastreo se ha establecido correctamente
 Instancia 4: la especificación de rastreo se ha establecido correctamente
 ```
@@ -1374,8 +1428,8 @@ Instancia 4: la especificación de rastreo se ha establecido correctamente
 Este problema se produce por las siguientes razones:
 {: tsCauses} 
 
-  * Las funciones de gestión de rastreo o de volcado son sólo para las instancias de aplicaciones que se están ejecutando. No se pueden utilizar operaciones de rastreo o de volcado en instancias de aplicaciones que se han detenido, se están iniciando o se han interrumpido.
-  * El estado de la instancia de aplicación cambia cuando se abre el diálogo de rastreo o de volcado. 
+  * Las funciones de gestión de rastreo o de volcado son sólo para las instancias de apps que se están ejecutando. No se pueden utilizar operaciones de rastreo o de volcado en instancias de apps que se han detenido, se están iniciando o se han interrumpido.
+  * El estado de la instancia de app cambia cuando se abre el diálogo de rastreo o de volcado. 
   
 
 
@@ -1389,7 +1443,7 @@ La solución consiste en cerrar la ventana y en volverla a abrir.
 
  
 
-Para distintas instancias de una aplicación, es posible que vea distinta configuración de traceSpecification.
+Para distintas instancias de una app, es posible que vea distinta configuración de traceSpecification.
 {: tsSymptoms}
 
  
@@ -1397,8 +1451,8 @@ Para distintas instancias de una aplicación, es posible que vea distinta config
 Este problema se produce por las siguientes razones:
 {: tsCauses}
 
-  * Es posible que haya cambiado anteriormente la configuración para una o varias de las instancias. Si cambia la configuración de traceSpecification para una instancia, no se aplica a otras instancias de la misma aplicación. Por ejemplo, la aplicación utiliza log4j y tiene 2 instancias para esta aplicación. Puede cambiar el nivel de registro de la instancia 0 desde info para depurar, pero el nivel de registro de la instancia 1 permanece en info. 
-  * La aplicación escala y tiene nuevas instancias. RMU no aplica la configuración de traceSpecification de la instancia existente a la instancia nueva y escalada. La nueva instancia utiliza la configuración predeterminada. Por ejemplo, la aplicación utiliza log4j y tiene una instancia. Puede cambiar el nivel de registro de esta instancia de info a debug. Una vez que realice este cambio, si escala la aplicación en dos instancias, el nivel de registro de la nueva instancia es info, en lugar de debug (depurar).
+  * Es posible que haya cambiado anteriormente la configuración para una o varias de las instancias. Si cambia la configuración de traceSpecification para una instancia, no se aplica a otras instancias de la misma app. Por ejemplo, la app utiliza log4j y tiene 2 instancias para esta app. Puede cambiar el nivel de registro de la instancia 0 desde info para depurar, pero el nivel de registro de la instancia 1 permanece en info. 
+  * La app escala y tiene nuevas instancias. RMU no aplica la configuración de traceSpecification de la instancia existente a la instancia nueva y escalada. La nueva instancia utiliza la configuración predeterminada. Por ejemplo, la app utiliza log4j y tiene una instancia. Puede cambiar el nivel de registro de esta instancia de info a debug. Una vez que realice este cambio, si escala la app en dos instancias, el nivel de registro de la nueva instancia es info, en lugar de debug (depurar).
   
 
 
@@ -1412,11 +1466,11 @@ Este comportamiento es el esperado.
 ## Cuota de disco excedida
 {: #ts_diskquota}
 
-Es posible que en el registro de aplicación vea que se ha superado la cuota de disco.
+Es posible que en el registro de app vea que se ha superado la cuota de disco.
 
  
 
-Verá el mensaje de error `Cuota de disco excedida` en el registro de la aplicación.
+Verá el mensaje de error `Cuota de disco excedida` en el registro de la app.
 {: tsSymptoms}
 
 
@@ -1424,9 +1478,9 @@ Verá el mensaje de error `Cuota de disco excedida` en el registro de la aplicac
 Este problema se produce por una de las siguientes razones: 
 {: tsCauses} 
 
-  * Los archivos de volcado se generan con las instancias de la aplicación que se está ejecutando y los archivos utilizan gran parte de la cuota de disco asignada. De forma predeterminada, la cuota de disco para una instancia de aplicación es 1 GB. Puede comprobar el uso de disco
+  * Los archivos de volcado se generan con las instancias de la app que se está ejecutando y los archivos utilizan gran parte de la cuota de disco asignada. De forma predeterminada, la cuota de disco para una instancia de app es 1 GB. Puede comprobar el uso de disco
 pulsando **Panel de control>Aplicación>Tiempo de ejecución de app**. En el siguiente ejemplo se muestra la información de tiempo de ejecución,
-incluido el uso de disco, para dos instancias de una aplicación:
+incluido el uso de disco, para dos instancias de una app:
     ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
@@ -1442,13 +1496,12 @@ Puede solucionar este problema con uno de estos métodos:
 {: tsResolve} 
 
   * Suprima los archivos de volcado después de descargarlos.
-  * Vuelva a desplegar la aplicación con una cuota de disco mayor, incluyendo la entrada siguiente en el manifiesto de despliegue:
+  * Vuelva a desplegar la app con una cuota de disco mayor, incluyendo la entrada siguiente en el manifiesto de despliegue:
     ```
 	disk_quota: 2048
 	```
 	
 	
-
 
 
 

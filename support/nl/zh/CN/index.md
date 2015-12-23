@@ -4,7 +4,7 @@
 # 获取客户支持
 {: #getting-customer-support}
 
-*上次更新时间：2015 年 11 月 19 日*
+*上次更新时间：2015 年 12 月 4 日*
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可以使用多个支持选项，例如，通过 Stack Overflow 获取帮助或打开支持凭单。{:shortdesc}
@@ -66,7 +66,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
   1. 下载并安装 RSS 阅读器。
   2. 通过以下某个方法，使用您的阅读器来预订订阅源：
-       * 将 ![RSS](images/updates_rss.jpg) 图标拖入 RSS 阅读器。
+       * 将 ![RSS](images/rss.svg) 图标拖入 RSS 阅读器。
        * 右键单击 RSS 图标，选择**复制链接地址**，然后将 URL 粘贴到 RSS 阅读器中。
 
 	有关更多信息，请参阅阅读器的**帮助**部分。 	   
@@ -117,7 +117,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
 如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帐户，那么可以打开支持凭单。如果您是 {{site.data.keyword.Bluemix_notm}} Dedicated 或 {{site.data.keyword.Bluemix_notm}} Local 客户，那么还可获得一个选项，即购买附加高级支持。通过该支持，您可以与指定的支持主管（{{site.data.keyword.Bluemix_notm}} 技术顾问和产品专家）远程联系。所有 {{site.data.keyword.Bluemix_notm}} 客户还可以联系 IBM 以求解决注册或帐单问题。
 
-### 联系 {{site.data.keyword.Bluemix_notm}} 支持
+### 联系 {{site.data.keyword.Bluemix_notm}} Public 支持人员
 {: #contacting-bluemix-support}
 
 如果通过故障诊断和帮助选项无法解决您的问题，您可以请求支持。
@@ -130,6 +130,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
      1. 首先，确保通过单击**状态**选中 {{site.data.keyword.Bluemix_notm}} 状态。
 	 2. 然后，如果问题不是因中断引发的，请单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
 
+  * 使用 [{{site.data.keyword.Bluemix_notm}} 支持凭单](http://ibm.biz/bluemixsupport){: new_window}表单。有关技术问题、标识问题以及帐单问题，可通过开立新凭单来联系支持人员。	 
   * 从 [IBM® Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}。通过 IBM Client Success Portal 上的以下选项获取支持：
 
      * 最初 30 天试用预订（免费）
@@ -142,54 +143,20 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
 打开支持凭证时，确保为您的凭单指示了适当的严重性，因为严重性决定凭单的处理方式。有关不同严重性的信息，请参阅[支持凭单严重性](index.html#support-ticket-severity){: new_window}。
 
-当您遇到注册问题或有关帐单的问题时，也可以联系 IBM。从以下选项中进行选择：
 
-  * 要使用“帐户和支持”，请登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，然后单击“仪表板”右上方的**帐户和支持**图标 ![帐户和支持](./images/account_support.png)。然后单击**取得联系**。填写表单以联系销售人员，或获取有关帐户或帐单的帮助。
-  * 要在注册 {{site.data.keyword.Bluemix_notm}} 遇到问题时直接联系 IBM，您可以向<a href="mailto:id@bluemix.net" target="_blank">标识支持</a>部门发送电子邮件。
-  * 要在使用 {{site.data.keyword.Bluemix_notm}} 服务发生有关收费的问题时直接联系 IBM，请向[帐单支持](mailto:billing@bluemix.net)部门发送电子邮件。
 
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Dedicated 支持
+{: #contacting-bluemix-support-dedicated}
 
 如果您是 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。如果您没有 IBM 标识，那么可以通过几个不同的选项来获取支持。
 
-<!-- MEK: change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might even remove it. I'll confirm with Dan Julin. -->
-
-<ul>
-<li>如有疑问、管理请求或不严重的问题，请通过使用 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Open new ticket to {{site.data.keyword.Bluemix_notm}} Support 表单</a>来联系支持人员。对于此表单，可以使用电子邮件地址或您的 IBM 标识。对于 {{site.data.keyword.Bluemix_notm}} Region 字段，选择 **Dedicated** 选项。<p>一般会在工作日正常办公时间（全球标准时间上午 7:00 至凌晨 1:00）监视这些渠道。对于严重性高的问题，请不要使用此选项。</p>
-</li>
-<li>向定制支持地址发送一封电子邮件，该地址是在设置您的专用环境时分配给您组织的地址。要向支持地址发送电子邮件，请在专用环境的 {{site.data.keyword.Bluemix_notm}} 用户界面中，单击“仪表板”右上方的**概要文件设置**图标，然后单击**支持**。所显示的页面包含电子邮件链接，您可以使用该链接向定制支持地址发送电子邮件。如果您有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，那么还可以使用您的 IBM 标识通过以下方法来打开高严重性问题的支持凭单：</li>
-<li>如果您拥有 IBM 标识且有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，那么可以使用以下某种方法来打开支持凭单：<ul>
-<li>从公共 {{site.data.keyword.Bluemix_notm}} 用户界面，单击仪表板右上方的**帐户和支持**图标 <img src="images/account_support.png" alt="帐户和支持" />，然后单击**获取帮助**。在显示的页面上，单击**取得联系**。</li>
-<li>转至 <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>，然后输入您的 IBM 标识和密码。IBM 标识将用作服务凭证。单击菜单上的**打开支持凭单**。确保为您的凭单指示了适当的严重性，因为严重性决定凭单的处理方式。</li>
-</ul>
-</li>
-<li>如果您没有 IBM 标识，那么可以联系您所在组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注：**根据您的请求，可以在 Local 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中可作为支持凭单联系人的用户的列表。</p>
-</li>
-</ul>
 
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Local 支持
+{: #contacting-bluemix-support-local}
 
 如果您是 {{site.data.keyword.Bluemix_notm}} Local 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。如果您没有 IBM 标识，那么可以通过几个不同的选项来获取支持。
-
-<!-- change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might remove this. I will confirm with Dan Julin. -->
-
-  * 如有疑问、管理请求或不严重的问题，可以向定制支持地址发送一封电子邮件，该地址是在设置您的本地环境时分配给您组织的地址。要向支持地址发送电子邮件，请在本地环境的 {{site.data.keyword.Bluemix_notm}} 用户界面中，单击“仪表板”右上方的**概要文件设置**图标，然后单击“支持”。所显示的页面包含电子邮件链接，您可以使用该链接向定制支持地址发送电子邮件。
-
-   一般会在工作日正常办公时间（全球标准时间上午 7:00 至凌晨 1:00）监视邮箱。对于严重性高的问题，请不要使用此选项。
-
-  * 使用 [Open new ticket to {{site.data.keyword.Bluemix_notm}} Support 表单](https://ibm.biz/bluemixsupport.com){: new_window}来打开新的凭单。对于此表单，可以使用电子邮件地址或您的 IBM 标识。
-
-  * 如果您拥有 IBM 标识且有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，那么可以使用以下某种方法来打开支持凭单：
-
-     * 从公共 {{site.data.keyword.Bluemix_notm}} 用户界面，单击仪表板右上方的“帐户和支持”图标 ![帐户和支持](./images/account_support.png)，然后单击“获取帮助”。在显示的页面上，单击“取得联系”。
-
-     * 转至 [IBM Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}，然后输入您的 IBM 标识和密码。IBM 标识将用作服务凭证。单击菜单上的“打开支持凭单”。确保为您的凭单指示了适当的严重性，因为严重性决定凭单的处理方式。
-
-  * 如果您没有 IBM 标识，那么可以联系您所在组织中拥有标识的人员，也可以与 IBM 代表合作。
-
-  **注：**根据您的请求，可以在 Local 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中作为支持凭单联系人的用户的列表。
 
 
 
@@ -203,6 +170,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 严重性 2 | <ul><li>影响多个用户的应用程序错误</li><li>个别用户无法登录</li></ul>
 严重性 3 | <ul><li>一般性问题</li><li>影响个别用户的应用程序错误或问题</li></ul>
 严重性 4 | <ul><li>次要应用程序问题</li><li>操作方法问题</li><li>增强功能</li></ul>
+*表 1. 严重性示例*
 
 将全天候监视严重性为 1 的支持凭单。其他凭单在工作日正常办公时间（全球标准时间上午 7:00 至凌晨 1:00）进行处理。
 
@@ -240,6 +208,5 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
 ## 常规
   * [Bluemix 支持门户网站](https://support.ibmcloud.com){: new_window}
-  * [Bluemix Developers Community](https://developer.ibm.com/bluemix/){: new_window}
   * [安装 cf 命令工具](../starters/install_cli.html){: new_window}
   * [SaaS 支持手册](http://www-01.ibm.com/software/support/handbook.html){: new_window}

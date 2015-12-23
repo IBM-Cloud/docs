@@ -1,5 +1,8 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
 
 # 디버깅
 {: #debugging}
@@ -75,6 +78,8 @@ Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집
 2014-08-11T14:20:52.78+0100 [STG]     ERR parse error: Expected another key-value pair at line 18, column 3
 2014-08-11T14:20:52.79+0100 [STG]     OUT 0 info it worked if it ends with ok
 ```
+{: screen}
+
 
 로그의
 첫 번째 오류는 스테이징 실패 이유를 보여줍니다. 이 예에서 첫 번째 오류는 스테이징 단계 중
@@ -92,6 +97,9 @@ Node.js 애플리케이션의 경우 DEA에서는 `package.json` 파일의 정�
 17   "monk":"*",
 18   }
 ```
+{: screen}
+
+
 17행의 끝에 쉼표가 있으므로, 18행에는 키-값 쌍이
 필요합니다. 이 문제점을 해결하려면 쉼표를 제거하십시오. 
 
@@ -101,6 +109,8 @@ Node.js 애플리케이션의 경우 DEA에서는 `package.json` 파일의 정�
 17   "monk":"*"
 18   }
 ```
+{: screen}
+
 
 ## 런타임 오류 디버깅
 {: #debugging-runtime-errors}

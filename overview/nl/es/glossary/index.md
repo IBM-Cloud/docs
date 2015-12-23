@@ -4,7 +4,7 @@
 # Términos del glosario de {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
 
-*Última actualización: 5 de noviembre de 2015*
+*Última actualización: 7 de diciembre de 2015*
 
 Este glosario contiene términos y definiciones correspondientes a {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -39,15 +39,15 @@ proveedor de servicio del usuario.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2000123"><!-- --></a>alias</dt>
 <dd class="dd">Nombre breve exclusivo y visible a nivel público que se utiliza en clientes de escritorio y de línea de mandatos, vías de acceso a repositorio Git y características de seguimiento y planificación. Para los usuarios que tienen un ID de Jazz, este ID es su alias.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2008805"><!-- -->API de </a></dt>
-<dd class="dd">Véase <a class="xref" href="#gloss_A__x2000186">interfaz de programación de aplicaciones</a>.</dd>
+<dd class="dd">Véase <a class="xref" href="#gloss_A__x2000186">interfaz de programación de apps</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x4281528"><!-- --></a>app</dt>
-<dd class="dd">Aplicación de dispositivo móvil o web. Véase también <a class="xref" href="#gloss_M__x4258535">aplicación móvil</a>, <a class="xref" href="#gloss_W__x2116500">aplicación web</a>.</dd>
+<dd class="dd">Aplicación de dispositivo móvil o web. Véase también <a class="xref" href="#gloss_M__x4258535">app móvil</a>, <a class="xref" href="#gloss_W__x2116500">app web</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7909906"><!-- --></a>ID de app</dt>
-<dd class="dd">Un GUID que se asigna a una aplicación para móvil Bluemix. Véase también <a class="xref" href="#gloss_G__x2390455">identificador exclusivo global</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_A__x7290111"><!-- --></a>clave de aplicación</dt>
-<dd class="dd">Identificador exclusivo que utiliza la aplicación cuando notifica datos a IBM Mobile Quality Assurance. La clave se puede volver a generar en cualquier momento. Sin embargo, las compilaciones antiguas que utilizan una clave de aplicación antigua no pueden notificar a sesiones de IBM Mobile Quality Assurance.</dd>
-<dt class="dt dlterm"><a name="gloss_A__x2000186"><!-- --></a>interfaz de programación de aplicaciones (API)</dt>
-<dd class="dd">Interfaz que permite que un programa de aplicación que está escrito en un lenguaje de alto nivel utilizar datos o funciones específicos del sistema operativo o de otro programa.</dd>
+<dd class="dd">Un GUID que se asigna a una app para móvil Bluemix. Véase también <a class="xref" href="#gloss_G__x2390455">identificador exclusivo global</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_A__x7290111"><!-- --></a>clave de app</dt>
+<dd class="dd">Identificador exclusivo que utiliza la app cuando notifica datos a IBM Mobile Quality Assurance. La clave se puede volver a generar en cualquier momento. Sin embargo, las compilaciones antiguas que utilizan una clave de app antigua no pueden notificar a sesiones de IBM Mobile Quality Assurance.</dd>
+<dt class="dt dlterm"><a name="gloss_A__x2000186"><!-- --></a>interfaz de programación de apps (API)</dt>
+<dd class="dd">Interfaz que permite que un programa de app que está escrito en un lenguaje de alto nivel utilizar datos o funciones específicos del sistema operativo o de otro programa.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2262995"><!-- --></a>artefacto</dt>
 <dd class="dd">Entidad utilizada o producida por un proceso de desarrollo de software o sistemas. Diseños, requisitos, archivos de origen, planes, scripts, simulaciones, modelos, planes de prueba y archivos ejecutables binarios son algunos ejemplos de artefactos. En un contexto HTTP, los artefactos tienen un URI y se denominan recursos llamados. Véase también <a class="xref" href="#gloss_C__x2017871">componente</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2014567"><!-- --></a>autenticación (AuthN)</dt>
@@ -84,11 +84,11 @@ detalles de enlace de la descripción de servicio para localizar, establecer con
 <dt class="dt dlterm"><a name="gloss_B__x7470463"><!-- --></a>BLU Acceleration</dt>
 <dd class="dd">Colección de tecnologías de IBM DB2 diseñadas para trabajar principalmente con proceso de consultas de inteligencia empresarial mayoritariamente de lectura. BLU Acceleration consta de cuatro principales avances en diseño de base de datos: proceso dinámico de columnas en memoria, compresión que se puede accionar, proceso de vectores paralelos y omisión de datos.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7807335"><!-- --></a>despliegue Blue-Green</dt>
-<dd class="dd">Técnica de despliegue que habilita la entrega continua y minimiza el tiempo de inactividad mediante la ejecución de dos entornos de producción prácticamente idénticos llamados Blue y Green. Mientras uno de los entornos (por ejemplo, Blue) es el entorno de producción, el otro (por ejemplo, Green) podrá usarse para las pruebas finales y el despliegue. Una vez la aplicación se haya desplegado en Green, éste se convertirá en el entorno de producción y Blue se quedará desocupado. Véase también <a class="xref" href="#gloss_R__x8439181">despliegue Red-Black</a>.</dd>
+<dd class="dd">Técnica de despliegue que habilita la entrega continua y minimiza el tiempo de inactividad mediante la ejecución de dos entornos de producción prácticamente idénticos llamados Blue y Green. Mientras uno de los entornos (por ejemplo, Blue) es el entorno de producción, el otro (por ejemplo, Green) podrá usarse para las pruebas finales y el despliegue. Una vez la app se haya desplegado en Green, éste se convertirá en el entorno de producción y Blue se quedará desocupado. Véase también <a class="xref" href="#gloss_R__x8439181">despliegue Red-Black</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
-<dd class="dd">Plataforma de estándares abiertos basada en la nube para crear, gestionar y ejecutar apps de todo tipo, como web, móvil, Big Data y dispositivos inteligentes. Las funciones incluyen Java, desarrollo para dispositivos móviles y supervisión de aplicaciones, así como características de partners de ecosistema y código abierto; todo ello se suministra como un servicio en la nube.</dd>
+<dd class="dd">Plataforma de estándares abiertos basada en la nube para crear, gestionar y ejecutar apps de todo tipo, como web, móvil, Big Data y dispositivos inteligentes. Las funciones incluyen Java, desarrollo para dispositivos móviles y supervisión de apps, así como características de partners de ecosistema y código abierto; todo ello se suministra como un servicio en la nube.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>contenedor modelo</dt>
-<dd class="dd">Plantilla que incluye una aplicación y su entorno de tiempo de ejecución y servicios predefinidos asociados para un determinado dominio.</dd>
+<dd class="dd">Plantilla que incluye una app y su entorno de tiempo de ejecución y servicios predefinidos asociados para un determinado dominio.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>sin borde</dt>
 <dd class="dd">Relativo a una plataforma de desarrollo de no propiedad abierta que incluye modelos de desarrollo de nube pública, nube dedicada y nube local. Consulte también <a class="xref" href="#gloss_D__x8439199">nube dedicada</a>, <a class="xref" href="#gloss_L__x8439194">nube local</a>, <a class="xref" href="#gloss_P__x4585370">nube pública</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>rama</dt>
@@ -99,7 +99,7 @@ detalles de enlace de la descripción de servicio para localizar, establecer con
 <dt class="dt dlterm"><a name="gloss_B__x2197543"><!-- --></a>constructor</dt>
 <dd class="dd">Herramienta que crea y compila código.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7233925"><!-- --></a>paquete de compilación</dt>
-<dd class="dd">Colección de scripts que preparan el código para se ejecute en Bluemix. Los paquetes de compilación examinan las aplicaciones desplegadas y descargan y configuran las aplicaciones dependientes.</dd>
+<dd class="dd">Colección de scripts que preparan el código para se ejecute en Bluemix. Los paquetes de compilación examinan las apps desplegadas y descargan y configuran las apps dependientes.</dd>
 </dl>
 
 ## C
@@ -108,11 +108,13 @@ detalles de enlace de la descripción de servicio para localizar, establecer con
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_C__x2016383">entidad emisora de certificados</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd">Véase <a class="xref" href="#gloss_C__x2016783">encadenamiento de bloques de cifrado</a>.</dd>
+<dd class="dd">Véase <a class="xref" href="#gloss_C__x2016383">entidad emisora de certificados</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_C__x7233913">entrega continua</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>entidad emisora de certificados (CA)</dt>
 <dd class="dd">Organización o empresa de terceros de confianza que emite los certificados digitales. La entidad emisora de certificados normalmente verifica la identidad de las personas a las que se otorga el certificado exclusivo. Véase también <a class="xref" href="#gloss_I__x3753781">certificado intermedio</a>, <a class="xref" href="#gloss_S__x2038004">capa de sockets seguros</a>, <a class="xref" href="#gloss_T__x2042234">raíz de confianza</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>solicitud de firma de certificado (CSR)</dt>
+<dd class="dd">Un mensaje electrónico que envía una organización a una entidad emisora de certificados (CA) para obtener un certificado. La solicitud incluye una clave pública y se firma con una clave privada; la CA devuelve el certificado después de firmarlo con su propia clave privada.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>conjunto de cambios</dt>
 <dd class="dd">Grupo de cambios relacionados con artefactos en un espacio de trabajo o corriente.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>encadenamiento de bloques de cifrado (CBC)</dt>
@@ -122,11 +124,11 @@ detalles de enlace de la descripción de servicio para localizar, establecer con
 <dt class="dt dlterm"><a name="gloss_C__x2000644"><!-- --></a>cliente</dt>
 <dd class="dd">Programa de software o sistema que solicita servicios a un servidor. Véase también <a class="xref" href="#gloss_H__x2002243">host</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x3877850"><!-- --></a>computación en la nube</dt>
-<dd class="dd">Plataforma informática en la que los usuarios pueden acceder a las aplicaciones o recursos informáticos, como servicios, desde cualquier lugar a
-través de sus dispositivos conectados. Una interfaz de usuario simplificada o una interfaz de programación de aplicaciones (API) hacen que la
+<dd class="dd">Plataforma informática en la que los usuarios pueden acceder a las apps o recursos informáticos, como servicios, desde cualquier lugar a
+través de sus dispositivos conectados. Una interfaz de usuario simplificada o una interfaz de programación de apps (API) hacen que la
 infraestructura que da soporte a tales servicios sea transparente para los usuarios.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x4585297"><!-- --></a>portabilidad en la nube</dt>
-<dd class="dd">La capacidad para mover aplicaciones y servicios entre entornos de computación en la nube públicos o privados, o desde distintos proveedores de nube.</dd>
+<dd class="dd">La capacidad para mover apps y servicios entre entornos de computación en la nube públicos o privados, o desde distintos proveedores de nube.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x7344030"><!-- --></a>finalización del código</dt>
 <dd class="dd">Característica de muchos IDE y editores de texto que termina automáticamente contenido (palabras, frases, etiquetas, etc.) a medida que el usuario escribe.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2051424"><!-- --></a>interfaz de línea de mandatos (CLI)</dt>
@@ -150,8 +152,10 @@ trabajo de repositorio. Un componente puede contener tantas carpetas o archivos 
 <dd class="dd">Información adquirida durante la autenticación que describe un usuario, asociaciones de grupo
 u otros atributos de identidad relacionados con la seguridad y que se utiliza para realizar servicios
 tales como autorización, auditoría o delegación. Por ejemplo, un ID de usuario y una contraseña son credenciales que permiten el acceso a la red y a los recursos del sistema.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">Consulte <a class="xref" href="#gloss_C__x3530521">solicitud de firma de certificado</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>dominio personalizado</dt>
-<dd class="dd">Parte personalizada de un URL seleccionado por el usuario para que dirija solicitudes a la aplicación. Un dominio personalizado forma parte de una ruta. Un dominio personalizado puede ser un dominio compartido, un subdominio compartido o un dominio compartido y un host. Véase también <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">ruta</a>, <a class="xref" href="#gloss_S__x2040080">subdominio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador uniforme de recursos</a>.</dd>
+<dd class="dd">Parte personalizada de un URL seleccionado por el usuario para que dirija solicitudes a la app. Un dominio personalizado forma parte de una ruta. Un dominio personalizado puede ser un dominio compartido, un subdominio compartido o un dominio compartido y un host. Véase también <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">ruta</a>, <a class="xref" href="#gloss_S__x2040080">subdominio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador uniforme de recursos</a>.</dd>
 </dl>
 
 ## D
@@ -173,20 +177,20 @@ el estado del proyecto de un vistazo. Los usuarios pueden ver información de re
 <dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>defecto</dt>
 <dd class="dd">Elemento de proyecto que permite que las partes interesadas realicen un seguimiento de los defectos y los arreglos de defectos.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>despliegue</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Proceso de mover una aplicación (como un informe o un modelo) a otra instancia. Por ejemplo, es habitual crear informes en un entorno de prueba y después desplegarlos en producción. Al desplegar una aplicación, ésta se exporta, se transfiere y se importa.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Proceso de mover una app (como un informe o un modelo) a otra instancia. Por ejemplo, es habitual crear informes en un entorno de prueba y después desplegarlos en producción. Al desplegar una app, ésta se exporta, se transfiere y se importa.</li>
 <li class="li">Proceso que recupera el resultado de una creación, empaqueta el resultado con propiedades de configuración e instala el paquete en una ubicación predefinida para que se pueda probar o ejecutar. Véase también <a class="xref" href="#gloss_S__x2067189">etapa</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_D__x5784896"><!-- --></a>DevOps</dt>
-<dd class="dd">Metodología de software que integra el desarrollo de aplicaciones y las operaciones de TI.</dd>
+<dd class="dd">Metodología de software que integra el desarrollo de apps y las operaciones de TI.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2021210"><!-- --></a>dominio</dt>
 <dd class="dd">Parte de una jerarquía de denominación que especifica la ruta. Por ejemplo, example.com. En Bluemix, los dominios están asociados a organizaciones. Los objetos de dominio no están enlazados directamente a apps. Véase también <a class="xref" href="#gloss_C__x5728384">dominio personalizado</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_O__x2032585">organización</a>, <a class="xref" href="#gloss_R__x2037338">ruta</a>, <a class="xref" href="#gloss_S__x2040080">subdominio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador uniforme de recursos</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x3744906"><!-- --></a>DQM</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_D__x5390841">modalidad de consulta dinámica</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x7470343"><!-- --></a>droplet</dt>
-<dd class="dd">Un archivo de Cloud Foundry que contiene una aplicación y sus dependencias de infraestructura y tiempo de ejecución, ante del despliegue en la nube.</dd>
+<dd class="dd">Un archivo de Cloud Foundry que contiene una app y sus dependencias de infraestructura y tiempo de ejecución, ante del despliegue en la nube.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x7470348"><!-- --></a>Droplet Execution Agent (DEA)</dt>
-<dd class="dd">Componente de Cloud Foundry responsable de desplegar aplicaciones.</dd>
+<dd class="dd">Componente de Cloud Foundry responsable de desplegar apps.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x5390841"><!-- --></a>modalidad de consulta dinámica (DQM)</dt>
 <dd class="dd">Modalidad de ejecución de consultas basada en Java que ofrece acceso nativo a fuentes de datos. Optimiza las consultas para solucionar los problemas derivados de la complejidad de la consulta y de los grandes volúmenes de datos. Proporciona funciones avanzadas de consulta, como almacenamiento en caché en memoria, que facilitan la planificación y ejecución de consultas y mejoran sus resultados.</dd>
 </dl>
@@ -197,7 +201,7 @@ el estado del proyecto de un vistazo. Los usuarios pueden ver información de re
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_E__x2115585"><!-- --></a>Eclipse</dt>
 <dd class="dd">Iniciativa de código abierto que proporciona a los fabricantes de software
 independientes (ISV) y a otros desarrolladores de herramientas una plataforma estándar
-para el desarrollo de herramientas de desarrollo de aplicaciones compatibles con
+para el desarrollo de herramientas de desarrollo de apps compatibles con
 conectores.</dd>
 <dt class="dt dlterm"><a name="gloss_E__x2026820"><!-- --></a>punto final</dt>
 <dd class="dd">Dirección de una API o servicio en un entorno. Una API expone un punto final
@@ -218,14 +222,14 @@ y al mismo tiempo invoca los puntos finales de otros servicios.</dd>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_F__x2023472"><!-- --></a>infraestructura</dt>
-<dd class="dd">Arquitectura para una aplicación que proporciona un estándar estructura para una aplicación y funciones generales y extensibles.  Una infraestructura habilita y simplifica una implementación coherente de tecnologías complejas para el desarrollo de aplicaciones.</dd>
+<dd class="dd">Arquitectura para una app que proporciona un estándar estructura para una app y funciones generales y extensibles.  Una infraestructura habilita y simplifica una implementación coherente de tecnologías complejas para el desarrollo de apps.</dd>
 </dl>
 
 ## G
 {: #gloss_G}
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_G__x7470477"><!-- --></a>GB por hora</dt>
-<dd class="dd">Cantidad acumulada de memoria (en gigabytes) que se está ejecutando para todas las instancias de una aplicación para un determinado paquete de compilación por hora.</dd>
+<dd class="dd">Cantidad acumulada de memoria (en gigabytes) que se está ejecutando para todas las instancias de una app para un determinado paquete de compilación por hora.</dd>
 <dt class="dt dlterm"><a name="gloss_G__x7494416"><!-- --></a>Git</dt>
 <dd class="dd">Programa de código abierto para la gestión del control de origen.</dd>
 <dt class="dt dlterm"><a name="gloss_G__x2390455"><!-- --></a>identificador exclusivo global (GUID)</dt>
@@ -262,13 +266,13 @@ incluyen GET, POST y PUT.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2115755"><!-- --></a>IDE</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_I__x2116934">entorno de desarrollo integrado</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>image</dt>
-<dd class="dd">Un tiempo de ejecución completo que puede utilizarse para ejecutar aplicaciones. Las imágenes se utilizan para crear contenedores y pueden contener varias imágenes padre (capas). Véase también <a class="xref" href="#gloss_B__x5366487">imagen base</a>, <a class="xref" href="#gloss_C__x2010901">contenedor</a>, <a class="xref" href="#gloss_L__x2028320">capa</a>, <a class="xref" href="#gloss_N__x2031005">espacio de nombres</a>, <a class="xref" href="#gloss_P__x8439210">imagen padre</a>, <a class="xref" href="#gloss_P__x8439215">repositorio de imágenes privadas</a>, <a class="xref" href="#gloss_R__x2064940">registro</a>.</dd>
+<dd class="dd">Un tiempo de ejecución completo que puede utilizarse para ejecutar apps. Las imágenes se utilizan para crear contenedores y pueden contener varias imágenes padre (capas). Véase también <a class="xref" href="#gloss_B__x5366487">imagen base</a>, <a class="xref" href="#gloss_C__x2010901">contenedor</a>, <a class="xref" href="#gloss_L__x2028320">capa</a>, <a class="xref" href="#gloss_N__x2031005">espacio de nombres</a>, <a class="xref" href="#gloss_P__x8439210">imagen padre</a>, <a class="xref" href="#gloss_P__x8439215">repositorio de imágenes privadas</a>, <a class="xref" href="#gloss_R__x2064940">registro</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4015600"><!-- --></a>impedimento</dt>
 <dd class="dd">Elemento que impide el progreso o un elemento de trabajo que realiza un seguimiento de algo que impide el progreso.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4585332"><!-- --></a>infraestructura como servicio (IaaS)</dt>
 <dd class="dd">Distribución de una infraestructura de sistemas, que incluye funcionalidad de servidor, funcionalidad de red, funcionalidad de centro de datos y funcionalidad de almacenamiento como un servicio externalizado.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2002531"><!-- --></a>instancia</dt>
-<dd class="dd">Entidad que consta de recursos que están reservados para una determinada aplicación o servicio.</dd>
+<dd class="dd">Entidad que consta de recursos que están reservados para una determinada app o servicio.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2116934"><!-- --></a>entorno de desarrollo integrado (IDE)</dt>
 <dd class="dd">Conjunto de herramientas de desarrollo de software, como los editores del código fuente, los
 compiladores y los depuradores, a las que se puede acceder desde una sola interfaz de usuario.</dd>
@@ -334,14 +338,14 @@ en un directorio de Internet o intranet.</dd>
 </dd>
 <dt class="dt dlterm"><a name="gloss_M__x2118203"><!-- --></a>hito</dt>
 <dd class="dd">Suceso significativo de un proyecto o proceso, que se utiliza para determinar el progreso hacia objetivos.</dd>
-<dt class="dt dlterm"><a name="gloss_M__x7636517"><!-- --></a>aplicación móvil</dt>
-<dd class="dd">Véase <a class="xref" href="#gloss_M__x4258535">aplicación móvil</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_M__x4258535"><!-- --></a>aplicación móvil (app para móvil)</dt>
-<dd class="dd">Aplicación que se ha diseñado para una plataforma móvil. Similares a las aplicaciones web, las apps para móvil proporcionan más funciones que la visualización estática de información; por ejemplo, permiten al usuario filtrar noticias en tiempo real. Véase también <a class="xref" href="#gloss_A__x4281528">app</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_M__x7636517"><!-- --></a>app móvil</dt>
+<dd class="dd">Véase <a class="xref" href="#gloss_M__x4258535">app móvil</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_M__x4258535"><!-- --></a>app móvil (app para móvil)</dt>
+<dd class="dd">Aplicación que se ha diseñado para una plataforma móvil. Similares a las apps web, las apps para móvil proporcionan más funciones que la visualización estática de información; por ejemplo, permiten al usuario filtrar noticias en tiempo real. Véase también <a class="xref" href="#gloss_A__x4281528">app</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_M__x7044858"><!-- --></a>programa de fondo móvil como servicio (MBaaS)</dt>
-<dd class="dd">Modelo de cálculo que conecta aplicaciones móviles a servicios de computación en la nube y proporciona características como, por ejemplo, gestión de usuarios, envío de notificaciones e integración con redes sociales a través de una API y SDK unificados.</dd>
+<dd class="dd">Modelo de cálculo que conecta apps móviles a servicios de computación en la nube y proporciona características como, por ejemplo, gestión de usuarios, envío de notificaciones e integración con redes sociales a través de una API y SDK unificados.</dd>
 <dt class="dt dlterm"><a name="gloss_M__x4585344"><!-- --></a>nube móvil</dt>
-<dd class="dd">Infraestructura en la que el almacenamiento y el proceso de datos para las aplicaciones se descarga desde un dispositivo móvil en la nube. Con la computación en la nube móvil, las aplicaciones no están limitadas a un operador específico, sino que se accede a las mismas a través de la web.</dd>
+<dd class="dd">Infraestructura en la que el almacenamiento y el proceso de datos para las apps se descarga desde un dispositivo móvil en la nube. Con la computación en la nube móvil, las apps no están limitadas a un operador específico, sino que se accede a las mismas a través de la web.</dd>
 <dt class="dt dlterm"><a name="gloss_M__x2245601"><!-- --></a>modelo</dt>
 <dd class="dd">Representación física o empresarial de la estructura de los datos de una o varias
 fuentes de datos. Un modelo describe objetos de datos, su estructura y agrupación, así como las
@@ -360,11 +364,11 @@ servidor de Cognos como un paquete para que los usuarios creen y ejecuten inform
 {: #gloss_O}
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_O__x6013335"><!-- --></a>OAuth</dt>
-<dd class="dd">Protocolo de autorización basado en HTTP que proporciona a las aplicaciones acceso de ámbito a un recurso protegido en nombre del propietario del recurso,
+<dd class="dd">Protocolo de autorización basado en HTTP que proporciona a las apps acceso de ámbito a un recurso protegido en nombre del propietario del recurso,
 creando una interacción de aprobación entre el propietario del recurso, el cliente
-y el servidor de recursos. </dd>
-<dt class="dt dlterm"><a name="gloss_O__x7470485"><!-- --></a>aplicación omnicanal</dt>
-<dd class="dd">Aplicación que permite a los usuarios obtener datos a través de varios canales o interfaces. Las aplicaciones móviles y web se consideran ejemplos de aplicaciones omnicanal.</dd>
+y el servidor de recursos.</dd>
+<dt class="dt dlterm"><a name="gloss_O__x7470485"><!-- --></a>app omnicanal</dt>
+<dd class="dd">Aplicación que permite a los usuarios obtener datos a través de varios canales o interfaces. Las apps móviles y web se consideran ejemplos de apps omnicanal.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x6969434"><!-- --></a>local</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_O__x4561212">local</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x4561212"><!-- --></a>local (local)</dt>
@@ -387,7 +391,7 @@ y el servidor de recursos. </dd>
 <dt class="dt dlterm"><a name="gloss_P__x2238121"><!-- --></a>carga útil</dt>
 <dd class="dd">Cuerpo de un mensaje que tiene contenido.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2029786"><!-- --></a>plataforma como servicio (PaaS)</dt>
-<dd class="dd">Distribución de una plataforma informática, que incluye aplicaciones, middleware optimizado, herramientas de desarrollo y los entornos de tiempo de ejecución Java y Web 2.0 en un entorno basado en la nube.</dd>
+<dd class="dd">Distribución de una plataforma informática, que incluye apps, middleware optimizado, herramientas de desarrollo y los entornos de tiempo de ejecución Java y Web 2.0 en un entorno basado en la nube.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7290106"><!-- --></a>biblioteca de preproducción</dt>
 <dd class="dd">Colección de características de pruebas de app que recopilan detalles acerca de cuestiones y problemas con un app. Las características de pruebas identifican el dispositivo y el usuario que está experimentando errores para que los desarrolladores puedan obtener registros y otra información a fin de corregir los problemas. Véase también <a class="xref" href="#gloss_P__x7290124">modalidad de preproducción</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7290124"><!-- --></a>modalidad de preproducción</dt>
@@ -400,9 +404,7 @@ y redes de asociados. Véase también <a class="xref" href="#gloss_P__x4585370">
 <dt class="dt dlterm"><a name="gloss_P__x8439215"><!-- --></a>repositorio de imagen privada</dt>
 <dd class="dd">La combinación de un registro de Bluemix de la organización y su espacio de nombres. El repositorio de imagen privada se utiliza cuando se hace referencia a una imagen en un mandato. Véase también <a class="xref" href="#gloss_I__x2024928">imagen</a>, <a class="xref" href="#gloss_N__x2031005">espacio de nombres</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2034701"><!-- --></a>clave privada</dt>
-<dd class="dd">En las comunicaciones seguras, patrón algorítmico que se utiliza para cifrar mensajes que solamente puede descifrar la clave pública correspondiente. La clave privada también se
-utiliza para descifrar mensajes que se han cifrado mediante la clave pública
-correspondiente. La clave privada se guarda en el sistema del usuario y se
+<dd class="dd">En las comunicaciones seguras, patrón algorítmico que se utiliza para cifrar mensajes que solamente puede descifrar la clave pública correspondiente. La clave privada también se utiliza para descifrar mensajes que se han cifrado mediante la clave pública correspondiente. La clave privada se guarda en el sistema del usuario y se
 protege mediante una contraseña.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7690456"><!-- --></a>servicio privado</dt>
 <dd class="dd">Servicio que solo está visible para los miembros de una organización de Bluemix especificada.</dd>
@@ -440,7 +442,7 @@ o un conjunto de códigos postales de la región.</dd>
 <dd class="dd">Conjunto de datos diseñado deliberadamente para comunicar información empresarial.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2036865"><!-- --></a>repositorio (repo)</dt>
 <dd class="dd">Área de almacenamiento persistente para datos y otros
-recursos de las aplicaciones.</dd>
+recursos de las apps.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3889804"><!-- --></a>espacio de trabajo de repositorio</dt>
 <dd class="dd">Un objeto de repositorio que incluye uno o más
 componentes. Los espacios de trabajo del repositorio los suelen utilizar los miembros del equipo individuales para alojar sus cambios en proceso. Los miembros de equipo entregan sus cambios de sus espacios de trabajo de repositorio a la corriente y aceptan los cambios de otros miembros del equipo en sus espacios de trabajo de repositorio desde la corriente. Cada espacio de trabajo de
@@ -449,25 +451,25 @@ de trabajo. Véase también <a class="xref" href="#gloss_W__x2096037">espacio de
 <dt class="dt dlterm"><a name="gloss_R__x3220976"><!-- --></a>REST (transferencia de estado representativo)</dt>
 <dd class="dd">Estilo de arquitectura de software para sistemas hipermedia distribuidos, como la World Wide Web. El término también suele utilizarse para describir cualquier interfaz simple que utilice XML (o YAML, JSON, texto sin formato) sobre HTTP sin una capa de mensajes adicional como SOAP.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2004267"><!-- --></a>recurso</dt>
-<dd class="dd">Componente físico o lógico que se pueden suministrar o reservar para una aplicación o instancia de servicio.  Los ejemplos de recursos incluyen base de datos, cuentas y límites de procesador, memoria, y almacenamiento.</dd>
+<dd class="dd">Componente físico o lógico que se pueden suministrar o reservar para una app o instancia de servicio.  Los ejemplos de recursos incluyen base de datos, cuentas y límites de procesador, memoria, y almacenamiento.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3220987"><!-- --></a>REST</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_R__x3220976">Representational State Transfer</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x7494440"><!-- --></a>retrospectiva</dt>
 <dd class="dd">En un desarrollo Agile, reunión o elemento de trabajo que evalúa los éxitos y las mejoras necesarias tras un sprint.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2037338"><!-- --></a>ruta</dt>
-<dd class="dd">URL utilizada para dirigir solicitudes a una aplicación. Una ruta está formada por un host (o subdominio) opcional y un dominio que se especifican cuando se envía una aplicación mediante push. Peor ejemplo, en la ruta myapp.example.com, myapp es el host y example.com es el dominio. Una ruta puede estar asociada a una o varias aplicaciones. A menos que se especifique un dominio personalizado, Bluemix utiliza un dominio compartido por defecto en la ruta de la aplicación. Véase también <a class="xref" href="#gloss_C__x5728384">dominio personalizado</a>, <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_S__x2040080">subdominio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador uniforme de recursos</a>.</dd>
+<dd class="dd">URL utilizada para dirigir solicitudes a una app. Una ruta está formada por un host (o subdominio) opcional y un dominio que se especifican cuando se envía una app mediante push. Peor ejemplo, en la ruta myapp.example.com, myapp es el host y example.com es el dominio. Una ruta puede estar asociada a una o varias apps. A menos que se especifique un dominio personalizado, Bluemix utiliza un dominio compartido por defecto en la ruta de la app. Véase también <a class="xref" href="#gloss_C__x5728384">dominio personalizado</a>, <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_S__x2040080">subdominio</a>, <a class="xref" href="#gloss_U__x2042491">Localizador uniforme de recursos</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2037526"><!-- --></a>regla</dt>
 <dd class="dd">Conjunto de sentencias condicionales que permiten a los sistemas de cálculo identificar relaciones y ejecutar respuestas automáticas en función de las mismas.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x4106478"><!-- --></a>RuleApp</dt>
 <dd class="dd">Unidad de gestión y despliegue para Rule Execution Server que puede contener uno o más conjuntos de reglas.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x5579603"><!-- --></a>Diseñador de reglas</dt>
-<dd class="dd">Herramienta de desarrollo de aplicaciones de reglas empresariales integrada en el entorno de desarrollo de Eclipse y dedicada a la creación y gestión de aplicaciones de reglas empresariales.</dd>
+<dd class="dd">Herramienta de desarrollo de apps de reglas empresariales integrada en el entorno de desarrollo de Eclipse y dedicada a la creación y gestión de apps de reglas empresariales.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x4188046"><!-- --></a>Rule Execution Server</dt>
-<dd class="dd">Módulo que se integra en el entorno de Java EE y ofrece los servicios estándar de una aplicación para ejecutar, controlar y supervisar los conjuntos de reglas contenidos en RuleApps.</dd>
+<dd class="dd">Módulo que se integra en el entorno de Java EE y ofrece los servicios estándar de una app para ejecutar, controlar y supervisar los conjuntos de reglas contenidos en RuleApps.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3721562"><!-- --></a>conjunto de reglas</dt>
 <dd class="dd">Programa de toma de decisiones que puede se procesado por un motor de reglas para tomar una decisión basada en parámetros de entrada y de salida. La lógica de toma de decisiones está implementada como reglas, tablas de decisiones y flujos de reglas.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2391929"><!-- --></a>tiempo de ejecución</dt>
-<dd class="dd">Conjunto de recursos utilizados para ejecutar la aplicación. Véase también <a class="xref" href="#gloss_S__x7470511">iniciador</a>.</dd>
+<dd class="dd">Conjunto de recursos utilizados para ejecutar la app. Véase también <a class="xref" href="#gloss_S__x7470511">iniciador</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2037566"><!-- --></a>entorno de ejecución</dt>
 <dd class="dd">Conjunto de recursos que se utilizan para ejecutar un programa o proceso.</dd>
 </dl>
@@ -478,7 +480,7 @@ de trabajo. Véase también <a class="xref" href="#gloss_W__x2096037">espacio de
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_S__x4585391"><!-- --></a>SaaS</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_S__x4585386">software como servicio</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>escalar</dt>
-<dd class="dd">Aumentar la capacidad de la plataforma (o sistema) añadiendo más aplicaciones o instancias de servicio.</dd>
+<dd class="dd">Aumentar la capacidad de la plataforma (o sistema) añadiendo más apps o instancias de servicio.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2116206"><!-- --></a>SCM</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_S__x3579285">gestión de control de origen</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2037763"><!-- --></a>ámbito</dt>
@@ -491,27 +493,27 @@ de trabajo. Véase también <a class="xref" href="#gloss_W__x2096037">espacio de
 <dt class="dt dlterm"><a name="gloss_S__x2038004"><!-- --></a>capa de sockets seguros (SSL)</dt>
 <dd class="dd">Protocolo de seguridad que proporciona
 privacidad en las comunicaciones. Con SSL,
-las aplicaciones cliente/servidor pueden comunicarse de una forma diseñada
+las apps cliente/servidor pueden comunicarse de una forma diseñada
 para impedir las escuchas no deseadas, la manipulación indebida y la
 falsificación. Véase también <a class="xref" href="#gloss_C__x2016383">entidad emisora de certificados</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2038343"><!-- -->Servicio </a></dt>
-<dd class="dd">Extensión en la nube que ofrece funcionalidad lista para utilizarse, como base de datos, mensajería, software de web para ejecutar código, o gestión de aplicaciones o capacidades de supervisión. Los servicios no suelen requerir instalación ni mantenimiento y se pueden combinar para crear aplicaciones.</dd>
+<dd class="dd">Extensión en la nube que ofrece funcionalidad lista para utilizarse, como base de datos, mensajería, software de web para ejecutar código, o gestión de apps o capacidades de supervisión. Los servicios no suelen requerir instalación ni mantenimiento y se pueden combinar para crear apps.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2004539"><!-- --></a>sesión</dt>
 <dd class="dd">Periodo de tiempo que transcurre entre que se inicia una app en un dispositivo móvil y se indica al producto de control de calidad que empiece a recopilar datos sobre el comportamiento y problemas de la app.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2375015"><!-- --></a>gravedad</dt>
 <dd class="dd">En desarrollo de software y de sistemas, medida de la importancia de una unidad de trabajo, por ejemplo, crítica, alta, media o baja.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x5905152"><!-- --></a>agitar</dt>
-<dd class="dd">Provocar un movimiento de forma que el acelerómetro de un dispositivo detecte dicho movimiento e inicie un evento. Por ejemplo, los encargados de realizar pruebas y los clientes pueden iniciar un informa de problema de una app agitando su dispositivo.</dd>
+<dd class="dd">Provocar un movimiento de forma que el acelerómetro de un dispositivo detecte dicho movimiento e inicie un suceso. Por ejemplo, los encargados de realizar pruebas y los clientes pueden iniciar un informa de problema de una app agitando su dispositivo.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2213318"><!-- --></a>inicio de sesión único (SSO)</dt>
-<dd class="dd">Proceso de autenticación por el cual un usuario puede acceder a más de un sistema o aplicación entrando un único ID de usuario y contraseña.</dd>
+<dd class="dd">Proceso de autenticación por el cual un usuario puede acceder a más de un sistema o app entrando un único ID de usuario y contraseña.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x4585386"><!-- --></a>software como servicio (SaaS)</dt>
-<dd class="dd">Modelo de despliegue de software mediante el cual el software, incluidos los procesos empresariales, las aplicaciones de empresa y las herramientas de colaboración, se proporcionan como un servicio a los clientes a través de la nube.</dd>
+<dd class="dd">Modelo de despliegue de software mediante el cual el software, incluidos los procesos empresariales, las apps de empresa y las herramientas de colaboración, se proporcionan como un servicio a los clientes a través de la nube.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2214822"><!-- --></a>SOR</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_S__x6735061">sistema de registros</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x3579285"><!-- --></a>gestión de control de origen (SCM)</dt>
 <dd class="dd">Aspecto de la gestión de configuración de software que implica gestionar cambios en los conjuntos de archivos.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2039442"><!-- --></a>espacio</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Unidad organizativa que contiene aplicaciones y servicios en la infraestructura Cloud Foundry que se pueden utilizar para almacenar y realizar un seguimiento de los recursos de la aplicación.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Unidad organizativa que contiene apps y servicios en la infraestructura Cloud Foundry que se pueden utilizar para almacenar y realizar un seguimiento de los recursos de la app.</li>
 <li class="li">Subgrupo dentro de una org de Bluemix. A los usuarios que son miembros de un org se les da acceso a uno o varios de sus espacios, con permisos asociados con un rol determinado (por ejemplo, desarrollador, gestor o auditor). Cualquier miembro del espacio puede las apps, pero sólo los miembros con el rol de desarrollador pueden crear apps y añadir instancias de servicio al espacio. Las apps y las instancias de servicio están asociadas con los espacios. Véase también
 <a class="xref" href="#gloss_O__x2032585">organización</a>.</li>
 </ol>
@@ -524,7 +526,7 @@ falsificación. Véase también <a class="xref" href="#gloss_C__x2016383">entida
 <dd class="dd">Véase <a class="xref" href="#gloss_S__x2213318">inicio de sesión
 único</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2067189"><!-- --></a>etapa</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Desplegar una aplicación, servicio o instancia en una ubicación predefinida para ejecutarlo o probarlo antes de desplegarlo en un entorno de producción. Véase también <a class="xref" href="#gloss_D__x2104544">etapa</a>.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Desplegar una app, servicio o instancia en una ubicación predefinida para ejecutarlo o probarlo antes de desplegarlo en un entorno de producción. Véase también <a class="xref" href="#gloss_D__x2104544">etapa</a>.</li>
 <li class="li">Grupo de trabajos de un contexto de ejecución compartido que consta del origen de la entrada, variables de entorno y una orden definida de ejecución.</li>
 <li class="li">Marcar un conjunto de cambios de archivos como listos para la confirmación de Git.</li>
 </ol>
@@ -532,7 +534,7 @@ falsificación. Véase también <a class="xref" href="#gloss_C__x2016383">entida
 <dt class="dt dlterm"><a name="gloss_S__x2094743"><!-- --></a>stanza</dt>
 <dd class="dd">Sección de un paquete de software que define una acción específica que se debe realizar en ese paquete de software o un conjunto de condiciones bajo las que se deben realizar acciones en el paquete de software. El paquete de software completo es una stanza que contiene una jerarquía de distintas stanzas.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7470511"><!-- --></a>iniciador</dt>
-<dd class="dd">Plantilla que incluye servicios predefinidos y código de aplicación configurado con un determinado paquete de compilación.  Un iniciador puede ser código de aplicación que se escribe en un lenguaje de programación específico, o una combinación de código de aplicación y conjunto de servicios. Véase también <a class="xref" href="#gloss_R__x2391929">tiempo de ejecución</a>.</dd>
+<dd class="dd">Plantilla que incluye servicios predefinidos y código de app configurado con un determinado paquete de compilación.  Un iniciador puede ser código de app que se escribe en un lenguaje de programación específico, o una combinación de código de app y conjunto de servicios. Véase también <a class="xref" href="#gloss_R__x2391929">tiempo de ejecución</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x5027530"><!-- --></a>historia</dt>
 <dd class="dd">Elemento de trabajo de desarrollo que define parte de un caso de uso o una contribución específica al valor del producto global.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2040080"><!-- --></a>subdominio</dt>
@@ -544,7 +546,7 @@ falsificación. Véase también <a class="xref" href="#gloss_C__x2016383">entida
 <dt class="dt dlterm"><a name="gloss_S__x6528306"><!-- --></a>sistema colaborativo</dt>
 <dd class="dd">En tecnología de la información (TI), sistema que incorpora tecnologías que animan al usuario a interactuar mediante correo electrónico, sistemas de colaboración y red.  Un sistema colaborativo suele utilizar tecnologías de nube para ampliar la utilidad de los sistemas de registro. Véase también <a class="xref" href="#gloss_S__x6735061">sistema de registros</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x6735061"><!-- --></a>sistema de registros (SOR)</dt>
-<dd class="dd">Sistema de almacenamiento de información (como, por ejemplo, una base de datos o una aplicación) que almacena registros empresariales y automatiza los procesos estándares. Véase también <a class="xref" href="#gloss_S__x6528306">sistema colaborativo</a>.</dd>
+<dd class="dd">Sistema de almacenamiento de información (como, por ejemplo, una base de datos o una app) que almacena registros empresariales y automatiza los procesos estándares. Véase también <a class="xref" href="#gloss_S__x6528306">sistema colaborativo</a>.</dd>
 </dl>
 
 ## T
@@ -559,7 +561,7 @@ falsificación. Véase también <a class="xref" href="#gloss_C__x2016383">entida
 <dt class="dt dlterm"><a name="gloss_T__x2877945"><!-- --></a>terceros, de</dt>
 <dd class="dd">Perteneciente a un producto o servicio que está proporcionado por una empresa que no es IBM.</dd>
 <dt class="dt dlterm"><a name="gloss_T__x2092493"><!-- --></a>mosaico</dt>
-<dd class="dd">Representación visual de una aplicación en ejecución que proporciona el estado en un panel de control.</dd>
+<dd class="dd">Representación visual de una app en ejecución que proporciona el estado en un panel de control.</dd>
 <dt class="dt dlterm"><a name="gloss_T__x2312511"><!-- --></a>línea temporal</dt>
 <dd class="dd">Área de actividad de un proyecto que normalmente tiene su propia planificación, entregables, equipos y proceso.</dd>
 <dt class="dt dlterm"><a name="gloss_T__x7494456"><!-- --></a>elemento de compilación de seguimiento</dt>
@@ -587,7 +589,7 @@ de información. Véase también <a class="xref" href="#gloss_C__x5728384">domin
 <dt class="dt dlterm"><a name="gloss_U__x2042718"><!-- --></a>URL</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_U__x2042491">localizador uniforme de recursos</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_U__x7290116"><!-- --></a>sentimiento de usuario</dt>
-<dd class="dd">Sistema de puntuación de evaluación de usuarios que se obtiene recopilando evaluaciones de la aplicación de los usuarios de las principales tiendas de aplicaciones minoristas en línea (por ejemplo, iTunes). La función rastrea todas las evaluaciones y revisiones para generar una puntuación acumulada de la app para móvil que combina calidad, nivel de satisfacción del usuario y cantidad general de comentarios positivos y negativos que proporcionan los usuarios.</dd>
+<dd class="dd">Sistema de puntuación de evaluación de usuarios que se obtiene recopilando evaluaciones de la app de los usuarios de las principales tiendas de apps minoristas en línea (por ejemplo, iTunes). La función rastrea todas las evaluaciones y revisiones para generar una puntuación acumulada de la app para móvil que combina calidad, nivel de satisfacción del usuario y cantidad general de comentarios positivos y negativos que proporcionan los usuarios.</dd>
 </dl>
 
 ## V
@@ -616,13 +618,13 @@ una red pública o privada. Una VPN garantiza que los datos enviados entre dos p
 <dt class="dt dlterm"><a name="gloss_W__x2406005"><!-- --></a>archivo WAR</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_W__x2116506">archivo web</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x7636628"><!-- --></a>app web</dt>
-<dd class="dd">Véase <a class="xref" href="#gloss_W__x2116500">aplicación web</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_W__x2116500"><!-- --></a>aplicación web (app web)</dt>
+<dd class="dd">Véase <a class="xref" href="#gloss_W__x2116500">app web</a>.</dd>
+<dt class="dt dlterm"><a name="gloss_W__x2116500"><!-- --></a>app web (app web)</dt>
 <dd class="dd">Aplicación a la que puede accederse mediante un navegador web y que proporciona otras funciones aparte de la visualización estática de la información,
-permitiendo, por ejemplo, que el usuario realice una consulta a una base de datos. Los componentes comunes de una aplicación web incluyen páginas HTML,
+permitiendo, por ejemplo, que el usuario realice una consulta a una base de datos. Los componentes comunes de una app web incluyen páginas HTML,
 páginas JSP y servlets. Véase también <a class="xref" href="#gloss_A__x4281528">app</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2116506"><!-- --></a>archivo web (WAR)</dt>
-<dd class="dd">Formato de archivo comprimido, definido por el estándar Java EE, para almacenar todos los recursos necesarios para instalar y ejecutar una aplicación web en un único archivo.</dd>
+<dd class="dd">Formato de archivo comprimido, definido por el estándar Java EE, para almacenar todos los recursos necesarios para instalar y ejecutar una app web en un único archivo.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x7494461"><!-- --></a>Web IDE</dt>
 <dd class="dd">En IBM DevOps Services, IDE basado en navegador para el desarrollo de web y de nube que se basa en la plataforma de código abierto Orion de Eclipse.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2173032"><!-- --></a>elemento de trabajo</dt>

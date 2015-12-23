@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} の用語集 
 {: #glossary}
 
-*最終更新日: 2015 年 11 月 5 日*
+*最終更新日: 2015 年 12 月 7 日*
 
 この用語集は {{site.data.keyword.Bluemix}} の用語と定義を提供します。{:shortdesc}
 
@@ -105,12 +105,14 @@ HTTP コンテキストでは、成果物には URI があり、リソースと�
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x2016383">「認証局 (CA) (certificate authority)」</a>を参照。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd"><a class="xref" href="#gloss_C__x2016783">「暗号化ブロック・チェーン (cipher block chaining)」</a>を参照。</dd>
+<dd class="dd"><a class="xref" href="#gloss_C__x2016383">「認証局 (CA) (certificate authority)」</a>を参照。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x7233913">「継続的デリバリー (continuous delivery)」</a>を参照。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>認証局 (CA) (certificate authority (CA))</dt>
 <dd class="dd">デジタル証明書を発行する、信頼できるサード・パーティーの組織または企業。一般に、認証局は、固有の証明書を付与された個人の ID を検証します。<a class="xref" href="#gloss_I__x3753781">「中間証明書 (intermediate certificate)」</a>、<a class="xref" href="#gloss_S__x2038004">「Secure Sockets Layer (SSL)」</a>、<a class="xref" href="#gloss_T__x2042234">「トラステッド・ルート (trusted
 root)」</a>も参照。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>証明書署名要求 (CSR) (certificate signing request (CSR))</dt>
+<dd class="dd">組織が証明書を取得するために認証局 (CA) に送信する電子メッセージ。この要求は公開鍵を含んでおり、秘密鍵を使用して署名されます。CA は、独自の秘密鍵を使用して署名した後、証明書を返します。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>変更セット (change set)</dt>
 <dd class="dd">ワークスペースまたはストリーム内の作成物に対する関連する変更を 1 つのグループにまとめたもの。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>暗号化ブロック・チェーン (CBC) (cipher block chaining (CBC))</dt>
@@ -147,6 +149,8 @@ root)」</a>も参照。</dd>
 <dd class="dd">新規フィーチャーおよびフィックスが迅速にかつ低リスクでパッケージ化され、テスト環境にデプロイされ、その後顧客の元にデプロイされるようにするために、継続的テスト、継続的統合、および継続的デプロイメントなどの手法を使用するソフトウェア開発プラクティス。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>資格情報 (credential)</dt>
 <dd class="dd">ユーザー、グループ関連付け、またはその他のセキュリティー関連の識別属性を記述する情報。認証中に取得され、許可、監査、委任などのサービスを実行するために使用されます。例えば、ユーザー ID とパスワードは、ネットワークおよびシステム・リソースへのアクセスを可能にする資格情報です。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">「<a class="xref" href="#gloss_C__x3530521">証明書署名要求 (certificate signing request)</a>」を参照。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>カスタム・ドメイン (custom domain)</dt>
 <dd class="dd">ユーザーが要求をアプリケーションに送信するために選択した URL のカスタマイズされた部分。カスタム・ドメインは、経路の一部を構成します。カスタム・ドメインとして、共有ドメイン、共有サブドメイン、または共有ドメインおよびホストを使用できます。<a class="xref" href="#gloss_D__x2021210">「ドメイン (domain)」</a>、<a class="xref" href="#gloss_H__x2002243">「ホスト (host)」</a>、<a class="xref" href="#gloss_R__x2037338">「経路 (route)」</a>、<a class="xref" href="#gloss_S__x2040080">「サブドメイン (subdomain)」</a>、<a class="xref" href="#gloss_U__x2042491">「Uniform Resource Locator」</a>も参照。</dd>
 </dl>

@@ -3,13 +3,13 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 13 de novembro de 2015*
+*Última atualização: 8 de dezembro de 2015*
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
 {{site.data.keyword.Bluemix_notm}} Local, é possível proteger
 suas cargas de trabalho mais sensíveis no firewall de sua empresa,
 enquanto permanece estavelmente conectado e em sincronia
-com o {{site.data.keyword.Bluemix_notm}} Public. 
+com o {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
 
 A IBM® utiliza operações em nuvem como um serviço para
@@ -18,7 +18,7 @@ monitorar e manter seu ambiente, para que você possa se concentrar na construç
 {{site.data.keyword.Bluemix_notm}} Local inclui um
 catálogo privado, organizado, que exibe os serviços locais que estão
 disponíveis exclusivamente para você. Ele também inclui serviços adicionais
-que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public.
+que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public. O catálogo organizado fornece a função para criar aplicativos híbridos que consistem em serviços públicos e privados. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança.
 
 {{site.data.keyword.Bluemix_notm}} Local fica em uma
 máquina virtual que está atrás do firewall de sua empresa, para que
@@ -26,18 +26,6 @@ você tenha o maior desempenho e a infraestrutura de nuvem mais
 segura disponíveis para você. A IBM instala, monitora remotamente e
 gerencia o {{site.data.keyword.Bluemix_notm}} Local em seu
 datacenter por meio da tecnologia de retransmissão da IBM.
-
-Retransmissão é um recurso de entrega incluído com o
-{{site.data.keyword.Bluemix_notm}} Local que permite que a
-IBM forneça automática e consistentemente atualizações
-para todas as implementações locais, de modo que você sempre tenha um
-sistema atualizado, estável e seguro. A retransmissão obtém
-conectividade segura por meio de uma saída, SSL de saída e um túnel
-VPN que se origina da máquina virtual de concepção que utiliza
-certificados que são específicos a cada instância do
-{{site.data.keyword.Bluemix_notm}} Local. O tráfego neste
-túnel é a automação Urban Code Deployer para serviço e
-manutenção da plataforma, recursos de computação e serviços para sua instância.
 
 ![{{site.data.keyword.Bluemix_notm}} Visão geral do Local](images/bluemixlocalarchitecture.png "Visão
 geral do Bluemix
@@ -86,6 +74,14 @@ benefício do uso do serviço {{site.data.keyword.APIM}}
 
 *Tabela 1. Serviços locais*
 
+### Retransmitir
+
+Retransmissão é um recurso de entrega incluído com o {{site.data.keyword.Bluemix_notm}} Local que permite à IBM entregar de forma automática e consistente as atualizações mais recentes para todas as implementações locais, para que você sempre tenha um sistema atualizado e seguro. A retransmissão obtém conectividade segura por meio de um túnel VPN aberto, com SSL de saída, que se origina da máquina virtual de concepção local usando certificados que são específicos de cada instância do {{site.data.keyword.Bluemix_notm}} Local. Todas as liberações iniciais do {{site.data.keyword.Bluemix_notm}} estão disponíveis na máquina virtual de concepção, que também age como uma máquina do agente de automação para implementações e atualizações. A conexão SSL origina-se da máquina virtual de concepção e uma vez que uma conexão segura é estabelecida de volta com o servidor de automação do {{site.data.keyword.Bluemix_notm}}, podemos verificar a moeda e a consistência das liberações do {{site.data.keyword.Bluemix_notm}} e iniciar a implementação de atualizações.
+
+O tráfego nesse túnel é a automação para serviço e manutenção da plataforma, recursos de cálculo e serviços para sua instância. A porta da web 443 de entrada é usada para essa conexão. A retransmissão é restrita ao acesso somente do agente de automação. A IBM usa o recurso de retransmissão para entregar atualizações de plataforma por meio de um processo de teste e validação consistente para assegurar que todas as implementações enviadas por push para seus ambientes locais sejam estáveis e seguras.
+
+Você tem visibilidade completa do ambiente para o incidente, problema, mudança, capacidade e gerenciamento de segurança como um administrador. Os administradores acessam as informações sobre seus ambientes usando o console de administração. A tecnologia de retransmissão mantém o console de administração atual com os dados mais recentes. Para obter mais informações sobre acesso de usuário, logs de segurança, controle de catálogo organizado e comunicação para atualizações e reparo do problema, consulte [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
+
 ##Configurando a instância do {{site.data.keyword.Bluemix_notm}}
 Local
 {: #setuplocal}
@@ -120,7 +116,7 @@ contato com o
 para começar.</li>
 <li>Estabeleça seu contrato do {{site.data.keyword.Bluemix_notm}}
 Local com a IBM que inclui datas do acontecimento para entrega.
-<ol type="a">
+	<ol type="a">
 	<li>Trabalhe com a IBM com relação à taxa para sua instância do
 {{site.data.keyword.Bluemix_notm}} Local. A taxa de
 recorrência mensal baseia-se nos serviços locais que você deseja
@@ -134,23 +130,7 @@ instância do {{site.data.keyword.Bluemix_notm}} Local.</li>
 <li>Depois que sua plataforma e conta forem criadas,
 identifique as pessoas em sua organização para as funções
 que são necessárias para que sua instância local esteja ativa e
-executando.<br />
-<br />
-<dl>
-<dt>**Focal em compras**</dt>
-<dd>Trabalha com os representantes IBM no estabelecimento de seu ambiente do {{site.data.keyword.Bluemix_notm}} Local, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. Essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O
-focal em compras é o contato geral para configurar a instância local.</dd>
-<dt>**Executivo de conformidade**</dt>
-<dd>Trabalha com os representantes IBM para selecionar uma opção de topologia e implementação que atenda aos requisitos de segurança. Essa função trabalha com o consultores de conformidade IBM para determinar quais padrões de implementação alcançam as metas e os objetivos de conformidade.</dd>
-<dt>**Especialista em rede**</dt>
-<dd>Trabalha com os representantes IBM nos planos de rede para a implementação do {{site.data.keyword.Bluemix_notm}}. Essa função fornece os requisitos para os representantes IBM e trabalha com os representantes em um plano de implementação. No
-final da fase de instalação e verificação, esta função será "sign
-off", quando a configuração da rede está em conformidade com os
-padrões corporativos.</dd>
-<dt>**DevOps focal**</dt>
-<dd>Trabalha com os representantes IBM para planejar e aplicar as atualizações de manutenção que são necessárias para a plataforma, os serviços e os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Essa função também trabalha com os representantes IBM na configuração da instância do {{site.data.keyword.Bluemix_notm}} Local.</dd>
-</dl>
-</li>
+executando. Para obter mais informações sobre as funções designadas, consulte <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Local</a>.</li>
 <li>Você fornece o hardware e a IBM ajuda a definir e estabelecer
 conectividade de rede entre a rede corporativa e a
 instância do {{site.data.keyword.Bluemix_notm}} Local. Para
@@ -159,7 +139,7 @@ consulte
 <a href="index.html#localinfra">requisitos de
 infraestrutura do {{site.data.keyword.Bluemix_notm}}
 Local</a>.
-<ol type="a">
+	<ol type="a">
 	<li>A IBM configura o acesso à rede e LDAP baseado no que foi
 fornecido. É fornecido
 acesso administrativo aos contatos designados. Deve-se também
@@ -172,7 +152,131 @@ do terminal LDAP, e acessa.</li>
 	</ol>
 </li>
 </ol>
-	
+
+##Funções e Responsabilidades
+{: #rolesresponsibilities}
+
+Se você configurar uma conta do {{site.data.keyword.Bluemix_notm}} Local, identificará as pessoas em sua organização para as funções necessárias para que sua instância funcione.
+
+###Funções
+
+A lista a seguir mostra as funções e as responsabilidades designadas ao cliente:
+
+<dl>
+<dt>**Focal em compras**</dt>
+<dd>Trabalha com o representante IBM no estabelecimento de seu
+ambiente do {{site.data.keyword.Bluemix_notm}} Local,
+incluindo a identificação da pessoa certa em sua organização para
+trabalhar em qualquer aspecto do projeto. A pessoa designada a essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O
+focal em compras é o contato geral para configurar a instância local.</dd>
+<dt>**Executivo de conformidade**</dt>
+<dd>Trabalha com o representante IBM para selecionar uma opção de topologia e de implementação que atenda aos requisitos de segurança. A pessoa designada a essa função trabalha com o consultor de conformidade IBM para determinar quais padrões de implementação alcançam os objetivos de conformidade.</dd>
+<dt>**Especialista em rede**</dt>
+<dd>Trabalha com o representante IBM nos planos de rede para a
+implementação do {{site.data.keyword.Bluemix_notm}}. A pessoa designada a essa função revisa as especificações de rede necessárias para a IBM e trabalha junto com a IBM em um plano de implementação. No término da fase de instalação e verificação, a pessoa designada a essa função aprovará que a configuração de rede está em conformidade com os padrões corporativos.</dd>
+<dt>**DevOps focal**</dt>
+<dd>Trabalha com o representante IBM para planejar e aplicar as
+atualizações de manutenção que são necessárias para a plataforma,
+serviços e tempos de execução do
+{{site.data.keyword.Bluemix_notm}}. A pessoa designada a essa função também trabalha com o representante IBM na configuração da instância do {{site.data.keyword.Bluemix_notm}} Local.</dd>
+<dt>**Especialista em IaaS**</dt>
+<dd>Trabalha com os representantes IBM no plano de implementação do VMware. Geralmente, é alguém que é um administrador do VMware no datacenter. A pessoa designada a essa função revisa os <a href="../local/index.html#localinfra">requisitos de infraestrutura do {{site.data.keyword.Bluemix_notm}} Local</a> e trabalha junto com a IBM em um plano de implementação. No término da implementação, a pessoa designada a essa função aprovará que a implementação está em conformidade com os padrões corporativos na camada IaaS.</dd>
+</dl>
+
+Seus representantes de serviços trabalham com um client success manager (CSM) dedicado e outros especialistas IBM, que trabalham juntos para assegurar que você sempre tenha o suporte necessário. O CSM é fornecido por 6 meses gratuitamente. O CSM conclui as tarefas a seguir:
+
+<ul>
+<li>Fornece coordenação técnica entre você e a IBM.</li>
+<li>Coordena atualizações, upgrades, ajuda de especialistas da IBM, além de ativação inicial de um engenheiro de suporte do {{site.data.keyword.Bluemix_notm}}.</li>
+<li>Fornece informações sobre os tipos de suporte que estão disponíveis.</li>
+<li>Agirá como um ponto de escalada inicial, se necessário.</li>
+</ul>
+
+O suporte e a equipe de operações do {{site.data.keyword.Bluemix_notm}} que trabalham com você em sua instância do {{site.data.keyword.Bluemix_notm}} podem acessar seu ambiente local, mas faz isso apenas pelos motivos a seguir.
+
+<ul>
+<li>Para responder a alertas e executar manutenção operacional</li>
+<li>Para tentar reproduzir um problema relatado em um chamado de suporte</li>
+</ul>
+
+###Responsabilidades
+
+Da configuração de seu ambiente até a manutenção contínua, você e a IBM devem concluir uma variedade de tarefas. As tabelas a seguir descrevem as tarefas necessárias e os proprietários para concluir a tarefa durante as fases de concepção, progressão e conclusão.
+
+A fase de concepção é usada para estabelecer o ambiente do {{site.data.keyword.Bluemix_notm}} Local. Neste momento, você já revisou os [Requisitos de infraestrutura local](../local/index.html#localinfra). Os objetivos principais dessa fase incluem os itens a seguir:
+
+- Revisar o contrato financeiro e estabelecer as datas do acontecimento para entrega.
+- Criar a plataforma {{site.data.keyword.Bluemix_notm}} e fornecer acesso aos tempos de execução e serviços.
+- Definir e estabelecer conectividade de rede entre a rede corporativa e as operações do {{site.data.keyword.Bluemix_notm}}.
+- Identificar e designar funções para sua equipe administrativa.
+
+*Tabela 1. Tarefas da fase de concepção*
+
+| **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
+|----------|------------------|-----------------------|
+|Configurar padrões de conformidade | Identificar padrões corporativos do governo, da indústria e proprietários que são necessários para o ambiente. | Cliente |
+|Criar plano de integração de segurança e conformidade | Criar plano de segurança e integração que inclui custos, planejamento e recursos que são necessários para atingir conformidade de segurança. | IBM |
+|Aprovação do plano de conformidade | Aprovar o plano de conformidade. | Cliente |
+|Criar dimensionamento para o ambiente |  	Criar dimensionamento de ambiente com base nas opções predefinidas que consideram a alta disponibilidade e os objetivos de recuperação de desastre, bem como o DEA inicial e o fornecimento de serviço que são necessários para suportar os apps criados com a plataforma. Você e a IBM trabalham juntos para definir, por exemplo, quais bancos de dados são necessários, quais serviços são oferecidos no catálogo organizado do cliente e muito mais. | A IBM e o cliente compartilham a responsabilidade |
+|Selecionar arquitetura | Selecione a arquitetura com base nas opções predefinidas que consideram a alta disponibilidade e os requisitos de recuperação de desastre. | IBM |
+|Definir objetivos de recuperação de desastre | Definir os requisitos de recuperação de desastre para o ambiente. | Cliente |
+|Criar plano de recuperação de desastres | Consultar e definir o plano de recuperação de desastres. A IBM cria um modelo de recuperação de desastre e consulta você sobre fornecimento de feedback e aprovação do plano. | A IBM e o cliente compartilham a responsabilidade |
+|Criar plano de backup e recuperação | Criar um plano de backup e recuperação que defina a frequência e os requisitos para distribuição ocasional do backup pelo site. A IBM faz backup de componentes de malha, serviços IBM, metadados de serviço, incluindo funções de usuário e muito mais. Você faz backup de todos os dados específicos do aplicativo pelos quais é responsável. | A IBM e o cliente compartilham a responsabilidade |
+|Identificar ferramentas para detecção de eventos e determinação de problemas | Identificar ferramentas da IBM e de terceiros usadas para detecção de eventos e determinação de problemas no nível da plataforma {{site.data.keyword.Bluemix_notm}}. | IBM |
+|Definir plano de escalada | Definir o plano de escalada para fazer triagem e resolver eventos detectados a partir dos componentes de monitoramento. | IBM |
+|Assinar contratos de infraestrutura, de plataforma e de suporte | Assinar o contrato de assinatura, incluindo os termos financeiros e as condições para o ambiente. Assinar contrato de monitoramento de rede e segurança. Assinar assinatura de suporte. | Cliente |
+|Comprar ambiente | Comprar recursos de cálculo, de rede e de armazenamento. Para obter mais informações sobre os requisitos de infraestrutura para o ambiente, consulte [Requisitos de infraestrutura local](../local/index.html#localinfra). | Cliente |
+|Instalar solução de VPN | Instalar solução de VPN bidirecional. | IBM |
+|Instalar componentes de malha, de aplicativo e de monitoramento e gerenciamento | Instalar, configurar e verificar componentes de malha, como BOSH Director, Cloud Controller, Health Manager, sistema de mensagens, roteadores, DEAs e provedores de serviço, além dos componentes de monitoramento definidos no plano de escalada e de detecção de problema. | IBM |
+|Instalar e configurar componentes de segurança | Instalar e configurar componentes de segurança que são ligados ao plano de monitoramento e escalada, incluindo IBM QRadar, área segura de credenciais, sistema de prevenção de intrusão, IBM BigFix e IBM Security Privileged Identity Management. | IBM |
+|Configurar servidor de login | Configurar o servidor de login para uso com o LDAP corporativo. | IBM |
+|Instalar e configurar componentes customizados |  	Instalar e configurar componentes customizados que residem fora do escopo do produto e serviços {{site.data.keyword.Bluemix_notm}}. | Cliente |
+|Conectar pipeline do {{site.data.keyword.Bluemix_notm}} | Conectar pipeline de integração contínua e de entrega contínua do {{site.data.keyword.Bluemix_notm}} com repositórios da IBM. | IBM |
+|Customizar componentes de solução externa | Customizar balanceadores de carga para cenários de recuperação de desastre. | Cliente |
+|Rastrear status para controles de segurança, de conformidade e de auditoria  | Rastrear status até o ponto em que todas as ferramentas e processos estiverem adequados para atingir a conformidade identificada. | Cliente |
+|Revisar a infraestrutura física | Revisar instalações físicas que hospedam os componentes da solução para ameaças e revisão de controles de segurança para proteger o datacenter. | Cliente |
+|Inspecionar software de monitoramento | Inspecionar componentes de monitoramento e gerenciamento, conforme definido no plano de escalada e de determinação de problema. | Cliente |
+|Inspecionar sistema operacional | Inspecionar para assegurar-se de que a imagem do sistema operacional atenda aos padrões de conformidade. A IBM fornece acesso à imagem do sistema operacional. | A IBM e o cliente compartilham a responsabilidade |
+
+A fase seguinte é a de progressão. A fase de progressão descreve o relacionamento colaborativo em andamento, entre você e a IBM. Os objetivos principais dessa fase incluem os itens a seguir:
+
+- Revisar a capacidade e coordenar os ajustes necessários.
+- Revisar as melhorias de manutenção e plataforma.
+- Coordenar as atividades para resolução de problemas e análise de causa raiz.
+
+*Tabela 2. Tarefas da fase de progressão*
+
+| **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
+|----------|------------------|-----------------------|
+|Revisar relatórios de capacidade semanal | Revisar os relatórios de capacidade semanal e executar a ação corretiva, se necessário. | Cliente |
+|Criar projeções mês a mês | Coletar informações e criar uma projeção mês a mês da capacidade e do consumo. | A IBM e o cliente compartilham a responsabilidade |
+|Revisar projeções de capacidade | Revisar as projeções de capacidade, visto que estão relacionadas a eventos externos que podem causar impacto na capacidade, bem como novas implementações previstas de apps. Trabalhe com a IBM para revisar as projeções e planejar adequadamente. | A IBM e o cliente compartilham a responsabilidade |
+|Ajustar a capacidade |  Incluir ou remover capacidade conforme suas necessidades mudarem. | IBM |
+|Publicar atualizações e manutenção futuras | Criar documentação para a manutenção necessária de componentes da IBM. | IBM |
+|Executar manutenção | Trabalhe com a IBM para planejar a manutenção necessária dentro de uma janela de 30 dias. É possível fornecer datas que podem não funcionar para você na janela de 30 dias e a IBM trabalhará para planejar a manutenção adequadamente. | A IBM e o cliente compartilham a responsabilidade |
+|Tratar de falhas de fornecimento | Corrigir falhas de fornecimento, se ocorrerem, para serviços criados pelo cliente que estejam implementados no Catálogo. | IBM |
+|Executar varreduras de rede e de IP | Executar varreduras diárias e mensais de rede e de IP. | A IBM e o cliente compartilham a responsabilidade |
+|Fornecer acesso aos logs de auditoria | Fornecer acesso a todos os logs de auditoria de segurança e administrativos.   | A IBM e o cliente compartilham a responsabilidade |
+|Conduzir teste | Conduzir teste periódico de Controles de chave sobre operações e teste de penetração de terceiros. | A IBM e o cliente compartilham a responsabilidade |
+|Relato de status, coordenação de auditoria e reuniões de conformidade  | Concluir relato de status, coordenação de auditoria externa e representação em reuniões de status de revisão de conformidade. | IBM |
+|Verificação de emprego e de necessidade de negócios | Verificação completa do emprego trimestralmente e verificação da necessidade contínua de negócios para representantes IBM que possuem acesso ao ambiente do cliente. | IBM |
+|Resolução de vulnerabilidades de segurança | Resolver vulnerabilidades de segurança relatadas na plataforma. | IBM |
+
+O estágio final da conclusão representa o término do relacionamento entre você e a IBM {{site.data.keyword.Bluemix_notm}}. As tarefas principais dessa fase incluem os itens a seguir:
+
+* Término do contrato financeiro
+* Remoção de todas as conexões de rede
+* Infraestrutura de reciclagem
+
+*Tabela 3. Tarefas da fase de conclusão*
+
+| **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
+|----------|------------------|-----------------------|
+|Terminar o contrato financeiro | Discutir e concordar com um término para o contrato financeiro. | A IBM e o cliente compartilham a responsabilidade |
+|Ambiente de desatribuição | Encerrar o acesso e as credenciais para o ambiente. | A IBM e o cliente compartilham a responsabilidade |
+|Encerrar a retransmissão | Finalizar a conexão de retransmissão. | IBM |
+|Reciclar a infraestrutura | Reciclar sua infraestrutura de acordo com as diretrizes da empresa. | Cliente |
+
 ##Requisitos da infraestrutura local do {{site.data.keyword.Bluemix_notm}}
 {: #localinfra}
 
@@ -192,7 +296,7 @@ principal do {{site.data.keyword.Bluemix_notm}}.
 <ul>
 <li>48 núcleos físicos a 2.0 GHz ou mais cada</li>
 <li>756 GB de RAM física</li>
-</li>Tamanho total de armazenamento de dados de 7.5 TB 
+</li>Tamanho total de armazenamento de dados de 7.5 TB
 <ul>
 <li>Armazenamento de dados de 7 TB para manter
 {{site.data.keyword.Bluemix_notm}}</li>
@@ -304,7 +408,7 @@ Os tipos de manutenção a seguir são necessários para o {{site.data.keyword.B
 <dd>Os serviços utilizam janelas de manutenção predefinidas padrão,
 o que pode fazer com que os serviços fiquem indisponíveis. A IBM não requer aprovação do cliente para executar manutenção, mas tenta minimizar o impacto em seus serviços.<br />
 <br />
-A IBM envia mensagens transmitidas das mudanças que estão planejadas para cada janela de manutenção, por meio de email, telefone ou outros métodos.<br />
+A IBM envia mensagens transmitidas das mudanças que estão planejadas para cada janela de manutenção, por meio de e-mail, telefone ou outros métodos.<br />
 <br />
 **Importante**: Algum serviço pode não ficar
 disponível durante o período de manutenção.</dd>
@@ -340,12 +444,69 @@ Para configurar a manutenção de sua instância local, trabalhe
 com seu representante de conta designado da IBM para identificar uma janela acordada para a
 manutenção padrão.
 
+Se houver um problema relatado após uma atualização de manutenção, você acordará com seu representante IBM se for de seu melhor interesse permitir que a IBM reverta a atualização. Em concordância, a IBM reverterá a atualização para restaurar o ambiente para o estado anterior.
+
+## Recuperação de desastre
+{: #dr}
+
+O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.{: shortdesc}
+
+A recuperação de desastre do {{site.data.keyword.Bluemix_short}} Local torna-se possível por meio de disponibilidade contínua para seus apps, da alta disponibilidade inerente da plataforma e da capacidade de restaurar sua instância no caso de uma falha. Você é responsável por ativar a disponibilidade contínua de seus apps implementando em várias regiões. A alta disponibilidade é construída no nível de plataforma por meio de tecnologias incluídas no Cloud Foundry e de outros componentes. Além disso, é possível trabalhar junto com a IBM para assegurar que seus dados sejam corretamente submetidos a backup no caso de você precisar restaurar sua instância a qualquer momento.
+
+### Ativando a disponibilidade contínua para o {{site.data.keyword.Bluemix_notm}} Local
+{: #enabling}
+
+Por padrão, o {{site.data.keyword.Bluemix_notm}} Public é implementado em várias localizações geográficas. No entanto, deve-se fazer o seguinte para ativar instâncias do {{site.data.keyword.Bluemix_notm}} Local distribuídas globalmente:
+
+* Assegure-se de que os desenvolvedores estejam implementando apps em mais de uma região, por meio de um processo manual ou automatizado. As regiões selecionadas devem ter uma separação de mais de 200 km umas das outras para assegurar que um desastre natural não possa afetar ambas as localizações geográficas.
+* Configure um balanceador de carga global, como Akamai ou Dyn, para apontar para apps em pelo menos duas regiões diferentes.
+
+**Nota**: nem todos os serviços do {{site.data.keyword.Bluemix_notm}} suportam distribuição regional. Ao construir um app, para atingir a distribuição geográfica, deve-se também certificar-se de que os serviços usados por esse app tenham a sincronização de dados como um recurso-chave.
+
+#### Implementando apps do {{site.data.keyword.Bluemix_notm}} Local em várias localizações geográficas
+{: #deploying}
+
+Para implementar em um segundo local ou em vários locais, deve-se seguir um processo semelhante ao usado para ativar sua localização geográfica primária:
+
+1. Ative um novo ambiente local para hospedar instâncias adicionais de seus aplicativos. Para criar um novo ambiente, entre em contato com a equipe de vendas da IBM para iniciar o processo. Para obter mais informações sobre a configuração de uma instância local, consulte [Configurando o {{site.data.keyword.Bluemix_notm}} Local](../local/index.html#setuplocal). Deve-se efetuar login separadamente para acessar cada ambiente. Cada local físico dos ambientes hospedados deve ter uma separação mínima de 200 km do local original para assegurar disponibilidade.
+2. Obtenha o nome de domínio exclusivo no qual seu novo app implementado será hospedado. Por exemplo, se seu domínio original for *mycompany.east.bluemix.net*, será possível criar um novo ambiente local com um novo domínio, como *mycompany.west.bluemix.net* e implementar no novo domínio.
+3. Sempre que você implementar seu app original, implemente no novo local. Para obter mais informações sobre implementação, consulte [Fazendo upload de seu app](../starters/upload_app.html).
+
+
+#### Ativando um balanceador de carga global para o {{site.data.keyword.Bluemix_notm}} Local
+{: #glb}
+
+Um balanceador de carga global não apenas assegura disponibilidade contínua e é necessário para recuperação de desastre, como também possui diversos benefícios adicionais:
+
+* Roteia usuários para a região mais próxima do {{site.data.keyword.Bluemix_notm}}, por padrão
+* Roteia com base no desempenho
+* Direciona seletivamente uma porcentagem de tráfego para uma nova versão do aplicativo
+* Fornece failover do site com base na verificação de funcionamento da região
+* Fornece failover do site com base na verificação de funcionamento do aplicativo
+* Usa roteamento ponderado entre os terminais
+
+É possível escolher um balanceador de carga global, como Akamai ou Dyn. Para obter mais informações sobre como usar Akamai como um balanceador de carga global, consulte [Gerenciamento de tráfego global](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Para obter mais informações sobre como usar Dyn como um balanceador de carga global, consulte [Quatro motivos pelos quais as empresas estão levando o balanceamento de carga global para a nuvem](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+
+### Alta disponibilidade
+{: #ha}
+
+Além de ativar a disponibilidade contínua, o {{site.data.keyword.Bluemix_notm}} também fornece alta disponibilidade na plataforma usando tecnologias construídas no Cloud Foundry, no Docker e em outros componentes.
+
+Essas tecnologias incluem os itens a seguir:
+
+<dl>
+<dt>Escalabilidade no Cloud Foundry</dt>
+<dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.</dd>
+<dt>Backup de metadados</dt>
+<dd>Os metadados são submetidos a backup em um local secundário, geralmente uma máquina virtual local. Se possível, convém replicar o backup para seu próprio ambiente com pelo menos 200 km de distância.</dd>
+</dl>
+
 ##Restaurando sua instância local
 {: #restorelocal}
 
-É feito backup regularmente de definições e configurações do {{site.data.keyword.Bluemix_notm}} Local para preparar-se para quaisquer indisponibilidades não planejadas no ambiente.
+É feito backup regularmente de definições, metadados e configurações do {{site.data.keyword.Bluemix_notm}} Local para se preparar para indisponibilidades não planejadas no ambiente. Os dados por cujo backup você é responsável incluem dados do aplicativo, dados de serviços do banco de dados em nuvem e armazenamentos de objeto.
 
-Como parte do backup de seus dados, a IBM conclui as tarefas a seguir:
+Como parte do backup de dados, que inclui metadados e configurações do sistema, a IBM conclui as tarefas a seguir:
 
 <ul>
 <li>Criptografa todas as cópias de backup e gerencia chaves de criptografia</li>
@@ -361,7 +522,9 @@ Como a proteção de dados privados é crítica, a IBM precisa da sua colaboraç
 <li>Mova uma cópia dos dados de backup criptografados externos, exatamente como faria para quaisquer outros dados de backup gerenciados.</li>
 <li>Forneça os arquivos de backup para o operador da IBM no caso de qualquer necessidade de restauração.</li>
 </ul>
-   
+
 # rellinks
-## general 
+## general
 * [Descobrir: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
+* [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
+* [Entrando em contato com o suporte](../troubleshoot/getting_customer_support.html#bluemix_support)

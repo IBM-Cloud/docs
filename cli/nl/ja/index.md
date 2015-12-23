@@ -38,7 +38,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 |-----------------|-----------------|
 | プラグイン名: active-deploy<br>  [資料の表示](../services/ActiveDeploy/index.html#cli) |  プラグイン名: development-name <br> [資料の表示](./plugins/dev_mode/index.html) | 
 
-### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを拡張します: bx
+### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースの拡張: bx
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
 ```
 bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
@@ -49,7 +49,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| プラグイン名: ibm-containers<br> [資料の表示](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| プラグイン名: ibm-containers<br> [資料の表示](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
 ## ![統合開発ツール](./images/Integrated_Dev_Tools.png) 統合開発ツール
 

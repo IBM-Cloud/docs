@@ -5,7 +5,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} 관리
 {: #administer}
-*마지막 업데이트 날짜: 2015년 11월 18일*
+*마지막 업데이트 날짜: 2015년 12월 8일*
 
 **계정 및 지원** &gt; **조직 관리**를 클릭하여 조직, 영역 및 지정된 사용자를 관리합니다. {{site.data.keyword.Bluemix_notm}} Local 또는 {{site.data.keyword.Bluemix_notm}} Dedicated 사용자인 경우, 로컬 또는 전용 인스턴스 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](index.html#mng)를 참조하십시오. {:shortdesc}
 
@@ -237,8 +237,7 @@
 
 다음 URL을 입력하여 관리 콘솔에 액세스할 수 있습니다.
 
-
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`. 
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -329,6 +328,10 @@ LDAP 구성 세부사항 섹션에 표시됩니다.
 포함된 텍스트 컨텐츠에 적용됩니다. 또한 **관리 이벤트**, **DataPower
 보고서**, **방화벽** 및 **로그인 감사**를 기준으로 검색을 필터링할 수도 있습니다. 
 * 보고서 또는 로그를 표시할 때 보고서의 상단 오른쪽에 있는 ![다운로드](images/icon_download.png) 아이콘을 클릭하여 이를 다운로드할 수 있습니다.
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+보안 보고서에 대한 자세한 정보는 [보안 보고서](../security/index.html#reports)를 참조하십시오.
 
 ### 상태 보기
 {: #oc_status}

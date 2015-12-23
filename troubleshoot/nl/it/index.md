@@ -1,16 +1,17 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
 *Ultimo aggiornamento: 19 novembre 2015*
 
-I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi.
+I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}
 
 ## Impossibile accedere a {{site.data.keyword.Bluemix_notm}}
@@ -19,7 +20,7 @@ I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero inc
 Per accedere a {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM e password validi.
 
 
-Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
+Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
 `L'ID e/o password IBM immessi non sono corretti. Riprova.`
@@ -81,9 +82,8 @@ Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.
 potresti non riuscire ad accedere a {{site.data.keyword.Bluemix_notm}}. Invece, visualizzi il seguente messaggio:
 {: tsSymptoms}
 
-`Your account is pending. Please wait up to 24 hours for email confirmation and also check your
-spam folder. If you still have not received your email confirmation,
-contact id@bluemix.net to get help.`
+<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your
+spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>.</code>
 
 
 Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
@@ -92,8 +92,7 @@ che si trova nella email di conferma per completare il processo di registrazione
 {: tsCauses} 
 
 L'email di conferma viene inviata all'indirizzo di posta
-da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto
-un'email di conferma, contatta il [supporto ID](mailto:id@bluemix.net).
+da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -106,7 +105,7 @@ se sei il proprietario dell'account o se sei allo stesso tempo un gestore e un m
  
 
 Non riesci a visualizzare il link **Invita un nuovo utente**
-nella sezione **Gestisci organizzazioni**.
+nella sezione **Gestisci organizzazioni**. 
 {: tsSymptoms}
 
  
@@ -276,7 +275,7 @@ Quando accedi all'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, sul 
 {: tsSymptoms}
  
 
-Questo problema potrebbe verificarsi se esegui il bind di un'istanza del servizio alla tua applicazione, ma il servizio non è più accessibile perché ne sono stati modificati i privilegi di servizio per la tua organizzazione o il tuo spazio.
+Questo problema potrebbe verificarsi se esegui il bind di un'istanza del servizio alla tua applicazione, ma il servizio non è più accessibile perché ne sono stati modificati i privilegi di servizio per la tua organizzazione o il tuo spazio. 
 {: tsCauses}
   	
 
@@ -301,13 +300,69 @@ applicazioni che non possono essere aggiornate o caratteri double-byte che non v
 
 
 
+## Impossibile effettuare le azioni richieste
+{: #ts_authority}
+
+Potresti non riuscire a completare delle azioni senza un'appropriata autorità di accesso.
+
+ 
+
+Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'applicazione, non riesci a completare le azioni richieste e visualizzai uno dei seguenti messaggi di errore:
+{: tsSymptoms}
+
+`BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
+
+
+`Server error, status code: 403, error code: 10003, message: You are not authorized to perform the requested action.`
+
+ 
+
+Non disponi di un adeguato livello di autorità necessario per eseguire le azioni.
+{: tsCauses}
+
+  
+
+Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi:
+{: tsResolve}
+ * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore.  
+ * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Per i dettagli, vedi [Gestione della tua organizzazione](../acctmgmt/index.html#mngorg){: new_window}.
+ 
+
+ 
+
+
+## Impossibile accedere ai servizi {{site.data.keyword.Bluemix_notm}} a causa di errori di autorizzazione
+{: #ts_vcap}
+
+Gli errori di autorizzazione potrebbero verificarsi quando la tua applicazione accede a un servizio {{site.data.keyword.Bluemix_notm}} se le credenziali del servizio sono hardcoded nell'applicazione. 
+
+Dopo aver configurato l'applicazione per comunicare con un servizio {{site.data.keyword.Bluemix_notm}}, distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}}. Tuttavia, non riesci a utilizzare l'applicazione per accedere al servizio {{site.data.keyword.Bluemix_notm}} e ricevi un messaggio di errore.
+{: tsSymptoms}
+
+Le credenziali hardcoded nell'applicazione potrebbero non essere corrette. Ogni volta che il servizio viene ricreato, le credenziali per accedervi cambiano.
+{: tsCauses}
+
+
+Invece di impostare come hardcoded le credenziali nella tua applicazione, utilizza i parametri di connessione dalla variabile di ambiente VCAP_SERVICES. I metodi per utilizzare i parametri di connessione dalla variabile di ambiente VCAP_SERVICES variano a seconda dei linguaggi di programmazione. Ad esempio, per le applicazioni Node.js, puoi utilizzare il seguente comando:
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
+
+ 
+ 
+
+
 
 
 ## Impossibile distribuire le applicazioni utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
 Quando al tuo progetto Eclipse viene applicato un facet non supportato, potresti non essere in grado di distribuire le
-tue applicazioni a Bluemix™ utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+tue applicazioni a {{site.data.keyword.Bluemix_notm}} utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -579,7 +634,8 @@ con il comando `cf push`:
 ```
 cf push -c <comando_di_avvio> -b <pacchetto_di_build-null>
 ```
-Per esempio:
+Ad
+                                    esempio:
 ```
 cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
@@ -609,21 +665,25 @@ per un account di prova è 2 GB.
 
 
 
-Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.{: tsResolve} 
+Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.
+{: tsResolve} 
 
   * Per aumentare la quota di memoria dell'account,
 converti il tuo account di prova in un account a pagamento. Per informazioni
 su come convertire il tuo account di prova in un account a pagamento, vedi [Pay
 accounts](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
-  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf. Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
+    Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
-	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione. Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
+	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione. 
+	Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
 	  1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
 	  ```
 	  cf apps
 	  ```
 	     Il comando cf apps elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
-      2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.```
+      2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.
+	  ```
 	  cf push <nomeapplicazione> -i <numero_istanza> -m <limite_memoria>
       ```
 	  3. Riavvia la tua applicazione per rendere effettive le modifiche.
@@ -710,7 +770,7 @@ nel file `manifest.yml`.
   * L'applicazione non contiene un file `package.json`.
 
 
-Per risolvere il problema utilizza uno dei seguenti metodi:
+Per risolvere il problema utilizza uno dei seguenti metodi: 
 {: tsResolve} 
 
   * Se il file `manifest.yml` non è memorizzato al
@@ -733,7 +793,7 @@ directory della tua applicazione.
   
   
 ## Non è possibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
-{: #ts_push}
+{: #ts_orgs}
 
 Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.Bluemix_notm}} quando
 lavori su una regione {{site.data.keyword.Bluemix_notm}}.
@@ -768,8 +828,7 @@ cercando potrebbe trovarsi in una regione differente.
 
    
   
-Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando cf, immetti il comando cf api e specifica l'endpoint API della regione.
-Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
+Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando cf, immetti il comando cf api e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
 Regno Unito:
 {: tsResolve}
 
@@ -791,7 +850,7 @@ Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rot
 
 
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
@@ -809,8 +868,8 @@ del dominio che si sta utilizzando. Per specificare un nome host differente, usa
 seguenti metodi:
 {: tsResolve} 
 
-  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica il nome host nell'opzione host.
-```
+  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica il nome host nell'opzione host.	 
+    ```
     host: <nomehost>	
 	```
   * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
@@ -840,7 +899,8 @@ o il percorso del file WAR.
  	
 	
 Utilizza l'opzione **-p** per specificare
-un file WAR o aggiungere il percorso del file WAR. Per esempio:
+un file WAR o aggiungere il percorso del file WAR. Ad
+                                    esempio:
 {: tsResolve}
 
 ```
@@ -875,11 +935,11 @@ Il problema può verificarsi se il supporto Unicode non è configurato correttam
 Puoi utilizzare il seguente codice all'interno dei tuoi file servlet o JSP:
 {: tsResolve} 
 
-  * Nel file di origine servlet
+  * Nel file di origine servlet 
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * Nel JSP
+  * Nel JSP 
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -988,7 +1048,7 @@ Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato
 
  
 
-Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
+Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse. 
 {: tsSymptoms}
 
  
@@ -1076,18 +1136,17 @@ Questo problema si verifica perché non viene fornito alcun pacchetto di build i
 Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, usa uno dei seguenti metodi:
 {: tsResolve}
 
-  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack.
-Ad
+  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack. Ad
                                     esempio:
   ```
-  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
+  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
 push` e specifica il pacchetto di build personalizzato usando
 l'opzione **-b**. Ad
                                     esempio:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor
+	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1113,7 +1172,7 @@ Se noti che il progetto DevOps Services non può essere creato, il tuo account {
 
 
 
-Fai clic sul pulsante **Distribuisci a Bluemix** ma il passo di **Creazione progetto** non viene completato correttamente.
+Fai clic sul pulsante **Distribuisci a Bluemix**, ma il passo "Creazione del progetto" non viene completato correttamente.
 {: tsSymptoms} 
 
 
@@ -1137,7 +1196,7 @@ un problema con il repository o con il frammento di pulsante.
 
 
 
-Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo di **Clonazione del repository** non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}. 
+Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo "Clonazione del repository" non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Questo problema si verifica a causa dei seguenti motivi:
@@ -1154,11 +1213,8 @@ Per risolvere il problema utilizza uno dei seguenti metodi:
 
   * Verifica che il repository Git esista e sia accessibile pubblicamente
 e che l'URL sia corretto.
-  * Verifica che il frammento non contenga errori di HTML o
-markdown.
-  * Se caratteri speciali, parametri di query o frammenti causano
-problemi con l'URL del repository Git, codifica l'URL nel frammento di
-pulsante.
+  * Verifica che il frammento non contenga errori di HTML o markdown.
+  * Se caratteri speciali, parametri di query o frammenti causano problemi con l'URL del repository Git, codifica l'URL nel frammento di pulsante.
   
 
   
@@ -1171,8 +1227,7 @@ dei problemi con il codice nel repository.
      
 
 
-Fai clic sul pulsante **Distribuisci a Bluemix** e il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}. Il passo di **Distribuzione
-a Bluemix** non viene completato correttamente.
+Fai clic sul pulsante **Distribuisci a Bluemix** e il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}. Il passo "Distribuzione a Bluemix" non viene completato correttamente.
 {: tsSymptoms} 
 
 Questo problema si verifica a causa dei seguenti motivi:
@@ -1180,12 +1235,13 @@ Questo problema si verifica a causa dei seguenti motivi:
 
   * Nel tuo spazio {{site.data.keyword.Bluemix_notm}} potrebbe non esserci spazio sufficiente
 per distribuire un'applicazione. 
-  * Un servizio richiesto potrebbe non essere dichiarato nel file manifest.yml.
-  * Un servizio richiesto potrebbe essere dichiarato nel file manifest.yml, ma il servizio si trova già nello spazio di destinazione.
+  * Un servizio richiesto potrebbe non essere dichiarato nel file `manifest.yml`.
+  * Un servizio richiesto potrebbe essere dichiarato nel file `manifest.yml`,
+ma il servizio si trova già nello spazio di destinazione.
   * Potrebbe esistere un problema con il codice nel repository.
 Per diagnosticare il problema, riesamina i log di creazione e distribuzione
 dalla distribuzione:
-  1. Quando il passo di **Distribuzione a Bluemix** non viene completato correttamente, fai clic sul link nel precedente passo di Configurazione della pipeline per aprire Delivery Pipeline.
+  1. Quando il passo "Distribuzione a Bluemix" non viene completato correttamente, fai clic sul link nel precedente passo di "Configurazione della pipeline" per aprire Delivery Pipeline.
   2. Identifica la fase di creazione o distribuzione non riuscita.
   3. Nella fase non riuscita, fai clic su **Visualizza log e cronologia**.
   4. Individua il messaggio di errore.
@@ -1196,7 +1252,9 @@ Per risolvere il problema utilizza uno dei seguenti metodi:
   * Se il messaggio di errore indica che nello
 spazio {{site.data.keyword.Bluemix_notm}} non vi è spazio sufficiente
 per distribuire l'applicazione, mira a un altro spazio.
-  * Se il messaggio di errore indica che un servizio richiesto non è dichiarato nel file manifest.yml, comunica al proprietario del repository che è necessario aggiungere il servizio richiesto.
+  * Se il messaggio di errore indica che un servizio richiesto non è
+dichiarato nel file `manifest.yml`, comunica al proprietario
+del repository che è necessario aggiungere il servizio richiesto.
   * Se il messaggio di errore indica che un servizio richiesto esiste
 già nello spazio di destinazione, seleziona un spazio differente da utilizzare.
   * Se il messaggio di errore indica che esiste un problema con la creazione,
@@ -1244,8 +1302,7 @@ Potrebbero verificarsi dei problemi durante la gestione del tuo account, ad esem
 ## Account non attivo
 {: #ts_accnt_inactive}
 
-Non puoi creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se il tuo account non è attivo. Devi contattare il team di supporto ID per
-risolvere questo problema.
+Non puoi creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se il tuo account non è attivo. Per risolvere questo problema, devi contattare il team di supporto.
 
 
 
@@ -1261,12 +1318,11 @@ Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo qua
 
  
 
-Per riattivare il tuo account, invia un'email al [supporto ID](mailto:id@bluemix.net). Nell'email, devi includere le seguenti informazioni:
+Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
 {: tsResolve}
 
   * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
-  * Il nome dell'organizzazione in cui verrà creata la tua applicazione. Queste informazioni consentono al team di supporto ID di determinare se ti sono stati assegnati i
-ruoli o l'appartenenza appropriati all'interno della tua organizzazione.
+  * Il nome dell'organizzazione in cui verrà creata la tua applicazione. Queste informazioni consentono al team di supporto di determinare se ti sono stati assegnati i ruoli o l'appartenenza appropriati all'interno della tua organizzazione.
 
 
 
@@ -1521,7 +1577,7 @@ della tua applicazione Python.
 deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua
 applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti
 dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
-il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione.
+il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione. 
 	```
 	web: python <ilnomedellatuaapplicazione>.py $PORT
 	```
@@ -1691,7 +1747,6 @@ la seguente voce nel manifest di distribuzione:
 	```
 	
 	
-
 
 
 

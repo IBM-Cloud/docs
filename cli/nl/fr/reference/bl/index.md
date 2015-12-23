@@ -18,7 +18,6 @@ dans Bluemix.
 
 Pour plus d'informations sur le téléchargement et l'utilisation de la commande bl, voir [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive).
 
-
 ## Commandes bl
 
 La ligne de commande Bluemix Live Sync, **bl**, applique la syntaxe suivante :
@@ -28,7 +27,7 @@ La ligne de commande Bluemix Live Sync, **bl**, applique la syntaxe suivante :
 ### Commandes
 <dl>
 <dt>login, l</dt>
-<dd>Connecte à Bluemix. </dd>
+<dd>Connecte à Bluemix.</dd>
 <dt>logout, lo</dt>
 <dd>Déconnecte l'utilisateur.</dd>
 <dt>sync, s</dt>
@@ -38,11 +37,11 @@ La ligne de commande Bluemix Live Sync, **bl**, applique la syntaxe suivante :
 <dt>projects, p</dt>
 <dd>Répertorie tous les projets disponibles pour la synchronisation.</dd>
 <dt>start, st</dt>
-<dd>Démarre l'instance d'application dans Bluemix. </dd>
+<dd>Démarre l'instance d'application dans Bluemix.</dd>
 <dt>stop, sp</dt>
-<dd>Arrête l'instance d'application dans Bluemix. </dd>
+<dd>Arrête l'instance d'application dans Bluemix.</dd>
 <dt>status, ss</dt>
-<dd>Affiche le statut de l'instance d'application en cours d'exécution dans Bluemix. </dd>
+<dd>Affiche le statut de l'instance d'application en cours d'exécution dans Bluemix.</dd>
 </dl>
 
 ### Arguments

@@ -4,7 +4,7 @@
 # Panoramica di {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Ultimo aggiornamento: 22 ottobre 2015*
+*Ultimo aggiornamento: 20 novembre 2015*
 
 {{site.data.keyword.Bluemix}} è la piattaforma open cloud {{site.data.keyword.IBM}} che fornisce agli sviluppatori web e mobili l'accesso
 al software {{site.data.keyword.IBM_notm}} per le funzioni di integrazione, sicurezza, transazione e ad altre funzioni chiave, oltre che al software dai business partner.
@@ -76,7 +76,7 @@ La seguente figura mostra l'architettura di alto livello di {{site.data.keyword.
 
 Puoi distribuire le
 tue applicazioni a regioni {{site.data.keyword.Bluemix_notm}} differenti, per
-considerazioni di sicurezza o di latenza. Puoi scegliere di effettuare la distribuzione su una singola regione o tra più regioni. Per ulteriori informazioni, vedi [Regioni](overview.html#ov_intro__reg).
+considerazioni di sicurezza o di latenza. Puoi scegliere di effettuare la distribuzione su una singola regione o tra più regioni. Per ulteriori informazioni, vedi [Regioni](#ov_intro__reg).
 
 ![Sviluppo di applicazioni a più regioni](images/multi-region.png)
 
@@ -175,8 +175,7 @@ Tutta l'infrastruttura {{site.data.keyword.Bluemix_notm}}, i componenti Cloud Fo
 ### Regioni
 {: #ov_intro__reg}
 
-Una regione {{site.data.keyword.Bluemix_notm}} è un territorio geografico definito a cui puoi distribuire le applicazioni. Puoi creare applicazioni e istanze di servizio in regioni differenti con la stessa infrastruttura {{site.data.keyword.Bluemix_notm}} per la gestione di applicazioni e la stessa vista dei dettagli di utilizzo per la fatturazione.
-Puoi selezionare la regione più vicina ai tuoi clienti e distribuire le tue applicazioni a tale regione per ottenere una bassa latenza di applicazione. Puoi anche selezionare la regione dove desideri conservare i dati delle applicazioni per far fronte ai problemi di sicurezza. Quando crei applicazioni in più regioni, se una regione diventa
+Una regione {{site.data.keyword.Bluemix_notm}} è un territorio geografico definito a cui puoi distribuire le applicazioni. Puoi creare applicazioni e istanze di servizio in regioni differenti con la stessa infrastruttura {{site.data.keyword.Bluemix_notm}} per la gestione di applicazioni e la stessa vista dei dettagli di utilizzo per la fatturazione. Puoi selezionare la regione più vicina ai tuoi clienti e distribuire le tue applicazioni a tale regione per ottenere una bassa latenza di applicazione. Puoi anche selezionare la regione dove desideri conservare i dati delle applicazioni per far fronte ai problemi di sicurezza. Quando crei applicazioni in più regioni, se una regione diventa
 inattiva, le applicazioni che si trovano nelle altre regioni continuano a essere eseguite. La disponibilità di risorse è la stessa per ogni regione che usi.
 
 Se stai utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, puoi passare a una regione differente per operare con gli spazi in tale regione.
@@ -191,14 +190,15 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 Se stai utilizzando gli strumenti Eclipse, devi connetterti alla regione {{site.data.keyword.Bluemix_notm}} con la quale vuoi lavorare creando un server {{site.data.keyword.Bluemix_notm}} e specificando l'endpoint API della regione. Per ulteriori informazioni sull'utilizzo degli strumenti Eclipse, consulta [Distribuzione di applicazioni con {{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#toolsinstall).
 
 A
-ciascuna regione viene assegnato un prefisso univoco. {{site.data.keyword.Bluemix_notm}} fornisce le seguenti regioni e i seguenti prefissi di regione. 
+ciascuna regione viene assegnato un prefisso univoco. {{site.data.keyword.Bluemix_notm}} fornisce le
+seguenti regioni e i seguenti prefissi di regione. 
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nome della regione** | **Prefisso della regione** | **Endpoint API cf** | **Console IU** |       
+| **Nome della regione** | **Prefisso della regione** | **Endpoint API cf** | **Console Interfaccia grafica** |       
 |-----------------|-------------------|---------------------|----------------|
-| Regione Stati Uniti Sud | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Regione Europa Regno Unito | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Regione del Sud degli USA | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| Regione Europa e Regno Unito | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Regione Australia Sydney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
@@ -251,7 +251,8 @@ documentazione Creazione di applicazioni Web.</dd>
 
 In {{site.data.keyword.Bluemix_notm}},
 un'applicazione, o *app*, rappresenta la risorsa utente che uno sviluppatore sta
-creando. Il ciclo di vita dell'applicazione in {{site.data.keyword.Bluemix_notm}} e Cloud Foundry è identico, indipendentemente da come distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, consulta il documento relativo alla [modalità di preparazione delle applicazioni](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html).
+creando. Il ciclo di vita dell'applicazione in {{site.data.keyword.Bluemix_notm}} e Cloud Foundry è identico, indipendentemente da come distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni,
+vedi [How Applications Are Staged](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html).
 
 <dl>
 <dt>Applicazioni mobili</dt>
@@ -287,7 +288,7 @@ codice applicativo e di una serie di servizi.
 {: #boilerplates}
 
 In {{site.data.keyword.Bluemix_notm}},
-un *contenitore tipo* contiene un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio. Puoi usare un contenitore tipo per essere operativo in pochissimo tempo. Puoi ad esempio, selezionare il contenitore tipo Mobile Cloud perché funga da host ad applicazioni web e mobili e accelerare il tempo di sviluppo di script lato server utilizzando SDK e il template di applicazioni mobili.
+un *contenitore tipo* contiene un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio. È possibile utilizzare un contenitore tipo per essere rapidamente operativi. Puoi ad esempio, selezionare il contenitore tipo Mobile Cloud perché funga da host ad applicazioni web e mobili e accelerare il tempo di sviluppo di script lato server utilizzando SDK e il template di applicazioni mobili.
 
 ### Runtime
 {: #runtimes}
@@ -304,7 +305,7 @@ Se non specifichi un pacchetto di build quando distribuisci la tua applicazione 
 <dl class="dl"><dt class="dt dlterm">Pacchetti di build {{site.data.keyword.IBM_notm}} integrati</dt>
 <dd class="dd"><div class="p">
 <!-- begin PRODUCTION ONLY -->
-Il seguente elenco consiste nei pacchetti di build integrati creati da {{site.data.keyword.IBM_notm}}.
+Il seguente elenco consiste nei pacchetti di build integrati creati da {{site.data.keyword.IBM_notm}}. 
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
@@ -313,9 +314,10 @@ Il seguente elenco consiste nei pacchetti di build integrati creati da {{site.da
 </div>
 </div>
 </dd>
-<dt class="dt dlterm">Pacchetti di build di community integrati</dt>
+<dt class="dt dlterm">Pacchetti di build della community integrati</dt>
 <dd class="dd"><p class="p">In {{site.data.keyword.Bluemix_notm}},
-puoi anche usare i pacchetti di build integrati forniti dalla community Cloud Foundry. Per elencare i pacchetti di build integrati della community, esegui il comando <span class="keyword cmdname">cf buildpacks</span>.</p>
+puoi anche utilizzare i pacchetti di build integrati forniti dalla community di
+Cloud Foundry. Per elencare i pacchetti di build integrati della community, esegui il comando <span class="keyword cmdname">cf buildpacks</span>.</p>
 </dd>
 <dt class="dt dlterm">Pacchetti di build esterni</dt>
 <dd class="dd"><div class="p">Se non riesci a trovare il runtime o il framework che vuoi nei
@@ -357,7 +359,7 @@ crei la API Cloud Integration, scegli la risorsa a cui si desideri accedere tram
 <dt>Servizio privato</dt>
     <dd>Un servizio privato consiste in una API Cloud Integration, degli SDK e delle politiche di titolarità. Inoltre, il servizio privato può contenere della
 documentazione o altri elementi dal provider di servizi. Solo il gestore dell'organizzazione può pubblicare una API Cloud Integration come un servizio privato. Per visualizzare i servizi privati a tua disposizione, seleziona la casella di spunta Privato nel catalogo {{site.data.keyword.Bluemix_notm}}. Puoi selezionare un servizio privato ed eseguire il bind a un'applicazione senza stabilire una connessione al servizio Cloud Integration. Puoi eseguire il bind di servizi privati alla tua applicazione nello stesso modo che adotti per altri servizi {{site.data.keyword.Bluemix_notm}}. Per informazioni su come pubblicare una API come un servizio privato, vedi Pubblicazione di una API come un servizio privato.</dd>
-	</dl>
+</dl>
 
 ### Scenario: creazione di una completa applicazione mobile per stabilire una connessione al proprio system of record
 {: #scenario}
@@ -367,12 +369,11 @@ documentazione o altri elementi dal provider di servizi. Solo il gestore dell'or
 Ad esempio, puoi
 creare un'applicazione mobile per interagire con il tuo sistema di gestione delle relazioni con la clientela installato in loco dietro un firewall. Puoi richiamare il system of record in modo sicuro e avvalerti dei servizi mobili in {{site.data.keyword.Bluemix_notm}} in modo da poter creare un'applicazione mobile completa.
 
-Innanzitutto, il tuo sviluppatore dell'integrazione crea l'applicazione di back-end mobile in {{site.data.keyword.Bluemix_notm}}.
-Utilizza il contenitore tipo Mobile Cloud che utilizza il runtime Node.js con cui ha maggiore dimestichezza.
+Innanzitutto, il tuo sviluppatore dell'integrazione crea l'applicazione di back-end mobile in {{site.data.keyword.Bluemix_notm}}. Utilizza il contenitore tipo Mobile Cloud che utilizza il runtime Node.js con cui ha maggiore dimestichezza.
 
 Quindi, utilizzando il servizio  nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}, presenta una API tramite un connettore sicuro. Il tuo sviluppatore dell'integrazione scarica il
 connettore sicuro e lo installa in loco per abilitare le comunicazioni protette tra la sua API e il database. Dopo che ha creato l'endpoint database, consulta tutti gli schemi ed estrae le tabelle che intende presentare
-come delle API all'applicazione. 
+come delle API all'applicazione.
 
 Il tuo sviluppatore dell'integrazione aggiunge il servizio Push per offrire notifiche mobili agli utenti interessati. Aggiunge anche un servizio di
 business partner per generare un tweet quando viene creato un nuovo record

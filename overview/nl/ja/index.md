@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} の概要
 {: #overview}
 
-*最終更新日: 2015 年 10 月 22 日*
+*最終更新日: 2015 年 11 月 20 日*
 
 {{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。{:shortdesc}
 
@@ -54,7 +54,7 @@
 *図 1. {{site.data.keyword.Bluemix_notm}} アーキテクチャー*
 
 待ち時間またはセキュリティーを考慮して、アプリはさまざまな {{site.data.keyword.Bluemix_notm}} の地域にデプロイすることができます。1 つの地域にデプロイすることも、複数地域にまたがってデプロイすることも選択できます。
-詳しくは、『[地域](overview.html#ov_intro__reg)』を参照してください。
+詳しくは、『[地域](#ov_intro__reg)』を参照してください。
 
 ![複数地域のアプリケーション開発](images/multi-region.png)
 
@@ -292,7 +292,7 @@ SoRを {{site.data.keyword.Bluemix_notm}} で作成するアプリと統合す�
     <dd>プライベート・サービスは、 Cloud Integration API、SDK、およびライセンス・ポリシーから構成されます。さらに、サービス・プロバイダーからのドキュメンテーションや他の項目がプライベート・サービスに含まれる場合もあります。
 Cloud Integration API をプライベート・サービスとして公開できるのは、組織管理者のみです。自分が利用できるプライベート・サービスを表示するには、{{site.data.keyword.Bluemix_notm}} カタログで「プライベート (Private)」チェック・ボックスを選択します。
 Cloud Integration サービスに接続せずに、プライベート・サービスを選択してアプリにバインドすることができます。プライベート・サービスのアプリへのバインドは、他の {{site.data.keyword.Bluemix_notm}} サービスの場合と同じ方法で行います。プライベート・サービスとして API を公開する方法については、プライベート・サービスとしての API の公開を参照してください。</dd>
-	</dl>
+</dl>
 
 ### シナリオ: SoR と接続するための機能豊富なモバイル・アプリを作成する
 {: #scenario}

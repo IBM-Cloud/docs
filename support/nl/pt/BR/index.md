@@ -4,7 +4,7 @@
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 4 de dezembro de 2015*
 
 
 Se encontrar problemas com o {{site.data.keyword.Bluemix}}, você tem várias opções de suporte, como obter ajuda por meio do
@@ -79,7 +79,7 @@ assinar, siga estas etapas:
 
   1. Faça download e instale um leitor RSS.
   2. Use seu leitor para assinar o feed por um dos métodos a seguir:
-       * Arraste o ícone ![RSS](images/updates_rss.jpg) para seu leitor RSS.
+       * Arraste o ícone ![RSS](images/rss.svg) para seu leitor RSS.
        * Clique com o botão direito no ícone RSS, selecione **Copiar endereço de link** e cole a URL
 em seu leitor RSS.
 
@@ -143,7 +143,7 @@ aplicativos em execução, execute pelo menos três instâncias de cada aplicati
 
 É possível abrir chamados de suporte se você tiver uma conta válida do {{site.data.keyword.Bluemix_notm}}. Os clientes do {{site.data.keyword.Bluemix_notm}} Dedicated ou {{site.data.keyword.Bluemix_notm}} Local também obtêm uma opção para comprar suporte premium adicional que permite o acesso remoto a uma líder de suporte nomeado, que é um consultor técnico e especialista de produto do {{site.data.keyword.Bluemix_notm}}. Todos os clientes do {{site.data.keyword.Bluemix_notm}} também podem entrar em contato com a IBM para questões sobre registro ou faturamento.
 
-### Contatando o suporte {{site.data.keyword.Bluemix_notm}}
+### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
 Se você não conseguir resolver seu problema com a resolução de problemas
@@ -158,6 +158,7 @@ a seguir:
 	 2. Em seguida, se o problema não for devido a uma indisponibilidade, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
 do suporte técnico.
 
+  * Use o formulário [{{site.data.keyword.Bluemix_notm}} Chamado de suporte](http://ibm.biz/bluemixsupport){: new_window}. Para questões técnicas, perguntas sobre ID e perguntas sobre faturamento, entre em contato com o suporte abrindo um novo chamado.	 
   * A partir do [IBM Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. O suporte está disponível por meio do IBM Client Success Portal com as opções a seguir:
 
      * Assinatura de teste inicial de 30 dias (complementar)
@@ -172,73 +173,21 @@ Ao abrir um chamado de suporte, assegure-se de indicar uma severidade
 apropriada para seu chamado, porque ela determina como o
 chamado será manipulado. Veja [Severidade de chamado de suporte](index.html#support-ticket-severity){: new_window} para obter informações sobre as diferentes severidades.
 
-Também é possível
-entrar em contato com a IBM quando você tiver problemas com o registro ou perguntas sobre
-sua conta. Selecione a partir das opções a seguir:
 
-  * Para usar Conta e suporte, efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.png) na parte superior direita do Painel. Em seguida, clique em **ENTRAR EM CONTATO**. Preencha o formulário
-para entrar em contato com Vendas ou obter ajuda com sua conta ou fatura.
-  * Para entrar em contato diretamente com a IBM para problemas ao registrar-se no {{site.data.keyword.Bluemix_notm}}, é possível enviar um e-mail para <a href="mailto:id@bluemix.net" target="_blank">Suporte para ID</a>.
-  * Para entrar em contato diretamente com a IBM para perguntas sobre sua conta para usar serviços do {{site.data.keyword.Bluemix_notm}}, é possível enviar um e-mail para [Suporte para faturamento](mailto:billing@bluemix.net).
 
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}}
 Dedicated
+{: #contacting-bluemix-support-dedicated}
 
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
 
-<!-- MEK: change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might even remove it. I'll confirm with Dan Julin. -->
-
-<ul>
-<li>Para perguntas, solicitações administrativas ou problemas menores, entre em contato com o suporte abrindo um novo chamado usando o
-formulário <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Abrir novo chamado para o Suporte {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **Dedicated** para o campo de região do {{site.data.keyword.Bluemix_notm}}.
-<p>Esses canais são monitorados durante as horas comerciais normais, 7h UTC até 1h UTC em dias de semana. Não
-use essa opção para problemas de alta severidade.</p>
-</li>
-<li>Envie um e-mail para o endereço de suporte customizado que foi designado à sua organização quando seu ambiente dedicado foi configurado. Para enviar um e-mail para o endereço de suporte, a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} no ambiente dedicado, clique no ícone **Configurações de perfil** na parte superior direita do Painel, em seguida, clique em **Suporte**. A página exibida contém um link de email que pode ser usado para enviar o email para o endereço de
-suporte customizado. Se você tiver acesso ao ambiente {{site.data.keyword.Bluemix_notm}} Public, também é possível abrir itens de alta severidade usando os métodos a seguir com seu ID IBM.</li>
-<li>Se você tiver um ID IBM e tiver acesso ao ambiente {{site.data.keyword.Bluemix_notm}} Public, é possível abrir um chamado de suporte usando um dos métodos a seguir:
-<ul>
-<li>Na interface com o usuário do {{site.data.keyword.Bluemix_notm}} público, clique no ícone **Conta e suporte** <img src="images/account_support.png" alt="Conta e suporte" /> na parte superior direita do Painel, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
-<li>Acesse o
-<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> e insira seu ID IBM e senha. Seu ID IBM serve como suas credenciais de serviço. Clique em **Abrir um chamado de suporte** no menu. Assegure-se de
-indicar uma severidade apropriada para seu chamado, porque ela determina como o
-chamado será manipulado.</li>
-</ul>
-</li>
-<li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
-<p>**Nota**: Em sua solicitação, uma lista de usuários em sua org que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Local.</p>
-</li>
-</ul>
 
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Local
+{: #contacting-bluemix-support-local}
 
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
-
-<!-- change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might remove this. I will confirm with Dan Julin. -->
-
-  * Para perguntas, solicitações administrativas ou problemas menores,
-é possível enviar um email para o endereço de suporte customizado que foi designado
-à sua organização quando seu ambiente local foi configurado. Para enviar um e-mail para o endereço de suporte, a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} no ambiente local, clique no ícone **Configurações de perfil** na parte superior direita do Painel, em seguida, clique em Suporte. A página exibida contém um link de email que pode ser usado para enviar o email para o endereço de
-suporte customizado.
-
-   A caixa de correio é monitorada durante as horas comerciais normais, 7h UTC às 13h UTC, nos dias úteis. Não
-use essa opção para problemas de alta severidade.
-
-  * Abra um novo chamado usando o formulário [Abrir novo chamado para o Suporte do {{site.data.keyword.Bluemix_notm}}](https://ibm.biz/bluemixsupport.com){: new_window}. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário.
-
-  * Se você tiver um ID IBM e tiver acesso ao ambiente {{site.data.keyword.Bluemix_notm}} Public, é possível abrir um chamado de suporte usando um dos métodos a seguir:
-
-     * Na interface com o usuário do {{site.data.keyword.Bluemix_notm}} público, clique no ícone Conta e suporte ![Conta e suporte](./images/account_support.png) na parte superior direita do Painel, em seguida, clique em Obter ajuda. Na página exibida, clique em ENTRAR EM CONTATO.
-
-     * Acesse o [IBM Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window} e insira seu ID IBM e senha. Seu ID IBM serve como suas credenciais de serviço. Clique em Abrir um chamado de suporte no menu. Assegure-se de
-indicar uma severidade apropriada para seu chamado, porque ela determina como o
-chamado será manipulado.
-
-  * Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
-
-  **Nota:** Em sua solicitação, uma lista de usuários em sua org que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Local.
 
 
 
@@ -255,6 +204,7 @@ Severidade 1 | <ul><li>Seu aplicativo não é acessível por seus clientes</li><
 Severidade 2 | <ul><li>Erros de aplicativo que estão afetando vários usuários</li><li>O usuário individual não pode efetuar login</li></ul>
 Severidade 3 | <ul><li>Problemas gerais</li><li>Erros de aplicativo ou que estão afetando usuários individuais</li></ul>
 Severidade 4 | <ul><li>Problemas de aplicativo menores</li><li>Perguntas sobre instruções</li><li>Aprimoramentos</li></ul>
+*Tabela 1. Exemplos de severidade*
 
 A severidade 1 suporta chamados que são monitorados 24 horas por dia, 7
 dias por semana. Outros chamados são processados durante as horas comerciais normais,
@@ -302,6 +252,5 @@ as informações a seguir do ambiente de aplicativo:
 
 ## general
   * [Porta de suporte do Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Comunidade de Desenvolvedores Bluemix](https://developer.ibm.com/bluemix/){: new_window}
   * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window}
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}

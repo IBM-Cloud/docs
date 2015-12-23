@@ -4,11 +4,11 @@
 # {{site.data.keyword.Bluemix_notm}} 概述
 {: #overview}
 
-*上次更新时间：2015 年 10 月 22 日*
+*上次更新时间：2015 年 11 月 20 日*
 
 {{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 基于 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 开放式源代码技术构建，通过平台即服务 (PaaS) 使开发者能够更轻松地进行应用程序开发。另外，{{site.data.keyword.Bluemix_notm}} 还提供预构建的移动后端即服务 (MBaaS) 功能。目标是通过提供各种可随时立即使用的服务以及托管功能来实现互联网大规模开发，从而简化应用程序的交付过程。
+{{site.data.keyword.Bluemix_notm}} 基于 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 开放式源代码技术构建，通过平台即服务 (PaaS) 使开发者能够更轻松地进行应用程序开发。另外，{{site.data.keyword.Bluemix_notm}} 还提供预构建的移动后端即服务 (MBaaS) 功能。目标是通过提供各种可随时立即使用的服务以及托管功能来实现因特网大规模开发，从而简化应用程序的交付过程。
 
 {{site.data.keyword.Bluemix_notm}} 还具有可满足您需求的云部署。无论是计划扩大规模的小企业，还是需要额外隔离机制的大企业，都可以在云中进行无边界开发，在这里您可以将专用服务连接到 {{site.data.keyword.IBM_notm}} 以及第三方供应商提供的公共 {{site.data.keyword.Bluemix_notm}} 服务。所有服务实例均由 {{site.data.keyword.IBM_notm}} 管理，而您只需要为自己选择使用的服务付费。
 
@@ -23,13 +23,13 @@
 - 经过优化的弹性工作负载。
 - 持续可用性。
 
-{{site.data.keyword.Bluemix_notm}} 分离和隐藏了与托管和管理基于云的应用程序相关的大部分复杂性。作为应用程序开发者，您可以只关注应用程序开发，而不必管理托管应用程序所需的基础架构。对于移动应用程序和 Web 应用程序，可以使用 {{site.data.keyword.Bluemix_notm}} 提供的预构建服务。可以将 Web 应用程序上传到 {{site.data.keyword.Bluemix_notm}}，并指示要运行的实例数。部署应用程序后，可以在应用程序的使用量或负载发生变化时，轻松地增加或减少应用程序数。
+{{site.data.keyword.Bluemix_notm}} 剥离与托管和管理基于云的应用程序相关的大部分复杂性并隐藏起来。作为应用程序开发者，您可以只关注应用程序开发，而不必管理托管应用程序所需的基础架构。对于移动应用程序和 Web 应用程序，可以使用 {{site.data.keyword.Bluemix_notm}} 提供的预构建服务。可以将 Web 应用程序上传到 {{site.data.keyword.Bluemix_notm}}，并指示要运行的实例数。部署应用程序后，可以在应用程序的使用情况或负载发生变化时，轻松地增加或减少应用程序数。
 
 通过 {{site.data.keyword.Bluemix_notm}}，您可以使用最流行的编程语言来快速开发应用程序。可以使用 iOS、Android 以及 HTML 搭配 JavaScript 来开发移动应用程序。对于 Web 应用程序，可以使用 Ruby、PHP、Java&trade;、Go 和 Python 等语言。还可以将现有应用程序迁移到 {{site.data.keyword.Bluemix_notm}}，并使用 {{site.data.keyword.Bluemix_notm}} 提供的运行时来运行应用程序。
 
-{{site.data.keyword.Bluemix_notm}} 还提供了中间件服务，供应用程序使用。{{site.data.keyword.Bluemix_notm}} 会在供应新服务实例并将这些服务与应用程序绑定时代表应用程序执行操作。这样，应用程序就可以执行其真正的职能，而服务的管理将留给基础架构来处理。
+{{site.data.keyword.Bluemix_notm}} 还提供了中间件服务，供应用程序使用。{{site.data.keyword.Bluemix_notm}} 会在供应新服务实例并将这些服务与应用程序绑定时代表应用程序执行操作。这样，应用程序就可以执行其真正的工作，而将服务的管理留给基础架构来执行。
 
-通常，在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您不必担心操作系统和基础架构层。诸如根文件系统和中间件组件这样的层已进行抽化，以便您可以重点关注自己的应用程序代码。但是，如果需要有关应用程序运行位置的具体信息，可以了解有关这些层的更多信息。有关详细信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 基础架构层](../cli/viewinfra.html#viewinfra)。 
+通常，在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您不必担心操作系统和基础架构层。诸如根文件系统和中间件组件这样的层已进行抽象化，以便您可以重点关注自己的应用程序代码。但是，如果需要有关应用程序运行位置的具体信息，可以了解有关这些层的更多信息。有关详细信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 基础架构层](../cli/viewinfra.html#viewinfra)。 
 
 ## {{site.data.keyword.Bluemix_notm}} 体系结构
 {: #ov_arch}
@@ -46,13 +46,13 @@
 
 不管是客户机（移动应用程序、外部运行的应用程序、基于 {{site.data.keyword.Bluemix_notm}} 构建的应用程序等）还是使用浏览器的开发者，都可以与 {{site.data.keyword.Bluemix_notm}} 托管的应用程序进行交互。客户机使用 REST 或 HTTP API 通过 {{site.data.keyword.Bluemix_notm}} 将请求路由到某个应用程序实例或组合服务。
 
-下图显示了高级别的 {{site.data.keyword.Bluemix_notm}} 体系结构。
+下图显示了高层次的 {{site.data.keyword.Bluemix_notm}} 体系结构。
 
 ![{{site.data.keyword.Bluemix_notm}} 体系结构](images/arch.png)
 
 *图 1. {{site.data.keyword.Bluemix_notm}} 体系结构*
 
-出于等待时间或安全考虑，可以将应用程序部署到不同的 {{site.data.keyword.Bluemix_notm}} 区域。您可以选择部署到一个区域或跨多个区域部署。有关更多信息，请参阅[区域](overview.html#ov_intro__reg)。
+出于等待时间或安全考虑，可以将应用程序部署到不同的 {{site.data.keyword.Bluemix_notm}} 区域。您可以选择部署到一个区域或跨多个区域部署。有关更多信息，请参阅[区域](#ov_intro__reg)。
 
 ![多区域应用程序部署](images/multi-region.png)
 
@@ -74,9 +74,9 @@
 
 {{site.data.keyword.Bluemix_notm}} Local 是您自己的 {{site.data.keyword.Bluemix_notm}} 实例，部署在公司防火墙后的数据中心内。通过 {{site.data.keyword.Bluemix_notm}} Local，可以与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步。
 
-{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的服务，供您使用。在本地环境中，所有运行时均可用。{{site.data.keyword.Bluemix_notm}} 的本地部署中包含以下优势和功能（无需额外付费）：中继设备管理技术、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力以及标准支持。
+{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的服务，供您使用。在本地环境中，所有运行时均可用。{{site.data.keyword.Bluemix_notm}} 的本地部署中包含以下优势和功能（无需额外付费）：中继管理技术、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力以及标准支持。
 
-IBM 使用中继设备技术来安全地监视和维护环境，让您可以始终专注于业务。中继设备是 {{site.data.keyword.Bluemix_notm}} Local 随附的一项交付功能，能够使 IBM 自动地持续交付更新，这样您将始终拥有稳定、安全的最新系统。中继设备通过开放的出站 SSL VPN 通道实现连接，此通道源自先启虚拟机。通过此通道，IBM 可以为您实例的平台、计算资源和服务提供服务并进行维护。请参阅 [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local)。
+IBM 使用中继技术来安全地监视和维护环境，让您可以始终专注于业务。中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的一项交付功能，能够使 IBM 以一致的方式自动交付更新，以便您始终都能有一个稳定、安全的最新系统。中继通过开放式出站 SSL VPN 隧道来实现连接，该隧道源自先启虚拟机。通过此隧道，IBM 可以为您实例的平台、计算资源和服务提供服务并进行维护。请参阅 [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local)。
 
 ![{{site.data.keyword.Bluemix_notm}} Local。](images/localarch.png "Bluemix Local")
 
@@ -138,7 +138,7 @@ IBM 使用中继设备技术来安全地监视和维护环境，让您可以始�
 ### 区域
 {: #ov_intro__reg}
 
-{{site.data.keyword.Bluemix_notm}} 区域是可将您应用程序部署到的已定义地理地域。您可以在不同的区域中创建应用程序和服务实例，但前提是这些区域使用相同的 {{site.data.keyword.Bluemix_notm}} 基础架构来进行应用程序管理，并使用相同的使用情况详细信息视图来进行记帐。您可以选择离客户最近的区域，并将应用程序部署到此区域以缩短应用程序等待时间。还可选择希望在其中保留应用程序数据以解决安全问题的区域。在多个区域中构建应用程序时，如果一个区域失败，其他区域中的应用程序会继续运行。您的资源限额对于您使用的每个区域都是相同的。
+{{site.data.keyword.Bluemix_notm}} 区域是可将您应用程序部署到的已定义地理地域。您可以在不同的区域中创建应用程序和服务实例，但前提是这些区域使用相同的 {{site.data.keyword.Bluemix_notm}} 基础架构来进行应用程序管理，并使用相同的使用情况详细信息视图来进行记帐。您可以选择离客户最近的区域，并将应用程序部署到此区域以缩短应用程序等待时间。还可选择希望在其中保留应用程序数据以解决安全问题的区域。在多个区域中构建应用程序后，如果一个区域发生故障，其他区域中的应用程序会继续运行。您的资源限额对于您使用的每个区域都是相同的。
 
 如果您使用的是 {{site.data.keyword.Bluemix_notm}} 用户界面，那么可以切换到其他区域来使用该区域中的空间。
 
@@ -184,7 +184,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ### 应用程序
 {: #applications}
 
-在 {{site.data.keyword.Bluemix_notm}} 中，应用程序 (*app*) 表示开发者正在构建的工件。{{site.data.keyword.Bluemix_notm}} 和 Cloud Foundry 中的应用程序生命周期完全相同，与将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 的方式无关。有关更多信息，请参阅 [How Applications Are Staged](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html)。
+在 {{site.data.keyword.Bluemix_notm}} 中，应用程序 (*app*) 表示开发者正在构建的工件。无论采用何种方式将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，{{site.data.keyword.Bluemix_notm}} 和 Cloud Foundry 中的应用程序生命周期完全相同。有关更多信息，请参阅 [How Applications Are Staged](https://docs.cloudfoundry.org/concepts/how-applications-are-staged.html)。
 
 <dl>
 <dt>移动应用程序</dt>
@@ -253,7 +253,7 @@ buildpack 是脚本的集合，用于预编译代码以便在目标 PaaS 上执�
 
 在云环境中，{{site.data.keyword.Bluemix_notm}} 可以通过连接以下两大类别的系统来为开发者提供帮助：记录系统和全接触系统。
 
-*记录系统*包含用于存储业务记录和自动执行标准化过程的应用程序和数据库。*全接触系统*是用于扩展记录系统有用性并使其更贴合用户的功能。通过将记录系统与在 {{site.data.keyword.Bluemix_notm}} 中创建的应用程序集成，可以执行以下操作：
+*记录系统*包含用于存储业务记录和自动执行标准化过程的应用程序和数据库。*全接触系统*是用于扩展记录系统用途并使其更吸引用户的功能。通过将记录系统与在 {{site.data.keyword.Bluemix_notm}} 中创建的应用程序集成，可以执行以下操作：
 
  * 通过下载并安装内部部署的安全连接器，启用应用程序与后端数据库之间的安全通信。
  * 以安全方式调用数据库。
@@ -268,7 +268,7 @@ buildpack 是脚本的集合，用于预编译代码以便在目标 PaaS 上执�
     <dd>通过 Cloud Integration API，可以经由 Web API 安全访问位于防火墙后的记录系统。创建 Cloud Integration API 时，请选择要通过 Web API 访问的资源，指定允许的操作，并包括用于访问 API 的 SDK 和样本。有关如何创建 Cloud Integration API 的更多信息，请参阅[创建 Cloud Integration API](../services/CloudIntegration/index.html#cloudint_add_service)。</dd>
 <dt>私有服务</dt>
     <dd>私有服务由 Cloud Integration API、SDK 和权利政策构成。此外，私有服务可能包含来自服务提供者的文档或其他项。只有组织管理员可以将 Cloud Integration API 发布为私有服务。要查看可供您使用的私有服务，请选中 {{site.data.keyword.Bluemix_notm}}“目录”中的“私有”复选框。您可以选择私有服务，并将其绑定到应用程序，而无需连接 Cloud Integration 服务。您可以使用与其他 {{site.data.keyword.Bluemix_notm}} 服务相同的方式，将私有服务绑定到应用程序。有关如何将 API 发布为私有服务的信息，请参阅“将 API 发布为私有服务”。</dd>
-	</dl>
+</dl>
 
 ### 场景：创建富移动应用程序以与记录系统相连接
 {: #scenario}

@@ -4,7 +4,7 @@
 # Support client
 {: #getting-customer-support}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 4 décembre 2015*
 
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options
@@ -14,7 +14,8 @@ d'assistance s'offrent à vous ; par exemple obtenir de l'aide via Stack Overflo
 ## Comment obtenir de l'aide
 {: #getting-help}
 Vous pouvez obtenir de l'aide en accédant à Compte et support ou
-directement à Stack Overflow, où vous pouvez rechercher des informations ou publier des questions. {:shortdesc}
+directement à Stack Overflow, où vous pouvez rechercher des informations ou publier des questions.
+{:shortdesc}
 
 ### Utilisation de Compte et support
 Compte et support est une fonction qui vous permet de consulter des informations de compte, d'afficher le statut, de rester informé grâce aux
@@ -22,7 +23,7 @@ notifications, de sélectionner votre région, de sélectionner et de gérer des
 
 Pour ouvrir Compte et support, connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
 **Compte et support** ![Compte et support](images/account_support.png) dans le coin supérieur droit du tableau de
-bord. 
+bord.
 
 Cliquez sur **Obtenir de
 l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les
@@ -87,15 +88,15 @@ Pour vous abonner, procédez comme suit :
 
   1. Téléchargez et installez le lecteur RSS.
   2. Utilisez votre lecteur pour vous abonner au flux à l'aide de l'une des méthodes suivantes :
-       * Faites glisser l'icône ![RSS](images/updates_rss.jpg) dans votre lecteur RSS.
+       * Faites glisser l'icône ![RSS](images/rss.svg) dans votre lecteur RSS.
        * Cliquez avec le bouton droit de la souris sur l'icône RSS, sélectionnez **Copy link address**, et collez l'adresse URL dans
 votre lecteur RSS.
 
-	Pour plus d'informations, consultez la section **Aide** de votre lecteur.  	   
+	Pour plus d'informations, consultez la section **Aide** de votre lecteur. 	   
 
 D'autres méthodes de lecture des flux RSS sont également disponibles via des plug-in de navigateur Web tels que [RSS Feed](http://feeder.co/){: new_window} Reader pour Chrome ou le
 module complémentaire [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} pour Firefox, ou d'autres
-nouvelles sources telles que [Feedly](http://www.feedly.com/){: new_window} ou [G2reader](http://www.g2reader.com/en/){: new_window}. 
+nouvelles sources telles que [Feedly](http://www.feedly.com/){: new_window} ou [G2reader](http://www.g2reader.com/en/){: new_window}.
 
 Vous pouvez également utiliser un service tiers pour envoyer un courrier électronique automatiquement à chaque mise à jour RSS. Exemples de services tiers :
 
@@ -114,7 +115,7 @@ Vous pouvez également utiliser un service tiers pour envoyer un courrier élect
 
 	Vérifiez les fenêtres de maintenance prévues publiées sur la page de statut au moins une fois par jour
 en utilisant l'une des options suivantes :
-	  * En accédant directement à la page [Statut](https://status.eu-gb.bluemix.net/){: new_window} 
+	  * En accédant directement à la page [Statut](https://status.eu-gb.bluemix.net/){: new_window}
 	  * En utilisant le flux RSS ou un réexpéditeur RSS vers e-mail
 
   * Vérification des fenêtres de maintenance ou d'un incident en cours
@@ -123,13 +124,12 @@ en utilisant l'une des options suivantes :
 fonctionne pas comme prévu, recherchez des fenêtres de maintenance ou un
 incident en cours sur la page Statut. Pour signaler un incident qui n'est pas encore répertorié sur la page Statut, ouvrez une demande de service via le
 [portail Client Success](https://support.ibmcloud.com/){: new_window} ou un
-[simple formulaire](https://support.eu-gb.bluemix.net/gethelp/){: new_window}. 
+[simple formulaire](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Bénéfice lié à plusieurs régions {{site.data.keyword.Bluemix_notm}}
 
     Tous les utilisateurs de l'environnement {{site.data.keyword.Bluemix_notm}} public ont automatiquement accès aux régions
 Sud des Etats-Unis, Europe-Royaume-Uni et Australie-Sydney :
-
 
 	  * Sud des Etats-Unis : https://console.ng.bluemix.net
 	  * Europe-Royaume-Uni : https://console.eu-gb.bluemix.net
@@ -137,7 +137,7 @@ Sud des Etats-Unis, Europe-Royaume-Uni et Australie-Sydney :
 
 	L'équipe de {{site.data.keyword.Bluemix_notm}} Global Operations gère toutes les régions afin d'éviter les impacts de la maintenance et
 de
-minimiser le risque d'incidents affectant simultanément toutes les régions. 
+minimiser le risque d'incidents affectant simultanément toutes les régions.
 
   * Préparation pour des interruptions mineures
 
@@ -160,7 +160,7 @@ local disposent également d'une option d'achat d'un support premium supplément
 contact avec un responsable de support désigné, qui est un conseiller technique {{site.data.keyword.Bluemix_notm}} et un spécialiste du produit. Tous les clients {{site.data.keyword.Bluemix_notm}} peuvent également contacter IBM pour les questions relatives
 à l'enregistrement ou à la facturation.
 
-### Contacter le service de support {{site.data.keyword.Bluemix_notm}}
+### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} public
 {: #contacting-bluemix-support}
 
 Si vous ne parvenez pas à résoudre votre problème à l'aide des options d'identification et de résolution des problèmes et des options d'aide, vous pouvez
@@ -170,119 +170,46 @@ Pour ouvrir un ticket de demande de service, utilisez l'une des méthodes suivan
 
   * A partir de Compte et support. Connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
 **Compte et support** ![Compte et support](./images/account_support.png) dans le coin supérieur droit du tableau de
-bord. 
+bord.
 
      1. Veillez tout d'abord à cocher le statut {{site.data.keyword.Bluemix_notm}} en cliquant sur
 **Statut**.
 	 2. Puis, si le problème n'est pas du à une indisponibilité, cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**. Remplissez le formulaire pour indiquer pour quelle raison vous avez besoin d'une assistance technique.
 
-  * Depuis le [portail IBM® Client Success](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. 
-Le support est disponible via le portail IBM Client Success avec les options suivantes : 
+  * Utilisez le formulaire [Open a {{site.data.keyword.Bluemix_notm}} Support
+ticket](http://ibm.biz/bluemixsupport){: new_window}. Pour toute question technique, sur un ID ou sur la facturation, prenez contact avec le support en ouvrant un nouveau
+ticket.
+	 
+  * Depuis le [portail IBM® Client Success](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. Le support est disponible via le portail IBM Client Success avec les options suivantes :
 
      * Abonnement initial à l'essai de 30 jours (complémentaire)
-	 * Environnements {{site.data.keyword.Bluemix_notm}} dédiés (inclus) 
-	 * Environnements {{site.data.keyword.Bluemix_notm}} locaux (inclus) 
+	 * Environnements {{site.data.keyword.Bluemix_notm}} dédiés (inclus)
+	 * Environnements {{site.data.keyword.Bluemix_notm}} locaux (inclus)
 	 * Paiement à la carte avec un additif de prise en charge
 	 * Abonnement avec additif de prise en charge
 
 	Connectez-vous au portail IBM Client Success avec votre ID et votre mot de passe IBM, puis cliquez sur **Open a support
-ticket**. 
+ticket**.
 
 Lors de l'ouverture d'un ticket de demande de service, veillez à indiquer la gravité
-appropriée pour votre ticket car cette information détermine la manière dont il est géré. Voir [Gravité des tickets de demande de service](index.html#support-ticket-severity){: new_window} pour des informations sur les différentes gravités. 
+appropriée pour votre ticket car cette information détermine la manière dont il est géré. Voir [Gravité des tickets de demande de service](index.html#support-ticket-severity){: new_window} pour des informations sur les différentes gravités.
 
-Vous pouvez également contacter
-IBM si vous rencontrez des problèmes lors de l'enregistrement ou lorsque vous posez des questions relatives à votre facture. Effectuez l'une des opérations
-suivantes :
 
-  * Pour utiliser Compte et support, connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
-**Compte et support** ![Compte et support](./images/account_support.png) dans le coin supérieur droit du tableau de
-bord. Cliquez ensuite sur **Prendre contact**. Remplissez le formulaire pour contacter le service commercial ou obtenir de l'aide concernant votre
-compte ou votre facture.
-  * Pour contacter IBM directement à propos des problèmes d'enregistrement de {{site.data.keyword.Bluemix_notm}}, envoyez un courrier
-électronique au <a href="mailto:id@bluemix.net" target="_blank">support en charge des ID</a>. 
-  * Pour contacter IBM directement et poser des questions relatives à votre facture concernant l'utilisation des services
-{{site.data.keyword.Bluemix_notm}}, envoyez un courrier électronique au [support en charge de la
-facturation](mailto:billing@bluemix.net). 
 
 
 ### Contacter le support pour {{site.data.keyword.Bluemix_notm}} dédié
+{: #contacting-bluemix-support-dedicated}
 
-Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié, le support est assuré par l'équipe de support IBM {{site.data.keyword.Bluemix_notm}}. 
-Toutefois, comme vous ne disposez peut-être pas d'un ID IBM, vous pouvez obtenir de l'aide de plusieurs façons.
+Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié, le support est assuré par l'équipe de support IBM {{site.data.keyword.Bluemix_notm}}. Toutefois, comme vous ne disposez peut-être pas d'un ID IBM, vous pouvez obtenir de l'aide de plusieurs façons.
 
-<!-- MEK: change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might even remove it. I'll confirm with Dan Julin. -->
-
-<ul>
-<li>Pour toute question, toute demande administrative ou tout problème mineur, prenez contact avec le support en ouvrant un nouveau ticket à l'aide du
-<a href="http://ibm.biz/bluemixsupport.com" target="_blank">formulaire Open new ticket to {{site.data.keyword.Bluemix_notm}} Support</a>. Vous
-pouvez utiliser une adresse électronique ou votre ID IBM dans ce formulaire. Sélectionnez l'option **Dedicated** dans la zone
-{{site.data.keyword.Bluemix_notm}} Region. <p>Ces canaux sont surveillés pendant les heures de bureau, de 7h00 à 1h00 (TUC) les jours de semaine. N'utilisez pas cette option pour des problèmes graves.</p>
-</li>
-<li>Envoyez un courrier électronique à l'adresse de support personnalisé qui a été affectée à votre organisation lorsque votre environnement dédié a été
-configuré. Pour envoyer un courrier électronique à l'adresse de support, depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} dans l'environnement dédié, cliquez sur
-l'icône **Paramètres de profil** dans le coin supérieur droit du tableau de bord, puis cliquez sur **Support**. La page qui s'affiche contient un lien vers une adresse électronique que vous pouvez utiliser pour envoyer le courrier électronique à l'adresse de support
-personnalisé. Si vous avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez aussi ouvrir des tickets dont la gravité
-est élevée en appliquant les méthodes ci-dessous avec votre ID IBM.
-</li>
-<li>Si vous disposez d'un ID IBM et d'un accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez ouvrir un ticket de demande de service en appliquant l'une des méthodes suivantes :<ul>
-<li>Depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} publique, cliquez sur l'icône **Compte et support**
-<img src="images/account_support.png" alt="Compte et support" /> dans le coin supérieur droit du tableau de bord, puis cliquez sur
-**Obtenir de l'aide**. Dans la page qui s'affiche, cliquez sur
-**Prendre contact**.</li>
-<li>Accédez au <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">portail IBM Client Success</a> et entrez votre ID
-IBM
-et votre mot de passe. 
-Votre ID IBM sert de données d'identification pour le service. Cliquez sur **Open a support ticket**
-dans le menu. Veillez à indiquer la gravité appropriée pour votre ticket car cette information détermine la manière dont votre ticket est géré.</li>
-</ul>
-</li>
-<li>Si vous ne possédez pas d'ID IBM, vous pouvez prendre contact avec une personne de votre organisation qui en possède un ou collaborer avec votre
-interlocuteur IBM habituel. <p>**Remarque** : à votre demande, la liste des utilisateurs dans votre organisation qui peuvent servir
-de contact pour les tickets de demande de service peut être affichée dans la page **Support** dans l'interface utilisateur
-{{site.data.keyword.Bluemix_notm}} dans votre environnement local. </p>
-</li>
-</ul>
 
 
 ### Contacter le support pour {{site.data.keyword.Bluemix_notm}} local
+{: #contacting-bluemix-support-local}
 
 Si vous êtes un client {{site.data.keyword.Bluemix_notm}} local, le support est assuré par l'équipe de support IBM
 {{site.data.keyword.Bluemix_notm}}. Toutefois, comme vous ne disposez peut-être pas d'un ID IBM, vous pouvez obtenir de l'aide de plusieurs façons.
-
-<!-- change Profile Settings to Account and Support when merge happens. Also we are trying to move away from the custom email addresses as they have stopped assigning them to customers, so we might remove this. I will confirm with Dan Julin. -->
-
-  * Pour toute question, pour toute demande administrative ou pour tout problème mineur, vous pouvez envoyer un courrier électronique à l'adresse de
-support personnalisé qui a été affectée à votre organisation lorsque votre environnement local a été configuré. Pour envoyer un courrier électronique à
-l'adresse de support, depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} dans l'environnement local, cliquez sur l'icône
-**Paramètres de profil** dans le coin supérieur droit du tableau de bord, puis cliquez sur Support. La page qui s'affiche contient un lien vers une adresse électronique que vous pouvez utiliser pour envoyer le courrier électronique à l'adresse de support
-personnalisé.
-
-   La boîte aux lettres est surveillée pendant les heures de bureau, de 7h00 à 1h00 (TUC) les jours de semaine. N'utilisez pas cette option pour des problèmes graves.
-
-  * Ouvrez un nouveau ticket à l'aide
-du [formulaire Open new ticket to {{site.data.keyword.Bluemix_notm}}
-Support](https://ibm.biz/bluemixsupport.com){: new_window}. Vous pouvez utiliser une adresse électronique ou votre ID IBM dans ce formulaire. 
-
-  * Si vous disposez d'un ID IBM et d'un accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez ouvrir un ticket de
-demande de service en appliquant l'une des méthodes suivantes :
-
-     * Depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}} publique, cliquez sur l'icône Compte et support
-![Compte et support](./images/account_support.png) dans le coin supérieur droit du tableau de bord, puis cliquez sur Obtenir de l'aide. 
-Dans la page qui s'affiche, cliquez sur Prendre contact. 
-
-     * Accédez au portail [IBM Client
-Success](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window} et entrez votre ID IBM et votre mot de passe. Votre ID IBM sert de données d'identification pour le service. Cliquez sur
-Open a support ticket dans le menu. Veillez à indiquer la gravité appropriée pour votre ticket car cette information détermine la manière dont votre ticket est géré.
-
-  * Si vous ne possédez pas d'ID IBM, vous pouvez prendre contact avec une personne de votre organisation qui en possède un ou collaborer avec votre
-interlocuteur IBM habituel. 
-
-  **Remarque :** à votre demande, la liste des utilisateurs dans votre organisation qui peuvent servir de contact pour les
-tickets de
-demande de service peut être affichée dans la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
-dans votre environnement local. 
 
 
 
@@ -298,6 +225,7 @@ Gravité 1 | <ul><li>Vos clients ne peuvent pas accéder à votre application</l
 Gravité 2 | <ul><li>Erreurs d'application ayant un impact sur plusieurs utilisateurs</li><li>Un utilisateur individuel ne peut pas se connecter</li></ul>
 Gravité 3 | <ul><li>Problèmes généraux</li><li>Erreurs d'application ayant un impact sur des utilisateurs individuels</li></ul>
 Gravité 4 | <ul><li>Problèmes mineurs liés à l'application</li><li>Questions relatives aux procédures</li><li>Améliorations</li></ul>
+*Tableau 1. Exemples de gravité*
 
 Les tickets de demande de service de gravité 1 sont surveillés 24 heure sur 24, 7
 jours sur 7. Les autres tickets sont traités pendant les heures de bureau, de 7h00 à 1h00 (TUC) les jours de
@@ -340,6 +268,5 @@ Les scripts utilisent l'interface de ligne de commande cf pour extraire les info
 
 ## general
   * [Portail de support Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Communauté des développeurs Bluemix](https://developer.ibm.com/bluemix/){: new_window}
   * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window}
   * [Manuel de support SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}

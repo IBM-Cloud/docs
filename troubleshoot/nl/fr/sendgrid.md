@@ -4,7 +4,7 @@
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
 
-# Traitement des incidents liés à SendGrid 
+# Traitement des incidents liés à SendGrid
 {: #ts_sendgrid}
 
 *Dernière mise à jour : 19 novembre 2015*
@@ -18,19 +18,22 @@ Voici la réponse à une question concernant l'utilisation de SendGrid dans {{si
 
 Si vous ne parvenez pas à envoyer des courriers électroniques avec le service SendGrid, il se peut que vous ayez atteint le nombre maximal de
 courriers
-électroniques pouvant être envoyés par instance de service. {:shortdesc}
+électroniques pouvant être envoyés par instance de service.
+{:shortdesc}
 
 
 Une fois que vous avez envoyé le nombre maximal de courriers électroniques autorisé, vous ne pouvez plus utiliser le service SendGrid pour envoyer
 d'autres
-courriers électroniques.{: tsSymptoms}
+courriers électroniques.
+{: tsSymptoms}
 
 
 Lorsque vous envoyez des courriers électroniques avec le service SendGrid, vous ne pouvez pas envoyer plus de 25000 courriers électroniques par
 instance de
 service tous les mois. Une fois la limite atteinte, SendGrid arrête d'envoyer des courriers électroniques, et vous n'êtes pas facturé si vous continuez
 d'utiliser
-ce service. {: tsCauses}
+ce service.
+{: tsCauses}
 
 Pour connaître le nombre restant de courriers électroniques pouvant être envoyés, cliquez sur votre instance de service SendGrid dans le tableau de
 bord {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **OPEN SENDGRID DASHBOARD**. Vous

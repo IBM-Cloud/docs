@@ -208,7 +208,7 @@ cf marketplace
 
 Distribuisce una nuova applicazione a Bluemix oppure aggiorna un'applicazione esistente in Bluemix.
 ```
-cf push nome_applicazione
+cf push nome_applicazione 
 ```
 <dl>
 <dt>nome_applicazione</dt>
@@ -222,7 +222,8 @@ esempio:</dd>
 cf push nomeapplicazione -c null
 ```</dd>
 <dd>Puoi anche utilizzare questa
-opzione per eseguire i file script. Per esempio:
+opzione per eseguire i file script. Ad
+                                    esempio:
 ```
 cf push nomeapplicazione -c “bash ./<run.sh>"
 ```</dd>

@@ -1,9 +1,10 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
@@ -76,13 +77,13 @@ nslookup stage1.mybluemix.net
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，可能无法登录到 {{site.data.keyword.Bluemix_notm}}。相反，会看到以下消息：
 {: tsSymptoms}
 
-`帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 id@bluemix.net 以获取帮助。`
+<code>帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支持</a>。</code>
 
 
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，您将收到确认电子邮件。必须单击确认电子邮件中的链接以完成注册过程。
 {: tsCauses} 
 
-确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系[标识支持](mailto:id@bluemix.net)。
+确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。  
 {: tsResolve}
 
 
@@ -178,8 +179,7 @@ nslookup stage1.mybluemix.net
   * 使用浏览器的隐私浏览模式。 
   * 清除浏览器的 cookie 和高速缓存。
   * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
-  * 如果安装了 cf 命令行界面，请输入 `cf
-apps` 命令以查看应用程序是否正在运行。
+  * 如果安装了 cf 命令行界面，请输入 `cf apps` 命令以查看应用程序是否正在运行。
   
   
   
@@ -207,7 +207,7 @@ apps` 命令以查看应用程序是否正在运行。
 
 
 
-## {{site.data.keyword.Bluemix_notm}} 仪表板无法装入应用程序或服务
+## {{site.data.keyword.Bluemix_notm}}“仪表板”无法装入应用程序或服务
 {: #ts_dashboard}
 
 {{site.data.keyword.Bluemix_notm}}“仪表板”可能未显示任何应用程序或服务信息，因为您的组织或空间无法访问该信息。 
@@ -238,12 +238,68 @@ apps` 命令以查看应用程序是否正在运行。
 
 
 
+## 无法执行请求的操作
+{: #ts_authority}
+
+没有相应的访问权限，您可能无法完成操作。
+
+ 
+
+尝试对服务实例或应用程序实例执行操作时，无法完成请求的操作，并看到以下其中一条错误消息：
+{: tsSymptoms}
+
+`BXNUI0514E: 您不是 <orgName> 组织中任何空间的开发者。`
+
+
+`服务器错误，状态码：403，错误代码：10003，消息：您无权执行请求的操作。`
+
+ 
+
+您没有执行操作所需的相应级别的权限。
+{: tsCauses}
+
+  
+
+要获取相应级别的权限，请使用以下其中一种方法：
+{: tsResolve}
+ * 选择您具有其开发者角色的另一个组织和空间。 
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../acctmgmt/index.html#mngorg){: new_window}。
+ 
+
+ 
+
+
+## 由于授权错误而无法访问 {{site.data.keyword.Bluemix_notm}} 服务
+{: #ts_vcap}
+
+应用程序访问 {{site.data.keyword.Bluemix_notm}} 服务时，如果服务凭证是硬编码到应用程序中的，那么可能会发生授权错误。 
+
+将应用程序配置为与 {{site.data.keyword.Bluemix_notm}} 服务通信后，将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。但是，无法使用应用程序来访问 {{site.data.keyword.Bluemix_notm}} 服务，并且会收到授权错误。
+{: tsSymptoms}
+
+硬编码到应用程序中的凭证可能不正确。每次重新创建服务时，用于访问该服务的凭证都会改变。
+{: tsCauses}
+
+
+不要将凭证硬编码到应用程序中，请改为使用 VCAP_SERVICES 环境变量中的连接参数。具体如何使用 VCAP_SERVICES 环境变量中的连接参数取决于程序语言。例如，对于 Node.js 应用程序，可以使用以下命令：
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+有关可在其他程序语言中使用的命令的更多信息，请参阅 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。 
+ 
+
+ 
+ 
+
+
 
 
 ## 无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序
 {: #ts_bm_tools_facet}
 
-将不受支持的构面应用于 Eclipse 项目时，可能无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 Bluemix™。 
+将不受支持构面应用于 Eclipse 项目时，可能无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。 
 
  
 
@@ -444,8 +500,7 @@ restage <appname>`。
 ```
 cf push -c <start_command> -b <null-buildpack>
 ```
-例如：
-```
+例如：```
 cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
@@ -581,7 +636,7 @@ cf push <appname>
   
   
 ## 在 {{site.data.keyword.Bluemix_notm}} 上找不到组织
-{: #ts_push}
+{: #ts_orgs}
 
 在 {{site.data.keyword.Bluemix_notm}} 区域上工作时，可能在 {{site.data.keyword.Bluemix_notm}} 上找不到组织。
   
@@ -749,8 +804,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve} 
 
   * 通过以下其中一种方法来指定启动命令： 
-      * 使用命令行界面。例如： 
-        ```
+      * 使用命令行界面。例如：```
 		cf push MyUniqueNodejs01 -c "node app.js"
 		```
 	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 文件。例如：
@@ -882,10 +936,9 @@ cf push MyUniqueAppName02 -p "./app.war"
 要对 Meteor 应用程序使用定制 buildpack，请使用以下其中一种方法：
 {: tsResolve}
 
-  * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
-  ```
+  * 如果使用 ``manifest.yml`` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
-  ```
+  ``
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```
 	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
@@ -894,7 +947,7 @@ cf push MyUniqueAppName02 -p "./app.war"
   
 
     
-## 部署到 {{site.data.keyword.Bluemix_notm}} 按钮不部署应用程序
+## “部署到 {{site.data.keyword.Bluemix_notm}} 按钮”不部署应用程序
 {: #deploytobluemixbuttondoesntdeployanapp}
 
 如果您单击“部署到 {{site.data.keyword.Bluemix_notm}}”按钮之后，发现未克隆 Git 存储库或者未部署应用程序，请尝试针对下列问题的故障诊断方法。
@@ -910,7 +963,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-单击了**部署到 Bluemix** 按钮，但**创建项目**步骤未成功完成。
+单击了**部署到 Bluemix** 按钮，但“创建项目”步骤未成功完成。
 {: tsSymptoms} 
 
 
@@ -931,7 +984,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-单击了**部署到 Bluemix** 按钮，但在 DevOps Services 中找不到 Git 存储库并且无法克隆。**克隆存储库**步骤未成功完成。因此，无法将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。 
+单击了**部署到 Bluemix** 按钮，但在 DevOps Services 中找不到 Git 存储库并且无法克隆。“克隆存储库”步骤未成功完成。因此，无法将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。 
 {: tsSymptoms} 
 
 发生此问题的原因可能如下：
@@ -945,8 +998,8 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 验证 Git 存储库是否存在，是否为公共可访问，以及 URL 是否正确。
-  * 验证片段中是否不包含任何 HTML 或 Markdown 错误。
-  * 如果特殊字符、查询参数或碎片导致 Git 存储库的 URL 存在问题，请在按钮片段中对该 URL 进行编码。
+  * 验证片段中是否没有任何 HTML 或 Markdown 错误。
+  * 如果特殊字符、查询参数或碎片导致 Git 存储库的 URL 存在问题，请将该 URL 编码到按钮片段中。
   
 
   
@@ -958,18 +1011,17 @@ cf push MyUniqueAppName02 -p "./app.war"
      
 
 
-单击了**部署到 Bluemix** 按钮，并且在 DevOps Services 中克隆了 Git 存储库，但应用程序未部署到 {{site.data.keyword.Bluemix_notm}}。**部署到 Bluemix** 步骤未成功完成。
+单击了**部署到 Bluemix** 按钮，并且在 DevOps Services 中克隆了 Git 存储库，但应用程序未部署到 {{site.data.keyword.Bluemix_notm}}。“部署到 Bluemix”步骤未成功完成。
 {: tsSymptoms} 
 
 发生此问题的原因可能如下：
 {: tsCauses}  
 
   * {{site.data.keyword.Bluemix_notm}} 空间中可能没有足够的空间来部署应用程序。 
-  * 可能未在 manifest.yml 文件中声明必需的服务。
-  * 可能在 manifest.yml 文件中声明了必需的服务，但该服务已存在于目标空间中。
-  * 存储库中的代码可能存在问题。
-要诊断问题，请复查该部署的构建和部署日志：
-  1. 当**部署到 Bluemix** 步骤未成功完成时，请单击上述配置管道步骤中的链接，以打开 Delivery Pipeline。
+  * 可能未在 `manifest.yml` 文件中声明必需的服务。
+  * 可能在 `manifest.yml` 文件中声明了必需的服务，但该服务已存在于目标空间中。
+  * 存储库中的代码可能存在问题。要诊断问题，请查看该部署的构建和部署日志：
+  1. “部署到 Bluemix”步骤未成功完成时，请单击上述“配置管道”步骤中的链接，以打开 Delivery Pipeline。
   2. 识别失败的构建或部署阶段。
   3. 在失败的阶段中，单击**查看日志和历史记录**。
   4. 找到错误消息。
@@ -978,7 +1030,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 如果错误消息指示 {{site.data.keyword.Bluemix_notm}} 空间中的空间不足，无法部署应用程序，那么请使用其他空间作为目标。
-  * 如果错误消息指示未在 manifest.yml 文件中声明必需的服务，请通知存储库所有者必须添加必需的服务。
+  * 如果错误消息指示未在 `manifest.yml` 文件中声明必需的服务，那么请通知存储库所有者必须添加必需的服务。
   * 如果错误消息指示目标空间中已存在必需的服务，那么请选择使用其他空间。
   * 如果错误消息指示构建中存在问题，那么请解决代码中导致无法构建应用程序的任何问题。要验证代码中是否没有任何问题，请使用 Git 命令来构建代码：
     1. 克隆 Git 存储库：
@@ -1022,7 +1074,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 ## 帐户不活动
 {: #ts_accnt_inactive}
 
-如果您的帐户处于不活动状态，那么无法在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。 必须联系标识支持团队来解决此问题。
+如果您的帐户处于不活动状态，那么无法在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。 必须联系支持团队来解决此问题。
 
 
 
@@ -1037,11 +1089,11 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要重新激活您的帐户，请向[标识支持](mailto:id@bluemix.net)发送电子邮件。在该电子邮件中，必须包含以下信息：
+要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
 {: tsResolve}
 
   * 您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。
-  * 要在其中创建应用程序的组织的名称。此信息可帮助标识支持团队确定在您所在组织内是否为您分配了正确的角色或成员资格。
+  * 要在其中创建应用程序的组织的名称。此信息可帮助支持团队确定在您所在组织内是否为您分配了正确的角色或成员资格。
 
 
 
@@ -1400,7 +1452,6 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	
 	
-
 
 
 

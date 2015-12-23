@@ -5,7 +5,7 @@
 
 #Administration de {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Dernière mise à jour : 18 novembre 2015*
+*Dernière mise à jour : 8 décembre 2015*
 
 Gérez vos organisations, vos espaces et les utilisateurs affectés en cliquant sur **Compte et support** &gt; **Gérer les
 organisations**. Si vous êtes un utilisateur d'un environnement {{site.data.keyword.Bluemix_notm}} local ou d'un environnement
@@ -14,15 +14,14 @@ local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié](index.ht
 ou dédiée.
 {:shortdesc}
 
-##Gestion de votre compte 
+##Gestion de votre compte
 {: #mngacct}
 
 Dans {{site.data.keyword.Bluemix}}, vous pouvez gérer les organisations et les espaces, notamment l'accès utilisateur, le tout à partir du
-tableau de bord dans l'interface utilisateur.
-Vous pouvez également surveiller votre utilisation et votre facturation.
+tableau de bord dans l'interface utilisateur. Vous pouvez également surveiller votre utilisation et votre facturation.
 {:shortdesc}
 
-###Organisations et espaces 
+###Organisations et espaces
 {: #orgsandspaces}
 
 En tant que responsable de l'organisation ou propriétaire de compte, vous pouvez utiliser la page Gérer les organisations pour afficher et gérer les
@@ -30,87 +29,80 @@ paramètres de l'organisation ou de l'espace, notamment l'accès utilisateur. Po
 
 ####Organisations
 
-Une organisation est définie par les éléments suivants : 
+Une organisation est définie par les éléments suivants :
 
 <dl>
-<dt>Les utilisateurs </dt>
+<dt>Les utilisateurs</dt>
 <dd>Rôle disposant du droit de base dans les organisations et les espaces. Vous devez être affecté à une organisation pour pouvoir obtenir d'autres
 droits dans les espaces de l'organisation. Pour des informations détaillées, voir
 [Utilisateurs et rôles](index.html#userroles).</dd>
-<dt>Les domaines </dt>
+<dt>Les domaines</dt>
 <dd>Indiquez la route Internet allouée à l'organisation. Une route possède un sous-domaine et un domaine. En général, le sous-domaine est le nom de l'application. Le
 domaine peut être un domaine système ou un domaine personnalisé que vous avez enregistré pour votre application.<br/>
 <p>**Remarque** : si vous ajoutez un domaine personnalisé, vous devez configurer votre serveur DNS afin de résoudre votre domaine
 personnalisé de sorte qu'il désigne le domaine système {{site.data.keyword.Bluemix_notm}}. Ainsi, lorsque
 {{site.data.keyword.Bluemix_notm}} reçoit une demande pour votre domaine personnalisé, il peut l'acheminer correctement vers votre
-application.
-</p></dd>
-<dt>Le quota </dt>
+application.</p></dd>
+<dt>Le quota</dt>
 <dd>Représente les limites des ressources pour l'organisation, notamment le nombre de services et la quantité de mémoire pouvant être alloués à
 l'organisation. Les quotas sont affectés lorsque les organisations sont
 créées. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota. Avec les plans Paiement à la carte ou
 Abonnement, vous pouvez ajuster votre quota pour les applications et les conteneurs Cloud Foundry au fur et à mesure que les besoins de votre organisation
-changent.
-</dd>
+changent.</dd>
 </dl>
 
 Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser des organisations afin de permettre la collaboration entre les utilisateurs et
 de faciliter le regroupement logique des ressources de projet comme suit :
 
-
 <ul>
-<li>Vous pouvez regrouper un ensemble d'espaces, d'applications, de services, de domaines, de routes et d'utilisateurs dans des organisations.
-</li>
-<li>Vous pouvez gérer l'accès aux espaces et aux organisations pour chaque utilisateur. </li>
+<li>Vous pouvez regrouper un ensemble d'espaces, d'applications, de services, de domaines, de routes et d'utilisateurs dans des organisations.</li>
+<li>Vous pouvez gérer l'accès aux espaces et aux organisations pour chaque utilisateur.</li>
 </ul>
 
 Lorsque vous créez une organisation, le nom de l'organisation doit être unique dans {{site.data.keyword.Bluemix_notm}}. Une fois que vous
 avez créé
 l'organisation, le droit *Responsable de l'organisation*, qui vous permet d'éditer le nom de l'organisation, de supprimer l'organisation et de
-créer des espaces dans l'organisation vous est attribué automatiquement. 
+créer des espaces dans l'organisation vous est attribué automatiquement.
 
 Lorsque vous supprimez une organisation, tous les espaces, toutes les applications et tous les services dans l'organisation sont supprimés.
-
 
 {{site.data.keyword.Bluemix_notm}} permet la collaboration dans les projets en affectant des utilisateurs dans une organisation et dans les
 espaces de l'organisation. Vous pouvez vous servir de l'onglet **Utilisateurs** pour afficher et gérer les utilisateurs de
 l'organisation. Vous pouvez aussi inviter des utilisateurs dans votre organisation en cliquant sur le lien **Inviter un nouvel utilisateur** dans
 l'onglet **Utilisateurs**. Les droits suivants peuvent être attribués aux utilisateurs d'une organisation :
 
-
 <ul>
-<li>Utilisateur de l'organisation </li>
-<li>Responsable de l'organisation </li>
-<li>Responsable de la facturation de l'organisation </li>
-<li>Auditeur de l'organisation </li>
+<li>Utilisateur de l'organisation</li>
+<li>Responsable de l'organisation</li>
+<li>Responsable de la facturation de l'organisation</li>
+<li>Auditeur de l'organisation</li>
 </ul>
 
 ####Espaces
 
-Dans une organisation, vous pouvez utiliser des espaces pour regrouper un ensemble d'applications, de services et d'utilisateurs. 
+Dans une organisation, vous pouvez utiliser des espaces pour regrouper un ensemble d'applications, de services et d'utilisateurs.
 
 Une fois que vous avez ajouté des utilisateurs à une organisation, vous pouvez leur attribuer des droits pour les espaces dans l'organisation. A
-l'instar des organisations, les espaces possèdent également un ensemble de droits pouvant être attribués aux utilisateurs : 
+l'instar des organisations, les espaces possèdent également un ensemble de droits pouvant être attribués aux utilisateurs :
 
 <ul>
-<li>Responsable de l'espace </li>
-<li>Développeur de l'espace </li>
-<li>Auditeur de l'espace </li>
+<li>Responsable de l'espace</li>
+<li>Développeur de l'espace</li>
+<li>Auditeur de l'espace</li>
 </ul>
 
-**Remarque** : un utilisateur doit disposer d'au moins l'un des droits dans l'espace. 
+**Remarque** : un utilisateur doit disposer d'au moins l'un des droits dans l'espace.
 
 L'onglet **Domaines** d'un espace est une liste en lecture seule des domaines qui sont affectés à l'espace. Le domaine de système est
 toujours disponible dans un espace, et des domaines personnalisés peuvent également être alloués à l'espace. Les applications qui ont été créées
 dans l'espace peuvent utiliser n'importe quel domaine répertorié pour l'espace.
 
-
-###Utilisateurs et rôles 
+###Utilisateurs et rôles
 {: #userroles}
 
-Les propriétaires de compte effectuent toutes les opérations sur les organisations et les espaces. 
+Les propriétaires de compte effectuent toutes les opérations sur les organisations et les espaces.
 
-####Types d'utilisateur 
+####Types d'utilisateur
 
 Vous pouvez être membre ou collaborateur d'un compte.
 
@@ -120,75 +112,70 @@ Vous pouvez être membre ou collaborateur d'un compte.
 êtes inscrit depuis l'invitation afin d'utiliser {{site.data.keyword.Bluemix_notm}} pour la première fois. </dd>
 <dt>Collaborateur</dt>
 <dd>Vous êtes collaborateur d'un compte {{site.data.keyword.Bluemix_notm}} si vous avez déjà utilisé {{site.data.keyword.Bluemix_notm}}
-avec un compte différent, puis avez été invité sur ce compte et avez accepté l'invitation.
-</dd>
+avec un compte différent, puis avez été invité sur ce compte et avez accepté l'invitation.</dd>
 </dl>
 
-####Rôles utilisateur 
+####Rôles utilisateur
 
-Les droits suivants peuvent être accordés aux utilisateurs pour qu'ils aient différents rôles utilisateur dans une organisation ou un espace : 
+Les droits suivants peuvent être accordés aux utilisateurs pour qu'ils aient différents rôles utilisateur dans une organisation ou un espace :
 
 <dl>
-<dt>Responsables de l'organisation </dt>
+<dt>Responsables de l'organisation</dt>
 <dd>Les responsables de l'organisation possèdent les droits suivants :
 <ul>
 <li>Créer ou supprimer des espaces dans l'organisation.</li>
-<li>Inviter des utilisateurs dans l'organisation si le responsable de l'organisation est aussi membre de l'organisation ou propriété du compte. </li>
-<li>Gérer des utilisateurs existants qui se trouvent déjà dans l'organisation. </li>
+<li>Inviter des utilisateurs dans l'organisation si le responsable de l'organisation est aussi membre de l'organisation ou propriété du compte.</li>
+<li>Gérer des utilisateurs existants qui se trouvent déjà dans l'organisation.</li>
 <li>Gérer les domaines de l'organisation.</li>
 </ul>
 <p>**Remarque** : si vous êtes collaborateur et avez déjà utilisé {{site.data.keyword.Bluemix_notm}} avec un compte différent,
 vous ne pouvez pas inviter d'utilisateur dans l'organisation même si vous possédez le rôle de responsable de l'organisation. Vous devez être membre pour
 pouvoir inviter des utilisateurs. Voir <a href="../troubleshoot/accessing.html#tr_adduser">Impossible d'ajouter des utilisateurs à une organisation</a>
-pour des informations sur le contournement de ce problème.
-</p>
+pour des informations sur le contournement de ce problème.</p>
 </dd>
-<dt>Responsables de la facturation </dt>
+<dt>Responsables de la facturation</dt>
 <dd>Les responsables de la facturation possèdent des droits qui leur permettent d'afficher les informations sur l'utilisation des contextes d'exécution et
-des services pour l'organisation. </dd>
-<dt>Auditeurs de l'organisation </dt>
-<dd>Les auditeurs de l'organisation possèdent des droits qui leur permettent d'afficher le contenu des applications et des services dans l'espace. </dd>
-<dt>Responsables de l'espace </dt>
+des services pour l'organisation.</dd>
+<dt>Auditeurs de l'organisation</dt>
+<dd>Les auditeurs de l'organisation possèdent des droits qui leur permettent d'afficher le contenu des applications et des services dans l'espace.</dd>
+<dt>Responsables de l'espace</dt>
 <dd>Les responsables de l'espace possèdent les droits suivants :
 <ul>
-<li>Ajouter des utilisateurs à l'espace et gérer les utilisateurs. </li>
-<li>Activer des fonctions pour l'espace. </li>
+<li>Ajouter des utilisateurs à l'espace et gérer les utilisateurs.</li>
+<li>Activer des fonctions pour l'espace.</li>
 </ul>
 </dd>
-<dt>Développeurs de l'espace </dt>
+<dt>Développeurs de l'espace</dt>
 <dd>Les développeurs de l'espace possèdent les droits suivants :
 <ul>
-<li>Créer, supprimer et gérer des applications et des services dans l'espace. </li>
-<li>Accéder aux journaux dans l'espace. </li>
+<li>Créer, supprimer et gérer des applications et des services dans l'espace.</li>
+<li>Accéder aux journaux dans l'espace.</li>
 </ul>
 </dd>
-<dt>Auditeurs de l'espace </dt>
+<dt>Auditeurs de l'espace</dt>
 <dd>Les auditeurs de l'espace possèdent des droits qui leur permettent d'accéder en lecture seule à toutes les informations sur l'espace, par exemple aux
-informations sur les applications et les services, aux paramètres, aux rapports et aux journaux.
-</dd>
+informations sur les applications et les services, aux paramètres, aux rapports et aux journaux.</dd>
 </dl>
 
-###Gestion de votre organisation 
+###Gestion de votre organisation
 {: #orgmng}
 
 En tant que responsable de l'organisation ou propriétaire de compte, vous pouvez gérer vos organisations. Les tâches de gestion incluent la création
 d'une organisation, le changement de nom d'une organisation, la création d'un espace, l'invitation d'utilisateurs dans un espace et la suppression d'une
 organisation existante.
 
-
 <ul>
 <li>Création d'une organisation
 <p>Seuls les utilisateurs qui possèdent un compte payant peuvent créer une organisation. Avec un compte payant, vous pouvez créer une organisation en
-procédant comme suit :
-</p>
+procédant comme suit :</p>
 <ol>
 <li>Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône dans le coin supérieur droit, puis sélectionnez
 **Gérer les organisations**.</li>
-<li>Cliquez sur **Créer une organisation** et suivez les invites pour créer votre organisation. </li>
+<li>Cliquez sur **Créer une organisation** et suivez les invites pour créer votre organisation.</li>
 </ol>
 </li>
 <li>Changement de nom d'une organisation
-<p>Procédez comme suit pour renommer votre organisation : </p>
+<p>Procédez comme suit pour renommer votre organisation :</p>
 <ol>
 <li>Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône dans le coin supérieur droit, puis sélectionnez
 **Gérer les organisations**.</li>
@@ -197,13 +184,12 @@ procédant comme suit :
 </ol>
 </li>
 <li>Liste des membres
-<p>Procédez comme suit pour répertorier les membres de votre organisation ou de votre espace : </p>
+<p>Procédez comme suit pour répertorier les membres de votre organisation ou de votre espace :</p>
 <ol>
 <li>Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône dans le coin supérieur droit, puis sélectionnez
 **Gérer les organisations**. Vous pouvez afficher les membres de votre organisation et leurs rôles dans l'onglet
-**Utilisateurs**.
-</li>
-<li>Cliquez sur le nom de l'espace dans votre organisation pour afficher les membres de cet espace et leurs rôles. </li>
+**Utilisateurs**.</li>
+<li>Cliquez sur le nom de l'espace dans votre organisation pour afficher les membres de cet espace et leurs rôles.</li>
 </ol>
 </li>
 <li>Création d'un espace
@@ -213,36 +199,30 @@ applications à des espaces. Procédez comme suit pour créer un espace :</p>
 <ol>
 <li>Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône dans le coin supérieur droit, puis sélectionnez
 **Gérer les organisations**.</li>
-<li>Cliquez sur **Créer un espace** sous le nom de votre organisation et suivez les invites pour créer votre espace.
-</li>
+<li>Cliquez sur **Créer un espace** sous le nom de votre organisation et suivez les invites pour créer votre espace.</li>
 </ol>
 </li>
 <li>Invitation d'utilisateurs dans un espace
 <p>Vous pouvez inviter des utilisateurs dans votre organisation en tant que collaborateurs. Vous pouvez aussi ajouter des utilisateurs de votre
 organisation à différents espaces. Les utilisateurs ne peuvent accéder qu'à l'espace auquel ils ont été ajoutés. Procédez comme suit pour ajouter un
-utilisateur à un espace :
-</p>
+utilisateur à un espace :</p>
 <ol>
 <li>Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône dans le coin supérieur droit, puis sélectionnez
 **Gérer les organisations**. Ensuite, cliquez sur **Ajouter un utilisateur** dans votre organisation et suivez les
-invites pour ajouter l'utilisateur à votre organisation. </li>
+invites pour ajouter l'utilisateur à votre organisation.</li>
 <li>Ajoutez l'utilisateur à un espace. Sélectionnez l'espace dans le panneau de navigation de gauche, cliquez sur **Ajouter un
-utilisateur** et suivez les invites pour ajouter l'utilisateur à l'espace.
-</li>
+utilisateur** et suivez les invites pour ajouter l'utilisateur à l'espace.</li>
 </ol>
 </li>
 <li>Suppression d'une organisation existante
 <p>Prenez contact avec le support en charge des ID et de l'enregistrement {{site.data.keyword.Bluemix_notm}} pour qu'il supprime votre
-organisation.
-</p>
+organisation.</p>
 <p>**Remarque** : les opérations de suppression sont irréversibles. Vous perdez toutes vos applications et tous les services qui sont
-associés à l'organisation.
-</p>
+associés à l'organisation.</p>
 </li>
 </ul>
 
 ## Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
-
 {: #mng}
 
 Utilisez la console d'administration pour gérer les ressources, surveiller l'utilisation, administrer les droits d'utilisateur et afficher les rapports
@@ -255,8 +235,7 @@ journaux, le statut et les notifications de mise à niveau pour votre environnem
 
 Vous pouvez accéder à la console d'administration en entrant l'adresse URL suivante :
 
-
-`https://opsconsole.&lt;sous-domaine&gt;.bluemix.net/`.
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;sous-domaine&gt;</strong></dt>
@@ -349,6 +328,10 @@ Effectuez l'une des opérations suivantes :
 contenu textuel des rapports et des journaux. Vous pouvez aussi choisir de filtrer votre recherche par **événements d'administration**,
 **rapports DataPower**, **pare-feu** et **audit de connexion**.
 * Lors de l'affichage d'un rapport ou d'un journal, vous pouvez cliquer sur l'icône ![Télécharger](images/icon_download.png) dans le coin supérieur droit du rapport pour le télécharger.
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+Pour plus d'informations sur les types de rapport de sécurité, voir [Rapports de sécurité](../security/index.html#reports).
 
 ### Affichage du statut
 {: #oc_status}
@@ -507,7 +490,7 @@ Les droits suivants peuvent être accordés aux utilisateurs :
 droit, ils ne peuvent pas se connecter. |
 | Reports | Les utilisateurs disposant du droit `reports` peuvent afficher (`view`) ou modifier (`write`)
 les rapports de sécurité. |
-| Users | Les utilisateurs disposant du droit `users` peuvent afficher (`view`) la liste des utilisateurs ou
+| Utilisateurs  | Les utilisateurs disposant du droit `users` peuvent afficher (`view`) la liste des utilisateurs ou
 ajouter ou retirer
 (`write`) des utilisateurs. Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs.|
 
@@ -858,8 +841,7 @@ Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword
 Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis
 un registre LDAP.
 
-Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration
-{{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
+Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 

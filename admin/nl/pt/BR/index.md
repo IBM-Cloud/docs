@@ -5,7 +5,7 @@
 
 #Administrando o {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Última atualização: 18 de novembro de 2015*
+*Última atualização: 8 de dezembro de 2015*
 
 Gerencie suas orgs, os espaços e os usuários designados clicando em **Conta e suporte** &gt; **Gerenciar organizações**. Se você for um usuário do {{site.data.keyword.Bluemix_notm}} Local ou {{site.data.keyword.Bluemix_notm}} Dedicated, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) para obter mais informações sobre como administrar a sua instância local ou dedicada.
 {:shortdesc}
@@ -257,8 +257,7 @@ segurança, logs, status e notificações de upgrade para o ambiente do
 
 É possível acessar o Console administrativo inserindo a URL a seguir:
 
-
-`https://opsconsole.&lt;subdomain&gt;.bluemix.net/`.
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -370,6 +369,10 @@ bem como ao conteúdo de texto contido nos logs e relatórios. Também é possí
 **Eventos de administração**, **Relatórios do DataPower**,
 **Firewall** e **Auditoria de login**.
 * Ao exibir um relatório ou log, é possível clicar no ícone ![Download](images/icon_download.png) na parte superior direita do relatório para fazer download dele.
+
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+Para obter mais informações sobre os tipos de relatórios de segurança, consulte [Relatórios de segurança](../security/index.html#reports).
 
 ### Visualizando o status
 {: #oc_status}

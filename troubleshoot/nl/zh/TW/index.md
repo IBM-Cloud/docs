@@ -1,16 +1,17 @@
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock} 
+
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
 {:tsResolve: .tsResolve} 
 {:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock} 
 
-# 存取 {{site.data.keyword.Bluemix_notm}} 的疑難排解 
+# {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
 *前次更新：2015 年 11 月 19 日*
 
-一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}，帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中恢復正常。
+一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 ## 無法登入 {{site.data.keyword.Bluemix_notm}}
@@ -19,7 +20,7 @@
 您必須具有有效的 IBM ID 及密碼才能登入 {{site.data.keyword.Bluemix_notm}}。
 
 
-當您嘗試登入 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
+嘗試登入 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
 `底下所輸入的 IBM ID 及/或密碼不正確。請重試。`
@@ -31,10 +32,10 @@
 
 若要取得有效的 IBM ID 及密碼，請移至「我的 IBM 設定檔」頁面，然後完成下列其中一個步驟：
 {: tsResolve}
-  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您已忘記您的密碼，請按一下「登入」頁面右邊的**忘記密碼**來重設密碼。如果您已忘記您的 IBM ID 或是您的密碼持續有問題，請聯絡 Worldwide IBM Registration Help Desk 以取得協助。 
-  * 如果您沒有 IBM ID，請按一下**登錄**來登錄 IBM ID 及密碼。 
+  * 如果您已登錄一個 IBM ID，而想要檢查您的 ID 及密碼是否有效，請按一下**登入**，並在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面右邊的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續有密碼的問題，請與 Worldwide IBM Registration Help Desk 聯絡以取得協助。 
+  * 如果您沒有 IBM ID，請按一下**登錄**來登錄一個 IBM ID 及密碼。 
   
-**附註：**若為 IBM 員工，IBM ID 可能與內部網路登入 ID 不同。 
+**附註：**對於 IBM 員工而言，IBM ID 可能與內部網路登入 ID 不同。 
 
 
 
@@ -43,24 +44,24 @@
 
     
     
-## {{site.data.keyword.Bluemix_notm}} 區域之間的自動失效接手無法使用
+## {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手無法使用
 {: #ts_failover}
 
-您無法在 {{site.data.keyword.Bluemix_notm}} 區域之間使用自動失效接手。不過，您可以使用在多個 IP 位址之間支援失效接手的 DNS 提供者作為暫行解決方法。
+您無法在 {{site.data.keyword.Bluemix_notm}} 地區之間使用自動失效接手。不過，您可以使用支援在多個 IP 位址之間進行失效接手的 DNS 提供者，作為暫行解決方法。
  
 
-當 {{site.data.keyword.Bluemix_notm}} 區域變成無法使用時，在該區域中執行的應用程式也會無法使用，即使相同應用程式正在另一個 {{site.data.keyword.Bluemix_notm}} 區域中執行。
+當 {{site.data.keyword.Bluemix_notm}} 地區變成無法使用時，在該地區中執行的應用程式也會無法使用，即使相同應用程式正在另一個 {{site.data.keyword.Bluemix_notm}} 地區中執行亦然。
 {: tsSymptoms}
 
  
-{{site.data.keyword.Bluemix_notm}} 尚未提供從一個區域到另一個區域的自動失效接手。
+{{site.data.keyword.Bluemix_notm}} 尚未提供從一個地區到另一個地區的自動失效接手。
 {: tsCauses}
 
  
-您可以使用在多個 IP 位址之間支援智慧型失效接手的 DNS 提供者，並且手動配置 DNS 設定，以啟用 {{site.data.keyword.Bluemix_notm}} 區域之間的自動失效接手。具有此功能的 DNS 提供者包括 NSONE、Akamai、Dyn。
+您可以使用支援在多個 IP 位址之間進行智慧型失效接手的 DNS 提供者，並且手動配置 DNS 設定，以啟用 {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手。具有此功能的 DNS 提供者包括 NSONE、Akamai、Dyn。
 {: tsResolve}
 
-當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 區域的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 區域的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令：
+當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令：
 ```
 nslookup stage1.mybluemix.net
 ```
@@ -70,27 +71,24 @@ nslookup stage1.mybluemix.net
 ## 帳戶擱置
 {: #ts_accntpding}
 
-如果您的帳戶擱置，您就無法登入 {{site.data.keyword.Bluemix_notm}}。
+如果您的帳戶擱置，您便無法登入 {{site.data.keyword.Bluemix_notm}}。
 
  
-在您登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您可能無法登入 {{site.data.keyword.Bluemix_notm}}。而會看到下列訊息：
+在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您可能無法登入 {{site.data.keyword.Bluemix_notm}}。相反地，您看到下列訊息：
 {: tsSymptoms}
 
-`您的帳戶處於擱置狀態。請等待 24 小時之內會收到電子郵件確認信，並且還要檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請與 id@bluemix.net 聯絡以獲得協助。`
-
-
-在您登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您收到一封確認電子郵件。您必須按一下此封確認電子郵件中的鏈結，才能完成登錄程序。
+<code>您的帳戶處於擱置狀態。請稍候，最晚 24 小時即會收到電子郵件確認信，同時也請檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請聯絡 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支援中心</a>。</code>在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您會收到一封確認電子郵件。您必須按一下此封確認電子郵件中的鏈結，才能完成登錄程序。
 {: tsCauses} 
 
-確認電子郵件會被寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您沒有收到確認電子郵件，請聯絡 [ID 支援](mailto:id@bluemix.net)。
+確認電子郵件會寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您尚未收到確認電子郵件，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport.com){: new_window}聯絡。  
 {: tsResolve}
 
 
 
-## 無法新增使用者至組織
+## 無法將使用者新增至組織
 {: #ts_adduser}
 
-您可以邀請多位使用者在相同的組織下工作。您可以邀請使用者到您的組織，但您必須是帳戶擁有者，或者同時是組織的管理員與成員。
+您可以邀請多位使用者在相同的組織下工作。唯有您是帳戶擁有者，或同時為組織的管理員與成員時，才能邀請使用者加入您的組織。
  
 
 您無法在**管理組織**區段中看到**邀請新使用者**鏈結。
@@ -98,36 +96,36 @@ nslookup stage1.mybluemix.net
 
  
 
-只有下列 {{site.data.keyword.Bluemix_notm}} 使用者可以邀請使用者到組織中：
+只有下列 {{site.data.keyword.Bluemix_notm}} 使用者可以邀請使用者加入組織：
 {: tsCauses}
   * 組織的帳戶擁有者
   * 同時為組織成員（非合作人員）的組織管理員
   
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以是組織的成員或合作人員：
 
-<dl><dt>合作者</dt>
-<dd>如果您已有 {{site.data.keyword.Bluemix_notm}} 帳戶，而別人邀請您到組織中，則您是組織的合作人員。</dd>
+<dl><dt>合作人員</dt>
+<dd>如果您已有 {{site.data.keyword.Bluemix_notm}} 帳戶，而別人邀請加入組織，則您是組織的合作人員。</dd>
 <dt>成員</dt>
-<dd>如果您沒有 {{site.data.keyword.Bluemix_notm}} 帳戶，但某人邀請您到組織中，且您從該邀請註冊 {{site.data.keyword.Bluemix_notm}}，則您是組織的成員。</dd>
+<dd>如果您沒有 {{site.data.keyword.Bluemix_notm}} 帳戶，但某人邀請您加入組織，且您透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}，則您是組織的成員。</dd>
 </dl>
 
 
-如果您是組織的合作者，即使已將您指派為組織管理員，您也無法邀請使用者加入您的組織。
+如果您是組織的合作人員，即使已將您指派為組織管理員，您也無法邀請使用者加入您的組織。
 
 **附註：**所有組織管理員（包括身為組織合作人員者）都可以新增、修改及移除已經在組織中的使用者。
 
  
 
-如果您無法邀請使用者到您的組織中，而需要不同的角色來完成這項動作，請與組織管理員聯絡以變更角色。若要識別您的組織管理員，請完成下列步驟：
+如果您無法邀請使用者加入您的組織，而需要不同的角色來完成這項動作，請與組織管理員聯絡，以變更角色。若要識別您的組織管理員，請完成下列步驟：
 {: tsResolve}
 
   1. 移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下「儀表板」右上方的**帳戶及支援**圖示 ![帳戶及支援](images/account_support.png)，然後選取**管理組織**。
   2. 移至您的組織，然後檢視**使用者**標籤上的組織管理員資訊。  
   
-如果您因自己是合作人員（而非成員）而無法邀請使用者，則必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後邀請您將該帳戶加入為組織成員。若要刪除先前的帳戶並將該帳戶加入為成員，請完成下列步驟： 
+如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 聯絡 [ID 支援](mailto:id@bluemix.net)，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
-  2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者邀請您加入組織作為組織管理員。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
+  1. 與 [ID 支援中心](mailto:id@bluemix.net)聯絡，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
+  2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 
 
@@ -176,8 +174,8 @@ nslookup stage1.mybluemix.net
   * 重新整理或重新啟動瀏覽器。
   * 登出 {{site.data.keyword.Bluemix_notm}} 然後再重新登入。
   * 使用瀏覽器的專用瀏覽模式。 
-  * 清除瀏覽器的 Cookie 及快取記憶體。
-  * 使用不同的瀏覽器。如需 {{site.data.keyword.Bluemix_notm}} 支援的瀏覽器版本的相關資訊：請參閱 [{{site.data.keyword.Bluemix_notm}} 必備項目](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
+  * 清除瀏覽器的 Cookie 及快取。
+  * 使用不同的瀏覽器。如需 {{site.data.keyword.Bluemix_notm}} 支援的瀏覽器版本的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 必要條件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
   * 如果您已安裝 cf 指令行介面，請輸入 `cf apps` 指令來查看您的應用程式是否正在執行中。
   
   
@@ -229,7 +227,7 @@ nslookup stage1.mybluemix.net
 # 管理應用程式疑難排解
 {: #managingapps}
 
-管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中恢復正常。
+管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -237,16 +235,72 @@ nslookup stage1.mybluemix.net
 
 
 
+## 無法執行所要求的動作
+{: #ts_authority}
+
+您可能沒有適當的存取權，無法完成動作。
+
+ 
+
+當您嘗試執行服務實例或應用程式實例的動作時，無法完成所要求的動作，並且看到下列其中一個錯誤訊息：
+{: tsSymptoms}
+
+`BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
+
+
+`Server error, status code: 403, error code: 10003, message: You are not authorized to perform the requested action.`
+
+ 
+
+您沒有執行動作所需的適當權限層級。
+{: tsCauses}
+
+  
+
+若要取得適當的權限層級，請使用下列其中一種方法：
+{: tsResolve}
+ * 選取另一個您具有開發人員角色的組織及空間。 
+ * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織](../acctmgmt/index.html#mngorg){: new_window}。
+ 
+
+ 
+
+
+## 因為授權錯誤，所以無法存取 {{site.data.keyword.Bluemix_notm}} 服務
+{: #ts_vcap}
+
+如果服務認證寫在您的應用程式中，則您的應用程式存取 {{site.data.keyword.Bluemix_notm}} 服務時可能會發生授權錯誤。 
+
+配置應用程式與 {{site.data.keyword.Bluemix_notm}} 服務通訊之後，即將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。不過，您無法使用應用程式來存取 {{site.data.keyword.Bluemix_notm}} 服務，而且會收到授權錯誤。
+{: tsSymptoms}
+
+寫在應用程式中的認證可能不正確。每次重建服務時，用來存取它的認證都會變更。
+{: tsCauses}
+
+
+請使用 VCAP_SERVICES 環境變數中的連線參數，而不是將認證寫在應用程式中。使用 VCAP_SERVICES 環境變數中連線參數的方法會根據程式語言而不同。例如，針對 Node.js 應用程式，您可以使用下列指令：
+{: tsResolve}
+
+```
+process.env.VCAP_SERVICES
+```
+如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 及 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。 
+ 
+
+ 
+ 
+
+
 
 
 ## 無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式
 {: #ts_bm_tools_facet}
 
-當不受支援的資料類型套用至 Eclipse 專案時，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將您的應用程式部署至 Bluemix™。 
+當不受支援的資料類型套用至 Eclipse 專案時，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
 
  
 
-您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。然而，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，而且您會看到此錯誤訊息：`不支援專案資料類型 <facet_name>。`例如，`不支援專案資料類型 Cloud Foundry 獨立式應用程式 1.0 版。`
+您可以使用 Cloud Foundry CLI，順利地將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。然而，您無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並且看到此錯誤訊息：`不支援專案資料類型 <facet_name>。`例如，`不支援專案資料類型 Cloud Foundry 獨立式應用程式 1.0 版。`
 {: tsSymptoms}
 
  
@@ -258,7 +312,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 您必須從 Eclipse 專案中移除資料類型，才能使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
 {: tsResolve} 
 
-若要移除資料類型，請在 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 中，針對專案按一下**專案>內容>專案資料類型**。然後，清除不受支援之資料類型的勾選框。 
+若要移除資料類型，請在 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 中，針對專案按一下**專案 > 內容 > 專案資料類型**。然後，清除不受支援之資料類型的勾選框。 
 
 
 
@@ -274,21 +328,21 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
  
 
-「錯誤的閘道」錯誤通常發生在您所造訪網站使用 Proxy 伺服器來儲存及中繼來自管理網站之主要伺服器的資料時。主要伺服器及 Proxy 伺服器可能未適當連接，因此您會在瀏覽器視窗中看到 HTTP 狀態碼 502。此狀態碼表示網站的主要伺服器未收到它預期來自 Proxy 伺服器的 HTTP 實作。
+「錯誤的閘道」錯誤通常發生在您所造訪網站使用 Proxy 伺服器來儲存及中繼來自管理網站之主要伺服器的資料時。主要伺服器及 Proxy 伺服器可能未適當連接，因此您在瀏覽器視窗中看到 HTTP 狀態碼 502。此狀態碼表示網站的主要伺服器未收到它預期來自 Proxy 伺服器的 HTTP 實作。
 {: tsCauses}
 
 其他較少見的「錯誤的閘道」錯誤原因，包括網際網路服務供應商 (ISP) 脫離、不正確的防火牆配置及瀏覽器快取錯誤。 
 
  
 
-如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](https://developer.ibm.com/bluemix/support/#status){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 區域的服務作為暫行解決方法。詳細資訊位於[使用另一個區域的服務](../services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
+如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](https://developer.ibm.com/bluemix/support/#status){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](../services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
 {: tsResolve}
 
   * 重試動作：
     * 按鍵盤上的 F5 以重新載入頁面，或者按一下重新整理按鈕。如果此步驟無效，請清除瀏覽器的快取及 Cookie，然後再重新載入。
 	* 使用不同的瀏覽器。
 	* 將路由器、數據機及電腦重新開機。將這些裝置重新開機可清除導致錯誤 502 的許多種錯誤。 
-  * 等待並於稍後再試一次。在部分案例中，暫時問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
+  * 等待並於稍後再試一次。在部分情況下，暫時問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
   * 如果問題仍然存在，請與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡。如需相關資訊，請參閱[與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。 
 
 
@@ -301,7 +355,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
   
 
-當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴增應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 調整為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
+當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴充應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 調整為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
 {: tsSymptoms}
 
 
@@ -359,19 +413,19 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 ## Android 應用程式無法收到推送通知
 {: #ts_push}
 
-無法存取 Google 的特定區域中，Android 應用程式收不到您透過 IBM Push 服務送出的通知。在此情況下，您可以使用協力廠商服務作為暫行解決方法。
+無法存取 Google 的特定地區中，Android 應用程式收不到您透過 IBM Push 服務送出的通知。在此情況下，您可以使用協力廠商服務作為暫行解決方法。
 
  
 
-連結您的 Bluemix 應用程式的 Push 服務，並將訊息傳送至已登錄的裝置。不過，在特定區域中，Android 平台上開發的應用程式收不到您的通知。
+連結您的 Bluemix 應用程式的 Push 服務，並將訊息傳送至已登錄的裝置。不過，在特定地區，Android 平台上開發的應用程式收不到您的通知。
 {: tsSymptoms}
 
  
-IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 平台上開發的行動式應用程式。若要讓 Android 應用程式收到通知，行動式應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的區域中，Android 應用程式即無法接收推送通知。
+IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 平台上開發的行動式應用程式。若要讓 Android 應用程式收到通知，行動式應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即無法接收推送通知。
 {: tsCauses}
 
  
-請使用不依賴 GCM 服務的協力廠商服務作為暫行解決方法，例如 [Pushy](https://pushy.me){: new_window}、[igetui](http://www.getui.com/){: new_window} 及 [jpush](https://www.jpush.cn/){: new_window}。
+請使用不依賴 GCM 服務的協力廠商服務（例如 [Pushy](https://pushy.me){: new_window}、[igetui](http://www.getui.com/){: new_window} 及 [jpush](https://www.jpush.cn/){: new_window}），作為暫行解決方法。
 {: tsResolve}
 
 
@@ -382,7 +436,7 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 如果您是試用帳戶使用者，可能會在超出組織的服務限制時，無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
  
 
-當您嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，看到下列錯誤訊息：
+嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
 {: tsSymptoms}
 
 `BXNUI2032E: 聯絡 Cloud Foundry 以建立資源時發生錯誤。資源：service_instances。Cloud Foundry 訊息："You have exceeded your organization's services limit."`
@@ -394,7 +448,7 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 
  
 
-刪除不需要的任何服務實例，或移除您可以擁有之服務實例數目的限制。
+請刪除不需要的任何服務實例，或移除您可以擁有之服務實例數目的限制。
 {: tsResolve}
  
   * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或指令行介面。若要使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來刪除服務實例，請完成下列步驟：
@@ -408,7 +462,7 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 
   
   
-## 無法在 {{site.data.keyword.Bluemix_notm}} 上執行執行檔
+## 執行檔無法在 {{site.data.keyword.Bluemix_notm}} 上執行
 {: #ts_executable}
 
 在不同環境中開發及建置的執行檔，可能無法在 {{site.data.keyword.Bluemix_notm}} 上執行。 
@@ -440,11 +494,11 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ## 已超出組織的記憶體限制
 {: #ts_outofmemory}
 
-如果您是試用帳戶使用者，可能會在超出組織的記憶體限制時，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。 
+如果您是試用帳戶使用者，則超出組織的記憶體限制時，您可能無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。 
 
 
 
-將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您會看到下列錯誤訊息：
+將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
@@ -485,7 +539,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	  
  
 
-當連結至應用程式的服務損毀時，應用程式可能會發生運行中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
+當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
 {: tsSymptoms}
 
 
@@ -501,7 +555,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 cf push <appname>
 ```
-此外，您可以撰寫應用程式碼，以識別運行中斷、異常狀況和連線失敗之類的問題，並從其中回復。 
+此外，您可以將應用程式編碼成可識別運作中斷、異常狀況和連線失敗之類的問題，並從其中回復。 
 
 	  
 
@@ -566,40 +620,40 @@ cf push <appname>
   
   
 ## 在 {{site.data.keyword.Bluemix_notm}} 上找不到組織
-{: #ts_push}
+{: #ts_orgs}
 
-在使用 {{site.data.keyword.Bluemix_notm}} 區域時，可能找不到 {{site.data.keyword.Bluemix_notm}} 上的組織。
+在使用 {{site.data.keyword.Bluemix_notm}} 地區時，可能找不到 {{site.data.keyword.Bluemix_notm}} 上的組織。
   
  
 
 您可以順利登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，但無法利用 cf 指令行介面或 Eclipse 外掛程式推送應用程式。
 {: tsSymptoms}
 
-當您嘗試使用 cf 指令行介面將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，看到下列其中一個錯誤訊息，且在訊息中指定了組織名稱： 
+嘗試使用 cf 指令行介面將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列其中一則錯誤訊息，且訊息中指定了組織名稱： 
 
 `尋找組織時發生錯誤`
 
 `找不到組織`
 
 
-當您嘗試使用 Cloud Foundry Eclipse 外掛程式將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，看到下列錯誤訊息：
+嘗試使用 Cloud Foundry Eclipse 外掛程式將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 
 `找不到 cloudspace。`
 
 
 
-這個問題的發生原因是未指定您要使用之區域的 API 端點，而您在尋找的組織可能在不同的區域中。
+這個問題的發生原因是未指定您要使用之地區的 API 端點，而您在尋找的組織可能在不同的地區中。
 {: tsCauses} 
 
    
   
-如果您使用 cf 指令行介面將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，請輸入 cf api 指令，並指定區域的 API 端點。例如，輸入下列指令以連接 {{site.data.keyword.Bluemix_notm}} 歐洲英國區域：
+如果您使用 cf 指令行介面將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，請輸入 cf api 指令，並指定地區的 API 端點。例如，輸入下列指令以連接 {{site.data.keyword.Bluemix_notm}} 歐洲英國地區：
 {: tsResolve}
 
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 區域的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}。  
+如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 地區的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}。  
   
   
 
@@ -611,7 +665,7 @@ cf api https://api.eu-gb.bluemix.net
 
 
 
-將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您會看到下列錯誤訊息：
+將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
@@ -643,7 +697,7 @@ cf api https://api.eu-gb.bluemix.net
 	
 
 
-使用 `cf push` 指令將 WAR 應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，您會看到此錯誤訊息：`編譯打包錯誤：無法取得實例，因為編譯打包失敗。`
+使用 `cf push` 指令將 WAR 應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，您看到此錯誤訊息：`編譯打包錯誤：無法取得實例，因為編譯打包失敗。`
 {: tsSymptoms} 
 
  
@@ -653,7 +707,7 @@ cf api https://api.eu-gb.bluemix.net
 
  	
 	
-使用 **-p** 選項來指定 WAR 檔，或新增 WAR 檔的路徑。例如：
+請使用 **-p** 選項來指定 WAR 檔，或新增 WAR 檔的路徑。例如：
 {: tsResolve}
 
 ```
@@ -756,7 +810,7 @@ cf push MyUniqueAppName02 -p "./app.war"
   ...
         ```
 
-  * 確定 `package.json` 檔案存在於您的 Node.js 應用程式中，以讓 Node.js 建置套件能辨識應用程式。此外，您必須將這個檔案放在應用程式的根目錄。下列範例顯示簡單 `package.json` 檔案：
+  * 確定 `package.json` 檔案存在於您的 Node.js 應用程式中，以讓 Node.js 建置套件能辨識應用程式。此外，您必須將這個檔案放在應用程式的根目錄。下列範例顯示簡單的 `package.json` 檔案：
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -808,7 +862,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-使用自訂建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您會看到此錯誤訊息：`無法編譯打包應用程式，因此沒有可顯示的實例。`
+使用自訂建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您看到此錯誤訊息：`無法編譯打包應用程式，因此沒有可顯示的實例。`
 {: tsSymptoms} 
 
 
@@ -894,7 +948,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-您按一下**部署至 Bluemix** 按鈕，但**建立專案**步驟未順利完成。
+您按一下**部署至 Bluemix** 按鈕，但「建立專案」步驟未順利完成。
 {: tsSymptoms} 
 
 
@@ -915,7 +969,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-您按一下**部署至 Bluemix** 按鈕，但是在 DevOps Services 中找不到且無法複製 Git 儲存庫。**複製儲存庫**步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
+您按一下**部署至 Bluemix** 按鈕，但是在 DevOps Services 中找不到且無法複製 Git 儲存庫。「複製儲存庫」步驟未順利完成。因此，無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 {: tsSymptoms} 
 
 此問題的可能發生原因如下：
@@ -929,8 +983,8 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * 驗證您的 Git 儲存庫已存在、可公開存取，而且 URL 正確無誤。
-  * 驗證 Snippet 沒有包含任何 HTML 或 Markdown 錯誤。
-  * 如果特殊字元、查詢參數或片段導致 Git 儲存庫的 URL 發生問題，請在按鈕 Snippet 中將 URL 編碼。
+  * 驗證 Snippet 未包含任何 HTML 或 Markdown 錯誤。
+  * 如果特殊字元、查詢參數或片段導致 Git 儲存庫 URL 發生問題，請在按鈕 Snippet 中將 URL 編碼。
   
 
   
@@ -942,17 +996,17 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
      
 
 
-您按一下**部署至 Bluemix** 按鈕，且已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 {{site.data.keyword.Bluemix_notm}}。**部署至 Bluemix** 步驟未順利完成。
+您按一下**部署至 Bluemix** 按鈕，且已在 DevOps Services 中複製 Git 儲存庫，但應用程式未部署至 {{site.data.keyword.Bluemix_notm}}。「部署至 Bluemix」步驟未順利完成。
 {: tsSymptoms} 
 
 此問題的可能發生原因如下：
 {: tsCauses}  
 
   * 可能是您的 {{site.data.keyword.Bluemix_notm}} 空間中沒有足夠的空間可以部署應用程式。 
-  * manifest.yml 檔案中可能未宣告必要的服務。
-  * manifest.yml 檔案中可能有宣告必要的服務，但是該服務已在目標空間中。
+  * `manifest.yml` 檔案中可能未宣告必要的服務。
+  * `manifest.yml` 檔案中可能宣告必要的服務，但是該服務已在目標空間中。
   * 可能是儲存庫中的程式碼有問題。若要診斷此問題，請檢閱部署所產生的建置和部署日誌：
-  1. 當**部署至 Bluemix** 步驟未順利完成時，請按一下先前配置管線步驟中的鏈結，以開啟 Delivery Pipeline。
+  1. 當「部署至 Bluemix」步驟未順利完成時，請按一下先前「配置管線」步驟中的鏈結，以開啟 Delivery Pipeline。
   2. 識別失敗的建置或部署編譯打包。
   3. 在失敗的編譯打包中，按一下**檢視日誌及歷程**。
   4. 尋找錯誤訊息。
@@ -961,7 +1015,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * 如果錯誤訊息指出 {{site.data.keyword.Bluemix_notm}} 空間中沒有足夠的空間可以部署應用程式，請以其他空間作為目標。
-  * 如果錯誤訊息指出 manifest.yml 檔案中未宣告必要的服務，請通知儲存庫擁有者必須新增必要的服務。
+  * 如果錯誤訊息指出 `manifest.yml` 檔案中未宣告必要的服務，請通知儲存庫擁有者必須新增必要的服務。
   * 如果錯誤訊息指出目標空間中已經有必要的服務，請選取其他的空間來使用。
   * 如果錯誤訊息指出建置有問題，請修正導致無法建置應用程式的任何程式碼問題。若要驗證程式碼沒有任何問題，請使用 Git 指令來建置程式碼：
     1. 複製 Git 儲存庫：
@@ -998,19 +1052,18 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 管理帳戶疑難排解
 {: #managingaccounts}
 
-您可能會在管理帳戶時遭遇問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中恢復正常。
+您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
 ## 帳戶處於非作用中
 {: #ts_accnt_inactive}
 
-如果帳戶處於非作用中，則您無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。您必須與 ID 支援團隊聯絡以修正此問題。
+如果帳戶處於非作用中，則您無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。您必須與支援團隊聯絡以修正此問題。
 
 
 
-
-當您嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，看到下列錯誤訊息：
+嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
 `BXNUI0096E: 無法建立應用程式。您的帳戶處於非作用中，因為它已遭到取消或暫停。`
@@ -1021,12 +1074,11 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-若要重新啟動您的帳戶，請傳送電子郵件至 [ID 支援](mailto:id@bluemix.net)。在電子郵件中，您必須包含下列資訊：
+若要重新啟動您的帳戶，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport.com){: new_window}聯絡。在電子郵件中，您必須包含下列資訊：
 {: tsResolve}
 
   * 您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。
-  * 您的應用程式建立所在的組織名稱。此資訊可幫助 ID 支援團隊判斷您是否已在組織內被指派正確的角色或成員資格。
-
+  * 您的應用程式建立所在的組織名稱。此資訊可幫助支援團隊判斷您是否已在組織內獲指派正確的角色或成員資格。
 
 
 
@@ -1037,11 +1089,11 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-當您嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，看到下列錯誤訊息：
+嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
 
-`BXNUI0097E: 無法新增應用程式。沒有與現行組織及區域相關聯的空間。在「儀表板」上，按一下「建立空間」。建立空間後，請重試。`
+`BXNUI0097E: 無法新增應用程式。沒有與現行組織及地區相關聯的空間。在「儀表板」上，按一下「建立空間」。建立空間後，請重試。`
 
 
 
@@ -1073,7 +1125,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此練習來達到應用程式升級的零關閉時間。如需相關資訊，請參閱藍綠部署。
+這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零關閉時間。如需相關資訊，請參閱藍綠部署。
 {: tsResolve}
   
 	
@@ -1114,7 +1166,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 執行時期疑難排解
 {: #runtimes}
 
-您在使用 IBM® Bluemix™ 執行時期時可能遭遇問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中恢復正常。
+您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
 
@@ -1140,7 +1192,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * [Cloud Foundry Java 建置套件](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
-  * [Cloud Foundry Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載節點模組，請在 cf 指令行介面中，鍵入下列指令：
+  * [Cloud Foundry Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載 node 模組，請在 cf 指令行介面中，鍵入下列指令：
 ```
   set NODE_MODULES_CACHE=false
   ```
@@ -1353,7 +1405,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  
 
-您會在應用程式的日誌中看到`已超出磁碟限額`訊息。
+您在應用程式的日誌中看到`已超出磁碟限額`訊息。
 {: tsSymptoms}
 
 
@@ -1361,7 +1413,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 此問題是下列其中一個原因所導致：
 {: tsCauses} 
 
-  * 傾出檔案是與執行中應用程式實例一起產生，而且檔案會耗盡配置的磁碟限額。一個應用程式實例的磁碟限額預設為 1 GB。您可以按一下**儀表板>應用程式>應用程式執行時期**，來檢查您的磁碟使用情形。下列範例顯示兩個應用程式實例的執行時期資訊（包括磁碟使用情形）：
+  * 傾出檔案是與執行中應用程式實例一起產生，而且檔案會耗盡配置的磁碟限額。一個應用程式實例的磁碟限額預設為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式執行時期**，來檢查您的磁碟使用情形。下列範例顯示兩個應用程式實例的執行時期資訊（包括磁碟使用情形）：
 ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
@@ -1384,7 +1436,6 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	
 	
-
 
 
 

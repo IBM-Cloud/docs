@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} 的词汇表术语 
 {: #glossary}
 
-*上次更新时间：2015 年 11 月 5 日*
+*上次更新时间：2015 年 12 月 7 日*
 
 本词汇表提供了 {{site.data.keyword.Bluemix}} 的术语和定义。{:shortdesc}
 
@@ -101,11 +101,13 @@
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd">请参阅<a class="xref" href="#gloss_C__x2016383">认证中心 (certificate authority)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd">请参阅<a class="xref" href="#gloss_C__x2016783">密码分组链接 (cipher block chaining)</a>。</dd>
+<dd class="dd">请参阅<a class="xref" href="#gloss_C__x2016383">认证中心 (certificate authority)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd">请参阅<a class="xref" href="#gloss_C__x7233913">持续交付 (continuous delivery)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>认证中心 (certificate authority, CA)</dt>
 <dd class="dd">发放数字证书的第三方可信组织或公司。认证中心通常会对被授予唯一证书的个人进行身份验证。另请参阅<a class="xref" href="#gloss_I__x3753781">中间证书 (intermediate certificate)</a>、<a class="xref" href="#gloss_S__x2038004">安全套接字层 (Secure Sockets Layer)</a> 和<a class="xref" href="#gloss_T__x2042234">可信根 (trusted root)</a>。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>证书签名请求 (certificate signing request, CSR）</dt>
+<dd class="dd">组织为了获取证书而向认证中心 (CA) 发送的电子消息。该请求是使用专用密钥进行签名的，其中包含公用密钥；CA 会使用其自己的专用密钥对证书进行签名，然后返回证书。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>变更集 (change set)</dt>
 <dd class="dd">对工作空间或流中的工件所进行的一组相关更改。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>密码分组链接 (cipher block chaining, CBC)</dt>
@@ -138,6 +140,8 @@
 <dd class="dd">一种软件开发实践，其利用持续测试、持续集成和持续部署等方法，使新功能和修订能够以低风险迅速打包并部署到测试环境，然后再部署给客户。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>凭证 (credential)</dt>
 <dd class="dd">认证期间获取的信息，其中描述用户、组织机构或其他与安全性相关的身份属性，用于执行授权、审计或委派等服务。例如，用户标识和密码就是允许访问网络和系统资源的凭证。</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd">请参阅<a class="xref" href="#gloss_C__x3530521">证书签名请求 (certificate signing request)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>定制域 (custom domain)</dt>
 <dd class="dd">由用户选择的 URL 的定制部分，用于将请求定向到应用程序。定制域是路径的一部分。定制域可以是共享域、共享子域或共享域和主机。另请参阅<a class="xref" href="#gloss_D__x2021210">域 (domain)</a>、<a class="xref" href="#gloss_H__x2002243">主机 (host)</a>、<a class="xref" href="#gloss_R__x2037338">路径 (route)</a>、<a class="xref" href="#gloss_S__x2040080">子域 (subdomain)</a> 和<a class="xref" href="#gloss_U__x2042491">统一资源定位符 (Uniform Resource Locator)</a>。</dd>
 </dl>

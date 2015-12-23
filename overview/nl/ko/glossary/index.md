@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}}의 용어집 용어
 {: #glossary}
 
-*마지막 업데이트 날짜: 2015년 11월 5일*
+*마지막 업데이트 날짜: 2015년 12월 7일*
 
 이 용어집은 {{site.data.keyword.Bluemix}}에 대한 용어 및 정의를 제공합니다.
 {:shortdesc}
@@ -236,11 +236,13 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x2016383">인증 기관</a>을 참조하십시오. </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd"><a class="xref" href="#gloss_C__x2016783">CBC(Cipher Block Chaining)</a>를 참조하십시오.</dd>
+<dd class="dd"><a class="xref" href="#gloss_C__x2016383">인증 기관</a>을 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x7233913">지속적 딜리버리</a>를 참조하십시오. </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>인증 기관(CA, certificate authority)</dt>
 <dd class="dd">디지털 인증서를 발급하는 신뢰할 수 있는 써드파티 조직 또는 회사입니다. 인증 기관은 일반적으로 고유한 인증서가 부여되는 개인의 ID를 확인합니다. <a class="xref" href="#gloss_I__x3753781">중간 인증서</a>, <a class="xref" href="#gloss_S__x2038004">SSL(Secure Sockets Layer)</a>, <a class="xref" href="#gloss_T__x2042234">신뢰할 수 있는 루트</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>인증서 서명 요청(CSR)</dt>
+<dd class="dd">인증서를 확보하기 위해 조직이 인증 기관(CA)에 전송하는 전자 메시지입니다. 요청에는 공개 키가 포함되어 있고 개인 키로 서명됩니다. CA는 자체 개인 키로 서명된 후 인증서를 리턴합니다.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>변경 세트(change set)</dt>
 <dd class="dd">작업공간 또는 스트림 내의 아티팩트와 관련된 변경사항의 그룹입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>CBC(Cipher Block Chaining)</dt>
@@ -264,8 +266,8 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>컴포넌트(component)</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">소스 제어 관리에서 스트림 또는 저장소 작업공간 내의 관련 아티팩트의 그룹화입니다. 컴포넌트는 임의의 수의 폴더와 파일을 포함할 수 있습니다. </li>
-<li class="li">구성 관리에서 재사용 가능한 엔지니어링 아티팩트 세트에 대한 조직 단위입니다. 컴포넌트는 종종 프로젝트 영역에 해당됩니다. 글로벌
-                  구성은 컴포넌트 내에 있습니다. <a class="xref" href="#gloss_A__x2262995">아티팩트</a>도 참조하십시오. </li>
+<li class="li">구성 관리에서 재사용 가능한 엔지니어링 아티팩트 세트에 대한 조직 단위입니다. 컴포넌트는 종종 프로젝트 영역에 해당됩니다.
+글로벌 구성은 컴포넌트 내에 있습니다. <a class="xref" href="#gloss_A__x2262995">아티팩트</a>도 참조하십시오. </li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>컨테이너(container)</dt>

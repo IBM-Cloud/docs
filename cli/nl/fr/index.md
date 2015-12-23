@@ -11,7 +11,7 @@
 Outils puissants pour {{site.data.keyword.Bluemix_short}}.
 {:shortdesc}
 
-## ![Interfaces de ligne de commande](./images/CLI.png) Interfaces de ligne de commande 
+## ![Interfaces de ligne de commande](./images/CLI.png) Interfaces de ligne de commande
 {: #downloads}
 
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
@@ -30,14 +30,14 @@ d'installation Mac](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){:
 
 ## ![Plug-in d'interface de ligne de commande](./images/CLI_Plugin.png) Plug-in d'interface de ligne de commande
 
-
 Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder
 aux plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir le
 [référentiel de plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://plugins.{DomainName}/){: new_window}.
 
 1. Pour installer des plug-in d'interface de ligne de commande cf depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
 final du registre des
-plug-in :```
+plug-in :
+```
 cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 ```
 2. Exécutez la commande suivante pour installer un plug-in :
@@ -48,11 +48,12 @@ cf install-plugin nom_plug-in -r bluemix-cf-staging
 | *Active Deploy* |  *Mode développement* | 
 |-----------------|-----------------|
 | Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/index.html#cli) |  Nom du plug-in :
-development-name<br> [Afficher la documentation](./plugins/dev_mode/index.html) | 
+development-name <br> [Afficher la documentation](./plugins/dev_mode/index.html) | 
 
 ### Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} : bx 
 1. Pour installer des plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
-final du registre des plug-in :```
+final du registre des plug-in :
+```
 bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
 ```
 2. Exécutez la commande suivante pour installer un plug-in :
@@ -62,9 +63,9 @@ bluemix plugin install nom_plug-in -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
 |-----|
-| Nom du plug-in : ibm-containers <br> [Afficher la documentation](https://www.{{DomainName}}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| Nom du plug-in : ibm-containers <br> [Afficher la documentation](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
 
-## ![Outils de développement intégrés](./images/Integrated_Dev_Tools.png) Outils de développement intégrés 
+## ![Outils de développement intégrés](./images/Integrated_Dev_Tools.png) Outils de développement intégrés
 
 
 Téléchargez et installez des plug-in afin d'intégrer les services {{site.data.keyword.Bluemix_notm}} que
