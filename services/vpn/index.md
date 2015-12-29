@@ -1,12 +1,15 @@
+{:new_window: target="_blank"} 
+
 # Getting started with IBM VPN (Beta)
 
 IBM® Virtual Private Network (VPN) provides a secure communication channel between your corporate data center and your resources inside IBM cloud. The connection is established over the Internet. You can use IBM cloud as an extension of your corporate data center. 
 
-IBM VPN service is available to securely access container resources inside IBM cloud.  
+IBM VPN service is available to securely access IBM containers (Docker containers)inside IBM cloud.  
 
 The IBM VPN service offering is available at: IBM Bluemix® > Catalog > Services > Network. 
 
 ### To use IBM VPN service:
+{: #ibm-vpn}
 
 1. Open IBM Bluemix > Catalog > Services > Network. You will see the available network services.
 2. Select **VPN**. You will see the VPN service description, available plans, and pricing details. 
@@ -19,6 +22,7 @@ The IBM VPN service offering is available at: IBM Bluemix® > Catalog > Services
 Proceed with configuring the gateway, site connections, and the Internet Key Exchange (IKE) and IPSec policies. See also: [Configuration at Your Data Center](index.html#yourdatacenter) 
 
 #### Gateway Configuration
+{: #gateway}
 ![Gateway Configuration](images/gateway.png)
 
 Configure the gateway as follows:  
@@ -28,6 +32,7 @@ Configure the gateway as follows:
 3. Select **SAVE**. 
 
 #### VPN Site Connection Configuration
+{: #site}
 ![Site Connection](images/siteconn.png)
 
 1. Select **ADD NEW**.
@@ -54,6 +59,7 @@ Configure the gateway as follows:
 Select the **IKE & IPSec Policies** tab.
 
 #####IKE Policy Configuration
+{: #ike}
 ![IKE Policy Configuration](images/ikepolicy.png)
 
 To configure IKE policy:
@@ -70,6 +76,7 @@ To configure IKE policy:
 3. Select **SAVE**.
 
 #####IPSec Policy Configuration
+{: #ipsec}
 ![IPSec Policy](images/ipsecpolicy.png)
 
 To configure IPSec policy:
@@ -147,10 +154,10 @@ You can manage the IBM VPN service by using graphical interface, command line in
 IBM lab has tested the following VPN gateway devices for interoperation with IBM VPN service:
 
 * Cisco Adaptive Security Appliance (ASA) Software Version 8.2(1) 
-* Brocade Vyatta 5415 vRouter 6.7 R7
-* Linux StrongSwan U5.1.2/K3.13.0-55-generic
-* Linux StrongSwan U5.2.2/K3.13.0-55-generic
-	
+* Brocade Vyatta 5415 vRouter 6.7 R7. [See configuration example](onpremises_gateway.html#vyatta){: new_window}
+* Linux StrongSwan U5.1.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
+* Linux StrongSwan U5.2.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
+
 In addition, an IPSec standards-compliant VPN gateway device from any other vendor is expected to work well with IBM VPN service.
 
 **2. How soon will a peer failure be detected?**
@@ -171,17 +178,32 @@ Use the Bluemix Secure Gateway service if you want to establish a secure connect
 
 **5. Can I use the IBM VPN service to access my containers and VMs inside Bluemix cloud by using their private IP addresses?**
  
-Currently, the IBM VPN service is available for accessing Bluemix containers only. 
+Currently, the IBM VPN service is available for accessing Bluemix containers only.
+
+**6. Can I define IBM VPN service at Bluemix Organization level?**
+
+Currently, the IBM VPN service is available only at the Bluemix Space level. If your Bluemix Organization has multiple Spaces, then a separate VPN service can be defined for each space.
+
+**7. How do I connect IBM VPN service with SoftLayer Gateway Appliance service (GaaS)?**
+
+You can build an IPSec tunnel to establish secure communication between IBM VPN service and SoftLayer GaaS. [See configuration example.](onpremises_gateway.html#gaas){: new_window}
+
 
 
 ># Related Links {:class="linklist"}
 >## API Reference {:id="api"}
->* [IBM VPN RESTful APIs](http://vpn-api-docs.mybluemix.net)
+>* [IBM VPN RESTful APIs](http://vpn-api-docs.mybluemix.net){: new_window}
 >
 ># Related Links {:class="linklist"}
 >## Related Links {:id="general"}
->* [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html)
->* [IBM VPN FAQs](index.html#faq)
+>* [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
+>* [IBM VPN FAQs](index.html#faq){: new_window}
+>
+># Related Links {:class="linklist"}
+>## Tutorials and Samples {:id="samples"}
+>* [On-premises strongSwan Gateway Configuration Example](onpremises_gateway.html#strongswan){: new_window}
+>* [On-premises Vyatta Gateway Configuration Example](onpremises_gateway.html#vyatta){: new_window}
+>* [On-premises SoftLayer Gateway Appliance Service (GaaS) Configuration Example](onpremises_gateway.html#gaas){: new_window}
 >
 >{:elementKind="article" id="rellinks"}
 
