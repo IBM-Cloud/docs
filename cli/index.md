@@ -6,9 +6,9 @@
 # CLI and Dev Tools
 {: #cli}
 
-*Last updated: 16 December 2015*
+*Last updated: 5 January 2016*
 
-Powerful tools for {{site.data.keyword.Bluemix_short}}.
+Powerful tools for {{site.data.keyword.Bluemix_short}} and download links.
 {:shortdesc}
 
 ## ![Command line interfaces](./images/CLI.png) Command line interfaces
