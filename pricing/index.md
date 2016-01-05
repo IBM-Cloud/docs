@@ -39,14 +39,14 @@
 # Pricing
 {: #pricing}
 
-*Last updated: 21 December 2015*
+*Last updated: 4 January 2016*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage details view for you to check the actual cost after you build your apps.
 {:shortdesc}
 
-## Free Trial
+## Free trial
 {: #trial}
-You can sign up for a free 30-day trial with your {{site.data.keyword.IBM}} id. During the trial, you can develop applications and use services on Bluemix.
+You can sign up for a free 30-day trial with your {{site.data.keyword.Bluemix_notm}} ID. During the trial, you can develop applications and use services on {{site.data.keyword.Bluemix_notm}}.
 
 Your account is provided with the following resources, free of charge:
 
@@ -56,7 +56,7 @@ Your account is provided with the following resources, free of charge:
 
 Your free trial expires 30 days after you sign up. After your 30-day trial expires, the applications in your account are stopped. You will not be able to sign up for another trial on {{site.data.keyword.Bluemix_notm}}. However, you can still access your account and the accounts that you are invited to. To restart your applications, you must either provide your credit card information for a Pay-As-You-Go account or create a Subscription account. After you convert your account, you can continue to use free compute and service allowances. You pay only for the usage of services, containers, and runtimes that is not included as part of your free monthly allowance.
 
-If you do not convert your account after your free trial expires, you will receive email notifications about your account status after the trial expires. The notifications remind you to create your pay account so that your application settings and configurations will not be lost. If you do not want to receive these notifications from {{site.data.keyword.Bluemix_notm}}, you can unsubscribe at anytime.
+If you do not convert your account after your free trial expires, you will receive email notifications about your account status after the trial expires. The notifications remind you to create your pay account so that your application settings and configurations will not be lost. If you do not want to receive these notifications from {{site.data.keyword.Bluemix_notm}}, you can unsubscribe at any time.
 One month after the trial expiration, your applications and service configurations are removed. The following figure shows the general process of {{site.data.keyword.Bluemix_notm}} account management.
 
 
@@ -88,7 +88,7 @@ The resources or capabilities vary depending on the particular code, but can inc
 * Use premium service plans
 
 **Note:** You can apply multiple promo codes to your account. Each promo code can be redeemed only once before the expiration date of the code.
-To use a promo code, click the **Profile Settings** icon, select **Account**, then click **Account Type** in the {{site.data.keyword.Bluemix_notm}}x user interface.
+To use a promo code, click the **Profile Settings** icon, select **Account**, then click **Account Type** in the {{site.data.keyword.Bluemix_notm}} user interface.
 
 ##How you are billed
 {: #pay-accounts}
@@ -112,7 +112,7 @@ If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you a
 
 If you sign up for a Pay-As-You-Go account, you pay only for the {{site.data.keyword.Bluemix_notm}} resources that you use. You are also eligible for free runtime and service allowances.
 
-In many countries, you can sign up for a Pay-As-You-Go account from the {{site.data.keyword.Bluemix_notm}} user interface. Click the **Free Trial** icon, then click **Confirm Your Free Account** and select **Option 1**. Enter your country and click **add my credit card** to provide your credit card information. After you provide your billing and credit card information, accept the terms and conditions, and submit your account request, your credit card will be validated. A confirmation email of the account information is also sent. A few minutes after you receive the confirmation email, you can return to {{site.data.keyword.Bluemix_notm}} to continue building your apps. If {{site.data.keyword.Bluemix_notm}} is unable to process your online request for your country, you can contact {{site.data.keyword.Bluemix_notm}} Sales, by using the link listed on the [Bluemix Contact Us](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) page to sign up your Pay-As-You-Go account.
+In many countries and regions, you can sign up for a Pay-As-You-Go account from the {{site.data.keyword.Bluemix_notm}} user interface. Click the **Free Trial** icon, then click **Confirm Your Free Account** and select **Option 1**. Enter your country or region and click **Add Credit Card** to provide your credit card information. After you provide your billing and credit card information, accept the terms and conditions, and submit your account request, your credit card will be validated. A confirmation email of the account information is also sent. A few minutes after you receive the confirmation email, you can return to {{site.data.keyword.Bluemix_notm}} to continue building your apps. If {{site.data.keyword.Bluemix_notm}} is unable to process your online request for your country or region, you can contact {{site.data.keyword.Bluemix_notm}} Sales, by using the link listed on the [Bluemix Contact Us](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) page, to sign up for your Pay-As-You-Go account.
 
 You can convert your Pay-As-You-Go account to a Subscription account at any time. With a Subscription account, you commit to spending a minimum amount each month. If you want to convert to a Subscription account, contact {{site.data.keyword.Bluemix_notm}} Sales, by using the link listed on the [Bluemix Contact Us](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) page.
 
