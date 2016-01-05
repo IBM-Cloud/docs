@@ -58,11 +58,13 @@ you are not already.
 <ol>
 <li>To connect to the {{site.data.keyword.Bluemix_notm}}> API endpoint, run the following command:<br/><br/>
 <code>
-cf api https://api.&lt;subdomain&gt;.bluemix.net
+cf bluemix-admin-api https://api.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance.</dd>
+<dd class="pd">Subdomain of the URL for your {{site.data.keyword.Bluemix_notm}} instance.<br />
+<p>**Tip:** You can also use **baa** as an alias for the longer
+**bluemix-admin-api** command name.</dd>
 </dl>
 <p>You can check the Admin Console Resources and Information page for the
 correct URL. The URL is shown in the API Information section in the **API URL**
@@ -81,7 +83,7 @@ You can add a user to your
 {{site.data.keyword.Bluemix_notm}} environment from
 an LDAP registry. Enter the following command:
 
-`cf ba add-user <user_name> <organization>`
+`cf bluemix-admin-add-user <user_name> <organization>`
 {: codeblock}
 
 <dl class="parml">
@@ -91,8 +93,8 @@ an LDAP registry. Enter the following command:
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add the user to.</dd>
 </dl>
 
-**Tip:** You can also use **ba au** as an alias for the longer
-**ba add-user** command name.
+**Tip:** You can also use **baau** as an alias for the longer
+**bluemix-admin-add-user** command name.
 
 ### Removing a user
 
@@ -100,7 +102,7 @@ You can remove a user from your
 {{site.data.keyword.Bluemix_notm}} environment by
 entering the following command:
 
-`cf ba remove-user <user_name>`
+`cf bluemix-admin-remove-user <user_name>`
 {: codeblock}
 
 <dl class="parml">
@@ -110,8 +112,8 @@ entering the following command:
 
 </dl>
 
-**Tip:** You can also use **ba ru** as an alias for the longer
-**ba remove-user** command name.
+**Tip:** You can also use **baru** as an alias for the longer
+**bluemix-admin-remove-user** command name.
 
 ### Adding and deleting an organization
 
@@ -119,7 +121,7 @@ You can add and delete an organization.
 
 * To add an organization, enter the following command:
 
-`cf ba create-organization <organization> <manager>`
+`cf bluemix-admin-create-organization <organization> <manager>`
 {: codeblock}
 
 <dl class="parml">
@@ -129,12 +131,12 @@ You can add and delete an organization.
 <dd class="pd">The user name of the manager for the org.</dd>
 </dl>
 
-**Tip:** You can also use **ba co** as an alias for the longer
-**ba create-organization** command name.
+**Tip:** You can also use **baco** as an alias for the longer
+**bluemix-admin-create-organization** command name.
 
 * To delete an organization, enter the following command:
 
-`cf ba delete-organization <organization>`
+`cf bluemix-admin-delete-organization <organization>`
 {: codeblock}
 
 <dl class="parml">
@@ -142,8 +144,8 @@ You can add and delete an organization.
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to delete.</dd>
 </dl>
 
-**Tip:** You can also use **ba do** as an alias for the longer
-**ba create-organization** command name.
+**Tip:** You can also use **bado** as an alias for the longer
+**bluemix-admin-create-organization** command name.
 
 ### Assigning a user to an organization
 
@@ -151,7 +153,7 @@ You can assign a user in your
 {{site.data.keyword.Bluemix_notm}} environment to a
 particular organization. Enter the following command:
 
-`cf ba set-org <user_name> <organization> [<role>]`
+`cf bluemix-admin-set-org <user_name> <organization> [<role>]`
 {: codeblock}
 
 <dl class="parml">
@@ -165,8 +167,8 @@ particular organization. Enter the following command:
 descriptions.</dd>
 </dl>
 
-**Tip:** You can also use **ba so** as an alias for the longer
-**ba set-org** command name.
+**Tip:** You can also use **baso** as an alias for the longer
+**bluemix-admin-set-org** command name.
 
 ### Unassigning a user from an organization
 
@@ -174,7 +176,7 @@ You can unassign a user in your
 {{site.data.keyword.Bluemix_notm}} environment from a
 particular organization. Enter the following command:
 
-`cf ba unset-org <user_name> <organization> [<role>]`
+`cf bluemix-admin-unset-org <user_name> <organization> [<role>]`
 {: codeblock}
 
 <dl class="parml">
@@ -188,8 +190,8 @@ particular organization. Enter the following command:
 descriptions.</dd>
 </dl>
 
-**Tip:** You can also use **ba uo** as an alias for the longer
-**ba unset-org** command name.
+**Tip:** You can also use **bauo** as an alias for the longer
+**bluemix-admin-unset-org** command name.
 
 ### Roles
 
@@ -214,7 +216,7 @@ space.</dd>
 
 You can set the usage quota for a particular organization.
 
-`cf ba set-quota <organization> <plan>`
+`cf bluemix-admin-set-quota <organization> <plan>`
 {: codeblock}
 
 <dl class="parml">
@@ -224,15 +226,15 @@ You can set the usage quota for a particular organization.
 <dd class="pd">The quota plan for an organization.</dd>
 </dl>
 
-**Tip:** You can also use **ba sq** as an alias for the longer
-**ba set-quota** command name.
+**Tip:** You can also use **basq** as an alias for the longer
+**bluemix-admin-set-quota** command name.
 
 ### Adding, deleting, and retrieving reports
 
 You can add, delete, and retrieve security reports.
 * To add a report, enter the following command:
 
-`cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>`
+`cf bluemix-admin-add-report <category> <date> <PDF|TXT|LOG> <RTF>`
 {: codeblock}
 
 <dl class="parml">
@@ -248,12 +250,12 @@ name.</dd>
 you included a path to the report PDF. The RTF version is used for indexing and searching.</dd>
 </dl>
 
-**Tip:** You can also use **ba ar** as an alias for the longer
-**ba add-report** command name.
+**Tip:** You can also use **baar** as an alias for the longer
+**bluemix-admin-add-report** command name.
 
 * To delete a report, enter the following command:
 
-`cf ba delete-report <category> <date> <name>`
+`cf bluemix-admin-delete-report <category> <date> <name>`
 {: codeblock}
 
 <dl class="parml">
@@ -266,12 +268,12 @@ name.</dd>
 <dd class="pd">The name of the report.</dd>
 </dl>
 
-**Tip:** You can also use **ba dr** as an alias for the longer
-**ba delete-report** command name.
+**Tip:** You can also use **badr** as an alias for the longer
+**bluemix-admin-delete-report** command name.
 
 * To retrieve a report, enter the following command:
 
-`cf ba retrieve-report <category> <date> <name>`
+`cf bluemix-admin-retrieve-report <category> <date> <name>`
 {: codeblock}
 
 <dl class="parml">
@@ -284,7 +286,7 @@ name.</dd>
 <dd class="pd">The name of the report.</dd>
 </dl>
 
-**Tip:** You can also use **ba rr** as an alias for the longer **ba retrieve-report** command name.
+**Tip:** You can also use **barr** as an alias for the longer **bluemix-admin-retrieve-report** command name.
 
 ### Enabling and disabling services for all organizations
 
@@ -295,7 +297,7 @@ You can enable or disable a service from being displayed in the
 {{site.data.keyword.Bluemix_notm}} Catalog for all
 organizations, enter the following command:
 
-`cf ba enable-service-plan <plan_identifier>`
+`cf bluemix-admin-enable-service-plan <plan_identifier>`
 {: codeblock}
 
 <dl class="parml">
@@ -304,14 +306,14 @@ organizations, enter the following command:
 you are prompted with service plans to choose from.</dd>
 </dl>
 
-**Tip:** You can also use **ba esp** as an alias for the longer
-**ba enable-service-plan** command name.
+**Tip:** You can also use **baesp** as an alias for the longer
+**bluemix-admin-enable-service-plan** command name.
 
 * To disable a service from being visible in the
 {{site.data.keyword.Bluemix_notm}} Catalog for all
 organizations, enter the following command:
 
-`cf ba disable-service-plan <plan_identifier>`
+`cf bluemix-admin-disable-service-plan <plan_identifier>`
 {: codeblock}
 
 <dl class="parml">
@@ -320,8 +322,8 @@ organizations, enter the following command:
 name, you are prompted with service plans to choose from.</dd>
 </dl>
 
-**Tip:** You can also use **ba dsp** as an alias for the longer
-**ba disable-service-plan** command name.
+**Tip:** You can also use **badsp** as an alias for the longer
+**bluemix-admin-disable-service-plan** command name.
 
 ### Adding, removing, and editing service visibility for organizations
 
@@ -333,7 +335,7 @@ organizations can see in the {{site.data.keyword.Bluemix_notm}} Catalog.
 {{site.data.keyword.Bluemix_notm}} Catalog, enter the
 following command:
 
-`cf ba add-service-plan-visibility <plan_identifier> <organization>`
+`cf bluemix-admin-add-service-plan-visibility <plan_identifier> <organization>`
 {: codeblock}
 
 <dl class="parml">
@@ -344,14 +346,14 @@ service name, you are prompted with service plans to choose from.</dd>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add to the service's visibility list.</dd>
 </dl>
 
-**Tip:** You can also use **ba aspv** as an alias for the longer
-**ba add-service-plan-visibility** command name.
+**Tip:** You can also use **baaspv** as an alias for the longer
+**bluemix-admin-add-service-plan-visibility** command name.
 
 * To remove the visibility of a service in the
 {{site.data.keyword.Bluemix_notm}} Catalog for an
 organization, enter the following command:
 
-`cf ba remove-service-plan-visibility <plan_identifier> <organization>`
+`cf bluemix-admin-remove-service-plan-visibility <plan_identifier> <organization>`
 {: codeblock}
 
 <dl class="parml">
@@ -362,13 +364,13 @@ non-unique service name, you are prompted with service plans to choose from.</dd
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to remove from the service's visibility list.</dd>
 </dl>
 
-**Tip:** You can also use **ba rspv** as an alias for the longer
-**ba remove-service-plan-visibility** command name.
+**Tip:** You can also use **barspv** as an alias for the longer
+**bluemix-admin-remove-service-plan-visibility** command name.
 
 * To replace all existing visible services for an organization or multiple organizations, use the
 following command:
 
-`cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>`
+`cf bluemix-admin-edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>`
 {: codeblock}
 
 **Note:** This
@@ -384,5 +386,5 @@ name, you are prompted with service plans to choose from.</dd>
 one organization by entering additional organization names or GUIDs in the command.</dd>
 </dl>
 
-**Tip:** You can also use **ba espv** as an alias for the longer
-**ba edit-service-plan-visibility** command name.
+**Tip:** You can also use **baespv** as an alias for the longer
+**bluemix-admin-edit-service-plan-visibility** command name.

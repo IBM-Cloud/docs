@@ -6,7 +6,7 @@
 #Updating apps
 {: #updatingapps}
 
-*Last updated: 4 December 2015*
+*Last updated: 8 December 2015*
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
@@ -78,7 +78,6 @@ In a browser or command line interface, enter the following URL to access the my
 ```
 http://host_name.mydomain
 ```
-{:codeblock}
 
 **Note:** To remove an orphaned route, use the following command:
 

@@ -107,7 +107,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dd class="dd">See <a class="xref" href="#gloss_C__x7233913">continuous delivery</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>certificate authority (CA)</dt>
 <dd class="dd">A trusted third-party organization or company that issues the digital certificates. The certificate authority typically verifies the identity of the individuals who are granted the unique certificate. See also <a class="xref" href="#gloss_I__x3753781">intermediate certificate</a>, <a class="xref" href="#gloss_S__x2038004">Secure Sockets Layer</a>, <a class="xref" href="#gloss_T__x2042234">trusted root</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_C__x3530521">certificate signing request (CSR)</dt>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>certificate signing request (CSR)</dt>
 <dd class="dd">An electronic message that an organization sends to a certificate authority (CA) to obtain a certificate. The request includes a public key and is signed with a private key; the CA returns the certificate after signing with its own private key.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>change set</dt>
 <dd class="dd">A group of related changes to artifacts in a workspace or stream.</dd>

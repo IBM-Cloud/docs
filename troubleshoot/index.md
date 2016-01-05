@@ -9,7 +9,7 @@
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -77,13 +77,13 @@ If your account is pending, you cannot log in to {{site.data.keyword.Bluemix_not
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you might not be able to log in to {{site.data.keyword.Bluemix_notm}}. Instead, you see the following message:
 {: tsSymptoms}
 
-`Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact id@bluemix.net to get help.`
+<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>.</code>
 
 
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [ID support](mailto:id@bluemix.net).
+The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -122,12 +122,12 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.png) in the upper right of the Dashboard, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the upper right of the Dashboard, and select **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
 
-  1. Contact [ID support](mailto:id@bluemix.net) to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
+  1. Contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
   2. After your account is deleted, have a user with the organization manager role invite you to the organization as an organization manager. Then, sign up for {{site.data.keyword.Bluemix_notm}} from the invitation. 
 
 
@@ -164,10 +164,10 @@ When you use the {{site.data.keyword.Bluemix_notm}} user interface, you might no
 You might see one of the following error messages when you use the {{site.data.keyword.Bluemix_notm}} user interface:
 {: tsSymptoms}
 
-`BXNUI0001E: Could not determine whether a session exists. Try to reload the browser.`
+`BXNUI0001E: The page wasn't loaded because Bluemix didn't detect whether a session exists.`
 
 
-`BXNUI0016E: Applications and services could not be retrieved.`
+`BXNUI0016E: The apps and services weren't retrieved because a Bluemix page didn't load.`
 
  
 
@@ -207,23 +207,6 @@ Use the side drawer menu in the upper left corner instead.
 
 
 
-## The {{site.data.keyword.Bluemix_notm}} Dashboard can't load apps or services
-{: #ts_dashboard}
-
-The {{site.data.keyword.Bluemix_notm}} Dashboard might not display any app or service information because your organization or space cannot access it. 
- 
-
-When you log into the {{site.data.keyword.Bluemix_notm}} user interface, there is nothing available on your Dashboard even though you have created apps and used some services before.
-{: tsSymptoms}
- 
-
-This problem might happen when you bind a service instance to your app, but the service is no longer accessible because the service privileges are changed for your organization or space. 
-{: tsCauses}
-  	
-
-To resolve the problem, type `cf services` in the cf command line interface to list your service instances and identify the service. Then, use the `cf delete-service` command to delete the service instance that is no longer accessible.
-{: tsResolve}
-
 
 
 
@@ -232,6 +215,7 @@ To resolve the problem, type `cf services` in the cf command line interface to l
 
 General problems with managing applications might include applications can't be updated, double-byte characters aren't displayed. However, in many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
+
 
 
 
@@ -264,8 +248,6 @@ To obtain the appropriate authority level, use one of the following methods:
  * Select another organization and space for which you have the developer role. 
  * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organization](../acctmgmt/index.html#mngorg){: new_window} for details.
  
-
-
 
  
 
@@ -300,7 +282,7 @@ For more information about the commands that you can use in other program langua
 ## Unable to deploy apps by using IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to Bluemix™ by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to {{site.data.keyword.Bluemix_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -444,7 +426,7 @@ If you are a trial account user, you might be unable to create an application in
 When you try to create an application in {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
 {: tsSymptoms}
 
-`BXNUI2032E: An error occurred when contacting Cloud Foundry to create a resource. Resource: service_instances. Cloud Foundry message: "You have exceeded your organization's services limit."`
+`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
 
 
@@ -622,7 +604,7 @@ Use one of the following methods to solve the problem:
   
   
   
-  
+ 
   
   
 
@@ -958,7 +940,7 @@ If you find that the DevOps Services project cannot be created, your IBM {{site.
 
 
 
-You click the **Deploy to Bluemix** button, but the **Creating project** step does not complete successfully.
+You click the **Deploy to Bluemix** button, but the "Creating project" step does not complete successfully.
 {: tsSymptoms} 
 
 
@@ -979,7 +961,7 @@ If you find that the Git repository is not cloned, an issue might exist with the
 
 
 
-You click the **Deploy to Bluemix** button, but the Git repository is not found and cannot be cloned in DevOps Services. The **Cloning repository** step does not complete successfully. Therefore, the app cannot be deployed to {{site.data.keyword.Bluemix_notm}}. 
+You click the **Deploy to Bluemix** button, but the Git repository is not found and cannot be cloned in DevOps Services. The "Cloning repository" step does not complete successfully. Therefore, the app cannot be deployed to {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 This problem might occur because of the following reasons:
@@ -993,8 +975,8 @@ Use one of the following methods to fix the problem:
 {: tsResolve}
 
   * Verify that your Git repository exists, is publicly accessible, and that the URL is correct.
-  * Verify that the snippet does not contain any HTML or markdown mistakes.
-  * If special characters, query parameters, or fragments cause an issue with the URL to the Git repository, encode the URL in the button snippet.
+  * Verify that the snippet does not contain any HTML or markdown errors.
+  * If special characters, query parameters, or fragments cause an issue with the Git repository URL, encode the URL in the button snippet.
   
 
   
@@ -1006,18 +988,18 @@ If you find that the app is not deployed, issues might exist with the code in th
      
 
 
-You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}. The **Deploying to Bluemix** step does not complete successfully.
+You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}. The "Deploying to Bluemix" step does not complete successfully.
 {: tsSymptoms} 
 
 This problem might occur because of the following reasons:
 {: tsCauses}  
 
   * There might not be enough space in your {{site.data.keyword.Bluemix_notm}} space to deploy an app. 
-  * A required service might not be declared in the manifest.yml file.
-  * A required service might be declared in the manifest.yml file, but the service is already in the target space.
+  * A required service might not be declared in the `manifest.yml` file.
+  * A required service might be declared in the `manifest.yml` file, but the service is already in the target space.
   * An issue might exist with the code in the repository.
 To diagnose the issue, review the build and deploy logs from the deployment:
-  1. When the **Deploying to Bluemix** step does not complete successfully, click the link in the previous Configuring pipeline step to open the Delivery Pipeline.
+  1. When the "Deploying to Bluemix" step does not complete successfully, click the link in the previous "Configuring pipeline" step to open the Delivery Pipeline.
   2. Identify the failed build or deploy stage.
   3. In the failed stage, click **View logs and history**.
   4. Locate the error message.
@@ -1026,7 +1008,7 @@ Use one of the following methods to fix the problem:
 {: tsResolve}
 
   * If the error message indicates that there is not enough space in the {{site.data.keyword.Bluemix_notm}} space to deploy the app, target another space.
-  * If the error message indicates that a required service is not declared in the manifest.yml file, notify the repository owner that the required service must be added.
+  * If the error message indicates that a required service is not declared in the `manifest.yml` file, notify the repository owner that the required service must be added.
   * If the error message indicates that a required service already exists in the target space, select a different space to use.
   * If the error message indicates that an issue exists with the build, fix any issues with the code that are preventing the app from being built. To verify that the code does not contain any issues, build the code by using Git commands:
     1. Clone the Git repository:
@@ -1070,14 +1052,14 @@ You might experience problems when you manage your account, such as different ap
 ## Account is inactive
 {: #ts_accnt_inactive}
 
-You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your account is inactive. You must contact the ID support team to fix this problem.
+You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your account is inactive. You must contact the support team to fix this problem.
 
 
 
 When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
 {: tsSymptoms} 
 
-`BXNUI0096E: The application could not be created. Your account is inactive because it was cancelled or suspended.`
+`BXNUI0096E: The app wasn't created. Your account is inactive because it was canceled or suspended.`
 
 
 The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive when the account is cancelled or suspended.
@@ -1085,11 +1067,11 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 
  
 
-To reactivate your account, send an email to [ID support](mailto:id@bluemix.net). In the email, you must include the following information:
+To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
   * The IBM ID that you use to log in to {{site.data.keyword.Bluemix_notm}}.
-  * The name of the organization in which your app is being created. This information can help the ID support team determine whether you are assigned the correct roles or membership within your organization.
+  * The name of the organization in which your app is being created. This information can help the support team determine whether you are assigned the correct roles or membership within your organization.
 
 
 
@@ -1104,7 +1086,7 @@ When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the
 {: tsSymptoms} 
 
 
-`BXNUI0097E: The new application could not be added. There is no space associated with the current organization and region. On the Dashboard, click Create a Space. When the space is created, try again.`
+`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click **Create a Space**. When the space is created, try again.`
 
 
 
@@ -1448,18 +1430,6 @@ You can resolve this issue by using one of the following methods:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

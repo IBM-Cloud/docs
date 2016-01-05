@@ -3,7 +3,7 @@
 # Web and Application
 {: #webapplication}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 Use these services to add or remove features rapidly while you develop web applications in the cloud. You can also simplify management tasks, and organize your business processes and rules. 
 {:shortdesc}

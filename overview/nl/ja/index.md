@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} の概要
 {: #overview}
 
-*最終更新日: 2015 年 10 月 15 日*
+*最終更新日: 2015 年 11 月 20 日*
 
 {{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。{:shortdesc}
 
@@ -54,7 +54,7 @@
 *図 1. {{site.data.keyword.Bluemix_notm}} アーキテクチャー*
 
 待ち時間またはセキュリティーを考慮して、アプリはさまざまな {{site.data.keyword.Bluemix_notm}} の地域にデプロイすることができます。1 つの地域にデプロイすることも、複数地域にまたがってデプロイすることも選択できます。
-詳しくは、『[地域](overview.html#ov_intro__reg)』を参照してください。
+詳しくは、『[地域](#ov_intro__reg)』を参照してください。
 
 ![複数地域のアプリケーション開発](images/multi-region.png)
 
@@ -172,16 +172,17 @@ Eclipse ツールの使用について詳しくは、「[Deploying apps with IBM
 
 | **地域名** | **地域接頭部** | **cf API エンドポイント** | **UI コンソール** |       
 |-----------------|-------------------|---------------------|----------------|
-| 米国南部地域 | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| ヨーロッパ・英国地域 | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| オーストラリア・シドニー地域 | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| 米国南部地域 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| ヨーロッパ・英国地域 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| オーストラリア・シドニー地域 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *表 1. {{site.data.keyword.Bluemix_notm}} の地域リスト*
 
 ### インフラストラクチャー
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}} では、コードを実行する方法として、Cloud Foundry、{{site.data.keyword.IBM_notm}} Containers、および仮想マシンという 3 つを提供しています。アプリをデプロイするための適切なインフラストラクチャーを選択することができます。
+{{site.data.keyword.Bluemix_notm}} では、コードを実行する方法として、Cloud Foundry、{{site.data.keyword.IBM_notm}} Containers、および Virtual Machines という 3 つを提供しています。{{site.data.keyword.IBM_notm}} Containers と Virtual Machines は、米国南部地域とヨーロッパ・英国地域のみで利用可能です。アプリをデプロイするための適切なインフラストラクチャーを選択することができます。 
 
 <dl>
 <dt>Cloud Foundry</dt>
@@ -279,7 +280,7 @@ buildpacks</span> コマンドを実行してください。</p>
  * セキュアな方法でデータベースを呼び出す。
  * データベースとカスタマー・リレーションシップ・マネジメント・システムなどのバックエンド・システムとの統合フローから API を作成する。
  * アプリに対して公開したいスキーマおよびテーブルのみを公開する。
- * {{site.data.keyword.Bluemix_notm}} 組織マネージャーとして、
+ * {{site.data.keyword.Bluemix_notm}} 組織管理者として、
 自分の組織メンバーのみに表示されるプライベート・サービスとして API を公開する。
 
 SoRを {{site.data.keyword.Bluemix_notm}} で作成するアプリと統合するには、Cloud Integration サービスを使用します。Cloud Integration サービスを使用すれば、Cloud Integration API を作成し、その API を組織のプライベート・サービスとして公開できます。
@@ -289,9 +290,9 @@ SoRを {{site.data.keyword.Bluemix_notm}} で作成するアプリと統合す�
     <dd>Cloud Integration API により、Web API を通してファイアウォールの後ろにある SoR への保護されたアクセスが提供されます。Cloud Integration API を作成する際には、Web API を通してアクセスしたいリソースを選択し、許可されたオペレーションを指定し、API にアクセスするための SDK とサンプルを組み込みます。Cloud Integration API の作成方法について詳しくは、『[Cloud Integration API の作成 (Creating Cloud Integration APIs)](../services/CloudIntegration/index.html#cloudint_add_service)』を参照してください。</dd>
 <dt>プライベート・サービス</dt>
     <dd>プライベート・サービスは、 Cloud Integration API、SDK、およびライセンス・ポリシーから構成されます。さらに、サービス・プロバイダーからのドキュメンテーションや他の項目がプライベート・サービスに含まれる場合もあります。
-Cloud Integration API をプライベート・サービスとして公開できるのは、組織マネージャーのみです。自分が利用できるプライベート・サービスを表示するには、{{site.data.keyword.Bluemix_notm}} カタログで「プライベート (Private)」チェック・ボックスを選択します。
+Cloud Integration API をプライベート・サービスとして公開できるのは、組織管理者のみです。自分が利用できるプライベート・サービスを表示するには、{{site.data.keyword.Bluemix_notm}} カタログで「プライベート (Private)」チェック・ボックスを選択します。
 Cloud Integration サービスに接続せずに、プライベート・サービスを選択してアプリにバインドすることができます。プライベート・サービスのアプリへのバインドは、他の {{site.data.keyword.Bluemix_notm}} サービスの場合と同じ方法で行います。プライベート・サービスとして API を公開する方法については、プライベート・サービスとしての API の公開を参照してください。</dd>
-	</dl>
+</dl>
 
 ### シナリオ: SoR と接続するための機能豊富なモバイル・アプリを作成する
 {: #scenario}
@@ -333,7 +334,7 @@ Cloud Integration サービスに接続せずに、プライベート・サー�
 * [{{site.data.keyword.Bluemix_notm}} の前提条件](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}} の新機能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} の既知の問題](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}} 用語集](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} 用語集](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

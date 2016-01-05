@@ -1,14 +1,12 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última atualização: 15 de outubro de 2015* 
+*Última atualização: 7 de dezembro de 2015*
 
 Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na
-rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} também
-fornece um conjunto de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus
-apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento
+rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento
 seguro do aplicativo.
 {:shortdesc}
 
@@ -16,7 +14,7 @@ O {{site.data.keyword.Bluemix_notm}} garante
 disponibilidade de segurança ao seguir as políticas de segurança que são orientadas por melhores práticas na IBM para sistemas, rede e engenharia segura. Essas políticas incluem
 práticas, como varredura do código-fonte, varredura dinâmica, modelagem de ameaça e teste de penetração. O
 {{site.data.keyword.Bluemix_notm}} segue o processo IBM Product
-Security Incident Response Team (PSIRT) para gerenciamento de incidentes de segurança. Consulte o site [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) para obter detalhes.
+Security Incident Response Team (PSIRT) para gerenciamento de incidentes de segurança. Consulte o site [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} para obter detalhes.
 
 Os {{site.data.keyword.Bluemix_notm}} Public e
 Dedicated usam o serviço de nuvem IBM SoftLayer
@@ -44,28 +42,26 @@ padrões incluem o seguinte: rede, criptografia de dados e controle de acesso
  * Resposta a incidentes de segurança
 
 ![Visão geral de
-segurança da plataforma Bluemix](images/platform_sec.png)
+segurança da plataforma Bluemix](images/platform_sec.svg)
 
 *Figura 1. Visão
 geral de segurança da
 plataforma {{site.data.keyword.Bluemix_notm}}*
 
-A segurança do
-{{site.data.keyword.Bluemix_notm}}
-Local difere porque você possui partes específicas de segurança
-hospedando o Bluemix no firewall de sua empresa e em seu
-datacenter. A seguinte imagem detalha quais partes da segurança são
+Com o {{site.data.keyword.Bluemix_notm}} Local, você hospeda o {{site.data.keyword.Bluemix_notm}} atrás do firewall de sua empresa e em seu datacenter. Portanto, você é responsável por determinados aspectos de segurança. A seguinte imagem detalha quais partes da segurança são
 de propriedade do cliente e quais partes de segurança são gerenciadas
 e mantidas pela IBM.
 
 ![Visão geral
 de segurança da plataforma Bluemix
-Local](images/security_local_platform.png)
+Local](images/security_local_platform.svg)
 
 *Figura 2. Visão
 geral de segurança da
 plataforma {{site.data.keyword.Bluemix_notm}}
 Local*
+
+A IBM instala, monitora remotamente e gerencia o {{site.data.keyword.Bluemix_notm}} Local em seu datacenter por meio de Retransmissão, um recurso de entrega incluído com o {{site.data.keyword.Bluemix_notm}} Local. A Retransmissão se conecta com segurança a certificados específicos de cada instância do {{site.data.keyword.Bluemix_notm}} Local. Para obter mais informações sobre o {{site.data.keyword.Bluemix_notm}} Local e Retransmissão, consulte [Bluemix Local](../local/index.html).
 
 ### Segurança funcional
 
@@ -77,6 +73,7 @@ autorização de acesso, auditoria de operações críticas e proteção de dado
 <dt>Autenticação</dt>
 <dd>Os desenvolvedores de aplicativos são autenticados no
 {{site.data.keyword.Bluemix_notm}} usando o IBM Web identity.
+
 Para {{site.data.keyword.Bluemix_notm}} Dedicado e Local,
 a autenticação por meio de LDAP é suportada por padrão. Sob solicitação, a autenticação por meio do
 IBM Web identity pode ser configurada em vez de {{site.data.keyword.Bluemix_notm}}.
@@ -359,7 +356,7 @@ O plug-in do IBM Application Security Testing for
 {{site.data.keyword.Bluemix_notm}} permite executar
 varreduras de segurança nos apps da web ou Android que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Esse plug-in é desenvolvido e suportado pela Comunidade do IBM UrbanCode™ Deploy na plataforma do IBM Bluemix DevOps Services.
 
-Para obter mais informações, acesse [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/).
+Para obter mais informações, acesse [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
 ### SQL Database
 
@@ -387,11 +384,11 @@ O plano completo para esse serviço também inclui criptografia de dados. Para o
 
 ### dashDB
 
-O serviço dashDB usa o IBM Directory Server LDAP para autenticação do usuário e o IBM InfoSphere Guardium Data Activity Monitor para proteger o banco de dados que é acessado por aplicativos. A conexão entre
+O serviço dashDB usa um servidor LDAP integrado para autenticação do usuário. A conexão entre
 os aplicativos e o banco de dados é protegida pelos certificados SSL. Esse serviço usa o recurso de criptografia nativa do DB2® para criptografar automaticamente seu banco de dados implementado e os backups de banco de dados. A rotação da chave mestra é automática
 e acontece a cada 90 dias.
 
-Para obter mais informações, consulte [Introdução ao dashDB](services/dashDB/index.html).
+Para obter mais informações, consulte [Introdução ao dashDB](../services/dashDB/index.html).
 
 ### Cloud Integration
 
@@ -415,6 +412,10 @@ ou um pacote de API.
 
 Para obter mais informações, consulte [Introdução ao Secure Gateway](../services/SecureGateway/index.html).
 
+### Security information and event management
+
+É possível usar ferramentas do security information and event management (SIEM) para analisar alertas de segurança em logs de aplicativos. Uma dessas ferramentas é o IBM Security QRadar&reg; SIEM, que fornece inteligência de segurança em ambientes de nuvem. Para obter informações, consulte [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+
 ## Implementação de segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
 
@@ -423,14 +424,12 @@ inclui diferentes fluxos de informações para usuários de app e desenvolvedore
 seguro.
 
 ![Arquitetura de
-implementação de segurança do Bluemix](images/sec_deployment.png)
+implementação de segurança do Bluemix](images/sec_deployment.svg)
 
 *Figura 3. Arquitetura de implementação de segurança
 do Bluemix*
 
-O fluxo de informações para usuários do app
-{{site.data.keyword.Bluemix_notm}} ** é como a
-seguir:
+Para *usuários do app* do {{site.data.keyword.Bluemix_notm}}, o **fluxo de usuário do app** é como a seguir:
  1. Por meio de um firewall, com prevenção de intrusão e segurança de rede adequados.
  2. Por meio do IBM DataPower Gateway com proxy reverso e proxy de rescisão de SSL.
  3. Por meio do roteador de rede.
@@ -439,19 +438,25 @@ seguir:
 O desenvolvedor do {{site.data.keyword.Bluemix_notm}}
 ** segue dois fluxos principais, para login e para
 desenvolvimento e implementação.
- * O fluxo de desenvolvedor para login inclui os itens a seguir:
+ * O **fluxo de login do desenvolvedor** inclui os itens a seguir:
     * Para desenvolvedores que estejam efetuando login no {{site.data.keyword.Bluemix_notm}} Public, o fluxo é como a seguir:
       1. Por meio do serviço IBM Single Sign On.
       2. Por meio do IBM web identity.
     * Para desenvolvedores que estejam efetuando login no
 {{site.data.keyword.Bluemix_notm}} Dedicated ou Local, o
 fluxo é por meio do LDAP corporativo.
- * O fluxo de desenvolvedor para desenvolvimento e implementação do app é como a seguir:
+ * O **fluxo de desenvolvimento e implementação** é como a seguir:
     1. Por meio de um firewall, com prevenção de intrusão e segurança de rede adequados. Isso se aplica somente ao {{site.data.keyword.Bluemix_notm}} Dedicado.
     2. Por meio do IBM DataPower Gateway com proxy reverso e proxy de rescisão de SSL.
     3. Por meio do roteador de rede.
     4. Por meio de autorização, usando o controlador de nuvem Cloud Foundry para assegurar acesso somente a apps e
 instâncias de serviço criadas pelo desenvolvedor.
+  
+Para *administradores* do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local, o **fluxo do administrador** é como a seguir:
+ 1. Por meio de um firewall, com prevenção de intrusão e segurança de rede adequados.
+ 2. Por meio do IBM DataPower Gateway com proxy reverso e proxy de rescisão de SSL.
+ 3. Por meio do roteador de rede.
+ 4. Atinge a página Administração na interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
 
 Além dos usuários descritos nesses caminhos, uma equipe de operações de segurança autorizada da IBM executa várias tarefas de segurança operacionais, como as descritas a seguir:
  * Varreduras de vulnerabilidade. Para
@@ -461,6 +466,35 @@ Além dos usuários descritos nesses caminhos, uma equipe de operações de segu
  * Gerenciamento de riscos com proteção contra intrusão.
  * Monitoramento de segurança com QRadar.
  * Relatórios de segurança disponíveis por meio do Console administrativo
+
+## Relatórios de segurança
+{: #reports}
+
+Com o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated, o {{site.data.keyword.Bluemix_notm}} gera vários relatórios de segurança e logs que podem ser visualizados por meio da página Administração. Para obter instruções para visualizar e usar os relatórios, consulte [Visualizando relatórios](../admin/index.html#oc_report).
+
+A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated.
+
+| **Categoria** | **Relatório** | **Descrição** |      
+|-----------------|-------------------|---------------------|
+| Firewall | Logins de firewall | Eventos relacionados a login do administrador para os dispositivos de firewall Vyatta. |
+| Firewall | Negações de firewall | Eventos gerados pelos dispositivos de firewall Vyatta quando uma solicitação para acessar é negada de acordo com as regras de firewall que estão em vigor. |
+| Eventos de login do administrador do {{site.data.keyword.Bluemix_notm}} | Login de administradores do {{site.data.keyword.Bluemix_notm}} | Eventos gerados pelo sistema operacional quando um administrador inicia uma sessão SSH em cada sistema {{site.data.keyword.Bluemix_notm}}. |
+| Eventos de login do desenvolvedor de aplicativos do {{site.data.keyword.Bluemix_notm}} | Login de desenvolvedores de aplicativos do {{site.data.keyword.Bluemix_notm}} | Eventos gerados pelo componente de login da plataforma {{site.data.keyword.Bluemix_notm}} quando um usuário da plataforma {{site.data.keyword.Bluemix_notm}} inicia uma sessão usando a linha de comandos, as APIs REST ou a interface com o usuário do {{site.data.keyword.Bluemix_notm}}. |
+| Eventos administrativos do administrador do {{site.data.keyword.Bluemix_notm}} | Eventos administrativos do sistema operacional dos administradores do {{site.data.keyword.Bluemix_notm}} | Eventos gerados pelo sistema operacional quando um administrador executa ação em uma sessão de trabalho atual. |
+| Eventos administrativos do desenvolvedor de aplicativos do {{site.data.keyword.Bluemix_notm}} | Eventos administrativos do {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) | Eventos relacionados a operações executadas pelo usuário da plataforma {{site.data.keyword.Bluemix_notm}} usando a linha de comandos, as APIs REST ou a interface com o usuário do {{site.data.keyword.Bluemix_notm}}. |
+| Eventos administrativos do banco de dados do administrador do {{site.data.keyword.Bluemix_notm}} | Eventos administrativos do banco de dados | Eventos relacionados a operações executadas por um administrador de banco de dados nos bancos de dados internos do {{site.data.keyword.Bluemix_notm}}. |
+| Eventos de administração | Eventos de gerenciamento do usuário | Eventos relacionados a ações de gerenciamento do usuário executadas na página Administração. |
+| Eventos de administração | Catálogo | Eventos relacionados a mudanças no Catálogo de serviços. |
+| Eventos de administração | Eventos de gerenciamento de relatórios de segurança | Eventos relacionados a ações de gerenciamento de relatórios de segurança executadas na página Administração. |
+| Revisões de acesso | Relatório de revisões de acesso | Revisões para acessos privilegiados. |
+| Gerenciamento de mudanças | Gerenciamento de mudanças de software | Atividade de gerenciamento de mudanças. |
+| Gerenciamento de chave | Gerenciamento de certificados SSL customizados | Certificações SSL customizadas que foram transferidos por upload e armazenadas. |
+| Encryption | Criptografia de dados em trânsito | Criptografia de dados em trânsito que foi configurada. |
+| Anti-virus | Relatório de varredura antivírus | Software antivírus que está em vigor. |
+| Gerenciamento de correção de software | Relatório de aplicativo de correção | Correções de software que foram aplicadas. |
+| Gerenciamento de incidentes de segurança | Relatório de correção de incidentes de segurança | Evidência de incidentes de segurança para gerenciamento de incidentes de segurança. |
+
+*Tabela 1. Lista de relatórios de segurança do {{site.data.keyword.Bluemix_notm}} Local e do {{site.data.keyword.Bluemix_notm}} Dedicated*
 
 # rellinks
 ## general 

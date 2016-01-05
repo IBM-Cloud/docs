@@ -5,7 +5,7 @@
 개요
 {: #overview}
 
-*마지막 업데이트 날짜: 2015년 10월 15일*
+*마지막 업데이트 날짜: 2015년 11월 20일*
 
 {{site.data.keyword.Bluemix}}는 모바일 및 웹 개발자에게 통합, 보안, 트랜잭션 및 기타 핵심 기능을 지원하는 {{site.data.keyword.IBM_notm}} 소프트웨어 및 비즈니스 파트너의 소프트웨어에 대한 액세스를 제공하는 {{site.data.keyword.IBM}}의 개방형 클라우드 플랫폼입니다.{:shortdesc}
 
@@ -93,7 +93,7 @@ PaaS(Platform as a Service)를 통해 애플리케이션을 더 간편하게 개
 
 대기 시간이나 보안을 고려하여 앱을 다른 {{site.data.keyword.Bluemix_notm}}
 지역에 배치할 수 있습니다. 한 지역에 배치하거나 여러 지역에 걸쳐 배치할지
-선택할 수 있습니다. 자세한 정보는 [지역](overview.html#ov_intro__reg)을 참조하십시오.
+선택할 수 있습니다. 자세한 정보는 [지역](#ov_intro__reg)을 참조하십시오.
 
 ![다중 지역 애플리케이션 배치](images/multi-region.png)
 
@@ -271,16 +271,17 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 
 | **지역 이름** | **지역 접두부** | **cf API 엔드포인트** | **UI 콘솔** |       
 |-----------------|-------------------|---------------------|----------------|
-| 미국 남부 지역 | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| 유럽 영국 지역 | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| 오스트레일리아 시드니 지역 | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| 미국 남부 지역 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| 유럽 영국 지역 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| 오스트레일리아 시드니 지역 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록*
 
 ### 인프라
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}}는 사용자의 코드를 실행하기 위한 3가지 방법, 즉 Cloud Foundry, {{site.data.keyword.IBM_notm}} 컨테이너 및 가상 머신을 제공합니다. 사용자는 앱을 배치하기 위한 적절한 인프라를 선택할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}는 사용자의 코드를 실행하기 위한 3가지 방법, 즉 Cloud Foundry, {{site.data.keyword.IBM_notm}} 컨테이너 및 가상 머신을 제공합니다. {{site.data.keyword.IBM_notm}} 컨테이너 및 가상 머신은 미국 남부 및 유럽 영국 지역에서만 사용할 수 있습니다. 사용자는 앱을 배치하기 위한 적절한 인프라를 선택할 수 있습니다. 
 
 <dl>
 <dt>Cloud Foundry</dt>
@@ -461,7 +462,7 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
     <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 또한 개인 서비스에는
 서비스 제공업체가 제공하는 문서 또는 기타 항목이 포함될 수 있습니다.
 조직 관리자만 Cloud Integration API를 개인 서비스로 공개할 수 있습니다. 사용자에게 제공되는 개인 서비스를 보려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 개인 선택란을 선택하십시오. Cloud Integration 서비스에 연결하지 않고 개인 서비스를 선택하고 앱에 바인딩할 수 있습니다. 다른 {{site.data.keyword.Bluemix_notm}} 서비스에서와 동일한 방식으로 개인 서비스를 앱에 바인딩합니다. API를 개인 서비스로 공개하는 방법에 대한 자세한 정보는 API를 개인 서비스로 공개를 참조하십시오. </dd>
-	</dl>
+</dl>
 
 ### 시나리오: SOR(System of Record)에 연결할 RMA(Rich Mobile Application) 작성
 {: #scenario}
@@ -517,7 +518,7 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 * [{{site.data.keyword.Bluemix_notm}} 필수 소프트웨어](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 알려진 문제](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}} 용어집](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} 용어집](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps 서비스](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

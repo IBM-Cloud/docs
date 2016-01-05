@@ -3,10 +3,248 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Gerenciando o {{site.data.keyword.Bluemix_notm}}
-{: #mng}
+#Administrando o {{site.data.keyword.Bluemix_notm}}
+{: #administer}
+*Última atualização: 8 de dezembro de 2015*
 
-*Última atualização: 15 de outubro de 2015* 
+Gerencie suas orgs, os espaços e os usuários designados clicando em **Conta e suporte** &gt; **Gerenciar organizações**. Se você for um usuário do {{site.data.keyword.Bluemix_notm}} Local ou {{site.data.keyword.Bluemix_notm}} Dedicated, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) para obter mais informações sobre como administrar a sua instância local ou dedicada.
+{:shortdesc}
+
+##Gerenciando sua conta
+{: #mngacct}
+
+No {{site.data.keyword.Bluemix}}, é possível gerenciar organizações e espaços, incluindo acesso de usuário Todos a partir do painel na interface com o usuário. É possível também monitorar seu uso e faturamento.
+{:shortdesc}
+
+###Organizações e espaços
+{: #orgsandspaces}
+
+Como gerenciador de organização ou proprietário da conta, é possível usar a página Gerenciar organizações para visualizar e gerenciar as configurações da organização ou do espaço, incluindo acesso de usuário. Para abrir a página Gerenciar organizações, no menu, acesse *Conta e suporte* &gt; **Gerenciar organizações**.
+
+####Organizações
+
+Uma organização é definida pelos itens a seguir:
+
+<dl>
+<dt>Usuários</dt>
+<dd>A função com permissão básica em organizações e espaços. Você deve estar designado a
+uma organização para poder receber permissões para os espaços dentro da organização. Para
+obter informações detalhadas, veja
+[Usuários e funções](index.html#userroles).</dd>
+<dt>Domínios</dt>
+<dd>Fornecem a rota na Internet que é alocada para a organização. Uma rota tem um subdomínio e um domínio. Um subdomínio normalmente é o nome do aplicativo. Um domínio pode ser um domínio do sistema ou um domínio customizado que você registrou para seu aplicativo.<br/>
+<p>**Nota**: Se um domínio customizado for incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
+maneira, quando o
+{{site.data.keyword.Bluemix_notm}}
+receber uma solicitação para o domínio customizado, ele poderá roteá-lo corretamente
+para o aplicativo.</p></dd>
+<dt>Cota</dt>
+<dd>Representa os limites de recurso para a organização, incluindo o número de serviços e a quantia de memória
+que pode ser alocada para uso pela organização. As cotas são designadas quando as organizações são criadas. Qualquer
+aplicativo ou serviço em um espaço da organização contribui para o uso da cota. Com planos de Assinatura ou de
+Pagamento conforme o uso, é possível ajustar a sua conta para contêineres e aplicativos
+do Cloud Foundry conforme as necessidades de mudança da sua organização.</dd>
+</dl>
+
+No
+{{site.data.keyword.Bluemix_notm}},
+é possível usar organizações para permitir a colaboração entre usuários e para facilitar
+o agrupamento lógico de recursos de projetos nas maneiras a seguir:
+
+<ul>
+<li>É possível agrupar um conjunto de espaços, aplicativos, serviços, domínios, rotas e
+usuários juntos em organizações.</li>
+<li>É possível gerenciar o acesso aos espaços e organizações por usuário.</li>
+</ul>
+
+Ao
+criar uma organização, o nome da organização deve ser exclusivo no {{site.data.keyword.Bluemix_notm}}. Depois de criar a organização, você será designado automaticamente à permissão *Gerenciador de organização*, que permite editar o nome da organização, excluir a organização e criar espaços na organização.
+
+Ao excluir uma organização, todos os espaços, aplicativos e serviços
+dentro da organização são excluídos.
+
+O
+{{site.data.keyword.Bluemix_notm}}
+permite a colaboração em projetos, designando usuários dentro de uma organização e dentro
+dos espaços na organização. É possível usar a guia **Usuários** para
+exibir e gerenciar usuários da organização. Também é possível convidar usuários em sua organização clicando no link **Convidar um novo usuário** na guia **Usuários**. As permissões a seguir podem ser designadas
+aos usuários em uma organização:
+
+<ul>
+<li>Usuário da organização</li>
+<li>Gerente da organização</li>
+<li>Gerente de faturamento da organização</li>
+<li>Auditor da organização</li>
+</ul>
+
+####Espaços
+
+Dentro de uma organização, é possível usar espaços para
+agrupar um conjunto de aplicativos, serviços e usuários.
+
+Após a inclusão de
+usuários em uma organização, é possível conceder a eles permissões para os espaços
+dentro da organização. Semelhantes às organizações, os espaços também têm um conjunto de
+permissões que podem ser designadas aos usuários:
+
+<ul>
+<li>Gerente de espaço</li>
+<li>Desenvolvedor de espaço</li>
+<li>Auditor de espaço</li>
+</ul>
+
+**Nota**: Um usuário deve ser designado a pelo menos uma das permissões no espaço.
+
+A guia **Domínios** para um espaço é uma lista
+somente leitura dos domínios designados ao espaço. O domínio do sistema está sempre disponível a um espaço e domínios customizados também
+podem ser alocados para o espaço. Os aplicativos que foram criados no espaço podem usar
+qualquer um dos domínios listados para o espaço.
+
+###Usuários e funções
+{: #userroles}
+
+Os proprietários de contas executam todas as operações nas organizações e
+nos espaços.
+
+####Tipos de usuário
+
+É possível ser membro ou colaborador de
+uma conta.
+
+<dl>
+<dt>Membro</dt>
+<dd>Você será membro de uma conta do
+{{site.data.keyword.Bluemix_notm}}
+se for seu criador ou caso tenha sido convidado para conta e se inscrito nela a partir do
+convite, como sua primeira experiência com o
+{{site.data.keyword.Bluemix_notm}}. </dd>
+<dt>Colaborador</dt>
+<dd>Você será colaborador de uma conta do
+{{site.data.keyword.Bluemix_notm}}
+se tiver usado anteriormente o
+{{site.data.keyword.Bluemix_notm}}
+ com uma conta diferente e, depois de convidado, aceito o convite para conta.</dd>
+</dl>
+
+####Funções de usuário
+
+Usuários podem ser designados às permissões a seguir para assumir
+diferentes funções de usuário em uma organização ou espaço:
+
+<dl>
+<dt>Gerentes de organização</dt>
+<dd>Os gerenciadores de organização têm as seguintes permissões:
+<ul>
+<li>Criar ou excluir espaços dentro da organização.</li>
+<li>Convidam usuários para a organização, caso sejam membros da organização ou proprietários da
+conta.</li>
+<li>Gerenciam usuários existentes que já estão na organização.</li>
+<li>Gerenciar domínios da organização.</li>
+</ul>
+<p>**Nota**: Se você tiver o tipo de usuário de colaborador e usou anteriormente o {{site.data.keyword.Bluemix_notm}} com uma conta diferente, não é possível convidar usuários na organização mesmo se estiver designado à função de gerenciador de organização. É necessário ter o tipo de usuário
+membro para convidar usuários. Consulte  <a href="../troubleshoot/accessing.html#tr_adduser">Não é
+possível incluir usuários em uma organização</a> para obter informações sobre como trabalhar
+com esse problema.</p>
+</dd>
+<dt>Gerentes de faturamento</dt>
+<dd>Os gerenciadores de faturamento têm permissões para visualizar as informações de uso do
+serviço e tempo de execução da organização.</dd>
+<dt>Auditores de organização</dt>
+<dd>Os auditores da organização têm permissões para visualizar o conteúdo do aplicativo e do
+serviço no espaço.</dd>
+<dt>Gerentes de espaço</dt>
+<dd>Os gerenciadores de espaçamento têm as permissões a seguir:
+<ul>
+<li>Incluir usuários no espaço e gerenciar usuários.</li>
+<li>Ativar recursos para o espaço</li>
+</ul>
+</dd>
+<dt>Desenvolvedores de espaço</dt>
+<dd>Os desenvolvedores de espaço têm as seguintes permissões:
+<ul>
+<li>Criar, excluir e gerenciar aplicativos e serviços dentro do espaço.</li>
+<li>Ter acesso a logs dentro do espaço</li>
+</ul>
+</dd>
+<dt>Auditores de espaço</dt>
+<dd>Os auditores de espaço têm permissões de acesso somente leitura a todas as informações
+sobre o espaço, por exemplo, informações sobre aplicativos e serviços, configurações,
+relatórios e logs.</dd>
+</dl>
+
+###Gerenciando sua organização
+{: #orgmng}
+
+Como gerenciador de organização ou proprietário da conta, é possível gerenciar
+suas organizações. As tarefas de gerenciamento incluem: criar uma organização,
+renomear uma organização, criar um espaço, convidar usuários para um espaço
+e excluir uma organização existente.
+
+<ul>
+<li>Criando uma organização
+<p>Somente usuários com
+contas a pagar podem criar uma organização. Com uma conta a pagar, é possível
+criar uma organização executando as etapas a seguir:</p>
+<ol>
+<li>Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone no canto superior direito e selecione **Gerenciar organizações**.</li>
+<li>Clique em **Criar uma organização** e
+siga os prompts para criar sua organização.</li>
+</ol>
+</li>
+<li>Renomeando uma organização
+<p>Execute as etapas
+a seguir para renomear sua organização:</p>
+<ol>
+<li>Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone no canto superior direito e selecione **Gerenciar organizações**.</li>
+<li>Selecione a organização que você deseja renomear.</li>
+<li>Digite um novo nome no campo **Organização**
+e clique em **Salvar**.</li>
+</ol>
+</li>
+<li>Listando membros
+<p>Execute as etapas a seguir
+para listar os membros de sua organização ou espaço:</p>
+<ol>
+<li>Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone no canto superior direito, e selecione **Gerenciar organizações**. É
+possível ver os membros de sua organização e suas funções na guia **Usuários**.</li>
+<li>Clique no nome de espaço em sua organização para ver os
+membros desse espaço e suas funções.</li>
+</ol>
+</li>
+<li>Criando um espaço
+<p>É possível criar espaços em
+sua organização, por exemplo, um espaço *dev* como
+um ambiente de desenvolvimento, um espaço *test* como um ambiente
+de teste e um espaço *production* como um ambiente de
+produção. Em seguida, é possível associar seus apps aos espaços. Execute as
+etapas a seguir para criar um espaço:</p>
+<ol>
+<li>Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone no canto superior direito e selecione **Gerenciar organizações**.</li>
+<li>Clique em **Criar um espaço** sob o nome da sua organização e siga os prompts para criar seu espaço.</li>
+</ol>
+</li>
+<li>Convidando usuários para um espaço
+<p>É possível convidar
+usuários para sua organização como colaboradores. Também é possível incluir usuários
+de sua organização em espaços diferentes. Os usuários só podem acessar
+o espaço no qual foram incluídos. Execute as etapas a seguir para incluir
+um usuário em um espaço:</p>
+<ol>
+<li>Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone no canto superior direito e selecione **Gerenciar organizações**. Em seguida, clique em **Incluir usuário** em sua organização e siga os prompts para incluir o usuário em sua organização.</li>
+<li>Inclua o usuário em um espaço. Selecione o espaço na área de janela
+de navegação esquerda, clique em **Incluir usuário** e siga
+os prompts para incluir o usuário no espaço.</li>
+</ol>
+</li>
+<li>Excluindo uma organização existente
+<p>Entre em contato com o suporte de registro e ID do {{site.data.keyword.Bluemix_notm}} para excluir a sua organização.</p>
+<p>**Nota**: Não é possível inverter operações de exclusão. Você perderá todos os aplicativos e
+serviços que estiverem associados à organização.</p>
+</li>
+</ul>
+
+## Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
+{: #mng}
 
 Use o Console administrativo para gerenciar recursos, monitorar
 o uso, administrar permissões do usuário e visualizar relatórios de
@@ -14,13 +252,12 @@ segurança, logs, status e notificações de upgrade para o ambiente do
 {{site.data.keyword.Bluemix}} Local ou Dedicated.
 {:shortdesc}
 
-## Acessando o Console administrativo
+### Acessando o Console administrativo
 {: #oc_access}
 
 É possível acessar o Console administrativo inserindo a URL a seguir:
 
-
-`https://opsconsole.<subdomain>.bluemix.net/`. 
+<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
@@ -29,23 +266,23 @@ subdomínio de sua instância do {{site.data.keyword.Bluemix}}
 foi designado durante o onboarding.</dd>
 </dl>
 
-## Visualizando as informações do sistema
+### Visualizando as informações do sistema
 {: #oc_system}
 
-Use o Console administrativo para monitorar suas informações do sistema. 
+Use o Console administrativo para monitorar suas informações do sistema.
 
 Para visualizar informações do sistema, clique em
-**ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA**. 
+**ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA**.
 
 É possível expandir e visualizar várias seções sobre
 atualizações pendentes, informações gerais do sistema e detalhes de
-configuração de LDAP. 
+configuração de LDAP.
 
 * Na seção Atualizações, você pode visualizar quaisquer
 atualizações pendentes que requeiram ação de sua parte. É possível
 também controlar facilmente suas atualizações utilizando o
 link de calendário para importar suas atualizações planejadas para um
-app de calendário. 
+app de calendário.
 
 <ol>
 <li>Para tomar ação para uma atualização específica, conclua as seguintes etapas:
@@ -72,13 +309,13 @@ de calendário** listada na página Informações do
 sistema em seu app. Ou, faça o download do arquivo de calendário
 clicando na URL de calendário e, em seguida, importando-o em seu
 app de calendário usando o arquivo `.ics`.</li>
-<li>Insira suas credenciais. </li>
-<li>Visualize suas atualizações planejadas. </li>
+<li>Insira suas credenciais.</li>
+<li>Visualize suas atualizações planejadas.</li>
 </ol>
 </li>
 </ol>
 
-* Na seção Informações gerais, é possível visualizar as informações a seguir: 
+* Na seção Informações gerais, é possível visualizar as informações a seguir:
     * Informações básicas sobre a construção do {{site.data.keyword.Bluemix_notm}}.
     * Informações de API incluindo a versão, a URL, a região e um link para a documentação de CLI.
     * Informações de domínio compartilhadas sobre seu sistema e serviço.
@@ -86,13 +323,13 @@ app de calendário usando o arquivo `.ics`.</li>
 * Na seção Detalhes de configuração LDAP, é possível selecionar o servidor
 LDAP e visualizar informações sobre os mapeamentos de usuários e de grupos. Se
 você estiver usando o {{site.data.keyword.IBM}} WebID, isso é
-indicado na seção Detalhes de configuração de LDAP. 
+indicado na seção Detalhes de configuração de LDAP.
 
-## Visualizando informações de uso
+### Visualizando informações de uso
 {: #oc_resource}
 
 Use o Console administrativo para monitorar o uso do recurso e
-da rede.  
+da rede.
 
 Para visualizar informações de recursos, clique em
 **ADMINISTRAÇÃO &gt; USO**.
@@ -112,7 +349,7 @@ Os dados exibidos são baseados na soma do tráfego de entrada e de saída para 
 * Tempo médio de resposta para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
 * Transações médias por segundo para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
 
-## Visualizando relatórios
+### Visualizando relatórios
 {: #oc_report}
 
 É possível visualizar os logs e relatórios de segurança, como
@@ -126,21 +363,24 @@ Selecione a partir das opções a seguir:
 
 * É possível selecionar as datas de início e de encerramento nos campos para filtrar quais relatórios e logs são
 exibidos.
-* É possível expandir e visualizar vários relatórios na área de janela de navegação
-esquerda.
+* É possível expandir e visualizar vários relatórios na área de janela de navegação à esquerda.
 * É possível procurar em sua coleção de relatórios e logs. A procura se aplica aos nomes de relatório
 bem como ao conteúdo de texto contido nos logs e relatórios. Também é possível escolher filtrar sua procura por
 **Eventos de administração**, **Relatórios do DataPower**,
 **Firewall** e **Auditoria de login**.
 * Ao exibir um relatório ou log, é possível clicar no ícone ![Download](images/icon_download.png) na parte superior direita do relatório para fazer download dele.
 
-## Visualizando o status
+<!-- This content cannot go into production until the security reports have gone into production -->
+
+Para obter mais informações sobre os tipos de relatórios de segurança, consulte [Relatórios de segurança](../security/index.html#reports).
+
+### Visualizando o status
 {: #oc_status}
 
 É possível monitorar o status de sua
 instância do {{site.data.keyword.Bluemix_notm}} por meio do
 Console administrativo. Também é possível assinar um feed RSS para
-notificações, para que você não precise verificá-las. 
+notificações, para que você não precise verificá-las.
 
 Para visualizar o status de sua
 instância do {{site.data.keyword.Bluemix_notm}},
@@ -157,19 +397,19 @@ notificações.
 
 3. Se você configurou seu navegador para feeds RSS, poderá assinar um feed RSS das
 notificações. Localize o ícone ![RSS](images/icon_RSS.png) à direita de **ATUALIZAÇÕES** na parte superior esquerda da
-lista de notificações e selecione uma das ações a seguir: 
+lista de notificações e selecione uma das ações a seguir:
 
 * Arraste o ícone ![RSS](images/icon_RSS.png) para seu leitor RSS.
 * Clique com o botão direito no ícone RSS, selecione **Copiar endereço de link** e cole a URL
-em seu leitor RSS. 
+em seu leitor RSS.
 
 4. Filtre quais notificações serão exibidas. Clique em **FILTRAR** na parte superior
 direita da lista de notificações. Em seguida, é possível procurar e limitar a lista de notificações digitando uma palavra que se espera localizar em uma notificação, por exemplo, "manutenção". Ou é possível
 clicar para selecionar quais notificações exibir pelo **Tipo**,
 **Região**, **Categoria**, **Data de início**
-ou **Data de encerramento**. 
+ou **Data de encerramento**.
 
-## Gerenciando seu catálogo
+### Gerenciando seu catálogo
 {: #oc_catalog}
 
 É possível gerenciar quais serviços e iniciadores do
@@ -190,7 +430,7 @@ catálogo do {{site.data.keyword.Bluemix_notm}}, selecione
 **DESATIVAR TODOS OS PLANOS**.
 * Para controlar a visibilidade de um plano individual, selecione o nome do plano e, em seguida, use o menu suspenso para selecionar **Ativar para todas as organizações**, **Desativar para todas as organizações** ou **Ativar plano para organizações específicas**.
 
-## Administrando as organizações
+### Administrando as organizações
 {: #oc_organizations}
 
 Você pode gerenciar suas organizações criando e excluindo organizações, incluindo gerenciadores para organizações e monitorando o uso de cota.
@@ -201,9 +441,9 @@ ADMINISTRAÇÃO DE ORGANIZAÇÃO**.
 
 É possível expandir e visualizar várias seções. Também é possível revisar e gerenciar os planos de cota para suas organizações.
 
-* Para criar uma nova organização e incluir os gerenciadores, clique em <strong>CRIAR ORGANIZAÇÃO</strong>. 
+* Para criar uma nova organização e incluir os gerenciadores, clique em <strong>CRIAR ORGANIZAÇÃO</strong>.
 Insira um nome para a organização e, em seguida, digite o nome ou
-e-mail da pessoa que deseja incluir como um gerente. É possível incluir mais de um gerenciador inserindo e selecionando múltiplos nomes. Clique em <strong>CRIAR ORGANIZAÇÃO</strong> para salvar suas mudanças e criar a organização. 
+e-mail da pessoa que deseja incluir como um gerente. É possível incluir mais de um gerenciador inserindo e selecionando múltiplos nomes. Clique em <strong>CRIAR ORGANIZAÇÃO</strong> para salvar suas mudanças e criar a organização.
 * Na seção Monitoramento de cota, é possível expandir a seção e visualizar as informações a
 seguir:
     * Uso de memória do ambiente. Esta seção detalha o uso de memória para o ambiente do sistema integral.
@@ -258,7 +498,7 @@ ambiente do {{site.data.keyword.Bluemix_notm}}.
 	* Para visualizar e editar o plano de cota para uma organização, clique no nome para a organização na lista.
 	* Para editar o nome da organização e incluir ou remover os gerenciadores, clique no nome para a organização na lista.
 
-## Gerenciando usuários e permissões
+### Gerenciando usuários e permissões
 {: #oc_useradmin}
 Você pode incluir usuários em sua instância do
 {{site.data.keyword.Bluemix_notm}} a partir do registro de
@@ -276,7 +516,7 @@ Permissões para cada usuário são exibidas. As permissões podem ser as seguin
 `Reports` e `Users`. As permissões podem ser ativadas, ou o
 usuário pode receber a capacidade `view` ou  `write` para essa
 permissão, conforme representado por ícones. Consulte
-[Permissões](#permissions) para obter descrições de cada tipo e explicação dos ícones. 
+[Permissões](#permissions) para obter descrições de cada tipo e explicação dos ícones.
 
 Escolha a partir das opções a seguir:
 * Localizar usuários. É possível localizar usuários na
@@ -307,19 +547,19 @@ Para remover um usuário, localize o usuário e clique no ícone
 ![Delete](images/icon_trash.png) e depois em
 **Remover**.
 
-### Permissões
+#### Permissões
 {: #permissions}
 
 Os usuários podem ser designados com as permissões a seguir:
 
-| **Permissão do usuário** | **Descrição** |       
+| **Permissão do usuário** | **Descrição** |
 |-----------------|-------------------|
 | Administrador | Usuários com a permissão `admin` podem
-editar permissões para outros usuários. | 
+editar permissões para outros usuários. |
 | Catálogo | Usuários com a permissão `catalog`
 podem ter a capacidade `view` ou
 `write` (modificar) de quais serviços estão
-disponíveis na instância local ou dedicada. |  
+disponíveis na instância local ou dedicada. |
 | Login | Os usuários com a permissão `login`
 podem efetuar login no Console administrativo. Sem essa permissão, os usuários não podem efetuar login. |
 | Relatórios | Usuários com a permissão `reports` podem ser designados com a capacidade para
@@ -340,7 +580,7 @@ permissão.
 * O ícone ![Gravar, representado por um lápis](images/icon_write.png) significa que o usuário possui a capacidade `write` (editar, incluir ou remover) para
 aquela permissão.
 
-## Gerenciando usuários com a API REST Admin
+### Gerenciando usuários com a API REST Admin
 {: #usingadminapi}
 
 É possível usar a API REST `Admin` para
@@ -359,7 +599,7 @@ pode fazer o download do Phython no
 [site de downloads de
 Python](https://www.python.org/downloads){: new_window}.
 
-### Efetuando login no Console administrativo
+#### Efetuando login no Console administrativo
 
 Antes que quaisquer solicitações de API `Admin` possam ser executadas, deve-se efetuar login no Console administrativo. Se você tiver a permissão `admin` ou
 `users` com a capacidade `write`, poderá incluir ou remover usuários. Deve-se ter permissão `admin` para editar permissões de outros usuários.
@@ -402,7 +642,7 @@ O exemplo a seguir mostra a saída a partir deste
 ```
 {: screen}
 
-### Listando organizações
+#### Listando organizações
 {: #listingorg}
 
 Ao incluir um usuário, você deve especificar uma organização. É possível usar a API REST `Admin` para listar todas as organizações. Você
@@ -420,13 +660,13 @@ listar todas as organizações, execute o seguinte comando:
 
 </dl>
 
-Para cada organização, os resultados incluem as informações a seguir 
+Para cada organização, os resultados incluem as informações a seguir
 * `"guid"`, GUID da organização
 * `"name"`, nome da organização
 
 O exemplo a seguir mostra a saída a partir deste
                 comando:
-``` 
+```
 {
      "resources": [
          {
@@ -437,16 +677,16 @@ O exemplo a seguir mostra a saída a partir deste
              "guid": "5129a5a8-37c2-4ee4-a9b2-bebae3531db5",
              "name": "org-2"
          },
- 
+
 		 		 ....
-		 		 
+
 		 ],
 		 "total_results": 284
 }
 ```
 {: screen}
 
-### Listando usuários
+#### Listando usuários
 {: #listingusr}
 
 É possível determinar se um usuário já foi incluído no
@@ -464,7 +704,7 @@ execute o seguinte comando:
 <dd class="pd">Passa o ID de usuário e a senha que foram armazenados previamente com a opção <samp class="ph codeph">-c</samp> no arquivo para o servidor HTTP como um cookie.</dd>
 </dl>
 
-Para cada usuário registrado, os resultados incluem as informações a seguir 
+Para cada usuário registrado, os resultados incluem as informações a seguir
 * `"first_name"` (nome) e `"last_name"` (sobrenome)
 * `"user_id"`, ID de usuário e endereço de e-mail
 * `"guid"`, GUID da organização.
@@ -514,8 +754,8 @@ O exemplo a seguir mostra a saída a partir deste
             "user_id": "someid@us.ibm.com"
         },
 		 		 ...
-		 		 
-		 		 
+
+
      }
     ],
     "total_pages": 395,
@@ -525,7 +765,7 @@ O exemplo a seguir mostra a saída a partir deste
 ```
 {: screen}
 
-### Incluindo um usuário
+#### Incluindo um usuário
 
 É possível usar a API REST `Admin` para
 incluir usuários na instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter permissão `users` com capacidade de `write` para incluir usuários.
@@ -554,7 +794,7 @@ Forneça as informações em um arquivo JSON.
 </dl>
 
 <ol>
-<li>Crie um arquivo JSON que contenha as informações em um formato JSON apropriado. 
+<li>Crie um arquivo JSON que contenha as informações em um formato JSON apropriado.
 <p>Por exemplo, crie um arquivo nomeado `user.json` que possua o conteúdo a seguir:</p>
 <code>
 {
@@ -608,7 +848,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 O exemplo a seguir mostra a saída a partir deste
                 comando:
 
-``` 
+```
 * Connected to localhost (127.0.0.1) port 3000 (#0)
  > POST /codi/v1/users HTTP/1.1
  > User-Agent: curl/7.37.1
@@ -617,7 +857,7 @@ O exemplo a seguir mostra a saída a partir deste
  > Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
  > Content-Type: application/json
  > Content-Length: 333
- > 
+ >
  * upload completely sent off: 333 out of 333 bytes
  &lt; HTTP/1.1 201 Created
  &lt; x-powered-by: Express
@@ -627,10 +867,10 @@ O exemplo a seguir mostra a saída a partir deste
  &lt; connection: close
  &lt; transfer-encoding: chunked
  &lt; X-Time_Check: Proxy Time: 5612 msec
- ``` 
+ ```
 {: screen}
 
-### Removendo um usuário
+#### Removendo um usuário
 
 É possível usar a API REST `Admin` para
 remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter permissão `users` com capacidade de `write` para remover usuários.
@@ -665,11 +905,11 @@ O exemplo a seguir mostra a saída a partir deste
  &lt; connection: close
  &lt; transfer-encoding: chunked
  &lt; X-Time_Check: Proxy Time: 1922 msec
- &lt; 
- ``` 
+ &lt;
+ ```
 {: screen}
 
-## Gerenciando usuários com a CLI cf
+### Gerenciando usuários com a CLI cf
 {: #usingadmincli}
 
 É possível gerenciar usuários para o ambiente do
@@ -687,23 +927,23 @@ comandos do Cloud Foundry não é suportada por
 Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
-### Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+#### Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 Após a interface de linha de comandos do cf ser instalada, é possível
 incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 
 Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in: 
+o plug-in:
 
 <ol>
-<li>Para incluir o repositório de plug-in admin do
-{{site.data.keyword.Bluemix_notm}}, execute o seguinte
-comando:<br/><br/> <code>
-cf add-plugin-repo BluemixAdmin https://opsconsole.<subdomain>;.bluemix.net/cli
+<li>Para incluir o repositório de plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir: <br/><br/>
+<code>
+cf add-plugin-repo BluemixAdmin https://opsconsole.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Subdomínio da URL da sua instância do
+{{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
 <li>Para instalar o plug-in CLI admin do
@@ -714,7 +954,7 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-### Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
+#### Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 É possível usar o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}} para incluir ou remover usuários, designar ou remover designação de usuários de organizações e
 executar outras tarefas de gerenciamento. Para ver uma lista de comandos, execute o comando
@@ -732,10 +972,9 @@ Antes de poder usar o plug-in da CLI Admin para gerenciar usuários,
 deve-se conectar e efetuar login, se ainda não o fez.
 
 <ol>
-<li>Para conectar-se ao terminal da API do
-{{site.data.keyword.Bluemix_notm}}>, execute o seguinte
-comando:<br/><br/> <code>
-cf api https://api.<subdomain>.bluemix.net
+<li>Para se conectar ao terminal da API do {{site.data.keyword.Bluemix_notm}}>, execute o comando a seguir: <br/><br/>
+<code>
+cf api https://api.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
@@ -757,7 +996,7 @@ seguinte comando:<br/><br/>
 
 É possível incluir um usuário em seu ambiente do
 {{site.data.keyword.Bluemix_notm}} a partir de um
-registro LDAP. Insira o comando a seguir: 
+registro LDAP. Insira o comando a seguir:
 
 `cf bluemix-admin-add-user <user_name> <organization>`
 {: codeblock}
@@ -777,7 +1016,7 @@ registro LDAP. Insira o comando a seguir:
 
 É possível remover um usuário do ambiente do
 {{site.data.keyword.Bluemix_notm}} inserindo o
-seguinte comando: 
+seguinte comando:
 
 `cf bluemix-admin-remove-user <user_name>`
 {: codeblock}
@@ -811,7 +1050,7 @@ seguinte comando:
 
 **Dica:** Também é possível usar
 **baco** como um alias para o nome de comando
-**bluemix-admin-create-organization** mais longo. 
+**bluemix-admin-create-organization** mais longo.
 
 * Para excluir uma organização, insira um comando a seguir:
 
@@ -825,13 +1064,13 @@ seguinte comando:
 
 **Dica:** Também é possível usar
 **bado** como um alias para o nome de comando
-**bluemix-admin-create-organization** mais longo. 
+**bluemix-admin-create-organization** mais longo.
 
 #### Designando um usuário a uma organização
 
 É possível designar um usuário no ambiente do
 {{site.data.keyword.Bluemix_notm}} para uma organização
-específica. Insira o comando a seguir: 
+específica. Insira o comando a seguir:
 
 `cf bluemix-admin-set-org <user_name> <organization> [<role>]`
 {: codeblock}
@@ -848,13 +1087,13 @@ específica. Insira o comando a seguir:
 
 **Dica:** Também é possível usar
 **baso** como um alias para o nome de comando
-**bluemix-admin-set-org** mais longo. 
+**bluemix-admin-set-org** mais longo.
 
 #### Removendo a designação de um usuário de uma organização
 
 É possível designar um usuário no ambiente do
 {{site.data.keyword.Bluemix_notm}} de uma organização
-específica. Insira o comando a seguir: 
+específica. Insira o comando a seguir:
 
 `cf bluemix-admin-unset-org <user_name> <organization> [<role>]`
 {: codeblock}
@@ -871,9 +1110,9 @@ específica. Insira o comando a seguir:
 
 **Dica:** Também é possível usar
 **bauo** como um alias para o nome de comando
-**bluemix-admin-unset-org** mais longo. 
+**bluemix-admin-unset-org** mais longo.
 
-### Funções
+#### Funções
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -892,9 +1131,9 @@ organização.</dd>
 espaço.</dd>
 </dl>
 
-### Configurando uma cota para uma organização
+#### Configurando uma cota para uma organização
 
-É possível configurar a cota de uso para uma determinada organização. 
+É possível configurar a cota de uso para uma determinada organização.
 
 `cf bluemix-admin-set-quota <organization> <plan>`
 {: codeblock}
@@ -908,11 +1147,11 @@ espaço.</dd>
 
 **Dica:** Também é possível usar
 **basq** como um alias para o nome de comando
-**bluemix-admin-set-quota** mais longo. 
+**bluemix-admin-set-quota** mais longo.
 
-### Incluindo, excluindo e recuperando os relatórios
+#### Incluindo, excluindo e recuperando os relatórios
 
-É possível incluir, excluir e recuperar os relatórios de segurança. 
+É possível incluir, excluir e recuperar os relatórios de segurança.
 * Para incluir um relatório, insira o comando a seguir:
 
 `cf bluemix-admin-add-report <category> <date> <PDF|TXT|LOG> <RTF>`
@@ -932,7 +1171,7 @@ um caminho no PDF do relatório. A versão RTF é usada para indexação e procu
 
 **Dica:** Também é possível usar
 **baar** como um alias para o nome de comando
-**bluemix-admin-add-report** mais longo. 
+**bluemix-admin-add-report** mais longo.
 
 * Para excluir um relatório, insira o comando a seguir:
 
@@ -950,7 +1189,7 @@ um caminho no PDF do relatório. A versão RTF é usada para indexação e procu
 
 **Dica:** Também é possível usar
 **badr** como um alias para o nome de comando
-**bluemix-admin-delete-report** mais longo. 
+**bluemix-admin-delete-report** mais longo.
 
 * Para recuperar um relatório, insira o comando a seguir:
 
@@ -968,9 +1207,9 @@ um caminho no PDF do relatório. A versão RTF é usada para indexação e procu
 
 **Dica:** Também é possível usar
 **barr** como um alias para o nome de comando
-**bluemix-admin-retrieve-report** mais longo. 
+**bluemix-admin-retrieve-report** mais longo.
 
-### Ativando e desativando serviços para todas as organizações
+#### Ativando e desativando serviços para todas as organizações
 
 É possível ativar ou desativar um serviço de ser exibido no Catálogo {{site.data.keyword.Bluemix_notm}} para todas as organizações.
 
@@ -981,13 +1220,13 @@ um caminho no PDF do relatório. A versão RTF é usada para indexação e procu
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja ativar. Se você inserir um nome do serviço não exclusivo, serão
-solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do serviço que você deseja ativar. Se você inserir um nome do serviço não
+exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
 </dl>
 
 **Dica:** Também é possível usar
 **baesp** como um alias para o nome de comando
-**bluemix-admin-enable-service-plan** mais longo. 
+**bluemix-admin-enable-service-plan** mais longo.
 
 * Para desativar um serviço de ficar visível no Catálogo {{site.data.keyword.Bluemix_notm}} para todas as
 organizações, insira o comando a seguir:
@@ -997,19 +1236,19 @@ organizações, insira o comando a seguir:
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja desativar. Se você inserir um nome do serviço não exclusivo, serão
-solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do serviço que você deseja desativar. Se você inserir um nome do serviço não
+exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
 </dl>
 
 **Dica:** Também é possível usar
 **badsp** como um alias para o nome de comando
-**bluemix-admin-disable-service-plan** mais longo. 
+**bluemix-admin-disable-service-plan** mais longo.
 
-### Incluindo, removendo e editando a visibilidade de serviço para organizações
+#### Incluindo, removendo e editando a visibilidade de serviço para organizações
 
 É possível incluir ou remover uma organização da lista de organizações que podem ver um serviço específico
 no Catálogo {{site.data.keyword.Bluemix_notm}}. Também é possível editar e substituir a lista de serviços que as
-organizações específicas podem ver no Catálogo {{site.data.keyword.Bluemix_notm}}. 
+organizações específicas podem ver no Catálogo {{site.data.keyword.Bluemix_notm}}.
 
 * Para permitir que uma organização visualize um serviço específico no Catálogo {{site.data.keyword.Bluemix_notm}}, insira o comando a seguir:
 
@@ -1027,7 +1266,7 @@ exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
 **Dica:** Também é possível usar
 **baaspv** como um alias para o nome de comando
 **bluemix-admin-add-service-plan-visibility** mais
-longo. 
+longo.
 
 * Para remover a visibilidade de um serviço no Catálogo {{site.data.keyword.Bluemix_notm}} para uma organização,
 insira o comando a seguir:
@@ -1047,7 +1286,7 @@ lista de visibilidade do serviço.</dd>
 **Dica:** Também é possível usar
 **barspv** como um alias para o nome de comando
 **bluemix-admin-remove-service-plan-visibility**
-mais longo. 
+mais longo.
 
 * Para substituir todos os serviços visíveis existentes para uma organização ou múltiplas organizações, use o comando a seguir:
 
@@ -1056,12 +1295,12 @@ mais longo.
 
 **Nota:** Esse comando substitui os serviços
 visíveis existentes para as organizações especificadas pelo serviço
-que você especifica no comando. 
+que você especifica no comando.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">O nome ou o GUID do serviço que você deseja tornar visível. Se você inserir um nome do serviço não exclusivo, serão
-solicitados os planos de serviço dos quais escolher.</dd>
+<dd class="pd">O nome ou o GUID do serviço que você deseja tornar visível. Se você inserir um nome do serviço não
+exclusivo, serão solicitados os planos de serviço dos quais escolher.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} para a qual incluir a visibilidade. É
 possível ativar a visibilidade do serviço para mais de uma organização, inserindo GUIDs ou nomes adicionais da
@@ -1071,4 +1310,4 @@ organização no comando.</dd>
 **Dica:** Também é possível usar
 **baespv** como um alias para o nome de comando
 **bluemix-admin-edit-service-plan-visibility**
-mais longo. 
+mais longo.

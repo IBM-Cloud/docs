@@ -3,7 +3,7 @@
 # Mobile
 {: #mobile}
 
-*Last updated: 19 November 2015*
+*Last updated: 9 December 2015*
 
 Use mobile services to build multiplatform, native or hybrid, Android and iOS applications. 
 {:shortdesc}

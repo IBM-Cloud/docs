@@ -4,12 +4,13 @@
 # Présentation de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Dernière mise à jour : 15 octobre 2015*
+*Dernière mise à jour : 20 novembre 2015*
 
 {{site.data.keyword.Bluemix}} est la plateforme de cloud ouverte d'{{site.data.keyword.IBM}} qui offre aux développeurs
 d'applications mobiles et Web un accès aux logiciels {{site.data.keyword.IBM_notm}} proposant des fonctions d'intégration, de sécurité, de
 transaction,
-etc., ainsi qu'à l'environnement logiciel de partenaires commerciaux.{:shortdesc}
+etc., ainsi qu'à l'environnement logiciel de partenaires commerciaux.
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} s'appuie sur la technologie open source
 [Cloud
@@ -17,7 +18,7 @@ Foundry](https://www.cloudfoundry.org/){: new_window} et facilite le développem
 sous forme de services (PaaS). {{site.data.keyword.Bluemix_notm}} propose également des capacités préconfigurées de système de back end
 mobile sous forme de services (MBaas). Son objectif est de simplifier la livraison d'une application en fournissant des services prêts à l'emploi et en
 hébergeant
-des capacités permettant un développement à l'échelle d'Internet. 
+des capacités permettant un développement à l'échelle d'Internet.
 
 {{site.data.keyword.Bluemix_notm}} propose également des déploiements de cloud qui répondent à vos besoins. Que vous fassiez partie d'une
 petite entreprise en pleine évolution ou d'une grande entreprise qui a besoin d'un isolement supplémentaire, vous pouvez vous développer dans un cloud sans
@@ -54,8 +55,7 @@ de programmation les plus courants. Vous pouvez développer des applications mob
 vous pouvez utiliser des langages tels que Ruby, PHP, Java&trade;, Go et Python. Vous pouvez aussi migrer des applications existantes vers {{site.data.keyword.Bluemix_notm}} et utiliser les
 contextes d'exécution fournis par {{site.data.keyword.Bluemix_notm}} pour exécuter vos applications.
 
-{{site.data.keyword.Bluemix_notm}} fournit également des services middleware pour vos applications. 
-{{site.data.keyword.Bluemix_notm}} agit au nom de l'application lorsqu'il provisionne des instances de service, puis lie ces services à
+{{site.data.keyword.Bluemix_notm}} fournit également des services middleware pour vos applications. {{site.data.keyword.Bluemix_notm}} agit au nom de l'application lorsqu'il provisionne des instances de service, puis lie ces services à
 l'application. Votre
 application peut effectuer son véritable travail tout en laissant la gestion des services à l'infrastructure.
 
@@ -65,7 +65,7 @@ couches, telles que les systèmes de fichiers racine et les composants de
 middleware, sont masquées pour que vous puissiez vous concentrer sur le code de
 votre application. Cependant, vous pouvez obtenir plus de détails sur ces couches si vous avez besoin d'informations spécifiques sur
 l'emplacement d'exécution de votre application. Voir [Affichage des couches de l'infrastructure{{site.data.keyword.Bluemix_notm}}](../cli/viewinfra.html#viewinfra)
-pour des détails.  
+pour des détails. 
 
 ## Architecture {{site.data.keyword.Bluemix_notm}}
 {: #ov_arch}
@@ -100,7 +100,7 @@ La figure suivante présente l'architecture de haut niveau {{site.data.keyword.B
 Vous pouvez déployer vos
 applications dans différentes régions {{site.data.keyword.Bluemix_notm}}, pour des raisons de sécurité ou pour
 réduire le temps d'attente. Vous pouvez procéder au déploiement dans une région ou dans plusieurs régions. Pour plus d'informations, voir
-[Régions](overview.html#ov_intro__reg).
+[Régions](#ov_intro__reg).
 
 ![Développement d'applications dans plusieurs régions](images/multi-region.png)
 
@@ -112,13 +112,11 @@ réduire le temps d'attente. Vous pouvez procéder au déploiement dans une rég
 {{site.data.keyword.Bluemix_notm}}
 dédié constitue votre environnement SoftLayer exclusif qui est connecté de façon sécurisée à la plateforme
 {{site.data.keyword.Bluemix_notm}} publique et à votre propre réseau. {{site.data.keyword.Bluemix_notm}} dédié réside sur votre réseau via une connexion de réseau privé virtuel ou
-une connexion réseau directe. Votre matériel à titulaire unique peut être configuré dans n'importe quel centre de données SoftLayer, n'importe où dans le
-monde. {{site.data.keyword.IBM_notm}} gère la plateforme dédiée et les services dédiés pour que vous puissiez vous consacrer à la construction d'applications personnalisées. 
-De plus, {{site.data.keyword.IBM_notm}} se charge de l'intégralité de la maintenance des instances dédiées au cours d'une fenêtre de maintenance
+une connexion réseau directe. Votre matériel à service exclusif peut être configuré dans n'importe quel centre de données SoftLayer, n'importe où dans le
+monde. {{site.data.keyword.IBM_notm}} gère la plateforme dédiée et les services dédiés pour que vous puissiez vous consacrer à la construction d'applications personnalisées. De plus, {{site.data.keyword.IBM_notm}} se charge de l'intégralité de la maintenance des instances dédiées au cours d'une fenêtre de maintenance
 que vous choisissez.
 
-{{site.data.keyword.IBM_notm}} met à disposition plusieurs services dans votre environnement dédié, mais vous pouvez vous connecter à tous les services publics.
-Tous les environnements d'exécution sont
+{{site.data.keyword.IBM_notm}} met à disposition plusieurs services dans votre environnement dédié, mais vous pouvez vous connecter à tous les services publics. Tous les environnements d'exécution sont
 disponibles dans l'environnement dédié.
 Tous les déploiements dédiés de {{site.data.keyword.Bluemix_notm}}
 incluent les fonctions et les avantages suivants gratuitement : réseau virtuel privé, réseau local virtuel privé, connectivité avec votre protocole LDAP,
@@ -130,7 +128,7 @@ support standard.
 
 *Figure 3. {{site.data.keyword.Bluemix_notm}} dédié*
 
-### {{site.data.keyword.Bluemix_notm}} local 
+### {{site.data.keyword.Bluemix_notm}} local
 {: #local}
 
 L'environnement {{site.data.keyword.Bluemix_notm}} local est votre propre instance {{site.data.keyword.Bluemix_notm}} qui est
@@ -138,19 +136,16 @@ déployée dans votre centre de données, derrière le pare-feu de la société.
 pouvez rester connecté de façon sécurisée à
 l'environnement {{site.data.keyword.Bluemix_notm}} public et synchronisé.
 
-
 L'environnement {{site.data.keyword.Bluemix_notm}} local inclut un catalogue privé mixte qui affiche les services locaux disponibles
 exclusivement pour vous. Il inclut également des services mixtes qui sont à votre disposition depuis l'environnement
 {{site.data.keyword.Bluemix_notm}} public. Tous les environnements d'exécution sont disponibles dans l'environnement local. Les déploiements
 locaux de {{site.data.keyword.Bluemix_notm}} présentent les fonctions et les avantages suivants gratuitement : technologie de gestion de relais,
 connectivité LDAP, possibilité d'optimiser des applications et des bases de données sur site existantes et support standard.
 
-
 IBM utilise la technologie de relais pour surveiller et gérer votre environnement de façon sécurisée de sorte que vous puissiez vous consacrer à
 votre activité. Le relais est une fonction de distribution incluse dans l'environnement {{site.data.keyword.Bluemix_notm}} local qui permet à IBM
 de distribuer les mises à jour automatiquement et de façon cohérente, pour que vous disposiez toujours d'un système à jour, stable et sécurisé. Le relais
-assure la connectivité via un tunnel de réseau privé virtuel ouvert, avec configuration SSL sortante, provenant de la machine virtuelle de création.
-Par le biais de ce tunnel, IBM sert et gère la plateforme, les ressources de traitement et les services pour votre instance. Voir
+assure la connectivité via un tunnel de réseau privé virtuel ouvert, avec configuration SSL sortante, provenant de la machine virtuelle de création. Par le biais de ce tunnel, IBM sert et gère la plateforme, les ressources de traitement et les services pour votre instance. Voir
 [{{site.data.keyword.Bluemix_notm}} local](../local/index.html#local).
 
 ![{{site.data.keyword.Bluemix_notm}} local.](images/localarch.png "Bluemix local")
@@ -247,15 +242,14 @@ L'ensemble de l'infrastructure {{site.data.keyword.Bluemix_notm}}, les composant
 {: #ov_intro}
 
 {{site.data.keyword.Bluemix_notm}} est composé d'applications, de services, de packs de construction, et d'autres composants. Vous pouvez
-déployer des applications dans différentes régions {{site.data.keyword.Bluemix_notm}} avec un seul ID {{site.data.keyword.IBM_notm}}. 
+déployer des applications dans différentes régions {{site.data.keyword.Bluemix_notm}} avec un seul ID {{site.data.keyword.IBM_notm}}.
 
 ### Régions
 {: #ov_intro__reg}
 
 Une région {{site.data.keyword.Bluemix_notm}} est un territoire géographique défini sur lequel vous pouvez déployer vos applications. Vous
 pouvez créer des instances d'application et de service dans différentes régions avec la même infrastructure {{site.data.keyword.Bluemix_notm}} pour
-la gestion des applications et la même vue de détails de l'utilisation pour la facturation.
-Vous pouvez sélectionner la région la plus proche de vos clients et y déployer vos applications pour avoir un temps d'attente faible. Vous pouvez également sélectionner la région où vous voulez garder les données d'application permettant d'adresser les problèmes de sécurité. Lorsque vous construisez des applications dans plusieurs régions et que l'une des régions s'arrête, les applications des autres régions continuent de
+la gestion des applications et la même vue de détails de l'utilisation pour la facturation. Vous pouvez sélectionner la région la plus proche de vos clients et y déployer vos applications pour avoir un temps d'attente faible. Vous pouvez également sélectionner la région où vous voulez garder les données d'application permettant d'adresser les problèmes de sécurité. Lorsque vous construisez des applications dans plusieurs régions et que l'une des régions s'arrête, les applications des autres régions continuent de
 fonctionner. La franchise de ressources est la même dans toutes les régions que vous utilisez.
 
 Si
@@ -283,9 +277,10 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 
 | **Nom de région** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |       
 |-----------------|-------------------|---------------------|----------------|
-| Région Sud des Etats-Unis | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| Région Europe et Royaume-Uni | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| Région Australie Sydney  | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| Région Sud des Etats-Unis | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| Région Europe et Royaume-Uni | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Région Australie Sydney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *Tableau 1. Liste des régions {{site.data.keyword.Bluemix_notm}}*
 
@@ -293,20 +288,19 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 {: #infrastructure}
 
 {{site.data.keyword.Bluemix_notm}} propose trois façons d'exécuter votre code : avec Cloud Foundry, avec
-{{site.data.keyword.IBM_notm}} Containers et à l'aide de machines virtuelles. Vous pouvez choisir l'infrastructure appropriée pour le déploiement
+{{site.data.keyword.IBM_notm}} Containers et avec Virtual Machines. {{site.data.keyword.IBM_notm}} Containers et Virtual Machines sont
+disponibles dans les régions Sud des Etats-Unis et Europe et Royaume-Uni seulement. Vous pouvez choisir l'infrastructure appropriée pour le déploiement
 de vos applications. 
 
 <dl>
 <dt>Cloud Foundry</dt>
     <dd>Les applications qui s'exécutent dans l'infrastructure Cloud Foundry fonctionnent avec des applications Cloud Foundry existantes et peuvent être
-liées à n'importe quel service disponible dans le catalogue {{site.data.keyword.Bluemix_notm}}.
-Avec cette infrastructure, vous
+liées à n'importe quel service disponible dans le catalogue {{site.data.keyword.Bluemix_notm}}. Avec cette infrastructure, vous
 développez et gérez le code de votre application, et {{site.data.keyword.Bluemix_notm}} se charge de la gestion
 et de la maintenance de l'infrastructure qui optimise ces applications.</dd>
 <dt>{{site.data.keyword.IBM_notm}}Containers</dt>
     <dd>Avec l'infrastructure {{site.data.keyword.IBM_notm}} Containers, vous pouvez exécuter votre application Web n'importe où, à condition que le
-déploiement de conteneur soit pris en charge.
-Un *conteneur* est un objet qui contient tous les éléments nécessaires à l'exécution d'une application. Cette
+déploiement de conteneur soit pris en charge. Un *conteneur* est un objet qui contient tous les éléments nécessaires à l'exécution d'une application. Cette
 infrastructure inclut un registre privé pour vos images sécurisées, afin que vous puissiez les télécharger, les
 stocker et les extraire. Ensuite, vous pouvez mettre ces images à disposition dans
 {{site.data.keyword.Bluemix_notm}} et gérer vos conteneurs sur la plateforme. L'infrastructure d'{{site.data.keyword.IBM_notm}} Containers
@@ -315,7 +309,9 @@ mise à l'échelle horizontalement et verticalement. Vous pouvez
 utiliser toutes les images qui sont disponibles dans le concentrateur Docker public et utiliser l'API Docker et l'interface de ligne de commande pour gérer
 vos
 conteneurs dans {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.IBM_notm}} met également à disposition des images publiques dans le
-registre Containers que vous pouvez utiliser et étendre.     {{site.data.keyword.IBM_notm}} Containers est utilisé pour exécuter des
+registre Containers que vous pouvez utiliser et étendre.
+
+    {{site.data.keyword.IBM_notm}} Containers est utilisé pour exécuter des
 conteneurs Docker
 dans un environnement de cloud hébergé. Docker ajoute un moteur qui déploie une application dans l'environnement virtuel que vous utilisez pour exécuter vos
 conteneurs. Il fournit également un environnement que vous pouvez utiliser pour exécuter
@@ -324,14 +320,12 @@ votre environnement de production.
 
     Pour en savoir plus sur {{site.data.keyword.IBM_notm}} Containers, voir
 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) dans la documentation intitulée Création
-d'applications Web.
-</dd>
-<dt>Virtual Machines (bêta) </dt>
+d'applications Web.</dd>
+<dt>Virtual Machines (bêta)</dt>
     <dd>L'infrastructure {{site.data.keyword.Bluemix_notm}} Virtual Machines permet de créer et de gérer des groupes de
 machines virtuelles
 dans le cloud public {{site.data.keyword.IBM_notm}}. Vous pouvez aussi créer et gérer des groupes de machines virtuelles dans vos clouds
-{{site.data.keyword.IBM_notm}} privés que vous avez décidé de mettre à la disposition des utilisateurs de {{site.data.keyword.Bluemix_notm}}.
-L'infrastructure inclut une aide pour la connexion à votre infrastructure sur site. La prise en charge de la surveillance et de la journalisation est
+{{site.data.keyword.IBM_notm}} privés que vous avez décidé de mettre à la disposition des utilisateurs de {{site.data.keyword.Bluemix_notm}}. L'infrastructure inclut une aide pour la connexion à votre infrastructure sur site. La prise en charge de la surveillance et de la journalisation est
 intégrée à {{site.data.keyword.Bluemix_notm}}. Vous pouvez déployer et gérer vos machines virtuelles avec l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}} ou les API OpenStack du cloud.
 
@@ -411,10 +405,10 @@ Un pack de construction est une collection de scripts qui prépare l'exécution 
 Si vous ne spécifiez pas de pack de construction lorsque vous déployez votre
 application dans {{site.data.keyword.Bluemix_notm}}, les packs de construction intégrés sont utilisés par défaut.
 
-<dl class="dl"><dt class="dt dlterm">Packs de construction {{site.data.keyword.IBM_notm}} intégrés </dt>
+<dl class="dl"><dt class="dt dlterm">Packs de construction {{site.data.keyword.IBM_notm}} intégrés</dt>
 <dd class="dd"><div class="p">
 <!-- begin PRODUCTION ONLY -->
-La liste suivante est la liste des packs de construction intégrés créés par {{site.data.keyword.IBM_notm}} :
+La liste suivante est la liste des packs de construction intégrés créés par {{site.data.keyword.IBM_notm}} : 
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
@@ -446,7 +440,7 @@ Les *systèmes d'enregistrement* incluent les applications et les bases de donn�
 des
 processus standardisés. Des *systèmes d'engagement* permettent de développer l'utilité des systèmes d'enregistrement en les rendant
 plus attractifs pour les utilisateurs.
-En intégrant un système d'enregistrement à l'application que vous créez dans {{site.data.keyword.Bluemix_notm}}, vous pouvez : 
+En intégrant un système d'enregistrement à l'application que vous créez dans {{site.data.keyword.Bluemix_notm}}, vous pouvez :
 
  * Activer une communication sécurisée entre l'application et la base de données dorsale, via le téléchargement et l'installation d'un connecteur
 sécurisé sur site.
@@ -455,26 +449,21 @@ sécurisé sur site.
  * Exposer uniquement les schémas et les tables de votre choix à l'application.
  * En tant que responsable d'organisation {{site.data.keyword.Bluemix_notm}}, publier une interface de programme d'application sous forme de service privé, visible uniquement des membres de votre organisation.
 
-Utiliser le service Cloud Integration pour intégrer un système d'enregistrement à l'application que vous créez dans {{site.data.keyword.Bluemix_notm}}.
-Le service Cloud Integration permet de créer et de publier une API Cloud Integration en tant que service privé pour
+Utiliser le service Cloud Integration pour intégrer un système d'enregistrement à l'application que vous créez dans {{site.data.keyword.Bluemix_notm}}. Le service Cloud Integration permet de créer et de publier une API Cloud Integration en tant que service privé pour
 votre
 organisation.
 
 <dl>
-<dt>API Cloud Integration </dt>
+<dt>API Cloud Integration</dt>
     <dd>Une API Cloud Integration fournit un accès sécurisé aux systèmes d'enregistrement résidant derrière un pare-feu
 via des API Web. Lorsque vous créez l'API Cloud Integration, vous choisissez la ressource à laquelle vous voulez accéder via l'API Web, spécifiez les
 opérations qui sont autorisées et incluez les logiciels SDK et les exemples pour accéder à l'API. Pour plus d'informations sur la création d'une API Cloud
 Integration, voir [Création d'une API Cloud Integration](../services/CloudIntegration/index.html#cloudint_add_service).</dd>
 <dt>Service privé</dt>
-    <dd>Un service privé est composé d'une API Cloud Integration, de logiciels SDK et de règles de droits. De plus, le service privé peut contenir de la documentation ou d'autres éléments appartenant au fournisseur de services. 
-Seul le responsable de l'organisation peut publier une API Cloud Integration en tant que service privé. Pour connaître les services privés à votre
-disposition, cochez la case Privé dans le catalogue {{site.data.keyword.Bluemix_notm}}.
-Vous pouvez sélectionner et lier un service privé à une application sans vous connecter au service Cloud Integration. Pour lier un service privé à votre
-application, procédez de la même façon que pour les services {{site.data.keyword.Bluemix_notm}}.
-Pour des informations sur la publication d'une API en tant que service privé, voir Publication d'une API en tant que service privé.
-</dd>
-	</dl>
+    <dd>Un service privé est composé d'une API Cloud Integration, de logiciels SDK et de règles de droits. De plus, le service privé peut contenir de la documentation ou d'autres éléments appartenant au fournisseur de services. Seul le responsable de l'organisation peut publier une API Cloud Integration en tant que service privé. Pour connaître les services privés à votre
+disposition, cochez la case Privé dans le catalogue {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner et lier un service privé à une application sans vous connecter au service Cloud Integration. Pour lier un service privé à votre
+application, procédez de la même façon que pour les services {{site.data.keyword.Bluemix_notm}}. Pour des informations sur la publication d'une API en tant que service privé, voir Publication d'une API en tant que service privé.</dd>
+</dl>
 
 ### Scénario : Création d'une application mobile riche pour la connexion avec votre système d'enregistrement
 {: #scenario}
@@ -483,23 +472,18 @@ Pour des informations sur la publication d'une API en tant que service privé, v
 des
 systèmes d'entreprise d'enregistrement pour générer une application qui interagit avec vos données sur site.
 
-Par exemple, vous pouvez concevoir une application mobile pour interagir avec votre système de gestion de la relation client résidant sur site, derrière un pare-feu. 
-Vous pouvez appeler le système d'enregistrement de manière sécurisée et optimiser les services mobiles dans {{site.data.keyword.Bluemix_notm}} afin
+Par exemple, vous pouvez concevoir une application mobile pour interagir avec votre système de gestion de la relation client résidant sur site, derrière un pare-feu. Vous pouvez appeler le système d'enregistrement de manière sécurisée et optimiser les services mobiles dans {{site.data.keyword.Bluemix_notm}} afin
 de générer une application mobile riche.
 
-Tout d'abord, votre développeur d'intégration crée l'application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.
-Il fait appel au conteneur boilerplate Mobile Cloud utilisant le contexte d'exécution Node.js qu'il connaît le mieux.
+Tout d'abord, votre développeur d'intégration crée l'application de back end mobile dans {{site.data.keyword.Bluemix_notm}}. Il fait appel au conteneur boilerplate Mobile Cloud utilisant le contexte d'exécution Node.js qu'il connaît le mieux.
 
 Puis, en utilisant le service Cloud Integration dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, il expose une API via un connecteur
-sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son  interface de programme d'application et la base de données. 
-Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
-qu'API. 
+sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son  interface de programme d'application et la base de données. Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
+qu'API.
 
 Il ajoute ensuite le service Push pour distribuer des notifications mobiles aux clients intéressés. Il ajoute également un service de partenaire commercial pour écrire un tweet lorsqu'un nouvel enregistrement client est créé avec une interface de programme d'application Twitter.
 
-En tant que développeur d'application, vous pouvez ensuite vous connecter à {{site.data.keyword.Bluemix_notm}}, télécharger le kit d'outils de développement Android et développer le code appelant les interfaces de programme d'application créées par le développeur d'intégration. 
-Vous pouvez développer une application mobile qui permet aux utilisateurs d'entrer des informations sur leur périphérique mobile. Cette application crée alors un enregistrement client dans le système de gestion client. 
-Lorsque l'enregistrement est créé, l'application crée une notification push pour périphérique mobile et un tweet pour signaler le nouvel enregistrement.
+En tant que développeur d'application, vous pouvez ensuite vous connecter à {{site.data.keyword.Bluemix_notm}}, télécharger le kit d'outils de développement Android et développer le code appelant les interfaces de programme d'application créées par le développeur d'intégration. Vous pouvez développer une application mobile qui permet aux utilisateurs d'entrer des informations sur leur périphérique mobile. Cette application crée alors un enregistrement client dans le système de gestion client. Lorsque l'enregistrement est créé, l'application crée une notification push pour périphérique mobile et un tweet pour signaler le nouvel enregistrement.
 
 ## Support de langue nationale pour {{site.data.keyword.Bluemix_notm}}
 {: #lang}
@@ -529,7 +513,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 * [Configuration requise pour {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problèmes {{site.data.keyword.Bluemix_notm}} connus](https://developer.ibm.com/bluemix/support/#issues)
-* [Glossaire {{site.data.keyword.Bluemix_notm}}](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} glossaire](glossary/index.html)
 * [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

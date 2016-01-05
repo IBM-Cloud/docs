@@ -4,7 +4,7 @@
 # Visão geral do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última atualização: 15 de outubro de 2015* 
+*Última atualização: 20 de novembro de 2015*
 
 {{site.data.keyword.Bluemix}} é a plataforma em nuvem
 aberta da {{site.data.keyword.IBM}} que fornece aos
@@ -109,7 +109,7 @@ do {{site.data.keyword.Bluemix_notm}}](images/arch.png)
 *Figura 1.
 Arquitetura do {{site.data.keyword.Bluemix_notm}}*
 
-É possível implementar seus apps em diferentes regiões do {{site.data.keyword.Bluemix_notm}}, para considerações de latência ou segurança. É possível optar por implementar para uma região ou entre várias regiões. Para obter mais informações, consulte [Regiões](overview.html#ov_intro__reg).
+É possível implementar seus apps em diferentes regiões do {{site.data.keyword.Bluemix_notm}}, para considerações de latência ou segurança. É possível optar por implementar para uma região ou entre várias regiões. Para obter mais informações, consulte [Regiões](#ov_intro__reg).
 
 ![Desenvolvimento de
 aplicativo multiregion](images/multi-region.png)
@@ -313,9 +313,10 @@ as regiões e os prefixos de regiões a seguir.
 | **Nome da região** | **Prefixo da região** | **Terminal
 de API cf** | **Console da interface com o usuário** |       
 |-----------------|-------------------|---------------------|----------------|
-| Região Sul dos EUA | us-south | api.ng.{{site.data.keyword.Bluemix_notm}}.net | console.ng.{{site.data.keyword.Bluemix_notm}}.net |
-| Região do Reino Unido na Europa | eu-gb | api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net | console.eu-gb.{{site.data.keyword.Bluemix_notm}}.net |
-| Região de Sydney, Austrália | eu-gb | api.au-syd.{{site.data.keyword.Bluemix_notm}}.net | console.au-syd.{{site.data.keyword.Bluemix_notm}}.net |
+| Região Sul dos EUA | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
+| Região do Reino Unido na Europa | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Região de Sydney na Austrália | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+
 
 *Tabela 1. Lista
 de regiões do {{site.data.keyword.Bluemix_notm}}*
@@ -323,9 +324,7 @@ de regiões do {{site.data.keyword.Bluemix_notm}}*
 ### Infraestrutura
 {: #infrastructure}
 
-O {{site.data.keyword.Bluemix_notm}} oferece três
-maneiras de executar seu código: Cloud Foundry,
-{{site.data.keyword.IBM_notm}} Containers e máquinas virtuais. É
+O {{site.data.keyword.Bluemix_notm}} oferece três maneiras de executar seu código: Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers e máquinas virtuais. O {{site.data.keyword.IBM_notm}} Containers e as máquinas virtuais estão disponíveis somente na região Sul dos EUA e Reino Unido na Europa. É
 possível selecionar a infraestrutura certa para implementar seus
 apps. 
 
@@ -345,6 +344,7 @@ infraestrutura do
 {{site.data.keyword.IBM_notm}} Containers escala horizontalmente e verticalmente. É possível usar todas as imagens disponíveis no Docker Hub público e usar a API do docker e a interface de linha de comandos para gerenciar seus contêineres no {{site.data.keyword.Bluemix_notm}}. A
 {{site.data.keyword.IBM_notm}}
 também fornece algumas imagens públicas no Registro de contêineres que podem ser usadas e estendidas.
+
     O {{site.data.keyword.IBM_notm}} Containers é
 usado para executar contêineres de Docker em um ambiente em
 nuvem hospedado. O Docker inclui um mecanismo que implementa um app no ambiente virtual que você usa para executar seus contêineres. O Docker também fornece um ambiente que pode ser usado para executar seu código. Quando você estiver pronto, ele fornece os meios pelos quais é possível transferir o código do seu ambiente de ambiente de desenvolvimento para o seu ambiente de teste e, então, para o seu ambiente de produção.
@@ -447,7 +447,7 @@ buildpacks integrados serão usados por padrão.
 {{site.data.keyword.IBM_notm}} integrados</dt>
 <dd class="dd"><div class="p">
 <!-- begin PRODUCTION ONLY -->
-A lista a seguir é de buildpacks integrados que são criados pela {{site.data.keyword.IBM_notm}}.
+A lista a seguir é de buildpacks integrados que são criados pela {{site.data.keyword.IBM_notm}}. 
 <ul>
 <li>Liberty for Java</li>
 <li>Node.js</li>
@@ -516,7 +516,7 @@ possível selecionar e ligar um serviço privado a um app sem se conectar ao ser
 liga serviços privados ao seu app da mesma maneira que faz com outros
 serviços {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como publicar uma API como um serviço privado,
 consulte Publicando uma API como um serviço privado.</dd>
-	</dl>
+</dl>
 
 ### Cenário: Criando um app móvel avançado para conexão
 com o sistema de registro
@@ -554,7 +554,7 @@ desenvolver um app móvel que permita aos usuários inserir suas
 informações em seus dispositivos móveis. O app móvel cria então um registro do cliente
 no sistema de gerenciamento do cliente. Quando o registro é criado, o
 app envia uma notificação para um dispositivo móvel e inicia
-um tweet sobre o novo registro. 
+um tweet sobre o novo registro.
 
 ## Suporte ao idioma nacional para o {{site.data.keyword.Bluemix_notm}}
 {: #lang}
@@ -587,7 +587,7 @@ do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support
 {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problemas
 conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}} glossário](/glossary/glossary.html)
+* [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
 * [Folha
 de precificação do {{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)

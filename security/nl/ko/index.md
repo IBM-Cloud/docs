@@ -1,20 +1,21 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2015년 10월 15일*
+*마지막 업데이트 날짜: 2015년 12월 7일*
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
-네트워크 및 인프라에서 계층화된 보안 제어가 있습니다. 또한 {{site.data.keyword.Bluemix_notm}}에서는
-자체 모바일 및 웹 앱을 보호하기 위해 애플리케이션 개발자가 사용할 수 있는 보안 서비스 스위트도 제공합니다. 이러한 요소가 결합되어 {{site.data.keyword.Bluemix_notm}}는
+네트워크 및 인프라에서 계층화된 보안 제어가 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 자체 모바일 및 웹 앱을 보호하기 위해
+애플리케이션 개발자가 사용할 수 있는 보안 서비스 그룹을 제공합니다. 이러한 요소가 결합되어 {{site.data.keyword.Bluemix_notm}}는
 보안 애플리케이션 개발을 위한 명확한 선택사항을 보유한 플랫폼이 됩니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 침해사고 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) 사이트를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 침해사고 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
-{{site.data.keyword.Bluemix_notm}} Public 및 Dedicated는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고 해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} Local의 경우
+{{site.data.keyword.Bluemix_notm}} Public 및 Dedicated는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
+해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} Local의 경우
 사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} Local을
 호스트하여 실제 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
 다양한 카테고리(플랫폼, 데이터 및 애플리케이션)의 PaaS(Platform as a Service) 계층에서 보안 기능을 추가합니다.
@@ -36,15 +37,18 @@
  * 서비스 거부(DoS) 및 조직적 공격 발견
  * 보안 침해사고 대응
 
-![Bluemix 플랫폼 보안 개요](images/platform_sec.png)
+![Bluemix 플랫폼 보안 개요](images/platform_sec.svg)
 
 *그림 1. {{site.data.keyword.Bluemix_notm}} 플랫폼 보안 개요*
 
-회사 방화벽 및 데이터 센터 뒤에 Bluemix를 호스팅하여 특정 보안 부분을 소유하고 있기 때문에 {{site.data.keyword.Bluemix_notm}} Local 보안은 다릅니다. 다음 보안 파트 이미지 세부사항은 고객 소유이며 보안 파트는 IBM에서 관리하고 유지보수합니다.
+{{site.data.keyword.Bluemix_notm}} Local에서는 회사의 방화벽 뒤 및 데이터 센터 내에 {{site.data.keyword.Bluemix_notm}}를 호스팅합니다. 따라서 특정 보안 사안에 대해서는 사용자에게 책임이 있습니다. 다음 보안 파트 이미지 세부사항은 고객 소유이며 보안 파트는 IBM에서 관리하고 유지보수합니다.
 
-![Bluemix Local 플랫폼 보안 개요](images/security_local_platform.png)
+![Bluemix Local 플랫폼 보안 개요](images/security_local_platform.svg)
 
 *그림 2. {{site.data.keyword.Bluemix_notm}} Local 플랫폼 보안 개요*
+
+IBM은 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능인 Relay를 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} Local을 설치하고
+원격으로 모니터하고 관리합니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에 고유한 인증서를 안전하게 연결합니다. {{site.data.keyword.Bluemix_notm}} Local 및 Relay에 대한 자세한 정보는 [Bluemix Local](../local/index.html)을 참조하십시오. 
 
 ### 기능적 보안
 
@@ -274,7 +278,7 @@ Static Analyzer로 로컬 디스크에서 명령행 인터페이스(CLI)를 사�
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 플러그인을 사용하면 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 사용자 웹 또는 Android 앱에서 보안 스캔을 실행할 수 있습니다. 이 플러그인은 IBM Bluemix DevOps 서비스 플랫폼에서 IBM UrbanCode™ Deploy 커뮤니티에 의해 개발되고 지원됩니다.
 
-자세한 정보는 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/)로 이동하십시오.
+자세한 정보는 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}로 이동하십시오.
 
 ### SQL Database
 
@@ -299,11 +303,11 @@ SQL을 사용하여 데이터를 마스킹하기 위해
 
 ### dashDB
 
-dashDB 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 사용자 인증용 IBM Directory Server LDAP와 IBM InfoSphere Guardium Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
+dashDB 서비스는 사용자 인증을 위한 내장된 LDAP 서버를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
 SSL 인증서에 의해 보호됩니다. 이 서비스는 배치된 데이터베이스와 데이터베이스 백업을 자동으로 암호화하기 위해 DB2® 원시 암호화 기능을 사용합니다. 마스터 키 회전은 자동이고 90일마다
 수행됩니다.
 
-자세한 정보는 [dashDB 시작하기](services/dashDB/index.html)를 참조하십시오.
+자세한 정보는 [dashDB 시작하기](../services/dashDB/index.html)를 참조하십시오.
 
 ### Cloud Integration
 
@@ -322,34 +326,45 @@ API 패키지를 사용하여 보안 게이트웨이를 구성하고 작성할 �
 
 자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/index.html)를 참조하십시오.
 
+### 보안 정보 및 이벤트 관리
+
+You can use security information and event management (SIEM) 도구를 사용하여 애플리케이션 로그의 보안 경보를 분석할 수 있습니다. 이러한 도구 중 하나가 클라우드 환경에서 지능형 보안을 제공하는 IBM Security QRadar&reg; SIEM입니다. 자세한 정보는 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}을 참조하십시오. 
+
 ## {{site.data.keyword.Bluemix_notm}} 보안 배치
 {: #security-deployment}
 
 {{site.data.keyword.Bluemix_notm}} 보안 배치 아키텍처에는
 보안 액세스를 보장할 수 있도록 앱 사용자 및 개발자용 다양한 정보 플로우가 포함되어 있습니다.
 
-![Bluemix 보안 배치 아키텍처](images/sec_deployment.png)
+![Bluemix 보안 배치 아키텍처](images/sec_deployment.svg)
 
 *그림 3. Bluemix 보안 배치 아키텍처*
 
-{{site.data.keyword.Bluemix_notm}} *앱 사용자*용 정보 플로우는 다음과 같습니다.
+{{site.data.keyword.Bluemix_notm}} *앱 사용자*의 경우, **앱 사용자 플로우**는 다음과 같습니다.
  1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음).
  2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
  3. 네트워크 라우터를 통해.
  4. DEA(Droplet Execution Agent)에서 애플리케이션 런타임에 도달합니다.
 
 {{site.data.keyword.Bluemix_notm}} *개발자*는 두 개의 기본 플로우(로그인용과 개발 및 배치용)를 따릅니다.
- * 로그인용 개발자 플로우에는 다음이 포함됩니다.
+ * **개발자 로그인 플로우**에는 다음이 포함됩니다.
     * {{site.data.keyword.Bluemix_notm}} Public에 로그인한 개발자의 경우
 플로우는 다음과 같습니다.
       1. IBM Single Sign On 서비스를 통해.
       2. IBM 웹 ID를 통해.
     * {{site.data.keyword.Bluemix_notm}} Dedicated 또는 Local에 로그인한 개발자의 경우 플로우는 엔터프라이즈 LDAP를 통합니다.
- * 앱 개발 및 배치용 개발자 플로우는 다음과 같습니다.
+ * **개발 및 배치 플로우**는 다음과 같습니다.
     1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음). {{site.data.keyword.Bluemix_notm}} Dedicated에만 적용됩니다.
     2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
     3. 네트워크 라우터를 통해.
     4. Cloud Foundry 클라우드 제어기를 사용한 권한 부여를 통해(개발자가 작성한 앱 및 서비스 인스턴스에 대한 액세스만 보장할 수 있도록).
+  
+{{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local *관리자*의 경우,
+**관리자 플로우**는 다음과 같습니다.
+ 1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음).
+ 2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
+ 3. 네트워크 라우터를 통해.
+ 4. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 관리 페이지에 도달합니다.
 
 이 경로에서 기술된 사용자와 더불어 인가된 IBM 보안 운영 팀은 다음과 같은 다양한 운영 보안 태스크를 수행합니다.
  * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 실제 보안 및 스캔을 소유합니다.
@@ -358,6 +373,36 @@ API 패키지를 사용하여 보안 게이트웨이를 구성하고 작성할 �
  * 침입 방지로 위험성 관리.
  * QRadar로 보안 모니터링.
  * 관리 콘솔을 통해 사용 가능한 보안 보고서
+
+## 보안 보고서
+{: #reports}
+
+{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하여 {{site.data.keyword.Bluemix_notm}}는 관리 페이지를 통해 볼 수 있는 다양한 보안 보고서와 로그를 생성합니다. 보고서 보기 및 사용에 대한 지시사항은 [보고서 보기](../admin/index.html#oc_report)를 참조하십시오. 
+
+다음 표는 {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated에 대해 생성되는
+보안 보고서 목록을 보여줍니다.
+
+| **카테고리** | **보고서** | **설명** |      
+|-----------------|-------------------|---------------------|
+| 방화벽 | 방화벽 로그인 | Vyatta 방화벽 디바이스에 대한 관리자 로그인과 관련한 이벤트. |
+| 방화벽 | 방화벽 거부 | 적용 중인 방화벽 규칙에 따라 액세스 요청이 거부되는 경우 Vyatta 방화벽 디바이스가 생성하는 이벤트. |
+| {{site.data.keyword.Bluemix_notm}} 관리자 로그인 이벤트 | {{site.data.keyword.Bluemix_notm}} 관리자 로그인 | 관리자가 모든 {{site.data.keyword.Bluemix_notm}} 시스템에서 SSH 세션을 시작할 때 운영 체제가 생성하는 이벤트. |
+| {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 로그인 이벤트 | {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 로그인 | {{site.data.keyword.Bluemix_notm}} 플랫폼 사용자가 명령행, REST API 또는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 세션을 시작할 때 {{site.data.keyword.Bluemix_notm}} 플랫폼 로그인 컴포넌트가 생성하는 이벤트. |
+| {{site.data.keyword.Bluemix_notm}} 관리자 관리 이벤트 | {{site.data.keyword.Bluemix_notm}} 관리자 운영 체제 관리 이벤트 | 관리자가 현재 작업 세션 내에서 조치를 수행할 때 운영 체제가 생성하는 이벤트. |
+| {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 관리 이벤트 | {{site.data.keyword.Bluemix_notm}}(Cloud Foundry) 관리 이벤트 | 명령행, REST API 또는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 플랫폼 사용자가 수행하는 오퍼레이션과 관련된 이벤트. |
+| {{site.data.keyword.Bluemix_notm}} 관리자 데이터베이스 관리 이벤트 | 데이터베이스 관리 이벤트 | {{site.data.keyword.Bluemix_notm}} 내부 데이터베이스에서 데이터베이스 관리자가 수행하는 오퍼레이션과 관련한 이벤트. |
+| 관리 이벤트 | 사용자 관리 이벤트 | 관리 페이지에서 수행되는 사용자 관리 조치와 관련한 이벤트. |
+| 관리 이벤트 | 카탈로그 | 서비스 카탈로그 변경과 관련한 이벤트. |
+| 관리 이벤트 | 보안 보고서 관리 이벤트 | 관리 페이지에서 수행되는 보안 보고서 관리 조치와 관련한 이벤트. |
+| 액세스 검토 | 액세스 검토 보고서 | 권한이 부여된 액세스에 대한 검토. |
+| 변경 관리 | 소프트웨어 변경 관리 | 변경 관리 활동. |
+| 키 관리 | 사용자 정의 SSL 인증서 관리 | 업로드 및 저장된 사용자 정의 SSL 인증. |
+| 암호화 | 전송 중 데이터 암호화 | 구성된 전송 중 데이터 암호화. |
+| 안티 바이러스 | 안티 바이러스 스캔 보고서 | 적용 중인 안티 바이러스 소프트웨어. |
+| 소프트웨어 수정사항 관리 | 패치 애플리케이션 보고서 | 적용된 소프트웨어 수정사항. |
+| 보안 침해사고 관리 | 보안 침해사고 조치방안 보고서 | 보안 침해사고 관리를 위한 보안 침해사고 증거. |
+
+*표 1. {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 보안 보고서 목록*
 
 # rellinks
 ## 일반 

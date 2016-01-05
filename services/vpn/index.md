@@ -1,12 +1,15 @@
+{:new_window: target="_blank"} 
+
 # Getting started with IBM VPN (Beta)
 
 IBM® Virtual Private Network (VPN) provides a secure communication channel between your corporate data center and your resources inside IBM cloud. The connection is established over the Internet. You can use IBM cloud as an extension of your corporate data center. 
 
-IBM VPN service is available to securely access container resources inside IBM cloud.  
+IBM VPN service is available to securely access IBM containers (Docker containers)inside IBM cloud.  
 
-The IBM VPN service offering is available at: IBM Bluemix > Catalog > Services > Network. 
+The IBM VPN service offering is available at: IBM Bluemix® > Catalog > Services > Network. 
 
 ### To use IBM VPN service:
+{: #ibm-vpn}
 
 1. Open IBM Bluemix > Catalog > Services > Network. You will see the available network services.
 2. Select **VPN**. You will see the VPN service description, available plans, and pricing details. 
@@ -16,17 +19,20 @@ The IBM VPN service offering is available at: IBM Bluemix > Catalog > Services >
 5. Select **CREATE**. The service instance is created.
 6. Select IBM Bluemix > Dashboard > Services > Virtual Private Network (VPN).
 
-Proceed with configuring the gateway, site connections, and the Internet Key Exchange (IKE) and IPSec policies.  
+Proceed with configuring the gateway, site connections, and the Internet Key Exchange (IKE) and IPSec policies. See also: [Configuration at Your Data Center](index.html#yourdatacenter) 
 
 #### Gateway Configuration
+{: #gateway}
 ![Gateway Configuration](images/gateway.png)
 
 Configure the gateway as follows:  
-1. Specify the gateway name.  
+1. Select **EDIT**.  
+2. Specify the gateway name.  
 2. Select the containers or groups with which you want to use the VPN service.  
 3. Select **SAVE**. 
 
 #### VPN Site Connection Configuration
+{: #site}
 ![Site Connection](images/siteconn.png)
 
 1. Select **ADD NEW**.
@@ -34,15 +40,15 @@ Configure the gateway as follows:
 	* **Name**: Name of the connection  
 	* **Description**: Description of the connection parameters (optional)  
 	* **Preshared Key String**: Preshared (secret) key to be used for authentication
-	* **Admin State**: Status of the VPN connection. Select from drop-down: UP or DOWN; default value: UP (optional)  
+	* **Admin State**: Status of the VPN connection. Select from drop-down: UP or DOWN. Default value: UP  
 	* **Customer Gateway IP**: Remote endpoint IP address of the VPN tunnel  
 	* **Customer Subnet**: Remote subnet address in CIDR format. 
 3. (Optional) Configure the following **Advanced Settings** parameters:  
 	* **IKE Policy**: Name of the IKE policy
-	* **Keep Alive Interval**: Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Default value: 15. Range: 15-86400
-	* **Action on dead peer**: Action to be taken when the peer is detected as dead
+	* **Keep Alive Interval**: Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Default value: 15. Range: 5-86399
+	* **Action on dead peer**: Action to be taken when the peer is detected as dead; Values: hold, clear; disabled; restart; restart-by-peer. Default value: hold
 	* **IPSec Policy**: Name of the IPSec policy
-	* **Keep Alive Timeout**: Timeout value in seconds after which the session is terminated. Default value: 120. Range: 30-86400
+	* **Keep Alive Timeout**: Timeout value in seconds after which the session is terminated. Default value: 120. Range: 6-86400
 4. Select **SAVE**.
 
 #### IKE and IPSec Policy Configuration
@@ -53,6 +59,7 @@ Configure the gateway as follows:
 Select the **IKE & IPSec Policies** tab.
 
 #####IKE Policy Configuration
+{: #ike}
 ![IKE Policy Configuration](images/ikepolicy.png)
 
 To configure IKE policy:
@@ -63,12 +70,13 @@ To configure IKE policy:
 	* **Authorization Algorithm**: sha1; cannot be changed  
 	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default); aes-192; aes-256; 3des
 	* **Key Lifetime**: Lifetime value (in seconds) of the IKE security association. Range: 60-86400. Default Value: 86400
-	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14; Default value: Group14
+	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 	* **Negotiation Mode**: Main; cannot be changed
 	* **Version**: IKEV1; cannot be changed
 3. Select **SAVE**.
 
 #####IPSec Policy Configuration
+{: #ipsec}
 ![IPSec Policy](images/ipsecpolicy.png)
 
 To configure IPSec policy:
@@ -79,11 +87,24 @@ To configure IPSec policy:
 	* **Authorization Algorithm**: sha1; cannot be changed  
 	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default); aes-192; aes-256; 3des
 	* **Key Lifetime**: Lifetime value (in seconds) of the security association. Range: 60-86400. Default Value: 3600
-	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14; Default value: Group14
+	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 	* **Transform Protocol**: ESP; cannot be changed
 	* **Encapsulation Mode**: Tunnel; cannot be changed
 3. Select **SAVE**.  
 
+
+###Configuration at Your Data Center 
+{: #yourdatacenter}
+
+The following VPN gateway configurations are required at your data center:
+
+* Enable NAT traversal at your VPN gateway only if your VPN gateway is behind NAT. 
+* Use the same preshared key that you had used while configuring the IBM VPN service.
+* Configure the subnets for all the containers or container groups for which you have enabled the IBM VPN service.
+* Ensure that the encryption, authentication, and PFS group settings are same at the IBM VPN gateway and your VPN gateway.
+
+**Note:** IBM VPN device always acts as the initiator. 
+    
 ###IBM VPN Overview
 IBM VPN provides the following features:
 
@@ -123,15 +144,66 @@ You can manage the IBM VPN service by using graphical interface, command line in
 
 * [IBM VPN graphical interface](https://console.ng.bluemix.net/?direct=classic)
 * [IBM VPN RESTful APIs](http://vpn-api-docs.mybluemix.net)
-* [IBM VPN command line interface](../../cli/plugins/vpn/index.html)  
+* [IBM VPN command line interface](../../cli/plugins/vpn/index.html)
+
+##FAQs 
+{: #faq}
+
+**1. Which third-party vendor devices are qualified in IBM labs for interoperability with IBM VPN service?**
+
+IBM lab has tested the following VPN gateway devices for interoperation with IBM VPN service:
+
+* Cisco Adaptive Security Appliance (ASA) Software Version 8.2(1) 
+* Brocade Vyatta 5415 vRouter 6.7 R7. [See configuration example](onpremises_gateway.html#vyatta){: new_window}
+* Linux StrongSwan U5.1.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
+* Linux StrongSwan U5.2.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
+
+In addition, an IPSec standards-compliant VPN gateway device from any other vendor is expected to work well with IBM VPN service.
+
+**2. How soon will a peer failure be detected?**
+ 
+A failed peer is detected at the configured keepalive timeout value. The default setting is 60 seconds.
+
+**3. How many VPN gateways and connections can I create per VPN service?**
+ 
+You can create one VPN gateway appliance per VPN service in a Bluemix space. You can define up to 16 connections to different destinations per VPN gateway. 
+
+**4. When should I use IBM VPN service versus Bluemix Secure Gateway service?**
+
+Both the services are used to provide secure connectivity between your Bluemix resources and your on-premises data center. 
+
+Use the IBM VPN service when you are looking to ensure connectivity between any two endpoints. The VPN service forms a secure, Layer-3 IPSec connection between your on-premises networks and Bluemix cloud. 
+
+Use the Bluemix Secure Gateway service if you want to establish a secure connection from a specific application endpoint in Bluemix to another endpoint inside your on-premises data center. 
+
+**5. Can I use the IBM VPN service to access my containers and VMs inside Bluemix cloud by using their private IP addresses?**
+ 
+Currently, the IBM VPN service is available for accessing Bluemix containers only.
+
+**6. Can I define IBM VPN service at Bluemix Organization level?**
+
+Currently, the IBM VPN service is available only at the Bluemix Space level. If your Bluemix Organization has multiple Spaces, then a separate VPN service can be defined for each space.
+
+**7. How do I connect IBM VPN service with SoftLayer Gateway Appliance service (GaaS)?**
+
+You can build an IPSec tunnel to establish secure communication between IBM VPN service and SoftLayer GaaS. [See configuration example.](onpremises_gateway.html#gaas){: new_window}
+
 
 
 ># Related Links {:class="linklist"}
->>## API Reference {:id="api"}
->* [IBM VPN RESTful APIs](http://vpn-api-docs.mybluemix.net)
+>## API Reference {:id="api"}
+>* [IBM VPN RESTful APIs](http://vpn-api-docs.mybluemix.net){: new_window}
+>
+># Related Links {:class="linklist"}
 >## Related Links {:id="general"}
->>## Command line Interface {:id="cli"}
->* [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html)
+>* [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
+>* [IBM VPN FAQs](index.html#faq){: new_window}
+>
+># Related Links {:class="linklist"}
+>## Tutorials and Samples {:id="samples"}
+>* [On-premises strongSwan Gateway Configuration Example](onpremises_gateway.html#strongswan){: new_window}
+>* [On-premises Vyatta Gateway Configuration Example](onpremises_gateway.html#vyatta){: new_window}
+>* [On-premises SoftLayer Gateway Appliance Service (GaaS) Configuration Example](onpremises_gateway.html#gaas){: new_window}
 >
 >{:elementKind="article" id="rellinks"}
 

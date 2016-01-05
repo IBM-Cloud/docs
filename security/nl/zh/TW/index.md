@@ -1,15 +1,15 @@
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2015 年 10 月 15 日*
+*前次更新：2015 年 12 月 7 日*
 
-{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 也提供一套安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
+{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html) 網站。
+{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
 
-「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用 IBM SoftLayer 的「基礎架構即服務 (IaaS)」雲端服務，並充分利用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
+「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用 IBM SoftLayer 的「基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。SoftLayer IaaS 為您的應用程式及資料提供層層重疊的多個保護層級。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
 
 ## {{site.data.keyword.Bluemix_notm}} 平台的安全
 {: #platform-security}
@@ -25,15 +25,17 @@ SoftLayer 的 {{site.data.keyword.Bluemix_notm}} 環境符合最嚴格的 IBM �
  * 拒絕服務及系統攻擊偵測
  * 資安事件回應
 
-![Bluemix 平台安全概觀](images/platform_sec.png)
+![Bluemix 平台安全概觀](images/platform_sec.svg)
 
 *圖 1. {{site.data.keyword.Bluemix_notm}} 平台安全概觀*
 
-「{{site.data.keyword.Bluemix_notm}} 本端」的安全不同，因為您透過將 Bluemix 置於公司防火牆後方、您的資料中心進行管理，而掌控了特定部分的安全。下圖詳述客戶掌控哪些部分的安全，而哪些部分的安全則由 IBM 所管理及維護。
+運用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以管理受公司防火牆保護以及在資料中心內的 {{site.data.keyword.Bluemix_notm}}。因此，您要負責特定的安全層面。下圖詳述客戶掌控哪些部分的安全，而哪些部分的安全則由 IBM 所管理及維護。
 
-![Bluemix 本端平台安全概觀](images/security_local_platform.png)
+![Bluemix 本端平台安全概觀](images/security_local_platform.svg)
 
-*圖 2. 「{{site.data.keyword.Bluemix_notm}} 本端」平台安全概觀*
+*圖 2.「{{site.data.keyword.Bluemix_notm}} 本端」平台安全概觀*
+
+IBM 透過「轉遞」來安裝、遠端監視及管理資料中心中的「{{site.data.keyword.Bluemix_notm}} 本端」，而「轉遞」是「{{site.data.keyword.Bluemix_notm}} 本端」內含的一種交付功能。「轉遞」會使用每一個「{{site.data.keyword.Bluemix_notm}} 本端」實例特有的憑證安全地進行連接。如需「{{site.data.keyword.Bluemix_notm}} 本端」及「轉遞」的相關資訊，請參閱 [Bluemix 本端](../local/index.html)。
 
 ### 功能安全
 
@@ -51,7 +53,7 @@ SoftLayer 的 {{site.data.keyword.Bluemix_notm}} 環境符合最嚴格的 IBM �
 <dd>對應用程式開發人員的所有鑑別嘗試，不論成功或失敗，都會建立審核日誌。對於管理 {{site.data.keyword.Bluemix_notm}} 應用程式執行所在儲存器的 Linux 系統，其特許存取也會建立審核日誌。</dd>
 
 <dt>資料保護</dt>
-<dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。接受下列 HTTP 方法：
+<dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。以下是允許使用的 HTTP 方法：
  * DELETE
  * GET
  * HEAD
@@ -98,7 +100,7 @@ HTTP 閒置逾時為 2 分鐘。
 <dd>「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」能促成侵入防禦，以便發現威脅，進而解決這些威脅。防火牆上已啟用侵入防禦原則。</dd>
 
 <dt>安全應用程式儲存器管理</dt>
-<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在其專屬的儲存器中隔離及執行，而儲存器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
+<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在自己的儲存器中隔離和執行，而儲存器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
 
 <dt>強化作業系統安全</dt>
 <dd>IBM 管理者會利用 IBM Endpoint Manager 等工具，定期執行網路及作業系統的強化作業。</dd>
@@ -153,7 +155,7 @@ HTTP 閒置逾時為 2 分鐘。
 
 {{site.data.keyword.Bluemix_notm}} 平台會透過網路，利用 SSL 來保護一般使用者的應用程式存取安全，藉以保護 data-in-transit 的安全，直到資料在 {{site.data.keyword.Bluemix_notm}} 內部網路的界限達到 IBM DataPower Gateway 為止。IBM DataPower Gateway 作為反向 Proxy，並提供 SSL 終止。
 
-當您在開發應用程式時，必須負責保護 data-in-use 與 data-at-rest 的安全。您可以充分運用 {{site.data.keyword.Bluemix_notm}} 的「型錄」中可用的數個資料相關服務，來協助這些重要事項。
+當您在開發應用程式時，必須負責保護 data-in-use 與 data-at-rest 的安全。您可以充分運用 {{site.data.keyword.Bluemix_notm}}「型錄」中可用的數個資料相關服務，來協助這些重要事項。
 
 ## {{site.data.keyword.Bluemix_notm}} 應用程式的安全
 {: #application-security}
@@ -213,7 +215,7 @@ Static Analyzer 可讓您在本端磁碟上，利用指令行介面 (CLI) 來掃
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛程式可讓您針對 {{site.data.keyword.Bluemix_notm}} 上管理的 Web 或 Android 應用程式執行安全掃描。此外掛程式由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上開發及支援。
 
-如需相關資訊，請造訪 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/)。
+如需相關資訊，請造訪 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
 ### SQL Database
 
@@ -231,9 +233,9 @@ SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料�
 
 ### dashDB
 
-dashDB 服務使用 IBM Directory Server LDAP 進行使用者鑑別，並使用 IBM InfoSphere Guardium Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
+dashDB 服務使用內嵌式 LDAP 伺服器進行使用者鑑別。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
 
-如需相關資訊，請參閱[開始使用 dashDB](services/dashDB/index.html)。
+如需相關資訊，請參閱[開始使用 dashDB](../services/dashDB/index.html)。
 
 ### Cloud Integration
 
@@ -247,32 +249,42 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 
 如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/index.html)。
 
+### 安全資訊及事件管理
+
+您可以使用安全資訊及事件管理 (SIEM) 工具來分析應用程式日誌中的安全警示。其中一種這類工具是 IBM Security QRadar&reg; SIEM，其提供雲端環境中的安全智慧。如需相關資訊，請參閱 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}。
+
 ## {{site.data.keyword.Bluemix_notm}} 安全部署
 {: #security-deployment}
 
 {{site.data.keyword.Bluemix_notm}} 安全部署架構包括適用於應用程式使用者及開發人員的不同資訊流程，以確保安全存取。
 
-![Bluemix 安全部署架構](images/sec_deployment.png)
+![Bluemix 安全部署架構](images/sec_deployment.svg)
 
 *圖 3. Bluemix 安全部署架構*
 
-{{site.data.keyword.Bluemix_notm}} *應用程式使用者* 的資訊流程如下所示：
+針對 {{site.data.keyword.Bluemix_notm}} *應用程式使用者*，**應用程式使用者流程**如下所示：
  1. 透過防火牆，並實施侵入防禦及網路安全。
  2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
  3. 透過網路路由器。
  4. 在 Droplet Execution Agent (DEA) 中呼叫應用程式執行時期。
 
 {{site.data.keyword.Bluemix_notm}} *開發人員* 遵循兩個主要流程：一個適用於登入，一個適用於開發及部署。
- * 適用於登入的開發人員流程包括下列項目：
+ * **開發人員登入流程**包括下列項目：
     * 若為登入「{{site.data.keyword.Bluemix_notm}} 公用」的開發人員，流程如下所示：
       1. 透過 IBM Single Sign On 服務。
       2. 透過 IBM Web 身分。
     * 若為登入「{{site.data.keyword.Bluemix_notm}} 專用」或「Bluemix 本端」的開發人員，流程會透過企業 LDAP。
- * 適用於應用程式開發及部署的開發人員流程如下所示：
+ * **開發及部署流程**如下所示：
     1. 透過防火牆，並實施侵入防禦及網路安全。這僅適用於「{{site.data.keyword.Bluemix_notm}} 專用」。
     2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
     3. 透過網路路由器。
     4. 透過利用 Cloud Foundry 雲端控制器所進行的授權，以確保僅能存取開發人員所建立的應用程式及服務實例。
+  
+針對「{{site.data.keyword.Bluemix_notm}} 專用」及「{{site.data.keyword.Bluemix_notm}} 本端」*管理者*，**管理者流程**如下所示：
+ 1. 透過防火牆，並實施侵入防禦及網路安全。
+ 2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
+ 3. 透過網路路由器。
+ 4. 到達 {{site.data.keyword.Bluemix_notm}} 使用者介面中的「管理」頁面。
 
 除了這些路徑中所述的使用者之外，經過授權的 IBM 安全作業團隊也會執行各種作業安全作業，例如下列作業：
  * 漏洞掃描。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您掌控了防火牆內的實體安全以及任何掃描。
@@ -281,6 +293,35 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
  * 風險管理與侵入防禦。
  * 使用 QRadar 進行安全監視。
  * 透過「管理主控台」提供的安全報告。
+
+## 安全報告
+{: #reports}
+
+運用「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」，{{site.data.keyword.Bluemix_notm}} 會產生您可透過「管理」頁面檢視的各種安全報告及日誌。如需檢視及使用報告的指示，請參閱[檢視報告](../admin/index.html#oc_report)。
+
+下表顯示針對「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」所產生的安全報告清單。
+
+| **種類** | **報告** | **說明** |      
+|-----------------|-------------------|---------------------|
+| 防火牆 | 防火牆登入 | 與 Vyatta 防火牆裝置的管理者登入有關的事件。 |
+| 防火牆 | 防火牆拒絕 | 根據現有的防火牆規則拒絕存取要求時，Vyatta 防火牆裝置所產生的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者登入事件 | {{site.data.keyword.Bluemix_notm}} 管理者登入 | 管理者在每個 {{site.data.keyword.Bluemix_notm}} 系統上啟動 SSH 階段作業時，作業系統所產生的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 應用程式開發人員登入事件 | {{site.data.keyword.Bluemix_notm}} 應用程式開發人員登入 | {{site.data.keyword.Bluemix_notm}} 平台使用者使用指令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 使用者介面來啟動階段作業時，{{site.data.keyword.Bluemix_notm}} 平台登入元件所產生的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者管理事件 | {{site.data.keyword.Bluemix_notm}} 管理者作業系統管理事件 | 管理者在現行工作階段作業內執行動作時，作業系統所產生的事件。 |
+| {{site.data.keyword.Bluemix_notm}} 應用程式開發人員管理事件 | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理事件 | {{site.data.keyword.Bluemix_notm}} 平台使用者使用指令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 使用者介面所執行之作業的相關事件。 |
+| {{site.data.keyword.Bluemix_notm}} 管理者資料庫管理事件 | 資料庫管理事件 | 資料庫管理者對 {{site.data.keyword.Bluemix_notm}} 內部資料庫執行之作業的相關事件。 |
+| 管理事件 | 使用者管理事件 | 在「管理」頁面上執行之使用者管理動作的相關事件。 |
+| 管理事件 | Catalog | 服務 Catalog 變更的相關事件 |
+| 管理事件 | 安全報告管理事件 | 在「管理」頁面上執行之安全報告管理動作的相關事件。 |
+| 檢查檢閱 | 存取檢閱報告 | 特許存取權的檢閱。 |
+| 變更管理 | 軟體變更管理 | 變更管理活動。 |
+| 金鑰管理 | 自訂 SSL 憑證管理 | 已上傳及儲存的自訂 SSL 憑證。 |
+| 加密 | data-in-transit 加密 | 已配置的 data-in-transit 加密。 |
+| 防毒 | 防毒掃描報告 | 現有的防毒軟體。 |
+| 軟體修正程式管理 | 修補程式應用程式報告 | 已套用的軟體修正程式。 |
+| 資安事件管理 | 資安事件補救報告 | 進行資安事件管理的資安事件證明。 |
+
+*表 1.「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」安全報告清單*
 
 # 相關鏈結
 ## 一般 

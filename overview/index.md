@@ -30,7 +30,7 @@ You can use {{site.data.keyword.Bluemix_notm}} to quickly develop apps in the mo
 
 {{site.data.keyword.Bluemix_notm}} also provides middleware services for your apps to use. {{site.data.keyword.Bluemix_notm}} acts on the app's behalf when it provisions new service instances, and then binds those services to the app. Your app can perform its real job, leaving the management of the services to the infrastructure.
 
-In general, you don't have to worry about the operating system and infrastructure layers when running apps on {{site.data.keyword.Bluemix_notm}}. Layers such as root filesystems and middleware components are abstracted so that you can focus on your application code. However, you can learn more about these layers if you need specifics on where your app is running. See [Viewing {{site.data.keyword.Bluemix_notm}} infrastructure layers](../cli/viewinfra.html#viewinfra) for details. 
+In general, you don't have to worry about the operating system and infrastructure layers when running apps on {{site.data.keyword.Bluemix_notm}}. Layers such as root filesystems and middleware components are abstracted so that you can focus on your application code. However, you can learn more about these layers if you need specifics on where your app is running. See [Viewing {{site.data.keyword.Bluemix_notm}} infrastructure layers](../cli/vcapsvc.html#viewinfra) for details. 
 
 ## {{site.data.keyword.Bluemix_notm}} architecture
 {: #ov_arch}
@@ -155,11 +155,11 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Region name** | **Region prefix** | **cf API endpoint** | **UI console** |       
-|-----------------|-------------------|---------------------|----------------|
-| US South region | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Europe United Kingdom region | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Australia Sydney region | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Region name** | **Geographic location** | **Region prefix** | **cf API endpoint** | **UI console** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Table 1. {{site.data.keyword.Bluemix_notm}} region list*
@@ -286,7 +286,7 @@ To integrate a system of record with the app that you create in {{site.data.keyw
     <dd>A Cloud Integration API provides secured access to the systems of record that reside behind a firewall through web APIs. When you create the Cloud Integration API, you choose the resource that you want to access through the web API, specify the operations that are permitted, and include SDKs and samples to access the API. For more information about how to create a Cloud Integration API, see [Creating Cloud Integration APIs](../services/CloudIntegration/index.html#cloudint_add_service).</dd>
 <dt>Private service</dt>
     <dd>A private service consists of a Cloud Integration API, SDKs, and entitlement policies. In addition, the private service might contain documentation or other items from the service provider. Only the organization manager can publish a Cloud Integration API as a private service. To see the private services that are available to you, select the Private checkbox in the {{site.data.keyword.Bluemix_notm}} catalog. You can select and bind a private service to an app without connecting to the Cloud Integration service. You bind private services to your app in the same way as you do for other {{site.data.keyword.Bluemix_notm}} services. For information about how to publish an API as a private service, see Publishing an API as a private service.</dd>
-	</dl>
+</dl>
 
 ### Scenario: Creating a rich mobile app to connect with your system of record
 {: #scenario}
@@ -322,7 +322,7 @@ The following table lists the supported national languages and language codes fo
 | Simplified Chinese | zh_CN |
 | Traditional Chinese | zh_TW |
 
-*Table 3. Supported national languages and language codes*
+*Table 2. Supported national languages and language codes*
 
 # rellinks
 ## general 

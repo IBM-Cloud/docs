@@ -61,8 +61,9 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Austrilian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.alchemyapishort}} 		|Ye	   	|Yes  		|Yes|
+|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
+|{{site.data.keyword.alertnotificationshort}}|Yes		|No			|No		|
 |{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
@@ -144,7 +145,7 @@ You can select the service that you need when you develop applications. Upon you
 
 You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.Bluemix_notm}} services](#accser_external).
 
-If you want to add a service to the {{site.data.keyword.Bluemix_notm}} service catalog for {{site.data.keyword.Bluemix_notm}} applications to use, you can build your own service and integrate it with {{site.data.keyword.Bluemix_notm}}. For more information, see [Integrating a service with {{site.data.keyword.Bluemix_notm}}](https://www.stage1.ng.bluemix.net/docs/services/v2api.html){: new_window}.
+
 
 ## Requesting a new service instance
 {: #req_instance}
