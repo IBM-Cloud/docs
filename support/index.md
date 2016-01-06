@@ -18,7 +18,7 @@ To get help, you can go to Account and Support, or you can go directly to Stack 
 ### Using Account and Support
 Account and Support is a feature that enables you to check account information, view status, stay up to date with notifications, select your region, select and manage orgs, and log out. In addition, you can get help and provide feedback.
 
-To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.png) in the upper right of the Dashboard.
+To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar.
 
 Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket with by clicking **GET IN TOUCH**.
 
@@ -52,7 +52,7 @@ On the Status page, you can find the following information:
 
 You can find the Status page by choosing either of the following options:
 
-  * From Account and Support: log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](./images/account_support.png) in the upper right of the Dashboard, then click **Status**.
+  * From Account and Support: log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar, then click **Status**.
   * Accessing it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
@@ -122,7 +122,7 @@ If you were unable to resolve your problem with troubleshooting and help options
 
 To open a support ticket, use one of the following methods:
 
-  * From Account and Support. Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.png) in the upper right of the Dashboard.
+  * From Account and Support. Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar.
 
      1. First, ensure that you check {{site.data.keyword.Bluemix_notm}} status by clicking **Status**.
 	 2. Then, if the problem is not due to an outage, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
