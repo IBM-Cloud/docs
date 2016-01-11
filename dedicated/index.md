@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 14 December 2015*
+*Last updated: 11 January 2016*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -70,6 +70,25 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 </li>
 </ol>
 
+You can expect a process similar to the following list for the initial deployment and configuration of your environment. For details about who is responsible for each task, see [Roles and responsibilities](../dedicated/index.html#rolesresponsibilities).
+
+<ol>
+<li>You select which data center to host your dedicated instance. For information about data center options, see <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a>.</li>
+<li>You specify the domain names for the deployment, and the IDs that you want to use. You get three domains when you set up your {{site.data.keyword.Bluemix_notm}} instance. You pick the prefix for the <code>*mycompany*.*region*.bluemix.net</code> and <code>*mycompany*.*region*.mybluemix.net</code>. And, you choose the full name for the third domain.<br />
+<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
+<li>You identify an owner for the Public account that is used to represent your company in {{site.data.keyword.Bluemix_notm}} Public. IBM uses this account for tracking syndicated services usage.</li>
+<li>You select the type of secure connection to your data center. You can select from SoftLayer VPN, SoftLayer Direct Link, and AT&T Net Bond.</li>
+<li>You decide if there will be any access to your dedicated environment from the public Internet.</li>
+<li>You select the type of authentication that will be used. You can select from IBM ID or Active Directory. For information about using and registering for an IBM ID, see the <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> page.
+</li>
+<li>You identify and assign roles for your administrative team of the environment. For information about the roles that you must assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.</li>
+<li>IBM deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
+<li>IBM configures your administrative access to the environment.</li>
+<li>You can start using your dedicated instance that is monitored by the IBM operations team in order to respond to alerts.</li>
+</ol>
+
+After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../administer/index.html#mng). For information about upgrades and maintenance, see [Maintaining your dedicated instance](index.html#maintaindedicated).
+
 ##Roles and responsibilities
 {: #rolesresponsibilities}
 
@@ -81,7 +100,7 @@ The following list shows the customer roles and responsibilities that you assign
 
 <dl>
 <dt>**Procurement focal**</dt>
-<dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Dedicated environment, including identifying the right people in your organization to work on any aspect of the project. The person assigned to this role oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the dedicated instance.</dd>
+<dd>Works with the IBM representative on establishing your {{site.data.keyword.Bluemix_notm}} Dedicated environment, including identifying the right people in your organization to work on any aspect of the project. The person assigned to this role takes on a project management role and oversees pattern selection, commercial arrangements, and arrangement of access to customer resources. The procurement focal is the overall contact for setting up the dedicated instance and tracking the process of the deployment.</dd>
 <dt>**Compliance officer**</dt>
 <dd>Works with the IBM representative to select a topology and deployment option that meets your security requirements. The person assigned to this role works with the IBM compliance consultant to determine which deployment patterns achieve the compliance goals.</dd>
 <dt>**Network specialist**</dt>
