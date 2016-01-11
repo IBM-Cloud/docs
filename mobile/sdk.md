@@ -32,7 +32,7 @@ To add Bluemix Mobile Services SDKs to your app, choose the SDKs that you want t
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push REST API</a></li>
 </ul>
-</td><td valign="top"><img src="images/cdova_sdk_icon.png" alt="cordova">
+</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -40,6 +40,15 @@ To add Bluemix Mobile Services SDKs to your app, choose the SDKs that you want t
 <ul><li><strong>Samples:</strong></li>
 <li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
 -->
+</ul>
+
+<ul><li><strong>Samples:</strong></li>
+<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Opens in a new tab or window)" target="_blank">HelloPush</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Opens in a new tab or window)" target="_blank">HelloAuthentication</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(Opens in a new tab or window)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <ul><li><strong>SDKs on github:</strong></li>
