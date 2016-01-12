@@ -41,6 +41,28 @@ To get a valid IBM ID and password, go to the My IBM profile page, and then comp
 
 
 
+## You have unsaved changes
+{: #ts_unsaved_changes}
+
+
+When you navigate on the app details page, you might be unable to perform any actions and might be prompted to save changes before you can proceed. 
+
+
+When you try to check your app or services on the app details page, you keep getting the following error message:
+{: tsSymptoms} 
+
+`You have unsaved changes in page app_name. Save or cancel the changes.`
+
+
+When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you navigate away from the page. 
+{: tsCauses}
+
+
+Close the message window, and then click the **RESET** button in your runtime pane. 
+{: tsResolve} 
+
+
+
 
     
     
