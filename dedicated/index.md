@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 11 January 2016*
+*Last updated: 12 January 2016*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -57,28 +57,28 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
 	<ol type="a">
 	<li>IBM installs monitoring and security infrastructure for the dedicated instance.</li>
-	<li>IBM installs the single tenant dedicated services that you selected.</li>
+	<li>IBM installs the single-tenant dedicated services that you selected.</li>
 	<li>You provide network configuration and endpoints for things such as IP addresses or firewalls and access to your LDAP for integration into {{site.data.keyword.Bluemix_notm}}.</li>
 	</ol>
 </li>
-<li>Identify and assign roles for your administrative team of the environment.
+<li>Identify and assign roles for your administrative team for the environment.
 	<ol type="a">
 	<li>IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing.</li>
-	<li>IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services and many of the public {{site.data.keyword.Bluemix_notm}} services.</li>
+	<li>IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services. The syndicated catalog also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.</li>
 	<li>You validate network and firewall configuration and the LDAP endpoint and access.</li>
 	</ol>
 </li>
 </ol>
 
-You can expect a process similar to the following list for the initial deployment and configuration of your environment. For details about who is responsible for each task, see [Roles and responsibilities](../dedicated/index.html#rolesresponsibilities).
+You can expect a process similar to the following list for the initial deployment and configuration for your environment. For details about who is responsible for each task, see [Roles and responsibilities](../dedicated/index.html#rolesresponsibilities).
 
 <ol>
 <li>You select which data center to host your dedicated instance. For information about data center options, see <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a>.</li>
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get three domains when you set up your {{site.data.keyword.Bluemix_notm}} instance. You pick the prefix for the <code>*mycompany*.*region*.bluemix.net</code> and <code>*mycompany*.*region*.mybluemix.net</code>. And, you choose the full name for the third domain.<br />
 <p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
-<li>You identify an owner for the Public account that is used to represent your company in {{site.data.keyword.Bluemix_notm}} Public. IBM uses this account for tracking syndicated services usage.</li>
+<li>You identify an owner for the public account that is used to represent your company in {{site.data.keyword.Bluemix_notm}} Public. IBM uses this account for tracking syndicated services usage.</li>
 <li>You select the type of secure connection to your data center. You can select from SoftLayer VPN, SoftLayer Direct Link, and AT&T Net Bond.</li>
-<li>You decide if there will be any access to your dedicated environment from the public Internet.</li>
+<li>You decide whether there will be any access to your dedicated environment from the public Internet.</li>
 <li>You select the type of authentication that will be used. You can select from IBM ID or Active Directory. For information about using and registering for an IBM ID, see the <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> page.
 </li>
 <li>You identify and assign roles for your administrative team of the environment. For information about the roles that you must assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.</li>
