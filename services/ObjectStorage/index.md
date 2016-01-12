@@ -312,28 +312,6 @@ An example response is as follows:
 
 The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. Select the endpoint from the Service Catalog with type of object-storage, region that matches the region field in the credentials, and internal interface (`internalURL`) when accessing the {{site.data.keyword.objectstorageshort}} service from inside {{site.data.keyword.Bluemix_notm}} or public interface (`publicURL`) when accessing the {{site.data.keyword.objectstorageshort}} service from outside of {{site.data.keyword.Bluemix_notm}}.
 
-### OpenStack Identity (Keystone) v2
-The v2 token request is a POST request to https://identity.open.softlayer.com/v2.0/tokens as shown in the following curl command:
-
-	curl -i \
-	  -H "Content-Type: application/json" \
-	  -d '
-	{
-		"auth": {
-			"tenantId": "0f47b41b06d047f9aae3b33f1db061ed",
-			"passwordCredentials": {
-				"userId": "ad78b2a3f843466988afd077731c61fc",
-				"password": "K/jyIi2jR=1?D.TP "
-			}
-		}
-	}' \
-	  https://identity.open.softlayer.com/v2.0/tokens ; echo
-
-**Note:** This request method is not documented on the OpenStack Identity v2 website. You cannot use `tenantName` and `username`.
-
-Use the value of the access token id field from the response body as the X-Auth-Token field when making requests to the {{site.data.keyword.objectstorageshort}} service.
-
-The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. Select the endpoint from the Service Catalog with type of object-storage, region which matches the region field in the credentials, and internal interface (`internalURL`) when accessing the {{site.data.keyword.objectstorageshort}} service from inside {{site.data.keyword.Bluemix_notm}} or public interface (`publicURL`) when accessing the {{site.data.keyword.objectstorageshort}} service from outside of {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
