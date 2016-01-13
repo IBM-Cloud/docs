@@ -330,7 +330,7 @@ The following table lists the supported national languages and language codes fo
 * [What's new in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} known issues](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossary](glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, an {{site.data.keyword.IBM_notm}} Company](http://www.softlayer.com/)
