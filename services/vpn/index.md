@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Getting started with IBM VPN (Beta)
+# Getting started with IBM VPN (BETA)
 
 IBM® Virtual Private Network (VPN) provides a secure communication channel between your corporate data center and your resources inside IBM cloud. The connection is established over the Internet. You can use IBM cloud as an extension of your corporate data center. 
 
