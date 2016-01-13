@@ -17,7 +17,7 @@ You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services
 
 You can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
 
-Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must create the custom domain for your organization in {{site.data.keyword.Bluemix_notm}}, and then you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain by configuring your DNS server or editing your local `hosts` file. After your custom domain is mapped to the {{site.data.keyword.Bluemix_notm}} system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
+Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must register the custom domain on a public DNS server, configure the custom domain in {{site.data.keyword.Bluemix_notm}}, and then map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on the public DNS server. After your custom domain is mapped to the {{site.data.keyword.Bluemix_notm}} system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
 
 **Note:** You can use the **nslookup** command to get the public IP address of the {{site.data.keyword.Bluemix_notm}} system domain. For example, at a command prompt, enter `nslookup mybluemix.net`.
 

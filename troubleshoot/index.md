@@ -9,7 +9,7 @@
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 9 December 2015*
+*Last updated: 6 January 2015*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -38,6 +38,28 @@ To get a valid IBM ID and password, go to the My IBM profile page, and then comp
 **Note:** For IBM employees, the IBM ID might be different from the intranet login ID. 
 
 
+
+
+
+## You have unsaved changes
+{: #ts_unsaved_changes}
+
+
+When you navigate on the app details page, you might be unable to perform any actions and might be prompted to save changes before you can proceed. 
+
+
+When you try to check your app or services on the app details page, you keep getting the following error message:
+{: tsSymptoms} 
+
+`You have unsaved changes in page app_name. Save or cancel the changes.`
+
+
+When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you navigate away from the page. 
+{: tsCauses}
+
+
+Close the message window, and then click the **RESET** button in your runtime pane. 
+{: tsResolve} 
 
 
 
@@ -122,7 +144,7 @@ You cannot invite users to your organization if you are a collaborator of the or
 If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the upper right of the Dashboard, and select **Manage Organizations**.
+  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar, and select **Manage Organizations**.
   2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
@@ -604,7 +626,7 @@ Use one of the following methods to solve the problem:
   
   
   
- 
+
   
   
 
@@ -1430,10 +1452,5 @@ You can resolve this issue by using one of the following methods:
 	```
 	
 	
-
-
-
-
-
 
 

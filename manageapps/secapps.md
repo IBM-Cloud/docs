@@ -53,6 +53,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 **Note:** OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for applications that have compatibility issues with the SHA-256 certificate.
 
+A certificate is issued by a certificate authority and is digitally signed by that authority. After you create the CSR, you can generate your SSL certificate on a public certificate authority. 
+
 ##Uploading SSL certificates
 {: #ssl_certificate}
 
