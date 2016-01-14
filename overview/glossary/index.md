@@ -153,7 +153,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_D__x2019215"><!-- --></a>daemon</dt>
 <dd class="dd">A program that runs unattended to perform continuous or periodic functions, such as network control.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2363941"><!-- --></a>dashboard</dt>
-<dd class="dd">A web user interface component that provides information about the project status at a glance. Users can view project summary information or more detailed information.</dd>
+<dd class="dd">A user interface component that provides a unified display of information from various sources, to provide the user a summary or a snapshot view of information.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2176124"><!-- --></a>data source</dt>
 <dd class="dd">The source of data itself, such as a database or XML file, and the connection information necessary for accessing the data.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2052849"><!-- --></a>data store</dt>
