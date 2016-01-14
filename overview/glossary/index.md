@@ -335,7 +335,7 @@ For other terms and definitions, see the [IBM Terminology website](http://www.ib
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_O__x6013335"><!-- --></a>OAuth</dt>
 <dd class="dd">An HTTP-based authorization protocol that gives applications scoped access to a protected resource on behalf of the resource owner, by creating an approval interaction between the resource owner, client, and resource server.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x7470485"><!-- --></a>omni-channel application</dt>
-<dd class="dd">An application that allows users to gather data through multiple channels or interfaces. Mobile and web applications are considered examples of an omni-channel applications.</dd>
+<dd class="dd">An application that allows users to interact and share data through multiple channels or interfaces while  ensuring continuity in their interactions. Mobile and web applications can be designed to provide an omnichannel experience.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x6969434"><!-- --></a>on-prem</dt>
 <dd class="dd">See <a class="xref" href="#gloss_O__x4561212">on-premises</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x4561212"><!-- --></a>on-premises (on-prem)</dt>
