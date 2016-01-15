@@ -6,7 +6,7 @@
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-*Last Updated: 8 December 2015* 
+*Last Updated: 15 January 2016* 
 
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
