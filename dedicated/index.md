@@ -4,7 +4,7 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 12 January 2016*
+*Last updated: 15 January 2016*
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
 {:shortdesc}
@@ -34,6 +34,7 @@ In addition, there is a set of included services by default and optional ones th
 
 *Table 1. Dedicated Services*
 
+
 ##Setting up {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #setupdedicated}
 
@@ -52,7 +53,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_notm}} Dedicated instance.</li>
 	</ol>
 	</li>
-<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For more information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.
+<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For information about the roles that you assign, see <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated roles and responsibilities</a>.
 </li>
 <li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_notm}} Dedicated instance.
 	<ol type="a">
@@ -64,7 +65,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 <li>Identify and assign roles for your administrative team for the environment.
 	<ol type="a">
 	<li>IBM configures network access and LDAP based on what you provided. Administrative access is given to the contacts that you designate. You must also designate a contact for support and billing.</li>
-	<li>IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services. The syndicated catalog also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.</li>
+	<li>IBM sets up a syndicated catalog in your dedicated environment to show your dedicated services. The syndicated catalog includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.</li>
 	<li>You validate network and firewall configuration and the LDAP endpoint and access.</li>
 	</ol>
 </li>
