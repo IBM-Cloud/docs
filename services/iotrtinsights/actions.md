@@ -6,9 +6,9 @@ In addition to displaying alerts in the alerts dashboard, IoT Real-Time Insights
 {: shortdesc}
 
 ## Creating actions {: #shared}
-Before you can select actions to use with your rules, you must create them.
+You can [create actions directly from the rules editor](rules.html "Create rules"), or create the actions in the Actions panel and then select the actions when you create your rules.
 
-To create an action:
+To create an action from the Actions panel:
 1. In the IoT Real-Time Insights console, go to **Analytics > Actions**.
 2. Click **Add new action**, select an action type, give the action a name, and provide a description.
 3. Provide the required parameters for the type of action that you are creating.  
@@ -54,11 +54,13 @@ Parameter | Description
 Name | The name of the action, which is used in the Alerts dashboard.
 Description | A brief description of the action.
 URL | The URL of the target webhook-enabled server. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data in the URL.
-Method | The type of webhook call to execute. Select on of the following types: GET, HEAD, OPTIONS, PATCH, PUT, POST, or DELETE.
+Method | The type of webhook call to execute. Select one of the following types: GET, HEAD, OPTIONS, PATCH, PUT, POST, or DELETE.
 User name | Include if required by the web service.
 Password | Include if required by the web service. **Important:** The password is sent in clear text.
 Header | Headers are made up from key and value pairs. **Tip:** You can use [variable substitution](#variable_substitution) to dynamically include additional data in the header.
-Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POST, and DELETE methods. The body is pre-populated with all variables that are listed in [variable substitution](#variable_substitution).
+Content type | The type of content of the body: JSON, XML, WWW form URL encoded, or plain text.  Available for the OPTIONS, PATCH, PUT, POST, and DELETE methods.
+Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POST, and DELETE methods. By default, the body field is pre-populated with all variables that are listed in [variable substitution](#variable_substitution). Select **Use customized message body** to edit the content of the body field. **Important:** The webhook server might require certain specific fields to be included in the body. For example, a Slack webhook must contain the "text" field.   
+
 
 
 ## Node-RED {: #nodered}
@@ -73,6 +75,9 @@ Parameter | Description
 Name | The name of the action, which is used in the Alerts dashboard.
 Description | A brief description of the action.
 URL | The URL of the target Node-RED HTTP input node.
+User name | Include if required by the Node-RED service.
+Password | Include if required by the Node-RED service. **Important:** The password is sent in clear text.
+Body | By default, the body field is pre-populated with all variables that are listed in [variable substitution](#variable_substitution). Select **Use customized message body** to edit the content of the body field.
 
 ## IFTTT {: #ifttt}
 Use the IFTTT action to trigger an IFTTT recipe when a rule is triggered. For more information about triggering Real-Time Insights actions as IFTTT recipes, see [Maker Channel](https://ifttt.com/maker) on the IFTTT site.

@@ -84,9 +84,12 @@ You can now start using IoT Real-Time Insights by adding users, connecting your 
 >* [Internet of Things phone application](https://github.com/ibm-messaging/IoT-html5-phone)
 >* [developerWorks Internet of Things Recipes](https://developer.ibm.com/recipes/)
 >* [Creating apps with the Internet of Things starter application](https://www.ng.bluemix.net/docs/starters/IoT/iot500.html#iot500)
+>* [API Documentation](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)
 >
 ># Related Links {:class="linklist"}
 >## Related links {:id="general"}
+>* [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category)
 >* [Getting started with Internet of Things Foundation](https://www.ng.bluemix.net/docs/services/IoT/index.html)  
+>* [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-real-time/)
 >
 >{:elementKind="article" id="rellinks"}

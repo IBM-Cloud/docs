@@ -44,6 +44,11 @@ To create the post to slack action:
  - Name - `Post service request on Slack`
  - URL - `Your Slack webhooks URL`
  - Method - **POST**
+ - Content type - application/json
+ - Select **Use customized message body**
+ - Body  
+ ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n IoT Real-Time Insights instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
+ **Important:** The Slack webhook must at a minimum contain the "text" field. For information, see [Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Slack documentation") in the Slack documentation.
 11. Click **OK** to save the action.
 
 ## Use Node-RED to send a text message {: #noderedex}
@@ -72,12 +77,12 @@ Where the first node is an http node, and the second is a twilio node.
   Connect the http and twilio nodes together by dragging between the output port of one to the input port of the other.
   4. Click the **Deploy** button to deploy the flow to the server
 3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action that has the following parameters:
- <ul>
- <li>Type - **Node-RED**</li>
- <li>Name - `Send text using Node-RED and Twilio`</li>
- <li>Description - `Send a text message alert to the service engineer.`</li>
- <li>URL - `http://mynodered.mybluemix.net/RTI-alert`</li>
-</ul>
+ - Type - **Node-RED**
+ - Name - `Send text using Node-RED and Twilio`
+ - Description - `Send a text message alert to the service engineer.`
+ - URL - `http://mynodered.mybluemix.net/RTI-alert`
+ - BODY   
+ ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n IoT Real-Time Insights instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```
 4. Click **OK** to save the action.
 
 ## Use IFTTT to post a Trello card {: #iftttex}

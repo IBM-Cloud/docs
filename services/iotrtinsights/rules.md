@@ -17,6 +17,7 @@ To create a rule for a device:
 The priority is used to classify the alerts that are displayed in the alerts panel. The default priority is Low.
 3. To set up the rule logic, add one or more IF conditions that are used as triggers for the rule.  
 You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions.  
+**Tip:** To get a feel for typical values returned by your devices, go to **Devices > Browse devices** and click your device to see the real-time data displayed.  
 **Important:** To trigger a condition that compares two data points, or to trigger two or more data point conditions that are combined sequentially, the triggering data must be included in the same message. If the data is received in more than one message, the condition or sequential conditions do not trigger.  
 > **Examples:**   
 A simple rule might trigger an alert if a parameter value is larger than a specified value.  
@@ -24,8 +25,8 @@ For example: Condition = `ax>5`
 A more complex rule might trigger an alert if a parameter value for a device that is mapped to a specific asset exceeds a specific value.  
 For example: Condition = `ax>5 AND asset.assetnum==5001`   
 For detailed steps, see [Example: Creating a complex rule by using message schema and context parameter conditions](#complex "Example: Creating a complex rule by using message schema and context parameter conditions").  
-5. Select one or more actions that occur if the rule conditions are met.  
-Actions are created separately from rules. For more information about actions, see [Create actions](actions.html#shared "Create actions").   
+5. Create or select one or more actions that occur if the rule conditions are met.  
+For more information about actions, see [Create actions](actions.html#shared "Create actions").   
  > For example: An action can be to send an email. For information about the different action types, see [Action types](actions.html "Action types").
 6. When you are satisfied with your rule, click **Save**.
 7. On the Rules page, click ![Configure icon.](images/gear.png "Configure icon") and select **Activate** to activate the rule.
