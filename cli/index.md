@@ -55,7 +55,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----|-----|
-| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_ov.html#container_cli_cfic_install) | Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
 
 ## ![Integrated development tools](./images/Integrated_Dev_Tools.png) Integrated development tools
 
