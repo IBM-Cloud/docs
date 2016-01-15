@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} overview
 {: #overview}
 
-*Last updated: 20 November 2015*
+*Last updated: 15 January 2016*
 
 {{site.data.keyword.Bluemix}} is the {{site.data.keyword.IBM}} open cloud platform that provides mobile and web developers access to {{site.data.keyword.IBM_notm}} software for integration, security, transaction, and other key functions, as well as software from business partners.
 {:shortdesc}
@@ -82,6 +82,10 @@ IBM uses relay technology to securely monitor and maintain your environment, so 
 ![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
 
 *Figure 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+The inception virtual machine is located behind your customer firewall and runs in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core services run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses the VLAN for the private subnet, which is more secure and can help avoid routing issues.
+
+DataPower appliances provide access to {{site.data.keyword.Bluemix_notm}} application domains. These appliances connect to the network that is accessible  from your intranet. Your users who deploy applications and services get access from the network that is accessible from your intranet. You must provide 7 IP addresses that have outbound internet access. DataPower appliances route from these customer IP addresses to the isolated {{site.data.keyword.Bluemix_notm}} deployment. For information about the network specifications and infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).
 
 ### How {{site.data.keyword.Bluemix_notm}} works
 {: #howwork}
