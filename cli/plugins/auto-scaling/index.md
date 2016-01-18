@@ -5,7 +5,7 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 12 January 2015*
+*Last updated: 18 January 2015*
 
 You can configure {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64 and OSX, and provides as much capability as the {{site.data.keyword.autoscaling}} RESTful API provides.
 {: shortdesc}

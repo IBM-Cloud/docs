@@ -6,7 +6,7 @@
 # CLI and Dev Tools
 {: #cli}
 
-*Last updated: 13 January 2016*
+*Last updated: 18 January 2016*
 
 Powerful tools for {{site.data.keyword.Bluemix_short}} and download links.
 {:shortdesc}
