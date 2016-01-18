@@ -288,7 +288,7 @@ displayed.
 * You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-* When displaying a report or log, you can click the ![Download](images/icon_download.png)
+* When displaying a report or log, you can click the ![Download](images/icon_download.svg)
 icon at the upper right of the report to download it.
 
 <!-- This content cannot go into production until the security reports have gone into production -->
@@ -312,9 +312,9 @@ The System Status page displays. The left pane displays the status
 of your runtimes and services across regions and your {{site.data.keyword.Bluemix_notm}} instance. The right pane shows notifications.
 
 3. If you configured your browser for RSS feeds, you can subscribe to an RSS feed of the
-notifications. Locate the ![RSS](images/icon_RSS.png) icon to the right of **UPDATES** at the top left of the notifications list, and select one of the following actions:
+notifications. Locate the ![RSS](images/icon_RSS.svg) icon to the right of **UPDATES** at the top left of the notifications list, and select one of the following actions:
 
-* Drag the ![RSS](images/icon_RSS.png) icon into your RSS reader.
+* Drag the ![RSS](images/icon_RSS.svg) icon into your RSS reader.
 * Right-click the RSS icon, select **Copy link address**, and paste the URL
 into your RSS reader.
 
@@ -404,7 +404,7 @@ organization, you receive a message. To save any changes that you made on the Ed
 Organization page, click **SAVE**.
 * In the Organization List section, you can view all organizations in the
 {{site.data.keyword.Bluemix_notm}} environment.
-	* To delete the organization, click ![Delete](images/icon_trash.png) in the Actions column.
+	* To delete the organization, click ![Delete](images/icon_trash.svg) in the Actions column.
 	* To view and edit the quota plan for an organization, click the name for the organization in the
 	list.
 	* To edit the name of the org and add or remove managers, click the name for the organization in
@@ -450,11 +450,11 @@ window that opens:
 To edit organizations, select from the following options:
 	* Add the user to an organization by using the search field to locate an organization, clicking to
 	select from the options, and clicking **ADD**.
-	* Remove a user from an organization by clicking the ![Remove, represented by a minus sign](images/icon_remove.png) icon.
+	* Remove a user from an organization by clicking the ![Remove, represented by a minus sign](images/icon_remove.svg) icon.
 When finished, click **SAVE**.
 * Remove users. If you have `admin` permission or
 `users` permission with `write` ability, you can remove users.
-To remove a user, locate the user and click the ![Delete](images/icon_trash.png) icon and then **Remove**.
+To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
 
 #### Permissions
 {: #permissions}
@@ -474,9 +474,9 @@ Users can be assigned the following permissions:
 Permissions can be enabled, or the user can be given `view` or
 `write` ability for that permission, as represented by the following icons:
 
-* The ![Enabled, represented by a check mark](images/icon_enabled.png) icon beside a permission means that it is enabled.
-* The ![View, represented by an eye](images/icon_read.png) icon means that the user has `view` (read-only) ability for that permission.
-* The ![Write, represented by a pencil](images/icon_write.png) icon means that the user has `write` (edit, add, or remove) ability for that permission.
+* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
+* The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) ability for that permission.
+* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) ability for that permission.
 
 ### Managing users with the Admin REST API
 {: #usingadminapi}
