@@ -59,7 +59,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 
 
-|Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Austrilian Sydney region|
+|Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.activedeployshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
@@ -87,7 +87,8 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|No|
 |{{site.data.keyword.globalizationshort}}	|Yes		|No		|No|
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
-|{{site.data.keyword.twittershort}}		|Yes		|Yes		|No|
+|{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.iot_short}}		|Yes		|No		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|No|
