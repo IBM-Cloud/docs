@@ -109,7 +109,7 @@ Users can be assigned the following permissions to take different user roles in 
 <dt>Space managers</dt>
 <dd>Spacing managers have the following permissions:
 <ul>
-<li>Add users to the space and manager users.</li>
+<li>Add users to the space and manage users.</li>
 <li>Enable features for the space</li>
 </ul>
 </dd>
