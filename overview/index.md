@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} overview
 {: #overview}
 
-*Last updated: 15 January 2016*
+*Last updated: 18 January 2016*
 
 {{site.data.keyword.Bluemix}} is the {{site.data.keyword.IBM}} open cloud platform that provides mobile and web developers access to {{site.data.keyword.IBM_notm}} software for integration, security, transaction, and other key functions, as well as software from business partners.
 {:shortdesc}
@@ -83,9 +83,9 @@ IBM uses relay technology to securely monitor and maintain your environment, so 
 
 *Figure 4. {{site.data.keyword.Bluemix_notm}} Local*
 
-The inception virtual machine is located behind your customer firewall and runs in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core services run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses the VLAN for the private subnet, which is more secure and can help avoid routing issues.
+The inception virtual machine runs in a network behind your customer firewall in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core services run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses a VLAN for the private subnet. Using a private subnet rather than a public VLAN is more secure and can help avoid routing issues.
 
-DataPower appliances provide access to {{site.data.keyword.Bluemix_notm}} application domains. These appliances connect to the network that is accessible  from your intranet. Your users who deploy applications and services get access from the network that is accessible from your intranet. You must provide 7 IP addresses that have outbound internet access. DataPower appliances route from these customer IP addresses to the isolated {{site.data.keyword.Bluemix_notm}} deployment. For information about the network specifications and infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).
+DataPower appliances provide access to {{site.data.keyword.Bluemix_notm}} application domains. These appliances connect to the network that is accessible  from your intranet. Users who are deploying apps and services get access from the network that is accessible from your intranet. You must provide seven IP addresses that have outbound internet access. DataPower appliances route from these customer IP addresses to the isolated {{site.data.keyword.Bluemix_notm}} deployment. For information about the network specifications and infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).
 
 ### How {{site.data.keyword.Bluemix_notm}} works
 {: #howwork}
