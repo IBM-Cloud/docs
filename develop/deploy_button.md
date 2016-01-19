@@ -6,7 +6,7 @@
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-*Last Updated: 15 January 2016* 
+*Last Updated: 19 January 2016* 
 
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
@@ -53,26 +53,23 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button:
 
 <ol>
 <li> Copy and modify one of the following snippet templates and include a public Git repository.
-
-<!-- audience blue staging only begin comment -->
 <p></p>
 <p>
 <strong>Tip</strong>: If you want to specify the build input for a DevOps Services project, add a branch parameter to the Git URL. When you add a branch parameter, the original public Git repository, including all of its branches, is cloned into a new, private DevOps Services project with a new Git repository. The specified Git branch is set as the input for the build job. If you don't specify a branch, the input for the build job is set to the master branch by default.
 </p>
-<!-- audience blue staging only end comment -->
 <ul>
 <li>HTML:
 <p>
 Default master branch:
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 <p>
 Specified Git branch:
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown:
@@ -80,12 +77,12 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>
