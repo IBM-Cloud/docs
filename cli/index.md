@@ -3,12 +3,12 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# CLI and Dev Tools
+# CLI and dev tools
 {: #cli}
 
-*Last updated: 18 January 2016*
+*Last updated: 19 January 2016*
 
-Powerful tools for {{site.data.keyword.Bluemix_short}} and download links.
+With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
 {:shortdesc}
 
 ## ![Command line interfaces](./images/CLI.png) Command line interfaces
