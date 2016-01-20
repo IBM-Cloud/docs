@@ -5,7 +5,7 @@
 
 #Services
 {: #services}
-*Last updated: 7 December 2015*
+*Last updated: 20 January 2015*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -95,6 +95,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
 |{{site.data.keyword.messageresonanceshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.APS_MAiOS}} 		|Yes		|No		|No|
+|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilemam}}		|Yes		|Yes		|No|
 |{{site.data.keyword.mobiledata}}		|Yes		|Yes		|No|
 |{{site.data.keyword.manda}}			|Yes		|Yes		|No|
