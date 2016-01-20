@@ -133,7 +133,7 @@ As an organization manager or account owner, you can manage your organizations. 
 <li>Creating an organization
 <p>Only users with pay accounts can create an organization. With a pay account, you can create an organization by taking the following steps:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**.</li>
 <li>Click **Create an Organization** and follow the prompts to create your organization.</li>
 </ol>
 </li>
@@ -148,7 +148,7 @@ As an organization manager or account owner, you can manage your organizations. 
 <li>Listing members
 <p>Take the following steps to list the members of your organization or space:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
 <li>Click the space name in your organization to see the members of this space and their roles.</li>
 </ol>
 </li>
@@ -162,7 +162,7 @@ As an organization manager or account owner, you can manage your organizations. 
 <li>Inviting users to a space
 <p>You can invite users to your organization as collaborators. You can also add users of your organization to different spaces. The users can access only the space that they were added to. Take the following steps to add a user to a space:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
 <li>Add the user to a space. Select the space from the navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
 </ol>
 </li>
