@@ -5,7 +5,7 @@
 
 #Administering {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Last updated: 18 January 2016*
+*Last updated: 20 January 2016*
 
 Manage your orgs, spaces, and assigned users by clicking the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) for more information about administering your local or dedicated instance.
 {:shortdesc}
