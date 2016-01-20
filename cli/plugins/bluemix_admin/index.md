@@ -23,6 +23,8 @@ plug-in.
 
 Complete the following steps to add the repository and install the plug-in:
 
+<!-- Update URL below to use console and not opsconsole when new CLI is available in customer envs -->
+
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
