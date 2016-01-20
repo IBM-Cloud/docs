@@ -5,21 +5,21 @@
 
 #Administering {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*Last updated: 16 December 2015*
+*Last updated: 18 January 2016*
 
-Manage your orgs, spaces, and assigned users by clicking **Account and Support** &gt; **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) for more information about administering your local or dedicated instance.
+Manage your orgs, spaces, and assigned users by clicking the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) for more information about administering your local or dedicated instance.
 {:shortdesc}
 
 ##Managing your account
 {: #mngacct}
 
-In {{site.data.keyword.Bluemix}}, you can manage orgs and spaces, including user access all from the dashboard in the user interface. You can also monitor your usage and billing.
+In {{site.data.keyword.Bluemix}} Public, you can manage orgs and spaces, including user access all from the dashboard in the user interface. You can also monitor your usage and billing.
 {:shortdesc}
 
 ###Organizations and spaces
 {: #orgsandspaces}
 
-As an organization manager or account owner, you can use the Manage Organizations page to view and manage the settings of the organization or space, including user access. To open the Manage Organizations page, on the menu go to *Account and Support* &gt; **Manage Organizations**.
+As an organization manager or account owner, you can use the Manage Organizations page to view and manage the settings of the organization or space, including user access. To open the Manage Organizations page, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**.
 
 ####Organizations
 
@@ -133,14 +133,14 @@ As an organization manager or account owner, you can manage your organizations. 
 <li>Creating an organization
 <p>Only users with pay accounts can create an organization. With a pay account, you can create an organization by taking the following steps:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**.</li>
 <li>Click **Create an Organization** and follow the prompts to create your organization.</li>
 </ol>
 </li>
 <li>Renaming an organization
 <p>Take the following steps to rename your organization:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and select **Manage Organizations**.</li>
 <li>Select the organization that you want to rename.</li>
 <li>Type a new name in the **Organization** field, and click **Save**.</li>
 </ol>
@@ -148,29 +148,29 @@ As an organization manager or account owner, you can manage your organizations. 
 <li>Listing members
 <p>Take the following steps to list the members of your organization or space:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
 <li>Click the space name in your organization to see the members of this space and their roles.</li>
 </ol>
 </li>
 <li>Creating a space
 <p>You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you an associate your apps with spaces. Take the following steps to create a space:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**.</li>
-<li>Click **Create a Space** under your organization name, and follow the prompts to create your space.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**.</li>
+<li>Click **Create a Space** following your organization name, and follow the prompts to create your space.</li>
 </ol>
 </li>
 <li>Inviting users to a space
 <p>You can invite users to your organization as collaborators. You can also add users of your organization to different spaces. The users can access only the space that they were added to. Take the following steps to add a user to a space:</p>
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the icon in the upper right, and select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
-<li>Add the user to a space. Select the space from the left navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
+<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
+<li>Add the user to a space. Select the space from the navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
 </ol>
 </li>
 <li>Changing user roles
 <p>Take the following steps to change user roles:</p>
 <ol>
-<li>From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the upper-right of the Dashboard, and then select **Manage Organizations**.</li>
-<li>Select the **MANAGER**, **BILLING MANAGER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in your organization. Or select a space from the left navigation pane, and then select the **MANAGER**, **DEVELOPER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in the space. </li>
+<li>From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and then select **Manage Organizations**.</li>
+<li>Select the **MANAGER**, **BILLING MANAGER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in your organization. Or select a space from the navigation pane, and then select the **MANAGER**, **DEVELOPER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in the space. </li>
 <li>Click **SAVE**.</li>
 </ol>
 </li>
@@ -183,26 +183,23 @@ As an organization manager or account owner, you can manage your organizations. 
 ## Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
 
-Use the Admin Console to manage resources, monitor usage, administer user permissions, and view security reports, logs, status, and upgrade notifications for your {{site.data.keyword.Bluemix}} Local or Dedicated environment.
+If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](index.html#orgmng).
 {:shortdesc}
 
-### Accessing the Admin Console
-{: #oc_access}
+*Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
 
-You can access the Admin Console by entering the following URL:
-
-<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
-
-<dl>
-<dt><strong>&lt;subdomain&gt;</strong></dt>
-<dd>This value is the name of your local or dedicated instance. The subdomain name for your {{site.data.keyword.Bluemix}} instance was
-assigned during onboarding.</dd>
-</dl>
+| What can I do? | Details |    
+|----------------|---------|
+|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business.|
+|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**. Manage which services are visible to your users.|
+|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**. Create organizations, monitor quotas for organizations and make needs-based decisions quickly.|
+|Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. Create spaces within your orgs. Add users and assign org and space roles to users. |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION**. Add users, remove users, and adjust user permissions. |
+|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS**. View security reports and audit logs for you instance.|
+|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION**. View system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains.  |
 
 ### Viewing system information
 {: #oc_system}
-
-Use the Admin Console to monitor your system information.
 
 To view system information, click **ADMINISTRATION &gt; SYSTEM INFORMATION**.
 
@@ -251,8 +248,6 @@ Details section.
 ### Viewing usage information
 {: #oc_resource}
 
-Use the Admin Console to monitor resource and network usage.
-
 To view resource information, click **ADMINISTRATION &gt; USAGE**.
 
 In the Resource Monitoring section, you can view the following
@@ -284,53 +279,24 @@ Select from the following options:
 
 * You can select start and end dates from the fields to filter which reports and logs are
 displayed.
-* You can expand and view various reports from the left navigation pane.
+* You can expand and view various reports from the navigation pane.
 * You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
 * When displaying a report or log, you can click the ![Download](images/icon_download.svg)
-icon at the upper right of the report to download it.
-
-<!-- This content cannot go into production until the security reports have gone into production -->
-
-For more information about the types of security reports, see [Security reports](../security/index.html#reports).
+icon to download the report.
 
 ### Viewing status
 {: #oc_status}
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance through the Admin
-Console. You can also subscribe to an RSS feed for notifications so that you don't have to check for them.
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
 
-To view status for your {{site.data.keyword.Bluemix_notm}} instance, complete the following steps:
-
-1. In the Admin Console in the upper-right corner, click the
-**Profile Settings** icon.
-
-2. Then, click **Status**.
-
-The System Status page displays. The left pane displays the status
-of your runtimes and services across regions and your {{site.data.keyword.Bluemix_notm}} instance. The right pane shows notifications.
-
-3. If you configured your browser for RSS feeds, you can subscribe to an RSS feed of the
-notifications. Locate the ![RSS](images/icon_RSS.svg) icon to the right of **UPDATES** at the top left of the notifications list, and select one of the following actions:
-
-* Drag the ![RSS](images/icon_RSS.svg) icon into your RSS reader.
-* Right-click the RSS icon, select **Copy link address**, and paste the URL
-into your RSS reader.
-
-4. Filter which notifications are displayed. Click **FILTER** at the top right
-of the notifications list. Then, you can search and narrow the list of notifications by typing a
-word that you would expect to find in a notification, for example "maintenance". Or, you can
-click to select which notifications to display by **Type**,
-**Region**, **Category**, **Start date**, or **End date**.
+You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status).
 
 ### Managing your Catalog
 {: #oc_catalog}
 
-You can manage which {{site.data.keyword.Bluemix_notm}} services and starters are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog.
-
-To use the Admin Console to manage the Catalog,
-click **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
+You can manage which {{site.data.keyword.Bluemix_notm}} services and starters are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog. Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
 
 Select a service or starter tile to edit the service or starter plan visibility. To edit the
 visibility, select from the following options:
@@ -348,7 +314,7 @@ organizations**.
 
 You can manage your organizations by creating and deleting organizations, adding managers to organizations, and monitoring quota usage.
 
-To use the Admin Console to manage your organizations, click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**.
+Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**.
 
 You can expand and view various sections. You can also review and manage the quota plans for
 your organizations.
@@ -412,11 +378,10 @@ Organization page, click **SAVE**.
 
 ### Managing users and permissions
 {: #oc_useradmin}
+
 You can add users to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through LDAP. You can add users singly or in
 groups, and view user permissions. If you are assigned `admin` permission, you
-can also set and manage permissions for other users.
-
-To use the Admin Console to manage users, click **ADMINISTRATION &gt; USER ADMINISTRATION**.
+can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
 
 The User Administration page displays all users for the local or dedicated instance.
 Permissions for each user are displayed. Permissions can be the following: None,
@@ -428,7 +393,7 @@ of each type and explanation of the icons.
 
 Choose from the following options:
 * Locate users.You can locate users in the table by using the **Search**
-field at the top.
+field.
 * Add users. If you have `admin` permission or
 `users` permission with `write` ability, you can add users. To
 add a user or group of users, click **ADD SINGLE USER** or **ADD USER
@@ -456,20 +421,20 @@ When finished, click **SAVE**.
 `users` permission with `write` ability, you can remove users.
 To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
 
-#### Permissions
+### Permissions
 {: #permissions}
 
 Users can be assigned the following permissions:
 
-| **User permission** | **Description** |
+| **User permission** | **Description** |       
 |-----------------|-------------------|
 | Admin | Users with `admin` permission are allowed to edit permissions for other users. |
-| Catalog | Users with `catalog` permission can be assigned the ability to `view` or `write` (modify) which services are available in the local or dedicated instance. |
-| Login | Users with `login` permission are allowed to log in to the Admin Console. Without this permission, users can't log in. |
+| Catalog | Users with `catalog` permission can be assigned the ability to `view` or `write` (modify) which services are available in the local or dedicated instance. |  
+| Login | Users with `login` permission are allowed to see the Administration page. Without this permission, users cannot see the Administration menu option. |
 | Reports | Users with `reports` permission can be assigned the ability to `view` or `write` (modify) security reports. |
 | Users | Users with `users` permission can be assigned the ability to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
 
-*Table 1. Permissions*
+*Table 2. Permissions*
 
 Permissions can be enabled, or the user can be given `view` or
 `write` ability for that permission, as represented by the following icons:
