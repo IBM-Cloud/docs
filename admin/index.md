@@ -976,7 +976,7 @@ Content-Type: application/json
 {: #usingadmincli}
 
 You can manage users for your
-{{site.data.keyword.Bluemix_notm}} environment by
+{{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
 using the Cloud Foundry command line interface with the
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For
 example, you can add users from an LDAP registry.
