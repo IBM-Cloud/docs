@@ -183,33 +183,80 @@ cf logs appname --recent | grep '\[App'
 ```
 For more information about the **grep** option, type `grep --help`.
 
-###Configuring third-party logging
+
+
+### Configuring external logging
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} keeps a limited amount of log information in memory. When information is logged, the old information is replaced by the newer information. To keep all the log information, you can save your logs to a third-party log management service.
+{{site.data.keyword.Bluemix_notm}} keeps a limited amount of log information in memory. When information is logged, the old information is replaced by the newer information. To keep all the log information, you can save your logs to an external log host, such as a third-party log management service or other host.
 
-To stream logs from your application and the system to a third-party log management service, complete the following steps:
+To stream logs from your app and the system to an external log host, complete the following steps:
 
-1. Register a third-party log management service.
-    
-    You can use any third-party log management service that supports the [syslog protocol](http://tools.ietf.org/html/rfc5424){:new_window}, such as Papertail, Splunk Storm, SumoLogic, and Logentries. Register a third-party log management service, then configure the service to provide a destination for your logs in {{site.data.keyword.Bluemix_notm}}. After you complete the configuration, the service typically provides you a syslog URL as the destination for your logs in {{site.data.keyword.Bluemix_notm}}. For information on how to configure third-party log management services, see [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
+  1. Determine the logging endpoint. 
+     
+	 You can send logs to a third-party log aggregator, such as Papertrail, Splunk, or Sumologic. You can also send logs to a syslog host, a syslog host that is encrypted with TLS (Transport Layer Security), or an HTTPS POST endpoint. The methods to obtain logging endpoints vary for different log hosts.
 
-2. Create a user-provided service instance.
-	
-	To stream logs in {{site.data.keyword.Bluemix_notm}} to the third-party log management service, you must first create a user-provided service instance. Use the following command to create a user-provided service instance, where service_name is the name for the user-provided service instance, and syslog_URL is the URL that you get from your third-party logging service.
-	
-	```
-	cf create-user-provided-service <service_name> -l <syslog_URL>
-	```
-	
-3. Bind the service instance to your application.
+  2. Create a user-provided service instance.
+     
+	 Use the ```cf create-user-provided-service``` command (or ```cups```, a short version of the command) to create a user-provided service instance: 
+	 ```
+	 cf create-user-provided-service <service_name> -l <logging_endpoint>
+	 ```
+	 **service_name**
+	 
+	 The name for the user-provided service instance.
+	 
+	 **logging_endpoint**
+	 
+	 The logging endpoint that {{site.data.keyword.Bluemix_notm}} sends logs to. Refer to the following table to replace *logging_endpoint* with your value:
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>Logging endpoint</th>
+     <th>Command</th>
+	 <th>Notes</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>syslog host</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>For example, to enable logging to Papertrail, type `cf cups my-logs -l syslog://<papertrail-url>`. Replace `<papertrail-url>` with the URL of your logging endpoint from Papertrail.</td>
+     </tr>
+	 <tr>
+     <td>syslog-tls host</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>The certificate must be trusted by a certificate authority. Don't use self-signed certificates.</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>This endpoint must be on the public Internet and accessible by {{site.data.keyword.Bluemix_notm}}</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. Bind the service instance to your app.
 
-	Use the following command to bind the service instance to your application, where appname is the name of your application, and service_name is the name for the user-provided service  instance.
+	 Use the following command to bind the service instance to your app: 
 	
-	```
-	cf bind-service appname <service_name>
-	```
-	
-	After that, you will be prompted to restage the application by typing cf restage appname for the changes to take effect. When logs are generated, you can view similar messages in the third-party log management service after a short delay.
+	 ```
+	 cf bind-service appname <service_name>
+	 ```
+	 **appname**
+	 
+	 The name of your app.
+	 
+	 **service_name**
+	 
+	 The name for the user-provided service instance.
+	 
+  4. Restage the app. 
+     Type ```cf restage appname``` for the changes to take effect. 
+	 
+When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
 
-**Note:** Logs you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in the third-party log management services.
+**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
+
+
+
