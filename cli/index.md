@@ -39,10 +39,12 @@ cf add-plugin-repo bluemix-cf http://plugins.ng.bluemix.net
 cf install-plugin plugin_name -r bluemix-cf
 ```
 
-| *Active Deploy* | *Admin Console* | *Development Mode* | 
+| *Active Deploy* | *Admin Console* | *Development Mode* |
 |-----------------|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
-
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) |
+| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
+|-----------------|-----------------|
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |  Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) | 
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
@@ -53,9 +55,9 @@ bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 bluemix plugin install plugin_name -r bluemix-bx
 ```
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *{{site.data.keyword.autoscaling}} CLI* | *VPN* |
-|-----|----|----|
-| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
+| *{{site.data.keyword.autoscaling}} CLI* | 
+|-----|
+| Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |
 
 ## ![Integrated development tools](./images/Integrated_Dev_Tools.png) Integrated development tools
 
