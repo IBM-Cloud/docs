@@ -14,7 +14,7 @@ If you experience problems with {{site.data.keyword.Bluemix}}, you can view the 
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
 
-Logs are in a fixed format. For verbose logs, you can filter the logs or use third-party logging services to store and process the logs. For more information about log formats, viewing and filtering logs, and third-party logging, see [Logging for apps running on Cloud Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps running on Cloud Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Debugging staging errors
