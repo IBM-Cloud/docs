@@ -42,6 +42,7 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *Admin Console* | *Development Mode* |
 |-----------------|-----------------|-----------------|
 | Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) |
+
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |  Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) | 
