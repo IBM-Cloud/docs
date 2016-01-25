@@ -6,7 +6,7 @@
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 19 January 2016*
+*Last updated: 25 January 2016*
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
 {:shortdesc}
@@ -43,9 +43,9 @@ cf install-plugin plugin_name -r bluemix-cf
 |-----------------|-----------------|-----------------|
 | Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: development-name <br> [View Docs](./plugins/dev_mode/index.html) |
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
-|-----------------|-----------------|
-| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |  Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) | 
+| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* | |
+|-----------------|-----------------|-----------------|
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |  Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |    |
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
