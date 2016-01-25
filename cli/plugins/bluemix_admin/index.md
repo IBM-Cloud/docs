@@ -1,4 +1,4 @@
-# {{site.data.keyword.Bluemix_notm}} admin
+# {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
 You can manage users for your

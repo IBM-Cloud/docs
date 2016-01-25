@@ -5,21 +5,21 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 20 January 2015*
+*Last updated: 25 January 2015*
 
-You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the {{site.data.keyword.autoscaling}} RESTful API provides.
+You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the auto-scaling RESTful API provides.
 {: shortdesc}
 
 Before you begin, install the {{site.data.keyword.Bluemix_notm}} CLI. See [Download {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} for instructions.
 
-## Adding the auto-scaling CLI plug-in
+## Adding the {{site.data.keyword.autoscaling}} CLI plug-in
 
 After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {{site.data.keyword.autoscaling}} CLI plug-in.
 
 Complete the following steps to add the repository and install the plug-in:
 1. To add the {{site.data.keyword.Bluemix_notm}} CLI plugin repository, run the following command:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. To install the {{site.data.keyword.autoscaling}} CLI plugin, run the following command:
 ```
@@ -37,13 +37,13 @@ You can attach an auto-scaling policy to a specific app. Run the following comma
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app to which you want to attach an auto-scaling policy.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the [{{site.data.keyword.autoscaling}} RESTful API doc](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html) for more details.</dd>
+<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the [auto-scaling RESTful API doc](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html) for more details.</dd>
 </dl>
 
 
 ## Generating an auto-scaling policy
 
-You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter  the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
+You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
 ```bx as policy-create```
 {: codeblock}
@@ -51,7 +51,7 @@ You can generate an auto-scaling policy by answering the questions on the comman
 
 ## Displaying an auto-scaling policy
 
-You can show the auto-scaling policy of an  app. The content of the policy is printed to the command line directly. Run the following command:
+You can show the auto-scaling policy of an app. The content of the policy is printed to the command line directly. Run the following command:
 
 ```bx as policy-show <APP_NAME> [--json]```
 {: codeblock}
