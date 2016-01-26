@@ -14,7 +14,7 @@ You can secure your applications by uploading SSL certificates and restricting a
 ##Creating certificate signing requests
 {: #ssl_csr}
 
-Before you can upload the SSL certificates to which you are entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server.
+Before you can upload the SSL certificates to which you are entitled {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server.
 
 A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, as well as a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
