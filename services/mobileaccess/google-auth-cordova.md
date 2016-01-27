@@ -8,7 +8,7 @@ In order to configure Cordova applications for Google authentication integration
 * Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](protecting-resources.html).
 * (optional) Get familiar with the following sections:
    * [Enabling Google authentication in Android apps](google-auth-android.html)
-   * [Enabling Google authentication in iOS apps](google-auth-iOS.html)
+   * [Enabling Google authentication in iOS apps](google-auth-ios.html)
 
 
 ## Configuring the Android Platform
