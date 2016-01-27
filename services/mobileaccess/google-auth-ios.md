@@ -25,7 +25,7 @@ To start using Google as identity provider, create a project in the Google Devel
 
 1. At this point you will be presented with an application type choice. Select **iOS**.
 
-1. Provide a meaningful name for your iOS client. Specify the bundleId of your iOS application. To find the bundleId of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
+1. Provide a meaningful name for your iOS client. Specify the bundle Id of your iOS application. To find the bundle Id of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
 
 1. Take a note of your new iOS Client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix_notm}}.
 
@@ -47,7 +47,7 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 1. Click **Google**
 
-1. Specify the Client ID for iOS obtained obtained in previous steps and click **Save**
+1. Specify the Client ID for iOS obtained in previous steps and click **Save**
 
 ## Configuring {{site.data.keyword.amashort}} Client SDK for iOS
 {: #google-auth-ios-sdk}
