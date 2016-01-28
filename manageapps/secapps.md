@@ -44,7 +44,7 @@ For the CSR to be valid, the following information must be entered when generati
 
   The fully qualified domain name (FQDN) for which you are requesting the SSL certificate.
   
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSH command tool](http://www.openssl.org/){:new_window}:
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
