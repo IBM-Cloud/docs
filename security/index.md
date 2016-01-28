@@ -325,6 +325,27 @@ You can find a {{site.data.keyword.Bluemix_notm}} self assessment document for t
  
 {{site.data.keyword.Bluemix_notm}} uses IBM SoftLayer Infrastructure-as-a-Service (IaaS) cloud services and takes full advantage of its security architecture. For additional information, contact the [{{site.data.keyword.Bluemix_notm}} sales](mailto:bmxcert1@us.ibm.com){:new_window} team.
 
+### Platform and service compliance
+The following table displays which services in {{site.data.keyword.Bluemix_notm}} are compliant for each of the standards.
+
+|{{site.data.keyword.Bluemix_notm}} components		|FISC		|ISO 27001	|SOC 2 Type 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} platform		|&#10004;			|&#10004;	|&#10004;	|
+|{{site.data.keyword.APIM}}			|&#10004;		|&#10004;	|			|
+|{{site.data.keyword.autoscaling}}			|&#10004;			|&#10004;	|			|
+|{{site.data.keyword.bigicloudst}}			|&#10004;			|&#10004;	|&#10004;	|
+|{{site.data.keyword.cloudant}}				|&#10004;			|&#10004;	|&#10004;	|
+|{{site.data.keyword.dashdbshort}}			|&#10004;			|&#10004;	|&#10004;	|
+|{{site.data.keyword.datacshort}}			|&#10004;			|&#10004;	|			|
+|{{site.data.keyword.jazzhub_short}}					|&#10004;			|&#10004;	|			|
+|{{site.data.keyword.containerlong}}			|&#10004;			|&#10004;	|			|
+|{{site.data.keyword.mql}}				|&#10004;			|&#10004;	|	 		|
+|{{site.data.keyword.SecureGateway}}			|&#10004;			|&#10004;	|	 		|
+|{{site.data.keyword.sescashort}}     |&#10004; |&#10004; | |
+
+*Table 1. Platform and service compliance*
+
+
 ## Security reports
 {: #reports}
 
