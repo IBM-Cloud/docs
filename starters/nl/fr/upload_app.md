@@ -4,7 +4,8 @@
 # Téléchargement de votre application
 *Dernière mise à jour : 11 novembre 2015*
 
-Une fois que vous êtes connecté à {{site.data.keyword.Bluemix}}, vous pouvez télécharger votre application avec la commande cf push. {:shortdesc}
+Une fois que vous êtes connecté à {{site.data.keyword.Bluemix}}, vous pouvez télécharger votre application avec la commande cf push. 
+{:shortdesc}
 
 Avant de commencer, effectuez les opérations suivantes :
   1. Installez l'interface de ligne de commande Cloud Foundry.

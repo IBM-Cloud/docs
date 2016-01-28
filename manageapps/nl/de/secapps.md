@@ -9,7 +9,8 @@
 *Letzte Aktualisierung: 4 Dezember 2015*
 
 Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate
-hochladen und den Zugriff auf die Anwendungen beschränken. {:shortdesc}
+hochladen und den Zugriff auf die Anwendungen beschränken. 
+{:shortdesc}
 
 ##Zertifikatssignieranforderungen erstellen
 {: #ssl_csr}

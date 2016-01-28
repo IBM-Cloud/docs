@@ -12,7 +12,8 @@
 Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die
 Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie
 (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten
-Ihrer Anwendung verwendet wird. {:shortdesc}
+Ihrer Anwendung verwendet wird. 
+{:shortdesc}
 
 ##Angepasste Domäne erstellen und verwenden
 {: #domain}

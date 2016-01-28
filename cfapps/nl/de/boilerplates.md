@@ -6,4 +6,5 @@
 
 Eine Boilerplate ist in {{site.data.keyword.Bluemix}} ein Container
 für eine Anwendung und die dazugehörige Laufzeitumgebung sowie vordefinierte Services für eine bestimmte
-Domäne. Mithilfe einer Boilerplate ist Ihre Anwendung sofort betriebsbereit. {:shortdesc}
+Domäne. Mithilfe einer Boilerplate ist Ihre Anwendung sofort betriebsbereit. 
+{:shortdesc}

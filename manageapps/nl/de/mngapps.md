@@ -7,7 +7,8 @@
 *Letzte Aktualisierung: 4 Dezember 2015*
 
 Mithilfe des Dashboards in der {{site.data.keyword.Bluemix}}-Benutzerschnittstelle
-können Sie Ihre Anwendungen und Services anzeigen und verwalten sowie die Ressourcennutzung anhand der Messanzeigen für Kontingente überwachen. {:shortdesc}
+können Sie Ihre Anwendungen und Services anzeigen und verwalten sowie die Ressourcennutzung anhand der Messanzeigen für Kontingente überwachen. 
+{:shortdesc}
 
 Der Anwendungsabschnitt im Dashboard enthält Übersichtsinformationen zu den von Ihnen erstellten Anwendungen. Diese
 Übersichtsinformationen umfassen den Namen, das Symbol, die URL, die Laufzeit und den Ausführungsstatus der entsprechenden Anwendung sowie die an sie gebundenen

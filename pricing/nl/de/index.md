@@ -44,7 +44,8 @@
 Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}}
 ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine
 Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht Nutzungsdetails, in der Sie die tatsächlichen Kosten
-nach dem Erstellen Ihrer Apps überprüfen können. {:shortdesc}
+nach dem Erstellen Ihrer Apps überprüfen können. 
+{:shortdesc}
 
 ## Kostenlose Testversion
 {: #trial}

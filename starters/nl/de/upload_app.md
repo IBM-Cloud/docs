@@ -5,7 +5,8 @@
 *Letzte Aktualisierung: 11. November 2015*
 
 Nachdem Sie sich bei {{site.data.keyword.Bluemix}} angemeldet haben, können Sie Ihre Anwendung
-mit dem Befehl 'cf push' hochladen. {:shortdesc}
+mit dem Befehl 'cf push' hochladen. 
+{:shortdesc}
 
 Bevor Sie damit beginnen, müssen Sie die folgenden Schritte durchführen:
   1. Installieren Sie die Cloud Foundry-Befehlszeilenschnittstelle.

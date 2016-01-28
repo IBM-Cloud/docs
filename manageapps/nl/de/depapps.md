@@ -420,7 +420,8 @@ Weitere Informationen zu den einzelnen Umgebungsvariablen finden Sie im Thema
 {: #customize_dep}
 
 Sie können Bereitstellungstasks für Ihre Anwendungen anpassen.
-So können Sie beispielsweise die Startbefehle für ihre Anwendungen angeben und Ihre Anwendungsstartumgebung konfigurieren. {:shortdesc}
+So können Sie beispielsweise die Startbefehle für ihre Anwendungen angeben und Ihre Anwendungsstartumgebung konfigurieren. 
+{:shortdesc}
 
 ### Startbefehle angeben
 

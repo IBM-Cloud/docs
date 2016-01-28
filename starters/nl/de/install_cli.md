@@ -17,7 +17,8 @@
 # App mit der Cloud Foundry-Befehlszeilenschnittstelle bereitstellen
 *Letzte Aktualisierung: 11. November 2015*
 
-Mithilfe der Cloud Foundry-Befehlszeilenschnittstelle können Sie Anwendungen und Serviceinstanzen bereitstellen und ändern. {:shortdesc}
+Mithilfe der Cloud Foundry-Befehlszeilenschnittstelle können Sie Anwendungen und Serviceinstanzen bereitstellen und ändern. 
+{:shortdesc}
 
 Installieren Sie vor Beginn die Befehlszeilenschnittstelle 'cf'.
 

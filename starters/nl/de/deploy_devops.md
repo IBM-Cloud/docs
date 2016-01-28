@@ -6,7 +6,8 @@
 *Letzte Aktualisierung: 8. Dezember 2015*  
 
 Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keyword.Bluemix}} automatisch bereitgestellt wird.
-Sie können dann den in Ihrer App ausgeführten Code ändern, indem Sie für Änderungen eine Push-Operation an das Git-Repository durchführen. {:shortdesc}
+Sie können dann den in Ihrer App ausgeführten Code ändern, indem Sie für Änderungen eine Push-Operation an das Git-Repository durchführen. 
+{:shortdesc}
 
 1. Um zu beginnen, klicken Sie auf der Übersichtsseite der App auf **GIT HINZUFÜGEN**.   
 2. Stellen Sie im Fenster, das geöffnet wird, sicher, dass das Kontrollkästchen zum Auffüllen des Repository mit dem Starteranwendungspaket und zum Aktivieren der Delivery Pipeline (Build & Deploy) aktiviert ist. Das Git-Repository wird erstellt. Wenn Startercode verfügbar ist, wird er in das Repository geladen. Die Anwendung wird zudem vom in {{site.data.keyword.jazzhub}} ausgeführten Service

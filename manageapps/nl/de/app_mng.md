@@ -10,7 +10,8 @@
 
 Beim App-Management handelt es sich um eine Reihe von Entwicklungs- und
 Debugging-Dienstprogrammen, die für Ihre Liberty- und Node.js-Anwendungen in
-{{site.data.keyword.Bluemix}} aktiviert werden können. {:shortdesc}
+{{site.data.keyword.Bluemix}} aktiviert werden können. 
+{:shortdesc}
 
 ##Dienstprogramme für das App-Management
 {: #Utilities}
