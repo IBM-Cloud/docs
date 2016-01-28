@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 15 January 2016*
+*Last updated: 27 January 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -37,9 +37,11 @@ In addition, there is a set of services available for {{site.data.keyword.Bluemi
 
 Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual machine, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual machine, and once a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, we can check for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begin deploying updates.
 
-The traffic on this tunnel is automation for serving and maintaining the platform, compute resources, and services for your instance. The inbound web port 443 is used for this connection. Relay is restricted to automation agent-only access. IBM uses the relay capability to deliver platform updates through a consistent testing and validation process to ensure that all deployments pushed to your local environments are stable and secure.
+The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability used by IBM operations to complete problem determination for your local instance. The outbound web port 443 is used for this connection. IBM uses the relay capability to deliver platform updates through a consistent testing and validation. This process ensures that all deployments pushed to your local environments are stable and secure.
 
-You have complete visibility of the environment for incident, problem, change, capacity, and security management as an administrator.  Administrators access the information about their environment by using the Administration console. Relay technology keeps the Administration console current with the latest data. For more information about user access, security logs, syndicated catalog control, and communication for updates and problem repair, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
+Only the IBM team working with you on your local environment can securely access your {{site.data.keyword.Bluemix_notm}} instance. Access to your local environment is secured by using two-factor authentication during multiple steps in the connection process. IBM provides a list of the approved users and IDs who can access your environment, and then you have the ability to audit any access to your environment. By generating a security report, you are able to find out who accessed your environment, and when and why it was accessed. For information about generating the security reports, see [Security reports](../security/index.html#reports).
+
+The environment is completely visible to you, as the administrator, for incident, problem, change, capacity, and security management. You can access the information about your environment by using the Administration page. Relay technology keeps the Administration page current with the latest data. For more information about user access, security logs, syndicated catalog control, and communication for updates and problem repair, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
 
 ##Setting up your {{site.data.keyword.Bluemix_notm}} Local instance
 {: #setuplocal}
