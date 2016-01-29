@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 27 January 2016*
+*Last updated: 29 January 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -244,7 +244,7 @@ ESXi is a virtualization layer that runs on physical servers and that abstracts 
 </dd>
 <dt>**High availability**</dt>
 <dd>
-To support a single node failure, you must have n+1 ESXi. For example, if two ESXis are used, meaning 16x cores each, then a third is needed.
+To support a single node failure, you must have n+1 ESXi. For example, if three ESXis are used, meaning 16x cores each, then a fourth is needed.
 <p><strong>Note:</strong> The customer VMware administrator can decide to enforce strict high availability failover in the cluster to guarantee resources.</p>
 </dd>
 <dt>**Network**</dt>
