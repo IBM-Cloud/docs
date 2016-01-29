@@ -3,6 +3,7 @@
 
 # Getting started with the HelloWorld sample
 {: #gettingstarted-android}
+*Last Updated: 28 January 2016*  
 
 If you want to get started with a new Android application, you can use the HelloWorld app. This app demonstrates how to connect to your {{site.data.keyword.Bluemix}} backend from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
 
@@ -31,7 +32,7 @@ When you successfully connect to {{site.data.keyword.Bluemix_notm}} from the mob
 
 5. Resolve any problems.<br/>When the connection fails, a message: "Bummer. Something went wrong" displays:</br>
 ![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")
-<br/> 
+<br/>
 Check the following items:
  * Verify that you correctly pasted the route and GUID values.
  * You can also check the debug log for more information.
@@ -45,10 +46,10 @@ For information about how to get the SDK and integrate it into your mobile app, 
 # rellinks
 
 ## samples
-   * [HelloWorld (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [HelloWorld sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
-   * [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## api
    * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
