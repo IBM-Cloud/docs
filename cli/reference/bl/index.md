@@ -17,7 +17,7 @@ You can use **bl** command line interface commands to complete the following tas
 * See the list of projects available for synchronization.
 * See the status of running applications.
 
-For more information on downloading and using the bl command, see [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive).
+For more information on downloading and using the bl command, see [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## bl commands
 
