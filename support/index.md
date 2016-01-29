@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 19 January 2016*
+*Last updated: 26 January 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -20,7 +20,7 @@ Account and Support is a feature that enables you to check account information, 
 
 To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar.
 
-Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket with by clicking **GET IN TOUCH**.
+Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
 
 ### Asking a question
@@ -29,7 +29,7 @@ Whether accessed directly or through Account and Support, Stack Overflow is a we
 To ask a question in Stack Overflow, choose from the following options:
   * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACKOVERFLOW** to post your question.
 
-  * Or, go directly to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+  * Go directly to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
 
 When you create a question in Stack Overflow, add a **bluemix** tag to your question to ensure that it is seen by the {{site.data.keyword.Bluemix_notm}} development and support teams.
 
@@ -42,23 +42,23 @@ The {{site.data.keyword.Bluemix_notm}} Status page is the central place to find 
 
 On the Status page, you can find the following information:
 
-  * Current status of services and components in all {{site.data.keyword.Bluemix_notm}} regions.
+  * The current status of services and components in all {{site.data.keyword.Bluemix_notm}} regions.
   * A list of announcements, in chronological order, for maintenance and incidents. You can filter the list or open an individual announcement for more details.
   * Planned maintenance windows, which are posted at least 24 hours in advance, except in extreme circumstances.
   * Unplanned incidents or outages, which are posted as soon as the {{site.data.keyword.Bluemix_notm}} team becomes aware of them. Incident notifications are regularly updated until they are resolved.
-  * Security bulletins.
+  * References to security bulletins that affect the various {{site.data.keyword.Bluemix_notm}} services or the platform.
   * Other platform-wide announcements of general interest to you.
   * An RSS feed to subscribe to.
 
 You can find the Status page by choosing either of the following options:
 
-  * From Account and Support: log in to the {{site.data.keyword.Bluemix_notm}} user interface and click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar, then click **Status**.
-  * Accessing it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar, and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
+  * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
 ### Subscribing to an RSS feed
 
-You can also be alerted of any notifications by subscribing to the RSS feed for the {{site.data.keyword.Bluemix_notm}} Status page. This provides a way for you to get updates without having to regularly consult the status page.
+You can also be alerted of any notifications by subscribing to the RSS feed for the {{site.data.keyword.Bluemix_notm}} Status page. This approach provides a way for you to get updates without having to regularly consult the status page.
 
 To subscribe, follow these steps:
 
@@ -71,7 +71,7 @@ To subscribe, follow these steps:
 
 Other methods of reading RSS feeds are also available through web browser plug-ins such as [RSS Feed](http://feeder.co/){: new_window} Reader for Chrome or [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} add-on for Firefox, or with other news sources like [Feedly](http://www.feedly.com/){: new_window} or [G2reader](http://www.g2reader.com/en/){: new_window}.
 
-You can also use a third-party service to automatically send an email for each RSS update. The following are some example third-party services:
+You can also use a third-party service to automatically send an email for each RSS update. The following list provides some example third-party services:
 
   * www.feedmyinbox.com
   * www.rssforward.com
@@ -92,7 +92,7 @@ You can also use a third-party service to automatically send an email for each R
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the [Client Success Portal](https://support.ibmcloud.com/){: new_window} or the [simple form](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [simple form](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -118,56 +118,48 @@ You can open support tickets if you have a valid {{site.data.keyword.Bluemix_not
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
-If you were unable to resolve your problem with troubleshooting and help options, you can ask for support.
+If you were unable to resolve your technical problem with the troubleshooting and help options, you can ask for support. However, before contacting support for a technical issue, ensure that the problem is not due to an outage by checking {{site.data.keyword.Bluemix_notm}} status. 
 
-To open a support ticket, use one of the following methods:
+If the problem is not due to an outage, you can open a support ticket by using one of the following options:
 
-  * From Account and Support. Log in to the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](./images/account_support.svg) in the top menu bar.
+  * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for. 
+  * Use the [{{site.data.keyword.Bluemix_notm}} Support ticket](http://ibm.biz/bluemixsupport){: new_window} form. You can also use this form for ID and billing questions.
 
-     1. First, ensure that you check {{site.data.keyword.Bluemix_notm}} status by clicking **Status**.
-	 2. Then, if the problem is not due to an outage, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
+  
+Support is available with the following options:
 
-  * Use the [{{site.data.keyword.Bluemix_notm}} Support ticket](http://ibm.biz/bluemixsupport){: new_window} form. For technical questions, ID questions, and billing questions, contact support by opening a new ticket.	 
-  * From the [IBM® Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. Support is available through the IBM Client Success Portal with the following options:
-
-     * Initial 30-day trial subscription (complimentary)
-	 * {{site.data.keyword.Bluemix_notm}} Dedicated environments (included)
-	 * {{site.data.keyword.Bluemix_notm}} Local environments (included)
-	 * Pay As You Go with the Support add-on
-	 * Subscription with the Support add-on
-
-	Log in to the IBM Client Success Portal with your IBM ID and password and click **Open a support ticket**.
-
-When opening a support ticket, ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities.
+  * Initial 30-day trial subscription (complimentary)
+  * {{site.data.keyword.Bluemix_notm}} Dedicated environments (included)
+  * {{site.data.keyword.Bluemix_notm}} Local environments (included)
+  * Pay As You Go with the Support add-on
+  * Subscription with the Support add-on
 
 
+When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities.
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #contacting-bluemix-support-dedicated}
 
-If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
+<!-- Michelle links to this anchor  -->
 
+If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
 
 <ul>
 <li>Contact support by opening a new ticket using the
 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a> form. You can use an email address or your IBM ID for this form. Select the **Dedicated** option for the {{site.data.keyword.Bluemix_notm}} region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 12 midnight UTC.</p>
 </li>
-<li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, you can open a support ticket by using one of the following methods:
-<ul>
-<li>Click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" />, then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
-<li>Go to the
-<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>, and enter your IBM ID and password. Your IBM ID serves as your service credentials. Click **Open a support ticket** on the menu. Ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled.</li>
-</ul>
-</li>
+<li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBM ID, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p>
-</li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p></li>
 </ul>
+
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Local
 {: #contacting-bluemix-support-local}
+
+<!-- Michelle links to this anchor  -->
 
 If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provided by the IBM {{site.data.keyword.Bluemix_notm}} support team. However, because you might not have an IBM ID, you have a few different options for getting support.
 
@@ -176,17 +168,11 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a> form. You can use an email address or your IBM ID for this form.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 12 midnight UTC.</p>
 </li>
-<li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, you can open a support ticket by using one of the following methods:
-<ul>
-<li>Click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" />, then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
-<li>Go to the
-<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>, and enter your IBM ID and password. Your IBM ID serves as your service credentials. Click **Open a support ticket** on the menu. Ensure that you indicate an appropriate severity for your ticket, because the severity determines how your ticket is handled.</li>
-</ul>
-</li>
+<li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
 <li>If you don't have an IBM ID, you can contact someone in your organization who does have one, or work with your IBM representative.
-<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p>
-</li>
+<p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Local environment.</p></li>
 </ul>
+
 
 ### Support ticket severity
 
