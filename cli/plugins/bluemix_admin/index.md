@@ -21,14 +21,14 @@ After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
 plug-in.
 
-Complete the following steps to add the repository and install the plug-in:
+**Note**: If you have previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then re-install to get the latest updates.
 
-<!-- Update URL below to use console and not opsconsole when new CLI is available in customer envs -->
+Complete the following steps to add the repository and install the plug-in:
 
 <ol>
 <li>To add the {{site.data.keyword.Bluemix_notm}} admin plug-in repository, run the following command:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://opsconsole.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
