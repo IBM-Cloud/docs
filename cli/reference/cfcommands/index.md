@@ -3,9 +3,9 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# cf commands for managing applications
+# Cloud Foundry (cf) commands
 
-*Last updated: 10 November 2015*
+*Last updated: 29 January 2016*
 
 You can use Cloud Foundry (cf) commands to manage your apps.
 {:shortdesc}

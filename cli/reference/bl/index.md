@@ -1,6 +1,11 @@
-# bl commands
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
 
-*Last updated:* 13 November 2015
+# {{site.data.keyword.Bluemix_notm}} Live Sync (bl) commands
+
+*Last updated: 29 January 2016*
 
 If you are building a Node.js application, you can use Bluemix™ Live Sync to quickly update the application instance running on Bluemix and develop as you would on the desktop without redeploying. When you make a change, you can see that change in your running Bluemix application immediately. The Bluemix Live Sync command line interface is called *bl*.
 

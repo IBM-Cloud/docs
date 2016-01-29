@@ -1,11 +1,11 @@
 {:shortdesc: .shortdesc}
 
-# bx commands for interacting with {{site.data.keyword.Bluemix_notm}}
+# {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated:* 5 January 2016
+*Last updated: 29 January 2016*
 
-The {{site.data.keyword.Bluemix}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} CLI commands, which are called bx commands, are wrappers of existing cf commands, and others are unique for {{site.data.keyword.Bluemix_notm}}. The information that follows lists all commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples.
+The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} CLI commands, which are called bx commands, are wrappers of existing cf commands, and others are unique for {{site.data.keyword.Bluemix_notm}}. The information that follows lists all commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
  
 **Note:** *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
