@@ -993,6 +993,8 @@ command line window.
 
 After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
+
+**Note**: If you have previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then re-install to get the latest updates.
 plug-in.
 
 Complete the following steps to add the repository and install the plug-in:
