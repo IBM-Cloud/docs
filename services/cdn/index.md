@@ -1,13 +1,13 @@
-# Getting started with IBM Content Delivery Network (BETA)
+# Getting started with {{site.data.keyword.cdn_full}} (CDN) (BETA)
 
-Content Delivery Networks (CDNs) use content caching servers to reduce content load time. CDN enhances user experience and lowers bandwidth usage.
+Content Delivery Networks (CDNs) use content caching servers local to consumers to reduce content load time. CDN enhances user experience and lowers bandwidth usage as well as processing on the content providing servers.
 
-You can use the IBM&reg; CDN service with your Bluemix&reg; application or virtual machine (VM) applications. The service supports only HTTP applications. HTTPS applications are not supported. 
+You can use the IBM&reg; CDN service with your Bluemix&reg; application or virtual machine (VM) applications. The service supports only applications that use HTTP protocol. Applications that use HTTPS protocol are not supported at the moment. 
 
-The IBM CDN service is available at IBM Bluemix > Catalog > Services > Network > CDN.
+The IBM CDN service is available at IBM Bluemix > Catalog > Services > Network > IBM CDN.
 
 **Note:**  
-> Before you begin with configuring the IBM CDN service, you must have an application hosted in Bluemix. If you need to create a Bluemix application, see: IBM Bluemix > Dashboard > CREATE APP.  
+> Before you begin with configuring the {{site.data.keyword.cdn_short}} service for a Bluemix application, you must have an application already deployed. If you need to create a Bluemix application, see: IBM Bluemix > Dashboard > CREATE APP.  
 
 > You must add a custom domain name for your Bluemix application. For steps to add a custom domain name, see: [To add a custom domain name](index.html#customdomain)  
 
@@ -16,8 +16,6 @@ The IBM CDN service is available at IBM Bluemix > Catalog > Services > Network >
 >```
 >dig www.myapp.com
 >```
-
->You must change the Bluemix domain name to the externally visible domain name. For example: change myapp.mybluemix.net to www.myapp.com.  
 
 ### To add a custom domain name: 
 {: #customdomain}
@@ -43,7 +41,7 @@ You will now see the custom domain name along with your application route.
 
 ### To create an IBM CDN service instance:
 1. Open IBM Bluemix > Catalog > Services > Network. You will see the available network services.
-2. Select **CDN**. You will see the CDN service description, available plans, and pricing details. 
+2. Select **IBM CDN**. You will see the CDN service description, available plans, and pricing details. 
 3. Select a suitable plan. 
 4. Select options in the **Add Service** section:
 	* **Space:**
@@ -72,9 +70,9 @@ You will now see the custom domain name along with your application route.
 6. Replace the CNAME target for your domain in your DNS provider record with the CNAME displayed.  
 ![](images/cname.png)
 
-	**Important:** If you do not update the CNAME target in your DNS provider record, your application will not be accessible. The IBM CDN service will continue to report an error until the CNAME target is updated.
+	**Important:** If you do not update the CNAME target in your DNS provider record, your application will not be accessible through the externally visible URL. The IBM CDN service will continue to report an error until the CNAME target is updated.
 
-	**Note:** Keep a record of the original CNAME target. You will need it if you stop the IBM CDN service.
+	**Note:** Keep a record of the original CNAME target. If you stop the IBM CDN service, you will need to modify the CNAME to the previous state where it was pointing to the Bluemix route of your application.
 
 Requests to your domain will now be routed by using the IBM CDN infrastructure.
 
@@ -95,7 +93,7 @@ Select IBM Bluemix > Dashboard > Services > Service instance tile > **Operations
 
 The purge cache configuration option is displayed only after you configure domains. See [To add IBM CDN service to an application](index.html#add_cdn) for steps to configure a domain.
 
-Use the purge cache option to remove all or selected objects from the CDN cache. You will need to use this option every time you push a new Bluemix application or change content of an existing application. You can purge your CDN cache in two ways:
+Use the purge cache option to remove all or selected objects from the CDN cache. You will need to use this option every time you push a new version of your Bluemix application or change content of an existing application. You can purge your CDN cache in two ways:
 
 * Purge all cached web objects in the domain: Select the domain from the **Domain** drop-down, select the **Purge entire cache** check-box, and select **PURGE**.  
 
@@ -111,7 +109,7 @@ Use the purge cache option to remove all or selected objects from the CDN cache.
 Select IBM Bluemix > Dashboard > Services > Service instance tile > **Advanced** tab to view the TTL configuration option.  
 ![](images/tab_adv.png)  
 
-Use the TTL option to configure a time limit of content expiry. On expiry, the cache will fetch the object from the application server.  
+Use the TTL option to configure a time limit of content expiry. On expiry, the cache will be populated again on the next request to serve the object from the application server.  
 
 The default TTL value is 3600 seconds. To change the TTL value, select **Edit** in the **Cache TTL Defaults** section, enter the required TTL value (in seconds), and select **SAVE**. 
 
