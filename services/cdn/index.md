@@ -1,13 +1,13 @@
-# Getting started with {{site.data.keyword.cdn_full}} (CDN) (BETA)
+# Getting started with {{site.data.keyword.cdn_short}} (BETA)
 
 Content Delivery Networks (CDNs) use content caching servers local to consumers to reduce content load time. CDN enhances user experience and lowers bandwidth usage as well as processing on the content providing servers.
 
-You can use the IBM&reg; CDN service with your Bluemix&reg; application or virtual machine (VM) applications. The service supports only applications that use HTTP protocol. Applications that use HTTPS protocol are not supported at the moment. 
+You can use the {{site.data.keyword.cdn_full}} (CDN) service with your Bluemix&reg; application or virtual machine (VM) applications. The service supports only applications that use HTTP protocol. Applications that use HTTPS protocol are not supported at the moment. 
 
 The IBM CDN service is available at IBM Bluemix > Catalog > Services > Network > IBM CDN.
 
 **Note:**  
-> Before you begin with configuring the {{site.data.keyword.cdn_short}} service for a Bluemix application, you must have an application already deployed. If you need to create a Bluemix application, see: IBM Bluemix > Dashboard > CREATE APP.  
+> Before you begin with configuring the IBM CDN service for a Bluemix application, you must have an application already deployed. If you need to create a Bluemix application, see: IBM Bluemix > Dashboard > CREATE APP.  
 
 > You must add a custom domain name for your Bluemix application. For steps to add a custom domain name, see: [To add a custom domain name](index.html#customdomain)  
 
