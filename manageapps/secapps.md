@@ -68,7 +68,7 @@ To properly serve the SSL certificate, you must use the following IP addresses t
 
 * US-SOUTH: 75.126.81.68
 * EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 The IP addresses that you use for dedicated environments are different. Contact your IBM representative to get the IP address for a dedicated environment.
 
