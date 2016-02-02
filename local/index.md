@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 29 January 2016*
+*Last updated: 2 February 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -221,12 +221,15 @@ The final stage of completion represents the end of the relationship between you
 |Shut down Relay | Terminate the Relay connection. | IBM |
 |Recycle infrastructure | Recycle your infrastructure according to company guidelines. | Customer |
 
-##{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
+## {{site.data.keyword.Bluemix_notm}} Local infrastructure requirements
 {: #localinfra}
 
-For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and the infrastructure for hosting the local instance. IBM sets the following requirements for setting up {{site.data.keyword.Bluemix_notm}} Local.
-###Hardware
+For {{site.data.keyword.Bluemix_notm}} Local, you own the physical security and the infrastructure for hosting the local instance. IBM sets the following minimum requirements for setting up {{site.data.keyword.Bluemix_notm}} Local.
+
+### Hardware
+
 While there are requirements for the type and size of available hardware, you can choose any combination to meet the set resource total requirements.
+
 <dl>
 <dt>**VMware ESXi hardware**</dt>
 <dd>
@@ -258,10 +261,14 @@ Recommended requirements include a customer accessible port group with seven cus
 </ul>
 <p>**Note**: IBM can detect if the network connection is lost. In the event that network connection is lost, IBM contacts you and works with your network specialist to resolve the issue.</p>
 </dd>
+<dt>**Network uplinks**</dt>
+<dd>Use two or more interfaces that range from 1 to 10 Gbps, depending on the intended workload for the system.</dd>
 </dl>
 
-###vCenter server configuration
+### vCenter server configuration
+
 Review the following version, datacenter, resource pool, and datastore requirements.
+
 <dl>
 <dt>**Supported VMware versions**</dt>
 <dd>vCenter and ESXi 5.1 and 5.5</dd>
@@ -280,30 +287,46 @@ vSphere Enterprise plus, if you plan to use distributed virtual switches</dd>
 <dd>Requires 7.5 TB for the initial deployment of {{site.data.keyword.Bluemix_notm}}.<br />
 <br />
 **Note**: When you use more than one datastore, ensure that each one begins with the same prefix. Examples of multiple datastore names with the same prefix are `bluemix_datastore_01` and `bluemix_datastore_02`.</dd>
+<dt>**Network**</dt>
+<dd>You must have one customer accessible network with outbound internet capability. The VLAN hosts the private subnet where the Bluemix Local components run. All traffic is routed from the private subnet to the customer subnet. A customer subnet IP is used for all access to Bluemix Local. Then, you can define a second private VLAN between only the ESXis being used for Bluemix Local. This VLAN is shown as a port group in VMware. Bluemix Local uses it for the private subnet, which is more secure and can help avoid routing issues.
+<p>If you are using vSphere distributed switches (vDS), create a folder to hold the vDS, and place the vDS inside the folder.</p>
 </dl>
 
-###Network Bandwidth
-Recommended throughput is 5 Mbps up and 5 Mbps down, and you can expect a monthly data usage of 10 GB. IBM establishes agreed upon windows when large bundles of data are delivered, which can be as large as 3 GB.
-###VMware permissions
+### Network Bandwidth for Relay
+
+Recommended throughput is 5 Mbps up and 5 Mbps down, and you can expect a monthly data usage of 10 GB. IBM establishes agreed upon windows when large bundles of data are delivered, which can be as large as 4 GB.
+
+### VMware permissions
+
 Set the following roles and permissions. Propagation is set for each permission. If the permission is propagated, the permission gets passed down through the object hierarchy. However, permissions for a child object always override permissions that are propagated from a parent object.
+
 <dl>
-<dt>**v Center Server**</dt>
+<dt>**vCenter Server**</dt>
 <dd>Set the role as read-only and not propagated.<br />
 <br />
 **Note**: This role is needed to retrieve task status for specific disk operations.</dd>
 <dt>**Datacenter**</dt>
-<dd>Create the role "{{site.data.keyword.Bluemix_notm}}" and grant permissions for **Datastore** including **Low level file operations** and **Update virtual machine files**.<br />
-<br />
+<dd>Create the role "{{site.data.keyword.Bluemix_notm}}" and grant the following permissions:
+<ul>
+<li>For **Datastore**, set **Low level file operations** and **Update virtual machine files**.</li>
+<li>For **vApp**, set **Import**.</li>
+<li>For **dvPort** group, set **Modify**. This is for vDS use only.</li>
+</ul>
 **Note**: This role is needed to support file posts to the datastores.</dd>
 <dt>**Cluster**</dt>
 <dd>Set the role as administrator and propagated.</dd>
 <dt>**Datastores**</dt>
 <dd>Set the role administrator and propagated for each {{site.data.keyword.Bluemix_notm}} datastore.</dd>
 <dt>**Network**</dt>
-<dd>Set public and private port groups with the administrator role, not propagated.</dd>
+<dd><ul>
+<li>For vSwitch, set public and private port groups with the administrator role, not propagated.</li>
+<li>For vDS parent folder, set as read-only and propagated.</li>
+<li>For vDS, set public and private port groups with the administrator role, not propogated.</li>
+</ul>
+</dd>
 </dl>
 
-###Droplet Execution Agent (DEA) pool
+### Increasing the Droplet Execution Agent (DEA) pool
 Each DEA is configured with:
 - 16 - 32 GB of RAM
 - 2x - 4x vCPU
@@ -311,7 +334,7 @@ Each DEA is configured with:
 
 For example, if the ESXi host size is 256 GB of memory with 16x cores, then eight DEAs are added. If the ESXi host size is 64 GB of memory with 8x cores, then two ESXis and four DEAs are required to be added. An additional 1.5 TB of storage is required for every four DEAs. This example is based on a DEA configured with 32 GB of RAM, 4x vCPU, and 300 GB of storage.
 
-##Maintaining your local instance
+## Maintaining your local instance
 {: #maintainlocal}
 
 IBM maintains and installs updates and fixes as IBM deems appropriate to the Bluemix Local platform, runtimes, and services. Services might not be available during maintenance windows.
@@ -399,7 +422,7 @@ These technologies include the following:
 <dd>Metadata is backed up to a secondary location, typically an on-premises virtual machine. If possible, you should replicate the backup to your own environment at least 200 km away.</dd>
 </dl>
 
-##Restoring your local instance
+## Restoring your local instance
 {: #restorelocal}
 
 {{site.data.keyword.Bluemix_notm}} Local settings, metadata, and configurations are backed up regularly to prepare for any unplanned outages in the environment. Your data that you are responsible for backing up includes application data, cloud database services data, and object stores.
