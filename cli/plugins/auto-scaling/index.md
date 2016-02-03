@@ -37,7 +37,7 @@ You can attach an auto-scaling policy to a specific app. Run the following comma
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app to which you want to attach an auto-scaling policy.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the [auto-scaling RESTful API doc](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html) for more details.</dd>
+<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the <a href="https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html" target="_blank">{{site.data.keyword.autoscaling}} RESTful API doc</a> for more details.</dd>
 </dl>
 
 
