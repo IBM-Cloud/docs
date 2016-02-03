@@ -228,7 +228,7 @@ For more information, go to [IBM Application Security Testing for Bluemix](https
 
 The SQL Database service adds a fully provisioned relational database to your app. This service uses IBM Directory Server LDAP for authentication and IBM InfoSphere® Guardium® Data Activity Monitor to protect the database that is accessed by applications. The connection between applications and the database is protected by the SSL certificate that DigiCert signs.
 
-In certain plans with this service, you can use the SQL database console in {{site.data.keyword.Bluemix_notm}}x to get reports that contain the following information:
+In certain plans with this service, you can use the SQL database console in {{site.data.keyword.Bluemix_notm}} to get reports that contain the following information:
 
  * Sensitive data that might exist in the database that is accessed by applications.
  * The application users who accessed the database within a specified period.
