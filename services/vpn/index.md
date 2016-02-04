@@ -1,12 +1,12 @@
-{:new_window: target="_blank"} 
+{: new_window: target="_blank"} 
 
 # Getting started with IBM VPN (BETA)
 
-IBM® Virtual Private Network (VPN) provides a secure communication channel between your corporate data center and your resources inside IBM cloud. The connection is established over the Internet. You can use IBM cloud as an extension of your corporate data center. 
+{{site.data.keyword.vpn_full}} (VPN) provides a secure communication channel between your corporate data center and your resources inside IBM cloud. The connection is established over the Internet. You can use IBM cloud as an extension of your corporate data center. 
 
-IBM VPN service is available to securely access IBM containers (Docker containers)inside IBM cloud.  
+IBM VPN service is available to securely access IBM containers (Docker containers) inside IBM cloud. The IBM VPN service offering is available at: IBM Bluemix® > Catalog > Services > Network. 
 
-The IBM VPN service offering is available at: IBM Bluemix® > Catalog > Services > Network. 
+Before you begin, ensure that you have an IBM Docker container ready to use. See [IBM Containers for Bluemix](https://www.ng.bluemix.net/docs/containers/container_index.html) for details on how to create and manage IBM containers.  
 
 ### To use IBM VPN service:
 {: #ibm-vpn}
@@ -31,6 +31,8 @@ Configure the gateway as follows:
 2. Select the containers or groups with which you want to use the VPN service.  
 3. Select **SAVE**. 
 
+**Note:** The IBM VPN gateway IP address is displayed after you complete the site connection configuration and when the connection is established.
+
 #### VPN Site Connection Configuration
 {: #site}
 ![Site Connection](images/siteconn.png)
@@ -50,6 +52,10 @@ Configure the gateway as follows:
 	* **IPSec Policy**: Name of the IPSec policy
 	* **Keep Alive Timeout**: Timeout value in seconds after which the session is terminated. Default value: 120. Range: 6-86400
 4. Select **SAVE**.
+
+**Note:** You will see a ***pending create*** message when the connection is being established. When you see this message, refresh the screen a few times to see the connection active message.
+
+**Important:** If you are using a web application, you must bind the web application to the Docker container you are using. This binding is required for the traffic to pass through the IPSec VPN tunnel.
 
 #### IKE and IPSec Policy Configuration
 
