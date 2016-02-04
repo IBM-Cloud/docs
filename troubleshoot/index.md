@@ -469,7 +469,7 @@ Delete any services instances that are not needed, or remove the limit on the nu
 	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
 	  2. Delete the service instance by typing `cf delete-service <service_instance_name>`.
 	  3. After you delete the service instance, you might want to restage your application that the service instance was bound to by typing `cf restage <appname>`.
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](../pricing/index.html#changing){: new_window}.
 
   
   
