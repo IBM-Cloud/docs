@@ -5,12 +5,11 @@
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2015년 12월 7일*
+*마지막 업데이트 날짜: 2015년 1월 20일*
 
 {{site.data.keyword.Bluemix}} 사용자 인터페이스의
 **서비스** 아래에 있는 **카탈로그**에서 사용 가능한 서비스를
-확인할 수 있습니다. 
-{:shortdesc}
+확인할 수 있습니다. {:shortdesc}
 
 
 사전 정의된 서비스는 모바일 애플리케이션용
@@ -90,8 +89,10 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 
 |서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|예		|예		|아니오|
 |{{site.data.keyword.alchemyapishort}} 		|예	   	|예  		|예|
 |{{site.data.keyword.appsecshort}}		|예		|아니오		|아니오|
+|{{site.data.keyword.alertnotificationshort}}|예		|아니오			|아니오		|
 |{{site.data.keyword.APS_DA}}			|예		|아니오		|아니오|
 |{{site.data.keyword.APS_MA}}			|예		|아니오		|아니오|
 |{{site.data.keyword.amashort}}			|예		|예		|예|
@@ -114,13 +115,15 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 |{{site.data.keyword.geospatialshort_Geospatial}}	|예	|예		|아니오|
 |{{site.data.keyword.globalizationshort}}	|예		|아니오		|아니오|
 |{{site.data.keyword.dataworks_short}}		|예		|예		|아니오|
-|{{site.data.keyword.twittershort}}		|예		|예		|아니오|
+|{{site.data.keyword.twittershort}}		|예		|예		|예|
+|{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
 |{{site.data.keyword.iot_short}}		|예		|아니오		|아니오|
 |{{site.data.keyword.languagetranslationshort}}	|예		|예		|아니오|
 |{{site.data.keyword.messagehub}}		|예		|예		|아니오|
 |{{site.data.keyword.messageresonanceshort}}	|예		|예		|아니오|
 |{{site.data.keyword.APS_MAiOS}} 		|예		|아니오		|아니오|
+|{{site.data.keyword.macm_short}}		|예		|예		|예|
 |{{site.data.keyword.mobilemam}}		|예		|예		|아니오|
 |{{site.data.keyword.mobiledata}}		|예		|예		|아니오|
 |{{site.data.keyword.manda}}			|예		|예		|아니오|

@@ -11,8 +11,7 @@ Si no encuentra ningún iniciador en el Catálogo de {{site.data.keyword.Bluemix
 el tiempo de ejecución que desea, puede incorporar un paquete de compilación externo
 a {{site.data.keyword.Bluemix_notm}}.
 Puede especificar un paquete de compilación personalizado compatible con Cloud Foundry cuando
-despliegue la app mediante el mandato cf push. 
-{:shortdesc}
+despliegue la app mediante el mandato cf push. {:shortdesc}
 
 La comunidad de Cloud Foundry proporciona paquetes de compilación externos que puede utilizar como paquetes de compilación propios. Antes de desplegar la
 app en {{site.data.keyword.Bluemix_notm}},

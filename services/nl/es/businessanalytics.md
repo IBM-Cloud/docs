@@ -4,7 +4,7 @@
 # Herramientas de análisis empresarial
 {: #businessanalytics}
 
-*Última actualización: 19 de noviembre de 2015*
+*Última actualización: 9 de diciembre de 2015*
 
 Con estos servicios, puede incorporar en las apps inteligencia empresarial para descubrir de forma rápida y sencilla información detallada procedente de todos los tipos de datos.
 {:shortdesc}

@@ -43,7 +43,7 @@ Cuando despliegue sus apps en {{site.data.keyword.Bluemix_notm}} desde la interf
 
 Si utiliza un paquete de compilación externo, debe especificar el URL del paquete de compilación mediante la opción **-b** cuando despliegue la app en {{site.data.keyword.Bluemix_notm}} desde el indicador de mandatos.
 
-  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}},  utilice el mandato siguiente:
+  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
   ```
   cf push
@@ -69,7 +69,7 @@ utilice el mandato siguiente:
   cf push nombre_app -p "./app"
   ```
   
-  * Para desplegar apps Node.js en {{site.data.keyword.Bluemix_notm}},  utilice el mandato siguiente:
+  * Para desplegar apps Node.js en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
   ```
   cf push nombre_app
@@ -146,19 +146,19 @@ cf push -f appManifest.yml
 |Opciones	|Descripción	|Uso o ejemplo|
 |:----------|:--------------|:---------------|
 |**buildpack**	|El URL o el nombre del paquete de compilación.	|`buildpack: ` *URL_paquete_compilación*|
-|**disk_quota**	|La cuota de disco que se debe asignar a la app. El valor predeterminado es 1 G. 	|`disk_quota: 500M`|
+|**disk_quota**	|La cuota de disco que se debe asignar a la app. El valor predeterminado es 1 G.	|`disk_quota: 500M`|
 |**domain**	|El nombre de dominio de la app en {{site.data.keyword.Bluemix_notm}}.	|`dominio:` ng.bluemix.net|
 |**host**	|El nombre de host de la app en {{site.data.keyword.Bluemix_notm}}. Este valor debe ser exclusivo en el entorno de {{site.data.keyword.Bluemix_notm}}.	|`host: ` *nombre_host*|
 |**nombre**	|El nombre de la app en {{site.data.keyword.Bluemix_notm}}. Este valor debe ser exclusivo en el entorno de {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nombre_app*|
-|**path**	|La ubicación de la app. Este valor puede ser una vía de acceso relativa o absoluta. 	|`path: ` *vía_acceso_a_app*|
+|**path**	|La ubicación de la app. Este valor puede ser una vía de acceso relativa o absoluta.	|`path: ` *vía_acceso_a_app*|
 |**command**	|El mandato de inicio personalizado para la app o el mandato para ejecutar archivos script..	|`command:` *mandato_personalizado* `command:` *bash ./run.sh*|
 |**memory**	|La cantidad de memoria que se debe asignar a la app. El valor predeterminado es 1 G.	|`memory: 512M`|
 |**instances**	|El número de instancias que van a crear para la app.	|`instances: 2`|
 |**timeout**	|El intervalo máximo de tiempo, en segundos, que se utiliza para iniciar la app. El valor predeterminado es de 60 segundos.	|`timeout: 80`|
 |**no-route**	|Un valor booleano para impedir que se asigne una ruta a la app si la app sólo se está ejecutando como programa de fondo. El valor predeterminado es **false**.	|`no-route: true`|
 |**random-route**	|Un valor booleano para asignar una ruta aleatoria a la app. El valor predeterminado es **false**.	|`random-route: true`|
-|**services**	|Los servicios que se van a enlazar a la app. 	|`services:   - mysql_maptest`|
-|**env**	|Las variables de entorno personalizadas de la app. |`env: DEV_ENV: production`|
+|**services**	|Los servicios que se van a enlazar a la app.	|`services:   - mysql_maptest`|
+|**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
 *Tabla 1. Opciones admitidas en el archivo manifest.yml*
 
 ###Un ejemplo de archivo `manifest.yml`
@@ -191,14 +191,8 @@ Las variables de entorno contienen información sobre el entorno de una app desp
 Puede ver las siguientes variables de entorno de una app {{site.data.keyword.Bluemix_notm}} en ejecución
 mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keyword.Bluemix_notm}}:
 
-  * Variables definidas por el usuario específicas para una app. Puede definir variables específicas para una app mediante el mandato **cf set-env** o configurando los pares de valores del archivo [`manifest.yml`](#appmanifest) de la manera siguiente:
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * Variables definidas por el usuario específicas para una app. Para obtener información sobre cómo añadir una variable definida por el usuario a una app, consulte [Cómo añadir variables de entorno definidas por el usuario](#ud_env){:new_window}.
+	  
   * La variable VCAP_SERVICES, que contiene la información de conexión para acceder a una instancia de servidor. Si su app está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio. Por ejemplo:
   
   ```
@@ -375,9 +369,8 @@ Para especificar mandatos de inicio para la app, puede utilizar uno de los sigui
 
 **Nota:** Si desea que prevalezcan los mandatos de inicio del paquete de compilación, especifique **null** como mandato de inicio.
 
-  * Utilice el mandato **cf push** y especifique el parámetro -c.Por ejemplo, cuando despliegue una
+  * Utilice el mandato **cf push** y especifique el parámetro -c. Por ejemplo, cuando despliegue una
 app Node.js, puede especificar el mandato de inicio **node app.js** en el parámetro -c:
-
   
   ```
   cf push appname -c "node app.js"
@@ -388,6 +381,33 @@ app Node.js, puede especificar el mandato de inicio **node app.js** en el parám
   ```
   command: node app.js
   ```
+  
+  
+  
+### Cómo añadir variables de entorno definidas por el usuario
+{: #ud_env}
+
+Las variables de entorno definidas por el usuario son específicas para una aplicación. Tiene las siguientes opciones para añadir una variable de entorno definida por el usuario a una app en ejecución:
+
+  * Utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Siga estos pasos:
+    1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de la app. Se mostrará la página de detalles de la App.
+	2. En el panel de navegación izquierdo, pulse **Variables de entorno**.
+	3. Pulse **USER-DEFINED** y, a continuación, pulse **ADD**.
+	4. Rellene los campos obligatorios y, a continuación, pulse **SAVE**.
+  * Utilice la interfaz de línea de mandatos cf. Añada una variable definida por el usuario utilizando el mandato `cf set-env`. Por ejemplo: 
+    ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * Utilice el archivo `manifest.yml`. Añada los pares de valores en el archivo. Por ejemplo: 
+    ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### Configuración del entorno de arranque
 

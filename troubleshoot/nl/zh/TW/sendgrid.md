@@ -7,7 +7,7 @@
 # SendGrid 疑難排解
 {: #ts_sendgrid}
 
-*前次更新：2015 年 11 月 19 日*
+*前次更新：2015 年 12 月 9 日*
 
 以下是在 {{site.data.keyword.Bluemix}} 中使用 SendGrid 的相關問題的解答。
 {:shortdesc}

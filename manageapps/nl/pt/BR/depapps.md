@@ -262,14 +262,8 @@ ambiente específicas do aplicativo para aplicativos no {{site.data.keyword.Blue
 utilizando o comando **cf env** ou a partir da interface com o usuário do
 {{site.data.keyword.Bluemix_notm}}:
 
-  * Variáveis definidas pelo usuário que são específicas de um aplicativo. É possível configurar variáveis específicas do aplicativo usando o comando **cf set-env** ou configurando pares de valores no [arquivo `manifest.yml`](#appmanifest), conforme a seguir:
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * Variáveis definidas pelo usuário que são específicas de um aplicativo. Para obter informações sobre como incluir uma variável definida pelo usuário em um app, veja [Incluindo variáveis de ambiente definidas pelo usuário](#ud_env){:new_window}.
+	  
   * A variável VCAP_SERVICES, que contém informações de conexão para acessar uma instância de serviço. Se o aplicativo estiver ligado a vários serviços, a variável VCAP_SERVICES incluirá as informações de conexão de cada instância de serviço. Por
 exemplo:
   
@@ -475,6 +469,34 @@ comando inicial **node app.js** no arquivo manifest:
   ```
   command: node app.js
   ```
+  
+  
+  
+### Incluindo variáveis de ambiente definidas pelo usuário
+{: #ud_env}
+
+As variáveis de ambiente definidas pelo usuário são específicas de um aplicativo. Você tem as opções a seguir para incluir uma variável de ambiente definida pelo usuário em um app em execução: 
+
+  * Use a interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Conclua
+as etapas a seguir:
+    1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no ladrilho do app. A página de detalhes do app é exibida.
+	2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**.
+	3. Clique em **DEFINIDA PELO USUÁRIO** e, em seguida, clique em **INCLUIR**.
+	4. Preencha os campos necessários e, em seguida, clique em **SALVAR**.
+  * Use a interface de linha de comandos cf. Inclua uma variável definida pelo usuário usando o comando `cf set-env`. Por exemplo: 
+    ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * Use o arquivo `manifest.yml`. Inclua pares de valores no arquivo. Por exemplo: 
+    ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### Configurando o ambiente de inicialização
 

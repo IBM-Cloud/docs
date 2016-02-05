@@ -4,10 +4,9 @@
 # Analyse métier
 {: #businessanalytics}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
-Ces services
-permettent d'imbriquer des informations décisionnelles dans vos applications afin de dégager des perspectives plus rapidement et plus facilement quel que
+Ces services permettent d'imbriquer des informations décisionnelles dans vos applications afin de dégager des perspectives plus rapidement et plus facilement quel que
 soit le type de données.
 {:shortdesc}
 

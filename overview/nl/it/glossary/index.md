@@ -32,9 +32,9 @@ Per altri termini e definizioni, consulta il [sito web IBM Terminology](http://w
 <dt class="dt dlterm"><a name="gloss_A__x2897512"><!-- --></a>AES</dt>
 <dd class="dd">Vedi <a class="xref" href="#gloss_A__x2897510">Advanced Encryption Standard</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2907651"><!-- --></a>sviluppo software snello</dt>
-<dd class="dd">Una metodologia di sviluppo software che si concentra sulla collaborazione e sulla qualità per produrre degli incrementi di prodotto completi a intervalli regolari, denominati interazioni o sprint.</dd>
+<dd class="dd">Una metodologia di sviluppo software che si concentra sulla collaborazione e sulla qualità per produrre degli incrementi di prodotto completi a intervalli regolari, denominati iterazioni o sprint.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2000123"><!-- --></a>alias</dt>
-<dd class="dd">Un nome breve univoco e visibile pubblicamente che viene utilizzato in client desktop e di riga comandi, percorsi di deposito Git e nelle funzioni di traccia e pianificazione. Per gli utenti che dispongono di un ID Jazz, tale ID è il loro alias.</dd>
+<dd class="dd">Un nome breve univoco e visibile pubblicamente che viene utilizzato in client desktop e di riga comandi, percorsi di repository Git e nelle funzioni di traccia e pianificazione. Per gli utenti che dispongono di un ID Jazz, tale ID è il loro alias.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2008805"><!-- -->API </a></dt>
 <dd class="dd">Vedi <a class="xref" href="#gloss_A__x2000186">application programming interface</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x4281528"><!-- --></a>applicazione</dt>
@@ -42,7 +42,7 @@ Per altri termini e definizioni, consulta il [sito web IBM Terminology](http://w
 <dt class="dt dlterm"><a name="gloss_A__x7909906"><!-- --></a>ID applicazione</dt>
 <dd class="dd">Un GUID assegnato a un'applicazione mobile Bluemix. Vedi anche <a class="xref" href="#gloss_G__x2390455">globally unique identifier</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7290111"><!-- --></a>chiave di applicazione</dt>
-<dd class="dd">L'identificativo univoco che l'applicazione utilizza quando notifica i dati a IBM Mobile Quality Assurance. La chiave può essere
+<dd class="dd">L'identificativo univoco che la tua applicazione utilizza quando notifica i dati a IBM Mobile Quality Assurance. La chiave può essere
 rigenerata in qualsiasi momento. Tuttavia, le build meno recenti che
 utilizzano una chiave applicazione meno recente non possono più
 inviare notifiche alle sessioni di IBM Mobile Quality Assurance.</dd>
@@ -145,13 +145,13 @@ connessi. Un'interfaccia utente semplificata o una API (Application Programming 
 <dt class="dt dlterm"><a name="gloss_C__x2051424"><!-- --></a>interfaccia riga di comando (CLI)</dt>
 <dd class="dd">Una interfaccia computer in cui l'input e l'output sono basati su testo.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2000758"><!-- --></a>commit</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Un'istantanea dello stato corrente di un progetto in un deposito. La cronologia di un progetto è definita da una serie di commit.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Un'istantanea dello stato corrente di un progetto in un repository. La cronologia di un progetto è definita da una serie di commit.</li>
 <li class="li">Memorizzare un'istantanea dello stato corrente di un progetto.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>componente</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">Nella gestione controllo origine, un raggruppamento di risorse utente correlate in un flusso o
-                  uno spazio di lavoro di deposito. Un componente può contenere qualsiasi numero di cartelle e file.</li>
+                  uno spazio di lavoro repository. Un componente può contenere qualsiasi numero di cartelle e file.</li>
 <li class="li">Nella gestione configurazione, un'unità di organizzazione per un insieme riutilizzabile di risorse
                   utente di engineering. I componenti spesso corrispondono alle aree del progetto. All'interno di un componente
                   esistono delle configurazioni globali. Vedi anche <a class="xref" href="#gloss_A__x2262995">risorsa utente</a>.</li>
@@ -162,8 +162,8 @@ connessi. Un'interfaccia utente semplificata o una API (Application Programming 
 <dt class="dt dlterm"><a name="gloss_C__x7233913"><!-- --></a>fornitura continua (CD)</dt>
 <dd class="dd">Una pratica di sviluppo software che utilizza tecniche quali la verifica continua, l'integrazione continua, e la distribuzione continua in modo che le nuove funzioni e correzioni vengano impacchettate e distribuite rapidamente e a basso rischio per gli ambienti di test e quindi ai clienti.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>credenziale</dt>
-<dd class="dd">Informazione acquisita durante l'autenticazione che descrive un utente, associazioni di gruppi o altri
-attributi di identità correlati alla sicurezza, e che viene utilizzata per eseguire servizi quali
+<dd class="dd">Informazioni acquisite durante l'autenticazione che descrivono un utente, associazioni di gruppi o altri
+attributi di identità correlati alla sicurezza, e che vengono utilizzate per eseguire servizi quali
 l'autorizzazione, la verifica o la delega. Ad esempio, un ID utente ed una password sono credenziali che consentono
 l'accesso alle risorse di rete e di sistema.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
@@ -238,8 +238,8 @@ beta</a>.</dd>
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_F__x2023301"><!-- --></a>fork</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">In Git, una copia divergente di un repository che può essere modificata senza influenzare l'originale o senza doverlo sincronizzare con esso.</li>
-<li class="li">Per creare un deposito di progetti e Git che includa tutti i contenuti di deposito
-                  e la cronologia di un altro progetto..</li>
+<li class="li">Per creare un repository di progetti e Git che includa tutti i contenuti di repository
+                  e la cronologia di un altro progetto.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_F__x2023472"><!-- --></a>framework</dt>
@@ -355,7 +355,7 @@ directory Internet o intranet.</dd>
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_M__x2858069"><!-- --></a>file manifest</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">Un file che contiene informazioni, come ad esempio le impostazioni, le istruzioni o i metadati, sugli altri file o sulle altre risorse utente.</li>
-<li class="li">Con le app Android, il file manifest specifica le autorizzazioni e i parametri di raccolta dati per consentire ai dispositivi mobili di notificare le informazioni richieste dai tester e dai clienti. Per i clienti e i tester interni sono richiesti dei manifest differenti.</li>
+<li class="li">Con le applicazioni Android, il file manifest specifica le autorizzazioni e i parametri di raccolta dati per consentire ai dispositivi mobili di notificare le informazioni richieste dai tester e dai clienti. Per i clienti e i tester interni sono richiesti dei manifest differenti.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_M__x7044865"><!-- --></a>MBaaS</dt>
@@ -406,7 +406,7 @@ e la sua ridistribuzione potrebbero essere soggetti a limitazioni di licenza. Li
 <dd class="dd">Vedi <a class="xref" href="#gloss_O__x2032585">organizzazione</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x2032585"><!-- --></a>organizzazione (org)</dt>
 <dd class="dd">La metodologia di raggruppamento per gli utenti in Bluemix. Le org sono utilizzate per
-gestire le quote. Gli utenti in una org condividono le quote di istanze di servizi e memoria. Vedi anche <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_S__x2039442">spazio</a>.</dd>
+gestire le quote. Gli utenti in un'organizzazione condividono le quote di istanze di servizi e memoria. Vedi anche <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_S__x2039442">spazio</a>.</dd>
 </dl>
 
 ## P
@@ -421,9 +421,9 @@ gestire le quote. Gli utenti in una org condividono le quote di istanze di servi
 <dt class="dt dlterm"><a name="gloss_P__x2029786"><!-- --></a>platform as a service (PaaS)</dt>
 <dd class="dd">L'offerta di una piattaforma di elaborazione, comprendente applicazioni, middleware ottimizzato, strumenti di sviluppo e ambienti di runtime Java e Web 2.0, in un ambiente basato sul cloud.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7290106"><!-- --></a>libreria di preproduzione</dt>
-<dd class="dd">Una raccolta di funzioni di test delle app che raccoglie i dettagli approfonditi sulle questioni e i problemi relativi a un'app. Le funzioni di test identificano il dispositivo e l'utente che sta riscontrando i bug in modo che gli sviluppatori possano ottenere i log e altre informazioni per correggere i problemi. Vedi anche <a class="xref" href="#gloss_P__x7290124">modalità di preproduzione</a>.</dd>
+<dd class="dd">Una raccolta di funzioni di test delle applicazioni che raccoglie i dettagli approfonditi sulle questioni e i problemi relativi a un'applicazione. Le funzioni di test identificano il dispositivo e l'utente che sta riscontrando i bug in modo che gli sviluppatori possano ottenere i log e altre informazioni per correggere i problemi. Vedi anche <a class="xref" href="#gloss_P__x7290124">modalità di preproduzione</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x7290124"><!-- --></a>modalità di preproduzione</dt>
-<dd class="dd">Uno stato operativo in cui i tester interni utilizzano tutte le funzioni di raccolta dati per fornire informazioni dettagliate riguardanti la modalità di funzionamento e le prestazioni di un'app. Vedi anche
+<dd class="dd">Uno stato operativo in cui i tester interni utilizzano tutte le funzioni di raccolta dati per fornire informazioni dettagliate riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche
 <a class="xref" href="#gloss_P__x7290106">libreria di preproduzione</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2090430"><!-- --></a>priorità</dt>
 <dd class="dd">Nello sviluppo di software e sistemi, una classificazione assegnata ai requisiti o agli elementi di lavoro
@@ -441,7 +441,7 @@ gestire le quote. Gli utenti in una org condividono le quote di istanze di servi
 utilizzate dai clienti. I dispositivi mobili dei clienti notificano i problemi in modo anonimo. Queste funzioni raccolgono anche una quantità minore di dettagli nei log, nei dati di sessione e nei report di arresto anomalo. Vedi anche <a class="xref" href="#gloss_P__x6070975">modalità
 di produzione</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x6070975"><!-- --></a>modalità di produzione</dt>
-<dd class="dd">Uno stato operativo in cui i clienti utilizzano una serie limitata di funzioni di raccolta dati per fornire informazioni riguardanti la modalità di funzionamento e le prestazioni di un'app. Vedi anche <a class="xref" href="#gloss_P__x2034919">libreria di produzione</a>.</dd>
+<dd class="dd">Uno stato operativo in cui i clienti utilizzano una serie limitata di funzioni di raccolta dati per fornire informazioni riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche <a class="xref" href="#gloss_P__x2034919">libreria di produzione</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035151"><!-- --></a>progetto</dt>
 <dd class="dd">Una raccolta organizzata utilizzata per raggruppare cartelle o package. I progetti vengono utilizzati per sviluppare, condividere, organizzare e gestire le versioni delle risorse correlate a un singolo impegno lavorativo.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x4585370"><!-- --></a>cloud pubblico</dt>
@@ -459,20 +459,20 @@ su un'icona dell'applicazione mobile.</dd>
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>principalmente in lettura</dt>
 <dd class="dd">Relativo ai dati che vengono modificati in modo dinamico.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>distribuzione Red-Black</dt>
-<dd class="dd">Una tecnica di distribuzione che determina una fornitura continua abilitando test, sviluppo e distribuzione sincronizzati. Inizialmente, lo sviluppo viene eseguito su un ambiente non attivo (Black) mentre l'ambiente attivo continua a prendere il traffico (Rosso). Quando viene avviata la distribuzione, entrambi gli ambienti diventano attivi (Red-Red) finché l'instradamento non viene disabilitato sull'ambiente della versione precedente che era attivo prima e quindi rimosso (Black) mentre il nuovo ambiente funge da solo ambiente attivo. Vedi anche <a class="xref" href="#gloss_B__x7807335">Distribuzione Blue-Green</a>.</dd>
+<dd class="dd">Una tecnica di distribuzione che determina una fornitura continua abilitando test, sviluppo e distribuzione sincronizzati. Inizialmente, lo sviluppo viene eseguito su un ambiente non attivo (Black) mentre l'ambiente attivo continua a prendere il traffico (Red). Quando viene avviata la distribuzione, entrambi gli ambienti diventano attivi (Red-Red) finché l'instradamento non viene disabilitato sull'ambiente della versione precedente che era attivo prima e quindi rimosso (Black) mentre il nuovo ambiente funge da solo ambiente attivo. Vedi anche <a class="xref" href="#gloss_B__x7807335">Distribuzione Blue-Green</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>regione</dt>
 <dd class="dd">Un territorio geografico definito. Una regione può essere una specifica area identificata da un codice postale, una città, uno stato, un gruppo di stati o un gruppo di nazioni. Ogni regione può essere una serie di altre regioni o una serie di codici postali che costituiscono la regione.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>registro</dt>
-<dd class="dd">Un deposito pubblico o privato che contiene immagini utilizzate per creare
+<dd class="dd">Un repository pubblico o privato che contiene immagini utilizzate per creare
 contenitori. Vedi anche <a class="xref" href="#gloss_C__x2010901">contenitore</a>, <a class="xref" href="#gloss_I__x2024928">immagine</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x7639721"><!-- --></a>repo</dt>
-<dd class="dd">Vedi <a class="xref" href="#gloss_R__x2036865">deposito</a>.</dd>
+<dd class="dd">Vedi <a class="xref" href="#gloss_R__x2036865">repository</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2036830"><!-- --></a>report</dt>
 <dd class="dd">Un set di dati deliberatamente disposti per comunicare informazioni di business.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2036865"><!-- --></a>repository (repo)</dt>
 <dd class="dd">Un’area di archiviazione permanente per dati e altre risorse delle applicazioni.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3889804"><!-- --></a>spazio di lavoro del repository</dt>
-<dd class="dd">Un oggetto deposito che include uno o più componenti. Gli spazi di lavoro repository sono di norma utilizzati dai singoli membri del team per contenere le loro modifiche in corso. I membri del team consegnano le loro modifiche dal loro spazio di lavoro repository al flusso e accettano le modifiche da altri membri del team nel loro spazio di lavoro repository dal flusso. Ciascun spazio di lavoro repository ha un proprietario e solo il proprietario può effettuare modifiche nello spazio di lavoro. Vedi anche <a class="xref" href="#gloss_W__x2096037">spazio di lavoro</a>.</dd>
+<dd class="dd">Un oggetto repository che include uno o più componenti. Gli spazi di lavoro repository sono di norma utilizzati dai singoli membri del team per contenere le loro modifiche in corso. I membri del team forniscono le loro modifiche dal loro spazio di lavoro repository al flusso e accettano le modifiche da altri membri del team nel loro spazio di lavoro repository dal flusso. Ciascun spazio di lavoro repository ha un proprietario e solo il proprietario può effettuare modifiche nello spazio di lavoro. Vedi anche <a class="xref" href="#gloss_W__x2096037">spazio di lavoro</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x3220976"><!-- --></a>Representational State Transfer (REST)</dt>
 <dd class="dd">Uno stile di architettura software per sistemi distribuiti ipermediali come il World Wide Web. Il termine viene spesso utilizzato anche per descrivere qualsiasi interfaccia semplice
 che utilizzi XML (o YAML, JSON, testo semplice) su HTTP senza un ulteriore livello di messaggistica, come SOAP.</dd>
@@ -534,7 +534,7 @@ le applicazioni client/server possono comunicare in un modo progettato per evita
 software web, di messaggistica e database per l'esecuzione di codice o funzionalità di monitoraggio o gestione delle applicazioni. I servizi di norma non richiedono installazione o manutenzione
 e possono essere combinati per creare delle applicazioni.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2004539"><!-- --></a>sessione</dt>
-<dd class="dd">Il periodo di tempo successivo all'avvio di un'app su un dispositivo mobile dopo il quale al prodotto di assicurazione della qualità viene segnalato di avviare la raccolta della modalità di funzionamento e dei problemi della app.</dd>
+<dd class="dd">Il periodo di tempo successivo all'avvio di un'applicazione su un dispositivo mobile dopo il quale al prodotto di assicurazione della qualità viene segnalato di avviare la raccolta della modalità di funzionamento e dei problemi della app.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2375015"><!-- --></a>severità</dt>
 <dd class="dd">Nello sviluppo di software e sistemi, una misurazione dell'importanza relativa a un'unità di
               lavoro, ad esempio, critica, alta, media o bassa.</dd>
@@ -551,7 +551,7 @@ e possono essere combinati per creare delle applicazioni.</dd>
 coinvolge la gestione delle modifiche alle raccolte di file.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2039442"><!-- --></a>spazio</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">Un'unità organizzativa che contiene applicazioni e servizi nell'infrastruttura Cloud Foundry e può essere utilizzata per memorizzare e tenere traccia delle risorse di applicazione.</li>
-<li class="li">Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di una org viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le app ma solo i membri con il ruolo di sviluppatore possono creare app e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche <a class="xref" href="#gloss_O__x2032585">organizzazione</a>.</li>
+<li class="li">Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di una org viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche <a class="xref" href="#gloss_O__x2032585">organizzazione</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_S__x6248609"><!-- --></a>sprint</dt>
@@ -581,7 +581,7 @@ specifico linguaggio di programmazione oppure una combinazione di codice applica
 <dt class="dt dlterm"><a name="gloss_S__x7290136"><!-- --></a>symbolication</dt>
 <dd class="dd">Il processo con il quale i simboli esclusi durante la compilazione della app vengono inseriti nelle tracce di stack per rendere le tracce leggibili per i tester e gli sviluppatori.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7344042"><!-- --></a>controllo della sintassi</dt>
-<dd class="dd">Una funzione che analizza il codice e prova a interpretarlo prima della compilazione per rilevare errori di sintassi che potrebbero causare una compilazione non corretta delle app e che informa quindi l'utente.</dd>
+<dd class="dd">Una funzione che analizza il codice e prova a interpretarlo prima della compilazione per rilevare errori di sintassi che potrebbero causare una compilazione non corretta delle applicazioni e che informa quindi l'utente.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x6528306"><!-- --></a>system of engagement</dt>
 <dd class="dd">Un sistema IT (information technology) che incorpora tecnologie che incoraggiano
 l'interazione degli utenti tramite email, sistemi di collaborazione e collegamento
@@ -634,7 +634,7 @@ per accedere alla risorsa di informazioni e le informazioni utilizzate dal proto
 <dt class="dt dlterm"><a name="gloss_U__x7290116"><!-- --></a>opinione dell'utente</dt>
 <dd class="dd">Un punteggio di classificazione dell'utente derivato dalla raccolta
 delle classificazioni delle applicazioni degli utenti dai principali
-application store online (ad esempio, iTunes). La funzione analizza tutte le classificazioni e le recensioni per generare un punteggio cumulativo delle app mobili che combina la qualità delle app, la soddisfazione degli utenti e la quantità complessiva di feedback negativi e positivi forniti dagli utenti.</dd>
+application store online (ad esempio, iTunes). La funzione analizza tutte le classificazioni e le recensioni per generare un punteggio cumulativo delle applicazioni mobili che combina la qualità delle applicazioni, la soddisfazione degli utenti e la quantità complessiva di feedback negativi e positivi forniti dagli utenti.</dd>
 </dl>
 
 ## V
@@ -674,7 +674,7 @@ includono pagine HTML, pagine JSP e servlet. Vedi anche <a class="xref" href="#g
 <dd class="dd">Una risorsa utente che rappresenta una nozione generalizzata di un'attività di sviluppo, quale un'attività, un report di difetto o una richiesta di miglioramento.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2096037"><!-- --></a>spazio di lavoro</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">In Eclipse, raccolta di progetti e altre risorse che l'utente sta attualmente sviluppando nel workbench. I metadati relativi a queste risorse si trovano in una directory
-nel file system; le risorse possono trovarsi nella stessa directory. Vedi anche <a class="xref" href="#gloss_R__x3889804">spazio di lavoro deposito</a>.</li>
+nel file system; le risorse possono trovarsi nella stessa directory. Vedi anche <a class="xref" href="#gloss_R__x3889804">spazio di lavoro repository</a>.</li>
 <li class="li">Un contesto che contiene una raccolta di risorse utente che possono essere modificate da un utente con autorizzazioni appropriate.</li>
 </ol>
 </dd>

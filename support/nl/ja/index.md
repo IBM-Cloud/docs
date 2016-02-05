@@ -4,7 +4,7 @@
 # お客様サポートの利用
 {: #getting-customer-support}
 
-*最終更新日: 2015 年 12 月 4 日*
+*最終更新日: 2016 年 1 月 19 日*
 
 
 {{site.data.keyword.Bluemix}} で問題が発生している場合、Stack Overflow からヘルプを取得したり、サポート・チケットをオープンしたりするなど、いくつかのサポート・オプションがあります。{:shortdesc}
@@ -17,7 +17,7 @@
 ### アカウントとサポートの使用
 「アカウントとサポート (Account and Support)」は、アカウント情報の確認、状況の表示、最新の通知情報の確認、地域の選択、組織の選択と管理、およびログアウトを可能にするフィーチャーです。さらに、ヘルプの取得およびフィードバックの提供も実行できます。
 
-「アカウントとサポート (Account and Support)」を開くには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、次に「ダッシュボード」の右上にある**「アカウントとサポート」**アイコン ![アカウントとサポート](images/account_support.png) をクリックします。
+「アカウントとサポート (Account and Support)」を開くには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、次に上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](images/account_support.svg) をクリックします。
 
 質問の答えを見つけるには、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力します。{{site.data.keyword.Bluemix_notm}} の文書および Stack Overflow からの答えが表示されます。このページには、Stack Overflow に質問を投稿したり、**「連絡を取る (GET IN TOUCH)」**をクリックしてチケットをオープンしたりするオプションも提供されています。
 
@@ -53,7 +53,7 @@ Stack Overflow で質問を作成する際は、その質問が {{site.data.keyw
 
 「状況」ページは、以下のいずれかのオプションによって表示できます。
 
-  * 「アカウントとサポート (Account and Support)」から: {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、「ダッシュボード」の右上にある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.png) をクリックしてから、**「状況」**をクリックします。
+  * 「アカウントとサポート (Account and Support)」から: {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.svg) をクリックしてから、**「状況」**をクリックします。
   * [IBM {{site.data.keyword.Bluemix_notm}} -「システム状況」](https://status.eu-gb.bluemix.net/){: new_window}から直接アクセス。
 
 
@@ -139,7 +139,7 @@ Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フ
 
 サポート・チケットをオープンするには、次のいずれかの方法を使用します。
 
-  * 「アカウントとサポート (Account and Support)」から。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、「ダッシュボード」の右上にある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.png) をクリックします。
+  * 「アカウントとサポート (Account and Support)」から。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.svg) をクリックします。
 
      1. 最初に、**「状況」**をクリックして、{{site.data.keyword.Bluemix_notm}} の状況を確認するようにしてください。
 	 2. 次に、問題の原因が障害によるものでない場合、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。フォームに記入して、テクニカル・サポートが必要な理由を示します。
@@ -166,13 +166,35 @@ Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フ
 {{site.data.keyword.Bluemix_notm}} Dedicated のお客様の場合、サポートは IBM {{site.data.keyword.Bluemix_notm}} サポート・チームによって提供されます。ただし、お客様が IBM ID を持っていない可能性があるため、サポートを取得するためのいくつかの異なる方法があります。
 
 
+<ul>
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} サポート・チケット</a>のフォームを使って新しいチケットをオープンして、サポートに連絡してください。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。「{{site.data.keyword.Bluemix_notm}} 地域」フィールドには、**「Dedicated」**オプションを選択してください。
+<p>フォームの実行依頼は、日曜日の午後 10:00 時 (協定世界時) から金曜日の深夜 0 時 (協定世界時) までモニターされています。</p>
+</li>
+<li>お客様が IBM ID を所有しており、 {{site.data.keyword.Bluemix_notm}} パブリック環境にアクセスできる場合は、次のいずれかの方法を使用してサポート・チケットをオープンすることができます。<ul>
+<li>**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="アカウントとサポート" /> をクリックし、次に**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
+<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> にアクセスし、ご使用の IBM ID とパスワードを入力します。ご使用の IBM ID は、サービスの資格情報として機能します。メニュー上の**「Open a support ticket」**をクリックします。重大度によってチケットの処理方法が決まるため、チケットに適切な重大度を指定するようにしてください。</li>
+</ul>
+</li>
+<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ユーザーからのご依頼があった場合、サポート・チケットの連絡先として機能できる、組織内のユーザーのリストを、ユーザーの Dedicated 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p>
+</li>
+</ul>
 
 ### {{site.data.keyword.Bluemix_notm}} Local のサポートへのお問い合わせ
 {: #contacting-bluemix-support-local}
 
 {{site.data.keyword.Bluemix_notm}} Local のお客様の場合、サポートは IBM {{site.data.keyword.Bluemix_notm}} サポート・チームによって提供されます。ただし、お客様が IBM ID を持っていない可能性があるため、サポートを取得するためのいくつかの異なる方法があります。
 
-
+<ul>
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} サポート・チケット</a>のフォームを使って新しいチケットをオープンして、サポートに連絡してください。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。<p>フォームの実行依頼は、日曜日の午後 10:00 時 (協定世界時) から金曜日の深夜 0 時 (協定世界時) までモニターされています。</p>
+</li>
+<li>お客様が IBM ID を所有しており、 {{site.data.keyword.Bluemix_notm}} パブリック環境にアクセスできる場合は、次のいずれかの方法を使用してサポート・チケットをオープンすることができます。<ul>
+<li>**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="Account and Support" /> をクリックし、次に**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
+<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> にアクセスし、ご使用の IBM ID とパスワードを入力します。ご使用の IBM ID は、サービスの資格情報として機能します。メニュー上の**「Open a support ticket」**をクリックします。重大度によってチケットの処理方法が決まるため、チケットに適切な重大度を指定するようにしてください。</li>
+</ul>
+</li>
+<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ユーザーからのご依頼があった場合、サポート・チケットの連絡先として機能できる、組織内のユーザーのリストを、ユーザーの Local 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p>
+</li>
+</ul>
 
 ### サポート・チケットの重大度
 

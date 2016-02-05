@@ -19,7 +19,7 @@ bluemix.net 網站。如果您不在意公司品牌，則可以在內容中插�
 
 1. 如果您沒有作用中的 {{site.data.keyword.Bluemix_notm}} 帳戶，請建立一個試用帳戶。 
 
-2. 您可以選取區域、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、您的使用者名稱及時間所建構。 
+2. 您可以選取地區、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、您的使用者名稱及時間所建構。 
 
 3. 原始的公用 Git 儲存庫的主要分支會複製到新的專用 {{site.data.keyword.jazzhub_short}} 專案，並具有新的 Git 儲存庫。 
 
@@ -64,10 +64,10 @@ Snippet 顯示顯示成功的結果回呼：</dd>
 	
     
 <dt class="pt dlterm">region_id</dt>
-<dd class="pd">預設目標區域的 ID。例如：<code>ibm:yp:us-south</code>。這是選用值。</dd>
+<dd class="pd">預設目標地區的 ID。例如：<code>ibm:yp:us-south</code>。這是選用值。</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">預設目標組織的 GUID。若要尋找此值，請按一下<strong>管理組織</strong> <i>organization_name</i>。組織的 URL 包含該組識的 GUID。這是選用值。</dd>
+<dd class="pd">預設目標組織的 GUID。若要尋找此值，請按一下<strong>管理組織</strong> > <i>organization_name</i>。組織的 URL 包含該組識的 GUID。這是選用值。</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">預設目標空間的 GUID。若要尋找此值，請按一下<strong>管理組織</strong> > <i>space_name</i>。空間的 URL 包含該空間的 GUID。這是選用值。</dd>

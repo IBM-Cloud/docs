@@ -5,7 +5,7 @@
 
 #服務
 {: #services}
-*前次更新：2015 年 12 月 7 日*
+*前次更新：2015 年 1 月 20 日*
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
@@ -35,7 +35,7 @@
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
 |測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。|
-*表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
+*表格 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
 
 
 
@@ -62,8 +62,10 @@
 
 |服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|是		|是		|否|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.appsecshort}}		|是		|否		|否|
+|{{site.data.keyword.alertnotificationshort}}|是		|否			|否		|
 |{{site.data.keyword.APS_DA}}			|是		|否		|否|
 |{{site.data.keyword.APS_MA}}			|是		|否		|否|
 |{{site.data.keyword.amashort}}			|是		|是		|是|
@@ -86,13 +88,15 @@
 |{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|否|
 |{{site.data.keyword.globalizationshort}}	|是		|否		|否|
 |{{site.data.keyword.dataworks_short}}		|是		|是		|否|
-|{{site.data.keyword.twittershort}}		|是		|是		|否|
+|{{site.data.keyword.twittershort}}		|是		|是		|是|
+|{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
 |{{site.data.keyword.iot_short}}		|是		|否		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|否|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
 |{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|
 |{{site.data.keyword.APS_MAiOS}} 		|是		|否		|否|
+|{{site.data.keyword.macm_short}}		|是		|是		|是|
 |{{site.data.keyword.mobilemam}}		|是		|是		|否|
 |{{site.data.keyword.mobiledata}}		|是		|是		|否|
 |{{site.data.keyword.manda}}			|是		|是		|否|
@@ -294,7 +298,7 @@
 
 假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
 
-1. 切換至服務實例存在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
+1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
 
 2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
 

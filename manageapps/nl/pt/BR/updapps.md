@@ -17,12 +17,7 @@
 
 É possível usar um domínio customizado na URL de seu aplicativo, em vez do domínio de sistema padrão do {{site.data.keyword.Bluemix_notm}}, que é mybluemix.net.
 
-Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se criar o domínio customizado para sua
-organização no
-{{site.data.keyword.Bluemix_notm}}; em
-seguida, deve-se mapear o domínio customizado no domínio do sistema do
-{{site.data.keyword.Bluemix_notm}}
-configurando o servidor DNS ou editando seu arquivo `hosts` local. Depois que seu domínio customizado estiver mapeado para o domínio do sistema do
+Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público, configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}} e, em seguida, mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema do
 {{site.data.keyword.Bluemix_notm}}, as
 solicitações de seu domínio customizado serão roteadas para seu aplicativo no
 {{site.data.keyword.Bluemix_notm}}.

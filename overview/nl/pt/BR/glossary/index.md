@@ -482,7 +482,7 @@ implementada como regras, tabelas de decisão e fluxos de regra.</dd>
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_S__x4585391"><!-- --></a>SaaS</dt>
 <dd class="dd">Consulte <a class="xref" href="#gloss_S__x4585386">software como serviço</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>scale</dt>
+<dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>escala</dt>
 <dd class="dd">Aumentar a capacidade da plataforma (ou do sistema) incluindo mais aplicativos ou instâncias de serviço</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2116206"><!-- --></a>SCM</dt>
 <dd class="dd">Veja <a class="xref" href="#gloss_S__x3579285">gerenciamento de controle de fonte</a>.</dd>
@@ -494,7 +494,7 @@ implementada como regras, tabelas de decisão e fluxos de regra.</dd>
 <dd class="dd">Uma reunião informal diária entre partes interessadas em um projeto de desenvolvimento ágil. Os participantes devem incluir um scrum principal, o proprietário do produto e a equipe, e podem incluir o gerenciador de produto e outras partes interessadas.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2038004"><!-- --></a>Secure Sockets Layer (SSL)</dt>
 <dd class="dd">Um protocolo de segurança que fornece privacidade de comunicação. Com SSL, aplicativos do cliente/servidor podem se comunicar da maneira projetada para evitar espionagem, violação e falsificação de mensagem. Consulte também <a class="xref" href="#gloss_C__x2016383">autoridade de certificação</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_S__x2038343"><!-- --></a>service</dt>
+<dt class="dt dlterm"><a name="gloss_S__x2038343"><!-- --></a>serviço</dt>
 <dd class="dd">Uma extensão da nuvem que fornece funcionalidade pronta para uso, tal como
 banco de dados, sistema de mensagens e software da web para execução de código ou gerenciamento de aplicativos
 ou monitoramento de recursos. Em geral os serviços não requerem instalação ou manutenção e podem ser combinados para criar aplicativos.</dd>

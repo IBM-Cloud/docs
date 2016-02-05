@@ -56,21 +56,22 @@ Para obter mais detalhes sobre os comandos, consulte a [doc da CLI do Bluemix Li
 <ol>
 <li>Faça download e instale a linha de comandos bl do {{site.data.keyword.Bluemix_notm}} Live Sync.   
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
 </p>  
 
-<strong>Importante:</strong> a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior.</li>
+<strong>Importante:</strong> a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior. </li>
 <li>Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha IBM.  
 <pre class="codeblock">bl login</pre>
 </li>
 
-<li>Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir:
+<li>Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir: 
 <pre class="codeblock">bl projects</pre>
 <p>Localize o nome do projeto
-na lista que corresponde ao seu aplicativo. O nome do projeto tem o formato de seu <i>alias</i> | <i>nome do seu aplicativo</i>.</p>
+na lista que corresponde ao seu aplicativo. O nome do projeto tem o formato de seu <i>alias</i> | <i>nome do seu aplicativo</i>. </p>
 </li>
-<li>Sincronize seu ambiente local com o projeto no {{site.data.keyword.Bluemix_notm}}, inserindo o comando a seguir. Se você for o proprietário do projeto, só precisará especificar o nome do seu aplicativo para projectName.<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
+<li>Sincronize seu ambiente local com o projeto no {{site.data.keyword.Bluemix_notm}}, inserindo o comando a seguir. Se você for o proprietário do projeto, só precisará especificar o nome do seu aplicativo para projectName. 
+<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
 <p>Esse comando continua em execução (e a sincronização continua) até que você insira um
 "q". A opção --verbose exibe as informações de criação de log e de status. Se algum de seus argumentos
 contiver um espaço, precisará colocar o nome entre aspas. </p></li>
@@ -165,12 +166,12 @@ O app deve usar o buildpack do IBM SDK for Node.js. Não há suporte para buildp
 1. Permita que o buildpack detecte o comando inicial do app. O comando inicial deve ser detectado automaticamente pelo buildpack, não configurado no arquivo `manifest.yml`.  
     
     a. Assegure-se de que o arquivo `package.json` contenha um script de início que inclua um comando inicial para o app.  
-b. Se o arquivo `manifest.yml` do app contiver um comando, configure-o como nulo.  
+    b. Se o arquivo `manifest.yml` do app contiver um comando, configure-o como nulo.  
 
 2. Configure a variável de ambiente.  
     
-    a. No arquivo `manifest.yml`, inclua esta variável:
-```
+    a. No arquivo `manifest.yml`, inclua esta variável: 
+	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true" 
 	```

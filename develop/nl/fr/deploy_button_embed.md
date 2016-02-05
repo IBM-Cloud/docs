@@ -13,8 +13,7 @@ vous pouvez incorporer la trame d'information dans des fichiers Readme, des blog
 
 {: shortdesc} 
 
-Le flux de trame d'information est utile si vous voulez gérer l'image de marque de votre entreprise. Lorsque des personnes cliquent sur votre trame d'information incorporée, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. 
-Si vous ne vous préoccupez pas de l'image de marque de votre entreprise, vous pouvez insérer un bouton [Déployer dans {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button.html) standard dans votre contenu à
+Le flux de trame d'information est utile si vous voulez gérer l'image de marque de votre entreprise. Lorsque des personnes cliquent sur votre trame d'information incorporée, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. Si vous ne vous préoccupez pas de l'image de marque de votre entreprise, vous pouvez insérer un bouton [Déployer dans {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button.html) standard dans votre contenu à
 la place de la trame d'information. 
 
 ##Etapes du flux de trame d'information {: #iframe-steps} 
@@ -35,8 +34,7 @@ nom d'application précédent, de votre nom d'utilisateur et de l'heure.
 ##Exemple de flux de trame d'information {: #iframe-example} 
 
 <p>
-L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre">exemple IBM Bluemix D2BM iFrame</a> fournit un exemple de flux de trame d'information pour un référentiel Git public.
-<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
+L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre">exemple IBM Bluemix D2BM iFrame</a> fournit un exemple de flux de trame d'information pour un référentiel Git public.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Exemple de flux de trame d'information Déployer dans Bluemix" /></div>
 </p> 
 
 <p>
@@ -79,7 +77,7 @@ de la trame d'information. Cette valeur est facultative.</dd>
 <dd class="pd">ID de la région cible par défaut. Par exemple : <code>ibm:yp:us-south</code>. Cette valeur est facultative.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">Identificateur global unique de l'organisation cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les  organisations</strong> <i>nom_organisation</i>. L'URL de l'organisation contient l'identificateur global unique de cette organisation. Cette valeur est facultative.</dd>
+<dd class="pd">Identificateur global unique de l'organisation cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les organisations</strong> > <i>nom_organisation</i>. L'URL de l'organisation contient l'identificateur global unique de cette organisation. Cette valeur est facultative.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">Identificateur global unique de l'espace cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les organisations</strong> >

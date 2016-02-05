@@ -32,7 +32,7 @@ In {{site.data.keyword.Bluemix_notm}},
 le applicazioni sono associate a organizzazioni e spazi. Un'organizzazione
 appartiene ed è utilizzata da più collaboratori. Inizialmente, ottieni
 un'organizzazione predefinita che prende il nome dal tuo nome utente e di cui
-sei l'unico collaboratore. All'interno di questo spazio puoi anche ottenere uno spazio. Lo spazio è un ambiente per l'esecuzione delle tue applicazioni; ad esempio, puoi
+sei l'unico collaboratore. All'interno di questa organizzazione ottieni anche uno spazio. Lo spazio è un ambiente per l'esecuzione delle tue applicazioni; ad esempio, puoi
 avere uno spazio di sviluppo come un ambiente di sviluppo, uno spazio di test come un ambiente di test
 e uno spazio di produzione come un ambiente di produzione. Inoltre, ciascun
 ambiente appartiene a una regione. Con {{site.data.keyword.Bluemix_notm}},
@@ -48,7 +48,7 @@ dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. D
   4. Immetti un nome univoco per la tua applicazione, ad esempio TestNode, e fai clic su **Fine**. Il nome dell'applicazione deve essere univoco
 nell'intero ambiente {{site.data.keyword.Bluemix_notm}}.
   
-Puoi ora visualizzare le istruzioni **Inizia a scrivere codice**. Puoi seguire le istruzioni per scaricare, modificare e distribuire il codice starter di TestNode. 
+Puoi ora visualizzare le istruzioni **Inizia a scrivere codice**. Puoi seguire le istruzioni per scaricare, modificare e distribuire il codice starter di TestNode.
 
 All'applicazione viene assegnata 1 istanza e 512 MB di quota di memoria
 per impostazione predefinita. Puoi aumentare la memoria o aggiungere più istanze per
@@ -75,7 +75,7 @@ la seguente procedura:
   3. Immetti un nome univoco per l'istanza del servizio o utilizza il
 nome predefinito generato da {{site.data.keyword.Bluemix_notm}},
 quindi fai clic su **Crea**.
-  4. Viene visualizzata la finestra Prepara di nuovo applicazione. Fai clic su **Riprepara** per preparare di nuovo l'applicazione.
+  4. Viene visualizzata la finestra Prepara di nuovo applicazione. Fai clic su **Riprepara** per ripreparare la tua applicazione.
   
 La tua applicazione è ora associata al servizio {{site.data.keyword.cloudant}}. Puoi trovare tutti i dati necessari perché l'applicazione comunichi con l'istanza del servizio nella variabile di ambiente VCAP_SERVICES. Ad esempio, poiché {{site.data.keyword.Bluemix_notm}}
 ospita diverse applicazioni sulla stessa macchina virtuale, le applicazioni
@@ -102,13 +102,12 @@ Per ulteriori informazioni, clic su**Variabili di ambiente** nella pagina Panora
    ]
 }
 ```
-{:codeblock}
 
 **Nota:** questa variabile di ambiente è la serializzazione di un oggetto JSON con una singola voce per ogni istanza del servizio a cui è associata l'applicazione. La quantità e il tipo di dati forniti da ciascuna istanza del servizio
 sono specifici per il servizio. Se l'applicazione non utilizza alcun servizio, VCAP_SERVICES è un oggetto JSON vuoto. Questa variabile di ambiente viene utilizzata solo
 quando aggiungi un servizio alla tua applicazione.
 
-## Creazione dell'applicazione utilizzando la CLI cf
+## Creazione della tua applicazione utilizzando la CLI cf
 {: #ee_cf}
 
 {{site.data.keyword.Bluemix_notm}} fornisce
@@ -168,7 +167,7 @@ comando:
 in un browser:
   ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 Per creare la tua applicazione puoi scegliere anche altri strumenti, ad esempio
 gli strumenti Eclipse. Per ulteriori informazioni, consulta la pagina Inizia a scrivere codice della tua applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
@@ -246,9 +245,9 @@ informazioni nel seguente modo:
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
-  **Nota:** come mostrato dal codice di esempio, per stabilire una connessione a un'istanza del servizio {{site.data.keyword.cloudant}}, puoi prima controllare se la variabile di ambiente VCAP_SERVICES esiste. Se esiste, l'applicazione può utilizzare le proprietà della variabile cloudant per accedere al database. Tuttavia, se la variabile di ambiente VCAP_SERVICES non è presente, l'istanza del servizio {{site.data.keyword.cloudant}} locale viene utilizza valori predefiniti forniti. 
+  **Nota:** come mostrato dal codice di esempio, per stabilire una connessione a un'istanza del servizio {{site.data.keyword.cloudant}}, puoi prima controllare se la variabile di ambiente VCAP_SERVICES esiste. Se esiste, l'applicazione può utilizzare le proprietà della variabile cloudant per accedere al database. Tuttavia, se la variabile di ambiente VCAP_SERVICES non è presente, l'istanza del servizio {{site.data.keyword.cloudant}} locale viene utilizza valori predefiniti forniti.
   
   4. Interagisci con l'istanza del servizio.
   
@@ -275,7 +274,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Facoltativo:** annulla il bind di un'istanza del servizio oppure eliminala.
   

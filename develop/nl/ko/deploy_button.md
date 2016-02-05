@@ -6,7 +6,7 @@
 
 #{{site.data.keyword.Bluemix_notm}}에 배치 단추 작성 {: #deploy-button} 
 
-*마지막 업데이트 날짜: 2015년 12월 8일* 
+*마지막 업데이트 날짜: 2016년 1월 19일* 
 
 {{site.data.keyword.Bluemix}}에 배치 단추는 다른 사람들이 코드를 사용해 보고 IBM {{site.data.keyword.Bluemix_notm}}에 배치할 수 있도록 공용 Git 소스 앱을 공유하는 효과적인 방법입니다. 이 단추를 사용하려면 최소한의 구성이 필요하며 마크업을 지원하는 모든 위치에 이 단추를 삽입할 수 있습니다. 사용자가 이 단추를 클릭하면 원래 앱이 영향을 받지 않도록 새 Git 저장소에 복제된 코드 사본이 작성됩니다. 
 {: shortdesc} 
@@ -67,11 +67,22 @@
 <ol>
 <li> 다음 스니펫 템플리트 중 하나를 복사하여 수정한 다음 올바른 공용 Git 저장소를 포함시키십시오.
 
+<p></p>
+<p>
+<strong>팁</strong>: DevOps 서비스 프로젝트에 대한 빌드 입력 항목을 지정하려는 경우, 분기 매개변수를 Git URL에 추가하십시오. 분기 매개변수를 추가하면 모든 분기를 포함하여 원래 공용 Git 저장소가 새 개인용 DevOps 서비스 오브젝트에 새 Git 저장소로 복제됩니다. 지정된 Git 분기가 빌드 작업을 위한 입력 항목으로 설정됩니다. 분기를 지정하지 않으면 빌드 작업의 입력 항목이 기본적으로 마스터 분기로 설정됩니다.
+</p>
 <ul>
-<li>HTML:
+<li>HTML: <p>
 기본 마스터 분기:
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+지정된 Git 분기:
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>마크다운:
@@ -79,7 +90,12 @@
 기본 마스터 분기:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+</pre>
+<p>지정된 Git 분기:
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>

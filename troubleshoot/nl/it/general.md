@@ -8,7 +8,7 @@
 # Problemi dei servizi generali
 {: #general}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 I problemi relativi ai servizi {{site.data.keyword.Bluemix}}
 potrebbero includere un errore di timeout del gateway che si verifica quando elimini

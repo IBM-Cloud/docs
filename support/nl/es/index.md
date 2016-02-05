@@ -4,7 +4,7 @@
 # Obtención de soporte al cliente
 {: #getting-customer-support}
 
-*Última actualización: 4 de diciembre de 2015*
+*Última actualización: 19 de enero de 2016*
 
 
 Si tiene problemas con {{site.data.keyword.Bluemix}},
@@ -19,7 +19,7 @@ Para obtener ayuda, vaya a Cuenta y soporte o vaya directamente a Stack Overflow
 ### Uso de Cuenta y soporte
 Cuenta y soporte es una característica en la que puede consultar información sobre la cuenta, ver el estado, estar al día de la información más reciente con las notificaciones, finalizar sesión, seleccionar una región y seleccionar y gestionar organizaciones. Además, puede obtener ayuda y dejar comentarios.
 
-Para abrir Cuenta y soporte, inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](images/account_support.png) en la esquina superior derecha del Panel de control.
+Para abrir Cuenta y soporte, inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](images/account_support.svg) en la barra de menús superior.
 
 Pulse **Obtener ayuda** para encontrar respuestas a sus preguntas. En la página que se muestra, escriba su pregunta en el campo de búsqueda. Se muestran respuestas de toda la documentación y Stack Overflow de {{site.data.keyword.Bluemix_notm}}. La página también da la opción de publicar la pregunta en Stack Overflow o abra una incidencia
 en **Póngase en contacto**.
@@ -53,11 +53,11 @@ En la página Estado hay disponible la información siguiente:
   * Incidencias o paradas no planificadas, que se publican en cuanto las conoce el equipo de {{site.data.keyword.Bluemix_notm}}. Las notificaciones de incidencias se actualizan con regularidad hasta que quedan resueltas.
   * Boletines de seguridad.
   * Otros anuncios sobre la plataforma en general que puedan ser de su interés.
-  * Un hilo RSS de subscripción.
+  * Un hilo RSS de suscripción.
 
 Para ver la página Estado, seleccione una de las dos opciones siguientes:
 
-  * Desde Cuenta y soporte: inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](./images/account_support.png) en la esquina superior derecha del Panel de control y, a continuación, pulse **Estado**.
+  * Desde Cuenta y soporte: inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](./images/account_support.svg) en la barra de menús superior y, a continuación, pulse **Estado**.
   * Acceda directamente en [IBM {{site.data.keyword.Bluemix_notm}} - Estado del sistema](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
@@ -129,7 +129,7 @@ Si no ha podido resolver el problema con las opciones de resolución de problema
 
 Para abrir una incidencia de soporte, utilice uno de los métodos siguientes:
 
-  * Desde Cuenta y soporte, inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](./images/account_support.png) en la esquina superior derecha del Panel de control.
+  * Desde Cuenta y soporte, inicie sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y pulse el icono **Cuenta y soporte** ![Cuenta y soporte](./images/account_support.svg) en la barra de menús superior.
 
      1. Primero, asegúrese de marcar el estado de {{site.data.keyword.Bluemix_notm}} pulsando **Estado**.
 	 2. Luego, si el problema no es debido a una parada, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**. Rellene el formulario para indicar qué soporte técnico necesita.
@@ -157,6 +157,22 @@ dedicado
 Si es cliente dedicado de {{site.data.keyword.Bluemix_notm}}, el soporte lo proporciona el equipo de soporte de IBM {{site.data.keyword.Bluemix_notm}}. Sin embargo, puesto que es posible que no disponga de un ID de IBM, tiene diversas opciones para obtener soporte.
 
 
+<ul>
+<li>Póngase en contacto con el soporte abriendo una nueva incidencia mediante el formulario
+<a href="http://ibm.biz/bluemixsupport" target="_blank">Incidencia de soporte de {{site.data.keyword.Bluemix_notm}}</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario. Seleccione la opción **Dedicado** para el campo de región de {{site.data.keyword.Bluemix_notm}}.
+<p>Los envíos de formularios se supervisan del domingo a las 10:00 PM UTC al viernes a las 12 de la noche UTC.</p>
+</li>
+<li>Si tiene un ID de IBM y tiene acceso al entorno de {{site.data.keyword.Bluemix_notm}} público, puede abrir una incidencia de soporte mediante uno de los siguientes métodos:
+<ul>
+<li>Pulse el icono **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> y, a continuación, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**.</li>
+<li>Vaya al
+<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">portal de IBM Client Success</a> y escriba su ID y contraseña de IBM. El ID de IBM le sirve como credenciales de servicio. Pulse **Abrir una incidencia de soporte** en el menú. Asegúrese de indicar una gravedad adecuada para la incidencia, ya que la gravedad determina la forma de gestionar la incidencia.</li>
+</ul>
+</li>
+<li>Si no dispone de un ID de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.
+<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que puede servir como contactos para dar incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Dedicado.</p>
+</li>
+</ul>
 
 ### Cómo ponerse en contacto para {{site.data.keyword.Bluemix_notm}}
 local
@@ -164,7 +180,22 @@ local
 
 Si es cliente local de {{site.data.keyword.Bluemix_notm}}, el soporte lo proporciona el equipo de soporte de IBM {{site.data.keyword.Bluemix_notm}}. Sin embargo, puesto que es posible que no disponga de un ID de IBM, tiene diversas opciones para obtener soporte.
 
-
+<ul>
+<li>Póngase en contacto con el soporte abriendo una nueva incidencia mediante el formulario
+<a href="http://ibm.biz/bluemixsupport" target="_blank">Incidencia de soporte de {{site.data.keyword.Bluemix_notm}}</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario.
+<p>Los envíos de formularios se supervisan del domingo a las 10:00 PM UTC al viernes a las 12 de la noche UTC.</p>
+</li>
+<li>Si tiene un ID de IBM y tiene acceso al entorno de {{site.data.keyword.Bluemix_notm}} público, puede abrir una incidencia de soporte mediante uno de los siguientes métodos:
+<ul>
+<li>Pulse el icono **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> y, a continuación, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**.</li>
+<li>Vaya al
+<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">portal de IBM Client Success</a> y escriba su ID y contraseña de IBM. El ID de IBM le sirve como credenciales de servicio. Pulse **Abrir una incidencia de soporte** en el menú. Asegúrese de indicar una gravedad adecuada para la incidencia, ya que la gravedad determina la forma de gestionar la incidencia.</li>
+</ul>
+</li>
+<li>Si no dispone de un ID de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.
+<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que pueden servir como contactos para las incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Local.</p>
+</li>
+</ul>
 
 ### Gravedad de la incidencia de soporte
 

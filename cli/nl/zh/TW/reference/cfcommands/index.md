@@ -219,10 +219,14 @@ cf push appname -c "bash ./<run.sh>"
 <dd>應用程式啟動的時間上限（秒）。其他伺服器端的逾時可能會置換此值。</dd>
 <dt>*-s* stackname</dt>
 <dd>要執行應用程式的堆疊。堆疊是根據建置的檔案系統（包括作業系統）。使用 `cf stacks`，以檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
-<dt>*--no-hostname*</dt> <dd>將 Bluemix 系統網域對映到此應用程式。</dd>
-<dt>*--no-manifest*</dt> <dd>忽略預設資訊清單檔。</dd>
-<dt>*--no-route*</dt> <dd>不要對映路徑至此應用程式。</dd>
-<dt>*--no-start*</dt> <dd>應用程式部署之後不要啟動應用程式。</dd>
+<dt>*--no-hostname*</dt>
+<dd>將 Bluemix 系統網域對映到此應用程式。</dd>
+<dt>*--no-manifest*</dt>
+<dd>忽略預設資訊清單檔。</dd>
+<dt>*--no-route*</dt>
+<dd>不要對映路徑至此應用程式。</dd>
+<dt>*--no-start*</dt>
+<dd>應用程式部署之後不要啟動應用程式。</dd>
 <dt>*--random-route*</dt>
 <dd>建立應用程式的隨機路徑。</dd>
 </dl>

@@ -3,7 +3,7 @@
 # 實驗性
 {: #experimental}
 
-*前次更新：2015 年 11 月 19 日*
+*前次更新：2015 年 12 月 9 日*
 
 移出「{{site.data.keyword.Bluemix_notm}} 實驗型錄」，以嘗試實驗性服務。
 {: shortdesc} 

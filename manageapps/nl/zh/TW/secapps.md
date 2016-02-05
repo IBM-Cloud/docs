@@ -56,6 +56,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 **附註：**OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可以使用
 SHA-1 選項來處理具有 SHA-256 憑證相容性問題的應用程式。
 
+憑證由憑證管理中心發行，並由該憑證管理中心執行數位簽署。在建立 CSR 之後，可在公用憑證管理中心產生 SSL 憑證。 
+
 ##上傳 SSL 憑證
 {: #ssl_certificate}
 

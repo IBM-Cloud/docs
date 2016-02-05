@@ -6,10 +6,10 @@
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
-# Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
+# Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 6 gennaio 2015*
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}
@@ -26,11 +26,11 @@ Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seg
 `L'ID e/o password IBM immessi non sono corretti. Riprova.`
 
 
-L'ID IBM e la password utilizzati per accedere a {{site.data.keyword.Bluemix_notm}} non sono validi.
+L'ID e la password IBM da te utilizzati per accedere a {{site.data.keyword.Bluemix_notm}} non sono validi.
 {: tsCauses} 
  
 
-Per ottenere un ID IBM e password validi, vai alla pagina Il mio profilo IBM  e completa una della seguenti procedure:
+Per ottenere un ID e una password IBM validi, vai alla pagina Il mio profilo IBM e completa una della seguenti procedure:
 {: tsResolve}
   * Se già hai registrato un ID IBM e vuoi controllare se il tuo ID e la tua password sono validi, fai clic su **Accedi** e immetti il tuo ID IBM e la relativa password nella pagina Accedi. Se hai dimenticato la password, fai clic su **Password dimenticata** nella parte destra della pagina di accesso per reimpostare la password. Se hai dimenticato il tuo ID IBM o continui ad avere problemi con la tua password, contatta l'Help Desk Worldwide IBM Registration per ottenere assistenza. 
   * Se non hai un ID IBM, fai clic su **Registrati** per registrare un ID IBM e password. 
@@ -38,6 +38,28 @@ Per ottenere un ID IBM e password validi, vai alla pagina Il mio profilo IBM  e 
 **Nota:** Per i dipendenti IBM, l'ID IBM potrebbe essere diverso dall'ID di accesso Intranet. 
 
 
+
+
+
+## Sono presenti modifiche non salvate
+{: #ts_unsaved_changes}
+
+
+Quando navighi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire delle azioni ed è possibile che ti venga richiesto di salvare le modifiche prima di continuare.  
+
+
+Quanto tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, continui a visualizzare il seguente messaggio di errore:
+{: tsSymptoms} 
+
+`Sono presenti modifiche non salvate nella pagina nome_applicazione. Salva o annulla le modifiche.`
+
+
+Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore di richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina.
+{: tsCauses}
+
+
+Chiudi la finestra del messaggio, quindi fai clic sul pulsante  **REIMPOSTA** nel riquadro del runtime.
+{: tsResolve} 
 
 
 
@@ -54,7 +76,7 @@ Quando una regione {{site.data.keyword.Bluemix_notm}}  diventa non disponibile, 
 {: tsSymptoms}
 
  
-{{site.data.keyword.Bluemix_notm}} does not yet provide automatic failover from one region to another.
+{{site.data.keyword.Bluemix_notm}} non fornisce ancora il failover automatico da una regione all'altra.
 {: tsCauses}
 
  
@@ -72,7 +94,7 @@ nslookup stage1.mybluemix.net
 
 
 
-## Account is pending
+## L'account è in sospeso
 {: #ts_accntpding}
 
 Se il tuo account è in sospeso, non puoi accedere a {{site.data.keyword.Bluemix_notm}}.
@@ -145,7 +167,7 @@ per modificare il tuo ruolo. Per identificare il gestore della tua organizzazion
 la seguente procedura:
 {: tsResolve}
 
-  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.png) nell'angolo superiore destro del Dashboard e seleziona **Gestisci organizzazioni**.
+  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona  **Account e supporto** ![Account e supporto](images/account_support.svg) nella barra dei menu superiore e seleziona **Gestisci organizzazioni**.
   2. Vai alla tua organizzazione e visualizza le informazioni del gestore organizzazione
 sulla scheda **UTENTI**.  
   
@@ -154,8 +176,7 @@ un membro, devi eliminare il tuo account {{site.data.keyword.Bluemix_notm}} prec
 ed essere inviato a entrare a far parte dell'account come membro dell'organizzazione. Per eliminare il tuo account precedente ed entrare a far parte dell'account come membro,
 completa la seguente procedura: 
 
-  1. Contatta il [supporto ID](mailto:id@bluemix.net) per aprire un ticket di supporto e richiedere
-l'eliminazione del tuo account. Se hai dei dati associati al tuo
+  1. Contatta il [supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
 account precedente che vuoi salvare e passare al nuovo account,
 includi queste informazioni nell'email. 
   2. Una volta eliminato il tuo account, fa sì che un utente con il ruolo di gestore
@@ -209,10 +230,10 @@ Quando utilizzi l'interfaccia utente
 uno dei seguenti messaggi di errore:
 {: tsSymptoms}
 
-`BXNUI0001E: Non è stato possibile determinare se esiste una sessione. Prova a ricaricare il browser.`
+`BXNUI0001E: La pagina non è stata caricata perché Bluemix non ha rilevato se esiste una sessione.`
 
 
-`BXNUI0016E: Non è stato possibile recuperare le applicazioni e i servizi.`
+`BXNUI0016E: Le applicazioni e i servizi non sono stati recuperati perché una pagina di Bluemix non è stata caricata.`
 
  
 
@@ -265,26 +286,6 @@ Utilizza invece il menu cassetto laterale nell'angolo superiore sinistro.
 
 
 
-## Il Dashboard {{site.data.keyword.Bluemix_notm}} non può caricare applicazioni o servizi
-{: #ts_dashboard}
-
-Il Dashboard {{site.data.keyword.Bluemix_notm}} potrebbe non visualizzare alcuna informazione su applicazioni o servizi perché la tua organizzazione o spazio non riesce ad accedervi. 
- 
-
-Quando accedi all'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, sul Dashboard non ci sono informazioni disponibili anche se in precedenza hai creato applicazioni e utilizzato alcuni servizi.
-{: tsSymptoms}
- 
-
-Questo problema potrebbe verificarsi se esegui il bind di un'istanza del servizio alla tua applicazione, ma il servizio non è più accessibile perché ne sono stati modificati i privilegi di servizio per la tua organizzazione o il tuo spazio. 
-{: tsCauses}
-  	
-
-Per risolvere il problema, immetti `cf services`
-nell'interfaccia riga di comando cf per elencare le tue istanze del servizio e identificare
-il servizio. Quindi, utilizza il comando `cf delete-service`
-per eliminare l'istanza del servizio che non è più accessibile.
-{: tsResolve}
-
 
 
 
@@ -307,7 +308,7 @@ Potresti non riuscire a completare delle azioni senza un'appropriata autorità d
 
  
 
-Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'applicazione, non riesci a completare le azioni richieste e visualizzai uno dei seguenti messaggi di errore:
+Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'applicazione, non riesci a completare le azioni richieste e visualizzai uno dei seguenti messaggi di errore: 
 {: tsSymptoms}
 
 `BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
@@ -317,14 +318,14 @@ Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'ap
 
  
 
-Non disponi di un adeguato livello di autorità necessario per eseguire le azioni.
+Non disponi di un adeguato livello di autorità necessario per eseguire le azioni. 
 {: tsCauses}
 
   
 
-Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi:
+Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi: 
 {: tsResolve}
- * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore.  
+ * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore. 
  * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Per i dettagli, vedi [Gestione della tua organizzazione](../acctmgmt/index.html#mngorg){: new_window}.
  
 
@@ -343,7 +344,7 @@ Le credenziali hardcoded nell'applicazione potrebbero non essere corrette. Ogni 
 {: tsCauses}
 
 
-Invece di impostare come hardcoded le credenziali nella tua applicazione, utilizza i parametri di connessione dalla variabile di ambiente VCAP_SERVICES. I metodi per utilizzare i parametri di connessione dalla variabile di ambiente VCAP_SERVICES variano a seconda dei linguaggi di programmazione. Ad esempio, per le applicazioni Node.js, puoi utilizzare il seguente comando:
+Invece di impostare come hardcoded le credenziali nella tua applicazione, utilizza i parametri di connessione dalla variabile di ambiente VCAP_SERVICES. I metodi per utilizzare i parametri di connessione dalla variabile di ambiente VCAP_SERVICES variano a seconda dei linguaggi di programmazione. Ad esempio, per le applicazioni Node.js, puoi utilizzare il seguente comando: 
 {: tsResolve}
 
 ```
@@ -426,12 +427,12 @@ prova le seguenti operazioni per risolvere il problema:
   * Ritenta l'azione:
     * Ricarica la pagina premendo F5 sulla tastiera o facendo clic sul
 pulsante di aggiornamento. Se questa operazione non funziona, cancella la cache
-e i cookie del browser e ricarica di nuovo la pagina.
+e i cookie del tuo browser e ricarica di nuovo la pagina.
 	* Utilizza un browser differente.
 	* Riavvia il router, il modem e il computer. Il riavvio di questi
 dispositivi può cancellare i diversi errori che portano all'errore 502. 
   * Attendi e riprova in seguito. In alcuni casi, possono verificarsi dei
-problemi temporanei con il provider dei servizi Internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
+problemi temporanei con il tuo provider dei servizi Internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
   * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window}. 
 
 
@@ -506,7 +507,7 @@ dalla console {{site.data.keyword.Bluemix_notm}}. Fai clic sul pulsante. Si apri
 finestra, DevOps Services imposta il cookie di autenticazione.
   * In un'altra scheda del browser, vai all'indirizzo https://hub.jazz.net ed esegui l'accesso. Torna alla console {{site.data.keyword.Bluemix_notm}}
 e aggiorna la pagina. Fai di nuovo clic su **AGGIUNGI GIT**.
-  * Modifica le impostazioni del browser per abilitare i cookie di terze parti e fai di nuovo clic su AGGIUNGI GIT. Per i dettagli sulla configurazione delle impostazioni,
+  * Modifica le impostazioni del tuo browser per abilitare i cookie di terze parti e fai di nuovo clic su AGGIUNGI GIT. Per i dettagli sulla configurazione delle impostazioni,
 consulta la documentazione relativa al tuo browser:
     * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
 	* [Google
@@ -559,9 +560,7 @@ Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}},
 visualizzi il seguente messaggio di errore: 
 {: tsSymptoms}
 
-`BXNUI2032E: Si è verificato
-un errore durante il tentativo di contattare Cloud Foundry per creare una risorsa. Risorsa:
-istanze_servizio. Messaggio di Cloud Foundry: "È stato superato il limite
+`BXNUI2032E: La risorsa <istanze_servizio> non è stata creata. Mentre Cloud Foundry veniva contattato per creare la risorsa, si è verificato un errore. Messaggio di Cloud Foundry: "È stato superato il limite
 dei servizi dell'organizzazione."`
 
 
@@ -741,7 +740,7 @@ nel file manifest.
 Quando esegui il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona la casella di spunta **Salva nel file manifest** nella pagina Dettagli applicazione della procedura guidata Applicazione. Quindi,
 le variabili che hai specificato nella
 procedura guidata vengono
-salvate nel file manifest della tua applicazione. Alla prossima apertura della procedura guidata, le variabili verranno visualizzate automaticamente.
+salvate nel file manifest della tua applicazione. La prossima volta che apri la procedura guidata, le variabili vengono visualizzate automaticamente.
 {: tsResolve}
 
 
@@ -786,7 +785,7 @@ directory della tua applicazione.
   
   
   
-  
+
   
   
 
@@ -846,7 +845,7 @@ cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utili
 ## Impossibile creare una rotta di applicazione
 {: #ts_hostistaken}
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host specificato è già in uso.
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
 
 
 
@@ -857,14 +856,14 @@ Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visual
 
 
 
-Questo problema si verifica se il nome host specificato
+Questo problema si verifica se il nome host da te specificato
 è già in uso.
 {: tsCauses} 
 
 
   
 Il nome host specificato deve essere univoco all'interno
-del dominio che si sta utilizzando. Per specificare un nome host differente, usa uno dei
+del dominio che stai utilizzando. Per specificare un nome host differente, usa uno dei
 seguenti metodi:
 {: tsResolve} 
 
@@ -1309,8 +1308,7 @@ Non puoi creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se il tuo 
 Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms} 
 
-`BXNUI0096E: Non è stato possibile creare
-l'applicazione. Il tuo account non è attivo perché è stato annullato o sospeso.`
+`BXNUI0096E: L'applicazione non è stata creata. Il tuo account non è attivo perché è stato annullato o sospeso.`
 
 
 Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo quando l'account viene annullato o sospeso.
@@ -1321,7 +1319,7 @@ Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo qua
 Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
 {: tsResolve}
 
-  * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
+  * L'ID IBM da te utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
   * Il nome dell'organizzazione in cui verrà creata la tua applicazione. Queste informazioni consentono al team di supporto di determinare se ti sono stati assegnati i ruoli o l'appartenenza appropriati all'interno della tua organizzazione.
 
 
@@ -1338,13 +1336,11 @@ Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, vi
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Non è stato possibile
-aggiungere la nuova applicazione. Non esiste alcuno spazio associato
-all'organizzazione e regione corrente. Sul Dashboard, fai clic su Crea uno spazio. Una volta creato lo spazio, prova di nuovo. `
+`BXNUI0097E: Prima di poter aggiungere un'applicazione, è necessario associare almeno uno spazio alla tua organizzazione e alla tua regione. Sul Dashboard, fai clic su **Crea uno spazio**. Una volta creato lo spazio, prova di nuovo. `
 
 
 
-le applicazioni in {{site.data.keyword.Bluemix_notm}} devono essere create all'interno di uno spazio nella tua organizzazione.
+Le applicazioni in {{site.data.keyword.Bluemix_notm}} devono essere create all'interno di uno spazio nella tua organizzazione.
 {: tsCauses} 
 
  
@@ -1561,7 +1557,7 @@ Per risolvere il problema, aggiungi un file `requirements.txt` e un file `Procfi
 
   1. Aggiungi un file `requirements.txt` nella directory root della tua applicazione Python.
      Il file `requirements.txt`
-specifica i pacchetti di libreria richiesti per l'applicazione Python
+specifica i pacchetti di libreria richiesti per la tua applicazione Python
 e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
 che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgiref==0.1.2` indica che la versione dell'interfaccia gateway del server Web richiesta dalla libreria web.py è la 0.1.2.
 	 ```
@@ -1747,26 +1743,5 @@ la seguente voce nel manifest di distribuzione:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

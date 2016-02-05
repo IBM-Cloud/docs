@@ -3,7 +3,7 @@
 # Commandes bx pour l'interaction avec {{site.data.keyword.Bluemix_notm}}
 {: #bluemix_cli}
 
-*Dernière mise à jour :* 19 octobre 2015
+*Dernière mise à jour :* 5 janvier 2016
 
 L'interface de ligne de commande {{site.data.keyword.Bluemix}} fournit un ensemble de commandes qui sont regroupées par espace de nom
 pour que les utilisateurs puissent interagir avec {{site.data.keyword.Bluemix_notm}}. Certaines commandes de l'interface de ligne de commande
@@ -16,12 +16,12 @@ trouverez ci-après la liste de toutes les commandes qui sont prises en charge p
 commandes pour lesquelles aucune action n'est requise indiquent **Aucun**. Sinon, les prérequis peuvent inclure une ou
 plusieurs des actions suivantes :
 <dl>
-<dt>**Noeud final**</dt>
-<dd>Un noeud final d'API doit être défini via `bluemix api` avant l'utilisation de la commande.</dd>
-<dt>**Connexion**</dt>
-<dd>La connexion avec la commande `bluemix login` est requise avant l'utilisation de cette commande.</dd>
-<dt>**Cible**</dt>
-<dd>La commande `bluemix target` doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
+<dt>Noeud final</dt>
+<dd>Un noeud final d'API doit être défini via <code>bluemix api</code> avant l'utilisation de la commande.</dd>
+<dt>Connexion</dt>
+<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande.</dd>
+<dt>Cible</dt>
+<dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
 </dl>
 
 ## bluemix help
@@ -81,7 +81,7 @@ bluemix api [NOEUD_FINAL_API][--unset]
 
 **Options de commande** :
 
-*NOEUD_FINAL_API* (facultatif) : noeud final d'API ciblé, par exemple https://api.ng.bluemix.net. Si
+*NOEUD_FINAL_API* (facultatif) : noeud final d'API ciblé, par exemple https://api.ng.bluemix.net.  Si
 l'option *NOEUD_FINAL_API* et l'option `--unset` sont toutes les deux spécifiées, le noeud final d'API en cours est affiché.
 
 `--unset` (facultatif) : retirez le paramètre de noeud final d'API.
@@ -150,7 +150,7 @@ Si ni -o *NOM_ORG* ni -s *NOM_ESPACE* n'est spécifié, l'organisation et l'espa
 
 **Exemples** :
 
-Associez l'organisation en cours à 'MonOrg' et l'espace en cours à 'MonEspace' :
+Définissez l'organisation en cours à `MonOrg` et l'espace à `MonEspace`:
 
 ```
 bluemix target -o MonOrg -s MonEspace
@@ -174,6 +174,112 @@ bluemix info
 **Prérequis** : Noeud final
 
 
+
+
+
+## bluemix regions
+Affichez les informations pour toutes les régions dans {{site.data.keyword.Bluemix_notm}}.
+
+```
+bluemix regions
+```
+
+**Prérequis** : Noeud final
+
+
+## bluemix region-set
+Passez à la région spécifiée. Cette commande redirige automatiquement sur la même organisation et le même espace dans la nouvelle région, si possible. Autrement, l'utilisateur est invité à sélectionner une nouvelle organisation et un nouvel espace si l'utilisateur est déjà connecté. Le noeud final d'API est changé
+en conséquence.
+
+```
+bluemix region-set NOM_REGION
+```
+
+**Prérequis** : Noeud final
+
+**Options de commande** :
+
+*NOM_REGION* (obligatoire) : nom de la région à laquelle vous voulez accéder. Vous pouvez utiliser la commande `bluemix
+regions` pour afficher tous les noms de région.
+
+**Exemples** :
+
+Définissez la région en cours à `eu-gb`:
+
+```
+bluemix region-set eu-gb
+```
+
+
+
+## bluemix config
+Ecrit les valeurs par défaut dans le fichier de configuration.
+
+```
+bluemix config --http-timeout DELAI_ATTENTE_EN_SECONDES | --trace (true|false|chemin/fichier) | --color (true|false) | --locale (ENVIRONNEMENT LOCAL|CLEAR)
+```
+
+**Prérequis** : Aucun
+
+**Options de commande** :
+
+--http-timeout *DELAI_ATTENTE_EN_SECONDES* : valeur du délai d'attente pour les demandes HTTP. La valeur par défaut est 60 secondes.
+
+--trace true|false|*chemin/fichier* : tracer les demandes HTTP jusqu'au terminal ou au fichier spécifié.
+
+--color true|false : activer ou désactiver la sortie couleur. La sortie couleur est activée par défaut.
+
+--locale *ENVIRONNEMENT LOCAL* : définir un environnement local par défaut. Si ENVIRONNEMENT LOCAL correspond à *CLEAR*, l'environnement local précédent est supprimé.
+
+Une seule de ces options peut être indiquée à la fois.
+
+**Exemples** :
+
+Définissez le délai d'attente des demandes HTTP à 30 secondes :
+
+```
+bluemix config --http-timeout 30
+```
+
+Activez la sortie de trace pour les demandes HTTP :
+
+```
+bluemix config --trace true
+```
+
+Tracez les demandes HTTP vers le fichier nommé */home/usera/my_trace* :
+
+```
+bluemix config --trace /home/usera/my_trace
+```
+
+Désactivez la sortie couleur :
+
+```
+bluemix config --color false
+```
+
+Définissez l'environnement local à zh_Hans :
+
+```
+bluemix config --locale zh_Hans
+```
+
+Effacez les paramètres d'environnement local :
+
+```
+bluemix config --locale CLEAR
+```
+
+
+
+
+
+
+
+
+
+
 ## bluemix list
 Répertoriez toutes les applications cf, les conteneurs, les groupes de conteneurs et les groupes de machines virtuelles dans l'espace en cours.
 
@@ -181,7 +287,7 @@ Répertoriez toutes les applications cf, les conteneurs, les groupes de conteneu
 bluemix list [apps|containers|container-groups|vm-groups]
 ```
 
-**Prérequis** : Noeud final, Connexion, Cible
+**Prérequis** :  Noeud final, Connexion, Cible
 
 **Options de commande** :
 
@@ -193,7 +299,7 @@ container-groups (facultatif) : affichez uniquement les informations sur les gro
 
 vm-groups (facultatif) : affichez uniquement les informations sur les groupes de machines virtuelles.
 
-Vous ne pouvez spécifier qu'un argument à la fois : `apps`, `containers`, `container-groups` ou `vm-groups`. Si vous ne spécifiez rien, toutes les
+Vous ne pouvez spécifier qu'une seule option `apps`, `containers`, `container-groups` ou `vm-groups` à la fois. Si vous ne spécifiez rien, toutes les
 applications cf, tous les conteneurs, tous les groupes de conteneurs et tous les groupes de machines virtuelles sont répertoriés.
 
 **Exemples** :
@@ -220,42 +326,41 @@ bluemix list
 ## bluemix scale
 Réduisez ou augmentez le nombre d'instances, le quota de disque et la taille de mémoire spécifiés pour l'application cf ou le groupe de conteneurs.
 
-**Remarque :** seul le nombre d'instances peut être spécifié pour la mise à l'échelle d'un groupe de conteneurs. Si aucune option n'est
+**Remarque :** seul un nombre d'instances peut être indiqué pour la mise à l'échelle d'un groupe de conteneurs. Si aucune option n'est
 spécifiée, cette commande répertorie le nombre d'instances en cours pour le groupe de conteneurs, ainsi que le quota de disque et la taille de mémoire pour
 l'application cf.
 
 ```
-bluemix scale NOM_APP_CF|NOM_GROUPE_CONTENEURS [-i NOMBRE_INSTANCES] [-k QUOTA_DISQUE] [-m TAILLE_MEMOIRE]
+bluemix scale NOM_APP_CF|NOM_GROUPE_CONTENEURS [-i NOMBRE_INSTANCES][-k DISK_QUOTA] [-m TAILLE_MEMOIRE]
 ```
 
-**Prérequis** : Noeud final, Connexion, Cible
+**Prérequis** :  Noeud final, Connexion, Cible
 
 **Options de commande** :
 
-*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (requis) : nom de l'application cf ou du groupe de conteneurs à mettre à
-l'échelle.
+*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (obligatoire) : nom de l'application cf ou du groupe de conteneurs à mettre à l'échelle.
 
--i *NOMBRE_INSTANCES* (facultatif) : nouveau nombre d'instances pour l'application cf ou le groupe de conteneurs à mettre à l'échelle. Il s'agit de la seule option valide pour la mise à l'échelle d'un groupe de conteneurs.
+-i *NOMBRE_INSTANCES*  (facultatif) : nouveau nombre d'instances pour l'application cf ou le groupe de conteneurs à mettre à l'échelle. Il s'agit de la seule option valide pour la mise à l'échelle d'un groupe de conteneurs.
 
--k *QUOTA_DISQUE* (facultatif) : nouveau quota de disque de l'application cf. Non valide pour la mise à l'échelle d'un groupe de conteneurs.
+-k *QUOTA_DISQUE* (facultatif) : nouveau quota de disque de l'application cf. Non valide pour la mise à l'échelle d'un groupe de conteneurs.
 
--m *TAILLE_MEMOIRE* (facultatif) : nouvelle taille de mémoire pour l'application cf. Non valide pour la mise à l'échelle d'un groupe de conteneurs.
+-m *TAILLE_MEMOIRE* (facultatif) : nouvelle taille de mémoire pour l'application cf. Non valide pour la mise à l'échelle d'un groupe de conteneurs.
 
 **Exemples** :
 
-Affichez le nombre d'instances en cours pour 'mon-groupe-conteneurs' :
+Affichez le nombre d'instances actuel pour `mon-groupe-conteneurs` :
 
 ```
 bluemix scale mon-groupe-conteneurs
 ```
 
-Associez deux instances à 'mon-groupe-conteneurs' :
+Mettez à l'échelle `mon-groupe-conteneurs` à 2 instances :
 
 ```
 bluemix scale mon-groupe-conteneurs -i 2
 ```
 
-Ajoutez trois instances, un quota de disque de 8 Go et une taille de mémoire de 1024 Mo à 'mon-app-java' :
+Mettez à l'échelle `mon-app-java` avec 3 instances, 8 Go de quota de disque et 1024 Mo de taille de mémoire :
 
 ```
 bluemix scale mon-app-java -i 3 -k 8G -m 1024M
@@ -263,7 +368,7 @@ bluemix scale mon-app-java -i 3 -k 8G -m 1024M
 
 
 ## bluemix curl
-Exécutez une demande HTTP brute dans {{site.data.keyword.Bluemix_notm}}. Par défaut, "Content-Type" a pour valeur "application/json".Cette
+Exécutez une demande HTTP brute dans {{site.data.keyword.Bluemix_notm}}. *Content-Type* est défini avec *application/json* par défaut. Cette
 commande envoie une demande au serveur de la console {{site.data.keyword.Bluemix_notm}} (par exemple https://console.ng.bluemix.net) au lieu de
 l'envoyer au noeud final d'API cf (par exemple https://api.ng.bluemix.net).
 
@@ -275,7 +380,7 @@ bluemix curl CHEMIN [OPTIONS...]
 
 **Options de commande** :
 
-*CHEMIN* (requis) : chemin URL de la ressource. Exemple : /rest/v2/apps.
+*CHEMIN* (obligatoire) : chemin URL de la ressource. Exemple : /rest/v2/apps.
 
 *OPTIONS* (facultatif) : les options prises en charge par la commande `bluemix
 curl` sont les mêmes que pour la commande `cf curl`.
@@ -290,15 +395,54 @@ bluemix curl /rest/templates
 
 
 ## bluemix iam orgs
-Cette commande possède la même fonction et les mêmes options que la commande `cf orgs`.
+Cette commande possède la même fonction et les mêmes options que la commande `cf orgs`, mais les régions dans lesquelles les organisations sont présentes s'affichent également.
 
 
 ## bluemix iam org
-Cette commande possède la même fonction et les mêmes options que la commande `cf org`.
+Cette commande possède la même fonction et les mêmes options que la commande `cf org`, mais les régions dans lesquelles l'organisation est présente s'affichent également.
 
 
 ## bluemix iam org-create
 Cette commande possède la même fonction et les mêmes options que la commande `cf create-org`.
+
+
+
+
+
+## bluemix iam org-replicate
+Répliquez une organisation de la région en cours dans une autre région.
+
+```
+bluemix iam org-replicate NOM_ORG NOM_REGION
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*NOM_ORG* (obligatoire) : nom de l'organisation existante à répliquer.
+
+*NOM_REGION* (obligatoire) : nom de la région hébergeant l'organisation répliquée.
+
+**Exemples** :
+
+Répliquez l'organisation `OE_Runtimes_Scaling` dans la région `eu-gb` :
+
+```
+bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## bluemix iam org-rename
@@ -372,7 +516,7 @@ bluemix catalog templates [-d]
 
 **Options de commande** :
 
--d (facultatif) : si l'option '-d' est spécifiée, la description de chaque modèle est également affichée. Sinon, seul l'ID et le nom des modèles sont affichés.
+-d (facultatif) : si l'option `-d` est spécifiée, la description de chaque modèle est également affichée. Sinon, seul l'ID et le nom des modèles sont affichés.
 
 
 ## bluemix catalog template-run
@@ -387,10 +531,9 @@ bluemix catalog template-run ID_MODELE NOM_APP_CF [-u URL] [-d DESCRIPTION]�
 
 **Options de commande** :
 
-*ID_MODELE* (requis) : modèle sur lequel doit s'appuyer l'application lorsqu'elle est créée. Utilisez 'bluemix templates' pour afficher
-les ID de tous les modèles.
+*ID_MODELE* (obligatoire) : modèle sur lequel doit s'appuyer l'application lorsqu'elle est créée. Utilisez `bluemix templates` pour voir tous les ID des modèles.
 
-*NOM_APP_CF* (requis) : nom de l'application cf à créer.
+*NOM_APP_CF* (obligatoire) : nom de l'application cf à créer.
 
 -u *URL* (facultatif) : route de l'application. Si elle n'est pas spécifiée, la route est définie par
 {{site.data.keyword.Bluemix_notm}} automatiquement en fonction du nom de votre application et du domaine par défaut.
@@ -402,59 +545,214 @@ l'application est démarrée automatiquement après sa création.
 
 **Exemples** :
 
-Créez une application cf 'mon-app' reposant sur le modèle 'javaHelloWorld' :
+Créez l'application cf `mon-app` d'après le modèle `javaHelloWorld` :
 
 ```
 bluemix catalog template-run javaHelloWorld mon-app
 ```
 
-Créez une application 'mon-app-ruby' reposant sur le modèle 'rubyHelloWorld' avec la route 'myrubyapp.ng.bluemix.net' et la description 'Ma première
-application Ruby dans {{site.data.keyword.Bluemix_notm}}.' :
+Créez l'application `mon-app-ruby` d'après le modèle `rubyHelloWorld` avec la route `myrubyapp.ng.bluemix.net` et la description `Ma première application Ruby dans {{site.data.keyword.Bluemix_notm}}.` :
 
 ```
 bluemix catalog template-run rubyHelloWorld mon-app-ruby -u myrubyapp.ng.bluemix.net -d "Ma première application Ruby dans {{site.data.keyword.Bluemix_notm}}."
 ```
 
-Créez une application 'mon-app-python' reposant sur le modèle 'pythonHelloWorld' sans démarrage automatique :
+Créez l'application `mon-app-python` d'après le modèle `pythonHelloWorld` sans démarrage automatique :
 
 ```
 bluemix catalog template-run pythonHelloWorld mon-app-python --no-start
 ```
 
 
-## bluemix network regions
-Affichez les informations pour toutes les régions dans {{site.data.keyword.Bluemix_notm}}.
+
+
+## bluemix catalog template-register
+
+Enregistrez un nouveau modèle de conteneur boilerplate sur {{site.data.keyword.Bluemix_notm}}.
 
 ```
-bluemix network regions
+bluemix catalog template-register ID_MODELE URL_MODELE
 ```
 
-**Prérequis** : Noeud final
-
-
-## bluemix network region-set
-Passez à la région spécifiée. Cette commande recible automatiquement la même organisation et le même espace dans la nouvelle région, si possible, ou
-demande à l'utilisateur de sélectionner une nouvelle organisation et un nouvel espace si l'utilisateur est déjà connecté. Le noeud final d'API est changé
-en conséquence.
-
-```
-bluemix network region-set NOM_REGION
-```
-
-**Prérequis** : Noeud final
+**Prérequis** : Noeud final, Connexion
 
 **Options de commande** :
 
-*NOM_REGION* (requis) : nom de la région dans laquelle passer. Vous pouvez utiliser la commande `bluemix
-regions` pour afficher tous les noms de région.
+*ID_MODELE* (obligatoire) : ID du nouveau modèle enregistré.
+
+*URL_MODELE* (obligatoire) : URL d'hébergement des métadonnées du nouveau modèle.
 
 **Exemples** :
 
-Associez la région en cours à 'eu-gb' :
+Créez un modèle nommé `javaHelloWorld` :
 
 ```
-bluemix network region-set eu-gb
+bluemix catalog template-register javaHelloWorld http://javaHelloWorld.ng.bluemix.net/info
 ```
+
+## bluemix catalog template-deregister
+
+Annulez l'enregistrement d'un modèle de conteneur boilerplate existant.
+
+```
+bluemix catalog template-deregister ID_MODELE [-f]
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*ID_MODELE* (obligatoire) : utilisez `bluemix catalog templates` pour afficher tous les ID des modèles.
+
+-f  (facultatif) : forcer l'annulation d'enregistrement sans confirmation.
+
+**Exemples** :
+
+Annulez l'enregistrement du modèle `javaHelloWorld` sans confirmation :
+
+```
+bluemix catalog template-deregister javaHelloWorld -f
+```
+
+
+## bluemix catalog template-registry
+Affichez le registre de modèles {{site.data.keyword.Bluemix_notm}}.
+
+```
+bluemix catalog template-registry
+```
+
+**Prérequis** : Noeud final
+
+
+
+
+
+
+
+
+
+## bluemix catalog service-broker
+
+Affichez les informations du courtier de services indiqué.
+
+```
+bluemix catalog service-broker NOM_COURTIER_SERVICES
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*NOM_COURTIER_SERVICES* (obligatoire) : nom du courtier de services à consulter.
+
+
+## bluemix catalog service-broker-create
+{: #bluemix_catalog_service_broker_create}
+Créez un courtier de services.
+
+```
+bluemix catalog service-broker-create TEXTE_JSON_COURTIER_SERVICES|FICHIER_JSON_COURTIER_SERVICES [--no-billing]
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*TEXTE_JSON_COURTIER_SERVICES*|*FICHIER_JSON_COURTIER_SERVICES* (obligatoire) : code JSON décrivant le nouveau courtier de services à créer. Vous pouvez utiliser le nom du fichier JSON ou utiliser directement le texte JSON.
+
+--no-billing (facultatif) : si cette option est spécifiée, la facturation du courtier de services est désactivée. 
+
+**Exemples** :
+
+Créez un courtier de services avec un fichier JSON :
+
+```
+bluemix catalog service-broker-create ./broker.json
+```
+
+Créez un nouveau courtier de services avec du texte JSON sans facturation :
+
+```
+bluemix catalog service-broker-create '{"name":"courtier_test", ...}' --no-billing
+```
+
+L'exemple suivant illustre un code JSON de courtier de services comportant tous les champs obligatoires :
+
+```
+{
+    "name": "mon_courtier",  // nom du courtier de services
+    "broker_url": "http://my_broker.ng.bluemix.net"  // URL qui pointe vers les métadonnées du courtier de services
+    "auth_username": "nom d'utilisateur",
+	"auth_password": "mot de passe",  // nom d'utilisateur et mot de passe nécessaires pour consulter l'URL du courtier de services. Le nom d'utilisateur et le mot de passe doivent être envoyés avec l'autorisation de base HTTP.
+    "visibilities": [
+        {"organization_name": "OE_Runtimes_Scaling"}
+    ]
+}
+```
+
+
+## bluemix catalog service-broker-update
+Mise à jour d'un courtier de services existant.
+
+```
+bluemix catalog service-broker-update NOM_COURTIER_ORIGINE TEXTE_JSON_COURTIER_SERVICES|FICHIER_JSON_COURTIER_SERVICES
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*NOM_COURTIER_ORIGINE* (obligatoire) : nom du courtier de services à mettre à jour.
+
+*TEXTE_JSON_COURTIER_SERVICES*|*FICHIER_JSON_COURTIER_SERVICES* (obligatoire) : nouveau code JSON décrivant le courtier de services. Vous pouvez utiliser le nom du fichier JSON ou utiliser directement le texte JSON.
+
+**Exemples** :
+
+Mettez à jour le courtier de services `auto-scaling` existant :
+
+```
+bluemix catalog service-broker-update auto-scaling ./auto-scaling.json
+```
+
+Voir [bluemix catalog service-broker-create](#bluemix_catalog_service_broker_create) pour plus de détails sur le format JSON du courtier de services.
+
+
+## bluemix catalog service-broker-delete
+
+Supprimez le courtier de services indiqué.
+
+```
+bluemix catalog service-broker-delete NOM_COURTIER_SERVICES [-f]
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*NOM_COURTIER_SERVICES* (obligatoire) : nom du courtier de services à supprimer.
+
+-f  (facultatif) : forcer la suppression sans confirmation.
+
+**Exemples** :
+
+Supprimez le courtier de services `auto-scaling` sans confirmation :
+
+```
+bluemix catalog service-broker-delete auto-scaling -f
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## bluemix network routes
@@ -476,16 +774,16 @@ bluemix network route-map NOM_APP_CF|NOM_GROUPE_CONTENEURS  DOMAINE  [-n NOM
 
 **Options de commande** :
 
-*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (requis) : nom de l'application cf ou du groupe de conteneurs à mapper à une route.
+*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (obligatoire) : nom de l'application cf ou du groupe de conteneurs à mapper à une route.
 
-*DOMAINE* (requis) : domaine de la route. Exemple : mybluemix.net ou ng.bluemix.net. 
+*DOMAINE* (obligatoire) : domaine de la route. Exemple : mybluemix.net ou ng.bluemix.net. 
 
 -n *NOM_HOTE* (facultatif) : nom d'hôte de la route. S'il n'est pas spécifié, le nom d'hôte est le nom de l'application ou le nom du
 groupe de conteneurs par défaut.
 
 **Exemples** :
 
-Mappez une route à 'mon-app' avec le domaine spécifié :
+Mappez une route à `mon-app` avec le domaine spécifié :
 
 ```
 bluemix network route-map mon-app mybluemix.net
@@ -509,22 +807,22 @@ bluemix network route-unmap NOM_APP_CF|NOM_GROUPE_CONTENEURS  DOMAINE  [-n N
 
 **Options de commande** :
 
-*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (requis) : nom de l'application cf ou du groupe de conteneurs.
+*NOM_APP_CF*|*NOM_GROUPE_CONTENEURS* (obligatoire) : nom de l'application cf ou du groupe de conteneurs.
 
-*DOMAINE* (requis) : domaine de la route (par exemple mybluemix.net ou ng.bluemix.net). 
+*DOMAINE* (obligatoire) : domaine de la route (par exemple mybluemix.net ou ng.bluemix.net). 
 
 -n *NOM_HOTE* (facultatif) : nom d'hôte de la route. S'il n'est pas spécifié, le nom d'hôte est le nom de l'application ou le nom du
 groupe de conteneurs par défaut.
 
 **Exemples** :
 
-Supprimez le mappage de 'my-app.mybluemix.net' à 'mon-app' :
+Supprimez le mappage de la route `mon-app.mybluemix.net` de `mon-app` :
 
 ```
 bluemix network route-unmap mon-app mybluemix.net
 ```
 
-Supprimez le mappage de 'abc.ng.bluexmix.net' à 'mon-groupe-conteneurs' :
+Supprimez le mappage de la route `abc.ng.bluexmix.net` de `mon-groupe-conteneurs` :
 
 ```
 bluemix network route-unmap mon-groupe-conteneurs ng.bluemix.net -n abc
@@ -563,6 +861,86 @@ Cette commande possède la même fonction et les mêmes options que la commande 
 Cette commande possède la même fonction et les mêmes options que la commande `cf delete-shared-domain`.
 
 
+
+
+## bluemix security cert
+
+Affichez la liste des informations de certificat de l'hôte spécifié.
+
+```
+bluemix security cert NOM_HOTE
+```
+
+**Prérequis** : Noeud final, Connexion
+
+**Options de commande** :
+
+*NOM_HOTE* (obligatoire) : nom du serveur hébergeant le certificat.
+
+**Exemples** :
+
+Affichez le certificat de l'hôte `ibmcxo-eventconnect.com` :
+
+```
+bluemix security cert ibmcxo-eventconnect.com
+```
+
+
+## bluemix security cert-add
+
+Ajoutez un certificat au domaine indiqué dans l'organisation en cours.
+
+```
+bluemix security cert-add DOMAINE -k FICHIER_CLE_PRIVEE -c FICHIER_CERT [-p MOT_DE_PASSE][-i INTERMEDIATE_CERT_FILE] [--verify-client]
+```
+
+**Prérequis** : Noeud final, Connexion, Cible
+
+**Options de commande** :
+
+*DOMAINE* (obligatoire) : domaine auquel est ajouté le certificat.
+
+-k *FICHIER_CLE_PRIVEE* (obligatoire) : chemin d'accès au fichier de clé privée.
+
+-c *FICHIER_CERT* (obligatoire) : chemin d'accès au fichier de certificat.
+
+-p *MOT_DE_PASSE* (facultatif) : mot de passe du certificat.
+
+-i *FICHIER_CERT_INTERMEDIAIRE* (facultatif) : chemin d'accès au fichier de certificat intermédiaire.
+
+--verify-client (facultatif) : indique s'il faut activer la vérification du certificat client.
+
+**Exemples** :
+
+Ajoutez un certificat au domaine `ibmcxo-eventconnect.com` :
+
+```
+bluemix security cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.crt -p 123 -i inter_cert.cert
+```
+
+
+## bluemix security cert-remove
+Supprimez un certificat du domaine spécifié dans l'organisation en cours.
+
+```
+bluemix security cert-remove DOMAINE [-f]
+```
+
+**Prérequis** : Noeud final, Connexion, Cible
+
+**Options de commande** :
+
+*DOMAINE* (obligatoire) : domaine dont le certificat est à supprimer.
+
+-f  (facultatif) : forcer la suppression sans confirmation.
+
+
+
+
+
+
+
+
 ## bluemix plugin repos
 Répertoriez tous les référentiels de plug-in qui sont enregistrés dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
@@ -584,15 +962,15 @@ bluemix plugin repo-add NOM_REFERENTIEL URL_REFERENTIEL
 
 **Options de commande** :
 
-*NOM_REFERENTIEL* (requis) : nom du référentiel à ajouter. Vous pouvez définir votre propre nom pour chaque référentiel.
+*NOM_REFERENTIEL* (obligatoire) : nom du référentiel à ajouter. Vous pouvez définir votre propre nom pour chaque référentiel.
 
-*URL_REFERENTIEL* (requis) : adresse URL du référentiel à ajouter. Elle doit contenir le protocole (par exemple
+*URL_REFERENTIEL* (obligatoire) : adresse URL du référentiel à ajouter. Elle doit contenir le protocole (par exemple
 http://plugins.ng.bluemix.net au lieu de plugins.ng.bluemix.net). http://plugins.ng.bluemix.net est le référentiel de plug-in officiel de l'interface de
 ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 **Exemples** :
 
-Ajoutez le référentiel de plug-in officiel de l'interface de ligne de commande Bluemix avec le nom 'référentiel-bluemix' :
+Ajoutez le référentiel de plug-in officiel de l'interface de ligne de commande Bluemix sous la forme `référentiel-bluemix` :
 
 ```
 bluemix plugin repo-add référentiel-bluemix http://plugins.ng.bluemix.net
@@ -610,11 +988,11 @@ bluemix plugin repo-remove NOM_REFERENTIEL
 
 **Options de commande** :
 
-*NOM_REFERENTIEL* (requis) : nom du référentiel à retirer.
+*NOM_REFERENTIEL* (obligatoire) : nom du référentiel à retirer.
 
 **Exemples** :
 
-Retirez le référentiel 'référentiel-bluemix' de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} :
+Supprimez `référentiel-bluemix` de l'interface de ligne de commande (CLI) {{site.data.keyword.Bluemix_notm}} :
 
 ```
 bluemix plugin repo-remove référentiel-bluemix
@@ -642,7 +1020,7 @@ Répertoriez tous les plug-in dans tous les référentiels ajoutés :
 bluemix plugin repo-plugin-list
 ```
 
-Répertoriez tous les plug-in dans le référentiel 'référentiel-bluemix' :
+Répertoriez tous les plug-in du référentiel `référentiel-bluemix` :
 
 ```
 bluemix plugin repo-plugin-list -r référentiel-bluemix
@@ -660,20 +1038,20 @@ bluemix plugin list
 
 
 ## bluemix plugin install
-Installez le plug-in dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} depuis le chemin ou le référentiel spécifié.
+Installez la version de plug-in spécifique dans l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} à partir du chemin ou du référentiel spécifié.
 
 ```
-bluemix plugin install CHEMIN_PLUG-IN|NOM_PLUG-IN [-r NOM_REFERENTIEL]
+bluemix plugin install CHEMIN_PLUG-IN|NOM_PLUG-IN [-r NOM_REFERENTIEL][-v VERSION]
 ```
 
 **Prérequis** : Aucun
 
 **Options de commande** :
 
-*CHEMIN_PLUG-IN*|*NOM_PLUG-IN* (requis) : si l'option '-r *NOM_REFERENTIEL*' n'est pas spécifiée, le
-plug-in est installé depuis le chemin d'accès local spécifié ou l'adresse URL distante spécifiée.
+*CHEMIN_PLUG-IN*|*NOM_PLUG-IN* (obligatoire) : si `-r *NOM_REFERENTIEL*` n'est pas indiqué, le plug-in est installé à partir de l'URL distante ou du chemin local indiqué.
 
 -r *NOM_REFERENTIEL* (facultatif) : nom du référentiel dans lequel se trouve le fichier binaire du plug-in.
+-v *VERSION*  (facultatif) : version de plug-in à installer. Si elle n'est pas fournie, la dernière version du plug-in est installée. Cette option n'est valide que si vous installez le plug-in à partir du référentiel.
 
 **Exemples** :
 
@@ -689,11 +1067,20 @@ Installez un plug-in depuis l'adresse URL distante :
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Installez le plug-in 'IBM-Containers' depuis le référentiel 'référentiel-bluemix' :
+Installez la dernière version du plug-in `IBM-Containers` à partir du référentiel `référentiel-bluemix` :
 
 ```
 bluemix plugin install IBM-Containers -r référentiel-bluemix
 ```
+Installez le plug-in `IBM-Containers` avec la version `0.5.800` à partir du référentiel `référentiel-bluemix` :
+
+```
+bluemix plugin install IBM-Containers -r référentiel-bluemix -v 0.5.800
+```
+
+
+
+
 
 
 ## bluemix plugin uninstall
@@ -707,11 +1094,11 @@ bluemix plugin uninstall NOM_PLUG-IN
 
 **Options de commande** :
 
-*NOM_PLUG-IN* (requis) : nom du plug-in à désinstaller.
+*NOM_PLUG-IN* (obligatoire) : nom du plug-in à désinstaller.
 
 **Exemples** :
 
-Désinstallez le plug-in 'IBM-Containers' installé précédemment :
+Désinstallez le plug-in `IBM-Containers` installé précédemment :
 
 ```
 bluemix plugin uninstall IBM-Containers

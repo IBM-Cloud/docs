@@ -6,7 +6,7 @@
 
 #「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成{: #deploy-button} 
 
-*最終更新日: 2015 年 12 月 8 日* 
+*最終更新日: 2016 年 1 月 19 日* 
 
 「{{site.data.keyword.Bluemix}} にデプロイ」ボタンを使用すると Git から入手したパブリック・アプリを効率的に共有することができ、それによって、他のユーザーがそのコードを試し、IBM {{site.data.keyword.Bluemix_notm}} にデプロイできるようになります。このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。誰かがこのボタンをクリックすると、オリジナルのアプリには影響しないように、新しい Git リポジトリー内にコードの複製コピーが作成されます。
 {: shortdesc} 
@@ -52,11 +52,24 @@
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成するには、以下のようにします。 
 
 <ol>
-<li> 以下のスニペット・テンプレートのいずれかをコピーして変更し、パブリック Git リポジトリーを含めます。<ul>
+<li> 以下のスニペット・テンプレートのいずれかをコピーして変更し、パブリック Git リポジトリーを含めます。
+<p></p>
+<p>
+<strong>ヒント</strong>: DevOps サービス・プロジェクト用のビルド入力を指定する場合は、Git URL にブランチ・パラメーターを追加します。ブランチ・パラメーターを追加すると、元のパブリック Git リポジトリーが、そのすべてのブランチを含め、新しい Git リポジトリーを使用する新しいプライベート DevOps サービス・プロジェクトに複製されます。指定された Git ブランチは、ビルド・ジョブの入力として設定されます。ブランチを指定しないと、ビルド・ジョブの入力はデフォルトでマスター・ブランチに設定されます。
+</p>
+<ul>
 <li>HTML:
+<p>
 デフォルト・マスター・ブランチ:
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+指定された Git ブランチ:
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown:
@@ -64,7 +77,12 @@
 デフォルト・マスター・ブランチ:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+</pre>
+<p>指定された Git ブランチ:
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>
@@ -111,7 +129,6 @@
       label: &lt;`actual_service_name`&gt; # [required] The actual service name from market place 
       plan: Shared # [optional] If provided, used to fetch the declared service. Otherwise, defaults to 'Free' or 'free'.
   applications:
-
   - services
     - &lt;`arbitrary_service_instance_name`&gt;
     name: &lt;`appname`&gt;

@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2015 年 12 月 7 日*
+*最終更新日: 2015 年 12 月 15 日*
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
 {:shortdesc}
@@ -302,6 +302,30 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
  * 侵入防止によるリスク管理。
  * QRadar を使用したセキュリティー・モニター。
  * 管理コンソールで使用可能なセキュリティー・レポート。
+
+## セキュリティー・コンプライアンス
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} は、信頼できる安全なクラウド・プラットフォームを提供します。{{site.data.keyword.Bluemix_notm}} のコンプライアンスは、ISO 27001 および ISO 27002 などの業界最高のセキュリティー規格を基盤としたプラットフォームおよびサービスの結果として作成されたものです。
+{:shortdesc}
+
+![EU のデータ保護モデル契約条項](images/icon_eumc.png)  **EU モデル契約条項**は、EU または欧州経済地域 (EEA) から第三国に転送される個人データを保護する取り決めです。EU モデル契約条項は、EU または EEA にデータ・エクスポーターとして位置するクライアントと、第三国にデータ・インポーターとして位置する IBM データ・プロセッサーとの間で署名されました。[IBM SaaS EU モデル契約条項](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}には、データ・エクスポーターとデータ・インポーターの権利と義務、およびデータ・サブジェクトの権利が記載されています。IBM SaaS EU モデル契約条項は、第三国で個人データの処理が行われる際に、その個人データに対して EU または EEA 内で使用可能な保護に似た保護を実行することを保証します。
+
+![金融情報システム](images/FISC.gif)  日本国内の銀行業界および関連する金融業界の場合、コンピューター・システムは、金融情報システムセンター (FISC) の安全対策基準に基づいた安全対策手順を実施する必要があります。**FISC** 安全対策基準は、金融庁 (FSA)、日本銀行 (BOJ)、および FISC によって実施されています。
+
+FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己評価文書 (日本語版) は、[IBM Bluemix リスク調査結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}から入手できます。 
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。 
+
+{{site.data.keyword.Bluemix_notm}} は、サード・パーティーのセキュリティー会社によって監査されており、ISO 27001 のすべての条件 ([Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}) を満たしています。
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) **Service Organization Controls (SOC)** レポートは、サービス組織でのセキュリティー、可用性、処理の完全性、機密性、およびプライバシーに関連した、主要な内部制御実施の評価を定義しています。米国公認会計士協会 (AICPA) ガイドを使用して生成されたこれらのレポートには、以下の項目が含まれています。 
+  * 組織の監督
+  * ベンダー管理プログラム
+  * 社内のコーポレート・ガバナンスおよびリスク管理プロセス
+  * 規制の監督
+ 
+{{site.data.keyword.Bluemix_notm}} は、IBM SoftLayer Infrastructure as a Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。
 
 ## セキュリティー・レポート
 {: #reports}

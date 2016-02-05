@@ -9,7 +9,7 @@
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última actualización: 19 de noviembre de 2015*
+*Última actualización: 6 de enero de 2015*
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
 {:shortdesc}
@@ -38,6 +38,28 @@ Para obtener un ID y contraseña de IBM válidos, vaya a la página Mi perfil de
 **Nota:** Para los empleados de IBM es posible que el ID de IBM no coincida con el ID de inicio de sesión en la intranet. 
 
 
+
+
+
+## Hay cambios sin guardar
+{: #ts_unsaved_changes}
+
+
+Al navegar en la página de detalles de aplicaciones, es posible que no pueda realizar las acciones y es posible que se le solicite que guarde los cambios para poder continuar. 
+
+
+Cuando intente comprobar la app o los servicios en la página de detalles de la app, seguirá recibiendo el siguiente mensaje de error:
+{: tsSymptoms} 
+
+`Hay cambios sin guardar en la página app_name. Guarde o cancele los cambios.`
+
+
+Cuando desplace el ratón sobre el campo **INSTANCES** o **MEMORY QUOTA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es mediante diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder navegar fuera de la página.
+{: tsCauses}
+
+
+Cierre la ventana de mensajes y, a continuación, pulse el botón **RESET** en el panel de tiempo de ejecución.
+{: tsResolve} 
 
 
 
@@ -77,7 +99,10 @@ Si la cuenta está pendiente, no puede iniciar una sesión en {{site.data.keywor
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}. Verá en su lugar el siguiente mensaje:
 {: tsSymptoms}
 
-<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">soporte de Bluemix</a>.</code>Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
+<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">soporte de Bluemix</a>.</code>
+
+
+Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
 {: tsCauses} 
 
 El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
@@ -130,12 +155,12 @@ y necesita otro rol para hacerlo, póngase en contacto con el gestor de la organ
 para cambiar el rol. Para identificar el gestor de la organización, siga estos pasos:
 {: tsResolve}
 
-  1. Vaya al panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de **Cuenta y soporte** ![Cuenta y soporte](images/account_support.png) en la esquina superior derecha del Panel de control y seleccione **Gestionar organizaciones**.
+  1. Vaya al Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono **Cuenta y soporte** ![Cuenta y soporte](images/account_support.svg) en la barra de menús superior y seleccione **Gestionar organizaciones**.
   2. Vaya a la organización y consulte la información sobre el gestor de la organización en el separador **USUARIOS**.  
   
 Si no puede invitar usuarios porque es colaborador y no un miembro, debe suprimir la cuenta anterior de {{site.data.keyword.Bluemix_notm}} y luego se le debe invitar como un miembro de la organización. Para suprimir la cuenta anterior y unirse como miembro, complete los siguientes pasos: 
 
-  1. Póngase en contacto con el [Soporte de ID](mailto:id@bluemix.net) para abrir una incidencia de soporte y pedir que se suprima su cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
+  1. Póngase en contacto con el [Soporte de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} para abrir una incidencia de soporte y solicitar que se suprima la cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
   2. Cuando se suprima la cuenta, tendrá un usuario con el rol de gestor de la organización y le invitará a unirse como gestor. Luego, inicie sesión en {{site.data.keyword.Bluemix_notm}} desde la invitación. 
 
 
@@ -174,10 +199,10 @@ Cuando utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, es 
 Es posible que vea uno de los siguientes mensajes de error cuando utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}:
 {: tsSymptoms}
 
-`BXNUI0001E: No se ha podido determinar si existe una sesión. Intente volver a cargar el navegador. `
+`BXNUI0001E: La página no se ha cargado porque Bluemix no ha detectado si existe una sesión.`
 
 
-`BXNUI0016E: No se han podido recuperar aplicaciones y servicios.`
+`BXNUI0016E: Las apps y servicios no se han recuperado porque no se ha cargado una página de Bluemix.`
 
  
 
@@ -218,23 +243,6 @@ Utilice en su lugar el menú lateral de la esquina superior izquierda.
 
 
 
-## El Panel de control de {{site.data.keyword.Bluemix_notm}} no puede cargar apps ni servicios
-{: #ts_dashboard}
-
-Es posible que el Panel de control de {{site.data.keyword.Bluemix_notm}} no muestre información sobre apps o servicios porque la organización o el espacio no pueden acceder a la misma. 
- 
-
-Cuando inicie una sesión en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, no hay nada disponible en el Panel de control, aunque antes haya creado apps y haya utilizado algunos servicios.
-{: tsSymptoms}
- 
-
-Este problema puede producirse cuando se enlaza una instancia de servicio a la app, pero ya no se puede acceder al servicio porque los privilegios del servicio se han modificado para la organización o el espacio. 
-{: tsCauses}
-  	
-
-Para solucionar el problema, escriba `cf services` en la interfaz de línea de mandatos cf para ver las instancias de servicio e identificar el servicio. Luego utilice el mandato `cf delete-service` para suprimir la instancia de servicio a la que ya no se puede acceder.
-{: tsResolve}
-
 
 
 
@@ -255,10 +263,9 @@ las aplicaciones que no se pueden actualizar y los caracteres de doble byte que 
 
 Es posible que no pueda efectuar acciones sin la autoridad de acceso adecuada.
 
-
  
 
-Cuando intenta llevar a cabo acciones para una instancia de servicio o una instancia de app, no puede completar las acciones solicitadas y ve uno de los siguientes mensajes de error:
+Cuando intenta llevar a cabo acciones para una instancia de servicio o una instancia de app, no puede completar las acciones solicitadas y ve uno de los siguientes mensajes de error: 
 {: tsSymptoms}
 
 `BXNUI0514E: No es desarrollador de ningún espacio de la organización <NombreOrg>.`
@@ -268,12 +275,13 @@ Cuando intenta llevar a cabo acciones para una instancia de servicio o una insta
 
  
 
-No tiene el nivel adecuado de autorización necesario para realizar las acciones.
+No tiene el nivel adecuado de autorización necesario para realizar las acciones. 
 {: tsCauses}
 
   
 
-Para obtener el nivel de autorización adecuado, utilice uno de estos métodos:{: tsResolve}
+Para obtener el nivel de autorización adecuado, utilice uno de estos métodos: 
+{: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
  * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de la organización](../acctmgmt/index.html#mngorg){: new_window} para obtener detalles.
  
@@ -293,12 +301,13 @@ Las credenciales codificadas de la app podrían no ser correctas. Cada vez que e
 {: tsCauses}
 
 
-En lugar de codificar las credenciales en la app, utilice parámetros de conexión de la variable de entorno VCAP_SERVICES. Los métodos para utilizar los parámetros de conexión de la variable de entorno VCAP_SERVICES varían en función de los lenguajes de programación. Por ejemplo, para las apps Node.js, puede utilizar el siguiente mandato: {: tsResolve}
+En lugar de codificar las credenciales en la app, utilice parámetros de conexión de la variable de entorno VCAP_SERVICES. Los métodos para utilizar los parámetros de conexión de la variable de entorno VCAP_SERVICES varían en función de los lenguajes de programación. Por ejemplo, para las apps Node.js, puede utilizar el siguiente mandato: 
+{: tsResolve}
 
 ```
 process.env.VCAP_SERVICES
 ```
-Para obtener más información sobre los mandatos que puede utilizar en otros lenguages de programación, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
  
 
  
@@ -460,8 +469,7 @@ Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}},
 ve el siguiente mensaje de error: 
 {: tsSymptoms}
 
-`BXNUI2032E: Se ha producido un error al establecer contacto con Cloud Foundry para crear un recurso. Recurso:
-service_instances. Mensaje de Cloud Foundry: "Ha excedido el límite de servicios de su organización."`
+`BXNUI2032E: No se ha creado el recurso <instancias_servicio>. Mientras se estaba contactando con Cloud Foundry para crear el recurso, se ha producido un error. Mensaje de Cloud Foundry: "Ha excedido el límite de servicios de su organización."`
 
 
 
@@ -568,7 +576,7 @@ Una app no se reinicia automáticamente si el servicio que ha enlazado a la app 
 	  
  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas.
 {: tsSymptoms}
 
 
@@ -647,7 +655,7 @@ Utilice uno de los métodos siguientes para resolver el problema:
   
   
   
-  
+
   
   
 
@@ -1027,8 +1035,7 @@ Si se encuentra con que el repositorio Git no está clonando, es posible que hay
 
 
 
-Pulsa el botón **Desplegar en Bluemix**, pero el repositorio Git no se encuentra y no se puede clonar en DevOps Services. El paso "Clonando repositorio" no se completa correctamente.
-Por lo tanto, la app no se puede desplegar en {{site.data.keyword.Bluemix_notm}}. 
+Pulsa el botón **Desplegar en Bluemix**, pero el repositorio Git no se encuentra y no se puede clonar en DevOps Services. El paso "Clonando repositorio" no se completa correctamente. Por lo tanto, la app no se puede desplegar en {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Este problema se podría producir por las siguientes razones:
@@ -1055,7 +1062,8 @@ Si detecta que la app no se ha desplegado, es posible que haya algún problema c
      
 
 
-Pulsa el botón **Desplegar en Bluemix** y el repositorio Git se clona en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}. El paso "Desplegando en Bluemix" no se completa correctamente.{: tsSymptoms} 
+Pulsa el botón **Desplegar en Bluemix** y el repositorio Git se clona en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}. El paso "Desplegando en Bluemix" no se completa correctamente.
+{: tsSymptoms} 
 
 Este problema se podría producir por las siguientes razones:
 {: tsCauses}  
@@ -1127,7 +1135,7 @@ No puede crear una app en {{site.data.keyword.Bluemix_notm}} si la cuenta está 
 Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error:
 {: tsSymptoms} 
 
-`BXNUI0096E: No se ha podido crear la app. La cuenta está inactiva porque se ha cancelado o suspendido.`
+`BXNUI0096E: La app no se ha creado. La cuenta está inactiva porque se ha cancelado o suspendido.`
 
 
 El estado de la cuenta de {{site.data.keyword.Bluemix_notm}} pasa a ser inactivo si la cuenta se cancela o se suspende.
@@ -1154,7 +1162,7 @@ Cuando intenta crear una app en {{site.data.keyword.Bluemix_notm}}, ve el siguie
 {: tsSymptoms} 
 
 
-`BXNUI0097E: No se ha podido añadir la nueva app. No hay espacio asociado a la organización y región actuales. En el Panel de control, pulse Crear un espacio. Cuando se cree el espacio, vuélvalo a intentar.`
+`BXNUI0097E: Para poder añadir una app, al menos un espacio debe estar asociado con la organización y la región. En el Panel de control, pulse **Crear un espacio**. Cuando se cree el espacio, vuélvalo a intentar.`
 
 
 
@@ -1502,26 +1510,5 @@ Puede solucionar este problema con uno de estos métodos:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

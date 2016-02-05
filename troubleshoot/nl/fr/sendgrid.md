@@ -7,7 +7,7 @@
 # Traitement des incidents liés à SendGrid
 {: #ts_sendgrid}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Voici la réponse à une question concernant l'utilisation de SendGrid dans {{site.data.keyword.Bluemix}}.
 {:shortdesc}

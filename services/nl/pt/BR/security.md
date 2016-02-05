@@ -4,7 +4,7 @@
 # Security
 {: #security}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Com esses serviços de segurança, é possível proteger o acesso a aplicativos e cargas de trabalho e varrer aplicativos quanto a vulnerabilidades. Também é possível integrar controles de segurança no gerenciamento de dados e serviços de Big Data. 
 {:shortdesc}

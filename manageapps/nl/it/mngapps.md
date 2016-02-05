@@ -16,7 +16,7 @@ stato di esecuzione di ogni applicazione vengono utilizzati colori diversi.
 
 **Arrestato o Sconosciuto (grigio)**
 
-  L'applicazione è arrestata oppure lo stato è sconosciuto. L'icona grigia indica che l'applicazione è arrestata oppure che lo stato è sconosciuto.
+  La tua applicazione è arrestata oppure lo stato è sconosciuto. L'icona grigia indica che l'applicazione è arrestata oppure che lo stato è sconosciuto.
 
 **In esecuzione (verde)**
 

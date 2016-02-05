@@ -85,7 +85,7 @@ iFrame 대신 표준 [{{site.data.keyword.Bluemix_notm}}에 배치 단추](../de
 이 값은 선택사항입니다.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">기본 대상 조직의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> <i>organization_name</i>을(를) 클릭하십시오. 조직의 URL에는 해당 조직의 GUID가 포함됩니다.
+<dd class="pd">기본 대상 조직의 GUID입니다. 이 값을 찾으려면 <strong>조직 관리</strong> > <i>organization_name</i>을(를) 클릭하십시오. 조직의 URL에는 해당 조직의 GUID가 포함됩니다.
 이 값은 선택사항입니다.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>

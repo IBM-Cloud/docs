@@ -16,7 +16,7 @@
 
 *표준 유형*은 특정 도메인에 대한 애플리케이션 및 그 연관된 런타임 환경과
 사전 정의된 서비스의 컨테이너입니다. 예를 들어, Mobile Cloud 표준 유형에는
-Mobile Data, Mobile Application Security 및 Push 서비스 외에 Node.js 런타임이 포함되어 있습니다. 또한
+Mobile Data, Mobile Application Security 및 푸시 서비스 외에 Node.js 런타임이 포함되어 있습니다. 또한
 이러한 서비스에 액세스하는 모바일 앱 개발을 시작하기 위한 SDK 및 샘플 애플리케이션을 포함합니다. 
 
 *런타임*은 애플리케이션을 실행하는 데 사용되는 자원 세트입니다. {{site.data.keyword.Bluemix_notm}}에서는

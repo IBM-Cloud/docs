@@ -28,8 +28,7 @@
 
 アプリケーションのログが使用できなくなって **cf     files** コマンドを使用してステージング・エラーの原因を確認することができない場合は、代わりに **cf logs** コマンドを使用できます。**cf logs** コマンドは Cloud Foundry ログ統合サービスを使用してアプリケーション・ログおよびシステム・ログの詳細を収集するので、このログ統合サービス内にバッファーされていた内容を確認することができます。このログ統合サービスの詳細については、[「Cloud Foundry へのログイン (Logging in Cloud Foundry)」](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}を参照してください。
 
-**注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf
-logs appname --recent` を入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、その cf コマンド・ライン・インターフェースとは別のコマンド・ラインで `cf logs appname` を入力してください。そうすれば、アプリケーションをデプロイしたときのログがトラッキングできます。
+**注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf logs appname --recent` を入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、その cf コマンド・ライン・インターフェースとは別のコマンド・ラインで `cf logs appname` を入力してください。そうすれば、アプリケーションをデプロイしたときのログがトラッキングできます。
 
 {{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging staging errors)」](../troubleshoot/debugging.html#debug_stgerr)のステップに従って問題を解決することができます。
 
@@ -45,7 +44,8 @@ logs appname --recent` を入力してもログが表示されない可能性が
   * Liberty サーバー・パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-  cf push```
+  cf push
+  ```
   
   Liberty ビルドパックの詳細については、[「Liberty for Java」](../starters/liberty/index.html#liberty)を参照してください。
   
@@ -73,7 +73,6 @@ logs appname --recent` を入力してもログが表示されない可能性が
 ```
   
 アプリケーションが Node.js ビルドパックによって認識されるようにするには、`package.json` ファイルがご使用の Node.js アプリケーション内にある必要があります。`app.js` ファイルはアプリケーションのエントリー・スクリプトで、`package.json` ファイル内に指定できます。以下は単純な `package.json` ファイルの例です。
-
 
   ```
   {
@@ -139,8 +138,7 @@ cf push -f appManifest.yml
 |options	|説明	|使用法または例|
 |:----------|:--------------|:---------------|
 |**ビルドパック (buildpack)**	|カスタム・ビルドパックの URL または名前。	|`buildpack:` *buildpack_URL*|
-|**disk_quota**	|アプリケーションに割り振るディスク割り当て量。デフォルト
-値は 1 G です。	|`disk_quota: 500M`|
+|**disk_quota**	|アプリケーションに割り振るディスク割り当て量。デフォルト値は 1 G です。	|`disk_quota: 500M`|
 |**ドメイン (domain)**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのドメイン・ネーム。	|`domain:` ng.bluemix.net|
 |**ホスト (host)**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのホスト名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。	|`host:` *host_name*|
 |**name**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーション名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。	|`name:` *appname*|
@@ -184,14 +182,8 @@ cf push -f appManifest.yml
 
 **cf env** コマンドを使用するか、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、実行中の {{site.data.keyword.Bluemix_notm}} アプリケーションの以下の環境変数を表示できます。
 
-  * アプリケーションに固有のユーザー定義の変数。アプリケーション固有の変数は、**cf set-env** コマンドを使用するか、[`manifest.yml` ファイル](#appmanifest)で以下のように値のペアを構成することで設定できます。
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * アプリケーションに固有のユーザー定義の変数。ユーザー定義変数をアプリに追加する方法については、『[ユーザー定義環境変数の追加](#ud_env){:new_window}』を参照してください。
+	  
   * サービス・インスタンスにアクセスするための接続情報を含む VCAP_SERVICES 変数。ご使用のアプリケーションが複数のサービスにバインドされている場合、VCAP_SERVICES 変数には各サービス・インスタンスの接続情報が含まれます。例えば次のようにします。
   
   ```
@@ -243,7 +235,8 @@ cf push -f appManifest.yml
 ユーザーは DEA およびビルドパックによって設定された環境変数にアクセスすることができます。
 
 <ul>
-<li>DEA によって定義された変数を以下に示します。<dl>
+<li>DEA によって定義された変数を以下に示します。
+  <dl>
   <dt><strong>HOME</strong></dt>
   <dd>デプロイ済みアプリケーションのルート・ディレクトリー。</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -323,7 +316,11 @@ cf push -f appManifest.yml
 
   </dl>
 </li>
-<li>ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} を参照してください。<li>Liberty ビルドパックによって定義された変数。<dl>
+<li>ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} を参照してください。
+
+    <li>Liberty ビルドパックによって定義された変数。
+	
+	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>アプリケーションを実行する Java SDK のロケーション。</dd>
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
@@ -336,7 +333,8 @@ cf push -f appManifest.yml
 	  <dd>実行中の Liberty プロファイルのサーバー・インスタンスのログ・ファイルや作業ディレクトリーなど、生成された出力のロケーション。</dd>
 	  </dl>
 </li>   
-<li>Node.js ビルドパックによって定義された変数。<dl>
+<li>Node.js ビルドパックによって定義された変数。
+	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>Node.js ランタイム環境のディレクトリー。</dd>
 	<dt><strong>CACHE_DIR</strong></dt>
@@ -353,7 +351,8 @@ cf push -f appManifest.yml
 ## アプリケーション・デプロイメントのカスタマイズ
 {: #customize_dep}
 
-アプリケーションのデプロイメント・タスクをカスタマイズすることができます。例えば、アプリケーションの開始コマンドを指定したり、アプリケーションの開始環境を構成したりすることができます。{:shortdesc}
+アプリケーションのデプロイメント・タスクをカスタマイズすることができます。例えば、アプリケーションの開始コマンドを指定したり、アプリケーションの開始環境を構成したりすることができます。
+{:shortdesc}
 
 ### 開始コマンドの指定
 
@@ -372,6 +371,33 @@ cf push -f appManifest.yml
   ```
   command: node app.js
 ```
+  
+  
+  
+### ユーザー定義環境変数の追加
+{: #ud_env}
+
+ユーザー定義環境変数はアプリケーションに固有です。ユーザー定義環境変数を実行中のアプリに追加する場合、以下のオプションがあります。
+
+  * {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用します。以下のステップを実行します。
+    1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリのタイルをクリックします。アプリの詳細ページが表示されます。
+	2. 左方のナビゲーション・ペインで、**「環境変数」**をクリックします。
+	3. **「ユーザー定義」**をクリックし、次に**「追加」**をクリックします。
+	4. 必須フィールドに入力し、次に**「保存」**をクリックします。
+  * cf コマンド・ライン・インターフェースを使用します。`cf set-env` コマンドを使用してユーザー定義変数を追加します。以下に例を示します。
+```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * `manifest.yml` ファイルを使用します。このファイル内に値の組を追加します。以下に例を示します。
+```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### 開始環境の構成
 
