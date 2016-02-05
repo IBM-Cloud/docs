@@ -4,7 +4,7 @@
 # 取得客戶支援
 {: #getting-customer-support}
 
-*前次更新：2015 年 12 月 4 日*
+*前次更新：2016 年 1 月 19 日*
 
 
 如果遇到 {{site.data.keyword.Bluemix}} 的問題，您有數個支援選項，例如透過 Stack Overflow 取得協助或開啟支援問題單。
@@ -12,21 +12,21 @@
 
 ## 取得協助
 {: #getting-help}
-若要取得協助，您可以移至「帳戶及支援」，也可以直接前往 Stack Overflow，在這裡您可以搜尋資訊或張貼問題。{:shortdesc}
+若要取得協助，您可以移至「帳戶和支援」，也可以直接前往 Stack Overflow，在這裡您可以搜尋資訊或張貼問題。{:shortdesc}
 
-### 使用帳戶及支援
-「帳戶及支援」特性可讓您檢查帳戶資訊、檢視狀態、透過通知掌握最新資訊、選取地區、選取及管理組織，以及登出。此外，您也可以取得協助並提供意見。
+### 使用帳戶和支援
+「帳戶和支援」特性可讓您檢查帳戶資訊、檢視狀態、透過通知掌握最新資訊、選取地區、選取及管理組織，以及登出。此外，您也可以取得協助並提供意見。
 
-若要開啟「帳戶及支援」，請登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，然後按一下「儀表板」右上方的**帳戶及支援**圖示 ![帳戶及支援](images/account_support.png)。
+若要開啟「帳戶和支援」，請登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，然後按一下頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)。
 
 按一下**取得協助**，以找出問題的答案。在顯示的頁面上，於搜尋欄位中鍵入您的問題。畫面上會顯示 {{site.data.keyword.Bluemix_notm}} 文件及 Stack Overflow 提供的答案。此頁面也會提供選項，將您的問題張貼至 Stack Overflow，或按一下**保持聯繫**來開啟問題單。
 
 
 ### 發問
-無論是直接存取還是透過「帳戶及支援」存取，Stack Overflow 都是一個網站，可充當讓使用者發問及回答問題的平台。{{site.data.keyword.Bluemix_notm}} 開發與支援團隊在 Stack Overflow 上很活躍，並且會追蹤以 **bluemix** 標示的問題。
+無論是直接存取還是透過「帳戶和支援」存取，Stack Overflow 都是一個網站，可充當讓使用者發問及回答問題的平台。{{site.data.keyword.Bluemix_notm}} 開發與支援團隊在 Stack Overflow 上很活躍，並且會追蹤以 **bluemix** 標示的問題。
 
 若要在 Stack Overflow 問問題，請選擇下列選項：
-  * 從「帳戶及支援」，按一下**取得協助**。在顯示的頁面上，在搜尋欄位鍵入您的問題以尋找答案。如果沒有傳回預期的答案，您可以按一下**貼文到 STACK OVERFLOW**，以張貼問題。
+  * 從「帳戶和支援」，按一下**取得協助**。在顯示的頁面上，在搜尋欄位鍵入您的問題以尋找答案。如果沒有傳回預期的答案，您可以按一下**貼文到 STACK OVERFLOW**，以張貼問題。
 
   * 或者，直接前往 [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}。
 
@@ -51,7 +51,7 @@
 
 您可以選擇下列其中一個選項來尋找「狀態」頁面：
 
-  * 從「帳戶及支援」：登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，按一下「儀表板」右上方的**帳戶及支援**圖示 ![帳戶及支援](./images/account_support.png)，然後按一下**狀態**。
+  * 從「帳戶和支援」：登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，按一下頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](./images/account_support.svg)，然後按一下**狀態**。
   * 直接在 [IBM {{site.data.keyword.Bluemix_notm}} - 系統狀態](https://status.eu-gb.bluemix.net/){: new_window}進行存取。
 
 
@@ -128,7 +128,7 @@ Success Portal](https://support.ibmcloud.com/){: new_window} 或[簡單的表單
 
 若要開啟支援問題單，請使用下列其中一種方法：
 
-  * 從「帳戶及支援」。登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，然後按一下「儀表板」右上方的**帳戶及支援**圖示 ![帳戶及支援](./images/account_support.png)。
+  * 從「帳戶和支援」。登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，按一下頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](./images/account_support.svg)。
 
      1. 首先，確定您按一下**狀態**來檢查 {{site.data.keyword.Bluemix_notm}} 狀態。
 	 2. 然後，如果問題不是由於運作中斷而產生，請按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
@@ -155,13 +155,39 @@ Success Portal](https://support.ibmcloud.com/){: new_window} 或[簡單的表單
 如果您是「{{site.data.keyword.Bluemix_notm}} 專用」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。然而，因為您可能沒有 IBM ID，所以會有一些不同的選項可以得到支援。
 
 
+<ul>
+<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 支援問題單</a>表單開啟新的問題單來聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。為 {{site.data.keyword.Bluemix_notm}} 地區欄位選取**專用**選項。
+<p>IBM 會在星期日晚上 10 點 (UTC) 到星期五午夜 12 點 (UTC) 監視表單的提交。</p>
+</li>
+<li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，則可以使用下列其中一種方法開啟支援問題單：
+<ul>
+<li>按一下**帳戶和支援**圖示 <img src="images/account_support.svg" alt="帳戶和支援" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
+<li>移至 <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>，然後輸入 IBM ID 和密碼。您的 IBM ID 會作為您的服務認證。在功能表上按一下 **Open a support ticket**。請務必為問題單指定適當的嚴重性，因為嚴重性會決定問題單的處理方式。</li>
+</ul>
+</li>
+<li>如果沒有 IBM ID，您可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
+<p>**附註**：您可以要求在「專用」環境中 {{site.data.keyword.Bluemix_notm}} 使用者介面的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p>
+</li>
+</ul>
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 本端」的支援中心聯絡
 {: #contacting-bluemix-support-local}
 
 如果您是「{{site.data.keyword.Bluemix_notm}} 本端」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。然而，因為您可能沒有 IBM ID，所以會有一些不同的選項可以得到支援。
 
-
+<ul>
+<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 支援問題單</a>表單開啟新的問題單來聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。<p>IBM 會在星期日晚上 10 點 (UTC) 到星期五午夜 12 點 (UTC) 監視表單的提交。</p>
+</li>
+<li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，則可以使用下列其中一種方法開啟支援問題單：
+<ul>
+<li>按一下**帳戶和支援**圖示 <img src="images/account_support.svg" alt="帳戶和支援" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
+<li>移至 <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>，然後輸入 IBM ID 和密碼。您的 IBM ID 會作為您的服務認證。在功能表上按一下 **Open a support ticket**。請務必為問題單指定適當的嚴重性，因為嚴重性會決定問題單的處理方式。</li>
+</ul>
+</li>
+<li>如果沒有 IBM ID，您可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
+<p>**附註**：您可以要求在「本端」環境中 {{site.data.keyword.Bluemix_notm}} 使用者介面的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p>
+</li>
+</ul>
 
 ### 支援問題單嚴重性
 

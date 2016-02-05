@@ -182,14 +182,8 @@ cf push -f appManifest.yml
 
 您可以使用 **cf env** 指令或從 {{site.data.keyword.Bluemix_notm}} 使用者介面，檢視執行中 {{site.data.keyword.Bluemix_notm}} 應用程式的下列環境變數：
 
-  * 應用程式特有的使用者定義變數。您可以設定應用程式特有變數，方法是使用 **cf set-env** 指令，或在 [`manifest.yml` 檔案](#appmanifest)中如下所示配置值配對：
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * 應用程式特有的使用者定義變數。如需如何將使用者定義的變數新增至應用程式的相關資訊，請參閱[新增使用者定義的環境變數](#ud_env){:new_window}。
+	  
   * VCAP_SERVICES 變數包含可存取服務實例的連線資訊。如果您的應用程式連結至多個服務，則 VCAP_SERVICES 變數會包括每一個服務實例的連線資訊。例如：
   
   ```
@@ -377,6 +371,34 @@ cf push -f appManifest.yml
   ```
   command: node app.js
   ```
+  
+  
+  
+### 新增使用者定義的環境變數
+{: #ud_env}
+
+使用者定義的環境變數是應用程式的特定變數。您有下列選項，可將使用者定義的環境變數新增至執行中的應用程式：
+
+  * 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面。請完成下列步驟：
+
+    1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，按一下應用程式磚。即會顯示「應用程式詳細資料」頁面。
+	2. 在左導覽窗格中，按一下**環境變數**。
+	3. 按一下**使用者定義**，然後按一下**新增**。
+	4. 填寫必要欄位，然後按一下**儲存**。
+  * 使用 cf 指令行介面。使用 `cf set-env` 指令新增使用者定義的變數。例如：
+  ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * 使用 `manifest.yml` 檔案。在該檔案中新增值配對。例如：
+  ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### 配置啟動環境
 

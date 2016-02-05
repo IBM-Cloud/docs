@@ -17,7 +17,7 @@
 
 您可以在應用程式的 URL 中使用自訂網域，而非預設 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
 
-網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，您必須在 {{site.data.keyword.Bluemix_notm}} 中建立組織的自訂網域，然後配置 DNS 伺服器或編輯本端 `hosts` 檔案，以將該自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
+網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域，然後將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
 
 **附註：**您可以使用 **nslookup** 指令，來取得 {{site.data.keyword.Bluemix_notm}} 系統網域的公用 IP 位址。例如，在命令提示字元中輸入 `nslookup mybluemix.net`。
 

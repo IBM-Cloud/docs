@@ -3,7 +3,7 @@
 # 시범
 {: #experimental}
 
-*마지막 업데이트 날짜: 2015년 11월 19일*
+*마지막 업데이트 날짜: 2015년 12월 9일*
 
 시범 서비스를 사용해보려면 {{site.data.keyword.Bluemix_notm}} 랩 카탈로그에서 체크아웃하십시오.
 {: shortdesc} 

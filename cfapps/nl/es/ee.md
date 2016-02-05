@@ -70,7 +70,6 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
    ]
 }
 ```
-{:codeblock}
 
 **Nota:** Esta variable de entorno es la serialización de un objeto JSON con una entrada para cada instancia de servicio al que la app está enlazada. La cantidad y el tipo de datos que proporciona cada instancia de servicio dependen del servicio. Cuando la app no utiliza ningún servicio, VCAP_SERVICES es un objeto JSON vacío.
 Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
@@ -122,7 +121,7 @@ Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
   6. Ahora puede acceder a la app especificando el siguiente URL de app en un navegador:
   ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 También puede elegir otras herramientas para crear la
 app, como por ejemplo herramientas Eclipse. Para obtener más información, consulte la página Empezar a escribir código de la app en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
@@ -185,7 +184,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **Nota:** Tal como muestra el código de ejemplo, para conectarse a una instancia de servicio de {{site.data.keyword.cloudant}}, primero puede comprobar si la variable de entorno VCAP_SERVICES existe. Si existe, la app puede utilizar las propiedades de la variable cloudant para acceder a la base de datos. Sin embargo, si la variable de entorno VCAP_SERVICES no está presente, se utiliza la instancia de servicio {{site.data.keyword.cloudant}} local con los valores predeterminados que se proporcionan.
   
@@ -212,7 +211,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Opcional:** Desenlazar o suprimir una instancia de servicio.
   

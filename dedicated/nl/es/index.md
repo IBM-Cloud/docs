@@ -4,9 +4,9 @@
 #{{site.data.keyword.Bluemix_notm}} dedicado
 {: #dedicated}
 
-*Última actualización: 8 de diciembre de 2015*
+*Última actualización: 18 de enero de 2016*
 
-{{site.data.keyword.Bluemix}} es una plataforma de estándares abiertos basada en la nube para crear, ejecutar y gestionar apps. {{site.data.keyword.Bluemix_notm}} dedicado le ofrece la potencia y simplicidad de {{site.data.keyword.Bluemix_notm}} en su propio entorno SoftLayer dedicado, que se conecta de forma segura tanto al entorno público de {{site.data.keyword.Bluemix_notm}} como a su propia red.
+{{site.data.keyword.Bluemix}} es una plataforma de estándares abiertos basada en la nube para crear, ejecutar y gestionar apps. Con {{site.data.keyword.Bluemix_notm}} Dedicado, obtendrá la potencia y la simplicidad de {{site.data.keyword.Bluemix_notm}}&mdash; en su propio entorno dedicado de SoftLayer, que se conecta de forma segura tanto al entorno público de {{site.data.keyword.Bluemix_notm}} como a su propia red.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} dedicado incluye un catálogo privado que muestra los servicios dedicados que tiene disponibles de forma exclusiva. También incluye servicios adicionales sindicados disponibles que puede utilizar desde {{site.data.keyword.Bluemix_notm}} público.
@@ -19,8 +19,7 @@
 
 Los entornos de {{site.data.keyword.Bluemix_notm}} dedicado tiene los mismos estándares de seguridad que {{site.data.keyword.Bluemix_notm}} público en la infraestructura y en la seguridad física y operativa. Sin embargo, el acceso de desarrollador a {{site.data.keyword.Bluemix_notm}} dedicado está controlado por políticas de LDAP, que las pueden configurar el equipo de {{site.data.keyword.Bluemix_notm}} al configurar el entorno. En el entorno dedicado, puede gestionar los roles y permisos de usuarios. Consulte [Gestión de usuarios y permisos](../admin/index.html#oc_useradmin) para ver más detalles.
 
-{{site.data.keyword.Bluemix_notm}} dedicado se suministra con todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}} incluidos y
-128 GB de memoria de app.
+{{site.data.keyword.Bluemix_notm}} dedicado se suministra con todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}} incluidos y 128 GB de memoria de app.
 
 Además, hay un conjunto de servicios incluidos de forma predeterminada y servicios opcionales que puede elegir para su instancia dedicada.
 
@@ -28,14 +27,13 @@ Además, hay un conjunto de servicios incluidos de forma predeterminada y servic
 |-----------------|-------------------|-------------------|
 | Incluido | {{site.data.keyword.autoscaling}} | Aumente o reduzca de forma dinámica la capacidad de cálculo de la app en función de políticas. Con este servicio, dispone de un uso ilimitado del entorno {{site.data.keyword.Bluemix_notm}} dedicado. |
 | Incluido | {{site.data.keyword.datacshort}} | Este servicio proporciona una cuadrícula de datos en memoria que da soporte a casos de ejemplo de memoria caché distribuidos para las apps. Incluye 50 GB de memoria caché en memoria. |
-| Incluido | {{site.data.keyword.cloudant}} | La base de datos NoSQL de IBM
-que ofrece una capa de datos JSON de alto rendimiento (compatible
-con CouchDB). Incluye 1,6 TB y un máximo de 3.000 solicitudes de API por segundo. |
-| Opcional | {{site.data.keyword.sqldb}} | La base de datos de IBM {{site.data.keyword.sqldbfull}} para {{site.data.keyword.Bluemix_notm}} añade una base de datos relacional con todas sus funciones a la app. {{site.data.keyword.sqldb}} ofrece una base de datos gestionada para manejar las exigentes cargas de trabajo transaccionales y web de la empresa. |
-| Opcional | {{site.data.keyword.mql}} | IBM {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} es un servicio de mensajería basado en la nube que proporciona mensajería flexible y fácil de usar para apps {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.mql}} proporciona una solución fácil de administrar para la mensajería. Puede utilizar {{site.data.keyword.mql}} para aumentar el nivel de respuesta y de escalado de sus apps y puede compartir y descargar trabajo entre apps con una sencilla y potente API. |
+| Opcional | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} es un servicio de mensajería basado en la nube que proporciona mensajería flexible y fácil de usar para apps {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.mql}} proporciona una solución fácil de administrar para la mensajería. Puede utilizar {{site.data.keyword.mql}} para aumentar el nivel de respuesta y de escalado de sus apps y puede compartir y descargar trabajo entre apps con una sencilla y potente API. |
 | Opcional | {{site.data.keyword.dashdbshort}} | Utilice dashDB para almacenar datos relacionales, que incluye tipos especiales como datos geoespaciales. A continuación, analice esos datos con SQL o análisis integrados avanzados como análisis predictivo y minería de datos, análisis con R y análisis geoespaciales. |
+|Opcional | {{site.data.keyword.APIM}} | Utilice el servicio de {{site.data.keyword.APIMfull}} para componer, gestionar y socializar API. Puede importar API con recursos utilizando un URL de proxy o ensamblando datos de fuentes de datos HTTP. La ventaja de utilizar el servicio de {{site.data.keyword.APIM}} es que puede gestionar cómo se utilizan las API. |
+|Opcional | {{site.data.keyword.SecureGateway}} | El servicio {{site.data.keyword.SecureGateway}} proporciona una forma segura para conectar las aplicaciones de {{site.data.keyword.Bluemix_notm}} a ubicaciones remotas locales o en la nube.  |
 
 *Tabla 1. Servicios dedicados*
+
 
 ##Configuración de {{site.data.keyword.Bluemix_notm}} dedicado
 {: #setupdedicated}
@@ -47,15 +45,10 @@ IBM le proporciona acceso a {{site.data.keyword.Bluemix_notm}} dedicado mediante
 Para configurar su versión privada de {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
-<li>Póngase en contacto con el representante designado de la cuenta de IBM o con el equipo de <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> para empezar a trabajar.</li>
-<li>El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.
-	<ol type="a">
-	<li>Trabaje con IBM, a cargo del cliente, para configurar la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.
-	El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.</li>
-	<li>Identifique plazos límite para cada fase de la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.</li>
-	</ol>
-	</li>
-<li>Seleccione la <a href="http://www.softlayer.com/data-centers" target="_blank">ubicación del centro de datos SoftLayer</a> para su instancia dedicada. A partir de aquí se crea la plataforma dedicada y la cuenta. Para la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia dedicada. Para obtener más información sobre los roles que asigne, consulte Roles y responsabilidades de <a href="index.html#rolesresponsibilities" target="_blank"> dedicado y {{site.data.keyword.Bluemix_notm}}</a>.
+<li>Póngase en contacto con el representante designado de la cuenta de IBM o con el contacto de <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank"> {{site.data.keyword.Bluemix_notm}}</a> para empezar a trabajar.</li>
+<li>Trabaje con IBM, a cargo del cliente, para configurar la instancia de {{site.data.keyword.Bluemix_notm}} dedicado. El cargo mensual se basa en los servicios dedicados que desee utilizar, más una suscripción a todos los servicios públicos de {{site.data.keyword.Bluemix_notm}}. Recibirá una factura por todo lo que utilice por encima del acuerdo de suscripción.</li>
+<li>Identifique plazos límite para cada fase de la configuración de la instancia de {{site.data.keyword.Bluemix_notm}} dedicado. Para obtener información sobre cada fase y las tareas implicadas, consulte <a href="index.html#rolesresponsibilities" target="_blank">Roles y responsabilidades de {{site.data.keyword.Bluemix_notm}} dedicados</a>.</li>
+<li>Seleccione la <a href="http://www.softlayer.com/data-centers" target="_blank">ubicación del centro de datos SoftLayer</a> para su instancia dedicada. A partir de aquí se crea la plataforma dedicada y la cuenta. Para la cuenta, identifique las personas de la organización para los roles necesarios para configurar y activar la instancia dedicada. Para obtener información sobre los roles que asigne, consulte <a href="index.html#rolesresponsibilities" target="_blank">Roles y responsabilidades de {{site.data.keyword.Bluemix_notm}} dedicados</a>.
 </li>
 <li>Defina y establezca la conectividad de red entre su red corporativa y la instancia de {{site.data.keyword.Bluemix_notm}} dedicado.
 	<ol type="a">
@@ -65,13 +58,32 @@ Para configurar su versión privada de {{site.data.keyword.Bluemix_notm}}:
 	</ol>
 </li>
 <li>Identifique y asigne roles para el equipo de administración del entorno.
-	<ol type="a">
+<ol type="a">
 	<li>IBM configura el acceso a la red y LDAP en función de lo que proporcione el usuario. Se ofrece acceso de administración a los contactos que designe el cliente. También debe designar un contacto para soporte y facturación.</li>
-	<li>IBM configura un catálogo sindicado en el entorno dedicado para mostrar los servicios dedicados y muchos de los servicios públicos de {{site.data.keyword.Bluemix_notm}}.</li>
+	<li>IBM configura un catálogo sindicado en el entorno dedicado para mostrar los servicios dedicados. El catálogo sindicado incluye servicios adicionales sindicados y disponibles para que los utilice el usuario a partir de {{site.data.keyword.Bluemix_notm}} público. Tiene la opción de decidir qué servicios públicos cumplen los requisitos de su empresa en función de sus criterios de privacidad de datos y de seguridad.</li>
 	<li>El cliente debe validar la configuración de la red y del cortafuegos, además del punto final LDAP y el acceso.</li>
 	</ol>
 </li>
 </ol>
+
+Puede prever un proceso similar a la siguiente lista para el despliegue y la configuración iniciales de su entorno. Para obtener detalles sobre la persona responsable de cada tarea, consulte [Roles y responsabilidades](../dedicated/index.html#rolesresponsibilities).
+
+<ol>
+<li>Se selecciona el centro de datos a utilizar para que aloje la instancia dedicada. Para obtener información sobre las opciones del centro de datos, consulte <a href="http://www.softlayer.com/data-centers" target="_blank">Ubicación del centro de datos SoftLayer</a>.</li>
+<li>Debe especificar los nombres de dominio para el despliegue, y los ID que desea utilizar. Obtendrá tres dominios al configurar la instancia de {{site.data.keyword.Bluemix_notm}}. Seleccione el prefijo para <code>*mycompany*.*region*.bluemix.net</code> y <code>*mycompany*.*region*.mybluemix.net</code>. Y puede elegir el nombre completo del tercer dominio.<br />
+<p>Puede elegir tantos dominios personalizados como desee. Sin embargo, el usuario es responsable de los certificados para los dominios personalizados. Para obtener información sobre cómo crear el dominio personalizado, consulte <a href="../manageapps/updapps.html#domain">Creación y utilización de un dominio personalizado</a>.</p></li>
+<li>Debe identificar un propietario para la cuenta pública que se utiliza para representar la empresa en {{site.data.keyword.Bluemix_notm}} público. IBM utiliza esta cuenta para realizar el seguimiento del uso de los servicios sindicados.</li>
+<li>Seleccione el tipo de conexión segura en el centro de datos. Puede seleccionar desde SoftLayer VPN, SoftLayer Direct Link y AT&T Net Bond.</li>
+<li>Decida si habrá acceso al entorno dedicado desde la Internet pública.</li>
+<li>Seleccione el tipo de autenticación que se utilizará. Puede seleccionar desde el ID de IBM o Active Directory. Para obtener información sobre cómo utilizar y registrarse para un ID de IBM, consulte la página <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Ayuda y preguntas frecuentes</a>.
+</li>
+<li>Identifique y asigne roles para el equipo de administración del entorno. Para obtener información sobre los roles que debe asignar, consulte <a href="index.html#rolesresponsibilities" target="_blank">Roles y responsabilidades de {{site.data.keyword.Bluemix_notm}} dedicados</a>.</li>
+<li>IBM despliega la plataforma principal que incluye los tipos de ejecución elásticos, la consola, la función de administración y la supervisión.</li>
+<li>IBM configura el acceso administrativo al entorno.</li>
+<li>Puede empezar utilizando la instancia dedicada que está supervisada por el equipo de operaciones de IBM para responder a las alertas.</li>
+</ol>
+
+Una vez que se configure la instancia de {{site.data.keyword.Bluemix_notm}}, puede supervisar y gestionar la instancia de {{site.data.keyword.Bluemix_notm}} utilizando la página Administración. Para obtener más información, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../administer/index.html#mng). Para obtener información sobre las actualizaciones y el mantenimiento, consulte [Mantenimiento de la instancia dedicada](index.html#maintaindedicated).
 
 ##Roles y responsabilidades
 {: #rolesresponsibilities}
@@ -84,7 +96,7 @@ La lista siguiente muestra los roles y responsabilidades de cliente que se asign
 
 <dl>
 <dt>**Contacto de suministro**</dt>
-<dd>Trabaja con el representante de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} dedicado, incluida la identificación de las personas adecuadas de la organización que trabajarán en cualquier aspecto del proyecto. La persona asignada a este rol supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia dedicada.</dd>
+<dd>Trabaja con el representante de IBM en el establecimiento del entorno de {{site.data.keyword.Bluemix_notm}} dedicado, incluida la identificación de las personas adecuadas de la organización que trabajarán en cualquier aspecto del proyecto. La persona asignada a este rol toma un rol de gestión de proyectos y supervisa la selección del patrón, las formas comerciales y la disposición de acceso a los recursos del cliente. El contacto de suministro es el contacto general para configurar la instancia dedicada y para rastrear el proceso del despliegue.</dd>
 <dt>**Responsable de suministro**</dt>
 <dd>Trabaja con el representante de IBM para seleccionar una topología y opción de despliegue que se ajuste a sus requisitos de seguridad. La persona asignada a este rol trabaja con el asesor de suministro de IBM para determinar qué patrones de despliegue consiguen los objetivos y las metas de conformidad.</dd>
 <dt>**Especialista en redes**</dt>
@@ -243,7 +255,7 @@ De forma predeterminada, {{site.data.keyword.Bluemix_notm}} público se desplieg
 Para efectuar un despliegue en una segunda ubicación o en varias ubicaciones, debe seguir un proceso similar al que siguió para habilitar la ubicación geográfica primaria:
 
 1. Habilite un nuevo entorno dedicado para alojar instancias adicionales de las apps. Para crear un nuevo entorno, póngase en contacto con el equipo de ventas de IBM para iniciar el proceso. Para obtener más información sobre la configuración de una instancia dedicada, consulte [Configuración de {{site.data.keyword.Bluemix_notm}} dedicado](../dedicated/index.html#setupdedicated). Debe iniciar sesión por separado para acceder a cada entorno. Cada ubicación física de los entornos alojados debe estar a una distancia mínima de 200 km de la ubicación original para garantizar la disponibilidad.
-2. Obtenga el nombre de dominio exclusivo en el que se alojará la nueva app desplegada. Por ejemplo, si el dominio original es *mycompany.east.bluemix.net*, puede crear un nuevo entorno local con un nuevo dominio como *mycompany.west.bluemix.net* y desplegarlo en el nuevo dominio.
+2. Obtenga el nombre de dominio exclusivo en el que se alojará la nueva app desplegada.  Por ejemplo, si el dominio original es *mycompany.east.bluemix.net*, puede crear un nuevo entorno local con un nuevo dominio como *mycompany.west.bluemix.net* y desplegarlo en el nuevo dominio.
 3. Cada vez que despliegue la app original, también la desplegará en la nueva ubicación. Para obtener más información sobre el despliegue, consulte [Carga de una app](../starters/upload_app.html).
 
 
@@ -266,7 +278,7 @@ Puede elegir un equilibrador de carga global como Akamai o Dyn. Para obtener má
 
 Además de habilitar una disponibilidad continua, {{site.data.keyword.Bluemix_notm}} también proporciona alta disponibilidad en la plataforma mediante tecnologías integradas en Cloud Foundry, Docker y otros componentes.
 
-Estas tecnologías incluyen: 
+Estas tecnologías incluyen:
 
 <dl>
 <dt>Escalabilidad en Cloud Foundry</dt>
@@ -281,7 +293,7 @@ Estas tecnologías incluyen:
 ##Restauración de la instancia dedicada
 {: #restorededicated}
 
-Se hace una copia de seguridad de forma regular de los valores, los metadatos y las configuraciones de {{site.data.keyword.Bluemix_notm}} dedicado para prepararse ante cualquier interrupción no planificada del entorno.Los datos de cuya copia de seguridad es responsable incluyen datos de app, datos de servicios de bases de datos en la nube y almacenes de objetos.
+Se hace una copia de seguridad de forma regular de los valores, los metadatos y las configuraciones de {{site.data.keyword.Bluemix_notm}} dedicado para prepararse ante cualquier interrupción no planificada del entorno. Los datos de cuya copia de seguridad es responsable incluyen datos de app, datos de servicios de bases de datos en la nube y almacenes de objetos.
 
 Como parte de la copia de seguridad de los datos, que incluye metadatos del sistema y configuraciones, IBM lleva a cabo las tareas siguientes:
 

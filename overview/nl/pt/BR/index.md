@@ -4,7 +4,7 @@
 # Visão geral do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última atualização: 20 de novembro de 2015*
+*Última atualização: 18 de janeiro de 2016*
 
 {{site.data.keyword.Bluemix}} é a plataforma em nuvem
 aberta da {{site.data.keyword.IBM}} que fornece aos
@@ -69,10 +69,7 @@ Em geral, você não precisa se preocupar com o sistema
 operacional e as camadas de infraestrutura ao executar apps no {{site.data.keyword.Bluemix_notm}}. Camadas
 como sistemas de arquivos raiz e componentes de middleware são abstraídas para que você possa focar em seu
 código do aplicativo. No entanto, é possível saber mais sobre estas camadas se precisar de informações específicas sobre onde seu
-app está sendo executado. Consulte
-[Visualizando camadas
-de infraestrutura do
-{{site.data.keyword.Bluemix_notm}}](../cli/viewinfra.html#viewinfra) para obter detalhes. 
+app está sendo executado. Veja [Visualizando camadas de infraestrutura do {{site.data.keyword.Bluemix_notm}}](../cli/vcapsvc.html#viewinfra) para obter detalhes. 
 
 ## Arquitetura do {{site.data.keyword.Bluemix_notm}}
 {: #ov_arch}
@@ -116,12 +113,12 @@ aplicativo multiregion](images/multi-region.png)
 
 *Figura 2. Implementação do aplicativo multiregion*
 
-### {{site.data.keyword.Bluemix_notm}} Dedicado
+### {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-O {{site.data.keyword.Bluemix_notm}} Dedicado
+O {{site.data.keyword.Bluemix_notm}} Dedicated
 é o seu próprio ambiente SoftLayer exclusivo que é seguramente conectado a ambos o {{site.data.keyword.Bluemix_notm}} público e sua
-própria rede. O {{site.data.keyword.Bluemix_notm}} Dedicado
+própria rede. O {{site.data.keyword.Bluemix_notm}} Dedicated
 é colocado em sua rede através de uma VPN ou uma conexão de rede direta. Seu hardware com locatário único pode ser configurado em qualquer datacenter SoftLayer ao redor
 do mundo. A {{site.data.keyword.IBM_notm}} gerencia a
 plataforma dedicada e os serviços dedicados, para que você possa se concentrar na construção de apps customizados. Além
@@ -170,6 +167,10 @@ Local](../local/index.html#local).
 ![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
 
 *Figura 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+A máquina virtual de concepção é executada em uma rede por trás do firewall do cliente em uma rede que possui conectividade de saída com o centro de operações IBM por meio de Retransmissão. Os componentes de plataforma e os serviços principais do {{site.data.keyword.Bluemix_notm}} são executados em uma rede local virtual (VLAN) privada e isolada. O {{site.data.keyword.Bluemix_notm}} Local usa uma VLAN para a sub-rede privada. O uso de uma sub-rede privada em vez de uma VLAN pública é mais seguro e pode ajudar a evitar problemas de roteamento. 
+
+Os dispositivos do DataPower fornecem acesso aos domínios de aplicativos {{site.data.keyword.Bluemix_notm}}. Esses dispositivos conectam à rede que é acessível a partir de sua intranet. Os usuários que estão implementando apps e serviços obtêm acesso a partir da rede que é acessível a partir de sua intranet. Deve-se fornecer sete endereços IP que tenham acesso à Internet de saída. Os dispositivos do DataPower são roteados a partir desses endereços IP do cliente para a implementação isolada do {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre as especificações de rede e os requisitos de infraestrutura, veja [Requisitos de infraestrutura do {{site.data.keyword.Bluemix_notm}} Local](../local/index.html#localinfra).
 
 ### Como o {{site.data.keyword.Bluemix_notm}} funciona
 {: #howwork}
@@ -310,12 +311,13 @@ as regiões e os prefixos de regiões a seguir.
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nome da região** | **Prefixo da região** | **Terminal
+| **Nome da região** | **Localização geográfica
+** | **Prefixo da região** | **Terminal
 de API cf** | **Console da interface com o usuário** |       
-|-----------------|-------------------|---------------------|----------------|
-| Região Sul dos EUA | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Região do Reino Unido na Europa | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Região de Sydney na Austrália | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| Região Sul dos EUA | Dallas, EUA | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| Região do Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Região de Sydney | Sydney, Austrália | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tabela 1. Lista
@@ -428,7 +430,7 @@ servidor usando o modelo de app móvel e o SDK.
 {: #runtimes}
 
 Um *tempo de execução* é o conjunto
-de recursos usado para executar um aplicativo. O {{site.data.keyword.Bluemix_notm}} fornece
+de recursos usado para executar um app. O {{site.data.keyword.Bluemix_notm}} fornece
 ambientes de tempo de execução como contêineres para diferentes tipos de apps. Os ambientes de tempo de execução são integrados como buildpacks ao {{site.data.keyword.Bluemix_notm}}
 e são configurados automaticamente para uso.
 
@@ -577,7 +579,7 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 | Chinês Simplificado | zh_CN |
 | Chinês Tradicional | zh_TW |
 
-*Tabela 3. Idiomas nacionais suportados e códigos de idioma*
+*Tabela 2. Idiomas nacionais suportados e códigos de idioma*
 
 # rellinks
 ## general 
@@ -588,8 +590,7 @@ do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support
 * [Problemas
 conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
-* [Folha
-de precificação do {{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} Folha de precificação](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud
 Foundry](http://cloudfoundry.org/)

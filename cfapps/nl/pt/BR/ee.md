@@ -6,7 +6,7 @@
 # Cenário: Desenvolvimento de ponta a ponta
 {: #ee}
 
-*Última atualização: 6 de novembro de 2015* 
+*Última atualização: 6 de novembro de 2015*
 
 É possível usar a interface com o usuário, a plataforma e uma
 seleção de ferramentas do {{site.data.keyword.Bluemix}} ao construir, executar
@@ -102,7 +102,6 @@ Clique em **Variáveis de ambiente** na página Visão geral do app para ver a l
    ]
 }
 ```
-{:codeblock}
 
 **Nota:** essa variável de ambiente é a serialização de um objeto JSON com uma entrada para cada instância de serviço a que o app está ligado. A quantia e o tipo de
 dados que cada instância de serviço fornece são específicos do serviço. Quando seu app não usar nenhum serviço, VCAP_SERVICES será um objeto JSON vazio. Essa variável de ambiente será usada somente quando
@@ -165,7 +164,7 @@ você estará pronto para implementar o app novamente no {{site.data.keyword.Blu
 a seguir em um navegador:
   ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 Também é possível escolher outras ferramentas para construir o app, como
 as ferramentas Eclipse. Para obter mais informações, consulte a página Codificação inicial do app na interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
@@ -244,7 +243,7 @@ informações, conforme a seguir:
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **Nota:** conforme visto no código de amostra, para se conectar a uma instância de serviço {{site.data.keyword.cloudant}}, é possível verificar se a variável de ambiente VCAP_SERVICES existe primeiro. Se existir, o aplicativo poderá usar as propriedades da variável do cloudant para acessar o banco de dados. No entanto, se a variável de ambiente VCAP_SERVICES não estiver presente, a instância de serviço local do {{site.data.keyword.cloudant}} será usada com os valores padrão fornecidos.
   
@@ -273,7 +272,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Opcional:** desvincular ou excluir uma instância de serviço.
   

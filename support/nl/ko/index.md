@@ -4,7 +4,7 @@
 # 고객 지원 받기
 {: #getting-customer-support}
 
-*마지막 업데이트 날짜: 2015년 12월 4일*
+*마지막 업데이트 날짜: 2016년 1월 19일*
 
 
 {{site.data.keyword.Bluemix}}에 문제점이 발생하면
@@ -19,7 +19,7 @@ Stack Overflow를 통해 도움을 받거나 지원 티켓을 여는 등 여러 
 ### 계정 및 지원 사용
 계정 및 지원에서는 계정 정보 확인, 상태 보기, 최신 알림 확인, 지역 선택, 조직 선택 및 관리, 로그아웃을 수행할 수 있습니다. 또한 도움을 받고 피드백을 제공할 수 있습니다.
 
-계정 및 지원을 열려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인한 다음 대시보드 오른쪽 상단의 **계정 및 지원** 아이콘 ![계정 및 지원](images/account_support.png)을 클릭하십시오.
+계정 및 지원을 열려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인한 다음 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](images/account_support.svg)을 클릭하십시오.
 
 질문에 대한 응답을 찾으려면 **도움 받기**를 클릭하십시오. 표시되는 페이지에서 검색 필드에 질문을 입력하십시오. {{site.data.keyword.Bluemix_notm}} 문서 및 스택 오버플로우의 응답이 표시됩니다. 표시되는 페이지에는 스택 오버플로우에 질문을 게시하거나 **문의**를 클릭하여 티켓을 열 수 있는 옵션도 제공됩니다.
 
@@ -58,7 +58,7 @@ Stack Overflow를 통해 도움을 받거나 지원 티켓을 여는 등 여러 
 
 다음 옵션 중 하나를 선택하여 상태 페이지를 찾을 수 있습니다.
 
-  * 계정 및 지원에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인한 다음 대시보드 오른쪽 상단의 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.png)을 클릭하고 **상태**를 클릭합니다.
+  * 계정 및 지원에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인한 다음 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.svg)을 클릭하고 **상태**를 클릭합니다.
   * [IBM {{site.data.keyword.Bluemix_notm}} - 시스템 상태](https://status.eu-gb.bluemix.net/){: new_window}에서 직접 액세스합니다.
 
 
@@ -144,7 +144,7 @@ Success Portal](https://support.ibmcloud.com/){: new_window} 또는 [단순 양�
 지원 티켓을 열려면 다음 방법 중 하나를
 사용하십시오.
 
-  * 계정 및 지원에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인하고 대시보드 오른쪽 상단의 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.png)을 클릭하십시오.
+  * 계정 및 지원에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인하고 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](./images/account_support.svg)을 클릭하십시오.
 
      1. 먼저 **상태**를 클릭하여 {{site.data.keyword.Bluemix_notm}} 상태를 확인하십시오.
 	 2. 그런 다음 정전으로 인한 문제점이 아닌 경우 **도움 받기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. 양식을 채워 필요한 기술 지원을 표시하십시오.
@@ -172,13 +172,48 @@ Dedicated에 대한 지원 요청
 {{site.data.keyword.Bluemix_notm}} Dedicated 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
 
 
+<ul>
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 지원 티켓</a> 양식을 사용해 새 티켓을 열어
+지원 센터에 연락합니다. 이 양식에는 이메일 주소나 IBM ID를 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 지역 필드에 대해 **Dedicated** 옵션을 선택하십시오.
+<p>일요일 오후 10:00(UTC 기준)에서 금요일 자정 12시(UTC 기준)까지 양식 제출이 모니터링됩니다.</p>
+</li>
+<li>IBM ID가 있고 {{site.data.keyword.Bluemix_notm}} Public 환경에 액세스할 수 있는 경우 다음 방법 중 하나를 사용하여 지원 티켓을 여는 것이 가능합니다.
+<ul>
+<li>**계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭하고 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
+<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>로 이동하여
+IBM ID 및 비밀번호를 입력하십시오. IBM ID가 사용자의 서비스 신임 정보로 사용됩니다. 메뉴에서 **지원 티켓 열기**를 클릭하십시오. 심각도에 따라 티켓 처리 방식이 결정되므로
+티켓에 대해 적합한 심각도를
+지정했는지 확인하십시오.</li>
+</ul>
+</li>
+<li>IBM ID가 없는 경우, 조직 내 ID가 있는 다른 사용자 또는 IBM 담당자에게 문의할 수 있습니다.
+<p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 Dedicated 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p>
+</li>
+</ul>
 
 ### {{site.data.keyword.Bluemix_notm}} Local에 대한 지원 요청
 {: #contacting-bluemix-support-local}
 
 {{site.data.keyword.Bluemix_notm}} Local 고객의 경우 IBM {{site.data.keyword.Bluemix_notm}} 지원 팀에서 지원합니다. 하지만 IBM ID가 없을 수 있으므로 지원을 받을 수 있는 몇 가지 다른 옵션이 주어집니다.
 
-
+<ul>
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 지원 티켓</a> 양식을 사용해 새 티켓을 열어
+지원 센터에 연락합니다. 이 양식에는 이메일 주소나 IBM ID를 사용할 수 있습니다.
+<p>일요일 오후 10:00(UTC 기준)에서 금요일 자정 12시(UTC 기준)까지 양식 제출이 모니터링됩니다.</p>
+</li>
+<li>IBM ID가 있고 {{site.data.keyword.Bluemix_notm}} Public 환경에 액세스할 수 있는 경우 다음 방법 중 하나를 사용하여 지원 티켓을 여는 것이 가능합니다.
+<ul>
+<li>**계정 및 지원** 아이콘 <img src="images/account_support.svg" alt="계정 및 지원" />을 클릭하고 **도움말 가져오기**를 클릭하십시오. 표시되는 페이지에서 **문의**를 클릭하십시오. </li>
+<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>로 이동하여
+IBM ID 및 비밀번호를 입력하십시오. IBM ID가 사용자의 서비스 신임 정보로 사용됩니다. 메뉴에서 **지원 티켓 열기**를 클릭하십시오. 심각도에 따라 티켓 처리 방식이 결정되므로
+티켓에 대해 적합한 심각도를
+지정했는지 확인하십시오.</li>
+</ul>
+</li>
+<li>IBM ID가 없는 경우, 조직 내 ID가 있는 다른 사용자 또는 IBM 담당자에게 문의할 수 있습니다.
+<p>**참고**: 요청 시 지원 티켓의 담당자 역할을 하는 조직의 사용자 목록이 Local 환경에서 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 **지원** 페이지에 표시될 수 있습니다.</p>
+</li>
+</ul>
 
 ### 지원 티켓 심각도
 
@@ -193,9 +228,7 @@ Dedicated에 대한 지원 요청
 심각도 4 | <ul><li>사소한 애플리케이션 문제</li><li>질문 방법</li><li>개선사항</li></ul>
 *표 1. 심각도 예제*
 
-심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안
-모니터링됩니다. 다른 티켓은 정규 업무시간 동안, 평일 UTC 오전 7:00시부터 UTC 오전 1:00까지
-처리됩니다.
+심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안 모니터링됩니다. 다른 티켓은 평일 UTC 오전 7:00시부터 UTC 오전 1:00시까지 정규 업무시간 중에 처리됩니다.
 
 
 ## 진단 정보 수집

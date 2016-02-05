@@ -6,10 +6,10 @@
 
 #Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Ultimo aggiornamento: 8 dicembre 2015* 
+*Ultimo aggiornamento: 19 gennaio 2016* 
 
-Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere l'applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
-richiede una configurazione minima ed è possibile inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
+Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
+richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
 una copia clonata del codice in un nuovo repository Git in modo che la tua applicazione originale rimanga invariata. 
 {: shortdesc} 
 
@@ -63,12 +63,23 @@ Per creare un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
 <li> Copia e modifica uno dei seguenti template di frammento e includi un repository Git pubblico.
-
+<p></p>
+<p>
+<strong>Suggerimento</strong>: se vuoi specificare l'input di build per un progetto DevOps Services, aggiungi un parametro di ramo all'URL Git. Quando aggiungi un parametro di ramo, il repository Git pubblico originale, inclusi tutti i sui rami, viene clonato in un nuovo progetto DevOps Services privato con un nuovo repository Git. Il ramo Git specificato viene impostato come input per il lavoro di build. Se non specifichi un ramo, l'input per il lavoro di build viene impostato sul ramo master per impostazione predefinita.
+</p>
 <ul>
 <li>HTML:
+<p>
 Ramo master predefinito:
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+Ramo Git specificato:
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown:
@@ -76,7 +87,12 @@ Ramo master predefinito:
 Ramo master predefinito:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+</pre>
+<p>Ramo Git specificato:
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>
@@ -116,7 +132,7 @@ Con il file manifest, puoi specificare:
     <li>Un nome applicazioni univoco.</li>  
     <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
 di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
-il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi  {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catalogo {{site.data.keyword.Bluemix_notm}}</a>.
+il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi  {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catalogo {{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
 	
@@ -166,14 +182,14 @@ che crea l'output nella cartella <code>.</code> </li>
 crea l'output nella cartella <code>./target/</code></li>
 	   </ul>
 	</li>	
-	<li>Se stai distribuendo un'applicazione in un contenitore utilizzando <strong>IBM Container Service</strong>, devi includere Dockerfile nella directory root del repository e, in una directory <code>.bluemix</code>, includere un file <code>pipeline.yml</code>.
+	<li>Se stai distribuendo un'applicazione in un contenitore utilizzando <strong>IBM Container Service</strong>, devi includere Dockerfile nella directory root del repository e, in una directory <code>.bluemix</code>, includere un file <code>pipeline.yml</code>. 
 	<ul>
 	    <li> Per saperne di più sulla creazione dei Dockerfile, consulta la documentazione di Docker. </li>
-	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura.
+	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura. 
 <ol>
 <li>Apri il progetto DevOps Services in un browser e fai clic su <b>Crea e distribuisci</b>.</li>
 <li>Configura la tua pipeline con i lavori di creazione e distribuzione dell'<b>IBM Container Service</b>.</li>
-<li>Nel browser, aggiungi <code>/yaml</code> all'URL del pipeline del progetto e premi Invio.
+<li>Nel tuo browser, aggiungi <code>/yaml</code> all'URL del pipeline del progetto e premi Invio. 
 <br>Esempio: <code>https://hub.jazz.net/pipeline/<proprietario>/<nome_progetto>/yaml</code></li>
 <li>Salva il file <code>pipeline.yml</code> risultante.</li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>

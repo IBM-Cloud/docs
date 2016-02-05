@@ -3,7 +3,7 @@
 # Sperimentale
 {: #experimental}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Controlla il catalogo {{site.data.keyword.Bluemix_notm}} Labs per provare i servizi sperimentali.
 {: shortdesc} 

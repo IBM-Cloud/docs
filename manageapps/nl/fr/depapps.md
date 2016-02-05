@@ -26,7 +26,7 @@ informations
 que vous avez soumises dans l'interface de ligne de commande cf ou le fichier `manifest.yml` pour déterminer ce qu'il doit créer pour la
 constitution de l'application. L'agent DEA sélectionne un pack de construction approprié pour la constitution de votre application et le processus
 de constitution génère un droplet. Pour plus d'informations sur le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}}, voir
-[Architecture {{site.data.keyword.Bluemix_notm}}, Fonctionnement de {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch). 
+[Architecture {{site.data.keyword.Bluemix_notm}}, Fonctionnement de {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch).
 
 Lors du processus de constitution, l'agent
 DEA vérifie si le pack de construction correspond à l'application, par exemple un contexte d'exécution Liberty pour un fichier .war, ou un contexte
@@ -57,8 +57,7 @@ constitution](../troubleshoot/debugging.html#debug_stgerr) afin de résoudre le 
 ##Déploiement d'applications avec la commande cf
 {: #dep_apps}
 
-Lorsque vous déployez vos applications sur {{site.data.keyword.Bluemix_notm}} depuis l'interface de ligne de commande, un pack de construction doit être fourni comme environnement d'exécution en fonction du langage et de l'infrastructure de votre application. 
-Vous pouvez également utiliser le service Delivery Pipeline afin de déployer des applications dans {{site.data.keyword.Bluemix_notm}}. 
+Lorsque vous déployez vos applications sur {{site.data.keyword.Bluemix_notm}} depuis l'interface de ligne de commande, un pack de construction doit être fourni comme environnement d'exécution en fonction du langage et de l'infrastructure de votre application. Vous pouvez également utiliser le service Delivery Pipeline afin de déployer des applications dans {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.Bluemix_notm}} fournit des packs de construction intégrés qui prennent en charge Java et Node.js. Si vous utilisez ces langages et infrastructures, vous n'avez pas besoin de spécifier le pack de construction lorsque vous déployez votre application à l'aide de l'interface de ligne de commande. Etant donné que {{site.data.keyword.Bluemix_notm}} repose sur Cloud Foundry, la commande utilise par défaut ces packs de construction.
 
@@ -104,7 +103,6 @@ Un
 fichier `package.json` doit se trouver dans votre application Node.js pour que l'application soit reconnue par le pack de construction
 Node.js. Le fichier `app.js` est le script d'entrée pour l'application et peut être spécifié dans le fichier
 `package.json`. L'exemple suivant représente un fichier `package.json` simple :
-              
 
   ```
   {
@@ -148,7 +146,6 @@ autre dans {{site.data.keyword.Bluemix_notm}}. Pour déployer une application da
   ```
   
   2. Déployez votre application avec la commande **cf push**, où nom_app doit être unique dans votre domaine.
-
   
   ```
   cf push nom_app
@@ -178,8 +175,8 @@ cf push -f appManifest.yml
 
 |Options	|Description	|Utilisation ou exemple|
 |:----------|:--------------|:---------------|
-|**buildpack**	|Adresse URL ou nom du pack de construction personnalisé. 	|`buildpack: ` *URL_pack_construction*|
-|**disk_quota**	|Quota de disque alloué à une application. La valeur par défaut est 1 G. 	|`disk_quota: 500M`|
+|**buildpack**	|Adresse URL ou nom du pack de construction personnalisé.	|`buildpack: ` *URL_pack_construction*|
+|**disk_quota**	|Quota de disque alloué à une application. La valeur par défaut est 1 G.	|`disk_quota: 500M`|
 |**domain**	|Nom de domaine de l'application dans {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
 |**host**	|Nom d'hôte de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement {{site.data.keyword.Bluemix_notm}}.	|`host: ` *nom_hôte*|
 |**name**	|Nom de l'application dans {{site.data.keyword.Bluemix_notm}}. Cette valeur doit être unique dans l'environnement
@@ -221,7 +218,7 @@ utilisant le pack de construction de communauté intégré Node.js dans {{site.d
 ```
 {:codeblock}
 
-##Variables d'environnement 
+##Variables d'environnement
 {: #app_env}
 
 Les variables d'environnement contiennent les informations relatives à l'environnement d'une application déployée dans {{site.data.keyword.Bluemix_notm}}. En plus des variables d'environnement définies par un *agent DEA (Droplet Execution Agent)* et les packs de construction, vous pouvez aussi
@@ -231,15 +228,8 @@ Vous pouvez afficher les variables d'environnement suivantes d'une application
 {{site.data.keyword.Bluemix_notm}} en cours d'exécution en utilisant la commande **cf env** ou
 l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} :
 
-  * Les variables définies par l'utilisateur, propres à une application. Vous pouvez définir des variables propres à l'application en utilisant la
-commande **cf set-env** ou en configurant des paires de valeurs dans le [fichier `manifest.yml`](#appmanifest) comme suit : 
-
-  ```
-  env:
-    VAR1:valeur1
-    VAR2:valeur2
-  ```
-   
+  * Les variables définies par l'utilisateur, propres à une application. Pour savoir comment ajouter une variable définie par l'utilisateur à une application, voir [Ajout de variables d'environnement définies par l'utilisateur](#ud_env){:new_window}.
+	  
   * La variable VCAP_SERVICES, qui contient les informations de connexion pour l'accès à une instance de service. Si votre application est liée à
 plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service. Exemple :
   
@@ -311,8 +301,8 @@ Vous pouvez accéder aux variables d'environnement définies par l'agent DEA et 
   <dd>Adresse IP de l'hôte DEA.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Chaîne JSON contenant des informations sur l'application déployée. Ces informations incluent le nom de l'application, les URI,
-les limites de mémoire, l'horodatage auquel l'application est parvenue à son statut en cours, etc. Exemple :
-<pre class="pre codeblock"><code>
+les limites de mémoire, l'horodatage auquel l'application est parvenue à son statut en cours, etc. Exemple : 
+  <pre class="pre codeblock"><code>
   {
     "limits": {
         "mem": 512,
@@ -426,7 +416,6 @@ comme commande de démarrage.
 
   * Utilisez la commande **cf push** et spécifiez le paramètre -c. Par exemple, lorsque vous déployez une application Node.js,
 vous pouvez spécifier la commande de démarrage **node app.js** avec le paramètre -c :
-
   
   ```
   cf push nom_app -c "node app.js"
@@ -439,12 +428,39 @@ vous pouvez spécifier la commande de démarrage **node app.js** avec le paramè
   command: node app.js
   ```
   
+  
+  
+### Ajout de variables d'environnement définies par l'utilisateur
+{: #ud_env}
+
+Variables d'environnement définies par l'utilisateur spécifiques à une application. Vous disposez des options suivantes pour ajouter une variable d'environnement définie par l'utilisateur à une application en cours d'exécution :
+
+  * Utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Procédez comme suit :
+    1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page des détails de l'application s'affiche.
+	2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**.
+	3. Cliquez sur **DEFINI PAR L'UTILISATEUR**, puis cliquez sur **AJOUTER**.
+	4. Remplissez les zones obligatoires, puis cliquez sur **SAUVEGARDER**.
+  * Utilisez l'interface de ligne de commande cf. Ajoutez une variable définie par l'utilisateur en utilisant la commande `cf set-env`. Par exemple :
+    ```
+    cf set-env appname nom_var_env valeur_var_env
+    ```
+	
+  * Utilisez le fichier `manifest.yml`. Ajoutez des paires de valeurs dans le fichier. Par exemple :
+    ```
+	env:
+      VAR1:valeur1
+      VAR2:valeur2
+    ```
+	
+
+
+  
 ### Configuration de l'environnement de démarrage
 
 Pour configurer l'environnement de démarrage de votre application,
 vous pouvez ajouter des scripts shell dans le répertoire `/.profile.d`. Le répertoire `/.profile.d` est situé sous le répertoire de construction de votre application. Les scripts du répertoire `/.profile.d` sont exécutés par {{site.data.keyword.Bluemix_notm}} avant le démarrage de
 l'application. Par exemple, vous pouvez associer la variable d'environnement NODE_ENV à la valeur **production** en plaçant un fichier
-`node_env.sh` comportant le contenu suivant sous le répertoire `/.profile.d` : 
+`node_env.sh` comportant le contenu suivant sous le répertoire `/.profile.d` :
 
 ```
 export NODE_ENV=production;

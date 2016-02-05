@@ -3,7 +3,7 @@
 # DevOps
 {: #devops}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Acelerar entrega de app | Escolha como codificar | Implementar com confiança
 ---- | ---- | ----

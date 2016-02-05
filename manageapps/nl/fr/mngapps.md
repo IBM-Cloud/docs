@@ -8,7 +8,8 @@
 
 Vous pouvez utiliser le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix}} pour afficher et gérer vos applications
 et vos services, ainsi que pour surveiller
-l'utilisation des ressources à l'aide des jauges de quotas.{:shortdesc}
+l'utilisation des ressources à l'aide des jauges de quotas.
+{:shortdesc}
 
 La section des applications du tableau de bord fournit des informations récapitulatives sur les applications que vous avez créées. Ces informations récapitulatives incluent le nom, l'icône, l'URL, le contexte d'exécution et le statut d'exécution de l'application, ainsi
 que les instances de service liées à l'application. Des couleurs différentes sont utilisées pour indiquer le statut d'exécution de chaque application.
@@ -21,7 +22,7 @@ que les instances de service liées à l'application. Des couleurs différentes 
 
   Votre application est en cours d'exécution. L'icône verte indique que l'application est démarrée et que toutes les instances sont en cours d'exécution.
 
-*Nombre* ** en cours d'exécution (jaune)** 
+*Nombre* ** en cours d'exécution (jaune)**
 
   L'application est démarrée mais toutes les instances ne sont pas en cours d'exécution. L'icône jaune indique que moins de 100% des instances sont
 en cours d'exécution. Le nombre d'instances en cours d'exécution et le nombre

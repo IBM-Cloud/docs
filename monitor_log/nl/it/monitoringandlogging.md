@@ -6,12 +6,12 @@
 #Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-*Ultimo aggiornamento: 4 dicembre 2015*
+*Ultimo aggiornamento: 8 dicembre 2015*
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
 {:shortdesc}
 
-Le applicazioni {{site.data.keyword.Bluemix}} possono essere applicazioni a più istanze ampiamente distribuite e l'esecuzione dell'applicazione e dei suoi dati può essere condivisa tra diversi servizi. In questo ambiente complesso, il processo di monitoraggio delle applicazioni e di revisione dei log è importante per gestire le tue applicazioni. 
+Le applicazioni {{site.data.keyword.Bluemix}} possono essere applicazioni a più istanze ampiamente distribuite e l'esecuzione della tua applicazione e dei suoi dati può essere condivisa tra diversi servizi. In questo ambiente complesso, il processo di monitoraggio delle applicazioni e di revisione dei log è importante per gestire le tue applicazioni.
 
 {{site.data.keyword.Bluemix_notm}} è dotato di un meccanismo di registrazione integrato per produrre file di log per le applicazioni in esecuzione. Nei log, puoi visualizzare gli errori, le avvertenze e i messaggi informativi che vengono generati per la tua applicazione. Inoltre, puoi configurare la tua applicazione in modo da scrivere i messaggi di log nel file di log. Per ulteriori informazioni sui formati e sulla visualizzazione dei log, vedi [Registrazione per le applicazioni {{site.data.keyword.Bluemix_notm}}](#logging_for_bluemix_apps).
 
@@ -65,7 +65,7 @@ Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per 
 <dd>
 <pre class="pre screen"><code>[App/0]</code></pre>
 <p>Colonne: 29 - 40</p>
-<p>Il componente che produce i log. Il seguente elenco fornisce la definizione per tutti i componenti: </p>
+<p>Il componente che produce i log. Il seguente elenco fornisce la definizione per tutti i componenti:</p>
 
 <dl>
 <dt><strong>APP</strong></dt>
@@ -120,14 +120,14 @@ Per visualizzare i log **Distribuzione** o **Runtime**, completa la seguente pro
 Scegli una delle seguenti opzioni per visualizzare i log dall'interfaccia riga di comando:
 
 <ul>
-<li>Accodamento dei log durante la distribuzione di applicazioni.
+<li>Accodamento dei log quando distribuisci le applicazioni.
 <p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi [Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Visualizzare i log recenti.</dd>
 
 <dt><strong>cf logs <var class="keyword varname">appname</var></strong></dt>
-<dd>Visualizzare i log che vengono generati dal momento in cui si esegue questo
+<dd>Visualizza i log che vengono generati dal momento in cui esegui questo
 comando.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Suggerimento:</span> quando esegui il comando <span class="keyword cmdname">cf push</span> o <span class="keyword cmdname">cf
@@ -176,6 +176,7 @@ Per visualizzare i log che ti interessano o per escludere i contenuti che non vu
 ```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
+
 Per ulteriori informazioni sull'opzione **grep**, immetti cut --help.
 * Per visualizzare le voci di log che contengono determinate parole chiave, utilizza l'opzione **grep**. Ad esempio, per visualizzare le voci di log che contengono la parola chiave [APP, puoi utilizzare il seguente comando:
 ```
@@ -192,7 +193,7 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un servizio di gest
 
 1. Registra un servizio di gestione log di terze parti.
     
-    Puoi utilizzare un qualsiasi servizio di gestione log di terze parti che supporti il [protocollo syslog](http://tools.ietf.org/html/rfc5424){:new_window}, come Papertail, Splunk Storm, SumoLogic e Logentries. Registra un servizio di gestione log di terze parti, quindi configura il servizio per fornire una destinazione per i log in {{site.data.keyword.Bluemix_notm}}. Una volta completata la configurazione, il servizio di solito fornisce un URL syslog come destinazione per i tuoi log in {{site.data.keyword.Bluemix_notm}}. Per
+    Puoi utilizzare un qualsiasi servizio di gestione log di terze parti che supporti il [protocollo syslog](http://tools.ietf.org/html/rfc5424){:new_window}, come Papertail, Splunk Storm, SumoLogic e Logentries. Registra un servizio di gestione log di terze parti, quindi configura il servizio per fornire una destinazione per i log in {{site.data.keyword.Bluemix_notm}}. Dopo che hai completato la configurazione, il servizio di solito ti fornisce un URL syslog come destinazione per i tuoi log in {{site.data.keyword.Bluemix_notm}}. Per
 informazioni su come configurare i servizi di gestione log di terze parti,
 vedi [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
 
@@ -214,4 +215,4 @@ vedi [Configuring Selected Third-Party Log Management Services](http://docs.clou
 	
 	Successivamente, ti verrà richiesto di preparare nuovamente l'applicazione immettendo cf restage nomeapp per rendere effettive le modifiche. Quando i log vengono generati, puoi visualizzare dei messaggi simili nel servizio di gestione log di terze parti dopo un breve intervallo.
 
-**Nota:** i log che vengono visualizzati nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nei servizi di gestione log di terze parti.
+**Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nei servizi di gestione log di terze parti.

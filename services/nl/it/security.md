@@ -4,7 +4,7 @@
 # Sicurezza
 {: #security}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Con questi
 servizi di sicurezza, puoi proteggere l'accesso alle applicazioni e ai

@@ -19,7 +19,7 @@ Questi programmi di utilità supportano sia Liberty che Node.js.
 
   1. *proxy*: gestione applicazioni minima che funge da proxy tra la tua applicazione e {{site.data.keyword.Bluemix_notm}}.
 
-    Quando abilitato, il pacchetto di build avvia un agent proxy ubicato tra il runtime e il contenitore della tua applicazione. Il programma di utilità *proxy* gestisce tutte le richieste ricevute dall'applicazione. A seconda del tipo di richiesta, esegue un'azione di gestione applicazioni oppure inoltra la richiesta alla tua applicazione. *proxy* consente l'abilitazione della maggior parte degli altri programmi di utilità di Gestione applicazioni. Abilitando il *proxy*, il contenitore dell'applicazione continua a funzionare, anche se l'applicazione si arresta in modo anomalo. L'agent proxy consente inoltre aggiornamenti di file incrementali, che abilitano la modalità "Live Edit" per le applicazioni Node.js.
+    Quando abilitato, il pacchetto di build avvia un agent proxy ubicato tra il runtime e il contenitore della tua applicazione. Il programma di utilità *proxy* gestisce tutte le richieste ricevute dall'applicazione. A seconda del tipo di richiesta, esegue un'azione di gestione applicazioni oppure inoltra la richiesta alla tua applicazione. *proxy* consente l'abilitazione della maggior parte degli altri programmi di utilità di Gestione applicazioni. Abilitando il *proxy*, il tuo contenitore dell'applicazione continua a funzionare, anche se l'applicazione si arresta in modo anomalo. L'agent proxy consente inoltre aggiornamenti di file incrementali, che abilitano la modalità "Live Edit" per le applicazioni Node.js.
 	
   2. *devconsole*: abilita il programma di utilità della console di sviluppo che è accessibile al seguente URL:
     ```
@@ -151,8 +151,8 @@ cf restage myApp
 {: #restrictions}
 
 * Gestione applicazioni supporta solo le applicazioni a istanza singola.
-* Le modifiche apportate alla tua applicazione mediante Gestione applicazioni sono transitorie e vengono perse una volta che si esce da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni. 
-* La maggior parte dei programmi di utilità di Gestione applicazioni non funzionano se imposti il comando di avvio nel file manifest.yml (comando) o nella CLI CF (-c). Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando di avvio nel file package.json o Procfile.
+* Le modifiche apportate alla tua applicazione mediante Gestione applicazioni sono transitorie e vengono perse una volta che si esce da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni.
+* La maggior parte dei programmi di utilità di Gestione applicazioni non funziona se imposti il tuo comando di avvio nel file manifest.yml (comando) o nella CLI CF (-c). Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando di avvio nel file package.json o Procfile.
 
 ##Modalità di sviluppo per Eclipse Tools
 {: #devmode}
@@ -161,7 +161,7 @@ La modalità di sviluppo è una funzione di [Eclipse Tools for {{site.data.keywo
 
 Lavorando con le loro applicazioni su {{site.data.keyword.Bluemix_notm}}, gli sviluppatori potrebbero sentire che le
 loro normali attività di sviluppo sono limitate rispetto a un ambiente di sviluppo locale. Per risolvere questo problema,
-la modalità di sviluppo attraverso Eclipse Tools offre un modo per poter lavorare nel cloud e al contempo
+la modalità di sviluppo attraverso Eclipse Tools ti offre un modo per poter lavorare nel cloud e al contempo
 operare in uno spazio di lavoro temporaneo e protetto.
 
 La modalità di sviluppo è supportata sia per le applicazioni Liberty che Node.js. Con la modalità di sviluppo

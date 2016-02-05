@@ -45,7 +45,8 @@ empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.
 
   O nome da ramificação de sua empresa que está pedindo o certificado, como Setor contábil ou Marketing.
   
-**Nome comum**
+**Nome comum
+**
 
   O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.
   
@@ -59,6 +60,10 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 **Nota:** a implementação OpenSSL SHA-512 depende do suporte do compilador para o tipo de número inteiro de 64 bits. É possível usar a opção SHA-1 para aplicativos
 que possuem problemas de compatibilidade com o certificado SHA-256.
+
+Um
+certificado é emitido por uma autoridade de certificação e é assinado digitalmente por
+essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL em uma autoridade de certificado público. 
 
 ##Fazendo upload de certificados SSL
 {: #ssl_certificate}
@@ -123,7 +128,7 @@ tipos de certificados a seguir são suportados no
   
     Um padrão de algoritmo usado para criptografar mensagens que somente a chave pública
 correspondente pode decriptografar. A chave privada também é usada para decriptografar mensagens que foram criptografadas pela chave pública correspondente. A chave privada é
-mantida no sistema do usuário e protegida por uma senha.
+mantida no sistema do usuário e é protegida por uma senha.
     
     Os tipos de chaves privadas a seguir são suportados no
 {{site.data.keyword.Bluemix_notm}}:
@@ -136,10 +141,10 @@ mantida no sistema do usuário e protegida por uma senha.
   **Certificado intermediário**
   
     Um certificado subordinado que é emitido pela autoridade
-do certificado de raiz confiável (CA) especificamente para emitir certificados
+de certificação raiz confiável (CA) especificamente para emitir certificados
 do servidor da entidade final. O resultado é uma cadeia de certificados que inicia na
-CA raiz confiável, passa pelo certificado intermediário e
-termina com o certificado SSL emitido à organização.
+autoridade de certificação raiz confiável, passa pelo certificado intermediário e
+termina com o certificado SSL emitido para a organização.
     
     Você deve usar um certificado
 intermediário para verificar a autenticidade do certificado principal. Os certificados

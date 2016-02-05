@@ -6,7 +6,7 @@
 #Monitoramento e criação de log
 {: #monitoringandlogging}
 
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 8 de dezembro de 2015*
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
 {:shortdesc}
@@ -174,9 +174,11 @@ tarefa de preparação. É possível usar esse log para solucionar problemas de 
 
 Para visualizar logs em que você está interessado ou excluir o conteúdo que você não deseja visualizar, é possível usar o comando **cf logs** com opções de filtragem, como **cut** e **grep** na interface de linha de comandos cf.
 
-* Para visualizar uma parte, em vez dos logs detalhados completos, use a opção **cut**. Por exemplo, para exibir as informações do componente e da mensagem, use o comando a seguir:```
+* Para visualizar uma parte, em vez dos logs detalhados completos, use a opção **cut**. Por exemplo, para exibir as informações do componente e da mensagem, use o comando a seguir:
+```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
+
 Para obter mais informações sobre a opção **grep**, digite cut --help.
 * Para exibir entradas de log que contêm determinadas palavras-chave, use a opção **grep**. Por exemplo, para exibir entradas de log que contêm a palavra-chave [APP, é possível usar o comando a seguir:
 ```

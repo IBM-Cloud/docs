@@ -50,8 +50,8 @@ Desktop Sync では以下の点を考慮してください。
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} Live Sync bl コマンド・ラインをダウンロードし、インストールします。   
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="「Windows bl コマンド・ラインのダウンロード」ボタン" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="「Mac bl コマンド・ラインのダウンロード」ボタン" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="「Windows bl コマンド・ラインのダウンロード」ボタン" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="「Mac bl コマンド・ラインのダウンロード」ボタン" /> </a>
 </p>  
 
 <strong>重要:</strong> bl コマンド・ライン・ツールは、Windows 7 と 8、および Mac OS X バージョン 10.9 以降でのみ使用可能です。</li>

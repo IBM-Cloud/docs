@@ -3,7 +3,7 @@
 # Données et analyse
 {: #data_analytics}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Allez plus loin avec des bases de données de cloud et des services d'analyse riches et intégrés. En plus d'explorer des
 services, vous pouvez utiliser la console Utilisation des données pour obtenir des données dans vos services, générer des applications

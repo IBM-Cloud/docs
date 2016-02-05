@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2015 年 12 月 7 日*
+*前次更新：2015 年 12 月 15 日*
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
 
@@ -293,6 +293,30 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
  * 風險管理與侵入防禦。
  * 使用 QRadar 進行安全監視。
  * 透過「管理主控台」提供的安全報告。
+
+## 安全相符性
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} 提供了一個您可以信任的安全雲端平台。{{site.data.keyword.Bluemix_notm}} 相符性是透過根據業界最佳安全標準（包括 ISO 27001 和 ISO 27002）建置的平台和服務來實現。
+{:shortdesc}
+
+![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家的 IBM 資料處理方（資料匯入方）之間簽訂的。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家處理時仍能受到像在 EU 或 EEA 中一樣的保護。
+
+![金融行業資訊系統](images/FISC.gif) 對於日本的銀行和相關金融機構，電腦系統必須具有適當的安全程序，這些程序應根據「金融行業資訊系統中心 (FISC)」安全準則。**FISC** 安全準則由「日本金融廳 (FSA)」、「日本央行 (BOJ)」和 FISC 貫徹實施。
+
+在 [IBM Bluemix 風險意見調查結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，可以找到 FISC 安全準則的 {{site.data.keyword.Bluemix_notm}} 自我評量文件（日語）。 
+ 
+![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通過**國際標準化組織 (ISO) 27001 和 27002 標準**的認證，這兩個標準定義了資訊安全管理程序的最佳做法。ISO 27001 標準根據不同組織的需求規定了應如何建立、實施和記錄「資訊安全管理系統 (ISMS)」，以及應如何實施安全性控制。ISO 27002 標準對 ISO 27001 中的每種安全控制進行了詳細的說明。ISO 27000 系列標準中包含了一個確定風險規模和評估資產價值的處理程序，旨在保護書面、口頭和電子資訊的機密性、完整性和可用性。 
+
+{{site.data.keyword.Bluemix_notm}} 經第三方安全公司審核，符合 ISO 27001 的所有需求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) **服務組織控制 (SOC)** 報告定義了如何對服務組織評估與安全性、可用性、處理完整性、機密性和隱私性相關的主要內部控制做法。這些報告是使用「美國註冊會計師協會 (AICPA) 手冊」產生的，包含下列各項目： 
+  * 組織監督
+  * 供應商管理方案
+  * 內部公司治理和風險管理程序
+  * 法規監督
+ 
+{{site.data.keyword.Bluemix_notm}} 使用「IBM SoftLayer 基礎架構即服務 (IaaS)」雲端服務，並充分利用其安全架構。如需相關資訊，請聯絡 [{{site.data.keyword.Bluemix_notm}} 銷售](mailto:bmxcert1@us.ibm.com){:new_window}團隊。
 
 ## 安全報告
 {: #reports}

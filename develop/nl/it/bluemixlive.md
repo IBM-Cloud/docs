@@ -58,24 +58,25 @@ Per ulteriori dettagli sui comandi, vedi la [documentazione della CLI Bluemix Li
 <ol>
 <li>Scarica e installa la riga di comando bl di {{site.data.keyword.Bluemix_notm}} Live Sync.   
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Pulsante Scarica la riga di comando bl per Windows" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Pulsante Scarica la riga di comando bl per Mac" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Pulsante Scarica la riga di comando bl per Windows" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Pulsante Scarica la riga di comando bl per Mac" /> </a>
 </p>  
 
-<strong>Importante:</strong> lo strumento riga di comando bl è disponibile solo per  Windows 7 e 8 e per Mac OS X versione 10.9 o successive.</li>
+<strong>Importante:</strong> lo strumento riga di comando bl è disponibile solo per  Windows 7 e 8 e per Mac OS X versione 10.9 o successive. </li>
 <li>Su una riga di comando, accedi utilizzando il seguente comando. Ti verranno richiesti il tuo ID e la tua password IBM.  
 <pre class="codeblock">bl login</pre>
 </li>
 
-<li>Visualizza l'elenco dei progetti disponibili per la sincronizzazione di {{site.data.keyword.Bluemix_notm}} Live Sync immettendo il seguente comando:
+<li>Visualizza l'elenco dei progetti disponibili per la sincronizzazione di {{site.data.keyword.Bluemix_notm}} Live Sync immettendo il seguente comando: 
 <pre class="codeblock">bl projects</pre>
 <p>Trova il nome progetto nell'elenco che corrisponde alla
-tua applicazione. Il nome del progetto ha il formato <i>alias</i> | <i>nome applicazione</i>.</p>
+tua applicazione. Il nome del progetto ha il formato <i>alias</i> | <i>nome applicazione</i>. </p>
 </li>
 <li>Sincronizza il tuo ambiente locale con il tuo progetto su {{site.data.keyword.Bluemix_notm}} immettendo
-il seguente comando. Se sei il proprietario del progetto, devi specificare solo il nome-della-tua-applicazione per nomeProgetto.<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
+il seguente comando. Se sei il proprietario del progetto, devi specificare solo il nome-della-tua-applicazione per nomeProgetto. 
+<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
 <p>L'esecuzione di questo comando (così come la sincronizzazione) continua finché
-non si immette una "q". L'opzione --verbose visualizza informazioni sulla registrazione e sullo stato. Se qualcuno dei tuoi argomenti contiene uno spazio, è necessario racchiudere il nome tra virgolette. </p></li>
+non si immette una "q". L'opzione --verbose visualizza informazioni sulla registrazione e sullo stato. Se qualcuno dei tuoi argomenti contiene uno spazio, devi racchiudere il nome tra virgolette. </p></li>
 <li>In un'altra finestra di riga di comando, nella tua directory locale, distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}} in
 modalità Live Edit immettendo il seguente comando:
 <pre class="codeblock">bl start</pre>
@@ -172,7 +173,7 @@ Live {: #configure_app_debug}
 
 2. Imposta la variabile di ambiente.  
     
-    a. Nel file `manifest.yml`, aggiungi questa variabile:
+    a. Nel file `manifest.yml`, aggiungi questa variabile: 
 	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true" 

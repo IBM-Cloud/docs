@@ -86,12 +86,12 @@ stages:
 ```
 ---
 name: <name>
-[inputs: 
-	<sequence of inputs>] 
+[inputs:
+	<sequence of inputs>]
 [triggers:   
-	<sequence of triggers>] 
+	<sequence of triggers>]
 [properties:   
-	<sequence of properties>] 
+	<sequence of properties>]
 [jobs:   
 	<sequence of jobs>]
 ```

@@ -63,6 +63,9 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 l'opzione SHA-1 per le applicazioni che presentano problemi di compatibilità con il certificato
 SHA-256.
 
+Un certificato viene emesso da un'autorità di
+certificazione e viene firmato in maniera digitale da tale autorità. Dopo aver creato il CSR, puoi generare il tuo certificato SSL su un'autorità di certificazione pubblica. 
+
 ##Caricamento di certificati SSL
 {: #ssl_certificate}
 

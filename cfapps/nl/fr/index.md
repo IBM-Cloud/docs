@@ -1,7 +1,7 @@
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
-# Création d'applications Cloud Foundry 
+# Création d'applications Cloud Foundry
 *Dernière mise à jour : 4 décembre 2015*
 
 Avec {{site.data.keyword.Bluemix}}, vous pouvez créer votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez ensuite choisir de continuer à employer l'interface utilisateur,
@@ -21,12 +21,11 @@ Pour commencer à créer une application, procédez comme suit :
   3. Cliquez sur **Web** et suivez les instructions pour choisir un module de démarrage, spécifier un nom et sélectionner le mode de
 codage.
   4. Une fois que vous avez terminé, cliquez sur **Afficher la vue d'ensemble de l'application**. La page Vue d'ensemble de votre
-application s'affiche dans le tableau de bord. 
+application s'affiche dans le tableau de bord.
   5. Vous pouvez ajouter un service à votre application en cliquant sur **AJOUTER UN SERVICE OU UNE API** dans la page
 Vue d'ensemble de votre application
 dans l'interface utilisateur Bluemix. Ou bien, vous pouvez utiliser l'interface de ligne de commande cf. Voir Options pour apprendre à utiliser les
 applications.
-
   6. Dans la page Vue d'ensemble de l'application, cliquez sur Ajouter un référentiel Git pour sauvegarder la source de votre application
 dans un
 référentiel Git et créer un projet hébergé par Git. Vous pouvez également déployer l'application à partir d'{{site.data.keyword.jazzhub_title}}.
@@ -41,14 +40,13 @@ la reprise. Pour plus d'informations, voir la rubrique de traitement des inciden
 Une fois que vous avez créé votre application, vous disposez de quelques options pour continuer à ajouter des services, construire l'application et la déployer :
 
 <dl><dt>Interface de ligne de commande cf</dt>
-<dd>Utilisez l'interface de ligne de commande cf pour mettre à jour votre application, créer une instance de service ou lier le service à votre application. 
-Vous pouvez également utiliser l'interface de ligne de commande cloud-cli pour créer, mettre à jour et supprimer des offres de services.</dd>
-<dt>Interface utilisateur {{site.data.keyword.Bluemix_notm}} </dt>
+<dd>Utilisez l'interface de ligne de commande cf pour mettre à jour votre application, créer une instance de service ou lier le service à votre application. Vous pouvez également utiliser l'interface de ligne de commande cloud-cli pour créer, mettre à jour et supprimer des offres de services.</dd>
+<dt>Interface utilisateur {{site.data.keyword.Bluemix_notm}}</dt>
 <dd>L'interface utilisateur {{site.data.keyword.Bluemix_notm}} permet de construire une application, et de choisir les services et les contextes d'exécution à combiner afin de résoudre vos problèmes métier.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
 <dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. Les
 services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont répertoriés dans le
-catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également Web IDE et Git hosting. </dd>
+catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également Web IDE et Git hosting.</dd>
 </dl>
 
 ## Conseils
@@ -58,8 +56,7 @@ Tenez compte des conseils suivants lorsque vous développez vos applications Web
 <dl><dt>Persistance</dt>
 <dd>Ne spécifiez pas d'emplacement de stockage local pour vos applications. Même si une seule instance est en cours d'exécution, chaque instance de votre application peut être à tout moment redémarrée et déplacée vers une autre machine virtuelle, notamment pour des raisons d'équilibrage de charge. Tout
 élément stocké en local est effacé lorsque l'application est déplacée ou supprimée. Utilisez l'un des services de magasin de données Bluemix pour la
-persistance.
-</dd>
+persistance.</dd>
 <dt>Limites de ressources</dt>
 <dd>Prenez connaissance des limites relatives aux quantités de ressources qu'un compte d'essai peut utiliser. Ces limites sont les suivantes :
 <table style="width:100%">

@@ -3,7 +3,7 @@
 
 # Seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última actualización: 7 de diciembre de 2015*
+*Última actualización: 15 de diciembre de 2015*
 
 Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de apps para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de apps seguras.
 {:shortdesc}
@@ -315,12 +315,36 @@ Además de los usuarios suscritos a estos métodos, un equipo de operaciones de 
  * Supervisión de la seguridad con QRadar.
  * Informes de seguridad disponibles mediante la Consola de administración.
 
+## Conformidad de la seguridad
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} proporciona una plataforma de nube segura en la que puede confiar. La conformidad de {{site.data.keyword.Bluemix_notm}} proviene de una plataforma y unos servicios que se compilan en los mejores estándares de seguridad del sector, incluidos ISO 27001 e ISO 27002.
+{:shortdesc}
+
+![Cláusula de modelo de protección de datos de la EU](images/icon_eumc.png)  Una **Cláusula modelo de la Unión Europea (EU)** es un acuerdo para proteger datos personales que se transfieren desde la EU o el Espacio Económico Europeo (EEA) a un país tercero. La Cláusula modelo de la EU se firma entre el cliente ubicado en la EU o EEA como el exportador de datos y el procesador de datos de IBM ubicado en un país tercero como el importador de datos. La [Cláusula modelo de la EU de SaaS de IBM](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contiene los derechos y obligaciones del exportador y del importador de datos, y los derechos de los asuntos de datos. La Cláusula modelo de la EU de SaaS de IBM garantiza que los datos personales, cuando se procesan en un país tercero, estén bajo protección similar a la protección disponible en la EU o la EEA.
+
+![Sistemas de información del sector financiero](images/FISC.gif)  Para banca e instituciones relacionadas con las finanzas de Japón, los sistemas informáticos deben tener procedimientos de seguridad en su lugar basados en las directrices de seguridad del FISC (Center for Financial Industry Information Systems). Las directrices de seguridad de **FISC** las impone FSA (Japan Financial Services Agency), BOJ (Bank of Japan) y FISC.
+
+Puede encontrar un documento de autovaloración de {{site.data.keyword.Bluemix_notm}} para las directrices de seguridad de FISC, escritas en japonés, en [Resultados de la encuesta de riesgos de IBM Bluemix](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} tiene certificación bajo los **Estándares 27001 y 27002 de ISO (International Organization for Standardization)**, que definen las mejores prácticas para los procesos de gestión de seguridad de información. El estándar ISO 27001 especifica los requisitos para establecer, implementar y documentar los ISMS (Information Security Management Systems) y los requisitos para implementar los controles de seguridad, de acuerdo con las necesidades de organizaciones individuales. El estándar ISO 27002 explica cada control de seguridad de ISO 27001 en detalle. La familia de estándares ISO 27000 incorpora un proceso de riesgo de escalado y de evaluación de activos, con el objetivo de salvaguardar la confidencialidad, la integridad y la disponibilidad de la información escrita, oral y electrónica. 
+
+{{site.data.keyword.Bluemix_notm}} la audita una empresa de seguridad de terceros y cumple todos los requisitos para ISO 27001: [Bluemix ISO 27001:2013 Certificado de registro](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
+Los informes de ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **SOC (Service Organization Controls)** definen la evaluación de las principales prácticas de control interno relacionadas con la seguridad, la disponibilidad, la integridad del proceso, la confidencialidad y la privacidad en una organización de servicio. Los informes generados mediante la guía del AICPA (American Institute of Certified Public Accountants) incluyen los elementos siguientes: 
+  * Supervisión de la organización
+  * Programa de gestión del proveedor
+  * Procesos de gobierno corporativo interno y de gestión de riesgos
+  * Supervisión de la normativa
+ 
+{{site.data.keyword.Bluemix_notm}} utiliza los servicios de nube de IBM SoftLayer Infrastructure-as-a-Service (IaaS) y aprovecha su arquitectura de seguridad. Para obtener información adicional, póngase en contacto con el equipo de [ventas de {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
+
 ## Informes de seguridad
 {: #reports}
 
 Con {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado, {{site.data.keyword.Bluemix_notm}} genera distintos informes de seguridad y registros que puede ver en la página Administración. Para obtener instrucciones para ver y utilizar los informes, consulte [Visualización de informes](../admin/index.html#oc_report).
 
-La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado. 
+La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado.
 
 | **Categoría** | **Informe** | **Descripción** |      
 |-----------------|-------------------|---------------------|

@@ -3,7 +3,7 @@
 # 試験的
 {: #experimental}
 
-*最終更新日: 2015 年 11 月 19 日*
+*最終更新日: 2015 年 12 月 9 日*
 
 {{site.data.keyword.Bluemix_notm}} Labs Catalog を確認し、試験的サービスをお試しください。
 {: shortdesc} 
