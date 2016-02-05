@@ -7,7 +7,7 @@
 # SendGrid 故障诊断
 {: #ts_sendgrid}
 
-*上次更新时间：2015 年 11 月 19 日*
+*上次更新时间：2015 年 12 月 9 日*
 
 以下是关于在 {{site.data.keyword.Bluemix}} 中使用 SendGrid 的问题解答。{:shortdesc}
 

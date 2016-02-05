@@ -9,14 +9,15 @@
 *上次更新时间：2015 年 12 月 8 日*
 
 
-您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。{:shortdesc}
+您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
+{:shortdesc}
 
-##创建和使用定制域
+##创建并使用定制域
 {: #domain}
 
 您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
 
-域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在 {{site.data.keyword.Bluemix_notm}} 中为组织创建定制域，然后必须通过配置 DNS 服务器或编辑本地 `hosts` 文件，将定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
+域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在公共 DNS 服务器上注册定制域，在 {{site.data.keyword.Bluemix_notm}} 中配置定制域，然后将定制域映射到公共 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
 
 **注：**可以使用 **nslookup** 命令来获取 {{site.data.keyword.Bluemix_notm}} 系统域的公共 IP 地址。例如，在命令提示符处，输入 `nslookup mybluemix.net`。
 
@@ -86,18 +87,18 @@ cf delete-route domain -n hostname -f
 
 *domain* 是域名，*hostname* 是应用程序的路径中的主机名。有关 **cf delete-route** 命令的更多信息，请键入 `cf delete-route -h`。
 
-##蓝-绿部署
+##蓝绿部署
 {: #blue_green}
 
-{{site.data.keyword.Bluemix_notm}} 支持蓝-绿部署方法，以便能够持续交付并尽可能减少停机事件。
+{{site.data.keyword.Bluemix_notm}} 支持蓝绿部署方法，以便能够持续交付并尽可能减少停机事件。
 
-*蓝-绿部署*是一种零停机部署方法，由两个几乎完全一样的生产环境构成：蓝和绿。这两个环境的不同之处在于工件，开发者有目的地更改了这些工件，并且通常是通过应用程序版本进行更改。在任何给定时间，必须至少有一个环境处于活动状态。使用蓝-绿部署方法，您可以实现以下优势：
+*蓝绿部署*是一种零停机部署方法，由两个几乎完全一样的生产环境构成：蓝和绿。这两个环境的不同之处在于工件，开发者有目的地更改了这些工件，并且通常是通过应用程序版本进行更改。在任何给定时间，必须至少有一个环境处于活动状态。使用蓝绿部署方法，您可以实现以下优势：
 
 * 使软件迅速从最终测试阶段过渡到实际生产。
 * 部署应用程序的新版本时，不必中断到应用程序的流量。
 * 快速回滚。如果其中一个环境有问题，可以迅速切换到其他环境。
 
-如果已经将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且要将应用程序更新为新版本，那么可以使用以下两种方法之一来确保蓝-绿部署。
+如果已经将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且要将应用程序更新为新版本，那么可以使用以下两种方法之一来确保蓝绿部署。
 
 ###示例：使用 cf rename 命令
 
@@ -106,14 +107,16 @@ cf delete-route domain -n hostname -f
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue```
+  cf push Blue
+  ```
   
   **结果：***Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
   
 2. 使用 **cf rename** 命令将 *Blue* 应用程序重命名为 *Green*：
   
   ```
-  cf rename Blue Green```
+  cf rename Blue Green
+  ```
   
   使用 **cf apps** 命令列出当前空间中的应用程序：
   
@@ -129,7 +132,8 @@ cf delete-route domain -n hostname -f
 3. 进行必要的更改，并使更新的 *Blue* 版本准备就绪。将更新的 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Blue```
+  cf push Blue
+  ```
   
   使用 **cf apps** 命令列出当前空间中的应用程序：
   
@@ -148,10 +152,10 @@ cf delete-route domain -n hostname -f
 4. 可选：如果想要删除应用程序的旧版本 (*Green*)，请使用 **cf delete** 命令。
   
   ```
-  cf delete Green -f```
+  cf delete Green -f
+  ```
   
-  使用
-**cf route** 命令列出空间中的路径：
+  使用 **cf route** 命令列出空间中的路径：
   
   ```
   ...
@@ -169,14 +173,16 @@ cf delete-route domain -n hostname -f
 1. 将 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
   
   ```
-  cf push Blue```
+  cf push Blue
+  ```
   
   **结果：***Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
   
 2. 进行必要的更改，并使 *Green* 版本准备就绪。将 *Green* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf push Green```
+  cf push Green
+  ```
   
   使用 **cf route** 命令列出当前空间中的应用程序：
   
@@ -243,7 +249,8 @@ cf delete-route domain -n hostname -f
 6. 可选：如果想要删除应用程序的旧版本 (*Blue*)，请使用 `cf delete` 命令。
   
   ```
-  cf delete Blue -f```
+  cf delete Blue -f
+  ```
   
   使用 cf route 命令列出空间中的路径：
   
@@ -260,5 +267,5 @@ cf delete-route domain -n hostname -f
 # 相关链接
 ## 常规 
 * [组织和空间](../acctmgmt/index.html#organdspaces)
-* [蓝-绿部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [蓝绿部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

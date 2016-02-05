@@ -7,7 +7,8 @@
 # 使用社区 buildpack
 *上次更新时间：2015 年 12 月 8 日*
 
-如果在 {{site.data.keyword.Bluemix}}“目录”中找不到提供所需运行时的入门模板，那么可以将外部 buildpack 添加到 {{site.data.keyword.Bluemix_notm}} 中。使用 cf push 命令部署应用程序时，可以指定 Cloud Foundry 兼容的定制 buildpack。{:shortdesc}
+如果在 {{site.data.keyword.Bluemix}}“目录”中找不到提供所需运行时的入门模板，那么可以将外部 buildpack 添加到 {{site.data.keyword.Bluemix_notm}} 中。使用 cf push 命令部署应用程序时，可以指定 Cloud Foundry 兼容的定制 buildpack。
+{:shortdesc}
 
 外部 buildpack 由 Cloud Foundry 社区提供，可用作您自己的 buildpack。将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 之前，请确保安装了 cf 命令行界面。
 
@@ -32,7 +33,8 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 <ul>
 
 <li>
-对于同一运行时或框架，IBM 创建的 buildpack 优先于社区 buildpack。如果想要使用社区 buildpack 覆盖 IBM 创建的 buildpack，必须使用带 -b 选项的 cf push 命令来指定该 buildpack。<p>例如，可以将社区 buildpack 用于 Java™ Web 应用程序：</p>
+对于同一运行时或框架，IBM 创建的 buildpack 优先于社区 buildpack。如果想要使用社区 buildpack 覆盖 IBM 创建的 buildpack，必须使用带 -b 选项的 cf push 命令来指定该 buildpack。
+<p>例如，可以将社区 buildpack 用于 Java™ Web 应用程序：</p>
 <pre class="pre"><code>cf push app_name -b java_buildpack</code></pre>
 <p>还可以将社区 buildpack 用于 Node.js 应用程序：</p>
 <pre class="pre"><code>cf push app_name -b nodejs_buildpack</code></pre>
@@ -71,7 +73,8 @@ cf push app_name -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cfli
 
 <ul>
 <li>
-使用 <strong>cf set-env</strong> 命令。例如，输入以下命令，将 Java 版本设置为 1.7.0：<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+使用 <strong>cf set-env</strong> 命令。例如，输入以下命令，将 Java 版本设置为 1.7.0：
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
 <p>然后，重新编译打包应用程序以使更改生效：</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>

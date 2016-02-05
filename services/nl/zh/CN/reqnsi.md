@@ -5,7 +5,7 @@
 
 #服务
 {: #services}
-*上次更新时间：2015 年 12 月 7 日*
+*上次更新时间：2015 年 1 月 20 日*
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。{:shortdesc}
 
@@ -40,7 +40,7 @@
 
 {{site.data.keyword.Bluemix_notm}} 还包含可供您试用的试验性服务。要查看所有可用的试验性服务、样板和运行时，请登录到 {{site.data.keyword.Bluemix_notm}}，滚动到“目录”的底部，然后单击 **{{site.data.keyword.Bluemix_notm}} Lab Catalog**。
 
-试验性服务可能不稳定，并且可能会发生变化而与较早版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
+试验性服务可能不稳定，并且可能会发生变化而与较低版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
 
 要在 {{site.data.keyword.Bluemix_notm}} 用户界面、cf 命令行界面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支持的工具中使用服务，请执行以下步骤：
 
@@ -58,8 +58,10 @@
 
 |服务	|在美国南部区域中可用	|在欧洲英国区域中可用 |在澳洲悉尼区域中可用|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|是		|是		|否|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.appsecshort}}		|是		|否		|否|
+|{{site.data.keyword.alertnotificationshort}}|是		|否			|否		|
 |{{site.data.keyword.APS_DA}}			|是		|否		|否|
 |{{site.data.keyword.APS_MA}}			|是		|否		|否|
 |{{site.data.keyword.amashort}}			|是		|是		|是|
@@ -82,13 +84,15 @@
 |{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|否|
 |{{site.data.keyword.globalizationshort}}	|是		|否		|否|
 |{{site.data.keyword.dataworks_short}}		|是		|是		|否|
-|{{site.data.keyword.twittershort}}		|是		|是		|否|
+|{{site.data.keyword.twittershort}}		|是		|是		|是|
+|{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
 |{{site.data.keyword.iot_short}}		|是		|否		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|否|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
 |{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|
 |{{site.data.keyword.APS_MAiOS}} 		|是		|否		|否|
+|{{site.data.keyword.macm_short}}		|是		|是		|是|
 |{{site.data.keyword.mobilemam}}		|是		|是		|否|
 |{{site.data.keyword.mobiledata}}		|是		|是		|否|
 |{{site.data.keyword.manda}}			|是		|是		|否|

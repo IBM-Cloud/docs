@@ -4,7 +4,7 @@
 # 获取客户支持
 {: #getting-customer-support}
 
-*上次更新时间：2015 年 12 月 4 日*
+*上次更新时间：2016 年 1 月 19 日*
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可以使用多个支持选项，例如，通过 Stack Overflow 获取帮助或打开支持凭单。{:shortdesc}
@@ -16,7 +16,7 @@
 ### 使用帐户和支持
 使用“帐户和支持”功能，可以检查帐户信息、查看状态、获取最新的通知、选择区域、选择和管理组织以及注销。此外，还可获取帮助并提供反馈。
 
-要打开“帐户和支持”，请登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，然后单击“仪表板”右上方的**帐户和支持**图标 ![帐户和支持](images/account_support.png)。
+要打开“帐户和支持”，请登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，然后单击顶部菜单栏中的**帐户和支持**图标 ![帐户和支持](images/account_support.svg)。
 
 单击**获取帮助**来查找问题的答案。在显示的页面上，在搜索字段中键入问题。这会显示来自
 {{site.data.keyword.Bluemix_notm}} 文档和 Stack Overflow 中的答案。此页面还提供了多个选项，用于将问题发布到 Stack Overflow 或通过单击**取得联系**打开凭单。
@@ -54,7 +54,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
 可以通过选择以下两个选项之一来找到“状态”页面：
 
-  * 从“帐户和支持”：登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，单击“仪表板”右上方的**帐户和支持**图标 ![帐户和支持](./images/account_support.png)，然后单击**状态**。
+  * 从“帐户和支持”：登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，单击顶部菜单栏中的**帐户和支持**图标 ![帐户和支持](./images/account_support.svg)，然后单击**状态**。
   * 直接通过 [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window} 访问。
 
 
@@ -125,7 +125,7 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 
 要打开支持凭单，请使用以下其中一种方法：
 
-  * 从“帐户和支持”。登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，然后单击“仪表板”右上方的**帐户和支持**图标 ![帐户和支持](./images/account_support.png)。
+  * 从“帐户和支持”。登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，单击顶部菜单栏中的**帐户和支持**图标 ![帐户和支持](./images/account_support.svg)。
 
      1. 首先，确保通过单击**状态**选中 {{site.data.keyword.Bluemix_notm}} 状态。
 	 2. 然后，如果问题不是因中断引发的，请单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
@@ -152,13 +152,34 @@ Stack Overflow 是一个 Web 站点，可用作用户提出和回答问题的平
 如果您是 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。如果您没有 IBM 标识，那么可以通过几个不同的选项来获取支持。
 
 
+<ul>
+<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 支持凭单</a>表单来开立新凭单。在此表单中，您可以使用电子邮件地址或您的 IBM 标识。在 {{site.data.keyword.Bluemix_notm}} 区域字段中，请选择 **Dedicated** 选项。<p>IBM 会在星期日晚上 10 点 (UTC) 到星期五午夜 12 点 (UTC) 监视表单的提交。</p>
+</li>
+<li>如果您拥有 IBM 标识且有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，那么可以使用以下某种方法来开立支持凭单：<ul>
+<li>单击**帐户和支持**图标 <img src="images/account_support.svg" alt="帐户和支持" />，然后单击**获取帮助**。在显示的页面上，单击**取得联系**。</li>
+<li>转至 <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>，然后输入 IBM 标识和密码。IBM 标识将用作服务凭证。单击菜单上的**打开支持凭单**。确保为您的凭单指示了适当的严重性，因为严重性决定凭单的处理方式。</li>
+</ul>
+</li>
+<li>如果您没有 IBM 标识，那么可以联系您所在组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Dedicated 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p>
+</li>
+</ul>
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Local 支持
 {: #contacting-bluemix-support-local}
 
 如果您是 {{site.data.keyword.Bluemix_notm}} Local 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。如果您没有 IBM 标识，那么可以通过几个不同的选项来获取支持。
 
-
+<ul>
+<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} 支持凭单</a>表单来开立新凭单。在此表单中，您可以使用电子邮件地址或您的 IBM 标识。<p>IBM 会在星期日晚上 10 点 (UTC) 到星期五午夜 12 点 (UTC) 监视表单的提交。</p>
+</li>
+<li>如果您拥有 IBM 标识且有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，那么可以使用以下某种方法来开立支持凭单：<ul>
+<li>单击**帐户和支持**图标 <img src="images/account_support.svg" alt="帐户和支持" />，然后单击**获取帮助**。在显示的页面上，单击**取得联系**。</li>
+<li>转至 <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a>，然后输入 IBM 标识和密码。IBM 标识将用作服务凭证。单击菜单上的**打开支持凭单**。确保为您的凭单指示了适当的严重性，因为严重性决定凭单的处理方式。</li>
+</ul>
+</li>
+<li>如果您没有 IBM 标识，那么可以联系您所在组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Local 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p>
+</li>
+</ul>
 
 ### 支持凭单严重性
 

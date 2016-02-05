@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2015 年 12 月 7 日*
+*上次更新时间：2015 年 12 月 15 日*
 
 {{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
 
@@ -293,6 +293,29 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
  * 通过入侵防御来管理风险。
  * 使用 QRadar 监视安全。
  * 通过管理控制台提供安全报告。
+
+## 安全合规性
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} 提供了一个您可以信任的安全云平台。{{site.data.keyword.Bluemix_notm}} 合规性是通过基于业界最佳安全标准（包括 ISO 27001 和 ISO 27002）构建的平台和服务来实现的。{:shortdesc}
+
+![欧盟 (EU) 数据保护示范条款](images/icon_eumc.png) **欧盟 (EU) 示范条款**是一种协议，用于保护从欧盟 (EU) 或欧洲经济区 (EEA) 传输到第三方国家或地区的个人数据。“欧盟 (EU) 示范条款”是由位于 EU 或 EEA 的客户（数据导出方）与位于第三方国家或地区的 IBM 数据处理方（数据导入方）之间签订的。[IBM SaaS 欧盟 (EU) 示范条款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含数据导出方和数据导入方的权利和责任，以及数据主体的权利。“IBM SaaS 欧盟示范条款”可确保个人数据在第三方国家或地区处理时仍能受到像在 EU 或 EEA 中一样的保护。
+
+![金融行业信息系统](images/FISC.gif) 对于日本的银行和相关金融机构，计算机系统必须具有适当的安全程序，这些程序应基于金融行业信息系统中心 (FISC) 安全准则。**FISC** 安全准则由日本金融厅 (FSA)、日本央行 (BOJ) 和 FISC 贯彻实施。
+
+在 [IBM Bluemix 风险调查结果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，可以找到 FISC 安全准则的 {{site.data.keyword.Bluemix_notm}} 自我评估文档（日语）。 
+ 
+![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通过**国际标准化组织 (ISO) 27001 和 27002 标准**的认证，这两个标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS) ，以及应如何实施安全性控制。ISO 27002 标准对 ISO 27001 中的每种安全性控制进行了详细的说明。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。 
+
+{{site.data.keyword.Bluemix_notm}} 经第三方安全公司审计，满足 ISO 27001 的所有要求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) **服务组织控制 (SOC)** 报告定义了如何对服务组织评估与安全性、可用性、处理完整性、机密性和隐私性相关的主要内部控制做法。这些报告是使用美国注册会计师协会 (AICPA) 指南生成的，包含以下各项： 
+  * 组织监督
+  * 供应商管理程序
+  * 内部公司治理和风险管理流程
+  * 法规监督
+ 
+{{site.data.keyword.Bluemix_notm}} 使用 IBM SoftLayer 基础架构即服务 (IaaS) 云服务，并充分利用了其安全体系结构。有关其他信息，请联系 [{{site.data.keyword.Bluemix_notm}} 销售](mailto:bmxcert1@us.ibm.com){:new_window}团队。
 
 ## 安全报告
 {: #reports}

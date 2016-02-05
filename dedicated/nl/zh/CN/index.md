@@ -4,9 +4,10 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*上次更新时间：2015 年 12 月 8 日*
+*上次更新时间：2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性，也就是在您自己的专用 SoftLayer 环境中进行操作，该环境以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境以及您自己的网络。{:shortdesc}
+{{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以在您自己的专用 SoftLayer 环境中享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性。该专用 SoftLayer 环境是以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境和您自己的网络。
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated 包含专用目录，其中显示只供您使用的专用服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的其他服务，供您使用。
 
@@ -26,12 +27,13 @@
 |-----------------|-------------------|-------------------|
 | 内含 | {{site.data.keyword.autoscaling}} | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的使用不受限制。 |
 | 内含 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
-| 内含 | {{site.data.keyword.cloudant}} | IBM 的非关系型数据库，用于提供高性能 JSON 数据层（与 CouchDB 兼容）。包含 1.6 TB，且每秒最多处理 3,000 个 API 请求。 |
-| 可选 | {{site.data.keyword.sqldb}} | IBM {{site.data.keyword.sqldbfull}} Database for {{site.data.keyword.Bluemix_notm}} 会将完整配置的关系数据库添加到您的应用程序。{{site.data.keyword.sqldb}} 提供受管数据库来处理您业务上要求不断提高的 Web 和事务工作负载。 |
-| 可选 | {{site.data.keyword.mql}} | IBM {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} 是基于云的消息传递服务，其针对 {{site.data.keyword.Bluemix_notm}} 应用程序提供灵活且易于使用的消息传递。{{site.data.keyword.mql}} 提供无需太多管理工作的消息传递解决方案。您可以使用 {{site.data.keyword.mql}} 来提高应用程序的响应性和可扩展性，通过一个简单且强大的 API 在应用程序之间分担和卸下工作负载。 |
+| 可选 | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} 是一种基于云的消息传递服务，该服务可为 {{site.data.keyword.Bluemix_notm}} 应用程序提供灵活且易于使用的消息传递功能。{{site.data.keyword.mql}} 提供无需太多管理工作的消息传递解决方案。您可以使用 {{site.data.keyword.mql}} 来提高应用程序的响应性和可扩展性，通过一个简单且强大的 API 在应用程序之间分担和卸下工作负载。 |
 | 可选 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 可存储关系数据，包括特殊类型的数据（例如地理空间数据）。然后，使用 SQL 或高级内置分析（例如预测性分析和数据挖掘、使用 R 的分析以及地理空间分析）来分析该数据。 |
+|可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
+|可选 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服务使您能够以安全方式将 {{site.data.keyword.Bluemix_notm}} 应用程序连接到内部部署或云中的远程位置。  |
 
 *表 1. 专用服务*
+
 
 ##设置 {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #setupdedicated}
@@ -43,31 +45,44 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 要设置专用版本的 {{site.data.keyword.Bluemix_notm}}，请执行以下操作：
 
 <ol>
-<li>首先联系 IBM 指定的客户代表或联系 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>。</li>
-<li>每月的经常性费用基于要使用的专用服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。
-        <ol type="a">
-	<li>与 IBM 一起设置您的 {{site.data.keyword.Bluemix_notm}} Dedicated 实例，费用由您支付。
-	每月的经常性费用基于要使用的专用服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。</li>
-	<li>为设置 {{site.data.keyword.Bluemix_notm}} Dedicated 实例的每个阶段确定截止期限。</li>
-	</ol>
-	</li>
-<li>为专用实例选择 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 数据中心位置</a>。然后，创建专用平台和帐户。针对您的帐户，为组织中需要启动并运行专用实例的人员分配必要的角色。有关分配的角色的更多信息，请参阅 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 角色和责任</a>。
+<li>首先联系 IBM 指定的客户代表或<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">联系 {{site.data.keyword.Bluemix_notm}}</a>。</li>
+<li>与 IBM 一起设置您的 {{site.data.keyword.Bluemix_notm}} Dedicated 实例，费用由您支付。每月的经常性费用基于要使用的专用服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。</li>
+<li>为设置 {{site.data.keyword.Bluemix_notm}} Dedicated 实例的每个阶段确定截止期限。有关所涉及的每个阶段和任务的信息，请参阅 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 角色和责任</a>。</li>
+<li>为专用实例选择 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 数据中心位置</a>。然后，创建专用平台和帐户。针对您的帐户，为组织中需要启动并运行专用实例的人员分配必要的角色。有关分配的角色的信息，请参阅 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 角色和责任</a>。
 </li>
 <li>定义并建立企业网络与 {{site.data.keyword.Bluemix_notm}} Dedicated 实例之间的网络连接。
-        <ol type="a">
+	<ol type="a">
 	<li>IBM 为专用实例安装监视和安全基础架构。</li>
 	<li>IBM 安装您所选的单租户专用服务。</li>
 	<li>您提供网络配置和端点（IP 地址或防火墙等）以及对 LDAP 的访问权（以便集成到 {{site.data.keyword.Bluemix_notm}} 中）。</li>
 	</ol>
 </li>
-<li>为您的环境管理团队确定并分配角色。
-        <ol type="a">
+<li>为您环境的管理团队确定并分配角色。
+	<ol type="a">
 	<li>IBM 根据您提供的信息配置网络访问和 LDAP。为您指定的联系人授予管理访问权。还必须指定一名联系人来负责记帐和提供相应支持。</li>
-	<li>IBM 在您的专用环境中设置联合目录，用于显示您的专用服务以及许多公共 {{site.data.keyword.Bluemix_notm}} 服务。</li>
+	<li>IBM 在您的专用环境中设置联合目录，用于显示您的专用服务。联合目录还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的其他服务，供您使用。您可以选择根据自己的数据隐私和安全标准来确定哪些公共服务满足您的业务需求。</li>
 	<li>您验证网络和防火墙配置以及 LDAP 端点和访问权。</li>
 	</ol>
 </li>
 </ol>
+
+对您的环境进行初始部署和配置的过程应类似于以下列表。有关每个任务负责人员的详细信息，请参阅[角色和责任](../dedicated/index.html#rolesresponsibilities)。
+
+<ol>
+<li>您选择使用哪个数据中心来托管专用实例。有关数据中心选项的信息，请参阅 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 数据中心位置</a>。</li>
+<li>您为部署指定域名，以及要使用的标识。设置 {{site.data.keyword.Bluemix_notm}} 实例时，您会得到三个域。请选取 <code>*mycompany*.*region*.bluemix.net</code> 和 <code>*mycompany*.*region*.mybluemix.net</code> 的前缀。然后，选择第三个域的全名。<br />
+<p>您可以根据自己的需要选择任意数量的定制域。不过，您应负责获取定制域的证书。有关创建定制域的信息，请参阅<a href="../manageapps/updapps.html#domain">创建和使用定制域</a>。</p></li>
+<li>您确定使用哪个公共帐户的所有者来在 {{site.data.keyword.Bluemix_notm}} Public 中代表您的公司。IBM 使用此帐户来跟踪联合服务使用情况。</li>
+<li>您选择数据中心安全连接的类型。可选类型包括 SoftLayer VPN、SoftLayer Direct Link 或 AT&T Net Bond。</li>
+<li>您决定是否将允许通过公共因特网对您的专用环境进行任何访问。</li>
+<li>您选择要使用的认证的类型。可选类型包括 IBM 标识或 Active Directory。有关使用和注册 IBM 标识的信息，请参阅<a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">帮助和常见问题</a>页面。</li>
+<li>您为您环境的管理团队确定并分配角色。有关必须分配哪些角色的信息，请参阅 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 角色和责任</a>。</li>
+<li>IBM 部署核心平台，其中包含弹性运行时、控制台、管理功能和监视。</li>
+<li>IBM 配置您对环境的管理访问权。</li>
+<li>您可以开始使用您的专用实例来响应警报，该实例由 IBM 操作团队进行监视。</li>
+</ol>
+
+{{site.data.keyword.Bluemix_notm}} 实例设置完成后，您可以使用“管理”页面来监视和管理 {{site.data.keyword.Bluemix_notm}} 实例。有关更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](../administer/index.html#mng)。有关升级和维护的信息，请参阅[维护专用实例](index.html#maintaindedicated)。
 
 ##角色和责任
 {: #rolesresponsibilities}
@@ -80,7 +95,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 
 <dl>
 <dt>**采购联系人**</dt>
-<dd>与 IBM 代表一起建立 {{site.data.keyword.Bluemix_notm}} Dedicated 环境，包括确定组织中负责项目各个方面的相应人员。分配有此角色的人员可监管模式选择、商业安排以及对客户资源访问的安排。采购联系人是设置专用实例的总联系人。</dd>
+<dd>与 IBM 代表一起建立 {{site.data.keyword.Bluemix_notm}} Dedicated 环境，包括确定组织中负责项目各个方面的相应人员。分配有此角色的人员将担当项目管理的角色，负责对模式选择、商业安排以及客户资源访问安排进行监督。采购联系人是设置专用实例和跟踪部署过程的总联系人。</dd>
 <dt>**合规管理人员**</dt>
 <dd>与 IBM 代表一起选择符合您安全需求的拓扑和部署选项。分配有此角色的人员可与 IBM 合规顾问一起确定哪些部署模式可达到合规目标。</dd>
 <dt>**网络专家**</dt>
@@ -130,7 +145,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |确定用于事件检测和问题确定的工具 | 确定用于在 {{site.data.keyword.Bluemix_notm}} 平台级别进行事件检测和问题确定的 IBM 和第三方工具。 | IBM |
 |定义上报计划 | 定义上报计划以分类和解决从监视组件检测到的事件。 | IBM |
 |签署基础架构、平台和支持协议 | 签署预订协议，包括环境的财务条款和条件。签署网络和安全性监视协议。签署支持预订。 | 客户 |
-|采购环境 | 采购计算资源、网络和存储，包括用于托管 {{site.data.keyword.Bluemix_notm}} 的核心和服务 VLAN、用于托管 Data Power 的裸机服务以及 SoftLayer 防火墙。提供基础架构以允许使用 VPN 隧道。 | 客户 |
+|采购环境 | 采购计算资源、网络和存储，包括用于托管 {{site.data.keyword.Bluemix_notm}} 的核心和服务 VLAN、用于托管 DataPower 的裸机服务以及 SoftLayer 防火墙。提供基础架构以允许使用 VPN 隧道。 | 客户 |
 |安装光纤网、应用程序以及监视和管理组件 | 安装、配置和验证光纤网组件（例如 BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
 |安装和配置安全组件 | 安装和配置与监视和上报计划绑定的安全组件，包括 IBM QRadar、凭证保险库、入侵防御系统、IBM BigFix 和 IBM Security Privileged Identity Management。 | IBM |
 |安装和配置定制组件 |  	安装和配置位于 {{site.data.keyword.Bluemix_notm}} 产品和服务范围之外的定制组件。 | 客户 |

@@ -163,7 +163,7 @@ cf logs appname
 <dt>appname</dt>
 <dd>应用程序的名称。</dd>
 <dt>*--recent*</dt>
-<dd>检索最新的日志。</dd>
+<dd>检索最新日志。</dd>
 </dl>
 
 ## cf marketplace

@@ -63,7 +63,7 @@
 <dd class="pd">缺省目标区域的标识。例如：<code>ibm:yp:us-south</code>。此值是可选的。</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">缺省目标组织的 GUID。要找到此值，请单击<strong>管理组织</strong> <i>organization_name</i>。组织的 URL 包含该组织的 GUID。此值是可选的。</dd>
+<dd class="pd">缺省目标组织的 GUID。要找到此值，请单击<strong>管理组织</strong> > <i>organization_name</i>。组织的 URL 包含该组织的 GUID。此值是可选的。</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">缺省目标空间的 GUID。要找到此值，请单击<strong>管理组织</strong> > <i>space_name</i>。空间的 URL 包含该空间的 GUID。此值是可选的。</dd>

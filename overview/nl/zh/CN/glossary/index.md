@@ -86,7 +86,7 @@
 <dd class="dd">与开放式非专有开发平台相关，此类平台包括公共云、专用云和本地云部署模型。另请参阅<a class="xref" href="#gloss_D__x8439199">专用云 (dedicated cloud)</a>、<a class="xref" href="#gloss_L__x8439194">本地云 (local cloud)</a> 和<a class="xref" href="#gloss_P__x4585370">公共云 (public cloud)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>分支 (branch)</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">一种用于隔离或并行开发的流。</li>
-<li class="li">创建用于隔离或并行开发的流。</li>
+<li class="li">创建用于并行或隔离开发的流。</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_B__x2197543"><!-- --></a>构建器 (builder)</dt>
@@ -340,7 +340,7 @@
 <dt class="dt dlterm"><a name="gloss_O__x4561212"><!-- --></a>内部部署 (on-premises, on-prem)</dt>
 <dd class="dd">与用户或组织的本地计算机上安装并运行的软件有关。</dd>
 <dt class="dt dlterm"><a name="gloss_O__x2062278"><!-- --></a>开放式源代码 (open source)</dt>
-<dd class="dd">与源代码可供公开使用或修改的软件有关。虽然开放式源代码软件的使用和再分发可能受许可限制的约束，但此类软件通常以公共协作形式进行开发，并免费提供给用户使用。Linux 就是一个众所周知的开放式源代码软件。</dd>
+<dd class="dd">与源代码可供公开使用或修改的软件有关。虽然开放式源代码软件的使用和再分发可能受许可限制的约束，但此类软件通常通过公共协作进行开发并免费提供给用户使用。Linux 就是一个众所周知的开放式源代码软件。</dd>
 <dt class="dt dlterm"><a name="gloss_O__x7470494"><!-- --></a>组织 (org)</dt>
 <dd class="dd">请参阅<a class="xref" href="#gloss_O__x2032585">组织 (organization)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_O__x2032585"><!-- --></a>组织 (organization, org)</dt>

@@ -14,7 +14,8 @@
 
 使用“部署到 {{site.data.keyword.Bluemix_notm}}”按钮克隆项目后，{{site.data.keyword.jazzhub_short}} 会创建一个基于 `pipeline.yml` 文件的管道。 
 
-示例：``` 
+示例：
+``` 
 <sample root>
 	.bluemix
 		pipeline.yml
@@ -92,7 +93,8 @@ name: <name>
 [properties:   
 	<sequence of properties>] 
 [jobs:   
-	<sequence of jobs>]```
+	<sequence of jobs>]
+```
 {: codeblock} 
 
 输入：
