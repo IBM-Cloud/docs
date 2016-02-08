@@ -76,6 +76,8 @@ Select VM or VM group instances to which you want to assign the security group.
 ![](images/assign_icon.png)  
 3. Select the VM instances as required.  
 ![](images/select_instance.png)  
+
+	**Note:** Select only VM instances that are not part of a VM group. If you select an instance that is part of a VM group, subsequent assign/unassign operations for VM groups can become unstable.
 4. Select **ADD**.
 	
 ####Assign VM Groups
