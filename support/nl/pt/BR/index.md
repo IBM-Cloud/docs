@@ -4,7 +4,7 @@
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 19 de janeiro de 2016*
 
 
 Se encontrar problemas com o {{site.data.keyword.Bluemix}}, você tem várias opções de suporte, como obter ajuda por meio do
@@ -19,7 +19,7 @@ Para obter ajuda, é possível acessar Conta e suporte ou acessar diretamente St
 ### Usando Conta e suporte
 Conta e suporte é um recurso que permite verificar dados da conta, visualizar status, ficar atualizado com as notificações, selecionar sua região, selecionar e gerenciar organizações e efetuar logout. Além disso, é possível obter ajuda e fornecer feedback.
 
-Para abrir Conta e suporte, efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.png) na parte superior direita do Painel.
+Para abrir a Conta e suporte, efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior.
 
 Clique em **Obter ajuda** para localizar respostas para as suas
 perguntas. Na página exibida, digite sua pergunta no
@@ -66,7 +66,7 @@ sejam resolvidas.
 
 É possível localizar a página Status, escolhendo uma das opções a seguir:
 
-  * Em Conta e suporte: efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.png) na parte superior direita do Painel, em seguida, clique em **Status**.
+  * Em Conta e suporte: efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} e clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.svg) na barra de menus superior e, em seguida, clique em **Status**.
   * Acessando-a diretamente em [IBM {{site.data.keyword.Bluemix_notm}} – Status do sistema](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
@@ -152,7 +152,7 @@ e as opções de ajuda, é possível perguntar ao suporte.
 Para abrir um chamado de suporte, use um dos métodos
 a seguir:
 
-  * A partir de Conta e suporte. Efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.png) na parte superior direita do Painel.
+  * A partir de Conta e suporte. Efetue login na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](./images/account_support.svg) na barra de menus superior.
 
      1. Primeiro, assegure-se de verificar o status do {{site.data.keyword.Bluemix_notm}} clicando em **Status**.
 	 2. Em seguida, se o problema não for devido a uma indisponibilidade, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
@@ -183,13 +183,46 @@ Dedicated
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
 
 
+<ul>
+<li>Entre em contato com o suporte abrindo uma novo chamado usando o formulário <a href="http://ibm.biz/bluemixsupport" target="_blank">Chamado de suporte do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **Dedicated** para o campo de região do {{site.data.keyword.Bluemix_notm}}.
+<p>Os envios de formulários são monitorados a partir de domingo as 22h UTC até às sextas-feiras à meia-noite UTC.</p>
+</li>
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente {{site.data.keyword.Bluemix_notm}} Public, é possível abrir um chamado de suporte usando um dos métodos a seguir:
+<ul>
+<li>Clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Acesse o
+<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> e insira seu ID IBM e senha. Seu ID IBM serve como suas credenciais de serviço. Clique em **Abrir um chamado de suporte** no menu. Assegure-se de
+indicar uma severidade apropriada para seu chamado, porque ela determina como o
+chamado será manipulado.</li>
+</ul>
+</li>
+<li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<p>**Nota**: em sua solicitação, uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Dedicated.</p>
+</li>
+</ul>
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Local
 {: #contacting-bluemix-support-local}
 
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como talvez você não tenha um ID IBM, há algumas opções diferentes para obter suporte.
 
-
+<ul>
+<li>Entre em contato com o suporte abrindo uma novo chamado usando o formulário <a href="http://ibm.biz/bluemixsupport" target="_blank">Chamado de suporte do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário.
+<p>Os envios de formulários são monitorados a partir de domingo as 22h UTC até às sextas-feiras à meia-noite UTC.</p>
+</li>
+<li>Se você tiver um ID IBM e tiver acesso ao ambiente {{site.data.keyword.Bluemix_notm}} Public, é possível abrir um chamado de suporte usando um dos métodos a seguir:
+<ul>
+<li>Clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
+<li>Acesse o
+<a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> e insira seu ID IBM e senha. Seu ID IBM serve como suas credenciais de serviço. Clique em **Abrir um chamado de suporte** no menu. Assegure-se de
+indicar uma severidade apropriada para seu chamado, porque ela determina como o
+chamado será manipulado.</li>
+</ul>
+</li>
+<li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
+<p>**Nota**: Em sua solicitação, uma lista de usuários em sua org que podem servir como contatos para chamados de suporte pode ser exibida na página **Suporte** na interface com o usuário do {{site.data.keyword.Bluemix_notm}} em seu ambiente Local.</p>
+</li>
+</ul>
 
 ### Severidade do chamado de suporte
 

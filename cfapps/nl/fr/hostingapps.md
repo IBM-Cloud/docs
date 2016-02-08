@@ -82,8 +82,7 @@ résilience.
 
   Si vous avez déjà utilisé des fonctions propres au système
 d'exploitation, vous pouvez résoudre le problème en utilisant des bibliothèques de compatibilité, par exemple Cygwin et Mono. Cygwin est une bibliothèque
-de compatibilité qui fournit un ensemble d'outils Linux dans un environnement Windows.
-Mono est une bibliothèque de compatibilité qui fournit des capacités Windows .NET dans Linux.
+de compatibilité qui fournit un ensemble d'outils Linux dans un environnement Windows. Mono est une bibliothèque de compatibilité qui fournit des capacités Windows .NET dans Linux.
 
   Evitez les dépendances propres au
 système d'exploitation ; à la place, utilisez des services mis à disposition par l'infrastructure de middleware ou les fournisseurs de services.
@@ -113,8 +112,7 @@ Pour déployer votre application dans {{site.data.keyword.Bluemix_notm}} en tant
 sélectionnez un contexte d'exécution dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le contexte d'exécution contient une application Hello
 World de démarrage que vous pouvez remplacer par votre propre application. Si vous ne trouvez pas de module de démarrage fournissant le contexte
 d'exécution que vous recherchez, vous pouvez apporter un pack de construction personnalisé compatible avec Cloud Foundry dans {{site.data.keyword.Bluemix_notm}} en spécifiant l'option -b
-dans la commande cf push.
-Pour des détails, voir [Utilisation de packs de construction de communauté](../cfapps/byob.html).
+dans la commande cf push. Pour des détails, voir [Utilisation de packs de construction de communauté](../cfapps/byob.html).
 
 Vous pouvez utiliser les outils et les services suivants mis à disposition par
 {{site.data.keyword.Bluemix_notm}} :
@@ -156,10 +154,12 @@ Procédez comme suit pour migrer votre application :
 </li>
 
 <li>Facultatif : si vous voulez spécifier et sauvegarder les détails du déploiement avant d'envoyer une application par commande push dans
-{{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter le manifeste d'application en procédant comme suit :<ol>
+{{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter le manifeste d'application en procédant comme suit :
+<ol>
 <li>Accédez au répertoire de travail de votre application et créez un fichier dont le nom est manifest.yml par défaut.</li>
 <li>Spécifiez les détails du déploiement dans le fichier manifeste. L'exemple ci-dessous est une illustration d'un fichier manifeste pour une application
-Java.. <pre class="pre codeblock"><code>applications:
+Java..
+<pre class="pre codeblock"><code>applications:
 - disk_quota: 1024M
   host: myjavatest
   name: MyJavaTest

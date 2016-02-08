@@ -265,7 +265,7 @@ incluyen GET, POST y PUT.</dd>
 <dd class="dd">Véase <a class="xref" href="#gloss_I__x4585332">infraestructura como servicio</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2115755"><!-- --></a>IDE</dt>
 <dd class="dd">Véase <a class="xref" href="#gloss_I__x2116934">entorno de desarrollo integrado</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>image</dt>
+<dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>imagen</dt>
 <dd class="dd">Un tiempo de ejecución completo que puede utilizarse para ejecutar apps. Las imágenes se utilizan para crear contenedores y pueden contener varias imágenes padre (capas). Véase también <a class="xref" href="#gloss_B__x5366487">imagen base</a>, <a class="xref" href="#gloss_C__x2010901">contenedor</a>, <a class="xref" href="#gloss_L__x2028320">capa</a>, <a class="xref" href="#gloss_N__x2031005">espacio de nombres</a>, <a class="xref" href="#gloss_P__x8439210">imagen padre</a>, <a class="xref" href="#gloss_P__x8439215">repositorio de imágenes privadas</a>, <a class="xref" href="#gloss_R__x2064940">registro</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4015600"><!-- --></a>impedimento</dt>
 <dd class="dd">Elemento que impide el progreso o un elemento de trabajo que realiza un seguimiento de algo que impide el progreso.</dd>

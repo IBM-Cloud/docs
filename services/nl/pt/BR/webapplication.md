@@ -3,7 +3,7 @@
 # Web and Application
 {: #webapplication}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios. 
 {:shortdesc}

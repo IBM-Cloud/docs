@@ -3,7 +3,7 @@
 # DevOps
 {: #devops}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Accélération de la distribution des applications | Choix du codage | Déploiement en toute confiance
 ---- | ---- | ----

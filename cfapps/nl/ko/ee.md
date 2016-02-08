@@ -10,8 +10,7 @@
 
 앱을 빌드, 실행 및 배치할 때는
 {{site.data.keyword.Bluemix}} 사용자 인터페이스,
-플랫폼 및 도구 선택을 사용할 수 있습니다. 이 엔드 투 엔드 개발 시나리오에 따라 시작하십시오. 
-{:shortdesc}
+플랫폼 및 도구 선택을 사용할 수 있습니다. 이 엔드 투 엔드 개발 시나리오에 따라 시작하십시오. {:shortdesc}
 
 ## 등록
 {: #ee_start}
@@ -99,7 +98,6 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
    ]
 }
 ```
-{:codeblock}
 
 **참고:** 이 환경 변수는 앱이 바인딩된 각 서비스 인스턴스마다 하나의 항목이 있는 JSON 오브젝트의 직렬화입니다. 각 서비스 인스턴스가 제공하는 데이터의 양 및 유형은
 서비스에 따라 정해집니다. 앱이 서비스를 사용하지 않는 경우 VCAP_SERVICES는 비어 있는 JSON 오브젝트입니다. 
@@ -161,7 +159,7 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
   
   6. 이제 브라우저에서 다음 앱 URL을 입력하여 앱에 액세스할 수 있습니다.```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 또한 Eclipse 도구와 같은 다른 앱 빌드 도구를 선택할 수도 있습니다. 자세한 정보는
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 앱의 코딩 시작 페이지를 참조하십시오.
@@ -235,7 +233,7 @@ VCAP_SERVICES 환경 변수가 업데이트되지 않습니다. 애플리케이�
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **참고:** 샘플 코드에서 표시하듯이, {{site.data.keyword.cloudant}} 서비스 인스턴스에 연결하기 위해 VCAP_SERVICES 환경 변수가 존재하는지 여부를
 우선 확인할 수 있습니다. 존재하는 경우, 애플리케이션이 cloudant 변수의 특성을 사용하여 데이터베이스에 액세스할 수 있습니다. 그러나
@@ -265,7 +263,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **선택사항:** 서비스 인스턴스를 바인드 해제하거나 삭제하십시오.
   

@@ -3,7 +3,7 @@
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 7 décembre 2015*
+*Dernière mise à jour : 15 décembre 2015*
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
 possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
@@ -309,10 +309,9 @@ d'obtenir des rapports contenant les informations suivantes :
 Pour masquer les données via SQL, les applications peuvent appeler les fonctions de masquage
 définies par l'utilisateur (UDF)
 qui sont déployées avec la base de données. Par exemple, vous pouvez masquer les données que vous voulez utiliser pour effectuer des tests dans un autre
-contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim..
+contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim.
 
-Le
-plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
+Le plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
 [Initiation à SQL Database](../services/SQLDB/index.html).
 
 ### dashDB
@@ -342,11 +341,10 @@ l'emplacement distant auquel vous voulez vous connecter. Vous pouvez configurer 
 
 Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/index.html).
 
-### Gestion des événements et sécurité des systèmes d'informations 
+### Gestion des événements et sécurité des systèmes d'informations
 
 Vous pouvez utiliser les outils SIEM (gestion des événements et sécurité des systèmes d'informations) pour analyser les alertes de sécurité dans les
-journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud.
-Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Déploiement de la sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
@@ -360,7 +358,6 @@ flux d'informations pour les utilisateurs et les développeurs d'applications af
 
 Pour les *utilisateurs d'application* {{site.data.keyword.Bluemix_notm}}, le **flux d'un utilisateur
 d'application** est le suivant :
-
  1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau.
  2. Via IBM DataPower Gateway avec proxy inverse et proxy de terminaison SSL.
  3. Via le routeur réseau.
@@ -375,7 +372,7 @@ est le suivant :
     * Pour les développeurs qui se connectent à l'environnement {{site.data.keyword.Bluemix_notm}} dédié ou local, le flux utilise le
 protocole LDAP
 de l'entreprise.
- * Le **flux de développement et de déploiement** est le suivant : 
+ * Le **flux de développement et de déploiement** est le suivant :
     1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau. Applicable à l'environnement
 {{site.data.keyword.Bluemix_notm}} dédié seulement.
     2. Via IBM DataPower Gateway avec proxy inverse et proxy de terminaison SSL.
@@ -390,7 +387,6 @@ Pour les *administrateurs* de l'environnement {{site.data.keyword.Bluemix_notm}}
  3. Via le routeur réseau.
  4. Atteint la page Administration dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
-
 En plus des utilisateurs décrits dans ces scénarios, une équipe autorisée en charge des opérations de sécurité IBM effectue diverses tâches de
 sécurité opérationnelles, par exemple :
  * Des analyses de vulnérabilités. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité
@@ -401,55 +397,74 @@ physique et des analyses au sein de votre pare-feu.
  * La surveillance de la sécurité avec QRadar.
  * La mise à disposition de rapports de sécurité dans la console d'administration.
 
-## Rapports de sécurité 
+## Conformité en matière de sécurité
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} fournit une plateforme cloud sécurisée, digne de confiance. La conformité {{site.data.keyword.Bluemix_notm}} résulte d'une plateforme et de services générés avec les meilleures normes de sécurité de l'industrie, notamment ISO 27001 et ISO 27002.
+{:shortdesc}
+
+![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client situé dans l'UE ou l'EEE (l'exportateur de données) et le processeur de données IBM situé dans le pays tiers (l'importateur de données). La clause [IBM
+SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
+
+![Financial Industry Information Systems (FISC)](images/FISC.gif) Pour les institutions bancaires et financières au Japon, les systèmes informatiques doivent avoir mis en place des procédures de sécurité, en accord avec les directives de sécurité établies par le FISC (Center for Financial Industry Information Systems). Les directives de sécurité du **FISC** sont imposées par l'agence japonaise FSA (Financial Services Agency), la banque BOJ (Bank of Japan) et le FISC.
+
+Vous pourrez trouver un document d'auto-évaluation {{site.data.keyword.Bluemix_notm}} correspondant aux directives en matière de sécurité du FISC, écrit en langue japonaise, sur le site [IBM Bluemix risk survey results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié aux **normes ISO (International Organization for Standardization) 27001 et 27002**, qui définissent le code de bonne pratique pour les processus de management de la sécurité de l'information. La norme ISO 27001 spécifie les exigences en matière d'établissement, de mise en oeuvre et de documentation des systèmes de management de la sécurité de l'information (SMSI) et les exigences relatives à la mise en oeuvre des contrôles de sécurité, en fonction des besoins des organisations individuelles. La norme ISO 27002 explique en détail chaque contrôle de sécurité de la norme ISO 27001. La famille de normes ISO 27000 intègre un processus d'évaluation des risques et d'estimation des ressources, dans le but de protéger la confidentialité, l'intégrité et l'accessibilité des informations écrites, orales et électroniques. 
+
+{{site.data.keyword.Bluemix_notm}} fait l'objet d'un audit par une firme indépendante et répond à toutes les exigences de la norme ISO 27001 : [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) Les rapports **Service Organization Controls (SOC)** définissent l'évaluation des pratiques de contrôle interne exemplaires liées à la sécurité, l'accessibilité, l'intégrité du traitement, la confidentialité et la protection des données personnelles au sein d'une organisation de services. Ces rapports générés à partir du guide de l'AICPA (American Institute of Certified Public Accountants) comprennent les éléments suivants : 
+  * Supervision de l'organisation
+  * Programme de gestion des fournisseurs
+  * Processus internes de gouvernance d'entreprise et de gestion des risques
+  * Régime réglementaire de surveillance
+ 
+{{site.data.keyword.Bluemix_notm}} utilise les services cloud d'IBM SoftLayer Infrastructure-as-a-Service (IaaS) et bénéficie de tous les avantages de leur architecture de sécurité. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
+
+## Rapports de sécurité
 {: #reports}
 
 Avec l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié,
-{{site.data.keyword.Bluemix_notm}} génère divers rapports de sécurité et journaux que vous pouvez afficher via la page Administration.
-Pour des instructions d'affichage et d'utilisation des rapports, voir [Affichage des rapports](../admin/index.html#oc_report).
+{{site.data.keyword.Bluemix_notm}} génère divers rapports de sécurité et journaux que vous pouvez afficher via la page Administration. Pour des instructions d'affichage et d'utilisation des rapports, voir [Affichage des rapports](../admin/index.html#oc_report).
 
 Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
-local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. 
+local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
 
 | **Catégorie** | **Rapport** | **Description** |      
 |-----------------|-------------------|---------------------|
-| Pare-feu | Connexions au pare-feu  | Evénements liés à la connexion de l'administrateur aux unités de pare-feu Vyatta.  |
-| Pare-feu | Refus du pare-feu  | Evénements générés par les unités de pare-feu Vyatta lorsqu'une demande d'accès est refusée selon les règles de
-pare-feu appliquées.  |
-| Evénements de connexion d'administrateur {{site.data.keyword.Bluemix_notm}}  | Connexion des
-administrateurs {{site.data.keyword.Bluemix_notm}}  | Evénements générés par le système d'exploitation lorsqu'un administrateur démarre une
-session SSH sur chaque système {{site.data.keyword.Bluemix_notm}}.  |
-| Evénements de connexion de développeur d'applications {{site.data.keyword.Bluemix_notm}}  | Connexion
-des développeurs d'applications {{site.data.keyword.Bluemix_notm}}  | Evénements générés par le composant
+| Pare-feu | Connexions au pare-feu | Evénements liés à la connexion de l'administrateur aux unités de pare-feu Vyatta. |
+| Pare-feu | Refus du pare-feu | Evénements générés par les unités de pare-feu Vyatta lorsqu'une demande d'accès est refusée selon les règles de
+pare-feu appliquées. |
+| Evénements de connexion d'administrateur {{site.data.keyword.Bluemix_notm}} | Connexion des
+administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système d'exploitation lorsqu'un administrateur démarre une
+session SSH sur chaque système {{site.data.keyword.Bluemix_notm}}. |
+| Evénements de connexion de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Connexion
+des développeurs d'applications {{site.data.keyword.Bluemix_notm}} | Evénements générés par le composant
 de connexion à la plateforme {{site.data.keyword.Bluemix_notm}} lorsqu'un utilisateur de la plateforme {{site.data.keyword.Bluemix_notm}}
-démarre une session via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.  |
-| Evénements d'administration d'administrateur {{site.data.keyword.Bluemix_notm}}  | Evénements
-d'administration du système d'exploitation des administrateurs {{site.data.keyword.Bluemix_notm}}  | Evénements générés par le système
-d'exploitation lorsqu'un administrateur effectue une action dans une session de travail en cours.
- |
-| Evénements d'administration de développeur d'applications {{site.data.keyword.Bluemix_notm}}  | Evénements
-d'administration (Cloud Foundry) {{site.data.keyword.Bluemix_notm}}  | Evénements liés aux opérations effectuées par l'utilisateur de la plateforme
-{{site.data.keyword.Bluemix_notm}} via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.  |
-| Evénements d'administration de base de données d'administrateur {{site.data.keyword.Bluemix_notm}}  | Evénements d'administration de base
-de données
- | Evénements liés aux opérations effectuées par un administrateur de base de données sur les bases de données internes
-{{site.data.keyword.Bluemix_notm}}.  |
-| Evénements d'administration | Evénements de gestion des utilisateurs  | Evénements liés aux actions de gestion des utilisateurs effectuées dans la page
-Administration.
- |
-| Evénements d'administration | Catalogue | Evénements liés aux modifications du catalogue des services.  |
-| Evénements d'administration | Evénements de gestion des rapports de sécurité  | Evénements liés aux actions de gestion des rapports de sécurité effectuées
-dans la page Administration.
- |
-| Révisions d'accès  | Rapport sur les révisions d'accès  | Révisions pour les accès privilégiés.  |
-| Gestion des modifications | Gestion des modifications logicielles  | Activité de gestion des modifications.  |
-| Gestion des clés  | Gestion des certificats SSL personnalisés  | Certifications SSL personnalisées qui ont été téléchargées et stockées.
- |
-| Chiffrement  | Chiffrement des données en transit  | Chiffrement des données en transit configuré.  |
-| Antivirus  | Rapport d'analyse antivirus  | Logiciel antivirus installé.  |
-| Gestion des correctifs logiciels  | Rapport d'application des correctifs  | Correctifs logiciels appliqués.  |
-| Gestion des incidents de sécurité | Rapport de résolution des incidents de sécurité  | Preuve des incidents de sécurité pour la gestion des
-incidents de sécurité.  |
+démarre une session via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
+| Evénements d'administration d'administrateur {{site.data.keyword.Bluemix_notm}} | Evénements
+d'administration du système d'exploitation des administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système
+d'exploitation lorsqu'un administrateur effectue une action dans une session de travail en cours. |
+| Evénements d'administration de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Evénements
+d'administration (Cloud Foundry) {{site.data.keyword.Bluemix_notm}} | Evénements liés aux opérations effectuées par l'utilisateur de la plateforme
+{{site.data.keyword.Bluemix_notm}} via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
+| Evénements d'administration de base de données d'administrateur {{site.data.keyword.Bluemix_notm}} | Evénements d'administration de base
+de données | Evénements liés aux opérations effectuées par un administrateur de base de données sur les bases de données internes
+{{site.data.keyword.Bluemix_notm}}. |
+| Evénements d'administration | Evénements de gestion des utilisateurs | Evénements liés aux actions de gestion des utilisateurs effectuées dans la page
+Administration. |
+| Evénements d'administration | Catalogue | Evénements liés aux modifications du catalogue des services. |
+| Evénements d'administration | Evénements de gestion des rapports de sécurité | Evénements liés aux actions de gestion des rapports de sécurité effectuées
+dans la page Administration. |
+| Révisions d'accès | Rapport sur les révisions d'accès | Révisions pour les accès privilégiés. |
+| Gestion des modifications | Gestion des modifications logicielles | Activité de gestion des modifications. |
+| Gestion des clés | Gestion des certificats SSL personnalisés | Certifications SSL personnalisées qui ont été téléchargées et stockées. |
+| Chiffrement | Chiffrement des données en transit | Chiffrement des données en transit configuré. |
+| Antivirus | Rapport d'analyse antivirus | Logiciel antivirus installé. |
+| Gestion des correctifs logiciels | Rapport d'application des correctifs | Correctifs logiciels appliqués. |
+| Gestion des incidents de sécurité | Rapport de résolution des incidents de sécurité | Preuve des incidents de sécurité pour la gestion des
+incidents de sécurité. |
 
 *Tableau 1. Liste des rapports de sécurité pour l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement
 {{site.data.keyword.Bluemix_notm}} dédié*

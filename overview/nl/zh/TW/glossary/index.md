@@ -85,7 +85,7 @@
 <dd class="dd">一種以雲端為基礎的開放標準平台，用於建置、管理和執行所有類型的應用程式（例如，Web、行動式、海量資料和智慧型裝置）。功能包括 Java、行動式後端開發和應用程式監視，以及來自生態系統合作夥伴和開放程式碼的特性－這些全都在雲端中以「功能即服務」的方式提供。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>樣板 (boilerplate)</dt>
 <dd class="dd">一種範本，包含一個應用程式及其相關聯的執行時期環境以及特定網域的預先定義服務。</dd>
-<dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>無國界 (borderless)</dt>
+<dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>無界限 (borderless)</dt>
 <dd class="dd">相關的開放式非專屬開發平台，其中包括公用雲端、專用雲端及本端雲端部署模型。另請參閱<a class="xref" href="#gloss_D__x8439199">專用雲端 (dedicated cloud)</a>、<a class="xref" href="#gloss_L__x8439194">本端雲端 (local cloud)</a>、<a class="xref" href="#gloss_P__x4585370">公用雲端 (public cloud)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>分支 (branch)</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">用於隔離或平行開發的串流。</li>
@@ -169,7 +169,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2019805"><!-- --></a>DEA</dt>
 <dd class="dd">請參閱 <a class="xref" href="#gloss_D__x7470348">Droplet Execution Agent</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x8439199"><!-- --></a>專用雲端 (dedicated cloud)</dt>
-<dd class="dd">一種專用雲端運算環境，提供具有單一承租戶硬體的基礎架構。另請參閱<a class="xref" href="#gloss_B__x8439189">無國界 (borderless)</a>。</dd>
+<dd class="dd">一種專用雲端運算環境，提供具有單一承租戶硬體的基礎架構。另請參閱<a class="xref" href="#gloss_B__x8439189">無界限 (borderless)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>問題報告 (defect)</dt>
 <dd class="dd">一種專案元素，容許利害關係人追蹤錯誤和錯誤修正程式。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>部署 (deployment)</dt>
@@ -253,7 +253,7 @@ root)</a>。</dd>
 <dd class="dd">請參閱<a class="xref" href="#gloss_I__x4585332">基礎架構即服務 (infrastructure as a service)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2115755"><!-- --></a>IDE</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_I__x2116934">整合開發環境 (integrated development environment)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>image</dt>
+<dt class="dt dlterm"><a name="gloss_I__x2024928"><!-- --></a>映像檔 (image)</dt>
 <dd class="dd">可用來執行應用程式的完整執行時期。映像檔是用來建立儲存器，而且可以包含多個母項映像檔（層）。另請參閱<a class="xref" href="#gloss_B__x5366487">基礎映像檔 (base image)</a>、<a class="xref" href="#gloss_C__x2010901">儲存器 (container)</a>、<a class="xref" href="#gloss_L__x2028320">層 (layer)</a>、<a class="xref" href="#gloss_N__x2031005">名稱空間 (namespace)</a>、<a class="xref" href="#gloss_P__x8439210">母項映像檔 (parent image)</a>、<a class="xref" href="#gloss_P__x8439215">專用映像檔儲存庫 (private image repository)</a>、<a class="xref" href="#gloss_R__x2064940">登錄 (registry)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_I__x4015600"><!-- --></a>障礙 (impediment)</dt>
 <dd class="dd">妨礙進度的項目，或對妨礙進度的項目進行追蹤的工作項目。</dd>
@@ -300,7 +300,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_L__x2028538"><!-- --></a>輕量型目錄存取通訊協定 (Lightweight Directory Access Protocol, LDAP)</dt>
 <dd class="dd">一種開放式通訊協定，它使用 TCP/IP 來存取支援 X.500 模型的目錄，且它不會引起對更複雜的「X.500 目錄存取通訊協定 (DAP)」的資源需求。例如，LDAP 可用來尋找網際網路或企業內部網路目錄中的人員、組織及其他資源。</dd>
 <dt class="dt dlterm"><a name="gloss_L__x8439194"><!-- --></a>本端雲端 (local cloud)</dt>
-<dd class="dd">用戶端資料中心內的雲端運算環境。本端雲端是內部部署的，並提供改良的延遲及安全。另請參閱<a class="xref" href="#gloss_B__x8439189">無國界 (borderless)</a>。</dd>
+<dd class="dd">用戶端資料中心內的雲端運算環境。本端雲端是內部部署的，並提供改良的延遲及安全。另請參閱<a class="xref" href="#gloss_B__x8439189">無界限 (borderless)</a>。</dd>
 </dl>
 
 ## M
@@ -363,9 +363,9 @@ root)</a>。</dd>
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_P__x2029790"><!-- --></a>PaaS</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_P__x2029786">平台即服務 (platform as a service)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_P__x8439210"><!-- --></a>母項映像檔 (parent image)</dt>
+<dt class="dt dlterm"><a name="gloss_P__x8439210"><!-- --></a>主映像檔 (parent image)</dt>
 <dd class="dd">提供另一個映像檔基礎的映像檔。例如，Ubuntu Linux 是 IBM Liberty 映像檔的母項映像檔。另請參閱<a class="xref" href="#gloss_B__x5366487">基礎映像檔 (base image)</a>、<a class="xref" href="#gloss_I__x2024928">映像檔 (image)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_P__x2238121"><!-- --></a>內容 (payload)</dt>
+<dt class="dt dlterm"><a name="gloss_P__x2238121"><!-- --></a>有效負載 (payload)</dt>
 <dd class="dd">保留內容的訊息主體。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2029786"><!-- --></a>平台即服務 (platform as a service, PaaS)</dt>
 <dd class="dd">在以雲端為基礎的環境中提供運算平台，包括應用程式、最佳化的中介軟體、開發工具以及 Java 和 Web 2.0 執行時期環境。</dd>
@@ -392,7 +392,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035151"><!-- --></a>專案 (project)</dt>
 <dd class="dd">用來分組資料夾或套件的有組織集合。專案用來對單一工作投入的相關資源，進行建置、版本管理、共用及組織等工作。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x4585370"><!-- --></a>公用雲端 (public cloud)</dt>
-<dd class="dd">一種雲端運算環境，其中可根據每次使用付款來訂閱標準化資源（例如基礎架構、多方承租戶硬體及服務）的存取權。另請參閱<a class="xref" href="#gloss_B__x8439189">無國界 (borderless)</a>、<a class="xref" href="#gloss_P__x4585362">專用雲端 (private cloud)</a>。</dd>
+<dd class="dd">一種雲端運算環境，其中可根據每次使用付款來訂閱標準化資源（例如基礎架構、多方承租戶硬體及服務）的存取權。另請參閱<a class="xref" href="#gloss_B__x8439189">無界限 (borderless)</a>、<a class="xref" href="#gloss_P__x4585362">專用雲端 (private cloud)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x2035465"><!-- --></a>推送 (push)</dt>
 <dd class="dd">將資訊從伺服器傳送到用戶端。伺服器推送內容時，會由伺服器主動起始交易，而不是因為來自用戶端的要求而起始交易。</dd>
 <dt class="dt dlterm"><a name="gloss_P__x5599582"><!-- --></a>推送通知 (push notification)</dt>
@@ -456,7 +456,7 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_S__x4585391"><!-- --></a>SaaS</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_S__x4585386">軟體即服務 (software as a service)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>調整 (scale)</dt>
+<dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>擴充 (scale)</dt>
 <dd class="dd">透過新增更多應用程式或服務實例的方式，增加平台（或系統）容量</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2116206"><!-- --></a>SCM</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_S__x3579285">原始碼控制管理 (source control management)</a>。</dd>
@@ -468,13 +468,13 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
 <dd class="dd">在敏捷開發專案中，利害關係人之間每日舉行的非正式會議。參與者必須包括 Scrum 管理師、產品擁有者和團隊，另外可能包括產品經理和其他利害關係人。</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2038004"><!-- --></a>Secure Sockets Layer (SSL)</dt>
 <dd class="dd">提供通訊隱私權的安全通訊協定。主從式應用程式可以透過 SSL，利用專為防止竊聽、竄改及訊息偽造而設計的方法進行通訊。另請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心 (certificate authority)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_S__x2038343"><!-- --></a> 服務</dt>
+<dt class="dt dlterm"><a name="gloss_S__x2038343"><!-- --></a>服務 (service)</dt>
 <dd class="dd">一種雲端延伸，用於提供資料庫、傳訊和 Web 軟體等現成功能以執行程式碼、應用程式管理或監視功能。服務通常不需要安裝或維護，並且可以透過結合來建立應用程式。</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2004539"><!-- --></a>階段作業 (session)</dt>
 <dd class="dd">在行動式裝置上啟動應用程式，且通知品質保證產品開始收集應用程式行為和問題之後的一段時間。</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2375015"><!-- --></a>嚴重性 (severity)</dt>
 <dd class="dd">在軟體及系統開發中，這是指對工作單元重要性的測量（例如，嚴重、高、中或低）。</dd>
-<dt class="dt dlterm"><a name="gloss_S__x5905152"><!-- --></a>蓋板 (shake)</dt>
+<dt class="dt dlterm"><a name="gloss_S__x5905152"><!-- --></a>搖動 (shake)</dt>
 <dd class="dd">製造移動，讓裝置的加速感應器能感應到該移動，然後啟動事件。
 例如，測試者和客戶可以搖動裝置，起始關於應用程式的問題報告。
 </dd>
@@ -507,9 +507,9 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
 <dd class="dd">套裝軟體的一部分，用於定義要在該套裝軟體上執行的特定動作，或者在套裝軟體上執行動作時要符合的一組條件。整個套裝軟體也是一個段落，其中包含由許多不同段落組成的階層。</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7470511"><!-- --></a>入門範本 (starter)</dt>
 <dd class="dd">一種範本，其中包含預先定義的服務，以及利用特定建置套件進行配置的應用程式碼。入門範本可以是用特定程式設計語言撰寫的應用程式碼，也可以是應用程式碼和一組服務的組合。另請參閱<a class="xref" href="#gloss_R__x2391929">執行時期 (runtime)</a>。</dd>
-<dt class="dt dlterm"><a name="gloss_S__x5027530"><!-- --></a>腳本 (story)</dt>
+<dt class="dt dlterm"><a name="gloss_S__x5027530"><!-- --></a>案例 (story)</dt>
 <dd class="dd">一種開發工作項目，用於定義使用案例的一部分，或者定義對整體產品價值的特定貢獻。</dd>
-<dt class="dt dlterm"><a name="gloss_S__x2040080"><!-- --></a>subdomain</dt>
+<dt class="dt dlterm"><a name="gloss_S__x2040080"><!-- --></a>子網域 (subdomain)</dt>
 <dd class="dd">構成更大網域一部分的網域。另請參閱<a class="xref" href="#gloss_C__x5728384">自訂網域 (custom domain)</a>、<a class="xref" href="#gloss_D__x2021210">網域 (domain)</a>、<a class="xref" href="#gloss_H__x2002243">主機 (host)</a>、<a class="xref" href="#gloss_R__x2037338">路徑 (route)</a>、<a class="xref" href="#gloss_U__x2042491">統一資源定位器 (Uniform Resource Locator)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7290136"><!-- --></a>象徵 (symbolication)</dt>
 <dd class="dd">一種處理程序，該處理程序會將在應用程式編譯期間排除的符號插入到堆疊追蹤資料中，使這些追蹤資料可供測試者和開發人員閱讀。</dd>

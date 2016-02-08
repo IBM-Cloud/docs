@@ -17,7 +17,7 @@ cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を�
 
 デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL に使用することができます。
 
-ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。カスタム・ドメインを使用するには、{{site.data.keyword.Bluemix_notm}} で自分の組織のカスタム・ドメインを作成し、DNS サーバーを構成するかローカル `hosts` ファイルを編集することで、そのカスタム・ドメインを {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップする必要があります。ご使用のカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
+ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。ご使用のカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
 
 **注:** **nslookup** コマンドを使用すると、{{site.data.keyword.Bluemix_notm}} システム・ドメインのパブリック IP アドレスを取得できます。例えば、コマンド・プロンプトで `nslookup mybluemix.net` と入力します。
 

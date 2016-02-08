@@ -9,7 +9,7 @@
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2015 年 11 月 19 日*
+*前次更新：2015 年 1 月 6 日*
 
 一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
 {:shortdesc}
@@ -38,6 +38,28 @@
 **附註：**對於 IBM 員工而言，IBM ID 可能與內部網路登入 ID 不同。 
 
 
+
+
+
+## 您有未儲存的變更
+{: #ts_unsaved_changes}
+
+
+在應用程式詳細資料頁面上進行瀏覽時，可能無法執行任何動作，系統可能會提示您儲存變更後才能繼續。 
+
+
+在應用程式詳細資料頁面上嘗試檢查應用程式或服務時，總是收到下列錯誤訊息：
+{: tsSymptoms} 
+
+`您在頁面 app_name 中有未儲存的變更。請儲存或取消這些變更。`
+
+
+在執行時期窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。這是有意這樣設計的；但是，當您要離開該頁面時，會有錯誤訊息提示您儲存記憶體或實例設定。
+{: tsCauses}
+
+
+關閉訊息視窗，然後按一下執行時期窗格中的**重設**按鈕。
+{: tsResolve} 
 
 
 
@@ -119,12 +141,12 @@ nslookup stage1.mybluemix.net
 如果您無法邀請使用者加入您的組織，而需要不同的角色來完成這項動作，請與組織管理員聯絡，以變更角色。若要識別您的組織管理員，請完成下列步驟：
 {: tsResolve}
 
-  1. 移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下「儀表板」右上方的**帳戶及支援**圖示 ![帳戶及支援](images/account_support.png)，然後選取**管理組織**。
+  1. 移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)，然後選取**管理組織**。
   2. 移至您的組織，然後檢視**使用者**標籤上的組織管理員資訊。  
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 與 [ID 支援中心](mailto:id@bluemix.net)聯絡，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
+  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援](http://ibm.biz/bluemixsupport){: new_window}，以開啟一個支援問題單，並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包括此資訊。 
   2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -161,10 +183,10 @@ nslookup stage1.mybluemix.net
 當您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面時，您可能會看到下列其中一則錯誤訊息：
 {: tsSymptoms}
 
-`BXNUI0001E: 無法判斷階段作業是否存在。請嘗試重新載入瀏覽器。`
+`BXNUI0001E: 未載入頁面，因為 Bluemix 未偵測到是否存在階段作業。`
 
 
-`BXNUI0016E: 無法擷取應用程式及服務。`
+`BXNUI0016E: 未擷取應用程式及服務，因為未載入 Bluemix 頁面。`
 
  
 
@@ -203,23 +225,6 @@ nslookup stage1.mybluemix.net
 
 
 
-
-## {{site.data.keyword.Bluemix_notm}}「儀表板」無法載入應用程式或服務
-{: #ts_dashboard}
-
-{{site.data.keyword.Bluemix_notm}}「儀表板」可能不會顯示任何應用程式或服務資訊，因為您的組織或空間無法存取它。 
- 
-
-登入 {{site.data.keyword.Bluemix_notm}} 使用者介面時，「儀表板」中沒有任何資訊可供使用，即使您之前已建立應用程式並且使用某些服務。
-{: tsSymptoms}
- 
-
-若將服務實例連結至應用程式，但是因為組織或空間的服務專用權已變更而無法再存取服務，則可能會發生此問題。
-{: tsCauses}
-  	
-
-若要解決問題，請在 cf 指令行介面中鍵入 `cf services`，以列出服務實例並識別服務。然後，使用 `cf delete-service` 指令來刪除無法再存取的服務實例。
-{: tsResolve}
 
 
 
@@ -439,7 +444,7 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
 {: tsSymptoms}
 
-`BXNUI2032E: 聯絡 Cloud Foundry 以建立資源時發生錯誤。資源：service_instances。Cloud Foundry 訊息："You have exceeded your organization's services limit."`
+`BXNUI2032E: 未建立 <service_instances> 資源。聯絡 Cloud Foundry 以建立資源時發生錯誤。Cloud Foundry 訊息："You have exceeded your organization's services limit."`
 
 
 
@@ -613,7 +618,7 @@ cf push <appname>
   
   
   
-  
+
   
   
 
@@ -723,7 +728,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-## 將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，未適當地顯示雙位元組字元
+## 將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 未適當地顯示雙位元組字元
 {: #ts_doublebytes}
 
 如果未適當地配置 Servlet 或 JSP 檔的 Unicode 支援，則可能無法適當地顯示雙位元組字元。
@@ -1066,7 +1071,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
 {: tsSymptoms} 
 
-`BXNUI0096E: 無法建立應用程式。您的帳戶處於非作用中，因為它已遭到取消或暫停。`
+`BXNUI0096E: 未建立應用程式。您的帳戶處於非作用中狀態，因為它已取消或已暫停。`
 
 
 當帳戶遭到取消或暫停時，{{site.data.keyword.Bluemix_notm}} 帳戶的狀態會變成非作用中。
@@ -1093,7 +1098,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsSymptoms} 
 
 
-`BXNUI0097E: 無法新增應用程式。沒有與現行組織及地區相關聯的空間。在「儀表板」上，按一下「建立空間」。建立空間後，請重試。`
+`BXNUI0097E: 在新增應用程式之前，必須至少有一個空間與您的組織和地區相關聯。在「儀表板」上，按一下「建立空間」。建立空間後，請重試。`
 
 
 
@@ -1436,26 +1441,5 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -29,7 +29,7 @@
 
 <dl><dt>cf 指令行介面</dt>
 <dd>使用 cf 指令行介面來更新應用程式、建立服務實例，或將服務連結至應用程式。您也可以使用 cloud-cli 指令行介面來建立、更新及刪除服務供應項目。</dd>
-<dt>{{site.data.keyword.Bluemix_notm}} 使用者介面</dt>
+<dt>{{site.data.keyword.Bluemix_notm}} user interface</dt>
 <dd>使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來建置應用程式，包括挑選要結合的服務和執行時期，以解決您的商業問題。</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
 <dd>使用 {{site.data.keyword.jazzhub_title}} 在雲端中建立應用程式，並將其部署至 {{site.data.keyword.Bluemix_notm}}。{{site.data.keyword.jazzhub_title}} 所提供的服務包括 Track & Plan 和 Delivery Pipeline（列在 {{site.data.keyword.Bluemix_notm}}「型錄」的 DevOps 下），以及 Web IDE 和 Git Hosting。</dd>

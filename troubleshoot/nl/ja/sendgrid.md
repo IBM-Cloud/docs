@@ -7,7 +7,7 @@
 # SendGrid のトラブルシューティング
 {: #ts_sendgrid}
 
-*最終更新日: 2015 年 11 月 19 日*
+*最終更新日: 2015 年 12 月 9 日*
 
 ここでは、{{site.data.keyword.Bluemix}} での SendGrid の使用に関する質問に対する回答を示します。
 {:shortdesc}

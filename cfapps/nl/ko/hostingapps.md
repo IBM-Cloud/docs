@@ -114,7 +114,7 @@ OS 특정 종속성을 피하십시오. 대신 미들웨어 인프라 또는 서
 
 애플리케이션을 클라우드 환경으로 완전히 이동하는 대신, 증분 방식으로
 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 마이그레이션할 수 있습니다. 
-우선 애플리케이션의 일부를 마이그레이션한 후에, Cloud Integration 서비스를 사용하여 기존 데이터 또는 SOR(System of Record)에 연결할 수 있습니다. 
+우선 애플리케이션의 일부를 마이그레이션한 후에, 클라우드 통합 서비스를 사용하여 기존 데이터 또는 SOR(System of Record)에 연결할 수 있습니다. 
 
 클라우드 애플리케이션에서 백엔드 데이터 또는 서비스에 액세스해야 할 수 있습니다(예: SOR(System of Record)). 
 {{site.data.keyword.Bluemix_notm}}에서는 Secure Gateway 서비스를 사용하여

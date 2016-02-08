@@ -3,7 +3,7 @@
 # Web e applicazione
 {: #webapplication}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Utilizza questi
 servizi per aggiungere o rimuovere funzioni rapidamente mentre sviluppi

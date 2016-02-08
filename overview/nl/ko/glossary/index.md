@@ -191,7 +191,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>주로 조회용으로 사용(read-mostly)</dt>
 <dd class="dd">동적으로 변경하는 데이터와 관련됩니다.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>red-black 배치(red-black deployment)</dt>
-<dd class="dd">동기화된 테스트, 개발 및 배치를 지원하여 지속적 딜리버리를 가능케 하는 배치 기술입니다. 처음에는 비활성 환경(black)에서 개발하고 활성 환경에 계속 트래픽이 유입됩니다(red). 배치가 시작되면 이전에 활성이던 이전 버전 환경에서 라우팅이 비활성화될 때까지 두 환경이 활성 상태를 유지하다가(red-red) 이후 새 환경이 유일한 활성 환경 역할을 하며 환경이 제거됩니다(black). <a class="xref" href="#gloss_B__x7807335">blue-green 배치</a>도 참조하십시오.</dd>
+<dd class="dd">동기화된 테스트, 개발 및 배치를 지원하여 지속적 딜리버리를 가능케 하는 배치 기술입니다. 처음에는 비활성 환경(black)에서 개발하고 활성 환경에 계속 트래픽이 유입됩니다(red). 배치가 시작되면 이전에 활성이던 이전 버전 환경에서 라우팅이 비활성화될 때까지 두 환경이 활성 상태를 유지하다가(red-red) 이후 새 환경이 유일한 활성 환경 역할을 하며 환경이 제거됩니다(black). <a class="xref" href="#gloss_B__x7807335">Blue-Green 배치</a>도 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>지역(region)</dt>
 <dd class="dd">정의된 지리적 영역입니다. 지역은 특정 우편 번호 영역, 동/면, 구/군/시, 시/도, 시/도 그룹 또는 국가 그룹이 될 수 있습니다. 각 지역은 다른 지역의 세트 또는 해당 지역을 구성하는 우편 번호의 세트가 될 수 있습니다.</dd>
 <dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>레지스트리(registry)</dt>

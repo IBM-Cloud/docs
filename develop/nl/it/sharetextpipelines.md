@@ -9,7 +9,7 @@
 
 Per i progetti di esempio distribuiti a {{site.data.keyword.Bluemix_notm}} mediante
 il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}},
-è possibile definire delle configurazioni pipeline {{site.data.keyword.jazzhub_short}} come
+puoi definire delle configurazioni pipeline {{site.data.keyword.jazzhub_short}} come
 file YAML. Le pipeline definite come testo possono essere condivise; in questo modo, gli utenti che
 biforcano il tuo progetto non devono configurare le loro pipeline. Questa funzione è in fase di sviluppo: il formato e l'implementazione YAML
 potrebbero subire modifiche in qualsiasi momento. Attualmente, questa funzione è disponibile solo per i
@@ -217,7 +217,7 @@ CF_APP	| Nome applicazione
 Puoi generare un file YAML da una pipeline. 
 
 Genera il
-file da una pipeline esistente con un un URL in questo formato:
+file da una pipeline esistente con un URL in questo formato:
 
 ```
 <DevOps Services domain>/pipeline/user/project/yaml

@@ -76,8 +76,7 @@ no iFrame. Esse valor é opcional.</dd>
 <dd class="pd">O ID da região de destino padrão. Por exemplo: <code>ibm:yp:us-south</code>. Esse valor é opcional.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">O guid da organização de destino padrão. Para localizar esse valor, clique em
-<strong>Gerenciar organizações</strong> <i>organization_name</i>. A
+<dd class="pd">O guid da organização de destino padrão. Para localizar esse valor, clique em <strong>Gerenciar organizações</strong> > <i>organization_name</i>. A
 URL para a organização contém o guid para essa organização. Esse valor é opcional.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
