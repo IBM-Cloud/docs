@@ -779,7 +779,7 @@ command:
 
 There are three APIs that you can use to register or create a new service, update a service, and delete a service.
 
-All APIs are relative to <code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>.
+All APIs are relative to <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
 <dl>
 <dt><strong>&lt;subdomain&gt;</strong></dt>
