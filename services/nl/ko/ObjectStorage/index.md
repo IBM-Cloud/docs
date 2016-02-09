@@ -10,7 +10,7 @@ OpenStack Swift와 Keystone 사용에 대한 자세한 정보와 문서는 [Open
 
 {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램은 다음과 같습니다.
 
-[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *그림 1. {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램*
 
