@@ -10,7 +10,7 @@ Mais informações e documentação sobre como usar o OpenStack Swift e o Keysto
 
 O diagrama de arquitetura do {{site.data.keyword.objectstorageshort}} é o seguinte:
 
-[![{{site.data.keyword.objectstorageshort}} Diagrama de arquitetura](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}(images/object_storage_solution_archectiture_small.png)]
+[![{{site.data.keyword.objectstorageshort}} Diagrama de arquitetura](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *Figure 1. {{site.data.keyword.objectstorageshort}} Diagrama de arquitetura*
 
