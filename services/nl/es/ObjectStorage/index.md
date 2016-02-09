@@ -10,7 +10,7 @@ Hay más información y documentación disponibles sobre el uso de OpenStack Swi
 
 El diagrama de arquitectura de {{site.data.keyword.objectstorageshort}} es el siguiente: 
 
-[![Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *Figura 1. Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}*
 
