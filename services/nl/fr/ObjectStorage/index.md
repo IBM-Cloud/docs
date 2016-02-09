@@ -10,7 +10,7 @@ Vous trouverez plus d'informations et de documentation sur l'utilisation d'OpenS
 
 Le diagramme de l'architecture de {{site.data.keyword.objectstorageshort}} est illustré ci-dessous :
 
-[![{{site.data.keyword.objectstorageshort}} - Diagramme Architecture](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} - Diagramme Architecture](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *Figure 1. Diagramme de l'architecture d'{{site.data.keyword.objectstorageshort}}*
 
