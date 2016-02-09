@@ -1,12 +1,39 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 18 January 2016*
+*Last Updated: 04 February 2016*
 
 # Latest Updates to the Node.js Buildpack
 {: #latest_updates}
 
 A list of the latest updates in the Node.js buildpack.
+
+## February 4, 2016: Updated Node.js Buildpack v3.0-20160125-1224
+
+This release is fully synchronized with the [Cloud Foundry community Node.js](https://github.com/cloudfoundry/nodejs-buildpack) buildpack. In addition to community changes, there have been changes to certain defaults, optimizations to reduce staging time and updates to the App Management feature.
+
+* Buildpack updates:
+
+  * Node.js v4.2.4 (IBM SDK for Node.js Version 4) is now the default runtime on Bluemix, replacing v0.12.9. This may cause your application to behave differently if you have not specified a particular version for your application. To learn how to specify a version of Node.js for your Bluemix application, see [Node.js runtime](index.html) documentation.
+
+  * NODE_ENV is now set to *production* by default. This will cause some node dependencies to behave differently. For example, the Express framework will no longer return stacktraces in the web browser for faulty endpoints, but instead just display *Internal Server Error*. When NPM_CONFIG_PRODUCTION is set to *true*, NPM will set NODE_ENV to *production* for subshell scripts in the npm install phase only. This allows users to set NODE_ENV to another value like *development* for application runtime. For clarity, npm scripts will see the message **NODE_ENV=production**.
+
+  * A Bug-fix to the Monitoring and Analytics service is included.
+
+* Caching updates:
+
+  * If cache is disabled (NODE_MODULES_CACHE=false) the buildpack will not attempt to cache any modules/components. Previously this setting made it so that the cache is not popped, but it would still cache the installed modules for future deploys. Now it will neither pop the cache nor attempt to store any cache.
+
+  * Bower_components are cached by default in addition to node_modules.
+
+* Other updates:
+
+  * Helpful warnings have been added for missing dependencies like gulp, bower, and angular.
+
+  * The detect script is updated with buildpack version information.
+
+  * The clustering recommendation (WEB_CONCURRENCY) initially introduced by community is removed as memory determination was inaccurate on Bluemix.
+
 
 ## December 16, 2015: Updated Node.js Buildpack v2.8-20151209-1403 and v3.0beta-20151211-2041
 
@@ -20,13 +47,16 @@ IBM Node.js Buildpack v3.0beta has been released as a non-default buildpack on B
 
 To push your application with v3.0beta:
 * Use "-b" option in your 'cf push' command:
+
 ```
- cf push -b sdk-for-nodejs-v3beta
+        cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
+
 * Or, use the "buildpack" option in your manifest.yml file:
+
 ```
-buildpack: sdk-for-nodejs-v3beta
+        buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -53,12 +83,14 @@ In addition, we have revamped the App Management feature in the Node.js buildpac
 
 * The Node.js buildpack now comes with [IBM SDK for Node.js v0.12.1](https://developer.ibm.com/node/sdk/).
 * If your application doesn’t specify a runtime in its package.json file, your app will now start using v0.12.1, instead of v0.10.x. If you need to use the previous version, specify v0.10.x in your package.json as shown below
+
 ```
-   "engines": {
-        "node": "0.10.x"
-    }
+        "engines": {
+            "node": "0.10.x"
+        }
 ```
 {: codeblock}
+
 * There are known issues with v0.12.1:
    * When using the Debug Tools feature provided by Bluemix Live Sync, the “Suspend” feature is broken.
    * The mqlight module used for the MQ Light service is not supported on v0.12.x

@@ -51,6 +51,6 @@ you can use the external
 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) to
 deploy the app.
 
-## RELATED LINKS
-{: #related_links}
+# rellinks
+## general
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

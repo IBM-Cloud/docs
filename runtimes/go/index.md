@@ -55,7 +55,7 @@ you can use the external
 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git) to
 deploy the application.
 
-## RELATED LINKS
-{: #related_links}
+# rellinks
+## general
 * [GoLang](http://golang.org/)
 * [Cloud Foundry buildpack for Go](https://github.com/cloudfoundry/go-buildpack)
