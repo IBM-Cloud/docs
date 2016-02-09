@@ -58,11 +58,11 @@ you can use the external
 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) to
 deploy the app.
 
-## TUTORIALS AND SAMPLES
-{: #tutorials_and_samples}
+# rellinks
+## samples
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 
-## RELATED LINKS
+## general
 {: #related_links}
 * [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

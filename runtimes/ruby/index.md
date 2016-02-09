@@ -55,7 +55,7 @@ you can use the external
 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) to
 deploy the app.
 
-## RELATED LINKS
-{: #related_links}
+# rellinks
+## general
 * [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails documentation](http://rubyonrails.org/documentation/)
