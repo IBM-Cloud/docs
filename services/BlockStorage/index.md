@@ -4,9 +4,9 @@
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction intensive workloads and runtimes in need of persistent storage.
 
-You can use IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} to create block storage devices that can be attached to virtual machines. The data in block storage devices persists beyond the lifecycle of your virtual machines. IBM {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
+You can use IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} to create {{site.data.keyword.blockstorageshort}} volumes that can be attached to virtual machines. The data in block storage volumes persists beyond the lifecycle of your virtual machines. IBM {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
 
-Block storage volumes are created through an IBM {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual machine under a particular device that you provide or the system can automatically select an available device name. The virtual machine performs its I/O operations directly with the specified device independent of the {{site.data.keyword.blockstorageshort}} service.
+{{site.data.keyword.blockstorageshort}} volumes are created through an IBM {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual machine under a particular device that you provide or the system can automatically select an available device name. The virtual machine performs its I/O operations directly with the specified device independent of the {{site.data.keyword.blockstorageshort}} service.
 
 You can also create block-level snapshots of volumes. {{site.data.keyword.blockstorageshort}} service does not allow the creation of snapshots while the volume is attached, so the resulting snapshots will be crash-consistent. 
 
@@ -14,7 +14,7 @@ You can also create block-level snapshots of volumes. {{site.data.keyword.blocks
 To create an instance of the {{site.data.keyword.blockstorageshort}} service in your space, follow these steps:
  
 1.	Go to the {{site.data.keyword.Bluemix_notm}} **Catalog** tab and enter **{{site.data.keyword.blockstorageshort}}** into the search box, or go to **Services** and select **Storage**. Click the **{{site.data.keyword.blockstorageshort}}** service. 
-2.	Enter a space and service name. Select a plan and click **Create**.
+2.	Enter a space and service name. Select the plan and click **Create**.
  	
 The {{site.data.keyword.blockstorageshort}} service is only supported in an unbound context. 
 
@@ -31,19 +31,20 @@ Below the overview are two tabs for volumes and snapshots. The volume tab is sel
 
 The snapshot tab shows a table of snapshots with similar properties and behavior. 
 
-Use the Create icon or the Actions drop-down list above the tables to create a new volume or to manipulate existing ones. 
+Use the Create icon above the tables to create a new volume or to manipulate existing ones. If you are creating a volume from a snapshot, you can also use the Actions drop-down list.
+
 
 ## Volume actions
 
 ### Create a volume
 
 1.	Click **Create** to start the **Create Volume** dialog.
-2.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to your space.
-3.	Provide a name. The name is not mandatory. It is for display purposes only.
+2.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
+3.	Provide a name. The name is for display purposes only.
 4.	Optionally, provide a more detailed description of the volume. 
 5.	Click **Create** to submit the information and close the dialog. 
 
-Creating a volume can take a few moments. If the volume is not immediately visible in the table of available volumes, click the refresh icon (circular arrow icon) at the top of the page. 
+Creating a volume can take a few moments. 
 
 ### Delete a volume
 
@@ -75,7 +76,7 @@ To attach a volume, follow these steps:
 5.	Click **Attach** to submit the information and close the dialog.
 
 The volume is listed in the table of attached volumes with the information about the virtual machine instance. 
-The virtual machine can now use the device with persistent data. 
+The virtual machine can now use the device to persist data. 
 
 To detach a volume, follow these steps: 
 
