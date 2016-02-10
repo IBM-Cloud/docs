@@ -420,7 +420,7 @@ You can also change your payment plan by using the command line interface. For m
 **Note:** Beta plan service instances cannot be moved to the Free plan. Any service instances not migrated will be disabled, and after 60 days, deleted. 
 
 ### What accounts and payment plans can I use for {{site.data.keyword.objectstorageshort}}?
-The {{site.data.keyword.objectstorageshort}} service comes with multiple plan options. As of our general availability release, two plans are currently offered, Standard and Free. The Standard plan is available only to {{site.data.keyword.Bluemix_notm}} Paid Accounts, either Pay-As-You-Go or Subscription, and to IBM internal users.
+The {{site.data.keyword.objectstorageshort}} service comes with multiple plan options. As of our general availability release, two plans are currently offered, Standard and Free. The Standard plan is available only to {{site.data.keyword.Bluemix_notm}} Paid Accounts, either Pay-As-You-Go or Subscription, and to IBM internal users. The Standard plan includes an introductory 5 GB Free Credit Allowance on storage usage per account.
 
 Trial accounts that are still active are able to use the Free plan which allows only one instance to exist in a {{site.data.keyword.Bluemix_notm}} Organization. After the time on the {{site.data.keyword.Bluemix_notm}} trial expires, the associated {{site.data.keyword.objectstorageshort}} service instance will be disabled, meaning that the storage account cannot be accessed either by the {{site.data.keyword.Bluemix_notm}} user interface or command line. After a grace period of 30 days, your {{site.data.keyword.Bluemix_notm}} account will be purged, and all data deleted. To avoid data loss, it is recommended that you upgrade to a {{site.data.keyword.Bluemix_notm}} Paid Account as soon as possible. To upgrade your account, click on the user management menu in the upper-right corner, and select **Account**, which provides instructions about the upgrade process.
 
@@ -430,9 +430,9 @@ Instances that are created on the Free plan can be upgraded to the Standard plan
 
 The {{site.data.keyword.objectstorageshort}} service charges only for what you use.  There are no minimum fee, set-up fees, or commitments to begin using the service. There is no charge for API request or inbound data network traffic.
 
-Your {{site.data.keyword.objectstorageshort}} usage is billed based on average daily storage usage throughout the billing cycle. This includes all object data in containers that you created under your {{site.data.keyword.Bluemix_notm}} organization account. 
+Your {{site.data.keyword.objectstorageshort}} usage is billed based on your storage usage within the billing cycle. This includes all object data in containers that you created under your {{site.data.keyword.Bluemix_notm}} organization account. 
 
-Outbound Data Transfer charge applies whenever data is read from any of your object containers over the public network. It is billed based on average daily public outbound data transfer throughout the billing cycle.
+Outbound Data Transfer charge applies whenever data is read from any of your object containers over the public network. Public Outbound Bandwidth is billed for all bandwidth consumed in the billing cycle.
 
 The metrics components to {{site.data.keyword.objectstorageshort}} pricing are as follows:
 * Storage Usage  - $0.04 per GB per month
