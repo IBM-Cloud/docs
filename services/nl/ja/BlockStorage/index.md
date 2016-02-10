@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# {{site.data.keyword.blockstorageshort}} (BETA) 入門
+# {{site.data.keyword.blockstorageshort}} 入門
 
 {{site.data.keyword.blockstoragefull}} では、永続性ストレージを必要とするトランザクション集約型のワークロードやランタイムのために、ブロック・レベルのストレージにアクセスできます。
 

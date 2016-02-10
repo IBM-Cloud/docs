@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} (ベータ版) 入門{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} 入門{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。Swift は、完全分散型の、API によるアクセスが可能なストレージ・プラットフォームを提供します。アプリケーションで直接使用することも、バックアップに使用することも可能で、コスト効率の高いスケールアウト・ストレージに理想的です。
 

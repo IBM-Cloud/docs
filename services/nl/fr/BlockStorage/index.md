@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Initiation à {{site.data.keyword.blockstorageshort}} (BETA)
+# Initiation à {{site.data.keyword.blockstorageshort}} 
 
 {{site.data.keyword.blockstoragefull}} permet d'accéder aux blocs de l'espace de stockage pour les charges de travail comportant de nombreuses transactions et les contextes d'exécution requérant un stockage permanent.
 

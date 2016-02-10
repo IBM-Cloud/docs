@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Introduzione a {{site.data.keyword.blockstorageshort}} (BETA)
+# Introduzione a {{site.data.keyword.blockstorageshort}} 
 
 {{site.data.keyword.blockstoragefull}} fornisce l'accesso all'archiviazione a livello di blocchi per i carichi di lavoro e i runtime che utilizzano molte transazioni e che hanno bisogno di un'archiviazione persistente.
 

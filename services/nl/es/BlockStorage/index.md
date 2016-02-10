@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Iniciación a {{site.data.keyword.blockstorageshort}} (BETA)
+# Iniciación a {{site.data.keyword.blockstorageshort}} 
 
 {{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente.
 

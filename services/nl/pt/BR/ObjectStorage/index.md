@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# Introdução ao {{site.data.keyword.objectstorageshort}} (BETA) {: #getting-started-with-object-storage} 
+# Introdução ao {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage} 
 
 O {{site.data.keyword.objectstoragefull}} fornece a você acesso a uma conta Swift do {{site.data.keyword.objectstorageshort}} totalmente provisionada para gerenciar seus dados. O swift fornece uma plataforma de armazenamento acessível por API totalmente distribuída. É possível usá-la diretamente em seus aplicativos ou para backups, tornando-a ideal para armazenamento de ampliação e custo efetivo.
 
