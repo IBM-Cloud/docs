@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# Getting started with {{site.data.keyword.objectstorageshort}}  (BETA) {: #getting-started-with-object-storage} 
+# Getting started with {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} provides you with access to a fully provisioned Swift {{site.data.keyword.objectstorageshort}} account to manage your data. Swift provides a fully distributed, API-accessible storage platform. You can use it directly in your applications or for backups, making it ideal for cost effective, scale-out storage.
 
