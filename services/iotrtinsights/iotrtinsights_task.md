@@ -1,11 +1,19 @@
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-# Connecting and viewing your devices {: #devices}
+# Connecting and viewing your devices
+{: #iotrtinsights_task}
+*Last updated: 11 February 2016*
 
 {{site.data.keyword.iotrtinsights_short}} uses {{site.data.keyword.iot_short}} for device access and data retrieval. Devices that you connect to {{site.data.keyword.iot_short}} are automatically connected to {{site.data.keyword.iotrtinsights_short}}.
 {: shortdesc}
 
 If you are connecting a new type of device, you must also configure the message schema to map the device data points, set the units, and name the device type. If your devices are of an already configured device type, their data automatically shows up in the dashboard.
+
+## Adding a new device
+{: #iotrtinsights_subtask}
 
 To add a new device:  
 Adding a new device is a two-step process. First, you add the device to {{site.data.keyword.iot_short}}, and then you configure how {{site.data.keyword.iotrtinsights_short}} consumes and displays the device data.
@@ -36,12 +44,14 @@ Adding a new device is a two-step process. First, you add the device to {{site.d
   </ol>
   </dd>
   <dt>Add manually</dt>
-  <dd>
   <p><b>Tip:</b> To create a [nested data point structure](schemas.html), first add a data point that has the data type Parent. In the data points table, you can then click ![Add child icon.](images/add_child.png "Add child") to add one or more child data points.</p>
+  <dd>
   <ol>
     <li>Click **Add manually**.</li>
-    <li>Select **Real-time data point** or **Virtual data point**</br></li>
-    <li>Define the following data point information:<ul>
+    <li>Select **Real-time data point** or **Virtual data point**</br>
+  </li>
+    <li>Define the following data point information:
+    <ul>  
     <li> Data point - The data point identifier that you [located in the {{site.data.keyword.iot_short}} dashboard](#identify-datapoints "Identify datapoints."). For example:  
    `id`, `ts`, `lat`  </li>
    <li>Description - A short description of the data point. This description is used when displaying the data points in dashboards.</li>
@@ -55,30 +65,31 @@ Adding a new device is a two-step process. First, you add the device to {{site.d
      `C`, `Mph`  </li>
      <li> Decimal places - Optional, float only: The number of decimals to include in the device data.</li>
      </ul></li>
-    </ol>
-  </dd>
+     </ol>
+    </dd>
   </dl>
    8. Click **OK** to create the message schema.
    9. Go to **Devices > Browse devices** and click your newly added device to verify that real-time device data is displayed and that the data points are correctly mapped.
 
-## Identifying data points and events in the {{site.data.keyword.iot_short}} dashboard. {: #identify-datapoints}
-The data points and event types for a device can be found in the {{site.data.keyword.iot_short}} dashboard.
->**Tip:** If you are using the Internet of Things phone application as your IoT device, you can use the sensorData event and the following data points to configure the message schema:
->- d.id - Device ID
->- d.ts - Timestamp
->- d.lat - Latitude
->- d.lng - Longitude
->- d.ax - X acceleration
->- d.ay - Y acceleration
->- d.az - Z acceleration
->- d.oa - Alpha movement
->- d.ob - Beta movement
->- d.og - Gamma movement  
->Where d.*datapoint* indicates that the data point is nested under a parent type d data point in the message payload.
+## Identifying data points and events in the {{site.data.keyword.iot_short}} dashboard.
+{: #identify-datapoints}
+   The data points and event types for a device can be found in the {{site.data.keyword.iot_short}} dashboard.
+   >**Tip:** If you are using the Internet of Things phone application as your IoT device, you can use the sensorData event and the following data points to configure the message schema:
+   >- d.id - Device ID
+   >- d.ts - Timestamp
+   >- d.lat - Latitude
+   >- d.lng - Longitude
+   >- d.ax - X acceleration
+   >- d.ay - Y acceleration
+   >- d.az - Z acceleration
+   >- d.oa - Alpha movement
+   >- d.ob - Beta movement
+   >- d.og - Gamma movement  
+   >Where d.*datapoint* indicates that the data point is nested under a parent type d data point in the message payload.
 
-1. From the Bluemix dashboard, click the Internet of Things tile.  
->**Note:**  If you are using the Internet of Things phone application, click the the *iot-phone-iotf-service* tile.  
-2. Click **Launch dashboard** to open the {{site.data.keyword.iot_short}} dashboard.
-3. Go to the **Devices** page.
-4. Click your device to open the device details page.  
-  Scroll down to the **Sensor Information** section to see a list of the available events and data points for the device. This information is required when you configure the device in {{site.data.keyword.iotrtinsights_short}}.
+   1. From the Bluemix dashboard, click the Internet of Things tile.  
+   >**Note:**  If you are using the Internet of Things phone application, click the the *iot-phone-iotf-service* tile.  
+   2. Click **Launch dashboard** to open the {{site.data.keyword.iot_short}} dashboard.
+   3. Go to the **Devices** page.
+   4. Click your device to open the device details page.  
+     Scroll down to the **Sensor Information** section to see a list of the available events and data points for the device. This information is required when you configure the device in {{site.data.keyword.iotrtinsights_short}}.
