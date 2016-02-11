@@ -2,7 +2,7 @@
 
 # Managing assets {: #manage-assets}
 
-One of the powers of IoT Real-Time Insights is to map your devices to your managed assets and to create rules that apply to all devices that are mapped to an asset.
+One of the powers of {{site.data.keyword.iotrtinsights_full}} is to map your devices to your managed assets and to create rules that apply to all devices that are mapped to an asset.
 {: shortdesc}
 
 For example, a single asset that you are interested in monitoring might include several devices and a large number of sensors.
@@ -13,10 +13,11 @@ To map your devices to your assets:
 1. Create a list of assets and save as a CSV file.  
 This file includes asset data from your asset management software.
 Sample file format:  
-
-`ASSETNUM,ASSETTYPE,AS_DESCRIPTION,AS_DESCRIPTION_LD,INSTALLDATE,AS_ITEMNUM,AS_ITEMSETID,AS_LOCATION,PRIORITY,PURCHASEPRICE,REPLACECOST,SERIALNUM,AS_SITEID,AS_STATUS,ACTION`  
-`5001,FACILITIES,New Asset 1,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123451,MYSITE,OPERATING,+  `  
-`5002,FACILITIES2,New Asset 2,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123452,MYSITE,OPERATING,+`  
+```
+ASSETNUM,ASSETTYPE,AS_DESCRIPTION,AS_DESCRIPTION_LD,INSTALLDATE,AS_ITEMNUM,AS_ITEMSETID,AS_LOCATION,PRIORITY,PURCHASEPRICE,REPLACECOST,SERIALNUM,AS_SITEID,AS_STATUS,ACTION  
+5001,FACILITIES,New Asset 1,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123451,MYSITE,OPERATING,+    
+5002,FACILITIES2,New Asset 2,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123452,MYSITE,OPERATING,+
+```
 
   Where:  
   - ASSETNUM - **Required:** The asset ID number in your system. (12)
@@ -37,7 +38,7 @@ Sample file format:
   >**Tip:** The number in parentheses indicates the maximum length of the string. Unless indicated, the parameter format is alphanumeric characters, mixed case.
 
 5. Create an asset and devices mapping list and save as a CSV file.  
-  This file is used to map the imported assets in the asset list to your IoT Foundation devices.  
+  This file is used to map the imported assets in the asset list to your {{site.data.keyword.iot_short}} devices.  
   Sample file format:  
   `sourceType,sourceId,targetType,targetId,action`  
   `d:orgid:iot-device-type,device001,asset,5001,+`  
@@ -45,14 +46,14 @@ Sample file format:
   `d:orgid:iot-device-type,device003,asset,5002,+`  
 
   Where:
-    - sourceType - Consists of the following IoT Foundation data for your device:
-      - orgid - Your IoT Foundation organization ID
-      - iot-device-type - Your IoT Foundation Device Type  
-    - sourceID - Your IoT Foundation Device ID  
+    - sourceType - Consists of the following {{site.data.keyword.iot_short}} data for your device:
+      - orgid - Your {{site.data.keyword.iot_short}} organization ID
+      - iot-device-type - Your {{site.data.keyword.iot_short}} Device Type  
+    - sourceID - Your {{site.data.keyword.iot_short}} Device ID  
     - targetType - Use the word `asset` to create an asset mapping.
     - targetID - The ASSETNUM entry for the asset from the context file that you created
     - action - A `+` symbol means that the asset is mapped, and a `-` symbol means that the asset is removed from mapping.
-2. Log in to the IoT Real-Time Insights console as an administrator user.
+2. Log in to the {{site.data.keyword.iotrtinsights_short}}  console as an administrator user.
 2. Go to **Devices > Manage Device Groups** and click **Import Asset**.  
 3. Browse for and select the asset file that you created.
 4. Click ![Create icon.](images/create.png "Create icon") to create the asset list.

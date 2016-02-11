@@ -2,14 +2,14 @@
 
 # Action types {: #actions}
 
-In addition to displaying alerts in the alerts dashboard, IoT Real-Time Insights supports several types of rule-triggered actions, such as sending emails and sending webhooks.
+In addition to displaying alerts in the alerts dashboard, {{site.data.keyword.iotrtinsights_short}} supports several types of rule-triggered actions, such as sending emails and sending webhooks.
 {: shortdesc}
 
 ## Creating actions {: #shared}
 You can [create actions directly from the rules editor](rules.html "Create rules"), or create the actions in the Actions panel and then select the actions when you create your rules.
 
 To create an action from the Actions panel:
-1. In the IoT Real-Time Insights console, go to **Analytics > Actions**.
+1. In the {{site.data.keyword.iotrtinsights_short}} console, go to **Analytics > Actions**.
 2. Click **Add new action**, select an action type, give the action a name, and provide a description.
 3. Provide the required parameters for the type of action that you are creating.  
 Action types:  
