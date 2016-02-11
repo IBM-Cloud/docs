@@ -1,0 +1,44 @@
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+
+*Last Updated: 11 February 2016*
+
+# Swift runtime
+{: #swift_runtime}
+
+The Swift runtime on {{site.data.keyword.Bluemix}} is powered by the swift_buildpack.
+The swift_buildpack provides a complete runtime environment for Swift apps.
+{: shortdesc}
+
+The swift_buildpack is used if your app's root directory contains a Package.swift file.
+
+## Starter application
+{: #starter_application}
+
+{{site.data.keyword.Bluemix}} provides a Swift starter application.  The Swift starter application is a simple Swift app that you can use to learn about the types of server applications you can develop using the Swift programming language.  This sample application creates a basic server that returns an HTML greeting to the client.  Please note that this is not a production-ready application.  Instead, it is meant to be used for educational purposes.  You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}} environment.  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+
+## Runtime versions
+{: #runtime_versions}
+
+You can specify the version of Swift to be used by your app with a .swift-version file in the root of your repository:
+
+```
+$ cat .swift-version
+swift-DEVELOPMENT-SNAPSHOT-2016-02-03-a
+```
+{: codeblock}
+
+### Available versions:
+{: #available_versions}
+
+For a complete list of the Swift supported versions please see the buildpack's [manifest.yml](https://github.com/cloudfoundry-community/swift-buildpack/blob/master/manifest.yml#L14) file.
+
+For details about the current version of the Swift buildpack that is installed in {{site.data.keyword.Bluemix}}, please follow this [link](https://github.com/cloudfoundry-community/swift-buildpack/releases/tag/v1.0.3).
+
+Since there are frequent Swift language changes, it's advised that you pin to your Swift version.
+
+# rellinks
+## general
+{: #related_links}
+* [Cloud Foundry buildpack for Swift](https://github.com/cloudfoundry-community/swift-buildpack)
