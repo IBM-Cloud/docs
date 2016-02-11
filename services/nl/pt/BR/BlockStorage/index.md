@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Introdução ao {{site.data.keyword.blockstorageshort}}
+# Introdução ao {{site.data.keyword.blockstorageshort}} (BETA)
 
 O {{site.data.keyword.blockstoragefull}} fornece acesso ao armazenamento de nível de bloco para cargas de trabalho e tempos de execução intensivos de transação na necessidade de armazenamento persistente.
 
