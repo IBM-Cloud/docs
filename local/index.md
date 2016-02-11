@@ -3,45 +3,72 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 2 February 2016*
+*Last updated: 10 February 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
 
 IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
 
-{{site.data.keyword.Bluemix_notm}} Local includes a private, syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public. The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.
+{{site.data.keyword.Bluemix_notm}} Local environments have the same security standards as the public {{site.data.keyword.Bluemix_notm}} in terms of operational security. You provide the hardware and infrastructure, which gives you control over infrastructure and physical security. Developer access to the local {{site.data.keyword.Bluemix_notm}} is controlled by your LDAP policies, which can be configured by the {{site.data.keyword.Bluemix_notm}} team when they set up your environment. Within the local environment, using the Administration page, you can manage user roles and permissions.
 
-{{site.data.keyword.Bluemix_notm}} Local sits on a virtual machine that is behind your company firewall, so that you have the highest performing and most secure cloud infrastructure available to you. IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through IBM's relay technology.
-
-![{{site.data.keyword.Bluemix_notm}} Local overview](images/bluemixlocalarchitecture.png "Bluemix Local overview")
-
-*Figure 1. {{site.data.keyword.Bluemix_notm}} Local detailed overview*
-
-{{site.data.keyword.Bluemix_notm}} Local environments have the same security standards as the public {{site.data.keyword.Bluemix_notm}} in terms of operational security. You provide the hardware and infrastructure, which gives you control over infrastructure and physical security. Developer access to the local {{site.data.keyword.Bluemix_notm}} is controlled by your LDAP policies, which can be configured by the {{site.data.keyword.Bluemix_notm}} team when they set up your environment. Within the local environment, using the Admin Console, you can manage user roles and permissions.
+{{site.data.keyword.Bluemix_notm}} Local includes a private syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public. The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. You see specific icons attached to service tiles in your catalog if, for example, it is a private service.
 
 {{site.data.keyword.Bluemix_notm}} Local comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute memory.
 
-In addition, there is a set of services available for {{site.data.keyword.Bluemix_notm}} Local.
+In addition, there is a set of services and components that are available for {{site.data.keyword.Bluemix_notm}} Local. Review the following table to see what is included and what is available for you to purchase optionally.
 
-| **Type** | **Name** | **Description** |    
+| **Type** | **Name** | **Description** |
 |----------|----------|-----------------|
-|Included | {{site.data.keyword.Bluemix_notm}} Runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage VMs and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
+|Included | {{site.data.keyword.Bluemix_notm}} runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage virtual machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
 |Included | {{site.data.keyword.autoscaling}}| Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix}} Local environment.|
-|Optional |{{site.data.keyword.datacshort}}| This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 |Optional | {{site.data.keyword.APIM}} | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
+|Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 
 *Table 1. Local Services*
 
+## {{site.data.keyword.Bluemix_notm}} Local architecture
+{: #localarch}
+
+{{site.data.keyword.Bluemix_notm}} Local sits on a virtual machine that is behind your company firewall, providing the highest performing and most secure cloud infrastructure to you. IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through IBM's Relay technology. Review the following diagram for information about how {{site.data.keyword.Bluemix_notm}} is set up in your local environment and how IBM maintains your local instance:
+
+![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local architecture diagram")
+
+*Figure 1. {{site.data.keyword.Bluemix_notm}} Local architecture*
+
+The inception virtual machine runs in a network behind your customer firewall in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core features that support the platform components run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses a VLAN for the private subnet. Using a private subnet rather than a public VLAN is more secure and can help avoid routing issues. The set of core features that support the platform include the following:
+
+<dl>
+<dt>**Monitoring and logging**</dt>
+<dd>The monitoring and logging features are deployed in your data centers through Relay, and the data remains in your data center. Alerts are sent back to IBM operations based on the defined alert criteria. No sensitive information is included in the alerts that are sent back to IBM.</dd>
+<dt>**Network**</dt>
+<dd>Relay is the delivery network included with {{site.data.keyword.Bluemix_notm}} Local. Relay enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability that is used by IBM operations to complete problem determination for your local instance. For more information about Relay, see [Relay](index.html#localrelay).</dd>
+<dt>**Compute**</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} uses a combination of the most prominent open source compute technologies to power your apps, including:
+<ul>
+<li>App-centric runtime environments based on Cloud Foundry.</li>
+<li>IBM Containers for portable and consistent delivery of your app without the need for you to manage an operating system.</li>
+<li>IBM Virtual Servers to get the most flexibility and control over your environments.</li></dd>
+<dt>**Security intelligence**</dt>
+<dd><p>IBM uses QRadar Security Intelligence Platform to provide a unified architecture for integrating several key components. These components include security information and event management, log management, anomaly detection, incident forensics, and configuration and vulnerability management. Bluemix also uses IBM QRadar security information and event management (SIEM) to monitor privileged user actions and successful and unsuccessful login attempts of application developers. QRadar reports provide the customer with visibility on that events data via the Reports and Logs section of the Administration page. For information about security reports, see [Viewing reports](../admin/index.html#oc_report).</p>
+<p>IBM BigFix ensures that fixes for operating systems are applied at appropriate frequencies. The patching process is automated, and the schedule is agreed upon between you and IBM. For information about maintenance and upgrades, see [Maintaining your local instance](index.html#maintainlocal).</p>
+</dd>
+</dl>
+
+Your apps are deployed inside virtual containers that run on Cloud Foundry virtual machines. All Cloud Foundry components, such as cloud controllers, health managers, routers, and droplet execution agents (DEAs) are deployed when {{site.data.keyword.Bluemix_notm}} is set up. The various {{site.data.keyword.Bluemix_notm}} management components are also included in the {{site.data.keyword.Bluemix_notm}} deployment.
+
+DataPower appliances provide access to {{site.data.keyword.Bluemix_notm}} application domains. These appliances connect to the network that is accessible  from your intranet. Your users who are deploying apps and services get access from the network that is accessible from your intranet. You must provide seven IP addresses that have outbound internet access. DataPower appliances route from these customer IP addresses to the isolated {{site.data.keyword.Bluemix_notm}} deployment. For information about the network specifications and infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).
+
 ### Relay
+{: #localrelay}
 
-Relay is a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local that enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual machine, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual machine, and once a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, we can check for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begin deploying updates.
+Relay is a delivery capability that is included with {{site.data.keyword.Bluemix_notm}} Local. Relay enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual machine, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual machine.  After a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, IBM checks for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begins deploying updates.
 
-The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability used by IBM operations to complete problem determination for your local instance. The outbound web port 443 is used for this connection. IBM uses the relay capability to deliver platform updates through a consistent testing and validation. This process ensures that all deployments pushed to your local environments are stable and secure.
+The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability that is used by IBM operations to complete problem determination for your local instance. The outbound web port 443 is used for this connection. IBM uses the Relay capability to deliver platform updates through a consistent testing and validation. This process ensures that all deployments that are pushed to your local environments are stable and secure.
 
-Only the IBM team working with you on your local environment can securely access your {{site.data.keyword.Bluemix_notm}} instance. Access to your local environment is secured by using two-factor authentication during multiple steps in the connection process. IBM provides a list of the approved users and IDs who can access your environment, and then you have the ability to audit any access to your environment. By generating a security report, you are able to find out who accessed your environment, and when and why it was accessed. For information about generating the security reports, see [Security reports](../security/index.html#reports).
+Only the IBM team that is working with you on your local environment can securely access your {{site.data.keyword.Bluemix_notm}} instance. Access to your local environment is secured by using two-factor authentication during multiple steps in the connection process. IBM provides a list of the approved users and IDs who can access your environment, and then you can audit any access to your environment. By generating a security report, you are able to find out who accessed your environment, and when and why it was accessed. For information about generating the security reports, see [Security reports](../security/index.html#reports).
 
-The environment is completely visible to you, as the administrator, for incident, problem, change, capacity, and security management. You can access the information about your environment by using the Administration page. Relay technology keeps the Administration page current with the latest data. For more information about user access, security logs, syndicated catalog control, and communication for updates and problem repair, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
+The environment is completely visible to you, as the administrator, for incident, problem, change, capacity, and security management. You can  access the information about your environment by using the Administration page. Relay technology keeps the Administration page current with the latest data. For more information about user access, security logs, syndicated catalog control, and communication for updates and problem repair, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
 
 ##Setting up your {{site.data.keyword.Bluemix_notm}} Local instance
 {: #setuplocal}
