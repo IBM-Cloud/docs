@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# Einführung in {{site.data.keyword.blockstorageshort}} 
+# Einführung in {{site.data.keyword.blockstorageshort}} (BETA)
 
 {{site.data.keyword.blockstoragefull}} bietet Speicherzugriff auf Blockebene für transaktionsintensive Arbeitslasten und Laufzeiten mit permanentem Speicherbedarf. 
 
