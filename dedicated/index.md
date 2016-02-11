@@ -14,7 +14,7 @@ All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the foll
 
 {{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the dedicated services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 128 GB of application memory.
+{{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of application memory.
 
 In addition, there is a set of services and components that are included or optional.
 
