@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# 開始使用 {{site.data.keyword.blockstorageshort}}
+# 開始使用 {{site.data.keyword.blockstorageshort}}（測試版）
 
 {{site.data.keyword.blockstoragefull}} 可讓您針對需要持續性儲存體的交易密集型工作量和執行時期，存取其區塊層儲存體。
 
