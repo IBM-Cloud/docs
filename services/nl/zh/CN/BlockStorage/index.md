@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# {{site.data.keyword.blockstorageshort}} 入门
+# {{site.data.keyword.blockstorageshort}} (BETA) 入门
 
 {{site.data.keyword.blockstoragefull}} 针对需要持久存储器的事务密集型工作负载和运行时，提供了对块级别存储器的访问。
 
