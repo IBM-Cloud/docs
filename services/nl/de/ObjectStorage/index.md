@@ -10,7 +10,7 @@ Weitere Informationen und Dokumentation zur Verwendung von OpenStack Swift und K
 
 Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
 
-[![{{site.data.keyword.objectstorageshort}}-Architekturdiagramm](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}}-Architekturdiagramm](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
 
