@@ -1,6 +1,6 @@
 # Getting started with IBM Network Security Groups (BETA)
 
-A security group is a set of IP filter rules. You can configure {{site.data.keyword.networksecuritygroups_full}} for virtual servers and virtual server groups. The service is available at IBM Bluemix&reg; > Catalog > Services > Network > Network Security Groups.
+A security group is a set of IP filter rules. You can configure {{site.data.keyword.networksecuritygroups_full}} for virtual servers and virtual server groups. The service is available at IBM Bluemix&reg; > Catalog > Services > Security > Network Security Groups.
 
 The following security groups are provided in Bluemix for IBM Virtual Servers:
 
@@ -13,7 +13,7 @@ The following security groups are provided in Bluemix for IBM Virtual Servers:
 You can define up to 10 security groups for a space in your organization. These security groups include the five predefined security groups. 
 
 ### Adding IBM Network Security Groups Service
-1. Select IBM Bluemix > Catalog > Services > Network. You will see the available network services.
+1. Select IBM Bluemix > Catalog > Services > Security. You will see the available security services.
 2. Select **Network Security Groups** service. You will see the service description, available plans, and pricing details. 
 3. Select a suitable plan. 
 4. Select the **Space:** in the **Add Service** section:  
@@ -54,7 +54,7 @@ You can configure rules to manage inbound traffic (ingress traffic) to a virtual
 	* **Port:** or **Port Range:** The port configuration parameter depends on the protocol you select.  
 		* If you select **ALL ICMP**, **ALL TCP**, or **ALL UDP**, no port information is required.  
 		* If you select a single protocol, the port number is automatically displayed. For example: If you select **HTTP**, port **80** is displayed.  
-		* If you select **Custom TCP Rule** or **Custom UDP rule**, select a port type. Values: ANY, Port, port range. If you select **Port**, enter the port number; if you select **Port range**, enter the range of port numbers.  
+		* If you select **Custom TCP Rule** or **Custom UDP rule**, select a port type. Values: port, port range. If you select **Port**, enter the port number; if you select **Port range**, enter the range of port numbers.  
 		* If you select **Custom ICMP Rule**, enter the ICMP **Code** and **Type**.
 	* **Select source type:** Select **IP** or **SG** or **Server**.  
 		* If you select **IP**, enter an IP address in the **Source IP** or **Destination IP** field.  
@@ -95,6 +95,10 @@ Select virtual server or virtual server group instances to which you want to ass
 ![](images/delete_sg.png)
 3. Select **DELETE**.
 
-
+># Related Links {:class="linklist"}
+>## Related Links {:id="general"}  
+>* [IBM Network Security Groups Command Line Interface](../../cli/plugins/networksecuritygroups/index.html)
+>
+>{:elementKind="article" id="rellinks"}
 
 
