@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 入門{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} (ベータ版) 入門{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。Swift は、完全分散型の、API によるアクセスが可能なストレージ・プラットフォームを提供します。アプリケーションで直接使用することも、バックアップに使用することも可能で、コスト効率の高いスケールアウト・ストレージに理想的です。
 
@@ -10,7 +10,7 @@ OpenStack Swift および Keystone についての詳細情報および資料に
 
 以下に {{site.data.keyword.objectstorageshort}} のアーキテクチャー図を示します。
 
-[![{{site.data.keyword.objectstorageshort}} アーキテクチャー図](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} アーキテクチャー図](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *図 1. {{site.data.keyword.objectstorageshort}} アーキテクチャー図*
 
