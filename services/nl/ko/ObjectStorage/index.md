@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 시작하기{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}}(베타) 시작하기{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}}에서는 데이터를 관리하는 데 필요한 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. Swift는 전체 분배된 API 액세스 가능 스토리지 플랫폼을 제공합니다. 이를 직접 애플리케이션에서 사용하거나 백업을 위해 사용하여 비용 효율이 높은 스케일 확장 스토리지를 위해 이상적인 것으로 만들 수 있습니다. 
 
@@ -10,7 +10,7 @@ OpenStack Swift와 Keystone 사용에 대한 자세한 정보와 문서는 [Open
 
 {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램은 다음과 같습니다.
 
-[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *그림 1. {{site.data.keyword.objectstorageshort}} 아키텍처 다이어그램*
 

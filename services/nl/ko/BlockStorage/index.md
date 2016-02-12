@@ -1,6 +1,6 @@
 {:new_window: target="_blank"} 
 
-# {{site.data.keyword.blockstorageshort}} (베타) 시작하기
+# {{site.data.keyword.blockstorageshort}}(베타) 시작하기
 
 {{site.data.keyword.blockstoragefull}}에서는 지속적 스토리지가 필요한 경우 트랜잭션이 많은 워크로드와 런타임의 블록 레벨 스토리지에 대한 액세스를 제공합니다.
 
