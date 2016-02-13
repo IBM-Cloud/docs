@@ -5,6 +5,7 @@ Your on-premises VPN gateway connects with the IBM VPN gateway. You may need to 
 * [Configuring IBM VPN with strongSwan](onpremises_gateway.html#strongswan)
 * [Configuring IBM VPN with Vyatta](onpremises_gateway.html#vyatta)
 * [Configuring IBM VPN with SoftLayer Gateway Appliance Service (GaaS)](onpremises_gateway.html#gaas)
+* [Configuring IBM VPN with Cisco ASA](onpremises_gateway.html#cisco)
 
 ##Configuring IBM VPN with strongSwan
 {: #strongswan} 
@@ -524,3 +525,68 @@ Dec  4 08:04:34 gateway Keepalived_vrrp: last message repeated 9 times
 Dec  4 08:05:34 gateway Keepalived_vrrp: last message repeated 8 times
 Dec  4 08:06:34 gateway Keepalived_vrrp: last message repeated 8 times
 ```
+
+##Configuring IBM VPN with Cisco ASA
+{: #cisco}
+
+![](images/cisco.png)
+
+1. [Configure IBM VPN service](index.html#ibm-vpn).
+2. [Configure the gateway](index.html#gateway).
+3. [Configure site connection](index.html#site).
+4. Configure Cisco ASA. See the following configuration example.
+
+		object network 10.2-network 
+		 subnet 10.2.0.0 255.255.0.0
+		http 10.2.0.0 255.255.0.0 inside
+		ssh 10.2.0.0 255.255.0.0 inside
+		
+		interface Ethernet0/0
+		 nameif outside
+		 security-level 0
+		 ip address 62.95.35.53 255.255.255.248 
+		
+		object network A_62.95.35.53 
+		 host 62.95.35.53
+		
+		access-list out-in extended permit gre any host 62.95.35.53 
+		access-list out-in extended permit tcp any host 62.95.35.53 eq pptp 
+		access-list outside_1_cryptomap extended permit ip object 10.2-network 
+		object network NETWORK_OBJ_172.31.0.0_16 
+		 subnet 172.31.0.0 255.255.0.0
+		object network Bluemix31 
+		 subnet 172.31.0.0 255.255.0.0
+		 description Bluemix 172.31.0.0 VPN 
+		
+		nat (inside,outside) source static 10.2-network 10.2-network destination static NETWORK_OBJ_172.31.0.0_16 NETWORK_OBJ_172.31.0.0_16
+		nat (outside,inside) source static NETWORK_OBJ_172.31.0.0_16 NETWORK_OBJ_172.31.0.0_16 destination static 10.2-network 10.2-network
+		
+		crypto ipsec transform-set ESP-AES-256-MD5 esp-aes-256 esp-md5-hmac 
+		crypto ipsec security-association lifetime seconds 28800
+		crypto ipsec security-association lifetime kilobytes 4608000
+		crypto map outside_map0 1 set transform-set ESP-AES-128-SHA
+		crypto map outside_map 1 match address outside_1_cryptomap
+		crypto map outside_map 1 set pfs group5
+		crypto map outside_map 1 set peer 134.168.6.5 
+		crypto map outside_map 1 set transform-set ESP-AES-128-SHA
+		crypto map outside_map 1 set nat-t-disable
+		crypto map outside_map interface outside
+		crypto isakmp identity address
+		crypto isakmp enable outside
+		crypto isakmp policy 1
+		 authentication pre-share
+		 encryption aes
+		 hash sha
+		 group 1
+		 lifetime 86400
+		
+		group-policy IPsec internal
+		group-policy IPsec attributes
+		 vpn-tunnel-protocol IPSec l2tp-ipsec 
+		
+		tunnel-group 134.168.6.5 type ipsec-l2l
+		tunnel-group 134.168.6.5 general-attributes
+		 default-group-policy IPsec
+		tunnel-group 134.168.6.5 ipsec-attributes
+		 pre-shared-key bluemix
+

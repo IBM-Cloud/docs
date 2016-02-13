@@ -159,7 +159,7 @@ You can manage the IBM VPN service by using graphical interface, command line in
 
 IBM lab has tested the following VPN gateway devices for interoperation with IBM VPN service:
 
-* Cisco Adaptive Security Appliance (ASA) Software Version 8.2(1) 
+* Cisco Adaptive Security Appliance (ASA) Software Version 8.2(1). [See configuration example](onpremises_gateway.html#cisco) 
 * Brocade Vyatta 5415 vRouter 6.7 R7. [See configuration example](onpremises_gateway.html#vyatta){: new_window}
 * Linux StrongSwan U5.1.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
 * Linux StrongSwan U5.2.2/K3.13.0-55-generic. [See configuration example](onpremises_gateway.html#strongswan){: new_window}
@@ -182,7 +182,7 @@ Use the IBM VPN service when you are looking to ensure connectivity between any 
 
 Use the Bluemix Secure Gateway service if you want to establish a secure connection from a specific application endpoint in Bluemix to another endpoint inside your on-premises data center. 
 
-**5. Can I use the IBM VPN service to access my containers and VMs inside Bluemix cloud by using their private IP addresses?**
+**5. Can I use the IBM VPN service to access my containers and virtual servers inside Bluemix cloud by using their private IP addresses?**
  
 Currently, the IBM VPN service is available for accessing Bluemix containers only.
 
@@ -210,6 +210,7 @@ You can build an IPSec tunnel to establish secure communication between IBM VPN 
 >* [On-premises strongSwan Gateway Configuration Example](onpremises_gateway.html#strongswan){: new_window}
 >* [On-premises Vyatta Gateway Configuration Example](onpremises_gateway.html#vyatta){: new_window}
 >* [On-premises SoftLayer Gateway Appliance Service (GaaS) Configuration Example](onpremises_gateway.html#gaas){: new_window}
+>* [On-premises Cisco ASA Configuration Example](onpremises_gateway.html#cisco){: new_window}
 >
 >{:elementKind="article" id="rellinks"}
 
