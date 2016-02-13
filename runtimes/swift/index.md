@@ -2,7 +2,7 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 11 February 2016*
+*Last Updated: 13 February 2016*
 
 # Swift runtime
 {: #swift_runtime}
@@ -29,10 +29,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-02-03-a
 ```
 {: codeblock}
 
-### Available versions:
-{: #available_versions}
-
-For a complete list of the Swift supported versions please see the buildpack's [manifest.yml](https://github.com/cloudfoundry-community/swift-buildpack/blob/master/manifest.yml#L14) file.
+For a complete list of the Swift supported versions, please see the buildpack's [manifest.yml](https://github.com/cloudfoundry-community/swift-buildpack/blob/master/manifest.yml) file.
 
 For details about the current version of the Swift buildpack that is installed in {{site.data.keyword.Bluemix}}, please follow this [link](https://github.com/cloudfoundry-community/swift-buildpack/releases/tag/v1.0.3).
 
@@ -40,5 +37,5 @@ Since there are frequent Swift language changes, it's advised that you pin to yo
 
 # rellinks
 ## general
-{: #related_links}
 * [Cloud Foundry buildpack for Swift](https://github.com/cloudfoundry-community/swift-buildpack)
+* [Swift language documentation](https://swift.org/)
