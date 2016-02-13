@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# 開始使用 {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage} 
+# 開始使用 {{site.data.keyword.objectstorageshort}}（測試版） {: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} 可讓您存取完全佈建的 Swift {{site.data.keyword.objectstorageshort}} 帳戶，以管理您的資料。Swift 提供完全分散式、API 可存取的儲存體平台。您可以直接在應用程式使用它或將它用於備份，讓它成為符合成本效益的橫向擴充儲存體。
 
@@ -10,7 +10,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 {{site.data.keyword.objectstorageshort}} 架構圖如下：
 
-[![{{site.data.keyword.objectstorageshort}} 架構圖](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} 架構圖](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *圖 1. {{site.data.keyword.objectstorageshort}} 架構圖*
 

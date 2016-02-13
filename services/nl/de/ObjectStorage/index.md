@@ -8,20 +8,29 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 Weitere Informationen und Dokumentation zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org){: new_window} verfügbar.
 
+Das {{site.data.keyword.objectstorageshort}}-Architekturdiagramm sieht wie folgt aus:
+
+[![{{site.data.keyword.objectstorageshort}}-Architekturdiagramm](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+
+*Abbildung 1. {{site.data.keyword.objectstorageshort}}-Architekturdiagramm*
+
 **Anmerkung:** Eine providerseitige Verschlüsselung wird nicht unterstützt. Für die Verschlüsselung von Daten vor dem Hochladen ist die Clientanwendung zuständig.
 
 **Anmerkung:** Der Beta-Plan für den {{site.data.keyword.objectstorageshort}}-Service wird nach der allgemeinen Verfügbarkeit (GA) des {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}-Service aus dem Katalog entfernt. Nach Ablauf einer Nachfrist werden Serviceinstanzen entfernt, die den Beta-Plan verwenden. [Aktualisieren Sie Ihren Preisstrukturplan](#changeplan), um die Verwendung des {{site.data.keyword.objectstorageshort}}-Service fortzusetzen. 
+
+
+
 
 ## {{site.data.keyword.objectstorageshort}}-Instanz in {{site.data.keyword.Bluemix_notm}} erstellen {: #creating-object-storage-instance} 
 
 ### Vorgehensweise zur Erstellung einer {{site.data.keyword.objectstorageshort}}-Serviceinstanz
 1.	Wechseln Sie zur {{site.data.keyword.Bluemix_notm}}-Registerkarte **Katalog** und geben Sie **{{site.data.keyword.objectstorageshort}}** in das Suchfeld ein oder wechseln Sie zu **Services** und wählen Sie **Storage** aus. Klicken Sie auf den **{{site.data.keyword.objectstorageshort}}**-Service. 
-2.	Wählen Sie Ihren Bereich, die App, den Servicenamen und den Plan aus und klicken Sie auf **Erstellen**.
+2.	Wählen Sie Ihren Bereich, die App, den Servicenamen und den Plan aus und klicken Sie auf **Erstellen**. 
 **Anmerkung:** Wenn Sie anfangs die Option **Nicht binden** für das Feld **App** auswählen, können Sie trotzdem weiterhin die Serviceinstanz an Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung binden, wenn Sie die Konfiguration abgeschlossen haben. (Siehe folgende Anweisungen.)
 
 ## {{site.data.keyword.objectstorageshort}} über eine {{site.data.keyword.Bluemix_notm}}-App verwenden {: #using-object-storage-from-bluemix-app} 
 
-### Vorgehensweise zum Binden eines {{site.data.keyword.objectstorageshort}}-Service an eine Anwendung nach der Erstellung{: #bind-object-storage-to-application} 
+### Vorgehensweise zum Binden eines {{site.data.keyword.objectstorageshort}}-Service an eine Anwendung nach der Erstellung {: #bind-object-storage-to-application} 
 1.	Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard die App aus, die Sie binden möchten.
 2.	Klicken Sie in der App-Übersicht auf **Service oder API binden**.
 3.	Wählen Sie in der Liste der Services Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus und klicken Sie auf **Hinzufügen**.
@@ -109,7 +118,7 @@ Sie finden die Werte für die Berechtigungsnachweise für Ihren {{site.data.keyw
 
 ![{{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise](images/service_credentials.jpg)
 
-*Abbildung 1. {{site.data.keyword.objectstorageshort}}Serviceberechtigungsnachweise*
+*Abbildung 2. {{site.data.keyword.objectstorageshort}}-Serviceberechtigungsnachweise*
 
 ### Mit Containern arbeiten
 
@@ -133,7 +142,7 @@ Inhalt eines Containers auflisten:
 
 #### Dateien mit einer Größe über 5 GB einem Container hinzufügen
 
-Wenn Sie eine Datei hochladen, die größer als 5 GB ist, müssen Sie sie in kleinere Segmente aufteilen. Sie können den Swift-Client durch Angabe des Parameters ```-segment-size``` anweisen, eine solche Hochladeoperation durchzuführen: 
+Wenn Sie eine Datei hochladen, die größer als 5 GB ist, müssen Sie sie in kleinere Segmente aufteilen. Sie können den Swift-Client durch Angabe des Parameters ```-segment-size``` anweisen, eine solche Hochladeoperation durchzuführen:
 
 	swift upload <Containername> <Dateiname> --segment-size <Größe_in_Byte>
 	
@@ -180,7 +189,7 @@ Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen ange
 
 #### Authentifizierungskonto angeben
 
-Der Swift-Befehl ```stat``` gibt Informationen zu Ihrem Konto aus: 
+Der Swift-Befehl ```stat``` gibt Informationen zu Ihrem Konto aus:
 
 	swift stat
 
@@ -213,7 +222,7 @@ Sie können die Swift-REST-API in einer Befehlszeilen-Clientschnittstelle wie cU
 
 ### {{site.data.keyword.objectstorageshort}}-URL {: #access-points}
 
-Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen Sie die {{site.data.keyword.objectstorageshort}}-URL wie folgt: 
+Zur Interaktion mit der {{site.data.keyword.objectstorageshort}}-API erstellen Sie die {{site.data.keyword.objectstorageshort}}-URL wie folgt:
 
 	https://<Zugriffspunkt>/<API-Version>/AUTH_<Projekt-ID>/<Containernamensbereich>/<object namespace>
 
@@ -221,12 +230,12 @@ Beispiel:
 
 ![{{site.data.keyword.objectstorageshort}}-URL](images/Swift_URL.png)
 
-*Abbildung 2. {{site.data.keyword.objectstorageshort}}-URL*
+*Abbildung 3. {{site.data.keyword.objectstorageshort}}-URL*
 
-Die URL besteht aus fünf Teilen. Sie finden die Werte für ```<API-Version>```, ```<Projekt-ID>``, ```<Containernamensbereich>`` und ```<object namespace>`` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle. Informationen für den ```<Zugriffspunkt>`` finden Sie in der folgenden Tabelle: 
+Die URL besteht aus fünf Teilen. Die ```<API-Version>``` ist Version 1. Sie finden die Werte für ```<Projekt-ID>``, ```<Containernamensbereich>`` und ```<object namespace>`` für Ihren {{site.data.keyword.objectstorageshort}} in der {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle. Informationen für den ```<Zugriffspunkt>`` finden Sie in der folgenden Tabelle: 
 
 
-| **Region**  |    **Interner Zugriffspunkt**                             |     **Öffentlicher Zugriffspunkt**                   |
+| **Region**  |     **Interner Zugriffspunkt**                             |     **Öffentlicher Zugriffspunkt**                   |
 |-------------|-----------------------------------------------------------|-----------------------------------------------|
 | Dallas      | https://dal.objectstorage.service.open.networklayer.com/  | https://dal.objectstorage.open.softlayer.com/ | 
 | London      | https://lon.objectstorage.service.open.networklayer.com/  | https://lon.objectstorage.open.softlayer.com/ |
@@ -242,13 +251,13 @@ Eine umfassende Liste der Optionen der {{site.data.keyword.objectstorageshort}}-
 
 ## {{site.data.keyword.objectstorageshort}} regionsübergreifend verwenden {: #multi-regions}  
 
-Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde. Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
+Der {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde.  Beispiel: Wenn Sie eine {{site.data.keyword.objectstorageshort}}-Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'US-South' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.  
 
-Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion. Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
+Für die {{site.data.keyword.Bluemix_notm}}-Region 'US-South' ist Dallas die Standardspeicherregion. Für die {{site.data.keyword.Bluemix_notm}}-Region 'United Kingdom' ist London die Standardspeicherregion.  Die {{site.data.keyword.objectstorageshort}}-Benutzerschnittstelle startet immer mit der Standardspeicherregion der {{site.data.keyword.Bluemix_notm}}-Region. Wenn Sie die Region wechseln wollen, klicken Sie auf die Dropdown-Liste für die {{site.data.keyword.objectstorageshort}}-Regionen und wählen eine andere Region aus.
 
 ![{{site.data.keyword.objectstorageshort}}-Region ändern](images/change_region.png)
 
-*Abbildung 3. {{site.data.keyword.objectstorageshort}}-Region ändern*
+*Abbildung 4. {{site.data.keyword.objectstorageshort}}-Region ändern*
 
 **Anmerkung:** Der {{site.data.keyword.objectstorageshort}}-Service unterstützt keine speicherregionsübergreifende Replikation.
 
@@ -402,7 +411,7 @@ Der Beta-Plan für den {{site.data.keyword.objectstorageshort}}-Service wird nac
 
 ![{{site.data.keyword.objectstorageshort}}-Preistarif ändern](images/Change_plan.png)
 
-*Abbildung 4. {{site.data.keyword.objectstorageshort}}Preistarif ändern*
+*Abbildung 5. {{site.data.keyword.objectstorageshort}}Preistarif ändern*
 
 Ihre Serviceinstanzen und Kundendaten werden in den neuen Plan versetzt.
 
@@ -417,7 +426,24 @@ Testkonten, die weiterhin aktiv sind, können den kostenlosen Plan nutzen, der n
 
 Instanzen, die im kostenlosen Plan erstellt werden, können mit den unter [Wie wird der Plan von der Beta-Version in die Standardversion geändert?](#changeplan) beschriebenen Schritten, auf den Standardplan aktualisiert werden. Zum Aktualisieren des Standardplans muss die zugeordnete Organisation ein gebührenpflichtiges {{site.data.keyword.Bluemix_notm}}-Konto sein. Testkonten mit {{site.data.keyword.objectstorageshort}}-Instanzen können nicht auf den Standardplan aktualisiert werden und Instanzen im Standardplan können nicht auf andere Pläne herabgestuft werden.
 
+### Welche Gebühren werden für meine Nutzung von {{site.data.keyword.objectstorageshort}} fällig und wann werden sie in Rechnung gestellt?
 
+Für den Service {{site.data.keyword.objectstorageshort}} werden nur Gebühren für das, was Sie nutzen, fällig.  Um mit der Verwendung des Service zu beginnen, sind keine Mindestgebühren oder Konfigurationsgebühren zu entrichten und es sind auch keine sonstigen Verpflichtungen einzugehen. Es sind keine Gebühren für API-Anforderungen oder für Netzverkehr für eingehende Daten zu entrichten.
+
+Ihre Nutzung von {{site.data.keyword.objectstorageshort}} wird während des gesamten Fakturierungszyklus auf der Grundlage der durchschnittlichen Speichernutzung pro Tag in Rechnung gestellt. Dies schließt alle Objektdaten in Containern ein, die Sie mit Ihrem {{site.data.keyword.Bluemix_notm}}-Organisationskonto erstellt haben. 
+
+Gebühren für die Übertragung abgehender Daten wird fällig, soabald Daten aus einem Ihrer Objektcontainer über das öffentliche Netz gelesen werden. Die Nutzung wird während des gesamten Fakturierungszyklus auf der Grundlage der durchschnittlichen öffentlichen Übertragung abgehender Daten pro Tag in Rechnung gestellt. 
+
+Die Metrikkomponenten für die Preisbestimmung von {{site.data.keyword.objectstorageshort}} sind folgende:
+* Speichernutzung - $0.04 pro GB pro Monat
+* Öffentliche Übertragung abgehender Daten - $0.09 pro GB pro Monat 
+
+Am Ende des Fakturierungszyklus wird Ihnen die Nutzung während des momentanen Fakturierungszeitraums von {{site.data.keyword.Bluemix_notm}} automatisch in Rechnung gestellt. Sie können Ihre Gebühren für den momentanen Fakturierungszeitraum über die {{site.data.keyword.Bluemix_notm}}-Berichterstellungsfunktion einsehen.
+
+Der für London und Dallas freigegebene Standardserviceplan unterliegt derselben Preisbestimmung.
+
+### Wie funktioniert die Datenreplikation in {{site.data.keyword.objectstorageshort}}?
+Der Service {{site.data.keyword.objectstorageshort}} pflegt drei Kopien Ihrer Daten, die in mehreren Speicherknoten repliziert werden. Weitere Informationen finden Sie in der Dokumentation [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
 
 ># Zugehörige Links {:class="linklist"}
 >## API-Referenz {:id="api"}

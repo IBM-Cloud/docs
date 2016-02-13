@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# Introdução ao {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage} 
+# Introdução ao {{site.data.keyword.objectstorageshort}} (BETA) {: #getting-started-with-object-storage} 
 
 O {{site.data.keyword.objectstoragefull}} fornece a você acesso a uma conta Swift do {{site.data.keyword.objectstorageshort}} totalmente provisionada para gerenciar seus dados. O swift fornece uma plataforma de armazenamento acessível por API totalmente distribuída. É possível usá-la diretamente em seus aplicativos ou para backups, tornando-a ideal para armazenamento de ampliação e custo efetivo.
 
@@ -10,7 +10,7 @@ Mais informações e documentação sobre como usar o OpenStack Swift e o Keysto
 
 O diagrama de arquitetura do {{site.data.keyword.objectstorageshort}} é o seguinte:
 
-[![{{site.data.keyword.objectstorageshort}} Diagrama de arquitetura](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} Diagrama de arquitetura](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}(images/object_storage_solution_archectiture_small.png)]
 
 *Figure 1. {{site.data.keyword.objectstorageshort}} Diagrama de arquitetura*
 
