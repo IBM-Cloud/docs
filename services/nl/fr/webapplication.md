@@ -3,10 +3,9 @@
 # Web et application
 {: #webapplication}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
-Utilisez ces services
-pour ajouter ou retirer des fonctions rapidement alors que vous développez des applications Web dans le cloud. Vous pouvez également simplifier les tâches
+Utilisez ces services pour ajouter ou retirer des fonctions rapidement alors que vous développez des applications Web dans le cloud. Vous pouvez également simplifier les tâches
 de gestion et organiser vos règles et processus métier. 
 {:shortdesc}
 

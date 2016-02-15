@@ -3,7 +3,7 @@
 # Mobile
 {: #mobile}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Use os serviços móveis para construir aplicativos de multiplataforma, nativa ou híbrida, Android e iOS. 
 {:shortdesc}

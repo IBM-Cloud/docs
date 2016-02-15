@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última actualización: 8 de diciembre de 2015*
+*Última actualización: 15 de enero de 2016*
 
 {{site.data.keyword.Bluemix}} local proporciona la potencia y la agilidad de la plataforma basada en nubes de {{site.data.keyword.Bluemix_notm}} para el centro de datos. Con {{site.data.keyword.Bluemix_notm}} local, puede proteger las cargas de trabajo más sensibles detrás del cortafuegos de la empresa, mientras que permanecen conectadas de forma segura y en sincronización con {{site.data.keyword.Bluemix_notm}} público.
 {:shortdesc}
@@ -40,7 +40,7 @@ El relé es una prestación de entrega que se incluye con {{site.data.keyword.Bl
 
 El tráfico en este túnel es una automatización para servir y mantener la plataforma, los recursos de cálculo y los servicios para la instancia. El puerto web de entrada 443 se utiliza para esta conexión. El relé está restringido al acceso solo de agente de automatización. IBM utiliza la capacidad del relé para entregar actualizaciones de plataforma mediante un proceso coherente de pruebas y validaciones para garantizar que todos los despliegues enviados por push a sus entornos locales sean estables y seguros.
 
-Tiene una completa visibilidad del entorno para la gestión de incidencias, problemas, cambios, capacidades y seguridad como administrador. Los administradores acceden a la información del entorno mediante la consola de administración. La tecnología de relé mantiene actualizada la consola de administración con los datos más recientes. Para obtener más información sobre el acceso de usuario, los registros de seguridad, el control de catálogos sindicados y la comunicación sobre las actualizaciones y la reparación de problemas, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y de {{site.data.keyword.Bluemix_notm}}dedicado](../admin/index.html#mng).
+Tiene una completa visibilidad del entorno para la gestión de incidencias, problemas, cambios, capacidades y seguridad como administrador.  Los administradores acceden a la información del entorno mediante la consola de administración. La tecnología de relé mantiene actualizada la consola de administración con los datos más recientes. Para obtener más información sobre el acceso de usuario, los registros de seguridad, el control de catálogos sindicados y la comunicación sobre las actualizaciones y la reparación de problemas, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y de {{site.data.keyword.Bluemix_notm}}dedicado](../admin/index.html#mng).
 
 ##Configuración de la instancia de {{site.data.keyword.Bluemix_notm}} local
 {: #setuplocal}
@@ -70,6 +70,39 @@ Para configurar su versión privada de {{site.data.keyword.Bluemix_notm}}:
 	</ol>
 </li>
 </ol>
+
+Puede prever un proceso similar a la siguiente lista para el despliegue y la configuración iniciales de su entorno. Para obtener detalles sobre la persona responsable de cada tarea, consulte [Roles y responsabilidades](../local/index.html#rolesresponsibilities).
+
+<ol>
+<li>Proporcione la configuración de VMware que cumpla las especificaciones para calcular recursos, la red y el almacenamiento. Para obtener más información sobre los requisitos de la infraestructura, consulte <a href="../local/index.html#localinfra">Requisitos de infraestructura local de {{site.data.keyword.Bluemix_notm}}</a>.</li>
+<li>Proporcione las credenciales de clúster de vCenter que utilizará la máquina virtual inicial. Debe proporcionar la siguiente información:
+<ul>
+<li>Nombre del clúster VMware</li>
+<li>Credenciales del clúster vCenter incluidos el ID de usuario y la contraseña</li>
+<li>Nombre o nombres del almacén de datos (nombre del LUN de almacenamiento)</li>
+<li>ID de VLAN/grupo de puertos VMware</li>
+<li>Nombre de agrupación de recursos</li>
+</ul>
+</li>
+<li>Usted e IBM trabajan conjuntamente para validar las credenciales que ha proporcionado en la tarea anterior.</li>
+<li>Debe proporcionar 7 direcciones IP en la red. Si tiene un proxy web protegido para permitir el acceso de salida a Internet para componentes internos de {{site.data.keyword.Bluemix_notm}}, debe proporcionar las credenciales para conectarse a él.
+<p>**Nota**: Si el proxy web no es seguro, no necesita proporcionar las credenciales. Además, tenga en cuenta que no todos los clientes locales de {{site.data.keyword.Bluemix_notm}} utilizan un proxy web.</p></li>
+<li>IBM proporciona una lista blanca de URL que deben estar permitidas a través del proxy web antes de iniciar el despliegue.</li>
+<li>Debe especificar los nombres de dominio para el despliegue, y los ID que desea utilizar. Obtendrá dos dominios definidos parcialmente al configurar la instancia local, y seleccione el prefijo para los dos dominios. Por ejemplo, seleccione el prefijo para <code>*mycompany*.bluemix.net</code> y <code>*mycompany*.mybluemix.net</code>. Y, a continuación, también puede seleccionar el dominio completo para crear un dominio personalizado.
+<p>Puede elegir tantos dominios personalizados como desee. Sin embargo, el usuario es responsable de los certificados para los dominios personalizados. Para obtener información sobre cómo crear el dominio personalizado, consulte <a href="../manageapps/updapps.html#domain">Creación y utilización de un dominio personalizado</a>.</p></li>
+<li>Puede elegir qué tecnología, IPSec o túnel OpenVPN utilizará para configurar el Relé para volver a conectarse al centro de operaciones de IBM.</li>
+<li>IBM instala e inicia la máquina virtual inicial dentro del clúster de {{site.data.keyword.Bluemix_notm}}. Si proporciona su propio VMware, un representante de IBM ayuda a su representante del cliente a completar esta tarea.</li>
+<li>IBM configura el Relé para comunicarse de nuevo con el centro de operaciones de IBM.</li>
+<li>El repositorio de máquina virtual inicial detiene los artefactos de compilación actualizados.</li>
+<li>Proporcione las credenciales para IBM para conectarse con la instancia de directorios LDAP corporativos.</li>
+<li>IBM utiliza la automatización para desplegar la plataforma central de {{site.data.keyword.Bluemix_notm}}.</li>
+<li>IBM despliega la plataforma principal que incluye los tipos de ejecución elásticos, la consola, la función de administración y la supervisión.</li>
+<li>IBM configura el acceso administrativo al entorno.</li>
+<li>IBM enlaza el catálogo sindicado desde el despliegue local a una instancia pública de {{site.data.keyword.Bluemix_notm}} para su uso de los servicios públicos. Hay disponible un conjunto de servicios públicos en la instancia local de forma predeterminada. Puede utilizar la página de administración para la gestión de catálogos para activar o desactivar los servicios para la instancia local.</li>
+<li>Puede empezar a utilizar la instancia local supervisada por el equipo de operaciones de IBM para responder a las alertas.</li>
+</ol>
+
+Una vez que se configure la instancia de {{site.data.keyword.Bluemix_notm}}, puede supervisar y gestionar la instancia de {{site.data.keyword.Bluemix_notm}} utilizando la página Administración. Para obtener más información, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../administer/index.html#mng). Para obtener información sobre las actualizaciones y el mantenimiento, consulte [Mantenimiento de la instancia local](index.html#maintainlocal).
 
 ##Roles y responsabilidades
 {: #rolesresponsibilities}
@@ -135,8 +168,7 @@ La fase inicial se utiliza para establecer el entorno de {{site.data.keyword.Blu
 |Identificar herramientas para la detección de sucesos y la determinación de problemas | identificar herramientas de IBM y de terceros utilizadas para la detección de sucesos y la determinación de problemas en el nivel de plataforma de {{site.data.keyword.Bluemix_notm}}. | IBM |
 |Definir un plan de escalamiento | Definir el plan de escalamiento para seleccionar y resolver sucesos detectados desde los componentes de supervisión. | IBM |
 |Firmar acuerdos de infraestructuras, plataformas y soporte | Firmar el acuerdo de suscripción, incluidos los términos y condiciones financieros del entorno. Firmar un acuerdo de supervisión de seguridad y redes. Firmar una suscripción de soporte. | Cliente |
-|Obtener un entorno | Conseguir recursos informáticos, de redes y almacenamiento. Para obtener más información sobre los requisitos de la infraestructura del entorno, consulte los [requisitos de la infraestructura local](../local/index.html#localinfra).
- | Cliente |
+|Obtener un entorno | Conseguir recursos informáticos, de redes y almacenamiento. Para obtener más información sobre los requisitos de la infraestructura del entorno, consulte los [requisitos de la infraestructura local](../local/index.html#localinfra). | Cliente |
 |Instalar una solución VPN | Instalar una solución VPN bidireccional. | IBM |
 |Instalar componentes de estructura, app y supervisión y gestión | Instalar, configurar y verificar componentes de estructura, como BOSH Director, Cloud Controller, Health Manager, mensajería, routers, DEA y proveedores de servicios y los componentes de supervisión definidos en el plan de escalamiento y detección de problemas. | IBM |
 |Instalar y configurar componentes de seguridad | Instalar y configurar componentes de seguridad enlazados con el plan de supervisión y escalamiento, incluyendo IBM QRadar, almacén de credenciales, sistema de prevención de intrusión, IBM BigFix e IBM Security Privileged Identity Management. | IBM |
@@ -220,9 +252,15 @@ una migración tras error estricta de alta disponibilidad en el clúster para ga
 </dd>
 <dt>**Red**</dt>
 <dd>
-Entre los requisitos recomendados se incluye un grupo de puertos accesibles para el cliente con 10 direcciones IP de red del cliente
-que tengan acceso saliente a Internet. A continuación, defina una segunda VLAN privada solo entre los ESXi utilizados para {{site.data.keyword.Bluemix_notm}} local. Esta VLAN se muestra como un grupo de puertos en VMware. {{site.data.keyword.Bluemix_notm}} local lo utiliza para la subred privada,
-que es más segura y puede ayudar a evitar problemas de direccionamiento.
+Entre los requisitos recomendados se incluye un grupo de puertos accesibles para el cliente con siete direcciones IP de red del cliente que tienen acceso saliente a Internet en la misma subred. La máquina virtual inicial utiliza dos puertos, tres puertos son direcciones IP virtuales utilizadas para los dominios, y las últimas dos son direcciones IP públicas para el DataPowers. A continuación, defina una segunda VLAN privada sólo entre los ESXi utilizados para {{site.data.keyword.Bluemix_notm}} Local. Esta VLAN se muestra como un grupo de puertos en VMware. {{site.data.keyword.Bluemix_notm}} local lo utiliza para la subred privada,
+que es más segura y puede ayudar a evitar problemas de direccionamiento.<br />
+<p>Se utilizarán los puertos siguientes:</p>
+<ul>
+<li>Puerto 443 para la conexión de relé
+<p>**Nota**: Si elige utilizar un túnel IPSec en lugar de una OpenVPN, abra a continuación un puerto de cliente para esta conexión.</p></li>
+<li>Puerto 389 o SSL 636 para la conexión LDAP o Active Directory</li>
+</ul>
+<p>**Nota**: IBM puede detectar si se ha perdido la conexión de red. En caso de que se pierda la conexión de red, IBM se pondrá en contacto con usted y trabajará con el especialista de red para resolver el problema.</p>
 </dd>
 </dl>
 
@@ -361,7 +399,7 @@ Puede elegir un equilibrador de carga global como Akamai o Dyn. Para obtener má
 
 Además de habilitar una disponibilidad continua, {{site.data.keyword.Bluemix_notm}} también proporciona alta disponibilidad en la plataforma mediante tecnologías integradas en Cloud Foundry, Docker y otros componentes.
 
-Estas tecnologías incluyen: 
+Estas tecnologías incluyen:
 
 <dl>
 <dt>Escalabilidad en Cloud Foundry</dt>
@@ -374,7 +412,7 @@ Estas tecnologías incluyen:
 ##Restauración de la instancia local
 {: #restorelocal}
 
-Se hace una copia de seguridad de forma regular de los valores, los metadatos y las configuraciones de {{site.data.keyword.Bluemix_notm}} local para prepararse ante cualquier interrupción no planificada del entorno.Los datos de cuya copia de seguridad es responsable incluyen datos de app, datos de servicios de bases de datos en la nube y almacenes de objetos.
+Se hace una copia de seguridad de forma regular de los valores, los metadatos y las configuraciones de {{site.data.keyword.Bluemix_notm}} local para prepararse ante cualquier interrupción no planificada del entorno. Los datos de cuya copia de seguridad es responsable incluyen datos de app, datos de servicios de bases de datos en la nube y almacenes de objetos.
 
 Como parte de la copia de seguridad de los datos, que incluye metadatos del sistema y configuraciones, IBM lleva a cabo las tareas siguientes:
 

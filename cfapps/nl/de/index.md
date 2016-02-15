@@ -2,13 +2,12 @@
 {:new_window: target="_blank"}
 
 # Cloud Foundry-Apps erstellen
-*Letzte Aktualisierung: 4 Dezember 2015*
+*Letzte Aktualisierung: 4. Dezember 2015*
 
 In {{site.data.keyword.Bluemix}} können Sie Ihre Anwendung in der
 {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen. Nachdem die Anwendung erstellt wurde, können Sie wählen, ob Sie weiterhin die Benutzerschnittstelle, die Befehlszeilenschnittstelle
 'cf' oder
-{{site.data.keyword.jazzhub_title}} verwenden möchten, um Ihre Anwendung zu entwickeln, zu überwachen, zu planen und bereitzustellen. 
-{:shortdesc}
+{{site.data.keyword.jazzhub_title}} verwenden möchten, um Ihre Anwendung zu entwickeln, zu überwachen, zu planen und bereitzustellen. {:shortdesc}
 
 Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen, beginnen Sie mit einem
 Starter. Bei einem *Starter* handelt es sich um eine Vorlage, die vordefinierte Services sowie Anwendungscode enthält, der mit einem bestimmten Buildpack konfiguriert ist. Es gibt zwei Arten von Startern: Boilerplates und Laufzeiten. 

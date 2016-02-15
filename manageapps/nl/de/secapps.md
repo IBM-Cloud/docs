@@ -6,10 +6,9 @@
 #Apps schützen
 {: #securingapps}
 
-*Letzte Aktualisierung: 4 Dezember 2015*
+*Letzte Aktualisierung: 4. Dezember 2015*
 
-Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate
-hochladen und den Zugriff auf die Anwendungen beschränken. 
+Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und den Zugriff auf die Anwendungen beschränken.
 {:shortdesc}
 
 ##Zertifikatssignieranforderungen erstellen
@@ -66,6 +65,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 **Hinweis:** Die OpenSSL-Implementierung SHA-512 ist von der Compilerunterstützung für den ganzzahligen 64-Bit-Typ abhängig. Sie können die
 SHA-1-Option für Anwendungen verwenden, die Kompatibilitätsprobleme mit dem SHA-256-Zertifikat
 haben. 
+
+Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert. Nach dem Erstellen der Zertifikatssignieranforderung (Certificate Signing Request, CSR) können Sie Ihr SSL-Zertifikat bei einer öffentlichen Zertifizierungsstelle generieren.  
 
 ##SSL-Zertifikate hochladen
 {: #ssl_certificate}
@@ -152,7 +153,7 @@ dazu aufgefordert, ein clientseitiges Zertifikat bereitzustellen. Beispiel:
 Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der
 Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. 
   
-  **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS (Transport Layer Security)-Protokolls ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen hierzu finden Sie in [Abschnitt 7.4.2 von RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+  **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS-Protokolls (Transport Layer Security) ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen hierzu finden Sie im [Abschnitt 7.4.2 von RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
 Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu
 **Organisationen verwalten** > **Domänen** > **Zertifikat anzeigen**,

@@ -3,7 +3,7 @@
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última atualização: 7 de dezembro de 2015*
+*Última atualização: 15 de dezembro de 2015*
 
 Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na
 rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento
@@ -74,7 +74,7 @@ autorização de acesso, auditoria de operações críticas e proteção de dado
 <dd>Os desenvolvedores de aplicativos são autenticados no
 {{site.data.keyword.Bluemix_notm}} usando o IBM Web identity.
 
-Para {{site.data.keyword.Bluemix_notm}} Dedicado e Local,
+Para {{site.data.keyword.Bluemix_notm}} Dedicated e Local,
 a autenticação por meio de LDAP é suportada por padrão. Sob solicitação, a autenticação por meio do
 IBM Web identity pode ser configurada em vez de {{site.data.keyword.Bluemix_notm}}.
 </dd>
@@ -446,7 +446,7 @@ desenvolvimento e implementação.
 {{site.data.keyword.Bluemix_notm}} Dedicated ou Local, o
 fluxo é por meio do LDAP corporativo.
  * O **fluxo de desenvolvimento e implementação** é como a seguir:
-    1. Por meio de um firewall, com prevenção de intrusão e segurança de rede adequados. Isso se aplica somente ao {{site.data.keyword.Bluemix_notm}} Dedicado.
+    1. Por meio de um firewall, com prevenção de intrusão e segurança de rede adequados. Isso se aplica somente ao {{site.data.keyword.Bluemix_notm}} Dedicated.
     2. Por meio do IBM DataPower Gateway com proxy reverso e proxy de rescisão de SSL.
     3. Por meio do roteador de rede.
     4. Por meio de autorização, usando o controlador de nuvem Cloud Foundry para assegurar acesso somente a apps e
@@ -466,6 +466,30 @@ Além dos usuários descritos nesses caminhos, uma equipe de operações de segu
  * Gerenciamento de riscos com proteção contra intrusão.
  * Monitoramento de segurança com QRadar.
  * Relatórios de segurança disponíveis por meio do Console administrativo
+
+## Conformidade de segurança
+{: #compliance}
+
+O {{site.data.keyword.Bluemix}} fornece uma plataforma de nuvem segura que você pode confiar. A conformidade do {{site.data.keyword.Bluemix_notm}} resulta de uma plataforma e de serviços que são construídos sobre os melhores padrões de segurança do setor, incluindo ISO 27001 e ISO 27002.
+{:shortdesc}
+
+![Cláusula de proteção de dados da União Europeia](images/icon_eumc.png) Uma **Cláusula de modelo da União Europeia (UE)** é um acordo para proteger dados pessoais que são transferidos da União Europeia ou do Espaço econômico europeu (EEE) para um país terceiro. A Cláusula de modelo da União Europeia é assinada entre o cliente localizado na União Europeia ou no EEE como o exportador de dados, e o processador de dados da IBM localizado no país terceiro como o importador de dados. A [Cláusula de modelo IBM SaaS da União Europeia](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contém os direitos e obrigações do exportador de dados e do importador de dados, e os direitos dos titulares dos dados. A Cláusula de modelo IBM SaaS da União Europeia assegura que os dados pessoais, quando processados em um país terceiro, estão sob proteção que é semelhante à proteção disponível dentro da União Europeia ou do Espaço econômico europeu.
+
+![Sistemas de informações do setor financeiro](images/FISC.gif) Para instituições financeiras e relacionadas a finanças no Japão, os sistemas de computador devem ter procedimentos de segurança locais que sejam baseados nas diretrizes de segurança do Centro para Financial Industry Information Systems (FISC). As diretrizes de segurança do  **FISC** são impingindas pela Japan Financial Services Agency (FSA), pelo Bank of Japan (BOJ) e pelo FISC.
+
+É possível localizar um documento de auto-avaliação do {{site.data.keyword.Bluemix_notm}} para obter as diretrizes de segurança do FISC, escrito em japonês, em [Resultados da pesquisa de opinião de risco do IBM Bluemix](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
+ 
+![ISO 27001/2](images/icon_iso27k1.png) O {{site.data.keyword.Bluemix_notm}} está certificado sob as **Normas da Organização internacional para normatização (ISO) 27001 e 27002**, que definem as melhores práticas para processos de gerenciamento de segurança da informação. A norma ISO 27001 especifica os requisitos para estabelecer, implementar e documentar Information Security Management Systems (ISMS) e os requisitos para implementar controles de segurança, de acordo com as necessidades de organizações individuais. A norma ISO 27002 explica cada controle de segurança de ISO 27001 em detalhes. A família de normas ISO 27000 incorpora um processo de ajuste de escala de risco e avaliação de ativos, com o objetivo de proteger a confidencialidade, a integridade e a disponibilidade das informações nas formas escrita, oral e eletrônica.  
+
+O {{site.data.keyword.Bluemix_notm}} é auditado por uma empresa de segurança de terceiros e atende a todos os requisitos do ISO 27001: [Certificado de registro ISO 27001:2013 do Bluemix](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
+Os relatórios ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **Service Organization Controls (SOC)** definem a avaliação das principais práticas de controle interno que estão relacionados à segurança, disponibilidade, integridade do processamento, confidencialidade e privacidade em uma organização de serviços. Os relatórios que são gerados usando o Guia American Institute of Certified Public Accountants (AICPA) incluem os itens a seguir: 
+  * Supervisão da organização
+  * Programa de gerenciamento de fornecedores
+  * Governança corporativa interna e processos de gerenciamento de riscos
+  * Supervisão regulamentar
+ 
+O {{site.data.keyword.Bluemix_notm}} usa serviços de nuvem do IBM SoftLayer Infrastructure-as-a-Service (IaaS) e aproveita ao máximo sua arquitetura de segurança. Para obter informações adicionais, entre em contato com a equipe de vendas do [{{site.data.keyword.Bluemix_notm}} ](mailto:bmxcert1@us.ibm.com){:new_window}.
 
 ## Relatórios de segurança
 {: #reports}

@@ -7,10 +7,10 @@
 #Anwendungen entwickeln 
 {: #develop-apps-IDS}
 
-*Letzte Aktualisierung: 07. Dezember 2015*  
+*Letzte Aktualisierung: 7. Dezember 2015*  
 
-Sie können Anwendungen in einer integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) oder einem Texteditor entwickeln oder auch
-{{site.data.keyword.jazzhub}} verwenden. {: shortdesc}
+Sie können Anwendungen in einer integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) oder einem Texteditor entwickeln oder auch {{site.data.keyword.jazzhub}} verwenden.
+{: shortdesc}
 
 ##Anwendungen mit Bluemix DevOps Services entwickeln
 {: #dev_ops}

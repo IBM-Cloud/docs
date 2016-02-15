@@ -17,7 +17,6 @@ Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL e
 Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.Bluemix}}, vous devez créer une demande de signature
 de certificat sur votre serveur.
 
-
 Une demande de signature de certificat est un message qui est envoyé à une autorité de certification afin de demander la signature d'une clé
 publique et des informations associées. En général, les demandes de signature de certificat sont au format PKCS #10. Une demande de signature de
 certificat inclut une clé publique ainsi qu'un nom usuel, une organisation, une ville, un état, un pays et une adresse électronique. Les demandes de
@@ -47,11 +46,11 @@ signature de certificat.
 
   Nom de la branche de votre société qui commande le certificat, par exemple Comptabilité ou Marketing.
   
-**Nom usuel **
+**Nom usuel**
 
   Nom de domaine complet pour lequel vous demandez le certificat SSL.
   
-Les méthodes de création d'une demande de signature de certificat varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec
+Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec
 l'[outil de commande OpenSSH](http://www.openssl.org/){:new_window} :
 
 ```
@@ -61,6 +60,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 **Remarque :** l'implémentation d'OpenSSL SHA-512 dépend du support de compilateur pour le type entier 64 bits. Vous pouvez utiliser
 l'option SHA-1 pour les applications qui présentent des problèmes de compatibilité avec le certificat SHA-256.
+
+Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme. Après avoir créé la demande de signature de certificat, vous pouvez générer votre certificat SSL auprès d'une autorité de certification publique. 
 
 ##Téléchargement de certificats SSL
 {: #ssl_certificate}
@@ -85,7 +86,7 @@ création d'un domaine personnalisé, dans le but de fournir la route d'URL allo
 Les adresses IP que vous utilisez pour les environnements dédiés sont différentes. Prenez contact avec votre
 interlocuteur IBM afin d'obtenir l'adresse IP pour un environnement dédié.
 
-Pour plus d'informations sur la création d'un domaine personnalisé, voir [Création et utilisation d'un domaine personnalisé](updapps.html#domain). 
+Pour plus d'informations sur la création d'un domaine personnalisé, voir [Création et utilisation d'un domaine personnalisé](updapps.html#domain).
 
 Pour télécharger un certificat pour votre application, procédez comme suit :
 

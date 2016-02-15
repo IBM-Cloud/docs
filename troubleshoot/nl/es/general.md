@@ -8,7 +8,7 @@
 # Problemas de servicios generales
 {: #general}
 
-*Última actualización: 19 de noviembre de 2015*
+*Última actualización: 9 de diciembre de 2015*
 
 Entre los problemas de los servicios de {{site.data.keyword.Bluemix}}
 se pueden incluir los errores de tiempo de espera agotado de pasarela que se producen al suprimir

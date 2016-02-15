@@ -3,7 +3,7 @@
 
 # Sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Ultimo aggiornamento: 7 dicembre 2015*
+*Ultimo aggiornamento: 15 dicembre 2015*
 
 Sviluppata con procedure di progettazione sicura, la piattaforma {{site.data.keyword.Bluemix}} offre diversi livelli di controlli di sicurezza tra
 la rete e l'infrastruttura. {{site.data.keyword.Bluemix_notm}} fornisce un gruppo di servizi di sicurezza che possono essere utilizzati dagli sviluppatori di applicazioni per proteggere le proprie applicazioni mobili e Web. Questi elementi si combinano per rendere {{site.data.keyword.Bluemix_notm}} una piattaforma con scelte chiare
@@ -211,7 +211,7 @@ un servizio di autenticazione basato sulle politiche che fornisce una funzionali
 applicazioni di incorporare la funzionalità SSO in un'applicazione,
 l'amministratore crea istanze del servizio e aggiunge origini di identità.
 
-Il servizio Single Sign On supporta diverse origini di identità in cui vengono memorizzate le credenziali degli utenti:
+Il servizio Single Sign On supporta diverse origini di identità in cui vengono memorizzate le credenziali dei tuoi utenti:
 
 <dl>
 <dt>SAML Enterprise</dt>
@@ -362,10 +362,34 @@ Oltre agli utenti descritti in questi percorsi, un team per le operazioni di sic
  * Monitoraggio della sicurezza con QRadar.
  * Report di sicurezza disponibili tramite la Console di gestione.
 
+## Conformità di sicurezza
+{: #compliance}
+
+{{site.data.keyword.Bluemix}} fornisce una piattaforma cloud sicura di cui ti puoi fidare. La conformità {{site.data.keyword.Bluemix_notm}} deriva da una piattaforma e da servizi basati sui migliori standard di sicurezza, tra cui ISO 27001 e ISO 27002.
+{:shortdesc}
+
+![Clausola del modello di protezione dati UE](images/icon_eumc.png)  una **Clausola del modello dell'Unione Europea (UE)** è un accordo studiato per proteggere i dati personali che vengono trasferiti dall'Unione Europea (UE) o dallo Spazio economico europeo (SEE) verso un terzo paese. La Clausola del modello UE viene firmato tra il client ubicato nell'UE o SEE come esportatore di dati e il processore di dati IBM ubicato nel paese terzo come importatore dei dati. La [Clausola del modello UE IBM SaaS](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contiene i diritti e gli obblighi dell'esportatore e dell'importatore dei dati nonché i diritti dei soggetti interessati. La Clausola del modello UE IBM SaaS garantisce che i dati personali, quando elaborati in un paese terzo, siano posti sotto una protezione analoga a quella disponibile all'interno dell'UE o SEE.
+
+![Financial Industry Information Systems](images/FISC.gif)  Per le istituzioni bancarie e finanziarie correlate in Giappone, i sistemi informatici devono disporre di procedure di sicurezza in vigore basate sulle linee guida di sicurezza FICS (Center for Financial Industry Information Systems). Le linee guida di sicurezza **FISC** vengono fatte rispettare dal Japan Financial Services Agency (FSA), Bank of Japan (BOJ) e FISC.
+
+Puoi trovare un documento di autovalutazione {{site.data.keyword.Bluemix_notm}} per le linee guida di sicurezza FISC, scritto in giapponese, in [IBM Bluemix risk survey results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} è certificato secondo gli **standard ISO (International Organization for Standardization) 27001 e 27002**, che definiscono le procedure ottimali per i processi di gestione della sicurezza informatica. Lo standard ISO 27001 specifica i requisiti per stabilire, implementare e documentare i sistemi di gestione della sicurezza delle informazioni (ISMS) e i requisiti per applicare dei controlli di sicurezza in base alle esigenze delle singole organizzazioni. Lo standard ISO 27002 illustra in dettaglio ciascun controllo di sicurezza dell'ISO 27001. L'insieme di standard ISO 27000 incorpora un processo di ridimensionamento del rischio e valutazione delle risorse, con l'obiettivo di salvaguardare la riservatezza, l'integrità e la disponibilità delle informazioni scritte, orali ed elettroniche. 
+
+{{site.data.keyword.Bluemix_notm}} è controllato da una società di sicurezza di terze parti e rispetta tutti i requisiti per l'ISO 27001: [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) I report **Service Organization Controls (SOC)** definiscono la valutazione delle principali pratiche di controllo interno che riguardano la sicurezza, la disponibilità, l'integrità di elaborazione, la riservatezza e la privacy in un'organizzazione di servizi. I report generati mediante la Guida AICPA (American Institute of Certified Public Accountant) includono i seguenti elementi: 
+  * Controllo dell'organizzazione
+  * Programma di gestione dei fornitori
+  * Processi interni del governo di impresa e della gestione dei rischi
+  * Controllo regolamentare
+ 
+{{site.data.keyword.Bluemix_notm}} utilizza i servizi cloud IBM SoftLayer IaaS (Infrastructure-as-a-Service) e si avvale appieno della sua architettura di sicurezza. Per ulteriori informazioni, contatta il team delle [vendite {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
+
 ## Report Sicurezza
 {: #reports}
 
-Con {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato, {{site.data.keyword.Bluemix_notm}} genera diversi report e log di sicurezza che è possibile visualizzare tramite la pagina Amministrazione. Per istruzioni sulla visualizzazione e sull'utilizzo dei report, vedi [Visualizzazione dei report](../admin/index.html#oc_report).
+Con {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato, {{site.data.keyword.Bluemix_notm}} genera diversi report e log di sicurezza che puoi visualizzare tramite la pagina Amministrazione. Per istruzioni sulla visualizzazione e sull'utilizzo dei report, vedi [Visualizzazione dei report](../admin/index.html#oc_report).
 
 La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato.
 
@@ -373,12 +397,12 @@ La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.
 |-----------------|-------------------|---------------------|
 | Firewall | Accessi firewall | Eventi relativi all'accesso dell'amministratore ai dispositivi firewall Vyatta. |
 | Firewall | Accessi firewall negati | Eventi generati da dispositivi firewall Vyatta quando una richiesta di accesso viene negata in base alle regole firewall in vigore. |
-| Eventi di accesso dell'amministratore {{site.data.keyword.Bluemix_notm}}  | Accesso amministratori {{site.data.keyword.Bluemix_notm}} | Eventi generati dal sistema operativo quando un amministratore avvia una sessione SSH su ogni sistema {{site.data.keyword.Bluemix_notm}}. |
+| Eventi di accesso dell'amministratore {{site.data.keyword.Bluemix_notm}} | Accesso amministratori {{site.data.keyword.Bluemix_notm}} | Eventi generati dal sistema operativo quando un amministratore avvia una sessione SSH su ogni sistema {{site.data.keyword.Bluemix_notm}}. |
 | Eventi di accesso dello sviluppatore di applicazioni {{site.data.keyword.Bluemix_notm}} | Accesso sviluppatori di applicazioni {{site.data.keyword.Bluemix_notm}} | Eventi generati dal componente di accesso della piattaforma {{site.data.keyword.Bluemix_notm}} quando un utente di {{site.data.keyword.Bluemix_notm}} avvia una sessione utilizzando la riga comandi, le API REST o l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. |
 | Eventi amministrativi dell'amministratore {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi di sistema operativo degli amministratori {{site.data.keyword.Bluemix_notm}} | Eventi generati dal sistema operativo quando un amministratore svolge un'azione all'interno di una sessione di lavoro corrente. |
 | Eventi amministrativi dello sviluppatore di applicazioni {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) | Eventi relativi alle operazioni effettuate dall'utente della piattaforma {{site.data.keyword.Bluemix_notm}} utilizzando la riga comandi, le API REST o l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. |
 | Eventi amministrativi di database dell'amministratore {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi di database | Eventi relativi alle operazioni effettuate da un amministratore di database nei database interni {{site.data.keyword.Bluemix_notm}}. |
-| Eventi di amministrazione | Eventi di gestione utente | Eventi relativi alle azioni di gestione utente eseguite nella pagina Amministrazione.  |
+| Eventi di amministrazione | Eventi di gestione utente | Eventi relativi alle azioni di gestione utente eseguite nella pagina Amministrazione. |
 | Eventi di amministrazione | Catalogo | Eventi relativi alle modifiche del catalogo dei servizi. |
 | Eventi di amministrazione | Eventi di gestione dei report di sicurezza | Eventi relativi alle azioni di gestione dei report di sicurezza eseguite nella pagina Amministrazione. |
 | Revisioni accesso | Report di revisioni accesso | Revisioni per accessi privilegiati. |

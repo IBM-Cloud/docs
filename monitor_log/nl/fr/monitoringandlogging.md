@@ -6,7 +6,7 @@
 #Surveillance et journalisation
 {: #monitoringandlogging}
 
-*Dernière mise à jour : 4 décembre 2015*
+*Dernière mise à jour : 8 décembre 2015*
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
 comprendre votre déploiement. De plus, vous pouvez réduire le temps et l'effort qui sont requis pour identifier les problèmes et les résoudre.
@@ -16,7 +16,6 @@ Les applications {{site.data.keyword.Bluemix}} peuvent être des applications à
 l'exécution de votre application et de ses données peut être partagée entre plusieurs services. Dans cet environnement complexe, la surveillance de vos
 applications et la consultation des journaux sont essentielles pour la gestion de vos applications.
 
-
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
 leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. De plus,
 vous pouvez également configurer votre application pour qu'elle écrive des messages de journal dans le fichier journal. Pour plus d'informations sur les
@@ -25,12 +24,10 @@ formats de journal et l'affichage des journaux, voir [Journalisation pour les ap
 La surveillance de votre application vous permet d'afficher et de contrôler son déploiement. Elle permet d'effectuer les tâches
 suivantes :
 
-
-* Collecter et surveiller les informations sur les performances pour les instances d'application et vérifier si elles sont opérationnelles. 
+* Collecter et surveiller les informations sur les performances pour les instances d'application et vérifier si elles sont opérationnelles.
 * En savoir plus sur le fonctionnement de l'application, par exemple détecter les goulots d'étranglement potentiels ou déterminer la
 nécessité d'une mise à niveau.
-
-* Estimer l'utilisation des ressources et les coûts. 
+* Estimer l'utilisation des ressources et les coûts.
 
 Pour un fonctionnement stable de vos déploiements sur la plateforme {{site.data.keyword.Bluemix_notm}}, vous devez détecter les problèmes
 rapidement et identifier les causes efficacement. Pour ce faire, gardez l'aspect traitement des incidents à l'esprit lorsque vous concevez vos applications
@@ -43,13 +40,10 @@ Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applicat
 souhaitable d'avoir connaissance des informations sur les performances, telles que l'état de santé, l'utilisation des ressources et les mesures du trafic. Elles
 vous permettent de prendre des décisions ou des mesures en conséquence.
 
-
 Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes :
 
-
 * Services {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics propose un service que vous pouvez utiliser pour surveiller les
-performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal.
-Pour plus d'informations, voir [Monitoring and Analytics](../services/monana/index.html).
+performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. Pour plus d'informations, voir [Monitoring and Analytics](../services/monana/index.html).
 * Options de tiers. Exemple : [New Relic](http://newrelic.com/){:new_window}.
 
 ##Journalisation pour les applications qui s'exécutent dans Cloud Foundry
@@ -60,12 +54,10 @@ Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}.
 {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf. Vous pouvez aussi filtrer les journaux pour afficher les parties qui
 vous intéressent.
 
-
-###Format de journal 
+###Format de journal
 {: #log_format}
 
 Les journaux pour les applications {{site.data.keyword.Bluemix_notm}} sont affichés dans un format fixe similaire au modèle suivant :
-
 
 ```
          1         2         3         4         5
@@ -75,30 +67,29 @@ aaaa-MM-jjTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 ```
 {:screen}
 
-Chaque entrée de journal contient quatre zones. Reportez-vous à la liste suivante pour une description courte de chaque zone : 
+Chaque entrée de journal contient quatre zones. Reportez-vous à la liste suivante pour une description courte de chaque zone :
 
 <dl>
 <dt><strong>Horodatage</strong></dt>
 <dd>
 <pre class="pre screen"><code>aaaa-MM-jjTHH:mm:ss:SS-0500</code></pre>
 <p>Colonnes : 1 à 27</p>
-<p>Date et heure de l'instruction de journal. L'horodatage est défini à la milliseconde près. </p>
+<p>Date et heure de l'instruction de journal. L'horodatage est défini à la milliseconde près.</p>
 </dd>
 
 <dt><strong>Composant</strong></dt>
 <dd>
 <pre class="pre screen"><code>[App/0]</code></pre>
 <p>Colonnes : 29 à 40</p>
-<p>Composant qui génère les journaux. La liste suivante donne la définition de tous les composants : </p>
+<p>Composant qui génère les journaux. La liste suivante donne la définition de tous les composants :</p>
 
 <dl>
 <dt><strong>APP</strong></dt>
 <dd>Application. Le composant APP est suivi d'une barre oblique et d'un chiffre qui indique l'instance d'application. 0 est la première instance, 1 est la
-deuxième instance, etc.
-</dd>
+deuxième instance, etc.</dd>
 
 <dt><strong>interface API</strong></dt>
-<dd>API Cloud Foundry. </dd>
+<dd>API Cloud Foundry.</dd>
 
 <dt><strong>DEA</strong></dt>
 <dd>Agent DEA (Droplet Execution Agent).</dd>
@@ -110,7 +101,7 @@ deuxième instance, etc.
 <dd>Routeur.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Constitution. </dd>
+<dd>Constitution.</dd>
 </dl>
 </dd>
 
@@ -119,14 +110,14 @@ deuxième instance, etc.
 <pre class="pre screen"><code>OUT</code></pre>
 <p>Colonnes : 42 à 44</p>
 <p>Flux dans lequel le message de journal est écrit. <samp class="ph codeph">OUT</samp> désigne le flux <samp class="ph codeph">stdout</samp> et
-<samp class="ph codeph">ERR</samp> désigne le flux <samp class="ph codeph">stderr</samp>. </p>
+<samp class="ph codeph">ERR</samp> désigne le flux <samp class="ph codeph">stderr</samp>.</p>
 </dd>
 
 <dt><strong>Message</strong></dt>
 <dd>
 <pre class="pre screen"><code>&lt;<var class="keyword varname">Message</var>&gt;</code></pre>
 <p>Colonnes : 46 à fin de ligne</p>
-<p>Message émis par le composant. Il varie selon le contexte. </p>
+<p>Message émis par le composant. Il varie selon le contexte.</p>
 </dd>
 
 </dl>
@@ -137,18 +128,15 @@ deuxième instance, etc.
 Vous pouvez utiliser le tableau de bord {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande pour afficher les
 journaux.
 
-
-####AFFICHAGE DES JOURNAUX DEPUIS LE TABLEAU DE BORD {{site.data.keyword.Bluemix_notm}} 
+####AFFICHAGE DES JOURNAUX DEPUIS LE TABLEAU DE BORD {{site.data.keyword.Bluemix_notm}}
 
 Pour afficher les journaux de **déploiement** ou d'**exécution**, procédez comme suit :
-
-1. Cliquez sur la vignette de votre application. La page des détails de l'application s'ouvre. 
+1. Cliquez sur la vignette de votre application. La page des détails de l'application s'ouvre.
 2. Dans la barre de navigation de gauche, cliquez sur **Journaux**.
 
-####AFFICHAGE DES JOURNAUX DEPUIS L'INTERFACE DE LIGNE DE COMMANDE 
+####AFFICHAGE DES JOURNAUX DEPUIS L'INTERFACE DE LIGNE DE COMMANDE
 
 Choisissez l'une des options suivantes pour afficher les journaux depuis l'interface de ligne de commande :
-
 
 <ul>
 <li>Affichage des dernières lignes des journaux lorsque vous déployez des applications.
@@ -158,29 +146,27 @@ ci-dessous dans l'interface de ligne de commande cf. Pour plus d'informations su
 [Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">nom_app</var> --recent</strong></dt>
-<dd>Affichez les journaux récents. </dd>
+<dd>Affichez les journaux récents.</dd>
 
 <dt><strong>cf logs <var class="keyword varname">nom_app</var></strong></dt>
-<dd>Affichez les journaux qui sont générés à partir du moment ou vous exécutez cette commande.
-</dd>
+<dd>Affichez les journaux qui sont générés à partir du moment ou vous exécutez cette commande.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Astuce :</span> lorsque vous exécutez la commande <span class="keyword cmdname">cf push</span> ou
 <span class="keyword cmdname">cf start</span> dans une seule fenêtre de ligne de commande, vous pouvez entrer <samp class="ph codeph">cf logs nom_app
---recent</samp> dans une autre fenêtre de ligne de commande pour afficher les journaux en temps réel.
-</div>
+--recent</samp> dans une autre fenêtre de ligne de commande pour afficher les journaux en temps réel. </div>
 </li>
 
 <li>Affichage des journaux après le déploiement des applications.
+
 <p>Lorsque la journalisation des applications est activée, vous pouvez afficher les journaux d'application ci-après si vous rencontrez des problèmes liés
-à votre application à l'exécution.
-Les journaux d'application peuvent permettre de déterminer la cause de l'erreur. </p>
+à votre application à l'exécution. Les journaux d'application peuvent permettre de déterminer la cause de l'erreur.</p>
 
 <dl><strong>buildpack.log</strong></dt>
 <dd>
 <p>Ce fichier journal enregistre des événements d'information à granularité fine pour le débogage. Vous pouvez l'utiliser pour identifier les problèmes liés à l'exécution du pack de construction.</p>
 <p>Pour générer des données dans le fichier <span class="ph filepath">buildpack.log</span>, vous devez activer la fonction de trace du pack de construction
 avec la commande suivante :
-<pre class="pre">cf set-env <var class="keyword varname">nom_app</var> JBP_LOG_LEVEL DEBUG</pre>
+   <pre class="pre">cf set-env <var class="keyword varname">nom_app</var> JBP_LOG_LEVEL DEBUG</pre>
 <p>
 <p>Pour afficher ce journal, entrez la commande suivante :
 <pre class="pre">cf files <var class="keyword varname">nom_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
@@ -205,13 +191,14 @@ identifier les problèmes liés à la constitution.</p>
 
 Pour afficher les journaux qui vous intéressent ou exclure le contenu que vous ne voulez pas afficher, vous pouvez utiliser la commande **cf
 logs** avec des options de filtrage telles que **cut** et **grep** dans l'interface de ligne de commande
-cf. 
+cf.
 
 * Pour afficher une partie des journaux à la place des journaux prolixes complets, utilisez l'option **cut**. Par exemple, pour
 afficher les informations de composant et de message, utilisez la commande suivante :
 ```
-cf logs nom_app --recent | cut -c 29-40,46-
+cf logs nom_app --recent | cut -c 29-40,46- 
 ```
+
 Pour plus d'informations sur l'option **grep**, entrez cut --help.
 * Pour afficher les entrées de journal qui contiennent certains mots clés, utilisez l'option **grep**. Par exemple, pour afficher
 les entrées de journal contenant le mot clé [APP, vous pouvez utiliser la commande suivante :
@@ -231,8 +218,7 @@ Pour transférer les journaux de votre application et du système dans un servic
 1. Enregistrez un service de gestion des journaux tiers.
     
     Vous pouvez utiliser n'importe quel service de gestion des journaux tiers qui prend en charge le
-[protocole syslog](http://tools.ietf.org/html/rfc5424){:new_window}, par exemple Papertail, Splunk Storm, SumoLogic et Logentries. Enregistrez un service de gestion des journaux tiers, puis configurez-le afin de fournir une destination pour vos journaux {{site.data.keyword.Bluemix_notm}}. 
-Une fois la configuration terminée, le service fournit généralement une adresse URL syslog comme destination pour vos journaux {{site.data.keyword.Bluemix_notm}}. Pour plus
+[protocole syslog](http://tools.ietf.org/html/rfc5424){:new_window}, par exemple Papertail, Splunk Storm, SumoLogic et Logentries. Enregistrez un service de gestion des journaux tiers, puis configurez-le afin de fournir une destination pour vos journaux {{site.data.keyword.Bluemix_notm}}. Une fois la configuration terminée, le service fournit généralement une adresse URL syslog comme destination pour vos journaux {{site.data.keyword.Bluemix_notm}}. Pour plus
 d'informations sur la configuration des services de gestion des journaux tiers, voir [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
 
 2. Créez une instance de service fournie par l'utilisateur.
@@ -240,7 +226,7 @@ d'informations sur la configuration des services de gestion des journaux tiers, 
 	Pour transférer des journaux de {{site.data.keyword.Bluemix_notm}} dans le service de
 gestion des journaux tiers, vous devez d'abord créer une instance de service fournie par l'utilisateur. Utilisez la commande suivante pour créer une
 instance de service fournie par l'utilisateur, où nom_service est le nom de l'instance de service fournie par l'utilisateur et URL_syslog est l'adresse URL
-que vous obtenez de votre service de gestion des journaux tiers : 
+que vous obtenez de votre service de gestion des journaux tiers :
 	
 	```
 	cf create-user-provided-service <nom_service> -l <URL_syslog>
@@ -249,7 +235,7 @@ que vous obtenez de votre service de gestion des journaux tiers :
 3. Liez l'instance de service à votre application.
 
 	Utilisez la commande suivante pour lier l'instance de service à votre application, où nom_app est le nom de votre application et nom_service est
-le nom de l'instance de service fournie par l'utilisateur : 
+le nom de l'instance de service fournie par l'utilisateur :
 	
 	```
 	cf bind-service nom_app <nom_service>

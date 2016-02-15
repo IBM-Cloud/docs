@@ -39,7 +39,7 @@
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 9 novembre 2015*
+*Dernière mise à jour : 4 janvier 2016*
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
 {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
@@ -49,8 +49,8 @@ puissiez vérifier le coût réel après avoir construit vos applications.
 
 ## Essai gratuit
 {: #trial}
-Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de 30 jours avec votre ID {{site.data.keyword.IBM}}. Au cours de
-l'essai, vous pouvez développer des applications et utiliser des services dans Bluemix.
+Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de 30 jours avec votre ID {{site.data.keyword.Bluemix_notm}}. Au cours de
+l'essai, vous pouvez développer des applications et utiliser des services dans {{site.data.keyword.Bluemix_notm}}.
 
 Les ressources gratuites suivantes sont mises à disposition sur votre compte :
 
@@ -60,18 +60,15 @@ Les ressources gratuites suivantes sont mises à disposition sur votre compte :
 
 Votre essai gratuit prend fin 30 jours après votre inscription. A la fin de votre essai de 30 jours, les applications de
 votre
-compte sont arrêtées. Vous ne pouvez pas vous inscrire pour un autre essai dans Bluemix. Toutefois, vous pouvez continuer d'accéder à votre compte et aux comptes sur lesquels vous êtes invités. Pour redémarrer vos applications, vous devez fournir vos informations de carte de crédit pour un compte de type Paiement à la carte ou créer un compte de
+compte sont arrêtées. Vous ne pouvez pas vous inscrire pour un autre essai dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous pouvez continuer d'accéder à votre compte et aux comptes sur lesquels vous êtes invités. Pour redémarrer vos applications, vous devez fournir vos informations de carte de crédit pour un compte de type Paiement à la carte ou créer un compte de
 type Abonnement. Une fois que vous avez converti votre compte, vous pouvez continuer d'utiliser les franchises pour les ressources de traitement et les
 services. Vous ne payez que pour l'utilisation des services, des conteneurs et des contextes d'exécution qui ne font pas partie de la franchise mensuelle.
 
 Si vous ne convertissez pas votre compte à la fin de l'essai gratuit, vous recevez des notifications par courrier électronique sur le statut de votre
-compte une fois votre essai terminé. Elles vous rappellent de créer votre compte payant pour que vos configurations et paramètres d'application ne soient pas perdus. Si
-vous ne voulez pas recevoir ces notifications de Bluemix, vous pouvez vous en
-désabonner à tout moment.
+compte une fois votre essai terminé. Elles vous rappellent de créer votre compte payant pour que vos configurations et paramètres d'application ne soient pas perdus. Pour ne plus recevoir ces notifications de {{site.data.keyword.Bluemix_notm}}, vous pouvez vous désabonner à tout moment.
 Un mois après la fin de l'essai, vos applications et vos configurations de service sont supprimées. La figure ci-dessous illustre
-le processus général de gestion des comptes Bluemix.
-Figure 1. Organigramme du processus de gestion des comptes Bluemix
-Organigramme du processus de gestion des comptes Bluemix
+le processus général de gestion des comptes {{site.data.keyword.Bluemix_notm}}.
+
 
 ![Organigramme du processus de gestion des comptes {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
 
@@ -86,8 +83,7 @@ ne sont plus illimitées comme celles proposées par de nombreux services IBM au
 {: #what_it_costs}
 
 Le prix varie selon les ressources utilisées par un service, un contexte d'exécution, un conteneur, une machine virtuelle ou une option de
-support spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. Bluemix
-met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous
+support spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous
 pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Détails sur l'utilisation*. Pour des informations
 plus détaillées sur les frais, voir [Paiement](index.html#charges).
  
@@ -115,20 +111,17 @@ cliquez sur **Type de compte** dans l'interface utilisateur {{site.data.keyword.
 ##Facturation
 {: #pay-accounts}
 
-Lorsque vous souscrivez un plan facturable Bluemix, vous pouvez sélectionner l'un des comptes suivants :
+Lorsque vous souscrivez à un plan de facturation {{site.data.keyword.Bluemix_notm}}, vous pouvez effectuer votre sélection parmi les comptes suivants :
 * Paiement à la carte
 * Abonnement
-* Bluemix dédié
-* Bluemix local
+* {{site.data.keyword.Bluemix_notm}} dédié
+* {{site.data.keyword.Bluemix_notm}} local
 
 Avec un compte de type Paiement à la carte, vous êtes facturé en fonction de votre utilisation des ressources de traitement et des services
 {{site.data.keyword.Bluemix_notm}}. Avec un compte de type Abonnement, vous pouvez bénéficier d'une remise mensuelle contre un engagement financier
-mensuel minimum. L'environnement Bluemix dédié et l'environnement Bluemix local sont
-facturés selon des contrats annuels.
+mensuel minimum. L'environnement {{site.data.keyword.Bluemix_notm}} dédié et l'environnement {{site.data.keyword.Bluemix_notm}} local sont facturés selon des contrats annuels.
 
-Vous pouvez convertir votre essai gratuit en compte de facturation à tout moment. Toutes les informations relatives à votre compte d'essai gratuit non
-facturable et toutes les solutions Bluemix sont alors fusionnées de façon transparente sur le nouveau compte de
-facturation.
+Vous pouvez convertir votre essai gratuit en compte de facturation à tout moment. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
 
 Après avoir créé un compte de facturation, vous pouvez éditer les informations que vous avez indiquées. Cliquez sur l'icône **Paramètres de
 profil** dans le coin supérieur droit de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Compte &gt; Type de compte** pour éditer
@@ -143,14 +136,11 @@ l'aide](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.ht
 
 Si vous créez un compte de type Paiement à la carte, vous ne payez que pour les ressources {{site.data.keyword.Bluemix_notm}} que vous utilisez. Vous bénéficiez également de franchises pour les services et les contextes d'exécution.
 
-Dans de nombreux pays, vous pouvez créer un compte de type Paiement à la carte depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Cliquez
-sur l'icône **Essai gratuit**, puis cliquez sur **Confirmation de votre compte gratuit** et sélectionnez **Option
-1**. Entrez votre pays et cliquez sur **Ajouter ma carte de crédit** pour fournir les informations relatives à votre carte de
-crédit. Une fois que vous avez indiqué vos informations de facturation et de carte
+Dans de nombreux pays et régions, vous pouvez créer un compte de type Paiement à la carte depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Essai gratuit**, puis cliquez sur **Confirmation de votre compte gratuit** et sélectionnez **Option 1**. Entrez votre pays ou région et cliquez sur **Ajouter une carte de crédit** pour fournir les informations relatives à votre carte de crédit. Une fois que vous avez indiqué vos informations de facturation et de carte
 de crédit, accepté les dispositions et envoyé votre demande de compte, votre carte de crédit est validée. Un courrier électronique de confirmation des
 informations de compte est également envoyé. Quelques minutes après la réception du courrier électronique de confirmation, vous pouvez revenir dans
-{{site.data.keyword.Bluemix_notm}} pour continuer de construire vos applications. Si {{site.data.keyword.Bluemix_notm}} ne parvient pas à traiter votre demande en ligne pour votre pays, vous pouvez prendre contact avec le service commercial {{site.data.keyword.Bluemix_notm}} via le lien apparaissant dans la
-page [Contactez-nous de Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) afin de créer votre compte Paiement à la carte.
+{{site.data.keyword.Bluemix_notm}} pour continuer de construire vos applications. Si {{site.data.keyword.Bluemix_notm}} ne parvient pas à traiter votre demande en ligne pour votre pays ou région, vous pouvez prendre contact avec le service commercial {{site.data.keyword.Bluemix_notm}} via le lien apparaissant dans la
+page [Contactez-nous de Bluemix](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) pour souscrire un compte de paiement à la carte.
 
 Vous pouvez convertir votre compte Paiement à la carte en compte Abonnement à tout moment. Avec un compte Abonnement, vous vous engagez à dépenser
 une somme minimale par mois. Pour passer à un compte Abonnement, prenez contact avec le service commercial {{site.data.keyword.Bluemix_notm}} via
@@ -224,12 +214,12 @@ Avec un compte de facturation {{site.data.keyword.Bluemix_notm}}, vous êtes fac
 vous utilisez dans votre organisation. Vous pouvez être invité par d'autres utilisateurs
 {{site.data.keyword.Bluemix_notm}} à participer à des organisations sur un compte différent. Si vous créez des
 applications ou utilisez des services dans les organisations dans lesquelles vous êtes invité, cette utilisation est facturée au compte sur lequel
-se trouvent ces organisations. Vous pouvez afficher davantage d'informations sur un prix spécifique dans la page des détails du catalogue Bluemix ou dans la calculatrice des prix dans la page Tarification de {{site.data.keyword.Bluemix_notm}}.
+se trouvent ces organisations. Vous pouvez afficher davantage d'informations sur un tarif spécifique dans la page des détails du catalogue {{site.data.keyword.Bluemix_notm}} ou dans la calculatrice des prix sur la page Tarification de {{site.data.keyword.Bluemix_notm}}.
 
-Différents types de frais s'appliquent selon les fonctions de Bluemix que vous utilisez. Le tableau suivant
+Différents types de frais s'appliquent selon les fonctions de {{site.data.keyword.Bluemix_notm}} que vous utilisez. Le tableau suivant
 propose une présentation générale :
 
-| Type de frais | Description | Fonctions Bluemix qui utilisent ce type de frais  | Exemple |
+| Type de frais | Description | Fonctions {{site.data.keyword.Bluemix_notm}} utilisant ce type de frais | Exemple |
 |------------------|------------------|--------------------------|--------------------------|
 | Fixe | La tarification fixe repose sur un prix mensuel convenu qui n'est pas ajusté. | Services  | Data Cache propose un plan fixe dont le prix est un
 montant mensuel fixe. |
@@ -241,8 +231,7 @@ volume en fonction de votre utilisation réelle. Les services peuvent proposer d
 général, la tarification différenciée est utilisée pour les paramètres de calcul des frais pour lesquels des quantités élevées par mois sont prévues, comme
 les appels d'API. |
 | Réservé | La tarification réservée repose sur un engagement à long terme pour un service, qui permet d'obtenir une remise. Avec un plan réservé, vous
-obtenez une instance de service dédiée facile à configurer, à déployer et à distribuer dans l'environnement Bluemix
-public.  | Services | DB2 on Cloud propose des plans réservés.|
+obtenez une instance de service dédiée facile à configurer, à déployer et à distribuer dans l'environnement {{site.data.keyword.Bluemix_notm}} public.  | Services | DB2 on Cloud propose des plans réservés.|
 
 ###Prix des ressources de traitement
 {: #compute}
@@ -278,16 +267,12 @@ la franchise mensuelle est facturée.</dd>
 <dt>Tarification réservée</dt>
     <dd><p>En tant que propriétaire d'un compte de type Paiement à la carte ou Abonnement, vous pouvez réserver une instance de service avec un engagement à
 long terme en échange d'une remise. Par exemple, vous pouvez réserver l'offre DB2 on Cloud de grande taille standard pour 12 mois.</p> 
-    <p>Certains services Bluemix proposent des plans réservés. Vous pouvez demander un plan réservé depuis le <strong>catalogue</strong>
-Bluemix en cliquant sur la vignette du service. Ensuite, sélectionnez le plan de service le
-plus adapté à vos besoins. Si un plan réservé est disponible, cliquez sur <strong>Demande</strong> et suivez les invites pour envoyer votre demande. Vous
-recevrez un courrier électronique contenant les informations sur le prix du plan réservé. Un ingénieur commercial
-Bluemix prendra également contact avec vous rapidement pour finaliser l'achat.
+    <p>Certains services {{site.data.keyword.Bluemix_notm}} offrent des plans réservés. Vous pouvez demander un plan réservé à partir du <strong>Catalogue</strong> {{site.data.keyword.Bluemix_notm}} en cliquant sur le titre du service. Ensuite, sélectionnez le plan de service le mieux adapté à vos besoins. Si un plan réservé est disponible, cliquez sur <strong>Demande</strong> et suivez les invites pour envoyer votre demande. Vous
+recevrez un courrier électronique contenant les informations sur le prix du plan réservé. Un ingénieur commercial {{site.data.keyword.Bluemix_notm}} prendra également contact avec vous rapidement pour finaliser l'achat.
 </p></dd>
 <dt>Tarification différenciée</dt>
     <dd>A l'instar de la tarification au compteur, le prix que vous payez dépend de la consommation que vous faites des contextes d'exécution et des
-services. Toutefois, la tarification différenciée propose des tranches de tarification supplémentaires et permet souvent de bénéficier de remises dans les
-tranches de consommation élevée. La tarification différenciée peut être par tranches simples, graduées ou fixes.</dd>
+services. Toutefois, la tarification différenciée propose des tranches de tarification supplémentaires et permet souvent de bénéficier de remises dans les tranches de consommation élevée. La tarification différenciée peut être par tranches simples, graduées ou fixes.</dd>
 </dl>
 
 
@@ -590,5 +575,5 @@ cf update-service <nom_service> [-p <nouveau_plan>]
 ## general 
 * [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
 * [Forum de la communauté des développeurs {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/)
-* [Obtention d'aide en ligne](https://www.stage1.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)
-* [Contactez-nous](https://ace.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)
+* [Obtention d'aide en ligne](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
+* [Contactez-nous](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

@@ -9,14 +9,15 @@
 *Última actualización: 8 de diciembre de 2015*
 
 
-Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las app en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.{:shortdesc}
+Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las app en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
+{:shortdesc}
 
 ##Creación y utilización de un dominio personalizado
 {: #domain}
 
 Puede utilizar un dominio personalizado en el URL de la aplicación en lugar del dominio del sistema {{site.data.keyword.Bluemix_notm}} predeterminado, que es mybluemix.net.
 
-Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}. Para utilizar un dominio personalizado, debe crear el dominio personalizado para la organización en {{site.data.keyword.Bluemix_notm}}, y, a continuación, debe correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}} configurando el servidor DNS o editando el archivo `hosts` local. Después de correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}}, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.Bluemix_notm}}.
+Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}. Para utilizar un dominio personalizado, debe registrar el dominio personalizado en un servidor DNS público, configurar el dominio personalizado en {{site.data.keyword.Bluemix_notm}} y, a continuación, correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}} en el servidor DNS público. Después de correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}}, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** Puede utilizar el mandato **nslookup** para obtener la dirección IP pública del dominio del sistema {{site.data.keyword.Bluemix_notm}}. Por ejemplo, en un indicador de mandatos, especifique `nslookup mybluemix.net`.
 
@@ -201,7 +202,7 @@ En este ejemplo, *Blue* es la aplicación previamente desplegada y *Green* es la
   **Resultados:**
   
     * Se despliegan dos instancias de la app, *Blue* y *Green*.
-	* La app *Blue* responde al URL `Blue.mybluemix.net`.Y la app *Green* responde al URL `Green.mybluemix.net`.
+	* La app *Blue* responde al URL `Blue.mybluemix.net`. Y la app *Green* responde al URL `Green.mybluemix.net`.
 	
 3. Correlacione la app *Blue* con la app *Green* para que todo el tráfico destinado a `Blue.mybluemix.net` se dirija a la app *Blue* y a la app *Green*.
   

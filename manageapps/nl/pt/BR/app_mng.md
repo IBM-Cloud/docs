@@ -60,7 +60,6 @@ Esses utilitários suportam apenas o Liberty.
 Esses utilitários suportam apenas o Node.js.
 
   1. *inspector*: ativa a interface com o depurador do inspetor do nó que está acessível a partir do utilitário *devconsole* ou em *https://myApp.mybluemix.net/bluemix-debug/inspector.*
-
   
   O processo do inspector é executado no contêiner do aplicativo. Use esse utilitário para criar perfis de uso da CPU, incluir pontos de interrupção e depurar código, tudo enquanto seu aplicativo estiver em execução no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o módulo do inspetor do nó, consulte [node-inspector no GitHub](https://github.com/node-inspector/node-inspector){:new_window}.
   
@@ -79,7 +78,7 @@ exemplo:
   
   Execute as etapas a seguir para configurar seu aplicativo Node.js com o [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}.
 
-    1. Configure a variável de ambiente *strongpm* BlUEMIX_APP_MGMT_ENABLE e remonte seu aplicativo. 
+    1. Configure a variável de ambiente *strongpm* BlUEMIX_APP_MGMT_ENABLE e remonte seu aplicativo.
     
 	```
     cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm

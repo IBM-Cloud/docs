@@ -17,10 +17,7 @@ Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utili
 
 Puoi utilizzare un dominio personalizzato nell'URL della tua applicazione anziché il dominio di sistema {{site.data.keyword.Bluemix_notm}} predefinito che è mybluemix.net.
 
-I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi creare
-il dominio personalizzato per la tua organizzazione in {{site.data.keyword.Bluemix_notm}}, quindi devi associare il dominio personalizzato
-al dominio di sistema {{site.data.keyword.Bluemix_notm}} mediante
-la configurazione del tuo server DNS o la modifica del tuo file `hosts` locale. Dopo aver
+I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}} e quindi associarlo al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
 associato il tuo dominio personalizzato al dominio di sistema {{site.data.keyword.Bluemix_notm}},
 le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.Bluemix_notm}}.
 

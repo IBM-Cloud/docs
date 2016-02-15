@@ -219,7 +219,7 @@ organización y espacio cuando se le solicite.
 <pre>cf login -a https://api.ng.bluemix.net</pre></li>
 <li>En el directorio de la app, escriba el mandato cf push
 con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
-<pre>cf push appname</pre></li>
+<pre>cf push nombre_app</pre></li>
 <li>Opcional: Si utiliza un paquete de compilación externo, debe usar la opción -b
 con el mandato push de cf. Por ejemplo:
 <pre>cf push appname -b buildpack_URL</pre>

@@ -3,7 +3,7 @@
 # DevOps
 {: #devops}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Accelera la distribuzione di applicazioni | Scegli come codificare | Distribuisci con fiducia
 ---- | ---- | ----

@@ -4,7 +4,7 @@
 # Business Analytics
 {: #businessanalytics}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Con questi
 servizi, puoi integrare la business intelligence nelle tue applicazioni

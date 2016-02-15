@@ -10,6 +10,6 @@
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utilizza
 l'interfaccia riga di comando Cloud Foundry, cf, per
-modificare le applicazioni, le istanze di servizio e i binding di servizio. IBM Containers utilizza anche l'interfaccia
+modificare le applicazioni, le istanze di servizio e i bind di servizio. IBM Containers utilizza anche l'interfaccia
 riga di comando ice per gestire i tuoi contenitori.
 {:shortdesc}

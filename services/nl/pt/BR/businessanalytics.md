@@ -4,7 +4,7 @@
 # Business Analytics
 {: #businessanalytics}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Com esses serviços, é possível integrar inteligência de negócios em seus aplicativos para revelar insights mais rapidamente e mais facilmente a partir de todos os tipos de dados.
 {:shortdesc}

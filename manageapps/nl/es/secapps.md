@@ -45,7 +45,7 @@ Para que la CSR sea válida, se debe especificar la siguiente información al ge
   Nombre de la rama de su empresa que está pidiendo el certificado, como por ejemplo Contabilidad o
 Marketing.
   
-**Aame común**
+**Nombre común**
 
   Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.
   
@@ -58,6 +58,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 ```
 
 **Nota:** La implementación SHA-512 de OpenSSL depende del soporte del compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las app que tienen problemas de compatibilidad con el certificado SHA-256.
+
+Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública. 
 
 ##Carga de certificados SSL
 {: #ssl_certificate}

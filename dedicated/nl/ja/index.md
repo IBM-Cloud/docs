@@ -4,10 +4,9 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*最終更新日: 2015 年 12 月 8 日*
+*最終更新日: 2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated を使用すれば、{{site.data.keyword.Bluemix_notm}} Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 SoftLayer 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。
-{:shortdesc}
+{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated を使用すれば、{{site.data.keyword.Bluemix_notm}}&mdash; Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 SoftLayer 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated には、自分だけが使用できる専用サービスを表示するプライベート・カタログが含まれています。また、{{site.data.keyword.Bluemix_notm}} Public からシンジケートおよび使用できる追加サービスも含まれています。
 
@@ -27,12 +26,13 @@
 |-----------------|-------------------|-------------------|
 | 組み込み | {{site.data.keyword.autoscaling}} | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_notm}} Dedicated 環境で使用量が無制限になります。 |
 | 組み込み | {{site.data.keyword.datacshort}} | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
-| 組み込み | {{site.data.keyword.cloudant}} | ハイパフォーマンスの JSON データ・レイヤーを提供する IBM の NoSQL データベース (CouchDB 互換)。1.6 TB および最大 3,000 API 要求/秒が含まれます。 |
-| オプション | {{site.data.keyword.sqldb}} | IBM {{site.data.keyword.sqldbfull}} Database for {{site.data.keyword.Bluemix_notm}} は、完全にプロビジョンされたリレーショナル・データベースをアプリケーションに追加します。{{site.data.keyword.sqldb}} は、ビジネスで負荷が高い Web ワークロードとトランザクション・ワークロードを処理するためのマネージド・データベースです。 |
-| オプション | {{site.data.keyword.mql}} | IBM {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.Bluemix_notm}} アプリにフレキシブルで使いやすいメッセージングを提供する、クラウド・ベースのメッセージング・サービスです。{{site.data.keyword.mql}} は、メッセージングに対する管理しやすいソリューションとなっています。{{site.data.keyword.mql}} を使用すれば、アプリの即応性と拡張性が高まると共に、簡潔で強力な API を使用してアプリ間で作業を共有して、作業の負荷を軽減することができます。 |
+| オプション | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.Bluemix_notm}} アプリにフレキシブルで使いやすいメッセージングを提供する、クラウド・ベースのメッセージング・サービスです。{{site.data.keyword.mql}} は、メッセージングに対する管理しやすいソリューションとなっています。{{site.data.keyword.mql}} を使用すれば、アプリの即応性と拡張性が高まると共に、簡潔で強力な API を使用してアプリ間で作業を共有して、作業の負荷を軽減することができます。 |
 | オプション | {{site.data.keyword.dashdbshort}} | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
+|オプション | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
+|オプション | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
 
 *表 1. Dedicated のサービス*
+
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated のセットアップ
 {: #setupdedicated}
@@ -45,26 +45,44 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 
 <ol>
 <li>IBM 指定のアカウント担当者に連絡するか、 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>に連絡して、開始します。</li>
-<li>毎月繰り返し発生する料金は、使用する専用サービスと、すべての {{site.data.keyword.Bluemix_notm}} パブリック・サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。<ol type="a">
-	<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスの料金について IBM と連携して決定します。	毎月繰り返し発生する料金は、使用する専用サービスと、すべての {{site.data.keyword.Bluemix_notm}} パブリック・サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
-	<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスをセットアップする各フェーズの期限を特定します。</li>
-	</ol>
-	</li>
-<li>専用インスタンスの <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer データ・センターのロケーション</a>を選択します。その後、専用プラットフォームおよびアカウントが作成されます。アカウントについて、専用インスタンスを稼働するために必要な役割の組織内のユーザーを特定します。割り当てる役割について詳しくは、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。
+<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスの料金について IBM と連携して決定します。毎月繰り返し発生する料金は、使用する専用サービスと、すべての {{site.data.keyword.Bluemix_notm}} パブリック・サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
+<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスをセットアップする各フェーズの期限を特定します。各フェーズおよび実行するタスクについては、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。</li>
+<li>専用インスタンスの <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer データ・センターのロケーション</a>を選択します。その後、専用プラットフォームおよびアカウントが作成されます。アカウントについて、専用インスタンスを稼働するために必要な役割の組織内のユーザーを特定します。割り当てる役割については、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。
 </li>
-<li>お客様の企業ネットワークと {{site.data.keyword.Bluemix_notm}} Dedicated インスタンス間のネットワーク接続を定義して確立します。<ol type="a">
+<li>お客様の企業ネットワークと {{site.data.keyword.Bluemix_notm}} Dedicated インスタンス間のネットワーク接続を定義して確立します。
+	<ol type="a">
 	<li>IBM が、専用インスタンス用のモニターおよびセキュリティー・インフラストラクチャーをインストールします。</li>
 	<li>IBM が、お客様によって選択された単一テナント専用サービスをインストールします。</li>
 	<li>お客様が、IP アドレスやファイアウォールなどのネットワーク構成とエンドポイント、および {{site.data.keyword.Bluemix_notm}} と統合するための LDAP へのアクセス権限を用意します。</li>
 	</ol>
 </li>
-<li>環境の管理チームの役割を特定して割り当てます。<ol type="a">
+<li>環境に合わせて管理チームの役割を特定し割り当てます。
+	<ol type="a">
 	<li>IBM が、お客様が用意した構成に基づいて、ネットワーク・アクセスおよび LDAP を構成します。お客様が指定した連絡先に、管理アクセス権限が付与されます。サポートおよび請求用の連絡先を指定する必要もあります。</li>
-	<li>IBM が、専用サービスおよび多くのパブリック {{site.data.keyword.Bluemix_notm}} サービスを示すために、専用環境にシンジケートされたカタログをセットアップします。</li>
+	<li>IBM が、専用サービスを示すために、専用環境にシンジケートされたカタログをセットアップします。シンジケートされたカタログには、{{site.data.keyword.Bluemix_notm}} Public からシンジケートされ、ユーザーが使用可能にできる追加サービスが含まれています。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。</li>
 	<li>お客様が、ネットワークとファイアウォールの構成、および LDAP エンドポイントとアクセスを確認します。</li>
 	</ol>
 </li>
 </ol>
+
+ご使用の環境に合わせた初期デプロイメントおよび構成は、以下にリストするプロセスのようになると考えられます。各タスクを誰が担当するかについて詳しくは、『[役割および責任](../dedicated/index.html#rolesresponsibilities)』を参照してください。
+
+<ol>
+<li>専用インスタンスをホストするためにどのデータ・センターを使用するかを選択します。データ・センターのオプションついては、<a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer データ・センターのロケーション</a>を参照してください。</li>
+<li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。{{site.data.keyword.Bluemix_notm}} インスタンスをセットアップした時に 3 つのドメインを取得します。<code>*mycompany*.*region*.bluemix.net</code> および <code>*mycompany*.*region*.mybluemix.net</code> の接頭部を選択します。そして、3 番目のドメインのフルネームはユーザーが選択します。<br />
+<p>カスタム・ドメインは必要な数だけ選択できます。ただし、それらのカスタム・ドメインの証明書はユーザーの責任になります。カスタム・ドメインの作成について詳しくは、『<a href="../manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</p></li>
+<li>{{site.data.keyword.Bluemix_notm}} Public 内でユーザーの企業を表すために使用されるパブリック・アカウントの所有者を特定します。IBM はこのアカウントを使用して、シンジケートされたサービス使用量を追跡します。</li>
+<li>データ・センターへのセキュア接続のタイプを選択します。SoftLayer VPN、SoftLayer Direct Link、および AT&T Net Bond の中から選択できます。</li>
+<li>パブリック・インターネットからユーザーの専用環境へのアクセスがあるかどうかを決定します。</li>
+<li>使用される認証のタイプを選択します。IBM ID または Active Directory から選択できます。IBM ID の使用および登録について詳しくは、<a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">「ヘルプおよびよくある質問」</a>ページを参照してください。
+</li>
+<li>環境に合わせて管理チームの役割を特定し割り当てます。割り当てが必要な役割については、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。</li>
+<li>IBM は、Elastic Runtime、コンソール、管理フィーチャー、およびモニタリングを含むコア・プラットフォームをデプロイします。</li>
+<li>IBM は、環境へのユーザーの管理アクセスを構成します。</li>
+<li>アラートに応答するために、IBM 運用チームによってモニターされている専用インスタンスの使用を開始できます。</li>
+</ol>
+
+{{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。詳細情報については、『[{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理](../administer/index.html#mng)』を参照してください。アップグレードおよび保守については、『[専用インスタンスの保守](index.html#maintaindedicated)』を参照してください。
 
 ##役割および責任
 {: #rolesresponsibilities}
@@ -77,7 +95,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 
 <dl>
 <dt>**調達フォーカル**</dt>
-<dd>IBM 担当員と連携して、お客様の {{site.data.keyword.Bluemix_notm}} Dedicated 環境を確立します。これには、プロジェクトのあらゆる側面について作業するのに適した、組織内の個人を特定することが含まれます。この役割に割り当てられたユーザーは、パターン選択、商業協定およびお客様のリソースへのアクセスの取り決めを監視します。調達フォーカルは、専用インスタンスをセットアップする際の総合的連絡先になります。</dd>
+<dd>IBM 担当員と連携して、お客様の {{site.data.keyword.Bluemix_notm}} Dedicated 環境を確立します。これには、プロジェクトのあらゆる側面について作業するのに適した、組織内の個人を特定することが含まれます。この役割に割り当てられたユーザーは、プロジェクト管理の役割を担当し、パターン選択、商業協定、およびお客様のリソースへのアクセスの取り決めを監視します。調達フォーカルは、専用インスタンスをセットアップし、デプロイメントのプロセスを追跡する際の総合的連絡先になります。</dd>
 <dt>**コンプライアンス責任者**</dt>
 <dd>IBM 担当員と連携して、お客様のセキュリティー要件に合ったトポロジーとデプロイメントのオプションを選択します。この役割に割り当てられたユーザーは IBM コンプライアンス・コンサルタントと連携して、コンプライアンスの目標を達成するデプロイメント・パターンを決めます。</dd>
 <dt>**ネットワーク専門家**</dt>

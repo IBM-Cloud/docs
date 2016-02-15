@@ -4,12 +4,11 @@
 # Présentation de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Dernière mise à jour : 20 novembre 2015*
+*Dernière mise à jour : 18 janvier 2016*
 
 {{site.data.keyword.Bluemix}} est la plateforme de cloud ouverte d'{{site.data.keyword.IBM}} qui offre aux développeurs
 d'applications mobiles et Web un accès aux logiciels {{site.data.keyword.IBM_notm}} proposant des fonctions d'intégration, de sécurité, de
-transaction,
-etc., ainsi qu'à l'environnement logiciel de partenaires commerciaux.
+transaction, etc., ainsi qu'à l'environnement logiciel de partenaires commerciaux.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} s'appuie sur la technologie open source
@@ -64,8 +63,7 @@ En général, il est inutile de se préoccuper des couches du système d'exploit
 couches, telles que les systèmes de fichiers racine et les composants de
 middleware, sont masquées pour que vous puissiez vous concentrer sur le code de
 votre application. Cependant, vous pouvez obtenir plus de détails sur ces couches si vous avez besoin d'informations spécifiques sur
-l'emplacement d'exécution de votre application. Voir [Affichage des couches de l'infrastructure{{site.data.keyword.Bluemix_notm}}](../cli/viewinfra.html#viewinfra)
-pour des détails. 
+l'emplacement d'exécution de votre application. Pour plus d'informations, voir [Affichage des couches de l'infrastructure {{site.data.keyword.Bluemix_notm}}](../cli/vcapsvc.html#viewinfra). 
 
 ## Architecture {{site.data.keyword.Bluemix_notm}}
 {: #ov_arch}
@@ -151,6 +149,10 @@ assure la connectivité via un tunnel de réseau privé virtuel ouvert, avec con
 ![{{site.data.keyword.Bluemix_notm}} local.](images/localarch.png "Bluemix local")
 
 *Figure 4. {{site.data.keyword.Bluemix_notm}} local*
+
+La machine virtuelle de création s'exécute sur un réseau protégé par le pare-feu de votre client sur un réseau avec une connectivité sortante vers le centre des opérations IBM via un relais. Les composants de la plateforme {{site.data.keyword.Bluemix_notm}} et les services de base s'exécutent dans un réseau local virtuel (VLAN) isolé et privé. L'environnement {{site.data.keyword.Bluemix_notm}} local utilise un réseau VLAN pour le sous-réseau privé. L'utilisation d'un sous-réseau privé à la place d'un réseau VLAN public est plus sécurisée et peut vous aider à éviter les problèmes de routage.
+
+Les dispositifs DataPower fournissent l'accès aux domaines d'application {{site.data.keyword.Bluemix_notm}}. Ces dispositifs se connectent au réseau accessible à partir de votre intranet. Les utilisateurs qui déploient des applications et des services obtiennent l'accès à partir du réseau accessible à partir de votre intranet. Vous devez fournir sept adresses IP ayant un accès Internet sortant. Les dispositifs DataPower effectuent le routage à partir de ces adresses IP client vers le déploiement {{site.data.keyword.Bluemix_notm}} isolé. Pour plus d'informations sur les spécifications de réseau et les exigences en matière d'infrastructure, voir [Exigences de l'infrastructure d'un environnement {{site.data.keyword.Bluemix_notm}} local](../local/index.html#localinfra).
 
 ### Fonctionnement de {{site.data.keyword.Bluemix_notm}}
 {: #howwork}
@@ -275,11 +277,11 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nom de région** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |       
-|-----------------|-------------------|---------------------|----------------|
-| Région Sud des Etats-Unis | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Région Europe et Royaume-Uni | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Région Australie Sydney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Nom de région** | **Emplacement géographique** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| Région Sud des Etats-Unis | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| Région Royaume-Uni | Londres, Angleterre | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Région Sydney | Sydney, Australie | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tableau 1. Liste des régions {{site.data.keyword.Bluemix_notm}}*
@@ -506,7 +508,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 | Chinois simplifié | zh_CN |
 | Chinois traditionnel | zh_TW |
 
-*Tableau 3. Langues nationales prises en charge et codes de langue*
+*Tableau 2. Langues nationales prises en charge et codes de langue*
 
 # rellinks
 ## general 
@@ -514,7 +516,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problèmes {{site.data.keyword.Bluemix_notm}} connus](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossaire](glossary/index.html)
-* [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, une société {{site.data.keyword.IBM_notm}}](http://www.softlayer.com/)

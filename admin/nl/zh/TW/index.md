@@ -5,21 +5,21 @@
 
 #管理 {{site.data.keyword.Bluemix_notm}}
 {: #administer}
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 1 月 20 日*
 
-按一下**帳戶及支援** &gt; **管理組織**，以管理您的組織、空間及已指派的使用者。如果您是「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」使用者，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用](index.html#mng)，以取得管理本端或專用實例的相關資訊。
+按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，來管理組織、空間及指派的使用者，然後選取**管理組織**。如果您是「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」使用者，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用](index.html#mng)，以取得管理本端或專用實例的相關資訊。
 {:shortdesc}
 
 ##管理帳戶
 {: #mngacct}
 
-在 {{site.data.keyword.Bluemix}} 中，您可以管理包括使用者存取在內的組織和空間－全都從使用者介面中的儀表板進行。您也可以監視使用情形及計費。
+在「{{site.data.keyword.Bluemix}} 公用」中，無論是管理組織和空間，還是管理使用者存取權，都可以從使用者介面中的儀表板來進行操作。您也可以監視使用情形及計費。
 {:shortdesc}
 
 ###組織及空間
 {: #orgsandspaces}
 
-身為組織管理員或帳戶擁有者，您可以使用「管理組織」頁面來檢視及管理組織或空間的設定（包括使用者存取）。若要開啟「管理組織」頁面，請移至功能表上的*帳戶及支援* &gt; **管理組織**。
+身為組織管理員或帳戶擁有者，您可以使用「管理組織」頁面來檢視及管理組織或空間的設定（包括使用者存取）。若要開啟「管理組織」頁面，請按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**。
 
 ####組織
 
@@ -103,7 +103,7 @@ Cloud Foundry 應用程式及儲存器的配額。
 <li>管理已在組織中的現有使用者。</li>
 <li>管理組織的網域。</li>
 </ul>
-<p>**附註**：如果您具有「合作人員」使用者類型，並且先前以不同的帳戶使用 {{site.data.keyword.Bluemix_notm}}，則即使您已獲指派組織管理員角色，也無法邀請使用者加入組織。您必須具有「成員」使用者類型才能邀請使用者。如需如何暫時解決此問題的相關資訊，請參閱<a href="../troubleshoot/accessing.html#tr_adduser">無法將使用者新增至組織</a>。</p>
+<p>**附註**：如果您具有「合作人員」使用者類型，並且先前以不同的帳戶使用 {{site.data.keyword.Bluemix_notm}}，則即使您已獲指派組織管理員角色，也無法邀請使用者加入組織。您必須具有「成員」使用者類型才能邀請使用者。如需如何暫時解決此問題的相關資訊，請參閱<a href="../troubleshoot/index.html#ts_adduser">無法將使用者新增至組織</a>。</p>
 </dd>
 <dt>計費管理員</dt>
 <dd>計費管理員具有許可權可檢視組織的執行時期及服務使用資訊。</dd>
@@ -130,28 +130,27 @@ Cloud Foundry 應用程式及儲存器的配額。
 {: #orgmng}
 
 身為組織管理員或帳戶擁有者，您可以管理您的組織。
-管理作業包括建立組織、將組織重新命名、建立空間、邀請使用者至空間，以及刪除現有的組織。
-
+管理作業包括建立組織、重新命名組織、建立空間、邀請使用者加入空間、變更使用者角色以及刪除現有組織。
 
 <ul>
 <li>建立組織<p>只有具有付費帳戶的使用者可以建立組織。
 使用付費帳戶，您可以採取下列步驟來建立組織：
 </p>
 <ol>
-<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下右上方的圖示，然後選取**管理組織**。</li>
+<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**。</li>
 <li>按一下**建立組織**，然後遵循提示以建立您的組織。</li>
 </ol>
 </li>
 <li>將組織重新命名<p>採取下列步驟以將您的組織重新命名：</p>
 <ol>
-<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下右上方的圖示，然後選取**管理組織**。</li>
+<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)，然後選取**管理組織**。</li>
 <li>選取您要重新命名的組織。</li>
 <li>在**組織**欄位中鍵入新名稱，然後按一下**儲存**。</li>
 </ol>
 </li>
 <li>列出成員<p>採取下列步驟可列出您組織或空間的成員：</p>
 <ol>
-<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下右上方的圖示，然後選取**管理組織**。您可以在**使用者**標籤中看到組織的成員及其角色。</li>
+<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**。您可以在**使用者**標籤中看到組織的成員及其角色。</li>
 <li>按一下組織中的空間名稱，以查看此空間的成員及其角色。</li>
 </ol>
 </li>
@@ -159,8 +158,8 @@ Cloud Foundry 應用程式及儲存器的配額。
 空間作為測試環境，以及 *production* 空間作為正式作業環境。
 然後，您可以將應用程式與空間相關聯。採取下列步驟以建立空間：</p>
 <ol>
-<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下右上方的圖示，然後選取**管理組織**。</li>
-<li>在您的組織名稱底下按一下**建立空間**，然後遵循提示以建立空間。</li>
+<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)，然後選取**管理組織**。</li>
+<li>按一下組織名稱後面的**建立空間**，然後遵循提示來建立空間。</li>
 </ol>
 </li>
 <li>邀請使用者至空間<p>您可以邀請使用者以合作人員身分加入您的組織。
@@ -168,9 +167,16 @@ Cloud Foundry 應用程式及儲存器的配額。
 使用者只能存取他們已加入的空間。
 請採取下列步驟以將使用者新增至空間：</p>
 <ol>
-<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下右上方的圖示，然後選取**管理組織**。然後，在您的組織中按一下**新增使用者**，並遵循提示以將使用者新增至您的組織。</li>
-<li>將使用者新增至空間。從左導覽窗格選取空間、按一下**新增使用者**，並遵循提示以將使用者新增至您的組織。
+<li>移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**。然後，在您的組織中按一下**新增使用者**，並遵循提示以將使用者新增至您的組織。</li>
+<li>將使用者新增至空間。從導覽窗格中選取空間，按一下**新增使用者**，然後遵循提示將使用者新增到空間中。</li>
+</ol>
 </li>
+<li>變更使用者角色
+<p>請採取下列步驟來變更使用者角色：</p>
+<ol>
+<li>在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，按一下**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg)，然後選取**管理組織**。</li>
+<li>選取**使用者**標籤中的**管理員**、**計費管理員**或**審核員**勾選框，以變更使用者在組織中的角色。或者，從導覽窗格中選取空間，然後選取**使用者**標籤中的**管理員**、**開發人員**或**審核員**勾選框，以變更使用者在空間中的角色。</li>
+<li>按一下**儲存**。</li>
 </ol>
 </li>
 <li>刪除現有的組織<p>請與 {{site.data.keyword.Bluemix_notm}} 登錄及 ID 支援中心聯絡，以刪除您的組織。</p>
@@ -182,24 +188,22 @@ Cloud Foundry 應用程式及儲存器的配額。
 ## 管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用
 {: #mng}
 
-使用「管理主控台」來管理資源、監視使用情形、管理使用者許可權，以及檢視您「{{site.data.keyword.Bluemix}} 本端」或「Bluemix 專用」環境中的安全報告、日誌、狀態及升級通知。{:shortdesc}
+如果您具有「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定使用者角色和許可權來管理組織；請參閱[管理組織](index.html#orgmng)。{:shortdesc}
 
-### 存取管理主控台
-{: #oc_access}
+*表格 1. 用於管理 {{site.data.keyword.Bluemix_notm}} 本端或專用實例的管理作業*
 
-您可以輸入下列 URL 來存取「管理主控台」：
-
-<code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>
-
-<dl>
-<dt><strong>&lt;subdomain&gt;</strong></dt>
-<dd>此值為本端或專用實例的名稱。{{site.data.keyword.Bluemix}} 實例的子網域名稱是在上線期間指派的。</dd>
-</dl>
+| 我能執行哪些操作？ | 詳細資料 |    
+|----------------|---------|
+|監視系統使用情形 | 按一下**管理 &gt; 使用情形**。檢視系統資訊、監視 CPU 使用率，以及計劃使用情形，以便做出最佳業務決策。|
+|管理型錄 | 按一下**管理 &gt; 型錄管理**。管理您的使用者可以看見哪些服務。|
+|管理組織 | 按一下**管理 &gt; 組織管理**。建立組織、監視組織配額，以及快速做出基於需求的決策。|
+|建立空間和指派使用者角色 | 按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**。在組織內建立空間。新增使用者並將組織和空間角色指派給使用者。 |
+|對管理使用者許可權進行管理 | 按一下**管理 &gt; 使用者管理**。新增使用者、移除使用者和調整使用者許可權。 |
+|檢視報告和日誌 | 按一下**管理 &gt; 報告和日誌**。檢視針對您實例的安全報告和審核日誌。|
+|檢視系統資訊 | 按一下**管理 &gt; 系統資訊**。檢視系統資訊，例如擱置更新、實例的名稱和版本、地區、API URL、CLI URL、LDAP 配置詳細資料、群組和使用者對映、統計資料以及共用網域。  |
 
 ### 檢視系統資訊
 {: #oc_system}
-
-使用「管理主控台」，可監視您的系統資訊。
 
 若要檢視系統資訊，請按一下**管理 &gt; 系統資訊**。
 
@@ -235,8 +239,6 @@ Cloud Foundry 應用程式及儲存器的配額。
 ### 檢視使用資訊
 {: #oc_resource}
 
-使用「管理主控台」，可監視資源及網路使用情形。
-
 若要檢視資源資訊，請按一下**管理 &gt; 使用情形**。
 
 在「資源監視」區段中，您可以檢視下列資訊：
@@ -256,40 +258,21 @@ Cloud Foundry 應用程式及儲存器的配額。
 從下列選項中選取：
 
 * 您可以從欄位中選取開始及結束日期，以過濾顯示的報告及日誌。
-* 您可以從左導覽窗格中展開及檢視各種報告。
+* 您可以從導覽窗格中展開及檢視各種報告。
 * 您可以在報告及日誌的集合中進行搜尋。搜尋適用於報告名稱，也適用於報告及日誌內包含的文字內容。您也可以選擇依**管理事件**、**DataPower 報告**、**防火牆**及**登入審核**來過濾您的搜尋。
-* 顯示報告或日誌時，您可以按一下報告右上角的 ![下載](images/icon_download.png) 圖示予以下載。
-
-<!-- This content cannot go into production until the security reports have gone into production -->
-
-如需安全報告類型的相關資訊，請參閱[安全報告](../security/index.html#reports)。
+* 顯示報告或日誌時，可以按一下 ![下載](images/icon_download.svg) 圖示來下載報告。
 
 ### 檢視狀態
 {: #oc_status}
 
-您可以透過「管理主控台」，來監視 {{site.data.keyword.Bluemix_notm}} 實例的狀態。您也可以訂閱 RSS 資訊來源以取得通知，這樣就不必查看是否有通知。
+您可以使用 {{site.data.keyword.Bluemix_notm}}「狀態」頁面來監視 {{site.data.keyword.Bluemix_notm}} 實例的狀態。「狀態」頁面是尋找通知和公告的一個中心位置，從中可瞭解影響 {{site.data.keyword.Bluemix_notm}} 平台以及 {{site.data.keyword.Bluemix_notm}} 中主要服務的重要事件。
 
-若要檢視 {{site.data.keyword.Bluemix_notm}} 實例的狀態，請完成下列步驟：
-
-1. 在「管理主控台」的右上角，按一下**設定檔設定**圖示。
-
-2. 然後，按一下**狀態**。
-
-即會顯示「系統狀態」頁面。左窗格會顯示跨地區的執行時期和服務以及 {{site.data.keyword.Bluemix_notm}} 實例的狀態。右窗格則顯示通知。
-
-3. 如果您已針對 RSS 資訊來源配置瀏覽器，則可以訂閱通知的 RSS 資訊來源。在通知清單左上角的**更新**右側，找出 ![RSS](images/icon_RSS.png) 圖示，然後選取下列其中一個動作：
-
-* 將 ![RSS](images/icon_RSS.png) 圖示拖曳到您的 RSS 閱讀器。
-* 在 RSS 圖示上按一下滑鼠右鍵、選取**複製鏈結位址**，然後將 URL 貼入您的 RSS 閱讀器。
-
-4. 過濾要顯示的通知。按一下通知清單右上角的**過濾**。然後，鍵入您預期會在通知中找到的單字，例如 "maintenance"，以搜尋通知清單並縮小範圍。或者，您可以按一下以選取要依**類型**、**地區**、**種類**、**開始日期**或**結束日期**顯示的通知。
+您可以訂閱 RSS 資訊來源以取得通知，這樣就不必查看是否有通知。如需「狀態」頁面和設定 RSS 資訊來源的相關資訊，請參閱[檢視 {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status)。
 
 ### 管理型錄
 {: #oc_catalog}
 
-您可以管理使用者可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到哪些 {{site.data.keyword.Bluemix_notm}} 服務及入門範本。
-
-若要使用「管理主控台」來管理「型錄」，請按一下**管理 &gt; 型錄管理**。
+您可以管理使用者可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到哪些 {{site.data.keyword.Bluemix_notm}} 服務及入門範本。按一下**管理 &gt; 型錄管理**。
 
 選取服務或入門範本磚，以編輯服務或入門範本方案可見性。若要編輯可見性，請從下列選項中選取：
 * 若要顯示隱藏的服務或入門範本，讓您的使用者能在「型錄」中看到它，請選取**啟用所有方案**。
@@ -301,7 +284,7 @@ Cloud Foundry 應用程式及儲存器的配額。
 
 您可以透過建立及刪除組織、將管理員新增至組織，以及監視配額用量，來管理您的組織。
 
-若要使用「管理主控台」來管理您的組織，請按一下**管理 &gt; 組織管理**。
+按一下**管理 &gt; 組織管理**。
 
 您可以展開及檢視各個區段。您也可以檢閱及管理組織的配額方案。
 
@@ -314,36 +297,37 @@ Cloud Foundry 應用程式及儲存器的配額。
 	<dt><strong>系統記憶體總計</strong></dt>
 	<dd>可供您環境使用的實體記憶體總計。</dd>
 	<dt><strong>已部署的配額</strong></dt>
-	<dd>在所有組織中，配置給所有已部署應用程式的記憶體總和。已部署的配額總和可超出您環境的實體系統記憶體總計。例如，如果您的系統記憶體總計為 16 GB，而且您已對每一個組織（總共有五個不同的組織）各配置 4 GB 的記憶體，則配額總計超出了已針對所有組織配置給您的系統記憶體總計。不過，在許多情況下，組織可能不會使用到個別配置給每個組織的配額總計。此外，所有組織也可能不會同時間用到其配置的記憶體配額總計。</dd>
+	<dd>在所有組織中，配置給所有已部署應用程式的記憶體總和。部署的配額總和
+	可能會超過環境的實體系統記憶體總計。例如，如果您的系統記憶體總計為 16 GB，而且您已對每一個組織（總共有五個不同的組織）各配置 4 GB 的記憶體，則配額總計超出了已針對所有組織配置給您的系統記憶體總計。不過，在許多情況下，組織可能不會使用到個別配置給每個組織的配額總計。此外，所有組織也可能不會同時間用到其配置的記憶體配額總計。</dd>
 	<dt><strong>配額總計</strong></dt>
 	<dd>在所有組織中的已配置記憶體總計。</dd>
 	</dl>
 	* 組織記憶體用量。本區段詳述組織層次的記憶體用量。您可以檢視配額額度總計，以及針對每一個組織所部署的配額。圖表會提供依每個組織的最高記憶體用量列出的資訊，依預設，使用最大量記憶體的組織會最先列出。您可以依**最高記憶體用量**及**超額記憶體配置**來排序。
 	<dl>
 	<dt><strong>最高記憶體用量</strong></dt>
-	<dd>使用此選項，可識別使用最大量記憶體的組織。依最高記憶體用量排序，可識別使用最大量記憶體的組織。清單是依已部署的配額來排序。</dd>
+	<dd>使用此選項，可識別使用最大量記憶體的組織。依最高記憶體用量排序，
+	可識別使用最大量記憶體的組織。清單是依已部署的配額來排序。</dd>
 	<dt><strong>超額記憶體配置</strong></dt>
 	<dd>使用此選項，可識別哪些組織的配額方案大於所需配額。	依超額記憶體用量排序，可識別哪些組織針對已配置給組織的配額，使用最少量的記憶體。</dd>
 	</dl>
 * 若要變更組織的配額方案，請按一下圖表中您要在「組織記憶體用量」區段中編輯之組織的長條，或從「組織清單」區段中選取組織的名稱。在「編輯組織」頁面上，您可以變更配額方案、變更組織名稱，以及新增或移除管理員。如果您選取的配額方案不足以提供組織的現行用量，則會收到一則訊息。若要儲存您在「編輯組織」頁面上所做的任何變更，請按一下**儲存**。
 * 在「組織清單」區段中，您可以檢視 {{site.data.keyword.Bluemix_notm}} 環境中的所有組織。
-	* 若要刪除組織，請在「動作」直欄中按一下 ![刪除](images/icon_trash.png)。
+	* 若要刪除組織，請在「動作」直欄中按一下 ![刪除](images/icon_trash.svg)。
 	* 若要檢視及編輯組織的配額方案，請按一下清單中組織的名稱。
 	* 若要編輯組織名稱，以及新增或移除管理員，請按一下清單中組織的名稱。
 
 ### 管理使用者及許可權
 {: #oc_useradmin}
-您可以透過 LDAP 將使用者從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} 實例。您可以新增單一使用者或使用者群組，並且檢視使用者許可權。如果您已獲指派 `admin` 許可權，則您也能設定及管理其他使用者的許可權。
 
-若要使用「管理主控台」來管理使用者，請按一下**管理 &gt; 使用者管理**。
+您可以透過 LDAP 將使用者從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} 實例。您可以新增單一使用者或使用者群組，並且檢視使用者許可權。如果您已獲指派 `admin` 許可權，則您也能設定及管理其他使用者的許可權。按一下**管理 &gt; 使用者管理**。
 
-「使用者管理」頁面會顯示本端或專用實例的所有使用者。顯示每一位使用者的許可權。許可權可以為下列項目：None、`Admin`、`Catalog`、`Login`、`Reports`
+「使用者管理」頁面會顯示本端或專用實例的所有使用者。會顯示每一位使用者的許可權。許可權可以為下列項目：None、`Admin`、`Catalog`、`Login`、`Reports`
 及 `Users`。可以啟用許可權，或是可以授與使用者該許可權的
 `view` 或 `write` 能力，如圖示所代表。
 如需每一種類型的說明以及圖示的說明，請參閱[許可權](#permissions)。
 
 從下列選項中選擇：
-* 找出使用者。您可以利用位於頂端的**搜尋**欄位，在表格中找出使用者。
+* 尋找使用者。您可以使用**搜尋**欄位在表格中尋找使用者。
 * 新增使用者。如果您具有 `admin` 許可權，或具有 `write` 能力的 `users` 許可權，則可以新增使用者。若要新增使用者或使用者群組，請按一下**新增一位使用者**或**新增使用者群組**。在**搜尋**欄位中，鍵入要搜尋的使用者名稱或群組名稱，然後從**組織**清單中，選取要將使用者或使用者群組新增到哪個組織。找到要新增的使用者或群組時，請按一下使用者名稱，然後按一下**新增使用者**或**新增多位使用者**來進行新增。超過 50
 位使用者的群組會透過背景批次工作來新增。新增作業成功完成時，使用者或群組即會新增至表格中，以供您檢視及搜尋。新增使用者時，他們不具有任何指派權限。
 * 編輯許可權及組織。如果您具有 `admin` 許可權，即可編輯其他使用者的許可權及組織。若要編輯許可權，請找出使用者，然後按一下使用者名稱。若要啟用或停用許可權，請在開啟的視窗中，從下列選項進行選取：
@@ -351,31 +335,31 @@ Cloud Foundry 應用程式及儲存器的配額。
 	* 從清單中選取**讀取**，以容許使用者具有該許可權的 `view`（唯讀）能力，或選取**寫入**，以容許使用者具有該許可權的 `write`（編輯、新增及移除）能力。
 	* 選取**關閉**以停用許可權。若要編輯組織，請從下列選項中選取：
 	* 利用搜尋欄位以找出組織、按一下以從選項中進行選取，然後按一下**新增**，以將使用者新增至組織。
-	* 按一下 ![移除，以減號代表](images/icon_remove.png) 圖示，以移除組織中的使用者。完成時，請按一下**儲存**。
-* 移除使用者。如果您具有 `admin` 許可權，或具有 `write` 能力的 `users` 許可權，則可以移除使用者。若要移除使用者，請找出使用者、按一下 ![刪除](images/icon_trash.png) 圖示，然後再按一下**移除**。
+	* 按一下 ![移除，以減號代表](images/icon_remove.svg) 圖示，以移除組織中的使用者。完成時，請按一下**儲存**。
+* 移除使用者。如果您具有 `admin` 許可權，或具有 `write` 能力的 `users` 許可權，則可以移除使用者。若要移除使用者，請找出使用者、按一下 ![刪除](images/icon_trash.svg) 圖示，然後再按一下**移除**。
 
-#### 許可權
+### 許可權
 {: #permissions}
 
 使用者可獲指派下列許可權：
 
-| **使用者許可權** | **說明** |
+| **使用者許可權** | **說明** |       
 |-----------------|-------------------|
 | Admin | 具有 `admin` 許可權的使用者，可編輯其他使用者的許可權。 |
-| Catalog | 具有 `catalog` 許可權的使用者，可獲指派對本端或專用實例中可用服務進行 `view` 或 `write`（修改）的能力。 |
-| Login | 具有 `login` 許可權的使用者，可登入「管理主控台」。如果沒有此許可權，使用者即無法登入。 |
+| Catalog | 具有 `catalog` 許可權的使用者，可獲指派對本端或專用實例中可用服務進行 `view` 或 `write`（修改）的能力。 |  
+| Login | 擁有 `login` 許可權的使用者可以查看「管理」頁面。沒有此許可權，使用者無法查看「管理」功能表選項。 |
 | Reports | 具有 `reports` 許可權的使用者，可獲指派對安全報告進行 `view` 或 `write`（修改）的能力。 |
 | Users | 具有 `users` 許可權的使用者，可獲指派對使用者清單進行 `view`，或對使用者進行 `write`（新增或移除）的能力。此許可權不容許您設定其他使用者的許可權。|
 
-*表 1. 許可權*
+*表格 2. 許可權*
 
 可以啟用許可權，或是可以授與使用者該許可權的
 `view` 或 `write` 能力，如下列圖示所代表：
 
 
-* 許可權旁的 ![已啟用，以勾號代表](images/icon_enabled.png) 圖示表示已啟用。
-* ![檢視，以眼睛代表](images/icon_read.png) 圖示表示使用者具有該許可權的 `view`（唯讀）能力。
-* ![寫入，以鉛筆代表](images/icon_write.png) 圖示表示使用者具有該許可權的 `write`（編輯、新增或移除）能力。
+* 許可權旁的 ![已啟用，以勾號代表](images/icon_enabled.svg) 圖示表示已啟用。
+* ![檢視，以眼睛代表](images/icon_read.svg) 圖示表示使用者具有該許可權的 `view`（唯讀）能力。
+* ![寫入，以鉛筆代表](images/icon_write.svg) 圖示表示使用者具有該許可權的 `write`（編輯、新增或移除）能力。
 
 ### 使用 Admin REST API 管理使用者
 {: #usingadminapi}
@@ -564,7 +548,7 @@ Cloud Foundry 應用程式及儲存器的配額。
 <ol>
 <li>建立包含適當 JSON 格式資訊的 JSON 檔案。<p>例如，建立名為 `user.json` 且含有下列內容的檔案：
 </p>
-<code>
+<pre>
 {
     "members": [
         {
@@ -582,7 +566,7 @@ Cloud Foundry 應用程式及儲存器的配額。
         }
     ]
 }
-</code><br/><br/>
+</pre>
 </li>
 <li>執行下列指令，以將 JSON 檔案內容公佈到使用者的端點：<br/><br/>
 <code>
@@ -625,14 +609,14 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  > Content-Length: 333
  >
  * upload completely sent off: 333 out of 333 bytes
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; vary: X-HTTP-Method-Override
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 19:32:54 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 5612 msec
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < vary: X-HTTP-Method-Override
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 19:32:54 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 5612 msec
  ```
 {: screen}
 
@@ -657,27 +641,224 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  * connect to ::1 port 3000 failed: Connection refused
  *   Trying 127.0.0.1...
  * Connected to localhost (127.0.0.1) port 3000 (#0)
- &gt; DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
- &gt; User-Agent: curl/7.37.1
- &gt; Host: localhost:3000
- &gt; Accept: */*
- &gt; Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
- &gt; 
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 21:01:09 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 1922 msec
- &lt; 
+ > DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
+ > User-Agent: curl/7.37.1
+ > Host: localhost:3000
+ > Accept: */*
+ > Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
+ >
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 21:01:09 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 1922 msec
+ <
  ```
+{: screen}
+
+### 自訂服務 API
+{: #servicebrokerapi}
+
+有三個 API 可用於登錄或建立新服務、更新服務和刪除服務。
+
+所有 API 都是相對於 <code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>。
+
+<dl>
+<dt><strong>&lt;subdomain&gt;</strong></dt>
+<dd>此值為本端或專用實例的名稱。{{site.data.keyword.Bluemix}} 實例的子網域名稱是在上線期間指派的。</dd>
+</dl>
+
+### 登錄新服務
+
+請使用下列 API 和程式碼範例來登錄新服務。
+
+#### Route
+
+```
+POST /codi/v1/serviceBrokers
+```
+{: screen}
+
+#### Request
+
+*表格 3. 欄位*
+
+| **名稱** | **說明** |
+|-----------------|-------------------|
+| name | 服務分配管理系統的名稱。 |
+| auth_username | 用於與服務分配管理系統連接的使用者名稱。 |
+| auth_password | 用於與服務分配管理系統連接的密碼。 |
+| broker_url | 用於連接服務分配管理系統的 URL。 |
+| owningOrganization | 將服務列入白名單時要使用的起始組織。 |
+
+##### Body
+
+```
+{
+  "name" : "Service broker's name",
+  "auth_username" : "username",
+  "auth_password" : "password",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### 標頭
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### 狀態
+
+```
+201 Created
+```
+{: screen}
+
+##### Body
+
+```
+{
+  "entity": {
+    "name": "Service broker's name",
+    "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
+    "created_at": "2015-12-07T19:51:50Z",
+    "updated_at": null,
+    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
+  }
+}
+```
+{: screen}
+
+### 更新服務
+
+請使用下列 API 和程式碼範例來更新服務。
+
+#### Route
+
+`PUT /codi/v1/serviceBrokers`
+{: screen}
+
+#### Request
+
+*表格 4. 欄位*
+
+| **名稱** | **說明** |
+|-----------------|-------------------|
+| name | 服務分配管理系統的名稱。此名稱是建立服務時使用的名稱，無法變更。 |
+| auth_username | 用於與服務分配管理系統連接的使用者名稱。 |
+| auth_password | 用於與服務分配管理系統連接的密碼。 |
+| broker_url | 用於連接服務分配管理系統的 URL。 |
+| owningOrganization | 將服務列入白名單時要使用的起始組織。 |
+
+##### Body
+
+```
+{
+  "name" : "Service Broker's name",
+  "auth_username" : "username",
+  "auth_password" : "newPassword",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### 標頭
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### 狀態
+
+```
+201 Created
+```
+{: screen}
+
+##### Body
+
+```
+{
+  "entity": {
+    "name": "Service Broker's name",
+    "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
+    "created_at": "2015-12-07T20:11:08Z",
+    "updated_at": "2015-12-07T20:11:19Z",
+    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
+  }
+}
+```
+{: screen}
+
+### 刪除服務
+
+請使用下列 API 和程式碼範例來刪除服務。
+
+*表格 5. 參數*
+
+| **名稱** | **說明** |
+|-----------------|-------------------|
+| name | 服務分配管理系統的名稱。此名稱是建立服務時使用的名稱，無法變更。 |
+
+#### Route
+
+```
+DELETE /codi/v1/serviceBrokers?name=name of service broker
+```
+{: screen}
+
+#### Request
+
+##### 標頭
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Response
+
+##### 狀態
+
+```
+204 No Content
+```
 {: screen}
 
 ### 使用 cf CLI 管理使用者
 {: #usingadmincli}
 
-您可以利用 Cloud Foundry 指令行介面與「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式搭配，來管理 {{site.data.keyword.Bluemix_notm}} 環境的使用者。例如，您可以從 LDAP 登錄新增使用者。
+您可以使用 Cloud Foundry 指令行介面與「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。
 
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理
 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -708,294 +889,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-#### 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
-
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。若要查看指令清單，請執行下列指令：
+若要查看指令清單，請執行下列指令：
 
 
 `cf plugins`
 {: codeblock}
 
-如需指令的其他說明，請使用 `--help` 選項。
+如需指令的其他說明，請使用 `-help` 選項。
 
-#### 連接及登入 {{site.data.keyword.Bluemix_notm}}
-
-您必須先連接並登入（如果尚未完成的話），才能使用管理 CLI 外掛程式來管理使用者。
-
-<ol>
-<li>若要連接至 {{site.data.keyword.Bluemix_notm}}> API 端點，請執行下列指令：<br/><br/>
-<code>
-cf api https://api.&lt;subdomain&gt;.bluemix.net
-</code>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。</dd>
-</dl>
-<p>您可以查看「管理主控台」的「資源及資訊」頁面，以取得正確的 URL。URL 顯示在「API 資訊」區段的 **API URL** 欄位中。</p>
-</li>
-<li>使用下列指令來登入 {{site.data.keyword.Bluemix_notm}}：<br/><br/>
-<code>
-cf login
-</code>
-</li>
-</ol>
-
-#### 新增使用者
-
-您可以從 LDAP 登錄，將使用者新增至您的 {{site.data.keyword.Bluemix_notm}} 環境。請輸入下列指令：
-
-`cf bluemix-admin-add-user <user_name> <organization>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">LDAP 登錄中的使用者名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **baau** 作為較長的 **bluemix-admin-add-user** 指令名稱的別名。
-
-#### 移除使用者
-
-您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境中移除使用者：
-
-`cf bluemix-admin-remove-user <user_name>`
-{: codeblock}
-
-<dl class="parml">
-
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
-
-</dl>
-
-**提示：**您也可以使用 **baru** 作為較長的 **bluemix-admin-remove-user** 指令名稱的別名。
-
-#### 新增及刪除組織
-
-您可以新增及刪除組織。
-
-* 若要新增組織，請輸入下列指令：
-
-`cf Bluemix-admin-create-organization <organization> <manager>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-<dt class="pt dlterm">&lt;manager&gt;</dt>
-<dd class="pd">組織管理員的使用者名稱。</dd>
-</dl>
-
-**提示：**您也可以使用 **baco** 作為較長的 **bluemix-admin-create-organization** 指令名稱的別名。
-
-* 若要刪除組織，請輸入下列指令：
-
-`cf Bluemix-admin-delete-organization <organization>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要刪除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **bado** 作為較長的 **bluemix-admin-create-organization** 指令名稱的別名。
-
-#### 將使用者指派至組織
-
-您可以將 {{site.data.keyword.Bluemix_notm}} 環境中的使用者指派給特定組織。請輸入下列指令：
-
-`cf bluemix-admin-set-org <user_name> <organization> [<role>]`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要指派使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">請參閱[角色](#roles)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
-</dl>
-
-**提示：**您也可以使用 **baso** 作為較長的 **bluemix-admin-set-org** 指令名稱的別名。
-
-#### 從組織取消指派使用者
-
-您可以從特定組織取消指派 {{site.data.keyword.Bluemix_notm}} 環境中的使用者。請輸入下列指令：
-
-`cf bluemix-admin-unset-org <user_name> <organization> [<role>]`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要指派使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-<dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">請參閱[角色](#roles)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
-</dl>
-
-**提示：**您也可以使用 **bauo** 作為較長的 **bluemix-admin-unset-org** 指令名稱的別名。
-
-#### 角色
-
-<dl class="parml">
-<dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">組織管理員。組織管理員具有執行下列動作的權限：<ul>
-<li>在組織內建立或刪除空間。</li>
-<li>邀請使用者加入組織及管理使用者。</li>
-<li>管理組織的網域。</li>
-</ul>
-</dd>
-<dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">計費管理員。計費管理員可以檢視組織的執行時期及服務用量資訊。</dd>
-<dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">組織審核員。組織審核員可以檢視空間中的應用程式及服務內容。</dd>
-</dl>
-
-#### 設定組織的配額
-
-您可以設定特定組織的使用配額。
-
-`cf bluemix-admin-set-quota <organization> <plan>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要設定配額之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-<dt class="pt dlterm">&lt;plan&gt;</dt>
-<dd class="pd">組織的配額方案。</dd>
-</dl>
-
-**提示：**您也可以使用 **basq** 作為較長的 **bluemix-admin-set-quota** 指令名稱的別名。
-
-#### 新增、刪除及擷取報告
-
-您可以新增、刪除及擷取安全報告。
-* 若要新增報告，請輸入下列指令：
-
-`cf bluemix-admin-add-report <category> <date> <PDF|TXT|LOG> <RTF>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">報告的種類。如果名稱中有空格，請使用引號括住該名稱。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">報告日期，格式為 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
-<dd class="pd">要上傳之報告 PDF、文字檔或日誌檔的路徑。</dd>
-<dt class="pt dlterm">&lt;RTF&gt;</dt>
-<dd class="pd">用來包含 PDF 之「Rich Text 格式 (RTF)」版本的選項。只有在您包含報告 PDF 的路徑時，此選項才適用。RTF 版本用於編製索引及進行搜尋。</dd>
-</dl>
-
-**提示：**您也可以使用 **baar** 作為較長的 **bluemix-admin-add-report** 指令名稱的別名。
-
-* 若要刪除報告，請輸入下列指令：
-
-`cf bluemix-admin-delete-report <category> <date> <name>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">報告的種類。如果名稱中有空格，請使用引號括住該名稱。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">報告日期，格式為 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">報告的名稱。</dd>
-</dl>
-
-**提示：**您也可以使用 **badr** 作為較長的 **bluemix-admin-delete-report** 指令名稱的別名。
-
-* 若要擷取報告，請輸入下列指令：
-
-`cf bluemix-admin-retrieve-report <category> <date> <name>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">報告的種類。如果名稱中有空格，請使用引號括住該名稱。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">報告日期，格式為 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">報告的名稱。</dd>
-</dl>
-
-**提示：**您也可以使用 **barr** 作為較長的 **bluemix-admin-retrieve-report** 指令名稱的別名。
-
-#### 啟用及停用所有組織的服務
-
-您可以針對所有組織，啟用或停用服務在 {{site.data.keyword.Bluemix_notm}}「型錄」中的顯示情形。
-
-* 若要讓所有組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見服務，請輸入下列指令：
-
-`cf bluemix-admin-enable-service-plan <plan_identifier>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
-</dl>
-
-**提示：**您也可以使用 **baesp** 作為較長的 **bluemix-admin-enable-service-plan** 指令名稱的別名。
-
-* 若要讓所有組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中看不見服務，請輸入下列指令：
-
-`cf bluemix-admin-disable-service-plan <plan_identifier>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要停用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
-</dl>
-
-**提示：**您也可以使用 **badsp** 作為較長的 **bluemix-admin-disable-service-plan** 指令名稱的別名。
-
-#### 新增、移除及編輯組織的服務可見性
-
-您可以從組織清單中新增或移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。您也可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}
-的「型錄」中看到的服務清單。
-
-* 若要容許組織檢視 {{site.data.keyword.Bluemix_notm}}「型錄」中的特定服務，請輸入下列指令：
-
-`cf bluemix-admin-add-service-plan-visibility <plan_identifier> <organization>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要新增可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增至服務可見性清單的 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **baaspv** 作為較長的 **bluemix-admin-add-service-plan-visibility** 指令名稱的別名。
-
-* 若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請輸入下列指令：
-
-`cf bluemix-admin-remove-service-plan-visibility <plan_identifier> <organization>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要移除可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要從服務的可見性清單中移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **barspv** 作為較長的 **bluemix-admin-remove-service-plan-visibility** 指令名稱的別名。
-
-* 若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
-
-`cf bluemix-admin-edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>`
-{: codeblock}
-
-**附註：**此指令會將所指定組織的現有可見服務取代為您在指令中指定的服務。
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要使其可見之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增可見性之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。您可以在指令中輸入其他組織名稱或 GUID，針對多個組織啟用服務的可見性。</dd>
-</dl>
-
-**提示：**您也可以使用 **baespv** 作為較長的 **bluemix-admin-edit-service-plan-visibility** 指令名稱的別名。
+如需如何使用「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 管理](../cli/plugins/bluemix_admin/index.html)。

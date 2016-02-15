@@ -4,9 +4,9 @@
 {:codeblock: .codeblock}
 
 
-#Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}}{: #deploy-button} 
+#Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Última atualização: 8 de dezembro de 2015* 
+*Última atualização: 19 de janeiro de 2016* 
 
 O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O
 botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer
@@ -62,12 +62,23 @@ Para criar um botão Implementar no {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
 <li> Copie e modifique um dos modelos de fragmento a seguir e inclua um repositório Git público.
-
+<p></p>
+<p>
+<strong>Dica</strong>: se você deseja especificar a entrada de construção para um projeto de Serviços DevOps, inclua um parâmetro de ramificação na URL do Git. Ao incluir um parâmetro de ramificação, o repositório Git público original, incluindo todas as suas ramificações, é clonado em um novo projeto privado de Serviços DevOps com um novo repositório Git. A ramificação Git especificada é configurada como a entrada para a tarefa de construção. Se você não especificar uma ramificação, a entrada para a tarefa de compilação será configurada como a ramificação principal por padrão.
+</p>
 <ul>
 <li>HTML:
-ramificação principal padrão:
+<p>
+Ramificação principal padrão:
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+Ramificação Git especificada:
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Redução de preço:
@@ -75,7 +86,12 @@ ramificação principal padrão:
 Ramificação principal padrão:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+</pre>
+<p>Ramificação Git especificada:
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>
@@ -116,7 +132,7 @@ Com o arquivo manifest, é possível especificar:
     <ul>
     <li>Um nome de app exclusivo.</li>  
     <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais
-que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>.
+que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> serviços declarados são uma extensão IBM do formato de manifest padrão do Cloud Foundry. Essa extensão pode ser revisada
 em uma liberação futura conforme o recurso evolui e melhora.
@@ -161,21 +177,23 @@ no diretório-raiz do repositório.
 	Construtores suportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que constrói a saída para a pasta <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, que constrói a saída para a pasta <code>. </code> </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>,
+que constrói a saída para a pasta <code>.</code>  </i>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>,
 que constrói a saída para a pasta <code>.</code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>,
 que constrói a saída para a pasta <code>./target/</code></li>
 	   </ul>
 	</li>	
-	<li>Se você estiver implementando um app em um contêiner usando o  <stong>IBM Container Service</strong>, deve-se incluir o Dockerfile no diretório-raiz do repositório e, em um diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>.
-<ul>
+	<li>Se você estiver implementando um app em um contêiner usando o  <stong>IBM Container Service</strong>, deve-se incluir o Dockerfile no diretório-raiz do repositório e, em um diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>. 
+	<ul>
 	    <li> Para aprender mais sobre a criação de Dockerfiles, consulte a documentação do Docker. </li>
-	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">consulte exemplos em GitHub</a>. Para criar um arquivo pipeline.yml a partir de um projeto do {{site.data.keyword.jazzhub_short}} e incluí-lo em seu repositório, conclua estas etapas.<ol>
+	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">consulte exemplos em GitHub</a>. Para criar um arquivo pipeline.yml a partir de um projeto do {{site.data.keyword.jazzhub_short}} e incluí-lo em seu repositório, conclua estas etapas. 
+<ol>
 <li>Abra seu projeto DevOps Services em um navegador e clique em <b>Construir e implementar</b>.</li>
 <li>Configure seu pipeline com tarefas de construção e implementação do <b>IBM Container
 Service</b>.</li>
-<li>Em seu navegador, inclua <code>/yaml</code> na URL de pipeline do projeto e pressione Enter.
+<li>Em seu navegador, inclua <code>/yaml</code> na URL de pipeline do projeto e pressione Enter. 
 <br>Exemplo: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>Salve o arquivo <code>pipeline.yml</code> resultante.</li>
 <li>No diretório-raiz de seu projeto, crie um diretório <code>.bluemix</code>.</li>

@@ -29,7 +29,7 @@ Per iniziare a creare la tua applicazione, attieniti alla seguente procedura:
   3. Fai clic su **WEB** e attieniti all'esperienza guidata
 per scegliere uno starter, specificare un nome e selezionare come desideri eseguire
 la codifica.
-  4. Dopo che hai terminato l'esperienza guidata, fai clic su **VISUALIZZA PANORAMICA DELL'APPLICAZIONE**. La Panoramica per la tua applicazione è visualizzata nel Dashboard. 
+  4. Dopo che hai terminato l'esperienza guidata, fai clic su **VISUALIZZA PANORAMICA DELL'APPLICAZIONE**. La Panoramica per la tua applicazione è visualizzata nel Dashboard.
   5. Puoi aggiungere un servizio alla tua applicazione facendo clic su **AGGIUNGI UN SERVIZIO O UNA API** nella Panoramica dell'applicazione nell'interfaccia utente Bluemix. In alternativa, puoi utilizzare l'interfaccia riga di comando cf. Vedi Opzioni per gestire le applicazioni.
   6. Nella Panoramica dell'applicazione, fai clic su Aggiungi Git per salvare la tua origine applicazione in un repository Git e creare un progetto ospitato da Git. Puoi anche distribuire l'applicazione da {{site.data.keyword.jazzhub_title}}.
 
@@ -59,7 +59,7 @@ Mentre sviluppi le tue applicazioni web, avvaliti dei seguenti suggerimenti:
 
 <dl><dt>Persistenza</dt>
 <dd>Non specificare archiviazioni locali per le tue applicazioni. Ogni istanza
-della tua applicazione, ance se è in esecuzione solo una singola istanza,
+della tua applicazione, anche se è in esecuzione solo una singola istanza,
 può essere riavviata o spostata su una macchina virtuale differente in
 qualsiasi momento, di norma per il bilanciamento del carico. Tutto quanto è memorizzato
 in un'archiviazione locale viene cancellato quando l'applicazione viene spostata

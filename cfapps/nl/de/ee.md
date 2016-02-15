@@ -8,8 +8,7 @@
 
 *Letzte Aktualisierung: 6. November 2015*
 
-Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform und eine Auswahl von Tools verwenden, wenn Sie Ihre Apps erstellen, ausführen und bereitstellen. Befolgen Sie dieses umfassende Entwicklungsszenario, um zu beginnen. 
-{:shortdesc}
+Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform und eine Auswahl von Tools verwenden, wenn Sie Ihre Apps erstellen, ausführen und bereitstellen. Befolgen Sie dieses umfassende Entwicklungsszenario, um zu beginnen. {:shortdesc}
 
 ## Registrieren
 {: #ee_start}
@@ -84,7 +83,6 @@ Klicken Sie auf der Übersichtsseite der App auf **Umgebungsvariablen**, um die 
    ]
 }
 ```
-{:codeblock}
 
 **Hinweis:** Bei dieser Umgebungsvariablen handelt es sich um die Serialisierung eines JSON-Objekts mit einem Eintrag pro Serviceinstanz, an die die App gebunden ist. Die Datenmenge und der Datentyp, die von den einzelnen Serviceinstanzen bereitgestellt werden, hängen
 vom jeweiligen Service ab. Wenn Ihre App keinen Service verwendet, ist VCAP_SERVICES ein leeres
@@ -141,7 +139,7 @@ Geben Sie im Verzeichnis (`C:\test`) der App den folgenden Befehl ein:
   
   6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben: ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 Sie können auch andere Tools zum Erstellen der App verwenden, z. B. Eclipse-Tools. Weitere Informationen finden Sie auf der Seite 'Coding beginnen' Ihrer App in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle. 
 
@@ -215,7 +213,7 @@ verwenden kann, um eine Verbindung zu dieser Instanz von {{site.data.keyword.clo
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **Hinweis:** Wie der Beispielcode zeigt, kann zur Herstellung einer Verbindung mit einer Serviceinstanz von {{site.data.keyword.cloudant}} zunächst überprüft werden, ob die
 Umgebungsvariable VCAP_SERVICES vorhanden ist. Ist die Umgebungsvariable vorhanden, kann die
@@ -245,7 +243,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Optional:** Heben Sie die Bindung einer Serviceinstanz auf oder löschen Sie die Serviceinstanz.
   

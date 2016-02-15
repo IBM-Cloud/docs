@@ -241,16 +241,8 @@ cf push -f appManifest.yml
 사용자 인터페이스를 통해 실행 중인 {{site.data.keyword.Bluemix_notm}}
 애플리케이션의 다음 환경 변수를 확인할 수도 있습니다.
 
-  * 애플리케이션에만 해당되는 사용자 정의 변수. **cf set-env**
-명령을 사용하거나 다음과 같이 [`manifest.yml`
-파일](#appmanifest)에서 값 쌍을 구성하여 애플리케이션별 변수를 설정할 수 있습니다.
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * 애플리케이션에만 해당되는 사용자 정의 변수. 사용자 정의 변수를 앱에 추가하는 방법에 대한 자세한 정보는 [사용자 정의 환경 변수 추가](#ud_env){:new_window}를 참조하십시오.
+	  
   * 서비스 인스턴스에 액세스하는 데 필요한 연결 정보가 포함된 VCAP_SERVICES 변수. 애플리케이션이 여러 개의 서비스에 바인딩된 경우, VCAP_SERVICES 변수에 각 서비스 인스턴스에 대한 연결 정보가 포함되어 있습니다. 예:
   
   ```
@@ -453,6 +445,34 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
   ```
   command: node app.js
   ```
+  
+  
+  
+### 사용자 정의 환경 변수 추가
+{: #ud_env}
+
+사용자 정의 환경 변수는 애플리케이션에 고유합니다. 사용자 정의 환경 변수를 실행 중인 앱에 추가할 때는 다음과 같은 옵션이 지원됩니다.
+
+  * {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하십시오. 다음 단계를 수행하십시오.
+
+    1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
+	2. 왼쪽 탐색 분할창에서 **환경 변수**를 클릭하십시오.
+	3. **사용자 정의**를 클릭하고 **추가**를 클릭하십시오.
+	4. 필수 필드에 값을 입력하고 **저장**을 클릭하십시오.
+  * cf 명령행 인터페이스를 사용하십시오. `cf set-env` 명령을 사용하여 사용자 정의 변수를 추가하십시오. 예: 
+  ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * `manifest.yml` 파일을 사용하십시오. 파일에 값 쌍을 추가하십시오. 예: 
+  ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### 스타트업 환경 구성
 

@@ -5,7 +5,7 @@
 
 #Compartilhando pipelines baseados em texto em projetos de amostra do {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
 
-*Última atualização: 7 de dezembro de 2015*  
+*Última atualização: 7 de dezembro de 2015* 
 
 No caso dos projetos de amostra implementados no
 {{site.data.keyword.Bluemix_notm}} pelo botão

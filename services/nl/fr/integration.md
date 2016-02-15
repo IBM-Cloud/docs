@@ -3,7 +3,7 @@
 # Intégration
 {: #integration}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Les services d'intégration proposent un éventail de services puissants et composables pour la connexion sécurisée aux données et aux services, quel que
 soit leur emplacement. Vous pouvez rapidement et simplement vous connecter à un éventail de noeuds finaux et exposer et gérer ces noeuds finaux sous la forme d'API

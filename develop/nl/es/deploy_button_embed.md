@@ -84,7 +84,7 @@ dentro del iFrame. Este valor es opcional.</dd>
 <dd class="pd">El ID de la región de destino predeterminada. Por ejemplo: <code>ibm:yp:us-south</code>. Este valor es opcional.</dd>
 	
 <dt class="pt dlterm">guid_organización</dt>
-<dd class="pd">El guid de la organización de destino predeterminada. Para encontrar este valor, pulse <strong>Gestionar organizaciones</strong> <i>nombre_organización</i>. El URL para la organización contiene el guid para dicha organización. Este valor es opcional.</dd>
+<dd class="pd">El guid de la organización de destino predeterminada. Para encontrar este valor, pulse <strong>Gestionar organizaciones</strong> > <i>nombre_organización</i>. El URL para la organización contiene el guid para dicha organización. Este valor es opcional.</dd>
 	
 <dt class="pt dlterm">guid_espacio</dt>
 <dd class="pd">El guid del espacio de destino predeterminado. Para encontrar este valor, pulse <strong>Gestionar organizaciones</strong> > <i>nombre_espacio</i>. El URL para el espacio contiene el guid para dicho espacio. Este valor es opcional.</dd>

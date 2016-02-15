@@ -9,7 +9,7 @@
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 6 janvier 2015*
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -44,6 +44,28 @@ Registration Helpdesk pour de l'aide.
 **Remarque :** pour les employés IBM, l'ID IBM peut être différent de l'ID de connexion à l'intranet. 
 
 
+
+
+
+## Des modifications n'ont pas été sauvegardées
+{: #ts_unsaved_changes}
+
+
+Lorsque vous naviguez dans la page des détails de l'application, vous ne pourrez peut-être pas effectuer d'action et vous serez invité à sauvegarder vos modifications pour pouvoir continuer. 
+
+
+Lorsque vous essayez de vérifier votre appli ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
+{: tsSymptoms} 
+
+`Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
+
+
+Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant de quitter la page.
+{: tsCauses}
+
+
+Fermez la fenêtre de message, puis cliquez sur le bouton **REINITIALISER** de votre contexte d'exécution.
+{: tsResolve} 
 
 
 
@@ -91,15 +113,16 @@ Après avoir procédé à votre inscription pour un compte d'essai {{site.data.k
 {: tsSymptoms}
 
 <code>Votre
-compte est en attente. La confirmation par courrier électronique peut prendre jusqu'à 24 heures ; vérifiez également votre dossier de courrier indésirable. 
-Si vous ne recevez pas votre confirmation par courrier électronique, envoyez un message au
-<a href="http://ibm.biz/bluemixsupport.com" target="_blank">support Bluemix</a>.</code> Après avoir procédé à votre inscription pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, vous recevez une confirmation par courrier électronique. Cliquez
+compte est en attente. La confirmation par courrier électronique peut prendre jusqu'à 24 heures ; vérifiez également votre dossier de courrier indésirable. Si vous ne recevez pas votre confirmation par courrier électronique, envoyez un message au
+<a href="http://ibm.biz/bluemixsupport.com" target="_blank">support Bluemix</a>.</code>
+
+
+Après avoir procédé à votre inscription pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, vous recevez une confirmation par courrier électronique. Cliquez
 sur le lien que contient ce courrier électronique pour compléter le processus d'enregistrement.
 {: tsCauses} 
 
-La confirmation par courrier électronique est envoyée à l'adresse de courrier électronique que vous avez indiquée. Vérifiez votre boîte de réception et votre dossier de courrier indésirable. 
-Si vous ne recevez pas de confirmation par courrier électronique, prenez contact avec le
-[support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.   
+La confirmation par courrier électronique est envoyée à l'adresse de courrier électronique que vous avez indiquée. Vérifiez votre boîte de réception et votre dossier de courrier indésirable. Si vous ne recevez pas de confirmation par courrier électronique, prenez contact avec le
+[support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -149,9 +172,7 @@ Si vous ne pouvez pas inviter d'utilisateurs dans votre organisation et que vous
 avec le responsable de l'organisation afin qu'il change votre rôle. Pour identifier le responsable de votre organisation, procédez comme suit :
 {: tsResolve}
 
-  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support**
-![Compte et support](images/account_support.png) dans le coin supérieur droit du tableau de bord, puis sélectionnez **Gérer
-les organisations**.
+  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support** ![Compte et support](images/account_support.svg) dans la barre de menu supérieure, et sélectionnez **Gérer les organisations**.
   2. Sélectionnez votre organisation et affichez les informations relatives au responsable dans l'onglet **Utilisateurs**.  
   
 Si
@@ -159,8 +180,7 @@ vous ne parvenez pas à inviter des utilisateurs car vous êtes collaborateur et
 {{site.data.keyword.Bluemix_notm}} précédent, puis être invité à rejoindre le compte en tant
 que membre de l'organisation. Pour supprimer votre compte précédent et rejoindre le compte en tant que membre, procédez comme suit : 
 
-  1. Prenez contact avec le [support en charge des ID](mailto:id@bluemix.net) pour ouvrir un ticket de
-demande de service et demander la suppression de votre compte. Si vous voulez sauvegarder des données associées à votre ancien compte et les déplacer dans votre nouveau
+  1. Contactez [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} pour ouvrir un ticket de demande de service et demander la suppression de votre compte. Si vous voulez sauvegarder des données associées à votre ancien compte et les déplacer dans votre nouveau
 compte, incluez ces informations dans votre courrier électronique. 
   2. Une fois votre compte supprimé, demandez à un utilisateur disposant du rôle de responsable de l'organisation de vous inviter dans l'organisation en
 tant que responsable de l'organisation. Ensuite, inscrivez-vous à
@@ -210,10 +230,10 @@ Lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
 Dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, un des messages d'erreur suivants peut s'afficher :
 {: tsSymptoms}
 
-`BXNUI0001E: Impossible de déterminer si une session existe. Essayez de recharger le navigateur.`
+`BXNUI0001E: La page n'a pas été chargée car Bluemix n'a pas détecté s'il existait une session.`
 
 
-`BXNUI0016E: Les applications et les services n'ont pas pu être extraits.`
+`BXNUI0016E: Les applications et les services n'ont pas été extraits car une page Bluemix n'a pas été chargée.`
 
  
 
@@ -262,27 +282,6 @@ Utilisez à la place le menu tiroir latéral dans le coin supérieur gauche.
 
 
 
-## Le tableau de bord {{site.data.keyword.Bluemix_notm}} ne parvient pas à charger des applications ou des services
-{: #ts_dashboard}
-
-Il se peut que le tableau de bord {{site.data.keyword.Bluemix_notm}} n'affiche pas d'informations sur les applications et les services car
-votre organisation ou votre espace ne peut pas y accéder. 
- 
-
-Lorsque vous vous connectez à l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, aucune information n'est disponible dans votre tableau de bord même si vous avez créé des
-applications et utilisé des services auparavant.
-{: tsSymptoms}
- 
-
-Ce problème peut se produire lorsque vous liez une instance de service à votre application, alors que le service n'est plus accessible à cause d'un
-changement
-de droits affectant votre organisation ou votre espace. 
-{: tsCauses}
-  	
-
-Pour résoudre le problème, entrez `cf services` dans l'interface de ligne de commande cf pour afficher la liste des instances de service et identifier le service concerné. Ensuite, entrez la commande `cf delete-service` pour supprimer l'instance de service qui n'est plus accessible.
-{: tsResolve}
-
 
 
 
@@ -298,15 +297,15 @@ jour, les caractères codés sur deux octets ne sont pas affichés. Toutefois, d
 
 
 
-## Impossible d'effectuer les actions demandées 
+## Impossible d'effectuer les actions demandées
 {: #ts_authority}
 
-Il se peut que vous ne puissiez pas effectuer des actions si vous ne disposez pas des droits d'accès appropriés. 
+Il se peut que vous ne puissiez pas effectuer des actions si vous ne disposez pas des droits d'accès appropriés.
 
  
 
 Lorsque vous essayez d'effectuer des actions pour une instance de service ou une instance d'application, vous ne pouvez pas effectuer les actions
-demandées et l'un des messages d'erreur suivants s'affiche :
+demandées et l'un des messages d'erreur suivants s'affiche : 
 {: tsSymptoms}
 
 `BXNUI0514E: Vous n'êtes développeur dans aucun des espaces de l'organisation <nom_organisation>.`
@@ -316,28 +315,26 @@ demandées et l'un des messages d'erreur suivants s'affiche :
 
  
 
-Vous ne disposez pas du niveau de droits approprié requis pour effectuer les actions.
+Vous ne disposez pas du niveau de droits approprié requis pour effectuer les actions. 
 {: tsCauses}
 
   
 
-Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suivantes :
+Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suivantes : 
 {: tsResolve}
- * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur.  
+ * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
  * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle
-Développeur. Voir [Gestion de votre organisation](../acctmgmt/index.html#mngorg){: new_window} pour des détails. 
+Développeur. Voir [Gestion de votre organisation](../acctmgmt/index.html#mngorg){: new_window} pour des détails.
  
 
  
 
 
 ## Impossible d'accéder à des services {{site.data.keyword.Bluemix_notm}} en raison d'erreurs d'autorisation
-
 {: #ts_vcap}
 
 Des erreurs d'autorisation peuvent survenir lorsque votre application accède à un service {{site.data.keyword.Bluemix_notm}} si les données
-d'identification du service sont codées en dur dans votre application.
- 
+d'identification du service sont codées en dur dans votre application. 
 
 Une fois que vous avez configuré votre application pour qu'elle communique avec un service {{site.data.keyword.Bluemix_notm}}, vous la
 déployez dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous ne pouvez pas utiliser l'application pour accéder au service
@@ -351,7 +348,7 @@ données d'identification permettant d'y accéder changent.
 
 Au lieu de coder en dur les données d'identification dans votre application, utilisez les paramètres de connexion de la variable
 d'environnement VCAP_SERVICES. Les méthodes d'utilisation des paramètres de connexion de la variable d'environnement VCAP_SERVICES varient selon les
-langages de programmation. Par exemple, pour les applications Node.js, vous pouvez utiliser la commande suivante :
+langages de programmation. Par exemple, pour les applications Node.js, vous pouvez utiliser la commande suivante : 
 {: tsResolve}
 
 ```
@@ -371,7 +368,7 @@ Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autre
 {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-Lorsqu'une facette non prise en charge est appliquée à votre projet Eclipse, il se peut que vous ne puissiez pas déployer vos applications dans {{site.data.keyword.Bluemix_notm}} à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.  
+Lorsqu'une facette non prise en charge est appliquée à votre projet Eclipse, il se peut que vous ne puissiez pas déployer vos applications dans {{site.data.keyword.Bluemix_notm}} à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
@@ -565,10 +562,8 @@ votre organisation.
 Lorsque vous tentez de créer une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche : 
 {: tsSymptoms}
 
-`BXNUI2032E: Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Ressource
-: instances_service. Message Cloud
-Foundry : "You have exceeded your
-organization's services limit."`
+`BXNUI2032E: La ressource <instance_service> n'a pas été créée. Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Message Cloud
+Foundry : "You have exceeded your organization's services limit."`
 
 
 
@@ -786,7 +781,7 @@ Utilisez l'une des méthodes suivantes pour résoudre le problème :
   
   
   
-  
+
   
   
 
@@ -1170,7 +1165,8 @@ Si vous constatez que le projet DevOps Services ne peut pas être créé, cela p
 
 
 
-Vous cliquez sur le bouton **Déployer dans Bluemix**, mais l'étape "Création du projet" n'aboutit pas. {: tsSymptoms} 
+Vous cliquez sur le bouton **Déployer dans Bluemix**, mais l'étape "Création du projet" n'aboutit pas.
+{: tsSymptoms} 
 
 
 Il se peut que votre compte
@@ -1192,8 +1188,7 @@ Si vous constatez que le référentiel Git n'est pas cloné, il peut y avoir un 
 
 
 
-Vous cliquez sur le bouton **Déployer dans Bluemix**, mais le référentiel Git est introuvable et ne peut pas être cloné dans DevOps Services. 
-L'étape "Clonage du référentiel n'aboutit pas. Par conséquent, l'application ne peut pas être déployée dans {{site.data.keyword.Bluemix_notm}}. 
+Vous cliquez sur le bouton **Déployer dans Bluemix**, mais le référentiel Git est introuvable et ne peut pas être cloné dans DevOps Services. L'étape "Clonage du référentiel n'aboutit pas. Par conséquent, l'application ne peut pas être déployée dans {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
 Ce problème peut survenir pour l'une des raisons suivantes :
@@ -1221,8 +1216,7 @@ Si vous constatez que l'application n'est pas déployée, il se peut que le code
      
 
 
-Vous cliquez sur le bouton **Déployer dans Bluemix** et le référentiel Git est cloné dans DevOps Services, mais l'application n'est pas déployée dans {{site.data.keyword.Bluemix_notm}}. 
-L'étape "Déploiement dans Bluemix" n'aboutit pas.
+Vous cliquez sur le bouton **Déployer dans Bluemix** et le référentiel Git est cloné dans DevOps Services, mais l'application n'est pas déployée dans {{site.data.keyword.Bluemix_notm}}. L'étape "Déploiement dans Bluemix" n'aboutit pas.
 {: tsSymptoms} 
 
 Ce problème peut survenir pour l'une des raisons suivantes :
@@ -1230,7 +1224,7 @@ Ce problème peut survenir pour l'une des raisons suivantes :
 
   * Il se peut que l'espace disponible dans votre espace {{site.data.keyword.Bluemix_notm}} ne soit pas
 suffisant pour déployer une application. 
-  * Il se peut qu'un service requis ne soit pas déclaré dans le fichier `manifest.yml`. 
+  * Il se peut qu'un service requis ne soit pas déclaré dans le fichier `manifest.yml`.
   * Il se peut qu'un service requis soit déclaré dans le fichier `manifest.yml` alors qu'il se trouve déjà dans l'espace cible.
   * Le code dans le référentiel peut comporter des erreurs.
 Pour diagnostiquer le problème, consultez les journaux de génération et de
@@ -1301,7 +1295,7 @@ l'équipe de support pour résoudre ce problème.
 Lorsque vous tentez de créer une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms} 
 
-`BXNUI0096E: L'application n'a pas pu être créée. Votre compte est inactif car il a été annulé ou suspendu.`
+`BXNUI0096E: L'application n'a pas été créée. Votre compte est inactif car il a été annulé ou suspendu.`
 
 
 Le statut de votre compte {{site.data.keyword.Bluemix_notm}} devient inactif lorsque le compte est annulé ou suspendu.
@@ -1329,8 +1323,7 @@ Lorsque vous tentez de créer une application dans {{site.data.keyword.Bluemix_n
 {: tsSymptoms} 
 
 
-`BXNUI0097E:
-La nouvelle application n'a pas pu être ajoutée. Aucun espace n'est associé à l'organisation et à la région en cours. Dans le tableau de bord, cliquez sur Créer un espace. Une fois l'espace créé, essayez à nouveau.`
+`BXNUI0097E: Pour qu'une application puisse être ajoutée, un espace au moins doit être associé à votre organisation et à votre région. Dans le tableau de bord, cliquez sur **Créer un espace**. Une fois l'espace créé, essayez à nouveau.`
 
 
 
@@ -1427,14 +1420,12 @@ de l'envoyer par commande push ou de la reconstituer.
 
  
 
-Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction. Les mises à jour qui ont été appliquées au pack de construction
-depuis le dernier envoi de l'application par commande push ne sont pas implémentées. 
+Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction. Les mises à jour qui ont été appliquées au pack de construction depuis le dernier envoi de l'application par commande push ne sont pas implémentées.
 {: tsSymptoms}
 
 
 
-Certains
-packs de construction ne sont pas configurés pour télécharger automatiquement sur internet tous les composants mis à jour afin de vous assurer de toujours utiliser la version la plus récente.
+Certains packs de construction ne sont pas configurés pour télécharger automatiquement sur internet tous les composants mis à jour afin de vous assurer de toujours utiliser la version la plus récente.
 {: tsCauses} 
 
  
@@ -1442,11 +1433,8 @@ packs de construction ne sont pas configurés pour télécharger automatiquement
 Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes. Exemples de packs de construction : 
 {: tsResolve}
 
-  * [Pack de construction Java Cloud Foundry](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus
-d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Pack de construction Node.js Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire
-qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud
-sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
+  * [Pack de construction Java Cloud Foundry](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Pack de construction Node.js Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
   ```
   set NODE_MODULES_CACHE=false
   ```
@@ -1717,26 +1705,5 @@ Vous pouvez résoudre ce problème en suivant l'une des méthodes ci-dessous :
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

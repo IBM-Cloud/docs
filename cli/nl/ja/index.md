@@ -6,9 +6,10 @@
 # CLI と開発ツール
 {: #cli}
 
-*最終更新日: 2015 年 11 月 10 日*
+*最終更新日: 2016 年 1 月 19 日*
 
-{{site.data.keyword.Bluemix_short}} 用の強力なツールです。{:shortdesc}
+{{site.data.keyword.Bluemix_short}} では、統合コマンド・ライン・インターフェースおよび CLI プラグインなどの強力なツールにアクセスできます。これらの各 CLI のダウンロードは、ユーザーの {{site.data.keyword.Bluemix_notm}} 体験をサポートするためにすべて使用可能です。
+{:shortdesc}
 
 ## ![コマンド・ライン・インターフェース](./images/CLI.png) コマンド・ライン・インターフェース
 {: #downloads}
@@ -16,10 +17,14 @@
 {{site.data.keyword.Bluemix_notm}} の体験をサポートするコマンド・ライン・インターフェースをダウンロードしてインストールします。Cloud Foundry cf コマンド・ライン・インターフェースは、他のすべての {{site.data.keyword.Bluemix_notm}} CLI ツールの前提条件です。
 
 
-| *Cloud Foundry: cf* |	*{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}: ice* | *{{site.data.keyword.Bluemix_notm}} Live Sync:
+| *Cloud Foundry: cf* |	*{{site.data.keyword.Bluemix_notm}}: bx* | 
+|---------------------|---------------|
+| [CLI のダウンロード](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [資料の表示](./reference/cfcommands/index.html) | [CLI のダウンロード](http://clis.{DomainName}/){: new_window}  <br> [資料の表示](./reference/bluemix_cli/index.html)| 
+
+| *{{site.data.keyword.Bluemix_notm}} Live Sync:
 bl* |
-|---------------------|---------------|---------------|
-| [CLI のダウンロード](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [資料の表示](./reference/cfcommands/index.html) |[Docker のダウンロード](https://docs.docker.com/installation/){: new_window} <br> [ice Mac インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [ice Windows インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [ice Linux インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [資料の表示](../containers/container_cli_ice_ov.html) | [Mac インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [資料の表示](./reference/bl/index.html) |
+|---------------|---------------|
+| [Mac インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows インストーラー](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [資料の表示](./reference/bl/index.html) |
 
 
 ## ![コマンド・ライン・インターフェースのプラグイン](./images/CLI_Plugin.png) コマンド・ライン・インターフェースのプラグイン
@@ -28,28 +33,28 @@ bl* |
 
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから cf CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf http://plugins.ng.bluemix.net
 ```
 2. プラグインをインストールするには、次のコマンドを実行します。```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
 
-| *Active Deploy* |  *開発モード* | 
-|-----------------|-----------------|
-| プラグイン名: active-deploy<br>  [資料の表示](../services/ActiveDeploy/index.html#cli) |  プラグイン名: development-name <br> [資料の表示](./plugins/dev_mode/index.html) | 
+| *Active Deploy* | *管理コンソール* | *開発モード* | 
+|-----------------|-----------------|-----------------|
+| プラグイン名: active-deploy<br>  [資料の表示](../services/ActiveDeploy/index.html#cli) |  プラグイン名: bluemix-admin<br> [資料の表示](../cli/plugins/bluemix_admin/index.html) | プラグイン名: development-name <br> [資料の表示](./plugins/dev_mode/index.html) | 
 
 ### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースの拡張: bx
 1. {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 ```
 2. プラグインをインストールするには、次のコマンドを実行します。```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
-|-----|
-| プラグイン名: ibm-containers<br> [資料の表示](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *{{site.data.keyword.autoscaling}} CLI* | *VPN* |
+|-----|----|----|
+| プラグイン名: ibm-containers<br> [資料の表示](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | プラグイン名: auto-scaling <br> [資料の表示](./plugins/auto-scaling/index.html) |プラグイン名: VPN <br> [資料の表示](./plugins/vpn/index.html) |
 
 ## ![統合開発ツール](./images/Integrated_Dev_Tools.png) 統合開発ツール
 

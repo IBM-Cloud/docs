@@ -4,7 +4,7 @@
 # Support client
 {: #getting-customer-support}
 
-*Dernière mise à jour : 4 décembre 2015*
+*Dernière mise à jour : 19 janvier 2016*
 
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options
@@ -21,12 +21,9 @@ directement à Stack Overflow, où vous pouvez rechercher des informations ou pu
 Compte et support est une fonction qui vous permet de consulter des informations de compte, d'afficher le statut, de rester informé grâce aux
 notifications, de sélectionner votre région, de sélectionner et de gérer des organisations et de vous déconnecter. Vous pouvez également obtenir de l'aide et fournir des commentaires en retour.
 
-Pour ouvrir Compte et support, connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
-**Compte et support** ![Compte et support](images/account_support.png) dans le coin supérieur droit du tableau de
-bord.
+Pour accéder à la fonction Compte et support, connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône **Compte et support** ![Compte et support](images/account_support.svg) dans la barre de menu supérieure.
 
-Cliquez sur **Obtenir de
-l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les
+Cliquez sur **Obtenir de l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les
 réponses provenant de la documentation {{site.data.keyword.Bluemix_notm}} et de Stack Overflow sont affichées. La page
 fournit également des options permettant de publier votre question dans Stack Overflow ou d'ouvrir un ticket
 de demande de service en cliquant sur **Obtenir de l'aide**.
@@ -72,11 +69,8 @@ jusqu'à leur résolution.
 
 Vous pouvez trouver la page Statut en choisissant l'une des options suivantes :
 
-  * Depuis Compte et support : connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
-**Compte et support** ![Compte et support](./images/account_support.png) dans le coin supérieur droit du tableau de
-bord, puis cliquez sur **Statut**.
-  * L'accès direct via [IBM {{site.data.keyword.Bluemix_notm}} - System
-Status](https://status.eu-gb.bluemix.net/){: new_window}.
+  * Depuis Compte et support : connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône **Compte et support** ![Compte et support](./images/account_support.svg) dans la barre de menu supérieure, puis cliquez sur **Statut**.
+  * L'accès direct via [IBM {{site.data.keyword.Bluemix_notm}} - System Status](https://status.eu-gb.bluemix.net/){: new_window}.
 
 
 ### Abonnement à un flux RSS
@@ -168,19 +162,15 @@ demander à obtenir de l'assistance.
 
 Pour ouvrir un ticket de demande de service, utilisez l'une des méthodes suivantes :
 
-  * A partir de Compte et support. Connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône
-**Compte et support** ![Compte et support](./images/account_support.png) dans le coin supérieur droit du tableau de
-bord.
+  * A partir de Compte et support. Connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support** ![Compte et support](./images/account_support.svg) dans la barre de menu supérieure.
 
-     1. Veillez tout d'abord à cocher le statut {{site.data.keyword.Bluemix_notm}} en cliquant sur
-**Statut**.
+     1. Veillez tout d'abord à cocher le statut {{site.data.keyword.Bluemix_notm}} en cliquant sur **Statut**.
 	 2. Puis, si le problème n'est pas du à une indisponibilité, cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**. Remplissez le formulaire pour indiquer pour quelle raison vous avez besoin d'une assistance technique.
 
   * Utilisez le formulaire [Open a {{site.data.keyword.Bluemix_notm}} Support
 ticket](http://ibm.biz/bluemixsupport){: new_window}. Pour toute question technique, sur un ID ou sur la facturation, prenez contact avec le support en ouvrant un nouveau
-ticket.
-	 
+ticket.	 
   * Depuis le [portail IBM® Client Success](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window}. Le support est disponible via le portail IBM Client Success avec les options suivantes :
 
      * Abonnement initial à l'essai de 30 jours (complémentaire)
@@ -204,6 +194,21 @@ appropriée pour votre ticket car cette information détermine la manière dont 
 Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié, le support est assuré par l'équipe de support IBM {{site.data.keyword.Bluemix_notm}}. Toutefois, comme vous ne disposez peut-être pas d'un ID IBM, vous pouvez obtenir de l'aide de plusieurs façons.
 
 
+<ul>
+<li>Contactez le support en ouvrant un nouveau ticket à l'aide du formulaire <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a>. Vous pouvez utiliser une adresse électronique ou votre ID IBM pour remplir ce formulaire. Sélectionnez l'option **Dedicated** dans la zone Région {{site.data.keyword.Bluemix_notm}}.
+<p>Les soumissions de formulaire sont surveillées du dimanche 22h00 au vendredi minuit (TUC).</p>
+</li>
+<li>Si vous disposez d'un ID IBM et d'un accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez ouvrir un ticket de demande de service en appliquant l'une des méthodes suivantes :<ul>
+<li>Cliquez sur l'icône **Compte et support** <img src="images/account_support.svg" alt="Compte et support" />, puis cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
+**Prendre contact**.</li>
+<li>Accédez au <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">portail IBM Client Success</a> et entrez votre ID IBM et votre mot de passe. L'ID IBM sert de données d'identification pour votre service. Cliquez sur **Open a support ticket**
+dans le menu. Veillez à indiquer la gravité appropriée pour votre ticket car cette information détermine la manière dont votre ticket est géré.</li>
+</ul>
+</li>
+<li>Si vous ne disposez pas d'un ID IBM, vous pouvez contacter une personne de votre organisation qui en a un ou travailler avec votre interlocuteur IBM.
+<p>**Remarque** : Si vous en faites la demande, une liste d'utilisateurs de votre organisation pouvant servir de contacts pour les tickets de demande de service peut s'afficher sur la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} de votre environnement dédié.</p>
+</li>
+</ul>
 
 ### Contacter le support pour {{site.data.keyword.Bluemix_notm}} local
 {: #contacting-bluemix-support-local}
@@ -211,7 +216,21 @@ Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié, le support e
 Si vous êtes un client {{site.data.keyword.Bluemix_notm}} local, le support est assuré par l'équipe de support IBM
 {{site.data.keyword.Bluemix_notm}}. Toutefois, comme vous ne disposez peut-être pas d'un ID IBM, vous pouvez obtenir de l'aide de plusieurs façons.
 
-
+<ul>
+<li>Contactez le support en ouvrant un nouveau ticket à l'aide du formulaire <a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a>. Vous pouvez utiliser une adresse électronique ou votre ID IBM pour remplir ce formulaire. <p>Les soumissions de formulaire sont surveillées du dimanche à 22h00 au vendredi minuit (TUC).</p>
+</li>
+<li>Si vous disposez d'un ID IBM et d'un accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez ouvrir un ticket de demande de service en appliquant l'une des méthodes suivantes :
+<ul>
+<li>Cliquez sur l'icône **Compte et support** <img src="images/account_support.svg" alt="Compte et support" />, puis cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
+**Prendre contact**.</li>
+<li>Accédez au <a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">portail IBM Client Success</a> et entrez votre ID IBM et votre mot de passe. L'ID IBM sert de données d'identification pour votre service. Cliquez sur **Open a support ticket**
+dans le menu. Veillez à indiquer la gravité appropriée pour votre ticket car cette information détermine la manière dont votre ticket est géré.</li>
+</ul>
+</li>
+<li>Si vous ne disposez pas d'un ID IBM, vous pouvez contacter une personne de votre organisation qui en a un ou travailler avec votre interlocuteur IBM.
+<p>**Remarque** : Si vous en faites la demande, une liste d'utilisateurs de votre organisation pouvant servir de contacts pour les tickets de demande de service peut s'afficher sur la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} de votre environnement local.</p>
+</li>
+</ul>
 
 ### Gravité des tickets de demande de service
 

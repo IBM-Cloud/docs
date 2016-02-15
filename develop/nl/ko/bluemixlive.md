@@ -72,8 +72,8 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 <ol>
 <li>{{site.data.keyword.Bluemix_notm}} Live Sync bl 명령행을 다운로드하고 설치하십시오.   
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Windows bl 명령행 다운로드 단추" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Mac bl 명령행 다운로드 단추" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Windows bl 명령행 다운로드 단추" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Mac bl 명령행 다운로드 단추" /> </a>
 </p>  
 
 <strong>중요:</strong> bl 명령행 도구는 Windows 7 및 8과 Mac OS X 버전 10.9 이상에서만 사용할 수 있습니다. </li>

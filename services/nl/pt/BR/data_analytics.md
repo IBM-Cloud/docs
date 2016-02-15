@@ -3,7 +3,7 @@
 # Data and Analytics
 {: #data_analytics}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Faça mais com serviços analíticos
 e bancos de dados em nuvem integrados e ricos. Além de explorar os serviços, é possível usar o console

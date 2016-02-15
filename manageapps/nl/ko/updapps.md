@@ -17,7 +17,7 @@ cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하
 
 애플리케이션의 URL에 기본 {{site.data.keyword.Bluemix_notm}} 시스템 도메인(mybluemix.net) 대신 사용자 정의 도메인을 사용할 수 있습니다.
 
-도메인은 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공합니다. 사용자 정의 도메인을 사용하려면 {{site.data.keyword.Bluemix_notm}}에서 조직에 대한 사용자 정의 도메인을 작성한 다음 DNS 서버를 구성하거나 로컬 `hosts` 파일을 편집하여 사용자 정의 도메인을 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑해야 합니다. 사용자 정의 도메인이 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑되면 사용자 정의 도메인에 대한 요청이 {{site.data.keyword.Bluemix_notm}}의 애플리케이션으로 라우팅됩니다.
+도메인은 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공합니다. 사용자 정의 도메인을 사용하려면 공용 DNS 서버에 사용자 정의 도메인을 등록하고, {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 다음 해당 사용자 도메인을 공용 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑해야 합니다. 사용자 정의 도메인이 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑되면 사용자 정의 도메인에 대한 요청이 {{site.data.keyword.Bluemix_notm}}의 애플리케이션으로 라우팅됩니다.
 
 **참고:** **nslookup** 명령을 사용하면 {{site.data.keyword.Bluemix_notm}} 시스템 도메인의 공용 IP 주소를 확인할 수 있습니다. 예를 들어, 명령 프롬프트에서 `nslookup mybluemix.net`를 입력하십시오.
 

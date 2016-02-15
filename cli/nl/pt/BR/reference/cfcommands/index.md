@@ -253,7 +253,7 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dt>appname</dt>
 <dd>O nome do aplicativo.</dd>
 <dt>*-i*instance_number</dt>
-<dd>O número de instâncias.</dd>
+<dd>O número de instâncias</dd>
 <dt>*-k*disk_limit</dt>
 <dd>O limite de disco para o aplicativo, por exemplo, *256M*, *1024M*
 oi *1G*.</dd>

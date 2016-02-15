@@ -4,9 +4,9 @@
 
 {{site.data.keyword.blockstoragefull}} proporciona almacenamiento a nivel de bloque para cargas de trabajo con gran intensidad de transacciones y tiempos de ejecución que necesitan almacenamiento persistente.
 
-Puede utilizar IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} para crear dispositivos de almacenamiento en bloque que se pueden adjuntar a máquinas virtuales. Los datos en los dispositivos de almacenamiento en bloque persiste más allá del ciclo de vida de las máquinas virtuales. IBM {{site.data.keyword.blockstorageshort}} utiliza OpenStack Cinder para gestionar el ciclo de vida del volumen.
+Puede utilizar IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} para crear volúmenes de {{site.data.keyword.blockstorageshort}} que se pueden adjuntar a máquinas virtuales. Los datos en los volúmenes de almacenamiento en bloque persiste más allá del ciclo de vida de las máquinas virtuales. IBM {{site.data.keyword.blockstorageshort}} utiliza OpenStack Cinder para gestionar el ciclo de vida del volumen.
 
-Los volúmenes de almacenamiento en bloque se crean mediante una instancia del servicio IBM {{site.data.keyword.blockstorageshort}}. Puede adjuntar los volúmenes a una máquina virtual bajo un dispositivo específico que proporcione o el sistema puede seleccionar automáticamente un nombre de dispositivo disponible. La máquina virtual realiza sus operaciones de E/S directamente con el dispositivo especificado independientemente del servicio {{site.data.keyword.blockstorageshort}}.
+Los volúmenes de {{site.data.keyword.blockstorageshort}} se crean mediante una instancia del servicio IBM {{site.data.keyword.blockstorageshort}}. Puede adjuntar los volúmenes a una máquina virtual bajo un dispositivo específico que proporcione o el sistema puede seleccionar automáticamente un nombre de dispositivo disponible. La máquina virtual realiza sus operaciones de E/S directamente con el dispositivo especificado independientemente del servicio {{site.data.keyword.blockstorageshort}}.
 
 También puede crear instantáneas de volúmenes a nivel de bloque. El servicio {{site.data.keyword.blockstorageshort}} no permite la creación de instantáneas mientas el volumen esté adjunto, por lo que las instantáneas resultantes serán coherentes a bloqueo. 
 
@@ -14,7 +14,7 @@ También puede crear instantáneas de volúmenes a nivel de bloque. El servicio 
 Para crear una instancia del servicio {{site.data.keyword.blockstorageshort}} en su espacio, siga estos pasos:
  
 1.	Vaya al separador **Catálogo** de {{site.data.keyword.Bluemix_notm}} y escriba **{{site.data.keyword.blockstorageshort}}** en el recuadro de búsqueda, o vaya a **Servicios** y seleccione **Almacenamiento**. Pulse el servicio **{{site.data.keyword.blockstorageshort}}**. 
-2.	Especifique un espacio y un nombre de servicio. Seleccione un plan y pulse **Crear**.
+2.	Especifique un espacio y un nombre de servicio. Seleccione el plan y pulse **Crear**.
  	
 Sólo se da soporte al servicio {{site.data.keyword.blockstorageshort}} en un contexto no enlazado. 
 
@@ -31,19 +31,20 @@ Debajo de la visión general hay dos separadores para volúmenes e instantáneas
 
 El separador de instancias muestra una tabla de instantáneas con propiedades y comportamiento similares. 
 
-Utilice el icono Crear o la lista desplegable Acciones de encima de las tablas para crear un nuevo volumen o manipular los existentes. 
+Utilice el icono Crear de encima de las tablas para crear un nuevo volumen o manipular los existentes. Si va a crear un volumen a partir de una instantánea, también puede utilizar la lista desplegable Acciones. 
+
 
 ## Acciones de volúmenes
 
 ### Crear un volumen
 
 1.	Pulse **Crear** para abrir el diálogo **Crear volumen**.
-2.	Proporcione el tamaño del volumen que desea. No se aceptan números decimales. El tamaño está limitado por la cuota asignada a su espacio.
-3.	Especifique un nombre. El nombre no es obligatorio. Es solo para fines de visualización.
+2.	Proporcione el tamaño del volumen que desea. No se aceptan números decimales. El tamaño está limitado por la cuota asignada a su organización.
+3.	Especifique un nombre. El nombre es solo para fines de visualización.
 4.	Opcionalmente, proporcione una descripción más detallada del volumen. 
 5.	Pulse **Crear** para enviar la información y cerrar el diálogo. 
 
-La creación de un volumen puede tardar unos minutos. Si el volumen no es visible inmediatamente en la tabla de volúmenes disponibles, pulse el icono de renovar (icono de flecha circular) en la parte superior de la página. 
+La creación de un volumen puede tardar unos minutos. 
 
 ### Suprimir un volumen
 
@@ -58,7 +59,7 @@ Puede aumentar el tamaño del volumen mediante la acción **Ampliar**. No puede 
 
 1.	Seleccione el volumen que desea ampliar.
 2.	Pulse **Ampliar**.
-3.	Seleccione el nuevo amaño del volumen. Proporcione el nuevo tamaño total del volumen. 
+3.	Seleccione el nuevo amaño del volumen. Proporcione el nuevo tamaño total del volumen.
 4.	Pulse **Ampliar** para enviar la información y cerrar el diálogo. 
 
 Para poder ampliarse, el volumen debe tener el estado **Disponible**. 
@@ -69,17 +70,18 @@ Los volúmenes se adjuntan y desconectan de máquinas virtuales como dispositivo
 Para adjuntar un volumen, siga estos pasos: 
 
 1.	Seleccione un volumen de la lista de volúmenes disponibles.
-2.	Pulse **Adjuntar**. 
+2.	Pulse **Adjuntar**.
 3.	En el diálogo Adjuntar, seleccione una instancia de una máquina virtual de la lista desplegable. 
 4.	Opcionalmente, especifique el dispositivo que se debe utilizar para adjuntar este volumen. Si no especifica ningún dispositivo, el sistema automáticamente selecciona el primer dispositivo disponible en la máquina virtual.
 5.	Pulse **Adjuntar** para enviar la información y cerrar el diálogo.
 
-El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de máquina virtual. Ahora la máquina virtual puede utilizar el dispositivo con datos persistentes. 
+El volumen se lista en la tabla de volúmenes adjuntos con la información sobre la instancia de máquina virtual. 
+Ahora la máquina virtual puede utilizar el dispositivo para persistir datos. 
 
 Para desconectar un volumen, siga estos pasos: 
 
 1.	Seleccione un volumen de la lista de volúmenes adjuntos. 
-2.	Pulse **Desconectar**. 
+2.	Pulse **Desconectar**.
 3.	Confirme la desconexión en el diálogo. 
 
 Tras la desconexión, el volumen ya no está disponible para las operaciones de E/S de la instancia de máquina virtual. En la IU del servicio {{site.data.keyword.blockstorageshort}}, el volumen ahora está disponible para adjuntarse a otras máquinas virtuales.

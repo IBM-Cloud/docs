@@ -63,6 +63,9 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 **참고:** OpenSSL SHA-512 구현은 64비트 정수 유형에 대한 컴파일러 지원에 따라 다릅니다. SHA-1 옵션은 SHA-256 인증서와 관련하여 호환성 문제가 있는 애플리케이션에
 사용할 수 있습니다. 
 
+인증서는 인증 기관에서 발행하며 인증 기관의 디지털 서명이
+있습니다. CSR을 작성한 후 잘 알려진 인증 기간에서 SSL 인증서를 생성할 수 있습니다. 
+
 ##SSL 인증서 업로드
 {: #ssl_certificate}
 

@@ -3,7 +3,7 @@
 # Services expérimentaux
 {: #experimental}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Consultez le catalogue {{site.data.keyword.Bluemix_notm}} Labs pour essayer des contextes d'exécution et des services expérimentaux.
 {: shortdesc} 

@@ -18,14 +18,15 @@ Le répertoire racine de l'exemple de projet doit contenir un dossier appelé `.
 `pipeline.yml`.
 
 Lorsqu'un projet est cloné avec le bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.jazzhub_short}} crée
-un pipeline qui s'appuie sur le fichier `pipeline.yml`.  
+un pipeline qui s'appuie sur le fichier `pipeline.yml`. 
 
 Exemple : 
 ``` 
 <base de l'exemple>
 	.bluemix
 		pipeline.yml
-	<autre exemple de contenu>```
+	<autre exemple de contenu>
+```
 {: codeblock} 
 
 Le format de fichier YAML correspond à un document YAML unique qui contient une spécification de pipeline. L'exemple de pipeline
@@ -72,7 +73,7 @@ stages:
       application: JavaSampleUnitTest
     script: |
       cf push "${CF_APP}"
-      # Affichage des journaux 
+      # Affichage des journaux
       #cf logs "${CF_APP}" --recent
 ```
 {: codeblock} 

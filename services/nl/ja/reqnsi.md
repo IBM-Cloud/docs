@@ -5,7 +5,7 @@
 
 #サービス
 {: #services}
-*最終更新日: 2015 年 12 月 7 日*
+*最終更新日: 2015 年 1 月 20 日*
 
 {{site.data.keyword.Bluemix}} ユーザー・インターフェースの**「サービス」**の下の**「カタログ」**で、使用可能なサービスを見つけることができます。
 {:shortdesc}
@@ -61,10 +61,12 @@
 
 
 
-|サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア・シドニー地域で利用可能|
+|サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
 |{{site.data.keyword.appsecshort}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.alertnotificationshort}}|はい		|いいえ			|いいえ		|
 |{{site.data.keyword.APS_DA}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.APS_MA}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.amashort}}			|はい		|はい		|はい|
@@ -87,13 +89,15 @@
 |{{site.data.keyword.geospatialshort_Geospatial}}	|はい	|はい		|いいえ|
 |{{site.data.keyword.globalizationshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.dataworks_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.twittershort}}		|はい		|はい		|いいえ|
+|{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
+|{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.iot_short}}		|はい		|いいえ		|いいえ|
 |{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.messageresonanceshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.APS_MAiOS}} 		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.macm_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.mobilemam}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.mobiledata}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.manda}}			|はい		|はい		|いいえ|

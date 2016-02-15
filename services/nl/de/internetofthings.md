@@ -3,10 +3,9 @@
 # Internet of Things
 {: #internetofthings}
 
-*Letzte Aktualisierung: 19. November 2015*
+*Letzte Aktualisierung: 9. Dezember 2015*
 
-Mit diesen Services können Sie rasch Anwendungen erstellen und erweitern, um
-Daten und Analysen aus verbundenen Einheiten und Sensoren zu Ihrem Vorteil zu nutzen.
+Mit diesen Services können Sie rasch Anwendungen erstellen und erweitern, um Daten und Analysen aus verbundenen Einheiten und Sensoren zu nutzen.
 {: shortdesc}
 
 

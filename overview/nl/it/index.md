@@ -4,7 +4,7 @@
 # Panoramica di {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Ultimo aggiornamento: 20 novembre 2015*
+*Ultimo aggiornamento: 18 gennaio 2016*
 
 {{site.data.keyword.Bluemix}} è la piattaforma open cloud {{site.data.keyword.IBM}} che fornisce agli sviluppatori web e mobili l'accesso
 al software {{site.data.keyword.IBM_notm}} per le funzioni di integrazione, sicurezza, transazione e ad altre funzioni chiave, oltre che al software dai business partner.
@@ -38,12 +38,12 @@ a crescere o a decrescere, quando l'utilizzo o il carico delle applicazioni vari
 Puoi utilizzare {{site.data.keyword.Bluemix_notm}} per sviluppare rapidamente applicazioni nei linguaggi di programmazione più diffusi. Puoi sviluppare le applicazioni mobili in iOS, Android e HTML con JavaScript. Per le applicazioni web, puoi utilizzare linguaggi quali Ruby, PHP, Java&trade;, Go e Python. Inoltre, puoi migrare le applicazioni
 esistenti a {{site.data.keyword.Bluemix_notm}} e utilizzare i runtime forniti da {{site.data.keyword.Bluemix_notm}} per eseguire le tue applicazioni.
 
-{{site.data.keyword.Bluemix_notm}} fornisce anche servizi middleware che possono essere utilizzati dalle applicazioni. {{site.data.keyword.Bluemix_notm}} opera per conto dell'applicazione quando esegue il provisioning di nuove istanze di servizio ed esegue quindi il bind di tali servizi all'applicazione. La tua applicazione può eseguire il suo compito effettivo, lasciando che sia l'infrastruttura a gestire i servizi.
+{{site.data.keyword.Bluemix_notm}} fornisce anche servizi middleware che possono essere utilizzati dalle tue applicazioni. {{site.data.keyword.Bluemix_notm}} opera per conto dell'applicazione quando esegue il provisioning di nuove istanze di servizio ed esegue quindi il bind di tali servizi all'applicazione. La tua applicazione può eseguire il suo compito effettivo, lasciando che sia l'infrastruttura a gestire i servizi.
 
 In generale, non devi preoccuparti dei livelli di infrastruttura e sistema operativo durante l'esecuzione delle applicazioni su {{site.data.keyword.Bluemix_notm}}. I livelli
-quali, ad esempio, i file system root e i componenti middleware sono astratti e pertanto puoi concentrarti sul
+quali, ad esempio, i file system root e i componenti middleware vengono astratti e pertanto puoi concentrarti sul
 codice della tua applicazione. Tuttavia, se hai bisogno di specifiche su dove è in esecuzione
-la tua applicazione, puoi consultare ulteriori informazioni su questi livelli. Per i dettagli, vedi [Visualizzazione dei livelli dell'infrastruttura {{site.data.keyword.Bluemix_notm}}](../cli/viewinfra.html#viewinfra). 
+la tua applicazione, puoi consultare ulteriori informazioni su questi livelli. Per i dettagli, vedi [Visualizzazione dei livelli dell'infrastruttura {{site.data.keyword.Bluemix_notm}}](../cli/vcapsvc.html#viewinfra). 
 
 ## Architettura di {{site.data.keyword.Bluemix_notm}}
 {: #ov_arch}
@@ -114,6 +114,10 @@ IBM utilizza la tecnologia relay per monitorare e gestire in modo sicuro il tuo 
 ![{{site.data.keyword.Bluemix_notm}} locale.](images/localarch.png "Bluemix locale")
 
 *Figura 4. {{site.data.keyword.Bluemix_notm}} locale*
+
+La macchina virtuale di inizio viene eseguita in una rete protetta dal firewall del cliente, una rete che dispone di connettività in uscita al centro operativo di IBM attraverso Relay. I componenti della piattaforma e i servizi principali {{site.data.keyword.Bluemix_notm}} vengono eseguiti in una VLAN (virtual local area network) privata e isolata. {{site.data.keyword.Bluemix_notm}} locale utilizza una VLAN per la sottorete privata. L'utilizzo di una sottorete privata anziché di una VLAN pubblica è più sicuro e può contribuire a evitare problemi di instradamento. 
+
+Le applicazioni DataPower forniscono accesso ai domini dell'applicazione {{site.data.keyword.Bluemix_notm}}. Queste applicazioni si connettono alla rete accessibile mediante la tua Intranet. Gli utenti che distribuiscono le applicazioni e i servizi ottengono l'accesso dalla rete accessibile dalla tua Intranet. Devi fornire sette indirizzi IP che abbiano l'accesso Internet in uscita. Le applicazioni DataPower vengono instradate da questi indirizzi IP del cliente alla distribuzione {{site.data.keyword.Bluemix_notm}} isolata. Per informazioni sulle specifiche di rete e sui requisiti dell'infrastruttura, vedi [Requisiti dell'infrastruttura {{site.data.keyword.Bluemix_notm}} locale](../local/index.html#localinfra).
 
 ### Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}}
 {: #howwork}
@@ -195,11 +199,11 @@ seguenti regioni e i seguenti prefissi di regione.
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nome della regione** | **Prefisso della regione** | **Endpoint API cf** | **Console Interfaccia grafica** |       
-|-----------------|-------------------|---------------------|----------------|
-| Regione del Sud degli USA | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Regione Europa e Regno Unito | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Regione Australia Sydney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Nome della regione** | **Ubicazione geografica** | **Prefisso della regione** | **Endpoint API cf** | **Console Interfaccia grafica** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| Regione Stati Uniti Sud | Dallas, Stati Uniti | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| Regione Regno Unito | Londra, Inghilterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Regione Sydney | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tabella 1. Elenco di regioni {{site.data.keyword.Bluemix_notm}}*
@@ -271,7 +275,7 @@ database, messaggistica, notifiche di push per le applicazioni mobili e memorizz
 in cache flessibile per le applicazioni web.
 
 Puoi creare dei tuoi servizi in {{site.data.keyword.Bluemix_notm}}. Tali servizi possono avere una complessità variabile. Può trattarsi di semplici programmi di utilità, tipo le funzioni che puoi vedere
-in una libreria di runtime. In alternativa, si può trattare della complessa logica di business che puoi osservare in un servizio di modellazione dei processi di business o in un database.
+in una libreria di runtime. In alternativa, si può trattare della complessa logica di business che puoi osservare in un servizio di modellazione dei processi aziendali o in un database.
 
 {{site.data.keyword.Bluemix_notm}} semplifica l'utilizzo di servizi eseguendo il provisioning di nuove istanze del servizio e associando tali istanze del servizio alla tua applicazione. La gestione del servizio è gestita automaticamente da {{site.data.keyword.Bluemix_notm}}. Per tutti i servizi disponibili in {{site.data.keyword.Bluemix_notm}},
 consulta il catalogo nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
@@ -288,7 +292,7 @@ codice applicativo e di una serie di servizi.
 {: #boilerplates}
 
 In {{site.data.keyword.Bluemix_notm}},
-un *contenitore tipo* contiene un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio. È possibile utilizzare un contenitore tipo per essere rapidamente operativi. Puoi ad esempio, selezionare il contenitore tipo Mobile Cloud perché funga da host ad applicazioni web e mobili e accelerare il tempo di sviluppo di script lato server utilizzando SDK e il template di applicazioni mobili.
+un *contenitore tipo* contiene un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio. Puoi usare un contenitore tipo per essere operativo in pochissimo tempo. Puoi ad esempio, selezionare il contenitore tipo Mobile Cloud perché funga da host ad applicazioni web e mobili e accelerare il tempo di sviluppo di script lato server utilizzando SDK e il template di applicazioni mobili.
 
 ### Runtime
 {: #runtimes}
@@ -298,7 +302,7 @@ Un *runtime* è la serie di risorse utilizzata per eseguire un'applicazione. {{s
 ### Pacchetti di build
 {: #buildpacks}
 
-Un pacchetto di build è una raccolta di script che preparano il codice per l'esecuzione sul PaaS di destinazione. Un pacchetto di build raccoglie le dipendenze di runtime e framework di un'applicazione. Li impacchetta quindi con l'applicazione in un droplet che può essere distribuito al cloud.
+Un pacchetto di build è una raccolta di script che preparano il tuo codice per l'esecuzione sul PaaS di destinazione. Un pacchetto di build raccoglie le dipendenze di runtime e framework di un'applicazione. Li impacchetta quindi con l'applicazione in un droplet che può essere distribuito al cloud.
 
 Se non specifichi un pacchetto di build quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}, vengono utilizzati per impostazione predefinita i pacchetti di build integrati.
 
@@ -361,7 +365,7 @@ crei la API Cloud Integration, scegli la risorsa a cui si desideri accedere tram
 documentazione o altri elementi dal provider di servizi. Solo il gestore dell'organizzazione può pubblicare una API Cloud Integration come un servizio privato. Per visualizzare i servizi privati a tua disposizione, seleziona la casella di spunta Privato nel catalogo {{site.data.keyword.Bluemix_notm}}. Puoi selezionare un servizio privato ed eseguire il bind a un'applicazione senza stabilire una connessione al servizio Cloud Integration. Puoi eseguire il bind di servizi privati alla tua applicazione nello stesso modo che adotti per altri servizi {{site.data.keyword.Bluemix_notm}}. Per informazioni su come pubblicare una API come un servizio privato, vedi Pubblicazione di una API come un servizio privato.</dd>
 </dl>
 
-### Scenario: creazione di una completa applicazione mobile per stabilire una connessione al proprio system of record
+### Scenario: creazione di una completa applicazione mobile per stabilire una connessione al tuo system of record
 {: #scenario}
 
 {{site.data.keyword.Bluemix_notm}} fornisce una piattaforma dove puoi integrare l'applicazione mobile, i servizi cloud e i system of record aziendali per fornire un'applicazione che interagisce con i tuoi dati in loco.
@@ -405,7 +409,7 @@ La seguente tabella elenca le lingue nazionali supportate e i codici lingua per 
 | Cinese semplificato | zh_CN |
 | Cinese tradizionale | zh_TW |
 
-*Tabella 3. Lingue nazionali supportate e codici lingua*
+*Tabella 2. Lingue nazionali supportate e codici lingua*
 
 # rellinks
 ## general 
@@ -413,7 +417,7 @@ La seguente tabella elenca le lingue nazionali supportate e i codici lingua per 
 * [Novità in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problemi noti di {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossario](glossary/index.html)
-* [Listino prezzi di {{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [Listino prezzi di {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, una società {{site.data.keyword.IBM_notm}}](http://www.softlayer.com/)
