@@ -8,15 +8,24 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 Hay más información y documentación disponibles sobre el uso de OpenStack Swift y Keystone en el [sitio de documentación de OpenStack](http://docs.openstack.org){: new_window}.
 
+El diagrama de arquitectura de {{site.data.keyword.objectstorageshort}} es el siguiente: 
+
+[![Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+
+*Figura 1. Diagrama de arquitectura de {{site.data.keyword.objectstorageshort}}*
+
 **Nota:** El cifrado del lado del proveedor no se proporciona. Es responsabilidad de la aplicación cliente cifrar datos antes de subirlos.
 
 **Nota:** El plan de {{site.data.keyword.objectstorageshort}} Service Beta se eliminará del catálogo tras la General Availability del {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. Tras un periodo de gracia, se eliminarán las instancias de servicio que utilizan el plan Beta. [Actualice el plan de precios](#changeplan) para continuar utilizando el servicio de {{site.data.keyword.objectstorageshort}}. 
+
+
+
 
 ## Creación de una instancia de {{site.data.keyword.objectstorageshort}} en {{site.data.keyword.Bluemix_notm}} {: #creating-object-storage-instance} 
 
 ### Cómo crear una instancia de servicio de {{site.data.keyword.objectstorageshort}}
 1.	Vaya al separador {{site.data.keyword.Bluemix_notm}} **Catálogo** y especifique **{{site.data.keyword.objectstorageshort}}** en el recuadro de búsqueda, o vaya a **Servicios** y seleccione **Almacenamiento**. Pulse el servicio de **{{site.data.keyword.objectstorageshort}}**. 
-2.	Seleccione el espacio, la app, el nombre de servicio y el plan y pulse **Crear**.
+2.	Seleccione el espacio, la app, el nombre de servicio y el plan y pulse **Crear**. 
 **Nota:** Si al principio ha seleccionado la opción **Dejar sin enlazar** en el campo **App**, aún puede enlazar la instancia de servicio a su aplicación {{site.data.keyword.Bluemix_notm}} después de completar la configuración. Consulte las instrucciones siguientes.
 
 ## Utilización de {{site.data.keyword.objectstorageshort}} desde una app de {{site.data.keyword.Bluemix_notm}} {: #using-object-storage-from-bluemix-app} 
@@ -61,7 +70,7 @@ En la parte superior del panel, visualizará la información de uso de almacenam
 #### Acciones
 Para recuperar los datos de uso más recientes, pulse el botón **Renovar**.   
 ####Navegador de objetos 
-La sección inferior del panel contiene el navegador de objetos.  Utilice este navegador para gestionar los objetos y contenedores de almacenamiento de objetos. Puede crear contenedores, cargar archivos, suprimir contenedores y suprimir archivos, entre otras acciones.
+La sección inferior del panel contiene el navegador de objetos. Utilice este navegador para gestionar los objetos y contenedores de almacenamiento de objetos. Puede crear contenedores, cargar archivos, suprimir contenedores y suprimir archivos, entre otras acciones.
 
 ## Utilización de Swift CLI para acceder a {{site.data.keyword.objectstorageshort}} {: #using-swift-cli}
 
@@ -109,7 +118,7 @@ Puede encontrar los valores de credenciales para el servicio de {{site.data.keyw
 
 ![Credenciales de servicio de {{site.data.keyword.objectstorageshort}}](images/service_credentials.jpg)
 
-*Figura 1. Credenciales de servicio de {{site.data.keyword.objectstorageshort}}*
+*Figura 2. Credenciales de servicio de {{site.data.keyword.objectstorageshort}}*
 
 ### Trabajar con contenedores
 
@@ -197,9 +206,9 @@ Esta clave puede ser cualquiera que seleccione, pero la práctica recomendada es
 El mandato ```tempurl``` de Swift toma estos argumentos de posición:
 
 * [method] GET para permitir la descarga, PUT para permitir la carga
-* [seconds]: tiempo en segundos durante los que el URL estará disponible
-* [path]: la vía de acceso completa del objeto expresada como /v1/<autorización_cuenta>/<nombre_contenedor>/<nombre_objeto>
-* [key]: clave que se establece en el paso 2
+* [seconds] Tiempo en segundos durante los que el URL estará disponible
+* [path] Vía de acceso completa del objeto expresada como /v1/<autorización_cuenta>/<nombre_contenedor>/<nombre_objeto>
+* [key] Clave que se establece en el paso 2
 
 ```
 swift tempurl GET <segundos> <vía_acceso> <clave>
@@ -221,9 +230,9 @@ Por ejemplo:
 
 URL de ![{{site.data.keyword.objectstorageshort}}](images/Swift_URL.png)
 
-*Figura 2. URL de {{site.data.keyword.objectstorageshort}}*
+* Figura 3. URL de {{site.data.keyword.objectstorageshort}}*
 
-El URL consta de cinco partes. Puede encontrar ```<versión de la API>```, ```<ID de proyecto>``, ```<espacio de nombres del contenedor>`` y ```<object namespace>`` del {{site.data.keyword.objectstorageshort}} en la interfaz de usuario de {{site.data.keyword.objectstorageshort}}. Para el ```<punto de acceso>``, consulte la tabla siguiente: 
+El URL consta de cinco partes. La ```<versión de la API>``` es la v1. Puede encontrar el ```<ID de proyecto>``, el ```<espacio de nombres del contenedor>`` y el ```<object namespace>`` de {{site.data.keyword.objectstorageshort}} en la interfaz de usuario de {{site.data.keyword.objectstorageshort}}. Para el ```<punto de acceso>``, consulte la tabla siguiente: 
 
 
 | **Región**  |     **Punto de acceso interno**                             |     **Punto de acceso público**                   |
@@ -242,13 +251,13 @@ Consulte la [Referencia completa de la API de OpenStack Swift](http://developer.
 
 ## Utilización de {{site.data.keyword.objectstorageshort}} entre varias regiones {: #multi-regions}  
 
-El servicio de IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} da soporte a las regiones de almacenamiento Dallas y Londres. Estas regiones de almacenamiento son independientes de la región {{site.data.keyword.Bluemix_notm}}, como por ejemplo EE.UU.-Sur y Reino Unido, en la que se crea la instancia de servicio de {{site.data.keyword.objectstorageshort}}. Por ejemplo, si crea una instancia de {{site.data.keyword.objectstorageshort}} en la región {{site.data.keyword.Bluemix_notm}} EE.UU.-Sur, puede leer y grabar datos a cualquier región de almacenamiento Dallas o Londres.  
+El servicio de IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} da soporte a las regiones de almacenamiento Dallas y Londres. Estas regiones de almacenamiento son independientes de la región {{site.data.keyword.Bluemix_notm}}, como por ejemplo EE.UU.-Sur y Reino Unido, en la que se crea la instancia de servicio de {{site.data.keyword.objectstorageshort}}.  Por ejemplo, si crea una instancia de {{site.data.keyword.objectstorageshort}} en la región {{site.data.keyword.Bluemix_notm}} EE.UU.-Sur, puede leer y grabar datos a cualquier región de almacenamiento Dallas o Londres.  
 
-Para la región {{site.data.keyword.Bluemix_notm}} EE.UU.-Sur, la región de almacenamiento Dallas es el valor predeterminado. Para la región {{site.data.keyword.Bluemix_notm}} Reino Unido, la región de almacenamiento Londres es el valor predeterminado. La interfaz de usuario de {{site.data.keyword.objectstorageshort}} siempre se lanza en la región de almacenamiento predeterminada de la región {{site.data.keyword.Bluemix_notm}}. Para conmutar regiones, pulse la lista desplegable de Región de {{site.data.keyword.objectstorageshort}} y seleccione otra región.
+Para la región {{site.data.keyword.Bluemix_notm}} EE.UU.-Sur, la región de almacenamiento Dallas es el valor predeterminado. Para la región {{site.data.keyword.Bluemix_notm}} Reino Unido, la región de almacenamiento Londres es el valor predeterminado.  La interfaz de usuario de {{site.data.keyword.objectstorageshort}} siempre se lanza en la región de almacenamiento predeterminada de la región {{site.data.keyword.Bluemix_notm}}. Para conmutar regiones, pulse la lista desplegable de Región de {{site.data.keyword.objectstorageshort}} y seleccione otra región.
 
 Región de cambio de ![{{site.data.keyword.objectstorageshort}}](images/change_region.png)
 
-*Figura 3. Región de cambio de {{site.data.keyword.objectstorageshort}}*
+*Figura 4. Región de cambio de {{site.data.keyword.objectstorageshort}}*
 
 **Nota:** El servicio de {{site.data.keyword.objectstorageshort}} NO da soporte a la réplica de la región de almacenamiento cruzada.
 
@@ -402,7 +411,7 @@ El plan de {{site.data.keyword.objectstorageshort}} Service Beta se eliminará d
 
 Cambiar plan de precios de ![{{site.data.keyword.objectstorageshort}}](images/Change_plan.png)
 
-*Figura 4. Cambiar plan de precios de {{site.data.keyword.objectstorageshort}}*
+*Figura 5. Cambiar plan de precios de {{site.data.keyword.objectstorageshort}}*
 
 Las instancias de servicio y los datos del cliente se moverán al nuevo plan.
 
@@ -417,25 +426,42 @@ Las cuentas de prueba que aún están activas podrán utilizar el plan Gratuito,
 
 Las instancias que se crean en el plan Gratuito se pueden actualizar al plan Estándar con los pasos descritos en [¿Cómo puedo cambiar mi plan de Beta a Estándar?](#changeplan). Para actualizar al plan Estándar, la organización asociada debe ser una cuenta de pago de {{site.data.keyword.Bluemix_notm}}. Las cuentas de versión de prueba con instancias de {{site.data.keyword.objectstorageshort}} no se pueden actualizar al plan Estándar, y las instancias del plan Estándar no se pueden degradar a otros planes.
 
+### ¿Cómo se me cobrará y facturará por mi uso de {{site.data.keyword.objectstorageshort}}?
 
+El servicio {{site.data.keyword.objectstorageshort}} sólo le cobrará por lo que utilice. No existe tarifa mínima, cargos de configuración ni compromisos para empezar a utilizar el servicio. No hay ningún cargo por solicitud de API ni por tráfico de red de datos entrante. 
 
-># Enlaces relacionados{:class="linklist"}
+Su uso de {{site.data.keyword.objectstorageshort}} se factura en función del uso de almacenamiento diario medio durante el ciclo de facturación. Esto incluye todos los datos de objetos en contenedores que haya creado bajo su cuenta de organización de {{site.data.keyword.Bluemix_notm}}. 
+
+Se aplica un cargo de Transferencia de datos salientes siempre que se lean datos desde cualquiera de sus contenedores de objetos a través de la red pública. Se factura en función de la transferencia de datos salientes pública diaria media durante el ciclo de facturación. 
+
+Los componentes de la métrica de los precios de {{site.data.keyword.objectstorageshort}} son los siguientes: 
+* Uso de almacenamiento - 0,04 $ por GB al mes
+* Transferencia de datos salientes pública - 0,09 por GB al mes 
+
+Al final del ciclo de facturación, {{site.data.keyword.Bluemix_notm}} le facturará automáticamente por el uso correspondiente al período de facturación actual. Puede ver sus cambios para el período de facturación actual a través de los informes de {{site.data.keyword.Bluemix_notm}}.
+
+El plan de servicio estándar publicado para Londres y Dallas tiene los mismos precios. 
+
+### ¿Cómo se efectúa la réplica de datos en {{site.data.keyword.objectstorageshort}}?
+El servicio de {{site.data.keyword.objectstorageshort}} conserva tres copias de sus datos que se replican a través de múltiples nodos de almacenamiento. Para obtener más información, consulte el documento [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
+
+># Enlaces relacionados {:class="linklist"}
 >## Referencia de API {:id="api"}
 >* [OpenStack Object Storage (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
 >* [OpenStack Identity (Keystone) API v3.0](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
 >
-># Enlaces relacionados{:class="linklist"}
+># Enlaces relacionados {:class="linklist"}
 >## SDK {:id="sdk"}
 >* [OpenStack Software Development Kits (SDK)](https://wiki.openstack.org/wiki/SDKs){: new_window}
 >
-># Enlaces relacionados{:class="linklist"}
+># Enlaces relacionados {:class="linklist"}
 >## Guías de aprendizaje y ejemplos {:id="samples"}
 >* [Conexión a IBM Object Storage for Bluemix con Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 >* [Utilice Python para acceder al Object Storage de Bluemix](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 >* [Comunidad de Object Storage de Bluemix](https://www.ibm.com/developerworks/community/groups/service/html/communityoverview?communityUuid=1b48459f-4091-43cb-bca4-37863606d989){: new_window}
 >
-># Enlaces relacionados{:class="linklist"}
->## Tiempos de ejecución compatibles{:id="buildpacks"}
+># Enlaces relacionados {:class="linklist"}
+>## Tiempos de ejecución compatibles {:id="buildpacks"}
 >* [Liberty for Java](https://www.ng.bluemix.net/docs/starters/liberty/index.html){: new_window}
 >* [SDK for Node.js](https://www.ng.bluemix.net/docs/starters/nodejs/index.html){: new_window}
 >* [Ir](https://www.ng.bluemix.net/docs/starters/go/index.html){: new_window}
@@ -444,8 +470,8 @@ Las instancias que se crean en el plan Gratuito se pueden actualizar al plan Est
 >* [Ruby](https://www.ng.bluemix.net/docs/starters/rails/index.html){: new_window}
 >* [Compilaciones de la comunidad](https://www.ng.bluemix.net/docs/starters/byob.html){: new_window}
 >
-># Enlaces relacionados{:class="linklist"}
->## Enlaces relacionados{:id="general"}
+># Enlaces relacionados {:class="linklist"}
+>## Enlaces relacionados {:id="general"}
 >* [Hoja de precios de IBM Bluemix](https://www.ng.bluemix.net/#/pricing){: new_window}
 >* [Requisitos previos de IBM Bluemix](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
 >

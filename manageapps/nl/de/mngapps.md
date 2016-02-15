@@ -4,11 +4,10 @@
 #Anwendungen verwalten
 {: #manageapps}
 
-*Letzte Aktualisierung: 4 Dezember 2015*
+*Letzte Aktualisierung: 4. Dezember 2015*
 
 Mithilfe des Dashboards in der {{site.data.keyword.Bluemix}}-Benutzerschnittstelle
-können Sie Ihre Anwendungen und Services anzeigen und verwalten sowie die Ressourcennutzung anhand der Messanzeigen für Kontingente überwachen. 
-{:shortdesc}
+können Sie Ihre Anwendungen und Services anzeigen und verwalten sowie die Ressourcennutzung anhand der Messanzeigen für Kontingente überwachen. {:shortdesc}
 
 Der Anwendungsabschnitt im Dashboard enthält Übersichtsinformationen zu den von Ihnen erstellten Anwendungen. Diese
 Übersichtsinformationen umfassen den Namen, das Symbol, die URL, die Laufzeit und den Ausführungsstatus der entsprechenden Anwendung sowie die an sie gebundenen
@@ -44,15 +43,11 @@ Informationen zu einer Anwendung anzuzeigen, klicken Sie auf die entsprechende K
 
 **Hinweis:** Es können jeweils immer nur die Ressourcen einer einzelnen Organisation angezeigt
 werden. Wenn Sie Mitglied mehrerer Organisationen sind, können Sie zwischen Organisationen umschalten,
-indem in der Kopfzeile des Dashboards neben der angezeigten Organisation auf
+indem Sie in der Kopfzeile des Dashboards neben der angezeigten Organisation auf
 das Symbol **Organisation ändern** klicken. 
 
-
-Nachdem eine Anwendung bereitgestellt wurde, können Sie die
-Anwendung starten, stoppen oder erneut starten oder (im Falle von
-Webanwendungen) die Anzahl der Instanzen sowie die von der Anwendung verwendete
-Speichermenge ändern.
+Nachdem eine Anwendung bereitgestellt wurde, können Sie die Anwendung starten, stoppen oder erneut starten oder (im Falle von Webanwendungen) die Anzahl der Instanzen sowie die von der Anwendung verwendete Speichermenge ändern.
 Gegenwärtig führt {{site.data.keyword.Bluemix_notm}} für Webanwendungen keine automatische Skalierung der Anwendungen auf Basis der jeweiligen Auslastung durch, weshalb Sie sich um diesen Aspekt selbst kümmern müssen. 
 
 Nach einer Aktualisierung können Anwendungen
-erneut bereitgestellt werden. Der Mechanismus zum Aktualisieren der Anwendung ist mit dem identisch, der für die ursprüngliche Bereitstellung verwendet wurde. {{site.data.keyword.Bluemix_notm}} stoppt alle aktiven Instanzen und ersetzt sie automatisch mit neuen Instanzen. 
+erneut bereitgestellt werden. Der Mechanismus zum Aktualisieren der Anwendung ist mit dem identisch, der für die ursprüngliche Bereitstellung verwendet wurde. {{site.data.keyword.Bluemix_notm}} stoppt alle aktiven Instanzen und ersetzt sie automatisch durch neue Instanzen. 

@@ -12,8 +12,7 @@ Wenn Sie im
 keinen Starter finden, der die gewünschte Laufzeitumgebung bereitstellt, können Sie ein
 externes Buildpack in {{site.data.keyword.Bluemix_notm}} integrieren.
 Sie können ein angepasstes, mit Cloud Foundry kompatibles Buildpack angeben, wenn Sie Ihre App
-mithilfe des Befehls 'cf push' bereitstellen. 
-{:shortdesc}
+mithilfe des Befehls 'cf push' bereitstellen. {:shortdesc}
 
 Externe Buildpacks werden Ihnen von der Cloud Foundry-Community für die Verwendung als eigene Buildpacks zur Verfügung gestellt. Bevor Sie Ihre App für
 {{site.data.keyword.Bluemix_notm}} bereitstellen, müssen

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map linking="sourceonly" xml:lang="fr-fr">
+<title>Mobile Client Access</title>
+<topicref href="index.html" linking="sourceonly" format="html" scope="peer"
+    navtitle="Mobile Client Access">
+    <topicref href="overview.html" format="html" scope="peer" navtitle="Présentation" 
+      outputclass="subsection">
+      <topicref href="sdks-samples-apis.html" format="html" scope="peer"
+        navtitle="Logiciels SDK, exemples et référence d'API"/>
+    </topicref>
+    <topicref navtitle="Initiation" outputclass="subsection" href="getting-started.html"
+      format="html" scope="peer">
+      <topicref href="getting-started-android.html" format="html" scope="peer" navtitle="Android"/>
+      <topicref href="getting-started-cordova.html" format="html" scope="peer" navtitle="Cordova"/>
+      <topicref href="getting-started-ios.html" format="html" scope="peer" navtitle="iOS"/>
+    </topicref>
+    <topicref href="protecting-resources.html" format="html" scope="peer"
+      navtitle="Protection des ressources de cloud" outputclass="subsection">
+      <topicref href="protecting-resources-nodejs.html" format="html" scope="peer"
+        navtitle="Node.js"/>
+      <topicref href="protecting-resources-java.html" format="html" scope="peer"
+        navtitle="Liberty for Java"/>
+      <topicref href="protecting-resources-local.html" format="html" scope="peer"
+        navtitle="Développement local"/>
+    </topicref>
+    <topicref href="facebook-auth-overview.html" navtitle="Authentification Facebook" format="html"
+      scope="peer" outputclass="subsection">
+      <topicref href="facebook-auth-android.html" format="html" scope="peer" navtitle="Android"/>
+      <topicref href="facebook-auth-cordova.html" format="html" scope="peer" navtitle="Cordova"/>
+      <topicref href="facebook-auth-ios.html" format="html" scope="peer" navtitle="iOS"/>
+    </topicref>
+    <topicref  href="google-auth-overview.html" navtitle="Authentification Google"
+      format="html" scope="peer" outputclass="subsection">
+      <topicref href="google-auth-android.html" format="html" scope="peer" navtitle="Android"/>
+      <topicref href="google-auth-cordova.html" format="html" scope="peer" navtitle="Cordova"/>
+      <topicref href="google-auth-ios.html" format="html" scope="peer" navtitle="iOS"/>
+    </topicref>
+    <topicref  href="custom-auth.html" navtitle="Authentification personnalisée" format="html"
+      scope="peer" outputclass="subsection">
+      <topicref href="custom-auth-identity-provider.html" format="html" scope="peer"
+        navtitle="Configuration d'un fournisseur d'identité"/>
+      <topicref href="custom-auth-config-mca.html" format="html" scope="peer"
+        navtitle="Configuration de l'authentification personnalisée pour Mobile Client Access"/>
+      <topicref href="custom-auth-android.html" format="html" scope="peer" navtitle="Android"/>
+      <topicref href="custom-auth-cordova.html" format="html" scope="peer" navtitle="Cordova"/>
+      <topicref href="custom-auth-ios.html" format="html" scope="peer" navtitle="iOS"/>
+    </topicref>
+    <topicref  href="advanced-topics.html" navtitle="Scénarios avancés" format="html"
+      scope="peer" outputclass="subsection">
+      <topicref href="advanced-topics-touchid.html" format="html" scope="peer"
+        navtitle="Sécurisation de l'autorisation avec Touch ID"/>
+      <topicref href="advanced-topics-oauthsdk.html" format="html" scope="peer"
+        navtitle="Communications de système de back end à système de back end"/>
+      <topicref href="advanced-topics-IMFURLProtocol.html" format="html" scope="peer"
+        navtitle="Utilisation d'IMFURLProtocol dans les applications iOS"/>
+    </topicref>
+    <topicref  href="app-monitoring.html" navtitle="Surveillance des applications" format="html"
+      scope="peer" outputclass="subsection">
+      <topicref href="app-monitoring-logger.html" format="html" scope="peer" navtitle="Logger"/>
+      <topicref href="app-monitoring-gathering-analytics.html" format="html" scope="peer"
+        navtitle="Collecte des données d'analyse"/>
+    </topicref>
+  </topicref>
+  <topicref href="idproviders.ditamap" type="ditamap"/>
+</map>
+

@@ -3,8 +3,7 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Textbasierte Pipelines in Beispielprojekten von {{site.data.keyword.jazzhub_short}} gemeinsam nutzen
-{: #share-pipeline}
+#Textbasierte Pipelines in Beispielprojekten von {{site.data.keyword.jazzhub_short}} gemeinsam nutzen {: #share-pipeline}
 
 *Letzte Aktualisierung: 7. Dezember 2015* 
 
@@ -170,10 +169,7 @@ Informationen zu den für eine Erweiterung verfügbaren Eigenschaften finden Sie
 **Umgebungsvariablen und Auflösung** 
 <!-- Formating for this? -->
 
-Bevor die Pipeline aus einer Datei des Typs `pipeline.yml`
-erstellt wird, werden durch die Funktion 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' alle Umgebungsvariablen
-in der Datei durch Informationen ersetzt, die Sie in der {{site.data.keyword.Bluemix_notm}}-Schnittstelle angeben
-(z. B. Ihre Organisation betreffend). YAML-Werte werden nur verwendet, wenn sie ausschließlich aus einer Umgebungsvariablen bestehen.  
+Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden durch die Funktion 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' alle Umgebungsvariablen in der Datei durch Informationen ersetzt, die Sie in der {{site.data.keyword.Bluemix_notm}}-Schnittstelle angeben (z. B. Ihre Organisation betreffend). YAML-Werte werden nur verwendet, wenn sie ausschließlich aus einer Umgebungsvariablen bestehen.  
 
 ```
 {

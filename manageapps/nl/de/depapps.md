@@ -6,13 +6,10 @@
 #Anwendungen bereitstellen
 {: #deployingapps}
 
-*Letzte Aktualisierung: 4 Dezember 2015*
+*Letzte Aktualisierung: 4. Dezember 2015*
 
-Sie können Anwendungen anhand verschiedener Methoden
-für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle
-oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei
-Verwendung eines
-Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen. {:shortdesc}
+Sie können Anwendungen anhand verschiedener Methoden für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei Verwendung eines Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen.
+{:shortdesc}
 
 ##Anwendungsbereitstellung
 {: #appdeploy}
@@ -26,12 +23,12 @@ Anwendung.
 Während der Staging-Phase werden die Informationen, die Sie in der
 Befehlszeilenschnittstelle 'cf' oder in der Datei `manifest.yml` angeben, von einem Droplet Execution Agent (DEA) verwendet, um zu entscheiden,
 was für das Staging der Anwendung erstellt werden muss. Der DEA wählt ein geeignetes Buildpack für das Staging Ihrer Anwendung aus, und das Ergebnis des
-Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie im Thema
+Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie unter
 [{{site.data.keyword.Bluemix_notm}}-Architektur, Funktionsweise von {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch). 
 
 Während des Staging-Prozesses überprüft der DEA, ob das Buildpack
 mit der Anwendung übereinstimmt, d. h. für diese geeignet ist. Beispiel: eine Liberty-Laufzeit für eine .war-Datei oder eine Node.js-Laufzeit für .js-Dateien. Anschließend erstellt der DEA einen isolierten Container, der das Buildpack und den Anwendungscode enthält. Der Container wird von der Komponente 'Warden'
-verwaltet. Weitere Informationen finden Sie in dem Abschnitt zum [Staging von Anwendungen](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
+verwaltet. Weitere Informationen finden Sie unter [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
 ###Starten einer Anwendung
 
@@ -46,9 +43,7 @@ Wenn die Protokolle für Ihre Anwendung nicht mehr verfügbar sind, sodass auch 
 **cf logs** verwenden. Der Befehl **cf logs** verwendet den Cloud Foundry-Protokollaggregator, um die
 Details Ihrer Anwendungsprotokolle
 und Systemprotokolle zu erfassen, und Sie können den im Protokollaggregator gepufferten Inhalt anzeigen. Weitere Informationen zum Protokollaggregator finden
-Sie im Thema
-[Protokollierung
-in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}. 
+Sie unter [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}. 
 
 **Hinweis:** Die Puffergröße ist begrenzt. Wenn eine Anwendung über einen langen Zeitraum ausgeführt wird und nicht erneut gestartet wird,
 kann es sein, dass nach Eingabe von `cf logs App-Name --recent` keine Protokolle angezeigt werden, weil der Inhalt des Protokollpuffers möglicherweise gelöscht worden
@@ -86,8 +81,7 @@ den folgenden Befehl:
   cf push
   ```
   
-  Weitere Informationen zum Liberty-Buildpack finden Sie im Thema
-[Liberty for Java](../starters/liberty/index.html#liberty).
+  Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](../starters/liberty/index.html#liberty).
   
   * Um Java Tomcat-Anwendungen für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden
 Befehl: 
@@ -139,13 +133,13 @@ Die Datei `package.json` muss sich in Ihrer Node.js-Anwendung befinden, damit di
     
   Weitere Informationen zur Datei `package.json` finden Sie unter [package.json](https://www.npmjs.org/doc/files/package.json.html){:new_window}. 
   
-  * Um PHP-, Ruby- oder Python-Anwendungen in {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl aus dem Verzeichnis, das die Anwendungsquelle enthält:
+  * Um PHP-, Ruby- oder Python-Anwendungen in {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl in dem Verzeichnis, das die Anwendungsquelle enthält:
   
   ```
   cf push App-Name
   ```
 
-###Eine App in mehreren Bereichen bereitstellen
+###Bereitstellung einer App in mehreren Bereichen
 
 Eine App ist für den Bereich, in dem sie bereitgestellt wird, spezifisch.
 Es ist nicht möglich, eine App von einem Bereich in
@@ -163,7 +157,7 @@ verwenden Sie hierfür den Befehl **cf target** zusammen mit der Option **-s**:
   ```
   
   2. Stellen Sie Ihre App mithilfe des Befehls **cf push** bereit;
-dabei muss App-Name in Ihrer Domäne eindeutig sein. 
+dabei muss der App-Name in Ihrer Domäne eindeutig sein. 
   
   ```
   cf push App-Name
@@ -201,11 +195,11 @@ cf push -f appManifest.yml
 |**disk_quota**	|Das Datenträgerkontingent, das einer Anwendung zugeordnet wird.
 Der Standardwert ist 1 GB. 	|`disk_quota: 500M`|
 |**domain**	|Der Domänenname der Anwendung in {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
-|**host**	|Der Hostname der Anwendung in {{site.data.keyword.Bluemix_notm}}. Dieser Wert muss in der {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.	|`host: ` *Hostname*|
+|**host**	|Der Hostname der Anwendung in {{site.data.keyword.Bluemix_notm}}. Dieser Wert muss in der {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.	|`host:` *Hostname*|
 |**name**	|Der Anwendungsname in {{site.data.keyword.Bluemix_notm}}. Dieser Wert muss in der {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.	|`name:` *App-Name*|
-|**path**	|Die Position Ihrer Anwendung. Dieser Wert kann entweder ein relativer Pfad oder ein absoluter Pfad sein. 	|`path: ` *Pfad zur Anwendung*|
+|**path**	|Die Position Ihrer Anwendung. Dieser Wert kann entweder ein relativer Pfad oder ein absoluter Pfad sein. 	|`path:` *Pfad zur Anwendung*|
 |**command**	|Der angepasste Startbefehl für Ihre Anwendung
-oder der Befehl für die Ausführung von Scriptdateien. 	|`command:` *angepasster Befehl* `command:` *bash ./run.sh*|
+oder der Befehl für die Ausführung von Scriptdateien. 	|`command:` *Angepasster Befehl* `command:` *bash ./run.sh*|
 |**memory**	|Die Speicherkapazität, die der Anwendung zugeordnet werden soll. Der Standardwert ist 1 GB.	|`memory: 512M`|
 |**instances**	|Die Anzahl der Instanzen, die für Ihre Anwendung erstellt werden sollen. 	|`instances: 2`|
 |**timeout**	|Die für den Start der Anwendung zulässige Höchstdauer in Sekunden. Der Standardwert ist 60 Sekunden. 	|`timeout: 80`|
@@ -244,18 +238,12 @@ Das folgende Beispiel zeigt eine Manifestdatei für eine Node.js-Anwendung, die 
 ##Umgebungsvariablen
 {: #app_env}
 
-Umgebungsvariablen enthalten Information zur Umgebung einer in {{site.data.keyword.Bluemix_notm}} bereitgestellten Anwendung. Neben den Umgebungsvariablen, die von einem *Droplet Execution Agent (DEA)* und Buildpacks festgelegt werden, können Sie auch anwendungsspezifische Umgebungsvariablen für Anwendungen in {{site.data.keyword.Bluemix_notm}} festlegen.
+Umgebungsvariablen enthalten Informationen zur Umgebung einer in {{site.data.keyword.Bluemix_notm}} bereitgestellten Anwendung. Neben den Umgebungsvariablen, die von einem *Droplet Execution Agent (DEA)* und Buildpacks festgelegt werden, können Sie auch anwendungsspezifische Umgebungsvariablen für Anwendungen in {{site.data.keyword.Bluemix_notm}} festlegen.
 
 Die folgenden Umgebungsvariablen einer aktiven {{site.data.keyword.Bluemix_notm}}-Anwendung können Sie mit dem Befehl **cf env** oder über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen: 
 
-  * Benutzerdefinierte Variablen, die für eine Anwendung spezifisch sind. Anwendungsspezifische Variablen können Sie mit dem Befehl **cf set-env** oder durch Konfiguration von Wertepaaren in der Datei [`manifest.yml`](#appmanifest) wie folgt festlegen:
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * Benutzerdefinierte Variablen, die für eine Anwendung spezifisch sind. Informationen dazu, wie eine benutzerdefinierte Variable einer App hinzugefügt wird, finden Sie in [Benutzerdefinierte Umgebungsvariablen hinzufügen](#ud_env){:new_window}.
+	  
   * Die Variable VCAP_SERVICES, die Verbindungsinformationen für den Zugriff auf eine Serviceinstanz enthält. Ist Ihre Anwendung an mehrere Services gebunden, so enthält die Variable VCAP_SERVICES die Verbindungsinformationen für jede einzelne Serviceinstanz. Beispiel: 
   
   ```
@@ -324,7 +312,7 @@ Sie können auf die vom DEA und von den Buildpacks festgelegten Umgebungsvariabl
   <dd>Die IP-Adresse des DEA-Hosts.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Eine JSON-Zeichenfolge, die Informationen zur bereitgestellten Anwendung enthält. Die Informationen umfassen den Anwendungsnamen, die URIs, die
-Speicherbegrenzungen, die Zeitmarke bei Erreichen des aktuellen Anwendungsstatus etc. Beispiel: 
+Speicherbegrenzungen, die Zeitmarke bei Erreichen des aktuellen Anwendungsstatus usw. Beispiel: 
   <pre class="pre codeblock"><code>
   {
     "limits": {
@@ -413,15 +401,13 @@ Speicherbegrenzungen, die Zeitmarke bei Erreichen des aktuellen Anwendungsstatus
 </li>
 </ul>	
 	
-Weitere Informationen zu den einzelnen Umgebungsvariablen finden Sie im Thema
-[Cloud Foundry-Umgebungsvariablen](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
+Weitere Informationen zu den einzelnen Umgebungsvariablen finden Sie unter [Cloud Foundry-Umgebungsvariablen](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Anwendungsbereitstellungen anpassen
 {: #customize_dep}
 
 Sie können Bereitstellungstasks für Ihre Anwendungen anpassen.
-So können Sie beispielsweise die Startbefehle für ihre Anwendungen angeben und Ihre Anwendungsstartumgebung konfigurieren. 
-{:shortdesc}
+So können Sie beispielsweise die Startbefehle für ihre Anwendungen angeben und Ihre Anwendungsstartumgebung konfigurieren. {:shortdesc}
 
 ### Startbefehle angeben
 
@@ -431,7 +417,7 @@ Die vom Buildpack bereitgestellten standardmäßigen Startbefehle werden durch d
 **Hinweis:** Wenn die Startbefehle
 des Buildpacks Vorrang haben sollen, geben Sie **null** als Startbefehl an.
 
-  * Verwenden Sie den Befehl **cf push** und geben Sie den Parameter -c an. Wenn Sie beispielsweise eine Node.js-Anwendung bereitstellen, können Sie den Startbefehl **node app.js** im Parameter
+  * Verwenden Sie den Befehl **cf push** und geben Sie den Parameter '-c' an. Wenn Sie beispielsweise eine Node.js-Anwendung bereitstellen, können Sie den Startbefehl **node app.js** im Parameter
 '-c' angeben:
 
   
@@ -445,6 +431,33 @@ des Buildpacks Vorrang haben sollen, geben Sie **null** als Startbefehl an.
   ```
   command: node app.js
   ```
+  
+  
+  
+### Benutzerdefinierte Umgebungsvariablen hinzufügen
+{: #ud_env}
+
+Benutzerdefinierte Umgebungsvariablen sind für eine Anwendung spezifisch. Sie haben die folgenden Möglichkeiten, einer aktiven App eine benutzerdefinierte Umgebungsvariable hinzuzufügen:
+
+  * Verwenden Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle. Führen Sie die folgenden Schritte aus:
+    1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Kachel Ihrer App. Die Detailseite für die App wird angezeigt.
+	2. Klicken Sie im linken Navigationsbereich auf **Umgebungsvariablen**.
+	3. Klicken Sie auf **USER-DEFINED** (Benutzerdefiniert) und anschließend auf **ADD** (Hinzufügen).
+	4. Füllen Sie die erforderlichen Felder aus und klicken Sie auf **SAVE** (Speichern).
+  * Verwenden Sie die Befehlszeilenschnittstelle 'cf'. Fügen Sie eine benutzerdefinierte Variable mit dem Befehl `cf set-env` hinzu. Beispiel: 
+  ```
+    cf set-env appname Umgebungsvariablenname Umgebungsvariablenwert
+    ```
+	
+  * Mithilfe der Datei `manifest.yml`. Fügen Sie Wertepaare in der Datei hinzu. Beispiel:
+  ```
+	env:
+      VAR1:wert1
+      VAR2:wert2
+    ```
+	
+
+
   
 ### Startumgebung konfigurieren
 
@@ -472,15 +485,7 @@ erstellen.
 **Hinweis:** Die Datei `.cfignore` muss
 das UTF-8-Format aufweisen. 
 
-Die Datei mit der Endung `.cfignore`
-enthält die Namen der Dateien und Verzeichnisse, die Sie ignorieren möchten; dabei steht
-jeder Name in einer einzelnen Zeile. Sie können einen Stern (*) als Platzhalterzeichen verwenden.
-Wenn Sie ein Verzeichnis angeben, werden zudem alle Dateien und Unterverzeichnisse in
-diesem Verzeichnis ignoriert. Der folgende Inhalt der Datei
-mit der Endung `.cfignore` gibt z. B. an, dass alle Dateien
-mit der Endung `.swp` und alle Dateien und
-Unterverzeichnisse des Verzeichnisses `tmp/`
-nicht nach {{site.data.keyword.Bluemix_notm}} hochgeladen werden. 
+Die Datei mit der Endung `.cfignore` enthält die Namen der Dateien und Verzeichnisse, die Sie ignorieren möchten; dabei steht jeder Name in einer einzelnen Zeile. Sie können einen Stern (*) als Platzhalterzeichen verwenden. Wenn Sie ein Verzeichnis angeben, werden zudem alle Dateien und Unterverzeichnisse in diesem Verzeichnis ignoriert. Der folgende Inhalt der Datei mit der Endung `.cfignore` gibt z. B. an, dass alle Dateien mit der Endung `.swp` und alle Dateien und Unterverzeichnisse des Verzeichnisses `tmp/` nicht nach {{site.data.keyword.Bluemix_notm}} hochgeladen werden. 
 
 ```
 *.swp
