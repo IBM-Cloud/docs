@@ -181,7 +181,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
     {{site.data.keyword.IBM_notm}} Containers are used to run Docker containers in a hosted cloud environment. Docker adds an engine that deploys an app to the virtual environment that you use for running your containers. Docker also provides an environment that you can use to run your code. When you're ready, it provides the means by which you can transfer the code from your development environment, to your test environment, and then to your production environment.
 
-    To find out more about {{site.data.keyword.IBM_notm}} Containers, see [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) in the Creating Web Apps documentation.</dd>
+    To find out more about {{site.data.keyword.IBM_notm}} Containers, see [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
 <dt>Virtual Machines (BETA)</dt>
     <dd>The {{site.data.keyword.Bluemix_notm}} virtual machines infrastructure gives you the ability to create and manage virtual machine groups on the {{site.data.keyword.IBM_notm}} public cloud. You can also create and manage VM groups on your private {{site.data.keyword.IBM_notm}} clouds that you’ve chosen to make available to {{site.data.keyword.Bluemix_notm}} users. The infrastructure includes a guided experience to connect to your on-premises infrastructure. Support for monitoring and logging is integrated into {{site.data.keyword.Bluemix_notm}}. You can deploy and manage your virtual machines by using either the {{site.data.keyword.Bluemix_notm}} user interface or the cloud's OpenStack APIs.
 
