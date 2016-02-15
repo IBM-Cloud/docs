@@ -86,7 +86,7 @@ See the following example:
   "description": "this is my app",
   "version": "0.1",
   "engines": {
-     "node": "4.2.4"
+     "node": "4.2.4",
      "npm": "2.11.3"
   }
 }
