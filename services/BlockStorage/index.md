@@ -4,9 +4,9 @@
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction intensive workloads and runtimes in need of persistent storage.
 
-You can use IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} to create {{site.data.keyword.blockstorageshort}} volumes that can be attached to virtual machines. The data in block storage volumes persists beyond the lifecycle of your virtual machines. IBM {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
+You can use IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.Bluemix_notm}} to create {{site.data.keyword.blockstorageshort}} volumes that can be attached to virtual servers. The data in block storage volumes persists beyond the lifecycle of your virtual servers. IBM {{site.data.keyword.blockstorageshort}} uses OpenStack Cinder to manage the volume lifecycle.
 
-{{site.data.keyword.blockstorageshort}} volumes are created through an IBM {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual machine under a particular device that you provide or the system can automatically select an available device name. The virtual machine performs its I/O operations directly with the specified device independent of the {{site.data.keyword.blockstorageshort}} service.
+{{site.data.keyword.blockstorageshort}} volumes are created through an IBM {{site.data.keyword.blockstorageshort}} service instance. You can attach the volumes to a virtual server under a particular device that you provide or the system can automatically select an available device name. The virtual server performs its I/O operations directly with the specified device independent of the {{site.data.keyword.blockstorageshort}} service.
 
 You can also create block-level snapshots of volumes. {{site.data.keyword.blockstorageshort}} service does not allow the creation of snapshots while the volume is attached, so the resulting snapshots will be crash-consistent. 
 
@@ -27,7 +27,7 @@ The header includes the date and time of the last UI refresh. You can use the re
 
 Use the search bar to find volumes based on the string that you enter. The tables are filtered as you type to show only the volumes that match the entered search string.
 
-Below the overview are two tabs for volumes and snapshots. The volume tab is selected by default. The tables on this tab list detailed information about available and attached volumes. Each row in a table shows the most important properties of a volume. More properties are visible when you expand a row. Attached volumes also show the virtual machine instance and the device that the volume is attached to. 
+Below the overview are two tabs for volumes and snapshots. The volume tab is selected by default. The tables on this tab list detailed information about available and attached volumes. Each row in a table shows the most important properties of a volume. More properties are visible when you expand a row. Attached volumes also show the virtual server instance and the device that the volume is attached to. 
 
 The snapshot tab shows a table of snapshots with similar properties and behavior. 
 
@@ -52,10 +52,10 @@ Creating a volume can take a few moments.
 2.	Click **Delete**.
 3.	Confirm the deletion of this volume.
 
-You cannot delete a volume that is attached to a virtual machine. You must detach the volume first.
+You cannot delete a volume that is attached to a virtual server. You must detach the volume first.
 
 ### Extend a volume
-You can increase the volume in size through the **Extend** action. You cannot reduce the size of a volume.
+You can increase the volume in size to up to ten times the original size through the **Extend** action. You cannot reduce the size of a volume.
 
 1.	Select the volume to be extended.
 2.	Click **Extend**.
@@ -64,19 +64,19 @@ You can increase the volume in size through the **Extend** action. You cannot re
 
 To be extended, a volume must be in **Available** state. 
 
-### Attach and detach a volume to a virtual machine
-Volumes are attached and detached from virtual machines as devices with a specific device name. For a virtual machine to be able to persist data on a volume, you must attach the volume to the virtual machine.
+### Attach and detach a volume to a virtual server
+Volumes are attached and detached from virtual servers as devices with a specific device name. For a virtual server to be able to persist data on a volume, you must attach the volume to the virtual server.
 
 To attach a volume, follow these steps: 
 
 1.	Select a volume from the list of available volumes.
 2.	Click **Attach**.
-3.	In the Attach dialog, select an instance of a virtual machine from the drop-down list. 
-4.	Optionally, specify the device to be used to attach this volume. If you do not specify the device, the system automatically selects the first available device on the virtual machine.
+3.	In the Attach dialog, select an instance of a virtual server from the drop-down list. 
+4.	Optionally, specify the device to be used to attach this volume. If you do not specify the device, the system automatically selects the first available device on the virtual server.
 5.	Click **Attach** to submit the information and close the dialog.
 
-The volume is listed in the table of attached volumes with the information about the virtual machine instance. 
-The virtual machine can now use the device to persist data. 
+The volume is listed in the table of attached volumes with the information about the virtual server instance. 
+The virtual server can now use the device to persist data. 
 
 To detach a volume, follow these steps: 
 
@@ -84,7 +84,7 @@ To detach a volume, follow these steps:
 2.	Click **Detach**.
 3.	Confirm the detachment in the dialog. 
 
-After it is detached, the volume is no longer available for I/O operations in the virtual machine instance. In the {{site.data.keyword.blockstorageshort}} service UI, the volume is now available to be attached to other virtual machines.
+After it is detached, the volume is no longer available for I/O operations in the virtual server instance. In the {{site.data.keyword.blockstorageshort}} service UI, the volume is now available to be attached to other virtual servers.
 
 ## Snapshot actions
 
