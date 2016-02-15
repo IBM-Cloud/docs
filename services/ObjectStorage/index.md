@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# Getting started with {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage} 
+# Getting started with {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} provides you with access to a fully provisioned Swift {{site.data.keyword.objectstorageshort}} account to manage your data. Swift provides a fully distributed, API-accessible storage platform. You can use it directly in your applications or for backups, making it ideal for cost effective, scale-out storage.
 
@@ -74,7 +74,7 @@ The bottom section of the panel contains the object browser. Use the object brow
 
 ## Using the Swift CLI to access {{site.data.keyword.objectstorageshort}} {: #using-swift-cli}
 
-You can access the {{site.data.keyword.objectstorageshort}} service over the Internet and from applications and virtual machines within IBM {{site.data.keyword.Bluemix_notm}}. Common use cases for the {{site.data.keyword.objectstorageshort}} service are as follows:
+You can access the {{site.data.keyword.objectstorageshort}} service over the Internet and from applications and virtual servers within IBM {{site.data.keyword.Bluemix_notm}}. Common use cases for the {{site.data.keyword.objectstorageshort}} service are as follows:
 
 * Backing up volume data from your instances
 * Using as an intermediary location when you transfer large amounts of data
@@ -235,15 +235,14 @@ For example:
 The URL consists of five parts. The ```<API version>``` is v1. You can find the  ```<project ID>```, ```<container namespace>```, and ```<object namespace>``` of your {{site.data.keyword.objectstorageshort}} from the {{site.data.keyword.objectstorageshort}} user interface.  For the ```<access point>```, see the following table: 
 
 
-| **Region**  |     **Internal access point**                             |     **Public access point**                   |
-|-------------|-----------------------------------------------------------|-----------------------------------------------|
-| Dallas      | https://dal.objectstorage.service.open.networklayer.com/  | https://dal.objectstorage.open.softlayer.com/ | 
-| London      | https://lon.objectstorage.service.open.networklayer.com/  | https://lon.objectstorage.open.softlayer.com/ |
+| **Region**  |   **Public access point**                     |
+|-------------|-----------------------------------------------|
+| Dallas      | https://dal.objectstorage.open.softlayer.com/ | 
+| London      | https://lon.objectstorage.open.softlayer.com/ |
 
 
 *Table 1. {{site.data.keyword.objectstorageshort}} access point*
 
-Use the internal access point when you access the {{site.data.keyword.objectstorageshort}} service from inside {{site.data.keyword.Bluemix_notm}} or the public access point when you access the {{site.data.keyword.objectstorageshort}} service from outside of {{site.data.keyword.Bluemix_notm}}.
 
 ### {{site.data.keyword.objectstorageshort}} API
 
@@ -382,8 +381,9 @@ An example response is as follows:
 	 "user": {"domain": {"id": "default", "name": "Default"}, "id": "3ec3164f750146be97f21559ee4d9c51", "name": "admin"},  "issued_at": "2014-06-10T20:40:14.360822Z"}}
 
 
-The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the Service Catalog with type of ```object-store```, region that matches the region field in the credentials, and internal interface (`internalURL`) when you access the {{site.data.keyword.objectstorageshort}} service from inside {{site.data.keyword.Bluemix_notm}} or public interface (`publicURL`) when you access the {{site.data.keyword.objectstorageshort}} service from outside of {{site.data.keyword.Bluemix_notm}}.
+The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the Service Catalog with type of ```object-store``` and the region that matches the region field in the credentials.
 
+**Note:** Use the public interface (`publicURL`). The internal interface (`internalURL`) is not accessible from {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Unbinding and deprovisioning {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
