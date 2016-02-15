@@ -1,6 +1,6 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} (BETA) 入门{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} 入门{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} 为您提供了对完整供应的 Swift {{site.data.keyword.objectstorageshort}} 帐户的访问权，以用于管理您的数据。Swift 提供了一个可通过 API 访问的全分布式存储平台。您可以直接在应用程序中使用 Swift，或将其用于备份，因此最适合用于高性价比的向外扩展存储。
 
@@ -10,7 +10,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 {{site.data.keyword.objectstorageshort}} 体系结构图如下所示：
 
-[![{{site.data.keyword.objectstorageshort}} 体系结构图](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} 体系结构图](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *图 1. {{site.data.keyword.objectstorageshort}} 体系结构图*
 
