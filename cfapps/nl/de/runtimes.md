@@ -1,12 +1,11 @@
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Laufzeiten - Übersicht
+# Übersicht über Laufzeiten
 *Letzte Aktualisierung: 11. November 2015*
 
 Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne VMs und Betriebssysteme einrichten und verwalten zu müssen. Laufzeiten in {{site.data.keyword.Bluemix}} basieren auf Cloud Foundry, was bedeutet, dass Community-Buildpacks oder Tool-Plug-ins für Cloud Foundry auch mit {{site.data.keyword.Bluemix_notm}} funktionieren.
-Nachfolgend finden Sie als Einführung die stetig wachsende Liste der Laufzeiten. 
-{:shortdesc}
+Nachfolgend finden Sie als Einführung die stetig wachsende Liste der Laufzeiten. {:shortdesc}
 
 <ul class="runtimeIconList">
 <li>

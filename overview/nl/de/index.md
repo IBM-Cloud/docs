@@ -1,10 +1,10 @@
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} - Übersicht
+# Übersicht über {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Letzte Aktualisierung: 20. November 2015*
+*Letzte Aktualisierung: 18. Januar 2016*
 
 {{site.data.keyword.Bluemix}} ist die offene {{site.data.keyword.IBM}} Cloudplattform, die Entwicklern von mobilen Anwendungen und Webanwendungen Zugriff auf {{site.data.keyword.IBM_notm}} Software für Integration, Sicherheit, Transaktion und andere Schlüsselfunktionen sowie auf Software von Geschäftspartnern zur Verfügung stellt.
 {:shortdesc}
@@ -44,9 +44,7 @@ herauf- oder herabskalieren, wenn sich die Nutzung oder die Auslastung der Apps 
 {{site.data.keyword.Bluemix_notm}} kann für eine rasche Entwicklung von Apps
 in den gängigsten Programmiersprachen genutzt werden. Mobile Apps können Sie in iOS, Android und HTML
 mit JavaScript entwickeln. Für Web-Apps können Sie Sprachen wie
-Ruby, PHP, Java&trade;, Go und Python verwenden. Darüber hinaus können
-Sie vorhandene Apps nach {{site.data.keyword.Bluemix_notm}} migrieren und die von
-{{site.data.keyword.Bluemix_notm}} bereitgestellten Laufzeiten verwenden, um Ihre
+Ruby, PHP, Java&trade;, Go und Python verwenden. Darüber hinaus können Sie vorhandene Apps nach {{site.data.keyword.Bluemix_notm}} migrieren und die von {{site.data.keyword.Bluemix_notm}} bereitgestellten Laufzeiten verwenden, um Ihre
 Apps auszuführen.
 
 {{site.data.keyword.Bluemix_notm}} stellt auch Middleware-Services für den Gebrauch
@@ -59,16 +57,12 @@ Im Allgemeinen müssen Sie sich bei der Ausführung von Apps in
 Infrastrukturebenen machen. Die Ebenen wie Stammdateisysteme und
 Middlewarekomponenten sind so abstrahiert, dass Sie sich auf Ihren Anwendungscode
 konzentrieren können. Es gibt jedoch noch weitere Informationen zu diesen Ebenen, wenn Sie
-spezielle Angaben dazu benötigen, wo Ihre App ausgeführt wird. Details finden Sie im Abschnitt zum [Anzeigen
-von {{site.data.keyword.Bluemix_notm}}-Infrastrukturebenen](../cli/viewinfra.html#viewinfra). 
+spezielle Angaben dazu benötigen, wo Ihre App ausgeführt wird. Details finden Sie im Abschnitt zum [Anzeigen von {{site.data.keyword.Bluemix_notm}}-Infrastrukturebenen](../cli/vcapsvc.html#viewinfra). 
 
 ## {{site.data.keyword.Bluemix_notm}}-Architektur
 {: #ov_arch}
 
-Mit {{site.data.keyword.Bluemix_notm}} können Sie auf die
-öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform zugreifen, eine
-dedizierte {{site.data.keyword.Bluemix_notm}}-Plattform einrichten oder
-beide Möglichkeiten nutzen.
+Mit {{site.data.keyword.Bluemix_notm}} können Sie auf die öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform zugreifen, eine dedizierte {{site.data.keyword.Bluemix_notm}}-Plattform einrichten oder beide Möglichkeiten nutzen.
 
 ### {{site.data.keyword.Bluemix_notm}} öffentlich
 {: #public}
@@ -104,7 +98,7 @@ Sie können
 Ihre Apps im Hinblick auf Latenz- und Sicherheitsaspekte für unterschiedliche
 {{site.data.keyword.Bluemix_notm}}-Regionen
 bereitstellen. Eine Bereitstellung
-kann entweder in einer Region oder in mehreren Regionen stattfinden. Weitere Informationen finden Sie in [Regionen](#ov_intro__reg).
+kann entweder in einer Region oder in mehreren Regionen stattfinden. Weitere Informationen finden Sie unter [Regionen](#ov_intro__reg).
 
 ![Anwendungsentwicklung in mehreren Regionen](images/multi-region.png)
 
@@ -146,11 +140,15 @@ syndiziert werden und die Sie verwenden können. Alle Laufzeiten sind in der lok
 die folgenden Leistungen und Funktionen ohne gesonderte Berechnung: Relay-Management-Technologie, Konnektivität mit Ihrem LDAP, Möglichkeit zur Nutzung lokal (d. h. am eigenen Standort)
 vorhandener Datenbanken und Apps und Standardunterstützung.
 
-IBM nutzt die Relay-Technologie für eine sichere Überwachung und Pflege Ihrer Umgebung, damit Sie Ihren Fokus auf das Geschäftliche richten können. Relay ist eine in {{site.data.keyword.Bluemix_notm}} Local integrierte Zustellungsfunktion, mit der IBM automatisch und konsistent Aktualisierungen bereitstellt und Sie somit stets ein aktuelles, stabiles und sicheres System haben. Relay erreicht die Konnektivität mittels eines offenen VPN-Tunnels mit ausgehender SSL, der von der virtuellen Konzeptionsmaschine stammt. Über diesen Tunnel stellt IBM die Plattform, Rechenressourcen und Services für Ihre Instanz bereit und verwaltet sie. Weitere Informationen finden Sie in [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local).
+IBM nutzt die Relay-Technologie für eine sichere Überwachung und Pflege Ihrer Umgebung, damit Sie Ihren Fokus auf das Geschäftliche richten können. Relay ist eine in {{site.data.keyword.Bluemix_notm}} Local integrierte Zustellungsfunktion, mit der IBM automatisch und konsistent Aktualisierungen bereitstellt und Sie somit stets ein aktuelles, stabiles und sicheres System haben. Relay erreicht die Konnektivität mittels eines offenen VPN-Tunnels mit ausgehender SSL, der von der virtuellen Konzeptionsmaschine stammt. Über diesen Tunnel stellt IBM die Plattform, Rechenressourcen und Services für Ihre Instanz bereit und verwaltet sie. Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local).
 
 ![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
 
 *Abbildung 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+Die virtuelle Konzeptionsmaschine wird in einem Netz hinter Ihrer Kundenfirewall ausgeführt, das eine abgehende Konnektivität zum IBM Operations Center über Relay hat. Die Komponenten der {{site.data.keyword.Bluemix_notm}}-Plattform und die Kernservices werden in einem privaten, isolierten VLAN (virtuelles LAN) ausgeführt. {{site.data.keyword.Bluemix_notm}} Local verwendet ein VLAN für das private Teilnetz. Die Verwendung eines privaten Teilnetzes ist sicherer als ein öffentliches VLAN und kann helfen, Routingprobleme zu vermeiden.
+
+DataPower-Appliances stellen den Zugriff auf {{site.data.keyword.Bluemix_notm}}-Anwendungsdomänen bereit. Diese Appliances stellen eine Verbindung zu dem Netz her, das über Ihr Intranet zugänglich ist. Benutzer, die Apps und Services bereitstellen, erhalten Zugriff über das Netz, das über Ihr Intranet zugänglich ist. Sie müssen sieben IP-Adressen bereitstellen, die einen abgehenden Internetzugriff haben. DataPower-Appliances leiten über diese Kunden-IP-Adressen zu der isolierten {{site.data.keyword.Bluemix_notm}}-Bereitstellung weiter. Informationen zu den Netzspezifikationen und den Infrastrukturanforderungen finden Sie in [{{site.data.keyword.Bluemix_notm}} Local-Infrastrukturanforderungen](../local/index.html#localinfra).
 
 ### Funktionsweise von {{site.data.keyword.Bluemix_notm}}
 {: #howwork}
@@ -255,7 +253,7 @@ Die gesamte
 Foundry-Komponenten und für {{site.data.keyword.IBM_notm}} spezifische Verwaltungskomponenten stellen eine hohe Verfügbarkeit sicher. Zum Lastausgleich
 werden mehrere Instanzen der Infrastruktur verwendet.
 
-## {{site.data.keyword.Bluemix_notm}} - Konzepte
+## {{site.data.keyword.Bluemix_notm}}-Konzepte
 {: #ov_intro}
 
 {{site.data.keyword.Bluemix_notm}} setzt sich aus Apps, Services, Buildpacks und anderen Komponenten zusammen. Sie können Apps mit nur einer einzigen {{site.data.keyword.IBM_notm}} ID in unterschiedlichen {{site.data.keyword.Bluemix_notm}}-Regionen bereitstellen.
@@ -293,18 +291,18 @@ Wenn Sie mit den Eclipse-Tools arbeiten,
 müssen Sie eine Verbindung zu der {{site.data.keyword.Bluemix_notm}}-Region herstellen, mit der Sie
 arbeiten möchten. Erstellen Sie hierzu einen {{site.data.keyword.Bluemix_notm}}-Server und geben Sie den
 API-Endpunkt der Region an. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema [Apps mit {{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#toolsinstall) bereitstellen.
+der Eclipse-Tools finden Sie unter [Apps mit {{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen](../manageapps/eclipsetools/eclipsetools.html#toolsinstall).
 
 Jeder Region wird ein eindeutiges Präfix zugewiesen. Für {{site.data.keyword.Bluemix_notm}}
 stehen die folgenden Regionen und Regionspräfixe zur Verfügung. 
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Regionsname** | **Regionspräfix** | **cf-API-Endpunkt** | **Benutzerschnittstellenkonsole** |       
-|-----------------|-------------------|---------------------|----------------|
-| Region 'Vereinigte Staaten (Süden)' | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Region 'Europa Vereinigtes Königreich' | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Region 'Australien Sydney' | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Regionsname** | **Standort** | **Regionspräfix** | **cf-API-Endpunkt** | **Benutzerschnittstellenkonsole** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| Region 'Vereinigte Staaten (Süden)' | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| Region 'United Kingdom' | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Region 'Sydney' | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tabelle 1. Liste der {{site.data.keyword.Bluemix_notm}}-Regionen*
@@ -504,7 +502,7 @@ Cloud Integration-API wählen Sie die Ressource aus,
 auf die Sie über die Web-API zugreifen möchten, geben die zulässigen Operationen
 an und beziehen die SDKs und Beispiele für den Zugriff auf die API ein. Weitere Informationen zur Erstellung
 einer Cloud Integration-API finden Sie
-im Thema [Cloud Integration-APIs erstellen](../services/CloudIntegration/index.html#cloudint_add_service).</dd>
+unter [Cloud Integration-APIs erstellen](../services/CloudIntegration/index.html#cloudint_add_service).</dd>
 <dt>Privater Service</dt>
     <dd>Ein privater Service besteht aus einer Cloud Integration-API,
 SDKs und Berechtigungsrichtlinien. Außerdem enthält der private Service
@@ -575,7 +573,7 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 | Vereinfachtes Chinesisch | zh_CN |
 | Traditionelles Chinesisch | zh_TW |
 
-*Tabelle 3. Unterstützte Landessprachen und Sprachencodes*
+*Tabelle 2. Unterstützte Landessprachen und Sprachencodes*
 
 # Zugehörige Links
 ## Allgemein 
@@ -583,7 +581,7 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Bekannte Probleme in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps-Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, ein {{site.data.keyword.IBM_notm}} Unternehmen](http://www.softlayer.com/)

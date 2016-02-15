@@ -7,7 +7,7 @@
 # Fehlerbehebung für SendGrid
 {: #ts_sendgrid}
 
-*Letzte Aktualisierung: 19. November 2015*
+*Letzte Aktualisierung: 9. Dezember 2015*
 
 Hier finden Sie die Antwort auf eine Frage zur Verwendung von SendGrid in {{site.data.keyword.Bluemix}}.
 {:shortdesc}

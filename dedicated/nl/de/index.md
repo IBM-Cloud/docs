@@ -4,126 +4,86 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Letzte Aktualisierung: 8. Dezember 2015*
+*Letzte Aktualisierung: 18. Januar 2016*
 
-{{site.data.keyword.Bluemix}} ist eine cloudbasierte
-Plattform mit offenen Standards für das Erstellen, Ausführen und Verwalten von Anwendungen. Mit
-{{site.data.keyword.Bluemix_notm}} Dedicated erhalten Sie die Leistung und
-Einfachheit von {{site.data.keyword.Bluemix_notm}} - und zwar in Ihrer eigenen
-dedizierten SoftLayer-Umgebung, die sowohl mit der
-{{site.data.keyword.Bluemix_notm}} Public-Umgebung als auch Ihrem eigenen Netz
-sicher verbunden ist.
+{{site.data.keyword.Bluemix}} ist eine cloudbasierte Plattform mit offenen Standards für das Erstellen, Ausführen und Verwalten von Anwendungen. Mit {{site.data.keyword.Bluemix_notm}} Dedicated erhalten Sie die Leistung und Einfachheit von {{site.data.keyword.Bluemix_notm}} &mdash; und zwar in Ihrer eigenen dedizierten SoftLayer-Umgebung, die sowohl mit der {{site.data.keyword.Bluemix_notm}} Public-Umgebung als auch Ihrem eigenen Netz sicher verbunden ist.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated umfasst einen privaten
-Katalog, in dem die dedizierten Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst
-außerdem zusätzliche Services, die aus {{site.data.keyword.Bluemix_notm}} Public
-syndiziert werden und die Sie verwenden können.
+{{site.data.keyword.Bluemix_notm}} Dedicated umfasst einen privaten Katalog, in dem die dedizierten Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst außerdem zusätzliche Services, die aus {{site.data.keyword.Bluemix_notm}} Public syndiziert werden und die Sie verwenden können.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated basiert auf
-SoftLayer. Das bedeutet, dass Ihnen eine besonders leistungsfähige
-Cloudinfrastruktur zur Verfügung steht. In jedem Rechenzentrum besteht rund um die Uhr die ganze Woche über
-ein Sicherheitsschutz mit strengen Kontrollen. Sie und IBM greifen über einen
-VPN-Tunnel und ein privates VLAN auf die
-{{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zu.
+{{site.data.keyword.Bluemix_notm}} Dedicated basiert auf SoftLayer. Das bedeutet, dass Ihnen eine besonders leistungsfähige Cloudinfrastruktur zur Verfügung steht. In jedem Rechenzentrum besteht rund um die Uhr die ganze Woche über ein Sicherheitsschutz mit strengen Kontrollen. Sie und IBM greifen über einen VPN-Tunnel und ein privates VLAN auf die {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zu.
 
 ![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
 *Abbildung 1. Ausführliches Diagramm zu {{site.data.keyword.Bluemix_notm}} Dedicated*
 
-{{site.data.keyword.Bluemix_notm}} Dedicated-Umgebungen besitzen
-in Hinblick auf Infrastruktur, Betriebssicherheit und physische Sicherheit dieselben Sicherheitsstandards wie die
-öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform. Der Zugriff von Entwicklern auf die dedizierte
-{{site.data.keyword.Bluemix_notm}}-Plattform wird jedoch durch Ihre LDAP-Richtlinien
-gesteuert, die bei der Einrichtung Ihrer Umgebung durch das
-{{site.data.keyword.Bluemix_notm}}-Team konfiguriert werden können. Sie können innerhalb der dedizierten Umgebung
-Benutzerrollen und Berechtigungen verwalten. Weitere Informationen finden Sie im Abschnitt zum [Verwalten von Benutzern und Berechtigungen](../admin/index.html#oc_useradmin).
+{{site.data.keyword.Bluemix_notm}} Dedicated-Umgebungen besitzen in Hinblick auf Infrastruktur, Betriebssicherheit und physische Sicherheit dieselben Sicherheitsstandards wie die öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform. Der Zugriff von Entwicklern auf die dedizierte {{site.data.keyword.Bluemix_notm}}-Plattform wird jedoch durch Ihre LDAP-Richtlinien gesteuert, die bei der Einrichtung Ihrer Umgebung durch das {{site.data.keyword.Bluemix_notm}}-Team konfiguriert werden können. Sie können innerhalb der dedizierten Umgebung Benutzerrollen und Berechtigungen verwalten. Weitere Informationen finden Sie unter [Benutzer und Berechtigungen verwalten](../admin/index.html#oc_useradmin).
 
-{{site.data.keyword.Bluemix_notm}} Dedicated wird mit vollständig
-integrierten {{site.data.keyword.Bluemix_notm}}-Laufzeiten und 128 GB
-Anwendungsspeicher ausgeliefert.
+{{site.data.keyword.Bluemix_notm}} Dedicated wird mit vollständig integrierten {{site.data.keyword.Bluemix_notm}}-Laufzeiten und 128 GB Anwendungsspeicher ausgeliefert.
 
-Des Weiteren gibt es eine Reihe inbegriffener Standardservices sowie optionale Services, die
-Sie für Ihre dedizierte Instanz auswählen können.
+Des Weiteren gibt es eine Reihe inbegriffener Standardservices sowie optionale Services, die Sie für Ihre dedizierte Instanz auswählen können.
 
 | **Typ**        | **Name**            | **Beschreibung** |      
 |-----------------|-------------------|-------------------|
-| Inbegriffen | {{site.data.keyword.autoscaling}} | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem
-Service können Sie Ihre {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung
-unbegrenzt nutzen. |
-| Inbegriffen | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem
-Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
-| Inbegriffen | {{site.data.keyword.cloudant}} | Die NoSQL-Datenbank von IBM bietet eine leistungsstarke JSON-Datenschicht (mit CouchDB kompatibel). Umfasst 1,6 TB und bis zu 3.000 API-Anforderungen pro Sekunde. |
-| Optional | {{site.data.keyword.sqldb}} | IBM {{site.data.keyword.sqldbfull}} Database for {{site.data.keyword.Bluemix_notm}} fügt Ihrer
-Anwendung eine vollständig bereitgestellte relationale Datenbank hinzu. {{site.data.keyword.sqldb}} stellt eine verwaltete Datenbank für die Abwicklung der anspruchsvollen web- und transaktionsorientierten Workloads Ihres Unternehmens bereit. |
-| Optional | {{site.data.keyword.mql}} | IBM {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} ist ein cloudbasierter Nachrichtenübertragungsservice, der flexible und benutzerfreundliche Messaging-Funktionalität für {{site.data.keyword.Bluemix_notm}}-Apps zur Verfügung stellt. {{site.data.keyword.mql}} bietet eine
-Messaging-Lösung mit geringem Verwaltungsaufwand. Mit {{site.data.keyword.mql}} können Sie Ihre Apps
-reaktionsfähiger und flexibler gestalten und mithilfe einer einfachen und leistungsfähigen API
-die Arbeitslast zwischen Apps aufteilen und auslagern. |
-| Optional | {{site.data.keyword.dashdbshort}} | Verwenden Sie dashDB zum Speichern
-relationaler Daten (einschließlich spezieller Datentypen wie Geodaten). Analysieren Sie die Daten anschließend
-mit SQL oder mit erweiterten integrierten Analyseverfahren wie Vorhersageanalyse, Data Mining oder Geodatenanalyse. |
+| Inbegriffen | {{site.data.keyword.autoscaling}} | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung unbegrenzt nutzen. |
+| Inbegriffen | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
+| Optional | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} ist ein cloudbasierter Nachrichtenübertragungsservice, der flexible und benutzerfreundliche Messaging-Funktionalität für {{site.data.keyword.Bluemix_notm}}-Apps zur Verfügung stellt. {{site.data.keyword.mql}} bietet eine Messaging-Lösung mit geringem Verwaltungsaufwand. Mit {{site.data.keyword.mql}} können Sie Ihre Apps reaktionsfähiger und flexibler gestalten und mithilfe einer einfachen und leistungsfähigen API die Arbeitslast zwischen Apps aufteilen und auslagern. |
+| Optional | {{site.data.keyword.dashdbshort}} | Verwenden Sie dashDB zum Speichern relationaler Daten (einschließlich spezieller Datentypen wie Geodaten). Analysieren Sie die Daten anschließend mit SQL oder mit erweiterten integrierten Analyseverfahren wie Vorhersageanalyse, Data Mining oder Geodatenanalyse. |
+|Optional | {{site.data.keyword.APIM}} | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
+|Optional | {{site.data.keyword.SecureGateway}} | Der {{site.data.keyword.SecureGateway}}-Service stellt eine sichere Methode zur Verbindung von {{site.data.keyword.Bluemix_notm}}-Anwendungen mit fernen Standorten lokal oder in der Cloud bereit.  |
 
 *Tabelle 1. Dedizierte Services*
+
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated einrichten
 {: #setupdedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated wurde konzipiert,
-um eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}}
-Public bereitzustellen. Sie können {{site.data.keyword.Bluemix_notm}}-Services
-und -Laufzeiten verwenden, um Ihre Datenverarbeitungsanforderungen in einem von IBM gehosteten
-SoftLayer-Konto zu unterstützen.
+{{site.data.keyword.Bluemix_notm}} Dedicated wurde konzipiert, um eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}} Public bereitzustellen. Sie können {{site.data.keyword.Bluemix_notm}}-Services und -Laufzeiten verwenden, um Ihre Datenverarbeitungsanforderungen in einem von IBM gehosteten SoftLayer-Konto zu unterstützen.
 
-IBM bietet Ihnen über eine kennwortgesicherte Anmeldung Zugriff auf
-{{site.data.keyword.Bluemix_notm}} Dedicated. Sie können auf die Services,
-Laufzeiten und zugehörigen Ressourcen zugreifen und
-{{site.data.keyword.Bluemix_notm}}-Apps bereitstellen und entfernen. IBM nutzt mehrere
-SoftLayer-Positionen, um
-{{site.data.keyword.Bluemix_notm}} Dedicated bereitzustellen, sodass sich
-Ihre private Version an einem Standort in Ihrer Nähe befindet.
+IBM bietet Ihnen über eine kennwortgesicherte Anmeldung Zugriff auf {{site.data.keyword.Bluemix_notm}} Dedicated. Sie können auf die Services, Laufzeiten und zugehörigen Ressourcen zugreifen und {{site.data.keyword.Bluemix_notm}}-Apps bereitstellen und entfernen. IBM nutzt mehrere SoftLayer-Positionen, um {{site.data.keyword.Bluemix_notm}} Dedicated bereitzustellen, sodass sich Ihre private Version an einem Standort in Ihrer Nähe befindet.
 
-Gehen Sie wie folgt vor, um Ihre private Version von
-{{site.data.keyword.Bluemix_notm}} einzurichten:
+Gehen Sie wie folgt vor, um Ihre private Version von {{site.data.keyword.Bluemix_notm}} einzurichten:
 
 <ol>
-<li>Wenden Sie sich an Ihren zugewiesenen IBM Kundenbeauftragten oder wenden
-Sie sich an <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>,
-um mit der Arbeit zu beginnen.</li>
-<li>Die monatlich fällige Gebühr basiert auf den dedizierten Services, die Sie nutzen möchten. Hinzu kommt
-ein Abonnement für alle {{site.data.keyword.Bluemix_notm}} Public-Services. Sie erhalten dann eine Rechnung für alle Nutzungen, die über die Abonnementvereinbarung hinausgehen.
-	<ol type="a">
-	<li>Erarbeiten Sie mit IBM Ihre Gebühren für Ihre
-{{site.data.keyword.Bluemix_notm}} Dedicated-Instanz.
-	Die monatlich fällige Gebühr basiert auf den dedizierten Services, die Sie nutzen möchten. Hinzu kommt
-ein Abonnement für alle {{site.data.keyword.Bluemix_notm}} Public-Services. Sie erhalten dann eine Rechnung für alle Nutzungen, die über die Abonnementvereinbarung hinausgehen.</li>
-	<li>Ermitteln Sie die Fristen für die einzelnen Einrichtungsphasen Ihrer
-{{site.data.keyword.Bluemix_notm}} Dedicated-Instanz.</li>
-	</ol>
-	</li>
-<li>Sie wählen den <a href="http://www.softlayer.com/data-centers" target="_blank">Standort
-des SoftLayer-Rechenzentrums</a> für Ihre dedizierte Instanz aus. Anschließend werden Ihre dedizierte Plattform und Ihr Konto erstellt. Für Ihr Konto ermitteln Sie die Personen in Ihrer Organisation für die Rollen,
-die benötigt werden, um Ihre dedizierte Instanz betriebsbereit zu machen. Weitere Informationen zu den Rollen, die Sie zuweisen, finden Sie unter <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated-Rollen und -Zuständigkeiten</a>.
+<li>Wenden Sie sich an Ihren zugewiesenen IBM Kundenbeauftragten oder <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">wenden Sie sich an {{site.data.keyword.Bluemix_notm}}</a>, um mit der Arbeit zu beginnen.</li>
+<li>Erarbeiten Sie mit IBM Ihre Gebühren für Ihre {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz. Die monatlich fällige Gebühr basiert auf den dedizierten Services, die Sie nutzen möchten. Hinzu kommt ein Abonnement für alle {{site.data.keyword.Bluemix_notm}} Public-Services. Sie erhalten dann eine Rechnung für alle Nutzungen, die über die Abonnementvereinbarung hinausgehen.</li>
+<li>Ermitteln Sie die Fristen für die einzelnen Einrichtungsphasen Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz. Informationen zu den einzelnen relevanten Phasen und Tasks finden Sie unter <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated-Rollen und -Zuständigkeiten</a>.</li>
+<li>Sie wählen den <a href="http://www.softlayer.com/data-centers" target="_blank">Standort des SoftLayer-Rechenzentrums</a> für Ihre dedizierte Instanz aus. Anschließend werden Ihre dedizierte Plattform und Ihr Konto erstellt. Für Ihr Konto ermitteln Sie die Personen in Ihrer Organisation für die Rollen, die benötigt werden, um Ihre dedizierte Instanz betriebsbereit zu machen. Informationen zu den Rollen, die Sie zuweisen, finden Sie unter <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated-Rollen und -Zuständigkeiten</a>.
 </li>
-<li>Definieren Sie die Netzkonnektivität zwischen Ihrem Unternehmensnetz und Ihrer
-{{site.data.keyword.Bluemix_notm}} Dedicated-Instanz und richten Sie sie ein.
+<li>Definieren Sie die Netzkonnektivität zwischen Ihrem Unternehmensnetz und Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz und richten Sie sie ein.
 	<ol type="a">
 	<li>IBM installiert die Überwachungs- und Sicherheitsinfrastruktur für die dedizierte Instanz.</li>
 	<li>IBM installiert die von Ihnen ausgewählten dedizierten Single-Tenant-Services.</li>
-	<li>Sie stellen die Netzkonfiguration und die Endpunkte z. B. für IP-Adressen oder Firewalls sowie Zugriff auf
-Ihr LDAP für die Integration mit {{site.data.keyword.Bluemix_notm}} bereit.</li>
+	<li>Sie stellen die Netzkonfiguration und die Endpunkte z. B. für IP-Adressen oder Firewalls sowie Zugriff auf Ihr LDAP für die Integration mit {{site.data.keyword.Bluemix_notm}} bereit.</li>
 	</ol>
 </li>
-<li>Ermitteln Sie die Rollen für Ihr Verwaltungsteam der Umgebung und weisen Sie sie zu.
+<li>Ermitteln Sie die Rollen für Ihr Verwaltungsteam für die Umgebung und weisen Sie sie zu.
 	<ol type="a">
-	<li>IBM konfiguriert den Netzzugriff und LDAP Ihren Angaben entsprechend. Die von Ihnen bestimmten Ansprechpartner erhalten Verwaltungszugriff. Sie müssen auch einen Ansprechpartner
-für die Unterstützung und die Abrechnung bestimmen.</li>
-	<li>IBM richtet in Ihrer dedizierten Umgebung einen syndizierten Katalog ein,
-um Ihnen Ihre dedizierten Services und viele der öffentlichen {{site.data.keyword.Bluemix_notm}}-Services zu zeigen.</li>
+	<li>IBM konfiguriert den Netzzugriff und LDAP Ihren Angaben entsprechend. Die von Ihnen bestimmten Ansprechpartner erhalten Verwaltungszugriff. Sie müssen auch einen Ansprechpartner für die Unterstützung und die Abrechnung bestimmen.</li>
+	<li>IBM richtet in Ihrer dedizierten Umgebung einen syndizierten Katalog ein, um Ihnen Ihre dedizierten Services zu zeigen. Der syndizierte Katalog umfasst außerdem zusätzliche Services, die aus {{site.data.keyword.Bluemix_notm}} Public syndiziert werden und die Sie verwenden können. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen.</li>
 	<li>Sie überprüfen die Netz- und Firewallkonfiguration sowie den LDAP-Endpunkt und -Zugriff.</li>
 	</ol>
 </li>
 </ol>
+
+Für die Erstbereitstellung und Erstkonfiguration Ihrer Umgebung können Sie einen Prozess wie in der folgenden Liste dargestellt erwarten. Details dazu, wer für die einzelnen Tasks verantwortlich ist, finden Sie unter [Rollen und Zuständigkeiten](../dedicated/index.html#rolesresponsibilities).
+
+<ol>
+<li>Sie wählen das Rechenzentrum aus, das als Host Ihrer dedizierten Instanz verwendet werden soll. Weitere Informationen zu Optionen für das Rechenzentrum finden Sie unter <a href="http://www.softlayer.com/data-centers" target="_blank">Standort des SoftLayer-Rechenzentrums</a>.</li>
+<li>Sie geben die Domänennamen für die Bereitstellung und die gewünschten IDs an. Sie erhalten drei Domänen, wenn Sie Ihre {{site.data.keyword.Bluemix_notm}}-Instanz einrichten. Sie wählen das Präfix für <code>*mycompany*.*region*.bluemix.net</code> und <code>*mycompany*.*region*.mybluemix.net</code> aus. Und Sie wählen den vollständigen Name für die dritte Domäne aus.<br />
+<p>Sie können so viele angepasste Domänen wählen, wie Sie möchten. Sie sind jedoch für die Zertifikate für die angepassten Domänen verantwortlich. Informationen zur Erstellung einer angepassten Domäne finden Sie unter <a href="../manageapps/updapps.html#domain">Angepasste Domäne erstellen und verwenden</a>.</p></li>
+<li>Sie geben einen Eigner für das öffentliche Konto an, das zur Darstellung Ihres Unternehmens in {{site.data.keyword.Bluemix_notm}} Public verwendet wird. IBM verwendet dieses Konto zur Verfolgung der Nutzung syndizierter Services.</li>
+<li>Sie wählen den Typ der sicheren Verbindung zu Ihrem Rechenzentrum aus. Sie haben die Auswahl zwischen SoftLayer VPN, SoftLayer Direct Link und AT&T Net Bond.</li>
+<li>Sie entscheiden, ob ein Zugriff auf Ihre dedizierte Umgebung über das öffentliche Internet erfolgen soll.</li>
+<li>Sie wählen den Typ der Authentifizierung aus, die verwendet werden soll. Sie haben die Auswahl zwischen IBM ID oder Active Directory. Informationen zur Verwendung und Registrierung einer IBM ID finden Sie auf der Seite für <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Hilfe und FAQ</a>.
+</li>
+<li>Sie ermitteln die Rollen für Ihr Verwaltungsteam für die Umgebung und weisen sie zu. Informationen zu den Rollen, die Sie zuweisen müssen, finden Sie unter <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated-Rollen und -Zuständigkeiten</a>.</li>
+<li>IBM stellt die zentrale Plattform bereit, die elastische Laufzeiten, Konsolen, Verwaltungsfunktionen und Überwachung umfasst.</li>
+<li>IBM konfiguriert Ihren Verwaltungszugriff auf die Umgebung.</li>
+<li>Sie können mit der Verwendung Ihrer dedizierten Instanz beginnen, die vom IBM Operationsteam überwacht wird, um auf Alerts zu reagieren.</li>
+</ol>
+
+Nach der Einrichtung Ihrer {{site.data.keyword.Bluemix_notm}}-Instanz können Sie die Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die Verwaltungsseite ('Administration') überwachen und verwalten. Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}} Local und Dedicated verwalten](../administer/index.html#mng). Weitere Informationen zu Upgrades und Wartung finden Sie unter [Dedizierte Instanz warten](index.html#maintaindedicated).
 
 ##Rollen und Zuständigkeiten
 {: #rolesresponsibilities}
@@ -136,9 +96,7 @@ In der folgenden Liste sind die Kundenrollen und -zuständigkeiten enthalten, di
 
 <dl>
 <dt>**Zentraler Ansprechpartner für das Beschaffungswesen**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an der Einrichtung
-Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung. Dazu gehört
-das Ermitteln geeigneter Personen in Ihrer Organisation für die Arbeit an den einzelnen Aspekten des Projekts. Die Person, die dieser Rolle zugewiesen ist, überwacht die Musterauswahl, geschäftlichen Vereinbarungen und die Regelung für den Zugang zu Kundenressourcen. Dieser zentrale Ansprechpartner ist der allgemeine Ansprechpartner für die Einrichtung der dedizierten Instanz.</dd>
+<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an der Einrichtung Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung. Dazu gehört das Ermitteln geeigneter Personen in Ihrer Organisation für die Arbeit an den einzelnen Aspekten des Projekts. Die Person, die dieser Rolle zugewiesen ist, übernimmt eine Projektmanagementrolle und überwacht die Musterauswahl, geschäftlichen Vereinbarungen und die Regelung für den Zugang zu Kundenressourcen. Dieser zentrale Ansprechpartner ist der allgemeine Ansprechpartner für die Einrichtung der dedizierten Instanz und die Überwachung des Bereitstellungsprozesses.</dd>
 <dt>**Compliance-Manager**</dt>
 <dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um eine Topologie
 und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. Die Person, die dieser Rolle zugewiesen ist, legt gemeinsam mit dem IBM Compliance-Berater fest, mit welchen Implementierungsmustern die Compliance-Ziele erreicht werden. </dd>
@@ -147,7 +105,7 @@ und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen 
 Die Person, die dieser Rolle zugewiesen ist, überprüft die von IBM vorausgesetzten Netzspezifikationen und arbeitet gemeinsam mit IBM an einem Implementierungsplan. Am Ende der Installations- und Verifizierungsphase prüft die Person, die dieser Rolle zugewiesen ist, dass die Netzkonfiguration im Einklang mit den Unternehmensstandards ist. </dd>
 <dt>**Zentraler DevOps-Ansprechpartner**</dt>
 <dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um die für die {{site.data.keyword.Bluemix_notm}}-Plattform, -Services und -Laufzeiten benötigten Wartungsaktualisierungen zu planen und anzuwenden. Die Person, die dieser Rolle zugewiesen ist, arbeitet auch mit dem
-IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zusammen. </dd>
+IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz. </dd>
 </dl>
 
 Ihre Ansprechpartner beim Kunden arbeiten mit dem Dedicated-Fachmann und anderen IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Der Dedicated-Fachmann ist Ihr Ansprechpartner im {{site.data.keyword.Bluemix_notm}}-Entwicklungssupport-Team, der die folgenden Tasks ausführt:
@@ -162,7 +120,7 @@ Das {{site.data.keyword.Bluemix_notm}}-Support- und -Operationsteam, das gemeins
 
 <ul>
 <li>Zum Antworten auf Alerts und zum Durchführen einer Betriebswartung</li>
-<li>Zum Reproduzieren eines Problems, das in einem Suport-Ticket berichtet wurde</li>
+<li>Zum Reproduzieren eines Problems, das in einem Supportticket berichtet wurde</li>
 </ul>
 
 ###Zuständigkeiten
@@ -226,7 +184,7 @@ Als nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die 
 |Durchführen von Netz- und IP-Scans | Führen Sie tägliche und monatliche Netz- und IP-Scans durch. | IBM und Kunde |
 |Bereitstellen von Zugriff auf Prüfprotokolle | Stellen Sie Zugriff auf alle Sicherheits- und Verwaltungsprüfprotokolle bereit.   | IBM und Kunde |
 |Durchführen von Tests | Führen Sie regelmäßige Kontrollen für Operationstests und Penetrationstests von Drittanbietern durch. | IBM und Kunde |
-|Statusberichterstattung, Prüfungskoordination und Konformitätsbesprechungen  | Führen Sie eine Statusberichterstattung, externe Prüfungskoordination und Präsentationen bei Statusbesprechungen zur Konformitätsprüfung aus. | IBM |
+|Statusberichterstattung, Prüfungskoordination und Konformitätsbesprechungen  | Führen Sie eine Statusberichterstattung, eine externe Prüfungskoordination und eine Präsentation bei Statusbesprechungen zur Konformitätsprüfung aus. | IBM |
 |Prüfung der Beschäftigungssituation und Geschäftsanforderungen | Führen Sie eine vierteljährliche Prüfung der Beschäftigungssituation sowie eine Prüfung kontinuierlicher Geschäftsanforderungen für IBM Ansprechpartner aus, die Zugriff auf die Umgebung des Kunden haben. | IBM |
 |Beheben von Sicherheitslücken | Beheben Sie berichtete Sicherheitslücken in der Plattform. | IBM |
 
@@ -273,7 +231,7 @@ geplanten Änderungen.<br />
 <br />
 **Hinweis:** Wenn Sie für die Aktualisierung keine bestimmte Zeit anfordern, wird die Wartung automatisch am Ende des Zeitfensters durchgeführt.<br />
 <br />
-Wechseln Sie zu **ADMINISTRATION > SYSTEM INFORMATION**, um anstehende Aktualisierungen anzuzeigen, nicht verfügbare Daten festzulegen und Aktualisierungen zu genehmigen. Weitere Informationen zu Benachrichtigungen und zum Planen anstehender Aktualisierungen finden Sie im Abschnitt zum <a href="../admin/index.html#oc_system">Anzeigen von Systeminformationen</a>.</dd>
+Wechseln Sie zu **ADMINISTRATION > SYSTEM INFORMATION**, um anstehende Aktualisierungen anzuzeigen, nicht verfügbare Daten festzulegen und Aktualisierungen zu genehmigen. Weitere Informationen zu Benachrichtigungen und zum Planen anstehender Aktualisierungen finden Sie unter <a href="../admin/index.html#oc_system">Systeminformationen anzeigen</a>.</dd>
 
 <dt>**Sonstige**</dt>
 <dd>IBM beabsichtigt, alle Wartungstätigkeiten, die Ihre Services

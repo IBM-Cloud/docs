@@ -6,27 +6,27 @@
 #Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-*Letzte Aktualisierung: 4 Dezember 2015*
+*Letzte Aktualisierung: 8. Dezember 2015*
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
 {:shortdesc}
 
-Bei {{site.data.keyword.Bluemix}}-Anwendungen kann es sich um weit verteilte Anwendungen mit mehreren Instanzen handeln und die Ausführung Ihrer Anwendung mitsamt der zugehörigen Daten kann von vielen verschiedene Services übernommen werden. In einer solchen komplexen Umgebung ist das Überwachen Ihrer Apps und das Überprüfen von Protokollen von zentraler Bedeutung für das Verwalten Ihrer Apps.
+Bei {{site.data.keyword.Bluemix}}-Anwendungen kann es sich um weit verteilte Anwendungen mit mehreren Instanzen handeln und die Ausführung Ihrer Anwendung mitsamt der zugehörigen Daten kann von vielen verschiedenen Services übernommen werden. In einer solchen komplexen Umgebung ist das Überwachen Ihrer Apps und das Überprüfen von Protokollen von zentraler Bedeutung für das Verwalten Ihrer Apps.
 
-{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten anzeigen, die für Ihre Apps erstellt werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für {{site.data.keyword.Bluemix_notm}}-Apps](#logging_for_bluemix_apps).
+{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten sehen, die für Ihre Apps erzeugt werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für {{site.data.keyword.Bluemix_notm}}-Apps](#logging_for_bluemix_apps).
 
 Durch die Überwachung Ihrer App können Sie Ihre App-Bereitstellung anzeigen und steuern. Mithilfe der Überwachung können Sie die folgenden Tasks ausführen:
 
 * Sammeln und überwachen Sie die Leistungsinformationen für App-Instanzen und prüfen Sie, ob diese funktional sind.
 * Gewinnen Sie Einblick in Anwendungsoperationen - erkennen Sie beispielsweise potenzielle Engpässe oder stellen Sie fest, wann Upgrades erforderlich sind.
-* Schätzen Sie die Ressourcennutzung und die anfallenden Gebühren.
+* Prognostizieren Sie die Ressourcennutzung und die anfallenden Gebühren.
 
-Für einen stabilen Betrieb Ihrer Bereitstellungen auf der {{site.data.keyword.Bluemix_notm}}-Plattform möchten Sie Probleme schnell erkennen und Ursachen effizient bestimmen. Dieses Ziel erreichen Sie, wenn Sie bei der Konzeption Ihrer Apps die Fehlerbehebung im Hinterkopf behalten und Services oder Tools für die Überwachung und Protokollierung verwenden, wenn Ihre App in {{site.data.keyword.Bluemix_notm}} implementiert wird.
+Für einen stabilen Betrieb Ihrer Bereitstellungen auf der {{site.data.keyword.Bluemix_notm}}-Plattform möchten Sie Probleme schnell erkennen und Ursachen effizient bestimmen. Dieses Ziel erreichen Sie, wenn Sie bei der Konzeption Ihrer Apps die Fehlerbehebung im Hinterkopf behalten und Services oder Tools für die Überwachung und Protokollierung verwenden, wenn Ihre App in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
 
 ##Überwachung von Apps, die in Cloud Foundry ausgeführt werden
 {: #monitoring_bluemix_apps}
 
-Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, möchten Sie über die aktuellen Leistungsdaten wie allgemeiner Status, Ressourcennutzung und Datenverkehrmetriken auf dem Laufenden bleiben. Anhand dieser Leistungsinformationen können Sie Entscheidungen treffen oder entsprechende Maßnahmen ergreifen.
+Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, möchten Sie über aktuelle Leistungsdaten wie den allgemeinen Status, die Ressourcennutzung und Datenverkehrsmetriken auf dem Laufenden bleiben. Anhand dieser Leistungsdaten können Sie Entscheidungen treffen oder entsprechende Maßnahmen ergreifen.
 
 Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der folgenden Methoden ein:
 
@@ -92,7 +92,7 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste finden Sie e
 <dd>
 <pre class="pre screen"><code>OUT</code></pre>
 <p>Spalte: 42 - 44</p>
-<p>der Datenstrom, in den die Protokollnachricht geschrieben wird. <samp class="ph codeph">OUT</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stdout</samp> und <samp class="ph codeph">ERR</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stderr</samp>.</p>
+<p>Der Datenstrom, in den die Protokollnachricht geschrieben wird. <samp class="ph codeph">OUT</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stdout</samp> und <samp class="ph codeph">ERR</samp> bezieht sich auf den Datenstrom <samp class="ph codeph">stderr</samp>.</p>
 </dd>
 
 <dt><strong>Nachricht</strong></dt>
@@ -109,13 +109,13 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste finden Sie e
 
 Protokolle können Sie entweder im {{site.data.keyword.Bluemix_notm}}-Dashboard oder über die Befehlszeilenschnittstelle anzeigen.
 
-####PROTOKOLLE IM {{site.data.keyword.Bluemix_notm}}-DASHBOARD ANZEIGEN
+####Protokolle im {{site.data.keyword.Bluemix_notm}}-Dashboard anzeigen
 
-Führen Sie die folgenden Schritte aus, um die Protokolle zur **Bereitstellung** oder **Laufzeit** anzuzeigen:
+Führen Sie die folgenden Schritte aus, um die Protokolle zur **Bereitstellung** oder zur **Laufzeit** anzuzeigen:
 1. Klicken Sie auf die Kachel für Ihre App. Die Seite mit den Anwendungsdetails wird angezeigt.
 2. Klicken Sie in der linken Navigationsleiste auf **Protokolle**.
 
-####PROTOKOLLE ÜBER DIE BEFEHLSZEILENSCHNITTSTELLE ANZEIGEN
+####Protokolle über die Befehlszeilenschnittstelle anzeigen
 
 Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die Befehlszeilenschnittstelle aus:
 
@@ -130,12 +130,11 @@ Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die B
 <dd>Zeigt Protokolle an, die in dem Moment generiert werden, in dem Sie diesen Befehl eingeben.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf
-start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf
-logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen.
+start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen.
 </div>
 </li>
 
-<li>Protokolle anzeigen, nachdem Sie Apps bereitgestellt wurden.
+<li>Protokolle anzeigen, nachdem die Apps bereitgestellt wurden.
 
 <p>Wenn die Anwendungsprotokollierung aktiviert ist, können Sie die folgenden Anwendungsprotokolle anzeigen, falls Probleme mit Ihrer App während der Laufzeit auftreten. Mithilfe von Anwendungsprotokollen lässt sich die Ursache eines Fehlers einfacher bestimmen.</p>
 
@@ -171,6 +170,7 @@ Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inha
 ```
 cf logs App-Name --recent | cut -c 29-40,46-
 ```
+
 Für weitere Informationen zur Option **grep** geben Sie 'cut --help' ein.
 * Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort '[APP' enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
 ```
@@ -208,19 +208,19 @@ zur Konfiguration von Protokoll-Management-Services anderer Anbieter finden Sie 
 	Um Protokolle in {{site.data.keyword.Bluemix_notm}} an
 den Protokoll-Management-Service des anderen Anbieters zu übermitteln,
 müssen Sie zunächst eine vom Benutzer bereitgestellte Serviceinstanz erstellen. Verwenden Sie für die Erstellung
-einer vom Benutzer bereitgestellten Serviceinstanz den folgenden Befehl; dabei ist Servicename der
-Name der vom Benutzer bereitgestellten Serviceinstanz und syslog-URL ist die
+einer vom Benutzer bereitgestellten Serviceinstanz den folgenden Befehl; dabei ist 'Servicename' der
+Name der vom Benutzer bereitgestellten Serviceinstanz und 'syslog-URL' ist die
 URL, die Sie vom Protokollierungsservice des anderen Anbieters erhalten. 
 	
 	```
-	cf create-user-provided-service <Servicename> -l <syslog_URL>
+	cf create-user-provided-service <Servicename> -l <syslog-URL>
 	```
 	
 3. Binden Sie die Serviceinstanz an Ihre Anwendung.
 
 	Verwenden Sie zum Binden der Serviceinstanz an Ihre Anwendung den folgenden Befehl;
-dabei ist App-Name der Name Ihrer Anwendung und
-Servicename ist der Name für die vom Benutzer bereitgestellte Serviceinstanz. 
+dabei ist 'App-Name' der Name Ihrer Anwendung und
+'Servicename' ist der Name für die vom Benutzer bereitgestellte Serviceinstanz. 
 	
 	```
 	cf bind-service App-Name <Servicename>
@@ -229,7 +229,7 @@ Servicename ist der Name für die vom Benutzer bereitgestellte Serviceinstanz.
 	Anschließend
 werden Sie dazu aufgefordert, für die Anwendung ein erneutes Staging durchzuführen; geben Sie hierfür 'cf
 restage App-Name' ein, damit die Änderungen wirksam werden. Wenn Protokolle generiert werden,
-können Sie nach einer kurzen Verzögerung ähnliche Nachrichten im Protokoll-Management-Services des anderen Anbieters sehen.
+können Sie nach einer kurzen Verzögerung ähnliche Nachrichten im Protokoll-Management-Service des anderen Anbieters sehen.
 
 
 **Hinweis:** Protokolle, die Sie in der Befehlszeilenschnittstelle sehen,

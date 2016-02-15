@@ -9,7 +9,7 @@
 # Fehlerbehebung für den Zugriff auf {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Letzte Aktualisierung: 19. November 2015*
+*Letzte Aktualisierung: 6. Januar 2015*
 
 Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix}} kann sein, dass sich ein Benutzer nicht an {{site.data.keyword.Bluemix_notm}} anmelden kann oder dass sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
@@ -41,11 +41,32 @@ Wenn Sie eine gültige IBM ID und ein gültiges Kennwort erhalten möchten, rufe
 
 
 
+## Es sind nicht gespeicherte Änderungen vorhanden
+{: #ts_unsaved_changes}
+
+
+Wenn Sie zur Detailseite der App navigieren, können Sie möglicherweise keine Aktionen ausführen und werden aufgefordert, Änderungen zu speichern, bevor Sie fortfahren. 
+
+
+Wenn Sie versuchen, Ihre App oder Services auf der Detailsseite der App zu prüfen, empfangen Sie immer wieder die folgende Fehlernachricht:
+{: tsSymptoms} 
+
+`Es gibt nicht gespeicherte Änderungen auf Seite 'Name der App'. Speichern oder verwerfen Sie die Änderungen.`
+
+
+Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie von der Seite wegnavigieren.
+{: tsCauses}
+
+
+Schließen Sie das Nachrichtenfenster und klicken Sie auf die Schaltfläche **ZURÜCKSETZEN** in Ihrem Laufzeitfenster.
+{: tsResolve} 
+
+
+
 
     
     
-## Automatische Funktionsübernahme zwischen {{site.data.keyword.Bluemix_notm}}-Regionen
-nicht verfügbar
+## Automatische Funktionsübernahme zwischen {{site.data.keyword.Bluemix_notm}}-Regionen nicht verfügbar
 {: #ts_failover}
 
 Die automatische Funktionsübernahme zwischen {{site.data.keyword.Bluemix_notm}}-Regionen
@@ -91,7 +112,7 @@ Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert 
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, erhalten Sie eine Bestätigungs-E-Mail. Sie müssen auf den Link in dieser Bestätigungs-E-Mail klicken, um den Registrierungsprozess abzuschließen.
 {: tsCauses} 
 
-Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, kontaktierten Sie den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
+Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -130,12 +151,12 @@ Sie können nicht Benutzer zu Ihrer Organisation einladen, wenn Sie ein Collabor
 Wenn Sie nicht Benutzer zu Ihrer Organisation einladen können und zum Einladen eine andere Rolle benötigen, kontaktieren Sie Ihren Organisationsmanager, damit er Ihre Rolle ändert. Führen Sie die folgenden Schritte aus, um festzustellen, wer Ihr Organisationsmanager ist:
 {: tsResolve}
 
-  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.png) in der oberen rechten Ecke des Dashboards, und wählen Sie **Organisationen verwalten** aus.
+  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) in der oberen Menüleiste und wählen Sie **Organisationen verwalten** aus.
   2. Wechseln Sie zu Ihrer Organisation und zeigen Sie die Informationen zum Organisationsmanager in der Registerkarte **Benutzer** an.  
   
 Wenn Sie nicht die Möglichkeit haben, Benutzer einzuladen, weil Sie ein Mitarbeiter und kein Mitglied sind, müssen Sie Ihr vorheriges {{site.data.keyword.Bluemix_notm}}-Konto löschen und anschließend eingeladen werden, als Mitglied der Organisation am Konto teilzunehmen. Um Ihr vorheriges Konto zu löschen und dem Konto als Mitglied beizutreten, führen Sie die folgenden Schritte durch: 
 
-  1. Wenden Sie sich an den [ID-Support](mailto:id@bluemix.net), um ein Support-Ticket zu öffnen und die Löschung Ihres Kontos anzufordern. Wenn Sie Daten besitzen, die zu Ihrem alten Konto gehören, und die Sie speichern und in das neue Konto verschieben möchten, beziehen Sie diese Informationen in Ihre E-Mail ein. 
+  1. Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}, um ein Support-Ticket zu öffnen und die Löschung Ihres Kontos anzufordern. Wenn Sie Daten besitzen, die zu Ihrem alten Konto gehören, und die Sie speichern und in das neue Konto verschieben möchten, beziehen Sie diese Informationen in Ihre E-Mail ein. 
   2. Nachdem Ihr Konto gelöscht ist, lassen Sie sich von dem Benutzer mit der Organisationsmanager-Rolle als Organisationsmanager in die Organisation einladen. Anschließend melden Sie sich über die Einladung bei {{site.data.keyword.Bluemix_notm}} an. 
 
 
@@ -172,10 +193,10 @@ Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden,
 Während der Verwendung der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle kann eine der folgenden Fehlernachrichten angezeigt werden:
 {: tsSymptoms}
 
-`BXNUI0001E: Could not determine whether a session exists. (Es konnte nicht festgestellt werden, ob eine Sitzung vorhanden ist.) Try to reload the browser. (Versuchen Sie, den Browser erneut zu laden.)`
+`BXNUI0001E: Die Seite wurde nicht geladen, weil von Bluemix nicht erkannt wurde, ob eine Sitzung vorhanden ist.`
 
 
-`BXNUI0016E: Applications and services could not be retrieved. (Anwendungen und Services konnten nicht abgerufen werden.)`
+`BXNUI0016E: Die Apps und Services wurden nicht abgerufen, da eine Bluemix-Seite nicht geladen wurde.`
 
  
 
@@ -224,23 +245,6 @@ das Seitenleistenmenü in der linken oberen Ecke.
 
 
 
-## Laden von Anwendungen oder Services im {{site.data.keyword.Bluemix_notm}}-Dashboard nicht möglich
-{: #ts_dashboard}
-
-Es kann vorkommen, das im {{site.data.keyword.Bluemix_notm}}-Dashboard keine Informationen zu Anwendungen oder Services angezeigt werden, weil von der Organisation oder dem Bereich nicht auf die Informationen zugegriffen werden kann. 
- 
-
-Wenn Sie sich an der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anmelden, ist im Dashboard nichts verfügbar, obwohl Sie vorher Anwendungen erstellt und Services verwendet haben.
-{: tsSymptoms}
- 
-
-Dieses Problem kann auftreten, wenn Sie eine Serviceinstanz an eine Anwendung binden, der Service jedoch nicht mehr verfügbar ist, weil die Serviceberechtigungen für die Organisation oder den Bereich geändert wurden. 
-{: tsCauses}
-  	
-
-Geben Sie zum Beheben des Problems `cf services` in die cf-Befehlszeilenschnittstelle ein, um die Serviceinstanzen aufzulisten und geben Sie den Service an. Löschen Sie anschließend mit dem Befehl `cf delete-service` die Serviceinstanz, die nicht mehr verfügbar ist.
-{: tsResolve}
-
 
 
 
@@ -273,15 +277,13 @@ Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz ausz
 
  
 
-Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen der Aktionen.
-{: tsCauses}
+Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen der Aktionen. {: tsCauses}
 
   
 
-Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden:
-{: tsResolve}
- * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers innehaben. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie in [Organisation verwalten](../acctmgmt/index.html#mngorg){: new_window}.
+Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: {: tsResolve}
+ * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie unter [Organisation verwalten](../acctmgmt/index.html#mngorg){: new_window}.
  
 
  
@@ -292,7 +294,7 @@ Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgend
 
 Berechtigungsfehler können auftreten, wenn Ihre App auf einen {{site.data.keyword.Bluemix_notm}}-Service zugreift und die Serviceberechtigungen in Ihrer App fest codiert sind. 
 
-Nachdem Sie Ihre App für die Kommunikation mit einem {{site.data.keyword.Bluemix_notm}}-Service konfiguriert haben, implementieren Sie sie in {{site.data.keyword.Bluemix_notm}}. Sie können die App jedoch nicht für den Zugriff auf den {{site.data.keyword.Bluemix_notm}}-Service verwenden und empfangen einen Berechtigungsfehler.
+Nachdem Sie Ihre App für die Kommunikation mit einem {{site.data.keyword.Bluemix_notm}}-Service konfiguriert haben, stellen Sie sie in {{site.data.keyword.Bluemix_notm}} bereit. Sie können die App jedoch nicht für den Zugriff auf den {{site.data.keyword.Bluemix_notm}}-Service verwenden und empfangen einen Berechtigungsfehler.
 {: tsSymptoms}
 
 Die fest codierten Berechtigungsnachweise in der App sind möglicherweise nicht korrekt. Jedes Mal, wenn der Service erneut erstellt wird, ändern sich die Berechtigungsnachweise für den Zugriff darauf.
@@ -399,8 +401,7 @@ und laden Sie die Seite anschließend erneut.
 können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
 Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie im Abschnitt zur [Kontaktaufnahme mit dem
-{{site.data.keyword.Bluemix_notm}}-Support](../support/index.html#contacting-bluemix-support){: new_window}. 
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](../support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -427,8 +428,7 @@ Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt
 {: tsCauses}
 
  
-Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten,
-versuchen Sie einen externen Service, z. B. [Object Store](../services/ObjectStorage/index.html){: new_window}.
+Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](../services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
@@ -519,9 +519,7 @@ Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine Anwend
 Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms}
 
-`BXNUI2032E: An error
-occurred when contacting Cloud Foundry to create a resource. (Beim Herstellen eines Kontakts zu Cloud Foundry zum Erstellen einer Ressource ist ein Fehler aufgetreten.) Resource:
-service_instances. Cloud Foundry message: "You have exceeded your
+`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your
 organization's services limit." (Cloud Foundry-Nachricht: "Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
 
 
@@ -674,7 +672,7 @@ Sie haben in IBM Bluemix DevOps Services eine App erstellt, aber die Symbole fü
 
  
 
-Wenn Sie eine Node.js-App in der Web-IDE von DevOps Services bearbeiten, werden die {{site.data.keyword.Bluemix_notm}}-Symbole für die Live-Bearbeitung, den schnellen Neustart und das Debugging nicht angezeigt.
+Wenn Sie eine Node.js-App in der Web-IDE von DevOps Services bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
 {: tsSymptoms}
 
  
@@ -700,7 +698,7 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
   
   
   
-  
+
   
   
 
@@ -847,16 +845,11 @@ Sie können den folgenden Code im Servlet oder der JSP-Datei verwenden:
 ## Bereitstellung von Node.js-Apps nicht möglich
 {: #ts_nodejs_deploy}
 
-Bei der Aktualisierung einer Node.js-App
-oder bei der Bereitstellung einer Node.js-App in
-{{site.data.keyword.Bluemix_notm}} kann es zu Problemen kommen.
+Bei der Aktualisierung einer Node.js-App oder bei der Bereitstellung einer Node.js-App in {{site.data.keyword.Bluemix_notm}} kann es zu Problemen kommen.
 
 
 
-Bei der Aktualisierung einer Node.js-App
-oder bei der Bereitstellung einer Node.js-App in
-{{site.data.keyword.Bluemix_notm}} wird
-möglicherweise eine der folgenden Fehlernachrichten angezeigt:
+Bei der Aktualisierung einer Node.js-App oder bei der Bereitstellung einer Node.js-App in {{site.data.keyword.Bluemix_notm}} wird möglicherweise eine der folgenden Fehlernachrichten angezeigt:
 {: tsSymptoms} 
 
 `An app was not successfully detected by any available buildpack.` (Eine App wurde von keinem verfügbaren Buildpack erfolgreich erkannt.)
@@ -1108,10 +1101,8 @@ Dieses Problem kann aufgrund folgender Ursachen auftreten:
 
   * Möglicherweise ist in Ihrem {{site.data.keyword.Bluemix_notm}}-Bereich nicht ausreichend Speicherplatz zum Bereitstellen einer App vorhanden. 
   * Möglicherweise wurde ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert.
-  * Möglicherweise ist ein erforderlicher Service in der Datei `manifest.yml` deklariert, aber der Service befindet sich bereits im Zielbereich.
-
-  * Möglicherweise besteht ein Problem mit dem Code im Repository.
-Zum Diagnostizieren des Problems überprüfen Sie den Build und stellen Sie Protokolle aus der Bereitstellung (Implementierung) bereit:
+  * Möglicherweise ist ein erforderlicher Service in der Datei `manifest.yml` deklariert, aber der Service befindet sich bereits im Zielbereich. 
+  * Möglicherweise besteht ein Problem mit dem Code im Repository. Zum Diagnostizieren des Problems überprüfen Sie den Build und stellen Sie Protokolle aus der Bereitstellung (Implementierung) bereit:
   1. Wenn der Schritt für die Bereitstellung in Bluemix nicht erfolgreich ausgeführt wird, klicken Sie auf den Link im vorherigen Schritt zum Konfigurieren einer Pipeline, um 'Delivery Pipeline' zu öffnen. 
   2. Ermitteln Sie die fehlgeschlagene Build- oder Bereitstellungsphase.
   3. Klicken Sie in der fehlgeschlagenen Phase auf die Option **Protokolle und Verlauf anzeigen**.
@@ -1121,8 +1112,7 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 {: tsResolve}
 
   * Wenn in der Fehlernachricht angegeben wird, dass im {{site.data.keyword.Bluemix_notm}}-Bereich nicht genügend Speicherplatz für die Bereitstellung der App vorhanden ist, wählen Sie als Ziel einen anderen Bereich aus.
-  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert wurde, benachrichtigen Sie den Repository-Eigner darüber, dass der erforderliche Service hinzugefügt werden muss.
-
+  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert wurde, benachrichtigen Sie den Repository-Eigner darüber, dass der erforderliche Service hinzugefügt werden muss. 
   * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service im Zielbereich bereits vorhanden ist, wählen Sie aus, dass ein anderer Bereich verwendet werden soll.
   * Wenn in der Fehlernachricht angegeben wird, dass mit dem Build ein Problem besteht, beheben Sie alle Fehler im Code, die verhindern, dass für die App ein Build erfolgen kann. Zum Überprüfen, dass der Code keine Probleme enthält, erstellen Sie den Code mithilfe von Git-Befehlen:
     1. Klonen Sie das Git-Repository:
@@ -1173,7 +1163,7 @@ Wenn Ihr Konto inaktiv ist, können Sie keine Anwendung in {{site.data.keyword.B
 Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
-`BXNUI0096E: The application could not be created. (Die Anwendung konnte nicht erstellt werden.) Your account is inactive because it was cancelled or suspended. (Ihr Konto ist inaktiv, da es storniert oder ausgesetzt wurde.)`
+`BXNUI0096E: Die App wurde nicht erstellt. Ihr Konto ist inaktiv, da es storniert oder ausgesetzt wurde.`
 
 
 Der Status Ihres {{site.data.keyword.Bluemix_notm}}-Kontos verändert sich in 'Inaktiv', wenn es storniert oder ausgesetzt wurde.
@@ -1185,9 +1175,7 @@ Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.b
 {: tsResolve}
 
   * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
-  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team
-feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation
-zugewiesen wurden. 
+  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden. 
 
 
 
@@ -1203,7 +1191,7 @@ Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstell
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Die neue Anwendung konnte nicht hinzugefügt werden. Der momentanen Organisation und Region ist kein Bereich zugeordnet. Klicken Sie auf dem Dashboard auf die Option zum Erstellen eines Bereichs. Wiederholen Sie den Vorgang, wenn der Bereich erstellt worden ist. `
+`BXNUI0097E: Bevor Sie eine App hinzufügen können, muss Ihrer Organisation und Ihrer Region mindestens ein Bereich zugeordnet sein. Klicken Sie auf dem Dashboard auf die Option **Bereich erstellen**. Wiederholen Sie den Vorgang, wenn der Bereich erstellt worden ist. `
 
 
 
@@ -1565,26 +1553,5 @@ Sie können dieses Problem auch auf eine der folgenden Methoden beheben:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

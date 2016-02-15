@@ -55,8 +55,8 @@ Weitere Details zu den Befehlen finden Sie in der [Dokumentation zur Bluemix Liv
 <ol>
 <li>Laden Sie die Befehlszeile 'bl' für {{site.data.keyword.Bluemix_notm}} Live Sync herunter und installieren Sie sie.    
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Schaltfläche zum Herunterladen der Windows-Befehlszeile 'bl'" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Schaltfläche zum Herunterladen der Mac-Befehlszeile 'bl'" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Schaltfläche zum Herunterladen der Windows-Befehlszeile 'bl'" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Schaltfläche zum Herunterladen der Mac-Befehlszeile 'bl'" /> </a>
 </p>  
 
 <strong>Wichtig:</strong> Das Befehlszeilentool 'bl' ist nur für Windows 7 und 8
@@ -66,12 +66,11 @@ sowie für Mac OS X ab Version 10.9 verfügbar. </li>
 </li>
 
 <li>Zeigen Sie die Liste der für die {{site.data.keyword.Bluemix_notm}} Live Sync-Synchronisation verfügbaren Projekte an, indem Sie den folgenden Befehl eingeben: <pre class="codeblock">bl projects</pre>
-<p>Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname weist das Format
-<i>eigener Alias</i> | <i>Name der eigenen Anwendung</i> auf.
+<p>Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname weist das Format <i>Alias</i> | <i>Anwendungsname</i> auf.
 </p>
 </li>
 <li>Synchronisieren Sie die lokale Umgebung mit dem Projekt in {{site.data.keyword.Bluemix_notm}}, indem Sie den folgenden Befehl eingeben. Wenn Sie der Eigner des Projekts sind, müssen Sie für 'projectName' nur den Namen Ihrer eigenen Anwendung angeben. <pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
-<p>Dieser Befehl (und die Synchronisation) wird solange ausgeführt, bis Sie ein "q" eingeben. Mit der Option '--verbose' werden die Protokollierungs- und Statusinformationen angezeigt. Wenn eines der Argumente ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen setzen. </p></li>
+<p>Dieser Befehl (und die Synchronisation) wird solange ausgeführt, bis Sie ein 'q' eingeben. Mit der Option '--verbose' werden die Protokollierungs- und Statusinformationen angezeigt. Wenn eines der Argumente ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen setzen. </p></li>
 <li>Stellen Sie in einem weiteren Befehlszeilenfenster in Ihrem lokalen Verzeichnis die Anwendung für {{site.data.keyword.Bluemix_notm}} im Live Edit-Modus bereit, indem Sie den folgenden Befehl eingeben: <pre class="codeblock">bl start</pre>
 </li>
 </ol>
