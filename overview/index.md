@@ -187,7 +187,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 <p>    
 You can run and manage virtual servers in public and private (on-premises) clouds that use OpenStack software. You can create, launch, and manage your virtual servers by using either the {{site.data.keyword.Bluemix_notm}} UI or the OpenStackClient (OSC) client. You can use virtual server images that are provided by {{site.data.keyword.IBM_notm}}, or create virtual servers from your own custom images. You can use {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} capabilities to remove most of the complexities that are associated with hosting and managing cloud-based applications such as logging, auto-scaling, and monitoring. You can use OpenStack services and {{site.data.keyword.Bluemix_notm}} services together to build and run hybrid applications. You can provision infrastructure resources as needed based on operational policies and workload demand. </p>
 <p>
-To find out more about {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, see [Virtual Machines](../virtualmachines/vm_index.html).</p> </dd>
+To find out more about {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, see [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Applications
