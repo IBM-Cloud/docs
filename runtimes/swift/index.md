@@ -1,8 +1,8 @@
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:codeblock: .codeblock}
+{:codeblock: .pre}
 
-*Last Updated: 13 February 2016*
+*Last Updated: 15 February 2016*
 
 # Swift runtime
 {: #swift_runtime}
@@ -16,24 +16,26 @@ The swift_buildpack is used if your app's root directory contains a Package.swif
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a Swift starter application.  The Swift starter application is a simple Swift app that you can use to learn about the types of server applications you can develop using the Swift programming language.  This sample application creates a basic server that returns an HTML greeting to the client.  Please note that this is not a production-ready application.  Instead, it is meant to be used for educational purposes.  You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}} environment.  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix}} provides a Swift starter application. The Swift starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic server that returns an HTML greeting to the client.  
+
+**Note:** This starter app is not a production-ready application.  Instead, it is meant to be used for educational purposes.  You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}} environment. See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}
 
-You can specify the version of Swift to be used by your app with a .swift-version file in the root of your repository:
+You can specify the version of Swift to be used by your app with a `.swift`-version file in the root of your repository:
 
 ```
-$ cat .swift-version
+cat .swift-version
 swift-DEVELOPMENT-SNAPSHOT-2016-02-03-a
 ```
-{: codeblock}
+{: pre}
 
-For a complete list of the Swift supported versions, please see the buildpack's [manifest.yml](https://github.com/cloudfoundry-community/swift-buildpack/blob/master/manifest.yml) file.
+For a complete list of the Swift-supported versions, refer to the buildpack's [manifest.yml](https://github.com/cloudfoundry-community/swift-buildpack/blob/master/manifest.yml) file.
 
-For details about the current version of the Swift buildpack that is installed in {{site.data.keyword.Bluemix}}, please follow this [link](https://github.com/cloudfoundry-community/swift-buildpack/releases/tag/v1.0.3).
+For details about the current version of the Swift buildpack that is installed in {{site.data.keyword.Bluemix}}, refer to the buildpack's [release information](https://github.com/cloudfoundry-community/swift-buildpack/releases/tag/v1.0.3).
 
-Since there are frequent Swift language changes, it's advised that you pin to your Swift version.
+Because there are frequent Swift language changes, you should include a .swift-version file so that your app is "pinned" to the Swift version your application is known to work with.
 
 # rellinks
 ## general
