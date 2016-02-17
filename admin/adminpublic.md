@@ -10,7 +10,7 @@
 Manage your orgs, spaces, and assigned users by clicking the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng) for more information about administering your local or dedicated instance.
 {:shortdesc}
 
-## Managing your {{site.data.keyword.Bluemix_notm}} Public account
+## Managing {{site.data.keyword.Bluemix_notm}} Public
 {: #mngacct}
 
 In {{site.data.keyword.Bluemix}} Public, you can manage orgs and spaces, including user access all from the dashboard in the user interface. You can also monitor your usage and billing.
