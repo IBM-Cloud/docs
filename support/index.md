@@ -216,26 +216,25 @@ The scripts use the cf command line interface to extract the following informati
   * Events
   * Provisioned services
 
-  ## National language support for {{site.data.keyword.Bluemix_notm}}
-  {: #lang}
+## National language support for {{site.data.keyword.Bluemix_notm}}
+{: #lang}
 
-  {{site.data.keyword.Bluemix_notm}} supports national languages other than English. However, not all of the content that is provided with {{site.data.keyword.Bluemix_notm}} is translated.
-  The following table lists the supported national languages and language codes for {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix_notm}} supports national languages other than English. However, not all of the content that is provided with {{site.data.keyword.Bluemix_notm}} is translated. The following table lists the supported national languages and language codes for {{site.data.keyword.Bluemix_notm}}.
 
-  | **National language** | **Language code** |
-  |-------------------|---------------|
-  | Brazilian Portuguese | pt_BR |
-  | English | en |
-  | French | fr |
-  | German | de |
-  | Japanese | ja |
-  | Korean | ko |
-  | Italian | it |
-  | Spanish | es |
-  | Simplified Chinese | zh_CN |
-  | Traditional Chinese | zh_TW |
-
-  *Table 2. Supported national languages and language codes*
+| **National language** | **Language code** |
+|-------------------|---------------|
+| Brazilian Portuguese | pt_BR |
+| English | en |
+| French | fr |
+| German | de |
+| Japanese | ja |
+| Korean | ko |
+| Italian | it |
+| Spanish | es |
+| Simplified Chinese | zh_CN |
+| Traditional Chinese | zh_TW |
+  
+*Table 2. Supported national languages and language codes*
 
 
 # rellinks
