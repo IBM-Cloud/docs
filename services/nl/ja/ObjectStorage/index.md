@@ -1,6 +1,7 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 入門{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} 入門
+{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。Swift は、完全分散型の、API によるアクセスが可能なストレージ・プラットフォームを提供します。アプリケーションで直接使用することも、バックアップに使用することも可能で、コスト効率の高いスケールアウト・ストレージに理想的です。
 
@@ -21,16 +22,16 @@ OpenStack Swift および Keystone についての詳細情報および資料に
 
 
 
-## {{site.data.keyword.Bluemix_notm}} での {{site.data.keyword.objectstorageshort}} インスタンスの作成{: #creating-object-storage-instance} 
+## {{site.data.keyword.Bluemix_notm}} での {{site.data.keyword.objectstorageshort}} インスタンスの作成 {: #creating-object-storage-instance} 
 
 ### {{site.data.keyword.objectstorageshort}} サービス・インスタンスの作成方法
 1.	{{site.data.keyword.Bluemix_notm}} の**「カタログ」**タブに移動し、検索ボックスに **{{site.data.keyword.objectstorageshort}}** と入力するか、または、**「サービス」**に移動して**「ストレージ」**を選択します。**{{site.data.keyword.objectstorageshort}}** サービスをクリックします。 
 2.	スペース、アプリ、サービス名、およびプランを選択し、**「作成」**をクリックします。
 **注:** 最初に**「アプリ」**フィールドで**「アンバインドのまま」**オプションを選択した場合、構成完了後もサービス・インスタンスを {{site.data.keyword.Bluemix_notm}} アプリケーションにバインドすることができます。以下の手順を参照してください。
 
-## {{site.data.keyword.Bluemix_notm}} アプリからの {{site.data.keyword.objectstorageshort}} の使用{: #using-object-storage-from-bluemix-app} 
+## {{site.data.keyword.Bluemix_notm}} アプリからの {{site.data.keyword.objectstorageshort}} の使用 {: #using-object-storage-from-bluemix-app} 
 
-### {{site.data.keyword.objectstorageshort}} サービスを作成後にアプリケーションにバインドする方法{: #bind-object-storage-to-application} 
+### {{site.data.keyword.objectstorageshort}} サービスを作成後にアプリケーションにバインドする方法 {: #bind-object-storage-to-application} 
 1.	{{site.data.keyword.Bluemix_notm}} ダッシュボードで、バインドするアプリを選択します。
 2.	アプリ概要で**「サービスまたは API のバインド」**をクリックします。
 3.	サービスのリストから {{site.data.keyword.objectstorageshort}} インスタンスを選択し、**「追加」**をクリックします。
@@ -62,7 +63,7 @@ OpenStack Swift および Keystone についての詳細情報および資料に
       ]
     }
 
-## {{site.data.keyword.objectstorageshort}} ユーザー・インターフェースの使用{: #using-object-storage-ui}
+## {{site.data.keyword.objectstorageshort}} ユーザー・インターフェースの使用 {: #using-object-storage-ui}
 
 ### UI エレメントとナビゲーション
 {{site.data.keyword.objectstorageshort}} がプロビジョンされると、{{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} サービス・インスタンス・ダッシュボードにインスタンス情報が表示されます。ダッシュボードから {{site.data.keyword.objectstorageshort}} インスタンスを選択すると、詳細情報を含むパネルが表示されます。  
@@ -73,7 +74,7 @@ OpenStack Swift および Keystone についての詳細情報および資料に
 ####オブジェクト・ブラウザー 
 パネルの最下部のセクションには、オブジェクト・ブラウザーが含まれます。オブジェクト・ブラウザーを使用して、オブジェクト・ストレージのコンテナーおよびオブジェクトを管理します。コンテナーの作成、ファイルのアップロード、コンテナーの削除、ファイルの削除をはじめとするアクションを行えます。
 
-## Swift CLI を使用した {{site.data.keyword.objectstorageshort}} へのアクセス{: #using-swift-cli}
+## Swift CLI を使用した {{site.data.keyword.objectstorageshort}} へのアクセス {: #using-swift-cli}
 
 {{site.data.keyword.objectstorageshort}} サービスには、インターネットを介してアクセスすることも、IBM {{site.data.keyword.Bluemix_notm}} 内でアプリケーションおよび仮想マシンからアクセスすることもできます。{{site.data.keyword.objectstorageshort}} サービスの一般的なユース・ケースは次のとおりです。
 
@@ -217,7 +218,7 @@ swift tempurl GET <seconds> <path> <key>
 
 このコマンドによって URL が返され、それをクラスター名の後ろに付けると完全な URL を取得できます。その完全な URL を使用して、任意の互換 HTTP クライアント (curl、wget、Firefox など) でオブジェクトをダウンロードできます。
 
-## Swift REST API を使用した {{site.data.keyword.objectstorageshort}} へのアクセス{: #using-swift-restapi}
+## Swift REST API を使用した {{site.data.keyword.objectstorageshort}} へのアクセス {: #using-swift-restapi}
 
 コマンド・ライン・クライアント・インターフェース (例えば cURL) で Swift REST API を使用するか、アプリケーションから API を呼び出すことができます。  
 
@@ -251,7 +252,7 @@ URL は 5 つの部分からなります。```<API version>``` は v1 です。`
 
 {{site.data.keyword.objectstorageshort}} REST API オプションの完全なリストおよび例については、[OpenStack Swift API の完全なリファレンス](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}を参照してください。
 
-## 複数地域にまたがる {{site.data.keyword.objectstorageshort}} の使用{: #multi-regions}  
+## 複数地域にまたがる {{site.data.keyword.objectstorageshort}} の使用 {: #multi-regions}  
 
 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} サービスは、ストレージ地域「ダラス」と「ロンドン」をサポートしています。これらのストレージ地域は、{{site.data.keyword.objectstorageshort}} サービス・インスタンスが作成される {{site.data.keyword.Bluemix_notm}} 地域 (「米国南部」や「英国」) とは関係ありません。例えば、{{site.data.keyword.Bluemix_notm}} 地域「米国南部」で {{site.data.keyword.objectstorageshort}} インスタンスを作成する場合、ストレージ地域「ダラス」または「ロンドン」のいずれかでデータを読み書きできます。  
 
@@ -293,7 +294,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 各地域のアクセス・ポイントについて詳しくは、表「[Object Storage アクセス・ポイント](#access-points)」を参照してください。
 
 
-## 認証および資格情報の理解{: #understanding-authentication-credentials}
+## 認証および資格情報の理解 {: #understanding-authentication-credentials}
 
 ### アプリケーションのバインドなしの {{site.data.keyword.objectstorageshort}} 資格情報の生成
 
@@ -388,7 +389,7 @@ Cloud Foundry CLI からサービス資格情報を取得するには、次の�
 
 
 
-## {{site.data.keyword.objectstorageshort}} のアンバインドおよびプロビジョン解除{: #deprovisioning-object-storage}
+## {{site.data.keyword.objectstorageshort}} のアンバインドおよびプロビジョン解除 {: #deprovisioning-object-storage}
 
 ### {{site.data.keyword.objectstorageshort}} サービスのプロビジョン解除方法
 1.	{{site.data.keyword.Bluemix_notm}} ダッシュボードからサービスを選択します。  
