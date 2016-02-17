@@ -79,6 +79,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
 |{{site.data.keyword.datacshort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|No|
 |{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
