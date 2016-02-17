@@ -3,9 +3,9 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Command Line Interface plug-ins
+# Cloud Foundry Command Line Interface plug-ins
 
-*Last updated: 29 January 2016*
+*Last updated: 2 Feburary 2016*
 
-Extend your {{site.data.keyword.Bluemix_short}}. command line interface with plug-ins. Choose a CLI for IBM® Containers for Bluemix to get more options for managing your containers. Keep on developing while your apps run by adding dev_mode CLI. 
+You can install and use Cloud Foundry Command Line Interface (cf cli) plug-ins that are available on [CLI Plug-in Repository](http://plugins.{DomainName}/){: new_window}. Each plug-in is identified by its binary file name, its developer-defined plug-in name, and the commands that the plug-in provides. You can use the binary file name only to install a plug-in, and use the plug-in name or a command for any other action.
 {:shortdesc}

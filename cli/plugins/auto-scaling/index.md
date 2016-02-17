@@ -5,14 +5,14 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 25 January 2015*
+*Last updated: 20 January 2015*
 
 You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the auto-scaling RESTful API provides.
 {: shortdesc}
 
 Before you begin, install the {{site.data.keyword.Bluemix_notm}} CLI. See [Download {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} for instructions.
 
-## Adding the {{site.data.keyword.autoscaling}} CLI plug-in
+## Adding the {{site.data.keyword.Bluemix_notm}} CLI plug-in
 
 After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {{site.data.keyword.autoscaling}} CLI plug-in.
 
@@ -43,7 +43,7 @@ You can attach an auto-scaling policy to a specific app. Run the following comma
 
 ## Generating an auto-scaling policy
 
-You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
+You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter  the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
 ```bx as policy-create```
 {: codeblock}
