@@ -10,7 +10,7 @@
 Follow these steps to use the starter applications.
 {:shortdesc}
 
-1. From the [{{site.data.keyword.Bluemix}} Catalog](https://console.{DomainName}.bluemix.net/catalog/),
+1. From the [{{site.data.keyword.Bluemix}} Catalog](https://console.{DomainName}/catalog/),
 navigate to the Runtimes section.
 2. Click the runtime you want to use.
 3. Log in to {{site.data.keyword.Bluemix}}, if you have not already.

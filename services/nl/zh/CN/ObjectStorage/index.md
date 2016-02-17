@@ -1,6 +1,7 @@
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.objectstorageshort}} 入门{: #getting-started-with-object-storage} 
+# {{site.data.keyword.objectstorageshort}} 入门
+{: #getting-started-with-object-storage} 
 
 {{site.data.keyword.objectstoragefull}} 为您提供了对完整供应的 Swift {{site.data.keyword.objectstorageshort}} 帐户的访问权，以用于管理您的数据。Swift 提供了一个可通过 API 访问的全分布式存储平台。您可以直接在应用程序中使用 Swift，或将其用于备份，因此最适合用于高性价比的向外扩展存储。
 
@@ -21,16 +22,16 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 
 
-## 在 {{site.data.keyword.Bluemix_notm}} 中创建 {{site.data.keyword.objectstorageshort}} 实例{: #creating-object-storage-instance} 
+## 在 {{site.data.keyword.Bluemix_notm}} 中创建 {{site.data.keyword.objectstorageshort}} 实例 {: #creating-object-storage-instance} 
 
 ### 如何创建 {{site.data.keyword.objectstorageshort}} 服务实例
 1.	转至 {{site.data.keyword.Bluemix_notm}} **目录**选项卡，然后在搜索框中输入 **{{site.data.keyword.objectstorageshort}}**，或者转至**服务**，然后选择**存储**。单击 **{{site.data.keyword.objectstorageshort}}** 服务。 
 2.	选择空间、应用程序、服务名称和套餐，然后单击**创建**。
 **注：**如果对于**应用程序**字段，初始选择的是**保持未绑定**选项，那么在完成配置后仍可以将服务实例绑定到 {{site.data.keyword.Bluemix_notm}} 应用程序。请参阅以下指示信息。
 
-## 从 {{site.data.keyword.Bluemix_notm}} 应用程序使用 {{site.data.keyword.objectstorageshort}}{: #using-object-storage-from-bluemix-app} 
+## 从 {{site.data.keyword.Bluemix_notm}} 应用程序使用 {{site.data.keyword.objectstorageshort}} {: #using-object-storage-from-bluemix-app} 
 
-### 如何在创建后将 {{site.data.keyword.objectstorageshort}} 服务绑定到应用程序{: #bind-object-storage-to-application} 
+### 如何在创建后将 {{site.data.keyword.objectstorageshort}} 服务绑定到应用程序 {: #bind-object-storage-to-application} 
 1.	在 {{site.data.keyword.Bluemix_notm}} 仪表板中，选择要绑定的应用程序。
 2.	在应用程序概述中，单击**绑定服务或 API**。
 3.	从服务列表中，选择 {{site.data.keyword.objectstorageshort}} 实例，然后单击**添加**。
@@ -61,7 +62,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
       ]
     }
 
-## 使用 {{site.data.keyword.objectstorageshort}} 用户界面{: #using-object-storage-ui}
+## 使用 {{site.data.keyword.objectstorageshort}} 用户界面 {: #using-object-storage-ui}
 
 ### UI 元素和导航
 供应 {{site.data.keyword.objectstorageshort}} 后，可以在 {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 服务实例仪表板中查看实例信息。在仪表板中，选择 {{site.data.keyword.objectstorageshort}} 实例以查看包含更详细信息的面板。  
@@ -72,7 +73,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 ####对象浏览器 
 面板的底部部分包含对象浏览器。使用对象浏览器可管理对象存储容器和对象。可以执行创建容器、上传文件、删除容器和删除文件等操作。
 
-## 使用 Swift CLI 访问 {{site.data.keyword.objectstorageshort}}{: #using-swift-cli}
+## 使用 Swift CLI 访问 {{site.data.keyword.objectstorageshort}} {: #using-swift-cli}
 
 您可以通过因特网以及 IBM {{site.data.keyword.Bluemix_notm}} 中的应用程序和虚拟机访问 {{site.data.keyword.objectstorageshort}} 服务。{{site.data.keyword.objectstorageshort}} 服务的常见用例如下所示：
 
@@ -216,11 +217,11 @@ swift tempurl GET <seconds> <path> <key>
 
 此命令将返回 URL，可以将此 URL 附加到集群名称以获得完整 URL。使用该完整 URL 可通过任何兼容的 HTTP 客户机（例如，curl、wget 或 Firefox）来下载对象。
 
-## 使用 Swift REST CLI 访问 {{site.data.keyword.objectstorageshort}}{: #using-swift-restapi}
+## 使用 Swift REST CLI 访问 {{site.data.keyword.objectstorageshort}} {: #using-swift-restapi}
 
 可以通过命令行客户机接口（例如，cURL）来使用 Swift REST API，也可以通过应用程序来调用该 API。  
 
-### {{site.data.keyword.objectstorageshort}} URL{: #access-points}
+### {{site.data.keyword.objectstorageshort}} URL {: #access-points}
 
 要与 {{site.data.keyword.objectstorageshort}} API 进行交互，请如下所示构造 {{site.data.keyword.objectstorageshort}} URL：
 
@@ -249,7 +250,7 @@ URL 由 5 个部分组成。`“<API version>”`为 V1。您可以在 {{site.da
 
 请参阅 [OpenStack Swift API Complete Reference](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}，以获取 {{site.data.keyword.objectstorageshort}} REST API 选项和示例的整套列表。
 
-## 跨多区域使用 {{site.data.keyword.objectstorageshort}}{: #multi-regions}  
+## 跨多区域使用 {{site.data.keyword.objectstorageshort}} {: #multi-regions}  
 
 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} 服务支持“达拉斯”和“伦敦”存储区域。这两个存储区域独立于 {{site.data.keyword.Bluemix_notm}} 区域（例如，美国南部区域和英国），而 {{site.data.keyword.objectstorageshort}} 服务实例创建于该区域。例如，如果在美国南部的 {{site.data.keyword.Bluemix_notm}} 区域中创建 {{site.data.keyword.objectstorageshort}} 实例，那么可以读写“达拉斯”或“伦敦”存储区域的数据。  
 
@@ -291,7 +292,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 有关不同区域的访问点的更多信息，请参阅 [Object Storage 访问点](#access-points)表。
 
 
-## 了解认证和凭证{: #understanding-authentication-credentials}
+## 了解认证和凭证 {: #understanding-authentication-credentials}
 
 ### 生成 {{site.data.keyword.objectstorageshort}} 凭证而不绑定应用程序
 
@@ -386,7 +387,7 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 
 
-## 取消绑定和撤销供应 {{site.data.keyword.objectstorageshort}}{: #deprovisioning-object-storage}
+## 取消绑定和撤销供应 {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
 
 ### 如何撤销供应 {{site.data.keyword.objectstorageshort}} 服务
 1.	从 {{site.data.keyword.Bluemix_notm}} 仪表板中选择服务。  
@@ -398,12 +399,12 @@ IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_not
 
 如果取消应用程序与 {{site.data.keyword.objectstorageshort}} 实例的绑定或删除服务密钥，那么将删除凭证。{{site.data.keyword.objectstorageshort}} 帐户要到撤销供应 {{site.data.keyword.objectstorageshort}} 实例后才会删除。通过[重新绑定或创建新的服务密钥](#bind-object-storage-to-application)，可以生成新的云凭证。
 
-## 常见问题{: #FAQ} 
+## 常见问题 {: #FAQ} 
 
 ### 价格是如何根据所选套餐变化的？
 定价根据所选套餐而变化。有关更多定价信息，请参阅 [IBM Bluemix 价格表](https://console.ng.bluemix.net/pricing/){: new_window}或使用[计算器](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}，以获取更详细的估算。
 
-### 如何将 Beta 套餐更改为标准套餐？{: #changeplan}  
+### 如何将 Beta 套餐更改为标准套餐？ {: #changeplan}  
 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} 服务的一般可用性发行版发布后，会将 {{site.data.keyword.objectstorageshort}} 服务 Beta 套餐从目录中除去。客户服务实例不会自动从 Beta 套餐迁移到标准套餐。需要执行以下步骤来更新套餐：
 
 1.	在 {{site.data.keyword.objectstorageshort}} 用户界面的左侧导航栏中，单击**套餐**。

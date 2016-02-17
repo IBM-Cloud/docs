@@ -12,7 +12,7 @@ bluemix plugin uninstall "Network Security Group"
 ```  
 **Install Locally**
 
-1. Download the IBM Network Security Groups plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net).  
+1. Download the IBM Network Security Groups plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).  
 2. Install the IBM Network Security Groups plug-in by using the following command:  
 **Note:** Either switch to the location of the Network Security Groups plug-in or specify the path to the plug-in location.  
 
@@ -33,21 +33,21 @@ bluemix plugin uninstall "Network Security Group"
 
 1. Add the Bluemix plug-in registry endpoint:  
 	```
-	bluemix plugin repo-add bluemix http://plugins.ng.bluemix.net
+	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```  
 2. Run the following command:
 
 	**For Microsoft Windows:**  
 	```
-	bluemix plugin install nsg-windows-amd64.exe -r bluemix
+	bluemix plugin install nsg-windows-amd64.exe -r bluemix-bx
 	```  
 	**For Apple Mac OS:**  
 	```
-	bluemix plugin install nsg-darwin-amd64 -r bluemix
+	bluemix plugin install nsg-darwin-amd64 -r bluemix-bx
 	```  
 	**For Linux OS:**  
 	```
-	bluemix plugin install nsg-linux-amd64 -r bluemix
+	bluemix plugin install nsg-linux-amd64 -r bluemix-bx
 	```  
 ## List of IBM Network Security Groups Service Commands  
 
