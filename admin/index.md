@@ -7,7 +7,7 @@
 {: #mng}
 *Last updated: 17 February 2016*
 
-If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](index.html#orgmng).
+If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
