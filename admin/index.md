@@ -3,185 +3,9 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#Administering
-{: #administer}
-*Last updated: 29 January 2016*
-
-Manage your orgs, spaces, and assigned users by clicking the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](index.html#mng) for more information about administering your local or dedicated instance.
-{:shortdesc}
-
-##Managing your account
-{: #mngacct}
-
-In {{site.data.keyword.Bluemix}} Public, you can manage orgs and spaces, including user access all from the dashboard in the user interface. You can also monitor your usage and billing.
-{:shortdesc}
-
-###Organizations and spaces
-{: #orgsandspaces}
-
-As an organization manager or account owner, you can use the Manage Organizations page to view and manage the settings of the organization or space, including user access. To open the Manage Organizations page, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**.
-
-####Organizations
-
-An organization is defined by the following items:
-
-<dl>
-<dt>Users</dt>
-<dd>The role with basic permission in organizations and spaces. You must be assigned to an organization before you can be granted other permissions to the spaces within the organization. For detailed information, see [Users and roles](index.html#userroles).</dd>
-<dt>Domains</dt>
-<dd>Provide the route on the internet that is allocated to the organization. A route has a sub-domain and a domain. A sub-domain is typically the application name. A domain might be a system domain, or a custom domain that you registered for your application.<br/>
-<p>**Note**: If you add a custom domain, you must configure your DNS server to resolve your custom domain to point to the {{site.data.keyword.Bluemix_notm}} system domain. In this way, when {{site.data.keyword.Bluemix_notm}} receives a request for your custom domain, it can properly route it to your application.</p></dd>
-<dt>Quota</dt>
-<dd>Represents the resource limits for the organization, including the number of services and the amount of memory that can be allocated for use by the organization. Quotas are assigned when organizations are created. Any application or service in a space of the organization contributes to the usage of the quota. With the Pay as you go or Subscription plans, you can adjust your quota for Cloud Foundry applications and containers as the needs of your organization change.</dd>
-</dl>
-
-In {{site.data.keyword.Bluemix_notm}}, you can use organizations to enable collaboration among users, and to facilitate the logical grouping of project resources in the following ways:
-
-<ul>
-<li>You can group a set of spaces, applications, services, domains, routes, and users together in organizations.</li>
-<li>You can manage the access to the spaces and organizations on a per-user basis.</li>
-</ul>
-
-When you create an organization, the organization name must be unique in {{site.data.keyword.Bluemix_notm}}. After you create the organization, you will be automatically assigned the *Organization Manager* permission, which enables you to edit the organization name, delete the organization, and create spaces in the organization.
-
-When you delete an organization, all the spaces, applications, and services within the organization are deleted.
-
-{{site.data.keyword.Bluemix_notm}} enables collaboration on projects by assigning users within an organization, and within the spaces in the organization. You can use the **Users** tab to display and manage users of the organization. You can also invite users to your organization by clicking the **Invite a New User** link on the **Users** tab. The following permissions can be assigned to users in an organization:
-
-<ul>
-<li>Organization user</li>
-<li>Organization manager</li>
-<li>Organization billing manager</li>
-<li>Organization auditor</li>
-</ul>
-
-####Spaces
-
-Within an organization, you can use spaces to group a set of applications, services, and users.
-
-After you add users to an organization, you can grant them permissions to the spaces within the organization. Similar to organizations, spaces also have a set of permissions that can be assigned to users:
-
-<ul>
-<li>Space manager</li>
-<li>Space developer</li>
-<li>Space auditor</li>
-</ul>
-
-**Note**: A user must be assigned at least one of the permissions in the space.
-
-The **Domains** tab for a space is a read-only list of the domains that are assigned to the space. The system domain is always available to a space, and custom domains might also be allocated to the space. Applications that were created in the space might use any of the listed domains for the space.
-
-###Users and roles
-{: #userroles}
-
-Account owners perform all operations on organizations and spaces.
-
-####User types
-
-You can be either a member or a collaborator of an account.
-
-<dl>
-<dt>Member</dt>
-<dd>You are a member of a {{site.data.keyword.Bluemix_notm}} account if you created the account, or you were invited to the account and then you signed up from the invitation, as your first experience with {{site.data.keyword.Bluemix_notm}}. </dd>
-<dt>Collaborator</dt>
-<dd>You are a collaborator of a {{site.data.keyword.Bluemix_notm}} account if you previously used {{site.data.keyword.Bluemix_notm}} with a different account, but then you were invited to this account and you accepted the invitation.</dd>
-</dl>
-
-####User roles
-
-Users can be assigned the following permissions to take different user roles in an organization or space:
-
-<dl>
-<dt>Organization managers</dt>
-<dd>Organization managers have the following permissions:
-<ul>
-<li>Create or delete spaces within the organization.</li>
-<li>Invite users to the organization if you are also a member of the organization or the account owner.</li>
-<li>Manage existing users who are already in the organization.</li>
-<li>Manage domains of the organization.</li>
-</ul>
-<p>**Note**: If you have the user type of collaborator, and previously used {{site.data.keyword.Bluemix_notm}} with a different account, you cannot invite users to the organization even if you are assigned the organization manager role. You must have the user type of member to invite users. See <a href="../troubleshoot/index.html#ts_adduser">Unable to add users to an organization</a> for information about how to work around this problem.</p>
-</dd>
-<dt>Billing managers</dt>
-<dd>Billing managers have permissions to view runtime and service usage information for the organization.</dd>
-<dt>Organization auditors</dt>
-<dd>Organization auditors have permissions to view application and service content in the space.</dd>
-<dt>Space managers</dt>
-<dd>Spacing managers have the following permissions:
-<ul>
-<li>Add users to the space and manage users.</li>
-<li>Enable features for the space</li>
-</ul>
-</dd>
-<dt>Space developers</dt>
-<dd>Space developers have the following permissions:
-<ul>
-<li>Create, delete, and manage applications and services within the space.</li>
-<li>Have access to logs within the space</li>
-</ul>
-</dd>
-<dt>Space auditors</dt>
-<dd>Space auditors have permissions for read-only access to all information about the space, such as information about applications and services, settings, reports, and logs.</dd>
-</dl>
-
-###Managing your organization
-{: #orgmng}
-
-As an organization manager or account owner, you can manage your organizations. Management tasks include creating an organization, renaming an organization, creating a space, inviting users to a space, changing user roles, and deleting an existing organization.
-
-<ul>
-<li>Creating an organization
-<p>Only users with pay accounts can create an organization. With a pay account, you can create an organization by taking the following steps:</p>
-<ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**.</li>
-<li>Click **Create an Organization** and follow the prompts to create your organization.</li>
-</ol>
-</li>
-<li>Renaming an organization
-<p>Take the following steps to rename your organization:</p>
-<ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and select **Manage Organizations**.</li>
-<li>Select the organization that you want to rename.</li>
-<li>Type a new name in the **Organization** field, and click **Save**.</li>
-</ol>
-</li>
-<li>Listing members
-<p>Take the following steps to list the members of your organization or space:</p>
-<ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
-<li>Click the space name in your organization to see the members of this space and their roles.</li>
-</ol>
-</li>
-<li>Creating a space
-<p>You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you an associate your apps with spaces. Take the following steps to create a space:</p>
-<ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**.</li>
-<li>Click **Create a Space** following your organization name, and follow the prompts to create your space.</li>
-</ol>
-</li>
-<li>Inviting users to a space
-<p>You can invite users to your organization as collaborators. You can also add users of your organization to different spaces. The users can access only the space that they were added to. Take the following steps to add a user to a space:</p>
-<ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
-<li>Add the user to a space. Select the space from the navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
-</ol>
-</li>
-<li>Changing user roles
-<p>Take the following steps to change user roles:</p>
-<ol>
-<li>From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and then select **Manage Organizations**.</li>
-<li>Select the **MANAGER**, **BILLING MANAGER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in your organization. Or select a space from the navigation pane, and then select the **MANAGER**, **DEVELOPER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in the space. </li>
-<li>Click **SAVE**.</li>
-</ol>
-</li>
-<li>Deleting an existing organization
-<p>Contact {{site.data.keyword.Bluemix_notm}} registration and ID support to delete your organization.</p>
-<p>**Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.</p>
-</li>
-</ul>
-
-## Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
+# Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
+*Last updated: 17 February 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](index.html#orgmng).
 {:shortdesc}
@@ -198,7 +22,7 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS**. View security reports and audit logs for you instance.|
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION**. View system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains.  |
 
-### Viewing system information
+## Viewing system information
 {: #oc_system}
 
 To view system information, click **ADMINISTRATION &gt; SYSTEM INFORMATION**.
@@ -245,7 +69,7 @@ notification when the update deployment starts and ends.</li>
 server, and view information about user and group mappings. If you are using {{site.data.keyword.IBM}} WebID, it is indicated in the LDAP Configuration
 Details section.
 
-### Viewing usage information
+## Viewing usage information
 {: #oc_resource}
 
 To view resource information, click **ADMINISTRATION &gt; USAGE**.
@@ -267,7 +91,7 @@ networks.
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
 
-### Viewing reports
+## Viewing reports
 {: #oc_report}
 
 You can view security reports and logs, such as DataPower&trade;, firewall, and login audit, for
@@ -310,14 +134,14 @@ The following table shows the list of security reports that are generated for {{
 
 *Table 2. Security report list*
 
-### Viewing status
+## Viewing status
 {: #oc_status}
 
 You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
 
 You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status).
 
-### Managing your Catalog
+## Managing your Catalog
 {: #oc_catalog}
 
 You can manage which {{site.data.keyword.Bluemix_notm}} services and starters are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog. Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
@@ -333,7 +157,7 @@ drop-down menu to select **Enable for all organizations**, **Disable for
 all organizations**, or **Enable plan for specific
 organizations**.
 
-### Administering organizations
+## Administering organizations
 {: #oc_organizations}
 
 You can manage your organizations by creating and deleting organizations, adding managers to organizations, and monitoring quota usage.
@@ -400,7 +224,7 @@ Organization page, click **SAVE**.
 	* To edit the name of the org and add or remove managers, click the name for the organization in
 	the list.
 
-### Managing users and permissions
+## Managing users and permissions
 {: #oc_useradmin}
 
 You can add users to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through LDAP. You can add users singly or in
@@ -445,7 +269,7 @@ When finished, click **SAVE**.
 `users` permission with `write` ability, you can remove users.
 To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
 
-### Permissions
+## Permissions
 {: #permissions}
 
 Users can be assigned the following permissions:
@@ -467,7 +291,7 @@ Permissions can be enabled, or the user can be given `view` or
 * The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) ability for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) ability for that permission.
 
-### Managing users with the Admin REST API
+## Managing users with the Admin REST API
 {: #usingadminapi}
 
 You can use the `Admin` REST API to add and remove users for your
@@ -484,7 +308,7 @@ download cURL from the [cURL Download site](http://curl.haxx.se/download.html){:
 * Python, to use the Python pretty-print JSON tool. This optional tool takes the JSON text as
 input and provides easy-to-read output. You can download Python from the [Python Downloads site](https://www.python.org/downloads){: new_window}.
 
-#### Logging in to the Admin Console
+### Logging in to the Admin Console
 
 Before you can run any `Admin` API requests, you must log in to the
 Admin Console. If you have `admin` permission or `users`
@@ -530,7 +354,7 @@ command:
 ```
 {: screen}
 
-#### Listing organizations
+### Listing organizations
 {: #listingorg}
 
 When you add a user, you must specify an organization. You can use the
@@ -574,7 +398,7 @@ The following example shows output from this command:
 ```
 {: screen}
 
-#### Listing users
+### Listing users
 {: #listingusr}
 
 You can determine whether a user was already added to your
@@ -652,7 +476,7 @@ The following example shows output from this command:
 ```
 {: screen}
 
-#### Adding a user
+### Adding a user
 
 You can use the `Admin` REST API to add users to the
 {{site.data.keyword.Bluemix_notm}} instance. You must
@@ -758,7 +582,7 @@ command:
  ```
 {: screen}
 
-#### Removing a user
+### Removing a user
 
 You can use the `Admin` REST API to remove users from the
 {{site.data.keyword.Bluemix_notm}} instance. You must
@@ -798,7 +622,7 @@ command:
  ```
 {: screen}
 
-### Custom service API
+## Custom service API
 {: #servicebrokerapi}
 
 There are three APIs that you can use to register or create a new service, update a service, and delete a service.
@@ -811,18 +635,18 @@ All APIs are relative to <code>https://console.&lt;subdomain&gt;.bluemix.net/</c
 assigned during onboarding.</dd>
 </dl>
 
-### Registering a new service
+## Registering a new service
 
 Use the following API and code examples to register a new service.
 
-#### Route
+### Route
 
 ```
 POST /codi/v1/serviceBrokers
 ```
 {: screen}
 
-#### Request
+### Request
 
 *Table 3. Fields*
 
@@ -834,7 +658,7 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-##### Body
+#### Body
 
 ```
 {
@@ -847,7 +671,7 @@ POST /codi/v1/serviceBrokers
 ```
 {: screen}
 
-##### Headers
+#### Headers
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -856,16 +680,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Response
+### Response
 
-##### Status
+#### Status
 
 ```
 201 Created
 ```
 {: screen}
 
-##### Body
+#### Body
 
 ```
 {
@@ -886,16 +710,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-### Updating a service
+## Updating a service
 
 Use the following API and code examples to update a service.
 
-#### Route
+### Route
 
 `PUT /codi/v1/serviceBrokers`
 {: screen}
 
-#### Request
+### Request
 
 *Table 4. Fields*
 
@@ -907,7 +731,7 @@ Use the following API and code examples to update a service.
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-##### Body
+#### Body
 
 ```
 {
@@ -920,7 +744,7 @@ Use the following API and code examples to update a service.
 ```
 {: screen}
 
-##### Headers
+#### Headers
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -929,16 +753,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Response
+### Response
 
-##### Status
+#### Status
 
 ```
 201 Created
 ```
 {: screen}
 
-##### Body
+#### Body
 
 ```
 {
@@ -959,7 +783,7 @@ Content-Type: application/json
 ```
 {: screen}
 
-### Deleting a service
+## Deleting a service
 
 Use the following API and code examples to delete a service.
 
@@ -969,16 +793,16 @@ Use the following API and code examples to delete a service.
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
 
-#### Route
+### Route
 
 ```
 DELETE /codi/v1/serviceBrokers?name=name of service broker
 ```
 {: screen}
 
-#### Request
+### Request
 
-##### Headers
+#### Headers
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -987,16 +811,16 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Response
+### Response
 
-##### Status
+#### Status
 
 ```
 204 No Content
 ```
 {: screen}
 
-### Managing users with the cf CLI
+## Managing users with the cf CLI
 {: #usingadmincli}
 
 You can manage users for your
@@ -1013,7 +837,7 @@ requires cf version 6.11.2 or later. [Download Cloud Foundry command line interf
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
 command line window.
 
-#### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
+### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
 After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
