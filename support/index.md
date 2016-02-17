@@ -27,7 +27,7 @@ Click **Get help** to find answers to your questions. On the page that is displa
 Whether accessed directly or through Account and Support, Stack Overflow is a website that serves as a platform for users to ask and answer questions. The {{site.data.keyword.Bluemix_notm}} development and support teams are active on Stack Overflow, and follow the questions that are tagged with **bluemix**.
 
 To ask a question in Stack Overflow, choose from the following options:
-  * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACKOVERFLOW** to post your question.
+  * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACK OVERFLOW** to post your question.
 
   * Go directly to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
 
@@ -92,7 +92,7 @@ You can also use a third-party service to automatically send an email for each R
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [simple form](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [Bluemix Support ticket](https://support.eu-gb.bluemix.net/gethelp/){: new_window} form.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -135,7 +135,7 @@ Support is available with the following options:
   * Subscription with the Support add-on
 
 
-When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities.
+When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is more urgent, your account's 30-day trial subscription period has expired, and does not have the Support add-on, in order to submit high-severity (level 1, 2, and 3) tickets, upgrade to Bluemix Standard Support by contacting sales by emailing sales@bluemix.net. 
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
