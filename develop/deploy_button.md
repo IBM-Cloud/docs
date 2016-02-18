@@ -1,12 +1,12 @@
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-*Last Updated: 19 January 2016* 
+*Last Updated: 18 February 2016* 
 
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
@@ -180,5 +180,5 @@ With the manifest file, you can specify:
  </ul>
 </ul>
 
-For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}.	
+For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp).	
 
