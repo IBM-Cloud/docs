@@ -26,9 +26,6 @@
 			"links": [{
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
-			}, {	
-				"name": "Balanceador de carga",
-				"href": "services/loadbalancer/index.html"
 			}, {
 				"name": "Rede privada virtual (VPN)",
 				"href": "services/vpn/index.html"
@@ -126,14 +123,11 @@
 				"name": "Tradução de idioma",
 				"href": "services/WatsonLanguageTranslation/index.html"
 			}, {
-				"name": "Classificador de idioma nacional",
+				"name": "Classificador de idioma natural",
 				"href": "services/NaturalLanguageClassifier/index.html"
 			}, {
 				"name": "Insights de personalidade",
 				"href": "services/PersonalityInsights/index.html"
-			}, {
-				"name": "Pergunta e resposta",
-				"href": "services/QuestionAnswer/index.html"
 			}, {
 				"name": "Relationship Extraction",
 				"href": "services/RelationshipExtraction/index.html"
@@ -172,9 +166,6 @@
 			}, {
 				"name": "Descoberta de serviço",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
-			}, {
-				"name": "Proxy de serviço",
-				"href": "services/ServiceProxy/index.html"
 			}]
 		}, {
 			"title": "DevOps",
@@ -192,9 +183,6 @@
 			}, {
 				"name": "Pipeline de entrega",
 				"href": "services/DeliveryPipeline/index.html"
-			}, {
-				"name": "Alternâncias de recurso",
-				"href": "services/FeatureToggle/index.html"
 			}, {
 				"name": "Globalization Pipeline",
 				"href": "services/GlobalizationPipeline/index.html"
@@ -259,9 +247,6 @@
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
-				"name": "Mobile Analytics",
-				"href": "services/mobileanalytics/index.html"
-			}, {
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -299,10 +284,6 @@
 			"img": "homepage/images/Pricing-icon.svg",
 			"href": "/pricing/"
 		}, {
-			"title": "API Docs",
-			"img": "homepage/images/APIDocs-icon.svg",
-			"href": "/apidocs/"
-		}, {
 			"title": "Bluemix DevOps Services",
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
@@ -310,10 +291,6 @@
 			"title": "CLI e ferramentas de desenvolvimento",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
-		}, {
-			"title": "Learn (BETA)",
-			"img": "homepage/images/Learn-icon.svg",
-			"href": "/learn/"
 		}, {
 			"title": "Architecture Center",
 			"img": "homepage/images/ArchitectureCenter-icon.svg",

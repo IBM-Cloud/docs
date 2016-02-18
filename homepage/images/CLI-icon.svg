@@ -1,20 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="76px" height="65px" viewBox="0 0 76 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
-    <title>CLI icon</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="2-Docs-landing-redesign-Copy" sketch:type="MSArtboardGroup" transform="translate(-682.000000, -1498.000000)">
-            <g id="CLI-icon" sketch:type="MSLayerGroup" transform="translate(683.000000, 1498.000000)">
-                <path d="M0.1803,63.5 L73.4953,63.5 L73.4953,5.02 C73.4953,2.692 72.0303,0.804 70.2233,0.804 L3.4513,0.804 C1.6453,0.804 0.1803,2.692 0.1803,5.02 L0.1803,63.5 L0.1803,63.5 Z" id="Stroke-13" stroke="#42535C" stroke-width="1.5" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
-                <path d="M73.495,11 L0.18,11" id="Stroke-14" stroke="#42535C" stroke-width="1.5" sketch:type="MSShapeGroup"></path>
-                <path d="M69.6915,6.239 C69.6915,5.341 68.9635,4.614 68.0665,4.614 C67.1685,4.614 66.4405,5.341 66.4405,6.239 C66.4405,7.137 67.1685,7.864 68.0665,7.864 C68.9635,7.864 69.6915,7.137 69.6915,6.239" id="Fill-15" fill="#42535C" sketch:type="MSShapeGroup"></path>
-                <path d="M62.6379,6.239 C62.6379,5.341 61.9099,4.614 61.0129,4.614 C60.1149,4.614 59.3869,5.341 59.3869,6.239 C59.3869,7.137 60.1149,7.864 61.0129,7.864 C61.9099,7.864 62.6379,7.137 62.6379,6.239" id="Fill-16" fill="#42535C" sketch:type="MSShapeGroup"></path>
-                <path d="M55.5843,6.239 C55.5843,5.341 54.8563,4.614 53.9593,4.614 C53.0613,4.614 52.3333,5.341 52.3333,6.239 C52.3333,7.137 53.0613,7.864 53.9593,7.864 C54.8563,7.864 55.5843,7.137 55.5843,6.239" id="Fill-17" fill="#42535C" sketch:type="MSShapeGroup"></path>
-                <path d="M10.0917,20.7342 L20.2887,26.6212" id="Stroke-18" stroke="#42535C" stroke-width="1.5" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-                <path d="M10.0917,32.7519 L20.2887,26.8649" id="Stroke-19" stroke="#42535C" stroke-width="1.5" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-121 208 76 65"
+	 enable-background="new -121 208 76 65" xml:space="preserve">
+<title>CLI icon</title>
+<desc>Created with Sketch.</desc>
+<g id="Docs" sketch:type="MSPage">
+	<g id="_x32_-Docs-landing-redesign-Copy" transform="translate(-682.000000, -1498.000000)" sketch:type="MSArtboardGroup">
+		<g id="CLI-icon" transform="translate(683.000000, 1498.000000)" sketch:type="MSLayerGroup">
+			<path id="Stroke-13" sketch:type="MSShapeGroup" fill="none" stroke="#2D3F49" stroke-width="1.5" stroke-linejoin="round" d="
+				M-120.8,271.5h73.3V213c0-2.3-1.5-4.2-3.3-4.2h-66.8c-1.8,0-3.3,1.9-3.3,4.2V271.5L-120.8,271.5z"/>
+			<path id="Stroke-14" sketch:type="MSShapeGroup" fill="none" stroke="#2D3F49" stroke-width="1.5" d="M-47.5,219h-73.3"/>
+			<path id="Fill-15" sketch:type="MSShapeGroup" fill="#2D3F49" d="M-51.3,214.2c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				s0.7,1.6,1.6,1.6C-52,215.9-51.3,215.1-51.3,214.2"/>
+			<path id="Fill-16" sketch:type="MSShapeGroup" fill="#2D3F49" d="M-58.4,214.2c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				s0.7,1.6,1.6,1.6C-59.1,215.9-58.4,215.1-58.4,214.2"/>
+			<path id="Fill-17" sketch:type="MSShapeGroup" fill="#2D3F49" d="M-65.4,214.2c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				s0.7,1.6,1.6,1.6C-66.1,215.9-65.4,215.1-65.4,214.2"/>
+			<path id="Stroke-18" sketch:type="MSShapeGroup" fill="none" stroke="#2D3F49" stroke-width="1.5" stroke-linecap="round" d="
+				M-110.9,228.7l10.2,5.9"/>
+			<path id="Stroke-19" sketch:type="MSShapeGroup" fill="none" stroke="#2D3F49" stroke-width="1.5" stroke-linecap="round" d="
+				M-110.9,240.8l10.2-5.9"/>
+		</g>
+	</g>
+</g>
 </svg>

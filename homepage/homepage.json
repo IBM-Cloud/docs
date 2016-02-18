@@ -26,9 +26,6 @@
 			"links": [{
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
-			}, {	
-				"name": "Load Balancer",
-				"href": "services/loadbalancer/index.html"
 			}, {
 				"name": "Virtual Private Network (VPN)",
 				"href": "services/vpn/index.html"
@@ -126,14 +123,11 @@
 				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
 			}, {
-				"name": "National Language Classifier",
+				"name": "Natural Language Classifier",
 				"href": "services/NaturalLanguageClassifier/index.html"
 			}, {
 				"name": "Personality Insights",
 				"href": "services/PersonalityInsights/index.html"
-			}, {
-				"name": "Question and Answer",
-				"href": "services/QuestionAnswer/index.html"
 			}, {
 				"name": "Relationship Extraction",
 				"href": "services/RelationshipExtraction/index.html"
@@ -172,9 +166,6 @@
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
-			}, {
-				"name": "Service Proxy",
-				"href": "services/ServiceProxy/index.html"
 			}]
 		}, {
 			"title": "DevOps",
@@ -192,9 +183,6 @@
 			}, {
 				"name": "Delivery Pipeline",
 				"href": "services/DeliveryPipeline/index.html"
-			}, {
-				"name": "Feature Toggles",
-				"href": "services/FeatureToggle/index.html"
 			}, {
 				"name": "Globalization Pipeline",
 				"href": "services/GlobalizationPipeline/index.html"
@@ -259,9 +247,6 @@
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
-				"name": "Mobile Analytics",
-				"href": "services/mobileanalytics/index.html"
-			}, {
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -299,10 +284,6 @@
 			"img": "homepage/images/Pricing-icon.svg",
 			"href": "/pricing/"
 		}, {
-			"title": "API Docs",
-			"img": "homepage/images/APIDocs-icon.svg",
-			"href": "/apidocs/"
-		}, {
 			"title": "Bluemix DevOps Services",
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
@@ -310,10 +291,6 @@
 			"title": "CLI and Dev Tools",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
-		}, {
-			"title": "Learn (BETA)",
-			"img": "homepage/images/Learn-icon.svg",
-			"href": "/learn/"
 		}, {
 			"title": "Architecture Center",
 			"img": "homepage/images/ArchitectureCenter-icon.svg",
