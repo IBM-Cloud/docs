@@ -135,7 +135,7 @@ Support is available with the following options:
   * Subscription with the Support add-on
 
 
-When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but your account's 30-day trial subscription period has expired and you don't have the Support add-on, to submit high-severity (level 1, 2, and 3) tickets, contact your IBM sales representative by emails to upgrade your support to {{site.data.keyword.Bluemix_notm}} Standard Support. The email address is sales@bluemix.net.
+When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but your account's 30-day trial subscription period has expired and you don't have the Support add-on, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to {{site.data.keyword.Bluemix_notm}} Standard Support, contact your IBM sales representative by email at sales@bluemix.net.
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
