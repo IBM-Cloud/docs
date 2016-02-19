@@ -3,9 +3,10 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 17 February 2016*
+*Last updated: 18 February 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
@@ -14,13 +15,67 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 
 | What can I do? | Details |    
 |----------------|---------|
-|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business.|
-|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT**. Manage which services are visible to your users.|
-|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**. Create organizations, monitor quotas for organizations and make needs-based decisions quickly.|
-|Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. Create spaces within your orgs. Add users and assign org and space roles to users. |
-|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION**. Add users, remove users, and adjust user permissions. |
-|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS**. View security reports and audit logs for you instance.|
-|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION**. View system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains.  |
+|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](index.html#oc_resource).|
+|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
+|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
+|Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/adminpublic.html#orgmng). |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_user). |
+|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
+|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. You can also access the calendar feed and event subscriptions for extending your notifications in the Pending Updates section. See [Viewing system information](index.html#oc_system). |
+|Extend notifications and set up event subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**. You can use web hooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and event subscriptions](index.html#oc_eventsubscription). |
+
+
+## Notifications and event subscriptions
+{: #oc_eventsubscription}
+
+You can always know the status of your environment by checking the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area for the Administration page for events such as scheduled maintenance and upgrades. Incidents are reported on the Status page.
+
+### Notifications
+
+You can view notifications from IBM for your local or dedicated environment and monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
+
+| **Event Type** | **Notification method** |       
+|-----------------|-------------------|
+| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications for the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **updates pending**. You can extend the notification capability by setting up an event subscription that integrates the maintenance update alerts from the Administration page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |
+| Critical incidents | You are alerted about critical incidents on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that integrates the incident alerts from the Status page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |  
+| Status | You can view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.  |
+
+*Table 2. Event types and notifications methods*
+
+### Setting up event subscriptions
+
+You can extend the functionality of the notifications that are sent to the Administration page and Status page by using event subscriptions that implement web hooks. Web hooks route your notifications directly to a destination of your choice, such as a help desk email address (by email) or a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the notification.
+
+To use web hooks to set up a specific event subscription, complete the following steps:
+
+1\. Go to the **ADMINISTRATION** page:
+
+- For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+- For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+
+**Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
+
+2\. Click **Add Subscription**.
+
+3\. Fill in the event subscription form. For information about the fields on the form, review the following table:
+
+| **Field** | **Description** |
+|-----------------|-------------------|
+| Type | Select Web hook. |
+| Method | Select GET or POST. |
+| Event | Select to be subscribed to notifications for updates or incidents. |
+| URL | Enter the URL to hook to your web service. |
+| Description | Add a description for the event subscription that you are creating. |
+| User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
+| Password | Enter the password for your web service. |
+| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. For example, if you want to display the title, message, and severity in the notification from your web service, you must define the {{site.data.keyword.Bluemix_notm}} values with the matching property for your web service. The following values can be used to pull information from the {{site.data.keyword.Bluemix_notm}} notification for the notification title, message body, and severity level: `"{{title}}`, `"{{message}},"` and `"{{severity}}"`. If you do not enter information in this section, you receive the notification without any additional information.  |
+
+Table 3. Event subscription form fields
+
+When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
+
+4\. Optional: Select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
+
 
 ## Viewing system information
 {: #oc_system}
@@ -30,13 +85,12 @@ To view system information, click **ADMINISTRATION &gt; SYSTEM INFORMATION**.
 You can expand and view various sections about pending updates, general system information, and
 LDAP configuration details.
 
-* In the Updates section, you can view any pending
-updates that require action on your part. You can also easily track your updates using the calendar
-link to import your scheduled updates to a calendar app.
+### Pending updates and notifications
+
+In the Updates section, you can see the number of pending
+update notifications that require action on your part. To take action for a specific update, complete the following steps:
 
 <ol>
-<li>To take action for a specific update, complete the following steps:
-<ol type="a">
 <li>Click <strong><em>Number</em> updates pending</strong> to view all pending
 updates.</li>
 <li>Select an update to take action or view the details of the update, which include the update
@@ -49,47 +103,116 @@ approved and scheduled.</li>
 dates. If you approve, the update is applied during the scheduled update window. IBM sends a
 notification when the update deployment starts and ends.</li>
 </ol>
-</li>
-<li>To import your scheduled updates to a calendar app of your choice, complete the following steps:
-<ol type="a">
+
+**Note**: If you do not set unavailable dates or approve the update, it is applied at the end of the 21-day window to ensure that your platform remains current and up-to-date.
+
+From the Pending Updates page, you can choose to track your update schedule by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg) and downloading the `.ics` file to import your scheduled updates into a calendar app of your choice:
+
+<ol>
 <li>Open your calendar app.</li>
-<li>Import the updates calendar by pasting the **Calendar URL** listed on the System Information page in your app. Or, download the calendar file by clicking the Calendar URL, and then import it to your calendar app by using the `.ics` file.</li>
+<li>Download the calendar file by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg), and then import it to your calendar app by using the `.ics` file.</li>
 <li>Enter your credentials.</li>
 <li>View your scheduled updates.</li>
 </ol>
-</li>
-</ol>
 
-* In the General Information section, you can view the following information:
-    * Basic information about the {{site.data.keyword.Bluemix_notm}} build.
-    * API information including the version, URL, region, and a link to the CLI documentation.
-    * Shared domain information about your system and service.
-    * Statistics about the total number of applications, users, and organizations.
-* In the LDAP Configuration Details section, you can select the LDAP
-server, and view information about user and group mappings. If you are using {{site.data.keyword.IBM}} WebID, it is indicated in the LDAP Configuration
-Details section.
+You can also extend the notification functionality for the Administration page by using event subscriptions to integrate with a web service of your choice. To set up an event notification subscription for an update or incident, see [Event subscriptions and notifications](index.html#oc_eventsubscription).
+
+### General system information
+
+In the General Information section, you can view the following information:
+
+- Basic information about the {{site.data.keyword.Bluemix_notm}} build.
+- API information including the version, URL, region, and a link to the CLI documentation.
+- Shared domain information about your system and service.
+- Statistics about the total number of applications, users, and organizations.
+
+### LDAP configuration details
+
+In the LDAP Configuration Details section, you can select the LDAP
+server, and view information about user and group mappings. If you are using {{site.data.keyword.IBM}} WebID, it is indicated in this section.
 
 ## Viewing usage information
 {: #oc_resource}
+
+You can view different types of usage information for your local or dedicated instance and {{site.data.keyword.Bluemix_notm}} account:
+
+- Resource information including disk space, CPU usage, network usage, and average response times. See [Resource usage](index.html#resourceusage).
+- Account usage per org including number of runtime apps with usage, total number of runtime GB-hours, and the number of service instances with usage. See [Account usage](index.html#accountusage).
+- Org memory quota usage, allocated app memory based on the total used memory quota, and a view of GB-hour usage per app for a specific org. You can also view quota usage for all orgs on the  Organization Administration page in the Quota monitoring section. See [Organization administration](../admin/index.html#orgusage).
+
+
+### Resource usage
+{: #resourceusage}
 
 To view resource information, click **ADMINISTRATION &gt; USAGE**.
 
 In the Resource Monitoring section, you can view the following
 information:
 
-* Resource usage information, such as how many GB of memory and how many GB of disk space are
+- Resource usage information, such as how many GB of memory and how many GB of disk space are
 used. You can view the CPU usage averaged across all droplet execution agents (DEAs). Click the
 **CPU** tile, and you can see the CPU usage for each DEA. The DEA with the
 highest usage is listed first, and each is identified by their job and IP address. The CPU usage is
 separated into three categories that include amount of CPU spent in system processes, amount of CPU
 spent in user processes, and amount of CPU spent in waiting processes.
-* Network usage information for bandwidth in and bandwidth out, over the past day, week, or month.
+- Network usage information for bandwidth in and bandwidth out, over the past day, week, or month.
 The data that is displayed is based on the sum of in and out traffic for both public and private
 networks.
-* Average response time for {{site.data.keyword.Bluemix_notm}} over the past 10 minutes, hour, and day.
-* Average transactions per second for
+- Average response time for {{site.data.keyword.Bluemix_notm}} over the past 10 minutes, hour, and day.
+- Average transactions per second for
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
+
+### Account usage
+{: #accountusage}
+
+You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage.
+
+<ol>
+<li>Click the <strong>Account and Support</strong> icon ![Account and Support](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Select the org that you want to see data for.</li>
+<li>You can see usage details for the following categories:
+<ul>
+<li>Runtime apps that have usage</li>
+<li>Runtime apps total usage in GB-hours</li>
+<li>Service instances that have usage</li>
+</ul>
+</li>
+<li>Optional: View your data for a specific month by using the <strong>Your Cloud Activity</strong> menu to select a month of your choice.</li>
+<li>Optional: Click <strong>EXPORT DATA</strong>, and select from <strong>CSV</strong> or <strong>JSON</strong> to export your data for the selected month to a <code>CSV</code> or <code>JSON</code> file.</li>
+</ol>
+
+You can also view the monthly usage and associated charges at the account level for your runtimes, apps, and services that are syndicated from {{site.data.keyword.Bluemix_notm}} Public. You can use this data to identify how much to charge specific orgs based on their usage.
+
+<ol>
+<li>Click the <strong>Account and Support</strong> icon ![Account and Support](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Click <strong>Public</strong>.</li>
+<li>Select the org that you want to see data for, or select <strong>All Organizations</strong> to view the data for all orgs at once.</li>
+<li>You can see usage details for the following categories:
+<ul>
+<li>Runtime apps that have usage</li>
+<li>Runtime apps total usage in GB-hours</li>
+<li>Service instances that have usage</li>
+<li>A charge summary for all syndicated runtimes, services, and apps</li>
+</ul>
+</li>
+<li>Optional: View your data for a specific month by selecting a month of your choice from the bar graph. The data for the current month displays by default.</li>
+<li>Optional: Click <strong>EXPORT DATA</strong>, and select from <strong>CSV</strong> or <strong>JSON</strong> to export your data for the selected month to a <code>CSV</code> or <code>JSON</code> file.</li>
+</ol>
+
+
+### Org usage
+{: #orgusage}
+
+To view usage per org, click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**, and then select an org from the **Organization list**. On the **Manage Organizations** page for the org that you selected, you can view the following usage information:
+
+- Number of services that are currently in use.
+- Number of routes that are currently in use.
+- Memory quota graph that shows how much of the quota is used and how much is not currently being used.
+- Application allocation graph that shows which applications are included in the used memory quota.
+- Metered application usage graph that shows a a three-month report of used GB-hours per deployed app. You can select the **List View** to see data for all apps, including the memory allocation per app and the metered GB-hour usage for the past three months.
+
+For more information about viewing usage per org, adjusting quota plans, and managing your orgs, see [Administering organizations](../admin/index.html#oc_organizations).
 
 ## Viewing reports
 {: #oc_report}
@@ -101,13 +224,13 @@ To view reports and logs, click **ADMINISTRATION &gt; REPORTS AND LOGS**.
 
 Select from the following options:
 
-* You can select start and end dates from the fields to filter which reports and logs are
+- You can select start and end dates from the fields to filter which reports and logs are
 displayed.
-* You can expand and view various reports from the navigation pane.
-* You can search within your collection of reports and logs. The search applies to report
+- You can expand and view various reports from the navigation pane.
+- You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-* When displaying a report or log, you can click the ![Download](images/icon_download.svg)
+- When displaying a report or log, you can click the ![Download](images/icon_download.svg)
 icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
@@ -132,12 +255,14 @@ The following table shows the list of security reports that are generated for {{
 | Software fix management | Patch application report | Software fixes that were applied. |
 | Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
 
-*Table 2. Security report list*
+*Table 4. Security report list*
 
 ## Viewing status
 {: #oc_status}
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.
+
+The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
 
 You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status).
 
@@ -148,36 +273,182 @@ You can manage which {{site.data.keyword.Bluemix_notm}} services and starters ar
 
 Select a service or starter tile to edit the service or starter plan visibility. To edit the
 visibility, select from the following options:
-* To show the hidden service or starter so that it is visible to your users in the
+
+- To show the hidden service or starter so that it is visible to your users in the
 Catalog, select **ENABLE ALL PLANS**.
-* To hide the service or starter from your users in the {{site.data.keyword.Bluemix_notm}}
+- To hide the service or starter from your users in the {{site.data.keyword.Bluemix_notm}}
 Catalog, select **DISABLE ALL PLANS**.
-* To control the visibility of an individual plan, select the plan name, and then use the
-drop-down menu to select **Enable for all organizations**, **Disable for
-all organizations**, or **Enable plan for specific
-organizations**.
+- To control the visibility of an individual plan, select the plan name, and then use the
+drop-down menu to select **Enable for all organizations**, **Disable for all organizations**, or **Enable plan for specific organizations**.
+
+<!-- staging only start -->
+
+### Registering a service broker
+{: #servicebrokerui}
+
+If you have a service that you want to display in your {{site.data.keyword.Bluemix_notm}} catalog, you must implement and register a service broker. After registering your broker, you can choose which orgs can access the service in your local or dedicated instance.
+
+The methods for working with you service broker vary depending on how many services it manages, or whether it has already been registered with {{site.data.keyword.Bluemix_notm}}.
+
+- If your service broker manages one service, you can use the user interface to register it after you have implemented the [Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window}. See [Registering a service broker that manages one service](index.html#registerbrokerui).
+- If your service broker manages multiple services, at this time, you can't register it after you have implemented the Service Broker API. Instead, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
+- If your service broker is already registered, and you want to update or delete it, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
+
+#### Registering a service broker that manages one service
+{: #registerbrokerui}
+
+Complete the following steps to register your service broker:
+
+1\. [Implement the Cloud Foundry Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window} to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.
+
+When you are implementing the service broker, in the JSON response of `GET /v2/catalog`, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response:
+
+```
+"services":[
+   {
+      "bindable":true,
+      "description":"Cool Service is a data warehousing and analytics solution.",
+      "id":"cool-service-id",
+      "name":"coolservice",
+      "tags":[
+         "customer_dedicated"
+      ],
+      "metadata":{
+         "displayName":"Cool Service",
+         "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
+         "providerDisplayName":"Cool company",
+         "longDescription":"Cool Service is a data warehousing and analytics solution. You can quickly move your data into a next-generation columnar in-memory database and start running complex analytical queries.",
+         "bullets":[
+            {
+               "title":"Fast and Simple",
+               "description":"Cool Service uses dynamic in-memory columnar technology and innovations, such as parallel vector processing and actionable compression to rapidly scan and return relevant data."
+            },
+            {
+               "title":"Connectivity",
+               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
+            }
+         ],
+         "featuredImageUrl":"http://path/to/icon_64x64.png",
+         "imageUrl":"http://path/to/icon_50x50.png",
+         "mediumImageUrl":"http://path/to/icon_32x32.png",
+         "smallImageUrl":"http://path/to/icon_24x24.png",
+         "documentationUrl":"http://path/to/documentation.html",
+         "instructionsUrl":"http://path/to/servicesample.md",
+         "termsUrl":"http://path/to/terms_of_agreement.pdf",
+         "media":[
+            {
+               "type":"youtube",
+               "thumbnailUrl":"http://path/to/thumbnail.png",
+               "url":"http://path/to/youtube/video",
+               "caption":"Using Cool Service in 60 Seconds"
+            },
+            {
+               "type":"image",
+               "thumbnailUrl":"http://path/to/thumbnail.png",
+               "url":"http://path/to/image_file.png",
+               "caption":"Cool Service connects applications"
+            },
+            {
+               "type":"video",
+               "thumbnailUrl":"http://path/to/thumb.png",
+               "caption":"Cool Service works with tables",
+               "source":[
+                  {
+                     "type":"video/mp4",
+                     "url":"http://path/to/video_file.mp4"
+                  },
+                  {
+                     "type":"video/ogg",
+                     "url":"http://path/to/video_file.ogg"
+                  }
+               ]
+            }
+         ]
+      },
+      "plans":[
+         {
+            "name":"smallplan",
+            "description":"Dedicated schema and tablespace per service instance on a shared server. 1GB and 10GB of compressed database storage can hold up to 5GB and 50GB of uncompressed data respectively based on typical compression ratios.",
+            "free":false,
+            "id":"cool-service-plan-id",
+            "metadata":{
+               "bullets":[
+                  "1 GB Min per instance. 10 GB Max per instance."
+               ],
+               "costs":[
+                  {
+                     "unitId":"INSTANCES_PER_MONTH",
+                     "unit":"MONTHLY",
+                     "partNumber":"D15UTLL"
+                  }
+               ],
+               "displayName":"Small"
+            }
+         }
+      ]
+   }
+]
+}
+```
+{: codeblock}
+
+**Note**: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.
+
+2\. After you have implement the Service Broker API, go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
+
+3\. Click **REGISTER A SERVICE BROKER**.
+
+4\. Complete the form by entering values in the following fields:
+
+- Service broker name
+- Service broker URL
+- Service broker user name
+- Service broker password
+
+5\. Click **CONNECT**.
+
+6\. Review the information for your service including the available plans, icon, and the service description.
+
+**Note**: If you need to change the catalog information for the service, update your service broker, and start the registration process again by filling in the form.
+
+7\. Click **REGISTER**.
+
+8\. Choose to enable all plans or only specific plans for the service. All plans are disabled by default.
+
+9\. Enable the service instance for all orgs or specific orgs.
+
+You can now see your service in the Custom Services category in your {{site.data.keyword.Bluemix_notm}} Catalog. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**, and select the tile in the catalog. You can enable different plans, and edit the plan visibility for your orgs at any time.
 
 ## Administering organizations
 {: #oc_organizations}
 
-You can manage your organizations by creating and deleting organizations, adding managers to organizations, and monitoring quota usage.
+You can manage your organizations by creating and deleting organizations, adding or removing managers for organizations, and monitoring quota usage to make the best decisions for your business.
 
 Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**.
 
 You can expand and view various sections. You can also review and manage the quota plans for
 your organizations.
 
-* To create a new organization and add managers, click <strong>CREATE ORGANIZATION</strong>.
-Enter a name for the organization, and then enter the name or email of the
-person that you want to add as a manager. You can add more than one manager by entering and
-selecting multiple names. Click <strong>CREATE ORGANIZATION</strong> to save your changes and
+### Creating orgs
+
+To create a new organization and add managers, complete the following steps:
+
+1. Click <strong>CREATE ORGANIZATION</strong>.
+2. Enter a name for the organization
+3. Enter the name or email of the person that you want to add as a manager. You can add more than one manager by entering and
+selecting multiple names.
+4. Click <strong>CREATE ORGANIZATION</strong> to save your changes and
 create the org.
-* In the Quota Monitoring section, you can expand the section and view
-the following information:
-    * Environment memory usage. This section details the memory usage for the full system environment.
+
+### Quota monitoring
+
+In the Quota Monitoring section, you can expand the section and view the following information:
+
+- Environment memory usage. This section details the memory usage for the full system environment.
 	The chart provides information that includes used system memory, total system memory, quota that is
 	used, and the total quota allocated. The following list of terms defines the types of memory usage
 	that are displayed in the chart.
+
 	<dl>
 	<dt><strong>Used system memory</strong></dt>
 	<dd>The physical memory that is used by your environment.</dd>
@@ -194,11 +465,13 @@ the following information:
 	<dt><strong>Total quota</strong></dt>
 	<dd>The total memory that is allocated across all organizations.</dd>
 	</dl>
-	* Organization memory usage. This section details the memory usage at an organization level. You
+
+- Organization memory usage. This section details the memory usage at an organization level. You
 	can view the total quota allowance and the quota that is deployed for each organization. The chart
 	provides information that is listed by highest memory usage per organization, and the organization
 	that uses the largest amount of memory, by default, is listed first. You can sort by
 	** Highest Memory Usage** and **Excess Memory Allocation**.
+
 	<dl>
 	<dt><strong>Highest Memory Usage</strong></dt>
 	<dd>Use this option to identify the org using the greatest amount of memory. Sort by highest memory
@@ -209,20 +482,40 @@ the following information:
 	Sort by excess memory usage to identify organizations that are using the lowest amount of memory for
 	the quota that has been allocated for the org. </dd>
 	</dl>
-* To change the quota plan for an organization, click the bar in the chart for the
+
+### Adjusting quota plans
+
+To change the quota plan for an organization, complete the following steps:
+
+<ol>
+<li>Click the bar in the chart for the
 organization that you want to edit in the Organization memory usage section, or select the name of
-the org from the Organization List section. On the Edit
-Organization page, you can change the quota plan, change the name of the org, and add or
-remove managers. If you select a quota plan that is not sufficient for the current usage for the
-organization, you receive a message. To save any changes that you made on the Edit
-Organization page, click **SAVE**.
-* In the Organization List section, you can view all organizations in the
-{{site.data.keyword.Bluemix_notm}} environment.
-	* To delete the organization, click ![Delete](images/icon_trash.svg) in the Actions column.
-	* To view and edit the quota plan for an organization, click the name for the organization in the
-	list.
-	* To edit the name of the org and add or remove managers, click the name for the organization in
-	the list.
+the org from the Organization List section.</li>
+<li>On the Manage Organization page, you can change the quota plan, change the name of the org, and add or
+remove managers.<br />
+<p><strong>Note</strong>: If you select a quota plan that is not sufficient for the current usage for the
+organization, you receive a message.</p>
+</li>
+<li>To save any changes that you made on the Manage Organization page, click <strong>SAVE</strong>.</li>
+</ol>
+
+### Managing your orgs from the organization list
+
+In the Organization List section, you can view all organizations in the
+{{site.data.keyword.Bluemix_notm}} environment, and you can take actions for individual orgs by clicking on the org name.
+
+- To delete the organization, click the **Delete** icon ![Delete](images/icon_trash.svg) in the Actions column.
+- To view the quota plan and usage for an organization, click the name for the organization in the
+	list. On the **Manage Organizations** page for the org that you selected, you can view the following usage information:
+
+  - Number of services that are currently in use.
+  - Number of routes that are currently in use.
+  - Memory quota graph that shows how much of the quota is used and how much is not currently being used.
+  - Application allocation graph that shows which applications are included in the used memory quota.
+  - Metered application usage graph that shows a a three-month report of used GB-hours per deployed app. You can select the **List View** to see data for all apps, including the memory allocation per app and the metered GB-hour usage for the past three months.
+
+- To edit the name of the org and add or remove managers, click the name for the organization in
+	the list and follow the prompts on the screen.
 
 ## Managing users and permissions
 {: #oc_useradmin}
@@ -235,15 +528,16 @@ The User Administration page displays all users for the local or dedicated insta
 Permissions for each user are displayed. Permissions can be the following: None,
 `Admin`, `Catalog`, `Login`,
 `Reports`, and `Users`. Permissions can be enabled, or the
-user can be given `view` or `write` ability for that
+user can be given `view` or `write` access for that
 permission, as represented by icons. See [Permissions](#permissions) for descriptions
 of each type and explanation of the icons.
 
 Choose from the following options:
+
 * Locate users.You can locate users in the table by using the **Search**
 field.
 * Add users. If you have `admin` permission or
-`users` permission with `write` ability, you can add users. To
+`users` permission with `write` access, you can add users. To
 add a user or group of users, click **ADD SINGLE USER** or **ADD USER
 GROUP**. In the **Search** field, type a user name or group name to
 search, and select the organization to add the user or user group to from the
@@ -257,8 +551,8 @@ you can edit permissions and organizations for other users. To edit permissions,
 click the user name. To enable or disable permissions, select from the following options in the
 window that opens:
 	* Select **On** from the list to enable a permission.
-	* Select **Read** from the list to allow the user to have `view` (read-only) ability for that permission, or **Write**
-	to allow `write` (edit, or add and remove) ability for that permission.
+	* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or **Write**
+	to allow `write` (edit, or add and remove) access for that permission.
 	* Select **Off** to disable the permission.
 To edit organizations, select from the following options:
 	* Add the user to an organization by using the search field to locate an organization, clicking to
@@ -266,10 +560,10 @@ To edit organizations, select from the following options:
 	* Remove a user from an organization by clicking the ![Remove, represented by a minus sign](images/icon_remove.svg) icon.
 When finished, click **SAVE**.
 * Remove users. If you have `admin` permission or
-`users` permission with `write` ability, you can remove users.
+`users` permission with `write` access, you can remove users.
 To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
 
-## Permissions
+### Permissions
 {: #permissions}
 
 Users can be assigned the following permissions:
@@ -277,19 +571,19 @@ Users can be assigned the following permissions:
 | **User permission** | **Description** |       
 |-----------------|-------------------|
 | Admin | Users with `admin` permission are allowed to edit permissions for other users. |
-| Catalog | Users with `catalog` permission can be assigned the ability to `view` or `write` (modify) which services are available in the local or dedicated instance. |  
+| Catalog | Users with `catalog` permission can be assigned the access to `view` or `write` (modify) which services are available in the local or dedicated instance. |  
 | Login | Users with `login` permission are allowed to see the Administration page. Without this permission, users cannot see the Administration menu option. |
-| Reports | Users with `reports` permission can be assigned the ability to `view` or `write` (modify) security reports. |
-| Users | Users with `users` permission can be assigned the ability to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
+| Reports | Users with `reports` permission can be assigned the access to `view` or `write` (modify) security reports. |
+| Users | Users with `users` permission can be assigned the access to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
 
-*Table 2. Permissions*
+*Table 5. Permissions*
 
 Permissions can be enabled, or the user can be given `view` or
-`write` ability for that permission, as represented by the following icons:
+`write` access for that permission, as represented by the following icons:
 
 * The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
-* The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) ability for that permission.
-* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) ability for that permission.
+* The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
+* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
@@ -312,7 +606,7 @@ input and provides easy-to-read output. You can download Python from the [Python
 
 Before you can run any `Admin` API requests, you must log in to the
 Admin Console. If you have `admin` permission or `users`
-permission with `write` ability, you can add or remove users. You must have
+permission with `write` access, you can add or remove users. You must have
 `admin` permission to edit other users' permissions.
 
 To log in to the Admin Console, you can use basic access authentication on the
@@ -359,7 +653,7 @@ command:
 
 When you add a user, you must specify an organization. You can use the
 `Admin` REST API to list all organizations. You must have
-`users` permission with `read` ability to list
+`users` permission with `read` access to list
 organizations.To list all organizations, run the following command:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
@@ -404,7 +698,7 @@ The following example shows output from this command:
 You can determine whether a user was already added to your
 {{site.data.keyword.Bluemix_notm}} environment by
 using the `Admin` REST API to list registered users. You must have
-`users` permission with `read` ability to list registered
+`users` permission with `read` access to list registered
 users.To list all users, run the following command:
 
 `curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
@@ -480,11 +774,11 @@ The following example shows output from this command:
 
 You can use the `Admin` REST API to add users to the
 {{site.data.keyword.Bluemix_notm}} instance. You must
-have `users` permission with `write` ability to add
+have `users` permission with `write` access to add
 users.
 
 You can add one user or a list of users. You can add users to a single
-organization, or to multiple organizations.-->To
+organization, or to multiple organizations.To
 add a user, you must provide the following information:
 
 * First name (given name) and last name (surname) of the user. Provide the
@@ -586,7 +880,7 @@ command:
 
 You can use the `Admin` REST API to remove users from the
 {{site.data.keyword.Bluemix_notm}} instance. You must
-have `users` permission with `write` ability to remove users.
+have `users` permission with `write` access to remove users.
 
 To remove a user, you must provide the user ID of the user. Run the following command:
 
@@ -648,8 +942,6 @@ POST /codi/v1/serviceBrokers
 
 ### Request
 
-*Table 3. Fields*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. |
@@ -657,6 +949,8 @@ POST /codi/v1/serviceBrokers
 | auth_password | Password used to connect with the service broker. |
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
+
+*Table 6. Fields*
 
 #### Body
 
@@ -721,8 +1015,6 @@ Use the following API and code examples to update a service.
 
 ### Request
 
-*Table 4. Fields*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
@@ -730,6 +1022,8 @@ Use the following API and code examples to update a service.
 | auth_password | Password used to connect with the service broker. |
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
+
+*Table 7. Fields*
 
 #### Body
 
@@ -787,11 +1081,11 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
-*Table 5. Parameter*
-
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
+
+*Table 8. Parameter*
 
 ### Route
 
@@ -824,7 +1118,7 @@ Content-Type: application/json
 {: #usingadmincli}
 
 You can manage users for your
-{{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
+{{site.data.keyword.Bluemix_notm}} environment by
 using the Cloud Foundry command line interface with the
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For
 example, you can add users from an LDAP registry.
@@ -841,9 +1135,9 @@ command line window.
 
 After the cf command line interface is installed, you can add the
 {{site.data.keyword.Bluemix_notm}} admin CLI
+plug-in.
 
 **Note**: If you have previously installed the {{site.data.keyword.Bluemix_notm}} Admin plug-in, you might need to uninstall the plug-in, delete the repository, and then re-install to get the latest updates.
-plug-in.
 
 Complete the following steps to add the repository and install the plug-in:
 
@@ -873,3 +1167,4 @@ command:
 For additional help for a command, use the `-help` option.
 
 For more information about how to work with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, see [{{site.data.keyword.Bluemix_notm}} admin](../cli/plugins/bluemix_admin/index.html).
+
