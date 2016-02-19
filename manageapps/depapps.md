@@ -30,7 +30,7 @@ If the logs for your application are no longer available so that the **cf files*
 
 **Note:** The buffer size is limited. If an application runs for a long time and is not restarted, logs might not be displayed when you enter `cf logs appname --recent` because the log buffer might have been cleared. Therefore, to debug staging errors for a large application, you can enter `cf logs appname` in a separate command line from the cf command line interface to track the logs when you deploy the application.
 
-If you experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}, you can follow the steps in [Debugging staging errors](../troubleshoot/debugging.html#debug_stgerr) to resolve the problem.
+If you experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}, you can follow the steps in [Debugging staging errors](../debug/index.html#debugging-staging-errors) to resolve the problem.
 
 ##Deploying applications by using the cf command
 {: #dep_apps}
