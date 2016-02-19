@@ -550,4 +550,4 @@ entering the following command:
 </dl>
 
 **Tip:** You can also use **ba usb** as an alias for the longer
-**ba add-service-broker** command name.
+**ba update-service-broker** command name.
