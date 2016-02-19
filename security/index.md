@@ -128,7 +128,7 @@ The following headers are populated by DataPower:
 <dt>User access management</dt>
 <dd>Within {{site.data.keyword.Bluemix_notm}}, Separation of Duties guidelines are followed to assign granular access privileges to users, and to ensure that users have only the access that is required to perform their jobs according to the principle of least privilege.
 
-Within a {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} user in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng) for details.
+Within a {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} user in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../admin/index.html#mng) for details.
 </dd>
 </dl>
 
