@@ -162,7 +162,7 @@
 				"href": "services/ConnectandCompose/index.html"
 			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
