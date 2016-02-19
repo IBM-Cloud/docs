@@ -129,7 +129,7 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Getting started with IBM Monitoring and Analytics for Bluemix service](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [How Bluemix works](../overview/overview.html#ov_arch){: new_window}
+  * [How Bluemix works](../public/index.html#howwork){: new_window}
   * [Installing the cf command tool](../starters/install_cli.html){: new_window}
   * [Viewing logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
  
