@@ -524,7 +524,7 @@ This error occurs when the amount of memory that is remaining for your organizat
 You can either increase the memory quota of your account, or reduce the memory that your apps use.
 {: tsResolve} 
 
-  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](../pricing/index.html#pay_accounts){: new_window}. 
+  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](../pricing/index.html#pay-accounts){: new_window}. 
   * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} user interface or the cf command line interface.
     If you use the {{site.data.keyword.Bluemix_notm}} user interface, complete the following steps:
 	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
