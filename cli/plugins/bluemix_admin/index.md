@@ -223,7 +223,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](#roles) for
+<dd class="pd">See [Roles](../../../admin/adminpublic.html#orgsandspaces) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
@@ -248,7 +248,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](#roles) for
+<dd class="pd">See [Roles](../../../admin/adminpublic.html#orgsandspaces) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
