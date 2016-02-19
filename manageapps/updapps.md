@@ -266,6 +266,5 @@ In this example, *Blue* is the previously deployed application and *Green* is th
 
 # rellinks
 ## general 
-* [Organizations and spaces](../acctmgmt/index.html#organdspaces)
 * [Blue-green deployments](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
