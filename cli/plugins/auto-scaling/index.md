@@ -5,7 +5,7 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 20 January 2015*
+*Last updated: 19 February 2016*
 
 You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the auto-scaling RESTful API provides.
 {: shortdesc}
@@ -101,9 +101,9 @@ You can show the history of the auto-scaling activity of a specific app. A table
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app for which you want to show the history of the auto-scaling policy.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window} for details about the time stamp format. 
+<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format. 
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window} for details about the time stamp format. 
+<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format. 
 </dl>
 
 **Tip:** You can also use the **--json** option to pretty print the original JSON response.
