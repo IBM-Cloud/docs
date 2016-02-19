@@ -268,7 +268,7 @@ You do not have the appropriate level of authority that is required to perform t
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organization](../acctmgmt/index.html#mngorg){: new_window} for details.
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organizations](../admin/adminpublic.html#orgmng){: new_window} for details.
  
 
  
