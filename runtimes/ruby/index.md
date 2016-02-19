@@ -2,10 +2,9 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 12 January 2016*
-
 # Ruby runtime
 {: #ruby_runtime}
+*Last updated: 19 February 2016*
 
 The Ruby runtime on {{site.data.keyword.Bluemix}} is powered by the ruby_buildpack.
 The ruby_buildpack provides a complete runtime environment for Ruby
