@@ -170,8 +170,8 @@ Next, as the application developer, you can log in to {{site.data.keyword.Bluemi
 
 # rellinks
 ## general
-* [What's new in {{site.data.keyword.Bluemix_notm}}](../../whatsnew/index.html)
+* [What's new in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}} known issues](https://developer.ibm.com/bluemix/support/#issues)
-* [Managing your account](../../admin/adminpublic.html#mngacct)
+* [Managing your account](../admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossary](glossary/index.html)
