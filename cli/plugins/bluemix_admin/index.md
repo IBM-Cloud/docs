@@ -1,7 +1,7 @@
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 18 February 2016*
+*Last updated: 17 February 2016*
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
@@ -49,7 +49,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. To see a list of commands, run the following
 command:
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 For additional help for a command, use the `-help` option.
@@ -86,7 +88,9 @@ You can add a user to your
 {{site.data.keyword.Bluemix_notm}} environment from
 an LDAP registry. Enter the following command:
 
-`cf ba add-user <user_name> <organization>`
+```
+cf ba add-user <user_name> <organization>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -105,7 +109,9 @@ an LDAP registry. Enter the following command:
 
 You can search for a user. Enter the following command:
 
-`cf ba search-users <user_name>`
+```
+cf ba search-users <user_name>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -122,7 +128,9 @@ You can search for a user. Enter the following command:
 
 You can set permissions for a specified user. Enter the following command:
 
-`cf ba set-permissions <user_name> <permission> <access>`
+```
+cf ba set-permissions <user_name> <permission> <access>
+```
 {: codeblock}
 
 **Note**: You can set one permission at a time.
@@ -147,7 +155,9 @@ You can remove a user from your
 {{site.data.keyword.Bluemix_notm}} environment by
 entering the following command:
 
-`cf ba remove-user <user_name>`
+```
+cf ba remove-user <user_name>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -166,7 +176,9 @@ You can add and delete an organization.
 
 * To add an organization, enter the following command:
 
-`cf ba create-organization <organization> <manager>`
+```
+cf ba create-organization <organization> <manager>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -181,7 +193,9 @@ You can add and delete an organization.
 
 * To delete an organization, enter the following command:
 
-`cf ba delete-organization <organization>`
+```
+cf ba delete-organization <organization>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -198,7 +212,9 @@ You can assign a user in your
 {{site.data.keyword.Bluemix_notm}} environment to a
 particular organization. Enter the following command:
 
-`cf ba set-org <user_name> <organization> [<role>]`
+```
+cf ba set-org <user_name> <organization> [<role>]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -221,7 +237,9 @@ You can unassign a user in your
 {{site.data.keyword.Bluemix_notm}} environment from a
 particular organization. Enter the following command:
 
-`cf ba unset-org <user_name> <organization> [<role>]`
+```
+cf ba unset-org <user_name> <organization> [<role>]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -261,7 +279,9 @@ space.</dd>
 
 You can set the usage quota for a particular organization.
 
-`cf ba set-quota <organization> <plan>`
+```
+cf ba set-quota <organization> <plan>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -279,7 +299,9 @@ You can set the usage quota for a particular organization.
 You can add, delete, and retrieve security reports.
 * To add a report, enter the following command:
 
-`cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>`
+```
+cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -300,7 +322,9 @@ you included a path to the report PDF. The RTF version is used for indexing and 
 
 * To delete a report, enter the following command:
 
-`cf ba delete-report <category> <date> <name>`
+```
+cf ba delete-report <category> <date> <name>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -318,7 +342,9 @@ name.</dd>
 
 * To retrieve a report, enter the following command:
 
-`cf ba retrieve-report <category> <date> <name>`
+```
+cf ba retrieve-report <category> <date> <name>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -342,7 +368,9 @@ You can enable or disable a service from being displayed in the
 {{site.data.keyword.Bluemix_notm}} Catalog for all
 organizations, enter the following command:
 
-`cf ba enable-service-plan <plan_identifier>`
+```
+cf ba enable-service-plan <plan_identifier>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -358,7 +386,9 @@ you are prompted with service plans to choose from.</dd>
 {{site.data.keyword.Bluemix_notm}} Catalog for all
 organizations, enter the following command:
 
-`cf ba disable-service-plan <plan_identifier>`
+```
+cf ba disable-service-plan <plan_identifier>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -380,7 +410,9 @@ organizations can see in the {{site.data.keyword.Bluemix_notm}} Catalog.
 {{site.data.keyword.Bluemix_notm}} Catalog, enter the
 following command:
 
-`cf ba add-service-plan-visibility <plan_identifier> <organization>`
+```
+cf ba add-service-plan-visibility <plan_identifier> <organization>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -398,7 +430,9 @@ service name, you are prompted with service plans to choose from.</dd>
 {{site.data.keyword.Bluemix_notm}} Catalog for an
 organization, enter the following command:
 
-`cf ba remove-service-plan-visibility <plan_identifier> <organization>`
+```
+cf ba remove-service-plan-visibility <plan_identifier> <organization>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -415,7 +449,9 @@ non-unique service name, you are prompted with service plans to choose from.</dd
 * To replace all existing visible services for an organization or multiple organizations, use the
 following command:
 
-`cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>`
+```
+cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
+```
 {: codeblock}
 
 **Note:** This
@@ -441,7 +477,9 @@ Use the following commands to list all service brokers, add or delete a service 
 * You can list all service brokers by
 entering the following command:
 
-`cf ba service-brokers <broker_name>`
+```
+cf ba service-brokers <broker_name>
+```
 {: codeblock}
 
 **Note**: To list all service brokers, enter the command without the `broker_name` parameter. 
@@ -458,7 +496,9 @@ entering the following command:
 {{site.data.keyword.Bluemix_notm}} Catalog by
 entering the following command:
 
-`cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -479,7 +519,9 @@ entering the following command:
 {{site.data.keyword.Bluemix_notm}} Catalog by
 entering the following command:
 
-`cf ba delete-service-broker <service_broker>`
+```
+cf ba delete-service-broker <service_broker>
+```
 {: codeblock}
 
 <dl class="parml">
