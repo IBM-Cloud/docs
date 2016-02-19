@@ -2,10 +2,10 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 12 January 2016*
 
 # Node.js runtime
 {: #nodejs_runtime}
+*Last updated: 19 February 2016*
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
 The sdk-for-nodejs buildpack provides a complete runtime environment for Node.js apps.
@@ -148,7 +148,7 @@ Typically the current **sdk-for-nodejs** buildpack and a back-level version are 
 
 # rellinks
 ## general
-* [Latest Updates to the Node.js Buildpack](updates.html)
+* [Latest Updates to the Node.js Buildpack](./updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

@@ -2,10 +2,10 @@
 {:new_window: target="_blank"}
 {:codeblock: .pre}
 
-*Last Updated: 15 February 2016*
 
 # Swift runtime
 {: #swift_runtime}
+*Last updated: 19 February 2016*
 
 The Swift runtime on {{site.data.keyword.Bluemix}} is powered by the swift_buildpack.
 The swift_buildpack provides a complete runtime environment for Swift apps.

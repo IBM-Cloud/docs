@@ -2,10 +2,9 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 04 January 2016*
-
 # PHP runtime
 {: #php_runtime}
+*Last updated: 19 February 2016*
 
 The PHP runtime on {{site.data.keyword.Bluemix}} is powered by the php_buildpack.
 The php_buildpack provides a complete runtime environment for PHP
@@ -62,7 +61,5 @@ deploy the app.
 ## samples
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-
 ## general
-{: #related_links}
 * [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)
