@@ -22,13 +22,13 @@ To get up and running quickly with this service, follow these steps:
 		- Selected plan - Select **Free** or **purchase plan** that is suitable for your needs.  
 		> **Important:** With the free {{site.data.keyword.iotdriverinsights_short}} plan, total upload size of Vehicle Probe Data is limited to 200MB.
 	4. Click **Use** to deploy **{{site.data.keyword.iotdriverinsights_full}}** to your Bluemix services.
-2. For more detail for how to run and configure the service, refer to [Administering](iotdriverinsights_admin.html) section and [API Documentation](https://dev-console.stage1.ng.bluemix.net/apidocs/103){:new_window}.
+2. For more detail for how to run and configure the service, refer to [Administering](iotdriverinsights_admin.html) section and [API Documentation](https://new-console.ng.bluemix.net/apidocs/103){:new_window}.
 
 
 # rellinks
 
 ## api 
-* [API Documentation](https://dev-console.stage1.ng.bluemix.net/apidocs/103){:new_window}
+* [API Documentation](https://new-console.ng.bluemix.net/apidocs/103){:new_window}
 
 
 ## general 
