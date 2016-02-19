@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 17 February 2016*
+*Last updated: 19 February 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -175,6 +175,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 
 
 ### Support ticket severity
+{: #support-ticket-severity}
 
 The following table lists some common examples of support issues and suggested severity levels. The examples are general guidelines for informational purposes only.
 
