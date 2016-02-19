@@ -15,7 +15,7 @@
 
 ## api 
 
-* [API Documentation](https://dev-console.stage1.ng.bluemix.net/apidocs/102) {: new_window}
+* [API Documentation](https://new-console.ng.bluemix.net/apidocs/102) {: new_window}
 
 
 ## general 
