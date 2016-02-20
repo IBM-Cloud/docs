@@ -274,7 +274,7 @@
 		"items": [{
 			"title": "為何要用 Bluemix？",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",
-			"href": "http://www.ibm.com/cloud-computing/bluemix/why-bluemix"
+			"href": "http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/"
 		}, {
 			"title": "Softlayer 文件",
 			"img": "homepage/images/Softlayer-icon.svg",
