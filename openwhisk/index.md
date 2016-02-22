@@ -87,7 +87,7 @@ To use this example, follow these steps:
     ```
     {: screen}
 
-You can also use the event-driven capabilities in {{site.data.keyword.openwhisk_short}} to invoke this action in response to events. Follow the [alarm service example](./openwhisk_package.html#openwhisk_packages_trigger) to configure an event source to invoke the `hello` action every time a periodic event is generated.
+You can also use the event-driven capabilities in {{site.data.keyword.openwhisk_short}} to invoke this action in response to events. Follow the [alarm service example](./openwhisk_packages.html#openwhisk_package_trigger) to configure an event source to invoke the `hello` action every time a periodic event is generated.
 
 
 ## System details
