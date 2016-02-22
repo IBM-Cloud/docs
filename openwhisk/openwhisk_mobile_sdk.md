@@ -6,9 +6,9 @@
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
 {: #openwhisk_mobile_sdk}
-*Last updated: 17 February 2016*
+*Last updated: 22 February 2016*
 
-{{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS 2 devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available and so Android developers can resort to using the {{site.data.keyword.openwhisk}} REST API directly.
+{{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS 2 devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
 {: shortdesc}
 
 The mobile SDK is written in Swift 2.0 and supports iOS 9 and later releases.
