@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 18 February 2016*
+*Last updated: 22 February 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -44,11 +44,7 @@ The inception virtual machine runs in a network behind your customer firewall in
 <dt>**Network**</dt>
 <dd>Relay is the delivery network included with {{site.data.keyword.Bluemix_notm}} Local. Relay enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability that is used by IBM operations to complete problem determination for your local instance. For more information about Relay, see [Relay](index.html#localrelay).</dd>
 <dt>**Compute**</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} uses a combination of the most prominent open source compute technologies to power your apps, including:
-<ul>
-<li>App-centric runtime environments based on Cloud Foundry.</li>
-<li>IBM Containers for portable and consistent delivery of your app without the need for you to manage an operating system.</li>
-<li>IBM Virtual Servers to get the most flexibility and control over your environments.</li></dd>
+<dd>{{site.data.keyword.Bluemix_notm}} Local uses app-centric runtime environments based on Cloud Foundry.</dd>
 <dt>**Security intelligence**</dt>
 <dd><p>IBM uses QRadar Security Intelligence Platform to provide a unified architecture for integrating several key components. These components include security information and event management, log management, anomaly detection, incident forensics, and configuration and vulnerability management. Bluemix also uses IBM QRadar security information and event management (SIEM) to monitor privileged user actions and successful and unsuccessful login attempts of application developers. QRadar reports provide the customer with visibility on that events data via the Reports and Logs section of the Administration page. For information about security reports, see [Viewing reports](../admin/index.html#oc_report).</p>
 <p>IBM BigFix ensures that fixes for operating systems are applied at appropriate frequencies. The patching process is automated, and the schedule is agreed upon between you and IBM. For information about maintenance and upgrades, see [Maintaining your local instance](index.html#maintainlocal).</p>
