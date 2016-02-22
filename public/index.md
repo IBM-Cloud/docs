@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*Last updated: 17 February 2016*
+*Last updated: 22 February 2016*
 
 
 {{site.data.keyword.Bluemix_notm}} abstracts and hides most of the complexities that are associated with hosting and managing cloud-based apps. As an application developer, you can focus on developing your app without having to manage the infrastructure that is required to host it.
@@ -64,14 +64,14 @@ You can deploy your apps to different {{site.data.keyword.Bluemix_notm}} regions
 <dt>{{site.data.keyword.IBM_notm}} Containers</dt>
 <dd><p>With the {{site.data.keyword.IBM_notm}} Containers infrastructure, you can run your web app anywhere that supports container deployment. A *container* is an object that holds everything that is needed for an app to run. This infrastructure includes a private registry for your trusted images, so that you can upload, store, and retrieve them. You can then make those images available in {{site.data.keyword.Bluemix_notm}} and manage your containers in the platform. The {{site.data.keyword.IBM_notm}} Containers infrastructure scales both horizontally and vertically. You can use all of the images that are available in the public Docker Hub and use the docker API and command line interface to manage your containers on {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.IBM_notm}} also provides some public images in the Containers Registry that you can use and extend.</p>
 <p>{{site.data.keyword.IBM_notm}} Containers are used to run Docker containers in a hosted cloud environment. Docker adds an engine that deploys an app to the virtual environment that you use for running your containers. Docker also provides an environment that you can use to run your code. When you're ready, it provides the means by which you can transfer the code from your development environment, to your test environment, and then to your production environment.</p>
-<p>To find out more about {{site.data.keyword.IBM_notm}} Containers, see [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</p></dd>
+<p>To find out more about {{site.data.keyword.IBM_notm}} Containers, see 
+<a href="../containers/container_index.html">{{site.data.keyword.IBM_notm}} Containers</a>.</p></dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
 <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} is a hosted cloud environment, part of {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, that you can use to build, run, manage, and monitor your applications, while maintaining the most control over your apps and the middleware on which they run. Use {{site.data.keyword.virtualmachinesshort}} to isolate your business solutions, especially when you deploy your apps in a public cloud.</p>
 <p>You can run and manage virtual servers in public and private (on-premises) clouds that use OpenStack software. You can create, launch, and manage your virtual servers by using either the {{site.data.keyword.Bluemix_notm}} UI or the OpenStackClient (OSC) client. You can use virtual server images that are provided by {{site.data.keyword.IBM_notm}}, or create virtual servers from your own custom images. You can use {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} capabilities to remove most of the complexities that are associated with hosting and managing cloud-based applications such as logging, auto-scaling, and monitoring. You can use OpenStack services and {{site.data.keyword.Bluemix_notm}} services together to build and run hybrid applications. You can provision infrastructure resources as needed based on operational policies and workload demand. </p>
 <p>
-To find out more about {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, see [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p></dd>
+To find out more about {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, see <a href="../virtualmachines/vm_index.html">{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}</a>.</p></dd>
 </dl>
-
 
 ### How {{site.data.keyword.Bluemix_notm}} works
 {: #howwork}
