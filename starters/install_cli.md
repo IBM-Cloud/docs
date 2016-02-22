@@ -34,7 +34,7 @@ After the command line interfaces are installed, you can get started:
 
   1. {: download} Download your starter code. 
       
-    ![Download starter code](images/btn_starter-code.svg)
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download starter code" /> </a>
   
   2. Extract the package to a new directory to set up your development environment.
   3. Change to your new directory.
