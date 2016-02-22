@@ -6,7 +6,7 @@
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 4 December 2015*
+*Last updated: 22 February 2015*
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -181,9 +181,9 @@ The following example shows a manifest file for a Node.js application that uses 
 Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by a *Droplet Execution Agent (DEA)* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
 
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
-
+	
   * User-defined variables that are specific for an application. For information about how to add a user-defined variable to an app, see [Adding user-defined environment variables](#ud_env){:new_window}.
-	  
+	 
   * The VCAP_SERVICES variable, which contains connection information to access a service instance. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance. For example:
   
   ```
@@ -232,11 +232,11 @@ You can view the following environment variables of a running {{site.data.keywor
   }
   ```
         
-You can access environment variables set by the DEA and buildpacks.
+You also have access to the environment variables that are set by the DEA and buildpacks.
 
-<ul>
-<li>The following variables are defined by the DEA:
-  <dl>
+The following variables are defined by the DEA:
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>The root directory of the deployed application.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -314,11 +314,12 @@ You can access environment variables set by the DEA and buildpacks.
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>Variables that are defined by buildpacks are different for each buildpack. See [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} for any other compatible buildpacks.
+</dl>
 
-    <li>Variables that are defined by Liberty Buildpack:
+Variables that are defined by buildpacks are different for each buildpack. See [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} for any other compatible buildpacks.
+
+<ul>
+    <li>The following variables are defined by the Liberty Buildpack:
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -333,7 +334,7 @@ You can access environment variables set by the DEA and buildpacks.
 	  <dd>The location of generated output such as log files and working directory of a running Liberty profile server instance.</dd>
 	  </dl>
 </li>   
-<li>Variables that are defined by Node.js Buildpack:
+<li>The following variables are defined by the Node.js Buildpack:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>The directory of the Node.js runtime environment.</dd>
@@ -345,7 +346,16 @@ You can access environment variables set by the DEA and buildpacks.
 </li>
 </li>
 </ul>	
-	
+
+You can use the following sample Node.js code to get the value of the VCAP_SERVICES environment variable:
+
+```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 For more information about each environment variable, see [Cloud Foundry Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Customizing application deployments
@@ -372,8 +382,7 @@ To specify start commands for your application, you can use one of the following
   command: node app.js
   ```
   
-  
-  
+
 ### Adding user-defined environment variables
 {: #ud_env}
 
@@ -396,9 +405,13 @@ User-defined environment variables are specific for an application. You have the
       VAR2:value2
     ```
 	
+After you have added a user-defined environment variable, you can use the following sample Node.js code to get the value of the variable that you defined:
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### Configuring the startup environment
 
 To configure the startup environment for your application, you can add shell scripts into the `/.profile.d` directory. The `/.profile.d` directory is under the build directory of your application. Scripts in the `/.profile.d` directory are run by {{site.data.keyword.Bluemix_notm}} before the application is run. For example, you can set the NODE_ENV environment variable to **production** by putting a `node_env.sh` file that contains the following content under the `/.profile.d` directory:
