@@ -6,7 +6,7 @@
 
 # Using and creating {{site.data.keyword.openwhisk_short}} packages
 {: #openwhisk_packages}
-*Last updated: 15 February 2016*
+*Last updated: 22 February 2016*
 
 In {{site.data.keyword.openwhisk}}, you can use packages to bundle together a set of related actions, and share them with others.
 
@@ -14,7 +14,7 @@ A package can include *actions* and *feeds*.
 - An action is a piece of code that runs on {{site.data.keyword.openwhisk_short}}. For example, the Cloudant package includes actions to read and write records to a Cloudant database.
 - A feed is used to configure an external event source to fire trigger events. For example, the Alarm package includes a feed that can fire a trigger at a specified frequency.
 
-Every {{site.data.keyword.openwhisk_short}} entity, including packages, belongs in a *namespace*, and the fully fully qualified name of an entity is `/namespaceName[/packageName]/entityName`. Refer to the [naming guidelines](./openwhisk_reference.html#openwhisk_entities) for more information.
+Every {{site.data.keyword.openwhisk_short}} entity, including packages, belongs in a *namespace*, and the fully qualified name of an entity is `/namespaceName[/packageName]/entityName`. Refer to the [naming guidelines](./openwhisk_reference.html#openwhisk_entities) for more information.
 
 The following sections describe how to browse packages and use the triggers and feeds in them. In addition, for those interested in contributing their own packages to the catalog, read the sections on creating and sharing packages.
 
@@ -272,7 +272,7 @@ Feeds offer a convenient way to configure an external event source to fire these
   ```
   {: pre}
 
-  You should see activations every eight seconds for the trigger, the rule and the action. The action receives the parameters `{"name":"Mork", "place":"Ork"}` on every invocation.
+  You should see activations every eight seconds for the trigger, the rule, and the action. The action receives the parameters `{"name":"Mork", "place":"Ork"}` on every invocation.
 
 
 ## Creating a package
@@ -480,5 +480,5 @@ Others can now use your `custom` package, including binding to the package or di
   ```
   {: screen}
 
-  In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
+  In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name..
 
