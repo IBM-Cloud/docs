@@ -297,7 +297,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
   {: codeblock}
 
-  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](./openwhisk_reference.html#runtime_ref_runtime_environment) detail the Node.js packages you can use in your actions.
+  Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. See [system details](./openwhisk_reference.html#runtime_ref_runtime_environment) for more information on Node.js packages you can use in your actions.
   
   This example also shows the need for asynchronous actions. The action returns `whisk.async()` to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `whisk.done()` function.
 
@@ -522,7 +522,7 @@ For the instructions that follow, assume that the user ID is "janesmith" and the
   {: screen}
 
 
-You can find more information about creating Docker actions in the [References](./openwhisk_reference.html#openwhisk_ref_docker) section.
+You can find more information about creating Docker actions in the [system details](./openwhisk_reference.html#openwhisk_ref_docker) section.
 
 
 ## Watching action output
