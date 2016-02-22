@@ -13,6 +13,9 @@
 				"name": "Cloud Foundry Apps",
 				"href": "cfapps/index.html"
 			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
+			}, {
 				"name": "Containers",
 				"href": "containers/container_index.html"
 			}, {
