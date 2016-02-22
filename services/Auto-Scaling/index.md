@@ -140,17 +140,23 @@ Check application configuration for more information.
 
 Contact the Cloud Administrator for more information.
 
-
 # rellinks
+{: #rellinks}
+
 ## samples
+{: #samples}
+
 * [Tutorial: Make your application elastic on {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/developerworks/cloud/library/cl-autoscale-app/index.html){:new_window}
 * [Cloud Foundry Architecture Labs](https://developer.ibm.com/bluemix/docs/category/cloud-foundry-docs/){:new_window}
 
 ## sdk
-* [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html){:new_window}
+{: #sdk}
+
+* [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.{DomainName}/docs/apidocs/48){:new_window}
 
 ## general
-* [{{site.data.keyword.Bluemix_notm}}  Pricing Sheet](https://console.{DomainName}/pricing/){:new_window}
-* [{{site.data.keyword.Bluemix_notm}}  Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){:new_window}
-* [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
+{: #general}
 
+* [Scaling containers](https://www.{DomainName}/docs/containers/container_creating_ov.html#container_group_ov){:new_window}
+* [Scaling virtual servers](https://www.{DomainName}/docs/virtualmachines/vm_index.html#vm_manage_instances){:new_window}
+* [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
