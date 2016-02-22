@@ -6,7 +6,7 @@
 
 # Creating triggers and rules
 {: #openwhisk_triggers}
-*Last updated: 15 February 2016*
+*Last updated: 22 February 2016*
 
 {{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
 {: shortdesc}
@@ -38,16 +38,16 @@ For example, consider a system with the following actions:
 - `classifyImage` action that detects the objects in an image and classifies them.
 - `thumbnailImage` action that creates a thumbnail version of an image.
 
-Also, suppose there are two event sources firing the following triggers:
+Also, suppose that there are two event sources that are firing the following triggers:
 - `newTweet` trigger that is fired when a new tweet is posted.
 - `newImage` trigger that is fired when an image is uploaded to a website.
 
-It is possible to setup rules so that a single trigger event invokes multiple actions, as well as having multiple triggers invoke the same action:
+You can set up rules so that a single trigger event invokes multiple actions, and have multiple triggers invoke the same action:
 - `newTweet -> classifyImage` rule.
 - `imageUpload -> classifyImage` rule.
 - `imageUpload -> thumbnailImage` rule.
 
-The three rules establish the following behavior: images in both tweets and uploaded images are classified, and uploaded images are classified and a thumbnail version is generated. 
+The three rules establish the following behavior: images in both tweets and uploaded images are classified, uploaded images are classified, and a thumbnail version is generated. 
 
 ## Creating and firing triggers
 {: #openwhisk_triggers}
