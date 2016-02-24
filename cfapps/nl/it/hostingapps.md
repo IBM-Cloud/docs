@@ -24,7 +24,7 @@ Se la tua applicazione osserva tutti i seguenti principi,
 essa è pronta per il cloud e può essere migrata in {{site.data.keyword.Bluemix_notm}}. Se l'applicazione viola uno dei principi, puoi generalmente modificarla
 per far sì che rispetti tutti i principi.
 
-* Non codificare direttamente l'applicazione in una topologia specifica.
+* Non codificare direttamente la tua applicazione in una topologia specifica.
 
   In
 un ambiente non cloud, l'applicazione potrebbe utilizzare una particolare topologia
@@ -35,7 +35,7 @@ e il ridimensionamento manuale del numero di istanze di un'applicazione.
 
   Crea
 la tua applicazione in modo che sia il più possibile generica e senza stati, in modo da preservare
-l'applicaizone dagli effetti delle modifiche di scalabilità.
+la tua applicazione dagli effetti delle modifiche di scalabilità.
 
 * Non presupporre che il file system locale sia permanente.
 
@@ -48,9 +48,9 @@ vengono perse nel momento in cui l'istanza viene arrestata e riavviata in un'ubi
 o VM differente.
 
   Invece che nel file system locale, puoi memorizzare
-le informazioni in un servizio, quale un database SQL o NoSQL. In un ambiente cloud dinamico, è importante anche che
-i registri siano disponibili in un servizio avente durata superiore alle istanze dell'applicazione in cui
-vengono generati i registri.
+le informazioni in un servizio, quale un database SQL o NoSQL. In un ambiente cloud dinamico, è fondamentale anche che
+i tuoi log siano disponibili in un servizio avente durata superiore alle istanze dell'applicazione in cui
+vengono generati i log.
 
 * Non memorizzare gli stati delle sessioni nella tua applicazione.
 
@@ -90,7 +90,7 @@ può fare riferimento a livelli differenti del tuo stack software.
   Puoi
 invece affidarti ai prodotti commerciali od open source esistenti e
 lasciare le soluzioni PaaS nel livello PaaS in modo da mantenerle al di fuori del codice della
-codtua applicazione.
+tua applicazione.
 
 * Non utilizzare protocolli oscuri.
 
@@ -106,7 +106,7 @@ database standard, accodamento e connessioni ai servizi Web.
 
   Se hai già utilizzato
 funzioni specifiche del sistema operativo, puoi risolvere il problema utilizzando librerie di compatibilità,
-quali Cygwin e Mono. Cygwin è una libreria di compatibilità che fornisce una serie di strumenti Linux in un ambiente Windows. Mono è una libreria di compatibilità che fornisce le funzionalità di Windows .NET in Linux. 
+quali Cygwin e Mono. Cygwin è una libreria di compatibilità che fornisce una serie di strumenti Linux in un ambiente Windows. Mono è una libreria di compatibilità che fornisce le funzionalità di Windows .NET in Linux.
 
   Evita le dipendenze specifiche del sistema operativo;
 utilizza invece servizi forniti dall'infrastruttura middleware
@@ -120,14 +120,14 @@ devono essere esternalizzati dagli script.
 
   Acquisisci almeno l'installazione
 della tua applicazione come una serie uniforme di script
-indipendenti dal sistema operativo. Fa sì che le dimensioni dell'installazione dell'applicazione
+indipendenti dal sistema operativo. Fa in modo che le dimensioni dell'installazione della tua applicazione
 restino contenute e preservane la portabilità, in modo che si adegui a differenti tecniche di automazione. Inoltre,
 riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
 
 Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [12-factor
 app](http://12factor.net/){:new_window}.
 
-##Migrazione delle applicazioni
+##Migrazione delle tue applicazioni
 {: #ht_hostapp}
 
 Invece di spostare completamente le applicazioni nell'ambiente cloud,
@@ -152,13 +152,12 @@ Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix
 | Strumento	| Metodo |
 |:------|:--------|
 |Interfaccia riga di comando Cloud Foundry (cf cli)	|Gestisci il tuo codice su un client locale e utilizza l'interfaccia riga di comando
-Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle applicazioni](../starters/upload_app.html).|
+Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle tue applicazioni](../starters/upload_app.html).|
 |Eclipse	|Gestisci il tuo codice in Eclipse e utilizza gli strumenti di IBM Eclipse per {{site.data.keyword.Bluemix_notm}} per distribuire la tua applicazione.|
 |Integrazione di Git	|Gestisci il tuo codice su GitHub e integra Git
 in {{site.data.keyword.Bluemix_notm}}. Puoi collaborare con altri sviluppatori. La tua applicazione viene distribuita
 automaticamente in {{site.data.keyword.Bluemix_notm}}
-quando esegui il commit delle modifiche nel codice. Non occorre eseguire manualmente il push
-dell'applicazione.|
+quando esegui il commit delle modifiche nel codice. Non devi eseguire manualmente il push dell'applicazione.|
 |{{site.data.keyword.Bluemix_notm}} DevOps
 Delivery Pipeline	|Gestisci il tuo codice sul repository DevOps GitHub
 e distribuisci la tua applicazione su {{site.data.keyword.Bluemix_notm}}
@@ -169,7 +168,7 @@ Se la piattaforma Cloud Foundry non risponde ai requisiti della tua applicazione
 puoi utilizzare un contenitore o una VM in cui il runtime venga configurato
 e aggiornato con più opzioni personalizzate.
 
-##Caricamento delle applicazioni attraverso la CLI cf
+##Caricamento delle tue applicazioni attraverso la CLI cf
 {: #ht_cfcli}
 
 Puoi
@@ -242,7 +241,7 @@ in esecuzione.</li>
 della tua applicazione. Per visualizzare la quota di memoria per la tua organizzazione, utilizza cf org org_name.
 * Per ulteriori informazioni su cf push, vedi [comandi cf](../cli/cfcommands.html).
 
-##Migrazione dei dati e utilizzo dei servizi
+##Migrazione dei tuoi dati e utilizzo dei servizi
 {: #ht_service}
 
 Una volta

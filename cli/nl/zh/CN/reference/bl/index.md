@@ -10,7 +10,7 @@
 * 从桌面创建新的基于云的项目
 * 将更改从桌面同步到基于云的项目工作空间以及 Bluemix 上运行的应用程序。
 * 请参阅可用于同步的项目列表。
-* 请参阅正在运行的应用程序状态。
+* 请参阅运行中应用程序的状态。
 
 有关下载和使用 bl 命令的更多信息，请参阅 [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive)。
 
@@ -37,7 +37,7 @@ Bluemix Live Sync 命令行 **bl** 的语法如下：
 <dt>stop, sp</dt>
 <dd>在 Bluemix 中停止应用程序实例。</dd>
 <dt>status, ss</dt>
-<dd>列出 Bluemix 中正在运行的应用程序实例的状态。</dd>
+<dd>列出 Bluemix 中运行中应用程序实例的状态。</dd>
 </dl>
 
 ### 自变量

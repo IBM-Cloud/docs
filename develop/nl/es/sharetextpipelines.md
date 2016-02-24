@@ -7,7 +7,7 @@
 
 *Última actualización: 7 de diciembre de 2015* 
 
-Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) de {{site.data.keyword.jazzhub_short}} como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}.
+Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) de {{site.data.keyword.jazzhub_short}} como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
 
 En el directorio raíz de proyecto del ejemplo, debe tener una carpeta con el nombre `.bluemix` que contenga un archivo `pipeline.yml`.

@@ -9,25 +9,21 @@
 *Dernière mise à jour : 8 décembre 2015*
 
 
-Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. 
-Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
-commande à utiliser pour démarrer votre application.{:shortdesc}
+Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
+commande à utiliser pour démarrer votre application.
+{:shortdesc}
 
 ##Création et utilisation d'un domaine personnalisé
 {: #domain}
 
 Vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu du domaine système
-{{site.data.keyword.Bluemix_notm}} par défaut, à savoir mybluemix.net. 
+{{site.data.keyword.Bluemix_notm}} par défaut, à savoir mybluemix.net.
 
-Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Si vous souhaitez
-utiliser un domaine personnalisé pour votre organisation, vous devez le créer dans
-{{site.data.keyword.Bluemix_notm}}, puis le mapper au domaine système {{site.data.keyword.Bluemix_notm}} en configurant votre serveur
-DNS ou en modifiant votre fichier `hosts` local. Une fois que votre domaine personnalisé est mappé au domaine système {{site.data.keyword.Bluemix_notm}}, les requêtes de votre domaine personnalisé sont acheminées à votre application
+Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer le domaine personnalisé sur un serveur DNS public, configurer ce domaine dans {{site.data.keyword.Bluemix_notm}}, puis mapper ce domaine au domaine système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine système {{site.data.keyword.Bluemix_notm}}, les requêtes de votre domaine personnalisé sont acheminées à votre application
 dans {{site.data.keyword.Bluemix_notm}}.
 
 **Remarque :** vous pouvez utiliser la commande **nslookup** pour obtenir l'adresse IP publique du domaine
-système {{site.data.keyword.Bluemix_notm}}.
-Par exemple, depuis une invite de commande, entrez `nslookup mybluemix.net`. 
+système {{site.data.keyword.Bluemix_notm}}. Par exemple, depuis une invite de commande, entrez `nslookup mybluemix.net`.
 
 Vous pouvez créer et utiliser un domaine personnalisé dans {{site.data.keyword.Bluemix_notm}} en utilisant
 l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
@@ -91,7 +87,6 @@ http://host_name.mydomain
 ```
 
 **Remarque :** pour supprimer une route orpheline, utilisez la commande suivante :
-
 
 ```
 cf delete-route domaine -n nom_hôte -f
@@ -225,7 +220,7 @@ Dans cet exemple, *Blue* est l'ancienne version déployée et
 répond à l'adresse URL `Green.mybluemix.net`.
 	
 3. Mappez l'application *Blue* à l'application *Green* pour que tout le trafic vers `Blue.mybluemix.net`
-soit routé vers l'application *Blue* et vers l'application *Green*. 
+soit routé vers l'application *Blue* et vers l'application *Green*.
   
   ```
   cf map-route Green mybluemix.net -n Blue
@@ -266,7 +261,7 @@ l'application *Blue* :
   **Résultat :** le routeur CF arrête d'envoyer le trafic à l'application *Blue*. L'application *Green*
 répond aux deux adresses URL : `Green.mybluemix.net` et `Blue.mybluemix.net`.
   
-5. Supprimez la route `Green.mybluemix.net` vers l'application *Green*. 
+5. Supprimez la route `Green.mybluemix.net` vers l'application *Green*.
   
   ```
   cf unmap-route Green mybluemix.net -n Green

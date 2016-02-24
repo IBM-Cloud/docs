@@ -26,7 +26,7 @@ To create the email action:
 6. In the To field, enter `service.engineer@company.com`.
 7. In the CC field, enter: `service.manager@company.com`.
 8. In the subject line, enter: `Service required.`
-9. Select to prepend with "IoT Real-Time Insights alert" to clarify where the email comes from.
+9. Select to prepend with "{{site.data.keyword.iotrtinsights_short}} alert" to clarify where the email comes from.
 10. To include the device data in the email, clear the **Do not include device data in the email message** check box.
 11. Click **OK** to save the action.  
 
@@ -47,7 +47,7 @@ To create the post to slack action:
  - Content type - application/json
  - Select **Use customized message body**
  - Body  
- ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n IoT Real-Time Insights instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
+ ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
  **Important:** The Slack webhook must at a minimum contain the "text" field. For information, see [Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Slack documentation") in the Slack documentation.
 11. Click **OK** to save the action.
 
@@ -66,23 +66,24 @@ Where the first node is an http node, and the second is a twilio node.
   <li>URL - `RTI-alert`</li>
   <li>Name - RTI Action</li>
   </ul>
-  2. Add a "twilio" output node and configure the it with the following attributes:
+  2. Add an "http response" output node and connect it and "http" input nodes together by dragging between the output port of one to the input port of the other.
+  3. Add a "twilio" output node and configure the it with the following attributes:
   <ul>
   <li>Service - **External service**</li>
   <li>Twilio - Add new twilio-api</li>
   <li>SMS to - `Phone number for the service engineer`</li>
   <li>Name - **SMS**</li>
   </ul>
-  3. Wire the nodes together  
+  4. Wire the nodes together  
   Connect the http and twilio nodes together by dragging between the output port of one to the input port of the other.
-  4. Click the **Deploy** button to deploy the flow to the server
-3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action that has the following parameters:
+  5. Click the **Deploy** button to deploy the flow to the server
+3. In {{site.data.keyword.iotrtinsights_short}}, go to **Analytics > Actions** and create an action that has the following parameters:
  - Type - **Node-RED**
  - Name - `Send text using Node-RED and Twilio`
  - Description - `Send a text message alert to the service engineer.`
  - URL - `http://mynodered.mybluemix.net/RTI-alert`
  - BODY   
- ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n IoT Real-Time Insights instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```
+ ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```
 4. Click **OK** to save the action.
 
 ## Use IFTTT to post a Trello card {: #iftttex}
@@ -104,7 +105,7 @@ To create the post a card on Trello action:
  8. Edit the title and description.
  9. Assign the @service.engineer and @service.manager members.
  8. Click **Create Action**.   
-3. In IoT Real-Time Insights, go to **Analytics > Actions** and create an action that has the following parameters:
+3. In {{site.data.keyword.iotrtinsights_short}}, go to **Analytics > Actions** and create an action that has the following parameters:
 <ul>
 <li>Type - **IFTTT**</li>
 <li>Name - `Post service request card`</li>

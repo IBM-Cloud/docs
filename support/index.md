@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 26 January 2016*
+*Last updated: 19 February 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -27,7 +27,7 @@ Click **Get help** to find answers to your questions. On the page that is displa
 Whether accessed directly or through Account and Support, Stack Overflow is a website that serves as a platform for users to ask and answer questions. The {{site.data.keyword.Bluemix_notm}} development and support teams are active on Stack Overflow, and follow the questions that are tagged with **bluemix**.
 
 To ask a question in Stack Overflow, choose from the following options:
-  * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACKOVERFLOW** to post your question.
+  * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACK OVERFLOW** to post your question.
 
   * Go directly to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
 
@@ -92,7 +92,7 @@ You can also use a third-party service to automatically send an email for each R
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [simple form](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [Bluemix Support ticket](https://support.eu-gb.bluemix.net/gethelp/){: new_window} form.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -118,14 +118,14 @@ You can open support tickets if you have a valid {{site.data.keyword.Bluemix_not
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
-If you were unable to resolve your technical problem with the troubleshooting and help options, you can ask for support. However, before contacting support for a technical issue, ensure that the problem is not due to an outage by checking {{site.data.keyword.Bluemix_notm}} status. 
+If you were unable to resolve your technical problem with the troubleshooting and help options, you can ask for support. However, before contacting support for a technical issue, ensure that the problem is not due to an outage by checking {{site.data.keyword.Bluemix_notm}} status.
 
 If the problem is not due to an outage, you can open a support ticket by using one of the following options:
 
-  * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for. 
+  * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
   * Use the [{{site.data.keyword.Bluemix_notm}} Support ticket](http://ibm.biz/bluemixsupport){: new_window} form. You can also use this form for ID and billing questions.
 
-  
+
 Support is available with the following options:
 
   * Initial 30-day trial subscription (complimentary)
@@ -135,7 +135,7 @@ Support is available with the following options:
   * Subscription with the Support add-on
 
 
-When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities.
+When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but your account's 30-day trial subscription period has expired and you don't have the Support add-on, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to {{site.data.keyword.Bluemix_notm}} Standard Support, contact your IBM sales representative by email at sales@bluemix.net.
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -175,6 +175,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 
 
 ### Support ticket severity
+{: #support-ticket-severity}
 
 The following table lists some common examples of support issues and suggested severity levels. The examples are general guidelines for informational purposes only.
 
@@ -215,6 +216,26 @@ The scripts use the cf command line interface to extract the following informati
   * Configured routes
   * Events
   * Provisioned services
+
+## National language support for {{site.data.keyword.Bluemix_notm}}
+{: #lang}
+
+{{site.data.keyword.Bluemix_notm}} supports national languages other than English. However, not all of the content that is provided with {{site.data.keyword.Bluemix_notm}} is translated. The following table lists the supported national languages and language codes for {{site.data.keyword.Bluemix_notm}}.
+
+| **National language** | **Language code** |
+|-------------------|---------------|
+| Brazilian Portuguese | pt_BR |
+| English | en |
+| French | fr |
+| German | de |
+| Japanese | ja |
+| Korean | ko |
+| Italian | it |
+| Spanish | es |
+| Simplified Chinese | zh_CN |
+| Traditional Chinese | zh_TW |
+  
+*Table 2. Supported national languages and language codes*
 
 
 # rellinks

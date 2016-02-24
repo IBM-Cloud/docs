@@ -181,13 +181,13 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
     {{site.data.keyword.IBM_notm}} Containers are used to run Docker containers in a hosted cloud environment. Docker adds an engine that deploys an app to the virtual environment that you use for running your containers. Docker also provides an environment that you can use to run your code. When you're ready, it provides the means by which you can transfer the code from your development environment, to your test environment, and then to your production environment.
 
-    To find out more about {{site.data.keyword.IBM_notm}} Containers, see [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) in the Creating Web Apps documentation.</dd>
-<dt>Virtual Machines (BETA)</dt>
-    <dd>The {{site.data.keyword.Bluemix_notm}} virtual machines infrastructure gives you the ability to create and manage virtual machine groups on the {{site.data.keyword.IBM_notm}} public cloud. You can also create and manage VM groups on your private {{site.data.keyword.IBM_notm}} clouds that you’ve chosen to make available to {{site.data.keyword.Bluemix_notm}} users. The infrastructure includes a guided experience to connect to your on-premises infrastructure. Support for monitoring and logging is integrated into {{site.data.keyword.Bluemix_notm}}. You can deploy and manage your virtual machines by using either the {{site.data.keyword.Bluemix_notm}} user interface or the cloud's OpenStack APIs.
-
-    Virtual machines on {{site.data.keyword.Bluemix_notm}} support provisioning of virtual machine groups with auto scaling. Through this support, the number of instances can be automatically increased or decreased, based on CPU load or the failure of an instance. In addition, load balancing is supported, which enables the assignment of virtual IP (floating IP) addresses as needed.
-
-    To find out more about {{site.data.keyword.Bluemix_notm}} virtual machines, see [Virtual Machines](../virtualmachines/vm_index.html) in the Creating Web Apps documentation.</dd>
+    To find out more about {{site.data.keyword.IBM_notm}} Containers, see [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} is a hosted cloud environment, part of {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, that you can use to build, run, manage, and monitor your applications, while maintaining the most control over your apps and the middleware on which they run. Use {{site.data.keyword.virtualmachinesshort}} to isolate your business solutions, especially when you deploy your apps in a public cloud. </p>
+<p>    
+You can run and manage virtual servers in public and private (on-premises) clouds that use OpenStack software. You can create, launch, and manage your virtual servers by using either the {{site.data.keyword.Bluemix_notm}} UI or the OpenStackClient (OSC) client. You can use virtual server images that are provided by {{site.data.keyword.IBM_notm}}, or create virtual servers from your own custom images. You can use {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} capabilities to remove most of the complexities that are associated with hosting and managing cloud-based applications such as logging, auto-scaling, and monitoring. You can use OpenStack services and {{site.data.keyword.Bluemix_notm}} services together to build and run hybrid applications. You can provision infrastructure resources as needed based on operational policies and workload demand. </p>
+<p>
+To find out more about {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, see [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Applications

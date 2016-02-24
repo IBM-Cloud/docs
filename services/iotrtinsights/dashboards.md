@@ -5,7 +5,7 @@
 The real-time data from your IoT devices is displayed in customizable dashboards. You can manually create dashboards that display real-time metrics, show graphs, and display other information for one or more devices. Dashboards can also contain filtered lists of devices and links to other dashboards.
 {: shortdesc}
 
-In addition to manually created dashboards, IoT Real-Time Insights comes with a predefined device alerts dashboard at **Dashboards > Overview** and dynamically creates device dashboards based on the message schemas that you create.
+In addition to manually created dashboards, {{site.data.keyword.iotrtinsights_short}} comes with a predefined device alerts dashboard at **Dashboards > Overview** and dynamically creates device dashboards based on the message schemas that you create.
 
 ## Dashboards {: #dashboards}
 
@@ -13,7 +13,7 @@ Administrators can create new dashboards and modify existing ones to display the
 To create a dashboard:
 1.	Go to **Dashboards > Browse Dashboards**.
 2.	Click **Add new dashboard**.
-3.	Give the dashboard a name and select attributes, such as icon and background. Also select whether to make this dashboard editable to IoT Real-Time Insights operator users.
+3.	Give the dashboard a name and select attributes, such as icon and background. Also select whether to make this dashboard editable to {{site.data.keyword.iotrtinsights_short}} operator users.
 4.	Click ![Create icon.](images/create.png "Create icon").
 5.	Click the new dashboard tile to open the empty dashboard.
 6.	To add widgets to the dashboard:  
@@ -78,7 +78,7 @@ Latitude | Device location on Special > Map widget (Longitude widget also requir
 
 
 ## Default dashboard layouts
-IoT Real-Time Insights comes with predefined dashboards: an alerts dashboard and device dashboards.
+{{site.data.keyword.iotrtinsights_short}} comes with predefined dashboards: an alerts dashboard and device dashboards.
 
 The following tables describe the widgets and layout of the predefined dashboards.
 ### Alerts Dashboard (Dashboards > Overview)

@@ -4,11 +4,11 @@
 # {{site.data.keyword.Bluemix_notm}} 概述
 {: #overview}
 
-*上次更新时间：2015 年 11 月 20 日*
+*上次更新时间：2016 年 1 月 18 日*
 
 {{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 基于 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 开放式源代码技术构建，通过平台即服务 (PaaS) 使开发者能够更轻松地进行应用程序开发。另外，{{site.data.keyword.Bluemix_notm}} 还提供预构建的移动后端即服务 (MBaaS) 功能。目标是通过提供各种可随时立即使用的服务以及托管功能来实现因特网大规模开发，从而简化应用程序的交付过程。
+{{site.data.keyword.Bluemix_notm}} 基于 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 开放式源代码技术构建，通过平台即服务 (PaaS) 使开发者能够更轻松地进行应用程序开发。另外，{{site.data.keyword.Bluemix_notm}} 还提供预构建的移动后端即服务 (MBaaS) 功能。目标是通过提供各种可随时立即使用的服务以及托管功能来实现互联网大规模开发，从而简化应用程序的交付过程。
 
 {{site.data.keyword.Bluemix_notm}} 还具有可满足您需求的云部署。无论是计划扩大规模的小企业，还是需要额外隔离机制的大企业，都可以在云中进行无边界开发，在这里您可以将专用服务连接到 {{site.data.keyword.IBM_notm}} 以及第三方供应商提供的公共 {{site.data.keyword.Bluemix_notm}} 服务。所有服务实例均由 {{site.data.keyword.IBM_notm}} 管理，而您只需要为自己选择使用的服务付费。
 
@@ -29,7 +29,7 @@
 
 {{site.data.keyword.Bluemix_notm}} 还提供了中间件服务，供应用程序使用。{{site.data.keyword.Bluemix_notm}} 会在供应新服务实例并将这些服务与应用程序绑定时代表应用程序执行操作。这样，应用程序就可以执行其真正的工作，而将服务的管理留给基础架构来执行。
 
-通常，在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您不必担心操作系统和基础架构层。诸如根文件系统和中间件组件这样的层已进行抽象化，以便您可以重点关注自己的应用程序代码。但是，如果需要有关应用程序运行位置的具体信息，可以了解有关这些层的更多信息。有关详细信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 基础架构层](../cli/viewinfra.html#viewinfra)。 
+通常，在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您不必担心操作系统和基础架构层。诸如根文件系统和中间件组件这样的层已进行抽象化，以便您可以重点关注自己的应用程序代码。但是，如果需要有关应用程序运行位置的具体信息，可以了解有关这些层的更多信息。有关详细信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 基础架构层](../cli/vcapsvc.html#viewinfra)。 
 
 ## {{site.data.keyword.Bluemix_notm}} 体系结构
 {: #ov_arch}
@@ -63,7 +63,7 @@
 
 {{site.data.keyword.Bluemix_notm}} Dedicated 是属于您自己的专用 SoftLayer 环境，它安全地连接到公共 {{site.data.keyword.Bluemix_notm}} 以及您自己的网络。{{site.data.keyword.Bluemix_notm}} Dedicated 通过 VPN 或直接网络连接参与您的网络活动。您的单租户硬件可以在全世界的任何一个 SoftLayer 数据中心内进行设置。{{site.data.keyword.IBM_notm}} 负责对专用平台和专用服务进行管理，所以您可以专注于构建定制应用程序。不仅如此，{{site.data.keyword.IBM_notm}} 还会在您所选择的维护时段内执行专用实例的所有维护工作。
 
-{{site.data.keyword.IBM_notm}} 为您的专用环境提供了几种服务，但您可以连接到所有公共服务。在专用环境中，所有运行时均可用。{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能（无需额外付费）：VPN、专用 VLAN、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。 
+{{site.data.keyword.IBM_notm}} 为您的专用环境提供了几种服务，但您可以连接到所有公共服务。在专用环境中，所有运行时均可用。无需额外付费，{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能：VPN、专用 VLAN、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。 
 
 ![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png)
 
@@ -74,13 +74,17 @@
 
 {{site.data.keyword.Bluemix_notm}} Local 是您自己的 {{site.data.keyword.Bluemix_notm}} 实例，部署在公司防火墙后的数据中心内。通过 {{site.data.keyword.Bluemix_notm}} Local，可以与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步。
 
-{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的服务，供您使用。在本地环境中，所有运行时均可用。{{site.data.keyword.Bluemix_notm}} 的本地部署中包含以下优势和功能（无需额外付费）：中继管理技术、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力以及标准支持。
+{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的服务，供您使用。在本地环境中，所有运行时均可用。无需额外付费，{{site.data.keyword.Bluemix_notm}} 的本地部署中包含以下优势和功能：中继管理技术、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力以及标准支持。
 
 IBM 使用中继技术来安全地监视和维护环境，让您可以始终专注于业务。中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的一项交付功能，能够使 IBM 以一致的方式自动交付更新，以便您始终都能有一个稳定、安全的最新系统。中继通过开放式出站 SSL VPN 隧道来实现连接，该隧道源自先启虚拟机。通过此隧道，IBM 可以为您实例的平台、计算资源和服务提供服务并进行维护。请参阅 [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html#local)。
 
 ![{{site.data.keyword.Bluemix_notm}} Local。](images/localarch.png "Bluemix Local")
 
 *图 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+先启虚拟机在客户防火墙后面的网络中运行，该网络使用出站连接通过中继技术连接到 IBM 操作中心。{{site.data.keyword.Bluemix_notm}} 平台组件和核心服务在一个独立的专用虚拟局域网 (VLAN) 中运行。{{site.data.keyword.Bluemix_notm}} Local 将 VLAN 用于专用子网。使用专用子网（而不使用公用 VLAN）不但更为安全，而且还有助于避免路由问题。
+
+DataPower 设备提供对 {{site.data.keyword.Bluemix_notm}} 应用程序域的访问。这些设备所连接到的网络从您的内部网即可进行访问。用户可从这个网络中获取相应访问权来部署应用程序和服务。您必须提供 7 个 IP 地址，以用于出站因特网访问。DataPower 设备会从这些客户 IP 地址路由到独立的 {{site.data.keyword.Bluemix_notm}} 部署。有关网络规范和基础架构需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Local 基础架构需求](../local/index.html#localinfra)。
 
 ### {{site.data.keyword.Bluemix_notm}} 的工作方式
 {: #howwork}
@@ -154,11 +158,11 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **区域名称** | **区域前缀** | **cf API 端点** | **UI 控制台** |       
-|-----------------|-------------------|---------------------|----------------|
-| 美国南部区域 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| 欧洲英国区域 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Australia Sydney region | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **区域名称** | **地理位置** | **区域前缀** | **cf API 端点** | **UI 控制台** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| 美国南部区域 | 美国达拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| 英国区域 | 英国伦敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| 悉尼区域 | 澳大利亚悉尼 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *表 1. {{site.data.keyword.Bluemix_notm}} 区域列表*
@@ -303,7 +307,7 @@ buildpack 是脚本的集合，用于预编译代码以便在目标 PaaS 上执�
 | 简体中文 | zh_CN |
 | 繁体中文 | zh_TW |
 
-*表 3. 支持的本地语言和语言代码*
+*表 2. 支持的本地语言和语言代码*
 
 # 相关链接
 ## 常规 
@@ -311,7 +315,7 @@ buildpack 是脚本的集合，用于预编译代码以便在目标 PaaS 上执�
 * [{{site.data.keyword.Bluemix_notm}} 中的新增功能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 已知问题](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} 词汇表](glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer（{{site.data.keyword.IBM_notm}} 下属公司）](http://www.softlayer.com/)

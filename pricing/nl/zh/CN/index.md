@@ -39,13 +39,13 @@
 # 定价
 {: #pricing}
 
-*上次更新时间：2015 年 11 月 9 日*
+*上次更新时间：2016 年 1 月 4 日*
 
 您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况详细信息”视图，可用于在构建应用程序后检查实际成本。{:shortdesc}
 
 ## 免费试用
 {: #trial}
-使用您的 {{site.data.keyword.IBM}} 标识进行注册后，即可享受 30 天的免费试用。试用期间，您可以在 Bluemix 上开发应用程序和使用服务。
+使用您的 {{site.data.keyword.Bluemix_notm}} 标识进行注册后，即可享受 30 天的免费试用。试用期间，您可以在 {{site.data.keyword.Bluemix_notm}} 上开发应用程序和使用服务。
 
 免费为您的帐户提供以下资源：
 
@@ -53,10 +53,10 @@
 * 10 个服务
 * 1 个 SSL 证书
 
-免费试用会在您注册后的 30 天到期。30 天试用到期后，您帐户中的应用程序将停止。您将无法在 Bluemix 上注册获取另一次试用。然而，您仍可以访问您的帐户和您收到邀请的帐户。要重新启动应用程序，必须提供现买现付帐户的信用卡信息，或创建预订帐户。转换帐户之后，可以继续使用免费的计算和服务限额。您只需要为每月免费限额中不包括的服务、容器和运行时的使用量付费。
+免费试用会在您注册后的 30 天到期。30 天试用到期后，您帐户中的应用程序将停止。您将无法在 {{site.data.keyword.Bluemix_notm}} 上注册获取另一次试用。然而，您仍可以访问您的帐户和您收到邀请的帐户。要重新启动应用程序，必须提供现买现付帐户的信用卡信息，或创建预订帐户。转换帐户之后，可以继续使用免费的计算和服务限额。您只需要为每月免费限额中不包括的服务、容器和运行时的使用量付费。
 
-如果您的免费试用到期后未转换帐户，那么在试用到期后，会收到有关帐户状态的电子邮件通知。通知会提示您创建付费帐户，这样您的应用程序设置和配置不会丢失。如果您不想从 Bluemix 收到这些通知，可以随时取消预订。试用到期后 1 个月，会除去您的应用程序和服务配置。下图显示了 Bluemix 帐户管理的一般流程。图 1. Bluemix 帐户管理流程图
-Bluemix 帐户管理流程图
+如果您的免费试用到期后未转换帐户，那么在试用到期后，会收到有关帐户状态的电子邮件通知。通知会提示您创建付费帐户，这样您的应用程序设置和配置不会丢失。如果您不想从 {{site.data.keyword.Bluemix_notm}} 收到这些通知，可以随时取消预订。试用到期后 1 个月，会除去您的应用程序和服务配置。下图显示 {{site.data.keyword.Bluemix_notm}} 帐户管理的一般流程。
+
 
 ![{{site.data.keyword.Bluemix_notm}} 帐户管理流程图](acctmgmt600.png)
 
@@ -69,7 +69,7 @@ Bluemix 帐户管理流程图
 ##成本
 {: #what_it_costs}
 
-费用根据特定服务、运行时、容器、虚拟机或支持选项所使用的资源而定。资源可以是 API 调用数、实例数、内存、存储器等。Bluemix 还提供了详细的成本估算工具和精确到分的成本计算器，帮助您规划费用。您可以使用*使用情况详细信息*视图来检查构建应用程序后的实际成本。有关费用的更多详细信息，请参阅[收费方式](index.html#charges)。
+费用根据特定服务、运行时、容器、虚拟机或支持选项所使用的资源而定。资源可以是 API 调用数、实例数、内存、存储器等。{{site.data.keyword.Bluemix_notm}} 还提供了详细的成本估算工具和精确到分的成本计算器，帮助您规划费用。您可以使用*使用情况详细信息*视图来检查构建应用程序后的实际成本。有关费用的更多详细信息，请参阅[收费方式](index.html#charges)。
  
 
 ##促销码
@@ -90,15 +90,15 @@ Bluemix 帐户管理流程图
 ##计费方式
 {: #pay-accounts}
 
-注册 Bluemix 计费套餐时，可以选择以下帐户：
+注册 {{site.data.keyword.Bluemix_notm}} 计费套餐时，可以选择以下帐户：
 * 现买现付
 * 预订
-* Bluemix Dedicated
-* Bluemix Local
+* {{site.data.keyword.Bluemix_notm}} Dedicated
+* {{site.data.keyword.Bluemix_notm}} Local
 
-使用现买现付帐户时，将根据您所使用的 {{site.data.keyword.Bluemix_notm}} 计算和服务来收费。使用预订帐户时，可享受基于每月最低花费承诺的每月折扣。Bluemix Dedicated 和 Bluemix Local 按一年期合同收费。
+使用现买现付帐户时，将根据您所使用的 {{site.data.keyword.Bluemix_notm}} 计算和服务来收费。使用预订帐户时，可享受基于每月最低花费承诺的每月折扣。{{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local 按一年期合同收费。
 
-您可以随时将免费试用帐户转换为计费帐户。所有免费试用的非计费帐户信息和 Bluemix 解决方案都将无缝合并到新的计费帐户中。
+您可以随时将免费试用帐户转换为计费帐户。所有免费试用的非计费帐户信息和 {{site.data.keyword.Bluemix_notm}} 解决方案都将无缝合并到新的计费帐户中。
 
 创建计费帐户后，您可以编辑所提供的信息。单击 {{site.data.keyword.Bluemix_notm}} 用户界面右上角的**概要文件设置**图标，然后单击**帐户 &gt; 帐户类型**来编辑您的信息。
 
@@ -109,7 +109,7 @@ Bluemix 帐户管理流程图
 
 如果注册现买现付帐户，那么只需要为您所使用的 {{site.data.keyword.Bluemix_notm}} 资源付费。您还有资格获取免费运行时和服务限额。
 
-在许多国家或地区，都可以从 {{site.data.keyword.Bluemix_notm}} 用户界面注册现买现付帐户。单击**免费试用**图标，然后单击**确认您的免费帐户**并选择**选项 1**。输入您所在的国家或地区，然后单击**添加我的信用卡**，以提供您的信用卡信息。在您提供帐单和信用卡信息，接受条款和条件并提交帐户请求之后，将验证您的信用卡。还会发送帐户信息的确认电子邮件。接收确认电子邮件之后的数分钟，您可以返回到 {{site.data.keyword.Bluemix_notm}}，以继续构建您的应用程序。如果 {{site.data.keyword.Bluemix_notm}} 无法处理您所在国家或地区的在线请求，那么您可以使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接联系 {{site.data.keyword.Bluemix_notm}} 销售人员来注册您的现买现付帐户。
+在许多国家或地区，都可以从 {{site.data.keyword.Bluemix_notm}} 用户界面注册现买现付帐户。单击**免费试用**图标，然后单击**确认您的免费帐户**并选择**选项 1**。输入您所在的国家或地区，然后单击**添加信用卡**来提供您的信用卡信息。在您提供帐单和信用卡信息，接受条款和条件并提交帐户请求之后，将验证您的信用卡。还会发送帐户信息的确认电子邮件。接收确认电子邮件之后的数分钟，您可以返回到 {{site.data.keyword.Bluemix_notm}}，以继续构建您的应用程序。如果 {{site.data.keyword.Bluemix_notm}} 无法处理您所在国家或地区的在线请求，那么您可以联系 {{site.data.keyword.Bluemix_notm}} 销售人员来注册您的现买现付帐户，联系销售人员的方法是使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接。
 
 您可以随时将现买现付帐户转换为预订帐户。使用预订帐户时，需要承诺每月最低花费量。如果想要转换为预订帐户，请使用 [Bluemix 联系我们](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)页面上列出的链接来联系 {{site.data.keyword.Bluemix_notm}} 销售人员。
 
@@ -151,23 +151,23 @@ Bluemix 帐户管理流程图
 ##收费方式
 {: #charges}
 
-使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您所在组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。您可以在 Bluemix“目录”中的“资源详细信息”页面上，或在 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器中，查看有关特定费用的更多信息。
+使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您所在组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。要查看有关特定费用的更多信息，请转至 {{site.data.keyword.Bluemix_notm}}“目录”中的资源详细信息页面，或者 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器。
 
-根据您所使用的 Bluemix 功能，应用不同的费用类型。下表提供了高层次的概述：
+所应用的费用类型会有所不同，具体取决于您所使用的 {{site.data.keyword.Bluemix_notm}} 功能。下表提供了高层次的概述：
 
-| 费用类型 | 描述 | 使用此类型费用的 Bluemix 功能 | 示例 |
+| 费用类型 | 描述 | 使用此费用类型的 {{site.data.keyword.Bluemix_notm}} 功能 | 示例 |
 |------------------|------------------|--------------------------|--------------------------|
 | 固定 | 固定费率定价基于约定的每月费用，此费用不可调整。 | 服务  | Data Cache 具有按每月固定费率收费的固定套餐。 |
 | 计量 | 按使用量计量的定价基于运行时的所使用 GB-小时数以及容器的所使用 GB-小时数和 IP 地址数及存储量。 | 服务、计算和容器 | 对于 Push 服务，会对超出每月免费限额的任何使用量收费。 |
 |  分层   |  某些定价套餐基于分层定价模型，会根据您的实际使用量为您提供数量折扣。服务可能会提供简单层、累进层或包量层定价套餐。 | 服务 | 分层定价通常用于每月数量预计会非常高的费用度量值，例如 API 调用数。 |
-| 保留 | 保留定价基于服务的长期承诺，会为您提供折扣价格。使用保留套餐时，您会得到一个易于在公共 Bluemix 环境中设置、部署和交付的专用服务实例。 | 服务 | DB2 on Cloud 具有保留套餐。|
+| 保留 | 保留定价基于服务的长期承诺，会为您提供折扣价格。使用保留套餐时，您会得到一个易于在公共 {{site.data.keyword.Bluemix_notm}} 环境中设置、部署和交付的专用服务实例。 | 服务 | DB2 on Cloud 具有保留套餐。|
 
 ###计算资源的费用
 {: #compute}
 
 对您应用程序运行的时间和使用的内存收费，计算方式为 *GB-小时*。GB-小时的计算方式为应用程序实例数乘以每个实例的内存量，再乘以实例运行的小时数。您可以根据需求定制实例数以及每个实例的内存量。您还可以添加内存或实例以针对更多用户进行扩展。最终费用按每 GB-小时：您的应用程序实例数乘以每个实例的内存，再乘以运行的小时数。
 
-例如，假设一个运行时在两个 512 MB 实例中运行 30 天（720 个小时），每 GB-小时的成本为 0.07 美元。这些资源的成本为 24.15 美元，包括 375 GB-小时的免费限额，计算方式如下： 
+例如，假设一个运行时在两个 512 MB 实例中运行 30 天（720 个小时），每 GB-小时的开销为 0.07 美元。这些资源的成本为 24.15 美元，包括 375 GB-小时的免费限额，计算方式如下： 
 
 ```
 2 个实例 x 0.5 GB x 720 小时 = 720 GB-小时。(720 - 375) GB-小时 x 每 GB-小时 0.07 美元 = 24.15 美元```
@@ -183,9 +183,9 @@ Bluemix 帐户管理流程图
     <dd>根据运行时和服务的使用量付费。例如，通过使用 Push 服务，对超出每月免费限额的任何使用量收费。</dd>
 <dt>保留费用</dt>
     <dd><p>作为现买现付帐户或预订帐户的帐户所有者，您可以保留服务实例，享受基于长期承诺的折扣价格。例如，可以将标准大型 DB2 on Cloud 产品保留 12 个月。</p> 
-    <p>某些 Bluemix 服务提供保留套餐。您可以在 Bluemix <strong>目录</strong>中通过单击服务磁贴来请求保留套餐。然后，选择最适合您需求的服务套餐。如果保留套餐可用，请单击<strong>请求</strong>，然后遵循提示发送请求。您将收到一封电子邮件，其中包含保留套餐的价格信息。Bluemix 销售代表也会尽快与您联系以完成购买。</p></dd>
+    <p>某些 {{site.data.keyword.Bluemix_notm}} 服务提供保留套餐。您可以在 {{site.data.keyword.Bluemix_notm}} <strong>目录</strong>中通过单击服务磁贴来请求保留套餐。然后，选择最适合您需求的服务套餐。如果保留套餐可用，请单击<strong>请求</strong>，然后遵循提示发送请求。您将收到一封电子邮件，其中包含保留套餐的价格信息。{{site.data.keyword.Bluemix_notm}} 销售代表也会尽快与您联系，以便完成购买。</p></dd>
 <dt>分层费用</dt>
-    <dd>与计量费用类似，分层费用也是根据运行时和服务的使用量付费。不过，分层费用会另添加额外的定价层，通常在使用量较大的层中提供折扣费用。分层定价以简单层、累进层或包量层形式提供。</dd>
+    <dd>与计量费用类似，分层费用也是根据运行时和服务的使用量付费。不同的是，分层费用会添加额外的定价层，通常在使用量较大的层中提供折扣费用。分层定价以简单层、累进层或包量层形式提供。</dd>
 </dl>
 
 
@@ -342,7 +342,7 @@ Bluemix 帐户管理流程图
 <dd>Auto-Scaling 策略免费。</dd>
 
 <dt>每月 2 GB（针对 Data Cache）</dt>
-<dd>Data Cache 服务提供的 50 MB 套餐免费。然而，免费套餐可能难以满足您每月计划使用的 2 GB。Data Cache 的 3 个付费套餐都是以固定金额购买特定的空间量，而不管您实际使用的空间量是多少。因此，您希望选择符合您计划使用量（标准套餐为 5 GB）的最低限度套餐。每月总成本为 155 美元。</dd>
+<dd>Data Cache 服务提供的 50 MB 套餐免费。然而，免费套餐可能难以满足您每月计划使用的 2 GB。Data Cache 的 3 个付费套餐都是以固定金额购买特定的空间量，而不管您实际使用的空间量是多少。因此，您希望选择符合您计划使用量（标准套餐为 5 GB）的最低限度套餐。每月总开销为 155 美元。</dd>
 
 <dt>NoSQL 数据库每月 150 GB</dt>
 <dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} 服务费用基于数据存储和按不同 API 方法访问该数据的能力。<strong>PUT</strong> 和 <strong>POST</strong> 命令被视为频繁 API 调用，但 <strong>GET</strong> 命令被视为稀少 API 调用。<p>
@@ -412,5 +412,5 @@ cf update-service <service_name> [-p <new_plan>]```
 ## 常规 
 * [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} 开发者社区论坛](https://developer.ibm.com/bluemix/)
-* [获取联机帮助](https://www.stage1.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)
-* [联系我们](https://ace.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)
+* [获取联机帮助](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
+* [联系我们](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

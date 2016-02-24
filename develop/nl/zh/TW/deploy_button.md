@@ -6,7 +6,7 @@
 
 #建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
 
-*前次更新：2015 年 12 月 8 日* 
+*前次更新：2016 年 1 月 19 日* 
 
 「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要最低配置，而且您可以將其插入任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
@@ -17,7 +17,7 @@
 
 1. 如果那個人沒有作用中的 {{site.data.keyword.Bluemix}} 帳戶，則必須建立試用帳戶。 
 
-2. 那個人可以選取區域、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、那個人的使用者名稱以及時間來建構。 
+2. 那個人可以選取地區、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、那個人的使用者名稱以及時間來建構。 
 
 3. 原始的公用 Git 儲存庫的主要分支會複製到新的專用 {{site.data.keyword.jazzhub_title}} 專案，並具有新的 Git 儲存庫。 
 
@@ -54,11 +54,21 @@
 <ol>
 <li> 複製並修改下列其中一個 Snippet 範本，並包括公用 Git 儲存庫。
 
+<p></p>
+<p>
+<strong>提示</strong>：如果想要為 DevOps Services 專案指定建置輸入，請將分支參數新增至 Git URL。當您新增分支參數時，原始公用 Git 儲存庫（包括其所有分支）會複製到新的專用 DevOps Services 專案（含新的 Git 儲存庫）。指定的 Git 分支會設為建置工作的輸入。如果未指定分支，則依預設，建置工作的輸入會設為主分支。</p>
 <ul>
-<li>HTML：
+<li>HTML：<p>
 預設主要分支：
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+指定的 Git 分支：
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown：
@@ -66,7 +76,12 @@
 預設主要分支：
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+</pre>
+<p>指定的 Git 分支：
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
 </pre>
 </li>
 </ul>

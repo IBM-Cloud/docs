@@ -3,7 +3,7 @@
 # Data and Analytics
 {: #data_analytics}
 
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 9 dicembre 2015*
 
 Fai di più con i potenti database cloud e servizi di analisi integrati. Oltre ad esplorare i servizi, puoi
 utilizzare la console Gestisci i dati per ottenere dati nei tuoi servizi, creare delle applicazioni guidate dai dati e analizzare i dati, tutto in una sola ubicazione centrale. Ti basta fare clic su [GESTISCI I DATI](https://console.ng.bluemix.net/data/services/) nel tile `Data & Analytics` sul Dashboard {{site.data.keyword.Bluemix_notm}}.
@@ -12,4 +12,4 @@ utilizzare la console Gestisci i dati per ottenere dati nei tuoi servizi, creare
 
 Crea di più | Cresci di più | Dormi di più
 ---- | ---- | ----
-Concentrati sulla cosa più divertente, ossia la creazione di nuove applicazioni, senza doverti preoccupare dell'amministrazione del sistema. | Scala notevolmente i tuoi dati su IBM Cloud. | Dormi sonni tranquilli mentre gli esperti IBM si occupano del corretto funzionamento dei tuoi dati 24 ore al giorno, sette giorni alla settimana.
+Concentrati sulla cosa più divertente, ossia la creazione di nuove applicazioni, senza doverti preoccupare dell'amministrazione del sistema. | Ridimensiona notevolmente i tuoi dati su IBM Cloud. | Dormi sonni tranquilli mentre gli esperti IBM si occupano del corretto funzionamento dei tuoi dati 24 ore al giorno, sette giorni alla settimana.

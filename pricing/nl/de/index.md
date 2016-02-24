@@ -39,17 +39,14 @@
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 09. November 2015*
+*Letzte Aktualisierung: 4. Januar 2016*
 
-Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}}
-ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine
-Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht Nutzungsdetails, in der Sie die tatsächlichen Kosten
-nach dem Erstellen Ihrer Apps überprüfen können. 
+Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdetails', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
 {:shortdesc}
 
-## Kostenlose Testversion
+## Kostenloser Test
 {: #trial}
-Sie können sich für einen kostenfreien 30-Tage-Test mit Ihrer {{site.data.keyword.IBM}} ID registrieren. Während des Testzeitraums können Sie in Bluemix Anwendungen entwickeln und Services nutzen. 
+Sie können sich für einen kostenfreien 30-Tage-Test mit Ihrer {{site.data.keyword.Bluemix_notm}}-ID registrieren. Während des Testzeitraums können Sie in {{site.data.keyword.Bluemix_notm}} Anwendungen entwickeln und Services nutzen. 
 
 Ihr Konto wird gebührenfrei mit den folgenden Ressourcen ausgestattet:
 
@@ -59,16 +56,16 @@ Ihr Konto wird gebührenfrei mit den folgenden Ressourcen ausgestattet:
 
 Ihr kostenloser Testzeitraum läuft 30 Tage nach Ihrer Registrierung ab. Nach Ablauf des 30-Tage-Tests
 werden die Anwendungen in Ihrem Konto gestoppt. Sie erhalten keine weitere Möglichkeit mehr, sich für einen
-Test in Bluemix zu registrieren.
+Test in {{site.data.keyword.Bluemix_notm}} zu registrieren.
 Sie können jedoch weiterhin auf Ihr Konto und die Konten zugreifen, in die Sie eingeladen wurden. Zum erneuten Starten Ihrer Anwendungen müssen Sie entweder Ihre Kreditkarteninformationen für ein Konto vom Typ Nutzungsabhängige Zahlung angeben oder ein Konto vom Typ Abonnement erstellen. Nach dem Konvertieren Ihres Kontos können Sie mit der Verwendung der kostenlosen Rechen- und Serviceressourcen fortfahren. Sie zahlen nur für die Nutzung von Services, Containern und Laufzeiten, die nicht durch die kostenlosen Monatsleistungen abgedeckt ist.
 
 Wenn Sie Ihr Konto nach Ablauf des kostenlosen Testzeitraums nicht konvertieren, empfangen
 Sie E-Mail-Benachrichtigungen über Ihren Kontostatus nach Ablauf des Tests. Die Benachrichtigungen
 erinnern Sie daran, ein gebührenpflichtiges Konto zu erstellen, damit Ihre Anwendungseinstellungen
-und -konfigurationen nicht verloren gehen. Wenn Sie diese Benachrichtigungen von
-Bluemix nicht empfangen möchten, können
-Sie das Abonnement jederzeit beenden. Einen Monat nach Ablauf des Testzeitraums werden Ihre Anwendungen und Servicekonfigurationen entfernt. In der folgenden Abbildung ist der allgemeine Prozess der
-Bluemix-Kontenverwaltung dargestellt. Abbildung 1. Prozessablaufdiagramm für die Bluemix-Kontenverwaltung
+und -konfigurationen nicht verloren gehen. Wenn Sie diese Benachrichtigungen von {{site.data.keyword.Bluemix_notm}} nicht empfangen möchten, können Sie das Abonnement jederzeit beenden.
+Einen Monat nach Ablauf des Testzeitraums werden Ihre Anwendungen und Servicekonfigurationen entfernt. In der folgenden Abbildung ist der allgemeine Prozess der
+{{site.data.keyword.Bluemix_notm}}-Kontenverwaltung dargestellt. 
+
 
 ![Prozessablaufdiagramm für die {{site.data.keyword.Bluemix_notm}}-Kontenverwaltung](acctmgmt600.png)
 
@@ -84,7 +81,7 @@ während der kostenlosen Testperiode angeboten werden.
 ##Kosten
 {: #what_it_costs}
 
-Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit, virtuellen Maschine oder Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. Bluemix stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdetails* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
+Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit, virtuellen Maschine oder Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdetails* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
  
 
 ##Werbecode
@@ -106,21 +103,21 @@ doch sie können mehr oder weniger Folgendes umfassen:
 
 **Hinweis:** Sie können mehrere Werbecodes auf Ihr Testkonto anwenden. Jeder Werbecode kann vor Ablauf seines Verfallsdatums
 nur ein einziges Mal eingelöst werden.
-Klicken Sie zum Verwenden eines Werbecodes auf das Symbol **Profileinstellungen**, wählen Sie **Konto** aus und klicken anschließend in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Kontotyp**.
+Klicken Sie zum Verwenden eines Werbecodes auf das Symbol **Profileinstellungen**, wählen Sie **Konto** aus und klicken anschließend in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Kontotyp**. 
 
 ##Rechnungsabwicklung
 {: #pay-accounts}
 
-Wenn Sie sich für einen abrechnungsfähigen Bluemix-Plan registrieren, können Sie eine der folgenden Konten auswählen: 
+Wenn Sie sich für einen abrechnungsfähigen {{site.data.keyword.Bluemix_notm}}-Plan registrieren, können Sie eines der folgenden Konten auswählen: 
 * Nutzungsabhängig
 * Abonnement
-* Bluemix Dedicated
-* Bluemix Local
+* {{site.data.keyword.Bluemix_notm}} Dedicated
+* {{site.data.keyword.Bluemix_notm}} Local
 
 Bei einem Konto für nutzungsabhängige Zahlung werden Ihnen die Kosten auf der Grundlage Ihrer Nutzung der {{site.data.keyword.Bluemix_notm}}-Berechnungen
-und -Services in Rechnung gestellt. Bei einem Konto für Abonnement können Sie einen monatlichen Rabatt auf der Basis einer verbindlichen Mindestausgabeverpflichtung erhalten. Die Gebühren für Bluemix Dedicated und Bluemix Local werden über Jahresverträge abgerechnet. 
+und -Services in Rechnung gestellt. Bei einem Abonnementkonto können Sie einen monatlichen Rabatt auf der Basis einer verbindlichen Mindestausgabeverpflichtung erhalten. Die Gebühren für {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local werden über Jahresverträge abgerechnet. 
 
-Sie können Ihre kostenlose Testversion jederzeit in ein belastbares Konto konvertieren. Die gesamten Kontoinformationen der kostenlosen, nicht fakturierbaren Testversion sowie die Bluemix-Lösungen werden ohne Reibungsverluste in das neue belastbares Konto übernommen. 
+Sie können Ihre kostenlose Testversion jederzeit in ein belastbares Konto konvertieren. Die gesamten Kontoinformationen der kostenlosen, nicht fakturierbaren Testversion sowie die {{site.data.keyword.Bluemix_notm}}-Lösungen werden ohne Reibungsverluste in das neue belastbares Konto übernommen. 
 
 Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegebenen Informationen bearbeiten. Klicken Sie auf das Symbol **Profileinstellungen** in der rechten oberen Ecke der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle und klicken Sie anschließend auf **Konto &gt; Kontotyp**, um Ihre Informationen zu bearbeiten.
 
@@ -129,27 +126,19 @@ Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung od
 ###Nutzungsabhängiges Konto
 {: #pay-as-you-go}
 
-Wenn Sie sich für ein Konto für nutzungsabhängige Zahlung registrieren, bezahlen Sie nur für die {{site.data.keyword.Bluemix_notm}}-Ressourcen, die
-Sie nutzen. Sie haben außerdem die Möglichkeit, zusätzliche kostenlose Laufzeit- und Serviceleistungen zu nutzen.
+Wenn Sie sich für ein Konto für nutzungsabhängige Zahlung registrieren, bezahlen Sie nur für die {{site.data.keyword.Bluemix_notm}}-Ressourcen, die Sie nutzen. Sie haben außerdem die Möglichkeit, zusätzliche kostenlose Laufzeit- und Serviceleistungen zu nutzen.
 
-In vielen Ländern können Sie sich für ein Konto für nutzungsabhängige Zahlung über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle
-registrieren. Klicken Sie auf das Symbol **Kostenlose Testversion** und anschließend auf **Bestätigen Sie Ihr kostenloses Konto** und wählen Sie **Option 1** aus. Geben Sie Ihr Land ein und klicken Sie auf **Meine Kreditkarte hinzufügen**,
-um die Informationen zu Ihrer Kreditkarte anzugeben. Akzeptieren Sie nach der Angabe Ihrer
-Abrechnungs- und Kreditkarteninformationen die Vertragsbedingungen und schicken Sie Ihre
-Anforderung ab. Ihre Kreditkarteninformationen werden geprüft. Es wird auch eine Bestätigungs-E-Mail für
-die Kontoinformationen gesendet. Einige Minuten nach Empfang der Bestätigungs-E-Mail können Sie zu
-{{site.data.keyword.Bluemix_notm}} zurückkehren, um mit
-der Erstellung Ihrer Apps fortzufahren. Wenn {{site.data.keyword.Bluemix_notm}} Ihre Onlineanforderung für Ihr Land nicht verarbeiten kann, können Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb wenden. Verwenden Sie den Link, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist, um sich für Ihr Konto für nutzungsabhängige Zahlung zu registrieren. 
+In vielen Ländern und Regionen können Sie sich für ein Konto für nutzungsabhängige Zahlung über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle registrieren. Klicken Sie auf das Symbol **Kostenlose Testversion** und anschließend auf **Bestätigen Sie Ihr kostenloses Konto** und wählen Sie **Option 1** aus. Geben Sie Ihr Land oder Ihre Region ein und klicken Sie auf **Kreditkarte hinzufügen**, um Ihre Kreditkarteninformationen anzugeben. Akzeptieren Sie nach der Angabe Ihrer Abrechnungs- und Kreditkarteninformationen die Vertragsbedingungen und schicken Sie Ihre Anforderung ab. Ihre Kreditkarteninformationen werden geprüft. Es wird auch eine Bestätigungs-E-Mail für die Kontoinformationen gesendet. Einige Minuten nach Empfang der Bestätigungs-E-Mail können Sie zu {{site.data.keyword.Bluemix_notm}} zurückkehren, um mit der Erstellung Ihrer Apps fortzufahren. Wenn {{site.data.keyword.Bluemix_notm}} Ihre Onlineanforderung für Ihr Land oder Ihre Region nicht verarbeiten kann, können Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb wenden. Verwenden Sie den Link, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist, um sich für Ihr Konto für nutzungsabhängige Zahlung zu registrieren. 
 
-Sie können Ihr Konto für nutzungsabhängige Zahlung jederzeit in ein Konto für Abonnement konvertieren. Mit einem Konto für Abonnement verpflichten
-Sie sich zu einem monatlichen Mindestausgabebetrag. Wenn Sie Ihr Konto in ein Konto für Abonnement konvertieren möchten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb, indem Sie den Link verwenden, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist. 
+Sie können Ihr Konto für nutzungsabhängige Zahlung jederzeit in ein Abonnementkonto konvertieren. Mit einem Abonnementkonto verpflichten
+Sie sich zu einem monatlichen Mindestausgabebetrag. Wenn Sie Ihr Konto in ein Abonnementkonto konvertieren möchten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb, indem Sie den Link verwenden, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist. 
 
-###Konto für Abonnement
+###Abonnementkonto
 {: #subscription}
 
-Wenn Sie sich für ein Konto für Abonnement registrieren, verpflichten Sie sich zu einem Mindestausgabebetrag pro Monat und erhalten einen Abonnementrabatt, der auf diese Mindestgebühr angewendet wird. Außerdem müssen Sie jede Nutzung bezahlen, die über den Mindestausgabebetrag hinausgeht.
+Wenn Sie sich für ein Abonnementkonto registrieren, verpflichten Sie sich zu einem Mindestausgabebetrag pro Monat und erhalten einen Abonnementrabatt, der auf diese Mindestgebühr angewendet wird. Außerdem müssen Sie jede Nutzung bezahlen, die über den Mindestausgabebetrag hinausgeht.
 
-Um sich für ein Abonnement-Konto anzumelden oder um weitere Informationen zu Abonnementgebühren und -nachlässen zu erhalten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb. Verwenden Sie dazu den Link, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist. 
+Um sich für ein Abonnementkonto anzumelden oder um weitere Informationen zu Abonnementgebühren und -nachlässen zu erhalten, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Vertrieb. Verwenden Sie dazu den Link, der auf der Seite für die [Bluemix-Kontaktaufnahme](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs) aufgelistet ist. 
 
 ###Zugeordnetes {{site.data.keyword.Bluemix_notm}}-Konto
 {: #dedicated}
@@ -174,7 +163,7 @@ zuständigen IBM Kundenbeauftragten bzw. an den
 [Bluemix-Vertrieb](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs). 
 
 
-###{{site.data.keyword.Bluemix_notm}} - Lokales Konto
+###{{site.data.keyword.Bluemix_notm}} Local-Konto
 {: #local}
 
 {{site.data.keyword.Bluemix_notm}} erfordert eine Mindestlaufzeit von einem Jahr und umfasst Folgendes:
@@ -197,18 +186,16 @@ zuständigen IBM Kundenbeauftragten bzw. an den
 ##Berechnung der Gebühren
 {: #charges}
 
-Über ein belastbares {{site.data.keyword.Bluemix_notm}}-Konto werden die Gebühren für Berechnungen, Container und Services erhoben, die von Ihrer Organisation in Anspruch genommen werden. Es kann vorkommen, dass Sie von anderen {{site.data.keyword.Bluemix_notm}}-Benutzern eingeladen werden, unter einem anderen Konto an Organisationen teilzunehmen. Wenn Sie in den Organisationen, in die Sie eingeladen wurden, Anwendungen erstellen oder Services verwenden, werden die Gebühren, die für diese Nutzung anfallen, dem Konto in Rechnung gestellt, das die betreffenden Organisationen enthält. Weitere Informationen zu bestimmten Gebühren können Sie über die Detailseite einer Ressource im Bluemix-Katalog oder über den Preisrechner auf der {{site.data.keyword.Bluemix_notm}}-Seite 'Preisstruktur' aufrufen.
+Über ein belastbares {{site.data.keyword.Bluemix_notm}}-Konto werden die Gebühren für Berechnungen, Container und Services erhoben, die von Ihrer Organisation in Anspruch genommen werden. Es kann vorkommen, dass Sie von anderen {{site.data.keyword.Bluemix_notm}}-Benutzern eingeladen werden, unter einem anderen Konto an Organisationen teilzunehmen. Wenn Sie in den Organisationen, in die Sie eingeladen wurden, Anwendungen erstellen oder Services verwenden, werden die Gebühren, die für diese Nutzung anfallen, dem Konto in Rechnung gestellt, das die betreffenden Organisationen enthält. Weitere Informationen zu bestimmten Gebühren können Sie über die Detailseite einer Ressource im {{site.data.keyword.Bluemix_notm}}-Katalog oder über den Preisrechner auf der {{site.data.keyword.Bluemix_notm}}-Seite 'Preisstruktur' aufrufen. 
 
+Die Gebühren werden abhängig von den von Ihnen verwendeten Komponenten von {{site.data.keyword.Bluemix_notm}} berechnet. In der folgenden Tabelle wird eine allgemeine Übersicht bereitgestellt:
 
-Die Gebühren werden abhängig von den von Ihnen verwendeten Komponenten von Bluemix berechnet. In der folgenden Tabelle wird eine allgemeine Übersicht bereitgestellt:
-
-| Gebührentyp | Beschreibung | Bluemix-Features, die diesen Gebührentyp verwenden | Beispiel |
+| Gebührentyp | Beschreibung | {{site.data.keyword.Bluemix_notm}}-Features, die diesen Gebührentyp verwenden | Beispiel |
 |------------------|------------------|--------------------------|--------------------------|
 | Fest | Die Festpreisgestaltung basiert auf einer vereinbarten monatlichen Gebühr, die nicht angepasst wird. | Services  | Für den Datencache wird ein fester Plan verwendet, der als feste monatliche Rate abgerechnet wird. |
 | Nutzungsabhängig | Die nutzungsabhängige Preisgestaltung basiert auf der Anzahl der GB-Stunden, die für Laufzeiten verbraucht werden, der Anzahl der GB-Stunden, die verbraucht wurden und der Anzahl der IP-Adressen und des Speichers für die Container. | Services, Berechnen und Container | Beim Push-Service wird jede Nutzung in Rechnung gestellt, die über die kostenlose monatliche Leistung hinausgeht. |
 |  Preisstufen   |  Manche Pläne basieren auf einem Preisstufenmodell, das einen dem tatsächlichen Nutzungsvolumen entsprechenden Nachlass ermöglicht. Für Services können Preistarife für einfache, gestaffelte oder Blockpreisstufen angeboten werden. | Services | Die gestaffelte Preisstruktur wird in der Regel für Gebührenmetriken verwendet, wenn große Mengen pro Monat erwartet werden, zum Beispiel für API-Aufrufe. |
-| Reserviert | Die Preisgestaltung für Reservierungen basiert auf einer langfristigen Zusage für einen Service; dafür erhalten Sie einen reduzierten Preis. Bei einem Reservierungsplan erhalten Sie eine dedizierte Serviceinstanz, die sich in der öffentlichen Bluemix-Umgebung leicht einrichten, implementieren und bereitstellen lässt.
- | Services | Für DB2 on Cloud werden Reservierungspläne bereitgestellt.|
+| Reserviert | Die Preisgestaltung für Reservierungen basiert auf einer langfristigen Zusage für einen Service; dafür erhalten Sie einen reduzierten Preis. Bei einem Reservierungsplan erhalten Sie eine dedizierte Serviceinstanz, die sich in der öffentlichen {{site.data.keyword.Bluemix_notm}}-Umgebung leicht einrichten, implementieren und bereitstellen lässt. | Services | Für DB2 on Cloud werden Reservierungspläne bereitgestellt.|
 
 ###Gebühren für Rechenressourcen
 {: #compute}
@@ -247,7 +234,7 @@ folgenden Arten in Rechnung gestellt:
 jede Nutzung in Rechnung gestellt, die über die kostenlose monatliche Leistung hinausgeht.</dd>
 <dt>Reservierungsgebühren</dt>
     <dd><p>Als Eigner eines Kontos für nutzungsabhängige Zahlung oder eines Abonnementkontos können Sie sich eine Serviceinstanz bei einer langfristigen Verpflichtung zu einem reduzierten Preis reservieren lassen. Beispiel: Sie können sich das Angebot 'DB2 on Cloud' in der herkömmlichen Größe für 12 Monate reservieren lassen.</p> 
-    <p>Für manche Bluemix-Services werden Reservierungspläne angeboten. Sie können einen Reservierungsplan im Bluemix-<strong>Katalog</strong> durch Klicken auf die Kachel des Service anfordern. Wählen Sie anschließend den Serviceplan aus, der Ihren Anforderungen am ehesten entspricht. Wenn ein Reservierungsplan verfügbar ist, klicken Sie auf <strong>Anfordern</strong> und gehen gemäß den Eingabeaufforderungen vor, um Ihre Anforderung zu senden. Sie erhalten eine E-Mail, in der die Preisinformationen für den Reservierungsplan enthalten sind. Außerdem wird sich bald ein Bluemix-Vertriebsbeauftragter mit Ihnen in Verbindung setzen, um den Kauf durchzuführen. </p></dd>
+    <p>Für manche {{site.data.keyword.Bluemix_notm}}-Services werden Reservierungspläne angeboten. Sie können einen Reservierungsplan im {{site.data.keyword.Bluemix_notm}}-<strong>Katalog</strong> durch Klicken auf die Kachel des Service anfordern. Wählen Sie anschließend den Serviceplan aus, der Ihren Anforderungen am ehesten entspricht. Wenn ein Reservierungsplan verfügbar ist, klicken Sie auf <strong>Anfordern</strong> und gehen gemäß den Eingabeaufforderungen vor, um Ihre Anforderung zu senden. Sie erhalten eine E-Mail, in der die Preisinformationen für den Reservierungsplan enthalten sind. Außerdem wird sich bald ein {{site.data.keyword.Bluemix_notm}}-Vertriebsbeauftragter mit Ihnen in Verbindung setzen, um den Kauf durchzuführen. </p></dd>
 <dt>Gestaffelte Preise</dt>
     <dd>Ähnlich wie bei den nutzungsabhängigen Gebühren bezahlen Sie die Gebühren entsprechend Ihrer Laufzeit- und Servicenutzung. Bei gestaffelten Preisen werden jedoch zusätzliche Preisstufen hinzugefügt, wobei oft reduzierte Gebühren in Stufen mit hohem Verbrauch angeboten werden. Gestaffelte Preise werden einfach, gestaffelt oder als Block angeboten.</dd>
 </dl>
@@ -534,5 +521,5 @@ cf update-service <Servicename> [-p <neuer Plan>]
 ## Allgemein 
 * [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
-* [Onlinehilfe abrufen](https://www.stage1.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)
-* [Kontaktaufnahme](https://ace.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)
+* [Onlinehilfe abrufen](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
+* [Kontaktaufnahme](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

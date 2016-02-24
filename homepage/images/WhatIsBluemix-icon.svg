@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="75px" height="74px" viewBox="0 0 75 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>WhatIsBluemix-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="WhatIsBluemix-icon" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" stroke-width="1.5" stroke="#2D3F49">
+            <g id="Layer_1" sketch:type="MSShapeGroup">
+                <g id="Group">
+                    <path d="M41.9,36.4 L31.6,18.6 L41.9,0.7 L62.5,0.7 L72.8,18.6 L62.5,36.4 L41.9,36.4 Z" id="Shape"></path>
+                    <path d="M41.9,72 L31.6,54.1 L41.9,36.3 L62.5,36.3 L72.8,54.1 L62.5,72 L41.9,72 Z" id="Shape"></path>
+                    <path d="M10.9,54.4 L0.6,36.6 L10.9,18.7 L31.5,18.7 L41.8,36.6 L31.5,54.4 L10.9,54.4 Z" id="Shape"></path>
+                    <path d="M41.9,57.1 C53.1113804,57.1 62.2,47.7427513 62.2,36.2 C62.2,34.8822371 62.0815449,33.5929586 61.8549994,32.3428356 C60.0971529,22.6426891 51.831448,15.3 41.9,15.3 C30.6886196,15.3 21.6,24.6572487 21.6,36.2 C21.6,47.7427513 30.6886196,57.1 41.9,57.1 Z" id="Oval"></path>
+                    <path d="M31.5,18.7 L31.5,55.2" id="Shape"></path>
+                    <path d="M31.5,54.4 L62.5,36.4" id="Shape"></path>
+                    <path d="M62.5,36.4 L31.5,18.7" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

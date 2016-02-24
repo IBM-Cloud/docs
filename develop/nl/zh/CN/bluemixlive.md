@@ -22,7 +22,7 @@
 **调试**  
     当 Node.js 应用程序处于“实时编辑”方式时，您可以创建 shell 并在其中进行调试。您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时，等等。  
 
-您可以使用“桌面同步”来保持桌面工作空间与您使用 Web IDE 直接编辑的基于云的项目工作空间同步。您可以使用“实时编辑”将基于云的项目工作空间中的更改传播到正在运行的应用程序。这两个功能部件，既可以使用其中一个，也可以两个同时使用。而且，如果使用“桌面同步”或“实时编辑”将应用程序置于“实时编辑”方式，那么可以调试正在运行的应用程序。
+您可以使用“桌面同步”来保持桌面工作空间与您使用 Web IDE 直接编辑的基于云的项目工作空间同步。您可以使用“实时编辑”将基于云的项目工作空间中的更改传播到运行中应用程序。这两个功能部件，既可以使用其中一个，也可以两个同时使用。而且，如果使用“桌面同步”或“实时编辑”将应用程序置于“实时编辑”方式，那么可以调试运行中应用程序。
 
 下图说明了 Bluemix Live Sync 过程。	
 
@@ -42,15 +42,15 @@
       **注：**Windows 需要 .NET Framework V4.5。如果您未安装 .NET，那么在您安装 {{site.data.keyword.Bluemix_notm}} Live Sync 命令行界面 (CLI) 时会提示您安装 .NET。  
 * 无需克隆 Git 存储库。 
 * 无论开发的应用程序是哪种类型，都可以将桌面项目与云工作空间进行同步。 
-* 如果应用程序是用 Node.js 编写的，那么可以将更改传播到正在运行的应用程序中。
+* 如果应用程序是用 Node.js 编写的，那么可以将更改传播到运行中应用程序。
 
 有关命令的更多详细信息，请参阅 [Bluemix Live Sync CLI 文档](../cli/reference/bl/index.html)。 
 
 <ol>
 <li>下载并安装 {{site.data.keyword.Bluemix_notm}} Live Sync bl 命令行。   
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="下载 Windows bl 命令行按钮" /></a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="下载 Mac bl 命令行按钮" /></a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下载 Windows bl 命令行按钮" /></a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="下载 Mac bl 命令行按钮" /></a>
 </p>  
 
 <strong>重要信息：</strong>bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。</li>
@@ -118,7 +118,7 @@ bl start --restart
 * 编辑断点条件以仅在满足特定条件时暂停执行。 
 * 检查本地变量和字段的状态。 
 * 立即查看 `console.log()` 调用的调试输出。此操作比监视 cf 日志速度更快。
-* 使用内置源代码编辑器对正在运行的应用程序代码立即执行临时更改。
+* 使用内置源代码编辑器对运行中应用程序代码立即执行临时更改。
 
 ###shell{: #shell} 
 

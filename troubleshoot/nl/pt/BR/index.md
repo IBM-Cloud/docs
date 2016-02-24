@@ -9,7 +9,7 @@
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 6 de janeiro de 2015*
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
@@ -46,6 +46,28 @@ da IBM.
 **Nota:** Para funcionários IBM, o ID IBM pode ser diferente do ID de login da intranet. 
 
 
+
+
+
+## Você possui mudanças não salvas
+{: #ts_unsaved_changes}
+
+
+Ao navegar na página de detalhes do app, talvez não seja possível executar quaisquer ações e você pode ser solicitado a salvar as mudanças para que possa continuar. 
+
+
+Ao tentar verificar seu app ou serviços na página de detalhes do app, você continua obtendo a mensagem de erro a seguir:
+{: tsSymptoms} 
+
+`Você possui mudanças não salvas na página app_name. Salve ou cancele as mudanças.`
+
+
+Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página.
+{: tsCauses}
+
+
+Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na área de janela de tempo de execução.
+{: tsResolve} 
 
 
 
@@ -151,7 +173,7 @@ para alterar a sua função. Para identificar o gerente da organização, conclu
 etapas a seguir:
 {: tsResolve}
 
-  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.png) na parte superior direita do Painel e selecione **Gerenciar organizações**.
+  1. Acesse o Painel do {{site.data.keyword.Bluemix_notm}}, clique no ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior e selecione **Gerenciar organizações**.
   2. Acesse sua organização e visualize as informações sobre o gerente da organização na guia **USUÁRIOS**.  
   
 Se você não conseguir convidar os usuários porque é um colaborador
@@ -159,8 +181,7 @@ e não um membro, deve-se excluir a conta anterior do {{site.data.keyword.Bluemi
 e, em seguida, ser convidado para se associar como um membro da organização. Para excluir sua conta anterior e se associar à conta como um membro,
 conclua as etapas a seguir: 
 
-  1. Entre em contato com o [suporte de ID](mailto:id@bluemix.net) para abrir um chamado de suporte e solicitar
-que sua conta seja excluída. Se houver dados associados
+  1. Entre em contato com o [Suporte ao {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} para abrir um chamado de suporte e solicitar que sua conta seja excluída. Se houver dados associados
 à sua conta antiga que você deseja salvar e mover para a nova conta,
 inclua essas informações em seu email. 
   2. Após sua conta ser excluída, peça a um usuário com a função de gerenciador
@@ -209,10 +230,10 @@ talvez não possa carregar uma página do {{site.data.keyword.Bluemix_notm}}. Em
 usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}:
 {: tsSymptoms}
 
-`BXNUI0001E: Não foi possível determinar se uma sessão existe. Tente recarregar o navegador.`
+`BXNUI0001E: A página não foi carregada, pois o Bluemix não detectou se existe uma sessão.`
 
 
-`BXNUI0016E: Os aplicativos e serviços não puderam ser recuperados. `
+`BXNUI0016E: Os apps e serviços não foram recuperados, pois uma página do Bluemix não foi carregada.`
 
  
 
@@ -264,26 +285,6 @@ Use o menu de gaveta lateral no canto superior esquerdo em seu lugar.
 
 
 
-## O Painel do {{site.data.keyword.Bluemix_notm}} não pode carregar apps ou serviços
-{: #ts_dashboard}
-
-O Painel do {{site.data.keyword.Bluemix_notm}} pode não exibir quaisquer informações de app ou serviço porque sua organização ou o espaço não pode acessá-las. 
- 
-
-Ao efetuar login na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, não há nada disponível no seu Painel embora você tenha criado apps e usado alguns serviços antes.
-{: tsSymptoms}
- 
-
-Esse problema pode ocorrer ao ligar uma instância de serviço ao seu app, mas o serviço não está mais acessível porque os privilégios do serviço foram mudados para sua organização ou seu espaço. 
-{: tsCauses}
-  	
-
-Para resolver o problema, digite `cf services`
-na interface de linha de comandos cf para listar suas instâncias do serviço e
-identificar o serviço. Em seguida, use o comando `cf delete-service`
-para excluir a instância do serviço que não está mais acessível.
-{: tsResolve}
-
 
 
 
@@ -307,7 +308,7 @@ Pode ser que você não consiga concluir as ações sem autoridade de acesso apr
 
  
 
-Ao tentar executar ações para uma instância de serviço ou uma instância de app, não é possível concluir as ações solicitadas e ver uma das mensagens de erro a seguir:
+Ao tentar executar ações para uma instância de serviço ou uma instância de app, não é possível concluir as ações solicitadas e ver uma das mensagens de erro a seguir: 
 {: tsSymptoms}
 
 `BXNUI0514E: você não é um desenvolvedor para nenhum dos espaços na organização <orgName>.`
@@ -317,12 +318,12 @@ Ao tentar executar ações para uma instância de serviço ou uma instância de 
 
  
 
-Você não possui o nível apropriado de autoridade necessário para executar as ações.
+Você não possui o nível apropriado de autoridade necessário para executar as ações. 
 {: tsCauses}
 
   
 
-Para obter o nível de autoridade apropriado, use um dos métodos a seguir:
+Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
  * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando sua organização](../acctmgmt/index.html#mngorg){: new_window} para obter detalhes.
@@ -343,7 +344,7 @@ As credenciais codificadas permanentemente no app podem não estar corretas. Tod
 {: tsCauses}
 
 
-Em vez de codificar permanentemente as credenciais no app, use parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES. Os métodos para usar parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES variam, dependendo das linguagens do programa. Por exemplo, para apps Node.js, é possível usar o comando a seguir:
+Em vez de codificar permanentemente as credenciais no app, use parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES. Os métodos para usar parâmetros de conexão a partir da variável de ambiente VCAP_SERVICES variam, dependendo das linguagens do programa. Por exemplo, para apps Node.js, é possível usar o comando a seguir: 
 {: tsResolve}
 
 ```
@@ -551,9 +552,7 @@ Ao tentar criar um aplicativo no {{site.data.keyword.Bluemix_notm}},
 você verá a mensagem de erro a seguir: 
 {: tsSymptoms}
 
-`BXNUI2032E: Ocorreu um erro
-ao contatar o Cloud Foundry para criar um recurso. Recurso:
-service_instances. Mensagem do Cloud Foundry: "Você excedeu seu
+`BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu
 limite de serviços da organização."`
 
 
@@ -767,7 +766,7 @@ mesmo diretório que seu app.
   
   
   
-  
+
   
   
 
@@ -1203,7 +1202,8 @@ com o código no repositório.
      
 
 
-Você clica no botão **Implementar no Bluemix** e o repositório Git é clonado no DevOps Services, mas o app não é implementado no {{site.data.keyword.Bluemix_notm}}. A etapa "Implementando no Bluemix" não é concluída com êxito.{: tsSymptoms} 
+Você clica no botão **Implementar no Bluemix** e o repositório Git é clonado no DevOps Services, mas o app não é implementado no {{site.data.keyword.Bluemix_notm}}. A etapa "Implementando no Bluemix" não é concluída com êxito.
+{: tsSymptoms} 
 
 Esse problema pode ocorrer pelas razões a seguir:
 {: tsCauses}  
@@ -1283,8 +1283,8 @@ Não é possível criar um app no {{site.data.keyword.Bluemix_notm}} se a sua co
 Ao tentar criar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensagem de erro a seguir:
 {: tsSymptoms} 
 
-`BXNUI0096E: Não foi
-possível criar o aplicativo. Sua conta está inativa porque foi cancelada ou suspensa.`
+`BXNUI0096E: O app não foi criado. Sua conta está inativa porque ela foi cancelada
+ou suspensa.`
 
 
 O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo quando a conta é cancelada ou suspensa.
@@ -1312,10 +1312,7 @@ Ao tentar criar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensag
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Não foi
-possível incluir o novo aplicativo. Não há espaço associado à
-organização e região atuais. No Painel, clique em Criar
-um espaço. Quando o espaço for criado, tente novamente. `
+`BXNUI0097E: Para que seja possível incluir um app, pelo menos um espaço deve estar associado à sua organização e região. No Painel, clique em **Criar um espaço**. Quando o espaço for criado, tente novamente. `
 
 
 
@@ -1721,26 +1718,5 @@ a entrada a seguir no manifest de implementação:
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

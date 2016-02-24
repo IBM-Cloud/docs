@@ -10,71 +10,88 @@ Before you begin, install the IBM Bluemix CLI. See [Bluemix CLI](http://clis.ng.
 ```
 bluemix plugin uninstall "Network Security Group"
 ```
+
 **Install Locally**
 
-1. Download the IBM Network Security Groups plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net).  
+1. Download the IBM Network Security Groups plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins).  
 2. Install the IBM Network Security Groups plug-in by using the following command:  
 **Note:** Either switch to the location of the Network Security Groups plug-in or specify the path to the plug-in location.  
 
-	**For Microsoft Windows:**
+	**For Microsoft Windows:**  
 	```
 	bluemix plugin install nsg-windows-amd64.exe  
-	```
+	```  
 	**For Apple Mac OS:**  
 	```  
 	bluemix plugin install nsg-darwin-amd64
-	```
+	```  
 	**For Linux OS:**  
 	```
 	bluemix plugin install nsg-linux-amd64
 	```  
+	**Note:** If you see a ***permission denied*** error message while installing the plug-in for Linux OS, run the following command and change the permissions:  
+	```
+	chmod a+x ./nsg-linux-amd64
+	```
 
 **Install from Bluemix Repository**
 
 1. Add the Bluemix plug-in registry endpoint:  
 	```
-	bluemix plugin repo-add bluemix http://plugins.ng.bluemix.net
+	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 	```  
 2. Run the following command:
 
-	**For Microsoft Windows:**
+	**For Microsoft Windows:**  
 	```
-	bluemix plugin install nsg-windows-amd64.exe -r bluemix
-	```
+	bluemix plugin install nsg-windows-amd64.exe -r bluemix-bx
+	```  
 	**For Apple Mac OS:**  
 	```
-	bluemix plugin install nsg-darwin-amd64 -r bluemix
-	```
+	bluemix plugin install nsg-darwin-amd64 -r bluemix-bx
+	```  
 	**For Linux OS:**  
 	```
-	bluemix plugin install nsg-linux-amd64 -r bluemix
+	bluemix plugin install nsg-linux-amd64 -r bluemix-bx
 	```  
+
+**Note:** After you install the Network Security Groups plug-in, log in to Bluemix. If you do not log in, you will not be able to run the Network Security Groups service commands. 
+
+Run the following command to log in to the United Kingdom region:
+
+```
+bluemix login -a https://api.eu-gb.bluemix.net
+```  
+
+See [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
+
 ## List of IBM Network Security Groups Service Commands  
 
 | 			Command 			| | |			Description 				|  
 | :----------------------------	| | |:------------------------------------	|  
-| security-group-create 		| | |Creates a security group 			|  
-| security-group-update 		| | |Updates an existing security group 	|
-| security-group-delete 		| | |Deletes an existing security group and all its rules |
-| security-group-list        | | |Lists all or assigned security groups for a VM or VM group instance|
-| security-group-show        | | |Shows details of an existing security group and its rules|
-| security-group-rule-create | | |Creates a security group rule |
-| security-group-rule-delete | | |Deletes an existing security group rule |
-| security-group-rule-list   | | |Lists all security group rules |
-| security-group-rule-show   | | |Shows details of an existing security group rule |
-| instance-list              | | |Lists all VM instances or VM instances assigned to a security group|
-| instance-group-list        | | |Lists all VM group instances or VM group instances assigned to a security group|
-| security-group-assign      | | |Assigns a security group to a VM instance or VM group instance |
-| security-group-unassign    | | |Removes a security group from a VM instance or VM group instance |
+| [security-group-create](index.html#sgcreate) 		| | |Creates a security group 			|  
+| [security-group-update](index.html#sgupdate) 		| | |Updates an existing security group 	|
+| [security-group-delete](index.html#sgdelete) 		| | |Deletes an existing security group and all its rules |
+| [security-group-list](index.html#sglist)        | | |Lists all or assigned security groups for a virtual server or virtual server group|
+| [security-group-show](index.html#sgshow)        | | |Shows details of an existing security group and its rules|
+| [security-group-rule-create](index.html#sgrulecreate) | | |Creates a security group rule |
+| [security-group-rule-delete](index.html#sgruledelete) | | |Deletes an existing security group rule |
+| [security-group-rule-list](index.html#sgrulelist)   | | |Lists all security group rules |
+| [security-group-rule-show](index.html#sgruleshow)   | | |Shows details of an existing security group rule |
+| [instance-list](index.html#inslist)              | | |Lists all virtual servers or virtual servers assigned to a security group|
+| [instance-group-list](index.html#grplist)        | | |Lists all virtual server groups or virtual server groups assigned to a security group|
+| [security-group-assign](index.html#sggrpassign)      | | |Assigns a security group to a virtual server or virtual server group |
+| [security-group-unassign](index.html#sggrpunassign)    | | |Removes a security group from a virtual server or virtual server group|
 
 ### Command Usage
 
-#### bluemix net security-group-create
+####bluemix network security-group-create
+{: #sgcreate}
 
 Creates a security group.
 
 ```
-bluemix net security-group-create [-d "<description>"] <name>
+bluemix network security-group-create [-d "<description>"] <name>
 ```
 
 ***Parameters:***
@@ -89,11 +106,11 @@ bluemix net security-group-create [-d "<description>"] <name>
 
 Create a security group and validate it:
 
-	$ bluemix net security-group-create -d "Security group created" test-00
+	$ bluemix network security-group-create -d "Security group created" test-00
 	
 	Created network security group [test-00] with ID [6ed0111f-73a7-4f4b-8cf3-2a9ac5ecf747]
 
-	$ bluemix net security-group-list
+	$ bluemix network security-group-list
 	+---------------------------------------------------------------------+
 	| ID                                   NAME    DESCRIPTION            |
 	+---------------------------------------------------------------------+
@@ -102,12 +119,13 @@ Create a security group and validate it:
 	| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 	+---------------------------------------------------------------------+
 
-#### bluemix net security-group-update
+####bluemix network security-group-update
+{: #sgupdate}
 
 Updates the name and description of an existing security group.
 
 ```
-bluemix net security-group-update [-n <name>] [-d "<description>"] <name or ID>
+bluemix network security-group-update [-n <name>] [-d "<description>"] <name or ID>
 ```
 
 ***Parameters:***
@@ -123,11 +141,11 @@ bluemix net security-group-update [-n <name>] [-d "<description>"] <name or ID>
 
 Update an existing security group and validate it:
 
-	$ bluemix net security-group-update -n test-01 -d "Security group updated" test-00
+	$ bluemix network security-group-update -n test-01 -d "Security group updated" test-00
 
 	Updated network security group [test-01] with ID [6ed0111f-73a7-4f4b-8cf3-2a9ac5ecf747]
 
-	$ bluemix net security-group-list
+	$ bluemix network security-group-list
 	+---------------------------------------------------------------------+
 	| ID                                   NAME    DESCRIPTION            |
 	+---------------------------------------------------------------------+
@@ -136,12 +154,13 @@ Update an existing security group and validate it:
 	| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 	+---------------------------------------------------------------------+
 
-#### bluemix net security-group-delete
+####bluemix network security-group-delete
+{: #sgdelete}
 
 Deletes an existing security group and all its rules.
 
 ```
-bluemix net security-group-delete <name or ID>
+bluemix network security-group-delete <name or ID>
 ```
 
 ***Parameters:***
@@ -152,11 +171,11 @@ bluemix net security-group-delete <name or ID>
 
 Delete an existing security group and validate it:
 
-	$ bluemix net security-group-delete test-01
+	$ bluemix network security-group-delete test-01
 	
 	Deleted security group test-01
 	
-	$ bluemix net security-group-list
+	$ bluemix network security-group-list
 	+---------------------------------------------------------------------+
 	| ID                                   NAME    DESCRIPTION            |
 	+---------------------------------------------------------------------+
@@ -164,12 +183,13 @@ Delete an existing security group and validate it:
 	| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 	+---------------------------------------------------------------------+
 
-#### bluemix net security-group-list
+####bluemix network security-group-list
+{: #sglist}
 
-Lists all security groups or the security groups assigned to a VM or VM group instance.
+Lists all security groups or the security groups assigned to a virtual server or virtual server group.
 
 ```
-bluemix net security-group-list [-v] [-i <name or ID>] [-ig <name or ID>]
+bluemix network security-group-list [-v] [-i <name or ID>] [-ig <name or ID>]
 ```
 
 ***Parameters:***
@@ -180,15 +200,15 @@ None. If no option is specified, the command lists all the security groups.
 
 **-v**: Prints list of rules with details for each security group
 
-**-i**: Lists security groups assigned to the specified VM instance. Data type: string
+**-i**: Lists security groups assigned to the specified virtual server. Data type: string
 
-**-ig**: Lists security groups assigned to the specified VM group instance. Data type: string
+**-ig**: Lists security groups assigned to the specified virtual server group. Data type: string
 
 ***Command Examples:***
 
 * List all security groups:
 
-		$ bluemix net security-group-list
+		$ bluemix network security-group-list
 		+---------------------------------------------------------------------+
 		| ID                                   NAME    DESCRIPTION            |
 		+---------------------------------------------------------------------+
@@ -196,30 +216,31 @@ None. If no option is specified, the command lists all the security groups.
 		| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 		+---------------------------------------------------------------------+
 
-* List security groups assigned to the VM instance **test-inst-1**:
+* List security groups assigned to the virtual server **test-inst-1**:
 
-		$ bluemix net security-group-list -i test-inst-1
+		$ bluemix network security-group-list -i test-inst-1
 		+---------------------------------------------------------------------+
 		| ID                                   NAME    DESCRIPTION            |
 		+---------------------------------------------------------------------+
 		| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 		+---------------------------------------------------------------------+
 
-* List security groups assigned to the VM group instance **test-stack-1**:
+* List security groups assigned to the virtual server group **test-stack-1**:
 
-		$ bluemix net security-group-list -ig test-stack-1
+		$ bluemix network security-group-list -ig test-stack-1
 		+---------------------------------------------------------------------+
 		| ID                                   NAME    DESCRIPTION            |
 		+---------------------------------------------------------------------+
 		| 71aca377-1a34-46eb-83b5-f471c9741c84 default Default security group |
 		+---------------------------------------------------------------------+
 
-#### bluemix net security-group-show
+####bluemix network security-group-show
+{: #sgshow}
 
 Shows details of an existing security group and its rules.
 
 ```
-bluemix net security-group-show <security group name or ID>
+bluemix network security-group-show <security group name or ID>
 ```
 
 ***Parameters:***
@@ -230,7 +251,7 @@ bluemix net security-group-show <security group name or ID>
 
 View information about the security group named **default**:
 
-	$ bluemix net security-group-show default
+	$ bluemix network security-group-show default
 	+----------------------------------------------------------------------------------------------------------------------------------+
 	| ID                                   DIRECTION PROTOCOL TYPE PORT_MIN PORT_MAX REMOTE_IP_PREFIX REMOTE_GROUP_ID                  |
 	+----------------------------------------------------------------------------------------------------------------------------------+
@@ -240,12 +261,13 @@ View information about the security group named **default**:
 	| c7ff45b1-86fb-4386-9fb0-6c5675b5ee30 egress             IPv6                                                                     |
 	+----------------------------------------------------------------------------------------------------------------------------------+
 
-#### bluemix net security-group-rule-create
+####bluemix network security-group-rule-create
+{: #sgrulecreate}
 
 Creates a security group rule.
 
 ```
-bluemix net security-group-rule-create -d <direction> -p <protocol> -t <type> [-ip <remote IP prefix> | -r <remote group name or ID>] [-min <minimum value of port range] [-max <maximum value of port range>] <security group name or ID>
+bluemix network security-group-rule-create -d <direction> -p <protocol> -t <type> [-ip <remote IP prefix> | -r <remote group name or ID>] [-min <minimum value of port range] [-max <maximum value of port range>] <security group name or ID>
 ```
 
 ***Parameters:***
@@ -270,16 +292,17 @@ bluemix net security-group-rule-create -d <direction> -p <protocol> -t <type> [-
 
 ***Command Example:***
 
-	$ bluemix net security-group-rule-create -d ingress -p tcp -ip 10.10.10.1 default
+	$ bluemix network security-group-rule-create -d ingress -p tcp -ip 10.10.10.1 default
 
 	Created network security group rule [9a988876-36e0-47dd-9a7e-76c5a6be7379]
 
-#### bluemix net security-group-rule-delete
+####bluemix network security-group-rule-delete
+{: #sgruledelete}
 
 Deletes an existing security group rule.
 
 ```
-bluemix net security-group-rule-delete <ID>
+bluemix network security-group-rule-delete <ID>
 ```
 
 ***Parameters:***
@@ -288,21 +311,22 @@ bluemix net security-group-rule-delete <ID>
 
 ***Command Example:***
 
-	$ bluemix net security-group-rule-delete f191473c-9dd4-4465-8c5e-697a3a5e2385
+	$ bluemix network security-group-rule-delete f191473c-9dd4-4465-8c5e-697a3a5e2385
 	
 	Deleted security group rule f191473c-9dd4-4465-8c5e-697a3a5e2385
 
-#### bluemix net security-group-rule-list
+####bluemix network security-group-rule-list
+{: #sgrulelist}
 
 Lists all security group rules.
 
 ```
-bluemix net security-group-rule-list
+bluemix network security-group-rule-list
 ```
 
 ***Command Example:***
 
-	$ bluemix net security-group-rule-list
+	$ bluemix network security-group-rule-list
 	+----------------------------------------------------------------------------------------------------------------------------------+
 	|ID									DIRECTION	PROTOCOL	TYPE	PORT_MIN	PORT_MAX	REMOTE_IP_PREFIX	REMOTE_GROUP_ID|
 	+----------------------------------------------------------------------------------------------------------------------------------+
@@ -312,12 +336,13 @@ bluemix net security-group-rule-list
 	|c60ca7c3-31c3-4f41-bdbf-8ed89f359c97	egress				 IPv6															   |
 	+----------------------------------------------------------------------------------------------------------------------------------+
 
-#### bluemix net security-group-rule-show
+####bluemix network security-group-rule-show
+{: #sgruleshow}
 
 Shows details of an existing security group rule.
 
 ```
-bluemix net security-group-rule-show <ID>
+bluemix network security-group-rule-show <ID>
 ```
 
 ***Parameters:***
@@ -326,7 +351,7 @@ bluemix net security-group-rule-show <ID>
 
 ***Command Example:***
 
-	$ bluemix net security-group-rule-show 9a988876-36e0-47dd-9a7e-76c5a6be7379
+	$ bluemix network security-group-rule-show 9a988876-36e0-47dd-9a7e-76c5a6be7379
 	+------------------------------------------------+
 	| FIELD     VALUE                                |
 	+------------------------------------------------+
@@ -340,12 +365,13 @@ bluemix net security-group-rule-show <ID>
 	| REMOTE_SG                                      |
 	+------------------------------------------------+
 
-#### bluemix net instance-list
+####bluemix network instance-list
+{: #inslist}
 
-Lists all VM instances, VM instances that are assigned to a security group, or instances that are part of a VM group.
+Lists all virtual servers, virtual servers that are assigned to a security group, or virtual server instances that are part of a virtual server group.
 
 ```
-bluemix net instance-list [-sg <security group name or ID> | -ig <VM group instance name or ID>]
+bluemix network instance-list [-sg <security group name or ID> | -ig <virtual server group name or ID>]
 ```
 
 ***Parameters:***
@@ -356,13 +382,13 @@ None. If no option is specified, the command lists all instances.
 
 **-sg**: Name or ID of a security group. Data type: string
 
-**-ig**: Name or ID of a VM group. Data type: string
+**-ig**: Name or ID of a virtual server group. Data type: string
 
 ***Command Examples:***
 
 * List all instances:
 
-		$ bluemix net instance-list
+		$ bluemix network instance-list
 		+--------------------------------------------------+
 		| ID                                   NAME        |
 		+--------------------------------------------------+
@@ -371,25 +397,26 @@ None. If no option is specified, the command lists all instances.
 		| e8e66653-fed5-4901-8116-ccdfef443f28 test-inst-1 |
 		+--------------------------------------------------+
 
-* List instances assigned to the security group **default**:
+* List virtual servers assigned to the security group **default**:
 
-		$ bluemix net instance-list -sg default
+		$ bluemix network instance-list -sg default
 		+--------------------------------------------------+
 		| ID                                   NAME        |
 		+--------------------------------------------------+
 		| e8e66653-fed5-4901-8116-ccdfef443f28 test-inst-1 |
 		+--------------------------------------------------+
 
-#### bluemix net instance-group-list
+####bluemix network instance-group-list
+{: #grplist}
 
-Lists all VM group instances, or VM group instances that are assigned to a security group.
+Lists all virtual server groups, or virtual server groups that are assigned to a security group.
 
 ```
-bluemix net instance-group-list [-sg <security group name or ID>]
+bluemix network instance-group-list [-sg <security group name or ID>]
 ```
 ***Parameters:***
 
-None. If no option is specified, the command lists all VM group instances.
+None. If no option is specified, the command lists all virtual server groups.
 
 ***Optional Parameters:***
 
@@ -397,9 +424,9 @@ None. If no option is specified, the command lists all VM group instances.
 
 ***Command Examples:***
 
-* List all VM group instances:
+* List all virtual server groups:
 
-		$ bluemix net instance-group-list
+		$ bluemix network instance-group-list
 		+---------------------------------------------------+
 		| ID                                   NAME         |
 		+---------------------------------------------------+
@@ -407,86 +434,88 @@ None. If no option is specified, the command lists all VM group instances.
 		| c9549664-05e9-46c0-a1b2-ac84e59ce3b0 test-stack-1 |
 		+---------------------------------------------------+
 
-* List VM group instances assigned to the security group **default**:
+* List virtual server groups that are assigned to the security group **default**:
 
-		$ bluemix net instance-group-list -sg default
+		$ bluemix network instance-group-list -sg default
 		+---------------------------------------------------+
 		| ID                                   NAME         |
 		+---------------------------------------------------+
 		| 098578a7-fadc-415c-835e-6518fb08dbc0 test-stack-1 |
 		+---------------------------------------------------+
 
-#### bluemix net security-group-assign
+####bluemix network security-group-assign
+{: #sggrpassign}
 
-Assigns a security group to a VM instance or a VM group instance.
+Assigns a security group to a virtual server or a virtual server group.
 
 ```
-bluemix net security-group-assign [-i <VM instance name or ID> |-ig <VM group instance>] <security group name or ID>
+bluemix network security-group-assign [-i <virtual server name or ID> |-ig <virtual server group name or ID>] <security group name or ID>
 ```
 
 ***Parameters:***
 
-**-i**: Name or ID of the VM instances that you want to assign. Data type: string or strings separated by comma/space 
+**-i**: Name or ID of the virtual server that you want to assign to. Data type: string or strings separated by comma/space 
 
-**-ig**: Name or ID of the VM group instances that you want to assign. Data type: string or strings separated by comma/space
+**-ig**: Name or ID of the virtual server group that you want to assign to. Data type: string or strings separated by comma/space
 
 ***Command Examples:***
 
-* Assign security group **default** to instance **test-inst-1**:
+* Assign security group **default** to virtual server **test-inst-1**:
 
-		$ bluemix net security-group-assign default -i test-inst-1
+		$ bluemix network security-group-assign default -i test-inst-1
 		Assigned network security group [default] to instance [test-inst-1]
 
-* Assign security group **default** to VM group instance **test-stack-1**:
+* Assign security group **default** to virtual server group **test-stack-1**:
 
-		$ bluemix net security-group-assign default -ig test-stack-1
+		$ bluemix network security-group-assign default -ig test-stack-1
 		Assigned security group [default] to instance group [test-stack-1]
 
-* Assign security group **default** to multiple VM and VM group instances:
+* Assign security group **default** to multiple virtual servers and virtual server groups:
 
-		$ bluemix net security-group-assign default -i test-inst-1,test-inst-2 -ig test-stack-1,test-stack-2
+		$ bluemix network security-group-assign default -i test-inst-1,test-inst-2 -ig test-stack-1,test-stack-2
 		Assigned network security group [default] to instance [test-inst-1]
 		Assigned network security group [default] to instance [test-inst-2]
 		Assigned network security group [default] to instance group [test-stack-1]
 		Assigned network security group [default] to instance group [test-stack-2]
 
-#### bluemix net security-group-unassign
+####bluemix network security-group-unassign
+{: #sggrpunassign}
 
-Removes a VM or VM group instance from a security group.
+Removes a virtual server or virtual server group from a security group.
 
 ```
-bluemix net security-group-unassign [-i <VM instance name or ID> | -ig <VM group instance name or ID>] <security group name or ID>
+bluemix network security-group-unassign [-i <virtual server name or ID> | -ig <virtual server group name or ID>] <security group name or ID>
 ```
 
 ***Parameters:***
 
-**security group name or ID**: Name or ID of the security group from which you want to delete the instance. Data type: string
+**security group name or ID**: Name or ID of the security group from which you want to delete the virtual server or virtual server group. Data type: string
 
-**-i**: Name or ID of the VM instances that you want to delete. Data type: string or strings separated by comma/space
+**-i**: Name or ID of the virtual server that you want to delete. Data type: string or strings separated by comma/space
 
-**-ig**: Name or ID of the VM group instances that you want to delete. Data type: string or strings separated by comma/space
+**-ig**: Name or ID of the virtual server group that you want to delete. Data type: string or strings separated by comma/space
 
 ***Command Examples:***
 
-* Remove VM instance **test-inst-1** from the security group **default** and validate it:
+* Remove virtual server **test-inst-1** from the security group **default** and validate it:
 
-		$ bluemix net security-group-unassign default -i test-inst-1
+		$ bluemix network security-group-unassign default -i test-inst-1
 		Unassigned security group [default] to instance [test-inst-1]
 		
-		$ bluemix net instance-list -sg default
+		$ bluemix network instance-list -sg default
 		No instances assigned to security group [default]
 
-* Remove VM group instance **test-stack-1** from the security group **default** and validate it:
+* Remove virtual server group **test-stack-1** from the security group **default** and validate it:
 
-		$ bluemix net security-group-assign default -ig test-stack-1
+		$ bluemix network security-group-assign default -ig test-stack-1
 		Unassigned security group [default] to instance group [test-stack-1]
 		
-		$ bluemix net instance-group-list -sg default
+		$ bluemix network instance-group-list -sg default
 		No instance groups assigned to security group [default]
 
-* Remove multiple VM and VM group instances from the security group **default**:
+* Remove multiple virtual servers and virtual server groups from the security group **default**:
 
-		$ bluemix net security-group-unassign default -i "test-inst-1 test-inst-2" -ig "test-stack-1 test-stack-2"
+		$ bluemix network security-group-unassign default -i "test-inst-1 test-inst-2" -ig "test-stack-1 test-stack-2"
 		Unassigned network security group [default] for instance [test-inst-1]
 		Unassigned network security group [default] for instance [test-inst-2]
 		Unassigned network security group [default] for instance group [test-stack-1]

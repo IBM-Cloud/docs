@@ -3,7 +3,7 @@
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2015년 12월 7일*
+*마지막 업데이트 날짜: 2015년 12월 15일*
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
@@ -311,7 +311,7 @@ SSL 인증서에 의해 보호됩니다. 이 서비스는 배치된 데이터베
 
 ### Cloud Integration
 
-Cloud Integration 서비스를 사용하면 클라우드 및 사내 구축형 데이터를 통합할 수 있습니다. 백엔드 데이터베이스(예: DB2, Oracle 및 SAP)와 상호작용하기 위한 서비스를 추가할 수 있습니다. 그리고 데이터를 이동하거나 액세스하고 사용할
+클라우드 통합 서비스를 사용하면 클라우드 및 사내 구축형 데이터를 통합할 수 있습니다. 백엔드 데이터베이스(예: DB2, Oracle 및 SAP)와 상호작용하기 위한 서비스를 추가할 수 있습니다. 그리고 데이터를 이동하거나 액세스하고 사용할
 {{site.data.keyword.Bluemix_notm}}
 애플리케이션의 REST API를 작성할 수 있습니다. 서비스는 사내 구축형 보안 커넥터와의 보안 통신이 가능하도록 하며,
 애플리케이션이 사용하는 REST API로서 백엔드 SOR(System of Record)을 노출합니다.
@@ -373,6 +373,30 @@ You can use security information and event management (SIEM) 도구를 사용하
  * 침입 방지로 위험성 관리.
  * QRadar로 보안 모니터링.
  * 관리 콘솔을 통해 사용 가능한 보안 보고서
+
+## 보안 준수
+{: #compliance}
+
+{{site.data.keyword.Bluemix}}는 신뢰할 수 있는 보안 클라우드 플랫폼을 제공합니다. {{site.data.keyword.Bluemix_notm}} 준수는 ISO 27001과 ISO 27002 등 업계 최고 보안 표준을 기반으로 빌드된 플랫폼 및 서비스를 사용할 때 보장됩니다.
+{:shortdesc}
+
+![EU 데이터 보호 모델 조항](images/icon_eumc.png)  **유럽 연합(EU) 모델 조항**은 EU 또는 유럽 경제 지역(EEA)에서 제3의 국가로 전송되는 개인 데이터 보호에 관한 협약입니다. EU 모델 조항은 EU 또는 EEA에 위치한 데이터 반출자 역할의 고객과 제3의 국가에 위치한 데이터 반입자 역할의 IBM 데이터 처리자가 체결합니다. [IBM SaaS EU 모델 조항](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}에는 데이터 반출자와 데이터 반입자의 권리와 의무, 데이터 대상의 권리가 규정되어 있습니다. IBM SaaS EU 모델 조항을 준수하면 제3의 국가에서 개인 데이터를 처리할 때 EU 또는 EEA에서와 비슷한 보호 조치가 적용됩니다.
+
+![금융 기관 정보 시스템](images/FISC.gif)  일본의 은행 및 관련 금융 기관에 구축된 컴퓨터 시스템에는 FISC(Center for Financial Industry Information Systems) 보안 지침을 기반으로 하는 보안 절차가 마련되어 있어야 합니다. **FISC** 보안 지침은 일본 금융 기관(FSA), 일본 은행(BOJ) 및 FISC에서 적용됩니다.
+
+[IBM Bluemix 위험성 설문조사 결과](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}에서 FISC 보안 지침과 관련된 {{site.data.keyword.Bluemix_notm}} 자가 진단 문서(일본어로 작성됨)를 확인할 수 있습니다.  
+ 
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}}는 최상의 정보 보안 관리 프로세스 방안을 정의하는 **국제 표준화 기구(ISO) 27001 및 27002 표준**에 의거하여 인증되었습니다. ISO 27001 표준은 개별 조직의 요구에 따라 정보 보안 관리 시스템(ISMS)의 설정, 구현 및 문서화를 위한 요구사항과 보안 제어 구현을 위한 요구사항을 지정합니다. ISO 27002 표준은 ISO 27001의 각 보안 제어를 상세히 설명합니다. ISO 27000 표준 모음은 서면, 구두 또는 전자식 정보의 신뢰성, 무결성 및 가용성 보호를 목적으로 자산의 가치와 위험을 척도화하는 프로세스를 통합한 것입니다. 
+
+{{site.data.keyword.Bluemix_notm}}는 제3의 보안 회사에 의한 감사를 거치며 ISO 27001의 모든 요구사항을 충족합니다([Bluemix ISO 27001:2013 등록 인증서](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}).
+
+![SSAE16 SOC1/2/3](images/icon_aicpa.png) **서비스 조직 제어(SOC)** 보고서에는 서비스 조직에서 보안, 가용성, 처리 무결성, 신뢰성, 개인정보 보호정책과 관련된 주요 내부 제어 정책의 평가를 정의되어 있습니다. AICPA(American Institute of Certified Public Accountants) 가이드를 사용하여 생성하는 이 보고서는 다음 항목을 제공합니다. 
+  * 조직 감시
+  * 공급업체 관리 프로그램
+  * 내부 기업 통제 및 위험 관리 프로세스
+  * 규제 감시
+ 
+{{site.data.keyword.Bluemix_notm}}는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고 해당 보안 아키텍처를 최대한 활용합니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 영업](mailto:bmxcert1@us.ibm.com){:new_window} 팀에 문의하십시오.
 
 ## 보안 보고서
 {: #reports}

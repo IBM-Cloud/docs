@@ -8,7 +8,7 @@
 # Problemas gerais de serviços
 {: #general}
 
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 9 de dezembro de 2015*
 
 Problemas de serviços do {{site.data.keyword.Bluemix}}
 podem incluir um erro de tempo limite do gateway que ocorre quando você

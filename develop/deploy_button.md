@@ -1,12 +1,12 @@
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-*Last Updated: 19 January 2016* 
+*Last Updated: 18 February 2016* 
 
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
@@ -23,9 +23,11 @@ When someone clicks your button, these actions occur:
 
 4. If the app requires a build file, the build file is detected automatically and the app is built. 
 
-5. If the app requires a container, a `pipeline.yml` that defines the **IBM Container Service** and a Dockerfile that defines an image are used to deploy the app in a {{site.data.keyword.Bluemix_notm}} container. 
+5. If a pipeline is configured for the build and deployment process,  a `pipeline.yml` file is used to deploy the app.
 
-6. The app is deployed to the person's {{site.data.keyword.Bluemix_notm}} organization. 
+6. If the app requires a container, a `pipeline.yml` that defines the **IBM Containers** service and a Dockerfile that defines an image are used to deploy the app in a {{site.data.keyword.Bluemix_notm}} container. 
+
+7. The app is deployed to the person's {{site.data.keyword.Bluemix_notm}} organization. 
 
 ##Examples of the button {: #button-examples} 
 
@@ -161,24 +163,25 @@ With the manifest file, you can specify:
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
 	</li>	
-	<li>If you are deploying an app in a container by using the <stong>IBM Container Service</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
-	<ul>
-	    <li> To learn more about creating Dockerfiles, see the Docker documentation. </li>
-	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually, <a href="https://github.com/Puquios/" target="_blank">see examples in GitHub</a>. To create a pipeline.yml file from a {{site.data.keyword.jazzhub_short}} project and add it to your repository, complete these steps. 
+	<li>To configure pipeline for the project, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a pipeline.yml file from a {{site.data.keyword.jazzhub_short}} project and add it to your repository, complete these steps. 
 <ol>
 <li>Open your DevOps Services project in a browser and click <b>Build and Deploy</b>.</li>
-<li>Configure your pipeline with <b>IBM Container Service</b> build and deployment jobs.</li>
+<li>Configure your pipeline with build and deployment jobs.</li>
 <li>In your browser, add <code>/yaml</code> to the project pipeline URL and press Enter. 
 <br>Example: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>Save the resulting <code>pipeline.yml</code> file.</li>
 <li>In the root directory of your project, create a <code>.bluemix</code> directory.</li>
 <li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repository.</li>
 </ol> </li>
+	<li>If you are deploying an app in a container by using <stong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
+	<ul>
+	    <li> To learn more about creating Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">see the Docker documentation</a>. </li>
+	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a href="https://github.com/Puquios/" target="_blank">see the examples in GitHub</a>. </li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}.	
+For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp).	
 

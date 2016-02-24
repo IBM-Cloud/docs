@@ -9,7 +9,7 @@
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2015 年 11 月 19 日*
+*上次更新时间：2015 年 1 月 6 日*
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。 
 {:shortdesc}
@@ -38,6 +38,28 @@
 **注：**对于 IBM 员工，IBM 标识可能不同于内部网登录标识。 
 
 
+
+
+
+## 您有未保存的更改
+{: #ts_unsaved_changes}
+
+
+在应用程序详细信息页面上进行浏览时，可能无法执行任何操作，系统可能会提示您保存更改后才能继续。 
+
+
+在应用程序详细信息页面上尝试检查应用程序或服务时，总是提示以下错误消息：
+{: tsSymptoms} 
+
+`您在页面 app_name 中有未保存的更改。请保存或取消这些更改。`
+
+
+在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意这样设计的；但是，当您要离开该页面时，会有错误消息提示您保存内存或实例设置。
+{: tsCauses}
+
+
+关闭消息窗口，然后单击运行时窗格中的**重置**按钮。
+{: tsResolve} 
 
 
 
@@ -122,12 +144,12 @@ nslookup stage1.mybluemix.net
 如果您无法邀请用户加入组织，并需要其他角色来完成此操作，请联系组织管理员来更改您的角色。要识别组织管理员，请完成以下步骤：
 {: tsResolve}
 
-  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击仪表板右上方的**帐户和支持**图标 ![帐户和支持](images/account_support.png)，然后选择**管理组织**。
+  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击顶部菜单栏中的**帐户和支持**图标 ![帐户和支持](images/account_support.svg)，然后选择**管理组织**。
   2. 转至您的组织，并查看**用户**选项卡上的组织管理员信息。  
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
 
-  1. 联系[标识支持](mailto:id@bluemix.net)，以打开一个支持凭单，要求删除您的帐户。 如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
+  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}，以打开一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
   2. 在您的帐户被删除后，让具有组织管理员角色的用户以组织管理员身份邀请您加入组织。然后，通过邀请注册 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -164,10 +186,10 @@ nslookup stage1.mybluemix.net
 在使用 {{site.data.keyword.Bluemix_notm}} 用户界面时，您可能看到以下一条错误消息：
 {: tsSymptoms}
 
-`BXNUI0001E: 无法确定会话是否存在。尝试重新装入浏览器。`
+`BXNUI0001E: 未装入页面，因为 Bluemix 未检测到是否存在会话。`
 
 
-`BXNUI0016E: 无法检索应用程序和服务。`
+`BXNUI0016E: 未检索到应用程序和服务，因为未装入 Bluemix 页面。`
 
  
 
@@ -206,23 +228,6 @@ nslookup stage1.mybluemix.net
 
 
 
-
-## {{site.data.keyword.Bluemix_notm}}“仪表板”无法装入应用程序或服务
-{: #ts_dashboard}
-
-{{site.data.keyword.Bluemix_notm}}“仪表板”可能未显示任何应用程序或服务信息，因为您的组织或空间无法访问该信息。 
- 
-
-登录到 {{site.data.keyword.Bluemix_notm}} 用户界面后，“仪表板”上没有任何内容，即使先前创建了应用程序并使用了一些服务，也是如此。
-{: tsSymptoms}
- 
-
-当您将服务实例绑定到应用程序，但服务不再可访问（因为组织或空间的服务特权已更改）时，可能会发生此问题。
-{: tsCauses}
-  	
-
-要解决问题，请在 cf 命令行界面中键入 `cf services`，以列出您的服务实例并标识该服务。然后，使用 `cf delete-service` 命令来删除不再可访问的服务实例。
-{: tsResolve}
 
 
 
@@ -358,7 +363,7 @@ Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 
 
 
-## 超过磁盘配额
+## 超出磁盘配额
 {: #ts_disk_quota}
 
 如果磁盘空间不足，可以手动修改磁盘配额来获取更多的磁盘空间。
@@ -441,7 +446,7 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 
 
 
-## 超过组织的服务限制
+## 超出组织的服务限制
 {: #ts_servicelimit}
 
 如果您是试用帐户用户，那么可能无法在超过组织服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
@@ -450,7 +455,7 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，您会看到以下错误消息： 
 {: tsSymptoms}
 
-`BXNUI2032E: 与 Cloud Foundry 联系以创建资源时发生错误。资源：service_instances。Cloud Foundry 消息：“已超过组织的服务限制。”`
+`BXNUI2032E: 未创建 <service_instances> 资源。联系 Cloud Foundry 来创建资源时，发生了错误。Cloud Foundry 消息：“已超过组织的服务限制。”`
 
 
 
@@ -629,7 +634,7 @@ cf push <appname>
   
   
   
-  
+
   
   
 
@@ -1081,7 +1086,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，您会看到以下错误消息：
 {: tsSymptoms} 
 
-`BXNUI0096E: 无法创建应用程序。您的帐户处于不活动状态，因为它已被取消或暂挂。`
+`BXNUI0096E: 未创建应用程序。您的帐户处于不活动状态，因为它已被取消或暂挂。`
 
 
 当您的 {{site.data.keyword.Bluemix_notm}} 帐户被取消或暂挂时，其状态会变为不活动。
@@ -1108,7 +1113,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsSymptoms} 
 
 
-`BXNUI0097E: 无法添加新应用程序。没有与当前组织和区域关联的空间。在“仪表板”上，单击“创建空间”。创建空间后，请重试。`
+`BXNUI0097E: 在添加应用程序之前，必须至少有一个空间与您的组织和区域相关联。在“仪表板”上，单击 **创建空间**。创建空间后，请重试。`
 
 
 
@@ -1415,7 +1420,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
 
 
-## 超过磁盘配额
+## 超出磁盘配额
 {: #ts_diskquota}
 
 您可能会在应用程序日志中看到超过磁盘配额的消息。
@@ -1452,26 +1457,5 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	```
 	
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

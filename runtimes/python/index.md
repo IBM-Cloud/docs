@@ -2,10 +2,9 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 12 January 2016*
-
 # Python runtime
 {: #python_runtime}
+*Last updated: 19 February 2016*
 
 The Python runtime on {{site.data.keyword.Bluemix}} is powered by the python_buildpack.
 The python_buildpack provides a complete runtime environment for Python
@@ -51,6 +50,6 @@ you can use the external
 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) to
 deploy the app.
 
-## RELATED LINKS
-{: #related_links}
+# rellinks
+## general
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

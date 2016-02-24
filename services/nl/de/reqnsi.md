@@ -5,7 +5,7 @@
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 7. Dezember 2015*
+*Letzte Aktualisierung: 20. Januar 2015*
 
 Verfügbare Services finden Sie im **Katalog** unter **Services** in der
 {{site.data.keyword.Bluemix}}-Benutzerschnittstelle.
@@ -56,10 +56,10 @@ stellt darüber hinaus experimentelle Services bereit, die Sie testen können. U
 
 Experimentelle Services sind möglicherweise
 nicht ganz stabil in der Ausführung und können Änderungen aufweisen, die nicht mit früheren
-Versionen kompatibel sind. Diese Services sollten nicht in Produktionsumgebungen verwendet werden. Support für experimenteller Service Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel eines experimentellen Service herausstellt,
+Versionen kompatibel sind. Diese Services sollten nicht in Produktionsumgebungen verwendet werden. Support für experimentelle Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel eines experimentellen Service herausstellt,
 ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.
 
-Um einen Service in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, der Befehlszeilenschnittstelle cf, IBM {{site.data.keyword.Bluemix_notm}} DevOps Service oder in sonstigen unterstützten Tools nutzen zu können, führen Sie die folgenden Schritte durch:
+Um einen Service in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, der Befehlszeilenschnittstelle 'cf', IBM {{site.data.keyword.Bluemix_notm}} DevOps Service oder in sonstigen unterstützten Tools nutzen zu können, führen Sie die folgenden Schritte durch:
 
 1. Erstellen Sie eine Instanz des Service. In den meisten Fällen kann die Serviceinstanz im Zuge der Anwendungserstellung eingerichtet werden.
 
@@ -76,8 +76,10 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 
 |Service	|Verfügbar in Region 'US South'	|Verfügbar in Region 'Europe United Kingdom' |Verfügbar in Region 'Australia Sydney'|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.alchemyapishort}} 		|Ja	   	|Ja  		|Ja|
 |{{site.data.keyword.appsecshort}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.alertnotificationshort}}|Ja		|Nein			|Nein		|
 |{{site.data.keyword.APS_DA}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.APS_MA}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.amashort}}			|Ja		|Ja		|Ja|
@@ -100,13 +102,15 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Ja	|Ja		|Nein|
 |{{site.data.keyword.globalizationshort}}	|Ja		|Nein		|Nein|
 |{{site.data.keyword.dataworks_short}}		|Ja		|Ja		|Nein|
-|{{site.data.keyword.twittershort}}		|Ja		|Ja		|Nein|
+|{{site.data.keyword.twittershort}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.weather_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.IntegrationTestingshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.iot_short}}		|Ja		|Nein		|Nein|
 |{{site.data.keyword.languagetranslationshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.messagehub}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.messageresonanceshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.APS_MAiOS}} 		|Ja		|Nein		|Nein|
+|{{site.data.keyword.macm_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.mobilemam}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.mobiledata}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.manda}}			|Ja		|Ja		|Nein|
@@ -193,18 +197,18 @@ führen Sie die folgenden Schritte durch:
 
 1. Verwenden Sie den Befehl **cf marketplace**, um den Namen und den Plan des benötigten Service zu suchen.
 
-2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'servicename' der Name des Service, 'serviceplan' der Plan
-des Service und 'serviceinstanz' der Name, den Sie für diese Serviceinstanz verwenden möchten.
+2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'service_name' der Name des Service, 'service_plan' der Plan
+des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
 
     ```
-    cf create-service servicename serviceplan serviceinstanz
+    cf create-service service_name service_plan service_instance
     ```
 
-3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist 'appname' der Name der Anwendung und 'serviceinstanz' der Name
+3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist 'appname' der Name der Anwendung und 'service_instance' der Name
 der Serviceinstanz.
 
     ```
-    cf bind-service anwendungsname serviceinstanz
+    cf bind-service appname service_instance
     ```
 
 **Hinweis:** Eine Serviceinstanz ist für einen Bereich spezifisch, in dem die Serviceinstanz erstellt wird. Es ist nicht möglich, eine Serviceinstanz in einen
@@ -365,7 +369,7 @@ einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services){: ne
 5. Binden Sie die vom Benutzer bereitgestellte Serviceinstanz mit dem folgenden Befehl an Ihre App:
 
 	```
-	cf bind-service eigene_app vom_benutzer_bereitgestellte_serviceinstanz
+	cf bind-service myapp user-provided_service_instance
 	```
 
 ## Services in einem anderen Service verwenden

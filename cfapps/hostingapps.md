@@ -118,7 +118,7 @@ Take the following steps to migrate your application:
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>For more information about the supported options that you can use in this file, see [Application manifest](../manageapps/deployingapps.html#appmanifest).
+<p>For more information about the supported options that you can use in this file, see [Application manifest](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -142,7 +142,7 @@ Take the following steps to migrate your application:
 
 * When you use the cf push command, the cf command line interface copies all of the files and directories from your current directory to {{site.data.keyword.Bluemix_notm}}. Ensure that you have only the required files in your application directory.
 * Ensure that your organization has enough memory for all instances of your application. To view the memory quota for your org, use cf org org_name.
-* For more information about cf push, see [cf commands](../cli/cfcommands.html).
+* For more information about cf push, see [cf commands](../cli/reference/cfcommands/index.html).
 
 ##Migrating your data and using services
 {: #ht_service}

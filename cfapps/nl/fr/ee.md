@@ -32,7 +32,7 @@ dont le nom dépend de votre nom d'utilisateur, et dont vous êtes le seul colla
 environnement de développement, d'un espace de test comme environnement de test et d'un espace de production comme environnement de production. De plus, chaque
 environnement appartient à une région. Avec {{site.data.keyword.Bluemix_notm}}, vous pouvez déployer vos
 applications dans une région géographique spécifique pour un temps d'attente des réseaux plus court, la confidentialité des données et une meilleure
-disponibilité. Voir Régions pour des détails. 
+disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
@@ -40,7 +40,7 @@ utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus cou
 des Etats-Unis** dans le coin supérieur droit de l'interface utilisateur. Ensuite, procédez comme suit pour créer une application :
   1. Cliquez sur **Créer une application**.
   2. Sélectionnez **Web**.
-  3. Sélectionnez le module de démarrage SDK for Node.js pour votre application Web et cliquez sur **Continuer**. 
+  3. Sélectionnez le module de démarrage SDK for Node.js pour votre application Web et cliquez sur **Continuer**.
   4. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Terminer**. Le nom de
 l'application doit être unique dans l'ensemble de l'environnement {{site.data.keyword.Bluemix_notm}}.
   
@@ -70,12 +70,12 @@ procédant comme suit :
   
 A présent, votre application est liée au service {{site.data.keyword.cloudant}}. Toutes les données nécessaires à l'application pour
 communiquer avec l'instance de service se trouvent dans la variable d'environnement VCAP_SERVICES. Ainsi,
-{{site.data.keyword.Bluemix_notm}} hébergeant plusieurs applications sur la même machine virtuelle, les applications ne peuvent pas utiliser le même numéro de port HTTP pour recevoir les demandes entrantes. Pour éviter tout conflit, un numéro de port unique est affecté à chaque application. 
-Ce numéro de port est disponible dans la variable VCAP_APP_PORT.
+{{site.data.keyword.Bluemix_notm}} hébergeant plusieurs applications sur la même machine virtuelle, les applications ne peuvent pas utiliser le même numéro de port HTTP pour recevoir les demandes entrantes. Pour éviter tout conflit, un numéro de port unique est affecté à chaque application. Ce numéro de port est disponible dans la variable VCAP_APP_PORT.
 
 Pour plus d'informations, cliquez sur **Variables d'environnement** dans la page Vue d'ensemble de l'application afin d'afficher la
 liste complète de
-VCAP_SERVICES :```
+VCAP_SERVICES :
+```
 {
    "cloudantNoSQLDB": [
       {
@@ -93,13 +93,11 @@ VCAP_SERVICES :```
    ]
 }
 ```
-{:codeblock}
 
 **Remarque :** cette variable d'environnement est la sérialisation d'un objet JSON avec une entrée pour chaque instance de
 service à laquelle l'application est
 liée. La quantité et le type des données fournies par chaque instance de service varient en fonction du service. Si votre application n'utilise pas de
-service, VCAP_SERVICES est un objet JSON vide.
-Cette variable d'environnement est utilisée uniquement lorsque vous
+service, VCAP_SERVICES est un objet JSON vide. Cette variable d'environnement est utilisée uniquement lorsque vous
 ajoutez un service à votre application.
 
 ## Construction de votre application via l'interface de ligne de commande cf
@@ -120,8 +118,7 @@ pour télécharger le code de votre application.
   
     1. Téléchargez le programme d'installation de l'outil de ligne de commande cf pour votre système d'exploitation.
     2. Suivez l'assistant de l'outil pour effectuer l'installation .
-    3. Utilisez la commande **cf -v** pour vérifier la version de l'interface de ligne de commande cf.
-Exemple :
+    3. Utilisez la commande **cf -v** pour vérifier la version de l'interface de ligne de commande cf. Exemple :
 	
 	```
 	cf -v
@@ -140,14 +137,14 @@ la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}} :
   cf api https://api.stage1.ng.bluemix.net
   ```
   
-  Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}.
-Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
+  Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}. Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
 vous avez indiquées sont sauvegardées.
   
   4. Ensuite, vous pouvez vous connecter à {{site.data.keyword.Bluemix_notm}} avec la commande cf login.
   
   ```
-  cf login -u votre_ID_utilisateur -p ***** -o nom_de_votre_organisation -s nom_de_votre_espace```
+  cf login -u votre_ID_utilisateur -p ***** -o nom_de_votre_organisation -s nom_de_votre_espace
+  ```
   
   5. Une fois que vous êtes connecté à {{site.data.keyword.Bluemix_notm}},
 vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix_notm}}. Depuis le répertoire de votre application, `C:\test`, entrez la commande suivante :
@@ -161,10 +158,10 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   6. A présent, vous pouvez accéder à l'application en entrant l'adresse URL de l'application suivante dans un navigateur :
   ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page
-Commencer le codage de votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. 
+Commencer le codage de votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
 ## Liaison d'un service via l'interface de ligne de commande cf
 {: #ee_cfbind}
@@ -185,7 +182,7 @@ les autres services.
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
-  La commande cf services permet d'afficher la liste des instances de service déjà créées. 
+  La commande cf services permet d'afficher la liste des instances de service déjà créées.
   
   ```
   cf services
@@ -211,7 +208,7 @@ mise à jour lorsque cette application est à nouveau démarrée. Pour redémarr
   3. Utilisez l'instance de service.
   
   Dans ce scénario, la variable d'environnement VCAP_SERVICES contient des informations, telles que les éléments suivants, qu'une application peut
-utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} : 
+utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
   
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
@@ -232,7 +229,7 @@ utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **Remarque :** comme illustré par cet exemple de code, pour vous connecter à une instance de service {{site.data.keyword.cloudant}}, vous pouvez commencer par
 vérifier si la variable
@@ -265,21 +262,19 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **Facultatif :** supprimez la liaison d'une instance de service ou supprimez une instance de service.
-
   
   Vous pouvez décider de supprimer la liaison d'une instance de service ou de supprimer une instance de service lorsqu'elle n'est plus utilisée, ou
 lorsque vous avez besoin d'espace. Pour supprimer la liaison d'une instance de service depuis votre application, utilisez la commande **cf
 unbind-service** ;
-pour supprimer une instance de service, utilisez la commande **cf delete-service**. 
+pour supprimer une instance de service, utilisez la commande **cf delete-service**.
 
   Pour plus d'informations sur les services, voir Services. Pour plus d'informations sur les options **cf** qui permettent de
 gérer vos applications dans l'environnement {{site.data.keyword.Bluemix_notm}}, exécutez **cf --help** dans l'interface de ligne de commande **cf**.
 
-  **Remarque :** avant de supprimer une instance de service, assurez-vous de ne plus en avoir besoin. Cette action entraîne la suppression de toutes les données associées à l'instance. 
-La variable d'environnement VCAP_SERVICES d'une application liée à un service supprimé n'est pas mise à jour tant que cette application n'est pas
+  **Remarque :** avant de supprimer une instance de service, assurez-vous de ne plus en avoir besoin. Cette action entraîne la suppression de toutes les données associées à l'instance. La variable d'environnement VCAP_SERVICES d'une application liée à un service supprimé n'est pas mise à jour tant que cette application n'est pas
 redémarrée.
 
 ## Calcul du coût de votre application

@@ -4,9 +4,9 @@
 #{{site.data.keyword.Bluemix_notm}} 專用
 {: #dedicated}
 
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} 是一種以雲端為基礎的開放標準平台，用於建置、執行及管理應用程式。使用「{{site.data.keyword.Bluemix_notm}} 專用」，即可使用強大而簡潔的 {{site.data.keyword.Bluemix_notm}}—在您自己的專用 SoftLayer 環境，且這個環境同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」環境和您自己的網路。
+{{site.data.keyword.Bluemix}} 是一種以雲端為基礎的開放標準平台，用於建置、執行及管理應用程式。使用「{{site.data.keyword.Bluemix_notm}} 專用」，即可在您自己的專用 SoftLayer 環境中，使用強大而簡潔的 {{site.data.keyword.Bluemix_notm}}，而這個環境同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」環境和您自己的網路。
 {:shortdesc}
 
 「{{site.data.keyword.Bluemix_notm}} 專用」包含一份專用型錄，它會顯示只供您使用的專用服務。它也包含來自「{{site.data.keyword.Bluemix_notm}} 公用」，用來形成聯合組織且可供您使用的其他服務。
@@ -27,12 +27,13 @@
 |-----------------|-------------------|-------------------|
 | 內含 | {{site.data.keyword.autoscaling}} | 根據原則，動態增加或減少應用程式的運算能力。使用此服務，即可在「{{site.data.keyword.Bluemix_notm}} 專用」環境中無限制地使用。 |
 | 內含 | {{site.data.keyword.datacshort}} | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
-| 內含 | {{site.data.keyword.cloudant}} | IBM 的 NoSQL 資料庫，提供高效能的 JSON 資料層（與 CouchDB 相容）。包含 1.6 TB 及最多每秒 3,000 個 API 要求。 |
-| 選用 | {{site.data.keyword.sqldb}} | IBM {{site.data.keyword.sqldbfull}} Database for {{site.data.keyword.Bluemix_notm}} 為您的應用程式增添了完整佈建的關聯式資料庫。{{site.data.keyword.sqldb}} 提供受管理資料庫來處理貴公司嚴苛的 Web 及交易式工作量。 |
-| 選用 | {{site.data.keyword.mql}} | IBM {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} 是以雲端為基礎的傳訊服務，它為 {{site.data.keyword.Bluemix_notm}} 應用程式提供富有彈性且易於使用的傳訊。{{site.data.keyword.mql}} 提供管理簡易的傳訊解決方案。您可以使用 {{site.data.keyword.mql}} 讓應用程式更具回應力且可擴充，也可以使用簡單而強大的 API，在應用程式之間共用及卸載工作。 |
+| 選用 | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} 是一種雲端型傳訊服務，可為 {{site.data.keyword.Bluemix_notm}} 應用程式提供靈活且易於使用的傳訊功能。{{site.data.keyword.mql}} 提供管理簡易的傳訊解決方案。您可以使用 {{site.data.keyword.mql}} 讓應用程式更具回應力且可擴充，也可以使用簡單而強大的 API，在應用程式之間共用及卸載工作。 |
 | 選用 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 來儲存關聯式資料，包括地理空間資料之類的特殊類型。然後，使用 SQL 或進階內建分析（例如預測分析及資料採礦、使用 R 的分析和地理空間分析）分析該資料。 |
+|選用 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服務來組合、管理及社交化 API。您也可以使用 Proxy URL 或組合來自 HTTP 資料來源中的資料，以利用資源匯入 API。使用 {{site.data.keyword.APIM}} 服務的好處是您可以管理 API 的使用方式。 |
+|選用 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服務使您能夠以安全的方式將 {{site.data.keyword.Bluemix_notm}} 應用程式連接至內部部署或雲端中的遠端位置。  |
 
 *表 1. 專用服務*
+
 
 ##設定 {{site.data.keyword.Bluemix_notm}} 專用
 {: #setupdedicated}
@@ -44,30 +45,44 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 若要設定您的 {{site.data.keyword.Bluemix_notm}} 專用版本，請執行下列動作：
 
 <ol>
-<li>要開始使用，請與您的 IBM 指定客戶業務代表聯絡，或與 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> 聯絡。</li>
-<li>每月的經常性費用是根據您要使用的專用服務，再加上所有 {{site.data.keyword.Bluemix_notm}} 公用服務的訂閱。您會收到關於任何超出訂閱合約之使用項目的發票。
-	<ol type="a">
-	<li>請和 IBM 確認您的「{{site.data.keyword.Bluemix_notm}} 專用」實例費用。
-	每月的經常性費用是根據您要使用的專用服務，再加上所有 {{site.data.keyword.Bluemix_notm}} 公用服務的訂閱。您會收到關於任何超出訂閱合約之使用項目的發票。</li>
-	<li>確認設定「{{site.data.keyword.Bluemix_notm}} 專用」實例的每一個階段的截止時間。</li>
-	</ol>
-	</li>
+<li>首先聯絡 IBM 指定的客戶代表或<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">聯絡 {{site.data.keyword.Bluemix_notm}}</a>。</li>
+<li>請和 IBM 確認您的「{{site.data.keyword.Bluemix_notm}} 專用」實例費用。
+每月的經常性費用是根據您要使用的專用服務，再加上所有 {{site.data.keyword.Bluemix_notm}} 公用服務的訂閱。您會收到關於任何超出訂閱合約之使用項目的發票。</li>
+<li>識別設定「{{site.data.keyword.Bluemix_notm}} 專用」實例的每一個階段的截止時間。如需每一個階段和所涉及作業的相關資訊，請參閱 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} 專用角色及責任</a>。</li>
 <li>為您的專用實例選取 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 資料中心位置</a>。然後，建立您的專用平台及帳戶。對於您的帳戶，請指定組織中負責維持專用實例運作所需角色的人員。如需您可指派之角色的相關資訊，請參閱 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} 專用角色及責任</a>。</li>
 <li>定義並建立貴公司網路與「{{site.data.keyword.Bluemix_notm}} 專用」實例之間的網路連線功能。
 	<ol type="a">
 	<li>IBM 針對專用實例安裝監視及安全基礎架構。</li>
-	<li>IBM 安裝您選取的單一承租戶專用服務。</li>
+	<li>IBM 會安裝您選取的單一承租戶專用服務。</li>
 	<li>針對 IP 位址或防火牆之類的事物提供網路配置及端點，並提供 LDAP 的存取權，以整合至 {{site.data.keyword.Bluemix_notm}}。</li>
 	</ol>
 </li>
-<li>識別環境的管理團隊，並指派角色。
+<li>識別環境的管理團隊，並指派其角色。
 	<ol type="a">
 	<li>IBM 會根據您提供的資訊，配置網路存取權及 LDAP。管理存取權會授與給您指定的聯絡人。您也必須指定聯絡人來負責支援及計費。</li>
-	<li>IBM 會在您的專用環境中設定聯合型錄，以顯示您的專用服務及許多公用 {{site.data.keyword.Bluemix_notm}} 服務。</li>
+	<li>IBM 會在您的專用環境中設定聯合型錄，以顯示您的專用服務。聯合型錄包含來自「{{site.data.keyword.Bluemix_notm}} 公用」，用來形成聯合組織且可供您使用的其他服務。您可以選擇根據資料隱私及安全準則來決定符合商業需求的公用服務。</li>
 	<li>您會驗證網路和防火牆配置，以及 LDAP 端點和存取權。</li>
 	</ol>
 </li>
 </ol>
+
+對您的環境進行起始部署和配置的過程應類似於下列清單。如需每個作業負責人員的詳細資料，請參閱[角色及責任](../dedicated/index.html#rolesresponsibilities)。
+
+<ol>
+<li>您選取要使用哪個資料中心來管理專用實例。如需資料中心選項的相關資訊，請參閱 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 資料中心位置</a>。</li>
+<li>您為部署指定網域名稱，以及要使用的 ID。設定 {{site.data.keyword.Bluemix_notm}} 實例時，您會得到三個網域。請挑選 <code>*mycompany*.*region*.bluemix.net</code> 和 <code>*mycompany*.*region*.mybluemix.net</code> 的字首。然後，選擇第三個網域的完整名稱。<br />
+<p>您可以根據自己的需要選擇任意數量的自訂網域。不過，您應負責取得自訂網域的憑證。如需建立自訂網域的相關資訊，請參閱<a href="../manageapps/updapps.html#domain">建立及使用自訂網域</a>。</p></li>
+<li>您識別使用哪個公用帳戶的擁有者，在「{{site.data.keyword.Bluemix_notm}} 公用」中代表您的公司。IBM 會使用此帳戶來追蹤聯合服務的使用情形。</li>
+<li>您選取資料中心的安全連線類型。可選取的類型包括 SoftLayer VPN、SoftLayer Direct Link 及 AT&T Net Bond。</li>
+<li>您決定是否將從公用網際網路存取您的專用環境。</li>
+<li>您選取將使用的鑑別類型。可選取的類型包括 IBM ID 或 Active Directory。如需使用及登錄 IBM ID 的相關資訊，請參閱<a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">說明及常見問題</a>頁面。</li>
+<li>您識別環境的管理團隊，並指派其角色。如需您必須指派哪些角色的相關資訊，請參閱 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} 專用角色及責任</a>。</li>
+<li>IBM 部署核心平台，其中包含彈性執行時期、主控台、管理特性和監視。</li>
+<li>IBM 配置您對環境的管理存取權。</li>
+<li>您可以開始使用您的專用實例來回應警示，該實例由 IBM 作業團隊進行監視。</li>
+</ol>
+
+在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端和專用](../administer/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護專用實例](index.html#maintaindedicated)。
 
 ##角色及責任
 {: #rolesresponsibilities}
@@ -80,7 +95,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 
 <dl>
 <dt>**採購聯絡人**</dt>
-<dd>與 IBM 業務代表一起建立您的「{{site.data.keyword.Bluemix_notm}} 專用」環境，包括識別您組織中處理專案任何層面的正確人員。指派給這個角色的人員會監督模式選擇、商業安排，以及客戶資源存取的安排。採購聯絡人是設定專用實例的整體聯絡人。</dd>
+<dd>與 IBM 業務代表一起建立您的「{{site.data.keyword.Bluemix_notm}} 專用」環境，包括識別您組織中處理專案任何層面的正確人員。指派給此角色的人員將擔當專案管理的角色，負責對型樣選取、商業安排以及客戶資源存取安排進行監視。採購聯絡人是設定專用實例和追蹤部署過程的整體聯絡人。</dd>
 <dt>**法規遵循管理者**</dt>
 <dd>與 IBM 業務代表一起選取符合您安全需求的拓蹼及部署選項。指派給這個角色的人員會與 IBM 規範顧問一起確定哪些部署模式能達到規範目標。</dd>
 <dt>**網路專家**</dt>

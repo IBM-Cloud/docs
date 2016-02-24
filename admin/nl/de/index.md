@@ -5,66 +5,48 @@
 
 #{{site.data.keyword.Bluemix_notm}} verwalten
 {: #administer}
-*Letzte Aktualisierung: 8. Dezember 2015*
+*Letzte Aktualisierung: 20. Januar 2016*
 
-Verwalten Sie Organisationen, Bereiche und zugeordnete Benutzer durch Klicken auf **Konto und Unterstützung** &gt; **Organisationen verwalten**. Wenn Sie ein Benutzer von {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated sind, finden Sie in '[{{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten](index.html#mng)' weitere Informationen zur Verwaltung einer lokalen oder dedizierten Instanz.
+Verwalten Sie Organisationen, Bereiche und zugeordnete Benutzer, indem Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) klicken und anschließend die Option **Organisationen verwalten** auswählen. Wenn Sie ein Benutzer von {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated sind, finden Sie unter [{{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten](index.html#mng) weitere Informationen zur Verwaltung einer lokalen oder dedizierten Instanz.
 {:shortdesc}
 
 ##Konto verwalten
 {: #mngacct}
 
-In {{site.data.keyword.Bluemix}} können Sie Organisationen und Bereiche, einschließlich des Benutzerzugriffs, über das Dashboard in der
-Benutzerschnittstelle verwalten. Sie können darüber hinaus Ihre Nutzung und Abrechnung überwachen.
+In der öffentlichen {{site.data.keyword.Bluemix}}-Umgebung (Public) können Sie Organisationen und Bereiche, einschließlich des Benutzerzugriffs, über das Dashboard in der Benutzerschnittstelle verwalten. Sie können darüber hinaus Ihre Nutzung und Abrechnung überwachen.
 {:shortdesc}
 
 ###Organisationen und Bereiche
 {: #orgsandspaces}
 
-Als Organisationsmanager können Sie die Einstellungen der Organisation oder des Bereichs, einschließlich des Benutzerzugriffs, auf der Seite 'Organisationen verwalten' anzeigen und verwalten. Zum Öffnen der Seite 'Organisationen verwalten' wechseln Sie zum Menü *Konto und Unterstützung* &gt; **Organisationen verwalten**.
+Als Organisationsmanager können Sie die Einstellungen der Organisation oder des Bereichs, einschließlich des Benutzerzugriffs, auf der Seite 'Organisationen verwalten' anzeigen und verwalten. Zum Öffnen der Seite 'Organisationen verwalten' klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen **Organisationen verwalten** aus.
 
 ####Organisationen
 
 Eine Organisation wird durch die folgenden Elemente definiert:
 
 <dl>
-<dt>Users</dt>
-<dd>Die Rolle mit Basisberechtigungen in Organisationen und Bereichen. Sie müssen einer Organisation zugewiesen sein, bevor Ihnen weitere
-Berechtigungen für Bereiche innerhalb der Organisation erteilt werden können. Detaillierte Informationen hierzu finden Sie in
-[Benutzer und Rollen](index.html#userroles).</dd>
+<dt>Benutzer</dt>
+<dd>Die Rolle mit Basisberechtigungen in Organisationen und Bereichen. Sie müssen einer Organisation zugewiesen sein, bevor Ihnen weitere Berechtigungen für Bereiche innerhalb der Organisation erteilt werden können. Detaillierte Informationen hierzu finden Sie unter [Benutzer und Rollen](index.html#userroles).</dd>
 <dt>Domänen</dt>
 <dd>Stellen die Route im Internet bereit, die der Organisation zugeordnet ist. Eine Route hat eine Unterdomäne und eine Domäne. Eine Unterdomäne ist in der Regel der Anwendungsname. Eine Domäne kann eine Systemdomäne oder eine angepasste Domäne sein, die Sie für Ihre Anwendung registriert haben.<br/>
-<p>**Hinweis**: Wenn Sie eine angepasste Domäne hinzufügen, müssen Sie Ihren DNS-Server so konfigurieren, dass er Ihre angepasste Domäne in einen Verweis auf die {{site.data.keyword.Bluemix_notm}}-Systemdomäne auflöst. Auf diese Weise kann {{site.data.keyword.Bluemix_notm}}
-eine aus Ihrer angepassten Domäne empfangene Anforderung ordnungsgemäß an Ihre Anwendung weiterleiten.</p></dd>
+<p>**Hinweis**: Wenn Sie eine angepasste Domäne hinzufügen, müssen Sie Ihren DNS-Server so konfigurieren, dass er Ihre angepasste Domäne in einen Verweis auf die {{site.data.keyword.Bluemix_notm}}-Systemdomäne auflöst. Auf diese Weise kann {{site.data.keyword.Bluemix_notm}} eine aus Ihrer angepassten Domäne empfangene Anforderung ordnungsgemäß an Ihre Anwendung weiterleiten.</p></dd>
 <dt>Kontingent</dt>
-<dd>Stellt die Ressourcengrenzwerte für die Organisation dar, einschließlich der Anzahl der Services
-und die Speicherkapazität, die für die Verwendung durch Ihre Organisation zugeordnet werden können. Kontingente
-werden bei der Erstellung von Organisationen zugeordnet. Jede Anwendung
-und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei. Sowohl mit dem nutzungsabhängigen Plan als auch dem
-Abonnementplan können Sie Ihr Kontingent für Cloud Foundry-Anwendungen und -Container
-anpassen, sobald sich die Bedürfnisse für Ihre Organisation ändern.</dd>
+<dd>Stellt die Ressourcengrenzwerte für die Organisation dar, einschließlich der Anzahl der Services und die Speicherkapazität, die für die Verwendung durch Ihre Organisation zugeordnet werden können. Kontingente werden bei der Erstellung von Organisationen zugeordnet. Jede Anwendung und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei. Sowohl mit dem nutzungsabhängigen Plan als auch dem Abonnementplan können Sie Ihr Kontingent für Cloud Foundry-Anwendungen und -Container anpassen, sobald sich die Bedürfnisse für Ihre Organisation ändern.</dd>
 </dl>
 
-In
-{{site.data.keyword.Bluemix_notm}} können Sie
-Organisation auf folgende Arten dazu verwenden, die Zusammenarbeit unter Benutzern zu ermöglichen und eine logische
-Gruppierung von Projektressourcen einzurichten:
+In {{site.data.keyword.Bluemix_notm}} können Sie Organisation auf folgende Arten dazu verwenden, die Zusammenarbeit unter Benutzern zu ermöglichen und eine logische Gruppierung von Projektressourcen einzurichten:
 
 <ul>
 <li>Sie können eine Reihe von Bereichen, Anwendungen, Services, Domänen, Routen und Benutzern in Organisationen zusammen gruppieren.</li>
 <li>Sie können den Zugriff auf die Bereiche und Organisationen auf Benutzerbasis verwalten.</li>
 </ul>
 
-Wenn Sie
-eine Organisation erstellen, muss der Organisationsname in
-{{site.data.keyword.Bluemix_notm}} eindeutig sein. Wenn Sie die Organisation erstellt haben, wird Ihnen automatisch die Berechtigung einer *Organisationsmanagers* zugewiesen, mit der Sie den Organisationsnamen bearbeiten, die Organisation löschen und Bereiche in der Organisation erstellen können.
+Wenn Sie eine Organisation erstellen, muss der Organisationsname in {{site.data.keyword.Bluemix_notm}} eindeutig sein. Wenn Sie die Organisation erstellt haben, wird Ihnen automatisch die Berechtigung einer *Organisationsmanagers* zugewiesen, mit der Sie den Organisationsnamen bearbeiten, die Organisation löschen und Bereiche in der Organisation erstellen können.
 
-Wenn Sie eine Organisation löschen, werden alle Bereiche,
-Anwendungen und Services in der Organisation gelöscht.
+Wenn Sie eine Organisation löschen, werden alle Bereiche, Anwendungen und Services in der Organisation gelöscht.
 
-{{site.data.keyword.Bluemix_notm}}
-ermöglicht die Zusammenarbeit an Projekten durch das Zuordnen von Benutzern innerhalb einer Organisation
-und innerhalb der Bereiche der Organisation. Auf der Registerkarte **Benutzer** können
-Sie Benutzer der Organisation anzeigen und verwalten. Darüber hinaus können Sie Benutzer in Ihre Organisation einladen, indem Sie auf den Link **Neuen Benutzer einladen** auf der Registerkarte **Benutzer** klicken. Benutzern in der Organisation können die folgenden Berechtigungen zugeordnet werden:
+{{site.data.keyword.Bluemix_notm}} ermöglicht die Zusammenarbeit an Projekten durch das Zuordnen von Benutzern innerhalb einer Organisation und innerhalb der Bereiche der Organisation. Auf der Registerkarte **Benutzer** können Sie Benutzer der Organisation anzeigen und verwalten. Darüber hinaus können Sie Benutzer in Ihre Organisation einladen, indem Sie auf den Link **Neuen Benutzer einladen** auf der Registerkarte **Benutzer** klicken. Benutzern in der Organisation können die folgenden Berechtigungen zugeordnet werden:
 
 <ul>
 <li>Organisationsbenutzer</li>
@@ -75,13 +57,9 @@ Sie Benutzer der Organisation anzeigen und verwalten. Darüber hinaus können Si
 
 ####Bereiche
 
-Innerhalb einer Organisation können Sie Bereiche verwenden,
-um eine Reihe von Anwendungen, Services und Benutzern zusammen zu gruppieren.
+Innerhalb einer Organisation können Sie Bereiche verwenden, um eine Reihe von Anwendungen, Services und Benutzern zusammen zu gruppieren.
 
-Wenn Sie
-einer Organisation Benutzer hinzugefügt haben, können Sie ihnen Berechtigungen für
-Bereiche innerhalb der Organisation erteilen. Ähnlich wie Organisationen haben auch Bereiche eine Reihe von
-Berechtigungen, die Benutzern zugeordnet werden können:
+Wenn Sie einer Organisation Benutzer hinzugefügt haben, können Sie ihnen Berechtigungen für Bereiche innerhalb der Organisation erteilen. Ähnlich wie Organisationen haben auch Bereiche eine Reihe von Berechtigungen, die Benutzern zugeordnet werden können:
 
 <ul>
 <li>Bereichsmanager</li>
@@ -91,10 +69,7 @@ Berechtigungen, die Benutzern zugeordnet werden können:
 
 **Hinweis**: Einem Benutzer muss mindestens eine der Berechtigungen im Bereich zugeordnet werden.
 
-Die Registerkarte **Domänen** für einen Bereich
-enthält eine schreibgeschützte Liste der Domänen, die dem Bereich zugeordnet sind. Die Systemdomäne ist für
-einen Bereich immer verfügbar. Außerdem können dem Bereich angepasste Domänen zugeordnet werden. Anwendungen,
-die in dem Bereich erstellt wurden, können eine beliebige der für den Bereich aufgelisteten Domänen verwenden.
+Die Registerkarte **Domänen** für einen Bereich enthält eine schreibgeschützte Liste der Domänen, die dem Bereich zugeordnet sind. Die Systemdomäne ist für einen Bereich immer verfügbar. Außerdem können dem Bereich angepasste Domänen zugeordnet werden. Anwendungen, die in dem Bereich erstellt wurden, können eine beliebige der für den Bereich aufgelisteten Domänen verwenden.
 
 ###Benutzer und Rollen
 {: #userroles}
@@ -107,19 +82,14 @@ Sie können entweder ein Mitglied oder ein Collaborator eines Kontos sein.
 
 <dl>
 <dt>Mitglied</dt>
-<dd>Sie sind ein Mitglied eines {{site.data.keyword.Bluemix_notm}}-Kontos,
-wenn Sie das Konto erstellt haben oder wenn Sie als Einstieg in {{site.data.keyword.Bluemix_notm}}
-zu dem Konto eingeladen wurden und sich dann auf der Basis der Einladung angemeldet haben. </dd>
+<dd>Sie sind ein Mitglied eines {{site.data.keyword.Bluemix_notm}}-Kontos, wenn Sie das Konto erstellt haben oder wenn Sie als Einstieg in {{site.data.keyword.Bluemix_notm}} zu dem Konto eingeladen wurden und sich dann auf der Basis der Einladung angemeldet haben. </dd>
 <dt>Collaborator</dt>
-<dd>Sie sind ein Collaborator eines {{site.data.keyword.Bluemix_notm}}-Kontos,
-wenn Sie {{site.data.keyword.Bluemix_notm}} zuvor mit einem anderen Konto
-verwendet haben, dann jedoch zu diesem Konto eingeladen wurden und die Einladung akzeptiert haben.</dd>
+<dd>Sie sind ein Collaborator eines {{site.data.keyword.Bluemix_notm}}-Kontos, wenn Sie {{site.data.keyword.Bluemix_notm}} zuvor mit einem anderen Konto verwendet haben, dann jedoch zu diesem Konto eingeladen wurden und die Einladung akzeptiert haben.</dd>
 </dl>
 
 ####Benutzerrollen
 
-Benutzern können die folgenden Berechtigungen
-für verschiedene Benutzerrollen in einer Organisation oder einem Bereich zugewiesen werden:
+Benutzern können die folgenden Berechtigungen für verschiedene Benutzerrollen in einer Organisation oder einem Bereich zugewiesen werden:
 
 <dl>
 <dt>Organisationsmanager</dt>
@@ -130,17 +100,16 @@ für verschiedene Benutzerrollen in einer Organisation oder einem Bereich zugewi
 <li>Verwalten Sie vorhandene Benutzer, die bereits Mitglieder der Organisation sind.</li>
 <li>Verwalten von Domänen der Organisation.</li>
 </ul>
-<p>**Hinweis**: Wenn Ihnen der Benutzertyp 'Collaborator' zugewiesen ist und Sie {{site.data.keyword.Bluemix_notm}} zuvor mit einem anderen Konto verwendet haben, können Sie keine Benutzer zur Organisation einladen, selbst wenn Ihnen die Organisationsmanagerrolle zugewiesen wird. Zum Einladen von Benutzern müssen Sie über den Benutzertyp 'Mitglied' verfügen. Weitere Informationen zur Umgehung dieses Problems finden Sie unter <a href="../troubleshoot/accessing.html#tr_adduser">Hinzufügen von Benutzern zu Organisation nicht möglich</a>.</p>
+<p>**Hinweis**: Wenn Ihnen der Benutzertyp 'Collaborator' zugewiesen ist und Sie {{site.data.keyword.Bluemix_notm}} zuvor mit einem anderen Konto verwendet haben, können Sie keine Benutzer zur Organisation einladen, selbst wenn Ihnen die Organisationsmanagerrolle zugewiesen wird. Zum Einladen von Benutzern müssen Sie über den Benutzertyp 'Mitglied' verfügen. Weitere Informationen zur Umgehung dieses Problems finden Sie unter <a href="../troubleshoot/index.html#ts_adduser">Hinzufügen von Benutzern zu Organisation nicht möglich</a>.</p>
 </dd>
 <dt>Abrechnungsmanager</dt>
-<dd>Fakturierungsmanager sind berechtigt, Informationen zur Laufzeit- und Servicenutzung
-für die Organisation anzuzeigen.</dd>
+<dd>Fakturierungsmanager sind berechtigt, Informationen zur Laufzeit- und Servicenutzung für die Organisation anzuzeigen.</dd>
 <dt>Organisationsauditoren</dt>
 <dd>Organisationsauditoren sind berechtigt, Anwendungs- und Serviceinhalt in dem Bereich anzuzeigen.</dd>
 <dt>Bereichsmanager</dt>
 <dd>Bereichsmanager verfügen über die folgenden Berechtigungen:
 <ul>
-<li>Fügen dem Bereich Benutzer hinzu und verwalten Benutzer.</li>
+<li>Fügen dem Bereich Benutzer hinzu und verwalten Benutzer. </li>
 <li>Aktivieren Features (Funktionen) für den Bereich.</li>
 </ul>
 </dd>
@@ -152,105 +121,85 @@ für die Organisation anzuzeigen.</dd>
 </ul>
 </dd>
 <dt>Bereichsauditoren</dt>
-<dd>Bereichsauditoren verfügen über Berechtigungen für den Lesezugriff auf alle Informationen über den Bereich, wie zum Beispiel auf Informationen zu
-Anwendungen und Services sowie auf Einstellungen, Berichte und Protokolle.</dd>
+<dd>Bereichsauditoren verfügen über Berechtigungen für den Lesezugriff auf alle Informationen über den Bereich, wie zum Beispiel auf Informationen zu Anwendungen und Services sowie auf Einstellungen, Berichte und Protokolle.</dd>
 </dl>
 
 ###Organisation verwalten
 {: #orgmng}
 
-Als Organisationsmanager oder Kontoeigner können Sie Ihre
-Organisationen verwalten. Management-Tasks beinhalten die Erstellung einer Organisation, die Umbenennung
-einer Organisation, die Erstellung eines Bereichs, das Einladen von Benutzen in einen Bereich sowie
-das Löschen einer vorhandenen Organisation.
+Als Organisationsmanager oder Kontoeigner können Sie Ihre Organisationen verwalten. Management-Tasks beinhalten die Erstellung einer Organisation, die Umbenennung einer Organisation, die Erstellung eines Bereichs, die Einladung von Benutzen in einen Bereich, die Änderung von Benutzerrollen sowie das Löschen einer vorhandenen Organisation.
 
 <ul>
 <li>Eine Organisation erstellen
-<p>Es können nur Benutzer mit einem Zahlungskonto eine Organisation
-erstellen. Mit einem Zahlungskonto können Sie durch Ausführen der folgenden Schritte
-eine Organisation erstellen:</p>
+<p>Es können nur Benutzer mit einem Zahlungskonto eine Organisation erstellen. Mit einem Zahlungskonto können Sie durch Ausführen der folgenden Schritte eine Organisation erstellen:</p>
 <ol>
-<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol in der oberen rechten Ecke, und wählen Sie **Organisationen verwalten** aus.</li>
-<li>Klicken Sie auf **Organisation erstellen**
-und befolgen Sie die Eingabeaufforderungen, um Ihre Organisation zu erstellen.</li>
+<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus.</li>
+<li>Klicken Sie auf **Organisation erstellen** und befolgen Sie die Eingabeaufforderungen, um Ihre Organisation zu erstellen.</li>
 </ol>
 </li>
 <li>Eine Organisation umbenennen
-<p>Führen Sie die folgenden Schritte aus, um Ihre Organisation
-umzubenennen:</p>
+<p>Führen Sie die folgenden Schritte aus, um Ihre Organisation umzubenennen:</p>
 <ol>
-<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol in der oberen rechten Ecke, und wählen Sie **Organisationen verwalten** aus.</li>
+<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) und wählen Sie **Organisationen verwalten** aus.</li>
 <li>Wählen Sie die Organisation aus, die Sie umbenennen möchten.</li>
-<li>Geben Sie im Feld **Organisation** einen neuen Namen ein und klicken Sie
-auf **Speichern**.</li>
+<li>Geben Sie im Feld **Organisation** einen neuen Namen ein und klicken Sie auf **Speichern**.</li>
 </ol>
 </li>
 <li>Mitglieder auflisten
-<p>Führen Sie die folgenden Schritte aus, um die Mitglieder Ihrer Organisation oder Ihres
-Bereichs aufzulisten:</p>
+<p>Führen Sie die folgenden Schritte aus, um die Mitglieder Ihrer Organisation oder Ihres Bereichs aufzulisten:</p>
 <ol>
-<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol in der oberen rechten Ecke, und wählen Sie **Organisationen verwalten** aus. Auf der Registerkarte
-**Benutzer** können Sie die Mitglieder Ihrer Organisation und deren Rollen sehen.</li>
-<li>Klicken Sie auf den Bereichsnamen in Ihrer Organisation, um die Mitglieder dieses Bereichs und
-deren Rollen anzuzeigen.</li>
+<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus. Auf der Registerkarte **Benutzer** werden die Mitglieder Ihrer Organisation und ihre Rollen angezeigt.</li>
+<li>Klicken Sie auf den Bereichsnamen in Ihrer Organisation, um die Mitglieder dieses Bereichs und deren Rollen anzuzeigen.</li>
 </ol>
 </li>
 <li>Einen Bereich erstellen
-<p>Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich
-*dev* als Entwicklungsumgebung, einen Bereich
-*test* als Testumgebung und einen Bereich
-*production* als Produktionsumgebung. Anschließend können Sie Ihre Apps Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu
-erstellen:</p>
+<p>Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* als Entwicklungsumgebung, einen Bereich *test* als Testumgebung und einen Bereich *production* als Produktionsumgebung. Anschließend können Sie Ihre Apps Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu erstellen:</p>
 <ol>
-<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol in der oberen rechten Ecke, und wählen Sie **Organisationen verwalten** aus.</li>
-<li>Klicken Sie unter Ihrem Organisationsnamen auf **Bereich erstellen**
-und befolgen Sie die Eingabeaufforderungen, um Ihren Bereich zu erstellen.</li>
+<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) und wählen Sie **Organisationen verwalten** aus.</li>
+<li>Klicken Sie auf **Bereich erstellen** hinter Ihrem Organisationsnamen und befolgen Sie die Eingabeaufforderungen, um Ihren Bereich zu erstellen.</li>
 </ol>
 </li>
 <li>Benutzer in einen Bereich einladen
-<p>Sie können Benutzer in Ihre Organisation als Teilnehmer einladen. Sie können außerdem
-Benutzer Ihrer Organisation zu verschiedenen Bereichen hinzufügen. Die Benutzer können nur auf den Bereich zugreifen,
-zu dem sie hinzugefügt wurden. Führen Sie die folgenden Schritte aus, um einen Benutzer zu einem Bereich
-hinzuzufügen:</p>
+<p>Sie können Benutzer in Ihre Organisation als Teilnehmer einladen. Sie können außerdem Benutzer Ihrer Organisation zu verschiedenen Bereichen hinzufügen. Die Benutzer können nur auf den Bereich zugreifen, zu dem sie hinzugefügt wurden. Führen Sie die folgenden Schritte aus, um einen Benutzer zu einem Bereich hinzuzufügen:</p>
 <ol>
-<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol in der oberen rechten Ecke, und wählen Sie **Organisationen verwalten** aus. Klicken Sie anschließend auf **Benutzer hinzufügen** in Ihrer Organisation und befolgen Sie die Eingabeaufforderungen, um den Benutzer zu Ihrer Organisation hinzuzufügen.</li>
-<li>Fügen Sie den Benutzer zu einem Bereich hinzu. Wählen Sie den Bereich im linken Navigationsfenster
-aus, klicken Sie auf
-**Benutzer hinzufügen** und befolgen Sie die Eingabeaufforderungen, um den Benutzer zu dem
-Bereich hinzuzufügen.</li>
+<li>Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus. Klicken Sie anschließend auf **Benutzer hinzufügen** in Ihrer Organisation und befolgen Sie die Eingabeaufforderungen, um den Benutzer zu Ihrer Organisation hinzuzufügen.</li>
+<li>Fügen Sie den Benutzer zu einem Bereich hinzu. Wählen Sie den Bereich im Navigationsfenster aus, klicken Sie auf **Benutzer hinzufügen** und befolgen Sie die Eingabeaufforderungen, um den Benutzer zu dem Bereich hinzuzufügen.</li>
+</ol>
+</li>
+<li>Benutzerrollen ändern
+<p>Führen Sie die folgenden Schritte aus, um Benutzerrollen zu ändern:</p>
+<ol>
+<li>Klicken Sie in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](images/account_support.svg) und wählen Sie **Organisationen verwalten** aus.</li>
+<li>Wählen Sie das Kontrollkästchen **Manager**, **Abrechnungsmanager** oder **Auditor** auf der Registerkarte **Benutzer** aus, um Rollen von Benutzern in Ihrer Organisation zu ändern. Oder wählen Sie einen Bereich im Navigationsbereich und anschließend das Kontrollkästchen **Manager**, **Entwickler** oder **Auditor** auf der Registerkarte **Benutzer** aus, um Rollen von Benutzern in dem Bereich zu ändern.</li>
+<li>Klicken Sie auf **Speichern**.</li>
 </ol>
 </li>
 <li>Eine vorhandenen Organisation löschen
 <p>Wenn Sie Ihre Organisation löschen möchten, wenden Sie sich an die Unterstützung für {{site.data.keyword.Bluemix_notm}}-Registrierungen und -IDs.</p>
-<p>**Hinweis**: Das Löschen von Operationen kann nicht rückgängig gemacht werden. Alle der Organisation zugeordneten Anwendungen und
-Services gehen verloren.</p>
+<p>**Hinweis**: Das Löschen von Operationen kann nicht rückgängig gemacht werden. Alle der Organisation zugeordneten Anwendungen und Services gehen verloren.</p>
 </li>
 </ul>
 
 ## {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten
 {: #mng}
 
-Mit der Administrationskonsole können Sie Ressourcen und Benutzerberechtigungen verwalten, die Nutzung überwachen verwalten und
-Sicherheitsberichte, Protokolle, Status und Upgradebenachrichtigungen für Ihre {{site.data.keyword.Bluemix}} Local- oder Dedicated-Umgebung anzeigen.
+Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Verwaltungsseite (**Administration**) Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und Benutzerrollen und Berechtigungen festlegen. Weitere Informationen finden Sie unter [Organisation verwalten](index.html#orgmng).
 {:shortdesc}
 
-### Auf die Administrationskonsole zugreifen
-{: #oc_access}
+*Tabelle 1. Verwaltungstasks zur Verwaltung einer {{site.data.keyword.Bluemix_notm}} Local- oder Dedicated-Instanz*
 
-Der Zugriff auf die Administrationskonsole erfolgt durch Eingabe der folgenden URL:
-
-<code>https://opsconsole.&lt;Unterdomäne&gt;.bluemix.net/</code>
-
-<dl>
-<dt><strong>&lt;Unterdomäne&gt;</strong></dt>
-<dd>Dieser Wert steht für den Namen der lokalen oder dedizierten Instanz. Der Unterdomänenname für Ihre {{site.data.keyword.Bluemix}}-Instanz wurde beim Onboarding zugeordnet.</dd>
-</dl>
+| Verwaltungstask | Details |    
+|----------------|---------|
+|Systemnutzung überwachen | Klicken Sie auf **ADMINISTRATION &gt; USAGE**. Zeigen Sie Systeminformationen an, überwachen Sie die CPU-Nutzung und planen Sie die Nutzung, um die besten Entscheidungen für Ihr Unternehmen zu treffen.|
+|Eigenen Katalog verwalten | Klicken Sie auf **ADMINISTRATION &gt; CATALOG MANAGEMENT**. Legen Sie fest, welche Services für Ihre Benutzer sichtbar sind.|
+|Organisationen verwalten | Klicken Sie auf **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**. Erstellen Sie Organisationen, überwachen Sie Kontigente für Organisationen und treffen Sie rasch bedarfsorientierte Entscheidungen.|
+|Bereiche erstellen und Benutzerrollen zuweisen | Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und anschließend auf **Organisationen verwalten**. Erstellen Sie Bereiche in Ihren Organisationen. Fügen Sie Benutzer hinzu und weisen Sie Benutzern Organisations- und Bereichsrollen zu. |
+|Administratorberechtigungen verwalten | Klicken Sie auf **ADMINISTRATION &gt; USER ADMINISTRATION**. Fügen Sie Benutzer hinzu, entfernen Sie Benutzer und passen Sie Benutzerberechtigungen an. |
+|Berichte und Protokolle prüfen | Klicken Sie auf **ADMINISTRATION &gt; REPORTS AND LOGS**. Zeigen Sie Sicherheitsberichte und Prüfprotokolle für Ihre Instanz an.|
+|Systeminformationen anzeigen | Klicken Sie auf **ADMINISTRATION &gt; SYSTEM INFORMATION**. Zeigen Sie Systeminformationen an. Beispiele: anstehende Aktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen.  |
 
 ### Systeminformationen anzeigen
 {: #oc_system}
-
-Überwachen Sie die Systeminformationen mithilfe der
-Administrationskonsole.
 
 Klicken Sie zum Anzeigen von Systeminformationen auf **ADMINISTRATION &gt; SYSTEM INFORMATION**.
 
@@ -278,8 +227,7 @@ Sie können verschiedene Bereiche zu anstehenden Aktualisierungen, allgemeinen S
 </ol>
 
 * Der Bereich für allgemeine Informationen enthält die folgenden Angaben:
-    * Basisinformationen zum
-{{site.data.keyword.Bluemix_notm}}-Build
+    * Basisinformationen zum {{site.data.keyword.Bluemix_notm}}-Build
     * API-Informationen wie Version, URL und Region sowie einen Link zur CLI-Dokumentation
     * Informationen der gemeinsamen Domäne zu Ihrem System und Service
     * Statistiken zur Gesamtzahl der Anwendungen, Benutzer und Organisationen
@@ -290,9 +238,6 @@ LDAP-Konfigurationsdetails angezeigt.
 
 ### Nutzungsinformationen anzeigen
 {: #oc_resource}
-
-Überwachen Sie die Ressourcen- und Netzauslastung mithilfe der
-Administrationskonsole.
 
 Klicken Sie zum Anzeigen von Ressourceninformationen auf **ADMINISTRATION &gt; USAGE**.
 
@@ -307,16 +252,10 @@ spezifiziert. Die CPU-Auslastung ist in drei Kategorien unterteilt: der für Sys
 aufgewendete Umfang der CPU-Auslastung, der für Benutzerprozesse
 aufgewendete Umfang der CPU-Auslastung und der für Prozesse mit Wartestatus
 aufgewendete Umfang der CPU-Auslastung.
-* Informationen zur Netzauslastung für die Bandbreite bei Ein- und Ausgang, über einen vergangenen Tag, eine
-vergangene Woche oder einen vergangenen Monat hinweg.
-Die angezeigten Daten basieren auf dem
-Gesamtwert zum ankommenden und abgehenden Datenverkehr für öffentliche und private Netze.
-* Durchschnittliche Antwortzeit für
-{{site.data.keyword.Bluemix_notm}} über
-die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
-* Durchschnittliche Transaktionen pro Sekunde für
-{{site.data.keyword.Bluemix_notm}} über
-die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
+* Informationen zur Netzauslastung für die Bandbreite bei Ein- und Ausgang, über einen vergangenen Tag, eine vergangene Woche oder einen vergangenen Monat hinweg.
+Die angezeigten Daten basieren auf dem Gesamtwert zum ankommenden und abgehenden Datenverkehr für öffentliche und private Netze.
+* Durchschnittliche Antwortzeit für {{site.data.keyword.Bluemix_notm}} über die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
+* Durchschnittliche Transaktionen pro Sekunde für {{site.data.keyword.Bluemix_notm}} über die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
 
 ### Berichte anzeigen
 {: #oc_report}
@@ -327,74 +266,31 @@ Klicken Sie zum Anzeigen von Berichten und Protokollen auf **ADMINISTRATION &gt;
 
 Es stehen Ihnen nun verschiedene Möglichkeiten zur Auswahl:
 
-* Sie können in den Feldern Start- und Enddatum auswählen, um die Berichte und Protokolle zu filtern, die
-angezeigt werden.
-* Sie können im linken Navigationsbereich verschiedene Berichte einblenden und anzeigen.
+* Sie können in den Feldern Start- und Enddatum auswählen, um die Berichte und Protokolle zu filtern, die angezeigt werden.
+* Sie können im Navigationsbereich verschiedene Berichte einblenden und anzeigen.
 * Sie können Ihre Berichte und Protokolle durchsuchen. Bei der Suche werden die
 Berichtsnamen ebenso wie der Textinhalt in den Berichten und Protokollen einbezogen. Sie können bei
 der Suche auch Filter für Administrationsereignisse, DataPower-, Firewall- und
 Anmeldeprüfungsberichte einsetzen.
-* Beim Anzeigen eines Berichts oder eines Protokolls können Sie auf das Symbol ![Download](images/icon_download.png) in der rechten oberen Ecke klicken, um den Bericht bzw. das Protokoll
-herunterzuladen.
-
-<!-- This content cannot go into production until the security reports have gone into production -->
-
-Weitere Informationen zu den verschiedenen Typen von Sicherheitsberichten finden Sie unter [Sicherheitsberichte](../security/index.html#reports).
+* Beim Anzeigen eines Berichts oder eines Protokolls können Sie auf das Symbol ![Download](images/icon_download.svg) klicken, um den Bericht bzw. das Protokoll herunterzuladen. 
 
 ### Status anzeigen
 {: #oc_status}
 
-Mithilfe der Administrationskonsole können Sie den
-Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz überwachen. Sie können auch einen RSS-Feed abonnieren, damit Sie
-nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben.
+Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite überwachen. Die Seite 'Status' ist der zentrale Ort zum Suchen nach Benachrichtigungen und Ankündigungen in Bezug auf bedeutende Ereignisse, die die {{site.data.keyword.Bluemix_notm}}-Plattform und die übergeordneten Services in {{site.data.keyword.Bluemix_notm}} betreffen. 
 
-Führen Sie die folgenden Schritte durch, um den Status Ihrer {{site.data.keyword.Bluemix_notm}}-Instanz anzuzeigen:
-
-1. Klicken Sie in der Administrationskonsole in der rechten oberen Ecke auf das
-Symbol für Profileinstellungen.
-
-2. Klicken Sie anschließend auf **Status**.
-
-Daraufhin wird die Seite mit dem Systemstatus angezeigt. Im linken Fensterbereich wird der
-Status Ihrer Laufzeiten und Services (regionsübergreifend) und Ihrer {{site.data.keyword.Bluemix_notm}}-Instanz angezeigt. Im rechten
-Fensterbereich werden Benachrichtigungen angezeigt.
-
-3. Wenn Ihr Browser für RSS-Feeds konfiguriert ist, können Sie einen RSS-Feed mit den Benachrichtigungen
-abonnieren. Suchen Sie das Symbol ![RSS](images/icon_RSS.png) links oben in der Benachrichtigungsliste rechts neben
-**UPDATES**
-und wählen Sie eine der folgenden Aktionen aus:
-
-* Ziehen Sie das Symbol ![RSS](images/icon_RSS.png) in Ihren RSS-Reader.
-* Klicken Sie mit der rechten Maustaste auf das RSS-Symbol, wählen Sie die Option zum Kopieren der
-Linkadresse aus und fügen Sie die URL in Ihren RSS-Reader ein.
-
-4. Filtern Sie, welche Benachrichtigungen angezeigt werden sollen. Klicken Sie rechts oben von der
-Benachrichtigungsliste auf die Option zum Filtern. Anschließend können Sie die Liste der Benachrichtigungen
-durch Eingabe eines Wortes, das Sie in einer Benachrichtigung erwarten, durchsuchen und entsprechend einschränken.
-Beispiel: Wartung. Sie können auch per Mausklick auswählen, welche Benachrichtigungen, kategorisiert nach **Typ**,
-**Region**, **Kategorie**, **Startdatum** oder **Enddatum**, angezeigt werden
-sollen.
+Sie können einen RSS-Feed abonnieren, damit Sie nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben. Weitere Informationen zur Seite 'Status' und zur Einrichtung des RSS-Feeds finden Sie in [{{site.data.keyword.Bluemix_notm}} anzeigen](../troubleshoot/getting_customer_support.html#status).
 
 ### Eigenen Katalog verwalten
 {: #oc_catalog}
 
-Sie können die
-{{site.data.keyword.Bluemix_notm}}-Services
-und -Starter festlegen, die für Benutzer im {{site.data.keyword.Bluemix_notm}}-Katalog
-sichtbar sein sollen.
+Sie können die {{site.data.keyword.Bluemix_notm}}-Services und -Starter festlegen, die für Benutzer im {{site.data.keyword.Bluemix_notm}}-Katalog sichtbar sein sollen. Klicken Sie auf **ADMINISTRATION &gt; CATALOG MANAGEMENT**. 
 
-Um über die Administrationskonsole den Katalog zu verwalten, klicken Sie auf **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
-
-Wählen Sie eine Kachel für einen Service oder einen Starter
-aus, um die Sichtbarkeit der betreffenden Service- oder Starterpläne zu bearbeiten. In Bezug auf
-die Sichtbarkeit stehen folgende Bearbeitungsoptionen zur Auswahl:
-* Wählen Sie **ENABLE ALL PLANS** aus, wenn der ausgeblendete Service
-oder Starter für Benutzer im Katalog sichtbar sein soll.
-* Wählen Sie **DISABLE ALL PLANS** aus, wenn
-ein Service oder Starter ausgeblendet sein soll, damit er für die Benutzer im {{site.data.keyword.Bluemix_notm}}-Katalog nicht sichtbar ist.
+Wählen Sie eine Kachel für einen Service oder einen Starter aus, um die Sichtbarkeit der betreffenden Service- oder Starterpläne zu bearbeiten. In Bezug auf die Sichtbarkeit stehen folgende Bearbeitungsoptionen zur Auswahl:
+* Wählen Sie **ENABLE ALL PLANS** aus, wenn der ausgeblendete Service oder Starter für Benutzer im Katalog sichtbar sein soll.
+* Wählen Sie **DISABLE ALL PLANS** aus, wenn ein Service oder Starter ausgeblendet sein soll, damit er für die Benutzer im {{site.data.keyword.Bluemix_notm}}-Katalog nicht sichtbar ist.
 * Soll die Sichtbarkeit eines einzelnen Plans gesteuert werden, wählen Sie den Namen des
-betreffenden Plans aus. Wählen Sie dann im Dropdown-Menü zum Anzeigen des Plans für alle
-Organisationen die
+betreffenden Plans aus. Wählen Sie dann im Dropdown-Menü zum Anzeigen des Plans für alle Organisationen die
 Option **Enable for all organizations**, zum Ausblenden des Plans
 bei allen Organisationen die Option **Disable for all organizations** und zum
 Anzeigen des Plans für bestimmte Organisationen die Option **Enable plan for specific
@@ -403,17 +299,14 @@ organizations** aus.
 ### Organisationen verwalten
 {: #oc_organizations}
 
-Sie können Ihre Organisationen verwalten, indem Sie
-Organisationen erstellen und löschen, Manager zu
-Organisationen hinzufügen und die Kontingentnutzung überwachen.
+Sie können Ihre Organisationen verwalten, indem Sie Organisationen erstellen und löschen, Manager zu Organisationen hinzufügen und die Kontingentnutzung überwachen.
 
-Um über die Administrationskonsole die Organisationen zu verwalten, klicken Sie auf **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**.
+Klicken Sie auf **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**. 
 
 Sie können verschiedene Bereiche erweitern und anzeigen. Darüber hinaus können Sie
 Kontingentpläne für Ihre Organisationen überprüfen und verwalten.
 
-* Klicken Sie zum Erstellen einer neuen Organisation und Hinzufügen von Managern auf
-<strong>CREATE ORGANISATION</strong>.
+* Klicken Sie zum Erstellen einer neuen Organisation und Hinzufügen von Managern auf <strong>CREATE ORGANISATION</strong>.
 Geben Sie einen Namen für die Organisation ein und
 anschließend den Namen oder eine E-Mail-Adresse einer Person, die als Manager hinzugefügt
 werden soll. Geben Sie
@@ -421,9 +314,8 @@ mehrere Namen ein bzw. wählen Sie mehrere Namen aus, wenn Sie mehrere Manager h
 möchten. Klicken Sie auf <strong>CREATE ORGANIZATION</strong>, um die Änderungen zu speichern und die Organisation zu erstellen.
 * Erweitern Sie den Bereich für die Kontingentüberwachung, um Informationen
 zu den folgenden Punkten anzuzeigen:
-    * Speicherbelegung der Umgebung. In diesem Bereich finden Sie Details zur Speicherbelegung für die
-gesamte Systemumgebung.
-	Das Diagramm enthält Informationen zum belegten Systemspeicher, gesamten Systemspeicher,
+    * Speicherbelegung der Umgebung. In diesem Bereich finden Sie Details zur Speicherbelegung für die gesamte Systemumgebung.
+Das Diagramm enthält Informationen zum belegten Systemspeicher, gesamten Systemspeicher,
 ausgeschöpften Kontingent und zum insgesamt zugeordneten Kontingent. Die folgende Liste definiert die Typen der Speicherbelegung, die im Diagramm angezeigt werden.
 	<dl>
 	<dt><strong>Belegter Systemspeicher</strong></dt>
@@ -472,7 +364,7 @@ entsprechende Nachricht. Speichern Sie Ihre Änderungen auf der Seite zum Bearbe
 Organisationen, indem Sie auf die Schaltfläche zum Speichern klicken.
 * Im Bereich mit der Organisationsliste werden alle Organisationen in der
 {{site.data.keyword.Bluemix_notm}}-Umgebung angezeigt.
-	* Löschen Sie eine Organisation, indem Sie in der Aktionsspalte auf ![Löschen](images/icon_trash.png) klicken.
+	* Löschen Sie eine Organisation, indem Sie in der Aktionsspalte auf ![Löschen](images/icon_trash.svg) klicken.
 	* Klicken Sie auf den Namen einer Organisation in der Liste, wenn Sie den Kontingentplan für die
 jeweilige Organisation anzeigen oder bearbeiten möchten.
 	* Klicken Sie auf den Namen einer Organisation in der Liste, wenn Sie den Namen der jeweiligen
@@ -480,24 +372,22 @@ Organisation bearbeiten oder Manager hinzufügen oder löschen möchten.
 
 ### Benutzer und Berechtigungen verwalten
 {: #oc_useradmin}
+
 Sie können Ihrer {{site.data.keyword.Bluemix_notm}}-Instanz aus der Benutzerregistry Ihres Unternehmens über LDAP
 Benutzer hinzufügen. Sie können
 Benutzer einzeln oder in Gruppen hinzufügen und die Benutzerberechtigungen anzeigen. Wenn Ihnen die
 Berechtigung `admin` zugewiesen ist, können Sie auch Berechtigungen für andere Benutzer festlegen
-und verwalten.
+und verwalten. Klicken Sie auf **ADMINISTRATION &gt; USER ADMINISTRATION**. 
 
-Um über die Administrationskonsole Benutzer zu verwalten, klicken Sie auf **ADMINISTRATION &gt; USER ADMINISTRATION**.
-
-Auf der Seite für die Benutzerverwaltung werden alle Benutzer
-für die lokale oder dedizierte Instanz angezeigt.
+Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale oder dedizierte Instanz angezeigt.
 Die Berechtigungen für jeden Benutzer werden angezeigt. Die folgenden Berechtigungen sind verfügbar: None,
 `Admin`, `Catalog`, `Login`,
 `Reports` und `Users`. Berechtigungen können aktiviert werden oder dem Benutzer kann die Funktionalität `view` bzw.
 `write` für diese Berechtigung erteilt werden; diese werden durch Symbole dargestellt. Beschreibungen der
-einzelnen Typen und Erläuterungen der Symbole finden Sie in [Berechtigungen](#permissions).
+einzelnen Typen und Erläuterungen der Symbole finden Sie unter [Berechtigungen](#permissions).
 
 Es stehen verschiedene Optionen zur Auswahl:
-* Nach Benutzern suchen. Sie können mithilfe des Feldes **Suchen** oben im Fenster Benutzer in der Tabelle suchen.
+* Nach Benutzern suchen. Sie können mithilfe des Feldes **Suchen** Benutzer in der Tabelle suchen. 
 * Fügen Sie Benutzer hinzu. Wenn Sie die Berechtigung `admin` oder die
 Berechtigung `users` mit der Funktionalität `write` besitzen, können
 Sie Benutzer hinzufügen. Klicken Sie auf **Einzelnen Benutzer hinzufügen** oder **Benutzergruppe hinzufügen**,
@@ -506,8 +396,7 @@ einer Gruppe für die Suche ein und wählen Sie die Organisation aus der Organis
 Benutzer oder die Benutzergruppe hinzugefügt werden soll. Wenn Sie den Benutzer oder die Gruppe gefunden haben, den bzw. die
 Sie hinzufügen möchten, klicken Sie auf den Benutzernamen und dann zum Hinzufügen auf
 **Benutzer hinzufügen** oder **Mehrere Benutzer hinzufügen**.
-Gruppen oder mehr als 50 Benutzer werden über einen
-Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe
+Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe
 zur Tabelle hinzugefügt und Sie können ihn bzw. sie anzeigen und durchsuchen. Wenn Benutzer hinzugefügt werden,
 sind ihnen keine Berechtigungen zugewiesen.
 * Bearbeiten Sie Berechtigungen und Organisationen. Wenn Sie die Berechtigung `admin`
@@ -515,55 +404,39 @@ besitzen, können Sie Berechtigungen und Organisationen für andere Benutzer bea
 suchen Sie den gewünschten Benutzer und klicken Sie auf den Benutzernamen. Um Berechtigungen zu aktivieren oder zu
 inaktivieren, wählen Sie in dem daraufhin angezeigten Fenster die folgenden Optionen aus:
 	* Wählen Sie **On** in der Liste aus, um eine Berechtigung zu aktivieren.
-	* Wählen Sie **Lesen** in der Liste aus, um dem Benutzer die Funktionalität
-`view` (schreibgeschützt) für diese Berechtigung zu erteilen, oder **Schreiben**,
-um die Funktionalität `write` (Schreiben, d. h. Bearbeiten, Hinzufügen und Entfernen) für diese
-Berechtigung zu erteilen.
-	* Wählen Sie **Off** aus, um die Berechtigung zu inaktivieren.
-Um Organisationen
-zu bearbeiten, wählen Sie die folgenden Optionen aus:
+	* Wählen Sie **Lesen** in der Liste aus, um dem Benutzer die Funktionalität `view` (schreibgeschützt) für diese Berechtigung zu erteilen, oder **Schreiben**,
+um die Funktionalität `write` (Schreiben, d. h. Bearbeiten, Hinzufügen und Entfernen) für diese Berechtigung zu erteilen.
+	* Wählen Sie **Off** aus, um die Berechtigung zu inaktivieren. Um Organisationen zu bearbeiten, wählen Sie die folgenden Optionen aus:
 	* Fügen Sie den Benutzer zu einer Organisation hinzu, indem Sie über das Suchfeld eine Organisation
 suchen und durch Klicken unter den verfügbaren Optionen die Option **HINZUFÜGEN** auswählen.
-	* Entfernen Sie einen Benutzer aus einer Organisation, indem Sie auf das Symbol ![Minuszeichen als Symbol für 'Entfernen'](images/icon_remove.png)
-klicken.
-Klicken Sie zum Abschluss auf die Schaltfläche zum
-Speichern.
+	* Entfernen Sie einen Benutzer aus einer Organisation, indem Sie auf das Symbol ![Minuszeichen als Symbol für 'Entfernen'](images/icon_remove.svg) klicken.
+Klicken Sie zum Abschluss auf die Schaltfläche zum Speichern.
 * Entfernen Sie Benutzer. Wenn Sie die Berechtigung `admin` oder die Berechtigung
 `users` mit der Funktionalität `write` besitzen, können Sie
 Benutzer entfernen.
-Um einen Benutzer zu entfernen, suchen Sie den Benutzer und klicken Sie zunächst auf das Symbol ![Löschen](images/icon_trash.png) und anschließend auf **Entfernen**.
+Um einen Benutzer zu entfernen, suchen Sie den Benutzer und klicken Sie zunächst auf das Symbol ![Löschen](images/icon_trash.svg) und anschließend auf **Entfernen**.
 
-#### Berechtigungen
+### Berechtigungen
 {: #permissions}
 
 Benutzern können die folgenden Berechtigungen zugewiesen werden:
 
-| **Benutzerberechtigung** | **Beschreibung** |
+| **Benutzerberechtigung** | **Beschreibung** |       
 |-----------------|-------------------|
 | Admin | Benutzer mit der Berechtigung `admin` können Berechtigungen für andere Benutzer bearbeiten. |
-| Catalog | Benutzern mit der Berechtigung `catalog` kann die Funktionalität
-`view` (Anzeigen) oder `write` (Ändern) zugewiesen werden, und
-zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. |
-| Login | Benutzer mit der Berechtigung `login` können sich bei der
-Administrationskonsole anmelden. Ohne diese Berechtigung können Benutzer sich nicht anmelden. |
-| Reports | Benutzern mit der Berechtigung `reports` kann für Sicherheitsberichte
-die Funktionalität `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden. |
-| Users | Benutzern mit der Berechtigung `users` kann die Funktionalität
-`view` (Anzeigen) für die Benutzerliste oder `write` (Hinzufügen oder Entfernen)
-für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen.|
+| Catalog | Benutzern mit der Berechtigung `catalog` kann die Funktionalität `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. |  
+| Login | Benutzer mit der Berechtigung `login` sind berechtigt, die Verwaltungsseite ('Administration') anzuzeigen. Ohne diese Berechtigung wird Benutzern die Menüoption 'Administration' nicht angezeigt. |
+| Reports | Benutzern mit der Berechtigung `reports` kann für Sicherheitsberichte die Funktionalität `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden. |
+| Users | Benutzern mit der Berechtigung `users` kann die Funktionalität `view` (Anzeigen) für die Benutzerliste oder `write` (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen.|
 
-*Tabelle 1. Berechtigungen*
+*Tabelle 2. Berechtigungen*
 
 Berechtigungen können aktiviert werden oder dem Benutzer kann die Funktionalität `view` bzw.
 `write` für diese Berechtigung erteilt werden; dies wird durch die folgenden Symbole dargestellt:
 
-* Das Symbol ![Aktiviert; dargestellt durch ein Hakensymbol](images/icon_enabled.png) neben einer
-Berechtigung bedeutet, dass diese Berechtigung aktiviert ist.
-* Das Symbol ![Anzeigen; dargestellt durch ein Augensymbol](images/icon_read.png) bedeutet, dass der Benutzer für diese
-Berechtigung über die Funktionalität `view` (schreibgeschützt) verfügt.
-* Das Symbol ![Schreiben; dargestellt durch ein Stiftsymbol](images/icon_write.png) bedeutet, dass der Benutzer für diese
-Berechtigung über die Funktionalität `write` (Bearbeiten, Hinzufügen oder
-Entfernen) verfügt.
+* Das Symbol ![Aktiviert; dargestellt durch ein Hakensymbol](images/icon_enabled.svg) neben einer Berechtigung bedeutet, dass diese Berechtigung aktiviert ist.
+* Das Symbol ![Anzeigen; dargestellt durch ein Augensymbol](images/icon_read.svg) bedeutet, dass der Benutzer für diese Berechtigung über die Funktionalität `view` (schreibgeschützt) verfügt.
+* Das Symbol ![Schreiben; dargestellt durch ein Stiftsymbol](images/icon_write.svg) bedeutet, dass der Benutzer für diese Berechtigung über die Funktionalität `write` (Bearbeiten, Hinzufügen oder Entfernen) verfügt.
 
 ### Benutzer mit der Admin-REST-API verwalten
 {: #usingadminapi}
@@ -574,8 +447,7 @@ werden probeweise zu Verfügung gestellt, um Basisoperationen über eine
 Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen
 enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
 
-Die folgenden Tools sind Voraussetzungen für die Verwendung der
-nachfolgenden Beispiele. Wenn Sie möchten, können Sie auch andere Tools verwenden.
+Die folgenden Tools sind Voraussetzungen für die Verwendung der nachfolgenden Beispiele. Wenn Sie möchten, können Sie auch andere Tools verwenden.
 * cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist
 ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle
 HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können
@@ -591,16 +463,13 @@ Berechtigung `users` mit der Funktionalität `write` besitzen, können Sie
 Benutzer hinzufügen und Benutzer entfernen. Zum Bearbeiten der Berechtigungen anderer Benutzer
 benötigen Sie die Berechtigung `admin`.
 
-Zum Anmelden bei der Administrationskonsole können Sie die Basiszugriffsauthentifizierung
-am Endpunkt
+Zum Anmelden bei der Administrationskonsole können Sie die Basiszugriffsauthentifizierung am Endpunkt
 `https://<eigener Host>.ibm.com/login` verwenden. Der Server gibt ein Cookie mit Ihrer Sitzung zurück. Dieses Cookie verwenden Sie für alle
 Operationen mit der Administrationskonsole.
 
-**Anmerkung:** Die Sitzung wird ungültig,
-wenn Sie mehrere Stunden lang nicht genutzt wird.
+**Anmerkung:** Die Sitzung wird ungültig, wenn Sie mehrere Stunden lang nicht genutzt wird.
 
-Führen Sie zum Anmelden bei der
-Administrationskonsole den folgenden Befehl aus:
+Führen Sie zum Anmelden bei der Administrationskonsole den folgenden Befehl aus:
 
 `curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://<eigener Host>.ibm.com/login | python -m json.tool`
 {: codeblock}
@@ -612,8 +481,7 @@ Administrationskonsole den folgenden Befehl aus:
 
 
 <dt class="pt dlterm">-c <em>Dateiname</em></dt>
-<dd class="pd">Speichert die angegebene Benutzer-ID und das angegebene Kennwort als Cookie
-in der angegebenen Datei.</dd>
+<dd class="pd">Speichert die angegebene Benutzer-ID und das angegebene Kennwort als Cookie in der angegebenen Datei.</dd>
 
 
 <dt class="pt dlterm">--header</dt>
@@ -693,12 +561,10 @@ Auflisten der registrierten Benutzer. Zum Auflisten der registrierten Benutzer m
 </dl>
 
 Für jeden registrierten Benutzer werden die folgenden Informationen zurückgegeben:
-* `"first_name"` (Vorname) und
-                                `"last_name"` (Familienname)
+* `"first_name"` (Vorname) und `"last_name"` (Familienname)
 * `"user_id"`, die Benutzer-ID und die E-Mail-Adresse
 * `"guid"`, die GUID der Organisation
-* `"permissions"`, die dem Benutzer erteilten Berechtigungen für die
-Administrationskonsole
+* `"permissions"`, die dem Benutzer erteilten Berechtigungen für die Administrationskonsole
 
 Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 
@@ -765,8 +631,7 @@ Sie können einen Benutzer oder eine Liste von Benutzern hinzufügen. Dabei kön
 
 * Vorname (fist_name) und Familienname (last_name) des Benutzers. Geben Sie den Vornamen
 (`"first_name"`) und den Familiennamen (`"last_name"`) aus [Listing users](index.html#listingusr) an.
-* E-Mail-Adresse und Benutzer-ID: Geben Sie die Benutzer-ID (`"user_id"`) aus
-[Benutzer auflisten](index.html#listingusr) für die E-Mail-Adresse und für die Benutzer-ID an.
+* E-Mail-Adresse und Benutzer-ID: Geben Sie die Benutzer-ID (`"user_id"`) aus [Benutzer auflisten](index.html#listingusr) für die E-Mail-Adresse und für die Benutzer-ID an.
 * `"guid"`. Geben Sie die GUID der Organisation aus [Organisationen auflisten](index.html#listingorg) an.
 
 Diese Informationen werden in einer JSON-Datei angegeben.
@@ -781,11 +646,10 @@ Diese Informationen werden in einer JSON-Datei angegeben.
 </dl>
 
 <ol>
-<li>Erstellen Sie eine JSON-Datei, die die Informationen in einem ordnungsgemäßen
-JSON-Format enthält.
+<li>Erstellen Sie eine JSON-Datei, die die Informationen in einem ordnungsgemäßen JSON-Format enthält.
 <p>Erstellen Sie beispielsweise eine Datei namens `user.json` mit dem
 folgenden Inhalt:</p>
-<code>
+<pre>
 {
     "members": [
         {
@@ -803,7 +667,7 @@ folgenden Inhalt:</p>
         }
     ]
 }
-</code><br/><br/>
+</pre>
 </li>
 <li>Führen Sie den folgenden Befehl aus, um den Inhalt der JSON-Datei an den
 Endpunkt des Benutzers zu übergeben:<br/><br/>
@@ -848,14 +712,14 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
  > Content-Length: 333
  >
  * upload completely sent off: 333 out of 333 bytes
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; vary: X-HTTP-Method-Override
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 19:32:54 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 5612 msec
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < vary: X-HTTP-Method-Override
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 19:32:54 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 5612 msec
  ```
 {: screen}
 
@@ -866,8 +730,7 @@ Benutzer aus der {{site.data.keyword.Bluemix_notm}}-Instanz
 zu entfernen. Zum Entfernen von Benutzern müssen Sie die Berechtigung
 `users` mit der Funktionalität `write` besitzen.
 
-Beim Entfernen
-eines Benutzers müssen Sie die Benutzer-ID des Benutzers angeben. Führen Sie den folgenden Befehl aus:
+Beim Entfernen eines Benutzers müssen Sie die Benutzer-ID des Benutzers angeben. Führen Sie den folgenden Befehl aus:
 
 `curl -v -b ./cookies.txt -X DELETE https://<eigener Host>.ibm.com/codi/v1/users?user_id=<Benutzer-ID@domain.com>`
 {: codeblock}
@@ -883,30 +746,227 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
  * connect to ::1 port 3000 failed: Connection refused
  *   Trying 127.0.0.1...
  * Connected to localhost (127.0.0.1) port 3000 (#0)
- &gt; DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
- &gt; User-Agent: curl/7.37.1
- &gt; Host: localhost:3000
- &gt; Accept: */*
- &gt; Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
- &gt; 
- &lt; HTTP/1.1 201 Created
- &lt; x-powered-by: Express
- &lt; content-type: application/json
- &lt; date: Wed, 22 Apr 2015 21:01:09 GMT
- &lt; connection: close
- &lt; transfer-encoding: chunked
- &lt; X-Time_Check: Proxy Time: 1922 msec
- &lt;
+ > DELETE /codi/v1/users?user_id=exampleuser@domain.com HTTP/1.1
+ > User-Agent: curl/7.37.1
+ > Host: localhost:3000
+ > Accept: */*
+ > Cookie: opsConsole.sid=s%3AHLcwKGumyEb3IxREmikDOG3ATKD5xYMe.jfjWAa1tJC0rGghpeV8RPHqE2JaFVL4ZFIJbQpSC%2FAI
+ >
+ < HTTP/1.1 201 Created
+ < x-powered-by: Express
+ < content-type: application/json
+ < date: Wed, 22 Apr 2015 21:01:09 GMT
+ < connection: close
+ < transfer-encoding: chunked
+ < X-Time_Check: Proxy Time: 1922 msec
+ <
  ```
+{: screen}
+
+### API für angepasster Services
+{: #servicebrokerapi}
+
+Es gibt drei APIs, die Sie zum Registrieren oder Erstellen eines neuen Service, zum Aktualisieren eines Service und zum Löschen eines Service verwenden können.
+
+Alle APIs beziehen sich auf <code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>.
+
+<dl>
+<dt><strong>&lt;Unterdomäne&gt;</strong></dt>
+<dd>Dieser Wert steht für den Namen der lokalen oder dedizierten Instanz. Der Unterdomänenname für Ihre {{site.data.keyword.Bluemix}}-Instanz wurde beim Onboarding zugeordnet.</dd>
+</dl>
+
+### Neuen Service registrieren
+
+Verwenden Sie die folgende API und die folgenden Codebeispiele zum Registrieren eines neuen Service.
+
+#### Route
+
+```
+POST /codi/v1/serviceBrokers
+```
+{: screen}
+
+#### Anforderung
+
+*Tabelle 3. Felder*
+
+| **Name** | **Beschreibung** |
+|-----------------|-------------------|
+| name | Name des Service-Brokers. |
+| auth_username | Benutzername für die Verbindung mit dem Service-Broker. |
+| auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
+| broker_url | URL für die Verbindung zum Service-Broker. |
+| owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
+
+##### Hauptteil
+
+```
+{
+  "name" : "Service broker's name",
+  "auth_username" : "username",
+  "auth_password" : "password",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### Header
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Antwort
+
+##### Status
+
+```
+201 Created
+```
+{: screen}
+
+##### Hauptteil
+
+```
+{
+  "entity": {
+    "name": "Service broker's name",
+    "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
+    "created_at": "2015-12-07T19:51:50Z",
+    "updated_at": null,
+    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
+  }
+}
+```
+{: screen}
+
+### Service aktualisieren
+
+Verwenden Sie die folgende API und die folgenden Codebeispiele zum Aktualisieren eines Service.
+
+#### Route
+
+`PUT /codi/v1/serviceBrokers`
+{: screen}
+
+#### Anforderung
+
+*Tabelle 4. Felder*
+
+| **Name** | **Beschreibung** |
+|-----------------|-------------------|
+| name | Name des Service-Brokers. Dieser Name kann in keinen anderen Namen als den Erstellungsnamen des Service geändert werden. |
+| auth_username | Benutzername für die Verbindung mit dem Service-Broker. |
+| auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
+| broker_url | URL für die Verbindung zum Service-Broker. |
+| owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
+
+##### Hauptteil
+
+```
+{
+  "name" : "Service Broker's name",
+  "auth_username" : "username",
+  "auth_password" : "newPassword",
+  "broker_url" : "https://broker.comp.com",
+  "owningOrganization" : "ORG"
+}
+```
+{: screen}
+
+##### Header
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Antwort
+
+##### Status
+
+```
+201 Created
+```
+{: screen}
+
+##### Hauptteil
+
+```
+{
+  "entity": {
+    "name": "Service Broker's name",
+    "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "auth_username": "username",
+    "space_guid": null
+  },
+  "warnings": [],
+  "metadata": {
+    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
+    "created_at": "2015-12-07T20:11:08Z",
+    "updated_at": "2015-12-07T20:11:19Z",
+    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
+  }
+}
+```
+{: screen}
+
+### Service löschen
+
+Verwenden Sie die folgende API und die folgenden Codebeispiele zum Löschen eines Service.
+
+*Tabelle 5. Parameter*
+
+| **Name** | **Beschreibung** |
+|-----------------|-------------------|
+| name | Name des Service-Brokers. Dieser Name kann in keinen anderen Namen als den Erstellungsnamen des Service geändert werden. |
+
+#### Route
+
+```
+DELETE /codi/v1/serviceBrokers?name=Name des Service-Brokers
+```
+{: screen}
+
+#### Anforderung
+
+##### Header
+
+```
+Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
+Host: console.comp.bluemix.net
+Content-Type: application/json
+```
+{: screen}
+
+#### Antwort
+
+##### Status
+
+```
+204 No Content
+```
 {: screen}
 
 ### Benutzer mit der Befehlszeilenschnittstelle 'cf' verwalten
 {: #usingadmincli}
 
-Sie können Benutzer für Ihre
-{{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem
-{{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
-verwalten. Sie können Benutzer beispielsweise aus einer LDAP-Registry
+Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}} Local- oder
+{{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud
+Foundry-Befehlszeilenschnittstelle mit dem
+{{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer beispielsweise aus einer LDAP-Registry
 hinzufügen.
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das
@@ -941,386 +1001,12 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-#### Das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
-
-Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
-können Sie Benutzer hinzufügen oder entfernen, Benutzer zu Organisationen zuweisen oder die Zuweisung
-aufheben und weitere Management-Tasks durchführen. Führen Sie den folgenden Befehl aus,
+Führen Sie den folgenden Befehl aus,
 um eine Liste der Befehle anzuzeigen:
 
 `cf plugins`
 {: codeblock}
 
-Wenn Sie weitere Hilfe zu einem Befehl benötigen, verwenden Sie die
-Option `--help`.
+Wenn Sie weitere Hilfe zu einem Befehl benötigen, verwenden Sie die Option `-help`.
 
-#### Verbindung zu {{site.data.keyword.Bluemix_notm}} herstellen und dort anmelden
-
-Bevor Sie das Administrator-CLI-Plug-in für die Verwaltung von Benutzern
-verwenden können, müssen Sie eine Verbindung herstellen und sich anmelden, falls
-Sie diese beiden Schritte noch nicht ausgeführt haben.
-
-<ol>
-<li>Führen Sie zum Herstellen einer Verbindung zum {{site.data.keyword.Bluemix_notm}}>-API-Endpunkt den folgenden Befehl aus:<br/><br/> <code>
-cf api https://api.&lt;subdomain&gt;.bluemix.net
-</code>
-<dl class="parml">
-<dt class="pt dlterm">&lt;Unterdomäne&gt;</dt>
-<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz.</dd>
-</dl>
-<p>Die richtige URL finden Sie auf der Seite zu Ressourcen und Informationen in
-der Administrationskonsole. Die URL wird im Abschnitt mit den
-API-Informationen im Feld **API-URL** angezeigt.</p>
-</li>
-<li>Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} mit dem folgenden Befehl an:<br/><br/> <code>
-cf login
-</code>
-</li>
-</ol>
-
-#### Benutzer hinzufügen
-
-Sie können einen Benutzer aus einer LDAP-Registry zu Ihrer
-{{site.data.keyword.Bluemix_notm}}-Umgebung hinzufügen. Geben Sie den folgenden Befehl ein:
-
-`cf bluemix-admin-add-user <Benutzername> <Organisation>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Benutzername&gt;</dt>
-<dd class="pd">Der Name des Benutzers in der LDAP-Registry.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer hinzugefügt wird.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baau** als Alias für den längeren Befehlsnamen
-**bluemix-admin-add-user** verwenden.
-
-#### Benutzer entfernen
-
-Sie können einen Benutzer aus Ihrer
-{{site.data.keyword.Bluemix_notm}}-Umgebung entfernen, indem Sie den folgenden Befehl eingeben:
-
-`cf bluemix-admin-remove-user <Benutzername>`
-{: codeblock}
-
-<dl class="parml">
-
-<dt class="pt dlterm">&lt;Benutzername&gt;</dt>
-<dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}.</dd>
-
-</dl>
-
-**Tipp:** Sie können auch
-**baru** als Alias für den längeren Befehlsnamen
-**bluemix-admin-remove-user** verwenden.
-
-#### Organisationen hinzufügen oder löschen
-
-Sie können Organisationen hinzufügen und löschen.
-
-* Geben Sie den folgenden Befehl ein, um eine Organisation hinzuzufügen:
-
-`cf Bluemix-admin-create-organization <Organisation> <Manager>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-die hinzugefügt werden soll.</dd>
-<dt class="pt dlterm">&lt;Manager&gt;</dt>
-<dd class="pd">Der Benutzername des Managers für die Organisation.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baco** als Alias für den längeren Befehlsnamen
-**bluemix-admin-create-organization** verwenden.
-
-* Geben Sie den folgenden Befehl ein, um eine Organisation zu löschen:
-
-`cf Bluemix-admin-delete-organization <Organisation>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-die gelöscht werden soll.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**bado** als Alias für den längeren Befehlsnamen
-**bluemix-admin-create-organization** verwenden.
-
-#### Einen Benutzer zu einer Organisation zuweisen
-
-Sie können einen Benutzer in Ihrer
-{{site.data.keyword.Bluemix_notm}}-Umgebung einer bestimmten Organisation zuweisen. Geben Sie den folgenden Befehl ein:
-
-`cf bluemix-admin-set-org <Benutzername> <Organisation> [<Rolle>]`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Benutzername&gt;</dt>
-<dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen wird.</dd>
-<dt class="pt dlterm">&lt;Rolle&gt;</dt>
-<dd class="pd">Informationen zu den Benutzerrollen und Beschreibungen von {{site.data.keyword.Bluemix_notm}}
-finden Sie in [Rollen](#roles).</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baso** als Alias für den längeren Befehlsnamen
-**bluemix-admin-set-org** verwenden.
-
-#### Zuweisung eines Benutzers zu einer Organisation aufheben
-
-Sie können die Zuweisung eines Benutzers in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung
-zu einer bestimmten Organisation aufheben. Geben Sie den folgenden Befehl ein:
-
-`cf bluemix-admin-unset-org <Benutzername> <Organisation> [<Rolle>]`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Benutzername&gt;</dt>
-<dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen wird.</dd>
-<dt class="pt dlterm">&lt;Rolle&gt;</dt>
-<dd class="pd">Informationen zu den Benutzerrollen und Beschreibungen von {{site.data.keyword.Bluemix_notm}}
-finden Sie in [Rollen](#roles).</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**bauo** als Alias für den längeren Befehlsnamen
-**bluemix-admin-unset-org** verwenden.
-
-#### Rollen
-
-<dl class="parml">
-<dt class="pt dlterm">OrgManager</dt>
-<dd class="pd">Organisationsmanager. Ein Organisationsmanager hat die Berechtigung zur Ausführung der folgenden Aktionen:
-<ul>
-<li>Erstellen oder Löschen von Bereichen innerhalb der Organisation.</li>
-<li>Einladen von Benutzern in die Organisation und Verwalten von Benutzern.</li>
-<li>Verwalten von Domänen der Organisation.</li>
-</ul>
-</dd>
-<dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">Fakturierungsmanager. Ein Fakturierungsmanager kann Informationen zur Laufzeit- und Servicenutzung
-für die Organisation anzeigen.</dd>
-<dt class="pt dlterm">OrgAuditor</dt>
-<dd class="pd">Organisationsauditor. Ein Organisationsauditor kann Anwendungs- und Serviceinhalt in dem Bereich
-anzeigen.</dd>
-</dl>
-
-#### Kontingent für eine Organisation festlegen
-
-Sie können das Nutzungskontingent für eine bestimmte Organisation festlegen.
-
-`cf bluemix-admin-set-quota <Organisation> <Plan>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-für die das Kontingent gelten soll.</dd>
-<dt class="pt dlterm">&lt;Plan&gt;</dt>
-<dd class="pd">Der Kontingentplan für eine Organisation.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**basq** als Alias für den längeren Befehlsnamen
-**bluemix-admin-set-quota** verwenden.
-
-#### Berichte hinzufügen, löschen oder abrufen
-
-Sie können Sicherheitsberichte hinzufügen, löschen und abrufen.
-* Geben Sie den folgenden Befehl ein, um einen Bericht hinzuzufügen:
-
-`cf bluemix-admin-add-report <Kategorie> <Datum> <PDF|TXT|LOG> <RTF>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kategorie&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Setzen Sie den Namen in Anführungszeichen, wenn er ein Leerzeichen
-enthält.</dd>
-<dt class="pt dlterm">&lt;Datum&gt;</dt>
-<dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
-<dt class="pt dlterm">&lt;PDF|TXT|LOG&gt;</dt>
-<dd class="pd">Der Pfad zu der PDF-, Text- oder Protokolldatei für den Bericht.</dd>
-<dt class="pt dlterm">&lt;RTF&gt;</dt>
-<dd class="pd">Eine Option, um eine RTF-Version der PDF-Datei einzubeziehen. Diese Option ist nur gültig, wenn
-Sie einen Pfad zu der Berichts-PDF angegeben haben. Die RTF-Version wird zum Indexieren und Suchen
-verwendet.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baar** als Alias für den längeren Befehlsnamen
-**bluemix-admin-add-report** verwenden.
-
-* Geben Sie den folgenden Befehl ein, um einen Bericht zu löschen:
-
-`cf bluemix-admin-delete-report <Kategorie> <Datum> <Name>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kategorie&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Setzen Sie den Namen in Anführungszeichen, wenn er ein Leerzeichen
-enthält.</dd>
-<dt class="pt dlterm">&lt;Datum&gt;</dt>
-<dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
-<dt class="pt dlterm">&lt;Name&gt;</dt>
-<dd class="pd">Der Name des Berichts.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**badr** als Alias für den längeren Befehlsnamen
-**bluemix-admin-delete-report** verwenden.
-
-* Geben Sie den folgenden Befehl ein, um einen Bericht abzurufen:
-
-`cf bluemix-admin-retrieve-report <Kategorie> <Datum> <Name>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kategorie&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Setzen Sie den Namen in Anführungszeichen, wenn er ein Leerzeichen
-enthält.</dd>
-<dt class="pt dlterm">&lt;Datum&gt;</dt>
-<dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
-<dt class="pt dlterm">&lt;Name&gt;</dt>
-<dd class="pd">Der Name des Berichts.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**barr** als Alias für den längeren Befehlsnamen
-**bluemix-admin-retrieve-report** verwenden.
-
-#### Services für alle Organisationen aktivieren oder inaktivieren
-
-Sie können die Sichtbarkeit eines Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-für alle Organisationen aktivieren und inaktivieren.
-
-* Geben Sie den folgenden Befehl ein, wenn ein Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-für alle Organisationen sichtbar sein soll:
-
-`cf bluemix-admin-enable-service-plan <Kennung des Plans>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kennung des Plans&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Service, der sichtbar sein soll. Wenn Sie einen Servicenamen
-eingeben, der nicht eindeutig ist, werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten
-Liste mit Serviceplänen zu treffen.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baesp** als Alias für den längeren Befehlsnamen
-**bluemix-admin-enable-service-plan** verwenden.
-
-* Geben Sie den folgenden Befehl ein, wenn ein Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-für alle Organisationen nicht sichtbar sein soll:
-
-`cf bluemix-admin-disable-service-plan <Kennung des Plans>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kennung des Plans&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Service, der nicht sichtbar sein soll. Wenn Sie einen Servicenamen
-eingeben, der nicht eindeutig ist, werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten
-Liste mit Serviceplänen zu treffen.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**badsp** als Alias für den längeren Befehlsnamen
-**bluemix-admin-disable-service-plan** verwenden.
-
-#### Sichtbarkeit von Services für Organisationen hinzufügen, entfernen oder bearbeiten
-
-Sie können eine Organisation in der Liste der Organisationen, für die ein bestimmter
-Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-sichtbar ist, hinzufügen oder löschen. Sie können die Liste der Services, die für bestimmte
-Organisationen im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-sichtbar sind, auch bearbeiten oder ersetzen.
-
-* Geben Sie den folgenden Befehl ein, wenn
-es einer Organisation ermöglicht werden soll, einen bestimmten Service im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-anzuzeigen:
-
-`cf bluemix-admin-add-service-plan-visibility <Kennung des Plans> <Organisation>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kennung des Plans&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Service, der sichtbar sein soll. Wenn Sie einen Servicenamen
-eingeben, der nicht eindeutig ist, werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten
-Liste mit Serviceplänen zu treffen.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-die zu der Liste des Service mit den Organisationen, für die der Service sichtbar ist, hinzugefügt
-werden soll.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baaspv** als Alias für den längeren Befehlsnamen
-**bluemix-admin-add-service-plan-visibility** verwenden.
-
-* Geben Sie den folgenden Befehl ein, wenn
-ein Service für eine Organisation im
-{{site.data.keyword.Bluemix_notm}}-Katalog
-nicht mehr sichtbar sein soll:
-
-`cf bluemix-admin-remove-service-plan-visibility <Kennung des Plans> <Organisation>`
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kennung des Plans&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Service, der nicht mehr sichtbar sein soll. Wenn Sie einen Servicenamen
-eingeben, der nicht eindeutig ist, werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten
-Liste mit Serviceplänen zu treffen.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-die aus der Liste des Service mit den Organisationen, für die der Service sichtbar ist,
-entfernt werden soll.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**barspv** als Alias für den längeren Befehlsnamen
-**bluemix-admin-remove-service-plan-visibility** verwenden.
-
-* Geben Sie den folgenden Befehl ein, wenn alle bestehenden sichtbaren Services für eine
-Organisation oder mehrere Organisationen ersetzt werden sollen:
-
-`cf bluemix-admin-edit-service-plan-visibilities <Kennung des Plans> <Organisation_1> <Optionale Organisation_2>`
-{: codeblock}
-
-**Hinweis:** Mit diesem Befehl werden alle bestehenden sichtbaren Services für die angegebenen Organisationen durch den im Befehl angegebenen Service ersetzt.
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Kennung des Plans&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Service, der sichtbar sein soll. Wenn Sie einen Servicenamen
-eingeben, der nicht eindeutig ist, werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten
-Liste mit Serviceplänen zu treffen.</dd>
-<dt class="pt dlterm">&lt;Organisation&gt;</dt>
-<dd class="pd">Der Name oder die GUID der
-{{site.data.keyword.Bluemix_notm}}-Organisation,
-für die ein sichtbarer Service hinzugefügt werden soll. Sie können einen Service für mehrere
-Organisationen sichtbar machen, indem Sie weitere Organisationsnamen oder GUIDs im Befehl angeben.</dd>
-</dl>
-
-**Tipp:** Sie können auch
-**baespv** als Alias für den längeren Befehlsnamen
-**bluemix-admin-edit-service-plan-visibility** verwenden.
+Weitere Informationen zur Arbeit mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Admin](../cli/plugins/bluemix_admin/index.html).

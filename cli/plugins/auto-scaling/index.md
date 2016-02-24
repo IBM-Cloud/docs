@@ -5,14 +5,14 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Last updated: 25 January 2015*
+*Last updated: 25 February 2016*
 
 You can configure the {{site.data.keyword.autoscaling}} service by using the {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.autoscaling}} CLI supports Linux64, Win64, and OSX, and provides functionality that is similar to the auto-scaling RESTful API provides.
 {: shortdesc}
 
 Before you begin, install the {{site.data.keyword.Bluemix_notm}} CLI. See [Download {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} for instructions.
 
-## Adding the {{site.data.keyword.autoscaling}} CLI plug-in
+## Adding the {{site.data.keyword.Bluemix_notm}} CLI plug-in
 
 After the {{site.data.keyword.Bluemix_notm}} CLI is installed, you can add the {{site.data.keyword.autoscaling}} CLI plug-in.
 
@@ -37,13 +37,13 @@ You can attach an auto-scaling policy to a specific app. Run the following comma
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app to which you want to attach an auto-scaling policy.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the <a href="https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html" target="_blank">{{site.data.keyword.autoscaling}} RESTful API doc</a> for more details.</dd>
+<dd class="pd">The name of the JSON file that describes the auto-scaling policy. See the <a href="https://www.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API doc</a> for more details.</dd>
 </dl>
 
 
 ## Generating an auto-scaling policy
 
-You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
+You can generate an auto-scaling policy by answering the questions on the command line interface. Depending on your input, a JSON file that contains the definition of the auto-scaling policy is saved with the name that you enter. If you do not enter  the file name, the policy content is printed to the command line directly without saving it to a file. Run the following command:
 
 ```bx as policy-create```
 {: codeblock}
@@ -101,16 +101,16 @@ You can show the history of the auto-scaling activity of a specific app. A table
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">The name of the app for which you want to show the history of the auto-scaling policy.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window} for details about the time stamp format. 
+<dd class="pd">The time stamp of the beginning of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to 50 hours ahead of the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format. 
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window} for details about the time stamp format. 
+<dd class="pd">The time stamp of the ending of the history range. The supported formats are `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. By default, the time stamp is set to the current time. See the <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a> for details about the time stamp format. 
 </dl>
 
 **Tip:** You can also use the **--json** option to pretty print the original JSON response.
 
 # rellinks
 ## general
-* [{{site.data.keyword.autoscaling}} service](../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} service](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 

@@ -79,6 +79,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
 |{{site.data.keyword.datacshort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.deliverypipeline}}		|Yes		|Yes		|No|
 |{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
@@ -91,6 +92,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.iot_short}}		|Yes		|No		|No|
+|{{site.data.keyword.keymanagementserviceshort}}|No		|Yes		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
 |{{site.data.keyword.messageresonanceshort}}	|Yes		|Yes		|No|
@@ -197,7 +199,7 @@ Each service might require a different mechanism for communicating with applicat
 * To interact with mobile back-end services, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services typically work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
 * To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window} troubleshooting topic for more information.
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](../troubleshoot/index.html#ts_topmenubar) troubleshooting topic for more information.
 
 ## Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services
 {: #accser_external}
@@ -314,8 +316,8 @@ the tile for the service that you want to access. The dashboard for the service 
 # rellinks
 {: #rellinks}
 
-## general 
-* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [Retrieving VCAP_SERVICES](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## general
+* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](../cfapps/ee.html#ee_bindui)
+* [Retrieving VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 
 

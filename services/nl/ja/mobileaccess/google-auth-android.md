@@ -1,0 +1,170 @@
+# Android アプリでの Google 認証の使用可能化
+{: #google-auth-android}
+
+## 開始する前に
+{: #before-you-begin}
+
+* {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](getting-started.html)および [Android SDK のセットアップ](getting-started-android.html)を参照してください。  
+* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
+
+## Android プラットフォーム用の Google プロジェクトの構成
+{: #google-auth-android-project}
+Google を ID プロバイダーとして使用することを開始するには、Google Developer Console 内にプロジェクトを作成します。プロジェクト作成の一部は、Google のクライアント ID を取得することです。このクライアント ID は、ユーザーのアプリケーションの固有 ID です。
+
+1. [Google Developer Console](https://console.developers.google.com)にプロジェクトを作成します。既にプロジェクトがある場合は、プロジェクト作成について説明している手順をスキップし、資格情報の追加を開始してください。
+
+1. プロジェクトを作成します。**「Create project (プロジェクトの作成)」**をクリックします。
+
+1. プロジェクトを選択し、**「Use Google APIs (Google API の使用)」**をクリックします (さらに、**「Enable APIs and get credentials like keys (API の使用可能化および鍵などの資格情報の取得)」**もクリックできます)
+
+1. API リストから Google+ API を選択し、**「Enable API (API の使用可能化)」**をクリックします。
+
+1. メニューで**「Credentials (資格情報)」**をクリックします。
+
+1. **「Add credentials (資格情報の追加)」**をクリックし、**「OAuth 2.0 client ID (OAuth 2.0 クライアント ID)」**を選択します。
+
+1. 同意コンソールで製品名を設定します。
+
+1. アプリケーション・タイプを選択します。**「Android」**をクリックします。Android クライアントに、意味のある名前を指定します。
+
+1. Google がユーザーのアプリケーションの認証性を検証するためには、署名証明書の指紋を指定する必要があります。
+
+	 **Android セキュリティーの追加情報:** Android OS では、Android デバイス上にインストールされているすべてのアプリケーションがデベロッパー証明書によって署名されていることが要求されます。Android アプリケーションは、デバッグおよびリリースという 2 つのモードで構築できます。通常は、デバッグ・モード用とリリース・モード用に別々の証明書を用意することが推奨されます。デバッグ・モードでの Android アプリケーションの署名に使用される証明書は、Android SDK にバンドルされています。Android SDK は、通常、Android Studio によって自動的にインストールされます。アプリケーションを Google Play にリリースする場合は、通常ユーザー自身で生成する、別の証明書を使用してアプリに署名する必要があります。詳しくは、[signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html) を参照してください。
+
+1. 開発環境用の証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイル内に保管されています。鍵ストアのデフォルト・パスワードは、`android` です。この証明書は、デバッグ・モードでのアプリケーションの構築に使用されます。
+
+1. 署名証明書の指紋を取得するには、以下のように指定します。
+
+	```XML
+	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
+	```
+	リリース・モードの証明書の鍵ハッシュも同じ構文を使用して取得できます。コマンド内の別名と鍵ストアのパスを置換してください。
+
+1. **「Certificate Fingerprints」**の下で `SHA1` で始まる行を見つけます。**keytool** コマンドを実行して取得した指紋を Google Developer Console にコピーします。
+
+1. Android アプリケーションのパッケージ名を指定します。Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、`<manifest package="{your-package-name}">` を探してください。完了したら、**「Create (作成)」**をクリックします。
+
+1. 新しい Android クライアント ID をメモします。この値を {{site.data.keyword.Bluemix}} に提供する必要があります。
+
+
+## Google 認証用の {{site.data.keyword.amashort}} の構成
+{: #google-auth-android-config}
+
+これで Android クライアント ID を取得したので、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を有効にすることができます。
+
+1. {{site.data.keyword.Bluemix}} ダッシュボードを開き、{{site.data.keyword.Bluemix_notm}} アプリケーションをクリックします。
+
+1. **「モバイル・オプション」**をクリックし、*applicationRoute* と *applicationGUID* の値をコピーします。これらの値は、SDK を初期化するために必要です。
+
+1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードが表示されます。
+
+1. **「認証のセットアップ」>「Google」**をクリックします。
+
+1. Android の**「クライアント ID」**を指定し、**「保存」**をクリックします。
+
+## Android 用の {{site.data.keyword.amashort}}  Client SDK の構成
+{: #google-auth-android-sdk}
+
+1. Android Studio に戻ります。
+
+1. アプリケーション・モジュールの `build.gradle` ファイルを開きます。
+
+
+	Android プロジェクトは、2 つの `build.gradle` ファイル (1 つはプロジェクト用で、もう 1 つはアプリケーション・モジュール用) を持っている場合があります。アプリケーション・モジュール用を使用します。
+
+  以下のように、依存関係セクションを見つけ、Client SDK の新しいコンパイル依存関係を追加します。
+
+	```Gradle
+	dependencies {
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        name:'googleauthentication',
+        version: '2.+',
+        ext: 'aar',
+        transitive: true
+    	// other dependencies  
+	}
+	```
+
+	`com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がある場合は削除することができます。`googleauthentication` モジュールは、ユーザーの代わりに自動的にそれをダウンロードします。`googleauthentication` モジュールは、Google SDK をダウンロードし、Android プロジェクトにインストールします。
+
+1. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして Gradle とプロジェクトを同期します。
+
+1. Android プロジェクトの `AndroidManifest.xml` ファイルを開きます。
+
+
+1. 以下のようにして、`<manifest>` エレメントにインターネット・アクセス許可を追加します。
+
+	```XML
+	<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	```
+
+1. {{site.data.keyword.amashort}} Client SDK を使用するには、context、applicationGUID、および applicationRoute の各パラメーターを渡して初期化する必要があります。
+
+	初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの onCreate メソッド内です。
+
+1. Client SDK を初期化し、Google 認証マネージャーを登録します。`applicationRoute` および `applicationGUID` は、ダッシュボードの**「モバイル・オプション」**セクションから取得した値に置換します。
+
+	```Java
+	BMSClient.getInstance().initialize(getApplicationContext(),
+					"applicationRoute",
+					"applicationGUID");
+
+	GoogleAuthenticationManager.getInstance().register(this);```
+
+1. 以下のコードをアクティビティーに追加します。
+
+	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		GoogleAuthenticationManager.getInstance()
+			.onActivityResultCalled(requestCode, resultCode, data);
+	}
+	```
+
+## 認証のテスト
+{: #google-auth-android-test}
+Client SDK が初期化され、Google 認証マネージャーが登録されたら、モバイル・バックエンドへの要求の実行を開始できます。
+
+### 開始する前に
+{: #google-auth-android-testing-before}
+MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
+
+1. `http://{appRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開いて、デスクトップ・ブラウザーで、保護されたモバイル・バックエンドのエンドポイントに要求を送信してみてください。MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+
+1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` インスタンスを初期化し、`GoogleAuthenticationManager` を登録した後、以下のコードを追加します。
+
+	```Java
+	Request request = new Request("/protected", Request.GET);
+	request.send(this, new ResponseListener() {
+		@Override
+		public void onSuccess (Response response) {
+			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
+			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+		}
+		@Override
+		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
+			if (null != t) {
+				Log.d("Myapp", "onFailure :: " + t.getMessage());
+			} else if (null != extendedInfo) {
+				Log.d("Myapp", "onFailure :: " + extendedInfo.toString());
+			} else {
+				Log.d("Myapp", "onFailure :: " + response.getResponseText());
+			}
+		}
+	});
+```
+
+1. アプリケーションを実行します。以下の Google のログイン画面が表示されます。
+
+	![image](images/android-google-login.png)
+
+	ご使用の Android デバイスと、現在 Google にログインしているかどうかによって、UI が異なる可能性があります。
+
+1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
+
+1. 	要求が正常に実行されると、LogCat ツールに以下の出力が表示されます。
+
+	![image](images/android-google-login-success.png)

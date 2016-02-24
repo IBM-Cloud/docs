@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*마지막 업데이트 날짜: 2015년 12월 8일*
+*마지막 업데이트 날짜: 2016년 1월 15일*
 
 {{site.data.keyword.Bluemix}} Local은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} Local을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} Public 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
 {:shortdesc}
@@ -11,7 +11,7 @@
 IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 데 주력할 수 있도록 사용자 환경을 모니터하고 유지보수하기 위한 서비스로 클라우드 작업을 사용합니다. 또한 IBM은 비즈니스에 집중할 수 있도록 플랫폼 업데이트를 처리합니다.
 
 {{site.data.keyword.Bluemix_notm}} Local에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 신디케이트된 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서
-사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함되어 있습니다. 신디케이트된 카탈로그는 공용 및 개인용 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.
+사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함되어 있습니다. 신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.
 
 {{site.data.keyword.Bluemix_notm}} Local은 최고 성능과 가장 안전한 클라우드 인프라를 사용할 수 있도록 회사 방화벽 뒤에 있는 가상 머신에 설치됩니다. IBM은 IBM의 Relay 기술을 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} Local을 설치하고 원격으로 모니터하고 관리합니다.
 
@@ -73,6 +73,39 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 </li>
 </ol>
 
+사용자 환경에 처음 배치하고 구성하기 위해서는 다음 목록과 비슷하게 프로세스가 진행되어야 합니다. 각 태스크를 책임지는 담당자에 대한 자세한 정보는 [역할 및 책임](../local/index.html#rolesresponsibilities)을 참조하십시오.
+
+<ol>
+<li>계산 자원, 네트워킹 및 스토리지에 대한 스펙에 부합하는 VMware 구성을 제공합니다. 인프라 요구사항에 대한 자세한 정보는 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항</a>을 참조하십시오.</li>
+<li>도입/인식(Inception) 가상 머신에 사용되는 vCenter 클러스터 신임 정보를 제공합니다. 다음 정보를 제공해야 합니다.
+<ul>
+<li>VMware 클러스터의 이름</li>
+<li>사용자 ID와 비밀번호를 포함하는 vCenter 클러스터 신임 정보</li>
+<li>데이터 저장소 이름(스토리지 LUN 이름)</li>
+<li>VLAN ID/VMware 포트 그룹</li>
+<li>자원 풀 이름</li>
+</ul>
+</li>
+<li>사용자와 IBM이 함께 협력하여 이전 태스크에서 제공한 신임 정보의 유효성을 검증합니다.</li>
+<li>사용자 네트워크의 7개 IP 주소를 제공합니다. 내부 {{site.data.keyword.Bluemix_notm}} 구성요소에 아웃바운드 인터넷 액세스를 허용하기 위해 보안 웹 프록시를 사용하는 경우, 연결에 필요한 신임 정보를 제공해야 합니다.
+<p>**참고**: 웹 프록시에 보안이 설정되어 있지 않으면 신임 정보를 제공할 필요가 없습니다. 또한, 일부 {{site.data.keyword.Bluemix_notm}} Local 고객은 웹 프록시를 사용하지 않는다는 점에 유의하십시오.</p></li>
+<li>IBM은 배치를 시작하기 전에 웹 프록시를 통해 허용되어야 하는 URL의 화이트리스트를 제공합니다.</li>
+<li>배치에 필요한 도메인 이름 및 사용할 ID를 지정합니다. 로컬 인스턴스를 설정할 때 특별히 정의된 두 개의 도메인이 나타나고, 이 두 개 도메인의 접두부를 선택합니다. 예를 들어, <code>*mycompany*.bluemix.net</code> 및 <code>*mycompany*.mybluemix.net</code>에 대한 접두부를 선택합니다. 그런 다음, 전체 도메인을 선택하여 사용자 정의 도메인을 작성할 수도 있습니다.
+<p>사용자 정의 도메인은 필요한 만큼 선택할 수 있습니다. 그러나, 사용자 정의 도메인의 인증은 사용자 자신이 책임져야 합니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="../manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</p></li>
+<li>IBM 운영 센터에 다시 연결하도록 릴레이를 구성하는 데 사용할 기술을 IPSec 또는 OpenVPN 터널 중에서 선택합니다.</li>
+<li>IBM이 {{site.data.keyword.Bluemix_notm}} 클러스터 내에 도입/인식(Inception) 가상 머신을 설치하고 시작합니다. 고유 VMware를 제공하는 경우, 고객 대표가 이 태스크를 완료할 수 있도록 IBM 담당자가 도와드립니다.</li>
+<li>IBM이 IBM 운영 센터와 다시 통신하도록 릴레이를 구성합니다.</li>
+<li>도입/인식(Inception) 가상 머신 저장소는 업데이트된 빌드 아티팩트를 가져옵니다.</li>
+<li>회사 LDAP 디렉토리 인스턴스에 연결하기 위해 IBM 신임 정보를 제공합니다.</li>
+<li>IBM이 자동화를 사용하여 코어 {{site.data.keyword.Bluemix_notm}} 플랫폼을 배치합니다.</li>
+<li>IBM이 탄력적 런타임, 콘솔, 관리 기능 및 모니터링을 포함하는 코어 플랫폼을 배치합니다.</li>
+<li>IBM이 환경에 대한 사용자의 관리 액세스 권한을 구성합니다.</li>
+<li>IBM이 공용 서비스를 사용하기 위해 로컬 배치의 신디케이션된 카탈로그를 Public {{site.data.keyword.Bluemix_notm}} 인스턴스에 연결합니다. 로컬 인스턴스에서는 공용 서비스를 기본적으로 사용할 수 있습니다. 카탈로그 관리를 위한 관리 페이지에서 로컬 인스턴스에 대해 서비스를 켜거나 끌 수 있습니다.</li>
+<li>경보에 대응하기 위해 IBM 운영 팀에서 모니터링하는 로컬 인스턴스의 사용을 시작할 수 있습니다.</li>
+</ol>
+
+{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 Dedicated 관리](../administer/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
+
 ##역할 및 책임
 {: #rolesresponsibilities}
 
@@ -117,7 +150,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 
 도입/인식(Inception) 단계는 {{site.data.keyword.Bluemix_notm}} Local 환경을 설정하는 데 사용됩니다. 이 시점에서 사용자는 [Local 인프라 요구사항](../local/index.html#localinfra)에 대한 검토를 마쳤습니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
-- 재무 계약을 검토하고 전달을 위한 기준 날짜를 설정합니다.
+- 재무 계약을 검토하고 전달을 위한 마일스톤 날짜를 설정합니다.
 - {{site.data.keyword.Bluemix_notm}} 플랫폼을 작성하고 런타임 및 서비스에 대한 액세스를 제공합니다.
 - 기업 네트워크 및 {{site.data.keyword.Bluemix_notm}} 오퍼레이션 간의 네트워크 연결을 정의하고 설정합니다.
 - 관리 팀에 대한 역할을 식별하고 지정합니다.
@@ -221,10 +254,16 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 </dd>
 <dt>**네트워크**</dt>
 <dd>
-권장 요구사항에는 아웃바운드 인터넷 액세스 권한을 가진 10개의 고객 네트워크 IP 주소가 있는
-고객 액세스 가능 포트 그룹이 포함됩니다. 그런 다음 {{site.data.keyword.Bluemix_notm}} Local에 대해
-사용되는 ESXi들 사이에만 두 번째 개인용 VLAN을 정의하십시오. 이 VLAN은 VMware에서 포트 그룹으로 표시됩니다. {{site.data.keyword.Bluemix_notm}} Local은
+권장 요구사항에는 동일한 서브넷에서 아웃바운드 인터넷 액세스 권한을 갖는 7개의 고객 네트워크 IP 주소를 포함하는 고객 액세스 가능 포트 그룹이 포함됩니다. 2개 포트는 도입/인식(Inception) 가상 머신에 사용되고, 3개 포트는 도메인에 사용되는 가상 IP 주소이고, 나머지 2개는 DataPowers를 위한 공용 IP 주소입니다. 그런 다음 {{site.data.keyword.Bluemix_notm}} Local에 사용되는 ESXi 사이에만 두 번째 개인용 VLAN을 정의합니다. 이 VLAN은 VMware에서 포트 그룹으로 표시됩니다. {{site.data.keyword.Bluemix_notm}} Local은
 이를 더 안전하고 라우팅 문제를 피하는 데 도움이 되는 개인용 서브넷으로 사용합니다.
+<br />
+<p>사용하는 포트는 다음과 같습니다.</p>
+<ul>
+<li>릴레이 연결의 경우 포트 443
+<p>**참고**: OpenVPN 대신 IPSec 터널을 사용하도록 선택하는 경우, 이 연결을 위한 고객 포트를 엽니다.</p></li>
+<li>LDAP 또는 Active Directory 연결을 위한 포트 389 또는 SSL 636</li>
+</ul>
+<p>**참고**: IBM이 네트워크 연결의 끊김 여부를 확인할 수 있습니다. 네트워크 연결이 끊기면 IBM에서 사용자에게 연락하여 네트워크 전문가와 함께 문제를 해결합니다.</p>
 </dd>
 </dl>
 
@@ -371,7 +410,7 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 
 <dl>
 <dt>Cloud Foundry의 확장성</dt>
-<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent(DEA)</a>는 내부에서 실행되는 앱에 대한 상태 점검을 수행합니다. 앱이나 DEA 자체에 문제가 있는 경우 문제 해결을 위해 앱의 추가 인스턴스를 대체 DEA에 배치합니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">고가용성 및 중복성을 갖도록 CF 구성</a>의 내용을 참조하십시오.
+<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA(Droplet Execution Agent)</a>는 내부에서 실행되는 앱에 대한 상태 점검을 수행합니다. 앱이나 DEA 자체에 문제가 있는 경우 문제 해결을 위해 앱의 추가 인스턴스를 대체 DEA에 배치합니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">고가용성 및 중복성을 갖도록 CF 구성</a>의 내용을 참조하십시오.
 </dd>
 <dt>메타데이터 백업</dt>
 <dd>메타데이터는 2차 위치(일반적으로 사내 구축형 가상 머신)에 백업됩니다. 가능할 경우 백업은 200km 이상 떨어진 사용자 환경에 복제해야 합니다.</dd>

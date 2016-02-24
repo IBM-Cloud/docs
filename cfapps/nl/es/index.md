@@ -9,9 +9,9 @@ Con {{site.data.keyword.Bluemix}}, puede crear su app en la interfaz de usuario 
 
 Para crear una app en {{site.data.keyword.Bluemix_notm}}, se comienza con un iniciador. Un *iniciador* es una plantilla que incluye servicios predefinidos y código de aplicación configurado con un determinado paquete de compilación. Hay dos tipos de iniciadores: contenedores modelo y tiempos de ejecución.
 
-Un *contenedor modelo* es un contenedor para una aplicación y su entorno de tiempo de ejecución y servicios predefinidos asociados para un dominio concreto. Por ejemplo, el contenedor modelo de Mobile Cloud incluye un tiempo de ejecución Node.js, así como los servicios Mobile Data, Mobile Application Security y Push. También incluye un SDK y appnes de ejemplo para empezar a desarrollar apps para móvil que accedan a estos servicios.
+Un *contenedor modelo* es un contenedor para una aplicación y su entorno de tiempo de ejecución y servicios predefinidos asociados para un dominio concreto. Por ejemplo, el contenedor modelo de Mobile Cloud incluye un tiempo de ejecución Node.js, así como los servicios Mobile Data, Mobile Application Security y Push. También incluye un SDK y apps de ejemplo para empezar a desarrollar apps para móvil que accedan a estos servicios.
 
-Un *tiempo de ejecución* es el conjunto de recursos que se utiliza para ejecutar una aplicación. {{site.data.keyword.Bluemix_notm}} proporciona entornos de tiempo de ejecución como contenedores para distintos tipos de appnes. Los entornos de tiempo de ejecución están integrados como paquetes de compilación en {{site.data.keyword.Bluemix_notm}}, se configuran automáticamente y requieren muy poco o ningún mantenimiento.
+Un *tiempo de ejecución* es el conjunto de recursos que se utiliza para ejecutar una aplicación. {{site.data.keyword.Bluemix_notm}} proporciona entornos de tiempo de ejecución como contenedores para distintos tipos de apps. Los entornos de tiempo de ejecución están integrados como paquetes de compilación en {{site.data.keyword.Bluemix_notm}}, se configuran automáticamente y requieren muy poco o ningún mantenimiento.
 
 Para empezar a crear la aplicación, siga los pasos siguientes:
   1. Vaya al panel de control en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
@@ -44,7 +44,7 @@ Después de crear la app, tiene algunas opciones para continuar añadiendo servi
 Utilice los siguientes consejos para desarrollar apps web:
 
 <dl><dt>Persistencia</dt>
-<dd>No especifique ningún almacenamiento local para las appnes. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de Bluemix para conservar los datos. </dd>
+<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de Bluemix para conservar los datos. </dd>
 <dt>Límites de recursos</dt>
 <dd>Tenga en cuenta los límites sobre las cantidades de recursos que puede utilizar una cuenta de prueba. Los límites son los siguientes:
 <table style="width:100%">

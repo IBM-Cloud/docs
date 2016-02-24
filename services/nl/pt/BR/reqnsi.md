@@ -5,7 +5,7 @@
 
 #Serviços
 {: #services}
-*Última atualização: 7 de dezembro de 2015*
+*Última atualização: 20 de janeiro de 2015*
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -81,10 +81,12 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 
 
 
-|Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney na Austrália|
+|Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney, na Austrália|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.alchemyapishort}} 		|Ye	   	|Sim  		|Sim|
+|{{site.data.keyword.activedeployshort}}	|Sim		|Sim		|Não|
+|{{site.data.keyword.alchemyapishort}} 		|Sim	   	|Sim  		|Sim|
 |{{site.data.keyword.appsecshort}}		|Sim		|Não		|Não|
+|{{site.data.keyword.alertnotificationshort}}|Sim		|Não			|Não		|
 |{{site.data.keyword.APS_DA}}			|Sim		|Não		|Não|
 |{{site.data.keyword.APS_MA}}			|Sim		|Não		|Não|
 |{{site.data.keyword.amashort}}			|Sim		|Sim		|Sim|
@@ -107,13 +109,15 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sim	|Sim		|Não|
 |{{site.data.keyword.globalizationshort}}	|Sim		|Não		|Não|
 |{{site.data.keyword.dataworks_short}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.twittershort}}		|Sim		|Sim		|Não|
+|{{site.data.keyword.twittershort}}		|Sim		|Sim		|Sim|
+|{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.iot_short}}		|Sim		|Não		|Não|
 |{{site.data.keyword.languagetranslationshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.messagehub}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.messageresonanceshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.APS_MAiOS}} 		|Sim		|Não		|Não|
+|{{site.data.keyword.macm_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.mobilemam}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.mobiledata}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.manda}}			|Sim		|Sim		|Não|

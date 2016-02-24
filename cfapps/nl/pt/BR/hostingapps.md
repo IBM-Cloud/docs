@@ -5,7 +5,7 @@
 
 #Hospedando apps no {{site.data.keyword.Bluemix_notm}}
 
-*Última atualização: 1 de dezembro de 2015* 
+*Última atualização: 1 de dezembro de 2015*
 
 <!--The whole topic is staging only -->
 
@@ -144,8 +144,7 @@ no {{site.data.keyword.Bluemix_notm}}
 acessem os dados e serviços da rede de backend. Para obter detalhes, consulte [Atingindo backend corporativo com o Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
 
 Para implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}} como
-um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{site.data.keyword.Bluemix_notm}}. O tempo de execução contém um aplicativo iniciador Hello World que pode ser substituído por seu próprio aplicativo. Se não for possível localizar um iniciador que forneça o tempo de execução desejado, será possível trazer um buildpack customizado compatível com Cloud Foundry para o {{site.data.keyword.Bluemix_notm}} usando a opção –b com o comando cf push.
-Para obter detalhes, consulte [Usando buildpacks da comunidade](../cfapps/byob.html).
+um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{site.data.keyword.Bluemix_notm}}. O tempo de execução contém um aplicativo iniciador Hello World que pode ser substituído por seu próprio aplicativo. Se não for possível localizar um iniciador que forneça o tempo de execução desejado, será possível trazer um buildpack customizado compatível com Cloud Foundry para o {{site.data.keyword.Bluemix_notm}} usando a opção –b com o comando cf push. Para obter detalhes, consulte [Usando buildpacks da comunidade](../cfapps/byob.html).
 
 É possível usar as ferramentas e serviços a seguir que o {{site.data.keyword.Bluemix_notm}} fornece:
 
@@ -192,7 +191,8 @@ da linha de comandos cf:
 </ol>
 </li>
 
-<li>Opcional: se desejar especificar e salvar os detalhes da implementação antes de enviar um aplicativo por push para o {{site.data.keyword.Bluemix_notm}}, será possível incluir o manifest do aplicativo executando as etapas a seguir:<ol>
+<li>Opcional: se desejar especificar e salvar os detalhes da implementação antes de enviar um aplicativo por push para o {{site.data.keyword.Bluemix_notm}}, será possível incluir o manifest do aplicativo executando as etapas a seguir:
+<ol>
 <li>Acesse o diretório ativo de seu aplicativo e crie um arquivo intitulado manifest.yml, que é o nome padrão.</li>
 <li>Especifique detalhes da implementação no arquivo manifest. O exemplo a seguir mostra um arquivo manifest para um aplicativo Java™.
 <pre class="pre codeblock"><code>applications:

@@ -4,7 +4,7 @@
 # {{site.data.keyword.Bluemix_notm}} の概要
 {: #overview}
 
-*最終更新日: 2015 年 11 月 20 日*
+*最終更新日: 2016 年 1 月 18 日*
 
 {{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。{:shortdesc}
 
@@ -31,7 +31,7 @@
 また、{{site.data.keyword.Bluemix_notm}} は、アプリが使用するミドルウェア・サービスも提供します。{{site.data.keyword.Bluemix_notm}} は、新規サービス・インスタンスをプロビジョンする際にアプリの代わりに機能し、それらのサービスをアプリにバインドします。サービスの管理をインフラストラクチャーにまかせ、ユーザーのアプリはそのアプリ本来の仕事を実行できます。
 
 一般に、{{site.data.keyword.Bluemix_notm}} でアプリを実行する際にオペレーティング・システムやインフラストラクチャー層について気にする必要はありません。ルート・ファイル・システムやミドルウェア・コンポーネントなどの層は抽象化されているため、ユーザーはアプリケーション・コードに集中できます。ただし、アプリケーションがどこで実行されているか詳細を知る必要がある場合は、これらの層について詳しく学ぶことができます。
-詳しくは、『[{{site.data.keyword.Bluemix_notm}} のインフラストラクチャー層の表示 (Vewing Bluemix infrastructure layers)](../cli/viewinfra.html#viewinfra)』を参照してください。 
+詳しくは、『[{{site.data.keyword.Bluemix_notm}} のインフラストラクチャー層の表示 (Viewing [ infrastructure layers)](../cli/vcapsvc.html#viewinfra)(../cli/vcapsvc.html#viewinfra)]』を参照してください。 
 
 ## {{site.data.keyword.Bluemix_notm}} アーキテクチャー
 {: #ov_arch}
@@ -84,6 +84,10 @@ IBM はリレー・テクノロジーを使用してお客様の環境のモニ�
 ![{{site.data.keyword.Bluemix_notm}} Local。](images/localarch.png "Bluemix Local")
 
 *図 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+インセプション仮想マシンは、リレーを介して IBM 運用センターにアウトバウンド接続されているネットワーク内にある、カスタマー・ファイアウォールの内側のネットワーク内で稼働します。{{site.data.keyword.Bluemix_notm}} プラットフォームのコンポーネントとコア・サービスは、専用の、分離された仮想ローカル・エリア・ネットワーク (VLAN) 内で実行されます。{{site.data.keyword.Bluemix_notm}} Local は、プライベート・サブネットに VLAN を使用します。パブリック VLAN ではなくプライベート・サブネットを使用した方がより安全であり、経路指定の問題を回避するのに役立ちます。
+
+DataPower アプライアンスは、{{site.data.keyword.Bluemix_notm}} アプリケーション・ドメインへのアクセスを提供します。これらのアプライアンスは、ユーザーのイントラネットからアクセス可能なネットワークに接続します。アプリおよびサービスをデプロイするユーザーは、ユーザーのイントラネットからアクセス可能なネットワークからアクセスします。ユーザーは、アウトバウンド・インターネット・アクセスが可能な、7 つの IP アドレスを提供する必要があります。DataPower アプライアンスは、これらの顧客の IP アドレスから、分離された {{site.data.keyword.Bluemix_notm}} デプロイメントに経路指定します。ネットワークの仕様およびインフラストラクチャーの要件について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件](../local/index.html#localinfra)』を参照してください。
 
 ### {{site.data.keyword.Bluemix_notm}} の動作
 {: #howwork}
@@ -170,11 +174,11 @@ Eclipse ツールの使用について詳しくは、「[Deploying apps with IBM
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **地域名** | **地域接頭部** | **cf API エンドポイント** | **UI コンソール** |       
-|-----------------|-------------------|---------------------|----------------|
-| 米国南部地域 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| ヨーロッパ・英国地域 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| オーストラリア・シドニー地域 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **地域名** | **地理的位置** | **地域接頭部** | **cf API エンドポイント** | **UI コンソール** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| 米国南部地域 | ダラス、米国 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| 英国地域 | ロンドン、イングランド | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| シドニー地域 | シドニー、オーストラリア | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *表 1. {{site.data.keyword.Bluemix_notm}} の地域リスト*
@@ -327,7 +331,7 @@ Cloud Integration サービスに接続せずに、プライベート・サー�
 | 中国語 (簡体字) | zh_CN |
 | 中国語 (繁体字) | zh_TW |
 
-*表 3. サポートされる各国語と言語コード*
+*表 2. サポートされる各国語と言語コード*
 
 # 関連リンク
 ## 一般 
@@ -335,7 +339,7 @@ Cloud Integration サービスに接続せずに、プライベート・サー�
 * [{{site.data.keyword.Bluemix_notm}} の新機能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} の既知の問題](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} 用語集](glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, an {{site.data.keyword.IBM_notm}} Company](http://www.softlayer.com/)

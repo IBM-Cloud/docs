@@ -4,7 +4,7 @@
 # Visión general de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última actualización: 20 de noviembre de 2015*
+*Última actualización: 18 de enero de 2016*
 
 {{site.data.keyword.Bluemix}} es la plataforma de nube abierta de {{site.data.keyword.IBM}} que proporciona a los desarrolladores de apps para móvil y web acceso al software de {{site.data.keyword.IBM_notm}} para funciones de integración, seguridad, transacción y otras funciones clave, así como a software de terceros.
 {:shortdesc}
@@ -33,8 +33,7 @@ Puede utilizar {{site.data.keyword.Bluemix_notm}} para desarrollar rápidamente 
 
 {{site.data.keyword.Bluemix_notm}} también proporciona servicios de middleware para que los utilicen las apps. {{site.data.keyword.Bluemix_notm}} actúa en nombre de la app cuando suministra nuevas instancias de servicio y luego enlaza estos servicios a la app. La app puede llevar a cabo su trabajo real, dejando la gestión de los servicios a la infraestructura.
 
-En general, no debe preocuparse de las capas de sistema operativo y de infraestructura cuando ejecute apps en {{site.data.keyword.Bluemix_notm}}. Las capas de tipo sistemas de archivos raíz y componentes de middleware se abstraen para que se pueda centrar en el código de la app. Sin embargo, puede obtener más información sobre estas capas y necesita datos específicos sobre dónde se ejecuta la app. Consulte [Visualización de las capas de la infraestructura
-de {{site.data.keyword.Bluemix_notm}}](../cli/viewinfra.html#viewinfra) para obtener más información. 
+En general, no debe preocuparse de las capas de sistema operativo y de infraestructura cuando ejecute apps en {{site.data.keyword.Bluemix_notm}}. Las capas de tipo sistemas de archivos raíz y componentes de middleware se abstraen para que se pueda centrar en el código de la app. Sin embargo, puede obtener más información sobre estas capas y necesita datos específicos sobre dónde se ejecuta la app. Consulte [Visualización de las capas de infraestructura de {{site.data.keyword.Bluemix_notm}}](../cli/vcapsvc.html#viewinfra) para obtener más detalles. 
 
 ## Arquitectura de {{site.data.keyword.Bluemix_notm}}
 {: #ov_arch}
@@ -87,6 +86,10 @@ IBM utiliza tecnología de relé para supervisar y mantener de forma segura el e
 ![{{site.data.keyword.Bluemix_notm}} local.](images/localarch.png "Bluemix local")
 
 *Figura 4. {{site.data.keyword.Bluemix_notm}} local*
+
+La máquina virtual inicial se ejecuta en una red detrás del cortafuegos del cliente en una red que tiene conectividad saliente al centro de operaciones de IBM a través del Relé. El componentes de la plataforma de {{site.data.keyword.Bluemix_notm}} y los servicios principales se ejecutan en una red de área local virtual aislada y privada (VLAN). {{site.data.keyword.Bluemix_notm}} Local utiliza una VLAN para la subred privada. El uso de una subred privada en lugar de una VLAN pública es más seguro y puede ayudar a evitar problemas de direccionamiento.
+
+Los dispositivos DataPower proporcionan acceso a los dominios de aplicaciones de {{site.data.keyword.Bluemix_notm}}. Estos dispositivos se conectan a la red accesible desde la intranet. Los usuarios que están desplegando las apps y los servicios obtienen acceso de la red a la que se puede acceder desde la intranet. Debe proporcionar siete direcciones IP que tienen acceso a Internet de salida. Los dispositivos de DataPower se direccionan desde estas direcciones IP de cliente al despliegue de {{site.data.keyword.Bluemix_notm}} aislado. Para obtener más información sobre las especificaciones de red y los requisitos de infraestructura, consulte [Requisitos de infraestructura locales de {{site.data.keyword.Bluemix_notm}}](../local/index.html#localinfra).
 
 ### Funcionamiento de {{site.data.keyword.Bluemix_notm}}
 {: #howwork}
@@ -183,11 +186,11 @@ Cada región tienen asignado un prefijo exclusivo. {{site.data.keyword.Bluemix_n
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nombre de la región** | **Prefijo de la región** | **Punto final cf API** | **Consola de interfaz de usuario** |       
-|-----------------|-------------------|---------------------|----------------|
-| Región EE.UU. sur | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| Región Europa Reino Unido | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Región Australia Sídney | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **Nombre de la región** | **Ubicación geográfica** | **Prefijo de la región** | **Punto final cf API** | **Consola de interfaz de usuario** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| Región EE.UU. sur | Dallas, EE.UU. | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| Región Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| Región Sídney | Sídney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *Tabla 1. Lista de regiones de {{site.data.keyword.Bluemix_notm}}*
@@ -349,7 +352,7 @@ La siguiente tabla lista los idiomas nacionales soportados y los códigos de idi
 | Chino simplificado | zh_CN |
 | Chino tradicional | zh_TW |
 
-*Tabla 3. Idiomas nacionales soportados y códigos de idioma*
+*Tabla 2. Idiomas nacionales soportados y códigos de idioma*
 
 # rellinks
 ## general 
@@ -357,7 +360,7 @@ La siguiente tabla lista los idiomas nacionales soportados y los códigos de idi
 * [Novedades de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * Problemas conocidos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glosario](glossary/index.html)
-* Hoja de precios de [{{site.data.keyword.Bluemix_notm}}](https://console.{{site.data.keyword.domainname}}/pricing/)
+* Hoja de precios de [{{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
 * [Cloud
 Foundry](http://cloudfoundry.org/)

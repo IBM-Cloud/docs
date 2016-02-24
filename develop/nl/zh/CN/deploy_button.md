@@ -6,7 +6,7 @@
 
 #创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮{: #deploy-button} 
 
-*上次更新时间：2015 年 12 月 8 日* 
+*上次更新时间：2016 年 1 月 19 日* 
 
 使用“部署到 {{site.data.keyword.Bluemix}}”按钮，可以高效地将自己的公共 Git 源应用程序共享给其他人员，以便其他人员可以试验代码并将其部署到 IBM {{site.data.keyword.Bluemix_notm}}。此按钮不但需要的配置最少，而且可插入到支持标记的任何位置。无论是谁，只要单击该按钮，即可在新的 Git 存储库中创建代码的克隆副本，而您的原始应用程序将不受影响。
 {: shortdesc} 
@@ -49,16 +49,31 @@
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请执行以下操作： 
 
 <ol>
-<li> 复制并修改以下某个片段模板，并在其中加入公共 Git 存储库。<ul>
-<li>HTML：
-缺省主分支：<pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
+<li> 复制并修改以下某个片段模板，并在其中加入公共 Git 存储库。<p></p>
+<p>
+<strong>提示</strong>：如果想要为 DevOps Services 项目指定构建输入，请向 Git URL 添加分支参数。添加分支参数后，系统会将原始公共 Git 存储库（包括其所有分支）克隆到带有新 Git 存储库的新专用 DevOps Services 项目中。系统会将指定的 Git 分支设置为构建作业的输入。如果未指定分支，那么缺省情况下，会将构建作业的输入设置为主分支。</p>
+<ul>
+<li>HTML：<p>
+缺省主分支：</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+指定的 Git 分支：
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown：<p>
 缺省主分支：</p>
 <pre class="codeblock">
-[&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [必需]&#41;
+[&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [必需]&#41;
+</pre>
+<p>指定的 Git 分支：
+</p>
+<pre class="codeblock">
+[&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [必需]&#41;
 </pre>
 </li>
 </ul>

@@ -5,7 +5,7 @@
 
 #Services
 {: #services}
-*Dernière mise à jour : 7 décembre 2015*
+*Dernière mise à jour : 20 janvier 2015*
 
 Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
 {{site.data.keyword.Bluemix}}.
@@ -50,7 +50,12 @@ problèmes
 identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
 applicable. Pour des informations sur la gravité des tickets, voir [Contacter le
 support](../support/index.html#contacting-bluemix-support){: new_window}.|
-*Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*{{site.data.keyword.Bluemix_notm}}
+*Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
+
+
+
+
+{{site.data.keyword.Bluemix_notm}}
 propose également des services expérimentaux que vous pouvez essayer. Pour afficher tous les services expérimentaux, les conteneurs boilerplate et les
 contextes d'exécution, connectez-vous à {{site.data.keyword.Bluemix_notm}}, faites défiler le catalogue jusqu'à la fin, puis cliquez sur le
 **catalogue {{site.data.keyword.Bluemix_notm}} Lab**.
@@ -76,10 +81,12 @@ services qui sont fournis par IBM.
 
 
 
-|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe/Royaume-Uni |Disponible dans la région Australie Sydney|
+|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe/Royaume-Uni |Disponible dans la région Sydney|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.alchemyapishort}} 		|Oui	   	|Oui  		|Oui|
 |{{site.data.keyword.appsecshort}}		|Oui		|Non		|Non|
+|{{site.data.keyword.alertnotificationshort}}|Oui		|Non			|Non		|
 |{{site.data.keyword.APS_DA}}			|Oui		|Non		|Non|
 |{{site.data.keyword.APS_MA}}			|Oui		|Non		|Non|
 |{{site.data.keyword.amashort}}			|Oui		|Oui		|Oui|
@@ -102,13 +109,15 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Oui	|Oui		|Non|
 |{{site.data.keyword.globalizationshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.dataworks_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.twittershort}}		|Oui		|Oui		|Non|
+|{{site.data.keyword.twittershort}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.IntegrationTestingshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.iot_short}}		|Oui		|Non		|Non|
 |{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.messageresonanceshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.APS_MAiOS}} 		|Oui		|Non		|Non|
+|{{site.data.keyword.macm_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.mobilemam}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.mobiledata}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.manda}}			|Oui		|Oui		|Non|
@@ -366,7 +375,7 @@ enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'inf
 	cf bind-service mon_app instance_service_fournie_par_utilisateur
 	```
 
-## Utilisation des services dans un autre service 
+## Utilisation des services dans un autre service
 {: #s2s_binding}
 
 L'autorisation d'accès au service permet à un service d'accéder à un autre service directement. Vous pouvez autoriser et configurer l'accès d'une
@@ -378,7 +387,6 @@ Pour utiliser une instance de service depuis un autre service, procédez comme s
 service s'ouvre.
 2. Dans le panneau de navigation de gauche, cliquez sur *Gérer* pour autoriser la liaison depuis d'autres instances de service à
 l'aide de la console de l'instance de service.
-
 3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur *Autorisation d'accès au service* dans le
 panneau de navigation de gauche, puis utilisez *Révoquer* pour supprimer la liaison de service. 
 

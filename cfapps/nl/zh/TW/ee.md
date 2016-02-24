@@ -26,13 +26,13 @@
 在 {{site.data.keyword.Bluemix_notm}} 中，應用程式與組織及空間相關聯。組織是由多個合作者所擁有及使用。
 一開始，您會得到預設組織，它是以您的使用者名稱來命名，且您是唯一的合作者。
 您也會在這個組織內得到一個空間。
-該空間是用來執行您應用程式的環境；例如，您可以有 dev 空間作為開發環境、test 空間作為測試環境，以及 production 空間作為正式作業環境。此外，每一個環境都屬於一個區域。
+該空間是用來執行您應用程式的環境；例如，您可以有 dev 空間作為開發環境、test 空間作為測試環境，以及 production 空間作為正式作業環境。此外，每一個環境都屬於一個地區。
 使用 {{site.data.keyword.Bluemix_notm}}，您可以將應用程式部署至特定的地理區域，以獲得較低的網路延遲、資料隱私及更好的可用性。
 如需詳細資料，請參閱「地區」。
 
 針對此情境，您想要使用 Node.js 開發 Web 應用程式。
 假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者基礎的區域建置及執行應用程式，以便得到較低網路延遲的好處。
-登入 {{site.data.keyword.Bluemix_notm}} 之後，從使用者介面的右上角選取**美國南方**區域。然後，您可以採取下列步驟來建立應用程式：
+登入 {{site.data.keyword.Bluemix_notm}} 之後，從使用者介面的右上角選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
   1. 按一下**建立應用程式**。
   2. 選取 **Web**。
   3. 為您的 Web 應用程式選取入門範本 SDK for Node.js，然後按一下**繼續**。
@@ -84,7 +84,6 @@
    ]
 }
 ```
-{:codeblock}
 
 **附註：**此環境變數是 JSON 物件的序列化，針對應用程式連結的每一個服務實例使用一個項目。每一個服務實例所提供資料的數量及類型都是服務所特有的。當您的應用程式未使用任何服務時，VCAP_SERVICES 是個空的 JSON 物件。此環境變數只適用於您將服務新增至應用程式時。
 
@@ -116,13 +115,13 @@ cf 指令行介面及 Eclipse 工具。您可以選擇 cf 指令行介面開始�
 	
     **需求：**請確定一律使用最新版本的 cf 指令行工具。
   3. 安裝 **cf** 指令行介面之後，您必須使用 **cf api** 指令，來指定要處理的
-{{site.data.keyword.Bluemix_notm}} 區域。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。美國南部地區 URL 是 stage1.ng.bluemix.net。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
+{{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。美國南部地區 URL 是 stage1.ng.bluemix.net。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
   cf api https://api.stage1.ng.bluemix.net
   ```
   
-  如需連接至其他 {{site.data.keyword.Bluemix_notm}} 地區的相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 地區。指定 {{site.data.keyword.Bluemix_notm}} 區域之後，會儲存您指定的位置資訊。
+  如需連接至其他 {{site.data.keyword.Bluemix_notm}} 地區的相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 地區。指定 {{site.data.keyword.Bluemix_notm}} 地區之後，會儲存您指定的位置資訊。
   
   4. 接下來，您可以使用 cf login 指令登入 {{site.data.keyword.Bluemix_notm}}。
   
@@ -143,7 +142,7 @@ cf 指令行介面及 Eclipse 工具。您可以選擇 cf 指令行介面開始�
   6. 現在，您可以在瀏覽器輸入下列應用程式 URL，來存取應用程式：
 ```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 您也可以選擇其他工具來建置您的應用程式，例如 Eclipse 工具。如需相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 使用者介面上應用程式的「開始編碼」頁面。
 
@@ -207,7 +206,7 @@ Cloudant 服務實例、將應用程式連結至服務實例，然後使用該�
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **附註：**如範例程式碼所示，若要連接至 {{site.data.keyword.cloudant}} 服務實例，您可以先檢查 VCAP_SERVICES 環境變數是否存在。如果存在，應用程式就可以使用 cloudant 變數的內容來存取資料庫。不過，如果 VCAP_SERVICES 環境變數不存在，則本端 {{site.data.keyword.cloudant}} 服務實例會搭配使用所提供的預設值。
   
@@ -234,7 +233,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **選用項目：**取消連結或刪除服務實例。
   

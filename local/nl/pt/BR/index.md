@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 8 de dezembro de 2015*
+*Última atualização: 15 de janeiro de 2016*
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
 {{site.data.keyword.Bluemix_notm}} Local, é possível proteger
@@ -15,7 +15,7 @@ com o {{site.data.keyword.Bluemix_notm}} Public.
 A IBM® utiliza operações em nuvem como um serviço para
 monitorar e manter seu ambiente, para que você possa se concentrar na construção de apps e serviços que são executados no topo do ambiente. A IBM também manipula atualizações de plataforma, para que você possa se concentrar nos negócios.
 
-{{site.data.keyword.Bluemix_notm}} Local inclui um
+O {{site.data.keyword.Bluemix_notm}} Local inclui um
 catálogo privado, organizado, que exibe os serviços locais que estão
 disponíveis exclusivamente para você. Ele também inclui serviços adicionais
 que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public. O catálogo organizado fornece a função para criar aplicativos híbridos que consistem em serviços públicos e privados. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança.
@@ -80,7 +80,7 @@ Retransmissão é um recurso de entrega incluído com o {{site.data.keyword.Blue
 
 O tráfego nesse túnel é a automação para serviço e manutenção da plataforma, recursos de cálculo e serviços para sua instância. A porta da web 443 de entrada é usada para essa conexão. A retransmissão é restrita ao acesso somente do agente de automação. A IBM usa o recurso de retransmissão para entregar atualizações de plataforma por meio de um processo de teste e validação consistente para assegurar que todas as implementações enviadas por push para seus ambientes locais sejam estáveis e seguras.
 
-Você tem visibilidade completa do ambiente para o incidente, problema, mudança, capacidade e gerenciamento de segurança como um administrador. Os administradores acessam as informações sobre seus ambientes usando o console de administração. A tecnologia de retransmissão mantém o console de administração atual com os dados mais recentes. Para obter mais informações sobre acesso de usuário, logs de segurança, controle de catálogo organizado e comunicação para atualizações e reparo do problema, consulte [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
+Você tem visibilidade completa do ambiente para o incidente, problema, mudança, capacidade e gerenciamento de segurança como um administrador.  Os administradores acessam as informações sobre seus ambientes usando o console de administração. A tecnologia de retransmissão mantém o console de administração atual com os dados mais recentes. Para obter mais informações sobre acesso de usuário, logs de segurança, controle de catálogo organizado e comunicação para atualizações e reparo do problema, consulte [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng).
 
 ##Configurando a instância do {{site.data.keyword.Bluemix_notm}}
 Local
@@ -130,7 +130,8 @@ instância do {{site.data.keyword.Bluemix_notm}} Local.</li>
 <li>Depois que sua plataforma e conta forem criadas,
 identifique as pessoas em sua organização para as funções
 que são necessárias para que sua instância local esteja ativa e
-executando. Para obter mais informações sobre as funções designadas, consulte <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Local</a>.</li>
+executando. Para obter mais informações sobre as funções designadas, consulte <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Local</a>.
+</li>
 <li>Você fornece o hardware e a IBM ajuda a definir e estabelecer
 conectividade de rede entre a rede corporativa e a
 instância do {{site.data.keyword.Bluemix_notm}} Local. Para
@@ -152,6 +153,40 @@ do terminal LDAP, e acessa.</li>
 	</ol>
 </li>
 </ol>
+
+É possível esperar um processo semelhante à lista a seguir para a implementação e configuração iniciais do seu ambiente. Para obter detalhes sobre quem é responsável por cada uma das tarefas, veja [Funções e responsabilidades](../local/index.html#rolesresponsibilities).
+
+<ol>
+<li>Forneça a configuração do VMware que atenda às especificações para recursos de cálculo, configuração de redes e armazenamento. Para obter mais informações sobre os requisitos de infraestrutura, veja <a href="../local/index.html#localinfra">Requisitos de infraestrutura do {{site.data.keyword.Bluemix_notm}} Local</a>.</li>
+<li>Forneça as credenciais do cluster do vCenter a serem usadas pela máquina virtual de concepção. Você deve fornecer as seguintes
+informações:
+<ul>
+<li>Nome do cluster do VMware</li>
+<li>Credenciais do cluster do vCenter, incluindo o ID do usuário e a senha</li>
+<li>Nome ou nomes do armazenamento de dados (nome do LUN de armazenamento)</li>
+<li>ID da VLAN/grupo de portas do VMware</li>
+<li>Nome do conjunto de recursos</li>
+</ul>
+</li>
+<li>Você e a IBM trabalham juntos para validar as credenciais fornecidas na tarefa anterior.</li>
+<li>Forneça 7 endereços IP em sua rede. Se houver um proxy da web seguro que permita acesso de saída para a Internet para componentes internos do {{site.data.keyword.Bluemix_notm}}, então deve-se fornecer as credenciais para conectar a ele.
+<p>**Nota**: se o seu proxy da web não for seguro, então não será necessário fornecer as credenciais. Além disso, observe que nem todos os clientes do {{site.data.keyword.Bluemix_notm}} Local usam um proxy da web.</p></li>
+<li>A IBM fornece uma lista de desbloqueio de URLs à qual você deve ter permissão por meio do proxy da web antes de iniciar a implementação.</li>
+<li>Especifique os nomes de domínio para a implementação e os IDs que deseja usar. Você obtém dois domínios definidos parcialmente ao configurar sua instância local e selecione o prefixo para os dois domínios. Por exemplo, selecione o prefixo para <code>*mycompany*.bluemix.net</code> e <code>*mycompany*.mybluemix.net</code>. E, em seguida, também é possível escolher o domínio completo para criar um domínio customizado.
+<p>É possível escolher quantos domínios customizados desejar. No entanto, você é responsável pelos certificados dos domínios customizados. Para obter informações sobre como criar seu domínio customizado, veja <a href="../manageapps/updapps.html#domain">Criando e usando um domínio customizado</a>.</p></li>
+<li>Escolha qual tecnologia, túnel IPSec ou OpenVPN, usar para configurar a Retransmissão para conectar novamente ao centro de operações IBM.</li>
+<li>A IBM instala e inicia a máquina virtual de concepção dentro do cluster do {{site.data.keyword.Bluemix_notm}}. Se você fornecer seu próprio VMware, então um representante IBM ajudará seu representante do cliente a concluir esta tarefa.</li>
+<li>A IBM configura a Retransmissão para comunicar novamente com o centro de operações IBM. </li>
+<li>O repositório de máquina virtual de concepção puxa os artefatos de construção atualizados.</li>
+<li>Forneça as credenciais para que a IBM conecte à instância do diretório LDAP corporativo.</li>
+<li>A IBM usa a automação para implementar a plataforma principal do {{site.data.keyword.Bluemix_notm}}.</li>
+<li>A IBM implementa a plataforma principal que inclui os tempos de execução elásticos, o console, o recurso de administração e o monitoramento.</li>
+<li>A IBM configura o acesso administrativo para o ambiente.</li>
+<li>A IBM vincula seu catálogo organizado a partir de sua implementação local a uma instância pública do {{site.data.keyword.Bluemix_notm}} para uso de serviços públicos. Um conjunto de serviços públicos está disponível em sua instância local por padrão. É possível usar a página de administração para gerenciamento de catálogos para ativar ou desativar os serviços para sua instância local.</li>
+<li>É possível começar a usar sua instância local que é monitorada pela equipe de operações da IBM para responder aos alertas.</li>
+</ol>
+
+Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para obter mais informações, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../administer/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância local](index.html#maintainlocal).
 
 ##Funções e Responsabilidades
 {: #rolesresponsibilities}
@@ -313,10 +348,15 @@ Para suportar uma única falha de nó, deve-se ter n+1 ESXi. Por exemplo, se for
 </dd>
 <dt>**Rede**</dt>
 <dd>
-Os requisitos recomendados incluem um grupo da porta acessível de cliente com 10 endereços IP de rede do cliente
-que tenham acesso à Internet de saída. Em seguida, defina uma segunda VLAN privada entre somente os
-ESXis sendo usados para {{site.data.keyword.Bluemix_notm}} Local. Essa VLAN é mostrada como um grupo da porta em VMware. O {{site.data.keyword.Bluemix_notm}} Local usa isso para sub-rede privada,
-que é mais segura e pode ajudar a evitar problemas de roteamento.
+Os requisitos recomendados incluem um grupo de portas acessível ao cliente com sete endereços IP de rede do cliente que possuem acesso à Internet de saída na mesma sub-rede. Duas portas são usadas pela máquina virtual de concepção, três portas são endereços IP virtuais usados para os domínios e as duas finais são endereços IP públicos para os DataPowers. Em seguida, defina uma segunda VLAN privada somente entre os ESXis que estão sendo usados no {{site.data.keyword.Bluemix_notm}} Local. Essa VLAN é mostrada como um grupo da porta em VMware. O {{site.data.keyword.Bluemix_notm}} Local usa isso para sub-rede privada,
+que é mais segura e pode ajudar a evitar problemas de roteamento.<br />
+<p>As portas a seguir são usadas:</p>
+<ul>
+<li>Porta 443 para a conexão de Retransmissão
+<p>**Nota**: se você optar por usar um túnel IPSec em vez de um OpenVPN, então abra uma porta do cliente para essa conexão.</p></li>
+<li>Porta 389 ou SSL 636 para a conexão LDAP ou Active Directory</li>
+</ul>
+<p>**Nota**: a IBM pode detectar se a conexão de rede for perdida. No caso de perda de conexão de rede, a IBM entra em contato com você e trabalha com seu especialista de rede para resolver o problema.</p>
 </dd>
 </dl>
 
@@ -449,7 +489,8 @@ Se houver um problema relatado após uma atualização de manutenção, você ac
 ## Recuperação de desastre
 {: #dr}
 
-O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.{: shortdesc}
+O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
+{: shortdesc}
 
 A recuperação de desastre do {{site.data.keyword.Bluemix_short}} Local torna-se possível por meio de disponibilidade contínua para seus apps, da alta disponibilidade inerente da plataforma e da capacidade de restaurar sua instância no caso de uma falha. Você é responsável por ativar a disponibilidade contínua de seus apps implementando em várias regiões. A alta disponibilidade é construída no nível de plataforma por meio de tecnologias incluídas no Cloud Foundry e de outros componentes. Além disso, é possível trabalhar junto com a IBM para assegurar que seus dados sejam corretamente submetidos a backup no caso de você precisar restaurar sua instância a qualquer momento.
 
@@ -496,7 +537,8 @@ Essas tecnologias incluem os itens a seguir:
 
 <dl>
 <dt>Escalabilidade no Cloud Foundry</dt>
-<dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.</dd>
+<dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.
+</dd>
 <dt>Backup de metadados</dt>
 <dd>Os metadados são submetidos a backup em um local secundário, geralmente uma máquina virtual local. Se possível, convém replicar o backup para seu próprio ambiente com pelo menos 200 km de distância.</dd>
 </dl>

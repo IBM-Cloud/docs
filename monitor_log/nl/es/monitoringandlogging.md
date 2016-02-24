@@ -6,7 +6,7 @@
 #Supervisión y registro
 {: #monitoringandlogging}
 
-*Última actualización: 4 de diciembre de 2015*
+*Última actualización: 8 de diciembre de 2015*
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
 {:shortdesc}
@@ -112,7 +112,7 @@ Puede utilizar el panel de control de {{site.data.keyword.Bluemix_notm}} o la in
 ####VISUALIZACIÓN DE REGISTROS DESDE EL PANEL DE CONTROL DE {{site.data.keyword.Bluemix_notm}}
 
 Para ver los registros **Despliegue** o **Tiempo de ejecución**, lleve a cabo los siguientes pasos:
-1. Pulse el mosaico de la app. Se muestra la página de detalles de la app.
+1. Pulse el mosaico de la app. Se mostrará la página de detalles de la app.
 2. En la barra de navegación izquierdo, pulse **Registros**.
 
 ####VISUALIZACIÓN DE REGISTROS DESDE LA INTERFAZ DE LÍNEA DE MANDATOS
@@ -169,6 +169,7 @@ Para ver los registros en los que está interesado o para excluir el contenido q
 ```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
+
 Para obtener más información sobre la opción **grep**, escriba cut --help.
 * Para visualizar las entradas de registro que contienen ciertas palabras clave, utilice la opción **grep**. Por ejemplo, para visualizar las entradas de registro que contienen la palabra clave [APP, puede utilizar el mandato siguiente:
 ```

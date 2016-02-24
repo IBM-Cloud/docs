@@ -8,7 +8,8 @@
 
 *上次更新时间：2015 年 12 月 4 日*
 
-您可以使用各种方法（例如，命令行界面和集成开发环境 (IDE)）将应用程序部署到 {{site.data.keyword.Bluemix}}。您还可以使用应用程序清单来部署应用程序。通过使用应用程序清单，可减少每次将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时必须指定的部署详细信息的数量。{:shortdesc}
+您可以使用各种方法（例如，命令行界面和集成开发环境 (IDE)）将应用程序部署到 {{site.data.keyword.Bluemix}}。您还可以使用应用程序清单来部署应用程序。通过使用应用程序清单，可减少每次将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时必须指定的部署详细信息的数量。
+{:shortdesc}
 
 ##应用程序部署
 {: #appdeploy}
@@ -43,7 +44,8 @@
   * 要将 Liberty 服务器软件包部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push```
+  cf push
+  ```
   
   有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](../starters/liberty/index.html#liberty)。
   
@@ -182,15 +184,8 @@ cf push -f appManifest.yml
 
 您可通过使用 **cf env** 命令或从 {{site.data.keyword.Bluemix_notm}} 用户界面查看正在运行的 {{site.data.keyword.Bluemix_notm}} 应用程序的以下环境变量：
 
-  * 特定于应用程序的用户定义变量。您可通过使用 **cf set-env** 命令，或在 [`manifest.yml` 文件](#appmanifest)中按如下所示配置值对来设置特定于应用程序的变量：
-
-  ```
-  env:
-
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * 特定于应用程序的用户定义变量。有关如何向应用程序添加用户定义的变量的信息，请参阅[添加用户定义的环境变量](#ud_env){:new_window}。
+	  
   * VCAP_SERVICES 变量，其中包含用于访问服务实例的连接信息。如果应用程序与多个服务绑定，那么 VCAP_SERVICES 变量会包含每个服务实例的连接信息。例如：
   
   ```
@@ -325,8 +320,8 @@ cf push -f appManifest.yml
 <li>通过 buildpack 定义的变量对于每个 buildpack 是不同的。请参阅 [buildpack](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}，以了解任何其他兼容 buildpack。
 
     <li>Liberty buildpack 定义的变量：
-
-          <dl>
+	
+	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>运行应用程序的 Java SDK 的位置。</dd>
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
@@ -340,7 +335,7 @@ cf push -f appManifest.yml
 	  </dl>
 </li>   
 <li>Node.js buildpack 定义的变量：
-        <dl>
+	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>Node.js 运行时环境的目录。</dd>
 	<dt><strong>CACHE_DIR</strong></dt>
@@ -357,7 +352,8 @@ cf push -f appManifest.yml
 ## 定制应用程序部署
 {: #customize_dep}
 
-您可以为应用程序定制部署任务。例如，可以为应用程序指定启动命令，并可以配置应用程序启动环境。{:shortdesc}
+您可以为应用程序定制部署任务。例如，可以为应用程序指定启动命令，并可以配置应用程序启动环境。
+{:shortdesc}
 
 ### 指定启动命令
 
@@ -368,7 +364,8 @@ cf push -f appManifest.yml
   * 使用 **cf push** 命令并指定 -c 参数。例如，部署 Node.js 应用程序时，可以通过 -c 参数指定 **node app.js** 启动命令：
   
   ```
-  cf push appname -c "node app.js"```
+  cf push appname -c "node app.js"
+  ```
   
   * 在 `manifest.yml` 文件中使用 command 参数。例如，部署 Node.js 应用程序时，可以在清单文件中指定 **node app.js** 启动命令：
 
@@ -377,12 +374,38 @@ cf push -f appManifest.yml
   command: node app.js
 ```
   
+  
+  
+### 添加用户定义的环境变量
+{: #ud_env}
+
+用户定义的环境变量是特定于应用程序的。要向运行中应用程序添加用户定义的环境变量，可以使用以下选项：
+
+  * 使用 {{site.data.keyword.Bluemix_notm}} 用户界面。请完成以下步骤：
+    1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击应用程序磁贴。这将显示应用程序详细信息页面。
+	2. 在左侧导航窗格中，单击**环境变量**。
+	3. 单击**用户定义**，然后单击**添加**。
+	4. 填写必填字段，然后单击**保存**。
+  * 使用命令行界面。使用 ``cf set-env`` 命令添加用户定义的变量。例如：```
+    cf set-env appname env_var_name env_var_value
+    ``
+	
+  * 使用 ``manifest.yml`` 文件。在该文件中添加值对。例如：```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ``
+	
+
+
+  
 ### 配置启动环境
 
 要为应用程序配置启动环境，可以将 shell 脚本添加到 `/.profile.d` 目录中。`/.profile.d` 目录位于应用程序的构建目录下。`/.profile.d` 目录中的脚本由 {{site.data.keyword.Bluemix_notm}} 在应用程序运行之前运行。例如，可以将 NODE_ENV 环境变量设置为 **production**，方法是将包含以下内容的 `node_env.sh` 文件放入 `/.profile.d` 目录下：
 
 ```
-export NODE_ENV=production;```
+export NODE_ENV=production;
+```
 
 ###防止上传文件和目录
 

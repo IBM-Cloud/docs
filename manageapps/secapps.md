@@ -6,7 +6,7 @@
 #Securing apps
 {: #securingapps}
 
-*Last updated: 4 December 2015*
+*Last updated: 16 February 2015*
 
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
@@ -64,7 +64,7 @@ For every organization in {{site.data.keyword.Bluemix_notm}} with an account own
 
 Before you can upload certificates, you must create a certificate signing request. See [Creating certificate signing requests](#ssl_csr).
 
-To properly serve the SSL certificate, you must use the following IP addresses to configure the DNS or a hosts file when creating a custom domain to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}.
+To properly serve the SSL certificate, you must use the following IP addresses to configure the DNS server when creating a custom domain to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}.
 
 * US-SOUTH: 75.126.81.68
 * EU-GB: 5.10.124.142

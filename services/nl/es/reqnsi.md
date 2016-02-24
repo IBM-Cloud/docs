@@ -5,7 +5,7 @@
 
 #Servicios
 {: #services}
-*Última actualización: 7 de diciembre de 2015*
+*Última actualización: 20 de enero de 2015*
 
 Puede encontrar servicios disponibles en el **Catálogo** en **Servicios** en la interfaz de usuario de {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -61,8 +61,10 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 
 |Servicio	|Disponible en la región EE.UU. sur	|Disponible en la región Europa Reino Unido |Disponible en la región Australiana Sídney|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.activedeployshort}}	|Sí		|Sí		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Sí	   	|Sí  		|Sí|
 |{{site.data.keyword.appsecshort}}		|Sí		|No		|No|
+|{{site.data.keyword.alertnotificationshort}}|Sí		|No			|No		|
 |{{site.data.keyword.APS_DA}}			|Sí		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Sí		|No		|No|
 |{{site.data.keyword.amashort}}			|Sí		|Sí		|Sí|
@@ -85,13 +87,15 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sí	|Sí		|No|
 |{{site.data.keyword.globalizationshort}}	|Sí		|No		|No|
 |{{site.data.keyword.dataworks_short}}		|Sí		|Sí		|No|
-|{{site.data.keyword.twittershort}}		|Sí		|Sí		|No|
+|{{site.data.keyword.twittershort}}		|Sí		|Sí		|Sí|
+|{{site.data.keyword.weather_short}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sí		|Sí		|No|
 |{{site.data.keyword.iot_short}}		|Sí		|No		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Sí		|Sí		|No|
 |{{site.data.keyword.messagehub}}		|Sí		|Sí		|No|
 |{{site.data.keyword.messageresonanceshort}}	|Sí		|Sí		|No|
 |{{site.data.keyword.APS_MAiOS}} 		|Sí		|No		|No|
+|{{site.data.keyword.macm_short}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.mobilemam}}		|Sí		|Sí		|No|
 |{{site.data.keyword.mobiledata}}		|Sí		|Sí		|No|
 |{{site.data.keyword.manda}}			|Sí		|Sí		|No|

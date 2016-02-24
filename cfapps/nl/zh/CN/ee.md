@@ -65,7 +65,6 @@
    ]
 }
 ```
-{:codeblock}
 
 **注：**此环境变量是 JSON 对象的序列化，其中与应用程序绑定的每个服务实例都对应一个条目。每个服务实例提供的数据量和数据类型都是特定于服务的。如果应用程序未使用任何服务，那么 VCAP_SERVICES 为空 JSON 对象。仅当将服务添加到应用程序后，才会使用此环境变量。
 
@@ -114,7 +113,7 @@
   
   6. 现在，可以通过在浏览器中输入以下应用程序 URL 来访问应用程序：```
   http://TestNode.stage1.mybluemix.net
-  ```{:codeblock}
+  ```
 
 您还可以选择其他工具来构建应用程序，例如 Eclipse 工具。有关更多信息，请参阅 {{site.data.keyword.Bluemix_notm}} 用户界面上应用程序的“开始编码”页面。
 
@@ -173,7 +172,7 @@
                 "url" : "https://user1:secret@localhost:25002"
                 }
         };
-  ```{:codeblock}
+  ```
   
   **注：**如样本代码所示，要连接到 {{site.data.keyword.cloudant}} 服务实例，首先可以检查 VCAP_SERVICES 环境变量是否存在。如果存在，那么应用程序可以使用 cloudant 变量的属性来访问数据库。但是，如果 VCAP_SERVICES 环境变量不存在，那么将使用具有所提供缺省值的本地 {{site.data.keyword.cloudant}} 服务实例。
   
@@ -201,7 +200,7 @@ var create_message = function(req, res) {
     });
   });
 }
-  ```{:codeblock}
+  ```
   
   5. **可选：**取消绑定或删除服务实例。
   

@@ -4,10 +4,10 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*마지막 업데이트 날짜: 2015년 12월 8일*
+*마지막 업데이트 날짜: 2016년 1월 18일*
 
 {{site.data.keyword.Bluemix}}는
-애플리케이션을 빌드, 실행 및 관리하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하면 {{site.data.keyword.Bluemix_notm}} Public 환경 및 자체 네트워크 모두에 안전하게 연결되어 있는 자체 전용 SoftLayer 환경에서의{{site.data.keyword.Bluemix_notm}} 강력함과 단순성을 확보할 수 있습니다.
+애플리케이션을 빌드, 실행 및 관리하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하면 {{site.data.keyword.Bluemix_notm}} Public 환경과 고유 네트워크 모두에 안전하게 연결되어 있는 자체 전용 SoftLayer 환경에서 {{site.data.keyword.Bluemix_notm}}의 강력한 성능과 단순함을 이용할 수 있습니다.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated에는
@@ -39,13 +39,15 @@
 {{site.data.keyword.Bluemix_notm}} Dedicated 환경에서
 무제한 사용이 가능합니다. |
 | 포함 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
-| 포함 | {{site.data.keyword.cloudant}} | 고성능 JSON 데이터 계층을 제공하는 IBM의 NoSQL 데이터베이스입니다(CouchDB와 호환 가능). 1.6TB 및 초당 3,000개까지의 API 요청이 포함됩니다. |
-| 선택사항 | {{site.data.keyword.sqldb}} | {{site.data.keyword.Bluemix_notm}}에 대한 IBM {{site.data.keyword.sqldbfull}} 데이터베이스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. {{site.data.keyword.sqldb}}는 요청되는 웹과 기존 업무의 워크로드를 처리해 주는 관리 데이터베이스를 제공합니다. |
 | 선택사항 | {{site.data.keyword.mql}} | {{site.data.keyword.Bluemix_notm}}에 대한 {{site.data.keyword.mqlfull}}는 {{site.data.keyword.Bluemix_notm}} 앱에 유연하고 사용하기 쉬운 메시징을 제공하는 클라우드 기반 메시징 서비스입니다. {{site.data.keyword.mql}}는 관리 작업이 간소화된 메시징 솔루션입니다. {{site.data.keyword.mql}}를 사용하면 앱의 응답성과 확장성이 향상되고 간단하면서 강력한 API를 통해 앱 간에 간편하게 작업을 공유 및 오프로드할 수 있습니다. |
 | 선택사항 | {{site.data.keyword.dashdbshort}} | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석,
 R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
+|선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는
+API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
+|선택사항 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
 
 *표1. 전용 서비스*
+
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated 설정
 {: #setupdedicated}
@@ -60,18 +62,12 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 {{site.data.keyword.Bluemix_notm}}의 개인용 버전 설정:
 
 <ol>
-<li>시작하려면 IBM 지정 계정 담당자에게 문의하거나 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>에 문의하십시오.</li>
-<li>매월 발생하는 요금은 사용하고자 하는 전용 서비스 및
-모든 {{site.data.keyword.Bluemix_notm}} 공용 서비스에 대한 구독을 기반으로 합니다. 그런 다음 해당 구독 계약과 더불어 사용하는 모든 항목에 대한 송장을 수령하십시오.
-	<ol type="a">
-	<li>{{site.data.keyword.Bluemix_notm}} Dedicated 인스턴스의 사용 요금에 관해 IBM과 함께 작업하십시오.
-	매월 발생하는 요금은 사용하고자 하는 전용 서비스 및
+<li>시작하려면 IBM 지정 계정 담당자에게 문의하거나 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}에 문의</a>하십시오.</li>
+<li>{{site.data.keyword.Bluemix_notm}} Dedicated 인스턴스의 사용 요금에 관해 IBM과 함께 작업하십시오.
+매월 발생하는 요금은 사용하고자 하는 전용 서비스 및
 모든 {{site.data.keyword.Bluemix_notm}} 공용 서비스에 대한 구독을 기반으로 합니다. 그런 다음 해당 구독 계약과 더불어 사용하는 모든 항목에 대한 송장을 수령하십시오.</li>
-	<li>{{site.data.keyword.Bluemix_notm}} Dedicated 인스턴스 설정의 각 단계마다 최종 기한을 식별하십시오.</li>
-	</ol>
-	</li>
-<li>전용 인스턴스에 대해 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 데이터 센터 위치</a>를 선택합니다. 그러면 전용 플랫폼 및 계정이 작성됩니다. 계정에 대해, 전용 인스턴스를 시작하고 실행하기 위해 필요한 역할을 담당할 조직의 직원을 식별하십시오. 사용자가 지정하는 역할에 대한 자세한 정보는
-<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 역할 및 책임</a>을 참조하십시오.
+<li>{{site.data.keyword.Bluemix_notm}} Dedicated 인스턴스 설정의 각 단계마다 최종 기한을 식별하십시오.각 단계 및 관련 태스크에 대한 자세한 정보는 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 역할 및 책임</a>을 참조하십시오.</li>
+<li>전용 인스턴스에 대해 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 데이터 센터 위치</a>를 선택합니다. 그러면 전용 플랫폼 및 계정이 작성됩니다. 계정에 대해, 전용 인스턴스를 시작하고 실행하기 위해 필요한 역할을 담당할 조직의 직원을 식별하십시오. 사용자가 지정하는 역할에 대한 자세한 정보는 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 역할 및 책임</a>을 참조하십시오.
 </li>
 <li>기업 네트워크 및 {{site.data.keyword.Bluemix_notm}} Dedicated
 인스턴스 간의 네트워크 연결을 정의하고 설정하십시오.
@@ -82,14 +78,33 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 {{site.data.keyword.Bluemix_notm}}로의 통합을 위한 LDAP에 액세스하십시오.</li>
 	</ol>
 </li>
-<li>환경의 관리 팀에 대한 역할을 식별하고 지정하십시오.
+<li>환경에서 관리 팀의 역할을 식별하고 지정하십시오.
 	<ol type="a">
 	<li>IBM은 제공된 내용을 기반으로 네트워크 액세스 및 LDAP를 구성합니다. 관리 액세스 권한이 지정된 담당자에게 부여됩니다. 지원 및 청구에 대한 담당자도 지정해야 합니다.</li>
-	<li>IBM은 전용 환경에서 전용 서비스 및 다수의 공용 {{site.data.keyword.Bluemix_notm}} 서비스를 표시하는 신디케이트된 카탈로그를 설정합니다.</li>
+	<li>IBM은 전용 서비스를 표시하기 위해 전용 환경에 신디케이트된 카탈로그를 설정합니다. 신디케이트된 카탈로그에는 {{site.data.keyword.Bluemix_notm}} Public에서 사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함됩니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.</li>
 	<li>네트워크 및 방화벽 구성과 LDAP 엔드포인트 및 액세스를 유효성 검증하십시오.</li>
 	</ol>
 </li>
 </ol>
+
+사용자 환경에 처음 배치하고 구성하기 위해서는 다음 목록과 비슷하게 프로세스가 진행되어야 합니다. 각 태스크를 책임지는 담당자에 대한 자세한 정보는 [역할 및 책임](../dedicated/index.html#rolesresponsibilities)을 참조하십시오.
+
+<ol>
+<li>전용 인스턴스를 호스팅하는 데 사용할 데이터 센터를 선택합니다. 데이터 센터 옵션에 대한 자세한 정보는 <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer 데이터 센터 위치</a>를 참조하십시오.</li>
+<li>배치에 필요한 도메인 이름 및 사용할 ID를 지정합니다. {{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하면 3개 도메인을 사용하게 됩니다. <code>*mycompany*.*region*.bluemix.net</code> 및 <code>*mycompany*.*region*.mybluemix.net</code>에 대한 접두부를 선택합니다. 그런 다음, 세 번째 도메인의 전체 이름을 선택합니다.<br />
+<p>사용자 정의 도메인은 필요한 만큼 선택할 수 있습니다. 그러나, 사용자 정의 도메인의 인증은 사용자 자신이 책임져야 합니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="../manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</p></li>
+<li>{{site.data.keyword.Bluemix_notm}} Public에서 사용자 회사를 나타내는 데 사용되는 공용 계정의 소유자를 식별합니다. 이 계정은 신디케이션된 서비스의 사용량을 추적하는 데 사용됩니다.</li>
+<li>데이터 센터에 대한 보안 연결의 유형을 선택합니다. SoftLayer VPN, SoftLayer Direct Link 및 AT&T Net Bond에서 선택할 수 있습니다.</li>
+<li>공용 인터넷에서 전용 환경에 제한 없이 액세스할 수 있는지 결정합니다.</li>
+<li>사용할 인증의 유형을 선택합니다. IBM ID 또는 Active Directory에서 선택할 수 있습니다. IBM ID의 사용과 등록에 대한 자세한 정보는 <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">도움말 및 FAQ</a> 페이지를 참조하십시오.
+</li>
+<li>환경에서 관리 팀의 역할을 식별하고 지정합니다. 사용자가 지정하는 역할에 대한 자세한 정보는 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated 역할 및 책임</a>을 참조하십시오.</li>
+<li>IBM이 탄력적 런타임, 콘솔, 관리 기능 및 모니터링을 포함하는 코어 플랫폼을 배치합니다.</li>
+<li>IBM이 환경에 대한 사용자의 관리 액세스 권한을 구성합니다.</li>
+<li>경보에 대응하기 위해 IBM 운영 팀에서 모니터링하는 전용 인스턴스의 사용을 시작할 수 있습니다.</li>
+</ol>
+
+{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 Dedicated 관리](../administer/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [전용 인스턴스 유지보수](index.html#maintaindedicated)를 참조하십시오.
 
 ##역할 및 책임
 {: #rolesresponsibilities}
@@ -103,7 +118,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <dl>
 <dt>**조달 담당자**</dt>
 <dd>프로젝트의 특정 측면에 관해 작업하는 조직의 적합한 직원 식별을 포함하여, {{site.data.keyword.Bluemix_notm}} Dedicated 환경의 설정에 관해
-IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 패턴 선택, 상업적 배열 및 고객 자원에 대한 액세스 배열을 감독합니다. 이 조달 담당자는 전용 인스턴스를 설정하기 위한 전체 담당자입니다.</dd>
+IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 프로젝트 관리 역할을 맡아 패턴 선택, 상업적 배열 및 고객 자원에 대한 액세스 배열을 감독합니다. 이 조달 담당자는 전용 인스턴스를 설정하고 배치 프로세스를 추적하기 위한 전체 담당자입니다.</dd>
 <dt>**규제 준수 담당자**</dt>
 <dd>IBM 담당자와 함께 작업하여 보안 요구사항을 충족하는 토폴로지 및 배치 옵션을 선택합니다. 이 역할에 지정된 사용자는
 규제 준수를 달성하는 배치 패턴을 결정하기 위해 IBM 규제 준수 컨설턴트와 함께 작업합니다.</dd>
@@ -137,7 +152,7 @@ IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 �
 
 도입/인식(Inception) 단계는 {{site.data.keyword.Bluemix_notm}} Dedicated 환경을 설정하는 데 사용됩니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
-- 재무 계약을 검토하고 전달을 위한 기준 날짜를 설정합니다.
+- 재무 계약을 검토하고 전달을 위한 마일스톤 날짜를 설정합니다.
 - {{site.data.keyword.Bluemix_notm}} 플랫폼을 작성하고 런타임 및 서비스에 대한 액세스를 제공합니다.
 - 기업 네트워크 및 {{site.data.keyword.Bluemix_notm}} 오퍼레이션 간의 네트워크 연결을 정의하고 설정합니다.
 - 관리 팀에 대한 역할을 식별하고 지정합니다.
@@ -295,7 +310,7 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 
 <dl>
 <dt>Cloud Foundry의 확장성</dt>
-<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent(DEA)</a>는 내부에서 실행되는 앱에 대한 상태 점검을 수행합니다. 앱이나 DEA 자체에 문제가 있는 경우 문제 해결을 위해 앱의 추가 인스턴스를 대체 DEA에 배치합니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">고가용성 및 중복성을 갖도록 CF 구성</a>의 내용을 참조하십시오.
+<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA(Droplet Execution Agent)</a>는 내부에서 실행되는 앱에 대한 상태 점검을 수행합니다. 앱이나 DEA 자체에 문제가 있는 경우 문제 해결을 위해 앱의 추가 인스턴스를 대체 DEA에 배치합니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">고가용성 및 중복성을 갖도록 CF 구성</a>의 내용을 참조하십시오.
 </dd>
 <dt>SoftLayer 중복성</dt>
 <dd>전용 환경에 SoftLayer가 있을 경우, 각 클라우드 스토리지 클러스터의 데이터가 여러 차례 기록되고 스토리지 클러스터는 드라이브 장애 시 자동 치료 기능을 갖도록 구성됩니다. 가상 머신에 문제가 있을 경우 SoftLayer는 다른 호스트에서 가상 머신을 다시 시작합니다.</dd>

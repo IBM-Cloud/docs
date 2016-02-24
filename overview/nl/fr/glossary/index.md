@@ -1,4 +1,4 @@
-{:shortdesc: .shortdesc}
+﻿{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Termes du glossaire de {{site.data.keyword.Bluemix_notm}} 
@@ -134,7 +134,7 @@ de cloud dédié et de cloud local. Voir aussi <a class="xref" href="#gloss_D__x
 <dd class="dd">Entreprise ou organisation tierce reconnue qui émet des certificats numériques. L'autorité de certification vérifie généralement l'identité des
 individus qui reçoivent un certificat unique. Voir aussi <a class="xref" href="#gloss_I__x3753781">certificat intermédiaire</a>,
 <a class="xref" href="#gloss_S__x2038004">couche Secure Sockets Layer</a>, <a class="xref" href="#gloss_T__x2042234">certificat racine digne de confiance</a>.</dd>
-<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>demande de signature de certificat </dt>
+<dt class="dt dlterm"><a name="gloss_C__x3530521"><!-- --></a>demande de signature de certificat</dt>
 <dd class="dd">Message électronique qu'une organisation envoie à une autorité de certification pour obtenir un certificat. La demande comprend une clé
 publique et est signée à l'aide d'une clé privée. L'autorité de certification retourne le certificat après l'avoir signé avec sa propre clé privée.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>ensemble d'artefacts modifiés</dt>
@@ -206,8 +206,7 @@ du projet ou des informations plus détaillées.</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>déploiement</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">Processus consistant à déplacer une application (telle qu'un rapport ou un modèle) vers une instance différente. Par exemple, les rapports sont souvent créés dans un environnement de test, puis déployés dans un environnement de production. Lorsqu'une application est déployée, elle est exportée, transférée, puis importée.</li>
 <li class="li">Processus qui extrait la sortie d'une génération, prépare la sortie avec des propriétés de configuration, et installe le package à un emplacement
-prédéfini pour qu'il puisse être testé ou exécuté. Voir
-aussi <a class="xref" href="#gloss_S__x2067189">étape</a>.</li>
+prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi <a class="xref" href="#gloss_S__x2067189">constituer</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_D__x5784896"><!-- --></a>DevOps</dt>
@@ -581,6 +580,9 @@ d'exécution.</li>
 <li class="li">Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.</li>
 </ol>
 </dd>
+<dt class="dt dlterm"><a name="gloss_S__x2067189a"><!-- --></a>étape</dt>
+<dd class="dd">Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
+d'exécution.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2094743"><!-- --></a>section</dt>
 <dd class="dd">Section d'un progiciel qui définit une action spécifique à entreprendre sur le progiciel ou un ensemble de conditions dans lesquelles des actions doivent être entreprises sur le progiciel. Le progiciel complet est lui-même une section qui contient une hiérarchie composée de multiples sections différentes.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7470511"><!-- --></a>module de démarrage</dt>

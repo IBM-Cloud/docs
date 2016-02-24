@@ -4,7 +4,7 @@
 # Sécurité
 {: #security}
 
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 9 décembre 2015*
 
 Ces services de sécurité permettent de protéger l'accès aux applications ainsi qu'aux
 charges de travail, et de rechercher les vulnérabilités dans les applications. Vous pouvez également imbriquer des contrôles de sécurité dans les services

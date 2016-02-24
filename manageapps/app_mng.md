@@ -65,12 +65,6 @@ These utilities support Node.js only.
   The *inspector* utility also starts *proxy*.
   
   2. *strongpm*: Enables use of [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} to analyze your Node.js application with utilities such as [StrongLoop Metrics, Profiling and Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-  
-  **NOTE:** You must use a 0.12 version of engines.node in order to use the **strongpm** utility. The engines.node version is specified in the package.json file. For example:
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   The *strongpm* utility also starts *proxy*.
   

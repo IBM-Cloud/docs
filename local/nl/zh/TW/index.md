@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} 本端
 {: #local}
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 1 月 15 日*
 
 「{{site.data.keyword.Bluemix}} 本端」將 {{site.data.keyword.Bluemix_notm}} 雲端型平台的功能及靈活性帶給資料中心。使用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以利用公司防火牆來保護最機密的工作量，同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」並與它同步。
 {:shortdesc}
@@ -68,6 +68,39 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 	</ol>
 </li>
 </ol>
+
+對您的環境進行初始部署和配置的過程應類似於下列清單。如需每個作業負責人員的詳細資料，請參閱[角色及責任](../local/index.html#rolesresponsibilities)。
+
+<ol>
+<li>您提供符合運算資源、網路和儲存體之規格的 VMware 配置。如需基礎架構需求的相關資訊，請參閱 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} 本端基礎架構需求</a>。</li>
+<li>您提供要由初始虛擬機器使用的 vCenter 叢集認證。您必須提供下列資訊：
+<ul>
+<li>VMware 叢集的名稱</li>
+<li>vCenter 叢集認證（包括使用者 ID 和密碼）</li>
+<li>一個或多個資料儲存庫名稱（儲存體 LUN 名稱）</li>
+<li>VLAN ID/VMware 埠群組</li>
+<li>資源儲存區名稱</li>
+</ul>
+</li>
+<li>您與 IBM 合作，一起驗證您在前一個作業中提供的認證。</li>
+<li>您提供自己網路上的 7 個 IP 位址。如果您有安全的 Web Proxy，容許內部 {{site.data.keyword.Bluemix_notm}} 元件對網際網路進行出埠存取，則必須提供認證以連接至其中。
+<p>**附註**：如果您的 Web Proxy 不是安全的 Proxy，則無需提供認證。另請注意，並非所有「{{site.data.keyword.Bluemix_notm}} 本端」客戶都使用 Web Proxy。</p></li>
+<li>IBM 提供一個 URL 白名單，在開始部署之前，您必須容許這些 URL 可通過您的 Web Proxy。</li>
+<li>您為部署指定網域名稱，以及要使用的 ID。設定本端實例時，您會得到兩個局部定義的網域，請挑選這兩個網域的字首。例如，挑選 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的字首。然後，還可以選擇完整網域來建立自訂網域。
+<p>您可以根據自己的需要選擇任意數量的自訂網域。不過，您應負責取得自訂網域的憑證。如需建立自訂網域的相關資訊，請參閱<a href="../manageapps/updapps.html#domain">建立及使用自訂網域</a>。</p></li>
+<li>您選擇要使用何種技術（IPSec 或 OpenVPN 通道）來配置「轉遞」，以便連回 IBM 作業中心。</li>
+<li>IBM 在 {{site.data.keyword.Bluemix_notm}} 叢集內安裝並啟動初始虛擬機器。如果您提供自己的 VMware，則 IBM 業務代表會協助您的客戶代表來完成此作業。</li>
+<li>IBM 配置「轉遞」，以便連回 IBM 作業中心與之進行通訊。</li>
+<li>初始虛擬機器儲存庫拉入更新後的建置構件。</li>
+<li>您提供認證，供 IBM 連接至公司的 LDAP 目錄實例。</li>
+<li>IBM 使用自動化來部署核心 {{site.data.keyword.Bluemix_notm}} 平台。</li>
+<li>IBM 部署核心平台，其中包含彈性執行時期、主控台、管理特性和監視。</li>
+<li>IBM 配置您對環境的管理存取權。</li>
+<li>IBM 將您的聯合型錄從本端部署鏈結至「公用 {{site.data.keyword.Bluemix_notm}}」實例，以便使用公用服務。依預設，本端實例中會提供一組公用服務。您可以使用管理頁面進行型錄管理，以便為本端實例開啟或關閉服務。</li>
+<li>您可以開始使用您的本端實例來回應警示，該實例由 IBM 作業團隊進行監視。</li>
+</ol>
+
+在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端和專用](../administer/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護本端實例](index.html#maintainlocal)。
 
 ##角色及責任
 {: #rolesresponsibilities}
@@ -212,7 +245,15 @@ ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器
 </dd>
 <dt>**網路**</dt>
 <dd>
-建議的需求包括客戶可存取的埠群組，其中含有 10 個具有出埠網際網路存取權的客戶網路 IP 位址。然後，僅在用於「{{site.data.keyword.Bluemix_notm}} 本端」的 ESXi 之間定義第二個專用 VLAN。此 VLAN 在 VMware 中會顯示為埠群組。「{{site.data.keyword.Bluemix_notm}} 本端」會將它用於專用子網路，這樣更安全，且有助於避免發生遞送問題。</dd>
+建議的需求包括客戶可存取的埠群組，其中含有 7 個在相同子網路中具有出埠網際網路存取權的客戶網路 IP 位址。2 個埠由初始虛擬機器使用，3 個埠是供網域使用的虛擬 IP 位址，最後 2 個埠是 DataPower 的公用 IP 位址。然後，定義第二個專用 VLAN，僅在要用於「{{site.data.keyword.Bluemix_notm}} 本端」的 ESXi 之間使用。此 VLAN 在 VMware 中會顯示為埠群組。「{{site.data.keyword.Bluemix_notm}} 本端」會將它用於專用子網路，這樣更安全，且有助於避免發生遞送問題。<br />
+<p>使用下列埠：</p>
+<ul>
+<li>埠 443，用於「轉遞」連線
+<p>**附註**：如果選擇使用 IPSec 通道，而不是 OpenVPN，請為此連線開啟一個客戶埠。</p></li>
+<li>埠 389 或 SSL 636，用於 LDAP 或 Active Directory 連線</li>
+</ul>
+<p>**附註**：IBM 可偵測到網路連線是否中斷。如果網路連線已中斷，IBM 會聯絡您，並與您的網路專家一起來解決該問題。</p>
+</dd>
 </dl>
 
 ###vCenter 伺服器配置
@@ -260,9 +301,9 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 ###Droplet Execution Agent (DEA) 儲存區
 每一個 DEA 都配置有：
-- 16 至 32 GB 的 RAM
-- 2 至 4 個 vCPU
-- 150 至 300 GB 的儲存體
+- 16 - 32 GB 的 RAM
+- 2x - 4x vCPU
+- 150 - 300 GB 的儲存體
 
 例如，如果 ESXi 主機大小為 256 GB 記憶體且具有 16 個核心，則會新增八個 DEA。如果 ESXi 主機大小為 64 GB 記憶體且具有 8 個核心，則需要新增兩個 ESXi 及四個 DEA。每四個 DEA 需要額外的 1.5 TB 儲存體。此範例是根據配置有 32 GB RAM、4 個 vCPU 及 300 GB 儲存體的 DEA。
 
@@ -348,7 +389,8 @@ IBM 會透過電子郵件、電話或其他方法，來傳送針對每一個維�
 
 <dl>
 <dt>Cloud Foundry 中的可擴充性</dt>
-<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> 會對其內部執行的應用程式執行性能檢查。如果應用程式或 DEA 本身發生問題，則會將應用程式的其他實例部署至替代 DEA，以處理問題。如需相關資訊，請參閱 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>。</dd>
+<dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> 會對其內部執行的應用程式執行性能檢查。如果應用程式或 DEA 本身發生問題，則會將應用程式的其他實例部署至替代 DEA，以處理問題。如需相關資訊，請參閱 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>。
+</dd>
 <dt>meta 資料備份</dt>
 <dd>meta 資料會備份至次要位置，一般是內部部署虛擬機器。如果可能，您應該將備份抄寫至距離至少 200 公里的專屬環境。</dd>
 </dl>

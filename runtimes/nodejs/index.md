@@ -2,10 +2,10 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 12 January 2016*
 
 # Node.js runtime
 {: #nodejs_runtime}
+*Last updated: 19 February 2016*
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
 The sdk-for-nodejs buildpack provides a complete runtime environment for Node.js apps.
@@ -86,7 +86,7 @@ See the following example:
   "description": "this is my app",
   "version": "0.1",
   "engines": {
-     "node": "4.2.4"
+     "node": "4.2.4",
      "npm": "2.11.3"
   }
 }
@@ -104,7 +104,7 @@ NPM provides a scripting facility allowing you to run scripts, including **prein
 
 ### Cache behavior
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} maintains a cache directory per node application, that is persisted between builds. The cache stores resolved dependencies so they are not downloaded and installed every time the app is deployed.  For example, suppose myapp depends on **express**.  Then the first time myapp is deployed the **expess** module is downloaded.  On subsequent deployments of myapp,  the cached instance of **express** is used.
+{{site.data.keyword.Bluemix}} maintains a cache directory per node application, that is persisted between builds. The cache stores resolved dependencies so they are not downloaded and installed every time the app is deployed.  For example, suppose myapp depends on **express**.  Then the first time myapp is deployed the **expess** module is downloaded.  On subsequent deployments of myapp,  the cached instance of **express** is used. The default behavior is to cache all node_modules installed by NPM and bower_components installed by bower.
 
 Use the NODE_MODULES_CACHE variable to determine whether or not the Node buildpack uses or ignores the cache from previous builds. The default value is true.  To disable caching set NODE_MODULES_CACHE to false, for example via the cf command line:
 ```
@@ -132,22 +132,23 @@ Bluemix provides multiple versions of the Node.js buildpack.
 The **sdk-for-nodejs** buildpack takes precedence over the **nodejs_buildpack** in Bluemix. If you want to use the **nodejs_buildpack** with your application instead of the **sdk-for-nodejs** buildpack, you must specify your buildpack, for example, by using the -b option with the **cf push** command.
 
 Typically the current **sdk-for-nodejs** buildpack and a back-level version are available.  To see all the available buildpacks us the **cf buildpacks** command.  For example:
-```
-cf buildpacks
-Getting buildpacks...
 
-buildpack                                 position   enabled   locked   filename   
-...
-sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
-nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
-sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
+```
+    cf buildpacks
+    Getting buildpacks...
+
+    buildpack                                 position   enabled   locked   filename   
+    ...
+    sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+    nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
+    sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
 ```
 {: codeblock}
 
 
-## RELATED LINKS
-{: #related_links}
-* [Latest Updates to the Node.js Buildpack](updates.html)
+# rellinks
+## general
+* [Latest Updates to the Node.js Buildpack](./updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

@@ -5,7 +5,7 @@
 개요
 {: #overview}
 
-*마지막 업데이트 날짜: 2015년 11월 20일*
+*마지막 업데이트 날짜: 2016년 1월 18일*
 
 {{site.data.keyword.Bluemix}}는 모바일 및 웹 개발자에게 통합, 보안, 트랜잭션 및 기타 핵심 기능을 지원하는 {{site.data.keyword.IBM_notm}} 소프트웨어 및 비즈니스 파트너의 소프트웨어에 대한 액세스를 제공하는 {{site.data.keyword.IBM}}의 개방형 클라우드 플랫폼입니다.{:shortdesc}
 
@@ -51,7 +51,7 @@ PaaS(Platform as a Service)를 통해 애플리케이션을 더 간편하게 개
 집중할 수 있도록
 루트 파일 시스템
 및 미들웨어 컴포넌트 등의 계층은 추상화됩니다. 단,
-앱이 실행되는 특정 계층에 대한 지식이 필요한 경우에는 해당 계층에 대해 자세히 볼 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 인프라 계층 보기](../cli/viewinfra.html#viewinfra)를 참조하십시오.  
+앱이 실행되는 특정 계층에 대한 지식이 필요한 경우에는 해당 계층에 대해 자세히 볼 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 인프라 계층 보기](../cli/vcapsvc.html#viewinfra)를 참조하십시오. 
 
 ## {{site.data.keyword.Bluemix_notm}} 아키텍처
 {: #ov_arch}
@@ -129,6 +129,10 @@ IBM은 사용자가 비즈니스에 집중할 수 있도록 사용자 환경을 
 ![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local")
 
 *그림 4. {{site.data.keyword.Bluemix_notm}} Local*
+
+도입/인식(Inception) 가상 머신은 릴레이를 통해 IBM 운영 센터에 아웃바운드 연결되는 네트워크의 방화벽 뒤에 있는 네트워크에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 플랫폼 구성요소와 코어 서비스는 분리된 사설 가상 근거리 통신망(VLAN)에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} Local은 사설 서브넷을 위해 VLAN을 사용합니다. 공용 VLAN에 비해 사설 서브넷을 사용하면 한층 안전하고 라우팅 문제를 방지하는 데 도움이 됩니다.
+
+DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항](../local/index.html#localinfra)를 참조하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}}의 작동 방식
 {: #howwork}
@@ -269,11 +273,11 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **지역 이름** | **지역 접두부** | **cf API 엔드포인트** | **UI 콘솔** |       
-|-----------------|-------------------|---------------------|----------------|
-| 미국 남부 지역 | us-south | api.ng.bluemix.net | console.ng.bluemix.net |
-| 유럽 영국 지역 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| 오스트레일리아 시드니 지역 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| **지역 이름** | **지리적 위치** | **지역 접두부** | **cf API 엔드포인트** | **UI 콘솔** |       
+|-----------------|-------------------------|-------------------|---------------------|----------------|
+| 미국 남부 지역 | 달라스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
+| 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
+| 시드니 지역 | 시드니, 오스트레일리아 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록*
@@ -453,7 +457,7 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 조직 관리자로서 조직 구성원에게만 표시되는
 개인 서비스로 API를 공개합니다.
 
-{{site.data.keyword.Bluemix_notm}}에서 작성한 앱과 SOR(System of Record)을 통합하려면 Cloud Integration 서비스를 사용합니다. Cloud Integration 서비스를 사용하여 Cloud Integration API를 작성하고 API를 조직의 개인 서비스로 공개할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서 작성한 앱과 SOR(System of Record)을 통합하려면 클라우드 통합 서비스를 사용합니다. 클라우드 통합 서비스를 사용하여 Cloud Integration API를 작성하고 API를 조직의 개인 서비스로 공개할 수 있습니다.
 
 <dl>
 <dt>Cloud Integration API</dt>
@@ -461,7 +465,7 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 <dt>개인 서비스</dt>
     <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 또한 개인 서비스에는
 서비스 제공업체가 제공하는 문서 또는 기타 항목이 포함될 수 있습니다.
-조직 관리자만 Cloud Integration API를 개인 서비스로 공개할 수 있습니다. 사용자에게 제공되는 개인 서비스를 보려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 개인 선택란을 선택하십시오. Cloud Integration 서비스에 연결하지 않고 개인 서비스를 선택하고 앱에 바인딩할 수 있습니다. 다른 {{site.data.keyword.Bluemix_notm}} 서비스에서와 동일한 방식으로 개인 서비스를 앱에 바인딩합니다. API를 개인 서비스로 공개하는 방법에 대한 자세한 정보는 API를 개인 서비스로 공개를 참조하십시오. </dd>
+조직 관리자만 Cloud Integration API를 개인 서비스로 공개할 수 있습니다. 사용자에게 제공되는 개인 서비스를 보려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 개인 선택란을 선택하십시오. 클라우드 통합 서비스에 연결하지 않고 개인 서비스를 선택하고 앱에 바인딩할 수 있습니다. 다른 {{site.data.keyword.Bluemix_notm}} 서비스에서와 동일한 방식으로 개인 서비스를 앱에 바인딩합니다. API를 개인 서비스로 공개하는 방법에 대한 자세한 정보는 API를 개인 서비스로 공개를 참조하십시오. </dd>
 </dl>
 
 ### 시나리오: SOR(System of Record)에 연결할 RMA(Rich Mobile Application) 작성
@@ -477,11 +481,11 @@ SOR(System of Record) 및 SOE(System of Engagement)를 연결함으로써 개발
 그는 가장 친숙한 Node.js 런타임을 사용하는
 Mobile Cloud 표준 유형을 사용합니다.
 
-그런 다음 {{site.data.keyword.Bluemix_notm}}사용자 인터페이스에서 Cloud Integration 서비스를 사용하여 보안 커넥터를 통해 API를 노출합니다. 통합 개발자는 보안 커넥터를 다운로드하고
+그런 다음 {{site.data.keyword.Bluemix_notm}}사용자 인터페이스에서 클라우드 통합 서비스를 사용하여 보안 커넥터를 통해 API를 노출합니다. 통합 개발자는 보안 커넥터를 다운로드하고
 이를 사내 구축형으로 설치하여 API와 데이터베이스 사이의
 보안 통신을 지원합니다. 데이터베이스 엔드포인트를 작성한 후 모든 스키마를 보고 앱에 API로 노출할 테이블을 추출할 수 있습니다. 
 
-통합 개발자는 Push 서비스를 추가하여 모바일 알림을 관심 있는 이용자에게 제공합니다. 또한 새 고객 레코드가
+통합 개발자는 푸시 서비스를 추가하여 모바일 알림을 관심 있는 이용자에게 제공합니다. 또한 새 고객 레코드가
 Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 트윗에 추가합니다.
 
@@ -511,7 +515,7 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 | 중국어 | zh_CN |
 | 대만어 | zh_TW |
 
-*표 3. 지원되는 자국어 및 언어 코드*
+*표 2. 지원되는 자국어 및 언어 코드*
 
 # rellinks
 ## 일반 
@@ -519,7 +523,7 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 알려진 문제](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} 용어집](glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{{site.data.keyword.domainname}}/pricing/)
+* [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps 서비스](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)
 * [SoftLayer, {{site.data.keyword.IBM_notm}} 회사](http://www.softlayer.com/)

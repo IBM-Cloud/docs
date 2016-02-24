@@ -8,10 +8,9 @@
 # Allgemeine Serviceprobleme
 {: #general}
 
-*Letzte Aktualisierung: 19. November 2015*
+*Letzte Aktualisierung: 9. Dezember 2015*
 
-Ein {{site.data.keyword.Bluemix}}-Serviceproblem
-liegt zum Beispiel vor, wenn für ein Gateway ein Zeitlimitfehler auftritt, sobald Sie eine Serviceinstanz löschen. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
+Ein {{site.data.keyword.Bluemix}}-Serviceproblem liegt zum Beispiel vor, wenn für ein Gateway ein Zeitlimitfehler auftritt, sobald Sie eine Serviceinstanz löschen. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
 ## Fehlernachricht wegen Gatewayzeitlimitüberschreitung beim Löschen einer Serviceinstanz

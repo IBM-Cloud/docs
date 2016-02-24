@@ -6,7 +6,7 @@
 
 #Creación del botón Desplegar en {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Última actualización: 8 de diciembre de 2015* 
+*Última actualización: 19 de enero de 2016* 
 
 El botón Desplegar en {{site.data.keyword.Bluemix}} es una manera fácil de compartir la app de origen Git público con otras personas para que puedan experimentar con el código
 y desplegarla en IBM {{site.data.keyword.Bluemix_notm}}. Este botón requiere una configuración mínima y puede insertarse en cualquier lugar que admita la marcación. El usuario que pulse el botón creará una copia del código en un nuevo repositorio Git, de manera que la app original no se verá afectada. 
@@ -60,11 +60,24 @@ botón de ejemplo para una app que se despliega en un contenedor {{site.data.key
 Para crear el botón Desplegar en {{site.data.keyword.Bluemix_notm}}: 
 
 <ol>
-<li> Copie y modifique una de las siguientes plantillas de fragmento de código con un repositorio Git público válido.<ul>
+<li> Copie y modifique una de las siguientes plantillas de fragmento de código con un repositorio Git público válido.
+<p></p>
+<p>
+<strong>Consejo</strong>: Si desea especificar la entrada de compilación para un proyecto de DevOps Services, añada un parámetro de ramificación en el URL de Git. Al añadir un parámetro de ramificación, el repositorio de Git público original, incluidas todas sus ramificaciones, se clonará en un nuevo proyecto privado de DevOps Services con un nuevo repositorio de Git. La ramificación de Git especificada se establece como la entrada para el trabajo de compilación. Si no especifica una ramificación, la entrada para el trabajo de compilación se establecerá en la rama maestra de forma predeterminada.
+</p>
+<ul>
 <li>HTML:
+<p>
 Default master branch:
+</p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git&gt;" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+</pre>
+<p>
+Specified Git branch:
+</p>
+<pre class="codeblock">
+&lt;a href="https://bluemix.net/deploy?repository=&lt;URL_repositorio_git&gt;&branch=&lt;rama_git>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown:
@@ -72,7 +85,12 @@ Default master branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git&gt; # [required]&#41;
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> # [required]&#41;
+</pre>
+<p>Rama Git especificada:
+</p>
+<pre class="codeblock">
+[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;URL_repositorio_git> &branch=&lt;rama_git&gt; # [required]&#41;
 </pre>
 </li>
 </ul>
@@ -107,7 +125,7 @@ Revise estas consideraciones del repositorio del proyecto que utilizará en el b
 En el archivo de manifiesto puede especificar: 
     <ul>
     <li>Un nombre de app exclusivo.</li>  
-    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al catálogo de <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}}</a>.
+    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al catálogo de <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> Los servicios declarados son una extensión de IBM del formato de manifiesto estándar de Cloud Foundry. Es posible que se vaya revisando dicha extensión en posteriores releases a medida que se desarrolle y mejore la característica.
 	
@@ -149,17 +167,18 @@ En el archivo de manifiesto puede especificar:
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que crea la salida en la carpeta <code>./output/</code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, que crea la salida en la carpeta <code>.</code> </i>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, que crea la salida en la carpeta <code>. </code>. </li>
+		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, que compila la salida a <code>. </code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, que crea la salida en la carpeta <code>./target/</code></li>
 	   </ul>
 	</li>	
-	<li>Si está desarrollando una app en un contenedor utilizando <stong>IBM Container Service</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. <ul>
+	<li>Si está desarrollando una app en un contenedor utilizando <stong>IBM Container Service</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
+	<ul>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, consulte la documentación de Docker. </li>
-	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un archivo <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">vea ejemplos en GitHub</a>. Para crear un archivo pipeline.yml a partir de un proyecto de {{site.data.keyword.jazzhub_short}} y añadirlo al repositorio, siga estos pasos.
+	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un archivo <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">vea ejemplos en GitHub</a>. Para crear un archivo pipeline.yml a partir de un proyecto de {{site.data.keyword.jazzhub_short}} y añadirlo al repositorio, siga estos pasos. 
 <ol>
 <li>Abra el proyecto de DevOps Services en un navegador y pulse <b>Crear y desplegar</b>.</li>
 <li>Configure su conducto con los trabajos de creación y despliegue de <b>IBM Container Service</b>.</li>
-<li>En el navegador, añada <code>/yaml</code> al URL del conducto del proyecto y pulse Intro.
+<li>En el navegador, añada <code>/yaml</code> al URL del conducto del proyecto y pulse Intro. 
 <br>Ejemplo: <code>https://hub.jazz.net/pipeline/<propietario>/<nombre_proyecto>/yaml</code></li>
 <li>Guarde el archivo resultante <code>pipeline.yml</code>.</li>
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>

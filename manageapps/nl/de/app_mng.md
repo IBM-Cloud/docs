@@ -10,8 +10,7 @@
 
 Beim App-Management handelt es sich um eine Reihe von Entwicklungs- und
 Debugging-Dienstprogrammen, die für Ihre Liberty- und Node.js-Anwendungen in
-{{site.data.keyword.Bluemix}} aktiviert werden können. 
-{:shortdesc}
+{{site.data.keyword.Bluemix}} aktiviert werden können. {:shortdesc}
 
 ##Dienstprogramme für das App-Management
 {: #Utilities}
@@ -85,7 +84,7 @@ Diese Dienstprogramme unterstützen nur Node.js.
     cf restage <App-Name>
     ```
 	
-    2. Fügen Sie in der Cloud Foundry-Befehlszeile eine Route zu Ihrer Anwendung hinzu, wobei an den Anwendungsnamen in der Route '-pm ' angehängt wird, z. B. '<App-Name>-pm.mybluemix.net'.
+    2. Fügen Sie in der Cloud Foundry-Befehlszeile eine Route zu Ihrer Anwendung hinzu, wobei an den Anwendungsnamen in der Route '-pm' angehängt wird, z. B. '<App-Name>-pm.mybluemix.net'.
     
 	```
     cf map-route <App-Name> ng.bluemix.net -n <App-Name>-pm
@@ -153,7 +152,7 @@ cf restage myApp
 
 * Das App-Management unterstützt nur Einzelinstanzanwendungen.
 * Änderungen, die Sie an Ihrer Anwendung mithilfe von App-Management vornehmen, sind temporär und gehen verloren, wenn Sie diesen Modus verlassen. Dieser Modus dient nur temporären Entwicklungszwecken und ist aufgrund seiner Leistung nicht als Produktionsumgebung gedacht.
-* Die meisten App-Management-Dienstprogramme funktionieren nicht, wenn Sie den Startbefehl in der Datei 'manifest.yml' (command) oder der Befehlszeilenschnittstelle 'cf' (-c) festlegen. Bei diesen Methoden handelt es sich um Buildpack-Überschreibungen, und sie sind Anti-Patterns für das Starten von Node.js-Anwendungen. Die besten Ergebnisse erzielen sie, indem Sie den Startbefehl in der Datei 'package.json' oder 'Procfile' festlegen.
+* Die meisten App-Management-Dienstprogramme funktionieren nicht, wenn Sie den Startbefehl in der Datei 'manifest.yml' (command) oder der Befehlszeilenschnittstelle 'cf' (-c) festlegen. Bei diesen Methoden handelt es sich um Buildpack-Überschreibungen und sie sind Anti-Patterns für das Starten von Node.js-Anwendungen. Die besten Ergebnisse erzielen Sie, indem Sie den Startbefehl in der Datei 'package.json' oder 'Procfile' festlegen.
 
 ##Entwicklungsmodus für Eclipse Tools
 {: #devmode}

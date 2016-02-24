@@ -4,7 +4,7 @@
 # Seguridad
 {: #security}
 
-*Última actualización: 19 de noviembre de 2015*
+*Última actualización: 9 de diciembre de 2015*
 
 Con estos servicios de seguridad, puede proteger el acceso a app y cargas de trabajo y exploración app en busca de vulnerabilidades. También puede incorporar controles de seguridad de gestión de datos en los servicios de gestión de datos y de Big Data. 
 {:shortdesc}

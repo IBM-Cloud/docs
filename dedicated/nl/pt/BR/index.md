@@ -4,16 +4,11 @@
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Última atualização: 8 de dezembro de 2015*
+*Última atualização: 18 de janeiro de 2016*
 
 {{site.data.keyword.Bluemix}} é
 uma plataforma de padrão aberto, baseada em nuvem para construir, executar e
-gerenciar aplicativos. Com o
-{{site.data.keyword.Bluemix_notm}} Dedicated, você obtém o
-poder e a simplicidade do {{site.data.keyword.Bluemix_notm}}—
-em seu próprio ambiente dedicado do SoftLayer que está firmemente
-conectado ao ambiente do {{site.data.keyword.Bluemix_notm}} e
-à sua própria rede.
+gerenciar aplicativos. Com o {{site.data.keyword.Bluemix_notm}} Dedicated, você obtém o poder e a simplicidade do {{site.data.keyword.Bluemix_notm}}&mdash; em seu próprio ambiente dedicado do SoftLayer que está firmemente conectado ao ambiente do {{site.data.keyword.Bluemix_notm}} Public e à sua própria rede.
 {:shortdesc}
 
 O {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -35,8 +30,7 @@ túnel VPN e uma VLAN privada.
 Dedicated*
 
 Ambientes do {{site.data.keyword.Bluemix_notm}} Dedicated
-possuem as mesmas normas de segurança que as do {{site.data.keyword.Bluemix_notm}} público
-em termos de segurança de infraestrutura, operacional e física. No entanto,
+possuem as mesmas normas de segurança que as do {{site.data.keyword.Bluemix_notm}} público em termos de segurança de infraestrutura, operacional e física. No entanto,
 o acesso do desenvolvedor ao {{site.data.keyword.Bluemix_notm}} dedicado é
 controlado por suas políticas de LDAP, que podem ser configuradas pela equipe do {{site.data.keyword.Bluemix_notm}}
 quando configuram seu ambiente. No ambiente dedicado,
@@ -58,22 +52,19 @@ você possui uso ilimitado no ambiente do {{site.data.keyword.Bluemix_notm}}
 Dedicated. |
 | Incluído | {{site.data.keyword.datacshort}} | Esse serviço fornece uma grade de dados da memória
 que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
-50 GB de cache da memória. |
-| Incluído | {{site.data.keyword.cloudant}} | Banco de dados NoSQL da IBM que fornece uma camada de dados JSON de alto desempenho (compatível com CouchDB). Inclui 1,6 TB e até 3.000 solicitações de API por segundo. |
-| Opcional | {{site.data.keyword.sqldb}} | O IBM
-{{site.data.keyword.sqldbfull}} Database for
-{{site.data.keyword.Bluemix_notm}} inclui um banco de dados relacional totalmente provisionado para seu aplicativo.. O
-{{site.data.keyword.sqldb}} fornece um banco de dados gerenciado para manipular as exigentes cargas de trabalho transacionais e da web dos seus negócios. |
-| Opcional | {{site.data.keyword.mql}} | O IBM
-{{site.data.keyword.mqlfull}} for
-{{site.data.keyword.Bluemix_notm}} é um serviço de sistema de
-mensagens baseado em nuvem que fornece mensagens flexíveis e fáceis
-de usar para apps {{site.data.keyword.Bluemix_notm}}. O
+50 GB de cache na memória. |
+| Opcional | {{site.data.keyword.mql}} | O {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} é um serviço de sistema de mensagens baseado em nuvem que fornece sistema de mensagens flexível e fácil de usar para apps {{site.data.keyword.Bluemix_notm}}. O
 {{site.data.keyword.mql}} fornece uma solução fácil de administrar para sistema de mensagens. É
 possível usar o {{site.data.keyword.mql}} para tornar os seus apps mais responsivos e escaláveis e compartilhar e transferir trabalho entre apps com uma API única e poderosa. |
 | Opcional | {{site.data.keyword.dashdbshort}} | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
+|Opcional | {{site.data.keyword.APIM}} | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
+possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
+benefício do uso do serviço {{site.data.keyword.APIM}}
+é que é possível gerenciar como suas APIs são usadas. |
+|Opcional | {{site.data.keyword.SecureGateway}} | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.   |
 
 *Tabela 1. Serviços dedicados*
+
 
 ##Configurando o {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #setupdedicated}
@@ -93,28 +84,18 @@ IBM usufrui das vantagens de vários locais do SoftLayer para entregar o {{site.
 Para configurar sua versão privada do {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
-<li>Entre em contato com o representante de conta da IBM ou entre em
-contato com o
-<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>
-para começar.</li>
-<li>A taxa de recorrência mensal baseia-se nos serviços
-dedicados que você desejar usar, mais uma assinatura de todos os serviços públicos do
-{{site.data.keyword.Bluemix_notm}}. Em seguida, você receberá uma fatura para tudo o que usar além
-desse contrato de assinatura.
-	<ol type="a">
-	<li>Trabalhe com a IBM com relação à taxa de sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated.
-	A taxa de recorrência mensal baseia-se nos serviços
+<li>Entre em contato com o representante de conta designado da IBM ou <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">entre em contato com o {{site.data.keyword.Bluemix_notm}}</a> para começar.</li>
+<li>Trabalhe com a IBM com relação à taxa de sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated. A taxa de recorrência mensal baseia-se nos serviços
 dedicados que você desejar usar, mais uma assinatura de todos os serviços públicos do
 {{site.data.keyword.Bluemix_notm}}. Em seguida, você receberá uma fatura para tudo o que usar além
 desse contrato de assinatura.</li>
-	<li>Identifique os prazos finais de cada fase de configuração
-da instância do {{site.data.keyword.Bluemix_notm}} Dedicated.</li>
-	</ol>
-	</li>
+<li>Identifique os prazos finais de cada fase de configuração
+da instância do {{site.data.keyword.Bluemix_notm}} Dedicated. Para obter informações sobre cada fase e as tarefas envolvidas, veja <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.</li>
 <li>Selecione o <a href="http://www.softlayer.com/data-centers" target="_blank">local do datacenter do SoftLayer</a> para a instância dedicada. Em seguida, sua plataforma e conta dedicadas
 são criadas. Para a conta, identifique as pessoas de sua organização
 para as funções que são necessárias para tornar a instância dedicada
-operacional. Para obter mais informações sobre as funções designadas, consulte <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.</li>
+operacional. Para obter informações sobre as funções designadas, veja <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.
+</li>
 <li>Defina e estabeleça conectividade de rede entre a
 rede corporativa e a instância do {{site.data.keyword.Bluemix_notm}}
 Dedicated.
@@ -127,21 +108,37 @@ coisas como endereços IP ou firewalls e acesso ao LDAP para
 integração ao {{site.data.keyword.Bluemix_notm}}.</li>
 	</ol>
 </li>
-<li>Identifique e designe funções para sua equipe administrativa
-do ambiente.
+<li>Identifique e designe funções para sua equipe administrativa para o ambiente.
 	<ol type="a">
 	<li>A IBM configura o acesso à rede e LDAP baseado no que foi
 fornecido. É fornecido
 acesso administrativo aos contatos designados. Deve-se também
 designar um contato para suporte e faturamento.</li>
-	<li>A IBM configura um catálogo organizado em seu ambiente dedicado
-para mostrar os serviços dedicados e vários dos serviços públicos do
-{{site.data.keyword.Bluemix_notm}}.</li>
+	<li>A IBM configura um catálogo organizado em seu ambiente dedicado para mostrar os serviços dedicados. O catálogo organizado inclui serviços adicionais que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança.</li>
 	<li>Você valida a configuração de rede e de firewall,
 do terminal LDAP, e acessa.</li>
 	</ol>
 </li>
 </ol>
+
+É possível esperar um processo semelhante à lista a seguir para a implementação e a configuração iniciais do seu ambiente. Para obter detalhes sobre quem é responsável por cada uma das tarefas, veja [Funções e responsabilidades](../dedicated/index.html#rolesresponsibilities).
+
+<ol>
+<li>Selecione qual datacenter usar para hospedar sua instância dedicada. Para obter informações sobre opções do datacenter, veja <a href="http://www.softlayer.com/data-centers" target="_blank">Local do datacenter do SoftLayer</a>.</li>
+<li>Especifique os nomes de domínio para a implementação e os IDs que deseja usar. Obtenha três domínios ao configurar sua instância do {{site.data.keyword.Bluemix_notm}}. Selecione o prefixo para a <code>*mycompany*.*region*.bluemix.net</code> e  <code>*mycompany*.*region*.mybluemix.net</code>. E, escolha o nome completo do terceiro domínio.<br />
+<p>É possível escolher quantos domínios customizados desejar. No entanto, você é responsável pelos certificados dos domínios customizados. Para obter informações sobre como criar seu domínio customizado, veja <a href="../manageapps/updapps.html#domain">Criando e usando um domínio customizado</a>.</p></li>
+<li>Identifique um proprietário para a conta pública que é usada para representar sua empresa no {{site.data.keyword.Bluemix_notm}} Public. A IBM usa essa conta para rastrear o uso de serviços organizados.</li>
+<li>Selecione o tipo de conexão segura para seu datacenter. É possível selecionar dentre SoftLayer VPN, SoftLayer Direct Link e AT&T Net Bond.</li>
+<li>Decida se haverá qualquer acesso ao seu ambiente dedicado a partir da Internet pública.</li>
+<li>Selecione o tipo de autenticação que será usada. É possível selecionar a partir do ID IBM ou Active Directory. Para obter informações sobre como usar e registrar um ID IBM, veja a página <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Ajuda e perguntas mais frequentes</a>.
+</li>
+<li>Identifique e designe funções à sua equipe administrativa para o ambiente. Para obter informações sobre as funções que você deve designar, veja <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.</li>
+<li>A IBM implementa a plataforma principal que inclui os tempos de execução elásticos, o console, o recurso de administração e o monitoramento.</li>
+<li>A IBM configura o acesso administrativo para o ambiente.</li>
+<li>É possível começar a usar sua instância dedicada que é monitorada pela equipe de operações da IBM para responder aos alertas. </li>
+</ol>
+
+Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para obter mais informações, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../administer/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância dedicada](index.html#maintaindedicated).
 
 ##Funções e responsabilidades
 {: #rolesresponsibilities}
@@ -155,8 +152,7 @@ A lista a seguir mostra as funções e as responsabilidades designadas ao client
 <dl>
 <dt>**Focal em compras**</dt>
 <dd>Trabalha com o representante IBM no estabelecimento do
-ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. A pessoa designada a essa função supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O focal em compras é o
-contato geral para configurar a instância dedicada.</dd>
+ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, incluindo a identificação das pessoas certas em sua organização para trabalhar em qualquer aspecto do projeto. A pessoa designada a essa função recebe uma função de gerenciamento de projeto e supervisiona a seleção padrão, acordos comerciais e a disposição de acesso aos recursos do cliente. O focal em compras é o contato geral para configurar a instância dedicada e rastrear o processo da implementação.</dd>
 <dt>**Executivo de conformidade**</dt>
 <dd>Trabalha com o representante IBM para selecionar uma opção de topologia e de implementação que atenda aos requisitos de segurança. A pessoa designada a essa função trabalha com o consultor de conformidade IBM para determinar quais padrões de implementação alcançam os objetivos de conformidade.</dd>
 <dt>**Especialista em rede**</dt>
@@ -321,7 +317,8 @@ Se houver um problema relatado após uma atualização de manutenção, você ac
 ## Recuperação de desastre
 {: #dr}
 
-O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.{: shortdesc}
+O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
+{: shortdesc}
 
 A recuperação de desastre do {{site.data.keyword.Bluemix_short}} Dedicated torna-se possível por meio de disponibilidade contínua para seus apps, da alta disponibilidade inerente da plataforma e da capacidade de restaurar sua instância no caso de uma falha. Você é responsável por ativar a disponibilidade contínua de seus apps implementando em várias regiões. A alta disponibilidade é construída no nível de plataforma por meio de tecnologias incluídas no Cloud Foundry e de outros componentes. Além disso, é possível trabalhar junto com a IBM para assegurar que seus dados sejam corretamente submetidos a backup no caso de você precisar restaurar sua instância a qualquer momento.
 
@@ -341,7 +338,7 @@ Por padrão, o {{site.data.keyword.Bluemix_notm}} Public é implementado em vár
 Para implementar em um segundo local ou em vários locais, deve-se seguir um processo semelhante ao usado para ativar sua localização geográfica primária:
 
 1. Ative um novo ambiente dedicado para hospedar instâncias adicionais de seus aplicativos. Para criar um novo ambiente, entre em contato com a equipe de vendas da IBM para iniciar o processo. Para obter mais informações sobre a configuração de uma instância dedicada, consulte [Configurando o {{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#setupdedicated). Deve-se efetuar login separadamente para acessar cada ambiente. Cada local físico dos ambientes hospedados deve ter uma separação mínima de 200 km do local original para assegurar disponibilidade.
-2. Obtenha o nome de domínio exclusivo no qual seu novo app implementado será hospedado. Por exemplo, se seu domínio original for *mycompany.east.bluemix.net*, será possível criar um novo ambiente local com um novo domínio, como *mycompany.west.bluemix.net* e implementar no novo domínio.
+2. Obtenha o nome de domínio exclusivo no qual seu novo app implementado será hospedado.  Por exemplo, se seu domínio original for *mycompany.east.bluemix.net*, será possível criar um novo ambiente local com um novo domínio, como *mycompany.west.bluemix.net* e implementar no novo domínio.
 3. Sempre que você implementar seu app original, implemente também no novo local. Para obter mais informações sobre implementação, consulte [Fazendo upload de seu app](../starters/upload_app.html).
 
 
@@ -368,7 +365,8 @@ Essas tecnologias incluem os itens a seguir:
 
 <dl>
 <dt>Escalabilidade no Cloud Foundry</dt>
-<dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.</dd>
+<dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.
+</dd>
 <dt>Redundância do SoftLayer</dt>
 <dd>Com o SoftLayer em ambientes dedicados, dados em cada cluster de armazenamento em nuvem são gravados várias vezes e os clusters de armazenamento são configurados com recursos de recuperação automática em caso de falha da unidade. Se houver algum problema com uma máquina virtual, o SoftLayer tentará reiniciar a máquina virtual em outro host.</dd>
 <dt>Backup de metadados</dt>

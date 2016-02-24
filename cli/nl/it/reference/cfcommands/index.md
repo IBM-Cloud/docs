@@ -71,7 +71,7 @@ cf create-service nome_servizio piano_servizio istanza_servizio
 Ad
 esempio, puoi utilizzare `cf create-service DataWorks free my_dataworks` per
 creare un'istanza del servizio {{site.data.keyword.dataworks_short}} con un
-piano gratuito.
+piano libero.
 
 <dl>
 <dt>nome_servizio</dt>

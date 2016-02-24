@@ -3,12 +3,12 @@
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Ferramentas CLI e de desenvolvimento
+# Ferramentas de CLI e de desenvolvimento
 {: #cli}
 
-*Última atualização: 10 de novembro de 2015*
+*Última atualização: 19 de janeiro de 2016*
 
-Ferramentas poderosas do {{site.data.keyword.Bluemix_short}}.
+Com o {{site.data.keyword.Bluemix_short}}, você tem acesso a poderosas ferramentas, tais como uma interface da linha de comandos unificada e plug-ins de CLI. Todos esses downloads de CLI estão disponíveis para suportar sua experiência no {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## ![Interfaces de linha de comandos](./images/CLI.png) Interfaces de linha de comandos
@@ -18,10 +18,14 @@ Faça download e instale as interfaces da linha de comandos para suportar sua ex
 é um pré-requisito para todas as outras ferramentas CLI do {{site.data.keyword.Bluemix_notm}}.
 
 
-| *Cloud Foundry: cf* |	*{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}: ICE* | *{{site.data.keyword.Bluemix_notm}} Live Sync:
+| *Cloud Foundry: cf* |	*{{site.data.keyword.Bluemix_notm}}: bx* | 
+|---------------------|---------------|
+| [Fazer download da CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) | [Fazer download da CLI](http://clis.{DomainName}/){: new_window} <br> [View Docs](./reference/bluemix_cli/index.html)| 
+
+| *{{site.data.keyword.Bluemix_notm}} Live Sync:
 bl* |
-|---------------------|---------------|---------------|
-| [Fazer download da CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |[Fazer download do Docker](https://docs.docker.com/installation/){: new_window} <br> [Mac Installer do ICE](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.pkg){: new_window} <br> [Windows Installer do ICE](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.exe){: new_window} <br> [Linux Installer do ICE](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_ice.tar.gz){: new_window} <br> [Visualizar docs](../containers/container_cli_ice_ov.html) | [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [View Docs](./reference/bl/index.html) |
+|---------------|---------------|
+| [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/Bluemix_bl.exe){: new_window} <br> [View Docs](./reference/bl/index.html) |
 
 
 ## ![Plug-ins da interface de linha de comandos](./images/CLI_Plugin.png) Plug-ins da interface de linha de comandos
@@ -30,32 +34,32 @@ Estenda facilmente sua interface de linha de comandos do {{site.data.keyword.Blu
 
 1. Para instalar plug-ins da CLI cf a partir do registro do {{site.data.keyword.Bluemix_notm}}, configure o terminal de registro de plug-in:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf http://plugins.ng.bluemix.net
 ```
 2. Execute o comando a seguir para instalar um
 plug-in:
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
 
-| *Active Deploy* |  *Development Mode* | 
-|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Nome do plug-in: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
+| *Active Deploy* | *Admin Console* | *Development Mode* | 
+|-----------------|-----------------|-----------------|
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Nome do plug-in: development-name <br> [View Docs](./plugins/dev_mode/index.html) | 
 
 ### Amplie a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}: bx
 1. Para instalar plug-ins da CLI do {{site.data.keyword.Bluemix_notm}} a partir do registro do {{site.data.keyword.Bluemix_notm}}, configure o terminal de registro de plug-in:
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
 ```
 2. Execute o comando a seguir para instalar um
 plug-in:
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
 
-| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* |
-|-----|
-| Plug-in name: ibm-containers <br> [Visualizar docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) |
+| *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *{{site.data.keyword.autoscaling}} CLI* | *VPN* |
+|-----|----|----|
+| Plug-in name: ibm-containers <br> [Visualizar docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
 
 ## ![Ferramentas de desenvolvimento integradas](./images/Integrated_Dev_Tools.png) Ferramentas de desenvolvimento integradas
 

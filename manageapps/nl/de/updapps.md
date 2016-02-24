@@ -10,9 +10,7 @@
 
 
 Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die
-Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie
-(selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten
-Ihrer Anwendung verwendet wird. 
+Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
 {:shortdesc}
 
 ##Angepasste Domäne erstellen und verwenden
@@ -22,11 +20,7 @@ Sie können in der URL Ihrer Anwendung eine angepasste Domäne anstelle der stan
 {{site.data.keyword.Bluemix_notm}}-Systemdomäne (mybluemix.net) verwenden. 
 
 Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in
-{{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie diese angepasste Domäne für Ihre Organisation zunächst in
-{{site.data.keyword.Bluemix_notm}} erstellen und anschließend der
-{{site.data.keyword.Bluemix_notm}}-Systemdomäne zuordnen, indem Sie Ihren DNS-Server entsprechend konfigurieren oder Ihre
-lokale Datei `hosts` entsprechend bearbeiten.
-Nachdem Ihre angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne zugeordnet wurde, werden Anforderungen
+{{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren, die angepasste Domäne in {{site.data.keyword.Bluemix_notm}} konfigurieren und die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zuordnen. Nachdem Ihre angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne zugeordnet wurde, werden Anforderungen
 für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} weitergeleitet. 
 
 **Hinweis:** Mit dem Befehl
@@ -41,14 +35,14 @@ entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die B
 
   1. Erstellen Sie eine angepasste Domäne für Ihre Organisation.
     
-	1. Klicken Sie in der Menüleiste des {{site.data.keyword.Bluemix_notm}}-**DASHBOARDS** auf **ORGANISATIONEN VERWALTEN**. 
+	1. Klicken Sie in der Menüleiste des {{site.data.keyword.Bluemix_notm}}-**Dashboards** auf **Organisationen verwalten**. 
 	
 	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**,
 geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**. 
     	
   2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu.
   
-    1. Klicken Sie in der Menüleiste des {{site.data.keyword.Bluemix_notm}}-**DASHBOARDs** auf die Kachel der Anwendung, der Sie die Route hinzufügen wollen. Die Seite **Übersicht** wird angezeigt.
+    1. Klicken Sie in der Menüleiste des {{site.data.keyword.Bluemix_notm}}-**Dashboards** auf die Kachel der Anwendung, der Sie die Route hinzufügen wollen. Die Seite **Übersicht** wird angezeigt.
 	
 	2. Klicken Sie auf der Seite **Übersicht** auf die Option **Routen und
 App-Zugriff bearbeiten**. 
@@ -115,8 +109,7 @@ zu ermöglichen und Ausfallzeitereignisse zu minimieren.
 
 Die *Blue-Green-Bereitstellung* ist ein Bereitstellungsverfahren ohne Ausfallzeiten
 (Zero-Downtime-Deployment), das aus zwei nahezu identischen Produktionsumgebungen besteht: Blue und Green.
-Sie unterscheiden sich durch die Artefakte, die der Entwickler bewusst geändert hat,
-normalerweise ist dies die Version der Anwendung. Es ist zu jedem Zeitpunkt mindestens eine der Umgebungen aktiv.
+Sie unterscheiden sich durch die Artefakte, die der Entwickler bewusst geändert hat; normalerweise ist dies die Version der Anwendung. Es ist zu jedem Zeitpunkt mindestens eine der Umgebungen aktiv.
 Durch die Verwendung des Blue-Green-Bereitstellungsverfahrens können Sie die folgenden Vorteile nutzen: 
 
 * Zeitnahe Überführung der Software aus der letzten Testphase in die Live-Produktion. 
@@ -132,7 +125,7 @@ um eine Blue-Green-Bereitstellung sicherzustellen.
 
 ###Beispiel: Befehl 'cf rename' verwenden
 
-In diesem Beispiel lautet der Name der Anwendung Blue. Das Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
+In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
 **cf rename** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von
 *Blue* gelöscht werden, wenn die aktualisierte Version vorhanden ist.
 
@@ -162,8 +155,8 @@ In diesem Beispiel lautet der Name der Anwendung Blue. Das Beispiel veranschauli
   
   **Ergebnis:** Die App *Green* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
 
-3. Nehmen Sie die erforderlichen Änderungen vor und machen Sie die aktualisierte Version von
-*Blue* bereit. Stellen Sie die aktualisierte App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
+3. Nehmen Sie die erforderlichen Änderungen vor und bereiten Sie die aktualisierte Version von
+*Blue* vor. Stellen Sie die aktualisierte App *Blue* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
   
   ```
   cf push Blue
@@ -184,7 +177,7 @@ In diesem Beispiel lautet der Name der Anwendung Blue. Das Beispiel veranschauli
 *Green*.
 	* Die App *Green* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
 	
-4. Optional: Wenn Sie die alte Version (*Green*) der App löschen wollen, verwenden Sie hierzu den Befehl **cf
+4. Optional: Wenn Sie die alte Version (*Green*) der App löschen wollen, verwenden Sie den Befehl **cf
 delete**. 
   
   ```
@@ -219,7 +212,7 @@ Dieses Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
   
   **Ergebnis:** Die App *Blue* wird ausgeführt und antwortet an die URL `Blue.mybluemix.net`.
   
-2. Nehmen Sie die erforderlichen Änderungen vor und machen Sie die Version *Green* bereit. Stellen Sie die App *Green* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
+2. Nehmen Sie die erforderlichen Änderungen vor und bereiten Sie die Version *Green* vor. Stellen Sie die App *Green* per Push-Operation in {{site.data.keyword.Bluemix_notm}} bereit:
   
   ```
   cf push Green
@@ -259,9 +252,7 @@ Dieses Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
   
   **Ergebnis:**
 
-    * Der CF-Router sendet nun den Datenverkehr für 'Blue.mybluemix.net' sowohl
-an die App
-'Blue' als auch an die App 'Green'. 
+    * Der CF-Router sendet nun den Datenverkehr für 'Blue.mybluemix.net' sowohl an die App 'Blue' als auch an die App 'Green'. 
 	* Der CF-Router sendet den Datenverkehr für 'Green.mybluemix.net' weiterhin an die App 'Green'. 
 	
 4. Wenn Sie sich vergewissert haben, dass *Green* wie erwartet ausgeführt wird, entfernen Sie die Route
@@ -282,7 +273,7 @@ der App *Blue* :
   ...
   ```
   
-  **Ergebnis:** Der CF Router sendet keinen Datenverkehr mehr an die App
+  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App
 *Blue*. Die App *Green* antwortet an beide URLs: `Green.mybluemix.net` und `Blue.mybluemix.net`.
   
 5. Entfernen Sie die Route `Green.mybluemix.net` zur App *Green*.
@@ -291,7 +282,7 @@ der App *Blue* :
   cf unmap-route Green mybluemix.net -n Green
   ```
   
-  **Ergebnis:** Der CF Router sendet keinen Datenverkehr mehr an die App
+  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App
 *Blue*. Die App *Green* antwortet an die URL `Blue.mybluemix.net`.
   
 6. Optional: Wenn Sie die alte Version (*Blue*) der Anwendung löschen wollen, verwenden Sie hierzu den Befehl `cf
@@ -302,7 +293,7 @@ delete`.
   ```
   
   Listen Sie die Routen in Ihrem Bereich mit dem Befehl
-cf route auf:
+'cf route' auf:
   
   ```
   ...

@@ -28,7 +28,7 @@ Durante la fase
 di preparazione, un Droplet Execution Agent    (DEA) utilizza le informazioni
 che tu fornisci nell'interfaccia riga di comando cf o nel file `manifest.yml`
 per stabilire che cosa creare per la preparazione dell'applicazione. Il DEA seleziona
-un pacchetto di build appropriato per preparare l'applicazione; il risultato del
+un pacchetto di build appropriato per preparare la tua applicazione; il risultato del
 processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione a {{site.data.keyword.Bluemix_notm}}, vedi [Architettura {{site.data.keyword.Bluemix_notm}}, Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch).
 
 Durante
@@ -49,18 +49,18 @@ quali ad esempio i log. Se l'avvio dell'applicazione non riesce, il
 DEA arresta l'applicazione e tutti i contenuti del tuo contenitore Warden
 vengono rimossi. Pertanto, se un'applicazione si arresta o se
 il processo di preparazione di un'applicazione non riesce, i file di log non
-potranno essere utilizzati.
+saranno disponibili per l'uso.
 
 Se i log della tua applicazione
 non sono più disponibili e il comando **cf     files**
 non potrà più essere utilizzato per vedere la causa degli errori di preparazione,
 al suo posto potrai utilizzare il comando **cf logs**. Il comando **cf
 logs** utilizza l'aggregatore di log di Cloud Foundry per
-raccogliere i dettagli dei log di applicazione e di sistema e potrai vedere
+raccogliere i dettagli dei tuoi log di applicazione e di sistema e potrai vedere
 ciò che è presente nel buffer all'interno dell'aggregatore di log. Per
 ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
-**Nota:** la dimensione del buffer è limitata. Se un'applicazione viene eseguita per tanto tempo e non viene riavviata, è possibile che immettendo `cf logs appname --recent` i log non vengano visualizzati perché il buffer dei log potrebbe essere stato cancellato. Pertanto, per eseguire il debug degli errori di preparazione di un'applicazione di grandi dimensioni, puoi immettere `cf logs appname` in una riga di comando diversa dall'interfaccia riga di comando cf per tracciare i log quando distribuisci l'applicazione.
+**Nota:** la dimensione del buffer è limitata. Se un'applicazione viene eseguita per tanto tempo e non viene riavviata, è possibile quando immetti `cf logs appname --recent` i log non vengano visualizzati perché il buffer dei log potrebbe essere stato cancellato. Pertanto, per eseguire il debug degli errori di preparazione di un'applicazione di grandi dimensioni, puoi immettere `cf logs appname` in una riga di comando diversa dall'interfaccia riga di comando cf per tracciare i log quando distribuisci l'applicazione.
 
 Se rilevi dei problemi durante la preparazione delle
 tue applicazioni su {{site.data.keyword.Bluemix_notm}},
@@ -125,8 +125,8 @@ comando:
   
 Perché
                                                   l'applicazione venga riconosciuta dal pacchetto
-                                                  di build Node.js, è necessario che il file
-                                                  `package.json` si trovi nell'applicazione Node.js. Il file `app.js`
+                                                  di build Node.js, è necessario che un file
+                                                  `package.json` sia presente nella tua applicazione Node.js. Il file `app.js`
 è lo script di avvio per l'applicazione e può essere specificato nel file `package.json`. Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:
@@ -155,7 +155,7 @@ Perché
                                                   `package.json`, vedi [package.json](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
   
   * Per distribuire applicazioni PHP, Ruby o Python a {{site.data.keyword.Bluemix_notm}},
-utilizza il seguente comando dalla directory che contiene l'origine dell'applicazione:
+utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
   
   ```
   cf push nome_applicazione
@@ -216,7 +216,7 @@ cf push -f appManifest.yml
 |**dominio**	|Il nome dominio dell'applicazione in {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
 |**host**	|Il nome host dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Questo valore deve essere univoco nell'ambiente {{site.data.keyword.Bluemix_notm}}.	|`host: ` *home_host*|
 |**nome**	|Il nome applicazione in {{site.data.keyword.Bluemix_notm}}. Questo valore deve essere univoco nell'ambiente {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nomeapplicazione*|
-|**path**	|L'ubicazione della tua applicazione. Questo valore può essere un percorso relativo o percorso assoluto. 	|`path: ` *percorso_alla_applicazione*|
+|**path**	|L'ubicazione della tua applicazione. Questo valore può essere un percorso relativo o percorso assoluto.	|`path: ` *percorso_alla_applicazione*|
 |**command**	|Il comando di avvio personalizzato per la tua applicazione o il comando per eseguire i file di script.	|`command:` *custom_command* `command:` *bash ./run.sh*|
 |**memory**	|La quantità di memoria da assegnare per l'applicazione. Il valore predefinito è 1G.	|`memory: 512M`|
 |**instances**	|Il numero di istanze da creare per la tua applicazione.	|`instances: 2`|
@@ -225,7 +225,7 @@ cf push -f appManifest.yml
 |**no-route**	|Un valore booleano che impedisce l'assegnazione di una rotta all'applicazione se l'applicazione è solo in esecuzione in background. Il valore predefinito è **false**.	|`no-route: true`|
 |**random-route**	|Un valore booleano per assegnare una rotta casuale all'applicazione. Il valore predefinito è **false**.	|`random-route: true`|
 |**services**	|I servizi di cui eseguire il bind all'applicazione.	|`services:   - mysql_maptest`|
-|**env**	|Le variabili di ambiente personalizzate per l'applicazione. |`env: DEV_ENV: production`|
+|**env**	|Le variabili di ambiente personalizzate per l'applicazione.|`env: DEV_ENV: production`|
 *Tabella 1. Opzioni supportate nel file manifest.yml*
 
 ###Un file `manifest.yml` di esempio
@@ -265,14 +265,8 @@ un'applicazione {{site.data.keyword.Bluemix_notm}} in esecuzione
 utilizzando il comando **cf env** oppure dall'interfaccia utente
 {{site.data.keyword.Bluemix_notm}}:
 
-  * Variabili definite dall'utente specifiche di un'applicazione. Puoi impostare le variabili specifiche dell'applicazione utilizzando il comando **cf set-env** oppure configurando coppie di valori nel [ file `manifest.yml`](#appmanifest) nel seguente modo:
-
-  ```
-  env:
-    VAR1:value1
-    VAR2:value2
-  ```
-   
+  * Variabili definite dall'utente specifiche di un'applicazione. Per informazioni su come aggiungere una variabile definita dall'utente a un'applicazione, vedi [Aggiunta di variabili di ambiente definite dall'utente](#ud_env){:new_window}.
+	  
   * La variabile VCAP_SERVICES, che contiene informazioni di connessione per accedere a un'istanza di servizio. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio. Ad
 esempio:
   
@@ -331,7 +325,7 @@ dai pacchetti di build.
   <dt><strong>HOME</strong></dt>
   <dd>La directory root dell'applicazione distribuita.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
-  <dd>La quantità massima di memoria che ogni istanza dell'applicazione può
+  <dd>La quantità massima di memoria che ogni istanza della tua applicazione può
 utilizzare. Puoi specificare il valore in un file <span class="ph filepath">manifest.yml</span> di applicazione
 oppure nella riga di comando quando distribuisci l'applicazione.</dd>
   <dt><strong>PORT</strong></dt>
@@ -477,6 +471,36 @@ nel file manifest:
   ```
   command: node app.js
   ```
+  
+  
+  
+### Aggiunta di variabili di ambiente definite dall'utente
+{: #ud_env}
+
+Le variabili di ambiente definite dall'utente sono specifiche per un'applicazione. Per aggiungere una variabile di ambiente definita dall'utente a un'applicazione in esecuzione puoi utilizzare le seguenti opzioni:
+
+  * Utilizza l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Completa la seguente
+procedura:
+    1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
+	2. Nel riquadro di navigazione a sinistra,  fai clic su **Variabili di ambiente**.
+	3. Fai clic su **DEFINITO DALL'UTENTE** e quindi su **AGGIUNGI**.
+	4. Compila i campi richiesti, quindi fai clic su **SALVA**.
+  * Utilizza l'interfaccia riga di comando cf. Aggiungi una variabile definita dall'utente utilizzando il comando `cf set-env`. Ad
+                                    esempio: 
+    ```
+    cf set-env appname env_var_name env_var_value
+    ```
+	
+  * Utilizza il file `manifest.yml`. Aggiungi coppie di valori nel file. Ad
+                                    esempio: 
+    ```
+	env:
+      VAR1:value1
+      VAR2:value2
+    ```
+	
+
+
   
 ### Configurazione dell'ambiente di avvio
 

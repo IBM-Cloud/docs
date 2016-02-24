@@ -3,9 +3,10 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*上次更新时间：2015 年 12 月 8 日*
+*上次更新时间：2016 年 1 月 15 日*
 
-{{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。{:shortdesc}
+{{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
+{:shortdesc}
 
 IBM® 使用云操作即服务来监视和维护您的环境，让您可以专注于构建基于该环境运行的应用程序和服务。IBM 还可以处理平台更新，让您可以专注于业务。
 
@@ -25,7 +26,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 
 | **类型** | **名称** | **描述** |    
 |----------|----------|-----------------|
-|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动并运行应用程序，无需设置和管理 VM 与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
+|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动应用程序并运行，无需设置和管理 VM 与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
 |内含 | {{site.data.keyword.autoscaling}}| 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
 |可选 |{{site.data.keyword.datacshort}}| 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 |可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
@@ -36,7 +37,7 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 
 中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的一项交付功能，能够使 IBM 以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。中继通过源自内部部署先启虚拟机的开放式出站 SSL VPN 隧道，使用特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书来实现安全连接。所有初始 {{site.data.keyword.Bluemix_notm}} 发行版都在先启虚拟机中提供，先启虚拟机还可作为用于部署和更新的自动化代理程序机器。SSL 连接源自先启虚拟机，一旦通过安全连接成功连回 {{site.data.keyword.Bluemix_notm}} 自动化服务器，我们就可以检查 {{site.data.keyword.Bluemix_notm}} 发行版的最新性和一致性，然后开始部署更新。
 
-此隧道上的流量为您实例的平台、计算资源和服务自动提供服务并进行维护。此连接使用入站 Web 端口 443。中继仅限自动化代理程序访问。IBM 使用中继功能通过一致的测试和验证流程来交付平台更新，以确保推送到本地环境的所有部署均稳定、安全。
+通过此隧道，为您实例的平台、计算资源和服务自动提供服务并进行维护。此连接使用入站 Web 端口 443。中继仅限自动化代理程序访问。IBM 使用中继功能通过一致的测试和验证流程来交付平台更新，以确保推送到本地环境的所有部署均稳定、安全。
 
 作为管理员，您可以全面了解环境中的事件、问题、变更、容量和安全管理。管理员使用管理控制台来访问有关环境的信息。中继技术可确保管理控制台中的数据是最新的。有关用户访问权、安全日志、联合目录控制以及更新与问题修复沟通的更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)。
 
@@ -53,7 +54,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>要设置本地实例，请查看 <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>。</li>
 <li>首先联系 IBM 指定的客户代表或联系 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>。</li>
 <li>与 IBM 达成 {{site.data.keyword.Bluemix_notm}} Local 协议，其中包含交付的里程碑日期。
-        <ol type="a">
+	<ol type="a">
 	<li>与 IBM 合作来设置您的 {{site.data.keyword.Bluemix_notm}} Local 实例，费用由您支付。每月的经常性费用基于要使用的本地服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。</li>
 	<li>为设置 {{site.data.keyword.Bluemix_notm}} Local 实例的每个阶段确定截止期限。</li>
 	</ol>
@@ -61,13 +62,43 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>创建您的平台和帐户后，为组织中需要启动并运行本地实例的人员分配必要的角色。有关分配的角色的更多信息，请参阅 <a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Local 角色和责任</a>。
 </li>
 <li>您需要提供硬件，而 IBM 将帮助您定义并建立企业网络与 {{site.data.keyword.Bluemix_notm}} Local 实例之间的网络连接。有关基础架构需求的更多信息，请参阅 <a href="index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>。
-        <ol type="a">
+	<ol type="a">
 	<li>IBM 根据您提供的信息配置网络访问和 LDAP。为您指定的联系人授予管理访问权。还必须指定一名联系人来负责记帐和提供相应支持。</li>
 	<li>IBM 在您的本地环境中设置联合目录，用于显示您的本地服务以及许多公共 {{site.data.keyword.Bluemix_notm}} 服务。</li>
 	<li>您验证网络和防火墙配置以及 LDAP 端点和访问权。</li>
 	</ol>
 </li>
 </ol>
+
+对您的环境进行初始部署和配置的过程应类似于以下列表。有关每个任务负责人员的详细信息，请参阅[角色和责任](../local/index.html#rolesresponsibilities)。
+
+<ol>
+<li>您提供与计算资源、联网和存储规范相符的 VMware 配置。有关基础架构需求的更多信息，请参阅 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>。</li>
+<li>您提供 vCenter 集群凭证，以供先启虚拟机使用。您必须提供以下信息：<ul>
+<li>VMware 集群的名称</li>
+<li>vCenter 集群凭证（包括用户标识和密码）</li>
+<li>一个或多个数据存储名称（存储 LUN 名称）</li>
+<li>VLAN 标识/VMware 端口组</li>
+<li>资源池名称</li>
+</ul>
+</li>
+<li>您与 IBM 一起来验证您在前一任务中提供的凭证。</li>
+<li>您提供自己网络上的 7 个 IP 地址。如果您有安全 Web 代理支持内部 {{site.data.keyword.Bluemix_notm}} 组件对因特网进行出站访问，那么必须提供用于连接到该代理的凭证。<p>**注**：如果您的 Web 代理不是安全代理，那么无需提供凭证。另请注意，并非所有 {{site.data.keyword.Bluemix_notm}} Local 客户都使用 Web 代理。</p></li>
+<li>IBM 提供了一个 URL 白名单，在开始部署之前，您必须允许这些 URL 可通过您的 Web 代理。</li>
+<li>您为部署指定域名，以及要使用的标识。设置本地实例时，您会得到两个部分定义的域，请选取这两个域的前缀。例如，选取 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的前缀。然后，还可以选择完整域来创建定制域。<p>您可以根据自己的需要选择任意数量的定制域。不过，您应负责获取定制域的证书。有关创建定制域的信息，请参阅<a href="../manageapps/updapps.html#domain">创建和使用定制域</a>。</p></li>
+<li>选择要使用何种技术（IPSec 或 OpenVPN 隧道）来配置中继，以便连回 IBM 操作中心。</li>
+<li>IBM 在 {{site.data.keyword.Bluemix_notm}} 集群中安装并启动先启虚拟机。如果您提供自己的 VMware，那么 IBM 代表会帮助您的客户代表来完成此任务。</li>
+<li>IBM 配置中继，以便连回 IBM 操作中心与之进行通信。</li>
+<li>先启虚拟机存储库拉入更新后的构建工件。</li>
+<li>您提供凭证，供 IBM 连接到公司 LDAP 目录实例。</li>
+<li>IBM 使用自动化来部署核心 {{site.data.keyword.Bluemix_notm}} 平台。</li>
+<li>IBM 部署核心平台，其中包含弹性运行时、控制台、管理功能和监视。</li>
+<li>IBM 配置您对环境的管理访问权。</li>
+<li>IBM 将您的联合目录从本地部署链接到公共 {{site.data.keyword.Bluemix_notm}} 实例，以便使用公共服务。缺省情况下，本地实例中会提供一组公共服务。您可以使用管理页面进行目录管理，以便为本地实例开启或关闭服务。</li>
+<li>您可以开始使用您的本地实例来响应警报，该实例由 IBM 操作团队进行监视。</li>
+</ol>
+
+{{site.data.keyword.Bluemix_notm}} 实例设置完成后，您可以使用“管理”页面来监视和管理 {{site.data.keyword.Bluemix_notm}} 实例。有关更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](../administer/index.html#mng)。有关升级和维护的信息，请参阅[维护本地实例](index.html#maintainlocal)。
 
 ##角色和责任
 {: #rolesresponsibilities}
@@ -211,7 +242,14 @@ ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内
 </dd>
 <dt>**网络**</dt>
 <dd>
-建议的需求包括客户可访问的端口组，端口组带 10 个具有出站因特网访问权的客户网络 IP 地址。然后，定义第二个专用 VLAN，仅供要用于 {{site.data.keyword.Bluemix_notm}} Local 的 ESXi 使用。此 VLAN 在 VMware 中显示为端口组。{{site.data.keyword.Bluemix_notm}} Local 将其用于专用子网，这样不但更为安全，而且有助于避免路由问题。</dd>
+建议的需求包括一个客户可访问的端口组，该端口组具有 7 个位于同一子网的客户网络 IP 地址，用于进行出站因特网访问。其中，2 个端口由先启虚拟机使用，3 个端口是供域使用的虚拟 IP 地址，最后 2 个端口是供 DataPower 使用的公共 IP 地址。然后，定义第二个专用 VLAN，仅在要用于 {{site.data.keyword.Bluemix_notm}} Local 的 ESXi 之间使用。此 VLAN 在 VMware 中显示为端口组。{{site.data.keyword.Bluemix_notm}} Local 将其用于专用子网，这样不但更为安全，而且有助于避免路由问题。<br />
+<p>所使用的端口如下所示：</p>
+<ul>
+<li>端口 443，用于中继连接<p>**注**：如果选择使用 IPSec 隧道，而不是 OpenVPN，请为此连接打开一个客户端口。</p></li>
+<li>端口 389 或 SSL 636，用于 LDAP 或 Active Directory 连接</li>
+</ul>
+<p>**注**：IBM 可检测到网络连接是否中断。如果网络连接中断，IBM 会联系您并与您的网络专家一起来解决该问题。</p>
+</dd>
 </dl>
 
 ###vCenter 服务器配置
