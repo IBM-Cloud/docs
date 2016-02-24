@@ -443,7 +443,7 @@ The following is an example of configuring Slack, creating a package binding, an
 2. Create a package binding with your Slack credentials, the channel that you want to post to, and the user name to post as.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel 'MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
   ```
   {: pre}
 
