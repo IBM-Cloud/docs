@@ -6,7 +6,7 @@
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 8 December 2015*
+*Last updated: 27 January 2016*
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -36,7 +36,11 @@ To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following met
 ##Logging for apps running on Cloud Foundry
 {: #logging_for_bluemix_apps}
 
-Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view the logs either from the {{site.data.keyword.Bluemix_notm}} Dashboard or from the cf command line interface. You can also filter the logs to see the parts that you are interested in.
+Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. When you encounter errors in any stage from deployment to runtime, you can check the logs for clues that might help solve your issue.
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###Log format
 {: #log_format}
@@ -54,7 +58,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 Every log entry contains four fields. Refer to the following list for the brief description of each field:
 
 <dl>
-<dt><strong>Timestamp</strong></dt>
+<dt><strong>Time stamp</strong></dt>
 <dd>
 <pre class="pre screen"><code>yyyy-MM-ddTHH:mm:ss:SS-0500</code></pre>
 <p>Columns: 1 - 27</p>
@@ -107,21 +111,33 @@ Every log entry contains four fields. Refer to the following list for the brief 
 ###Viewing logs
 {: #viewing_logs}
 
-You can use either the {{site.data.keyword.Bluemix_notm}} Dashboard or the command line interface to view logs.
+You can view the logs for your Cloud Foundry apps in three places:
 
-####VIEWING LOGS FROM THE {{site.data.keyword.Bluemix_notm}} DASHBOARD
+  * [The {{site.data.keyword.Bluemix_notm}} Dashboard](#viewing_logs_UI){:new_window}
+  * [The command line interface](#viewing_logs_cli){:new_window}
+  * [External log hosts](#thirdparty_logging){:new_window}
 
-To see the **Deployment** or **Runime** logs, complete the following steps:
-1. Click the tile for your app. The app details page is displayed.
+#### Viewing logs from the {{site.data.keyword.Bluemix_notm}} Dashboard
+{: #viewing_logs_UI}
+
+To see the deployment or runtime logs, complete the following steps:
+1. Log in to {{site.data.keyword.Bluemix_notm}}, and then click the tile for your app on the Dashboard. The app details page is displayed.
 2. In the left navigation bar, click **Logs**.
 
-####VIEWING LOGS FROM THE COMMAND LINE INTERFACE
+In the **Logs** console, you can view the recent logs for your app or tail logs in real time. In addition, you can filter logs by log type and channel.
+
+**Notes:** Logs are not persisted between app crashes and deployments.
+
+
+
+#### Viewing logs from the command line interface
+{: #viewing_logs_cli}
 
 Choose from the following options to view logs from the command line interface:
 
 <ul>
 <li>Tailing logs when you deploy apps.
-<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see [Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
+<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Display logs from the recent past.</dd>
@@ -166,6 +182,9 @@ staging task. You can use this log to troubleshoot staging problems.</p>
 
 **Note:** For information about how to enable application logging, see [Debugging runtime errors](../troubleshoot/debugging.html#debug_runtime).
 
+
+
+
 ###Filtering logs
 {: #filtering_logs}
 
@@ -185,7 +204,7 @@ For more information about the **grep** option, type `grep --help`.
 
 
 
-### Configuring external logging
+### Configuring external log hosts
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}} keeps a limited amount of log information in memory. When information is logged, the old information is replaced by the newer information. To keep all the log information, you can save your logs to an external log host, such as a third-party log management service or other host.
@@ -253,10 +272,13 @@ To stream logs from your app and the system to an external log host, complete th
 	 
   4. Restage the app. 
      Type ```cf restage appname``` for the changes to take effect. 
+
+#### Viewing logs from external hosts
+{: #viewing_logs_external}
+
 	 
 When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
 
 **Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
-
 
 

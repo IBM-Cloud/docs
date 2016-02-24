@@ -7,21 +7,21 @@
 # Debugging
 {: #debugging}
 
-*Last updated: 19 November 2015*
+*Last updated: 26 January 2015*
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors. 
 {:shortdesc}
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
 
-Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps running on Cloud Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external log hosts, see [Logging for apps running on Cloud Foundry](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Debugging staging errors
 {: #debugging-staging-errors}
-You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your application fails to stage, you can use the cf command line interface or the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plugin to see the cause of the error and to recover from the problem.
+You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can view logs to see the cause of the error and to recover from the problem.
 
-To understand why your application might be failing on {{site.data.keyword.Bluemix_notm}}, you need know how an application is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](../manageapps/deployingapps.html#appdeploy){: new_window}.
+To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](../manageapps/deployingapps.html#appdeploy){: new_window}.
 
 The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
 
@@ -66,6 +66,8 @@ The first error in the log shows the reason why the staging fails. In the exampl
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
+{: screen}
+
 
 For a Node.js application, the DEA uses the information in the `package.json` file to download the modules. From this error, you can see that error occurs for the module. Therefore, you might need to review the 18th line of the `package.json` file. 
 
@@ -107,12 +109,12 @@ When you enter `cf logs appname --recent` in the cf command line interface, only
 <dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</strong></dt> 
 <dd>The integrated log file search and analysis capabilities of the Monitoring and Analytics Service can help you to quickly identify errors. For more information, see <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd> 
 <dt><strong>Third-party tools</strong></dt> 
-<dd>You can collect and export the logs from your application to a third-party log management service. For more information, see <a href="http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">Configuring Selected Third-Party Log Management Services</a>.</dd> 
+<dd>You can collect and export the logs from your application to an external log host. For more information, see <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuring external logging</a>.</dd> 
 <dt><strong>Scripts to collect and export the logs </strong></dt> 
 <dd>To use a script to automatically collect and export the logs to an external file, you must connect to the {{site.data.keyword.Bluemix_notm}} server from your computer, and you must have enough space on your computer to download the logs. For more information, see <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecting diagnostic information</a>. </dd>
 </dl>
 
-The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files and Logs** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files and Logs** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using. 
+The `stdout.log` and `stderr.log` files were previously accessible, by default, through the application view in the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files** > **logs**. However, that application logging is no longer available with the current version of Cloud Foundry where {{site.data.keyword.Bluemix_notm}} is hosted. To keep the stdout and stderr application logging accessible through the {{site.data.keyword.Bluemix_notm}} Dashboard under **Files** > **logs**, you can redirect the logging to other files in the {{site.data.keyword.Bluemix_notm}} file system, depending on the runtime that you are using. 
 
   * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries prefixed with SystemOut and SystemErr respectively.
   * For Node.js applications, you can override the console.log function to explicitly write to a file in the logs directory.
@@ -130,6 +132,9 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
   * [Getting started with IBM Monitoring and Analytics for Bluemix service](../services/monana/index.html#gettingstartedtemplate){: new_window}
   * [How Bluemix works](../overview/overview.html#ov_arch){: new_window}
   * [Installing the cf command tool](../starters/install_cli.html){: new_window}
+  * [Viewing logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  
+  
  
 
 
