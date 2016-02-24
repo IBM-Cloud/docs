@@ -32,7 +32,7 @@ After your app is created, you have a few options for continuing to add services
 <dt>{{site.data.keyword.Bluemix_notm}} user interface</dt>
 <dd>Use the {{site.data.keyword.Bluemix_notm}} user interface to build your application, including picking which services and runtimes to combine to solve your business problem.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Use {{site.data.keyword.jazzhub_title}} to create an application in the cloud and deploy it to {{site.data.keyword.Bluemix_notm}}. The services that are provided by {{site.data.keyword.jazzhub_title}}s include Track & Plan and Delivery Pipeline, listed in the {{site.data.keyword.Bluemix_notm}} Catalog under DevOps, as well as Web IDE and Git hosting.</dd>
+<dd>Use {{site.data.keyword.jazzhub_title}} to create an application in the cloud and deploy it to {{site.data.keyword.Bluemix_notm}}. The services that are provided by {{site.data.keyword.jazzhub_title}} include Track & Plan and Delivery Pipeline, listed in the {{site.data.keyword.Bluemix_notm}} Catalog under DevOps, as well as Web IDE and Git hosting.</dd>
 </dl>
 
 ## Tips
