@@ -42,7 +42,7 @@ As the shared ledger concept gains traction in the business world, IBM and its p
 ## api 
 * [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
 * [OBC API (Github)](https://github.com/openblockchain/obc-docs/blob/master/api/Openchain%20API.md)
-* [OBC JS (Node.js SDK)](https://github.com/IBM-Blockchain/marbles/blob/master/utils/obc-js/README.md)
+* [OBC JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 
 ## general 
 * [OBC Fabric Code](https://github.com/openblockchain/)

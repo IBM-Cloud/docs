@@ -6,13 +6,13 @@ You can use the {{site.data.keyword.amashort}} Server SDK to protect resources i
 ### Before you begin
 {: #before-you-begin}
 
-* You must be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}. For more information, see [Creating apps with SDK for Node.js](https://www.{DomainName}/docs/starters/nodejs/index.html)
+* You must be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}. For more information, see [Creating apps with SDK for Node.js](https://www.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)
 * The {{site.data.keyword.amashort}} Server SDK requires that your Node.js server is implemented with the `Express` framework. Note that there are multiple other frameworks that use `Express` frameworks, such as LoopBack. You can use {{site.data.keyword.amashort}} Server SDK with any of these frameworks. For more information about the Express framework, see [Expressjs.com](http://expressjs.com/).
 
 ### About the {{site.data.keyword.amashort}} Server SDK
 {: #about}
 
-The {{site.data.keyword.amashort}} Server SDK provides a `MCABackendStrategy` passport strategy to be used in backend applications deployed on IBM {{site.data.keyword.Bluemix_notm}}. To protect your app from unauthorized access and get monitoring information, you must instrument your Node.js server with the `MCABackendStrategy`. The `bms-mca-token-validation-strategy` npm module provides the `MCABackendStrategy` passport strategy and verification method to validate the access token and id token issues by a {{site.data.keyword.amashort}}. This module also automatically supplies monitoring information about security events.
+The {{site.data.keyword.amashort}} Server SDK provides a `MCABackendStrategy` passport strategy to be used in backend applications deployed on IBM {{site.data.keyword.Bluemix_notm}}. To protect your app from unauthorized access and get monitoring information, you must instrument your Node.js server with the `MCABackendStrategy`. The `bms-mca-token-validation-strategy` npm module provides the `MCABackendStrategy` passport strategy and verification method to validate the access token and ID token that was issued by {{site.data.keyword.amashort}}. This module also automatically supplies monitoring information about security events.
 
 The {{site.data.keyword.amashort}} Server SDK uses the `Passport` framework to enforce authorization.  For more information, see [Passportjs.org](http://passportjs.org/).
 
