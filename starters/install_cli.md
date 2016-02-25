@@ -16,7 +16,7 @@
 {:user_ID: data-hd-keyref="user_ID"}
 
 # Deploying your app with the command line interface
-*Last updated: 21 February 2016*
+*Last updated: 24 February 2016*
 
 You can use the command line interface to deploy and modify applications and service instances.
 {:shortdesc}
@@ -41,18 +41,20 @@ After the command line interfaces are installed, you can get started:
   
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
   
-  4. Connect to {{site.data.keyword.Bluemix}}.
+   4.  Make changes to your app code as you see fit. We suggest making sure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix}}.<br><br>One file you should take note of is the `manifest.yml` file. When deploying your app back to {{site.data.keyword.Bluemix}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters. You can [read more about the manifest file](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} in the Cloud Foundry documentation.
+  
+  5. Connect to {{site.data.keyword.Bluemix}}.
   
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
-  5. Log in to {{site.data.keyword.Bluemix_notm}}.
+  6. Log in to {{site.data.keyword.Bluemix_notm}}.
  
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
   
-  6. Deploy your app to {{site.data.keyword.Bluemix_notm}}. For more information about cf push command, see [Uploading your application](./upload_app.html).
+  7. Deploy your app to {{site.data.keyword.Bluemix_notm}}. For more information about cf push command, see [Uploading your application](./upload_app.html).
   
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
   
-  7. Access your app by entering the following URL into your browser:
+  8. Access your app by entering the following URL into your browser:
   
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>
