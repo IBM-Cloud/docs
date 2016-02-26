@@ -23,13 +23,13 @@ To get started:
 2. Configure the IKE policy by selecting the **IKE & IPSec Policies** tab.
   1. Select **ADD NEW**.  
   2. Specify the following details:
-  	* **Name**: Name of the IKE policy
-  	* **Authorization Algorithm**: sha1; cannot be changed  
-  	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default), aes-192, aes-256, 3des
-  	* **Key Lifetime**: Lifetime value (in seconds) of the IKE security association. Range: 60-86400. Default Value: 86400
-  	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2, Group5, Group14. Default value: Group2
-  	* **Negotiation Mode**: Main; cannot be changed
-  	* **Version**: IKEV1; cannot be changed
+	* **Name**: Name of the IKE policy
+	* **Authorization Algorithm**: sha1; cannot be changed  
+	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default), aes-192, aes-256, 3des
+	* **Key Lifetime**: Lifetime value (in seconds) of the IKE security association. Range: 60-86400. Default Value: 86400
+	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2, Group5, Group14. Default value: Group2
+	* **Negotiation Mode**: Main; cannot be changed
+	* **Version**: IKEV1; cannot be changed
   3. Select **SAVE**.
 
 3. Configure the IPSec policy:
@@ -72,7 +72,8 @@ To get started:
 
 **Important:** If you are using a web application, you must bind the web application to the Docker container you are using. This binding is required for the traffic to pass through the IPSec VPN tunnel.
 
-
+For detailed IBM VPN service configuration steps, see [Configuring your Communication Channel](vpn_configuring.html#configure).
+ 
 # rellinks
 ## samples 
 * [On-premises strongSwan Gateway Configuration Example](vpn_onpremises.html#strongswan){: new_window}
