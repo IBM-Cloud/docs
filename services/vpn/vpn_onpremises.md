@@ -1,11 +1,19 @@
-# On-premises VPN Gateway Configuration Examples
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-Your on-premises VPN gateway connects with the IBM VPN gateway. You may need to modify the configuration of the on-premises gateway that you are using. 
+# On-premises Configuration Examples
+{:#onpremises}
+*Last updated: 25 February 2016*
 
-* [Configuring IBM VPN with strongSwan](onpremises_gateway.html#strongswan)
-* [Configuring IBM VPN with Vyatta](onpremises_gateway.html#vyatta)
-* [Configuring IBM VPN with SoftLayer Gateway Appliance Service (GaaS)](onpremises_gateway.html#gaas)
-* [Configuring IBM VPN with Cisco ASA](onpremises_gateway.html#cisco)
+Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} gateway. You may need to modify the configuration of the on-premises gateway that you are using. 
+{:shortdesc}
+
+* [Configuring IBM VPN with strongSwan](vpn_onpremises.html#strongswan)
+* [Configuring IBM VPN with Vyatta](vpn_onpremises.html#vyatta)
+* [Configuring IBM VPN with SoftLayer Gateway Appliance Service (GaaS)](vpn_onpremises.html#gaas)
+* [Configuring IBM VPN with Cisco ASA](vpn_onpremises.html#cisco)
 
 ##Configuring IBM VPN with strongSwan
 {: #strongswan} 
@@ -14,9 +22,8 @@ Your on-premises VPN gateway connects with the IBM VPN gateway. You may need to 
 
 To use IBM VPN with strongSwan, configure as follows:
 
-1. [Configure IBM VPN service](index.html#ibm-vpn).  
-2. [Configure the gateway](index.html#gateway).  
-3. [Configure site connection](index.html#site). Following is an example configuration.  
+1. [Configure the gateway](vpn_configuring.html#gateway).  
+3. [Configure site connection](vpn_configuring.html#site). Following is an example configuration.  
 ![strongSwan_site](images/strongswan_site.png)
 4. Configure strongSwan.  
 	**Note:** The following example is based on Ubuntu 14.10.  
@@ -29,6 +36,8 @@ To use IBM VPN with strongSwan, configure as follows:
 		University of Applied Sciences Rapperswil, Switzerland  
 		See 'ipsec --copyright' for copyright information.		
 		```  
+		{: codeblock}
+
 	2. Configure IPSec:  
 		* Edit the file: **/etc/ipsec.conf**  
 			```
@@ -47,7 +56,8 @@ To use IBM VPN with strongSwan, configure as follows:
 			 dpddelay=2s  
 			include /etc/ipsec.all.conf  
 			```
-				
+			{: codeblock}
+
 		* Add the file: **/etc/ipsec.all.conf**  
 			```
 			root@rdmnm:~# more /etc/ipsec.all.conf  
@@ -61,7 +71,7 @@ To use IBM VPN with strongSwan, configure as follows:
 			  leftauth=psk  
 			  rightauth=psk  
 			  rightsubnet=172.31.0.0/16,172.30.0.0/16  
-			  leftsubnet=192.168.3.0/24  
+			  leftsubnet=10.121.33.0/24  
 			  rightid=%any  
 			  leftid=169.55.254.166  
 			  ikelifetime=3600s  
@@ -72,19 +82,23 @@ To use IBM VPN with strongSwan, configure as follows:
 			  dpdaction=hold  
 			  dpdtimeout=120s  
 			```
-	
+			{: codeblock}
+
 		* Edit file: **/etc/ipsec.secrets** 
  
 			```  
 			root@rdmnm:~# more   /etc/ipsec.secrets  
 				  : PSK "567890"
 			```
+			{: codeblock}
 
 	3. Restart IPSec:
 
 		```
 		root@rdmnm:~# ipsec restart
 		```  
+		{: codeblock}
+
 	4. Verify configuration:
 		* Run the following command on the strongswan server to verify IPSec status:
 
@@ -93,10 +107,11 @@ To use IBM VPN with strongSwan, configure as follows:
 			Security Associations (1 up, 0 connecting):
 			         all[1914]: ESTABLISHED 48 minutes ago, 169.55.254.166[169.55.254.166]...134.168.8.164[134.168.8.164]
 			         all{20}:  INSTALLED, TUNNEL, ESP in UDP SPIs: cb9c3056_i 1595f835_o
-			         all{20}:   192.168.3.0/24 === 172.30.0.0/16 
+			         all{20}:   10.121.33.0/24 === 172.30.0.0/16 
 			         all{19}:  INSTALLED, TUNNEL, ESP in UDP SPIs: c6e4ed78_i 8765e42d_o
-			         all{19}:   192.168.3.0/24 === 172.31.0.0/16
+			         all{19}:   10.121.33.0/24 === 172.31.0.0/16
 			```
+			{: codeblock}
 
 		* Verify IBM VPN IPSec connection status:
 
@@ -120,11 +135,10 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 
 ![](images/vyatta.png)
 
-1. [Configure IBM VPN service](index.html#ibm-vpn).
-2. [Configure the gateway](index.html#gateway).
-3. [Configure site connection](index.html#site). Following is an example configuration.  
+1. [Configure the gateway](vpn_configuring.html#gateway).
+2. [Configure site connection](vpn_configuring.html#site). Following is an example configuration.  
 	![](images/vyatta_site.png)
-4. Configure Vyatta.  
+3. Configure Vyatta.  
 
 	1. Use SSH to login to the Vyatta appliance:  
 		```
@@ -143,20 +157,28 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 		HW UUID:      002590D2-A0A8-0607-0025-90D2A0A80E0F  
 		Uptime:       20:12:17 up 2 days, 23:28,  2 users,  load average: 0.33, 0.27, 0.24  
 		```  
+		{: codeblock}
+
 	2. Enter configuration mode:  
 		```
 		vyatta@vyatta: configure
 		vyatta@vyatta#
 		```  
+		{: codeblock}
+
 	3. Configure interface-bonding IP addresses:  
 		```
 		Set interface bonding bond0 address 192.168.201.2/24
 		Set interface bonding bond1 address 173.192.83.82/29
 		```  
+		{: codeblock}
+
 	4. Enable VPN on bond1:  
 		```
 		set vpn ipsec ipsec-interfaces interface bond1
 		```  
+		{: codeblock}
+
 	5. Configure IKE group:  
 		```
 		set vpn ipsec ike-group bm-ike lifetime 28800  
@@ -164,6 +186,8 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 		set vpn ipsec ike-group bm-ike proposal 1 encryption aes128  
 		set vpn ipsec ike-group bm-ike proposal 1 hash sha1  
 		```  
+		{: codeblock}
+
 	6. Configure ESP group:  
 		```
 		set vpn ipsec esp-group bm-esp compression disable  
@@ -173,6 +197,8 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 		set vpn ipsec esp-group bm-esp proposal 2 encryption aes128  
 		set vpn ipsec esp-group bm-esp proposal 2 hash sha1  
 		```  
+		{: codeblock}
+
 	7. Establish connection with the remote site:   
 		```
 		set vpn ipsec site-to-site peer 129.41.255.27 authentication id 173.192.83.82  
@@ -190,6 +216,8 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 			The 129.41.255.27 is the IBM cloud gateway;  
 			The 172.31.0.0/16 is the container subnet behind IBM gateway.  
 		```
+		{: codeblock}
+
 	8. Commit and confirm the configuration:  
 		```  
 		vyatta@vpn# show vpn  
@@ -245,8 +273,10 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 		vyatta@vpn# commit
 		vyatta@vpn# confirm   
 		```
+		{: codeblock}
+
 	9. Verify the configuration:  
-		```	
+		```
 		vyatta@vpn:~$ show vpn  ipsec status  
 		IPSec Process Running PID: 5633  
 		  
@@ -314,6 +344,7 @@ Nov 25 08:03:40 rdmnm charon: 12[IKE] 129.41.253.120 is initiating a Main Mode I
 		------  -----  -------------  -------  ----  -----  ------  ------  -----
 		1       up     0.0/0.0        aes128   sha1  no     1359    3600    all  
 		```  
+		{: codeblock}
 
 	10. Check IBM VPN connection status:
 
@@ -361,7 +392,7 @@ Nov 19 00:26:07 vpn pluto[5876]: 173.192.83.86
 			* Diffie-Hellman group: 2  
 			* ESP - Perfect Forward Security: Enable  
 			* Pre-shared Secret: Enter the preshared secret key that you had used while configuring IBM VPN.  
-		* Select **Next**.  
+		* Select **Next**.
 	8. Select the firewall. Select **Next**.  
 	![](images/gaas_firewall.png)
 	9. Select the check box to agree with the gateway configuration overwrite.
@@ -373,9 +404,8 @@ Nov 19 00:26:07 vpn pluto[5876]: 173.192.83.86
 	13. Wait until all parameters are configured.  
 	![](images/gaas_request2.png)
 
-2. [Configure IBM VPN service](index.html#ibm-vpn).
-3. [Configure the gateway](index.html#gateway).
-4. [Configure site connection](index.html#site). Following is an example configuration.  
+2. [Configure the gateway](vpn_configuring.html#gateway).
+3. [Configure site connection](vpn_configuring.html#site). Following is an example configuration.  
 	![](images/gaas_site.png)
 5. Verify the configuration.
 	1. Run the following command on Vyatta to verify IPSec connection status:  
@@ -506,6 +536,8 @@ Nov 19 00:26:07 vpn pluto[5876]: 173.192.83.86
 		2 packets transmitted, 2 received, 0% packet loss, time 1001ms
 		rtt min/avg/max/mdev = 1.794/1.896/1.998/0.102 ms
 		```
+		{: codeblock}
+
 	2. Check the IPSec connection status on IBM VPN GUI:
 	![](images/gaas_site_ibm.png)
 
@@ -525,17 +557,15 @@ Dec  4 08:04:34 gateway Keepalived_vrrp: last message repeated 9 times
 Dec  4 08:05:34 gateway Keepalived_vrrp: last message repeated 8 times
 Dec  4 08:06:34 gateway Keepalived_vrrp: last message repeated 8 times
 ```
-
 ##Configuring IBM VPN with Cisco ASA
 {: #cisco}
 
 ![](images/cisco.png)
 
-1. [Configure IBM VPN service](index.html#ibm-vpn).
-2. [Configure the gateway](index.html#gateway).
-3. [Configure site connection](index.html#site).
-4. Configure Cisco ASA. See the following configuration example.
-
+1. [Configure the gateway](vpn_configuring.html#gateway).
+2. [Configure site connection](vpn_configuring.html#site).
+3. Configure Cisco ASA. See the following configuration example.
+		
 		object network 10.2-network 
 		 subnet 10.2.0.0 255.255.0.0
 		http 10.2.0.0 255.255.0.0 inside
