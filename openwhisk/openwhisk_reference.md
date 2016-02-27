@@ -314,7 +314,7 @@ You can also include any compilation steps or dependencies by modifying the `doc
 | hourRate | a user cannot invoke more than this many actions per hour | per user | number | 3600 |
 
 ### Per action timeout (ms) (Default: 60s)
-* The timeout limit N is in the range [100ms..300000ms] and is set per action in millioseconds.
+* The timeout limit N is in the range [100ms..300000ms] and is set per action in milliseconds.
 * A user can change the limit when creating the action.
 * A container that runs longer than N milliseconds is terminated.
 
