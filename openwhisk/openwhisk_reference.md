@@ -122,7 +122,7 @@ An activation record contains the following fields:
 ## JavaScript actions
 {: #openwhisk_ref_javascript}
 
-### Function protoype
+### Function prototype
 
 {{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 0.12.9.
 
