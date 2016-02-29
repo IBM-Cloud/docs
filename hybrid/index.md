@@ -18,3 +18,11 @@ At its core, {{site.data.keyword.Bluemix_notm}} is an environment for you to dev
 ## Local
 
 With {{site.data.keyword.Bluemix_notm}} Local, you can take advantage of the true value of a private cloud within your data center.  {{site.data.keyword.Bluemix_notm}} Local is delivered as-a-service and in constant collaboration with your IT team. It also enables you to leverage your existing mainframes, service-oriented architecture, processes, and data in a modern cloud platform. Learn more about [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html).
+
+# rellinks
+## general
+* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/)
+* [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [What's new in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} glossary](../overview/glossary/index.html)
