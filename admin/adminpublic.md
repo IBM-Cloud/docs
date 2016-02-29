@@ -174,11 +174,11 @@ Depending on whether the invitee has an IBM ID or not, that user is assigned as 
 
 *Table 1. Account role assignments*
 
-| **Email type** | **Assigned account role** | 
+| **Invited email type** | **Assigned account role** | 
 |----------------|------------------|
 |User has IBM ID account linked to invited email address  | Member  | 
 |User does not have an IBM ID | An IBM ID is created matching the submitted email address, and the user is added as a Member. | 
-|An existing {{site.data.keyword.Bluemix_notm}} user | Collaborator | 
+|An email address for a current {{site.data.keyword.Bluemix_notm}} user | Collaborator | 
 
 Complete the following steps to add users with assigned roles to specific spaces for a chosen org:
 
