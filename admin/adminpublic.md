@@ -5,7 +5,7 @@
 
 # Administering
 {: #administer}
-*Last updated: 17 February 2016*
+*Last updated: 29 February 2016*
 
 Manage your orgs, spaces, and assigned users by clicking the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. If you are a {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated user, see [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng) for more information about administering your local or dedicated instance.
 {:shortdesc}
@@ -124,58 +124,87 @@ Users can be assigned the following permissions to take different user roles in 
 <dd>Space auditors have permissions for read-only access to all information about the space, such as information about applications and services, settings, reports, and logs.</dd>
 </dl>
 
-### Managing your organization
+### Managing your organizations
 {: #orgmng}
 
 As an organization manager or account owner, you can manage your organizations. Management tasks include creating an organization, renaming an organization, creating a space, inviting users to a space, changing user roles, and deleting an existing organization.
 
-<ul>
-<li>Creating an organization
-<p>Only users with pay accounts can create an organization. With a pay account, you can create an organization by taking the following steps:</p>
+#### Creating an organization
+
+Only users with pay accounts can create an organization. With a pay account, you can create an organization by taking the following steps:
+
 <ol>
 <li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**.</li>
 <li>Click **Create an Organization** and follow the prompts to create your organization.</li>
 </ol>
-</li>
-<li>Renaming an organization
-<p>Take the following steps to rename your organization:</p>
+
+#### Renaming an organization
+
+Take the following steps to rename your organization:
+
 <ol>
 <li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and select **Manage Organizations**.</li>
 <li>Select the organization that you want to rename.</li>
 <li>Type a new name in the **Organization** field, and click **Save**.</li>
 </ol>
-</li>
-<li>Listing members
-<p>Take the following steps to list the members of your organization or space:</p>
+
+#### Listing members 
+
+Take the following steps to list the members of your organization or space:
+
 <ol>
 <li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. You can see the members of your organization and their roles in the **Users** tab.</li>
 <li>Click the space name in your organization to see the members of this space and their roles.</li>
 </ol>
-</li>
-<li>Creating a space
-<p>You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you an associate your apps with spaces. Take the following steps to create a space:</p>
+
+#### Creating a space
+
+You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you an associate your apps with spaces. Take the following steps to create a space:
+
 <ol>
 <li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](images/account_support.svg), then select **Manage Organizations**.</li>
 <li>Click **Create a Space** following your organization name, and follow the prompts to create your space.</li>
 </ol>
-</li>
-<li>Inviting users to a space
-<p>You can invite users to your organization as collaborators. You can also add users of your organization to different spaces. The users can access only the space that they were added to. Take the following steps to add a user to a space:</p>
+
+#### Inviting users to a space
+
+You can invite users to your orgs and spaces by email address. The users can access only the space that they were added to. 
+
+Depending on whether the invitee has an IBM ID or not, that user is assigned as having a `member` or `collaborator` role for the account. The following table details how account roles are assigned by invitation type.
+
+*Table 1. Account role assignments*
+
+| **Email type** | **Assigned account role** | 
+|----------------|------------------|
+|User has IBM ID account linked to invited email address  | Member  | 
+|User does not have an IBM ID | An IBM ID is created matching the submitted email address, and the user is added as a Member. | 
+|An existing {{site.data.keyword.Bluemix_notm}} user | Collaborator | 
+
+Complete the following steps to add users with assigned roles to specific spaces for a chosen org:
+
 <ol>
-<li>Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations**. Then, click **Add user** in your organization, and follow the prompts to add the user to your organization.</li>
-<li>Add the user to a space. Select the space from the navigation pane, click **Add User**, and follow the prompts to add the user to the space.</li>
+<li>Go to **Account and Support** &gt; **Account** &gt; **Manage Organizations**.</li>
+<li>Select **Invite Users**.</li>
+<li>Enter the email address for the person that you want to invite.</li>
+<li>Select the role for the org to which you plan to invite the new user.</li>
+<li>Select the role for the space to which you plan to invite the new user.</li>
+<li>Select **Invite**.</li>
+<li>View the confirmation that the invitation was sent in the **Pending** section. Select **Resend email** or **Cancel invitation** to take action on a pending invitation.</li>
 </ol>
-</li>
-<li>Changing user roles
-<p>Take the following steps to change user roles:</p>
+
+#### Changing user roles
+
+Take the following steps to change user roles:
+
 <ol>
 <li>From the {{site.data.keyword.Bluemix_notm}} user interface, click the **Account and Support** icon ![Account and Support](images/account_support.svg), and then select **Manage Organizations**.</li>
 <li>Select the **MANAGER**, **BILLING MANAGER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in your organization. Or select a space from the navigation pane, and then select the **MANAGER**, **DEVELOPER**, or **AUDITOR** check box in the **USERS** tab to change roles of users in the space. </li>
 <li>Click **SAVE**.</li>
 </ol>
-</li>
-<li>Deleting an existing organization
-<p>Contact {{site.data.keyword.Bluemix_notm}} registration and ID support to delete your organization.</p>
-<p>**Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.</p>
-</li>
-</ul>
+
+#### Deleting an existing organization
+
+Contact {{site.data.keyword.Bluemix_notm}} registration and ID support to delete your organization.
+
+**Note**: Deleting operations cannot be reversed. You lose all your applications and services that are associated with the organization.
+
