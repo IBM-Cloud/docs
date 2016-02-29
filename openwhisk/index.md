@@ -5,7 +5,7 @@
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.openwhisk_short}}
-*Last updated: 22 February 2016*
+*Last updated: 17 February 2016*
 
 {{site.data.keyword.openwhisk}} is a distributed, event-driven compute service. {{site.data.keyword.openwhisk_short}} executes application logic in response to events or direct invocations from web or mobile apps over HTTP. Events can be provided from Bluemix services like Cloudant, and from external sources. Developers can focus on writing application logic, and creating actions that are executed on demand. The rate of executing actions always matches the event rate, resulting in inherent scaling and resiliency, and optimal utilization. You pay for only what you use and you don't have to manage a server. You can also get the [source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
 {: shortdesc}
@@ -13,7 +13,7 @@
 For more details about how {{site.data.keyword.openwhisk_short}} works, see [About {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
 ## Setting up {{site.data.keyword.openwhisk_short}}
-You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. Go to [Configure CLI](https://{DomainName}/openwhisk/cli){: new_window} and follow the guided experience to install it.
+You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. Go to [Configure CLI](https://{DomainName}/openwhisk/cli){: new_window} and follow the guided experience to install it. Note that you must have Python 2.7 installed on your system to use the CLI.
 
 After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line or through REST APIs.
 
@@ -87,7 +87,7 @@ To use this example, follow these steps:
     ```
     {: screen}
 
-You can also use the event-driven capabilities in {{site.data.keyword.openwhisk_short}} to invoke this action in response to events. Follow the [alarm service example](./openwhisk_package.html#openwhisk_packages_trigger) to configure an event source to invoke the `hello` action every time a periodic event is generated.
+You can also use the event-driven capabilities in {{site.data.keyword.openwhisk_short}} to invoke this action in response to events. Follow the [alarm service example](./openwhisk_packages.html#openwhisk_packages_trigger) to configure an event source to invoke the `hello` action every time a periodic event is generated.
 
 
 ## System details
@@ -105,3 +105,4 @@ You can find additional information about {{site.data.keyword.openwhisk_short}} 
 
 ## general
 * [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
+* [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
