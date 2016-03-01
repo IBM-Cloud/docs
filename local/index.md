@@ -20,7 +20,7 @@ In addition, there is a set of services and components that are available for {{
 
 | **Type** | **Name** | **Description** |
 |----------|----------|-----------------|
-|Included | {{site.data.keyword.Bluemix_notm}} runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage virtual servers and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
+|Included | {{site.data.keyword.Bluemix_notm}} runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
 |Included | {{site.data.keyword.autoscaling}}| Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix}} Local environment.|
 |Optional | {{site.data.keyword.APIM}} | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
 |Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
@@ -30,13 +30,13 @@ In addition, there is a set of services and components that are available for {{
 ## {{site.data.keyword.Bluemix_notm}} Local architecture
 {: #localarch}
 
-{{site.data.keyword.Bluemix_notm}} Local sits on a virtual server that is behind your company firewall, providing the highest performing and most secure cloud infrastructure to you. IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through IBM's Relay technology. Review the following diagram for information about how {{site.data.keyword.Bluemix_notm}} is set up in your local environment and how IBM maintains your local instance:
+{{site.data.keyword.Bluemix_notm}} Local sits on a virtual machine that is behind your company firewall, providing the highest performing and most secure cloud infrastructure to you. IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through IBM's Relay technology. Review the following diagram for information about how {{site.data.keyword.Bluemix_notm}} is set up in your local environment and how IBM maintains your local instance:
 
 ![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local architecture diagram")
 
 *Figure 1. {{site.data.keyword.Bluemix_notm}} Local architecture*
 
-The inception virtual server runs in a network behind your customer firewall in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core features that support the platform components run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses a VLAN for the private subnet. Using a private subnet rather than a public VLAN is more secure and can help avoid routing issues. The set of core features that support the platform include the following:
+The inception virtual machine runs in a network behind your customer firewall in a network that has outbound connectivity to the IBM operations center through Relay. The {{site.data.keyword.Bluemix_notm}} platform components and core features that support the platform components run in a private, isolated virtual local area network (VLAN). {{site.data.keyword.Bluemix_notm}} Local uses a VLAN for the private subnet. Using a private subnet rather than a public VLAN is more secure and can help avoid routing issues. The set of core features that support the platform include the following:
 
 <dl>
 <dt>**Monitoring and logging**</dt>
@@ -51,14 +51,14 @@ The inception virtual server runs in a network behind your customer firewall in 
 </dd>
 </dl>
 
-Your apps are deployed inside virtual containers that run on Cloud Foundry virtual servers. All Cloud Foundry components, such as cloud controllers, health managers, routers, and droplet execution agents (DEAs) are deployed when {{site.data.keyword.Bluemix_notm}} is set up. The various {{site.data.keyword.Bluemix_notm}} management components are also included in the {{site.data.keyword.Bluemix_notm}} deployment.
+Your apps are deployed inside virtual containers that run on Cloud Foundry virtual machines. All Cloud Foundry components, such as cloud controllers, health managers, routers, and droplet execution agents (DEAs) are deployed when {{site.data.keyword.Bluemix_notm}} is set up. The various {{site.data.keyword.Bluemix_notm}} management components are also included in the {{site.data.keyword.Bluemix_notm}} deployment.
 
 DataPower appliances provide access to {{site.data.keyword.Bluemix_notm}} application domains. These appliances connect to the network that is accessible  from your intranet. Your users who are deploying apps and services get access from the network that is accessible from your intranet. You must provide seven IP addresses that have outbound internet access. DataPower appliances route from these customer IP addresses to the isolated {{site.data.keyword.Bluemix_notm}} deployment. For information about the network specifications and infrastructure requirements, see [{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements](../local/index.html#localinfra).
 
 ### Relay
 {: #localrelay}
 
-Relay is a delivery capability that is included with {{site.data.keyword.Bluemix_notm}} Local. Relay enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual server on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual server, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual server.  After a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, IBM checks for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begins deploying updates.
+Relay is a delivery capability that is included with {{site.data.keyword.Bluemix_notm}} Local. Relay enables IBM to automatically and consistently deliver the latest updates to all local deployments, so that you always have an up-to-date and secure system. Relay achieves secure connectivity through an open, outbound SSL, VPN tunnel that originates from the inception virtual machine on-premises by using certificates that are specific to each {{site.data.keyword.Bluemix_notm}} Local instance. All initial {{site.data.keyword.Bluemix_notm}} releases are available in the inception virtual machine, which also acts as an automation agent machine for deployments and updates. The SSL connection originates from the inception virtual machine.  After a secure connection is established back to the {{site.data.keyword.Bluemix_notm}} automation server, IBM checks for the currency and consistency of {{site.data.keyword.Bluemix_notm}} releases, and begins deploying updates.
 
 The traffic on this tunnel is automated activity for serving and maintaining the platform, compute resources, and services for your instance. The traffic includes the monitoring capability that is used by IBM operations to complete problem determination for your local instance. The outbound web port 443 is used for this connection. IBM uses the Relay capability to deliver platform updates through a consistent testing and validation. This process ensures that all deployments that are pushed to your local environments are stable and secure.
 
@@ -99,7 +99,7 @@ You can expect a process similar to the following list for the initial deploymen
 
 <ol>
 <li>You provide the VMware configuration that meets the specifications for compute resources, networking, and storage. For more information about the infrastructure requirements, see <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.</li>
-<li>You provide the vCenter cluster credentials to be used by the inception virtual server. You must provide the following information:
+<li>You provide the vCenter cluster credentials to be used by the inception virtual machine. You must provide the following information:
 <ul>
 <li>Name of the VMware cluster</li>
 <li>vCenter cluster credentials including the user ID and password</li>
@@ -115,9 +115,9 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.
 <p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the IBM operations center.</li>
-<li>IBM installs and starts up the inception virtual server within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an IBM representative helps your customer representative to complete this task.</li>
+<li>IBM installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an IBM representative helps your customer representative to complete this task.</li>
 <li>IBM configures the Relay to communicate back to the IBM operations center.</li>
-<li>The inception virtual server repository pulls in the updated build artifacts.</li>
+<li>The inception virtual machine repository pulls in the updated build artifacts.</li>
 <li>You provide the credentials for IBM to connect to the corporate LDAP directory instance.</li>
 <li>IBM uses automation to deploy the core {{site.data.keyword.Bluemix_notm}} platform.</li>
 <li>IBM deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
@@ -256,14 +256,14 @@ While there are requirements for the type and size of available hardware, you ca
 <dl>
 <dt>**VMware ESXi hardware**</dt>
 <dd>
-ESXi is a virtualization layer that runs on physical servers and that abstracts processor, memory, storage, and resources into multiple virtual servers. Choose any combination that meets the following resource totals, on the condition that minimum physical core count per ESXi is eight. The following specifications are for the {{site.data.keyword.Bluemix_notm}} core runtime only.
+ESXi is a virtualization layer that runs on physical servers and that abstracts processor, memory, storage, and resources into multiple virtual machines. Choose any combination that meets the following resource totals, on the condition that minimum physical core count per ESXi is eight. The following specifications are for the {{site.data.keyword.Bluemix_notm}} core runtime only.
 <ul>
 <li>48 Physical cores at 2.0 or more GHz each</li>
 <li>756 GB of physical RAM</li>
 <li>Total datastore size of 7.5 TB
 <ul>
 <li>7 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
-<li>500 GB datastore to hold the inception virtual server</li>
+<li>500 GB datastore to hold the inception virtual machine</li>
 </ul>
 </li>
 </ul>
@@ -276,7 +276,7 @@ To support a single node failure, you must have n+1 ESXi. For example, if three 
 </dd>
 <dt>**Network**</dt>
 <dd>
-Recommended requirements include a customer accessible port group with seven customer network IP addresses that have outbound internet access in the same subnet. Two ports are used by the inception virtual server, three ports are virtual IP addresses used for the domains, and the final two are public IP addresses for the DataPowers. Then, you define a second private VLAN between only the ESXis being used for {{site.data.keyword.Bluemix_notm}} Local. This VLAN is shown as a port group in VMware. {{site.data.keyword.Bluemix_notm}} Local uses it for the private subnet, which is more secure and can help avoid routing issues.<br />
+Recommended requirements include a customer accessible port group with seven customer network IP addresses that have outbound internet access in the same subnet. Two ports are used by the inception virtual machine, three ports are virtual IP addresses used for the domains, and the final two are public IP addresses for the DataPowers. Then, you define a second private VLAN between only the ESXis being used for {{site.data.keyword.Bluemix_notm}} Local. This VLAN is shown as a port group in VMware. {{site.data.keyword.Bluemix_notm}} Local uses it for the private subnet, which is more secure and can help avoid routing issues.<br />
 <p>The following ports are used:</p>
 <ul>
 <li>Port 443 for the Relay connection
@@ -332,7 +332,7 @@ Set the following roles and permissions. Propagation is set for each permission.
 <dt>**Datacenter**</dt>
 <dd>Create the role "{{site.data.keyword.Bluemix_notm}}" and grant the following permissions:
 <ul>
-<li>For **Datastore**, set **Low level file operations** and **Update virtual server files**.</li>
+<li>For **Datastore**, set **Low level file operations** and **Update virtual machine files**.</li>
 <li>For **vApp**, set **Import**.</li>
 <li>For **dvPort** group, set **Modify**. This is for vDS use only.</li>
 </ul>
@@ -462,7 +462,7 @@ These technologies include the following:
 <dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
 </dd>
 <dt>Metadata backup</dt>
-<dd>Metadata is backed up to a secondary location, typically an on-premises virtual server. If possible, you should replicate the backup to your own environment at least 200 km away.</dd>
+<dd>Metadata is backed up to a secondary location, typically an on-premises virtual machine. If possible, you should replicate the backup to your own environment at least 200 km away.</dd>
 </dl>
 
 ## Restoring your local instance
