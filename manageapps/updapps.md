@@ -6,7 +6,7 @@
 #Updating apps
 {: #updatingapps}
 
-*Last updated: 8 December 2015*
+*Last updated: 1 March 2016*
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
@@ -18,8 +18,6 @@ You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services
 You can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
 
 Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must register the custom domain on a public DNS server, configure the custom domain in {{site.data.keyword.Bluemix_notm}}, and then map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on the public DNS server. After your custom domain is mapped to the {{site.data.keyword.Bluemix_notm}} system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
-
-**Note:** You can use the **nslookup** command to get the public IP address of the {{site.data.keyword.Bluemix_notm}} system domain. For example, at a command prompt, enter `nslookup mybluemix.net`.
 
 You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by using either the {{site.data.keyword.Bluemix_notm}} user interface, or the cf command line interface.
 
@@ -73,6 +71,15 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
     
         The host name in the route that you want to use for your application.
 	
+After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on your registered DNS server:
+
+  1. Set up a 'CNAME' record for the custom domain name on your DNS server.
+  2. Map the custom domain name to the secure endpoint for the {{site.data.keyword.Bluemix_notm}} region where your application is running. Use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
+  
+    * US-SOUTH: `secure.us-south.bluemix.net`
+    * EU-GB: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 In a browser or command line interface, enter the following URL to access the myapp application:
 
 ```
