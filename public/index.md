@@ -67,20 +67,20 @@ Each execution environment, including both mobile and web, is isolated from the 
 
 *Figure 5. Deploying an app*
 
-When you create an app and deploy it to {{site.data.keyword.Bluemix_notm}}, the {{site.data.keyword.Bluemix_notm}} environment determines an appropriate virtual machine (VM) to which the app or artifacts that the app represents is sent. For a mobile app, a mobile back-end projection is created on {{site.data.keyword.Bluemix_notm}}. Any code for the mobile app running in the cloud eventually runs in the {{site.data.keyword.Bluemix_notm}} environment. For a web app, the code running in the cloud is the app itself that the developer deploys to {{site.data.keyword.Bluemix_notm}}. The determination of the VM is based on several factors, including:
+When you create an app and deploy it to {{site.data.keyword.Bluemix_notm}}, the {{site.data.keyword.Bluemix_notm}} environment determines an appropriate virtual server to which the app or artifacts that the app represents is sent. For a mobile app, a mobile back-end projection is created on {{site.data.keyword.Bluemix_notm}}. Any code for the mobile app running in the cloud eventually runs in the {{site.data.keyword.Bluemix_notm}} environment. For a web app, the code running in the cloud is the app itself that the developer deploys to {{site.data.keyword.Bluemix_notm}}. The determination of the virtual server is based on several factors, including:
 
 * The load already on the machine
-* Runtimes or frameworks supported by that VM.
+* Runtimes or frameworks supported by that virtual server.
 
-After a VM is chosen, an application manager on each VM installs the proper framework and runtime for the app. Then the app can be deployed into that framework. When the deployment is completed, the application artifacts are started.
+After a virtual server is chosen, an application manager on each virtual server installs the proper framework and runtime for the app. Then the app can be deployed into that framework. When the deployment is completed, the application artifacts are started.
 
-The following figure shows the structure of a VM, also known as Droplet execution agent (DEA), that has multiple apps deployed to it:
+The following figure shows the structure of a virtual server, also known as Droplet execution agent (DEA), that has multiple apps deployed to it:
 
-![Design of a VM](images/container.png)
+![Design of a virtual server](images/container.png)
 
-*Figure 6. Design of a VM*
+*Figure 6. Design of a virtual server*
 
-In each VM, an application manager communicates with the rest of the {{site.data.keyword.Bluemix_notm}} infrastructure, and manages the apps that are deployed to this VM. Each VM has containers to separate and protect apps. In each container, {{site.data.keyword.Bluemix_notm}} installs the appropriate framework and runtime that are required for each app.
+In each virtual server, an application manager communicates with the rest of the {{site.data.keyword.Bluemix_notm}} infrastructure, and manages the apps that are deployed to this virtual server. Each virtual server has containers to separate and protect apps. In each container, {{site.data.keyword.Bluemix_notm}} installs the appropriate framework and runtime that are required for each app.
 
 When the app is deployed, if it has a web interface (as for a Java web app), or other REST-based services (such as mobile services exposed publicly to the mobile app), users of the app can communicate with it by using normal HTTP requests.
 
@@ -124,7 +124,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 
 {{site.data.keyword.Bluemix_notm}} is designed to host scalable, resilient apps and application artifacts that can both scale to meet your needs, and remain highly available and quick to recover from problems. {{site.data.keyword.Bluemix_notm}} separates those components that track the state of interactions (stateful) from those that do not (stateless). This separation allows {{site.data.keyword.Bluemix_notm}} to move apps flexibly as needed to achieve scalability and resiliency.
 
-You can have one or more instances running for your app. When you have multiple instances for one app, the app is uploaded only once. However, {{site.data.keyword.Bluemix_notm}} deploys the number of instances of the app requested, and distributes them across as many VMs as possible.
+You can have one or more instances running for your app. When you have multiple instances for one app, the app is uploaded only once. However, {{site.data.keyword.Bluemix_notm}} deploys the number of instances of the app requested, and distributes them across as many virtual servers as possible.
 
 You must save all persistent data in a stateful data store that is outside of your app, such as on one of the data store services that are provided by {{site.data.keyword.Bluemix_notm}}. Because anything cached in memory or on disk might not be available even after a restart, you can use the memory space or filesystem of a single {{site.data.keyword.Bluemix_notm}} instance as a brief, single-transaction cache. With a single instance setup, the request to your app might be interrupted because of the stateless nature of {{site.data.keyword.Bluemix_notm}}. A best practice is to use at least three instances for each app to ensure the availability of your app.
 
