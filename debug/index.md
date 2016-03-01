@@ -116,7 +116,7 @@ Specifically, logging to stdout and stderr can be enabled. For more information 
   * For Node.js applications, see [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
   * For PHP applications, see [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * For Python applications, see [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * For Ruby on Rails applications, see [The Logger](https://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * For Ruby on Rails applications, see [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * For Ruby Sinatra applications, see [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
   
 When you enter `cf logs appname --recent` in the cf command line interface, only the most recent logs are displayed. To view the logs for errors that occurred earlier, you must retrieve all the logs and search for the errors. To retrieve all the logs for your application, use one of the following methods:
