@@ -152,7 +152,7 @@ Contact the Cloud Administrator for more information.
 ## sdk
 {: #sdk}
 
-* [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.{DomainName}/docs/apidocs/48){:new_window}
+* [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.{DomainName}/apidocs/48){:new_window}
 
 ## general
 {: #general}
