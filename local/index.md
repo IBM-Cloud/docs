@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 22 February 2016*
+*Last updated: 1 March 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -260,11 +260,12 @@ ESXi is a virtualization layer that runs on physical servers and that abstracts 
 <ul>
 <li>48 Physical cores at 2.0 or more GHz each</li>
 <li>756 GB of physical RAM</li>
-</li>Total datastore size of 7.5 TB
+<li>Total datastore size of 7.5 TB
 <ul>
 <li>7 TB datastore to hold {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB datastore to hold the inception virtual server</li>
 </ul>
+</li>
 </ul>
 <p><strong>Note:</strong> If you use multiple datastores, use the same prefix for each.</p>
 </dd>
