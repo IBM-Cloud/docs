@@ -3,7 +3,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 1 March 2016*
+*Last updated: 2 March 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -295,7 +295,7 @@ Review the following version, datacenter, resource pool, and datastore requireme
 
 <dl>
 <dt>**Supported VMware versions**</dt>
-<dd>vCenter and ESXi 5.1 and 5.5</dd>
+<dd>vCenter and ESXi 5.1, 5.5, and 6.0</dd>
 <dt>**Supported VMware types**</dt>
 <dd>vSphere Enterprise<br />
 vSphere Enterprise plus, if you plan to use distributed virtual switches</dd>
