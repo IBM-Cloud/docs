@@ -13,7 +13,7 @@
 For more details about how {{site.data.keyword.openwhisk_short}} works, see [About {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
 ## Setting up {{site.data.keyword.openwhisk_short}}
-You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. Go to [Configure CLI](https://{DomainName}/openwhisk/cli){: new_window} and follow the guided experience to install it. Note that you must have Python 2.7 installed on your system to use the CLI.
+You can use the {{site.data.keyword.openwhisk_short}} command line interface (CLI) to set up your namespace and authorization key. Go to [Configure CLI](https://console.{DomainName}/openwhisk/cli){: new_window} and follow the guided experience to install it. Note that you must have Python 2.7 installed on your system to use the CLI.
 
 After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line or through REST APIs.
 
