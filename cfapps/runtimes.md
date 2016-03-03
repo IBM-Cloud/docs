@@ -19,6 +19,11 @@ Use runtimes to get your app up and running quickly, with no need to set up and 
 <p class="runtimeLink"><a format="html" href="../runtimes/nodejs/index.html" scope="peer">VIEW DOCS</a></p>
 </li>
 <li>
+<p class="runtimeIcon"><img src="images/xpages_featured.svg" alt="XPages" /></p>
+<p class="runtimeTitle">XPages</p>
+<p class="runtimeLink"><a format="html" href="../starters/xpages/index.html" scope="peer">VIEW DOCS</a></p>
+</li>
+<li>
 <p class="runtimeIcon"><img src="images/go_featured.svg" alt="Go" /></p>
 <p class="runtimeTitle">Go</p>
 <p class="runtimeLink"><a format="html" href="../runtimes/go/index.html" scope="peer">VIEW DOCS</a></p>
@@ -37,11 +42,6 @@ Use runtimes to get your app up and running quickly, with no need to set up and 
 <p class="runtimeIcon"><img src="images/ruby_featured.svg" alt="Ruby" /></p>
 <p class="runtimeTitle">Ruby</p>
 <p class="runtimeLink"><a format="html" href="../runtimes/ruby/index.html" scope="peer">VIEW DOCS</a></p>
-</li>
-<li>
-<p class="runtimeIcon"><img src="images/xpages_featured.svg" alt="XPages" /></p>
-<p class="runtimeTitle">XPages</p>
-<p class="runtimeLink"><a format="html" href="../starters/xpages/index.html" scope="peer">VIEW DOCS</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/byod_featured.png" alt="Community buildpacks" /></p>
