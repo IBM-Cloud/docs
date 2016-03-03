@@ -3,13 +3,13 @@
 {:download: .download}
 
 # Start coding with Git
-*Last updated: 8 December 2015*  
+*Last updated: 2 March 2016*  
 
 You can create a hosted Git repository that deploys to {{site.data.keyword.Bluemix}} automatically. Then, you can modify the code that runs in your app by pushing changes to the Git repository. 
 {:shortdesc}
 
-1. To get started, on the app's Overview page, click **ADD GIT**.  
-2. In the window that opens, make sure that the **Populate the repository with the starter application package and enable Delivery Pipeline (Build & Deploy)** check box is selected. The Git repository is created. If starter code is available, it is loaded into the repository. In addition, the application is deployed by the Delivery Pipeline service running in {{site.data.keyword.jazzhub}}.  
+1. To get started, on the app's Overview page, click **Add Git Repo and Pipeline**, or in the {{site.data.keyword.Bluemix_notm}} Classic Experience, click **ADD GIT**. 
+2. In the window that opens, make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected. The Git repository is created. If starter code is available, it is loaded into the repository. In addition, the application is deployed by the Delivery Pipeline service running in {{site.data.keyword.jazzhub}}.  
 3. To update your app, you can use the command line or the Web IDE.  
    **If you use the command line:**  
    a. Clone your Git repository from the Git URL on the app's Overview page.  
@@ -17,7 +17,7 @@ You can create a hosted Git repository that deploys to {{site.data.keyword.Bluem
    c. From the Git command line interface, push your changes.  
 	    
    **If you use the Web IDE:**  
-   a. On the app's Overview page, click **EDIT CODE**. Your project opens in the Web IDE.  
+   a. On the app's Overview page, click **Edit Code**. Your project opens in the Web IDE.  
    b. Make changes as needed, and then push by using the built-in Git support.  
 		
 The updated app is redeployed to {{site.data.keyword.Bluemix_notm}}.  
