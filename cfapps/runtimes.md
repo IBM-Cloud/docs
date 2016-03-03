@@ -39,6 +39,11 @@ Use runtimes to get your app up and running quickly, with no need to set up and 
 <p class="runtimeLink"><a format="html" href="../runtimes/ruby/index.html" scope="peer">VIEW DOCS</a></p>
 </li>
 <li>
+<p class="runtimeIcon"><img src="images/xpages_featured.svg" alt="XPages" /></p>
+<p class="runtimeTitle">XPages</p>
+<p class="runtimeLink"><a format="html" href="../starters/xpages/index.html" scope="peer">VIEW DOCS</a></p>
+</li>
+<li>
 <p class="runtimeIcon"><img src="images/byod_featured.png" alt="Community buildpacks" /></p>
 <p class="runtimeTitle">Community buildpacks</p>
 <p class="runtimeLink"><a format="html" href="byob.html" scope="peer">VIEW DOCS</a></p>
