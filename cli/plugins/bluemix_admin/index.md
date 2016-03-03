@@ -1,3 +1,8 @@
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
@@ -62,7 +67,7 @@ Before you can use the Admin CLI plug-in to manage users, you must connect and l
 you are not already.
 
 <ol>
-<li>To connect to the {{site.data.keyword.Bluemix_notm}}> API endpoint, run the following command:<br/><br/>
+<li>To connect to the {{site.data.keyword.Bluemix_notm}} API endpoint, run the following command:<br/><br/>
 <code>
 cf ba api https://api.&lt;subdomain&gt;.bluemix.net
 </code>
