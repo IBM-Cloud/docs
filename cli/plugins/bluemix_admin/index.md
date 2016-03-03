@@ -6,7 +6,7 @@
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 17 February 2016*
+*Last updated: 3 March 2016*
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
@@ -69,7 +69,7 @@ you are not already.
 <ol>
 <li>To connect to the {{site.data.keyword.Bluemix_notm}} API endpoint, run the following command:<br/><br/>
 <code>
-cf ba api https://api.&lt;subdomain&gt;.bluemix.net
+cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
