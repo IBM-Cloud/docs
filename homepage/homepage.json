@@ -242,8 +242,11 @@
 		}, {
 			"title": "Mobile",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/index.html",
 			"links": [{
+				"name": "Try Bluemix Mobile Services",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
