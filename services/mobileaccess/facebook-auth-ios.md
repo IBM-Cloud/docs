@@ -121,7 +121,7 @@ You can also update the `info.plist` file by right-clicking the file, selecting 
 	    </dict>
 	</dict>
 ```
-	Update the URL scheme and FacebookappID properties with your Facebook Application ID.
+Update the URL scheme and FacebookappID properties with your Facebook Application ID.
 
  **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
