@@ -48,6 +48,7 @@ To create the post to slack action:
  - Select **Use customized message body**
  - Body  
  ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
+ {: codeblock}  
  **Important:** The Slack webhook must at a minimum contain the "text" field. For information, see [Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Slack documentation") in the Slack documentation.
 11. Click **OK** to save the action.
 
@@ -83,7 +84,8 @@ Where the first node is an http node, and the second is a twilio node.
  - Description - `Send a text message alert to the service engineer.`
  - URL - `http://mynodered.mybluemix.net/RTI-alert`
  - BODY   
- ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```
+ ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
+ {: codeblock}
 4. Click **OK** to save the action.
 
 ## Use IFTTT to post a Trello card {: #iftttex}

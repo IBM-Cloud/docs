@@ -18,6 +18,7 @@ ASSETNUM,ASSETTYPE,AS_DESCRIPTION,AS_DESCRIPTION_LD,INSTALLDATE,AS_ITEMNUM,AS_IT
 5001,FACILITIES,New Asset 1,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123451,MYSITE,OPERATING,+    
 5002,FACILITIES2,New Asset 2,,2015-03-16,1001,ITEMSET,CONFRMA1,1,1000,1200,123452,MYSITE,OPERATING,+
 ```
+{: codeblock}
 
   Where:  
   - ASSETNUM - **Required:** The asset ID number in your system. (12)
@@ -40,10 +41,13 @@ ASSETNUM,ASSETTYPE,AS_DESCRIPTION,AS_DESCRIPTION_LD,INSTALLDATE,AS_ITEMNUM,AS_IT
 5. Create an asset and devices mapping list and save as a CSV file.  
   This file is used to map the imported assets in the asset list to your {{site.data.keyword.iot_short}} devices.  
   Sample file format:  
-  `sourceType,sourceId,targetType,targetId,action`  
-  `d:orgid:iot-device-type,device001,asset,5001,+`  
-  `d:orgid:iot-device-type,device002,asset,5002,+`  
-  `d:orgid:iot-device-type,device003,asset,5002,+`  
+  ```
+  sourceType,sourceId,targetType,targetId,action  
+  d:orgid:iot-device-type,device001,asset,5001,+  
+  d:orgid:iot-device-type,device002,asset,5002,+  
+  d:orgid:iot-device-type,device003,asset,5002,+  
+  ```
+  {: screen}   
 
   Where:
     - sourceType - Consists of the following {{site.data.keyword.iot_short}} data for your device:

@@ -18,6 +18,7 @@ The following examples illustrate supported nested message formats:
     {"msg": "Hello World"}  
 }
 ```
+{: codeblock}
 
 - Complex data
 ```
@@ -34,6 +35,7 @@ The following examples illustrate supported nested message formats:
     }  
 }
 ```  
+{: codeblock}
 
 >**Important:** Nested JSON messages must contain the d element, which is where you include all data for the event that is transmitted in the message.
 - The element is required for your message to meet the {{site.data.keyword.iot_short}} message specification.
