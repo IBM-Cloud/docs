@@ -74,7 +74,7 @@ The {{site.data.keyword.amashort}} Client SDK is distributed with CocoaPods, a d
 
 You can also update the `info.plist` file by right-clicking the file, selecting **Open as > Source Code** and adding the following XML:
 
-	```
+```XML
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
