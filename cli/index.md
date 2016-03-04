@@ -20,6 +20,14 @@ Download and install command line interfaces to support your {{site.data.keyword
 |---------------------|---------------|
 | [Download CLI](http://clis.{DomainName}/) <br> [View Docs](./reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |
 
+<!-- audience blue staging only begin comment -->
+
+|*{{site.data.keyword.Bluemix_notm}}: cloud-cli* |  
+|---------------|
+| [Mac Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/cloud-cli/Bluemix_cloud_cli.pkg){: new_window} <br> [Windows Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/cloud-cli/Bluemix_cloud_cli.exe){: new_window} <br> [Linux Installer](ftp://public.dhe.ibm.com/cloud/bluemix/cli/cloud-cli/Bluemix_cloud_cli_linux_64.tar.gz){: new_window} <br> [View Docs](#cloudcli) | 
+
+<!-- audience blue staging only end comment -->
+
 
 ## ![Command line interface plug-ins](./images/CLI_Plugin.svg) Command line interface plug-ins
 
@@ -29,23 +37,27 @@ Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface wit
 
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging http://plugins.stage1.ng.bluemix.net
 ```
 2. Run the following command to install a plug-in:
 ```
 bluemix plugin install plugin_name -r bluemix-bx-staging
 ```
 
-| *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Catalog Manager*  |
+|-----|-----|-----|
+| Plug-in name: active-deploy <br> [View Docs](../services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) | Plug-in name: catalog-manager  <br> [View Docs](./plugins/catalogmanager/index.html) |
+
+| *Network Security Groups* |  *VPN*  |
 |-----|-----|
-| Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |  Plug-in name: nsg <br> [View Docs](./plugins/networksecuritygroups/index.html)  |
+| Plug-in name: network-security-groups <br> [View Docs](./plugins/networksecuritygroups/index.html) | Plug-in name: VPN  <br> [View Docs](./plugins/bx_vpn/index.html) |
 
 
 ### Extend your Cloud Foundry command line interface: cf
 
 1. To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging http://plugins.stage1.ng.bluemix.net
 ```
 2. Run the following command to install a plug-in:
 ```
@@ -54,7 +66,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 
 | *Active Deploy* | *Admin Console* | *Development Mode* |
 |-----------------|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/index.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: dev_mode <br> [View Docs](./plugins/dev_mode/index.html) |
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: dev_mode <br> [View Docs](./plugins/dev_mode/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
