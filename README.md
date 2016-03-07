@@ -77,7 +77,7 @@ There are many free Markdown editors available, however, not all editors will ho
 |  Dita Element     |   HTML 5 output from Dita  |   How to code in Markdown    | HTML 5 output from Markdown  |
 |-----------------|-----------|-------------|-------------------|
 | **codeblock**    | `<pre class="codeblock">` | ```` ```code``` ```` <br>`{: codeblock}`<br>**Note:** This requires the following attribute definition available in the attribute definition template: `{:codeblock: .codeblock} ` | `<pre class="codeblock">`<br>`<code>code</code>`<br>`</pre>`|
-| **pre**    | `<pre class="pre">` | ```` ```code``` ````  | `<pre>`<br>`<code>code</code>`<br>`</pre>`|
+| **pre**    | `<pre class="pre">` | ```` ```code``` ```` <br>`{: pre}`<br>**Note:** This requires the following attribute definition available in the attribute definition template: `{:pre: .pre} ` | `<pre>`<br>`<code>code</code>`<br>`</pre>`|
 | **systemoutput**    | `<samp class="ph systemoutput">` | ```` `systemoutput` ```` | `<code>systemoutput</code>`|	
 | **codeph**    | `<samp class="ph codeph">` | ```` `codeph` ```` | `<code>codeph</code>`|			
 | **userinput**    | `<kbd class="ph userinput">` | ```` `userinput` ```` | `<code>userinput</code>`|	
