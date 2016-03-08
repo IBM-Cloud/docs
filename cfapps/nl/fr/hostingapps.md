@@ -197,7 +197,7 @@ les nouvelles parties de code.</li>
 travail dans {{site.data.keyword.Bluemix_notm}}. Assurez-vous que votre répertoire de travail contient uniquement les fichiers requis.
 * Assurez-vous que votre organisation dispose de suffisamment de mémoire pour toutes les instances de votre application. Afin d'afficher le quota de
 mémoire de votre organisation, utilisez cf org nom_organisation.
-* Pour plus d'informations sur cf push, voir [Commandes cf](../cli/cfcommands.html).
+* Pour plus d'informations sur cf push, voir [Commandes cf](../cli/reference/cfcommands/index.html).
 
 ##Migration de vos données et utilisation des services
 {: #ht_service}

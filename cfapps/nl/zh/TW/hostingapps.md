@@ -144,7 +144,7 @@
 
 * 使用 cf push 指令時，cf 指令行介面會將所有檔案及目錄從現行目錄複製到 {{site.data.keyword.Bluemix_notm}}。確定應用程式目錄中只有所需的檔案。
 * 確定您的組織有足夠的記憶體可供應用程式的所有實例使用。若要檢視您組織的記憶體配額，請使用 cf org org_name。
-* 如需 cf push 的相關資訊，請參閱 [cf 指令](../cli/cfcommands.html)。
+* 如需 cf push 的相關資訊，請參閱 [cf 指令](../cli/reference/cfcommands/index.html)。
 
 ##移轉資料及使用服務
 {: #ht_service}

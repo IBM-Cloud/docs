@@ -236,7 +236,7 @@ con el mandato push de cf. Por ejemplo:
 Asegúrese de tener solo los archivos necesarios en su directorio de app.
 * Asegúrese de que su organización dispone de memoria suficiente para todas las instancias de su
 app. Para ver la cuota de memoria para su organización, utilice cf org org_name.
-* Para obtener más información sobre cf push, consulte [Mandatos cf](../cli/cfcommands.html).
+* Para obtener más información sobre cf push, consulte [Mandatos cf](../cli/reference/cfcommands/index.html).
 
 ##Migración de sus datos y uso de servicios
 {: #ht_service}

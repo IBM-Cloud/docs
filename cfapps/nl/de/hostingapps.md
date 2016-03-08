@@ -149,7 +149,7 @@ Führen Sie die folgenden Schritte aus, um die Anwendung zu migrieren:
 * Wenn Sie den Befehl 'cf push' verwenden, kopiert die Befehlszeilenschnittstelle 'cf' alle Dateien und Verzeichnisse aus Ihrem aktuellen Verzeichnis in {{site.data.keyword.Bluemix_notm}}.
 Stellen Sie sicher, dass sich in Ihrem Anwendungsverzeichnis nur die erforderlichen Dateien befinden.
 * Stellen Sie sicher, dass von Ihrer Organisation ausreichend Speicherplatz für alle Instanzen der Anwendung bereitgestellt wird. Das Speicherkontingent für Ihre Organisation können Sie mit 'cf org Organisationsname' anzeigen. 
-* Weitere Informationen zum Befehl 'cf push' finden Sie unter ['cf'-Befehle](../cli/cfcommands.html). 
+* Weitere Informationen zum Befehl 'cf push' finden Sie unter ['cf'-Befehle](../cli/reference/cfcommands/index.html). 
 
 ##Daten migrieren und Services verwenden
 {: #ht_service}

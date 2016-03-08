@@ -237,7 +237,7 @@ com os novos bits de código.</li>
 de que você tenha apenas os arquivos necessários em seu diretório de aplicativo.
 * Assegure-se de que sua organização tenha memória suficiente para todas as instâncias
 de seu aplicativo. Para visualizar a cota de memória de sua organização, use cf org org_name.
-* Para obter mais informações sobre cf push, consulte [Comandos cf](../cli/cfcommands.html).
+* Para obter mais informações sobre cf push, consulte [Comandos cf](../cli/reference/cfcommands/index.html).
 
 ##Migrando seus dados e usando serviços
 {: #ht_service}

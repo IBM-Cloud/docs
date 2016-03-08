@@ -239,7 +239,7 @@ in esecuzione.</li>
 * Quando utilizzi il comando cf push, l'interfaccia riga di comando cf copia tutti i file e tutte le directory dalla tua directory corrente a {{site.data.keyword.Bluemix_notm}}. Assicurati di avere solo i file richiesti nella directory della tua applicazione.
 * Accertati che la memoria della tua organizzazione sia sufficiente per tutte le istanze
 della tua applicazione. Per visualizzare la quota di memoria per la tua organizzazione, utilizza cf org org_name.
-* Per ulteriori informazioni su cf push, vedi [comandi cf](../cli/cfcommands.html).
+* Per ulteriori informazioni su cf push, vedi [comandi cf](../cli/reference/cfcommands/index.html).
 
 ##Migrazione dei tuoi dati e utilizzo dei servizi
 {: #ht_service}

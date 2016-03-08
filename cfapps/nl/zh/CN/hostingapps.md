@@ -138,7 +138,7 @@
 
 * 使用 cf push 命令时，cf 命令行界面会将当前目录中的所有文件和目录复制到 {{site.data.keyword.Bluemix_notm}} 中。确保应用程序目录中只包含必需的文件。
 * 确保组织的内存足够供应用程序的所有实例使用。要查看组织的内存配额，请使用 cf org org_name。
-* 有关 cf push 的更多信息，请参阅 [cf 命令](../cli/cfcommands.html)。
+* 有关 cf push 的更多信息，请参阅 [cf 命令](../cli/reference/cfcommands/index.html)。
 
 ##迁移数据和使用服务
 {: #ht_service}
