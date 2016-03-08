@@ -228,9 +228,13 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 **Important**: Some service might not be available to you during the maintenance period.</dd>
 
 <dt>**Monthly Change Window**</dt>
-<dd>The monthly maintenance window is applied based on coordination between you and IBM within a 21-day window. You can provide IBM with specific dates or times within the 21-day window that might not work for you. IBM attempts to schedule updates around those times. Based on the requests, IBM communicates the scheduled maintenance window to you. Monthly change windows are not expected to impact the running Bluemix Dedicated environment.<br />
+<dd>The monthly maintenance window is applied based on coordination between you and IBM within a 21-day window. You can provide IBM with specific dates or times within the 21-day window that might not work for you. IBM attempts to schedule updates around those times. Based on the requests, IBM communicates the scheduled maintenance window to you. Monthly change windows are not expected to impact the running Bluemix Dedicated environment.
+<p>The following image shows the process from receiving a notification about a pending update to setting dates that might not work for you, and then finally receiving the notification about the scheduled date:</p>
+<p><img src="../local/images/maintenance_dates.png" alt="Process for setting unavailable dates for a maintenance update"></p>
 <br />
-**Note:** If you do not request a specific time for the update, the maintenance is automatically applied at the end of the window.<br />
+**Note**: If you do not need to set any unavailable dates for the update, then you can approve the update. IBM notifies you of the scheduled date for the maintenance to be applied.<br />
+<p>The following image shows the process from receiving a notification about a pending update, approving the update, and then receiving a scheduled date for the update:</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="Process for approving the update without unavailable dates"></p>
 <br />
 Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unavailable dates, and approve updates. For more information about notifications and scheduling pending updates, see <a href="../admin/index.html#oc_system">Viewing system information</a>.</dd>
 
