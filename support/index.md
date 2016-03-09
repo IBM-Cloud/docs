@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 19 February 2016*
+*Last updated: 8 March 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -190,6 +190,18 @@ Severity 4 | <ul><li>Minor application issues</li><li>How to questions</li><li>E
 Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed during normal business hours, 7:00 am UTC to 1:00 am UTC on weekdays.
 
 
+### Escalating a support ticket
+{: #escalation}
+
+If you have not received a timely response to a support ticket, or if you feel that a support ticket is not being addressed appropriately, you can escalate the support ticket. Through the support ticket escalation process, IBM management reviews your concerns and works with you to improve the support experience.
+
+To submit an escalation request, complete the following steps:
+  1. Open a new support ticket with the subject **Escalation Request**.
+  2. To ensure that your escalation request can be matched with the original support ticket, include the following information in the body of the ticket:
+       * The ticket number of your open support ticket that needs escalation.
+	   * A brief summary of the reasons that escalation is needed.
+
+
 ## Collecting diagnostic information
 {: #collecting-diagnostic-information}
 To diagnose and resolve problems with {{site.data.keyword.Bluemix_notm}} applications and services, the {{site.data.keyword.Bluemix_notm}} Support team might ask you to collect diagnostic information.
@@ -234,7 +246,7 @@ The scripts use the cf command line interface to extract the following informati
 | Spanish | es |
 | Simplified Chinese | zh_CN |
 | Traditional Chinese | zh_TW |
-  
+
 *Table 2. Supported national languages and language codes*
 
 
