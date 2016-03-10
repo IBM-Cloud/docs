@@ -16,7 +16,7 @@ The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
 
 **Note:** Provider side encryption is not provided. It is the responsibility of the client application to encrypt data before uploading.
 
-**Note:** The {{site.data.keyword.objectstorageshort}} Service Beta plan will be removed from the catalog after the General Availability of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. After a grace period, service instances that use the Beta plan will be removed. [Update your pricing plan](#changeplan) to continue using the {{site.data.keyword.objectstorageshort}} service. 
+**Note:** The {{site.data.keyword.objectstorageshort}} Service Beta plan has been removed from the catalog after the General Availability of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. After a grace period, service instances that use the Beta plan will be removed. [Update your pricing plan](#changeplan) to continue using the {{site.data.keyword.objectstorageshort}} service. 
 
 
 
@@ -179,6 +179,100 @@ To download a directory structure, use the ```-prefix``` parameter to indicate t
 
 	swift delete <container_name> <file_name>
 
+### Working with object versioning
+
+You can set up versions of each object in your container by using the ```X-Versions-Location``` flag. To do this, create an additional container to keep older versions of your objects as follows. 
+
+If you are using the swift client, you can set it up like this:
+
+	swift post container_one -H "X-Versions-Location:container_two"
+
+If you are using curl, you can set it up like this:
+
+	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
+
+In the example above, ```container_two``` has been set up to contain the older versions of your objects stored in ```container_one```. Therefore, ```container_one``` will have the most current version of your objects, and ```container_two``` will have the older versions of your objects. Make sure ```container_two``` exists in order for versioning to work.
+
+With versioning set up, when you upload an object to ```container_one```, if there is an existing version of the object, the existing version is moved to ```container_two``` as the new version is created in ```container_one```. If you delete an object from ```container_one```, the previous version of the object is moved from ```container_two``` back to ```container_one```.
+
+Objects in ```container_two``` will be automatically named with the following format: ```<Length><Object_name>/<Timestamp>```
+
+```Length``` refers to the length of the name of your object; this is a 3-characters, zero-padded hexadecimal number. ```Object_name``` is the name of your object. ```Timestamp``` is the timestamp of when this particular version of the object was originally uploaded.
+
+To disable versioning, use the ```X-Remove-Versions-Location``` flag:
+
+	swift post container_one -H "X-Remove-Versions-Location:"
+
+or
+
+	curl -i -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Versions-Location: anyvalue" https://<object-storage_url>/container_one
+
+Here is a full example of the use of versioning:
+
+1. Create a container:
+
+		$ swift post container_one
+		$
+
+2. Set up versioning for container_one:
+
+		$ swift post container_one -H "X-Versions-Location:container_two"
+		$
+
+3. Create container_two:
+
+		$ swift post container_two
+		$
+
+4. Upload an object for the first time to container_one:
+
+		$ swift upload container_one object
+		object
+		$
+
+5. List objects in container_one:
+
+		$ swift list container_one
+		object
+		$
+
+6. List objects in container_two:
+
+		$ swift list container_two
+		$
+
+7. Upload a new version of the object to container_one:
+
+		$ swift upload container_one object
+		object
+		$
+
+8. List objects in container_one:
+
+		$ swift list container_one
+		object
+		$
+
+9. List objects in container_two:
+
+		$ swift list container_two
+		006object/1457456909.27383
+		$
+
+10. Delete object in container_one:
+
+		$ swift delete container_one object
+		object
+		$
+
+11. List both containers:
+
+		$ swift list container_one
+		object
+		$ swift list container_two
+		$
+
+
 ### Creating a temporary URL
 
 A temporary URL is a long, difficult-to-guess URL that can be used for a specified period to download objects without requiring further authentication. Generate a temporary URL with the following steps:
@@ -200,15 +294,20 @@ Locate the Account field and note the full string behind *Account*: including ``
 This key can be anything that you select, but best practice is that you select a long, random, and hard to guess string.
 
 	swift post -m "Temp-URL-Key:<key>"
+	
+Run the Swift ```stat``` command to verify that the ```Temp-URL-Key``` is set successfully.
+
+	swift stat
+
 
 #### Creating the temporary URL
 
 The Swift ```tempurl``` command takes these positional arguments:
 
-* [method] GET to allow download, PUT to allow upload
-* [seconds] Time in seconds that the temporary URL will be available
-* [path] The full path of the object expressed as /v1/<auth_account>/<container_name>/<object_name>
-* [key] The key that you set in step 2
+* [method] GET to allow download. PUT to allow upload.
+* [seconds] Time in seconds that the temporary URL will be available.
+* [path] The full path of the object expressed as ```/v1/<auth_account>/<container_name>/<object_name>```. For more information, see the [{{site.data.keyword.objectstorageshort}} URL](#access-points). 
+* [key] The key that you set in step 2.
 
 ```
 swift tempurl GET <seconds> <path> <key>
@@ -340,45 +439,105 @@ The recommended v3 token request is a POST request to https://identity.open.soft
 
 Use the value of the ```X-Subject-Token``` field from the response header as the ```X-Auth-Token``` field when you make requests to the {{site.data.keyword.objectstorageshort}} service.
 
-An example response is as follows:
+An example response is as follows. The response is trimmed to show only the {{site.data.keyword.objectstorageshort}} relevent information.
 
 	HTTP/1.1 201 Created
-	X-Subject-Token: gAAAAABWlw5mwttbb_6G3LnTiGusyoOSEHXMG7oTnDYWN1vBZB6XAxUEhz4ehGkdw6Qm_I9ZFFXr8fwcc2KaEbpWbQoglhAvrYTXbrkn8MvErLdnbcT0XK2t5N7lEZyyKQlsgmQWcrch8VOO_OiSKKToORYR7luI-2TrR_JIVZm-8AAS6hLhk9
+	Date: Mon, 29 Feb 2016 21:03:41 GMT
+	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_wsgi/3.4 Python/2.7.5
+	X-Subject-Token: gAAAAABW1LIubUgqKl-eInzhZUHWEnXijp7t6_5inl4DTRLxDhNbJ25ly2X7bASNvH7ocxinaJu_kdhSfnHNRwPAeYY77Ii2Cwp02-bvxUA1S9lV_knT6EyCOW2mSBl_HuuDD2cEgdiKmyZTVt-RvDxhPKYD-rHkJz-dHO4Folg8TVXotilb1uw
 	Vary: X-Auth-Token
+	x-openstack-request-id: req-01e096c8-5393-4f98-8ff6-029c55e42524
+	Content-Length: 12051
 	Content-Type: application/json
-	Content-Length: 960
-	Date: Tue, 10 Jun 2014 20:40:14 GMT
-	
-	{"token": 
-	{"audit_ids": ["ECwrVNWbSCqmEgPnu0YCRw"], "methods": ["password"],
-	 "roles": [{"id": "c703057be878458588961ce9a0ce686b", "name": "admin"}],
-	 "expires_at": "2014-06-10T21:40:14.360795Z", 
-	 "project": {"domain": {"id": "default", "name": "Default"}, "id": "3d4c2c82bd5948f0bcab0cf3a7c9b48c", "name": "demo"}, 
-	 "catalog": [
-	 {
-		"endpoints": [
-			{
-			"adminURL": "https://lon.objectstorage.service.open.networklayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"id": "20cbfa6ff22b4a67a1484d30235bfc80",
-			"internalURL": "https://lon.objectstorage.service.open.networklayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"publicURL": "https://lon.objectstorage.open.softlayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"region": "london"
-			},
-			{
-			"adminURL": "https://dal.objectstorage.service.open.networklayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"id": "4207049680fa4effbecd044c7448a8cb",
-			"internalURL": "https://dal.objectstorage.service.open.networklayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"publicURL": "https://dal.objectstorage.open.softlayer.com/v1/AUTH_35a68d1d115b4a0f8c7975d4f96f256b",
-			"region": "dallas"
-			}
-			],
-		"endpoints_links": [],
-		"name": "swift",
-		"type": "object-store"
-		},
-	 ], 
-	 "extras": {},
-	 "user": {"domain": {"id": "default", "name": "Default"}, "id": "3ec3164f750146be97f21559ee4d9c51", "name": "admin"},  "issued_at": "2014-06-10T20:40:14.360822Z"}}
+
+	{
+	  "token" : {
+	    "roles" : [
+	      {
+	        "id" : "f61f06a84f6443e880210fa986bd8691",
+	        "name" : "ObjectStorageOperator"
+	      }
+	    ],
+	    "catalog" : [
+	      {
+	        "endpoints" : [
+	          {
+	            "id" : "20cbfa6ff22b4a67a1484d30235bfc80",
+	            "region" : "london",
+	            "region_id" : "london",
+	            "url" : "https:\/\/lon.objectstorage.service.open.networklayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "admin"
+	          },
+	          {
+	            "id" : "38b8c081b11a452bb951698c334a406d",
+	            "region" : "london",
+	            "region_id" : "london",
+	            "url" : "https:\/\/lon.objectstorage.service.open.networklayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "internal"
+	          },
+	          {
+	            "id" : "4207049680fa4effbecd044c7448a8cb",
+	            "region" : "dallas",
+	            "region_id" : "dallas",
+	            "url" : "https:\/\/dal.objectstorage.open.softlayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "public"
+	          },
+	          {
+	            "id" : "8a65a0cf38ac4211ad6a3c9c0eb337ff",
+	            "region" : "london",
+	            "region_id" : "london",
+	            "url" : "https:\/\/lon.objectstorage.open.softlayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "public"
+	          },
+	          {
+	            "id" : "a60cf32be624491d89170ef8264de5e8",
+	            "region" : "dallas",
+	            "region_id" : "dallas",
+	            "url" : "https:\/\/dal.objectstorage.service.open.networklayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "admin"
+	          },
+	          {
+	            "id" : "c769862200124a308d6748e418c971ba",
+	            "region" : "dallas",
+	            "region_id" : "dallas",
+	            "url" : "https:\/\/dal.objectstorage.service.open.networklayer.com\/v1\/AUTH_3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	            "interface" : "internal"
+	          }
+	        ],
+	        "id" : "896e4064cbe742afbf9a543c15f27ac0",
+	        "type" : "object-store",
+	        "name" : "swift"
+	      },
+	    ],
+	    "extras" : {
+
+	    },
+	    "user" : {
+	      "id" : "0b8aebd924ef4cc7aa9232f07e47e874",
+	      "name" : "user_87c094ce47a9feae3a137ffcbbfa098a888c12a8",
+	      "domain" : {
+	        "id" : "8753ff40ac1a4f4a9f162ad8026b6ce0",
+	        "name" : "757955"
+	      }
+	    },
+	    "expires_at" : "2016-02-29T22:03:42.061343Z",
+	    "audit_ids" : [
+	      "cbA-iL2dSheyB72PHd7q8Q"
+	    ],
+	    "issued_at" : "2016-02-29T21:03:42.000000Z",
+	    "project" : {
+	      "id" : "3ecf7d7bac2c4eda89c03dd3afa7a0a3",
+	      "name" : "object_storage_c1d8b3a1",
+	      "domain" : {
+	        "id" : "8753ff40ac1a4f4a9f162ad8026b6ce0",
+	        "name" : "757955"
+	      }
+	    },
+	    "methods" : [
+	      "password"
+	    ]
+	  }
+	}
 
 
 The {{site.data.keyword.objectstorageshort}} URL is found in the Service Catalog. The Service Catalog is contained in the response body of the token request. The response is a full catalog of OpenStack services that are available. Select the endpoint from the Service Catalog with type of ```object-store``` and the region that matches the region field in the credentials.
@@ -404,7 +563,7 @@ If you unbind an application from the {{site.data.keyword.objectstorageshort}} i
 Pricing varies depending on the chosen plan. For more pricing information, see the [IBM Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/){: new_window} or use the [Calculator](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} for more detailed estimates.
 
 ### How do I change my plan from Beta to Standard? {: #changeplan}  
-The {{site.data.keyword.objectstorageshort}} Service Beta plan will be removed from the catalog after the General Availability of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. Customer service instances are NOT migrated from Beta to Standard plan automatically. You will need to update your plan by following these steps:
+The {{site.data.keyword.objectstorageshort}} Service Beta plan has been removed from the catalog after the General Availability of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. Customer service instances are NOT migrated from Beta to Standard plan automatically. You will need to update your plan by following these steps:
 
 1.	Click **Plan** from the left navigation bar in the {{site.data.keyword.objectstorageshort}} user interface.
 2.	Select **Standard** as the new plan and then click **Save**.
