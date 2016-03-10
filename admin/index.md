@@ -264,7 +264,7 @@ You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance usin
 
 The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
 
-You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status).
+You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
 ## Managing your Catalog
 {: #oc_catalog}
