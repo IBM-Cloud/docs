@@ -5,7 +5,7 @@
 
 #Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-*Last Updated: 21 January 2016*
+*Last Updated: 7 March 2016*
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}} (the {{site.data.keyword.deliverypipeline}} service).
 {: shortdesc} 
@@ -18,18 +18,14 @@ A deployment job takes output from a build job and deploys it to either IBM Cont
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} service so that development artifacts use IBM Containers, are tested in one region, and are deployed to production in multiple regions. For more information, see [Regions](../../overview/index.html#ov_intro__reg).
 
-1. Log in to {{site.data.keyword.Bluemix_notm}} and select an organization and space for your app.
-1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click **CREATE AN APP**.
-1. Select a web or mobile app template, select a starter, and click **CONTINUE**. Name your app, and then click **FINISH**.  
-1. On the Start Coding page, scroll down and click **VIEW APP OVERVIEW**.  
-1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **ADD GIT**. Make sure that the **Populate the repository with the starter app package and enable {{site.data.keyword.deliverypipeline}} (Build & Deploy)** check box is selected and then click **CONTINUE**.   
-1. After your Git repository is created, click **CLOSE**. The ADD GIT link is replaced by an EDIT CODE link and your Git URL.  
-1. Add the {{site.data.keyword.deliverypipeline}} service to the associated space or spaces. After you add this service, you can create a multi-stage deployment pipeline in your {{site.data.keyword.Bluemix_notm}} spaces by configuring and running stages that contain build, test, and deployment jobs.
-    1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, click **ADD A SERVICE OR API**. For the category, select the **DevOps** check box, and from the catalog, click **Delivery Pipeline**.
-    2. Select a plan and click **CREATE**. The {{site.data.keyword.deliverypipeline}} Dashboard opens showing the app that you created earlier.     
-  
-On the {{site.data.keyword.deliverypipeline}} Dashboard, you can see your 
-{{site.data.keyword.jazzhub_short}} projects and the states that they are in. You can check the status of builds, the deployed app, and recent deployments, or see the most recent logs and deployment details.  
+Complete these steps to set up your {{site.data.keyword.deliverypipeline}}:    
+
+1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **Add Git Repo and Pipeline**. 
+1. Make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected and then click **CONTINUE**.   
+1. After your Git repository is created, click **CLOSE**. The Add Git button is replaced by an Edit Code button and your Git URL.  
+1. To add the {{site.data.keyword.deliverypipeline}} service to the associated space or spaces, click **Connect New**, click the **DevOps** category, click **Delivery Pipeline**, and click **Create**.
+
+After you add this service, you can create a multi-stage deployment pipeline in your {{site.data.keyword.Bluemix_notm}} spaces by configuring and running stages that contain build, test, and deployment jobs. On the {{site.data.keyword.deliverypipeline}} Dashboard, you can see your {{site.data.keyword.jazzhub_short}} projects and the states that they are in. You can check the status of builds, the deployed app, and recent deployments, or see the most recent logs and deployment details.  
 
 <article class="topic reference nested1" aria-labelledby="d68e338" lang="en-us" id="rellinks">
 <h2 class="topictitle2" id="d68e338">Related links</h2>
