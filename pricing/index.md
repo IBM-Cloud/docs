@@ -377,7 +377,7 @@ When all the items are added, the total price of the application is $384.15.
 ##Usage details
 {: #usage}
 
-As an account owner or a billing manager, you can use the Usage Details view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
+As an account owner, a user with *Auditor* permission in the space, or a billing manager,, you can use the Usage Details view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
 
 To open the Usage Details view, click the **Account and Support** icon in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface and select **Account** On the page that is displayed, click **Usage Details**. In the view, you can see a summary of the runtime and service usage for the account.
 
