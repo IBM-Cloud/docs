@@ -4,7 +4,7 @@
 
 #Services
 {: #services}
-*Last updated: 28 January 2016*
+*Last updated: 14 March 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -33,18 +33,18 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.activedeployshort}}			|Yes		|Yes		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
-|{{site.data.keyword.alertnotificationshort}}		|Yes		|No			|No		|
+|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
 |{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
 |{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.hadoopst}}			|Yes		|No		|No|
-|{{site.data.keyword.APIM}}			|Yes		|Yes		|No|
+|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.autoscaling}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.bigicloudst}}		|Yes		|No		|No|
-|{{site.data.keyword.rules_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.cloudint}}			|Yes		|Yes		|No|
-|{{site.data.keyword.cloudant}}			|Yes		|Yes		|No|
+|{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No|
@@ -55,7 +55,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.creshort}}			|Yes		|No		|No|
 |{{site.data.keyword.game}}			|Yes		|Yes		|Yes|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|No|
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.globalizationshort}}	|Yes		|No		|No|
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
@@ -63,16 +63,16 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.iot_short}}		|Yes		|No		|No|
 |{{site.data.keyword.keymanagementserviceshort}}	|No		|Yes		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|No|
+|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
 |{{site.data.keyword.messageresonanceshort}}	|Yes		|Yes		|No|
 |{{site.data.keyword.APS_MAiOS}} 		|Yes		|No		|No|
 |{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilemam}}		|Yes		|Yes		|No|
 |{{site.data.keyword.mobiledata}}		|Yes		|Yes		|No|
-|{{site.data.keyword.manda}}			|Yes		|Yes		|No|
-|{{site.data.keyword.mqa}}			|Yes		|Yes		|No|
-|{{site.data.keyword.mql}}			|Yes		|Yes		|No|
+|{{site.data.keyword.manda}}			|Yes		|Yes		|Yes|
+|{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes|
+|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
@@ -82,14 +82,14 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
-|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|No|
+|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.servicediscoveryshort}}		|Yes		|No		|No|
 |{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.sqldb}}			|Yes		|Yes		|No|
 |{{site.data.keyword.staticanalyzershort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|No		|No|
+|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.times}}			|Yes		|Yes		|No|
 |{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
@@ -97,7 +97,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.visualizationrenderingshort}} |Yes		|Yes		|No|
-|{{site.data.keyword.workflow}}			|Yes		|Yes		|No|
-|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|No|
+|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes|
+|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
 *Table 2. Service availability*
