@@ -5,7 +5,7 @@
 
 # Administering
 {: #1stanchor}
-*Last updated: 07 Feb 2016*
+*Last updated: 15 Feb 2016*
 
 
 Administration of {{site.data.keyword.iotdriverinsights_full}} includes the following activities:
@@ -63,12 +63,13 @@ The following table describes context parameters:
 
 |Category|Parameter Name|Description|Default Value|
 |:-------:|:--------:|:--------|:-------:|
+|Analysis Time Zone|\-|Applied timezone for analysis |+00:00|
 |Time Range|\-|This value defines time period type.|\-|
 |Time Range|Day Time|Time range of day time|1030 \- 1730|
 |Time Range|Night Time|Time range of night time|2030 \- 0700|
 |Time Range|Morning Peak|Time range of morning peak time|0700 \- 1030|
 |Time Range|Evening Peak|Time range of evening peak time|1730 \- 2030|
-|Road Type|\-|This values are used to map user road type value in input data to Driver Insights unique road type classification. If you do not have Road Type value, you can retrieve Road Type value via "getLinkInformation" REST API which is provided by "IBM Watson IoT Map Insights". The road type value is stored in the "properties > type" in the response. [Sample JSON](#sampleJson) represents the position of "type" in the response.|\-|
+|Road Type|\-|This values are used to map user road type value in input data to {{site.data.keyword.iotdriverinsights_short}} unique road type classification. If you do not have Road Type value, you can retrieve Road Type value via "getLinkInformation" REST API which is provided by "{{site.data.keyword.iotmapinsights_full}}". The road type value is stored in the "properties > type" in the response. [Sample JSON](#sampleJson) represents the position of "type" in the response.|\-|
 |Road Type|Motorway|Road type value map to Motorway|1|
 |Road Type|Urban Highway|Road type value map to Urban Highway|2|
 |Road Type|Urban Primary|Road type value map to Urban Primary|3|
@@ -94,7 +95,7 @@ Then, new parameters are applied and they become effective for next submitted jo
 ```
 {
 	"links": [{
-		"internal_link_id": 32088220365736308,
+		"internal_link_id": "32088220365736308",
 		"external_link_id": "3846419005",
 		...
 		"properties": {
