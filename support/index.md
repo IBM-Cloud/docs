@@ -4,7 +4,7 @@
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 8 March 2016*
+*Last updated: 15 March 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
@@ -92,7 +92,7 @@ You can also use a third-party service to automatically send an email for each R
 
   * Check for current maintenance windows or an incident in progress
 
-	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [Bluemix Support ticket](https://support.eu-gb.bluemix.net/gethelp/){: new_window} form.
+	If you suspect that {{site.data.keyword.Bluemix_notm}} is not functioning as expected, check the status page for current maintenance windows or an incident in progress. To report an incident that is not already listed on the status page, open a Support ticket through the **Account and Support** icon ![Account and Support](images/account_support.svg) in the top menu bar or the [IBM {{site.data.keyword.Bluemix_notm}} Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window} help page.
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
@@ -123,7 +123,7 @@ If you were unable to resolve your technical problem with the troubleshooting an
 If the problem is not due to an outage, you can open a support ticket by using one of the following options:
 
   * From Account and Support, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
-  * Use the [{{site.data.keyword.Bluemix_notm}} Support ticket](http://ibm.biz/bluemixsupport){: new_window} form. You can also use this form for ID and billing questions.
+  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, ID and login, and technical support problems. For technical support problems, you can further select a technical group after you click the **Technical Support** tile. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the left navigation pane.
 
 
 Support is available with the following options:
@@ -147,7 +147,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is p
 
 <ul>
 <li>Contact support by opening a new ticket using the
-<a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a> form. You can use an email address or your IBM ID for this form. Select the **Dedicated** option for the {{site.data.keyword.Bluemix_notm}} region field.
+<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBM ID for this form. Select the **Dedicated** option for the {{site.data.keyword.Bluemix_notm}} region field.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 12 midnight UTC.</p>
 </li>
 <li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
@@ -165,7 +165,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 
 <ul>
 <li>Contact support by opening a new ticket using the
-<a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} Support ticket</a> form. You can use an email address or your IBM ID for this form.
+<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a> help page. You can use an email address or your IBM ID for this form.
 <p>Form submissions are monitored from Sunday 10:00 PM UTC through Friday 12 midnight UTC.</p>
 </li>
 <li>If you have an IBM ID and have access to the {{site.data.keyword.Bluemix_notm}} Public environment, click the **Account and Support** icon <img src="images/account_support.svg" alt="Account and Support" /> in the top menu bar and then click **Get help**. On the page that is displayed, click **GET IN TOUCH**.</li>
@@ -176,6 +176,7 @@ If you are a {{site.data.keyword.Bluemix_notm}} Local customer, support is provi
 
 ### Support ticket severity
 {: #support-ticket-severity}
+When you contact support, you can request a specific severity level, depending on the type and urgency of the problem. The severity level might affect how quickly your issue is addressed.
 
 The following table lists some common examples of support issues and suggested severity levels. The examples are general guidelines for informational purposes only.
 
