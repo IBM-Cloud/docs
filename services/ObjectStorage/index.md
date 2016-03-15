@@ -272,6 +272,49 @@ Here is a full example of the use of versioning:
 		$ swift list container_two
 		$
 
+### Scheduling object deletion
+
+You can set your objects to expire in a given amount of time. In other words, you can schedule the deletion of your objects. You can do this by making use of either of the ```X-Delete-At``` or ```X-Delete-After``` headers. The ```X-Delete-At``` header takes an integer number representing the epoch time at which to delete the object. The ```X-Delete_After``` header takes an integer number representing the number of seconds after which the object will be deleted.
+
+If you are using the swift client do a post to the object in your container, see the following examples.
+
+* To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
+
+		swift post -H "X-Delete-At:1459515600" container object
+
+* To set the object to be deleted an hour from now, use the following command:
+
+		swift post -H "X-Delete-After:3600" container object
+
+  After doing this, the ```swift stat container object``` command will show the ```X-Delete-At``` header with the appropriate expiration in epoch time.
+
+* To remove the expiration time from your object, use the following command:
+
+		swift post -H "X-Remove-Delete-After:" container object
+
+If you are using curl, the commands are as follows. 
+
+* To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
+
+		curl -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:1459515600" https://<object-storage_url>/container/object
+
+* To set the object to be deleted an hour from now, use the following command:
+
+		curl -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:3600" https://<object-storage_url>/container/object
+
+* To check if the object has the header, use the following command:
+
+		curl -I -H "X-Auth-Token: <token>" https://<object-storage_url>/container/object
+
+* To remove the expiration time, use the following command:
+
+		curl -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<object-storage_url>/container/object
+
+**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time, meaning it will not be reachable any more. The actual deletion will take place the next time the swift-object-expirer daemon configured in your swift cluster runs.
+
+
+
+
 
 ### Creating a temporary URL
 
