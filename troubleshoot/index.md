@@ -9,7 +9,7 @@
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 19 Feburary 2015*
+*Last updated: 15 March 2016*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -380,7 +380,7 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 	```
   * Use the **-k** option with the `cf push` command when you push your app to {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -494,11 +494,11 @@ When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must spe
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 For example:
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -537,7 +537,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 	     The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
       2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. Restart your app for the changes to take effect.
 
@@ -566,7 +566,7 @@ You can manually restart the app by typing the following command in the command 
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures. 
 
@@ -699,7 +699,7 @@ The host name that you specify must be unique within the domain that you are usi
 	```
   * If you deploy your application from the command prompt, use the `cf push` command with the **-n** option. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -803,7 +803,7 @@ Take the following actions based on the cause that leads to the problem:
   * Specify the start command by one of the following methods: 
       * Use the cf command line interface. For example: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * Use the [package.json](https://docs.npmjs.com/json){: new_window} file. For example:
 	    ```
@@ -940,7 +940,7 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
   ```
   * If you deploy your application from the command prompt, use the `cf push` command and specify your custom buildpack by using the **-b** option. For example:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1219,11 +1219,11 @@ If the buildpack that you are using does not provide a mechanism to load the lat
   ```
   3. Push your app with the null buildpack that was modified to delete the cache by using the following command. After you complete this step, all contents in the cache directory of your app are deleted.
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. Push your app with the latest buildpack that you want to use by using the following command: 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

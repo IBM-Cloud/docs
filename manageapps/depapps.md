@@ -6,7 +6,7 @@
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 22 February 2015*
+*Last updated: 15 March 2016*
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -41,7 +41,7 @@ When you deploy your applications to {{site.data.keyword.Bluemix_notm}} from the
 
 If you use an external buildpack, you must specify the URL of the buildpack by using the **-b** option when you deploy your application to {{site.data.keyword.Bluemix_notm}} from the command prompt.
 
-  * To deploy Liberty server packages to {{site.data.keyword.Bluemix_notm}}, use the following command:
+  * To deploy Liberty server packages to {{site.data.keyword.Bluemix_notm}}, use the following command from your source directory:
   
   ```
   cf push
@@ -52,7 +52,7 @@ If you use an external buildpack, you must specify the URL of the buildpack by u
   * To deploy Java Tomcat applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * To deploy WAR packages to {{site.data.keyword.Bluemix_notm}}, use the following command:
@@ -69,7 +69,7 @@ If you use an external buildpack, you must specify the URL of the buildpack by u
   * To deploy Node.js applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
   
   ```
-  cf push appname
+  cf push appname -p app_path
   ```
   
 A `package.json` file must be in your Node.js application for the application to be recognized by the Node.js buildpack. The `app.js` file is the entry script for the application, and can be specified in the `package.json` file. The following example shows a simple `package.json` file:
@@ -111,7 +111,7 @@ An app is specific to the space where it is deployed. You can't move or copy an 
   cf target -s <space_name>
   ```
   
-  2. Deploy your app by using the **cf push** command, where appname must be unique within your domain.
+  2. Go to your app directory and deploy your app by using the **cf push** command, where appname must be unique within your domain.
   
   ```
   cf push appname
@@ -373,7 +373,7 @@ To specify start commands for your application, you can use one of the following
   * Use the **cf push** command and specify the -c parameter. For example, when you deploy a Node.js application, you can specify the **node app.js** start command on the -c parameter:
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * Use the command parameter in the `manifest.yml` file. For example, when you deploy a Node.js application, you can specify the **node app.js** start command in the manifest file:

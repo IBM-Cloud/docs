@@ -5,7 +5,7 @@
 {:pre: .pre}
 
 # Using community buildpacks
-*Last updated: 8 December 2015*
+*Last updated: 15 March 2016*
 
 If you can't find a starter in the {{site.data.keyword.Bluemix}} Catalog that provides the runtime you want, you can bring an external buildpack to {{site.data.keyword.Bluemix_notm}}. You can specify a custom, Cloud Foundry-compatible buildpack when you deploy your app by using the cf push command.
 {:shortdesc}
@@ -35,14 +35,14 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 <li>
 For the same runtime or framework, IBM-created buildpacks take precedence over the community ones. If you want to use the community buildpack to overwrite the IBM-created buildpack, you must specify the buildpack by using the -b option with the cf push command.
 <p>For example, you can use the community buildpack for Java™ web apps:</p>
-<pre class="pre"><code>cf push app_name -b java_buildpack</code></pre>
+<pre class="pre"><code>cf push app_name -b java_buildpack -p app_path</code></pre>
 <p>You can also use the community buildpack for Node.js app:</p>
-<pre class="pre"><code>cf push app_name -b nodejs_buildpack</code></pre>
+<pre class="pre"><code>cf push app_name -b nodejs_buildpack -p app_path</code></pre>
 </li>
 
 <li>
 <p>For a runtime or framework that is not supported by IBM-created buildpacks but is supported by built-in community buildpacks, you do not have to use the -b option with the cf push command.</p><p>For example, for Ruby apps, there are no IBM-created buildpacks. You can use the built-in community buildpack by entering the following command:</p>
-<pre class="pre"><code>cf push app_name</code></pre>
+<pre class="pre"><code>cf push app_name -p app_path</code></pre>
 </li>
 </ul>
 
@@ -51,21 +51,21 @@ For the same runtime or framework, IBM-created buildpacks take precedence over t
 You can use external or custom buildpacks in {{site.data.keyword.Bluemix_notm}}. You must specify the URL of the buildpack with the -b option, and specify the stack with the ```-s``` option on the **cf push** command. For example, to use an external community buildpack for static files, run the following command
 
 ```
-cf push app_name -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
 ```
 {:pre}
 
 Another example is that if you do not want to use the built-in community buildpack for Ruby apps, you can use an external buildpack by entering the following command:
 
 ```
-cf push app_name -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
 ```
 {:pre}
 
 You can also use a custom buildpack for your application. For example, to use an open source PHP buildpack that is provided by the Cloud Foundry community, when you deploy your PHP app to Bluemix, enter the following command to specify the Git repository URL of the buildpack:
 
 ```
-cf push app_name -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
 ```
 {:pre}
 
