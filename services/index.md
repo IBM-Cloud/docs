@@ -57,7 +57,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.creshort}}			|Yes		|No		|No|
 |{{site.data.keyword.game}}			|Yes		|Yes		|Yes|
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes|
-|{{site.data.keyword.globalizationshort}}	|Yes		|No		|No|
+|{{site.data.keyword.globalizationshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
@@ -77,7 +77,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepush}}Push		|Yes		|Yes		|No|
+|{{site.data.keyword.mobilepush}}	|Yes		|Yes		|Yes|
 |Push for iOS 8					|Yes		|Yes		|No|
 |{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
