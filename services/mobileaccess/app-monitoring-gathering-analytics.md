@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Gathering usage analytics
 {: #usage-analytics}
 

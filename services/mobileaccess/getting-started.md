@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Getting started
 {: #getting-started}
 To get started with {{site.data.keyword.amashort}}, you can either add the {{site.data.keyword.amashort}} service to an existing {{site.data.keyword.Bluemix}} application, or you can create a new app with the boilerplate.  

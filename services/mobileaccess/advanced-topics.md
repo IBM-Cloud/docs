@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # {{site.data.keyword.amashort}} advanced features
 {: #before-you-begin}
 The {{site.data.keyword.amashort}} service provides features to use in advanced scenarios.

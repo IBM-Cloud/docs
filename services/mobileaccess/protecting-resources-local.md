@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
 

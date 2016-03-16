@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Using Google to authenticate users
 {: #google-auth}
 You can configure the {{site.data.keyword.amashort}} service to protect resources, using Google as identity provider. Your mobile application users can then use their Google credentials for authentication.
@@ -9,7 +16,7 @@ You can configure the {{site.data.keyword.amashort}} service to protect resource
 
 See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Google for authentication.
 
-![image](images/mca-sequence-google.png)
+![image](images/mca-sequence-google.jpg)
 
 1. Use the {{site.data.keyword.amashort}} SDK to make a request to your backend resources that are protected  with the {{site.data.keyword.amashort}} Server SDK.
 * The {{site.data.keyword.amashort}} Server SDK detects the unauthorized request and returns an HTTP 401 code and authorization scope.

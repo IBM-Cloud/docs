@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
@@ -108,7 +115,7 @@ To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SD
 
 After the {{site.data.keyword.amashort}} Client SDK is initialized, you can start making requests to your mobile backend.
 
-1. Try to send a request to a protected endpoint of your new mobile backend. In your browser, open the following URL: `http://{appRoute}/protected`. For example:
+1. Try to send a request to a protected endpoint of your new mobile backend. In your browser, open the following URL: `{applicationRoute}/protected`. For example:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected

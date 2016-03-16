@@ -1,12 +1,19 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Enabling Facebook authentication in Android apps
 {: #facebook-auth-android}
 To use Facebook as identity provider in your Android applications, add and configure the Android Platform for your Facebook application.
 
 ## Before you begin
 {: #facebook-auth-android-before}
- * You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](getting-started.html) and [Setting up the Android SDK](getting-started-android.html).  
- * Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](protecting-resources.html).
- * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](facebook-auth-overview.html#facebook-appID).
+ * You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+ * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configuring a Facebook application for the Android Platform
@@ -57,16 +64,15 @@ To use Facebook as identity provider in your Android applications, you must add 
 {: #facebook-auth-android-mca}
 After you have Facebook Application ID and you configured you Facebook Application to serve Android clients, you can enable Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
 
-1. Open the {{site.data.keyword.Bluemix}} dashboard and click on your {{site.data.keyword.Bluemix_notm}} application.
+1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-1. Click **Mobile Options** and take note of *applicationRoute* and *applicationGUID* values. You  need these values in following steps.
+1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
 
-1. Click on the {{site.data.keyword.amashort}} tile.
-The {{site.data.keyword.amashort}} dashboard displays.
+1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
-1. Click **Set up authentication > Facebook**.
+1. Click the **Facebook** tile.
 
-1. Specify your Facebook Application ID and click **Save**.
+1. Specify the Facebook Application ID and click **Save**.
 
 ## Configuring {{site.data.keyword.amashort}}  Client SDK for Android
 {: #facebook-auth-android-sdk}
@@ -141,9 +147,9 @@ You Android project might have two `build.gradle` files:  for the project and ap
 	</application>
 ```
 
-1. Initialize the Client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} Client SDK by passing the context, applicationGUID, and applicationRoute parameters.<br/>
+1. Initialize the Client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} Client SDK by passing the context, app GUID (`applicationGUID`), and route (`applicationRoute`) parameters.<br/>
  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.<br/>
- Replace the applicationRoute and applicationGUID with values from the **Mobile Options** menu on the main page of your app in the Bluemix dashboard.
+ Replace `applicationRoute` and `applicationGUID` with values for **Route** and **App GUID** from the **Mobile Options** menu on the main page of your app in the Bluemix dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -170,12 +176,12 @@ After the Client SDK is initialized and Facebook Authentication Manager is regis
 
 ### Before you begin
 {: #facebook-auth-android-testing-before}
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `http://{appRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
+1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.
 
-1. Use your Android application to make request to the same endpoint. Add the below code after you initialize `BMSClient` and register `FacebookAuthenticationManager`
+1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register `FacebookAuthenticationManager`.
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
