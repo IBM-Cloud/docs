@@ -928,6 +928,7 @@ command:
  ```
 {: screen}
 
+
 ## Custom service API
 {: #servicebrokerapi}
 
@@ -946,6 +947,7 @@ assigned during onboarding.</dd>
 Use the following API and code examples to register a new service.
 
 ### Route
+{: #registerroute}
 
 ```
 POST /codi/v1/serviceBrokers
@@ -953,6 +955,7 @@ POST /codi/v1/serviceBrokers
 {: screen}
 
 ### Request
+{: #registerrequest}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -965,6 +968,7 @@ POST /codi/v1/serviceBrokers
 *Table 6. Fields*
 
 #### Body
+{: #registerbody}
 
 ```
 {
@@ -978,6 +982,7 @@ POST /codi/v1/serviceBrokers
 {: screen}
 
 #### Headers
+{: #registerheaders}
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -987,8 +992,10 @@ Content-Type: application/json
 {: screen}
 
 ### Response
+{: #registerresponse}
 
 #### Status
+{: #registerstatus}
 
 ```
 201 Created
@@ -996,6 +1003,7 @@ Content-Type: application/json
 {: screen}
 
 #### Body
+{: #registerbody2}
 
 ```
 {
@@ -1021,11 +1029,13 @@ Content-Type: application/json
 Use the following API and code examples to update a service.
 
 ### Route
+{: #updateroute}
 
 `PUT /codi/v1/serviceBrokers`
 {: screen}
 
 ### Request
+{: #updaterequest}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1038,6 +1048,7 @@ Use the following API and code examples to update a service.
 *Table 7. Fields*
 
 #### Body
+{: #updatebody}
 
 ```
 {
@@ -1051,6 +1062,7 @@ Use the following API and code examples to update a service.
 {: screen}
 
 #### Headers
+{: #updateheaders}
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -1060,8 +1072,10 @@ Content-Type: application/json
 {: screen}
 
 ### Response
+{: #updateresponse}
 
 #### Status
+{: #updatestatus}
 
 ```
 201 Created
@@ -1069,6 +1083,7 @@ Content-Type: application/json
 {: screen}
 
 #### Body
+{: #updatebody2}
 
 ```
 {
@@ -1107,8 +1122,10 @@ DELETE /codi/v1/serviceBrokers?name=name of service broker
 {: screen}
 
 ### Request
+{: #deleterequest}
 
 #### Headers
+{: #deleteheaders}
 
 ```
 Authorization: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -1118,8 +1135,10 @@ Content-Type: application/json
 {: screen}
 
 ### Response
+{: #deleteresponse}
 
 #### Status
+{: #deletestatus}
 
 ```
 204 No Content
