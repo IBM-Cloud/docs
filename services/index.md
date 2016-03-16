@@ -4,7 +4,7 @@
 
 #Services
 {: #services}
-*Last updated: 14 March 2016*
+*Last updated: 16 March 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -35,7 +35,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
 |{{site.data.keyword.appsecshort}}		|Yes		|No		|No|
-|Application Security on Cloud  |Yes  |Yes  |Yes  |
+|{{site.data.keyword.appseccloudshort}}  |Yes  |Yes  |Yes  |
 |{{site.data.keyword.APS_DA}}			|Yes		|No		|No|
 |{{site.data.keyword.APS_MA}}			|Yes		|No		|No|
 |{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes|
