@@ -1,9 +1,16 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # {{site.data.keyword.amashort}} overview
 {: #mca-overview}
 
 The {{site.data.keyword.amafull}} service provides authentication and monitoring services for mobile applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
 
-You can use the {{site.data.keyword.amashort}} service to protect Node.js and Java for Liberty applications that are hosted on {{site.data.keyword.Bluemix_notm}} with various authentication types. By instrumenting your mobile applications with {{site.data.keyword.amashort}} SDK, you can use the authentication capabilities that are provided by {{site.data.keyword.amashort}} service. Monitoring and client-side logs data are gathered automatically and sent to the {{site.data.keyword.amashort}} service on demand. Use the {{site.data.keyword.amashort}} dashboard to configure the various authentication types and see data that is gathered by the client-side SDK.
+You can use the {{site.data.keyword.amashort}} service to protect Node.js and Liberty for Java&trade; applications that are hosted on {{site.data.keyword.Bluemix_notm}} with various authentication types. By instrumenting your mobile applications with {{site.data.keyword.amashort}} SDK, you can use the authentication capabilities that are provided by {{site.data.keyword.amashort}} service. Monitoring and client-side logs data are gathered automatically and sent to the {{site.data.keyword.amashort}} service on demand. Use the {{site.data.keyword.amashort}} dashboard to configure the various authentication types and see data that is gathered by the client-side SDK.
 
 **Note**: The {{site.data.keyword.amashort}}  service was previously known as Advanced Mobile Access.
 
@@ -12,7 +19,7 @@ You can use the {{site.data.keyword.amashort}} service to protect Node.js and Ja
 
 * **{{site.data.keyword.amashort}} dashboard**: Configure various authentication types and monitor mobile application performance, analytics, usage statistics, and device logs.
 * **{{site.data.keyword.amashort}} Client SDK**: Instrument mobile applications to use {{site.data.keyword.amashort}}  functionality. Supported platforms are: iOS 8+, Android 4+, Cordova.
-* **{{site.data.keyword.amashort}} Server SDK**: Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are Node.js and Java for Liberty.
+* **{{site.data.keyword.amashort}} Server SDK**: Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are Node.js and Liberty for Java&trade;.
 
 ## Authentication types
 {: #authtypes}
@@ -24,7 +31,7 @@ You can use the following types of authentication in your mobile app:
 ## {{site.data.keyword.amashort}}  architecture overview
 {: #architecture}
 
-![image](images/mca-overview.png)
+![image](images/mca-overview.jpg)
 
 * Protect your cloud resources (Node.js applications) with {{site.data.keyword.amashort}} the Server SDK.
 * Use the `Request` class provided by the {{site.data.keyword.amashort}}  Client SDK to communicate with your protected cloud resources.
@@ -40,7 +47,7 @@ You can use the following types of authentication in your mobile app:
 {: #flow}
 The following diagram describes how a request flows from the SDK to your mobile backend and identity providers.
 
-![image](images/mca-sequence-overview.png)
+![image](images/mca-sequence-overview.jpg)
 
 1. Use {{site.data.keyword.amashort}} SDK to make a request to your backend resources that are protected with the {{site.data.keyword.amashort}} Server SDK.
 * The {{site.data.keyword.amashort}} Server SDK detects an unauthorized request and returns HTTP 401 + authorization scope.

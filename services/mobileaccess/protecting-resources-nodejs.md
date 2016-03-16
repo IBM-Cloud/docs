@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Protecting Node.js resources with {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Setting up the Android SDK
 {: #getting-started-android}
 
@@ -63,7 +70,7 @@ Initialize the SDK by passing the context, applicationGUID, and applicationRoute
 
 After the {{site.data.keyword.amashort}} Client SDK is initialized, you can start making requests to your mobile backend.
 
-1. Try to send a request to protected endpoint of your new mobile backend. In your browser, open the following URL: `http://{appRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
+1. Try to send a request to protected endpoint of your new mobile backend. In your browser, open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK only.
 
 1. Use your Android application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:

@@ -1,6 +1,13 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Protecting Liberty for Java resources with {{site.data.keyword.amashort}}
 {: #protecting-liberty}
-The {{site.data.keyword.amashort}} Server SDK provides an OAuthTAI module for Liberty for Java&#8482; applications that are deployed on {{site.data.keyword.Bluemix}}. You must instrument your Liberty server with the OAuthTAI module to protect it from unauthorized access and get monitoring information.
+The {{site.data.keyword.amashort}} Server SDK provides an OAuthTAI module for Liberty for Java&trade;  applications that are deployed on {{site.data.keyword.Bluemix}}. You must instrument your Liberty server with the OAuthTAI module to protect it from unauthorized access and get monitoring information.
 
 ## Before you begin
 {: #before-you-begin}
@@ -17,7 +24,7 @@ The {{site.data.keyword.amashort}} Server SDK provides an OAuthTAI module for Li
 1. Copy the `OAuthTai-1.0.mf` directory to the `$<wlp.user.dir>/extension/lib/features` directory.
 
 
-## Configuring the Java for Liberty server to use the {{site.data.keyword.amashort}} Server SDK
+## Configuring the Liberty for Java server to use the {{site.data.keyword.amashort}} Server SDK
 {: #configuring-liberty}
 
 1. Edit the `server.xml` file and add required features.

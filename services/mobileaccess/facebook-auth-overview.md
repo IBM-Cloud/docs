@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
 You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as identity provider. Your mobile application users can use their Facebook credentials for authentication.
@@ -9,7 +16,7 @@ You can configure the {{site.data.keyword.amashort}} service to protect resource
 
 See the following simplified diagram to understand how {{site.data.keyword.amashort}} integrates with Facebook for authentication.
 
-![image](images/mca-sequence-facebook.png)
+![image](images/mca-sequence-facebook.jpg)
 
 1. Use the {{site.data.keyword.amashort}} SDK to make a request to your backend resources that are protected with the {{site.data.keyword.amashort}} Server SDK.
 * The {{site.data.keyword.amashort}} Server SDK detects an unauthorized request and returns HTTP 401 code and authorization scope.
@@ -42,5 +49,6 @@ If you were presented with a choice of selecting an iOS or Android application, 
 {: #next-steps}
 
 * [Enabling Facebook authentication in Android apps](facebook-auth-android.html)
-* [Enabling Facebook authentication in iOS apps](facebook-auth-ios.html)
+* [Enabling Facebook authentication in iOS apps (Swift SDK)](facebook-auth-ios-swift-sdk.html)
+* [Enabling Facebook authentication in iOS apps (Objective-C SDK)](facebook-auth-ios.html)
 * [Enabling Facebook authentication in Cordova apps](facebook-auth-cordova.html)

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDKs, Samples, API references
@@ -150,7 +157,7 @@ cordova plugin add ibm-mfp-core
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## {{site.data.keyword.amashort}} Server SDK for Java for Liberty server
+## {{site.data.keyword.amashort}} Server SDK for Liberty for Java&trade; server
 {: #serverlibertysdk}
 
 [Download TAI artifacts](https://imf-tai.{DomainName}/public/TAI.zip)

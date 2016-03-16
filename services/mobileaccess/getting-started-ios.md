@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Setting up the iOS SDK
 {: #getting-started-ios}
 
@@ -16,9 +23,13 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 
 ### Install CocoaPods
 {: #install-cocoapods}
-1. Open Terminal and run the `pod --version` command. If you already have CocoaPods installed, the version number displays. You can skip to the next section to install the SDK.
+1. Open Terminal and run the **pod --version** command. If you already have CocoaPods installed, the version number displays. You can skip to the next section to install the SDK.
 
-1. If you do not have CocoaPods installed, run: `sudo gem install cocoapods`. For more information, see the [Cocoapods website](https://cocoapods.org/).
+1. If you do not have CocoaPods installed, run:
+```
+sudo gem install cocoapods
+```
+For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 ### Install the {{site.data.keyword.amashort}} Client SDK with CocoaPods
 {: #install-sdk-cocoapods}
@@ -47,14 +58,14 @@ To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SD
 
 1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Application route** and **Application GUID** values to initialize the SDK.
 
-1. Add the following header to import the `IMFCore` framework in the class for which you want to use the {{site.data.keyword.amashort}} Client SDK by adding the following header:
+1. Import the `IMFCore` framework in the class that you want to use the {{site.data.keyword.amashort}} Client SDK by adding the following header:
 
-	Objective-C:
+	**Objective-C:**
 	 ```Objective-C
 	#import <IMFCore/IMFCore.h>
 	```
 
-	Swift:
+	**Swift:**
 
 	The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project:
 
@@ -69,7 +80,7 @@ To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SD
 1. Use the following code to initialize the {{site.data.keyword.amashort}} Client SDK.  A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate. <br/>
 Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	Objective-C:
+	**Objective-C:**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -77,7 +88,7 @@ Replace the *applicationRoute* and *applicationGUID* with the values from **Mobi
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	**Swift:**
 
 	```Swift
 IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
@@ -88,12 +99,12 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 
 After the {{site.data.keyword.amashort}} Client SDK is initialized, you can start making requests to your mobile backend.
 
-1. Try to send a request to a protected endpoint on your mobile backend in your browser. Open the following URL: `http://{appRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
+1. Try to send a request to a protected endpoint on your mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK only.
 
 1. Use your iOS application to make a request to the same endpoint. Add the following code after you initialize `IMFClient`:
 
-	Objective-C:
+	**Objective-C:**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -111,7 +122,7 @@ After the {{site.data.keyword.amashort}} Client SDK is initialized, you can star
 	}];
 	```
 
-	Swift:
+	**Swift:**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

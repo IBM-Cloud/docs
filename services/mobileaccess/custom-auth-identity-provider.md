@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Creating a custom identity provider
 {: #custom-create}
 To create a custom identity provider, develop a web application that exposes a RESTful API:
@@ -7,7 +14,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ```
 
 * `base_url`: Specifies the base URL of the custom identity provider web application. The base URL is the URL to be registered in the {{site.data.keyword.amashort}} dashboard.
-* `tenant_id` : Specifies the unique identifier of the tenant. When the {{site.data.keyword.amashort}} invokes this API, it always supplies the {{site.data.keyword.Bluemix}} applicationGUID.
+* `tenant_id` : Specifies the unique identifier of the tenant. When the {{site.data.keyword.amashort}} invokes this API, it always supplies the {{site.data.keyword.Bluemix}} app GUID (`applicationGUID`).
 * `realm_name` : Specifies the custom realm name that is defined in the {{site.data.keyword.amashort}} dashboard.
 * `request_type` : Specifies one of:
 	* `startAuthorization`: Specifies a first step of authentication process. The custom identity provider must respond with either "challenge", "success", or "failure" status.
@@ -104,7 +111,7 @@ The user identity object is used by the {{site.data.keyword.amashort}} service t
 ## Security considerations
 {: #custom-security}
 
-Each request from the {{site.data.keyword.amashort}} service to a custom identity provider contains an authorization header so that the custom identity provider can verify that the request is coming from an authorized source. While not strictly mandatory, consider validating the authorization header by instrumenting your custom identity provider with a {{site.data.keyword.amashort}} Server SDK. To use this SDK, your custom identity provider application must implemented with Node.js or Liberty for Java and run on {{site.data.keyword.Bluemix_notm}}.
+Each request from the {{site.data.keyword.amashort}} service to a custom identity provider contains an authorization header so that the custom identity provider can verify that the request is coming from an authorized source. While not strictly mandatory, consider validating the authorization header by instrumenting your custom identity provider with a {{site.data.keyword.amashort}} Server SDK. To use this SDK, your custom identity provider application must implemented with Node.js or Liberty for Java&trade;&trade; and run on {{site.data.keyword.Bluemix_notm}}.
 
 The authorization header contains information about the mobile client and mobile app that triggered the authentication process. You can use the security context to retrieve this data. For more information, see [Protecting resources](protecting-resources.html)
 

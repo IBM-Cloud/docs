@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Using a custom identity provider to authenticate users
 {: #custom-id}
 You can create a custom identity provider and implement your own logic for collecting and validating credentials. A custom identity provider is a web application that exposes a RESTful interface. You can host custom identity provider on premises or on {{site.data.keyword.Bluemix}}. The only requirement is that the custom identity provider must be accessible from public internet so that it can communicate with the {{site.data.keyword.amashort}} service.
@@ -6,7 +13,7 @@ You can create a custom identity provider and implement your own logic for colle
 {: #custom-id-ovr}
  The following diagram demonstrates how {{site.data.keyword.amashort}} integrates with a custom identity provider.
 
-![image](images/mca-sequence-custom.png)
+![image](images/mca-sequence-custom.jpg)
 
 1. Use the {{site.data.keyword.amashort}} SDK to make a request to your backend resources that are protected with {{site.data.keyword.amashort}} Server SDK.
 * The {{site.data.keyword.amashort}} Server SDK detects an unauthorized request and returns HTTP 401 and authorization scope.

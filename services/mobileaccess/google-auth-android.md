@@ -1,11 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Enabling Google authentication in Android apps
 {: #google-auth-android}
 
 ## Before you begin
 {: #before-you-begin}
 
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](getting-started.html) and [Setting up the Android SDK](getting-started-android.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Configuring a Google project for the Android Platform
 {: #google-auth-android-project}
@@ -22,9 +29,9 @@ If you already have a project, you can skip the steps that describe project crea
 
 1. Click **Credentials** in the menu.
 
-1. Click **Add credentials** and select **OAuth 2.0 client ID**.
+1. Click **New credentials** and select **OAuth 2.0 client ID**.
 
-1. Set a product name on the consent console.
+1. Set a product name on the **OAuth consent screen** tab.
 
 1. Select an application type. Click **Android**. Provide a meaningful name for your Android client.
 
@@ -53,15 +60,15 @@ If you already have a project, you can skip the steps that describe project crea
 
 Now that you have an Android Client ID, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
 
-1. Open the {{site.data.keyword.Bluemix}} dashboard and click your {{site.data.keyword.Bluemix_notm}} application.
+1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-1. Click **Mobile Options** and copy the *applicationRoute* and *applicationGUID* values. You need these values to initialize the SDK.
+1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values when you initialize the SDK.
 
-1. Click on the {{site.data.keyword.amashort}} tile. You will reach {{site.data.keyword.amashort}} dashboard.
+1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
 
-1. Click **Set up authentication > Google**.
+1. Click the **Google** tile.
 
-1. Specify the **Client ID** for Android and click **Save**.
+1. In **Application ID for Android**, specify your Android Client ID for Android and click **Save**.
 
 ## Configuring {{site.data.keyword.amashort}} Client SDK for Android
 {: #google-auth-android-sdk}
@@ -103,7 +110,7 @@ Now that you have an Android Client ID, you can enable Google authentication in 
 
 	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application
 
-1. Initialize the Client SDK and register the Google authentication manager. Replace the `applicationRoute` and `applicationGUID` with from the **Mobile Options** section in the dashboard.
+1. Initialize the Client SDK and register the Google authentication manager. Replace the `applicationRoute` and `applicationGUID` with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -130,9 +137,9 @@ After the Client SDK is initialized and the Google Authentication Manager is reg
 
 ### Before you begin
 {: #google-auth-android-testing-before}
-You must have a mobile backend that was created with the MobileFirst Services Starter boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](protecting-resources.html)
+You must have a mobile backend that was created with the MobileFirst Services Starter boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
-1. Try to send a request to the protected endpoint of your mobile backend in your desktop browser by opening `http://{appRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
+1. Try to send a request to the protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
  The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, you will see `Unauthorized` in your desktop browser.
 
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.

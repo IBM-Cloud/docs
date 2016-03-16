@@ -1,17 +1,24 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Enabling, configuring and using Logger
 {: #enable-logger}
 
 The {{site.data.keyword.amashort}} Client SDK provides a logging framework that is similar to other log frameworks that you might be familiar with, such as `java.util.logging` or `log4j`. The logging framework supports multiple per-package logger instances, different log levels, capturing of stack traces for an application crash and more.
 
-You can also configure the logged data to be persisted to a local store, which can be sent to the {{site.data.keyword.amashort}} Service on demand.
+You can also configure the logged data to be persisted to a local store, which can be sent to the {{site.data.keyword.amashort}} service on demand.
 
 The {{site.data.keyword.amashort}} Client SDK logging framework supports the following log levels, listed from least to most verbose, with recommended use guidelines:
 
-* `FATAL` - Use for unrecoverable crashes or hangs. The FATAL level is reserved for logging unrecoverable errors, which appear to users as an application crash
-* `ERROR` - Use for unexpected exceptions or unexpected network protocol errors
-* `WARN` - To log usage warnings that are not considered critical errors, such as usage of deprecated APIs or slow network response
-* `INFO` - Use for reporting initialization events and other data that might be instrumental
-* `DEBUG` - Use for reporting debug statements to help developers resolve application defects
+* `FATAL` - Use for unrecoverable crashes or hangs. The FATAL level is reserved for logging unrecoverable errors, which appear to users as an application crash.
+* `ERROR` - Use for unexpected exceptions or unexpected network protocol errors.
+* `WARN` - To log usage warnings that are not considered critical errors, such as usage of deprecated APIs or slow network response.
+* `INFO` - Use for reporting initialization events and other data that might be useful.
+* `DEBUG` - Use for reporting debug statements to help developers resolve application defects.
 
 Make sure that you have initialized the {{site.data.keyword.amashort}} Client SDK prior to using the logging framework. The following samples demonstrate the basic usage of a {{site.data.keyword.amashort}} Client SDK logging framework.
 
@@ -82,9 +89,9 @@ logger.fatal("fatal message");
 
 You can find the following additional methods in Logger classes:
 
-* `setCapture` - Enables or disables persisting log information to be sent to {{site.data.keyword.amashort}} Service later
-* `setLevel` - sets the minimum log level to print log messages
-* `send` - sends persisted logs to the {{site.data.keyword.amashort}} Service
+* `setCapture` - Enables or disables persisting log information to be sent to {{site.data.keyword.amashort}} service later.
+* `setLevel` - Sets the minimum log level to save log messages.
+* `send` - Sends persisted logs to the {{site.data.keyword.amashort}} service.
 
 For example, when capture is ON and the logger level is configured to FATAL, the logger captures uncaught exceptions. Uncaught exceptions often appear to users as application crashes, but do not capture any logs that lead up to the crash event. Alternatively, a more verbose logger level ensures that logs that lead to a FATAL logger entry, such as WARN and ERROR, are also captured.
 
@@ -114,7 +121,7 @@ Logger logger2 = Logger.getInstance("logger2");
 logger1.debug("debug message");
 logger2.info("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
 
@@ -139,7 +146,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 [logger1 logDebugWithMessages:@"debug message"];
 [logger2 logInfoWithMessages:@"info message"];
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
 
@@ -164,7 +171,7 @@ let logger2 = IMFLogger(forName: "logger2");
 logger1.logDebugWithMessages("debug message")
 logger2.logInfoWithMessages("info message")
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
 
 ```
@@ -187,7 +194,7 @@ var logger2 = MFPLogger.getInstance("logger2");
 logger1.debug ("debug message");
 logger2.info ("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
 
