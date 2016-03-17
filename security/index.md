@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 19 February 2016*
+*Last updated: 17 March 2016*
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
@@ -204,23 +204,9 @@ The Single Sign On service supports several identity sources where your users' c
 
 For more information, see [Getting started with Single Sign On](../services/SingleSignOn/index.html).
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-This service provides a security analysis of Android mobile applications. To use this service, you must upload a compiled Android app as an APK file. When the security analysis scan is done, you can download a report.
-
-For more information, see [Getting started with AppScan Mobile Analyzer](../services/AppScanMobileAnalyzer/index.html#migrating).
-
-### AppScan Dynamic Analyzer
-
-This service provides a security analysis of web applications with a dynamic analysis tool. The tool works on the deployed web app, not on the app source code, and it can scan any {{site.data.keyword.Bluemix_notm}} web app regardless of its language or technology. You can scan only applications of the organizations that you belong to. To create a scan, you must configure the web app URL and the login credentials if any. When the scan is done, you can download a report.
-
-For more information, see [Getting started with AppScan Dynamic Analyzer](../services/AppScanDynamicAnalyzer/index.html).
-
-### Mobile Analyzer for iOS (Beta)
-
-The Mobile Analyzer for iOS service provides AppScan dynamic security analysis for iOS mobile applications. It helps you identify security issues in your iOS mobile apps.
-
-For more information, see [Getting started with Mobile Analyzer for iOS](../services/AppScanIOS/index.html).
+This service provides a security analysis of mobile and web apps, and it allows you to scan source code for security vulnerabilities. For more information, see  [Getting started with Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
 
 ### IBM UrbanCode plug-in for application security testing
 
