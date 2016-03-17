@@ -14,7 +14,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_full}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 15 March 2016*
+*Last updated: 17 March 2016*
 
 ## Overview
 
@@ -81,10 +81,12 @@ Follow these steps to use the analytics functions of the {{site.data.keyword.iot
 
 For more information on REST API usage, see the {{site.data.keyword.iotmapinsights_short}} REST API documentation.
 
+<!--
 ## Tutorial
 
 Refer to [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window} and [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}.
 You can download a step-by-step tutorial in PDF format and some sample code.
+-->
 
 ## Copyright Notice
 
@@ -101,6 +103,8 @@ Map data [(C) OpenStreetMap contributors](http://www.openstreetmap.org/){:new_wi
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-map-insights){:new_window}
 * [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
 
+<!--
 ## samples
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+-->
