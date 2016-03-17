@@ -10,10 +10,11 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Getting started with {{site.data.keyword.mobilepushfull}} 
+# Getting started with {{site.data.keyword.mobilepushshort}}
+ 
 {: #gettingstartedtemplate} 
 
-The {{site.data.keyword.mobilepushshort}} service measures the state, behavior, and context of your mobile apps, mobile users, and mobile devices by providing monitoring services for mobile applications that access Cloud Resources hosted on {{site.data.keyword.Bluemix_notm}}. Client side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
+The {{site.data.keyword.mobilepushfull}} service measures the state, behavior, and context of your mobile apps, mobile users, and mobile devices by providing monitoring services for mobile applications that access Cloud Resources hosted on {{site.data.keyword.Bluemix_notm}}. Client side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
 {:shortdesc}
 
 The Push Notifications service provides a unified platform to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) push notifications to your mobile application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
@@ -21,8 +22,8 @@ The Push Notifications service provides a unified platform to send and manage mo
 This section describes how to set up basic push notifications. When you use a basic notification, the notifications are broadcast instead of reaching a specific set of users using tags.
 
 1. [Configure credentials for a notification provider](t__main_push_config_provider.html)
-2. [Enable mobile app to receive notifications](c_enable_push notfications.html)
-3. [Send basic notifications](t_send_notifications.html)
+2. [Enable mobile app to receive notifications](c_enable_push.html)
+3. [Send basic notifications](t_send_push_notifications.html)
 
 # Related Links
 {: #rellinks}

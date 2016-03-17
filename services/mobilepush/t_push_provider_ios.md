@@ -7,7 +7,7 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Creating and configuring push credentials for APNs
+# Configuring credentials for Apple push notifications(APNs)
 
 {: #create-push-credentials-apns}
 

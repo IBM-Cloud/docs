@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# REST API
+# Using REST APIs
 {: #push-api-rest}
 
 You can use a REST (Representational State Transfer) API (application program interface) for push notifications. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.
