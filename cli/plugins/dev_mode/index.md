@@ -1,4 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
 # Development mode CLI
+{: #devmodecli}
+
+*Last updated: 25 February 2016*
+
 Development mode (dev_mode) is a Bluemix feature that you can use to work with your apps while your apps are running in the cloud. Development mode includes the dev_mode command line interface. dev_mode CLI is built as a cf CLI plug-in and supports both Liberty and IBM Node.js apps.
 
 dev_mode CLI provides the following features:
