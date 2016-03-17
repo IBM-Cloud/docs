@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotdriverinsights_full}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 15 March 2016*
+*Last updated: 17 March 2016*
 
 ## Analysis Overview
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on driver's behavior from car probe data and contextual data.
@@ -28,7 +28,10 @@ Following steps are the rough sequence to interact your application with {{site.
 
 ![Typical analysis sequence](images/sequencediagram.png "Typical analysis sequence")
 
-As for the analyzable behaviors and contexts, refer to [Overview](iotdriverinsights_overview.html) section. And refer to [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial](https://github.com/IBM-Bluemix/iot-for-automotive-tutorials){:new_window} how to try sample application that implements above analysis sequence with sample car probe data.
+As for the analyzable behaviors and contexts, refer to [Overview](iotdriverinsights_overview.html) section. 
+<!--
+And refer to [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial](https://github.com/IBM-Bluemix/iot-for-automotive-tutorials){:new_window} how to try sample application that implements above analysis sequence with sample car probe data.
+-->
 
 ## How to add service
 To get up and running quickly with this service, follow these steps:
@@ -44,10 +47,12 @@ To get up and running quickly with this service, follow these steps:
 	4. Click **Use** to deploy **{{site.data.keyword.iotdriverinsights_full}}** to your Bluemix services.
 2. For more detail for how to run and configure the service, refer to [Administering](iotdriverinsights_admin.html) section and [API Documentation](https://new-console.ng.bluemix.net/apidocs/121){:new_window}.
 
+<!--
 ## Tutorial
 Refer to [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window} and [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}. You can download step-by-step tutorial by PDF format and sample source codes. 
 
 ![Tutorial overview](images/tutorial.png "Tutorial overview")
+-->
 
 # rellinks
 
@@ -60,6 +65,8 @@ Refer to [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdr
 * [stackoverflow](http://stackoverflow.com/questions/tagged/iot-driver-insights){:new_window}
 * [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
 
+<!--
 ## samples
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+-->
