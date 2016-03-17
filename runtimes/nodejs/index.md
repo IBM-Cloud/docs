@@ -1,17 +1,24 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
-# Node.js runtime
+# SDK for Node.js
 {: #nodejs_runtime}
-*Last updated: 19 February 2016*
+*Last updated: 16 March 2016*
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
 The sdk-for-nodejs buildpack provides a complete runtime environment for Node.js apps.
 {: shortdesc}
 
-The Node.js buildpack is used when the application contains a **package.json** file in the root directory.
+The sdk-for-nodejs buildpack is used when the application contains a **package.json** file in the root directory.
 
 ## Starter application
 {: #starter_application}
@@ -70,7 +77,7 @@ With this code, when the application is running on Bluemix, the VCAP_APP_HOST an
 ## Available versions
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} provides all the [currently available Node.js runtimes](http://nodejs.org/dist/). Of those, IBM provides versions which contain enhancements and bug fixes. See [Latest Updates to the Node.js Buildpack](updates.html) for more information.
+{{site.data.keyword.Bluemix}} provides all the [currently available Node.js runtimes](http://nodejs.org/dist/). Of those, IBM provides versions which contain enhancements and bug fixes. See [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html) for more information.
 
 The IBM Node.js buildpack caches all the IBM runtime versions. So if you use IBM SDK for Node.js runtime in your application, you get faster application performance when your application is pushed to Bluemix.
 
@@ -132,23 +139,21 @@ Bluemix provides multiple versions of the Node.js buildpack.
 The **sdk-for-nodejs** buildpack takes precedence over the **nodejs_buildpack** in Bluemix. If you want to use the **nodejs_buildpack** with your application instead of the **sdk-for-nodejs** buildpack, you must specify your buildpack, for example, by using the -b option with the **cf push** command.
 
 Typically the current **sdk-for-nodejs** buildpack and a back-level version are available.  To see all the available buildpacks us the **cf buildpacks** command.  For example:
+<pre>
+      cf buildpacks
+      Getting buildpacks...
 
-```
-    cf buildpacks
-    Getting buildpacks...
+      buildpack                                 position   enabled   locked   filename   
 
-    buildpack                                 position   enabled   locked   filename   
-    ...
-    sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
-    nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
-    sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
-```
+      sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+      nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
+      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
+</pre>
 {: codeblock}
-
 
 # rellinks
 ## general
-* [Latest Updates to the Node.js Buildpack](./updates.html)
+* [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

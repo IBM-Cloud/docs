@@ -1,10 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# PHP runtime
+# PHP
 {: #php_runtime}
-*Last updated: 19 February 2016*
+*Last updated: 16 March 2016*
 
 The PHP runtime on {{site.data.keyword.Bluemix}} is powered by the php_buildpack.
 The php_buildpack provides a complete runtime environment for PHP
@@ -50,7 +57,7 @@ currently installed in {{site.data.keyword.Bluemix}}:
 * 5.5.30
 * 5.6.30
 * 5.6.13
-* 5.6.714
+* 5.6.14
 
 If your app requires a PHP version that is not listed,
 you can use the external

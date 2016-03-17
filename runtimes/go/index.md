@@ -1,11 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
-# Go runtime
+# Go
 {: #go_runtime}
-*Last updated: 19 February 2016*
+*Last updated: 16 March 2016*
 
 The Go runtime on {{site.data.keyword.Bluemix}} is powered by the go_buildpack.
 The go_buildpack provides a complete runtime environment for Go

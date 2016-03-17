@@ -1,14 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Ruby runtime
+# Ruby
 {: #ruby_runtime}
-*Last updated: 19 February 2016*
+*Last updated: 16 March 2016*
 
 The Ruby runtime on {{site.data.keyword.Bluemix}} is powered by the ruby_buildpack.
-The ruby_buildpack provides a complete runtime environment for Ruby
-app.
+The ruby_buildpack provides a complete runtime environment for Ruby apps.
 {: shortdesc}
 
 The ruby_buildpack is used if your app has a Gemfile in the root directory. It will then use Bundler to install your dependencies.
