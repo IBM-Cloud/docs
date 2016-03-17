@@ -1,24 +1,34 @@
+---
+
+copyright:
+
+  years: 2015, 2016
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Getting started with {{site.data.keyword.vpn_full}}
+# Getting started with {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Last updated: 25 February 2016*
+*Last updated: 17 March 2016*
 
-{{site.data.keyword.vpn_short}} service is available to securely access IBM containers (Docker containers) inside IBM cloud. You can use IBM cloud as an extension of your corporate data center. You can also connect with the SoftLayer servers using IBM VPN.
+The {{site.data.keyword.vpn_full}} service for Bluemix&reg; is available to securely access IBM Containers (Docker containers) inside the IBM Bluemix cloud environment. You can use the IBM Bluemix cloud environment as an extension of your corporate data center. You can also connect with the SoftLayer servers using the IBM VPN service.
 {:shortdesc}
 
-Before you begin, ensure that you have an IBM Docker container ready to use. See [IBM Containers for Bluemix](https://www.ng.bluemix.net/docs/containers/container_index.html) for details on how to create and manage IBM containers.  
+Before you begin, ensure that you have an IBM Docker container ready to use. See [IBM Containers for Bluemix](https://www.ng.bluemix.net/docs/containers/container_index.html) for details on how to create and manage IBM Containers.  
 
-To get started:
+To get started, select the **Virtual Private Network** service instance tile on the Bluemix dashboard. Complete the following steps:
 
-1. Configure the {{site.data.keyword.vpn_short}} Gateway by selecting **CREATE GATEWAY**. A default gateway is created. If required, edit the gateway configuration as shown in the following steps.
+1. Configure the {{site.data.keyword.vpn_short}} gateway by selecting **CREATE GATEWAY**. A default gateway is created. If required, edit the gateway configuration as shown in the following steps.  
+{: #gateway}  
+
   1. Select **EDIT**.  
   2. Specify the gateway name.  
   3. Select the containers or groups with which you want to use the VPN service.  
   4. Select **SAVE**.  
 
- You can use the default IKE and IPSec policies or configure custom policies. If you want to use the default policies, skip to step 4.
+ You can use the default IKE and IPSec policies, or configure custom policies. If you want to use the default policies, skip to step 4.
 
 2. Configure the IKE policy by selecting the **IKE & IPSec Policies** tab.
   1. Select **ADD NEW**.  
@@ -44,7 +54,9 @@ To get started:
   	* **Encapsulation Mode**: Tunnel; cannot be changed
   3. Select **SAVE**.  
 
-4. Provide the details to establish a connection between your data center or SoftLayer server, and the IBM cloud.
+4. Provide the details to establish a connection between your data center or SoftLayer server VPN gateway, and the IBM VPN gateway.  
+{: #site}  
+
   1. Select the **VPN Gateway Appliance** tab.
   2. Select **ADD NEW** in the **VPN Site Connections** section.
   3. Specify the following site connection details:  
@@ -68,11 +80,12 @@ To get started:
   	* **Keep Alive Timeout**: Timeout value in seconds after which the session is terminated. Default value: 120. Range: 6-86400. The keep alive timeout value must be higher than the keep alive interval value.
   5. Select **SAVE**.
 
-  **Note:** You will see a ***pending create*** message when the connection is being established. When you see this message, refresh the screen a few times to see the connection active message.
+  **Note:** When the connection is being established, the connection status displays as ***pending create***. When you see this status, refresh the screen a few times to see the connection active status.
 
 **Important:** If you are using a web application, you must bind the web application to the Docker container you are using. This binding is required for the traffic to pass through the IPSec VPN tunnel.
 
-For detailed IBM VPN service configuration steps, see [Configuring your Communication Channel](vpn_configuring.html#configure).
+**Important:** The IBM VPN service currently operates in responder mode. To initiate the VPN connection, a data packet must flow out from the IBM VPN gateway to your on-premises data center or SoftLayer server. Once the VPN connection is established, traffic can flow in either direction between endpoints of the VPN connection.
+
  
 # rellinks
 ## samples 

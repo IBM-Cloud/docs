@@ -1,3 +1,11 @@
+---
+
+copyright:
+
+  years: 2015, 2016
+
+---
+
 # IBM VPN CLI
 You can use the command line interface (CLI) to configure and manage your IBM® Virtual Private Network (VPN) service. The IBM VPN CLI is a plug-in that is used with the Cloud Foundry CLI plug-in. The plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
