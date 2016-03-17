@@ -13,7 +13,7 @@ copyright:
 
 # Administering
 {: #1stanchor}
-*Last updated: 17 Feb 2016*
+*Last updated: 17 March 2016*
 
 
 Administration of {{site.data.keyword.iotdriverinsights_full}} includes the following activities:
