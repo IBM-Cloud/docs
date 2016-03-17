@@ -1,7 +1,16 @@
-{:new_window: target="_blank"}
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
+
 
 # Administering
 {: #1stanchor}
