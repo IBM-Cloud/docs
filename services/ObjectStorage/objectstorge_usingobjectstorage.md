@@ -97,7 +97,7 @@ You can find the credential values for your {{site.data.keyword.objectstoragesho
 
 *Figure 2. {{site.data.keyword.objectstorageshort}} Service Credentials*
 
-### Working with containers {: #Work-with-containers}
+### Working with containers {: #work-with-containers}
 
 Listing containers:
 
@@ -111,7 +111,7 @@ Listing the content of a container:
 
 	swift list <container_name>
 
-### Working with objects {: #Work-with-objects}
+### Working with objects {: #work-with-objects}
 
 #### Adding a file to a container
 
@@ -156,7 +156,7 @@ To download a directory structure, use the ```-prefix``` parameter to indicate t
 
 	swift delete <container_name> <file_name>
 
-### Working with object versioning {: #Work-with-object-versioning}
+### Working with object versioning {: #work-with-object-versioning}
 
 You can set up versions of each object in your container by using the ```X-Versions-Location``` flag. To do this, create an additional container to keep older versions of your objects as follows. 
 
@@ -249,7 +249,7 @@ Here is a full example of the use of versioning:
 		$ swift list container_two
 		$
 
-### Scheduling object deletion {: #Schedule-object-deletion}
+### Scheduling object deletion {: #schedule-object-deletion}
 
 You can set your objects to expire in a given amount of time. In other words, you can schedule the deletion of your objects. You can do this by making use of either of the ```X-Delete-At``` or ```X-Delete-After``` headers. The ```X-Delete-At``` header takes an integer number representing the epoch time at which to delete the object. The ```X-Delete_After``` header takes an integer number representing the number of seconds after which the object will be deleted.
 
@@ -293,7 +293,7 @@ If you are using curl, the commands are as follows.
 
 
 
-### Creating a temporary URL {: #Create-temporary-URL}
+### Creating a temporary URL {: #create-temporary-url}
 
 A temporary URL is a long, difficult-to-guess URL that can be used for a specified period to download objects without requiring further authentication. Generate a temporary URL with the following steps:
 
