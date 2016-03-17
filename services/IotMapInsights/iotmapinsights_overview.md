@@ -1,5 +1,16 @@
-{:new_window: target="_blank"}
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
+
 
 # About {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}

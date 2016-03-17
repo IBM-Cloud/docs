@@ -1,7 +1,15 @@
-{:new_window: target="_blank"}
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
 
 # Administering
 {: #1stanchor}
@@ -106,6 +114,8 @@ Then, new parameters are applied and they become effective for next submitted jo
 	}]
 }
 ```
+{: screen}
+
 
 ## Manage data stored in the service
 {: #managedata}

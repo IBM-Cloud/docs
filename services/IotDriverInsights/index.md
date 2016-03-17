@@ -1,7 +1,15 @@
-{:new_window: target="_blank"}
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
 
 # Getting started with {{site.data.keyword.iotdriverinsights_full}} (Experimental)
 {: #gettingstartedtemplate}
