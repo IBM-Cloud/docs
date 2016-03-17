@@ -10,6 +10,7 @@ You can use IBM {{site.data.keyword.blockstorageshort}} for {{site.data.keyword.
 
 You can also create block-level snapshots of volumes. {{site.data.keyword.blockstorageshort}} service does not allow the creation of snapshots while the volume is attached, so the resulting snapshots will be crash-consistent. 
 
+
 ## How to create a {{site.data.keyword.blockstorageshort}} service instance
 To create an instance of the {{site.data.keyword.blockstorageshort}} service in your space, follow these steps:
  
@@ -20,7 +21,9 @@ The {{site.data.keyword.blockstorageshort}} service is only supported in an unbo
 
 An instance of {{site.data.keyword.blockstorageshort}} service is created in your space. You can open the {{site.data.keyword.blockstorageshort}} UI to manage volumes anytime by clicking the service instance icon.
 
-## {{site.data.keyword.blockstorageshort}} user interface (UI)
+
+
+## Using {{site.data.keyword.blockstorageshort}} user interface (UI) {: #using-block-storage-ui}
 The {{site.data.keyword.blockstorageshort}} graphical user interface provides a high-level overview of your storage volumes, snapshots, and total storage consumption for both volumes and snapshots at the top of the window. 
 
 The header includes the date and time of the last UI refresh. You can use the refresh icon (a circular arrow icon) to refresh the UI manually, if needed. 
@@ -34,37 +37,9 @@ The snapshot tab shows a table of snapshots with similar properties and behavior
 Use the Create icon above the tables to create a new volume or to manipulate existing ones. If you are creating a volume from a snapshot, you can also use the Actions drop-down list.
 
 
-## Volume actions
 
-### Create a volume
 
-1.	Click **Create** to start the **Create Volume** dialog.
-2.	Provide the size of the volume that you want. Decimal numbers are not accepted. The size is limited by the quota that is assigned to your organization.
-3.	Provide a name. The name is for display purposes only.
-4.	Optionally, provide a more detailed description of the volume. 
-5.	Click **Create** to submit the information and close the dialog. 
-
-Creating a volume can take a few moments. 
-
-### Delete a volume
-
-1.	Select the volume that you want to delete.
-2.	Click **Delete**.
-3.	Confirm the deletion of this volume.
-
-You cannot delete a volume that is attached to a virtual server. You must detach the volume first.
-
-### Extend a volume
-You can increase the volume in size to up to ten times the original size through the **Extend** action. You cannot reduce the size of a volume.
-
-1.	Select the volume to be extended.
-2.	Click **Extend**.
-3.	Select the new size of the volume. Provide the new total size of the volume.
-4.	Click **Extend** to submit the information and close the dialog. 
-
-To be extended, a volume must be in **Available** state. 
-
-### Attach and detach a volume to a virtual server
+## Attaching a volume to a virtual server {: #attaching-detaching-volume}
 Volumes are attached and detached from virtual servers as devices with a specific device name. For a virtual server to be able to persist data on a volume, you must attach the volume to the virtual server.
 
 To attach a volume, follow these steps: 
@@ -77,40 +52,6 @@ To attach a volume, follow these steps:
 
 The volume is listed in the table of attached volumes with the information about the virtual server instance. 
 The virtual server can now use the device to persist data. 
-
-To detach a volume, follow these steps: 
-
-1.	Select a volume from the list of attached volumes. 
-2.	Click **Detach**.
-3.	Confirm the detachment in the dialog. 
-
-After it is detached, the volume is no longer available for I/O operations in the virtual server instance. In the {{site.data.keyword.blockstorageshort}} service UI, the volume is now available to be attached to other virtual servers.
-
-## Snapshot actions
-
-### Create a snapshot
-
-1.	Select the **Volumes** tab to get a list of volumes.
-2.	Select the volume that you want to create a snapshot of in the unattached volumes column. Make sure that the volume you select is unattached. The selected volume is highlighted. 
-3.	Click **Actions** and select **Create Snapshot** from the drop-down list.
-4.	Give the snapshot a name and click **Create**.
-
-**Note:** You cannot delete a volume while snapshots for the volume exist. 
-
-### Create a volume from a snapshot
-
-1.	Select the **Snapshots** tab to get a list of snapshots.
-2.	Select the snapshot that you want to create a volume from. The selected snapshot is highlighted.
-3.	Click **Actions** and select **Create Volume** from the drop-down list.
-4.	Give the new volume a name and optionally a new size and click **Create**. 
-
-**Note:** The new volume size must be equal or greater than the snapshot size. 
-
-### Delete a snapshot
-
-1.	Select the **Snapshots** tab to get a list of snapshots.
-2.	Select the snapshot that you want to delete. The selected snapshot is highlighted.
-3.	Click **Actions** and select **Delete**. 
 
 
 
