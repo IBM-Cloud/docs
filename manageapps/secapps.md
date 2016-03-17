@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Securing apps
 {: #securingapps}
 
-*Last updated: 16 February 2015*
+*Last updated: 17 March 2016*
 
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}

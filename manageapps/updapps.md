@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Updating apps
 {: #updatingapps}
 
-*Last updated: 1 March 2016*
+*Last updated: 17 March 2016*
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.

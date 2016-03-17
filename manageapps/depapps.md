@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 15 March 2016*
+*Last updated: 17 March 2016*
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}

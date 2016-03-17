@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #Managing applications
 {: #manageapps}
 
-*Last updated: 4 December 2015*
+*Last updated: 17 March 2015*
 
 You can use the Dashboard in the {{site.data.keyword.Bluemix}} user interface to view and manage your applications and services, and to monitor resource usage by using the quota gauges.
 {:shortdesc}
