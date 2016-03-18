@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 
 # Administering
@@ -98,7 +98,9 @@ To apply changes of parameters:
 
 Then, new parameters are applied and they become effective for next submitted job.
 
-##### <a name="sampleJson"> Sample JSON Response of "getLinkInformation" REST API
+##### Sample JSON Response of "getLinkInformation" REST API
+{: #sampleJson}
+
 ```
 {
 	"links": [{

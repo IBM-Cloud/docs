@@ -5,10 +5,10 @@ copyright:
 
 ---
 
-{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 
 
