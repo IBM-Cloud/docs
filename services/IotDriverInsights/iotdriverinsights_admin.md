@@ -13,7 +13,7 @@ copyright:
 
 # Administering
 {: #1stanchor}
-*Last updated: 17 March 2016*
+*Last updated: 18 March 2016*
 
 
 Administration of {{site.data.keyword.iotdriverinsights_full}} includes the following activities:
@@ -69,9 +69,6 @@ The following table describes behavior parameters:
 
 The following table describes context parameters:
 
-<!-- Remove for Experimental release from the following table
-|Analysis Time Zone|\-|Applied timezone for analysis |+00:00|
--->
 |Category|Parameter Name|Description|Default Value|
 |:-------:|:--------:|:--------|:-------:|
 |Time Range|\-|This value defines time period type.|\-|
