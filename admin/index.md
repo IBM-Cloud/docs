@@ -60,16 +60,16 @@ You can extend the functionality of the notifications that are sent to the Admin
 
 To use web hooks to set up a specific event subscription, complete the following steps:
 
-1\. Go to the **ADMINISTRATION** page:
+1. Go to the **ADMINISTRATION** page:
 
 - For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 - For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 
 **Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
 
-2\. Click **Add Subscription**.
+2. Click **Add Subscription**.
 
-3\. Fill in the event subscription form. For information about the fields on the form, review the following table:
+3. Fill in the event subscription form. For information about the fields on the form, review the following table:
 
 | **Field** | **Description** |
 |-----------------|-------------------|
@@ -86,7 +86,7 @@ Table 3. Event subscription form fields
 
 When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
-4\. Optional: Select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
+You can select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
 
 
 ## Viewing system information
