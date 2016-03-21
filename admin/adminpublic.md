@@ -136,6 +136,8 @@ Users can be assigned the following permissions to take different user roles in 
 <dd>Space auditors have permissions for read-only access to all information about the space, such as information about applications and services, settings, reports, and logs.</dd>
 </dl>
 
+**Note**: Users that are assigned the manager or developer role can access the VCAP_SERVICES environment variable. However, a user that is assigned the auditor role, can't access VCAP_SERVICES. In addition, content in VCAP_SERVICES is not partially redacted based on the user role.
+
 ### Managing your organizations
 {: #orgmng}
 
