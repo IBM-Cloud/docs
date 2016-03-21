@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 16 March 2016*
+*Last updated: 21 March 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -93,6 +93,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.servicediscoveryshort}}		|Yes		|No		|No|
+|{{site.data.keyword.serviceproxyshort}}		|Yes		|No		|No|
 |{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
