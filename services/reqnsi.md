@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 20 January 2015*
+*Last updated: 20 January 2016*
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
