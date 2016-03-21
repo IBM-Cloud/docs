@@ -1,3 +1,12 @@
+---
+
+copyright:
+
+  years: 2016
+
+---
+
+
 # Getting started with IBM Network Security Groups (BETA)
 
 The {{site.data.keyword.networksecuritygroups_full}} service in Bluemix focuses on network security. Use the IBM Network Security Groups service to configure and manage network policies that control inbound and outbound traffic between virtual servers. You can find the service in the Bluemix catalog under the Security category and under the Network category.

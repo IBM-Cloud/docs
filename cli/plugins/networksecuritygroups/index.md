@@ -1,3 +1,12 @@
+---
+
+copyright:
+
+  years: 2016
+
+---
+
+
 # IBM Network Security Groups Command Line Interface
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.networksecuritygroups_full}} service. The IBM Network Security Groups CLI is a plug-in that is used with the [Bluemix&reg; CLI](http://clis.ng.bluemix.net/ui/home.html). The plug-in is available for Windows, Mac OS, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 

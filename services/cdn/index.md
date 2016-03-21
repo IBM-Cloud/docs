@@ -1,3 +1,12 @@
+---
+
+copyright:
+
+  years: 2016
+
+---
+
+
 # Getting started with {{site.data.keyword.cdn_short}} (BETA)
 
 Content Delivery Networks (CDNs) use content caching servers local to consumers to reduce content load time. CDN enhances user experience and lowers bandwidth usage as well as processing on the content providing servers.
