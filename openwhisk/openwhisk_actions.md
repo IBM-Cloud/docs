@@ -19,7 +19,7 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-*Last updated: 22 February 2016*
+*Last updated: 22 March 2016*
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
 {:shortdesc}
