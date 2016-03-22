@@ -391,6 +391,8 @@ Several utility actions are provided in a package called `/whisk.system/util` th
 
   In the result, you see that the lines are sorted.
 
+**Note**: For more information on invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.html##openwhisk_binding_actions)
+
 ## Creating Swift actions
 {: #openwhisk_actions_swift}
 
