@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -242,7 +242,7 @@ displayed.
 - You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-- When displaying a report or log, you can click the ![Download](images/icon_download.svg)
+- When displaying a report or log, you can click the ![Download](images/icon_download.png)
 icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
@@ -1198,4 +1198,3 @@ command:
 For additional help for a command, use the `-help` option.
 
 For more information about how to work with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, see [{{site.data.keyword.Bluemix_notm}} admin](../cli/plugins/bluemix_admin/index.html).
-
