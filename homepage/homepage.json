@@ -30,6 +30,9 @@
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
+				"name": "Network Security Groups",
+				"href": "services/networksecuritygroups/index.html"
+			}, {
 				"name": "Virtual Private Network (VPN)",
 				"href": "services/vpn/index.html"
 			}]
@@ -144,6 +147,9 @@
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
 			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
+			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
@@ -253,6 +259,9 @@
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
