@@ -165,4 +165,4 @@ Set up APNs on the Push dashboard.
 	![Set push notifications](images/credential_screen.jpg)
 3. In the **Password** field, enter the password that is associated with the **.p12** certificate file, then click **Save**.
 After the certificates are uploaded successfully with a valid password, you can start sending notifications.
-1. Next steps. [Enable Notifications for iOS](t-enable-ios-notifications.html).
+1. Next steps. [Enable Notifications for iOS](c_ios_enable.html).
