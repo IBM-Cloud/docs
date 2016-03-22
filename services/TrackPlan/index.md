@@ -17,7 +17,7 @@ copyright:
 
 #Getting started with the {{site.data.keyword.trackplan}} service {: #track-plan}  
 
-*Last Updated: 7 March 2016*
+*Last Updated: 22 March 2016*
 
 To view, edit, and plan tasks, use {{site.data.keyword.trackplanlong}} (the {{site.data.keyword.trackplan}} service). You can track your work and your team's work, create defects, see what's incoming, maintain your backlog, and plan work for future sprints.
 {: shortdesc}
