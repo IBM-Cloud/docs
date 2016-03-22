@@ -61,7 +61,7 @@ You can use the {{site.data.keyword.openwhisk_short}} CLI to download example co
 
 To install the starter app example, enter the following command:
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
 {: pre}
 
