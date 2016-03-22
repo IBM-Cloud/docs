@@ -14,10 +14,13 @@ copyright:
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## March 18, 2016: Updated Node.js Buildpack v3.2-20160315-1257
+
+This release of the buildpack moves the the default IBM SDK for Node.js runtime from version 4.3.0 to 4.3.2. It also includes IBM SDK for Node.js versions 0.10.43, 0.12.12, and 4.3.1. Users should use these recent Node.js versions to pick up fixes for several security vulnerabilities.
 
 ## March 4, 2016: Updated Node.js Buildpack v3.1-20160222-1123
 
-This release of the buildpack bumps the the default IBM SDK for Node.js runtime from version 4.2.4 to 4.3.0. It also includes IBM SDK for Node.js versions 0.10.42, 0.12.10, and 4.2.6. Users should use these recent Node.js versions to pick up fixes for several security vulnerabilities.
+This release of the buildpack moves the the default IBM SDK for Node.js runtime from version 4.2.4 to 4.3.0. It also includes IBM SDK for Node.js versions 0.10.42, 0.12.10, and 4.2.6. Users should use these recent Node.js versions to pick up fixes for several security vulnerabilities.
 
 ## February 4, 2016: Updated Node.js Buildpack v3.0-20160125-1224
 
