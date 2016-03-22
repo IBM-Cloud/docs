@@ -29,10 +29,12 @@ To obtain the base URL for the REST API:
 
 
 ## Accept language header
+{: #push-api-rest-accept}
 
 The "Accept-Language" header specifies which language to use for the error messages that are output by [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}I. The following languages are supported for error messages: Chinese (Simplified), Chinese, (Traditional), English (US), German, French, Italian, Japanese, Korean, Portuguese, and Spanish.
 
-## AppSecret
+## appSecret
+{: #push-api-rest-secret}
 
 When an application binds to the Push Notifications, the service generates an appSecret (a unique key) and passes it in the response header. If you are using the IBM® Push Notifications for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure. For information about the REST API, see REST API Reference.
 
@@ -62,7 +64,8 @@ The **Show Credentials** screen shows information about the AppSecret:
 }
 ``` 
 
-##Push REST API Filters
+##Push REST API filters
+{: #push-api-rest-filters}
 
 Filters define a search criteria that restrict data that is returned from a GET API of Push. Apply the filters against the result of the Get operation that you want to filter. The filter restricts the number of entries that are included in the result. For example, you can use a filter to search a tag with a starts with "test". You can generate a filter by using the following syntax.
 
