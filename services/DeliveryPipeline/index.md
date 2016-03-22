@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 
 #Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-*Last Updated: 7 March 2016*
+*Last Updated: 22 March 2016*
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}} (the {{site.data.keyword.deliverypipeline}} service).
 {: shortdesc} 
