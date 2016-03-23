@@ -97,7 +97,7 @@ You can use the following {{site.data.keyword.Bluemix_notm}} commands:
  <tr> 
  <td>[bluemix app start](index.html#bluemix_app_start) </td> 
  <td>[bluemix app stop](index.html#bluemix_app_stop)</td> 
- <td>[bluemix app restart](index.html#bluemix_app_stop)</td>
+ <td>[bluemix app restart](index.html#bluemix_app_restart)</td>
  <td>[bluemix app restage](index.html#bluemix_app_restage)</td>
  <td>[bluemix app instance-restart](index.html#bluemix_app_instance_restart)</td>
  </tr>
@@ -793,7 +793,7 @@ This command has the same function and options as the `cf stop` command.
 
 
 ## bluemix app restart
-{: #bluemix_app_stop}
+{: #bluemix_app_restart}
 
 This command has the same function and options as the `cf restart` command.
 

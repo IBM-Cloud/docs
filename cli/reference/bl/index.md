@@ -58,14 +58,10 @@ The Bluemix Live Sync command line, **bl**, has the following syntax:
 </dl>
 
 ### Arguments
-<dl>
-<dd>Arguments for the command.</dd>
-</dl>
+Arguments for the command.
 
 ### Options
-<dl>
-<dd>Options for the command.</dd>
-</dl>
+Options for the command.
 
 ### Global Options
 <dl>
