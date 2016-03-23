@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated: 1 March 2016*
+*Last updated: 23 March 2016*
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} of the commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The information that follows lists all commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -35,7 +35,7 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 
 You can use the following {{site.data.keyword.Bluemix_notm}} commands:
 
- <table> 
+ <table role="presentation"> 
  <tbody> 
  <tr> 
  <td> 
