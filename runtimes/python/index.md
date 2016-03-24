@@ -36,6 +36,7 @@ python-3.4.3
 ```
 {: codeblock}
 
+When a version is not specified, version 2.7.10 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
