@@ -79,6 +79,8 @@ Creates a VPN connection.
 cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> -subnets ["<subnet/mask>"] -cip <customer gateway IP address> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
 #### Parameters
+{: #p1}
+
 **connection name:** 
 Name of the connection.
 
@@ -95,6 +97,7 @@ Remote subnet address in CIDR format.
 Remote endpoint IP address of the VPN tunnel. 
 
 ##### Optional Parameters:
+{: #op1}
 
 **-d:** Description of the parameters specified.
 
@@ -125,6 +128,8 @@ Creates an IKE policy.
 cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
+{: #p2}
+
 **policy name:** 
 Name of the IKE policy.
 
@@ -132,6 +137,7 @@ Name of the IKE policy.
 Name of the gateway. 
 
 ##### Optional Parameters:
+{: #op2}
 
 **-d:** Description of the parameters specified.
 
@@ -150,6 +156,8 @@ Creates an IPSec policy.
 cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
+{: #p3}
+
 **policy name:** 
 Name of the IPSec policy. 
 
@@ -157,6 +165,7 @@ Name of the IPSec policy.
 Name of the gateway. 
 
 ##### Optional Parameters:
+{: #op3}
 
 **-d:** Description of the parameters specified.
 
@@ -174,12 +183,15 @@ Creates a VPN gateway.
 cf vpn-create gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets <subnet address>
 ```
 #### Parameters
+{: #p4}
+
 **gateway name:** 
 Name of the gateway.
 
 **-t:** Containers for which you want to enable the service. Values: allSingleContainers; allContainerGroups; allContainers. Default value: No default value; you must specify a type. 
 
 #####Optional Parameters:
+{: #op4}
 
 **-gateway_ip:** 
 IP address of the gateway. 
@@ -272,11 +284,14 @@ Updates an existing VPN connection.
 cf vpn-update connection <connection name> -g <gateway name> -cip <customer gateway IP address> -subnets ["<subnet/mask>"] -k <preshared key> -d <description> -peer_id <peer ID> -admin_state <admin state> -dpd-action <action> -gateway_ip <IP address> -i <initiator state> -dpd-timeout <value> -dpd-interval <value> -ike <name> -ipsec <name>
 ```
 #### Parameters
+{: #p5}
+
 **connection name:** 
 Name of the connection.
 
 
 ##### Optional Parameters:
+{: #op5}
 
 **gateway name:** 
 Name of the gateway.
@@ -319,10 +334,13 @@ Updates an IKE policy.
 cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
+{: #p6}
+
 **policy name:** 
 Name of the IKE policy. 
 
 ##### Optional Parameters:
+{: #op6}
 
 **gateway name:** Name of the gateway. 
 
@@ -343,11 +361,14 @@ Updates an IPSec policy.
 cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group> -e <encryption algorithm> -lv <lifetime value>
 ```
 #### Parameters
+{: #p7}
+
 **policy name:** 
 Name of the IPSec policy.
 
 
 ##### Optional Parameters:
+{: #op7}
 
 **gateway name:** 
 Name of the gateway.
@@ -368,10 +389,13 @@ Updates an existing VPN gateway.
 cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets <subnet address>
 ```
 #### Parameters
+{: #p8}
+
 **gateway name:** 
 Name of the gateway.
 
 #####Optional Parameters:
+{: #op8}
 
 **-t:** Containers for which you want to enable the service. Values: allSingleContainers; allContainerGroups; allContainers. Default value: No default value; you must specify a type.
 
