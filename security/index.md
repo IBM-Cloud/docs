@@ -320,18 +320,18 @@ The following table displays which services in {{site.data.keyword.Bluemix_notm}
 
 |{{site.data.keyword.Bluemix_notm}} components		|FISC		|ISO 27001	|SOC 2 Type 1		|
 |:----------------------|:---------:|:---------:|:---------:|
-|{{site.data.keyword.Bluemix_notm}} platform		|&#10004;			|&#10004;	|&#10004;	|
-|{{site.data.keyword.APIM}}			|&#10004;		|&#10004;	|			|
-|{{site.data.keyword.autoscaling}}			|&#10004;			|&#10004;	|			|
-|{{site.data.keyword.bigicloudst}}			|&#10004;			|&#10004;	|&#10004;	|
-|{{site.data.keyword.cloudant}}				|&#10004;			|&#10004;	|&#10004;	|
-|{{site.data.keyword.dashdbshort}}			|&#10004;			|&#10004;	|&#10004;	|
-|{{site.data.keyword.datacshort}}			|&#10004;			|&#10004;	|			|
-|{{site.data.keyword.jazzhub_short}}					|&#10004;			|&#10004;	|			|
-|{{site.data.keyword.containerlong}}			|&#10004;			|&#10004;	|			|
-|{{site.data.keyword.mql}}				|&#10004;			|&#10004;	|	 		|
-|{{site.data.keyword.SecureGateway}}			|&#10004;			|&#10004;	|	 		|
-|{{site.data.keyword.sescashort}}     |&#10004; |&#10004; | |
+|{{site.data.keyword.Bluemix_notm}} platform		|Y			|Y	|Y	|
+|{{site.data.keyword.APIM}}			|Y	|Y |			|
+|{{site.data.keyword.autoscaling}}			|Y	|Y |			|
+|{{site.data.keyword.bigicloudst}}			|Y |Y |Y |
+|{{site.data.keyword.cloudant}}				|Y |Y |Y	|
+|{{site.data.keyword.dashdbshort}}			|Y	|Y	|Y	|
+|{{site.data.keyword.datacshort}}			|Y	|Y	|			|
+|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|			|
+|{{site.data.keyword.containerlong}}			|Y		|Y	|			|
+|{{site.data.keyword.mql}}				|Y	|Y	|	 		|
+|{{site.data.keyword.SecureGateway}}			|Y	|Y |	 		|
+|{{site.data.keyword.sescashort}}     |Y |Y | |
 
 *Table 1. Platform and service compliance*
 
