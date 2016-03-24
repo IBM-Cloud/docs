@@ -20,7 +20,7 @@ With the Push REST API, backend server applications and clients can access Push 
 
 To obtain the base URL for the REST API:
 
-1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service. 
+1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service.
 
 1. In the main page of the Bluemix dashboard, go to the **Applications** area and then click your app.
 
@@ -62,7 +62,7 @@ The **Show Credentials** screen shows information about the AppSecret:
    }
  ]
 }
-``` 
+```
 
 ##Push REST API filters
 {: #push-api-rest-filters}

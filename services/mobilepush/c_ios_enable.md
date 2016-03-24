@@ -9,4 +9,3 @@ copyright:
 {: #enable-push-ios-notifications}
 
 Enable iOS applications to receive push notifications and send push notifications to your devices.
-

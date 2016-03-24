@@ -22,7 +22,7 @@ Before you can use the Push Notification Service Cordova plug-in, you need to in
 
 	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the ```app.receivedEvent``` function within the o```nDeviceReady: function()``` function to initialize the BMS client.
 
-	```	
+	```
 	onDeviceReady: function() {
 	    app.receivedEvent('deviceready');
 	    BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");

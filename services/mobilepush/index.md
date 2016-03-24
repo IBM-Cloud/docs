@@ -11,8 +11,8 @@ copyright:
 {:codeblock:.codeblock}
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
- 
-{: #gettingstartedtemplate} 
+
+{: #gettingstartedtemplate}
 
 The {{site.data.keyword.mobilepushfull}} service measures the state, behavior, and context of your mobile apps, mobile users, and mobile devices by providing monitoring services for mobile applications that access Cloud Resources hosted on {{site.data.keyword.Bluemix_notm}}. Client side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
 {:shortdesc}
@@ -39,13 +39,11 @@ This section describes how to set up basic push notifications. When you use a ba
 ## SDK
 {: #sdk}
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
-* [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} 
+* [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
 * [iOS SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
 
 ## API Reference
 {: #api}
-* [Push API Reference (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window} 
-* [IMFPush API reference iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window} 
-* [REST API Reference](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} 
-
-
+* [Push API Reference (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
+* [IMFPush API reference iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
+* [REST API Reference](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}

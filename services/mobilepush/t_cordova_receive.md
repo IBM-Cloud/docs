@@ -30,7 +30,7 @@ The following section lists the Android notification properties:
 * message - Push notification message
 * payload - JSON object containing a notification payload
 
- 
+
 ##iOS notification properties
 
 The following section lists the iOS notification properties:
@@ -70,10 +70,10 @@ Add the following Swift code snippets to your application delegate class.
 funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
 
     CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
-} 
+}
 ```
 
-``` 
+```
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 

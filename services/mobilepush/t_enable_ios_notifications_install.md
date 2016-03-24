@@ -1,7 +1,7 @@
 # Initializing Push SDK for iOS apps
 {: #enable-push-ios-notifications-install}
 
-For an existing Xcode project, you can set up the Bluemix Mobile Services Client SDK using the CocoaPods dependency management tool. An alternative is to install the SDK manually. 
+For an existing Xcode project, you can set up the Bluemix Mobile Services Client SDK using the CocoaPods dependency management tool. An alternative is to install the SDK manually.
 
 **Note**: To view the Swift Push readme file, go https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master
 
@@ -16,22 +16,22 @@ $ sudo gem install cocoapods
 $ pod init
 ```
 3. In the generated Podfile, add the SDK dependencies you need. Copy the following Podfile.
-   
-   Objective-C 
-   
-    ``` 
+
+   Objective-C
+
+    ```
     source 'https://github.com/CocoaPods/Specs.git'
 	Copy the following list as is and remove the dependencies you do not need
 	pod 'IMFCore'
 	pod 'IMFPush'
 	```
-   
+
    Swift
- 
+
 	```
 	source 'https://github.com/CocoaPods/Specs.git'
 	// Copy the following list as is and remove the dependencies you do not need.
-	use_frameworks! 
+	use_frameworks!
 
 	target 'MyApp' do
 	    platform :ios, '8.0'
@@ -44,7 +44,7 @@ $ pod init
 $ pod update
 ```
 That command installs your dependencies and creates a new Xcode workspace. git **Note**: Ensure that you always open the new Xcode workspace, instead of the original Xcode project file:
- 	  
+
 	```
 	$ open App.xcworkspace
 	```
@@ -61,13 +61,13 @@ Write #import directives for the relevant headers, for example:
 
 ```
 //Objective-C
-#import <IMFCore/IMFCore.h> 
+#import <IMFCore/IMFCore.h>
 #import <IMFPush/IMFPush.h>
-```	
+```
 
 **Note**: Updating your Pods project using the CocoaPods commands `pod install` or `pod update` might override the Bluemix Mobile Services source folders. If you want to retain your customized versions of the original files, ensure that they are backed up before you issue one of these commands.
 
-###Swift 
+###Swift
 
 **Pre-requisites**
 
@@ -83,7 +83,7 @@ import BMSCore
 import BMSPush
 ```
 
-	 				
+
 ##Build Settings
 
 Go to **Xcode > Build Settings > Build Options and Set Enable Bitcode** to **No**.

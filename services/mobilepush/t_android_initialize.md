@@ -44,4 +44,3 @@ Specifies the location where the app hosted. You can use one of three values:
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
-

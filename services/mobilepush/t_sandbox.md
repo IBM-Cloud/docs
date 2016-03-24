@@ -19,9 +19,9 @@ To switch the mode of operation of the push service from sandbox to production:
 
 1. Use the PUT ApplicationID Settings REST API call
 2. In the JSON body, confirm that the mode was switched by using the [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} API call. The expected response is "mode": "PRODUCTION
- 
+
  ```
- { 
+ {
  "mode": "PRODUCTION"
  }
  ```

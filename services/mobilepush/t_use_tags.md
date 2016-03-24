@@ -20,5 +20,3 @@ Create tags on the **Tag** screen. For information about how to create tags, see
 1. In the **Search** tags field, search for the tags that want to use and then click the **+Add** button.![Notifications Screen](images/tag_notification.jpg)
 1. Go to the **Create Your Notifications** area and in the **Message Text** field, enter text that want to send in your notification.
 1. Click the **Send** button.
-
-

@@ -55,12 +55,12 @@ Specifies the route that is assigned to the server application that you created 
 
 **GUID**
 
-Specifies the unique key that is assigned to the application that you created on Bluemix. This value is case-sensitive. 
+Specifies the unique key that is assigned to the application that you created on Bluemix. This value is case-sensitive.
 
 **bluemixRegionSuffix**
 
 Specifies the location where the app is hosted. The ```bluemixRegion``` parameter specifies which Bluemix deployment you are using. You can set this value with a ```BMSClient.REGION``` static property and use one of three values:
 
 - BMSClient.REGION_US_SOUTH
-- BMSClient.REGION_UK 
+- BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY

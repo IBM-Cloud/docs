@@ -28,8 +28,8 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 
 	```
 	dependencies {
-	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+' 
-	  compile 'com.google.android.gms:play-services:7.8.0' 
+	  compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
+	  compile 'com.google.android.gms:play-services:7.8.0'
 	}  
 	```
 1. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
@@ -44,35 +44,35 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	```
- 
-	You can read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here. 
+
+	You can read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here.
 
 1. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
-	
+
 	```
 	<intent-filter>  
 		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
 		<category  android:name="android.intent.category.DEFAULT"/>
 	</intent-filter>
 	```
-	**Note**: Replace *Your_Android_Package_Name* in the action above with the application package name used in your application. 
+	**Note**: Replace *Your_Android_Package_Name* in the action above with the application package name used in your application.
 
 1. Add the Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE event notifications.
 
 	```
 	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-	
+
 	<receiver
 	    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-	    android:permission="com.google.android.c2dm.permission.SEND"> 
+	    android:permission="com.google.android.c2dm.permission.SEND">
 	    <intent-filter>
 	        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-	        
+
 	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
 	    </intent-filter>
 	    <intent-filter>
 	        <action android:name="android.intent.action.BOOT_COMPLETED" />
-	        
+
 	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
 	    </intent-filter>
 	</receiver>

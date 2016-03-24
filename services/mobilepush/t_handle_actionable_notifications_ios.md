@@ -24,12 +24,10 @@ When an actionable notification is received, the control is passed onto the foll
 ```
 
 ###Swift
- 
+
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
       //must call completion handler when finished
       completionHandler()
   }
 ```    
-    
-

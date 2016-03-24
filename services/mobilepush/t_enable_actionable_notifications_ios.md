@@ -13,7 +13,7 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 1. Create a user response action.
 
 	Objective-C
-	
+
 	```
 	// For Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
@@ -23,9 +23,9 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
 	  ```
-	  
+
 	Swift
-	
+
 	```
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
@@ -46,16 +46,16 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 2. Create the notification category and set an action. **UIUserNotificationActionContextDefault** or **UIUserNotificationActionContextMinimal** are valid contexts.
 
 	Objective-C
-	
+
 	```
 	// For Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
-	    
+
 	Swift
-	
+
 	```
 	// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
@@ -66,14 +66,14 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 1. Create the notification setting and assign the categories from the previous step.
 
 	Objective-C
-	
+
 	```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
-	
+
 	Swift
-	
+
 	```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
@@ -82,22 +82,22 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 1. Create the local or remote notification and assign it the identity of the category.
 
 	Objective-C
-	
+
 	```
 	//For Objective-C
-	
+
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-	
+
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
 
 	Swift
-	
+
 	```
 	//For Swift
 	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-	
+
 	application.registerUserNotificationSettings(notificationSettings)
 	application.registerForRemoteNotifications()
 	```

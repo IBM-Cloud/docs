@@ -157,7 +157,7 @@ Set up APNs on the Push dashboard.
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	The Push dashboard is displayed.
-	
+
 	![Set push notifications](images/wizard.jpg)
 1
 2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the p.12 certificate to Bluemix.
