@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Last Updated: 15 March 2016*  
+*Last Updated: 23 March 2016*  
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
 {: shortdesc} 
@@ -58,7 +58,7 @@ Desktop Sync has the following considerations:
 For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixlive.html#bl-commands). 
 
 <ol>
-<li>Sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services<a/> account.</li>
+<li>Sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> account.</li>
 <li>Download and install the {{site.data.keyword.Bluemix_notm}} Live Sync bl command line.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Download the Windows bl command line button" /> </a> 
@@ -270,7 +270,7 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 **Warning:** Providing your password as a command line option is discouraged as it is visible to others and recorded as a part of your command history.
 
-**Note:** You must sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services<a/> account before logging in.
+**Note:** You must sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> account before logging in.
 
 ### Options
 
