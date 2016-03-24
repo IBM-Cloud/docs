@@ -161,14 +161,8 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
-			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
 			}, {
 				"name": "Secure Gateway",
 				"href": "services/SecureGateway/secure_gateway.html"
@@ -282,7 +276,19 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "APIs",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
 		"id": "Resources",
 		"descriptionTitle": "Resources",
