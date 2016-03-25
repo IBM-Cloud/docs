@@ -114,6 +114,4 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 ## Service Deprecation
 
-## Service Deprecation
-
 IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service. 
