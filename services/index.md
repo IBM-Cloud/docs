@@ -111,3 +111,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
 *Table 2. Service availability*
+
+## Service Deprecation
+
+IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. For at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of the service.
