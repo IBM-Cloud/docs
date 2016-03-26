@@ -281,6 +281,9 @@
 			"img": "homepage/images/private-apis.svg",
 			"href": "services/apis.html",
 			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
 				"name": "API Management",
 				"href": "services/APIManagement/index.html"
 			}, {
