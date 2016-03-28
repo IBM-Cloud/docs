@@ -68,7 +68,7 @@ You can use the {{site.data.keyword.openwhisk_short}} CLI to download example co
 
 To install the starter app example, enter the following command:
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
 This will download a zip file containing the starter app.  Inside the project directory is a Podfile.  Run "pod install" from a terminal to install the SDK.
 {: pre}
