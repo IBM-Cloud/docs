@@ -18,7 +18,7 @@ copyright:
 
 # Using {{site.data.keyword.openwhisk_short}}-enabled services 
 {: #openwhisk_ecosystem}
-*Last updated: 22 February 2016*
+*Last updated: 28 March 2016*
 
 In {{site.data.keyword.openwhisk}}, a catalog of packages gives you an easy way to enhance your app with useful capabilities, and to access external services in the ecosystem. Examples of external services that are {{site.data.keyword.openwhisk_short}}-enabled include Cloudant, The Weather Company, Slack, and GitHub.
 {: shortdesc}
