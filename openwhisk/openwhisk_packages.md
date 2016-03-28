@@ -457,11 +457,11 @@ After the actions and feeds that comprise a package are debugged and tested, the
 1. Share the package with all users:
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package sample
+  ok: updated package custom
   ```
   {: screen}
 
