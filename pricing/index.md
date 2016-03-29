@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 4 January 2016*
+*Last updated: 29 March 2016*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage details view for you to check the actual cost after you build your apps.
 {:shortdesc}
@@ -113,7 +113,7 @@ When you sign up for a {{site.data.keyword.Bluemix_notm}} billable plan, you can
 
 With a Pay-As-You-Go account, you are charged based on your use of {{site.data.keyword.Bluemix_notm}} compute and services. With a Subscription account, you can get a monthly discount based on a minimum monthly spending commitment. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local are charged by annual contracts.
 
-You can convert your free trail into a billable account at any time. All of your free trial non-billable account information and {{site.data.keyword.Bluemix_notm}} solutions will be seamlessly merged into the new billable account.
+You can convert your free trial into a billable account at any time. All of your free trial non-billable account information and {{site.data.keyword.Bluemix_notm}} solutions will be seamlessly merged into the new billable account.
 
 After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon** in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface, then click **Account &gt; Account Type** to edit your information.
 
