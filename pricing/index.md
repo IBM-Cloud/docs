@@ -306,14 +306,13 @@ You can use different methods to know how much you need to pay for using {{site.
 * The cost calculator on the {{site.data.keyword.Bluemix_notm}} Pricing page provides accurate app prices based on your input of runtime and service usages.
 * You can also calculate your cost manually.
 
-###Using the cost calculator
+###Using the cost calculators
 {: #calculator}
 
-You can quickly price your app by using the cost calculator that is provided by {{site.data.keyword.Bluemix_notm}}.
+You can quickly price your app by using the cost calculators that are provided by {{site.data.keyword.Bluemix_notm}}.
 
-1. Go to the {{site.data.keyword.Bluemix_notm}} docs landing page by clicking **Docs** on the header. 
-2. Click **Pricing** at the bottom to go to the {{site.data.keyword.Bluemix_notm}} pricing page.
-3. Click **Open Calculator**.
+1. Go to the {{site.data.keyword.Bluemix_notm}} [pricing page](https://console.{DomainName}/pricing/). 
+2. Use one of the **Estimate Your Costs** widgets, or click **Open Calculator** to use the **Down to the penny pricing calculator**.
 
 To use the calculator, type your projected monthly usage of the listed resources; for example, number of instances or push notifications. Click inside the **Monthly Usage** field for hints about the units that are expected in the field. The calculator displays the price for your input immediately. You can also adjust the calculator to display yearly costs instead of monthly costs.
 
