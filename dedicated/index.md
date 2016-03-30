@@ -280,35 +280,28 @@ The final stage of completion represents the end of the relationship between you
 
 IBM maintains and installs updates and fixes as IBM deems appropriate to the {{site.data.keyword.Bluemix_notm}} Dedicated platform, runtimes, and services.
 
-**Important**: IBM reserves the right to interrupt services to apply emergency maintenance as needed. IBM might change scheduled maintenance hours, but will notify you of any such changes, as well as any emergency maintenance information.
-
 The following types of maintenance are required for {{site.data.keyword.Bluemix_notm}} Dedicated:
 <dl>
-<dt>**Standard Maintenance Windows**</dt>
+<dt>**Standard maintenance for services**</dt>
 <dd>The services utilize pre-defined, standard maintenance windows, which might cause the services to be unavailable. IBM does not require customer approval to perform maintenance, but attempts to minimize impact to your services.<br />
 <br />
 IBM sends broadcast messages of the changes that are planned for each maintenance window, through email, phone, or other methods.<br />
 <br />
 **Important**: Some service might not be available to you during the maintenance period.</dd>
 
-<dt>**Monthly Change Window**</dt>
+<dt>**Standard maintenance for {{site.data.keyword.Bluemix_notm}}**</dt>
 <dd>The monthly maintenance window is applied based on coordination between you and IBM within a 21-day window. You can provide IBM with specific dates or times within the 21-day window that might not work for you. IBM attempts to schedule updates around those times. Based on the requests, IBM communicates the scheduled maintenance window to you. Monthly change windows are not expected to impact the running Bluemix Dedicated environment.
 <p>The following image shows the process from receiving a notification about a pending update to setting dates that might not work for you, and then finally receiving the notification about the scheduled date:</p>
 <p><img src="../local/images/maintenance_dates.png" alt="Process for setting unavailable dates for a maintenance update"></p>
 <br />
-**Note**: If you do not need to set any unavailable dates for the update, then you can approve the update. IBM notifies you of the scheduled date for the maintenance to be applied.<br />
-<p>The following image shows the process from receiving a notification about a pending update, approving the update, and then receiving a scheduled date for the update:</p>
-<p><img src="../local/images/maintenance_nodates.png" alt="Process for approving the update without unavailable dates"></p>
+**Note**: If you do not need to set any unavailable dates for the update, then you can approve the update. IBM then notifies you of the scheduled date for the maintenance to be applied.<br />
 <br />
 Go to **ADMINISTRATION > SYSTEM INFORMATION** to view pending updates, set unavailable dates, and approve updates. For more information about notifications and scheduling pending updates, see <a href="../admin/index.html#oc_system">Viewing system information</a>.</dd>
-
-<dt>**Other**</dt>
-<dd>IBM intends to confine all maintenance that might affect your services, in particular the availability of your {{site.data.keyword.Bluemix_notm}} Dedicated environment, runtimes, and services, to the standard and monthly updates. Other change windows might be used on an exception basis for management of the environment. IBM will make reasonable efforts to minimize the impact to you during such change windows and will notify you in advance.</dd>
 </dl>
 
-To set up maintenance of your dedicated instance, work with your IBM designated account representative to identify an agreed up on window for the standard maintenance.
+**Important**: IBM reserves the right to interrupt services to apply emergency maintenance as needed. IBM might change scheduled maintenance hours, but will notify you of any such changes, as well as any emergency maintenance information.
 
-If there is a reported issue following a maintenance update, you agree with your IBM representative if it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
+To set up maintenance of your dedicated instance, work with your IBM designated account representative to identify an agreed up on window for the standard maintenance. If there is a reported issue following a maintenance update, you agree with your IBM representative if it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
 
 ## Incident response and support
 {: #incidentresponse}
@@ -319,7 +312,9 @@ If you identify an issue that needs attention from IBM support and operations, y
 
 ### IBM-detected critical incidents
 
-Critical incidents are urgent, unexpected service outages, and stability issues that affect your environment or your users. If IBM detects a critical incident within your environment, you are notified by a notification on the **Status** page. You can also check the Status page for any known issues for the platform or your services. If you want to integrate your notifications with a web service that supports web hooks, see [Notifications and event subscriptions](../admin/index.html#oc_eventsubscription) for information about how to extend your notification capabilities.
+Critical incidents are urgent, unexpected service outages, and stability issues that affect your environment or your users. If IBM detects a critical incident within your environment, you are notified by a notification on the **Status** page. You can also check the Status page for any known issues for the platform or your services. For more information about the Status page, see [Viewing status](../admin/index.html#oc_status).
+
+If you want to integrate your notifications with a web service that supports web hooks, see [Notifications and event subscriptions](../admin/index.html#oc_eventsubscription) for information about how to extend your notification capabilities.
 
 ![Incident response process](../local/images/incidentresponseprocess.png "Incident response process")
 
