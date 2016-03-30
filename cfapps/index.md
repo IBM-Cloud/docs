@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Creating Cloud Foundry apps
-*Last updated: 4 December 2015*
+*Last updated: 30 March 2016*
 
 With {{site.data.keyword.Bluemix}}, you can create your app in the {{site.data.keyword.Bluemix_notm}} user interface. After it's created, you can decide to continue to use the UI, use the cf command line interface, or use {{site.data.keyword.jazzhub_title}} to develop, track, plan, and deploy your app.
 {:shortdesc}
@@ -30,7 +30,7 @@ To get started creating your application, take the following steps:
   2. Click **CREATE AN APP**.
   3. Click **WEB** and follow the guided experience to choose a starter, specify a name, and select how you want to code.
   4. When you are finished with the guided experience, click **VIEW APP OVERVIEW**. The Overview for your app is displayed on the Dashboard.
-  5. You can add a service to your app by clicking **ADD A SERVICE OR API** on the app Overview in the Bluemix user interface. Or, you can use the cf command line interface. See Options for working with apps.
+  5. You can add a service to your app by clicking **ADD A SERVICE OR API** on the app Overview in the Bluemix user interface. Browse and select services from the catalog, or, scroll to the bottom of the catalog and click **{{site.data.keyword.Bluemix_notm}} Experimental Services** to browse experimental services. Or, you can use the cf command line interface. See Options for working with apps.
   6. On the app Overview, click Add Git to save your application source in a Git repository and create a Git hosted project. You can also deploy the application from {{site.data.keyword.jazzhub_title}}.
 
 **Note:** If a service that you bind to an app crashes, the app might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the app to recover from these problems. Consider coding your app to identify and recover from outages, exceptions, and connection failures. See the Apps are not automatically restarted troubleshooting topic for more information.
