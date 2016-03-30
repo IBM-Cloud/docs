@@ -63,7 +63,7 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.game}}			|No		|No		|Yes |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
-|{{site.data.keyword.globalizationshort}}	|Yes		| Yes		| Yes |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Yes		| Yes		| Yes |
 |{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
