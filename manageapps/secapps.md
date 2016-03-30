@@ -14,7 +14,7 @@ copyright:
 #Securing apps
 {: #securingapps}
 
-*Last updated: 17 March 2016*
+*Last updated: 30 March 2016*
 
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
@@ -90,7 +90,7 @@ To upload a certificate for your application:
 
 3. For your custom domain, click **Upload Certificate**.
 
-4. Browse to upload a certificate, private key, and optionally an intermediate certificate. You can also select the checkbox to enable request of a client certificate.
+4. Browse to upload a certificate, private key, and optionally an intermediate certificate. You can also select the checkbox to enable requests of a client certificate. If you enable the option to request a client certificate, you must upload a client certificate trust store file that defines the allowed user access to your custom domain.
 
   **Certificate**
     
@@ -121,8 +121,18 @@ To upload a certificate for your application:
   
   **Enable request of client certificate**
   
-    If you enable this option, a user who tries to access an SSL protected domain is requested to provide a client side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain.
+    If you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
   
   **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+
+  **Client certificate trust store**
+  
+  The client certificate trust store is a file that contains the client certificates for the users that you want to allow access to your application. If you enable the option to request a client certificate, upload a client certificate trust store file. 
+  
+   The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
+    
+      * PEM (pem, .crt, .cer, and .cert)
+	  * DER (.der or .cer )
+      * PKCS #7 (p7b, p7r, spc)
 
 To delete a certificate or replace an existing certificate with a new one, go to **Manage Organizations** > **Domains** > **View Certificate** to manage your certificates.
