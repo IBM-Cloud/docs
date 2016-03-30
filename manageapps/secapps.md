@@ -97,10 +97,10 @@ To upload a certificate for your application:
     A digital document that binds a public key to the identity of the certificate owner, thereby enabling the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
     
     The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
-    
-      * PEM (pem, .crt, .cer, and .cert)
-	  * DER (.der or .cer )
-      * PKCS #7 (p7b, p7r, spc)
+
+	* PEM (pem, .crt, .cer, and .cert)
+	* DER (.der or .cer )
+	* PKCS #7 (p7b, p7r, spc)
 	  
   **Private key**
   
