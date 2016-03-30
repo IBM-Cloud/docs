@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 7 March 2016*
+*Last updated: 30 March 2016*
 
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
@@ -24,12 +24,11 @@ copyright:
 
 All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the following benefits and features at no additional cost: VPN, private virtual local area network (VLAN), firewall, connectivity with your LDAP, ability to leverage existing on-premises databases and apps, 24/7 on-site security, dedicated hardware, and standard support.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the dedicated services that are available exclusively to you. It also includes additional services that are syndicated from and available for you to use from {{site.data.keyword.Bluemix_notm}} Public.
-
 {{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute resources memory.
 
 In addition, there is a set of services and components that are included or optional.
 
+*Table 1. Dedicated Services*
 
 | **Type**        | **Name**            | **Description** |      
 |-----------------|-------------------|-------------------|
@@ -42,7 +41,60 @@ In addition, there is a set of services and components that are included or opti
 |Optional | {{site.data.keyword.SecureGateway}} | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
 
-*Table 1. Dedicated Services*
+### Syndicated catalog
+{: #catalogdedicated}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the local services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
+
+The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your dedicated environment, you see specific icons attached to service tiles in your catalog, such as ![Dedicated service icon](images/dedicatedicon.png "Dedicated service icon").
+
+*Table 2. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
+
+|Service    |Available in US South region   |Available in Europe United Kingdom region |Available in Australian Sydney region|
+|:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
+|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
+|{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
+|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No |
+|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|No |
+|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.game}}			|No		|No		|Yes |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
+|{{site.data.keyword.globalizationshort}}	|Yes		| Yes		| Yes |
+|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
+|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.manda}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.mobilepush}}Push		|Yes		|Yes		|Yes |
+|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
+|{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.ssofull}}			|Yes		|No		|No|
+|{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
+|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
+|{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
 
 ## {{site.data.keyword.Bluemix_notm}} Dedicated architecture
 {: #dedicatedarch}
@@ -154,7 +206,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 - Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
 - Identify and assign roles for your administrative team.
 
-*Table 1. Inception phase tasks*
+*Table 3. Inception phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -189,7 +241,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 - Review maintenance and platform improvements.
 - Coordinate the activities for problem resolution and root cause analysis.
 
-*Table 2. Progression phase tasks*
+*Table 4. Progression phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -214,7 +266,7 @@ The final stage of completion represents the end of the relationship between you
 * Removing all network connections
 * Recycling infrastructure
 
-*Table 3. Completion phase tasks*
+*Table 5. Completion phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
