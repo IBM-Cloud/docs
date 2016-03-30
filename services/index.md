@@ -27,7 +27,9 @@ Multiple levels of support are provided for {{site.data.keyword.Bluemix_notm}} s
 |Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
 *Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
 
-{{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the bottom of the Catalog, and then click **{{site.data.keyword.Bluemix_notm}} Experimental Services**.
+##Experimental services
+
+{{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the bottom of the catalog, and then click **{{site.data.keyword.Bluemix_notm}} Experimental Services**.
 
 Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
 
@@ -112,6 +114,6 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
 *Table 2. Service availability*
 
-## Service Deprecation
+## Service deprecation
 
 IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service. 
