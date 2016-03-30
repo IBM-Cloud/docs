@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 18 March 2016*
+*Last updated: 30 March 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -23,8 +23,6 @@ copyright:
 IBM® uses cloud operations as a service to monitor and maintain your environment, so that you can focus on building apps and services that run on top of the environment. IBM also handles platform updates, so that you can focus on the business.
 
 {{site.data.keyword.Bluemix_notm}} Local environments have the same security standards as the public {{site.data.keyword.Bluemix_notm}} in terms of operational security. You provide the hardware and infrastructure, which gives you control over infrastructure and physical security. Developer access to the local {{site.data.keyword.Bluemix_notm}} is controlled by your LDAP policies, which can be configured by the {{site.data.keyword.Bluemix_notm}} team when they set up your environment. Within the local environment, using the Administration page, you can manage user roles and permissions.
-
-{{site.data.keyword.Bluemix_notm}} Local includes a private syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public. The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. You see specific icons attached to service tiles in your catalog if, for example, it is a private service.
 
 {{site.data.keyword.Bluemix_notm}} Local comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute memory.
 
@@ -38,6 +36,60 @@ In addition, there is a set of services and components that are available for {{
 |Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 
 *Table 1. Local Services*
+
+### Syndicated catalog
+
+{{site.data.keyword.Bluemix_notm}} Local includes a private syndicated catalog that displays the local services that are available exclusively to you. It also includes additional services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
+
+The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your local environment, you see specific icons attached to service tiles in your catalog, such as ![Local service icon](images/localicon.png "Dedicated service icon").
+
+*Table 2. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
+
+|Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
+|:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
+|{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
+|{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
+|{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No |
+|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|No |
+|{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.game}}			|No		|No		|Yes |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
+|{{site.data.keyword.globalizationshort}}	|Yes		| Yes		| Yes |
+|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
+|{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.manda}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.mql}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.mobilepush}}Push		|Yes		|Yes		|Yes |
+|{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
+|{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.ssofull}}			|Yes		|No		|No|
+|{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
+|{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.texttospeechshort}} 	|Yes 		|Yes	 	|Yes|
+|{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
 
 ## {{site.data.keyword.Bluemix_notm}} Local architecture
 {: #localarch}
@@ -189,7 +241,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 - Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
 - Identify and assign roles for your administrative team.
 
-*Table 1. Inception phase tasks*
+*Table 3. Inception phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -223,7 +275,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 - Review maintenance and platform improvements.
 - Coordinate the activities for problem resolution and root cause analysis.
 
-*Table 2. Progression phase tasks*
+*Table 4. Progression phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -247,7 +299,7 @@ The final stage of completion represents the end of the relationship between you
 * Removing all network connections
 * Recycling infrastructure
 
-*Table 3. Completion phase tasks*
+*Table 5. Completion phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
