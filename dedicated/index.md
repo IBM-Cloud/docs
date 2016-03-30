@@ -290,7 +290,7 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 **Important**: Some service might not be available to you during the maintenance period.</dd>
 
 <dt>**Standard maintenance for {{site.data.keyword.Bluemix_notm}}**</dt>
-<dd>The monthly maintenance window is applied based on coordination between you and IBM within a 21-day window. You can provide IBM with specific dates or times within the 21-day window that might not work for you. IBM attempts to schedule updates around those times. Based on the requests, IBM communicates the scheduled maintenance window to you. Monthly change windows are not expected to impact the running Bluemix Dedicated environment.
+<dd>Maintenance updates are applied based on coordination between you and IBM within a 21-day window. You can provide IBM with specific dates or times within the 21-day window that might not work for you. IBM attempts to schedule updates around those times. Based on the requests, IBM communicates the scheduled maintenance window to you. Monthly change windows are not expected to impact the running Bluemix Dedicated environment.
 <p>The following image shows the process from receiving a notification about a pending update to setting dates that might not work for you, and then finally receiving the notification about the scheduled date:</p>
 <p><img src="../local/images/maintenance_dates.png" alt="Process for setting unavailable dates for a maintenance update"></p>
 <br />
