@@ -7,7 +7,6 @@
 
 **Note:** Provider side encryption is not provided. It is the responsibility of the client application to encrypt data before uploading.
 
-**Note:** The {{site.data.keyword.objectstorageshort}} Service Beta plan has been removed from the catalog after the General Availability of the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} Service. After a grace period, service instances that use the Beta plan will be removed. [Update your pricing plan](objectstorage_faq.html#changeplan) to continue using the {{site.data.keyword.objectstorageshort}} service. 
 
 
 
