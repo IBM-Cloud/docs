@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 31 March 2016*
+*Last updated: 1 April 2016*
 
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
@@ -26,7 +26,7 @@ All dedicated deployments of {{site.data.keyword.Bluemix_notm}} include the foll
 
 {{site.data.keyword.Bluemix_notm}} Dedicated comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute resources memory.
 
-In addition, there is a set of services and components that are included or optional.
+In addition, there is a set of services that are available as {{site.data.keyword.Bluemix_notm}} Dedicated services. Review the following table to see what is included and what is available for you to purchase.
 
 *Table 1. Dedicated Services*
 
@@ -42,6 +42,30 @@ In addition, there is a set of services and components that are included or opti
 |Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
 | Optional | {{site.data.keyword.iot_short}} | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
 
+There are optional components that are available for you to purchase to scale and extend the capacity of your resources and services. You can purchase any of these components by contacting the sales team; go to [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for information about contacting a sales representative. To increase your plan for a service, you can select the plan from the service tile in your catalog.
+
+*Table 2. Optional components for purchase*
+
+| **Name**            | **Description** |      
+|-------------------|-------------------|
+|Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Includes running a private version of the {{site.data.keyword.cloudantfull}} within the dedicated environment with a design capacity of 1.6 terabytes.  |
+|Dedicated runtimes 16 GB capacity increase  | An extension of the runtimes environment to provide an additional 16 GB of runtime capacity. |
+|Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | An environment that permits deploying and running {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} instances up to a cumulative capacity of 50 GB. |
+|Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate Softlayer network point of presence designed for data transfers of up to 1 Gbps. |
+|Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate Softlayer network point of presence designed for data transfers of up to 10 Gbps. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | One database per service instance on a dedicated server with 64 GB RAM, 16 vCPUs. Recommended for up to 1 TB of pre-load data, based on typical compression.  |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | One database per service instance on a dedicated bare metal server with 256GB RAM, 32 cores. Recommended for up to 4 TB of pre-load data, based on typical compression. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | One database per service instance on a dedicated bare metal server with 256GB RAM, 32 Cores. Recommended for up to 12 TB of pre-load data, based on typical compression. This is a storage dense plan suitable for environments where data volumes are higher and queries do not need to run at in-memory speeds. |
+|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | An environment that permits running a private version of {{site.data.keyword.APIM}} within the dedicated environment with a capacity of 1,000 API calls per second. |
+|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | An environment that permits execution of a private version of IBM API Management for Bluemix within the dedicated environment with a capacity of 500 API calls per second.  |
+|{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
+|IBM Bluemix Dedicated Hardware Firewall - High Availability | A redundant 1 gigabit per second hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
+|Dedicated 1 Gbps Vyatta VPN configured for high availability  | A 1 Gbps Vyatta VPN configured for high availability for use by the dedicated environment. |
+|IBM Dedicated {{site.data.keyword.mql}} PR 30 capacity increase | An environment that permits deploying and running {{site.data.keyword.mql}} instances up to a total capacity of 30 service instances. |
+|Dedicated {{site.data.keyword.mobilepushshort}} services 12 GB capacity increase | An environment that permits deploying and running the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}} service involving Liberty and Node.js runtimes within the dedicated environment. The {{site.data.keyword.mobilepushshort}} service has a prerequisite dependency on {{site.data.keyword.cloudant}} with a design capacity of at least 500 GB. |
+|{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
+
+
 ### Syndicated catalog
 {: #catalogdedicated}
 
@@ -49,7 +73,7 @@ In addition, there is a set of services and components that are included or opti
 
 The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your dedicated environment, you see specific icons attached to service tiles in your catalog, such as ![Dedicated service icon](images/dedicatedicon.png "Dedicated service icon").
 
-*Table 2. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
+*Table 3. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
 
 |Service    |Available in US South region   |Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -207,7 +231,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 - Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
 - Identify and assign roles for your administrative team.
 
-*Table 3. Inception phase tasks*
+*Table 4. Inception phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -242,7 +266,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 - Review maintenance and platform improvements.
 - Coordinate the activities for problem resolution and root cause analysis.
 
-*Table 4. Progression phase tasks*
+*Table 5. Progression phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -267,7 +291,7 @@ The final stage of completion represents the end of the relationship between you
 * Removing all network connections
 * Recycling infrastructure
 
-*Table 5. Completion phase tasks*
+*Table 6. Completion phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
