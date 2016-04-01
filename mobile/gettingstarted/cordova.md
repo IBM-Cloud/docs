@@ -1,9 +1,15 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
 # Getting started with the HelloWorld sample
 {: #gettingstarted-cordova}
-*Last Updated: 2 March 2016*
+*Last Updated: 17 March 2016*
 
 If you want to get started with a new Cordova application, you can use the HelloWorld app. This app demonstrates how to connect to your mobile backend on {{site.data.keyword.Bluemix}} from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
 
@@ -21,13 +27,13 @@ If you want to get started with a new Cordova application, you can use the Hello
 
 3. Run the following commands from your project directory to add the Android and iOS platform environments:
 
-	Android:
+	### Android
 
 	```Bash
 	cordova platform add android
 	```
 
-	iOS:
+	### iOS
 
 	```Bash
 	cordova platform add ios
@@ -39,45 +45,10 @@ If you want to get started with a new Cordova application, you can use the Hello
 	cordova plugin add ibm-mfp-core
 	```
 
-5. Configure your Cordova app for Android, iOS or both.
+5. Configure the HelloWorld sample.
 
-	* **Android**
-
-		Before opening your project in Android Studio, build and run your Cordova application through your command-line interface (CLI) to avoid build errors.
-
-		```Bash
-		cordova build android
-		```
-
-		```Bash
-		cordova run android
-		```
-
-	* **iOS**
-
-		Configure your Xcode project as follows, to avoid build errors.
-
-		- Use the most recent version of Xcode to open your `xcode.proj` file in the *&lt;app_name&gt;*/platforms/ios directory.
-
-			**Important:** If you receive a message to "Convert to Latest Swift Syntax", click **Cancel**.
-
-		- Go to **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** and add the following path:
-
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
-
-		- Go to **Build settings > Linking > Runpath Search Paths** and add the following Frameworks parameter:
-
-			```
-			@executable_path/Frameworks
-			```
-
-		- Build and run your application with Xcode.		
-6. Configure the HelloWorld sample.
-
-	- Change to the directory where you cloned the project.
-	- Open the *&lt;your_app_dir&gt;*/www/js/index.js file and replace the *&lt;APPLICATION_ROUTE&gt;* and *&lt;APPLICATION_ID&gt;* with your Bluemix application ID and route values.
+	* Change to the directory where you cloned the project.
+	* Open the *&lt;your_app_dir&gt;*/www/js/index.js file and replace the *&lt;APPLICATION_ROUTE&gt;* and *&lt;APPLICATION_ID&gt;* with your Bluemix application ID and route values.
 
 		**Note:** Make sure that your route is securely using the https protocol.
 
@@ -87,27 +58,46 @@ If you want to get started with a new Cordova application, you can use the Hello
 		GUID: "<APPLICATION_GUID>",
 		```
 
-7. Run the sample on your mobile emulator or device.
+6. Configure your Cordova app for iOS. The Android platform does not require additional configuration.
 
-	Build the Cordova app using the following commands:
+	### iOS
+  Configure your Xcode project as follows, to avoid build errors.
+
+	1. Use the most recent version of Xcode to open your `xcode.proj` file in the *&lt;app_name&gt;*/platforms/ios directory.
+
+		**Important:** If you receive a message to "Convert to Latest Swift Syntax", click **Cancel**.
+
+	2. Go to **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** and add the following path:
+
+		```
+		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
+		```
+
+	3. Go to **Build settings > Linking > Runpath Search Paths** and add the following Frameworks parameter:
+
+		```
+		@executable_path/Frameworks
+		```
+
+7. Build and run the sample on your mobile emulator or device.
+
+  ### Android
+	1. Build the Cordova app using the following command:
+
+    **Important:** Before opening your project in Android Studio, you must first build your Cordova application through the Cordova commmand-line interface (CLI). Otherwise, you will encounter build errors.
 
 	```Bash
 	cordova build android
 	```
 
-	```Bash
-	cordova build ios
-	```
+	2. Run the sample app in Android Studio.
 
-	Run the sample app using the following commands:
+  ### iOS
+  1. Build the Cordova app in Xcode.
 
-	```Bash
-	cordova run android
-	```
+    **Tip:** Building in Xcode offers more options, such as debugging and project configuration.
 
-	```Bash
-	cordova run ios
-	```
+  2. Run the sample app in Xcode.
 
 A single view application with a **PING BLUEMIX** button displays. When you tap the button, the application tests the connection from the client to the backend {{site.data.keyword.Bluemix_notm}} application. The connection is tested by using the application route that you specified in the `index.js` file.
 
@@ -129,8 +119,8 @@ If the connection fails, an error message displays. More information about the e
 ## Next steps:
 {: #next}
 For information about how to get the SDK and integrate it into your mobile app, see:
-* [Mobile Client Access: Setting up the Cordova plug-in](../services/mobileaccess/getting-started-cordova.html)
-* [Push Notifications: Setting up the Cordova plug-in](../mobilepush/enablepush_cordova.html#setup_sdk_cordova)
+* [Mobile Client Access: Setting up the Cordova plug-in](../../services/mobileaccess/getting-started-cordova.html)
+* [Push Notifications: Setting up the Cordova plug-in](../../services/mobilepush/enablepush_cordova.html#setup_sdk_cordova)
 
 # rellinks
 
