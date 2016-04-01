@@ -26,7 +26,9 @@ IBM® uses cloud operations as a service to monitor and maintain your environmen
 
 {{site.data.keyword.Bluemix_notm}} Local comes with all included {{site.data.keyword.Bluemix_notm}} runtimes and 64 GB of compute memory.
 
-In addition, there is a set of services and components that are available for {{site.data.keyword.Bluemix_notm}} Local. Review the following table to see what is included and what is available for you to purchase optionally.
+In addition, there is a set of services that are available as {{site.data.keyword.Bluemix_notm}} Local services. Review the following table to see what is included and what is available for you to purchase.
+
+*Table 1. Local services and runtimes*
 
 | **Type** | **Name** | **Description** |
 |----------|----------|-----------------|
@@ -36,7 +38,17 @@ In addition, there is a set of services and components that are available for {{
 |Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 |Optional | {{site.data.keyword.iot_short}} | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The local base offering includes an initial environment that permits running a private version of the IBM {{site.data.keyword.iot_short}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
 
-*Table 1. Local Services*
+There are optional components that are available for you to purchase to scale and extend the capacity of your resources and services. You can purchase any of these components by contacting the sales team; go to [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for information about contacting a sales representative. To increase your plan for a service, you can select the plan from the service tile in your catalog.
+
+*Table 2. Optional components for purchase*
+
+| **Name** | **Description** |
+|----------|-----------------|
+|IBM {{site.data.keyword.Bluemix_notm}} Local access one-time set up | A one-time set up charge for deploying and configuring the local environment. |
+|IBM {{site.data.keyword.Bluemix_notm}} Local compute 16 GB capacity increase | An extension of the IBM {{site.data.keyword.Bluemix_notm}} Local compute environment to provide an additional 16 GB of memory capacity. |
+|IBM {{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | An environment that permits deploying and running Data Cache and Session Cache instances up to a cumulative capacity of 50 GB. |
+|IBM {{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | An environment that permits running a private version of {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} with a capacity of 500 API calls per second. |
+|IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | An environment additional to the {{site.data.keyword.iot_short}} Local base service offering that permits running a private version of the {{site.data.keyword.iot_short}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
 
 ### Syndicated catalog
 
@@ -44,7 +56,7 @@ In addition, there is a set of services and components that are available for {{
 
 The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your local environment, you see specific icons attached to service tiles in your catalog, such as ![Local service icon](images/localicon.png "Dedicated service icon").
 
-*Table 2. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
+*Table 3. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -242,7 +254,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 - Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
 - Identify and assign roles for your administrative team.
 
-*Table 3. Inception phase tasks*
+*Table 4. Inception phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -276,7 +288,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 - Review maintenance and platform improvements.
 - Coordinate the activities for problem resolution and root cause analysis.
 
-*Table 4. Progression phase tasks*
+*Table 5. Progression phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -300,7 +312,7 @@ The final stage of completion represents the end of the relationship between you
 * Removing all network connections
 * Recycling infrastructure
 
-*Table 5. Completion phase tasks*
+*Table 6. Completion phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
