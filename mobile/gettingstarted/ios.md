@@ -76,4 +76,4 @@ For information about how to get the SDK and integrate it into your mobile app, 
 
 ## api
    *
-[Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
