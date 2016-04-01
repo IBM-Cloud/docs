@@ -17,7 +17,7 @@ The Core SDK includes APIs for enabling custom authentication, monitoring, and l
 ### Android
 {: #coresdk-android}
 [Github repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 
 #### Install the Core SDK with Gradle
 {: #coresdk-android-gradle}
@@ -34,7 +34,7 @@ The Core SDK includes APIs for enabling custom authentication, monitoring, and l
 {: #coresdk-ios}
 
 [Github repo](#),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 
 #### Install the Core SDK with CocoaPods
 {: #coresdk-ios-cocoapods}
@@ -62,7 +62,7 @@ cordova plugin add ibm-mfp-core
 {: #facebooksdk-android}
 
 [Github repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
 
 #### Install the Facebook SDK with Gradle
 {: #facebooksdk-android-gradle}
@@ -79,7 +79,7 @@ cordova plugin add ibm-mfp-core
 {: #facebooksdk-ios}
 
 [Github repo (coming soon)](#),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
 #### Install the Facebook SDK with CocoaPods
 {: #facebooksdk-ios-cocoapods}
@@ -107,7 +107,7 @@ cordova plugin add ibm-mfp-core
 {: #googlesdk-android}
 
 [Github repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
 
 #### Install the Google+ SDK with Gradle
 {: #googlesdk-android-gradle}
@@ -124,7 +124,7 @@ cordova plugin add ibm-mfp-core
 {: #googlesdk-ios}
 
 [Github repo (coming soon)](#),
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
 
 #### Install the Google+ SDK with CocoaPods
 {: #googlesdk-ios-cocoapods}
@@ -183,7 +183,7 @@ npm install -save bms-mca-oauth-sdk
 ## IMFURLProtocol
 {: #IMFURLProtocol}
 
-[API reference](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
+[API reference](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
 
 #### Install the IMFURLProtocol with CocoaPods
 {: #IMFURLProtocol-cocoapods}

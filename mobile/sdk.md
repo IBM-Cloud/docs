@@ -1,6 +1,6 @@
 # SDKs, samples, and API reference
 {: #sdk}
-*Last Updated: 28 January 2016* 
+*Last Updated: 28 January 2016*
 
 To add Bluemix Mobile Services SDKs to your app, choose the SDKs that you want to use and then configure your dependency manager to pull the SDKs into your app.
 
@@ -27,11 +27,11 @@ To add Bluemix Mobile Services SDKs to your app, choose the SDKs that you want t
 </ul>
 <ul>
 <li><strong>API references:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Facebook authentication</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Google authentication </a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push REST API</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Facebook authentication</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Google authentication </a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push REST API</a></li>
 </ul>
 </td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
@@ -77,12 +77,12 @@ SDK</a></p> --->
 DevOps</a></p>
 <ul>
 <li><strong>API references:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Facebook authentication</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Google authentication </a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push REST API</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Facebook authentication</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Google authentication </a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Opens in a new tab or window)" target="_blank">Push REST API</a></li>
 </ul>
 </td>
 </tr>
