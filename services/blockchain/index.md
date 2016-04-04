@@ -38,6 +38,7 @@ As the shared ledger concept gains traction in the business world, IBM and its p
 # rellinks
 ## samples 
 * [Marbles Demo (Github)](https://github.com/IBM-Blockchain/marbles)
+* [Commercial Paper Demo (Github)](https://github.com/IBM-Blockchain/cp-web)
 
 ## api 
 * [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
