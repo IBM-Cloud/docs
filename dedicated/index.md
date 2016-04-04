@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 1 April 2016*
+*Last updated: 4 April 2016*
 
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
@@ -64,6 +64,8 @@ There are optional components that are available for you to purchase to scale an
 |IBM Dedicated {{site.data.keyword.mql}} PR 30 capacity increase | An environment that permits deploying and running {{site.data.keyword.mql}} instances up to a total capacity of 30 service instances. |
 |Dedicated {{site.data.keyword.mobilepushshort}} services 12 GB capacity increase | An environment that permits deploying and running the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}} service involving Liberty and Node.js runtimes within the dedicated environment. The {{site.data.keyword.mobilepushshort}} service has a prerequisite dependency on {{site.data.keyword.cloudant}} with a design capacity of at least 500 GB. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
+
+**Note**: {{site.data.keyword.Bluemix_notm}} Dedicated components may indicate a specific configured capacity, such as gigabytes or transactions per second. Since actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice may be more or less than the configured capacity.
 
 
 ### Syndicated catalog
