@@ -50,7 +50,7 @@ There are optional components that are available for you to purchase to scale an
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | An environment that permits running a private version of {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} with a capacity of 500 API calls per second. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | An environment additional to the {{site.data.keyword.iot_short}} Local base service offering that permits running a private version of the {{site.data.keyword.iot_short}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
 
-**Note**: {{site.data.keyword.Bluemix_notm}} Local components may indicate a specific configured capacity, such as gigabytes or transactions per second. Since actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice may be more or less than the configured capacity.
+**Note**: {{site.data.keyword.Bluemix_notm}} Local components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
 
 ### Syndicated catalog
 
