@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
