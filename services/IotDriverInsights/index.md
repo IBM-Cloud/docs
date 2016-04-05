@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotdriverinsights_full}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 18 March 2016*
+*Last updated: 4 April 2016*
 
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on driver's behavior from car probe data and contextual data.
 {:shortdesc}
@@ -42,7 +42,7 @@ To get up and running quickly with this service, follow these steps:
 		- Selected plan - Select **Free** or **purchase plan** that is suitable for your needs.  
 		> **Important:** With the free {{site.data.keyword.iotdriverinsights_short}} plan, total upload size of Vehicle Probe Data is limited to 200 MB.
 	4. Click **Use** to deploy **{{site.data.keyword.iotdriverinsights_full}}** to your Bluemix services.
-2. For more detail for how to run and configure the service, refer to [Administering](iotdriverinsights_admin.html) section and [API Documentation](https://new-console.ng.bluemix.net/apidocs/121){:new_window}.
+2. For more detail for how to run and configure the service, refer to [Administering](iotdriverinsights_admin.html) section and [API Documentation](https://new-console.ng.bluemix.net/apidocs/165){:new_window}.
 
 
 
@@ -52,7 +52,7 @@ To get up and running quickly with this service, follow these steps:
 
 ## API Reference
 {: #api}
-* [API Documentation](https://new-console.ng.bluemix.net/apidocs/121){:new_window}
+* [API Documentation](https://new-console.ng.bluemix.net/apidocs/165){:new_window}
 
 ## Related Links
 {: #general}
