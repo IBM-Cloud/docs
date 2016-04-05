@@ -71,6 +71,7 @@ The following table describes context parameters:
 
 |Category|Parameter Name|Description|Default Value|
 |:-------:|:--------:|:--------|:-------:|
+|Analysis Time Zone|\-|Applied timezone for analysis |+00:00|
 |Time Range|\-|This value defines time period type.|\-|
 |Time Range|Day Time|Time range of day time|1030 \- 1730|
 |Time Range|Night Time|Time range of night time|2030 \- 0700|
