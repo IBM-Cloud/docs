@@ -14,7 +14,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_full}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 18 March 2016*
+*Last updated: 4 April 2016*
 
 ## Overview
 
@@ -92,7 +92,7 @@ Map data [(C) OpenStreetMap contributors](http://www.openstreetmap.org/){:new_wi
 
 ## API Reference
 {: #api}
-* [REST API Documentation](https://new-console.ng.bluemix.net/apidocs/123){:new_window}
+* [REST API Documentation](https://new-console.ng.bluemix.net/apidocs/163){:new_window}
 
 ## Related Links
 {: #general}
