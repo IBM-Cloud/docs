@@ -166,7 +166,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 
 
-1. Register Google Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code right after where you initialized the IMFClient:
+1. Register Google Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code immediately after you initialize the IMFClient:
 
 	Objective-C:
 
