@@ -1487,7 +1487,7 @@ bluemix region-set us-south
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the <a href="https://docs.docker.com/reference/commandline/attach/" target="_blank">attach</a> command in the Docker help. 
+Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} command in the Docker help. 
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -1514,7 +1514,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the <a href="https://docs.docker.com/reference/commandline/build/" target="_blank">build</a> command in the Docker help. 
+Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the [build](https://docs.docker.com/reference/commandline/build/){: new_window} command in the Docker help. 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -1545,7 +1545,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ## bluemix ic create
 {: #bluemix_ic_create}
 
-Create a new container in your {{site.data.keyword.Bluemix_notm}} repository. This command wraps the `docker create` command. For more information, see the <a href="https://docs.docker.com/reference/commandline/create/" target="_blank">create</a> command in the Docker help.
+Create a new container in your {{site.data.keyword.Bluemix_notm}} repository. This command wraps the `docker create` command. For more information, see the [create](https://docs.docker.com/reference/commandline/create/){: new_window} command in the Docker help.
 
 
 ## bluemix ic cpi
@@ -1584,7 +1584,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 {: #bluemix_ic_exec}
 
 
-Execute a command within a container. For more information, see the <a href="https://docs.docker.com/reference/commandline/exec/" target="_blank">exec</a> command in the Docker help.
+Execute a command within a container. For more information, see the [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} command in the Docker help.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -1696,8 +1696,8 @@ bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e
 
 |  Environment variable                              |     Description                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance. For more information about creating a bridge app, see <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">Binding a service to a container</a>. |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Add an SSH key to a container when you create the container. You can add the SSH key by using the environment variable when you create the container from the {{site.data.keyword.Bluemix_notm}} dashboard or from the CLI. For more information about SSH keys, see <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">Logging in to a container</a>. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance. For more information about creating a bridge app, see [Binding a service to a container](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Add an SSH key to a container when you create the container. You can add the SSH key by using the environment variable when you create the container from the {{site.data.keyword.Bluemix_notm}} dashboard or from the CLI. For more information about SSH keys, see [Logging in to a container](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
 *Table 1. Commonly used environment variables*
 
@@ -1832,7 +1832,7 @@ bluemix ic group-remove my_group
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the <a href="https://docs.docker.com/reference/commandline/images" target="_blank">images</a> command in the Docker help. The list includes the image ID, the created date, and the image name.
+View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the [images](https://docs.docker.com/reference/commandline/images){: new_window} command in the Docker help. The list includes the image ID, the created date, and the image name.
 
 ```
 bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
@@ -1859,7 +1859,7 @@ bluemix ic images
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-View the information about a container. For more information, see the <a href="https://docs.docker.com/reference/commandline/inspect" target="_blank">inspect</a> command in the Docker help.
+View the information about a container. For more information, see the [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} command in the Docker help.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2002,7 +2002,7 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Stop a running process in a container without stopping the container. For more information, see the <a href="https://docs.docker.com/reference/commandline/kill/" target="_blank">kill</a> command in the Docker help.
+Stop a running process in a container without stopping the container. For more information, see the [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} command in the Docker help.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2057,7 +2057,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-Pause all processes within a running container. For more information, see the <a href="https://docs.docker.com/reference/commandline/pause/" target="_blank">pause</a> command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
+Pause all processes within a running container. For more information, see the [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
 
 ```
 bluemix ic pause CONTAINER
@@ -2092,7 +2092,7 @@ bluemix ic pause proxy
 ## bluemix ic unpause
 {: #unpause}
 
-Unpause all processes within a running container. For more information, see the <a href="https://docs.docker.com/reference/commandline/unpause/" target="_blank">unpause</a> command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
+Unpause all processes within a running container. For more information, see the [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
 
 ```
 bluemix ic unpause CONTAINER
@@ -2127,12 +2127,12 @@ bluemix ic unpause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the <a href="https://docs.docker.com/reference/commandline/port/" target="_blank">port</a> command in the Docker help.
+List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the [port](https://docs.docker.com/reference/commandline/port/){: new_window} command in the Docker help.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-View a list of containers that are running in the logged-in user's namespace. By default, this command shows only containers that are running. For more information, see the <a href="https://docs.docker.com/reference/commandline/ps/" target="_blank">ps</a> command in the Docker help.
+View a list of containers that are running in the logged-in user's namespace. By default, this command shows only containers that are running. For more information, see the [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} command in the Docker help.
 
 ```
 bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -2163,7 +2163,7 @@ bluemix ic ps -a
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-Restart a container. For more information, see the <a href="https://docs.docker.com/reference/commandline/restart/" target="_blank">restart</a> command in the Docker help.
+Restart a container. For more information, see the [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} command in the Docker help.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2200,7 +2200,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Remove a container. For more information, see the <a href="https://docs.docker.com/reference/commandline/rm/" target="_blank">rm</a> command in the Docker help.
+Remove a container. For more information, see the [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} command in the Docker help.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2237,7 +2237,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Remove an image from the logged-in user's namespace. For more information, see the <a href="https://docs.docker.com/reference/commandline/rmi/" target="_blank">rmi</a> command in the Docker help.
+Remove an image from the logged-in user's namespace. For more information, see the [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} command in the Docker help.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2278,7 +2278,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-Start a new container in the container cloud service from an image name. For more information, see the <a href="https://docs.docker.com/reference/commandline/run/" target="_blank">run</a> command in the Docker help.
+Start a new container in the container cloud service from an image name. For more information, see the [run](https://docs.docker.com/reference/commandline/run/){: new_window} command in the Docker help.
 
 
 
@@ -2313,8 +2313,8 @@ When you specify a port, you are making the app available to the {{site.data.key
 
 |      Environment variable                          |   Description                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">Binding a service to a container</a>. |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Add an SSH key to a container when you create the container. You can add the SSH key by using the environment variable when you create a container from the {{site.data.keyword.Bluemix_notm}} dashboard or from the CLI. For more information about SSH keys, see <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">Logging in to a container</a>. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see [Binding a service to a container](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Add an SSH key to a container when you create the container. You can add the SSH key by using the environment variable when you create a container from the {{site.data.keyword.Bluemix_notm}} dashboard or from the CLI. For more information about SSH keys, see [Logging in to a container](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
 *Table 2. Commonly used environment variables*
 
@@ -2422,7 +2422,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 
 ## bluemix ic start
 {: #ic_start}
-Start a stopped container. For more information, see the <a href="https://docs.docker.com/reference/commandline/start/" target="_blank">start</a> command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
+Start a stopped container. For more information, see the [start](https://docs.docker.com/reference/commandline/start/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
 
 ```
 bluemix ic start CONTAINER
@@ -2456,7 +2456,7 @@ bluemix ic start proxy
 
 ## bluemix ic stop  
 {: #ic_stop}
-Stop a running container. For more information, see the <a href="https://docs.docker.com/reference/commandline/stop/" target="_blank">stop</a> command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
+Stop a running container. For more information, see the [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -2493,7 +2493,7 @@ bluemix ic stop proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the <a href="https://docs.docker.com/reference/commandline/stats/" target="_blank">stats</a> command in the Docker help.
+For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} command in the Docker help.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -2518,7 +2518,7 @@ bluemix ic stats --no-stream my_container
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Show the processes that are running in the container. For more information, see the <a href="https://docs.docker.com/reference/commandline/top/" target="_blank">top</a> command in the Docker help.
+Show the processes that are running in the container. For more information, see the [top](https://docs.docker.com/reference/commandline/top/){: new_window} command in the Docker help.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -2622,7 +2622,7 @@ bluemix ic volume-remove volume_name
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-Exit a container and display the exit code as confirmation. For more information, see the <a href="https://docs.docker.com/reference/commandline/wait/" target="_blank">wait</a> command in the Docker help.
+Exit a container and display the exit code as confirmation. For more information, see the [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} command in the Docker help.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -2653,4 +2653,4 @@ bluemix ic version
 
 **Prerequisites**:  Docker
 
-To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the <a href="https://docs.docker.com/reference/commandline/version/" target="_blank">version</a> command in the Docker help.
+To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the [version](https://docs.docker.com/reference/commandline/version/){: new_window} command in the Docker help.
