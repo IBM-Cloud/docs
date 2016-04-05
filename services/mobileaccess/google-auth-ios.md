@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Enabling Google authentication in iOS apps
@@ -74,7 +74,7 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 ### Configuring iOS project for Google Authentication
 {: #google-auth-ios-googleauth}
-Configure Google integration by updating the `info.plist` file. The `info.plist` file is usually in the `Supporting files` folder in your Xcode project. You can either edit the file in the properly list editor or with a text editor.
+Configure Google integration by updating the `info.plist` file. The `info.plist` file is usually in the `Supporting files` folder in your Xcode project. You can either edit the file in the property list editor or with a text editor.
 
 * Configure Google integration by adding the following URL schemas to your `info.plist` file.
 	![info.plist file](images/ios-google-infoplist-settings.png)
