@@ -18,7 +18,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 18 February 2016*
+*Last updated: 5 April 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
@@ -107,11 +107,11 @@ update notifications that require action on your part. To take action for a spec
 updates.</li>
 <li>Select an update to take action or view the details of the update, which include the update
 window, scheduled date, or disruption status.</li>
-<li>Click <strong>SET UNAVAILABLE DATES</strong> to set specific days in the update window
+<li>Click <strong>SELECT UNAVAILABLE DATES</strong> to set specific days in the update window
 that are not convenient for the update to be applied. If you set unavailable dates, IBM approves and
 schedules your update based on your selections. You receive a notification when the update is
 approved and scheduled.</li>
-<li>Click <strong>APPROVE</strong> to approve the update, if you do not have any unavailable
+<li>Click <strong>APPROVE UPDATE</strong> to approve the update, if you do not have any unavailable
 dates. If you approve, the update is applied during the scheduled update window. IBM sends a
 notification when the update deployment starts and ends.</li>
 </ol>
