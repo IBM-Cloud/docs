@@ -35,18 +35,20 @@ As the shared ledger concept gains traction in the business world, IBM and its p
 <!-- Use ordered list markup for the step section. Include examples as needed. -->
 
 
-# rellinks
+ rellinks
 ## samples 
-* [Marbles Demo (Github)](https://github.com/IBM-Blockchain/marbles)
+* [IBM Marbles Demo (GitHub)](https://github.com/IBM-Blockchain/marbles)
+* [IBM Commercial Paper Demo (GitHub)](https://github.com/IBM-Blockchain/cp-web#readme)
 
 ## api 
 * [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
-* [OBC API (Github)](https://github.com/openblockchain/obc-docs/blob/master/api/Openchain%20API.md)
-* [OBC JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
+* [Hyperledger API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
+* [IBM JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 
 ## general 
-* [OBC Fabric Code](https://github.com/openblockchain/)
-* [OBC Whitepaper, Protocol Spec & Related Docs](https://github.com/openblockchain/obc-docs)
+* [Hyperledger Fabric Code](https://github.com/hyperledger/fabric)
+* [Hyperledger Whitepaper](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
+* [Hyperledger Protocol Spec & Related Docs](https://github.com/hyperledger/fabric/tree/master/docs)
 * [Linux Foundation: Hyperledger Project](https://www.hyperledger.org/)
 
 <!-- 
