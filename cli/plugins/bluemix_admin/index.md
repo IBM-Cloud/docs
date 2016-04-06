@@ -491,7 +491,7 @@ one organization by entering additional organization names or GUIDs in the comma
 
 Use the following commands to list all service brokers, add or delete a service broker, or to update a service broker.
 
-* You can list all service brokers by
+* You can list a service brokers by
 entering the following command:
 
 ```
