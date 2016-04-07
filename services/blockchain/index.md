@@ -46,10 +46,10 @@ As the shared ledger concept gains traction in the business world, IBM and its p
 * [IBM JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 
 ## general 
-* [Hyperledger Fabric Code](https://github.com/hyperledger/fabric)
-* [Hyperledger Whitepaper](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
-* [Hyperledger Protocol Spec & Related Docs](https://github.com/hyperledger/fabric/tree/master/docs)
-* [Linux Foundation: Hyperledger Project](https://www.hyperledger.org/)
+* [Fabric Code](https://github.com/hyperledger/fabric)
+* [Whitepaper](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
+* [Protocol Spec & Related Docs](https://github.com/hyperledger/fabric/tree/master/docs)
+* [Linux Foundation](https://www.hyperledger.org/)
 
 <!-- 
 [Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/) 
