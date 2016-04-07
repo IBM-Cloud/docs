@@ -20,7 +20,7 @@ With the Push REST API, backend server applications and clients can access Push 
 
 To obtain the base URL for the REST API:
 
-1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service.
+1. Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service. 
 
 1. In the main page of the Bluemix dashboard, go to the **Applications** area and then click your app.
 
@@ -31,7 +31,7 @@ To obtain the base URL for the REST API:
 ## Accept language header
 {: #push-api-rest-accept}
 
-The "Accept-Language" header specifies which language to use for the error messages that are output by [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}I. The following languages are supported for error messages: Chinese (Simplified), Chinese, (Traditional), English (US), German, French, Italian, Japanese, Korean, Portuguese, and Spanish.
+The "Accept-Language" header specifies which language to use for the error messages that are output by [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. The following languages are supported for error messages: Chinese (Simplified), Chinese, (Traditional), English (US), German, French, Italian, Japanese, Korean, Portuguese, and Spanish.
 
 ## appSecret
 {: #push-api-rest-secret}
@@ -62,7 +62,7 @@ The **Show Credentials** screen shows information about the AppSecret:
    }
  ]
 }
-```
+``` 
 
 ##Push REST API filters
 {: #push-api-rest-filters}

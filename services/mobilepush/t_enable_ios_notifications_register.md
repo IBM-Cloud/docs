@@ -31,7 +31,7 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift
