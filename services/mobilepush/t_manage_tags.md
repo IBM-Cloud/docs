@@ -20,10 +20,11 @@ Tag-based notifications are notification messages that are targeted to all the d
 1. Click the + **Create Tag** button.   
 
    a. In the **Name** field, enter the name of the tag. For example, "coupons".
-
+   
    b. In the **Description** field, enter a tag description.
+   
    c. Click  **Save**.
-
+   
 1. In the **Code Snippets** area, select the platform for your mobile application.
 1. Modify the code snippets to handle errors and then copy the code snippets for each tag into your mobile application.
 
@@ -39,3 +40,8 @@ Tag-based notifications are notification messages that are targeted to all the d
 1. From the **Tag** tab, select the tag that you want to edit.
 1. Click the edit icon.
 1. Edit the tag description and then click the **Save** button.
+
+
+
+
+

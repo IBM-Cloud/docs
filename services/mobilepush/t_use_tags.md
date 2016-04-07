@@ -9,7 +9,7 @@ copyright:
 {: #using_tags}
 
 
-Tag-based notifications are notification messages that are targeted to all the devices that are subscribed to a particular tag. Each device can subscribed to any number of tags. This section describes how to send tag-based notifications. Subscriptions are maintained by the Push Notifications service Bluemix instance. When a tag is deleted, all the information associated with that tag, including its subscribers and devices are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
+Tag-based notifications are notification messages that are targeted to all the devices that are subscribed to a particular tag. Each device can be subscribed to any number of tags. This section describes how to send tag-based notifications. Subscriptions are maintained by the Push Notifications service Bluemix instance. When a tag is deleted, all the information associated with that tag, including its subscribers and devices are deleted. No automatic unsubscribe is needed for this tag since it no longer exists and no further action is required from the client side.
 
 **Before you begin**
 

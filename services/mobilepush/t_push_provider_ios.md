@@ -101,7 +101,7 @@ Create a development and distribution SSL certificate.
 
 	![Export certificate and keys](images/export_p12.jpg)
 19. In the **Key Access.app** wants to export key from your keychain screen, enter your administrative password for your Mac to allow your system to export these items, and then select **Always Allow**. A .p12 certificate is generated on your desktop.
-20. Next Ste[Create a development and distribution provisioning profile](#create-push-credentials-dev-profile)file
+20. Next Step[Create a development and distribution provisioning profile](#create-push-credentials-dev-profile)file
 
 ##Creating a development provisioning profile
 {: #create-push-credentials-dev-profile}
@@ -157,7 +157,7 @@ Set up APNs on the Push dashboard.
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	The Push dashboard is displayed.
-
+	
 	![Set push notifications](images/wizard.jpg)
 1
 2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the p.12 certificate to Bluemix.
