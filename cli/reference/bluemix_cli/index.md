@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated: 23 March 2016*
+*Last updated: 8 April 2016*
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} of the commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The information that follows lists all commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -1709,7 +1709,7 @@ bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e
 
 -p *PORT*|--publish *PORT*  (optional):  Expose the port for the HTTP traffic. Containers in your group must listen to the HTTP port. HTTPS requests can't be made. For container groups, you can't include multiple ports.
 
-When you specify a port, you make the app available to the {{site.data.keyword.Bluemix_notm}} Load Balancer or containers that are trying to reach the host in the same {{site.data.keyword.Bluemix_notm}} space. If a port is specified in the Dockerfile for the image that you are using, include that port.
+When you specify a port, you make the app available to the {{site.data.keyword.Bluemix_notm}} Load Balancer or containers that are trying to reach the host in the same {{site.data.keyword.Bluemix_notm}} space. Then the {{site.data.keyword.Bluemix_notm}} load balancer or containers can use the port to reach the host and the app in the same {{site.data.keyword.Bluemix_notm}} space. If a port is specified in the Dockerfile for the image that you are using, include that port.
 
 **Tip:**
 
