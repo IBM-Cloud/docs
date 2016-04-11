@@ -24,7 +24,7 @@ Os exemplos abaixo representam uma ação que notifica um engenheiro de serviço
  - [IFTTT](#iftttex "IFTTT")
 
 ## Usar Enviar e-mail {: #emailex}
-Neste exemplo, a ação é configurada para usar o recurso Enviar e-mail do Real-Time Insights para enviar um e-mail para o engenheiro de serviço principal e também enviar um e-mail de backup para seu gerente. 
+Neste exemplo, a ação é configurada para usar o recurso Enviar e-mail do Real-Time Insights para enviar um e-mail para o engenheiro de serviço principal e também enviar um e-mail de backup para seu gerente.
 
 Para criar uma ação de e-mail:
 1. No Real-Time Insights, acesse **Análise > Ações**.
@@ -58,7 +58,7 @@ Para criar a ação postar no Slack:
  - Corpo  
  ```{"text":"*Um dispositivo precisa de sua atenção*\n Horário: {{timestamp}}\n Instância do {{site.data.keyword.iotrtinsights_short}}: {{tenantId}}\n Dispositivo: {{deviceId}}\n Regra: {{ruleName}}\n Descrição: {{ruleDescription}}\n Condição: {{ruleCondition}}\n Mensagem do dispositivo bruto: \n{{message}}"}```
  {: codeblock}  
- **Importante:** O webhook do Slack deve conter, no mínimo, o campo "text". Para obter informações, veja [Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Documentação do Slack") na documentação do Slack.
+ **Importante:** O webhook do Slack deve conter, no mínimo, o campo "text". Para obter informações, veja [Incoming Webhooks](https://api.slack.com/incoming-webhooks "Documentação do Slack") na documentação do Slack.
 11. Clique em **OK** para salvar a ação.
 
 ## Usar o Node-RED para enviar uma mensagem de texto {: #noderedex}

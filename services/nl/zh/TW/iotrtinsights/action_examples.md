@@ -56,7 +56,7 @@ copyright:
  - 內文
  ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
  {: codeblock}  
- **重要事項：**Slack Webhook 必須至少包含 "text" 欄位。如需相關資訊，請參閱 Slack 文件中的[送入 Webhook](https://api.slack.com/incoming-webhooks, "Slack 文件")。
+ **重要事項：**Slack Webhook 必須至少包含 "text" 欄位。如需相關資訊，請參閱 Slack 文件中的[送入 Webhook](https://api.slack.com/incoming-webhooks "Slack 文件")。
 11. 按一下**確定**，以儲存動作。
 
 ## 使用 Node-RED 傳送文字訊息 {: #noderedex}
