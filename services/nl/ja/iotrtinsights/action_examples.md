@@ -55,7 +55,7 @@ Slack への投稿アクションを作成するには、以下のようにし�
  - 本文
 ```{"text":"*要確認デバイスが発生*\n 時刻: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} インスタンス: {{tenantId}}\n デバイス: {{deviceId}}\n ルール: {{ruleName}}\n 説明: {{ruleDescription}}\n 条件: {{ruleCondition}}\n ロー・デバイス・メッセージ: \n{{message}}"}```
  {: codeblock}  
- **重要:** Slack Webhook には少なくとも「text」フィールドを含める必要があります。詳しくは、Slack の資料の『[Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Slack の資料")』を参照してください。
+ **重要:** Slack Webhook には少なくとも「text」フィールドを含める必要があります。詳しくは、Slack の資料の『[Incoming Webhooks](https://api.slack.com/incoming-webhooks "Slack の資料")』を参照してください。
 11. **「OK」**をクリックしてアクションを保存します。
 
 ## Node-RED を使用したテキスト・メッセージの送信{: #noderedex}

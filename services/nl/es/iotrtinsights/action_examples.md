@@ -56,7 +56,7 @@ Para crear la acción publicar en slack:
  - Cuerpo
  ```{"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}```  
  {: codeblock}  
- **Importante:** El webhook de Slack debe tener como mínimo el campo "text". Para obtener información, consulte [Webhooks entrantes](https://api.slack.com/incoming-webhooks, "Documentación de Slack") en la documentación de Slack.
+ **Importante:** El webhook de Slack debe tener como mínimo el campo "text". Para obtener información, consulte [Webhooks entrantes](https://api.slack.com/incoming-webhooks "Documentación de Slack") en la documentación de Slack.
 11. Pulse **Aceptar** para guardar la acción.
 
 ## Utilice Node-RED para enviar un mensaje de texto {: #noderedex}

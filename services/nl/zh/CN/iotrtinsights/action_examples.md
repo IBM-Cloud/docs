@@ -56,7 +56,7 @@ copyright:
  - 主体
 ```{"text":"*有设备需要您的关注*\n 时间：{{timestamp}}\n {{site.data.keyword.iotrtinsights_short}} 实例：{{tenantId}}\n 设备：{{deviceId}}\n 规则：{{ruleName}}\n 描述：{{ruleDescription}}\n 条件：{{ruleCondition}}\n 原始设备消息：\n{{message}}"}```
  {: codeblock}  
- **重要信息：**Slack Webhook 必须至少包含“text”字段。有关信息，请参阅 Slack 文档中的 [入局 Webhook](https://api.slack.com/incoming-webhooks, "Slack 文档 ")。
+ **重要信息：**Slack Webhook 必须至少包含“text”字段。有关信息，请参阅 Slack 文档中的 [入局 Webhook](https://api.slack.com/incoming-webhooks "Slack 文档 ")。
 11. 单击**确定**以保存操作。
 
 ## 使用 Node-RED 发送短信{: #noderedex}

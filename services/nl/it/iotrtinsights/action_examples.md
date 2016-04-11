@@ -57,7 +57,7 @@ consulta la [documentazione di Slack](https://api.slack.com/incoming-webhooks).
  - Corpo
  ```{"text":"*Un dispositivo richiede la tua attenzione*\n Data/ora: {{timestamp}}\n Istanza {{site.data.keyword.iotrtinsights_short}}: {{tenantId}}\n Dispositivo: {{deviceId}}\n Regola: {{ruleName}}\n Descrizione: {{ruleDescription}}\n Condizione: {{ruleCondition}}\n Messaggio dispositivo non elaborato: \n{{message}}"}```
  {: codeblock}  
- **Importante:** il webhook Slack deve contenere come minimo il campo "text". Per informazioni, vedi [Incoming Webhooks](https://api.slack.com/incoming-webhooks, "Documentazione di Slack") nella documentazione di Slack.
+ **Importante:** il webhook Slack deve contenere come minimo il campo "text". Per informazioni, vedi [Incoming Webhooks](https://api.slack.com/incoming-webhooks "Documentazione di Slack") nella documentazione di Slack.
 11. Fai clic su **OK** per salvare l'azione.
 
 ## Utilizza Node-RED per inviare un messaggio di testo {: #noderedex}
