@@ -1,11 +1,17 @@
+---
+
+Copyright :
+  Années : 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Dernière mise à jour : 12 janvier 2016*
-
-# Contexte d'exécution Python
+# Python
 {: #python_runtime}
+*Dernière mise à jour : 16 mars 2016*
 
 Le contexte d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
 Le pack python_buildpack fournit un environnement d'exécution complet pour les applis Python.
@@ -16,13 +22,12 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage Python. L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.
-Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions de contexte d'exécution
 {: #runtime_versions}
 
-Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Exemple :
+Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
 
 ```
 python-3.4.3
@@ -47,6 +52,6 @@ Si votre application requiert une version de Python qui n'est pas répertoriée,
 utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour
 la déployer.
 
-## LIENS CONNEXES
-{: #related_links}
-* [Pack de construction Cloud Foundry pour Python](https://github.com/cloudfoundry/python-buildpack)
+# rellinks
+## general
+* [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

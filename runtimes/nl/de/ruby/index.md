@@ -1,28 +1,32 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Letzte Aktualisierung: 12. Januar 2016*
-
-# Ruby-Laufzeit
+# Ruby
 {: #ruby_runtime}
+*Letzte Aktualisierung: 16. März 2016*
 
-Die Ruby-Laufzeit unter {{site.data.keyword.Bluemix}} basiert auf dem Ruby-Buildpack (ruby_buildpack).
-Das Ruby-Buildpack (ruby_buildpack) stellt eine vollständige Laufzeitumgebung für die
-Ruby-App bereit.
+Die Laufzeit von Ruby in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ruby_buildpack'. Das Buildpack 'ruby_buildpack' bietet eine vollständige Laufzeitumgebung für Ruby-Apps.
 {: shortdesc}
 
-Das Ruby-Buildpack wird verwendet, wenn Ihre App im Stammverzeichnis eine GEM-Datei enthält. Für die Installation Ihrer Abhängigkeiten wird dann der Bundler verwendet.
+Das Buildpack 'ruby_buildpack' wird verwendet, wenn im Stammverzeichnis Ihrer App das Element 'Gemfile' enthalten ist. Es wird zum Installieren Ihrer Abhängigkeiten anschließend Bundler verwendet. 
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Ruby-Starteranwendung zur Verfügung.  Die Ruby-Starteranwendung ist eine einfache Ruby-App, die eine Vorlage bereitstellt, die Sie für Ihre App nutzen können. Sie können die Starter-App ausprobieren und Änderungen vornehmen und diese dann per Push-Operation an die {{site.data.keyword.Bluemix}}-Umgebung übertragen.  Hilfeinformationen zur Verwendung der Starteranwendung finden Sie im Thema zur [Verwendung der Starteranwendungen](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine Ruby-Starteranwendung bereit. Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html). 
 
 ## Laufzeitversionen
 {: #runtime_versions}
 
-Sie können die Version von Ruby, mit der Ihre App arbeiten soll, in der GEM-Datei Ihrer Anwendung angeben; Beispiel:
+Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im Element 'Gemfile' Ihrer Anwendung angeben. Beispiel: 
 
 
 ```
@@ -34,14 +38,12 @@ Sie können die Version von Ruby, mit der Ihre App arbeiten soll, in der GEM-Dat
 ```
 {: codeblock}
 
-Wird keine Version angegeben, wird Version 2.2.2 standardmäßig ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 2.2.2 ausgewählt. 
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Im derzeit in {{site.data.keyword.Bluemix}} installierten
-[Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462)
-sind die folgenden Ruby-Versionen verfügbar:
+Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.7?cm_mc_uid=02162397679414470795470&cm_mc_sid_50200000=1447951462) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
 
 * 2.0.0
 * 2.1.6
@@ -49,12 +51,10 @@ sind die folgenden Ruby-Versionen verfügbar:
 * 2.2.2
 * 2.2.3
 
-Wenn für Ihre App eine Ruby-Version erforderlich ist, die
-nicht aufgeführt ist, können Sie das externe
-[Ruby-Bildpack](https://github.com/cloudfoundry/ruby-buildpack) für
-die Bereitstellung der App verwenden.
+Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
 
-## ZUGEHÖRIGE LINKS
-{: #related_links}
+
+# Zugehörige Links
+## Allgemein
 * [Cloud Foundry-Buildpack für Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Dokumentation zu Ruby on Rails](http://rubyonrails.org/documentation/)
