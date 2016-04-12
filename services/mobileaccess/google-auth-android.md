@@ -186,3 +186,5 @@ You must have a mobile backend that was created with the MobileFirst Services St
  If you call this code after a user is logged in with Google, the user is logged out of Google. When the user tries to log in again, they must select a Google account under which they will be logged in again. When they try to log in with a previous logged in Google ID, the user is not prompted for their credentials again. To be prompted for login credentials again, the user must remove their Google account from the Android device.
 
  The value for `listener` passed to the logout function can be `null`.
+ 
+
