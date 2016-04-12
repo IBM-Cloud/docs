@@ -245,7 +245,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+		NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
