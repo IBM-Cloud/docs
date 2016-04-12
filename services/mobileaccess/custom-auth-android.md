@@ -224,4 +224,4 @@ You must have an application that was created with the {{site.data.keyword.mobil
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
 
- The value for `listener` passed to the logout function can be null.
+ The value for `listener` passed to the logout function can be `null`.
