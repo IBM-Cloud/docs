@@ -83,7 +83,7 @@ Your on-premises strongSwan setup uses the following example configuration:
 			root@rdmnm:~# more /etc/ipsec.all.conf  
 							
 			conn all  
-			  auto=route  
+			  auto=add  
 			  esp=aes128-sha1-modp1024!  
 			  ike=aes128-sha1-modp1024!  
 			  right=%any  
