@@ -1,11 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*上次更新时间：2016 年 1 月 4 日*
-
-# PHP 运行时
+# PHP
 {: #php_runtime}
+*上次更新时间：2016 年 3 月 16 日*
 
 {{site.data.keyword.Bluemix}} 上的 PHP 运行时由 php_buildpack 提供支持。php_buildpack 为 PHP 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
@@ -24,7 +30,6 @@
 {: #runtime_versions}
 
 您可以在 composer.json 文件中为您的应用程序指定要使用的 PHP 版本。例如：
-
 
 ```
 {
@@ -48,15 +53,13 @@ Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages
 * 5.5.30
 * 5.6.30
 * 5.6.13
-* 5.6.714
+* 5.6.14
 
 如果您应用程序所需的 PHP 版本没有列在上述列表中，那么可以使用外部 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) 来部署应用程序。
 
-## 教程和样本
-{: #tutorials_and_samples}
+# 相关链接
+## 样本
 * [构建和部署 REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [构建和部署移动友好的卡路里计数器](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-
-## 相关链接
-{: #related_links}
+## 常规
 * [用于 PHP 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/php-buildpack.git)

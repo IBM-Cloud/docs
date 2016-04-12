@@ -1,12 +1,53 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*上次更新时间：2016 年 1 月 18 日*
-
-# Node.js buildpack 的最新更新
+# sdk-for-nodejs buildpack 的最新更新
 {: #latest_updates}
 
-Node.js buildpack 中最新更新的列表。
+*上次更新时间：2016 年 3 月 22 日*
+
+sdk-for-nodejs buildpack 中最新更新的列表。
+## 2016 年 3 月 18 日：更新了 Node.js Buildpack V3.2-20160315-1257
+
+此 buildpack 发行版将缺省 IBM SDK for Node.js 运行时从 V4.3.0 移至 V4.3.2。此外，还包含 IBM SDK for Node.js V0.10.43、V0.12.12 和 V4.3.1。用户应该使用这些最新的 Node.js 版本来获取用于修复多个安全漏洞的修订。
+
+## 2016 年 3 月 4 日：更新了 Node.js Buildpack V3.1-20160222-1123
+
+此 buildpack 发行版将缺省 IBM SDK for Node.js 运行时从 V4.2.4 移至 V4.3.0。此外，还包含 IBM SDK for Node.js V0.10.42、V0.12.10 和 V4.2.6。用户应该使用这些最新的 Node.js 版本来获取用于修复多个安全漏洞的修订。
+
+## 2016 年 2 月 4 日：更新了 Node.js Buildpack V3.0-20160125-1224
+
+此发行版已与 [Cloud Foundry 社区 Node.js](https://github.com/cloudfoundry/nodejs-buildpack) buildpack 全面同步。除了社区更改外，还有对某些缺省值的更改，为了缩短编译打包时间而进行的优化，以及对应用程序管理功能的更新。
+
+* Buildpack 更新
+
+  * Node.js V4.2.4 (IBM SDK for Node.js V4) 现在替代 V0.12.9 成为 Bluemix 上的缺省运行时。如果没有为应用程序指定特定版本，那么这可能会导致应用程序行为不同。要了解如何为 Bluemix 应用程序指定 Node.js 版本，请参阅 [Node.js 运行时](index.html)文档。
+
+  * 现在，缺省情况下，NODE_ENV 设置为 *production*。这将造成某些节点依赖项的行为不同。例如，Express 框架在 Web 浏览器中对于发生故障的端点，不再返回堆栈跟踪，但是改为仅显示*因特网服务器错误*。NPM_CONFIG_PRODUCTION 设置为 *true* 时，仅对于 npm 安装阶段中的子 shell 脚本，NPM 才会将 NODE_ENV 设置为 *production*。这允许用户将应用程序运行时的 NODE_ENV 设置为其他值，例如 *development*。对于进行澄清，npm 脚本将看到消息 **NODE_ENV=production**。
+
+  * 包含了对 Monitoring and Analytics 服务的错误修订。
+
+* 高速缓存更新：
+
+  * 如果禁用了高速缓存 (NODE_MODULES_CACHE=false)，那么 buildpack 不会尝试对任何模块/组件进行高速缓存。先前，配置此设置后，不会对高速缓存执行出栈，但仍会对安装用于未来部署的模块进行高速缓存。现在，既不会对高速缓存执行出栈，也不会尝试存储任何高速缓存。
+
+  * 缺省情况下，除了 node_modules 外，还会对 bower_components 进行高速缓存。
+
+* 其他更新：
+
+  * 为缺少的依赖项（例如，gulp、bower 和 angular）添加了有帮助的警告。
+
+  * 检测脚本已使用 buildpack 版本信息进行更新。
+
+  * 除去了社区初始引入的集群建议 (WEB_CONCURRENCY)，因为在 Bluemix 上无法准确地确定内存。
+
 
 ## 2015 年 12 月 16 日：更新了 Node.js Buildpack V2.8-20151209-1403 和 V3.0beta-20151211-2041
 
@@ -21,13 +62,18 @@ IBM Node.js Buildpack V3.0beta 已在 Node.js V4.2.3 作为缺省运行时的 Bl
 要使用 V3.0beta 推送应用程序：
 
 * 使用“cf push”命令中的“-b”选项：
+
+
 ```
- cf push -b sdk-for-nodejs-v3beta
+        cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
+
 * 或者，使用 manifest.yml 文件中的“buildpack”选项：
+
+
 ```
-buildpack: sdk-for-nodejs-v3beta
+        buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -55,12 +101,15 @@ buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来�
 
 * 该 Node.js buildpack 现在随 [IBM SDK for Node.js V0.12.1](https://developer.ibm.com/node/sdk/) 一起提供。
 * 如果应用程序未在其 package.json 文件中指定运行时，那么现在应用程序将开始使用 V0.12.1，而不使用 V0.10.x。如果需要使用先前的版本，请在 package.json 中指定 V0.10.x，如下所示：
+
+
 ```
-   "engines": {
+        "engines": {
 "node": "0.10.x"
 }
 ```
 {: codeblock}
+
 * V0.12.1 存在一些已知问题：
    * 使用 Bluemix Live Sync 提供的“调试工具”功能时，“暂挂”功能会中断。
    * V0.12.x 上不支持用于 MQ Light 服务的 mqlight 模块
@@ -104,3 +153,7 @@ Foundry 的 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack)
 ## 2014 年 7 月 29 日：更新 Node.js buildpack V1.1-20140717-1447
 
 该 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.5 一起提供。这意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.29 时，您将获取完全受支持的 IBM Node.js 运行时。请参阅[此处](https://developer.ibm.com/node/sdk/)，以获取有关 IBM Node.js SDK 的更多信息。
+
+# 相关链接
+## 常规
+* [node.js 运行时](index.html)

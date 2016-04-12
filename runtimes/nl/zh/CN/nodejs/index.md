@@ -1,22 +1,29 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*上次更新时间：2016 年 1 月 12 日*
 
-# Node.js 运行时
+# SDK for Nodejs
 {: #nodejs_runtime}
+*上次更新时间：2016 年 3 月 16 日*
 
 {{site.data.keyword.Bluemix}} 上的 Node.js 运行时采用 sdk-for-nodejs buildpack 技术。
 sdk-for-nodejs buildpack 为 Node.js 应用程序提供完整的运行时环境。
 {: shortdesc}
 
-应用程序在根目录中包含 **package.json** 文件时使用 Node.js buildpack。
+应用程序在根目录中包含 **package.json** 文件时，会使用 sdk-for-nodejs buildpack。
 
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Node.js 入门模板应用程序。Node.js 入门模板应用程序是简单的 Node.js 应用程序，提供可用于您应用程序的模板。您可以体验入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
+{{site.data.keyword.Bluemix}} 提供 Node.js 入门模板应用程序。Node.js 入门模板应用程序是简单的 Node.js 应用程序，提供可用于您应用程序的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
 
 ## 启动命令
 {: #starup_commmand}
@@ -31,10 +38,9 @@ web: node app.js```
 
 如果未提供 **Procfile**，那么 IBM Bluemix Node.js buildpack 会检查 **package.json** 文件中是否有 scripts.start 条目。同样，在下面的示例中，app.js 是应用程序的启动 js 脚本。```
 {
-  ...   
+    ...   
 "scripts": {
-
-    "start": "node app.js"
+"start": "node app.js"
 }
 }
 ```
@@ -42,7 +48,7 @@ web: node app.js```
 
 如果 **package.json** 中提供了启动脚本条目，那么将自动生成 **Procfile**。自动生成的 **Procfile** 的内容如下所示：
 ```
-web: npm start```
+    web: npm start```
 {: codeblock}
 
 有关 **Procfile** 和 **package.json** 文件的更多信息，请参阅 [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html)。
@@ -67,7 +73,7 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 ## 可用版本
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 运行时](http://nodejs.org/dist/)。其中，IBM 提供的版本包含增强功能和错误修订。请参阅 [Node.js Buildpack 的最新更新](updates.html)，以获取更多信息。
+{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 运行时](http://nodejs.org/dist/)。其中，IBM 提供的版本包含增强功能和错误修订。请参阅 [Node.js Buildpack 的最新更新](../../runtimes/nodejs/updates.html)，以获取更多信息。
 
 IBM Node.js buildpack 高速缓存所有 IBM 运行时版本。因此，如果在应用程序中使用 IBM SDK for Node.js 运行时，那么在将应用程序推送到 Bluemix 时可提高应用程序性能。
 
@@ -83,7 +89,7 @@ IBM Node.js buildpack 高速缓存所有 IBM 运行时版本。因此，如果�
   "description": "this is my app",
   "version": "0.1",
   "engines": {
-     "node": "4.2.4"
+     "node": "4.2.4",
      "npm": "2.11.3"
   }
 }
@@ -101,7 +107,7 @@ NPM 提供了脚本编制功能，允许您运行脚本，其中包括分别适�
 
 ### 高速缓存行为
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} 为构建之间持久存储的每个节点应用程序保留一个高速缓存目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **expess** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。
+{{site.data.keyword.Bluemix}} 为构建之间持久存储的每个节点应用程序保留一个高速缓存目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **expess** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
 
 使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 cf 命令行：
 ```
@@ -128,23 +134,24 @@ Bluemix 提供多个版本的 Node.js buildpack。
 
 在 Bluemix 中，**sdk-for-nodejs** buildpack 优先于 **nodejs_buildpack**。如果想要将 **nodejs_buildpack**（而不是 **sdk-for-nodejs** buildpack）用于应用程序，那么必须指定 buildpack，例如，使用 -b 选项以及 **cf push** 命令。
 
-通常会提供 **sdk-for-nodejs** buildpack 的当前版本和低版本。要查看所有可用的 buildpack，请使用 **cf buildpacks** 命令。例如：```
-cf buildpacks
+通常会提供 **sdk-for-nodejs** buildpack 的当前版本和低版本。要查看所有可用的 buildpack，请使用 **cf buildpacks** 命令。例如：
+<pre>
+      cf buildpacks
 Getting buildpacks...
 
-buildpack                      position          enabled          locked          filename	
+      buildpack                      position          enabled          locked          filename	
    
-...
-sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+
+      sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
 nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
 sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
-```
+
+</pre>
 {: codeblock}
 
-
-## 相关链接
-{: #related_links}
-* [Node.js buildpack 的最新更新](updates.html)
+# 相关链接
+## 常规
+* [Node.js buildpack 的最新更新](../../runtimes/nodejs/updates.html)
 * [应用程序管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

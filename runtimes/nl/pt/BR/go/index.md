@@ -1,11 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Última atualização: 12 de janeiro de 2016*
 
-# Tempo de execução
+# Ir
 {: #go_runtime}
+*Última atualização: 16 de março de 2016*
 
 O tempo de execução Go no {{site.data.keyword.Bluemix}} foi desenvolvido com o go_buildpack.
 O go_buildpack fornece um ambiente de tempo de execução completo para apps Go.
@@ -50,13 +57,13 @@ atualmente instalado no {{site.data.keyword.Bluemix}}:
 * 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
+* 1,5
 * 1.5.1
 
 Se o seu app requer uma versão do Go não listada,
 é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git) externo para implementar o aplicativo.
 
-## LINKS RELACIONADOS
-{: #related_links}
+# rellinks
+## geral
 * [GoLang](http://golang.org/)
 * [Buildpack do Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack)
