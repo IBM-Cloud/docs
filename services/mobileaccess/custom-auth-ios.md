@@ -309,3 +309,22 @@ After you initialize the Client SDK and register a custom `IMFAuthenticationDele
 1. 	When your requests succeeds, you see the following output in the Xcode console:
 
 	![image](images/ios-custom-login-success.png)
+	
+		
+	You can also add logout functionality by adding the following code:
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	
+	Swift: 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
+Passing `callBack` to the logout function is optional. You can also pass `nil`.
+
