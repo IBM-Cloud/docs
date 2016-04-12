@@ -95,8 +95,8 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	var success = function(data){
     	console.log("success", data);
     }
-	var failure = function(error)
-    	{console.log("failure", error);
+	var failure = function(error){
+    	console.log("failure", error);
     }
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
