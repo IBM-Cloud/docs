@@ -215,3 +215,13 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 1. 	When your request succeeds, the following output is in the LogCat utility:
 
 	![image](images/android-facebook-login-success.png)
+
+ You can also add logout functionality by adding the following code:
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ If you call this code after a user is logged in with Facebook, the user is logged out of Facebook. When the user tries to log in again, they are prompted for their Facebook credentials.
+
+ The value for `listener` passed to the logout function can be `null`.
