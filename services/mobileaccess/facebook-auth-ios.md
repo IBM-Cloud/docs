@@ -286,3 +286,24 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. 	When your request succeeds, the following output is displayed in the Xcode console:
 	![image](images/ios-facebook-login-success.png)
+
+	You can also add logout functionality by adding the following code:
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	If you call this code after a user is logged in with Facebook and the user tries to log in again, they are prompted to authorize Mobile Client Access to use Facebook for authentication purposes.
+
+	To switch users, you must call this code and the user must logout from Facebook in their browser.
+
+  Passing `callBack` to the logout function is optional. You can also pass `nil`.
+
