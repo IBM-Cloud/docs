@@ -23,9 +23,11 @@ copyright:
 [Liberty for Java 런타임](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html)을 참조하십시오.
 
 기본적으로 IBM JRE 버전 8이 사용됩니다. JBP_CONFIG_IBMJDK 환경 변수를 사용하면 IBM JRE의 대체 버전을 지정할 수 있습니다. 예를 들어,
-최신 IBM JRE 7.1을 사용하려면 다음 환경 변수를 설정하십시오.```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"```
-{: #codeblock}
+최신 IBM JRE 7.1을 사용하려면 다음 환경 변수를 설정하십시오.
+  ```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+  ```
+  {: #codeblock}
 
 
 버전 특성은 버전 범위로 설정될 수 있습니다. 두 개의 지원되는 버전 범위(1.7.+ 및 1.8.+) 가 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오. 
@@ -35,15 +37,19 @@ copyright:
 
 선택사항으로, 애플리케이션을 JRE로서 OpenJDK에서 실행되도록 구성할 수 있습니다. 
 애플리케이션이 OpenJDK에서 실행되도록 하려면 JVM 환경 변수를 “openjdk”로 설정하십시오. 
-예를 들어, cf 명령행 도구를 사용하여 다음 명령을 실행하십시오. ```
-    $ cf set-env myapp JVM 'openjdk'```
-{: #codeblock}
+예를 들어, cf 명령행 도구를 사용하여 다음 명령을 실행하십시오. 
+  ```
+    $ cf set-env myapp JVM 'openjdk'
+  ```
+  {: #codeblock}
 
 사용으로 설정되는 경우 기본적으로 OpenJDK 버전 8이 사용됩니다. 
 JBP_CONFIG_OPENJDK 환경 변수를 사용하면 OpenJDK의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 OpenJDK 7을 사용하려면
-다음 환경 변수를 설정하십시오. ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"```
-{: #codeblock}
+다음 환경 변수를 설정하십시오. 
+  ```
+    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+  ```
+  {: #codeblock}
 
 버전 특성은 1.7.+ 등의 버전 범위 또는 [사용 가능한
 OpenJDK 버전 목록](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)에 나열된 특정 버전으로 설정될 수 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오. 
