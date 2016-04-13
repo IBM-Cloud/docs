@@ -265,8 +265,7 @@ After you initialize the Client SDK and register a custom `IMFAuthenticationDele
 {: #custom-ios-testing-before}
  You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
-
- 1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
+1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
   The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, an `Unauthorized` message displays in your browser.
 1. Use your iOS application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom `IMFAuthenticationDelegate`:
 
@@ -305,26 +304,24 @@ After you initialize the Client SDK and register a custom `IMFAuthenticationDele
 	};
 
 	```
-
 1. 	When your requests succeeds, you see the following output in the Xcode console:
 
 	![image](images/ios-custom-login-success.png)
-	
-		
+
 	You can also add logout functionality by adding the following code:
 
-	Objective C: 
+	Objective C:
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]
 	```
-	
-	Swift: 
+
+	Swift:
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
-If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
-Passing `callBack` to the logout function is optional. You can also pass `nil`.
+ If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
 
+ Passing `callBack` to the logout function is optional. You can also pass `nil`.
