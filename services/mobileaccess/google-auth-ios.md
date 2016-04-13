@@ -278,14 +278,11 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 1. 	Your request should succeed. You should see the following output in the LogCat
 
 	![image](images/ios-google-login-success.png)
-	
-	
-	
-	
+		
 	You can also add logout functionality by adding the following code:
-	
+
 	Objective C:
-	
+
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
@@ -296,8 +293,6 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-
 	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize Mobile Client Access to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and login with another user.
 
 	Passing `callBack` to the logout function is optional. You can also pass `nil`.
-
