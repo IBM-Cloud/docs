@@ -212,21 +212,25 @@ Bluemix 대시보드 또는 CF CLI에서 볼 수 있습니다.
 
 
 독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 staging_info.yml 파일에서 확인할 수 있습니다.
-```
-    $ cf files myapp staging_info.yml```
-{: #codeblock}
+  ```
+    $ cf files myapp staging_info.yml
+  ```
+  {: #codeblock}
 
 WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 jvm.options 파일에서 유지됩니다. 
 
-WAR, EAR 및 서버 디렉토리에 대한 jvm.options 파일을 보려면 다음 명령을 실행하십시오. ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options```
-{: #codeblock}
+WAR, EAR 및 서버 디렉토리에 대한 jvm.options 파일을 보려면 다음 명령을 실행하십시오. 
+  ```
+    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+  ```
+  {: #codeblock}
 
 패키지된 서버의 jvm.options 파일을 보려면
-<serverName>을 서버의 이름으로 대체하고 다음 명령을 실행하십시오. ```
+<serverName>을 서버의 이름으로 대체하고 다음 명령을 실행하십시오. 
+  ```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
-```
-{: #codeblock]
+  ```
+  {: #codeblock]
 
 #### 사용 예제
 {: #example_usage}
@@ -234,29 +238,34 @@ WAR, EAR 및 서버 디렉토리에 대한 jvm.options 파일을 보려면 다�
 IBM JRE JVM 세부
 가비지 콜렉션 로깅을 활성화하기 위해 사용자 정의 JVM 옵션을 사용하여
 애플리케이션 배치:
-* 애플리케이션의 manifest.yml 파일에 있는 JVM 옵션:```
+* 애플리케이션의 manifest.yml 파일에 있는 JVM 옵션:
+  ```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-```
-{: #codeblock}
+  ```
+  {: #codeblock}
 
-* 생성된 JVM 세부 가비지 콜렉션 로깅을 확인합니다.```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001```
-{: #codeblock}    
+* 생성된 JVM 세부 가비지 콜렉션 로깅을 확인합니다.
+  ```
+    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+  ```
+  {: #codeblock}    
 
 * 메모리 부족 조건에서 힙, 스냅 및
 javacore를 트리거하도록 배치된 애플리케이션의 IBM JRE JVM
 옵션 업데이트:
 
 JVM 옵션을 사용하여 애플리케이션의 환경 변수를 설정하고
-애플리케이션을 다시 시작합니다. ```
+애플리케이션을 다시 시작합니다. 
+  ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-```
-{: #codeblock}
+  ```
+  {: #codeblock}
 
 * 메모리 부족 조건에서 생성된 JVM 덤프를
-확인합니다. ```
+확인합니다. 
+  ```
     $ cf files myapp dumps
 
 
@@ -266,8 +275,8 @@ JVM 옵션을 사용하여 애플리케이션의 환경 변수를 설정하고
     Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-```
-{: #codeblock}
+  ```
+  {: #codeblock}
 
 ### JRE 오버레이
 {: #overlaying_jre}
@@ -316,19 +325,21 @@ Java JRE와 동일한 파일 계층구조에
 .java/jre로 시작하는 특정 파일이 있습니다. 
 
 예를 들어, AES 256비트 암호화를 사용하려는 경우
-이 Java 정책 파일을 오버레이해야 합니다.```
+이 Java 정책 파일을 오버레이해야 합니다.
+  ```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
-```
-{: #codeblock}
+  ```
+  {: #codeblock}
 
 적절한 제한 없는 정책 파일을
 다운로드하여 애플리케이션에 다음과 같이
-추가하십시오.```
+추가하십시오.
+  ```
     resources\.java-overlay\.java\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
-```
-{: #codeblock}
+  ```
+  {: #codeblock}
 
 애플리케이션을 푸시하면 이 jar이
 Java 런타임의 기본 정책 jar을 오버레이합니다.
