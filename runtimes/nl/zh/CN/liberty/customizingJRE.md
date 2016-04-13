@@ -19,8 +19,10 @@ copyright:
 
 缺省情况下，应用程序配置为使用 IBM JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Liberty for Java 运行时](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html)。
 
-缺省情况下，将使用 IBM JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 IBM JRE 的替代版本。例如，要使用最新版本的 IBM JRE 7.1，请设置以下环境变量：```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"```
+缺省情况下，将使用 IBM JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 IBM JRE 的替代版本。例如，要使用最新版本的 IBM JRE 7.1，请设置以下环境变量：
+```
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+```
 {: #codeblock}
 
 version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和 1.8.+。为了获得最佳结果，请使用 Java 8。
@@ -28,12 +30,16 @@ version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和
 ## OpenJDK
 {: #openjdk}
 
-（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用使用 OpenJDK 运行应用程序，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：```
-    $ cf set-env myapp JVM 'openjdk'```
+（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用使用 OpenJDK 运行应用程序，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
+```
+    $ cf set-env myapp JVM 'openjdk'
+```
 {: #codeblock}
 
-如果启用，缺省情况下，将使用 OpenJDK V8。使用 JBP_CONFIG_OPENJDK 环境变量可指定 OpenJDK 的替代版本。例如，要使用最新版本的 OpenJDK 7，请设置以下环境变量：```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"```
+如果启用，缺省情况下，将使用 OpenJDK V8。使用 JBP_CONFIG_OPENJDK 环境变量可指定 OpenJDK 的替代版本。例如，要使用最新版本的 OpenJDK 7，请设置以下环境变量：
+```
+    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+```
 {: #codeblock}
 
 version 属性可以设置为版本范围（例如，1.7.+）或[可用 OpenJDK 版本列表](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)上列出的任何特定版本。为了获得最佳结果，请使用 Java 8。
@@ -158,17 +164,22 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项还会以下列形式持久存储在运行时环境中：作为命令行选项（独立 Java 应用程序）或位于 jvm.options 文件中（非独立 Java 应用程序）。针对应用程序应用的 JVM 选项可以从 Bluemix 仪表板或 CF CLI 进行查看。
 
-独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些可在 staging_info.yml 文件中进行查看。```
-    $ cf files myapp staging_info.yml```
+独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些可在 staging_info.yml 文件中进行查看。
+```
+    $ cf files myapp staging_info.yml
+```
 {: #codeblock}
 
 用于 WAR、EAR、服务器目录和打包服务器部署的 JVM 选项会持久存储在 jvm.options 文件中。
 
-要查看 jvm.options 文件中的 WAR、EAR 和服务器目录，请运行以下命令：```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options```
+要查看 jvm.options 文件中的 WAR、EAR 和服务器目录，请运行以下命令：
+```
+    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+```
 {: #codeblock}
 
-要查看 jvm.options 文件中的打包服务器，请将 <serverName> 替换为您服务器的名称，并运行以下命令：```
+要查看 jvm.options 文件中的打包服务器，请将 <serverName> 替换为您服务器的名称，并运行以下命令：
+```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: #codeblock]
@@ -177,19 +188,23 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 {: #example_usage}
 
 使用定制 JVM 选项部署应用程序以启用 IBM JRE JVM 详细垃圾回收日志记录：
-* 应用程序的 manifest.yml 文件中包含的 JVM 选项：```
+* 应用程序的 manifest.yml 文件中包含的 JVM 选项：
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
 ```
 {: #codeblock}
 
-* 查看所生成的 JVM 详细垃圾回收日志记录：```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001```
+* 查看所生成的 JVM 详细垃圾回收日志记录：
+```
+    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+```
 {: #codeblock}    
 
 * 更新已部署应用程序的 IBM JRE JVM 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore：
 
-使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：```
+使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
+```
      $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
 ```
@@ -254,7 +269,8 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ```
 {: #codeblock}
 
-下载相应的不受限制的策略文件，并将其添加到应用程序，如下所示：```
+下载相应的不受限制的策略文件，并将其添加到应用程序，如下所示：
+```
     resources\.java-overlay\.java\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
