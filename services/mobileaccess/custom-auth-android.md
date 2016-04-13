@@ -216,7 +216,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 	![image](images/android-custom-login-success.png)
 	
 	
-1. You can also add logout functionality by adding the following code:
+ You can also add logout functionality by adding the following code:
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
