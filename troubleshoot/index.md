@@ -248,7 +248,7 @@ General problems with managing applications might include applications can't be 
 
 
 
-## Cannot switch application into debug mode
+## Unable to switch apps into debug mode
 {: #ts_debug}
 
 You might not be able to enable the debug mode if the Java virtual machine (JVM) version is 8 or lower. 
