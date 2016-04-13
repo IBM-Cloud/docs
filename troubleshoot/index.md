@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 15 March 2016*
+*Last updated: 13 April 2016*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -248,14 +248,16 @@ General problems with managing applications might include applications can't be 
 
 
 
-
 ## Cannot switch application into debug mode
 {: #ts_debug}
 
-After you select **Enable application debug**, the tools attempt to switch the application into debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`. 
+You might not be able to enable the debug mode if the Java virtual machine (JVM) version is 8 or lower. 
+
+
+After you select **Enable application debug**, the tools attempt to switch the application into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`. 
 {: tsSymptoms}
 
-However, when the tools fail to enable debug mode, the web application status displays `Updating mode` and `Developing` only, and does not display `Debugging`. The tools might also display the following error message in the Console view:
+However, when the tools fail to enable the debug mode, the web application status displays `Updating mode` and `Developing` only, and does not display `Debugging`. The tools might also display the following error message in the Console view:
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
@@ -300,27 +302,26 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 The following Java virtual machine (JVM) versions cannot establish a debug session: IBM JVM 7, IBM JVM 8, and previous versions of Oracle JVM 8.
 {: tsCauses}
 
-If your workbench JVM is one of these versions, then you can have issues when you create a debug session. Your workbench JVM version is typically the system JVM of your local computer. Your system JVM is not the same as the JVM of your running Bluemix Java application. The Bluemix Java application almost always runs on IBM JVM, and sometimes runs on OpenJDK JVM.
+If your workbench JVM is one of these versions, then you might have issues when you create a debug session. Your workbench JVM version is typically the system JVM of your local computer. Your system JVM is not the same as the JVM of your running Bluemix Java application. The Bluemix Java application almost always runs on IBM JVM, and sometimes runs on OpenJDK JVM.
   
 
 To check the version of Java that IBM Eclipse Tools for Bluemix runs, complete the following steps:
 {: tsResolve}
 
-  * In IBM Eclipse Tools for Bluemix, select **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
-  * Find the `eclipse.vm` property from the list. The following line is an example of an `eclipse.vm` property:
+  1. In IBM Eclipse Tools for Bluemix, select **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
+  2. Find the `eclipse.vm` property from the list. The following line is an example of an `eclipse.vm` property:
 	
 	```
 	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
 	```
 
-  * At the command line, enter `java -version` from the `bin` directory of your Java installation.
-  * The computer displays your IBM JVM version.
+  3. At the command line, enter `java -version` from the `bin` directory of your Java installation. Your IBM JVM version information is displayed.
 
 If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, complete the following steps to switch to Oracle JVM 8:
 
-  * To download and install Oracle JVM 8, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
-  * Restart Eclipse.
-  * Check that the `eclipse.vm` property points to your new installation of Oracle JVM 8.
+  1. Download and then install Oracle JVM 8, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
+  2. Restart Eclipse.
+  3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
 
 
 
