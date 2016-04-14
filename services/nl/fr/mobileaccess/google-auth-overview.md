@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+  
+---
+
 # Utilisation de Google pour authentifier les utilisateurs
 {: #google-auth}
 Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}} en utilisant Google en tant que fournisseur d'identité. Les utilisateurs de votre application mobile peuvent alors s'authentifier avec leurs données d'identification Google.
@@ -14,7 +20,7 @@ Le diagramme simplifié suivant représente l'intégration entre {{site.data.key
 1. Utilisez le SDK {{site.data.keyword.amashort}} pour envoyer une demande à vos ressources de back end qui sont protégées par le SDK serveur de {{site.data.keyword.amashort}}.
 * Le SDK serveur de {{site.data.keyword.amashort}} détecte une demande non autorisée et renvoie une erreur HTTP 401 et la portée d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} détecte automatiquement l'erreur HTTP 401 et lance le processus d'authentification.
-* Il contacte le service {{site.data.keyword.amashort}} et lui demande d'émettre un en-tête d'autorisation.
+* Le SDK client de {{site.data.keyword.amashort}} contacte le service {{site.data.keyword.amashort}} et lui demande d'émettre un en-tête d'autorisation.
 * Le service {{site.data.keyword.amashort}} demande au client de s'authentifier auprès de Google en fournissant une demande d'authentification.
 * Le SDK client de {{site.data.keyword.amashort}} utilise le SDK Google pour lancer le processus d'authentification. Lorsque l'authentification aboutit, le SDK Google renvoie un jeton d'accès Google.
 * Le jeton d'accès Google est considéré comme une réponse à la demande d'authentification. Il est envoyé au service {{site.data.keyword.amashort}}.

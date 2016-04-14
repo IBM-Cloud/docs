@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Android SDK のセットアップ
 {: #getting-started-android}
 
@@ -63,7 +70,7 @@ context、applicationGUID、および applicationRoute の各パラメーター�
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンドの保護されているエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。 `http://{appRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+1. 新しいモバイル・バックエンドの保護されているエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 1. Android アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 

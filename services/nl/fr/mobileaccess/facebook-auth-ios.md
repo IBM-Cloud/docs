@@ -1,15 +1,21 @@
-# Activation de l'authentification Facebook dans les applis iOS
+---
+
+Copyright : 2015, 2016
+
+---
+
+# Activation de l'authentification Facebook dans les applications iOS (SDK Objective-C)
 {: #facebook-auth-ios}
 
 Pour utiliser Facebook comme fournisseur d'identité dans vos applications iOS, ajoutez et configurez la plateforme iOS pour votre application Facebook.
 
+**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de {{site.data.keyword.amashort}}. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du SDK Swift, voir [Activation de l'authentification Facebook dans les applications iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)
+
 ## Avant de commencer
 {: #facebook-auth-ios-before}
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.
-Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](getting-started.html) et [Configuration du SDK iOS](getting-started-ios.html).  
-* Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}.
-Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
-* Créez un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](facebook-auth-overview.html#facebook-appID).
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Objective-C d'iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* Créez un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuration d'une application Facebook pour la plateforme iOS
 {: #facebook-auth-ios-config}
@@ -17,7 +23,7 @@ Pour plus d'informations, voir [Protection des ressources](protecting-resources.
 
 1. Ouvrez votre application Facebook dans le portail Facebook Developer et cliquez sur **Settings (Paramètres)> Add Platform (Ajouter une plateforme) > iOS**.
 
-1. Entrez l'ID de bundle (*bundleId*) de votre application iOS. Pour le trouver, recherchez la valeur de **Bundle Identifier (ID de bundle)** dans le fichier `info.plist` ou dans l'onglet **General** du projet Xcode.
+1. Entrez l'ID de bundle (*bundleId*) de votre application iOS. Pour trouver l'ID *bundleId*, recherchez la valeur de **Bundle Identifier (ID de bundle)** dans le fichier `info.plist` ou dans l'onglet **General** du projet Xcode.
 **Astuce** : Vous pouvez activer le suffixe de schéma d'URL et l'authentification unique (SSO) si vous prévoyez d'utiliser ces fonctions.
 
 1. Cliquez sur **Save Settings (Sauvegarder les paramètres)**.
@@ -27,14 +33,13 @@ Pour plus d'informations, voir [Protection des ressources](protecting-resources.
 
 Après avoir configuré l'ID d'application Facebook, ainsi que votre application Facebook de manière qu'elle puisse répondre aux demandes des clients iOS, vous pouvez activer l'authentification Facebook dans {{site.data.keyword.amashort}}.
 
-1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix}}.
 
-1. Cliquez sur **Options pour application mobile** et notez les valeurs de *applicationRoute* et de *applicationGUID*.
-Vous aurez besoin de ces valeurs lors de l'initialisation du SDK.
+1. Cliquez sur **Options pour application mobile** et notez la valeur de **Route** (`applicationRoute`) et **Identificateur global unique de l'application** (`applicationGUID`). Vous aurez besoin de ces valeurs lors de l'initialisation du SDK.
 
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 
-1. Cliquez sur **Configurer l'authentification > Facebook**.
+1. Cliquez sur la vignette **Facebook** .
 
 1. Entrez l'ID d'application Facebook et cliquez sur **Sauvegarder**.
 
@@ -44,14 +49,11 @@ Vous aurez besoin de ces valeurs lors de l'initialisation du SDK.
 ### Installation de CocoaPods
 {: #facebook-auth-cocoapods}
 
-Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets iOS.
-CocoaPods télécharge automatiquement les artefacts à partir des référentiels et les met à la disposition de votre application iOS.
+Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionnaire de dépendances pour les projets iOS. CocoaPods télécharge automatiquement les artefacts à partir des référentiels et les met à la disposition de votre application iOS.
 
-1. Ouvrez Terminal et lancez la commande `pod --version`.
-Si CocoaPods est déjà installé, le numéro de version est affiché. Vous pouvez passer à la section suivante de ce tutoriel.
+1. Ouvrez Terminal et lancez la commande `pod --version`. Si CocoaPods est déjà installé, le numéro de version est affiché. Vous pouvez passer à la section suivante de ce tutoriel.
 
-1. Installez CocoaPods en exécutant `sudo gem install cocoapods`.
-Reportez-vous au [site Web CocoaPods](https://cocoapods.org/) si vous avez besoin d'autres instructions.
+1. Installez CocoaPods en exécutant `sudo gem install cocoapods`. Reportez-vous au [site Web CocoaPods](https://cocoapods.org/) si vous avez besoin d'autres instructions.
 
 ### Installation du logiciel SDK client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #facebook-auth-install-cocoapods}
@@ -62,14 +64,12 @@ Reportez-vous au [site Web CocoaPods](https://cocoapods.org/) si vous avez besoi
 	pod 'IMFFacebookAuthentication'
 	```
 
-1. Sauvegardez le fichier `Podfile` et exécutez la commande `pod install` à partir de la ligne de commande.
-CocoaPods installe les dépendances. La progression et les composants ajoutés s'affichent.
- **Important** : A partir de ce moment, vous devrez toujours ouvrir votre projet à l'aide d'un fichier `xcworkspace` généré par CocoaPods.
-Son nom est généralement `{your-project-name}.xcworkspace`.  
+1. Sauvegardez le fichier `Podfile` et exécutez la commande `pod install` à partir de la ligne de commande. CocoaPods installe les dépendances. La progression et les composants ajoutés s'affichent.
+ **Important** : Vous devez à présent ouvrir votre projet en utilisant le fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.  
 
 1. Exécutez `open {your-project-name}.xcworkspace` depuis la ligne de commande pour ouvrir l'espace de travail de votre projet iOS.
 
-### Configuration d'un projet iOS pour l'authentification Facebook
+### Configuration de votre projet iOS pour authentification Facebook
 {: #facebook-auth-ios-configproject}
 
 1. Localisez le fichier `info.plist`, généralement situé sous le dossier `Supporting files` de votre projet Xcode.
@@ -82,18 +82,18 @@ Son nom est généralement `{your-project-name}.xcworkspace`.
 
 Vous pouvez aussi mettre à jour le fichier `info.plist` en cliquant avec le bouton droit, en sélectionnant **Open as (Ouvrir en tant que) > Source Code (Code source)** et en ajoutant le code XML suivant :
 
-	```
+ ```XML
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb{your-facebook-application-id}</string>
+				<string>fb{votre_ID_application_facebook}</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
+	<string>{votre_ID_application_facebook}</string>
 	<key>FacebookDisplayName</key>
 	<string>MyApp</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -129,22 +129,21 @@ Vous pouvez aussi mettre à jour le fichier `info.plist` en cliquant avec le bou
 	    </dict>
 	</dict>
 ```
-	Mettez à jour les propriétés de schéma d'URL et d'ID d'appli Facebook avec votre ID d'application Facebook. 
+Mettez à jour les propriétés de schéma d'URL et d'ID d'appli Facebook avec votre ID d'application Facebook.
 
- **Important** : Veillez à ne pas remplacer les propriétés existantes du fichier `info.plist`.
-Si certaines propriétés se chevauchent, vous devez les fusionner manuellement.
-Pour plus d'informations, voir [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) et [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
+ **Important** : Veillez à ne pas remplacer les propriétés existantes du fichier `info.plist`. Si certaines propriétés se chevauchent, vous devez les fusionner manuellement. Pour plus d'informations, voir [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) et [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize}
 
-Initialisez le SDK en passant les paramètres suivants : l'identificateur unique global de l'application (`applicationGUID`) et la route de l'application (`applicationRoute`).
+Initialisez le SDK client en transmettant la route de votre application (`applicationRoute`) et l'identificateur global unique de l'application
+(`applicationGUID`).
 
 En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
-1. Ouvrez la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}} et cliquez sur votre appli.
-Cliquez sur **Options pour application mobile**. Les valeurs de *Route de l'application* et d'*Identificateur global unique de
-l'application* sont affichées.
+1. Ouvrez la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}} et cliquez sur votre appli. Cliquez sur **Options pour
+application mobile** et notez la valeur de **Route** (`applicationRoute`) et **Identificateur global unique de
+l'application** (`applicationGUID`). 
 
 1. Importez l'infrastructure requise dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant les en-têtes suivants :
 
@@ -162,7 +161,7 @@ l'application* sont affichées.
 
 	1. Cliquez avec le bouton droit sur votre projet dans Xcode, puis sélectionnez **New File... (Nouveau fichier...)**.
 	* Dans la catégorie **iOS Source (Source iOS)**, sélectionnez `Header file (Fichier d'en-tête)`.
-	* Nommez-le `BridgingHeader.h`. 
+	* Nommez-le `BridgingHeader.h`.
 	* Ajoutez des importations à votre en-tête de pontage :
 
 	```Objective-C
@@ -172,10 +171,13 @@ l'application* sont affichées.
 ```
 	* Cliquez sur votre projet dans Xcode et sélectionnez l'onglet **Build Settings (Paramètres de génération)**.
 	* Recherchez **Objective-C Bridging Header**.
-	* Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`. 
+	* Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
-3. Initialisez le logiciel SDK client.	Remplacez applicationRoute et applicationGUID par les valeurs issues de **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+3. Initialisez le logiciel SDK client.	Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
+**Route** et
+**Identificateur global unique de l'application** de la section **Options pour application mobile**
+dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C**
 
@@ -192,9 +194,8 @@ l'application* sont affichées.
 	 							backendGUID: "applicationGUID")
 	```
 
-
-
-1. Signalez au SDK Facebook l'activation de l'appli et enregistrez le gestionnaire d'authentification Facebook en ajoutant le code suivant à la méthode `application:didFinishLaunchingWithOptions` dans le délégué de votre appli. Entrez ce code juste après avoir initialisé l'instance IMFClient.
+1. Signalez au SDK Facebook l'activation de l'application et enregistrez le gestionnaire d'authentification Facebook en ajoutant le code suivant à la méthode
+`application:didFinishLaunchingWithOptions` dans votre délégué d'application. Entrez ce code juste après avoir initialisé l'instance IMFClient.
 
 	**Objective-C**
 
@@ -240,9 +241,10 @@ Lorsque le SDK client est initialisé et que le gestionnaire d'authentification 
 
 ### Avant de commencer
 {: #facebook-auth-ios-testing-before}
-Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](protecting-resources.html).
+Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Ouvrez l'URL suivante : `http://{appRoute}/protected`.
+1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Ouvrez l'URL suivante :
+`http://{applicationRoute}/protected`.
 Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
@@ -291,6 +293,5 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 
 1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Facebook pour l'authentification.
 
-1. 	Lorsque votre demande aboutit, la sortie suivante figure dans la console Xcode :
-
+1. 	Si votre demande aboutit, la sortie suivante s'affiche dans la console Xcode :
 	![image](images/ios-facebook-login-success.png)

@@ -1,17 +1,24 @@
+---
+
+copyright:
+  años: 2015, 2016
+  
+---
+
 # Habilitación, configuración y uso del registrador
 {: #enable-logger}
 
-El SDK del cliente de {{site.data.keyword.amashort}} proporciona una infraestructura de registro que es similar a otras infraestructuras que es posible que conozca, como `java.util.logging` o `log4j`. La infraestructura de registro admite varias instancias de registrador por paquete, diferentes niveles de registro, captura de los seguimientos de pila en caso de bloqueo de la aplicación y más. 
+El SDK del cliente de {{site.data.keyword.amashort}} proporciona una infraestructura de registro que es similar a otras infraestructuras que es posible que conozca, como `java.util.logging` o `log4j`. La infraestructura de registro admite varias instancias de registrador por paquete, diferentes niveles de registro, captura de los seguimientos de pila en caso de bloqueo de la aplicación y más.
 
-También puede configurar que los datos de registro persistan en un almacén local, que pueda enviarse al servidor de {{site.data.keyword.amashort}} a petición.
+También puede configurar que los datos de registro persistan en un almacén local, que pueda enviarse al servicio de {{site.data.keyword.amashort}} a petición.
 
 
 La infraestructura de registro del SDK del cliente de {{site.data.keyword.amashort}} admite los siguientes niveles de registro, que aparecen de menos a más detallados, con las directrices de uso recomendadas:
 
-* `FATAL`: se usa para bloqueos no recuperables. El nivel FATAL se reserva para errores no recuperables de registro, que se muestran a los usuarios como un bloqueo de la aplicación. 
+* `FATAL`: se usa para bloqueos no recuperables. El nivel FATAL se reserva para errores no recuperables de registro, que aparecen como "bloqueo de la aplicación" a los usuarios.
 * `ERROR`: se usa para excepciones o errores de protocolo de red no esperados.
 * `WARN`: para registrar avisos de uso que no se consideran errores críticos, como el uso de API obsoletas o la respuesta de red lenta.
-* `INFO`: se usa para notificar sucesos de inicialización y otros datos que pueden ser instrumentales.
+* `INFO`: se usa para notificar sucesos de inicialización y otros datos que pueden ser útiles. 
 * `DEBUG`: se usa para notificar sentencias de depuración para que los desarrolladores puedan resolver defectos de la aplicación.
 
 Asegúrese de haber inicializado el SDK del cliente de {{site.data.keyword.amashort}} antes de utilizar la infraestructura de registro. Los ejemplos siguientes demuestran el uso básico de una infraestructura de registro del SDK del cliente de {{site.data.keyword.amashort}}.
@@ -83,13 +90,13 @@ logger.fatal("fatal message");
 
 Encontrar los métodos siguientes en las clases del registrador:
 
-* `setCapture`: habilita o inhabilita que la información de registro persistente se envíe posteriormente al servicio de {{site.data.keyword.amashort}}. 
+* `setCapture`: habilita o inhabilita el envío posterior de la información de registro persistente al servicio de {{site.data.keyword.amashort}}. 
 * `setLevel`: define el nivel mínimo de registro para guardar mensajes de registro.
 * `send`: envía registros persistentes al servicio de {{site.data.keyword.amashort}}.
 
-Por ejemplo, cuando la captura está en ON  el nivel de registro está configurado en FATAL, el registrador capturará excepciones no percibidas. A menudo, estas excepciones no percibidas aparecen como bloqueos de aplicación a los usuarios, pero no capturan ningún registro que conduzca al suceso de bloqueo. Como alternativa, un nivel más detallado garantiza que también se capturen los registros que llevan a una entrada FATAL del registrador, como WARN o ERROR. 
+Por ejemplo, cuando la captura está en ON y el nivel de registro está configurado en FATAL, el registrador capturará excepciones no percibidas. A menudo, estas excepciones no percibidas aparecen como bloqueos de aplicación a los usuarios, pero no capturan ningún registro que conduzca al suceso de bloqueo. Como alternativa, un nivel más detallado garantiza que también se capturen los registros que llevan a una entrada FATAL del registrador, como WARN o ERROR.
 
-**Nota:** en [SDK, ejemplos y referencias de API](sdks-samples-apis.html) encontrará referencias de la API del registrador. La API del registrador forma parte del Core del SDK del cliente de {{site.data.keyword.amashort}}. 
+**Nota:** en [SDK, ejemplos y referencias de API](sdks-samples-apis.html) encontrará referencias de la API del registrador. La API del registrador forma parte del Core del SDK del cliente de {{site.data.keyword.amashort}}.
 
 
 ## Ejemplo de uso

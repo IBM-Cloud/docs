@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Configurazione dell'SDK Android
 {: #getting-started-android}
 
@@ -48,8 +55,7 @@ Inizializza l'SDK passando i parametri context, applicationGUID e applicationRou
 
 1. Dalla pagina principale del dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sulla tua applicazione. Fai clic su **Opzioni mobili**. Per inizializzare l'SDK ti servono i valori rotta applicazione (**Application Route**) e GUID applicazione (**Application GUID**).
 
-2. Inizializza l'SDK client {{site.data.keyword.amashort}} nella tua applicazione Android. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
-
+2. Inizializza l'SDK client {{site.data.keyword.amashort}} nella tua applicazione Android.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
 <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	```Java
@@ -64,7 +70,7 @@ Inizializza l'SDK passando i parametri context, applicationGUID e applicationRou
 
 Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste al tuo backend mobile.
 
-1. Prova a inviare una richiesta a un endpoint protetto del tuo nuovo backend mobile. Nel tuo browser, apri il seguente URL: `http://{appRoute}/protected`. Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
+1. Prova a inviare una richiesta a un endpoint protetto del tuo nuovo backend mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected`. Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>L'endpoint `/protected` di un backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized` perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
 1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient`:

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Google を使用したユーザーの認証
 {: #google-auth}
 Google を ID プロバイダーとして使用してリソースを保護するように {{site.data.keyword.amashort}} サービスを構成することができます。それにより、モバイル・アプリケーション・ユーザーは、Google の資格情報を認証に使用できるようになります。

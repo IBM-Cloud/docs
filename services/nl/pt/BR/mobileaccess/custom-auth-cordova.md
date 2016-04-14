@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Configurando o {{site.data.keyword.amashort}} Client SDK para Cordova
 {: #custom-cordova}
 Configure seu aplicativo Cordova que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} Client SDK e conecte o aplicativo ao {{site.data.keyword.Bluemix}}.
@@ -5,26 +12,31 @@ Configure seu aplicativo Cordova que está usando autenticação customizada par
 
 ## Antes de Começar
 {: #before-you-begin}
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado. Seu app móvel também devem ser instrumentado com o {{site.data.keyword.amashort}} Client SDK. Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também devem ser instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
-ao {{site.data.keyword.amashort}}](getting-started.html)
- * [Configurando o Cordova SDK](getting-started-cordova.html)
- * [Usando um provedor de identidade customizado](custom-auth.html)
- * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
- * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
+ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Configurando o Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
+ * [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 ## Inicializando o {{site.data.keyword.amashort}} Client SDK
 {: #custom-cordova-sdk}
 Inicialize o SDK passando os parâmetros applicationGUID e applicationRoute.
 
-1. Obtenha os valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os valores Application Route e Application GUID são exibidos.
+1. Obtenha os valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os
+valores **Route** (`applicationRoute`) e
+**App GUID** (`applicationGUID`) são exibidos.
 1. Inicialize o Client SDK.
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- Substitua *applicationRoute* e *applicationGUID* pelos valores que estão no painel **Opções de dispositivo móvel** de seu aplicativo no painel do {{site.data.keyword.Bluemix_notm}}.
+ Substitua *applicationRoute* e *applicationGUID* pelos valores
+**Route** e **App GUID** no painel
+**Opções móveis** de seu aplicativo no painel
+{{site.data.keyword.Bluemix_notm}} dashboard.
 
 ## Interface do listener de autenticação
 {: #custom-cordva-auth}
@@ -114,7 +126,7 @@ Client 		// Access Client SDK will remain in a waiting-for-credentials state 		/
 ## Registrando um listener de autenticação customizado
 {: #custom-cordova-authreg}
 
-Depois de criar um listener de autenticação customizado, registre-o com `BMSClient` antes de iniciar sua utilização. Inclua o código a seguir no aplicativo. Chame esse código antes de enviar quaisquer solicitações para seus recursos protegidos.
+Depois de criar um listener de autenticação customizado, registre-o com `BMSClient` antes de iniciar sua utilização. Inclua o código a seguir no aplicativo.  Chame esse código antes de enviar quaisquer solicitações para seus recursos protegidos.
 
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
@@ -128,11 +140,12 @@ Após a inicialização do Client SDK e do registro de um AuthenticationListener
 
 ### Antes de Começar
 {: #custom-cordova-testing-before}
-Deve-se ter um aplicativo criado com o texto padrão do {{site.data.keyword.mobilefirstbp}} e ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
+Deve-se ter um aplicativo criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
 
 
-1. Envie uma solicitação para o terminal protegido de seu backend móvel no navegador, abrindo `http://{appRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
- O terminal `/protected` de um backend móvel criado com o texto padrão do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
+abrindo `{applicationRoute}/protected`, por exemplo,
+`http://my-mobile-backend.mybluemix.net/protected`.O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar o AuthenticationListener customizado.
 

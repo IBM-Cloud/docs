@@ -1,3 +1,7 @@
+---
+copyright :
+  années : 2015, 2016
+---
 # Utilisation d'IMFURLProtocol dans les applications iOS
 {: #imfurl}
 Dans certains scénarios avancés, il peut être impossible d'utiliser la classe `IMFResourceRequest` pour envoyer des demandes à des ressources protégées, par exemple lorsque la demande est envoyée par un code provenant d'un autre éditeur. Une solution consiste à utiliser l'API `IMFURLProtocol` avec l'appel standard `NSURLRequest (NSMutableURLRequest)`.

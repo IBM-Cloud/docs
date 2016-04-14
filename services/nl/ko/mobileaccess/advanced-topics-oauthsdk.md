@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+  
+---
+
 # 백엔드 간 통신
 {: #backend-comm}
 
@@ -46,7 +53,8 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// Add the obtained authHeader to request you want to send to a protected resource
+	// In the request that you want to send to the protected resource, 
+	// add the authHeader value.
 
 	request.headers.Authorization = authHeader;
 

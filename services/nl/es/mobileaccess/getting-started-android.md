@@ -1,7 +1,14 @@
+---
+
+copyright:
+  años: 2015, 2016
+  
+---
+
 # Configuración del SDK de Android
 {: #getting-started-android}
 
-Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos. 
+Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -14,12 +21,12 @@ Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyw
 
 El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, un gestor de dependencias para proyectos de Android. Gradle descarga automáticamente los artefactos desde los repositorios y los pone a disposición para la aplicación de Android.
 
-1. Cree un proyecto de Android Studio o abra uno ya existente. 
+1. Cree un proyecto de Android Studio o abra uno ya existente.
 
 1. Abra el archivo `build.gradle`.
-**Sugerencia**: es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el proyecto y para módulo de la aplicación. Utilice el archivo del módulo de la aplicación. 
+**Sugerencia**: es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el proyecto y para módulo de la aplicación. Utilice el archivo del módulo de la aplicación.
 
-1. Busque la sección de **dependencias** en el archivo `build.gradle`. Añada una dependencia de compilación para el SDK del cliente de {{site.data.keyword.amashort}}:
+1. Busque la sección de **dependencias** en el archivo `build.gradle`.  Añada una dependencia de compilación para el SDK del cliente de {{site.data.keyword.amashort}}:
 
 	```Gradle
 	dependencies {
@@ -43,15 +50,16 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, u
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
 
-Inicialice el SDK pasando los parámetros de contexto, applicationGUID y applicationRoute al método `initialize`. 
+Inicialice el SDK pasando los parámetros de contexto, applicationGUID y applicationRoute al método `initialize`.
 
 
-1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK. 
+1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
 
-2. Inicialice el SDK del cliente de {{site.data.keyword.amashort}} en la aplicación de Android. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
-
+2. Inicialice el SDK del cliente de {{site.data.keyword.amashort}} en la aplicación de Android.  Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 <br/>
-Sustituya *applicationRoute* y *applicationGUID* con los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 	```Java
+Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+
+	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID");
@@ -63,9 +71,9 @@ Sustituya *applicationRoute* y *applicationGUID* con los valores de **Opciones m
 
 Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes al programa de fondo móvil.
 
-1. Intente enviar una solicitud a un punto final protegido del nuevo programa de fondo móvil. En el navegador, abra el URL siguiente: `http://{RutaApp}/protected`.
-Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
+1. Intente enviar una solicitud a un punto final protegido del nuevo programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+
 1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
 	```Java

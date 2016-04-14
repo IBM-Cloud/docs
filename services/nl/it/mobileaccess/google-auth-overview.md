@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Utilizzo di Google per autenticare gli utenti
 {: #google-auth}
 Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Google come provider di identità. I tuoi utenti dell'applicazione mobile possono quindi utilizzare le loro credenziali Google per l'autenticazione.

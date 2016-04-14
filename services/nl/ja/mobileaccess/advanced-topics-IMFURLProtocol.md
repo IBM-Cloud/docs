@@ -1,3 +1,7 @@
+---
+copyright:
+  years: 2015, 2016
+---
 # iOS アプリケーションでの IMFURLProtocol の使用
 {: #imfurl}
 高機能のケースでは、保護リソースに要求を送信するために `IMFResourceRequest` クラスを使用できないことがあります (例えば、何らかのサード・パーティー・コードによって保護リソースに要求が送信される場合など)。考えられる解決策の 1 つは、標準 `NSURLRequest (NSMutableURLRequest)` 呼び出しと一緒に `IMFURLProtocol` API を使用することです。

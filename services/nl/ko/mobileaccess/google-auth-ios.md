@@ -1,10 +1,19 @@
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
 # iOS 앱에서 Google 인증 사용
 {: #google-auth-ios}
 
+**팁:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. Swift SDK 사용에 대한 지시사항은 [iOS 앱(Swift SDK)에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)을 참조하십시오.
+
 ## 시작하기 전에
 {: #google-auth-ios-before}
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](getting-started.html) 및 [iOS SDK 설정](getting-started-ios.html)을 참조하십시오.   
-* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
+* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Objective-C SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)을 참조하십시오.  
+* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 
 ## iOS 플랫폼에 대한 Google 프로젝트 구성
@@ -25,9 +34,9 @@ ID 제공자로 Google 사용을 시작하려면 Google 클라이언트 ID를 �
 
 1. 이 시점에 애플리케이션 유형 선택사항이 표시됩니다. **iOS**를 선택하십시오. 
 
-1. iOS 클라이언트에 대한 의미있는 이름을 지정하십시오. iOS 애플리케이션의 번들 ID를 지정하십시오. iOS 애플리케이션의 번들 ID를 찾으려면, `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오. 
+1. iOS 클라이언트에 대한 의미있는 이름을 지정하십시오. iOS 애플리케이션의 번들 ID를 지정하십시오. iOS 애플리케이션의 번들 ID를 찾으려면 `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오.
 
-1. 새 iOS 클라이언트 ID를 기록해 놓으십시오. {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 설정할 때 값이 필요합니다. 
+1. 새 iOS 클라이언트 ID를 기록해 놓으십시오. {{site.data.keyword.Bluemix}}에서 애플리케이션을 설정할 때 값이 필요합니다. 
 
 
 ## Google 인증을 위해 {{site.data.keyword.amashort}} 구성
@@ -35,56 +44,48 @@ ID 제공자로 Google 사용을 시작하려면 Google 클라이언트 ID를 �
 
 iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다. 
 
-1. {{site.data.keyword.Bluemix}} 대시보드를 열고 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 클릭하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 *applicationRoute* 및 *applicationGUID* 값을 기록해 두십시오. SDK를 초기화하는 데 이 값이 필요합니다. 
+1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 이 값이 필요합니다. 
 
-1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. 
+1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
-1. {{site.data.keyword.amashort}} 대시보드로 이동됩니다. 
+1. **Google** 타일을 클릭하십시오.
 
-1. **인증 설정**을 클릭하십시오. 
-
-1. **Google**을 클릭하십시오. 
-
-1. 이전 단계에서 확보한 iOS용 클라이언트 ID를 지정하고 **저장**을 클릭하십시오. 
+1. **iOS용 애플리케이션 ID**에서 Android용 iOS 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
 
 ## iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #google-auth-ios-sdk}
 
-### Cocoapods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #google-auth-ios-sdk-cocoapods}
 
-1. iOS 프로젝트로 이동하십시오. 
+1. iOS 프로젝트로 이동하십시오.
 
-1. `Podfile`을 편집하고 필요한 대상에 아래 행을 추가하십시오. 
+1. `Podfile`을 편집하여 다음 행을 추가하십시오.
 
 	```
 	pod 'IMFGoogleAuthentication'
 	```
 
-1. `Podfile`을 저장하고 명령행에서 `pod install`을 실행하십시오. 
+1. `Podfile`을 저장하고 명령행에서 `pod install`을 실행하십시오. CocoaPods가 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트를 확인할 수 있습니다. 
 
-1. Cocoapods는 추가된 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트를 확인할 수 있습니다. 
+**중요**: 이제 CocoaPods에서 생성한 `xcworkspace` 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다.   
 
-	> 이 시점부터 항상 CocoaPods에서 생성한 xcworkspace 파일을 사용하여 프로젝트 열어야 합니다. 일반적으로 이름은 {your-project-name}.xcworkspace입니다.   
-
-1. iOS 프로젝트 작업공간을 열려면 명령행에서 `open {your-project-name}.xcworkspace`를 실행하십시오. 
+1. 명령행에서 `open {your-project-name}.xcworkspace`를 실행하여 iOS 프로젝트 작업공간을 여십시오.
 
 ### Google 인증을 위해 iOS 프로젝트 구성
 {: #google-auth-ios-googleauth}
+`info.plist` 파일을 업데이트하여 Google 통합을 구성하십시오. `info.plist` 파일은 보통 Xcode 프로젝트의 `지원 파일` 폴더에 있습니다. 특성 목록 편집기에서 또는 문서 편집기를 사용하여 해당 파일을 편집할 수 있습니다.
 
-1. `info.plist` 파일을 찾으십시오. 이 파일은 보통 Xcode 프로젝트의 `지원 파일` 폴더에 있습니다. 
+* 다음 URL 스키마를 `info.plist` 파일에 추가하여 Google 통합을 구성하십시오.
+	![info.plist 파일](images/ios-google-infoplist-settings.png)
 
-1. 아래 두 개의 URL 스킴을 `info.plist` 파일에 추가하여 Google 통합을 구성하십시오. 
+	첫 번째 URL 스키마는 Google 개발자 콘솔에서 가져온 클라이언트 ID의 역방향 버전입니다. 예를 들어, 클라이언트 ID가 `123123-abcabc.apps.googleusercontent.com`이면 URL 스키마는 `com.googleusercontent.apps.123123-abcabc`입니다.
 
-	![이미지](images/ios-google-infoplist-settings.png)
+	두 번째 URL 스키마는 애플리케이션의 번들 ID입니다.
 
-	> 첫 번째 URL 스키마는 Google 개발자 콘솔에서 가져온 클라이언트 ID의 역방향입니다. 예를 들어, 클라이언트 ID가 `123123-abcabc.apps.googleusercontent.com`인 경우 URL 스키마는 `com.googleusercontent.apps.123123-abcabc`여야 합니다.
-
-	> 두 번째 URL 스키마는 애플리케이션의 번들 ID입니다. 
-
-1. 또는 `info.plist` 파일을 마우스 오른쪽 단추로 클릭하고 `다른 이름으로 열기` -> `소스 코드`를 선택한 다음 아래 XML을 추가하여 업데이트할 수 있습니다. 
+* 문서 편집기를 사용하십시오. `info.plist`를 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 열기 > 소스 코드**를 선택하십시오. 다음 XML을 파일에 추가하십시오.
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -108,51 +109,56 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 	</array>
 
 	```
-	> 위에 설명된 대로 두 가지 URL 스키마를 업데이트하십시오.
+	두 URL 스키마를 모두 업데이트하십시오.
 
-	> `info.plist`의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 추가 정보는 Google 문서의 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start) 섹션을 참조하십시오.
+	**중요**: `info.plist` 파일의 기존 특성을 대체하지 마십시오. 중첩된 특성이 있는 경우 특성을 수동으로 병합해야 합니다. 자세한 정보는 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start)를 참조하십시오.
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #google-auth-ios-initialize}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용할 수 있으려면 applicationGUID 및 applicationRoute 매개변수를 전달하여 초기화해야 합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 applicationGUID 및 applicationRoute 매개변수를 전달하여 해당 클라이언트 SDK를 초기화하십시오.
 
-> 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다.
+필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지를 열고 이전에 작성된 앱을 클릭하십시오. 이 동작은 모바일 백엔드 앱 대시보드를 엽니다. 
+1. applicationGUID 및 applicationRoute 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. 애플리케이션 라우트 및
+애플리케이션 GUID 값이 표시됩니다.
 
-2. 대시보드의 오른쪽 맨 위에 있는 `모바일 옵션`을 클릭하십시오. 애플리케이션 라우트 및 애플리케이션 GUID 값이 표시됩니다. 
+1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 다음 헤더를 추가하십시오.
 
-1. 아래 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 
+	Objective-C:
+                    
 
-	Objective-C 애플리케이션:
-
-	```Objective-C
-	#import <IMFCore/IMFCore.h>
-	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
-	```
-
-	Swift 애플리케이션:
-
-	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C를 사용하여 구현되므로 이를 사용하려면 Swift 프로젝트에 브리징 헤더를 추가해야 할 수 있습니다. 
-
-	* Xcode에서 마우스 오른쪽 단추로 프로젝트를 클릭하고 `새 파일...`을 선택하십시오. 
-	* `iOS 소스` 카테고리에서 `헤더 파일`을 선택하십시오. 
-	* `BridgingHeader.h`로 이름을 지정하십시오. 
-	* 아래 가져오기를 브리징 헤더에 추가하십시오. 
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
-	* Xcode에서 프로젝트를 클릭하고 `빌드 설정` 탭을 선택하십시오. 
-	* `Objective-C 브리징 헤더`를 검색하십시오. 
-	* 값을 `BridgingHeader.h` 파일의 위치로 설정하십시오(예: `$(SRCROOT)/MyApp/BridgingHeader.h`). 
-	* 프로젝트를 빌드하여 Xcode가 브리징 헤더를 선택 중인지 확인하십시오. 
 
-3. 클라이언트 SDK를 초기화하려면 아래 코드를 사용하십시오. 
+	Swift:
 
-	Objective-C 애플리케이션:
+
+	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C로 구현됩니다. SDK를 사용하려면 브리징 헤더를 사용자의 Swift 프로젝트에 추가해야
+할 수도 있습니다. 
+
+	1. Xcode에서 마우스 오른쪽 단추로 프로젝트를 클릭하고 **새 파일...**을 선택하십시오. 
+	2. **iOS 소스** 카테고리에서 **헤더 파일**을 선택하십시오. 
+	3. `BridgingHeader.h`로 이름을 지정하십시오. 
+	4. 다음 가져오기를 브리징 헤더에 추가하십시오.
+
+	```Objective-C
+	#import <IMFCore/IMFCore.h>
+	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
+	```
+	5. Xcode에서 프로젝트를 클릭하고 **빌드 설정** 탭을 선택하십시오.
+	6. `Objective-C Bridging Header`를 검색하십시오. 
+	7. 값을 `BridgingHeader.h` 파일의 위치로 설정하십시오(예: `$(SRCROOT)/MyApp/BridgingHeader.h`).
+	8. 프로젝트를 빌드하여 Xcode가 브리징 헤더를 선택 중인지 확인하십시오. 
+
+3. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. *applicationRoute* 및 *applicationGUID*를 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+
+	Objective-C:
+                    
+
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -160,32 +166,38 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift 애플리케이션:
+	Swift:
+
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
 
-	> applicationRoute 및 applicationGUID를 모바일 옵션에서 확보한 값으로 대체하십시오. 
 
-1. 아래 코드를 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 추가하여 Google 인증 핸들러를 등록하십시오. IMFClient를 초기화한 후에 바로 수행하는 것이 좋습니다. 
 
-	Objective-C 애플리케이션:
+1. 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Google 인증 핸들러를 등록하십시오. IMFClient를 초기화한 후에 바로 이 코드를 추가하십시오.
+
+	Objective-C:
+                    
+
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 	```
 
-	Swift 애플리케이션:
+	Swift:
+
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 	```
 
-1. 아래 코드를 앱 위임자에 추가하십시오. 
+1. 다음 코드를 앱 위임자에 추가하십시오. 
 
-	Objective-C 애플리케이션:
+	Objective-C:
+                    
+
 
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -203,7 +215,8 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 	}
 	```
 
-	Swift 애플리케이션:
+	Swift:
+
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -225,10 +238,11 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 
 ### 시작하기 전에
 {: #google-auth-ios-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [자원 보호](protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우
+[자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 
-1. `http://{appRoute}/protected`를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송해 보십시오. 예: `http://my-mobile-backend.mybluemix.net/protected`
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
 
 1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측된 모바일 애플리케이션만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
 

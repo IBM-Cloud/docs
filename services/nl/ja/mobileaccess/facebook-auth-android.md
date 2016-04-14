@@ -1,12 +1,19 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Android アプリで Facebook 認証を使用可能にする
 {: #facebook-auth-android}
 Android アプリケーションで Facebook をID プロバイダーとして使用するには、Android プラットフォームを追加して Facebook アプリケーション用に構成する必要があります。
 
 ## 開始する前に
 {: #facebook-auth-android-before}
- * {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](getting-started.html)および [Android SDK のセットアップ](getting-started-android.html)を参照してください。  
- * {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
- * Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](facebook-auth-overview.html#facebook-appID)を参照してください。
+ * {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)を参照してください。  
+ * {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+ * Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 
 ## Android プラットフォーム用の Facebook アプリケーションの構成
@@ -32,7 +39,7 @@ Android アプリケーションで Facebook を ID プロバイダーとして�
 	</activity>
 	```
 
-1. Facebook でアプリケーションの認証性を確実にするためには、ご使用のデベロッパー証明書 SHA1 のハッシュを指定する必要があります。
+1. Facebook でアプリケーションの認証性を確保するためには、ご使用のデベロッパー証明書 SHA1 のハッシュを指定する必要があります。
 
 	**Android セキュリティーの詳細:** Android OS では、Android デバイスにインストールされたすべてのアプリケーションがデベロッパー証明書によって署名されている必要があります。Android アプリケーションのビルドは、デバッグ・モードとリリース・モードの 2 つのモードで行えます。<br/>
   デバッグ・モードとリリース・モードには、異なる証明書を使用してください。デバッグ・モードで Android アプリケーションの署名に使用する証明書は Android SDK にバンドルされています。Android SDK は通常、Android Studio によって自動的にインストールされます。作成したアプリを Google Play ストアでリリースする場合、通常自身で生成する別の証明書を使ってアプリに署名する必要があります。<br/>Facebook のキー・ハッシュは 2 セット入力することができます。1 つはデバッグ証明書を使用してデバッグ・モードでビルドされたアプリケーションのキー・ハッシュで、もう 1 つはリリース証明書を使用してリリース・モードでビルドされたアプリケーションのキー・ハッシュです。詳しくは、[signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html) を参照してください。
@@ -57,14 +64,13 @@ Android アプリケーションで Facebook を ID プロバイダーとして�
 {: #facebook-auth-android-mca}
 Facebook Application ID を取得し、Android クライアントに対して機能するよう Facebook アプリケーションを構成したら、{{site.data.keyword.amashort}} ダッシュボードで Facebook 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix}} ダッシュボードを開き、{{site.data.keyword.Bluemix_notm}} アプリケーションをクリックします。
+1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
 
-1. **「モバイル・オプション」**をクリックし、*applicationRoute* と *applicationGUID* の値をメモします。この後のステップで、これらの値が必要になります。
+1. **「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。SDK を初期化する際に、これらの値が必要になります。
 
-1. {{site.data.keyword.amashort}} タイルをクリックします。
-{{site.data.keyword.amashort}} ダッシュボードが表示されます。
+1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 
-1. **「認証のセットアップ」>「Facebook」**をクリックします。
+1. **「Facebook」**タイルをクリックします。
 
 1. Facebook Application ID を指定して**「保存」**をクリックします。
 
@@ -143,9 +149,9 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 	</application>
 ```
 
-1. Client SDK を初期化して Facebook 認証マネージャーを登録します。コンテキスト、applicationGUID、および applicationRoute パラメーターを渡して {{site.data.keyword.amashort}} Client SDK を初期化します。<br/>
- 初期化コードを入れる場所は一般的に (必須ではありませんが)、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。<br/>
- applicationRoute および applicationGUID を、Bluemix ダッシュボード内のご使用のアプリのメインページにある **「モバイル・オプション」** メニューの値と置き換えてください。
+1. Client SDK を初期化して Facebook 認証マネージャーを登録します。コンテキスト、アプリ GUID (`applicationGUID`)、および経路 (`applicationRoute`) の各パラメーターを渡すことによって、{{site.data.keyword.amashort}} Client SDK を初期化します。<br/>
+初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。<br/>
+*applicationRoute* および *applicationGUID* を、Bluemix ダッシュボード内のご使用のアプリのメインページにある**「モバイル・オプション」**メニューの**「経路」**および**「アプリ GUID」**の値と置き換えてください。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -171,9 +177,9 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 
 ### 開始する前に
 {: #facebook-auth-android-testing-before}
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](protecting-resources.html)を参照してください。
+{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
-1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントに要求を送信してみてください。 次の URL を開きます。`http://{appRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントに要求を送信してみてください。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
 1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化し、`FacebookAuthenticationManager` を登録した後、次のコードを追加します。
 

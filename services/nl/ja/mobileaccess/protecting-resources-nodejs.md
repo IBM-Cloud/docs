@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # {{site.data.keyword.amashort}} を使用した Node.js リソースの保護
 {: #protecting-resources-nodejs}
 
@@ -6,7 +13,7 @@
 ### 開始する前に
 {: #before-you-begin}
 
-* {{site.data.keyword.Bluemix_notm}} での Node.js アプリケーションの開発に精通している必要があります。詳細情報については、[SDK for Node.js を使用したアプリの作成](https://www.{DomainName}/docs/starters/nodejs/index.html)を参照してください。
+* {{site.data.keyword.Bluemix_notm}} での Node.js アプリケーションの開発に精通している必要があります。詳細情報については、[SDK for Node.js を使用したアプリの作成](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)を参照してください。
 * {{site.data.keyword.amashort}} Server SDK では、Node.js サーバーが `Express` フレームワークを使用して実装されていることが要求されます。`Express` フレームワークを使用するフレームワークは、LoopBack など、他に複数あります。{{site.data.keyword.amashort}} Server SDK は、それらのどのフレームワークでも使用できます。Express フレームワークの詳細情報については、[Expressjs.com](http://expressjs.com/) を参照してください。
 
 ### {{site.data.keyword.amashort}} Server SDK について

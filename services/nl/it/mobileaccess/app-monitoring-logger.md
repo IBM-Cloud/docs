@@ -1,17 +1,26 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Abilitazione, configurazione e utilizzo del Logger
 {: #enable-logger}
 
 L'SDK client {{site.data.keyword.amashort}} fornisce un framework di registrazione in log simile ad altri framework di log con cui potresti avere dimestichezza, come `java.util.logging` o `log4j`. Il framework di registrazione in log supporta, tra l'altro, più istanze logger per pacchetto, diversi livelli di log e l'acquisizione di tracce di stack per un arresto anomalo di applicazioni.
 
-Puoi anche configurare che i dati registrati in log vengano memorizzati in modo persistente in un archivio locale, che può essere inviato al servizio {{site.data.keyword.amashort}} su richiesta.
+Puoi anche configurare che i dati registrati in log vengano memorizzati in modo persistente in un archivio locale e che è quindi possibile inviare al servizio {{site.data.keyword.amashort}} su richiesta.
 
 Il framework di registrazione in log dell'SDK client {{site.data.keyword.amashort}} supporta i seguenti livelli di log, elencati da quello meno dettagliato a quello più dettagliato, con le linee guida di utilizzo consigliato:
 
-* `FATAL` - utilizzalo per i blocchi o gli arresti anomali irreversibili. Il livello FATAL è riservato per la registrazione degli errori irreversibili, che si presentano agli utenti come un arresto anomalo dell'applicazione
-* `ERROR` - utilizzalo per le eccezioni impreviste o gli errori di protocollo di rete imprevisti
-* `WARN` - per registrare le avvertenze di utilizzo che non sono considerate degli errori critici, come ad esempio l'utilizzo di API dichiarate obsolete o una risposta di rete lenta
-* `INFO` - utilizzalo per la notifica di eventi di inizializzazione e altri dati che potrebbero essere utili
-* `DEBUG` - utilizzalo per la notifica delle istruzioni di debug per aiutare gli sviluppatori a risolvere i difetti delle applicazioni
+* `FATAL` - utilizzalo per i blocchi o gli arresti anomali irreversibili. Il livello
+FATAL è riservato per la registrazione degli errori irreversibili, che si
+presentano agli utenti come un arresto anomalo dell'applicazione.
+* `ERROR` - utilizzalo per le eccezioni impreviste o gli errori di protocollo di rete imprevisti.
+* `WARN` - per registrare le avvertenze di utilizzo che non sono considerate degli errori critici, come ad esempio l'utilizzo di API dichiarate obsolete o una risposta di rete lenta.
+* `INFO` - utilizzalo per la notifica di eventi di inizializzazione e altri dati che potrebbero essere utili.
+* `DEBUG` - utilizzalo per la notifica delle istruzioni di debug per aiutare gli sviluppatori a risolvere i difetti delle applicazioni.
 
 Assicurati di avere inizializzato l'SDK client {{site.data.keyword.amashort}} prima di utilizzare il framework di registrazione in log. I seguenti esempi illustrano l'utilizzo di base di un framework di registrazione in log dell'SDK client {{site.data.keyword.amashort}}.
 
@@ -84,9 +93,9 @@ logger.fatal("fatal message");
 
 Puoi trovare i seguenti metodi aggiuntivi nelle classi Logger:
 
-* `setCapture` - abilita o disabilita la persistenza delle informazioni di log da inviare successivamente al servizio {{site.data.keyword.amashort}}
-* `setLevel` - imposta il livello di log minimo per scrivere i messaggi di log
-* `send` - invia i log memorizzati in modo persistente al servizio {{site.data.keyword.amashort}}
+* `setCapture` - abilita o disabilita la memorizzazione in modo persistente delle informazioni di log da inviare successivamente al servizio {{site.data.keyword.amashort}}.
+* `setLevel` - imposta il livello di log minimo per salvare i messaggi di log.
+* `send` - invia i log memorizzati in modo persistente al servizio {{site.data.keyword.amashort}}.
 
 Ad esempio, quando l'acquisizione è attiva (ON) e il livello del logger è configurato
 su FATAL, il logger acquisisce le eccezioni non rilevate. Le eccezioni non rilevate spesso
@@ -105,7 +114,7 @@ I seguenti frammenti di codice mostrano un utilizzo di Logger di esempio:
 {: #enable-logger-sample-android}
 
 ```Java
-// Abilita la persistenza dei log
+// Abilita la memorizzazione in modo persistente dei log
 Logger.setCapture(true);
 
 // Imposta il livello di log minimo da scrivere e memorizzare in modo persistente
@@ -127,7 +136,7 @@ Logger.send();
 {: #enable-logger-sample-objectc}
 
 ```Objective-C
-// Abilita la persistenza dei log
+// Abilita la memorizzazione in modo persistente dei log
 [IMFLogger setCapture:YES];
 
 // Avvia l'acquisizione delle eccezioni non rilevate
@@ -152,7 +161,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Abilita la persistenza dei log
+// Abilita la memorizzazione in modo persistente dei log
 IMFLogger.setCapture(true)
 
 // Avvia l'acquisizione delle eccezioni non rilevate
@@ -178,7 +187,7 @@ IMFLogger.send()
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
-// Abilita la persistenza dei log
+// Abilita la memorizzazione in modo persistente dei log
 MFPLogger.setCapture(true);
 
 // Imposta il livello di log minimo da scrivere e memorizzare in modo persistente

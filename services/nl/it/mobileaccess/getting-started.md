@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Introduzione
 {: #getting-started}
 Per iniziare a utilizzare {{site.data.keyword.amashort}}, puoi aggiungere il servizio {{site.data.keyword.amashort}} a
@@ -6,7 +13,7 @@ un'applicazione {{site.data.keyword.Bluemix}} oppure puoi creare una nuova appli
 ## Creazione di un'istanza del servizio {{site.data.keyword.amashort}}
 {: #service-instance}
 
-Puoi creare una nuova istanza di un servizio {{site.data.keyword.amashort}} dal catalogo {{site.data.keyword.Bluemix}}. Se non utilizzi il contenitore tipo per creare un nuovo backend mobile, devi configurare l'SDK server sul tuo backend esistente.
+Puoi creare una nuova istanza di un servizio {{site.data.keyword.amashort}} dal catalogo {{site.data.keyword.Bluemix}}.  Se non utilizzi il contenitore tipo per creare un nuovo backend mobile, devi configurare l'SDK server sul tuo backend esistente.
 
 
   * **Nuova applicazione**: le istruzioni nelle seguenti sezioni descrivono come creare una nuova applicazione che crea un backend mobile e protegge con l'SDK server {{site.data.keyword.amashort}}. Fai clic sul contenitore tipo **MobileFirst Services Starter** per creare una nuova applicazione
@@ -29,8 +36,9 @@ gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli 
 {: #next-steps}
 Diversi endpoint dell'applicazione Node.js da te creata con il contenitore tipo sono protetti con {{site.data.keyword.amashort}}. Per ulteriori informazioni sull'applicazione di backend mobile predefinita, vedi [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
-Puoi configurare la tua applicazione mobile per utilizzare l'SDK {{site.data.keyword.amashort}}. Dopo che hai configurato l'SDK, puoi iniziare a configurare l'autenticazione e il monitoraggio nella tua applicazione. Attieniti alle istruzioni per la tua piattaforma di sviluppo mobile:
+Puoi configurare la tua applicazione mobile per utilizzare l'SDK {{site.data.keyword.amashort}}.  Dopo che hai configurato l'SDK, puoi iniziare a configurare l'autenticazione e il monitoraggio nella tua applicazione.  Attieniti alle istruzioni per la tua piattaforma di sviluppo mobile:
 
 * [Android](getting-started-android.html)
-* [iOS](getting-started-ios.html)
+* [iOS (SDK Swift)](getting-started-ios.html)
+* [iOS (SDK Objective-C)](getting-started-ios.html)
 * [Cordova](getting-started-cordova.html)

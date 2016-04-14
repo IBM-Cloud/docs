@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # 入門
 {: #getting-started}
 {{site.data.keyword.amashort}} の使用を開始するには、{{site.data.keyword.amashort}} サービスを既存の {{site.data.keyword.Bluemix}} アプリケーションに追加するか、ボイラープレートを使用して新しいアプリを作成することができます。  
@@ -29,5 +36,6 @@ MobileFirst Services Starter を使用すると、IBM {{site.data.keyword.Bluemi
 {{site.data.keyword.amashort}} SDK を使用するようにモバイル・アプリをセットアップすることができます。SDK をセットアップしたら、ご使用のアプリでの認証およびモニタリングのセットアップを開始できます。ご使用のモバイル開発プラットフォーム用の説明に従ってください。
 
 * [Android](getting-started-android.html)
-* [iOS](getting-started-ios.html)
+* [iOS (Swift SDK)](getting-started-ios.html)
+* [iOS (Objective-C SDK)](getting-started-ios.html)
 * [Cordova](getting-started-cordova.html)

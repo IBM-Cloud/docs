@@ -1,6 +1,13 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Facebook 資格情報を使用したユーザーの認証
 {: #facebook-auth-overview}
-{{site.data.keyword.amashort}} サービスを構成して、Facebook を ID プロバイダーとして使用することでリソースを保護することができます。モバイル・アプリケーション・ユーザーは、自身の Facebook 資格情報を認証に使用できます。
+Facebook を ID プロバイダーとして使用してリソースを保護するように、{{site.data.keyword.amashort}} サービスを構成できます。モバイル・アプリケーション・ユーザーは、自身の Facebook 資格情報を認証に使用できます。
 
 **重要**: Facebook SDK を別途インストールする必要はありません。Facebook SDK は、{{site.data.keyword.amashort}} Client SDK を構成する際に依存関係マネージャーによって自動的にインストールされます。
 
@@ -42,5 +49,6 @@ iOS アプリケーションと Android アプリケーションの選択肢が�
 {: #next-steps}
 
 * [Android アプリで Facebook 認証を使用可能にする](facebook-auth-android.html)
-* [iOS アプリで Facebook 認証を使用可能にする](facebook-auth-ios.html)
+* [iOS アプリで Facebook 認証を使用可能にする (Swift SDK)](facebook-auth-ios-swift-sdk.html)
+* [iOS アプリで Facebook 認証を使用可能にする (Objective-C SDK)](facebook-auth-ios.html)
 * [Cordova アプリで Facebook 認証を使用可能にする](facebook-auth-cordova.html)

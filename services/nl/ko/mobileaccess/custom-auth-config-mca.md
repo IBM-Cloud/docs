@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+  
+---
+
 # 사용자 정의 인증을 사용하도록 {{site.data.keyword.amashort}} 구성
 {: #custom-dash}
 모바일 앱에서 사용자 정의 인증을 사용하려면 사용자 정의 ID 제공자의
@@ -15,11 +22,13 @@
 {: #custom-dash-config}
 사용자 정의 인증을 구성하려면 {{site.data.keyword.amashort}} 대시보드를 사용하십시오. 
 
-1. {{site.data.keyword.amashort}} 대시보드로 이동하십시오. {{site.data.keyword.Bluemix_notm}}
-대시보드에서 사용 중인 애플리케이션을 클릭하십시오. {{site.data.keyword.amashort}}
-타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
+1. {{site.data.keyword.Bluemix}} 대시보드에서 앱을 여십시오. 
 
-1. **인증 설정 > 사용자 정의**를 클릭하십시오. 
+1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 이 값이 필요합니다. 
+
+1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
+
+1. **사용자 정의** 타일을 클릭하십시오.
 
 1. 사용자 정의 ID 제공자의 **영역 이름**과 **기본 URL**을
 입력하고 변경사항을 저장하십시오. 

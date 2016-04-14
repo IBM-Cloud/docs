@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Usando o Google para autenticar usuários
 {: #google-auth}
 É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos, usando o Google como provedor de identidade. Seu aplicativo móvel pode então usar suas credenciais do Google para autenticação.
@@ -15,7 +22,7 @@ Veja o diagrama simplificado a seguir para entender como o {{site.data.keyword.a
 1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação aos seus recursos de backend que são protegidos com o
 {{site.data.keyword.amashort}} Server SDK.
 * O {{site.data.keyword.amashort}} Server SDK detecta a solicitação não autorizada e retorna um código HTTP 401 e um escopo de autorização.
-* O {{site.data.keyword.amashort}} Client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação. 
+* O {{site.data.keyword.amashort}} Client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação.
 * O {{site.data.keyword.amashort}} Client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e pede para emitir um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} solicita que o cliente primeiro autentique com o Google fornecendo um desafio de autenticação.
 * O {{site.data.keyword.amashort}} Client SDK usa o SDK do Google para iniciar o processo de autenticação. Após uma autenticação bem-sucedida, o SDK do Google retorna um token de acesso do Google.

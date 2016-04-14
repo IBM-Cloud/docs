@@ -1,13 +1,19 @@
+---
+
+copyright :
+  années : 2015, 2016
+  
+---
+
 # Surveillance des applications
 {: #app-monitoring}
 
 Outre les fonctions de sécurité, {{site.data.keyword.amafull}} fournit également des fonctions de surveillance et d'analyse à vos applications mobiles. Le SDK client de {{site.data.keyword.amashort}} vous permet d'enregistrer les journaux client et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.amashort}}. Tous les événements de sécurité, tels que les réussites et les échecs d'authentification, qui se produisent dans le service {{site.data.keyword.amashort}} sont automatiquement journalisés.
 
-Lorsque les données ont été fournies à {{site.data.keyword.amashort}}, vous pouvez utiliser son tableau de bord de surveillance pour analyser les performances pour vos applications mobiles, de vos périphériques et de vos journaux client. Les informations sur les demandes que votre application envoie aux ressources qui sont protégées par
+Lorsque les données ont été fournies à {{site.data.keyword.amashort}}, vous pouvez utiliser le tableau de bord de surveillance de {{site.data.keyword.amashort}} pour analyser les performances pour vos applications mobiles, de vos périphériques et de vos journaux client. Les informations sur les demandes que votre application envoie aux ressources qui sont protégées par
 {{site.data.keyword.amashort}} sont enregistrées par défaut.
 
-Les données enregistrées automatiquement comprennent des informations telles que le nombre d'authentifications, les nouveaux périphériques et les nouveaux utilisateurs.
-En outre, vous pouvez configurer le SDK client de {{site.data.keyword.amashort}} pour signaler les informations suivantes :
+Les données enregistrées automatiquement comprennent des informations telles que le nombre d'authentifications, les nouveaux périphériques et les nouveaux utilisateurs. En outre, vous pouvez configurer le SDK client de {{site.data.keyword.amashort}} pour signaler les informations suivantes :
 
 ### Statistiques d'utilisation de vos applications mobiles
 {: #usage-stats}
