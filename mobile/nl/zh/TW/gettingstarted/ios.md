@@ -4,6 +4,7 @@
 
 # 開始使用 HelloWorld 範例
 {: #gettingstarted-ios}
+*前次更新：2016 年 1 月 28 日*
 如果您要開始使用新的 iOS 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動式應用程式連接到
 {{site.data.keyword.Bluemix}} 後端而不需鑑別。
 應用程式已安裝 SDK。當您準備好時，便可以取得想要在應用程式中使用的特定程式庫。
@@ -56,7 +57,7 @@ return true
 
 如需相關資訊，您也可以檢查除錯日誌。
 
-## 下一步：
+## 後續步驟：
 {: #next}
 如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱有關設定 {{site.data.keyword.Bluemix}} 服務的資訊。
    * [Mobile Client Access](../../services/mobileaccess/index.html)
@@ -65,10 +66,10 @@ return true
 # 相關鏈結
 
 ## 範例
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [HelloWorld 範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## SDK
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## API
    *

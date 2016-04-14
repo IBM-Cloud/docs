@@ -4,12 +4,13 @@
 
 # Introduzione all'esempio HelloWorld
 {: #gettingstarted-ios}
-Se desideri iniziare a lavorare con una nuova applicazione iOS, puoi utilizzare l'applicazione HelloWorld. Questa applicazione illustra come stabilire una connessione al tuo backend {{site.data.keyword.Bluemix}} da un'applicazione mobile senza autenticazione. Nell'applicazione è già installato l'SDK. Quando sei pronto, puoi ottenere le specifiche librerie
+*Ultimo aggiornamento: 28 gennaio 2016*
+Se vuoi iniziare a lavorare con una nuova applicazione iOS, puoi utilizzare l'applicazione HelloWorld. Questa applicazione illustra come stabilire una connessione al tuo backend {{site.data.keyword.Bluemix}} da un'applicazione mobile senza autenticazione. Nell'applicazione è già installato l'SDK. Quando sei pronto, puoi ottenere le specifiche librerie
     che desideri utilizzare nella tua applicazione.
 
 1. Crea il tuo backend mobile in {{site.data.keyword.Bluemix_notm}}.
 <ol>
-	<li>Nella sezione Contenitori tipo del catalogo {{site.data.keyword.Bluemix_notm}}, fare clic su **MobileFirst Services Starter**.</li>
+	<li>Nella sezione Contenitori tipo del catalogo {{site.data.keyword.Bluemix_notm}}, fai clic su **MobileFirst Services Starter**.</li>
     <li>Immetti un nome e un host per la tua applicazione e fai clic su **Crea**.</li>
     <li>Fai clic su **Fine**. </li>
 </ol>
@@ -71,10 +72,10 @@ Per informazioni su come ottenere l'SDK e integrarlo nella tua applicazione mobi
 # rellinks
 
 ## samples
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [Esempio HelloWorld](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## sdk
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
    *

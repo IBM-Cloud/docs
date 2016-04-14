@@ -2,10 +2,10 @@
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Initiation à l'exemple HelloWorld
+# Initiation à l'exemple HelloWorld 
 {: #gettingstarted-ios}
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld.
-Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
+*Dernière mise à jour : 28 janvier 2016*
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
 mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
 votre application.
 
@@ -16,14 +16,14 @@ Starter**.</li>
     <li>Entrez un nom et un hôte pour votre application et cliquez sur **Créer**.</li>
     <li>Cliquez sur **Terminer**. </li>
 </ol>
-2. Obtenez le projet depuis GitHub. Depuis votre ordinateur, ouvrez le terminal, puis entrez la commande suivante :
+2. Obtenez le projet depuis GitHub.
+Depuis votre ordinateur, ouvrez le terminal, puis entrez la commande suivante :
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld
 ```
 
 3. Initialisez le projet.
 Pour initialiser le logiciel SDK, copiez le code suivant dans la méthode `didFinishLaunchingWithOptions` du délégué de l'application :
-
    * Objective-C :
 ```
 // Initialisez le logiciel SDK avec l'ID et la route de l'application IBM Bluemix
@@ -69,17 +69,17 @@ Vous pouvez aussi consulter le journal de débogage pour plus d'informations.
 ## Etapes suivantes :
 {: #next}
 Pour des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir les informations sur la configuration des
-services {{site.data.keyword.Bluemix}}. 
+services {{site.data.keyword.Bluemix}}.
    * [Mobile Client Access](../../services/mobileaccess/index.html)
    * [Push](../../services/mobilepush/index.html)
 
 # rellinks
 
 ## samples
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [Exemple HelloWorld ](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## sdk
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [Logiciel SDK de base](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
    *
