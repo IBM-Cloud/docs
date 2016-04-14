@@ -259,12 +259,7 @@ The package includes the following feed.
 
 The `/whisk.system/alarms/alarm` feed configures the Alarm service to fire a trigger event at a specified frequency. The parameters are as follows:
 
-- `cron`: A string, based on the Unix crontab syntax, that indicates when to fire the trigger in Coordinated Universal Time (UTC). The string is a sequence of six fields separated by spaces: `X X X X X X `. Here are some examples of the frequency indicated by the string:
-
-  - `* * * * * *`: every second.
-  - `0 * * * * *`: top of every minute.
-  - `* 0 * * * *`: top of every hour.
-  - `* * * 8 * *`: sometime on the eighth day of every month
+- `cron`: A string, based on the Unix crontab syntax, that indicates when to fire the trigger in Coordinated Universal Time (UTC). The string is a sequence of six fields separated by spaces: `X X X X X X `. For more details on using cron syntax, see: (https://github.com/ncb000gt/node-cron).
 
 - `trigger_payload`: The value of this parameter becomes the content of the trigger every time the trigger is fired.
 
