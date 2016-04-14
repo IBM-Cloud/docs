@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-*Last updated: 22 February 2016*
+*Last updated: 14 April 2016*
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
 {: shortdesc}
