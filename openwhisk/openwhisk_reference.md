@@ -88,7 +88,7 @@ The input to and output from an action is a dictionary of key-value pairs. The k
 
 Invocations of an action are not ordered. If the user invokes an action twice from the command-line or the REST API, the second invocation might run before the first. If the actions have side effects, they might be observed in any order.
 
-Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved.  {{site.data.keyword.openwhisk_short}} does not ensure any particular concurrent consistency model for side effects. Any concurrency side effects will be implementation dependent.
+Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved. Any concurrency side effects will be implementation dependent.
 
 ### At most once semantics
 {: #openwhisk_atmostonce}
