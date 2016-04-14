@@ -4,6 +4,7 @@
 
 # HelloWorld 样本入门
 {: #gettingstarted-ios}
+*上次更新时间：2016 年 1 月 28 日*
 如果想要从新的 iOS 应用程序开始操作，可以使用 HelloWorld 应用程序。此应用程序演示了如何在不认证的情况下，从移动应用程序连接到 {{site.data.keyword.Bluemix}} 后端。该应用程序已经安装有 SDK。准备就绪后，可以获取要在应用程序中使用的特定库。
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 中创建移动后端。
@@ -40,14 +41,14 @@ return true
 ![Hello World 应用程序未连接到 {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "图 2. Hello World 应用程序未连接到 Bluemix")
 <br/>请验证是否正确地粘贴了路径和 GUID 值：
    * Objective-C：
-
-```
+  ```
   [imfClient initializeWithBackendRoute:@"https://hellotest.mybluemix.net"
   backendGUID:@"9d48d73a-0878-4254-test-bdcbe6c79c31"];
   ``` {: codeblock}
    * Swift：
-```
-  IMFClient.sharedInstance().initializeWithBackendRoute("https://hellotest.mybluemix.net", backendGUID: "9d48d73a-0878-4254-test-bdcbe6c79c31")```{: codeblock}
+  ```
+  IMFClient.sharedInstance().initializeWithBackendRoute("https://hellotest.mybluemix.net", backendGUID: "9d48d73a-0878-4254-test-bdcbe6c79c31")
+  ```{: codeblock}
 
 
 您还可以检查调试日志以获取更多信息。
@@ -61,10 +62,10 @@ return true
 # 相关链接
 
 ## 样本
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [HelloWorld 样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## sdk
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
    *

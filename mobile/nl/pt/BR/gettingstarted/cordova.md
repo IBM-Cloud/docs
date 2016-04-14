@@ -1,49 +1,147 @@
+<!-- Attribute definitions -->
+{:codeblock: .codeblock}
+
 # Introdução à amostra de HelloWorld
 {: #gettingstarted-cordova}
+*Última atualização: 2 de março de 2016*
 
-Se desejar iniciar com um novo aplicativo Cordova, é possível usar o app HelloWorld. Esse app demonstra como se conectar ao backend do Bluemix a partir de um app móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
+Se desejar iniciar com um novo aplicativo Cordova, é possível usar o app HelloWorld. Este aplicativo demonstra como conectar seu backend móvel ao {{site.data.keyword.Bluemix}} usando um aplicativo móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
 
-1. Crie seu backend móvel no Bluemix.
-<ol>
-	<li>Na seção Textos padrão do catálogo do Bluemix, clique em MobileFirst Services Starter.</li>
-    	<li>Insira um nome e um host para seu app e clique em **Criar**.</li>
-    	<li>Clique em **Concluir**. </li>
-</ol>
-2. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu
+1. Crie seu backend móvel em {{site.data.keyword.Bluemix_notm}}.
+
+	1. Na seção Modelos do catálogo do {{site.data.keyword.Bluemix_notm}}, clique em MobileFirst Services Starter.
+	1. Insira um nome e um host para seu app e clique em **Criar**.
+	1. Clique em **Concluir**.
+
+2. Obtenha o projeto a partir do GitHub. É possível usar o comando de clonar git para obter o projeto. Em seu
 computador, abra o terminal e, em seguida, insira o comando a seguir:
-```
-git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-Cordova-helloworld.git
-```
-Antes de iniciar, faça download do arquivo Gradle.zip e instale o Gradle extraindo o arquivo compactado transferido por download no diretório de sua escolha. O Android Studio pode perguntar por um GRADLE HOME quando você importar a amostra pela primeira vez. Configure esse caminho com o diretório bin que está localizado no arquivo Gradle.zip extraído. O arquivo build.gradle constrói automaticamente seu projeto enviando por pull as dependências necessárias.
 
-3. Inicialize o projeto.
-Para inicializar o SDK, substitua &lt;APPLICATION_ROUTE&gt; e &lt;APPLICATION_ID&gt; pela rota e pelo GUID do aplicativo no bloco try na função BMSClient.getInstance().initialize():
-```
-// inicializar o SDK com o ID e a rota do aplicativo IBM Bluemix
-BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID>");
-```
-4. Execute a amostra em seu ambiente de desenvolvimento.
-Na barra de ferramentas do Android Studio, clique no botão executar e selecione um
-simulador.
-No simulador, clique em **Executar ping no Bluemix**. O app de amostra envia uma solicitação Get para um recurso protegido no tempo de execução de Node.js no Bluemix. Se a
-solicitação for bem-sucedida, a conexão será verificada e o texto no
-simulador será atualizado.
-Nota: o código de tempo de execução de Node.js é fornecido no texto padrão do MobileFirst Services Starter. Se o aplicativo backend não tiver sido criado com o texto padrão do MobileFirst Services Starter, o aplicativo não será conectado com êxito.
+	```Bash
+	git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld
+	```
+
+3. Execute os seguintes comandos usando o diretório do projeto para incluir os ambientes de plataforma Android e iOS:
+
+	Android:
+
+	```Bash
+	cordova platform add android
+	```
+
+	iOS:
+
+	```Bash
+	cordova platform add ios
+	```
+
+4. Inclua o plug-in Cordova com o seguinte comando:
+
+	```Bash
+	cordova plugin add ibm-mfp-core
+	```
+
+5. Configure o aplicativo Cordova para Android, iOS ou ambos.
+
+	* **Android**
+
+		Antes de abrir o projeto no Android Studio, compile e execute o aplicativo Cordova usando a interface da linha de comandos (CLI) para evitar erros de compilação. 
+
+		```Bash
+		cordova build android
+		```
+
+		```Bash
+		cordova run android
+		```
+
+	* **iOS**
+
+		Configure seu projeto Xcode da seguinte maneira para evitar erros de compilação.
+
+		- Use a versão mais recente do Xcode para abrir o arquivo `xcode.proj` no diretório *&lt;app_name&gt;*/platforms/ios.
+
+			**Importante:** se você receber uma mensagem para "Converter para a sintaxe Swift mais recente", clique em **Cancelar**.
+
+		- Acesse **Configurações de Compilação > Compilador Swift - Geração de Códigos > Cabeçalho de Ponte do Objective-C** e inclua o seguinte caminho: 
+
+			```
+			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
+			```
+
+		- Acesse **Configurações de Compilação > Vinculação > Caminhos da Procura Runpath** e inclua o seguinte parâmetro do Frameworks:
+
+			```
+			@executable_path/Frameworks
+			```
+
+		- Compile e execute seu aplicativo com Xcode.		
+6. Configure a amostra HelloWorld.
+
+	- Mude para o diretório no qual você clonou o projeto. 
+	- Abra o arquivo *&lt;your_app_dir&gt;*/www/js/index.js e substitua *&lt;APPLICATION_ROUTE&gt;* e *&lt;APPLICATION_ID&gt;* pelo ID do aplicativo Bluemix e valores de rota. 
+
+		**Observação:** assegure-se de que a rota esteja protegida usando o protocolo https.
+
+		```Javascript
+		// Bluemix credentials
+		route: "<APPLICATION_ROUTE>",
+		GUID: "<APPLICATION_GUID>",
+		```
+
+7. Execute a amostra no seu emulador ou dispositivo móvel.
+
+	Compile o aplicativo Cordova usando os seguintes comandos:
+
+	```Bash
+	cordova build android
+	```
+
+	```Bash
+	cordova build ios
+	```
+
+	Execute o aplicativo de amostra usando os seguintes comandos:
+
+	```Bash
+	cordova run android
+	```
+
+	```Bash
+	cordova run ios
+	```
+
+Um aplicativo de visualização única com um botão **PING BLUEMIX** é exibido. Quando você toca no botão, o aplicativo testa a conexão do cliente ao aplicativo de backend {{site.data.keyword.Bluemix_notm}}. A conexão é testada usando a rota do aplicativo especificada no arquivo `index.js`. 
 
 
 ![Aplicativo Hello World conectado com êxito ao Bluemix](images/yayconnected.jpg "Figura 1. Aplicativo Hello World conectado com êxito ao Bluemix")
 
-Quando você se conectar com êxito ao Bluemix a partir do app móvel no Android Studio, uma mensagem que diz "Oba! você está conectado" será exibida.
-5. Resolva quaisquer problemas.
 
-![Aplicativo Hello World não conectado ao Bluemix](images/bummer_android.jpg "Figura 2. Aplicativo Hello World não conectado ao Bluemix")
+Ao conectar-se com sucesso ao {{site.data.keyword.Bluemix_notm}} usando o aplicativo móvel, uma mensagem dizendo "Eba! Você está conectado" é exibida. 
 
-Quando a conexão falha, uma mensagem "Puxa, algo deu errado" é exibida. Mais informações sobre o erro são incluídas.
-Verifique os itens a seguir:
- * Verifique se você colou corretamente os valores de
+
+<!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
+
+Se a conexão falhar, uma mensagem de erro será exibida. Mais informações sobre o erro estão incluídas na mensagem. É possível verificar os seguintes itens para solucionar seu erro: 
+
+- Verifique se você colou corretamente os valores de
 rota e GUID.
- * Também é possível verificar o log de depuração para obter mais informações.
+- Visualize o log de depuração do Xcode ou do Android.
+- Verifique o status do seu aplicativo no {{site.data.keyword.Bluemix_notm}}.
 
 ## Próximas etapas:
 {: #next}
-Para obter informações sobre como obter o SDK e o integrar ao app móvel, consulte Configurando o cliente SDK do Android.
+Para obter informações sobre como obter o SDK e integrá-lo ao seu aplicativo móvel, veja: 
+* [Mobile Client Access: configurando o plug-in do Cordova](../services/mobileaccess/getting-started-cordova.html)
+* [Push Notifications: configurando o plug-in do Cordova](../mobilepush/enablepush_cordova.html#setup_sdk_cordova)
+
+# rellinks
+
+## exemplos
+   * [HelloWorld (Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)
+
+## sdk
+   * [bms-clientsdk-cordova-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+
+<!--## api
+   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/cordova/core-api-doc/overview-summary.html)
+-->
