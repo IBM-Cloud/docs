@@ -219,7 +219,7 @@ It is possible for an action is synchronous on some inputs and asynchronous on o
 ```
 {: codeblock}
 
-- In this case, the `main` function should return `whisk.async()`. When the activation result is available, the `whisk.done()` function should be called with the result is passed as a JSON object. This is referred to as an *asynchronous* activation.
+- In this case, the `main` function should return `whisk.async()`. When the activation result is available, the `whisk.done()` function should be called with the result passed as a JSON object. This is referred to as an *asynchronous* activation.
 
 Note that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
