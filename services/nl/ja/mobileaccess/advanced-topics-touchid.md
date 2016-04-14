@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Touch ID での許可情報の保護
 {: #before-you-begin}
 

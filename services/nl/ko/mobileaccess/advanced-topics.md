@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+  
+---
+
 # {{site.data.keyword.amashort}} 고급 기능
 {: #before-you-begin}
 {{site.data.keyword.amashort}} 서비스는 고급 시나리오에 사용할 기능을 제공합니다. 

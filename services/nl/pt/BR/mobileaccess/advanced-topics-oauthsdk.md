@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Comunicações de backend para backend
 {: #backend-comm}
 
@@ -32,7 +39,7 @@ var options = {
 
 	// Todas as propriedades abaixo são recuperadas automaticamente quando o Node.js
  // é executado no {{site.data.keyword.Bluemix_notm}} e ligado a uma instância do serviço {{site.data.keyword.amashort}}.
- // Como alternativa, é possível obter esses valores de propriedades clicando em Mostrar credenciais
+	// Como alternativa, é possível obter esses valores de propriedades clicando em Mostrar credenciais
 	// no quadro do serviço {{site.data.keyword.amashort}} no painel do aplicativo {{site.data.keyword.Bluemix_notm}}
 
 	appId: "appId",				// applicationGUID do Bleumix, conhecido como tenantId
@@ -43,7 +50,8 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// Inclua o authHeader obtido na solicitação que você deseja enviar para um recurso protegido
+	// In the request that you want to send to the protected
+resource, 	// add the authHeader value.
 
 	request.headers.Authorization = authHeader;
 

@@ -1,17 +1,24 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Configurando o {{site.data.keyword.amashort}} Client SDK para Android
 {: #custom-android}
 Configure seu aplicativo Android que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} Client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 ## Antes de Começar
 {: #before-you-begin}
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que está configurado para usar um provedor de identidade customizado. Seu
-app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} Client SDK. Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que está configurado para usar um provedor de identidade customizado.  Seu
+app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
-ao {{site.data.keyword.amashort}}](getting-started.html)
- * [Configurando o SDK do Android](getting-started-android.html)
- * [Usando um provedor de identidade customizado](custom-auth.html)
- * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
- * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
+ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Configurando o SDK do Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
+ * [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 ## Inicializando o {{site.data.keyword.amashort}} Client SDK
@@ -43,7 +50,10 @@ Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 1. Inicialize o SDK.  
 Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
-Substitua os valores *applicationRoute* e *applicationGUID* pelos valores que estão no painel **Opções de dispositivo móvel** do aplicativo no painel do {{site.data.keyword.Bluemix_notm}}.
+Substitua *applicationRoute* e *applicationGUID* pelos valores
+**Route** e **App GUID** que você obtém quando
+clica em **Opções móveis** em seu app no painel
+{{site.data.keyword.Bluemix_notm}}.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -67,7 +77,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argumentos
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: Fornecido pelo {{site.data.keyword.amashort}} Client SDK para que seja possível relatar as respostas ou falhas dos desafios de autenticação durante a coleta de credenciais. Por exemplo, quando um usuário cancela a autenticação.
+* `AuthenticationContext`: Fornecido pelo {{site.data.keyword.amashort}} Client SDK para que seja possível relatar as respostas ou falhas dos desafios de autenticação durante a coleta de credenciais.  Por exemplo, quando um usuário cancela a autenticação.
 * `JSONObject`: contém um desafio de autenticação customizada, conforme retornado por um provedor de identidade customizado.
 * `Context`: uma referência ao Contexto Android que foi usado quando a solicitação foi enviada. Geralmente esse argumento representa uma Atividade Android.
 
@@ -180,12 +190,14 @@ Depois que o Client SDK for inicializado e um AuthenticationListener customizado
 
 ### Antes de Começar
 {: #custom-android-testing-before}
-Deve-se ter um aplicativo que foi criado com o texto padrão do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
+Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
 
 
-1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador abrindo `http://{appRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
+abrindo `{applicationRoute}/protected`, por exemplo,
+`http://my-mobile-backend.mybluemix.net/protected`.
 
-1. O terminal `/protected` de um backend móvel que é criado com o texto padrão do {{site.data.keyword.mobilefirstbp}} está protegido com {{site.data.keyword.amashort}}. O
+1. O terminal `/protected` de um backend móvel que é criado com o modelo do {{site.data.keyword.mobilefirstbp}} está protegido com {{site.data.keyword.amashort}}. O
 terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Android para fazer solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar seu AuthenticationListener customizado.
@@ -211,6 +223,6 @@ terminal pode ser acessado somente por aplicativos móveis que sejam instrumenta
 	});
 ```
 
-1. 	Quando sua solicitação for bem-sucedida, a saída a seguir estará na ferramenta LogCat: 
+1. 	Quando sua solicitação for bem-sucedida, a saída a seguir estará na ferramenta LogCat:
 
 	![image](images/android-custom-login-success.png)

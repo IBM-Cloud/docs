@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN" "ibm-map.dtd">
+<map linking="sourceonly" xml:lang="zh-tw">
+	<title>Mobile Client Access</title>
+	<topicmeta>
+		<copyright>
+			<copyryear year="2015"/>
+			<copyryear year="2016"/>
+			<copyrholder>IBM</copyrholder>
+		</copyright>
+	</topicmeta>
+	<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Client Access"
+		scope="peer">
+		<topicref format="html" href="overview.html" navtitle="概觀" outputclass="subsection"
+			scope="peer">
+			<topicref format="html" href="sdks-samples-apis.html"
+				navtitle="SDK、範例及 API 參考資料" scope="peer"/>
+		</topicref>
+		<topicref format="html" href="getting-started.html" navtitle="開始使用"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="getting-started-android.html" navtitle="Android" scope="peer"/>
+			<topicref format="html" href="getting-started-cordova.html" navtitle="Cordova" scope="peer"/>
+			<topicref format="html" href="getting-started-ios-swift-sdk.html"
+				navtitle="iOS (Swift SDK)" scope="peer"/>
+			<topicref format="html" href="getting-started-ios.html" navtitle="iOS (Objective-C SDK)"
+				scope="peer"/>
+		</topicref>
+		<topicref format="html" href="protecting-resources.html" navtitle="保護雲端資源"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="protecting-resources-nodejs.html" navtitle="Node.js"
+				scope="peer"/>
+			<topicref format="html" href="protecting-resources-java.html" navtitle="Liberty for Java"
+				scope="peer"/>
+			<topicref format="html" href="protecting-resources-local.html" navtitle="本端開發"
+				scope="peer"/>
+		</topicref>
+		<topicref format="html" href="facebook-auth-overview.html" navtitle="Facebook 鑑別"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="facebook-auth-android.html" navtitle="Android" scope="peer"/>
+			<topicref format="html" href="facebook-auth-cordova.html" navtitle="Cordova" scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
+				scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS (Objective-C SDK)"
+				scope="peer"/>
+		</topicref>
+		<topicref format="html" href="google-auth-overview.html" navtitle="Google 鑑別"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="google-auth-android.html" navtitle="Android" scope="peer"/>
+			<topicref format="html" href="google-auth-cordova.html" navtitle="Cordova" scope="peer"/>
+			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
+				scope="peer"/>
+			<topicref format="html" href="google-auth-ios.html" navtitle="iOS (Objective-C SDK)"
+				scope="peer"/>
+		</topicref>
+		<topicref format="html" href="custom-auth.html" navtitle="自訂鑑別"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="custom-auth-identity-provider.html"
+				navtitle="配置身分提供者" scope="peer"/>
+			<topicref format="html" href="custom-auth-config-mca.html"
+				navtitle="配置 Mobile Client Access 的自訂鑑別" scope="peer"/>
+			<topicref format="html" href="custom-auth-android.html" navtitle="Android" scope="peer"/>
+			<topicref format="html" href="custom-auth-cordova.html" navtitle="Cordova" scope="peer"/>
+			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
+				scope="peer"/>
+			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS (Objective-C SDK)"
+				scope="peer"/>
+		</topicref>
+		<topicref format="html" href="advanced-topics.html" navtitle="進階"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="advanced-topics-touchid.html"
+				navtitle="使用 Touch ID 保護授權安全" scope="peer"/>
+			<topicref format="html" href="advanced-topics-oauthsdk.html"
+				navtitle="後端對後端通訊" scope="peer"/>
+			<topicref format="html" href="advanced-topics-IMFURLProtocol.html"
+				navtitle="在 iOS 應用程式中使用 IMFURLProtocol" scope="peer"/>
+		</topicref>
+		<topicref format="html" href="app-monitoring.html" navtitle="應用程式監視"
+			outputclass="subsection" scope="peer">
+			<topicref format="html" href="app-monitoring-logger.html" navtitle="日誌程式" scope="peer"/>
+			<topicref format="html" href="app-monitoring-gathering-analytics.html"
+				navtitle="收集分析" scope="peer"/>
+		</topicref>
+	</topicref>
+</map>

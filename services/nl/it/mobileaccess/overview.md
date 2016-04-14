@@ -1,9 +1,16 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Panoramica di {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 Il servizio {{site.data.keyword.amafull}} fornisce servizi di autenticazione e monitoraggio per le applicazioni mobili che accedono a risorse cloud ospitate su {{site.data.keyword.Bluemix_notm}}.
 
-Puoi utilizzare il servizio {{site.data.keyword.amashort}} per proteggere le applicazioni Node.js e Liberty for Java ospitate su {{site.data.keyword.Bluemix_notm}} con diversi tipi di autenticazione. Strumentando le tue applicazioni mobili con l'SDK {{site.data.keyword.amashort}}, puoi utilizzare le
+Puoi utilizzare il servizio {{site.data.keyword.amashort}} per proteggere le applicazioni Node.js e Liberty for Java&trade; ospitate su {{site.data.keyword.Bluemix_notm}} con diversi tipi di autenticazione. Strumentando le tue applicazioni mobili con l'SDK {{site.data.keyword.amashort}}, puoi utilizzare le
 funzionalità di autenticazione fornite dal servizio {{site.data.keyword.amashort}}. I dati di log lato client e di monitoraggio vengono raccolti automaticamente e
 inviati al servizio {{site.data.keyword.amashort}} su richiesta. Utilizza il dashboard {{site.data.keyword.amashort}} per configurare i diversi tipi di autenticazione e visualizzare i dati raccolti dall'SDK lato client.
 
@@ -14,7 +21,7 @@ inviati al servizio {{site.data.keyword.amashort}} su richiesta. Utilizza il das
 
 * Dashboard **{{site.data.keyword.amashort}}**: configura diversi tipi di autenticazione ed esegui il monitoraggio delle prestazioni delle applicazioni mobili, delle analisi, delle statistiche di utilizzo e dei log dispositivo.
 * SDK client **{{site.data.keyword.amashort}}**: strumenta le applicazioni mobili per utilizzare la funzionalità {{site.data.keyword.amashort}}. Le piattaforme supportate sono: iOS 8+, Android 4+, Cordova.
-* SDK server **{{site.data.keyword.amashort}}**: proteggi le risorse ospitate su {{site.data.keyword.Bluemix_notm}}. I runtime attualmente supportati sono Node.js e Liberty for Java.
+* SDK server **{{site.data.keyword.amashort}}**: proteggi le risorse ospitate su {{site.data.keyword.Bluemix_notm}}. I runtime attualmente supportati sono Node.js e Liberty for Java&trade;.
 
 ## Tipi di autenticazione
 {: #authtypes}
@@ -37,7 +44,7 @@ con il servizio {{site.data.keyword.amashort}}.
 * Dopo un'autenticazione con esito positivo, {{site.data.keyword.amashort}} restituisce un token di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} aggiunge automaticamente il token di autorizzazione alla richiesta originale e reinvia la richiesta alla risorsa cloud.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'accessToken dalla richiesta e lo convalida presso il servizio {{site.data.keyword.amashort}}.
-* L'accesso viene concesso. La risposta viene restituita all'applicazione mobile.
+* L'accesso viene concesso.  La risposta viene restituita all'applicazione mobile.
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #flow}
@@ -59,7 +66,7 @@ token di accesso Facebook o Google. Questi token fungono da risposta alla richie
 all'SDK client {{site.data.keyword.amashort}}.
 * Dopo essere stata ottenuta, la risposta alla richiesta di verifica dell'autenticazione viene inviata al servizio {{site.data.keyword.amashort}}.
 * Il servizio convalida la risposta alla richiesta di verifica dell'autenticazione con un rispettivo provider di identità (Facebook/Google/Personalizzata).
-* Se la convalida ha esito positivo, il servizio {{site.data.keyword.amashort}} genera un'intestazione di autorizzazione e restituisce l'intestazione all'SDK client {{site.data.keyword.amashort}}. L'intestazione di autorizzazione contiene due token: un token di accesso che contiene le informazioni sulle autorizzazioni di accesso e un token ID che contiene le informazioni sull'utente corrente, sul dispositivo o sull'applicazione.
+* Se la convalida ha esito positivo, il servizio {{site.data.keyword.amashort}} genera un'intestazione di autorizzazione e restituisce l'intestazione all'SDK client {{site.data.keyword.amashort}}. L'intestazione di autorizzazione contiene due token: un token di accesso che contiene le informazioni sulle autorizzazioni di accesso e un token ID che contiene le informazioni su utente, dispositivo o applicazione correnti.
 * Da questo punto in avanti, tutte le richieste effettuate con l'SDK client {{site.data.keyword.amashort}} hanno un'intestazione di autorizzazione di nuova acquisizione.
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, convalida l'intestazione con il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di backend.

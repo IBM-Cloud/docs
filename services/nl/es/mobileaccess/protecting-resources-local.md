@@ -1,18 +1,25 @@
+---
+
+copyright:
+  años: 2015, 2016
+
+---
+
 # Uso de {{site.data.keyword.amashort}} con un entorno de desarrollo local
 {: #protecting-local}
 
 Puede configurar su entorno de desarrollo local para que utilice el servicio de {{site.data.keyword.amashort}} que se ejecuta en {{site.data.keyword.Bluemix}}. Específicamente, puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} cuando desarrolle código del lado del servidor con un servidor de desarrollo local, como Node.js.
 
-El SDK del servidor de {{site.data.keyword.amashort}} necesita que se definan dos variables de entorno. Cuando desarrolle código del lado del servidor en {{site.data.keyword.Bluemix_notm}}, la infraestructura de {{site.data.keyword.Bluemix_notm}} proporciona estas variables. 
+El SDK del servidor de {{site.data.keyword.amashort}} necesita que se definan dos variables de entorno. Cuando desarrolle código del lado del servidor en {{site.data.keyword.Bluemix_notm}}, la infraestructura de {{site.data.keyword.Bluemix_notm}} proporciona estas variables.
 
-* `VCAP_SERVICES`: contiene información sobre servicios que están enlazados a la aplicación de fondo móvil. 
-* `VCAP_APPLICATION`: contiene información sobre la aplicación de fondo móvil. 
+* `VCAP_SERVICES`: contiene información sobre servicios que están enlazados a la aplicación de fondo móvil.
+* `VCAP_APPLICATION`: contiene información sobre la aplicación de fondo móvil.
 
-Para utilizar {{site.data.keyword.amashort}} con un servidor de desarrollo local, debe añadir estas variables manualmente. 
+Para utilizar {{site.data.keyword.amashort}} con un servidor de desarrollo local, debe añadir estas variables manualmente.
 
 1. Abra el panel de control de {{site.data.keyword.Bluemix_notm}} del programa de fondo móvil que está protegido con el servicio de {{site.data.keyword.amashort}}.
 
-1. Pulse **Opciones móviles** y copie el valor de **AppGUID**. 
+1. Pulse **Opciones móviles** y copie el valor de **AppGUID**.
 
 1. En el entorno de desarrollo local, defina la variable de entorno *VCAP_APPLICATION*. La variable debe contener un objeto JSON en serie con una sola propiedad.
 ```JavaScript
@@ -22,14 +29,14 @@ Para utilizar {{site.data.keyword.amashort}} con un servidor de desarrollo local
 ```
 Sustituya la variable *appGUID* con el valor del campo **Opciones móviles**.
 
-1. Haga clic en **Mostrar credenciales** en el mosaico de servicios de {{site.data.keyword.amashort}} en la aplicación de fondo móvil en el panel de control de {{site.data.keyword.Bluemix_notm}}. Se muestra un objeto JSON con las credenciales de acceso que proporciona {{site.data.keyword.amashort}} a la aplicación de fondo móvil. 
+1. Haga clic en **Mostrar credenciales** en el mosaico de servicios de {{site.data.keyword.amashort}} en la aplicación de fondo móvil en el panel de control de {{site.data.keyword.Bluemix_notm}}. Se muestra un objeto JSON con las credenciales de acceso que proporciona {{site.data.keyword.amashort}} a la aplicación de fondo móvil.
 
-1. En el entorno de desarrollo local, defina la variable de entorno `VCAP_SERVICES`. El valor de esta variable debe ser un objeto JSON en serie que contenga las credenciales de {{site.data.keyword.amashort}}. Consulte el ejemplo siguiente para obtener más información. 
+1. En el entorno de desarrollo local, defina la variable de entorno `VCAP_SERVICES`. El valor de esta variable debe ser un objeto JSON en serie que contenga las credenciales de {{site.data.keyword.amashort}}.  Consulte el ejemplo siguiente para obtener más información.
 
 ## Código de ejemplo
 {: #local-dev-sample}
 
-Para utilizar el servicio de {{site.data.keyword.amashort}} en un entorno de desarrollo Node.js local, añada el código siguiente antes del módulo require `bms-mca-token-validation-strategy`. 
+Para utilizar el servicio de {{site.data.keyword.amashort}} en un entorno de desarrollo Node.js local, añada el código siguiente antes del módulo require `bms-mca-token-validation-strategy`.
 
 ```JavaScript
 var vcapApplication = {
@@ -58,7 +65,7 @@ var MCABackendStrategy =
 
 // Resto del código
 ```
-Sustituya las apariciones del valor *appGUID* en el código con el valor *appGUID* del programa de fondo móvil. 
+Sustituya las apariciones del valor *appGUID* en el código con el valor *appGUID* del programa de fondo móvil.
 
 
 ## Configuración de aplicaciones móviles para que funcionen con un servidor de desarrollo local

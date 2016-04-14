@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
 

@@ -1,18 +1,32 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Ativando, configurando e usando o criador de logs
 {: #enable-logger}
 
 O {{site.data.keyword.amashort}} Client SDK fornece uma estrutura de criação de log que é semelhante a outras estruturas de log com as quais você pode estar familiarizado, tais como, `java.util.logging` ou `log4j`. A estrutura de criação de log suporta várias instâncias do criador de logs por pacote, diferentes níveis de log, captura ou rastreios de pilha para um travamento de aplicativo e mais.
 
-Também é possível configurar os dados registrados para que sejam armazenados em um armazenamento local, o qual pode ser enviado para o Serviço {{site.data.keyword.amashort}} on demand.
+Também é possível configurar os dados registrados para que sejam persistidos em um
+armazenamento local, o qual pode ser enviado para o serviço
+{{site.data.keyword.amashort}} on demand.
 
 A estrutura de criação de log do {{site.data.keyword.amashort}} Client SDK suporta os níveis de log a seguir, listados do menos para
 o mais detalhado, com as diretrizes de uso recomendadas:
 
-* `FATAL` - Usar para travamentos ou interrupções irrecuperáveis. O nível FATAL é reservado para erros irrecuperáveis de criação de log, que aparecem para usuários como um travamento do aplicativo
-* `ERROR` - Usar para exceções inesperadas ou erros de protocolo de rede inesperados
-* `WARN` - Para registrar avisos de uso que não são considerados erros críticos, tais como uso de APIs descontinuadas ou resposta de rede lenta
-* `INFO` - Usar para relatar eventos de inicialização e outros dados que podem ser instrumentais
-* `DEBUG` - Usar para relatar instruções de depuração para ajudar os desenvolvedores a resolver defeitos do aplicativo
+* `FATAL` - Usar para travamentos ou interrupções irrecuperáveis. O nível FATAL
+é reservado para registrar erros irrecuperáveis, que aparecem
+para usuários, como uma paralisação do aplicativo.
+* `ERROR`: Usar para exceções inesperadas ou erros de protocolo de rede inesperados.
+* `WARN` - Para registrar avisos de uso que não são considerados
+erros críticos, como o uso de APIs descontinuadas ou resposta de rede lenta.
+* `INFO` - Use para relatar eventos de inicialização e outros
+dados que possam ser úteis.
+* `DEBUG` - Use para relatar instruções de depuração para ajudar
+os desenvolvedores a resolver defeitos do aplicativo.
 
 Assegure-se de que tenha inicializado o {{site.data.keyword.amashort}} Client SDK antes de usar a estrutura de criação de log. As
 amostras a seguir demonstram o uso básico de uma estrutura de criação de log do {{site.data.keyword.amashort}} Client SDK.
@@ -87,9 +101,11 @@ logger.fatal("fatal message");
 
 É possível localizar os métodos adicionais a seguir em classes do Criador de logs:
 
-* `setCapture` - Ativa ou desativa informações de log persistentes a serem enviadas para o serviço {{site.data.keyword.amashort}} posteriormente
-* `setLevel` - configura o nível de log mínimo para imprimir mensagens de log
-* `send` - envia logs armazenados para o serviço {{site.data.keyword.amashort}} 
+* `setCapture` - Ativa ou desativa informações de log
+persistentes a serem enviadas para o serviço {{site.data.keyword.amashort}}
+posteriormente.
+* `setLevel` - Configura o nível de log mínimo para salvar mensagens de log.
+* `send` - Envia logs persistidos para o serviço {{site.data.keyword.amashort}}.
 
 Por exemplo, quando a captura estiver ATIVADA e o nível do criador de logs estiver configurado
 como FATAL, o criador de logs irá capturar exceções não capturadas. Exceções não capturadas geralmente aparecem para os usuários como travamentos do aplicativo, mas não capturam nenhum log que levariam para o evento de travamento. Ou então, um nível de criador de logs mais detalhado garante que os logs que levam a uma entrada do criador de logs FATAL, tal com WARN e ERROR, também sejam capturados.
@@ -121,7 +137,7 @@ Logger logger2 = Logger.getInstance("logger2");
 logger1.debug("debug message");
 logger2.info("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
 
@@ -146,7 +162,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 [logger1 logDebugWithMessages:@"debug message"];
 [logger2 logInfoWithMessages:@"info message"];
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
 
@@ -171,7 +187,7 @@ let logger2 = IMFLogger(forName: "logger2");
 logger1.logDebugWithMessages("debug message")
 logger2.logInfoWithMessages("info message")
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
 
 ```
@@ -194,7 +210,7 @@ var logger2 = MFPLogger.getInstance("logger2");
 logger1.debug ("debug message");
 logger2.info ("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
 

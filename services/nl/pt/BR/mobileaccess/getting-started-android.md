@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Configurando o SDK do Android
 {: #getting-started-android}
 
@@ -15,12 +22,12 @@ recursos protegidos e desprotegidos.
 
 O {{site.data.keyword.amashort}} Client SDK é distribuído com o Gradle, um gerenciador de dependências para projetos Android. O Gradle faz download automaticamente dos artefatos de repositórios e os disponibiliza em seu aplicativo Android.
 
-1. Crie um projeto Android Studio ou abra um projeto existente. 
+1. Crie um projeto Android Studio ou abra um projeto existente.
 
 1. Abra o arquivo `build.gradle`.
 **Dica**: o seu projeto Android pode ter dois arquivos `build.gradle`: para o projeto e o módulo do aplicativo. Use o arquivo do módulo do aplicativo.
 
-1. Localize a seção **Dependências** do arquivo `build.gradle`. Inclua uma dependência de compilação no
+1. Localize a seção **Dependências** do arquivo `build.gradle`.  Inclua uma dependência de compilação no
 {{site.data.keyword.amashort}} Client SDK:
 
 	```Gradle
@@ -50,8 +57,7 @@ Inicialize o SDK passando os parâmetros context, applicationGUID e applicationR
 
 1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Os valores **Rota do aplicativo** e **GUID do aplicativo** são necessários para inicializar o SDK.
 
-2. Inicialize o {{site.data.keyword.amashort}} Client SDK em seu aplicativo Android. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
-
+2. Inicialize o {{site.data.keyword.amashort}} Client SDK em seu aplicativo Android.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
 <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
 
 	```Java
@@ -66,8 +72,9 @@ Inicialize o SDK passando os parâmetros context, applicationGUID e applicationR
 
 Depois que o {{site.data.keyword.amashort}} Client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação ao terminal protegido do seu novo backend móvel. Em seu navegador, abra a URL a seguir: `http://{appRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o texto padrão do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
+1. Tente enviar uma solicitação ao terminal protegido do seu novo backend móvel. Em
+seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
 mensagem `Unauthorized` é retornada no navegador, porque esse terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK.
 
 1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:

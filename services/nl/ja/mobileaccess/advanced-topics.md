@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # {{site.data.keyword.amashort}} 拡張機能
 {: #before-you-begin}
 {{site.data.keyword.amashort}} サービスは、高機能シナリオで使用するための機能を提供します。

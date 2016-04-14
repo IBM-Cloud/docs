@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+
+---
+
 # Collecte des données d'analyse d'utilisation
 {: #usage-analytics}
 
@@ -11,24 +17,24 @@ Utilisez les API suivantes pour démarrer l'enregistrement et l'envoi des donné
 {: #usage-analytics-android}
 
 ```Java
-// Enable recording of usage analytics
-MFPAnalytics.enable()
+// Activation de l'enregistrement de l'analyse d'utilisation
+MFPAnalytics.enable();
 
-// Start recording application startup time
-// Add this code in the onCreate method of your main Activity
-MFPAnalytics.startLoggingApplicationStartup()
+// Lancement de l'enregistrement de l'heure de démarrage de l'application
+// Ajout de ce code dans la méthode onCreate de votre activité principale
+MFPAnalytics.startLoggingApplicationStartup();
 
-// Record the duration of application startup
-// Add this code in the onStarted method of your main Activity
-MFPAnalytics.logApplicationStartup()
+// Enregistrement de la durée de démarrage de l'application
+// Ajout de ce code dans la méthode onStart de votre activité principale
+MFPAnalytics.logApplicationStartup();
 
-// Record application foreground and background events
-// Add this code in the onPause and onResume methods of your main Activity
-MFPAnalytics.logSessionStart()
-MFPAnalytics.logSessionEnd()
+// Enregistrement des événements d'avant-plan et d'arrière-plan
+// Ajout de ce code dans les méthodes onPause et onResume de votre activité principale
+MFPAnalytics.logSessionStart();
+MFPAnalytics.logSessionEnd();
 
-// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-MFPAnalytics.send()
+// Envoi des analyses d'utilisation enregistrées au service {{site.data.keyword.amashort}}
+MFPAnalytics.send();
 ```
 
 ### iOS - Objective-C

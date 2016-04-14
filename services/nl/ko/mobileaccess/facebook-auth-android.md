@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
 # Android 앱에서 Facebook 인증 사용
 {: #facebook-auth-android}
 Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Android 플랫폼을 추가하고 Facebook 애플리케이션용으로 구성하십시오. 
@@ -5,9 +12,9 @@ Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 And
 ## 시작하기 전에
 {: #facebook-auth-android-before}
  * {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK를 갖춘 Android 프로젝트가 있어야 합니다.
-자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](getting-started.html) 및 [Android SDK 설정](getting-started-android.html)을 참조하십시오.   
- * {{site.data.keyword.amashort}} 서버 SDK로 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
- * Facebook 애플리케이션 ID를 작성하십시오. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
+자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [Android SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)을 참조하십시오.  
+ * {{site.data.keyword.amashort}} 서버 SDK로 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+ * Facebook 애플리케이션 ID를 작성하십시오. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
 
 
 ## Android 플랫폼에 대해 Facebook 애플리케이션 구성
@@ -59,14 +66,13 @@ Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 And
 {: #facebook-auth-android-mca}
 Facebook 애플리케이션 ID를 얻고 Android 클라이언트를 서비스하도록 Facebook 애플리케이션을 구성한 후에는 {{site.data.keyword.amashort}} 대시보드에서 Facebook 인증을 사용으로 설정할 수 있습니다. 
 
-1. {{site.data.keyword.Bluemix}} 대시보드를 열고 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 클릭하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 *applicationRoute* 및 *applicationGUID* 값을 메모해 두십시오. 다음 단계에서 이 값이 필요합니다. 
+1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 이 값이 필요합니다. 
 
-1. {{site.data.keyword.amashort}} 타일을 클릭하십시오.
-{{site.data.keyword.amashort}} 대시보드가 표시됩니다. 
+1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
-1. **인증 설정 > Facebook**을 클릭하십시오. 
+1. **Facebook** 타일을 클릭하십시오.
 
 1. Facebook 애플리케이션 ID를 지정하고 **저장**을 클릭하십시오. 
 
@@ -142,13 +148,9 @@ Android 프로젝트에는 두 개의 `build.gradle` 파일(프로젝트용 및 
 	</application>
 ```
 
-1. 클라이언트 SDK를 초기화하고 Facebook 인증 관리자를 등록하십시오. context, applicationGUID
-및 applicationRoute 매개변수를 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를
-초기화하십시오. <br/>
- 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의
-`onCreate` 메소드에 있습니다. <br/>
- applicationRoute 및 applicationGUID를 Bluemix 대시보드에서 앱의 기본 기본 페이지에 있는
-**모바일 옵션** 메뉴의 값으로 대체하십시오. 
+1. 클라이언트 SDK를 초기화하고 Facebook 인증 관리자를 등록하십시오. 컨텍스트, 앱 GUID(`applicationGUID`) 및 라우트(`applicationRoute`) 매개변수를 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오.<br/>
+ 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드에 있습니다.<br/>
+ *applicationRoute* 및 *applicationGUID*를 Bluemix 대시보드에서 앱의 기본 페이지에 있는 **모바일 옵션** 메뉴의 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -178,12 +180,12 @@ Android 프로젝트에는 두 개의 `build.gradle` 파일(프로젝트용 및 
 {{site.data.keyword.mobilefirstbp}} 표준 유형을 사용하고 있어야 하며,
 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의
 보호를 받은 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우
-[자원 보호](protecting-resources.html)를 참조하십시오. 
+[자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. 브라우저에서 새로 작성한 모바일 백엔드의 보호 엔드포인트로 요청을 전송해 보십시오. URL `http://{appRoute}/protected`를 여십시오. 예를 들면 `http://my-mobile-backend.mybluemix.net/protected`와 같습니다. 
+1. 브라우저에서 새로 작성한 모바일 백엔드의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면 `http://my-mobile-backend.mybluemix.net/protected`와 같습니다. 
 <br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 갖춘 모바일 애플리케이션에서만 액세스할 수 있으므로 이 메시지가 리턴됩니다.
 
-1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 `FacebookAuthenticationManager`를 등록한 후 다음 코드를 추가하십시오. 
+1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 다음 코드를 추가하고 `FacebookAuthenticationManager`를 등록하십시오.
 
 	```Java
 	Request request = new Request("/protected", Request.GET);

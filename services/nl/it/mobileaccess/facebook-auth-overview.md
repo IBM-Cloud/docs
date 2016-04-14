@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Autenticazione degli utenti con le credenziali Facebook
 {: #facebook-auth-overview}
 Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile possono utilizzare le loro credenziali Facebook per l'autenticazione.
@@ -37,11 +44,12 @@ Se ti viene presentata una scelta di selezione di un'applicazione iOS o Android,
 
 1. Imposta il nome di visualizzazione dell'applicazione di tua scelta e seleziona una categoria. Fai clic su **Create App ID** per continuare.
 
-1. Copia l'ID applicazione (**App ID**) visualizzato. Questo valore è il tuo ID applicazione Facebook. Questo valore ti serve per configurare l'autenticazione Facebook con la tua applicazione mobile.
+1. Copia l'ID applicazione (**App ID**) visualizzato. Questo valore è il tuo ID applicazione Facebook.  Questo valore ti serve per configurare l'autenticazione Facebook con la tua applicazione mobile.
 
 ## Fasi successive
 {: #next-steps}
 
 * [Abilitazione dell'autenticazione Facebook nelle applicazioni Android](facebook-auth-android.html)
-* [Abilitazione dell'autenticazione Facebook nelle applicazioni iOS](facebook-auth-ios.html)
+* [Abilitazione dell'autenticazione Facebook nelle applicazioni iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
+* [Abilitazione dell'autenticazione Facebook nelle applicazioni iOS (SDK Objective-C)](facebook-auth-ios.html)
 * [Abilitazione dell'autenticazione Facebook nelle applicazioni Cordova](facebook-auth-cordova.html)

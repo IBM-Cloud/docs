@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+  
+---
+
 # Configuration du logiciel SDK Android
 {: #getting-started-android}
 
@@ -66,8 +72,8 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 
 Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
-1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Dans le navigateur, ouvrez l'URL suivante : `http://{appRoute}/protected`.
-Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
+`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Cordova 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #custom-cordova}
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Cordova アプリケーションを構成します。
@@ -7,24 +14,24 @@
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](getting-started.html)
- * [Cordova SDK のセットアップ](getting-started-cordova.html)
- * [カスタム ID プロバイダーの使用](custom-auth.html)
- * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Cordova SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
+ * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #custom-cordova-sdk}
 applicationGUID および applicationRoute パラメーターを渡すことによって、SDK を初期化します。
 
-1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。「**Mobile オプション**」をクリックします。アプリケーション経路とアプリケーション GUID の値が表示されます。
+1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。「**Mobile オプション**」をクリックします。**「経路」** (`applicationRoute`) と**「アプリ GUID」** (`applicationGUID`) の値が表示されます。
 1. Client SDK を初期化します。
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- *applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボードのアプリケーションの**「モバイル・オプション」**パネルにある値で置き換えます。
+ *applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリケーションの**「モバイル・オプション」**パネルから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
 
 ## 認証リスナー・インターフェース
 {: #custom-cordva-auth}
@@ -138,7 +145,7 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `http://{appRoute}/protected`、たとえば `http://my-mobile-backend.mybluemix.net/protected` を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
 その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
 1. Cordova アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。

@@ -1,10 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Protezione delle risorse Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
 L'SDK server {{site.data.keyword.amashort}} fornisce un modulo OAuthTAI per le applicazioni Liberty for Java&trade; distribuite su {{site.data.keyword.Bluemix}}. Devi strumentare il tuo server Liberty con il modulo OAuthTAI per proteggerlo dall'accesso non autorizzato e per ottenere le informazioni di monitoraggio.
 
 ## Prima di cominciare
 {: #before-you-begin}
-* Devi avere dimestichezza con lo sviluppo di applicazioni Liberty for Java su {{site.data.keyword.bluemix}}. Per ulteriori informazioni, vedi [Liberty for Java](https://www.{DomainName}/docs/starters/liberty/index.html).
+* Devi avere dimestichezza con lo sviluppo di applicazioni Liberty for Java su {{site.data.keyword.bluemix}}. Per ulteriori informazioni, vedi [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## Installazione dell'SDK server {{site.data.keyword.amashort}}
 {: #installing-server-sdk}
@@ -17,7 +24,7 @@ L'SDK server {{site.data.keyword.amashort}} fornisce un modulo OAuthTAI per le a
 1. Copia la directory `OAuthTai-1.0.mf` nella directory `$<wlp.user.dir>/extension/lib/features`.
 
 
-## Configurazione del server Java for Liberty per l'utilizzo dell'SDK server {{site.data.keyword.amashort}}
+## Configurazione del server Liberty for Java per utilizzare l'SDK server {{site.data.keyword.amashort}}
 {: #configuring-liberty}
 
 1. Modifica il file `server.xml` e aggiungi le funzioni richieste.
@@ -61,7 +68,8 @@ mediante bind a un oggetto speciale denominato `ALL_AUTHENTICATED_USERS`. Il seg
 
 Per proteggere le risorse ospitate dalla tua applicazione Liberty for Java, devi specificare `TAIUserRole` come ruolo di sicurezza Java. Puoi definire la regola di sicurezza nel file `web.xml` oppure come un'annotazione.
 
-* Per specificare il `TAIUserRole` nel file `web.xml`, definisci `TAIUserRole` nell'elemento `<security-role>` e usa quindi questo ruolo per proteggere la risorsa web in un elemento `security-constraint`. Ad esempio:
+* Per specificare il `TAIUserRole` nel file `web.xml`, definisci `TAIUserRole` nell'elemento `<security-role>` e usa quindi questo ruolo per proteggere la risorsa web in un elemento `security-constraint`.
+Ad esempio:
 
 	```XML
 	<security-constraint>

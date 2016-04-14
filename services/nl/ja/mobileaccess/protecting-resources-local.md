@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
 
