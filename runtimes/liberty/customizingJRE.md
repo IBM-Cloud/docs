@@ -271,7 +271,7 @@ For example, if you want to use AES 256-bit encryption, you need to overlay thes
 
 Download the appropriate unrestricted policy files and add them to your application as:
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}
