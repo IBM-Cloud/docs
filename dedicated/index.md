@@ -288,21 +288,6 @@ Next is the progression phase. The progression phase describes the on-going, col
 |Employment and business need verification | Complete quarterly employment verification and verification of continued business need for IBM representatives that have access to the customer environment. | IBM |
 |Resolution of security vulnerabilities | Resolve reported security vulnerabilities in the platform. | IBM |
 
-The final stage of completion represents the end of the relationship between you and IBM {{site.data.keyword.Bluemix_notm}}. The primary tasks for this phase include the following:
-
-* Ending of the financial agreement
-* Removing all network connections
-* Recycling infrastructure
-
-*Table 6. Completion phase tasks*
-
-| **Task** | **Task details** | **Responsible party** |
-|----------|------------------|-----------------------|
-|End financial agreement | Discuss and agree to an end to the financial agreement contract. | IBM and customer share responsibility |
-|Decommission environment | Shut down access to and credentials for the environment. | IBM and customer share responsibility |
-|Remove customer network connections | Remove network connections between IBM and the customer environment. | IBM and customer share responsibility |
-|Recycle infrastructure | Your environment is recycled based on the SoftLayer-defined processes. | IBM |
-
 ##Maintaining your dedicated instance
 {: #maintaindedicated}
 
