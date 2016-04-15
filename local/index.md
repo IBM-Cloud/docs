@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 6 April 2016*
+*Last updated: 15 April 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -191,7 +191,9 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You and IBM work together to validate the credentials that you provided in the previous task.</li>
 <li>You provide 7 IP addresses on your network. If you have a secured web proxy for allowing outbound access to the Internet for internal {{site.data.keyword.Bluemix_notm}} components, then you must provide the credentials to connect to it.
 <p>**Note**: If your web proxy is not secure, then you do not need to provide the credentials. Also, note that not all {{site.data.keyword.Bluemix_notm}} Local customers use a web proxy.</p></li>
-<li>IBM provides a whitelist of URLs that must be allowed through your web proxy before starting the deployment.</li>
+<li>IBM provides a URL whitelist that must be allowed through your web proxy before starting the deployment.<br />
+<p>**Note**: The URL whitelist does contain websites such as twitter.com, facebook.com, and youtube.com. If these URLs are not allowed, then certain services and areas of {{site.data.keyword.Bluemix_notm}} might not be available for use.</p>
+</li>
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.
 <p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the IBM operations center.</li>
