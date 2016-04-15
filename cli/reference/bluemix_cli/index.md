@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-*Last updated: 8 April 2016*
+*Last updated: 15 Apr 2016*
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} of the commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The information that follows lists all commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -38,8 +38,7 @@ You can use the following {{site.data.keyword.Bluemix_notm}} commands:
  <table role="presentation"> 
  <tbody> 
  <tr> 
- <td> 
- [bluemix help](index.html#bluemix_help)</td> 
+ <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
  <td>[bluemix login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
@@ -72,8 +71,8 @@ You can use the following {{site.data.keyword.Bluemix_notm}} commands:
  
  <tr> 
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete) </td> 
- <td>[bluemix iam user-create](index.html#bluemix_iam_user_create)</td> 
- <td>[bluemix iam user-delete](index.html#bluemix_iam_user_delete)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td> 
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
@@ -260,11 +259,17 @@ You can use the following {{site.data.keyword.Bluemix_notm}} commands:
  <tr> 
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
- <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
- <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
-
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
  </tr>
  
+ <tr>
+ <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
+ </tr>
  
  
  </tbody> 
@@ -584,7 +589,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 ## bluemix curl
 {: #bluemix_curl}
 
-Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends a request to the {{site.data.keyword.Bluemix_notm}} console server (for example, https://console.ng.bluemix.net) instead of the cf API endpoint (for example, https://api.ng.bluemix.net).
+Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document](http://apidocs.cloudfoundry.org/){: new_window}.
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -594,34 +599,89 @@ bluemix curl PATH [OPTIONS...]
 
 **Command options**:
 
-*PATH*  (required):  The URL path of the resource. For example, /rest/v2/apps.
+*PATH*  (required):  The URL path of the resource. For example, /v2/apps.
 
 *OPTIONS*  (optional):  The options that are supported by the `bluemix curl` command are the same as those for the `cf curl` command.
 
 **Examples**:
 
-View the information for all boilerplate templates:
+View the information for all organizations of the current account:
 
 ```
-bluemix curl /rest/templates
+bluemix curl /v2/organizations
 ```
 
 
 ## bluemix iam orgs
 {: #bluemix_iam_orgs}
-This command has the same function and options as the `cf orgs` command, except that regions where orgs exist are also displayed.
 
+List all organizations
+
+```
+bluemix iam orgs [-r REGION --guid]
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*-r REGION*  (optional): For which region the organization information is shown. If set to 'all', all organizations in all regions are listed.
+
+*--guid* (optional): Display the GUID of the organizations.
+
+**Examples**:
+List all the organizations in region: `us-south` with the GUID displayed
+
+```
+bluemix iam orgs -r us-south --guid
+```
 
 ## bluemix iam org
 {: #bluemix_iam_org}
 
-This command has the same function and options as the `cf org` command, except that regions where the org exists is displayed.
+Show the information for the specified organization.
 
+```
+bluemix iam org ORG_NAME [--guid]
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*ORG_NAME* (required): The name of the organization.
+
+*--guid* (optional): Display the GUID of the organization.
+
+
+**Examples**:
+Show the information of organization `IBM` with the GUID displayed
+
+```
+bluemix iam org IBM --guid
+```
 
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
-This command has the same function and options as the `cf create-org` command.
+Create a new organization. This operation can only be performed by account owner.
+
+```
+bluemix iam org-create ORG_NAME
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*ORG_NAME* (required): The name of the organization being created.
+
+**Examples**:
+Create an organization named `IBM`.
+
+```
+bluemix iam org-create IBM
+```
 
 
 ## bluemix iam org-replicate
@@ -643,24 +703,49 @@ bluemix iam org-replicate ORG_NAME REGION_NAME
 
 **Examples**:
 
-Replicate the org `OE_Runtimes_Scaling` to the region `eu-gb`:
+Replicate the org `myorg` to the region `eu-gb`:
 
 ```
-bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
+bluemix iam org-replicate myorg eu-gb
 ```
 
 
 ## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
-This command has the same function and options as the `cf rename-org` command.
+Rename an organization. This operation can be done only by an org manager.
+
+```
+bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*OLD_ORG_NAME* (required):  The old name of the org that is to be renamed.
+
+*NEW_ORG_NAME*  (required):  The new name of the org that it is renamed to.
 
 
 ## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
+Delete the specified organization in current region.
 
-This command has the same function and options as the `cf delete-org` command.
+```
+bluemix iam org-delete ORG_NAME [-f --all]
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*ORG_NAME* (required):  The name of the existing org that is to be deleted.
+
+*-f* (optional): Force deletion without confirmation.
+
+*--all* (optional): Delete the organization from all regions.
 
 
 ## bluemix iam spaces
@@ -695,53 +780,252 @@ This command has the same function and options as the `cf rename-space` command.
 This command has the same function and options as the `cf delete-space` command.
 
 
-## bluemix iam user-create
-{: #bluemix_iam_user_create}
+## bluemix iam account-users
+{: #bluemix_iam_account_users}
 
-This command has the same function and options as the `cf create-user` command.
+Displays users associated with the account. This operation can be performed only by the account owner.
+
+```
+bluemix iam account-users
+```
+
+## bluemix iam account-user-invite
+{: #bluemix_iam_account-user_inviate}
 
 
-## bluemix iam user-delete
-{: #bluemix_iam_user_delete}
+Invites a user to the account with an organization and space role already set. This operation can be performed only by the account owner.
+
+```
+bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
+```
+
+**Prerequisites**:  Endpoint, Login
 
 
-This command has the same function and options as the `cf delete-user` command.
+**Command options**:
 
+*USER_NAME* (required): The name of the user being invited.
+
+*ORG_NAME* (required): The name of the organization this user is invited to.
+
+*ORG_ROLE* (required): The name of the organization role this user is invited to. For example:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>This role can invite and manage users, select and change plans, and set spending limits.</dd>
+<dt>BillingManager</dt>
+<dd>This role can create and manage the billing account and payment information.</dd>
+<dt>OrgAuditor</dt>
+<dd>This role has read-only access to org information and reports.</dd>
+</dl> 
+
+*SPACE_NAME* (required): The name of the space this user is invited to.
+
+*SPACE_ROLE* (required): The name of the space role this user is invited to. For example:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>This role can invite and manage users, and enable features for a given space.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>This role can create and manage apps and services, and see logs and reports.</dd>
+<dt>SpaceAuditor</dt>
+<dd>This role can view logs, reports, and settings for the space.</dd>
+</dl> 
+
+**Examples**:
+
+Invite user `Mary` to the organization `IBM` as `OrgManager` role and the space `Cloud` as `SpaceAuditor` role:
+
+```
+bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+```
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
-This command has the same function and options as the `cf org-users` command.
+Display users in the specified organization by role.
+
+```
+bluemix iam org-users ORG_NAME [-a]
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*ORG_NAME* (required): The name of the organization.
+
+*-a* (optional): List all the users in the specified organization, not grouped by role.
 
 
 ## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
-This command has the same function and options as the `cf set-org-role` command.
+Assign an organization role to a user. This operation can be performed only by an organization manager.
+
+```
+bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*USER_NAME* (required): The name of the user being assigned.
+
+*ORG_NAME* (required): The name of the organization this user is assigned to.
+
+*ORG_ROLE* (required): The name of the organization role this user is assigned to. For example:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>This role can invite and manage users, select and change plans, and set spending limits.</dd>
+<dt>BillingManager</dt>
+<dd>This role can create and manage the billing account and payment information.</dd>
+<dt>OrgAuditor</dt>
+<dd>This role has read-only access to org information and reports.</dd>
+</dl> 
+
+**Examples**:
+
+Assign user `Mary` to the organization `IBM` as `OrgManager` role:
+
+```
+bluemix iam org-role-set Mary IBM OrgManager
+```
 
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
-This command has the same function and options as the `cf unset-org-role` command.
+Remove an organization role from a user. This operation can be performed only by an organization manager.
+
+```
+bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*USER_NAME* (required): The name of the user being removed.
+
+*ORG_NAME* (required): The name of the organization this user is removed from.
+
+*ORG_ROLE* (required): The name of the organization role this user is removed from. For example:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>This role can invite and manage users, select and change plans, and set spending limits.</dd>
+<dt>BillingManager</dt>
+<dd>This role can create and manage the billing account and payment information.</dd>
+<dt>OrgAuditor</dt>
+<dd>This role has read-only access to org information and reports.</dd>
+</dl> 
+
+**Examples**:
+
+Remove user `Mary` from the organization `IBM` as `OrgManager` role:
+
+```
+bluemix iam org-role-unset Mary IBM OrgManager
+```
 
 
 ## bluemix iam space-users
 {: #bluemix_iam_space_users}
 
-This command has the same function and options as the `cf space-users` command.
+Display users in the specified space by role.
+
+```
+bluemix iam space-users ORG_NAME SPACE_NAME
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*ORG_NAME* (required): The name of the organization
+
+*SPACE_NAME* (required): The name of the space.
 
 
 ## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
-This command has the same function and options as the `cf set-space-role` command.
+Assign a space role to a user. This operation can be performed only by a space manager.
 
+```
+bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*USER_NAME* (required): The name of the user being assigned.
+
+*ORG_NAME* (required): The name of the organization this user is assigned to.
+
+*SPACE_NAME* (required): The name of the space this user is assigned to.
+
+*SPACE_ROLE* (required): The name of the space role this user is assigned to. For example:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>This role can invite and manage users, and enable features for a given space.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>This role can create and manage apps and services, and see logs and reports.</dd>
+<dt>SpaceAuditor</dt>
+<dd>This role can view logs, reports, and settings for the space.</dd>
+</dl> 
+
+
+**Examples**:
+
+Assign user `Mary` to the organization `IBM` and space `Cloud` as `SpaceManager` role:
+
+```
+bluemix iam space-role-set Mary IBM Cloud SpaceManager
+```
 
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
-This command has the same function and options as the `cf unset-space-role` command.
+Remove a space role from a user. This operation can be performed only by a space manager.
+
+```
+bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**Prerequisites**:  Endpoint, Login
+
+**Command options**:
+
+*USER_NAME* (required): The name of the user being removed.
+
+*ORG_NAME* (required): The name of the organization this user is removed from.
+
+*SPACE_NAME* (required): The name of the space this user is removed from.
+
+*SPACE_ROLE* (required): The name of the space role this user is removed from. For example:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>This role can invite and manage users, and enable features for a given space.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>This role can create and manage apps and services, and see logs and reports.</dd>
+<dt>SpaceAuditor</dt>
+<dd>This role can view logs, reports, and settings for the space.</dd>
+</dl> 
+
+**Examples**:
+
+Remove user `Mary` from the organization `IBM` and space `Cloud` as `SpaceManager` role:
+
+```
+bluemix iam space-role-unset Mary IBM Cloud SpaceManager
+```
 
 
 ## bluemix app push
@@ -1208,21 +1492,21 @@ This command has the same function and options as the `cf delete-shared-domain` 
 ## bluemix security cert
 {: #bluemix_security_cert}
 
-List the certificate information for the specified host.
+List the certificate information of a domain.
 
 ```
-bluemix security cert HOST_NAME
+bluemix security cert DOMAIN_NAME
 ```
 
 **Prerequisites**:  Endpoint, Login
 
 **Command options**:
 
-*HOST_NAME* (required):  The name of the server that hosts the certificate.
+*DOMAIN_NAME* (required):  The domain that hosts the certificate.
 
 **Examples**:
 
-View the certificate on the host `ibmcxo-eventconnect.com`:
+View the certificate information of the domain `ibmcxo-eventconnect.com`:
 
 ```
 bluemix security cert ibmcxo-eventconnect.com
@@ -2569,7 +2853,7 @@ bluemix ic volume-inspect VOLUME_NAME
 
 The following example is a request to inspect a volume, where `volume_name` is the name of the volume.
 ```
-bluemix ic volume inspect volume_name
+bluemix ic volume-inspect volume_name
 ```
 
 
@@ -2618,6 +2902,90 @@ The following example shows a request to remove a volume, where `volume_name` is
 bluemix ic volume-remove volume_name
 ```
 
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+List file systems.
+
+```
+bluemix ic volume-fs
+```
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+Create a new file system.
+
+```
+bluemix ic volume-fs-create FILE_SYSTEM_NAME
+```
+
+**Prerequisites**:  Endpoint, Login, Target
+
+**Command options**:
+
+*FILE_SYSTEM_NAME*  (required):  The file system name. The name can contain lowercase letters, numbers, underscores `_`, and hyphens `-`.
+
+**Examples**:
+
+The following example shows a request to create a file system.
+```
+bluemix ic volume-fs-create my_file_system 
+```
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+Remove a file system.
+
+```
+bluemix ic volume-fs-remove FILE_SYSTEM_NAME
+```
+
+**Prerequisites**:  Endpoint, Login, Target
+
+**Command options**:
+
+*FILE_SYSTEM_NAME*  (required):  The file system name.
+
+**Examples**:
+
+The following example shows a request to remove a file system, where `my_file_system` is the name of the file system.
+```
+bluemix ic volume-fs-remove my_file_system
+```
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+Inspect a file system.
+
+```
+bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
+```
+
+**Prerequisites**:  Endpoint, Login, Target
+
+**Command options**:
+
+*FILE_SYSTEM_NAME*  (required):  The file system name.
+
+**Examples**:
+
+The following example is a request to inspect a file system, where `my_file_system` is the name of the volume.
+```
+bluemix ic volume-fs-inspect my_file_system
+```
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+List all file system flavors.
+
+```
+bluemix ic volume-fs-flavors
+```
+
+**Prerequisites**:  Endpoint, Login, Target
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
