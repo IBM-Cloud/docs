@@ -18,13 +18,6 @@ You can create a toolchain in two ways: add a toolchain to an existing app or us
 
 **Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console-ondeck.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. 
 
-
-* [Creating a toolchain from an app](#creating_a_toolchain_from_an_app)  
-* [Creating a toolchain from a template](#creating_a_toolchain_from_a_template)  
-* [Configuring a tool integration](#configuring_a_tool_integration)    
-* [Creating a toolchain](#creating_a_toolchain)  
-* [Viewing a toolchain](#viewing_a_toolchain)   
-
 ##Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
 

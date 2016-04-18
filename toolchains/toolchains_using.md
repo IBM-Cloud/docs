@@ -18,13 +18,6 @@ Use an existing toolchain to help with your day-to-day work. You can add or dele
 
 **Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console-ondeck.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. 
 
-
-* [Configuring a tool integration](#configuring_a_tool_integration)
-* [Adding a tool integration](#adding_a_tool_integration)
-* [Deleting a tool integration](#deleting_a_tool_integration)
-* [Managing access](#managing_access)
-* [Deleting a toolchain](#deleting_a_toolchain)
-
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
 
