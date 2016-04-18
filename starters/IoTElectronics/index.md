@@ -29,7 +29,7 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 {: #rellinks}
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](https://new-console.{DomainName}/apidocs/166)
+* [{{site.data.keyword.iotelectronics}}](https://new-console.ng.bluemix.net/apidocs/166)
 * [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
@@ -39,13 +39,13 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 
 * [{{site.data.keyword.iotelectronics_full}} documentation](iotelectronics_overview.html)
 
-* [{{site.data.keyword.iot_full}}](https://console.{DomainName}/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
 
-* [{{site.data.keyword.iotrtinsights_full}}](https://console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
+* [{{site.data.keyword.iotrtinsights_full}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
 
-* [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
+* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 
-* [{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## samples
 {: #samples}

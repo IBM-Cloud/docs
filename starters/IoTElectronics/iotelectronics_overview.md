@@ -3,7 +3,7 @@
 
 # Getting started with {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Last updated: 12 April 2016*
+*Last updated: 18 April 2016*
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}
@@ -51,14 +51,14 @@ To install the mobile app, download the source files and follow the instructions
 {: #rellinks}
 ## Components
 {: #general}
-* [{{site.data.keyword.iot_short}}](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.iotrtinsights_short}}](https://console.ng.bluemix.net/docs/services/iotrtinsights/index.html)   
-* [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
+* [{{site.data.keyword.iotrtinsights_short}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/index.html)   
+* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
+* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](https://new-console.{DomainName}/apidocs/166)
+* [{{site.data.keyword.iotelectronics}}](https://new-console.ng.bluemix.net/apidocs/166)
 * [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
