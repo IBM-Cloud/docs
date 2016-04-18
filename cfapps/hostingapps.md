@@ -17,7 +17,7 @@ copyright:
 
 #Hosting apps in {{site.data.keyword.Bluemix_notm}}
 
-*Last updated: 1 December 2015*
+*Last updated: 18 April 2016*
 
 <!--The whole topic is staging only -->
 
@@ -91,13 +91,15 @@ To deploy your application to {{site.data.keyword.Bluemix_notm}} as a Cloud Foun
 
 You can use the following tools and services that {{site.data.keyword.Bluemix_notm}} provides:
 
+*Table 1. {{site.data.keyword.Bluemix_notm}} tools*
+
 | Tool	| Method |
 |:------|:--------|
 |Cloud Foundry command line interface (cf cli)	|Manage your code on local client and use Cloud Foundry command line interface to push your application to {{site.data.keyword.Bluemix_notm}} manually. For more information, see [Uploading your apps](../starters/upload_app.html).|
 |Eclipse	|Manage your code in Eclipse and use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} to push your application.|
 |Git integration	|Manage your code on GitHub and integrate Git into {{site.data.keyword.Bluemix_notm}}. You can collaborate with other developers. Your application is deployed to {{site.data.keyword.Bluemix_notm}} automatically when you commit changes in the code. You do not need to push the application manually.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Manage your code on DevOps GitHub repository and deploy your application to {{site.data.keyword.Bluemix_notm}} by using the DevOps Delivery Pipeline.|
-*Table 1. {{site.data.keyword.Bluemix_notm}} tools*
+
 
 If the Cloud Foundry platform does not support your application requirements, you can use a container or VM where the runtime is set up, configured, and maintained with more customized options.
 
