@@ -15,12 +15,11 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 5 April 2016*
+*Last updated: 18 April 2016*
 
-If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](../admin/adminpublic.html#orgmng).
+If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
@@ -31,7 +30,7 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
 |Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/adminpublic.html#orgmng). |
-|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_user). |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. You can also access the calendar feed and event subscriptions for extending your notifications in the Pending Updates section. See [Viewing system information](index.html#oc_system). |
 |Extend notifications and set up event subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**. You can use web hooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and event subscriptions](index.html#oc_eventsubscription). |
@@ -46,13 +45,13 @@ You can always know the status of your environment by checking the Status page. 
 
 You can view notifications from IBM for your local or dedicated environment and monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
 
+Table 2. Event types and notifications methods
+
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
 | Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications for the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **updates pending**. You can extend the notification capability by setting up an event subscription that integrates the maintenance update alerts from the Administration page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |
 | Critical incidents | You are alerted about critical incidents on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that integrates the incident alerts from the Status page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |  
 | Status | You can view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.  |
-
-*Table 2. Event types and notifications methods*
 
 ### Setting up event subscriptions
 
@@ -60,16 +59,16 @@ You can extend the functionality of the notifications that are sent to the Admin
 
 To use web hooks to set up a specific event subscription, complete the following steps:
 
-1. Go to the **ADMINISTRATION** page:
-
-- For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
-- For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+* For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+* For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 
 **Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
 
-2. Click **Add Subscription**.
+1. Click **Add Subscription**.
 
-3. Fill in the event subscription form. For information about the fields on the form, review the following table:
+2. Fill in the event subscription form. For information about the fields on the form, review the following table:
+
+Table 3. Event subscription form fields
 
 | **Field** | **Description** |
 |-----------------|-------------------|
@@ -81,8 +80,6 @@ To use web hooks to set up a specific event subscription, complete the following
 | User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
 | Password | Enter the password for your web service. |
 | Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. For example, if you want to display the title, message, and severity in the notification from your web service, you must define the {{site.data.keyword.Bluemix_notm}} values with the matching property for your web service. The following values can be used to pull information from the {{site.data.keyword.Bluemix_notm}} notification for the notification title, message body, and severity level: `"{{title}}`, `"{{message}},"` and `"{{severity}}"`. If you do not enter information in this section, you receive the notification without any additional information.  |
-
-Table 3. Event subscription form fields
 
 When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
@@ -247,6 +244,8 @@ icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
 
+*Table 4. Security report list*
+
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
 | Firewall | Firewall logins | Events related to administrator login to the Vyatta firewall devices. |
@@ -266,8 +265,6 @@ The following table shows the list of security reports that are generated for {{
 | Anti-virus | Anti-virus scan report | Anti-virus software that is in place. |
 | Software fix management | Patch application report | Software fixes that were applied. |
 | Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
-
-*Table 4. Security report list*
 
 ## Viewing status
 {: #oc_status}
@@ -337,7 +334,7 @@ When you are implementing the service broker, in the JSON response of `GET /v2/c
             },
             {
                "title":"Connectivity",
-               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
+               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data quickly with familiar tools."
             }
          ],
          "featuredImageUrl":"http://path/to/icon_64x64.png",
@@ -580,6 +577,8 @@ To remove a user, locate the user and click the ![Delete](images/icon_trash.svg)
 
 Users can be assigned the following permissions:
 
+*Table 5. Permissions*
+
 | **User permission** | **Description** |       
 |-----------------|-------------------|
 | Admin | Users with `admin` permission are allowed to edit permissions for other users. |
@@ -588,12 +587,10 @@ Users can be assigned the following permissions:
 | Reports | Users with `reports` permission can be assigned the access to `view` or `write` (modify) security reports. |
 | Users | Users with `users` permission can be assigned the access to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
 
-*Table 5. Permissions*
-
 Permissions can be enabled, or the user can be given `view` or
 `write` access for that permission, as represented by the following icons:
 
-* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
+* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon with a permission means that it is enabled.
 * The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
 
@@ -957,6 +954,8 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
+*Table 6. Fields*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. |
@@ -965,7 +964,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-*Table 6. Fields*
 
 #### Body
 {: #registerbody}
@@ -1037,6 +1035,8 @@ Use the following API and code examples to update a service.
 ### Request
 {: #updaterequest}
 
+*Table 7. Fields*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
@@ -1045,7 +1045,6 @@ Use the following API and code examples to update a service.
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-*Table 7. Fields*
 
 #### Body
 {: #updatebody}
@@ -1108,11 +1107,12 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
+*Table 8. Parameter*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
 
-*Table 8. Parameter*
 
 ### Route
 
