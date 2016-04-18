@@ -16,7 +16,7 @@ copyright:
 You can create a toolchain in two ways: add a toolchain to an existing app or use a predefined template to create a toolchain. Depending on the toolchain or template that you use, the toolchain might include a GitHub repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. The pipeline builds any changes to the GitHub repo and then deploys the app to {{site.data.keyword.Bluemix}}. 
 {: shortdesc}  
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console-ondeck.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. 
+**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. 
 
 ##Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
