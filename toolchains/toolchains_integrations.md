@@ -13,9 +13,9 @@ copyright:
 # Tool integrations (Experimental)
 {: #integrations}
 
-*Last updated: 15 April 2016*
+*Last updated: 18 April 2016*
 
-Important: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time request for access. 
+Important: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}.  Toolchains are available in the Dallas region only.
 {:shortdesc}
 
 ## Delivery Pipeline

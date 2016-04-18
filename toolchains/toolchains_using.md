@@ -11,12 +11,12 @@ copyright:
 # Using toolchains (Experimental)
 {: #toolchains-using}
 
-*Last updated: 15 April 2016*
+*Last updated: 18 April 2016*
 
 Use an existing toolchain to help with your day-to-day work. You can add or delete tool integrations from a toolchain, configure existing or new tool integrations, and manage access to the toolchain.  
 {: shortdesc}
 
-**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}. 
+**Important**: This capability is experimental. Toolchains might not be stable and might change in ways that are not compatible with earlier versions. They are not recommended for use in production environments. To use toolchains, you must make a one-time [request for access](https://new-console.ng.bluemix.net/devops?cm_mmc=IBMBluemixGarageMethod-_-MethodSite-_-10-19-15::12-31-18-_-toolchains-welcome-page){: new_window}.  Toolchains are available in the Dallas region only.
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
