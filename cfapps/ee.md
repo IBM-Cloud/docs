@@ -18,7 +18,7 @@ copyright:
 # Scenario: End-to-end development
 {: #ee}
 
-*Last updated: 6 November 2015*
+*Last updated: 18 April 2016*
 
 You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a selection of tools when you build, run, and deploy your apps. Follow this end-to-end development scenario to get started.
 {:shortdesc}
@@ -35,7 +35,7 @@ After signing up, you start to build your first app by using {{site.data.keyword
 
 In {{site.data.keyword.Bluemix_notm}}, apps are associated with organizations and spaces. An organization is owned and used by multiple collaborators. Initially, you get a default organization that is named after your user name and you are the only collaborator. You also get a space within this organization. The space is an environment to run your apps; for example, you can have a dev space as a development environment, a test space as a test environment, and a production space as a production environment. Furthermore, each of the environment belongs to a region. With {{site.data.keyword.Bluemix_notm}}, you can deploy your applications to a specific geographical region for lower network latency, data privacy, and better availability. See Regions for details.
 
-For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, select the **US South** region from the upper-right corner of the user interface. Then, you can take the following steps to create an app:
+For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, select the **US South** region. Then, you can take the following steps to create an app:
   1. Click **CREATE AN APP**.
   2. Select **Web**.
   3. Select the starter SDK for Node.js for your web app, and click **Continue**.
@@ -233,9 +233,9 @@ Your 30-day free trial has expired, but you want to continue to use {{site.data.
 
 {{site.data.keyword.Bluemix_notm}} provides an estimator and calculator for you to see your app cost. You can see the cost of TestNode in the following ways:
 
-  * In your dashboard, click TestNode. Then, in the Overview page, click **estimate the cost of this app** in the lower right to see the price of **SDK for Node.js** runtime and Support, and the total monthly price of your app in the upper right corner.
+  * In your dashboard, click TestNode. Then, in the Overview page, click **estimate the cost of this app** to see the price of **SDK for Node.js** runtime and Support, and the total monthly price of your app.
   
-  * Or, in the Pricing Sheet page, type the monthly usage of the runtime and services of your app. For example, 3 instances of **SDK for Node.js** with 1 GB memory for each instance. The monthly price is calculated and displayed in the upper right corner of the window.
+  * Or, in the Pricing Sheet page, type the monthly usage of the runtime and services of your app. For example, 3 instances of **SDK for Node.js** with 1 GB memory for each instance. The monthly price is calculated and displayed.
 
 You can also calculate your app cost manually by adding up the prices of your runtimes and services and deducting the free allowance. For more information, see Calculating your costs manually.
 
