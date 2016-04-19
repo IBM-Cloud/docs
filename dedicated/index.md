@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 6 April 2016*
+*Last updated: 19 April 2016*
 
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
@@ -279,7 +279,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 |Review projections | Review the capacity projections as it relates to external events that might impact capacity. | Customer |
 |Adjust capacity |  Add or remove capacity as your needs change. | IBM |
 |Publish upcoming updates and maintenance | Create documentation for the required maintenance of IBM components. | IBM |
-|Perform maintenance | Work with IBM to schedule required maintenance within a 30-day window. You can provide dates that might not work for you in the 30-day window, and IBM works to schedule the maintenance accordingly. | IBM and customer share responsibility |
+|Perform maintenance | Work with IBM to schedule required maintenance within a 21-day window. You can provide dates that might not work for you in the 30-day window, and IBM works to schedule the maintenance accordingly. | IBM and customer share responsibility |
 |Address provisioning failures | Fix provisioning failures, if they occur, for customer-created services that are deployed to the Catalog. | IBM |
 |Perform network and IP scans | Perform daily and monthly network and IP scans. | IBM and customer share responsibility |
 |Provide access to audit logs | Provide access to all security and administrative audit logs.   | IBM and customer share responsibility |
