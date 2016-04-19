@@ -308,11 +308,11 @@ The methods for working with you service broker vary depending on how many servi
 
 Complete the following steps to register your service broker:
 
-1\. [Implement the Cloud Foundry Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window} to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.
-
-When you are implementing the service broker, in the JSON response of `GET /v2/catalog`, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response:
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implement the Cloud Foundry Service Broker API</a> to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.<br />
+<br />
+<p>When you are implementing the service broker, in the JSON response of <code>GET /v2/catalog</code>, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response</p>
+<p><pre>
 "services":[
    {
       "bindable":true,
@@ -334,7 +334,7 @@ When you are implementing the service broker, in the JSON response of `GET /v2/c
             },
             {
                "title":"Connectivity",
-               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data quickly with familiar tools."
+               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
             }
          ],
          "featuredImageUrl":"http://path/to/icon_64x64.png",
@@ -398,33 +398,27 @@ When you are implementing the service broker, in the JSON response of `GET /v2/c
    }
 ]
 }
-```
-{: codeblock}
-
-**Note**: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.
-
-2\. After you have implement the Service Broker API, go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
-
-3\. Click **REGISTER A SERVICE BROKER**.
-
-4\. Complete the form by entering values in the following fields:
-
-- Service broker name
-- Service broker URL
-- Service broker user name
-- Service broker password
-
-5\. Click **CONNECT**.
-
-6\. Review the information for your service including the available plans, icon, and the service description.
-
-**Note**: If you need to change the catalog information for the service, update your service broker, and start the registration process again by filling in the form.
-
-7\. Click **REGISTER**.
-
-8\. Choose to enable all plans or only specific plans for the service. All plans are disabled by default.
-
-9\. Enable the service instance for all orgs or specific orgs.
+</pre></p>
+<p><strong>Note</strong>: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.</p>
+</li>
+<li>After you have implement the Service Broker API, go to <strong>ADMINISTRATION</strong> &gt; <strong>CATALOG MANAGEMENT</strong>.</li>
+<li>Click <strong>REGISTER A SERVICE BROKER</strong>.</li>
+<li>Complete the form by entering values in the following fields:
+<ul>
+<li>Service broker name</li>
+<li>Service broker URL</li>
+<li>Service broker user name</li>
+<li>Service broker password</li>
+</ul>
+</li>
+<li>Click <strong>CONNECT</strong>.</li>
+<li>Review the information for your service including the available plans, icon, and the service description.<br />
+<p><strong>Note</strong>: If you need to change the catalog information for the service, update your service broker, and start the registration process again by filling in the form.</p>
+</li>
+<li>Click <strong>REGISTER</strong>.</li>
+<li>Choose to enable all plans or only specific plans for the service. All plans are disabled by default.</li>
+<li>Enable the service instance for all orgs or specific orgs.</li>
+</ol>
 
 You can now see your service in the Custom Services category in your {{site.data.keyword.Bluemix_notm}} Catalog. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**, and select the tile in the catalog. You can enable different plans, and edit the plan visibility for your orgs at any time.
 
