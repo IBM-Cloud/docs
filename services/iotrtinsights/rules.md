@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # Creating rules and responding to alerts {: #rules}
@@ -55,7 +62,7 @@ Depending on the message frequency and the rule conditions, a rule might trigger
 Condition | Description
 ------------- | -------------
 Trigger every time conditions are met | The rule is triggered every time the rule conditions are met.
-Trigger if conditions are met N times in M *days/hours/minutes/custom* | The rule is triggered when the conditions have been met M times in the selected time interval, and is then not triggered again until the configured time period has passed. </br>Example: The conditional trigger requirement =`Trigger only once if conditions are met 4 times in 30 minutes`. The device sends one new message with every five minutes. At noon, the temperature initially exceeds 90 degrees, which meets the condition. The conditional trigger counter is started but the rule is not yet triggered.  After 15 minutes and three more messages that indicate that `temp > 90` have been received the rule is triggered. The rule is then not triggered for another 15 minutes no matter what the temperature is.
+Trigger if conditions are met N times in M *days/hours/minutes/custom* | The rule is triggered when the conditions have been met N times in the selected time interval, and is then not triggered again until the configured time period has passed. </br>Example: The conditional trigger requirement =`Trigger only once if conditions are met 4 times in 30 minutes`. The device sends one new message with every five minutes. At noon, the temperature initially exceeds 90 degrees, which meets the condition. The conditional trigger counter is started but the rule is not yet triggered.  After 15 minutes and three more messages that indicate that `temp > 90` have been received the rule is triggered. The rule is then not triggered for another 15 minutes no matter what the temperature is.
 
 ## Example: Creating a complex rule by using message schema and context parameter conditions {: #complex}
 To create a more complex rule that creates an alert in the Alerts Dashboard when the ax parameter exceeds a value of five for any IoT Phone device that is mapped to asset number 5001, do the following steps:

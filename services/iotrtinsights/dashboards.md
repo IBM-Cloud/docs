@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # Managing dashboards and templates {: #managing-dashboards}
@@ -40,7 +47,7 @@ If, however, you configure the data point with a min and max value, you have the
 
 You can also assign a Sensor type for the data point to enable a special type of visualization widget to better illustrate the type of sensor data that is displayed. For example, you can select the sensor type `Light on/off` to enable a `Plain light indicator (on/off)` visualization widget.
 
-You also have the option to include several widgets for the same datapoint in the same dashboard to show both the raw numerical value and humidity side by side.   ![Multiple widgets for the same data point.](images/widgets.png "Multiple widgets for the same data point icon")  
+You also have the option to include several widgets for the same datapoint in the same dashboard to show both the raw numerical value and humidity side by side.   ![Multiple widgets for the same data point.](images/widgets.svg "Multiple widgets for the same data point icon")  
 *Three visualization options for the same data point.*
 
 
@@ -73,8 +80,8 @@ Energy meter | Plain value | N/A | Integer/Float
 Percentage | Plain percentage (0-100) | N/A | Integer/Float
 Voltage | Plain voltage gauge | N/A | Integer/Float
 Current | Plain current gauge | N/A | Integer/Float
-Longitude | Device location on Special > Map widget (Latitude widget also required) | N/A | Float
-Latitude | Device location on Special > Map widget (Longitude widget also required) | N/A | Float
+Longitude | Device location on Special > Map widget (Latitude widget also required) | **Important:** The data point used for the longitude value must be assigned the sensor type Longitude in the message schema. | Float
+Latitude | Device location on Special > Map widget (Longitude widget also required) | **Important:** The data point used for the latitude value must be assigned the sensor type Latitude in the message schema. | Float  
 
 
 ## Default dashboard layouts

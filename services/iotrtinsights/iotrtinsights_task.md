@@ -1,4 +1,11 @@
-{:new_window: target="_blank"}
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
@@ -48,25 +55,25 @@ Adding a new device is a two-step process. First, you add the device to {{site.d
   <dd>
   <ol>
     <li>Click **Add manually**.</li>
-    <li>Select **Real-time data point** or **Virtual data point**</br>
-  </li>
+    <li>Select **Real-time data point** or **Virtual data point**</br></li>
     <li>Define the following data point information:
     <ul>  
-    <li> Data point - The data point identifier that you [located in the {{site.data.keyword.iot_short}} dashboard](#identify-datapoints "Identify datapoints."). For example:  
+     <li> Data point - The data point identifier that you [located in the {{site.data.keyword.iot_short}} dashboard](#identify-datapoints "Identify datapoints."). For example:  
    `id`, `ts`, `lat`  </li>
-   <li>Description - A short description of the data point. This description is used when displaying the data points in dashboards.</li>
-   <li>Virtual data point function - Add one or more components to define a valid function. You can use data points, numerical values, and mathematical operators such as +, -, \*, /, (, and ) to build your function. </li>
-   <li>Data type - The type of data of the data point:  
+     <li>Description - A short description of the data point. This description is used when displaying the data points in dashboards.</li>
+     <li>Virtual data point function - Add one or more components to define a valid function. You can use data points, numerical values, and mathematical operators such as +, -, \*, /, (, and ) to build your function. </li>
+     <li>Data type - The type of data of the data point:  
    `String`, `Integer`, `Float`, or `Parent`.</li>
      <li>Sensor type - Optionally select how to interpret the data point in the dashboards. Depending on the type and sensor type combination, additional visualization options might be available for your dashboard widgets. For more information about sensor types and visualization options, see [Dashboard widgets](dashboards.html#dashboard-widget "Dashboard widgets").</li>
-    <li>Data point icon - Optionally select an icon to represent the data point in the dashboard widgets.</li>
-    <li>Min value/Max value - Optional, integer and Float only: If a max and min value is entered, device data can be displayed as a gauge in the dashboards.</li>
-    <li>Data unit - Optional: The unit of data of the data point. For example:  
+     <li>Data point icon - Optionally select an icon to represent the data point in the dashboard widgets.</li>
+     <li>Min value/Max value - Optional, integer and Float only: If a max and min value is entered, device data can be displayed as a gauge in the dashboards.</li>
+     <li>Data unit - Optional: The unit of data of the data point. For example:  
      `C`, `Mph`  </li>
      <li> Decimal places - Optional, float only: The number of decimals to include in the device data.</li>
-     </ul></li>
-     </ol>
-    </dd>
+    </ul>
+    </li>
+  </ol>
+  </dd>
   </dl>
    8. Click **OK** to create the message schema.
    9. Go to **Devices > Browse devices** and click your newly added device to verify that real-time device data is displayed and that the data points are correctly mapped.

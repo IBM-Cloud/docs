@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
 {:new_window: target=_"blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
