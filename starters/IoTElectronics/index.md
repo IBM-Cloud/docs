@@ -29,7 +29,6 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 {: #rellinks}
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](https://new-console.ng.bluemix.net/apidocs/166)
 * [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
@@ -47,6 +46,6 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 
 * [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
-## samples
+## Samples
 {: #samples}
-* [Sample mobile app](iotelectronics_overview.html#iotforelectronics_getmobileapp)
+* [Sample mobile app](https://github.com/ibm-watson-iot/iote-mobile)
