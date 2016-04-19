@@ -232,7 +232,7 @@ The following list shows the customer roles and responsibilities that you assign
 <dd>Works with the IBM representatives on the deployment plan for VMware. Typically, this is someone who is a VMware administrator in the data center. The person assigned to this role reviews the <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a> and works together with IBM on an implementation plan. At the end of deployment, the person assigned to this role approves that the deployment is in compliance with the corporate standards at the IaaS layer.</dd>
 </dl>
 
-Your customer representatives work with a dedicated client success manager (CSM) and other IBM specialists that work together to ensure that you always have the support that you need. The CSM is provided for 6 months at no charge. The CSM completes the following tasks:
+Your customer representatives work with IBM specialists that work together to ensure that you always have the support that you need. A Client Success Manager (CSM) is provided for 6 months. The CSM completes the following tasks:
 
 <ul>
 <li>Provides technical coordination between you and IBM.</li>
