@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 19 April 2016*
+*Last updated: 20 April 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -66,37 +66,43 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
 |{{site.data.keyword.appseccloudshort}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.hadoopst}}			|Yes		|No		|No |
 |{{site.data.keyword.APIM}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.conceptexpansionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.conceptinsightsshort}}	|Yes		|Yes		|Yes |
-|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|No |
-|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|No |
+|{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.DB2OnCloud_short}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.dialogshort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.documentconversionshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.game}}			|No		|No		|Yes |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Yes	|Yes		|Yes |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Yes		| Yes		| Yes |
-|{{site.data.keyword.dataworks_short}}		|Yes		|Yes		|No|
+|{{site.data.keyword.identitymixershort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes |
+|{{site.data.keyword.eventhubshort}}		|Yes		|No		|No|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
 |{{site.data.keyword.macm_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.manda}}			|Yes		|Yes		|Yes |
+|{{site.data.keyword.amashort}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.mqa}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.mql}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.pm_short}}			|Yes		|Yes		|No |
+|{{site.data.keyword.presenceinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.redis}} Cloud	|Yes		|No		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
+|{{site.data.keyword.runbook_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.SendGrid}}	|Yes		|Yes		|No|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes |
@@ -104,6 +110,8 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.toneanalyzershort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.visualinsightsshort}}	|Yes		|Yes		|Yes|
+|{{site.data.keyword.visualrecognitionshort}}	|Yes 		|Yes	 	|Yes|
+|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.workflow}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes |
 
