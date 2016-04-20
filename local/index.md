@@ -302,7 +302,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 |Review capacity projections | Review the capacity projections as they relate to external events that might impact capacity as well as anticipated new deployments of apps. Work with IBM to review the projections and plan accordingly. | IBM and customer share responsibility |
 |Adjust capacity |  Add or remove capacity as your needs change. | IBM |
 |Publish upcoming updates and maintenance | Create documentation for the required maintenance of IBM components. | IBM |
-|Perform maintenance | Work with IBM to schedule required maintenance within a 21-day window. You can provide dates that might not work for you in the 30-day window, and IBM works to schedule the maintenance accordingly. | IBM and customer share responsibility |
+|Perform maintenance | Work with IBM to schedule required maintenance within a 21-day window. You can provide dates that might not work for you in the 21-day window, and IBM works to schedule the maintenance accordingly. | IBM and customer share responsibility |
 |Address provisioning failures | Fix provisioning failures, if they occur, for customer-created services that are deployed to the Catalog. | IBM |
 |Perform network and IP scans | Perform daily and monthly network and IP scans. | IBM and customer share responsibility |
 |Provide access to audit logs | Provide access to all security and administrative audit logs.   | IBM and customer share responsibility |
