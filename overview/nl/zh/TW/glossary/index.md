@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014，2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
@@ -143,7 +155,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>儲存器 (container)</dt>
 <dd class="dd">一種系統建構，容許使用者同步執行個別邏輯作業系統實例。儲存器使用檔案系統各層來最小化映像檔大小，並推動重複使用。另請參閱<a class="xref" href="#gloss_I__x2024928">映像檔 (image)</a>、<a class="xref" href="#gloss_L__x2028320">層 (layer)</a>、<a class="xref" href="#gloss_R__x2064940">登錄 (registry)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x7233913"><!-- --></a>持續交付 (continuous delivery, CD)</dt>
-<dd class="dd">一種軟體開發作法，利用持續測試、持續整合和持續部署等技術，使新特性和修正程式能夠在低風險的情況下迅速包裝並部署到測試環境，然後再部署給客戶。</dd>
+<dd class="dd">一種軟體開發作法，利用持續測試、持續整合和持續部署等技術，使新特性和修正程式能夠在低風險的情況下迅速包裝並部署至測試環境，然後再部署給客戶。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>認證 (credential)</dt>
 <dd class="dd">鑑別期間所獲得的資訊，用於說明使用者、群組關聯或其他安全相關的身分屬性，且用來執行如授權、審核或委派等服務。例如，使用者 ID 及密碼是容許存取網路及系統資源的認證。</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
@@ -173,7 +185,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>問題報告 (defect)</dt>
 <dd class="dd">一種專案元素，容許利害關係人追蹤錯誤和錯誤修正程式。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>部署 (deployment)</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">將應用程式（例如，報告或模型）移至不同實例的處理程序。例如，經常會在測試環境中建立報告，然後將其部署到正式作業。部署應用程式時，會匯出、傳送然後匯入該應用程式。</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">將應用程式（例如，報告或模型）移至不同實例的處理程序。例如，經常會在測試環境中建立報告，然後將其部署至正式作業。部署應用程式時，會匯出、傳送然後匯入該應用程式。</li>
 <li class="li">一個處理程序，用於擷取建置輸出、包裝輸出（含配置內容），以及在預先定義的位置中安裝套件，以進行測試或執行。另請參閱<a class="xref" href="#gloss_S__x2067189">編譯打包 (stage)</a>。</li>
 </ol>
 </dd>
@@ -184,7 +196,7 @@ root)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x3744906"><!-- --></a>DQM</dt>
 <dd class="dd">請參閱<a class="xref" href="#gloss_D__x5390841">動態查詢模式 (dynamic query mode)</a>。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x7470343"><!-- --></a>Droplet</dt>
-<dd class="dd">Cloud Foundry 中的保存檔，其中包含應用程式及其執行時期和架構相依關係，保存以後才可部署到雲端。</dd>
+<dd class="dd">Cloud Foundry 中的保存檔，其中包含應用程式及其執行時期和架構相依關係，保存以後才可部署至雲端。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x7470348"><!-- --></a>Droplet Execution Agent (DEA)</dt>
 <dd class="dd">負責部署應用程式的 Cloud Foundry 元件。</dd>
 <dt class="dt dlterm"><a name="gloss_D__x5390841"><!-- --></a>動態查詢模式 (dynamic query mode, DQM)</dt>
@@ -246,7 +258,7 @@ root)</a>。</dd>
 <dd class="dd">一種網際網路通訊協定，供 Web 伺服器和 Web 瀏覽器用來在網際網路上安全地傳送和顯示超媒體文件。</dd>
 </dl>
 
-## 入侵
+## I
 {: #gloss_I}
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_I__x4585337"><!-- --></a>IaaS</dt>
@@ -544,7 +556,7 @@ Bluemix 會在您的應用程式路徑中使用預設的共用網域。
 <dd class="dd">由授信憑證管理中心 (CA) 簽署的憑證。另請參閱<a class="xref" href="#gloss_C__x2016383">憑證管理中心 (certificate authority)</a>、<a class="xref" href="#gloss_I__x3753781">中繼憑證 (intermediate certificate)</a>。</dd>
 </dl>
 
-## 使用者
+## U
 {: #gloss_U}
     
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_U__x2116436"><!-- --></a>統一資源識別碼 (Uniform Resource Identifier, URI)</dt>

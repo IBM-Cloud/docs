@@ -1,262 +1,107 @@
+---
+
+
+
+copyright:
+
+  years: 2015, 2016
+
+
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#Amministrazione di {{site.data.keyword.Bluemix_notm}}
-{: #administer}
-*Ultimo aggiornamento: 20 gennaio 2016*
 
-Gestisci le tue organizzazioni, i tuoi spazi e i tuoi utenti assegnati facendo clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**. Se sei un utente {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato](index.html#mng) per ulteriori informazioni sull'amministrazione della tua istanza locale o dedicata.
-{:shortdesc}
-
-##Gestione del tuo account
-{: #mngacct}
-
-In {{site.data.keyword.Bluemix}} pubblico, puoi gestire organizzazioni e spazi, compreso l'accesso degli utenti, e tutto questo dal dashboard nell'interfaccia utente. Puoi anche monitorare il tuo utilizzo e la fatturazione a tuo carico.
-{:shortdesc}
-
-###Organizzazioni e spazi
-{: #orgsandspaces}
-
-In qualità di gestore dell'organizzazione o proprietario dell'account, puoi utilizzare la pagina Gestisci organizzazioni per visualizzare e gestire le impostazioni dell'organizzazione o dello spazio, incluso l'accesso degli utenti. Per aprire la pagina Gestisci organizzazioni, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.
-
-####Organizzazioni
-
-Un'organizzazione è definita dai seguenti elementi:
-
-<dl>
-<dt>Utenti</dt>
-<dd>Il ruolo con l'autorizzazione di base in organizzazioni e spazi. Devi essere assegnato
-a un'organizzazione prima che ti possano essere concesse altre autorizzazioni agli
-spazi all'interno dell'organizzazione. Per informazioni dettagliate,
-consulta [Utenti e ruoli](index.html#userroles).</dd>
-<dt>Domini</dt>
-<dd>Fornisci la rotta su internet che è assegnata all'organizzazione. Una rotta ha un dominio secondario e un dominio. Un dominio secondario è di norma il
-nome dell'applicazione. Un dominio può essere un dominio di sistema o un dominio personalizzato che hai registrato per la tua applicazione.<br/>
-<p>**Nota**: se aggiungi un dominio personalizzato, devi configurare il server DNS per risolvere il tuo dominio personalizzato per puntare al dominio di sistema {{site.data.keyword.Bluemix_notm}}. In questo modo, quando {{site.data.keyword.Bluemix_notm}} riceve una richiesta per il tuo dominio personalizzato, può correttamente instradarla alla tua applicazione.</p></dd>
-<dt>Quota</dt>
-<dd>Rappresenta i limiti di risorse per l'organizzazione, compreso il numero di servizi
-e la quantità di memoria che può essere assegnata per l'utilizzo da parte dell'organizzazione. Le quote vengono assegnate quando
-vengono create le organizzazioni. Applicazioni o servizi in uno spazio dell'organizzazione contribuiscono tutti
-all'utilizzo della quota. Con i piani Pagamento a consumo o Sottoscrizione, puoi regolare la tua quota per
-le applicazioni e i contenitori Cloud Foundry in base al variare delle esigenze della tua organizzazione.</dd>
-</dl>
-
-In {{site.data.keyword.Bluemix_notm}},
-puoi utilizzare le organizzazioni per abilitare la collaborazione tra utenti e per facilitare il raggruppamento
-logico di risorse dei progetti nei seguenti modi:
-
-<ul>
-<li>Puoi raggruppare un insieme di spazi, applicazioni, servizi, domini, rotte e utenti nelle organizzazioni.</li>
-<li>Puoi gestire l'accesso agli spazi e alle organizzazioni in base ai singoli utenti.</li>
-</ul>
-
-Quando crei
-un'organizzazione, il suo nome deve essere univoco in {{site.data.keyword.Bluemix_notm}}. Dopo che hai creato l'organizzazione, ti verrà automaticamente assegnata
-l'autorizzazione *Gestore organizzazione*, che ti consente di modificare il nome dell'organizzazione, di eliminarla e di creare spazi al suo interno.
-
-Quando elimini un'organizzazione, tutti gli
-spazi e i servizi e tutte le applicazioni al suo interno vengono eliminati.
-
-{{site.data.keyword.Bluemix_notm}} consente la collaborazione sui progetti assegnando utenti all'interno di un'organizzazione e all'interno degli
-spazi nell'organizzazione. Puoi utilizzare la scheda **Utenti** per
-visualizzare e gestire gli utenti dell'organizzazione. Puoi anche invitare gli utenti alla tua organizzazione facendo clic sul link **Invita un nuovo utente** nella scheda **Utenti**. Agli utenti in un'organizzazione possono essere assegnate le seguenti autorizzazioni:
-
-<ul>
-<li>Utente organizzazione</li>
-<li>Gestore organizzazione</li>
-<li>Gestore fatturazione dell'organizzazione</li>
-<li>Revisore organizzazione</li>
-</ul>
-
-####Spazi
-
-All'interno di un'organizzazione, puoi utilizzare
-gli spazi per raggruppare un insieme di applicazioni, servizi e utenti.
-
-Dopo che hai aggiunto gli
-utenti a un'organizzazione, puoi concedere loro le autorizzazioni agli spazi all'interno
-dell'organizzazione. In modo analogo alle organizzazioni, anche gli spazi hanno una serie di autorizzazioni che possono
-essere assegnate agli utenti:
-
-<ul>
-<li>Gestore spazio</li>
-<li>Sviluppatore spazio</li>
-<li>Revisore spazio</li>
-</ul>
-
-**Nota**: a un utente deve essere assegnata almeno una delle autorizzazioni nello spazio.
-
-La scheda **Domini** per uno spazio
-è un elenco di sola lettura dei domini assegnati allo spazio. Il dominio di sistema è sempre disponibile per uno spazio e allo
-spazio è anche possibile assegnare dei domini personalizzati. Le applicazioni che erano state create nello spazio possono utilizzare qualsiasi dominio elencato per lo spazio.
-
-###Utenti e ruoli
-{: #userroles}
-
-I proprietari degli account eseguono tutte le operazioni sulle organizzazioni
-e sugli spazi.
-
-####Tipi di utenti
-
-Puoi essere un membro o un collaboratore di un account.
-
-<dl>
-<dt>Membro</dt>
-<dd>Sei un membro di un account {{site.data.keyword.Bluemix_notm}} se
-hai creato l'account, oppure se sei stato invitato all'account e hai quindi eseguito la
-registrazione dall'invito, come tua prima esperienza con {{site.data.keyword.Bluemix_notm}}. </dd>
-<dt>Collaboratore</dt>
-<dd>Sei un collaboratore di un account {{site.data.keyword.Bluemix_notm}}
-se hai in precedenza utilizzato {{site.data.keyword.Bluemix_notm}} con
-un account differente ma sei stato quindi invitato a questo account e hai accettato
-l'invito.</dd>
-</dl>
-
-####Ruoli utente
-
-Agli utenti possono essere assegnate
-le seguenti autorizzazioni per assumere ruoli utente differenti in
-un'organizzazione o in uno spazio:
-
-<dl>
-<dt>Gestori organizzazione</dt>
-<dd>I gestori organizzazione hanno le seguenti autorizzazioni:
-<ul>
-<li>Creare o eliminare spazi all'interno dell'organizzazione.</li>
-<li>Invitare utenti all'organizzazione se sei anche un membro
-dell'organizzazione oppure il proprietario dell'account.</li>
-<li>Gestire gli utenti esistenti che già fanno parte dell'organizzazione.</li>
-<li>Gestire i domini dell'organizzazione.</li>
-</ul>
-<p>**Nota**: se hai il tipo utente di collaboratore, e precedentemente hai utilizzato {{site.data.keyword.Bluemix_notm}} con un altro account, non puoi invitare utenti all'organizzazione anche se ti è stato assegnato il ruolo di gestore organizzazione. Devi avere
-il tipo di utente di membro per invitare degli utenti. Per informazioni su come aggirare questo
-problema, consulta il documento relativo all'<a href="../troubleshoot/index.html#ts_adduser">impossibilità di aggiungere utenti a un'organizzazione</a>.</p>
-</dd>
-<dt>Gestori fatturazione</dt>
-<dd>I gestori fatturazione dispongono delle autorizzazioni per
-visualizzare le informazioni su runtime e servizi per l'organizzazione.</dd>
-<dt>Revisori organizzazione</dt>
-<dd>I revisori organizzazione dispongono delle autorizzazioni per visualizzare
-il contenuto di applicazioni e servizi nello spazio.</dd>
-<dt>Gestori spazio</dt>
-<dd>I gestori spazio hanno le seguenti autorizzazioni:
-<ul>
-<li>Aggiungere utenti allo spazio e gestire gli utenti.</li>
-<li>Abilitare le funzioni per lo spazio</li>
-</ul>
-</dd>
-<dt>Sviluppatori spazio</dt>
-<dd>Gli sviluppatori spazio hanno le seguenti autorizzazioni:
-<ul>
-<li>Creare, eliminare e gestire applicazioni e servizi all'interno dello spazio.</li>
-<li>Avere accesso ai log all'interno dello spazio</li>
-</ul>
-</dd>
-<dt>Revisori spazio</dt>
-<dd>I revisori spazio hanno le autorizzazioni per l'accesso in sola lettura
-a tutte e informazioni sullo spazio, quali le informazioni su applicazioni e servizi,
-impostazioni, report e log.</dd>
-</dl>
-
-###Gestione della tua organizzazione
-{: #orgmng}
-
-In qualità di gestore dell'organizzazione o di proprietario dell'account,
-puoi gestire le tue organizzazioni. Le attività di gestione includono la creazione di un'organizzazione, la rinominazione di un'organizzazione, la creazione di uno spazio, l'invito di utenti a uno spazio, la modifica dei ruoli utente e l'eliminazione di un'organizzazione esistente.
-
-<ul>
-<li>Creazione di un'organizzazione
-<p>Solo gli utenti con account a pagamento possono creare un'organizzazione. Con un account a pagamento,
-puoi creare un'organizzazione attenendoti alla seguente procedura:</p>
-<ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.</li>
-<li>Fai clic su **Crea un'organizzazione** e attieniti alle richieste che
-ti vengono presentate per creare la tua organizzazione.</li>
-</ol>
-</li>
-<li>Rinominazione di un'organizzazione
-<p>Per rinominare la tua organizzazione, attieniti alla seguente procedura:</p>
-<ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.</li>
-<li>Seleziona l'organizzazione che desideri rinominare.</li>
-<li>Immetti un nuovo nome nel campo **Organizzazione** e fai
-clic su **Salva**.</li>
-</ol>
-</li>
-<li>Elenco dei membri
-<p>Attieniti alla seguente procedura per elencare i membri della tua organizzazione o del tuo spazio:</p>
-<ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.Puoi visualizzare i membri
-della tua organizzazione e i loro ruolo nella scheda **Utenti**.</li>
-<li>Fai clic sul nome dello spazio nella tua organizzazione per visualizzare i membri di questo spazio e i loro ruoli.</li>
-</ol>
-</li>
-<li>Creazione di uno spazio
-<p>Puoi creare degli spazi nella tua organizzazione; ad esempio,
-uno spazio *dev* come un ambiente di sviluppo,
-uno spazio *test* come un ambiente di test e uno
-spazio *production* come un ambiente di produzione. Puoi quindi associare le tue applicazioni agli spazi. Per creare uno spazio, attieniti alla
-seguente procedura:</p>
-<ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto ** ![Account e supporto](images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.</li>
-<li>Fai clic su **Crea uno spazio** seguendo il nome dell'organizzazione e attieniti alle istruzioni per creare il tuo spazio.</li>
-</ol>
-</li>
-<li>Invito di utenti a uno spazio
-<p>Puoi invitare degli utenti alla tua organizzazione come collaboratori. Puoi anche aggiungere
-degli utenti della tua organizzazione a spazi differenti. Gli utenti possono accedere solo allo
-spazio al quale sono stati aggiunti. Per aggiungere un utente a uno spazio, attieniti alla seguente procedura:</p>
-<ol>
-<li>Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.Fai quindi clic su **Aggiungi utente** nella tua organizzazione e attieniti alle richieste che ti vengono presentate per aggiungere l'utente alla tua organizzazione.</li>
-<li>Aggiungi l'utente a uno spazio. Seleziona lo spazio dal riquadro di navigazione, fai clic su **Aggiungi utente** e attieniti alle istruzioni per aggiungere l'utente allo spazio.</li>
-</ol>
-</li>
-<li>Modifica dei ruoli utente
-<p>Per modificare i ruoli utente, attieniti alla seguente procedura: </p>
-<ol>
-<li>Dall'interfaccia utente {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Account e supporto** ![Account e supporto](images/account_support.svg), quindi seleziona **Gestisci organizzazioni**.</li>
-<li>Nella scheda **UTENTI** seleziona la casella di spunta **GESTORE**, **GESTORE FATTURAZIONE** o **REVISORE** per modificare i ruoli degli utenti nella tua organizzazione. Oppure, seleziona uno spazio dal riquadro di navigazione e seleziona la casella di spunta **GESTORE**, **SVILUPPATORE** o **REVISORE** nella scheda **UTENTI** per modificare i ruoli degli utenti nello spazio. </li>
-<li>Fai clic su **SALVA**.</li>
-</ol>
-</li>
-<li>Eliminazione di un'organizzazione esistente
-<p>Per eliminare la tua organizzazione, contatta il supporto delle registrazioni e degli ID {{site.data.keyword.Bluemix_notm}}.</p>
-<p>**Nota**: le operazioni di eliminazione sono irreversibili. Perdi tutte le applicazioni e tutti i servizi associati all'organizzazione.</p>
-</li>
-</ul>
-
-## Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
+# Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
 {: #mng}
+*Ultimo aggiornamento: 18 febbraio 2016* 
 
-Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare i report e i log sulla sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei ruoli e delle autorizzazioni per gli utenti; vedi [Gestione delle tue organizzazioni](index.html#orgmng).
+Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei ruoli e delle autorizzazioni per gli utenti; vedi [Gestione delle tue organizzazioni](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Tabella 1. Attività amministrative per la gestione della tua istanza di {{site.data.keyword.Bluemix_notm}} locale o dedicato*
 
 | Quali operazioni posso eseguire? | Dettagli |    
 |----------------|---------|
-|Monitorare l'utilizzo del sistema | Fai clic su **AMMINISTRAZIONE &gt; UTILIZZO**. Visualizza le informazioni di sistema, monitora l'utilizzo della CPU e pianifica l'utilizzo per ottimizzare il processo decisionale per la tua azienda.|
-|Gestire il tuo catalogo | Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**. Gestisci i servizi visibili agli utenti.|
-|Amministrare le organizzazioni | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONI**. Crea organizzazioni, monitora le quote per le organizzazioni e prendi decisioni rapide basate sulle esigenze.|
-|Creare spazi e assegnare i ruoli utente | Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**. Crea spazi all'interno delle tue organizzazioni. Aggiungi utenti e assegna loro dei ruoli per l'organizzazione e lo spazio. |
-|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI**. Aggiungi e rimuovi utenti e modifica le autorizzazioni utente. |
-|Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG**. Visualizza i report di sicurezza e i log di controllo relativi alla tua istanza.|
-|Visualizzare le informazioni di sistema.  | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA**. Visualizza le informazioni di sistema, ad esempio aggiornamenti in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi.  |
+|Monitorare l'utilizzo del sistema | Fai clic su **AMMINISTRAZIONE &gt; UTILIZZO**. Visualizza le informazioni di sistema, monitora l'utilizzo della CPU e pianifica l'utilizzo per ottimizzare il processo decisionale per la tua azienda. Vedi [Visualizzazione delle informazioni sull'utilizzo](index.html#oc_resource).|
+|Gestire il tuo catalogo | Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** per stabilire quali servizi sono visibili ai tuoi utenti e organizzazioni. Vedi [Gestione del tuo catalogo](index.html#oc_catalog).|
+|Amministrare le organizzazioni | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE** per creare organizzazioni, monitorare le quote per le organizzazioni e prendere decisioni rapide basate sulle esigenze. Vedi [Amministrazione delle organizzazioni](index.html#oc_organizations).|
+|Creare spazi e assegnare i ruoli utente | Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni** per creare spazi nelle tue organizzazioni. Aggiungi utenti e assegna loro dei ruoli per l'organizzazione e lo spazio. Vedi [Gestione delle tue organizzazioni](../admin/adminpublic.html#orgmng). |
+|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](index.html#oc_user). |
+|Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](index.html#oc_report). |
+|Visualizzare le informazioni di sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Puoi inoltre accedere al feed calendario e alle sottoscrizioni evento per ampliare le tue notifiche nella sezione Aggiornamenti in sospeso. Vedi [Visualizzazione delle informazioni sul sistema](index.html#oc_system). |
+|Estendere le notifiche e impostare le sottoscrizioni evento | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* aggiornamenti in sospeso**. Puoi utilizzare gli hook Web da integrare con un servizio Web a scelta, per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di eventi](index.html#oc_eventsubscription). |
 
-### Visualizzazione delle informazioni sul sistema
+
+## Notifiche e sottoscrizioni di eventi
+{: #oc_eventsubscription}
+
+Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. {{site.data.keyword.Bluemix_notm}} invia inoltre all'area Notifiche le eventuali notifiche riguardanti la pagina Amministrazione in relazione a eventi quali aggiornamenti e manutenzione pianificati. Gli incidenti vengono segnalati nella pagina Stato.
+
+### Notifiche
+
+Puoi visualizzare le notifiche inviate da IBM per il tuo ambiente locale o dedicato e monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui punti in cui vengono pubblicate.
+
+| **Tipo di evento** | **Metodo di notifica** |       
+|-----------------|-------------------|
+| Aggiornamenti di manutenzione | Vieni avvisato dei prossimi aggiornamenti di manutenzione nella pagina Notifiche per l'amministrazione. Vai alla pagina **Amministrazione**, quindi seleziona l'icona **Notifiche** ![Notifiche](images/icon_announcement.svg). Per visualizzare un storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di aggiornamento di manutenzione provenienti dalla pagina Amministrazione con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |
+| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di incidente provenienti dalla pagina Stato con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |  
+| Stato | Puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.   |
+
+*Tabella 2. Tipi di evento e metodi di notifica*
+
+### Impostazione di sottoscrizioni evento
+
+Puoi estendere la funzionalità delle notifiche inviate alle pagine Amministrazione e Stato, utilizzando le sottoscrizioni evento che implementano hook Web. Gli hook Web instradano le tue notifiche direttamente a una destinazione a scelta, ad esempio un indirizzo e-mail help desk (tramite e-mail) o un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare gli aggiornamenti di manutenzione o gli avvisi di incidente critico, e le informazioni incluse nella notifica.
+
+Per utilizzare gli hook Web per l'impostazione di una sottoscrizione evento specifica, completa la seguente procedura:
+
+1. Vai alla pagina **AMMINISTRAZIONE**:
+
+- Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI DI SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+- Per le notifiche di avviso di incidente, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+
+**Nota**: puoi accedere alla pagina di sottoscrizione evento per entrambi i tipi di notifica, utilizzando uno qualsiasi dei due metodi descritti.
+
+2. Fai clic su **Aggiungi sottoscrizione**.
+
+3. Compila il modulo di sottoscrizione evento. Per informazioni sui campi del modulo, consulta la seguente tabella:
+
+| **Campo** | **Descrizione** |
+|-----------------|-------------------|
+| Tipo | Seleziona l'hook Web. |
+| Metodo | Seleziona GET o POST. |
+| Evento | Selezionalo per sottoscrivere le notifiche di aggiornamenti o incidenti. |
+| URL | Immetti l'URL per agganciarti al tuo servizio Web. |
+| Descrizione | Aggiungi una descrizione della sottoscrizione evento che stai creando. |
+| Nome utente | Immetti il tuo nome utente per il tuo servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
+| Password | Immetti la password per il tuo servizio Web. |
+| Payload | Se hai selezionato il metodo POST, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori utilizzati per la notifica IBM. Ad esempio, se desideri che la notifica proveniente dal servizio Web riporti il titolo, il messaggio e il grado di severità, devi definire i valori {{site.data.keyword.Bluemix_notm}} con la proprietà corrispondente per il tuo servizio Web. I seguenti valori possono essere utilizzati per estrarre informazioni dalla notifica {{site.data.keyword.Bluemix_notm}} in relazione a livello di severità, corpo del messaggio e titolo della notifica: `"{{title}}`, `"{{message}},"` e `"{{severity}}"`. Se non immetti informazioni in questa sezione, ricevi la notifica priva di informazioni supplementari.  |
+
+Tabella 3. Campi del modulo di sottoscrizione evento
+
+Quando salvi la tua sottoscrizione evento, ricevi notifiche attraverso il metodo che hai impostato attraverso il tuo servizio Web. Le notifiche vengono ancora pubblicate nella pagina Stato per quanto riguarda gli incidenti e nell'area Notifiche della pagina Amministrazione per quanto riguarda gli aggiornamenti di manutenzione.
+
+Puoi selezionare qualsiasi sottoscrizione evento salvata e visualizzare l'attività recente. Puoi fare clic per espandere qualsiasi voce delle attività recenti per visualizzare i dettagli. I dettagli includono i valori IBM per la notifica utilizzabili nella sezione payload. Per visualizzare questi valori, espandi la voce dell'attività recente, l'**Evento** e infine l'**Oggetto**.
+
+
+## Visualizzazione delle informazioni sul sistema
 {: #oc_system}
 
 Per visualizzare le informazioni sul sistema, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA**.
 
 Puoi espandere e visualizzare diverse sezioni relative ad aggiornamenti in sospeso, informazioni generali sul sistema e dettagli della configurazione LDAP.
 
-* Nella sezione Aggiornamenti, puoi visualizzare gli eventuali aggiornamenti in sospeso che richiedono un tuo intervento. Puoi anche tenere facilmente traccia dei tuoi aggiornamenti utilizzando il link di calendario per importare i tuoi aggiornamenti pianificati in un'applicazione calendario.
+### Notifiche e aggiornamenti in sospeso
+
+Nella sezione Aggiornamenti, puoi visualizzare il numero di notifiche di
+aggiornamenti in sospeso che richiedono un tuo intervento. Per intervenire per uno specifico aggiornamento, completa questa procedura:
 
 <ol>
-<li>Per intervenire per uno specifico aggiornamento, completa questa procedura:
-<ol type="a">
 <li>Fai clic su <strong><em>Numero</em> aggiornamenti in sospeso</strong> per visualizzare tutti
 gli aggiornamenti in sospeso.</li>
 <li>Seleziona un aggiornamento per intervenire o per visualizzare i relativi dettagli, che
@@ -266,45 +111,115 @@ di aggiornamenti che non siano opportuni per l'applicazione dell'aggiornamento. 
 e pianifica il tuo aggiornamento in base alle tue selezioni. Ricevi una notifica quando l'aggiornamento viene approvato e pianificato.</li>
 <li>Fai clic su <strong>APPROVA</strong> per approvare l'aggiornamento, se non hai alcuna data non disponibile. Se approvi, l'aggiornamento viene applicato durante la finestra di aggiornamento pianificata. IBM invia una notifica quando la distribuzione dell'aggiornamento inizia e finisce.</li>
 </ol>
-</li>
-<li>Per importare i tuoi aggiornamenti pianificati in un'applicazione calendario a tua scelta, completa la seguente procedura:
-<ol type="a">
+
+**Nota**: se non imposti le date non disponibili o non approvi l'aggiornamento, quest'ultimo viene applicato alla fine della finestra temporale di 21 giorni per assicurare che la tua piattaforma resti attuale e aggiornata.
+
+Dalla pagina Aggiornamenti in sospeso, puoi scegliere di tracciare la pianificazione dei tuoi aggiornamenti facendo clic sull'icona **Calendario** ![Calendario](images/icon_calendar.svg) e scaricando il file `.ics` per importare i tuoi aggiornamenti pianificati in un'applicazione calendario a scelta:
+
+<ol>
 <li>Apri la tua applicazione calendario.</li>
-<li>Importa il calendario degli aggiornamenti incollando l'**URL calendario** elencato nella pagina Informazioni di sistema nella tua applicazione. In alternativa, scarica il file calendario facendo clic sull'URL calendario e importalo quindi nella tua applicazione calendario utilizzando il file `.ics`.</li>
+<li>Scarica il file calendario facendo clic sull'icona **Calendario** ![Calendario](images/icon_calendar.svg), quindi importalo nella tua applicazione calendario attraverso il file `.ics`.</li>
 <li>Immetti le tue credenziali.</li>
 <li>Visualizza i tuoi aggiornamenti pianificati.</li>
 </ol>
-</li>
-</ol>
 
-* Nella sezione di informazioni generali, puoi visualizzare le seguenti informazioni:
-    * Le informazioni di base sulla build {{site.data.keyword.Bluemix_notm}}.
-    * Le informazioni sull'API, compresi versione, URL, regione e un link alla documentazione della CLI.
-    * Le informazioni sul dominio condiviso relative al tuo sistema e al tuo servizio.
-    * Le statistiche sul numero totale di applicazioni, utenti e organizzazioni.
-* Nella sezione Dettagli di configurazione LDAP, puoi selezionare il server LDAP
-e visualizzare le informazioni relative alle associazioni di utenti e gruppi. Se stai utilizzando {{site.data.keyword.IBM}} WebID, è indicato nella sezione Dettagli di configurazione LDAP.
+Puoi anche estendere la funzionalità di notifica per la pagina Amministrazione utilizzando delle sottoscrizioni evento da integrare con un servizio Web a scelta. Per impostare una sottoscrizione di notifica evento per un aggiornamento o un incidente, vedi [Notifiche e sottoscrizioni evento](index.html#oc_eventsubscription).
 
-### Visualizzazione delle informazioni sull'utilizzo
+### Informazioni generali sul sistema
+
+Nella sezione di informazioni generali, puoi visualizzare le seguenti informazioni:
+
+- Le informazioni di base sulla build {{site.data.keyword.Bluemix_notm}}.
+- Le informazioni sull'API, compresi versione, URL, regione e un link alla documentazione della CLI.
+- Le informazioni sul dominio condiviso relative al tuo sistema e al tuo servizio.
+- Le statistiche sul numero totale di applicazioni, utenti e organizzazioni.
+
+### Dettagli configurazione LDAP
+
+Nella sezione Dettagli di configurazione LDAP, puoi selezionare il server LDAP
+e visualizzare le informazioni relative alle associazioni di utenti e gruppi. Se stai utilizzando un WebID {{site.data.keyword.IBM}}, questo viene indicato in questa sezione.
+
+## Visualizzazione delle informazioni sull'utilizzo
 {: #oc_resource}
+
+Puoi visualizzare differenti tipi di informazioni sull'utilizzo della tua istanza locale o dedicata e sull'account {{site.data.keyword.Bluemix_notm}}:
+
+- Informazioni sulle risorse, quali spazio su disco, utilizzo della CPU, utilizzo della rete e tempi medi di risposta. Vedi [Utilizzo risorsa](index.html#resourceusage).
+- Utilizzo dell'account per organizzazione, incluso il numero di applicazioni di runtime con utilizzo, numero totale di GB-ore di runtime e numero di istanze di servizio con relativo utilizzo. Vedi [Utilizzo dell'account](index.html#accountusage).
+- Utilizzo di quote di memoria, memoria dell'applicazione assegnata in base alla percentuale totale di memoria utilizzata e una vista sull'utilizzo di GB-ore per applicazione in relazione a un'organizzazione specifica. Puoi anche visualizzare l'utilizzo delle quote di memoria per tutte le organizzazioni sulla pagina Amministrazione organizzazione nella sezione Monitoraggio quota. Vedi [Amministrazione organizzazione](../admin/index.html#orgusage).
+
+
+### Utilizzo delle risorse
+{: #resourceusage}
 
 Per visualizzare le informazioni sulle risorse, fai clic su **AMMINISTRAZIONE &gt; UTILIZZO**.
 
 Nella sezione di monitoraggio delle risorse, puoi visualizzare le seguenti informazioni:
 
-* Informazioni sull'utilizzo delle risorse, ad esempio la quantità di GB di memoria e di GB di spazio su disco
+- Informazioni sull'utilizzo delle risorse, ad esempio la quantità di GB di memoria e di GB di spazio su disco
 utilizzata. Puoi visualizzare l'utilizzo della CPU calcolato come media su tutti i DEA (droplet execution agent). Fai clic
 sul tile **CPU**, per potere così visualizzare l'utilizzo della CPU per ogni DEA. Il DEA con
 l'utilizzo più elevato è elencato per primo; ognuno di essi è identificato dal relativo lavoro e indirizzo IP. L'utilizzo
 della CPU è separato in tre categorie che includono la quantità di CPU impiegata nei processi di sistema, quella
 impiegata nei processi utente e quella impiegata nei processi in attesa.
-* Informazioni sull'utilizzo della rete per la larghezza di banda in entrata e in uscita, nel corso del giorno, settimana o
+- Informazioni sull'utilizzo della rete per la larghezza di banda in entrata e in uscita, nel corso del giorno, settimana o
 mese precedente.
 I dati visualizzati sono basati sulla somma del traffico in entrata e in uscita per la rete pubblica e quella privata.
-* Il tempo di risposta medio per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
-* Le transazioni medie al secondo per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
+- Il tempo di risposta medio per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
+- Le transazioni medie al secondo per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
 
-### Visualizzazione dei report
+### Utilizzo dell'account
+{: #accountusage}
+
+Puoi visualizzare l'utilizzo mensile del tuo account per il tuo ambiente locale o dedicato. Puoi utilizzare questi dati per sapere quanto addebitare a determinate organizzazioni in base all'uso effettuato.
+
+<ol>
+<li>Fai clic sull'icona <strong>Account e supporto</strong> ![Account e supporto](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Dettagli di utilizzo</strong>.</li>
+<li>Seleziona l'organizzazione per cui desideri visualizzare i dati.</li>
+<li>Puoi vedere i dettagli di utilizzo per le seguenti categorie:
+<ul>
+<li>Applicazioni di runtime con utilizzo</li>
+<li>Utilizzo totale delle applicazioni di runtime in GB-ore</li>
+<li>Istanze di servizio con utilizzo</li>
+</ul>
+</li>
+<li>Facoltativo: visualizza i tuoi dati per un mese specifico, utilizzando il menu <strong>La tua attività cloud</strong> per selezionare un mese a scelta.</li>
+<li>Facoltativo: fai clic su <strong>ESPORTA DATI</strong> e scegli tra <strong>CSV</strong> o <strong>JSON</strong> per esportare i dati per il mese selezionato in un file <code>CSV</code> o <code>JSON</code>.</li>
+</ol>
+
+Puoi anche visualizzare l'utilizzo mensile e gli addebiti associati a livello di account per i tuoi runtime, applicazioni e servizi diffusi da {{site.data.keyword.Bluemix_notm}} pubblico. Puoi utilizzare questi dati per sapere quanto addebitare a determinate organizzazioni in base all'uso effettuato.
+
+<ol>
+<li>Fai clic sull'icona <strong>Account e supporto</strong> ![Account e supporto](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Dettagli di utilizzo</strong>.</li>
+<li>Fai clic su <strong>Pubblico</strong>.</li>
+<li>Seleziona l'organizzazione per cui desideri visualizzare i dati o <strong>Tutte le organizzazioni</strong> per visualizzare in una volta sola i dati di tutte le organizzazioni.</li>
+<li>Puoi vedere i dettagli di utilizzo per le seguenti categorie:
+<ul>
+<li>Applicazioni di runtime con utilizzo</li>
+<li>Utilizzo totale delle applicazioni di runtime in GB-ore</li>
+<li>Istanze di servizio con utilizzo</li>
+<li>Riepilogo degli addebiti per tutte le applicazioni, i servizi e i runtime diffusi</li>
+</ul>
+</li>
+<li>Facoltativo: visualizza i tuoi dati per un mese specifico, selezionando un mese a scelta dal grafico a barre. Per impostazione standard vengono visualizzati i dati del mese corrente.</li>
+<li>Facoltativo: fai clic su <strong>ESPORTA DATI</strong> e scegli tra <strong>CSV</strong> o <strong>JSON</strong> per esportare i dati per il mese selezionato in un file <code>CSV</code> o <code>JSON</code>.</li>
+</ol>
+
+
+### Utilizzo delle organizzazioni
+{: #orgusage}
+
+Per visualizzare l'utilizzo per organizzazione, fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE**, quindi seleziona un'organizzazione dall'**Elenco delle organizzazioni**. Nella pagina **Gestisci organizzazioni** dell'organizzazione selezionata, puoi visualizzare le seguenti informazioni sull'utilizzo:
+
+- Numero di servizi attualmente in uso.
+- Numero di rotte attualmente in uso.
+- Grafico delle quote di memoria che mostra le percentuali di quota di memoria attualmente in uso e non in uso.
+- Grafico sull'assegnazione delle applicazioni che mostra quali applicazioni sono incluse nella quota di memoria utilizzata.
+- Grafico sull'utilizzo misurato dell'applicazione che mostra un report trimestrale sulle GB-ore utilizzate per applicazione distribuita. Puoi selezionare la **Vista elenco** per visualizzare i dati per tutte le applicazioni, compresa l'assegnazione di memoria per applicazione e l'utilizzo a consumo di GB-ore degli ultimi tre mesi.
+
+Per ulteriori informazioni sulla visualizzazione dell'utilizzo per organizzazione, sull'adeguamento dei piani di quota e sulla gestione delle tue organizzazioni, vedi [Amministrazione delle organizzazioni](../admin/index.html#oc_organizations).
+
+## Visualizzazione dei report
 {: #oc_report}
 
 Puoi visualizzare i report e i log di sicurezza, quali DataPower&trade;, firewall e controllo accessi, per la tua istanza {{site.data.keyword.Bluemix_notm}}.
@@ -313,51 +228,227 @@ Per visualizzare report e log, fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG**
 
 Seleziona dalle seguenti opzioni:
 
-* Puoi selezionare le date di inizio e di fine dai campi per filtrare i report e i log da
+- Puoi selezionare le date di inizio e di fine dai campi per filtrare i report e i log da
 visualizzare.
-* Puoi espandere e visualizzare i diversi report dal riquadro di navigazione.
-* Puoi effettuare ricerche nella tua raccolta di report e log. La ricerca si applica ai nomi di report e al contenuto testuale
+- Puoi espandere e visualizzare i diversi report dal riquadro di navigazione.
+- Puoi effettuare ricerche nella tua raccolta di report e log. La ricerca si applica ai nomi di report e al contenuto testuale
 all'interno di report e log. Puoi anche scegliere di filtrare la ricerca in base
 agli **Eventi di amministrazione**, ai **Report DataPower**, al **Firewall** e al **Controllo accessi**.
-* Durante la visualizzazione di un report o log, puoi fare clic sull'icona ![Download](images/icon_download.svg)
+- Durante la visualizzazione di un report o log, puoi fare clic sull'icona ![Download](images/icon_download.png)
 per scaricare il report.
 
-### Visualizzazione dello stato
+La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato.
+
+| **Categoria** | **Report** | **Descrizione** |      
+|-----------------|-------------------|---------------------|
+| Firewall | Accessi firewall | Eventi relativi all'accesso dell'amministratore ai dispositivi firewall Vyatta. |
+| Firewall | Accessi firewall negati | Eventi generati da dispositivi firewall Vyatta quando una richiesta di accesso viene negata in base alle regole firewall in vigore. |
+| Eventi di accesso dell'amministratore {{site.data.keyword.Bluemix_notm}} | Accesso amministratori {{site.data.keyword.Bluemix_notm}} | Eventi generati dal sistema operativo quando un amministratore avvia una sessione SSH su ogni sistema {{site.data.keyword.Bluemix_notm}}. |
+| Eventi di accesso dello sviluppatore di applicazioni {{site.data.keyword.Bluemix_notm}} | Accesso sviluppatori di applicazioni {{site.data.keyword.Bluemix_notm}} | Eventi generati dal componente di accesso della piattaforma {{site.data.keyword.Bluemix_notm}} quando un utente di {{site.data.keyword.Bluemix_notm}} avvia una sessione utilizzando la riga comandi, le API REST o l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. |
+| Eventi amministrativi dell'amministratore {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi di sistema operativo degli amministratori {{site.data.keyword.Bluemix_notm}} | Eventi generati dal sistema operativo quando un amministratore svolge un'azione all'interno di una sessione di lavoro corrente. |
+| Eventi amministrativi dello sviluppatore di applicazioni {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) | Eventi relativi alle operazioni effettuate dall'utente della piattaforma {{site.data.keyword.Bluemix_notm}} utilizzando la riga comandi, le API REST o l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. |
+| Eventi amministrativi di database dell'amministratore {{site.data.keyword.Bluemix_notm}} | Eventi amministrativi di database | Eventi relativi alle operazioni effettuate da un amministratore di database nei database interni {{site.data.keyword.Bluemix_notm}}. |
+| Eventi di amministrazione | Eventi di gestione utente | Eventi relativi alle azioni di gestione utente eseguite nella pagina Amministrazione. |
+| Eventi di amministrazione | Catalogo | Eventi relativi alle modifiche del catalogo dei servizi. |
+| Eventi di amministrazione | Eventi di gestione dei report di sicurezza | Eventi relativi alle azioni di gestione dei report di sicurezza eseguite nella pagina Amministrazione. |
+| Revisioni accesso | Report di revisioni accesso | Revisioni per accessi privilegiati. |
+| Gestione modifiche | Gestione delle modifiche del software | Attività di gestione delle modifiche. |
+| Gestione chiavi | Gestione dei certificati SSL personalizzati | Certificazioni SSL personalizzate che sono state caricate e archiviate. |
+| Crittografia | Crittografia dei data-in-transit | Crittografia configurata per i data-in-transit. |
+| Antivirus | Report di scansione antivirus | Software antivirus in uso. |
+| Gestione delle correzioni software | Report di applicazione patch | Correzioni software applicate. |
+| Gestione degli incidenti di sicurezza | Report di correzione incidenti di sicurezza | Prove di incidenti di sicurezza per consentirne la gestione. |
+
+*Tabella 4. Elenco dei report di sicurezza*
+
+## Visualizzazione dello stato
 {: #oc_status}
 
-Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}.
+Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. 
 
-Puoi sottoscrivere a un feed RSS per le notifiche in modo da non doverle controllare personalmente. Per ulteriori informazioni sulla pagina Stato e sulla configurazione del feed RSS, vedi [Visualizzazione di {{site.data.keyword.Bluemix_notm}}](../troubleshoot/getting_customer_support.html#status).
+La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}.
 
-### Gestione del tuo catalogo
+Puoi sottoscrivere a un feed RSS per le notifiche in modo da non doverle controllare personalmente. Per ulteriori informazioni sulla pagina Stato e sulla configurazione del feed RSS, vedi [Visualizzazione di {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+
+## Gestione del tuo catalogo
 {: #oc_catalog}
 
 Puoi gestire quali servizi e starter {{site.data.keyword.Bluemix_notm}} sono visibili agli utenti nel Catalogo {{site.data.keyword.Bluemix_notm}}. Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
 
 Seleziona un tile di servizio o di starter per modificare la visibilità del piano di servizio o starter. Per modificare la
 visibilità, seleziona dalle seguenti opzioni:
-* Per visualizzare il servizio o lo starter nascosto in modo che sia visibile ai tuoi utenti nel Catalogo,
+
+- Per visualizzare il servizio o lo starter nascosto in modo che sia visibile ai tuoi utenti nel Catalogo,
 seleziona **ABILITA TUTTI I PIANI**.
-* Per nascondere il servizio o lo starter ai tuoi utenti nel Catalogo {{site.data.keyword.Bluemix_notm}},
+- Per nascondere il servizio o lo starter ai tuoi utenti nel Catalogo {{site.data.keyword.Bluemix_notm}},
 seleziona **DISABILITA TUTTI I PIANI**.
-* Per controllare la visibilità di un singolo piano, seleziona il nome del piano e utilizza quindi
+- Per controllare la visibilità di un singolo piano, seleziona il nome del piano e utilizza quindi
 il menu a discesa per selezionare **Abilita per tutte le organizzazioni**, **Disabilita per
 tutte le organizzazioni** o **Abilita piano per specifiche organizzazioni**.
 
-### Amministrazione delle organizzazioni
+<!-- staging only start -->
+
+### Registrazione di un broker dei servizi
+{: #servicebrokerui}
+
+Se vuoi visualizzare un determinato servizio nel tuo catalogo {{site.data.keyword.Bluemix_notm}}, devi implementare e registrare un broker dei servizi. Una volta registrato il tuo broker, puoi scegliere quali organizzazioni possono accedere al servizio nella tua istanza locale o dedicata.
+
+Le modalità d'uso del tuo broker dei servizi variano a seconda del numero di servizi che gestisce o dalla sua eventuale precedente registrazione in {{site.data.keyword.Bluemix_notm}}.
+
+- Se il tuo broker dei servizi gestisce un unico servizio, puoi utilizzare l'interfaccia utente per registrarlo al termine dell'implementazione dell'[API broker dei servizi](http://docs.cloudfoundry.org/services/api.html){: new_window}. Vedi [Registrazione di un broker dei servizi che gestisce un unico servizio](index.html#registerbrokerui).
+- Se il tuo broker dei servizi gestisce più servizi, al momento non puoi registrarlo al termine dell'implementazione dell'API broker dei servizi. Utilizza invece la CLI cf con il plug-in [{{site.data.keyword.Bluemix_notm}} Admin CLI](../cli/plugins/bluemix_admin/index.html) (sottocomando `ba`) o l'[API del servizio personalizzato](index.html#servicebrokerapi).
+- Se il tuo broker dei servizi è già registrato e desideri aggiornarlo o eliminarlo, utilizza la CLI cf con il plug-in [{{site.data.keyword.Bluemix_notm}} Admin CLI](../cli/plugins/bluemix_admin/index.html) (sottocomando `ba`) o l'[API del servizio personalizzato](index.html#servicebrokerapi).
+
+#### Registrazione di un broker dei servizi che gestisce un unico servizio
+{: #registerbrokerui}
+
+Completa la seguente procedura per registrare il tuo broker dei servizi:
+
+1\. [Implementa l'API broker dei servizi Cloud Foundry](http://docs.cloudfoundry.org/services/api.html){: new_window} per consentire la comunicazione tra il tuo servizio e {{site.data.keyword.Bluemix_notm}}. L'API broker dei servizi è un insieme di endpoint REST utilizzati da {{site.data.keyword.Bluemix_notm}}.
+
+Quando implementi il broker dei servizi, nella risposta JSON di `GET /v2/catalog` devi fornire le definizioni per i tuoi piani di servizio e servizi, incluse le informazioni sul servizio che desideri visualizzare. Ad esempio, consulta il seguente file JSON di esempio della risposta del catalogo (GET):
+
+```
+"services":[
+   {
+      "bindable":true,
+      "description":"Cool Service è una soluzione di immagazzinamento e di analisi dei dati.",
+      "id":"cool-service-id",
+      "name":"coolservice",
+      "tags":[
+         "customer_dedicated"
+      ],
+      "metadata":{
+         "displayName":"Cool Service",
+         "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
+         "providerDisplayName":"Cool company",
+         "longDescription":"Cool Service è una soluzione di immagazzinamento e di analisi dei dati. Puoi spostare rapidamente i tuoi dati in un database in-memoria a colonne di prossima generazione e iniziare ad eseguire query analitiche complesse.",
+         "bullets":[
+            {
+               "title":"Rapida e semplice",
+               "description":"Cool Service utilizza innovazioni e tecnologia a colonne in memoria dinamiche, come l'elaborazione vettoriale parallela e una compressione su cui è possibile intervenire per eseguire rapidamente la scansione dei dati pertinenti ed eseguirne la restituzione."
+            },
+            {
+               "title":"Connettività",
+               "description":"Cool Service è progettato per consentirti di connetterti facilmente a tutti i servizi e a tutte le applicazioni. Puoi iniziare immediatamente ad analizzare i tuoi dati con strumenti familiari."
+            }
+         ],
+         "featuredImageUrl":"http://path/to/icon_64x64.png",
+         "imageUrl":"http://path/to/icon_50x50.png",
+         "mediumImageUrl":"http://path/to/icon_32x32.png",
+         "smallImageUrl":"http://path/to/icon_24x24.png",
+         "documentationUrl":"http://path/to/documentation.html",
+         "instructionsUrl":"http://path/to/servicesample.md",
+         "termsUrl":"http://path/to/terms_of_agreement.pdf",
+         "media":[
+            {
+               "type":"youtube",
+               "thumbnailUrl":"http://path/to/thumbnail.png",
+               "url":"http://path/to/youtube/video",
+               "caption":"Come usare Cool Service in 60 secondi"
+            },
+            {
+               "type":"image",
+               "thumbnailUrl":"http://path/to/thumbnail.png",
+               "url":"http://path/to/image_file.png",
+               "caption":"Connessione di applicazioni con Cool Service"
+            },
+            {
+               "type":"video",
+               "thumbnailUrl":"http://path/to/thumb.png",
+               "caption":"Utilizzo delle tabelle da parte di Cool Service",
+               "source":[
+                  {
+                     "type":"video/mp4",
+                     "url":"http://path/to/video_file.mp4"
+                  },
+                  {
+                     "type":"video/ogg",
+                     "url":"http://path/to/video_file.ogg"
+                  }
+               ]
+            }
+         ]
+      },
+      "plans":[
+         {
+            "name":"smallplan",
+            "description":"Spazio tabelle e schema dedicati per istanza di servizio su un server condiviso. L'archiviazione dei database compressi da 1 e 10 GB può contenere fino a, rispettivamente, 5 e 50 GB di dati non compressi, con rapporti di compressione standard.",
+            "free":false,
+            "id":"cool-service-plan-id",
+            "metadata":{
+               "bullets":[
+                  "Minimo 1 GB per istanza. Massimo 10 GB per istanza."
+               ],
+               "costs":[
+                  {
+                     "unitId":"INSTANCES_PER_MONTH",
+                     "unit":"MONTHLY",
+                     "partNumber":"D15UTLL"
+                  }
+               ],
+               "displayName":"Small"
+            }
+         }
+      ]
+   }
+]
+}
+```
+{: codeblock}
+
+**Nota**: quando crei un broker dei servizi per un ambiente locale o dedicato, devi specificare `customer_dedicated` nel campo "tags" del tuo file JSON di definizione dei servizi.
+
+2\. Una volta implementata l'API broker dei servizi, vai a **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
+
+3\. Fai clic su **REGISTRA UN BROKER DEI SERVIZI**.
+
+4\. Completa il modulo immettendo valori nei seguenti campi:
+
+- Nome del broker dei servizi
+- URL del broker dei servizi
+- Nome utente del broker dei servizi
+- Password del broker dei servizi
+
+5\. Fai clic su **CONNETTI**.
+
+6\. Controlla le informazioni sul tuo servizio, inclusi i piani disponibili, l'icona e la descrizione del servizio.
+
+**Nota**: se devi modificare le informazioni di catalogo del servizio, aggiorna il tuo broker di servizi e riavvia il processo di registrazione, compilando il modulo.
+
+7\. Fai clic su **REGISTRA**.
+
+8\. Scegli di abilitare tutti i piani o solo piani specifici per il servizio. Tutti i piani sono disabilitati per impostazione predefinita.
+
+9\. Abilita l'istanza del servizio per tutte le organizzazioni o solo per organizzazioni specifiche.
+
+Ora puoi vedere il tuo servizio nella categoria Servizi personalizzati del tuo catalogo {{site.data.keyword.Bluemix_notm}}. Vai a **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** e seleziona il tile del catalogo. Puoi abilitare differenti piani e modificarne la visibilità per le tue organizzazioni in qualsiasi momento.
+
+## Amministrazione delle organizzazioni
 {: #oc_organizations}
 
-Puoi gestire le tue organizzazioni attraverso la creazione e l'eliminazione di organizzazioni, l'aggiunta di gestori alle organizzazioni e il monitoraggio dell'utilizzo delle quote.
+Puoi gestire le tue organizzazioni attraverso la creazione e l'eliminazione di organizzazioni, l'aggiunta o la rimozione di gestori alle/dalle organizzazioni e il monitoraggio dell'utilizzo delle quote, così da adottare le scelte migliori per la tua attività.
 
-Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONI**. 
+Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE**.
 
 Puoi espandere e visualizzare le diverse sezioni. Puoi anche riesaminare e gestire i piani di quota per le tue organizzazioni.
 
-* Per creare una nuova organizzazione e aggiungere dei gestori, fai clic su <strong>CREA ORGANIZZAZIONE</strong>.
-Immetti un nome per l'organizzazione, quindi immetti il nome o l'email della persona che vuoi aggiungere come gestore. Puoi aggiungere più di un gestore immettendo e selezionando più nomi. Fai clic su <strong>CREA ORGANIZZAZIONE</strong> per salvare le tue modifiche e creare l'organizzazione.
-* Nella sezione Monitoraggio quota, puoi espandere la sezione e visualizzare le seguenti informazioni:
-    * Utilizzo della memoria dell'ambiente. Questa sezione mostra in dettaglio l'utilizzo della memoria per l'intero ambiente di sistema.
+### Creazione di organizzazioni
+
+Per creare una nuova organizzazione e aggiungere gestori, completa la seguente procedura:
+
+1. Fai clic su <strong>CREA ORGANIZZAZIONE</strong>.
+2. Immetti un nome per l'organizzazione.
+3. Immetti il nome o l'email della persona che vuoi aggiungere come gestore. Puoi aggiungere più di un gestore immettendo e selezionando più nomi.
+4. Fai clic su <strong>CREA ORGANIZZAZIONE</strong> per salvare le tue modifiche e creare l'organizzazione.
+
+### Monitoraggio quota
+
+Nella sezione Monitoraggio quota, puoi espandere la sezione e visualizzare le seguenti informazioni:
+
+- Utilizzo della memoria dell'ambiente. Questa sezione mostra in dettaglio l'utilizzo della memoria per l'intero ambiente di sistema.
 	Il grafico fornisce informazioni che includono la memoria di sistema utilizzata, la memoria totale di sistema, la quota utilizzata e la quota totale assegnata. Il seguente elenco di termini definisce i tipi di utilizzo di memoria visualizzati nel grafico.
+
 	<dl>
 	<dt><strong>Memoria di sistema utilizzata</strong></dt>
 	<dd>La memoria fisica utilizzata dal tuo ambiente.</dd>
@@ -373,9 +464,11 @@ la propria assegnazione di quota totale della memoria. </dd>
 	<dt><strong>Quota totale</strong></dt>
 	<dd>La memoria totale assegnata su tutte le organizzazioni.</dd>
 	</dl>
-	* Utilizzo della memoria dell'organizzazione. Questa sezione mostra in dettaglio l'utilizzo della memoria a livello di organizzazione. Puoi visualizzare
+
+- Utilizzo della memoria dell'organizzazione. Questa sezione mostra in dettaglio l'utilizzo della memoria a livello di organizzazione. Puoi visualizzare
 la quota totale consentita e la quota che viene distribuita per ogni organizzazione. Il grafico fornisce informazioni che vengono elencate
 in base all'utilizzo massimo della memoria per ogni organizzazione e, per impostazione predefinita, viene elencata per prima l'organizzazione che utilizza la maggiore quantità di memoria. Puoi ordinare per **Utilizzo massimo memoria** e **Assegnazione memoria in eccesso**.
+
 	<dl>
 	<dt><strong>Utilizzo massimo memoria</strong></dt>
 	<dd>Usa questa opzione per identificare l'organizzazione che utilizza la maggior quantità di memoria. Ordina per Utilizzo
@@ -386,34 +479,62 @@ memoria. L'elenco viene ordinato in base alla quota distribuita. </dd>
 	Ordina per Assegnazione memoria in eccesso per identificare le organizzazioni che utilizzano
 la minore quantità di memoria per la quota assegnata per l'organizzazione. </dd>
 	</dl>
-* Per modificare il piano di quota per un'organizzazione, fai clic sulla barra del grafico
-relativo all'organizzazione che vuoi modificare nella sezione Utilizzo della memoria dell'organizzazione o seleziona il nome dell'organizzazione dalla sezione Elenco organizzazioni. Nella pagina Modifica organizzazione, puoi modificare il piano di quota, modificare il nome dell'organizzazione e aggiungere o rimuovere gestori. Se selezioni un piano di quota che non è sufficiente per l'utilizzo corrente per l'organizzazione, riceverai un messaggio. Per salvare le eventuali modifiche che hai apportato nella pagina Modifica organizzazione,
-fai clic su **SALVA**.
-* Nella sezione Elenco organizzazioni, puoi visualizzare tutte le organizzazioni nell'ambiente {{site.data.keyword.Bluemix_notm}}.
-	* Per eliminare l'organizzazione, fai clic su ![Elimina](images/icon_trash.svg) nella colonna Azioni.
-	* Per visualizzare e modificare il piano di quota per un'organizzazione, fai clic sul nome per l'organizzazione nell'elenco.
-	* Per modificare il nome dell'organizzazione e aggiungere o rimuovere gestori, fai clic sul nome per l'organizzazione nell'elenco.
 
-### Gestione di utenti e autorizzazioni
+### Regolazione dei piani di quota
+
+Per modificare il piano di quota di un'organizzazione, completa la seguente procedura:
+
+<ol>
+<li>Fai clic sulla barra del grafico
+relativo all'organizzazione che vuoi modificare nella sezione Utilizzo della memoria dell'organizzazione o seleziona il nome
+dell'organizzazione nella sezione Elenco organizzazioni.</li>
+<li>Nella pagina Gestisci organizzazione, puoi cambiare il piano di quota, modificare il nome dell'organizzazione e aggiungere o
+rimuovere gestori.<br />
+<p><strong>Nota</strong>: se selezioni un piano di quota che non è sufficiente per l'utilizzo corrente
+dell'organizzazione, riceverai un messaggio.</p>
+</li>
+<li>Per salvare le eventuali modifiche apportate nella pagina Gestisci organizzazione, fai clic su <strong>SALVA</strong>.</li>
+</ol>
+
+### Gestione delle tue organizzazioni dall'elenco delle organizzazioni
+
+Nella sezione Elenco organizzazioni, puoi visualizzare tutte le organizzazioni
+dell'ambiente {{site.data.keyword.Bluemix_notm}} e intervenire sulle singole organizzazioni facendo clic sul nome dell'organizzazione.
+
+- Per eliminare l'organizzazione, fai clic sull'icona **Elimina** ![Elimina](images/icon_trash.svg) nella colonna Azioni.
+- Per visualizzare il piano di quota e l'utilizzo di un'organizzazione, fai clic sul nome dell'organizzazione
+nell'elenco. Nella pagina **Gestisci organizzazioni** dell'organizzazione selezionata, puoi visualizzare le seguenti informazioni sull'utilizzo:
+
+  - Numero di servizi attualmente in uso.
+  - Numero di rotte attualmente in uso.
+  - Grafico delle quote di memoria che mostra le percentuali di quota di memoria attualmente in uso e non in uso.
+  - Grafico sull'assegnazione delle applicazioni che mostra quali applicazioni sono incluse nella quota di memoria utilizzata.
+  - Grafico sull'utilizzo misurato dell'applicazione che mostra un report trimestrale sulle GB-ore utilizzate per applicazione distribuita. Puoi selezionare la **Vista elenco** per visualizzare i dati per tutte le applicazioni, compresa l'assegnazione di memoria per applicazione e l'utilizzo a consumo di GB-ore degli ultimi tre mesi.
+
+- Per modificare il nome dell'organizzazione e aggiungere o rimuovere gestori, fai clic sul nome dell'organizzazione
+ nell'elenco e segui i prompt mostrati a schermo.
+
+## Gestione di utenti e autorizzazioni
 {: #oc_useradmin}
 
 Puoi aggiungere degli utenti alla tua istanza {{site.data.keyword.Bluemix_notm}} dal registro utenti della tua azienda tramite LDAP. Puoi aggiungere gli utenti singolarmente
 o in gruppi e visualizzarne le autorizzazioni. Se disponi dell'autorizzazione `ammin`,
-puoi anche impostare e gestire le autorizzazioni per gli altri utenti. Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI**. 
+puoi anche impostare e gestire le autorizzazioni per gli altri utenti. Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI**.
 
 La pagina Amministrazione utenti visualizza tutti gli utenti per l'istanza locale o dedicata.
 Sono visualizzate le autorizzazioni per ciascun utente. Le autorizzazioni possono essere: Nessuna,
 `Ammin`, `Catalogo`, `Accesso`,
 `Report` e `Utenti`. È possibile abilitare le autorizzazioni oppure
-è possibile fornire agli utenti la capacità di `visualizzazione` o di `scrittura` per
-l'autorizzazione indicata, come rappresentato dalle icone. Consulta [Autorizzazioni](#permissions) per delle descrizioni di
+fornire agli utenti l'accesso in `visualizzazione` o `scrittura` per
+l'autorizzazione indicata, come indicato dalle icone. Consulta [Autorizzazioni](#permissions) per delle descrizioni di
 ciascun tipo e una spiegazione delle icone.
 
 Scegli tra le seguenti opzioni:
+
 * Individuare utenti. Puoi individuare gli utenti nella tabella utilizzando il campo
 **Ricerca**.
 * Aggiungere utenti. Se disponi dell'autorizzazione `ammin` o
-dell'autorizzazione `utenti` con la capacità di `scrittura`, puoi aggiungere gli utenti. Per aggiungere un utente o un gruppo di utenti, fai clic su **AGGIUNGI SINGOLO UTENTE** o **AGGIUNGI GRUPPO
+dell'autorizzazione `utenti` con accesso in `scrittura`, puoi aggiungere utenti. Per aggiungere un utente o un gruppo di utenti, fai clic su **AGGIUNGI SINGOLO UTENTE** o **AGGIUNGI GRUPPO
 DI UTENTI**. Nel campo **Ricerca**, immetti un nome utente o nome gruppo da
 ricercare, quindi seleziona l'organizzazione a cui aggiungere l'utente o il gruppo di utenti
 dall'elenco **Organizzazione**. Una volta trovato l'utente o il gruppo che desideri aggiungere,
@@ -425,9 +546,8 @@ non dispongono di autorizzazioni.
 le autorizzazioni e le organizzazioni per gli altri utenti. Per modificare le autorizzazioni, individua
 l'utente e fai clic sul nome utente. Per abilitare o disabilitare autorizzazioni, seleziona dalle seguenti opzioni nella finestra che viene visualizzata:
 	* Seleziona **Attivo** dall'elenco per abilitare un'autorizzazione.
-	* Seleziona **Lettura** dall'elenco per consentire all'utente di disporre
-della capacità di `visualizzazione` (sola lettura) per tale autorizzazione oppure **Scrittura**
-per consentire la capacità di `scrittura` (modifica o aggiunta e rimozione) per l'autorizzazione.
+	* Seleziona **Lettura** dall'elenco per consentire all'utente di disporre dell'accesso in `visualizzazione` (sola lettura) per tale autorizzazione oppure **Scrittura**
+ per consentire l'accesso in `scrittura` (modifica o aggiunta e rimozione) per tale autorizzazione.
 	* Seleziona **Disattivo** per disabilitare l'autorizzazione.
 Per modificare le organizzazioni, seleziona dalle seguenti opzioni:
 	* Aggiungi l'utente a un'organizzazione utilizzando il campo di ricerca per individuare un'organizzazione, facendo clic per
@@ -435,9 +555,7 @@ selezionare dalle opzioni e facendo clic su **AGGIUNGI**.
 	* Rimuovi un utente da un'organizzazione facendo clic sull'icona ![Rimuovi, rappresentato da un segno meno](images/icon_remove.svg).
 Al termine, fai clic su **SALVA**.
 * Rimuovere utenti. Se disponi dell'autorizzazione `ammin` o
-dell'autorizzazione `utenti` con la capacità di `scrittura`, puoi rimuovere
-gli utenti.
-Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/icon_trash.svg) e quindi su **Rimuovi**.
+dell'autorizzazione `utenti` con accesso in `scrittura`, puoi rimuovere utenti. Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/icon_trash.svg) e quindi su **Rimuovi**.
 
 ### Autorizzazioni
 {: #permissions}
@@ -448,25 +566,21 @@ Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/ico
 |-----------------|-------------------|
 | Ammin | Gli utenti con l'autorizzazione `ammin` possono
 modificare le autorizzazioni per gli altri utenti. |
-| Catalogo | Agli utenti con l'autorizzazione `catalogo` può essere assegnata la capacità di `visualizzare` o `scrivere` (modificare) quali servizi sono disponibili nell'istanza locale o dedicata. |  
-| Accesso | Agli utenti con l'autorizzazione `accesso` è consentito visualizzare la pagina Amministrazione. Senza questa autorizzazione, gli utenti non possono vedere l'opzione di menu Amministrazione.  |
-| Report | Agli utenti con l'autorizzazione `report` può essere assegnata la capacità di
-`visualizzare` o `scrivere` (modificare) i report di sicurezza. |
-| Utenti | Agli utenti con l'autorizzazione `utenti` può essere assegnata la capacità
-di `visualizzare` l'elenco di utenti o di `scrivere` (aggiungere o rimuovere) gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti.|
+| Catalogo | Agli utenti con autorizzazione `catalogo` può essere assegnato l'accesso in `visualizzazione` o in `scrittura` (modifica) per i servizi disponibili nell'istanza locale o dedicata. |  
+| Accesso | Agli utenti con autorizzazione `accesso` è consentito visualizzare la pagina Amministrazione. Senza questa autorizzazione, gli utenti non possono vedere l'opzione di menu Amministrazione. |
+| Report | Agli utenti con autorizzazione `report` può essere assegnato l'accesso in `visualizzazione` o in `scrittura` (modifica) per i report di sicurezza. |
+| Utenti | Agli utenti con autorizzazione `utenti` può essere assegnato l'accesso in `visualizzazione` per l'elenco di utenti o in `scrittura` (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti.|
 
-*Tabella 2. Autorizzazioni*
+*Tabella 5. Autorizzazioni*
 
-È possibile abilitare le autorizzazioni oppure è possibile fornire agli utenti la capacità di `visualizzazione` o
-di `scrittura` per l'autorizzazione indicata, come rappresentato dalle seguenti icone:
+È possibile abilitare le autorizzazioni o fornire agli utenti l'accesso in `visualizzazione` o
+in `scrittura` per l'autorizzazione indicata, come indicato dalle seguenti icone:
 
 * L'icona ![Abilitato, rappresentata da un segno di spunta](images/icon_enabled.svg) accanto a un'autorizzazione significa che essa è abilitata.
-* L'icona ![Visualizza, rappresentata da un occhio](images/icon_read.svg) significa che l'utente dispone della capacità di `visualizzazione` (sola lettura) per tale
-autorizzazione.
-* L'icona ![Scrittura, rappresentata da una matita](images/icon_write.svg) significa che l'utente dispone della capacità di `scrittura` (modifica, aggiunta o rimozione) per tale
-autorizzazione.
+* L'icona ![Visualizza, rappresentata da un occhio](images/icon_read.svg) indica che l'utente dispone di un accesso in `visualizzazione` (sola lettura) per tale autorizzazione.
+* L'icona ![Scrittura, rappresentata da una matita](images/icon_write.svg) indica che l'utente dispone di un accesso in `scrittura` (modifica, aggiunta o rimozione) per tale autorizzazione.
 
-### Gestione degli utenti con la API REST Admin
+## Gestione degli utenti con la API REST Admin
 {: #usingadminapi}
 
 Puoi utilizzare l'API REST `Admin` per aggiungere e rimuovere utenti per l'istanza {{site.data.keyword.Bluemix_notm}}.
@@ -482,12 +596,11 @@ cURL dal [sito cURL/Download](http://curl.haxx.se/download.html){: new_window}.
 * Python, per utilizzare lo strumento JSON Pretty-Print Python. Questo strumento
 facoltativo prende il testo JSON come input e fornisce un output facile da leggere. Puoi scaricare Python dal sito [Downloads di Python](https://www.python.org/downloads){: new_window}.
 
-#### Accesso alla Console di gestione
+### Accesso alla Console di gestione
 
 Prima di poter eseguire qualsiasi richiesta API `Admin`,
 devi eseguire l'accesso alla Console di gestione. Se disponi dell'autorizzazione `ammin`
-o dell'autorizzazione `utenti` con la capacità di `scrittura`,
-puoi aggiungere o rimuovere utenti. Per modificare le autorizzazioni di altri utenti devi disporre
+o dell'autorizzazione `utenti` con accesso in `scrittura`, puoi aggiungere o rimuovere utenti. Per modificare le autorizzazioni di altri utenti devi disporre
 dell'autorizzazione `ammin`.
 
 Per accedere alla Console di gestione, puoi utilizzare l'autenticazione di accesso di base sull'endpoint `https://<il_tuo_host>.ibm.com/login`. Il server restituisce un cookie con la tua sessione. Puoi utilizzare tale
@@ -529,11 +642,13 @@ Il seguente esempio mostra l'output di questo
 ```
 {: screen}
 
-#### Elenco delle organizzazioni
+### Elenco delle organizzazioni
 {: #listingorg}
 
 Quando aggiungi un utente, devi specificare un'organizzazione. Puoi
-utilizzare la API REST `Admin` per elencare tutte le organizzazioni. Devi disporre dell'autorizzazione `utenti` con la capacità di `lettura` per elencare le organizzazioni. Per elencare tutte le organizzazioni, esegui questo comando:
+utilizzare la API REST `Admin` per elencare tutte le organizzazioni. Per elencare le
+organizzazioni devi disporre dell'autorizzazione `utenti` con accesso in
+`lettura`. Per elencare tutte le organizzazioni, esegui il seguente comando:
 
 `curl -b ./cookies.txt https://<il_tuo_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
@@ -573,11 +688,12 @@ Il seguente esempio mostra l'output di questo
 ```
 {: screen}
 
-#### Elenco degli utenti
+### Elenco degli utenti
 {: #listingusr}
 
 Puoi determinare se un utente è già stato aggiunto al tuo ambiente {{site.data.keyword.Bluemix_notm}} utilizzando
-l'API REST `Admin` per elencare gli utenti registrati. Devi disporre dell'autorizzazione `utenti` con la capacità di `lettura` per elencare le organizzazioni. Per elencare tutti gli utenti, esegui questo comando:
+l'API REST `Admin` per elencare gli utenti registrati. Per elencare gli utenti registrati devi disporre di un'autorizzazione `utenti`
+con accesso in `lettura`. Per elencare tutti gli utenti, esegui il seguente comando:
 
 `curl -b ./cookies.txt https://<il_tuo_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
@@ -651,13 +767,15 @@ Il seguente esempio mostra l'output di questo
 ```
 {: screen}
 
-#### Aggiunta di un utente
+### Aggiunta di un utente
 
-Puoi utilizzare l'API REST `Admin` per aggiungere utenti all'istanza {{site.data.keyword.Bluemix_notm}}. Per aggiungere utenti devi disporre dell'autorizzazione `utenti`
-con la capacità di `scrittura`.
+Puoi utilizzare l'API REST `Admin` per aggiungere utenti all'istanza {{site.data.keyword.Bluemix_notm}}. Per aggiungere utenti
+devi disporre dell'autorizzazione `utenti` con accesso in
+`scrittura`.
 
-Puoi aggiungere un singolo utente o un elenco di utenti. Puoi aggiungere gli utenti a una singola organizzazione
-oppure a più organizzazioni.-->Per aggiungere un utente, devi fornire le seguenti informazioni:
+Puoi aggiungere un singolo utente o un elenco di utenti. Puoi aggiungere utenti a una
+o più organizzazioni. Per aggiungere un utente,
+devi fornire le seguenti informazioni:
 
 * Nome e cognome dell'utente. Fornisci `"nome"` e `"cognome"` da [Elenco degli utenti](index.html#listingusr).
 * Indirizzo email e ID utente: fornisci l'`"id_utente"` da [Elenco degli utenti](index.html#listingusr) sia per l'indirizzo email sia per l'ID utente.
@@ -753,9 +871,10 @@ Il seguente esempio mostra l'output di questo
  ```
 {: screen}
 
-#### Rimozione di un utente
+### Rimozione di un utente
 
-Puoi utilizzare l'API REST `Admin` per rimuovere gli utenti dall'istanza {{site.data.keyword.Bluemix_notm}}. Per rimuovere gli utenti registrati devi disporre dell'autorizzazione `utenti` con la capacità di `scrittura`.
+Puoi utilizzare l'API REST `Admin` per rimuovere gli utenti dall'istanza {{site.data.keyword.Bluemix_notm}}. Per
+rimuovere degli utenti devi disporre dell'autorizzazione `utenti` con accesso in `scrittura`.
 
 Per rimuovere un utente, devi fornire l'ID dell'utente: Immetti il seguente comando:
 
@@ -791,12 +910,13 @@ Il seguente esempio mostra l'output di questo
  ```
 {: screen}
 
-### API del servizio personalizzato
+
+## API del servizio personalizzato
 {: #servicebrokerapi}
 
 Sono disponibili tre API che ti consentono di registrare o creare un nuovo servizio, di aggiornare un servizio e di eliminare un servizio.
 
-Tutte le API sono relative a <code>https://opsconsole.&lt;subdomain&gt;.bluemix.net/</code>.
+Tutte le API sono relative a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
 <dl>
 <dt><strong>&lt;dominiosecondario&gt;</strong></dt>
@@ -804,20 +924,20 @@ Tutte le API sono relative a <code>https://opsconsole.&lt;subdomain&gt;.bluemix.
 assegnato durante l'onboarding.</dd>
 </dl>
 
-### Registrazione di un nuovo servizio
+## Registrazione di un nuovo servizio
 
 Utilizza i seguenti esempi di API e codice per registrare un nuovo servizio.
 
-#### Rotta
+### Rotta
+{: #registerroute}
 
 ```
 POST /codi/v1/serviceBrokers
 ```
 {: screen}
 
-#### Richiesta
-
-*Tabella 3. Campi*
+### Richiesta
+{: #registerrequest}
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -827,7 +947,10 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
 
-##### Corpo
+*Tabella 6. Campi*
+
+#### Corpo
+{: #registerbody}
 
 ```
 {
@@ -840,7 +963,8 @@ POST /codi/v1/serviceBrokers
 ```
 {: screen}
 
-##### Intestazioni
+#### Intestazioni
+{: #registerheaders}
 
 ```
 Autorizzazione: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -849,16 +973,19 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Risposta
+### Risposta
+{: #registerresponse}
 
-##### Stato
+#### Stato
+{: #registerstatus}
 
 ```
 201 Creato
 ```
 {: screen}
 
-##### Corpo
+#### Corpo
+{: #registerbody2}
 
 ```
 {
@@ -879,18 +1006,18 @@ Content-Type: application/json
 ```
 {: screen}
 
-### Aggiornamento di un servizio
+## Aggiornamento di un servizio
 
 Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 
-#### Rotta
+### Rotta
+{: #updateroute}
 
 `PUT /codi/v1/serviceBrokers`
 {: screen}
 
-#### Richiesta
-
-*Tabella 4. Campi*
+### Richiesta
+{: #updaterequest}
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -900,7 +1027,10 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
 
-##### Corpo
+*Tabella 7. Campi*
+
+#### Corpo
+{: #updatebody}
 
 ```
 {
@@ -913,7 +1043,8 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 ```
 {: screen}
 
-##### Intestazioni
+#### Intestazioni
+{: #updateheaders}
 
 ```
 Autorizzazione: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -922,16 +1053,19 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Risposta
+### Risposta
+{: #updateresponse}
 
-##### Stato
+#### Stato
+{: #updatestatus}
 
 ```
 201 Creato
 ```
 {: screen}
 
-##### Corpo
+#### Corpo
+{: #updatebody2}
 
 ```
 {
@@ -952,26 +1086,28 @@ Content-Type: application/json
 ```
 {: screen}
 
-### Eliminazione di un servizio
+## Eliminazione di un servizio
 
 Utilizza i seguenti esempi di API e codice per eliminare un servizio.
-
-*Tabella 5. Parametro*
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
 
-#### Rotta
+*Tabella 8. Parametro*
+
+### Rotta
 
 ```
 DELETE /codi/v1/serviceBrokers?name=name of service broker
 ```
 {: screen}
 
-#### Richiesta
+### Richiesta
+{: #deleterequest}
 
-##### Intestazioni
+#### Intestazioni
+{: #deleteheaders}
 
 ```
 Autorizzazione: bearer eyJ0eXAiOiJKV1QiLCJhbG ... ciOiJIUzI1
@@ -980,22 +1116,22 @@ Content-Type: application/json
 ```
 {: screen}
 
-#### Risposta
+### Risposta
+{: #deleteresponse}
 
-##### Stato
+#### Stato
+{: #deletestatus}
 
 ```
 204 Nessun contenuto
 ```
 {: screen}
 
-### Gestione degli utenti con la CLI cf
+## Gestione degli utenti con la CLI cf
 {: #usingadmincli}
 
-Puoi gestire gli utenti per il tuo ambiente
-{{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato
-utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in
-{{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
+Puoi gestire gli utenti per il tuo ambiente {{site.data.keyword.Bluemix_notm}}
+utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
 esempio, puoi aggiungere utenti da un registro LDAP.
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
@@ -1006,12 +1142,14 @@ l'interfaccia riga di comando Cloud Foundry](https://github.com/cloudfoundry/cli
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
 in una finestra riga di comando diversa da quella di Cygwin.
 
-#### Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin
+### Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI
 
 Dopo aver installato l'interfaccia riga di comandi cf, puoi
 aggiungere il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI.
+
+**Nota**: se avevi già installato il plug-in Gestione {{site.data.keyword.Bluemix_notm}}, per ottenere gli ultimi aggiornamenti potresti doverlo disinstallare, eliminare il repository e reinstallare il plug-in.
 
 Completa la seguente procedura per aggiungere il repository e installare
 il plug-in:
@@ -1019,7 +1157,7 @@ il plug-in:
 <ol>
 <li>Per aggiungere il repository del plug-in {{site.data.keyword.Bluemix_notm}} Admin, esegui questo comando:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://opsconsole.&lt;dominiosecondario&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://console.&lt;dominiosecondario&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;dominiosecondario&gt;</dt>

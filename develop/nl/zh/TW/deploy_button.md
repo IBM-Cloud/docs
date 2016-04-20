@@ -1,12 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
 
-*前次更新：2016 年 1 月 19 日* 
+*前次更新：2016 年 3 月 2 日* 
 
 「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要最低配置，而且您可以將其插入任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
@@ -23,9 +35,11 @@
 
 4. 如果應用程式需要建置檔，則會自動偵測建置檔，並建置應用程式。 
 
-5. 如果應用程式需要儲存器，則會使用 `pipeline.yml`（它會定義 **IBM Container Service**）及 Dockerfile （它定義映像檔）在 {{site.data.keyword.Bluemix_notm}} 儲存器中部署應用程式。 
+5. 如果配置管線進行建置及部署程序，則會使用 `pipeline.yml` 檔來部署應用程式。
 
-6. 應用程式會部署至那個人的 {{site.data.keyword.Bluemix_notm}} 組織。 
+6. 如果應用程式需要儲存器，則會使用 `pipeline.yml`（它會定義 **IBM Containers** 服務）及 Dockerfile（它定義映像檔）在 {{site.data.keyword.Bluemix_notm}} 儲存器中部署應用程式。 
+
+7. 應用程式會部署至那個人的 {{site.data.keyword.Bluemix_notm}} 組織。 
 
 ##按鈕的範例 {: #button-examples} 
 
@@ -156,24 +170,24 @@
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
 	   </ul>
 	</li>	
-	<li>如果您利用 <stong>IBM Container Service</strong> 在儲存器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
-	<ul>
-	    <li> 若要進一步瞭解如何建立 Dockerfile，請參閱 Docker 文件。</li>
-	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。若要從 {{site.data.keyword.jazzhub_short}} 專案中建立 pipeline.yml 檔案並將它新增至儲存庫中，請完成下列步驟。
+	<li>若要配置專案的管線，請在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要從 {{site.data.keyword.jazzhub_short}} 專案中建立 pipeline.yml 檔案並將它新增至儲存庫中，請完成下列步驟。
 <ol>
 <li>在瀏覽器中開啟您的 DevOps Services 專案，然後按一下<b>建置並部署</b>。</li>
-<li>使用 <b>IBM Container Service</b> 建置與部署工作配置您的管線。</li>
+<li>使用建置及部署工作配置您的管線。</li>
 <li>在瀏覽器中，將 <code>/yaml</code> 新增至專案管線 URL，然後按 Enter 鍵。
 <br>範例：<code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>儲存產生的 <code>pipeline.yml</code> 檔案。</li>
 <li>在專案的根目錄中，建立 <code>.bluemix</code> 目錄。</li>
 <li>將 <code>pipeline.yml</code> 檔案上傳至 <code>.bluemix</code> 儲存庫。</li>
 </ol> </li>
+	<li>如果您利用 <stong>IBM Containers</strong> 在儲存器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
+	<ul>
+	    <li> 若要進一步瞭解如何建立 Dockerfile，<a href="https://docs.docker.com/reference/builder/" target="_blank">請參閱 Docker 文件</a>。</li>
+	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於儲存器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}。	
-
+如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	

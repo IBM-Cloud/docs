@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -10,7 +22,7 @@
 *Última actualización: 7 de diciembre de 2015*  
 
 Puede desarrollar apps mediante un entorno de desarrollo integrado
-(IDE) o un editor de texto, o bien utilizando {{site.data.keyword.jazzhub}}.
+(IDE) o un editor de texto, o bien utilizando {{site.data.keyword.jazzhub}}. 
 {: shortdesc}
 
 ##Desarrollo de apps con Bluemix DevOps Services

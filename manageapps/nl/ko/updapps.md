@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #앱 업데이트
 {: #updatingapps}
 
-*마지막 업데이트 날짜: 2015년 12월 8일*
+*마지막 업데이트 날짜: 2016년 3월 17일*
 
 
 cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우 심지어 Node.js와 같은 기본 제공 빌드팩의 경우에도 -c 매개변수를 제공하여 애플리케이션 시작에 사용할 명령을 지정해야 합니다.
@@ -18,8 +26,6 @@ cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하
 애플리케이션의 URL에 기본 {{site.data.keyword.Bluemix_notm}} 시스템 도메인(mybluemix.net) 대신 사용자 정의 도메인을 사용할 수 있습니다.
 
 도메인은 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공합니다. 사용자 정의 도메인을 사용하려면 공용 DNS 서버에 사용자 정의 도메인을 등록하고, {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 다음 해당 사용자 도메인을 공용 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑해야 합니다. 사용자 정의 도메인이 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑되면 사용자 정의 도메인에 대한 요청이 {{site.data.keyword.Bluemix_notm}}의 애플리케이션으로 라우팅됩니다.
-
-**참고:** **nslookup** 명령을 사용하면 {{site.data.keyword.Bluemix_notm}} 시스템 도메인의 공용 IP 주소를 확인할 수 있습니다. 예를 들어, 명령 프롬프트에서 `nslookup mybluemix.net`를 입력하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 작성하고 사용할 수 있습니다.
 
@@ -73,6 +79,15 @@ cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하
     
         애플리케이션에 사용할 라우트의 호스트 이름입니다.
 	
+{{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 후에는 사용자 정의 도메인을 등록된 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인으로 맵핑해야 합니다.
+
+  1. DNS 서버에 사용자 정의 도메인 이름에 대한 'CNAME' 레코드를 설정하십시오.
+  2. 애플리케이션이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 보안 엔드포인트에 사용자 정의 도메인 이름을 맵핑하십시오. 다음과 같은 지역 엔드포인트를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 조직에 할당되는 URL 라우트를 제공하십시오.
+  
+    * US-SOUTH: `secure.us-south.bluemix.net`
+    * EU-GB: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 브라우저 또는 명령행 인터페이스에서 myapp 애플리케이션에 액세스하는 데 필요한 다음 URL을 입력하십시오.
 
 ```
@@ -264,8 +279,7 @@ cf delete-route domain -n hostname -f
   **결과:** *초록색* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
 
 
-# rellinks
+# 관련 링크
 ## 일반 
-* [조직 및 영역](../acctmgmt/index.html#organdspaces)
 * [Blue-Green 배치](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

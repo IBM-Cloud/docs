@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -216,7 +228,7 @@ var create_message = function(req, res) {
 ## アプリのコスト計算
 {: #ee_billing}
 
-30 日間の無料トライアルの期限が切れたが、{{site.data.keyword.Bluemix_notm}} を使用し続けることを望んでいるとします。{{site.data.keyword.Bluemix_notm}} を使用し続けるためには、従量課金アカウントまたはサブスクリプション・アカウント用にクレジット・カード情報を追加する必要があります。ただし、{{site.data.keyword.Bluemix_notm}} は、有料アカウントに変換した場合でも、ほとんどのランタイム・フレームワークおよびサービスについて無料枠を引き続き提供します。使用量が無料枠を超えない限り、{{site.data.keyword.Bluemix_notm}} による課金はありません。
+30 日間の無料トライアルの期限が切れたが、{{site.data.keyword.Bluemix_notm}} を使用し続けることを望んでいるとします。{{site.data.keyword.Bluemix_notm}} を使用し続けるためには、従量課金アカウントまたはサブスクリプション・アカウント用にクレジット・カード情報を追加する必要があります。ただし、{{site.data.keyword.Bluemix_notm}} は、有料アカウントに切り替えた場合でも、ほとんどのランタイム・フレームワークおよびサービスについて無料枠を引き続き提供します。使用量が無料枠を超えない限り、{{site.data.keyword.Bluemix_notm}} による課金はありません。
 
 {{site.data.keyword.Bluemix_notm}} は、アプリのコストを確認できるように、見積もり機能と計算機能を備えています。次のようにして TestNode のコストを確認できます。
 

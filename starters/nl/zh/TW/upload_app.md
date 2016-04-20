@@ -1,27 +1,36 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # 上傳應用程式
-*前次更新：2015 年 11 月 11 日*
+*前次更新：2016 年 2 月 17 日*
 
 登入 {{site.data.keyword.Bluemix}} 之後，即可使用 cf push 指令來上傳應用程式。
 {:shortdesc}
 
 開始之前，您必須：
-  1. 安裝 Cloud Foundry 指令行介面。
+  1. 安裝 {{site.data.keyword.Bluemix}} 及 Cloud Foundry 指令行介面。
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_cf_commandline.svg" alt="下載 Cloud Foundry 指令行介面" /></a>
-  </p>
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 {{site.data.keyword.Bluemix}} 指令行介面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_cf_commandline.svg" alt="下載 Cloud Foundry 指令行介面" /> </a>
 
   2. 連接至 {{site.data.keyword.Bluemix}}。
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. 登入 {{site.data.keyword.Bluemix_notm}}。
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
 發出 **cf push** 指令時，**cf** 指令行介面會提供工作目錄給
 {{site.data.keyword.Bluemix_notm}} 環境，其使用建置套件來建置及執行應用程式。

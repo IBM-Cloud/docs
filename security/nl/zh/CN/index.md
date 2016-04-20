@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*上次更新时间：2015 年 12 月 15 日*
+*上次更新时间：2016 年 3 月 17 日*
 
 {{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
 
@@ -82,7 +94,7 @@ HTTP 不活动超时为 2 分钟。
 </dd>
 
 <dt>安全开发实践</dt>
-<dd> 对于 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated，将通过使用 IBM Security AppScan® Dynamic Analyzer 和 Static Analyzer 产品，对各种 {{site.data.keyword.Bluemix_notm}} 组件定期执行安全漏洞扫描。执行威胁建模和渗透测试来检测和解决所有类型 {{site.data.keyword.Bluemix_notm}} 部署的任何潜在漏洞。此外，应用程序开发者还可以使用 AppScan Dynamic Analyzer 服务来保护自己在 {{site.data.keyword.Bluemix_notm}} 上部署的 Web 应用程序。</dd>
+<dd> 对于 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated，将通过使用 IBM Security AppScan® Dynamic Analyzer，对各种 {{site.data.keyword.Bluemix_notm}} 组件定期执行安全漏洞扫描。执行威胁建模和渗透测试来检测和解决所有类型 {{site.data.keyword.Bluemix_notm}} 部署的任何潜在漏洞。此外，应用程序开发者还可以使用 AppScan Dynamic Analyzer 服务来保护自己在 {{site.data.keyword.Bluemix_notm}} 上部署的 Web 应用程序。</dd>
 </dl>
 
 ### 基础架构安全
@@ -121,7 +133,7 @@ HTTP 不活动超时为 2 分钟。
 <dd>{{site.data.keyword.Bluemix_notm}} 使用 IBM Security QRadar® 工具来整合 Linux 日志，从而监视对 Linux 系统的特权访问。{{site.data.keyword.Bluemix_notm}} 还使用 IBM QRadar 安全信息和事件管理 (SIEM) 来监视应用程序开发者的成功和不成功登录尝试。</dd>
 
 <dt>用户访问管理</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 中，按照职责分离准则来为用户分配精细的访问特权，并根据最低特权原则，确保用户只拥有执行其作业所需的访问权。在 {{site.data.keyword.Bluemix_notm}} Dedicated 和 Local 环境中，指派的管理员可以使用管理控制台来管理 {{site.data.keyword.Bluemix_notm}} 用户在其组织中的角色和许可权。有关详细信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng)。
+<dd>在 {{site.data.keyword.Bluemix_notm}} 中，按照职责分离准则来为用户分配精细的访问特权，并根据最低特权原则，确保用户只拥有执行其作业所需的访问权。在 {{site.data.keyword.Bluemix_notm}} Dedicated 和 Local 环境中，指派的管理员可以使用管理控制台来管理 {{site.data.keyword.Bluemix_notm}} 用户在其组织中的角色和许可权。有关详细信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](../admin/index.html#mng)。
 </dd>
 </dl>
 
@@ -185,31 +197,9 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 有关更多信息，请参阅 [Single Sign On 入门](../services/SingleSignOn/index.html)。
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-此服务提供对 Android 移动应用程序的安全分析。要使用此服务，必须将编译的 Android 应用程序以 APK 文件形式进行上传。安全分析扫描完成后，即可下载报告。
-
-有关更多信息，请参阅 [AppScan Mobile Analyzer 入门](../services/AppScanMobileAnalyzer/index.html)。
-
-### AppScan Dynamic Analyzer
-
-此服务通过动态分析工具提供对 Web 应用程序的安全分析。此工具用于处理已部署的 Web 应用程序，而不是应用程序源代码，并且可以扫描任何 {{site.data.keyword.Bluemix_notm}} Web 应用程序（无论其使用何种语言或技术）。您只能扫描所属组织的应用程序。要创建扫描，必须配置 Web 应用程序 URL 和登录凭证（如果有的话）。扫描完成后，即可下载报告。
-
-有关更多信息，请参阅 [AppScan Dynamic Analyzer 入门](../services/AppScanDynamicAnalyzer/index.html)。
-
-### Mobile Analyzer for iOS (Beta)
-
-Mobile Analyzer for iOS 服务提供对 iOS 移动应用程序的 AppScan 动态安全分析。可帮助您识别 iOS 移动应用程序中的身份安全问题。
-
-有关更多信息，请参阅 [Mobile Analyzer for iOS 入门](../services/AppScanIOS/index.html)。
-
-### Static Analyzer (Beta)
-
-Static Analyzer 服务支持在云上执行静态应用程序安全测试。可帮助您在软件开发生命周期的早期找出源代码漏洞，以便在部署之前修复这些漏洞。
-
-通过 Static Analyzer，可以使用命令行界面 (CLI) 在本地磁盘上扫描 Java 和 Java Web 内容。此外，还可以运行一个小型安装程序，以将 Static Analyzer 插件添加到 Eclipse 或 Maven 中。您可以使用客户机实用程序来扫描和收集有关文件的信息，这会生成一个归档文件，将该归档文件提交到云上之后，即可获取扫描结果。
-
-有关更多信息，请参阅 [IBM Static Analyzer for Bluemix 入门](../services/StaticAnalyzer/index.html)。
+此服务提供对移动和 Web 应用程序的安全性分析，并允许您扫描源代码来查找安全漏洞。有关更多信息，请参阅 [Application Security on Cloud 入门](../services/ApplicationSecurityonCloud/index.html)。
 
 ### 用于应用程序安全测试的 IBM UrbanCode 插件
 
@@ -247,7 +237,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 
 通过 Secure Gateway 服务，可以将 {{site.data.keyword.Bluemix_notm}} 应用程序安全地连接到内部部署或云中的远程位置。该服务可提供安全连接，并在您的 {{site.data.keyword.Bluemix_notm}} 组织与要连接到的远程位置之间建立隧道。可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 API 软件包来配置和创建安全网关。
 
-有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/index.html)。
+有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/secure_gateway.html)。
 
 ### 安全信息和事件管理
 
@@ -279,7 +269,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
     2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
     3. 经过网络路由器。
     4. 经过授权（通过使用 Cloud Foundry 云控制器），以确保仅访问开发者创建的应用程序和服务实例。
-  
+
 对于 {{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local *管理员*，**管理员流**如下所示：
  1. 经过具有适当入侵防御功能和网络安全的防火墙。
  2. 经过具有逆向代理和 SSL 终止代理功能的 IBM DataPower Gateway。
@@ -292,7 +282,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
  * 通过使用 IBM Endpoint Manager 定期应用修订，加强操作系统安全。
  * 通过入侵防御来管理风险。
  * 使用 QRadar 监视安全。
- * 通过管理控制台提供安全报告。
+ * 在“管理”页面上提供有安全报告。
 
 ## 安全合规性
 {: #compliance}
@@ -304,8 +294,8 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 ![金融行业信息系统](images/FISC.gif) 对于日本的银行和相关金融机构，计算机系统必须具有适当的安全程序，这些程序应基于金融行业信息系统中心 (FISC) 安全准则。**FISC** 安全准则由日本金融厅 (FSA)、日本央行 (BOJ) 和 FISC 贯彻实施。
 
 在 [IBM Bluemix 风险调查结果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，可以找到 FISC 安全准则的 {{site.data.keyword.Bluemix_notm}} 自我评估文档（日语）。 
- 
-![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通过**国际标准化组织 (ISO) 27001 和 27002 标准**的认证，这两个标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS) ，以及应如何实施安全性控制。ISO 27002 标准对 ISO 27001 中的每种安全性控制进行了详细的说明。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。 
+
+![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通过**国际标准化组织 (ISO) 27001 和 27002 标准**的认证，这两个标准定义了信息安全管理过程的最佳做法。ISO 27001 标准根据不同组织的需求规定了应如何建立、实施和记录信息安全管理系统 (ISMS) ，以及应如何实施安全性控制。ISO 27002 标准对 ISO 27001 中的每种安全性控制进行了详细的说明。ISO 27000 系列标准中包含了一个确定风险规模和评估资产价值的过程，旨在保护书面、口头和电子信息的机密性、完整性和可用性。
 
 {{site.data.keyword.Bluemix_notm}} 经第三方安全公司审计，满足 ISO 27001 的所有要求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
 
@@ -314,39 +304,31 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
   * 供应商管理程序
   * 内部公司治理和风险管理流程
   * 法规监督
- 
+
 {{site.data.keyword.Bluemix_notm}} 使用 IBM SoftLayer 基础架构即服务 (IaaS) 云服务，并充分利用了其安全体系结构。有关其他信息，请联系 [{{site.data.keyword.Bluemix_notm}} 销售](mailto:bmxcert1@us.ibm.com){:new_window}团队。
 
-## 安全报告
-{: #reports}
+### 平台和服务合规性
+下表显示了 {{site.data.keyword.Bluemix_notm}} 中符合每种标准的服务。
 
-通过 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated，{{site.data.keyword.Bluemix_notm}} 会生成各种安全报告和日志，您可以通过“管理”页面进行查看。有关查看和使用报告的指示信息，请参阅[查看报告](../admin/index.html#oc_report)。
+|{{site.data.keyword.Bluemix_notm}} 组件		|FISC		|ISO 27001	|SOC 2 第 1 类		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} 平台		|是			|是	|是	|
+|{{site.data.keyword.APIM}}			|是	|是 |			|
+|{{site.data.keyword.autoscaling}}			|是	|是 |			|
+|{{site.data.keyword.bigicloudst}}			|是 |是 |是 |
+|{{site.data.keyword.cloudant}}				|是 |是 |是	|
+|{{site.data.keyword.dashdbshort}}			|是	|是	|是	|
+|{{site.data.keyword.datacshort}}			|是	|是	|			|
+|{{site.data.keyword.jazzhub_short}}					|是	|是	|			|
+|{{site.data.keyword.containerlong}}			|是		|是	|			|
+|{{site.data.keyword.mql}}				|是	|是	|	 		|
+|{{site.data.keyword.SecureGateway}}			|是	|是 |	 		|
+|{{site.data.keyword.sescashort}}     |是 |是 | |
 
-下表显示了为 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 生成的安全报告的列表。
+*表 1. 平台和服务合规性*
 
-| **类别** | **报告** | **描述** |      
-|-----------------|-------------------|---------------------|
-| 防火墙 | 防火墙登录 | 与管理员登录到 Vyatta 防火墙设备相关的事件。 |
-| 防火墙 | 防火墙拒绝 | 根据适用的防火墙规则，访问请求被拒绝时，Vyatta 防火墙设备生成的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理员登录事件 | {{site.data.keyword.Bluemix_notm}} 管理员登录 | 管理员在每个 {{site.data.keyword.Bluemix_notm}} 系统上启动 SSH 会话时，操作系统生成的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 应用程序开发者登录事件 | {{site.data.keyword.Bluemix_notm}} 应用程序开发者登录 | {{site.data.keyword.Bluemix_notm}} 平台用户使用命令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 用户界面启动会话时，{{site.data.keyword.Bluemix_notm}} 平台登录组件生成的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理员管理事件 | {{site.data.keyword.Bluemix_notm}} 管理员操作系统管理事件 | 管理员在当前工作会话中执行操作时，操作系统生成的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 应用程序开发者管理事件 | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理事件 | 与 {{site.data.keyword.Bluemix_notm}} 平台用户使用命令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 用户界面执行的操作相关的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理员数据库管理事件 | 数据库管理事件 | 与数据库管理员在 {{site.data.keyword.Bluemix_notm}} 内部数据库上执行的操作相关的事件。 |
-| 管理事件 | 用户管理事件 | 与在“管理”页面上执行的用户管理操作相关的事件。 |
-| 管理事件 | 目录 | 与服务“目录”更改相关的事件。 |
-| 管理事件 | 安全报告管理事件 | 与在“管理”页面上执行的安全报告管理操作相关的事件。 |
-| 访问审核 | 访问审核报告 | 对特权访问的审核。 |
-| 变更管理 | 软件变更管理 | 变更管理活动。 |
-| 密钥管理 | 定制 SSL 证书管理 | 已上传并存储的定制 SSL 证书。 |
-| 加密 | 传输中的数据加密 | 已配置的传输中的数据加密。 |
-| 防病毒 | 防病毒扫描报告 | 已就位的防病毒软件。 |
-| 软件修订管理 | 补丁安装报告 | 已应用的软件修订。 |
-| 安全事件管理 | 安全事件补救报告 | 用于安全事件管理的安全事件证据。 |
-
-*表 1. {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 安全报告列表*
 
 # 相关链接
-## 常规 
+## 常规
 * [SoftLayer 安全合规性](http://www.softlayer.com/security)
 * [Single Sign On 入门](../services/SingleSignOn/index.html)

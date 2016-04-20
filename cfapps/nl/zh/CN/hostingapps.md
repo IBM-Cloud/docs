@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -119,7 +131,7 @@
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>有关可以在此文件中使用的受支持选项的更多信息，请参阅[应用程序清单](../manageapps/deployingapps.html#appmanifest)。</p></li></ol>
+<p>有关可以在此文件中使用的受支持选项的更多信息，请参阅[应用程序清单](../manageapps/depapps.html#appmanifest)。</p></li></ol>
 </li>
 
 <li>推送应用程序。可以使用 cf push 命令上传应用程序。<ol>

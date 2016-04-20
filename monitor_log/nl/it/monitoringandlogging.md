@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-*Ultimo aggiornamento: 8 dicembre 2015*
+*Ultimo aggiornamento: 27 gennaio 2016* 
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
 {:shortdesc}
@@ -36,7 +44,11 @@ Per monitorare le applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno 
 ##Registrazione per le applicazioni in esecuzione su Cloud Foundry
 {: #logging_for_bluemix_apps}
 
-I file di log vengono creati automaticamente quando utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Puoi visualizzare i log sia dal Dashboard {{site.data.keyword.Bluemix_notm}} che dall'interfaccia riga di comando cf. Puoi anche filtrare i log in modo da visualizzare solo le parti che ti interessano.
+I file di log vengono creati automaticamente quando utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Quando riscontri errori in qualsiasi fase, dalla distribuzione al runtime, puoi controllare i log alla ricerca di indizi che possano aiutarti a risolvere il problema.
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###Formato dei log
 {: #log_format}
@@ -54,7 +66,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per una breve descrizione di ciascun campo:
 
 <dl>
-<dt><strong>Timestamp</strong></dt>
+<dt><strong>Data/ora</strong></dt>
 <dd>
 <pre class="pre screen"><code>yyyy-MM-ddTHH:mm:ss:SS-0500</code></pre>
 <p>Colonne: 1 - 27</p>
@@ -107,21 +119,33 @@ Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per 
 ###Visualizzazione dei log
 {: #viewing_logs}
 
-Per visualizzare i log puoi utilizzare il Dashboard {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando.
+Puoi visualizzare i log delle tue applicazioni Cloud Foundry in tre punti:
 
-####VISUALIZZAZIONE DEI LOG DAL DASHBOARD {{site.data.keyword.Bluemix_notm}}
+  * Dashboard [The {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
+  * [Interfaccia riga di comando](#viewing_logs_cli){:new_window}
+  * [Host log esterni](#thirdparty_logging){:new_window}
 
-Per visualizzare i log **Distribuzione** o **Runtime**, completa la seguente procedura:
-1. Fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
+#### Visualizzazione dei log dal dashboard {{site.data.keyword.Bluemix_notm}}
+{: #viewing_logs_UI}
+
+Per visualizzare i log di distribuzione o di runtime, completa la seguente procedura:
+1. Accedi a {{site.data.keyword.Bluemix_notm}}, quindi fai clic sul tile della tua applicazione sul Dashboard. Viene visualizzata la pagina dei dettagli dell'applicazione.
 2. Nella barra di navigazione sinistra, fai clic su **Log**.
 
-####VISUALIZZAZIONE DEI LOG DALL'INTERFACCIA RIGA DI COMANDO
+Nella console **Log**, puoi visualizzare in tempo reale i log recenti riguardanti la tua applicazione o le parti finali dei log. Inoltre, puoi filtrare i log in base al canale e al tipo di log.
+
+**Nota:** i log non vengono conservati dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
+
+
+
+#### Visualizzazione dei log dall'interfaccia riga di comando
+{: #viewing_logs_cli}
 
 Scegli una delle seguenti opzioni per visualizzare i log dall'interfaccia riga di comando:
 
 <ul>
 <li>Accodamento dei log quando distribuisci le applicazioni.
-<p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi [Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
+<p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a>.</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Visualizzare i log recenti.</dd>
@@ -167,6 +191,9 @@ preparazione.</p>
 
 **Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](../troubleshoot/debugging.html#debug_runtime).
 
+
+
+
 ###Filtraggio dei log
 {: #filtering_logs}
 
@@ -184,35 +211,83 @@ cf logs appname --recent | grep '\[App'
 ```
 Per ulteriori informazioni sull'opzione **grep**, immetti `grep --help`.
 
-###Configurazione della registrazione di terze parti
+
+
+### Configurazione di host log esterno
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} conserva in memoria una quantità limitata di informazioni di log. Quando si registrano le informazioni, i dati precedenti vengono sostituiti con le informazioni più recenti. Per conservare tutte le informazioni di log, puoi salvare i tuoi log in un servizio di gestione log di terze parti.
+{{site.data.keyword.Bluemix_notm}} conserva in memoria una quantità limitata di informazioni di log. Quando si registrano le informazioni, i dati precedenti vengono sostituiti con le informazioni più recenti. Per conservare tutte le informazioni di log, puoi salvare i tuoi log in un log host esterno, quale un servizio di gestione log di terze parti o un altro host.
 
-Per trasmettere i log dalla tua applicazione e dal sistema a un servizio di gestione log di terze parti, completa la seguente procedura:
+Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno, completa la seguente procedura:
 
-1. Registra un servizio di gestione log di terze parti.
-    
-    Puoi utilizzare un qualsiasi servizio di gestione log di terze parti che supporti il [protocollo syslog](http://tools.ietf.org/html/rfc5424){:new_window}, come Papertail, Splunk Storm, SumoLogic e Logentries. Registra un servizio di gestione log di terze parti, quindi configura il servizio per fornire una destinazione per i log in {{site.data.keyword.Bluemix_notm}}. Dopo che hai completato la configurazione, il servizio di solito ti fornisce un URL syslog come destinazione per i tuoi log in {{site.data.keyword.Bluemix_notm}}. Per
-informazioni su come configurare i servizi di gestione log di terze parti,
-vedi [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
+  1. Determina l'endpoint di registrazione. 
+     
+	 Puoi inviare i log a un aggregatore di log di terze parti, quale ad esempio Papertrail, Splunk o Sumologic. Puoi anche inviare i log a un host syslog, un host syslog crittografato con TLS (Transport Layer Security) o un endpoint HTTPS POST. I metodi per ottenere gli endpoint di registrazione variano per i diversi host log.
 
-2. Crea un'istanza del servizio fornito dall'utente.
-	
-	Per trasmettere i log presenti in {{site.data.keyword.Bluemix_notm}} al servizio di gestione log di terze parti, devi prima creare un'istanza del servizio fornito dall'utente. Utilizza il seguente comando per creare un'istanza del servizio fornito dall'utente, dove nome_servizio è il nome per l'istanza del servizio fornito dall'utente e URL_syslog è l'URL che ottieni dal servizio di registrazione di terze parti.
-	
-	```
-	cf create-user-provided-service <nome_servizio> -l <URL_>
-	```
-	
-3. Esegui il bind dell'istanza del servizio alla tua applicazione.
+  2. Crea un'istanza del servizio fornito dall'utente.
+     
+	 Utilizza il comando ``"cf create-user-provided-service"`` (o ```cups``, una versione breve del comando) per creare un'istanza del servizio fornita dall'utente:
+ ```
+	 cf create-user-provided-service <nome_servizio> -l <endpoint_registrazione>
+	 ```
+	 **nome_servizio**
+	 
+	 Il nome dell'istanza di servizio fornita dall'utente.
+	 
+	 **endpoint_registrazione**
+	 
+	 L'endpoint di registrazione a cui invia i log {{site.data.keyword.Bluemix_notm}}. Fai riferimento alla seguente tabella per sostituire *endpoint_registrazine* con il tuo valore:
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>Endpoint_registrazione</th>
+     <th>Comando</th>
+	 <th>Note</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>syslog host</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORTA`</td>
+	 <td>Ad esempio, per consentire la registrazione in Papertrail, immetti `cf cups my-logs -l syslog://<papertrail-url>`. Sostituisci `<papertrail-url>` con l'URL del tuo endpoint di registrazione proveniente da Papertrail.</td>
+     </tr>
+	 <tr>
+     <td>syslog-tls host</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORTA`</td>
+	 <td>Il certificato deve essere garantito da un'autorità di certificazione. Non utilizzare certificati autofirmati.</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORTA`</td>
+	 <td>Questo endpoint deve trovarsi sull'Internet pubblico e deve essere accessibile da {{site.data.keyword.Bluemix_notm}}</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. Esegui il bind dell'istanza del servizio alla tua applicazione.
 
-	Utilizza il seguente comando per eseguire il bind dell'istanza del servizio alla tua applicazione, dove nomeapp è il nome della tua applicazione e nome_servizio è il nome per l'istanza del servizio fornito dall'utente.
+	 Utilizza il seguente comando per eseguire il bind dell'istanza del servizio alla tua applicazione: 
 	
-	```
-	cf bind-service nomeapp <nome_servizio>
-	```
-	
-	Successivamente, ti verrà richiesto di preparare nuovamente l'applicazione immettendo cf restage nomeapp per rendere effettive le modifiche. Quando i log vengono generati, puoi visualizzare dei messaggi simili nel servizio di gestione log di terze parti dopo un breve intervallo.
+	 ```
+	 cf bind-service nomeapp <nome_servizio>
+	 ```
+	 **nome_applicazione**
+	 
+	 Il nome della tua applicazione.
+	 
+	 **nome_servizio**
+	 
+	 Il nome dell'istanza di servizio fornita dall'utente.
+	 
+  4. Riprepara l'applicazione.
+     Digita ```cf restage appname``` per rendere effettive le modifiche. 
 
-**Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nei servizi di gestione log di terze parti.
+#### Visualizzazione dei log dagli host esterni
+{: #viewing_logs_external}
+
+	 
+Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf. In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
+
+**Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nel tuo host log esterno. 
+
+

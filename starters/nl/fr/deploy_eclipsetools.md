@@ -1,3 +1,16 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:download: .download}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
@@ -14,13 +27,11 @@ Foundry.
   2. Cliquez en maintenant le bouton de votre souris enfoncé sur le bouton suivant pour le faire glisser et le déposer dans la barre d'outils
 Eclipse, puis suivez les invites d'installation d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} :
   
-  ![Glisser et déposer dans un espace de travail Eclipse Luna en cours d'exécution pour installer IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png) 
+  ![Glisser et déposer dans un espace de travail Eclipse Luna en cours d'exécution pour installer IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
-  3. Téléchargez votre code de démarrage et importez-le dans Eclipse en sélectionnant **Fichier>Projets
+  3. {: download} Téléchargez votre code de démarrage et importez-le dans Eclipse en sélectionnant **Fichier>Projets
 existants dans l'espace de travail>Fichier archive**.
-
-  <p>
-  <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code du module de démarrage" /> </a>
-  </p>
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code du module de démarrage" /> </a> 
 
 Pour des instructions détaillées concernant le déploiement d'applications, voir [Déploiement d'applications avec IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.

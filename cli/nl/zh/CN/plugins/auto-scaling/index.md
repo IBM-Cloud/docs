@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -5,21 +17,21 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*上次更新时间：2015 年 1 月 20 日*
+*上次更新时间：2016 年 2 月 25 日*
 
-您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，并且提供类似于 {{site.data.keyword.autoscaling}} RESTful API 提供的功能。
+您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，并且提供与 Auto-Scaling RESTful API 所提供功能类似的功能。
 {: shortdesc}
 
 开始之前，请先安装 {{site.data.keyword.Bluemix_notm}} CLI。有关指示信息，请参阅[下载 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}。
 
-## 添加 Auto-Scaling CLI 插件
+## 添加 {{site.data.keyword.Bluemix_notm}} CLI 插件
 
 安装 {{site.data.keyword.Bluemix_notm}} CLI 后，可以添加 {{site.data.keyword.autoscaling}} CLI 插件。
 
 完成以下步骤来添加存储库并安装该插件：
 1. 要添加 {{site.data.keyword.Bluemix_notm}} CLI 插件存储库，请运行以下命令：
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 要安装 {{site.data.keyword.autoscaling}} CLI 插件，请运行以下命令：
 ```
@@ -37,7 +49,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">要附加 Auto-Scaling 策略的应用程序的名称。</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">描述 Auto-Scaling 策略的 JSON 文件的名称。有关更多详细信息，请参阅 [{{site.data.keyword.autoscaling}} RESTful API 文档](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html)。</dd>
+<dd class="pd">描述 Auto-Scaling 策略的 JSON 文件的名称。有关更多详细信息，请参阅 <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API 文档</a>。</dd>
 </dl>
 
 
@@ -101,16 +113,16 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">要显示其 Auto-Scaling 策略历史记录的应用程序的名称。
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">历史记录范围的开始时间戳记。支持的格式为 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`。缺省情况下，此时间戳记设置为早于当前时间的 50 小时。有关时间戳记格式的详细信息，请参阅 [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}。
+<dd class="pd">历史记录范围的开始时间戳记。支持的格式为 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`。缺省情况下，此时间戳记设置为早于当前时间的 50 小时。有关时间戳记格式的详细信息，请参阅 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a>。
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">历史记录范围的结束时间戳记。支持的格式为 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`。缺省情况下，此时间戳记设置为当前时间。有关时间戳记格式的详细信息，请参阅 [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}。
+<dd class="pd">历史记录范围的结束时间戳记。支持的格式为 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`。缺省情况下，此时间戳记设置为当前时间。有关时间戳记格式的详细信息，请参阅 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a>。
 </dl>
 
 **提示：**您还可以使用 **--json** 选项更好地显示原始 JSON 响应。
 
 # 相关链接
 ## 常规
-* [{{site.data.keyword.autoscaling}} 服务](../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} 服务](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 

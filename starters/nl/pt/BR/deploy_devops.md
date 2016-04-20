@@ -1,27 +1,37 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:download: .download}
 
 # Iniciar a codificação com Git
-*Última atualização: 8 de dezembro de 2015*  
+*Última atualização: 2 de março de 2016*  
 
 É possível criar um repositório Git hospedado que é implementado no {{site.data.keyword.Bluemix}} automaticamente. Em seguida, é possível modificar o código que é executado em seu app enviando por push as mudanças
 para o repositório Git. 
 {:shortdesc}
 
-1. Para iniciar, na página Visão geral do app, clique em **INCLUIR GIT**.  
-2. Na janela que é aberta, certifique-se de que a caixa de seleção **Preencher
-o repositório com o pacote de aplicativo iniciador e ativar o Delivery
-Pipeline (Build & Deploy)** esteja marcada. O repositório Git é criado. Se o código de início estiver disponível,
+1. Para iniciar, na página Visão geral do app, clique em **Incluir repositório Git e pipeline** ou, em {{site.data.keyword.Bluemix_notm}} Classic Experience, clique em **INCLUIR GIT**. 
+2. Na janela que é aberta, certifique-se de que a caixa de seleção **Preencher o repositório com o pacote inicial do app e ativar o pipeline Construir e implementar** esteja selecionada. O repositório Git é criado. Se o código de início estiver disponível,
 ele será carregado no repositório. Além disso, o aplicativo é implementado pelo serviço Delivery Pipeline em execução no {{site.data.keyword.jazzhub}}.  
-3. Para atualizar seu app, é possível usar a linha de comandos ou o Web IDE.
-**Se você usar a linha de comandos:**
-   a. Clone seu repositório Git a partir da URL do Git na página Visão geral do app.
-   b. Em seu editor favorito, atualize o código.
+3. Para atualizar seu app, é possível usar a linha de comandos ou o Web IDE.  
+   **Se você usar a linha de comandos:**
+   a. Clone seu repositório Git a partir da URL do Git na página Visão geral do app.  
+   b. Em seu editor favorito, atualize o código.  
    c. Na interface da linha de comandos do Git, envie suas mudanças por push.  
 	    
    **Se você usar o Web IDE:**  
-   a. Na página Visão geral do app, clique em **EDITAR CÓDIGO**. Seu projeto é aberto no Web IDE.  
+   a. Na página Visão geral do app, clique em **Editar código**. Seu projeto é aberto no Web IDE.  
    b. Faça as mudanças necessárias e, em seguida, envie por push usando o suporte integrado do Git.  
 		
 O app atualizado é reimplementado no {{site.data.keyword.Bluemix_notm}}.  
@@ -37,18 +47,18 @@ Para saber mais sobre o {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [
 1. Faça download e instale a linha de comandos bl do {{site.data.keyword.Bluemix_notm}} Live Sync. 
 
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
 </p>
 
 **Importante:** a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior. 
 
-2. Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha da IBM®.
+2. Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha da IBM®. 
 ```
 bl login
 ```
 
-3. Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir:
+3. Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir: 
 ```
 bl projects
 ```

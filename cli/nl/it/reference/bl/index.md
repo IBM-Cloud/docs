@@ -1,6 +1,23 @@
-# comandi bl
+---
 
-*Ultimo aggiornamento:* 13 novembre 2015
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
+# Comandi {{site.data.keyword.Bluemix_notm}} Live Sync (bl)
+
+*Ultimo aggiornamento: 29 gennaio 2016*
 
 Se stai creando un'applicazione Node.js, puoi utilizzare Bluemix™ Live Sync per aggiornare rapidamente l'istanza dell'applicazione in esecuzione su Bluemix e sviluppare
 come faresti sul desktop senza rieseguire la distribuzione. Quando apporti una modifica, puoi vedere tale modifica nella tua applicazione Bluemix in esecuzione
@@ -14,7 +31,7 @@ Puoi utilizzare i comandi dell'interfaccia riga di comando **bl** per completare
 * Visualizzare l'elenco di progetti disponibili per la sincronizzazione.
 * Visualizzare lo stato delle applicazioni in esecuzione.
 
-Per ulteriori informazioni sul download e l'utilizzo del comando bl, vedi [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive).
+Per ulteriori informazioni sul download e l'utilizzo del comando bl, vedi [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## comandi bl
 
@@ -43,14 +60,10 @@ La riga di comando Bluemix Live Sync, **bl**, ha la seguente sintassi:
 </dl>
 
 ### Argomenti
-<dl>
-<dd>Argomenti per il comando.</dd>
-</dl>
+Argomenti per il comando.
 
 ### Opzioni
-<dl>
-<dd>Opzioni per il comando.</dd>
-</dl>
+Opzioni per il comando.
 
 ### Opzioni globali
 <dl>

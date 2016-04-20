@@ -1,9 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# CLI 外掛程式
-*前次更新：2015 年 11 月 10 日*
+# Cloud Foundry 指令行介面外掛程式
 
-使用外掛程式，延伸您的 {{site.data.keyword.Bluemix_short}} 指令行介面。選擇 IBM® Containers for Bluemix 的 CLI，以取得其他選項來管理您的儲存器。新增 dev_mode CLI 就能在應用程式執行時繼續開發。{:shortdesc}
+*前次更新：2016 年 2 月 2 日*
+
+您可以安裝及使用 [CLI 外掛程式儲存庫](http://plugins.{DomainName}/){: new_window}上可用的「Cloud Foundry 指令行介面 (cf cli)」外掛程式。每一個外掛程式都是透過其二進位檔名稱、其開發人員定義的外掛程式名稱以及外掛程式所提供的指令來識別。您可以使用二進位檔名稱僅安裝外掛程式，以及將外掛程式名稱或指令用於任何其他動作。
+{:shortdesc}
+

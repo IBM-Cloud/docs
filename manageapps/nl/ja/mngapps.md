@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #アプリケーションの管理
 {: #manageapps}
 
-*最終更新日: 2015 年 12 月 4 日*
+*最終更新日: 2015 年 3 月 17 日*
 
 {{site.data.keyword.Bluemix}} ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理、および割り当て量ゲージを使用したリソース使用量のモニターを行うことができます。
 {:shortdesc}

@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 # 有关服务的故障诊断
 {: #services_troubleshooting}

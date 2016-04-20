@@ -1,27 +1,36 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # Caricamento della tua applicazione
-*Ultimo aggiornamento: 11 novembre 2015*
+*Ultimo aggiornamento: 17 febbraio 2016* 
 
 Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix}}, puoi caricare la tua applicazione con il comando cf push.
 {:shortdesc}
 
 Prima di iniziare, devi:
-  1. Installare l'interfaccia riga di comando Cloud Foundry.
+  1. Installa le interfacce riga di comando {{site.data.keyword.Bluemix}} e Cloud Foundry.
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /></a>
-  </p>
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>
 
   2. Stabilisci una connessione a {{site.data.keyword.Bluemix}}.
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. Accedi a {{site.data.keyword.Bluemix_notm}}.
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nomeutente</var> -o <var class="keyword varname" data-hd-keyref="org_name">nome_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nome_spazio</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nome_utente</var> -o <var class="keyword varname" data-hd-keyref="org_name">nome_organizzazione</var> -s <var class="keyword varname" data-hd-keyref="space_name">nome_spazio</var></pre>
 
 Quando viene immesso un comando **cf push**, l'interfaccia riga di comando **cf** fornisce
 la directory di lavoro all'ambiente {{site.data.keyword.Bluemix_notm}} che usa

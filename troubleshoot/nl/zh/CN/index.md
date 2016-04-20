@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2015 年 1 月 6 日*
+*上次更新时间：2016 年 3 月 15 日*
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。 
 {:shortdesc}
@@ -268,7 +274,7 @@ nslookup stage1.mybluemix.net
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../acctmgmt/index.html#mngorg){: new_window}。
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../admin/adminpublic.html#orgmng){: new_window}。
  
 
  
@@ -387,7 +393,7 @@ Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 	```
   * 在用于将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 的 `cf push` 命令中使用 **-k** 选项：
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -478,7 +484,7 @@ unbind-service <appname> <service_instance_name>`。
 	  2. 删除服务实例，方法是输入 `cf delete-service <service_instance_name>`。
 	  3. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序，方法是输入 `cf
 restage <appname>`。
-  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](../acctmgmt/bill_usage.html#bil_plan){: new_window}。
+  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](../pricing/index.html#changing){: new_window}。
 
   
   
@@ -503,10 +509,10 @@ restage <appname>`。
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 例如：```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -532,7 +538,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve} 
 
-  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](../acctmgmt/bill_usage.html#bil_plan){: new_window}。 
+  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](../pricing/index.html#pay-accounts){: new_window}。 
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面。
     如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面，请完成下列步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
@@ -545,7 +551,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	     cf apps 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
       2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. 重新启动应用程序以使更改生效。
 
@@ -574,7 +580,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。 
 
@@ -674,7 +680,7 @@ cf push <appname>
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}。  
+如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html){: new_window}。  
   
   
 
@@ -707,7 +713,7 @@ cf api https://api.eu-gb.bluemix.net
 	```
   * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `cf push` 命令。 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -809,8 +815,9 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve} 
 
   * 通过以下其中一种方法来指定启动命令： 
-      * 使用命令行界面。例如：```
-		cf push MyUniqueNodejs01 -c "node app.js"
+      * 使用命令行界面。例如：
+    ```
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 文件。例如：
 	    ```
@@ -914,7 +921,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](../manageapps/deployingapps.html#appmanifest){: new_window}。
+要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](../manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 
@@ -941,12 +948,13 @@ cf push MyUniqueAppName02 -p "./app.war"
 要对 Meteor 应用程序使用定制 buildpack，请使用以下其中一种方法：
 {: tsResolve}
 
-  * 如果使用 ``manifest.yml`` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：```
+  * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
+```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
-  ``
+  ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1224,11 +1232,11 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
   ```
   3. 通过使用以下命令，使用修改用于删除高速缓存的空 buildpack 推送应用程序。完成此步骤后，会删除应用程序高速缓存目录中的所有内容。
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 通过使用以下命令，使用想要使用的最新 buildpack 推送应用程序： 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	
@@ -1264,7 +1272,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-`注意`消息可供参考，但未必表明发生了问题。要停止记录这些消息，可以将 buildpack 的 nginx-defaults.conf 文件中的日志记录级别从 stderr notice 更改为 stderr error。例如： 	
+`注意`消息可供参考，但未必表明发生问题。要停止记录这些消息，可以将 buildpack 的 nginx-defaults.conf 文件中的日志记录级别从 stderr notice 更改为 stderr error。例如： 	
 {: tsResolve}
 
 ```

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 {:pre: .pre}
 
 # Utilisation des packs de construction intégrés de la communauté
-*Dernière mise à jour : 8 décembre 2015*
+*Dernière mise à jour : 15 mars 2016*
 
 Si vous ne trouvez pas de module de démarrage qui offre le contexte d'exécution dont vous avez besoin dans le catalogue {{site.data.keyword.Bluemix}}, vous pouvez fournir un
 pack de construction externe dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez spécifier un pack de construction personnalisé et compatible avec Cloud Foundry lorsque vous déployez votre application avec la commande cf
@@ -44,16 +56,16 @@ Dans le cas d'un contexte d'exécution ou d'une infrastructure identique, les pa
 communauté. Si vous voulez utiliser le pack de construction de la communauté à la place de celui créé par IBM, vous devez le spécifier à l'aide de l'option
 -b de la commande cf push.
 <p>Par exemple, vous pouvez utiliser le pack de construction de la communauté pour les applications Web Java. :</p>
-<pre class="pre"><code>cf push nom_app -b pack_construction_java</code></pre>
+<pre class="pre"><code>cf push nom_app -b pack_construction_java -p chemin_app</code></pre>
 <p>Vous pouvez également utiliser le pack de construction de la communauté pour les applications Node.js :</p>
-<pre class="pre"><code>cf push nom_app -b pack_construction_nodejs</code></pre>
+<pre class="pre"><code>cf push nom_app -b pack_construction_nodejs -p chemin_app</code></pre>
 </li>
 
 <li>
 <p>Dans le cas d'un contexte d'exécution ou d'une infrastructure non pris en charge par les packs de construction créés par IBM, mais pris en charge par
 les packs de construction intégrés de la communauté, il n'est pas nécessaire d'utiliser l'option -b avec la commande cf push.</p><p>Par exemple, pour des
 applications Ruby, il n'existe aucun pack de construction créé par IBM. Pour utiliser le pack de construction intégré de la communauté, saisissez la commande suivante :</p>
-<pre class="pre"><code>cf push nom_app</code></pre>
+<pre class="pre"><code>cf push nom_app -p chemin_app</code></pre>
 </li>
 </ul>
 
@@ -63,7 +75,7 @@ Vous pouvez utiliser des packs de construction externes ou personnalisés dans {
 l'adresse URL du pack de construction avec l'option -b et la pile avec l'option ```-s``` dans la commande **cf push**. Par exemple, pour utiliser un pack de construction de communauté externe pour des fichiers statiques, exécutez la commande suivante :
 
 ```
-cf push nom_app -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
+cf push nom_app -p chemin_app -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
 ```
 {:pre}
 
@@ -71,7 +83,7 @@ Ou bien, si vous ne souhaitez pas
 utiliser ce pack de construction pour les applications Ruby, vous pouvez employer le pack de construction externe en entrant la commande suivante :
 
 ```
-cf push nom_app -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
+cf push nom_app -p chemin_app -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
 ```
 {:pre}
 
@@ -81,7 +93,7 @@ Foundry, entrez la commande suivante lors du déploiement de l'application PHP d
 construction :
 
 ```
-cf push nom_app -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
+cf push nom_app -p chemin_app -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
 ```
 {:pre}
 
@@ -90,8 +102,7 @@ cf push nom_app -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflin
 <ul>
 <li>
 Utilisez la commande <strong>cf set-env</strong>. Par exemple, entrez la commande suivante pour définir la version Java 1.7.0 :
-<pre class="pre"><code>cf
-set-env nom_app JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env nom_app JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Ensuite, reconstituez votre application pour appliquer
 la modification :</p>
 <pre class="pre"><code>cf restage nom_app</code></pre>

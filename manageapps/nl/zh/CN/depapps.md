@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #部署应用程序
 {: #deployingapps}
 
-*上次更新时间：2015 年 12 月 4 日*
+*上次更新时间：2016 年 3 月 17 日*
 
 您可以使用各种方法（例如，命令行界面和集成开发环境 (IDE)）将应用程序部署到 {{site.data.keyword.Bluemix}}。您还可以使用应用程序清单来部署应用程序。通过使用应用程序清单，可减少每次将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时必须指定的部署详细信息的数量。
 {:shortdesc}
@@ -18,7 +26,7 @@
 
 ###应用程序编译打包
 
-在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 体系结构，{{site.data.keyword.Bluemix_notm}} 的工作方式](../overview/index.html#ov_arch)。
+在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 体系结构，{{site.data.keyword.Bluemix_notm}} 的工作方式](../public/index.html#publicarch)。
 
 在编译打包过程中，DEA 会检查 buildpack 是否与应用程序相匹配。例如，Liberty 运行时用于 .war 文件，或者 Node.js 运行时用于 .js 文件。然后，DEA 会创建包含 buildpack 和应用程序代码的独立容器。容器由 Warden 组件进行管理。有关更多信息，请参阅 [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
@@ -30,7 +38,7 @@
 
 **注：**缓冲区大小是有限制的。如果应用程序运行了很长时间且未重新启动，那么输入 `cf logs appname --recent` 后可能不会显示日志，原因是日志缓冲区可能已清除。因此，要调试大型应用程序的编译打包错误，可以在部署应用程序时，在 cf 命令行界面的单独命令行中输入 `cf logs appname` 来跟踪日志。
 
-如果在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时遇到问题，那么可以执行[调试编译打包错误](../troubleshoot/debugging.html#debug_stgerr)中的步骤来解决问题。
+如果在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时遇到问题，那么可以执行[调试编译打包错误](../debug/index.html#debugging-staging-errors)中的步骤来解决问题。
 
 ##使用 cf 命令部署应用程序
 {: #dep_apps}
@@ -41,7 +49,7 @@
 
 如果使用外部 buildpack，那么在通过命令提示符将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，必须使用 **-b** 选项来指定 buildpack 的 URL。
 
-  * 要将 Liberty 服务器软件包部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
+  * 要将 Liberty 服务器软件包部署到 {{site.data.keyword.Bluemix_notm}}，请从源目录使用以下命令：
   
   ```
   cf push
@@ -52,7 +60,7 @@
   * 要将 Java Tomcat 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * 要将 WAR 包部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
@@ -69,8 +77,8 @@
   * 要将 Node.js 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
   ```
-  cf push appname 
-```
+  cf push appname -p app_path
+  ```
   
 Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack 才可识别此应用程序。`app.js` 文件是应用程序的入口脚本，可在 `package.json` 文件中指定该文件。以下示例显示简单的 `package.json` 文件：  
 	
@@ -112,7 +120,7 @@ Node.js 应用程序中必须具有 `package.json` 文件，Node.js buildpack �
   cf target -s <space_name>
   ```
   
-  2. 使用 **cf push** 命令部署应用程序，其中 appname 必须在域中唯一。
+  2. 转至应用程序目录，然后使用 **cf push** 命令部署应用程序，其中 appname 必须在域中唯一。
   
   ```
   cf push appname 
@@ -183,9 +191,9 @@ cf push -f appManifest.yml
 (DEA)* 和 buildpack 设置的环境变量，还可为 {{site.data.keyword.Bluemix_notm}} 上的应用程序设置特定于应用程序的环境变量。
 
 您可通过使用 **cf env** 命令或从 {{site.data.keyword.Bluemix_notm}} 用户界面查看正在运行的 {{site.data.keyword.Bluemix_notm}} 应用程序的以下环境变量：
-
+	
   * 特定于应用程序的用户定义变量。有关如何向应用程序添加用户定义的变量的信息，请参阅[添加用户定义的环境变量](#ud_env){:new_window}。
-	  
+	 
   * VCAP_SERVICES 变量，其中包含用于访问服务实例的连接信息。如果应用程序与多个服务绑定，那么 VCAP_SERVICES 变量会包含每个服务实例的连接信息。例如：
   
   ```
@@ -235,10 +243,11 @@ cf push -f appManifest.yml
   }
   ```
         
-您可访问通过 DEA 和 buildpack 设置的环境变量。
+您还有权访问通过 DEA 和 buildpack 设置的环境变量。
 
-<ul>
-<li>以下变量通过 DEA 定义：<dl>
+以下变量通过 DEA 定义：
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>已部署应用程序的根目录。</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -315,13 +324,14 @@ cf push -f appManifest.yml
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>通过 buildpack 定义的变量对于每个 buildpack 是不同的。请参阅 [buildpack](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}，以了解任何其他兼容 buildpack。
+</dl>
 
-    <li>Liberty buildpack 定义的变量：
-	
-	  <dl>
+通过 buildpack 定义的变量对于每个 buildpack 是不同的。请参阅 [buildpack](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}，以了解任何其他兼容 buildpack。
+
+
+
+<ul>
+    <li>以下变量通过 Liberty buildpack 定义：<dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>运行应用程序的 Java SDK 的位置。</dd>
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
@@ -334,7 +344,7 @@ cf push -f appManifest.yml
 	  <dd>生成的输出（例如，日志文件）的位置以及正在运行的 Liberty 概要文件服务器实例的工作目录。</dd>
 	  </dl>
 </li>   
-<li>Node.js buildpack 定义的变量：
+<li>以下变量通过 Node.js buildpack 定义：
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>Node.js 运行时环境的目录。</dd>
@@ -346,7 +356,17 @@ cf push -f appManifest.yml
 </li>
 </li>
 </ul>	
-	
+
+您可以使用以下样本 Node.js 代码来获取 VCAP_SERVICES 环境变量的值：
+
+```
+if (process.env.VCAP_SERVICES) {
+
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 有关每个环境变量的更多信息，请参阅 [Cloud Foundry 环境变量](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}。
 
 ## 定制应用程序部署
@@ -364,7 +384,7 @@ cf push -f appManifest.yml
   * 使用 **cf push** 命令并指定 -c 参数。例如，部署 Node.js 应用程序时，可以通过 -c 参数指定 **node app.js** 启动命令：
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * 在 `manifest.yml` 文件中使用 command 参数。例如，部署 Node.js 应用程序时，可以在清单文件中指定 **node app.js** 启动命令：
@@ -374,8 +394,7 @@ cf push -f appManifest.yml
   command: node app.js
 ```
   
-  
-  
+
 ### 添加用户定义的环境变量
 {: #ud_env}
 
@@ -396,9 +415,13 @@ cf push -f appManifest.yml
       VAR2:value2
     ``
 	
+添加了用户定义的环境变量后，可以使用以下样本 Node.js 代码来获取所定义变量的值：
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### 配置启动环境
 
 要为应用程序配置启动环境，可以将 shell 脚本添加到 `/.profile.d` 目录中。`/.profile.d` 目录位于应用程序的构建目录下。`/.profile.d` 目录中的脚本由 {{site.data.keyword.Bluemix_notm}} 在应用程序运行之前运行。例如，可以将 NODE_ENV 环境变量设置为 **production**，方法是将包含以下内容的 `node_env.sh` 文件放入 `/.profile.d` 目录下：

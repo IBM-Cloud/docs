@@ -1,5 +1,25 @@
-# Bluemix dev_mode CLI
-開發模型是一項 Bluemix 特性，您可以用來在應用程式於雲端執行時處理應用程式。開發模型包括 dev_mode 指令行介面。dev_mode CLI 建置為 cf CLI 外掛程式，且同時支援 Liberty 和 IBM Node.js 應用程式。
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
+# 開發模型 CLI
+{: #devmodecli}
+
+*前次更新：2016 年 2 月 25 日*
+
+開發模型 (dev_mode) 是一項 Bluemix 特性，您可以用來在應用程式於雲端執行時處理應用程式。開發模型包括 dev_mode 指令行介面。dev_mode CLI 建置為 cf CLI 外掛程式，且同時支援 Liberty 和 IBM Node.js 應用程式。
 
 dev_mode CLI 提供下列特性：
 - 在開發模式與標準模式之間切換應用程式。

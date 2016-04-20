@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #管理应用程序
 {: #manageapps}
 
-*上次更新时间：2015 年 12 月 4 日*
+*上次更新时间：2015 年 3 月 17 日*
 
 您可以使用 {{site.data.keyword.Bluemix}} 用户界面中的“仪表板”来查看和管理应用程序和服务，以及使用配额标尺来监视资源使用情况。{:shortdesc}
 

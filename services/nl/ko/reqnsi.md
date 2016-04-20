@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2015년 1월 20일*
+*마지막 업데이트 날짜: 2016년 1월 20일*
 
 {{site.data.keyword.Bluemix}} 사용자 인터페이스의
 **서비스** 아래에 있는 **카탈로그**에서 사용 가능한 서비스를
@@ -107,6 +114,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 |{{site.data.keyword.conceptinsightsshort}}	|예		|예		|예|
 |{{site.data.keyword.dashdbshort}}		|예		|예		|아니오|
 |{{site.data.keyword.datacshort}}		|예		|예		|예|
+|{{site.data.keyword.DB2OnCloud_short}}		|예		|예		|예|
 |{{site.data.keyword.deliverypipeline}}		|예		|예		|아니오|
 |{{site.data.keyword.dialogshort}}		|예		|예		|예|
 |{{site.data.keyword.documentconversionshort}}	|예		|예		|예|
@@ -119,6 +127,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
 |{{site.data.keyword.iot_short}}		|예		|아니오		|아니오|
+|{{site.data.keyword.keymanagementserviceshort}}|아니오		|예		|아니오|
 |{{site.data.keyword.languagetranslationshort}}	|예		|예		|아니오|
 |{{site.data.keyword.messagehub}}		|예		|예		|아니오|
 |{{site.data.keyword.messageresonanceshort}}	|예		|예		|아니오|
@@ -139,6 +148,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 |{{site.data.keyword.relationshipextractionshort}}	|예	|예		|예|
 |{{site.data.keyword.retrieveandrankshort}}	|예 		|예 		|예|
 |{{site.data.keyword.SecureGateway}}		|예		|예		|아니오|
+|{{site.data.keyword.servicediscoveryshort}}	|예		|아니오		|아니오|
 |{{site.data.keyword.sescashort}}		|예		|예		|예|
 |{{site.data.keyword.ssofull}}			|예		|아니오		|아니오|
 |{{site.data.keyword.speechtotextshort}}	|예 		|예	 	|예|
@@ -160,7 +170,7 @@ IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 �
 
 # 애플리케이션에 서비스 추가
 {: #add_service}
-*마지막 업데이트 날짜: 2015년 11월 19일*
+*마지막 업데이트 날짜: 2016년 3월 8일*
 
 {{site.data.keyword.Bluemix}}에서는
 서비스 목록을 제공하며 개발자를 대신하여 서비스를 관리합니다. 사용할 애플리케이션에
@@ -237,9 +247,8 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
     cf bind-service appname service_instance
     ```
 
-**참고:** 서비스 인스턴스는 해당 서비스 인스턴스가 작성된 영역과 관련된 것입니다. 서비스 인스턴스를 다른 영역 또는
-조직으로 이동할 수 없습니다. 대신 사용할 각 영역에 대해
-새 서비스 인스턴스를 요청해야 합니다.
+동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성할 수 있습니다. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external){: new_window}을 참조하십시오.
+
 
 ## 애플리케이션이 서비스와 상호작용하도록 구성 
 {: #config}
@@ -276,7 +285,7 @@ cf 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하
 가동 중단, 예외, 연결 오류를 식별하고 이러한 오류에서 복구할 수 있도록 애플리케이션
 코딩을 고려하십시오. 자세한 정보는
 [앱이
-자동으로 다시 시작되지 않음](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window} 문제점 해결 주제를 참조하십시오. 
+자동으로 다시 시작되지 않음](../troubleshoot/index.html#ts_topmenubar) 문제점 해결 주제를 참조하십시오. 
 
 ## 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정
 {: #accser_external}
@@ -378,30 +387,38 @@ cups** 명령을 사용하여 사용자 제공 서비스 인스턴스를
 ## 다른 지역에서 서비스 사용
 {: #cross_region_service}
 
-한 지역에서 작성되어 앱에 바인딩된 서비스 인스턴스가 있는 경우, 사용자 제공 서비스를 작성하여 다른 지역에서 이 서비스 인스턴스를 사용할 수 있습니다.
+한 지역에서 작성되어 앱에 바인딩된 서비스 인스턴스가 있는 경우, 다음 방법 중 하나를 사용하여 다른 지역에서 이 서비스 인스턴스를 사용할 수 있습니다.
 
-서비스 인스턴스를 사용하려는 지역에서 시작하고 있다고 가정해 보십시오. 다른 지역에 있는 서비스 인스턴스를 사용하려면 다음 단계를 수행하십시오.
+  * 서비스 신임 정보를 사용하여 직접 앱 인스턴스를 구성하십시오. 세부사항은 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external){: new_window}을 참조하십시오.
+  * 사용자 제공 서비스를 브릿지로 작성하십시오.
+    
+	서비스 인스턴스를 사용하려는 지역에서 시작하고 있다고 가정해 보십시오. 다른 지역에 있는 서비스 인스턴스를 사용하려면 다음 단계를 수행하십시오.
 
-1. 서비스 인스턴스가 있는 지역으로 전환하십시오. {{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄에서 **지역**을 펼치거나
+      1. 서비스 인스턴스가 있는 지역으로 전환하십시오. {{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄에서 **지역**을 펼치거나
 **지역** 아이콘을 클릭한 후 서비스 인스턴스가 있는 지역을 선택하십시오.
 
-2. 서비스가 있는 지역 내 서비스 인스턴스의 VCAP_SERVICES 환경 변수에서 신임 정보와 연결 매개변수를 검색하십시오. 다음 단계를 수행하십시오.
+      2. 서비스가 있는 지역 내 서비스 인스턴스의 VCAP_SERVICES 환경 변수에서 신임 정보와 연결 매개변수를 검색하십시오. 다음 단계를 수행하십시오.
 
 
-	1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션 타일을 클릭하십시오. 개요 페이지가 표시됩니다. 
-	2. 왼쪽 탐색 분할창에서 **환경 변수**를 클릭하십시오.
+	       1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션 타일을 클릭하십시오. 개요 페이지가 표시됩니다. 
+	       2. 왼쪽 탐색 분할창에서 **환경 변수**를 클릭하십시오.
 *VCAP_SERVICES* 환경 변수 세부사항이 오른쪽 분할창에 표시됩니다. 서비스 인스턴스의 JSON 컨텐츠를 기록하십시오.
 
-3. 서비스 인스턴스를 사용하려는 지역으로 전환하십시오.{{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄에서 **지역**을 펼치거나
+      3. 서비스 인스턴스를 사용하려는 지역으로 전환하십시오.{{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄에서 **지역**을 펼치거나
 **지역** 아이콘을 클릭한 후 서비스 인스턴스를 사용하려는 지역을 선택하십시오.
 
-4. *VCAP_SERVICES* 환경 변수에서 기록한 신임 정보와 연결 매개변수를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오. 사용자 제공 서비스 인스턴스를 작성하는 방법에 대한 정보는 [사용자 제공 서비스 인스턴스 작성](#user_provide_services){: new_window}의 내용을 참조하십시오.
+      4. *VCAP_SERVICES* 환경 변수에서 기록한 신임 정보와 연결 매개변수를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오. 사용자 제공 서비스 인스턴스를 작성하는 방법에 대한 정보는 [사용자 제공 서비스 인스턴스 작성](#user_provide_services){: new_window}의 내용을 참조하십시오.
 
-5. 다음 명령을 사용하여 사용자 제공 서비스 인스턴스를 앱에 바인딩하십시오. 
+      5. 다음 명령을 사용하여 사용자 제공 서비스 인스턴스를 앱에 바인딩하십시오. 
 
+	     ```
+	     cf bind-service myapp user-provided_service_instance
 	```
-	cf bind-service myapp user-provided_service_instance
-	```
+
+
+
+
+
 
 ## 다른 서비스에서 서비스 사용
 {: #s2s_binding}
@@ -414,11 +431,11 @@ cups** 명령을 사용하여 사용자 제공 서비스 인스턴스를
 2. 왼쪽 분할창에서 서비스 인스턴스의 콘솔을 사용하여 다른 서비스 인스턴스의 바인딩에 권한을 부여하려면 *관리*를 클릭하십시오.
 3. 서비스 인스턴스에 대한 다른 서비스 액세스를 거부하려면 왼쪽 분할창에서 *서비스 액세스 권한 부여*를 클릭한 다음 *취소*를 사용하여 서비스 바인딩을 제거하십시오.  
 
-# rellinks
+# 관련 링크
 {: #rellinks}
 
-## 일반 
-* [{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}를 사용하여 서비스 바인딩
-* [VCAP_SERVICES 검색](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## 일반
+* [{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 바인딩](../cfapps/ee.html#ee_bindui)
+* [VCAP_SERVICES 검색](../cli/vcapsvc.html#retrieving)
 
 

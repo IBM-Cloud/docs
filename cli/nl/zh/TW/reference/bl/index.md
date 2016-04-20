@@ -1,6 +1,23 @@
-# bl 指令
+---
 
-*前次更新：2015 年 11 月 13 日*
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
+# {{site.data.keyword.Bluemix_notm}} Live Sync (bl) 指令
+
+*前次更新：2016 年 1 月 29 日*
 
 如果您要建置 Node.js 應用程式，可以使用 Bluemix™ Live Sync 快速更新 Bluemix 上執行的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。當您進行變更時，可以立即在執行中的 Bluemix 應用程式看到該變更。Bluemix Live Sync 指令行介面稱為 *bl*。
 
@@ -12,7 +29,7 @@
 * 查看可以同步化的專案清單。
 * 查看執行中應用程式的狀態。
 
-如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive)。
+如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](../develop/bluemixlive.html)。
 
 ## bl 指令
 
@@ -41,14 +58,10 @@ Bluemix Live Sync 指令行 (**bl**) 的語法如下：
 </dl>
 
 ### 引數
-<dl>
-<dd>指令的引數。</dd>
-</dl>
+指令的引數。
 
 ### 選項
-<dl>
-<dd>指令的選項。</dd>
-</dl>
+指令的選項。
 
 ### 廣域選項
 <dl>

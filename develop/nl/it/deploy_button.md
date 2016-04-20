@@ -1,12 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Ultimo aggiornamento: 19 gennaio 2016* 
+*Ultimo aggiornamento: 2 marzo 2016*  
 
 Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
 richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
@@ -28,12 +40,11 @@ al nome utente della persona e all'ora.
 
 4. Se l'applicazione richiede un file di build, esso viene rilevato automaticamente e l'applicazione viene creata. 
 
-5. Se
-l'applicazione richiede un contenitore, vengono utilizzati un `pipeline.yml` che
-definisce l'**IBM Container Service** e un Dockerfile che definisce un'immagine
-per distribuire l'applicazione in un contenitore {{site.data.keyword.Bluemix_notm}}. 
+5. Se per il processo di creazione e distribuzione è stata configurata una pipeline, l'applicazione viene distribuita con un file `pipeline.yml`.
 
-6. L'applicazione viene distribuita all'organizzazione {{site.data.keyword.Bluemix_notm}} della persona. 
+6. Se l'applicazione richiede un contenitore, per distribuire l'applicazione in un contenitore {{site.data.keyword.Bluemix_notm}} vengono utilizzati un file `pipeline.yml`, che definisce il servizio **IBM Containers**, e un Dockerfile, che definisce un'immagine. 
+
+7. L'applicazione viene distribuita all'organizzazione {{site.data.keyword.Bluemix_notm}} della persona. 
 
 ##Esempi del pulsante {: #button-examples} 
 
@@ -132,7 +143,8 @@ Con il file manifest, puoi specificare:
     <li>Un nome applicazioni univoco.</li>  
     <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
 di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
-il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi  {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catalogo {{site.data.keyword.Bluemix_notm}}</a>. 
+il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store"> caalogo {{site.data.keyword.Bluemix_notm}}</a>.
+
     
     <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
 	
@@ -157,9 +169,9 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
     #Esempio di manifest.yml
 
   declared-services: 
-      sample-java-cloudant-cloudantNoSQLDB: 
-        label: cloudantNoSQLDB 
-        plan: Shared 
+      sample-java-cloudant-cloudantNoSQLDB:
+        label: cloudantNoSQLDB
+        plan: Shared
   applications:
   - services
     - sample-java-cloudant-cloudantNoSQLDB
@@ -170,7 +182,7 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
    </ul>
 	<li> Se il repository deve essere creato prima che venga distribuita l'applicazione, viene attivato un build automatico del codice nel repository
 prima della distribuzione. I build automatici si verificano quando nella directory root del repository viene rilevato un file script di
-build. 
+build.
 	
 	Builder supportati: 
 	    <ul>
@@ -182,24 +194,24 @@ che crea l'output nella cartella <code>.</code> </li>
 crea l'output nella cartella <code>./target/</code></li>
 	   </ul>
 	</li>	
-	<li>Se stai distribuendo un'applicazione in un contenitore utilizzando <strong>IBM Container Service</strong>, devi includere Dockerfile nella directory root del repository e, in una directory <code>.bluemix</code>, includere un file <code>pipeline.yml</code>. 
-	<ul>
-	    <li> Per saperne di più sulla creazione dei Dockerfile, consulta la documentazione di Docker. </li>
-	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un <code>pipeline.yml</code> manualmente, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura. 
+	<li>Per configurare la pipeline per il progetto, includi un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura. 
 <ol>
 <li>Apri il progetto DevOps Services in un browser e fai clic su <b>Crea e distribuisci</b>.</li>
-<li>Configura la tua pipeline con i lavori di creazione e distribuzione dell'<b>IBM Container Service</b>.</li>
+<li>Configura la tua pipeline con i lavori di creazione e distribuzione.</li>
 <li>Nel tuo browser, aggiungi <code>/yaml</code> all'URL del pipeline del progetto e premi Invio. 
 <br>Esempio: <code>https://hub.jazz.net/pipeline/<proprietario>/<nome_progetto>/yaml</code></li>
 <li>Salva il file <code>pipeline.yml</code> risultante.</li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
 <li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
 </ol> </li>
+	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>.
+	<ul>
+	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>.</li>
+	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>.</li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}.	
-
+Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	

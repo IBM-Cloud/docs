@@ -1,5 +1,25 @@
-# Bluemix dev_mode CLI
-开发方式是一种 Bluemix 功能，您可以在应用程序于云中运行时将该功能与应用程序搭配使用。开发方式包括 dev_mode 命令行界面。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
+# 开发方式 CLI
+{: #devmodecli}
+
+*上次更新时间：2016 年 2 月 25 日*
+
+开发方式 (dev_mode) 是一种 Bluemix 功能，您可以在应用程序于云中运行时将该功能与应用程序搭配使用。开发方式包括 dev_mode 命令行界面。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
 
 dev_mode CLI 提供以下功能：
 - 将应用程序在开发方式和正常方式之间切换。
@@ -38,12 +58,11 @@ dev_mode CLI 提供以下功能：
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## 用法
+## 使用量
 **要显示所有 dev_mode CLI 命令，请使用以下命令：**
 
 ```
-cf plugins
-```
+cf plugins```
 
 ### dev_mode 命令
 
@@ -55,7 +74,7 @@ cf mode <appName> <dev|normal>
 
 更改应用程序方式。
 
-### status
+### 状态
 
 ```
 cf status <appName>

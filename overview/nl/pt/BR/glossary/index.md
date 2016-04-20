@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014，2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
@@ -49,9 +61,7 @@ do IBM Mobile Quality Assurance.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2000186"><!-- --></a>Application Programming Interface (API)</dt>
 <dd class="dd">Uma interface que permite que um programa aplicativo escrito em uma linguagem de alto nível use dados ou funções específicos do sistema operacional ou de outro programa.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2262995"><!-- --></a>artefato</dt>
-<dd class="dd">Uma entidade que é usada ou produzida por um processo de desenvolvimento de software ou sistemas. Exemplos de artefatos incluem designs, requisitos, arquivos de origem, planos, scripts,
-              simulações, modelos, planos de teste e arquivos executáveis binários. Em um contexto de HTTP,
-              os artefatos possuem um URI e são chamados de recursos. Consulte também <a class="xref" href="#gloss_C__x2017871">componente</a>.</dd>
+<dd class="dd">Uma entidade que é usada ou produzida por um processo de desenvolvimento de software ou sistemas. Exemplos de artefatos incluem designs, requisitos, arquivos de origem, planos, scripts, simulações, modelos, planos de teste e arquivos executáveis binários. Em um contexto de HTTP, os artefatos possuem um URI e são chamados de recursos. Consulte também <a class="xref" href="#gloss_C__x2017871">componente</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2014567"><!-- --></a>autenticação (AuthN)</dt>
 <dd class="dd">O processo de validação da identidade de um usuário ou servidor.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7470446"><!-- --></a>AuthN</dt>
@@ -86,7 +96,7 @@ do IBM Mobile Quality Assurance.</dd>
 <dd class="dd">Uma técnica de implementação que possibilita a entrega contínua e minimiza o tempo de inatividade executando dois ambientes de produção quase idênticos chamados Azul e Verde. Enquanto um dos ambientes (por exemplo, Azul) é o ambiente de produção em tempo real, o outro (por exemplo, Verde) pode ser usado para teste e implementação finais. Após o aplicativo ser implementado em Verde, o Verde se torna o ambiente de produção e o Azul se torna inativo. Veja também <a class="xref" href="#gloss_R__x8439181">implementação vermelho-preto</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
 <dd class="dd">Uma plataforma de padrões abertos baseada em nuvem para construir, gerenciar e executar apps de todos os tipos, como web, móveis, big data e dispositivos inteligentes. Os recursos incluem Java, desenvolvimento de backend de dispositivo móvel e monitoramento de aplicativo, bem como recursos de parceiros de ecossistema e software livre — tudo fornecido como serviço na nuvem.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>texto padrão</dt>
+<dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>modelo</dt>
 <dd class="dd">Um modelo que inclui um aplicativo e seu ambiente de tempo de execução e
               serviços predefinidos associados para um domínio específico.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>sem fronteiras</dt>
@@ -145,9 +155,7 @@ com sua própria chave privada.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>componente</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">No gerenciamento de controle de fonte, um agrupamento de artefatos relacionados em um fluxo ou
                   área de trabalho do repositório. Um componente pode conter qualquer número de pastas e arquivos.</li>
-<li class="li">No gerenciamento de configuração, uma unidade de organização para um conjunto reutilizável de
-                  artefatos de engenharia. Os componentes geralmente correspondem às áreas do projeto. Existem
-                  configurações globais dentro de um componente. Consulte também <a class="xref" href="#gloss_A__x2262995">artefato</a>.</li>
+<li class="li">No gerenciamento de configuração, uma unidade de organização para um conjunto reutilizável de artefatos de engenharia. Os componentes geralmente correspondem às áreas do projeto. Existem configurações globais dentro de um componente. Consulte também <a class="xref" href="#gloss_A__x2262995">artefato</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>contêiner</dt>

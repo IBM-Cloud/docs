@@ -1,6 +1,23 @@
-# bl 명령
+---
 
-*마지막 업데이트 날짜:* 2015년 11월 13일
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
+# {{site.data.keyword.Bluemix_notm}} Live Sync(bl) 명령
+
+*마지막 업데이트 날짜: 2016년 1월 29일*
 
 Node.js 애플리케이션을 빌드하는 경우 Bluemix™ Live Sync를 사용하여 재배치 없이 데스크탑에서처럼 Bluemix에서 실행되는 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다. 변경할 경우 실행 중인 Bluemix 애플리케이션에서 변경사항을 즉시 확인할 수 있습니다. Bluemix Live Sync 명령행 인터페이스를 *bl*이라고 합니다.
 
@@ -13,7 +30,7 @@ Node.js 애플리케이션을 빌드하는 경우 Bluemix™ Live Sync를 사용
 * 동기화할 수 있는 프로젝트 목록을 확인합니다.
 * 실행 중인 애플리케이션의 상태를 확인합니다.
 
-bl 명령 다운로드 및 사용에 대한 자세한 정보는 [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive)를 참조하십시오.
+bl 명령 다운로드 및 사용에 대한 자세한 정보는 [Bluemix Live Sync](../develop/bluemixlive.html)를 참조하십시오.
 
 ## bl 명령
 
@@ -42,14 +59,10 @@ Bluemix Live Sync 명령행인 **bl**은 다음과 같은 구문을 사용합니
 </dl>
 
 ### 인수
-<dl>
-<dd>명령에 대한 인수입니다. </dd>
-</dl>
+명령에 대한 인수입니다. 
 
 ### 옵션
-<dl>
-<dd>명령에 대한 옵션입니다. </dd>
-</dl>
+명령에 대한 옵션입니다. 
 
 ### 글로벌 옵션
 <dl>

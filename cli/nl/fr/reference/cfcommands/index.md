@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Commandes cf de gestion des applications
+# Commandes Cloud Foundry (cf) 
 
-*Dernière mise à jour : 10 novembre 2015*
+*Dernière mise à jour : 29 janvier 2016*
 
 Vous pouvez utiliser des commandes Cloud Foundry (cf) pour gérer vos applications.
 {:shortdesc}

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #服務
 {: #services}
-*前次更新：2015 年 1 月 20 日*
+*前次更新：2016 年 1 月 20 日*
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
@@ -80,6 +87,7 @@
 |{{site.data.keyword.conceptinsightsshort}}	|是		|是		|是|
 |{{site.data.keyword.dashdbshort}}		|是		|是		|否|
 |{{site.data.keyword.datacshort}}		|是		|是		|是|
+|{{site.data.keyword.DB2OnCloud_short}}		|是		|是		|是|
 |{{site.data.keyword.deliverypipeline}}		|是		|是		|否|
 |{{site.data.keyword.dialogshort}}		|是		|是		|是|
 |{{site.data.keyword.documentconversionshort}}	|是		|是		|是|
@@ -92,6 +100,7 @@
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
 |{{site.data.keyword.iot_short}}		|是		|否		|否|
+|{{site.data.keyword.keymanagementserviceshort}}|否		|是		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|否|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
 |{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|
@@ -112,6 +121,7 @@
 |{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|否|
+|{{site.data.keyword.servicediscoveryshort}}	|是		|否		|否|
 |{{site.data.keyword.sescashort}}		|是		|是		|是|
 |{{site.data.keyword.ssofull}}			|是		|否		|否|
 |{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|
@@ -133,7 +143,7 @@
 
 # 將服務新增至您的應用程式
 {: #add_service}
-*前次更新：2015 年 11 月 19 日*
+*前次更新：2016 年 3 月 8 日*
 
 {{site.data.keyword.Bluemix}} 有一份服務清單，並代表開發人員管理它們。若要新增服務以供應用程式使用，您必須要求此服務的實例，並配置應用程式以與服務互動。
 
@@ -190,8 +200,7 @@
     cf bind-service appname service_instance
     ```
 
-**附註：**服務實例是專屬於建立該服務實例的空間。您無法將服務實例移動到另一個空間或組織。
-而是必須針對您要使用服務的每個空間，要求一個新的服務實例。
+您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
 
 
 ## 配置應用程式以與服務互動 
@@ -213,7 +222,7 @@
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}疑難排解主題。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](../troubleshoot/index.html#ts_topmenubar)疑難排解主題。
 
 
 ## 讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務
@@ -293,28 +302,35 @@
 ## 在另一個地區使用服務
 {: #cross_region_service}
 
-如果您的服務實例建立並連結到一個地區中的應用程式，您可以藉由建立使用者提供的服務，在另一個地區中使用這個服務實例。
+如果您的服務實例建立並連結到某個地區中的應用程式，則可以使用下列其中一種方法，在另一個地區中使用這個服務實例：
+
+  * 使用服務認證直接配置應用程式實例。如需詳細資料，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
+  * 建立使用者提供的服務作為橋接器。
+    
+	假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
+
+      1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
+
+      2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
 
 
-假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
+	       1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式磚。即會顯示「概觀」頁面。
+	       2. 在左導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
 
-1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取服務實例存在的地區。
+      3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取您想要使用服務實例的地區。
 
-2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
+      4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services){: new_window}。
 
+      5. 使用下列指令，以將使用者提供的服務實例連結至應用程式：
 
-	1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式磚。即會顯示「概觀」頁面。
-	2. 在左導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
-
-3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 頂端功能表列，展開**地區**或按一下**地區**圖示，然後選取您想要使用服務實例的地區。
-
-4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services){: new_window}。
-
-5. 使用下列指令，以將使用者提供的服務實例連結至應用程式：
-
+	     ```
+	     cf bind-service myapp user-provided_service_instance
 	```
-	cf bind-service myapp user-provided_service_instance
-	```
+
+
+
+
+
 
 ## 在另一個服務中使用服務
 {: #s2s_binding}
@@ -330,8 +346,8 @@
 # 相關鏈結
 {: #rellinks}
 
-## 一般 
-* [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [擷取 VCAP_SERVICES](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## 一般
+* [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](../cfapps/ee.html#ee_bindui)
+* [擷取 VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 
 

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Protegendo apps
 {: #securingapps}
 
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 17 de março de 2016*
 
 É possível proteger seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
 {:shortdesc}
@@ -50,8 +58,7 @@ empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.
 
   O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.
   
-Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar
-uma CSR usando [a ferramenta de comando OpenSSH](http://www.openssl.org/){:new_window}:
+Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando [a ferramenta de linha de comandos OpenSSL](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -81,14 +88,14 @@ para fazer um upload de certificado grátis.
 Antes que seja possível fazer upload dos certificados, deve-se criar uma
 solicitação de assinatura de certificado. Consulte [Criando certificate signing requests](#ssl_csr).
 
-Para entregar adequadamente
-o certificado SSL, deve-se usar os endereços IP a seguir para configurar
-o DNS ou um arquivo host ao criar um domínio customizado para fornecer a
-rota da URL que está alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}.
+Para entregar
+o certificado SSL adequadamente, deve-se usar os endereços IP a seguir para configurar
+o servidor DNS ao criar um domínio customizado para fornecer a
+rota da URL alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}.
 
 * EUA-SUL: 75.126.81.68
 * EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 Os endereços IP que você usa para ambientes dedicados
 são diferentes. Entre em contato com seu representante IBM para obter o endereço IP

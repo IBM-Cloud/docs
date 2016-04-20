@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -118,7 +130,7 @@
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](../manageapps/deployingapps.html#appmanifest)』を参照してください。
+<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](../manageapps/depapps.html#appmanifest)』を参照してください。
 
 </p></li></ol>
 </li>

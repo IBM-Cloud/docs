@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Distribuzione delle applicazioni
 {: #deployingapps}
 
-*Ultimo aggiornamento: 4 dicembre 2015*
+*Ultimo aggiornamento: 17 marzo 2016*
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
 utilizzando vari metodi, quali ad esempio l'interfaccia riga di comando e gli ambienti di
@@ -29,7 +37,7 @@ di preparazione, un Droplet Execution Agent    (DEA) utilizza le informazioni
 che tu fornisci nell'interfaccia riga di comando cf o nel file `manifest.yml`
 per stabilire che cosa creare per la preparazione dell'applicazione. Il DEA seleziona
 un pacchetto di build appropriato per preparare la tua applicazione; il risultato del
-processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione a {{site.data.keyword.Bluemix_notm}}, vedi [Architettura {{site.data.keyword.Bluemix_notm}}, Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch).
+processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}}, vedi [Architettura {{site.data.keyword.Bluemix_notm}}, come funziona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
 
 Durante
 il processo di preparazione, il DEA verifica se il pacchetto di build
@@ -65,7 +73,7 @@ ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry](
 Se rilevi dei problemi durante la preparazione delle
 tue applicazioni su {{site.data.keyword.Bluemix_notm}},
 puoi seguire le istruzioni che si trovano in [Debugging
-staging errors](../troubleshoot/debugging.html#debug_stgerr) per risolvere il problema.
+staging errors](../debug/index.html#debugging-staging-errors) per risolvere il problema.
 
 ##Distribuzione delle applicazioni mediante il comando cf
 {: #dep_apps}
@@ -84,8 +92,7 @@ l'URL del pacchetto di build utilizzando l'opzione **-b**
 quando esegui la distribuzione della tua applicazione in {{site.data.keyword.Bluemix_notm}} dal
 prompt dei comandi.
 
-  * Per distribuire i pacchetti del server Liberty in {{site.data.keyword.Bluemix_notm}},
-utilizza il seguente comando:
+  * Per distribuire pacchetti server Liberty in {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando dalla tua directory di origine:
   
   ```
   cf push
@@ -98,7 +105,7 @@ for Java](../starters/liberty/index.html#liberty).
   * Per distribuire le applicazioni Java Tomcat a {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando:
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * Per distribuire pacchetti WAR in {{site.data.keyword.Bluemix_notm}},
@@ -120,7 +127,7 @@ comando:
                                                   seguente:
   
   ```
-  cf push nome_applicazione
+  cf push appname -p percorso_applicazione
   ```
   
 Perché
@@ -173,7 +180,7 @@ utilizzando il comando **cf target** con l'opzione **-s**:
   cf target -s <space_name>
   ```
   
-  2. Distribuisci la tua applicazione utilizzando il comando **cf push**, dove nome_applicazione deve essere univoco all'interno del tuo dominio.
+  2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nome_applicazione deve essere univoco all'interno del tuo dominio.
   
   ```
   cf push nome_applicazione
@@ -264,9 +271,9 @@ Puoi visualizzare le seguenti variabili di ambiente di
 un'applicazione {{site.data.keyword.Bluemix_notm}} in esecuzione
 utilizzando il comando **cf env** oppure dall'interfaccia utente
 {{site.data.keyword.Bluemix_notm}}:
-
+	
   * Variabili definite dall'utente specifiche di un'applicazione. Per informazioni su come aggiungere una variabile definita dall'utente a un'applicazione, vedi [Aggiunta di variabili di ambiente definite dall'utente](#ud_env){:new_window}.
-	  
+	 
   * La variabile VCAP_SERVICES, che contiene informazioni di connessione per accedere a un'istanza di servizio. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio. Ad
 esempio:
   
@@ -316,12 +323,11 @@ esempio:
   }
   ```
         
-Puoi accedere alle variabili di ambiente impostate dal DEA e
-dai pacchetti di build.
+Puoi accedere anche alle variabili di ambiente impostate dal DEA e dai pacchetti di build.
 
-<ul>
-<li>Le seguenti variabili sono definite dal DEA:
-  <dl>
+Le seguenti variabili sono definite dal DEA:
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>La directory root dell'applicazione distribuita.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -407,12 +413,13 @@ associato all'applicazione distribuita. Ad
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>Le variabili definite dai pacchetti di build sono diverse
+</dl>
+
+Le variabili definite dai pacchetti di build sono diverse
 per ogni pacchetto di build. Vedi [Pacchetti di build](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
 
-    <li>Variabili definite dal pacchetto di build Liberty:
+<ul>
+    <li>Le seguenti variabili sono definite dal pacchetto di build Liberty:
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -429,7 +436,7 @@ un'istanza del server di profili Liberty nel DEA.</dd>
 directory di lavoro di un'istanza del server di profili Liberty in esecuzione.</dd>
 	  </dl>
 </li>   
-<li>Variabili definite dal pacchetto di build Node.js:
+<li>Le seguenti variabili sono definite dal pacchetto di build Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>La directory dell'ambiente di runtime Node.js.</dd>
@@ -441,7 +448,16 @@ directory di lavoro di un'istanza del server di profili Liberty in esecuzione.</
 </li>
 </li>
 </ul>	
-	
+
+Puoi utilizzare il seguente codice di esempio Node.js per ottenere il valore della variabile di ambiente VCAP_SERVICES:
+
+```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 Per ulteriori informazioni sulle singole variabili di ambiente, vedi [Cloud Foundry Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Personalizzazione delle distribuzioni dell'applicazione
@@ -461,7 +477,7 @@ forniti dal pacchetto di build.
   * Utilizza il comando **cf push** e specifica il parametro -c. Ad esempio, quando distribuisci un'applicazione Node.js, puoi specificare il comando di avvio **node app.js** nel parametro -c:
   
   ```
-  cf push nomeapplicazione -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * Utilizza il parametro di comando nel file `manifest.yml`. Ad esempio, quando distribuisci un'applicazione Node.js,
@@ -472,8 +488,7 @@ nel file manifest:
   command: node app.js
   ```
   
-  
-  
+
 ### Aggiunta di variabili di ambiente definite dall'utente
 {: #ud_env}
 
@@ -499,9 +514,13 @@ procedura:
       VAR2:value2
     ```
 	
+Una volta aggiunta una variabile di ambiente definita dall'utente, puoi utilizzare il seguente codice di esempio Node.js per ottenere il valore della variabile che hai definito: 
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### Configurazione dell'ambiente di avvio
 
 Per configurare l'ambiente di avvio della tua applicazione,

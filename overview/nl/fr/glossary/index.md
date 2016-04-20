@@ -1,4 +1,16 @@
-﻿{:shortdesc: .shortdesc}
+---
+
+ 
+
+copyright:
+
+  years: 2014,，2015, 2016 
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Termes du glossaire de {{site.data.keyword.Bluemix_notm}} 
@@ -580,9 +592,6 @@ d'exécution.</li>
 <li class="li">Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.</li>
 </ol>
 </dd>
-<dt class="dt dlterm"><a name="gloss_S__x2067189a"><!-- --></a>étape</dt>
-<dd class="dd">Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
-d'exécution.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2094743"><!-- --></a>section</dt>
 <dd class="dd">Section d'un progiciel qui définit une action spécifique à entreprendre sur le progiciel ou un ensemble de conditions dans lesquelles des actions doivent être entreprises sur le progiciel. Le progiciel complet est lui-même une section qui contient une hiérarchie composée de multiples sections différentes.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7470511"><!-- --></a>module de démarrage</dt>

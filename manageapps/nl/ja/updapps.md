@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #アプリの更新
 {: #updatingapps}
 
-*最終更新日: 2015 年 12 月 8 日*
+*最終更新日: 2016 年 3 月 17 日*
 
 
 cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
@@ -18,8 +26,6 @@ cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を�
 デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL に使用することができます。
 
 ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。ご使用のカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
-
-**注:** **nslookup** コマンドを使用すると、{{site.data.keyword.Bluemix_notm}} システム・ドメインのパブリック IP アドレスを取得できます。例えば、コマンド・プロンプトで `nslookup mybluemix.net` と入力します。
 
 {{site.data.keyword.Bluemix_notm}} でのカスタム・ドメインの作成と使用は、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、または cf コマンド・ライン・インターフェースを使用して行います。
 
@@ -73,6 +79,15 @@ cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を�
     
         アプリケーションに使用する経路内のホスト名。
 	
+{{site.data.keyword.Bluemix_notm}} でカスタム・ドメインを構成した後、登録された DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。
+
+  1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。
+  2. アプリケーションが実行されている {{site.data.keyword.Bluemix_notm}} 地域のセキュア・エンドポイントにカスタム・ドメイン・ネームをマップします。以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
+  
+    * US-SOUTH: `secure.us-south.bluemix.net`
+    * EU-GB: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 ブラウザーまたはコマンド・ライン・インターフェースで、myapp アプリケーションにアクセスするための URL を次のように入力します。
 
 ```
@@ -266,6 +281,5 @@ cf delete-route domain -n hostname -f
 
 # 関連リンク
 ## 一般 
-* [組織およびスペース](../acctmgmt/index.html#organdspaces)
 * [Blue-Green デプロイメント](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

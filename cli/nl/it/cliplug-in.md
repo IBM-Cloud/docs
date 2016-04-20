@@ -1,11 +1,23 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Plug-in CLI
-*Ultimo aggiornamento: 10 novembre 2015*
+# Plug-in interfaccia riga di comando Cloud Foundry
 
-Estendi la tua interfaccia riga di comando {{site.data.keyword.Bluemix_short}}. con i plug-in. Scegli una CLI per Containers per Bluemix per ottenere ulteriori opzioni
-per gestire i tuoi contenitori. Continua le tue attività di sviluppo mentre le applicazioni sono in esecuzione aggiungendo la CLI dev_mode. 
-{:shortdesc}
+*Ultimo aggiornamento: 2 febbraio 2016*
+
+Puoi installare e utilizzare i plug-in dell'interfaccia riga di comando Cloud Foundry (cli cf) disponibili nel [Repository di plug-in CLI](http://plugins.{DomainName}/){: new_window}. Ciascun plug-in viene identificato dal proprio nome file binario, dal nome plug-in definito dallo sviluppatore e dai comandi forniti dal plug-in. Puoi utilizzare il nome file binario solo per installare un plug-in, mentre per eseguire qualsiasi altra azione puoi utilizzare il nome plug-in o un comando. {:shortdesc}
+

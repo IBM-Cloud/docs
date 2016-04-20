@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Comandos cf para gerenciar aplicativos
+# Comandos do Cloud Foundry (cf)
 
-*Última atualização: 10 de novembro de 2015*
+*Última atualização: 29 de janeiro de 2016*
 
 É possível usar os comandos do Cloud Foundry (cf) para gerenciar os seus apps.
 {:shortdesc}

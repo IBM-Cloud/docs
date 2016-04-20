@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015 e 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
@@ -52,8 +64,7 @@ linguaggio di alto livello di utilizzare funzioni o dati specifici del
 sistema operativo oppure un altro programma.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2262995"><!-- --></a>risorsa utente</dt>
 <dd class="dd">Un'entità utilizzata o prodotta da un processo di sviluppo software o di sistema. Esempi di risorse utente includono progettazioni, requisiti, file di origine, piani, script,
-              simulazioni, modelli, piani di test e file eseguibili binari. In un contesto HTTP,
-              le risorse utente dispongono di un URI e sono chiamate risorse. Vedi anche <a class="xref" href="#gloss_C__x2017871">componente</a>.</dd>
+simulazioni, modelli, piani di test e file eseguibili binari. In un contesto HTTP, le risorse utente dispongono di un URI e sono chiamate risorse. Vedi anche <a class="xref" href="#gloss_C__x2017871">componente</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x2014567"><!-- --></a>autenticazione (AuthN)</dt>
 <dd class="dd">Il processo di convalida dell'identità di un utente o di un server.</dd>
 <dt class="dt dlterm"><a name="gloss_A__x7470446"><!-- --></a>AuthN</dt>
@@ -97,8 +108,7 @@ Blu diventa inattivo. Vedi anche <a class="xref" href="#gloss_R__x8439181">distr
 <dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
 <dd class="dd">Una piattaforma a standard aperti e basata sul cloud per sviluppare, gestire ed eseguire app di tutti i tipi, come ad esempio dispositivi smart, Big Data, mobili e web. Le funzionalità includono Java, sviluppo di back-end mobile e monitoraggio delle applicazioni, oltre a funzioni dai partner di ecosistema e open source, il tutto fornito come un servizio nel cloud.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>contenitore tipo</dt>
-<dd class="dd">Un template che include un'applicazione e il suo ambiente di runtime associato e
-              i servizi predefiniti per uno specifico dominio.</dd>
+<dd class="dd">Un template che include un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>illimitato</dt>
 <dd class="dd">Relativo a una piattaforma di sviluppo aperta e non proprietaria che include modelli di sviluppo cloud pubblico, cloud dedicato e cloud locale. Vedi anche <a class="xref" href="#gloss_D__x8439199">cloud dedicato</a>, <a class="xref" href="#gloss_L__x8439194">cloud locale</a>, <a class="xref" href="#gloss_P__x4585370">cloud pubblico</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>ramo</dt>
@@ -129,15 +139,13 @@ di certificazione in genere verifica l'identità dei singoli utenti a cui viene 
 <dt class="dt dlterm"><a name="gloss_C__x2255031"><!-- --></a>serie di modifiche</dt>
 <dd class="dd">Un gruppo di modifiche correlate alle risorse utente in uno spazio di lavoro o in un flusso.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016783"><!-- --></a>cipher block chaining (CBC)</dt>
-<dd class="dd">Un metodo di riduzione dei pattern ripetitivi nel testo cifrato eseguendo un'operazione OR-esclusivo su
-ciascun blocco di dati di 8 byte con il blocco di 8 byte crittografato precedentemente prima che venga crittografato.</dd>
+<dd class="dd">Un metodo di riduzione dei pattern ripetitivi nel testo cifrato eseguendo un'operazione OR-esclusivo su ciascun blocco di dati di 8 byte con il blocco di 8 byte crittografato precedentemente prima che venga crittografato.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2008863"><!-- --></a>CLI</dt>
 <dd class="dd">Vedi <a class="xref" href="#gloss_C__x2051424">interfaccia riga di comando</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2000644"><!-- --></a>client</dt>
 <dd class="dd">Un computer o un programma software che richiede servizi da un server. Vedi anche <a class="xref" href="#gloss_H__x2002243">host</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x3877850"><!-- --></a>elaborazione cloud</dt>
-<dd class="dd">Una piattaforma di calcolo in cui gli utenti possono accedere ad applicazioni o risorse di elaborazione, come i servizi, da qualsiasi luogo tramite i propri dispositivi
-connessi. Un'interfaccia utente semplificata o una API (Application Programming Interface), o entrambe le cose, formano l'infrastruttura che supporta tali servizi in modo trasparente agli utenti.</dd>
+<dd class="dd">Una piattaforma di calcolo in cui gli utenti possono accedere ad applicazioni o risorse di elaborazione, come i servizi, da qualsiasi luogo tramite i propri dispositivi connessi. Un'interfaccia utente semplificata o una API (Application Programming Interface), o entrambe le cose, formano l'infrastruttura che supporta tali servizi in modo trasparente agli utenti.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x4585297"><!-- --></a>portabilità cloud</dt>
 <dd class="dd">La capacità di spostare applicazioni e servizi in ambiente di elaborazione cloud pubblici o privati o da diversi provider cloud.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x7344030"><!-- --></a>completamento del codice</dt>
@@ -150,11 +158,8 @@ connessi. Un'interfaccia utente semplificata o una API (Application Programming 
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>componente</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Nella gestione controllo origine, un raggruppamento di risorse utente correlate in un flusso o
-                  uno spazio di lavoro repository. Un componente può contenere qualsiasi numero di cartelle e file.</li>
-<li class="li">Nella gestione configurazione, un'unità di organizzazione per un insieme riutilizzabile di risorse
-                  utente di engineering. I componenti spesso corrispondono alle aree del progetto. All'interno di un componente
-                  esistono delle configurazioni globali. Vedi anche <a class="xref" href="#gloss_A__x2262995">risorsa utente</a>.</li>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Nella gestione controllo origine, un raggruppamento di risorse utente correlate in un flusso o uno spazio di lavoro repository. Un componente può contenere qualsiasi numero di cartelle e file.</li>
+<li class="li">Nella gestione configurazione, un'unità di organizzazione per un insieme riutilizzabile di risorse utente di engineering. I componenti spesso corrispondono alle aree del progetto. All'interno di un componente esistono delle configurazioni globali. Vedi anche <a class="xref" href="#gloss_A__x2262995">risorsa utente</a>.</li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>contenitore</dt>
@@ -162,16 +167,11 @@ connessi. Un'interfaccia utente semplificata o una API (Application Programming 
 <dt class="dt dlterm"><a name="gloss_C__x7233913"><!-- --></a>fornitura continua (CD)</dt>
 <dd class="dd">Una pratica di sviluppo software che utilizza tecniche quali la verifica continua, l'integrazione continua, e la distribuzione continua in modo che le nuove funzioni e correzioni vengano impacchettate e distribuite rapidamente e a basso rischio per gli ambienti di test e quindi ai clienti.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>credenziale</dt>
-<dd class="dd">Informazioni acquisite durante l'autenticazione che descrivono un utente, associazioni di gruppi o altri
-attributi di identità correlati alla sicurezza, e che vengono utilizzate per eseguire servizi quali
-l'autorizzazione, la verifica o la delega. Ad esempio, un ID utente ed una password sono credenziali che consentono
-l'accesso alle risorse di rete e di sistema.</dd>
+<dd class="dd">Informazioni acquisite durante l'autenticazione che descrivono un utente, associazioni di gruppi o altri attributi di identità correlati alla sicurezza, e che vengono utilizzate per eseguire servizi quali l'autorizzazione, la verifica o la delega. Ad esempio, un ID utente ed una password sono credenziali che consentono l'accesso alle risorse di rete e di sistema.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
 <dd class="dd">Vedi <a class="xref" href="#gloss_C__x3530521">richieste di firma certificato</a>.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>dominio personalizzato</dt>
-<dd class="dd">La parte personalizzata dell'URL selezionata dall'utente per indirizzare le
-richieste all'applicazione. Il dominio personalizzato è parte integrante
-della rotta. Il dominio personalizzato può essere un dominio condiviso, un dominio secondario condiviso
+<dd class="dd">La parte personalizzata dell'URL selezionata dall'utente per indirizzare le richieste all'applicazione. Il dominio personalizzato è parte integrante della rotta. Il dominio personalizzato può essere un dominio condiviso, un dominio secondario condiviso
 o un dominio e un host condivisi. Vedi anche <a class="xref" href="#gloss_D__x2021210">dominio</a>, <a class="xref" href="#gloss_H__x2002243">host</a>, <a class="xref" href="#gloss_R__x2037338">rotta</a>, <a class="xref" href="#gloss_S__x2040080">dominio secondario</a>, <a class="xref" href="#gloss_U__x2042491">Uniform Resource Locator</a>.</dd>
 </dl>
 

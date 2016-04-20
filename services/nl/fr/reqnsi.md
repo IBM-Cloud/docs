@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #Services
 {: #services}
-*Dernière mise à jour : 20 janvier 2015*
+*Dernière mise à jour : 20 janvier 2016*
 
 Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
 {{site.data.keyword.Bluemix}}.
@@ -101,6 +108,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.conceptinsightsshort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.dashdbshort}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.datacshort}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.DB2OnCloud_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.deliverypipeline}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.dialogshort}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.documentconversionshort}}	|Oui		|Oui		|Oui|
@@ -113,6 +121,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.IntegrationTestingshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.iot_short}}		|Oui		|Non		|Non|
+|{{site.data.keyword.keymanagementserviceshort}}|Non		|Oui		|Non|
 |{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.messageresonanceshort}}	|Oui		|Oui		|Non|
@@ -133,6 +142,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.relationshipextractionshort}}	|Oui	|Oui		|Oui|
 |{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Non|
+|{{site.data.keyword.servicediscoveryshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.sescashort}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
 |{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
@@ -154,7 +164,7 @@ services qui sont fournis par IBM.
 
 # Ajout d'un service à votre application
 {: #add_service}
-*Dernière mise à jour : 19 novembre 2015*
+*Dernière mise à jour : 8 mars 2016*
 
 {{site.data.keyword.Bluemix}} dispose d'une liste de services qu'il gère pour les développeurs. Pour
 ajouter un service que votre application pourra utiliser, vous devez demander une instance de ce service et configurer l'application afin qu'elle
@@ -221,8 +231,12 @@ le nom de l'instance de service :
     cf bind-service nom_app instance_service
     ```
 
-**Remarque :** une instance de service est propre à l'espace dans lequel elle est créée. Vous ne pouvez pas déplacer une instance de service dans un autre espace ou une autre organisation. A la place, vous devez demander une nouvelle
-instance de service pour chaque espace dans lequel vous voulez utiliser une instance de service.
+Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois,
+vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
+créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon
+dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Utilisation des
+services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}.
+
 
 ## Configuration de votre application pour l'interaction avec un service 
 {: #config}
@@ -247,7 +261,7 @@ d'un objet JSON. La variable contient les données d'exécution requises pour in
 Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et
 d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Voir la rubrique de traitement des incidents
 [Les applications ne sont pas redémarrées
-automatiquement](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window} pour plus d'informations.
+automatiquement](../troubleshoot/index.html#ts_topmenubar) pour plus d'informations.
 
 ## Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes
 {: #accser_external}
@@ -345,35 +359,46 @@ service](#config){: new_window}.
 ## Utilisation des services dans une autre région
 {: #cross_region_service}
 
-Si une instance de service est créée et liée à des applications dans une région, vous pouvez l'utiliser dans une autre région en créant un
-service fourni par l'utilisateur.
+Si une instance de service est créée et liée à des applications dans une région, vous pouvez l'utiliser dans une autre région de l'une des façons
+suivantes :
 
-Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
+
+  * Utilisez les données d'identification du service pour configurer votre instance d'application directement. Voir
+[Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}
+pour des détails. 
+  * Créez un service fourni par l'utilisateur comme pont. 
+    
+	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
 existe dans une autre région, procédez comme suit :
 
-1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}} supérieure, développez
+      1. Passez dans la région dans laquelle l'instance de service existe. Dans la barre de menu {{site.data.keyword.Bluemix_notm}} supérieure, développez
 **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle l'instance de service existe.
 
-2. Récupérez les données d'identification et les paramètres de connexion depuis la variable d'environnement VCAP_SERVICES de l'instance de service
+      2. Récupérez les données d'identification et les paramètres de connexion depuis la variable d'environnement VCAP_SERVICES de l'instance de service
 dans la région dans laquelle le service existe. Procédez comme suit :
 
-	1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation
+	       1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation
 s'affiche.
-	2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés dans le panneau de droite. Enregistrez le contenu JSON pour
+	       2. Dans le panneau de navigation de gauche, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés dans le panneau de droite. Enregistrez le contenu JSON pour
 l'instance de service.
 
-3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}
+      3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}
 supérieure, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle
 utiliser l'instance de service.
 
-4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez
+      4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez
 enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'informations sur la création d'une instance de service fournie par l'utilisateur, voir [Création d'une instance de service fournie par l'utilisateur](#user_provide_services){: new_window}.
 
-5. Liez l'instance de service fournie par l'utilisateur à votre application avec la commande suivante :
+      5. Liez l'instance de service fournie par l'utilisateur à votre application avec la commande suivante :
 
-	```
-	cf bind-service mon_app instance_service_fournie_par_utilisateur
-	```
+	     ```
+	     cf bind-service mon_app instance_service_fournie_par_utilisateur
+	     ```
+
+
+
+
+
 
 ## Utilisation des services dans un autre service
 {: #s2s_binding}
@@ -393,8 +418,8 @@ panneau de navigation de gauche, puis utilisez *Révoquer* pour supprimer la lia
 # rellinks
 {: #rellinks}
 
-## general 
-* [Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [Extraction de VCAP_SERVICES](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## general
+* [Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
+* [Extraction de VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 
 

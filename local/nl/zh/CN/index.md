@@ -1,45 +1,82 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*上次更新时间：2016 年 1 月 15 日*
+*上次更新时间：2016 年 3 月 18 日*
 
 {{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
 {:shortdesc}
 
 IBM® 使用云操作即服务来监视和维护您的环境，让您可以专注于构建基于该环境运行的应用程序和服务。IBM 还可以处理平台更新，让您可以专注于业务。
 
-{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的其他服务，供您使用。联合目录提供了用于创建混合应用程序的功能，混合应用程序由公共服务和私有服务组成。您可以选择根据自己的数据隐私和安全标准来确定哪些公共服务满足您的业务需求。
+{{site.data.keyword.Bluemix_notm}} Local 环境在操作安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。您需要提供硬件和基础架构，这样就能对基础架构和物理安全进行控制。开发者对本地 {{site.data.keyword.Bluemix_notm}} 的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在本地环境中，您可以使用“管理”页面来管理用户角色和许可权。
 
-{{site.data.keyword.Bluemix_notm}} Local 位于公司防火墙后的虚拟机上，可为您提供性能最佳和最安全的云基础架构。IBM 通过 IBM 的中继技术对您数据中心的 {{site.data.keyword.Bluemix_notm}} Local 进行安装、远程监视以及管理。
-
-![{{site.data.keyword.Bluemix_notm}} Local 概览图](images/bluemixlocalarchitecture.png "Bluemix Local 概览图")
-
-*图 1. {{site.data.keyword.Bluemix_notm}} Local 详细概览图*
-
-{{site.data.keyword.Bluemix_notm}} Local 环境在操作安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。您需要提供硬件和基础架构，这样就能对基础架构和物理安全进行控制。开发者对本地 {{site.data.keyword.Bluemix_notm}} 的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在该本地环境中，您可以使用管理控制台来管理用户角色和许可权。
+{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含可通过 {{site.data.keyword.Bluemix_notm}} Public 供您使用的其他服务。联合目录提供了用于创建混合应用程序的功能，混合应用程序由公共服务和私有服务组成。您可以选择根据自己的数据隐私和安全标准来确定哪些公共服务满足您的业务需求。例如，如果是专用服务，那么可看到附加到目录中服务磁贴的特定图标。
 
 {{site.data.keyword.Bluemix_notm}} Local 随附所有内含的 {{site.data.keyword.Bluemix_notm}} 运行时和 64 GB 计算内存。
 
-此外，还有一组可供 {{site.data.keyword.Bluemix_notm}} Local 使用的服务。
+此外，还有一组可供 {{site.data.keyword.Bluemix_notm}} Local 使用的服务和组件。请查看下表以了解哪些已包含在内，哪些可供您选择购买。
 
-| **类型** | **名称** | **描述** |    
+| **类型** | **名称** | **描述** |
 |----------|----------|-----------------|
-|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动应用程序并运行，无需设置和管理 VM 与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
+|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
 |内含 | {{site.data.keyword.autoscaling}}| 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
-|可选 |{{site.data.keyword.datacshort}}| 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 |可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
+|可选 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 
 *表 1. 本地服务*
 
+## {{site.data.keyword.Bluemix_notm}} Local 体系结构
+{: #localarch}
+
+{{site.data.keyword.Bluemix_notm}} Local 位于公司防火墙后的虚拟机上，可为您提供性能最佳和最安全的云基础架构。IBM 通过 IBM 的中继技术在您的数据中心内对 {{site.data.keyword.Bluemix_notm}} Local 进行安装、远程监视以及管理。请查看下图，以获取有关如何在本地环境中设置 {{site.data.keyword.Bluemix_notm}} 以及 IBM 如何维护本地实例的信息：
+
+![{{site.data.keyword.Bluemix_notm}} Local。](images/localarch.png "Bluemix Local 体系结构图")
+
+*图 1. {{site.data.keyword.Bluemix_notm}} Local 体系结构*
+
+网络中的先启虚拟机在客户防火墙后面运行，该网络使用出站连接通过中继连接到 IBM 操作中心。{{site.data.keyword.Bluemix_notm}} 平台组件以及支持这些平台组件的核心功能在一个独立的专用虚拟局域网 (VLAN) 中运行。{{site.data.keyword.Bluemix_notm}} Local 将 VLAN 用于专用子网。使用专用子网（而不使用公用 VLAN）不但更为安全，而且还有助于避免路由问题。支持该平台的核心功能集包括以下内容：
+
+<dl>
+<dt>**监视和日志记录**</dt>
+<dd>监视和日志记录功能通过中继部署在您的数据中心内，并且数据保留在数据中心内。警报会根据定义的警报条件发回 IBM 操作人员。发回 IBM 的警报中不会包含任何敏感信息。</dd>
+<dt>**网络**</dt>
+<dd>中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的交付网络。中继使 IBM 能够以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。此隧道上的流量是自动执行的活动，用于处理和维护您实例的平台、计算资源和服务。流量包括 IBM 操作人员用于完成您本地实例的问题确定的监视能力。有关中继的更多信息，请参阅[中继](index.html#localrelay)。</dd>
+<dt>**计算**</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} Local 使用基于 Cloud Foundry 的以应用程序为中心的运行时环境。</dd>
+<dt>**安全情报**</dt>
+<dd><p>IBM 使用 QRadar 安全情报平台提供了用于集成多个关键组件的统一体系结构。这些组件包括安全信息和事件管理、日志管理、异常检测、事件取证以及配置和漏洞管理。Bluemix 还使用 IBM QRadar 安全信息和事件管理 (SIEM) 来监视特权用户操作以及应用程序开发者的成功和不成功登录尝试。QRadar 报告通过“管理”页面的“报告和日志”部分，让客户了解这些事件数据。有关安全报告的信息，请参阅[查看报告](../admin/index.html#oc_report)。</p>
+<p>IBM BigFix 会确保以适当的频率应用操作系统的修订。打补丁进程会自动执行，并遵循您与 IBM 约定的日程安排。有关维护和升级的信息，请参阅[维护本地实例](index.html#maintainlocal)。</p>
+</dd>
+</dl>
+
+您的应用程序会部署到在 Cloud Foundry 虚拟机上运行的虚拟容器内部。安装 {{site.data.keyword.Bluemix_notm}} 时，将部署所有 Cloud Foundry 组件，例如云控制器、运行状况管理器、路由器和 Droplet Execution Agent (DEA)。此外，在 {{site.data.keyword.Bluemix_notm}} 部署中还将包含各种 {{site.data.keyword.Bluemix_notm}} 管理组件。
+
+DataPower 设备提供对 {{site.data.keyword.Bluemix_notm}} 应用程序域的访问。这些设备所连接到的网络从您的内部网即可进行访问。要部署应用程序和服务的用户通过可从内部网进行访问的网络中获取相应访问权。您必须提供 7 个 IP 地址，以用于出站因特网访问。DataPower 设备会从这些客户 IP 地址路由到独立的 {{site.data.keyword.Bluemix_notm}} 部署。有关网络规范和基础架构需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Local 基础架构需求](../local/index.html#localinfra)。
+
 ### 中继
+{: #localrelay}
 
-中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的一项交付功能，能够使 IBM 以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。中继通过源自内部部署先启虚拟机的开放式出站 SSL VPN 隧道，使用特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书来实现安全连接。所有初始 {{site.data.keyword.Bluemix_notm}} 发行版都在先启虚拟机中提供，先启虚拟机还可作为用于部署和更新的自动化代理程序机器。SSL 连接源自先启虚拟机，一旦通过安全连接成功连回 {{site.data.keyword.Bluemix_notm}} 自动化服务器，我们就可以检查 {{site.data.keyword.Bluemix_notm}} 发行版的最新性和一致性，然后开始部署更新。
+中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的交付功能。中继使 IBM 能够以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。中继通过源自内部部署先启虚拟机的开放式出站 SSL VPN 隧道，使用特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书来实现安全连接。所有初始 {{site.data.keyword.Bluemix_notm}} 发行版都在先启虚拟机中提供，先启虚拟机还可作为用于部署和更新的自动化代理程序机器。SSL 连接源自先启虚拟机。通过安全连接成功连回 {{site.data.keyword.Bluemix_notm}} 自动化服务器后，IBM 会检查 {{site.data.keyword.Bluemix_notm}} 发行版是否最新以及是否一致，然后开始部署更新。
 
-通过此隧道，为您实例的平台、计算资源和服务自动提供服务并进行维护。此连接使用入站 Web 端口 443。中继仅限自动化代理程序访问。IBM 使用中继功能通过一致的测试和验证流程来交付平台更新，以确保推送到本地环境的所有部署均稳定、安全。
+此隧道上的流量是自动执行的活动，用于处理和维护您实例的平台、计算资源和服务。流量包括 IBM 操作人员用于完成您本地实例的问题确定的监视能力。此连接使用出站 Web 端口 443。IBM 使用中继功能通过一致的测试和验证过程来交付平台更新。此过程将确保推送到本地环境的所有部署均稳定、安全。
 
-作为管理员，您可以全面了解环境中的事件、问题、变更、容量和安全管理。管理员使用管理控制台来访问有关环境的信息。中继技术可确保管理控制台中的数据是最新的。有关用户访问权、安全日志、联合目录控制以及更新与问题修复沟通的更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)。
+只有在您本地环境上与您协作的 IBM 团队才能安全地访问您的 {{site.data.keyword.Bluemix_notm}} 实例。在执行连接过程的多个步骤期间，使用双重认证对本地环境的访问进行了保护。IBM 提供了已批准访问您环境的用户和标识的列表，随后您可以审计对您环境的任何访问。通过生成安全报告，您能够了解谁访问过您的环境，何时以及为什么进行访问。有关生成安全报告的信息，请参阅[安全报告](../security/index.html#reports)。
+
+作为管理员，您可以全面了解环境中的事件、问题、变更、容量和安全管理。您可以使用“管理”页面来访问有关环境的信息。中继技术可确保“管理”页面中的数据是最新的。有关用户访问权、安全日志、联合目录控制以及更新与问题修复沟通的更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)。
 
 ##设置 {{site.data.keyword.Bluemix_notm}} Local 实例
 {: #setuplocal}
@@ -160,13 +197,13 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |选择体系结构 | 基于预定义的选项来选择体系结构，这些选项将高可用性和灾难恢复需求考虑在内。 | IBM |
 |定义灾难恢复目标 | 为环境定义灾难恢复需求。 | 客户 |
 |创建灾难恢复计划 | 协商和定义灾难恢复计划。IBM 创建灾难恢复模型，并与您协商在何处由您提供反馈和审批计划。 | IBM 和客户共担责任 |
-|创建备份和恢复计划 | 创建备份和恢复计划，其中定义现场和非现场分布的备份的频率和需求。IBM 备份光纤网组件、IBM 服务、服务元数据（包括用户角色）等。您备份自己负责的任何特定于应用程序的数据。 | IBM 和客户共担责任 |
+|创建备份和恢复计划 | 创建备份和恢复计划，其中定义现场和非现场分布的备份的频率和需求。IBM 备份平台组件、IBM 服务、服务元数据（包括用户角色）等。您备份自己负责的任何特定于应用程序的数据。 | IBM 和客户共担责任 |
 |确定用于事件检测和问题确定的工具 | 确定用于在 {{site.data.keyword.Bluemix_notm}} 平台级别进行事件检测和问题确定的 IBM 和第三方工具。 | IBM |
 |定义上报计划 | 定义上报计划以分类和解决从监视组件检测到的事件。 | IBM |
 |签署基础架构、平台和支持协议 | 签署预订协议，包括环境的财务条款和条件。签署网络和安全性监视协议。签署支持预订。 | 客户 |
 |采购环境 | 采购计算资源、网络和存储。有关环境基础架构需求的更多信息，请参阅 [Local 基础架构需求](../local/index.html#localinfra)。 | 客户 |
 |安装 VPN 解决方案 | 安装双向 VPN 解决方案。 | IBM |
-|安装光纤网、应用程序以及监视和管理组件 | 安装、配置和验证光纤网组件（例如 BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
+|安装平台、应用程序以及监视和管理组件 | 安装、配置和验证平台组件（例如，BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
 |安装和配置安全组件 | 安装和配置与监视和上报计划绑定的安全组件，包括 IBM QRadar、凭证保险库、入侵防御系统、IBM BigFix 和 IBM Security Privileged Identity Management。 | IBM |
 |配置登录服务器 | 配置登录服务器以与公司 LDAP 配合使用。 | IBM |
 |安装和配置定制组件 |  	安装和配置位于 {{site.data.keyword.Bluemix_notm}} 产品和服务范围之外的定制组件。 | 客户 |
@@ -216,12 +253,15 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |关闭中继 | 终止中继连接。 | IBM |
 |回收基础架构 | 根据公司准则回收基础架构。 | 客户 |
 
-##{{site.data.keyword.Bluemix_notm}} Local 基础架构需求
+## {{site.data.keyword.Bluemix_notm}} Local 基础架构需求
 {: #localinfra}
 
-对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有物理安全和用于托管本地实例的基础架构。IBM 针对 {{site.data.keyword.Bluemix_notm}} Local 的设置，设置了以下需求。
-###硬件
+对于 {{site.data.keyword.Bluemix_notm}} Local，您拥有物理安全和用于托管本地实例的基础架构。针对 {{site.data.keyword.Bluemix_notm}} Local 的安装，IBM 设置了以下最低需求。
+
+### 硬件
+
 虽然对可用硬件的类型和大小有要求，但可以选择任意组合来满足所设置的资源总需求。
+
 <dl>
 <dt>**VMware ESXi 硬件**</dt>
 <dd>
@@ -229,16 +269,17 @@ ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内
 <ul>
 <li>48 个物理核心，每个核心 2.0 GHz 或更高</li>
 <li>756 GB 物理 RAM</li>
-</li>数据存储总大小为 7.5 TB <ul>
+<li>数据存储总大小为 7.5 TB <ul>
 <li>7 TB 数据存储，用于容纳 {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB 数据存储，用于容纳先启虚拟机</li>
 </ul>
+</li>
 </ul>
 <p><strong>注：</strong>如果使用多个数据存储，请对每个数据存储使用相同的前缀。</p>
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用 2 个 ESXi，每个 ESXi 16 个核心，那么需要第三个 ESXi。<p><strong>注：</strong>客户 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。</p>
+为了针对单节点故障提供支持，必须有 n+1 个 ESXi。例如，如果使用 3 个 ESXi（意味着每个 ESXi 有 16 个核心），那么需要第四个 ESXi。<p><strong>注：</strong>客户 VMware 管理员可以决定是否在集群中强制执行严格的高可用性故障转移以保证有足够的资源。</p>
 </dd>
 <dt>**网络**</dt>
 <dd>
@@ -250,13 +291,17 @@ ESXi 是一种在物理服务器上运行的虚拟化层，可将处理器、内
 </ul>
 <p>**注**：IBM 可检测到网络连接是否中断。如果网络连接中断，IBM 会联系您并与您的网络专家一起来解决该问题。</p>
 </dd>
+<dt>**网络上行链路**</dt>
+<dd>使用两个或更多接口（范围：1 到 10 Gbps），具体取决于系统的目标工作负载。</dd>
 </dl>
 
-###vCenter 服务器配置
+### vCenter 服务器配置
+
 查看以下版本、数据中心、资源池和数据存储需求。
+
 <dl>
 <dt>**支持的 VMware 版本**</dt>
-<dd>vCenter 和 ESXi 5.1 和 5.5</dd>
+<dd>vCenter 和 ESXi 5.1、5.5 和 6.0</dd>
 <dt>**支持的 VMware 类型**</dt>
 <dd>vSphere Enterprise<br />
 vSphere Enterprise plus（如果计划使用分布式虚拟交换机）</dd>
@@ -272,30 +317,45 @@ vSphere Enterprise plus（如果计划使用分布式虚拟交换机）</dd>
 <dd>初始部署 {{site.data.keyword.Bluemix_notm}} 需要 7.5 TB 数据存储。<br />
 <br />
 **注**：使用多个数据存储时，请确保每个数据存储都以相同的前缀开头。例如，具有相同前缀的多个数据存储为 `bluemix_datastore_01` 和 `bluemix_datastore_02`。</dd>
+<dt>**网络**</dt>
+<dd>您必须有一个可供客户访问且带有出站因特网功能的网络。VLAN 会托管运行 Bluemix Local 组件的专用子网。所有流量都会从专用子网路由到客户子网。客户子网 IP 用于对 Bluemix Local 的所有访问。然后，可以定义第二个专用 VLAN，但仅在要用于 Bluemix Local 的 ESXi 之间使用。此 VLAN 在 VMware 中显示为端口组。Bluemix Local 会将其用于专用子网，这样不但更为安全，而且有助于避免路由问题。<p>如果要使用 vSphere 分布式交换机 (vDS)，请创建用于保存 vDS 的文件夹，然后将 vDS 放入该文件夹中。</p>
 </dl>
 
-###网络带宽
-建议吞吐量上行为 5 Mbps，下行为 5 Mbps，每个月的预期数据使用量为 10 GB。在传递大小最大达到 3 GB 的大型捆绑数据时，IBM 会确定商定时段。
-###VMware 许可权
+### 用于中继的网络带宽
+
+建议吞吐量上行为 5 Mbps，下行为 5 Mbps，每个月的预期数据使用量为 10 GB。在传递其大小最高可达 4 GB 的大型数据束时，IBM 会确定商定时段。
+
+### VMware 许可权
+
 设置以下角色和许可权。为每个许可权设置传播。如果传播许可权，那么该许可权将通过对象层次结构向下传递。但是，子对象的许可权始终会覆盖自父对象传播的许可权。
+
 <dl>
-<dt>**vCenter 服务器**</dt>
+<dt>**vCenter Server**</dt>
 <dd>将角色设置为只读且不传播。<br />
 <br />
 **注**：要检索特定磁盘操作的任务状态，需要此角色。</dd>
 <dt>**数据中心**</dt>
-<dd>创建角色“{{site.data.keyword.Bluemix_notm}}”并授予对**数据存储**（包括**低级别文件操作**和**更新虚拟机文件**）的许可权。<br />
-<br />
+<dd>创建角色“{{site.data.keyword.Bluemix_notm}}”，并授予以下许可权：
+<ul>
+<li>对于 **Datastore**，设置**低级别文件操作**和**更新虚拟机文件**。</li>
+<li>对于 **vApp**，设置**导入**。</li>
+<li>对于 **dvPort** 组，设置**修改**。这仅供 vDS 使用。</li>
+</ul>
 **注**：要支持将文件发布到数据存储，需要此角色。</dd>
 <dt>**集群**</dt>
 <dd>将角色设置为管理员且进行传播。</dd>
 <dt>**数据存储**</dt>
 <dd>将角色设置为管理员且对每个 {{site.data.keyword.Bluemix_notm}} 数据存储进行传播。</dd>
 <dt>**网络**</dt>
-<dd>使用管理员角色设置公共和专用端口组，但不传播。</dd>
+<dd><ul>
+<li>对于 vSwitch，使用管理员角色设置公共和专用端口组，但不传播。</li>
+<li>对于 vDS 父文件夹，设置为只读且传播。</li>
+<li>对于 vDS，使用管理员角色设置公共和专用端口组，但不传播。</li>
+</ul>
+</dd>
 </dl>
 
-###Droplet Execution Agent (DEA) 池
+### 增大 Droplet Execution Agent (DEA) 池
 每个 DEA 都会配置为：
 - 16 - 32 GB RAM
 - 2 - 4 个 vCPU
@@ -303,7 +363,7 @@ vSphere Enterprise plus（如果计划使用分布式虚拟交换机）</dd>
 
 例如，如果 ESXi 主机大小为 256 GB 内存，16 个核心，那么将添加 8 个 DEA。如果 ESXi 主机大小为 64 GB 内存，8 个核心，那么将需要添加 2 个 ESXi 和 4 个 DEA。每四个 DEA 还需要额外添加 1.5 TB 的存储器。此示例基于配置有 32 GB RAM、4 个 vCPU 和 300 GB 存储器的 DEA。
 
-##维护本地实例
+## 维护本地实例
 {: #maintainlocal}
 
 IBM 会在 IBM 认为适当的时候，为 Bluemix Local 平台、运行时以及服务维护和安装更新与修订。在维护时段内，服务可能会不可用。
@@ -320,9 +380,12 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 **重要信息**：在维护期间，某个服务可能不可用。</dd>
 
 <dt>**每月更改时段**</dt>
-<dd>每月维护时段根据您与 IBM 的协商在 21 天时段中进行选择。您可以向 IBM 提供这 21 天时段中可能不适合您的具体日期或时间。IBM 会尝试基于这些时间来安排更新。根据请求，IBM 会向您发送安排的维护时段。每月更改时段应该不会影响运行中的 Bluemix Local 环境。<br />
+<dd>每月维护时段根据您与 IBM 的协商在 21 天时段中进行选择。您可以向 IBM 提供这 21 天时段中可能不适合您的具体日期或时间。IBM 会尝试基于这些时间来安排更新。根据请求，IBM 会向您发送安排的维护时段。每月更改时段应该不会影响运行中的 Bluemix Local 环境。<p>下图显示了从收到有关暂挂更新的通知，到设置可能不适用的日期，再到最终收到有关已安排日期的通知的整个过程：</p>
+<p><img src="images/maintenance_dates.png" alt="设置不可用的维护更新日期的过程"></p>
 <br />
-**注**：如果未请求更新的具体时间，那么维护会自动在时段结束时应用。<br />
+**注**：如果不需要设置任何不可用的更新日期，那么可以批准更新。IBM 会通知您要应用的已安排维护日期。<br />
+<p>下图显示了从收到有关暂挂更新的通知，到批准更新，再到收到已安排更新日期的整个过程：</p>
+<p><img src="images/maintenance_nodates.png" alt="批准无不可用日期的更新的过程"></p>
 <br />
 转至**管理 > 系统信息**以查看暂挂的更新，设置不可用的日期以及批准更新。有关通知和安排暂挂更新的更多信息，请参阅<a href="../admin/index.html#oc_system">查看系统信息</a>。</dd>
 
@@ -333,6 +396,25 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 要为本地实例设置维护，请与 IBM 指定的客户代表一起商定标准维护时段。
 
 如果在维护更新后报告有问题，您可与您的 IBM 代表商定，在符合您的最大利益时允许 IBM 回滚更新。IBM 会根据商定的结果回滚更新，使环境复原到先前的状态。
+
+## 事件响应和支持
+{: #incidentresponse}
+
+### 客户检测到的问题
+
+如果识别到需要 IBM 支持和操作人员关注的问题，您可以使用多种不同的方法来联系支持人员。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。根据问题情况，您和/或 IBM 可合作解决问题。
+
+### IBM 检测到的严重事件
+
+严重事件是指紧迫的意外服务中断以及影响您的环境或用户的稳定性问题。如果 IBM 检测到您的环境内有严重事件，那么会在**状态**页面上借助通知来告知您。您还可以检查“状态”页面来获取平台或服务的任何已知问题。如果要将通知与支持 Web Hook 的 Web Service 集成在一起，请参阅[通知和事件预订](../admin/index.html#oc_eventsubscription)，以获取有关如何扩展通知功能的信息。
+
+![事件响应过程](images/incidentresponseprocess.png "事件响应过程")
+
+*图 2. 事件响应过程*
+
+根据问题情况，您和/或 IBM 可合作解决问题。如果您有与事件相关的疑问，或者需要 IBM 代表帮助您解决问题，那么可以开具支持凭单。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。
+
+**注**：将全天候监视严重性为 1 的支持凭单。其他凭单的处理时间是周日晚上 10:00 GMT 到周六上午 12:00 GMT。有关支持凭单严重性和使用支持的更多信息，请参阅<a href="../support/index.html#contacting-bluemix-support-local">联系支持人员</a>。
 
 ## 灾难恢复
 {: #dr}
@@ -390,7 +472,7 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 <dd>元数据会备份到辅助位置，通常位于内部部署虚拟机上。如果可能，应该将备份复制到自己的环境中，至少 200 公里远的位置。</dd>
 </dl>
 
-##复原本地实例
+## 复原本地实例
 {: #restorelocal}
 
 系统会定期备份 {{site.data.keyword.Bluemix_notm}} Local 设置、元数据和配置，以做好准备来应对环境中的任何意外中断。您负责备份的数据包括应用程序数据、云数据库服务数据和对象存储。
@@ -412,8 +494,11 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 <li>向 IBM 操作员提供备份文件，以防万一有任何需要复原的情况。</li>
 </ul>
 
+
 # 相关链接
 ## 常规
 * [Discover: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
+* [{{site.data.keyword.Bluemix_notm}} 中的新增功能](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 词汇表](glossary/index.html)
 * [管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
-* [联系支持人员](../troubleshoot/getting_customer_support.html#bluemix_support)
+* [联系支持人员](troubleshoot/getting_customer_support.html#bluemix_support)

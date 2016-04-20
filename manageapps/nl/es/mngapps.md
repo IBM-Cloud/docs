@@ -1,12 +1,21 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #Gestión de app
 {: #manageapps}
 
-*Última actualización: 4 de diciembre de 2015*
+*Última actualización: 17 de marzo de 2015*
 
-Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus app y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.{:shortdesc}
+Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus app y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.
+{:shortdesc}
 
 La sección de la aplicación del panel de control proporciona información resumida de las app que ha creado. La información resumida incluye nombre, icono, URL, tiempo de ejecución y estado de ejecución de la aplicación y de las instancias de servicio que están enlazadas a la aplicación. Se utilizan distintos colores para indicar el estado de ejecución cada aplicación.
 

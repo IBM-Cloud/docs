@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 20 gennaio 2015*
+*Ultimo aggiornamento: 20 gennaio 2016*
 
 I servizi disponibili sono elencati nel **catalogo** sotto **Servizi**
 nell'interfaccia utente
@@ -104,6 +111,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.conceptinsightsshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.dashdbshort}}		|Sì		|Sì		|No|
 |{{site.data.keyword.datacshort}}		|Sì		|Sì		|Sì|
+|{{site.data.keyword.DB2OnCloud_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.deliverypipeline}}		|Sì		|Sì		|No|
 |{{site.data.keyword.dialogshort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.documentconversionshort}}	|Sì		|Sì		|Sì|
@@ -116,6 +124,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sì		|Sì		|No|
 |{{site.data.keyword.iot_short}}		|Sì		|No		|No|
+|{{site.data.keyword.keymanagementserviceshort}}|No		|Sì		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Sì		|Sì		|No|
 |{{site.data.keyword.messagehub}}		|Sì		|Sì		|No|
 |{{site.data.keyword.messageresonanceshort}}	|Sì		|Sì		|No|
@@ -136,6 +145,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
 |{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|No|
+|{{site.data.keyword.servicediscoveryshort}}	|Sì		|No		|No|
 |{{site.data.keyword.sescashort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.ssofull}}			|Sì		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sì 		|Sì	 	|Sì|
@@ -157,7 +167,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
-*Ultimo aggiornamento: 19 novembre 2015*
+*Ultimo aggiornamento: 8 marzo 2016*
 
 {{site.data.keyword.Bluemix}} ha un elenco di servizi e
 li gestisce per conto degli sviluppatori. Per aggiungere un servizio a
@@ -221,9 +231,8 @@ Se utilizzi l'interfaccia riga di comando cf per richiedere un'istanza del servi
     cf bind-service nome_applicazione istanza_servizio
     ```
 
-**Nota:** un'istanza del servizio è specifica per uno spazio in cui tale istanza viene creata. Non puoi spostare un'istanza del servizio
-in un altro spazio o organizzazione. Devi invece richiedere una nuova istanza del servizio
-per ciascuno spazio in cui vuoi utilizzarla.
+Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}. 
+
 
 ## Configurazione della tua applicazione per l'interazione con un servizio 
 {: #config}
@@ -253,7 +262,7 @@ diversi servizi. Potresti dover leggere la documentazione del servizio in merito
 e come interpretare ogni elemento di informazione.
 
 Se si verifica un arresto anomalo di un servizio di cui esegui il bind a un'applicazione,
-l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, consulta l'argomento di risoluzione dei problemi relativo al fatto che [le applicazioni non verranno riavviate automaticamente](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}.
+l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, consulta l'argomento di risoluzione dei problemi relativo al fatto che [le applicazioni non verranno riavviate automaticamente](../troubleshoot/index.html#ts_topmenubar).
 
 ## Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}}
 {: #accser_external}
@@ -351,43 +360,49 @@ Ora puoi configurare la tua applicazione per utilizzare le risorse esterne. Per 
 ## Utilizzo dei servizi in un'altra regione
 {: #cross_region_service}
 
-Se disponi di un'istanza del servizio che è stata creata e associata
-ad applicazioni in una determinata regione, puoi utilizzare questa istanza in un'altra
-regione creando un servizio fornito dall'utente.
+Se disponi di un'istanza di servizio creata e associata mediante bind ad applicazioni in un'unica regione, puoi utilizzare questa istanza in un'altra regione utilizzando uno dei seguenti metodi:
 
-Supponiamo di iniziare nella regione in cui
+  * Utilizza le credenziali del servizio per configurare direttamente l'istanza della tua applicazione. Per i dettagli, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}. 
+  * Crea come ponte un servizio fornito dall'utente.
+    
+	Supponiamo di iniziare nella regione in cui
 desideri utilizzare l'istanza del servizio. Per utilizzare un'istanza del servizio che si trova
 in un'altra regione, completa la seguente procedura:
 
-1. Passa alla regione in cui si trova l'istanza del servizio. Nella barra dei menu principale di {{site.data.keyword.Bluemix_notm}},
+      1. Passa alla regione in cui si trova l'istanza del servizio. Nella barra dei menu principale di {{site.data.keyword.Bluemix_notm}},
 espandi **Regione** o fai clic sull'icona **Regione**,
 quindi seleziona la regione in cui si trova l'istanza del servizio.
 
-2. Recupera le credenziali e i parametri di connessione dalla variabile di ambiente VCAP_SERVICES dell'istanza del servizio nella regione in cui si trova il servizio. Completa la seguente
+      2. Recupera le credenziali e i parametri di connessione dalla variabile di ambiente VCAP_SERVICES dell'istanza del servizio nella regione in cui si trova il servizio. Completa la seguente
 procedura:
 
-	1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile dell'applicazione. Viene visualizzata la pagina Panoramica.
-	2. Nel riquadro di navigazione a sinistra,  fai clic su **Variabili di ambiente**. I dettagli della variabile di ambiente *VCAP_SERVICES*
+	       1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile dell'applicazione. Viene visualizzata la pagina Panoramica.
+	       2. Nel riquadro di navigazione a sinistra,  fai clic su **Variabili di ambiente**. I dettagli della variabile di ambiente *VCAP_SERVICES*
 vengono visualizzati nel riquadro a destra. Registra il contenuto JSON per l'istanza
 del servizio.
 
-3. Passa alla regione in cui desideri utilizzare l'istanza del
+      3. Passa alla regione in cui desideri utilizzare l'istanza del
 servizio. Nella barra dei menu principale di {{site.data.keyword.Bluemix_notm}},
 espandi **Regione** o fai clic sull'icona **Regione**,
 quindi seleziona la regione in cui desideri utilizzare l'istanza del servizio.
 
-4. Crea un'istanza del servizio fornito dall'utente utilizzando le credenziali
+      4. Crea un'istanza del servizio fornito dall'utente utilizzando le credenziali
 e i parametri di connessione che hai registrato dalla variabile di ambiente
 *VCAP_SERVICES*. Per informazioni su come creare un'istanza
 del servizio fornito dall'utente, vedi [Creazione di un'istanza
 del servizio fornito dall'utente](#user_provide_services){: new_window}.
 
-5. Esegui il bind dell'istanza del servizio fornito dall'utente alla tua applicazione
+      5. Esegui il bind dell'istanza del servizio fornito dall'utente alla tua applicazione
 utilizzando il seguente comando:
 
-	```
-	cf bind-service myapp user-provided_service_instance
-	```
+	     ```
+	     cf bind-service myapp user-provided_service_instance
+	     ```
+
+
+
+
+
 
 ## Utilizzo di servizi in un altro servizio
 {: #s2s_binding}
@@ -404,8 +419,8 @@ cui vuoi accedere. Viene visualizzato il dashboard per il servizio.
 # rellinks
 {: #rellinks}
 
-## general 
-* [Esecuzione del bind di un servizio utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [Richiamo di VCAP_SERVICES](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## general
+* [Esecuzione del bind di un servizio utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
+* [Richiamo di VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 
 

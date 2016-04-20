@@ -1,7 +1,19 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014，2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}}의 용어집 용어
+# {{site.data.keyword.Bluemix_notm}}의 용어집 용어 
 {: #glossary}
 
 *마지막 업데이트 날짜: 2015년 12월 7일*
@@ -9,138 +21,17 @@
 이 용어집은 {{site.data.keyword.Bluemix}}에 대한 용어 및 정의를 제공합니다.
 {:shortdesc}
 
-이 용어집에서는 다음과 같은 상호 참조가 사용됩니다.
+이 용어집에서는 다음과 같은 상호 참조가 사용됩니다.  
 
-* *참조하십시오*는 선호하지 않는 용어에서 선호하는 용어까지 또는 약어에서 상세한 설명이 있는 양식까지 포괄합니다.
-* *도 참조하십시오*는 관련되거나 대조적인 용어를 포괄합니다.
+* *참조하십시오*는 선호하지 않는 용어에서 선호하는 용어까지 또는 약어에서 상세한 설명이 있는 양식까지 포괄합니다. 
+* *도 참조하십시오*는 관련되거나 대조적인 용어를 포괄합니다. 
 
 다른 용어 및 정의에 대해서는 [IBM 용어 웹 사이트](http://www.ibm.com/software/globalization/terminology/){: new_window}(새 창에서 열림)를 참조하십시오.
 
-[가](#gloss_GA) [나](#gloss_NA) [다](#gloss_DA) [바](#gloss_BA) [아](#gloss_AA) [자](#gloss_JA) [C](#gloss_C) [E](#gloss_E) [G](#gloss_G) [H](#gloss_H) [I](#gloss_I) [J](#gloss_J) [M](#gloss_M) [O](#gloss_O) [P](#gloss_P) [S](#gloss_S) [T](#gloss_T) [U](#gloss_U) [W](#gloss_W)
+[A](#gloss_A) [B](#gloss_B) [C](#gloss_C) [D](#gloss_D) [E](#gloss_E) [F](#gloss_F) [G](#gloss_G) [H](#gloss_H) [I](#gloss_I) [J](#gloss_J) [L](#gloss_L) [M](#gloss_M) [N](#gloss_N) [O](#gloss_O) [P](#gloss_P) [R](#gloss_R) [S](#gloss_S) [T](#gloss_T) [U](#gloss_U) [V](#gloss_V) [W](#gloss_W) 
 
-## 가
-{: #gloss_GA}
-
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_V__x2043123"><!-- --></a>가상(virtual)</dt>
-<dd class="dd">물리적으로는 그와 같이 존재하지 않지만 마치 존재하는 것처럼 보이기 위해 소프트웨어에 의해 만들어진 것과 관련됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_V__x2043165"><!-- --></a>가상 머신(VM, virtual machine)</dt>
-<dd class="dd">실제 시스템처럼 프로그램을 실행하는 시스템의 소프트웨어 구현입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_V__x2043188"><!-- --></a>가상 사설망(VPN, Virtual Private Network)</dt>
-<dd class="dd">공용 네트워크 또는 사설 네트워크의 기존 프레임워크에 회사 인트라넷을 확장하는 것입니다. VPN은 연결된 두 엔드포인트 사이에 전송되는 데이터가 안전하게 유지되도록 보장합니다.</dd>
-<dt class="dt dlterm"><a name="gloss_V__x2043253"><!-- --></a>VM</dt>
-<dd class="dd"><a class="xref" href="#gloss_V__x2043165">가상 머신</a>을 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_V__x2484351"><!-- --></a>VPN</dt>
-<dd class="dd"><a class="xref" href="#gloss_V__x2043188">VPN(Virtual Private Network)</a>을 참조하십시오.</dd>
-</dl>
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_L__x2028320"><!-- --></a>계층(layer)</dt>
-<dd class="dd">상위 이미지의 변경된 버전입니다. 이미지는 계층으로 구성되어 있고, 상위 이미지 위에 변경된 버전이 계층적으로 있어 새 이미지를 생성합니다. <a class="xref" href="#gloss_C__x2010901">컨테이너</a>, <a class="xref" href="#gloss_I__x2024928">이미지</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_L__x2481619"><!-- --></a>LDAP</dt>
-<dd class="dd"><a class="xref" href="#gloss_L__x2028538">LDAP(Lightweight Directory Access Protocol)</a>을 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_L__x2804840"><!-- --></a>라이센스 키(license key)</dt>
-<dd class="dd">소프트웨어 라이센스가 있는 프로그램의 사용을 규제하는 권한입니다. 소프트웨어
-라이센스 키는 소프트웨어가 업그레이드 또는 이동되거나
-하드웨어 프로세서 그룹이 변경되거나 추가 라이센스 사용이 추가되거나 라이센스 키가 필요한 새 소프트웨어를 구매하는 경우에
-시스템에 설치되어야 합니다.</dd>
-<dt class="dt dlterm"><a name="gloss_L__x7690463"><!-- --></a>Light API 호출(light API call)</dt>
-<dd class="dd">데이터를 읽기만 하는 클라이언트 오퍼레이션입니다. 단일 함수를 수행하고 있기 때문에
-Light API 호출은 Haevy API 호출보다 자원을 더 적게
-사용합니다. <a class="xref" href="#gloss_H__x7690468">Heavy
-API 호출</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_L__x2028538"><!-- --></a>LDAP(Lightweight Directory Access Protocol)</dt>
-<dd class="dd">X.500 모델을 지원하고 더 복잡한 X.500 DAP(Directory Access Protocol)의
-자원 요구사항을 초래하지 않는 디렉토리에 대한 액세스를 제공하기 위해
-TCP/IP을 사용하는 개방형 프로토콜입니다. 예를 들어,
-LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 자원을
-찾는 데 사용될 수 있습니다.</dd>
-<dt class="dt dlterm"><a name="gloss_L__x8439194"><!-- --></a>로컬 클라우드(local cloud)</dt>
-<dd class="dd">클라이언트의 데이터 센터 내에 있는 클라우드 컴퓨팅 환경입니다. 로컬 클라우드는 사내 구축형이며 대기 시간과 보안이 향상됩니다. <a class="xref" href="#gloss_B__x8439189">경계선이 없음(borderless)</a>도 참조하십시오.</dd>
-</dl>
-
-## 나
-{: #gloss_NA}
-
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_N__x2031005"><!-- --></a>네임스페이스(namespace)</dt>
-<dd class="dd">Bluemix 레지스트리 내에서 조직의 이미지 저장소를 식별하는 고유 이름입니다. <a class="xref" href="#gloss_I__x2024928">이미지</a>, <a class="xref" href="#gloss_P__x8439215">개인용 이미지 저장소</a>도 참조하십시오.</dd>
-</dl>
-
-## 다
-{: #gloss_DA}
-
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_D__x2019215"><!-- --></a>디먼(daemon)</dt>
-<dd class="dd">네트워크 제어와 같은 연속적이거나 정기적인 기능을 수행하기 위해 무인 서비스로 실행되는 프로그램입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2363941"><!-- --></a>대시보드(dashboard)</dt>
-<dd class="dd">프로젝트 상태에 대한 정보를 한 눈에 파악할 수 있는 웹 사용자 인터페이스 컴포넌트입니다. 사용자는 프로젝트 요약 정보 또는 보다 자세한 정보를 볼 수 있습니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2176124"><!-- --></a>데이터 소스(data source)</dt>
-<dd class="dd">데이터베이스 또는 XML 파일과 같은 데이터 자체의 소스와 데이터에 액세스하는 데 필요한 연결 정보입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2052849"><!-- --></a>데이터 저장소(data store)</dt>
-<dd class="dd">데이터가 저장되는 장소(예: 데이터베이스 시스템, 파일 또는 디렉토리)입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2019805"><!-- --></a>DEA</dt>
-<dd class="dd"><a class="xref" href="#gloss_D__x7470348">DEA(Droplet Execution Agent)</a>를 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x8439199"><!-- --></a>전용 클라우드(dedicated cloud)</dt>
-<dd class="dd">인프라에 단일 테넌트 하드웨어를 제공하는 프라이빗 클라우드 컴퓨팅 환경입니다. <a class="xref" href="#gloss_B__x8439189">경계선이 없음(borderless)</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>결함(defect)</dt>
-<dd class="dd">관련자(stakeholder)가 버그 및 버그 수정을 추적할 수 있도록 허용하는 프로젝트 요소입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>배치(deployment)</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">애플리케이션(예: 보고서 또는 모델)을 다른 인스턴스로 이동하는 프로세스입니다. 예를 들어, 보고서는 종종 테스트 환경에서 작성된 다음 프로덕션 환경에 배치됩니다. 애플리케이션이 배치되면 내보내지고, 전송되고, 가져와집니다.</li>
-<li class="li">빌드의 출력을 검색하고, 구성 특성으로 출력을 패키지하며, 테스트 또는 실행이 가능하도록 사전 정의된 위치에 패키지를 설치하는 프로세스입니다. <a class="xref" href="#gloss_S__x2067189">스테이징 또는 단계</a>도 참조하십시오. </li>
-</ol>
-</dd>
-<dt class="dt dlterm"><a name="gloss_D__x5784896"><!-- --></a>DevOps</dt>
-<dd class="dd">애플리케이션 개발과 IT 오퍼레이션을 통합하는 소프트웨어 방법입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x2021210"><!-- --></a>도메인(domain)</dt>
-<dd class="dd">라우트를 지정하는 이름 지정 계층 구조의 일부입니다(예: example.com). Bluemix에서 도메인은 조직과 연관됩니다. 도메인 오브젝트는 앱에 직접적으로 바인딩되지 않습니다. <a class="xref" href="#gloss_C__x5728384">사용자 정의 도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_O__x2032585">조직</a>, <a class="xref" href="#gloss_R__x2037338">라우트</a>, <a class="xref" href="#gloss_S__x2040080">하위 도메인</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x3744906"><!-- --></a>DQM</dt>
-<dd class="dd"><a class="xref" href="#gloss_D__x5390841">동적 조회 모드</a>를 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x7470343"><!-- --></a>드롭릿(droplet)</dt>
-<dd class="dd">클라우드에 배치하기 전에 애플리케이션과 해당 런타임 및 프레임워크 종속성을 포함하는 Cloud Foundry 내의 아카이브입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x7470348"><!-- --></a>DEA(Droplet Execution Agent)</dt>
-<dd class="dd">애플리케이션을 배치할 책임이 있는 Cloud Foundry 컴포넌트입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_D__x5390841"><!-- --></a>동적 조회 모드(DQM, dynamic query mode)</dt>
-<dd class="dd">데이터 소스에 대한 고유의 액세스를 제공하는 Java 기반 조회 실행 모드입니다. 조회 복잡성과 많은 양의 데이터를 처리하기 위해 조회를 최적화합니다. 조회 계획, 실행 및 결과에 도움이 되는 인메모리 캐싱과 같은 고급 조회 기능을 제공합니다.</dd>
-</dl>
-
-## 바
-{: #gloss_BA}
-
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_B__x2315215"><!-- --></a>백로그(backlog)</dt>
-<dd class="dd">Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우선순위를 지정하는 프로젝트 및 릴리스에 필요한 기능 또는 기술 태스크의 목록입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x5366487"><!-- --></a>기본 이미지(base image)</dt>
-<dd class="dd">상위 이미지가 없는 이미지입니다. <a class="xref" href="#gloss_I__x2024928">이미지</a>, <a class="xref" href="#gloss_P__x8439210">상위 이미지</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7470455"><!-- --></a>베타 서비스(beta service)</dt>
-<dd class="dd">프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. <a class="xref" href="#gloss_E__x7470450">시범 서비스</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x2000361"><!-- --></a>바인드(bind)</dt>
-<dd class="dd">승인된 프로토콜을 사용하여 네트워크에 있는 소프트웨어 컴포넌트 간의 연결을 설정하는 것입니다. 웹 서비스에서 서비스 요청자가 서비스를 검색, 연결 및 호출하기 위해 서비스 설명에서 바인딩 세부사항을 사용하여 런타임에 서비스와의 상호작용을 호출하거나 시작할 때 바인드 오퍼레이션이 수행됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7470463"><!-- --></a>BLU 가속화(BLU Acceleration)</dt>
-<dd class="dd">주로 조회용으로 사용되는 비즈니스 인텔리전스 조회 처리에 주로 사용되도록 디자인된 IBM DB2 기술의 콜렉션입니다. BLU 가속화는 4가지 주요 데이터베이스 디자인 기능, 즉 동적 인메모리 열 형식 처리, 조치 가능한 압축, 병렬 벡터 처리 및 데이터 스킵으로 구성됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7807335"><!-- --></a>Blue-Green 배치(blue-green deployment)</dt>
-<dd class="dd">지속적 딜리버리를 사용하고 Blue 및 Green이라는 거의 동일한 두 개의 프로덕션 환경을 실행하여 중단시간을 최소화하는 배치 기술입니다. 환경 중 하나(예: Blue)는 라이브 프로덕션 환경이고 다른 하나(예: Green)는 최종 테스트 및 배치에 사용될 수 있습니다. 애플리케이션이 Green에 배치된 후 Green은 프로덕션 환경이 되고 Blue는 유휴 상태가 됩니다.<a class="xref" href="#gloss_R__x8439181">red-black 배치</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
-<dd class="dd">웹, 모바일, 빅데이터, 스마트 디바이스 같은 모든 유형의 앱을 빌드, 관리 및 실행하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. 기능에는 Java, 모바일 백엔드 개발 및 애플리케이션 모니터링뿐 아니라 에코시스템 파트너 및 오픈 소스 등 클라우드에 서비스로 제공되는 기능도 모두 포함됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>표준 유형(boilerplate)</dt>
-<dd class="dd">특정 도메인에 대한 애플리케이션 및 그 연관된 런타임 환경과 미리 정의된 서비스를 포함하는 템플리트입니다. </dd>
-<dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>경계선이 없음(borderless)</dt>
-<dd class="dd">퍼블릭 클라우드, 전용 클라우드, 로컬 클라우드 배치 방법을 포함하는 비독점 오픈 개발 플랫폼과 관련이 있습니다. <a class="xref" href="#gloss_D__x8439199">전용 클라우드</a>, <a class="xref" href="#gloss_L__x8439194">로컬 클라우드</a>, <a class="xref" href="#gloss_P__x4585370">퍼블릭 클라우드</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>분기(branch)</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">병렬 또는 독립 개발을 위한 스트림입니다.</li>
-<li class="li">병렬 또는 독립 개발을 위한 스트림을 작성하는 것입니다.</li>
-</ol>
-</dd>
-<dt class="dt dlterm"><a name="gloss_B__x2197543"><!-- --></a>빌더(builder)</dt>
-<dd class="dd">코드를 빌드하고 컴파일하는 도구입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_B__x7233925"><!-- --></a>빌드팩(buildpack)</dt>
-<dd class="dd">Bluemix에서 실행할 코드를 준비하는 스크립트의 콜렉션입니다. 빌드팩은 배치된 애플리케이션을 검사한 다음 종속 애플리케이션을 다운로드하고 구성합니다.</dd>
-</dl>
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_F__x2023301"><!-- --></a>분기(fork)</dt>
-<dd class="dd"><ol class="ol glossnoindent"><li class="li">Git에서 원본과 동기화할 필요가 없거나 원본에 영향을 미치지 않고 수정할 수 있는 저장소의 다른 복사본입니다.</li>
-<li class="li">프로젝트와 모든 저장소 컨텐츠 및 또다른 프로젝트의 히스토리를 포함하는 Git 저장소를 작성하는 것입니다.</li>
-</ol>
-</dd>
-<dt class="dt dlterm"><a name="gloss_F__x2023472"><!-- --></a>프레임워크(framework)</dt>
-<dd class="dd">애플리케이션, 일반, 확장 가능한 기능에 대한 표준 구조를 제공하는 애플리케이션의 아키텍처입니다. 프레임워크를 통해 애플리케이션 개발을 위한 복잡한 기술의 일관성 있는 구현을 사용하고 단순화할 수 있습니다.</dd>
-</dl>
-
-## 아
-{: #gloss_AA}
+## A
+{: #gloss_A}
 
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_A__x2113001"><!-- --></a>액세스 토큰(access token)</dt>
 <dd class="dd">사용자의 서비스 제공업체 신임 정보를 사용하는 대신 사용자를 대신하여 보호되는 자원에 액세스하기 위해 이용자가 사용하는 값입니다.</dd>
@@ -185,49 +76,36 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 </dd>
 </dl>
 
-## 자
-{: #gloss_JA}
-
-<dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>주로 조회용으로 사용(read-mostly)</dt>
-<dd class="dd">동적으로 변경하는 데이터와 관련됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>red-black 배치(red-black deployment)</dt>
-<dd class="dd">동기화된 테스트, 개발 및 배치를 지원하여 지속적 딜리버리를 가능케 하는 배치 기술입니다. 처음에는 비활성 환경(black)에서 개발하고 활성 환경에 계속 트래픽이 유입됩니다(red). 배치가 시작되면 이전에 활성이던 이전 버전 환경에서 라우팅이 비활성화될 때까지 두 환경이 활성 상태를 유지하다가(red-red) 이후 새 환경이 유일한 활성 환경 역할을 하며 환경이 제거됩니다(black). <a class="xref" href="#gloss_B__x7807335">Blue-Green 배치</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>지역(region)</dt>
-<dd class="dd">정의된 지리적 영역입니다. 지역은 특정 우편 번호 영역, 동/면, 구/군/시, 시/도, 시/도 그룹 또는 국가 그룹이 될 수 있습니다. 각 지역은 다른 지역의 세트 또는 해당 지역을 구성하는 우편 번호의 세트가 될 수 있습니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>레지스트리(registry)</dt>
-<dd class="dd">컨테이너를 작성하는 데 사용되는 이미지를 포함하는 공용 또는 개인용 저장소입니다. <a class="xref" href="#gloss_C__x2010901">컨테이너</a>, <a class="xref" href="#gloss_I__x2024928">이미지</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x7639721"><!-- --></a>저장소(repo)</dt>
-<dd class="dd"><a class="xref" href="#gloss_R__x2036865">저장소(repository)</a>를 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2036830"><!-- --></a>보고서(report)</dt>
-<dd class="dd">비즈니스 정보를 전달하기 위해 의도적으로 배치된 데이터 세트입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2036865"><!-- --></a>저장소(repository)</dt>
-<dd class="dd">데이터 및 기타 애플리케이션 자원에 대한 지속적인 스토리지 영역입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x3889804"><!-- --></a>저장소 작업공간(repository workspace)</dt>
-<dd class="dd">하나 이상의 컴포넌트를 포함하는 저장소 오브젝트입니다. 저장소 작업공간은 일반적으로 진행 중인 변경사항을 포함하기 위해 개별 팀 구성원이 사용합니다. 팀 구성원은 저장소 작업공간에서 스트림으로 변경사항을 전달하고 스트림에서 저장소 작업공간으로의 다른 팀 구성원의 변경사항을 승인합니다. 모든 저장소 작업공간은 소유자를 가지고 있으며 해당 소유자만 작업공간을 변경할 수 있습니다. <a class="xref" href="#gloss_W__x2096037">작업공간</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x3220976"><!-- --></a>REST(Representational State Transfer)</dt>
-<dd class="dd">월드 와이드 웹(WWW)과 같은 분산된 하이퍼미디어 시스템에 대한 소프트웨어 아키텍처 스타일입니다. 해당 용어는 또한 종종 SOAP와 같은 추가적인 메시징 계층 없이 HTTP를 통해 XML(또는 YAML, JSON, 일반 텍스트)을 사용하는 임의의 단순한 인터페이스를 설명하는 데도 사용됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2004267"><!-- --></a>자원(resource)</dt>
-<dd class="dd">애플리케이션 또는 서비스 인스턴스에 대해 프로비저닝하거나 예약할 수 있는 물리적 또는 논리적 컴포넌트입니다. 자원의 예로는 데이터베이스, 계정, 프로세서, 메모리 및 스토리지 한계가 있습니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x3220987"><!-- --></a>REST</dt>
-<dd class="dd"><a class="xref" href="#gloss_R__x3220976">REST(Representational State Transfer)</a>를 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x7494440"><!-- --></a>소급(retrospective)</dt>
-<dd class="dd">Agile 개발에서 스프린트 이후 성공 및 필요한 개선사항을 평가하는 작업 항목 또는 모임입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2037338"><!-- --></a>라우트(route)</dt>
-<dd class="dd">애플리케이션으로 요청을 전달하는 데 사용되는 URL입니다. 라우트는 애플리케이션을 푸시할 때 지정되는 선택적 호스트(또는 하위 도메인)와 도메인으로 구성됩니다. 예를 들어, myapp.example.com 라우트에서 myapp는 호스트이고 example.com은 도메인입니다. 라우트는 하나 이상의 애플리케이션과 연관될 수 있습니다. 사용자 정의 도메인이 지정되지 않은 경우 Bluemix는 애플리케이션의 라우트에 기본 공유 도메인을 사용합니다. <a class="xref" href="#gloss_C__x5728384">사용자 정의 도메인</a>, <a class="xref" href="#gloss_D__x2021210">도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_S__x2040080">하위 도메인</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2037526"><!-- --></a>규칙(rule)</dt>
-<dd class="dd">컴퓨터 시스템이 관계를 식별하고 그에 맞게 자동화된 응답을 실행할 수 있게 하는 일련의 조건문입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x4106478"><!-- --></a>RuleApp</dt>
-<dd class="dd">하나 이상의 규칙 세트를 포함할 수 있는 규칙 실행 서버에 대한 배치 및 관리 단위입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x5579603"><!-- --></a>규칙 디자이너(Rule Designer)</dt>
-<dd class="dd">비즈니스 규칙 애플리케이션의 작성과 관리에만 사용되며 Eclipse 개발 환경에 통합되는 비즈니스 규칙 애플리케이션 개발 도구입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x4188046"><!-- --></a>규칙 실행 서버(Rule Execution Server)</dt>
-<dd class="dd">Java EE 환경에 통합되고 RuleApp에 포함된 규칙 세트를 실행, 제어 및 모니터링하기 위해 애플리케이션의 표준 서비스를 제공하는 모듈입니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x3721562"><!-- --></a>규칙 세트(ruleset)</dt>
-<dd class="dd">입력 및 출력 매개변수를 기반으로 규칙 엔진이 의사결정을 위해 처리할 수 있는 의사결정 프로그램입니다. 의사결정 로직은 규칙, 의사결정 테이블 및 규칙 플로우로 구현됩니다.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2391929"><!-- --></a>런타임(runtime)</dt>
-<dd class="dd">애플리케이션을 실행하는 데 사용되는 자원 세트입니다. <a class="xref" href="#gloss_S__x7470511">스타터</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_R__x2037566"><!-- --></a>런타임 환경(runtime environment)</dt>
-<dd class="dd">프로그램 또는 프로세스를 실행하는 데 사용되는 자원 세트입니다.</dd>
+## B
+{: #gloss_B}
+  
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_B__x2315215"><!-- --></a>백로그(backlog)</dt>
+<dd class="dd">Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우선순위를 지정하는 프로젝트 및 릴리스에 필요한 기능 또는 기술 태스크의 목록입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x5366487"><!-- --></a>기본 이미지(base image)</dt>
+<dd class="dd">상위 이미지가 없는 이미지입니다. <a class="xref" href="#gloss_I__x2024928">이미지</a>, <a class="xref" href="#gloss_P__x8439210">상위 이미지</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7470455"><!-- --></a>베타 서비스(beta service)</dt>
+<dd class="dd">프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. <a class="xref" href="#gloss_E__x7470450">시범 서비스</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x2000361"><!-- --></a>바인드(bind)</dt>
+<dd class="dd">승인된 프로토콜을 사용하여 네트워크에 있는 소프트웨어 컴포넌트 간의 연결을 설정하는 것입니다. 웹 서비스에서 서비스 요청자가 서비스를 검색, 연결 및 호출하기 위해 서비스 설명에서 바인딩 세부사항을 사용하여 런타임에 서비스와의 상호작용을 호출하거나 시작할 때 바인드 오퍼레이션이 수행됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7470463"><!-- --></a>BLU 가속화(BLU Acceleration)</dt>
+<dd class="dd">주로 조회용으로 사용되는 비즈니스 인텔리전스 조회 처리에 주로 사용되도록 디자인된 IBM DB2 기술의 콜렉션입니다. BLU 가속화는 4가지 주요 데이터베이스 디자인 기능, 즉 동적 인메모리 열 형식 처리, 조치 가능한 압축, 병렬 벡터 처리 및 데이터 스킵으로 구성됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7807335"><!-- --></a>Blue-Green 배치(blue-green deployment)</dt>
+<dd class="dd">지속적 딜리버리를 사용하고 Blue 및 Green이라는 거의 동일한 두 개의 프로덕션 환경을 실행하여 중단시간을 최소화하는 배치 기술입니다. 환경 중 하나(예: Blue)는 라이브 프로덕션 환경이고 다른 하나(예: Green)는 최종 테스트 및 배치에 사용될 수 있습니다. 애플리케이션이 Green에 배치된 후 Green은 프로덕션 환경이 되고 Blue는 유휴 상태가 됩니다.<a class="xref" href="#gloss_R__x8439181">red-black 배치</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7301758"><!-- --></a>Bluemix</dt>
+<dd class="dd">웹, 모바일, 빅데이터, 스마트 디바이스 같은 모든 유형의 앱을 빌드, 관리 및 실행하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. 기능에는 Java, 모바일 백엔드 개발 및 애플리케이션 모니터링뿐 아니라 에코시스템 파트너 및 오픈 소스 등 클라우드에 서비스로 제공되는 기능도 모두 포함됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7233930"><!-- --></a>표준 유형(boilerplate)</dt>
+<dd class="dd">특정 도메인에 대한 애플리케이션 및 그 연관된 런타임 환경과 미리 정의된 서비스를 포함하는 템플리트입니다. </dd>
+<dt class="dt dlterm"><a name="gloss_B__x8439189"><!-- --></a>경계선이 없음(borderless)</dt>
+<dd class="dd">퍼블릭 클라우드, 전용 클라우드, 로컬 클라우드 배치 방법을 포함하는 비독점 오픈 개발 플랫폼과 관련이 있습니다. <a class="xref" href="#gloss_D__x8439199">전용 클라우드</a>, <a class="xref" href="#gloss_L__x8439194">로컬 클라우드</a>, <a class="xref" href="#gloss_P__x4585370">퍼블릭 클라우드</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x2050278"><!-- --></a>분기(branch)</dt>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">병렬 또는 독립 개발을 위한 스트림입니다.</li>
+<li class="li">병렬 또는 독립 개발을 위한 스트림을 작성하는 것입니다.</li>
+</ol>
+</dd>
+<dt class="dt dlterm"><a name="gloss_B__x2197543"><!-- --></a>빌더(builder)</dt>
+<dd class="dd">코드를 빌드하고 컴파일하는 도구입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_B__x7233925"><!-- --></a>빌드팩(buildpack)</dt>
+<dd class="dd">Bluemix에서 실행할 코드를 준비하는 스크립트의 콜렉션입니다. 빌드팩은 배치된 애플리케이션을 검사한 다음 종속 애플리케이션을 다운로드하고 구성합니다.</dd>
 </dl>
 
 ## C
@@ -236,7 +114,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_C__x2015942"><!-- --></a>CA</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x2016383">인증 기관</a>을 참조하십시오. </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2234719"><!-- --></a>CBC</dt>
-<dd class="dd"><a class="xref" href="#gloss_C__x2016383">인증 기관</a>을 참조하십시오.</dd>
+<dd class="dd"><a class="xref" href="#gloss_C__x2016383">인증 기관</a>을 참조하십시오. </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2050789"><!-- --></a>CD</dt>
 <dd class="dd"><a class="xref" href="#gloss_C__x7233913">지속적 딜리버리</a>를 참조하십시오. </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2016383"><!-- --></a>인증 기관(CA, certificate authority)</dt>
@@ -266,8 +144,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2017871"><!-- --></a>컴포넌트(component)</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">소스 제어 관리에서 스트림 또는 저장소 작업공간 내의 관련 아티팩트의 그룹화입니다. 컴포넌트는 임의의 수의 폴더와 파일을 포함할 수 있습니다. </li>
-<li class="li">구성 관리에서 재사용 가능한 엔지니어링 아티팩트 세트에 대한 조직 단위입니다. 컴포넌트는 종종 프로젝트 영역에 해당됩니다.
-글로벌 구성은 컴포넌트 내에 있습니다. <a class="xref" href="#gloss_A__x2262995">아티팩트</a>도 참조하십시오. </li>
+<li class="li">구성 관리에서 재사용 가능한 엔지니어링 아티팩트 세트에 대한 조직 단위입니다. 컴포넌트는 종종 프로젝트 영역에 해당됩니다. 글로벌 구성은 컴포넌트 내에 있습니다. <a class="xref" href="#gloss_A__x2262995">아티팩트</a>도 참조하십시오. </li>
 </ol>
 </dd>
 <dt class="dt dlterm"><a name="gloss_C__x2010901"><!-- --></a>컨테이너(container)</dt>
@@ -276,13 +153,51 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dd class="dd">지속적인 테스트, 지속적인 통합 및 지속적인 배치와 같은 기술을 적용하는 소프트웨어 개발 방식으로, 새 기능 및 수정사항이 패키지되고 위험을 최소화하여 신속하게 테스트 환경에 배치된 다음 고객에게 배치되도록 합니다.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x2018813"><!-- --></a>신임 정보(credential)</dt>
 <dd class="dd">인증 중에 획득한 정보로, 사용자, 그룹 연관 또는 다른 보안 관련 ID 속성을 설명하고 권한 부여, 감사 또는 위임과 같은 서비스를 수행하는 데 사용됩니다. 예를 들어, 사용자 ID 및 비밀번호는 네트워크와 시스템 자원에 대한 액세스를 허용하는 신임 정보입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_C__x2140147"><!-- --></a>CSR</dt>
+<dd class="dd"><a class="xref" href="#gloss_C__x3530521">인증서 서명 요청</a>을 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_C__x5728384"><!-- --></a>사용자 정의 도메인(custom domain)</dt>
 <dd class="dd">사용자가 요청을 애플리케이션으로 전달하기 위해 선택한 URL의 사용자 정의된 부분입니다. 사용자 정의 도메인은 라우트의 일부를 구성합니다. 사용자 정의 도메인은 공유 도메인, 공유 하위 도메인 또는 공유 도메인 및 호스트가 될 수 있습니다. <a class="xref" href="#gloss_D__x2021210">도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_R__x2037338">라우트</a>, <a class="xref" href="#gloss_S__x2040080">하위 도메인</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
 </dl>
 
+## D
+{: #gloss_D}
+    
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_D__x2019215"><!-- --></a>디먼(daemon)</dt>
+<dd class="dd">네트워크 제어와 같은 연속적이거나 정기적인 기능을 수행하기 위해 무인 서비스로 실행되는 프로그램입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2363941"><!-- --></a>대시보드(dashboard)</dt>
+<dd class="dd">프로젝트 상태에 대한 정보를 한 눈에 파악할 수 있는 웹 사용자 인터페이스 컴포넌트입니다. 사용자는 프로젝트 요약 정보 또는 보다 자세한 정보를 볼 수 있습니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2176124"><!-- --></a>데이터 소스(data source)</dt>
+<dd class="dd">데이터베이스 또는 XML 파일과 같은 데이터 자체의 소스와 데이터에 액세스하는 데 필요한 연결 정보입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2052849"><!-- --></a>데이터 저장소(data store)</dt>
+<dd class="dd">데이터가 저장되는 장소(예: 데이터베이스 시스템, 파일 또는 디렉토리)입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2019805"><!-- --></a>DEA</dt>
+<dd class="dd"><a class="xref" href="#gloss_D__x7470348">DEA(Droplet Execution Agent)</a>를 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x8439199"><!-- --></a>전용 클라우드(dedicated cloud)</dt>
+<dd class="dd">인프라에 단일 테넌트 하드웨어를 제공하는 프라이빗 클라우드 컴퓨팅 환경입니다. <a class="xref" href="#gloss_B__x8439189">경계선이 없음(borderless)</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2117804"><!-- --></a>결함(defect)</dt>
+<dd class="dd">관련자(stakeholder)가 버그 및 버그 수정을 추적할 수 있도록 허용하는 프로젝트 요소입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2104544"><!-- --></a>배치(deployment)</dt>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">애플리케이션(예: 보고서 또는 모델)을 다른 인스턴스로 이동하는 프로세스입니다. 예를 들어, 보고서는 종종 테스트 환경에서 작성된 다음 프로덕션 환경에 배치됩니다. 애플리케이션이 배치되면 내보내지고, 전송되고, 가져와집니다.</li>
+<li class="li">빌드의 출력을 검색하고, 구성 특성으로 출력을 패키지하며, 테스트 또는 실행이 가능하도록 사전 정의된 위치에 패키지를 설치하는 프로세스입니다. <a class="xref" href="#gloss_S__x2067189">스테이징 또는 단계</a>도 참조하십시오. </li>
+</ol>
+</dd>
+<dt class="dt dlterm"><a name="gloss_D__x5784896"><!-- --></a>DevOps</dt>
+<dd class="dd">애플리케이션 개발과 IT 오퍼레이션을 통합하는 소프트웨어 방법입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x2021210"><!-- --></a>도메인(domain)</dt>
+<dd class="dd">라우트를 지정하는 이름 지정 계층 구조의 일부입니다(예: example.com). Bluemix에서 도메인은 조직과 연관됩니다. 도메인 오브젝트는 앱에 직접적으로 바인딩되지 않습니다. <a class="xref" href="#gloss_C__x5728384">사용자 정의 도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_O__x2032585">조직</a>, <a class="xref" href="#gloss_R__x2037338">라우트</a>, <a class="xref" href="#gloss_S__x2040080">하위 도메인</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x3744906"><!-- --></a>DQM</dt>
+<dd class="dd"><a class="xref" href="#gloss_D__x5390841">동적 조회 모드</a>를 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x7470343"><!-- --></a>드롭릿(droplet)</dt>
+<dd class="dd">클라우드에 배치하기 전에 애플리케이션과 해당 런타임 및 프레임워크 종속성을 포함하는 Cloud Foundry 내의 아카이브입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x7470348"><!-- --></a>DEA(Droplet Execution Agent)</dt>
+<dd class="dd">애플리케이션을 배치할 책임이 있는 Cloud Foundry 컴포넌트입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_D__x5390841"><!-- --></a>동적 조회 모드(DQM, dynamic query mode)</dt>
+<dd class="dd">데이터 소스에 대한 고유의 액세스를 제공하는 Java 기반 조회 실행 모드입니다. 조회 복잡성과 많은 양의 데이터를 처리하기 위해 조회를 최적화합니다. 조회 계획, 실행 및 결과에 도움이 되는 인메모리 캐싱과 같은 고급 조회 기능을 제공합니다.</dd>
+</dl>
+
 ## E
 {: #gloss_E}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_E__x2115585"><!-- --></a>Eclipse</dt>
 <dd class="dd">솔루션파트너(ISV) 및 기타 도구 개발자에게 플러그 호환 애플리케이션 개발 도구의 개발을 위한 표준 플랫폼을 제공하는 오픈 소스 이니셔티브입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_E__x2026820"><!-- --></a>엔드포인트(endpoint)</dt>
@@ -293,9 +208,21 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dd class="dd">프로덕션에 사용할 준비가 되지 않았으며 언제든지 프로덕션에서 제거될 수 있는 서비스입니다. <a class="xref" href="#gloss_B__x7470455">베타 서비스</a>도 참조하십시오.</dd>
 </dl>
 
+## F
+{: #gloss_F}
+    
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_F__x2023301"><!-- --></a>분기(fork)</dt>
+<dd class="dd"><ol class="ol glossnoindent"><li class="li">Git에서 원본과 동기화할 필요가 없거나 원본에 영향을 미치지 않고 수정할 수 있는 저장소의 다른 복사본입니다.</li>
+<li class="li">프로젝트와 모든 저장소 컨텐츠 및 또다른 프로젝트의 히스토리를 포함하는 Git 저장소를 작성하는 것입니다.</li>
+</ol>
+</dd>
+<dt class="dt dlterm"><a name="gloss_F__x2023472"><!-- --></a>프레임워크(framework)</dt>
+<dd class="dd">애플리케이션, 일반, 확장 가능한 기능에 대한 표준 구조를 제공하는 애플리케이션의 아키텍처입니다. 프레임워크를 통해 애플리케이션 개발을 위한 복잡한 기술의 일관성 있는 구현을 사용하고 단순화할 수 있습니다.</dd>
+</dl>
+
 ## G
 {: #gloss_G}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_G__x7470477"><!-- --></a>GB-시간</dt>
 <dd class="dd">시간당 특정 빌드팩의 모든 애플리케이션 인스턴스에 대해 실행 중인 누적 메모리의 양(기가바이트)입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_G__x7494416"><!-- --></a>Git</dt>
@@ -308,7 +235,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 
 ## H
 {: #gloss_H}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_H__x7690468"><!-- --></a>Heavy API 호출(heavy API call)</dt>
 <dd class="dd">데이터를 쓰거나 삭제하거나 삽입하는 클라이언트 오퍼레이션입니다. Heavy API 호출은 데이터에 영향을 미치기 때문에 Light API 호출보다 더 많은 자원을 소모합니다. <a class="xref" href="#gloss_L__x7690463">Light API 호출</a>도 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_H__x2002243"><!-- --></a>호스트(host)</dt>
@@ -325,7 +252,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 
 ## I
 {: #gloss_I}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_I__x4585337"><!-- --></a>IaaS</dt>
 <dd class="dd"><a class="xref" href="#gloss_I__x4585332">IaaS(Infrastructure as a Service)</a>를 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_I__x2115755"><!-- --></a>IDE</dt>
@@ -352,7 +279,7 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 
 ## J
 {: #gloss_J}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_J__x2406009"><!-- --></a>JAR 파일(JAR file)</dt>
 <dd class="dd">Java 아카이브 파일입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_J__x3292165"><!-- --></a>JSON(JavaScript Object Notation)</dt>
@@ -361,9 +288,36 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 <dd class="dd"><a class="xref" href="#gloss_J__x3292165">JSON(JavaScript Object Notation)</a>을 참조하십시오.</dd>
 </dl>
 
+## L
+{: #gloss_L}
+    
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_L__x2028320"><!-- --></a>계층(layer)</dt>
+<dd class="dd">상위 이미지의 변경된 버전입니다. 이미지는 계층으로 구성되어 있고, 상위 이미지 위에 변경된 버전이 계층적으로 있어 새 이미지를 생성합니다. <a class="xref" href="#gloss_C__x2010901">컨테이너</a>, <a class="xref" href="#gloss_I__x2024928">이미지</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x2481619"><!-- --></a>LDAP</dt>
+<dd class="dd"><a class="xref" href="#gloss_L__x2028538">LDAP(Lightweight Directory Access Protocol)</a>을 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x2804840"><!-- --></a>라이센스 키(license key)</dt>
+<dd class="dd">소프트웨어 라이센스가 있는 프로그램의 사용을 규제하는 권한입니다. 소프트웨어
+라이센스 키는 소프트웨어가 업그레이드 또는 이동되거나
+하드웨어 프로세서 그룹이 변경되거나 추가 라이센스 사용이 추가되거나 라이센스 키가 필요한 새 소프트웨어를 구매하는 경우에
+시스템에 설치되어야 합니다.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x7690463"><!-- --></a>Light API 호출(light API call)</dt>
+<dd class="dd">데이터를 읽기만 하는 클라이언트 오퍼레이션입니다. 단일 함수를 수행하고 있기 때문에
+Light API 호출은 Haevy API 호출보다 자원을 더 적게
+사용합니다. <a class="xref" href="#gloss_H__x7690468">Heavy
+API 호출</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x2028538"><!-- --></a>LDAP(Lightweight Directory Access Protocol)</dt>
+<dd class="dd">X.500 모델을 지원하고 더 복잡한 X.500 DAP(Directory Access Protocol)의
+자원 요구사항을 초래하지 않는 디렉토리에 대한 액세스를 제공하기 위해
+TCP/IP을 사용하는 개방형 프로토콜입니다. 예를 들어,
+LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 자원을
+찾는 데 사용될 수 있습니다.</dd>
+<dt class="dt dlterm"><a name="gloss_L__x8439194"><!-- --></a>로컬 클라우드(local cloud)</dt>
+<dd class="dd">클라이언트의 데이터 센터 내에 있는 클라우드 컴퓨팅 환경입니다. 로컬 클라우드는 사내 구축형이며 대기 시간과 보안이 향상됩니다. <a class="xref" href="#gloss_B__x8439189">경계선이 없음(borderless)</a>도 참조하십시오.</dd>
+</dl>
+
 ## M
 {: #gloss_M}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_M__x2858069"><!-- --></a>Manifest 파일(manifest file)</dt>
 <dd class="dd"><ol class="ol glossnoindent"><li class="li">기타 파일 또는 아티팩트에 대한 설정, 지시사항 또는 메타데이터와 같은
 정보를 포함하는 파일입니다.</li>
@@ -409,9 +363,16 @@ LDAP는 인터넷 또는 인트라넷 디렉토리의 사람, 조직 및 기타 
 Cognos 서버에 패키지로 공개되어야 합니다.</dd>
 </dl>
 
+## N
+{: #gloss_N}
+
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_N__x2031005"><!-- --></a>네임스페이스(namespace)</dt>
+<dd class="dd">Bluemix 레지스트리 내에서 조직의 이미지 저장소를 식별하는 고유 이름입니다. <a class="xref" href="#gloss_I__x2024928">이미지</a>, <a class="xref" href="#gloss_P__x8439215">개인용 이미지 저장소</a>도 참조하십시오.</dd>
+</dl>
+
 ## O
 {: #gloss_O}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_O__x6013335"><!-- --></a>OAuth</dt>
 <dd class="dd">자원 소유자, 클라이언트 및 자원 서버 사이의 승인 상호작용을 작성함으로써 자원 소유자 대신 보호되는 자원에 대한 제한된 액세스를 애플리케이션에 제공하는 HTTP 기반의 권한 부여 프로토콜입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_O__x7470485"><!-- --></a>옴니채널 애플리케이션(omni-channel application)</dt>
@@ -439,7 +400,7 @@ Linux는 오픈 소스 소프트웨어의 잘 알려진 예입니다.</dd>
 
 ## P
 {: #gloss_P}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_P__x2029790"><!-- --></a>PaaS</dt>
 <dd class="dd"><a class="xref" href="#gloss_P__x2029786">PaaS(Platform as a Service)</a>를 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_P__x8439210"><!-- --></a>상위 이미지(parent image)</dt>
@@ -486,9 +447,54 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.</d
 <dd class="dd">모바일 앱 아이콘에 나타나는 변경 또는 업데이트를 보여주는 경보입니다.</dd>
 </dl>
 
+## R
+{: #gloss_R}
+    
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_R__x7470468"><!-- --></a>주로 조회용으로 사용(read-mostly)</dt>
+<dd class="dd">동적으로 변경하는 데이터와 관련됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x8439181"><!-- --></a>red-black 배치(red-black deployment)</dt>
+<dd class="dd">동기화된 테스트, 개발 및 배치를 지원하여 지속적 딜리버리를 가능케 하는 배치 기술입니다. 처음에는 비활성 환경(black)에서 개발하고 활성 환경에 계속 트래픽이 유입됩니다(red). 배치가 시작되면 이전에 활성이던 이전 버전 환경에서 라우팅이 비활성화될 때까지 두 환경이 활성 상태를 유지하다가(red-red) 이후 새 환경이 유일한 활성 환경 역할을 하며 환경이 제거됩니다(black). <a class="xref" href="#gloss_B__x7807335">Blue-Green 배치</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2091391"><!-- --></a>지역(region)</dt>
+<dd class="dd">정의된 지리적 영역입니다. 지역은 특정 우편 번호 영역, 동/면, 구/군/시, 시/도, 시/도 그룹 또는 국가 그룹이 될 수 있습니다. 각 지역은 다른 지역의 세트 또는 해당 지역을 구성하는 우편 번호의 세트가 될 수 있습니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2064940"><!-- --></a>레지스트리(registry)</dt>
+<dd class="dd">컨테이너를 작성하는 데 사용되는 이미지를 포함하는 공용 또는 개인용 저장소입니다. <a class="xref" href="#gloss_C__x2010901">컨테이너</a>, <a class="xref" href="#gloss_I__x2024928">이미지</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x7639721"><!-- --></a>저장소(repo)</dt>
+<dd class="dd"><a class="xref" href="#gloss_R__x2036865">저장소(repository)</a>를 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2036830"><!-- --></a>보고서(report)</dt>
+<dd class="dd">비즈니스 정보를 전달하기 위해 의도적으로 배치된 데이터 세트입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2036865"><!-- --></a>저장소(repository)</dt>
+<dd class="dd">데이터 및 기타 애플리케이션 자원에 대한 지속적인 스토리지 영역입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x3889804"><!-- --></a>저장소 작업공간(repository workspace)</dt>
+<dd class="dd">하나 이상의 컴포넌트를 포함하는 저장소 오브젝트입니다. 저장소 작업공간은 일반적으로 진행 중인 변경사항을 포함하기 위해 개별 팀 구성원이 사용합니다. 팀 구성원은 저장소 작업공간에서 스트림으로 변경사항을 전달하고 스트림에서 저장소 작업공간으로의 다른 팀 구성원의 변경사항을 승인합니다. 모든 저장소 작업공간은 소유자를 가지고 있으며 해당 소유자만 작업공간을 변경할 수 있습니다. <a class="xref" href="#gloss_W__x2096037">작업공간</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x3220976"><!-- --></a>REST(Representational State Transfer)</dt>
+<dd class="dd">월드 와이드 웹(WWW)과 같은 분산된 하이퍼미디어 시스템에 대한 소프트웨어 아키텍처 스타일입니다. 해당 용어는 또한 종종 SOAP와 같은 추가적인 메시징 계층 없이 HTTP를 통해 XML(또는 YAML, JSON, 일반 텍스트)을 사용하는 임의의 단순한 인터페이스를 설명하는 데도 사용됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2004267"><!-- --></a>자원(resource)</dt>
+<dd class="dd">애플리케이션 또는 서비스 인스턴스에 대해 프로비저닝하거나 예약할 수 있는 물리적 또는 논리적 컴포넌트입니다. 자원의 예로는 데이터베이스, 계정, 프로세서, 메모리 및 스토리지 한계가 있습니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x3220987"><!-- --></a>REST</dt>
+<dd class="dd"><a class="xref" href="#gloss_R__x3220976">REST(Representational State Transfer)</a>를 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x7494440"><!-- --></a>소급(retrospective)</dt>
+<dd class="dd">Agile 개발에서 스프린트 이후 성공 및 필요한 개선사항을 평가하는 작업 항목 또는 모임입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2037338"><!-- --></a>라우트(route)</dt>
+<dd class="dd">애플리케이션으로 요청을 전달하는 데 사용되는 URL입니다. 라우트는 애플리케이션을 푸시할 때 지정되는 선택적 호스트(또는 하위 도메인)와 도메인으로 구성됩니다. 예를 들어, myapp.example.com 라우트에서 myapp는 호스트이고 example.com은 도메인입니다. 라우트는 하나 이상의 애플리케이션과 연관될 수 있습니다. 사용자 정의 도메인이 지정되지 않은 경우 Bluemix는 애플리케이션의 라우트에 기본 공유 도메인을 사용합니다. <a class="xref" href="#gloss_C__x5728384">사용자 정의 도메인</a>, <a class="xref" href="#gloss_D__x2021210">도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_S__x2040080">하위 도메인</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2037526"><!-- --></a>규칙(rule)</dt>
+<dd class="dd">컴퓨터 시스템이 관계를 식별하고 그에 맞게 자동화된 응답을 실행할 수 있게 하는 일련의 조건문입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x4106478"><!-- --></a>RuleApp</dt>
+<dd class="dd">하나 이상의 규칙 세트를 포함할 수 있는 규칙 실행 서버에 대한 배치 및 관리 단위입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x5579603"><!-- --></a>규칙 디자이너(Rule Designer)</dt>
+<dd class="dd">비즈니스 규칙 애플리케이션의 작성과 관리에만 사용되며 Eclipse 개발 환경에 통합되는 비즈니스 규칙 애플리케이션 개발 도구입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x4188046"><!-- --></a>규칙 실행 서버(Rule Execution Server)</dt>
+<dd class="dd">Java EE 환경에 통합되고 RuleApp에 포함된 규칙 세트를 실행, 제어 및 모니터링하기 위해 애플리케이션의 표준 서비스를 제공하는 모듈입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x3721562"><!-- --></a>규칙 세트(ruleset)</dt>
+<dd class="dd">입력 및 출력 매개변수를 기반으로 규칙 엔진이 의사결정을 위해 처리할 수 있는 의사결정 프로그램입니다. 의사결정 로직은 규칙, 의사결정 테이블 및 규칙 플로우로 구현됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2391929"><!-- --></a>런타임(runtime)</dt>
+<dd class="dd">애플리케이션을 실행하는 데 사용되는 자원 세트입니다. <a class="xref" href="#gloss_S__x7470511">스타터</a>도 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_R__x2037566"><!-- --></a>런타임 환경(runtime environment)</dt>
+<dd class="dd">프로그램 또는 프로세스를 실행하는 데 사용되는 자원 세트입니다.</dd>
+</dl>
+
 ## S
 {: #gloss_S}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_S__x4585391"><!-- --></a>SaaS</dt>
 <dd class="dd"><a class="xref" href="#gloss_S__x4585386">SaaS(Software as a Service)</a>를 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x2004442"><!-- --></a>스케일(scale)</dt>
@@ -544,7 +550,7 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.</d
 <dd class="dd">전체 제품의 가치에 기여하는 특정 부분 또는 유스 케이스의 일부를 정의하는 개발 작업 항목입니다. </dd>
 <dt class="dt dlterm"><a name="gloss_S__x2040080"><!-- --></a>하위 도메인(subdomain)</dt>
 <dd class="dd">더 큰 도메인의 일부를 구성하는 도메인입니다. <a class="xref" href="#gloss_C__x5728384">사용자 정의 도메인</a>, <a class="xref" href="#gloss_D__x2021210">도메인</a>, <a class="xref" href="#gloss_H__x2002243">호스트</a>, <a class="xref" href="#gloss_R__x2037338">라우트</a>, <a class="xref" href="#gloss_U__x2042491">URL(Uniform Resource Locator)</a>도 참조하십시오.</dd>
-<dt class="dt dlterm"><a name="gloss_S__x7290136"><!-- --></a>부호화(symbolication)</dt>
+<dt class="dt dlterm"><a name="gloss_S__x7290136"><!-- --></a>심볼리케이션(symbolication)</dt>
 <dd class="dd">앱 컴파일 동안 제외되는 기호가 테스터와 개발자가 추적을 쉽게 읽을 수 있도록 만들기 위해 스택 추적에 삽입되는 프로세스입니다.</dd>
 <dt class="dt dlterm"><a name="gloss_S__x7344042"><!-- --></a>구문 검사(syntax checking)</dt>
 <dd class="dd">앱이 적절하게 컴파일되지 못하게 할 수 있는 구문 오류를 발견하고 이를 사용자에게 알리기 위해 컴파일 전에 코드를 구문 분석하고 그 해석을 시도하는 기능입니다.</dd>
@@ -556,7 +562,7 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.</d
 
 ## T
 {: #gloss_T}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_T__x2218705"><!-- --></a>TAI</dt>
 <dd class="dd"><a class="xref" href="#gloss_T__x2239009">TAI(Trust Association Interceptor)</a>를 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_T__x2007852"><!-- --></a>태스크(task)</dt>
@@ -580,7 +586,7 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.</d
 
 ## U
 {: #gloss_U}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_U__x2116436"><!-- --></a>URI(Uniform Resource Identifier)</dt>
 <dd class="dd">텍스트의 페이지, 동영상 또는 사운드 클립, 정지된 이미지나 애니메이션 이미지 또는 프로그램과 같은 웹의 컨텐츠를 식별하는 데 사용되는 고유 주소입니다. URI의 가장 일반적인 양식은 웹 페이지 주소이며, URL(Uniform Resource Locator)이라고 하는 URI의 특별한 양식 또는 서브세트입니다. URI는 일반적으로 자원에 액세스하는 방법, 해당 자원을 포함하는 컴퓨터, 컴퓨터의 자원 이름(파일 이름)을 설명합니다.</dd>
 <dt class="dt dlterm"><a name="gloss_U__x2042491"><!-- --></a>URL(Uniform Resource Locator)</dt>
@@ -593,9 +599,24 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.</d
 <dd class="dd">주요 온라인 애플리케이션 소매 상점(예: iTunes)에서 사용자 애플리케이션의 평가 결과를 수집하여 파생되는 사용자 평가 점수입니다. 이 기능은 모든 평가 및 리뷰를 크롤링하여 앱 품질, 사용자 만족도, 사용자가 제공하는 전체 긍정 및 부정 피드백 양을 결합한 누적 모바일 앱 점수를 생성합니다.</dd>
 </dl>
 
+## V
+{: #gloss_V}
+    
+<dl class="dl"><dt class="dt dlterm"><a name="gloss_V__x2043123"><!-- --></a>가상(virtual)</dt>
+<dd class="dd">물리적으로는 그와 같이 존재하지 않지만 마치 존재하는 것처럼 보이기 위해 소프트웨어에 의해 만들어진 것과 관련됩니다.</dd>
+<dt class="dt dlterm"><a name="gloss_V__x2043165"><!-- --></a>가상 머신(VM, virtual machine)</dt>
+<dd class="dd">실제 시스템처럼 프로그램을 실행하는 시스템의 소프트웨어 구현입니다.</dd>
+<dt class="dt dlterm"><a name="gloss_V__x2043188"><!-- --></a>가상 사설망(VPN, Virtual Private Network)</dt>
+<dd class="dd">공용 네트워크 또는 사설 네트워크의 기존 프레임워크에 회사 인트라넷을 확장하는 것입니다. VPN은 연결된 두 엔드포인트 사이에 전송되는 데이터가 안전하게 유지되도록 보장합니다.</dd>
+<dt class="dt dlterm"><a name="gloss_V__x2043253"><!-- --></a>VM</dt>
+<dd class="dd"><a class="xref" href="#gloss_V__x2043165">가상 머신</a>을 참조하십시오.</dd>
+<dt class="dt dlterm"><a name="gloss_V__x2484351"><!-- --></a>VPN</dt>
+<dd class="dd"><a class="xref" href="#gloss_V__x2043188">VPN(Virtual Private Network)</a>을 참조하십시오.</dd>
+</dl>
+
 ## W
 {: #gloss_W}
-
+    
 <dl class="dl"><dt class="dt dlterm"><a name="gloss_W__x2844389"><!-- --></a>WAR</dt>
 <dd class="dd"><a class="xref" href="#gloss_W__x2116506">웹 아카이브</a>를 참조하십시오.</dd>
 <dt class="dt dlterm"><a name="gloss_W__x2406005"><!-- --></a>WAR 파일(WAR file)</dt>

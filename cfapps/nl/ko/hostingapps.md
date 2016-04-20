@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -183,7 +195,7 @@ Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않�
   instances: 1
   memory: 512M</code></pre>
 <p>이 파일에서 사용할 수 있는 지원 옵션에 대한 자세한 정보는
-[애플리케이션 Manifest](../manageapps/deployingapps.html#appmanifest)를 참조하십시오. </p></li></ol>
+[애플리케이션 Manifest](../manageapps/depapps.html#appmanifest)를 참조하십시오. </p></li></ol>
 </li>
 
 <li>애플리케이션을 푸시하십시오. cf push 명령을 사용하여 애플리케이션을 업로드할 수 있습니다. <ol>
@@ -247,7 +259,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 애플리케이션에 대해 설정된 VCAP_SERVICES 환경 변수가 존재하는지 확인하십시오. 
 
 
-# rellinks
+# 관련 링크
 ## 일반 
 * [IBM Containers](../containers/container_cli_ov.html)
 * [가상 머신](../virtualmachines/vm_index.html)

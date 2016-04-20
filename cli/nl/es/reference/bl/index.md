@@ -1,6 +1,23 @@
-# Mandatos bl
+---
 
-*Última actualización:* 13 de noviembre de 2015
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
+# Mandatos de {{site.data.keyword.Bluemix_notm}} Live Sync (bl)
+
+*Última actualización: 29 de enero de 2016*
 
 Si está creando una app Node.js, puede utilizar Bluemix™ Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en Bluemix y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla. Cuando realice un cambio, puede verlo de inmediato en la app Bluemix en ejecución. La interfaz de línea de mandatos de Bluemix Live Sync se llama *bl*.
 
@@ -12,7 +29,7 @@ Puede utilizar la interfaz de línea de mandatos **bl** para realizar las tareas
 * Ver la lista de los proyectos que se pueden sincronizar.
 * Ver el estado de las apps en ejecución.
 
-Para obtener más información sobre cómo descargar y utilizar el mandato bl, consulte [Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive).
+Para obtener más información sobre cómo descargar y utilizar el mandato bl, consulte [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## Mandatos bl
 
@@ -41,14 +58,10 @@ La línea de mandatos de Bluemix Live Sync, **bl**, tiene la siguiente sintaxis:
 </dl>
 
 ### Argumentos
-<dl>
-<dd>Argumentos para el mandato.</dd>
-</dl>
+Argumentos para el mandato.
 
 ### Opciones
-<dl>
-<dd>Opciones para el mandato.</dd>
-</dl>
+Opciones para el mandato.
 
 ### Opciones globales
 <dl>

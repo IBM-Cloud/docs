@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -52,7 +64,8 @@ Para utilizar servicios dentro de la app, debe crear una instancia de servicio y
   
 Ahora la app está enlazada al servicio {{site.data.keyword.cloudant}}. Encontrará todos los datos necesarios para que la app se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Por ejemplo, como {{site.data.keyword.Bluemix_notm}} aloja varias apps en la misma máquina virtual, las apps no pueden utilizar el mismo número de puerto HTTP para recibir las solicitudes entrantes. Para evitar conflictos, se asigna un número de puerto exclusivo a cada app. Este número de puerto está disponible bajo la variable VCAP_APP_PORT.
 
-Pulse **Variables de entorno** en la página Visión general de la app para ver toda la lista completa de VCAP_SERVICES para obtener más información:```
+Pulse **Variables de entorno** en la página Visión general de la app para ver toda la lista completa de VCAP_SERVICES para obtener más información:
+```
 {
    "cloudantNoSQLDB": [
       {
@@ -71,8 +84,7 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
 }
 ```
 
-**Nota:** Esta variable de entorno es la serialización de un objeto JSON con una entrada para cada instancia de servicio al que la app está enlazada. La cantidad y el tipo de datos que proporciona cada instancia de servicio dependen del servicio. Cuando la app no utiliza ningún servicio, VCAP_SERVICES es un objeto JSON vacío.
-Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
+**Nota:** Esta variable de entorno es la serialización de un objeto JSON con una entrada para cada instancia de servicio al que la app está enlazada. La cantidad y el tipo de datos que proporciona cada instancia de servicio dependen del servicio. Cuando la app no utiliza ningún servicio, VCAP_SERVICES es un objeto JSON vacío. Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
 
 ## Creación de una app con la cli cf
 {: #ee_cf}
@@ -141,7 +153,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
-  También puede utilizar el mandato cf services para ver la lista de las instancias de servicio que ha creado. 
+  También puede utilizar el mandato cf services para ver la lista de las instancias de servicio que ha creado.
   
   ```
   cf services
@@ -163,7 +175,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   
   3. Utilizar la instancia de servicio.
   
-  En este caso de ejemplo, la variable de entorno VCAP_SERVICES incluye información, como por ejemplo los elementos siguientes, que una app puede utilizar para conectar con esta instancia de {{site.data.keyword.cloudant}}: 
+  En este caso de ejemplo, la variable de entorno VCAP_SERVICES incluye información, como por ejemplo los elementos siguientes, que una app puede utilizar para conectar con esta instancia de {{site.data.keyword.cloudant}}:
   
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>

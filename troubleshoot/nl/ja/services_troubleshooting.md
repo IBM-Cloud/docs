@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 # サービスに関するトラブルシューティング
 {: #services_troubleshooting}

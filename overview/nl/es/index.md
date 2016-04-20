@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -210,13 +222,23 @@ Foundry</dt>
     Los {{site.data.keyword.IBM_notm}} Containers se utilizan para ejecutar contenedores de Docker en un entorno de nube alojado. Docker
 añade un motor para desplegar una app al entorno virtual para ejecutar los contenedores. También proporciona un entorno para ejecutar el código. Cuando esté preparado, proporcionará los medios por los cuales transferir el código desde el entorno de desarrollo a su entorno de prueba y luego al entorno de producción.
 
-    Para obtener más información sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) en la documentación Creación de apps web.</dd>
-<dt>Máquinas virtuales (BETA)</dt>
-    <dd>La infraestructura de máquinas virtuales de {{site.data.keyword.Bluemix_notm}} le facilita la creación y gestión de grupos de máquinas virtuales en la nube pública de {{site.data.keyword.IBM_notm}}. También puede crear y gestionar grupos de máquinas virtuales en aquellas nubes privadas de {{site.data.keyword.IBM_notm}} que haya decidido compartir con usuarios de {{site.data.keyword.Bluemix_notm}}. La infraestructura incluye instrucciones para conectarse a las infraestructuras locales. El soporte de supervisión y registro está integrado en {{site.data.keyword.Bluemix_notm}}. Puede desplegar y gestionar sus máquinas virtuales mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o bien con las API de OpenStack en la nube.
-
-    Las máquinas virtuales de {{site.data.keyword.Bluemix_notm}} da soporte al suministro de grupos de máquinas virtuales con escalado automático. Gracias a este soporte, se puede aumentar o disminuir automáticamente el número de instancias en función de la carga del CPU del error de una instancia. Además, también se da soporte al equilibrio de carga, que habilita la asignación de direcciones IP virtuales (IP flotantes) según se necesite.
-
-    Para obtener más información sobre las máquinas virtuales de {{site.data.keyword.Bluemix_notm}}, consulte [Máquinas virtuales](../virtualmachines/vm_index.html) en la documentación Creación de apps web.</dd>
+    Para obtener más información sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html). </dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} es un entorno de nube alojado,
+parte de {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, que puede utilizar para construir,
+ejecutar, gestionar y supervisar sus aplicaciones, a la vez que mantiene casi todo el control sobre sus apps y el middleware en
+el que se ejecutan. Utilice {{site.data.keyword.virtualmachinesshort}} para aislar sus soluciones empresariales,
+especialmente cuando despliega sus apps en una nube pública. </p>
+<p>    
+Puede ejecutar y gestionar servidores virtuales en nubes públicas y privadas (en local) que utilicen software OpenStack. Puede crear,
+lanzar y gestionar sus servidores virtuales usando la IU de {{site.data.keyword.Bluemix_notm}} o el cliente OpenStackClient (OSC). Puede
+usar imágenes de servidor virtual proporcionadas por {{site.data.keyword.IBM_notm}}, o crear servidores virtuales desde sus propias
+imágenes personalizadas. Puede usar las capacidades de {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}
+para eliminar la mayoría de las complejidades asociadas al alojamiento y gestión de
+aplicaciones basadas en nube, como el registro, escalado automático y la supervisión. Puede usar servicios OpenStack y servicios {{site.data.keyword.Bluemix_notm}} juntos para construir y ejecutar aplicaciones híbridas. Puede suministrar recursos de
+infraestructura según sea necesario, en base a las políticas operativas y la demanda de carga de trabajo. </p>
+<p>
+Para más información sobre {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, consulte [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html). </p> </dd>
 </dl>
 
 ### Aplicaciones

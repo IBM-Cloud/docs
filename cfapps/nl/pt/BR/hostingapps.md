@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -64,7 +76,7 @@ servidor.
   Se não for possível eliminar o estado de sessão completamente, envie-o
 para um disponível altamente disponível que seja externo ao seu servidor
 de aplicativos. Os armazenamentos incluem IBM WebSphere Extreme Scale, Redis ou
-Memcached, ou um banco de dados externo.
+Memcached ou um banco de dados externo.
 
 * Não use dependência de infraestrutura específica.
 
@@ -77,7 +89,7 @@ ser mudados.
 
   A extração de dependências específicas do ambiente para um
 conjunto de arquivos de propriedade é uma melhoria, mas ainda é inadequada. A melhor prática é usar um registro de serviço externo para resolver
-terminais em serviço, ou delegar a função de roteamento inteira para um barramento de serviço
+terminais em serviço ou delegar a função de roteamento inteira para um barramento de serviço
 ou um balanceador de carga com um nome virtual.
 
 * Não use APIs de infraestrutura em seu aplicativo.
@@ -203,7 +215,7 @@ da linha de comandos cf:
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>Para obter mais informações sobre as opções suportadas que podem ser usadas nesse arquivo, consulte [Manifest do aplicativo](../manageapps/deployingapps.html#appmanifest).
+<p>Para obter mais informações sobre as opções suportadas que podem ser usadas nesse arquivo, consulte [Manifest do aplicativo](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>

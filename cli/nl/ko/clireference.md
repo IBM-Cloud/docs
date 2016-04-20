@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -6,9 +18,9 @@
 # 명령행 인터페이스 참조
 
 
-*마지막 업데이트 날짜: 2015년 11월 9일*
+*마지막 업데이트 날짜: 2016년 2월 17일*
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}}에서는
 Cloud Foundry 명령행 인터페이스인 cf를 사용하여 애플리케이션,
-서비스 인스턴스 및 서비스 바인딩을 수정합니다. IBM Containers에서는
-ice 명령행 인터페이스도 사용하여 컨테이너를 관리합니다.{:shortdesc}
+서비스 인스턴스 및 서비스 바인딩을 수정합니다. Cloud Foundry 애플리케이션 이외에 {{site.data.keyword.Bluemix_notm}} 환경을 관리하는 확장된 경험을 제공하는 {{site.data.keyword.Bluemix_notm}} 명령행 도구도 사용할 수 있습니다.
+{:shortdesc}

@@ -1,5 +1,25 @@
-# Bluemix dev_mode CLI
-開発モードは Bluemix のフィーチャーで、これを使用すれば、アプリがクラウドで稼働している間もそのアプリを操作することができます。開発モードには、dev_mode コマンド・ライン・インターフェースが組み込まれています。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
+# 開発モード CLI
+{: #devmodecli}
+
+*最終更新日: 2016 年 2 月 25 日*
+
+開発モード (dev_mode) は Bluemix のフィーチャーです。これを使用すると、アプリがクラウドで稼働している間もそのアプリを操作することができます。開発モードには、dev_mode コマンド・ライン・インターフェースが組み込まれています。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
 
 dev_mode CLI は以下のフィーチャーを備えています。
 - アプリを開発モードと通常モードの間で切り替える。
@@ -38,7 +58,7 @@ dev_mode コマンド・ライン・ツールのインストールには、以�
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## 使用法
+## 使用量
 **dev_mode CLI に含まれているコマンドをすべて表示するには、以下のコマンドを使用します。**
 
 ```

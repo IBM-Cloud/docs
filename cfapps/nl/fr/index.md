@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -44,9 +56,9 @@ Une fois que vous avez créé votre application, vous disposez de quelques optio
 <dt>Interface utilisateur {{site.data.keyword.Bluemix_notm}}</dt>
 <dd>L'interface utilisateur {{site.data.keyword.Bluemix_notm}} permet de construire une application, et de choisir les services et les contextes d'exécution à combiner afin de résoudre vos problèmes métier.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. Les
-services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont répertoriés dans le
-catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également Web IDE et Git hosting.</dd>
+<dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. 
+Les services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont proposés dans le
+catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également dans Web IDE et Git Hosting. </dd>
 </dl>
 
 ## Conseils

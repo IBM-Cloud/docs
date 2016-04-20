@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 15 décembre 2015*
+*Dernière mise à jour : 17 mars 2016*
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
 possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
@@ -113,9 +125,9 @@ Les en-têtes suivants sont remplis par DataPower :
 </dd>
 
 <dt>Pratiques de développement sécurisé</dt>
-<dd> Pour l'environnement {{site.data.keyword.Bluemix_notm}} dédié, des analyses régulières permettant de détecter les vulnérabilités en matière de
-sécurité sont effectuées sur divers
-composants {{site.data.keyword.Bluemix_notm}} avec les offres IBM Security AppScan® Dynamic Analyzer et Static Analyzer. La modélisation des
+<dd> Pour les environnements {{site.data.keyword.Bluemix_notm}} public et dédié, des analyses régulières permettant de détecter les vulnérabilités
+en matière de sécurité sont effectuées sur divers composants {{site.data.keyword.Bluemix_notm}} avec IBM Security AppScan® Dynamic
+Analyzer. La modélisation des
 menaces et des tests de pénétration sont effectués pour détecter et traiter les vulnérabilités potentielles pour tous les types de déploiement
 {{site.data.keyword.Bluemix_notm}}. De plus, les développeurs d'applications peuvent utiliser le service AppScan Dynamic Analyzer afin de sécuriser
 leurs applications Web qui sont déployées dans {{site.data.keyword.Bluemix_notm}}.</dd>
@@ -162,8 +174,9 @@ Security, pour détecter les anomalies liées au réseau et aux configurations h
 systèmes d'exploitation sont appliqués à une fréquence appropriée. Les correctifs automatisés sont activés avec IBM Endpoint Manager.</dd>
 
 <dt>Analyse et consolidation des journaux d'audit</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBM Security QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. {{site.data.keyword.Bluemix_notm}} utilise également les informations de sécurité et la gestion des événements (SIEM) d'IBM QRadar pour surveiller
-les tentatives de connexion, réussies ou
+<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBM Security QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. {{site.data.keyword.Bluemix_notm}}
+utilise également les outils SIEM (gestion des événements et des informations de sécurité) d'IBM QRadar pour surveiller les tentatives de connexion,
+réussies ou
 non, des développeurs d'applications.</dd>
 
 <dt>Gestion de l'accès utilisateur</dt>
@@ -174,7 +187,7 @@ principe du moindre privilège.
 Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
 gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Voir
-[Gestion de {{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng) pour des détails.
+[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng) pour des détails. 
 </dd>
 </dl>
 
@@ -255,35 +268,10 @@ Le service Single Sign On prend en charge plusieurs sources d'identité dans les
 
 Pour plus d'informations, voir [Initiation à Single Sign On](../services/SingleSignOn/index.html).
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-Ce service fournit une analyse de sécurité des applications mobiles Android. Pour l'utiliser, vous devez télécharger une appli Android compilée sous la forme d'un fichier APK. Lorsque l'analyse de sécurité est terminée, vous pouvez télécharger un rapport.
-
-Pour plus d'informations, voir [Initiation à AppScan Mobile Analyzer](../services/AppScanMobileAnalyzer/index.html).
-
-### AppScan Dynamic Analyzer
-
-Ce service fournit une analyse de sécurité des applications Web via un outil d'analyse dynamique. Celui-ci fonctionne sur l'appli Web déployée et non sur le code source ; il peut analyser toute appli Web {{site.data.keyword.Bluemix_notm}}, quelque soit son langage ou sa technologie. Vous pouvez analyser uniquement les applications des organisations dont vous faites partie. Pour créer une analyse, vous devez configurer l'adresse URL de l'appli Web et, le cas échéant, les justificatifs d'identité pour l'ouverture de session. Lorsque l'analyse est terminée, vous pouvez télécharger un rapport.
-
-Pour plus d'informations, voir [Initiation à AppScan Dynamic
-Analyzer](../services/AppScanDynamicAnalyzer/index.html).
-
-### Mobile Analyzer for iOS (bêta)
-
-Le service Mobile Analyzer for iOS permet l'analyse de sécurité dynamique AppScan pour les applications mobiles iOS. Il permet d'identifier les problèmes de sécurité dans vos applications
-mobiles iOS.
-
-Pour plus d'informations, voir [Initiation à Mobile Analyzer for iOS](../services/AppScanIOS/index.html).
-
-### Static Analyzer (bêta)
-
-Le service Static Analyzer permet de tester la sécurité d'application statique dans le cloud. Il vous aide à détecter les vulnérabilités du code source tôt dans le cycle de vie de développement logiciel pour que vous puissiez y remédier avant le
-déploiement.
-
-Static Analyzer vous permet d'analyser le code Java et le contenu Web Java via l'interface de ligne de commande sur votre disque local. De plus, vous pouvez exécuter un petit programme d'installation qui ajoute les plug-in Static Analyzer à Eclipse ou Maven. Vous pouvez vous servir de l'utilitaire client pour analyser et rassembler des informations sur vos fichiers dans un fichier archive que vous
-envoyez ensuite au cloud pour les résultats d'analyse.
-
-Pour plus d'informations, voir [Initiation à IBM Static Analyzer for Bluemix](../services/StaticAnalyzer/index.html).
+Ce service fournit une analyse de sécurité des applications mobiles et Web et vous permet d'analyser le code source afin d'identifier d'éventuelles
+vulnérabilités en matière de sécurité. Pour plus d'informations, voir [Initiation à Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in IBM UrbanCode pour le test de la sécurité des applications
 
@@ -299,8 +287,8 @@ Le service SQL Database ajoute une base de données relationnelle complète à v
 pour l'authentification et IBM InfoSphere® Guardium® Data Activity Monitor pour protéger la base de données à laquelle accèdent des applications. La connexion entre les applications et la base de données est
 protégée par le certificat SSL que DigiCert signe.
 
-Dans certains plans incluant ce service, vous pouvez utiliser la console de base de données SQL dans {{site.data.keyword.Bluemix_notm}} afin
-d'obtenir des rapports contenant les informations suivantes :
+Dans certains plans incluant ce service, vous pouvez utiliser la console de base de données
+SQL dans {{site.data.keyword.Bluemix_notm}} afin d'obtenir des rapports contenant les informations suivantes :
 
  * Les données sensibles qui peuvent exister dans la base de données à laquelle des applications accèdent.
  * Les utilisateurs de l'application qui ont accédé à la base de données au cours d'une période spécifique.
@@ -339,11 +327,11 @@ distants, sur site ou dans le cloud. Il assure la connectivité et établit un t
 l'emplacement distant auquel vous voulez vous connecter. Vous pouvez configurer et créer une passerelle sécurisée en utilisant l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}} ou un package d'API.
 
-Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/index.html).
+Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/secure_gateway.html).
 
-### Gestion des événements et sécurité des systèmes d'informations
+### Gestion des événements et des informations de sécurité 
 
-Vous pouvez utiliser les outils SIEM (gestion des événements et sécurité des systèmes d'informations) pour analyser les alertes de sécurité dans les
+Vous pouvez utiliser les outils SIEM (gestion des événements et des informations de sécurité) pour analyser les alertes de sécurité dans les
 journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Déploiement de la sécurité {{site.data.keyword.Bluemix_notm}}
@@ -379,7 +367,7 @@ de l'entreprise.
     3. Via le routeur réseau.
     4. Via l'autorisation avec le contrôleur de cloud Cloud Foundry, pour assurer l'accès uniquement aux applications et aux instances de service qui sont
 créées par le développeur.
-  
+
 Pour les *administrateurs* de l'environnement {{site.data.keyword.Bluemix_notm}} dédié et de l'environnement
 {{site.data.keyword.Bluemix_notm}} local, le **flux d'un administrateur** est le suivant :
  1. Via un pare-feu, avec prévention contre les intrusions et sécurité du réseau.
@@ -395,7 +383,7 @@ physique et des analyses au sein de votre pare-feu.
  * Le renforcement du système d'exploitation en appliquant des correctifs régulièrement avec IBM Endpoint Manager.
  * La gestion des risques avec protection contre les intrusions.
  * La surveillance de la sécurité avec QRadar.
- * La mise à disposition de rapports de sécurité dans la console d'administration.
+ * La génération de rapports de sécurité disponibles dans la page Administration. 
 
 ## Conformité en matière de sécurité
 {: #compliance}
@@ -409,8 +397,8 @@ SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=
 ![Financial Industry Information Systems (FISC)](images/FISC.gif) Pour les institutions bancaires et financières au Japon, les systèmes informatiques doivent avoir mis en place des procédures de sécurité, en accord avec les directives de sécurité établies par le FISC (Center for Financial Industry Information Systems). Les directives de sécurité du **FISC** sont imposées par l'agence japonaise FSA (Financial Services Agency), la banque BOJ (Bank of Japan) et le FISC.
 
 Vous pourrez trouver un document d'auto-évaluation {{site.data.keyword.Bluemix_notm}} correspondant aux directives en matière de sécurité du FISC, écrit en langue japonaise, sur le site [IBM Bluemix risk survey results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
- 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié aux **normes ISO (International Organization for Standardization) 27001 et 27002**, qui définissent le code de bonne pratique pour les processus de management de la sécurité de l'information. La norme ISO 27001 spécifie les exigences en matière d'établissement, de mise en oeuvre et de documentation des systèmes de management de la sécurité de l'information (SMSI) et les exigences relatives à la mise en oeuvre des contrôles de sécurité, en fonction des besoins des organisations individuelles. La norme ISO 27002 explique en détail chaque contrôle de sécurité de la norme ISO 27001. La famille de normes ISO 27000 intègre un processus d'évaluation des risques et d'estimation des ressources, dans le but de protéger la confidentialité, l'intégrité et l'accessibilité des informations écrites, orales et électroniques. 
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié aux **normes ISO (International Organization for Standardization) 27001 et 27002**, qui définissent le code de bonne pratique pour les processus de management de la sécurité de l'information. La norme ISO 27001 spécifie les exigences en matière d'établissement, de mise en oeuvre et de documentation des systèmes de management de la sécurité de l'information (SMSI) et les exigences relatives à la mise en oeuvre des contrôles de sécurité, en fonction des besoins des organisations individuelles. La norme ISO 27002 explique en détail chaque contrôle de sécurité de la norme ISO 27001. La famille de normes ISO 27000 intègre un processus d'évaluation des risques et d'estimation des ressources, dans le but de protéger la confidentialité, l'intégrité et l'accessibilité des informations écrites, orales et électroniques.
 
 {{site.data.keyword.Bluemix_notm}} fait l'objet d'un audit par une firme indépendante et répond à toutes les exigences de la norme ISO 27001 : [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
 
@@ -419,57 +407,31 @@ Vous pourrez trouver un document d'auto-évaluation {{site.data.keyword.Bluemix_
   * Programme de gestion des fournisseurs
   * Processus internes de gouvernance d'entreprise et de gestion des risques
   * Régime réglementaire de surveillance
- 
+
 {{site.data.keyword.Bluemix_notm}} utilise les services cloud d'IBM SoftLayer Infrastructure-as-a-Service (IaaS) et bénéficie de tous les avantages de leur architecture de sécurité. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
 
-## Rapports de sécurité
-{: #reports}
+### Conformité de la plateforme et des services 
+Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.Bluemix_notm}} qui sont conformes à chaque norme. 
 
-Avec l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié,
-{{site.data.keyword.Bluemix_notm}} génère divers rapports de sécurité et journaux que vous pouvez afficher via la page Administration. Pour des instructions d'affichage et d'utilisation des rapports, voir [Affichage des rapports](../admin/index.html#oc_report).
+|Composants {{site.data.keyword.Bluemix_notm}}		|FISC		|ISO 27001	|SOC 2 Type 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|Plateforme {{site.data.keyword.Bluemix_notm}} 		|O			|O	|O	|
+|{{site.data.keyword.APIM}}			|O	|O |			|
+|{{site.data.keyword.autoscaling}}			|O	|O |			|
+|{{site.data.keyword.bigicloudst}}			|O |O |O |
+|{{site.data.keyword.cloudant}}				|O |O |O	|
+|{{site.data.keyword.dashdbshort}}			|O	|O	|O	|
+|{{site.data.keyword.datacshort}}			|O	|O	|			|
+|{{site.data.keyword.jazzhub_short}}					|O	|O	|			|
+|{{site.data.keyword.containerlong}}			|O		|O	|			|
+|{{site.data.keyword.mql}}				|O	|O	|	 		|
+|{{site.data.keyword.SecureGateway}}			|O	|O |	 		|
+|{{site.data.keyword.sescashort}}     |O |O | |
 
-Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
-local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
+*Tableau 1. Conformité de la plateforme et des services*
 
-| **Catégorie** | **Rapport** | **Description** |      
-|-----------------|-------------------|---------------------|
-| Pare-feu | Connexions au pare-feu | Evénements liés à la connexion de l'administrateur aux unités de pare-feu Vyatta. |
-| Pare-feu | Refus du pare-feu | Evénements générés par les unités de pare-feu Vyatta lorsqu'une demande d'accès est refusée selon les règles de
-pare-feu appliquées. |
-| Evénements de connexion d'administrateur {{site.data.keyword.Bluemix_notm}} | Connexion des
-administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système d'exploitation lorsqu'un administrateur démarre une
-session SSH sur chaque système {{site.data.keyword.Bluemix_notm}}. |
-| Evénements de connexion de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Connexion
-des développeurs d'applications {{site.data.keyword.Bluemix_notm}} | Evénements générés par le composant
-de connexion à la plateforme {{site.data.keyword.Bluemix_notm}} lorsqu'un utilisateur de la plateforme {{site.data.keyword.Bluemix_notm}}
-démarre une session via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
-| Evénements d'administration d'administrateur {{site.data.keyword.Bluemix_notm}} | Evénements
-d'administration du système d'exploitation des administrateurs {{site.data.keyword.Bluemix_notm}} | Evénements générés par le système
-d'exploitation lorsqu'un administrateur effectue une action dans une session de travail en cours. |
-| Evénements d'administration de développeur d'applications {{site.data.keyword.Bluemix_notm}} | Evénements
-d'administration (Cloud Foundry) {{site.data.keyword.Bluemix_notm}} | Evénements liés aux opérations effectuées par l'utilisateur de la plateforme
-{{site.data.keyword.Bluemix_notm}} via la ligne de commande, les API REST ou l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. |
-| Evénements d'administration de base de données d'administrateur {{site.data.keyword.Bluemix_notm}} | Evénements d'administration de base
-de données | Evénements liés aux opérations effectuées par un administrateur de base de données sur les bases de données internes
-{{site.data.keyword.Bluemix_notm}}. |
-| Evénements d'administration | Evénements de gestion des utilisateurs | Evénements liés aux actions de gestion des utilisateurs effectuées dans la page
-Administration. |
-| Evénements d'administration | Catalogue | Evénements liés aux modifications du catalogue des services. |
-| Evénements d'administration | Evénements de gestion des rapports de sécurité | Evénements liés aux actions de gestion des rapports de sécurité effectuées
-dans la page Administration. |
-| Révisions d'accès | Rapport sur les révisions d'accès | Révisions pour les accès privilégiés. |
-| Gestion des modifications | Gestion des modifications logicielles | Activité de gestion des modifications. |
-| Gestion des clés | Gestion des certificats SSL personnalisés | Certifications SSL personnalisées qui ont été téléchargées et stockées. |
-| Chiffrement | Chiffrement des données en transit | Chiffrement des données en transit configuré. |
-| Antivirus | Rapport d'analyse antivirus | Logiciel antivirus installé. |
-| Gestion des correctifs logiciels | Rapport d'application des correctifs | Correctifs logiciels appliqués. |
-| Gestion des incidents de sécurité | Rapport de résolution des incidents de sécurité | Preuve des incidents de sécurité pour la gestion des
-incidents de sécurité. |
-
-*Tableau 1. Liste des rapports de sécurité pour l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement
-{{site.data.keyword.Bluemix_notm}} dédié*
 
 # rellinks
-## general 
+## general
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [Initiation à Single Sign On](../services/SingleSignOn/index.html)
