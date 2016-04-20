@@ -1,10 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última atualização: 8 de dezembro de 2015*  
+*Última atualização: 23 de março de 2016*  
 
 Se você estiver construindo um aplicativo Node.js, será possível usar o {{site.data.keyword.Bluemix}} Live Sync para atualizar rapidamente a instância do aplicativo no {{site.data.keyword.Bluemix_notm}} e desenvolver da forma usual na área de trabalho sem reimplementar.   
 {: shortdesc} 
@@ -51,9 +62,10 @@ O Desktop Sync tem as considerações a seguir:
 * Não importa o tipo de aplicativo que você está desenvolvendo, é possível sincronizar seu projeto de desktop com a área de trabalho de nuvem. 
 * Se seu aplicativo for gravado em Node.js, será possível propagar as mudanças para aplicativos em execução.
 
-Para obter mais detalhes sobre os comandos, consulte a [doc da CLI do Bluemix Live Sync](../cli/reference/bl/index.html). 
+Para obter mais detalhes sobre os comandos, consulte [Comandos do Bluemix Live Sync (bl)](bluemixlive.html#bl-commands). 
 
 <ol>
+<li>Inscreva-se para uma conta grátis do <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a>.</li>
 <li>Faça download e instale a linha de comandos bl do {{site.data.keyword.Bluemix_notm}} Live Sync.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Fazer download do botão da linha de comandos bl do Windows" /> </a>
@@ -61,6 +73,7 @@ Para obter mais detalhes sobre os comandos, consulte a [doc da CLI do Bluemix Li
 </p>  
 
 <strong>Importante:</strong> a ferramenta de linha de comandos bl está disponível somente para Windows 7 e 8 e Mac OS X versão 10.9 ou posterior. </li>
+
 <li>Em uma linha de comandos, efetue login usando o comando a seguir. Você será solicitado a fornecer o ID e a senha IBM.  
 <pre class="codeblock">bl login</pre>
 </li>
@@ -193,6 +206,425 @@ Envie por push o app e, em seguida, procure em `https://app-host.mybluemix.net/b
 
 3. Envie por push o app.
 
+## Comandos do {{site.data.keyword.Bluemix_notm}} Live Sync (bl)  {: #bl-commands}
+
+Se você estiver construindo um aplicativo Node.js, será possível usar o {{site.data.keyword.Bluemix_live}} para
+atualizar rapidamente a instância do aplicativo em execução no {{site.data.keyword.Bluemix_notm}} e
+desenvolver da mesma forma como faria na área de trabalho sem reimplementar. Quando você
+fizer uma mudança, será possível ver essa mudança no aplicativo {{site.data.keyword.Bluemix_notm}} em execução
+imediatamente. A interface da linha de comandos do {{site.data.keyword.Bluemix_live}} é chamada de *bl*.
+{:shortdesc}
+
+É possível usar os comandos da interface de linha de comandos **bl** para concluir as tarefas a seguir:
+
+* Inicie e pare um aplicativo que esteja em execução no {{site.data.keyword.Bluemix_notm}}.
+* Crie um novo projeto baseado em nuvem a partir de sua área de trabalho.
+* Mudanças de sincronização a partir de sua área de trabalho para a área de trabalho do projeto baseada em nuvem e para o aplicativo em execução no {{site.data.keyword.Bluemix_notm}}.
+* Consulte a lista de projetos disponíveis para sincronização.
+* Consulte o status dos aplicativos em execução.
+
+Para obter informações adicionais sobre download e uso do comando bl, veja [Bluemix Live Sync](../develop/bluemixlive.html).
+
+## Comandos bl
+
+A linha de comandos do {{site.data.keyword.Bluemix_live}}, **bl**, tem a sintaxe a seguir:
+
+```
+comando bl [argumentos][options] [--help]
+```
+
+### Comandos
+<dl>
+<dt>login, l</dt>
+<dd>Efetue login no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>logout, lo</dt>
+<dd>Efetue logout do usuário.</dd>
+<dt>sync, s</dt>
+<dd>Inicie o processo de sincronização entre a área de trabalho e o servidor.</dd>
+<dt>create, c</dt>
+<dd>Crie um projeto privado, vincule-o ao Git repo nesse diretório
+e implemente o conteúdo no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>projects, p</dt>
+<dd>Liste todos os projetos que estão disponíveis para sincronização.</dd>
+<dt>start, st</dt>
+<dd>Inicie a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>stop, sp</dt>
+<dd>Pare a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>status, ss</dt>
+<dd>Liste o status da instância do aplicativo em execução no {{site.data.keyword.Bluemix_notm}}.</dd>
+</dl>
+
+### Argumentos
+<dl>
+<dd>Argumentos para o comando.</dd>
+</dl>
+
+### Opções
+<dl>
+<dd>Opções para o comando.</dd>
+</dl>
+
+### Opções globais
+<dl>
+<dt>--help</dt>
+<dd>Exiba a página de ajuda para o comando especificado</dd>
+<dt>--verbose</dt>
+<dd>Ative a criação de log detalhado.</dd>
+</dl>
+
+**Nota:** Se qualquer um de seus argumentos ou opções contiver um espaço, coloque o valor entre aspas duplas.
+
+## help
+
+```
+bl [ command ] --help
+```
+
+### Uso
+<dl>
+<dd>Use esse comando para exibir a ajuda sobre um comando ou a lista de comandos.</dd>
+</dl>
+
+### Exemplos
+
+O comando a seguir exibe a lista de comandos:
+
+`'bl --help'`
+
+O comando a seguir exibe as informações detalhadas sobre o comando sync:
+
+`'bl sync --help'`
+
+## login
+
+`'bl login|l [ -u username ][-p password ][ -s server ]'`
+
+### Propósito
+
+Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log precisa ser feito somente uma vez por sessão.
+
+**Aviso:** é desaconselhável fornecer sua senha como uma opção da linha de comandos, pois estará visível para terceiros e registrada como parte de seu histórico de comandos.
+
+**Nota:** deve-se fazer a inscrição para uma conta grátis do <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> antes de efetuar login.
+
+### Opções
+
+<dl>
+<dt>-u username</dt>
+<dd>Seu ID IBM a ser usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt>-p password</dt>
+<dd>Sua senha de ID IBM.</dd>
+<dt>-s server</dt>
+<dd>O nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}.</dd>
+</dl>
+
+### Exemplos
+
+Esse comando solicita um *username* e um *password*:
+
+`'bl login'`
+
+Este comando efetua login do usuário `name@company.com:`
+
+`'bl login –u name@company.com –p pa55w0rd'`
+
+Este comando efetua login do usuário `name@company.com` com a senha pa55 w0rd que contém um espaço, portanto, ela precisa de aspas:
+
+`'bl login –u name@company.com –p “pa55 w0rd”'`
+
+## logout
+
+```
+bl logout|lo
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para efetuar logout.</dd>
+</dl>
+
+## Projetos
+
+```
+bl projects|p
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para listar todos os projetos disponíveis para sincronização pelo usuário com login efetuado.</dd>
+</dl>
+
+## sync
+
+```
+bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para iniciar a sincronização do conteúdo de um projeto com seu diretório local. Esse comando é executado
+até que um <code>q</code> seja inserido. Esse comando pode opcionalmente mostrar um log de todas as mudanças
+de estado do aplicativo e do arquivo.</dd>
+</dl>
+
+### Argumento
+
+<dl>
+<dt>projectName</dt>
+<dd>O nome do projeto no formato <i>“alias | mproject”</i> ou apenas
+<i>myproject</i>, se o projeto for de propriedade do usuário com login efetuado.</dd>
+</dl>
+
+### Opções
+
+<dl>
+<dt>-d localDirectory</dt>
+<dd>Caminho do diretório local. Usa como padrão a pasta atual ".".</dd>
+<dt>--overwritelocal</dt>
+<dd>Sobrescreva o diretório local com conteúdo da área de trabalho do projeto.</dd>
+<dt>--overwriteremote</dt>
+<dd>Sobrescreva a área de trabalho do projeto com o conteúdo do diretório local.</dd>
+<dt>--verbose</dt>
+<dd>Exiba a criação de log detalhado.</dd>
+</dl>
+
+### Exemplos
+
+Este comando inicia a sincronização com o projeto associado, se o diretório atual for um
+destino de sincronização existente. Se o diretório atual estiver vazio e não for um destino de sincronização existente, o comando solicitará um *projectName*. Se o diretório atual não estiver vazio e
+não for um destino de sincronização existente, uma opção de sobrescrita será necessária.
+
+```
+bl sync
+```
+
+Esse comando inicia a sincronização e é equivalente a
+```bl sync “alias | myproject”```
+se o projeto é propriedade do usuário que efetuou login.
+
+```bl sync  myproject```
+
+Este
+comando inicia a sincronização com o projeto <code>my pro ject</code> cujo nome contém espaços; portanto,
+ele é colocado entre aspas:
+
+```bl sync “my pro ject”```
+
+Este comando inicia a sincronização do projeto <code>myproject</code> com o diretório myfolder:
+
+```bl sync myproject –d  myfolder```
+
+## create
+
+```
+bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+
+### Propósito
+<dl>
+<dd>Use esse comando a partir de um diretório que contém o código para criar um
+projeto privado, vincule-o ao Git repo e implemente o conteúdo do repo
+no {{site.data.keyword.Bluemix_notm}}.</dd>
+</dl>
+
+### Opções
+
+<dl>
+<dt>-n PROJECT_NAME</dt>
+<dd>Um nome para seu projeto. Padrão: nome dir atual.</dd>
+<dt>-r REGION</dt>
+<dd>Uma região do {{site.data.keyword.Bluemix_notm}}. Padrão: Sul EUA</dd>
+<dt>-o ORG</dt>
+<dd>Uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: Primeiro org localizado.</dd>
+<dt>-s SPACE</dt>
+<dd>Um espaço do {{site.data.keyword.Bluemix_notm}}. Parão: primeiro espaço localizado.</dd>
+<dt>-g GIT_REPO</dt>
+<dd>Nome do repo remoto a ser usado para quaisquer Git repos existentes. Padrão: origem.</dd>
+<dt>-e GIT_EXE</dt>
+<dd>Caminho completo para um executável Git. Padrão: detectado.</dd>
+<dt>--creds</dt>
+<dd>Prompt para credenciais Git.</dd>
+<dt>--fork</dt>
+<dd>Bifurque esse diretório e crie um projeto e repo.</dd>
+<dt>--public</dt>
+<dd>Torne o novo projeto público.</dd>
+<dt>--prompt</dt>
+<dd>Solicita todas as opções necessárias com as opções disponíveis.</dd>
+</dl>
+
+### Exemplos
+
+Esse comando inicia o processo para criar um projeto privado e
+solicita um nome do projeto a ser usado.
+
+```bl create```
+
+Esse
+comando cria um projeto público denominado <code>myNewProject</code>.
+
+```bl create -n myNewProject --public```
+
+## status
+
+```
+bl status|ss [ projectName ]
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para listar o status dos aplicativos que estão associados às configurações de ativação no diretório <code>./launchConfigurations</code>.</dd>
+</dl>
+
+###Argumento
+
+<dl>
+<dt>projectName</dt>
+<dd>O nome do projeto no formato “alias | myproject” ou myproject apenas se o projeto for de propriedade do usuário com login efetuado.</dd>
+</dl>
+
+### Exemplos
+
+Este exemplo exibe o status dos aplicativos em execução. Se o diretório atual for um destino de sincronização
+existente, ele usará o projeto associado. Se o diretório atual não for um destino de sincronização existente,
+o comando solicitará o <i>projectName</i>.
+
+````bl status```
+
+Este exemplo exibe o status do projeto myproject que é equivalente a
+```bl status “alias | myproject”```
+se o projeto é propriedade do usuário que efetuou login.
+
+```bl status myproject```
+
+Este
+exemplo exibe o status do aplicativo em execução que é associado ao projeto <code>my pro ject</code> cujo
+nome contém espaços; portanto, ele é colocado entre aspas:
+
+```bl status “my pro ject”```
+
+## start
+
+```
+bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para iniciar a instância do aplicativo que é descrita pela ativação ou arquivo manifest. O aplicativo
+é ativado no modo de edição em tempo real, por padrão, se o buildpack do aplicativo suportar edição em tempo real. Assim
+que é iniciado, as URLs para o aplicativo, as ferramentas de depuração e o painel do {{site.data.keyword.Bluemix_notm}}
+são exibidos.</dd>
+</dl>
+
+### Argumento
+
+<dl>
+<dt>projectName</dt>
+<dd>O nome do projeto no formato <i>“alias | myproject”</i> ou apenas <i>myproject</i>,
+se o projeto for de propriedade do usuário com login efetuado.</dd>
+</dl>
+
+### Opções
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>O nome da configuração de ativação (por exemplo, <code>mylaunchconfig</code>), nome do arquivo (por exemplo,
+<code>mylaunchconfig.launch</code> ou um caminho relativo ao projeto para o arquivo de configuração de ativação
+(por exemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
+<dt>-m manifestPath</dt>
+<dd>O caminho relativo ao projeto para o arquivo manifest (por exemplo, <code>manifest.yml</code>).</dd>
+<dt>--liveedit</dt>
+<dd>Inicie o aplicativo associado no modo de edição em tempo real ou saia com um erro, se o
+buildpack não suportar o modo de edição em tempo real.</dd>
+<dt>--noliveedit</dt>
+<dd>Inicie o aplicativo associado no modo normal.</dd>
+<dt>--view</dt>
+<dd>Abra um navegador do aplicativo em execução.</dd>
+<dt>--restart</dt>
+<dd>Reinicie um aplicativo já em execução no modo de edição em tempo real sem reimplementá-lo.</dd>
+</dl>
+
+### Exemplos
+
+Esse comando inicia uma instância do aplicativo de <code>myproject</code> associada ao arquivo de ativação
+<code>launchConfigurations/my.launch</code>.
+
+```bl start myproject –l “launchConfigurations/my.launch”```
+
+Esse
+comando inicia uma instância do aplicativo do projeto que é associado ao diretório atual com o arquivo de ativação
+<code>launchConfigurations/my.launch</code>. Se o diretório atual não for um destino de sincronização, um erro
+será exibido.
+
+```bl start –l “launchConfigurations/my.launch” ```
+
+Esse
+comando inicia uma instância do aplicativo do projeto que é associada ao diretório atual
+com arquivo manifest <code>manifest.yml</code>. As informações especificadas no manifest
+são usadas para criar um novo arquivo de configuração de ativação. O comando solicita as
+informações necessárias restantes e, em seguida, inicia o aplicativo descrito pela
+configuração de ativação:
+
+```bl start –m “mymanifest.yml” ```
+
+Esse
+comando inicia uma instância do aplicativo do projeto que é associada ao diretório atual
+com arquivo manifest <code>manifest.yml</code> e é equivalente a
+```bl start –m manifest.yml```.
+
+```bl start```
+
+## stop
+
+```
+bl stop|sp projectName [ -l launchConfiguration ]
+```
+
+### Propósito
+
+<dl>
+<dd>Use esse comando para parar a instância do aplicativo que é associada ao arquivo de ativação.</dd>
+</dl>
+
+### Argumento
+
+<dl>
+<dt>projectName</dt>
+<dd>O nome do projeto no formato “alias | mproject” ou mproject apenas se o projeto for de propriedade do usuário com login efetuado.</dd>
+</dl>
+
+### Opções
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>O nome da configuração de ativação (por exemplo, <code>mylaunchconfig</code>), nome do arquivo (por exemplo,
+<code>mylaunchconfig.launch</code> ou um caminho relativo ao projeto para o arquivo de configuração de ativação
+(por exemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
+</dl>
+
+### Exemplos
+
+Este comando para o aplicativo, se o diretório atual for um destino de sincronização; caso contrário,
+sairá com um erro. Se não houver configurações de ativação, esse comando sairá com um erro. Se houver mais de uma
+configuração de ativação, o comando solicitará que você forneça uma para parar.
+
+```bl stop```
+
+Esse
+comando para uma instância do aplicativo do projeto que está sendo executada com o arquivo de ativação <code>mylaunchConfig</code>.
+
+```bl stop myproject –l “mylaunchConfig” ```
+
+Esse comando para o aplicativo se o diretório
+atual for um destino de sincronização do projeto associado que foi iniciado com o arquivo de ativação
+<code>launchConfigurations/mylaunchconfig.launch</code>; caso contrário, ele sairá com um erro:
+
+```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
 
 ># Links Relacionados {:class="linklist"}
 >## Tutoriais e Amostras {:id="samples"}
@@ -200,6 +632,6 @@ Envie por push o app e, em seguida, procure em `https://app-host.mybluemix.net/b
 >
 ># Links Relacionados {:class="linklist"}
 >## links relacionados {:id="general"}
->* [Comandos bl](https://www.ng.bluemix.net/docs/cli/bl_cli.html)   
+>* [Ferramentas Eclipse para o Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
 >
 >{:elementKind="article" id="rellinks"}

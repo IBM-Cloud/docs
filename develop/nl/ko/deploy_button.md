@@ -1,12 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #{{site.data.keyword.Bluemix_notm}}에 배치 단추 작성 {: #deploy-button} 
 
-*마지막 업데이트 날짜: 2016년 1월 19일* 
+*마지막 업데이트 날짜: 2016년 3월 2일* 
 
 {{site.data.keyword.Bluemix}}에 배치 단추는 다른 사람들이 코드를 사용해 보고 IBM {{site.data.keyword.Bluemix_notm}}에 배치할 수 있도록 공용 Git 소스 앱을 공유하는 효과적인 방법입니다. 이 단추를 사용하려면 최소한의 구성이 필요하며 마크업을 지원하는 모든 위치에 이 단추를 삽입할 수 있습니다. 사용자가 이 단추를 클릭하면 원래 앱이 영향을 받지 않도록 새 Git 저장소에 복제된 코드 사본이 작성됩니다. 
 {: shortdesc} 
@@ -31,11 +43,11 @@
 4. 앱에 빌드 파일이 필요한 경우 빌드 파일이 자동으로 검색되어 앱이
 빌드됩니다. 
 
-5. 앱에 컨테이너가 필요한 경우,
-**IBM Container Service**를 정의하는 `pipeline.yml`과
-이미지를 정의하는 Dockerfile이 앱을 {{site.data.keyword.Bluemix_notm}} 컨테이너에 배치하는 데 사용됩니다. 
+5. 빌드 및 배치 프로세스에 대해 파이프라인이 구성되어 있으면 `pipeline.yml` 파일이 앱을 배치하는 데 사용됩니다.
 
-6. 앱이 사용자의 {{site.data.keyword.Bluemix_notm}} 조직에 배치됩니다. 
+6. 앱에 컨테이너가 필요한 경우, **IBM Containers** 서비스를 정의하는 `pipeline.yml`과 이미지를 정의하는 Dockerfile이 앱을 {{site.data.keyword.Bluemix_notm}} 컨테이너에 배치하는 데 사용됩니다. 
+
+7. 앱이 사용자의 {{site.data.keyword.Bluemix_notm}} 조직에 배치됩니다. 
 
 ##단추 예 {: #button-examples} 
 
@@ -188,21 +200,20 @@ Manifest 파일을 사용하여 다음을
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> - 출력을 <code>./target/</code> 폴더에 빌드합니다.</li>
 	   </ul>
 	</li>	
-	<li><stong>IBM Container Service</strong>를 사용하여 컨테이너에 앱을 배치할 경우,
-저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다. 
-	<ul>
-	    <li> Dockerfile 작성에 대해 자세히 알아보려면 Docker 문서를 참조하십시오. </li>
-	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. <code>pipeline.yml</code>을 수동으로 작성하려면 <a href="https://github.com/Puquios/" target="_blank">GitHub의 예를 참조</a>하십시오. {{site.data.keyword.jazzhub_short}} 프로젝트로부터 pipeline.yml 파일을 작성하고 이를 저장소에 추가하려면 다음 단계를 완료하십시오.
+	<li>프로젝트의 파이프라인을 구성하려면 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시키십시오. <code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. {{site.data.keyword.jazzhub_short}} 프로젝트로부터 pipeline.yml 파일을 작성하고 이를 저장소에 추가하려면 다음 단계를 완료하십시오.
 <ol>
 <li>브라우저에서 DevOps Services 프로젝트를 열고 <b>빌드 및 배치</b>를 클릭하십시오.</li>
-<li><b>IBM Container Service</b> 빌드 및 배치 작업과 함께 파이프라인을
-구성하십시오.</li>
+<li>빌드 및 배치 작업과 함께 파이프라인을 구성하십시오.</li>
 <li>브라우저에서 <code>/yaml</code>을 프로젝트 파이프라인 URL에 추가하고 Enter를 누르십시오. 
 <br>예: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>결과 <code>pipeline.yml</code> 파일을 저장하십시오.</li>
 <li>프로젝트의 루트 디렉토리에서 <code>.bluemix</code> 디렉토리를 작성하십시오.</li>
 <li><code>pipeline.yml</code> 파일을 <code>.bluemix</code> 저장소에 업로드하십시오.</li>
 </ol> </li>
+	<li><stong>IBM Containers</strong>를 사용하여 컨테이너에 앱을 배치하는 경우, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
+	<ul>
+	    <li> Dockerfile 작성에 대해 자세히 알아보려면 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 문서를 참조</a>하십시오.</li>
+	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. 특히 컨테이너에 대한 <code>pipeline.yml</code>을 수동으로 작성하려면 <a href="https://github.com/Puquios/" target="_blank">GitHub의 예를 참조</a>하십시오.</li>
         </ul>
 
  </li>
@@ -211,5 +222,4 @@ Manifest 파일을 사용하여 다음을
 
 문제점 해결 도움말은
 [Bluemix에
-배치 단추로 앱이 배치되지 않는 경우](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}를 참조하십시오.	
-
+배치 단추로 앱이 배치되지 않는 경우](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	

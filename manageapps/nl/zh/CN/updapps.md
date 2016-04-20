@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #更新应用程序
 {: #updatingapps}
 
-*上次更新时间：2015 年 12 月 8 日*
+*上次更新时间：2016 年 3 月 17 日*
 
 
 您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
@@ -18,8 +26,6 @@
 您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
 
 域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在公共 DNS 服务器上注册定制域，在 {{site.data.keyword.Bluemix_notm}} 中配置定制域，然后将定制域映射到公共 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
-
-**注：**可以使用 **nslookup** 命令来获取 {{site.data.keyword.Bluemix_notm}} 系统域的公共 IP 地址。例如，在命令提示符处，输入 `nslookup mybluemix.net`。
 
 可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面在 {{site.data.keyword.Bluemix_notm}} 中创建并使用定制域。
 
@@ -35,7 +41,7 @@
   
     1. 在 {{site.data.keyword.Bluemix_notm}} **仪表板**的菜单栏上，单击要添加路径的应用程序的磁贴。这将显示“**概述**”页面。
 	
-	2. 在“**概述**”页面上的应用程序菜单中，单击**编辑路径和应用程序访问权**。
+	2. 在**概述**页面上的应用程序菜单中，单击**编辑路径和应用程序访问权**。
 	
 	3. 单击**添加路径**，然后指定要用于应用程序的路径。
 	
@@ -73,6 +79,15 @@
     
         要用于应用程序的路径中的主机名。
 	
+在 {{site.data.keyword.Bluemix_notm}} 中配置定制域后，必须将该定制域映射到您注册的 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域：
+
+  1. 为 DNS 服务器上的定制域名设置“CNAME”记录。
+  2. 将定制域名映射到运行应用程序的 {{site.data.keyword.Bluemix_notm}} 区域的安全端点。使用以下区域端点来提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径：
+  
+    * US-SOUTH：`secure.us-south.bluemix.net`
+    * EU-GB：`secure.eu-gb.bluemix.net`
+    * AU-SYD：`secure.au-syd.bluemix.net`
+  
 在浏览器或命令行界面中，输入以下 URL 来访问 myapp 应用程序：
 
 ```
@@ -110,7 +125,7 @@ cf delete-route domain -n hostname -f
   cf push Blue
   ```
   
-  **结果：***Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
+  **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
   
 2. 使用 **cf rename** 命令将 *Blue* 应用程序重命名为 *Green*：
   
@@ -127,7 +142,7 @@ cf delete-route domain -n hostname -f
   ...
   ```
   
-  **结果：***Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
+  **结果：**该 *Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
 
 3. 进行必要的更改，并使更新的 *Blue* 版本准备就绪。将更新的 *Blue* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
@@ -147,7 +162,7 @@ cf delete-route domain -n hostname -f
   
   **结果：**
     * 应用程序的两个实例已部署：*Blue* 和 *Green*。
-	* *Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
+	* 该 *Green* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
 	
 4. 可选：如果想要删除应用程序的旧版本 (*Green*)，请使用 **cf delete** 命令。
   
@@ -164,7 +179,7 @@ cf delete-route domain -n hostname -f
   ...
   ```
   
-  **结果：***Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。
+  **结果：**该 *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。
   
 ###示例：使用 cf map-route 命令
 
@@ -176,7 +191,7 @@ cf delete-route domain -n hostname -f
   cf push Blue
   ```
   
-  **结果：***Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
+  **结果：**该 *Blue* 应用程序正在运行，并且正在响应 URL `Blue.mybluemix.net`。
   
 2. 进行必要的更改，并使 *Green* 版本准备就绪。将 *Green* 应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
   
@@ -197,7 +212,7 @@ cf delete-route domain -n hostname -f
   **结果：**
   
     * 应用程序的两个实例已部署：*Blue* 和 *Green*。
-	* *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。*Green* 应用程序正在响应 URL `Green.mybluemix.net`。
+	* 该 *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。*Green* 应用程序正在响应 URL `Green.mybluemix.net`。
 	
 3. 将 *Blue* 应用程序映射到 *Green* 应用程序，让 `Blue.mybluemix.net` 的所有流量路由到 *Blue* 应用程序和 *Green* 应用程序。
   
@@ -266,6 +281,5 @@ cf delete-route domain -n hostname -f
 
 # 相关链接
 ## 常规 
-* [组织和空间](../acctmgmt/index.html#organdspaces)
 * [蓝绿部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

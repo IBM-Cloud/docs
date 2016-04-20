@@ -1,9 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# CLI プラグイン
-*最終更新日: 2015 年 11 月 10 日*
+# Cloud Foundry コマンド・ライン・インターフェース・プラグイン
 
-ご使用の {{site.data.keyword.Bluemix_short}} コマンド・ライン・インターフェースをプラグインによって拡張します。IBM® Containers for Bluemix 用 CLI を選択して、コンテナー管理のためのオプションをさらに取得します。dev_mode CLI を追加することで、アプリの実行中も開発を続けることができます。{:shortdesc}
+*最終更新日: 2016 年 2 月 2 日*
+
+[CLI プラグイン・リポジトリー](http://plugins.{DomainName}/){: new_window}で入手可能な Cloud Foundry コマンド・ライン・インターフェース (cf cli) プラグインをインストールして使用できます。各プラグインは、バイナリー・ファイル名、開発者が定義したプラグイン名、およびそのプラグインが提供するコマンドによって識別されます。バイナリー・ファイル名は、プラグインのインストールにのみ使用できます。その他のアクションにはすべて、プラグイン名またはコマンドを使用します。
+{:shortdesc}
+

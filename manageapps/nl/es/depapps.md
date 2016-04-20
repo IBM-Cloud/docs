@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Despliegue de apps
 {: #deployingapps}
 
-*Última actualización: 4 de diciembre de 2015*
+*Última actualización: 17 de marzo de 2016*
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -18,7 +26,7 @@ El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases
 
 ###Transferencia de una app
 
-Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte Arquitectura de [{{site.data.keyword.Bluemix_notm}}, Cómo funciona {{site.data.keyword.Bluemix_notm}}](../overview/index.html#ov_arch).
+Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte Arquitectura de [{{site.data.keyword.Bluemix_notm}}, Cómo funciona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch). 
 
 Durante el proceso de transferencia, el DEA comprueba si el paquete de compilación coincide con la app. Por ejemplo, un tiempo de ejecución de Liberty para un archivo .war o un tiempo de ejecución Node.js para archivos .js. El DEA crea a continuación un contenedor aislado que contiene el paquete de compilación y el código de app. El componente
 Warden es el encargado de gestionar el contenedor. Para obtener más información, consulte [Cómo se transfieren las apps](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
@@ -32,7 +40,7 @@ logs** utiliza el agregador de registros de Cloud Foundry para recopilar detalle
 
 **Nota:** El tamaño del almacenamiento intermedio está limitado. Si una app se ejecuta durante mucho rato y no se reinicia, es posible que no se muestren registros cuando se especifique `cf logs nombreapp --recent` ya que puede que el almacenamiento intermedio de registros se haya borrado. Por lo tanto, para depurar errores de transferencia de una app grande, puede especificar `cf logs nombreapp` en una línea de mandatos que no sea la interfaz de línea de mandatos cf para efectuar un seguimiento de los registros cuando despliegue la app.
 
-Si tiene problemas para transferir sus apps en {{site.data.keyword.Bluemix_notm}}, siga los pasos del apartado [Depuración de errores de transferencia](../troubleshoot/debugging.html#debug_stgerr) para solucionar el problema.
+Si tiene problemas para transferir sus apps en {{site.data.keyword.Bluemix_notm}}, siga los pasos del apartado [Depuración de errores de transferencia](../debug/index.html#debugging-staging-errors) para solucionar el problema.
 
 ##Despliegue de apps mediante el mandato cf
 {: #dep_apps}
@@ -43,7 +51,7 @@ Cuando despliegue sus apps en {{site.data.keyword.Bluemix_notm}} desde la interf
 
 Si utiliza un paquete de compilación externo, debe especificar el URL del paquete de compilación mediante la opción **-b** cuando despliegue la app en {{site.data.keyword.Bluemix_notm}} desde el indicador de mandatos.
 
-  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
+  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente, desde su directorio de origen: 
   
   ```
   cf push
@@ -54,7 +62,7 @@ Si utiliza un paquete de compilación externo, debe especificar el URL del paque
   * Para desplegar apps Java Tomcat en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
   ```
-  cf push nombre_app -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * Para desplegar paquetes WAR en {{site.data.keyword.Bluemix_notm}},
@@ -72,7 +80,7 @@ utilice el mandato siguiente:
   * Para desplegar apps Node.js en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
   ```
-  cf push nombre_app
+  cf push appname -p app_path
   ```
   
 A
@@ -119,7 +127,7 @@ Una app es específica del espacio en el que se ha desplegado. No puede mover ni
   cf target -s <nombre_espacio>
   ```
   
-  2. Despliegue la app con el mandato **cf push**, donde nombre_app debe ser exclusivo dentro del dominio.
+  2. Acceda al directorio de la app y despliéguela con el mandato **cf push**, donde nombre_app debe ser exclusivo dentro del dominio. 
   
   ```
   cf push nombre_app
@@ -190,9 +198,9 @@ Las variables de entorno contienen información sobre el entorno de una app desp
 
 Puede ver las siguientes variables de entorno de una app {{site.data.keyword.Bluemix_notm}} en ejecución
 mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keyword.Bluemix_notm}}:
-
+	
   * Variables definidas por el usuario específicas para una app. Para obtener información sobre cómo añadir una variable definida por el usuario a una app, consulte [Cómo añadir variables de entorno definidas por el usuario](#ud_env){:new_window}.
-	  
+	 
   * La variable VCAP_SERVICES, que contiene la información de conexión para acceder a una instancia de servidor. Si su app está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio. Por ejemplo:
   
   ```
@@ -241,11 +249,11 @@ mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keywor
   }
   ```
         
-Puede acceder a las variables de entorno definidas por el DEA y los paquetes de compilación.
+También tiene acceso a las variables de entorno establecidas por DEA y los paquetes de compilación. 
 
-<ul>
-<li>Las siguientes variables están definidas por el DEA:
-  <dl>
+Las siguientes variables están definidas por el DEA:
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>El directorio raíz de la app desplegada.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -323,11 +331,12 @@ Puede acceder a las variables de entorno definidas por el DEA y los paquetes de 
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>Las variables definidas por un paquete de compilación varían según cada paquete de compilación. Consulte [Paquetes de compilación](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} para conocer los paquetes de compilación compatibles.
+</dl>
 
-    <li>Variables que define el paquete de compilación de Liberty:
+Las variables definidas por un paquete de compilación varían según cada paquete de compilación. Consulte [Paquetes de compilación](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} para conocer los paquetes de compilación compatibles.
+
+<ul>
+    <li>Las variables siguientes están definidas por el paquete de compilación de Liberty:
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -342,8 +351,8 @@ Puede acceder a las variables de entorno definidas por el DEA y los paquetes de 
 	  <dd>La ubicación de las salidas que se generen como archivos de registro y directorios de trabajo de una instancia de servidor de un perfil de Liberty en ejecución.</dd>
 	  </dl>
 </li>   
-<li>Variables que define el paquete de compilación de Node.js:
-	<dl>
+<li>Las variables siguientes están definidas por el paquete de compilación de Node.js: 	
+	  <dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>El directorio del entorno de ejecución de Node.js.</dd>
 	<dt><strong>CACHE_DIR</strong></dt>
@@ -354,7 +363,16 @@ Puede acceder a las variables de entorno definidas por el DEA y los paquetes de 
 </li>
 </li>
 </ul>	
-	
+
+Puede utilizar el código de ejemplo siguiente de Node.js para obtener el valor de la variable de entorno VCAP_SERVICES: 
+
+```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 Para obtener más información sobre cada variable de entorno, consulte el apartado [Variables de entorno de Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Personalización de despliegues de apps
@@ -373,7 +391,7 @@ Para especificar mandatos de inicio para la app, puede utilizar uno de los sigui
 app Node.js, puede especificar el mandato de inicio **node app.js** en el parámetro -c:
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * Utilice el parámetro command del archivo `manifest.yml`. Por ejemplo, cuando despliegue una app Node.js, puede especificar el mandato de inicio **node app.js** en el archivo de manifiesto:
@@ -382,8 +400,7 @@ app Node.js, puede especificar el mandato de inicio **node app.js** en el parám
   command: node app.js
   ```
   
-  
-  
+
 ### Cómo añadir variables de entorno definidas por el usuario
 {: #ud_env}
 
@@ -406,9 +423,14 @@ Las variables de entorno definidas por el usuario son específicas para una apli
       VAR2:value2
     ```
 	
+Tras añadir una variable de entorno definida por el usuario, puede usar el código de ejemplo Node.js siguiente para obtener el
+valor de la variable que ha definido: 
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### Configuración del entorno de arranque
 
 Para configurar el entorno de arranque para la app, puede añadir scripts de shell en el directorio `/.profile.d`. El directorio `/.profile.d` está bajo el directorio build de la app. {{site.data.keyword.Bluemix_notm}} ejecuta los scripts del directorio `/.profile.d` antes de que se ejecute la app. Por ejemplo, puede establecer la variable de entorno NODE_ENV en **production** colocando un archivo `node_env.sh` con el siguiente contenido bajo el directorio `/.profile.d`:

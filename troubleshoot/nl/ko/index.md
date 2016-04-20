@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-*마지막 업데이트 날짜: 2015년 1월 6일*
+*마지막 업데이트 날짜: 2016년 3월 15일*
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한
 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
@@ -303,7 +309,7 @@ nslookup stage1.mybluemix.net
 
 애플리케이션 관리와 관련된 일반적인 문제점으로는 애플리케이션을
 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 경우가 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
 {:shortdesc}
 
 
@@ -336,7 +342,7 @@ nslookup stage1.mybluemix.net
 해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
  * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오. 
- * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 관리](../acctmgmt/index.html#mngorg){: new_window}를 참조하십시오.
+ * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 관리](../admin/adminpublic.html#orgmng){: new_window}를 참조하십시오.
  
 
  
@@ -373,9 +379,7 @@ process.env.VCAP_SERVICES
 ## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없음
 {: #ts_bm_tools_facet}
 
-지원되지 않는 패싯이 Eclipse 프로젝트에 적용되는 경우
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여
-사용자 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다. 
+지원되지 않는 패싯이 Eclipse 프로젝트에 적용되는 경우 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 사용자 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다. 
 
  
 
@@ -384,28 +388,21 @@ Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 �
 
  
 
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}는
-프로젝트 패싯 단위로 {{site.data.keyword.Bluemix_notm}} 런타임에 프로젝트를 맵핑합니다. 패싯은 Eclipse에서
-Java EE 프로젝트의 요구사항을 정의하고, 서로 다른 런타임이 서로 다른 프로젝트와 연관될 수 있도록 런타임 구성의 일부로 사용됩니다. IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 지원하지 않는 프로젝트에 패싯이 적용되는 경우,
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없습니다.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}는 프로젝트 패싯 단위로 {{site.data.keyword.Bluemix_notm}} 런타임에 프로젝트를 맵핑합니다. 패싯은 Eclipse에서 Java EE 프로젝트의 요구사항을 정의하고, 서로 다른 런타임이 서로 다른 프로젝트와 연관될 수 있도록 런타임 구성의 일부로 사용됩니다. IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 지원하지 않는 프로젝트에 패싯이 적용되는 경우, IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없습니다.
 {: tsCauses}
 
 
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 있으려면
-Eclipse 프로젝트에서 패싯을 제거해야 합니다.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 있으려면 Eclipse 프로젝트에서 패싯을 제거해야 합니다.
 {: tsResolve} 
 
-패싯을 제거하려면 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서
-프로젝트에 대해 **프로젝트>특성>프로젝트 패싯**을 클릭하십시오. 그런 다음 지원되지 않는 패싯의 선택란을 선택 취소하십시오. 
+패싯을 제거하려면 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 프로젝트에 대해 **프로젝트>특성>프로젝트 패싯**을 클릭하십시오. 그런 다음 지원되지 않는 패싯의 선택란을 선택 취소하십시오. 
 
 
 
 ## 502 잘못된 게이트웨이 오류가 수신됨
 {: #ts_502_error}
 
-{{site.data.keyword.Bluemix_notm}}에서
-앱과 상호작용할 때 502 잘못된 게이트웨이 오류가 수신되면 {{site.data.keyword.Bluemix_notm}}
-상태 페이지를 확인한 후 적절하게 조치를 취하십시오.
+{{site.data.keyword.Bluemix_notm}}에서 앱과 상호작용할 때 502 잘못된 게이트웨이 오류가 수신되면 {{site.data.keyword.Bluemix_notm}} 상태 페이지를 확인한 후 적절하게 조치를 취하십시오.
 
  
 
@@ -414,36 +411,21 @@ Eclipse 프로젝트에서 패싯을 제거해야 합니다.
 
  
 
-잘못된 게이트웨이 오류는
-사이트를 호스팅하는 기본 서버의 데이터를 저장하고 릴레이하기 위해
-프록시 서버를 사용하는 웹 사이트를 방문할 때 일반적으로 발생합니다. 기본 서버와 프록시 서버가 제대로 연결되지 않았을 수 있으므로
-브라우저 창에 HTTP 상태 코드 502가 표시됩니다. 이 상태 코드는
-사이트의 기본 서버가 프록시 서버로부터 예상한 HTTP 구현을 수신하지
-않았음을 나타냅니다.
+잘못된 게이트웨이 오류는 사이트를 호스팅하는 기본 서버의 데이터를 저장하고 릴레이하기 위해 프록시 서버를 사용하는 웹 사이트를 방문할 때 일반적으로 발생합니다. 기본 서버와 프록시 서버가 제대로 연결되지 않았을 수 있으므로 브라우저 창에 HTTP 상태 코드 502가 표시됩니다. 이 상태 코드는 사이트의 기본 서버가 프록시 서버로부터 예상한 HTTP 구현을 수신하지 않았음을 나타냅니다.
 {: tsCauses}
 
-잘못된 게이트웨이 오류의 덜 일반적인
-기타 원인은 ISP(Internet Service Provider) 드롭아웃, 잘못된 방화벽
-구성 및 브라우저 캐시 오류입니다. 
+잘못된 게이트웨이 오류의 덜 일반적인 기타 원인은 ISP(Internet Service Provider) 드롭아웃, 잘못된 방화벽 구성 및 브라우저 캐시 오류입니다. 
 
  
 
-{{site.data.keyword.Bluemix_notm}} 서비스가
-작동 중지되었다고 의심하는 경우에는 먼저 [{{site.data.keyword.Bluemix_notm}} 상태](https://developer.ibm.com/bluemix/support/#status){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로
-사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](../services/reqnsi.html#cross_region_service){: new_window}에서
-확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여
-문제를 해결하십시오. 
+{{site.data.keyword.Bluemix_notm}} 서비스가 작동 중지되었다고 의심하는 경우에는 먼저 [{{site.data.keyword.Bluemix_notm}} 상태](https://developer.ibm.com/bluemix/support/#status){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](../services/reqnsi.html#cross_region_service){: new_window}에서 확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여 문제를 해결하십시오.
 {: tsResolve}
 
   * 조치 재시도:
-    * 키보드에서 F5를 누르거나 새로 고치기 단추를 클릭하여 페이지를
-다시 로드하십시오. 이 단계가 작동하지 않는 경우에는 브라우저의 캐시 및
-쿠키를 지운 후 다시 로드하십시오.
+    * 키보드에서 F5를 누르거나 새로 고치기 단추를 클릭하여 페이지를 다시 로드하십시오. 이 단계가 작동하지 않는 경우에는 브라우저의 캐시 및 쿠키를 지운 후 다시 로드하십시오.
 	* 다른 브라우저를 사용하십시오.
-	* 라우터, 모뎀 및 컴퓨터를 다시 부팅하십시오. 이 디바이스를 다시 부팅하면
-오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다. 
-  * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는
-{{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
+	* 라우터, 모뎀 및 컴퓨터를 다시 부팅하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다. 
+  * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
   * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 센터에 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오. 
 
 
@@ -457,23 +439,15 @@ Eclipse 프로젝트에서 패싯을 제거해야 합니다.
 
   
 
-디스크 공간이 부족하면
-디스크 할당량이 초과되었다는 메시지가 표시됩니다. 이 문제점을 해결하기 위해
-앱 인스턴스를 확장하여 추가 디스크 공간을 얻도록 시도했을 수 있습니다. 예를 들어, 앱 세부사항 페이지에서 메모리 할당량을 변경하여 256MB에서 1256MB로
-확장했을 수 있습니다. 하지만 디스크 할당량은 동일하게 유지되었기 때문에
-추가 디스크 공간을 얻지 못했습니다. 
+디스크 공간이 부족하면 디스크 할당량이 초과되었다는 메시지가 표시됩니다. 이 문제점을 해결하기 위해 앱 인스턴스를 확장하여 추가 디스크 공간을 얻도록 시도했을 수 있습니다. 예를 들어, 앱 세부사항 페이지에서 메모리 할당량을 변경하여 256MB에서 1256MB로 확장했을 수 있습니다. 하지만 디스크 할당량은 동일하게 유지되었기 때문에 추가 디스크 공간을 얻지 못했습니다.
 {: tsSymptoms}
 
 
-하나의 앱에 대해 할당되는 기본 디스크 할당량은
-1GB입니다. 추가 디스크 공간이 필요한 경우에는 디스크 할당량을 수동으로
-지정해야 합니다. 
+하나의 앱에 대해 할당되는 기본 디스크 할당량은 1GB입니다. 추가 디스크 공간이 필요한 경우에는 디스크 할당량을 수동으로 지정해야 합니다.
 {: tsCauses}
 
  
-다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는
-[오브젝트 저장소](../services/ObjectStorage/index.html){: new_window} 등의
-외부 서비스를 사용해 보십시오.
+다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](../services/ObjectStorage/index.html){: new_window} 등의 외부 서비스를 사용해 보십시오.
 {: tsResolve}
 
   * manifest.yml 파일에서 다음 항목을 추가하십시오.
@@ -483,7 +457,7 @@ Eclipse 프로젝트에서 패싯을 제거해야 합니다.
   * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때
 **-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -529,8 +503,7 @@ Chrome](https://support.google.com/chrome/answer/95647){: new_window}
 ## Android 앱이 푸시 알림을 받을 수 없음
 {: #ts_push}
 
-Google이 액세스할 수 없는 특정 지역의 Android 앱은
-IBM 푸시 서비스를 통해 사용자가 전송하는 알림을 수신할 수 없습니다. 이 경우에는 써드파티 서비스를 임시 해결책으로 사용할 수 있습니다.
+Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM 푸시 서비스를 통해 사용자가 전송하는 알림을 수신할 수 없습니다. 이 경우에는 써드파티 서비스를 임시 해결책으로 사용할 수 있습니다.
 
  
 
@@ -539,17 +512,11 @@ Bluemix 앱을 위한 푸시 서비스를 바인딩하고 등록된 디바이스
 {: tsSymptoms}
 
  
-IBM 푸시 서비스는
-GCM(Google Cloud Messaging) 서비스를 사용하여 알림을 Android 플랫폼에서
-개발되는 모바일 앱에 디스패치합니다. Android 앱이 알림을 수신하도록
-설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수
-있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는
-Android 앱이 푸시 알림을 수신할 수 없습니다.
+IBM 푸시 서비스는 GCM(Google Cloud Messaging) 서비스를 사용하여 알림을 Android 플랫폼에서 개발되는 모바일 앱에 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 푸시 알림을 수신할 수 없습니다.
 {: tsCauses}
 
  
-GCM 서비스에 의존하지 않는 써드파티 서비스를
-임시 해결책으로 사용하십시오(예: [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window}, [jpush](https://www.jpush.cn/){: new_window}).
+GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책으로 사용하십시오(예: [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window}, [jpush](https://www.jpush.cn/){: new_window}).
 {: tsResolve}
 
 
@@ -557,98 +524,70 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를
 ## 조직의 서비스 한계가 초과됨
 {: #ts_servicelimit}
 
-평가판 계정 사용자인 경우 조직의 서비스 한계를 초과하면
-{{site.data.keyword.Bluemix_notm}}에서 애플리케이션을
-작성할 수 없습니다.
+평가판 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성할 수 없습니다.
  
 
-{{site.data.keyword.Bluemix_notm}}에서
-애플리케이션을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다. 
+{{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
 `BXNUI2032E: <service_instances> 자원이 작성되지 않았습니다. 자원을 작성하기 위해 Cloud Foundry에 접속하는 동안 오류가 발생했습니다. Cloud Foundry 메시지: "조직의 서비스 한계를 초과했습니다."`
 
 
 
-이 오류는
-사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과한 경우에 발생합니다. 평가판 계정의 최대 서비스 인스턴스 수는 10입니다.
+이 오류는 사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과한 경우에 발생합니다. 평가판 계정의 최대 서비스 인스턴스 수는 10입니다.
 {: tsCauses} 
 
  
 
-필요하지 않은 서비스 인스턴스를
-삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
+필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
 {: tsResolve}
  
-  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스 또는 명령행 인터페이스를 사용할 수 있습니다.
-    {{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를
-수행하십시오.
-	  1. {{site.data.keyword.Bluemix_notm}} 대시보드의 왼쪽 분할창에서 **서비스**를 클릭하십시오. 서비스 타일이
-표시됩니다. 
+  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 명령행 인터페이스를 사용할 수 있습니다.
+    {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
+	  1. {{site.data.keyword.Bluemix_notm}} 대시보드의 왼쪽 분할창에서 **서비스**를 클릭하십시오. 서비스 타일이 표시됩니다. 
 	  2. 삭제하려는 서비스 타일에서 **메뉴** 아이콘을 클릭하십시오.
-	  3. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 삭제한 후에는
-서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징하라는 메시지가
-표시됩니다. 
-    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면
-다음 단계를 수행하십시오.
-	  1. `cf unbind-service <appname> <service_instance_name>`을
-입력하여 애플리케이션에서 서비스 인스턴스의 바인드를 해제하십시오.
-	  2. `cf delete-service <service_instance_name>`을 입력하여
-서비스 인스턴스를 삭제하십시오.
-	  3. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`을
-입력하여 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징할 수 있습니다.
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로
-변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](../acctmgmt/bill_usage.html#bil_plan){: new_window}을
-참조하십시오.
+	  3. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 삭제한 후에는 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징하라는 메시지가 표시됩니다.
+    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
+	  1. `cf unbind-service <appname> <service_instance_name>`을 입력하여 애플리케이션에서 서비스 인스턴스의 바인드를 해제하십시오.
+	  2. `cf delete-service <service_instance_name>`을 입력하여 서비스 인스턴스를 삭제하십시오.
+	  3. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`을 입력하여 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징할 수 있습니다.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [플랜 변경 방법](../pricing/index.html#changing){: new_window}을 참조하십시오.
 
   
   
-## {{site.data.keyword.Bluemix_notm}}에서
-실행 파일을 실행할 수 없음
+## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
 
-실행 파일이 다른 환경에서 개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서
-실행할 수 없습니다. 
+실행 파일이 다른 환경에서 개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다. 
 
  
 
-실행 파일이 다른 환경에서
-개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서
-실행할 수 없습니다.
+실행 파일이 다른 환경에서 개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다.
 {: tsSymptoms}
 
  
 
-{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우 이미 빌드되었으므로
-{{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서
-실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 그러나 빌드팩이 필요하지 않음을
-{{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
+{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우 이미 빌드되었으므로 {{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 그러나 빌드팩이 필요하지 않음을 {{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
 {: tsCauses}
 
  
 
-실행 파일을
-{{site.data.keyword.Bluemix_notm}}로 푸시할 때
-빌드팩이 필요하지 않음을 나타내는 null-buildpack을 지정해야 합니다. null-buildpack을 지정하려면 **-b** 옵션을 `cf push`
-명령과 함께 사용하십시오.
+실행 파일을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 빌드팩이 필요하지 않음을 나타내는 null-buildpack을 지정해야 합니다. null-buildpack을 지정하려면 **-b** 옵션을 `cf push` 명령과 함께 사용하십시오.
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 예:
-```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+    ```
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리
-할당량을 늘릴 수 있습니다. 
+평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 
 
 
 
@@ -668,8 +607,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve} 
 
-  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](../acctmgmt/bill_usage.html#bil_plan){: new_window}을
-참조하십시오. 
+  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](../pricing/index.html#pay-accounts){: new_window}을 참조하십시오. 
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스를 사용하십시오.
     {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션을 선택하십시오. 앱 세부사항 페이지가 열립니다.
@@ -682,7 +620,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	     cf 앱 명령은 현재 영역에 배치된 앱을 모두 나열합니다. 각 앱의 상태도 표시됩니다.
       2. 앱에서 사용하는 메모리의 양을 줄이려면 앱 인스턴스 수 또는 최대 메모리 한계를 줄이거나 둘 다 줄이십시오.
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. 변경사항이 적용되도록 앱을 다시 시작하십시오.
 
@@ -702,8 +640,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 
 
 
-이 동작은 Cloud Foundry의
-의도된 동작입니다.
+이 동작은 Cloud Foundry의 의도된 동작입니다.
 {: tsCauses} 
 
  
@@ -712,7 +649,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 또한 가동 중단, 예외, 연결 실패 등의 문제점을 식별하고 이러한 문제점에서 복구하도록 앱을 코딩할 수 있습니다. 
 
@@ -724,19 +661,16 @@ cf push <appname>
 앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 Manifest 파일에 변수를 저장하지 않으면 지정한 값이 재설정됩니다.
 
 
-
 앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시한 후 지정한 변수가 손실됩니다.
 {: tsSymptoms} 
 
 
-지정한 변수는
-Manifest 파일에 저장한 경우에만 저장됩니다.
+지정한 변수는 Manifest 파일에 저장한 경우에만 저장됩니다.
 {: tsCauses} 
 
  
 
-앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 애플리케이션 마법사의 애플리케이션 세부사항 페이지에서 **Manifest 파일에 저장** 선택란을 선택하십시오. 그러면 마법사에서 지정한 변수가 애플리케이션의 Manifest 파일에
-저장됩니다. 다음에 마법사를 열면 변수가 자동으로 표시됩니다.
+앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 애플리케이션 마법사의 애플리케이션 세부사항 페이지에서 **Manifest 파일에 저장** 선택란을 선택하십시오. 그러면 마법사에서 지정한 변수가 애플리케이션의 Manifest 파일에 저장됩니다. 다음에 마법사를 열면 변수가 자동으로 표시됩니다.
 {: tsResolve}
 
 
@@ -756,20 +690,16 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
 다음과 같은 경우 이 아이콘을 사용할 수 없습니다.
 {: tsCauses}
 
-  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에
-저장되지 않았습니다.
-  * 앱이 프로젝트의 최상위 레벨이 아닌 서브디렉토리에 저장되었지만, 이 서브디렉토리의
-경로가 `manifest.yml` 파일에 지정되어 있지 않습니다.
+  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에 저장되지 않았습니다.
+  * 앱이 프로젝트의 최상위 레벨이 아닌 서브디렉토리에 저장되었지만, 이 서브디렉토리의 경로가 `manifest.yml` 파일에 지정되어 있지 않습니다.
   * 앱에 `package.json` 파일이 없습니다.
 
 
 다음 방법 중 하나를 사용하여 문제점을 해결하십시오. 
 {: tsResolve} 
 
-  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에
-저장되지 않은 경우 여기에 저장하십시오.
-  * 앱이 서브디렉토리에 저장된 경우 `manifest.yml` 파일에
-서브디렉토리의 경로를 지정하십시오.
+  * `manifest.yml` 파일이 프로젝트의 최상위 레벨에 저장되지 않은 경우 여기에 저장하십시오.
+  * 앱이 서브디렉토리에 저장된 경우 `manifest.yml` 파일에 서브디렉토리의 경로를 지정하십시오.
   ```
    path: path_to_application
    ```
@@ -787,9 +717,7 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
 ## {{site.data.keyword.Bluemix_notm}}에서 조직을 찾을 수 없음
 {: #ts_orgs}
 
-{{site.data.keyword.Bluemix_notm}} 지역에서 작업할 때
-{{site.data.keyword.Bluemix_notm}}에서
-조직을 찾을 수 없습니다.
+{{site.data.keyword.Bluemix_notm}} 지역에서 작업할 때 {{site.data.keyword.Bluemix_notm}}에서 조직을 찾을 수 없습니다.
   
  
 
@@ -821,8 +749,7 @@ Cloud Foundry Eclipse 플러그인을 사용하여
 
    
   
-cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 cf api 명령을 입력하고 지역의 API 엔드포인트를 지정하십시오. 예를 들어 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}}
-유럽 영국 지역에 연결하십시오.
+cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 cf api 명령을 입력하고 지역의 API 엔드포인트를 지정하십시오. 예를 들어 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하십시오.
 {: tsResolve}
 
 ```
@@ -834,7 +761,7 @@ Eclipse 도구를
 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의
 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는
 [IBM Eclipse Tools
-for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}를 참조하십시오.
+for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html){: new_window}를 참조하십시오.
   
   
 
@@ -871,7 +798,7 @@ for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.
   * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf
 push` 명령을 **-n** 옵션과 함께 사용하십시오. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -982,7 +909,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
   * 다음 방법 중 하나로 시작 명령을 지정하십시오. 
       * cf 명령행 인터페이스를 사용하십시오. 예: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * [package.json](https://docs.npmjs.com/json){: new_window} 파일을 사용하십시오. 예를 들어, 다음과 같습니다.
 	    ```
@@ -1087,7 +1014,7 @@ for Java를 사용하여 앱 작성](../starters/liberty/index.html#liberty){: n
 
  
 
-이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](../manageapps/deployingapps.html#appmanifest){: new_window}를 참조하십시오.
+이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](../manageapps/depapps.html#appmanifest){: new_window}를 참조하십시오.
 {: tsResolve}	
 	
 
@@ -1120,7 +1047,7 @@ Meteor 앱에 대해 사용자 정의 빌드팩을 사용하려면 다음 방법
   ```
   * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf push` 명령을 사용하되 **-b** 옵션을 사용하여 사용자 정의 빌드팩을 지정하십시오. 예:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 	
   
@@ -1258,7 +1185,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 {: #managingaccounts}
 
 계정을 관리할 때 여러 앱이 동일한 도메인 이름을 공유하거나 관리자가 일부 조직을 볼 수 없는 것과 같은 문제점이 발생할 수 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
 {:shortdesc}
 
 
@@ -1375,7 +1302,8 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 # 런타임 문제점 해결
 {: #runtimes}
 
-IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니다. 그러나 대부분의 경우
+몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
 {:shortdesc}
 
 
@@ -1413,11 +1341,11 @@ IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니
   ```
   3. 다음 명령을 사용하여 캐시를 삭제하기 위해 수정한 널 빌드팩으로 앱을 푸시합니다. 이 단계를 완료하고 나면 앱의 캐시 디렉토리에 있는 모든 컨텐츠가 삭제됩니다.
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 다음 명령을 사용하여 사용할 최신 빌드팩으로 앱을 푸시합니다. 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	
@@ -1516,7 +1444,8 @@ Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로
 
  
 
-이 문제점은 다음과 같은 이유로 발생합니다.
+이 문제점은 다음과 같은 이유로
+발생합니다.
 {: tsCauses}
 
   * 애플리케이션이 Java™ 웹 애플리케이션이 아닙니다. RMU(Runtime Management Utilities)에서는 Liberty 빌드팩을 사용하여 배치된 웹 애플리케이션만

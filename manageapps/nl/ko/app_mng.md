@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#App Management
+#Liberty 및 Node.js 앱 관리
 {: #app_management}
 
-*마지막 업데이트 날짜: 2015년 12월 8일*
+*마지막 업데이트 날짜: 2016년 3월 17일*
 
 App Management는 {{site.data.keyword.Bluemix}}에서
 Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버깅 유틸리티 세트입니다. {:shortdesc}
@@ -65,12 +73,6 @@ Liberty 및 Node.js 애플리케이션에 사용할 수 있는 개발 및 디버
   또한 *inspector* 유틸리티는 *프록시*를 시작하지 않습니다.
   
   2. *strongpm*: [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}에서 [StrongLoop 메트릭, 프로파일링 및 추적](https://strongloop.com/node-js/devops-tools/){:new_window} 등의 유틸리티를 사용하여 Node.js 애플리케이션을 분석할 수 있도록 합니다. 
-  
-  **참고:** **strongpm** 유틸리티를 사용하려면 engines.node의 0.12 버전을 사용해야 합니다. engines.node 버전은 package.json 파일에 지정됩니다. 예:
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   또한 *strongpm* 유틸리티는 *프록시*를 시작하지 않습니다.
   

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Monitoramento e criação de log
 {: #monitoringandlogging}
 
-*Última atualização: 8 de dezembro de 2015*
+*Última atualização: 27 de janeiro de 2016*
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
 {:shortdesc}
@@ -37,7 +45,11 @@ Analytics](../services/monana/index.html).
 ##Criação de log para apps em execução no Cloud Foundry
 {: #logging_for_bluemix_apps}
 
-Os arquivos de log são criados automaticamente quando se está usando a infraestrutura do Cloud Foundry para executar seus apps no {{site.data.keyword.Bluemix_notm}}. É possível visualizar os logs a partir do Painel do {{site.data.keyword.Bluemix_notm}} ou da interface de linha de comandos cf. Também é possível filtrar os logs para ver as partes em que você está interessado.
+Os arquivos de log são criados automaticamente quando se está usando a infraestrutura do Cloud Foundry para executar seus apps no {{site.data.keyword.Bluemix_notm}}. Ao encontrar erros em qualquer estágio de implementação no tempo de execução, é possível verificar os logs para obter pistas que podem ajudar a resolver seu problema.
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###Formato do Log
 {: #log_format}
@@ -110,21 +122,34 @@ Toda entrada de log contém quatro campos. Consulte a lista a seguir para obter 
 ###Visualizando logs
 {: #viewing_logs}
 
-É possível usar o Painel do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos para visualizar logs.
+É possível visualizar os logs para seus apps do Cloud Foundry em três locais:
 
-####VISUALIZANDO LOGS A PARTIR DO PAINEL DO {{site.data.keyword.Bluemix_notm}}
+  * [O Painel do {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
+  * [Interface da Linha de Comandos](#viewing_logs_cli){:new_window}
+  * [Hosts de logs externos](#thirdparty_logging){:new_window}
 
-Para ver os logs de **Implementação** ou de **Tempo de execução**, conclua as etapas a seguir:
-1. Clique no quadrado do app. A página de detalhes do app é exibida.
+#### Visualizando logs do Painel do
+{{site.data.keyword.Bluemix_notm}}
+{: #viewing_logs_UI}
+
+Para ver os logs de implementação ou de tempo de execução, conclua as etapas a seguir:
+1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no quadro de seu app no Painel. A página de detalhes do app é exibida.
 2. Na barra de navegação à esquerda, clique em **Logs**.
 
-####VISUALIZANDO LOGS A PARTIR DA INTERFACE DA LINHA DE COMANDOS
+No console de **Logs**, é possível visualizar os logs recentes para seu app ou acompanhar logs em tempo real. Além disso, é possível filtrar logs por tipo de log e canal.
+
+**Notas:** logs não são persistidos entre travamentos e implementações de apps.
+
+
+
+#### Visualizando logs a partir da interface da linha de comandos
+{: #viewing_logs_cli}
 
 Escolha entre as opções a seguir para visualizar logs a partir da interface da linha de comandos:
 
 <ul>
 <li>Ajustando logs ao implementar apps.
-<p>Use o comando **cf logs** para exibir logs a partir de seu app e dos componentes do sistema que interagem com ele durante a implementação de apps no {{site.data.keyword.Bluemix_notm}}. É possível digitar os comandos a seguir na interface de linha de comandos cf. Para obter informações adicionais sobre logs cf, consulte [Tipos de log e suas mensagens em Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
+<p>Use o comando **cf logs** para exibir logs a partir de seu app e dos componentes do sistema que interagem com ele durante a implementação de apps no {{site.data.keyword.Bluemix_notm}}. É possível digitar os comandos a seguir na interface de linha de comandos cf. Para obter informações adicionais sobre cf logs, consulte <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Tipos de log e suas mensagens no Cloud Foundry</a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Exibir logs do passado recente.</dd>
@@ -169,6 +194,9 @@ tarefa de preparação. É possível usar esse log para solucionar problemas de 
 
 **Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](../troubleshoot/debugging.html#debug_runtime).
 
+
+
+
 ###Filtrando logs
 {: #filtering_logs}
 
@@ -186,46 +214,85 @@ cf logs appname --recent | grep '\[App'
 ```
 Para obter mais informações sobre a opção **grep**, digite `grep --help`.
 
-###Configurando a criação de log de terceiro
+
+
+### Configurando hosts de logs externos
 {: #thirdparty_logging}
 
 O {{site.data.keyword.Bluemix_notm}} mantém
 uma quantia limitada de informação de log na memória. Quando as informações são
-registradas, as informações antigas são substituídas pelas informações mais novas. Para manter todas as informações do log, é possível salvar os logs em um serviço de
-gerenciamento de log de terceiro.
+registradas, as informações antigas são substituídas pelas informações mais novas. Para manter todas as informações de log, é possível salvar seus logs em um host de log externo, como um serviço de gerenciamento de log de terceiro ou outro host.
 
-Para mover logs do aplicativo e do sistema para
-um serviço de gerenciamento de log de terceiro, conclua as etapas a seguir:
+Para mover logs de seu app e do sistema para um host de log externo, conclua as etapas a seguir:
 
-1. Registre um serviço de gerenciamento de log de terceiro.
-    
-    É
-possível usar qualquer serviço de gerenciamento de log de terceiro que suporte o [protocolo
-syslog](http://tools.ietf.org/html/rfc5424){:new_window}, como Papertail, Splunk Storm, SumoLogic e Logentries. Registre um serviço de gerenciamento de log de terceiro e, em seguida, configure o
-serviço para fornecer um destino para os logs no {{site.data.keyword.Bluemix_notm}}. Depois que a configuração é concluída, o serviço geralmente fornece uma URL do syslog como o destino para seus logs no {{site.data.keyword.Bluemix_notm}}. Para obter
-informações sobre como configurar serviços de gerenciamento de log de terceiro,
-consulte [Configurando serviços de gerenciamento de log de terceiro selecionados](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
+  1. Determine o terminal de criação de log. 
+     
+	 É possível enviar logs a um agregador de log de terceiro, como Papertrail, Splunk ou Sumologic. Também é possível enviar logs a um host de syslog, um host de syslog criptografado com TLS (Segurança da camada de transporte) ou um terminal HTTPS POST. Os métodos para obter terminais de criação de log variam para diferentes hosts de logs.
 
-2. Crie uma instância de serviço fornecida pelo usuário.
-	
-	Para
-mover logs no {{site.data.keyword.Bluemix_notm}} para
-o serviço de gerenciamento de log de terceiro, deve-se primeiro criar uma instância de serviço
-fornecida pelo usuário. Use o comando a seguir para criar uma instância de serviço fornecida pelo usuário, em que service_name é o nome da instância de serviço fornecida pelo usuário e syslog_URL é a URL obtida do serviço de criação de log de terceiros.
-	
-	```
-	cf create-user-provided-service <service_name> -l <syslog_URL>
-	```
-	
-3. Ligue a instância de serviço ao aplicativo.
+  2. Crie uma instância de serviço fornecida pelo usuário.
+     
+	 Use o comando `'cf create-user-provided-service'` (ou `'cups'`, uma versão curta do comando) para criar uma instância de serviço fornecida pelo usuário:
+	 ```
+	 cf create-user-provided-service <service_name> -l <logging_endpoint>
+	 ```
+	 **nome_do_serviço**
+	 
+	 O nome da instância de serviço fornecida pelo usuário.
+	 
+	 **logging_endpoint**
+	 
+	 O terminal de criação de log para o qual o {{site.data.keyword.Bluemix_notm}} envia logs. Consulte a tabela a seguir para substituir *logging_endpoint* por seu valor:
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>Terminal de criação de log</th>
+     <th>Comando:</th>
+	 <th>Notas</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>host syslog</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>Por exemplo, para ativar a criação de log para Papertrail, digite `cf cups my-logs -l syslog://<papertrail-url>`. Substitua `<papertrail-url>` pela URL de seu terminal de criação de log a partir do Papertrail.</td>
+     </tr>
+	 <tr>
+     <td>host syslog-tls</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>O certificado deve ser confiável por uma autoridade de certificação. Não use certificados autoassinados.</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>Esse terminal deve estar na Internet pública e acessível pelo {{site.data.keyword.Bluemix_notm}}</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. Ligue a instância de serviço ao seu app.
 
-	Use o comando a seguir para ligar a instância de serviço ao aplicativo, em que appname é o nome do aplicativo e service_name é o nome da instância de serviço fornecida pelo usuário.
+	 Use o comando a seguir para ligar a instância de serviço a seu app: 
 	
-	```
-	cf bind-service appname <service_name>
-	```
-	
-	Depois disso, você será solicitado a remontar o aplicativo digitando cf restage appname para que as mudanças entrem em vigor. Quando os logs forem gerados, você poderá visualizar mensagens semelhantes
-no serviço de gerenciamento de log de terceiro depois de um breve atraso.
+	 ```
+	 cf bind-service appname <service_name>
+	 ```
+	 **appname**
+	 
+	 O nome do seu app.
+	 
+	 **nome_do_serviço**
+	 
+	 O nome da instância de serviço fornecida pelo usuário.
+	 
+  4. Remonte o app.
+     Digite `'cf restage appname'` para que as mudanças entrem em vigor. 
 
-**Nota:** os logs visualizados na interface de linha de comandos não estão no formato syslog e podem não corresponder exatamente às mensagens exibidas nos serviços de gerenciamento de log de terceiros.
+#### Visualizando logs de hosts externos
+{: #viewing_logs_external}
+
+	 
+Quando os logs forem gerados, após um breve atraso, será possível visualizar mensagens em seu host do log externo semelhantes às mensagens visualizadas a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a partir da interface da linha de comandos cf. Se você tiver várias instâncias de seu app, os logs serão agregados e será possível ver todos os logs de seu app. Além disso, os logs são persistidos entre travamentos e implementações de apps.
+
+**Nota:** os logs visualizados na interface de linha de comandos não estão no formato syslog e podem não corresponder exatamente às mensagens exibidas em seu host do log externo. 
+
+

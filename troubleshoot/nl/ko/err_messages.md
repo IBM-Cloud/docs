@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 # 오류 메시지
 {: #error-messages}

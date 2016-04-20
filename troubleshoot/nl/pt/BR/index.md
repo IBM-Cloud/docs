@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 6 de janeiro de 2015*
+*Última atualização: 15 de março de 2016*
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
@@ -62,11 +68,11 @@ Ao tentar verificar seu app ou serviços na página de detalhes do app, você co
 `Você possui mudanças não salvas na página app_name. Salve ou cancele as mudanças.`
 
 
-Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página.
+Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página. 
 {: tsCauses}
 
 
-Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na área de janela de tempo de execução.
+Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na área de janela de tempo de execução. 
 {: tsResolve} 
 
 
@@ -326,7 +332,7 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
- * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando sua organização](../acctmgmt/index.html#mngorg){: new_window} para obter detalhes.
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando suas organizações](../admin/adminpublic.html#orgmng){: new_window} para obter detalhes.
  
 
  
@@ -465,7 +471,7 @@ especificar sua cota do disco. A cota máxima de disco que você pode especifica
   * Use a opção **-k** com o comando `cf push` quando enviar por push seu
 app para {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -584,8 +590,7 @@ unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
   * Para remover o limite no número de instâncias de serviços que você pode
-ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste em uma conta paga, consulte [Como mudar seu plano](../pricing/index.html#changing){: new_window}.
 
   
   
@@ -619,11 +624,11 @@ com o comando `cf push`:
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 Por exemplo:
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -654,7 +659,7 @@ de memória para uma conta de avaliação é 2 GB.
 
   * Para aumentar a cota de memória de sua conta,
 converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
+como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
@@ -668,7 +673,7 @@ seguintes etapas:
 	     O comando cf apps lista todos os aplicativos que você implementou no espaço atual. O status de cada app também é exibido.
       2. Para reduzir a quantia de memória que é usada por seu app, reduza o número de instâncias do app ou o limite máximo de memória, ou ambos:
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. Reinicie seu app para que as mudanças entrem em vigor.
 
@@ -698,7 +703,7 @@ Esse comportamento é de acordo com o design do Cloud Foundry.
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 Além disso, é possível codificar o app para identificar e recuperar de problemas como indisponibilidades, exceções e falhas na conexão. 
 
@@ -818,7 +823,7 @@ Se
 você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
 Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
 API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
-sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}.  
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -855,7 +860,7 @@ dos métodos a seguir:
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` com a opção **-n**. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -972,7 +977,7 @@ ao problema:
   * Especifique o comando inicial por um dos métodos a seguir: 
       * Use a interface de linha de comandos cf. Por exemplo: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
 exemplo:
@@ -1087,7 +1092,7 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
 Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
-aplicativo](../manageapps/deployingapps.html#appmanifest){: new_window}.
+aplicativo](../manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1123,7 +1128,7 @@ Para usar um buildpack customizado para apps Meteor, use um dos métodos a segui
 push` e especifique seu buildpack customizado usando
 a opção **-b**. Por exemplo:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1455,12 +1460,12 @@ consulte [Git Basics - Recording Changes to the Repository](http://www.git-scm.c
 o cache usando o comando a seguir. Depois de concluir essa
 etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. Envie seu app por push com o buildpack mais recente que você deseja usar
 usando o comando a seguir: 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

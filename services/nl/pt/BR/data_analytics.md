@@ -1,9 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 
 # Data and Analytics
 {: #data_analytics}
 
-*Última atualização: 9 de dezembro de 2015*
+*Última atualização: 9 de março de 2016*
 
 Faça mais com serviços analíticos
 e bancos de dados em nuvem integrados e ricos. Além de explorar os serviços, é possível usar o console
@@ -14,4 +22,4 @@ e analisar seus dados, todos em um local central. Basta clicar em [TRABALHAR COM
 
 Construa mais | Cresça mais | Dormiria mais
 ---- | ---- | ----
-Fique focado nas coisas divertidas... criando novos apps, não na administração do sistema. | Aumente muito a escala da sua data no IBM Cloud. | Fique tranquilo enquanto os especialistas IBM mantêm seus dados em execução 24 horas por dia, sete dias por semana.
+Fique focado nas coisas divertidas... criando novos apps, não na administração do sistema. | Escale seus dados no IBM Cloud. | Fique tranquilo enquanto os especialistas IBM mantêm seus dados em execução 24 horas por dia, sete dias por semana.

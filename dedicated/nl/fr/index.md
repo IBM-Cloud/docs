@@ -1,38 +1,74 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicated}
 
-*Dernière mise à jour : 18 janvier 2016*
+*Dernière mise à jour : 7 mars 2016*
+
 
 {{site.data.keyword.Bluemix}} est une plateforme à normes ouvertes reposant sur le cloud qui permet de construire, d'exécuter et de gérer des applications. Avec l'environnement {{site.data.keyword.Bluemix_notm}} dédié, vous bénéficiez de la puissance et de la simplicité de {{site.data.keyword.Bluemix_notm}}&mdash;et ce, dans votre propre environnement SoftLayer dédié, connecté de façon sécurisée à l'environnement {{site.data.keyword.Bluemix_notm}} public et à votre propre réseau.
 {:shortdesc}
 
-L'environnement {{site.data.keyword.Bluemix_notm}} dédié inclut un catalogue privé qui affiche les services dédiés disponibles exclusivement pour vous. Il inclut également des services supplémentaires qui sont à votre disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public.
+Tous les déploiements dédiés de {{site.data.keyword.Bluemix_notm}} incluent les fonctions et les avantages suivants gratuitement : réseau
+privé virtuel (VPN), réseau local virtuel (VLAN) privé, connectivité avec votre protocole LDAP, possibilité d'optimiser des applications et des bases de
+données sur
+site existantes, sécurité sur site 24 heures sur 24 et 7 jours sur 7, matériel dédié et support standard. 
 
-L'environnement {{site.data.keyword.Bluemix_notm}} dédié s'appuie sur SoftLayer pour que vous puissiez bénéficier de l'infrastructure de cloud la plus performante. Chaque centre de données applique des contrôles rigoureux de sécurité 24 heures sur 24, 7 jours sur 7. Vous et IBM accédez à votre instance {{site.data.keyword.Bluemix_notm}} dédiée via un tunnel de réseau privé virtuel et un réseau local virtuel privé.
+L'environnement {{site.data.keyword.Bluemix_notm}} dédié inclut un catalogue privé qui affiche les services dédiés disponibles exclusivement pour vous. Il
+inclut également des services supplémentaires qui sont à votre disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public.
 
-![{{site.data.keyword.Bluemix_notm}} dédié](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} dédié")
+L'environnement {{site.data.keyword.Bluemix_notm}} dédié est fourni avec tous les contextes d'exécution
+{{site.data.keyword.Bluemix_notm}} et 64 Go de mémoire pour les ressources de traitement. 
 
-*Figure 1. Diagramme détaillé de l'environnement {{site.data.keyword.Bluemix_notm}} dédié*
+De plus, vous disposez d'un ensemble de services et de composants inclus ou facultatifs.
 
-Les environnements {{site.data.keyword.Bluemix_notm}} dédiés appliquent les mêmes normes de sécurité que l'environnement {{site.data.keyword.Bluemix_notm}} public en termes d'infrastructure, de fonctionnement et de sécurité physique. Toutefois, l'accès des développeurs à l'environnement {{site.data.keyword.Bluemix_notm}} dédié est contrôlé par vos stratégies LDAP, qui peuvent être configurées par l'équipe {{site.data.keyword.Bluemix_notm}} lorsqu'elle configure votre environnement. Dans l'environnement dédié, vous pouvez gérer les rôles utilisateur et les droits. Voir [Gestion des utilisateurs et des droits](../admin/index.html#oc_useradmin) pour des détails.
 
-L'environnement {{site.data.keyword.Bluemix_notm}} dédié est fourni avec tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} et 128 Go de mémoire pour les applications.
-
-De plus, il existe un ensemble de services inclus par défaut, ainsi que des ensembles facultatifs que vous pouvez choisir pour votre instance dédiée.
 
 | **Type**        | **Nom **            | **Description** |      
 |-----------------|-------------------|-------------------|
-| Inclus   | {{site.data.keyword.autoscaling}} | Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix_notm}} dédié. |
-| Inclus   | {{site.data.keyword.datacshort}} | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
+|Inclus | Contextes d'exécution {{site.data.keyword.Bluemix_notm}} | Utilisez des contextes d'exécution pour que votre application soit
+opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les
+contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} dédiée.|
+| Inclus | {{site.data.keyword.autoscaling}} | Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix_notm}} dédié. |
+| Facultatif | {{site.data.keyword.datacshort}} | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
 | Facultatif | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} est un service de messagerie reposant sur le cloud qui fournit une messagerie souple et facile à utiliser pour les applications {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.mql}} constitue une solution d'administration simple pour la messagerie. Vous pouvez utiliser {{site.data.keyword.mql}} pour rendre vos applications plus réactives et plus évolutives, et vous pouvez partager et décharger le travail entre des applications à l'aide d'une API puissante et simple. |
 | Facultatif | {{site.data.keyword.dashdbshort}} | Utilisez dashDB pour stocker les données relationnelles, notamment les types spéciaux tels que les données géospatiales. Ensuite, analysez ces données avec l'analyse intégrée avancée ou SQL, comme l'analyse prédictive et l'exploration de données, l'analyse avec R et l'analyse géospatiale. |
 |Facultatif | {{site.data.keyword.APIM}} | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
 |Facultatif | {{site.data.keyword.SecureGateway}} | Le service {{site.data.keyword.SecureGateway}} fournit un moyen sécurisé pour connecter des applications {{site.data.keyword.Bluemix_notm}} à des emplacements distants sur site ou dans le cloud.  |
+|Facultatif | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
+entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
+d'application mobile et Web. |
 
 *Tableau 1. Services dédiés*
+
+## Architecture de l'environnement {{site.data.keyword.Bluemix_notm}} dédié 
+{: #dedicatedarch}
+
+L'environnement {{site.data.keyword.Bluemix_notm}} dédié s'appuie sur SoftLayer pour que vous puissiez bénéficier de l'infrastructure de cloud la plus performante. Chaque centre de données applique des contrôles rigoureux de sécurité 24 heures sur 24, 7 jours sur 7. Vous et IBM accédez à votre instance {{site.data.keyword.Bluemix_notm}} dédiée via un tunnel de réseau privé virtuel et un réseau local virtuel privé.
+
+{{site.data.keyword.Bluemix_notm}} dédié réside sur votre réseau via une connexion de réseau privé virtuel ou
+une connexion réseau directe. Votre matériel à service exclusif peut être configuré dans n'importe quel centre de données SoftLayer, n'importe où dans le
+monde. {{site.data.keyword.IBM_notm}} gère la plateforme dédiée et les services dédiés pour que vous puissiez vous consacrer à la construction d'applications personnalisées. De plus, {{site.data.keyword.IBM_notm}} se charge de l'intégralité de la maintenance des instances dédiées au cours d'une fenêtre de maintenance
+que vous choisissez.
+
+![{{site.data.keyword.Bluemix_notm}} dédié](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} dédié")
+
+*Figure 1. Diagramme détaillé de l'environnement {{site.data.keyword.Bluemix_notm}} dédié*
+
+Les environnements {{site.data.keyword.Bluemix_notm}} dédiés appliquent les mêmes normes de sécurité que l'environnement {{site.data.keyword.Bluemix_notm}} public en termes d'infrastructure, de fonctionnement et de sécurité physique. Toutefois, l'accès des développeurs à l'environnement {{site.data.keyword.Bluemix_notm}} dédié est contrôlé par vos stratégies LDAP, qui peuvent être configurées par l'équipe {{site.data.keyword.Bluemix_notm}} lorsqu'elle configure votre environnement. Dans l'environnement dédié, vous pouvez gérer les rôles utilisateur et les droits. Voir [Gestion des utilisateurs et des droits](../admin/index.html#oc_useradmin) pour des détails.
 
 
 ##Configuration de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
@@ -47,8 +83,7 @@ Pour configurer votre version privée de {{site.data.keyword.Bluemix_notm}} :
 <ol>
 <li>Prenez contact avec votre représentant de compte IBM attitré ou <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">avec {{site.data.keyword.Bluemix_notm}}</a> pour commencer.</li>
 <li>Décidez avec IBM du tarif correspondant à votre instance {{site.data.keyword.Bluemix_notm}} dédiée. Le prix mensuel dépend des services dédiés que vous voulez utiliser, et comprend un abonnement à tous les services {{site.data.keyword.Bluemix_notm}} publics. Vous recevez ensuite une facture pour tous les éléments que vous utilisez au-delà de ce contrat d'abonnement.</li>
-<li>Identifiez les échéances pour chaque phase de configuration de votre instance {{site.data.keyword.Bluemix_notm}} dédiée. Pour obtenir des informations sur chaque phase et les tâches concernées, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>.
-</li>
+<li>Identifiez les échéances pour chaque phase de configuration de votre instance {{site.data.keyword.Bluemix_notm}} dédiée. Pour obtenir des informations sur chaque phase et les tâches concernées, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>.</li>
 <li>Sélectionnez l'<a href="http://www.softlayer.com/data-centers" target="_blank">emplacement du centre de données SoftLayer</a> pour votre instance dédiée. Ensuite, votre plateforme dédiée et votre compte sont créés. Pour votre compte, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance dédiée. Pour obtenir des informations sur les rôles que vous attribuez, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>.
 </li>
 <li>Définissez et établissez la connectivité du réseau entre votre réseau d'entreprise et votre instance {{site.data.keyword.Bluemix_notm}} dédiée.
@@ -71,13 +106,14 @@ Vous pouvez vous attendre à obtenir un processus similaire à la liste suivante
 
 <ol>
 <li>Vous sélectionnez le centre de données à utiliser pour héberger votre instance dédiée. Pour plus d'informations sur les options de centre de données, voir <a href="http://www.softlayer.com/data-centers" target="_blank">Emplacement du centre de données SoftLayer</a>.</li>
-<li>Vous spécifiez les noms de domaine pour le déploiement et les ID que vous souhaitez utiliser. Vous obtenez trois domaines lorsque vous configurez votre instance {{site.data.keyword.Bluemix_notm}}. Vous sélectionnez le préfixe pour <code>*mycompany*.*region*.bluemix.net</code> et <code>*mycompany*.*region*.mybluemix.net</code>. Puis vous choisissez le nom complet du troisième domaine.<br />
+<li>Vous spécifiez les noms de domaine pour le déploiement et les ID que vous souhaitez utiliser. Vous obtenez trois domaines lorsque vous configurez votre instance {{site.data.keyword.Bluemix_notm}}. Vous sélectionnez le préfixe pour <code>*masociété*.*région*.bluemix.net</code> et <code>*masociété*.*région*.mybluemix.net</code>. Puis vous choisissez le nom complet du troisième domaine.<br />
 <p>Vous pouvez choisir autant de domaines personnalisés que vous le souhaitez. Cependant, vous êtes chargé des certificats de ces domaines personnalisés. Pour plus d'informations sur la création d'un domaine personnalisé, voir <a href="../manageapps/updapps.html#domain">Création et utilisation d'un domaine personnalisé</a>.</p></li>
 <li>Vous identifiez un propriétaire du compte public utilisé pour représenter votre société dans l'environnement {{site.data.keyword.Bluemix_notm}} public. IBM utilise ce compte pour le suivi de l'utilisation des services mixtes.</li>
 <li>Vous sélectionnez le type de connexion sécurisée à votre centre de données. Vous pouvez effectuer votre sélection entre SoftLayer VPN, SoftLayer Direct Link et AT&T Net Bond.</li>
 <li>Vous décidez s'il y aura un accès à votre environnement dédié à partir de l'Internet public.</li>
-<li>Vous sélectionnez le type d'authentification qui sera utilisé. Vous pouvez sélectionner ID IBM ou Active Directory. Pour plus d'informations sur l'utilisation et l'enregistrement d'un ID IBM, voir la page <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a>. </li>
-<li>Vous identifiez et affectez des rôles pour votre équipe d'administration pour l'environnement. Pour obtenir des informations sur les rôles que vous devez attribuer, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>. </li>
+<li>Vous sélectionnez le type d'authentification qui sera utilisé. Vous pouvez sélectionner ID IBM ou Active Directory. Pour plus d'informations sur l'utilisation et l'enregistrement d'un ID IBM, voir la page <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a>.
+</li>
+<li>Vous identifiez et affectez des rôles pour votre équipe d'administration pour l'environnement. Pour obtenir des informations sur les rôles que vous devez attribuer, voir <a href="index.html#rolesresponsibilities" target="_blank">Rôles et responsabilités de l'environnement {{site.data.keyword.Bluemix_notm}} dédié</a>.</li>
 <li>IBM déploie la plateforme de base qui comprend les environnements d'exécution élastiques, la console, les fonctions d'administration et de surveillance.</li>
 <li>IBM configure votre accès administrateur à l'environnement.</li>
 <li>Vous pouvez commencer à utiliser votre instance dédiée surveillée par l'équipe IBM chargée des opérations pour répondre aux alertes.</li>
@@ -168,8 +204,8 @@ et de reprise après incident. | IBM |
 consulte pour que vous puissiez donner votre feedback et approuver le plan. | IBM et le client partagent la
 responsabilité |
 |Créer un plan de sauvegarde et de reprise | Créer un plan de sauvegarde et de reprise qui définit la fréquence et les exigences pour une distribution sur
-site et hors site de la sauvegarde. IBM sauvegarde des composants de matrice, des services IBM, des métadonnées de service incluant des rôles utilisateur,
-etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la
+site et hors site de la sauvegarde. IBM sauvegarde des composants de plateforme, des services IBM, des métadonnées de service incluant des rôles
+utilisateur, etc. Vous sauvegardez les données propres à l'application desquelles vous êtes en charge. | IBM et le client partagent la
 responsabilité |
 |Identifier les outils pour la détection d'événements et l'identification des problèmes. | Identifier les outils IBM et tiers utilisés pour la
 détection d'événements et l'identification des problèmes au niveau de la plateforme {{site.data.keyword.Bluemix_notm}}. | IBM |
@@ -180,10 +216,10 @@ pour l'environnement. Signer l'accord de surveillance du réseau et de la sécur
 |Procurer l'environnement | Procurer les ressources de traitement, le réseau et le stockage, notamment le réseau local virtuel des services et de base
 pour héberger {{site.data.keyword.Bluemix_notm}}, des services non virtualisés pour héberger Data Power, et le pare-feu SoftLayer. Fournir
 l'infrastructure pour autoriser un tunnel de réseau privé virtuel. | Client |
-|Installer les composants de matrice, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de matrice, comme
-BOSH
-Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi que les
-composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes. | IBM |
+|Installer les composants de plateforme, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de plateforme,
+comme BOSH Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi
+que les composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes.
+ | IBM |
 |Installer et configurer les composants de sécurité | Installer et configurer les composants de sécurité qui sont liés dans le plan de surveillance et
 d'escalade, notamment IBM QRadar, le coffre des identifications, le système de prévention des intrusions, IBM BigFix et IBM Security
 Privileged Identity
@@ -290,10 +326,18 @@ téléphone ou par d'autres moyens.<br />
 <dd>La fenêtre de maintenance mensuelle est convenue entre vous et IBM dans une fenêtre de 21 jours. Vous pouvez fournir à IBM des dates ou des heures
 spécifiques qui ne vous conviennent pas dans la fenêtre de 21 jours. IBM tente de planifier les mises à jour en dehors de ces dates ou de ces heures. En
 fonction des demandes, IBM vous communique la fenêtre de maintenance planifiée. Les fenêtres de maintenance mensuelle n'ont généralement pas d'impact
-sur l'environnement Bluemix dédié en cours d'exécution.<br />
+sur l'environnement Bluemix dédié en cours d'exécution.
+<p>L'image suivante représente le processus, de la réception d'une notification relative à une mise à jour en attente à la définition de dates ne convenant
+pas, jusqu'à la réception de la notification relative à la date planifiée :
+</p>
+<p><img src="../local/images/maintenance_dates.png" alt="Processus de définition des dates d'indisponibilité pour une mise à jour de maintenance"></p>
 <br />
-**Remarque :** si vous ne proposez pas d'heure spécifique pour la mise à jour, la maintenance est appliquée automatiquement à la fin de
-la fenêtre.<br />
+**Remarque** : si vous n'avez pas besoin de définir de dates d'indisponibilité pour la mise à jour, vous pouvez l'approuver. IBM vous
+signale la date planifiée pour la maintenance. <br />
+<p>L'image suivante représente le processus, de la réception d'une notification relative à une mise à jour en attente à l'approbation de la mise à jour,
+jusqu'à la réception de la date planifiée pour la mise à jour :
+</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="Processus d'approbation de la mise à jour sans date d'indisponibilité"></p>
 <br />
 Accédez à **ADMINISTRATION > SYSTEM INFORMATION** pour afficher les mises à jour en attente, définir des dates d'indisponibilité et
 approuver des mises à jour. Pour plus d'informations sur les notifications et la planification des mises à jour en attente, voir
@@ -311,6 +355,41 @@ maintenance standard.
 
 Si un problème est signalé suite à une mise à jour de maintenance, vous décidez avec votre interlocuteur IBM s'il est judicieux pour vous qu'IBM
 annule la mise à jour. Si vous parvenez à un accord, IBM annule la mise à jour afin de restaurer l'état précédent de l'environnement.
+
+## Réponse aux incidents et support
+{: #incidentresponse}
+
+### Problèmes détectés par le client 
+
+Si vous identifiez un problème nécessitant l'attention du centre des opérations et du support IBM, vous pouvez prendre contact avec le support de
+plusieurs façons. Pour des informations sur la façon de contacter le support, voir
+[Contacter le support](../support/index.html#contacting-bluemix-support-local). Selon le problème, vous et IBM travaillerez ensemble ou
+individuellement pour le résoudre.
+
+
+### Incidents critiques détectés par IBM 
+
+Les incidents critiques sont des problèmes dont la résolution est urgente, comme des indisponibilités de service inattendues ou des problèmes de
+stabilité ayant un impact sur votre environnement ou vos utilisateurs. Si IBM détecte un incident critique dans votre environnement, elle vous envoie une
+notification sur la page **Statut**. Vous pouvez également rechercher dans la page Statut les problèmes connus pour la plateforme ou vos
+services. Si vous voulez intégrer vos notifications à un service Web qui prend en charge les webhooks, voir
+[Notifications et abonnements à des événements](../admin/index.html#oc_eventsubscription) pour des informations sur l'extension de vos
+fonctions de notification.
+
+
+![Processus de réponse à un incident](../local/images/incidentresponseprocess.png "Processus de réponse à un incident")
+
+*Figure 2. Processus de réponse à un incident*
+
+Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre.
+En cas de question relative à l'incident ou si vous avez besoin de l'aide d'un interlocuteur IBM pour résoudre le problème, vous pouvez ouvrir un ticket de
+demande de service. Pour des informations sur la façon de contacter le support, voir
+[Contacter le support](../support/index.html#contacting-bluemix-support-local). 
+
+**Remarque** : les tickets de demande de service de gravité 1 sont surveillés 24 heures sur 24, 7 jours sur 7. Les autres tickets
+sont traités du dimanche 22:00 GMT au samedi 12:00 GMT. Pour plus d'informations sur la gravité des tickets de demande de service et la collaboration avec
+le support, voir <a href="../support/index.html#contacting-bluemix-support-local">Contacter le support</a>.
+
 
 ## Reprise après incident
 {: #dr}
@@ -394,8 +473,9 @@ disponibilité avec redondance</a>.
 </dd>
 <dt>Redondance SoftLayer</dt>
 <dd>Avec SoftLayer dans les environnements dédiés, les données de chaque cluster de stockage en cloud sont écrites plusieurs fois et les clusters de
-stockage sont configurés avec des capacités de rétablissement automatique en cas d'échec d'unité. S'il existe un problème lié à une machine virtuelle,
-SoftLayer tente de redémarrer la machine virtuelle sur un autre hôte.</dd>
+stockage sont configurés avec des capacités de rétablissement automatique en cas d'échec d'unité. En cas de problème lié à un serveur virtuel, SoftLayer
+tente de redémarrer le serveur virtuel sur un autre hôte.
+</dd>
 <dt>Sauvegarde des métadonnées</dt>
 <dd>Les métadonnées sont sauvegardées avec SoftLayer EVault Backup dans une zone qui se trouve à au moins 200 kilomètres.</dd>
 </dl>
@@ -428,5 +508,7 @@ que ceux-ci ne soit pas déplacés hors de vos centres de données. En particuli
 # rellinks
 ## general
 * [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [Nouveautés de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
+* [Glossaire {{site.data.keyword.Bluemix_notm}}](glossary/index.html)
 * [Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié](../admin/index.html#mng)
 * [Contacter le service de support](../troubleshoot/getting_customer_support.html#bluemix_support)

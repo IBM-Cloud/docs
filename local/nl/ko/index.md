@@ -1,47 +1,83 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*마지막 업데이트 날짜: 2016년 1월 15일*
+*마지막 업데이트 날짜: 2016년 3월 18일*
 
 {{site.data.keyword.Bluemix}} Local은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} Local을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} Public 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
 {:shortdesc}
 
 IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 데 주력할 수 있도록 사용자 환경을 모니터하고 유지보수하기 위한 서비스로 클라우드 작업을 사용합니다. 또한 IBM은 비즈니스에 집중할 수 있도록 플랫폼 업데이트를 처리합니다.
 
-{{site.data.keyword.Bluemix_notm}} Local에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 신디케이트된 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서
-사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함되어 있습니다. 신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.
+{{site.data.keyword.Bluemix_notm}} Local 환경은 운영 보안이라는 면에서 공용 {{site.data.keyword.Bluemix_notm}}와 보안 표준이 동일합니다. 사용자에게 인프라 및 실제 보안을 통해 제어를 제공하는 하드웨어 및 인프라를 제공합니다. 로컬 {{site.data.keyword.Bluemix_notm}}에 대한 개발자 액세스는 LDAP 정책에 의해 제어되며 이 정책은 환경을 설정할 때 {{site.data.keyword.Bluemix_notm}} 팀에서 구성할 수 있습니다. 로컬 환경 내에서는 관리 페이지를 사용하여 사용자 역할 및 권한을 관리할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} Local은 최고 성능과 가장 안전한 클라우드 인프라를 사용할 수 있도록 회사 방화벽 뒤에 있는 가상 머신에 설치됩니다. IBM은 IBM의 Relay 기술을 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} Local을 설치하고 원격으로 모니터하고 관리합니다.
-
-![{{site.data.keyword.Bluemix_notm}} Local 개요](images/bluemixlocalarchitecture.png "Bluemix Local 개요")
-
-*그림 1. {{site.data.keyword.Bluemix_notm}} Local 상세 개요*
-
-{{site.data.keyword.Bluemix_notm}} Local 환경은 운영 보안이라는 면에서 공용 {{site.data.keyword.Bluemix_notm}}와 보안 표준이 동일합니다. 사용자에게 인프라 및 실제 보안을 통해 제어를 제공하는 하드웨어 및 인프라를 제공합니다. 로컬 {{site.data.keyword.Bluemix_notm}}에 대한 개발자 액세스는 LDAP 정책에 의해 제어되며 이 정책은 환경을 설정할 때 {{site.data.keyword.Bluemix_notm}} 팀에서 구성할 수 있습니다. 로컬 환경 내에서는 관리 콘솔을 사용하여 사용자 역할 및 권한을 관리할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} Local에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 신디케이트된 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서 사용 가능한 추가 서비스도 포함되어 있습니다. 신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.예를 들어, 개인 서비스인 경우, 카탈로그의 서비스 타일에 특정 아이콘이 추가됩니다.
 
 {{site.data.keyword.Bluemix_notm}} Local은 {{site.data.keyword.Bluemix_notm}} 런타임 및 64GB의 계산 메모리가 모두 포함되어 제공됩니다.
 
-또한 {{site.data.keyword.Bluemix_notm}} Local에 선택할 수 있는 서비스 세트가 있습니다.
+또한 {{site.data.keyword.Bluemix_notm}} Local에 사용 가능한 일련의 서비스 및 컴포넌트가 있습니다. 다음 표를 검토하여 포함되는 항목과 선택적으로 구입 가능한 항목을 확인하십시오.
 
-| **유형** | **이름** | **설명** |    
+| **유형** | **이름** | **설명** |
 |----------|----------|-----------------|
-|포함 | {{site.data.keyword.Bluemix_notm}} 런타임 | VM 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에서 사용자에게 사용 가능합니다.|
+|포함 | {{site.data.keyword.Bluemix_notm}} 런타임 | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에서 사용자에게 사용 가능합니다.|
 |포함 | {{site.data.keyword.autoscaling}}| 정책에 따라 애플리케이션의 계산 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} Local 환경에서 무제한 사용이 가능합니다.|
-|선택사항 |{{site.data.keyword.datacshort}}| 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 |선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는
 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
+|선택사항 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 
 *표1. 로컬 서비스*
 
+## {{site.data.keyword.Bluemix_notm}} Local 아키텍처
+{: #localarch}
+
+{{site.data.keyword.Bluemix_notm}} Local은 회사 방화벽 뒤에 있는 가상 머신에 설치되며 최고 성능의 가장 안전한 클라우드 인프라를 제공합니다. IBM은 IBM의 Relay 기술을 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} Local을 설치하고 원격으로 모니터링하며 관리합니다. {{site.data.keyword.Bluemix_notm}}가 로컬 환경에 설정되는 방법과 IBM이 로컬 인스턴스를 유지보수하는 방법에 대한 정보를 얻으려면 다음 다이어그램을 검토하십시오.
+
+![{{site.data.keyword.Bluemix_notm}} Local.](images/localarch.png "Bluemix Local 아키텍처 다이어그램")
+
+*그림 1. {{site.data.keyword.Bluemix_notm}} Local 아키텍처*
+
+도입/인식(Inception) 가상 머신은 고객 방화벽 뒤에서 Relay를 통해 IBM 운영 센터에 아웃바운드 연결되는 네트워크에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 플랫폼 컴포넌트와 이 플랫폼 컴포넌트를 지원하는 코어 기능은 분리된 사설 가상 근거리 통신망(VLAN)에서 실행됩니다.{{site.data.keyword.Bluemix_notm}} Local은 사설 서브넷을 위해 VLAN을 사용합니다. 공용 VLAN에 비해 사설 서브넷을 사용하면 한층 안전하고 라우팅 문제를 방지하는 데 도움이 됩니다.플랫폼을 지원하는 코어 기능 세트에는 다음이 포함됩니다.
+
+<dl>
+<dt>**모니터링 및 로깅**</dt>
+<dd>모니터링 및 로깅 기능은 Relay를 통해 데이터 센터에 배치되고 해당 데이터는 데이터 센터에 유지됩니다. 경보는 정의된 경보 기준에 따라 IBM 운영 센터에 반송됩니다. 민감한 정보는 IBM에 반송되는 경보에 포함되지 않습니다.</dd>
+<dt>**네트워크**</dt>
+<dd>Relay는 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 네트워크입니다. Relay를 통해 IBM은 모든 로컬 배치에 최신 업데이트를 자동으로 일관되게 전달할 수 있으며, 이로써 사용자는 시스템을 항상 최신 및 보안 상태로 유지할 수 있습니다. 이 터널의 트래픽은 인스턴스의 플랫폼, 계산 자원 및 서비스를 제공하고 유지보수하기 위한 자동화된 활동입니다. 이 트래픽에는 IBM 운영 센터에서 로컬 인스턴스에 대한 문제점 판별을 완료하기 위해 사용하는 모니터링 기능이 포함됩니다. Relay에 대한 자세한 정보는 [Relay](index.html#localrelay)를 참조하십시오.</dd>
+<dt>**계산**</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} Local은 Cloud Foundry를 기반으로 앱 중심 런타임 환경을 사용합니다.</dd>
+<dt>**보안 인텔리전스**</dt>
+<dd><p>IBM은 QRadar Security Intelligence Platform을 사용하여 여러 핵심 컴포넌트를 통합하는 통일된 아키텍처를 제공합니다. 이러한 컴포넌트에는 보안 정보 및 이벤트 관리, 로그 관리, 이상 항목 발견, 인시던트 포렌직, 구성 및 취약성 관리 등이 포함됩니다. Bluemix는 또한 IBM QRadar 보안 정보 및 이벤트 관리(SIEM)를 사용하여 권한이 있는 사용자 조치와 애플리케이션 개발자의 성공 및 실패한 로그인 시도를 모니터링합니다. 고객은 관리 페이지의 보고서 및 로그 섹션을 통해 QRadar 보고서에서 그러한 이벤트 데이터를 볼 수 있습니다. 보안 보고서에 대한 정보는 [보고서 보기](../admin/index.html#oc_report)를 참조하십시오.</p>
+<p>IBM BigFix는 운영 체제의 수정사항이 적절한 빈도로 적용되도록 합니다. 패치 프로세스는 자동화되며 스케줄은 사용자와 IBM 간의 합의로 결정됩니다. 유지보수 및 업그레이드에 대한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.</p>
+</dd>
+</dl>
+
+사용자 앱은 Cloud Foundry 가상 머신에서 실행되는 가상 컨테이너 내에 배치됩니다. 클라우드 제어기, 상태 관리자, 라우터 및 DEA(Droplet Execution Agent) 등의 모든 Cloud Foundry 컴포넌트는 {{site.data.keyword.Bluemix_notm}}가 설정될 때 배치됩니다. 다양한 {{site.data.keyword.Bluemix_notm}} 관리 컴포넌트 또한 {{site.data.keyword.Bluemix_notm}} 배치에 포함됩니다.
+
+DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오.
+
 ### Relay
+{: #localrelay}
 
-Relay는 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능이며 항상 최신이며 보안 시스템을 포함하기 위해 IBM이 모든 로컬 배치에 자동으로 지속적인 최신 업데이트를 제공하도록 합니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에 특정한 인증서를 사용하여 도입/인식(Inception) 가상 머신 사내 구축형에서 생성된 개방형, 아웃바운드 SSL, VPN 터널을 통해 보안 연결을 달성합니다. 모든 초기 {{site.data.keyword.Bluemix_notm}} 릴리스는 배치 및 업데이트를 위한 자동 에이전트 머신으로도 작동하는 도입/인식(Inception) 가상 머신에서 사용 가능합니다. SSL 연결은 도입/인식(Inception) 가상 머신에서 시작되고, {{site.data.keyword.Bluemix_notm}} 자동 서버에 보안 연결이 다시 설정되면 {{site.data.keyword.Bluemix_notm}} 릴리스의 일관성을 점검한 후 업데이트를 배치할 수 있습니다.
+Relay는 {{site.data.keyword.Bluemix_notm}} Local에 포함된 전달 기능입니다. Relay를 통해 IBM은 모든 로컬 배치에 최신 업데이트를 자동으로 일관되게 전달할 수 있으며, 이로써 사용자는 시스템을 항상 최신 및 보안 상태로 유지할 수 있습니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에 특정한 인증서를 사용하여 도입/인식(Inception) 가상 머신 사내 구축형에서 생성된 개방형, 아웃바운드 SSL, VPN 터널을 통해 보안 연결을 달성합니다. 모든 초기 {{site.data.keyword.Bluemix_notm}} 릴리스는 배치 및 업데이트를 위한 자동 에이전트 머신으로도 작동하는 도입/인식(Inception) 가상 머신에서 사용 가능합니다. SSL 연결은 도입/인식(Inception) 가상 머신에서 시작됩니다. {{site.data.keyword.Bluemix_notm}} 자동화 서버에 보안 연결이 다시 설정되면 IBM은 {{site.data.keyword.Bluemix_notm}} 릴리스의 현행성 및 일관성을 점검한 후 업데이트 배치를 시작합니다.
 
-이 터널의 트래픽은 인스턴스의 플랫폼, 계산 자원 및 서비스를 제공하고 유지보수하기 위한 자동화입니다. 이 연결에는 인바운드 웹 포트 443이 사용됩니다. 릴레이는 자동 에이전트 전용 액세스로 제한됩니다. IBM은 릴레이 기능을 사용하여 지속적 테스트와 유효성 검증 프로세스를 통한 플랫폼 업데이트를 제공하여 사용자의 로컬 환경에 푸시되는 모든 배치의 안정성과 안전을 보장합니다.
+이 터널의 트래픽은 인스턴스의 플랫폼, 계산 자원 및 서비스를 제공하고 유지보수하기 위한 자동화된 활동입니다. 이 트래픽에는 IBM 운영 센터에서 로컬 인스턴스에 대한 문제점 판별을 완료하기 위해 사용하는 모니터링 기능이 포함됩니다. 이 연결에는 아웃바운드 웹 포트 443이 사용됩니다. IBM은 Relay 기능을 사용하여 일관된 테스트 및 유효성 검증 프로세스를 거친 플랫폼 업데이트를 전달합니다. 이 프로세스로 인해 로컬 환경에 푸시되는 모든 배치가 안정적이고 보안이 유지됩니다.
 
-사용자는 관리자 자격으로 사고, 문제점, 변경, 용량 및 보안 관리를 위해 환경과 관련한 일체의 가시성을 갖습니다.  관리자는 관리 콘솔을 사용하여 환경 정보에 액세스합니다. 릴레이 기술은 최신 데이터를 사용하여 관리 콘솔을 최신 상태로 유지합니다. 사용자 액세스, 보안 로그, 신디케이트된 카탈로그 제어, 업데이트 및 문제 해결을 위한 통신 등에 대해 자세히 알려면 [Managing {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)를 참조하십시오.
+로컬 환경에서 사용자와 함께 작업 중인 IBM 팀만 사용자의 {{site.data.keyword.Bluemix_notm}} 인스턴스에 액세스할 수 있습니다. 연결 프로세스의 여러 단계 동안 2-요소 인증을 사용하여 로컬 환경에 대한 액세스를 보안합니다. IBM은 사용자 환경에 액세스할 수 있는 승인된 사용자 및 ID 목록을 제공하며, 그러면 사용자가 사용자 환경에 대한 모든 액세스를 감사할 수 있습니다. 보안 보고서를 생성하여 환경에 액세스한 사용자와 환경에 액세스한 시점 및 이유를 판별할 수 있습니다. 보안 보고서 생성에 대한 정보는 [보안 보고서](../security/index.html#reports)를 참조하십시오.
+
+관리자는 인시던트, 문제점, 변경, 용량 및 보안 관리를 위해 환경과 관련한 일체를 볼 수 있습니다. 관리 페이지를 사용하여 환경에 대한 정보에 액세스할 수 있습니다. Relay 기술은 최신 데이터로 관리 페이지를 최신 상태로 유지합니다. 사용자 액세스, 보안 로그, 신디케이트된 카탈로그 제어, 업데이트 및 문제 해결을 위한 통신 등에 대해 자세히 알려면 [Managing {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)를 참조하십시오.
 
 ##{{site.data.keyword.Bluemix_notm}} Local 인스턴스 설정
 {: #setuplocal}
@@ -166,13 +202,13 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |아키텍처 선택 | 고가용성 및 재해 복구 요구사항을 고려하여 사전 정의된 선택사항을 토대로 아키텍처를 선택합니다. | IBM |
 |재해 복구 목표 정의 | 환경에 대한 재해 복구 요구사항을 정의합니다. | 고객 |
 |재해 복구 플랜 작성 | 재해 복구 플랜을 상의하여 정의합니다. IBM은 재해 복구 모델을 작성하고 사용자의 피드백 제공 및 플랜 승인 지점에서 사용자와 상의합니다. | IBM 및 고객 책임 공유 |
-|백업 및 복구 플랜 작성 | 온오프 사이트 백업 분배를 위한 요구사항과 빈도를 정의하는 백업 및 복구 플랜을 작성합니다. IBM은 패브릭 컴포넌트, IBM 서비스, 사용자 역할을 포함하는 서비스 메타데이터 등을 백업합니다. 사용자는 사용자에게 책임이 있는 애플리케이션 고유 데이터를 백업합니다. | IBM 및 고객 책임 공유 |
+|백업 및 복구 플랜 작성 | 온오프 사이트 백업 분배를 위한 요구사항과 빈도를 정의하는 백업 및 복구 플랜을 작성합니다. IBM은 플랫폼 컴포넌트, IBM 서비스, 사용자 역할을 포함하는 서비스 메타데이터 등을 백업합니다. 사용자는 사용자에게 책임이 있는 애플리케이션 고유 데이터를 백업합니다. | IBM 및 고객 책임 공유 |
 |이벤트 발견 및 문제점 판별을 위한 식별 도구 | {{site.data.keyword.Bluemix_notm}} 플랫폼 레벨에서 이벤트 발견 및 문제점 판별에 사용되는 IBM 및 써드파티 도구를 식별합니다. | IBM |
 |확대 플랜 정의 | 모니터링 컴포넌트를 통해 발견된 이벤트를 선별하고 해결하는 단계적 확대 플랜을 정의합니다. | IBM |
 |인프라, 플랫폼 및 지원 계약에 서명 | 환경에 대한 재무 조건을 포함하여 구독 계약에 서명합니다. 네트워크 및 보안 모니터링 계약에 서명합니다. 지원 구독에 서명합니다. | 고객 |
 |환경 조달 | 계산 자원, 네트워크 및 스토리지를 조달합니다. 환경의 인프라 요구사항에 대한 자세한 정보는 [Local 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오. | 고객 |
 |VPN 솔루션 설치 | 양방향 VPN 솔루션을 설치합니다. | IBM |
-|패브릭, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 패브릭 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | IBM |
+|플랫폼, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 플랫폼 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | IBM |
 |보안 컴포넌트 설치 및 구성 | 모니터링 및 단계적 확대 플랜에 연결된 보안 컴포넌트(예: IBM QRadar, 신임 정보 저장소, 침입 방지 시스템, IBM BigFix, IBM Security Privileged Identity Management)를 설치하고 구성합니다. | IBM |
 |로그인 서버 구성 | 기업 LDAP에 사용할 로그인 서버를 구성합니다. | IBM |
 |사용자 정의 컴포넌트 설치 및 구성 |  	{{site.data.keyword.Bluemix_notm}} 제품 및 서비스 범위의 외부에 상주하는 사용자 정의 컴포넌트를 설치하고 구성합니다. | 고객 |
@@ -222,15 +258,17 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |릴레이 종료 | 릴레이 연결을 종료합니다. | IBM |
 |인프라 재사용 | 회사 가이드라인에 따라 인프라를 재사용합니다. | 고객 |
 
-##{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항
+## {{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항
 {: #localinfra}
 
 {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는
-로컬 인스턴스를 호스팅하기 위한 실제 보안 및 인프라를 소유합니다. IBM은
-{{site.data.keyword.Bluemix_notm}} Local을 설정하기 위해 다음 요구사항을 설정합니다.
-###하드웨어
+로컬 인스턴스를 호스팅하기 위한 실제 보안 및 인프라를 소유합니다. IBM은 {{site.data.keyword.Bluemix_notm}} Local을 설정하기 위한 다음과 같은 최소 요구사항을 설정합니다.
+
+### 하드웨어
+
 사용 가능한 하드웨어의 유형 및 크기에 대한 요구사항이 있지만 세트 자원의 총 요구사항을 충족하는
 모든 조합을 선택할 수 있습니다.
+
 <dl>
 <dt>**VMware ESXi 하드웨어**</dt>
 <dd>
@@ -239,17 +277,18 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 <ul>
 <li>각각 2.0GHz 이상의 48개 실제 코어</li>
 <li>756GB의 실제 RAM</li>
-</li>7.5TB의 총 데이터 저장소 크기
+<li>7.5TB의 총 데이터 저장소 크기
 <ul>
 <li>{{site.data.keyword.Bluemix_notm}}를 보유할 7TB의 데이터 저장소</li>
 <li>도입/인식(Inception) 가상 머신을 보유할 500GB의 데이터 저장소</li>
 </ul>
+</li>
 </ul>
 <p><strong>참고:</strong> 다중 데이터 저장소를 사용하는 경우 각각에 대해 동일한 접두부를 사용하십시오.</p>
 </dd>
 <dt>**고가용성**</dt>
 <dd>
-단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 각각 16x 코어를 의미하는 두 ESXi가 사용되는 경우, 세 번째가 필요합니다.
+단일 노드 장애를 지원하려면 n+1 ESXi가 있어야 합니다. 예를 들어, 각각 16x 코어를 의미하는 세 개의 ESXi가 사용되는 경우, 네 번째가 필요합니다.
 <p><strong>참고:</strong> 고객 VMware 관리자는 클러스터에서 고가용성 장애 복구를 엄격하게 적용하여 자원을 보장하기로 결정할 수 있습니다.</p>
 </dd>
 <dt>**네트워크**</dt>
@@ -265,13 +304,17 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 </ul>
 <p>**참고**: IBM이 네트워크 연결의 끊김 여부를 확인할 수 있습니다. 네트워크 연결이 끊기면 IBM에서 사용자에게 연락하여 네트워크 전문가와 함께 문제를 해결합니다.</p>
 </dd>
+<dt>**네트워크 업링크**</dt>
+<dd>시스템에 대해 계획한 워크로드에 따라 1 - 10Gbps 범위의 둘 이상의 인터페이스를 사용합니다. </dd>
 </dl>
 
-###vCenter 서버 구성
+### vCenter 서버 구성
+
 다음 버전, 데이터 센터, 자원 풀 및 데이터 저장소 요구사항을 검토하십시오.
+
 <dl>
 <dt>**지원되는 VMware 버전**</dt>
-<dd>vCenter 및 ESXi 5.1 및 5.5</dd>
+<dd>vCenter 및 ESXi 5.1, 5.5 및 6.0</dd>
 <dt>**지원되는 VMware 유형**</dt>
 <dd>vSphere Enterprise<br />
 분산 가상 스위치를 사용하려는 경우 vSphere Enterprise 플러스</dd>
@@ -290,23 +333,34 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 <br />
 **참고**: 둘 이상의 데이터 저장소를 사용하는 경우 각 데이터 저장소는 동일한 접두부로 시작해야 합니다. 접두부가 동일한 여러 데이터 저장소 이름의 예는
 `bluemix_datastore_01` 및 `bluemix_datastore_02`입니다.</dd>
+<dt>**네트워크**</dt>
+<dd>고객이 액세스할 수 있고 아웃바운드 인터넷 기능이 있는 하나의 네트워크가 있어야 합니다. VLAN은 Bluemix Local 컴포넌트가 실행되는 개인용 서브넷을 호스트합니다. 모든 트래픽은 개인용 서브넷에서 고객 서브넷으로 라우트됩니다. 고객 서브넷 IP는 Bluemix Local에 대한 모든 액세스에 사용됩니다. Bluemix Local에 사용되는 ESXi들 사이에서만 사용되는 또 하나의 개인용 VLAN을 정의할 수 있습니다. 이 VLAN은 VMware에서 포트 그룹으로 표시됩니다. Bluemix Local은 이를 더 안전하고 라우팅 문제를 피하는 데 도움이 되는 개인용 서브넷으로 사용합니다.
+<p>vSphere 분배 스위치(vDS)를 사용하는 경우, vDS를 보유하는 폴더를 작성하여 이 폴더에 vDS를 배치하십시오.</p>
 </dl>
 
-###네트워크 대역폭
+### Relay의 네트워크 대역폭
+
 권장되는 처리량은 5Mbps 위 및 5Mbps 아래이며,
-월별 데이터 사용량은 10GB로 예상할 수 있습니다. IBM은 대규모 데이터 번들이 전달될 때 최대 3GB로 설정하기로 Windows와 합의했습니다.
-###VMware 권한
+월별 데이터 사용량은 10GB로 예상할 수 있습니다. 대규모 데이터 번들(최대 4GB)이 전달되는 경우 IBM은 합의된 창을 설정합니다. 
+
+### VMware 권한
+
 다음 역할 및 권한을 설정하십시오. 각 권한에 대해 전파가 설정됩니다. 권한이
 전파되는 경우, 권한은 오브젝트 계층 구조를 따라 아래쪽으로 전달됩니다. 그러나 하위 오브젝트의 권한은
 상위 오브젝트로부터 전파된 권한을 항상 대체합니다.
+
 <dl>
-<dt>**v 센터 서버**</dt>
+<dt>**vCenter Server**</dt>
 <dd>역할을 읽기 전용 및 전파되지 않음으로 설정하십시오.<br />
 <br />
 **참고**: 이 역할은 특정 디스크 오퍼레이션에 대한 태스크 상태를 검색하는 데 필요합니다.</dd>
 <dt>**데이터 센터**</dt>
-<dd>"{{site.data.keyword.Bluemix_notm}}" 역할을 작성하고 **하위 레벨 파일 오퍼레이션** 및 **가상 머신 파일 업데이트**를 포함하여 **데이터 저장소**에 대한 권한을 부여하십시오.<br />
-<br />
+<dd>"{{site.data.keyword.Bluemix_notm}}" 역할을 작성하고 다음과 같은 권한을 부여하십시오.
+<ul>
+<li>**데이터 저장소**에 대해, **하위 레벨 파일 오퍼레이션** 및 **가상 머신 파일 업데이트**를 설정하십시오.</li>
+<li>**vApp**에 대해 **가져오기**를 설정하십시오.</li>
+<li>**dvPort** 그룹에 대해 **수정**을 설정하십시오. 이는 vDS 전용입니다.</li>
+</ul>
 **참고**: 이 역할은 데이터 저장소에 대한 파일 포스트를 지원하는 데 필요합니다.</dd>
 <dt>**클러스터**</dt>
 <dd>역할을 관리자 및 전파됨으로 설정하십시오.</dd>
@@ -314,10 +368,15 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 <dd>각 {{site.data.keyword.Bluemix_notm}} 데이터 저장소에 대해
 역할을 관리자 및 전파됨으로 설정하십시오.</dd>
 <dt>**네트워크**</dt>
-<dd>공용 및 개인용 포트 그룹을 관리자 역할, 전파되지 않음으로 설정하십시오.</dd>
+<dd><ul>
+<li>vSwitch에 대해, 공용 및 개인용 포트 그룹을 관리자 역할 및 전파되지 않음으로 설정하십시오. </li>
+<li>vDS 상위 폴더에 대해, 읽기 전용 및 전파됨으로 설정하십시오.</li>
+<li>vDS에 대해, 공용 및 개인용 포트 그룹을 관리자 역할 및 전파되지 않음으로 설정하십시오. </li>
+</ul>
+</dd>
 </dl>
 
-###DEA(Droplet Execution Agent) 풀
+### DEA(Droplet Execution Agent) 풀 늘리기
 각 DEA는 다음으로 구성됩니다.
 - 16 - 32GB의 RAM
 - 2x - 4x vCPU
@@ -328,7 +387,7 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 추가해야 합니다. 4개의 DEA마다 추가로 1.5TB의 스토리지가 필요합니다. 이 예제는 32GB의 RAM, 4x vCPU 및
 300GB의 스토리지로 구성된 DEA를 기반으로 합니다.
 
-##로컬 인스턴스 유지보수
+## 로컬 인스턴스 유지보수
 {: #maintainlocal}
 
 IBM은 Bluemix Local 플랫폼, 런타임 및 서비스에 대해 IBM이 적합하다고 판단되면 업데이트 및 수정사항을 유지보수하고 설치합니다. 유지보수 창 중에는 서비스를 사용하지 못할 수 있습니다.
@@ -345,9 +404,12 @@ IBM은 각각의 유지보수 창에 대해 계획된 변경사항의 브로드�
 **중요**: 유지보수 기간 중에는 일부 서비스를 사용하지 못할 수도 있습니다.</dd>
 
 <dt>**월별 변경 창**</dt>
-<dd>월별 유지보수 창은 21일 기간 내에 사용자와 IBM 간 조정을 기반으로 적용됩니다. 사용자는 작동하지 않을 수 있는 21일 기간 내에 특정 날짜 또는 시간을 IBM에 제공할 수 있습니다. IBM은 해당 시간을 중심으로 업데이트를 스케줄하기 위해 시도합니다. 요청을 기반으로 IBM은 사용자에게 스케줄된 유지보수 창을 전달합니다. 월별 변경 창은 실행 중인 Bluemix Local 환경에 영향을 미칠 것으로 예상되지 않습니다.<br />
+<dd>월별 유지보수 창은 21일 기간 내에 사용자와 IBM 간 조정을 기반으로 적용됩니다. 사용자는 작동하지 않을 수 있는 21일 기간 내에 특정 날짜 또는 시간을 IBM에 제공할 수 있습니다. IBM은 해당 시간을 중심으로 업데이트를 스케줄하기 위해 시도합니다. 요청을 기반으로 IBM은 사용자에게 스케줄된 유지보수 창을 전달합니다. 월별 변경 창은 실행 중인 Bluemix Local 환경에 영향을 미칠 것으로 예상되지 않습니다.<p>다음 이미지는 보류 중인 업데이트에 대한 알림을 수신하는 것부터 사용자에게 작동하지 않을 수 있는 날짜를 설정한 후 마지막으로 스케줄된 날짜에 대한 알림을 수신하기까지의 과정을 보여줍니다.</p>
+<p><img src="images/maintenance_dates.png" alt="유지보수 업데이트에 사용 불가능한 날짜를 설정하는 프로세스"></p>
 <br />
-**참고**: 업데이트할 특정 시간을 요청하지 않는 경우 유지보수는 창의 마지막에 자동으로 적용됩니다.<br />
+**참고**: 업데이트에 사용 불가능한 날짜를 설정하지 않아도 되는 경우 업데이트를 승인할 수 있습니다. IBM에서 유지보수를 적용할 스케줄된 날짜를 알려줍니다.<br />
+<p>다음 이미지는 보류 중인 업데이트에 대한 알림을 수신하는 것부터 업데이트를 승인한 후 스케줄된 업데이트 날짜를 수신하기까지의 과정을 보여줍니다.</p>
+<p><img src="images/maintenance_nodates.png" alt="사용 불가능한 날짜 없이 업데이트를 승인하는 프로세스"></p>
 <br />
 **관리 > 시스템 정보**로 이동하여 보류 중인 업데이트를 확인하고 사용 불가능한 날짜를 설정하며 업데이트를 승인하십시오. 알림 및 보류 중인 업데이트 스케줄링에 대한 자세한 정보는 <a href="../admin/index.html#oc_system">시스템 정보 보기</a>를 참조하십시오.</dd>
 
@@ -358,6 +420,25 @@ IBM은 각각의 유지보수 창에 대해 계획된 변경사항의 브로드�
 로컬 인스턴스의 유지보수를 설정하려면 IBM 전용 계정 담당자와 함께 작업하여 표준 유지보수에 대해 합의된 기간을 식별하십시오.
 
 유지보수 업데이트 후 문제가 보고되는 경우 IBM이 업데이트를 롤백할 수 있도록 IBM 담당자와 협의합니다. 계약 시, IBM은 업데이트를 롤백하여 환경을 이전 단계로 복원합니다.
+
+## 인시던트 대응 및 지원
+{: #incidentresponse}
+
+### 고객이 발견한 문제
+
+IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하는 경우 몇 가지 다양한 방법을 사용하여 지원 센터에 문의할 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다.
+
+### IBM이 발견한 중요 인시던트
+
+중요 인시던트는 환경 또는 사용자에게 영향을 미치는 긴급하고 예상치 못한 서비스 가동 중단 및 안정성 문제입니다. IBM이 사용자의 환경 내에서 중요 인시던트를 발견하는 경우 **상태** 페이지의 알림을 통해 사용자에게 알립니다. 상태 페이지에서 플랫폼이나 사용하는 서비스에 대한 알려진 문제가 있는지 확인할 수도 있습니다. 웹 후크를 지원하는 웹 서비스와 알림을 통합하려면 [알림 및 이벤트 구독](../admin/index.html#oc_eventsubscription)에서 알림 기능 확장 방법에 대한 정보를 참조하십시오.
+
+![인시던트 대응 프로세스](images/incidentresponseprocess.png "인시던트 대응 프로세스")
+
+*그림 2. 인시던트 대응 프로세스*
+
+문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다. 인시던트에 관한 질문이 있거나 문제를 해결하는 데 IBM 담당자의 도움이 필요한 경우 지원 티켓을 열 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 
+
+**참고**: 심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="../support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
 
 ## 재해 복구
 {: #dr}
@@ -416,7 +497,7 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 <dd>메타데이터는 2차 위치(일반적으로 사내 구축형 가상 머신)에 백업됩니다. 가능할 경우 백업은 200km 이상 떨어진 사용자 환경에 복제해야 합니다.</dd>
 </dl>
 
-##로컬 인스턴스 복원
+## 로컬 인스턴스 복원
 {: #restorelocal}
 
 {{site.data.keyword.Bluemix_notm}} Local 설정, 메타데이터 및 구성은 환경에서 예상치 못한 가동 중단에 대처하기 위해 주기적으로 백업됩니다. 사용자에게 백업 책임이 있는 데이터에는 애플리케이션 데이터, 클라우드 데이터베이스 서비스 데이터 및 오브젝트 저장소가 있습니다.
@@ -438,8 +519,11 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 <li>복원이 필요한 경우 백업 파일을 IBM 운영자에게 제공합니다.</li>
 </ul>
 
-# rellinks
+
+# 관련 링크
 ## 일반
 * [탐색: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
+* [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 용어집](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](../admin/index.html#mng)
-* [지원 문의](../troubleshoot/getting_customer_support.html#bluemix_support)
+* [지원 문의](troubleshoot/getting_customer_support.html#bluemix_support)

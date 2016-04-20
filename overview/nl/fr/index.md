@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -38,9 +50,9 @@ développeur dispose d'un contrôle et d'une flexibilité accrus, ainsi que d'un
 - Des charges de travail optimisées et élastiques.
 - Une disponibilité continue.
 
-{{site.data.keyword.Bluemix_notm}} masque la plupart des aspects complexes associés à l'hébergement et à la gestion des applications basées
-sur le
-cloud. En tant que développeur d'applications, vous pouvez vous consacrer au développement de votre application sans avoir à gérer l'infrastructure
+{{site.data.keyword.Bluemix_notm}} fait abstraction de la plupart des aspects complexes associés à l'hébergement et à la gestion des
+applications basées sur le
+cloud et les masque. En tant que développeur d'applications, vous pouvez vous consacrer au développement de votre application sans avoir à gérer l'infrastructure
 requise pour son
 hébergement. Pour les applications mobiles et Web, vous pouvez utiliser les services préconfigurés fournis par
 {{site.data.keyword.Bluemix_notm}}. Pour les applications Web, vous pouvez télécharger votre application web dans {{site.data.keyword.Bluemix_notm}} et
@@ -135,7 +147,7 @@ pouvez rester connecté de façon sécurisée à
 l'environnement {{site.data.keyword.Bluemix_notm}} public et synchronisé.
 
 L'environnement {{site.data.keyword.Bluemix_notm}} local inclut un catalogue privé mixte qui affiche les services locaux disponibles
-exclusivement pour vous. Il inclut également des services mixtes qui sont à votre disposition depuis l'environnement
+exclusivement pour vous. Il inclut également des services qui sont à votre disposition depuis l'environnement
 {{site.data.keyword.Bluemix_notm}} public. Tous les environnements d'exécution sont disponibles dans l'environnement local. Les déploiements
 locaux de {{site.data.keyword.Bluemix_notm}} présentent les fonctions et les avantages suivants gratuitement : technologie de gestion de relais,
 connectivité LDAP, possibilité d'optimiser des applications et des bases de données sur site existantes et support standard.
@@ -189,7 +201,7 @@ fait, un gestionnaire d'application installe l'infrastructure et l'environnement
 dans cette infrastructure. Ensuite, les artefacts d'application sont démarrés.
 
 La figure suivante présente la structure d'une machine virtuelle,
-aussi appelée agent DEA (Droplet execution agent), sur laquelle plusieurs applications sont déployées : 
+aussi appelée agent DEA (Droplet Execution Agent), sur laquelle plusieurs applications sont déployées : 
 
 ![Conception d'une machine virtuelle](images/container.png)
 
@@ -277,7 +289,7 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nom de région** | **Emplacement géographique** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |       
+| **Nom de région** | **Zone géographique** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |       
 |-----------------|-------------------------|-------------------|---------------------|----------------|
 | Région Sud des Etats-Unis | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Région Royaume-Uni | Londres, Angleterre | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
@@ -321,24 +333,26 @@ votre code. Lorsque vous êtes prêt, il vous permet de transférer le code de v
 votre environnement de production.
 
     Pour en savoir plus sur {{site.data.keyword.IBM_notm}} Containers, voir
-[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) dans la documentation intitulée Création
-d'applications Web.</dd>
-<dt>Virtual Machines (bêta)</dt>
-    <dd>L'infrastructure {{site.data.keyword.Bluemix_notm}} Virtual Machines permet de créer et de gérer des groupes de
-machines virtuelles
-dans le cloud public {{site.data.keyword.IBM_notm}}. Vous pouvez aussi créer et gérer des groupes de machines virtuelles dans vos clouds
-{{site.data.keyword.IBM_notm}} privés que vous avez décidé de mettre à la disposition des utilisateurs de {{site.data.keyword.Bluemix_notm}}. L'infrastructure inclut une aide pour la connexion à votre infrastructure sur site. La prise en charge de la surveillance et de la journalisation est
-intégrée à {{site.data.keyword.Bluemix_notm}}. Vous pouvez déployer et gérer vos machines virtuelles avec l'interface utilisateur
-{{site.data.keyword.Bluemix_notm}} ou les API OpenStack du cloud.
-
-    Les machines virtuelles dans {{site.data.keyword.Bluemix_notm}} prennent en charge la mise à disposition de
-groupes de machines virtuelles avec la mise à l'échelle automatique. Ainsi, le nombre d'instances peut être augmenté ou réduit automatiquement en
-fonction de la charge de l'unité centrale ou de l'échec d'une instance. De plus, l'équilibrage de charge est pris en charge, ce qui permet l'affectation
-d'adresses IP virtuelles (adresses IP flottantes) en fonction des besoins.
-
-    Pour en savoir plus sur les machines virtuelles
-{{site.data.keyword.Bluemix_notm}}, voir
-[Virtual Machines](../virtualmachines/vm_index.html) dans la documentation Création d'applications Web.</dd>
+[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).
+</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (bêta)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} est un environnement de cloud hébergé qui fait partie
+d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} et que vous pouvez utiliser pour générer, exécuter et surveiller vos
+applications, tout en gardant un contrôle optimal sur vos applications et le middleware sur lequel elles s'exécutent. Utilisez
+{{site.data.keyword.virtualmachinesshort}} pour isoler vos solutions d'entreprise, en particulier lorsque vous déployez vos applications dans
+un cloud public. </p>
+<p>    
+Vous pouvez exécuter et gérer des serveurs virtuels dans des clouds publics et privés (sur site) qui utilisent le logiciel OpenStack. Vous pouvez créer,
+lancer et gérer vos serveurs virtuels via l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou le client OpenStackClient (OSC). Vous
+pouvez utiliser des images de serveur virtuel mises à disposition par {{site.data.keyword.IBM_notm}} ou créer des serveurs virtuels à partir de vos
+propres images personnalisées. Vous pouvez utiliser les fonctions d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} pour
+masquer la plupart des aspects complexes associés à l'hébergement et à la gestion des applications reposant sur le cloud, comme la journalisation, la mise
+à l'échelle automatique et la surveillance.
+Vous pouvez combiner les services OpenStack et les services {{site.data.keyword.Bluemix_notm}} pour générer et exécuter des applications
+hybrides. Vous pouvez mettre à disposition des ressources d'infrastructure en fonction des besoins, selon des stratégies d'exploitation et la demande en
+charge de travail. </p>
+<p>
+Pour en savoir plus sur {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, voir [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Applications
@@ -515,7 +529,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 * [Configuration requise pour {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problèmes {{site.data.keyword.Bluemix_notm}} connus](https://developer.ibm.com/bluemix/support/#issues)
-* [{{site.data.keyword.Bluemix_notm}} glossaire](glossary/index.html)
+* [Glossaire {{site.data.keyword.Bluemix_notm}}](glossary/index.html)
 * [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net)
 * [Cloud Foundry](http://cloudfoundry.org/)

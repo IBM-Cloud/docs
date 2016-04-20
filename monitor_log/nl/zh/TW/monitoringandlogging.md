@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #監視及記載
 {: #monitoringandlogging}
 
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 1 月 27 日*
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署，此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
 {:shortdesc}
@@ -36,7 +44,11 @@
 ##Cloud Foundry 上執行的應用程式的記載
 {: #logging_for_bluemix_apps}
 
-當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會自動建立日誌檔。您可以從 {{site.data.keyword.Bluemix_notm}}「儀表板」或 cf 指令行介面中檢視日誌。您也可以過濾日誌，以查看感興趣的部分。
+當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會自動建立日誌檔。當您在從部署到執行時期的任何階段中發生錯誤時，您可以檢查日誌以尋找可能協助解決您問題的線索。
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###日誌格式
 {: #log_format}
@@ -107,21 +119,33 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 ###檢視日誌
 {: #viewing_logs}
 
-您可以使用 {{site.data.keyword.Bluemix_notm}}「儀表板」或指令行介面來檢視日誌。
+您可以在三個位置中檢視 Cloud Foundry 應用程式的日誌：
 
-####從 {{site.data.keyword.Bluemix_notm}}「儀表板」檢視日誌
+  * [{{site.data.keyword.Bluemix_notm}} 儀表板](#viewing_logs_UI){:new_window}
+  * [指令行介面](#viewing_logs_cli){:new_window}
+  * [外部日誌主機](#thirdparty_logging){:new_window}
 
-若要查看**部署**或**執行時期**日誌，請完成下列步驟：
-1. 按一下應用程式磚。即會顯示「應用程式詳細資料」頁面。
+#### 從 {{site.data.keyword.Bluemix_notm}} 儀表板檢視日誌
+{: #viewing_logs_UI}
+
+若要查看部署或執行時期日誌，請完成下列步驟：
+1. 登入 {{site.data.keyword.Bluemix_notm}}，然後按一下「儀表板」上您應用程式的磚。即會顯示「應用程式詳細資料」頁面。
 2. 在左導覽列中，按一下**日誌**。
 
-####從指令行介面檢視日誌
+在**日誌**主控台中，您可以檢視應用程式的最新日誌，或即時調整日誌。此外，您還可以依日誌類型及通道來過濾日誌。
+
+**附註：**在應用程式當機與部署之間，不會持續保存日誌。
+
+
+
+#### 從指令行介面檢視日誌
+{: #viewing_logs_cli}
 
 從下列選項中選擇，以從指令行介面檢視日誌：
 
 <ul>
 <li>當您部署應用程式時，讀取日誌的尾端。
-<p>當您將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，請使用 **cf logs** 指令來顯示來自應用程式以及來自與應用程式互動的系統元件的日誌。您可以在 cf 指令行介面中鍵入下列指令。如需 cf 日誌的相關資訊，請參閱 [Cloud Foundry 中的日誌類型及其訊息](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。</p>
+<p>當您將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，請使用 **cf logs** 指令來顯示來自應用程式以及來自與應用程式互動的系統元件的日誌。您可以在 cf 指令行介面中鍵入下列指令。如需 cf 日誌的相關資訊，請參閱 <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Cloud Foundry 中的日誌類型及其訊息</a>。</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>以最新到過去的順序顯示日誌。</dd>
@@ -159,6 +183,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 **附註：**如需如何啟用應用程式記載的相關資訊，請參閱[除錯執行時期錯誤](../troubleshoot/debugging.html#debug_runtime)。
 
+
+
+
 ###過濾日誌
 {: #filtering_logs}
 
@@ -176,43 +203,85 @@ cf logs appname --recent | grep '\[App'
 ```
 如需 **grep** 選項的相關資訊，請鍵入 `grep --help`。
 
-###配置協力廠商記載
+
+
+### 配置外部日誌主機
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}} 在記憶體中保留了有限的日誌資訊量。
 在記載資訊時，舊資訊會取代為較新的資訊。
-若要保留所有日誌資訊，您可以將日誌儲存到協力廠商日誌管理服務。
+若要保留所有日誌資訊，您可以將日誌儲存到外部日誌主機（例如協力廠商日誌管理服務或其他主機）。
 
+若要將日誌從您的應用程式及系統串流到外部日誌主機，請完成下列步驟：
 
-若要將日誌從您的應用程式及系統串流到協力廠商日誌管理服務，請完成下列步驟：
+  1. 決定記載端點。 
+     
+	 您可以將日誌傳送給協力廠商日誌聚集器（例如 Papertrail、Splunk 或 Sumologic）。您也可以將日誌傳送給 syslog 主機、使用 TLS（傳輸層安全）加密的 syslog 主機，或 HTTPS POST 端點。不同日誌主機取得記載端點的方法會不同。
 
+  2. 建立使用者提供的服務實例。
+     
+	 使用 ```cf create-user-provided-service``` 指令（或 ```cups``，指令的簡短版本），以建立使用者提供的服務實例：
+	 ```
+	 cf create-user-provided-service <service_name> -l <logging_endpoint>
+	 ```
+	 **service_name**
+	 
+	 使用者提供的服務實例的名稱。
+	 
+	 **logging_endpoint**
+	 
+	 {{site.data.keyword.Bluemix_notm}} 將日誌傳送至其中的記載端點。請參閱下表，以將 *logging_endpoint* 取代為您的值：
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>記載端點</th>
+     <th>指令</th>
+	 <th>注意事項</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>syslog 主機</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>例如，若要啟用記載至 Papertrail 的功能，請鍵入 `cf cups my-logs -l syslog://<papertrail-url>`。請將 `<papertrail-url>` 取代為來自 Papertrail 的記載端點的 URL。</td>
+     </tr>
+	 <tr>
+     <td>syslog-tls 主機</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>憑證必須受憑證管理中心信任。請不要使用自簽憑證。</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>此端點必須位在公用網際網路上，並且可供 {{site.data.keyword.Bluemix_notm}} 存取</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. 將服務實例連結至您的應用程式。
 
-1. 登錄協力廠商日誌管理服務。
-    
-    您可以使用任何支援 [syslog
-通訊協定](http://tools.ietf.org/html/rfc5424){:new_window}的協力廠商日誌管理服務，例如 Papertail、Splunk Storm、SumoLogic 及 Logentries。
-請登錄協力廠商日誌管理服務，然後配置該服務以為 {{site.data.keyword.Bluemix_notm}} 中的日誌提供目的地。
-完成配置之後，服務通常會提供您 syslog URL 作為 {{site.data.keyword.Bluemix_notm}} 日誌的目的地。如需如何配置協力廠商日誌管理服務的相關資訊，請參閱[配置選取的協力廠商日誌管理服務](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}。
-
-2. 建立使用者提供的服務實例。
+	 使用下列指令，將服務實例連結至您的應用程式： 
 	
-	若要將 {{site.data.keyword.Bluemix_notm}} 中的日誌串流到協力廠商日誌管理服務，您必須先建立使用者提供的服務實例。
-請使用下列指令來建立使用者提供的服務實例，其中 service_name 是使用者提供的服務實例名稱，syslog_URL 是您從協力廠商記載服務取得的 URL。
-	
+	 ```
+	 cf bind-service appname <service_name>
 	```
-	cf create-user-provided-service <service_name> -l <syslog_URL>
-	```
-	
-3. 將服務實例連結至您的應用程式。
+	 **appname**
+	 
+	 應用程式的名稱。
+	 
+	 **service_name**
+	 
+	 使用者提供的服務實例的名稱。
+	 
+  4. 重新編譯打包應用程式。
+     鍵入 ```cf restage appname```，讓變更生效。 
 
-	請使用下列指令將服務實例連結至您的應用程式，其中 appname 是您的應用程式名稱，而 service_name 是使用者提供的服務實例名稱。
-	
-	```
-	cf bind-service appname <service_name>
-	```
-	
-	在那之後，系統會提示您鍵入 cf restage appname 重新編譯打包應用程式，讓變更生效。
-產生日誌時，您可以在短暫的延遲之後，在協力廠商日誌管理服務中檢視類似訊息。
+#### 從外部主機檢視日誌
+{: #viewing_logs_external}
+
+	 
+產生日誌時，在短暫延遲之後，您可以在外部日誌主機中檢視訊息，訊息與從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面檢視的訊息類似。如果您的應用程式有多個實例，則會聚集日誌，而且您可以查看您應用程式的所有日誌。此外，在應用程式當機與部署之間，會持續保存日誌。
+
+**附註：**您在指令行介面中檢視的日誌不是屬於 syslog 格式，而且可能不完全符合外部日誌主機中顯示的訊息。 
 
 
-**附註：**您在指令行介面中檢視的日誌不是屬於 syslog 格式，且可能不完全符合協力廠商日誌管理服務中顯示的訊息。

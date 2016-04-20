@@ -1,3 +1,16 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:download: .download}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
@@ -15,10 +28,8 @@ Cloud Foundry Clouds.
   
   ![Arraste e solte em uma área de trabalho do Eclipse Luna em execução para instalar o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
-  3. Faça download do seu código de início e importe-o para o Eclipse acessando **Arquivo > Importar projetos existentes para a Área de trabalho > Archive**.
-
-  <p>
-  <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_starter-code.svg" alt="Fazer download do código de início" /> </a>
-</p>
+  3. {: download} Faça download do seu código de início e importe-o para o Eclipse acessando **Arquivo > Importar projetos existentes para a Área de trabalho > Archive**.
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_starter-code.svg" alt="Fazer download do código de início" /> </a> 
 
 Para obter orientações passo a passo na implementação de apps, consulte [Implementando apps com o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.

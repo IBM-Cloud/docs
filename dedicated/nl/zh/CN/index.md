@@ -1,38 +1,61 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*上次更新时间：2016 年 1 月 18 日*
+*上次更新时间：2016 年 3 月 7 日*
+
 
 {{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以在您自己的专用 SoftLayer 环境中享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性。该专用 SoftLayer 环境是以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境和您自己的网络。
 {:shortdesc}
 
+无需额外付费，{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能：VPN、专用虚拟局域网 (VLAN)、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。
+
 {{site.data.keyword.Bluemix_notm}} Dedicated 包含专用目录，其中显示只供您使用的专用服务。此外，还包含从 {{site.data.keyword.Bluemix_notm}} Public 联合的其他服务，供您使用。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated 基于 SoftLayer 构建，可为您提供性能最佳的云基础架构。每个数据中心都采用严格的全天候安全控制。您和 IBM 可通过 VPN 隧道以及专用 VLAN 来访问您的 {{site.data.keyword.Bluemix_notm}} 专用实例。
+{{site.data.keyword.Bluemix_notm}} Dedicated 随附所有内含的 {{site.data.keyword.Bluemix_notm}} 运行时和 64 GB 计算资源内存。
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+此外，还有一组内含或可选的服务和组件。
 
-*图 1. {{site.data.keyword.Bluemix_notm}} Dedicated 详图*
-
-{{site.data.keyword.Bluemix_notm}} Dedicated 环境在基础架构、操作和物理安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。但是，开发者对专用 {{site.data.keyword.Bluemix_notm}} 的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在该专用环境中，您可以管理用户角色和许可权。有关详细信息，请参阅[管理用户和许可权](../admin/index.html#oc_useradmin)。
-
-{{site.data.keyword.Bluemix_notm}} Dedicated 随附所有内含的 {{site.data.keyword.Bluemix_notm}} 运行时和 128 GB 应用程序内存。
-
-此外，还有一组内含的服务（缺省）以及可为专用实例选择的可选服务。
 
 | **类型**        | **名称**            | **描述** |      
 |-----------------|-------------------|-------------------|
+|内含 | {{site.data.keyword.Bluemix_notm}} 运行时 | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Dedicated 实例中使用。|
 | 内含 | {{site.data.keyword.autoscaling}} | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的使用不受限制。 |
-| 内含 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
+| 可选 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
 | 可选 | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} 是一种基于云的消息传递服务，该服务可为 {{site.data.keyword.Bluemix_notm}} 应用程序提供灵活且易于使用的消息传递功能。{{site.data.keyword.mql}} 提供无需太多管理工作的消息传递解决方案。您可以使用 {{site.data.keyword.mql}} 来提高应用程序的响应性和可扩展性，通过一个简单且强大的 API 在应用程序之间分担和卸下工作负载。 |
 | 可选 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 可存储关系数据，包括特殊类型的数据（例如地理空间数据）。然后，使用 SQL 或高级内置分析（例如预测性分析和数据挖掘、使用 R 的分析以及地理空间分析）来分析该数据。 |
 |可选 | {{site.data.keyword.APIM}} | 使用 {{site.data.keyword.APIMfull}} 服务可编写、管理和社交化 API。可以使用资源导入 API，方法是使用代理 URL 或从 HTTP 数据源组合数据。使用 {{site.data.keyword.APIM}} 服务的好处是，您可以管理 API 的使用方式。 |
 |可选 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服务使您能够以安全方式将 {{site.data.keyword.Bluemix_notm}} 应用程序连接到内部部署或云中的远程位置。  |
+|可选 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
 
 *表 1. 专用服务*
+
+## {{site.data.keyword.Bluemix_notm}} Dedicated 体系结构
+{: #dedicatedarch}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated 基于 SoftLayer 构建，可为您提供性能最佳的云基础架构。每个数据中心都采用严格的全天候安全控制。您和 IBM 可通过 VPN 隧道以及专用 VLAN 来访问您的 {{site.data.keyword.Bluemix_notm}} 专用实例。
+
+{{site.data.keyword.Bluemix_notm}} Dedicated 通过 VPN 或直接网络连接参与您的网络活动。您的单租户硬件可以在全世界的任何一个 SoftLayer 数据中心内进行设置。{{site.data.keyword.IBM_notm}} 负责对专用平台和专用服务进行管理，所以您可以专注于构建定制应用程序。不仅如此，{{site.data.keyword.IBM_notm}} 还会在您所选择的维护时段内执行专用实例的所有维护工作。
+
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+
+*图 1. {{site.data.keyword.Bluemix_notm}} Dedicated 详图*
+
+{{site.data.keyword.Bluemix_notm}} Dedicated 环境在基础架构、操作和物理安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。但是，开发者对专用 {{site.data.keyword.Bluemix_notm}} 的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在该专用环境中，您可以管理用户角色和许可权。有关详细信息，请参阅[管理用户和许可权](../admin/index.html#oc_useradmin)。
 
 
 ##设置 {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -141,12 +164,12 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |选择体系结构 | 基于预定义的选项来选择体系结构，这些选项将高可用性和灾难恢复需求考虑在内。 | IBM |
 |定义灾难恢复目标 | 为环境定义灾难恢复需求。 | 客户 |
 |创建灾难恢复计划 | 协商和定义灾难恢复计划。IBM 创建灾难恢复模型，并与您协商在何处由您提供反馈和审批计划。 | IBM 和客户共担责任 |
-|创建备份和恢复计划 | 创建备份和恢复计划，其中定义现场和非现场分布的备份的频率和需求。IBM 备份光纤网组件、IBM 服务、服务元数据（包括用户角色）等。您备份自己负责的任何特定于应用程序的数据。 | IBM 和客户共担责任 |
+|创建备份和恢复计划 | 创建备份和恢复计划，其中定义现场和非现场分布的备份的频率和需求。IBM 备份平台组件、IBM 服务、服务元数据（包括用户角色）等。您备份自己负责的任何特定于应用程序的数据。 | IBM 和客户共担责任 |
 |确定用于事件检测和问题确定的工具 | 确定用于在 {{site.data.keyword.Bluemix_notm}} 平台级别进行事件检测和问题确定的 IBM 和第三方工具。 | IBM |
 |定义上报计划 | 定义上报计划以分类和解决从监视组件检测到的事件。 | IBM |
 |签署基础架构、平台和支持协议 | 签署预订协议，包括环境的财务条款和条件。签署网络和安全性监视协议。签署支持预订。 | 客户 |
 |采购环境 | 采购计算资源、网络和存储，包括用于托管 {{site.data.keyword.Bluemix_notm}} 的核心和服务 VLAN、用于托管 DataPower 的裸机服务以及 SoftLayer 防火墙。提供基础架构以允许使用 VPN 隧道。 | 客户 |
-|安装光纤网、应用程序以及监视和管理组件 | 安装、配置和验证光纤网组件（例如 BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
+|安装平台、应用程序以及监视和管理组件 | 安装、配置和验证平台组件（例如，BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
 |安装和配置安全组件 | 安装和配置与监视和上报计划绑定的安全组件，包括 IBM QRadar、凭证保险库、入侵防御系统、IBM BigFix 和 IBM Security Privileged Identity Management。 | IBM |
 |安装和配置定制组件 |  	安装和配置位于 {{site.data.keyword.Bluemix_notm}} 产品和服务范围之外的定制组件。 | 客户 |
 |建立初始网络配置 | 建立初始网络配置，包括防火墙、DataPower、Fortigate 和 DNS。 | IBM |
@@ -216,9 +239,12 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 **重要信息**：在维护期间，某个服务可能不可用。</dd>
 
 <dt>**每月更改时段**</dt>
-<dd>每月维护时段根据您与 IBM 的协商在 21 天时段中进行选择。您可以向 IBM 提供这 21 天时段中可能不适合您的具体日期或时间。IBM 会尝试基于这些时间来安排更新。根据请求，IBM 会向您发送安排的维护时段。每月更改时段应该不会影响运行中的 Bluemix Dedicated 环境。<br />
+<dd>每月维护时段根据您与 IBM 的协商在 21 天时段中进行选择。您可以向 IBM 提供这 21 天时段中可能不适合您的具体日期或时间。IBM 会尝试基于这些时间来安排更新。根据请求，IBM 会向您发送安排的维护时段。每月更改时段应该不会影响运行中的 Bluemix Dedicated 环境。<p>下图显示了从收到有关暂挂更新的通知，到设置可能不适用的日期，再到最终收到有关已安排日期的通知的整个过程：</p>
+<p><img src="../local/images/maintenance_dates.png" alt="设置不可用的维护更新日期的过程"></p>
 <br />
-**注：**如果未请求更新的具体时间，那么维护会自动在时段结束时应用。<br />
+**注**：如果不需要设置任何不可用的更新日期，那么可以批准更新。IBM 会通知您要应用的已安排维护日期。<br />
+<p>下图显示了从收到有关暂挂更新的通知，到批准更新，再到收到已安排更新日期的整个过程：</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="批准无不可用日期的更新的过程"></p>
 <br />
 转至**管理 > 系统信息**以查看暂挂的更新，设置不可用的日期以及批准更新。有关通知和安排暂挂更新的更多信息，请参阅<a href="../admin/index.html#oc_system">查看系统信息</a>。</dd>
 
@@ -229,6 +255,26 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 要为专用实例设置维护，请与 IBM 指定的客户代表一起商定标准维护时段。
 
 如果在维护更新后报告有问题，您可与您的 IBM 代表商定，在符合您的最大利益时允许 IBM 回滚更新。IBM 会根据商定的结果回滚更新，使环境复原到先前的状态。
+
+## 事件响应和支持
+{: #incidentresponse}
+
+### 客户检测到的问题
+
+如果识别到需要 IBM 支持和操作人员关注的问题，您可以使用多种不同的方法来联系支持人员。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。根据问题情况，您和/或 IBM 可合作解决问题。
+
+### IBM 检测到的严重事件
+
+严重事件是指紧迫的意外服务中断以及影响您的环境或用户的稳定性问题。如果 IBM 检测到您的环境内有严重事件，那么会在**状态**页面上借助通知来告知您。您还可以检查“状态”页面来获取平台或服务的任何已知问题。如果要将通知与支持 Web Hook 的 Web Service 集成在一起，请参阅[通知和事件预订](../admin/index.html#oc_eventsubscription)，以获取有关如何扩展通知功能的信息。
+
+![事件响应过程](../local/images/incidentresponseprocess.png "事件响应过程")
+
+*图 2. 事件响应过程*
+
+根据问题情况，您和/或 IBM 可合作解决问题。如果您有与事件相关的疑问，或者需要 IBM 代表帮助您解决问题，那么可以开具支持凭单。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。
+
+**注**：将全天候监视严重性为 1 的支持凭单。其他凭单的处理时间是周日晚上 10:00 GMT 到周六上午 12:00 GMT。有关支持凭单严重性和使用支持的更多信息，请参阅<a href="../support/index.html#contacting-bluemix-support-local">联系支持人员</a>。
+
 
 ## 灾难恢复
 {: #dr}
@@ -283,7 +329,7 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 <dt>Cloud Foundry 中的可扩展性</dt>
 <dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> 会对其中运行的应用程序执行运行状况检查。如果应用程序或 DEA 本身存在问题，那么它会将应用程序的其他实例部署到备用 DEA 来解决该问题。有关更多信息，请参阅<a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">配置 CF 以通过冗余实现高可用性</a>。</dd>
 <dt>SoftLayer 冗余</dt>
-<dd>在专用环境中使用 SoftLayer 时，每个云存储集群中的数据都会被写入多次，而且存储集群都配备有在发生驱动器故障时进行自动修复的功能。如果某个虚拟机发生问题，SoftLayer 会尝试在其他主机上重新启动该虚拟机。</dd>
+<dd>在专用环境中使用 SoftLayer 时，每个云存储集群中的数据都会被写入多次，而且存储集群都配备有在发生驱动器故障时进行自动修复的功能。如果某个虚拟服务器发生问题，SoftLayer 会尝试在其他主机上重新启动该虚拟服务器。</dd>
 <dt>元数据备份</dt>
 <dd>使用 SoftLayer EVault Backup 将元数据备份到至少 200 公里远的位置。</dd>
 </dl>
@@ -313,5 +359,7 @@ IBM 会通过电子邮件、电话或其他方法来发送有关针对每个维�
 # 相关链接
 ## 常规
 * [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [{{site.data.keyword.Bluemix_notm}} 中的新增功能](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 词汇表](glossary/index.html)
 * [管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
 * [联系支持人员](../troubleshoot/getting_customer_support.html#bluemix_support)

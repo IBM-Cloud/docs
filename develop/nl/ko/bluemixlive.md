@@ -1,10 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*마지막 업데이트 날짜: 2015년 12월 8일*  
+*마지막 업데이트 날짜: 2016년 3월 23일*  
 
 Node.js 애플리케이션을 빌드하고 있는 경우, {{site.data.keyword.Bluemix}} Live Sync를 사용하여 재배치 없이 데스크탑에서처럼
 {{site.data.keyword.Bluemix_notm}} 에서 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다.   
@@ -67,9 +78,10 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 클라우드 작업공간과 동기화할 수 있습니다. 
 * 애플리케이션이 Node.js로 작성된 경우, 변경사항을 실행 중인 애플리케이션으로 전파할 수 있습니다.
 
-명령에 대한 세부사항은 [Bluemix Live Sync CLI 문서](../cli/reference/bl/index.html)를 참조하십시오. 
+명령에 대한 세부사항은 [Bluemix Live Sync(bl) 명령](bluemixlive.html#bl-commands)을 참조하십시오. 
 
 <ol>
+<li>무료 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 계정에 가입하십시오.</li>
 <li>{{site.data.keyword.Bluemix_notm}} Live Sync bl 명령행을 다운로드하고 설치하십시오.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Windows bl 명령행 다운로드 단추" /> </a>
@@ -77,6 +89,7 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 </p>  
 
 <strong>중요:</strong> bl 명령행 도구는 Windows 7 및 8과 Mac OS X 버전 10.9 이상에서만 사용할 수 있습니다. </li>
+
 <li>명령행에서 다음 명령을 사용하여 로그인하십시오. IBM ID와 비밀번호를 입력하도록 프롬프트됩니다.  
 <pre class="codeblock">bl login</pre>
 </li>
@@ -218,6 +231,437 @@ Debug를 설치한 후 디버그 도구를 사용할 수 있습니다.
 
 3. 앱을 푸시하십시오.
 
+## {{site.data.keyword.Bluemix_notm}} Live Sync(bl) 명령{: #bl-commands}
+
+Node.js 애플리케이션을 빌드하고 있는 경우 {{site.data.keyword.Bluemix_live}}를
+사용하여 재배치 없이 데스크탑에서처럼 {{site.data.keyword.Bluemix_notm}}에서 실행되는
+애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다. 변경할 경우 실행 중인
+{{site.data.keyword.Bluemix_notm}} 애플리케이션에서 변경사항을
+즉시 확인할 수 있습니다. {{site.data.keyword.Bluemix_live}}
+명령행 인터페이스를 *bl*이라고 합니다. {:shortdesc}
+
+**bl** 명령행 인터페이스 명령을 사용하여 다음과 같은 태스크를
+완료할 수 있습니다. 
+
+* {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션을 시작하고 중지하십시오.
+* 데스크탑에서 새 클라우드 기반 프로젝트를 작성합니다.
+* 데스크탑의 변경사항을 클라우드 기반 프로젝트 작업공간과 {{site.data.keyword.Bluemix_notm}}에서
+실행되는 애플리케이션으로 동기화
+* 동기화할 수 있는 프로젝트 목록을 확인합니다.
+* 실행 중인 애플리케이션의 상태를 확인합니다.
+
+bl 명령 다운로드 및 사용에 대한 자세한 정보는 [Bluemix Live Sync](../develop/bluemixlive.html)를 참조하십시오.
+
+## bl 명령
+
+{{site.data.keyword.Bluemix_live}} 명령행인 **bl**은 다음과 같은 구문을 사용합니다.
+
+```
+bl command [arguments][options] [--help]
+```
+
+### 명령
+<dl>
+<dt>login, l</dt>
+<dd>{{site.data.keyword.Bluemix_notm}}에 로그인하십시오.</dd>
+<dt>logout, lo</dt>
+<dd>사용자가 로그아웃됩니다. </dd>
+<dt>sync, s</dt>
+<dd>데스크탑과 서버 간 동기화 프로세스를 시작합니다. </dd>
+<dt>create, c</dt>
+<dd>개인용 프로젝트를 작성하여 이 디렉토리의 Git repo에 링크한 다음
+{{site.data.keyword.Bluemix_notm}}에 컨텐츠를 배치합니다.</dd>
+<dt>projects, p</dt>
+<dd>동기화할 수 있는 모든 프로젝트를 나열합니다. </dd>
+<dt>start, st</dt>
+<dd>{{site.data.keyword.Bluemix_notm}}에서 애플리케이션 인스턴스를 시작합니다.</dd>
+<dt>stop, sp</dt>
+<dd>{{site.data.keyword.Bluemix_notm}}에서 애플리케이션 인스턴스를 중지합니다.</dd>
+<dt>status, ss</dt>
+<dd>{{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션 인스턴스의 상태 목록을 표시합니다.</dd>
+</dl>
+
+### 인수
+<dl>
+<dd>명령에 대한 인수입니다. </dd>
+</dl>
+
+### 옵션
+<dl>
+<dd>명령에 대한 옵션입니다. </dd>
+</dl>
+
+### 글로벌 옵션
+<dl>
+<dt>--help</dt>
+<dd>지정된 명령의 도움말 페이지를 표시합니다. </dd>
+<dt>--verbose</dt>
+<dd>상세 로깅을 설정합니다. </dd>
+</dl>
+
+**참고:** 인수 또는 옵션에 공백이 포함되어 있으면 값을 큰따옴표로 묶으십시오.
+
+## help
+
+```
+bl [ command ] --help
+```
+
+### 사용량
+<dl>
+<dd>이 명령을 사용하면 명령 또는 명령 목록에 대한 도움말이
+표시됩니다. </dd>
+</dl>
+
+### 예
+
+다음 명령은 명령 목록을 표시합니다. 
+
+```bl --help```
+
+다음 명령은 sync 명령에 대한 자세한 정보를 표시합니다.
+
+```bl sync --help```
+
+## login
+
+```bl login|l [ -u username ][-p password ][ -s server ]```
+
+### 용도
+
+이 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인합니다. 로그인은 세션당 한 번만 수행해야
+합니다. 
+
+**경고:** 비밀번호를 명령행 옵션으로 제공할 경우 다른 사용자가 볼 수 있으며 명령 히스토리의 일부로 기록되므로 권장되지 않습니다.
+
+**참고:** 로그인하기 전에 무료 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 계정에 가입해야 합니다.
+
+### 옵션
+
+<dl>
+<dt>-u username</dt>
+<dd>{{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용하는 IBM ID입니다.</dd>
+<dt>-p password</dt>
+<dd>IBM ID 비밀번호입니다. </dd>
+<dt>-s server</dt>
+<dd>{{site.data.keyword.jazzhub_short}} 서버의 서버 이름 또는 IP 주소입니다.</dd>
+</dl>
+
+### 예
+
+다음 명령은 *username*과 *password*를
+묻는 메시지를 표시합니다. 
+
+```bl login```
+
+다음 명령을 사용하면 `name@company.com:` 사용자가 로그인합니다.
+
+```bl login –u name@company.com –p pa55w0rd```
+
+다음 명령을 사용하면 `name@company.com` 사용자가 pa55 w0rd 비밀번호를 사용하여 로그인합니다. 이 비밀번호에는 공백이 있으므로 따옴표가 필요합니다.
+
+```bl login –u name@company.com –p “pa55 w0rd”```
+
+## logout
+
+```
+bl logout|lo
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 로그아웃됩니다. </dd>
+</dl>
+
+## 프로젝트
+
+```
+bl projects|p
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 로그인한 사용자가 동기화할 수 있는 모든 프로젝트가 나열됩니다. </dd>
+</dl>
+
+## sync
+
+```
+bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 로컬 디렉토리와의 프로젝트 컨텐츠 동기화가
+시작됩니다. 이 명령은 <code>q</code>를 입력할 때까지 실행됩니다.
+이 명령은 선택적으로 모든 파일 및 애플리케이션 상태 변경사항의 로그를
+표시할 수 있습니다. </dd>
+</dl>
+
+### 인수
+
+<dl>
+<dt>projectName</dt>
+<dd><i>“alias | myproject”</i> 또는 <i>myproject</i>(프로젝트가
+로그인한 사용자의 소유인 경우) 형식의 프로젝트 이름입니다. </dd>
+</dl>
+
+### 옵션
+
+<dl>
+<dt>-d localDirectory</dt>
+<dd>로컬 디렉토리 경로입니다. 기본값은 현재 폴더 "."입니다.</dd>
+<dt>--overwritelocal</dt>
+<dd>로컬 디렉토리를 프로젝트 작업공간의 컨텐츠로 겹쳐씁니다. </dd>
+<dt>--overwriteremote</dt>
+<dd>프로젝트 작업공간을 로컬 디렉토리의 컨텐츠로 겹쳐씁니다. </dd>
+<dt>--verbose</dt>
+<dd>상세 로깅을 표시합니다. </dd>
+</dl>
+
+### 예
+
+현재 디렉토리가 기존 동기화 대상인 경우 다음 명령은 연관된 프로젝트와의 동기화를
+시작합니다. 현재 디렉토리가 비어 있으며 기존 동기화 대상이 아닌 경우 이 명령은
+*projectName*을 요구하는 프롬프트를 표시합니다. 현재 디렉토리가 비어 있지
+않으며 기존 동기화 대상도 아닌 경우 overwrite 옵션이 필요합니다.
+
+
+```
+bl sync```
+
+다음 명령은 동기화를 시작하며, 프로젝트가 로그인한 사용자의 소유인 경우
+```bl sync “alias | myproject”```
+명령과 동일합니다.
+
+```bl sync  myproject```
+
+다음 명령은 <code>my pro ject</code>
+프로젝트와의 동기화를 시작합니다. 이때 프로젝트의 이름은 공백이 포함되어 있으므로
+따옴표로 묶어야 합니다. 
+
+```bl sync “my pro ject”```
+
+다음 명령은 <code>myproject</code> 프로젝트와 myfolder 디렉토리의 동기화를 시작합니다.
+
+```bl sync myproject –d  myfolder```
+
+## create
+
+```
+bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+
+### 용도
+<dl>
+<dd>코드가 포함된 디렉토리에서 이 명령을 사용하여 개인용 프로젝트를 작성하고 Git 저장소에 링크한 후
+{{site.data.keyword.Bluemix_notm}}에 저장소의 컨텐츠를 배치합니다. </dd>
+</dl>
+
+### 옵션
+
+<dl>
+<dt>-n PROJECT_NAME</dt>
+<dd>프로젝트의 이름입니다. 기본값: 현재 디렉토리 이름입니다.</dd>
+<dt>-r REGION</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 지역입니다.
+기본값: 미국 남부</dd>
+<dt>-o ORG</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 조직입니다.
+기본값: 처음 발견된 조직입니다.</dd>
+<dt>-s SPACE</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 영역입니다.
+기본값: 처음 찾은 영역입니다.</dd>
+<dt>-g GIT_REPO</dt>
+<dd>기존 Git 저장소에 사용할 원격 저장소의 이름을 지정합니다. 기본값: origin.</dd>
+<dt>-e GIT_EXE</dt>
+<dd>Git 실행 파일의 전체 경로입니다. 기본값: detected.</dd>
+<dt>--creds</dt>
+<dd>Git 신임 정보를 프롬프트합니다.</dd>
+<dt>--fork</dt>
+<dd>이 디렉토리를 분기하고 프로젝트와 저장소를 작성합니다.</dd>
+<dt>--public</dt>
+<dd>새 프로젝트를 공용으로 만듭니다.</dd>
+<dt>--prompt</dt>
+<dd>사용 가능한 선택사항과 함께 필요한 모든 옵션을 프롬프트합니다.</dd>
+</dl>
+
+### 예
+
+이 명령은 개인용 프로젝트를 작성하는 프로세스를 시작하고
+사용할 프로젝트 이름을 프롬프트합니다.
+
+```bl create```
+
+이 명령은
+이름이 <code>myNewProject</code>인 공용 프로젝트를 작성합니다. 
+
+```bl create -n myNewProject --public```
+
+## status
+
+```
+bl status|ss [ projectName ]
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 <code>./launchConfigurations</code> 디렉토리의 실행 구성과
+연관된 애플리케이션의 상태가 나열됩니다. </dd>
+</dl>
+
+###인수
+
+<dl>
+<dt>projectName</dt>
+<dd>“alias | myproject” 또는 myproject(프로젝트가 로그인한 사용자의 소유인 경우) 형식의 프로젝트 이름입니다.</dd>
+</dl>
+
+### 예
+
+다음 예는 실행 중인 애플리케이션의 상태를 표시합니다. 현재 디렉토리가 기존 동기화 대상인
+경우 연관된 프로젝트가 사용됩니다. 현재 디렉토리가 기존 동기화 대상이 아닌 경우 이 명령은
+<i>projectName</i>을 묻는 메시지를 표시합니다. 
+
+````bl status```
+
+다음 예제는 프로젝트가 로그인한 사용자의 소유인 경우
+```bl status “alias | myproject”```
+명령과 동일한 myproject 프로젝트의 상태를 표시합니다.
+
+```bl status myproject```
+
+다음 명령은 <code>my pro ject</code>
+프로젝트와 연관된 실행 중인 애플리케이션의 상태를 표시합니다. 이때 프로젝트의
+이름에 공백이 포함되어 있으므로 따옴표로 묶어야 합니다. 
+
+```bl status “my pro ject”```
+
+## start
+
+```
+bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 실행 또는 Manifest 파일에 기술된 애플리케이션 인스턴스가
+시작됩니다. 애플리케이션의 빌드팩이 실시간 편집을 지원할 경우 애플리케이션이
+기본적으로 실시간 편집 모드로 실행됩니다. 시작되면 애플리케이션의 URL,
+디버그 도구 및 {{site.data.keyword.Bluemix_notm}}
+대시보드가 표시됩니다.</dd>
+</dl>
+
+### 인수
+
+<dl>
+<dt>projectName</dt>
+<dd><i>“alias | myproject”</i> 또는 <i>myproject</i>(프로젝트가
+로그인한 사용자의 소유인 경우) 형식의 프로젝트 이름입니다. </dd>
+</dl>
+
+### 옵션
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>실행 구성 이름(예: <code>mylaunchconfig</code>), 파일 이름(예:
+<code>mylaunchconfig.launch</code> 또는 실행 구성 파일의 프로젝트
+상대 경로(예: <code>launchConfigurations/mylaunchconf.launch</code>)입니다. </dd>
+<dt>-m manifestPath</dt>
+<dd>Manifest 파일의 프로젝트 상대 경로입니다(예: <code>manifest.yml</code>). </dd>
+<dt>--liveedit</dt>
+<dd>연관된 애플리케이션이 실시간 편집 모드로 시작되거나, 빌드팩에서 실시간 편집 모드를
+지원하지 않는 경우 오류가 발생하면서 종료됩니다. </dd>
+<dt>--noliveedit</dt>
+<dd>연관된 애플리케이션이 정상 모드로 시작됩니다. </dd>
+<dt>--view</dt>
+<dd>실행 중인 애플리케이션의 브라우저가 열립니다. </dd>
+<dt>--restart</dt>
+<dd>실시간 편집 모드로 이미 실행 중인 애플리케이션을 재배치하지 않고 다시 시작합니다. </dd>
+</dl>
+
+### 예
+
+다음 명령을 실행하면 실행 파일 <code>launchConfigurations/my.launch</code>와 연관된
+<code>myproject</code>의 애플리케이션 인스턴스가 시작됩니다.
+
+
+```bl start myproject –l “launchConfigurations/my.launch”```
+
+다음 명령을 실행하면
+실행 파일 <code>launchConfigurations/my.launch</code>가 있는 현재 디렉토리와 연관된
+프로젝트의 애플리케이션 인스턴스가 시작됩니다. 현재 디렉토리가 동기화 대상이
+아닌 경우 오류가 표시됩니다. 
+
+```bl start –l “launchConfigurations/my.launch” ```
+
+다음 명령을 실행하면
+Manifest 파일 <code>manifest.yml</code>이 있는 현재 디렉토리와 연관된
+프로젝트의 애플리케이션 인스턴스가 시작됩니다. Manifest에 지정된 정보는 실행 구성 파일을
+새로 작성하는 데 사용됩니다. 이 명령을 실행하면 나머지 필수 정보를 묻는 메시지가
+표시된 다음 실행 구성에 기술된 애플리케이션이 시작됩니다. 
+
+```bl start –m “mymanifest.yml” ```
+
+다음 명령은 Manifest 파일 <code>manifest.yml</code>이 있는 현재 디렉토리와 연관된 프로젝트의 애플리케이션 인스턴스를 시작하며
+```bl start –m manifest.yml``` 명령과 동일합니다.
+
+```bl start```
+
+## stop
+
+```
+bl stop|sp projectName [ -l launchConfiguration ]
+```
+
+### 용도
+
+<dl>
+<dd>이 명령을 사용하면 실행 파일과 연관된 애플리케이션 인스턴스가 중지됩니다. </dd>
+</dl>
+
+### 인수
+
+<dl>
+<dt>projectName</dt>
+<dd>“alias | myproject” 또는 myproject(프로젝트가 로그인한 사용자의 소유인 경우) 형식의 프로젝트 이름입니다. </dd>
+</dl>
+
+### 옵션
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>실행 구성 이름(예: <code>mylaunchconfig</code>), 파일 이름(예:
+<code>mylaunchconfig.launch</code> 또는 실행 구성 파일의 프로젝트
+상대 경로(예: <code>launchConfigurations/mylaunchconf.launch</code>)입니다. </dd>
+</dl>
+
+### 예
+
+다음 명령을 실행하면 현재 디렉토리가 동기화 대상인 경우 애플리케이션이 중지되고,
+그렇지 않은 경우 오류가 발생하면서 종료됩니다. 실행 구성이 없는 경우
+이 명령은 오류가 발생하면서 종료됩니다. 실행 구성이 두 개 이상 있는 경우
+중지할 구성을 묻는 메시지가 표시됩니다. 
+
+```bl stop```
+
+다음 명령을 실행하면
+실행 파일 <code>mylaunchConfig</code>를 사용하여 실행 중인 프로젝트의
+애플리케이션 인스턴스가 중지됩니다. 
+
+```bl stop myproject –l “mylaunchConfig” ```
+
+다음 명령을
+실행하면 현재 디렉토리가 실행 파일 <code>launchConfigurations/mylaunchconfig.launch</code>를
+사용하여 시작된 연관된 프로젝트의 동기화 대상인 경우 애플리케이션이 중지되고,
+그렇지 않은 경우 오류가 발생하면서 종료됩니다. 
+
+```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
 
 ># 관련 링크 {:class="linklist"}
 >## 학습서 및 샘플 {:id="samples"}
@@ -225,6 +669,6 @@ Debug를 설치한 후 디버그 도구를 사용할 수 있습니다.
 >
 ># 관련 링크 {:class="linklist"}
 >## 관련 링크 {:id="general"}
->* [bl 명령](https://www.ng.bluemix.net/docs/cli/bl_cli.html)   
+>* [Bluemix용 Eclipse 도구](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
 >
 >{:elementKind="article" id="rellinks"}

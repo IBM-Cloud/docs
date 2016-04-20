@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #更新應用程式
 {: #updatingapps}
 
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 3 月 17 日*
 
 
 您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
@@ -18,8 +26,6 @@
 您可以在應用程式的 URL 中使用自訂網域，而非預設 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
 
 網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域，然後將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
-
-**附註：**您可以使用 **nslookup** 指令，來取得 {{site.data.keyword.Bluemix_notm}} 系統網域的公用 IP 位址。例如，在命令提示字元中輸入 `nslookup mybluemix.net`。
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面，在 {{site.data.keyword.Bluemix_notm}} 中建立及使用自訂網域。
 
@@ -73,6 +79,15 @@
     
         您要用於應用程式的路徑中的主機名稱。
 	
+在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，您必須將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
+
+  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。
+  2. 將自訂網域名稱對映至應用程式執行所在的 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑：
+  
+    * US-SOUTH：`secure.us-south.bluemix.net`
+    * EU-GB：`secure.eu-gb.bluemix.net`
+    * AU-SYD：`secure.au-syd.bluemix.net`
+  
 在瀏覽器或指令行介面中，輸入下列 URL 以存取 myapp 應用程式：
 
 ```
@@ -147,7 +162,7 @@ cf delete-route domain -n hostname -f
   
   **結果：**
     * 已部署兩個應用程式實例：*Blue* 及 *Green*。
-	* *Green* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
+	* 該 *Green* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
 	
 4. 選用項目：如果您要刪除舊版 (*Green*) 的應用程式，請使用 **cf delete** 指令。
   
@@ -197,7 +212,7 @@ cf delete-route domain -n hostname -f
   **結果：**
   
     * 已部署兩個應用程式實例：*Blue* 及 *Green*。
-	* *Blue* 應用程式正在回應 URL `Blue.mybluemix.net`。且 *Green* 應用程式正在回應 URL `Green.mybluemix.net`。
+	* 該 *Blue* 應用程式正在回應 URL `Blue.mybluemix.net`。且 *Green* 應用程式正在回應 URL `Green.mybluemix.net`。
 	
 3. 將 *Blue* 應用程式對映至 *Green* 應用程式，讓 `Blue.mybluemix.net` 的所有資料流量同時遞送至 *Blue* 應用程式及 *Green* 應用程式。
   
@@ -266,6 +281,5 @@ cf delete-route domain -n hostname -f
 
 # 相關鏈結
 ## 一般 
-* [組織及空間](../acctmgmt/index.html#organdspaces)
 * [藍綠部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

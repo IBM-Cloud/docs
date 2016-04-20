@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# 管理應用程式用的 cf 指令
+# Cloud Foundry (cf) 指令
 
-*前次更新：2015 年 11 月 10 日*
+*前次更新：2016 年 1 月 29 日*
 
 您可以使用 Cloud Foundry (cf) 指令來管理應用程式。{:shortdesc}
 

@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2015 年 12 月 15 日*
+*最終更新日: 2016 年 3 月 17 日*
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
 {:shortdesc}
@@ -87,7 +99,7 @@ HTTP の非活動タイムアウトは 2 分です。
 </dd>
 
 <dt>セキュア開発プラクティス</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} Public および Dedicated では、IBM Security AppScan® Dynamic Analyzer および static analyzer の各オファリングを使用して、様々な {{site.data.keyword.Bluemix_notm}} コンポーネントに対してセキュリティー脆弱性スキャンを定期的に実行します。{{site.data.keyword.Bluemix_notm}} デプロイメントに対しては、そのすべてのタイプについて潜在的な脆弱性を検出して解決するために、脅威のモデル化および侵入テストを実行します。さらに、アプリケーション開発者は AppScan Dynamic Analyzer サービスを使用して、{{site.data.keyword.Bluemix_notm}} にデプロイされている自分たちの Web アプリをセキュアにすることができます。</dd>
+<dd> {{site.data.keyword.Bluemix_notm}} Public および Dedicated では、IBM Security AppScan® Dynamic Analyzer を使用して、さまざまな {{site.data.keyword.Bluemix_notm}} コンポーネントに対してセキュリティー脆弱性スキャンを定期的に実行します。{{site.data.keyword.Bluemix_notm}} デプロイメントに対しては、そのすべてのタイプについて潜在的な脆弱性を検出して解決するために、脅威のモデル化および侵入テストを実行します。さらに、アプリケーション開発者は AppScan Dynamic Analyzer サービスを使用して、{{site.data.keyword.Bluemix_notm}} にデプロイされている自分たちの Web アプリをセキュアにすることができます。</dd>
 </dl>
 
 ### インフラストラクチャーのセキュリティー
@@ -128,7 +140,7 @@ HTTP の非活動タイムアウトは 2 分です。
 <dt>ユーザー・アクセス管理</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 内では職務分離ガイドラインに従い、ユーザーに細かいアクセス特権を割り当てて、ユーザーが持っているのは、最小特権の原則に基づいた、ジョブの実行に必要なアクセス権限のみであることを保証します。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} の管理](../admin/index.html#mng)』を参照してください。
+{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理](../admin/index.html#mng)』を参照してください。
 </dd>
 </dl>
 
@@ -192,31 +204,9 @@ Single Sign On サービスでは、以下に示すように、ユーザーの�
 
 詳しくは、『[Single Sign On 入門 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)』を参照してください。
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-このサービスは、Android モバイル・アプリケーションのセキュリティー分析を提供します。このサービスを使用するには、コンパイルされた Android アプリを APK ファイルとしてアップロードする必要があります。セキュリティー分析のスキャンが完了すると、レポートをダウンロードできます。
-
-詳しくは、『[AppScan Mobile Analyzer 入門 (Getting started with AppScan Mobile Analyzer)](../services/AppScanMobileAnalyzer/index.html)』を参照してください。
-
-### AppScan Dynamic Analyzer
-
-このサービスは、動的分析ツールを使用した Web アプリケーションのセキュリティー分析を提供します。このツールは、アプリのソース・コード上ではなくデプロイ済みの Web アプリ上で機能し、その言語やテクノロジーに関係なく、あらゆる {{site.data.keyword.Bluemix_notm}} Web アプリをスキャンすることができます。ユーザーは自分が所属する組織のアプリケーションのみをスキャンできます。スキャンを作成するには、Web アプリの URL と、該当する場合はログイン資格情報を構成する必要があります。スキャンが完了すると、レポートをダウンロードできます。
-
-詳しくは、『[AppScan Dynamic Analyzer 入門 (Getting started with AppScan Dynamic Analyzer)](../services/AppScanDynamicAnalyzer/index.html)』.
-
-### Mobile Analyzer for iOS (ベータ版)
-
-Mobile Analyzer for iOS サービスは、iOS モバイル・アプリケーションに AppScan 動的セキュリティー分析を提供します。これは、iOS モバイル・アプリでのセキュリティー問題を特定するのに役立ちます。
-
-詳しくは、『[Mobile Analyzer for iOS 入門 (Getting started with Mobile Analyzer for iOS)](../services/AppScanIOS/index.html)』を参照してください。
-
-### Static Analyzer (ベータ版)
-
-Static Analyzer サービスを使用することで、クラウドでの静的アプリケーション・セキュリティー・テストが可能になります。これは、ソフトウェア開発ライフサイクルにおいて早期にソース・コードの脆弱性を検出して、デプロイする前に修正できるようにするのに役立ちます。
-
-Static Analyzer では、ローカル・ディスクでコマンド・ライン・インターフェース (CLI) を使用して、Java および Java Web コンテンツをスキャンできます。また、Eclipse または Maven に Static Analyzer プラグインを追加する小規模なインストーラーを実行できます。クライアント・ユーティリティーを使用して、ファイルに関する情報をスキャンしてアーカイブ・ファイルに収集できます。このアーカイブ・ファイルをスキャン結果としてクラウドに送信します。
-
-詳しくは、『[IBM Static Analyzer for Bluemix 入門 (Getting started with IBM Static Analyzer for Bluemix)](../services/StaticAnalyzer/index.html)』を参照してください。
+このサービスは、モバイル・アプリおよび Web アプリのセキュリティー分析を提供します。このサービスを使用して、ソース・コードのセキュリティー脆弱性をスキャンできます。詳しくは、『[Application Security on Cloud の概要 (Getting started with Application Security on Cloud)](../services/ApplicationSecurityonCloud/index.html)』を参照してください。
 
 ### アプリケーション・セキュリティー・テスト用の IBM UrbanCode プラグイン
 
@@ -228,7 +218,7 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラ�
 
 SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
 
-このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}}x で SQL Database コンソールを使用して、以下の情報を含むレポートを取得できます。
+このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}} 内の SQL データベース・コンソールを使用すると、以下の情報を含むレポートを取得できます。
 
  * アプリケーションがアクセスするデータベース内に存在する可能性のある機密データ。
  * 指定された期間内にデータベースにアクセスしたアプリケーション・ユーザー。
@@ -254,7 +244,7 @@ Cloud Integration サービスにより、クラウドとオンプレミスの�
 
 Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm}} アプリをオンプレミスまたはクラウドにあるリモート・ロケーションにセキュアに接続できるようになります。これにより、セキュア接続が実現し、{{site.data.keyword.Bluemix_notm}} 組織と接続先リモート・ロケーションとの間にトンネルが確立されます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは API パッケージを使用して、セキュア・ゲートウェイを構成および作成できます。
 
-詳しくは、『[Secure Gateway 入門 (Getting started with Secure Gateway)](../services/SecureGateway/index.html)』を参照してください。
+詳しくは、『[Secure Gateway 入門 (Getting started with Secure Gateway)](../services/SecureGateway/secure_gateway.html)』を参照してください。
 
 ### SIEM (Security Information and Event Management)
 
@@ -275,11 +265,11 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
  1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。
  2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
  3. ネットワーク・ルーターを介します。
- 4. ドロップレット実行エージェント (DEA) のアプリケーション・ランタイムに到達します。
+ 4. Droplet Execution Agent (DEA) のアプリケーション・ランタイムに到達します。
 
 {{site.data.keyword.Bluemix_notm}} *開発者*は、ログイン用と開発およびデプロイ用の 2 つのメイン・フローに従います。
  * **開発者のログイン・フロー**には、以下が含まれます。
-    * {{site.data.keyword.Bluemix_notm}} (パブリック) にログインする開発者の場合、フローは以下のとおりです。
+    * {{site.data.keyword.Bluemix_notm}} Public にログインする開発者の場合、フローは以下のとおりです。
       1. IBM シングル・サインオン・サービスを介します。
       2. IBM Web ID を介します。
     * {{site.data.keyword.Bluemix_notm}} Dedicated または Local にログインする開発者の場合、フローは企業 LDAP を介します。
@@ -288,7 +278,7 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
     2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
     3. ネットワーク・ルーターを介します。
     4. Cloud Foundry クラウド・コントローラーを使用した許可を介します。これにより、開発者によって作成されたアプリおよびサービス・インスタンスにのみアクセスが確保されます。
-  
+
 {{site.data.keyword.Bluemix_notm}} Dedicated および {{site.data.keyword.Bluemix_notm}} Local *管理者* の場合、**管理者のフロー**は、以下のとおりです。
  1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。
  2. リバース・プロキシーおよび SSL 終端プロキシーを備えた IBM DataPower Gateway を介します。
@@ -301,7 +291,7 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
  * IBM Endpoint Manager を使用してフィックスを定期的に適用することによる、オペレーティング・システムの堅牢化。
  * 侵入防止によるリスク管理。
  * QRadar を使用したセキュリティー・モニター。
- * 管理コンソールで使用可能なセキュリティー・レポート。
+ * 「管理」ページで入手可能なセキュリティー・レポート。
 
 ## セキュリティー・コンプライアンス
 {: #compliance}
@@ -314,8 +304,8 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
 ![金融情報システム](images/FISC.gif)  日本国内の銀行業界および関連する金融業界の場合、コンピューター・システムは、金融情報システムセンター (FISC) の安全対策基準に基づいた安全対策手順を実施する必要があります。**FISC** 安全対策基準は、金融庁 (FSA)、日本銀行 (BOJ)、および FISC によって実施されています。
 
 FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己評価文書 (日本語版) は、[IBM Bluemix リスク調査結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}から入手できます。 
- 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。 
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。
 
 {{site.data.keyword.Bluemix_notm}} は、サード・パーティーのセキュリティー会社によって監査されており、ISO 27001 のすべての条件 ([Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}) を満たしています。
 
@@ -324,39 +314,31 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
   * ベンダー管理プログラム
   * 社内のコーポレート・ガバナンスおよびリスク管理プロセス
   * 規制の監督
- 
+
 {{site.data.keyword.Bluemix_notm}} は、IBM SoftLayer Infrastructure as a Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。
 
-## セキュリティー・レポート
-{: #reports}
+### プラットフォームとサービスの準拠
+以下の表は、{{site.data.keyword.Bluemix_notm}} 内のどのサービスが各標準に準拠しているかを示しています。
 
-{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated では、{{site.data.keyword.Bluemix_notm}} は各種セキュリティー・レポートおよびログを生成します。これらは、「管理」ページから表示できます。レポートの表示および使用の説明については、『[レポートの表示](../admin/index.html#oc_report)』を参照してください。
+|{{site.data.keyword.Bluemix_notm}} コンポーネント		|FISC		|ISO 27001	|SOC 2 タイプ 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} プラットフォーム		|Y			|Y	|Y	|
+|{{site.data.keyword.APIM}}			|Y	|Y |			|
+|{{site.data.keyword.autoscaling}}			|Y	|Y |			|
+|{{site.data.keyword.bigicloudst}}			|Y |Y |Y |
+|{{site.data.keyword.cloudant}}				|Y |Y |Y	|
+|{{site.data.keyword.dashdbshort}}			|Y	|Y	|Y	|
+|{{site.data.keyword.datacshort}}			|Y	|Y	|			|
+|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|			|
+|{{site.data.keyword.containerlong}}			|Y		|Y	|			|
+|{{site.data.keyword.mql}}				|Y	|Y	|	 		|
+|{{site.data.keyword.SecureGateway}}			|Y	|Y |	 		|
+|{{site.data.keyword.sescashort}}     |Y |Y | |
 
-以下の表では、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 用に生成されるセキュリティー・レポートのリストを示します。
+*表 1. プラットフォームとサービスの準拠*
 
-| **カテゴリー** | **レポート** | **説明** |      
-|-----------------|-------------------|---------------------|
-| ファイアウォール | ファイアウォールのログイン | Vyatta ファイアウォール・デバイスへの管理者のログインに関するイベント。 |
-| ファイアウォール | ファイアウォールの拒否 | 設定されているファイアウォール・ルールに従ってアクセス要求が拒否された場合に Vyatta ファイアウォール・デバイスによって生成されるイベント。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者のログイン・イベント | {{site.data.keyword.Bluemix_notm}} 管理者のログイン | 管理者が各 {{site.data.keyword.Bluemix_notm}} システム上で SSH セッションを開始したときにオペレーティング・システムによって生成されるイベント。 |
-| {{site.data.keyword.Bluemix_notm}} アプリケーション開発者のログイン・イベント | {{site.data.keyword.Bluemix_notm}} アプリケーション開発者のログイン | コマンド・ライン、REST API、または {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} プラットフォーム・ユーザーがセッションを開始したときに {{site.data.keyword.Bluemix_notm}} プラットフォーム・ログイン・コンポーネントによって生成されるイベント。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者の管理イベント | {{site.data.keyword.Bluemix_notm}} 管理者のオペレーティング・システム管理イベント | 管理者が現行作業セッション内でアクションを実行したときにオペレーティング・システムによって生成されるイベント。 |
-| {{site.data.keyword.Bluemix_notm}} アプリケーション開発者の管理イベント | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理イベント | コマンド・ライン、REST API、または {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} プラットフォーム・ユーザーによって実行された操作に関連するイベント。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者のデータベース管理イベント | データベース管理イベント | {{site.data.keyword.Bluemix_notm}} 内部データベースでデータベース管理者によって実行された操作に関連するイベント。 |
-| 管理イベント | ユーザー管理イベント | 「管理」ページで実行されたユーザー管理アクションに関連するイベント。 |
-| 管理イベント | catalog | サービス・カタログの変換に関連するイベント。 |
-| 管理イベント | セキュリティー・レポート管理イベント | 「管理」ページで実行されたセキュリティー・レポート管理アクションに関連するイベント。 |
-| アクセス・レビュー | アクセス・レビュー・レポート | 特権アクセスのレビュー。 |
-| 変更管理 | ソフトウェア変更管理 | 変更管理アクティビティー。 |
-| 鍵管理 | カスタム SSL 証明書の管理 | アップロードおよび保管されたカスタム SSL 証明書。 |
-| 暗号化 | 転送中のデータ暗号化 | 構成されている転送中のデータ暗号化。 |
-| アンチウィルス | アンチウィルス・スキャン・レポート | 配置されているアンチウィルス・ソフトウェア。 |
-| ソフトウェア・フィックス管理 | パッチ適用レポート | 適用されたソフトウェア・フィックス。 |
-| セキュリティー・インシデント管理 | セキュリティー・インシデント修復レポート | セキュリティー・インシデント管理のセキュリティー・インシデントのエビデンス。 |
-
-*表 1. {{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated のセキュリティー・レポートのリスト*
 
 # 関連リンク
-## 一般 
+## 一般
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [Single Sign On 入門 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)

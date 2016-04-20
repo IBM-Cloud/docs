@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Protección de apps
 {: #securingapps}
 
-*Última actualización: 4 de diciembre de 2015*
+*Última actualización: 17 de marzo de 2016*
 
 Puede proteger las app subiendo certificados SSL y limitando el acceso a las app.
 {:shortdesc}
@@ -50,7 +58,7 @@ Marketing.
   Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.
   
 Los métodos para crear una CSR varían en función del sistema operativo. El ejemplo siguiente
-muestra cómo crear una CSR utilizando [la herramienta de mandatos OpenSSH](http://www.openssl.org/){:new_window}:
+muestra cómo crear una CSR utilizando [la herramienta de línea de mandatos OpenSSL](http://www.openssl.org/){:new_window}: 
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -71,11 +79,11 @@ Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario 
 Para poder cargar los certificados, debe crear una
 solicitud de firma de certificado. Consulte [Creación de solicitudes de firma de certificado](#ssl_csr).
 
-Para poder servir correctamente el certificado SSL, debe utilizar la siguiente dirección IP para configurar el archivo DNS o hosts al crear un dominio personalizado para proporcionar la ruta URL que esté alojada en su organización en {{site.data.keyword.Bluemix_notm}}.
+Para poder servir correctamente el certificado SSL, debe utilizar la siguiente dirección IP para configurar el servidor DNS al crear un dominio personalizado para proporcionar la ruta URL que esté alojada en su organización en {{site.data.keyword.Bluemix_notm}}. 
 
 * US-SOUTH: 75.126.81.68
 * EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 Las direcciones IP que utiliza para entornos dedicados son diferentes. Contacte con su representante de IBM para conseguir una dirección IP de entorno dedicado.
 

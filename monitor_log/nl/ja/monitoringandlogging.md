@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #モニターとロギング
 {: #monitoringandlogging}
 
-*最終更新日: 2015 年 12 月 8 日*
+*最終更新日: 2016 年 1 月 27 日*
 
 アプリをモニターし、ログを確認することで、アプリケーション実行
 およびデータ・フローをたどって、デプロイメントの理解を深めることができます。また、問題を見つけて修復するために必要な時間と労力を削減することもできます。
@@ -38,7 +46,11 @@ Analytics](../services/monana/index.html) を参照してください。
 ##Cloud Foundry で実行されているアプリのロギング
 {: #logging_for_bluemix_apps}
 
-Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。ログは、{{site.data.keyword.Bluemix_notm}} のダッシュボードまたは cf コマンド・ライン・インターフェースのいずれかによって表示できます。ログをフィルターに掛けて、関心のある部分を表示できます。
+Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。デプロイメントからランタイムまでのどのステージでも、エラーが発生した場合は、ログを調べて問題解決の糸口を探すことができます。
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###ログ・フォーマット
 {: #log_format}
@@ -109,21 +121,33 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 ###ログの表示
 {: #viewing_logs}
 
-{{site.data.keyword.Bluemix_notm}} のダッシュボードまたはコマンド・ライン・インターフェースのいずれかを使用して、ログを表示できます。
+Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
-####{{site.data.keyword.Bluemix_notm}} のダッシュボードからのログの表示
+  * [{{site.data.keyword.Bluemix_notm}} ダッシュボード](#viewing_logs_UI){:new_window}
+  * [コマンド・ライン・インターフェース](#viewing_logs_cli){:new_window}
+  * [外部ログ・ホスト](#thirdparty_logging){:new_window}
 
-**デプロイメント**または**ランタイム**のログを表示するには、以下のステップを実行します。
-1. アプリのタイルをクリックします。アプリの詳細ページが表示されます。
+#### {{site.data.keyword.Bluemix_notm}} ダッシュボードからのログの表示
+{: #viewing_logs_UI}
+
+デプロイメントまたはランタイムのログを表示するには、以下の手順を実行します。
+1. {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードでアプリのタイルをクリックします。アプリの詳細ページが表示されます。
 2. 左側のナビゲーション・バーで、**「ログ」**をクリックします。
 
-####コマンド・ライン・インターフェースからのログの表示
+**「ログ」**コンソールでは、アプリの最近のログを表示したり、最新のログ (ログ・ファイルの末尾) をリアルタイムで確認することができます。また、ログのタイプとチャネルでログをフィルターに掛けることもできます。
+
+**注:** アプリのクラッシュおよびデプロイメントをまたいでログが継続的に保持されることはありません。
+
+
+
+#### コマンド・ライン・インターフェースからのログの表示
+{: #viewing_logs_cli}
 
 コマンド・ライン・インターフェースからログを表示するには、以下のいずれかのオプションを選択します。
 
 <ul>
 <li>アプリのデプロイ時にログの末尾を表示する。
-<p>**cf logs** コマンドを使用して、 {{site.data.keyword.Bluemix_notm}} へのアプリのデプロイ時にアプリのログ、およびアプリと対話するシステム・コンポーネントのログを表示します。cf コマンド・ライン・インターフェースで以下のコマンドを入力できます。cf logs について詳しくは、 『[Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}』を参照してください。</p>
+<p>**cf logs** コマンドを使用して、 {{site.data.keyword.Bluemix_notm}} へのアプリのデプロイ時にアプリのログ、およびアプリと対話するシステム・コンポーネントのログを表示します。cf コマンド・ライン・インターフェースで以下のコマンドを入力できます。cf logs について詳しくは、<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a> を参照してください。</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>最近のログを表示します。</dd>
@@ -159,6 +183,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 **注:** アプリケーションのロギングを有効にする方法については、『[ランタイム・エラーのデバッグ](../troubleshoot/debugging.html#debug_runtime)』を参照してください。
 
+
+
+
 ###ログのフィルタリング
 {: #filtering_logs}
 
@@ -176,34 +203,83 @@ cf logs appname --recent | grep '\[App'
 ```
 **grep** オプションについて詳しくは、`grep --help` と入力してください。
 
-###サード・パーティー・ロギングの構成
+
+
+### 外部ログ・ホストの構成
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} は、限られた量のログ情報をメモリー内に保持します。情報がログに記録されると、古い情報が新しい情報に置き換えられます。すべてのログ情報を保持するには、サード・パーティーのログ管理サービスにログを保存することができます。
+{{site.data.keyword.Bluemix_notm}} は、限られた量のログ情報をメモリー内に保持します。情報がログに記録されると、古い情報が新しい情報に置き換えられます。すべてのログ情報を保持するには、外部ログ・ホスト (例えば、サード・パーティーのログ管理サービスまたはその他のホスト) にログを保存することができます。
 
-アプリケーションおよびシステムからサード・パーティーのログ管理サービスにログをストリーミングするには、以下のステップを実行してください。
+アプリおよびシステムから外部ログ・ホストにログをストリーミングするには、以下の手順を実行します。
 
-1. サード・パーティーのログ管理サービスを登録します。
-    
-    Papertail、Splunk Storm、SumoLogic、および Logentries などの、[Syslog プロトコル](http://tools.ietf.org/html/rfc5424){:new_window}をサポートするすべてのサード・パーティー・ログ管理サービスを使用できます。サード・パーティー・ログ管理サービスを登録し、次に {{site.data.keyword.Bluemix_notm}} 内のログの宛先を提供するようにサービスを構成します。構成を完了すると、サービスは通常、{{site.data.keyword.Bluemix_notm}} 内のログの宛先として Syslog URL を提供します。サード・パーティー・ログ管理サービスの構成方法について詳しくは、[Configuring Selected Third-Party Log Management Services ](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}を参照してください。
+  1. ロギング・エンドポイントを決定します。 
+     
+	 Papertrail、Splunk、または Sumologic など、サード・パーティーのログ集約機能にログを送信できます。また、syslog ホスト、TLS (Transport Layer Security) で暗号化された syslog ホスト、または HTTPS POST エンドポイントにログを送信することもできます。ロギング・エンドポイントを取得する方法は、ログ・ホストによって異なります。
 
-2. ユーザー提供のサービス・インスタンスを作成します。
+  2. ユーザー提供のサービス・インスタンスを作成します。
+     
+	 ```cf create-user-provided-service``` コマンド (または、短縮版コマンド ```cups``) を使用して、ユーザー提供のサービス・インスタンスを作成します。
+	 ```
+	 cf create-user-provided-service <service_name> -l <logging_endpoint>
+	 ```
+	 **service_name**
+	 
+	 ユーザー提供のサービス・インスタンスの名前。
+	 
+	 **logging_endpoint**
+	 
+	 {{site.data.keyword.Bluemix_notm}} がログを送信する先のロギング・エンドポイント。次の表を参照して、*logging_endpoint* を適切な値で置き換えてください。
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>ロギング・エンドポイント</th>
+     <th>コマンド</th>
+	 <th>注</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>syslog ホスト</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>例えば、Papertrail へのロギングを有効にするには、`cf cups my-logs -l syslog://<papertrail-url>` と入力します。 `<papertrail-url>` を、Papertrail からのロギング・エンドポイントの URL に置き換えてください。</td>
+     </tr>
+	 <tr>
+     <td>syslog-tls ホスト</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>証明書は認証局によって信頼されている必要があります。自己署名証明書を使用しないでください。</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>このエンドポイントは、パブリック・インターネットにあり、{{site.data.keyword.Bluemix_notm}} によってアクセス可能でなければなりません。</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. サービス・インスタンスをアプリにバインドします。
+
+	 サービス・インスタンスをアプリにバインドするには、以下のコマンドを使用します。 
 	
-	{{site.data.keyword.Bluemix_notm}} 内のログをサード・パーティー・ログ管理サービスにストリーミングするには、最初にユーザー提供のサービス・インスタンスを作成する必要があります。以下のコマンドを使用して、ユーザー提供のサービス・インスタンスを作成します。ここで、service_name はユーザー提供のサービス・インスタンスの名前で、syslog_URL はサード・パーティーのロギング・サービスから取得する URL です。
-	
+	 ```
+	 cf bind-service appname <service_name>
 	```
-	cf create-user-provided-service <service_name> -l <syslog_URL>
-	```
-	
-3. サービス・インスタンスをアプリケーションにバインドします。
+	 **appname**
+	 
+	 アプリの名前。
+	 
+	 **service_name**
+	 
+	 ユーザー提供のサービス・インスタンスの名前。
+	 
+  4. アプリを再ステージングします。
+     変更を有効にするため、```cf restage appname``` と入力します。 
 
-	以下のコマンドを使用して、サービス・インスタンスをアプリケーションにバインドします。ここで、appname はアプリケーションの名前で、service_name はユーザー提供のサービス・インスタンスの名前です。
-	
-	```
-	cf bind-service appname <service_name>
-	```
-	
-	その後、変更を有効にするために、cf restage appname と入力して、アプリケーションの再ステージを行うよう求めるプロンプトが出されます。ログが生成されると、少し遅れて、同様のメッセージをサード・パーティー・ログ管理サービスで表示できます。
+#### 外部ホストからのログの表示
+{: #viewing_logs_external}
+
+	 
+ログが生成されると、少し遅れて、外部ログ・ホストにあるメッセージを表示できます。それらは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースで表示するメッセージに似たメッセージです。アプリに複数のインスタンスがある場合、ログは集約されるため、アプリのすべてのログを確認できます。それに加えて、ログは、アプリのクラッシュおよびデプロイメントをまたいで継続的に保持されます。
+
+**注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。 
 
 
-**注:** コマンド・ライン・インターフェースに表示されるログは、Syslog フォーマットになっておらず、サード・パーティー・ログ管理サービスに表示されるメッセージに完全に一致しない可能性があります。

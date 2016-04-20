@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -167,7 +179,7 @@ Java..
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>Pour plus d'informations sur les options prises en charge que vous pouvez utiliser dans ce fichier, voir [Manifeste d'application](../manageapps/deployingapps.html#appmanifest).
+<p>Pour plus d'informations sur les options prises en charge que vous pouvez utiliser dans ce fichier, voir [Manifeste d'application](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>

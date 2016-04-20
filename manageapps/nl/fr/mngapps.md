@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #Gestion des applications
 {: #manageapps}
 
-*Dernière mise à jour : 4 décembre 2015*
+*Dernière mise à jour : 17 mars 2015*
 
 Vous pouvez utiliser le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix}} pour afficher et gérer vos applications
 et vos services, ainsi que pour surveiller

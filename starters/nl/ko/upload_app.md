@@ -1,27 +1,36 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # 애플리케이션 업로드
-*마지막 업데이트 날짜: 2015년 11월 11일*
+*마지막 업데이트 날짜: 2016년 2월 17일*
 
 {{site.data.keyword.Bluemix}}에 로그인한 후, cf push 명령을 사용하여 애플리케이션을 업로드할 수 있습니다.
 {:shortdesc}
 
 시작하기 전에 다음을 수행해야 합니다.
-  1. Cloud Foundry 명령행 인터페이스를 설치하십시오.
+  1. {{site.data.keyword.Bluemix}} 및 Cloud Foundry 명령행 인터페이스를 설치하십시오.
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /></a>
-  </p>
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령행 인터페이스 다운로드" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /> </a>
 
   2. {{site.data.keyword.Bluemix}}에 연결하십시오.
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
 **cf push** 명령이 실행되면
 **cf** 명령행 인터페이스가 빌드팩을 사용하여 애플리케이션을 빌드하고 실행하는
@@ -43,7 +52,7 @@ push** 명령을 입력하십시오. 앱 이름은 {{site.data.keyword.Bluemix_n
   
   또한 Node.js 애플리케이션에 유효한 package.json 파일이 포함되어야 합니다.
 
-  모든 기타 외부 빌드팩은 -b 옵션을 사용하여 푸시해야 합니다. 예:
+  모든 기타 외부 빌드팩은 -b 옵션을 사용하여 푸시해야 합니다. 예를 들어, 다음과 같습니다. 
 
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var> -b buildpack_URL</pre>
   

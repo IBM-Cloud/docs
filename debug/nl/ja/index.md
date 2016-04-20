@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -7,28 +15,29 @@
 # デバッグ
 {: #debugging}
 
-*最終更新日: 2015 年 11 月 19 日*
+*最終更新日: 2016 年 3 月 3 日*
 
-{{site.data.keyword.Bluemix}} で問題が発生した場合、ログ・ファイルを確認して問題を調査し、エラーをデバッグすることができます。{:shortdesc}
+{{site.data.keyword.Bluemix}} で問題が発生した場合、ログ・ファイルを確認して問題を調査し、エラーをデバッグすることができます。
+{:shortdesc}
 
 ログは、ジョブが正常に実行されているか失敗しているかなどの情報を提供します。また、問題の原因のデバッグおよび判別に使用できる関連情報も提供します。
 
-ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、サード・パーティーのロギング・サービスを使用してログを保管および処理したりすることができます。ログのフォーマット、ログの表示とフィルター処理、およびサード・パーティー・ロギングについて詳しくは、[Cloud Foundry で実行されているアプリのロギング](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}を参照してください。
+ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、外部ロギング・ホストを使用してログを保管および処理したりできます。ログのフォーマット、ログの表示とフィルター処理、および外部ロギングの構成について詳しくは、『[Cloud Foundry で実行されているアプリのロギング](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}』を参照してください。
 
 
 ## ステージング・エラーのデバッグ
 {: #debugging-staging-errors}
 {{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生する場合があります。
-アプリケーションがステージングに失敗した場合、cf コマンド・ライン・インターフェースまたは IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} プラグインを使用して、エラーの原因を確認すること、および問題から復旧することができます。
+アプリがステージングに失敗した場合、ログを使用してエラーの原因を調べ、問題から回復することができます。
 
-{{site.data.keyword.Bluemix_notm}} 上でアプリケーションに障害が発生している原因を理解するには、アプリケーションがどのように {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行されるかを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
-deployment)」](../manageapps/deployingapps.html#appdeploy){: new_window}を参照してください。
+{{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する場合の原因を理解するには、アプリがどのように {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行されるかを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
+deployment)」](../manageapps/depapps.html#appdeploy){: new_window}を参照してください。
 
 以下の手順は、`cf
 logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](../starters/install_cli.html){: new_window}を参照してください。
 
   1. cf コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。```
-	 cf api https://api.{DomainName}
+	 cf api https://api.ng.bluemix.net
 	 ```
 	 
   2. `cf login` を入力して {{site.data.keyword.Bluemix_notm}} にログインします。
@@ -67,6 +76,8 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 
 ログの最初のエラーが、ステージングが失敗した理由を示しています。この例では、最初のエラーはステージングの段階での DEA コンポーネントからの出力です。```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
+{: screen}
+
 
 Node.js アプリケーションに対し、DEA は `package.json` ファイル内の情報を使用してモジュールをダウンロードします。このエラーから、モジュールに対してエラーが発生することが分かります。このため、`package.json` ファイルの 18 行目を確認する必要があるかもしれません。 
 
@@ -102,7 +113,7 @@ Node.js アプリケーションに対し、DEA は `package.json` ファイル�
   * PHP アプリケーションの場合は、 『[error_log](http://php.net/manual/en/function.error-log.php){: new_window}』を参照してください。
   * Python アプリケーションの場合は、 「[Logging
 HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}」を参照してください。
-  * Ruby on Rails アプリケーションの場合は、[「The Logger」](guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}を参照してください。
+  * Ruby on Rails アプリケーションの場合は、[「The Logger」](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}を参照してください。
   * Ruby Sinatra アプリケーションの場合は、[「Logging」](http://www.sinatrarb.com/intro.html#Logging){: new_window}を参照してください。
   
 cf コマンド・ライン・インターフェースに `cf logs appname --recent` と入力すると、最新のログのみが表示されます。以前に発生したエラーのログを表示するには、すべてのログを取得してエラーを検索する必要があります。ご使用のアプリケーションのログをすべて取得するには、以下のいずれかの方法を使用して下さい。
@@ -111,12 +122,12 @@ cf コマンド・ライン・インターフェースに `cf logs appname --rec
 <dd>Monitoring and Analytics サービスの統合されたログ・ファイル検索機能および分析機能は、エラーを素早く特定するのに役立ちます。詳しくは、<a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and
 Analytics</a> を参照してください。</dd> 
 <dt><strong>サード・パーティー・ツール</strong></dt> 
-<dd>ご使用のアプリケーションからログを収集して、サード・パーティーのログ管理サービスにエクスポートすることも可能です。詳しくは、<a href="http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">選択されたサード・パーティー・ログ管理サービスの構成 (Configuring Selected Third-Party Log Management Services) </a>を参照してください。</dd> 
+<dd>アプリケーションからログを収集して、外部ログ・ホストにエクスポートすることができます。詳しくは、『<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">外部ロギングの構成</a>』を参照してください。</dd> 
 <dt><strong>ログを収集しエクスポートするスクリプト</strong></dt> 
 <dd>スクリプトを使用してログの収集と外部ファイルへのエクスポートを自動的に行うには、ご使用のコンピューターから {{site.data.keyword.Bluemix_notm}} サーバーへ接続する必要があります。また、ご使用のコンピューター上にログをダウンロードするために十分なスペースを確保しておく必要があります。詳しくは、『<a href="../support/index.html#collecting-diagnostic-information" target="_blank">診断情報の収集</a>』を参照してください。</dd>
 </dl>
 
-`stdout.log` ファイルおよび `stderr.log` ファイルは、以前は、{{site.data.keyword.Bluemix_notm}} ダッシュボードのアプリケーション・ビューから、**「ファイルとログ」** > **「ログ」**の下で、デフォルトでアクセス可能でした。しかし、そのアプリケーションのロギングは、{{site.data.keyword.Bluemix_notm}} がホストされている現行バージョンの Cloud Foundry では使用不可になりました。stdout および stderr アプリケーション・ロギングを {{site.data.keyword.Bluemix_notm}} ダッシュボードで**「ファイルとログ」** > **「ログ」**の下でアクセス可能にしておくためには、使用しているランタイムに応じて、{{site.data.keyword.Bluemix_notm}} ファイル・システム内の他のファイルにロギングをリダイレクトできます。 
+`stdout.log` ファイルおよび `stderr.log` ファイルは、以前は、デフォルトで、{{site.data.keyword.Bluemix_notm}} ダッシュボードのアプリケーション・ビューから**「ファイル」** > **「ログ」**を選択することによってアクセスできました。しかし、そのアプリケーションのロギングは、{{site.data.keyword.Bluemix_notm}} がホストされている現行バージョンの Cloud Foundry では使用不可になりました。stdout および stderr のアプリケーション・ロギングを、{{site.data.keyword.Bluemix_notm}} ダッシュボードで**「ファイル」** > **「ログ」**の下でアクセス可能にしておくために、使用しているランタイムに応じて、{{site.data.keyword.Bluemix_notm}} ファイル・システム内の他のファイルにロギングをリダイレクトできます。 
 
   * Liberty for Java アプリケーションの場合、stdout および stderr に向けられた出力は、logs ディレクトリー内の `messages.log` ファイルに既に含まれています。接頭部が SystemOut および
 SystemErr のエントリーをそれぞれ探してください。
@@ -133,8 +144,11 @@ SystemErr のエントリーをそれぞれ探してください。
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [IBM Monitoring and Analytics for Bluemix サービス入門](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Bluemix の動作](../overview/overview.html#ov_arch){: new_window}
+  * [Bluemix の動作](../public/index.html#howwork){: new_window}
   * [cf コマンド・ツールのインストール](../starters/install_cli.html){: new_window}
+  * [ログの表示](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  
+  
  
 
 

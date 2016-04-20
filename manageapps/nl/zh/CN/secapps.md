@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #保护应用程序
 {: #securingapps}
 
-*上次更新时间：2015 年 12 月 4 日*
+*上次更新时间：2016 年 3 月 17 日*
 
 您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。{:shortdesc}
 
@@ -43,7 +51,7 @@ CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签�
 
   为其请求 SSL 证书的标准域名 (FQDN)。
   
-根据操作系统，创建 CSR 的方法也有所不同。以下示例显示如何使用 [OpenSSH 命令工具](http://www.openssl.org/){:new_window}创建 CSR：
+根据操作系统，创建 CSR 的方法也有所不同。以下示例显示如何使用 [OpenSSL 命令行工具](http://www.openssl.org/){:new_window}创建 CSR：
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -63,11 +71,11 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 在上传证书之前，必须创建证书签名请求。请参阅[创建证书签名请求](#ssl_csr)。
 
-要正确提供 SSL 证书，在创建定制域以提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径时，必须使用以下 IP 地址来配置 DNS 或 hosts 文件。
+要正确提供 SSL 证书，在创建定制域以提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径时，必须使用以下 IP 地址来配置 DNS 服务器。
 
 * US-SOUTH：75.126.81.68
 * EU-GB：5.10.124.142
-* AU-SYD：168.1.35.169
+* AU-SYD：168.1.35.166
 
 您用于专用环境的 IP 地址会有所不同。联系您的 IBM 代表以获取专用环境的 IP 地址。
 

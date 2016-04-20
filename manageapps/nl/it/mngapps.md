@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #Gestione delle applicazioni
 {: #manageapps}
 
-*Ultimo aggiornamento: 4 dicembre 2015*
+*Ultimo aggiornamento: 17 marzo 2015* 
 
 Puoi utilizzare il Dashboard nell'interfaccia utente {{site.data.keyword.Bluemix}} per visualizzare e gestire le tue applicazioni e i tuoi servizi, nonché per monitorare l'utilizzo delle risorse mediante i misuratori di quota.
 {:shortdesc}

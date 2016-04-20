@@ -1,12 +1,26 @@
+---
+
+ 
+
+copyright :
+
+  années : 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Plug-in de l'interface de ligne de commande
-*Dernière mise à jour : 10 novembre 2015*
+# Plug-in de l'interface de ligne de commande Cloud Foundry 
 
-Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_short}}. avec des plug-in. Choisissez une interface de ligne de
-commande pour IBM® Containers for Bluemix afin de disposer de davantage d'options pour gérer vos conteneurs. Continuez votre travail de développement pendant que vos applications s'exécutent en ajoutant l'interface de ligne
-de commande dev_mode. 
-{:shortdesc}
+*Dernière mise à jour : 2 février 2016*
+
+Vous pouvez installer et utiliser les plug-in de l'interface de ligne de commande Cloud Foundry (cf cli) qui sont disponibles dans le
+[référentiel de plug-in de l'interface de ligne de commande](http://plugins.{DomainName}/){: new_window}. Chaque plug-in est
+identifié par le nom de son fichier binaire, son nom (qui est défini par le développeur), et les commandes qu'il fournit. Le nom du fichier binaire permet
+d'installer un plug-in seulement, et vous pouvez utiliser le nom du plug-in ou une commande pour toute autre action. {:shortdesc}
+

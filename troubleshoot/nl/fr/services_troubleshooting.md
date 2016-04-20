@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 # Traitement des incidents liés aux services
 {: #services_troubleshooting}

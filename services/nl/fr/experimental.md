@@ -1,4 +1,9 @@
+---
 
+copyright:
+  years: 2015, 2016
+
+---
 
 # Services expérimentaux
 {: #experimental}

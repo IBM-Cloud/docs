@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Sécurisation des applications
 {: #securingapps}
 
-*Dernière mise à jour : 4 décembre 2015*
+*Dernière mise à jour : 17 mars 2016*
 
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
@@ -50,8 +58,8 @@ signature de certificat.
 
   Nom de domaine complet pour lequel vous demandez le certificat SSL.
   
-Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec
-l'[outil de commande OpenSSH](http://www.openssl.org/){:new_window} :
+Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment
+créer une demande de signature de certificat avec l'[outil de ligne de commande OpenSSL](http://www.openssl.org/){:new_window} :
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -75,13 +83,13 @@ d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléch
 Pour
 pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat. Voir [Création de demandes de signature de certificat](#ssl_csr).
 
-Pour
-servir correctement le certificat SSL, vous devez utiliser les adresses IP ci-après afin de configurer le serveur DNS ou un fichier hosts lors de la
-création d'un domaine personnalisé, dans le but de fournir la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}.
+Pour servir correctement le certificat SSL, vous devez utiliser les adresses IP ci-après afin de configurer le serveur DNS lors
+de la création d'un domaine personnalisé, dans le but de fournir la route d'URL allouée à votre organisation dans
+{{site.data.keyword.Bluemix_notm}}.
 
 * SUD DES ETATS-UNIS : 75.126.81.68
 * EUROPE-ROYAUME-UNI : 5.10.124.142
-* AUSTRALIE-SYDNEY : 168.1.35.169
+* AUSTRALIE-SYDNEY : 168.1.35.166
 
 Les adresses IP que vous utilisez pour les environnements dédiés sont différentes. Prenez contact avec votre
 interlocuteur IBM afin d'obtenir l'adresse IP pour un environnement dédié.

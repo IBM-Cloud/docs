@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2015 年 12 月 15 日*
+*前次更新：2016 年 3 月 17 日*
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
 
@@ -82,7 +94,7 @@ HTTP 閒置逾時為 2 分鐘。
 </dd>
 
 <dt>安全開發作法</dt>
-<dd> 若為「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」，會利用 IBM Security AppScan® Dynamic Analyzer 及靜態分析器供應項目，在各種 {{site.data.keyword.Bluemix_notm}} 元件上定期執行安全漏洞掃描。會執行威脅建模及滲透測試，以偵測並解決所有類型之 {{site.data.keyword.Bluemix_notm}} 部署的任何潛在漏洞。此外，應用程式開發人員可以使用 AppScan Dynamic Analyzer 服務來保護在 {{site.data.keyword.Bluemix_notm}} 上部署的 Web 應用程式。</dd>
+<dd> 若為「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」，會利用 IBM Security AppScan® Dynamic Analyzer，在各種 {{site.data.keyword.Bluemix_notm}} 元件上定期執行安全漏洞掃描。會執行威脅建模及滲透測試，以偵測並解決所有類型之 {{site.data.keyword.Bluemix_notm}} 部署的任何潛在漏洞。此外，應用程式開發人員可以使用 AppScan Dynamic Analyzer 服務來保護在 {{site.data.keyword.Bluemix_notm}} 上部署的 Web 應用程式。</dd>
 </dl>
 
 ### 基礎架構安全
@@ -121,7 +133,7 @@ HTTP 閒置逾時為 2 分鐘。
 <dd>{{site.data.keyword.Bluemix_notm}} 使用 IBMSecurity QRadar® 工具來合併 Linux 日誌，以監視 Linux 系統上的特許存取。{{site.data.keyword.Bluemix_notm}} 也會使用 IBM QRadar 安全資訊及事件管理 (SIEM)，來監視應用程式開發人員的成功和不成功的登入嘗試。</dd>
 
 <dt>使用者存取管理</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 內，會遵循「權責區分」準則，指派精細的存取權給使用者，並確保根據最低專用權原則，使用者僅具備執行其工作所需的存取權。在「{{site.data.keyword.Bluemix_notm}} 專用」及「Bluemix 本端」環境內，已指派的管理者可以利用「管理主控台」來管理 {{site.data.keyword.Bluemix_notm}} 使用者在其組織中的角色及許可權。如需詳細資料，請參閱[管理 {{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng)。
+<dd>在 {{site.data.keyword.Bluemix_notm}} 內，會遵循「權責區分」準則，指派精細的存取權給使用者，並確保根據最低專用權原則，使用者僅具備執行其工作所需的存取權。在「{{site.data.keyword.Bluemix_notm}} 專用」及「Bluemix 本端」環境內，已指派的管理者可以利用「管理主控台」來管理 {{site.data.keyword.Bluemix_notm}} 使用者在其組織中的角色及許可權。如需詳細資料，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及專用](../admin/index.html#mng)。
 </dd>
 </dl>
 
@@ -142,13 +154,13 @@ HTTP 閒置逾時為 2 分鐘。
 
 <dl>
 <dt>Data-in-transit</dt>
-<dd>正在網路上的節點之間傳送的資料。</dd>
+<dd>在網路上的節點之間傳送的資料。</dd>
 
 <dt>Data-at-rest</dt>
 <dd>儲存的資料。</dd>
 
 <dt>Data-in-use</dt>
-<dd>目前未儲存，且正在某一端點上接受操作的資料。</dd>
+<dd>目前未儲存，且在某一端點上接受操作的資料。</dd>
 </dl>
 
 當您在規劃資料安全時，需要考量每一種類型的資料。
@@ -185,31 +197,9 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 
 如需相關資訊，請參閱[開始使用 Single Sign On](../services/SingleSignOn/index.html)。
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-此服務提供對 Android 行動式應用程式的安全分析。若要使用此服務，您必須將編譯的 Android 應用程式以 APK 檔案形式進行上傳。安全分析掃描完成後，即可下載報告。
-
-如需相關資訊，請參閱[開始使用 AppScan Mobile Analyzer](../services/AppScanMobileAnalyzer/index.html)。
-
-### AppScan Dynamic Analyzer
-
-此服務使用動態分析工具，提供對 Web 應用程式的安全分析。此工具會在已部署的 Web 應用程式（而非應用程式原始碼）上運作，並且可以掃描任何 {{site.data.keyword.Bluemix_notm}} Web 應用程式，不論其語言或技術為何。您只能掃描所屬組織的應用程式。若要建立掃描，您必須配置 Web 應用程式 URL 及登入認證（如果有的話）。掃描完成後，即可下載報告。
-
-如需相關資訊，請參閱[開始使用 AppScan Dynamic Analyzer](../services/AppScanDynamicAnalyzer/index.html)。
-
-### Mobile Analyzer for iOS（測試版）
-
-Mobile Analyzer for iOS 服務針對 iOS 行動式應用程式提供 AppScan 動態安全分析。它可協助您識別 iOS 行動式應用程式中的安全問題。
-
-如需相關資訊，請參閱[開始使用 Mobile Analyzer for iOS](../services/AppScanIOS/index.html)。
-
-### Static Analyzer（測試版）
-
-Static Analyzer 服務可在雲端上啟用靜態應用程式安全測試。它可協助您提早在軟體開發生命週期中找到原始碼漏洞，以在部署之前進行修正。
-
-Static Analyzer 可讓您在本端磁碟上，利用指令行介面 (CLI) 來掃描 Java 及 Java Web 內容。此外，您可以執行小型安裝程式，將 Static Analyzer 外掛程式新增至 Eclipse 或 Maven。您可以使用用戶端公用程式來掃描您的檔案，並將相關資訊收集到一個保存檔中，然後將保存檔提交至雲端以取得掃描結果。
-
-如需相關資訊，請參閱[開始使用 IBM Static Analyzer for Bluemix](../services/StaticAnalyzer/index.html)。
+此服務提供行動式及 Web 應用程式的安全分析，並可讓您掃描原始碼是否有安全漏洞。如需相關資訊，請參閱[開始使用 Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html)。
 
 ### 用於應用程式安全測試的 IBM UrbanCode 外掛程式
 
@@ -221,7 +211,7 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛�
 
 SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料庫。此服務使用 IBM Directory Server LDAP 進行鑑別，並使用 IBM InfoSphere® Guardium® Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 DigiCert 簽署的 SSL 憑證保護。
 
-在含有此服務的某些方案中，您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL Database 主控台來取得包含下列資訊的報告：
+在含有此服務的某些方案中，您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 資料庫主控台來取得包含下列資訊的報告：
 
  * 應用程式所存取的資料庫中可能存在的機密資料。
  * 在指定期間內存取資料庫的應用程式使用者。
@@ -247,7 +237,7 @@ Cloud Integration 服務可讓您整合雲端與內部部署資料。您可以�
 
 Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程式安全地連接至遠端位置（內部部署或雲端）。它提供安全連線功能，並在您的 {{site.data.keyword.Bluemix_notm}} 組織與您要連接的遠端位置之間建立通道。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 API 套件，來配置及建立安全閘道。
 
-如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/index.html)。
+如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/secure_gateway.html)。
 
 ### 安全資訊及事件管理
 
@@ -279,7 +269,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
     2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
     3. 透過網路路由器。
     4. 透過利用 Cloud Foundry 雲端控制器所進行的授權，以確保僅能存取開發人員所建立的應用程式及服務實例。
-  
+
 針對「{{site.data.keyword.Bluemix_notm}} 專用」及「{{site.data.keyword.Bluemix_notm}} 本端」*管理者*，**管理者流程**如下所示：
  1. 透過防火牆，並實施侵入防禦及網路安全。
  2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
@@ -289,10 +279,10 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 除了這些路徑中所述的使用者之外，經過授權的 IBM 安全作業團隊也會執行各種作業安全作業，例如下列作業：
  * 漏洞掃描。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您掌控了防火牆內的實體安全以及任何掃描。
  * 使用者存取管理。
- * 使用 IBM Endpoint Manager 定期套用修正程式，來強化作業系統。
+ * 利用 IBM Endpoint Manager 定期套用修正程式，來強化作業系統。
  * 風險管理與侵入防禦。
  * 使用 QRadar 進行安全監視。
- * 透過「管理主控台」提供的安全報告。
+ * 可在「管理」頁面上取得安全報告。
 
 ## 安全相符性
 {: #compliance}
@@ -305,8 +295,8 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 ![金融行業資訊系統](images/FISC.gif) 對於日本的銀行和相關金融機構，電腦系統必須具有適當的安全程序，這些程序應根據「金融行業資訊系統中心 (FISC)」安全準則。**FISC** 安全準則由「日本金融廳 (FSA)」、「日本央行 (BOJ)」和 FISC 貫徹實施。
 
 在 [IBM Bluemix 風險意見調查結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，可以找到 FISC 安全準則的 {{site.data.keyword.Bluemix_notm}} 自我評量文件（日語）。 
- 
-![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通過**國際標準化組織 (ISO) 27001 和 27002 標準**的認證，這兩個標準定義了資訊安全管理程序的最佳做法。ISO 27001 標準根據不同組織的需求規定了應如何建立、實施和記錄「資訊安全管理系統 (ISMS)」，以及應如何實施安全性控制。ISO 27002 標準對 ISO 27001 中的每種安全控制進行了詳細的說明。ISO 27000 系列標準中包含了一個確定風險規模和評估資產價值的處理程序，旨在保護書面、口頭和電子資訊的機密性、完整性和可用性。 
+
+![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通過**國際標準化組織 (ISO) 27001 和 27002 標準**的認證，這兩個標準定義了資訊安全管理程序的最佳做法。ISO 27001 標準根據不同組織的需求規定了應如何建立、實施和記錄「資訊安全管理系統 (ISMS)」，以及應如何實施安全性控制。ISO 27002 標準對 ISO 27001 中的每種安全控制進行了詳細的說明。ISO 27000 系列標準中包含了一個確定風險規模和評估資產價值的處理程序，旨在保護書面、口頭和電子資訊的機密性、完整性和可用性。
 
 {{site.data.keyword.Bluemix_notm}} 經第三方安全公司審核，符合 ISO 27001 的所有需求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
 
@@ -315,39 +305,31 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
   * 供應商管理方案
   * 內部公司治理和風險管理程序
   * 法規監督
- 
+
 {{site.data.keyword.Bluemix_notm}} 使用「IBM SoftLayer 基礎架構即服務 (IaaS)」雲端服務，並充分利用其安全架構。如需相關資訊，請聯絡 [{{site.data.keyword.Bluemix_notm}} 銷售](mailto:bmxcert1@us.ibm.com){:new_window}團隊。
 
-## 安全報告
-{: #reports}
+### 平台及服務規範
+下表顯示 {{site.data.keyword.Bluemix_notm}} 中的各項服務符合的每一個標準。
 
-運用「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」，{{site.data.keyword.Bluemix_notm}} 會產生您可透過「管理」頁面檢視的各種安全報告及日誌。如需檢視及使用報告的指示，請參閱[檢視報告](../admin/index.html#oc_report)。
+|{{site.data.keyword.Bluemix_notm}} 元件		|FISC		|ISO 27001	|SOC 2 類型 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} 平台		|Y			|Y	|Y	|
+|{{site.data.keyword.APIM}}			|Y	|Y |			|
+|{{site.data.keyword.autoscaling}}			|Y	|Y |			|
+|{{site.data.keyword.bigicloudst}}			|Y |Y |Y |
+|{{site.data.keyword.cloudant}}				|Y |Y |Y	|
+|{{site.data.keyword.dashdbshort}}			|Y	|Y	|Y	|
+|{{site.data.keyword.datacshort}}			|Y	|Y	|			|
+|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|			|
+|{{site.data.keyword.containerlong}}			|Y		|Y	|			|
+|{{site.data.keyword.mql}}				|Y	|Y	|	 		|
+|{{site.data.keyword.SecureGateway}}			|Y	|Y |	 		|
+|{{site.data.keyword.sescashort}}     |Y |Y | |
 
-下表顯示針對「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」所產生的安全報告清單。
+*表 1. 平台及服務規範*
 
-| **種類** | **報告** | **說明** |      
-|-----------------|-------------------|---------------------|
-| 防火牆 | 防火牆登入 | 與 Vyatta 防火牆裝置的管理者登入有關的事件。 |
-| 防火牆 | 防火牆拒絕 | 根據現有的防火牆規則拒絕存取要求時，Vyatta 防火牆裝置所產生的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者登入事件 | {{site.data.keyword.Bluemix_notm}} 管理者登入 | 管理者在每個 {{site.data.keyword.Bluemix_notm}} 系統上啟動 SSH 階段作業時，作業系統所產生的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 應用程式開發人員登入事件 | {{site.data.keyword.Bluemix_notm}} 應用程式開發人員登入 | {{site.data.keyword.Bluemix_notm}} 平台使用者使用指令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 使用者介面來啟動階段作業時，{{site.data.keyword.Bluemix_notm}} 平台登入元件所產生的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者管理事件 | {{site.data.keyword.Bluemix_notm}} 管理者作業系統管理事件 | 管理者在現行工作階段作業內執行動作時，作業系統所產生的事件。 |
-| {{site.data.keyword.Bluemix_notm}} 應用程式開發人員管理事件 | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) 管理事件 | {{site.data.keyword.Bluemix_notm}} 平台使用者使用指令行、REST API 或 {{site.data.keyword.Bluemix_notm}} 使用者介面所執行之作業的相關事件。 |
-| {{site.data.keyword.Bluemix_notm}} 管理者資料庫管理事件 | 資料庫管理事件 | 資料庫管理者對 {{site.data.keyword.Bluemix_notm}} 內部資料庫執行之作業的相關事件。 |
-| 管理事件 | 使用者管理事件 | 在「管理」頁面上執行之使用者管理動作的相關事件。 |
-| 管理事件 | Catalog | 服務 Catalog 變更的相關事件 |
-| 管理事件 | 安全報告管理事件 | 在「管理」頁面上執行之安全報告管理動作的相關事件。 |
-| 檢查檢閱 | 存取檢閱報告 | 特許存取權的檢閱。 |
-| 變更管理 | 軟體變更管理 | 變更管理活動。 |
-| 金鑰管理 | 自訂 SSL 憑證管理 | 已上傳及儲存的自訂 SSL 憑證。 |
-| 加密 | data-in-transit 加密 | 已配置的 data-in-transit 加密。 |
-| 防毒 | 防毒掃描報告 | 現有的防毒軟體。 |
-| 軟體修正程式管理 | 修補程式應用程式報告 | 已套用的軟體修正程式。 |
-| 資安事件管理 | 資安事件補救報告 | 進行資安事件管理的資安事件證明。 |
-
-*表 1.「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」安全報告清單*
 
 # 相關鏈結
-## 一般 
+## 一般
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [開始使用 Single Sign On](../services/SingleSignOn/index.html)

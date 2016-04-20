@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -5,21 +17,21 @@
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*마지막 업데이트 날짜: 2015년 1월 20일*
+*마지막 업데이트 날짜: 2016년 2월 25일*
 
-{{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.autoscaling}} CLI를 사용하여 {{site.data.keyword.autoscaling}} 서비스를 구성할 수 있습니다. {{site.data.keyword.autoscaling}} CLI는 Linux64, Win64 및 OSX를 지원하며, {{site.data.keyword.autoscaling}} RESTful API와 비슷한 기능을 제공합니다.
+{{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.autoscaling}} CLI를 사용하여 {{site.data.keyword.autoscaling}} 서비스를 구성할 수 있습니다. {{site.data.keyword.autoscaling}} CLI는 Linux64, Win64 및 OSX를 지원하며, Auto Scaling RESTful API와 비슷한 기능을 제공합니다.
 {: shortdesc}
 
 시작하기 전에 {{site.data.keyword.Bluemix_notm}} CLI를 설치하십시오. 지시사항은 [{{site.data.keyword.Bluemix_notm}} CLI 다운로드](http://plugins.{DomainName}/ui/home.html){: new_window}를 참조하십시오.
 
-## Auto Scaling CLI 플러그인 추가
+## {{site.data.keyword.Bluemix_notm}} CLI 플러그인 추가
 
 {{site.data.keyword.Bluemix_notm}} CL를 설치하고 나면 {{site.data.keyword.autoscaling}} CLI 플러그인을 추가할 수 있습니다.
 
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 1. {{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.
 ```
@@ -37,7 +49,7 @@ Auto-Scaling 정책을 특정 앱에 연결할 수 있습니다. 다음 명령�
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">Auto-Scaling 정책을 연결할 앱의 이름입니다.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">Auto-Scaling 정책을 설명하는 JSON 파일의 이름입니다. 자세한 정보는 [{{site.data.keyword.autoscaling}} RESTful API 문서](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html)를 참조하십시오.</dd>
+<dd class="pd">Auto-Scaling 정책을 설명하는 JSON 파일의 이름입니다. 자세한 정보는 <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API 문서</a>를 참조하십시오.</dd>
 </dl>
 
 
@@ -101,16 +113,16 @@ Auto-Scaling 정책을 특정 앱에 연결할 수 있습니다. 다음 명령�
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">Auto-Scaling 정책의 히스토리를 표시할 앱의 이름입니다.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">히스토리 범위가 시작되는 시점의 시간소인입니다. 지원되는 형식은 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`입니다. 기본적으로 시간소인은 현재 시간보다 50시간 이전 시간으로 설정됩니다. 시간소인 형식에 대한 자세한 정보는 [W3C 날짜 및 시간 형식 표준](https://www.w3.org/TR/NOTE-datetime){: new_window}을 참조하십시오.
+<dd class="pd">히스토리 범위가 시작되는 시점의 시간소인입니다. 지원되는 형식은 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`입니다. 기본적으로 시간소인은 현재 시간보다 50시간 이전 시간으로 설정됩니다. 시간소인 형식에 대한 자세한 정보는 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C 날짜 및 시간 형식 표준</a>을 참조하십시오.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">히스토리 범위가 끝나는 시점의 시간소인입니다. 지원되는 형식은 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`입니다. 기본적으로 시간소인은 현재 시간으로 설정됩니다. 시간소인 형식에 대한 자세한 정보는 [W3C 날짜 및 시간 형식 표준](https://www.w3.org/TR/NOTE-datetime){: new_window}을 참조하십시오.
+<dd class="pd">히스토리 범위가 끝나는 시점의 시간소인입니다. 지원되는 형식은 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`입니다. 기본적으로 시간소인은 현재 시간으로 설정됩니다. 시간소인 형식에 대한 자세한 정보는 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C 날짜 및 시간 형식 표준</a>을 참조하십시오.
 </dl>
 
 **팁:** **--json** 옵션을 사용하면 원본 JSON 응답이 깨끗하게 인쇄됩니다.
 
-# rellinks
+# 관련 링크
 ## 일반
-* [{{site.data.keyword.autoscaling}} 서비스](../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} 서비스](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C 날짜 및 시간 형식 표준](https://www.w3.org/TR/NOTE-datetime){: new_window}
 

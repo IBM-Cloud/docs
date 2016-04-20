@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 # Resolución de problemas de servicios
 {: #services_troubleshooting}

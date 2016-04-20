@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -479,7 +491,7 @@ incluídos, o preço total do aplicativo é de $384,15.
 ##Detalhes de uso
 {: #usage}
 
-Como proprietário da conta ou gerente de faturamento, é possível usar a visualização Detalhes de uso para ver os encargos em tempo real para os tempos de execução e serviços que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
+Como um proprietário da conta, um usuário com permissão de *Auditor* no espaço ou um gerente de faturamento, é possível usar a visualização Detalhes de uso para ver os encargos em tempo real para os tempos de execução e os e serviços que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
 
 Para abrir a visualização Detalhes de uso, clique no ícone **Conta e suporte** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}} e selecione **Conta**. Na página que é exibida, clique em **Detalhes de uso**. Na visualização, é possível ver um resumo do tempo de execução e do uso do serviço para a conta.
 

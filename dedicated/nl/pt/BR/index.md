@@ -1,20 +1,63 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Última atualização: 18 de janeiro de 2016*
+*Última atualização: 7 de março de 2016*
+
 
 {{site.data.keyword.Bluemix}} é
 uma plataforma de padrão aberto, baseada em nuvem para construir, executar e
 gerenciar aplicativos. Com o {{site.data.keyword.Bluemix_notm}} Dedicated, você obtém o poder e a simplicidade do {{site.data.keyword.Bluemix_notm}}&mdash; em seu próprio ambiente dedicado do SoftLayer que está firmemente conectado ao ambiente do {{site.data.keyword.Bluemix_notm}} Public e à sua própria rede.
 {:shortdesc}
 
-O {{site.data.keyword.Bluemix_notm}} Dedicated
-inclui um catálogo particular que exibe os serviços dedicados que
-estão disponíveis exclusivamente para você. Ele também inclui serviços adicionais
-que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public.
+Todas as implementações dedicadas do {{site.data.keyword.Bluemix_notm}} incluem os benefícios e recursos a seguir sem nenhum custo adicional: VPN, rede local virtual (VLAN) privada, firewall, conectividade com seu LDAP, capacidade de alavancar bancos de dados e apps existentes no local, segurança no site 24x7, hardware dedicado e suporte padrão.
+
+O {{site.data.keyword.Bluemix_notm}} Dedicated inclui um catálogo particular que exibe os serviços dedicados que estão disponíveis exclusivamente para você. Ele também inclui serviços adicionais que são organizados e estão disponíveis para uso a partir do {{site.data.keyword.Bluemix_notm}} Public.
+
+O {{site.data.keyword.Bluemix_notm}} Dedicated vem com todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} incluídos e 64 GB de memória de recursos de cálculo.
+
+Além disso, há um conjunto de serviços e componentes incluídos ou opcionais.
+
+
+| **Tipo**        | **Nome**            | **Descrição** |      
+|-----------------|-------------------|-------------------|
+|Incluído | Tempos de execução do {{site.data.keyword.Bluemix_notm}} | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} estão disponíveis para você usar em sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated.|
+| Incluído | {{site.data.keyword.autoscaling}} | Aumentar ou diminuir dinamicamente a capacidade de
+cálculo do aplicativo com base em políticas. Com esse serviço,
+você possui uso ilimitado no ambiente do {{site.data.keyword.Bluemix_notm}}
+Dedicated. |
+| Opcional | {{site.data.keyword.datacshort}} | Esse serviço fornece uma grade de dados da memória
+que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
+50 GB de cache na memória. |
+| Opcional | {{site.data.keyword.mql}} | O {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} é um serviço de sistema de mensagens baseado em nuvem que fornece sistema de mensagens flexível e fácil de usar para apps {{site.data.keyword.Bluemix_notm}}. O
+{{site.data.keyword.mql}} fornece uma solução fácil de administrar para sistema de mensagens. É
+possível usar o {{site.data.keyword.mql}} para tornar os seus apps mais responsivos e escaláveis e compartilhar e transferir trabalho entre apps com uma API única e poderosa. |
+| Opcional | {{site.data.keyword.dashdbshort}} | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
+|Opcional | {{site.data.keyword.APIM}} | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
+possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
+benefício do uso do serviço {{site.data.keyword.APIM}}
+é que é possível gerenciar como suas APIs são usadas. |
+|Opcional | {{site.data.keyword.SecureGateway}} | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.  |
+|Opcional | {{site.data.keyword.cloudant}} | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
+
+*Tabela 1. Serviços dedicados*
+
+## Arquitetura do {{site.data.keyword.Bluemix_notm}} Dedicated
+{: #dedicatedarch}
 
 O {{site.data.keyword.Bluemix_notm}} Dedicated é
 desenvolvido em SoftLayer para que você tenha o maior desempenho da
@@ -23,7 +66,13 @@ controles rigorosos. Você e a IBM acessam a instância do
 {{site.data.keyword.Bluemix_notm}} Dedicated usando um
 túnel VPN e uma VLAN privada.
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+O {{site.data.keyword.Bluemix_notm}} Dedicated
+é colocado em sua rede através de uma VPN ou uma conexão de rede direta. Seu hardware com locatário único pode ser configurado em qualquer datacenter SoftLayer ao redor
+do mundo. A {{site.data.keyword.IBM_notm}} gerencia a
+plataforma dedicada e os serviços dedicados, para que você possa se concentrar na construção de apps customizados. Além
+disso, a {{site.data.keyword.IBM_notm}} executa toda a manutenção às instâncias dedicadas durante uma janela de manutenção selecionada por você.
+
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
 *Figura 1. Diagrama detalhado do
 {{site.data.keyword.Bluemix_notm}}
@@ -37,33 +86,6 @@ quando configuram seu ambiente. No ambiente dedicado,
 é possível gerenciar funções e permissões do usuário. Consulte
 [Gerenciando
 usuários e permissões](../admin/index.html#oc_useradmin) para obter detalhes.
-
-O {{site.data.keyword.Bluemix_notm}} Dedicated
-vem com todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} incluídos
-e 128 GB de memória do aplicativo.
-
-Além disso, há um conjunto de serviços incluídos por padrão e opcionais que você pode escolher para a sua instância dedicada.
-
-| **Tipo**        | **Nome**            | **Descrição** |      
-|-----------------|-------------------|-------------------|
-| Incluído | {{site.data.keyword.autoscaling}} | Aumentar ou diminuir dinamicamente a capacidade de
-cálculo do aplicativo com base em políticas. Com esse serviço,
-você possui uso ilimitado no ambiente do {{site.data.keyword.Bluemix_notm}}
-Dedicated. |
-| Incluído | {{site.data.keyword.datacshort}} | Esse serviço fornece uma grade de dados da memória
-que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
-50 GB de cache na memória. |
-| Opcional | {{site.data.keyword.mql}} | O {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} é um serviço de sistema de mensagens baseado em nuvem que fornece sistema de mensagens flexível e fácil de usar para apps {{site.data.keyword.Bluemix_notm}}. O
-{{site.data.keyword.mql}} fornece uma solução fácil de administrar para sistema de mensagens. É
-possível usar o {{site.data.keyword.mql}} para tornar os seus apps mais responsivos e escaláveis e compartilhar e transferir trabalho entre apps com uma API única e poderosa. |
-| Opcional | {{site.data.keyword.dashdbshort}} | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
-|Opcional | {{site.data.keyword.APIM}} | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
-possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
-benefício do uso do serviço {{site.data.keyword.APIM}}
-é que é possível gerenciar como suas APIs são usadas. |
-|Opcional | {{site.data.keyword.SecureGateway}} | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.   |
-
-*Tabela 1. Serviços dedicados*
 
 
 ##Configurando o {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -135,7 +157,7 @@ do terminal LDAP, e acessa.</li>
 <li>Identifique e designe funções à sua equipe administrativa para o ambiente. Para obter informações sobre as funções que você deve designar, veja <a href="index.html#rolesresponsibilities" target="_blank">Funções e responsabilidades do {{site.data.keyword.Bluemix_notm}} Dedicated</a>.</li>
 <li>A IBM implementa a plataforma principal que inclui os tempos de execução elásticos, o console, o recurso de administração e o monitoramento.</li>
 <li>A IBM configura o acesso administrativo para o ambiente.</li>
-<li>É possível começar a usar sua instância dedicada que é monitorada pela equipe de operações da IBM para responder aos alertas. </li>
+<li>É possível começar a usar sua instância dedicada que é monitorada pela equipe de operações da IBM para responder aos alertas.</li>
 </ol>
 
 Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para obter mais informações, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../administer/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância dedicada](index.html#maintaindedicated).
@@ -202,12 +224,12 @@ A fase de concepção é usada para estabelecer o ambiente do {{site.data.keywor
 |Selecionar arquitetura | Selecione a arquitetura com base nas opções predefinidas que consideram a alta disponibilidade e os requisitos de recuperação de desastre. | IBM |
 |Definir objetivos de recuperação de desastre | Definir os requisitos de recuperação de desastre para o ambiente. | Cliente |
 |Criar plano de recuperação de desastres | Consultar e definir o plano de recuperação de desastres. A IBM cria um modelo de recuperação de desastre e consulta você sobre fornecimento de feedback e aprovação do plano. | A IBM e o cliente compartilham a responsabilidade |
-|Criar plano de backup e recuperação | Criar um plano de backup e recuperação que defina a frequência e os requisitos para distribuição ocasional do backup pelo site. A IBM faz backup de componentes de malha, serviços IBM, metadados de serviço, incluindo funções de usuário e muito mais. Você faz backup de todos os dados específicos do aplicativo pelos quais é responsável. | A IBM e o cliente compartilham a responsabilidade |
+|Criar plano de backup e recuperação | Criar um plano de backup e recuperação que defina a frequência e os requisitos para distribuição ocasional do backup pelo site. A IBM faz backup de componentes da plataforma, serviços IBM, metadados de serviços, incluindo funções de usuários e muito mais. Você faz backup de todos os dados específicos do aplicativo pelos quais é responsável. | A IBM e o cliente compartilham a responsabilidade |
 |Identificar ferramentas para detecção de eventos e determinação de problemas | Identificar ferramentas da IBM e de terceiros usadas para detecção de eventos e determinação de problemas no nível da plataforma {{site.data.keyword.Bluemix_notm}}. | IBM |
 |Definir plano de escalada | Definir o plano de escalada para fazer triagem e resolver eventos detectados a partir dos componentes de monitoramento. | IBM |
 |Assinar contratos de infraestrutura, de plataforma e de suporte | Assinar o contrato de assinatura, incluindo os termos financeiros e as condições para o ambiente. Assinar contrato de monitoramento de rede e segurança. Assinar assinatura de suporte. | Cliente |
 |Comprar ambiente | Comprar recursos de cálculo, rede e armazenamento, incluindo VLAN principal e de serviços para hospedar o {{site.data.keyword.Bluemix_notm}}, serviços bare metal para hospedar o Data Power e o SoftLayer Firewall. Fornecer infraestrutura para permitir túnel VPN. | Cliente |
-|Instalar componentes de malha, de aplicativo e de monitoramento e gerenciamento | Instalar, configurar e verificar componentes de malha, como BOSH Director, Cloud Controller, Health Manager, sistema de mensagens, roteadores, DEAs e provedores de serviço, além dos componentes de monitoramento definidos no plano de escalada e de detecção de problema. | IBM |
+|Instalar componentes de plataforma, de aplicativo e de monitoramento e gerenciamento | Instale, configure e verifique componentes de plataforma, como o BOSH Director, o Cloud Controller, o Health Manager, o sistema de mensagens, os roteadores, os DEAs e os provedores de serviços, além dos componentes de monitoramento definidos no plano de escalada e de detecção de problema. | IBM |
 |Instalar e configurar componentes de segurança | Instalar e configurar componentes de segurança que são ligados ao plano de monitoramento e escalada, incluindo IBM QRadar, área segura de credenciais, sistema de prevenção de intrusão, IBM BigFix e IBM Security Privileged Identity Management. | IBM |
 |Instalar e configurar componentes customizados |  	Instalar e configurar componentes customizados que residem fora do escopo do produto e serviços {{site.data.keyword.Bluemix_notm}}. | Cliente |
 |Estabelecer configuração de rede inicial | Estabelecer configuração de rede inicial, incluindo firewalls, DataPower, Fortigate e DNS. | IBM |
@@ -288,11 +310,13 @@ pode não funcionar para você. A IBM tenta planejar atualizações
 nesses momentos. Com base nas solicitações, a IBM
 comunica a janela de manutenção planejada para você. Não se espera que as janelas de
 mudança mensal causem impacto no ambiente do Bluemix Dedicated em
-execução.<br />
+execução.
+<p>A imagem a seguir mostra o processo de receber uma notificação sobre uma atualização pendente para datas de configuração que podem não funcionar para você e, então, finalmente receber a notificação sobre a data planejada:</p>
+<p><img src="../local/images/maintenance_dates.png" alt="Processo para configurar datas indisponíveis para uma atualização de manutenção"></p>
 <br />
-**Nota:** Se você não solicita um momento específico
-para a atualização, a manutenção é aplicada automaticamente no final
-da janela.<br />
+**Nota**: se você não precisar configurar quaisquer datas indisponíveis para a atualização, então, será possível aprovar a atualização. A IBM o notifica sobre a data planejada para a manutenção a ser aplicada.<br />
+<p>A imagem a seguir mostra o processo de receber uma notificação sobre uma atualização pendente, aprovar a atualização e, em seguida, receber uma data planejada para a atualização:</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="Processo para aprovar a atualização sem datas indisponíveis"></p>
 <br />
 Acesse **ADMINISTRAÇÃO > INFORMAÇÕES DO SISTEMA**
 para visualizar atualizações pendentes, configurar datas
@@ -313,6 +337,26 @@ do ambiente. A IBM fará esforços razoáveis para minimizar o impacto a você d
 Para configurar a manutenção de sua instância dedicada, trabalhe com seu representante de conta designado pela IBM para identificar uma janela acordada para a manutenção padrão.
 
 Se houver um problema relatado após uma atualização de manutenção, você acordará com seu representante IBM se for de seu melhor interesse permitir que a IBM reverta a atualização. Em concordância, a IBM reverterá a atualização para restaurar o ambiente para o estado anterior.
+
+## Resposta ao incidente e suporte
+{: #incidentresponse}
+
+### Problemas detectados pelo cliente
+
+Se você identificar um problema que precisa de atenção do suporte e operações da IBM, será possível entrar em contato com o suporte usando alguns métodos diferentes. Para obter informações sobre como entrar em contato com o suporte, consulte [Contatando o suporte](../support/index.html#contacting-bluemix-support-local). Dependendo do problema, você, a IBM ou ambos trabalham juntos para corrigir o problema.
+
+### Incidentes críticos detectados pela IBM
+
+Os incidentes críticos são indisponibilidades de serviço urgentes e inesperadas e problemas de estabilidade que afetam seu ambiente ou seus usuários. Se a IBM detectar um incidente crítico em seu ambiente, você será notificado por uma notificação na página **Status**. Também é possível verificar a página Status para quaisquer problemas conhecidos da plataforma ou de seus serviços. Se deseja integrar suas notificações a um serviço da web que suporta o ganchos da web, consulte [Notificações e inscrições de eventos](../admin/index.html#oc_eventsubscription) para obter informações sobre como estender seus recursos de notificação.
+
+![Processo de resposta de incidente](../local/images/incidentresponseprocess.png "Processo de resposta de incidente")
+
+*Figura 2. Processo de resposta de incidente*
+
+Dependendo do problema, você, a IBM ou ambos trabalham juntos para corrigir o problema. Se você tiver uma pergunta sobre o incidente ou se precisar de um representante IBM para ajudá-lo a resolver o problema, será possível, então, abrir um chamado de suporte. Para obter informações sobre como entrar em contato com o suporte, consulte [Contatando o suporte](../support/index.html#contacting-bluemix-support-local).
+
+**Nota**: chamados de suporte de gravidade 1 são monitorados 24 horas por dia, sete dias por semana. Outros chamados são processados a partir de domingo às 22h GMT até sábado às 0h GMT. Para obter mais informações sobre gravidade de chamados de suporte e trabalhar com suporte, consulte <a href="../support/index.html#contacting-bluemix-support-local">Contatando o suporte</a>.
+
 
 ## Recuperação de desastre
 {: #dr}
@@ -368,7 +412,7 @@ Essas tecnologias incluem os itens a seguir:
 <dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.
 </dd>
 <dt>Redundância do SoftLayer</dt>
-<dd>Com o SoftLayer em ambientes dedicados, dados em cada cluster de armazenamento em nuvem são gravados várias vezes e os clusters de armazenamento são configurados com recursos de recuperação automática em caso de falha da unidade. Se houver algum problema com uma máquina virtual, o SoftLayer tentará reiniciar a máquina virtual em outro host.</dd>
+<dd>Com o SoftLayer em ambientes dedicados, dados em cada cluster de armazenamento em nuvem são gravados várias vezes e os clusters de armazenamento são configurados com recursos de recuperação automática em caso de falha da unidade. Se houver um problema com um servidor virtual, o SoftLayer tentará reiniciar o servidor virtual em outro host.</dd>
 <dt>Backup de metadados</dt>
 <dd>Os metadados são submetidos a backup usando o SoftLayer EVault Backup em um local que tenha uma distância de no mínimo 200 km.</dd>
 </dl>
@@ -398,5 +442,7 @@ Como a proteção de dados privados é crítica, a IBM precisa da sua colaboraç
 # rellinks
 ## general
 * [Descobrir: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
 * [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
 * [Entrando em contato com o suporte](../troubleshoot/getting_customer_support.html#bluemix_support)

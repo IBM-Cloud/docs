@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -19,7 +31,7 @@ Para empezar a crear la aplicación, siga los pasos siguientes:
   3. Pulse **WEB** y siga las instrucciones
 para elegir un iniciador, especifique un nombre y seleccione cómo desea codificar.
   4. Cuando acabe con las instrucciones, pulse **VER
-VISIÓN GENERAL DE LA APP**. Se visualiza la Visión general de su app en el panel de control. 
+VISIÓN GENERAL DE LA APP**. Se visualiza la Visión general de su app en el panel de control.
   5. Puede añadir un servicio a la app pulsando **AÑADIR UN SERVICIO O API** en la Visión general de la app, en la interfaz de usuario de Bluemix. También puede utilizar la interfaz de línea de mandatos cf. Consulte Opciones para trabajar con apps.
   6. En la Visión general de la app, pulse Añadir Git para guardar el origen de la aplicación en un
 repositorio Git y crear un proyecto alojado en Git. También puede desplegar la aplicación desde {{site.data.keyword.jazzhub_title}}.
@@ -36,7 +48,7 @@ Después de crear la app, tiene algunas opciones para continuar añadiendo servi
 <dt>Interfaz de usuario de {{site.data.keyword.Bluemix_notm}}</dt>
 <dd>Utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para compilar su aplicación, incluida la selección de servicios y tiempos de ejecución que desea combinar para solucionar el problema empresarial.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Utilice {{site.data.keyword.jazzhub_title}} para crear una aplicación en la nube y desplegarla en {{site.data.keyword.Bluemix_notm}}. Los servicios que suministra {{site.data.keyword.jazzhub_title}} incluyen Track & Plan y Delivery Pipeline, que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}}, en DevOps, así como Web IDE y el alojamiento de Git.</dd>
+<dd>Utilice {{site.data.keyword.jazzhub_title}} para crear una aplicación en la nube y desplegarla en {{site.data.keyword.Bluemix_notm}}. Los servicios que suministra {{site.data.keyword.jazzhub_title}} incluyen Track & Plan y Delivery Pipeline, que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}}, en DevOps, así como Web IDE y el alojamiento de Git. </dd>
 </dl>
 
 ## Consejos
@@ -44,7 +56,7 @@ Después de crear la app, tiene algunas opciones para continuar añadiendo servi
 Utilice los siguientes consejos para desarrollar apps web:
 
 <dl><dt>Persistencia</dt>
-<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de Bluemix para conservar los datos. </dd>
+<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de Bluemix para conservar los datos.</dd>
 <dt>Límites de recursos</dt>
 <dd>Tenga en cuenta los límites sobre las cantidades de recursos que puede utilizar una cuenta de prueba. Los límites son los siguientes:
 <table style="width:100%">

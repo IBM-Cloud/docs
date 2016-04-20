@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -178,11 +190,13 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 <dt>{{site.data.keyword.IBM_notm}} Containers</dt>
     <dd>利用 {{site.data.keyword.IBM_notm}} Containers 基础架构，您可以在支持容器部署的任何位置运行 Web 应用程序。*容器*是一个对象，用于容纳应用程序运行所需的所有内容。此基础架构中包含用于可信映像的专用注册表，方便您上传、存储和检索这些映像。然后，您可以让这些映像可用于 {{site.data.keyword.Bluemix_notm}} 中，并在平台中管理容器。{{site.data.keyword.IBM_notm}} Containers 基础架构可水平和垂直扩展。您可以使用公共 Docker Hub 中提供的所有映像，还可以使用 Docker API 和命令行界面来管理 {{site.data.keyword.Bluemix_notm}} 上的容器。{{site.data.keyword.IBM_notm}} 还在 Containers 注册表中提供一些公共映像，供您使用和扩展。    {{site.data.keyword.IBM_notm}} Containers 用于在托管的云环境中运行 Docker 容器。Docker 会添加一个引擎，该引擎会将应用程序部署到用于运行容器的虚拟环境中。Docker 还会提供一个环境，供您用于运行代码。当您准备就绪后，它会提供相应的工具，让您可以将代码从开发环境转移到测试环境，然后再转移到生产环境。
 
-    要了解有关 {{site.data.keyword.IBM_notm}} Containers 的更多信息，请参阅“创建 Web 应用程序”文档中的 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
-<dt>虚拟机 (BETA)</dt>
-    <dd>通过 {{site.data.keyword.Bluemix_notm}} 虚拟机基础架构，您可以在 {{site.data.keyword.IBM_notm}} 公共云上创建和管理虚拟机组。还可以在您选择向 {{site.data.keyword.Bluemix_notm}} 用户提供的私有 {{site.data.keyword.IBM_notm}} 云上创建和管理 VM 组。该基础架构融入了有关连接到内部部署基础架构的指导经验。对监视和日志记录的支持已集成到 {{site.data.keyword.Bluemix_notm}} 中。您可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或云的 OpenStack API 来部署和管理您的虚拟机。    {{site.data.keyword.Bluemix_notm}} 上的虚拟机支持通过自动扩展来供应虚拟机组。通过这种支持，可以根据 CPU 负载或实例的失败自动增加或减少实例数。此外，还支持负载均衡，其允许根据需要分配虚拟 IP（浮动 IP）地址。
-
-    要了解有关 {{site.data.keyword.Bluemix_notm}} 虚拟机的更多信息，请参阅“创建 Web 应用程序”文档中的[虚拟机](../virtualmachines/vm_index.html)。</dd>
+    要了解有关 {{site.data.keyword.IBM_notm}} Containers 的更多信息，请参阅 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 是一种托管的云环境，属于 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的一部分，可用于构建、运行、管理和监视您的应用程序，同时保持对应用程序以及运行应用程序的中间件的最大控制权。使用 {{site.data.keyword.virtualmachinesshort}} 来隔离您的业务解决方案，尤其是在公共云中部署应用程序时。</p>
+<p>    
+可以在使用 OpenStack 软件的公共和私有（内部部署）云中运行和管理虚拟服务器。您可以使用 {{site.data.keyword.Bluemix_notm}} UI 或 OpenStackClient (OSC) 客户机来创建、启动和管理虚拟服务器。可以使用 {{site.data.keyword.IBM_notm}} 提供的虚拟服务器映像，也可以基于您自己的定制映像来创建虚拟服务器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的各种功能，最大限度地降低与托管和管理基于云的应用程序相关的复杂性，例如日志记录、自动扩展和监视。可将 OpenStack 服务与 {{site.data.keyword.Bluemix_notm}} 服务一起使用来构建和运行混合应用程序。根据运行策略和工作负载需求，可按需供应基础架构资源。</p>
+<p>
+要了解有关 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 的更多信息，请参阅 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)。</p> </dd>
 </dl>
 
 ### 应用程序

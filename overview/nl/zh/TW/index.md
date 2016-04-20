@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -52,7 +64,7 @@
 
 *圖 1. {{site.data.keyword.Bluemix_notm}} 架構*
 
-基於延遲或安全考量，您可以將應用程式部署至不同的 {{site.data.keyword.Bluemix_notm}} 地區。您可以選擇部署到一個地區，或是部署到多個地區。如需相關資訊，請參閱[地區](#ov_intro__reg)。
+基於延遲或安全考量，您可以將應用程式部署至不同的 {{site.data.keyword.Bluemix_notm}} 地區。您可以選擇部署至一個地區，或是部署至多個地區。如需相關資訊，請參閱[地區](#ov_intro__reg)。
 
 ![多地區應用程式開發](images/multi-region.png)
 
@@ -91,7 +103,7 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 ### {{site.data.keyword.Bluemix_notm}} 的運作方式
 {: #howwork}
 
-將某個應用程式部署到 {{site.data.keyword.Bluemix_notm}} 時，您必須使用足夠的資訊來配置 {{site.data.keyword.Bluemix_notm}}，才能支援該應用程式。
+將某個應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您必須使用足夠的資訊來配置 {{site.data.keyword.Bluemix_notm}}，才能支援該應用程式。
 
 * 對於行動式應用程式，{{site.data.keyword.Bluemix_notm}} 包含代表行動式應用程式後端的構件，例如行動式應用程式用來與伺服器進行通訊的服務。
 * 對於 Web 應用程式，您必須確保將適當的執行時期和架構相關資訊傳遞給 {{site.data.keyword.Bluemix_notm}}，以讓它可以設定適當的執行環境來執行應用程式。
@@ -102,7 +114,7 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 
 *圖 5. 部署應用程式*
 
-當您建立應用程式並將其部署至 {{site.data.keyword.Bluemix_notm}} 時，{{site.data.keyword.Bluemix_notm}} 環境會判定將應用程式或應用程式所代表的構件傳送到哪個適當的虛擬機器 (VM)。對於行動式應用程式，將在 {{site.data.keyword.Bluemix_notm}} 上建立行動式後端投射。在雲端中執行的行動式應用程式的任何程式碼最終都會在 {{site.data.keyword.Bluemix_notm}} 環境中執行。對於 Web 應用程式，在雲端中執行的程式碼是開發人員部署到 {{site.data.keyword.Bluemix_notm}} 的應用程式本身。VM 的判定是根據數個因素，包括：
+當您建立應用程式並將其部署至 {{site.data.keyword.Bluemix_notm}} 時，{{site.data.keyword.Bluemix_notm}} 環境會判定將應用程式或應用程式所代表的構件傳送到哪個適當的虛擬機器 (VM)。對於行動式應用程式，將在 {{site.data.keyword.Bluemix_notm}} 上建立行動式後端投射。在雲端中執行的行動式應用程式的任何程式碼最終都會在 {{site.data.keyword.Bluemix_notm}} 環境中執行。對於 Web 應用程式，在雲端中執行的程式碼是開發人員部署至 {{site.data.keyword.Bluemix_notm}} 的應用程式本身。VM 的判定是根據數個因素，包括：
 
 * 機器上已有的負載。
 * 該 VM 支援的執行時期或架構。
@@ -115,7 +127,7 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 
 *圖 6. VM 的設計*
 
-在每一個 VM 中，應用程式管理程式都會與 {{site.data.keyword.Bluemix_notm}} 基礎架構的其餘部分進行通訊，並管理部署到此 VM 的應用程式。每一個 VM 都具有儲存器，用以隔離及保護應用程式。在每一個儲存器中，{{site.data.keyword.Bluemix_notm}} 會安裝每一個應用程式所需的適當架構及執行時期。
+在每一個 VM 中，應用程式管理程式都會與 {{site.data.keyword.Bluemix_notm}} 基礎架構的其餘部分進行通訊，並管理部署至此 VM 的應用程式。每一個 VM 都具有儲存器，用以隔離及保護應用程式。在每一個儲存器中，{{site.data.keyword.Bluemix_notm}} 會安裝每一個應用程式所需的適當架構及執行時期。
 
 部署應用程式時，如果該應用程式具有 Web 介面（例如，Java Web 應用程式）或其他 REST 型服務（例如，向行動式應用程式公開的行動式服務），則應用程式的使用者就可利用正常的 HTTP 要求與其進行通訊。
 
@@ -184,12 +196,13 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 及指令行介面來管理 {{site.data.keyword.Bluemix_notm}} 上的儲存器。{{site.data.keyword.IBM_notm}} 也在「Containers 登錄」中提供部分公用映像檔，您可以使用並擴充。
     {{site.data.keyword.IBM_notm}} Containers 用來在受管理的雲端環境中執行 Docker 儲存器。Docker 會新增引擎，該引擎會將應用程式部署至用於執行儲存器的虛擬環境。Docker 也提供可用來執行程式碼的環境。在您備妥時，會提供各種方法，讓您可以將程式碼從開發環境傳送至測試環境，然後再傳送至正式作業環境。
 
-    若要進一步瞭解 {{site.data.keyword.IBM_notm}} Containers，請參閱「建立 Web 應用程式」文件中的 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
-<dt>Virtual Machines（測試版）</dt>
-    <dd>{{site.data.keyword.Bluemix_notm}} 虛擬機器基礎架構讓您能夠在 {{site.data.keyword.IBM_notm}} 公用雲端上建立及管理虛擬機器群組。您也可以在專用 {{site.data.keyword.IBM_notm}} 雲端（已選擇提供給 {{site.data.keyword.Bluemix_notm}} 使用者）上建立及管理 VM 群組。基礎架構包含連接到內部部署基礎架構的引導式體驗。{{site.data.keyword.Bluemix_notm}} 中整合了對於監視及記載的支援。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或雲端的 OpenStack API，部署及管理您的虛擬機器。
-    {{site.data.keyword.Bluemix_notm}} 上的虛擬機器，能支援佈建具有自動擴充功能的虛擬機器群組。透過這項支援，實例數可以根據 CPU 負載或實例的失敗而自動增加或減少。此外，也支援負載平衡，可以視需要指派虛擬 IP（浮動 IP）位址。
-
-    若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} 虛擬機器，請參閱「建立 Web 應用程式」文件中的 [Virtual Machines](../virtualmachines/vm_index.html)。</dd>
+    若要進一步瞭解 {{site.data.keyword.IBM_notm}} Containers，請參閱 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)。</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}（測試版）</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 是受管理的雲端環境（{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的一部分），可用來建置、執行、管理及監視應用程式，同時維護應用程式及其執行所在的中介軟體的最大控制權。{{site.data.keyword.virtualmachinesshort}} 可用來找出您的商業解決方案，特別是在公用雲端中部署應用程式時。</p>
+<p>    
+您可以在使用 OpenStack 軟體的公開和私密（內部部署）雲端中執行及管理虛擬伺服器。您可以使用 {{site.data.keyword.Bluemix_notm}} UI 或 OpenStackClient (OSC) 用戶端來建立、啟動及管理虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} 所提供的虛擬伺服器映像檔，或從您自己的自訂映像檔建立虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 功能，來移除與管理雲端型應用程式相關聯的大部分複雜事宜（例如記載、自動調整及監視）。您可以一起使用 OpenStack 服務與 {{site.data.keyword.Bluemix_notm}} 服務，以建置及執行混合式應用程式。您可以視需要根據作業原則及工作量需求來佈建基礎架構資源。</p>
+<p>
+若要進一步瞭解 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}，請參閱 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)。</p> </dd>
 </dl>
 
 ### 應用程式

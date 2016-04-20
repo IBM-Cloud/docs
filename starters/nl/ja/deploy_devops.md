@@ -1,14 +1,27 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:download: .download}
 
 # Git を使用したコーディングの開始
-*最終更新日: 2015 年 12 月 8 日*  
+*最終更新日: 2016 年 3 月 2 日*  
 
-{{site.data.keyword.Bluemix}} に自動的にデプロイする、ホストされた Git リポジトリーを作成することができます。次に、その Git リポジトリーに変更をプッシュすることにより、アプリで実行されるコードを変更することができます。{:shortdesc}
+{{site.data.keyword.Bluemix}} に自動的にデプロイする、ホストされた Git リポジトリーを作成することができます。次に、その Git リポジトリーに変更をプッシュすることにより、アプリで実行されるコードを変更することができます。
+{:shortdesc}
 
-1. 開始するには、アプリの「概要」ページで、**「GIT の追加」**をクリックします。  
-2. オープンしたウィンドウで、「リポジトリーにスターター・アプリケーション・パッケージを取り込み、**「Delivery Pipeline (Build & Deploy) を使用可能にする (Populate the repository with the starter application package and enable Delivery Pipeline (Build & Deploy))」**チェック・ボックスが選択されていることを確認します。Git リポジトリーが作成されました。スターター・コードが使用可能な場合、リポジトリーにロードされます。さらに、{{site.data.keyword.jazzhub}} で実行されている Delivery Pipeline サービスによってアプリケーションもデプロイされます。  
+1. 開始するには、アプリの「概要」ページで、**「Git リポジトリーおよびパイプラインの追加」**をクリックするか、{{site.data.keyword.Bluemix_notm}} Classic Experience で**「Git の追加」**をクリックします。 
+2. オープンしたウィンドウで、**「リポジトリーにスターター・アプリ・パッケージを取り込み、Build & Deploy パイプラインを使用可能にします」**チェック・ボックスが選択されていることを確認します。Git リポジトリーが作成されました。スターター・コードが使用可能な場合、リポジトリーにロードされます。さらに、{{site.data.keyword.jazzhub}} で実行されている Delivery Pipeline サービスによってアプリケーションもデプロイされます。  
 3. アプリを更新するには、コマンド・ラインまたは Web IDE を使用します。
 **コマンド・ラインを使用する場合:**
    a. アプリの「概要」ページ上の Git URL から Git リポジトリーを複製します。
@@ -32,8 +45,8 @@ Node.js アプリをビルドする場合、{{site.data.keyword.Bluemix_notm}} L
 1. {{site.data.keyword.Bluemix_notm}} Live Sync bl コマンド・ラインをダウンロードし、インストールします。 
 
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Windows bl コマンド・ラインのダウンロード・ボタン" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Mac bl コマンド・ラインのダウンロード・ボタン" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="「Windows bl コマンド・ラインのダウンロード」ボタン" /> </a>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="「Mac bl コマンド・ラインのダウンロード」ボタン" /> </a>
 </p>
 
 **重要:** bl コマンド・ライン・ツールは、Windows 7 と 8、および Mac OS X バージョン 10.9 以降でのみ使用可能です。 

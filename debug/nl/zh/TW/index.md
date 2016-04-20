@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -7,26 +15,26 @@
 # 除錯
 {: #debugging}
 
-*前次更新：2015 年 11 月 19 日*
+*前次更新：2016 年 3 月 3 日*
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則可以檢視日誌檔來調查問題，並且進行除錯。{:shortdesc}
 
 日誌提供如工作是否順利執行或是否失敗這類的資訊。它們也會提供可用來除錯並判定問題原因的相關資訊。
 
-日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用協力廠商記載服務來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及協力廠商記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](../manageapps/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
+日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用外部記載主機來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及配置外部記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
 
 
 ## 針對編譯打包錯誤進行除錯
 {: #debugging-staging-errors}
-您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包您的應用程式，則可以使用 cf 指令行介面或 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式，來查看錯誤原因以及從問題回復。
+您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包您的應用程式，您可以檢視日誌來查看錯誤原因以及從問題回復。
 
-若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](../manageapps/deployingapps.html#appdeploy){: new_window}。
+若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](../manageapps/depapps.html#appdeploy){: new_window}。
 
 下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
 
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
      ```
-	 cf api https://api.{DomainName}
+	 cf api https://api.ng.bluemix.net
 	 ```
 	 
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
@@ -66,6 +74,8 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
+{: screen}
+
 
 針對 Node.js 應用程式，DEA 使用 `package.json` 檔案中的資訊來下載模組。從此錯誤中，您可以看到模組發生該錯誤。因此，您可能需要檢閱 `package.json` 檔案的第 18 行。 
 
@@ -99,7 +109,7 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
   * 若為 Node.js 應用程式，請參閱 [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。 
   * 若為 PHP 應用程式，請參閱 [error_log](http://php.net/manual/en/function.error-log.php){: new_window}。
   * 若為 Python 應用程式，請參閱 [logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}。
-  * 若為 Ruby on Rails 應用程式，請參閱 [The Logger](guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
+  * 若為 Ruby on Rails 應用程式，請參閱 [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
   * 若為 Ruby Sinatra 應用程式，請參閱 [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
   
 當您在 cf 指令行介面中輸入 `cf logs appname --recent` 時，只會顯示最新的日誌。若要檢視之前發生的錯誤日誌，您必須擷取所有的日誌，然後搜尋錯誤。若要擷取您的應用程式的所有日誌，請使用下列其中一種方法：
@@ -107,12 +117,12 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 <dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics 服務</strong></dt> 
 <dd>Monitoring and Analytics 服務具有整合的日誌檔搜尋及分析功能，可協助您快速地識別錯誤。如需相關資訊，請參閱 <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>。</dd> 
 <dt><strong>協力廠商工具</strong></dt> 
-<dd>您可以收集並匯出您的應用程式日誌至協力廠商日誌管理服務。如需相關資訊，請參閱<a href="http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html" target="_blank">配置選取的協力廠商日誌管理服務</a>。</dd> 
+<dd>您可以收集您應用程式的日誌，並將其匯出至外部日誌主機。如需相關資訊，請參閱<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">配置外部記載</a>。</dd> 
 <dt><strong>收集並匯出日誌的 Script</strong></dt> 
 <dd>若要使用 Script 來自動收集並匯出日誌到外部檔案，您必須從您的電腦連接至 {{site.data.keyword.Bluemix_notm}} 伺服器，而且您的電腦上必須具有足夠的空間可下載日誌。如需相關資訊，請參閱<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集診斷資訊</a>。</dd>
 </dl>
 
-依預設，可透過**檔案及日誌** > **日誌**下的 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，事先存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 管理所在的 Cloud Foundry 現行版本無法再使用該應用程式記載。若要持續可以透過**檔案及日誌** > **日誌**下的 {{site.data.keyword.Bluemix_notm}}「儀表板」存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視使用的執行時期而定）。 
+依預設，可透過**檔案** > **日誌**下的 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，事先存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 管理所在的 Cloud Foundry 現行版本無法再使用該應用程式記載。若要持續可以透過**檔案** > **日誌**下的 {{site.data.keyword.Bluemix_notm}}「儀表板」存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的執行時期而定）。 
 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄中的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
@@ -128,8 +138,11 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [開始使用 IBM Monitoring and Analytics for Bluemix 服務](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Bluemix 運作方式](../overview/overview.html#ov_arch){: new_window}
+  * [Bluemix 運作方式](../public/index.html#howwork){: new_window}
   * [安裝 cf 指令工具](../starters/install_cli.html){: new_window}
+  * [檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  
+  
  
 
 

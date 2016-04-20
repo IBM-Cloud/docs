@@ -1,13 +1,25 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# アプリケーションを管理するための cf コマンド
+# Cloud Foundry (cf) コマンド
 
-*最終更新日: 2015 年 11 月 10 日*
+*最終更新日: 2016 年 1 月 29 日*
 
-Cloud Foundry (cf) コマンドを使用してアプリを管理できます。{:shortdesc}
+Cloud Foundry (cf) コマンドを使用してアプリを管理できます。
+{:shortdesc}
 
 以下の情報は、アプリの管理に最も一般的に使用される cf コマンドをリストしています。すべての cf コマンドとそのヘルプ情報をリストするには、`cf help` を使用します。特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 

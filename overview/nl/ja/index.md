@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -6,11 +18,12 @@
 
 *最終更新日: 2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。{:shortdesc}
+{{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。
+{:shortdesc}
 
 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} オープン・ソース・テクノロジーに基づいて構築された {{site.data.keyword.Bluemix_notm}} は、Platform as a Service (PaaS) を使用したアプリケーション開発をより容易にします。{{site.data.keyword.Bluemix_notm}} では、事前構築済みの Mobile Backend as a Service (MBaaS) 機能も提供されています。その目的は、すぐに使用可能なサービスを提供し、インターネット規模の開発を可能にする機能をホストすることで、アプリの配信を単純化することにあります。
 
-また、{{site.data.keyword.Bluemix_notm}} は、ユーザーのニーズに合ったクラウド・デプロイメントも提供します。ユーザーがこれから規模を拡大する予定の中小企業であっても、さらに分離を必要とする大企業であっても、境界線のないクラウド内で開発を行うことが可能です。ユーザーはこのクラウドで、{{site.data.keyword.IBM_notm}} またはサード・パーティー・プロバイダーが提供するパブリック {{site.data.keyword.Bluemix_notm}} サービスに独自の専用サービスを接続することができます。すべてのサービス・インスタンスは、{{site.data.keyword.IBM_notm}} によって管理されます。ユーザーが受け取るのは、ユーザーが使用すると選択したサービスのみに対する 1 通の請求書になります。
+また、{{site.data.keyword.Bluemix_notm}} は、ユーザーのニーズに合ったクラウド・デプロイメントも提供します。ユーザーがこれから規模を拡大する予定の中小企業であっても、さらに分離を必要とする大企業であっても、境界線のないクラウド内で開発を行うことが可能です。ユーザーはこのクラウドで、{{site.data.keyword.IBM_notm}} またはサード・パーティー・プロバイダーが提供する Public {{site.data.keyword.Bluemix_notm}} サービスに独自の専用サービスを接続することができます。すべてのサービス・インスタンスは、{{site.data.keyword.IBM_notm}} によって管理されます。ユーザーが受け取るのは、ユーザーが使用すると選択したサービスのみに対する 1 通の請求書になります。
 
 {{site.data.keyword.Bluemix_notm}} に用意された一連の広範なサービスおよびランタイムにより、開発者は柔軟に制御できるようになり、また、予測分析からビッグデータまでさまざまなデータ・オプションを利用できるようになります。
 
@@ -85,7 +98,7 @@ IBM はリレー・テクノロジーを使用してお客様の環境のモニ�
 
 *図 4. {{site.data.keyword.Bluemix_notm}} Local*
 
-インセプション仮想マシンは、リレーを介して IBM 運用センターにアウトバウンド接続されているネットワーク内にある、カスタマー・ファイアウォールの内側のネットワーク内で稼働します。{{site.data.keyword.Bluemix_notm}} プラットフォームのコンポーネントとコア・サービスは、専用の、分離された仮想ローカル・エリア・ネットワーク (VLAN) 内で実行されます。{{site.data.keyword.Bluemix_notm}} Local は、プライベート・サブネットに VLAN を使用します。パブリック VLAN ではなくプライベート・サブネットを使用した方がより安全であり、経路指定の問題を回避するのに役立ちます。
+開始仮想マシンは、リレーを介して IBM 運用センターにアウトバウンド接続されているネットワーク内にある、カスタマー・ファイアウォールの内側のネットワーク内で稼働します。{{site.data.keyword.Bluemix_notm}} プラットフォームのコンポーネントとコア・サービスは、専用の、分離された仮想ローカル・エリア・ネットワーク (VLAN) 内で実行されます。{{site.data.keyword.Bluemix_notm}} Local は、プライベート・サブネットに VLAN を使用します。パブリック VLAN ではなくプライベート・サブネットを使用した方がより安全であり、経路指定の問題を回避するのに役立ちます。
 
 DataPower アプライアンスは、{{site.data.keyword.Bluemix_notm}} アプリケーション・ドメインへのアクセスを提供します。これらのアプライアンスは、ユーザーのイントラネットからアクセス可能なネットワークに接続します。アプリおよびサービスをデプロイするユーザーは、ユーザーのイントラネットからアクセス可能なネットワークからアクセスします。ユーザーは、アウトバウンド・インターネット・アクセスが可能な、7 つの IP アドレスを提供する必要があります。DataPower アプライアンスは、これらの顧客の IP アドレスから、分離された {{site.data.keyword.Bluemix_notm}} デプロイメントに経路指定します。ネットワークの仕様およびインフラストラクチャーの要件について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件](../local/index.html#localinfra)』を参照してください。
 
@@ -195,11 +208,13 @@ Eclipse ツールの使用について詳しくは、「[Deploying apps with IBM
     <dd>{{site.data.keyword.IBM_notm}} Containers インフラストラクチャーを使用すれば、コンテナー・デプロイメントがサポートされている所ならどこでも Web アプリを実行することができます。*コンテナー* は、アプリを実行するために必要なすべてのものを保持するオブジェクトです。このインフラストラクチャーには、信頼できるイメージの専用レジストリーが含まれており、それらのイメージをアップロード、保管、および取得できるようになっています。その後、それらのイメージを {{site.data.keyword.Bluemix_notm}} で使用できるようにして、このプラットフォームでコンテナーを管理することができます。{{site.data.keyword.IBM_notm}} Containers インフラストラクチャーは、水平方向にも垂直方向にもスケーリングします。パブリック Docker ハブで提供されているすべてのイメージを使用することができ、Docker API およびコマンド・ライン・インターフェースを使用して、{{site.data.keyword.Bluemix_notm}} 上のコンテナーを管理できます。{{site.data.keyword.IBM_notm}} は、Containers レジストリーに、使用したり拡張したりできるパブリック・イメージも用意しています。
     {{site.data.keyword.IBM_notm}} Containers は、ホストされたクラウド環境で Docker コンテナーを実行するために使用されます。Docker は、コンテナーを実行するために使用する仮想環境にアプリをデプロイするエンジンを追加します。Docker は、コードの実行に使用できる環境も提供します。また、ユーザーの準備が整ったときに、コードを開発環境からテスト環境へ転送し、次に実稼働環境へ転送するための手段を提供します。
 
-    {{site.data.keyword.IBM_notm}} Containers について詳しくは、「Web アプリの作成」資料の『[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)』を参照してください。</dd>
-<dt>Virtual Machines (ベータ版)</dt>
-    <dd>{{site.data.keyword.Bluemix_notm}} 仮想マシン・インフラストラクチャーを使用すると、{{site.data.keyword.IBM_notm}} パブリック・クラウドで仮想マシン・グループを作成および管理することができます。また、{{site.data.keyword.Bluemix_notm}} ユーザーが使用できるように選択した自分のプライベート {{site.data.keyword.IBM_notm}} クラウドで、VM グループを作成および管理することもできます。このインフラストラクチャーでは、オンプレミス・インフラストラクチャーに接続するための指示が出されます。モニターとロギングのサポートが、{{site.data.keyword.Bluemix_notm}} に統合されています。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたはクラウドの OpenStack API のいずれかを使用して、仮想マシンをデプロイおよび管理することができます。     {{site.data.keyword.Bluemix_notm}} 上の仮想マシンは、自動スケーリングを使用した仮想マシン・グループのプロビジョニングをサポートします。このサポートにより、CPU の負荷またはインスタンスの障害に基づいて、インスタンスの数を自動的に増やしたり減らしたりすることができます。さらに、ロード・バランシングがサポートされています。これにより、必要に応じて仮想 IP (浮動 IP) アドレスを割り当てることが可能になります。
-
-    {{site.data.keyword.Bluemix_notm}} 仮想マシンについて詳しくは、「Web アプリの作成」資料の[「仮想マシン」](../virtualmachines/vm_index.html)を参照してください。</dd>
+    {{site.data.keyword.IBM_notm}} Containers について詳しくは、『[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)』を参照してください。</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (ベータ版)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} は {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} に含まれるホストされたクラウド環境で、アプリケーションやそれらが実行されるミドルウェアを最大限に制御しながら、アプリケーションをビルド、実行、管理、およびモニターすることができます。{{site.data.keyword.virtualmachinesshort}} を使用すると、特にパブリック・クラウドにアプリケーションをデプロイした場合に、お客様のビジネス・ソリューションが他から分離されます。</p>
+<p>    
+OpenStack ソフトウェアを使用するパブリック・クラウドとプライベート (オンプレミス) クラウドで、仮想サーバーの実行と管理を行えます。{{site.data.keyword.Bluemix_notm}} UI または OpenStackClient (OSC) クライアントを使用することで、仮想サーバーを作成、起動、および管理できます。{{site.data.keyword.IBM_notm}} 提供の仮想サーバー・イメージを使用することも、独自のカスタム・イメージから仮想サーバーを作成することも可能です。{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 機能を使用することで、ロギング、自動スケーリング、モニタリングなど、クラウド・ベースのアプリケーションのホスティングおよび管理に関連する複雑性の大部分を取り除けます。OpenStack サービスと {{site.data.keyword.Bluemix_notm}} サービスを一緒に使用して、ハイブリッド・アプリケーションを構築して実行することができます。運用ポリシーとワークロード要求に基づき、必要に応じてインフラストラクチャー・リソースをプロビジョンできます。</p>
+<p>
+{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} について詳しくは、『[{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)』を参照してください。</p> </dd>
 </dl>
 
 ### アプリケーション

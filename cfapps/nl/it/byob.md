@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 {:pre: .pre}
 
 # Utilizzo dei pacchetti di build della community
-*Ultimo aggiornamento: 8 dicembre 2015*
+*Ultimo aggiornamento: 15 marzo 2016*
 
 Se non riesci a trovare uno starter nel Catalogo {{site.data.keyword.Bluemix}} che ti fornisca il runtime desiderato, puoi portare tu un pacchetto di build esterno in {{site.data.keyword.Bluemix_notm}}. Puoi specificare un pacchetto di build personalizzato compatibile con Cloud Foundry quando distribuisci la tua applicazione utilizzando il comando cf push.
 {:shortdesc}
@@ -40,15 +52,15 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 <li>
 Per lo stesso runtime o framework, i pacchetti di build creati da IBM hanno la precedenza su quelli della community. Se vuoi usare il pacchetto di build della community per sovrascrivere quello creato da IBM, devi specificare il pacchetto di build utilizzando l'opzione -b con il comando cf push.
 <p>Ad esempio, puoi usare il pacchetto di build della community per le applicazioni Web Java™:</p>
-<pre class="pre"><code>cf push app_name -b java_buildpack</code></pre>
+<pre class="pre"><code>cf push app_name -b java_buildpack -p app_path</code></pre>
 <p>Puoi anche usare il pacchetto di build della community per le applicazioni Node.js:</p>
-<pre class="pre"><code>cf push app_name -b nodejs_buildpack</code></pre>
+<pre class="pre"><code>cf push app_name -b nodejs_buildpack -p app_path</code></pre>
 </li>
 
 <li>
 <p>Per un runtime o un framework non supportato da pacchetti di build creati da IBM ma supportato da pacchetti di build della community integrati, non devi necessariamente utilizzare l'opzione -b con il comando cf push.</p><p>Ad esempio, per le applicazioni Ruby, non ci sono pacchetti di build creati da IBM. Puoi usare il pacchetto di build della community integrato immettendo il
 seguente comando:</p>
-<pre class="pre"><code>cf push app_name</code></pre>
+<pre class="pre"><code>cf push app_name -p app_path</code></pre>
 </li>
 </ul>
 
@@ -57,7 +69,7 @@ seguente comando:</p>
 Puoi utilizzare pacchetti di build esterni o personalizzati in {{site.data.keyword.Bluemix_notm}}. Devi specificare l'URL del pacchetto di build con l'opzione -b e specificare lo stack con l'opzione ```-s``` nel comando **cf push**. Ad esempio, per utilizzare un pacchetto di build della community esterno per i file statici, esegui questo comando
 
 ```
-cf push app_name -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
 ```
 {:pre}
 
@@ -67,7 +79,7 @@ per le applicazioni Ruby, puoi utilizzare un pacchetto di build esterno immetten
 comando:
 
 ```
-cf push app_name -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/cloudfoundry/heroku-buildpack-ruby -s cflinuxfs2
 ```
 {:pre}
 
@@ -75,7 +87,7 @@ Puoi
 anche utilizzare un pacchetto di build personalizzato per la tua applicazione. Ad esempio, per utilizzare un pacchetto di build PHP open source fornito dalla community di Cloud Foundry, quando distribuisci la tua applicazione PHP a Bluemix, immetti il seguente comando per specificare l'URL del repository Git del pacchetto di build:
 
 ```
-cf push app_name -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
+cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
 ```
 {:pre}
 
@@ -84,7 +96,7 @@ cf push app_name -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cfli
 <ul>
 <li>
 Utilizza il comando <strong>cf set-env</strong>. Ad esempio, immetti il seguente comando per impostare la versione Java su 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Quindi, per rendere effettive
 le modifiche, prepara di nuovo la tua applicazione:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

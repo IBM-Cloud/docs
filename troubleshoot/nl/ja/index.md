@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-*最終更新日: 2015 年 1 月 6 日*
+*最終更新日: 2016 年 3 月 15 日*
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -45,7 +51,7 @@
 {: #ts_unsaved_changes}
 
 
-アプリの詳細ページでナビゲートしている時に、アクションを実行できず、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。 
+アプリの詳細ページでナビゲートしている時に、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。 
 
 
 アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージを受信し続けます。
@@ -268,7 +274,7 @@ nslookup stage1.mybluemix.net
 適切な権限レベルを取得するには、以下のいずれかの方法を使用します。
 {: tsResolve}
  * 開発者役割を備えている別の組織およびスペースを選択します。 
- * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織の管理](../acctmgmt/index.html#mngorg){: new_window}』を参照してください。
+ * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織の管理](../admin/adminpublic.html#orgmng){: new_window}』を参照してください。
  
 
  
@@ -380,7 +386,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 	```
   * アプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときに、`cf push` コマンドで **-k** オプションを使用します。
 ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -469,7 +475,7 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 	  1. 次を入力して、アプリケーションからサービス・インスタンスをアンバインドします: `cf unbind-service <appname> <service_instance_name>`。
 	  2. 次を入力して、サービス・インスタンスを削除します: `cf delete-service <service_instance_name>`。
 	  3. サービス・インスタンスを削除した後、次を入力して、サービス・インスタンスがバインドされていたアプリケーションを再ステージングしなければならない場合があります: `cf restage <appname>`.
-  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../acctmgmt/bill_usage.html#bil_plan){: new_window}』を参照してください。
+  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[プラン変更方法](../pricing/index.html#changing){: new_window}』を参照してください。
 
   
   
@@ -494,11 +500,10 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
-以下に例を示します。
-```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+以下に例を示します。```
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -524,7 +529,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
 {: tsResolve} 
 
-  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../acctmgmt/bill_usage.html#bil_plan){: new_window}』を参照してください。 
+  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../pricing/index.html#pay-accounts){: new_window}』を参照してください。 
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースのいずれかを使用します。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する場合、以下のステップを実行してください。
 	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーションを選択します。アプリ詳細ページが開きます。
@@ -537,7 +542,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。
       2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. アプリを再始動して、変更を有効にします。
 
@@ -566,7 +571,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。 
 
@@ -666,7 +671,7 @@ cf コマンド・ライン・インターフェースを使用して {{site.dat
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}』を参照してください。  
+Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html){: new_window}』を参照してください。  
   
   
 
@@ -699,7 +704,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 	```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、``cf
 push`` コマンドを **-n** オプションで使用します。```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ``
 
 
@@ -720,8 +725,7 @@ push`` コマンドを **-n** オプションで使用します。```
 
  	
 	
-**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。
-{: tsResolve}
+**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。{: tsResolve}
 
 ```
 cf push MyUniqueAppName01 -p app.war
@@ -803,7 +807,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
   * 以下のいずれかの方法で開始コマンドを指定します。 
       * cf コマンド・ライン・インターフェースを使用します。以下に例を示します。
 ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * [package.json](https://docs.npmjs.com/json){: new_window} ファイルを使用します。例:
 	    ```
@@ -815,7 +819,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 	}
 	    ```
 	  * `manifest.yml` ファイルを使用します。例:
-	    ```
+```
 		applications:
   name: MyUniqueNodejs01
   ...
@@ -907,7 +911,7 @@ DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプ�
 
  
 
-この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[「アプリケーション・マニフェスト (Application manifest)」](../manageapps/deployingapps.html#appmanifest){: new_window}を参照してください。
+この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[「アプリケーション・マニフェスト (Application manifest)」](../manageapps/depapps.html#appmanifest){: new_window}を参照してください。
 {: tsResolve}	
 	
 
@@ -940,7 +944,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
   ```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。以下に例を示します。
 ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 	
   
@@ -1219,11 +1223,11 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
   ```
   3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリをプッシュします。このステップを完了すると、アプリのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
 ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。
 ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

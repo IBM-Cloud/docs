@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014，2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
@@ -6,7 +18,8 @@
 
 *最終更新日: 2015 年 12 月 7 日*
 
-この用語集は {{site.data.keyword.Bluemix}} の用語と定義を提供します。{:shortdesc}
+この用語集は {{site.data.keyword.Bluemix}} の用語と定義を提供します。
+{:shortdesc}
 
 この用語集では以下の相互参照を使用します。 
 

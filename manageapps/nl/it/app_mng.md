@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Gestione applicazioni
+#Gestione di applicazioni Liberty e Node.js
 {: #app_management}
 
-*Ultimo aggiornamento: 8 dicembre 2015*
+*Ultimo aggiornamento: 17 marzo 2016*
 
 La Gestione applicazioni è un insieme di programmi di utilità per lo sviluppo e il debug che è possibile abilitare per
  le tue applicazioni Liberty e Node.js su {{site.data.keyword.Bluemix}}.
@@ -66,13 +74,6 @@ Questi programmi di utilità supportano solo Node.js.
   Il programma di utilità *inspector* avvia anche *proxy*.
   
   2. *strongpm*: abilita l'utilizzo di [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} per analizzare la tua applicazione Node.js con programmi di utilità quali [StrongLoop Metrics, Profiling e Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-  
-  **NOTA:** per utilizzare il programma di utilità **strongpm** occorre la versione 0.12 di engines.node. La versione di engines.node è specificata nel file package.json. Ad
-esempio:
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   Il programma di utilità *strongpm* avvia anche *proxy*.
   

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -396,7 +408,7 @@ Cuando se añaden todos los elementos, el precio total de la app es de 384,15 d�
 ##Detalles de uso
 {: #usage}
 
-Como propietario de cuenta o gestor de facturación, puede utilizar la vista Detalles de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
+Como propietario de cuenta, usuario con permisos de *Auditor* en el espacio o gestor de facturación, puede utilizar la vista Detalles de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
 
 Para abrir la vista Detalles de uso, pulse el icono **Cuenta y soporte** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y seleccione **Cuenta**. En la página que se muestra, pulse **Detalles de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta.
 

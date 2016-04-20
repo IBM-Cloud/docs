@@ -13,6 +13,9 @@
 				"name": "Cloud Foundry 应用程序",
 				"href": "cfapps/index.html"
 			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
+			}, {
 				"name": "容器",
 				"href": "containers/container_index.html"
 			}, {
@@ -27,6 +30,9 @@
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
+				"name": "Network Security Groups",
+				"href": "services/networksecuritygroups/index.html"
+			}, {
 				"name": "Virtual Private Network (VPN)",
 				"href": "services/vpn/index.html"
 			}]
@@ -35,7 +41,7 @@
 			"img": "homepage/images/storage.svg",
 			"href": "services/storage.html",
 			"links": [{
-				"name": "Block Storage",
+				"name": "块存储器",
 				"href": "services/BlockStorage/index.html"
 			}, {
 				"name": "Object Storage",
@@ -141,6 +147,9 @@
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
 			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
+			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
@@ -152,17 +161,11 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
@@ -194,7 +197,7 @@
 				"href": "services/TrackPlan/index.html"
 			}]
 		}, {
-			"title": "安全",
+			"title": "安全性",
 			"img": "homepage/images/security.svg",
 			"href": "services/security.html",
 			"links": [{
@@ -239,14 +242,20 @@
 		}, {
 			"title": "移动",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/index.html",
 			"links": [{
+				"name": "尝试使用 Bluemix Mobile Services",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -257,7 +266,7 @@
 				"href": "services/mobilepush/index.html"
 			}]
 		}, {
-			"title": "物联网",
+			"title": "Internet of Things",
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
@@ -267,12 +276,24 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "API",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "资源",
 		"descriptionTitle": "资源",
 		"items": [{
-			"title": "为什么是 Bluemix？",
+			"title": "为什么要使用 Bluemix？",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",
 			"href": "http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/"
 		}, {
@@ -292,7 +313,7 @@
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {
-			"title": "体系结构中心",
+			"title": "Architecture Center",
 			"img": "homepage/images/ArchitectureCenter-icon.svg",
 			"href": "https://developer.ibm.com/architecture/"
 		}]
