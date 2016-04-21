@@ -21,7 +21,7 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 2. Under **Custom**, click **Configure**.
 3. Enter the following authentication credentials:
   - **Realm name**: myRealm
-  - **URL**: http://<*myIoT4eStarterApp*>.mybluemix.net  
+  - **URL**: https://<*myIoT4eStarterApp*>.mybluemix.net  
 (*This is the URL of your {{site.data.keyword.iotelectronics}} Starter app. You can find your Starter app name in the heading of this page.*)
 4. Save.
 

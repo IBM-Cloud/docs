@@ -3,7 +3,7 @@
 
 # Getting started with {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Last updated: 18 April 2016*
+*Last updated: 21 April 2016*
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}
@@ -59,6 +59,5 @@ To install the mobile app, download the source files and follow the instructions
 
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](https://new-console.ng.bluemix.net/apidocs/166)
 * [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
