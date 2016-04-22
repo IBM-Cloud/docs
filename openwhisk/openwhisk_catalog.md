@@ -350,6 +350,7 @@ The package includes the following actions.
 | `/whisk.system/watson` | package | username, password | Actions for the Watson analytics APIs |
 | `/whisk.system/watson/translate` | action | translateFrom, translateTo, translateParam, username, password | Translate text |
 | `/whisk.system/watson/languageId` | action | payload, username, password | Identify language |
+| `/whisk.system/watson/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convert text into audio |
 
 While not required, it's suggested that you create a package binding with the `username` and `password` values. This way you don't need to specify these credentials every time you invoke the actions in the package.
 
@@ -419,6 +420,39 @@ Here is an example of creating a package binding and identifying the language of
   ```
   {: screen}
 
+
+### Converting some text to speech
+
+The `/whisk.system/watson/textToSpeech` action converts some text into an audio speech. The parameters are as follows:
+
+- `username`: The Watson API username.
+- `password`: The Watson API password.
+- `payload`: The text to convert into speech.
+- `voice`: The voice of the speaker.
+- `accept`: The format of the speech file.
+- `encoding`: The encoding of the speech binary data.
+
+Here is an example of creating a package binding and converting some text to speech.
+
+1. Create a package binding with your Watson credentials.
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. Invoke the `textToSpeech` action in your package binding to convert the text.
+
+  ```
+  $ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
 
 ## Using the Slack package
 {: #openwhisk_catalog_slack}
