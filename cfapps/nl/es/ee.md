@@ -108,10 +108,10 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
 	```
 	
     **Requisito:** Asegúrese de utilizar siempre la última versión de la herramienta de línea de mandatos cf.
-  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la región EE. UU. sur es stage1.ng.bluemix.net. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
+  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la región EE. UU. sur es ng.bluemix.net. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Para obtener más información sobre cómo conectarse a otras regiones de {{site.data.keyword.Bluemix_notm}}, consulte Regiones de {{site.data.keyword.Bluemix_notm}}. Después de especificar la región de {{site.data.keyword.Bluemix_notm}}, la información sobre ubicación que ha especificado se guarda.
@@ -132,7 +132,7 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
   
   6. Ahora puede acceder a la app especificando el siguiente URL de app en un navegador:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 También puede elegir otras herramientas para crear la

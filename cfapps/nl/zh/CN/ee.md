@@ -102,10 +102,10 @@ copyright:
 	```
 	
     **要求：**确保始终使用最新版本的 cf 命令行工具。
-  3. 安装 **cf** 命令行界面后，必须使用 **cf api** 命令来指定要使用的 {{site.data.keyword.Bluemix_notm}} 区域。**cf** 命令行界面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是区域的 URL。美国南部区域的 URL 为 stage1.ng.bluemix.net。输入以下命令，以连接到 {{site.data.keyword.Bluemix_notm}}：
+  3. 安装 **cf** 命令行界面后，必须使用 **cf api** 命令来指定要使用的 {{site.data.keyword.Bluemix_notm}} 区域。**cf** 命令行界面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是区域的 URL。美国南部区域的 URL 为 ng.bluemix.net。输入以下命令，以连接到 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   有关连接到其他 {{site.data.keyword.Bluemix_notm}} 区域的更多信息，请参阅 {{site.data.keyword.Bluemix_notm}} 区域。指定 {{site.data.keyword.Bluemix_notm}} 区域后，您所指定的位置信息会得到保存。
@@ -124,7 +124,7 @@ copyright:
   有关 **cf push** 命令的更多信息，请参阅“上传应用程序”。
   
   6. 现在，可以通过在浏览器中输入以下应用程序 URL 来访问应用程序：```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 您还可以选择其他工具来构建应用程序，例如 Eclipse 工具。有关更多信息，请参阅 {{site.data.keyword.Bluemix_notm}} 用户界面上应用程序的“开始编码”页面。

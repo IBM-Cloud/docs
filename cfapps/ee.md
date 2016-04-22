@@ -102,10 +102,10 @@ Click **Environment Variables** on the app Overview page to see the whole list o
 	```
 	
     **Requirement:** Make sure that you always use the latest version of the cf command line tool.
-  3. After you install the **cf** command line interface, you must specify which {{site.data.keyword.Bluemix_notm}} region you want to work with by using the **cf api** command. The **cf** command line interface uses *https://api.Bluemix_URL*, where *Bluemix_URL* is the region's URL. The URL of the US South region is stage1.ng.bluemix.net. Enter the following command to connect to {{site.data.keyword.Bluemix_notm}}:
+  3. After you install the **cf** command line interface, you must specify which {{site.data.keyword.Bluemix_notm}} region you want to work with by using the **cf api** command. The **cf** command line interface uses *https://api.Bluemix_URL*, where *Bluemix_URL* is the region's URL. The URL of the US South region is {{Domain}}. Enter the following command to connect to {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   For more information about connecting to other {{site.data.keyword.Bluemix_notm}} regions, see {{site.data.keyword.Bluemix_notm}} regions. After you specify the {{site.data.keyword.Bluemix_notm}} region, the location information that you specified is saved.

@@ -142,11 +142,11 @@ cf.
   3. Une fois que vous avez installé l'interface de ligne de commande **cf**, vous devez spécifier la région
 {{site.data.keyword.Bluemix_notm}} que vous voulez utiliser avec la commande **cf api**. L'interface de ligne de commande
 **cf** utilise *https://api.URL_Bluemix*, où *URL_Bluemix* est l'adresse URL de la région. L'adresse URL de la
-région Sud des Etats-Unis est stage1.ng.bluemix.net. Entrez
+région Sud des Etats-Unis est ng.bluemix.net. Entrez
 la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}} :
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}. Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
@@ -169,7 +169,7 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   
   6. A présent, vous pouvez accéder à l'application en entrant l'adresse URL de l'application suivante dans un navigateur :
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page

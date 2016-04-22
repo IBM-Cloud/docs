@@ -112,11 +112,11 @@ TestNode zu beginnen.
 	
     **Anforderung:** Vergewissern Sie sich, dass Sie stets die neueste Version des Befehlszeilentools 'cf' verwenden.
   3. Nach der Installation der Befehlszeilenschnittstelle **cf** müssen Sie angeben, mit welcher {{site.data.keyword.Bluemix_notm}}-Region Sie arbeiten wollen, indem Sie den Befehl **cf api** verwenden.
-Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet wie folgt: stage1.ng.bluemix.net. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
+Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet wie folgt: `ng.bluemix.net`. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
 {{site.data.keyword.Bluemix_notm}} herzustellen:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Weitere Informationen zum Herstellen einer Verbindung zu anderen {{site.data.keyword.Bluemix_notm}}-Regionen finden Sie im Abschnitt zu den {{site.data.keyword.Bluemix_notm}}-Regionen. Nach Angabe der {{site.data.keyword.Bluemix_notm}}-Region werden die von Ihnen angegebenen Positionsinformationen
@@ -138,7 +138,7 @@ Geben Sie im Verzeichnis (`C:\test`) der App den folgenden Befehl ein:
   Weitere Informationen zum Befehl **cf push** finden Sie unter 'Anwendung hochladen'.
   
   6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben: ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Sie können auch andere Tools zum Erstellen der App verwenden, z. B. Eclipse-Tools. Weitere Informationen finden Sie auf der Seite 'Coding beginnen' Ihrer App in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle. 

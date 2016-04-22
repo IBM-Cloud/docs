@@ -149,11 +149,11 @@ esempio:
     **Requisito:** assicurati di usare sempre la versione più recente dello strumento riga di comando cf.
   3. Dopo che hai installato l'interfaccia riga di comando **cf**,
 devi specificare qual è la regione {{site.data.keyword.Bluemix_notm}} che
-desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti sud è stage1.ng.bluemix.net. Immetti il seguente comando per
+desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti sud è ng.bluemix.net. Immetti il seguente comando per
 stabilire una connessione a {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Per ulteriori informazioni sulla connessione ad altre regioni {{site.data.keyword.Bluemix_notm}}, vedi Regioni {{site.data.keyword.Bluemix_notm}}. Dopo che hai specificato la regione {{site.data.keyword.Bluemix_notm}},
@@ -178,7 +178,7 @@ comando:
   6. Puoi ora accedere all'applicazione immettendo il seguente URL
 in un browser:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Per creare la tua applicazione puoi scegliere anche altri strumenti, ad esempio

@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 13 April 2016*
+*Last updated: 22 April 2016*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -91,7 +91,7 @@ You can use a DNS provider that supports intelligent failover among multiple ID 
 
 When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of a {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1222,7 +1222,7 @@ You might notice that several applications share the same URL in {{site.data.key
 This problem might happen when you assign the same URL route for different applications within a space.
 {: tsCauses}
 
-For example, you push the myApp1 application to {{site.data.keyword.Bluemix_notm}} and set the domain to "mynewapp.stage1.mybluemix.net". Then, you push another myApp2 application to the same space and set one of its URL routes to "mynewapp.stage1.mybluemix.net". The route is now mapped to both applications.
+For example, you push the myApp1 application to {{site.data.keyword.Bluemix_notm}} and set the domain to "mynewapp.mybluemix.net". Then, you push another myApp2 application to the same space and set one of its URL routes to "mynewapp.mybluemix.net". The route is now mapped to both applications.
 
  
 

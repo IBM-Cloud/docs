@@ -91,7 +91,7 @@ copyright:
 
 DNS 設定を構成する場合、アプリが実行されている {{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを指定する必要があります。{{site.data.keyword.Bluemix_notm}} 領域のパブリック IP アドレスを取得するには、`nslookup` コマンドを使用します。例えば、次のコマンドをコマンド・ライン・ウィンドウに入力できます。
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1140,7 +1140,7 @@ Git リポジトリーが複製されない場合は、リポジトリーまた�
 この問題は、同じスペース内の異なるアプリケーションに対して同一の URL 経路を指定した場合に発生する可能性があります。
 {: tsCauses}
 
-例えば、myApp1 アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメインを「mynewapp.stage1.mybluemix.net」に設定します。次に、別の myApp2 アプリケーションを同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.stage1.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
+例えば、myApp1 アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメインを「mynewapp.mybluemix.net」に設定します。次に、別の myApp2 アプリケーションを同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
 
  
 

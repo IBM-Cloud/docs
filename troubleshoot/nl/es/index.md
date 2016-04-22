@@ -91,7 +91,7 @@ Puede utilizar un proveedor de DNS que dé soporte a la migración tras error in
 
 Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.Bluemix_notm}} en la que se ejecutan sus apps. Para obtener la dirección IP pública de una región de {{site.data.keyword.Bluemix_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una ventana de línea de mandatos:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1196,7 +1196,7 @@ Puede que observe que varias apps comparten el mismo URL en {{site.data.keyword.
 Este problema puede producirse cuando se asigna la misma ruta de URL a distintas apps de un espacio.
 {: tsCauses}
 
-Por ejemplo, supongamos que envía la app myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.stage1.mybluemix.net". Luego envía otra app myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.stage1.mybluemix.net". Ahora la ruta está correlacionada a ambas apps.
+Por ejemplo, supongamos que envía la app myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.mybluemix.net". Luego envía otra app myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.mybluemix.net". Ahora la ruta está correlacionada a ambas apps.
 
  
 

@@ -104,7 +104,7 @@ Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses 
 dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la
 commande `nslookup`. Par exemple, vous pouvez entrer la commande suivante dans une fenêtre de ligne de commande :
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1358,8 +1358,8 @@ Ce problème peut se produire lorsque vous affectez la même route d'adresse URL
 {: tsCauses}
 
 Par exemple, vous envoyez par commande push l'application mon_App1 dans {{site.data.keyword.Bluemix_notm}} et définissez le nom de domaine
-"manouvelleapp.stage1.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez ses routes
-d'adresse URL "manouvelleapp.stage1.mybluemix.net". La route est désormais mappée aux deux applications.
+"manouvelleapp.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez ses routes
+d'adresse URL "manouvelleapp.mybluemix.net". La route est désormais mappée aux deux applications.
 
  
 

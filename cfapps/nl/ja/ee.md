@@ -102,10 +102,10 @@ copyright:
 	```
 	
     **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。
-  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は stage1.ng.bluemix.net です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
+  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は ng.bluemix.net です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   他の {{site.data.keyword.Bluemix_notm}} 地域への接続について詳しくは、『{{site.data.keyword.Bluemix_notm}} 地域』を参照してください。{{site.data.keyword.Bluemix_notm}} 地域を指定すると、指定したロケーション情報が保存されます。
@@ -126,7 +126,7 @@ copyright:
   
   6. これで、ブラウザーで以下のアプリ URL を入力することによってアプリにアクセスできるようになりました。
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 アプリをビルドするために他のツール (Eclipse ツールなど) を選択することもできます。詳細については、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースのアプリの「コーディングの開始」ページを参照してください。

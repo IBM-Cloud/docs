@@ -95,7 +95,7 @@ di una regione {{site.data.keyword.Bluemix_notm}},
 usa il comando `nslookup`. Ad esempio, puoi immettere
 il seguente comando in una finestra della riga di comando:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1369,7 +1369,7 @@ Questo problema potrebbe verificarsi quando assegni
 la stessa rotta URL per applicazioni differenti all'interno di uno spazio.
 {: tsCauses}
 
-Ad esempio, esegui il push dell'applicazione myApp1 a {{site.data.keyword.Bluemix_notm}} e imposti il dominio su "mynewapp.stage1.mybluemix.net". Esegui quindi il push di un'altra applicazione myApp2 allo stesso spazio e imposti una delle sue rotte URL su "mynewapp.stage1.mybluemix.net". La rotta è ora associata a entrambe le applicazioni.
+Ad esempio, esegui il push dell'applicazione myApp1 a {{site.data.keyword.Bluemix_notm}} e imposti il dominio su "mynewapp.mybluemix.net". Esegui quindi il push di un'altra applicazione myApp2 allo stesso spazio e imposti una delle sue rotte URL su "mynewapp.mybluemix.net". La rotta è ora associata a entrambe le applicazioni.
 
  
 

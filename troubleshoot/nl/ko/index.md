@@ -109,7 +109,7 @@ DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_not
 `nslookup` 명령을 사용하십시오. 예를 들어,
 명령행 창에 다음 명령을 입력할 수 있습니다.
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1257,7 +1257,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 이 문제점은 한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에 발생할 수 있습니다.
 {: tsCauses}
 
-예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
+예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
 
  
 
