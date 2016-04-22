@@ -14,7 +14,7 @@ Get your Google Cloud Messaging (GCM) credentials, and then set up the Push Noti
 
 ##Getting Your Sender ID and API key
 
-The API key is stored securely and used by the Push Notification Service to connect to the GCM server and the sender ID (project number) is used by the Android SDK on the client side.
+The API key is stored securely and used by the Push Notification Service to connect to the GCM server and the sender ID (project number) is used by the Android SDK on the client side. For more information about  Sender ID, see [Google Cloud Message](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Get a Google Development account at [Google Dev Console](https://console.developers.google.com/start){: new_window}. For more information about Google Cloud Messaging (GCM), see [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
 
