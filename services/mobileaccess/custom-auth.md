@@ -85,7 +85,7 @@ You can use any of the following Node.js sample implementations of a custom iden
 
  * [Simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Advanced sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## Typical communication between {{site.data.keyword.amashort}} Server and a custom identity provider
 {: #custom-id-comm}
 1. The {{site.data.keyword.amashort}} service sends a `startAuthorization` request to the custom identity provider.
@@ -109,5 +109,6 @@ A custom identity provider supports one custom authentication realm. To handle i
 * [Creating a Custom Identity Provider](custom-auth-identity-provider.html)
 * [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 * [Configuring custom authentication for Android](custom-auth-android.html)
-* [Configuring custom authentication for iOS](custom-auth-ios.html)
+* [Configuring custom authentication for iOS (Swift SDK)](custom-auth-ios-swift-sdk.html)
+* [Configuring custom authentication for iOS (Objective-C SDK)](custom-auth-ios.html)
 * [Configuring custom authentication for Cordova](custom-auth-cordova.html)
