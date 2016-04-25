@@ -951,7 +951,7 @@ Liberty buildpack uses the `server.xml` file to configure the app and generates 
 
  
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Creating apps with Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
