@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Configuring the {{site.data.keyword.amashort}} Client SDK for Cordova
@@ -13,11 +13,11 @@ Configure your Cordova application that is using custom authentication to use th
 ## Before you begin
 {: #before-you-begin}
 You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
- * [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Setting up Cordova SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
- * [Using a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creating a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
+ * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 ## Initializing the {{site.data.keyword.amashort}} Client SDK
 {: #custom-cordova-sdk}
@@ -30,7 +30,7 @@ Initialize the SDK by passing applicationGUID and applicationRoute parameters.
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- Replace the *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values from the **Mobile Options** panel of your application on the {{site.data.keyword.Bluemix_notm}} dashboard.
+ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values from the **Mobile Options** panel of your application on the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 ## Authentication listener interface
 {: #custom-cordva-auth}

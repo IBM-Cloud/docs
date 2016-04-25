@@ -13,7 +13,7 @@ You can use the {{site.data.keyword.amashort}} Server SDK to protect resources i
 ### Before you begin
 {: #before-you-begin}
 
-* You must be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}. For more information, see [Creating apps with SDK for Node.js](https://www.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* You must be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}. For more information, see [Creating apps with SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)
 * The {{site.data.keyword.amashort}} Server SDK requires that your Node.js server is implemented with the `Express` framework. Note that there are multiple other frameworks that use `Express` frameworks, such as LoopBack. You can use {{site.data.keyword.amashort}} Server SDK with any of these frameworks. For more information about the Express framework, see [Expressjs.com](http://expressjs.com/).
 
 ### About the {{site.data.keyword.amashort}} Server SDK

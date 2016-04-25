@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Enabling Facebook authentication in Android apps
@@ -11,9 +11,9 @@ To use Facebook as identity provider in your Android applications, add and confi
 
 ## Before you begin
 {: #facebook-auth-android-before}
- * You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
- * Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
- * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+ * You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+ * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configuring a Facebook application for the Android Platform
@@ -149,7 +149,7 @@ You Android project might have two `build.gradle` files:  for the project and ap
 
 1. Initialize the Client SDK and register Facebook authentication manager. Initialize the {{site.data.keyword.amashort}} Client SDK by passing the context, app GUID (`applicationGUID`), and route (`applicationRoute`) parameters.<br/>
  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.<br/>
- Replace `applicationRoute` and `applicationGUID` with values for **Route** and **App GUID** from the **Mobile Options** menu on the main page of your app in the Bluemix dashboard.
+ Replace *applicationRoute* and *applicationGUID* with values for **Route** and **App GUID** from the **Mobile Options** menu on the main page of your app in the Bluemix dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -176,7 +176,7 @@ After the Client SDK is initialized and Facebook Authentication Manager is regis
 
 ### Before you begin
 {: #facebook-auth-android-testing-before}
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.

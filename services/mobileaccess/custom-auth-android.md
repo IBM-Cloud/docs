@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Configuring the {{site.data.keyword.amashort}} Client SDK for Android
@@ -12,11 +12,11 @@ Configure your Android application that is using custom authentication to use th
 ## Before you begin
 {: #before-you-begin}
 You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
- * [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Setting up Android SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
- * [Using a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creating a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Setting up Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
+ * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 ## Initializing the {{site.data.keyword.amashort}} Client SDK
@@ -48,7 +48,7 @@ Add the internet access permission under the `<manifest>` element:
 
 1. Initialize the SDK.  
 A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
-Replace the *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
+Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values you get when you click **Mobile Options** in your app on the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -214,8 +214,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
 	![image](images/android-custom-login-success.png)
-	
-	
+
  You can also add logout functionality by adding the following code:
 
  ```Java

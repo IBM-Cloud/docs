@@ -31,8 +31,8 @@ Note: The Mobile Client Access service was previously known as Advanced Mobile A
 >
 ># Related Links {:class="linklist"}
 >## API reference{:id="api"}
->* [Core API reference (Android)](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
->* [Core API reference (iOS)](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+>* [Core API reference (Android)](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+>* [Core API reference (iOS)](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 >
 ># Related Links {:class="linklist"}
 >## SDK {:id="sdk"}

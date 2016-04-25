@@ -2,19 +2,21 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
-# Enabling Facebook authentication in iOS apps
+# Enabling Facebook authentication in iOS apps (Objective-C SDK)
 {: #facebook-auth-ios}
 
 To use Facebook as identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
 
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} Client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Facebook authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)
+
 ## Before you begin
 {: #facebook-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuring your Facebook Application for the iOS Platform
 {: #facebook-auth-ios-config}
@@ -170,7 +172,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	* Set the value to location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Make sure your bridging header is being picked up by Xcode by building your project. You should see no failure messages.
 
-3. Initialize the Client SDK.	Replace the applicationRoute and applicationGUID with the values that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+3. Initialize the Client SDK.	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	**Objective-C**
 
@@ -233,7 +235,7 @@ After the Client SDK is initialized and Facebook Authentication Manager is regis
 
 ### Before you begin
 {: #facebook-auth-ios-testing-before}
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`.
 For example: `http://my-mobile-backend.mybluemix.net/protected`
@@ -255,7 +257,7 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -306,4 +308,3 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 	To switch users, you must call this code and the user must logout from Facebook in their browser.
 
   Passing `callBack` to the logout function is optional. You can also pass `nil`.
-
