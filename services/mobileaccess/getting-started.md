@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Getting started
@@ -36,5 +36,6 @@ Several endpoints of the Node.js application that you created with the boilerpla
 You can set up your mobile app to use the {{site.data.keyword.amashort}} SDK.  After you set up the SDK you can start setting up authentication and monitoring in your app.  Follow the instructions for your mobile development platform:
 
 * [Android](getting-started-android.html)
-* [iOS](getting-started-ios.html)
+* [iOS (Swift SDK)](getting-started-ios.html)
+* [iOS (Objective-C SDK)](getting-started-ios.html)
 * [Cordova](getting-started-cordova.html)

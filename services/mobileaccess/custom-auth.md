@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Using a custom identity provider to authenticate users
@@ -79,7 +79,13 @@ Example of a custom authentication challenge answer sent by mobile client:
 	}
 	```
 
+### Sample implementation of custom identity provider
+{: #custom-sample}
+You can use any of the following Node.js sample implementations of a custom identity provider as a reference when you develop your custom identity provider. Download full application code from the GitHub repositories.
 
+ * [Simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Advanced sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Typical communication between {{site.data.keyword.amashort}} Server and a custom identity provider
 {: #custom-id-comm}
 1. The {{site.data.keyword.amashort}} service sends a `startAuthorization` request to the custom identity provider.
@@ -96,7 +102,7 @@ By default, the custom identity provider is considered a stateless application. 
 ## Custom realm
 {: #custom-id-custom}
 
-A custom identity provider supports one custom authentication realm. To handle incoming authentication challenges, create and register an instance of AuthenticationDelegate / AuthenticationListener in your mobile client application. Define the custom authentication realm name when you configure a custom identity provider in the {{site.data.keyword.amashort}} dashboard. It can be used to identify that the request is incoming from a specific {{site.data.keyword.amashort}} service instance. 
+A custom identity provider supports one custom authentication realm. To handle incoming authentication challenges, create and register an instance of AuthenticationDelegate / AuthenticationListener in your mobile client application. Define the custom authentication realm name when you configure a custom identity provider in the {{site.data.keyword.amashort}} dashboard. It can be used to identify that the request is incoming from a specific {{site.data.keyword.amashort}} service instance.
 
 ## Next steps
 {: #next-steps}

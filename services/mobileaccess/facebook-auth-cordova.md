@@ -11,18 +11,18 @@ To configure Cordova applications for Facebook authentication integration, you m
 
 ## Before you begin
 {: #facebook-auth-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and a Cordova project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Cordova plug-in](https://www.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and a Cordova project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
+* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 * (optional) Get familiar with the following sections:
-   * [Enabling Facebook authentication in Android apps](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
-   * [Enabling Facebook authentication in iOS apps](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)
+   * [Enabling Facebook authentication in Android apps](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
+   * [Enabling Facebook authentication in iOS apps](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html)
 
 
 ## Configuring the Android Platform
 {: #facebook-auth-cordova-android}
 
-The steps that are required to configure the Android Platform of a Cordova application for Facebook authentication integration are very similar to the steps that are required for native Android applications. For more information, see [Enabling Facebook authentication in Android apps](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Complete the following steps:
+The steps that are required to configure the Android Platform of a Cordova application for Facebook authentication integration are very similar to the steps that are required for native Android applications. For more information, see [Enabling Facebook authentication in Android apps](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Complete the following steps:
 
 * Configuring Facebook Application for Android Platform
 * Configuring {{site.data.keyword.amashort}} for Facebook authentication
@@ -33,7 +33,7 @@ The only difference when you are configuring Cordova applications is that you mu
 ## Configuring the iOS platform
 {: #facebook-auth-cordova-ios}
 
-The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS applications. The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating with Facebook authentication. For more information, see  [Enabling Facebook authentication in iOS apps](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Complete the following steps:
+The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS applications. The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating with Facebook authentication. For more information, see  [Enabling Facebook authentication in iOS apps](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Complete the following steps:
 
 * Configuring Facebook Application for iOS Platform
 * Configuring {{site.data.keyword.amashort}} for Facebook authentication
@@ -59,7 +59,7 @@ The steps required to configure iOS Platform of Cordova application for Facebook
 
 1. Add the `FacebookSDK.framework` file to the list of linked libraries in **Link binary with libraries**.
 
- See [Configuring iOS Platform for Facebook authentication](https://www.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Register the `IMFFacebookAuthenticationHandler` API in native code as described in the **Initializing the {{site.data.keyword.amashort}} Client SDK** section. Do not initialize `IMFClient` in your native code.
+ See [Configuring iOS Platform for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Register the `IMFFacebookAuthenticationHandler` API in native code as described in the **Initializing the {{site.data.keyword.amashort}} Client SDK** section. Do not initialize `IMFClient` in your native code.
 
 Add the following line to the `application:openURL:sourceApplication:annotation` method of your application delegate. This code ensures that all Cordova plugins are notified of respective events.
 
@@ -77,14 +77,14 @@ Use the following JavaScript code in your Cordova application to initialize the 
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
 
-Replace the *applicationRoute* and *applicationGUID* with values obtained for **Route** and **App GUID** from **Mobile Options**.
+Replace *applicationRoute* and *applicationGUID* with values obtained for **Route** and **App GUID** from **Mobile Options**.
 
 ## Testing the authentication
 {: #facebook-auth-cordova-test}
 After the Client SDK is initialized and Facebook authentication manager is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.

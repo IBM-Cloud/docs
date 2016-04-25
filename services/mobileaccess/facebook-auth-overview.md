@@ -49,5 +49,6 @@ If you were presented with a choice of selecting an iOS or Android application, 
 {: #next-steps}
 
 * [Enabling Facebook authentication in Android apps](facebook-auth-android.html)
+* [Enabling Facebook authentication in iOS apps (Swift SDK)](facebook-auth-ios-swift-sdk.html)
 * [Enabling Facebook authentication in iOS apps (Objective-C SDK)](facebook-auth-ios.html)
 * [Enabling Facebook authentication in Cordova apps](facebook-auth-cordova.html)

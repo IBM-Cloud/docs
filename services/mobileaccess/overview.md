@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# {{site.data.keyword.amashort}} overview
+# About {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 The {{site.data.keyword.amafull}} service provides authentication and monitoring services for mobile applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.

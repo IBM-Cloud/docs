@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Enabling Google authentication in Android apps
@@ -11,27 +11,39 @@ copyright:
 ## Before you begin
 {: #before-you-begin}
 
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Configuring a Google project for the Android Platform
 {: #google-auth-android-project}
-To start using Google as an identity provider, create a project in the Google Developer Console. Part of creating a project is to obtain a Google client ID.  The client ID is a unique identifier for your application.
+To start using Google as an identity provider, create a project in the Google Developer Console. Part of creating a project is to obtain a Google client ID.  The Google client ID is a unique identifier for your application used by Google authentication.
 
 1. Create a project in [Google Developer Console](https://console.developers.google.com).
 If you already have a project, you can skip the steps that describe project creation and start with adding credentials.
+   1.    Open the new project menu.
 
-1. Create a project. Click **Create project**.
+         ![image](images/FindProject.jpg)
 
-1. Select your project and click **Use Google APIs** (you can also click **Enable APIs and get credentials like keys**)
+   2.    Click **Create a project**.
 
-1. In the API list, choose Google+ API and click **Enable API**.
+         ![image](images/CreateAProject.jpg)
 
-1. Click **Credentials** in the menu.
 
-1. Click **New credentials** and select **OAuth 2.0 client ID**.
+   1. From the **Social APIs** list, choose **Google+ API**.
 
-1. Set a product name on the **OAuth consent screen** tab.
+     ![image](images/chooseGooglePlus.jpg)
+
+   1. Click **Enable** from the next screen.
+
+1. Select the **Consent Screen** tab and provide  the Product name shown to users. Other values are optional. Click **Save**.
+
+    ![image](images/consentScreen.png)
+
+1. From the **Credentials** list, choose OAuth client ID.
+
+     ![image](images/chooseCredentials.png)
+
+
 
 1. Select an application type. Click **Android**. Provide a meaningful name for your Android client.
 
@@ -41,7 +53,7 @@ If you already have a project, you can skip the steps that describe project crea
 
 1. A keystore that contains a certificate for development environments is stored in a `~/.android/debug.keystore` file. The default keystore password is `android`. This certificate is used to build applications in debug mode.
 
-1. Retrieve your signing certificate fingerprint:
+     1. Retrieve your signing certificate fingerprint:
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -52,13 +64,13 @@ If you already have a project, you can skip the steps that describe project crea
 
 1. Specify the package name of your Android application. To find the package name of your Android application, open the `AndroidManifest.xml` file in Android Studio and look for: `<manifest package="{your-package-name}">`. When you are done, click **Create**.
 
-1. Take a note of your new Android Client ID. You need to provide this value to {{site.data.keyword.Bluemix}}.
+A dialog appears that displays your Google client id. Take note of this value. You need to register this value on {{site.data.keyword.Bluemix}}.
 
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-android-config}
 
-Now that you have an Android Client ID, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
+Now that you have a Google Client ID for Android, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -68,7 +80,7 @@ Now that you have an Android Client ID, you can enable Google authentication in 
 
 1. Click the **Google** tile.
 
-1. In **Application ID for Android**, specify your Android Client ID for Android and click **Save**.
+1. In **Application ID for Android**, specify your Google Client ID for Android and click **Save**.
 
 ## Configuring {{site.data.keyword.amashort}} Client SDK for Android
 {: #google-auth-android-sdk}
@@ -110,7 +122,7 @@ Now that you have an Android Client ID, you can enable Google authentication in 
 
 	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application
 
-1. Initialize the Client SDK and register the Google authentication manager. Replace the `applicationRoute` and `applicationGUID` with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
+1. Initialize the Client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -137,7 +149,7 @@ After the Client SDK is initialized and the Google Authentication Manager is reg
 
 ### Before you begin
 {: #google-auth-android-testing-before}
-You must have a mobile backend that was created with the MobileFirst Services Starter boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
+You must have a mobile backend that was created with the MobileFirst Services Starter boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
 1. Try to send a request to the protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
  The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, you will see `Unauthorized` in your desktop browser.
@@ -165,19 +177,19 @@ You must have a mobile backend that was created with the MobileFirst Services St
 	});
 ```
 
-1. Run your application. A Google Login screen pops up:
+1. Run your application. A Google Login screen pops up. After login, the app requests permission to access resources:
 
 	![image](images/android-google-login.png)
 
 	Depending on your Android device and whether you're currently logged in to Google you might have a different UI.
 
-1. By clicking **OK**, you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
+  By clicking **OK**, you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
 
 1. 	After your request succeeds, you can see the following output in the LogCat tool:
 
 	![image](images/android-google-login-success.png)
-	
-1. You can also add logout functionality by adding the following code:
+
+ You can also add logout functionality by adding the following code:
 
  ```Java
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -186,5 +198,3 @@ You must have a mobile backend that was created with the MobileFirst Services St
  If you call this code after a user is logged in with Google, the user is logged out of Google. When the user tries to log in again, they must select a Google account under which they will be logged in again. When they try to log in with a previous logged in Google ID, the user is not prompted for their credentials again. To be prompted for login credentials again, the user must remove their Google account from the Android device.
 
  The value for `listener` passed to the logout function can be `null`.
- 
-

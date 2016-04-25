@@ -1,16 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
 
 ---
 
-# Setting up the iOS Objective-C SDK
+# Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
 Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, initialize the SDK and make requests to protected and unprotected resources.
-
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. For details, see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)
 
 ## Before you begin
 {: #before-you-begin}
@@ -44,8 +42,10 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 1. Edit the `Podfile` file and add the following line to the required targets:
 
 	```
-	pod 'IMFCore'
+  use_frameworks!
+	pod 'BMSSecurity'
 	```
+  **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
 1. Save the `Podfile` file and run `pod install` from the command line. <br/>Cocoapods  install added dependencies. You can see the progress and which components were added.<br/>
 **Important**: CocoaPods generates an `xcworkspace` file.  You must open this file to work on your project going forward.
@@ -55,46 +55,33 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 ## Initializing the {{site.data.keyword.amashort}} Client SDK
 {: #init-mca-sdk-ios}
 
-To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SDK by passing the **Route** (`applicationRoute`), and **App GUID** (`applicationGUID`) parameters.
+ Initialize the SDK by passing the `applicationRoute` and `applicationGUID` parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
+1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **App GUID** fields.
 
-1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Route** and **App GUID** values to initialize the SDK.
+1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} Client SDK.
 
-1. Import the `IMFCore` framework in the class that you want to use the {{site.data.keyword.amashort}} Client SDK by adding the following header:
+ ```Swift
+ import BMSCore
+ import BMSSecurity
+ ```  
 
-	**Objective-C:**
-	 ```Objective-C
-	#import <IMFCore/IMFCore.h>
-	```
+1. Initialize the {{site.data.keyword.amashort}} Client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
-	**Swift:**
+ ```Swift
+ let backendURL = "<applicationRoute>"
+ let backendGUID = "<applicationGUID>"
 
-	The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project:
+ func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-	1. Right-click your project in Xcode and select **New File..**.
-	1. In the **iOS Source** category, click **Header file**. Name the file `BridgingHeader.h`.
-	1. Add the following line to your bridging header: `#import <IMFCore/IMFCore.h>`
-	1. Click your project in Xcode and select **Build Settings** tab.
-	1. Search for `Objective-C Bridging Header`.
-	1. Set the value to the location of your `BridgingHeader.h` file, for example `$(SRCROOT)/MyApp/BridgingHeader.h`.
-	1. Make sure your bridging header is being picked up by Xcode by building your project. You should see not see any failure messages.
+ // Initialize the Client SDK.  
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
 
-1. Use the following code to initialize the {{site.data.keyword.amashort}} Client SDK.  A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate. <br/>
-Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
-	**Objective-C:**
-
-	```Objective-C
-	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
-	```
-
-	**Swift:**
-
-	```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
-	```
+ return true
+ }
+ ```
 
 ## Making a request to your mobile backend
 {: #request}
@@ -104,49 +91,31 @@ After the {{site.data.keyword.amashort}} Client SDK is initialized, you can star
 1. Try to send a request to a protected endpoint on your mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK only.
 
-1. Use your iOS application to make a request to the same endpoint. Add the following code after you initialize `IMFClient`:
+1. Use your iOS application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
-	**Objective-C:**
+ ```Swift
+ let customResourceURL = "<your protected resource's path>"
+ let request = Request(url: customResourceURL, method: HttpMethod.GET)
+ let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+     if error == nil {
+         print ("response:\(response?.responseText), no error")
+     } else {
+         print ("error: \(error)")
+     }
+ }
 
-	```Objective-C
-	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
-								[[IMFClient sharedInstance] backendRoute]];
-
-	IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
-																method:@"GET"];
-
-	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-		if (error){
-			NSLog(@"Error :: %@", [error description]);
-		} else {
-			NSLog(@"Response :: %@", [response responseText]);
-		}
-	}];
-	```
-
-	**Swift:**
-
-	```Swift
-	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
-
-	let request = IMFResourceRequest(path: requestPath, method: "GET");
-	request.sendWithCompletionHandler { (response, error) -> Void in
-		if (nil != error){
-			NSLog("Error :: %@", error.description)
-		} else {
-			NSLog("Response :: %@", response.responseText)
-		}
-	};
-
-	```
+ request.sendWithCompletionHandler(callBack)
+ ```
 
 1.  When your request succeeds, you will see the following output the Xcode console:
 
-	![image](images/getting-started-ios-success.png)
+ ```
+ response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
+ ```
 
 ## Next steps
 {: #next-steps}
 When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
-  * [Facebook](facebook-auth-ios.html)
-  * [Google](google-auth-ios.html)
-  * [Custom](custom-auth-ios.html)
+  * [Facebook](facebook-auth-ios-swift-sdk.html)
+  * [Google](google-auth-ios-swift-sdk.html)
+  * [Custom](custom-auth-ios-swift-sdk.html)
