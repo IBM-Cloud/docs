@@ -4,18 +4,20 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Last Updated: 08 April 2016*  
+*Last Updated: 07 April 2016*  
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
 {: shortdesc}
@@ -104,7 +106,7 @@ For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_not
 
 When you change the files in your Web IDE, they are automatically redeployed to your application running on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
 
-**Note:** For a more consistent experience when using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and will be added.
+**NOTE:** For a more consistent experience when using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and will be added.
 
 ##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
@@ -194,79 +196,88 @@ You can use **bl** command line interface commands to complete the following tas
 For more information on downloading and using the bl command, see [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## bl commands
+{: #bl_commands}
 
 The {{site.data.keyword.Bluemix_live}} command line, **bl**, has the following syntax:
 
 ```
 bl command [arguments] [options] [--help]
 ```
+{: pre}
 
-### Commands
-<dl>
-<dt>login, l</dt>
-<dd>Log in to {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>logout, lo</dt>
-<dd>Log the user out.</dd>
-<dt>sync, s</dt>
-<dd>Start the synchronization process between the desktop and the server.</dd>
-<dt>create, c</dt>
-<dd>Create a private project, link it to the Git repo in this directory, and deploy the contents to {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>projects, p</dt>
-<dd>List all the projects that are available for synchronizing.</dd>
-<dt>start, st</dt>
-<dd>Start the application instance in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>stop, sp</dt>
-<dd>Stop the application instance in {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>status, ss</dt>
-<dd>List the status of the running application instance in {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+**Commands**
 
-### Arguments
-<dl>
-<dd>Arguments for the command.</dd>
-</dl>
+l *login*: Log in to {{site.data.keyword.Bluemix_notm}}.
 
-### Options
-<dl>
-<dd>Options for the command.</dd>
-</dl>
+lo *logout*: Log out of {{site.data.keyword.Bluemix_notm}}.
 
-### Global Options
-<dl>
-<dt>--help</dt>
-<dd>Display the help page for the specified command</dd>
-<dt>--verbose</dt>
-<dd>Enable verbose logging.</dd>
-</dl>
+s *sync*: Start the synchronization process between the desktop and the server.
+
+c *create*: Create a private project, link it to the Git repo in this directory, and deploy the contents to {{site.data.keyword.Bluemix_notm}}.
+
+p *projects*: List all the projects that are available for synchronizing.
+
+st *start*: Start the application instance in {{site.data.keyword.Bluemix_notm}}.
+
+sp *stop*: Stop the application instance in {{site.data.keyword.Bluemix_notm}}.
+
+ss *status*: List the status of the running application instance in {{site.data.keyword.Bluemix_notm}}.
+
+
+**Arguments**
+
+Arguments for the command.
+
+
+**Options**
+
+Options for the command.
+
+**Global Options**
+
+*--help*: Display the help page for the specified command
+
+*--verbose*: Enable verbose logging.
 
 **Note:** If any of your arguments or options contain a space, enclose the value in double quotation marks.
 
-## help
+## Help
+{: bl_help}
 
 ```
-bl [ command ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### Usage
-<dl>
-<dd>Use this command to display help about a command or the command list.</dd>
-</dl>
+**Usage**
 
-### Examples
+Use this command to display help about a command or the command list.
 
-The following command displays the list of commands:
+**Examples**
 
-```bl --help```
+Display the list of commands:
 
-The following command displays detailed information about the sync command:
+```
+bl --help
+```
+{: pre}
 
-```bl sync --help```
+Display detailed information about the sync command:
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-```bl login|l [ -u username ] [-p password ][ -s server ]```
+## Login
+{: bl_login}
 
-### Purpose
+```
+bl login | l [ -u username ] [-p password ][ -s server ]
+```
+{: pre}
+
+**Purpose**
 
 Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in needs to be done only one time per session.
 
@@ -274,284 +285,308 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 **Note:** You must sign up for a free <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> account before logging in.
 
-### Options
+**Options**
 
-<dl>
-<dt>-u username</dt>
-<dd>Your IBM id to use to log in to {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>-p password</dt>
-<dd>Your IBM id password.</dd>
-<dt>-s server</dt>
-<dd>Server Name or IP Address of the {{site.data.keyword.jazzhub_short}} server.</dd>
-</dl>
+-u *username*: Your IBM id to use to log in to {{site.data.keyword.Bluemix_notm}}.
 
-### Examples
+-p *password*: Your IBM id password.
+
+-s *server*: Server Name or IP Address of the {{site.data.keyword.jazzhub_short}} server.
+
+**Examples**
 
 This command prompts for both a *username* and a *password*:
 
-```bl login```
+```
+bl login
+```
+{: pre}
 
-This command logs in the user, ``name@company.com:``
-
-```bl login –u name@company.com –p pa55w0rd```
-
-This command logs in the user, ``name@company.com`` with the password of pa55 w0rd that contains a space so it needs quotes:
-
-```bl login –u name@company.com –p “pa55 w0rd”```
-
-## logout
+Log in the user, `name@company.com`:
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd
 ```
+{: pre}
 
-### Purpose
+Log in the user, `name@company.com` with the password of *pa55 w0rd* that contains a space so it needs quotes:
 
-<dl>
-<dd>Use this command to log out.</dd>
-</dl>
+```
+bl login –u name@company.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Logout
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**Purpose**
+
+Use this command to log out.
 
 ## Projects
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### Purpose
+**Purpose**
 
-<dl>
-<dd>Use this command to list all the projects that are available for synchronization by the logged in user.</dd>
-</dl>
+Use this command to list all the projects that are available for synchronization by the logged in user.
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### Purpose
+**Purpose**
 
-<dl>
-<dd>Use this command to start the synchronization of the contents of a project with your local directory. This command runs until a <code>q</code> is entered. This command can optionally show a log of all file and application state changes.</dd>
-</dl>
+Use this command to start the synchronization of the contents of a project with your local directory. This command runs until a <code>q</code> is entered. This command can optionally show a log of all file and application state changes.
 
-### Argument
+**Argument**
 
-<dl>
-<dt>projectName</dt>
-<dd>The project name in the form <i>“alias | mproject”</i> or just <i>myproject</i> if the project is owned by the logged in user.</dd>
-</dl>
+*projectName*: The project name in the form *“alias | mproject”* or just *myproject* if the project is owned by the logged in user.
 
-### Options
+**Options**
 
-<dl>
-<dt>-d localDirectory</dt>
-<dd>Local directory path. Defaults to the current folder ".".</dd>
-<dt>--overwritelocal</dt>
-<dd>Overwrite the local directory with contents of the project workspace.</dd>
-<dt>--overwriteremote</dt>
-<dd>Overwrite the project workspace with the contents of the local directory.</dd>
-<dt>--verbose</dt>
-<dd>Display verbose logging.</dd>
-</dl>
+-d *localDirectory*: Local directory path. Defaults to the current folder ".".
 
-### Examples
+*--overwritelocal*: Overwrite the local directory with contents of the project workspace.
+
+*--overwriteremote*: Overwrite the project workspace with the contents of the local directory.
+
+*--verbose*: Display verbose logging.
+
+**Examples**
 
 This command begins synchronization with the associated project if the current directory is an existing sync target. If the current directory is empty and is not an existing sync target, the command prompts for a *projectName*. If the current directory is not empty and not an existing sync target, an overwrite option is required.
 
 ```
 bl sync
 ```
+{: pre}
 
-This command begins synchronization and is equivalent to
-```bl sync “alias | myproject”```
-if the project is owned by the logged in user.
-
-```bl sync  myproject```
-
-This command begins synchronization with the project <code>my pro ject</code> whose name contains spaces so it is enclosed in quotes:
-
-```bl sync “my pro ject”```
-
-This command begins synchronization of the project <code>myproject</code> with the directory myfolder:
-
-```bl sync myproject –d  myfolder```
-
-## create
+This command begins synchronization and is equivalent to `bl sync “alias | myproject”` if the project is owned by the logged in user.
 
 ```
-bl create|c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
+bl sync  myproject
 ```
+{: pre}
 
-### Purpose
-<dl>
-<dd>Use this command from a directory that contains code to create a private project, link it to a Git repo, and deploy the contents of the repo to {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+This command begins synchronization with the project `my pro ject` whose name contains spaces so it is enclosed in quotes:
 
-### Options
+```
+bl sync “my pro ject”
+```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>A name for your project. Default: current dir name.</dd>
-<dt>-r REGION</dt>
-<dd>A {{site.data.keyword.Bluemix_notm}} region. Default: US South</dd>
-<dt>-o ORG</dt>
-<dd>A {{site.data.keyword.Bluemix_notm}} org. Default: First org found.</dd>
-<dt>-s SPACE</dt>
-<dd>A {{site.data.keyword.Bluemix_notm}} space. Default: First space found.</dd>
-<dt>-g GIT_REPO</dt>
-<dd>Name of the remote repo to use for any existing Git repos. Default: origin.</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Full path to a Git executable. Default: detected.</dd>
-<dt>--creds</dt>
-<dd>Prompt for your Git credentials.</dd>
-<dt>--fork</dt>
-<dd>Fork this directory and create a project and repo.</dd>
-<dt>--public</dt>
-<dd>Make the new project public.</dd>
-<dt>--prompt</dt>
-<dd>Prompt for all required options with available choices.</dd>
-</dl>
+This command begins synchronization of the project `myproject` with the directory `myfolder`:
 
-### Examples
+```
+bl sync myproject –d  myfolder
+```
+{: pre}
+
+## Create
+{: bl_create}
+
+```
+bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
+```
+{: pre}
+
+**Purpose**
+
+Use this command from a directory that contains code to create a private project, link it to a Git repo, and deploy the contents of the repo to {{site.data.keyword.Bluemix_notm}}.
+
+**Options**
+
+-n *PROJECT_NAME*: A name for your project. Default: current dir name.
+
+-r *REGION*: A {{site.data.keyword.Bluemix_notm}} region. Default: US South.
+
+-o *ORG*: A {{site.data.keyword.Bluemix_notm}} org. Default: First org found.
+
+-s *SPACE*: A {{site.data.keyword.Bluemix_notm}} space. Default: First space found.
+
+-g *GIT_REPO*: Name of the remote repo to use for any existing Git repos. Default: origin.
+
+-e *GIT_EXE*: Full path to a Git executable. Default: detected.
+
+*--creds*: Prompt for your Git credentials.
+
+*--fork*: Fork this directory and create a project and repo.
+
+*--public*: Make the new project public.
+
+*--prompt*: Prompt for all required options with available choices.
+
+**Examples**
 
 This command begins the process to create a private project and prompts for a project name to use.
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
-This command creates a public project that is named <code>myNewProject</code>.
-
-```bl create -n myNewProject --public```
-
-## status
+This command creates a public project that is named `myNewProject`.
 
 ```
-bl status|ss [ projectName ]
+bl create -n myNewProject --public
 ```
+{: pre}
 
-### Purpose
-
-<dl>
-<dd>Use this command to list the status of the applications that are associated with the launch configurations in the <code>./launchConfigurations</code> directory.</dd>
-</dl>
-
-###Argument
-
-<dl>
-<dt>projectName</dt>
-<dd>The project name in the form “alias | myproject” or just myproject if the project is owned by the logged in user.</dd>
-</dl>
-
-### Examples
-
-This example displays the status of the running applications. If the current directory is an existing sync target, it uses the associated project. If the current directory is not an existing sync target, the command prompts for the <i>projectName</i>.
-
-````bl status```
-
-This example displays the status of the project myproject that is equivalent to
-```bl status “alias | myproject”```
-if the project is owned by the logged in user.
-
-```bl status myproject```
-
-This example displays the status of the running application that is associated with the project <code>my pro ject</code> whose name contains spaces so it is enclosed in quotes:
-
-```bl status “my pro ject”```
-
-## start
+## Status
+{: bl_status}
 
 ```
-bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
+bl status | ss [ projectName ]
 ```
+{: pre}
 
-### Purpose
+**Purpose**
 
-<dl>
-<dd>Use this command to start the application instance that is described by the launch or manifest file. The application is launched in live edit mode by default if the application’s buildpack supports live edit. Once started, the URLs for the application, the debug tools, and the {{site.data.keyword.Bluemix_notm}} dashboard are displayed.</dd>
-</dl>
+Use this command to list the status of the applications that are associated with the launch configurations in the `./launchConfigurations` directory.
 
-### Argument
+**Argument**
 
-<dl>
-<dt>projectName</dt>
-<dd>The project name in the form <i>“alias | myproject”</i> or just <i>myproject</i> if the project is owned by the logged in user.</dd>
-</dl>
+*projectName*: The project name in the form `“alias | myproject”` or just `myproject` if the project is owned by the logged in user.
 
-### Options
+**Examples**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>The launch configuration name (for example, <code>mylaunchconfig</code>), file name (for example, <code>mylaunchconfig.launch</code>, or a project-relative path to the launch configuration file (for example, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-<dt>-m manifestPath</dt>
-<dd>The project-relative path to the manifest file (for example, <code>manifest.yml</code>).</dd>
-<dt>--liveedit</dt>
-<dd>Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.</dd>
-<dt>--noliveedit</dt>
-<dd>Start the associated application in normal mode.</dd>
-<dt>--view</dt>
-<dd>Open a browser of the running application.</dd>
-<dt>--restart</dt>
-<dd>Restart an application already running in live edit mode without redeploying it.</dd>
-</dl>
+This example displays the status of the running applications. If the current directory is an existing sync target, it uses the associated project. If the current directory is not an existing sync target, the command prompts for the `projectName`.
 
-### Examples
+````
+bl status
+```
+{: pre}
 
-This command starts an application instance of <code>myproject</code> associated with the launch file <code>launchConfigurations/my.launch</code>.
-
-```bl start myproject –l “launchConfigurations/my.launch”```
-
-This command starts an application instance of the project that is associated with the current directory with the launch file <code>launchConfigurations/my.launch</code>. If the current directory is not a sync target, an error is displayed.
-
-```bl start –l “launchConfigurations/my.launch” ```
-
-This command starts an application instance of the project that is associated with the current directory with the manifest file <code>manifest.yml</code>. The information specified in the manifest is used to create a new launch configuration file. The command prompts you for the remaining required information, and then starts the application described by the launch configuration:
-
-```bl start –m “mymanifest.yml” ```
-
-This command starts an application instance of the project that is associated with the current directory with the manifest file <code>manifest.yml</code> and is equivalent to
-```bl start –m manifest.yml```.
-
-```bl start```
-
-## stop
+This example displays the status of the project *myproject* that is equivalent to `bl status “alias | myproject”` if the project is owned by the logged in user.
 
 ```
-bl stop|sp projectName [ -l launchConfiguration ]
+bl status myproject
 ```
+{: pre}
 
-### Purpose
+This example displays the status of the running application that is associated with the project `my pro ject` whose name contains spaces so it is enclosed in quotes:
 
-<dl>
-<dd>Use this command to stop the application instance that is associated with the launch file.</dd>
-</dl>
+```
+bl status “my pro ject”
+```
+{: pre}
 
-### Argument
+## Start
+{: bl_start}
 
-<dl>
-<dt>projectName</dt>
-<dd>The project name in the form “alias | mproject” or just mproject if the project is owned by the logged in user.</dd>
-</dl>
+```
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
+```
+{: pre}
 
-### Options
+**Purpose**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>The launch configuration name (for example, <code>mylaunchconfig</code>), file name (for example, <code>mylaunchconfig.launch</code>, or a project-relative path to the launch configuration file (for example, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-</dl>
+Use this command to start the application instance that is described by the launch or manifest file. The application is launched in live edit mode by default if the application’s buildpack supports live edit. Once started, the URLs for the application, the debug tools, and the {{site.data.keyword.Bluemix_notm}} dashboard are displayed.
 
-### Examples
+**Argument**
+
+*projectName*: The project name in the form *“alias | myproject”* or just *myproject* if the project is owned by the logged in user.
+
+**Options**
+
+-l *launchConfiguration*: The launch configuration name (for example, `mylaunchconfig`), file name (for example, `mylaunchconfig.launch`, or a project-relative path to the launch configuration file (for example, `launchConfigurations/mylaunchconf.launch`).
+
+-m *manifestPath*: The project-relative path to the manifest file (for example, `manifest.yml`).
+
+*--liveedit*: Start the associated application in live edit mode or exits with an error if the buildpack does not support live edit mode.
+
+*--noliveedit*: Start the associated application in normal mode.
+
+*--view*: Open a browser of the running application.
+
+*--restart*: Restart an application already running in live edit mode without redeploying it.
+
+**Examples**
+
+This command starts an application instance of `myproject` associated with the launch file `launchConfigurations/my.launch`.
+
+```
+bl start myproject –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+This command starts an application instance of the project that is associated with the current directory with the launch file `launchConfigurations/my.launch`. If the current directory is not a sync target, an error is displayed.
+
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+This command starts an application instance of the project that is associated with the current directory with the manifest file `manifest.yml`. The information specified in the manifest is used to create a new launch configuration file. The command prompts you for the remaining required information, and then starts the application described by the launch configuration:
+
+```
+bl start –m “mymanifest.yml”
+```
+{: pre}
+
+This command starts an application instance of the project that is associated with the current directory with the manifest file `manifest.yml` and is equivalent to `bl start –m manifest.yml`.
+
+```
+bl start
+```
+{: pre}
+
+## Stop
+{: bl_stop}
+
+```
+bl stop | sp projectName [ -l launchConfiguration ]
+```
+{: pre}
+
+**Purpose**
+
+Use this command to stop the application instance that is associated with the launch file.
+
+**Argument**
+
+*projectName*: The project name in the form *“alias | mproject”* or just *mproject* if the project is owned by the logged in user.
+
+**Options**
+
+-l *launchConfiguration*: The launch configuration name (for example, `mylaunchconfig`), file name (for example, `mylaunchconfig.launch`, or a project-relative path to the launch configuration file (for example, `launchConfigurations/mylaunchconf.launch`).
+
+**Examples**
 
 This command stops the application if the current directory is a sync target; otherwise, it exits with an error. If there are no launch configurations, then this command exits with an error. If there are more than one launch configurations, then the command prompts you for the one to stop.
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
-This command stops an application instance of the project that is running with the launch file <code>mylaunchConfig</code>.
+This command stops an application instance of the project that is running with the launch file `mylaunchConfig`.
 
-```bl stop myproject –l “mylaunchConfig” ```
+```
+bl stop myproject –l “mylaunchConfig”
+```
+{: pre}
 
-This command stops the application if the current directory is a sync target of the associated project that was started with the launch file <code>launchConfigurations/mylaunchconfig.launch</code>; otherwise, it exits with an error:
+This command stops the application if the current directory is a sync target of the associated project that was started with the launch file `launchConfigurations/mylaunchconfig.launch`; otherwise, it exits with an error:
 
-```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
+{: pre}
 
 ># Related Links {:class="linklist"}
 >## Tutorials and samples {:id="samples"}
