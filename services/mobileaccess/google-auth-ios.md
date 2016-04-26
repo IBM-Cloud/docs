@@ -8,7 +8,7 @@ copyright:
 # Enabling Google authentication in iOS apps
 {: #google-auth-ios}
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} Client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
 
 ## Before you begin
 {: #google-auth-ios-before}
@@ -53,13 +53,13 @@ If you already have a project, you can skip the steps that describe project crea
 
 1. Provide a meaningful name for your iOS client. Specify the bundle ID of your iOS application. To find the bundle ID of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
 
-1. Take a note of your new iOS Client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
+1. Take a note of your new iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
 
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-ios-config}
 
-Now that you have an iOS Client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
+Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -69,7 +69,7 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 1. Click the **Google** tile.
 
-1. In **Application ID for iOS**, specify your iOS Client ID for Android and click **Save**.
+1. In **Application ID for iOS**, specify your iOS client ID for Android and click **Save**.
 
 	Note: In addition to the Google client id, the reverse value is also needed for your client configuration (see below). To access both values, download the example plist using pencil icon:
 		![info.plist file download](images/download_plist.png)
@@ -101,7 +101,7 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 * Configure Google integration by adding the following URL schemas to your `info.plist` file.
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
-	The first URL Schema is a reversed version of the Client ID from the Google Developer Console.  For example, if your Client ID is `123123-abcabc.apps.googleusercontent.com`, your URL Schema is: `com.googleusercontent.apps.123123-abcabc`.
+	The first URL Schema is a reversed version of the client ID from the Google Developer Console.  For example, if your client ID is `123123-abcabc.apps.googleusercontent.com`, your URL Schema is: `com.googleusercontent.apps.123123-abcabc`.
 
 	The second URL Schema is the bundle ID of your application.
 
@@ -315,6 +315,6 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize Mobile Client Access to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and login with another user.
+	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and login with another user.
 
 	Passing `callBack` to the logout function is optional. You can also pass `nil`.

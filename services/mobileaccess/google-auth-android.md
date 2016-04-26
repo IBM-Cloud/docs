@@ -70,7 +70,7 @@ A dialog appears that displays your Google client id. Take note of this value. Y
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-android-config}
 
-Now that you have a Google Client ID for Android, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
+Now that you have a Google client ID for Android, you can enable Google authentication in the {{site.data.keyword.amashort}} Dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -80,7 +80,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 1. Click the **Google** tile.
 
-1. In **Application ID for Android**, specify your Google Client ID for Android and click **Save**.
+1. In **Application ID for Android**, specify your Google client ID for Android and click **Save**.
 
 ## Configuring {{site.data.keyword.amashort}} client SDK for Android
 {: #google-auth-android-sdk}

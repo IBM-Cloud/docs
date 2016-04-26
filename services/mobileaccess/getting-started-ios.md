@@ -10,7 +10,7 @@ copyright:
 
 Instrument your iOS application with the {{site.data.keyword.amashort}} SDK, initialize the SDK and make requests to protected and unprotected resources.
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. For details, see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. For details, see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)
 
 ## Before you begin
 {: #before-you-begin}

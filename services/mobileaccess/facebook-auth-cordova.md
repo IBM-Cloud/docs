@@ -11,8 +11,8 @@ To configure Cordova applications for Facebook authentication integration, you m
 
 ## Before you begin
 {: #facebook-auth-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and a Cordova project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
-* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and a Cordova project that is instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 * (optional) Get familiar with the following sections:
    * [Enabling Facebook authentication in Android apps](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)
@@ -26,9 +26,9 @@ The steps that are required to configure the Android Platform of a Cordova appli
 
 * Configuring Facebook Application for Android Platform
 * Configuring {{site.data.keyword.amashort}} for Facebook authentication
-* Configuring {{site.data.keyword.amashort}} Client SDK for Android
+* Configuring {{site.data.keyword.amashort}} client SDK for Android
 
-The only difference when you are configuring Cordova applications is that you must initialize the {{site.data.keyword.amashort}} Client SDK in your JavaScript code instead of in the Java code. The `FacebookAuthenticationManager` API must still be registered in your native code.
+The only difference when you are configuring Cordova applications is that you must initialize the {{site.data.keyword.amashort}} client SDK in your JavaScript code instead of in the Java code. The `FacebookAuthenticationManager` API must still be registered in your native code.
 
 ## Configuring the iOS platform
 {: #facebook-auth-cordova-ios}
@@ -59,7 +59,7 @@ The steps required to configure iOS Platform of Cordova application for Facebook
 
 1. Add the `FacebookSDK.framework` file to the list of linked libraries in **Link binary with libraries**.
 
- See [Configuring iOS Platform for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Register the `IMFFacebookAuthenticationHandler` API in native code as described in the **Initializing the {{site.data.keyword.amashort}} Client SDK** section. Do not initialize `IMFClient` in your native code.
+ See [Configuring iOS Platform for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Register the `IMFFacebookAuthenticationHandler` API in native code as described in the **Initializing the {{site.data.keyword.amashort}} client SDK** section. Do not initialize `IMFClient` in your native code.
 
 Add the following line to the `application:openURL:sourceApplication:annotation` method of your application delegate. This code ensures that all Cordova plugins are notified of respective events.
 
@@ -68,10 +68,10 @@ Add the following line to the `application:openURL:sourceApplication:annotation`
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #facebook-auth-cordova-init}
 
-Use the following JavaScript code in your Cordova application to initialize the {{site.data.keyword.amashort}} Client SDK.
+Use the following JavaScript code in your Cordova application to initialize the {{site.data.keyword.amashort}} client SDK.
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -81,13 +81,13 @@ Replace *applicationRoute* and *applicationGUID* with values obtained for **Rout
 
 ## Testing the authentication
 {: #facebook-auth-cordova-test}
-After the Client SDK is initialized and Facebook authentication manager is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and Facebook authentication manager is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.
+<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
 1. Use your Cordova application to make request to the same endpoint. Add the below code after you initialize `BMSClient`:
 

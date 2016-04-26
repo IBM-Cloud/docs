@@ -10,9 +10,9 @@ copyright:
 # Getting started with {{site.data.keyword.amashort}}
 {: #getting-started}
 
-The {{site.data.keyword.amafull}}  service gives your mobile application security and monitoring functionality. You can configure client authentication and identity providers. You can also add monitoring function to your app that enables both client logging and usage statistics.
+The {{site.data.keyword.amafull}} service gives your mobile application security and monitoring functionality. You can configure client authentication and identity providers. You can also add monitoring function to your app that enables both client logging and usage statistics.
 
-Note: The Mobile Client Access service was previously known as Advanced Mobile Access.
+Note: The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
 {: shortdesc}
 
 1. Set up a mobile backend in Bluemix and configure the SDK in your mobile app. For more information, see [Getting started](getting-started.html).

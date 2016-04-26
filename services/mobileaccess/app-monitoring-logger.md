@@ -8,11 +8,11 @@ copyright:
 # Enabling, configuring and using Logger
 {: #enable-logger}
 
-The {{site.data.keyword.amashort}} Client SDK provides a logging framework that is similar to other log frameworks that you might be familiar with, such as `java.util.logging` or `log4j`. The logging framework supports multiple per-package logger instances, different log levels, capturing of stack traces for an application crash and more.
+The {{site.data.keyword.amashort}} client SDK provides a logging framework that is similar to other log frameworks that you might be familiar with, such as `java.util.logging` or `log4j`. The logging framework supports multiple per-package logger instances, different log levels, capturing of stack traces for an application crash and more.
 
 You can also configure the logged data to be persisted to a local store, which can be sent to the {{site.data.keyword.amashort}} service on demand.
 
-The {{site.data.keyword.amashort}} Client SDK logging framework supports the following log levels, listed from least to most verbose, with recommended use guidelines:
+The {{site.data.keyword.amashort}} client SDK logging framework supports the following log levels, listed from least to most verbose, with recommended use guidelines:
 
 * `FATAL` - Use for unrecoverable crashes or hangs. The FATAL level is reserved for logging unrecoverable errors, which appear to users as an application crash.
 * `ERROR` - Use for unexpected exceptions or unexpected network protocol errors.
@@ -20,7 +20,7 @@ The {{site.data.keyword.amashort}} Client SDK logging framework supports the fol
 * `INFO` - Use for reporting initialization events and other data that might be useful.
 * `DEBUG` - Use for reporting debug statements to help developers resolve application defects.
 
-Make sure that you have initialized the {{site.data.keyword.amashort}} Client SDK prior to using the logging framework. The following samples demonstrate the basic usage of a {{site.data.keyword.amashort}} Client SDK logging framework.
+Make sure that you have initialized the {{site.data.keyword.amashort}} client SDK prior to using the logging framework. The following samples demonstrate the basic usage of a {{site.data.keyword.amashort}} client SDK logging framework.
 
 ### Android
 {: #enable-logger-android}
@@ -68,7 +68,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**Note:** The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C, therefore you might need to add the `IMFLoggerExtension.swift` file to your Swift project to use the previous logger API. You can find this file in the [Mobile Client Access Client SDK archive](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+**Note:** The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C, therefore you might need to add the `IMFLoggerExtension.swift` file to your Swift project to use the previous logger API. You can find this file in the [{{site.data.keyword.amashort}} client SDK archive](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova
@@ -95,7 +95,7 @@ You can find the following additional methods in Logger classes:
 
 For example, when capture is ON and the logger level is configured to FATAL, the logger captures uncaught exceptions. Uncaught exceptions often appear to users as application crashes, but do not capture any logs that lead up to the crash event. Alternatively, a more verbose logger level ensures that logs that lead to a FATAL logger entry, such as WARN and ERROR, are also captured.
 
-**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the {{site.data.keyword.amashort}} Client SDK Core.
+**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the {{site.data.keyword.amashort}} client SDK Core.
 
 
 ## Sample usage
@@ -198,11 +198,11 @@ logger2.info ("info message");
 MFPLogger.send(success, failure);
 ```
 
-## Enabling the {{site.data.keyword.amashort}} Client SDK internal logs
+## Enabling the {{site.data.keyword.amashort}} client SDK internal logs
 {: #enable-logger-sdklogs}
-This feature is currently available only in the Android version of the {{site.data.keyword.amashort}} Client SDK.
+This feature is currently available only in the Android version of the {{site.data.keyword.amashort}} client SDK.
 
-The {{site.data.keyword.amashort}} Client SDK provides a better development experience by not unnecessarily increasing the Logcat output with its internal debug messages. Therefore, by default, internal log messages that are produced by the {{site.data.keyword.amashort}} SDK with the DEBUG level are not printed. You can enable printing of all internal log messages of the {{site.data.keyword.amashort}} Client SDK with the following API:
+The {{site.data.keyword.amashort}} client SDK provides a better development experience by not unnecessarily increasing the Logcat output with its internal debug messages. Therefore, by default, internal log messages that are produced by the {{site.data.keyword.amashort}} SDK with the DEBUG level are not printed. You can enable printing of all internal log messages of the {{site.data.keyword.amashort}} client SDK with the following API:
 
 
 ```

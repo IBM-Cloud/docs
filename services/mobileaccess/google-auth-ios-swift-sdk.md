@@ -40,7 +40,7 @@ Prepare your app for Google sign-in by following the instructions Google provide
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-ios-config}
 
-Now that you have an iOS Client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix}} dashboard.
+Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix}} dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -70,7 +70,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a d
 
 1.  Run `pod init`.
 
-### Installing the {{site.data.keyword.amashort}} Client SWift SDK using CocoaPods
+### Installing the {{site.data.keyword.amashort}} client SWift SDK using CocoaPods
 {: #google-auth-ios-sdk-cocoapods}
 
 1. Navigate to your iOS project.
@@ -91,7 +91,7 @@ The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a d
 
 1. Copy the `GoogleAuthenticationManager.swift` file from the `BMSGoogleAuthentication` pod source files to your project directory.
 
-## Initializing the {{site.data.keyword.amashort}} Client Swift SDK
+## Initializing the {{site.data.keyword.amashort}} client Swift SDK
 {: #google-auth-ios-initialize}
 
 To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the `applicationGUID`, and `applicationRoute` parameters.

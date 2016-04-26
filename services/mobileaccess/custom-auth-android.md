@@ -5,13 +5,13 @@ copyright:
 
 ---
 
-# Configuring the {{site.data.keyword.amashort}} Client SDK for Android
+# Configuring the {{site.data.keyword.amashort}} client SDK for Android
 {: #custom-android}
-Configure your Android application that is using custom authentication to use the {{site.data.keyword.amashort}} Client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your Android application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
+You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Setting up Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -19,7 +19,7 @@ You must have a resource that is protected by an instance of the {{site.data.key
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
 1. In your Android project in Android Studio, open the `build.gradle` file of your app module.
 <br/>**Tip:** Your Android project might have two `build.gradle` files: for the project and for the application module. Use the application module file.
@@ -59,7 +59,7 @@ Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GU
 ## AuthenticationListener interface
 {: #custom-android-authlistener}
 
-The {{site.data.keyword.amashort}} Client SDK provides the `AuthenticationListener` interface so that you can implement a custom authentication flow. The `AuthenticationListener` interface exposes three methods that are called on different phases of the authentication process.
+The {{site.data.keyword.amashort}} client SDK provides the `AuthenticationListener` interface so that you can implement a custom authentication flow. The `AuthenticationListener` interface exposes three methods that are called on different phases of the authentication process.
 
 ### onAuthenticationChallengeReceived method
 {: #custom-onAuth}
@@ -71,11 +71,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Arguments
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: Provided by {{site.data.keyword.amashort}} Client SDK so that you can report back authentication challenge answers or failures during credentials collection.  For example, when a user cancels the authentication.
+* `AuthenticationContext`: Provided by {{site.data.keyword.amashort}} client SDK so that you can report back authentication challenge answers or failures during credentials collection.  For example, when a user cancels the authentication.
 * `JSONObject`: Contains a custom authentication challenge, as returned by a custom identity provider.
 * `Context`: A reference to the Android Context that was used when the request was sent. Usually this argument represents an Android Activity.
 
-By calling the `onAuthenticationChallengeReceived` method, the {{site.data.keyword.amashort}} Client SDK is delegating control to the developer.  The service waits for credentials. The developer must collect credentials and report them back to the {{site.data.keyword.amashort}} Client SDK by using one of `AuthenticationContext` interface methods.
+By calling the `onAuthenticationChallengeReceived` method, the {{site.data.keyword.amashort}} client SDK is delegating control to the developer.  The service waits for credentials. The developer must collect credentials and report them back to the {{site.data.keyword.amashort}} client SDK by using one of `AuthenticationContext` interface methods.
 
 ### onAuthenticationSuccess method
 {: #custom-android-authlistener-onsuccess}
@@ -94,7 +94,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ## AuthenticationContext interface
 {: #custom-android-authcontext}
 
-The `AuthenticationContext` is supplied as an argument to the `onAuthenticationChallengeReceived` method of a custom `AuthenticationListener`. You must collect credentials and use the `AuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} Client SDK or report a failure. Use one of the following methods.
+The `AuthenticationContext` is supplied as an argument to the `onAuthenticationChallengeReceived` method of a custom `AuthenticationListener`. You must collect credentials and use the `AuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} client SDK or report a failure. Use one of the following methods.
 
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
@@ -138,7 +138,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// In case there was a failure collecting credentials you need to report
 			// it back to the AuthenticationContext. Otherwise Mobile Client
-			// Access Client SDK will remain in a waiting-for-credentials state
+			// Access client SDK will remain in a waiting-for-credentials state
 			// forever
 
 			log("This should never happen...");
@@ -177,7 +177,7 @@ Use the *realmName* that you specified in the {{site.data.keyword.amashort}} das
 
 ## Testing the authentication
 {: #custom-android-testing}
-After the Client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #custom-android-testing-before}
@@ -186,7 +186,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 
 1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, an `Unauthorized` message displays in your  browser.
+1. The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
 
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 

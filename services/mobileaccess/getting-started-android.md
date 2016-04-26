@@ -8,7 +8,7 @@ copyright:
 # Setting up the Android SDK
 {: #getting-started-android}
 
-Instrument your Android application with the {{site.data.keyword.amashort}} Client SDK, initialize the SDK, and make requests to protected and unprotected resources.
+Instrument your Android application with the {{site.data.keyword.amashort}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
 
 ## Before you begin
 {: #before-you-begin}
@@ -16,17 +16,17 @@ Instrument your Android application with the {{site.data.keyword.amashort}} Clie
 * Set up Android Studio and the Android Studio SDK. For more information about how to set up your Android development environment, see [Google Developer Tools](http://developer.android.com/sdk/index.html).
 
 
-## Installing the {{site.data.keyword.amashort}} Client SDK
+## Installing the {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk}
 
-The {{site.data.keyword.amashort}} Client SDK is distributed with Gradle, a dependency manager for Android projects. Gradle automatically downloads artifacts from repositories and makes them available to your Android application.
+The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a dependency manager for Android projects. Gradle automatically downloads artifacts from repositories and makes them available to your Android application.
 
 1. Create an Android Studio project or open an existing project.
 
 1. Open the `build.gradle` file.
 **Tip**: Your Android project might have two `build.gradle` files: for the project and the application module. Use the application module file.
 
-1. Find the **Dependencies** section of the `build.gradle` file.  Add a compile dependency for the {{site.data.keyword.amashort}} Client SDK:
+1. Find the **Dependencies** section of the `build.gradle` file.  Add a compile dependency for the {{site.data.keyword.amashort}} client SDK:
 
 	```Gradle
 	dependencies {
@@ -47,7 +47,7 @@ The {{site.data.keyword.amashort}} Client SDK is distributed with Gradle, a depe
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #initalize-mca-sdk}
 
 Initialize the SDK by passing the context, applicationGUID, and applicationRoute parameters to the `initialize` method.
@@ -55,7 +55,7 @@ Initialize the SDK by passing the context, applicationGUID, and applicationRoute
 
 1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Application route** and **Application GUID** values to initialize the SDK.
 
-2. Initialize the {{site.data.keyword.amashort}} Client SDK in your Android application.  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
+2. Initialize the {{site.data.keyword.amashort}} client SDK in your Android application.  A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 <br/>Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	```Java
@@ -68,10 +68,10 @@ Initialize the SDK by passing the context, applicationGUID, and applicationRoute
 ## Making a request to your mobile backend
 {: #request}
 
-After the {{site.data.keyword.amashort}} Client SDK is initialized, you can start making requests to your mobile backend.
+After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile backend.
 
 1. Try to send a request to protected endpoint of your new mobile backend. In your browser, open the following URL: `{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK only.
+<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK only.
 
 1. Use your Android application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 

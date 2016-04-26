@@ -71,7 +71,7 @@ Replace the occurrences of the *appGUID* value in the code with your mobile back
 ## Configuring mobile applications to work with a local development server
 {: #configuring-local}
 
-Initialize the {{site.data.keyword.amashort}} Client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application and use the localhost (or IP address) in each of your requests. See the following samples.
+Initialize the {{site.data.keyword.amashort}} client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application and use the localhost (or IP address) in each of your requests. See the following samples.
 
 You might need to change `localhost` to an actual IP address of your development server in the following examples.
 

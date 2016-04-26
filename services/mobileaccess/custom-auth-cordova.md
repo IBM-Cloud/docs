@@ -5,26 +5,26 @@ copyright:
 
 ---
 
-# Configuring the {{site.data.keyword.amashort}} Client SDK for Cordova
+# Configuring the {{site.data.keyword.amashort}} client SDK for Cordova
 {: #custom-cordova}
-Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amashort}} Client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your Cordova application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
+You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-cordova-sdk}
 Initialize the SDK by passing applicationGUID and applicationRoute parameters.
 
 1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) values are displayed.
-1. Initialize the Client SDK.
+1. Initialize the client SDK.
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
@@ -35,7 +35,7 @@ Initialize the SDK by passing applicationGUID and applicationRoute parameters.
 ## Authentication listener interface
 {: #custom-cordva-auth}
 
-The {{site.data.keyword.amashort}} Client SDK provides an authentication listener interface to implement a custom authentication flow. You must add the following methods that are called in different phases of an authentication process.
+The {{site.data.keyword.amashort}} client SDK provides an authentication listener interface to implement a custom authentication flow. You must add the following methods that are called in different phases of an authentication process.
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -56,10 +56,10 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 
 #### Arguments
 {: #onAuthenticationChallengeReceived-args}
-* `authenticationContext`: Provided by {{site.data.keyword.amashort}} Client SDK so that developer can report back authentication challenge answers or failure during credentials collection, such as the user cancelling the authentication request.
+* `authenticationContext`: Provided by {{site.data.keyword.amashort}} client SDK so that developer can report back authentication challenge answers or failure during credentials collection, such as the user cancelling the authentication request.
 * `challenge`: A JSON object that contains a custom authentication challenge, as returned by a custom identity provider.
 
-Calling the `onAuthenticationChallengeReceived` method the {{site.data.keyword.amashort}} Client SDK delegates control to developer. The {{site.data.keyword.amashort}} waits for credentials. The developer must collect credentials and report them back to the {{site.data.keyword.amashort}} Client SDK by using one of the following  `authContext` interface methods.
+Calling the `onAuthenticationChallengeReceived` method the {{site.data.keyword.amashort}} client SDK delegates control to developer. The {{site.data.keyword.amashort}} waits for credentials. The developer must collect credentials and report them back to the {{site.data.keyword.amashort}} client SDK by using one of the following  `authContext` interface methods.
 
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
@@ -76,7 +76,7 @@ This method is called after an authentication failure. The arguments include an 
 ## authenticationContext
 {: #custom-cordova-authcontext}
 
-The `authenticationContext` value is supplied as an argument to the `onAuthenticationChallengeReceived` method of a custom authentication listener. The developer must collect credentials and use the `authenticationContext` methods to either return credentials to the {{site.data.keyword.amashort}} Client SDK or report a failure. Use one of the following methods:
+The `authenticationContext` value is supplied as an argument to the `onAuthenticationChallengeReceived` method of a custom authentication listener. The developer must collect credentials and use the `authenticationContext` methods to either return credentials to the {{site.data.keyword.amashort}} client SDK or report a failure. Use one of the following methods:
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
@@ -108,7 +108,7 @@ var customAuthenticationListener = {
 
 		// In case there was a failure collecting credentials you need to report
 		// it back to the authenticationContext. Otherwise Mobile Client
-		// Access Client SDK will remain in a waiting-for-credentials state
+		// Access client SDK will remain in a waiting-for-credentials state
 		// forever
 
 	},
@@ -136,7 +136,7 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## Testing the authentication
 {: #custom-cordova-test}
-After the Client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and a custom AuthenticationListener is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #custom-cordova-testing-before}
@@ -144,7 +144,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 
 
 1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
- The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, an `Unauthorized` message displays in your browser.
+ The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
 
 1. Use your Cordova application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom AuthenticationListener.
 

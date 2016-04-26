@@ -14,8 +14,8 @@ To use Facebook as identity provider in your iOS applications, add and configure
 
 ## Before you begin
 {: #facebook-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}}  Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Create a Facebook Application ID. For more information, see [Obtaining a Facebook application ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuring your Facebook Application for the iOS Platform
@@ -44,19 +44,19 @@ After you have configured the Facebook Application ID and your Facebook Applicat
 
 1. Specify the Facebook Application ID and click **Save**.
 
-## Configuring the {{site.data.keyword.amashort}} Client SDK for iOS
+## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #facebook-auth-ios-sdk}
 
 ### Installing CocoaPods
 {: #facebook-auth-cocoapods}
 
-The {{site.data.keyword.amashort}} Client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
+The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
 
 1. Open Terminal and run `pod --version` command. If you already have CocoaPods installed, the version number is displayed. You can skip to the next section of this tutorial.
 
 1. Install CocoaPods by running `sudo gem install cocoapods`. Refer to [CocoaPods website](https://cocoapods.org/) in case additional guidance is required.
 
-### Installing the {{site.data.keyword.amashort}} Client SDK with CocoaPods
+### Installing the {{site.data.keyword.amashort}} client SDK with CocoaPods
 {: #facebook-auth-install-cocoapods}
 
 1. In your iOS project, edit the `Podfile` and the following line:
@@ -134,16 +134,16 @@ Update the URL scheme and FacebookappID properties with your Facebook Applicatio
 
  **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #facebook-auth-ios-initalize}
 
-Initialize the Client SDK by passing your app's route (`applicationRoute`) and app GUID (`applicationGUID`).
+Initialize the client SDK by passing your app's route (`applicationRoute`) and app GUID (`applicationGUID`).
 
 A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
 
 1. Open the main page of the {{site.data.keyword.Bluemix_notm}} dashboard and click your app. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`).
 
-1. Import required framework in the class that you want to use {{site.data.keyword.amashort}} Client SDK by adding the following headers:
+1. Import required framework in the class that you want to use {{site.data.keyword.amashort}} client SDK by adding the following headers:
 
 	**Objective-C**
 
@@ -155,7 +155,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	**Swift**
 
-	The {{site.data.keyword.amashort}} Client SDK is implemented using Objective-C, therefore you might need to add a bridging header to your swift project.
+	The {{site.data.keyword.amashort}} client SDK is implemented using Objective-C, therefore you might need to add a bridging header to your swift project.
 
 	1. Right-click your project in Xcode and select **New File...**
 	* In the **iOS Source** category, pick `Header file`
@@ -172,7 +172,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	* Set the value to location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Make sure your bridging header is being picked up by Xcode by building your project. You should see no failure messages.
 
-3. Initialize the Client SDK.	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+3. Initialize the client SDK.	Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	**Objective-C**
 
@@ -231,7 +231,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 ## Testing the authentication
 {: #facebook-auth-ios-testing}
-After the Client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and Facebook Authentication Manager is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #facebook-auth-ios-testing-before}
@@ -239,7 +239,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 
 1. Try to send a request to protected endpoint of your newly created mobile backend in your browser. Open the following URL: `{applicationRoute}/protected`.
 For example: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.
+<br/>The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint can only be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
 1. Use your iOS application to make a request to the same endpoint.
 
@@ -284,7 +284,7 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 
 	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 
-1. Click **OK** to authorize {{site.data.keyword.amashort}}  to use your Facebook user identity for authentication purposes.
+1. Click **OK** to authorize {{site.data.keyword.amashort}} to use your Facebook user identity for authentication purposes.
 
 1. 	When your request succeeds, the following output is displayed in the Xcode console:
 	![image](images/ios-facebook-login-success.png)
@@ -303,7 +303,7 @@ For example: `http://my-mobile-backend.mybluemix.net/protected`
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	If you call this code after a user is logged in with Facebook and the user tries to log in again, they are prompted to authorize Mobile Client Access to use Facebook for authentication purposes.
+	If you call this code after a user is logged in with Facebook and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Facebook for authentication purposes.
 
 	To switch users, you must call this code and the user must logout from Facebook in their browser.
 
