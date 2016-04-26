@@ -55,7 +55,7 @@ If you use an external buildpack, you must specify the URL of the buildpack by u
   cf push
   ```
   
-  For more information about Liberty Buildpack, see [Liberty for Java](../starters/liberty/index.html#liberty).
+  For more information about Liberty Buildpack, see [Liberty for Java](../runtimes/liberty/index.html).
   
   * To deploy Java Tomcat applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
   
