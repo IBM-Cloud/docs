@@ -15,7 +15,7 @@ To get started with {{site.data.keyword.amashort}}, you can either add the {{sit
 You can create a new instance of a {{site.data.keyword.amashort}} service from the {{site.data.keyword.Bluemix}} catalog.  If you do not use the boilerplate to create a new mobile backend, you must configure the server SDK on your existing backend.
 
 
-  * **New app**: The instructions in the following sections describe how to create a new app that creates a mobile backend and protects with the {{site.data.keyword.amashort}} Server SDK. Click the **MobileFirst Services Starter** boilerplate to create a new application with the {{site.data.keyword.amashort}} service.
+  * **New app**: The instructions in the following sections describe how to create a new app that creates a mobile backend and protects with the {{site.data.keyword.amashort}} server SDK. Click the **MobileFirst Services Starter** boilerplate to create a new application with the {{site.data.keyword.amashort}} service.
   * **Existing app**: Click the {{site.data.keyword.amashort}} icon and create a new service instance that is bound to an existing application. To configure the server SDK on your existing app, see [Protecting Cloud Resources](protecting-resources.html).
 
 

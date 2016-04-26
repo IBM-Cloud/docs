@@ -11,8 +11,8 @@ copyright:
 ## Before you begin
 {: #before-you-begin}
 
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an Android project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Configuring a Google project for the Android Platform
 {: #google-auth-android-project}
@@ -82,7 +82,7 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 1. In **Application ID for Android**, specify your Google Client ID for Android and click **Save**.
 
-## Configuring {{site.data.keyword.amashort}} Client SDK for Android
+## Configuring {{site.data.keyword.amashort}} client SDK for Android
 {: #google-auth-android-sdk}
 
 1. Return to Android Studio.
@@ -118,11 +118,11 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. To use the {{site.data.keyword.amashort}} Client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
+1. To use the {{site.data.keyword.amashort}} client SDK, you must initialize it by passing the context, applicationGUID, and applicationRoute parameters.
 
 	A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application
 
-1. Initialize the Client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
+1. Initialize the client SDK and register the Google authentication manager. Replace *applicationRoute* and *applicationGUID* with the values from **Route** and **App GUID** from the **Mobile Options** section in the dashboard.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -145,14 +145,14 @@ Now that you have a Google Client ID for Android, you can enable Google authenti
 
 ## Testing the authentication
 {: #google-auth-android-test}
-After the Client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #google-auth-android-testing-before}
 You must have a mobile backend that was created with the MobileFirst Services Starter boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
 1. Try to send a request to the protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.
- The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, you will see `Unauthorized` in your desktop browser.
+ The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}. Therefore, it can only be accessed by mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, you will see `Unauthorized` in your desktop browser.
 
 1. Use your Android application to make request to the same endpoint. Add the following code after you initialize the `BMSClient` instance and register `GoogleAuthenticationManager`.
 

@@ -12,8 +12,8 @@ copyright:
 
 ## Before you begin
 {: #google-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
 ## Configuring a Google Project for the iOS Platform
@@ -74,10 +74,10 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 	Note: In addition to the Google client id, the reverse value is also needed for your client configuration (see below). To access both values, download the example plist using pencil icon:
 		![info.plist file download](images/download_plist.png)
 
-## Configuring the {{site.data.keyword.amashort}} Client SDK for iOS
+## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #google-auth-ios-sdk}
 
-### Installing the {{site.data.keyword.amashort}} Client SDK using CocoaPods
+### Installing the {{site.data.keyword.amashort}} client SDK using CocoaPods
 {: #google-auth-ios-sdk-cocoapods}
 
 1. Navigate to your iOS project.
@@ -133,16 +133,16 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 
 	**Important**: Do not override any existing properties in the `info.plist` file. If you have overlapping properties, you will need to merge the properties manually. For more information, see [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start).
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #google-auth-ios-initialize}
 
-To use the {{site.data.keyword.amashort}} Client SDK,  initialize it by passing the applicationGUID, and applicationRoute parameters.
+To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the applicationGUID, and applicationRoute parameters.
 
 A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Get the applicationGUID and applicationRoute values. From the  {{site.data.keyword.Bluemix_notm}} Dashboard, click your app. Click **Mobile Options**. The Application Route and Application GUID values are displayed.
 
-1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} Client SDK. Add the following headers:
+1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} client SDK. Add the following headers:
 
 	Objective-C:
 
@@ -153,7 +153,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	Swift:
 
-	The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
+	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
 
 	1. Right-click your project in Xcode and select **New File...**
 	2. In the **iOS Source** category, pick **Header file**.
@@ -169,7 +169,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
-3. Use the following code to initialize the Client SDK.  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
+3. Use the following code to initialize the client SDK.  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
 
 	Objective-C:
 
@@ -240,7 +240,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 ## Testing the authentication
 {: #google-auth-ios-testing}
-After the Client SDK is initialized, you can start making requests to your mobile backend.
+After the client SDK is initialized, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #google-auth-ios-testing-before}
@@ -249,7 +249,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 
 1. Try to send a request to protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
 
-1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} Client SDK. As a result you will see `Unauthorized` in your desktop browser.
+1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} client SDK. As a result you will see `Unauthorized` in your desktop browser.
 
 1. Use your iOS application to make request to the same endpoint.
 

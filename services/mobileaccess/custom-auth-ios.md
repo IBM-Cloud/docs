@@ -5,12 +5,12 @@ copyright:
 
 ---
 
-# Configuring {{site.data.keyword.amashort}} Client SDK for iOS
+# Configuring {{site.data.keyword.amashort}} client SDK for iOS
 {: #custom-ios}
 
 Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} Client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} Client Objective-C SDK. For instructions on using the Swift SDK, see [Configuring {{site.data.keyword.amashort}} Client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
 
 ## Before you begin
 {: #before-you-begin}

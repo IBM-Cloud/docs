@@ -5,15 +5,15 @@ copyright:
 
 ---
 
-# Configuring {{site.data.keyword.amashort}} Client SDK for iOS (Swift SDK)
+# Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)
 {: #custom-ios}
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} Client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
 
 ## Before you begin
 {: #before-you-begin}
 
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
+You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -38,13 +38,13 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
  1. Click **Save**.
 
-## Configuring the {{site.data.keyword.amashort}} Client SDK for iOS
+## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
  {: #custom-auth-ios-sdk}
 
 ### Installing CocoaPods
  {: #custom-auth-cocoapods}
 
- The {{site.data.keyword.amashort}} Client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
+ The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
 
  1. Open Terminal and run `pod --version` command. If you already have CocoaPods installed, the version number is displayed. You can skip to the next section of this tutorial.
 
@@ -56,10 +56,10 @@ You must have a resource that is protected by an instance of the {{site.data.key
 
  1.  Run `pod init`.
 
-### Installing the Client SDK with CocoaPods
+### Installing the client SDK with CocoaPods
 {: #custom-ios-sdk-cocoapods}
 
-Use the CocoaPods dependency manager to install the {{site.data.keyword.amashort}} Client SDK.
+Use the CocoaPods dependency manager to install the {{site.data.keyword.amashort}} client SDK.
 
 1. Open Terminal and navigate to the root directory of your iOS project.
 
@@ -78,14 +78,14 @@ CocoaPods installs added dependencies. The progress and which components were ad
 
 1. Run `open {your-project-name}.xcworkspace` from command line to open your iOS project workspace.
 
-### Initializing the Client SDK
+### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
 Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
 
 1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **App GUID** fields.
 
-1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} Client SDK.
+1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} client SDK.
 
  ```Swift
  import UIKit
@@ -93,7 +93,7 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
  import BMSSecurity
 ```
 
-1. Initialize the {{site.data.keyword.amashort}} Client SDK, change the authorization manager to be MCAAuthorizationManager, and define an authentication delegate and register it. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+1. Initialize the {{site.data.keyword.amashort}} client SDK, change the authorization manager to be MCAAuthorizationManager, and define an authentication delegate and register it. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -140,7 +140,7 @@ Initialize the SDK by passing the `applicationRoute`and `applicationGUID` parame
 ## Testing the authentication
 {: #custom-ios-testing}
 
-After you initialize the Client SDK and register a custom authentication delegate, you can start making requests to your mobile backend.
+After you initialize the client SDK and register a custom authentication delegate, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #custom-ios-testing-before}
@@ -148,7 +148,7 @@ After you initialize the Client SDK and register a custom authentication delegat
  You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
-  The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, an `Unauthorized` message displays in your browser.
+  The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
 
 1. Use your iOS application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom authentication delegate:
 

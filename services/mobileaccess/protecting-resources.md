@@ -13,7 +13,7 @@ With the {{site.data.keyword.amashort}} service, you can protect your Node.js an
 {:shortdesc}
 ## Authorization filter
 {: #auth-filter}
-The {{site.data.keyword.amashort}} Server SDK has authorization filters that you can use to protect your backend applications.  The authorization filter intercepts incoming requests and validates whether an authorization header is present. If the authorization header is not present or is invalid, the filter returns a response with HTTP 401. The {{site.data.keyword.amashort}} Client SDK knows how to intercept an HTTP 401 response that is returned by the {{site.data.keyword.amashort}} Server SDK and triggers the authentication flow.
+The {{site.data.keyword.amashort}} server SDK has authorization filters that you can use to protect your backend applications.  The authorization filter intercepts incoming requests and validates whether an authorization header is present. If the authorization header is not present or is invalid, the filter returns a response with HTTP 401. The {{site.data.keyword.amashort}} client SDK knows how to intercept an HTTP 401 response that is returned by the {{site.data.keyword.amashort}} server SDK and triggers the authentication flow.
 ## Authorization header
 {: #auth-header}
 The authorization header in the incoming request consists of three parts: Bearer, Access Token, and ID Token that are separated by white spaces. `Access Token` is a mandatory component while `ID Token` is optional.

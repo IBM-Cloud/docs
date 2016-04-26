@@ -8,9 +8,9 @@ copyright:
 # Using {{site.data.keyword.amashort}} with a local development environment
 {: #protecting-local}
 
-You can configure your local development environment to use the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can use the {{site.data.keyword.amashort}} Server SDK when you are developing server side code with a local development server, such as Node.js.
+You can configure your local development environment to use the {{site.data.keyword.amashort}} service that is running on {{site.data.keyword.Bluemix}}. Specifically, you can use the {{site.data.keyword.amashort}} server SDK when you are developing server side code with a local development server, such as Node.js.
 
-The {{site.data.keyword.amashort}} Server SDK requires that two environment variables are set. When you are developing server-side code on {{site.data.keyword.Bluemix_notm}}, these variables are supplied by {{site.data.keyword.Bluemix_notm}} infrastructure.
+The {{site.data.keyword.amashort}} server SDK requires that two environment variables are set. When you are developing server-side code on {{site.data.keyword.Bluemix_notm}}, these variables are supplied by {{site.data.keyword.Bluemix_notm}} infrastructure.
 
 * `VCAP_SERVICES`: Contains information about services that are bound to the mobile backend application.
 * `VCAP_APPLICATION`: Contains information about the mobile backend application.

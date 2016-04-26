@@ -11,8 +11,8 @@ copyright:
 ## Before you begin
 {: #google-auth-ios-before}
 
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Preparing your app for Google sign-in
 {: #google-sign-in-ios}
@@ -52,13 +52,13 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 1. In **Application ID for iOS**, specify the `CLIENT_ID` value from the `GoogleService-Info.plist` file that you obtained earlier and click **Save**.
 
-## Configuring the {{site.data.keyword.amashort}} Client SDK for iOS
+## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #google-auth-ios-sdk}
 
 ### Installing CocoaPods
 {: #google-auth-cocoapods}
 
-The {{site.data.keyword.amashort}} Client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
+The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a dependency manager for iOS projects. CocoaPods automatically downloads artifacts from repositories and makes them available to your iOS application.
 
 1. Open Terminal and run `pod --version` command. If you already have CocoaPods installed, the version number is displayed. You can skip to the next section of this tutorial.
 
@@ -94,13 +94,13 @@ The {{site.data.keyword.amashort}} Client SDK is distributed with CocoaPods, a d
 ## Initializing the {{site.data.keyword.amashort}} Client Swift SDK
 {: #google-auth-ios-initialize}
 
-To use the {{site.data.keyword.amashort}} Client SDK,  initialize it by passing the `applicationGUID`, and `applicationRoute` parameters.
+To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the `applicationGUID`, and `applicationRoute` parameters.
 
 A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `applicationRoute` and `applicationGUID` values are displayed in the **Route** and **App GUID** fields.
 
-1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} Client SDK. Add the following headers:
+1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} client SDK. Add the following headers:
 
  ```Swift
  import UIKit
@@ -108,7 +108,7 @@ A common, though not mandatory, place to put the initialization code is in the `
  import BMSSecurity
  ```
 
-1. Use the following code to initialize the Client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+1. Use the following code to initialize the client SDK. Replace the `<applicationRoute>` and `<applicationGUID>` with values for **Route** and **App GUID** that you obtained from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -116,7 +116,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialize the Client SDK.  
+ // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -140,7 +140,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 ## Testing the authentication
 {: #google-auth-ios-testing}
 
-After the Client SDK is initialized and Google Authentication Manager is registered, you can start making requests to your mobile backend.
+After the client SDK is initialized and Google Authentication Manager is registered, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #google-auth-ios-testing-before}
@@ -150,7 +150,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and alrea
 
 1. Try to send a request to protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
 
-1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} Client SDK. As a result you will see `Unauthorized` in your desktop browser.
+1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} client SDK. As a result you will see `Unauthorized` in your desktop browser.
 
 1. Use your iOS application to make request to the same endpoint.
 

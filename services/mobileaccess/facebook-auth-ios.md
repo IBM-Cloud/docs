@@ -10,7 +10,7 @@ copyright:
 
 To use Facebook as identity provider in your iOS applications, add and configure the iOS Platform for your Facebook application.
 
-**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} Client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} Client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Facebook authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Facebook authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)
 
 ## Before you begin
 {: #facebook-auth-ios-before}
