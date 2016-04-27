@@ -17,7 +17,7 @@ copyright:
 # Development mode CLI
 {: #devmodecli}
 
-*Last updated: 11 April 2016*
+*Last updated: 27 April 2016*
 
 With Bluemix development mode command line interface (dev_mode CLI), you can update your apps while your apps are running in the cloud. dev_mode CLI is built as a cf CLI plug-in and supports both Liberty and IBM Node.js apps.
 {: shortdesc}
@@ -35,10 +35,10 @@ You can do the following tasks with the dev_mode CLI:
 Use one of the following methods to install the dev_mode command line tool:
 - Install locally.
   1. Download the dev_mode plug-in for your platform from [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}).
-  2. Install the dev_mode plug-in by using the cf install-plugin command:
+  2. Go to the folder that the dev_mode plug-in is saved, and install the dev_mode plug-in by using the `cf install-plugin` command. For example: 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Install from the Bluemix CLI repository.
@@ -48,7 +48,7 @@ Use one of the following methods to install the dev_mode command line tool:
         cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
-  2. Type cf repo-plugins. The dev_mode plug-in appears in the bluemix-repo repository.
+  2. Type `cf repo-plugins`. The dev_mode plug-in appears in the bluemix-repo repository.
 		
 		```
         cf repo-plugins
