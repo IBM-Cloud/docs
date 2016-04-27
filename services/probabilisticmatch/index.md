@@ -182,9 +182,9 @@ searchPerson: POST    https://pme.mybluemix.net/mdmcloud/pme/search/person
 >
 ># Related Links {:class="linklist"}
 >## COMPATIBLE RUNTIMES {:id="buildpacks"}
->* [Liberty for Java](../../starters/liberty/index.html#liberty)
->* [SDK for Node.js](../../starters/nodejs/index.html#nodejs)
->* [Ruby on Rails](../../starters/rails/index.html#rails)
+>* [Liberty for Java](../../runtimes/liberty/index.html)
+>* [SDK for Node.js](../../runtimes/nodejs/index.html)
+>* [Ruby](../../runtimes/ruby/index.html)
 >
 ># Related Links {:class="linklist"}
 >## RELATED LINKS {:id="general"}
