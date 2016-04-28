@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 26 April 2016*
+*Last updated: 28 April 2016*
 
 
 {{site.data.keyword.Bluemix}} is an open-standards, cloud-based platform for building, running, and managing applications. With {{site.data.keyword.Bluemix_notm}} Dedicated, you get the power and simplicity of {{site.data.keyword.Bluemix_notm}}&mdash;in your own dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your own network.
@@ -33,15 +33,15 @@ In addition, there is a set of services that are available as {{site.data.keywor
 | **Type**        | **Name**            | **Description** |      
 |-----------------|-------------------|-------------------|
 |Included | {{site.data.keyword.Bluemix_notm}} runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Dedicated instance.|
-| Included | {{site.data.keyword.autoscaling}} | Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix_notm}} Dedicated environment. |
-| Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory Cache. |
+|Included | {{site.data.keyword.autoscaling}} | Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix_notm}} Dedicated environment. |
+|Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory Cache. |
 |Optional | {{site.data.keyword.sescashort}} | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
-| Optional | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} is a cloud-based messaging service that provides flexible and easy to use messaging for {{site.data.keyword.Bluemix_notm}} apps. {{site.data.keyword.mql}} provides an administration-light solution to messaging. You can use {{site.data.keyword.mql}} to make your apps more responsive and scalable, and you can share and offload work between apps with a simple, powerful API. |
-| Optional | {{site.data.keyword.dashdbshort}} | Use dashDB to store relational data, including special types such as geospatial data. Then analyze that data with SQL or advanced built-in analytics like predictive analytics and data mining, analytics with R, and geospatial analytics. |
+|Optional | {{site.data.keyword.dashdbshort}} | Use dashDB to store relational data, including special types such as geospatial data. Then analyze that data with SQL or advanced built-in analytics like predictive analytics and data mining, analytics with R, and geospatial analytics. |
 |Optional | {{site.data.keyword.APIM}} | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
 |Optional | {{site.data.keyword.SecureGateway}} | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
-| Optional | {{site.data.keyword.iot_full}} | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_full}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
+|Optional | {{site.data.keyword.iot_full}} | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_full}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
+|Optional | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} is a scalable, distributed, high throughput message bus to unite your on-premises and off-premises technologies. {{site.data.keyword.messagehub}} is based on Apache Kafka, which is a fast, scalable, and durable real-time messaging engine. |
 
 There are optional components that are available for you to purchase to scale and extend the capacity of your resources and services. You can purchase any of these components by contacting the sales team; go to [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for information about contacting a sales representative. To increase your plan for a service, you can select the plan from the service tile in your catalog.
 
@@ -62,7 +62,6 @@ There are optional components that are available for you to purchase to scale an
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
 |IBM Bluemix Dedicated Hardware Firewall - High Availability | A redundant 1 Gbps hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
 |Dedicated 1 Gbps Vyatta VPN configured for high availability  | A 1 Gbps Vyatta VPN configured for high availability for use by the dedicated environment. |
-|IBM Dedicated {{site.data.keyword.mql}} PR 30 capacity increase | An environment that permits deploying and running {{site.data.keyword.mql}} instances up to a total capacity of 30 service instances. |
 |Dedicated {{site.data.keyword.mobilepushshort}} services 12 GB capacity increase | An environment that permits deploying and running the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}} service involving Liberty and Node.js runtimes within the dedicated environment. The {{site.data.keyword.mobilepushshort}} service has a prerequisite dependency on {{site.data.keyword.cloudant}} with a design capacity of at least 500 GB. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
 
