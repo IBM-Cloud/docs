@@ -45,7 +45,7 @@ You can always know the status of your environment by checking the Status page. 
 
 You can view notifications from IBM for your local or dedicated environment and monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
 
-Table 2. Event types and notifications methods
+*Table 2. Event types and notifications methods*
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
@@ -79,12 +79,26 @@ To use web hooks to set up a specific event subscription, complete the following
 | Description | Add a description for the event subscription that you are creating. |
 | User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
 | Password | Enter the password for your web service. |
-| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. For example, if you want to display the title, message, and severity in the notification from your web service, you must define the {{site.data.keyword.Bluemix_notm}} values with the matching property for your web service. The following values can be used to pull information from the {{site.data.keyword.Bluemix_notm}} notification for the notification title, message body, and severity level: `"{{title}}`, `"{{message}},"` and `"{{severity}}"`. If you do not enter information in this section, you receive the notification without any additional information.  |
+| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. See the following table for the IBM values that you can use to populate your notification. If you do not enter information in this section, you receive a notification that does not have any additional information. |
+
+*Table 4. Payload section values*
+
+| **IBM value** | **Description** | **Event type** |
+|---------------|-----------------|-----------------|
+|{{content.title}} | Message title |  Update and incident  |
+|{{status}} | Status of the update or incident. | Update and incident |
+|{{type}} | Update or incident | Update and incident | 
+|{{region}} | Affected region | Update and incident |
+|{{content.message}} | Message description |   Update and incident  |
+|{{content.severity}} | Severity rating | Incident |
+|{{content.category}} | Affected services | Incident |
+|{{content.subCategoryName}} | Affected components | Incident |
+|{{content.scheduleWindow}} | The scheduled date for the update | Update |
+|{{content.disruption}} | Affected components | Update |
 
 When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
 You can select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
-
 
 ## Viewing system information
 {: #oc_system}
@@ -244,7 +258,7 @@ icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-*Table 4. Security report list*
+*Table 5. Security report list*
 
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -577,7 +591,7 @@ To remove a user, locate the user and click the ![Delete](images/icon_trash.svg)
 
 Users can be assigned the following permissions:
 
-*Table 5. Permissions*
+*Table 6. Permissions*
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
@@ -954,7 +968,7 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
-*Table 6. Fields*
+*Table 7. Fields*
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1035,7 +1049,7 @@ Use the following API and code examples to update a service.
 ### Request
 {: #updaterequest}
 
-*Table 7. Fields*
+*Table 8. Fields*
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1107,7 +1121,7 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
-*Table 8. Parameter*
+*Table 9. Parameter*
 
 | **Name** | **Description** |
 |-----------------|-------------------|
