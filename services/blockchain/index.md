@@ -1,55 +1,66 @@
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# Getting started with {{site.data.keyword.blockchain}}
-{: #experimentalforblockchain}
-<!-- *Last updated: 14 February 2016* -->
+# Getting started with {{site.data.keyword.blockchain}} (Beta)
+{: #gettingstartedtemplate}
+*Last updated: 28 April 2016*
 
-<!-- This template is for getting started with a Bluemix service. It is a task template intended to document productive use of the service. It is not intended for discovery and conceptual information.  -->
-
-<!-- The short description section should include one to two sentences describing why a developer would want to use your service in an app. This should be conversational style. For search engine optimization, include the service long name and "Bluemix".  -->
-
-**Attention:** Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. 
-
-{{site.data.keyword.blockchain}} is an emerging technology that is expected to radically transform financial, supply-chain, and similar transaction-based networks, creating new opportunities for innovation and growth while reducing the cost and risk of business operations. With the rapid emergence of Bitcoin in the online transactions domain since 2009, many businesses and industries have invested significant resources in investigating the underlying technology that powers the popular, yet controversial, cryptocurrency.  In association with the Linux Foundation and business partners, IBM is now taking blockchain technology to the global marketplace.
-
-{{site.data.keyword.blockchain}} is a peer-to-peer distributed ledger technology that first gained traction in the financial industry because of its capacity to issue, trade, manage, and service assets efficiently and securely. The distributed ledger makes it easy to create cost-efficient business networks without requiring a central point of control. This is in marked contrast to the world of SoR (System of Records), where every member in the ecosystem needs to maintain its own ledger system and reconcile transaction updates with one another using inefficient, expensive, and often non-standardized methods.  Entering 2016, blockchain awareness has now reached the point where demand for a robust, industry-wide, real-world solution is surging.
-
-As the shared ledger concept gains traction in the business world, IBM and its partners have been busy adding new blockchain capabilities, including smart contract, consensus-building, and multi-layered conditional transactions. With this announcement of our experimental blockchain technology, IBM invites you to use Bluemix to test and contribute to this open-source solution.
-
-
+With the {{site.data.keyword.blockchainfull}} service on Bluemix, you can quickly spin up a blockchain network and circumvent the complexities involved with manually creating a development environment.  Rather than creating and managing a network, developers can spend their time generating applications and working with chaincode.  The service is a peer-to-peer permissioned network built on top of the Linux Foundation's Hyperledger [fabric code](https://github.com/hyperledger/fabric).
 {:shortdesc}
 
-<!-- The task section includes steps to integrate the service into the app.  
-- DO NOT include an overview section in this topic. For now, provide the overview concepts in a separately chunked concepts topic from the ditamap. After February 2016, overview concepts are to be moved to product pages and linked from related links. 
-- With task-based, technical information, reduce the conversational style in favor of succinct and direct instructions.
-- DO include the basic, most-common-use scenario steps to use the service or integrate it into the app. 
-- DO NOT include steps to add the service from the Bluemix catalog; we assume that the user already took steps in the UI to add the service. 
-- For additional tasks like configuring, managing, etc., include a separately chunked task topic from the ditamap. Use a task title such as "Configuring x", "Administering y", "Managing z". 
-- DO include code snippets in all languages that can be copied, as well as VCAP service info.  -->
+You can use a blockchain network to exchange financial records through a shared ledger. For more information about shared ledgers and business networks, see the [About {{site.data.keyword.blockchain}}](ibmblockchain_overview.html) topic.
 
-<!-- You can include an optional prerequisites paragraph for any prerequisites to be met before integrating the service. For example: -->
+To get started, follow these steps to create and deploy an unbound service instance of an {{site.data.keyword.blockchain}} network.  Once complete, you will have your own development environment with validating nodes and a security service.   From here, you can deploy chaincode, see results, and build your applications
 
-<!-- Include a sentence to briefly introduce the steps. -->
+1. From the landing page for the [{{site.data.keyword.blockchain}} DevOps Service](https://console.ng.bluemix.net/catalog/services/blockchain/), complete the following fields in the **Add Service** window.
+  - Choose **dev** from the **Space** dropdown window.
+  - Leave the **App** field as **Leave unbound**.
+  - Change the **Service name** to **myblockchain123** without the quotation marks, or something unique to you.
+  - Leave the **Credential name** field as its default value.
+  - Leave the **Selected Plan** as its default value.
+  - Click **CREATE**.
+2.  You are now on the **Service Dashboard** screen for your new service.  From here you can **Manage** your instance of the network.
+  - Click **LAUNCH** to see the blockchain monitor for your {{site.data.keyword.blockchain}} network.
+3.  The blockchain monitor displays, network details, live logs, current ledger state, APIs, and chaincode templates.  Use the dashboard to do any of the following functions.
+  - Access Discovery and API routes for the peers on your network.
+  - View any currently running chaincode containers.
+  - View real-time logs and troubleshoot chaincode that fails to execute.
+  - View the world state for your ledger.
+  - Access the Swagger UI and interact with your network via the REST API.
+  - Deploy one of three available chaincode templates. 
 
-<!-- Use ordered list markup for the step section. Include examples as needed. -->
 
-
-# rellinks
-## samples 
+# Related Links
+{: #rellinks}
+## Tutorials and Samples
+{: #samples}
 * [IBM Marbles Demo (GitHub)](https://github.com/IBM-Blockchain/marbles)
 * [IBM Commercial Paper Demo (GitHub)](https://github.com/IBM-Blockchain/cp-web#readme)
 
-## api 
+## API Reference
+{: #api}
 * [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
-* [Hyperledger API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
+* [API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
 * [IBM JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 
-## general 
+## Related Links
+{: #general}
 * [Fabric Code](https://github.com/hyperledger/fabric)
 * [Whitepaper](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
 * [Protocol Spec & Related Docs](https://github.com/hyperledger/fabric/tree/master/docs)
 * [Linux Foundation](https://www.hyperledger.org/)
+* [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
+
 
 <!-- 
 [Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/) 
