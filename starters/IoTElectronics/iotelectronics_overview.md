@@ -3,7 +3,7 @@
 
 # Getting started with {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Last updated: 28 April 2016*
+*Last updated: 29 April 2016*
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}
@@ -59,7 +59,7 @@ To connect the mobile app, follow these steps:
 
   1. On your computer, start your {{site.data.keyword.iotelectronics}} application and click **View App** to display the Starter app.  
   2. Start the consumer app experience by selecting **Consumer App**.
-  3. Scroll to the QR code located beneath the heading "In the mobile app on your phone, you'll be asked to scan QR Codes".)
+  3. Scroll to the QR code located beneath the heading "In the mobile app on your phone, you'll be asked to scan QR Codes".
   4. On your phone, start the mobile app and tap **Get Started**.
   5. Scroll through the walkthrough, and then click **Try It Out**.
   3. Click the image of a QR code. Enter login credentials when prompted. Your user ID and password can be any length. Be sure to remember what you chose for future sessions.
@@ -93,5 +93,6 @@ To register an appliance, follow these steps:
 
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
+*  [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
+* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

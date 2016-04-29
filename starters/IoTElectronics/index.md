@@ -15,6 +15,7 @@ If you are using Bluemix Classic, click the **Routes** link.
 
 {{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances. Quickly explore the features of the solution by using simulated appliances and data, and then start adding your own appliances.
 
+
 ## Configuring the solution
 Before you can use the mobile app, you must configure {{site.data.keyword.amafull}}, as follows:
 1. In your Bluemix dashboard, open {{site.data.keyword.amashort}}. *(This might appear as Advanced Mobile Access.)*
@@ -29,6 +30,7 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 {: #rellinks}
 ## API documentation
 {: #api}
+* [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
 * [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
 * [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
@@ -37,15 +39,11 @@ Before you can use the mobile app, you must configure {{site.data.keyword.amaful
 {: #general}
 
 * [{{site.data.keyword.iotelectronics_full}} documentation](iotelectronics_overview.html)
-
 * [{{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-
 * [{{site.data.keyword.iotrtinsights_full}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
-
 * [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-
 * [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## Samples
 {: #samples}
-* [Sample mobile app](https://github.com/ibm-watson-iot/iote-mobile)
+* [Sample mobile app](https://new-console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_overview.html#iotforelectronics_getmobileapp)
