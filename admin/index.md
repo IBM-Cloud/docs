@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 28 April 2016*
+*Last updated: 29 April 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
@@ -66,7 +66,7 @@ To use web hooks to set up a specific event subscription, complete the following
 
 1. Click **Add Subscription**.
 
-2. Fill in the event subscription form. For information about the fields on the form, review the following table:
+2. Fill in the event subscription form. For information about the fields on the form and the values to use in the payload section, review the following tables:
 
 *Table 3. Event subscription form fields*
 
@@ -84,17 +84,17 @@ To use web hooks to set up a specific event subscription, complete the following
 *Table 4. Payload section values*
 
 | **IBM value** | **Description** | **Event type** |
-|---------------|-----------------|-----------------|
-|{{content.title}} | Message title |  Update and incident  |
-|{{status}} | Status of the update or incident. | Update and incident |
-|{{type}} | Update or incident | Update and incident | 
-|{{region}} | Affected region | Update and incident |
-|{{content.message}} | Message description |   Update and incident  |
-|{{content.severity}} | Severity rating | Incident |
-|{{content.category}} | Affected services | Incident |
-|{{content.subCategoryName}} | Affected components | Incident |
-|{{content.scheduleWindow}} | The scheduled date for the update | Update |
-|{{content.disruption}} | Affected components | Update |
+|----------------|----------------|------------------------|
+| {{content.title}} | Message title |  Update and incident  |
+| {{status}} | Status of the update or incident. | Update and incident |
+| {{type}} | Update or incident | Update and incident | 
+| {{region}} | Affected region | Update and incident |
+| {{content.message}} | Message description |   Update and incident  |
+| {{content.severity}} | Severity rating | Incident |
+| {{content.category}} | Affected services | Incident |
+| {{content.subCategoryName}} | Affected components | Incident |
+| {{content.scheduleWindow}} | The scheduled date for the update | Update |
+| {{content.disruption}} | Affected components | Update |
 
 When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
