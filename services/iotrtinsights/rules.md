@@ -14,7 +14,7 @@ Use analytics rules to set up alerts and notifications for your devices. For exa
 
 You can use rules that include conditions that compare data points or context parameters such as asset mappings with static values, other data points, or context parameters.
 
->**Note:** When you use a free plan instances of {{site.data.keyword.iotrtinsights_short}}, all rules are automatically deactivated after one hour. You can manually reactivate the rules. To get continuous rules coverage, you can upgrade to a paid plan.
+**Note:** When you use a free plan instances of {{site.data.keyword.iotrtinsights_short}}, all rules are automatically deactivated after one hour. You can manually reactivate the rules. To get continuous rules coverage, you can upgrade to a paid plan.
 
 To create a rule for a device:
 1. In the {{site.data.keyword.iotrtinsights_short}} console, go to **Analytics > Rules**.
@@ -26,7 +26,7 @@ The priority is used to classify the alerts that are displayed in the alerts pan
 You can add conditions in parallel rows to apply them as OR conditions, or you can add conditions in sequential columns to apply them as AND conditions.  
 **Tip:** To get a feel for typical values returned by your devices, go to **Devices > Browse devices** and click your device to see the real-time data displayed.  
 **Important:** To trigger a condition that compares two data points, or to trigger two or more data point conditions that are combined sequentially, the triggering data must be included in the same message. If the data is received in more than one message, the condition or sequential conditions do not trigger.  
-> **Examples:**   
+**Examples:**   
 A simple rule might trigger an alert if a parameter value is larger than a specified value.  
 For example: Condition = `ax>5`  
 A more complex rule might trigger an alert if a parameter value for a device that is mapped to a specific asset exceeds a specific value.  
@@ -45,7 +45,7 @@ To set conditional triggering for a rule:
  For a more detailed description of the conditional triggers, see [Conditional triggering](#conditional "Conditional triggering overview").
 5. Create or select one or more actions that occur if the rule conditions are met.  
 For more information about actions, see [Create actions](actions.html#shared "Create actions").   
- > For example: An action can be to send an email. For information about the different action types, see [Action types](actions.html "Action types").
+For example: An action can be to send an email. For information about the different action types, see [Action types](actions.html "Action types").
 6. When you are satisfied with your rule, click **Save**.
 7. On the Rules page, click ![Configure icon.](images/gear.png "Configure icon") and select **Activate** to activate the rule.
 
@@ -79,10 +79,10 @@ For detailed steps, see [Managing assets](assets.html "Managing assets").
  3. Select **Static value** as the operand to compare with.
  4. Enter the value `5` to compare the ax data point with.
  5.  Click **OK** to add the condition.
-5. To add the AND condition, click the ![Add icon.](images/rules_plus.png "Add icon") that is to the right of the first condition.
+5. To add the AND condition, click the ![Add icon.](images/rules_plus.png "Add icon") next to the first condition.
 6. Click the new condition tile and edit the condition.
   1. Select **context** as the operand to compare.
-  2. In the context parameter menu, click the triangle in front of the **assets** context schema to expand the list of asset context parameters.
+  2. In the context parameter menu, expand the **assets** context schema to see the list of asset context parameters.
   3. Select the **ASSETNUM** context schema parameter.
   3. Select the **==** operator so that the condition is true if the value of the first and second operands are equal.
   3. Select **Static value** as the operand to compare with.
@@ -97,7 +97,7 @@ For detailed steps, see [Managing assets](assets.html "Managing assets").
 
 After you have successfully mapped your devices to assets you can create rules that use the asset details. Mapping devices to assets and creating rules that incorporate both data points and asset information is a powerful tool.
 
-In the examples below, we are using assets to track our corporate cellphones. Two assets have been created and mapped to cellphones. Asset 5001 is mapped to phones with PURCHASEPRICE < 100 and asset 5002 to phones with PURCHASEPRICE >=100. The device data trigger condition for each example is `d.ax>5`, which in this simplified example corresponds to a sudden acceleration of the phone, for example if it is dropped.
+In the following examples we are using assets to track our corporate cellphones. Two assets have been created and mapped to cellphones. Asset 5001 is mapped to phones with PURCHASEPRICE < 100 and asset 5002 to phones with PURCHASEPRICE >=100. The device data trigger condition for each example is `d.ax>5`, which in this simplified example corresponds to a sudden acceleration of the phone, for example if it is dropped.
 
 You can now set up two simple rules that tell us when a phone that is mapped to asset 5001 has been dropped. It is also equally easy to set up a rule that tracks when a phone that is not mapped to 5001 is dropped. This could be any phone in 5002, or any phone that is not mapped to an asset at all.
 

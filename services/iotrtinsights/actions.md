@@ -43,7 +43,7 @@ Name | The name of the action, which is used in the Alerts Dashboard.
 Description | A brief description of the action.
 To | One or more email addresses, separated by commas.
 Cc | One or more email addresses, separated by commas.
-Subject | The subject line of the email. Optionally, you can automatically start the subject with "IoT Real-Time Insight alert".
+Subject | The subject line of the email. Optionally, you can automatically start the subject with `IoT Real-Time Insight alert`.
 
 The body of the email is automatically created from the message of the device at the time the rule was triggered.  
 **Important:** If the device data contains sensitive information you can opt to not include the device data in the email message and to show the sensible data only in the alerts panel.

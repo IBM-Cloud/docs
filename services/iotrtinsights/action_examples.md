@@ -12,7 +12,7 @@ copyright:
 The Send email, IFTTT, Node-RED, and webhooks action types open up a whole universe of options for executing tasks, which is limited only by your imagination and the connectors that are used by the other tools. For example, actions to post device status messages on Slack, send text messages to service personnel, create device service requests, and much more.
 {: shortdesc}
 
-The examples below all represent an action that notifies a service engineer when the temperature, which is represented by the temp data point of a device, exceeds 100 degrees, by using the following rule condition:
+The following examples all represent an action that notifies a service engineer when the temperature, which is represented by the temp data point of a device, exceeds 100 degrees, by using the following rule condition:
 `temp >= 100`
 
 You can trigger one or more of the following action types when the rule condition occurs:  
@@ -33,7 +33,7 @@ To create the email action:
 6. In the To field, enter `service.engineer@company.com`.
 7. In the CC field, enter: `service.manager@company.com`.
 8. In the subject line, enter: `Service required.`
-9. Select to prepend with "{{site.data.keyword.iotrtinsights_short}} alert" to clarify where the email comes from.
+9. Select to prepend with `{{site.data.keyword.iotrtinsights_short}} alert` to clarify where the email comes from.
 10. To include the device data in the email, clear the **Do not include device data in the email message** check box.
 11. Click **OK** to save the action.  
 

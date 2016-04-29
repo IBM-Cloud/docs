@@ -14,7 +14,7 @@ One of the powers of {{site.data.keyword.iotrtinsights_full}} is to map your dev
 
 For example, a single asset that you are interested in monitoring might include several devices and a large number of sensors.
 
->**Tip:** You can repeat the mapping procedure when your assets are updated or modified. The `action`  parameter in the context and mapping files lets you add and remove assets and devices.
+**Tip:** You can repeat the mapping procedure when your assets are updated or modified. The `action`  parameter in the context and mapping files lets you add and remove assets and devices.
 
 To map your devices to your assets:
 1. Create a list of assets and save as a CSV file.  
@@ -43,7 +43,7 @@ ASSETNUM,ASSETTYPE,AS_DESCRIPTION,AS_DESCRIPTION_LD,INSTALLDATE,AS_ITEMNUM,AS_IT
   - AS_SITEID - The ID of the site that the asset is installed in. (8)
   - AS_STATUS - The status of the asset. (20)
   - ACTION - A `+` symbol means that the asset is added, and a `-` symbol means that the asset is removed.  
-  >**Tip:** The number in parentheses indicates the maximum length of the string. Unless indicated, the parameter format is alphanumeric characters, mixed case.
+  **Tip:** The number in parentheses indicates the maximum length of the string. Unless indicated, the parameter format is alphanumeric characters, mixed case.
 
 5. Create an asset and devices mapping list and save as a CSV file.  
   This file is used to map the imported assets in the asset list to your {{site.data.keyword.iot_short}} devices.  
