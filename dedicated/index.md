@@ -70,7 +70,7 @@ There are optional components that are available for you to purchase to scale an
 ### Syndicated catalog
 {: #catalogdedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the local services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
+{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
 
 The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your dedicated environment, you see specific icons attached to service tiles in your catalog, such as ![Dedicated service icon](images/dedicatedicon.png "Dedicated service icon").
 
@@ -222,7 +222,7 @@ Your customer representatives work with IBM specialists that work together to en
 <li>Cultivates a long-term relationship between you and {{site.data.keyword.Bluemix_notm}} development, support, and services that you use.</li>
 </ul>
 
-The {{site.data.keyword.Bluemix_notm}} support and operations team that works with you on your {{site.data.keyword.Bluemix_notm}} instance might access your local environment, but does so only for the following reasons.
+The {{site.data.keyword.Bluemix_notm}} support and operations team that works with you on your {{site.data.keyword.Bluemix_notm}} instance might access your dedicated environment, but does so only for the following reasons.
 
 <ul>
 <li>To respond to alerts and perform operational maintenance</li>
@@ -383,7 +383,7 @@ By default, {{site.data.keyword.Bluemix_notm}} Public deploys to multiple geogra
 To deploy into a second location or multiple locations, you must follow a process similar to the one you took to enable your primary geographic location:
 
 1. Enable a new dedicated environment to host additional instances of your applications. To create a new environment, contact your IBM sales team to initiate the process. For more information about setting up a dedicated instance, see [Setting up {{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#setupdedicated). You must log in separately to access each environment. Each physical location for the hosted environments should be a minimum of 200 km away from the original location to ensure availability.
-2. Obtain the unique domain name where your new deployed app will be hosted.  For example, if your original domain is *mycompany.east.bluemix.net*, then you can create a new local environment with a new domain such as *mycompany.west.bluemix.net*, and deploy to the new domain.
+2. Obtain the unique domain name where your new deployed app will be hosted. For example, if your original domain is *mycompany.east.bluemix.net*, then you can create a new dedicated environment with a new domain such as *mycompany.west.bluemix.net*, and deploy to the new domain.
 3. Each time you deploy your original app, also deploy to the new location. For more information about deploying, see [Uploading your app](../starters/upload_app.html).
 
 
