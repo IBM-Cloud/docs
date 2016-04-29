@@ -555,36 +555,35 @@ user can be given `view` or `write` access for that
 permission, as represented by icons. See [Permissions](#permissions) for descriptions
 of each type and explanation of the icons.
 
-Choose from the following options:
+### Working with users
+
+You can search for existing users, remove users, and add users individually or by a group. Choose from the following options:
 
 * Locate users.You can locate users in the table by using the **Search**
 field.
-* Add users. If you have `admin` permission or
-`users` permission with `write` access, you can add users. To
-add a user or group of users, click **ADD SINGLE USER** or **ADD USER
-GROUP**. In the **Search** field, type a user name or group name to
-search, and select the organization to add the user or user group to from the
-**Org** list. When you find the user or group that you want to add, click the
-user name, then click **ADD USER** or **ADD USERS** to add.
-Groups of more than 50 users are added through a background batch job. When the add operation
-is successful, the user or group is added to the table for you to view and search. When users are
-added, they have no assigned permissions.
-* Edit permissions and organizations. If you have `admin` permission,
-you can edit permissions and organizations for other users. To edit permissions, locate the user and
-click the user name. To enable or disable permissions, select from the following options in the
-window that opens:
-	* Select **On** from the list to enable a permission.
-	* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or **Write**
-	to allow `write` (edit, or add and remove) access for that permission.
-	* Select **Off** to disable the permission.
-To edit organizations, select from the following options:
-	* Add the user to an organization by using the search field to locate an organization, clicking to
-	select from the options, and clicking **ADD**.
-	* Remove a user from an organization by clicking the ![Remove, represented by a minus sign](images/icon_remove.svg) icon.
-When finished, click **SAVE**.
-* Remove users. If you have `admin` permission or
-`users` permission with `write` access, you can remove users.
-To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
+
+* Add a single user. If you have `admin` permission or
+`users` permission with `write` access, you can add users.
+
+  1. To add a single user from your LDAP directory, click **Add User**.
+  2. In the **Search** field, type the email address for the user, and then select the user from the populated list.
+  3. Next, from the **Org** field, choose the org to which you want to add the user by entering the org name and selecting it from the populated list.
+  4. To add the user to the selected org, click **Add User**.
+
+  **Note**: When the add operation is successful, the user is added to the table for you to view and search. When users are added, they have no assigned permissions.
+
+* Add a group of users from your LDAP directory.
+
+  1. Click **Add User Group**.
+  2. In the **Search** field, type a group name to search, and select the group name from the populated list.
+  3. Next, from the **Org** field, choose the org to which you want to add the user group by entering the org name and selecting it from the populated list.
+  4. To add the user group to the selected org, click **Add Users**.
+  **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
+
+* Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
+
+    1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
+    2. Click **Remove**.
 
 ### Permissions
 {: #permissions}
@@ -601,12 +600,26 @@ Users can be assigned the following permissions:
 | Reports | Users with `reports` permission can be assigned the access to `view` or `write` (modify) security reports. |
 | Users | Users with `users` permission can be assigned the access to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
 
+
 Permissions can be enabled, or the user can be given `view` or
 `write` access for that permission, as represented by the following icons:
 
-* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon with a permission means that it is enabled.
+* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
 * The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
+
+Editing permissions and organizations for other users requires you to have `admin` permission. To edit permissions, locate the user and
+click the user name. From the **Edit User** page, you can enable or disable permissions:
+
+* Select **On** from the list to enable a permission.
+* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or select **Write**
+to allow `write` (edit, or add and remove) access for that permission.
+* Select **Off** to disable the permission.
+
+To add or remove a user from an org, select from the following options:
+
+* To add a user to an org, select the user name from the table to access the **Edit User** screen. Then, use the search field to locate an org, and select the org from the list, and then click **Save**.
+* To remove a user from an org, select the user name from the table to access the **Edit User** screen. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
