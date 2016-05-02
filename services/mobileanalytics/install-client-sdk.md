@@ -11,7 +11,7 @@ Client SDKs
 *Last updated: 21 April 2016*
 
 The {{site.data.keyword.mobileanalytics_short}}
-Client SDKs are currently available for Android, iOS and WatchOS (Swift).
+Client SDKs are currently available for Android, iOS and WatchOS.
 {: #shortdesc}
 
 ## Installing the Android Client SDK
@@ -21,36 +21,11 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
 
 1. Create an [Android Studio](http://developer.android.com/sdk/index.html) project or open an existing project.
 
-2. Find the `allprojects, repositories` section of the `build.gradle` file for your **project module** and add the Maven central snapshot repository.
-
-  **Tip**: Your Android project might have two `build.gradle` files: one for the project and one for the application module. Make sure that you use your **project module** file.
-
-  ```
-  maven {
-      url 'https://oss.sonatype.org/content/repositories/snapshots/'
-      }
-  ```
-  {: codeblock}
-
-  Your repositories statement should be similar to the following code example:
-
-  ```
-  allprojects {
-    repositories {
-        jcenter()
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
-            }
-          }
-        }
-  ```
-  {: screen}
-
-3. Open the `build.gradle` file that is in your application module.
+2. Open the `build.gradle` file that is in your application module.
 
   **Tip**: Your Android project might have two `build.gradle` files: one for the project and one for the application module. Make sure to use the **application module** file.
 
-4. Find the `Dependencies` section of the `build.gradle` file and add a compile dependency for the {{site.data.keyword.mobileanalytics_short}} Client SDK, as follows:
+3. Find the `Dependencies` section of the `build.gradle` file and add a compile dependency for the {{site.data.keyword.mobileanalytics_short}} Client SDK, as follows:
 
   ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
@@ -75,9 +50,9 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
   ```
   {: screen}
 
-5. Synchronize your project with Gradle by clicking **Tools &gt; Android &gt; Sync Project with Gradle Files**.
+4. Synchronize your project with Gradle by clicking **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
-6. Open the `AndroidManifest.xml` file for your Android project and add internet access permission under the `<manifest>` element:
+5. Open the `AndroidManifest.xml` file for your Android project and add internet access permission under the `<manifest>` element:
 
 	```XML
 	 <uses-permission android:name="android.permission.INTERNET" />
@@ -95,7 +70,7 @@ The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument you
 
 Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
 
-The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Swift projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
+The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application.
 
 #### Cocoapods
 {: #cocoapods}
@@ -106,7 +81,7 @@ The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapo
     ```
     {: codeblock}
 
-2. If you have not already initialized your workspace for CocoaPods, run the `pod init` command. CocoaPods creates a `Podfile` file for you, which is where you define dependencies for your Xcode project.
+2. If you have not already initialized your workspace for CocoaPods, run the `pod init` command in the root directory of your project. CocoaPods creates a `Podfile` file for you, which is where you define dependencies for your Xcode project.
 
 3. Add the `BMSAnalytics` pod to the target in your Podfile, for example:
 
@@ -130,9 +105,15 @@ The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [Cocoapo
 
 Add frameworks to your project using [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
 
-1. Add `BMSCore` frameworks to your Cartfile:
+1. Add `BMSAnalytics` frameworks to your Cartfile:
   ```
-  github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+  github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
   ```
 2. Run the `carthage update` command. When the build completes, drag `BMSAnalytics.framework`, `BMSCore.framework` and `BMSAnalyticsAPI.framework` into your Xcode project.
 3. Follow the instructions on the [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) site to complete the integration.
+
+# rellinks
+
+## SDK
+* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}

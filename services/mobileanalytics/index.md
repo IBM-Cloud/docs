@@ -19,9 +19,9 @@ Use the {{site.data.keyword.mobileanalytics_full}} service to measure the state,
 
 To get up and running quickly with the {{site.data.keyword.mobileanalytics_short}} service, follow these steps:
 
-1. After you [create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) of the {{site.data.keyword.mobileanalytics_short}} service, start your service instance by clicking your tile in the Services section of the {{site.data.keyword.Bluemix}} Dashboard.
+1. After you [create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the Services section of the {{site.data.keyword.Bluemix}} Dashboard.
 
-  **Important:** When you initially start your newly created Mobile Analytics service, a window displays to confirm that you allow {{site.data.keyword.Bluemix_notm}} to provide necessary information to the service about yourself so the service can validate your identity. Click **Confirm** to continue to the {{site.data.keyword.mobileanalytics_short}} console. If you cancel, the {{site.data.keyword.mobileanalytics_short}} console will not open.
+  **Important:** When you initially open your newly created Mobile Analytics service, a window displays to confirm that you allow {{site.data.keyword.Bluemix_notm}} to provide necessary information to the service about yourself so the service can validate your identity. Click **Confirm** to continue to the {{site.data.keyword.mobileanalytics_short}} console. If you cancel, the {{site.data.keyword.mobileanalytics_short}} console will not open.
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](install-client-sdk.html).
 3. Import the Client SDKs and initialize them with the following code snippet to record usage analytics.
   #### Android
@@ -39,7 +39,6 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 		```Java
 		try {
 		        BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
-		        BMSClient.getInstance().setDefaultProtocol(BMSClient.HTTP_SCHEME);
 		    } catch (MalformedURLException e) {
 		        Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
 		    }
@@ -61,19 +60,19 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
   3. Initialize the Client SDK inside your application code to record usage analytics and application sessions.
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute("",bluemixAppGUID: "", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
 	Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
 	```
 
     The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example,   `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
 
-  See the [Instrumenting your application](sdk.html) topic.
 4. Send recorded usage analytics to the Mobile Analytics Service. A simple way to test your analytics is to run the following code when your application starts:
 
 	#### Android
 	{: #android-send}
 	
-	You can add the `Analytics.send()` code snippet into any method and analytics is sent when that method runs:
+	You can add the `Analytics.send()` method in the `onCreate` method of the main activity in your Android application, or in a location that works best for your project.
+	
 	```
 	Analytics.send(new ResponseListener() {
 	    @Override
@@ -97,7 +96,8 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	#### iOS
 	{: #ios-send}
 	
-	You can add the `Analytics.send` code snippet into any method and analytics is sent when that method runs:
+	
+	Use the `Analytics.send` method to send analytics data to the server. Place the `Analytics.send` method in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project. 
 		
 	```
 	Analytics.send { (response: Response?, error: NSError?) in
@@ -109,7 +109,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	  }
 	}
 	```
-
+See the [Instrumenting your application](sdk.html) topic for more information about...
 5. Compile and run the application on your emulator or device.
 
 6. Go to the {{site.data.keyword.mobileanalytics_short}} **Dashboard** to see usage analytics, such as new devices and total devices using the application. You can also monitor your app by [creating custom charts](app-monitoring.html#custom-charts), [setting alerts](app-monitoring.html#alerts), and [monitoring app crashes](app-monitoring.html#monitor-app-crash). 
@@ -118,5 +118,5 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 # rellinks
 
 ## SDK
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}

@@ -16,9 +16,9 @@ The {{site.data.keyword.mobileanalytics_full}} SDKs enable you to instrument you
 
 1.  Pre-defined data - This category includes generic usage and device information that applies to all apps. Within this category is device metadata (operating system and device model) and usage data (active users and app sessions) that indicates the volume, frequency, or duration of app use. Pre-defined data is collected automatically after you initialize the {{site.data.keyword.mobileanalytics_short}} SDK in your app.
 2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track.
-3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app ignore messages below a given level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
+3. Client log messages - This category enables the developer to add lines of code throughout the app that log custom messages to assist in development and debugging. The developer assigns a severity/verbosity level to each log message and can subsequently filter messages by assigned level or preserve storage space by configuring the app to ignore messages that are below a given log level. To collect client log data, you must initialize the {{site.data.keyword.mobileanalytics_short}} SDK within your app, as well as add a line of code for each log message.
 
-Currently SDKs are available for Android, iOS and WatchOS (Swift).
+Currently SDKs are available for Android, iOS and WatchOS.
 
 ## Identifying your Client Key value
 {: #analytics-clientkey}
@@ -47,15 +47,14 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
 	```Java
 	try {
-            BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure you are pointing to your region
-            BMSClient.getInstance().setDefaultProtocol(BMSClient.HTTP_SCHEME);
+            BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
             Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
 
-  To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegionSuffix** parameter. In the initializer, the **bluemixRegionSuffix** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+  To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
   <!-- Set this value with a `BMSClient.REGION` static property. -->
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
@@ -92,7 +91,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
     ```
     {: codeblock}
 
-    To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegionSuffix** parameter. In the initializer, the **bluemixRegionSuffix** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
+    To use the {{site.data.keyword.mobileanalytics_short}} Client SDK, you must initialize the `BMSClient` with the **bluemixRegion** parameter. In the initializer, the **bluemixRegion** value specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`.
    
    <!-- Set this value with a `BMSClient.REGION` static property. -->
 
@@ -102,7 +101,7 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 
   The application name is used as a filter to search for client logs in your {{site.data.keyword.mobileanalytics_short}} Dashboard. By using the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
-  An optional `deviceEvents` parameter automatically gathers analytics for device-level events. The `deviceEvents` parameter is available for **iOS only**.
+  An optional `deviceEvents` parameter automatically gathers analytics for device-level events.
 
   ### iOS
     {: #ios-initialize-analytics}
@@ -119,9 +118,9 @@ Initialize your application to enable sending logs to the {{site.data.keyword.mo
 	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
 	```
 
+  You can record device events on WatchOS by using the `Analytics.recordApplicationDidBecomeActive()` and `Analytics.recordApplicationWillResignActive()` methods.
+  
   Add the following line to the `applicationDidBecomeActive()` method of the ExtensionDelegate class.
-
-  **Attention:** The `deviceEvents` parameter equivalent on watchOS is `ExtensionDelegate`.
 
 	```
 	Analytics.recordApplicationDidBecomeActive()
