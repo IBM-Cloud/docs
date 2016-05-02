@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 29 April 2016*
+*Last updated: 2 May 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
@@ -283,17 +283,19 @@ The following table shows the list of security reports that are generated for {{
 ## Viewing status
 {: #oc_status}
 
+You can view status for the {{site.data.keyword.Bluemix_notm}} environment and for the administration console.
+
 ### {{site.data.keyword.Bluemix_notm}} environment status
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.
 
 The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
 ### Administration console status
 
-A verification check is completed by default on the components that are used to administer your {{site.data.keyword.Bluemix_notm}} environment after the initial deployment. You can go to the Admin Console Verification Check page to check the status of the components after the verification check has run. To access the page, go to <code>https://console.&lt;subdomain&gt;.bluemix.net/check</code>, where `<subdomain>` is the name of your local or dedicated instance.
+After the initial deployment of your {{site.data.keyword.Bluemix_notm}} environment, a verification check is completed automatically on the components that are used to administer your environment. You can go to the Admin Console Verification Check page to check the status of the components after the verification check has run. To access the page, go to <code>https://console.&lt;subdomain&gt;.bluemix.net/check</code>, where `<subdomain>` is the name of your local or dedicated instance.
 
-You can run a verification at any time. You must be logged in to select the option to run the verification. If you encounter failures adding a user, editing an org, or managing your services, run this check to identify if any components are failing or disconnected. You can open a support ticket with the information from the check to get the issue resolved quickly.
+You can run a verification at any time. You must be logged in to select the option to run the verification. If you encounter failures while you are adding a user, editing an org, or managing your services, run this check to identify whether any components are failing or disconnected. You can open a support ticket with the information from the check to get the issue resolved quickly.
 
 ## Managing your Catalog
 {: #oc_catalog}
