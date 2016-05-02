@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 29 April 2016*
+*Last updated: 2 May 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -35,6 +35,7 @@ In addition, there is a set of services that are available as {{site.data.keywor
 |Included | {{site.data.keyword.Bluemix_notm}} runtimes | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
 |Included | {{site.data.keyword.autoscaling}}| Dynamically increase or decrease the compute resources capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix}} Local environment.|
 |Optional | {{site.data.keyword.APIM}} | Use the {{site.data.keyword.APIMfull}} service to compose, manage, and socialize APIs. You can import APIs with resources by using a proxy URL or by assembling data from HTTP data sources. The benefit of using the {{site.data.keyword.APIM}} service is that you can manage how your APIs are used. |
+|Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. |
 |Optional | {{site.data.keyword.datacshort}} | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 |Optional | {{site.data.keyword.iot_full}} | This service lets your apps communicate with and consume data that is collected by your connected devices, sensors, and gateways. The local base offering includes an initial environment that permits running a private version of the IBM {{site.data.keyword.iot_full}} within the local environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
 |Optional | {{site.data.keyword.sescashort}} | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
