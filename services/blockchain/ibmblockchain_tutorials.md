@@ -42,7 +42,7 @@ Chaincode is a piece of code that lets you interact with a network's shared ledg
 ### Implementing your first chaincode
 
 #### Setting up the environment
-1. Download and install GoLang for your operating system at [GoLang](https://golang.org/dl/).
+1. Download and install Golang for your operating system at [GoLang](https://golang.org/dl/).
 2. Setting your GOPATH
 	- If you jump right to step 3, you might encounter an error similar to this: `$GOPATH must not be set to $GOROOT`.  The $GOPATH is simply a path within your **environment variables** where your go code and future projects will exist.  The $GOPATH must be set to get, build, and install packages outside the standard Go tree.  As a result, this path needs to be unique from the $GOROOT path - where your original go tree resides.  Not too tricky, just create a directory and point your $GOPATH there.
 	- Here's an example for a machine running windows.
@@ -65,7 +65,7 @@ The {{site.data.keyword.blockchain}} service currently requires chaincode to be 
 Therefore, you must register a GitHub account and set up Git locally on your computer. Go to [set up git](https://help.github.com/articles/set-up-git/) for more information.  
 1. Visit [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) and fork this repo.  
 2. Now clone your fork to your $GOPATH.  
-3. Notice that in this repo we have two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build. 
+3. Notice that in this repo there are two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build. 
 4. Make sure that it builds in your local environment:
 - Open a terminal or command prompt.
 - Browse to the folder that contains `chaincode_start.go` and enter:
@@ -96,7 +96,7 @@ Init is called when you first deploy your chaincode.
 As the name implies, this function should be used to do any initialization your chaincode needs.
 In the example, you use `Init` to configure the initial state of one variable on the ledger.
 
-In your `chaincode.go` file,  change the `Init` function so that it stores the first element in the `args` argument to the key "hello_world".
+In your `chaincode_start.go` file,  change the `Init` function so that it stores the first element in the `args` argument to the key "hello_world".
 
 ```go
 func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
@@ -123,7 +123,7 @@ Invocation transactions will be captured as blocks on the chain.
 The structure of `Invoke` is simple.
 It receives a `function` argument and based on this argument calls Go functions in the chaincode.
 
-In your `chaincode.go` file, change the `Invoke` function so that it calls a generic write function.
+In your `chaincode_start.go` file, change the `Invoke` function so that it calls a generic write function.
 
 ```go
 func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
@@ -141,7 +141,7 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 }
 ```
 
-Now that it’s looking for `write`, you need to make that function somewhere in your `chaincode.go` file.
+Now that it’s looking for `write`, you need to make that function somewhere in your `chaincode_start.go` file.
 
 ```go
 func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
@@ -172,7 +172,7 @@ As the name implies, `Query` is called whenever you query your chaincode state.
 Queries do not result in blocks being added to the chain.  (Only deploy and invoke functions add new blocks).
 You will use `Query` to read the value of your chaincode state's key/value pairs.
 
-In your `chaincode.go` file, change the `Query` function so that it calls a generic read function.
+In your `chaincode_start.go` file, change the `Query` function so that it calls a generic read function.
 
 ```go
 func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
@@ -188,7 +188,7 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 }
 ```
 
-Now that it’s looking for `read`, make that function somewhere in your `chaincode.go` file.
+Now that it’s looking for `read`, make that function somewhere in your `chaincode_start.go` file.
 
 ```go
 func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
@@ -218,7 +218,7 @@ Next, this function returns the value as an array of bytes back to `Query`, who 
 #### Main()
 Finally, you need to create a short `main` function that will execute when each peer deploys their instance of the chaincode.
 It simply starts the chaincode and registers it with the peer.
-You don’t need to add any code here beyond what is already in the example code.
+You don’t need to add any code for this function.  Both chaincode_start.go and chaincode_finished.go have a `main` function that lives at the top of the file.  The function looks like this:
 
 ```go
 func main() {
@@ -255,6 +255,7 @@ The first step is to find the API swagger page.
 Calls to the `/chaincode` endpoint of the rest interface require a secure context ID.
 This means that you must pass in a registered enrollID from the service credentials list in order for most REST calls to be accepted.
 - Click the link **+ Network's Enroll IDs** to expand a list of enrollIDs and their secrets for your network.
+- Open a notepad and copy a set of credentials.  You will need them later.
 - Expand the **Registrar** API section by clicking it.
 - Expand the `POST /registrar` section by clicking it.
 - Set the body's text field.  It should be JSON that contains an enrollID and secret from your list above. Example:
@@ -285,6 +286,7 @@ When you send a deploy request to a peer, you send it the url to your chaincode 
 - Expand the **Chaincode** API section by clicking it.
 - Expand the `POST /chaincode` section by clicking it.
 - Set the `DeploySpec` text field (make the other fields blank). Copy the example below but substitute in your chaincode repo path. Also use the same enrollID you used in the `/registrar` step.
+- The `"path":` will look something like this: `"https://github.com/johndoe/learn-chaincode/finished"`.  It's the path of your fork and then one directory down, where your chaincode_finished.go file lives.
 
 	```
 	{
@@ -293,7 +295,7 @@ When you send a deploy request to a peer, you send it the url to your chaincode 
 		"params": {
 			"type": 1,
 			"chaincodeID": {
-				"path": "https://githubub.com/ibm-blockchain/marbles-chaincode/hyperledger/part2"
+				"path": "https://github.com/ibm-blockchain/learn-chaincode/finished"
 			},
 			"ctorMsg": {
 				"function": "init",
@@ -311,8 +313,8 @@ The response should look like:
 
 ![Deploy Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/deploy_response.PNG)
 
-The response for the deployment will contain an ID that is associated with this chaincode.
-This is how you will reference the chaincode in any future invoke or query requests.
+The response for the deployment will contain an ID that is associated with this chaincode.  The ID is a 128 character alphanumeric hash.  
+This is how you will reference the chaincode in any future invoke or query requests, so copy this ID to your notepad as well.  
 
 #### Query
 Next, query the chaincode for the value of the `hello_world` key you set with the `Init` function.
@@ -366,6 +368,7 @@ Change the value of `hello_world` to "go away".
 			"ctorMsg": {
 				"function": "write",
 				"args": [
+					"hello_world",
 					"go away"
 				]
 			},
