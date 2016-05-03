@@ -26,7 +26,7 @@ copyright:
 1. クライアント・サイドの開発環境をセットアップします。既存の Android アプリ、Cordova アプリ、または iOS アプリに {{site.data.keyword.amashort}} SDK を追加できます。HelloAuthentication サンプル・アプリケーションをダウンロードすることもできます。
    * **Android**: ([SDK](getting-started-android.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (Swift-C SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (Swift SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (Objective-C SDK)**: ([SDK](getting-started-ios.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. サーバー・サイド・リソースを保護します。Node.js ランタイムまたは Liberty for Java&trade; ランタイムで稼働しているモバイル・バックエンド・リソースを、モバイル対応の OAuth セキュリティーによって保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。

@@ -24,7 +24,7 @@ copyright:
 1. 设置客户端开发环境。您可以将 {{site.data.keyword.amashort}} SDK 添加到现有 Android、Cordova 或 iOS 应用程序。您还可以下载 HelloAuthentication 样本应用程序。
    * **Android**：([SDK](getting-started-android.html))（[样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)）
    * **Cordova**：([SDK](getting-started-cordova.html))（[样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication)）
-   * **iOS (Swift-C SDK)**：([SDK](getting-started-ios-swift-sdk.html))（[样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication)）
+   * **iOS (Swift SDK)**：([SDK](getting-started-ios-swift-sdk.html))（[样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication)）
    * **iOS (Objective-C SDK)**：([SDK](getting-started-ios.html))（[样本](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)）
 
 1. 保护服务器端资源。通过支持移动的 OAuth 安全性，保护正在 Node.js 或 Liberty for Java&trade; 运行时上运行的移动后端资源。有关更多信息，请参阅[保护资源](protecting-resources.html)。

@@ -24,7 +24,7 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
 1. Richten Sie Ihre clientseitige Entwicklungsumgebung ein. Sie können das {{site.data.keyword.amashort}}-SDK zu Ihrer vorhandenen Android-, Cordova- oder iOS-App hinzufügen. Außerdem können Sie die Beispielanwendung 'HelloAuthentication' herunterladen. 
    * **Android**: ([SDK](getting-started-android.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (Swift-C-SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (Swift-SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (Objective-C-SDK)**: ([SDK](getting-started-ios.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. Schützen Sie serverseitige Ressourcen. Schützen Sie Ihre mobilen Back-End-Ressourcen, die in Node.js- oder Liberty for Java&trade;-Laufzeiten mit für Mobilgeräte konfigurierter OAuth-Sicherheit ausgeführt werden. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
