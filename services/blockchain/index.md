@@ -20,20 +20,20 @@ With the {{site.data.keyword.blockchainfull}} service on Bluemix, you can quickl
 
 You can use a blockchain network to exchange financial records through a shared ledger. For more information about shared ledgers and business networks, see the [About {{site.data.keyword.blockchain}}](ibmblockchain_overview.html) topic.
 
-To get started, follow these steps to create and deploy an unbound service instance of an {{site.data.keyword.blockchain}} network.  Once complete, you will have your own development environment with validating nodes and a security service.   From here, you can deploy chaincode, see results, and build your applications
+To get started, follow these steps to create and deploy an unbound service instance of a {{site.data.keyword.blockchain}} network.  Once complete, you will have your own development environment with validating nodes and a security service. From there, you can deploy chaincode, see results, and build your applications:
 
-1. From the landing page for the [{{site.data.keyword.blockchain}} DevOps Service](https://console.ng.bluemix.net/catalog/services/blockchain/), complete the following fields in the **Add Service** window.
-  - Choose **dev** from the **Space** dropdown window.
+1. From the landing page for the [{{site.data.keyword.blockchain}} DevOps Service](https://console.ng.bluemix.net/catalog/services/blockchain/), complete the following fields in the **Add Service** window:
+  - Choose **dev** from the **Space** drop-down window.
   - Leave the **App** field as **Leave unbound**.
-  - Change the **Service name** to **myblockchain123** without the quotation marks, or something unique to you.
+  - Change the **Service name** to **myblockchain123**, or some value unique to you.
   - Leave the **Credential name** field as its default value.
   - Leave the **Selected Plan** as its default value.
   - Click **CREATE**.
-2.  You are now on the **Service Dashboard** screen for your new service.  From here you can **Manage** your instance of the network.
+2.  You are now on the **Service Dashboard** screen for your new service.  From here you can **Manage** your instance of the network:
   - Click **LAUNCH** to see the blockchain monitor for your {{site.data.keyword.blockchain}} network.
-3.  The blockchain monitor displays, network details, live logs, current ledger state, APIs, and chaincode templates.  Use the dashboard to do any of the following functions.
+3.  The blockchain monitor displays network details, live logs, current ledger state, APIs, and chaincode templates.  Use the dashboard for any of the following functions:
   - Access Discovery and API routes for the peers on your network.
-  - View any currently running chaincode containers.
+  - View any currently-running chaincode containers.
   - View real-time logs and troubleshoot chaincode that fails to execute.
   - View the world state for your ledger.
   - Access the Swagger UI and interact with your network via the REST API.
