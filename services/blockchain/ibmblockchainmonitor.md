@@ -11,41 +11,47 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Managing chain code with the {{site.data.keyword.blockchain}} monitor
+# Managing chain code with the blockchain monitor
 {: #blockchain_dashboard_monitor}
 *Last updated: 28 April 2016*
 
-Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs, and chaincodes.  
-The purpose of the monitor is to provide you with an overview of your blockchain environment, 
-including performance data and currently deployed chaincodes.  
-{:shortdesc}
+Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincodes. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincodes. {:shortdesc}
 
 ## Monitor tabs
 {: #blockchain_dashboard_monitor_tabs}
 
-The following tabs are displayed within your dashboard:
+The following tabs are displayed on your dashboard:
   - Network
   - Live Logs
   - Blockchain
   - APIs
   - Deploy
 
-**Network tab**: Displays data for your blockchain network.  Here you can find the Discovery and API routes for your two validating peers and for the Certificate Authority.   The routes are simply the combined values of your host and port for each node.  For example, if you were to look at JSON code snippet for your **Service Credentials** back on the **Service Dashboard**, you notice that `"discovery_host"` and `"discovery_port"` equate to the route displayed on the **Network** tab.  These values are useful if you want to manually connect to bluemix.  From this dashboard, you can monitor the status of your peers and any chaincode containers that are currently running.  You can also view logs.  
+**Network tab**: Monitor the status of your peers and any chaincode containers that are currently running, as shown in Figure 1. Additionally, you can find the Discovery and API routes for your validating peers and for the Certificate Authority. The routes are simply the combined values of your host and port for each node.  For example, the JSON code snippet for your **Service Credentials** on the **Service Dashboard** shows that `"discovery_host"` and `"discovery_port"` equate to the route displayed on the **Network** tab. These values are useful to manually connect to Bluemix.
 
-![](images/dashboard_network.PNG)
+![](images/IBC_BMX_Monitor_Network.png)
+Figure 1.
 
-**Live Logs tab**:  Displays real-time data for your two validating peers and certificate authority.  The three windows will show you the results of all transactions made to the network.  Use this information to investigate and troubleshoot chaincode that fails to properly execute.
 
-![](images/dashboard_logs.PNG)
-    
-**Blockchain tab**: Displays the current state of your blockchain.  View all transactions, current ledger state, and performance data for your network.  
+**Live Logs tab**:  View real-time data for your validating peers and Certificate Authority. The log in Figure 2 show you the results of all transactions on the network. Use this information to investigate and troubleshoot chaincode that fails to properly execute:
 
-![](images/dashboard_blockchain.PNG)
-    
-**APIs tab**:  Displays the Swagger UI.  Use this page to interact with your blockchain network by using the REST API.  
+![](images/IBC_BMX_Monitor_LiveLogs.png)
+Figure 2.
 
-![](images/dashboard_swagger.PNG)
 
-**Deploy tab**:  Contains three chaincode applications that you can deploy to your network.  You are able to interact with your chaincode from this tab OR the API tab.  
+**Blockchain tab**: View the current state of your blockchain. As shown in Figure 3, you can view all transactions, the current ledger state and performance data for the network:
 
-![](images/dashboard_deploy.PNG)
+![](images/IBC_BMX_Monitor_Blockchain.png)
+Figure 3.
+
+
+**APIs tab**: Use the Swagger UI to interact with your blockchain network through the REST API, as shown in Figure 4:  
+
+![](images/IBC_BMX_Monitor_API.png)
+Figure 4.
+
+
+**Deploy tab**: Learn and experiment with three sample chaincode templates that you can deploy to and invoke on your network. Instructions are provided each step of the way to help guide you through the process, as shown in Figure 5. All deployments and invocations of chaincode will be written to the log, but can also be seen on other tabs, such as Live Logs, Blockchain, and API tabs.  
+
+![](images/IBC_BMX_Monitor_Deploy.png)
+Figure 5.
