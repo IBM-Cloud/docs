@@ -18,7 +18,8 @@ métricas de monitoramento para o seu aplicativo. Para obter mais
 informações sobre o serviço que o New Relic oferece, consulte [New
 Relic](http://newrelic.com/java).
 
-De acordo com esta [documentação de instalação manual do agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), os aplicativos Java que devem ser monitorados usando o serviço New Relic geralmente precisam ser empacotados e configurados com um agente New Relic e uma chave de licença da conta. No ambiente do IBM Bluemix, um contrato de licença e uma conta do New Relic podem ser obtidos criando uma instância de serviço no IBM Bluemix. Os aplicativos Java podem então ser ligados à instância do serviço New Relic e o buildpack do Liberty configura automaticamente o aplicativo que está pronto para ser monitorado pelo serviço New Relic. Especificamente,
+De acordo com esta [documentação de instalação manual do agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), os aplicativos Java que devem ser monitorados usando o serviço New Relic geralmente precisam ser empacotados e configurados com um agente New Relic e uma chave de licença da conta. No ambiente do IBM Bluemix, um contrato de licença e uma conta do New Relic podem ser obtidos criando uma instância de serviço no IBM Bluemix. Os aplicativos Java podem então ser ligados à instância do serviço New Relic e o buildpack do Liberty configura automaticamente o aplicativo que está pronto para ser monitorado pelo serviço New Relic.
+Especificamente,
 o buildpack:
 
 * fornece ao aplicativo um agente do New Relic.
@@ -42,16 +43,16 @@ do Liberty para o aplicativo:
 {: #add_new_relic}
 
 Para que um aplicativo Java existente seja monitorado com o New Relic no IBM Bluemix, siga estas etapas.
-1. Crie uma instância do serviço New Relic no IBM Bluemix. 
-<pre>
+1. Crie uma instância do serviço New Relic no IBM Bluemix.
+```
     $ cf create-service newrelic standard mynewrelic
-</pre>
+```
 {: #codeblock}
 
-2. Implemente seu aplicativo no IBM Bluemix com o serviço New Relic. Veja o manifest do aplicativo
-de amostra a seguir: 
-<pre>
-        &dash;&dash;&dash;
+2. Implemente seu aplicativo no IBM Bluemix com o serviço New Relic.  Veja o manifest do aplicativo
+de amostra a seguir:
+```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -60,11 +61,11 @@ de amostra a seguir:
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic
+```
 {: #codeblock}
 
-3. Acesse o painel do New Relic para seu aplicativo diretamente a partir do painel do IBM Bluemix de seu aplicativo. 
+3. Acesse o painel do New Relic para seu aplicativo diretamente a partir do painel do IBM Bluemix de seu aplicativo.
 
 ### Incluir um serviço New Relic fornecido pelo usuário
 {: #add_user_provided_new_relic}
@@ -80,11 +81,11 @@ existente.  Por exemplo, se a sua chave de licença existente for 1234567, será
 ```
 {: #codeblock}
 
-2. Implemente seu aplicativo no IBM Bluemix com a instância do serviço New Relic fornecida pelo usuário. A seguir
+2. Implemente seu aplicativo no IBM Bluemix com a instância do serviço New Relic fornecida pelo usuário.  A seguir
 está um manifest do aplicativo de amostra que usa uma instância do serviço New Relic
 fornecida pelo usuário:
-<pre>
-        &dash;&dash;&dash;
+```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -93,8 +94,8 @@ fornecida pelo usuário:
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic
+```
 {: #codeblock}
 
 3. Acesse o painel do New Relic para visualizar as métricas do aplicativo.
@@ -103,7 +104,7 @@ A configuração automática do serviço New Relic é diferente da configuraçã
 contêiner que é disponibilizada por meio da estrutura do buildpack.  Como ela é disponibilizada por meio
 da estrutura, a configuração automática desse serviço difere de outros serviços de três maneiras:
 * Fazer opt-out não é uma opção.
-* A integração de serviço depende do agente do New Relic, um agente Java. Portanto, ela é configurada por meio de opções Java, em vez de variáveis de nuvem no arquivo server.xml. 
+* A integração de serviço depende do agente do New Relic, um agente Java. Portanto, ela é configurada por meio de opções Java, em vez de variáveis de nuvem no arquivo server.xml.
 * A configuração depende de VCAP_SERVICES e VCAP_APPLICATION.
 
 # rellinks

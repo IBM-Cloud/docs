@@ -15,13 +15,13 @@ copyright:
 
 Os recursos beta do Liberty fornecem um acesso antecipado aos novos
 modelos de programação e de funcionalidade que podem ser incluídos em uma liberação futura
-do Liberty. A maioria dos recursos beta também podem ser usados em aplicativos implementados no Bluemix. 
+do Liberty. A maioria dos recursos beta também podem ser usados em aplicativos implementados no Bluemix.
 
 **Importante**: os recursos beta são somente para propósitos de teste e desenvolvimento e não podem ser usados em produção. Para obter os termos de
 uso completos, consulte o [
 contrato de licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-Recursos beta do Liberty disponíveis no Bluemix 
+Recursos beta do Liberty disponíveis no Bluemix
 <table>
 <tr>
 <th align="left">Recurso</th>
@@ -38,7 +38,7 @@ Recursos beta do Liberty disponíveis no Bluemix
 </tr>
 </table>
 
-Para usar os recursos beta do Liberty no Bluemix, será necessário executar um dos procedimentos a seguir: 
+Para usar os recursos beta do Liberty no Bluemix, será necessário executar um dos procedimentos a seguir:
 
 1. [Implemente um diretório do servidor ou um servidor em pacote](optionsForPushing.html) com um ou mais recursos beta ativados no arquivo server.xml como no exemplo a seguir:
 ```
@@ -54,16 +54,16 @@ Para usar os recursos beta do Liberty no Bluemix, será necessário executar um 
 2.  Configure a variável de ambiente IBM_LIBERTY_BETA como **true**. Essa variável direciona o buildpack do Liberty para instalar
 e ativar os recursos beta em seu aplicativo.  Verifique os seguintes exemplos:
   * usando a ferramenta de linha de comandos cf:
-<pre>
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * ou usando o arquivo manifest.yml:
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # rellinks

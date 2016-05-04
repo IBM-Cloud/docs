@@ -40,7 +40,7 @@ que é usada pelos componentes a seguir:
 * a memória que é usada para classes (aplicativo e servidor de aplicativos), pilhas de encadeamento e buffers io diretos.
 * A memória que é usada pelo heap de aplicativo Java.
 
-Mais informações sobre o uso de memória JVM podem ser localizadas no artigo do developerWorks [Obrigado pela memória](http://www.ibm.com/developerworks/library/j-nativememory-linux/) 
+Mais informações sobre o uso de memória JVM podem ser localizadas no artigo do developerWorks [Obrigado pela memória](http://www.ibm.com/developerworks/library/j-nativememory-linux/)
 
 Ao implementar
 um aplicativo, o uso de memória do processo inteiro é monitorado. Se o uso de memória exceder o limite de memória

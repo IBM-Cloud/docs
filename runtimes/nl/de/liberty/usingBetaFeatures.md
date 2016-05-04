@@ -13,7 +13,7 @@ copyright:
 
 *Letzte Aktualisierung: 23. März 2016*
 
-Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in Bluemix implementiert sind. 
+Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in Bluemix implementiert sind.
 
 **Wichtig**: Die Beta-Features dienen nur zu Entwicklungs- und Testzwecken und dürfen in Produktionsumgebungen nicht verwendet werden. Umfassende Nutzungsbedingungen finden Sie in der
 [ Lizenzvereinbarung für Betaversionen](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
@@ -37,7 +37,8 @@ In Bluemix verfügbare Liberty-Beta-Features
 
 Führen Sie einen der folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix verwenden zu können:
 
-1. [Implementieren Sie ein Serververzeichnis oder einen paketierten Server](optionsForPushing.html) mit mindestens einem in der Datei 'server.xml' aktivierten Beta-Feature, wie im folgenden Beispiel gezeigt: ```
+1. [Implementieren Sie ein Serververzeichnis oder einen paketierten Server](optionsForPushing.html) mit mindestens einem in der Datei 'server.xml' aktivierten Beta-Feature, wie im folgenden Beispiel gezeigt:
+```
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
@@ -50,16 +51,16 @@ Führen Sie einen der folgenden Schritte aus, um die Liberty-Beta-Features in Bl
 2.  Setzen Sie die Umgebungsvariable IBM_LIBERTY_BETA auf **true**. Diese Variable weist das
 Liberty-Buildpack an, die Beta-Features zu installieren und für Ihre Anwendung zu aktivieren.  Lesen Sie folgende Beispiele:
   * Verwendung des Befehlszeilentools 'cf':
-<pre>
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
-  * Alternativ Verwendung der Datei 'manifest.yml': 
-<pre>
+  * Alternativ Verwendung der Datei 'manifest.yml':
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # Zugehörige Links

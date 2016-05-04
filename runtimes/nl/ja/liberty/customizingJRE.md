@@ -31,7 +31,7 @@ version プロパティーをバージョン範囲に設定することができ
 ## OpenJDK
 {: #openjdk}
 
-オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。アプリケーションが OpenJDK で実行できるようにするには、JVM 環境変数を「openjdk」に設定します。例えば、cf コマンド・ライン・ツールを使用して、次のコマンドを実行します。
+オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。例えば、cf コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
@@ -68,7 +68,7 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
   * 障害発生時のアプリケーションの使用可能メモリー・リソースに関する情報を Loggregator にルーティングします。
   * JVM メモリー・ダンプを有効にするようにアプリケーションが構成されている場合、Java プロセスの kill は無効にされ、JVM メモリー・ダンプは共通のアプリケーション「dumps」ディレクトリーにルーティングされます。これらのダンプは、その後、Bluemix ダッシュボードまたは CF CLI で表示できます。
 
-以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成したデフォルト JVM 構成例を示します。   
+以下に 512M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成したデフォルト JVM 構成例を示します。
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -271,7 +271,7 @@ IBM JRE の JVM 冗長ガーベッジ・コレクション・ロギングを有�
 
 適切な非制限ポリシー・ファイルをダウンロードし、それらを次のファイルとしてアプリケーションに追加します。
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}

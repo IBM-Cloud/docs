@@ -22,7 +22,8 @@ copyright:
     cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
 </pre>
 
-Tomcat 런타임에 대한 자세한 정보는 [java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md)를 참조하십시오.
+Tomcat 런타임에 대한 자세한 정보는
+[java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md)를 참조하십시오.
 
 ## 스타터 애플리케이션
 {: #starter_application}
@@ -34,13 +35,15 @@ Tomcat 런타임에 대한 자세한 정보는 [java-buildpack readme](https://g
 
 JBP_CONFIG_TOMCAT 환경 변수를 사용하여 앱에서 사용할 Tomcat 버전을 변경할 수 있습니다.
 JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java 버전을 변경할 수 있습니다.
-두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다. 예: ```
+두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다. 예:
+```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-현재 기본 Tomcat 버전은 8.0.30입니다. 현재 기본 Java 버전은 1.8.0_65입니다. 자세한 정보는 [java-buildpack 릴리스](https://github.com/cloudfoundry/java-buildpack/releases)를 참조하십시오.
+현재 기본 Tomcat 버전은 8.0.30입니다. 현재 기본 Java 버전은 1.8.0_65입니다.
+자세한 정보는 [java-buildpack 릴리스](https://github.com/cloudfoundry/java-buildpack/releases)를 참조하십시오.
 
 # 관련 링크
 ## 일반

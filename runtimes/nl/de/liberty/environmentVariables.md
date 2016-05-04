@@ -75,22 +75,22 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 
 <tr>
 <td>JVM</td>
-<td>Zum Auswählen des [JRE-Typs](customizingJRE.html). </td>
+<td>Zum Auswählen des [JRE-Typs](customizingJRE.html).</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>Zum Festlegen der [JVM-Argumente](customizingJRE.html). </td>
+<td>Zum Festlegen der [JVM-Argumente](customizingJRE.html).</td>
 </tr>
 
 <tr>
 <td>HTTP_PROXY</td>
-<td>Zum Festlegen der Proxy-Server-Informationen. </td>
+<td>Zum Festlegen der Proxy-Server-Informationen.</td>
 </tr>
 
 <tr>
 <td>HTTPS_PROXY</td>
-<td>Zum Festlegen der Proxy-Server-Informationen. </td>
+<td>Zum Festlegen der Proxy-Server-Informationen.</td>
 </tr>
 
 <tr>

@@ -82,7 +82,7 @@ le opzioni di dump JVM e terminando i processi quando la memoria di un'applicazi
 l'errore al Loggregator.
   * se un'applicazione è configurata per abilitare i dump di memoria JVM, l'interruzione dei processi Java è disabilitata e i dump di memoria JVM vengono instradati a una directory "dumps" dell'applicazione	comune. Questi dump possono essere quindi visualizzati dal dashboard Bluemix o dalla CLI CF.
 
-Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria di 512 M:   
+Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria 512M:
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -293,7 +293,7 @@ Ad esempio, se desideri utilizzare la crittografia AES a 256 bit, devi soprappor
 
 Scarica i file di politica senza limitazioni appropriati e aggiungili all'applicazione come:
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}

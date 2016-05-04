@@ -107,11 +107,11 @@ NPM 提供了脚本编制功能，允许您运行脚本，其中包括分别适�
 
 ### 高速缓存行为
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} 为构建之间持久存储的每个节点应用程序保留一个高速缓存目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **expess** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
+{{site.data.keyword.Bluemix}} 为每个节点应用程序保留一个高速缓存目录，并且将在构建之间持久存储该目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **expess** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
 
 使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 cf 命令行：
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -125,6 +125,32 @@ cf set-env myapp NODE_MODULES_CACHE false
 }
 ```
 {: codeblock}
+
+### FIPS 方式
+{: #fips_mode}
+
+Nodejs buildpack V3.2-20160315-1257 及更高版本支持 [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。要启用 FIPS，请将环境变量 FIPS_MODE 设置为 true。
+例如：
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+了解以下情况很重要：FIPS_MODE 为 true 时，**使用 [MD5](https://en.wikipedia.org/wiki/MD5) 的节点模块会失败**。例如，[Express](http://expressjs.com/) 模块会失败。在 Expess 应用程序中将 [etag](http://expressjs.com/en/api.html) 设置为 false 可能会帮助解决此问题。例如，您可以在代码中执行以下操作：
+```
+    app.set('etag', false);
+```
+{: codeblock}
+请参阅这篇 [stackoverflow 帖子](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)以获取更多信息。
+
+要验证应用程序中的 FIPS_MODE 是否为 true，请检查 **process.versions.openssl** 的值。例如：```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+如果 SSL 版本包含“fips”，那么应用程序会以 FIPS 方式运行。    
+
 
 ## Node.js buildpack
 

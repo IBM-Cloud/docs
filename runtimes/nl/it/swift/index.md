@@ -16,9 +16,9 @@ Il swift_buildpack verrà utilizzato se la directory root della tua applicazione
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Swift.  L'applicazione starter Swift è un'applicazione semplice Swift che puoi utilizzare per avere informazioni sui tipi di applicazioni del server che puoi distribuire utilizzando il linguaggio di programmazione Swift. Questa applicazione di esempio crea un server di base che restituisce un messaggio di saluto al client.  
+{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Swift. L'applicazione starter Swift è un'applicazione semplice Swift che puoi utilizzare per avere informazioni sui tipi di applicazioni del server che puoi distribuire utilizzando il linguaggio di programmazione Swift. Questa applicazione di esempio crea un server di base che restituisce un messaggio di saluto al client.  
 
-**Nota:** questa applicazione starter non è un'applicazione pronta per la produzione.  Invece, è destinata ad essere utilizzata per scopi didattici.  Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+**Nota:** questa applicazione starter non è un'applicazione pronta per la produzione.  Invece, è destinata ad essere utilizzata per scopi didattici.  Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push all'ambiente {{site.data.keyword.Bluemix}}. Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}

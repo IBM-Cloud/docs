@@ -11,7 +11,7 @@ copyright:
 # Utilización de Dynatrace
 {: #using_dynatrace}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 08 de abril de 2016*
 
 Dynatrace es un servicio de otro proveedor que proporciona supervisión de la aplicación.
 
@@ -32,7 +32,7 @@ El agente de Dynatrace debe estar alojado en un servidor web, y el paquete de co
 ```
       ---
       6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
-```  
+```
 {: #codeblock}
      * Al final del URL, el nombre del archivo jar debe ser **dynatrace-agent-version-unix.jar**. La versión debe ser **6.3.0** o **6.3.0_nnnn**, donde nnnn es el identificador de la microversión. Tenga en cuenta que este puede ser distinto del nombre de archivo jar que Dynatrace utiliza y, por lo tanto, podría solicitarle que cambie el nombre del jar.       
      * El archivo **dynatrace-agent-6.3.0-unix.jar** debe estar disponible en la ubicación especificada en el archivo index.yml. La ubicación para el archivo jar y el index.yml puede ser el mismo directorio.
@@ -44,25 +44,25 @@ A continuación, deberá configurar un recopilador de Dynatrace que es accesible
   1. Configure un recopilador de Dynatrace.
     * Consulte el [sitio web de la comunidad de Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace) para obtener instrucciones sobre la descarga y configuración del recopilador de Dynatrace.
     * Asegúrese de que el recopilador se configura en una ubicación que sea accesible para el agente de Dynatrace que se ejecuta con la app en Bluemix.
-  2. Cree un servicio proporcionado por el usuario que apunte al recopilador de Dynatrace en ejecución. Por ejemplo, utilice el mandato que aparece a continuación:
-<pre>
+  2. Cree un servicio proporcionado por el usuario que apunte al recopilador de Dynatrace en ejecución. <b>NOTA</b> El nombre del servicio proporcionado por el usuario debe contener <b>dynatrace</b>. Por ejemplo, utilice el mandato que aparece a continuación:
+```
     $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
-</pre>
+```
 {: #codeblock}
-En este ejemplo, DynatraceCollectorIPaddress es la dirección IP del recopilador de Dynatrace que ha configurado, y el perfil es el nombre de perfil de Dynatrace opcional asociado con esta app supervisada. El valor del perfil predeterminado es Monitoring. Puede especificar los parámetros opcionales como en el ejemplo que se indica a continuación.
-<pre>
+En este ejemplo, my-dynatrace-collector es el nombre proporcionado al servicio, DynatraceCollectorIPaddress es la dirección IP del recopilador de Dynatrace que ha configurado, y el perfil es el nombre de perfil de Dynatrace opcional asociado con esta app supervisada. El valor del perfil predeterminado es Monitoring. Puede especificar los parámetros opcionales como en el ejemplo que se indica a continuación.
+```
     $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                                           "options" : {
                                                        "dynatrace-parameter-1": "value",
                                                        "dynatrace-parameter-2": "value"
                                          }}'
-</pre>
+```
 {: #codeblock}
 Consulte [Sección establecimiento del agente de la configuración del agente](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration) en el sitio web de la comunidad de Dynatrace para obtener más información sobre las opciones disponibles. Por ejemplo, utilizando la opción de exclusión, puede excluir las clases que supervisa Dynatrace. Consulte [Infraestructura del agente de DynaTrace](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) para obtener más detalles sobre cómo configurar el servicio proporcionado por el usuario.
   3. Una vez que haya enviado la app a Bluemix, enlace el servicio proporcionado por el usuario que ha creado a la app. Por ejemplo, utilice el mandato
-<pre>
+```
     $ cf bs myApp my-dynatrace-service
-</pre>  
+```
 **Nota**: Debe volver a transferir la aplicación después de enlazar el servicio.
 
 ## Configuración de la app de Liberty
@@ -72,22 +72,22 @@ La app de Liberty que desea supervisar deben estar configurada para localizar el
 <ol>
    <li> Establezca la variable **JBP_CONFIG_DYNATRACEAGENT** para que tenga el valor
    *"repository_root: URL_of_server_hosting_index.yml"*. Por ejemplo, después de enviar la aplicación, emita el siguiente mandato:
-<pre>   
+```
     $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
-</pre>
+```
 {: #codeblock}
   En este ejemplo, *my-dynatrace-agent-host.mybluemix.net* es el URL del archivo index.yml alojado por el servidor que ha configurado previamente.
   </li>
   <li> Después de establecer la variable de entorno, vuelva a transferir la aplicación. El staging_task.log para la aplicación de Liberty emite un mensaje que indica que se ha descargado correctamente el agente de Dynatrace desde el servidor de alojamiento del agente. Por ejemplo:
-<pre>
+```
     Descarga de dynatrace-agent-6.3.0-unix.jar 6.3.0 de https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17,8 s)
-</pre>
+```
 {: #codeblock}
 </li>
 <li>Para ver el staging_task.log, emita el siguiente mandato:
-<pre>
+```
     $ cf files myAppName logs/staging_task.log
-</pre>  
+```
 {: #codeblock}
 </li>
 </ol>

@@ -28,21 +28,21 @@ Para obtener más información sobre el tiempo de ejecución de Tomcat, consulte
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Tomcat. La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Tomcat.  La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
 
 Puede cambiar la versión de Tomcat que utilizará la app con la variable de entorno JBP_CONFIG_TOMCAT.
 Puede cambiar la versión de Java que utilizará la app con la variable de entorno JBP_CONFIG_OPEN_JDK_JRE.
-Ambos se pueden especificar en el archivo de manifiesto de la aplicación. Por ejemplo:
+Ambos se pueden especificar en el archivo de manifiesto de la aplicación.  Por ejemplo:
 ```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-La versión de Tomcat predeterminada actual es 8.0.30. La versión de Java predeterminada actual es 1.8.0_65.
+La versión de Tomcat predeterminada actual es 8.0.30.  La versión de Java predeterminada actual es 1.8.0_65.
 Para obtener más información, consulte [releases de java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks

@@ -194,7 +194,7 @@ copyright:
 </tr>
 </table>
 
-使用遠端 EJB 的應用程式可以部署至 Bluemix，不過，由於 Bluemix 環境中的埠限制，遠端 EJB 不可透過 CORBA/IIOP 通訊協定來進行遠端存取。
+使用遠端 EJB 的應用程式可以部署至 Bluemix，不過，由於 Bluemix 環境中的埠限制，無法使用 CORBA/IIOP 通訊協定來遠端存取這些遠端 EJB。
 
 # 相關鏈結
 ## 一般

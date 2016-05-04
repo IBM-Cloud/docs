@@ -38,7 +38,8 @@ web: node app.js
 
 Salva il **Procfile** nella directory root della tua applicazione.
 
-Se non è presente un **Procfile**, il pacchetto di build Node.js IBM Bluemix verifica se è presente una voce scripts.start nel file **package.json**. Anche nell'esempio sottostante, app.js è lo script js di avvio per la tua applicazione.```
+Se non è presente un **Procfile**, il pacchetto di build Node.js IBM Bluemix verifica se è presente una voce scripts.start nel file **package.json**. Anche nell'esempio sottostante, app.js è lo script js di avvio per la tua applicazione.
+```
 {
     ...   
     "scripts": {
@@ -76,7 +77,7 @@ Con questo codice, quando l'applicazione è in esecuzione su Bluemix, le variabi
 ## Versioni disponibili
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} fornisce tutti i [runtime Node.js attualmente disponibili](http://nodejs.org/dist/).  Di questi, IBM fornisce delle versioni contenenti miglioramenti e correzioni di bug. Per ulteriori informazioni, consulta [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html).
+{{site.data.keyword.Bluemix}} fornisce tutti i [runtime Node.js attualmente disponibili](http://nodejs.org/dist/). Di questi, IBM fornisce delle versioni contenenti miglioramenti e correzioni di bug. Per ulteriori informazioni, consulta [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html).
 
 Il pacchetto di build IBM Node.js memorizza in cache tutte le versioni di runtime di IBM. Quindi, se utilizzi il runtime IBM SDK for Node.js nella tua applicazione, ottieni delle prestazioni della tua applicazione più rapide quando ne viene eseguito il push a Bluemix.
 
@@ -104,7 +105,7 @@ Nel file **package.json** deve essere sempre specificata una versione di nodo. I
 ## Opzioni di configurazione
 {: #configuration_options}
 
-### script NPM 
+### script NPM
 {: #npm_scripts}
 NPM fornisce una funzione per gli script che ti consente di eseguire gli script, compresi quelli **preinstall** e **postinstall** che vengono applicati prima e dopo l'installazione dei tuoi node_modules.  Per i dettagli completi, consulta [npm-scripts](https://docs.npmjs.com/misc/scripts).
 
@@ -112,9 +113,9 @@ NPM fornisce una funzione per gli script che ti consente di eseguire gli script,
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} gestisce una directory di cache per ogni applicazione nodo che viene conservata tra i build. La cache memorizza le dipendenze risolte in modo che non vengano scaricate e installate ogni volta che l'applicazione viene distribuita.  Supponi, ad esempio, che myapp dipenda da **express**.  La prima volta che myapp viene distribuita, il modulo **express** viene scaricato.  Nelle successive distribuzioni di myapp, viene utilizzata l'istanza memorizzata in cache di **express**. Il comportamento predefinito è di inserire nella cache tutti i node_modules installati da NPM e i bower_components installati da bower.
 
-Utilizza la variabile NODE_MODULES_CACHE per determinare se il pacchetto di build Node utilizza o ignora la cache dai build precedenti. Il valore predefinito è true. Per disabilitare la memorizzazione in cache, imposta NODE_MODULES_CACHE su false, ad esempio mediante la riga di comando cf:
+Utilizza la variabile NODE_MODULES_CACHE per determinare se il pacchetto di build Node utilizza o ignora la cache dai build precedenti. Il valore predefinito è true.  Per disabilitare la memorizzazione in cache, imposta NODE_MODULES_CACHE su false, ad esempio mediante la riga di comando cf:
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -128,6 +129,35 @@ Puoi utilizzare un array **cacheDirectories** nel **package.json** di livello su
 }
 ```
 {: codeblock}
+
+### FIPS MODE
+{: #fips_mode}
+
+Le versioni del pacchetto di build Nodejs v3.2-20160315-1257 e successive supportano [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Per abilitare FIPS per imposta la variabile di ambiente FIPS_MODE su true.
+Ad esempio:
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+È importante comprendere che quando FIPS_MODE è true **i moduli del nodo che utilizzano [MD5](https://en.wikipedia.org/wiki/MD5) hanno esito negativo**. Ad esempio i moduli
+[Express](http://expressjs.com/) hanno esito negativo.  L'impostazione di [etag](http://expressjs.com/en/api.html) su
+false nella tua applicazione Expess può aiutare ad aggirare questo problema. Ad esempio puoi eseguire quanto segue nel tuo codice:
+```
+    app.set('etag', false);
+```
+{: codeblock}
+Per ulteriori informazioni, consulta post stackoverflow [](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
+
+Per verificare se FIPS_MODE è true nella tua applicazione, controlla il valore di **process.versions.openssl**. Ad esempio:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+Se la versione SSl contiene "fips", vuol dire che l'applicazione è in esecuzione in modalità FIPS.    
+
 
 ## Pacchetti di build Node.js
 

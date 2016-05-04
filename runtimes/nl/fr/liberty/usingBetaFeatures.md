@@ -13,7 +13,7 @@ Copyright :
 
 *Dernière mise à jour : 23 mars 2016*
 
-Les fonctions bêta de Liberty sont destinées à faciliter l'accès aux nouvelles fonctionnalités et aux nouveaux modèles de programmation pouvant être intégrés dans une édition future de Liberty. La plupart des fonctions bêta peuvent également être utilisées dans des applications déployées sur Bluemix. 
+Les fonctions bêta de Liberty sont destinées à faciliter l'accès aux nouvelles fonctionnalités et aux nouveaux modèles de programmation pouvant être intégrés dans une édition future de Liberty. La plupart des fonctions bêta peuvent également être utilisées dans des applications déployées sur Bluemix.
 
 **Important** : Les fonctions bêta sont destinées à des fins de développement et de test et ne doivent pas être utilisées en
 production. Pour connaître les conditions d'utilisation complètes de ces fonctions, voir le document relatif au [contrat de licence des versions bêta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
@@ -35,7 +35,7 @@ Fonctions bêta de Liberty disponibles dans Bluemix
 </tr>
 </table>
 
-Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez de l'une des façons suivantes : 
+Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez de l'une des façons suivantes :
 
 1. [Déployez un répertoire de serveur ou un package de serveur](optionsForPushing.html) avec une ou plusieurs fonctions bêta activées dans le fichier server.xml, comme dans l'exemple suivant :
 ```
@@ -50,16 +50,16 @@ Pour utiliser les fonctions bêta de Liberty dans Bluemix, procédez de l'une de
 
 2.  Affectez à la variable d'environnement IBM_LIBERTY_BETA la valeur **true**. Cette variable indique au pack de construction Liberty qu'il doit installer et activer les fonctions bêta pour votre application.  Voir les exemples suivants :
   * Utilisation de l'outil de ligne de commande cf :
-<pre>
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * Ou, utilisation du fichier manifest.yml :
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # rellinks

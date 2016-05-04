@@ -29,7 +29,7 @@ El paquete de compilación de Liberty se utiliza cuando se despliegan los siguie
 
 ## Aplicación de inicio
 {: #starter_application}
-{{site.data.keyword.Bluemix}} proporciona varias aplicaciones de inicio de Liberty. Las aplicaciones de inicio de Liberty son apps de Liberty sencillas que proporcionan una plantilla que puede utilizar. Puede experimentar con las apps de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de las aplicaciones de inicio.
+{{site.data.keyword.Bluemix}} proporciona varias aplicaciones de inicio de Liberty.  Las aplicaciones de inicio de Liberty son apps de Liberty sencillas que proporcionan una plantilla que puede utilizar. Puede experimentar con las apps de inicio, y realizar y enviar los cambios al entorno de Bluemix.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de las aplicaciones de inicio.
 
 # rellinks
 ## general

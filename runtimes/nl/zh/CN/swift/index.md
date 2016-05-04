@@ -7,7 +7,7 @@
 {: #swift_runtime}
 *上次更新时间：2016 年 2 月 19 日*
 
-{{site.data.keyword.Bluemix}} 上的 Swift 运行时由 swift_buildpack 提供支持。swift_buildpack 为 Swift 应用程序提供了一个完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Swift 运行时由 swift_buildpack 提供技术支持。swift_buildpack 为 Swift 应用程序提供了完整的运行时环境。
 {: shortdesc}
 
 如果应用程序的根目录中包含 Package.swift 文件，那么将使用 swift_buildpack。
@@ -15,7 +15,7 @@
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 Swift 入门模板应用程序。Swift 入门模板应用程序是一个简单的 Swift 应用程序，可以用于了解可使用 Swift 编程语言开发的服务器应用程序的类型。此样本应用程序会创建基本服务器，用于向客户机返回 HTML 问候。  
+{{site.data.keyword.Bluemix}} 提供了 Swift 入门模板应用程序。Swift 入门模板应用程序是一个简单的 Swift 应用程序，可以用于了解可使用 Swift 编程语言开发的服务器应用程序的类型。此样本应用程序会创建向客户机返回 HTML 问候的基本服务器。  
 
 **注：**此入门模板应用程序不是用于生产的应用程序，而是旨在用于培训。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
 

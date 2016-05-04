@@ -14,7 +14,7 @@ copyright:
 
 *Letzte Aktualisierung: 23. März 2016*
 
-Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden. 
+Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
 
 Zur Implementierung Ihrer Liberty-Anwendungen in Bluemix können Sie die folgenden Methoden verwenden:
 
@@ -22,15 +22,15 @@ Zur Implementierung Ihrer Liberty-Anwendungen in Bluemix können Sie die folgend
 * Serververzeichnis mit einer Push-Operation übertragen
 * Paketierten Server mit einer Push-Operation übertragen
 
-Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack implementieren, müssen Sie als Speicherbegrenzung für Ihre Anwendung mindestens 512 MB angeben. Weitere Informationen finden Sie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html).
+Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack bereitstellen, müssen Sie als Speicherbegrenzung für Ihre Anwendung mindestens 512 MB angeben. Weitere Informationen finden Sie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html).
 
 ## Eigenständige Apps
 {: #stand_alone_apps}
 
 Eigenständige Anwendungen wie z. B. die in WAR- oder EAR-Dateien enthaltenen Anwendungen, können in Bluemix für Liberty implementiert werden.
 
-
-Zur Implementierung einer eigenständigen Anwendung müssen Sie den Befehl 'cf push' mit dem Parameter '-p' ausführen, der auf Ihre WAR- oder EAR-Datei verweist. Beispiel:
+Zur Implementierung einer eigenständigen Anwendung müssen Sie den Befehl 'cf push' mit dem Parameter '-p' ausführen, der auf Ihre WAR- oder EAR-Datei verweist.
+Beispiel:
 
 ```
     $ cf push <yourappname> -p myapp.war
@@ -125,14 +125,15 @@ Die vollständige Standardkonfigurationsdatei 'server.xml' für Liberty lautet w
 {: #cdi12}
 
 Für eine bessere Leistung ist die [Funktion für das implizite Bean-Archiv-Scannen in CDI 1.2](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html) standardmäßig inaktiviert,
-wenn nur WAR- und EAR-Dateien bereitgestellt werden. Die Funktion für das implizite Bean-Archiv-Scannen kann über die Umgebungsvariable JBP_CONFIG_LIBERTY aktiviert werden. Beispiel:
+wenn nur WAR- und EAR-Dateien bereitgestellt werden. Die Funktion für das implizite Bean-Archiv-Scannen kann über die Umgebungsvariable JBP_CONFIG_LIBERTY aktiviert werden.
+Beispiel:
 
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: #codeblock}
 
-Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müssen Sie ein erneutes Staging für Ihre Anwendung durchführen: 
+Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müssen Sie ein erneutes Staging für Ihre Anwendung durchführen:
 
 ```
     $ cf restage myapp
@@ -142,9 +143,10 @@ Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müsse
 ## Serververzeichnis
 {: #server_directory}
 
-In einigen Fällen müssen Sie möglicherweise eine angepasste Liberty-Serverkonfiguration mit Ihrer Anwendung bereitstellen. Diese angepasste Konfiguration kann erforderlich sein, wenn Sie eine WAR- oder EAR-Datei bereitstellen und die Standarddatei 'server.xml' bestimmte Einstellungen nicht enthält, die für Ihre Anwendung benötigt werden. 
+In einigen Fällen müssen Sie möglicherweise eine angepasste Liberty-Serverkonfiguration mit Ihrer Anwendung bereitstellen. Diese angepasste Konfiguration kann erforderlich sein, wenn Sie eine WAR- oder EAR-Datei bereitstellen und die Standarddatei 'server.xml' bestimmte Einstellungen nicht enthält, die für Ihre Anwendung benötigt werden.
 
-Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert haben und bereits einen Liberty-Server mit Ihrer Anwendung erstellt haben, können Sie den Inhalt dieses Verzeichnisses mit einer Push-Operation an Bluemix übertragen. Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie den folgenden Befehl aus: 
+Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert haben und bereits einen Liberty-Server mit Ihrer Anwendung erstellt haben, können Sie den Inhalt dieses Verzeichnisses mit einer Push-Operation an Bluemix übertragen.
+Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie den folgenden Befehl aus:
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -154,11 +156,11 @@ Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert haben und bereits 
 Wenn auf Ihrer Workstation kein Liberty-Profil installiert ist,
 können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer Anwendung zu erstellen:
 
-1. Erstellen Sie ein Verzeichnis mit dem Namen 'defaultServer'. 
-2. Erstellen Sie im Verzeichnis 'defaultServer' ein Verzeichnis mit dem Namen 'apps'. 
-3. Kopieren Sie die WAR- oder EAR-Datei in das Verzeichnis 'defaultServer/apps'. 
-4. Erstellen Sie im Verzeichnis 'defaultServer' eine server.xml-Datei mit dem folgenden Beispielinhalt. Zusätzlich: 
-  * Vergewissern Sie sich, dass das Attribut 'location' oder 'type' des Anwendungselements so aktualisiert wurde, dass die Angaben mit dem Dateinamen und dem Typ Ihrer Anwendung übereinstimmen. 
+1. Erstellen Sie ein Verzeichnis mit dem Namen 'defaultServer'.
+2. Erstellen Sie im Verzeichnis 'defaultServer' ein Verzeichnis mit dem Namen 'apps'.
+3. Kopieren Sie die WAR- oder EAR-Datei in das Verzeichnis 'defaultServer/apps'.
+4. Erstellen Sie im Verzeichnis 'defaultServer' eine server.xml-Datei mit dem folgenden Beispielinhalt.  Zusätzlich:
+  * Vergewissern Sie sich, dass das Attribut 'location' oder 'type' des Anwendungselements so aktualisiert wurde, dass die Angaben mit dem Dateinamen und dem Typ Ihrer Anwendung übereinstimmen.
   * Die im Diagramm enthaltene Datei 'server.xml' enthält ein minimales Feature-Set. Möglicherweise müssen Sie das Feature-Set abhängig von den Anforderungen Ihrer Anwendung anpassen.
 
 ```
@@ -173,7 +175,7 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
 ```
 {: #codeblock}
 
-Nach Vorbereitung des Serververzeichnisses können Sie es in Bluemix implementieren. 
+Nach Vorbereitung des Serververzeichnisses können Sie es in Bluemix implementieren.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -190,17 +192,18 @@ Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implement
 ## Paketierter Server
 {: #packaged_server}
 
-Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an Bluemix übertragen.
-Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
+Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an Bluemix übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
 
-Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl './bin/server package' aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option '––include=usr'. Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus: 
+Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl './bin/server package' aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option '––include=usr'.
+Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus:
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
-Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Anschließend können Sie die komprimierte Datei mithilfe des Befehls 'cf push' mit einer Push-Operation an Bluemix übertragen. Beispiel:
+Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Anschließend können Sie die komprimierte Datei mithilfe des Befehls 'cf push' mit einer Push-Operation an Bluemix übertragen.
+Beispiel:
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
@@ -209,25 +212,24 @@ Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Anschli
 
 Hinweis: Auf die Webanwendungen, die als Teil des paketierten Servers implementiert werden, kann unter dem Kontextstammverzeichnis gemäß Liberty-Profil zugegriffen werden.
 
-
 ### Änderung der Datei 'server.xml'
 {: #modifications_of_serverxml}
 
 Bei der Übertragung eines paketierten Servers oder eines Liberty-Serververzeichnisses mit einer Push-Operation erkennt das Liberty-Buildpack die Datei 'server.xml' zusammen mit Ihrer Anwendung. Das Liberty-Buildpack nimmt die folgenden Änderungen an der Datei 'server.xml' vor:
 
-* Das Buildpack stellt sicher, dass sich genau ein Element 'httpEndpoint' in der Datei befindet. 
+* Das Buildpack stellt sicher, dass sich genau ein Element 'httpEndpoint' in der Datei befindet.
 * Das Buildpack stellt sicher, dass das Attribut 'httpPort' im Element 'httpEndpoint' auf eine Systemvariable namens '${port}' verweist. Das Buildpack überschreibt außerdem das Hostattribut.
-* Das Buildpack definiert das Attribut 'logDirectory' im Protokollierungselement so, dass auf ein Systemprotokollverzeichnis verwiesen wird. 
-* Das Buildpack stellt sicher, dass die Datei 'runtime-vars.xml' logisch mit der Datei 'server.xml' zusammengeführt wird. Insbesondere fügt das Buildpack der Datei 'server.xml' die Zeile *&lt;include location="runtime-vars.xml" /&gt;* hinzu. 
+* Das Buildpack definiert das Attribut 'logDirectory' im Protokollierungselement so, dass auf ein Systemprotokollverzeichnis verwiesen wird.
+* Das Buildpack stellt sicher, dass die Datei 'runtime-vars.xml' logisch mit der Datei 'server.xml' zusammengeführt wird. Insbesondere fügt das Buildpack der Datei 'server.xml' die Zeile *&lt;include location="runtime-vars.xml" /&gt;* hinzu.
 
 ### Referenzierbare Variablen
 {: #referenceable_variables}
 
 Die folgenden Variablen sind in der Datei 'runtime-vars.xml' definiert und werden von einer mit einer Push-Operation übertragenen server.xml-Datei referenziert. Bei allen Variablen muss die Groß-/Kleinschreibung beachtet werden.
 
-* ${port}: Der HTTP-Port, an dem der Liberty-Server empfangsbereit ist. 
-* ${vcap_console_port}: Der Port, an dem die Konsole von VCAP aktiv ist (entspricht in der Regel ${port}). 
-* ${vcap_app_port}: Der Port, an dem der App-Server empfangsbereit ist (entspricht in der Regel ${port}). 
+* ${port}: Der HTTP-Port, an dem der Liberty-Server empfangsbereit ist.
+* ${vcap_console_port}: Der Port, an dem die Konsole von VCAP aktiv ist (entspricht in der Regel ${port}).
+* ${vcap_app_port}: Der Port, an dem der App-Server empfangsbereit ist (entspricht in der Regel ${port}).
 * ${vcap_console_ip}: Die IP-Adresse der Konsole von VCAP (entspricht in der Regel der IP-Adresse, für die der Liberty-Server empfangsbereit ist).
 * ${application_name}: Der Name der Anwendung wie mithilfe der Optionen im Befehl 'cf push' definiert.
 * ${application_version}: Die Version dieser Anwendungsinstanz in Form einer UUID wie beispielsweise 'b687ea75-49f0-456e-b69d-e36e8a854caa'. Diese Variable ändert sich bei jeder weiteren Push-Operation für die Anwendung, die neuen Code oder Änderungen an den Anwendungsartefakten enthält.
@@ -245,12 +247,14 @@ eingefügt, die Cloud Foundry für die Anwendung festlegt. Für [automatisch kon
 Services](autoConfig.html) werden Servicebindungseinträge in der Datei 'server.xml' vom Liberty-Buildpack
 generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in einem der folgenden Formate vorliegen:
 
-* cloud.services.<service-name>.<property> - Gibt Informationen wie Name, Typ und Plan des Service an. 
-* cloud.services.<service-name>.connection.<property> - Gibt die Verbindungsinformationen für den Service an. 
+* cloud.services.&lt;service-name&gt;.&lt;property&gt; - Gibt Informationen wie Name, Typ und Plan des Service an.
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; - Gibt die Verbindungsinformationen für den Service an.
 
 Die typischen Informationen lauten wie folgt:
-* name: Der Name des Service. Beispiel: 'mysql-e3abd'. label: Der Typ des erstellten Service. Beispiel: 'mysql-5.5'.
-* plan: Der Serviceplan gemäß der eindeutigen ID für diesen Plan. Beispiel: '100'. connection.name: Eine eindeutige ID für die Verbindung in Form einer UUID. Beispiel: 'd01af3a5fabeb4d45bb321fe114d652ee'.
+* name: Der Name des Service. Beispiel: 'mysql-e3abd'.
+label: Der Typ des erstellten Service. Beispiel: 'mysql-5.5'.
+* plan: Der Serviceplan gemäß der eindeutigen ID für diesen Plan. Beispiel: '100'.
+connection.name: Eine eindeutige ID für die Verbindung in Form einer UUID. Beispiel: 'd01af3a5fabeb4d45bb321fe114d652ee'.
 * connection.hostname: Der Hostname des Servers, der den Service ausführt. Beispiel: 'mysql-server.mydomain.com'.
 * connection.host: Die IP-Adresse des Servers, der den Service ausführt. Beispiel: 9.37.193.2.
 * connection.port: Der Port, an dem der Service für eingehende Verbindungen empfangsbereit ist. Beispiel: 3306,3307.

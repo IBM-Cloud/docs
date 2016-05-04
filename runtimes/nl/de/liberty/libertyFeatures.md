@@ -13,7 +13,7 @@ copyright:
 
 *Letzte Aktualisierung: 23. März 2016*
 
-Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features. 
+Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
 
 <table>
 
@@ -194,7 +194,7 @@ Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
 </tr>
 </table>
 
-Anwendungen, die ferne EJBs verwenden, können in Bluemix bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der Bluemix-Umgebung nicht mit dem CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden. 
+Anwendungen, die ferne EJBs verwenden, können in Bluemix bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der Bluemix-Umgebung nicht mit dem CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.
 
 # Zugehörige Links
 ## Allgemein

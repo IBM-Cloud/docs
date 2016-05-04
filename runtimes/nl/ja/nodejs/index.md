@@ -115,7 +115,7 @@ NPM は、スクリプトの実行を可能にするスクリプティング機�
 
 Node ビルドパックが以前のビルドからのキャッシュを使用するか無視するかを決定するには、NODE_MODULES_CACHE 変数を使用します。デフォルト値は true です。キャッシングを無効にするには、NODE_MODULES_CACHE を (例えば cf コマンド・ラインで) false に設定します。
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -129,6 +129,33 @@ cf set-env myapp NODE_MODULES_CACHE false
 }
 ```
 {: codeblock}
+
+### FIPS MODE
+{: #fips_mode}
+
+Nodejs ビルドパック v3.2-20160315-1257 以降では [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards) がサポートされます。FIPS を有効にするには、環境変数 FIPS_MODE を true に設定します。
+例えば、以下のように指定します。
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+FIPS_MODE が true の場合、**[MD5](https://en.wikipedia.org/wiki/MD5) を使用するノード・モジュールが失敗する**ことを理解することが重要です。例えば、[Express](http://expressjs.com/) モジュールは失敗します。Expess アプリケーションで  [etag](http://expressjs.com/en/api.html) を false に設定すると、こうした失敗への対処に役立つ可能性があります。例えば、コードで以下のようにすることができます。
+```
+    app.set('etag', false);
+```
+{: codeblock}
+詳しくは、[stackoverflow の投稿](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)を参照してください。
+
+アプリケーションで FIPS_MODE が true であるかどうか確認するには、**process.versions.openssl** の値を確認します。例えば、次のように指定します。
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+SSl バージョンに「fips」が含まれている場合、このアプリケーションは FIPS モードで実行されています。    
+
 
 ## Node.js buildpacks
 

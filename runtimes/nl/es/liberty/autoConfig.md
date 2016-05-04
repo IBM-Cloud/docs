@@ -44,6 +44,7 @@ Light](../../services/MQLight/index.html#mqlight010)
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 Tal como se ha indicado, algunos servicios se pueden gestionar mediante aplicación o mediante contenedor. Mongo y SQLDB son ejemplos de dichos servicios. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor y los configura de forma automática. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno services_autoconfig_excludes. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](autoConfig.html#opting_out).
 
@@ -62,7 +63,7 @@ Cuando envía una aplicación autónoma, el paquete de compilación de Liberty g
 Cuando el usuario especifica un archivo server.xml y lo enlaza a servicios gestionados por contenedor,
 el paquete de compilación de Liberty:
 
-* Genera la configuración correspondiente a los servicios enlazados si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios enlazados. 
+* Genera la configuración correspondiente a los servicios enlazados si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios enlazados.
 * Actualiza Genera la configuración correspondiente a los servicios enlazados si el archivo server.xml proporcionado contiene una stanza de configuración para los servicios enlazados.
 
 Consulte la documentación del tipo de servicio enlazado para ver más detalles.
@@ -101,8 +102,7 @@ Es decir, la gramática de la serie es la siguiente:
 **Importante**: El tipo de servicio que especifique debe coincidir con la etiqueta de servicio que aparece en la variable de entorno VCAP_SERVICES. No se permiten espacios en blanco.
 **Importante**: No se permiten espacios en blanco en <service_type_specification>. Sólo se permiten espacios en blanco para separar varias instancias de <service_type_specification>.
 
-Utilice la opción “all” para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo de Mongo anterior. Utilice la opción “config” para renunciar únicamente a las acciones de actualización de la configuración, como en el caso de ejemplo
-de SQLDB anterior.
+Utilice la opción "all" para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo de Mongo anterior. Utilice la opción "config" para renunciar únicamente a las acciones de actualización de la configuración, como en el caso de ejemplo de SQLDB anterior.
 
 A continuación se muestra un ejemplo de especificaciones opt-out en un archivo manifest.yml para los casos de ejemplo de Mongo y de SQLDB.
 

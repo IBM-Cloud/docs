@@ -23,7 +23,7 @@ customizar as opções da JVM ou sobrepor as funções do JRE.
 Por padrão, os aplicativos são configurados
 para executar com uma versão leve do IBM JRE. Esse
 JRE leve é dividido para fornecer função principal essencial com um disco
-e área de cobertura da memória muito reduzidos. Para obter informações adicionais sobre o conteúdo do JRE leve, veja [Liberty for Java Runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html). 
+e área de cobertura da memória muito reduzidos. Para obter informações adicionais sobre o conteúdo do JRE leve, veja [Liberty for Java Runtime](http://download.boulder.ibm.com/ibmdl/pub/software/dw/jdk/docs/bluemix/libertyforjava_jre.doc.html).
 
 O
 IBM JRE versão 8 é usado, por padrão. Use a variável de ambiente JBP_CONFIG_IBMJDK para especificar uma versão alternativa do IBM JRE. Por exemplo, para usar o mais recente
@@ -41,7 +41,7 @@ de versão suportados: 1.7.+ e 1.8.+. Para obter os melhores resultados, use Jav
 {: #openjdk}
 
 Opcionalmente, os aplicativos podem ser
-configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM como “openjdk”. Por
+configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM (Java virtual machine) como "openjdk". Por
 exemplo, usando a ferramenta de linha de comandos cf, execute o comando:
 ```
     $ cf set-env myapp JVM 'openjdk'
@@ -66,9 +66,9 @@ A propriedade da versão pode ser configurada para um intervalo de versão como 
 O buildpack Liberty configura as opções da JVM
 padrão considerando:
 
-* Um limite de memória de um aplicativo. As configurações de heap da JVM aplicadas
+* Um limite de memória de um aplicativo.  As configurações de heap da JVM aplicadas
 são calculadas com base em:
-  * o limite de memória de um aplicativo, conforme explicado em [Limites de memória e o buildpack do Liberty](memoryLimits.html#memory_limits) 
+  * o limite de memória de um aplicativo, conforme explicado em [Limites de memória e o buildpack do Liberty](memoryLimits.html#memory_limits)
   * o tipo de JRE, uma vez que as opções relacionadas ao heap para a JVM variam de acordo
 com as opções suportadas do JRE.
 
@@ -86,7 +86,7 @@ aplicativo está esgotada.
 no momento da falha para o Loggregator.
   * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. Esses dumps podem ser visualizados a partir do painel do Bluemix ou da CLI do CF.
 
-A seguir está um configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um Limite de memória de 512 M:    
+A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um limite de memória de 512 M:
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -99,7 +99,7 @@ A seguir está um configuração da JVM padrão de exemplo que é gerada pelo bu
 ```
 {: #codeblock}
 
-### Customizando a configuração da JVM 
+### Customizando a configuração da JVM
 {: #customizing_jvm}
 
 Os aplicativos podem customizar as opções
@@ -111,13 +111,14 @@ que as opções variam de acordo com o JRE.
 <table>
 <tr>
 <th align="left">JRE</th>
-<th align="left">Formato de opções da linha de comandos </th>
+<th align="left">Formato de opções da linha de comandos</th>
 <th align="left">Referência</th>
 </tr>
 
 <tr>
 <td>IBM JRE</td>
-<td>inclui opções de tempo de execução (prefixadas por -X), quaisquer propriedades de sistema do Java (prefixadas com -D) e não recomenda -XX para o uso casual (essas opções estão sujeitas à mudança)</td>
+<td>inclui opções de tempo de execução (prefixadas por -X), quaisquer propriedades de sistema do Java (prefixadas com -D) e não recomenda -XX para o uso casual (essas opções estão sujeitas à mudança)
+</td>
 <td>[Opções da linha de comandos da Versão 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Opções da linha de comandos da Versão 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
 </td>
 </tr>
@@ -127,7 +128,7 @@ que as opções variam de acordo com o JRE.
 <td>é baseado no tempo de execução do HotSpot que possui a notação de
 -X para não padrão, -XX para opções do desenvolvedor e sinalizações Booleanas
 para ativar ou desativar a opção </td>
-<td>[Visão tempo de execução de execução do HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html)  </td>
+<td>[Visão tempo de execução de execução do HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -185,7 +186,7 @@ diretório do servidor do tempo de execução do Liberty</td>
 <td>uma variável de ambiente que é suportada pelo tempo de execução do
 Liberty</td>
 <td>Todos</td>
-<td>Reiniciar ou remontar o app </td>
+<td>Reiniciar ou remontar o app</td>
 <td>Sim</td>
 </tr>
 </table>
@@ -202,7 +203,7 @@ são persistidas como opções da linha de comandos. Elas podem ser visualizadas
 ```
 {: #codeblock}
 
-As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo jvm.options. 
+As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo jvm.options.
 
 Para visualizar o arquivo jvm.options para WAR, EAR e diretório do servidor, execute o comando:
 ```
@@ -266,7 +267,7 @@ de aplicativos pode fornecer arquivos JRE para customização.
 
 Os
 arquivos a serem sobrepostos podem ser colocados em pacote com o WAR, EAR ou JAR
-do aplicativo em uma pasta de recursos na raiz do archive. Para um servidor (arquivo compactado ou diretório do servidor), os arquivos podem ser colocados em pacote em uma pasta de recursos no diretório do servidor, com o arquivo server.xml. 
+do aplicativo em uma pasta de recursos na raiz do archive. Para um servidor (arquivo compactado ou diretório do servidor), os arquivos podem ser colocados em pacote em uma pasta de recursos no diretório do servidor, com o arquivo server.xml.
 
 * Arquivo WAR
   * WEB-INF
@@ -297,7 +298,7 @@ do aplicativo em uma pasta de recursos na raiz do archive. Para um servidor (arq
     * outros arquivos
     * .java-overlay
 
-O diretório .java-overlay contém arquivos específicos na mesma hierarquia de arquivo que o Java JRE que está sendo sobreposto iniciando com .java/jre. 
+O diretório .java-overlay contém arquivos específicos na mesma hierarquia de arquivo que o Java JRE que está sendo sobreposto iniciando com .java/jre.
 
 Por exemplo, se você desejar usar a criptografia AES de 256 bits, será necessário sobrepor estes arquivos de políticas Java:
 ```
@@ -308,7 +309,7 @@ Por exemplo, se você desejar usar a criptografia AES de 256 bits, será necess�
 
 Faça o download dos arquivos de políticas sem restrições apropriados e inclua-os em seu aplicativo como:
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}

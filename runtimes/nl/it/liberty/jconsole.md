@@ -24,22 +24,22 @@ copyright:
 {: #push_server_package}
 
 Esegui il push del package server contenente la tua applicazione limitandolo
-a una singola istanza. Il tuo file server.xml deve contenere le funzioni monitor-1.0 e restConnector-1.0. Deve contenere anche un elemento basicRegistry e un elemento administrator-role.
-<pre>
-       &lt;featureManager&gt;
-    	   &lt;feature&gt;jsp-2.2&lt;/feature&gt;
-    	   &lt;feature&gt;monitor-1.0&lt;/feature&gt;
-    	   &lt;feature&gt;restConnector-1.0&lt;/feature&gt;
-       &lt;/featureManager&gt;
+a una singola istanza. Il tuo file server.xml deve contenere le funzioni `monitor-1.0` e `restConnector-1.0`. Deve contenere anche un elemento basicRegistry e un elemento administrator-role.
+```xml
+       <featureManager>
+           <feature>jsp-2.2</feature>
+           <feature>monitor-1.0</feature>
+           <feature>restConnector-1.0</feature>
+       </featureManager>
 
-       &lt;basicRegistry&gt;
-    	   &lt;user name="jconuser" password="jconpassw0rd"/&gt;
-       &lt;/basicRegistry&gt;
+       <basicRegistry>
+           <user name="jconuser" password="jconpassw0rd"/>
+       </basicRegistry>
 
-       &lt;administrator-role&gt;
-    	   &lt;user&gt;jconuser&lt;/user&gt;
-       &lt;/administrator-role&gt;
-</pre>
+       <administrator-role>
+           <user>jconuser</user>
+       </administrator-role>
+```
 {: #codeblock}
 
    * Nota: la password deve essere codificata con lo strumento securityUtility fornito da Liberty.
@@ -47,23 +47,22 @@ a una singola istanza. Il tuo file server.xml deve contenere le funzioni monitor
 ### Avvia l'applicazione JConsole
 {: #start_jconsole_app}
 
-La JConsole è inclusa con l'installazione java.  Per avviare l'applicazione JConsole vai in <java-home>/bin (Java 1.7 o successive) ed esegui il seguente comando:
-<pre>
+La JConsole è inclusa con l'installazione Java.  Per avviare l'applicazione JConsole vai in &lt;java-home&gt;/bin ed esegui il seguente comando:
+```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
-</pre>
+```
 {: #codeblock}
 
-  * I seguenti sono i parametri truststore predefiniti che dovrebbero andar bene nella maggior parte dei casi:
-<pre>
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/acerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
-</pre>
+Potresti dover trasmettere ulteriori parametri per configurare il trustStore Java. I seguenti parametri dovrebbero funzionare nella maggior parte dei casi:
+```
+    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+```
 {: #codeblock}
-  * Specifica i parametri truststore appropriato, se necessario.
 
 ### Completa la connessione
 {: #start_jconsole_app}
-  * Compila il campo Processo remoto con questo URL:    
-    * service:jmx:rest://<appName>.mybluemix.net:443/IBMJMXConnectorREST.  
+  * Compila il campo Processo remoto con il seguente URL:
+    * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
   *  Compila inoltre i campi Username e Password con un utente con ruolo administrator-role e una password dal file server.xml.
   * Fai clic su Connect.
 
@@ -73,8 +72,7 @@ viene stabilita correttamente, la JConsole inizia il monitoraggio.
 Se la connessione non riesce, puoi produrre dei log utili per diagnosticare il problema.  Prova prima a raccogliere la traccia lato client aggiungendo ** -J-Djava.util.logging.config.file=c:/tmp/logging.properties** al
 comando jconsole.
 Viene qui di seguito riportato un file di proprietà di registrazione di esempio:
-
-<pre>
+```
     handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
@@ -83,14 +81,14 @@ Viene qui di seguito riportato un file di proprietà di registrazione di esempio
     javax.management.level=FINEST
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
-</pre>
+```
 {: #codeblock}
 
 Puoi anche aggiungere <b>&dash;J&dash;Djavax.net.debug=ssl</b> al comando jconsole. Ciò produce la traccia di diagnostica SSL in una finestra di output JConsole
 separata.  Infine, puoi abilitare la traccia sul lato server aggiungendo quanto segue al tuo file server.xml:
-<pre>
-    &lt;logging traceSpecification="com.ibm.ws.jmx.&ast;=all"/&gt;
-</pre>
+```
+    <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
+```
 {: codeblock}
 
 # rellinks

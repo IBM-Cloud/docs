@@ -151,8 +151,8 @@ Si un perfil de Liberty no está instalado en la estación de trabajo, puede uti
 1. Cree un directorio llamado defaultServer.
 2. Cree un directorio apps en el directorio defaultServer.
 3. Copie el archivo WAR o EAR en el directorio defaultServer/apps.
-4. En el directorio defaultServer, cree un archivo server.xml con el siguiente contenido de ejemplo. Además:
-  * Asegúrese de actualizar el atributo location o type del elemento de la aplicación para que coincida con el nombre de archivo y el tipo de la aplicación. 
+4. En el directorio defaultServer, cree un archivo server.xml con el siguiente contenido de ejemplo.  Además:
+  * Asegúrese de actualizar el atributo location o type del elemento de la aplicación para que coincida con el nombre de archivo y el tipo de la aplicación.
   * El archivo server.xml del diagrama muestra un conjunto de características mínimas. Es posible que tenga que ajustar el conjunto de características en función de los requisitos de la aplicación.
 
 ```
@@ -190,9 +190,9 @@ Puede enviar por push un archivo del servidor empaquetado a Bluemix. El archivo 
 Para empaquetar un servidor Liberty, utilice el mandato ./bin/server package desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción '––include=usr'.
 Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
 Este mandato genera un archivo serverName.zip en el directorio del servidor. Luego puede enviar por push este archivo comprimido a Bluemix con el mandato cf push.
@@ -208,7 +208,7 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del servido
 ### Modificación del archivo server.xml
 {: #modifications_of_serverxml}
 
-Cuando se envía un servidor empaquetado o un directorio del servidor Liberty, el paquete de compilación de Liberty detecta el archivo server.xml junto con la aplicación. El paquete de compilación de Liberty realiza las siguientes modificaciones en el archivo server.xml. 
+Cuando se envía un servidor empaquetado o un directorio del servidor Liberty, el paquete de compilación de Liberty detecta el archivo server.xml junto con la aplicación. El paquete de compilación de Liberty realiza las siguientes modificaciones en el archivo server.xml.
 
 * El paquete de compilación se asegura de que haya exactamente un elemento httpEndpoint en el archivo.
 * El paquete de compilación se asegura de que el atributo httpPort del elemento httpEndpoint apunte a una variable del sistema llamada ${port}. El paquete de compilación también sustituye el atributo host.
@@ -238,8 +238,8 @@ Cuando desee enlazar un servicio con la aplicación, se incluirá información a
 				actualizará entradas de enlace de servicios en el archivo server.xml. El contenido de las entradas de enlace de servicio
 				puede estar en una de las formas siguientes:
 
-* cloud.services.<service-name>.<property>, que describe la información como nombre, tipo y plan del servicio.
-* cloud.services.<service-name>.connection.<property>, que describe la información de conexión para el servicio.
+* cloud.services.&lt;service-name&gt;.&lt;property&gt;, que describe la información como nombre, tipo y plan del servicio.
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que describe la información de conexión para el servicio.
 
 El conjunto de información típico es el siguiente:
 * name: el nombre del servicio. Por ejemplo, mysql-e3abd.

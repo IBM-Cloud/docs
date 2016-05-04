@@ -25,14 +25,12 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[앱
-관리 유틸리티](../../manageapps/app_mng.html)를 사용으로 설정합니다. </td>
+<td>[앱 관리 유틸리티](../../manageapps/app_mng.html)를 사용으로 설정합니다. </td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[앱
-관리 유틸리티](../../manageapps/app_mng.html)를 설치합니다. </td>
+<td>[앱 관리 유틸리티](../../manageapps/app_mng.html)를 설치합니다. </td>
 </tr>
 
 <tr>
@@ -52,23 +50,22 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>[IBM JRE 버전](customizingJRE.html)을 구성합니다. </td>
+<td>[IBM JRE 버전](customizingJRE.html)을 구성합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>[WAR 또는 EAR 파일의 기능](optionsForPushing.html#stand_alone_apps)을 포함하여 다양한
-Liberty 런타임 옵션을 구성합니다. </td>
+<td>[WAR 또는 EAR 파일의 기능](optionsForPushing.html#stand_alone_apps)을 포함하여 다양한 Liberty 런타임 옵션을 구성합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK 버전](customizingJRE.html)</td>을 구성합니다. </tr>
+<td>[OpenJDK 버전](customizingJRE.html)을 구성합니다.</td>
+</tr>
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Spring Auto-Reconfiguration 프레임워크를 사용하지 않습니다. 사용 안함으로 설정하려면 값을 enabled:
-false로 설정하십시오. </td>
+<td>Spring Auto-Reconfiguration 프레임워크를 사용하지 않습니다. 사용 안함으로 설정하려면 값을 enabled: false로 설정하십시오. </td>
 </tr>
 
 <tr>

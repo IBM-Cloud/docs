@@ -22,7 +22,7 @@ El python_buildpack se utilizará si el directorio raíz de la aplicación conti
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Python. La aplicación de inicio Python es una app Python sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar por push los cambios al entorno de {{site.data.keyword.Bluemix}}. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una app Python sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar por push los cambios al entorno de {{site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -34,6 +34,7 @@ python-3.4.3
 ```
 {: codeblock}
 
+Cuando no se especifique una versión, se elegirá la versión 2.7.10 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}

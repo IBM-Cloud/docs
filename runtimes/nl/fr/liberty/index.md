@@ -14,8 +14,7 @@ Copyright :
 
 *Dernière mise à jour : 23 mars 2016*
 
-Les applications Liberty for Java sur {{site.data.keyword.Bluemix}} reposent sur le pack de construction liberty-for-java. Le pack de construction liberty-for-java fournit un environnement d'exécution complet permettant d'exécuter des applications Java EE 7 et OSGi par dessus le profil Liberty.
-Il prend en charge les infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide particulièrement bien adapté au cloud.
+Les applications Liberty for Java sur {{site.data.keyword.Bluemix}} reposent sur le pack de construction liberty-for-java. Le pack de construction liberty-for-java fournit un environnement d'exécution complet permettant d'exécuter des applications Java EE 7 et OSGi par dessus le profil Liberty. Il prend en charge les infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide particulièrement bien adapté au cloud.
 {: shortdesc}
 
 ## Détection
@@ -30,8 +29,7 @@ Le pack de construction Liberty est utilisé lorsque les types d'applications su
 
 ## Application de démarrage
 {: #starter_application}
-{{site.data.keyword.Bluemix}} fournit plusieurs applications de démarrage Liberty. Les applications de démarrage Liberty sont des applications Liberty simples qui fournissent un modèle que vous pouvez utiliser. Vous pouvez expérimenter ces applications de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.
-Pour obtenir de l'aide sur l'utilisation des applications de démarrage, voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} fournit plusieurs applications de démarrage Liberty.  Les applications de démarrage Liberty sont des applications Liberty simples qui fournissent un modèle que vous pouvez utiliser. Vous pouvez expérimenter ces applications de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Pour obtenir de l'aide sur l'utilisation des applications de démarrage, voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html).
 
 # rellinks
 ## general

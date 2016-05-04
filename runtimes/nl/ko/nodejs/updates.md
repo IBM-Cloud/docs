@@ -14,6 +14,21 @@ copyright:
 *마지막 업데이트 날짜: 2016년 3월 22일*
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+## 2016년 4월 29일: 업데이트된 Node.js 빌드팩 v3.3-20160418-1749
+
+이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.44, 0.12.13, 4.4.1 및 4.4.2를 추가합니다. 기본값은 이제 4.4.2입니다. 몇몇 이전 IBM SDK for Node.js 런타임 버전도 제거되었습니다. 빌드팩에는 이제 두 개의 최신 버전인 0.10.x, 0.12.x와 4.x만 포함되어 현재 0.10.43, 0.10.44, 0.12.12, 0.12.13, 4.4.1 및 4.4.2입니다.
+
+4.4.1 및 4.4.2의 경우, 이제 사용자의 앱에 `FIPS_MODE=true` 환경 변수를 설정하여 FIPS 호환 가능한 버전의 런타임을 사용하는 것이 가능합니다. 그러면 스테이징 출력에서 `FIPS_MODE`를 찾아서 빌드팩에서 인식되었는지 확인하십시오. 
+
+업데이트된 빌드팩과 새 런타임 버전에는 보안 취약점에 대한 수정사항도 포함되어 있습니다. 
+* [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-2537](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-3956](http://www-01.ibm.com/support/docview.wss?uid=swg21980827)
+
+업데이트된 빌드팩에는 다음 두 개의 버그에 대한 수정사항도 포함되어 있습니다. 
+* 이제 요청된 범위와 일치하는 것이 사용 가능한 경우 IBM SDK for Node.js 빌드가 항상 사용됩니다. 이전에는 4.x 런타임 버전의 경우에만 true였습니다. 
+* 이제 앱 관리 검사기 유틸리티가 4.x 런타임 버전에서 작동하게 됩니다. 
+
 ## 2016년 3월 18일: 업데이트된 Node.js 빌드팩 v3.2-20160315-1257
 
 이 릴리스의 빌드팩은 기본 IBM SDK for Node.js 런타임을 버전 4.3.0에서 4.3.2로 이동합니다. 또한 IBM SDK for Node.js 버전 0.10.43, 0.12.12 및 4.3.1을 포함합니다. 사용자는 이러한 최근 Node.js 버전을 사용하여 몇 가지 보안 취약점에 대한 수정사항을 가져와야 합니다. 
@@ -60,7 +75,7 @@ IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 및 v1.2.0.7(각각 커뮤니�
 IBM Node.js 빌드팩 v3.0beta는 기본 런타임 Node.js v4.2.3과 함께 Bluemix의 기본이 아닌 빌드팩으로 릴리스되었습니다. 사용자 앱과 서비스가 계속해서 Bluemix에서 작동되도록 하려면 이 베타 버전의 빌드팩을 사용하여 사용자 애플리케이션을 푸시하십시오. 30일 이후 v3가 기본 빌드팩이 됩니다.
 
 v3.0beta를 사용하여 사용자 애플리케이션을 푸시하려면 다음을 수행하십시오. 
-* Use "-b" option in your 'cf push' command:
+* "-b" 옵션을 'cf push' 명령에서 사용하십시오. 
 
 ```
         cf push -b sdk-for-nodejs-v3beta
@@ -130,13 +145,8 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 
 ## 2014년 10월 23일: 업데이트된 Node.js 빌드팩 v1.6-20141013-1736
 
-* 이제 Node.js 빌드팩은 [IBM SDK for Node.js v1.1.0.8](https://developer.ibm.com/node/sdk/)과 함께 제공됩니다. 이는 애플리케이션에 안정적인 최신 Node.js 런타임 v0.10.32를 지정하면 완전히 지원되는 IBM Node.js 런타임을 사용할 수 있다는 의미입니다. 이번 최신 SDK에는 서비스 거부(DoS)를 일으키는
-임베디드 qs 모듈 문제의 수정사항이 포함되어 있습니다.
-또한 npm 모듈의 업데이트된 버전과 http 및 url 모듈의 다른 개선사항도
-포함합니다. 자세한 내용은 [v0.10.32 변경 로그](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog)를 참조하십시오. 
-* 배치하는 동안 고객 애플리케이션에 올바르지 않은
-index.html 파일을 추가하는 버그에 대한 수정사항도
-포함되어 있습니다. 
+* 이제 Node.js 빌드팩은 [IBM SDK for Node.js v1.1.0.8](https://developer.ibm.com/node/sdk/)과 함께 제공됩니다. 이는 애플리케이션에 안정적인 최신 Node.js 런타임 v0.10.32를 지정하면 완전히 지원되는 IBM Node.js 런타임을 사용할 수 있다는 의미입니다. 이번 최신 SDK에는 서비스 거부(DoS)를 일으키는 임베디드 qs 모듈 문제의 수정사항이 포함되어 있습니다. 또한 npm 모듈의 업데이트된 버전과 http 및 url 모듈의 다른 개선사항도 포함합니다. 자세한 내용은 [v0.10.32 변경 로그](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog)를 참조하십시오. 
+* 배치하는 동안 고객 애플리케이션에 올바르지 않은 index.html 파일을 추가하는 버그에 대한 수정사항도 포함되어 있습니다. 
 
 ## 2014년 9월 30일: 업데이트된 Node.js 빌드팩 v1.4-20140908-1746
 

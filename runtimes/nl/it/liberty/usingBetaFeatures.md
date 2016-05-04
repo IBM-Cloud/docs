@@ -51,16 +51,16 @@ Per utilizzare le funzioni beta Liberty in Bluemix, dovrai:
 2.  Imposta la variabile di ambiente IBM_LIBERTY_BETA su **true**. Questa variabile indica al pacchetto di build Liberty
 di installare e abilitare le funzioni beta per la tua applicazione.  Consulta i seguenti esempi:
   * utilizzando lo strumento di riga di comando cf:
-<pre>
+```
        $ cf set-env <nomedellatuaapplicazione> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * oppure utilizzando il file manifest.yml:
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # rellinks

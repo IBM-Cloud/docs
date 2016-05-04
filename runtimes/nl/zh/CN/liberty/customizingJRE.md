@@ -30,7 +30,7 @@ version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和
 ## OpenJDK
 {: #openjdk}
 
-（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用使用 OpenJDK 运行应用程序，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
+（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用应用程序以使用 OpenJDK 运行，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
@@ -67,7 +67,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
   * 将发生故障时应用程序的可用内存资源相关信息路由到 Loggregator。
   * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以从 Bluemix 仪表板或 CF CLI 来查看这些转储。
 
-下面是缺省 JVM 配置的示例，它是由 buildpack 为具有 512 MB 内存限制的已部署应用程序生成的：   
+下面是缺省 JVM 配置的示例，它是由 buildpack 为具有 512M 内存限制的已部署应用程序生成的：
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -83,32 +83,32 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ### 定制 JVM 配置
 {: #customizing_jvm}
 
-应用程序可以使用由配置给该应用程序的 JRE 所定义的规范来定制 JVM 选项。请参考有关如何直接从 JRE 文档指定选项及其用法的准则，因为选项随 JRE 不同而不同。
+应用程序可以使用为该应用程序配置的 JRE 所定义的规范来定制 JVM 选项。请直接参考 JRE 文档中有关如何指定选项及其用法的指导，因为选项随 JRE 不同而不同。
 
 <table>
 <tr>
 <th align="left">JRE</th>
 <th align="left">命令行选项格式</th>
-<th align="left">参考</th>
+<th align="left">参考信息</th>
 </tr>
 
 <tr>
 <td>IBM JRE</td>
 <td>包含运行时选项（前缀为 -X），任何 Java 系统属性（前缀为 -D），不建议随意使用 -XX（这些选项可能会更改）</td>
-<td>[V8
-命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html)，[V7 命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)</td>
+<td>[V8 命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html)，[V7 命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
+</td>
 </tr>
 
 <tr>
 <td> OpenJDK</td>
-<td>基于 HotSpot 运行时，其中包含 -X（表示非标准）、-XX（表示开发人员选项）以及用于启用或禁用选项的布尔标志</td>
+<td>基于 HotSpot 运行时，其中包含 -X（表示非标准）、-XX（表示开发者选项）符号表示法，以及用于启用或禁用该选项的布尔标志</td>
 <td>[HotSpot 运行时概述](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html)</td>
 </tr>
 </table>
 
 需要定制 JVM 选项的应用程序可以将该选项设置为 Bluemix 中的环境变量 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 其中某一个的值。有关如何设置应用程序的环境变量的信息，请参阅“环境变量”部分。打包服务器或服务器目录还可以包含含有命令行选项的 jvm.options 文件，而不设置环境变量。
 
-将 JVM 选项应用到 JRE 时，会先应用 Liberty buildpack 的缺省选项，然后应用定制选项。定制选项以特定顺序附加，即表中列出的顺序。选项的优先顺序是由应用 Java 选项的顺序所定义的。最后应用的选项的优先顺序高于之前应用的选项。
+将 JVM 选项应用到 JRE 时，会先应用 Liberty buildpack 的缺省选项，然后应用定制选项。以特定顺序附加定制选项，即表中列出的顺序。选项的优先顺序是由应用 Java 选项的顺序所定义的。最后应用的选项的优先顺序高于之前应用的选项。
 
 注：某些选项只有在代理程序触发选项后才会生效。
 
@@ -164,7 +164,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项还会以下列形式持久存储在运行时环境中：作为命令行选项（独立 Java 应用程序）或位于 jvm.options 文件中（非独立 Java 应用程序）。针对应用程序应用的 JVM 选项可以从 Bluemix 仪表板或 CF CLI 进行查看。
 
-独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些可在 staging_info.yml 文件中进行查看。
+独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。可在 staging_info.yml 文件中查看这些选项。
 ```
     $ cf files myapp staging_info.yml
 ```
@@ -178,11 +178,11 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ```
 {: #codeblock}
 
-要查看 jvm.options 文件中的打包服务器，请将 <serverName> 替换为您服务器的名称，并运行以下命令：
+要查看 jvm.options 文件中的打包服务器，请将 &lt;serverName> 替换为您服务器的名称，并运行以下命令：
 ```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
-{: #codeblock]
+{: #codeblock}
 
 #### 用法示例
 {: #example_usage}
@@ -205,7 +205,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
 ```
-     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
 ```
 {: #codeblock}
@@ -213,7 +213,6 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 * 查看触发内存不足状况时所生成的 JVM 转储：
 ```
     $ cf files myapp dumps
-
 
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
     OK
@@ -271,7 +270,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 下载相应的不受限制的策略文件，并将其添加到应用程序，如下所示：
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}

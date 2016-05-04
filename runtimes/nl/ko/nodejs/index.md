@@ -115,7 +115,7 @@ NPM은 사용자 node_modules가 설치되기 전과 후에 적용되는 **prein
 
 Node 빌드팩이 이전 빌드의 캐시를 사용할지 또는 무시할지를 판별하려면 NODE_MODULES_CACHE 변수를 사용하십시오. 기본값은 true입니다. 캐싱을 사용 안함으로 설정하려면 NODE_MODULES_CACHE를 false로 설정하십시오. 예를 들어 cf 명령행을 사용하는 경우 다음과 같습니다.
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -129,6 +129,36 @@ cf set-env myapp NODE_MODULES_CACHE false
 }
 ```
 {: codeblock}
+
+### FIPS 모드
+{: #fips_mode}
+
+Nodejs 빌드팩 버전 v3.2-20160315-1257 이상에서 [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)를 지원합니다. FIPS를 사용하려면 환경 변수 FIPS_MODE를 true로 설정하십시오.
+예: 
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+FIPS_MODE가 true일 때 **[MD5](https://en.wikipedia.org/wiki/MD5)를 사용하는 노드 모듈이 실패하게 됨**을 인지하는 것이 중요합니다. 예를 들면,
+[Express](http://expressjs.com/) 모듈이 실패하게 됩니다. Expess 앱에서 [etag](http://expressjs.com/en/api.html)를 false로 설정하면
+그 문제를 임시로 해결하도록 도울 수 있습니다. 예를 들면, 코드에서 다음과 같이 할 수 있습니다.
+```
+    app.set('etag', false);
+```
+{: codeblock}
+자세한 정보는 이 [스택오버플로우 포스트](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)를
+참조하십시오. 
+
+앱에서 FIPS_MODE가 true인지 확인하려면 **process.versions.openssl**의 값을 확인하십시오. 예:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+SSl 버전에 "fips"가 포함되어 있는 경우에는 앱이 FIPS 모드에서 실행 중입니다.    
+
 
 ## Node.js 빌드팩
 
