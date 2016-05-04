@@ -28,14 +28,15 @@ copyright:
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Tomcat 入門範本應用程式。Tomcat 入門範本應用程式是簡單的 Tomcat 應用程式，它提供一個可以讓您使用的範本。您可以實驗入門範本應用程式，並進行及推送對 Bluemix 環境的變更。使用入門範本應用程式時如需協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 Tomcat 入門範本應用程式。Tomcat 入門範本應用程式是簡單的 Tomcat 應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
 
 ## 執行時期版本
 {: #runtime_versions}
 
 您可以使用 JBP_CONFIG_TOMCAT 環境變數來變更應用程式要使用的 Tomcat 版本。
 您可以使用 JBP_CONFIG_OPEN_JDK_JRE 環境變數來變更應用程式要使用的 Java 版本。
-這兩者都可以在應用程式的資訊清單檔中予以指定。例如：```
+這兩者都可以在應用程式的資訊清單檔中予以指定。例如：
+```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'

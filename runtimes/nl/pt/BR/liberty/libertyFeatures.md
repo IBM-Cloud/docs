@@ -8,12 +8,12 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Recursos do Liberty suportados no Bluemmix 
+# Recursos do Liberty suportados no Bluemmix
 {: #liberty_features}
 
 *Última atualização: 23 de março de 2016*
 
-A tabela a seguir mostra os recursos do Liberty suportados no Bluemix 
+A tabela a seguir mostra os recursos do Liberty suportados no Bluemix
 
 <table>
 
@@ -196,7 +196,7 @@ A tabela a seguir mostra os recursos do Liberty suportados no Bluemix
 
 Os aplicativos que usam EJBs remotos podem ser implementados no Bluemix,
 no entanto, os EJBs remotos não são acessíveis remotamente com o protocolo
-CORBA/IIOP devido a restrições de porta no ambiente do Bluemix. 
+CORBA/IIOP devido a restrições de porta no ambiente do Bluemix.
 
 # rellinks
 ## geral

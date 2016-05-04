@@ -9,27 +9,28 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Opções para enviar por push os apps Liberty 
+# Opções para enviar por push os apps Liberty
 {: #options_for_pushing}
 
 *Última atualização: 23 de março de 2016*
 
 O comportamento do servidor Liberty no Bluemix é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no Bluemix, o buildpack assegura que as variáveis de ambiente para os serviços de ligação sejam mostradas como variáveis de configuração no servidor Liberty.
 
-É possível usar os métodos a seguir para implementar seus aplicativos Liberty no Bluemix. 
+É possível usar os métodos a seguir para implementar seus aplicativos Liberty no Bluemix.
 
 * Enviando um aplicativo independente por push
 * Enviando um diretório de servidor por push
 * Enviando um servidor em pacote por push
 
-Importante: ao implementar um aplicativo com o buildpack do Liberty, especifique um mínimo de 512 M como o Limite de memória para seus aplicativos. Para obter mais informações, veja [Limites de memória e o buildpack do Liberty](memoryLimits.html). 
+Importante: quando você implementa um aplicativo com o buildpack do Liberty, especifique um mínimo de 512 M como o limite de memória para seus aplicativos. Para obter mais informações, veja [Limites de memória e o buildpack do Liberty](memoryLimits.html).
 
 ## Apps independentes
 {: #stand_alone_apps}
 
-Os aplicativos independentes como os arquivos WAR ou EAR podem ser implementados no Liberty no Bluemix. 
+Os aplicativos independentes como os arquivos WAR ou EAR podem ser implementados no Liberty no Bluemix.
 
-Para implementar um aplicativo independente, execute o comando cf push com o parâmetro -p que aponta para seu arquivo WAR ou EAR. Por exemplo:
+Para implementar um aplicativo independente, execute o comando cf push com o parâmetro -p que aponta para seu arquivo WAR ou EAR.
+Por exemplo:
 
 ```
     $ cf push <yourappname> -p myapp.war
@@ -125,7 +126,7 @@ Por exemplo:
 ```    
 {: #codeblock}
 
-Importante: para que as mudanças da variável de ambiente entrem em vigor, deve-se remontar seu aplicativo: 
+Importante: para que as mudanças da variável de ambiente entrem em vigor, deve-se remontar seu aplicativo:
 
 ```
     $ cf restage myapp
@@ -135,7 +136,7 @@ Importante: para que as mudanças da variável de ambiente entrem em vigor, deve
 ## Diretório do servidor
 {: #server_directory}
 
-Em alguns casos, pode ser necessário fornecer uma configuração do servidor Liberty customizada com seu aplicativo. Essa configuração customizada pode ser necessária quando você implementa um arquivo WAR ou EAR e o arquivo server.xml padrão não tem certas configurações necessárias para seu aplicativo. 
+Em alguns casos, pode ser necessário fornecer uma configuração do servidor Liberty customizada com seu aplicativo. Essa configuração customizada pode ser necessária quando você implementa um arquivo WAR ou EAR e o arquivo server.xml padrão não tem certas configurações necessárias para seu aplicativo.
 
 Se você instalou o perfil Liberty em sua estação de trabalho e já criou um servidor Liberty com seu aplicativo, é possível enviar o conteúdo desse diretório para o Bluemix.
 Por exemplo, se o seu servidor Liberty for nomeado defaultServer, execute o comando:
@@ -150,7 +151,7 @@ Se um perfil Liberty não estiver instalado em sua estação de trabalho, será 
 1. Crie um diretório nomeado defaultServer.
 2. Crie um diretório apps no diretório defaultServer.
 3. Copie seu arquivo WAR ou EAR no diretório defaultServer/apps.
-4. No diretório defaultServer, crie um arquivo server.xml com o conteúdo de exemplo a seguir. Além disso:
+4. No diretório defaultServer, crie um arquivo server.xml com o conteúdo de exemplo a seguir.  Além disso:
   * Assegure-se de atualizar o local ou o atributo de tipo do elemento do aplicativo para corresponder o nome do arquivo e o tipo do aplicativo.
   * O arquivo server.xml no diagrama mostra um conjunto mínimo de recursos. Pode ser necessário ajustar o conjunto de recursos dependendo das necessidades do aplicativo.
 
@@ -167,7 +168,7 @@ Se um perfil Liberty não estiver instalado em sua estação de trabalho, será 
 ```
 {: #codeblock}
 
-Depois que o diretório do servidor estiver pronto, será possível implementá-lo no Bluemix. 
+Depois que o diretório do servidor estiver pronto, será possível implementá-lo no Bluemix.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -181,7 +182,7 @@ Nota: os aplicativos da Web que são implementados como parte do diretório do s
 ```
 {: #codeblock}
 
-## Servidor em pacote 
+## Servidor em pacote
 {: #packaged_server}
 
 Também é possível enviar por push um arquivo do servidor em pacote para o Bluemix. O arquivo de servidor em pacote é criado usando o comando de pacote do servidor Liberty. Além do aplicativo e dos arquivos de configuração, o arquivo do servidor em pacote pode conter recursos compartilhados e recursos do usuário do Liberty necessários pelo aplicativo.
@@ -189,9 +190,9 @@ Também é possível enviar por push um arquivo do servidor em pacote para o Blu
 Para colocar em pacote um servidor Liberty, use o comando ./bin/server package a partir do diretório de instalação do Liberty. Especifique o nome do servidor e inclua a opção '––include=usr'.
 Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
 Esse comando gera um arquivo serverName.zip no diretório do servidor. É possível então enviar por push esse arquivo compactado para o Bluemix com o comando cf push.
@@ -207,14 +208,14 @@ Nota: os aplicativos da web que são implementados como parte do servidor em pac
 ### Modificação do arquivo server.xml
 {: #modifications_of_serverxml}
 
-Quando um servidor em pacote ou um diretório do servidor Liberty é enviado por push, o buildpack do Liberty detecta o arquivo server.xml juntamente com seu aplicativo. O buildpack do Liberty faz as modificações a seguir no arquivo server.xml. 
+Quando um servidor em pacote ou um diretório do servidor Liberty é enviado por push, o buildpack do Liberty detecta o arquivo server.xml juntamente com seu aplicativo. O buildpack do Liberty faz as modificações a seguir no arquivo server.xml.
 
-* O buildpack assegura que haja exatamente um elemento httpEndpoint no arquivo. 
+* O buildpack assegura que haja exatamente um elemento httpEndpoint no arquivo.
 * O buildpack assegura que o atributo httpPort no elemento httpEndpoint aponte para uma variável do sistema chamada ${port}. O buildpack também substitui o atributo host.
 * O buildpack configura o atributo logDirectory no elemento de criação de log para apontar para um diretório de log do sistema.
-* O buildpack assegura que um arquivo runtime-vars.xml seja mesclado logicamente com seu arquivo server.xml. Especificamente, o buildpack anexa a linha *&lt;include location="runtime-vars.xml" /&gt;* ao seu arquivo server.xml. 
+* O buildpack assegura que um arquivo runtime-vars.xml seja mesclado logicamente com seu arquivo server.xml. Especificamente, o buildpack anexa a linha *&lt;include location="runtime-vars.xml" /&gt;* ao seu arquivo server.xml.
 
-### Variáveis referenciáveis 
+### Variáveis referenciáveis
 {: #referenceable_variables}
 
 As variáveis a seguir são definidas no arquivo runtime-vars.xml e referenciadas a partir de um arquivo server.xml enviado por push. Todas as variáveis fazem distinção entre maiúsculas e minúsculas.
@@ -234,8 +235,8 @@ As variáveis a seguir são definidas no arquivo runtime-vars.xml e referenciada
 
 Quando desejar ligar um serviço a seu aplicativo, as informações sobre o serviço, como as credenciais de conexão, são incluídas na [Variável de ambiente VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que o Cloud Foundry configura para o aplicativo. Para os [serviços automaticamente configurados](autoConfig.html), o buildpack Liberty gera ou atualiza entradas de ligação de serviço no arquivo server.xml. O conteúdo das entradas de ligação de serviço pode estar em um dos formatos a seguir:
 
-* cloud.services.<service-name>.<property>, que descreve as informações como o nome, o tipo e o plano do serviço. 
-* cloud.services.<service-name>.connection.<property>, que descreve as informações de conexão para o serviço. 
+* cloud.services.&lt;service-name&gt;.&lt;property&gt;, que descreve as informações como o nome, o tipo e o plano do serviço.
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que descreve as informações de conexão para o serviço.
 
 O conjunto de informações típico é o seguinte:
 * name: o nome do serviço. Por exemplo, mysql-e3abd.

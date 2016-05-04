@@ -45,6 +45,7 @@ VCAP_SERVICES を読み取って、バインドされたサービスについて
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 前述の通り、一部のサービスは、アプリケーション管理またはコンテナー管理のいずれかにすることができます。Mongo と SQLDB は、そういったサービスの例です。デフォルトでは、
 Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。アプリケーションがサービスを管理するようにしたい場合、services_autoconfig_excludes 環境変数を設定することで、サービスの自動構成をオプトアウトできます。詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
@@ -109,9 +110,7 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 **重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。空白文字は使用できません。**重要**: <service_type_specification> 内に空白文字を含めることはできません。空白文字の使用が許可されるのは、
 複数の <service_type_specification> インスタンスを区切る場合のみです。
 
-上記の Mongo シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、
-「all」オプションを使用します。上記の SQLDB シナリオのように、構成の更新アクションのみをオプトアウトするには、
-「config」オプションを使用します。
+上記の Mongo シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、「all」オプションを使用します。上記の SQLDB シナリオのように、構成の更新アクションのみをオプトアウトするには、「config」オプションを使用します。
 
 以下に、Mongo シナリオと SQLDB シナリオの manifest.yml ファイル内のオプトアウト指定の例を示します。
 

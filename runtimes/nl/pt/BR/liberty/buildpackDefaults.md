@@ -34,7 +34,7 @@ adverso o aplicativo. Existem opções para assegurar que o aplicativo
 não seja afetado pela mudança nos padrões de recursos.
 
 * Configure a variável de ambiente JBP_CONFIG_LIBERTY para especificar explicitamente
-uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](optionsForPushing.html#stand_alone_apps). 
+uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](optionsForPushing.html#stand_alone_apps).
 * Implemente seu aplicativo como um [diretório do
 servidor](optionsForPushing.html#server_directory) ou um [servidor
 em pacote](optionsForPushing.html#packaged_server). Forneça um arquivo server.xml customizado que especifique o conjunto exato dos recursos necessários para seu aplicativo.

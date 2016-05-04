@@ -157,7 +157,7 @@ y realiza actualizaciones de aplicación sin volver a desplegar o transferir la 
 
 ### 23 de enero de 2015: actualización del paquete de compilación de Liberty v1.11-20150119-1511
 * El paquete de compilación contiene una versión actualizada de IBM JRE
-7.1 SR2 FP1. 
+7.1 SR2 FP1.
 * También contiene una versión actualizada de WebSphere eXterme
 Scale Client v8.6.0.6 y el agente actualizado para el servicio Auto-Scaling.
 * El soporte del servicio de [New Relic](newRelic.html) se ha mejorado para dar soporte a los servicios definidos por el usuario.

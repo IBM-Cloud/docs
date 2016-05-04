@@ -17,12 +17,12 @@ Die Laufzeit von Python in {{site.data.keyword.Bluemix}} basiert auf dem Buildpa
 Das Buildpack 'python_buildpack' bietet eine vollständige Laufzeitumgebung für Python-Apps.
 {: shortdesc}
 
-Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer App die Datei 'requirements.txt' oder die Datei 'setup.py' enthält. 
+Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer App die Datei 'requirements.txt' oder die Datei 'setup.py' enthält.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Python-Starteranwendung bereit. Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html). 
+{{site.data.keyword.Bluemix}} stellt eine Python-Starteranwendung bereit.  Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -34,6 +34,7 @@ python-3.4.3
 ```
 {: codeblock}
 
+Wenn keine Version angegeben ist, wird standardmäßig Version 2.7.10 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
@@ -48,7 +49,7 @@ Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudf
 * 3.4.3
 * 3.5.0
 
-Wenn für Ihre Anwendung eine Python-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack) implementieren. 
+Wenn für Ihre Anwendung eine Python-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack) implementieren.
 
 # Zugehörige Links
 ## Allgemein

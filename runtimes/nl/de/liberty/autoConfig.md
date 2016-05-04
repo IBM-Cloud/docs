@@ -42,6 +42,7 @@ Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servi
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 Wie bereits erwähnt können manche Services anwendungsverwaltet oder containerverwaltet sein. Mongo und SQLDB sind Beispiele für solche Services. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable 'services_autoconfig_excludes' definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](autoConfig.html#opting_out).
 
@@ -70,14 +71,14 @@ Weitere Einzelheiten finden Sie in der Dokumentation zum gebundenen Servicetyp.
 In manchen Fällen soll das Liberty-Buildpack die gebundenen Services vielleicht nicht automatisch konfigurieren. Betrachten Sie die folgenden Szenarios:
 
 * Eine Anwendung verwendet MongoDB, die Verbindung zur Datenbank soll aber von der Anwendung direkt verwaltet werden. Die Anwendung enthält die erforderliche Clienttreiber-JAR-Datei. Das Liberty-Buildpack soll den Mongo-Service nicht automatisch konfigurieren.
-* Der Benutzer gibt die Datei 'server.xml' und die Konfigurationszeilengruppen für die SQLDB-Instanz an, da eine vom Standard abweichende Datenquellenkonfiguration erforderlich ist. Das Liberty-Buildpack soll die Datei 'server.xml' zwar nicht aktualisieren, aber dennoch sicherstellen, dass die entsprechende unterstützende Software installiert wird. 
+* Der Benutzer gibt die Datei 'server.xml' und die Konfigurationszeilengruppen für die SQLDB-Instanz an, da eine vom Standard abweichende Datenquellenkonfiguration erforderlich ist. Das Liberty-Buildpack soll die Datei 'server.xml' zwar nicht aktualisieren, aber dennoch sicherstellen, dass die entsprechende unterstützende Software installiert wird.
 
 Sie können die automatische Servicekonfiguration über die Umgebungsvariable 'services_autoconfig_excludes' ausschließen. Diese Umgebungsvariable kann in eine Datei 'manifest.yml' eingefügt oder mit dem cf-Client definiert werden.
 
-Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. Sie können die Konfiguration entweder vollständig (siehe Mongo-Szenario) oder nur die Konfigurationsaktualisierungen für die Datei 'server.xml' (siehe SQLDB-Szenario) ausschließen. Der Wert, den Sie für die Umgebungsvariable 'services_autoconfig_excludes' angeben, ist eine Zeichenfolge, für die Folgendes gilt: 
+Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. Sie können die Konfiguration entweder vollständig (siehe Mongo-Szenario) oder nur die Konfigurationsaktualisierungen für die Datei 'server.xml' (siehe SQLDB-Szenario) ausschließen. Der Wert, den Sie für die Umgebungsvariable 'services_autoconfig_excludes' angeben, ist eine Zeichenfolge, für die Folgendes gilt:
 
 * Die Zeichenfolge kann Opt-out-Spezifikationen für einen oder mehrere Services enthalten.
-* Die Opt-out-Spezifikation für einen bestimmten Service lautet 'service_type=option'. Dabei gilt Folgendes: 
+* Die Opt-out-Spezifikation für einen bestimmten Service lautet 'service_type=option'. Dabei gilt Folgendes:
   * 'service_type' ist die Bezeichnung für den Service gemäß VCAP_SERVICES.
   * Die Option lautet entweder 'all' oder 'config'.
 * Wenn die Zeichenfolge eine Opt-out-Spezifikation für mehrere Services enthält, müssen die einzelnen Opt-out-Spezifikationen durch ein einzelnes Leerzeichen voneinander getrennt werden.
@@ -96,7 +97,7 @@ Formal sieht die Syntax der Zeichenfolge wie folgt aus.
 **Wichtig**: Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
 **Wichtig**: Innerhalb von <Spezifikation_des_Servicetyps> ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Vorkommen von <Spezifikation_des_Servicetyps> voneinander zu trennen.
 
-Über die Option 'all' können alle automatischen Konfigurationsaktionen für einen Service ausgeschlossen werden (siehe Mongo-Szenario). Über die Option 'config' können Sie angeben, dass nur Konfigurationsaktualisierungsaktionen ausgeschlossen werden sollen (siehe SQLDB-Szenario).
+Über die Option "all" können alle automatischen Konfigurationsaktionen für einen Service ausgeschlossen werden (siehe Mongo-Szenario oben). Über die Option "config" können Sie angeben, dass nur die Konfigurationsaktualisierungsaktionen ausgeschlossen werden sollen (siehe SQLDB-Szenario oben).
 
 Beispiele für Opt-out-Spezifikationen in der Datei 'manifest.yml' für das Mongo- und das SQLDB-Szenario.
 

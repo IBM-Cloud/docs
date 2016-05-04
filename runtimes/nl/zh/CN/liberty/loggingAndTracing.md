@@ -27,7 +27,7 @@ copyright:
 {: #using_trace_and_dump}
 
 在 IBM Bluemix 用户界面中有跟踪和转储功能。
-* 使用跟踪可查看和更新在运行中应用程序实例上的 Liberty 日志记录 traceSpecification。
+* 使用跟踪可查看和更新有关运行中应用程序实例的 Liberty 日志记录 traceSpecification。
 * 使用转储可创建和处理在运行中应用程序实例上的线程和堆转储。
 
 要执行此操作，请在用户界面中选择 Liberty 应用程序。在左侧导航中的“运行时”下，可以打开实例详细信息。选择一个或多个实例。在“操作”菜单下，可以选择 TRACE 或 DUMP。

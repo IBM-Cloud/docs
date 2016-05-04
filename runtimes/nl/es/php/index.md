@@ -25,7 +25,7 @@ El php_buildpack se utiliza en las condiciones siguientes:
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio PHP. La aplicación de inicio PHP es una aplicación PHP sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la aplicación de inicio, y realizar y enviar por push los cambios al entorno {site.data.keyword.Bluemix}}. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio PHP.  La aplicación de inicio PHP es una aplicación PHP sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la aplicación de inicio, y realizar y enviar por push los cambios al entorno {site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}

@@ -19,7 +19,7 @@ Os aplicativos Liberty for Java no {{site.data.keyword.Bluemix}} são desenvolvi
 
 ## Detecção
 {: #detection}
-O buildpack do Liberty é usado quando os tipos de aplicativos a seguir são implementados: 
+O buildpack do Liberty é usado quando os tipos de aplicativos a seguir são implementados:
 * [Arquivos WAR](optionsForPushing.html#stand_alone_apps)
 * [Arquivos
 EAR](optionsForPushing.html#stand_alone_apps)
@@ -30,7 +30,7 @@ EAR](optionsForPushing.html#stand_alone_apps)
 
 ## Aplicativo iniciador
 {: #starter_application}
-O {{site.data.keyword.Bluemix}} fornece vários aplicativos iniciadores Liberty. Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os apps iniciadores e fazer e enviar por push as mudanças para o ambiente Bluemix. Veja [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.
+O {{site.data.keyword.Bluemix}} fornece vários aplicativos iniciadores Liberty.  Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os apps iniciadores e fazer e enviar por push as mudanças para o ambiente Bluemix.  Veja [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.
 
 # rellinks
 ## geral

@@ -26,7 +26,7 @@ Il php_buildpack viene utilizzato nelle seguenti condizioni:
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} fornisce un'applicazione starter PHP.  L'applicazione starter PHP è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente
-{site.data.keyword.Bluemix}}. Consulta il documento relativo all'[utilizzo delle applicazioni starter](../../cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
+{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](../../cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
@@ -39,7 +39,7 @@ Puoi specificare la versione di PHP che deve essere utilizzata dalla tua applica
 }
 ```
 {: codeblock}
-Per ulteriori informazioni, vedi [Pacchetti piattaforma compositore](https://getcomposer.org/doc/02-libraries.md#platform-packages). 
+Per ulteriori informazioni, vedi [Pacchetti piattaforma compositore](https://getcomposer.org/doc/02-libraries.md#platform-packages).
 
 Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 5.5.30.
 

@@ -18,7 +18,7 @@ O tempo de execução Node.js no {{site.data.keyword.Bluemix}} é desenvolvido c
 O buildpack sdk-for-nodejs fornece um ambiente de tempo de execução completo para apps Node.js.
 {: shortdesc}
 
-O buildpack sdk-for-nodejs é usado quando o aplicativo contém um arquivo **package.json** no diretório-raiz. 
+O buildpack sdk-for-nodejs é usado quando o aplicativo contém um arquivo **package.json** no diretório-raiz.
 
 ## Aplicativo iniciador
 {: #starter_application}
@@ -119,11 +119,11 @@ NPM fornece um recurso de script permitindo que você execute scripts, incluindo
 
 ### Comportamento do cache
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} mantém um diretório de cache por aplicativo de nó, que é persistido entre as construções. O cache armazena dependências resolvidas para que elas não sejam transferidas por download e instaladas toda vez que o app for implementado.  Por exemplo, suponha que myapp dependa de **express**.  Em seguida, na primeira vez que myapp for implementado, o módulo **expess** será transferido por download.  Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower. 
+{{site.data.keyword.Bluemix}} mantém um diretório de cache por aplicativo de nó, que é persistido entre as construções. O cache armazena dependências resolvidas para que elas não sejam transferidas por download e instaladas toda vez que o app for implementado.  Por exemplo, suponha que myapp dependa de **express**.  Em seguida, na primeira vez que myapp for implementado, o módulo **expess** será transferido por download.  Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
 
 Use a variável NODE_MODULES_CACHE para determinar se o builpack Node usa ou ignora ou não o cache de construções anteriores. O valor padrão é true.  Para desativar o armazenamento em cache, configure NODE_MODULES_CACHE como false, por exemplo, por meio da linha de comandos cf:
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -137,6 +137,36 @@ Observe que os node_modules que estão incluídos em seu aplicativo não são ar
 }
 ```
 {: codeblock}
+
+### FIPS MODE
+{: #fips_mode}
+
+O buildpack Nodejs versões v3.2-20160315-1257 e mais recentes suporta [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards). Para ativar o FIPS, configure a variável de ambiente FIPS_MODE como true.
+Por exemplo:
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+É importante entender que quando FIPS_MODE for true **os módulos do nó que usam [MD5](https://en.wikipedia.org/wiki/MD5) irão falhar**. Por exemplo,
+os módulos [Express](http://expressjs.com/) falharão. Configurar [etag](http://expressjs.com/en/api.html) como false em seu app
+Express pode ajudar como solução alternativa. Por exemplo, é possível fazer o seguinte em seu código:
+```
+    app.set('etag', false);
+```
+{: codeblock}
+Veja este [post de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
+para obter mais informações.
+
+Para verificar se FIPS_MODE for true em seu app, verifique o valor de **process.versions.openssl**. Por exemplo:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+Se a versão SSl contiver "fips", então o app estará executando no modo FIPS.    
+
 
 ## Buildpacks Node.js
 

@@ -14,6 +14,21 @@ copyright:
 *Ultimo aggiornamento: 22 marzo 2016*
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+## 29 aprile 2016: pacchetto di build Node.js aggiornato v3.3-20160418-1749
+
+Questa release del pacchetto di build aggiunge le versioni di runtime di IBM SDK for Node.js 0.10.44, 0.12.13, 4.4.1 e 4.4.2. La versione predefinita è ora la 4.4.2. Molte vecchie versioni di runtime di IBM SDK for Node.js sono state rimosse. Il pacchetto di build include ora solo le ultime due versioni di 0.10.x, 0.12.x e 4.x le quali al momento sono 0.10.43, 0.10.44, 0.12.12, 0.12.13, 4.4.1 e 4.4.2.
+
+Per 4.4.1 e 4.4.2, è ora possibile utilizzare una versione compatibile FIPS del runtime utilizzando la variabile di ambiente `FIPS_MODE=true` per la tua applicazione. Quindi cerca `FIPS_MODE` nell'output della fase di preparazione per confermare che è stata riconosciuta dal pacchetto di build.
+
+Il pacchetto di build aggiornato e le nuove versioni di runtime contengono inoltre le correzioni per le vulnerabilità della sicurezza:
+* [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-2537](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-3956](http://www-01.ibm.com/support/docview.wss?uid=swg21980827)
+
+Il pacchetto di build aggiornato contiene inoltre le correzioni a due bug:
+* Ora le build di IBM SDK for Node.js saranno sempre utilizzate se ne è disponibile una che corrisponde all'intervallo richiesto. Precedentemente era vero solo per le versioni di runtime 4.x.
+* Ora il programma di utilità inspector Gestione applicazioni utilizzerà le versioni di runtime 4.x.
+
 ## 18 marzo 2016: pacchetto di build Node.js aggiornato v3.2-20160315-1257
 
 Questa release del pacchetto di build sposta il runtime IBM SDK for Node.js predefinito dalla versione 4.3.0 alla 4.3.2. Essa inoltre include IBM SDK for Node.js versioni 0.10.43, 0.12.12, e 4.3.1. Gli utenti devono utilizzare queste ultime versioni di Node.js per apportare le correzioni a diverse vulnerabilità di sicurezza.
@@ -51,7 +66,7 @@ Questa release è completamente sincronizzata con il pacchetto di build [Cloud F
 
 ## 16 dicembre 2015: pacchetto di build Node.js aggiornato v2.8-20151209-1403 e v3.0beta-20151211-2041
 
-Questa release del pacchetto di build Node.js viene fornita con due versioni, v2.8 e v3.0beta.  Entrambe le versioni includono le seguenti modifiche:
+Questa release del pacchetto di build Node.js viene fornita con due versioni, v2.8 e v3.0beta. Entrambe le versioni includono le seguenti modifiche:
 
 Una correzione di bug per il servizio Monitoring and Analytics L'inclusione di un runtime
 memorizzato in cache per IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 e v1.2.0.7 (basati
@@ -59,8 +74,8 @@ rispettivamente su Node.js v4.2.3, v4.2.2, v0.12.9 e v0.12.8 di community) Inolt
 
 Il pacchetto di build v3.0beta di IBM Node.js è stato rilasciato come un pacchetto di build non predefinito su Bluemix con Node.js v4.2.3 come runtime predefinito. Per garantire che le tue applicazioni e i tuoi servizi continuino a funzionare su Bluemix, esegui il push della tua applicazione con la versione beta del pacchetto di build. Dopo 30 giorni o più, la v3 diventerà il pacchetto di build predefinito.
 
-Per eseguire il push della tua applicazione con v3.0beta: 
-* Utilizza l'opzione "-b" nel tuo comando 'cf push': 
+Per eseguire il push della tua applicazione con v3.0beta:
+* Utilizza l'opzione "-b" nel tuo comando 'cf push':
 
 ```
         cf push -b sdk-for-nodejs-v3beta
@@ -86,11 +101,12 @@ Node.js v2.6.1 introduce una correzione di bug al [gestore di gestione delle app
 
 ## 15 ottobre 2015: pacchetto di build Node.js aggiornato v2.6-20151006-1309
 
-Questa release del pacchetto di build Node.js offre l'integrazione di [StrongLoop Process Manager](https://strong-pm.io) alla funzione Gestione applicazioni. Per ulteriori informazioni, consulta il post del blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/). 
+Questa release del pacchetto di build Node.js offre l'integrazione di [StrongLoop Process Manager](https://strong-pm.io) alla funzione Gestione applicazioni. Per ulteriori informazioni, consulta il post del blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 giugno 2015: pacchetto di build Node.js aggiornato v2.0-20150608-1503
 
-In questa release, è stata eseguita la sincronizzazione tra il pacchetto di build Node.js e [il pacchetto di build Node.js della community CF](https://github.com/cloudfoundry/nodejs-buildpack) più recente, fornito dalla community con numerose nuove funzioni.Inoltre, è stata rinnovata la funzione Gestione applicazioni nel pacchetto di build Node.js, che abilita programmi di utilità quali shell, node-inspector, Bluemix Live Sync e altro ancora.  Per i dettagli vedi [Gestione applicazioni](../../manageapps/app_mng.html).
+In questa release, è stata eseguita la sincronizzazione tra il pacchetto di build Node.js e [il pacchetto di build Node.js della community CF](https://github.com/cloudfoundry/nodejs-buildpack) più recente, fornito dalla community con numerose nuove funzioni.
+Inoltre, è stata rinnovata la funzione Gestione applicazioni nel pacchetto di build Node.js, che abilita programmi di utilità quali shell, node-inspector, Bluemix Live Sync e altro ancora. Per i dettagli vedi [Gestione applicazioni](../../manageapps/app_mng.html).
 
 ## 5 maggio 2015: pacchetto di build Node.js aggiornato v1.17-20150429-1033
 

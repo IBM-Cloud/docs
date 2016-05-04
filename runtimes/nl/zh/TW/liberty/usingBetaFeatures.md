@@ -47,18 +47,18 @@ Bluemix 中可用的 Liberty 測試版特性
 ```
 {: #codeblock}
 
-2.  將 IBM_LIBERTY_BETA 環境變數設為 **true**。此變數會引導 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。請參閱下列範例：
+2.  將 IBM_LIBERTY_BETA 環境變數設為 **true**。此變數會指示 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。請參閱下列範例：
   * 使用 cf 指令行工具：
-<pre>
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * 或者，使用 manifest.yml 檔案：
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # 相關鏈結

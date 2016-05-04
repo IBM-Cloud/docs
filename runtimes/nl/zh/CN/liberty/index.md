@@ -14,7 +14,7 @@ copyright:
 
 *上次更新时间：2016 年 3 月 23 日*
 
-{{site.data.keyword.Bluemix}} 上的 Liberty for Java 应用程序由 liberty-for-java buildpack 提供技术支持。liberty-for-java buildpack 为基于 Liberty 概要文件运行 Java EE 7 和 OSGi 应用程序提供了完整的运行时环境。它支持 Spring 等常用框架，并包含 IBM JRE。WebSphere Liberty 支持非常适合云的快速应用程序开发。
+{{site.data.keyword.Bluemix}} 上的 Liberty for Java 应用程序由 liberty-for-java buildpack 提供技术支持。liberty-for-java buildpack 为基于 Liberty 概要文件运行 Java EE 7 和 OSGi 应用程序提供了完整的运行时环境。它支持 Spring 等流行框架，并包含 IBM JRE。WebSphere Liberty 支持非常适合云的快速应用程序开发。
 {: shortdesc}
 
 ## 检测

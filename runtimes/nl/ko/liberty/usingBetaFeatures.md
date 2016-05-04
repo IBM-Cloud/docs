@@ -15,8 +15,7 @@ copyright:
 
 Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로운 기능과 프로그래밍 모델을 미리 사용해 볼 수 있도록 합니다. Bluemix에 배치된 애플리케이션에서도 대부분의 베타 기능을 사용할 수 있습니다. 
 
-**중요**: 베타 기능은 개발과 테스트 용도로만 제공되며 운영 환경에서는 사용할 수 없습니다. 이용 약관 전문을 보려면
-[베타 라이센스 계약](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html)을 참조하십시오.
+**중요**: 베타 기능은 개발과 테스트 용도로만 제공되며 운영 환경에서는 사용할 수 없습니다. 이용 약관 전문을 보려면 [베타 라이센스 계약](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html)을 참조하십시오.
 
 Bluemix에서 사용 가능한 Liberty 베타 기능
 <table>
@@ -48,19 +47,18 @@ Bluemix에서 Liberty 베타 기능을 사용하려면 다음을 수행해야 �
 ```
 {: #codeblock}
 
-2.  IBM_LIBERTY_BETA 환경 변수를 **true**로 설정하십시오. 이 변수는 애플리케이션의 베타 기능을 설치하고
-활성화하도록 Liberty 빌드팩에 지시합니다.다음 예를 참조하십시오. 
-  * cf 명령행 도구 사용: 
-<pre>
+2.  IBM_LIBERTY_BETA 환경 변수를 **true**로 설정하십시오. 이 변수는 애플리케이션의 베타 기능을 설치하고 활성화하도록 Liberty 빌드팩에 지시합니다. 다음 예를 참조하십시오. 
+  * cf 명령행 도구 사용:
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * 또는 manifest.yml 파일 사용:
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # 관련 링크

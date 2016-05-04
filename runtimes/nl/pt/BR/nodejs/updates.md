@@ -8,31 +8,46 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Atualizações mais recentes para o buildpack sdk-for-nodejs 
+# Atualizações mais recentes para o buildpack sdk-for-nodejs
 {: #latest_updates}
 
 *Última atualização: 22 de março de 2016*
 
-Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs. 
+Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
+## 29 de abril de 2016: atualizado o buildpack Node.js v3.3-20160418-1749
+
+Esta liberação do buildpack inclui o tempo de execução do IBM SDK for Node.js versões 0.10.44, 0.12.13, 4.4.1 e 4.4.2. O padrão é agora 4.4.2. Várias versões de runtime anteriores do IBM SDK for Node.js também foram removidas. O buildpack agora inclui somente as duas versões mais recentes 0.10.x, 0.12.x e 4.x que são atualmente a 0.10.43, 0.10.44, 0.12.12, 0.12.13, 4.4.1 e 4.4.2.
+
+Para 4.4.1 e 4.4.2, agora é possível usar uma versão compatível com FIPS do tempo de execução configurando a variável de ambiente `FIPS_MODE=true` para seu app. Em seguida, verifique `FIPS_MODE` na saída temporária para confirmar se ela foi reconhecida pelo buildpack.
+
+O buildpack atualizado e as novas versões de runtime também contêm correções para vulnerabilidades de segurança:
+* [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-2537](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-3956](http://www-01.ibm.com/support/docview.wss?uid=swg21980827)
+
+O buildpack atualizado contém correções para dois erros:
+* Agora as construções do IBM SDK for Node.js serão sempre usadas se houver uma disponível correspondente ao intervalo solicitado. Anteriormente isso era verdadeiro somente para versões de runtime 4.x.
+* Agora o utilitário do inspetor de gerenciamento de app funcionará com as versões de runtime 4.x.
+
 ## 18 de março de 2016: Atualizado o Buildpack Node.js v3.2-20160315-1257
 
-Esta liberação do buildpack move o tempo de execução padrão do IBM SDK for Node.js da versão 4.3.0 para 4.3.2. Também inclui o IBM SDK for Node.js versões 0.10.43, 0.12.12 e 4.3.1. Os usuários devem usar essas versões recentes do Node.js para captar as correções para vulnerabilidades de segurança diversas. 
+Esta liberação do buildpack move o tempo de execução padrão do IBM SDK for Node.js da versão 4.3.0 para 4.3.2. Também inclui o IBM SDK for Node.js versões 0.10.43, 0.12.12 e 4.3.1. Os usuários devem usar essas versões recentes do Node.js para captar as correções para vulnerabilidades de segurança diversas.
 
-## 4 de março de 2016: Atualizado o buildpack Node.js v3.1-20160222-1123 
+## 4 de março de 2016: Atualizado o buildpack Node.js v3.1-20160222-1123
 
-Esta liberação do buildpack move o tempo de execução padrão do IBM SDK for Node.js da versão 4.2.4 para 4.3.0. Também inclui o IBM SDK for Node.js versões 0.10.42, 0.12.10 e 4.2.6. Os usuários devem usar essas versões recentes do Node.js para captar as correções para vulnerabilidades de segurança diversas. 
+Esta liberação do buildpack move o tempo de execução padrão do IBM SDK for Node.js da versão 4.2.4 para 4.3.0. Também inclui o IBM SDK for Node.js versões 0.10.42, 0.12.10 e 4.2.6. Os usuários devem usar essas versões recentes do Node.js para captar as correções para vulnerabilidades de segurança diversas.
 
-## 4 de fevereiro de 2016: Atualizado o buildpack Node.js v3.0-20160125-1224 
+## 4 de fevereiro de 2016: Atualizado o buildpack Node.js v3.0-20160125-1224
 
-Esta liberação é totalmente sincronizada com o buildpack do [Node.js da comunidade do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Além de mudanças da comunidade, houve mudanças em determinados padrões, otimizações para reduzir o tempo de preparação e atualizações para o recurso App Management. 
+Esta liberação é totalmente sincronizada com o buildpack do [Node.js da comunidade do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Além de mudanças da comunidade, houve mudanças em determinados padrões, otimizações para reduzir o tempo de preparação e atualizações para o recurso App Management.
 
 * Atualizações do buildpack:
 
-  * O Node.js v4.2.4 (IBM SDK for Node.js Versão 4) agora é o tempo de execução padrão no Bluemix, substituindo o v0.12.9. Isso pode fazer com que seu aplicativo se comporte de forma diferente se você não tiver especificado uma determinada versão para seu aplicativo. Para saber como especificar uma versão do Node.js para seu aplicativo Bluemix, veja a documentação [Tempo de execução do Node.js](index.html). 
+  * O Node.js v4.2.4 (IBM SDK for Node.js Versão 4) agora é o tempo de execução padrão no Bluemix, substituindo o v0.12.9. Isso pode fazer com que seu aplicativo se comporte de forma diferente se você não tiver especificado uma determinada versão para seu aplicativo. Para saber como especificar uma versão do Node.js para seu aplicativo Bluemix, veja a documentação [Tempo de execução do Node.js](index.html).
 
-  * NODE_ENV está agora configurado como *production* por padrão. Isso fará com que algumas dependências do nó se comportem de forma diferente. Por exemplo, a estrutura Express não retornará mais os rastreios de pilha no navegador da web para os terminais com falha, mas, em vez disso, exibirá apenas *Erro interno do servidor*. Quando NPM_CONFIG_PRODUCTION for configurado como *true*, o NPM configurará NODE_ENV como *production* para scripts subshell somente na fase de instalação do npm. Esse permite que os usuários configurem NODE_ENV para outro valor como *development* para o tempo de execução do aplicativo. Para clareza, os scripts npm verão a mensagem **NODE_ENV=production**. 
+  * NODE_ENV está agora configurado como *production* por padrão. Isso fará com que algumas dependências do nó se comportem de forma diferente. Por exemplo, a estrutura Express não retornará mais os rastreios de pilha no navegador da web para os terminais com falha, mas, em vez disso, exibirá apenas *Erro interno do servidor*. Quando NPM_CONFIG_PRODUCTION for configurado como *true*, o NPM configurará NODE_ENV como *production* para scripts subshell somente na fase de instalação do npm. Esse permite que os usuários configurem NODE_ENV para outro valor como *development* para o tempo de execução do aplicativo. Para clareza, os scripts npm verão a mensagem **NODE_ENV=production**.
 
-  * Uma correção de bug para o serviço Monitoring and Analytics está incluída. 
+  * Uma correção de bug para o serviço Monitoring and Analytics está incluída.
 
 * Atualizações de armazenamento em cache:
 

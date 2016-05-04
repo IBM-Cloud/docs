@@ -30,7 +30,7 @@ log e outras opções de rastreio podem ser configurados por meio do arquivo de 
 ## Usando os recursos de rastreio e de dump
 {: #using_trace_and_dump}
 
-Na interface com o usuário do IBM Bluemix, existem recursos de rastreio e de dump. 
+Na interface com o usuário do IBM Bluemix, existem recursos de rastreio e de dump.
 * Use o Rastreio para visualizar e atualizar o traceSpecification de criação de log do Liberty em instâncias do aplicativo em execução.
 * Use o Dump para criar e manipular dumps de encadeamento e de heap em instâncias do aplicativo em execução.
 

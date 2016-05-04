@@ -22,7 +22,7 @@ ruby_buildpack 為 Ruby 應用程式提供完整的執行時期環境。
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Ruby 入門範本應用程式。Ruby 入門範本應用程式是簡單的 Ruby 應用程式，它提供一個可以讓您用於應用程式的範本。您可以實驗入門範本應用程式，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。使用入門範本應用程式時如需協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 Ruby 入門範本應用程式。Ruby 入門範本應用程式是簡單的 Ruby 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
 
 ## 執行時期版本
 {: #runtime_versions}
@@ -56,5 +56,5 @@ ruby_buildpack 為 Ruby 應用程式提供完整的執行時期環境。
 
 # 相關鏈結
 ## 一般
-* [Ruby 的 Cloud Foundry 建置套件](https://github.com/cloudfoundry/cf-buildpack-ruby)
+* [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails 文件](http://rubyonrails.org/documentation/)

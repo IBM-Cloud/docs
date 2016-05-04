@@ -42,14 +42,14 @@ Le pack de construction Liberty se charge de la configuration automatique des ty
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 Comme mentionné, certains services peuvent être soit gérés par l'application, soit gérés par le conteneur. Mongo et SQLDB sont des exemples de tels services. Par défaut, le pack de construction Liberty suppose que ces services sont gérés par le conteneur et les configure automatiquement. Si vous souhaitez que le service soit géré par l'application, vous pouvez résilier la configuration automatique du service en configurant la variable d'environnement services_autoconfig_excludes. Pour plus d'informations, voir [Résiliation de la configuration automatique des services](autoConfig.html#opting_out).
 
 ## Installation des fonctions Liberty et du code d'accès client
 {: #installation_of_liberty_features}
 
-Lorsque vous créez une liaison à un service géré par le conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section featureManager du fichier server.xml.
-Le pack de construction Liberty met à jour la section featureManager et installe les fichiers binaires de support requis. Si le service requiert des fichiers Jar de pilote client, ces fichiers Jar sont téléchargés à un emplacement prédéterminé dans le répertoire d'installation de
+Lorsque vous créez une liaison à un service géré par le conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section featureManager du fichier server.xml. Le pack de construction Liberty met à jour la section featureManager et installe les fichiers binaires de support requis. Si le service requiert des fichiers Jar de pilote client, ces fichiers Jar sont téléchargés à un emplacement prédéterminé dans le répertoire d'installation de
 Liberty.
 
 Pour plus d'informations, voir la documentation relative au type de service lié.
@@ -57,12 +57,11 @@ Pour plus d'informations, voir la documentation relative au type de service lié
 ## Génération ou mise à jour des sections de configuration dans le fichier server.xml
 {: #generating_or_updating_serverxml}
 
-Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère la section server.xml comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing) vers Bluemix.
-Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
+Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère la section server.xml comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing) vers Bluemix. Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
 
 Lorsque vous fournissez un fichier server.xml et que vous créez une liaison avec des services gérés par conteneur, le pack de construction Liberty effectue les opérations suivantes :
 
-* Génération de la configuration pour les services liés si le fichier server.xml fourni ne comporte pas de sections de configuration pour ces services. 
+* Génération de la configuration pour les services liés si le fichier server.xml fourni ne comporte pas de sections de configuration pour ces services.
 * Mise à jour de la configuration des services liés si le fichier server.xml fourni comporte déjà des sections de configuration pour ces services.
 
 Pour plus d'informations, voir la documentation relative au type de service lié.
@@ -74,7 +73,6 @@ Dans certains cas, vous ne souhaiterez peut-être pas que le pack de constructio
 
 * Votre application utilise la base de données MongoDB, mais vous désirez que l'application gère directement la connexion à la base de données. L'application contient le fichier Jar de pilote client requis. Vous ne voulez pas que le pack de construction Liberty configure automatiquement le service Mongo.
 * Vous avez soumis un fichier server.xml comportant les sections de configuration pour l'instance SQLDB car vous avez besoin d'une configuration de source de données non standard. Vous ne voulez pas que le pack de construction Liberty mette à jour le fichier server.xml, mais vous souhaitez tout de même qu'il vérifie que le logiciel de prise en charge est installé.
-
 
 Pour résilier la configuration automatique des services, utilisez alors la variable d'environnement services_autoconfig_excludes. Vous pouvez inclure cette variable d'environnement dans un fichier manifest.yml ou la définir à l'aide du client cf.
 
@@ -90,7 +88,6 @@ Plus formellement, la syntaxe de la chaîne est la suivante :
 
 ```
     Opt_out_string :: <spécification_type_service[<délimiteur>spécification_type_service]*
-
     <spécification_type_service> :: <type_service>=<option>
     <type_service> :: type de service (label du service tel qu'il figure dans VCAP_SERVICES)
     <option> :: all | config
@@ -101,7 +98,7 @@ Plus formellement, la syntaxe de la chaîne est la suivante :
 **Important** : Le type de service que vous indiquez doit correspondre au libellé des services tel qu'il figure dans la variable d'environnement VCAP_SERVICES. Le caractère espace n'est pas admis.
 **Important** : Aucun espace n'est autorisé dans une entrée <spécification_type_service>. L'unique utilisation admise d'un espace est pour la séparation de plusieurs instances de <spécification_type_service>.
 
-Utilisez l'option “all” pour résilier toutes les actions de configuration automatique de services, comme dans le scénario Mongo ci-dessus. Utilisez l'option "config" pour résilier uniquement les actions de mise à jour de la configuration, comme dans le scénario SQLDB ci-dessus.
+Utilisez l'option "all" pour résilier toutes les actions de configuration automatique de services, comme dans le scénario Mongo ci-dessus. Utilisez l'option "config" pour ne résilier que les actions de mise à jour de configuration, comme dans le scénario SQLDB ci-dessus.
 
 Voici quelques de résiliation de configuration automatique dans un fichier manifest.yml pour les scénarios Mongo et SQLDB.
 

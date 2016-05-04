@@ -14,11 +14,9 @@ copyright:
 
 *上次更新时间：2016 年 3 月 23 日*
 
-Liberty buildpack 在 Bluemix 中会频繁更新。
-每个发行版都可能包含安全修订或增强功能。
+Liberty buildpack 在 Bluemix 中会频繁更新。每个发行版都可能包含安全修订或增强功能。
 
-对于 WAR 或 EAR 应用程序的 Java 版本或 Liberty 功能集等设置，buildpack 具有缺省值。
-其中一些缺省值可能会在不同 buildpack 发行版中有所更改，这可能会对应用程序产生不利影响。要阻止应用程序受 buildpack 缺省值更改的影响，请执行步骤来配置应用程序，以避免应用程序依赖 buildpack 缺省值。
+对于 WAR 或 EAR 应用程序的 Java 版本或 Liberty 功能集等设置，buildpack 具有缺省值。其中一些缺省值可能会在不同 buildpack 发行版中有所更改，这可能会对应用程序产生不利影响。要阻止应用程序受 buildpack 缺省值更改的影响，请执行步骤来配置应用程序，以避免应用程序依赖 buildpack 缺省值。
 
 ## Liberty 功能
 {: #liberty_features}

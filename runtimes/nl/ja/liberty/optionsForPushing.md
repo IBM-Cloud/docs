@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2015, 2016
@@ -26,7 +26,7 @@ Liberty ビルドパックは、単一の Liberty サーバーにデプロイさ
 * サーバー・ディレクトリーをプッシュする
 * パッケージされたサーバーをプッシュする
 
-重要: Liberty ビルドパックでアプリケーションをデプロイする際には、アプリケーションのメモリー限度として最小でも 512 M を指定してください。[『メモリー制限および Liberty ビルドパック』](memoryLimits.html)を参照してください。
+重要: Liberty ビルドパックでアプリケーションをデプロイする際には、アプリケーションのメモリー限度として最小 512M を指定してください。[『メモリー制限および Liberty ビルドパック』](memoryLimits.html)を参照してください。
 
 ## スタンドアロン・アプリケーション
 {: #stand_alone_apps}
@@ -169,7 +169,7 @@ Liberty プロファイルをワークステーションにインストールし
             <feature>jsp-2.3</feature>
         </featureManager>
 
-        <httpEndpoint id=>
+        <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
@@ -197,9 +197,9 @@ Liberty プロファイルをワークステーションにインストールし
 
 Liberty サーバーをパッケージするには、Liberty インストール・ディレクトリーから ./bin/server package コマンドを使用します。サーバー名を指定して、'––include=usr' オプションを含めます。例えば、Liberty サーバーが defaultServer の場合、次のコマンドを実行します。
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
 このコマンドはサーバーのディレクトリーに serverName.zip ファイルを生成します。その後 cf push コマンドで圧縮ファイルを Bluemix にプッシュできます。例えば、次のとおりです。
@@ -243,8 +243,8 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 それを Cloud Foundry がアプリケーション用に設定します。[自動構成されるサービス](autoConfig.html)の場合、
 Liberty ビルドパックが server.xml ファイル内のサービス・バインディングのエントリーを生成または更新します。サービス・バインディングのエントリーの内容は、以下のいずれかの形式です。
 
-* cloud.services.<service-name>.<property> は、サービスの名前、タイプ、プランなどの情報を記述します。
-* cloud.services.<service-name>.connection.<property> は、サービスの接続情報を記述します。
+* cloud.services.&lt;service-name&gt;.&lt;property&gt; は、サービスの名前、タイプ、プランなどの情報を記述します。
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; は、サービスの接続情報を記述します。
 
 情報の典型的なセットは、次のとおりです。
 * name: サービスの名前。例えば、mysql-e3abd です。label: 作成されたサービスのタイプ。例えば、mysql-5.5 です。

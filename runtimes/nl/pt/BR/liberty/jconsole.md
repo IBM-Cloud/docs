@@ -16,54 +16,53 @@ copyright:
 ## As etapas para monitorar o tempo de execução do Bluemix Liberty com o JConsole são as seguintes:
 {: #steps_to_monitor}
 
-1. Envie por push seu aplicativo em um pacote do servidor que contenha um server.xml apropriado. 
-2. Inicie o app JConsole com as propriedades de sistema adequadas na linha de comandos. 
+1. Envie por push seu aplicativo em um pacote do servidor que contenha um server.xml apropriado.
+2. Inicie o app JConsole com as propriedades de sistema adequadas na linha de comandos.
 3. Forneça a URL adequada do processo remoto, o Nome do usuário e a Senha para o JConsole.
 
 ### Enviar por push o pacote do servidor
 {: #push_server_package}
 
-Envie por push o pacote do servidor que contém seu aplicativo, limitando-o a uma instância única. Seu arquivo server.xml deve conter os recursos monitor-1.0 e restConnector-1.0. Ele também deve conter um elemento basicRegistry e um elemento administrator-role. 
-<pre>
-       &lt;featureManager&gt;
-    	   &lt;feature&gt;jsp-2.2&lt;/feature&gt;
-    	   &lt;feature&gt;monitor-1.0&lt;/feature&gt;
-    	   &lt;feature&gt;restConnector-1.0&lt;/feature&gt;
-       &lt;/featureManager&gt;
+Envie por push o pacote do servidor que contém seu aplicativo, limitando-o a uma instância única. Seu arquivo server.xml deve conter os recursos `monitor-1.0` e `restConnector-1.0`. Ele também deve conter um elemento basicRegistry e um elemento administrator-role.
+```xml
+       <featureManager>
+           <feature>jsp-2.2</feature>
+           <feature>monitor-1.0</feature>
+           <feature>restConnector-1.0</feature>
+       </featureManager>
 
-       &lt;basicRegistry&gt;
-    	   &lt;user name="jconuser" password="jconpassw0rd"/&gt;
-       &lt;/basicRegistry&gt;
+       <basicRegistry>
+           <user name="jconuser" password="jconpassw0rd"/>
+       </basicRegistry>
 
-       &lt;administrator-role&gt;
-    	   &lt;user&gt;jconuser&lt;/user&gt;
-       &lt;/administrator-role&gt;
-</pre>
+       <administrator-role>
+           <user>jconuser</user>
+       </administrator-role>
+```
 {: #codeblock}
 
    * Nota: a senha deve ser codificada com a ferramenta securityUtility fornecida pelo Liberty.
 
-### Iniciar o app JConsole 
+### Iniciar o app JConsole
 {: #start_jconsole_app}
 
-O JConsole é incluído com sua instalação java. Para iniciar o app JConsole, acesse <java-home>/bin (Java 1.7 ou superior) e execute o comando a seguir: 
-<pre>
+JConsole é incluído com sua instalação Java. Para iniciar o app JConsole, acesse &lt;java-home&gt;/bin e execute o comando a seguir:
+```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
-</pre>
+```
 {: #codeblock}
 
-  * A seguir estão os padrões de parâmetro do armazenamento confiável que devem funcionar na maioria dos casos: 
-<pre>
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/acerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
-</pre>
+Talvez você tenha de passar parâmetros adicionais para configurar o armazenamento confiável Java. Os parâmetros a seguir devem funcionar na maioria dos casos:
+```
+    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
+```
 {: #codeblock}
-  * Especifique os parâmetros de armazenamento confiável apropriados, se necessário.
 
-### Concluir a conexão 
+### Concluir a conexão
 {: #start_jconsole_app}
-  * Preencha o campo Processo remoto com esta URL:     
-    * service:jmx:rest://<appName>.mybluemix.net:443/IBMJMXConnectorREST.  
-  *  Além disso, preencha os campos Nome do usuário e Senha com um usuário e uma senha da função de administrador a partir do arquivo server.xml. 
+  * Preencha o campo Processo remoto com a URL a seguir:
+    * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
+  *  Além disso, preencha os campos Nome do usuário e Senha com um usuário e uma senha da função de administrador a partir do arquivo server.xml.
   * Clique em Conectar.
 
 Quando a conexão for bem-sucedida, o
@@ -73,8 +72,7 @@ Se a conexão falhar, é possível produzir logs para ajudar a diagnosticar o pr
 Primeiramente, tente coletar o rastreio do lado do cliente incluindo **
 -J-Djava.util.logging.config.file=c:/tmp/logging.properties** no comando jconsole.
 Aqui está um arquivo de propriedade de criação de log de amostra:
-
-<pre>
+```
     handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
@@ -83,13 +81,13 @@ Aqui está um arquivo de propriedade de criação de log de amostra:
     javax.management.level=FINEST
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
-</pre>
+```
 {: #codeblock}
 
-Também é possível incluir <b>&dash;J&dash;Djavax.net.debug=ssl</b> no comando jconsole. Isso produz o rastreio de diagnóstico SSL em uma janela de saída separada do JConsole. Por último, é possível ativar o rastreio no lado do servidor, incluindo o seguinte em seu arquivo server.xml: 
-<pre>
-    &lt;logging traceSpecification="com.ibm.ws.jmx.&ast;=all"/&gt;
-</pre>
+Também é possível incluir <b>&dash;J&dash;Djavax.net.debug=ssl</b> no comando jconsole. Isso produz o rastreio de diagnóstico SSL em uma janela de saída separada do JConsole.  Por último, é possível ativar o rastreio no lado do servidor, incluindo o seguinte em seu arquivo server.xml:
+```
+    <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
+```
 {: codeblock}
 
 # rellinks

@@ -26,7 +26,7 @@ Per distribuire le tue applicazioni Liberty a Bluemix, puoi utilizzare i seguent
 * Esecuzione del push di una directory server
 * Esecuzione del push di un server in pacchetto
 
-Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512 M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html).
+Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html).
 
 ## Applicazioni autonome
 {: #stand_alone_apps}
@@ -147,8 +147,7 @@ Importante: per rendere effettive le tue modifiche alle variabili di ambiente è
 ## Directory server
 {: #server_directory}
 
-In alcuni casi, potrebbe essere necessario fornire una configurazione server Liberty personalizzata con la tua
-				applicazione. Questa configurazione personalizzata potrebbe servirti quando distribuisci un file WAR o EAR e il file server.xml predefinito non ha le specifiche impostazioni di cui la tua applicazione ha bisogno.
+In alcuni casi, potrebbe essere necessario fornire una configurazione server Liberty personalizzata con la tua 				applicazione. Questa configurazione personalizzata potrebbe servirti quando distribuisci un file WAR o EAR e il file server.xml predefinito non ha le specifiche impostazioni di cui la tua applicazione ha bisogno.
 
 Se hai installato il profilo Liberty sulla tua workstation e hai già creato un server Liberty con la tua applicazione, puoi distribuire i contenuti di tale directory in Bluemix.
 Ad esempio, se il server Liberty è denominato defaultServer, esegui il comando:
@@ -203,9 +202,9 @@ Puoi anche eseguire il push di un server in pacchetto a Bluemix. Il file di serv
 Per impacchettare un server Liberty, utilizza il comando ./bin/server package dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione '––include=usr'.
 Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
 Questo comando genera un file serverName.zip nella directory del server. Puoi quindi eseguire il push di tale file compresso a Bluemix con il comando cf push.
@@ -253,8 +252,8 @@ Quando desideri eseguire il bind di un servizio alla tua applicazione, le inform
 				aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
 				servizio può essere in uno dei seguenti formati:
 
-* cloud.services.<nome-servizio>.<proprietà>, che descrive informazioni quali il nome, il tipo e il piano del servizio.
-* cloud.services.<nome-servizio>.connection.<proprietà>, che descrive le informazioni di connessione per il servizio.
+* cloud.services.&lt;nome-servizio&gt;.&lt;proprietà&gt;, che descrive informazioni quali il nome, il tipo e il piano del servizio.
+* cloud.services.&lt;nome-servizio&gt;.connection.&lt;proprietà&gt;, che descrive le informazioni di connessione per il servizio.
 
 L'insieme di informazioni tipico è il seguente:
 * name: il nome del servizio. Ad esempio, mysql-e3abd.

@@ -38,12 +38,12 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 }
 ```
 {: codeblock}
-詳しくは、[『godep』](https://github.com/tools/godep)を参照してください。
+詳しくは、[『godep』](https://github.com/tools/godep){: new_window}を参照してください。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2)では、以下のバージョンの Go が使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}では、以下のバージョンの Go が使用できます。
 
 * 1.2.1
 * 1.2.2
@@ -54,9 +54,9 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 * 1.5
 * 1.5.1
 
-アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git)を使用してアプリケーションをデプロイできます。
+アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git){: new_window}を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
 ## 一般
-* [The Go Programming Language](http://golang.org/)
-* [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack)
+* [The Go Programming Language](http://golang.org/){: new_window}
+* [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack){: new_window}
