@@ -22,4 +22,4 @@ To register the notificationListener object with Push, call the **MFPPush.listen
 	}
 ```
 2. Build the project and run it on the device or emulator. When the onSuccess() method for the response listener in the register() method is invoked, it confirms that the device has successfully registered with Push Notification Service. At this time you can send a message as described in Sending basic push notifications.
-3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.//Receive push notifications on Android devices
+3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.
