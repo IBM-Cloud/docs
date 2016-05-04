@@ -37,7 +37,7 @@ To get started, follow these steps to create and deploy an unbound service insta
   - View real-time logs and troubleshoot chaincode that fails to execute.
   - View the world state for your ledger.
   - Access the Swagger UI and interact with your network via the REST API.
-  - Deploy one of three available chaincode templates. 
+  - Deploy one of three available chaincode examples. 
 
 
 # Related Links
@@ -49,7 +49,7 @@ To get started, follow these steps to create and deploy an unbound service insta
 
 ## API Reference
 {: #api}
-* [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
+* [API (Swagger UI)](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
 * [API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
 * [IBM JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 
