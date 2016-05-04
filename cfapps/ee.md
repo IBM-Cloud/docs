@@ -126,7 +126,7 @@ Click **Environment Variables** on the app Overview page to see the whole list o
   
   6. Now, you can access the app by entering the following app URL in a browser:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 You can also choose other tools to build your app, such as Eclipse tools. For more information, see the Start Coding page of your app on {{site.data.keyword.Bluemix_notm}} user interface.
