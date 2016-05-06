@@ -15,13 +15,12 @@ copyright:
 # About {{site.data.keyword.iotdriverinsights_short}}
 {: #iotdriverinsights_overview}
 
-
-You can use {{site.data.keyword.iotdriverinsights_full}} to analyze driver's behavior from vehicle probe data and contextual data.
+You can use {{site.data.keyword.iotdriverinsights_full}} to analyze driver's behavior from car probe data and contextual data.
 {:shortdesc}
 
 ## Driver behavior analysis
 {: #driver_behavior_analysis}
-You can analyze driver behavior such as harsh acceleration or braking, frequent braking, speeding, sharp turns, and other actions from vehicle probe data and contextual data.
+You can analyze driver behavior such as harsh acceleration or braking, frequent braking, speeding, sharp turns, and other actions from car probe data and contextual data.
 
 The following activities and contexts are included:
  - Driving behaviors 
@@ -59,15 +58,15 @@ The following activities and contexts are included:
 
 ## Big data analysis infrastructure
 {: #big_data_analysis_infrastructure}
-{{site.data.keyword.iotdriverinsights_short}} uses Hadoop as the back-end infrastructure. Hadoop enables  {{site.data.keyword.iotdriverinsights_short}} to  realize high scalability for analyzing big data from vehicle probe data and contextual data.
+{{site.data.keyword.iotdriverinsights_short}} uses Hadoop as the back-end infrastructure. Hadoop enables  {{site.data.keyword.iotdriverinsights_short}} to  realize high scalability for analyzing big data from car probe data and contextual data.
 
 ## REST API
 {: #rest_api}
 Developers can retrieve the analysis results by REST API and use them in the {{site.data.keyword.Bluemix_notm}} application.
  1. Vehicle data
-   - `sendCarProbeData` sends the vehicle probe data to be analyzed.
-   - `getCarProbeDataListAsDate` returns the list of vehicle probe data by date basis.
-   - `deleteCarProbeDataListByDate` deletes the vehicle probe data.
+   - `sendCarProbeData` sends the car probe data to be analyzed.
+   - `getCarProbeDataListAsDate` returns the list of car probe data by date basis.
+   - `deleteCarProbeDataListByDate` deletes the car probe data.
  2. Analysis Job
    - `sendJobRequest` sends the driving behavior analysis job request.
    - `getJobInfo` returns the information of the specified job.

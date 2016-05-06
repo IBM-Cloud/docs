@@ -14,7 +14,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_short}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 11 April 2016*
+*Last updated: 6 May 2016*
 
 {{site.data.keyword.iotmapinsights_full}} makes it easy for developers to enable their applications to use geospatial functions such as map matching and shortest path search based on the road networks across the globe.
 {:shortdesc}
@@ -70,7 +70,7 @@ Follow these steps to use the analytics functions of the {{site.data.keyword.iot
 
 ## API Reference
 {: #api}
-* [API docs](https://new-console.ng.bluemix.net/apidocs/163){:new_window}
+* [API docs](https://new-console.ng.bluemix.net/apidocs/194){:new_window}
 
 ## Related Links
 {: #general}

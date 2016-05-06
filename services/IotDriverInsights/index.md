@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotdriverinsights_short}} (Experimental)
 {: #gettingstartedtemplate}
-*Last updated: 12 April 2016*
+*Last updated: 6 May 2016*
 
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on drivers' behavior by using the {{site.data.keyword.iotdriverinsights_short}} API to gather and analyze car probe data and contextual data.
 {:shortdesc}
@@ -23,7 +23,7 @@ Follow these steps to integrate your application with the {{site.data.keyword.io
 1. (Optional) Before sending car probe data to {{site.data.keyword.iotdriverinsights_short}} API, you can add additional data to your car probe data by using the {{site.data.keyword.iotmapinsights_short}} API.
      - Get map matched car probe data by using `mapMatching` API.
         - [Request] Car probe data
-        - [Resonse] Map matched car probe data
+        - [Response] Map matched car probe data
      - Get road type data by using `getLinkInformation` API.
         - [Request] Road link id
         - [Response] Road type
@@ -42,7 +42,7 @@ Follow these steps to integrate your application with the {{site.data.keyword.io
    - [Request] Trip uuid
    - [Response] Detail of analyzed trip 
 
-The following sequence diagram shows the sequene of steps.
+The following sequence diagram shows the sequence of steps.
 
 ![Typical analysis sequence](images/sequence_diagram.png "Typical analysis sequence")
 
@@ -54,7 +54,7 @@ See the [About {{site.data.keyword.iotdriverinsights_short}}](iotdriverinsights_
 
 ## API Reference
 {: #api}
-* [API docs](https://new-console.ng.bluemix.net/apidocs/165){:new_window}
+* [API docs](https://new-console.ng.bluemix.net/apidocs/193){:new_window}
 
 ## Related Links
 {: #general}
