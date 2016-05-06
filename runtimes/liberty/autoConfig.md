@@ -42,6 +42,7 @@ The Liberty buildpack provides automatic configuration for the following service
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 As noted, some services can be application managed, or container managed. Mongo and SQLDB are examples of such services. By default, the Liberty buildpack assumes that these services are container managed and automatically configures them. If you want the application to manage the service, you can opt-out of automatic configuration for the service by setting the services_autoconfig_excludes environment variable. For more information, see [Opting out of service auto-configuration](autoConfig.html#opting_out).
 
@@ -91,12 +92,12 @@ More formally, the grammar of the String follows.
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **Important**: The service type that you specify must match the services label as it appears in the VCAP_SERVICES environment variable. White space is not allowed.
 **Important**: No white space is allowed within a <service_type_specification>. The only allowed usage of white space is to separate multiple <service_type_specification> instances.
 
-Use the “all” option to opt out of all automatic configuration actions for a service, as in the Mongo scenario above. Use the “config” option to opt out of only the configuration update actions as in the SQLDB scenario above.
+Use the "all" option to opt out of all automatic configuration actions for a service, as in the Mongo scenario above. Use the "config" option to opt out of only the configuration update actions as in the SQLDB scenario above.
 
 Here are sample opt-out specifications in a manifest.yml file for the Mongo and SQLDB scenarios.
 
@@ -110,7 +111,7 @@ Here are sample opt-out specifications in a manifest.yml file for the Mongo and 
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 Here are examples of how to set the services_autoconfig_excludes environment variable for the application myapp by using the command-line interface.
 
@@ -118,7 +119,7 @@ Here are examples of how to set the services_autoconfig_excludes environment var
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # rellinks
 ## general

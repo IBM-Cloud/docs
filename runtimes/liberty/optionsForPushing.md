@@ -22,7 +22,7 @@ You can use the following methods to deploy your Liberty applications to Bluemix
 * Pushing a server directory
 * Pushing a packaged server
 
-Important: When you deploy an application with the Liberty buildpack, specify a minimum of 512 M as the Memory Limit for your applications. For more information, see [Memory limits and the Liberty buildpack](memoryLimits.html).
+Important: When you deploy an application with the Liberty buildpack, specify a minimum of 512M as the memory limit for your applications. For more information, see [Memory limits and the Liberty buildpack](memoryLimits.html).
 
 ## Stand-alone apps
 {: #stand_alone_apps}
@@ -35,7 +35,7 @@ For example:
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 When a stand-alone application is deployed, a default Liberty configuration is provided for the application. The default configuration enables the following Liberty features:
 
@@ -61,7 +61,7 @@ These features correspond to the Java EE 7 Web Profile features. You can specify
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 Note: For best results, set the Liberty features with the JBP_CONFIG_LIBERTY environment variable or deploy your application as a [server directory](optionsForPushing.html#server_directory) or [packaged server](optionsForPushing.html#packaged_server) with a custom server.xml file. Setting this environment variable ensures that your application uses only the feature that it needs and it is not affected by the buildpack's default Liberty feature set changes. If you need to provide extra Liberty configuration beyond the feature set, use the [server directory](optionsForPushing.html#server_directory) or the [packaged server](optionsForPushing.html#packaged_server) option to deploy your application.
 
@@ -70,14 +70,14 @@ If you deployed a WAR file, the web application is accessible under the context 
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 If you deployed an EAR file, the embedded web application is accessible under the context root as defined in the EAR deployment descriptor. For example,
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 The entire default Liberty server.xml configuration file is as follows:
 ```
@@ -113,7 +113,7 @@ The entire default Liberty server.xml configuration file is as follows:
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -124,14 +124,14 @@ For example:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 Important: In order for your environment variable changes to take effect you must restage your application:
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Server directory
 {: #server_directory}
@@ -144,7 +144,7 @@ For example, if your Liberty server is named defaultServer, run the command:
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 If a Liberty profile is not installed on your workstation, you can use the following steps to create a server directory with your application:
 
@@ -166,21 +166,21 @@ If a Liberty profile is not installed on your workstation, you can use the follo
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 After the server directory is ready, you can deploy it to Bluemix.
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Note: The web applications that are deployed as part of the server directory are accessible under the [context root, as determined by the Liberty profile](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). For example:
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Packaged server
 {: #packaged_server}
@@ -190,10 +190,10 @@ You can also push a packaged server file to Bluemix. The packaged server file is
 To package a Liberty server, use the ./bin/server package command from your Liberty installation directory. Specify your server name and include the '––include=usr' option.
 For example, if your Liberty server is defaultServer, run the command:
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
-{: #codeblock}
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
+{: codeblock}
 
 This command generates a serverName.zip file in the server's directory. You can then push that compressed file to Bluemix with the cf push command.
 For example:
@@ -201,7 +201,7 @@ For example:
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 Note: The web applications that are deployed as part of the packaged server are accessible under the context root, as determined by the Liberty profile.
 
@@ -235,8 +235,8 @@ The following variables are defined in the runtime-vars.xml file, and referenced
 
 When you want to bind a service to your application, information about the service, such as connection credentials, is included in the [VCAP_SERVICES environment variable](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) that Cloud Foundry sets for the application. For [automatically configured services](autoConfig.html), the Liberty buildpack generates or updates service binding entries in the server.xml file. The contents of the service binding entries can be in one of the following forms:
 
-* cloud.services.<service-name>.<property>, which describes the information such as the name, type, and plan of the service.
-* cloud.services.<service-name>.connection.<property>, which describes the connection information for the service.
+* cloud.services.&lt;service-name&gt;.&lt;property&gt;, which describes the information such as the name, type, and plan of the service.
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, which describes the connection information for the service.
 
 The typical set of information is as follows:
 * name: The name of the service. For example, mysql-e3abd.
