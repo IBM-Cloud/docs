@@ -8,7 +8,7 @@ copyright:
 # About Push Notifications
 {: #overview-push}
 
-Push Notifications is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications.  
+Push Notifications is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. For information about Push dedicated service, see [Dedicated Services](../../dedicated/index.html). 
 
 
 ## Push notification service process
@@ -33,7 +33,7 @@ The role that created the mobile backend application that bundles an instance of
 
 ###Push Notification Service
 
-The push notification service manages all the information that is related to the devices that register for notifications. The service keeps your applications transparent to the technology details of sending notifications to these heterogeneous mobile platforms, handling all of this within.
+The Push Notification Service manages all the information that is related to the devices that register for notifications. The service keeps your applications transparent to the technology details of sending notifications to these heterogeneous mobile platforms, handling all of this within.
 
 ###Gateways
 
