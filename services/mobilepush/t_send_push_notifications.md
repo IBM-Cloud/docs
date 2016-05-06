@@ -13,9 +13,15 @@ copyright:
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
 
 
+{: #push-send-notifications}
+
+After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).
+
+
 Send basic push notifications.
 
-1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**. 
+1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**.
+
 
 	**Note**: When you select the **All Devices** option, all the devices that have subscribed to push notifications receive your notification.
 	

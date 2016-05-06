@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # Managing dashboards and templates {: #managing-dashboards}
@@ -23,14 +30,14 @@ To create a dashboard:
  3.	Click ![Create icon.](images/create.png "Create icon") to add the widget to the dashboard.
 7.	The dashboard updates with the newly added widgets, and displays the real-time data that is defined by the selected data point.
 
->**Tip:** To create a dashboard that lists all your devices, do the following:  
+**Tip:** To create a dashboard that lists all your devices, do the following:  
 1. Go to **Dashboards > Browse Dashboards** and click **Add new dashboard**.
 2. Give the dashboard a descriptive name, such as `All devices`, and click ![Create icon.](images/create.png "Create icon").
 3. In the dashboards panel, click the dashboard and then click **Add new component**.
 4. Select the **Container** component and select **Filtered devices** to create a list of all your devices.
 5. Click ![Create icon.](images/create.png "Create icon").  
 
->Your devices are listed in the new dashboard. Click a device icon to open the device dashboard and see the real-time data for the device.
+Your devices are listed in the new dashboard. Click a device icon to open the device dashboard and see the real-time data for the device.
 
 ### Dashboard widgets {: #dashboard-widgets}
 The dashboards are made up from widgets that display real-time data from one or more devices. The behavior of the widget depends on its type, the data point that is displayed, and the way the data point is configured in the schema.  
@@ -40,7 +47,7 @@ If, however, you configure the data point with a min and max value, you have the
 
 You can also assign a Sensor type for the data point to enable a special type of visualization widget to better illustrate the type of sensor data that is displayed. For example, you can select the sensor type `Light on/off` to enable a `Plain light indicator (on/off)` visualization widget.
 
-You also have the option to include several widgets for the same datapoint in the same dashboard to show both the raw numerical value and humidity side by side.   ![Multiple widgets for the same data point.](images/widgets.png "Multiple widgets for the same data point icon")  
+You also have the option to include several widgets for the same datapoint in the same dashboard to show both the raw numerical value and humidity side by side.   ![Multiple widgets for the same data point.](images/widgets.svg "Multiple widgets for the same data point icon")  
 *Three visualization options for the same data point.*
 
 
@@ -73,8 +80,8 @@ Energy meter | Plain value | N/A | Integer/Float
 Percentage | Plain percentage (0-100) | N/A | Integer/Float
 Voltage | Plain voltage gauge | N/A | Integer/Float
 Current | Plain current gauge | N/A | Integer/Float
-Longitude | Device location on Special > Map widget (Latitude widget also required) | N/A | Float
-Latitude | Device location on Special > Map widget (Longitude widget also required) | N/A | Float
+Longitude | Device location on Special > Map widget (Latitude widget also required) | **Important:** The data point used for the longitude value must be assigned the sensor type Longitude in the message schema. | Float
+Latitude | Device location on Special > Map widget (Longitude widget also required) | **Important:** The data point used for the latitude value must be assigned the sensor type Latitude in the message schema. | Float  
 
 
 ## Default dashboard layouts
@@ -92,14 +99,14 @@ This dashboard is included with the product and provides a list of devices that 
 </thead>
 <tbody>
 <tr>
-<td style="width:30%">Container: Devices with alerts</td>
-<td style="width:30%">Container: Alerts for device</td>
-<td style="width:30%">Special: Additional device information</td>
+<td>Container: Devices with alerts</td>
+<td>Container: Alerts for device</td>
+<td>Special: Additional device information</td>
 </tr>
 <tr>
-<td style="width:30%"></td>
-<td style="width:30%"></td>
-<td style="width:30%">Special: Map</td>
+<td></td>
+<td></td>
+<td>Special: Map</td>
 </tr>
 </tbody>
 </table>
@@ -117,14 +124,14 @@ Clicking a device icon in a device list opens a device dashboard for the device.
 </thead>
 <tbody>
 <tr>
-<td style="width:30%">Device: Datapoint 1</td>
-<td style="width:30%">Device: Datapoint 2</td>
-<td style="width:30%">Device: Datapoint 3</td>
+<td>Device: Datapoint 1</td>
+<td>Device: Datapoint 2</td>
+<td>Device: Datapoint 3</td>
 </tr>
 <tr>
-<td style="width:30%">Device: Datapoint N</td>
-<td style="width:30%"></td>
-<td style="width:30%"></td>
+<td>Device: Datapoint N</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -142,9 +149,9 @@ The following dashboard includes a list of all devices and provides device infor
 </thead>
 <tbody>
 <tr>
-<td style="width:30%">Container: Filtered devices (no filter parameters set)</td>
-<td style="width:30%">Special: Additional device information</td>
-<td style="width:30%"></td>
+<td>Container: Filtered devices (no filter parameters set)</td>
+<td>Special: Additional device information</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -169,81 +176,6 @@ To modify a predefined template:
  3.	Click ![Create icon.](images/create.png "Create icon") to update the widget.  
 
 The template updates with your changes.
-
-<!-- Administrators can also manually add templates for specific device types. These templates can then be linked to from the predefined templates.  -->
-
-<!-- To create a template:
-1.	Go to **Dashboards > Manage templates**.
-2.	Click **Add new template**.
-3.	Give the template a name, select a device type and attributes such as icon and background.
-4.	Click ![Create icon.](images/create.png "Create icon").
-5.	The empty template opens.
-6.	Add widgets to the template.  
-For a list of widgets, see below.
- 1.	Click **Add new component** to add an initial template widget.
- 2.	Select a component to add, then select further component attributes and, if needed, select display properties.
- For example, ... Then position the newly added widget in the dashboard grid.
- 3.	Click ![Create icon.](images/create.png "Create icon") to add the widget to the template.
-7.	The template updates with the newly added widgets.
-
-### Template widgets
-Widget | Type and visualization
-------------- | -------------
-Device | Data - Real-time value of data points for the device. For a description of the available widget options, see [Dashboard widgets](#dashboard-widgets "Dashboard widgets") above.
-Chart | Graph - Plot real-time values of data points for one or more devices.
-Dashboard | Link to a dashboard or a template.
-Text | Text box - Formatted text
-Container | Types of containers:<ul><li>All dashboards – A linked list of all dashboards</li><li>Filtered devices – A list of all devices, or filtered by name or location</li><li>Filtered devices with alerts – A list of all devices with alerts, or filtered by name or location</li><li>Alerts for device – A list of alerts for a device that is selected in a Filtered devices with alerts container</li></ul>
-Special | Types of special:<ul><li>Map – A map that locates the selected device</li><li>Additional device information – More information about the selected device</li></ul>
-
-### Template example: Selected set of graphs
-One way of using device templates is to expand on the predefined device template by creating specialized templates for a device type, and then linking these from the predefined template by using a Dashboard widget.
-
-<table>
-<thead>
-<tr>
-<th colspan="3">Descriptive graphs template</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="width:30%">Device: ID</td>
-<td style="width:30%">Graph: One data point</td>
-<td style="width:30%">Graph: Another data point</td>
-</tr>
-<tr>
-<td style="width:30%">Special: Additional device information</td>
-<td style="width:30%">Text: Short description of how to <br>interpret the device data in the graphs.</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-*Descriptive graphs template*
-
-Link to this template from a predefined device template:
-
-<table>
-<thead>
-<tr>
-<th colspan="3">Predefined device dashboard layout with link to template</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="width:30%">Device: Datapoint 1</td>
-<td style="width:30%">Device: Datapoint 2</td>
-<td style="width:30%">Device: Datapoint 3</td>
-</tr>
-<tr>
-<td style="width:30%">Device: Datapoint N</td>
-<td style="width:30%"><b>Dashboard: Descriptive graphs template</b></td>
-<td style="width:30%"></td>
-</tr>
-</tbody>
-</table>
-
-*Predefined device dashboard layout with link to template* -->
 
 
 ## Resetting predefined dashboards and templates {: #resetting-dashboards}

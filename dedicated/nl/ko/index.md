@@ -1,22 +1,67 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*마지막 업데이트 날짜: 2016년 1월 18일*
+*마지막 업데이트 날짜: 2016년 3월 7일*
+
 
 {{site.data.keyword.Bluemix}}는
 애플리케이션을 빌드, 실행 및 관리하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하면 {{site.data.keyword.Bluemix_notm}} Public 환경과 고유 네트워크 모두에 안전하게 연결되어 있는 자체 전용 SoftLayer 환경에서 {{site.data.keyword.Bluemix_notm}}의 강력한 성능과 단순함을 이용할 수 있습니다.
 {:shortdesc}
 
+모든 {{site.data.keyword.Bluemix_notm}} 전용 배치에는 추가 비용 없이 VPN, 사설 VLAN(Virtual Local Area Network), 방화벽, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 전용 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.
+
 {{site.data.keyword.Bluemix_notm}} Dedicated에는
 사용자가 독점적으로 사용 가능한 전용 서비스를 표시하는 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서
 사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함되어 있습니다.
 
+{{site.data.keyword.Bluemix_notm}} Dedicated는 {{site.data.keyword.Bluemix_notm}} 런타임 및 64GB의 계산 자원 메모리가 모두 포함되어 제공됩니다.
+
+또한 포함되거나 선택사항인 일련의 서비스 및 컴포넌트가 있습니다.
+
+
+| **유형**        | **이름**            | **설명** |      
+|-----------------|-------------------|-------------------|
+|포함 | {{site.data.keyword.Bluemix_notm}} 런타임 | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. {{site.data.keyword.Bluemix_notm}} Dedicated 인스턴스에서 모든 {{site.data.keyword.Bluemix_notm}} 런타임을 사용할 수 있습니다.|
+| 포함 | {{site.data.keyword.autoscaling}} | 정책에 따라 애플리케이션의 계산 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면
+{{site.data.keyword.Bluemix_notm}} Dedicated 환경에서
+무제한 사용이 가능합니다. |
+| 선택사항 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
+| 선택사항 | {{site.data.keyword.mql}} | {{site.data.keyword.Bluemix_notm}}에 대한 {{site.data.keyword.mqlfull}}는 {{site.data.keyword.Bluemix_notm}} 앱에 유연하고 사용하기 쉬운 메시징을 제공하는 클라우드 기반 메시징 서비스입니다. {{site.data.keyword.mql}}는 관리 작업이 간소화된 메시징 솔루션입니다. {{site.data.keyword.mql}}를 사용하면 앱의 응답성과 확장성이 향상되고 간단하면서 강력한 API를 통해 앱 간에 간편하게 작업을 공유 및 오프로드할 수 있습니다. |
+| 선택사항 | {{site.data.keyword.dashdbshort}} | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석,
+R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
+|선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는
+API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
+|선택사항 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
+|선택사항 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
+
+*표1. 전용 서비스*
+
+## {{site.data.keyword.Bluemix_notm}} Dedicated 아키텍처
+{: #dedicatedarch}
+
 {{site.data.keyword.Bluemix_notm}} Dedicated는 SoftLayer에서 빌드되었으므로 최고 성능의 클라우드 인프라를 사용할 수 있습니다. 각 데이터 센터에서는 일주일 내내 24시간 보안 및 엄격한 제어를 수행합니다. 사용자 및 IBM은 VPN 터널 및 사설 VLAN을 통해 {{site.data.keyword.Bluemix_notm}} 전용 인스턴스에 액세스합니다.
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+{{site.data.keyword.Bluemix_notm}} Dedicated는
+VPN 또는 직접 네트워크 연결을 통해 네트워크에 설치됩니다.
+단일 테넌트 하드웨어는 전 세계의 어떤 SoftLayer 데이터 센터에도
+설정할 수 있습니다. {{site.data.keyword.IBM_notm}}은 전용 플랫폼 및 전용 서비스를 관리하여 사용자가 사용자 정의 앱을 빌드하는 데 전념할 수 있도록 합니다. 또한 {{site.data.keyword.IBM_notm}}은 사용자가 선택한 유지보수 기간 동안 전용 인스턴스에 대해 모든 유지보수를 수행합니다.
+
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
 *그림 1. 자세한 {{site.data.keyword.Bluemix_notm}} Dedicated 다이어그램*
 
@@ -25,28 +70,6 @@
 {{site.data.keyword.Bluemix_notm}}와 보안 표준이 동일합니다. 그러나 전용 {{site.data.keyword.Bluemix_notm}}에 대한
 개발자 액세스는 LDAP 정책에 의해 제어되며, 이 정책은 환경을 설정할 때
 {{site.data.keyword.Bluemix_notm}} 팀에서 구성할 수 있습니다. 전용 환경 내에서는 사용자 역할 및 권한을 관리할 수 있습니다. 세부사항은 [관리자 및 권한 관리](../admin/index.html#oc_useradmin)를 참조하십시오.
-
-{{site.data.keyword.Bluemix_notm}} Dedicated는
-{{site.data.keyword.Bluemix_notm}} 런타임 및
-128GB의 애플리케이션 메모리가 모두 포함되어 제공됩니다.
-
-또한 기본적으로 포함되는 서비스와 전용 인스턴스에
-선택할 수 있는 선택적 서비스가 있습니다.
-
-| **유형**        | **이름**            | **설명** |      
-|-----------------|-------------------|-------------------|
-| 포함 | {{site.data.keyword.autoscaling}} | 정책에 따라 애플리케이션의 계산 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면
-{{site.data.keyword.Bluemix_notm}} Dedicated 환경에서
-무제한 사용이 가능합니다. |
-| 포함 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
-| 선택사항 | {{site.data.keyword.mql}} | {{site.data.keyword.Bluemix_notm}}에 대한 {{site.data.keyword.mqlfull}}는 {{site.data.keyword.Bluemix_notm}} 앱에 유연하고 사용하기 쉬운 메시징을 제공하는 클라우드 기반 메시징 서비스입니다. {{site.data.keyword.mql}}는 관리 작업이 간소화된 메시징 솔루션입니다. {{site.data.keyword.mql}}를 사용하면 앱의 응답성과 확장성이 향상되고 간단하면서 강력한 API를 통해 앱 간에 간편하게 작업을 공유 및 오프로드할 수 있습니다. |
-| 선택사항 | {{site.data.keyword.dashdbshort}} | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석,
-R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
-|선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는
-API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
-|선택사항 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
-
-*표1. 전용 서비스*
 
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated 설정
@@ -168,12 +191,12 @@ IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 �
 |아키텍처 선택 | 고가용성 및 재해 복구 요구사항을 고려하여 사전 정의된 선택사항을 토대로 아키텍처를 선택합니다. | IBM |
 |재해 복구 목표 정의 | 환경에 대한 재해 복구 요구사항을 정의합니다. | 고객 |
 |재해 복구 플랜 작성 | 재해 복구 플랜을 상의하여 정의합니다. IBM은 재해 복구 모델을 작성하고 사용자의 피드백 제공 및 플랜 승인 지점에서 사용자와 상의합니다. | IBM 및 고객 책임 공유 |
-|백업 및 복구 플랜 작성 | 온오프 사이트 백업 분배를 위한 요구사항과 빈도를 정의하는 백업 및 복구 플랜을 작성합니다. IBM은 패브릭 컴포넌트, IBM 서비스, 사용자 역할을 포함하는 서비스 메타데이터 등을 백업합니다. 사용자는 사용자에게 책임이 있는 애플리케이션 고유 데이터를 백업합니다. | IBM 및 고객 책임 공유 |
+|백업 및 복구 플랜 작성 | 온오프 사이트 백업 분배를 위한 요구사항과 빈도를 정의하는 백업 및 복구 플랜을 작성합니다. IBM은 플랫폼 컴포넌트, IBM 서비스, 사용자 역할을 포함하는 서비스 메타데이터 등을 백업합니다. 사용자는 사용자에게 책임이 있는 애플리케이션 고유 데이터를 백업합니다. | IBM 및 고객 책임 공유 |
 |이벤트 발견 및 문제점 판별을 위한 식별 도구 | {{site.data.keyword.Bluemix_notm}} 플랫폼 레벨에서 이벤트 발견 및 문제점 판별에 사용되는 IBM 및 써드파티 도구를 식별합니다. | IBM |
 |확대 플랜 정의 | 모니터링 컴포넌트를 통해 발견된 이벤트를 선별하고 해결하는 단계적 확대 플랜을 정의합니다. | IBM |
 |인프라, 플랫폼 및 지원 계약에 서명 | 환경에 대한 재무 조건을 포함하여 구독 계약에 서명합니다. 네트워크 및 보안 모니터링 계약에 서명합니다. 지원 구독에 서명합니다. | 고객 |
-|환경 조달 | {{site.data.keyword.Bluemix_notm}}을 호스팅하는 코어 및 서비스 VLAN과, Data Power 및 SoftLayer Firewall을 호스팅하는 단순 메탈 서비스 등 계산 자원, 네트워크 및 스토리지를 조달합니다. VPN 터널을 허용하는 인프라를 제공합니다. | 고객 |
-|패브릭, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 패브릭 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | IBM |
+|환경 조달 | {{site.data.keyword.Bluemix_notm}}을 호스팅하는 코어 및 서비스 VLAN과, Data Power 및 SoftLayer Firewall을 호스팅하는 베어 메탈 서비스 등 계산 자원, 네트워크 및 스토리지를 조달합니다. VPN 터널을 허용하는 인프라를 제공합니다. | 고객 |
+|플랫폼, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 플랫폼 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | IBM |
 |보안 컴포넌트 설치 및 구성 | 모니터링 및 단계적 확대 플랜에 연결된 보안 컴포넌트(예: IBM QRadar, 신임 정보 저장소, 침입 방지 시스템, IBM BigFix, IBM Security Privileged Identity Management)를 설치하고 구성합니다. | IBM |
 |사용자 정의 컴포넌트 설치 및 구성 |  	{{site.data.keyword.Bluemix_notm}} 제품 및 서비스 범위의 외부에 상주하는 사용자 정의 컴포넌트를 설치하고 구성합니다. | 고객 |
 |초기 네트워크 구성 설정 | 방화벽, DataPower, Fortigate 및 DNS 등 초기 네트워크 구성을 설정합니다. | IBM |
@@ -243,9 +266,12 @@ IBM은 각각의 유지보수 창에 대해 계획된 변경사항의 브로드�
 **중요**: 유지보수 기간 중에는 일부 서비스를 사용하지 못할 수도 있습니다.</dd>
 
 <dt>**월별 변경 창**</dt>
-<dd>월별 유지보수 창은 21일 기간 내에 사용자와 IBM 간 조정을 기반으로 적용됩니다. 사용자는 작동하지 않을 수 있는 21일 기간 내에 특정 날짜 또는 시간을 IBM에 제공할 수 있습니다. IBM은 해당 시간을 중심으로 업데이트를 스케줄하기 위해 시도합니다. 요청을 기반으로 IBM은 사용자에게 스케줄된 유지보수 창을 전달합니다. 월별 변경 창은 실행 중인 Bluemix Dedicated 환경에 영향을 미칠 것으로 예상되지 않습니다.<br />
+<dd>월별 유지보수 창은 21일 기간 내에 사용자와 IBM 간 조정을 기반으로 적용됩니다. 사용자는 작동하지 않을 수 있는 21일 기간 내에 특정 날짜 또는 시간을 IBM에 제공할 수 있습니다. IBM은 해당 시간을 중심으로 업데이트를 스케줄하기 위해 시도합니다. 요청을 기반으로 IBM은 사용자에게 스케줄된 유지보수 창을 전달합니다. 월별 변경 창은 실행 중인 Bluemix Dedicated 환경에 영향을 미칠 것으로 예상되지 않습니다.<p>다음 이미지는 보류 중인 업데이트에 대한 알림을 수신하는 것부터 사용자에게 작동하지 않을 수 있는 날짜를 설정한 후 마지막으로 스케줄된 날짜에 대한 알림을 수신하기까지의 과정을 보여줍니다.</p>
+<p><img src="../local/images/maintenance_dates.png" alt="유지보수 업데이트에 사용 불가능한 날짜를 설정하는 프로세스"></p>
 <br />
-**참고:** 업데이트할 특정 시간을 요청하지 않는 경우 유지보수는 창의 마지막에 자동으로 적용됩니다.<br />
+**참고**: 업데이트에 사용 불가능한 날짜를 설정하지 않아도 되는 경우 업데이트를 승인할 수 있습니다. IBM에서 유지보수를 적용할 스케줄된 날짜를 알려줍니다.<br />
+<p>다음 이미지는 보류 중인 업데이트에 대한 알림을 수신하는 것부터 업데이트를 승인한 후 스케줄된 업데이트 날짜를 수신하기까지의 과정을 보여줍니다.</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="사용 불가능한 날짜 없이 업데이트를 승인하는 프로세스"></p>
 <br />
 **관리 > 시스템 정보**로 이동하여 보류 중인 업데이트를 확인하고 사용 불가능한 날짜를 설정하며 업데이트를 승인하십시오. 알림 및 보류 중인 업데이트 스케줄링에 대한 자세한 정보는 <a href="../admin/index.html#oc_system">시스템 정보 보기</a>를 참조하십시오.</dd>
 
@@ -256,6 +282,26 @@ IBM은 각각의 유지보수 창에 대해 계획된 변경사항의 브로드�
 전용 인스턴스의 유지보수를 설정하려면 IBM 전용 계정 담당자와 함께 작업하여 표준 유지보수에 대해 합의된 기간을 식별하십시오.
 
 유지보수 업데이트 후 문제가 보고되는 경우 IBM이 업데이트를 롤백할 수 있도록 IBM 담당자와 협의합니다. 계약 시, IBM은 업데이트를 롤백하여 환경을 이전 단계로 복원합니다.
+
+## 인시던트 대응 및 지원
+{: #incidentresponse}
+
+### 고객이 발견한 문제
+
+IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하는 경우 몇 가지 다양한 방법을 사용하여 지원 센터에 문의할 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다.
+
+### IBM이 발견한 중요 인시던트
+
+중요 인시던트는 환경 또는 사용자에게 영향을 미치는 긴급하고 예상치 못한 서비스 가동 중단 및 안정성 문제입니다. IBM이 사용자의 환경 내에서 중요 인시던트를 발견하는 경우 **상태** 페이지의 알림을 통해 사용자에게 알립니다. 상태 페이지에서 플랫폼이나 사용하는 서비스에 대한 알려진 문제가 있는지 확인할 수도 있습니다. 웹 후크를 지원하는 웹 서비스와 알림을 통합하려면 [알림 및 이벤트 구독](../admin/index.html#oc_eventsubscription)에서 알림 기능 확장 방법에 대한 정보를 참조하십시오.
+
+![인시던트 대응 프로세스](../local/images/incidentresponseprocess.png "인시던트 대응 프로세스")
+
+*그림 2. 인시던트 대응 프로세스*
+
+문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다. 인시던트에 관한 질문이 있거나 문제를 해결하는 데 IBM 담당자의 도움이 필요한 경우 지원 티켓을 열 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 
+
+**참고**: 심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="../support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
+
 
 ## 재해 복구
 {: #dr}
@@ -313,7 +359,7 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 <dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA(Droplet Execution Agent)</a>는 내부에서 실행되는 앱에 대한 상태 점검을 수행합니다. 앱이나 DEA 자체에 문제가 있는 경우 문제 해결을 위해 앱의 추가 인스턴스를 대체 DEA에 배치합니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">고가용성 및 중복성을 갖도록 CF 구성</a>의 내용을 참조하십시오.
 </dd>
 <dt>SoftLayer 중복성</dt>
-<dd>전용 환경에 SoftLayer가 있을 경우, 각 클라우드 스토리지 클러스터의 데이터가 여러 차례 기록되고 스토리지 클러스터는 드라이브 장애 시 자동 치료 기능을 갖도록 구성됩니다. 가상 머신에 문제가 있을 경우 SoftLayer는 다른 호스트에서 가상 머신을 다시 시작합니다.</dd>
+<dd>전용 환경에 SoftLayer가 있을 경우, 각 클라우드 스토리지 클러스터의 데이터가 여러 차례 기록되고 스토리지 클러스터는 드라이브 장애 시 자동 치료 기능을 갖도록 구성됩니다. 가상 서버에 문제가 있는 경우 SoftLayer는 다른 호스트에서 가상 서버를 다시 시작하려고 시도합니다.</dd>
 <dt>메타데이터 백업</dt>
 <dd>메타데이터는 SoftLayer EVault 백업을 사용하여 200km 이상 떨어진 위치에 백업됩니다.</dd>
 </dl>
@@ -341,8 +387,10 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 <li>복원이 필요한 경우 백업 파일을 IBM 운영자에게 제공합니다.</li>
 </ul>
 
-# rellinks
+# 관련 링크
 ## 일반
 * [탐색: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 용어집](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](../admin/index.html#mng)
 * [지원 문의](../troubleshoot/getting_customer_support.html#bluemix_support)

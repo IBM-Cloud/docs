@@ -1,36 +1,49 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:download: .download}
 
 # Commencer à coder avec Git
-*Dernière mise à jour : 8 décembre 2015*  
+*Dernière mise à jour : 2 mars 2016*  
 
 Vous pouvez créer un référentiel Git hébergé qui se déploie automatiquement dans {{site.data.keyword.Bluemix}}. Ensuite, vous pouvez modifier le code qui s'exécute dans votre application en envoyant par commande push les modifications dans le référentiel Git. 
 {:shortdesc}
 
-1. Pour commencer, dans la vue d'ensemble de l'application, cliquez sur **AJOUTER UN REFERENTIEL GIT**.  
+1. Pour commencer, dans la vue d'ensemble de l'application, cliquez sur **Ajouter le référentiel et le pipeline Git**, ou dans la
+version classique de {{site.data.keyword.Bluemix_notm}}, cliquez sur **AJOUTER UN REFERENTIEL GIT**. 
 2. Dans la fenêtre qui s'ouvre, vérifiez que la case **Remplir le référentiel avec le package d'applications du module de démarrage et
-activer Delivery Pipeline (Build & Deploy)** est cochée. Le référentiel Git est créé. Si le code de démarrage est disponible, il est chargé dans le référentiel. De
+activer le pipeline Build & Deploy** est cochée. Le référentiel Git est créé. Si le code de démarrage est disponible, il est chargé dans le référentiel. De
 plus, l'application est déployée par le service Delivery Pipeline qui s'exécute dans {{site.data.keyword.jazzhub}}.  
-3. Pour mettre à jour votre application, vous pouvez utiliser la ligne de commande ou l'environnement de développement intégré Web.
-**Si vous utilisez la ligne de commande :**
-   a. Clonez votre référentiel Git à partir de l'adresse URL Git figurant dans la vue d'ensemble de l'application.
-b. Dans l'éditeur de votre choix, mettez à jour le code. Depuis l'interface de ligne de commande Git, envoyez vos modifications par commande push.  
+3. Pour mettre à jour votre application, vous pouvez utiliser la ligne de commande ou l'environnement de développement intégré Web.  
+   **Si vous utilisez la ligne de commande :**
+   a. Clonez votre référentiel Git à partir de l'adresse URL Git figurant dans la vue d'ensemble de l'application.  
+   b. Dans l'éditeur de votre choix, mettez à jour le code.  
+   Depuis l'interface de ligne de commande Git, envoyez vos modifications par commande push.  
 	    
    **Si vous utilisez l'environnement de développement intégré Web :**  
    a. Dans la vue d'ensemble de l'application, cliquez sur **Editer le code**. Votre projet s'ouvre dans l'environnement de
-développement intégré Web.
-  
-b. Apportez les modifications requises, puis envoyez-les par commande push à l'aide du support Git intégré.  
+développement intégré Web.  
+   b. Apportez les modifications requises, puis envoyez-les par commande push à l'aide du support Git intégré.  
 		
 L'application mise à jour est redéployée dans {{site.data.keyword.Bluemix_notm}}.  
 
 Pour des instructions détaillées, voir [Set up Git integration
 and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).
 
-## Vous avez ajouté un référentiel Git ? Essayez {{site.data.keyword.Bluemix_notm}} Live Sync.   
+## Vous avez ajouté un référentiel Git ? Essayez {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
-Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix_notm}} Live Sync pour mettre à jour rapidement l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement comme sur le bureau.   
+Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix_notm}} Live Sync pour mettre à jour rapidement l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement comme sur le bureau.  
 
 Pour en savoir plus sur {{site.data.keyword.Bluemix_notm}} Live Sync, voir
 [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). Pour plus de détails sur les commandes, voir la
@@ -41,17 +54,18 @@ Edit](../develop/bluemixlive.html).
 1. Téléchargez et installez la ligne de commande bl de {{site.data.keyword.Bluemix_notm}} Live Sync. 
 
 <p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/bl_gs_icons_windows_b.png" alt="Bouton de téléchargement de la ligne de commande bl Windows" /> </a> <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/bl_gs_icons_mac-osx_b.png" alt="Bouton de téléchargement de la ligne de commande bl Mac" /> </a> </p>
+<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Bouton de téléchargement de la ligne de commande bl Windows" /> </a> <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Bouton de téléchargement de la ligne de commande bl Mac" /> </a>
+</p>
 
-**Important :** l'outil de ligne de commande bl est disponible uniquement pour Windows 7
-et 8 et Mac OS X version 10.9 ou ultérieure.  
+**Important :** l'outil de ligne de commande bl est disponible uniquement pour Windows 7 et 8 et Mac OS X version 10.9 ou ultérieure. 
 
-2. Sur une ligne de commande, connectez-vous avec la commande ci-après. Vous serez invité à entrer votre ID IBM® et votre mot de passe.```
+2. Sur une ligne de commande, connectez-vous avec la commande ci-après. Vous serez invité à entrer votre ID IBM® et votre mot de passe. 
+```
 bl login
 ```
 
-3. Affichez la liste des projets disponibles pour la synchronisation {{site.data.keyword.Bluemix_notm}} Live Sync en entrant la commande
-suivante :
+3. Affichez la liste des projets disponibles pour la synchronisation {{site.data.keyword.Bluemix_notm}} Live Sync en entrant la commande suivante
+: 
 ```
 bl projects
 ```
@@ -67,8 +81,9 @@ bl sync nom_projet -d répertoire_local --verbose
 Cette commande continue de s'exécuter (et la synchronisation continue) jusqu'à ce que vous entriez la lettre "q". L'option --verbose affiche les
 informations de journalisation et de statut. Si l'un de vos arguments contient un espace, placez-le entre apostrophes. 
 
-5. Dans une autre fenêtre de ligne de commande, dans votre répertoire local, déployez l'application dans {{site.data.keyword.Bluemix_notm}}
-en mode édition directe avec la commande suivante :```
+5. Dans une autre fenêtre de ligne de commande, dans votre répertoire local, déployez l'application dans {{site.data.keyword.Bluemix_notm}} en
+mode édition directe avec la commande suivante :
+```
 bl start
 ```  
 

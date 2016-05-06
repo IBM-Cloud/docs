@@ -19,7 +19,7 @@ Nach der Installation der {{site.data.keyword.Bluemix_notm}}-CLI können Sie das
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 1. Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in hinzuzufügen:
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.autoscaling}}-CLI zu installieren:
 ```

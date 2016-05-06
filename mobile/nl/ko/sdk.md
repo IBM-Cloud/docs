@@ -1,5 +1,6 @@
 # SDK, 샘플 및 API 참조
 {: #sdk}
+*마지막 업데이트 날짜: 2016년 1월 28일* 
 
 앱에 Bluemix Mobile Services SDK를 추가하려면 사용할 SDK를 선택한 다음 앱에 SDK를 가져오도록 종속성 관리자를 구성하십시오.
 
@@ -26,13 +27,13 @@
 </ul>
 <ul>
 <li><strong>API 참조:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Core</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">푸시</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">REST API 푸시</a></li>
 </ul>
-</td><td valign="top"><img src="images/cdova_sdk_icon.png" alt="cordova">
+</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -40,6 +41,15 @@
 <ul><li><strong>Samples:</strong></li>
 <li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
 -->
+</ul>
+
+<ul><li><strong>샘플:</strong></li>
+<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">HelloPush</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">HelloAuthentication</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <ul><li><strong>github의 SDK:</strong></li>
@@ -63,11 +73,11 @@ SDK</a></p> --->
 <li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Hello ToDo</a></li>
 </ul>
 
-<p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">SDK on IBM
-DevOps</a></p>
+<p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">IBM
+DevOps의 SDK</a></p>
 <ul>
 <li><strong>API 참조:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Core</a></li>
+<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">IMFURLProtocol</a></li>

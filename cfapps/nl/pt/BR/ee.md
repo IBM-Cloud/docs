@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -135,11 +147,11 @@ exemplo:
 	
     **Requisito:** certifique-se de sempre usar a versão mais recente da ferramenta de linha de comandos cf.
   3. Depois de instalar a interface de linha de comandos **cf**, deve-se especificar
-com qual região do {{site.data.keyword.Bluemix_notm}} você deseja trabalhar usando o comando **cf api**. A interface de linha de comandos **cf** usa *https://api.Bluemix_URL*, em que *Bluemix_URL* é a URL da região. A URL da região sul do EUA é stage1.ng.bluemix.net. Insira o comando a seguir para se conectar ao
+com qual região do {{site.data.keyword.Bluemix_notm}} você deseja trabalhar usando o comando **cf api**. A interface de linha de comandos **cf** usa *https://api.Bluemix_URL*, em que *Bluemix_URL* é a URL da região. A URL da região sul do EUA é ng.bluemix.net. Insira o comando a seguir para se conectar ao
 {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Para obter mais informações sobre a conexão com outras regiões do {{site.data.keyword.Bluemix_notm}}, consulte as regiões do {{site.data.keyword.Bluemix_notm}}. Após especificar a região do {{site.data.keyword.Bluemix_notm}},
@@ -163,7 +175,7 @@ você estará pronto para implementar o app novamente no {{site.data.keyword.Blu
   6. Agora, é possível acessar o app inserindo a URL do app
 a seguir em um navegador:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Também é possível escolher outras ferramentas para construir o app, como

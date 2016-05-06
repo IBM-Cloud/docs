@@ -1,4 +1,9 @@
+---
 
+copyright:
+  years: 2015, 2016
+
+---
 
 # 試験的
 {: #experimental}

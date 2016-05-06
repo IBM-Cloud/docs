@@ -1,10 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync{: #live-sync}
 
-*上次更新时间：2015 年 12 月 8 日*  
+*上次更新时间：2016 年 3 月 23 日*  
 
 如果您要构建 Node.js 应用程序，那么可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的应用程序实例，并像在桌面上进行操作一样进行开发，而无需重新部署。   
 {: shortdesc} 
@@ -44,9 +55,10 @@
 * 无论开发的应用程序是哪种类型，都可以将桌面项目与云工作空间进行同步。 
 * 如果应用程序是用 Node.js 编写的，那么可以将更改传播到运行中应用程序。
 
-有关命令的更多详细信息，请参阅 [Bluemix Live Sync CLI 文档](../cli/reference/bl/index.html)。 
+有关命令的更多详细信息，请参阅 [Bluemix Live Sync (bl) 命令](bluemixlive.html#bl-commands)。 
 
 <ol>
+<li>注册免费 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帐户。</li>
 <li>下载并安装 {{site.data.keyword.Bluemix_notm}} Live Sync bl 命令行。   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下载 Windows bl 命令行按钮" /></a>
@@ -54,6 +66,7 @@
 </p>  
 
 <strong>重要信息：</strong>bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。</li>
+
 <li>在命令行上，使用以下命令登录。系统将提示您输入 IBM 标识和密码。  
 <pre class="codeblock">bl login</pre>
 </li>
@@ -159,6 +172,388 @@ bl start --restart
 
 3. 推送应用程序。
 
+## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) 命令{: #bl-commands}
+
+如果您要构建 Node.js 应用程序，那么可使用 {{site.data.keyword.Bluemix_live}} 快速更新在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序实例，而且无需重新部署即可像在桌面上一样进行开发。执行更改后，您可以立即在运行中的 {{site.data.keyword.Bluemix_notm}} 应用程序中看到该更改。{{site.data.keyword.Bluemix_live}} 命令行界面称为 *bl*。{:shortdesc}
+
+您可使用 **bl** 命令行界面命令完成以下任务：
+
+* 启动和停止正在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+* 从桌面创建新的基于云的项目
+* 将更改从桌面同步到基于云的项目工作空间以及正在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+* 请参阅可用于同步的项目列表。
+* 请参阅运行中应用程序的状态。
+
+有关下载和使用 bl 命令的更多信息，请参阅 [Bluemix Live Sync](../develop/bluemixlive.html)。
+
+## bl 命令
+
+{{site.data.keyword.Bluemix_live}} 命令行 **bl** 的语法如下：
+
+```
+bl command [arguments][options] [--help]
+```
+
+### 命令
+<dl>
+<dt>login, l</dt>
+<dd>登录到 {{site.data.keyword.Bluemix_notm}}。</dd>
+<dt>logout, lo</dt>
+<dd>注销用户。</dd>
+<dt>sync, s</dt>
+<dd>启动桌面和服务器之间的同步过程。</dd>
+<dt>create, c</dt>
+<dd>创建专用项目，将其链接到此目录中的 Git 存储库，并将内容部署到 {{site.data.keyword.Bluemix_notm}}。</dd>
+<dt>projects, p</dt>
+<dd>列出可用于同步的所有项目。</dd>
+<dt>start, st</dt>
+<dd>在 {{site.data.keyword.Bluemix_notm}} 中启动应用程序实例。</dd>
+<dt>stop, sp</dt>
+<dd>在 {{site.data.keyword.Bluemix_notm}} 中停止应用程序实例。</dd>
+<dt>status, ss</dt>
+<dd>列出 {{site.data.keyword.Bluemix_notm}} 中正在运行的应用程序实例的状态。</dd>
+</dl>
+
+### 自变量
+<dl>
+<dd>命令的自变量。</dd>
+</dl>
+
+### 选项
+<dl>
+<dd>命令的选项。</dd>
+</dl>
+
+### 全局选项
+<dl>
+<dt>--help</dt>
+<dd>显示指定命令的帮助页面</dd>
+<dt>--verbose</dt>
+<dd>启用详细日志记录。</dd>
+</dl>
+
+**注：**如果有任何自变量或选项包含空格，请将值用双引号括住。
+
+## help
+
+```
+bl [ command ] --help
+```
+
+### 使用量
+<dl>
+<dd>使用此命令可显示有关命令或命令列表的帮助。</dd>
+</dl>
+
+### 示例
+
+
+以下命令显示命令的列表：
+
+```bl --help```
+
+以下命令显示有关 sync 命令的详细信息：
+
+```bl sync --help```
+
+## login
+
+```bl login|l [ -u username ][-p password ][ -s server ]```
+
+### 用途
+
+使用此命令可登录到 {{site.data.keyword.Bluemix_notm}}。针对每个会话，仅需要执行一次登录。
+
+**警告**：建议不要将密码作为命令行选项提供，因为这样一来，其他人也会看到密码，并且密码会记录为命令历史记录的一部分。
+
+**注**：您必须注册免费 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帐户后才能登录。
+
+### 选项
+
+<dl>
+<dt>-u username</dt>
+<dd>用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。</dd>
+<dt>-p password</dt>
+<dd>您的 IBM 标识密码。</dd>
+<dt>-s server</dt>
+<dd>{{site.data.keyword.jazzhub_short}} 服务器的服务器名称或 IP 地址。</dd>
+</dl>
+
+### 示例
+
+
+此命令会提示需要 *username* 和 *password*：
+
+```bl login```
+
+此命令用于使用户 `name@company.com:` 登录：
+
+```bl login –u name@company.com –p pa55w0rd```
+
+此命令用于使用户 `name@company.com` 通过密码 pa55 w0rd 登录，此密码包含一个空格，因此需要用引号将其括起：
+
+```bl login –u name@company.com –p “pa55 w0rd”```
+
+## logout
+
+```
+bl logout|lo
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可注销。</dd>
+</dl>
+
+## 项目
+
+```
+bl projects|p
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可列出已登录用户可用于进行同步的所有项目。</dd>
+</dl>
+
+## sync
+
+```
+bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可开始将项目的内容与本地目录同步。此命令将一直运行，直到输入 <code>q</code> 为止。（可选）此命令可显示包含所有文件和应用程序状态更改的日志。</dd>
+</dl>
+
+### 自变量
+
+<dl>
+<dt>projectName</dt>
+<dd>格式为 <i>“alias | mproject”</i> 或仅
+<i>myproject</i>（如果项目由已登录用户拥有）的项目名称。</dd>
+</dl>
+
+### 选项
+
+<dl>
+<dt>-d localDirectory</dt>
+<dd>本地目录路径。缺省值为当前文件夹“.”。</dd>
+<dt>--overwritelocal</dt>
+<dd>使用项目工作空间的内容覆盖本地目录。</dd>
+<dt>--overwriteremote</dt>
+<dd>使用本地目录的内容覆盖项目工作空间。</dd>
+<dt>--verbose</dt>
+<dd>显示详细日志记录。</dd>
+</dl>
+
+### 示例
+
+
+如果当前目录为现有同步目标，那么此命令会开始与关联项目进行同步。如果当前目录为空且不是现有同步目标，那么此命令会提示需要 *projectName*。如果当前目录不为空且不是现有同步目标，那么需要覆盖选项。
+
+```
+bl sync```
+
+此命令用于开始同步，并等效于
+```bl sync “alias | myproject”```
+如果项目由已登录用户拥有，那么等效于：
+
+```bl sync  myproject```
+
+此命令会开始与其名称包含空格（因此括在引号内）的项目 <code>my pro ject</code> 进行同步：
+
+```bl sync “my pro ject”```
+
+此命令用于开始将项目 <code>myproject</code> 与目录 myfolder 进行同步：
+
+```bl sync myproject –d  myfolder```
+
+## create
+
+```
+bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+
+### 用途
+<dl>
+<dd>从包含代码的目录使用此命令可创建专用项目，将其链接到 Git 存储库，并将该存储库的内容部署到 {{site.data.keyword.Bluemix_notm}}。</dd>
+</dl>
+
+### 选项
+
+<dl>
+<dt>-n PROJECT_NAME</dt>
+<dd>项目的名称。缺省值：当前目录名称。</dd>
+<dt>-r REGION</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 区域。缺省值：美国南部</dd>
+<dt>-o ORG</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 组织。缺省值：找到的第一个组织。</dd>
+<dt>-s SPACE</dt>
+<dd>{{site.data.keyword.Bluemix_notm}} 空间。缺省值：找到的第一个空间。</dd>
+<dt>-g GIT_REPO</dt>
+<dd>用于任何现有 Git 存储库的远程存储库名称。缺省值：origin。</dd>
+<dt>-e GIT_EXE</dt>
+<dd>Git 可执行文件的完整路径。缺省值：detected。</dd>
+<dt>--creds</dt>
+<dd>提示输入 Git 凭证。</dd>
+<dt>--fork</dt>
+<dd>派生此目录并创建项目和存储库。</dd>
+<dt>--public</dt>
+<dd>使新项目成为公共项目。</dd>
+<dt>--prompt</dt>
+<dd>对所有必需选项提示可用的选择。</dd>
+</dl>
+
+### 示例
+
+
+此命令开始创建专用项目的过程，并提示输入要使用的项目名称。
+
+```bl create```
+
+此命令创建名为 <code>myNewProject</code> 的公共项目。
+
+```bl create -n myNewProject --public```
+
+## 状态
+
+```
+bl status|ss [ projectName ]
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可列出与 <code>./launchConfigurations</code> 目录中启动配置相关联的应用程序的状态。</dd>
+</dl>
+
+###自变量
+
+<dl>
+<dt>projectName</dt>
+<dd>格式为“alias | myproject”或仅为 myproject（如果项目由已登录用户拥有）的项目名称。</dd>
+</dl>
+
+### 示例
+
+
+此示例显示正在运行的应用程序的状态。如果当前目录为现有同步目标，那么它会使用关联项目。如果当前目录不是现有同步目标，那么此命令会提示需要 <i>projectName</i>。
+
+````bl status```
+
+此示例显示项目 myproject 的状态，等效于：
+```bl status “alias | myproject”```
+如果项目由已登录用户拥有，那么等效于：
+
+```bl status myproject```
+
+此示例显示与项目 <code>my pro ject</code> 关联的运行中应用程序的状态，此项目的名称包含空格，因此括在引号内：
+
+```bl status “my pro ject”```
+
+## start
+
+```
+bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可启动应用程序实例，此实例由启动或清单文件进行描述。如果应用程序的 buildpack 支持实时编辑，那么缺省情况下会以实时编辑方式启动应用程序。一旦启动，即会显示应用程序的 URL、调试工具和 {{site.data.keyword.Bluemix_notm}} 仪表板。</dd>
+</dl>
+
+### 自变量
+
+<dl>
+<dt>projectName</dt>
+<dd>格式为 <i>“alias | myproject”</i> 或仅
+<i>myproject</i>（如果项目由已登录用户拥有）的项目名称。</dd>
+</dl>
+
+### 选项
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>启动配置名称（例如，<code>mylaunchconfig</code>）、文件名（例如，<code>mylaunchconfig.launch</code>）或启动配置文件的相对于项目的路径（例如，<code>launchConfigurations/mylaunchconf.launch</code>）。</dd>
+<dt>-m manifestPath</dt>
+<dd>清单文件（例如，<code>manifest.yml</code>）的相对于项目的路径。</dd>
+<dt>--liveedit</dt>
+<dd>以实时编辑方式启动关联应用程序，如果 buildpack 不支持实时编辑方式，那么此应用程序会由于出现错误而退出。</dd>
+<dt>--noliveedit</dt>
+<dd>以正常方式启动关联应用程序。</dd>
+<dt>--view</dt>
+<dd>打开正在运行的应用程序的浏览器。</dd>
+<dt>--restart</dt>
+<dd>重新启动已在实时编辑方式下运行的应用程序，而不进行重新部署。</dd>
+</dl>
+
+### 示例
+
+
+此命令用于启动与启动文件 <code>launchConfigurations/my.launch</code> 关联的 <code>myproject</code> 应用程序实例。
+
+```bl start myproject –l “launchConfigurations/my.launch”```
+
+此命令用于启动与具有启动文件 <code>launchConfigurations/my.launch</code> 的当前目录关联的项目应用程序实例。如果当前目录不是同步目标，那么会显示错误。
+
+```bl start –l “launchConfigurations/my.launch” ```
+
+此命令用于启动与具有清单文件 <code>manifest.yml</code> 的当前目录关联的项目应用程序实例。清单中指定的信息用于创建新的启动配置文件。此命令提示您输入其余的必需信息，然后会启动由启动配置描述的应用程序：
+
+```bl start –m “mymanifest.yml” ```
+
+此命令用于启动与具有清单文件 <code>manifest.yml</code> 的当前目录关联的项目的应用程序实例，并且等效于：
+```bl start –m manifest.yml```。
+
+```bl start```
+
+## stop
+
+```
+bl stop|sp projectName [ -l launchConfiguration ]
+```
+
+### 用途
+
+<dl>
+<dd>使用此命令可停止与启动文件关联的应用程序实例。</dd>
+</dl>
+
+### 自变量
+
+<dl>
+<dt>projectName</dt>
+<dd>格式为“alias | mproject”或仅为 mproject（如果项目由已登录用户拥有）的项目名称。</dd>
+</dl>
+
+### 选项
+
+<dl>
+<dt>-l launchConfiguration</dt>
+<dd>启动配置名称（例如，<code>mylaunchconfig</code>）、文件名（例如，<code>mylaunchconfig.launch</code>）或启动配置文件的相对于项目的路径（例如，<code>launchConfigurations/mylaunchconf.launch</code>）。</dd>
+</dl>
+
+### 示例
+
+
+如果当前目录为同步目标，那么此命令会停止应用程序；否则，此命令会由于发生错误而退出。如果没有启动配置，那么此命令会由于发生错误而退出。
+如果有多个启动配置，那么此命令会提示您选择要停止的配置。
+
+```bl stop```
+
+此命令用于停止与使用启动文件 <code>mylaunchConfig</code> 运行的项目应用程序实例。
+
+```bl stop myproject –l “mylaunchConfig” ```
+
+如果当前目录为使用启动文件 <code>launchConfigurations/mylaunchconfig.launch</code> 启动的关联项目的同步目标，那么此命令会停止应用程序；否则，此命令会由于发生错误而退出：
+
+```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
 
 ># 相关链接{:class="linklist"}
 >## 教程和样本{:id="samples"}
@@ -166,6 +561,6 @@ bl start --restart
 >
 ># 相关链接{:class="linklist"}
 >## 相关链接{:id="general"}
->* [bl 命令](https://www.ng.bluemix.net/docs/cli/bl_cli.html)   
+>* [Eclipse Tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
 >
 >{:elementKind="article" id="rellinks"}

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -60,7 +72,7 @@ cf 명령행 인터페이스를 사용할 수 있습니다. 앱으로 작업하�
 {{site.data.keyword.jazzhub_title}}를
 사용하십시오.
 {{site.data.keyword.jazzhub_title}}에서 제공되는 서비스에는 DevOps 아래의 {{site.data.keyword.Bluemix_notm}} 카탈로그에 나열된
-Track & Plan 및 Delivery Pipeline과 Web IDE 및 Git 호스팅도 포함합니다.</dd>
+Track & Plan 및 Delivery Pipeline과 Web IDE 및 Git 호스팅도 포함됩니다.</dd>
 </dl>
 
 ## 팁

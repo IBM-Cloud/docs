@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 5 April 2016*
+*Last updated: 4 May 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -73,7 +73,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.twittershort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.weather_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.IntegrationTestingshort}}	|Yes		|Yes		|No|
-|{{site.data.keyword.iot_short}}		|Yes		|No		|No|
+|{{site.data.keyword.iot_short}}		|Yes		|Yes		|No|
 |{{site.data.keyword.keymanagementserviceshort}}	|No		|Yes		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.messagehub}}		|Yes		|Yes		|No|
@@ -95,7 +95,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes|
-|{{site.data.keyword.servicediscoveryshort}}		|Yes		|No		|No|
+|{{site.data.keyword.servicediscoveryshort}}		|Yes		|Yes		|No|
 |{{site.data.keyword.serviceproxyshort}}		|Yes		|No		|No|
 |{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
@@ -114,6 +114,23 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.workloadscheduler}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.xpagesservice_short}}	|Yes		|Yes		|No|
 *Table 2. Service availability*
+
+## Continued availability for services
+{{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal. 
+
+The following services are classified as Tier 1:
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB by Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL by Compose
+  * {{site.data.keyword.ssofull}}
+
+To read more about terms of use for services, see: [{{site.data.keyword.Bluemix_notm}} terms](../navigation/notices.html#terms).
 
 ## Service deprecation
 

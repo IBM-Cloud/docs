@@ -1,11 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Android アプリでの Google 認証の使用可能化
 {: #google-auth-android}
 
 ## 開始する前に
 {: #before-you-begin}
 
-* {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](getting-started.html)および [Android SDK のセットアップ](getting-started-android.html)を参照してください。  
-* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
+* {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)を参照してください。  
+* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 ## Android プラットフォーム用の Google プロジェクトの構成
 {: #google-auth-android-project}
@@ -21,9 +28,9 @@ Google を ID プロバイダーとして使用することを開始するには
 
 1. メニューで**「Credentials (資格情報)」**をクリックします。
 
-1. **「Add credentials (資格情報の追加)」**をクリックし、**「OAuth 2.0 client ID (OAuth 2.0 クライアント ID)」**を選択します。
+1. **「New credentials (新規資格情報)」**をクリックし、**「OAuth 2.0 client ID (OAuth 2.0 クライアント ID)」**を選択します。
 
-1. 同意コンソールで製品名を設定します。
+1. **「OAuth 同意画面」**タブで製品名を設定します。
 
 1. アプリケーション・タイプを選択します。**「Android」**をクリックします。Android クライアントに、意味のある名前を指定します。
 
@@ -52,15 +59,15 @@ Google を ID プロバイダーとして使用することを開始するには
 
 これで Android クライアント ID を取得したので、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を有効にすることができます。
 
-1. {{site.data.keyword.Bluemix}} ダッシュボードを開き、{{site.data.keyword.Bluemix_notm}} アプリケーションをクリックします。
+1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
 
-1. **「モバイル・オプション」**をクリックし、*applicationRoute* と *applicationGUID* の値をコピーします。これらの値は、SDK を初期化するために必要です。
+1. **「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。SDK を初期化する際に、これらの値が必要になります。
 
-1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードが表示されます。
+1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
 
-1. **「認証のセットアップ」>「Google」**をクリックします。
+1. **「Google」**タイルをクリックします。
 
-1. Android の**「クライアント ID」**を指定し、**「保存」**をクリックします。
+1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Android クライアント ID を指定し、**「保存」**をクリックします。
 
 ## Android 用の {{site.data.keyword.amashort}}  Client SDK の構成
 {: #google-auth-android-sdk}
@@ -104,7 +111,7 @@ Google を ID プロバイダーとして使用することを開始するには
 
 	初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの onCreate メソッド内です。
 
-1. Client SDK を初期化し、Google 認証マネージャーを登録します。`applicationRoute` および `applicationGUID` は、ダッシュボードの**「モバイル・オプション」**セクションから取得した値に置換します。
+1. Client SDK を初期化し、Google 認証マネージャーを登録します。*applicationRoute* および *applicationGUID* を、ダッシュボード内の**「モバイル・オプション」**セクションから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -130,9 +137,9 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
 
 ### 開始する前に
 {: #google-auth-android-testing-before}
-MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
+MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
-1. `http://{appRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開いて、デスクトップ・ブラウザーで、保護されたモバイル・バックエンドのエンドポイントに要求を送信してみてください。MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+1. `{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開いて、デスクトップ・ブラウザーで、モバイル・バックエンドの保護エンドポイントに要求を送信してみてください。MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
 1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` インスタンスを初期化し、`GoogleAuthenticationManager` を登録した後、以下のコードを追加します。
 

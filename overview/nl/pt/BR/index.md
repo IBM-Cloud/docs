@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -168,7 +180,7 @@ Local](../local/index.html#local).
 
 *Figura 4. {{site.data.keyword.Bluemix_notm}} Local*
 
-A máquina virtual de concepção é executada em uma rede por trás do firewall do cliente em uma rede que possui conectividade de saída com o centro de operações IBM por meio de Retransmissão. Os componentes de plataforma e os serviços principais do {{site.data.keyword.Bluemix_notm}} são executados em uma rede local virtual (VLAN) privada e isolada. O {{site.data.keyword.Bluemix_notm}} Local usa uma VLAN para a sub-rede privada. O uso de uma sub-rede privada em vez de uma VLAN pública é mais seguro e pode ajudar a evitar problemas de roteamento. 
+A máquina virtual de concepção é executada em uma rede por trás do firewall do cliente em uma rede que possui conectividade de saída com o centro de operações IBM por meio de Retransmissão. Os componentes de plataforma e os serviços principais do {{site.data.keyword.Bluemix_notm}} são executados em uma rede local virtual (VLAN) privada e isolada. O {{site.data.keyword.Bluemix_notm}} Local usa uma VLAN para a sub-rede privada. O uso de uma sub-rede privada em vez de uma VLAN pública é mais seguro e pode ajudar a evitar problemas de roteamento.
 
 Os dispositivos do DataPower fornecem acesso aos domínios de aplicativos {{site.data.keyword.Bluemix_notm}}. Esses dispositivos conectam à rede que é acessível a partir de sua intranet. Os usuários que estão implementando apps e serviços obtêm acesso a partir da rede que é acessível a partir de sua intranet. Deve-se fornecer sete endereços IP que tenham acesso à Internet de saída. Os dispositivos do DataPower são roteados a partir desses endereços IP do cliente para a implementação isolada do {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre as especificações de rede e os requisitos de infraestrutura, veja [Requisitos de infraestrutura do {{site.data.keyword.Bluemix_notm}} Local](../local/index.html#localinfra).
 
@@ -351,22 +363,13 @@ também fornece algumas imagens públicas no Registro de contêineres que podem 
 usado para executar contêineres de Docker em um ambiente em
 nuvem hospedado. O Docker inclui um mecanismo que implementa um app no ambiente virtual que você usa para executar seus contêineres. O Docker também fornece um ambiente que pode ser usado para executar seu código. Quando você estiver pronto, ele fornece os meios pelos quais é possível transferir o código do seu ambiente de ambiente de desenvolvimento para o seu ambiente de teste e, então, para o seu ambiente de produção.
 
-    Para saber mais sobre
-{{site.data.keyword.IBM_notm}} Containers, consulte
-[{{site.data.keyword.IBM_notm}}
-Containers](../containers/container_index.html) na documentação Criando apps da web.</dd>
-<dt>Máquinas Virtuais (BETA)</dt>
-    <dd>A infraestrutura de máquinas virtuais do
-{{site.data.keyword.Bluemix_notm}} fornece a
-capacidade de criar e gerenciar grupos de máquinas virtuais na nuvem pública da {{site.data.keyword.IBM_notm}}. Também
-é possível criar e gerenciar grupos de VMs em suas
-nuvens {{site.data.keyword.IBM_notm}} privadas que você
-escolheu disponibilizar para usuários do {{site.data.keyword.Bluemix_notm}}. A infraestrutura inclui uma experiência guiada para conexão com a infraestrutura no local. O suporte para monitoramento e criação de log é integrado no {{site.data.keyword.Bluemix_notm}}. É possível implementar e gerenciar suas máquinas virtuais usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou as APIs do OpenStack da nuvem.
-
-    Máquinas virtuais no {{site.data.keyword.Bluemix_notm}} suportam provisionamento de grupos de máquinas virtuais com escala automática. Por meio desse suporte, o número de instâncias pode ser automaticamente aumentado ou diminuído, com base na carga de CPU ou na falha de uma instância. Além disso, o balanceamento de carga é suportado, o que possibilita a designação de endereços de IP virtual (IP flutuante) conforme necessário.
-
-    Para saber mais sobre as máquinas virtuais do {{site.data.keyword.Bluemix_notm}}, consulte [Máquinas virtuais](../virtualmachines/vm_index.html) na
-documentação de Criando apps da web.</dd>
+    Para saber mais sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} é um ambiente de nuvem hospedado, parte do {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, que você pode usar para construir, executar, gerenciar e monitorar seus aplicativos, enquanto mantém o máximo de controle sobre seus apps e o middleware no qual eles são executados. Use {{site.data.keyword.virtualmachinesshort}} para isolar suas soluções de negócios, principalmente ao implementar seus apps em uma nuvem pública. </p>
+<p>    
+É possível executar e gerenciar servidores virtuais em nuvens públicas e privadas (no local) que usam o software OpenStack. É possível criar, ativar e gerenciar seus servidores virtuais usando a UI do {{site.data.keyword.Bluemix_notm}} ou o cliente OpenStackClient (OSC). É possível usar imagens de servidor virtual que são fornecidas pela {{site.data.keyword.IBM_notm}} ou criar servidores virtuais a partir de suas próprias imagens customizadas. É possível usar recursos do {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} para remover a maioria das complexidades associadas ao hosting e ao gerenciamento de aplicativos baseados na nuvem, como criação de log, ajuste automático de escala e monitoramento. É possível usar serviços do OpenStack e serviços do {{site.data.keyword.Bluemix_notm}} juntos para construir e executar aplicativos híbridos. É possível provisionar recursos de infraestrutura conforme necessário com base nas políticas operacionais e na demanda de carga de trabalho. </p>
+<p>
+Para saber mais sobre {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, consulte [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Aplicativos
@@ -413,16 +416,20 @@ consulte o catálogo na interface com o usuário do {{site.data.keyword.Bluemix_
 {: #starters}
 
 Um *iniciador* é um modelo
-que inclui serviços predefinidos e código do app que é configurado com um buildpack específico. Há dois tipos de iniciadores: textos padrão
+que inclui serviços predefinidos e código do app que é configurado com um buildpack específico. Há
+dois tipos de iniciadores: modelos
 e tempos de execução. Um iniciador pode ser código do app que é gravado em uma linguagem de programação específica ou uma combinação de código do app e um conjunto de serviços.
 
-### Textos padrão
+### Modelos
 {: #boilerplates}
 
 No {{site.data.keyword.Bluemix_notm}},
-um *texto padrão* contém um app e seu ambiente de tempo de execução associado e serviços predefinidos para um domínio
-específico. É possível usar um texto padrão para instalação e execução rápidas. Por
-exemplo, é possível selecionar o texto padrão Nuvem para dispositivo móvel para hospedar apps
+um *modelo* contém um app e seu ambiente de tempo de
+execução associado e serviços predefinidos para um domínio
+específico. É possível usar um modelo para instalação e execução
+rápidas. Por
+exemplo, é possível selecionar o modelo Nuvem para dispositivo móvel
+para hospedar apps
 móveis e da web e acelerar o tempo de desenvolvimento de scripts do lado do
 servidor usando o modelo de app móvel e o SDK.
 
@@ -534,7 +541,8 @@ que reside no local protegido por um firewall. É possível chamar o
 sistema de registro de uma maneira segura e alavancar os serviços móveis no {{site.data.keyword.Bluemix_notm}} para que seja possível construir um app móvel avançado.
 
 Primeiro, seu desenvolvedor de integração cria o app de backend
-móvel no {{site.data.keyword.Bluemix_notm}}. Ele usa o texto padrão Nuvem para dispositivo móvel que usa o tempo de execução Node.js
+móvel no {{site.data.keyword.Bluemix_notm}}. Ele usa o modelo
+Nuvem para dispositivo móvel que usa o tempo de execução Node.js
 com o qual ele está mais familiarizado.
 
 Depois, usando o serviço Cloud Integration na
@@ -583,17 +591,11 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 
 # rellinks
 ## general 
-* [Pré-requisitos
-do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
-* [O que há de novo no
-{{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [Problemas
-conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
+* [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
+* [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
+* [Problemas conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Folha de precificação](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}}DevOps Services](https://hub.jazz.net)
-* [Cloud
-Foundry](http://cloudfoundry.org/)
-* [SoftLayer, uma
-empresa da
-{{site.data.keyword.IBM_notm}}](http://www.softlayer.com/)
+* [Cloud Foundry](http://cloudfoundry.org/)
+* [SoftLayer, uma empresa da {{site.data.keyword.IBM_notm}}](http://www.softlayer.com/)

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #모니터링 및 로깅
 {: #monitoringandlogging}
 
-*마지막 업데이트 날짜: 2015년 12월 8일*
+*마지막 업데이트 날짜: 2016년 1월 27일*
 
 앱을 모니터링하고 로그를 검토하면서 애플리케이션 실행을 따라 가면 배치에 대해 더 잘 이해할 수 있습니다. 또한 문제를 찾아 이를 해결하는 데 드는 시간과 노력을 줄일 수 있습니다.
 {:shortdesc}
@@ -37,7 +45,11 @@ Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서
 ##Cloud Foundry에서 실행되는 앱 로깅
 {: #logging_for_bluemix_apps}
 
-로그 파일은 Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 자동으로 작성됩니다. {{site.data.keyword.Bluemix_notm}} 대시보드 또는 명령행 인터페이스에서 로그를 볼 수 있습니다. 또한 관심있는 파트를 보기 위해 로그를 필터링할 수도 있습니다. 
+로그 파일은 Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 자동으로 작성됩니다. 배치에서 런타임까지 어느 단계에서 오류가 발생하더라도 로그를 확인하여 문제를 해결하는 데 도움이 되는 단서를 얻을 수 있습니다.
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###로그 형식
 {: #log_format}
@@ -108,23 +120,34 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 ###로그 보기
 {: #viewing_logs}
 
-{{site.data.keyword.Bluemix_notm}} 대시보드 또는 명령행 인터페이스를 사용하여 로그를 볼 수 있습니다.
+세 위치에서 Cloud Foundry 앱에 대한 로그를 볼 수 있습니다.
 
-####{{site.data.keyword.Bluemix_notm}} 대시보드를 통해 로그 보기
+  * [{{site.data.keyword.Bluemix_notm}} Dashboard](#viewing_logs_UI){:new_window}
+  * [명령행 인터페이스](#viewing_logs_cli){:new_window}
+  * [외부 로그 호스트](#thirdparty_logging){:new_window}
 
-**배치** 또는 **런타임** 로그를 확인하려면 다음 단계를 완료하십시오.
-1. 앱의 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
+#### {{site.data.keyword.Bluemix_notm}} 대시보드에서 로그 보기
+{: #viewing_logs_UI}
+
+배치 또는 런타임 로그를 보려면 다음 단계를 완료하십시오.
+1. {{site.data.keyword.Bluemix_notm}}에 로그인한 다음 대시보드에서 사용자의 앱에 대한 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
 2. 왼쪽 탐색줄에서 **로그**를 클릭하십시오.
 
-####명령행 인터페이스를 통해 로그 보기
+**로그** 콘솔에서 앱에 대한 최신 로그 또는 실시간 비상 로그를 볼 수 있습니다. 또한 로그 유형 및 채널별로 로그를 필터링할 수 있습니다.
+
+**참고:** 로그는 앱 충돌 및 배치 사이에서 지속되지 않습니다.
+
+
+
+#### 명령행 인터페이스에서 로그 보기
+{: #viewing_logs_cli}
 
 명령행 인터페이스를 통해 로그를 보려면 다음 옵션 중에서 선택하십시오. 
 
 <ul>
 <li>앱 배치 시 로그 추적
 <p>**cf logs** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 때 앱과 상호작용하는
-시스템 컴포넌트 및 앱에서 로그를 표시합니다. cf 명령행 인터페이스에 다음 명령을 입력할 수 있습니다. cf 로그에 대한 자세한 정보는 [Log Types
-and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}를 참조하십시오. </p>
+시스템 컴포넌트 및 앱에서 로그를 표시합니다. cf 명령행 인터페이스에 다음 명령을 입력할 수 있습니다. cf 로그에 대한 자세한 정보는 <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a>를 참조하십시오.</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>가장 최신의 로그를 표시합니다. </dd>
@@ -165,6 +188,9 @@ and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deplo
 
 **참고:** 애플리케이션 로깅 사용 방법에 대한 정보는 [런타임 오류 디버깅](../troubleshoot/debugging.html#debug_runtime)을 참조하십시오. 
 
+
+
+
 ###로그 필터링
 {: #filtering_logs}
 
@@ -182,50 +208,85 @@ cf logs appname --recent | grep '\[App'
 ```
 **grep** 옵션에 대한 자세한 정보를 보려면 `grep --help`를 입력하십시오. 
 
-###써드파티 로깅 구성
+
+
+### 외부 로그 호스트 구성
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}}는 메모리에 제한된 양의 로그 정보를 보관합니다. 정보가 로깅되면
 이전 정보는 새 정보로 바뀝니다.
-로그 정보를 모두 보관하려면 써드파티 로그 관리 서비스에
-로그를 저장할 수 있습니다. 
+로그 정보를 모두 보관하려면 써드파티 로그 관리 서비스와 같은 외부 로그 호스트 또는 기타 호스트에 로그를 저장할 수 있습니다.
 
-애플리케이션 및 시스템에서 써드파티 로그 관리 서비스로
-로그를 스트림하려면 다음 단계를 수행하십시오.
+앱 및 시스템에서 외부 로그 호스트로 로그를 스트림하려면 다음 단계를 수행하십시오.
 
-1. 써드파티 로그 관리 서비스를 등록하십시오.
-    
-    Papertail, Splunk Storm, SumoLogic, Logentries 등
-[syslog
-프로토콜](http://tools.ietf.org/html/rfc5424){:new_window}을 지원하는 써드파티 로그 관리 서비스를 사용할 수 있습니다.
-써드파티 로그 관리 서비스를 등록한 다음
-{{site.data.keyword.Bluemix_notm}}에서 로그에 대한 대상을 제공하십시오.
-구성을 완료한 후에는 일반적으로 서비스가 {{site.data.keyword.Bluemix_notm}}에서 로그에 대한 대상으로 syslog URL을 제공합니다. 써드파티 로그 관리 서비스를 구성하는 방법에 대한
-자세한 정보는 [Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}를 참조하십시오. 
+  1. 로깅 엔드포인트를 판별하십시오. 
+     
+	 Papertrail, Splunk 또는 Sumologic 등의 써드파티 로그 수집기에 로그를 전송할 수 있습니다. 또한 syslog 호스트, TLS(Transport Layer Security)로 암호화된 syslog 호스트 또는 HTTPS POST 엔드포인트에 로그를 전송할 수 있습니다. 로깅 엔드포인트를 얻기 위한 방법은 로그 호스트에 따라 다릅니다.
 
-2. 사용자 제공 서비스 인스턴스를 작성하십시오.
+  2. 사용자 제공 서비스 인스턴스를 작성하십시오.
+     
+	 `'cf create-user-provided-service'` 명령 또는 `'cups'`(명령의 짧은 버전)를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.
+	 ```
+	 cf create-user-provided-service <service_name> -l <logging_endpoint>
+	 ```
+	 **service_name**
+	 
+	 사용자 제공 서비스 인스턴스의 이름입니다.
+	 
+	 **logging_endpoint**
+	 
+	 {{site.data.keyword.Bluemix_notm}}에서 로그를 전송하는 로깅 엔드포인트입니다. *logging_endpoint*를 사용자의 값으로 교체하려면 다음 표를 참조하십시오.
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>로깅 엔드포인트</th>
+     <th>명령</th>
+	 <th>참고</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>syslog 호스트</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>예를 들어, Papertrail에 로깅을 사용하려면 `cf cups my-logs -l syslog://<papertrail-url>`을 입력하십시오. `<papertrail-url>`을 Papertrail의 사용자 로깅 엔드포인트의 URL로 대체하십시오.</td>
+     </tr>
+	 <tr>
+     <td>syslog-tls 호스트</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>인증서는 인증 기관에 의해 신뢰받아야 합니다. 자체 서명 인증서를 사용하지 마십시오.</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>이 엔드포인트는 공용 인터넷에 있어야 하며 {{site.data.keyword.Bluemix_notm}}에 의해 액세스될 수 있어야 합니다.</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. 서비스 인스턴스를 앱에 바인딩하십시오. 
+
+	 다음 명령을 사용하여 서비스 인스턴스를 앱에 바인딩하십시오. 
 	
-	{{site.data.keyword.Bluemix_notm}}에서 써드파티 로그 관리 서비스로 로그를 스트림하려면
-먼저 사용자 제공 서비스 인스턴스를 작성해야 합니다. 다음 명령을 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오. 여기서, service_name은
-사용자 제공 서비스 인스턴스의 이름이고 syslog_URL은 써드파티 로깅 서비스에서 가져온 URL입니다.
-	
+	 ```
+	 cf bind-service appname <service_name>
 	```
-	cf create-user-provided-service <service_name> -l <syslog_URL>
-	```
-	
-3. 서비스 인스턴스를 애플리케이션에 바인딩하십시오.
+	 **appname**
+	 
+	 앱의 이름입니다.
+	 
+	 **service_name**
+	 
+	 사용자 제공 서비스 인스턴스의 이름입니다.
+	 
+  4. 앱을 다시 스테이징하십시오.
+     변경사항이 적용되도록 ```cf restage appname```을 입력하십시오. 
 
-	서비스 인스턴스를 애플리케이션에 바인딩하려면 다음 명령을 사용하십시오. 여기서, appname은 애플리케이션의 이름이고
-service_name은 사용자 제공 서비스 인스턴스의 이름입니다.
-	
-	```
-	cf bind-service appname <service_name>
-	```
-	
-	그런 다음, 변경사항을 적용하기 위해 cf restage appname을 입력하여 애플리케이션을
-다시 스테이징하라는 메시지가 표시됩니다. 로그가 생성되면 잠시 지연되었다가
-써드파티 로그 관리 서비스에 유사한 메시지가 표시될 수 있습니다.
+#### 외부 호스트에서 로그 보기
+{: #viewing_logs_external}
+
+	 
+로그가 생성될 때 짧은 지연 후에 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스에서 표시되는 메시지와 유사한 메시지를 외부 로그 호스트에서 볼 수 있습니다. 앱의 다중 인스턴스가 있는 경우, 로그가 집계되고 앱에 대한 모든 로그를 볼 수 있습니다. 또한 로그는 앱 충돌 및 배치 사이에서 지속됩니다.
+
+**참고:** 명령행 인터페이스에 표시된 로그는 syslog 형식이 아니며 외부 로그 호스트에 표시된 메시지와 정확히 일치하지 않을 수 있습니다. 
 
 
-**참고:** 명령행 인터페이스에 표시된 로그는 syslog 형식이 아니며
-써드파티 로그 관리 서비스에 표시된 메시지와 정확히 일치하지 않을 수 있습니다.

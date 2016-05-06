@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #保護應用程式安全
 {: #securingapps}
 
-*前次更新：2015 年 12 月 4 日*
+*前次更新：2016 年 3 月 17 日*
 
 您可以上傳 SSL 憑證並限制應用程式存取，來保護您的應用程式。{:shortdesc}
 
@@ -45,8 +53,7 @@ CSR 是傳送給憑證管理中心的訊息，用來要求簽署公開金鑰及�
 
   您要求憑證的完整網域名稱 (FQDN)。
   
-建立 CSR 的方法會視您的作業系統而不同。下列範例顯示如何使用
-[OpenSSH 指令工具](http://www.openssl.org/){:new_window}建立 CSR：
+建立 CSR 的方法會視您的作業系統而不同。下列範例顯示如何使用 [OpenSSL 指令行工具](http://www.openssl.org/){:new_window}建立 CSR：
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -69,13 +76,11 @@ SHA-1 選項來處理具有 SHA-256 憑證相容性問題的應用程式。
 
 您必須先建立憑證簽署要求，才能上傳憑證。請參閱[建立憑證簽署要求](#ssl_csr)。
 
-若要適當地提供 SSL 憑證，您必須使用下列 IP 位址，以在建立自訂網域來提供
-{{site.data.keyword.Bluemix_notm}} 中配置給貴組織的 URL 路徑時，配置
-DNS 或 hosts 檔。
+若要適當地提供 SSL 憑證，您必須使用下列 IP 位址，以在建立自訂網域來提供 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑時，配置 DNS 伺服器。
 
 * US-SOUTH：75.126.81.68
 * EU-GB：5.10.124.142
-* AU-SYD：168.1.35.169
+* AU-SYD：168.1.35.166
 
 您用於專用環境的 IP 位址不同。請與您的 IBM 業務代表聯絡，以取得專用環境的 IP 位址。
 

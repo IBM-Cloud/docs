@@ -9,7 +9,7 @@ copyright:
 {: #facebook-auth-overview}
 You can configure the {{site.data.keyword.amashort}} service to protect resources by using Facebook as identity provider. Your mobile application users can use their Facebook credentials for authentication.
 
-**Important**: You do not need to separately install the Facebook SDK. The Facebook SDK is installed automatically by dependency managers when you configure the {{site.data.keyword.amashort}} Client SDK.
+**Important**: You do not need to separately install the Facebook SDK. The Facebook SDK is installed automatically by dependency managers when you configure the {{site.data.keyword.amashort}} client SDK.
 
 ## {{site.data.keyword.amashort}} request flow
 {: #mca-facebook-sequence}
@@ -18,18 +18,18 @@ See the following simplified diagram to understand how {{site.data.keyword.amash
 
 ![image](images/mca-sequence-facebook.jpg)
 
-1. Use the {{site.data.keyword.amashort}} SDK to make a request to your backend resources that are protected with the {{site.data.keyword.amashort}} Server SDK.
-* The {{site.data.keyword.amashort}} Server SDK detects an unauthorized request and returns HTTP 401 code and authorization scope.
-* The {{site.data.keyword.amashort}} Client SDK automatically detects the HTTP 401 code and starts the authentication process.
-* The {{site.data.keyword.amashort}} Client SDK  contacts the {{site.data.keyword.amashort}} service and asks to issue an authorization header.
+1. Use the {{site.data.keyword.amashort}} client SDK to make a request to your backend resources that are protected with the {{site.data.keyword.amashort}} server SDK.
+* The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 code and authorization scope.
+* The {{site.data.keyword.amashort}} client SDK automatically detects the HTTP 401 code and starts the authentication process.
+* The {{site.data.keyword.amashort}} client SDK  contacts the {{site.data.keyword.amashort}} service and asks to issue an authorization header.
 * The {{site.data.keyword.amashort}} service asks the client to authenticate with Facebook first by supplying an authentication challenge.
-* The {{site.data.keyword.amashort}} Client SDK uses the Facebook SDK to start the authentication process. After successful authentication, the Facebook SDK returns a Facebook access token.
+* The {{site.data.keyword.amashort}} client SDK uses the Facebook SDK to start the authentication process. After successful authentication, the Facebook SDK returns a Facebook access token.
 * The Facebook access token is considered an authentication challenge answer. The token is sent to the {{site.data.keyword.amashort}} service.
 * The service validates the authentication challenge answer with Facebook servers.
-* If validation is successful, the {{site.data.keyword.amashort}} service generates an authorization header and returns it to the {{site.data.keyword.amashort}} Client SDK. Authorization header contains two tokens: an access token that contains access permissions information, and ID token that contains information about current user, device, and application.
-* From this point on, all requests that are made through the {{site.data.keyword.amashort}} Client SDK  have a newly obtained authorization header.
-* The {{site.data.keyword.amashort}} Client SDK  automatically resends the original request that triggered the authorization flow.
-* The {{site.data.keyword.amashort}} Server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a backend resource.
+* If validation is successful, the {{site.data.keyword.amashort}} service generates an authorization header and returns it to the {{site.data.keyword.amashort}} client SDK. Authorization header contains two tokens: an access token that contains access permissions information, and ID token that contains information about current user, device, and application.
+* From this point on, all requests that are made through the {{site.data.keyword.amashort}} client SDK  have a newly obtained authorization header.
+* The {{site.data.keyword.amashort}} client SDK  automatically resends the original request that triggered the authorization flow.
+* The {{site.data.keyword.amashort}} server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a backend resource.
 
 ## Obtaining a Facebook application ID from the Facebook Developer Portal
 {: #facebook-appID}

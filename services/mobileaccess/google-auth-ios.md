@@ -8,39 +8,58 @@ copyright:
 # Enabling Google authentication in iOS apps
 {: #google-auth-ios}
 
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Enabling Google authentication in iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
+
 ## Before you begin
 {: #google-auth-ios-before}
-* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Manually protect your backend application with {{site.data.keyword.amashort}} Server SDK. For more information, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* You must have a resource that is protected by {{site.data.keyword.amashort}} and an iOS project that is instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) and [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Manually protect your backend application with {{site.data.keyword.amashort}} server SDK. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
 ## Configuring a Google Project for the iOS Platform
 {: #google-auth-ios-project}
 To start using Google as identity provider, create a project in the Google Developer Console to obtain a Google client ID.  This client ID is a unique identifier to let Google know which application is attempting to connect.   If you already have Google project, you can skip the steps that describe project creation and start with adding credentials.
 
-1. Open the [Google Developer Console](https://console.developers.google.com).
 
-1. Create a project. Click **Create project**.
 
-1. Select your project and click **Use Google APIs**. You might also click **Enable APIs and get credentials like keys**.
+1. Create a project in [Google Developer Console](https://console.developers.google.com).
+If you already have a project, you can skip the steps that describe project creation and start with adding credentials.
+   1.    Open the new project menu.
 
-1. In the API list, choose the Google+ API and click **Enable API**.
+         ![image](images/FindProject.jpg)
 
-1. Click **Credentials > Add credentials** and select **OAuth 2.0 client ID**.
+   2.    Click **Create a project**.
 
-1. You might be asked to set a product name on the consent console. Proceed to do so.
+         ![image](images/CreateAProject.jpg)
+
+
+1. From the **Social APIs** list, choose **Google+ API**.
+
+     ![image](images/chooseGooglePlus.jpg)
+
+1. Click **Enable** from the next screen.
+
+1. Select the **Consent Screen** tab and provide  the Product name shown to users. Other values are optional. Click **Save**.
+
+    ![image](images/consentScreen.png)
+
+1. From the **Credentials** list, choose OAuth client ID.
+
+     ![image](images/chooseCredentials.png)
+
+
 
 1. At this point you will be presented with an application type choice. Select **iOS**.
 
 1. Provide a meaningful name for your iOS client. Specify the bundle ID of your iOS application. To find the bundle ID of your iOS application look for **Bundle Identifier** in either the `info.plist` file or the Xcode project **General** tab.
 
-1. Take a note of your new iOS Client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
+1. Take a note of your new iOS client ID. You need the value when you set up the application in  {{site.data.keyword.Bluemix}}.
 
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-ios-config}
 
-Now that you have an iOS Client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
+Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 1. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
@@ -50,12 +69,15 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 1. Click the **Google** tile.
 
-1. In **Application ID for iOS**, specify your iOS Client ID for Android and click **Save**.
+1. In **Application ID for iOS**, specify your iOS client ID for Android and click **Save**.
 
-## Configuring the {{site.data.keyword.amashort}} Client SDK for iOS
+	Note: In addition to the Google client id, the reverse value is also needed for your client configuration (see below). To access both values, download the example plist using pencil icon:
+		![info.plist file download](images/download_plist.png)
+
+## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #google-auth-ios-sdk}
 
-### Installing the {{site.data.keyword.amashort}} Client SDK using CocoaPods
+### Installing the {{site.data.keyword.amashort}} client SDK using CocoaPods
 {: #google-auth-ios-sdk-cocoapods}
 
 1. Navigate to your iOS project.
@@ -68,7 +90,7 @@ Now that you have an iOS Client ID, you can enable Google authentication in the 
 
 1. Save the `Podfile` and run `pod install` from the command line. CocoaPods  installs the dependencies. You will see the progress and which components were added.
 
-**Important**: You now must open your project by using the `xcworkspace` file that is generated by CocoaPods. Usually the name is `{your-project-name}.xcworkspace`.  
+  **Important**: You now must open your project by using the `xcworkspace` file that is generated by CocoaPods. Usually the name is `{your-project-name}.xcworkspace`.  
 
 1. Run `open {your-project-name}.xcworkspace` from the command line to open your iOS project workspace.
 
@@ -79,7 +101,7 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 * Configure Google integration by adding the following URL schemas to your `info.plist` file.
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
-	The first URL Schema is a reversed version of the Client ID from the Google Developer Console.  For example, if your Client ID is `123123-abcabc.apps.googleusercontent.com`, your URL Schema is: `com.googleusercontent.apps.123123-abcabc`.
+	The first URL Schema is a reversed version of the client ID from the Google Developer Console.  For example, if your client ID is `123123-abcabc.apps.googleusercontent.com`, your URL Schema is: `com.googleusercontent.apps.123123-abcabc`.
 
 	The second URL Schema is the bundle ID of your application.
 
@@ -111,16 +133,16 @@ Configure Google integration by updating the `info.plist` file. The `info.plist`
 
 	**Important**: Do not override any existing properties in the `info.plist` file. If you have overlapping properties, you will need to merge the properties manually. For more information, see [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start).
 
-## Initializing the {{site.data.keyword.amashort}} Client SDK
+## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #google-auth-ios-initialize}
 
-To use the {{site.data.keyword.amashort}} Client SDK,  initialize it by passing the applicationGUID, and applicationRoute parameters.
+To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the applicationGUID, and applicationRoute parameters.
 
 A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Get the applicationGUID and applicationRoute values. From the  {{site.data.keyword.Bluemix_notm}} Dashboard, click your app. Click **Mobile Options**. The Application Route and Application GUID values are displayed.
 
-1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} Client SDK. Add the following headers:
+1. Import the required frameworks in the class where you want to use the {{site.data.keyword.amashort}} client SDK. Add the following headers:
 
 	Objective-C:
 
@@ -131,7 +153,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 	Swift:
 
-	The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
+	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
 
 	1. Right-click your project in Xcode and select **New File...**
 	2. In the **iOS Source** category, pick **Header file**.
@@ -147,7 +169,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	7. Set the value to the location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Make sure your bridging header is being picked up by Xcode by building your project.
 
-3. Use the following code to initialize the Client SDK.  Replace the *applicationRoute* and *applicationGUID*  with values that you  obtained from **Mobile Options**.
+3. Use the following code to initialize the client SDK.  Replace *applicationRoute* and *applicationGUID* with the **Route** and **App GUID** values that you obtained from **Mobile Options**.
 
 	Objective-C:
 
@@ -218,16 +240,16 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 ## Testing the authentication
 {: #google-auth-ios-testing}
-After the Client SDK is initialized, you can start making requests to your mobile backend.
+After the client SDK is initialized, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #google-auth-ios-testing-before}
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://www.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
 1. Try to send a request to protected endpoint of your mobile backend in your desktop browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`
 
-1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} Client SDK. As a result you will see `Unauthorized` in your desktop browser.
+1. The `/protected` endpoint of a mobile backend created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} client SDK. As a result you will see `Unauthorized` in your desktop browser.
 
 1. Use your iOS application to make request to the same endpoint.
 
@@ -245,7 +267,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -278,3 +300,21 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 1. 	Your request should succeed. You should see the following output in the LogCat
 
 	![image](images/ios-google-login-success.png)
+		
+	You can also add logout functionality by adding the following code:
+
+	Objective C:
+
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	If you call this code after a user is logged in with Google and the user tries to log in again, they are prompted to authorize {{site.data.keyword.amashort}} to use Google for authentication purposes. At that point, the user can click the user name in the upper-right corner of the screen to select and login with another user.
+
+	Passing `callBack` to the logout function is optional. You can also pass `nil`.

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #Serviços
 {: #services}
-*Última atualização: 20 de janeiro de 2015*
+*Última atualização: 20 de janeiro de 2016*
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -58,7 +65,9 @@ o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Pa
 
 
 
-O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para visualizar todos os serviços experimentais, textos padrão e tempos de execução disponíveis, efetue login no {{site.data.keyword.Bluemix_notm}}, role para a parte inferior do Catálogo e, em seguida, clique em **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
+O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para
+visualizar todos os serviços experimentais, modelos e tempos de
+execução disponíveis, efetue login no {{site.data.keyword.Bluemix_notm}}, role para a parte inferior do Catálogo e, em seguida, clique em **{{site.data.keyword.Bluemix_notm}} Lab Catalog**.
 
 Serviços experimentais podem não ser estáveis e podem mudar de maneiras que não sejam compatíveis com versões anteriores. Esses serviços não são recomendados para uso em ambientes de produção. O suporte para serviços experimentais é fornecido por meio da Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM
 e for determinado que é um defeito em um serviço experimental,
@@ -101,6 +110,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.conceptinsightsshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.dashdbshort}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.datacshort}}		|Sim		|Sim		|Sim|
+|{{site.data.keyword.DB2OnCloud_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.deliverypipeline}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.dialogshort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.documentconversionshort}}	|Sim		|Sim		|Sim|
@@ -113,6 +123,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.iot_short}}		|Sim		|Não		|Não|
+|{{site.data.keyword.keymanagementserviceshort}}|Não		|Sim		|Não|
 |{{site.data.keyword.languagetranslationshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.messagehub}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.messageresonanceshort}}	|Sim		|Sim		|Não|
@@ -133,6 +144,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.relationshipextractionshort}}	|Sim	|Sim		|Sim|
 |{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Não|
+|{{site.data.keyword.servicediscoveryshort}}	|Sim		|Não		|Não|
 |{{site.data.keyword.sescashort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
 |{{site.data.keyword.speechtotextshort}}	|Sim 		|Sim	 	|Sim|
@@ -154,7 +166,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 
 # Incluindo um serviço em seu aplicativo
 {: #add_service}
-*Última atualização: 19 de novembro de 2015*
+*Última atualização: 8 de março de 2016*
 
 O {{site.data.keyword.Bluemix}} possui
 uma lista de serviços e gerencia-os em nome dos desenvolvedores. Para incluir um serviço para o
@@ -223,9 +235,8 @@ que você requer.
     cf bind-service appname service_instance
     ```
 
-**Nota:** Uma instância de serviço é específica para um espaço em que a instância de serviço é criada. Não é possível mover uma instância de serviço para
-outro espaço ou organização. Em vez disso, deve-se solicitar uma nova instância de
-serviço para cada espaço em que você deseja utilizá-la.
+É possível ligar uma instância de serviço a apenas às instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
+
 
 ## Configurando seu aplicativo para interagir com um serviço 
 {: #config}
@@ -259,7 +270,7 @@ o que deve-se esperar e como interpretar cada parte de informação.
 
 Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.Bluemix_notm}}
 não reinicia automaticamente o aplicativo para recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades,
-exceções e falhas de conexão. Consulte o tópico de resolução de problemas [Os apps não serão reiniciados automaticamente](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window} para obter informações adicionais.
+exceções e falhas de conexão. Consulte o tópico de resolução de problemas [Os apps não serão reiniciados automaticamente](../troubleshoot/index.html#ts_topmenubar) para obter informações adicionais.
 
 ## Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}
 {: #accser_external}
@@ -351,41 +362,47 @@ Agora é possível configurar o seu aplicativo para usar os recursos externos. P
 ## Usando serviços em uma outra região
 {: #cross_region_service}
 
-Se você tiver uma instância de serviço criada e ligada
-a apps em uma região, poderá usar esta instância de serviço em uma outra
-região criando um serviço fornecido pelo usuário.
+Se você tiver uma instância de serviço criada e ligada a apps em uma região, será possível usar essa instância de serviço em uma outra região com um dos métodos a seguir:
 
-Suponha que você esteja iniciando na região em que
+  * Use as credenciais de serviço para configurar sua instância do app diretamente. Consulte [Ativando apps externos para usarem serviço do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window} para obter detalhes.
+  * Crie um serviço fornecido pelo usuário como uma ponte.
+    
+	Suponha que você esteja iniciando na região em que
 deseja usar a instância de serviço. Para usar uma instância de serviço existente
 em uma outra região, conclua as etapas a seguir:
 
-1. Alterne para a região em que a instância de serviço existe. Na barra de menus superior do {{site.data.keyword.Bluemix_notm}},
+      1. Alterne para a região em que a instância de serviço existe. Na barra de menus superior do {{site.data.keyword.Bluemix_notm}},
 expanda **Região** ou clique no ícone **Região** e,
 em seguida, selecione a região em que a instância de serviço existe.
 
-2. Recupere as credenciais e os parâmetros de conexão da variável de ambiente VCAP_SERVICES da instância de serviço na região na qual o serviço existe. Conclua
+      2. Recupere as credenciais e os parâmetros de conexão da variável de ambiente VCAP_SERVICES da instância de serviço na região na qual o serviço existe. Conclua
 as etapas a seguir:
 
-	1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no tile do aplicativo. A página Visão geral é exibida.
-	2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES*
+	       1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no tile do aplicativo. A página Visão geral é exibida.
+	       2. Na área de janela de navegação à esquerda, clique em **Variáveis de ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES*
 são exibidos na área de janela direita. Registre o conteúdo JSON para a
 instância de serviço.
 
-3. Alterne para a região em que você deseja usar a instância de
+      3. Alterne para a região em que você deseja usar a instância de
 serviço. Na barra de menus superior do {{site.data.keyword.Bluemix_notm}}, expanda **Região** ou clique no ícone **Região** e, em seguida, selecione a região em que você deseja usar a instância de serviço.
 
-4. Crie uma instância de serviço fornecida pelo usuário usando as credenciais
+      4. Crie uma instância de serviço fornecida pelo usuário usando as credenciais
 e os parâmetros de conexão que você registrou a partir da variável de ambiente
 *VCAP_SERVICES*. Para obter informações sobre como criar
 uma instância de serviço fornecida pelo usuário, consulte [Criando uma
 instância de serviço fornecida pelo usuário](#user_provide_services){: new_window}.
 
-5. Ligue a instância de serviço fornecida pelo usuário ao seu app
+      5. Ligue a instância de serviço fornecida pelo usuário ao seu app
 usando o comando a seguir:
 
-	```
-	cf bind-service myapp user-provided_service_instance
-	```
+	     ```
+	     cf bind-service myapp user-provided_service_instance
+	     ```
+
+
+
+
+
 
 ## Usando os serviços em outro serviço
 {: #s2s_binding}
@@ -403,8 +420,8 @@ no ladrilho para o serviço que você deseja acessar. O painel para o serviço �
 # rellinks
 {: #rellinks}
 
-## general 
-* [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [Recuperando VCAP_SERVICES](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## general
+* [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
+* [Recuperando VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 
 

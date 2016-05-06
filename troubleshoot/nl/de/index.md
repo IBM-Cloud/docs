@@ -94,7 +94,7 @@ einer {{site.data.keyword.Bluemix_notm}}-Region
 den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
 den folgenden Befehl eingeben:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -1221,7 +1221,7 @@ Es kann vorkommen, dass in {{site.data.keyword.Bluemix_notm}} von mehreren Anwen
 Dieses Problem kann auftreten, wenn Sie unterschiedlichen Anwendungen in einem Bereich dieselbe URL-Route zuweisen.
 {: tsCauses}
 
-Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen Sie als Domäne 'mynewapp.stage1.mybluemix.net' fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' in demselben Bereich per Push-Operation und legen für eine ihrer URL-Routen unter den Namen 'mynewapp.stage1.mybluemix.net' fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
+Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen Sie als Domäne 'mynewapp.mybluemix.net' fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' in demselben Bereich per Push-Operation und legen für eine ihrer URL-Routen unter den Namen 'mynewapp.mybluemix.net' fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
 
  
 

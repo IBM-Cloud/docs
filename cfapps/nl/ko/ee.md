@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -131,11 +143,11 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
 사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을
 지정해야 합니다.
 **cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은
-지역의 URL입니다. 미국 남부 지역의 URL은 stage1.ng.bluemix.net입니다. 다음 명령을 입력하여
+지역의 URL입니다. 미국 남부 지역의 URL은 ng.bluemix.net입니다. 다음 명령을 입력하여
 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
@@ -158,7 +170,7 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
   **cf push** 명령에 대한 자세한 정보는 앱 업로드를 참조하십시오.
   
   6. 이제 브라우저에서 다음 앱 URL을 입력하여 앱에 액세스할 수 있습니다.```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 또한 Eclipse 도구와 같은 다른 앱 빌드 도구를 선택할 수도 있습니다. 자세한 정보는

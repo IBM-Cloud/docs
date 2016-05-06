@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#App Management
+#Gerenciando apps Liberty e Node.js
 {: #app_management}
 
-*Última atualização: 8 de dezembro de 2015*
+*Última atualização: 17 de março de 2016*
 
 App Management é um conjunto de utilitários de desenvolvimento e depuração que podem ser ativados para
 seus aplicativos Liberty e Node.js no {{site.data.keyword.Bluemix}}.
@@ -66,13 +74,6 @@ Esses utilitários suportam apenas o Node.js.
   O utilitário *inspector* também inicia o *proxy*.
   
   2. *strongpm*: ativa o uso de [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} para analisar o aplicativo Node.js com utilitários como: [StrongLoop Metrics, Profiling e Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-  
-  **NOTA:** deve-se usar uma versão 0.12 de engines.node para usar o utilitário **strongpm**. A versão engines.node é especificada no arquivo package.json. Por
-exemplo:
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   O utilitário *strongpm* também inicia o *proxy*.
   

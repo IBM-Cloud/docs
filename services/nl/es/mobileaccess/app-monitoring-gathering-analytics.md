@@ -1,9 +1,16 @@
+---
+
+copyright:
+  años: 2015, 2016
+
+---
+
 # Recopilación de analíticas de uso
 {: #usage-analytics}
 
 Puede configurar el SDK del cliente de {{site.data.keyword.amashort}} para que registre analíticas y envíe los datos registrados al servicio de {{site.data.keyword.amashort}}.
 
-**Nota:** asegúrese de haber habilitado la captura de registro antes de empezar a registrar las analíticas de uso. 
+**Nota:** asegúrese de haber habilitado la captura de registro antes de empezar a registrar las analíticas de uso.
 
 Utilice las API siguientes para empezar el registro y envío de analíticas de uso:
 
@@ -12,23 +19,23 @@ Utilice las API siguientes para empezar el registro y envío de analíticas de u
 
 ```Java
 // Habilite el registro de analíticas de uso
-MFPAnalytics.enable()
+MFPAnalytics.enable();
 
 // Empiece registrando el tiempo de inicio de la aplicación
 // Añada este código al método onCreate de la actividad principal
-MFPAnalytics.startLoggingApplicationStartup()
+MFPAnalytics.startLoggingApplicationStartup();
 
 // Registre la duración del tiempo de inicio de la aplicación
-// Añada este código al método onStarted de la actividad principal
-MFPAnalytics.logApplicationStartup()
+// Añada este código al método onStart de la actividad principal
+MFPAnalytics.logApplicationStartup();
 
 // Registre los sucesos de fondo y primer plano de la aplicación
 // Añada este código a los métodos onPause y onResume de la actividad principal
-MFPAnalytics.logSessionStart()
-MFPAnalytics.logSessionEnd()
+MFPAnalytics.logSessionStart();
+MFPAnalytics.logSessionEnd();
 
 // Envíe las analíticas de uso registradas al servicio de {{site.data.keyword.amashort}}
-MFPAnalytics.send()
+MFPAnalytics.send();
 ```
 
 ### iOS - Objective-C
@@ -71,4 +78,4 @@ MFPAnalytics.enable();
 // Envíe las analíticas de uso registradas al servicio de {{site.data.keyword.amashort}}
 MFPAnalytics.send();
 ```
-**Nota:** cuando esté desarrollando aplicaciones de Cordova, utilice la API nativa para habilitar el registro de sucesos de ciclo de vida de la aplicación. 
+**Nota:** cuando esté desarrollando aplicaciones de Cordova, utilice la API nativa para habilitar el registro de sucesos de ciclo de vida de la aplicación.

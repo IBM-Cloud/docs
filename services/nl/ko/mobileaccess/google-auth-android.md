@@ -1,11 +1,18 @@
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
 # Android 앱에서 Google 인증 사용
 {: #google-auth-android}
 
 ## 시작하기 전에
 {: #before-you-begin}
 
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 Android 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](getting-started.html) 및 [Android SDK 설정](getting-started-android.html)을 참조하십시오.   
-* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
+* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 Android 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [Android SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)을 참조하십시오.  
+* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 ## Android 플랫폼에 대한 Google 프로젝트 구성
 {: #google-auth-android-project}
@@ -22,9 +29,9 @@ ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 �
 
 1. 메뉴에서 **신임 정보**를 클릭하십시오. 
 
-1. **신임 정보 추가**를 클릭하고 **OAuth 2.0 클라이언트 ID**를 선택하십시오. 
+1. **새 신임 정보**를 클릭하고 **OAuth 2.0 클라이언트 ID**를 선택하십시오.
 
-1. 승인 콘솔에서 제품 이름을 설정하십시오. 
+1. **OAuth 승인 화면** 탭에서 제품 이름을 설정하십시오.
 
 1. 애플리케이션 유형을 선택하십시오. **Android**를 클릭하십시오. Android 클라이언트에 대한 의미있는 이름을 지정하십시오. 
 
@@ -53,15 +60,15 @@ ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 �
 
 Android 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다. 
 
-1. {{site.data.keyword.Bluemix}} 대시보드를 열고 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 클릭하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 *applicationRoute* 및 *applicationGUID* 값을 복사하십시오. SDK를 초기화하는 데 이 값이 필요합니다. 
+1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 이 값이 필요합니다. 
 
-1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드로 이동됩니다. 
+1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
-1. **인증 설정 > Google**을 클릭하십시오. 
+1. **Google** 타일을 클릭하십시오.
 
-1. Android용 **클라이언트 ID**를 지정하고 **저장**을 클릭하십시오. 
+1. **Android용 애플리케이션 ID**에서 Android용 Android 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
 
 ## Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #google-auth-android-sdk}
@@ -104,7 +111,7 @@ Android 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시
 
 	필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션의 기본 활동의 onCreate 메소드입니다. 
 
-1. 클라이언트 SDK를 초기화하고 Google 인증 관리자를 등록하십시오. `applicationRoute` 및 `applicationGUID`를 대시보드의 **모바일 옵션** 섹션의 값으로 대체하십시오. 
+1. 클라이언트 SDK를 초기화하고 Google 인증 관리자를 등록하십시오. *applicationRoute* 및 *applicationGUID*를 대시보드의 **모바일 옵션** 섹션에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -130,10 +137,10 @@ Android 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시
 
 ### 시작하기 전에
 {: #google-auth-android-testing-before}
-MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드가 있어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
+MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드가 있어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. `http://{appRoute}/protected`를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송해보십시오(예: `http://my-mobile-backend.mybluemix.net/protected`).
- MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 따라서, {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 모바일 애플리케이션만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을
+전송하십시오. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 따라서, {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 모바일 애플리케이션만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient` 인스턴스를 초기화하고 `GoogleAuthenticationManager`를 등록한 후에 다음 코드를 추가하십시오. 
 

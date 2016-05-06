@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #custom-android}
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Android アプリケーションを構成します。
@@ -6,11 +13,11 @@
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](getting-started.html)
- * [Android SDK のセットアップ](getting-started-android.html)
- * [カスタム ID プロバイダーの使用](custom-auth.html)
- * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
+ * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
@@ -40,7 +47,7 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
 
-1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボードのアプリケーションの**「モバイル・オプション」**パネルにある値で置き換えます。
+1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリ内で**「モバイル・オプション」**をクリックしたときに取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -176,7 +183,7 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `http://{appRoute}/protected`、たとえば `http://my-mobile-backend.mybluemix.net/protected` を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。
 
 1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
 その結果、`承認されていない`というメッセージがブラウザーに表示されます。
@@ -204,6 +211,6 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 	});
 ```
 
-1. 	要求が成功したら、LogCat ツールで以下のように出力されます。 
+1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
 	![image](images/android-custom-login-success.png)

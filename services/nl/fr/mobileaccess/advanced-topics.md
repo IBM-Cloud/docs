@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+  
+---
+
 # Fonctions avancées de {{site.data.keyword.amashort}}
 {: #before-you-begin}
 Le service {{site.data.keyword.amashort}} fournit des fonctions destinées aux scénarios avancés.

@@ -1,6 +1,23 @@
-# bl コマンド
+---
 
-*最終更新日:* 2015 年 11 月 13 日
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:new_window: target="_blank"}
+
+# {{site.data.keyword.Bluemix_notm}} Live Sync (bl) コマンド
+
+*最終更新日: 2016 年 1 月 29 日*
 
 Node.js アプリケーションを作成する場合、Bluemix™ Live Sync を使用して、Bluemix で実行中のアプリケーション・インスタンスを即時に更新して、デスクトップの場合と同じように再デプロイせずに開発することができます。変更を行うと、実行中の Bluemix アプリケーションでその変更を即時に確認できます。Bluemix Live Sync コマンド・ライン・インターフェースは *bl* と呼ばれます。
 
@@ -12,7 +29,7 @@ Node.js アプリケーションを作成する場合、Bluemix™ Live Sync を
 * 同期に使用可能なプロジェクトのリストの表示。
 * 実行中のアプリケーションの状況の表示。
 
-bl コマンドのダウンロードと使用について詳しくは、[Bluemix Live Sync](https://www.ng.bluemix.net/docs/manageapps/bluemixlive.html#bluemixlive) を参照してください。
+bl コマンドのダウンロードと使用について詳しくは、[Bluemix Live Sync](../develop/bluemixlive.html) を参照してください。
 
 ## bl コマンド
 
@@ -41,14 +58,10 @@ Bluemix Live Sync コマンド・ライン **bl** の構文は次のとおりで
 </dl>
 
 ### arguments
-<dl>
-<dd>コマンドの引数。</dd>
-</dl>
+コマンドの引数。
 
 ### options
-<dl>
-<dd>コマンドのオプション。</dd>
-</dl>
+コマンドのオプション。
 
 ### グローバル・オプション
 <dl>

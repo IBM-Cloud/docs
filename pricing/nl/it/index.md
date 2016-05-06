@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -114,7 +126,7 @@ Quando ti registri per un piano fatturabile {{site.data.keyword.Bluemix_notm}}, 
 * {{site.data.keyword.Bluemix_notm}} locale
 
 Con un account Pagamento a consumo, gli addebiti a tuo carico sono basati sull'utilizzo che fai di elaborazione e servizi {{site.data.keyword.Bluemix_notm}}. Con
-un account Sottoscrizione, puoi ottenere uno sconto mensile basato su un impegno di spesa mensile minimo. {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale vengono addebitati in base a dei contratti annuali. 
+un account Sottoscrizione, puoi ottenere uno sconto mensile basato su un impegno di spesa mensile minimo. {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale vengono addebitati in base a dei contratti annuali.
 
 Puoi convertire il tuo account di prova gratuito in un account fatturabile in qualsiasi momento. Tutte le soluzioni {{site.data.keyword.Bluemix_notm}} e le informazioni sul tuo account di prova gratuito non fatturabile saranno inglobate senza soluzione di continuità nel nuovo account fatturabile.
 
@@ -473,7 +485,7 @@ Una volta aggiunti tutti gli elementi, il prezzo totale dell'applicazione è di
 ##Dettagli di utilizzo
 {: #usage}
 
-In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dettagli di utilizzo per visualizzare gli addebiti in tempo reale per i runtime e i servizi utilizzati al mese nelle tue organizzazioni. Puoi
+In qualità di proprietario dell'account, utente con autorizzazione *Revisore* spazio o gestore della fatturazione, puoi utilizzare la vista Dettagli di utilizzo per visualizzare gli addebiti in tempo reale per i runtime e i servizi utilizzati ciascun mese nelle tue organizzazioni. Puoi
 vedere i GB-ora di runtime e il consumo dei servizi in tutte le regioni oppure puoi
 selezionare la visualizzazione di una regione e di uno spazio specifici per gli ultimi
 12 mesi.

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -139,35 +151,34 @@
 
 「サブスクリプション」アカウントに申し込む手順およびサブスクリプション・レートや割引について詳しくは、[Bluemix のお問い合わせ](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)ページにリストされたリンクを使用して {{site.data.keyword.Bluemix_notm}} 営業担当員にお問い合わせください。
 
-###{{site.data.keyword.Bluemix_notm}} 専用アカウント
+###{{site.data.keyword.Bluemix_notm}} Dedicated アカウント
 {: #dedicated}
 
-{{site.data.keyword.Bluemix_notm}} は以下を含む最低 1 年の期間を必要とします。
+{{site.data.keyword.Bluemix_notm}} は以下を含む最低 1 年間の契約を必要とします。
 
 * ご使用のインフラストラクチャーへの VPN 接続
 * SoftLayer データ・センター内の完全に冗長な環境
 * サポートされているすべてのランタイム (IBM Java Liberty、Node.js、および標準装備であるオープン・ソースの各ランタイム)
-* 選択したすべての専用サービスとすべての公開 {{site.data.keyword.Bluemix_notm}} サービス
+* 選択したすべての専用サービスとすべての Public {{site.data.keyword.Bluemix_notm}} サービス
 * 標準 {{site.data.keyword.Bluemix_notm}} サポート
 
 SoftLayer DirectLink やプレミアム・サポートのオプションなど、オプション項目をオーダーすることもできます。詳細については、[Bluemix 営業担当](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にお問い合わせください。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated を使用するには、最低 1 年間の契約が必要になります。その期間中の月々の支払額は、希望する専用サービスと、すべての公開サービスへのアクセス権限を付与するサブスクリプション・アカウントに基づきます。
+{{site.data.keyword.Bluemix_notm}} Dedicated を使用するには、最低 1 年間の契約が必要になります。その期間中の月々の支払額は、希望する専用サービスと、すべてのパブリック・サービスへのアクセス権限を付与するサブスクリプション・アカウントに基づきます。
 {{site.data.keyword.Bluemix_notm}} Public のサービスの使用料は、サブスクリプション・アカウントの契約に基づいて計算されます。サブスクリプション契約の対象ではないサービスを使用した場合には、請求書が送付されます。契約を開始する場合は、IBM 指定アカウント担当者または [Bluemix 営業担当](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)に連絡してください。
 
 
-###{{site.data.keyword.Bluemix_notm}} Local
-account
+###{{site.data.keyword.Bluemix_notm}} Local アカウント
 {: #local}
 
-{{site.data.keyword.Bluemix_notm}} は以下を含む最低 1 年の期間を必要とします。
+{{site.data.keyword.Bluemix_notm}} は以下を含む最低 1 年間の契約を必要とします。
 
 * IBM がローカル・デプロイメントに接続して、自動的に、一貫性を持って配信の更新を有効にする中継といわれるデリバリー機能
 * サポートされているすべてのランタイム (IBM Java Liberty、Node.js、および標準装備であるオープン・ソースの各ランタイム)
-* 選択したすべてのローカル・サービスおよびすべてのパブリック {{site.data.keyword.Bluemix_notm}} サービスへのアクセス
+* 選択したすべてのローカル・サービスおよびすべての Public {{site.data.keyword.Bluemix_notm}} サービスへのアクセス
 * 標準 {{site.data.keyword.Bluemix_notm}} サポート
 
-{{site.data.keyword.Bluemix_notm}} Local を使用するには、最低 1 年間の契約が必要になります。その期間中の月々の支払額は、希望するローカル・サービスと、すべての公開サービスへのアクセス権限を付与するサブスクリプション・アカウントに基づきます。
+{{site.data.keyword.Bluemix_notm}} Local を使用するには、最低 1 年間の契約が必要になります。その期間中の月々の支払額は、希望するローカル・サービスと、すべてのパブリック・サービスへのアクセス権限を付与するサブスクリプション・アカウントに基づきます。
 {{site.data.keyword.Bluemix_notm}} Public のサービスの使用料は、サブスクリプション・アカウントの契約に基づいて計算されます。サブスクリプション契約の対象ではないサービスを使用した場合には、請求書が送付されます。契約を開始する場合は、IBM 指定アカウント担当者または [{{site.data.keyword.Bluemix_notm}} 営業担当](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)に連絡してください。
 
 ##課金方法
@@ -438,7 +449,7 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 ##使用量詳細
 {: #usage}
 
-アカウント所有者と請求管理者は、「使用量詳細」ビューを使用して、組織で月ごとに使用されるランタイムとサービスのリアルタイムの課金額を表示することができます。すべての地域のランタイム GB 時間とサービス使用量を表示できます。あるいは、過去 12 カ月の特定の地域およびスペースを表示するように選択することもできます。
+アカウント所有者、スペースの*監査員* 許可を持つユーザー、または請求管理者は、「使用量詳細」ビューを使用して、組織で月ごとに使用されるランタイムとサービスのリアルタイムの課金額を表示することができます。すべての地域のランタイム GB 時間とサービス使用量を表示できます。あるいは、過去 12 カ月の特定の地域およびスペースを表示するように選択することもできます。
 
 「使用量詳細」ビューを開くには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの右上隅にある**「アカウントとサポート」**アイコンをクリックし、**「アカウント」**を選択します。表示されるページで、**「使用量詳細」**をクリックします。このビューでは、アカウントのランタイムとサービスの使用量のサマリーを表示できます。
 

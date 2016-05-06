@@ -1,10 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Usando um provedor de identidade customizado para autenticar usuários
 {: #custom-id}
 É possível criar um provedor de identidade customizado e implementar sua própria lógica para coletar e validar credenciais. Um provedor de identidade customizado é um aplicativo da web que expõe uma interface RESTful. É possível hospedar o provedor de identidade customizado no local ou no {{site.data.keyword.Bluemix}}. O único requisito é que o provedor de identidade customizado deve ser acessível na Internet pública para que possa se comunicar com o serviço {{site.data.keyword.amashort}}.
 
 ## Visão geral do {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
-O diagrama a seguir demonstra como o {{site.data.keyword.amashort}} se integra a um provedor de identidade customizado.
+ O diagrama a seguir demonstra como o {{site.data.keyword.amashort}} se integra a um provedor de identidade customizado.
 
 ![image](images/mca-sequence-custom.jpg)
 

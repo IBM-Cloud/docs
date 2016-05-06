@@ -43,12 +43,12 @@
 >
 ># Related Links {:class="linklist"}
 >## Compatible Runtimes {:id="buildpacks"}
->* [Liberty for Java](https://www.ng.bluemix.net/docs/starters/liberty/index.html){: new_window}
->* [SDK for Node.js](https://www.ng.bluemix.net/docs/starters/nodejs/index.html){: new_window}
->* [Go](https://www.ng.bluemix.net/docs/starters/go/index.html){: new_window}
->* [PHP](https://www.ng.bluemix.net/docs/starters/php/index.html){: new_window}
->* [Python](https://www.ng.bluemix.net/docs/starters/python/index.html){: new_window}
->* [Ruby](https://www.ng.bluemix.net/docs/starters/rails/index.html){: new_window}
+>* [Liberty for Java](https://www.ng.bluemix.net/docs/runtimes/liberty/index.html){: new_window}
+>* [SDK for Node.js](https://www.ng.bluemix.net/docs/runtimes/nodejs/index.html){: new_window}
+>* [Go](https://www.ng.bluemix.net/docs/runtimes/go/index.html){: new_window}
+>* [PHP](https://www.ng.bluemix.net/docs/runtimes/php/index.html){: new_window}
+>* [Python](https://www.ng.bluemix.net/docs/runtimes/python/index.html){: new_window}
+>* [Ruby](https://www.ng.bluemix.net/docs/runtimes/ruby/index.html){: new_window}
 >* [Community buildpacks](https://www.ng.bluemix.net/docs/starters/byob.html){: new_window}
 >
 ># Related Links {:class="linklist"}

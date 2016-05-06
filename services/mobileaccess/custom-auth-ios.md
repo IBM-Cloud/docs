@@ -5,25 +5,27 @@ copyright:
 
 ---
 
-# Configuring {{site.data.keyword.amashort}} Client SDK for iOS
+# Configuring {{site.data.keyword.amashort}} client SDK for iOS
 {: #custom-ios}
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} Client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amashort}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.
+
+**Tip:** If you are developing your iOS app in Swift, consider using the {{site.data.keyword.amashort}} client Swift SDK. The instructions on this page apply to the {{site.data.keyword.amashort}} client Objective-C SDK. For instructions on using the Swift SDK, see [Configuring {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} Client SDK.  For more information, see the following information:
- * [Getting started with {{site.data.keyword.amashort}}](https://www.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Setting up iOS SDK](https://www.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
- * [Using a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creating a custom identity provider](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://www.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
+ * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
+ * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 
-## Installing the Client SDK with CocoaPods
+## Installing the client SDK with CocoaPods
 {: #custom-ios-sdk-cocoapods}
-Use the CocoaPods dependency manager to install the {{site.data.keyword.amashort}} Client SDK.
+Use the CocoaPods dependency manager to install the {{site.data.keyword.amashort}} client SDK.
 
 1. Open Terminal and navigate to the root directory of your iOS project.
 
@@ -42,14 +44,14 @@ CocoaPods installs added dependencies. The progress and which components were ad
 
 
 
-### Initializing the Client SDK
+### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
 Initialize the SDK by passing the application route (`applicationRoute`) and GUID (`applicationGUID`) parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
 
 1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options** to see the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`).
 
-1. Import the `IMFCore` framework in the class that you want to use Client SDK.
+1. Import the `IMFCore` framework in the class that you want to use client SDK.
 
 	Objective-C:
 
@@ -59,7 +61,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 
 	Swift:
 
-	The {{site.data.keyword.amashort}} Client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
+	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project to use the SDK.
 
 	* Right-click your project in Xcode and select **New File...**
 	* In the **iOS Source** category, pick **Header file**. Name the file `BridgingHeader.h`.
@@ -69,7 +71,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 	* Set the value to location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verify that your bridging header is being picked up by Xcode by building your project.
 
-1. Initialize the Client SDK. Replace the applicationRoute and applicationGUID with the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) that you obtained from **Mobile Options**.
+1. Initialize the client SDK. Replace the applicationRoute and applicationGUID with the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) that you obtained from **Mobile Options**.
 
 	Objective-C:
 
@@ -91,7 +93,7 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 {: #custom-ios-sdk-authhandler}
 
 
-The {{site.data.keyword.amashort}} Client SDK provides the `IMFAuthenticationHandler` interface to implement a custom authentication flow. The `IMFAuthenticationHandler` exposes three methods that are called on different phases of the authentication process.
+The {{site.data.keyword.amashort}} client SDK provides the `IMFAuthenticationHandler` interface to implement a custom authentication flow. The `IMFAuthenticationHandler` exposes three methods that are called on different phases of the authentication process.
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
@@ -100,10 +102,10 @@ The {{site.data.keyword.amashort}} Client SDK provides the `IMFAuthenticationHan
 
 This method is called when a custom authentication challenge is received from {{site.data.keyword.amashort}} Service. The arguments include
 
-* `IMFAuthenticationContext` protocol is provided by {{site.data.keyword.amashort}} Client SDK so that developer can report back authentication challenge answers or failure during crendtials collection (e.g. user cancelled)
+* `IMFAuthenticationContext` protocol is provided by {{site.data.keyword.amashort}} client SDK so that developer can report back authentication challenge answers or failure during crendtials collection (e.g. user cancelled)
 * `NSDictionary` containing a custom authentication challenge as returned by a Custom Identity Provider
 
-By calling the `authenticationContext:didReceiveAuthenticationChallenge` method the {{site.data.keyword.amashort}} Client SDK is delegating control to developer and putting itself into a waiting-for-credentials mode. It is developer responsibility to collect credentials and report them back to the {{site.data.keyword.amashort}} Client SDK by using one of `IMFAuthenticationContext` protocol methods as will be described below.
+By calling the `authenticationContext:didReceiveAuthenticationChallenge` method the {{site.data.keyword.amashort}} client SDK is delegating control to developer and putting itself into a waiting-for-credentials mode. It is developer responsibility to collect credentials and report them back to the {{site.data.keyword.amashort}} client SDK by using one of `IMFAuthenticationContext` protocol methods as will be described below.
 
 ```
 - (void)authenticationContext:(id<IMFAuthenticationContext>)context
@@ -123,7 +125,7 @@ This method is called after authentication failure. The arguments include IMFAut
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext` is supplied as an argument to the `authenticationContext:didReceiveAuthenticationChallenge` method of a custom `IMFAuthenticationHandler`. It is developer's responsibility to collect credentials and use `IMFAuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} Client SDK or report a failure. Use one of the below methods
+`IMFAuthenticationContext` is supplied as an argument to the `authenticationContext:didReceiveAuthenticationChallenge` method of a custom `IMFAuthenticationHandler`. It is developer's responsibility to collect credentials and use `IMFAuthenticationContext` methods to either return credentials to {{site.data.keyword.amashort}} client SDK or report a failure. Use one of the below methods
 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
@@ -173,7 +175,7 @@ CustomAuthenticationDelegate.m
 
 	// In case there was a failure collecting credentials you need to report
 	// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-	// Access Client SDK will remain in a waiting-for-credentials state
+	// Access client SDK will remain in a waiting-for-credentials state
 	// forever
 }
 
@@ -219,7 +221,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		// In case there was a failure collecting credentials you need to report
 		// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access Client SDK will remain in a waiting-for-credentials state
+		// Access client SDK will remain in a waiting-for-credentials state
 		// forever
 	}
 
@@ -259,15 +261,14 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Testing the authentication
 {: #custom-ios-testing}
-After you initialize the Client SDK and register a custom `IMFAuthenticationDelegate`, you can start making requests to your mobile backend.
+After you initialize the client SDK and register a custom `IMFAuthenticationDelegate`, you can start making requests to your mobile backend.
 
 ### Before you begin
 {: #custom-ios-testing-before}
  You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
-
- 1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
-  The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} Client SDK. As a result, an `Unauthorized` message displays in your browser.
+1. Send a request to protected endpoint of your mobile backend in your browser by opening `{applicationRoute}/protected`, for example `http://my-mobile-backend.mybluemix.net/protected`.
+  The `/protected` endpoint of a mobile backend that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your browser.
 1. Use your iOS application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom `IMFAuthenticationDelegate`:
 
 	Objective-C:
@@ -305,7 +306,24 @@ After you initialize the Client SDK and register a custom `IMFAuthenticationDele
 	};
 
 	```
-
 1. 	When your requests succeeds, you see the following output in the Xcode console:
 
 	![image](images/ios-custom-login-success.png)
+
+	You can also add logout functionality by adding the following code:
+
+	Objective C:
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+ If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
+
+ Passing `callBack` to the logout function is optional. You can also pass `nil`.

@@ -1,22 +1,25 @@
 {
 	"identifier": "id",
-	"label": "título",
+	"label": "title",
 	"items": [{
 		"id": "GetStarted"
 	}, {
 		"id": "Categories",
 		"items": [{
-			"title": "Calcular",
+			"title": "Compute",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
 				"name": "Apps de Cloud Foundry",
 				"href": "cfapps/index.html"
 			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
+			}, {
 				"name": "Contenedores",
 				"href": "containers/container_index.html"
 			}, {
-				"name": "Servidor virtual",
+				"name": "Servidores virtuales",
 				"href": "virtualmachines/vm_index.html"
 			}]
 		}, {
@@ -24,8 +27,11 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
-				"name": "Content Delivery Network (CDN)",
-				"href": "services/media_cdn/index.html"
+				"name": "Red de entrega de contenido (CDN)",
+				"href": "services/cdn/index.html"
+			}, {
+				"name": "Grupos de seguridad de red",
+				"href": "services/networksecuritygroups/index.html"
 			}, {
 				"name": "Red privada virtual (VPN)",
 				"href": "services/vpn/index.html"
@@ -46,16 +52,16 @@
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
+				"name": "Analíticas para Apache Hadoop",
 				"href": "services/AnalyticsforHadoop/index.html"
 			}, {
-				"name": "Analytics for Apache Spark",
+				"name": "Analíticas para Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
 				"name": "BigInsights",
 				"href": "services/BigInsights/index.html"
 			}, {
-				"name": "Base de datos Cloudant NoSQL",
+				"name": "Base de datos NoSQL de Cloudant",
 				"href": "services/Cloudant/index.html"
 			}, {
 				"name": "dashDB",
@@ -117,7 +123,7 @@
 				"name": "Concept Insights",
 				"href": "services/ConceptInsights/index.html"
 			}, {
-				"name": "Diálogo",
+				"name": "Dialog",
 				"href": "services/Dialog/index.html"
 			}, {
 				"name": "Language Translation",
@@ -129,7 +135,7 @@
 				"name": "Personality Insights",
 				"href": "services/PersonalityInsights/index.html"
 			}, {
-				"name": "Extracción de relaciones",
+				"name": "Relationship Extraction",
 				"href": "services/RelationshipExtraction/index.html"
 			}, {
 				"name": "Retrieve and Rank",
@@ -140,6 +146,9 @@
 			}, {
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
+			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
 			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
@@ -152,17 +161,11 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
@@ -204,7 +207,7 @@
 				"name": "Key Protect",
 				"href": "services/keymgmt/index.html"
 			}, {
-				"name": "Single Sign On",
+				"name": "Inicio de sesión único",
 				"href": "services/SingleSignOn/index.html"
 			}]
 		}, {
@@ -212,10 +215,10 @@
 			"img": "homepage/images/app-services.svg",
 			"href": "services/application_services.html",
 			"links": [{
-				"name": "Business Rules",
+				"name": "Reglas empresariales ",
 				"href": "services/rules/index.html"
 			}, {
-				"name": "Data Cache",
+				"name": "Memoria caché de datos",
 				"href": "services/DataCache/index.html"
 			}, {
 				"name": "Message Hub",
@@ -224,29 +227,35 @@
 				"name": "MQ Light",
 				"href": "services/MQLight/index.html"
 			}, {
-				"name": "Session Cache",
+				"name": "Caché de sesiones",
 				"href": "services/SessionCache/index.html"
 			}, {
 				"name": "WebSphere Application Server",
 				"href": "services/ApplicationServeronCloud/index.html"
 			}, {
-				"name": "Workflow",
+				"name": "Flujo de trabajo",
 				"href": "services/workflow/index.html"
 			}, {
 				"name": "Workload Scheduler",
 				"href": "services/WorkloadScheduler/index.html"
 			}]
 		}, {
-			"title": "Mobile",
+			"title": "Móvil",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/index.html",
 			"links": [{
+				"name": "Probar servicios Bluemix Mobile",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -257,26 +266,38 @@
 				"href": "services/mobilepush/index.html"
 			}]
 		}, {
-			"title": "Internet of Things",
+			"title": "Internet de las cosas",
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things Foundation",
+				"name": "Fundación Internet of Things (Internet de las cosas)",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "API",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "Gestión de API",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "Recursos",
 		"descriptionTitle": "Recursos",
 		"items": [{
 			"title": "¿Por qué Bluemix?",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",
 			"href": "http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/"
 		}, {
-			"title": "Documentos de Softlayer",
+			"title": "Softlayer Docs",
 			"img": "homepage/images/Softlayer-icon.svg",
 			"href": "https://knowledgelayer.softlayer.com"
 		}, {
@@ -292,9 +313,10 @@
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {
-			"title": "Centro de arquitectura",
+			"title": "Architecture Center",
 			"img": "homepage/images/ArchitectureCenter-icon.svg",
 			"href": "https://developer.ibm.com/architecture/"
 		}]
 	}]
 }
+

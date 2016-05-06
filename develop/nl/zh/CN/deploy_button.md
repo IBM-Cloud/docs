@@ -1,12 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮{: #deploy-button} 
 
-*上次更新时间：2016 年 1 月 19 日* 
+*上次更新时间：2016 年 3 月 2 日* 
 
 使用“部署到 {{site.data.keyword.Bluemix}}”按钮，可以高效地将自己的公共 Git 源应用程序共享给其他人员，以便其他人员可以试验代码并将其部署到 IBM {{site.data.keyword.Bluemix_notm}}。此按钮不但需要的配置最少，而且可插入到支持标记的任何位置。无论是谁，只要单击该按钮，即可在新的 Git 存储库中创建代码的克隆副本，而您的原始应用程序将不受影响。
 {: shortdesc} 
@@ -23,9 +35,11 @@
 
 4. 如果应用程序需要一个构建文件，那么会自动检测到该构建文件，并且会构建该应用程序。 
 
-5. 如果应用程序需要容器，那么 `pipeline.yml`（定义 **IBM Container Service**）和 Dockerfile（定义映像）可用于在 {{site.data.keyword.Bluemix_notm}} 容器中部署应用程序。 
+5. 如果管道配置用于构建和部署过程，那么将使用 `pipeline.yml` 文件来部署应用程序。
 
-6. 应用程序将部署到该人员的 {{site.data.keyword.Bluemix_notm}} 组织。 
+6. 如果应用程序需要容器，那么 `pipeline.yml`（定义 **IBM Container** 服务）和 Dockerfile（定义映像）用于在 {{site.data.keyword.Bluemix_notm}} 容器中部署应用程序。 
+
+7. 应用程序将部署到该人员的 {{site.data.keyword.Bluemix_notm}} 组织。 
 
 ##按钮示例{: #button-examples} 
 
@@ -149,22 +163,22 @@ applications:
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>，它会将输出构建到 <code>./target/</code> 文件夹中</li>
 	   </ul>
 	</li>	
-	<li>如果您要使用 <stong>IBM Container Service</strong> 在容器中部署应用程序，那么必须将 Dockerfile 放入到存储库的根目录中，并将 <code>pipeline.yml</code> 文件放入到 <code>.bluemix</code> 目录中。<ul>
-	    <li> 要了解有关创建 Dockerfile 的更多信息，请参阅 Docker 文档。</li>
-	    <li>您可以手动创建 <code>pipeline.yml</code> 文件，也可以根据现有 DevOps Services 项目来生成 pipeline.yml 文件。要手动创建 <code>pipeline.yml</code>，请参阅 <a href="https://github.com/Puquios/" target="_blank">GitHub</a> 中的示例。要根据 {{site.data.keyword.jazzhub_short}} 项目创建 pipeline.yml 文件，并将其添加到您的存储库中，请完成以下步骤。
+	<li>要为项目配置管道，请将 <code>pipeline.yml</code> 文件放入 <code>.bluemix</code> 目录中。您可以手动创建 <code>pipeline.yml</code> 文件，也可以根据现有 DevOps Services 项目来生成 pipeline.yml 文件。要根据 {{site.data.keyword.jazzhub_short}} 项目创建 pipeline.yml 文件，并将其添加到您的存储库中，请完成以下步骤。
 <ol>
 <li>在浏览器中打开您的 DevOps Services 项目，然后单击<b>构建和部署</b>。</li>
-<li>使用 <b>IBM Container Service</b> 构建和部署作业来配置管道。</li>
+<li>使用构建和部署作业来配置管道。</li>
 <li>在浏览器中，将 <code>/yaml</code> 添加到项目管道 URL 中，然后按 Enter 键。<br>示例：<code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>保存生成的 <code>pipeline.yml</code> 文件。</li>
 <li>在项目的根目录中，创建 <code>.bluemix</code> 目录。</li>
 <li>将 <code>pipeline.yml</code> 文件上传到 <code>.bluemix</code> 存储库。</li>
 </ol> </li>
+	<li>如果您要使用 <stong>IBM Containers</strong> 在容器中部署应用程序，那么必须将 Dockerfile 放入存储库的根目录中，并将 <code>pipeline.yml</code> 文件放入 <code>.bluemix</code> 目录中。<ul>
+	    <li> 要了解有关创建 Dockerfile 的更多信息，请参阅 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 文档</a>。</li>
+	    <li>您可以手动创建 <code>pipeline.yml</code> 文件，也可以根据现有 DevOps Services 项目来生成 pipeline.yml 文件。要手动创建专用于容器的 <code>pipeline.yml</code>，请参阅 <a href="https://github.com/Puquios/" target="_blank">GitHub</a> 中的示例。</li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-有关故障诊断帮助，请参阅[“部署到 Bluemix”按钮不部署应用程序](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}。	
-
+有关故障诊断帮助，请参阅[“部署到 Bluemix”按钮不部署应用程序](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	

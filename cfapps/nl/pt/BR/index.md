@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -17,12 +29,14 @@ Ao criar um app no
 começa com um iniciador. Um *iniciador* é um modelo
 que inclui serviços predefinidos e código do aplicativo que é configurado
 com um buildpack específico. Há
-dois tipos de iniciadores: textos padrão e tempos de execução.
+dois tipos de iniciadores: modelos e tempos de execução.
 
-Um *texto padrão* é um contêiner para um aplicativo e
+Um *modelo* é um contêiner para um
+aplicativo e
 seu ambiente de tempo de execução associado e serviços predefinidos para
 um domínio específico. Por exemplo, o
-texto padrão Nuvem para dispositivo móvel inclui um tempo de execução do Node.js, bem
+modelo Nuvem para dispositivo móvel inclui um tempo de execução do
+Node.js, bem
 como Dados móveis, Segurança do dispositivo móvel e Envio por push. Ele também inclui um
 SDK e aplicativos de amostra para começar a desenvolver apps móveis que acessam esses serviços.
 
@@ -61,7 +75,7 @@ construir seu aplicativo, incluindo a escolha de quais serviços e tempos de exe
 combinar para resolver seu problema de negócios.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
 <dd>Use o {{site.data.keyword.jazzhub_title}} para criar um aplicativo na nuvem e implementá-lo no
-{{site.data.keyword.Bluemix_notm}}. Os serviços fornecidos por {{site.data.keyword.jazzhub_title}}s incluem Track & Plan e Delivery Pipeline, listados no Catálogo do {{site.data.keyword.Bluemix_notm}} em DevOps, bem como Web IDE e hosting Git.</dd>
+{{site.data.keyword.Bluemix_notm}}. Os serviços fornecidos pelo {{site.data.keyword.jazzhub_title}} incluem Track & Plan e Delivery Pipeline, listados no Catálogo do {{site.data.keyword.Bluemix_notm}} sob DevOps, assim com o Web IDE e hosting Git.</dd>
 </dl>
 
 ## Dicas

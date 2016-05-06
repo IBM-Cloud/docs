@@ -1,27 +1,36 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # アプリケーションのアップロード
-*最終更新日: 2015 年 11 月 11 日*
+*最終更新日: 2016 年 2 月 17 日*
 
 {{site.data.keyword.Bluemix}} にログインすると、cf push コマンドを使用してアプリケーションをアップロードすることができます。
 {:shortdesc}
 
 開始前に、以下のことを行ってください。
-  1. Cloud Foundry コマンド・ライン・インターフェースをインストールします。
+  1. {{site.data.keyword.Bluemix}} と Cloud Foundry コマンド・ライン・インターフェースをインストールします。 
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /></a>
-</p>
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a>
 
   2. {{site.data.keyword.Bluemix}} に接続します。
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. {{site.data.keyword.Bluemix_notm}} にログインします。
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
 **cf push** コマンドが実行されると、**cf** コマンド・ライン・インターフェースは、ビルドパックを使用してアプリケーションのビルドと実行を行う {{site.data.keyword.Bluemix_notm}} 環境に対して作業ディレクトリーを提供します。
 

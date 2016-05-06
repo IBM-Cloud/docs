@@ -12,7 +12,7 @@ To use custom authentication with your mobile app, you must register a custom au
 ## Before you begin
 {: #custom-dash-begin}
 * Read [Getting Started](getting-started.html).
-* Protect your backend application with the {{site.data.keyword.amashort}} Server SDK.  For more information see [Protecting resources](protecting-resources.html).
+* Protect your backend application with the {{site.data.keyword.amashort}} server SDK.  For more information see [Protecting resources](protecting-resources.html).
 * Have a custom identity provider application running.
 
 ## Configure custom authentication in the {{site.data.keyword.Bluemix}} dashboard

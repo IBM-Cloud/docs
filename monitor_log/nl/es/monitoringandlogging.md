@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Supervisión y registro
 {: #monitoringandlogging}
 
-*Última actualización: 8 de diciembre de 2015*
+*Última actualización: 27 de enero de 2016*
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
 {:shortdesc}
@@ -15,7 +23,7 @@ Las app {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente (app de v
 
 {{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las app a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y sobre cómo ver los registros, consulte [Registro para apps {{site.data.keyword.Bluemix_notm}}](#logging_for_bluemix_apps).
 
-La supervisión de la app le permite ver y controlar el despliegue de la aplicación. Con la supervisión puede llevar a cabo las siguientes tareas: 
+La supervisión de la app le permite ver y controlar el despliegue de la aplicación. Con la supervisión puede llevar a cabo las siguientes tareas:
 
 * Recopilar y supervisar información de rendimiento para instancias de app y comprobar si son funcionales.
 * Tener una mejor perspectiva de las operaciones de la aplicación (por ejemplo, detectar los posibles cuellos de botella o cuando se deben efectuar actualizaciones).
@@ -36,7 +44,12 @@ Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los s
 ##Registro para apps en ejecución en Cloud Foundry
 {: #logging_for_bluemix_apps}
 
-Los archivos de registro se crean automáticamente al utilizar la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Puede ver los registros desde el panel de control de {{site.data.keyword.Bluemix_notm}} o desde la interfaz de línea de mandatos cf. También puede filtrar los registros para ver aquellas secciones que le interesen.
+Los archivos de registro se crean automáticamente al utilizar la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en cualquier etapa del despliegue al tiempo de ejecución, puede
+comprobar los registros en busca de pistas que pudieran ayudar a solucionar su problema. 
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###Formato de anotación
 {: #log_format}
@@ -84,7 +97,7 @@ Cada entrada de registro contiene cuatro campos. Consulte la siguiente lista par
 <dd>Router.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Transferencia. </dd>
+<dd>Transferencia.</dd>
 </dl>
 </dd>
 
@@ -107,21 +120,33 @@ Cada entrada de registro contiene cuatro campos. Consulte la siguiente lista par
 ###Visualización de registros
 {: #viewing_logs}
 
-Puede utilizar el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos para ver los registros.
+Puede ver los registros para sus app Cloud Foundry  en tres lugares: 
 
-####VISUALIZACIÓN DE REGISTROS DESDE EL PANEL DE CONTROL DE {{site.data.keyword.Bluemix_notm}}
+  * [Panel de control de {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
+  * [Interfaz de línea de mandatos](#viewing_logs_cli){:new_window}
+  * [Host de registro externo](#thirdparty_logging){:new_window}
 
-Para ver los registros **Despliegue** o **Tiempo de ejecución**, lleve a cabo los siguientes pasos:
-1. Pulse el mosaico de la app. Se mostrará la página de detalles de la app.
+#### Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix_notm}}
+{: #viewing_logs_UI}
+
+Para ver los registros de despliegue o de tiempo de ejecución, realice los pasos siguientes: 
+1. Inicie sesión en {{site.data.keyword.Bluemix_notm}}, y a continuación pulse en el icono de su app en el panel de control. Se mostrará la página de detalles de la app.
 2. En la barra de navegación izquierdo, pulse **Registros**.
 
-####VISUALIZACIÓN DE REGISTROS DESDE LA INTERFAZ DE LÍNEA DE MANDATOS
+En la consola **Registros**, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. Además, puede filtrar registros por tipo de registro y canal. 
+
+**Notas:** Los registros no se conservan tras una detención anómala de la app o tras un nuevo despliegue. 
+
+
+
+#### Visualización de registros desde la interfaz de línea de mandatos
+{: #viewing_logs_cli}
 
 Elija una de las siguientes opciones para ver los registros desde la interfaz de línea de mandatos:
 
 <ul>
 <li>Seguimiento de los registros al desplegar apps.
-<p>Utilice el mandato **cf logs** para mostrar registros desde la app y desde los componentes del sistema que interactúan con la app al desplegar apps en {{site.data.keyword.Bluemix_notm}}. Puede escribir los siguientes mandatos en la interfaz de línea de mandatos cf. Para obtener más información sobre los registros cf, consulte [Tipos de registro y sus mensajes en Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.</p>
+<p>Utilice el mandato **cf logs** para mostrar registros desde la app y desde los componentes del sistema que interactúan con la app al desplegar apps en {{site.data.keyword.Bluemix_notm}}. Puede escribir los siguientes mandatos en la interfaz de línea de mandatos cf. Para obtener más información sobre los registros cf, consulte <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Tipos de registro y sus mensajes en Cloud Foundry</a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">nombreapp</var> --recent</strong></dt>
 <dd>Visualizar registros recientes.</dd>
@@ -143,15 +168,17 @@ registros en tiempo real. </div>
 <dd>
 <p>Este archivo de registro registra sucesos informativos detallados para la depuración. Puede utilizar este registro para resolver problemas de ejecución del paquete de compilación.</p>
 <p>Para generar datos en el archivo <span class="ph filepath">buildpack.log</span> debe habilitar el rastreo del paquete de compilación mediante el mandato siguiente:
-<pre class="pre">cf set-env <var class="keyword varname">nombre_app</var> JBP_LOG_LEVEL DEBUG</pre>
+   <pre class="pre">cf set-env <var class="keyword varname">nombre_app</var> JBP_LOG_LEVEL DEBUG</pre>
 <p>
-<p>Para ver este registro, ejecute el siguiente mandato:<pre class="pre">cf files <var class="keyword varname">nombre_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
+<p>Para ver este registro, ejecute el siguiente mandato:
+<pre class="pre">cf files <var class="keyword varname">nombre_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
 </dd>
 
 <dt><strong>staging_task.log</strong></dt>
 <dd><p>Este archivo de registro registra mensajes después de los principales pasos de la tarea de transferencia. Puede utilizar este registro para resolver problemas de transferencia.</p>
-<p>Para ver este registro, ejecute el siguiente mandato:<pre class="pre">cf files <var class="keyword varname">nombre_app</var> logs/staging_task.log</pre>
+<p>Para ver este registro, ejecute el siguiente mandato:
+<pre class="pre">cf files <var class="keyword varname">nombre_app</var> logs/staging_task.log</pre>
 </p>
 </dd>
 </dl>
@@ -159,6 +186,9 @@ registros en tiempo real. </div>
 
 
 **Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](../troubleshoot/debugging.html#debug_runtime).
+
+
+
 
 ###Filtrado de registros
 {: #filtering_logs}
@@ -177,33 +207,91 @@ cf logs appname --recent | grep '\[App'
 ```
 Para obtener más información sobre la opción **grep**, escriba `grep --help`.
 
-###Configuración del registro de terceros
+
+
+### Configuración de hosts de registro externo
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} mantiene una cantidad limitada de información de registro en la memoria. Cuando se registra información, la información antigua se sustituye por la nueva. Para mantener toda la información de registro, puede guardar los registros en un servicio de gestión de registros de terceros.
+{{site.data.keyword.Bluemix_notm}} mantiene una cantidad limitada de información de registro en la memoria. Cuando se registra información, la información antigua se sustituye por la nueva. Para mantener toda la información de registro, puede guardar los registros en un host de log externo, como un servicio de gestión de registros de terceros o en otro host. 
 
-Para transferir los registros de la aplicación y del sistema a un servicio de gestión de registros de terceros, siga estos pasos:
+Para enviar la secuencia de los registros de su app y el sistema a un host de registro externo, realice los pasos siguientes: 
 
-1. Registre un servicio de gestión de registros de terceros.
-    
-    Puede utilizar cualquier servicio de gestión de registros de terceros que dé soporte al [protocolo syslog](http://tools.ietf.org/html/rfc5424){:new_window}, como por ejemplo Papertail, Splunk Storm, SumoLogic y Logentries. Registre un servicio de gestión de registros de terceros y configure el servicio para que proporcione un destino para los registros en {{site.data.keyword.Bluemix_notm}}. Después de completar la configuración, el servicio suele proporcionarle un URL de syslog como destino de sus registros en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo configurar servicios de gestión de registros de terceros, consulte [Configuración de determinados servicios de gestión de registros de terceros](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}.
+  1. Determine el punto final de registro.  
+     
+	 Puede enviar registros a un agregador de registros de terceros, como Papertrail, Splunk o Sumologic. También puede enviar
+registros a un host de syslog, un host de syslog encriptado con TLS (Seguridad de la capa de transporte) o un punto final POST de HTTPS. Los métodos para
+obtener los puntos finales del registro varían para los distintos hosts de registro. 
 
-2. Cree un a instancia de servicio proporcionada por el usuario.
-	
-	Para transferir los registros de {{site.data.keyword.Bluemix_notm}} al servicio de gestión de registros de terceros, primero debe crear una instancia de servicio proporcionada por el usuario. Utilice el siguiente mandato para crear una instancia de servicio proporcionada por el usuario, donde nombre_servicio es el nombre de la instancia de servicio proporcionada por el usuario y URL_syslog es el URL obtenido del servicio de registro de terceros. 
-	
-	```
-	cf create-user-provided-service <nombre_servicio> -l <URL_syslog>
-	```
-	
-3. Enlace la instancia de servicio a la aplicación.
+  2. Cree un a instancia de servicio proporcionada por el usuario.
+     
+	 Utilice el mandato ```cf create-user-provided-service``` (o ```cups``, una versión abreviada del mismo)
+para crear una instancia de servicio proporcionado por el usuario:
+	 ```
+	 cf create-user-provided-service <nombre_servicio> -l <punto_final_registro>
+	 ```
+	 **nombre_servicio**
+	 
+	 El nombre de la instancia de servicio proporcionado por el usuario. 
+	 
+	 **punto_final_registro**
+	 
+	 El punto final del registro al que {{site.data.keyword.Bluemix_notm}} envía los registros. Consulte la tabla siguiente
+para sustituir *punto_final_registro* por su valor: 
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>Punto final de registro</th>
+     <th>Mandato</th>
+	 <th>Notas</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>host de syslog</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>Por ejemplo, para habilitar el registro en Papertrail, escriba `cf cups my-logs -l syslog://<papertrail-url>`. Sustituya
+`<papertrail-url>` por el URL de su punto final de registro de Papertrail. </td>
+     </tr>
+	 <tr>
+     <td>syslog-tls host</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>El certificado debe ser de confianza para una autoridad de certificados. No utilice certificados autofirmados. </td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>Este punto final debe estar en Internet de forma pública, y accesible por {{site.data.keyword.Bluemix_notm}}</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. Enlazar una instancia de servicio a la app.
 
-	Utilice el mandato siguiente para enlazar la instancia de servicio a la aplicación, donde nombre_app es el nombre de la aplicación y nombre_servicio es el nombre de la instancia de servicio proporcionada por el usuario. 
+	 Utilice el mandato siguiente para enlazar la instancia de servicio a su app:  
 	
-	```
-	cf bind-service nombreapp <nombre_servicio>
-	```
-	
-	A continuación se le solicitará que vuelva a transferir la aplicación escribiendo cf restage nombre_app para que los cambios entren en vigor. Cuando se generen registros, podrá ver mensajes parecidos en el servicio de gestión de registros de terceros tras un breve intervalo de tiempo.
+	 ```
+	 cf bind-service nombreapp <nombre_servicio>
+	 ```
+	 **nombre_app**
+	 
+	 El nombre de su app. 
+	 
+	 **nombre_servicio**
+	 
+	 El nombre de la instancia de servicio proporcionado por el usuario. 
+	 
+  4. Volver a transferir la app.
+     Escriba ```cf restage appname``` para que los cambios surtan efecto.  
 
-**Nota:** Los registros que ve en la interfaz de línea de mandatos no tienen el formato de syslog y es posible que no coincidan exactamente con los mensajes que se muestran en los servicios de gestión de registros de terceros.
+#### Visualización de registros de hosts externos
+{: #viewing_logs_external}
+
+	 
+Cuando se generan los registros, tras un breve retardo, puede ver los mensajes en su host de registros externo, que es parecido a los mensajes
+que ve desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o desde la interfaz de línea de mandatos cf. Si tiene varias
+instancias de su app, los registros se agregan y puede ver todos los registros de su app. Además, los registros se conservan
+después de una detención anómala de la app, o tras su redespliegue. 
+
+**Nota:** Los registros que ve en la interfaz de línea de mandatos no tienen el formato de syslog y es posible que no coincidan exactamente con los mensajes que se muestran en su host de registro externo.  
+
+

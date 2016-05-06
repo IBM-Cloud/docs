@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -115,10 +127,10 @@ cf 指令行介面及 Eclipse 工具。您可以選擇 cf 指令行介面開始�
 	
     **需求：**請確定一律使用最新版本的 cf 指令行工具。
   3. 安裝 **cf** 指令行介面之後，您必須使用 **cf api** 指令，來指定要處理的
-{{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。美國南部地區 URL 是 stage1.ng.bluemix.net。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
+{{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。美國南部地區 URL 是 ng.bluemix.net。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   如需連接至其他 {{site.data.keyword.Bluemix_notm}} 地區的相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 地區。指定 {{site.data.keyword.Bluemix_notm}} 地區之後，會儲存您指定的位置資訊。
@@ -141,7 +153,7 @@ cf 指令行介面及 Eclipse 工具。您可以選擇 cf 指令行介面開始�
   
   6. 現在，您可以在瀏覽器輸入下列應用程式 URL，來存取應用程式：
 ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 您也可以選擇其他工具來建置您的應用程式，例如 Eclipse 工具。如需相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 使用者介面上應用程式的「開始編碼」頁面。

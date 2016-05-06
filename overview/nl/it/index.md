@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016 
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -115,7 +127,7 @@ IBM utilizza la tecnologia relay per monitorare e gestire in modo sicuro il tuo 
 
 *Figura 4. {{site.data.keyword.Bluemix_notm}} locale*
 
-La macchina virtuale di inizio viene eseguita in una rete protetta dal firewall del cliente, una rete che dispone di connettività in uscita al centro operativo di IBM attraverso Relay. I componenti della piattaforma e i servizi principali {{site.data.keyword.Bluemix_notm}} vengono eseguiti in una VLAN (virtual local area network) privata e isolata. {{site.data.keyword.Bluemix_notm}} locale utilizza una VLAN per la sottorete privata. L'utilizzo di una sottorete privata anziché di una VLAN pubblica è più sicuro e può contribuire a evitare problemi di instradamento. 
+La macchina virtuale di inizio viene eseguita in una rete protetta dal firewall del cliente, una rete che dispone di connettività in uscita al centro operativo di IBM attraverso Relay. I componenti della piattaforma e i servizi principali {{site.data.keyword.Bluemix_notm}} vengono eseguiti in una VLAN (virtual local area network) privata e isolata. {{site.data.keyword.Bluemix_notm}} locale utilizza una VLAN per la sottorete privata. L'utilizzo di una sottorete privata anziché di una VLAN pubblica è più sicuro e può contribuire a evitare problemi di instradamento.
 
 Le applicazioni DataPower forniscono accesso ai domini dell'applicazione {{site.data.keyword.Bluemix_notm}}. Queste applicazioni si connettono alla rete accessibile mediante la tua Intranet. Gli utenti che distribuiscono le applicazioni e i servizi ottengono l'accesso dalla rete accessibile dalla tua Intranet. Devi fornire sette indirizzi IP che abbiano l'accesso Internet in uscita. Le applicazioni DataPower vengono instradate da questi indirizzi IP del cliente alla distribuzione {{site.data.keyword.Bluemix_notm}} isolata. Per informazioni sulle specifiche di rete e sui requisiti dell'infrastruttura, vedi [Requisiti dell'infrastruttura {{site.data.keyword.Bluemix_notm}} locale](../local/index.html#localinfra).
 
@@ -154,9 +166,9 @@ macchina virtuale ha dei contenitori per separare e proteggere le applicazioni. 
 
 Quando l'applicazione viene distribuita, se ha un'interfaccia web (come per un'applicazione web Java), o altri servizi basati su REST (come i servizi mobili presentati pubblicamente all'applicazione mobile), gli utenti dell'applicazione possono comunicare con essa utilizzando normali richieste HTTP.
 
-![Richiamo di un'applicazione {{site.data.keyword.Bluemix_notm}}](images/execute.png)
+![Chiamata di un'applicazione {{site.data.keyword.Bluemix_notm}}](images/execute.png)
 
-*Figura 7. Richiamo di un'applicazione {{site.data.keyword.Bluemix_notm}}*
+*Figura 7. Chiamata di un'applicazione {{site.data.keyword.Bluemix_notm}}*
 
 A ogni applicazione può essere associato uno o più URL, ma tutti devono puntare all'endpoint {{site.data.keyword.Bluemix_notm}}. Quando viene ricevuta una richiesta, {{site.data.keyword.Bluemix_notm}} la esamina, determina qual è l'applicazione a cui è destinata e seleziona quindi una delle istanze dell'applicazione per la ricezione della richiesta. 
 
@@ -232,22 +244,13 @@ eseguire i tuoi contenitori. Docker fornisce anche un ambiente che puoi usare pe
 il tuo codice. Quando sei pronto, ti offre gli strumenti con i quali puoi trasferire il codice
 dal tuo ambiente di sviluppo al tuo ambiente di test e, quindi, al tuo ambiente di produzione.
 
-    Per ulteriori informazioni su {{site.data.keyword.IBM_notm}} Containers, consulta [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html) nella documentazione Creazione di applicazioni web.</dd>
-<dt>Virtual Machines (BETA)</dt>
-    <dd>L'infrastruttura {{site.data.keyword.Bluemix_notm}} Virtual Machines ti consente di creare e gestire gruppi di macchine virtuali sul cloud pubblico {{site.data.keyword.IBM_notm}}. Puoi anche creare e gestire gruppi di macchine virtuali sui cloud {{site.data.keyword.IBM_notm}} privati che hai scelto di rendere disponibili per gli utenti {{site.data.keyword.Bluemix_notm}}. L'infrastruttura include un'esperienza guidata che ti consente di connetterti
-alla tua infrastruttura installata in loco. L'assistenza al monitoraggio e alla registrazione è
-integrata in {{site.data.keyword.Bluemix_notm}}. Puoi distribuire e gestire le tue macchine virtuali usando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}
-o le API OpenStack del cloud.
-
-    Le macchine virtuali su {{site.data.keyword.Bluemix_notm}} supportano
-la fornitura di gruppi di macchine virtuali con ridimensionamento automatico. Attraverso
-questo supporto, il numero di istanze può aumentare o diminuire automaticamente
-in base al carico della CPU o all'esecuzione non riuscita di un'istanza. Inoltre,
-viene supportato il bilanciamento del carico, che consente l'assegnazione
-di indirizzi IP virtuali (IP variabili) secondo necessità.
-
-    Per ulteriori informazioni sulle macchine virtuali {{site.data.keyword.Bluemix_notm}}, consulta [Macchine virtuali](../virtualmachines/vm_index.html) nella
-documentazione Creazione di applicazioni Web.</dd>
+    Per ulteriori informazioni su {{site.data.keyword.IBM_notm}} Containers, vedi [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} è un ambiente cloud ospitato, appartenente a {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, che puoi utilizzare per creare, eseguire, gestire e monitorare le tue applicazioni, pur mantenendo il massimo controllo sulle tue applicazioni e sul middleware su cui vengono eseguite. Utilizza {{site.data.keyword.virtualmachinesshort}} per isolare le tue soluzioni aziendali, soprattutto quando distribuisci le tue applicazioni in un cloud pubblico.</p>
+<p>    
+Puoi eseguire e gestire i server virtuali in cloud pubblici e privati (in loco) che utilizzano software OpenStack. Puoi creare, avviare e gestire i tuoi server virtuali attraverso l'interfaccia utente {{site.data.keyword.Bluemix_notm}} o il client OSC (OpenStackClient). Puoi utilizzare le immagini del server virtuale fornite da {{site.data.keyword.IBM_notm}} o creare server virtuali partendo dalle tue immagini personalizzate. Puoi utilizzare le funzioni {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} per eliminare gran parte delle complessità associate all'ospitare e gestire applicazioni basate sul cloud, quali la registrazione,il ridimensionamento automatico e il monitoraggio. Puoi utilizzare i servizi OpenStack e servizi {{site.data.keyword.Bluemix_notm}} insieme, per creare ed eseguire applicazioni ibride. Puoi eseguire il provisioning di risorse di infrastruttura come necessario in base alle politiche operative a alla domanda di carico di lavoro. </p>
+<p>
+Per ulteriori informazioni su {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, vedi [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Applicazioni

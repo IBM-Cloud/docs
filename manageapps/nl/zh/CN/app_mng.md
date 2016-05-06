@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#应用程序管理
+#管理 Liberty 和 Node.js 应用程序
 {: #app_management}
 
-*上次更新时间：2015 年 12 月 8 日*
+*上次更新时间：2016 年 3 月 17 日*
 
 应用程序管理实用程序是一组开发和调试实用程序，可以对 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 应用程序启用这些实用程序。{:shortdesc}
 
@@ -62,12 +70,6 @@
   *inspector* 实用程序还会启动 *proxy*。
   
   2. *strongpm*：启用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} 以通过 [StrongLoop 度量值、概要分析和跟踪](https://strongloop.com/node-js/devops-tools/){:new_window}等实用程序来分析 Node.js 应用程序。
-  
-  **注：**要使用 **strongpm** 实用程序，必须使用 engines.node V0.12。engines.node 版本在 package.json 文件中指定。例如：
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   *strongpm* 实用程序还会启动 *proxy*。
   

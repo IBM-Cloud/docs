@@ -1,5 +1,25 @@
-# CLI dev_mode Bluemix
-La modalità di sviluppo è una funzione Bluemix che puoi utilizzare per gestire le tue applicazioni mentre sono in esecuzione nel cloud. La modalità di sviluppo include l'interfaccia riga di comando dev_mode. La CLI dev_mode è stata messa a punto come un plug-in CLI cf e supporta sia applicazioni Node.js IBM sia Liberty.
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
+# CLI modalità di sviluppo
+{: #devmodecli}
+
+*Ultimo aggiornamento: 25 febbraio 2016* 
+
+La modalità di sviluppo (dev_mode) è una funzione Bluemix che puoi utilizzare per gestire le tue applicazioni mentre sono in esecuzione nel cloud. La modalità di sviluppo include l'interfaccia riga di comando dev_mode. La CLI dev_mode è stata messa a punto come un plug-in CLI cf e supporta sia applicazioni Node.js IBM sia Liberty.
 
 La CLI dev_mode fornisce le seguenti funzioni:
 - Alterna la tua applicazione tra la modalità sviluppo e quella normale.

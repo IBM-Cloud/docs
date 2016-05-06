@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# 애플리케이션 관리를 위한 cf 명령
+# Cloud Foundry(cf) 명령
 
-*마지막 업데이트 날짜: 2015년 11월 10일*
+*마지막 업데이트 날짜: 2016년 1월 29일*
 
 Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다. {:shortdesc}
 
@@ -280,6 +291,6 @@ cf stop appname
 cf -v
 ```
 
-# rellinks
+# 관련 링크
 ## 일반 
 * [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

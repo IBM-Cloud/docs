@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #アプリの保護
 {: #securingapps}
 
-*最終更新日: 2015 年 12 月 4 日*
+*最終更新日: 2016 年 3 月 17 日*
 
 SSL 証明書をアップロードし、アプリケーションへのアクセスを制限することにより、アプリケーションを保護することができます。
 {:shortdesc}
@@ -44,7 +52,7 @@ CSR を有効にするには、CSR の生成時に以下の情報を入力する
 
   SSL 証明書の要求先サイトの完全修飾ドメイン名 (FQDN)。
   
-CSR の作成方法は、ご使用のオペレーティング・システムによって様々です。以下は、[OpenSSH コマンド・ツール](http://www.openssl.org/){:new_window}を使用して CSR を作成する方法を示した例です。
+CSR の作成方法は、ご使用のオペレーティング・システムによって様々です。以下は、[OpenSSL コマンド・ライン・ツール](http://www.openssl.org/){:new_window}を使用して CSR を作成する方法を示した例です。
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -64,11 +72,11 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 証明書をアップロードするには、その前に証明書署名要求を作成する必要があります。『[証明書署名要求の作成](#ssl_csr)』を参照してください。
 
-SSL 証明書を正しく提供するには、{{site.data.keyword.Bluemix_notm}} の組織に割り当てられている URL 経路を指定するためにカスタム・ドメインを作成する際に、DNS や hosts ファイルを以下の IP アドレスを使用して構成する必要があります。
+SSL 証明書を正しく提供するには、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定するためにカスタム・ドメインを作成する際に、以下の IP アドレスを使用して DNS サーバーを構成する必要があります。
 
 * US-SOUTH: 75.126.81.68
 * EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 専用環境で実際に使用する IP アドレスは別のものになります。専用環境の IP アドレスを入手するには、IBM 担当員にお問い合わせください。
 

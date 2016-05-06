@@ -1,26 +1,36 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # Fazendo upload do seu aplicativo
-*Última atualização: 11 de novembro de 2015*
+*Última atualização: 17 de fevereiro de 2016*
 
-Depois de ter efetuado login no {{site.data.keyword.Bluemix}}, é possível fazer upload do aplicativo com o comando cf push.{:shortdesc}
+Depois de ter efetuado login no {{site.data.keyword.Bluemix}}, é possível fazer upload do aplicativo com o comando cf push.
+{:shortdesc}
 
 Antes de iniciar, deve-se:
-  1. Instale a interface de linha de comandos do Cloud Foundry.
+  1. Instale as interfaces de linha de comandos do {{site.data.keyword.Bluemix}} e do Cloud Foundry.
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_cf_commandline.svg" alt="Fazer download da interface de linha de comandos do Cloud Foundry" /></a>
-</p>
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download da interface da linha de comandos do {{site.data.keyword.Bluemix}} " /></a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_cf_commandline.svg" alt="Fazer download da interface da linha de comandos do Cloud Foundry" /> </a>
 
   2. Conecte-se ao {{site.data.keyword.Bluemix}}.
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. Efetue login no {{site.data.keyword.Bluemix_notm}}.
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
 Quando
 um comando **cf push** é emitido, a interface de linha de comandos
@@ -47,7 +57,7 @@ exemplo:
   **Dica:** ao usar o comando **cf push**, a interface da linha de comandos **cf** copia todos os arquivos e diretórios de seu diretório atual para o Bluemix. Assegure-se
 de que você tenha apenas os arquivos necessários em seu diretório de aplicativo.
 
-  O comando cf push faz upload e implementa o aplicativo no {{site.data.keyword.Bluemix_notm}}. Consulte [Comandos cf](../cli/reference/cfcommands/index.html) para obter mais informações sobre cf push. Consulte [Usando buildpacks da comunidade](../cfapps/byob.html) para obter informações sobre buildpacks. 
+  O comando cf push faz upload e implementa o aplicativo no {{site.data.keyword.Bluemix_notm}}. Consulte [Comandos cf](../cli/reference/cfcommands/index.html) para obter mais informações sobre cf push. Consulte [Usando buildpacks da comunidade](../cfapps/byob.html) para obter informações sobre buildpacks.
 
   2. Se você mudar seu aplicativo, será possível fazer upload dessas mudanças inserindo o comando cf push novamente. A
 interface da linha de comandos cf usa as opções anteriores e as respostas

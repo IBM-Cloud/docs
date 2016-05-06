@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #앱 보안
 {: #securingapps}
 
-*마지막 업데이트 날짜: 2015년 12월 4일*
+*마지막 업데이트 날짜: 2016년 3월 17일*
 
 SSL 인증서를 업로드하고 애플리케이션 액세스를
 제한하여 애플리케이션 보안을 유지할 수 있습니다.{:shortdesc}
@@ -51,9 +59,7 @@ CSR이 유효하려면 CSR 생성 시 다음 정보를 입력해야 합니다.
   SSL 인증서를 요청하는 데 사용하는 완전한 도메인 이름(FQDN)입니다.
 
   
-CSR 작성 방법은 운영 체제에 따라 다릅니다. 다음 예에서는
-[OpenSSH 명령 도구](http://www.openssl.org/){:new_window}를
-사용하여 CSR을 작성하는 방법을 보여줍니다. 
+CSR 작성 방법은 운영 체제에 따라 다릅니다. 다음 예제는 [OpenSSL 명령행 도구](http://www.openssl.org/){:new_window}를 사용하여 CSR을 작성하는 방법을 보여줍니다.
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -80,14 +86,12 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 인증서를 업로드하려면 먼저 인증서 서명 요청을 작성해야 합니다.
 [인증서 서명 요청 작성](#ssl_csr)을 참조하십시오.
 
-SSL 인증서를 적절히 제공하려면 {{site.data.keyword.Bluemix_notm}}에서 사용자 조직에 할당되는
-URL 라우트를 제공하기 위해 사용자 정의 도메인을 작성할 때 다음 IP 주소를 사용하여
-DNS 또는 호스트 파일을 구성해야 합니다.
+SSL 인증서를 적절히 제공하려면 {{site.data.keyword.Bluemix_notm}}에서 사용자 조직에 할당되는 URL 라우트를 제공하기 위해 사용자 정의 도메인을 작성할 때 다음 IP 주소를 사용하여 DNS 서버를 구성해야 합니다.
 
 
 * US-SOUTH: 75.126.81.68
 * EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 전용 환경에 사용하는 IP 주소는 다릅니다. IBM 담당자에게 문의하여 전용 환경의 IP 주소를 받으십시오. 
 

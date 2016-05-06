@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
@@ -132,7 +144,7 @@ IBM은 사용자가 비즈니스에 집중할 수 있도록 사용자 환경을 
 
 도입/인식(Inception) 가상 머신은 릴레이를 통해 IBM 운영 센터에 아웃바운드 연결되는 네트워크의 방화벽 뒤에 있는 네트워크에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} 플랫폼 구성요소와 코어 서비스는 분리된 사설 가상 근거리 통신망(VLAN)에서 실행됩니다. {{site.data.keyword.Bluemix_notm}} Local은 사설 서브넷을 위해 VLAN을 사용합니다. 공용 VLAN에 비해 사설 서브넷을 사용하면 한층 안전하고 라우팅 문제를 방지하는 데 도움이 됩니다.
 
-DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항](../local/index.html#localinfra)를 참조하십시오.
+DataPower 어플라이언스는 {{site.data.keyword.Bluemix_notm}} 애플리케이션 도메인에 액세스할 수 있도록 지원합니다. 이 어플라이언스는 사용자 인트라넷에서 액세스 가능한 네트워크에 연결됩니다. 앱과 서비스를 배치하는 사용자는 인트라넷에서 액세스 가능한 네트워크에서 액세스할 수 있습니다. 아웃바운드 인터넷 액세스 가능한 7개의 IP 주소를 제공해야 합니다. DataPower 어플라이언스는 이 고객 IP 주소에서 분리된 {{site.data.keyword.Bluemix_notm}} 배치로 경로 지정됩니다. 네트워크 스펙 및 인프라 요구 사항에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}}의 작동 방식
 {: #howwork}
@@ -308,18 +320,13 @@ Docker 컨테이너를 실행하는 데 사용됩니다. Docker는
 환경을 제공합니다. 준비가 완료되면 개발 환경에서 테스트 환경 및 프로덕션 환경으로
 코드를 전송할 수 있는 방법을 제공합니다.
 
-    {{site.data.keyword.IBM_notm}} 컨테이너에 대한 자세한 정보는 웹 앱 작성 문서의 [{{site.data.keyword.IBM_notm}} 컨테이너](../containers/container_index.html)를 참조하십시오.</dd>
-<dt>가상 머신(베타)</dt>
-    <dd>{{site.data.keyword.Bluemix_notm}} 가상 머신 인프라는 사용자에게 {{site.data.keyword.IBM_notm}} 퍼블릭 클라우드에서 가상 머신 그룹을 작성하고 관리하는 기능을 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}} 사용자가 사용할 수 있도록 선택한 프라이빗 {{site.data.keyword.IBM_notm}} 클라우드에서 VM 그룹을 작성하고 관리할 수 있습니다. 인프라에는
-사내 구축형 인프라에 연결하는 데 필요한 안내가 포함되어 있습니다. 모니터링 및 로깅에 대한 지원은
-{{site.data.keyword.Bluemix_notm}}에 통합되어 있습니다.
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 클라우드의 OpenStack API를 사용하여 가상 머신을 배치하고 관리할 수 있습니다.    {{site.data.keyword.Bluemix_notm}}의 가상 머신은
-Auto-Scaling 기능이 있는 가상 머신 그룹의 프로비저닝을 지원합니다. 이 지원을 통해 인스턴스의 수는
-CPU 로드 또는 인스턴스의 실패를 기반으로 자동으로
-증가되거나 감소될 수 있습니다. 또한 필요에 따라 가상 IP(유동 IP) 주소 지정을 사용하는
-로드 밸런싱 기능이 지원됩니다.
-
-    {{site.data.keyword.Bluemix_notm}} 가상 머신에 대한 자세한 정보는 웹 앱 작성 문서의 [가상 머신](../virtualmachines/vm_index.html)을 참조하십시오.</dd>
+    {{site.data.keyword.IBM_notm}} 컨테이너에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} 컨테이너](../containers/container_index.html)를 참조하십시오.</dd>
+<dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}(베타)</dt>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}은 호스트되는 클라우드 환경이며 앱 및 앱이 실행되는 미들웨어에 대한 제어를 유지하면서 사용자의 애플리케이션을 빌드, 실행, 관리 및 모니터할 수 있는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}의 일부입니다. 비즈니스 솔루션을 격리할 때, 특히 앱을 퍼블릭 클라우드에 배치할 때 {{site.data.keyword.virtualmachinesshort}}을 사용하십시오.</p>
+<p>    
+OpenStack 소프트웨어를 사용하는 공용 및 개인용(사내 구축형) 클라우드에서 가상 서버를 실행하고 관리할 수 있습니다. {{site.data.keyword.Bluemix_notm}} UI 또는 OSC(OpenStackClient) 클라이언트를 사용하여 가상 서버를 작성, 실행 및 관리할 수 있습니다. {{site.data.keyword.IBM_notm}}에서 제공하는 가상 서버 이미지를 사용하거나 자신의 사용자 정의 이미지에서 가상 서버를 작성할 수 있습니다. {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 기능을 사용하면 로깅, Auto Scaling 및 모니터링 등의 클라우드 기반 애플리케이션을 호스트하고 관리하는 것과 연관된 복잡성을 제거할 수 있습니다. OpenStack 서비스 및 {{site.data.keyword.Bluemix_notm}} 서비스를 함께 사용하여 하이브리드 애플리케이션을 빌드하고 실행할 수 있습니다. 필요에 따라 운영 정책 및 워크로드 요구를 기반으로 하여 인프라 자원을 프로비저닝할 수 있습니다.</p>
+<p>
+{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)의 내용을 참조하십시오.</p> </dd>
 </dl>
 
 ### 애플리케이션
@@ -438,7 +445,7 @@ Cloud Foundry 커뮤니티에 지원을
 </dl>
 
 
-## SOR(System of Record) 통합
+## SOR(System of Record)과 통합
 {: #sor}
 
 {{site.data.keyword.Bluemix_notm}}는
@@ -517,7 +524,7 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 
 *표 2. 지원되는 자국어 및 언어 코드*
 
-# rellinks
+# 관련 링크
 ## 일반 
 * [{{site.data.keyword.Bluemix_notm}} 필수 소프트웨어](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -204,7 +216,7 @@ dell'interfaccia riga di comando cf:
   instances: 1
   memory: 512M</code></pre>
 <p>Per ulteriori informazioni sulle
-opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](../manageapps/deployingapps.html#appmanifest).
+opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>

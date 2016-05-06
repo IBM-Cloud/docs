@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+  
+---
+
 # 로거 활성화, 구성 및 사용
 {: #enable-logger}
 
@@ -6,20 +13,18 @@
 여러 개의 패키지별 로거 인스턴스, 여러 로그 레벨, 애플리케이션 충돌에 대한 스택 추적 캡처 등을
 지원합니다. 
 
-또한 로깅된 데이터를 로컬 저장소에 보존하도록 구성하고 요구 시 {{site.data.keyword.amashort}}
-서비스로 전송할 수도 있습니다. 
+또한 로깅된 데이터를 로컬 저장소에 보존하도록 구성하고 요청 시 {{site.data.keyword.amashort}} 서비스로 전송할 수도 있습니다.
 
 {{site.data.keyword.amashort}} 클라이언트 SDK 로깅 프레임워크는 다음과 같은
 로그 레벨(로그 수준이 가장 낮은 레벨부터 가장 자세한 레벨까지)을 권장 사용 가이드라인과 함께 지원합니다. 
 
 * `FATAL` - 복구할 수 없는 충돌 또는 정지에 사용합니다. FATAL 레벨은
-복구할 수 없는 오류를 로깅하는 데 사용하고, 사용자에게는 애플리케이션 충돌로 표시됩니다. 
-* `ERROR` - 예상치 못한 예외 또는 예상치 못한 네트워크 프로토콜 오류에 사용합니다. 
-* `WARN` - 더 이상 사용되지 않는 API 또는 느린 네트워크 응답과 같이 중요한 오류로
-간주되지 않는 사용 경고를 로깅합니다. 
-* `INFO` - 도움이 될 수 있는 초기화 이벤트 및 기타 데이터를 보고하는 데 사용합니다. 
-* `DEBUG` - 개발자가 애플리케이션 결함을 해결하는 데 도움이 되도록 디버그 명령문을
-보고하는 데 사용합니다. 
+복구할 수 없는 오류를 로깅하는 데 사용하고, 사용자에게는 애플리케이션 충돌로
+표시됩니다. 
+* `ERROR` - 예상치 못한 예외 또는 예상치 못한 네트워크 프로토콜 오류에 사용합니다.
+* `WARN` - 더 이상 사용되지 않는 API 사용 또는 느린 네트워크 응답과 같이 중요한 오류로 간주되지 않는 사용 경고를 로그합니다.
+* `INFO` - 유용할 수 있는 초기화 이벤트 및 기타 데이터를 보고하는 데 사용합니다.
+* `DEBUG` - 개발자가 애플리케이션 결함을 해결하는 데 도움이 되도록 디버그 명령문을 보고하는 데 사용합니다.
 
 로깅 프레임워크를 사용하기 전에 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화했는지 확인하십시오.
 다음 샘플은 {{site.data.keyword.amashort}} 클라이언트 SDK 로깅 프레임워크의 기본 사용법을
@@ -96,10 +101,9 @@ logger.fatal("fatal message");
 
 로거 클래스에서 다음과 같은 추가 메소드를 찾을 수 있습니다. 
 
-* `setCapture` - 나중에 {{site.data.keyword.amashort}} 서비스로 전송할
-로그 정보의 보존을 사용 또는 사용 안함으로 설정합니다. 
-* `setLevel` - 로그 메시지를 작성할 최소 로그 레벨을 설정합니다. 
-* `send` - 보존된 로그를 {{site.data.keyword.amashort}} 서비스로 전송합니다. 
+* `setCapture` - 나중에 {{site.data.keyword.amashort}} 서비스로 전송할 로그 정보 보존을 사용 또는 사용 안함으로 설정합니다.
+* `setLevel` - 로그 메시지를 저장할 최소 로그 레벨을 설정합니다.
+* `send` - 보존된 로그를 {{site.data.keyword.amashort}} 서비스로 전송합니다.
 
 예를 들어, 캡처가 설정되어 있고 로거 레벨이 FATAL로 구성되어 있는 경우
 로거는 미발견 예외를 캡처합니다. 미발견 예외는 종종 사용자에게 애플리케이션 충돌로 표시되지만,
@@ -133,7 +137,7 @@ Logger logger2 = Logger.getInstance("logger2");
 logger1.debug("debug message");
 logger2.info("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
 
@@ -158,7 +162,7 @@ IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
 [logger1 logDebugWithMessages:@"debug message"];
 [logger2 logInfoWithMessages:@"info message"];
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 [IMFLogger send];
 ```
 
@@ -183,7 +187,7 @@ let logger2 = IMFLogger(forName: "logger2");
 logger1.logDebugWithMessages("debug message")
 logger2.logInfoWithMessages("info message")
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 IMFLogger.send()
 
 ```
@@ -206,7 +210,7 @@ var logger2 = MFPLogger.getInstance("logger2");
 logger1.debug ("debug message");
 logger2.info ("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} Service
+// Send persisted logs to the {{site.data.keyword.amashort}} service
 MFPLogger.send(success, failure);
 ```
 

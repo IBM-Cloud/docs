@@ -2,9 +2,9 @@
 	"identifier": "id",
 	"label": "title",
 	"items": [{
-		"id": "GetStarted"
+		"id": "始めに"
 	}, {
-		"id": "Categories",
+		"id": "カテゴリー",
 		"items": [{
 			"title": "計算",
 			"img": "homepage/images/compute.svg",
@@ -12,6 +12,9 @@
 			"links": [{
 				"name": "Cloud Foundry アプリ",
 				"href": "cfapps/index.html"
+			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
 			}, {
 				"name": "コンテナー",
 				"href": "containers/container_index.html"
@@ -24,10 +27,13 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
-				"name": "コンテンツ配信ネットワーク (CDN)",
+				"name": "コンテンツ・デリバリー・ネットワーク (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
-				"name": "Virtual Private Network (VPN)",
+				"name": "ネットワーク・セキュリティー・グループ",
+				"href": "services/networksecuritygroups/index.html"
+			}, {
+				"name": "仮想プライベート・ネットワーク (VPN)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
@@ -35,14 +41,14 @@
 			"img": "homepage/images/storage.svg",
 			"href": "services/storage.html",
 			"links": [{
-				"name": "Block Storage",
+				"name": "ブロック・ストレージ",
 				"href": "services/BlockStorage/index.html"
 			}, {
-				"name": "Object Storage",
+				"name": "オブジェクト・ストレージ",
 				"href": "services/ObjectStorage/index.html"
 			}]
 		}, {
-			"title": "データおよび分析",
+			"title": "データ & 分析",
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
@@ -64,7 +70,7 @@
 				"name": "DB2 on Cloud",
 				"href": "services/DB2OnCloud/index.html"
 			}, {
-				"name": "Compose による Elasticsearch",
+				"name": "Elasticsearch by Compose",
 				"href": "services/ElasticsearchByCompose/index.html"
 			}, {
 				"name": "Geospatial Analytics",
@@ -82,16 +88,16 @@
 				"name": "Insights for Weather",
 				"href": "services/Weather/index.html"
 			}, {
-				"name": "Compose による MongoDB",
+				"name": "MongoDB by Compose",
 				"href": "services/MongoDBByCompose/index.html"
 			}, {
-				"name": "Compose による PostgreSQL",
+				"name": "PostgreSQL by Compose",
 				"href": "services/PostgreSQLByCompose/index.html"
 			}, {
 				"name": "Predictive Analytics",
 				"href": "services/PredictiveModeling/index.html"
 			}, {
-				"name": "Compose による Redis",
+				"name": "Redis by Compose",
 				"href": "services/RedisByCompose/index.html"
 			}, {
 				"name": "SQL Database",
@@ -141,6 +147,9 @@
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
 			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
+			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
@@ -152,17 +161,11 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
@@ -201,7 +204,7 @@
 				"name": "Application Security on Cloud",
 				"href": "services/ApplicationSecurityonCloud/index.html"
 			}, {
-				"name": "Key Protect",
+				"name": "鍵の保護",
 				"href": "services/keymgmt/index.html"
 			}, {
 				"name": "Single Sign On",
@@ -239,14 +242,20 @@
 		}, {
 			"title": "モバイル",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/index.html",
 			"links": [{
+				"name": "Try Bluemix Mobile Services",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -257,7 +266,7 @@
 				"href": "services/mobilepush/index.html"
 			}]
 		}, {
-			"title": "Internet of Things",
+			"title": "モノのインターネット",
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
@@ -267,16 +276,28 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "API",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "リソース",
 		"descriptionTitle": "リソース",
 		"items": [{
-			"title": "Bluemix を選択する理由",
+			"title": "Why Bluemix?",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",
 			"href": "http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/"
 		}, {
-			"title": "Softlayer の資料",
+			"title": "Softlayer Docs",
 			"img": "homepage/images/Softlayer-icon.svg",
 			"href": "https://knowledgelayer.softlayer.com"
 		}, {

@@ -1,5 +1,25 @@
-# Bluemix dev_mode CLI
-개발 모드는 클라우드에서 앱을 실행하는 동안 앱과 함께 작업하는 데 사용할 수 있는 Bluemix 기능입니다. 개발 모드에는 dev_mode 명령행 인터페이스가 포함되어 있습니다. dev_mode CLI는 cf CLI 플러그인으로 빌드되며 Liberty 앱과 IBM Node.js 앱을 모두 지원합니다.
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+
+# 개발 모드 CLI
+{: #devmodecli}
+
+*마지막 업데이트 날짜: 2016년 2월 25일*
+
+개발 모드(dev_mode)는 클라우드에서 앱을 실행하는 동안 앱에 대한 작업을 수행하는 데 사용할 수 있는 Bluemix 기능입니다. 개발 모드에는 dev_mode 명령행 인터페이스가 포함되어 있습니다. dev_mode CLI는 cf CLI 플러그인으로 빌드되며 Liberty 앱과 IBM Node.js 앱을 모두 지원합니다.
 
 dev_mode CLI에서는 다음과 같은 기능을 제공합니다.
 - 앱을 개발 모드와 정상 모드로 전환합니다.
@@ -38,7 +58,7 @@ dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용�
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## 사용법
+## 사용량
 **모든 dev_mode CLI 명령을 표시하려면 다음 명령을 사용하십시오.**
 
 ```
@@ -55,7 +75,7 @@ cf mode <appName> <dev|normal>
 
 앱 모드를 변경합니다.
 
-### 상태
+### status
 
 ```
 cf status <appName>
@@ -121,7 +141,7 @@ cf restart-inplace <appName>
 
 
 
-### 도움말
+### help
 
 ```
 cf help <commandName>

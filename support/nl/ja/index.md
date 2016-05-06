@@ -1,13 +1,21 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # お客様サポートの利用
 {: #getting-customer-support}
 
-*最終更新日: 2016 年 1 月 19 日*
+*最終更新日: 2016 年 3 月 15 日*
 
 
-{{site.data.keyword.Bluemix}} で問題が発生している場合、Stack Overflow からヘルプを取得したり、サポート・チケットをオープンしたりするなど、いくつかのサポート・オプションがあります。{:shortdesc}
+{{site.data.keyword.Bluemix}} で問題が発生している場合、Stack Overflow からヘルプを取得したり、サポート・チケットをオープンしたりするなど、いくつかのサポート・オプションがあります。
+{:shortdesc}
 
 ## ヘルプの取得
 {: #getting-help}
@@ -19,16 +27,16 @@
 
 「アカウントとサポート (Account and Support)」を開くには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、次に上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](images/account_support.svg) をクリックします。
 
-質問の答えを見つけるには、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力します。{{site.data.keyword.Bluemix_notm}} の文書および Stack Overflow からの答えが表示されます。このページには、Stack Overflow に質問を投稿したり、**「連絡を取る (GET IN TOUCH)」**をクリックしてチケットをオープンしたりするオプションも提供されています。
+質問の答えを見つけるには、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力します。{{site.data.keyword.Bluemix_notm}} の文書および Stack Overflow からの答えが表示されます。このページには、Stack Overflow に質問を投稿したり、**「連絡」**をクリックしてチケットをオープンしたりするオプションも提供されています。
 
 
 ### 質問する
 Stack Overflow に直接アクセスしたか、「アカウントとサポート (Account and Support)」からアクセスしたかに関係なく、Stack Overflow は、ユーザーが質疑応答するためのプラットフォームとして使用できる Web サイトです。{{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームは、Stack Overflow で積極的に活動しており、**bluemix** のタグが付いた質問をフォローしています。
 
 Stack Overflow で質問するには、以下のオプションから選択します。
-  * 「アカウントとサポート (Account and Support)」から、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力して答えを見つけます。期待した答えが返されない場合は、**「Stack Overflow に投稿 (POST TO STACKOVERFLOW)」**をクリックして質問を投稿できます。
+  * 「アカウントとサポート (Account and Support)」から、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力して答えを見つけます。期待した答えが返されない場合は、**「Stack Overflow への投稿」**をクリックして質問を投稿できます。
 
-  * あるいは、直接、[「Stack Overflow」](http://stackoverflow.com/questions/tagged/bluemix){: new_window}にアクセスできます。
+  * 直接、[「Stack Overflow」](http://stackoverflow.com/questions/tagged/bluemix){: new_window}にアクセスします。
 
 Stack Overflow で質問を作成する際は、その質問が {{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームによって確実に読まれるように、**bluemix** タグを質問に追加してください。
 
@@ -47,20 +55,19 @@ Stack Overflow で質問を作成する際は、その質問が {{site.data.keyw
   * 予定されているメンテナンス時間帯。特別な状況を除き、24 時間前までには予告されます。
   * 計画外の問題または障害。{{site.data.keyword.Bluemix_notm}} チームが認識次第、掲示されます。
 問題に関する通知は、解決まで定期的に更新されます。
-  * セキュリティー情報。
+  * さまざまな {{site.data.keyword.Bluemix_notm}} サービスまたはプラットフォームに影響するセキュリティー情報への参照。
   * プラットフォーム全体における他の一般的な発表。
   * 購読できる RSS フィード。
 
 「状況」ページは、以下のいずれかのオプションによって表示できます。
 
-  * 「アカウントとサポート (Account and Support)」から: {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.svg) をクリックしてから、**「状況」**をクリックします。
-  * [IBM {{site.data.keyword.Bluemix_notm}} -「システム状況」](https://status.eu-gb.bluemix.net/){: new_window}から直接アクセス。
+  * {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.svg) をクリックし、**「状況」**をクリックします。リストされたリソースについて ![問題](images/some_issues.svg) アイコンがないか確認してください。このアイコンは、障害を示す可能性があります。
+  * [IBM {{site.data.keyword.Bluemix_notm}} -「システム状況」](https://status.eu-gb.bluemix.net/){: new_window}から直接アクセスします。
 
 
 ### RSS フィードの購読
 
-{{site.data.keyword.Bluemix_notm}} の「状況」ページの RSS フィードを購読することで、すべての通知についてアラートを受け取ることもできます。これにより、状況ページを定期的に調べなくても更新を得られます。
-
+{{site.data.keyword.Bluemix_notm}} の「状況」ページの RSS フィードを購読することで、すべての通知についてアラートを受け取ることもできます。この方法により、状況ページを定期的に調べなくても更新を得られます。
 
 購読するには、以下の手順に従ってください。
 
@@ -102,9 +109,7 @@ RSS フィードを読み取るには、Web ブラウザー・プラグイン (C
 
 	{{site.data.keyword.Bluemix_notm}} が期待どおりに動作していないと疑われる場合、
 状況ページで現在のメンテナンス時間帯や進行中の問題を確認します。
-状況ページにまだリストされていない問題を報告するには、
-[Client
-Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フォーム](https://support.eu-gb.bluemix.net/gethelp/){: new_window}を使用してサポート・チケットをオープンします。
+状況ページにまだリストされていない問題を報告するには、上部メニュー・バーの**「アカウントとサポート」**アイコン ![アカウントとサポート](images/account_support.svg)、または [IBM {{site.data.keyword.Bluemix_notm}} サポート](https://support.eu-gb.bluemix.net/gethelp/){: new_window}のヘルプ・ページからサポート・チケットをオープンします。
 
   * 複数の {{site.data.keyword.Bluemix_notm}} 地域を利用する
 
@@ -135,68 +140,60 @@ Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フ
 ### {{site.data.keyword.Bluemix_notm}} Public のサポートへのお問い合わせ
 {: #contacting-bluemix-support}
 
-トラブルシューティングおよびヘルプのオプションを使用しても問題を解決できなかった場合は、サポートを依頼することができます。
+トラブルシューティングおよびヘルプのオプションを使用しても技術的な問題を解決できなかった場合は、サポートを依頼することができます。ただし、技術的な問題についてサポートに問い合わせる前に、{{site.data.keyword.Bluemix_notm}} の状況をチェックして、問題が障害によるものではないことを確認してください。
 
-サポート・チケットをオープンするには、次のいずれかの方法を使用します。
+問題が障害によるものではない場合は、以下のいずれかのオプションを使用してサポート・チケットをオープンすることができます。
 
-  * 「アカウントとサポート (Account and Support)」から。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにログインし、上部のメニュー・バーにある**「アカウントとサポート」**アイコン ![アカウントとサポート](./images/account_support.svg) をクリックします。
-
-     1. 最初に、**「状況」**をクリックして、{{site.data.keyword.Bluemix_notm}} の状況を確認するようにしてください。
-	 2. 次に、問題の原因が障害によるものでない場合、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。フォームに記入して、テクニカル・サポートが必要な理由を示します。
-
-  * [{{site.data.keyword.Bluemix_notm}} サポート・チケット](http://ibm.biz/bluemixsupport){: new_window}のフォームを使用します。技術的な質問、ID に関する質問、および請求に関する質問について、新規チケットを開いてサポートにお問い合わせください。	 
-  * [IBM® Client Success Portal](https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix){: new_window} から。サポートは、次のオプションにより IBM Client Success Portal から利用可能です。
-
-     * 最初の 30 日間のトライアルのサブスクリプション (無料)
-	 * {{site.data.keyword.Bluemix_notm}} Dedicated 環境 (組み込み済み)
-	 * {{site.data.keyword.Bluemix_notm}} Local 環境 (組み込み済み)
-	 * サポート・アドオン付き従量課金 (PAYG)
-	 * サポート・アドオン付きサブスクリプション
-
-	IBM ID とパスワードを使用して IBM Client Success Portal にログインし、**「サポート・チケットのオープン」**をクリックします。
-
-サポート・チケットをオープンする時は、チケットの適切な重大度を指定するようにしてください。重大度によってチケットの処理方法が決まります。さまざまな重大度については、『[サポート・チケットの重大度](index.html#support-ticket-severity){: new_window}』を参照してください。
+  * 「アカウントとサポート (Account and Support)」から、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。フォームに記入して、テクニカル・サポートが必要な理由を示します。
+  * [IBM {{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}のヘルプ・ページを使用します。購入、請求、ID とログイン、技術サポートの問題についてチケットを送信することができます。技術サポートの問題については、さらに、**「テクニカル・サポート」**タイルをクリックして技術グループを選択できます。例えば、Cloud Foundry アプリ、OpenWhisk、コンテナー、仮想サーバー、またはベア・メタル・サーバーに関する支援が必要な場合は、**「アプリケーション・サービス」**を選択できます。特定サービスに関する支援が必要な場合は、該当するサービス・カテゴリーを選択してください。サービスが属するカテゴリーを判別するには、左側のナビゲーション・ペインにある[「サービス」](../services/index.html){: new_window}でカテゴリーを探してください。
 
 
+サポートを利用する場合、以下のオプションがあります。
+
+  * 最初の 30 日間のトライアルのサブスクリプション (無料)
+  * {{site.data.keyword.Bluemix_notm}} Dedicated 環境 (組み込み済み)
+  * {{site.data.keyword.Bluemix_notm}} Local 環境 (組み込み済み)
+  * サポート・アドオン付き従量課金 (PAYG)
+  * サポート・アドオン付きサブスクリプション
+
+
+サポート・チケットをオープンするときは、チケットの適切な重大度を必ず指定してください。重大度によってチケットの処理方法が決まります。さまざまな重大度については、『[サポート・チケットの重大度](index.html#support-ticket-severity){: new_window}』を参照してください。要求が緊急だが、アカウントの 30 日間のトライアル・サブスクリプション期間が満了していて、サポート・アドオンがない場合は、アカウントをアップグレードして高い重大度 (レベル 1、2、および 3) のチケットを送信することができます。アカウントを {{site.data.keyword.Bluemix_notm}} 標準サポートにアップグレードするには、IBM 営業担当員に E メール (sales@bluemix.net) でご連絡ください。
 
 
 ### {{site.data.keyword.Bluemix_notm}} Dedicated のサポートへのお問い合わせ
 {: #contacting-bluemix-support-dedicated}
 
+<!-- Michelle links to this anchor  -->
+
 {{site.data.keyword.Bluemix_notm}} Dedicated のお客様の場合、サポートは IBM {{site.data.keyword.Bluemix_notm}} サポート・チームによって提供されます。ただし、お客様が IBM ID を持っていない可能性があるため、サポートを取得するためのいくつかの異なる方法があります。
 
-
 <ul>
-<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} サポート・チケット</a>のフォームを使って新しいチケットをオープンして、サポートに連絡してください。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。「{{site.data.keyword.Bluemix_notm}} 地域」フィールドには、**「Dedicated」**オプションを選択してください。
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} サポート</a>のヘルプ・ページを使用して新しいチケットをオープンすることで、サポートに連絡します。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。「{{site.data.keyword.Bluemix_notm}} 地域」フィールドには、**「Dedicated」**オプションを選択してください。
 <p>フォームの実行依頼は、日曜日の午後 10:00 時 (協定世界時) から金曜日の深夜 0 時 (協定世界時) までモニターされています。</p>
 </li>
-<li>お客様が IBM ID を所有しており、 {{site.data.keyword.Bluemix_notm}} パブリック環境にアクセスできる場合は、次のいずれかの方法を使用してサポート・チケットをオープンすることができます。<ul>
-<li>**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="アカウントとサポート" /> をクリックし、次に**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
-<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> にアクセスし、ご使用の IBM ID とパスワードを入力します。ご使用の IBM ID は、サービスの資格情報として機能します。メニュー上の**「Open a support ticket」**をクリックします。重大度によってチケットの処理方法が決まるため、チケットに適切な重大度を指定するようにしてください。</li>
+<li>IBM ID をお持ちで、{{site.data.keyword.Bluemix_notm}} Public 環境にアクセスできる場合は、上部メニュー・バーの**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="アカウントとサポート" /> をクリックし、**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
+<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ご要望に応じて、サポート・チケットの連絡先として機能できる組織内のユーザーのリストを、ご使用の Dedicated 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p></li>
 </ul>
-</li>
-<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ユーザーからのご依頼があった場合、サポート・チケットの連絡先として機能できる、組織内のユーザーのリストを、ユーザーの Dedicated 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p>
-</li>
-</ul>
+
 
 ### {{site.data.keyword.Bluemix_notm}} Local のサポートへのお問い合わせ
 {: #contacting-bluemix-support-local}
 
+<!-- Michelle links to this anchor  -->
+
 {{site.data.keyword.Bluemix_notm}} Local のお客様の場合、サポートは IBM {{site.data.keyword.Bluemix_notm}} サポート・チームによって提供されます。ただし、お客様が IBM ID を持っていない可能性があるため、サポートを取得するためのいくつかの異なる方法があります。
 
 <ul>
-<li><a href="http://ibm.biz/bluemixsupport" target="_blank">{{site.data.keyword.Bluemix_notm}} サポート・チケット</a>のフォームを使って新しいチケットをオープンして、サポートに連絡してください。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。<p>フォームの実行依頼は、日曜日の午後 10:00 時 (協定世界時) から金曜日の深夜 0 時 (協定世界時) までモニターされています。</p>
+<li><a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} サポート</a>のヘルプ・ページを使用して新しいチケットをオープンすることで、サポートに連絡します。このフォームには、E メール・アドレスまたはご使用の IBM ID を使用できます。<p>フォームの実行依頼は、日曜日の午後 10:00 時 (協定世界時) から金曜日の深夜 0 時 (協定世界時) までモニターされています。</p>
 </li>
-<li>お客様が IBM ID を所有しており、 {{site.data.keyword.Bluemix_notm}} パブリック環境にアクセスできる場合は、次のいずれかの方法を使用してサポート・チケットをオープンすることができます。<ul>
-<li>**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="Account and Support" /> をクリックし、次に**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
-<li><a href="https://support.ibmcloud.com/ics/support/mylogin.asp?login=bluemix" target="_blank">IBM Client Success Portal</a> にアクセスし、ご使用の IBM ID とパスワードを入力します。ご使用の IBM ID は、サービスの資格情報として機能します。メニュー上の**「Open a support ticket」**をクリックします。重大度によってチケットの処理方法が決まるため、チケットに適切な重大度を指定するようにしてください。</li>
-</ul>
-</li>
-<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ユーザーからのご依頼があった場合、サポート・チケットの連絡先として機能できる、組織内のユーザーのリストを、ユーザーの Local 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p>
-</li>
+<li>IBM ID をお持ちで、{{site.data.keyword.Bluemix_notm}} Public 環境にアクセスできる場合は、上部メニュー・バーの**「アカウントとサポート」**アイコン <img src="images/account_support.svg" alt="アカウントとサポート" /> をクリックし、**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。</li>
+<li>IBM ID を持っていない場合は、IBM ID を持っている組織内のユーザーに連絡するか、IBM 担当員にご連絡ください。<p>**注**: ご要望に応じて、サポート・チケットの連絡先として機能できる組織内のユーザーのリストを、ご使用の Local 環境で {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースの**「サポート」**ページに表示できます。</p></li>
 </ul>
 
+
 ### サポート・チケットの重大度
+{: #support-ticket-severity}
+サポートに連絡する際には、問題のタイプと緊急度に応じて、特定の重大度レベルを要求できます。重大度レベルは、問題にどれぐらい迅速に対応するかに影響を与えます。
 
 以下の表に、一般的なサポート案件の例と提案される重大度レベルをいくつか示します。これらの例は、情報提供のみを目的とした一般ガイドラインです。
 
@@ -209,6 +206,18 @@ Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フ
 *表 1. 重大度の例*
 
 重大度 1 のサポート・チケットは、1 日 24 時間、週に 7 日間モニターされます。他のチケットは、通常の営業時間中 (平日の午前 7:00 から午前 1:00 (世界協定時)) に処理されます。
+
+
+### サポート・チケットのエスカレート
+{: #escalation}
+
+サポート・チケットに対してタイムリーな応答を受け取らなかった場合、または、サポート・チケットが適切に対処されていないと感じられた場合は、サポート・チケットをエスカレートすることができます。サポート・チケットのエスカレーション・プロセスを通じて、IBM のマネジメントがお客様のご要望を確認し、サポート状況の改善に向けて対応します。
+
+エスカレーションの要求を送信するには、以下の手順を行ってください。
+  1. 件名に**「エスカレーションの要求」**と指定して、新しいサポート・チケットをオープンします。
+  2. エスカレーションの要求を当初のサポート・チケットと対応付けられるようにするために、以下の情報をチケットの本文に含めてください。
+       * エスカレーションが必要なオープン済みサポート・チケットのチケット番号。
+	   * エスカレーションが必要な理由の要約。
 
 
 ## 診断情報の収集
@@ -237,6 +246,26 @@ Success Portal](https://support.ibmcloud.com/){: new_window} または[簡易フ
   * 構成済みの経路
   * イベント
   * プロビジョンされたサービス
+
+## {{site.data.keyword.Bluemix_notm}} の各国語サポート
+{: #lang}
+
+{{site.data.keyword.Bluemix_notm}} は、英語以外の各国語をサポートします。ただし、{{site.data.keyword.Bluemix_notm}} で提供されるすべてのコンテンツが翻訳されるわけではありません。次の表は、{{site.data.keyword.Bluemix_notm}} でサポートされる各国語と言語コードをリストしています。
+
+| **各国語** | **言語コード** |
+|-------------------|---------------|
+| ブラジル・ポルトガル語 | pt_BR |
+| 英語 | en |
+| フランス語  | fr |
+| ドイツ語  | de |
+| 日本語 | ja |
+| 韓国語  | ko |
+| イタリア語 | it |
+| スペイン語 | es |
+| 中国語 (簡体字) | zh_CN |
+| 中国語 (繁体字) | zh_TW |
+
+*表 2. サポートされる各国語と言語コード*
 
 
 # 関連リンク

@@ -8,11 +8,11 @@ copyright:
 # Application monitoring
 {: #app-monitoring}
 
-In addition to security features, the {{site.data.keyword.amafull}} also provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.amashort}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.amashort}} Service. All the security events, such as authentication success or failure, that occur in {{site.data.keyword.amashort}} Service are logged automatically.
+In addition to security features, the {{site.data.keyword.amafull}} also provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.amashort}} client SDK. Developers can control when to send this data to the {{site.data.keyword.amashort}} Service. All the security events, such as authentication success or failure, that occur in {{site.data.keyword.amashort}} Service are logged automatically.
 
 When data is delivered to {{site.data.keyword.amashort}}, you can use the {{site.data.keyword.amashort}} Monitoring Dashboard to get analytics insights about your mobile applications, devices, and client logs. Information about requests that your application makes to resources that are protected by {{site.data.keyword.amashort}} are recorded by default.
 
-The automatically recorded data includes information such as number of authentications, new devices, and new users. In addition you can configure the {{site.data.keyword.amashort}} Client SDK to report the following information:
+The automatically recorded data includes information such as number of authentications, new devices, and new users. In addition you can configure the {{site.data.keyword.amashort}} client SDK to report the following information:
 
 ### Usage statistics of your mobile applications
 {: #usage-stats}

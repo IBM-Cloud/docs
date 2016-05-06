@@ -1,37 +1,62 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*最終更新日: 2016 年 1 月 18 日*
+*最終更新日: 2016 年 3 月 7 日*
 
-{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated を使用すれば、{{site.data.keyword.Bluemix_notm}}&mdash; Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 SoftLayer 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。{:shortdesc}
+
+{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated を使用すれば、{{site.data.keyword.Bluemix_notm}}&mdash; Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 SoftLayer 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。
+{:shortdesc}
+
+{{site.data.keyword.Bluemix_notm}} のすべての専用デプロイメントには、追加コストなしで次の利点およびフィーチャーが含まれています。VPN、プライベート仮想ローカル・エリア・ネットワーク (VLAN)、ファイアウォール、ご使用の LDAP との接続性、既存のオンプレミス・データベースおよびアプリを利用する機能、 週 7 日 24 時間体制のオンサイト・セキュリティー、専用ハードウェア、および標準サポート。
 
 {{site.data.keyword.Bluemix_notm}} Dedicated には、自分だけが使用できる専用サービスを表示するプライベート・カタログが含まれています。また、{{site.data.keyword.Bluemix_notm}} Public からシンジケートおよび使用できる追加サービスも含まれています。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated は、SoftLayer に基づいて構築されているため、最高のパフォーマンスを誇るクラウド・インフラストラクチャーを使用できます。各データ・センターは 1 週間に 7 日、1 日 24 時間のセキュリティー、および厳格な管理が施されています。お客様および IBM は、VPN トンネルおよび専用 VLAN を介して {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスにアクセスします。
+{{site.data.keyword.Bluemix_notm}} (Dedicated) には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 64 GB の計算リソース・メモリーが備わっています。
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+さらに、組み込みまたはオプションのさまざまなサービスおよびコンポーネントがあります。
 
-*図 1. {{site.data.keyword.Bluemix_notm}} Dedicated の詳細図*
-
-インフラストラクチャー、運用、および物理的セキュリティーの観点から、{{site.data.keyword.Bluemix_notm}} Dedicated 環境のセキュリティー標準はパブリック {{site.data.keyword.Bluemix_notm}} のセキュリティー標準と同じです。ただし、専用 {{site.data.keyword.Bluemix_notm}} に対する開発者のアクセスは LDAP ポリシーによって制御されます。{{site.data.keyword.Bluemix_notm}} チームは、ご使用の環境の設定時にこのポリシーを構成することができます。専用環境内で、ユーザーの役割および許可を管理できます。詳しくは、『[ユーザーおよび許可の管理](../admin/index.html#oc_useradmin)』を参照してください。
-
-{{site.data.keyword.Bluemix_notm}} Dedicated には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 128 GB のアプリケーション・メモリーが搭載されています。
-
-さらに、デフォルトの一連の組み込みサービスと、専用インスタンス用に選択できるオプションのサービスがあります。
 
 | **タイプ **        | **名前**            | **説明** |      
 |-----------------|-------------------|-------------------|
+|組み込み | {{site.data.keyword.Bluemix_notm}} ランタイム | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスで使用可能です。|
 | 組み込み | {{site.data.keyword.autoscaling}} | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_notm}} Dedicated 環境で使用量が無制限になります。 |
-| 組み込み | {{site.data.keyword.datacshort}} | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
+| オプション | {{site.data.keyword.datacshort}} | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
 | オプション | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} は、{{site.data.keyword.Bluemix_notm}} アプリにフレキシブルで使いやすいメッセージングを提供する、クラウド・ベースのメッセージング・サービスです。{{site.data.keyword.mql}} は、メッセージングに対する管理しやすいソリューションとなっています。{{site.data.keyword.mql}} を使用すれば、アプリの即応性と拡張性が高まると共に、簡潔で強力な API を使用してアプリ間で作業を共有して、作業の負荷を軽減することができます。 |
 | オプション | {{site.data.keyword.dashdbshort}} | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
 |オプション | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} サービスを使用して、API を構成、管理、およびソーシャル化します。API は、プロキシー URL を使用するか、HTTP データ・ソースからデータをアセンブルすることにより、リソースと一緒にインポートできます。{{site.data.keyword.APIM}} サービスを使用する利点は、API の使用方法を管理できることです。 |
 |オプション | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
+|オプション | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
 
 *表 1. Dedicated のサービス*
+
+## {{site.data.keyword.Bluemix_notm}} Dedicated アーキテクチャー
+{: #dedicatedarch}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated は、SoftLayer に基づいて構築されているため、最高のパフォーマンスを誇るクラウド・インフラストラクチャーを使用できます。各データ・センターは 1 週間に 7 日、1 日 24 時間のセキュリティー、および厳格な管理が施されています。お客様および IBM は、VPN トンネルおよび専用 VLAN を介して {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスにアクセスします。
+
+{{site.data.keyword.Bluemix_notm}} Dedicated は、VPN または直接のネットワーク接続によってご使用のネットワーク上に置かれます。
+単一テナントのハードウェアは、世界中のどの SoftLayer データ・センターでもセットアップできます。専用プラットフォームと専用サービスの管理は {{site.data.keyword.IBM_notm}} が行うので、ユーザーはカスタム・アプリの作成に集中することができます。また、{{site.data.keyword.IBM_notm}} は、ユーザーが選択したメンテナンス期間中に専用インスタンスのすべてのメンテナンスを実行します。
+
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+
+*図 1. {{site.data.keyword.Bluemix_notm}} Dedicated の詳細図*
+
+インフラストラクチャー、運用、および物理的セキュリティーの観点から、{{site.data.keyword.Bluemix_notm}} Dedicated 環境のセキュリティー標準は Public {{site.data.keyword.Bluemix_notm}} のセキュリティー標準と同じです。ただし、専用の {{site.data.keyword.Bluemix_notm}} に対する開発者のアクセスは LDAP ポリシーによって制御されます。{{site.data.keyword.Bluemix_notm}} チームは、ご使用の環境の設定時にこのポリシーを構成することができます。専用環境内で、ユーザーの役割および許可を管理できます。詳しくは、『[ユーザーおよび許可の管理](../admin/index.html#oc_useradmin)』を参照してください。
 
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated のセットアップ
@@ -45,7 +70,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 
 <ol>
 <li>IBM 指定のアカウント担当者に連絡するか、 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>に連絡して、開始します。</li>
-<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスの料金について IBM と連携して決定します。毎月繰り返し発生する料金は、使用する専用サービスと、すべての {{site.data.keyword.Bluemix_notm}} パブリック・サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
+<li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスの料金について IBM と連携して決定します。毎月繰り返し発生する料金は、使用する専用サービスと、すべての {{site.data.keyword.Bluemix_notm}} のパブリック・サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
 <li>{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスをセットアップする各フェーズの期限を特定します。各フェーズおよび実行するタスクについては、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。</li>
 <li>専用インスタンスの <a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer データ・センターのロケーション</a>を選択します。その後、専用プラットフォームおよびアカウントが作成されます。アカウントについて、専用インスタンスを稼働するために必要な役割の組織内のユーザーを特定します。割り当てる役割については、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。
 </li>
@@ -59,7 +84,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>環境に合わせて管理チームの役割を特定し割り当てます。
 	<ol type="a">
 	<li>IBM が、お客様が用意した構成に基づいて、ネットワーク・アクセスおよび LDAP を構成します。お客様が指定した連絡先に、管理アクセス権限が付与されます。サポートおよび請求用の連絡先を指定する必要もあります。</li>
-	<li>IBM が、専用サービスを示すために、専用環境にシンジケートされたカタログをセットアップします。シンジケートされたカタログには、{{site.data.keyword.Bluemix_notm}} Public からシンジケートされ、ユーザーが使用可能にできる追加サービスが含まれています。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。</li>
+	<li>IBM が、専用サービスを示すために、専用環境にシンジケートされたカタログをセットアップします。シンジケートされたカタログには、{{site.data.keyword.Bluemix_notm}} Public からシンジケートされた、ユーザーが使用できる追加サービスが含まれています。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。</li>
 	<li>お客様が、ネットワークとファイアウォールの構成、および LDAP エンドポイントとアクセスを確認します。</li>
 	</ol>
 </li>
@@ -69,7 +94,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 
 <ol>
 <li>専用インスタンスをホストするためにどのデータ・センターを使用するかを選択します。データ・センターのオプションついては、<a href="http://www.softlayer.com/data-centers" target="_blank">SoftLayer データ・センターのロケーション</a>を参照してください。</li>
-<li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。{{site.data.keyword.Bluemix_notm}} インスタンスをセットアップした時に 3 つのドメインを取得します。<code>*mycompany*.*region*.bluemix.net</code> および <code>*mycompany*.*region*.mybluemix.net</code> の接頭部を選択します。そして、3 番目のドメインのフルネームはユーザーが選択します。<br />
+<li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。{{site.data.keyword.Bluemix_notm}} インスタンスのセットアップ時に 3 つのドメインを取得します。<code>*mycompany*.*region*.bluemix.net</code> および <code>*mycompany*.*region*.mybluemix.net</code> の接頭部を選択します。そして、3 番目のドメインのフルネームはユーザーが選択します。<br />
 <p>カスタム・ドメインは必要な数だけ選択できます。ただし、それらのカスタム・ドメインの証明書はユーザーの責任になります。カスタム・ドメインの作成について詳しくは、『<a href="../manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</p></li>
 <li>{{site.data.keyword.Bluemix_notm}} Public 内でユーザーの企業を表すために使用されるパブリック・アカウントの所有者を特定します。IBM はこのアカウントを使用して、シンジケートされたサービス使用量を追跡します。</li>
 <li>データ・センターへのセキュア接続のタイプを選択します。SoftLayer VPN、SoftLayer Direct Link、および AT&T Net Bond の中から選択できます。</li>
@@ -79,7 +104,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>環境に合わせて管理チームの役割を特定し割り当てます。割り当てが必要な役割については、『<a href="index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Dedicated の役割と責任</a>』を参照してください。</li>
 <li>IBM は、Elastic Runtime、コンソール、管理フィーチャー、およびモニタリングを含むコア・プラットフォームをデプロイします。</li>
 <li>IBM は、環境へのユーザーの管理アクセスを構成します。</li>
-<li>アラートに応答するために、IBM 運用チームによってモニターされている専用インスタンスの使用を開始できます。</li>
+<li>専用インスタンスの使用を開始できます。このインスタンスは、アラートに対応できるように IBM 運用チームによってモニターされています。</li>
 </ol>
 
 {{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。詳細情報については、『[{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理](../administer/index.html#mng)』を参照してください。アップグレードおよび保守については、『[専用インスタンスの保守](index.html#maintaindedicated)』を参照してください。
@@ -115,7 +140,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 {{site.data.keyword.Bluemix_notm}} インスタンスについてお客様と連携する {{site.data.keyword.Bluemix_notm}} サポートおよび運用チームは、以下の理由でのみ、お客様のローカル環境にアクセスすることがあります。
 
 <ul>
-<li>警告に対応し、運用上の保守を実行するため</li>
+<li>アラートに対応し、運用上の保守を実行するため</li>
 <li>サポート・チケットで報告された問題の再現を試みるため</li>
 </ul>
 
@@ -141,12 +166,12 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 |アーキテクチャーの選択 | 高可用性および災害復旧の要件を考慮に入れた事前定義の選択に基づいて、アーキテクチャーを選択します。 | IBM |
 |災害復旧目標の定義 | 環境の災害復旧の要件を定義します。 | お客様 |
 |災害復旧計画の作成 | 災害復旧計画を相談して定義します。IBM は災害復旧モデルを作成してお客様と相談し、お客様はフィードバックを提供して計画を承認します。 | IBM とお客様の共同の責任 |
-|バックアップおよびリカバリー計画の作成 | 頻度およびバックアップのオン/オフ・サイト分配の要件を定義したバックアップとリカバリーの計画を作成します。IBM はファブリック・コンポーネント、IBM サービス、ユーザー役割などのサービス・メタデータなどをバックアップします。お客様は、お客様が責任を持つアプリケーション固有のデータをバックアップします。 | IBM とお客様の共同の責任 |
+|バックアップおよびリカバリー計画の作成 | 頻度およびバックアップのオン/オフ・サイト分配の要件を定義したバックアップとリカバリーの計画を作成します。IBM はプラットフォーム・コンポーネント、IBM サービス、サービス・メタデータ (ユーザー役割を含む) などをバックアップします。お客様は、お客様が責任を持つアプリケーション固有のデータをバックアップします。 | IBM とお客様の共同の責任 |
 |イベント検出および問題判別用ツールの特定 | {{site.data.keyword.Bluemix_notm}} プラットフォーム・レベルでイベント検出および問題判別に使用する IBM およびサード・パーティーのツールを特定します。 | IBM |
 |エスカレーション計画の定義 | モニター・コンポーネントで検出されたイベントをトリアージおよび解決するためのエスカレーション計画を定義します。 | IBM |
 |インフラストラクチャー、プラットフォーム、およびサポートに関する合意の承認 | 環境の金銭的条件など、サブスクリプションに関する合意を承認します。ネットワークおよびセキュリティー・モニターに関する合意を承認します。サポート・サブスクリプションを承認します。 | お客様 |
 |環境の調達 | 計算リソース、ネットワーク、およびストレージを調達します。これには、{{site.data.keyword.Bluemix_notm}} をホストするためのコアおよびサービス VLAN、Data Power をホストするためのベアメタル・サービス、および SoftLayer Firewall が含まれます。VPN トンネルを可能にするインフラストラクチャーを用意します。 | お客様 |
-|ファブリック、アプリケーション、およびモニターと管理の各コンポーネントのインストール | ファブリック・コンポーネント (BOSH Director、クラウド・コントローラー、正常性マネージャー、メッセージング、ルーター、DEA、サービス・プロバイダーなど) およびエスカレーションや問題検出の計画で定義されているモニター・コンポーネントをインストール、構成、および検証します。 | IBM |
+|プラットフォーム、アプリケーション、モニター、および管理の各コンポーネントのインストール | プラットフォーム・コンポーネント (BOSH Director、クラウド・コントローラー、正常性マネージャー、メッセージング、ルーター、DEA、サービス・プロバイダーなど) およびエスカレーションや問題検出の計画で定義されているモニター・コンポーネントをインストール、構成、および検証します。 | IBM |
 |セキュリティー・コンポーネントのインストールと構成 | モニタリングと報告の計画と結合しているセキュリティー・コンポーネント (IBM QRadar、資格情報ボールト、侵入防御システム、IBM BigFix、IBM Security Privileged Identity Management など) をインストールして構成します。 | IBM |
 |カスタム・コンポーネントのインストールと構成 |  	{{site.data.keyword.Bluemix_notm}} 製品およびサービスの有効範囲外にあるカスタム・コンポーネントをインストールして構成します。 | お客様 |
 |初期ネットワーク構成の確立 | 初期ネットワーク構成 (ファイアウォール、DataPower、Fortigate、および DNS を含む) を確立します。 | IBM |
@@ -216,9 +241,12 @@ IBM は、E メール、電話、または他の方法を通じて、各保守�
 **重要**: 保守期間中には、一部のサービスが使用不可になる可能性があります。</dd>
 
 <dt>**月次変更期間**</dt>
-<dd>月次保守期間は、21 日間の期間内でお客様と IBM の間の調整に基づいて適用されます。お客様は、21 日間の期間内で都合が悪い可能性のある特定の日時を IBM に提示してください。IBM は、その時間を外して更新をスケジュールに入れるようにします。要求に基づき、IBM はスケジュールに入れた保守期間をお客様に伝えます。月次変更期間は、稼働中の Bluemix Dedicated 環境には影響しないと見込まれます。<br />
+<dd>月次保守期間は、21 日間の期間内でお客様と IBM の間の調整に基づいて適用されます。お客様は、21 日間の期間内で都合が悪い可能性のある特定の日時を IBM に提示してください。IBM は、その時間を外して更新をスケジュールに入れるようにします。要求に基づき、IBM はスケジュールに入れた保守期間をお客様に伝えます。月次変更期間は、稼働中の Bluemix Dedicated 環境には影響しないと見込まれます。<p>次の図は、保留中の更新についての通知を受け取り、お客様の都合の悪い可能性のある日付を設定し、最終的に、スケジュールされた日付についての通知を受け取るまでのプロセスを表しています。</p>
+<p><img src="../local/images/maintenance_dates.png" alt="保守更新の利用不能日の設定プロセス"></p>
 <br />
-**注:** 特定の時間に更新するよう要求しない場合、保守は、自動的に期間の最後に適用されます。<br />
+**注**: 更新の利用不能日を設定する必要がない場合、更新を承認できます。IBM は保守適用のスケジュール日をお客様に通知します。<br />
+<p>次の図は、保留中の更新についての通知を受け取り、更新を承認し、更新のスケジュール日を受け取るプロセスを表しています。</p>
+<p><img src="../local/images/maintenance_nodates.png" alt="利用不能日のない場合の更新承認プロセス"></p>
 <br />
 **「管理」>「システム情報 (SYSTEM INFORMATION)」**へ移動して保留中の更新を表示し、利用不能日を設定して、更新を承認します。通知と保留中の更新のスケジューリングについて詳しくは、『<a href="../admin/index.html#oc_system">システム情報の表示</a>』を参照してください。</dd>
 
@@ -229,6 +257,26 @@ IBM は、E メール、電話、または他の方法を通じて、各保守�
 専用インスタンスの保守をセットアップするために、IBM 指定のアカウント担当者と連携して、標準保守用に合意した期間を指定してください。
 
 保守更新後に報告された問題があり、IBM による更新のロールバックを許可するのが最善である場合、お客様は IBM 担当員に同意を示します。合意した場合、IBM はその更新をロールバックして、環境を前の状態に戻します。
+
+## インシデント対応およびサポート
+{: #incidentresponse}
+
+### お客様が検出した問題
+
+IBM サポートおよび運用チームに知らせる必要のある問題を見つけた場合、サポートに連絡する方法はいくつかあります。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support-local)を参照してください。問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。
+
+### IBM が検出した重大インシデント
+
+重大インシデントは、緊急で予期しないサービス障害であり、お客様の環境またはユーザーに影響する安定性の問題です。IBM がお客様の環境内で重大インシデントを検出した場合、それを通知するためにお客様の「**状況**」ページに通知が表示されます。「状況」ページでは、プラットフォームまたはサービスに関して既知の問題があるかどうかも確認できます。通知を、Web フックをサポートする Web サービスと統合したい場合は、[通知およびイベント・サブスクリプション](../admin/index.html#oc_eventsubscription)で、通知機能の拡張方法についての説明を参照してください。
+
+![インシデント対応プロセス](../local/images/incidentresponseprocess.png "インシデント対応プロセス")
+
+*図 2. インシデント対応プロセス*
+
+問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。インシデントに関する質問がある場合、または、問題を解決するために IBM 担当員の支援を必要とする場合、サポート・チケットをオープンすることができます。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support-local)を参照してください。
+
+**注**: 重大度 1 のサポート・チケットは、1 日 24 時間、週に 7 日間モニターされます。その他のチケットは、日曜 10:00 pm GMT から土曜 12:00 am GMT まで処理されます。サポート・チケットの重大度とサポートとの協力について詳しくは、<a href="../support/index.html#contacting-bluemix-support-local">サポートへのお問い合わせ</a>を参照してください。
+
 
 ## 災害復旧
 {: #dr}
@@ -286,7 +334,7 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <dd>Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> は、その内部で実行しているアプリに対するヘルス・チェックを実行します。アプリまたは DEA 自体に問題が生じた場合、代替 DEA にアプリの追加インスタンスがデプロイされ、問題が解決されます。詳しくは、『<a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>』を参照してください。
 </dd>
 <dt>SoftLayer 冗長性</dt>
-<dd>専用環境での SoftLayer によって、各クラウド・ストレージ・クラスター内のデータは複数回書き込まれ、ストレージ・クラスターはドライブ障害に備えて自動修復機能を持つように構成されます。仮想マシンで問題があった場合、SoftLayer はその仮想マシンを別のホストで再始動することを試みます。</dd>
+<dd>専用環境での SoftLayer によって、各クラウド・ストレージ・クラスター内のデータは複数回書き込まれ、ストレージ・クラスターはドライブ障害に備えて自動修復機能を持つように構成されます。仮想サーバーで問題があった場合、SoftLayer はその仮想サーバーを別のホストで再始動することを試みます。</dd>
 <dt>メタデータのバックアップ</dt>
 <dd>SoftLayer EVault Backup を使用して、メタデータは最低でも 200 km 離れた場所にバックアップされます。</dd>
 </dl>
@@ -316,5 +364,7 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 # 関連リンク
 ## 一般
 * [詳細: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [{{site.data.keyword.Bluemix_notm}} の新機能](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 用語集](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](../admin/index.html#mng)
 * [サポートへのお問い合わせ](../troubleshoot/getting_customer_support.html#bluemix_support)

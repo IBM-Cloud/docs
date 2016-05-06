@@ -1,8 +1,8 @@
-# Logiciels SDK, exemples et référence d'API 
+# Logiciels SDK, exemples et référence d'API
 {: #sdk}
+*Dernière mise à jour : 28 janvier 2016* 
 
 Afin d'ajouter des logiciels SDK pour les services mobiles Bluemix à votre application, choisissez les logiciels SDK à utiliser, puis configurez votre gestionnaire de dépendances afin d'extraire les logiciels SDK dans votre application.
-
 
 <table id="sdk__sdk-table-mbaas" class="mobile-dl"><tbody><tr class="doc-tr-even"><td><img src="images/Droid_SDK_icon.png" alt="android">
 <!---
@@ -33,7 +33,7 @@ Afin d'ajouter des logiciels SDK pour les services mobiles Bluemix à votre appl
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Push</a></li>
 <li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">API REST Push</a></li>
 </ul>
-</td><td valign="top"><img src="images/cdova_sdk_icon.png" alt="cordova">
+</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -41,6 +41,15 @@ Afin d'ajouter des logiciels SDK pour les services mobiles Bluemix à votre appl
 <ul><li><strong>Samples:</strong></li>
 <li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
 -->
+</ul>
+
+<ul><li><strong>Exemples :</strong></li>
+<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">HelloPush</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">HelloAuthentication</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <ul><li><strong>Logiciels SDK dans github :</strong></li>

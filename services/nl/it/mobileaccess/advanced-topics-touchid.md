@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Protezione dell'autorizzazione con Touch ID
 {: #before-you-begin}
 

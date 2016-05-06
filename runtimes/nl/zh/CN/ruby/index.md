@@ -1,13 +1,19 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*上次更新时间：2016 年 1 月 12 日*
-
-# Ruby 运行时
+# Ruby
 {: #ruby_runtime}
+*上次更新时间：2016 年 3 月 16 日*
 
-{{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了一个完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。
 {: shortdesc}
 
 如果您应用程序的根目录中包含 Gemfile，那么将使用 ruby_buildpack。然后，它将使用 Bundler 来安装依赖项。
@@ -46,7 +52,7 @@ gem 'json', '>=0'```
 
 如果您应用程序所需的 Ruby 版本没有列在上述列表中，那么可以使用外部 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) 来部署应用程序。
 
-## 相关链接
-{: #related_links}
+# 相关链接
+## 常规
 * [用于 Ruby 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails 文档](http://rubyonrails.org/documentation/)

@@ -4,6 +4,7 @@
 
 # Cómo empezar con el ejemplo HelloWorld
 {: #gettingstarted-ios}
+*Última actualización: 28 de enero de 2016*
 Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el programa de fondo de {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
 
 1. Cree el programa de fondo móvil en {{site.data.keyword.Bluemix_notm}}.
@@ -68,10 +69,10 @@ Para obtener información sobre cómo obtener el SDK e integrarlo en la app para
 # rellinks
 
 ## samples
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [Ejemplo HelloWorld](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## sdk
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
    *

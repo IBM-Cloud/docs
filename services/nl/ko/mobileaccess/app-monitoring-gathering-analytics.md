@@ -1,3 +1,10 @@
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
 # 사용량 분석 수집
 {: #usage-analytics}
 
@@ -13,23 +20,23 @@
 
 ```Java
 // Enable recording of usage analytics
-MFPAnalytics.enable()
+MFPAnalytics.enable();
 
 // Start recording application startup time
 // Add this code in the onCreate method of your main Activity
-MFPAnalytics.startLoggingApplicationStartup()
+MFPAnalytics.startLoggingApplicationStartup();
 
 // Record the duration of application startup
-// Add this code in the onStarted method of your main Activity
-MFPAnalytics.logApplicationStartup()
+// Add this code in the onStart method of your main Activity
+MFPAnalytics.logApplicationStartup();
 
 // Record application foreground and background events
 // Add this code in the onPause and onResume methods of your main Activity
-MFPAnalytics.logSessionStart()
-MFPAnalytics.logSessionEnd()
+MFPAnalytics.logSessionStart();
+MFPAnalytics.logSessionEnd();
 
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-MFPAnalytics.send()
+MFPAnalytics.send();
 ```
 
 ### iOS - Objective-C

@@ -1,3 +1,7 @@
+---
+copyright:
+  años: 2015, 2016
+---
 # Utilización de IMFURLProtocol en aplicaciones de iOS
 {: #imfurl}
 En situaciones avanzadas, es posible que no pueda utilizar la clase `IMFResourceRequest` para el envío de solicitudes a recursos protegidos; por ejemplo, cuando algún código de terceros envía una solicitud a un recurso protegido. Una posible solución es utilizar la API `IMFURLProtocol`, junto con la llamada estándar `NSURLRequest (NSMutableURLRequest)`.
@@ -5,14 +9,14 @@ En situaciones avanzadas, es posible que no pueda utilizar la clase `IMFResource
 ## Instalación de pod `IMFURLProtocol`
 {: #imfurl-pod}
 
-Puede utilizar CocoaPods para instalar pod `IMFURLProtocol`. Después podrá hacer referencia a `IMFURLProtocol.h` desde el proyecto de iOS. 
+Puede utilizar CocoaPods para instalar pod `IMFURLProtocol`. Después podrá hacer referencia a `IMFURLProtocol.h` desde el proyecto de iOS.
 
 ## Envío de solicitudes con la API IMFURLProtocol
 {: #imfurl-send}
 
-1. Importe el archivo `IMFURLProtocol.h` a la clase que esté utilizando para enviar la solicitud. 
-2. Implemente la API `NSURLConnectionDataDelegate` en una clase que se haya pasado como delegada de una clase `NSURLConnection`. 
-3. Registre una instancia de `IMFURLProtocol` con el método `IMFURLProtocol:registerIMFURLProtocol`. 
+1. Importe el archivo `IMFURLProtocol.h` a la clase que esté utilizando para enviar la solicitud.
+2. Implemente la API `NSURLConnectionDataDelegate` en una clase que se haya pasado como delegada de una clase `NSURLConnection`.
+3. Registre una instancia de `IMFURLProtocol` con el método `IMFURLProtocol:registerIMFURLProtocol`.
 4. Registre la vía de acceso al recurso protegido con el método `IMFURLProtocol:registerProtectedResourceWithPath`.
 5. Cree una solicitud `NSMutableURLRequest` y defina las propiedades como necesarias para una solicitud estándar a un recurso.
 6. Configure `NSURLConnection` con la solicitud y el delegado que se creó en los pasos anteriores y envíelos utilizando `NSURLConnection:start`.
@@ -21,7 +25,7 @@ Puede utilizar CocoaPods para instalar pod `IMFURLProtocol`. Después podrá hac
 ## Código de ejemplo
 {: #imfurl-sample}
 
-Este ejemplo muestra cómo registrar `IMFURLProtocol` y cómo enviar una solicitud estándar a un recurso protegido. 
+Este ejemplo muestra cómo registrar `IMFURLProtocol` y cómo enviar una solicitud estándar a un recurso protegido.
 
 ### Paso 1: añada la implementación del protocolo y procese la respuesta.
 {: #imfurl-sample1}

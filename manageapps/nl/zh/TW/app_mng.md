@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#應用程式管理
+#管理 Liberty 及 Node.js 應用程式
 {: #app_management}
 
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 3 月 17 日*
 
 「應用程式管理」是一組開發及除錯公用程式，可以針對您在 {{site.data.keyword.Bluemix}}
 上的 Liberty 和 Node.js 應用程式啟用。{:shortdesc}
@@ -65,12 +73,6 @@
   *inspector* 公用程式也會啟動 *proxy*。
   
   2. *strongpm*：啟用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}，以使用 [StrongLoop Metrics、Profiling 及 Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} 之類的公用程式來分析 Node.js 應用程式。
-  
-  **附註：**您必須使用 0.12 版的 engines.node，才能使用 **strongpm** 公用程式。engines.node 版本指定於 package.json 檔案中。例如：
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   *strongpm* 公用程式也會啟動 *proxy*。
   

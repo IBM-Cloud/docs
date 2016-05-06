@@ -1,7 +1,16 @@
-# iOS SDK 설정
+---
+
+저작권:
+  연도: 2015, 2016
+
+---
+
+# iOS Objective-C SDK 설정
 {: #getting-started-ios}
 
 {{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 계측하십시오. SDK를 초기화하고 보호 및 비보호 자원에 대한 요청을 작성하십시오. 
+
+**팁:** Swift로 iOS 앱을 개발하는 경우, {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 세부사항은 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)을 참조하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -16,9 +25,12 @@
 
 ### CocoaPods 설치
 {: #install-cocoapods}
-1. 터미널을 열고 `pod --version` 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
+1. 터미널을 열고 **pod --version** 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
 
-1. CocoaPods가 설치되어 있지 않은 경우에는 `sudo gem install cocoapods`를 실행하십시오. 자세한 정보는 [Cocoapods 웹 사이트](https://cocoapods.org/)를 참조하십시오. 
+1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오.
+```
+sudo gem install cocoapods```
+자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
 
 ### CocoaPods로 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
@@ -42,20 +54,20 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #init-mca-sdk-ios}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면, **applicationGUID** 및 **applicationRoute** 매개변수를 전달하여 SDK를 초기화해야 합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`) 매개변수를 전달하여 SDK를 초기화해야 합니다.
 
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. SDK를 초기화하려면 **애플리케이션 라우트** 및 **애플리케이션 GUID** 값이 필요합니다. 
+1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. SDK를 초기화하려면 **라우트** 및 **앱 GUID** 값이 필요합니다.
 
-1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스의 `IMFCore` 프레임워크를 가져오려면 다음 헤더를 추가하십시오. 
+1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 `IMFCore` 프레임워크를 가져오십시오.
 
-	Objective-C:
+	**Objective-C:**
 	 ```Objective-C
 	#import <IMFCore/IMFCore.h>
 	```
 
-	Swift:
-
+	**Swift:
+**
 
 	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C로 구현됩니다. 브리징 헤더를 Swift 프로젝트에 추가해야 할 수 있습니다. 
 
@@ -71,9 +83,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 대체하십시오.
 
 
-	Objective-C:
-                    
-
+	**Objective-C:**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -81,8 +91,8 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
-
+	**Swift:
+**
 
 	```Swift
 IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
@@ -93,14 +103,12 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 
 {{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
 
-1. 브라우저에서 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. 다음 URL `http://{appRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
+1. 브라우저에서 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스할 수 있기 때문에 브라우저에 `권한 없음` 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `IMFClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
-	Objective-C:
-                    
-
+	**Objective-C:**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -118,8 +126,8 @@ if (error){
 	}];
 	```
 
-	Swift:
-
+	**Swift:
+**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

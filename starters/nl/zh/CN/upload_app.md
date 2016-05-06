@@ -1,26 +1,34 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # 上传应用程序
-*上次更新时间：2015 年 11 月 11 日*
+*上次更新时间：2016 年 2 月 17 日*
 
 登录到 {{site.data.keyword.Bluemix}} 后，可以使用 cf push 命令来上传应用程序。{:shortdesc}
 
 开始之前，您必须：
-  1. 安装 Cloud Foundry 命令行界面。
+  1. 安装 {{site.data.keyword.Bluemix}} 和 Cloud Foundry 命令行界面。
 
-  <p>
-  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_cf_commandline.svg" alt="下载 Cloud Foundry 命令行界面" /></a>
-  </p>
-
-
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_cf_commandline.svg" alt="下载 Cloud Foundry 命令行界面" /> </a>
   2. 连接到 {{site.data.keyword.Bluemix}}。
 
-  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
   
   3. 登录到 {{site.data.keyword.Bluemix_notm}}。
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
 发出 **cf push** 命令时，**cf** 命令行界面将提供使用 buildpack 来构建并运行应用程序的 {{site.data.keyword.Bluemix_notm}} 环境的工作目录。
 

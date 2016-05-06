@@ -1,8 +1,13 @@
+---
+
+Copyright : 2015, 2016
+
+---
+
 # Utilisation de {{site.data.keyword.amashort}} avec un environnement de développement local
 {: #protecting-local}
 
-Vous pouvez configurer votre environnement de développement local pour qu'il utilise le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}.
-En particulier, vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} lorsque vous développez du code côté serveur avec un serveur de développement local, comme Node.js.
+Vous pouvez configurer votre environnement de développement local pour qu'il utilise le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}. En particulier, vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} lorsque vous développez du code côté serveur avec un serveur de développement local, comme Node.js.
 
 Le SDK serveur de {{site.data.keyword.amashort}} requiert la définition de deux variables. Lorsque vous développez du code côté serveur sur {{site.data.keyword.Bluemix_notm}}, ces variables sont fournies par l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 
@@ -15,8 +20,7 @@ Pour utiliser {{site.data.keyword.amashort}} avec un serveur de développement l
 
 1. Cliquez sur **Options pour application mobile** et copiez la valeur de **AppGUID**.
 
-1. Dans votre environnement de développement local, définissez la variable d'environnement *VCAP_APPLICATION*.
-Elle doit contenir une représentation d'objet JSON sous la forme d'une chaîne de caractères (stringified) avec une seule propriété.
+1. Dans votre environnement de développement local, définissez la variable d'environnement *VCAP_APPLICATION*. Elle doit contenir une représentation d'objet JSON sous la forme d'une chaîne de caractères (stringified) avec une seule propriété.
 ```JavaScript
 {
     application_id: "appGUID"

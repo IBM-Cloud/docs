@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Actualización de apps
 {: #updatingapps}
 
-*Última actualización: 8 de diciembre de 2015*
+*Última actualización: 17 de marzo de 2016*
 
 
 Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las app en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
@@ -18,8 +26,6 @@ Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Service
 Puede utilizar un dominio personalizado en el URL de la aplicación en lugar del dominio del sistema {{site.data.keyword.Bluemix_notm}} predeterminado, que es mybluemix.net.
 
 Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}. Para utilizar un dominio personalizado, debe registrar el dominio personalizado en un servidor DNS público, configurar el dominio personalizado en {{site.data.keyword.Bluemix_notm}} y, a continuación, correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}} en el servidor DNS público. Después de correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}}, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.Bluemix_notm}}.
-
-**Nota:** Puede utilizar el mandato **nslookup** para obtener la dirección IP pública del dominio del sistema {{site.data.keyword.Bluemix_notm}}. Por ejemplo, en un indicador de mandatos, especifique `nslookup mybluemix.net`.
 
 Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_notm}} puede utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
 
@@ -73,6 +79,16 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
     
         El nombre de host de la ruta que desea utilizar para la aplicación.
 	
+Tras configurar su dominio personalizado en {{site.data.keyword.Bluemix_notm}}, debe correlacionarlo con el
+dominio del sistema {{site.data.keyword.Bluemix_notm}} en su servidor DNS registrado: 
+
+  1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS. 
+  2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.Bluemix_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}: 
+  
+    * US-SOUTH: `secure.us-south.bluemix.net`
+    * EU-GB: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 En un navegador o interfaz de línea de mandatos, escriba el siguiente URL para acceder a la aplicación miapp:
 
 ```
@@ -275,7 +291,6 @@ delete`.
 
 # rellinks
 ## general 
-* [Organizaciones y espacios](../acctmgmt/index.html#organdspaces)
 * [Despliegues Blue-Green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

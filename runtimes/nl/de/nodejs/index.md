@@ -1,84 +1,91 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Letzte Aktualisierung: 12. Januar 2016*
 
-# Node.js-Laufzeit
+# SDK for Node.js
 {: #nodejs_runtime}
+*Letzte Aktualisierung: 16. März 2016*
 
-Die Node.js-Laufzeit in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack sdk-for-nodejs.
-Das Buildpack sdk-for-nodejs stellt eine vollständige Laufzeitumgebung für Node.js-Apps bereit.
+Die Laufzeit von Node.js in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'sdk-for-nodejs'.
+Das Buildpack 'sdk-for-nodejs' bietet eine vollständige Laufzeitumgebung für Node.js-Apps.
 {: shortdesc}
 
-Das Node.js-Buildpack wird verwendet, wenn sich die Datei **package.json** im Stammverzeichnis der Anwendung befindet.
+Das Buildpack 'sdk-for-nodejs' wird verwendet, wenn die Anwendung die Datei **package.json** im Stammverzeichnis enthält.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Node.js-Starteranwendung zur Verfügung.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die eine Vorlage bereitstellt, die Sie für Ihre App nutzen können. Sie können die Starter-App ausprobieren und Änderungen vornehmen und diese dann per Push-Operation an die Bluemix-Umgebung übertragen. Hilfeinformationen zur Verwendung der Starteranwendung finden Sie im Thema zur [Verwendung der Starteranwendungen](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
 
 ## Startbefehl
 {: #starup_commmand}
 
-Es wird empfohlen, zum Angeben eines Startbefehls für Ihre Bluemix-Node.js-Anwendung die Datei **Procfile** oder die Datei **package.json** zu verwenden.
+Für die Angabe eines Startbefehls für Ihre Bluemix Node.js-Anwendung wird empfohlen, dass Sie entweder das Element **Procfile** oder die Datei **package.json** verwenden.
 
-Geben Sie in der Datei **Procfile** im Formular, das im Anschluss folgt, einen Startbefehl an. Dabei ist 'app.js' das js-Startscript für die Anwendung.
+Geben Sie im folgenden Format einen Startbefehl in Ihrem Element **Procfile** an. Dabei ist 'app.js' das js-Startscript für Ihre Anwendung.
 ```
-web: node app.js```
+web: node app.js
+```
 {: codeblock}
 
-Speichern Sie die Datei **Procfile** im Stammverzeichnis Ihrer Anwendung. 
+Speichern Sie das Element **Procfile** im Stammverzeichnis Ihrer Anwendung.
 
-Wenn keine Datei des Typs **Procfile** vorhanden ist, sucht das IBM Bluemix-Node.js-Buildpack in der Datei **package.json** nach dem Eintrag 'scripts.start'. Im unten stehenden Beispiel ist 'app.js' ebenfalls das js-Startscript für die Anwendung.
+Wenn das Element **Procfile** nicht vorhanden ist, prüft das IBM Bluemix-Node.js-Buildpack, ob der Eintrag 'scripts.start' in der Datei **package.json** vorhanden ist. Im unten stehenden Beispiel ist 'app.js' wieder das js-Startscript für Ihre Anwendung.
 ```
 {
-  ...   
-"scripts": {
-
-    "start": "node app.js"
-}
+    ...   
+    "scripts": {
+      "start": "node app.js"
+    }
 }
 ```
 {: codeblock}
 
-Wenn ein solcher Eintrag in der Datei **package.json** vorhanden ist, wird die Datei **Procfile** automatisch generiert. Der Inhalt der automatisch generierten Datei **Procfile** sieht wie folgt aus:
+Wenn ein Eintrag für ein Startscript in der Datei **package.json** vorhanden ist, wird das Element **Procfile** automatisch erstellt. Der Inhalt des automatisch generierten Elements **Procfile** ist wie folgt:
 ```
-web: npm start```
+    web: npm start
+```
 {: codeblock}
 
-Weitere Informationen zu den Dateien **Procfile** und **package.json** finden Sie unter
-[Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html). 
+Weitere Informationen zum Element **Procfile** und zur Datei **package.json** finden Sie in [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).
 
-## Hinweise zur lokalen Ausführung Ihrer Node.js-Anwendung
+## Hinweise für die lokale Ausführung Ihrer Node.js-Anwendung
 {: #hints}
 
-Mit diesen Angaben vereinfachen Sie sowohl die lokale Ausführung der Node.js-Anwendung als auch deren Ausführung in Bluemix.
+Mithilfe dieser Informationen können Sie die Ausführung Ihrer Node.js-Anwendung lokal oder in Bluemix vereinfachen.
 
-Das folgende Beispiel zeigt einen Teil der Quelle für eine **js**-Datei:
+Im folgenden Beispiel wird ein Teil der Quelle für eine **js**-Datei gezeigt:
 ```
 var port = (process.env.VCAP_APP_PORT || 3000);
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 ```
 {: codeblock}
 
-Wenn die Anwendung mit diesem Code in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT die Bluemix-internen Werte für Host und Port, bei denen die App für eingehende Verbindungen empfangsbereit ist. Bei einer lokalen Ausführung der Anwendung sind VCAP_APP_HOST und VCAP_APP_PORT nicht definiert; somit wird **localhost** als Host und **3000** als Portnummer verwendet. Bei dieser Konfiguration kann die Anwendung ohne weitere Änderungen lokal zu Testzwecken und in Bluemix ausgeführt werden.
+Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT mit diesem Code die für Bluemix internen Werte für den Host und den Port, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung sind die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT nicht definiert, wodurch **localhost** als Host und **3000** als Portnummer verwendet werden. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Textzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
 
 ## App-Management
-{{site.data.keyword.Bluemix}} stellt eine Reihe von Dienstprogrammen für Verwaltung und Debugging Ihrer Node.js-App bereit.  Ausführliche Details hierzu finden Sie unter [App-Management](../../manageapps/app_mng.html).
+{{site.data.keyword.Bluemix}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](../../manageapps/app_mng.html).
 
 ## Verfügbare Versionen
 {: #available_versions}
 
-In {{site.data.keyword.Bluemix}} werden alle [derzeit verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) bereitgestellt. IBM stellt dafür Versionen bereit, die funktionale Erweiterungen und Fehlerkorrekturen enthalten. Informationen hierzu finden Sie unter [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html).
+{{site.data.keyword.Bluemix}} stellt alle [zurzeit verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) zur Verfügung. Davon stellt IBM Versionen zur Verfügung, die Erweiterungen und Fehlerkorrekturen enthalten. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html).
 
-Das IBM Node.js-Buildpack stellt alle IBM Laufzeitversionen in den Cache. Daher erzielen Sie bei Verwendung der IBM SDK for Node.js-Laufzeit in Ihrer Anwendung eine bessere Anwendungsleistung, wenn die Anwendung per Push-Operation an Bluemix übertragen wird.
+Das IBM Node.js-Buildpack stellt alle IBM Laufzeitversionen in den Cache. Verwenden Sie die IBM SDK for Node.js-Laufzeit also in Ihrer Anwendung, erhalten Sie eine bessere Anwendungsleistung, wenn Ihre Anwendung mit einer Push-Operation an Bluemix übertragen wird.
 
-Geben Sie mithilfe des Parameters **node** im Abschnitt **engines** der Datei **package.json** die Version der Node.js-Laufzeit an, die Sie ausführen möchten.
+Verwenden Sie den Parameter **node** im Abschnitt **engines** der Datei **package.json**, um die Version der Node.js-Laufzeit anzugeben, die Sie ausführen möchten.
 
-Verwenden Sie den Parameter **npm** im Abschnitt **engines** der Datei **package.json**, wenn Sie eine Version von npm angeben müssen, die sich von der Version unterscheidet, die im Lieferumfang von Node.js enthalten ist.  
+Verwenden Sie den Parameter **npm** im Abschnitt **engines** der Datei **package.json**, wenn Sie eine andere als die mit Node.js im Paket vorhandene Version von 'npm' verwenden müssen.  
 
-Beispiel:
+Lesen Sie folgendes Beispiel:
 
 ```
 {
@@ -86,35 +93,35 @@ Beispiel:
   "description": "this is my app",
   "version": "0.1",
   "engines": {
-     "node": "4.2.4"
+     "node": "4.2.4",
      "npm": "2.11.3"
   }
 }
 ```
 {: codeblock}
 
-Eine Knotenversion muss stets in der Datei **package.json** angegeben werden. Wenn keine Angabe erfolgt, wird die neueste Knotenversion verwendet.
+Für 'node' muss in der Datei **package.json** stets eine Version angegeben werden. Ist das nicht der Fall, wird die neueste Knotenversion verwendet.
 
 ## Konfigurationsoptionen
 {: #configuration_options}
 
 ### NPM-Scripts
 {: #npm_scripts}
-NPM stellt eine Scripting-Funktion bereit, mit deren Hilfe Sie Scripts ausführen können, einschließlich der Scripts **preinstall** und **postinstall**, die vor und nach der Installation Ihrer Knotenmodule (node_modules) angewendet werden.  Ausführliche Details hierzu finden Sie unter [npm-scripts](https://docs.npmjs.com/misc/scripts).
+NPM stellt eine Scripting-Funktion bereit, mit der Sie Scripts einschließlich der Scripts **preinstall** und **postinstall** ausführen können, die vor und nach der Installation Ihrer Knotenmodule (node_modules) installiert werden.  Vollständige Details finden Sie in [npm-scripts](https://docs.npmjs.com/misc/scripts).
 
 ### Caching-Verhalten
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} pflegt pro Knotenanwendung ein Cacheverzeichnis, das zwischen den Builds erhalten bleibt. Im Cache werden aufgelöste Abhängigkeiten gespeichert; sie werden also nicht jedes Mal, wenn die App bereitgestellt wird, heruntergeladen und installiert.  Beispiel: Angenommen, 'myapp' ist von **express** abhängig.  Wenn dann 'myapp' das erste Mal bereitgestellt wird, wird das Modul **expess** heruntergeladen.  Bei nachfolgenden Bereitstellungen von 'myapp' wird die im Cache stehende Instanz von **express** verwendet.
+{{site.data.keyword.Bluemix}} enthält pro Knotenanwendung ein Cacheverzeichnis, das von einem Build zum anderen erhalten bleibt. Der Cache speichert aufgelöste Abhängigkeiten, das heißt, sie werden nicht bei jeder Implementierung der App heruntergeladen und installiert.  Beispiel: Nehmen Sie an, die 'myapp' hängt von **express** ab.  Beim ersten Implementieren von 'myapp' wird das Modul **express** heruntergeladen.  Bei den nachfolgenden Implementierungen von 'myapp' wird die in den Cache gestellte Instanz von **express** verwendet. Das Standardverhalten sieht so aus, dass alle von NPM installierten Knotenmodule (node_modules) und alle von Bower installierten Bower-Komponenten (bower_components) in den Cache gestellt werden.
 
-Verwenden Sie die Variable NODE_MODULES_CACHE, um festzustellen, ob das Node-Buildpack den Cache früherer Builds verwendet oder nicht. Der Standardwert ist true.  Zur Inaktivierung des Caching müssen Sie NODE_MODULES_CACHE auf 'false' setzen, beispielsweise über die Befehlszeile 'cf':
+Legen Sie mithilfe der Variablen NODE_MODULES_CACHE fest, ob das Node-Buildpack den bei vorherigen Builds verwendeten Cache verwendet oder ignoriert. Der Standardwert ist 'true'.  Legen Sie zum Inaktivieren des Cachings für NODE_MODULES_CACHE den Wert 'false' fest, beispielsweise über die cf-Befehlszeile:
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
-Beachten Sie, dass Knotenmodule (node_modules), die in Ihrer Anwendung integriert sind, nicht in den Cache gestellt werden.
+Beachten Sie, dass in Ihrer Anwendung enthaltene Knotenmodule (node_modules) nicht in den Cache gestellt werden.
 
-Für eine differenziertere Kontrolle über die im Cache gespeicherten Module können Sie in der übergeordneten Datei **package.json** ein Array des Typs **cacheDirectories** verwenden.  Ist das Element **cacheDirectories** in der Datei **package.json** enthalten, werden nur die Module, die sich um Array **cacheDirectories** befinden, im Cache gespeichert.  Im folgenden Beispiel werden nur Knotenmodule (node_modules) und Bower-Komponenten (bower_components) im Cache gespeichert.
+Sie können das Array **cacheDirectories** im **package.json** der höchsten Ebene verwenden, um detailliert steuern zu können, welche Module in den Cache gestellt werden.  Wenn das Element **cacheDirectories** in der Datei **package.json** vorhanden ist, werden nur Module in den Cache gestellt, die sich im Array **cacheDirectories** befinden.  Im folgenden Beispiel werden nur Knotenmodule (node_modules) und Bower-Komponenten (bower_components) in den Cache gestellt.
 ```
 {
   "cacheDirectories": ["node_modules","bower_components"],
@@ -123,32 +130,59 @@ Für eine differenziertere Kontrolle über die im Cache gespeicherten Module kö
 ```
 {: codeblock}
 
-## Node.js-Buildpacks
+### FIPS MODE
+{: #fips_mode}
 
-Bluemix stellt mehrere Versionen des Node.js-Buildpacks bereit.
-* Das von IBM erstellte Buildpack **sdk-for-nodejs** ist das für Node.js-Anwendungen in Bluemix verwendete Standard-Buildpack.
-* Das Buildpack **nodejs_buildpack** ist das externe Buildpack, das von der Cloud Foundry-Community bereitgestellt wird.
+Die Node.js-Buildpackversionen v3.2-20160315-1257 sowie höhere Versionen unterstützen [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Zur Aktivierung von FIPS müssen Sie die Umgebungsvariable FIPS_MODE auf 'true' setzen.
+Beispiel:
 
-Das Buildpack **sdk-for-nodejs** hat in Bluemix Vorrang vor dem Buildpack **nodejs_buildpack**. Wenn Sie anstelle von **sdk-for-nodejs** das Buildpack **nodejs_buildpack** für Ihre Anwendung verwenden möchten, müssen Sie das Buildpack z. B. mit der Option -b im Befehl **cf push** angeben.
-
-Standardmäßig sind das aktuelle Buildpack **sdk-for-nodejs** und eine frühere Version verfügbar.  Verwenden Sie den Befehl **cf buildpacks**, um alle verfügbaren Buildpacks anzuzeigen.  Beispiel:
 ```
-cf buildpacks
-Getting buildpacks...
-
-buildpack                      position          enabled          locked          filename	
-   
-...
-sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
-nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
-sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
+    $ cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
+Beachten Sie, dass **Knotenmodule, die [MD5](https://en.wikipedia.org/wiki/MD5) nutzen, fehlschlagen**, wenn FIPS_MODE auf 'true' gesetzt ist. So schlagen
+beispielsweise [Express](http://expressjs.com/)-Module fehl.  Um dieses Problem zu umgehen, können Sie [etag](http://expressjs.com/en/api.html) in Ihrer
+Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
+```
+    app.set('etag', false);
+```
+{: codeblock}
+Weitere Informationen finden Sie in diesem [stackoverflow-Post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-## ZUGEHÖRIGE LINKS
-{: #related_links}
-* [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html)
+Um zu überprüfen, ob FIPS_MODE in Ihrer App auf 'true' gesetzt ist, müssen Sie den Wert von **process.versions.openssl** prüfen. Beispiel:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+Wenn die SSL-Version "fips" enthält, wird die App im FIPS-Modus ausgeführt.    
+
+
+## Node.js-Buildpacks
+
+Bluemix stellt mehrere Versionen des Node.js-Buildpacks bereit.
+* Das von IBM erstellte Buildpack **sdk-for-nodejs** ist das für Node.js-Anwendungen in Bluemix standardmäßig verwendete Buildpack.
+* Das **nodejs_buildpack** ist das externe Buildpack, das von der Cloud Foundry-Community bereitgestellt wird.
+
+Das Buildpack **sdk-for-nodejs** hat in Bluemix Vorrang vor dem Buildpack **nodejs_buildpack**. Wenn Sie mit Ihrer Anwendung das Buildpack **nodejs_buildpack** statt des Buildpacks **sdk-for-nodejs** verwenden wollen, müssen Sie Ihr Buildpack angeben, beispielsweise indem Sie mit dem Befehl **cf push** die Option Option '-b' angeben.
+
+In der Regel stehen das aktuelle Buildpack **sdk-for-nodejs** und eine frühere Version zur Verfügung.  Mithilfe des Befehls **cf buildpacks** können Sie alle verfügbaren Buildpacks anzeigen.  Beispiel:
+<pre>
+      cf buildpacks
+      Getting buildpacks...
+
+      buildpack                         position   enabled   locked   filename   
+
+      sdk_for_nodejs                    2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+      nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
+      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
+</pre>
+{: codeblock}
+
+# Zugehörige Links
+## Allgemein
+* [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html)
 * [App-Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

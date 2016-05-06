@@ -1,3 +1,10 @@
+---
+
+copyright:
+  años: 2015, 2016
+
+---
+
 # Creación de un proveedor de identidad personalizado
 {: #custom-create}
 Para crear un proveedor de identidad personalizado, desarrolle una aplicación web que exponga una API RESTful:
@@ -6,19 +13,19 @@ Para crear un proveedor de identidad personalizado, desarrolle una aplicación w
 POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/<tipo_solicitud>
 ```
 
-* `url_base`: especifica el URL base de la aplicación web del proveedor de identidad personalizado. El URL base es el URL que se va a registrar en el panel de control de {{site.data.keyword.amashort}}. 
-* `id_arrendatario`: indica el identificador exclusivo del arrendatario. Cuando {{site.data.keyword.amashort}} invoca esta API, siempre proporciona el applicationGUID de {{site.data.keyword.Bluemix}}. 
-* `nombre_reino`: especifica el nombre de reino personalizado definido en el panel de control de {{site.data.keyword.amashort}}. 
+* `url_base`: especifica el URL base de la aplicación web del proveedor de identidad personalizado. El URL base es el URL que se va a registrar en el panel de control de {{site.data.keyword.amashort}}.
+* `id_arrendatario`: indica el identificador exclusivo del arrendatario. Cuando {{site.data.keyword.amashort}} invoca esta API, siempre proporciona el GUID de la app de {{site.data.keyword.Bluemix}} (`applicationGUID`).
+* `nombre_reino`: especifica el nombre de reino personalizado definido en el panel de control de {{site.data.keyword.amashort}}.
 * `tipo_solicitud`: indica una de las siguientes opciones:
-	* `startAuthorization`: indica un primer paso del proceso de autenticación. El proveedor de identidad personalizado debe responder con el estado "challenge", "success" o "failure". 
-	* `handleChallengeAnswer`: gestiona una respuesta a un cambio de autenticación desde el cliente móvil. 
+	* `startAuthorization`: indica un primer paso del proceso de autenticación. El proveedor de identidad personalizado debe responder con el estado "challenge", "success" o "failure".
+	* `handleChallengeAnswer`: gestiona una respuesta a un cambio de autenticación desde el cliente móvil.
 
 ## API `startAuthorization`
 {: #custom-startauthorization}
 
 `POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/startAuthorization`
 
-La API `startAuthorization` se utiliza como primer paso del proceso de autenticación. Un proveedor de identidad personalizado debe responder con el estado "challenge", "success" o "failure". 
+La API `startAuthorization` se utiliza como primer paso del proceso de autenticación. Un proveedor de identidad personalizado debe responder con el estado "challenge", "success" o "failure".
 
 Para permitir la máxima flexibilidad del proceso de autenticación, el proveedor de identidad personalizado tendrá acceso a todas las cabeceras HTTP enviadas desde el cliente móvil en el cuerpo de la solicitud. Las cabeceras se proporcionan con el formato siguiente:
 
@@ -31,12 +38,12 @@ Para permitir la máxima flexibilidad del proceso de autenticación, el proveedo
 }
 ```
 
-El proveedor de identidad personalizada puede responder con un cambio de autenticación o un error o éxito inmediatos. El estado HTTP de respuesta debe ser `HTTP 200` y JSON de respuesta debe incluir las propiedades siguientes: 
+El proveedor de identidad personalizada puede responder con un cambio de autenticación o un error o éxito inmediatos. El estado HTTP de respuesta debe ser `HTTP 200` y JSON de respuesta debe incluir las propiedades siguientes:
 
-* `status`: especifica el estado `success`, `challenge` o `failure` de la solicitud. 
-* `stateId` (opcional): indica un identificador de serie generado de forma aleatoria para identificar la sesión de autenticación con el cliente móvil. Este atributo se puede omitir si el proveedor de identidad personalizado no almacena ningún estado. 
+* `status`: especifica el estado `success`, `challenge` o `failure` de la solicitud.
+* `stateId` (opcional): indica un identificador de serie generado de forma aleatoria para identificar la sesión de autenticación con el cliente móvil. Este atributo se puede omitir si el proveedor de identidad personalizado no almacena ningún estado.
 * `challenge`: especifica un objeto JSON que representa un cambio de autenticación que se volverá a enviar al cliente móvil. Este atributo solo se envía al cliente si el estado se define en `challenge`.
-* `userIdentity`: indica un objeto JSON que representa una identidad de usuario. La identidad de usuario consiste en propiedades como `userName`, `displayName` y attributes. Para obtener más información, consulte [Objeto de identidad de usuario](#custom-user-identity). Esta propiedad solo se envía al cliente móvil si el estado se establece en `success`.
+* `userIdentity`: indica un objeto JSON que representa una identidad de usuario.  La identidad de usuario consiste en propiedades como `userName`, `displayName` y attributes.  Para obtener más información, consulte [Objeto de identidad de usuario](#custom-user-identity). Esta propiedad solo se envía al cliente móvil si el estado se establece en `success`.
 
 Por ejemplo:
 
@@ -56,9 +63,9 @@ Por ejemplo:
 
 `POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/handleChallengeAnswer`
 
-La API `handleChallengeAnswer` gestiona una respuesta a un cambio de autenticación desde el cliente móvil. Igual que la API `startAuthorization`, la API `handleChallengeAnswer` responde con el estado `challenge`, `success` o `failure`. 
+La API `handleChallengeAnswer` gestiona una respuesta a un cambio de autenticación desde el cliente móvil. Igual que la API `startAuthorization`, la API `handleChallengeAnswer` responde con el estado `challenge`, `success` o `failure`.
 
-De forma similar a la solicitud `startAuthorization`, el proveedor de identidad personalizado tiene acceso a todas las cabeceras HTTP enviadas desde el cliente móvil en el cuerpo de la solicitud. Además de las cabeceras de solicitud del cliente móvil, el cuerpo de la solicitud `handleChallengeAnswer` también incluye las propiedades `stateId` y `challengeAnswer`. 
+De forma similar a la solicitud `startAuthorization`, el proveedor de identidad personalizado tiene acceso a todas las cabeceras HTTP enviadas desde el cliente móvil en el cuerpo de la solicitud. Además de las cabeceras de solicitud del cliente móvil, el cuerpo de la solicitud `handleChallengeAnswer` también incluye las propiedades `stateId` y `challengeAnswer`.
 
 ### Ejemplo de cuerpo de la solicitud `handleChallengeAnswer`
 {: #custom-handleChallengeAnswer-example}
@@ -76,7 +83,7 @@ De forma similar a la solicitud `startAuthorization`, el proveedor de identidad 
 }
 ```
 
-La respuesta de la API `handleChallengeAnswer` debe tener la misma estructura que la respuesta de la API `startAuthorization`. 
+La respuesta de la API `handleChallengeAnswer` debe tener la misma estructura que la respuesta de la API `startAuthorization`.
 
 ## Objeto de identidad de usuario
 {: #custom-user-identity}
@@ -99,12 +106,12 @@ Una respuesta a una solicitud de autenticación con éxito debe incluir un objet
 }
 ```
 
-El objeto de identidad de usuario se utiliza en el servicio de {{site.data.keyword.amashort}} para generar una señal de ID que se envía al cliente móvil como parte de la cabecera de autorización. Después de una autenticación satisfactoria, el cliente móvil tendrá acceso al objeto de identidad de usuario. 
+El objeto de identidad de usuario se utiliza en el servicio de {{site.data.keyword.amashort}} para generar una señal de ID que se envía al cliente móvil como parte de la cabecera de autorización. Después de una autenticación satisfactoria, el cliente móvil tendrá acceso al objeto de identidad de usuario.
 
 ## Consideraciones sobre seguridad
 {: #custom-security}
 
-Cada solicitud del servicio de {{site.data.keyword.amashort}} a un proveedor de identidad personalizado contiene una cabecera de autorización, de forma que el proveedor pueda verificar que la solicitud proviene de un origen autorizado. Aunque no es estrictamente obligatorio, piense en la posibilidad de validar la cabecera de autorización instrumentando el proveedor de identidad personalizado con un SDK del servidor de {{site.data.keyword.amashort}}. Para utilizar este SDK, la aplicación del proveedor de identidad personalizado debe implementarse en con Node.js o Liberty for Java y ejecutarse en {{site.data.keyword.Bluemix_notm}}.
+Cada solicitud del servicio de {{site.data.keyword.amashort}} a un proveedor de identidad personalizado contiene una cabecera de autorización, de forma que el proveedor pueda verificar que la solicitud proviene de un origen autorizado. Aunque no es estrictamente obligatorio, piense en la posibilidad de validar la cabecera de autorización instrumentando el proveedor de identidad personalizado con un SDK del servidor de {{site.data.keyword.amashort}}. Para utilizar este SDK, la aplicación del proveedor de identidad personalizado debe implementarse en con Node.js o Liberty for Java&trade;&trade; y ejecutarse en {{site.data.keyword.Bluemix_notm}}.
 
 La cabecera de autorización contiene información sobre el cliente móvil y la app móvil que han activado el proceso de autenticación. Puede utilizar el contexto de seguridad para recuperar estos datos. Para obtener más información, consulte [Protección de recursos](protecting-resources.html)
 

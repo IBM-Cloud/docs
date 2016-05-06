@@ -111,15 +111,19 @@ The user identity object is used by the {{site.data.keyword.amashort}} service t
 ## Security considerations
 {: #custom-security}
 
-Each request from the {{site.data.keyword.amashort}} service to a custom identity provider contains an authorization header so that the custom identity provider can verify that the request is coming from an authorized source. While not strictly mandatory, consider validating the authorization header by instrumenting your custom identity provider with a {{site.data.keyword.amashort}} Server SDK. To use this SDK, your custom identity provider application must implemented with Node.js or Liberty for Java&trade;&trade; and run on {{site.data.keyword.Bluemix_notm}}.
+Each request from the {{site.data.keyword.amashort}} service to a custom identity provider contains an authorization header so that the custom identity provider can verify that the request is coming from an authorized source. While not strictly mandatory, consider validating the authorization header by instrumenting your custom identity provider with a {{site.data.keyword.amashort}} server SDK. To use this SDK, your custom identity provider application must implemented with Node.js or Liberty for Java&trade;&trade; and run on {{site.data.keyword.Bluemix_notm}}.
 
 The authorization header contains information about the mobile client and mobile app that triggered the authentication process. You can use the security context to retrieve this data. For more information, see [Protecting resources](protecting-resources.html)
 
 ## Sample implementation of custom identity provider
 {: #custom-sample}
-You can use the following Node.js sample implementation of a custom identity provider as a reference when you develop your custom identity provider. Download full application code from the [Github repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+You can use any of the following Node.js sample implementations of a custom identity provider as a reference when you develop your custom identity provider. Download the full application code from the GitHub repositories.
 
-### JSON structure
+* [Simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Advanced sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
 This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
@@ -130,7 +134,7 @@ This implementation assumes that the supplied authentication challenge answer is
  }
  ```
 
-### Custom identity provider sample code
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -209,6 +213,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Next steps
 {: #next-steps}

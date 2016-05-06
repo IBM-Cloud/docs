@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
@@ -86,12 +98,12 @@ stages:
 ```
 ---
 name: <name>
-[inputs:
-	<sequence of inputs>]
+[inputs: 
+	<sequence of inputs>] 
 [triggers:   
-	<sequence of triggers>]
+	<sequence of triggers>] 
 [properties:   
-	<sequence of properties>]
+	<sequence of properties>] 
 [jobs:   
 	<sequence of jobs>]
 ```

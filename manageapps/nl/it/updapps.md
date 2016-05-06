@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Aggiornamento di applicazioni
 {: #updatingapps}
 
-*Ultimo aggiornamento: 8 dicembre 2015*
+*Ultimo aggiornamento: 17 marzo 2016*
 
 
 Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} DevOps Services. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
@@ -20,8 +28,6 @@ Puoi utilizzare un dominio personalizzato nell'URL della tua applicazione anzich
 I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}} e quindi associarlo al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
 associato il tuo dominio personalizzato al dominio di sistema {{site.data.keyword.Bluemix_notm}},
 le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.Bluemix_notm}}.
-
-**Nota:** puoi utilizzare il comando **nslookup** per ottenere l'indirizzo IP pubblico del dominio di sistema {{site.data.keyword.Bluemix_notm}}. Ad esempio, in un prompt dei comandi, immetti `nslookup mybluemix.net`.
 
 Puoi creare e utilizzare un dominio personalizzato in {{site.data.keyword.Bluemix_notm}} utilizzando
 l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
@@ -82,6 +88,15 @@ seguente comando:
     
         Il nome host nella rotta che desideri utilizzare per la tua applicazione.
 	
+Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_notm}}, devi associarlo al dominio personalizzato del dominio di sistema {{site.data.keyword.Bluemix_notm}} sul tuo server DNS registrato:
+
+  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS.
+  2. Associare il nome dominio personalizzato all'endpoint sicuro della regione {{site.data.keyword.Bluemix_notm}} in cui viene eseguita la tua applicazione. Utilizza i seguenti endpoint della regione per fornire la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}:
+  
+    * STATI UNITI SUD: `secure.us-south.bluemix.net`
+    * EUROPA REGNO UNITO: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione myapp:
 
 ```
@@ -298,7 +313,6 @@ essere eliminata quando è in funzione la nuova.
 
 # rellinks
 ## general 
-* [Organizzazioni e spazi](../acctmgmt/index.html#organdspaces)
 * [Distribuzioni blue-green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

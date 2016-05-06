@@ -1,10 +1,17 @@
+---
+
+copyright:
+  años: 2015, 2016
+  
+---
+
 # Protección de los recursos Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
 El SDK del servidor de {{site.data.keyword.amashort}} proporciona un módulo OAuthTAI para aplicaciones Liberty for Java&trade; que se desplieguen en {{site.data.keyword.Bluemix}}. Debe instrumentar el servidor de Liberty con el módulo OAuthTAI para protegerlo en caso de acceso no autorizado y para obtener información de supervisión.
 
 ## Antes de empezar
 {: #before-you-begin}
-* Debe estar familiarizado con el desarrollo de aplicaciones Liberty for Java en {{site.data.keyword.bluemix}}. Para obtener más información, consulte [Liberty for Java](https://www.{DomainName}/docs/starters/liberty/index.html).
+* Debe estar familiarizado con el desarrollo de aplicaciones Liberty for Java en {{site.data.keyword.bluemix}}. Para obtener más información, consulte [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## Instalación del SDK del servidor de {{site.data.keyword.amashort}}
 {: #installing-server-sdk}
@@ -17,7 +24,7 @@ El SDK del servidor de {{site.data.keyword.amashort}} proporciona un módulo OAu
 1. Copie el directorio `OAuthTai-1.0.mf` en el directorio `$<wlp.user.dir>/extension/lib/features`.
 
 
-## Configuración del servidor de Java for Liberty para que utilice el SDK del servidor de {{site.data.keyword.amashort}}.
+## Configuración del servidor de Liberty for Java para que utilice el SDK del servidor de {{site.data.keyword.amashort}}.
 {: #configuring-liberty}
 
 1. Edite el archivo `server.xml` y añada las funciones necesarias.
@@ -31,7 +38,7 @@ El SDK del servidor de {{site.data.keyword.amashort}} proporciona un módulo OAu
 
 	```
 1. Continúe editando el archivo `server.xml` y configure la función
-OAuthTAI. El rol de seguridad `TAIUserRole` está correlacionado con un asunto especial denominado `ALL_AUTHENTICATED_USERS`. El siguiente fragmento de código muestra cómo proteger los métodos GET del punto final `/protected`. 
+OAuthTAI. El rol de seguridad `TAIUserRole` está correlacionado con un asunto especial denominado `ALL_AUTHENTICATED_USERS`. El siguiente fragmento de código muestra cómo proteger los métodos GET del punto final `/protected`.
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -50,7 +57,7 @@ OAuthTAI. El rol de seguridad `TAIUserRole` está correlacionado con un asunto e
 	</application>
 	```
 
-1. Añada la propiedad siguiente que contiene el URL de servicio de {{site.data.keyword.amashort}} a las variables de entorno de la aplicación de fondo. Puede añadir el URL al archivo `manifest.yml` o `server.env`. 
+1. Añada la propiedad siguiente que contiene el URL de servicio de {{site.data.keyword.amashort}} a las variables de entorno de la aplicación de fondo. Puede añadir el URL al archivo `manifest.yml` o `server.env`.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
@@ -59,7 +66,7 @@ OAuthTAI. El rol de seguridad `TAIUserRole` está correlacionado con un asunto e
 ### Protección de los recursos de Liberty for Java
 {: #protecting-liberty-resources}
 
-Para proteger los recursos alojados en la aplicación Liberty for Java, debe especificar `TAIUserRole` como rol de seguridad de Java. Puede definir el rol de seguridad en el archivo `web.xml` o como anotación. 
+Para proteger los recursos alojados en la aplicación Liberty for Java, debe especificar `TAIUserRole` como rol de seguridad de Java. Puede definir el rol de seguridad en el archivo `web.xml` o como anotación.
 
 * Para especificar `TAIUserRole` en el archivo `web.xml`, defina `TAIUserRole` en el elemento `<security-role>` y, a continuación, utilice este rol para proteger el recurso web en un elemento `security-constraint`.
 Por ejemplo:

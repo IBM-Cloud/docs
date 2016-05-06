@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Comunicazioni backend-backend
 {: #backend-comm}
 
@@ -43,7 +50,8 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// Aggiungi l'authHeader ottenuto alla richiesta che vuoi inviare a una risorsa protetta
+	// Nella richiesta che vuoi inviare alla risorsa protetta,
+	// aggiungi il valore authHeader.
 
 	request.headers.Authorization = authHeader;
 

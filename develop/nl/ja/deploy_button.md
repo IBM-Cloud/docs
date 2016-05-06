@@ -1,12 +1,24 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
 
 #「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成{: #deploy-button} 
 
-*最終更新日: 2016 年 1 月 19 日* 
+*最終更新日: 2016 年 3 月 2 日* 
 
 「{{site.data.keyword.Bluemix}} にデプロイ」ボタンを使用すると Git から入手したパブリック・アプリを効率的に共有することができ、それによって、他のユーザーがそのコードを試し、IBM {{site.data.keyword.Bluemix_notm}} にデプロイできるようになります。このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。誰かがこのボタンをクリックすると、オリジナルのアプリには影響しないように、新しい Git リポジトリー内にコードの複製コピーが作成されます。
 {: shortdesc} 
@@ -23,9 +35,11 @@
 
 4. アプリにビルド・ファイルが必要な場合、そのビルド・ファイルは自動的に検出されて、アプリがビルドされます。 
 
-5. アプリにコンテナーが必要な場合、**IBM Container Service** を定義する `pipeline.yml` およびイメージを定義する Dockerfile が、{{site.data.keyword.Bluemix_notm}} コンテナー内にアプリをデプロイするために使用されます。 
+5. ビルドおよびデプロイメントのプロセス用にパイプラインが構成されている場合、アプリをデプロイするために `pipeline.yml` ファイルが使用されます。
 
-6. アプリがユーザーの {{site.data.keyword.Bluemix_notm}} 組織にデプロイされます。 
+6. アプリにコンテナーが必要な場合、**IBM Containers** サービスを定義する `pipeline.yml` およびイメージを定義する Dockerfile が、{{site.data.keyword.Bluemix_notm}} コンテナー内にアプリをデプロイするために使用されます。 
+
+7. アプリがユーザーの {{site.data.keyword.Bluemix_notm}} 組織にデプロイされます。 
 
 ##このボタンの例{: #button-examples} 
 
@@ -161,24 +175,24 @@
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> (<code>./target/</code> フォルダーへの出力をビルドする)</li>
 	   </ul>
 	</li>	
-	<li><stong>IBM Container Service</strong> を使用してアプリをコンテナーにデプロイする場合、リポジトリーのルート・ディレクトリーに Dockerfile を含め、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
-	<ul>
-	    <li> Dockerfile の作成について詳しくは、Docker 資料を参照してください。</li>
-	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。<code>pipeline.yml</code> を手動で作成するには、<a href="https://github.com/Puquios/" target="_blank">GitHub にある例を参照してください</a>。pipeline.yml ファイルを {{site.data.keyword.jazzhub_short}} プロジェクトから作成して、それをリポジトリーに追加するには、以下の手順を実行してください。
+	<li>プロジェクト用のパイプラインを構成するには、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含めます。<code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。pipeline.yml ファイルを {{site.data.keyword.jazzhub_short}} プロジェクトから作成して、それをリポジトリーに追加するには、以下の手順を実行してください。
 <ol>
 <li>ブラウザーで DevOps Services プロジェクトを開き、「<b>ビルドとデプロイ</b>」をクリックします。</li>
-<li>「<b>IBM Container Service</b>」のビルドとデプロイメントのジョブを使用してパイプラインを構成します。</li>
+<li>ビルドとデプロイメントのジョブでパイプラインを構成します。</li>
 <li>ブラウザーで、<code>/yaml</code> をプロジェクト・パイプライン URL に追加し、Enter キーを押します。
 <br>例: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
 <li>作成された <code>pipeline.yml</code> ファイルを保存します。</li>
 <li>プロジェクトのルート・ディレクトリー内に <code>.bluemix</code> ディレクトリーを作成します。</li>
 <li>この <code>pipeline.yml</code> ファイルを <code>.bluemix</code> リポジトリーにアップロードします。</li>
 </ol> </li>
+	<li><stong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイする場合、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
+	<ul>
+	    <li> Dockerfile の作成について詳しくは、<a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 資料</a>を参照してください。</li>
+	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。コンテナーに固有の <code>pipeline.yml</code> を手動で作成するには、<a href="https://github.com/Puquios/" target="_blank">GitHub にある例</a>を参照してください。</li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](../troubleshoot/managingapps.html#deploytobluemixbuttondoesntdeployanapp){: new_window}を参照してください。	
-
+トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}を参照してください。	

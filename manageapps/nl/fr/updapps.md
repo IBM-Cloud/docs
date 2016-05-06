@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Mise à jour d'applications
 {: #updatingapps}
 
-*Dernière mise à jour : 8 décembre 2015*
+*Dernière mise à jour : 17 mars 2016*
 
 
 Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
@@ -16,14 +24,11 @@ commande à utiliser pour démarrer votre application.
 ##Création et utilisation d'un domaine personnalisé
 {: #domain}
 
-Vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu du domaine système
+Vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu du domaine de système
 {{site.data.keyword.Bluemix_notm}} par défaut, à savoir mybluemix.net.
 
-Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer le domaine personnalisé sur un serveur DNS public, configurer ce domaine dans {{site.data.keyword.Bluemix_notm}}, puis mapper ce domaine au domaine système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine système {{site.data.keyword.Bluemix_notm}}, les requêtes de votre domaine personnalisé sont acheminées à votre application
+Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer le domaine personnalisé sur un serveur DNS public, configurer ce domaine dans {{site.data.keyword.Bluemix_notm}}, puis mapper ce domaine au domaine de système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine de système {{site.data.keyword.Bluemix_notm}}, les requêtes de votre domaine personnalisé sont acheminées à votre application
 dans {{site.data.keyword.Bluemix_notm}}.
-
-**Remarque :** vous pouvez utiliser la commande **nslookup** pour obtenir l'adresse IP publique du domaine
-système {{site.data.keyword.Bluemix_notm}}. Par exemple, depuis une invite de commande, entrez `nslookup mybluemix.net`.
 
 Vous pouvez créer et utiliser un domaine personnalisé dans {{site.data.keyword.Bluemix_notm}} en utilisant
 l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
@@ -80,6 +85,18 @@ l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche
     
         Nom d'hôte sur la route que vous désirez utiliser pour votre application.
 	
+Une fois le domaine personnalisé configuré dans {{site.data.keyword.Bluemix_notm}}, vous devez le mapper au domaine de système
+{{site.data.keyword.Bluemix_notm}} sur votre serveur DNS enregistré : 
+
+  1. Configurez un enregistrement 'CNAME' pour le nom de domaine personnalisé sur votre serveur DNS. 
+  2. Mappez le nom de domaine personnalisé au noeud final sécurisé pour la région {{site.data.keyword.Bluemix_notm}} dans laquelle s'exécute
+votre application. Utilisez les noeuds finaux de région suivants pour fournir la route d'URL allouée à votre organisation dans
+{{site.data.keyword.Bluemix_notm}} : 
+  
+    * SUD DES ETATS-UNIS : `secure.us-south.bluemix.net`
+    * EUROPE-ROYAUME-UNI : `secure.eu-gb.bluemix.net`
+    * AUSTRALIE-SYDNEY : `secure.au-syd.bluemix.net`
+  
 Depuis un navigateur ou l'interface de ligne de commande, entrez l'adresse URL suivante pour accéder à l'application mon_app :
 
 ```
@@ -291,7 +308,6 @@ delete`.
 
 # rellinks
 ## general 
-* [Organisations et espaces](../acctmgmt/index.html#organdspaces)
 * [Déploiements Blue-Green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

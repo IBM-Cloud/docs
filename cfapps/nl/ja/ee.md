@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -90,10 +102,10 @@
 	```
 	
     **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。
-  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は stage1.ng.bluemix.net です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
+  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は ng.bluemix.net です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   他の {{site.data.keyword.Bluemix_notm}} 地域への接続について詳しくは、『{{site.data.keyword.Bluemix_notm}} 地域』を参照してください。{{site.data.keyword.Bluemix_notm}} 地域を指定すると、指定したロケーション情報が保存されます。
@@ -114,7 +126,7 @@
   
   6. これで、ブラウザーで以下のアプリ URL を入力することによってアプリにアクセスできるようになりました。
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 アプリをビルドするために他のツール (Eclipse ツールなど) を選択することもできます。詳細については、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースのアプリの「コーディングの開始」ページを参照してください。
@@ -216,7 +228,7 @@ var create_message = function(req, res) {
 ## アプリのコスト計算
 {: #ee_billing}
 
-30 日間の無料トライアルの期限が切れたが、{{site.data.keyword.Bluemix_notm}} を使用し続けることを望んでいるとします。{{site.data.keyword.Bluemix_notm}} を使用し続けるためには、従量課金アカウントまたはサブスクリプション・アカウント用にクレジット・カード情報を追加する必要があります。ただし、{{site.data.keyword.Bluemix_notm}} は、有料アカウントに変換した場合でも、ほとんどのランタイム・フレームワークおよびサービスについて無料枠を引き続き提供します。使用量が無料枠を超えない限り、{{site.data.keyword.Bluemix_notm}} による課金はありません。
+30 日間の無料トライアルの期限が切れたが、{{site.data.keyword.Bluemix_notm}} を使用し続けることを望んでいるとします。{{site.data.keyword.Bluemix_notm}} を使用し続けるためには、従量課金アカウントまたはサブスクリプション・アカウント用にクレジット・カード情報を追加する必要があります。ただし、{{site.data.keyword.Bluemix_notm}} は、有料アカウントに切り替えた場合でも、ほとんどのランタイム・フレームワークおよびサービスについて無料枠を引き続き提供します。使用量が無料枠を超えない限り、{{site.data.keyword.Bluemix_notm}} による課金はありません。
 
 {{site.data.keyword.Bluemix_notm}} は、アプリのコストを確認できるように、見積もり機能と計算機能を備えています。次のようにして TestNode のコストを確認できます。
 

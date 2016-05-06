@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#App Management
+#Gestión de Liberty y Node.js
 {: #app_management}
 
-*Última actualización: 8 de diciembre de 2015*
+*Última actualización: 17 de marzo de 2016*
 
 App Management es un conjunto de programas de utilidad de desarrollo y depuración que se pueden habilitar en las apps Liberty y Node.js para {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -20,7 +28,8 @@ Estos programas de utilidad admiten Liberty y Node.js.
 
     Cuando esta opción está habilitada, el paquete de compilación inicia un agente de proxy que se encuentra entre el contenedor y el tiempo de ejecución de la app. El programa de utilidad *proxy* gestiona todas las solicitudes que recibe la app. En función del tipo de solicitud, realiza una acción de App Management o reenvía la solicitud a la app. *proxy* permite la habilitación de la mayoría de los programas de utilidad de App Management. Al habilitar *proxy*, el contenedor de la app sigue en funcionamiento aunque la app se cuelga. El agente de proxy también permite las actualizaciones incrementales de archivos, que habilitan el modo "Live Edit" para las apps Node.js.
 	
-  2. *devconsole*: Habilita el programa de utilidad de la consola de desarrollo, accesible en el siguiente URL: ```
+  2. *devconsole*: Habilita el programa de utilidad de la consola de desarrollo, accesible en el siguiente URL:
+    ```
     http://<nombreapp>.mybluemix.net/bluemix-debug/manage
     ```
 	
@@ -32,7 +41,8 @@ Estos programas de utilidad admiten Liberty y Node.js.
 
     Health Center admite el análisis del rendimiento de las apps Liberty y Node.js mediante las herramientas de diagnóstico y supervisión de IBM. Para obtener más información, consulte [Cómo analizar el rendimiento de las apps Liberty Java o Node.js en {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.</p></li>
 	
-  4. *shell*: Habilita un shell basado en web al que se puede acceder desde el programa de utilidad devconsole o desde el siguiente URL:```
+  4. *shell*: Habilita un shell basado en web al que se puede acceder desde el programa de utilidad devconsole o desde el siguiente URL:
+    ```
     http://<nombre_app>.mybluemix.net/bluemix-debug/shell
     ```
 	
@@ -63,12 +73,6 @@ Estos programas de utilidad solo admiten Node.js.
   El programa de utilidad *inspector* también inicia *proxy*.
   
   2. *strongpm*: Habilita el uso de [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} para analizar la app Node.js con programas de utilidad tales como [StrongLoop Metrics, Profiling y Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-  
-  **NOTA:** Debe utilizar una versión 0.12 de engines.node para poder utilizar el programa de utilidad **strongpm**. La versión de engines.node se especifica en el archivo package.json. Por ejemplo:
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   El programa de utilidad *strongpm* también inicia *proxy*.
   
@@ -119,7 +123,7 @@ Estos programas de utilidad solo admiten Node.js.
 
 Para habilitar las utilidades de App Management, defina la variable de entorno *BLUEMIX_APP_MGMT_ENABLE* y reinicie su app. Se pueden habilitar múltiples utilidades al separar con “+”.
 
-Por ejemplo, para habilitar los programas de utilidad devconsole y *shell*, ejecute el siguiente mandato: 
+Por ejemplo, para habilitar los programas de utilidad devconsole y *shell*, ejecute el siguiente mandato:
 
 ```
 cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell

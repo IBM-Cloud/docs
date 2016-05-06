@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -5,21 +17,21 @@
 # 自動調整 CLI
 {: #autoscalingcli}
 
-*前次更新：2015 年 1 月 20 日*
+*前次更新：2016 年 2 月 25 日*
 
-您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供 {{site.data.keyword.autoscaling}} RESTful API 所提供的類似功能。
+您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供自動調整 RESTful API 所提供的類似功能。
 {: shortdesc}
 
 開始之前，請安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需指示，請參閱[下載 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}。
 
-## 新增自動調整 CLI 外掛程式
+## 新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
 
 在安裝 {{site.data.keyword.Bluemix_notm}} CLI 之後，您可以新增 {{site.data.keyword.autoscaling}} CLI 外掛程式。
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 1. 若要新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫，請執行下列指令：
 ```
-bluemix plugin repo-add bluemix-plugin-repo https://plugins.stage1.ng.bluemix.net
+bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 若要安裝 {{site.data.keyword.autoscaling}} CLI 外掛程式，請執行下列指令：
 ```
@@ -37,7 +49,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">您要將自動調整原則附加至其中的應用程式名稱。</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
-<dd class="pd">說明自動調整原則之 JSON 檔案的名稱。如需其他詳細資料，請參閱 [{{site.data.keyword.autoscaling}} RESTful API 文件](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html)。</dd>
+<dd class="pd">說明自動調整原則之 JSON 檔案的名稱。如需其他詳細資料，請參閱 <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">{{site.data.keyword.autoscaling}} RESTful API 文件</a>。</dd>
 </dl>
 
 
@@ -101,16 +113,16 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">您要顯示其自動調整原則歷程的應用程式名稱。
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">歷程範圍開始的時間戳記。支援的格式為 `yyyy-MM-ddTHH:mm:ss+/-hhmm、yyyy-MM-ddTHH:mm:ssZ`。依預設，時間戳記會設為現行時間前的 50 小時。如需有關時間戳記格式的詳細資料，請參閱 [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}。
+<dd class="pd">歷程範圍開始的時間戳記。支援的格式為 `yyyy-MM-ddTHH:mm:ss+/-hhmm、yyyy-MM-ddTHH:mm:ssZ`。依預設，時間戳記會設為現行時間前的 50 小時。如需有關時間戳記格式的詳細資料，請參閱 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C 日期和時間格式標準</a>。
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">歷程範圍結束的時間戳記。支援的格式為 `yyyy-MM-ddTHH:mm:ss+/-hhmm、yyyy-MM-ddTHH:mm:ssZ`。依預設，時間戳記會設為現行時間。如需有關時間戳記格式的詳細資料，請參閱 [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}。
+<dd class="pd">歷程範圍結束的時間戳記。支援的格式為 `yyyy-MM-ddTHH:mm:ss+/-hhmm、yyyy-MM-ddTHH:mm:ssZ`。依預設，時間戳記會設為現行時間。如需有關時間戳記格式的詳細資料，請參閱 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C 日期和時間格式標準</a>。
 </dl>
 
 **提示：**您也可以使用 **--json** 選項，來細緻列印原始 JSON 回應。
 
 # 相關鏈結
 ## 一般
-* [{{site.data.keyword.autoscaling}} 服務](../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} 服務](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
