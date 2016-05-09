@@ -18,7 +18,7 @@ copyright:
 # Herramientas de CLI y de desarrollo
 {: #cli}
 
-*Última actualización: 16 de febrero de 2016*
+*Última actualización: 30 de marzo de 2016*
 
 Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas como, por ejemplo, una interfaz de línea de mandatos unificada y plug-ins de CLI. Cada una de estas descargas de CLI están disponibles para dar soporte a su experiencia de {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -30,6 +30,8 @@ Descargue e instale las interfaz de línea de mandatos que dan soporte a su expe
 {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos cf de Cloud Foundry es un requisito previo para las demás herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
 una experiencia ampliada para gestionar su entorno de {{site.data.keyword.Bluemix_notm}} aparte de las aplicaciones de Cloud Foundry.
 
+Las dos herramientas de interfaz de línea de mandatos utiliza ¡n el puerto 433 de forma predeterminada. Si tiene el proxy HTTP entre las herramientas de interfaz de línea de mandatos (CLI) y el entorno de {{site.data.keyword.Bluemix_notm}}, debe configurar la variable de entorno `http-proxy` con el puerto y el URL de proxy HTTP real en el caso de que exista. Consulte [Utilización de la CLI cf con un servidor proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} para obtener más detalles.
+
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|
@@ -40,7 +42,7 @@ una experiencia ampliada para gestionar su entorno de {{site.data.keyword.Bluemi
 
 Amplíe fácilmente su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} con más mandatos. Para acceder
 a los plugin de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}, consulte el
-[Repositorio de plugin de la CLI](http://plugins.ng.bluemix.net/). 
+[Repositorio de plugin de la CLI](http://plugins.ng.bluemix.net/).
 
 ### Amplíe su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}: bx
 

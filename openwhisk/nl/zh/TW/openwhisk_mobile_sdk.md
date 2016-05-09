@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 行動式 SDK
 {: #openwhisk_mobile_sdk}
-*前次更新：2016 年 3 月 22 日*
+*前次更新：2016 年 3 月 28 日*
 
 {{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動式 SDK，讓行動式應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
 {: shortdesc}
@@ -51,7 +51,7 @@ end
 
 在應用程式的專案目錄中建立稱為 'Cartfile' 的檔案。在 Cartfile 中放入下列這幾行：
 ```
-github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
+github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
@@ -59,7 +59,7 @@ github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
 
 ### 從原始碼安裝
 
-https://github.com/openwhisk/swift-client-sdk 中會提供原始碼。在 Xcode 中，使用 OpenWhisk.xcodeproj 檔案來開啟專案。專案包含目標分別設為 iOS 及 WathOS2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+https://github.com/openwhisk//openwhisk-client-swift.git 中會提供原始碼。在 Xcode 中，使用 OpenWhisk.xcodeproj 檔案來開啟專案。專案包含目標分別設為 iOS 及 WathOS2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安裝入門範本應用程式範例
 {: #openwhisk_install_sdkstart}
@@ -68,7 +68,7 @@ https://github.com/openwhisk/swift-client-sdk 中會提供原始碼。在 Xcode 
 
 若要安裝入門範本應用程式範例，請輸入下列指令：
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
 這會下載包含入門範本應用程式的 zip 檔。Podfile 是在專案目錄內。從終端機執行 "pod install" 來安裝 SDK。
 {: pre}
@@ -224,7 +224,7 @@ whisk.urlSession = session
 
 ### 完整名稱支援
 
-所有動作及觸發程式的完整名稱都是由名稱空間、套件及動作或觸發程式名稱所構成。呼叫動作或發動觸發程式時，SDK 可以接受這些作為參數。SDK 也提供接受類似 `/mynamespace/mypackage/nameOfActionOrTrigger` 之完整名稱的函數。完整名稱字串支援所有 {{site.data.keyword.openwhisk_short}} 使用者都有的名稱空間及套件的未命名預設值，因此適用下列剖析規則：
+所有動作及觸發程式的完整名稱都是由名稱空間、套件及動作或觸發程式名稱所構成。呼叫動作或發動觸發程式時，SDK 可以接受這些完整名稱作為參數。SDK 也提供接受類似 `/mynamespace/mypackage/nameOfActionOrTrigger` 之完整名稱的函數。完整名稱字串支援所有 {{site.data.keyword.openwhisk_short}} 使用者都有的名稱空間及套件的未命名預設值，因此適用下列剖析規則：
 
 - qName = "foo" 導致名稱空間 = 預設值、套件 = 預設值、動作/觸發程式 = "foo"
 - qName = "mypackage/foo" 導致名稱空間 = 預設值、套件 = mypackage、動作/觸發程式 = "foo"

@@ -39,7 +39,7 @@ Um *feed* é uma maneira conveniente de configurar uma origem de eventos externo
 
 ## Rules
 
-Um regra associa um acionador a uma ação, com cada disparo do acionador fazendo com que a ação correspondente seja chamada com o evento acionador como entrada.
+Uma regra associa um acionador a uma ação, com cada disparo do acionador fazendo com que a ação correspondente seja chamada com o evento acionador como entrada.
 
 Com o conjunto apropriado de regras, é possível que um único evento acionador chame várias ações ou que uma ação seja chamada como uma resposta a eventos de vários acionadores.
 

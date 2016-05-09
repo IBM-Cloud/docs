@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} モバイル SDK の使用
 {: #openwhisk_mobile_sdk}
-*最終更新日: 2016 年 3 月 22 日*
+*最終更新日: 2016 年 3 月 28 日*
 
 {{site.data.keyword.openwhisk}} は、モバイル・アプリが簡単にリモート・トリガーを発生させてリモート・アクションを起動できるようにする、iOS デバイスおよび watchOS 2 デバイス用のモバイル SDK を提供します。
 Android 用のバージョンは、現時点では使用できません。Android 開発者は、直接、{{site.data.keyword.openwhisk}} REST API を使用することができます。
@@ -53,7 +53,7 @@ end
 
 アプリのプロジェクト・ディレクトリーに「Cartfile」というファイルを作成します。Cartfile に次の行を追加します。
 ```
-github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
+github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
@@ -62,7 +62,7 @@ Carthage/build/iOS 内部に OpenWhisk.framework ファイルを置きます。X
 
 ### ソース・コードからのインストール
 
-ソース・コードは https://github.com/openwhisk/swift-client-sdk で入手可能です。
+ソース・コードは、https://github.com/openwhisk//openwhisk-client-swift.git で入手可能です。
 Xcode の OpenWhisk.xcodeproj ファイルを使用して、プロジェクトを開きます。プロジェクトには、それぞれ iOS と watchOS2 用の「OpenWhisk」と「OpenWhiskWatch」という 2 つのスキーマが含まれます。
 必要なターゲットのプロジェクトをビルドし、結果のフレームワークをご使用のアプリに追加します (通常は ~/Library/Developer/Xcode/DerivedData/ご使用のアプリ名)。
 
@@ -74,7 +74,7 @@ Xcode の OpenWhisk.xcodeproj ファイルを使用して、プロジェクト�
 
 スターター・アプリ・サンプルをインストールするには、次のコマンドを入力します。
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
 これにより、スターター・アプリを含む zip ファイルがダウンロードされます。プロジェクト・ディレクトリーの内部は Podfile です。端末から「pod install」を実行して、SDK をインストールします。
 {: pre}

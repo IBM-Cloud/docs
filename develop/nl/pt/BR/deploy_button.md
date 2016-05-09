@@ -20,7 +20,7 @@ copyright:
 
 *Última atualização: 2 de março de 2016* 
 
-O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer essoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado.
+O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer essoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado. 
 {: shortdesc} 
 
 **Dica:** se a marca da empresa for importante, será possível [integrar um fluxo Implementar no iFrame do {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button_embed.html) a seu conteúdo, em vez de inserir um botão. Quando as pessoas criam uma cópia clonada de seu app público de origem Git, elas permanecem em seu conteúdo em vez de serem redirecionadas ao website bluemix.net. 
@@ -165,7 +165,7 @@ Com o arquivo manifest, é possível especificar:
 </pre>
    </li>
    </ul>
-	<li> Se o repositório precisar ser construído antes da implementação do app, uma construção automatizada do código no repositório será acionada antes da implementação. As construções automatizadas ocorrem quando um arquivo do script de construção é detectado no diretório-raiz do repositório.
+	<li> Se o repositório precisar ser construído antes da implementação do app, uma construção automatizada do código no repositório será acionada antes da implementação. As construções automatizadas ocorrem quando um arquivo do script de construção é detectado no diretório-raiz do repositório. 
 	
 	Construtores suportados: 
 	    <ul>
@@ -185,7 +185,7 @@ Com o arquivo manifest, é possível especificar:
 <li>No diretório-raiz de seu projeto, crie um diretório <code>.bluemix</code>.</li>
 <li>Faça upload do arquivo <code>pipeline.yml</code> para o repositório <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Se você estiver implementando um app em um contêiner usando <stong>IBM Containers</strong>, deverá incluir o Dockerfile no diretório-raiz do repositório e, em um diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>.
+	<li>Se você estiver implementando um app em um contêiner usando <stong>IBM Containers</strong>, deverá incluir o Dockerfile no diretório-raiz do repositório e, em um diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>. 
 	<ul>
 	    <li> Para aprender mais sobre a criação de Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte a documentação do Docker</a>. </li>
 	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente especificamente para contêineres, <a href="https://github.com/Puquios/" target="_blank">consulte os exemplos em GitHub</a>. </li>

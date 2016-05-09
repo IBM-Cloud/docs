@@ -18,7 +18,8 @@ copyright:
 
 *上次更新时间：2016 年 1 月 29 日*
 
-您可以使用 Cloud Foundry (cf) 命令来管理应用程序。{:shortdesc}
+您可以使用 Cloud Foundry (cf) 命令来管理应用程序。
+{:shortdesc}
 
 以下信息列出了管理应用程序最常用的 cf 命令。要列出所有 cf 命令及其帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 

@@ -14,7 +14,7 @@ copyright:
 #Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-*Ultimo aggiornamento: 27 gennaio 2016* 
+*Ultimo aggiornamento: 27 gennaio 2016*
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
 {:shortdesc}
@@ -145,7 +145,7 @@ Scegli una delle seguenti opzioni per visualizzare i log dall'interfaccia riga d
 
 <ul>
 <li>Accodamento dei log quando distribuisci le applicazioni.
-<p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a>.</p>
+<p>Utilizza il comando **cf logs** per visualizzare i log dalla tua applicazione e dai componenti di sistema che interagiscono con la tua applicazione quando distribuisci le applicazioni a {{site.data.keyword.Bluemix_notm}}. Nell'interfaccia riga di comando cf puoi immettere i seguenti comandi. Per ulteriori informazioni sui log cf, vedi <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a>. </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Visualizzare i log recenti.</dd>
@@ -226,8 +226,8 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 
   2. Crea un'istanza del servizio fornito dall'utente.
      
-	 Utilizza il comando ``"cf create-user-provided-service"`` (o ```cups``, una versione breve del comando) per creare un'istanza del servizio fornita dall'utente:
- ```
+	 Utilizza il comando ``"cf create-user-provided-service"`` (o ```cups``, una versione breve del comando) per creare un'istanza del servizio fornita dall'utente: 
+	 ```
 	 cf create-user-provided-service <nome_servizio> -l <endpoint_registrazione>
 	 ```
 	 **nome_servizio**
@@ -279,14 +279,14 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 	 
 	 Il nome dell'istanza di servizio fornita dall'utente.
 	 
-  4. Riprepara l'applicazione.
+  4. Riprepara l'applicazione. 
      Digita ```cf restage appname``` per rendere effettive le modifiche. 
 
 #### Visualizzazione dei log dagli host esterni
 {: #viewing_logs_external}
 
 	 
-Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf. In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
+Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf.  In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
 
 **Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nel tuo host log esterno. 
 

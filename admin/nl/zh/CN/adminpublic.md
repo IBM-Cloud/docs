@@ -19,12 +19,14 @@ copyright:
 {: #administer}
 *上次更新时间：2016 年 2 月 29 日*
 
-要管理组织、空间和分配的用户，可单击**帐户和支持**图标 ![帐户和支持](../support/images/account_support.svg)，然后选择**管理组织**。如果您是 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 用户，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)，以了解有关管理本地或专用实例的更多信息。{:shortdesc}
+要管理组织、空间和分配的用户，可单击**帐户和支持**图标 ![帐户和支持](../support/images/account_support.svg)，然后选择**管理组织**。如果您是 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 用户，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)，以了解有关管理本地或专用实例的更多信息。
+{:shortdesc}
 
 ## 管理 {{site.data.keyword.Bluemix_notm}} Public
 {: #mngacct}
 
-在 {{site.data.keyword.Bluemix}} Public 中，无论是管理组织和空间，还是管理用户访问权，都可以从用户界面中的仪表板来进行操作。也可以监视您的使用情况和费用。{:shortdesc}
+在 {{site.data.keyword.Bluemix}} Public 中，无论是管理组织和空间，还是管理用户访问权，都可以从用户界面中的仪表板来进行操作。也可以监视您的使用情况和费用。
+{:shortdesc}
 
 ### 组织和空间
 {: #orgsandspaces}
@@ -130,7 +132,7 @@ copyright:
 <dd>空间审计员对有关空间的所有信息具有只读访问权，如应用程序和服务的相关信息、设置、报告和日志。</dd>
 </dl>
 
-**注**：分配有管理者或开发者角色的用户可以访问 VCAP_SERVICES 环境变量。但是，分配有审计员角色的用户无法访问 VCAP_SERVICES。此外，VCAP_SERVICES 中的内容不会基于用户角色而被部分隐藏。
+**注**：分配有管理者或开发者角色的用户可以访问 VCAP_SERVICES 环境变量。但是，分配有审计员角色的用户无法访问 VCAP_SERVICES。
 
 ### 管理组织
 {: #orgmng}

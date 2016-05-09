@@ -51,7 +51,7 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 4 de janeiro de 2016*
+*Última atualização: 29 de março de 2016*
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
 experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O Bluemix fornece uma calculadora de custo para estimar o custo antecipadamente e a visualização Detalhes de uso para verificar o custo real após a construção de apps.
@@ -374,10 +374,13 @@ precisa pagar para usar o {{site.data.keyword.Bluemix_notm}} para construir e ho
 * A calculadora de custo na página Precificação do {{site.data.keyword.Bluemix_notm}} fornece preços de apps precisos com base em sua entrada de usos de tempo de execução e de serviço.
 * Também é possível calcular seu custo manualmente.
 
-###Usando a calculadora de custo
+###Usando os calculadores de custo 
 {: #calculator}
 
-É possível precificar rapidamente seu app usando a calculadora de custo na página Precificação do {{site.data.keyword.Bluemix_notm}}. Acesse a página Precificação do {{site.data.keyword.Bluemix_notm}} e clique em **Abrir calculadora**.
+É possível precificar rapidamente seu app usando os calculadores de custo que são fornecidos pelo {{site.data.keyword.Bluemix_notm}}. 
+
+1. Acesse a [página de precificação](https://console.{DomainName}/pricing/) do {{site.data.keyword.Bluemix_notm}}. 
+2. Use um dos widgets **Estimar seus custos** ou clique em **Abrir calculadora** para usar a **Calculadora de preços até o último centavo**.
 
 Para usar a calculadora, digite seu uso mensal projetado
 dos recursos listados, por exemplo, o número de instâncias ou de notificações push. Clique dentro do campo **Uso

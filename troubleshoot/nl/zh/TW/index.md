@@ -15,9 +15,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2016 年 3 月 15 日*
+*前次更新：2016 年 4 月 13 日*
 
-一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 ## 無法登入 {{site.data.keyword.Bluemix_notm}}
@@ -91,7 +91,7 @@ copyright:
 
 當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令：
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -189,10 +189,10 @@ nslookup mybluemix.net
 當您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面時，您可能會看到下列其中一則錯誤訊息：
 {: tsSymptoms}
 
-`BXNUI0001E: 未載入頁面，因為 Bluemix 未偵測到是否存在階段作業。`
+`BXNUI0001E: 由於 Bluemix 未偵測到階段作業是否存在，因此未載入頁面。`
 
 
-`BXNUI0016E: 未擷取應用程式及服務，因為未載入 Bluemix 頁面。`
+`BXNUI0016E: 由於未載入 Bluemix 頁面，因此未擷取應用程式及服務。`
 
  
 
@@ -238,8 +238,88 @@ nslookup mybluemix.net
 # 管理應用程式疑難排解
 {: #managingapps}
 
-管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
+
+
+
+
+
+## 無法將應用程式切換為除錯模式
+{: #ts_debug}
+
+如果 Java 虛擬機器 (JVM) 版本是第 8 版或更舊版本，則您可能無法啟用除錯模式。 
+
+
+在您選取**啟用應用程式除錯**之後，工具會嘗試將應用程式切換為除錯模式。然後，Eclipse 工作台會開始除錯階段作業。工具順利啟用除錯模式時，Web 應用程式狀態會顯示`更新模式`、`開發中`及`除錯中`。
+{: tsSymptoms}
+
+不過，工具無法啟用除錯模式時，Web 應用程式狀態只會顯示`更新模式`及`開發中`，並不會顯示`除錯中`。工具可能也會在「主控台」視圖中顯示下列錯誤訊息：
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+下列 Java 虛擬機器 (JVM) 版本無法建立除錯階段作業：IBM JVM 7、IBM JVM 8 及舊版 Oracle JVM 8。
+{: tsCauses}
+
+如果您的工作台 JVM 為上述其中一種版本，則可能會在建立除錯階段作業時發生問題。您的工作台 JVM 版本一般是本端電腦的系統 JVM。您的系統 JVM 與執行中 Bluemix Java 應用程式的 JVM 不同。Bluemix Java 應用程式幾乎一律會在 IBM JVM 上執行，但有時會在 OpenJDK JVM 上執行。
+  
+
+若要檢查 IBM Eclipse Tools for Bluemix 所執行的 Java 版本，請完成下列步驟：
+{: tsResolve}
+
+  1. 在 IBM Eclipse Tools for Bluemix 中，選取**說明** > **關於 Eclipse** > **安裝詳細資料** > **配置**。
+  2. 從清單中尋找 `eclipse.vm` 內容。下列這一行是 `eclipse.vm` 內容範例：
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. 在指令行中，從 Java 安裝的 `bin` 目錄中輸入 `java -version`。即會顯示 IBM JVM 版本資訊。
+
+如果您的工作台 JVM 是 IBM JVM 7 或 8，或舊版 Oracle JVM 8，請完成下列步驟來切換至 Oracle JVM 8：
+
+  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE 下載](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
+  2. 重新啟動 Eclipse。
+  3. 檢查 `eclipse.vm` 內容是否指向新的 Oracle JVM 8 安裝。
+
 
 
 
@@ -366,7 +446,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
   
 
-當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴充應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 調整為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
+當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴充應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 擴充為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
 {: tsSymptoms}
 
 
@@ -550,7 +630,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  
  
 
-當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
+當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。
 {: tsSymptoms}
 
 
@@ -789,7 +869,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 下列原因是問題的可能原因：
 {: tsCauses}
  
-  * 未指定 start 指令。
+  * 未指定啟動指令。
   * 部署 Node.js 應用程式所需的檔案從應用程式中遺漏，或是放在非根目錄的資料夾中。
   
 
@@ -798,7 +878,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 請根據導致問題的原因採取下列動作：
 {: tsResolve} 
 
-  * 以下列其中一種方法指定 start 指令： 
+  * 以下列其中一種方法指定啟動指令： 
       * 使用 cf 指令行介面。例如：
 ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
@@ -857,7 +937,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，區域環境中沒有 `runtime-vars.xml` 檔案。
+Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，本端環境中沒有 `runtime-vars.xml` 檔案。
 {: tsCauses}
 
  
@@ -1063,7 +1143,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 管理帳戶疑難排解
 {: #managingaccounts}
 
-您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 
@@ -1132,11 +1212,11 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 將相同的 URL 路徑指派給空間內的不同應用程式時，可能會發生此問題。
 {: tsCauses}
 
-例如，您將 myApp1 應用程式推送至 {{site.data.keyword.Bluemix_notm}}，並將網域設為 "mynewapp.mybluemix.net"。然後，將另一個 myApp2 應用程式推送至相同的空間，並將它的其中一個 URL 路徑設為 "mynewapp.mybluemix.net"。路徑現在對映至兩個應用程式。
+例如，您將 myApp1 應用程式推送至 {{site.data.keyword.Bluemix_notm}}，並將網域設為 "mynewapp.stage1.mybluemix.net"。然後，將另一個 myApp2 應用程式推送至相同的空間，並將它的其中一個 URL 路徑設為 "mynewapp.stage1.mybluemix.net"。路徑現在對映至兩個應用程式。
 
  
 
-這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零關閉時間。如需相關資訊，請參閱藍綠部署。
+這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零中斷時間。如需相關資訊，請參閱藍綠部署。
 {: tsResolve}
   
 	
@@ -1177,7 +1257,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 執行時期疑難排解
 {: #runtimes}
 
-您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 
@@ -1189,12 +1269,12 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-當您在建置套件更新之後推送或重新編譯打包應用程式時，不會自動載入最新的建置套件元件。因此，您的應用程式會使用已作廢的建置套件元件。將不會實作自從您前次推送應用程式後已套用至建置套件的更新項目。
+當您在建置套件更新之後推送或重新編譯打包應用程式時，不會自動載入最新的建置套件元件。因此，您的應用程式會使用已作廢的建置套件元件。將不會實作自從您前次推送應用程式後已套用至建置套件的更新。
 {: tsSymptoms}
 
 
 
-部分建置套件未配置為自動從網際網路下載所有更新的元件，以確保您一律使用最新的版本。
+部分建置套件未配置為自動從網際網路下載所有更新的元件，以確保您隨時使用最新的版本。
 {: tsCauses} 
 
  
@@ -1294,7 +1374,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	 ```
 	如需如何配置 `requirements.txt` 檔案的相關資訊，請參閱[需求檔案](https://pip.readthedocs.org/en/1.1/requirements.html)。 
 	 
-  2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的 start 指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於 start 指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。
+  2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的啟動指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於啟動指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。
 ```
 	web: python <yourappname>.py $PORT
 	```

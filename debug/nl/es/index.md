@@ -22,12 +22,12 @@ Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de r
 
 Los registros dan información si un trabajo se ejecuta correctamente o si falla. También proporcionan información importante que se puede utilizar para la depuración y determinar la causa de un problema.
 
-Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información acerca de los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}. 
+Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información acerca de los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Depuración de errores de transferencia
 {: #debugging-staging-errors}
-Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si su app no se puede transferir, puede comprobar los registros para ver el motivo del error y evitar el problema. 
+Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si su app no se puede transferir, puede comprobar los registros para ver el motivo del error y evitar el problema.
 
 Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [despliegue de apps](../manageapps/depapps.html#appdeploy){: new_window}.
 
@@ -117,13 +117,13 @@ Cuando especifica `cf logs nombre_app --recent` en la interfaz de línea de mand
 <dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics Service</strong></dt> 
 <dd>Las funciones integradas de búsqueda y análisis de archivos de registro del Monitoring and Analytics Service le pueden ayudar a identificar errores rápidamente. Para obtener más información, consulte <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Supervisión y análisis</a>.</dd> 
 <dt><strong>Herramientas de terceros </strong></dt> 
-<dd>Puede recopilar y exportar los registros de la app en un host de registro externo. Para obtener más información, consulte <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuración de registro externo</a>. </dd> 
+<dd>Puede recopilar y exportar los registros de la app en un host de registro externo. Para obtener más información, consulte <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuración de registro externo</a>.</dd> 
 <dt><strong>Scripts para recopilar y exportar los registros</strong></dt> 
 <dd>Para utilizar un script a fin de recopilar y exportar automáticamente los registros a un archivo externo, debe conectar con el servidor de {{site.data.keyword.Bluemix_notm}} desde el sistema y debe tener suficiente espacio para descargar los registros. Para obtener más información, consulte <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Recopilación de información de diagnóstico</a>. </dd>
 </dl>
 
 Antes se accedía a los archivos `stdout.log` y `stderr.log` de forma predeterminada a través de la vista de app del Panel de control de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**. Sin embargo, este registro de apps ya no está disponible con la versión actual de
-Cloud Foundry en la que se aloja {{site.data.keyword.Bluemix_notm}}. Para que se pueda acceder al registro de app stdout y stderr a través del Panel de control de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**, puede redirigir el registro a otros archivos del sistema de archivos de {{site.data.keyword.Bluemix_notm}}, en función del tiempo de ejecución que utilice.  
+Cloud Foundry en la que se aloja {{site.data.keyword.Bluemix_notm}}. Para que se pueda acceder al registro de app stdout y stderr a través del Panel de control de {{site.data.keyword.Bluemix_notm}} bajo **Archivos** > **registros**, puede redirigir el registro a otros archivos del sistema de archivos de {{site.data.keyword.Bluemix_notm}}, en función del tiempo de ejecución que utilice. 
 
   * Para las apps Liberty for Java, la información de salida que se dirige a stdout y stderr ya está contenida en el archivo `messages.log` del directorio logs. Busque las entradas con el prefijo SystemOut y
 SystemErr respectivamente.

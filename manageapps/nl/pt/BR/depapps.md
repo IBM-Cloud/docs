@@ -355,14 +355,14 @@ em que o aplicativo atingiu seu estado atual e assim por diante. Por exemplo:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",

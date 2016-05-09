@@ -8,9 +8,9 @@ copyright:
 # 試験的
 {: #experimental}
 
-*最終更新日: 2015 年 12 月 9 日*
+*最終更新日: 2016 年 4 月 4 日*
 
-{{site.data.keyword.Bluemix_notm}} Labs Catalog を確認し、試験的サービスをお試しください。
+{{site.data.keyword.Bluemix_notm}} Experimental Services を確認し、試験的サービスをお試しください。
 {: shortdesc} 
 
 

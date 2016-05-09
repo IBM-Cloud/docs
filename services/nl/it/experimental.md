@@ -8,9 +8,9 @@ copyright:
 # Sperimentale
 {: #experimental}
 
-*Ultimo aggiornamento: 9 dicembre 2015*
+*Ultimo aggiornamento: 4 aprile 2015*
 
-Controlla il catalogo {{site.data.keyword.Bluemix_notm}} Labs per provare i servizi sperimentali.
+Controlla i servizi sperimentali {{site.data.keyword.Bluemix_notm}} per provare i servizi sperimentali.
 {: shortdesc} 
 
 

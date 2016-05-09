@@ -33,7 +33,7 @@
 				"name": "Network Security Groups",
 				"href": "services/networksecuritygroups/index.html"
 			}, {
-				"name": "Virtual Private Network (VPN)",
+				"name": "虚拟专用网 (VPN)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
@@ -52,9 +52,6 @@
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
-				"href": "services/AnalyticsforHadoop/index.html"
-			}, {
 				"name": "Analytics for Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
@@ -242,7 +239,7 @@
 		}, {
 			"title": "移动",
 			"img": "homepage/images/mobile.svg",
-			"href": "services/index.html",
+			"href": "services/mobile.html",
 			"links": [{
 				"name": "尝试使用 Bluemix Mobile Services",
 				"href": "mobile/index.html"
@@ -281,6 +278,9 @@
 			"img": "homepage/images/private-apis.svg",
 			"href": "services/apis.html",
 			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
 				"name": "API Management",
 				"href": "services/APIManagement/index.html"
 			}, {

@@ -12,9 +12,10 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 3 月 21 日*
+*上次更新时间：2016 年 4 月 5 日*
 
-通过 {{site.data.keyword.Bluemix_notm}}，您可以轻松地实施、托管和扩展服务和应用程序。您可以关注应用程序逻辑和应用程序设计。{:shortdesc}
+通过 {{site.data.keyword.Bluemix_notm}}，您可以轻松地实施、托管和扩展服务和应用程序。您可以关注应用程序逻辑和应用程序设计。
+{:shortdesc}
 
 系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：
 
@@ -29,6 +30,8 @@ copyright:
 
 
 
+##试验性服务
+
 {{site.data.keyword.Bluemix_notm}} 还包含可供您试用的试验性服务。要查看所有可用的试验性服务、样板和运行时，请登录到 {{site.data.keyword.Bluemix_notm}}，滚动到“目录”的底部，然后单击 **{{site.data.keyword.Bluemix_notm}} 试验性服务**。
 
 试验性服务可能不稳定，并且可能会发生变化而与较低版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
@@ -41,6 +44,7 @@ copyright:
 
 |服务	|在美国南部区域中可用	|在欧洲英国区域中可用 |在澳洲悉尼区域中可用|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.cloudaccesstrailshort}}	|是		|否		|否|
 |{{site.data.keyword.activedeployshort}}			|是		|是		|否|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
@@ -67,7 +71,7 @@ copyright:
 |{{site.data.keyword.creshort}}			|是		|否		|否|
 |{{site.data.keyword.game}}			|是		|是		|是|
 |{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|是|
-|{{site.data.keyword.globalizationshort}}	|是		|是		|是|
+|{{site.data.keyword.GlobalizationPipeline_short}}	|是		|是		|是|
 |{{site.data.keyword.dataworks_short}}		|是		|是		|否|
 |{{site.data.keyword.twittershort}}		|是		|是		|是|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
@@ -94,7 +98,7 @@ copyright:
 |{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|是|
-|{{site.data.keyword.servicediscoveryshort}}		|是		|否		|否|
+|{{site.data.keyword.servicediscoveryshort}}		|是		|是		|否|
 |{{site.data.keyword.serviceproxyshort}}		|是		|否		|否|
 |{{site.data.keyword.sescashort}}		|是		|是		|是|
 |{{site.data.keyword.ssofull}}			|是		|否		|否|
@@ -113,3 +117,8 @@ copyright:
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是|
 |{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
 *表 2. 服务可用性*
+
+
+## 服务废弃
+
+在中断或替换一般可用服务之前，IBM 将就其意图提供至少 30 天的通知。如果不提供等效替换，那么从该通知的日期起至少 12 个月内，IBM 将使用在商业上合理的方式来继续操作和支持先前部署的服务实例。 

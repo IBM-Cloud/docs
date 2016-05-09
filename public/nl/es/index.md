@@ -43,7 +43,7 @@ Puede utilizar {{site.data.keyword.Bluemix_notm}} para desarrollar rápidamente 
 
 {{site.data.keyword.Bluemix_notm}} también proporciona servicios de middleware para que los utilicen las apps. {{site.data.keyword.Bluemix_notm}} actúa en nombre de la app cuando suministra nuevas instancias de servicio y luego enlaza estos servicios a la app. La app puede llevar a cabo su trabajo real, dejando la gestión de los servicios a la infraestructura.
 
-## Arquitectura pública de {{site.data.keyword.Bluemix_notm}} 
+## Arquitectura pública de {{site.data.keyword.Bluemix_notm}}
 {: #publicarch}
 
 
@@ -81,15 +81,15 @@ Cada entorno de ejecución, que incluye tanto móvil como web, se aísla del ent
 
 *Figura 5. Despliegue de una app*
 
-Cuando crea una app y la despliega en {{site.data.keyword.Bluemix_notm}}, el entorno de {{site.data.keyword.Bluemix_notm}} determina un servidor virtual adecuado al que se envía la app o los artefactos que representa la app. En el caso de una app para móvil, se crea una proyección de proceso en {{site.data.keyword.Bluemix_notm}}. Cualquier código de la app para móvil de la nube en principio se ejecuta en el entorno de {{site.data.keyword.Bluemix_notm}}. En el caso de una app web, el código que se ejecuta en la nube es la propia app que el desarrollador despliega en {{site.data.keyword.Bluemix_notm}}. La determinación del servidor virtual se basa en varios factores, que incluyen los siguientes: 
+Cuando crea una app y la despliega en {{site.data.keyword.Bluemix_notm}}, el entorno de {{site.data.keyword.Bluemix_notm}} determina un servidor virtual adecuado al que se envía la app o los artefactos que representa la app. En el caso de una app para móvil, se crea una proyección de proceso en {{site.data.keyword.Bluemix_notm}}. Cualquier código de la app para móvil de la nube en principio se ejecuta en el entorno de {{site.data.keyword.Bluemix_notm}}. En el caso de una app web, el código que se ejecuta en la nube es la propia app que el desarrollador despliega en {{site.data.keyword.Bluemix_notm}}. La determinación del servidor virtual se basa en varios factores, que incluyen los siguientes:
 
 * La carga que ya soporta la máquina
-* Los tiempos de ejecución o infraestructuras que soporta dicho servidor virtual. 
+* Los tiempos de ejecución o infraestructuras que soporta dicho servidor virtual.
 
 Después de seleccionar un servidor virtual, un gestor de apps de cada servidor virtual instala la infraestructura y el tiempo de ejecución adecuados para la app. A partir de entonces la app se puede desplegar en la infraestructura. Cuando se completa el despliegue, se inician los artefactos de la app.
 
 La siguiente figura
-muestra la estructura de un servidor virtual, también conocido como agente de ejecución de gotas (DEA), en el que se han desplegado varias apps: 
+muestra la estructura de un servidor virtual, también conocido como agente de ejecución de gotas (DEA), en el que se han desplegado varias apps:
 
 ![Diseño de un servidor virtual](images/container.png)
 
@@ -151,7 +151,7 @@ trasladar apps de forma flexible según convenga para lograr escalabilidad y res
 
 Puede tener una o varias instancias en ejecución para la app. Si tiene varias instancias de una app, la app sólo se carga una vez. Sin embargo, {{site.data.keyword.Bluemix_notm}} despliega
 el número de instancias de la app solicitada y las distribuye
-a través del mayor número posible de servidores virtuales. 
+a través del mayor número posible de servidores virtuales.
 
 Debe guardar todos los datos persistentes
 en un almacén de datos con estado que se encuentre fuera de la app,
@@ -212,4 +212,4 @@ descargar el kit de herramientas de desarrollo de Android y desarrollar código 
 * Requisitos previos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * Problemas conocidos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)
 * [Gestión de la cuenta](../admin/adminpublic.html#mngacct)
-* [{{site.data.keyword.Bluemix_notm}} glosario](../overview/glossary/index.html)
+* [Glosario de {{site.data.keyword.Bluemix_notm}}](../overview/glossary/index.html)

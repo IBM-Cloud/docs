@@ -18,7 +18,7 @@ copyright:
 
 # 使用和创建 {{site.data.keyword.openwhisk_short}} 包
 {: #openwhisk_packages}
-*上次更新时间：2016 年 2 月 22 日*
+*上次更新时间：2016 年 3 月 28 日*
 
 在 {{site.data.keyword.openwhisk}} 中，可以使用包将一组相关操作捆绑在一起，然后与其他人共享。
 
@@ -456,11 +456,11 @@ copyright:
 1. 与所有用户共享包：
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package sample
+  ok: updated package custom
   ```
   {: screen}
 

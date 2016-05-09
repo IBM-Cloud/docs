@@ -421,7 +421,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 使用以下命令可列出所有服务代理程序，添加或删除服务代理程序，或者更新服务代理程序。
 
-* 可以通过输入以下命令来列出特定服务代理程序：
+* 可以通过输入以下命令来列出服务代理程序：
 
 ```
 cf ba service-brokers <broker_name>

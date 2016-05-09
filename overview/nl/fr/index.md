@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  2014, 2016
 
  
 
@@ -333,8 +333,7 @@ votre code. Lorsque vous êtes prêt, il vous permet de transférer le code de v
 votre environnement de production.
 
     Pour en savoir plus sur {{site.data.keyword.IBM_notm}} Containers, voir
-[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).
-</dd>
+[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (bêta)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} est un environnement de cloud hébergé qui fait partie
 d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} et que vous pouvez utiliser pour générer, exécuter et surveiller vos
@@ -347,8 +346,7 @@ lancer et gérer vos serveurs virtuels via l'interface utilisateur {{site.data.k
 pouvez utiliser des images de serveur virtuel mises à disposition par {{site.data.keyword.IBM_notm}} ou créer des serveurs virtuels à partir de vos
 propres images personnalisées. Vous pouvez utiliser les fonctions d'{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} pour
 masquer la plupart des aspects complexes associés à l'hébergement et à la gestion des applications reposant sur le cloud, comme la journalisation, la mise
-à l'échelle automatique et la surveillance.
-Vous pouvez combiner les services OpenStack et les services {{site.data.keyword.Bluemix_notm}} pour générer et exécuter des applications
+à l'échelle automatique et la surveillance. Vous pouvez combiner les services OpenStack et les services {{site.data.keyword.Bluemix_notm}} pour générer et exécuter des applications
 hybrides. Vous pouvez mettre à disposition des ressources d'infrastructure en fonction des besoins, selon des stratégies d'exploitation et la demande en
 charge de travail. </p>
 <p>

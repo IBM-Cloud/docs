@@ -16,7 +16,7 @@ copyright:
 {:codeblock: .codeblock}
 
 
-#创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮{: #deploy-button} 
+#创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮 {: #deploy-button} 
 
 *上次更新时间：2016 年 3 月 2 日* 
 
@@ -41,7 +41,7 @@ copyright:
 
 7. 应用程序将部署到该人员的 {{site.data.keyword.Bluemix_notm}} 组织。 
 
-##按钮示例{: #button-examples} 
+##按钮示例 {: #button-examples} 
 
 请参阅公共 {{site.data.keyword.jazzhub_short}} 存储库的应用程序按钮示例：
 
@@ -58,7 +58,7 @@ copyright:
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/deploy_buttonx2.png" alt="部署到 Bluemix" /></a></p> 
 
-##创建按钮{: #create-button}
+##创建按钮 {: #create-button}
 
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请执行以下操作： 
 
@@ -95,21 +95,21 @@ copyright:
 <li>将该片段插入博客、文章、Wiki、自述文件或您希望推广您应用程序的任何位置。</li>
 </ol>
 
-##按钮片段的注意事项{: #button-snippet}
+##按钮片段的注意事项 {: #button-snippet}
 
 如果您要定制“部署到 Bluemix”按钮片段，请查看以下注意事项。 
 
-* 这两个模板均使用 PNG 格式的英语的外部按钮图像的缺省路径。 
+* 这两个模板均使用外部按钮图像的缺省路径，图像采用 PNG 格式，文本使用英语。 
 
     * 如果您倾向于使用按钮的 SVG 图像而不是 PNG 图像，那么也有可用的 SVG 版本。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button.svg`。
 	
-	* 如果您希望使用较大的按钮图像，可以使用所提供的 PNG 图像，该图像是原始大小的两倍。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button_x2.png`。 
+	* 如果您希望使用较大的按钮图像，我们还提供了比原始大小大两倍的图像。您可以将片段中使用的外部按钮图像的路径更改为 `https://bluemix.net/deploy/button_x2.png`。 
 	
 	* 如果您偏向于将图像存储在本地，那么可下载图像并将其存储在 Git 存储库中。调整路径以使用图像的相对位置。 
 	
 	* 如果您希望使用此按钮的翻译版本，那么可远程进行引用或从 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) 进行下载。 
 	
-##按钮的存储库注意事项{: #button-repo} 
+##按钮的存储库注意事项 {: #button-repo} 
 
 对于要在“部署到 Bluemix”按钮中使用的项目存储库，请查看以下注意事项。 
 

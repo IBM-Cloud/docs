@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} pubblico
 {: #public}
-*Ultimo aggiornamento: 22 febbraio 2016* 
+*Ultimo aggiornamento: 22 febbraio 2016*
 
 
 {{site.data.keyword.Bluemix_notm}} astrae e nasconde la maggior parte delle complessità associate al fungere da host e al gestire applicazioni basate sul cloud. In qualità di sviluppatore dell'applicazione, puoi concentrarti sullo sviluppo dell'applicazione senza dover gestire l'infrastruttura richiesta per fungere da host per essa.

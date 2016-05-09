@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -214,20 +214,6 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラ�
 
 詳しくは、[IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。
 
-### SQL Database
-
-SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
-
-このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}} 内の SQL データベース・コンソールを使用すると、以下の情報を含むレポートを取得できます。
-
- * アプリケーションがアクセスするデータベース内に存在する可能性のある機密データ。
- * 指定された期間内にデータベースにアクセスしたアプリケーション・ユーザー。
- * データベース内の機密データにアクセスしているアプリケーション・ユーザー。
-
-SQL を使用してデータをマスクするには、データベースと共にデプロイされているマスキングのユーザー定義関数 (UDF) をアプリケーションから呼び出します。例えば、使用したいデータを別の場所でテスト用にマスクすることも可能です。UDF はこのデータ・マスキング・アルゴリズムを IBM Infosphere Optim™ から実装します。
-
-このサービスのプレミアム・プランには、データ暗号化も含まれています。このサービスについて詳しくは、『[SQL Database 入門 (Getting started with SQL Database)](../services/SQLDB/index.html) 』を参照してください。
-
 ### dashDB
 
 dashDB サービスは、ユーザー認証に組み込み LDAP サーバーを使用します。アプリケーションとデータベースの間の接続は、SSL 証明書によって保護されます。このサービスでは、DB2® 固有の暗号化機能を使用して、デプロイ済みのデータベースおよびデータベース・バックアップを自動的に暗号化します。マスター鍵のローテーションは、90 日ごとに自動で実施されます。
@@ -245,6 +231,20 @@ Cloud Integration サービスにより、クラウドとオンプレミスの�
 Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm}} アプリをオンプレミスまたはクラウドにあるリモート・ロケーションにセキュアに接続できるようになります。これにより、セキュア接続が実現し、{{site.data.keyword.Bluemix_notm}} 組織と接続先リモート・ロケーションとの間にトンネルが確立されます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは API パッケージを使用して、セキュア・ゲートウェイを構成および作成できます。
 
 詳しくは、『[Secure Gateway 入門 (Getting started with Secure Gateway)](../services/SecureGateway/secure_gateway.html)』を参照してください。
+
+### SQL Database
+
+SQL Database サービスは、完全にプロビジョンされたリレーショナル・データベースをアプリに追加します。このサービスでは、IBM Directory Server LDAP を使用して認証を行い、IBM InfoSphere® Guardium® Data Activity Monitor を使用してアプリケーションがアクセスするデータベースを保護します。アプリケーションとデータベースの間の接続は、DigiCert が署名する SSL 証明書によって保護されます。
+
+このサービスを使用する特定のプランでは、{{site.data.keyword.Bluemix_notm}} 内の SQL データベース・コンソールを使用すると、以下の情報を含むレポートを取得できます。
+
+ * アプリケーションがアクセスするデータベース内に存在する可能性のある機密データ。
+ * 指定された期間内にデータベースにアクセスしたアプリケーション・ユーザー。
+ * データベース内の機密データにアクセスしているアプリケーション・ユーザー。
+
+SQL を使用してデータをマスクするには、データベースと共にデプロイされているマスキングのユーザー定義関数 (UDF) をアプリケーションから呼び出します。例えば、使用したいデータを別の場所でテスト用にマスクすることも可能です。UDF はこのデータ・マスキング・アルゴリズムを IBM Infosphere Optim™ から実装します。
+
+このサービスのプレミアム・プランには、データ暗号化も含まれています。このサービスについて詳しくは、『[SQL Database 入門 (Getting started with SQL Database)](../services/SQLDB/index.html) 』を参照してください。
 
 ### SIEM (Security Information and Event Management)
 

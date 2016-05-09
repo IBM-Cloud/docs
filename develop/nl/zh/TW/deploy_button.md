@@ -20,7 +20,7 @@ copyright:
 
 *前次更新：2016 年 3 月 2 日* 
 
-「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要最低配置，而且您可以將其插入任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
+「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要的配置最少，而且您可以將其插入到任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
 
 **提示：**如果公司品牌很重要，您可以在內容中[內嵌「部署至 {{site.data.keyword.Bluemix_notm}}」的 iFrame 流程](../develop/deploy_button_embed.html)，而非插入按鈕。當有人建立您的公用 Git 來源應用程式的副本時，他們會停留在您的內容中，而非重新導向至 bluemix.net 網站。 
@@ -131,7 +131,7 @@ copyright:
     <strong>附註：</strong>宣告的服務是標準 Cloud Foundry 資訊清單格式的 IBM 延伸規格。此延伸規格可能會隨著該特性的發展與改進，在未來的版本中修訂。<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">瞭解如何建立 <code>manifest.yml</code> 檔案。</a>  
 <pre class="codeblock">
 	---
-    #範本 manifest.yml
+    #Template manifest.yml
 
   declared-services:
     &lt;`arbitrary_service_instance_name`&gt;:  # [required]
@@ -146,7 +146,7 @@ copyright:
 
 <pre class="codeblock">
 	---
-    #範例 manifest.yml
+    #Example manifest.yml
 
   declared-services: 
       sample-java-cloudant-cloudantNoSQLDB: 

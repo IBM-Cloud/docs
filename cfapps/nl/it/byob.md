@@ -83,8 +83,7 @@ cf push app_name -p app_path -b https://github.com/cloudfoundry/heroku-buildpack
 ```
 {:pre}
 
-Puoi
-anche utilizzare un pacchetto di build personalizzato per la tua applicazione. Ad esempio, per utilizzare un pacchetto di build PHP open source fornito dalla community di Cloud Foundry, quando distribuisci la tua applicazione PHP a Bluemix, immetti il seguente comando per specificare l'URL del repository Git del pacchetto di build:
+Puoi anche utilizzare un pacchetto di build personalizzato per la tua applicazione. Ad esempio, per utilizzare un pacchetto di build PHP open source fornito dalla community di Cloud Foundry, quando distribuisci la tua applicazione PHP a Bluemix, immetti il seguente comando per specificare l'URL del repository Git del pacchetto di build:
 
 ```
 cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-pack -s cflinuxfs2
@@ -96,7 +95,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Utilizza il comando <strong>cf set-env</strong>. Ad esempio, immetti il seguente comando per impostare la versione Java su 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
 <p>Quindi, per rendere effettive
 le modifiche, prepara di nuovo la tua applicazione:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

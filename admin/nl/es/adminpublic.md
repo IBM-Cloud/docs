@@ -143,8 +143,7 @@ siguientes para que asuman distintos roles de usuario en una organización o esp
 </dl>
 
 **Nota**: Los usuarios que están asignados al rol de gestor o desarrollador pueden acceder a la variable de entorno
-VCAP_SERVICES. No obstante, un usuario asignado al rol auditor, no puede acceder a VCAP_SERVICES. Además, el contenido en VCAP_SERVICES no
-se oculta parcialmente en base al rol de usuario. 
+VCAP_SERVICES. No obstante, un usuario asignado al rol auditor no puede acceder a VCAP_SERVICES. 
 
 ### Gestión de las organizaciones
 {: #orgmng}
@@ -192,7 +191,7 @@ Puede crear espacios en la organización; por ejemplo, un espacio *dev* como ent
 
 Puede invitar a usuarios a sus organizaciones y espacios por la dirección de correo electrónico. Los usuarios solo pueden acceder al espacio al que se han añadido. 
 
-Según si el invitado tiene o no un ID de IBM, dicho usuario se asigna como si tuviera el rol `miembro` o `colaborador` para la cuenta. En la tabla siguiente se ofrecen detalles sobre cómo se asignan los roles de cuenta por tipo de invitación. 
+Según si el invitado tiene o no un ID de IBM, dicho usuario se asigna como si tuviera el rol `miembro` o `colaborador` para la cuenta. En la tabla siguiente se ofrecen detalles sobre cómo se asignan los roles de cuenta por tipo de invitación.
 
 *Tabla 1. Asignaciones de roles de cuenta*
 
@@ -200,19 +199,19 @@ Según si el invitado tiene o no un ID de IBM, dicho usuario se asigna como si t
 |----------------|------------------|
 |El usuario tiene cuenta de ID de IBM enlazado a dirección de correo invitado  | Miembro  | 
 |El usuario no tiene un ID de IBM | Se crea un ID de IBM que coincide con la dirección de correo enviada, y se añade al usuario como Miembro. | 
-|Una dirección de correo para un usuario actual de {{site.data.keyword.Bluemix_notm}}  | Colaborador | 
+|Una dirección de correo para un usuario actual de {{site.data.keyword.Bluemix_notm}} | Colaborador | 
 
-Realice los pasos siguientes para añadir usuarios con roles asignados a espacios específicos para una organización elegida: 
+Realice los pasos siguientes para añadir usuarios con roles asignados a espacios específicos para una organización elegida:
 
 <ol>
-<li>Acceda a **Cuenta y soporte** &gt; **Cuenta** &gt; **Gestionar organizaciones**. </li>
+<li>Acceda a **Cuenta y soporte** &gt; **Cuenta** &gt; **Gestionar organizaciones**.</li>
 <li>Seleccione **Invitar usuarios**.</li>
-<li>Especifique la dirección de correo electrónico de la persona que quiera invitar. </li>
-<li>Seleccione el rol para la organización a la que tiene pensado invitar al usuario nuevo. </li>
-<li>Seleccione el rol para el espacio al que tiene pensado invitar al usuario nuevo. </li>
-<li>Seleccione **Invitar**. </li>
+<li>Especifique la dirección de correo electrónico de la persona que quiera invitar.</li>
+<li>Seleccione el rol para la organización a la que tiene pensado invitar al usuario nuevo.</li>
+<li>Seleccione el rol para el espacio al que tiene pensado invitar al usuario nuevo.</li>
+<li>Seleccione **Invitar**.</li>
 <li>En la sección **Pendiente** puede ver la confirmación de que la invitación se ha enviado. Seleccione
-**Reenviar correo** o **Cancelar invitación** para actuar sobre una invitación pendiente. </li>
+**Reenviar correo** o **Cancelar invitación** para actuar sobre una invitación pendiente.</li>
 </ol>
 
 #### Cambio de roles de usuario

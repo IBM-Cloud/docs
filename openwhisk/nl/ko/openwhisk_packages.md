@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 패키지 사용 및 작성
 {: #openwhisk_packages}
-*마지막 업데이트 날짜: 2016년 2월 22일*
+*마지막 업데이트 날짜: 2016년 3월 28일*
 
 {{site.data.keyword.openwhisk}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
 
@@ -457,11 +457,11 @@ copyright:
 1. 모든 사용자와 패키지를 공유하십시오.
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package sample
+  ok: updated package custom
   ```
   {: screen}
 

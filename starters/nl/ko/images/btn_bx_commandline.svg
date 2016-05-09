@@ -1,20 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="355.4px" height="48px" viewBox="149 -12 355.4 48" style="enable-background:new 149 -12 355.4 48;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="355.4px"
+   height="48px"
+   viewBox="149 -12 355.4 48"
+   style="enable-background:new 149 -12 355.4 48;"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="btn_bx_commandline.svg"
+   inkscape:export-filename="N:\PUB\ABD042\ART\WORK\ship2\starters\images\btn_bx_commandline.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"><metadata
+     id="metadata19"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs17" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview15"
+     showgrid="false"
+     inkscape:zoom="1.3449634"
+     inkscape:cx="78.812551"
+     inkscape:cy="24"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style3">
 	.st0{fill:#5596E6;}
 	.st1{fill:#FFFFFF;}
 	.st2{font-family:'HelvNeueBoldforIBM';}
 	.st3{font-size:14px;}
-</style>
-<rect x="149" y="-12" class="st0" width="355.4" height="48"/>
-<text transform="matrix(1 0 0 1 165.2869 17.0946)" class="st1 st2 st3">Bluemix 명령행 인터페이스 다운로드</text>
-<g>
-	<polygon class="st1" points="484.4,7.3 483.2,6.2 478.2,11.2 478.2,-2.1 476.6,-2.1 476.6,11.2 471.6,6.2 470.4,7.3 477.4,14.3 	
-		"/>
-	<polygon class="st1" points="487.8,11.5 487.8,17.9 467,17.9 467,11.5 465.4,11.5 465.4,17.9 465.4,21.1 467,21.1 487.8,21.1 
-		489.4,21.1 489.4,17.9 489.4,11.5 	"/>
-</g>
-</svg>
+</style><rect
+     x="149"
+     y="-12"
+     class="st0"
+     width="355.4"
+     height="48"
+     id="rect5" /><text
+     transform="matrix(1 0 0 1 165.2869 17.0946)"
+     class="st1 st2 st3"
+     id="text7"
+     sodipodi:linespacing="125%">Bluemix <tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:13.99999976px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan8079">명령행 인터페이스 다운로드</tspan></text>
+<g
+     id="g9"><polygon
+       class="st1"
+       points="484.4,7.3 483.2,6.2 478.2,11.2 478.2,-2.1 476.6,-2.1 476.6,11.2 471.6,6.2 470.4,7.3 477.4,14.3     "
+       id="polygon11" /><polygon
+       class="st1"
+       points="487.8,11.5 487.8,17.9 467,17.9 467,11.5 465.4,11.5 465.4,17.9 465.4,21.1 467,21.1 487.8,21.1    489.4,21.1 489.4,17.9 489.4,11.5  "
+       id="polygon13" /></g></svg>

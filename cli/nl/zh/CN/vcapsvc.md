@@ -17,7 +17,8 @@ copyright:
 *上次更新时间：2016 年 3 月 15 日*
 
 
-VCAP_SERVICES 环境变量是一个 JSON 对象，包含可用于与 {{site.data.keyword.Bluemix_notm}} 中的服务实例进行交互的信息。{:shortdesc}
+VCAP_SERVICES 环境变量是一个 JSON 对象，包含可用于与 {{site.data.keyword.Bluemix_notm}} 中的服务实例进行交互的信息。
+{:shortdesc}
 
 
 ## 检索 VCAP_SERVICES 环境变量的值

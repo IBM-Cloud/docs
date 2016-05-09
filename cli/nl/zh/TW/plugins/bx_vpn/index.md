@@ -23,12 +23,12 @@ copyright:
 您可以使用 Bluemix CLI VPN 外掛程式配置及管理 IBM Virtual Private Network (VPN) 服務。
 {:shortdesc}
 
-以下資訊列出 Bluemix CLI VPN 外掛程式支援的所有指令，並包括其名稱、選項、用法、必要條件、說明及範例。
+接下來的資訊列出 Bluemix CLI VPN 外掛程式支援的所有指令，並包括其名稱、選項、用法、必要條件、說明及範例。
 
-**附註：***必要條件*列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
+**附註：***必要條件* 列出使用指令之前需要哪些動作。必要條件可能包括下列一個以上的動作：
 <dl>
 <dt>**端點**</dt>
-<dd>必須透過 `bluemix api` 設定 API 端點後，才能設定使用此指令。</dd>
+<dd>必須透過 `bluemix api` 設定 API 端點後，才能使用此指令。</dd>
 <dt>**登入**</dt>
 <dd>需要使用 `bluemix login` 指令進行登入後，才能使用此指令。</dd>
 <dt>**目標**</dt>
@@ -61,17 +61,17 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 -peer_id *PEER_ID*（選用）：遠端對等節點的 ID。VPN 通道的其他端點。
 
--admin_state *ADMIN_STATE*（選用）：VPN 連線的狀態。有效值是 `UP` 或 `DOWN`。
+-admin_state *ADMIN_STATE*（選用）：VPN 連線的狀態。有效值為 `UP` 或 `DOWN`。
 
--dpd-action *ACTION*（選用）：將對等節點偵測為停用時要採取的動作。有效值是 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。預設值為 `hold`。
+-dpd-action *ACTION*（選用）：偵測到對等節點已停用時所要採取的動作。有效值為 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。預設值為 `hold`。
 
 -gateway_ip *IP_ADDRESS*（選用）：本端 VPN 通道端點的 IP 位址。
 
--i *INITIATOR_STATE*（選用）：起始器的狀態。預設值是 `bi-directional`。
+-i *INITIATOR_STATE*（選用）：起始器的狀態。預設值為 `bi-directional`。
 
--dpd-timeout *VALUE*（選用）：逾時值（以秒為單位），在此期間之後會終止階段作業。範圍：6 - 86400 秒。預設值是 `120` 秒。
+-dpd-timeout *VALUE*（選用）：逾時值（以秒為單位），在此期間之後會終止階段作業。範圍：6 - 86400 秒。預設值為 `120` 秒。
 
--dpd-interval *VALUE*（選用）：保留作用中間隔（以秒為單位）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。預設值是 `15` 秒。
+-dpd-interval *VALUE*（選用）：保留作用中間隔（以秒為單位）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。預設值為 `15` 秒。
 
 -ike *NAME*（選用）：IKE 原則的名稱。
 
@@ -102,11 +102,11 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 
 -d *DESCRIPTION*（選用）：指定參數的說明。
 
--pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值是 `Group2`、`Group5` 或 `Group14`。預設值是 `Group2`。
+-pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值為 `Group2`、`Group5` 或 `Group14`。預設值為 `Group2`。
 
--e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值是 `aes-128`、`aes-192`、`aes-256` 或 `3des`。預設值是 `aes-128`。
+-e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值為 `aes-128`、`aes-192`、`aes-256` 或 `3des`。預設值為 `aes-128`。
 
--lv *LIFETIME_VALUE*（選用）：IKE 安全關聯的生命期限值。範圍：60 - 86400 秒。預設值是 `86400` 秒。
+-lv *LIFETIME_VALUE*（選用）：IKE 安全關聯的生命期限值。範圍：60 - 86400 秒。預設值為 `86400` 秒。
 
 **範例**：
 
@@ -133,11 +133,11 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 
 -d *DESCRIPTION*（選用）：指定參數的說明。
 
--pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值是 `Group2`、`Group5` 或 `Group14`。預設值是 `Group2`。
+-pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值為 `Group2`、`Group5` 或 `Group14`。預設值為 `Group2`。
 
--e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值是 `aes-128`、`aes-192`、`aes-256` 或 `3des`。預設值是 `aes-128`。
+-e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值為 `aes-128`、`aes-192`、`aes-256` 或 `3des`。預設值為 `aes-128`。
 
--lv *LIFETIME_VALUE*（選用）：安全關聯的生命期限值。範圍：60 - 86400 秒。預設值是 `3600` 秒。
+-lv *LIFETIME_VALUE*（選用）：安全關聯的生命期限值。範圍：60 - 86400 秒。預設值為 `3600` 秒。
 
 **範例**：
 
@@ -160,7 +160,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 
 *GATEWAY_NAME*（必要）：閘道的名稱。
 
--t *TYPE*（必要）：您要啟用服務的儲存器。有效值是 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。無預設值；您必須指定類型。
+-t *TYPE*（必要）：您要啟用服務的儲存器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。無預設值；您必須指定類型。
 
 -gateway_ip *IP_ADDRESS*（選用）：閘道的 IP 位址。
 
@@ -351,9 +351,9 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 
 -peer_id *PEER_ID*（選用）：遠端對等節點的 ID。VPN 通道的其他端點。
 
--admin_state *ADMIN_STATE*（選用）：VPN 連線的狀態。有效值是 `UP` 或 `DOWN`。
+-admin_state *ADMIN_STATE*（選用）：VPN 連線的狀態。有效值為 `UP` 或 `DOWN`。
 
--dpd-action *ACTION*（選用）：將對等節點偵測為停用時要採取的動作。有效值是 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。
+-dpd-action *ACTION*（選用）：偵測到對等節點已停用時所要採取的動作。有效值為 `hold`、`clear`、`disabled`、`restart` 或 `restart-by-peer`。
 
 -gateway_ip *IP_ADDRESS*（選用）：本端 VPN 通道端點的 IP 位址。
 
@@ -385,9 +385,9 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 
 -d *DESCRIPTION*（選用）：指定參數的說明。
 
--pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值是 `Group2`、`Group5` 或 `Group14`。
+-pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值為 `Group2`、`Group5` 或 `Group14`。
 
--e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值是 `aes-128`、`aes-192`、`aes-256` 或 `3des`。
+-e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值為 `aes-128`、`aes-192`、`aes-256` 或 `3des`。
 
 -lv *LIFETIME_VALUE*（選用）：IKE 安全關聯的生命期限值。範圍：60 - 86400 秒。
 
@@ -409,9 +409,9 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 
 -d *DESCRIPTION*（選用）：指定參數的說明。
 
--pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值是 `Group2`、`Group5` 或 `Group14`。
+-pfs *GROUP*（選用）：Diffie-Hellman (DH) 群組 ID。有效值為 `Group2`、`Group5` 或 `Group14`。
 
--e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值是 `aes-128`、`aes-192`、`aes-256` 或 `3des`。
+-e *ENCRYPTION_ALGORITHM*（選用）：加密演算法。有效值為 `aes-128`、`aes-192`、`aes-256` 或 `3des`。
 
 -lv *LIFETIME_VALUE*（選用）：安全關聯的生命期限值。範圍：60 - 86400 秒。
 
@@ -429,7 +429,7 @@ bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subn
 
 *GATEWAY_NAME*（必要）：閘道的名稱。
 
--t *TYPE*（選用）：您要啟用服務的儲存器。有效值是 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。
+-t *TYPE*（選用）：您要啟用服務的儲存器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。
 
 -gateway_ip *IP_ADDRESS*（選用）：閘道的 IP 位址。
 

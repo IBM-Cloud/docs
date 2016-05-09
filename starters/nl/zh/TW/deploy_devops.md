@@ -17,7 +17,8 @@ copyright:
 # 開始使用 Git 撰寫程式碼
 *前次更新：2016 年 3 月 2 日*  
 
-您可以建立自動部署至 {{site.data.keyword.Bluemix}} 的受管理 Git 儲存庫。然後，您可以將變更推送至 Git 儲存庫，以修改在應用程式中執行的程式碼。{:shortdesc}
+您可以建立自動部署至 {{site.data.keyword.Bluemix}} 的受管理 Git 儲存庫。然後，您可以將變更推送至 Git 儲存庫，以修改在應用程式中執行的程式碼。
+{:shortdesc}
 
 1. 若要開始使用，請在應用程式的「概觀」頁面上按一下**新增 Git 儲存庫及管線**，或在「{{site.data.keyword.Bluemix_notm}} 一般經驗」中按一下**新增 GIT**。 
 2. 在開啟的視窗中，確定已選取**將入門範本應用程式套件移入儲存庫並啟用「建置並部署」管線**勾選框。隨即建立 Git 儲存庫。如果有入門範本程式碼，就會將其載入儲存庫中。此外，在 {{site.data.keyword.jazzhub}} 中執行的 Delivery Pipeline 服務也會部署應用程式。  
@@ -31,7 +32,7 @@ copyright:
    a. 在應用程式的「概觀」頁面上，按一下**編輯程式碼**。您的專案就會在 Web IDE 中開啟。  
    b. 視需要進行變更，然後使用內建 Git 支援來推送。  
 		
-更新的應用程式即會重新部署至 {{site.data.keyword.Bluemix_notm}}。  
+已更新的應用程式即會重新部署至 {{site.data.keyword.Bluemix_notm}}。  
 
 如需逐步指示，請參閱 [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment)。  
 
@@ -59,9 +60,9 @@ bl login
 ```
 bl projects
 ```
-在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 your *alias* | *your application name*。 
+在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 *your alias* | *your application name*。 
 
-4. 輸入下列指令，將您的區域環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。 
+4. 輸入下列指令，將您的本端環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose

@@ -51,9 +51,10 @@ copyright:
 # 定价
 {: #pricing}
 
-*上次更新时间：2016 年 1 月 4 日*
+*上次更新时间：2016 年 3 月 29 日*
 
-您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况详细信息”视图，可用于在构建应用程序后检查实际成本。{:shortdesc}
+您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况详细信息”视图，可用于在构建应用程序后检查实际成本。
+{:shortdesc}
 
 ## 免费试用
 {: #trial}
@@ -163,7 +164,7 @@ copyright:
 ##收费方式
 {: #charges}
 
-使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您所在组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。要查看有关特定费用的更多信息，请转至 {{site.data.keyword.Bluemix_notm}}“目录”中的资源详细信息页面，或者 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器。
+使用 {{site.data.keyword.Bluemix_notm}} 计费帐户时，会针对您组织中使用的计算、容器和服务向您收费。其他 {{site.data.keyword.Bluemix_notm}} 用户可能会邀请您以其他帐户参与组织。如果您在邀请您参与的组织中创建应用程序或使用服务，那么会对包含这些组织的帐户中发生的使用量收费。要查看有关特定费用的更多信息，请转至 {{site.data.keyword.Bluemix_notm}}“目录”中的资源详细信息页面，或者 {{site.data.keyword.Bluemix_notm}}“定价”页面上的价格计算器。
 
 所应用的费用类型会有所不同，具体取决于您所使用的 {{site.data.keyword.Bluemix_notm}} 功能。下表提供了高层次的概述：
 
@@ -304,7 +305,10 @@ copyright:
 ###使用成本计算器
 {: #calculator}
 
-您可以使用 {{site.data.keyword.Bluemix_notm}}“定价”页面上的成本计算器来快速计算应用程序的价格。转至 {{site.data.keyword.Bluemix_notm}}“定价”页面，然后单击**打开计算器**。
+您可以通过使用 {{site.data.keyword.Bluemix_notm}} 提供的成本计算器，对应用程序进行快速定价。
+
+1. 转至 {{site.data.keyword.Bluemix_notm}} [ 定价页面](https://console.{DomainName}/pricing/)。 
+2. 使用其中一个**成本估算**窗口小部件，或者单击**打开计算器**以使用**定价计算器（精确到分）**。
 
 要使用该计算器，请键入所列资源的每月计划使用量；例如，实例数或推送通知数。单击**每月的使用情况**字段，以获取有关字段中预期的单元的提示。计算器会针对您的输入立即显示价格。您还可以调整计算器，以显示每年成本，而不是每月成本。
 

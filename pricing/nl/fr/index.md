@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
  
 
@@ -51,7 +51,7 @@ copyright:
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 4 janvier 2016*
+*Dernière mise à jour : 29 mars 2016*
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
 {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
@@ -133,7 +133,7 @@ Avec un compte de type Paiement à la carte, vous êtes facturé en fonction de 
 {{site.data.keyword.Bluemix_notm}}. Avec un compte de type Abonnement, vous pouvez bénéficier d'une remise mensuelle contre un engagement financier
 mensuel minimum. L'environnement {{site.data.keyword.Bluemix_notm}} dédié et l'environnement {{site.data.keyword.Bluemix_notm}} local sont facturés selon des contrats annuels.
 
-Vous pouvez convertir votre essai gratuit en compte de facturation à tout moment. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
+Vous pouvez convertir à tout moment votre version d'évaluation en compte facturable. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
 
 Après avoir créé un compte de facturation, vous pouvez éditer les informations que vous avez indiquées. Cliquez sur l'icône **Paramètres de
 profil** dans le coin supérieur droit de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Compte &gt; Type de compte** pour éditer
@@ -402,10 +402,15 @@ application.
 contextes d'exécution et des services que vous avez entrées.
 * Vous pouvez aussi calculer votre coût manuellement.
 
-###Utilisation de la calculatrice des coûts
+###Utilisation des calculatrices de coût
 {: #calculator}
 
-Vous pouvez estimer rapidement le prix de votre application à l'aide de la calculatrice des coûts dans la page Tarification de {{site.data.keyword.Bluemix_notm}}. Accédez à la page Tarification de {{site.data.keyword.Bluemix_notm}} et cliquez sur **Ouvrir la calculatrice**.
+Vous pouvez évaluer rapidement la tarification de votre application en utilisant les calculatrices de coût fournies par
+{{site.data.keyword.Bluemix_notm}}.
+
+1. Accédez à la page {{site.data.keyword.Bluemix_notm}} [Tarification](https://console.{DomainName}/pricing/). 
+2. Utilisez l'un des widgets **Estimez vos coûts** ou cliquez sur **Ouvrir la calculatrice** pour utiliser
+la **calculatrice de prix au centime près**.
 
 Pour utiliser la calculatrice, entrez votre utilisation mensuelle prévue pour les ressources répertoriées, par exemple le nombre d'instances ou de
 notifications push. Cliquez dans la zone **Utilisation mensuelle**

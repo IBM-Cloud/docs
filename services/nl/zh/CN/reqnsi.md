@@ -14,7 +14,8 @@ copyright:
 {: #services}
 *上次更新时间：2016 年 1 月 20 日*
 
-在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。{:shortdesc}
+在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。
+{:shortdesc}
 
 
 {{site.data.keyword.Bluemix_notm}} 中提供针对移动应用程序的预定义服务。{{site.data.keyword.Bluemix_notm}} 为对移动应用程序实施、托管和扩展这些移动服务提供了便利。您可以关注应用程序逻辑和应用程序设计。
@@ -147,7 +148,7 @@ copyright:
 
 * 从 {{site.data.keyword.Bluemix_notm}} 用户界面。查看 {{site.data.keyword.Bluemix_notm}}“目录”。
 * 从 cf 命令行界面。使用 **cf marketplace** 命令。
-* 从自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
+* 从您自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
 在开发应用程序时，您可以选择所需的服务。在您进行选择后，{{site.data.keyword.Bluemix_notm}} 将与该服务进行交互，并执行必要的步骤以供应服务的资源。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
 
@@ -170,7 +171,7 @@ copyright:
 
 2. 在“添加服务”窗格中，从**应用程序**列表中选择要将此服务实例绑定到的应用程序。
 
-3. 在**服务名称**字段中键入名称。缺省服务名称已提供。您可以更改该字段中的名称，也可以保留不变。
+3. 在**服务名称**字段中键入名称。系统提供了缺省服务名称。您可以更改该字段中的名称，也可以保留不变。
 
 4. 完成其他字段或选择，然后单击**创建**。
 
@@ -189,7 +190,7 @@ copyright:
     ```
     cf bind-service appname service_instance```
 
-只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改为使用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
+只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
 
 
 ## 将应用程序配置为与服务进行交互 
@@ -201,7 +202,7 @@ copyright:
 
 * 要与数据库服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，用户标识、密码和应用程序的访问 URI。
 * 要与移动后端服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者名称和使用应用程序的用户。
-* 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是 JSON 对象的序列化。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
+* 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
 如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](../troubleshoot/index.html#ts_topmenubar)故障诊断主题。
 

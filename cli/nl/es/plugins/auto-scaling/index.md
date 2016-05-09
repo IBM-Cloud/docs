@@ -24,7 +24,7 @@ Puede configurar el servicio {{site.data.keyword.autoscaling}} utilizando la {{s
 
 Antes de empezar, instale la CLI de {{site.data.keyword.Bluemix_notm}}. Consulte [Descargar {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} para obtener instrucciones.
 
-## Adición del plugin de la CLI de {{site.data.keyword.Bluemix_notm}} 
+## Adición del plugin de la CLI de {{site.data.keyword.Bluemix_notm}}
 
 Una vez instalada la CLI de {{site.data.keyword.Bluemix_notm}}, puede añadir el plugin de la CLI {{site.data.keyword.autoscaling}}.
 

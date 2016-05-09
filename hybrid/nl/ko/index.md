@@ -21,10 +21,7 @@ copyright:
 
 ## 공용
 
-핵심은
-{{site.data.keyword.Bluemix_notm}}는
-앱을 개발하고 바로 사용 가능한 기능을 제공하는 서비스를
-사용할 수 있는 환경이라는 점입니다. {{site.data.keyword.Bluemix_notm}} Public은 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다. 또한 100개가 넘는 IBM 및 써드파티 서비스를 이용하여 앱 어셈블리를 간편하게 만들 수도 있습니다. [{{site.data.keyword.Bluemix_notm}} Public](../public/index.html)에 대해 자세히 알아보십시오.
+핵심은 {{site.data.keyword.Bluemix_notm}}는 앱을 개발하고 바로 사용 가능한 기능을 제공하는 서비스를 사용할 수 있는 환경이라는 점입니다. {{site.data.keyword.Bluemix_notm}} Public은 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다. 또한 100개가 넘는 IBM 및 써드파티 서비스를 이용하여 앱 어셈블리를 간편하게 만들 수도 있습니다. [{{site.data.keyword.Bluemix_notm}} Public](../public/index.html)에 대해 자세히 알아보십시오.
 
 ## 전용
 

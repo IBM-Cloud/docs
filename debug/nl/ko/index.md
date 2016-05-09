@@ -18,7 +18,8 @@ copyright:
 *마지막 업데이트 날짜: 2016년 3월 3일*
 
 {{site.data.keyword.Bluemix}}에서 문제점이
-발견된 경우 로그 파일을 확인하여 문제점을 조사하고 오류를 디버그할 수 있습니다. {:shortdesc}
+발견된 경우 로그 파일을 확인하여 문제점을 조사하고 오류를 디버그할 수 있습니다.
+{:shortdesc}
 
 로그는 작업이 성공적으로 실행되었는지 또는 실패하였는지 등의 정보를 제공합니다.
 또한 문제점을 디버그하고 문제점의 원인을 판별하는 데 사용할 수 있는 관련 정보도 제공합니다. 
@@ -66,8 +67,8 @@ Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집
 
 ### Node.js 애플리케이션에 대한 스테이징 오류 디버깅
 
-다음 예에서는 `cf logs appname --recent`를 입력하면 표시되는 로그를 보여줍니다. 이 예에서는 Node.js 애플리케이션에서 스테이징 오류가 발생했다고
-간주합니다. ```
+다음 예에서는 `cf logs appname --recent`를 입력하면 표시되는 로그를 보여줍니다. 이 예에서는 Node.js 애플리케이션에서 스테이징 오류가 발생했다고 간주합니다.
+```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
@@ -84,17 +85,14 @@ Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집
 {: screen}
 
 
-로그의
-첫 번째 오류는 스테이징 실패 이유를 보여줍니다. 이 예에서 첫 번째 오류는 스테이징 단계 중
-DEA 컴포넌트에서 제공하는 출력입니다. ```
-2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3```
+로그의 첫 번째 오류는 스테이징 실패 이유를 보여줍니다. 이 예에서 첫 번째 오류는 스테이징 단계 중 DEA 컴포넌트에서 제공하는 출력입니다.
+```
+2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
+```
 {: screen}
 
 
-Node.js 애플리케이션의 경우 DEA에서는 `package.json` 파일의 정보를
-사용하여 모듈을 다운로드합니다. 이 오류에서 모듈에 대해 발생한 오류를 확인할 수
-있습니다. 따라서 `package.json` 파일의 18번째 행을 검토해야 합니다.
- 
+Node.js 애플리케이션의 경우 DEA에서는 `package.json` 파일의 정보를 사용하여 모듈을 다운로드합니다. 이 오류에서 모듈에 대해 발생한 오류를 확인할 수 있습니다. 따라서 `package.json` 파일의 18번째 행을 검토해야 합니다.  
 
 ```
 15   "jade": "~1.3.0",

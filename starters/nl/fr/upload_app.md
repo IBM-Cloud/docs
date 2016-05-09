@@ -20,9 +20,10 @@ Une fois que vous êtes connecté à {{site.data.keyword.Bluemix}}, vous pouvez 
 {:shortdesc}
 
 Avant de commencer, effectuez les opérations suivantes :
-  1. Installez les interfaces de ligne de commande {{site.data.keyword.Bluemix}} et Cloud Foundry. 
+  1. Installez les interfaces de ligne de commande {{site.data.keyword.Bluemix}} et Cloud Foundry.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a>
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> 
+
   2. Connectez-vous à {{site.data.keyword.Bluemix}}.
 
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">nom_domaine</span></pre>
