@@ -11,7 +11,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Last updated: 17 March 2016*
+*Last updated: 09 May 2016*
 
 The {{site.data.keyword.vpn_full}} service for Bluemix&reg; is available to securely access IBM Containers (Docker containers) inside the IBM Bluemix cloud environment. You can use the IBM Bluemix cloud environment as an extension of your corporate data center. You can also connect with the SoftLayer servers using the IBM VPN service.
 {:shortdesc}
@@ -25,7 +25,8 @@ To get started, select the **Virtual Private Network** service instance tile on 
 
   1. Select **EDIT**.  
   2. Specify the gateway name.  
-  3. Select the containers or groups with which you want to use the VPN service.  
+  3. Select the container and container group with which you want to use the VPN service.  
+	**Note:** The container and container group private subnets are preselected so that you can access them over the VPN connection.
   4. Select **SAVE**.  
 
  You can use the default IKE and IPSec policies, or configure custom policies. If you want to use the default policies, skip to step 4.
@@ -57,15 +58,15 @@ To get started, select the **Virtual Private Network** service instance tile on 
 4. Provide the details to establish a connection between your data center or SoftLayer server VPN gateway, and the IBM VPN gateway.  
 {: #site}  
 
-  1. Select the **VPN Gateway Appliance** tab.
-  2. Select **ADD NEW** in the **VPN Site Connections** section.
+  1. Select the **Gateway Appliance** tab.
+  2. Select **Create Connection** in the **Site Connections** section.
   3. Specify the following site connection details:  
   	* **Name**: Name of the connection  
   	* **Description**: Description of the connection (optional)  
   	* **Preshared Key String**: Preshared (secret) key to be used for authentication
   	* **Admin State**: Status of the VPN connection. Select from drop-down: UP or DOWN. Default value: UP  
   	* **Customer Gateway IP**: Remote endpoint IP address of the VPN tunnel  
-  	* **Customer Subnet**: Remote subnet address in CIDR format. Select the plus sign to save the subnet details.
+  	* **Customer Subnet**: Remote subnet address in CIDR format. Select the plus sign to add another subnet.
   4. (Optional) Configure the following **Advanced Settings** parameters:  
   	* **IKE Policy**: Select the IKE policy.  
   	* **Keep Alive Interval**: Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Default value: 15. Range: 5-86399

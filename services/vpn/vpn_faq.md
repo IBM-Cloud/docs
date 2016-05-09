@@ -11,7 +11,7 @@ copyright:
 
 # {{site.data.keyword.vpn_short}} FAQs
 {: #vpn_faq}
-*Last updated: 17 March 2016*
+*Last updated: 09 May 2016*
 
 Following are some frequently asked questions.
 {:shortdesc}
@@ -54,3 +54,7 @@ Following are some frequently asked questions.
 7. How do I connect the IBM VPN service with the SoftLayer Gateway Appliance service (GaaS)?
 
 	You can build an IPSec tunnel to establish secure communication between the IBM VPN service and the SoftLayer GaaS. [See configuration example.](vpn_onpremises.html#gaas){: new_window}
+
+8. Can I access the container and container group using their private IP addresses?
+
+	The container and container group private subnets are preselected so that you can access them over the VPN connection.
