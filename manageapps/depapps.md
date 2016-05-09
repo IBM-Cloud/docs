@@ -441,8 +441,12 @@ The `.cfignore` file contains the names of files and directories that you want t
 tmp/
 ```
 
-# rellinks
-## general 
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
