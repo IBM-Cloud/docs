@@ -1,4 +1,20 @@
+---
+
+ 
+
+copyright:
+
+  years: 2016
+
+ 
+
+---
+
+{:shortdesc: .shortdesc} 
+{:new_window: target="_blank"}
+
 # Basic Authentication Guide
+*Last updated: 9 May 2016*
 
 This guide will help you obtain an access token, include it in the header of your first API call, and refresh the access token when it expires.
 
