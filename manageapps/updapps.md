@@ -14,7 +14,7 @@ copyright:
 #Updating apps
 {: #updatingapps}
 
-*Last updated: 17 March 2016*
+*Last updated: 9 May 2016*
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
@@ -279,7 +279,11 @@ In this example, *Blue* is the previously deployed application and *Green* is th
   **Result:** The *Green* app is responding to the URL `Blue.mybluemix.net`.
 
 
-# rellinks
-## general 
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [Blue-green deployments](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
