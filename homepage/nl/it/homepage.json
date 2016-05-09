@@ -52,9 +52,6 @@
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
-				"href": "services/AnalyticsforHadoop/index.html"
-			}, {
 				"name": "Analytics for Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
@@ -242,7 +239,7 @@
 		}, {
 			"title": "Mobile",
 			"img": "homepage/images/mobile.svg",
-			"href": "services/index.html",
+			"href": "services/mobile.html",
 			"links": [{
 				"name": "Prova i servizi mobile Bluemix",
 				"href": "mobile/index.html"
@@ -281,6 +278,9 @@
 			"img": "homepage/images/private-apis.svg",
 			"href": "services/apis.html",
 			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
 				"name": "Gestione API",
 				"href": "services/APIManagement/index.html"
 			}, {

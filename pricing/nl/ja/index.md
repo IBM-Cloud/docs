@@ -51,7 +51,7 @@ copyright:
 # 料金
 {: #pricing}
 
-*最終更新日: 2016 年 1 月 4 日*
+*最終更新日: 2016 年 3 月 29 日*
 
 無料で {{site.data.keyword.Bluemix}} でアプリケーションを実行し、
 {{site.data.keyword.Bluemix_notm}} サービスを試すことができます。
@@ -338,7 +338,10 @@ IBM パブリック・クラウドの {{site.data.keyword.Bluemix_notm}} 仮想�
 ###コスト計算器の使用
 {: #calculator}
 
-{{site.data.keyword.Bluemix_notm}} の「料金」ページにあるコスト計算器を使用すると、アプリの価格を素早く設定できます。{{site.data.keyword.Bluemix_notm}} の「料金」ページに移動して**「カリキュレーターを開く」**をクリックしてください。
+{{site.data.keyword.Bluemix_notm}} で提供されるコスト計算器を使用すると、アプリの価格を素早く設定できます。
+
+1. {{site.data.keyword.Bluemix_notm}} の[「料金」ページ](https://console.{DomainName}/pricing/)に移動します。 
+2. いずれかの**「コスト見積もり」**ウィジェットを使用するか、または**「カリキュレーターを開く」**をクリックして、**「詳細な料金カリキュレーター」**を使用します。
 
 計算器を使用するには、インスタンス数やプッシュ通知数など、リストされたリソースの予想される月々の使用量を入力します。
 **「月々の使用量」

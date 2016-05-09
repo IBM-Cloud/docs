@@ -18,7 +18,7 @@ copyright:
 
 # 使用启用了 {{site.data.keyword.openwhisk_short}} 的服务 
 {: #openwhisk_ecosystem}
-*上次更新时间：2016 年 2 月 22 日*
+*上次更新时间：2016 年 3 月 28 日*
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
 {: shortdesc}
@@ -259,12 +259,7 @@ copyright:
 
 `/whisk.system/alarms/alarm` 订阅源将警报服务配置为按指定的频率触发触发器事件。参数如下所示：
 
-- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器。此字符串是 6 个字段组成的序列，字段之间用空格分隔：`X X X X X X `。下面是此字符串所指示频率的一些示例：
-
-  - `* * * * * *`：每秒。
-  - `0 * * * * *`：每分钟开头。
-  - `* 0 * * * *`：每小时开头。
-  - `* * * 8 * *`：每个月第 8 天的某个时间
+- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器，时间采用全球标准时间 (UTC)。此字符串是 6 个字段组成的序列，字段之间用空格分隔：`X X X X X X `。有关使用 cron 语法的更多详细信息，请参阅 https://github.com/ncb000gt/node-cron。
 
 - `trigger_payload`：此参数的值成为每次触发器触发时触发器的内容。
 

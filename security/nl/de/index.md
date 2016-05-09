@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Letzte Aktualisierung: 15. Dezember 2015*
+*Letzte Aktualisierung: 17. März 2016*
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet eine Gruppe von Sicherheitsservices zur Verwendung durch Anwendungsentwickler zum Sichern ihrer mobilen Apps und Web-Apps. Kombiniert machen diese Elemente {{site.data.keyword.Bluemix_notm}} zu einer Plattform mit klaren Auswahlmöglichkeiten für eine sichere Anwendungsentwicklung.
 {:shortdesc}
@@ -87,7 +99,7 @@ Folgende Header werden von DataPower belegt:
 </dd>
 
 <dt>Verfahren für sichere Entwicklung</dt>
-<dd> Für {{site.data.keyword.Bluemix_notm}} Public und Dedicated werden mithilfe von IBM Security AppScan® Dynamic Analyzer und Produkten für statische Analysen regelmäßig für verschiedene {{site.data.keyword.Bluemix_notm}}-Komponenten Scans auf Sicherheitslücken durchgeführt. Es werden Bedrohungsmodelle und Tests für unbefugten Zugriff durchgeführt, um mögliche Schwachstellen für alle Typen von {{site.data.keyword.Bluemix_notm}}-Bereitstellungen zu entdecken und zu beheben. Zusätzlich können Anwendungsentwickler den Service AppScan Dynamic Analyzer zum Sichern ihrer Web-Apps verwenden, die in {{site.data.keyword.Bluemix_notm}} bereitgestellt sind.</dd>
+<dd> Für {{site.data.keyword.Bluemix_notm}} Public und Dedicated werden mithilfe von IBM Security AppScan® Dynamic Analyzer regelmäßig für verschiedene {{site.data.keyword.Bluemix_notm}}-Komponenten Scans auf Sicherheitslücken durchgeführt. Es werden Bedrohungsmodelle und Tests für unbefugten Zugriff durchgeführt, um mögliche Schwachstellen für alle Typen von {{site.data.keyword.Bluemix_notm}}-Bereitstellungen zu entdecken und zu beheben. Zusätzlich können Anwendungsentwickler den Service AppScan Dynamic Analyzer zum Sichern ihrer Web-Apps verwenden, die in {{site.data.keyword.Bluemix_notm}} bereitgestellt sind.</dd>
 </dl>
 
 ### Infrastruktursicherheit
@@ -128,7 +140,7 @@ Folgende Header werden von DataPower belegt:
 <dt>Benutzerzugriffsmanagement</dt>
 <dd>Innerhalb von {{site.data.keyword.Bluemix_notm}} werden die Richtlinien zur Aufgabentrennung befolgt, um Benutzern differenzierte Zugriffsberechtigungen zuzuweisen und sicherzustellen, dass Benutzer nur über den Zugriff verfügen, der entsprechend dem Prinzip der geringsten Rechte zum Ausführen ihres jeweiligen Jobs erforderlich ist.
 
-Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}} verwalten](../admin/index.html#mng).
+Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}} Local und Dedicated verwalten](../admin/index.html#mng).
 </dd>
 </dl>
 
@@ -192,51 +204,15 @@ Der SSO-Service unterstützt mehrere Identitätsquellen, in denen die Berechtigu
 
 Weitere Informationen finden Sie in [Einführung in Single Sign-On](../services/SingleSignOn/index.html).
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-Dieser Service stellt eine Sicherheitsanalyse zu mobilen Android-Anwendungen bereit. Um diesen Service nutzen zu können, müssen Sie eine kompilierte Android-App als APK-Datei hochladen. Nach Abschluss der Sicherheitsanalyse können Sie einen Bericht herunterladen.
-
-Weitere Informationen finden Sie in [Einführung in AppScan Mobile Analyzer](../services/AppScanMobileAnalyzer/index.html).
-
-### AppScan Dynamic Analyzer
-
-Dieser Service stellt eine Sicherheitsanalyse zu Webanwendungen mit einem dynamischen Analysetool bereit. Das Tool arbeitet an der bereitgestellten Webanwendung, nicht am Anwendungsquellcode, und kann beliebige {{site.data.keyword.Bluemix_notm}}-Webanwendungen prüfen, ungeachtet ihrer Sprache oder Technologie. Es können nur Anwendungen der Organisationen geprüft werden, denen Sie angehören. Um eine Prüfung durchzuführen, müssen Sie die Webanwendungs-URL und die Anmeldungs-Berechtigungsnachweise konfigurieren, sofern vorhanden. Nach erfolgter Prüfung können Sie einen Bericht herunterladen.
-
-Weitere Informationen finden Sie in [Einführung in AppScan Dynamic Analyzer](../services/AppScanDynamicAnalyzer/index.html).
-
-### Mobile Analyzer for iOS (Beta)
-
-Mit dem Service 'Mobile Analyzer for iOS' wird eine dynamische AppScan-Sicherheitsanalyse für mobile iOS-Anwendungen bereitgestellt. Diese hilft Ihnen dabei, Sicherheitsprobleme in Ihren mobilen iOS-Apps zu ermitteln.
-
-Weitere Informationen finden Sie in [Einführung in Mobile Analyzer for iOS](../services/AppScanIOS/index.html).
-
-### Static Analyzer (Beta)
-
-Mit dem Service 'Static Analyzer' werden Sicherheitstests für statische Anwendungen in der Cloud ermöglicht. Er hilft Ihnen dabei, Schwachstellen im Quellcode in einem frühen Stadium des Softwareentwicklungslebenszyklus zu finden, sodass diese vor der Bereitstellung behoben werden können.
-
-Mit Static Analyzer können Sie Java und Java-Webinhalte mithilfe einer Befehlszeilenschnittstelle (Command-Line Interface, CLI) auf Ihrer lokalen Festplatte prüfen. Dazu können Sie ein kleines Installationsprogramm ausführen, mit dem Static Analyzer-Plug-ins zu Eclipse oder Maven hinzugefügt werden. Sie können das Clientdienstprogramm zum Scannen und Sammeln von Informationen zu Ihren Dateien in einer Archivdatei verwenden, die Sie anschließend zum Anzeigen der Scanergebnisse an die Cloud übergeben.
-
-Weitere Informationen finden Sie in [Einführung in IBM Static Analyzer for Bluemix](../services/StaticAnalyzer/index.html).
+Dieser Service stellt eine Sicherheitsanalyse für mobile Apps und Web-Apps bereit und ermöglicht Ihnen das Scannen von Quellcode auf Sicherheitslücken. Weitere Informationen finden Sie in der [Einführung zu Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
 
 ### IBM UrbanCode-Plug-in für das Testen der Anwendungssicherheit
 
 Mit dem Plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} wird Ihnen das Ausführen von Sicherheitsscans für Ihre Web- oder Android-Apps ermöglicht, die in {{site.data.keyword.Bluemix_notm}} gehostet werden. Dieses Plug-in wird von der IBM UrbanCode™ Deploy Community in der IBM Bluemix DevOps Services-Plattform entwickelt und unterstützt.
 
 Weitere Informationen finden Sie in [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
-
-### SQL Database
-
-Mit dem Service 'SQL Database' wird Ihrer App eine vollständig bereitgestellte relationale Datenbank hinzugefügt. Dieser Service nutzt IBM Directory Server LDAP zur Authentifizierung und IBM InfoSphere® Guardium® Data Activity Monitor zum Schutz der Datenbank, auf die Anwendungen zugreifen. Die Verbindung zwischen Anwendungen und der Datenbank wird über das von DigiCert signierte SSL-Zertifikat geschützt.
-
-Bei bestimmten Plänen können Sie bei diesem Service die Konsole der SQL-Datenbank in {{site.data.keyword.Bluemix_notm}} verwenden, um Berichte mit den folgenden Informationen zu erhalten:
-
- * Sensible Daten, die in der Datenbank enthalten sein können, auf die Anwendungen zugreifen.
- * Die Anwendungsbenutzer, die während eines bestimmten Zeitraums auf die Datenbank zugegriffen haben.
- * Die Anwendungsbenutzer, die auf sensible Daten in der Datenbank zugreifen.
-
-Zum Maskieren von Daten mit SQL können Anwendungen die benutzerdefinierten Funktionen (User-Defined Functions, UDF) zum Maskieren aufrufen, die zusammen mit der Datenbank bereitgestellt wurden. So können Sie beispielsweise die Daten maskieren, die Sie an anderer Stelle zum Testen verwenden möchten. Die UDFs implementieren die Algorithmen zur Datenmaskierung aus IBM InfoSphere Optim™.
-
-Der Premiumplan dieses Service umfasst auch die Verschlüsselung von Daten. Weitere Informationen zu diesem Service finden Sie in [Einführung in SQL Database](../services/SQLDB/index.html).
 
 ### dashDB
 
@@ -254,7 +230,21 @@ Weitere Informationen finden Sie in [Einführung in Cloud Integration](../servic
 
 Mit dem Service 'Secure Gateways' können Sie lokal oder in der Cloud eine sichere Verbindung zwischen {{site.data.keyword.Bluemix_notm}}-Apps und fernen Standorten herstellen. Es wird eine sichere Verbindung bereitgestellt und ein Tunnel zwischen Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und dem fernen Standort, zu dem Sie eine Verbindung herstellen möchten, eingerichtet. Mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder eines API-Pakets können Sie ein sicheres Gateway konfigurieren und erstellen.
 
-Weitere Informationen finden Sie unter [Einführung in Secure Gateway](../services/SecureGateway/index.html).
+Weitere Informationen finden Sie unter [Einführung in Secure Gateway](../services/SecureGateway/secure_gateway.html).
+
+### SQL Database
+
+Mit dem Service 'SQL Database' wird Ihrer App eine vollständig bereitgestellte relationale Datenbank hinzugefügt. Dieser Service nutzt IBM Directory Server LDAP zur Authentifizierung und IBM InfoSphere® Guardium® Data Activity Monitor zum Schutz der Datenbank, auf die Anwendungen zugreifen. Die Verbindung zwischen Anwendungen und der Datenbank wird über das von DigiCert signierte SSL-Zertifikat geschützt.
+
+Bei bestimmten Plänen können Sie bei diesem Service die Konsole der SQL-Datenbank in {{site.data.keyword.Bluemix_notm}} verwenden, um Berichte mit den folgenden Informationen zu erhalten:
+
+ * Sensible Daten, die in der Datenbank enthalten sein können, auf die Anwendungen zugreifen.
+ * Die Anwendungsbenutzer, die während eines bestimmten Zeitraums auf die Datenbank zugegriffen haben.
+ * Die Anwendungsbenutzer, die auf sensible Daten in der Datenbank zugreifen.
+
+Zum Maskieren von Daten mit SQL können Anwendungen die benutzerdefinierten Funktionen (User-Defined Functions, UDF) zum Maskieren aufrufen, die zusammen mit der Datenbank bereitgestellt wurden. So können Sie beispielsweise die Daten maskieren, die Sie an anderer Stelle zum Testen verwenden möchten. Die UDFs implementieren die Algorithmen zur Datenmaskierung aus IBM InfoSphere Optim™.
+
+Der Premiumplan dieses Service umfasst auch die Verschlüsselung von Daten. Weitere Informationen zu diesem Service finden Sie in [Einführung in SQL Database](../services/SQLDB/index.html).
 
 ### Sicherheitsinformationen und Ereignismanagement
 
@@ -286,7 +276,7 @@ Der {{site.data.keyword.Bluemix_notm}}-*Entwickler* folgt zwei Hauptabläufen, e
     2. Über das IBM DataPower Gateway mit Reverse Proxy und SSL-Terminierungsproxy.
     3. Über den Netzrouter.
     4. Über die Autorisierung über einen Cloud Foundry-Cloud-Controller, um einen Zugriff sicherzustellen, der auf die Apps und Serviceinstanzen beschränkt ist, die von dem Entwickler erstellt wurden.
-  
+
 Für *Administratoren* von {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local ist der **Ablauf für Administratoren** wie folgt:
  1. Über eine Firewall mit aktivem Abwehren unbefugter Zugriffe und aktiver Netzsicherheit.
  2. Über das IBM DataPower Gateway mit Reverse Proxy und SSL-Terminierungsproxy.
@@ -299,7 +289,7 @@ Zusätzlich zu den in diesen Pfaden beschriebenen Benutzern führt ein autorisie
  * Abschottung des Betriebssystems durch regelmäßiges Anwenden von Fixes mithilfe von IBM Endpoint Manager.
  * Risikomanagement mit Schutz gegen Angriffe von außen.
  * Sicherheitsüberwachung mit QRadar.
- * Über die Administrationskonsole verfügbare Sicherheitsberichte.
+ * Über die Verwaltungsseite verfügbare Sicherheitsberichte.
 
 ## Einhaltung von Sicherheitsbestimmungen
 {: #compliance}
@@ -312,8 +302,8 @@ Zusätzlich zu den in diesen Pfaden beschriebenen Benutzern führt ein autorisie
 ![Finanzwirtschaftliche Informationssysteme](images/FISC.gif) Für Bankunternehmen und zugehörige Finanzinstitute in Japan müssen für Computersysteme Sicherheitsverfahren auf der Basis der FISC-Sicherheitsrichtlinien (Center for Financial Industry Information Systems) eingerichtet sein. **FISC**-Sicherheitsrichtlinien werden von der Japan Financial Services Agency (FSA), Bank of Japan (BOJ) und FISC zwingend vorgeschrieben.
 
 Ein auf Japanisch verfasstes {{site.data.keyword.Bluemix_notm}}-Selbstbeurteilungsdokument in Bezug auf die FISC-Sicherheitsrichtlinien finden Sie unter [IBM Bluemix-Risikobewertungsergebnisse](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
- 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} ist unter den **Standards 27001 und 27002 der International Organization for Standardization (ISO)** zertifiziert, die die bewährten Verfahren für Prozesse des Informationssicherheitsmanagements definieren. Der ISO-Standard 27001 spezifiziert die Anforderungen für die Einrichtung, Implementierung und Dokumentation von Managementsystemen für die Informationssicherheit (ISMS, Information Security Management Systems) sowie die Anforderungen für die Implementierung von Sicherheitsmaßnahmen nach den individuellen Bedürfnissen einzelner Organisationen. Der ISO-Standard 27002 erläutert die einzelnen Sicherheitselemente des ISO-Standards 27001 ausführlich. Die Familie der ISO-Standards 27000 beinhaltet einen Prozess zur Risikoskalierung und Ressourcenbewertung mit der Zielsetzung, den Schutz der Vertraulichkeit, Integrität und Verfügbarkeit geschriebener, mündlicher und elektronischer Informationen sicherzustellen. 
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} ist unter den **Standards 27001 und 27002 der International Organization for Standardization (ISO)** zertifiziert, die die bewährten Verfahren für Prozesse des Informationssicherheitsmanagements definieren. Der ISO-Standard 27001 spezifiziert die Anforderungen für die Einrichtung, Implementierung und Dokumentation von Managementsystemen für die Informationssicherheit (ISMS, Information Security Management Systems) sowie die Anforderungen für die Implementierung von Sicherheitsmaßnahmen nach den individuellen Bedürfnissen einzelner Organisationen. Der ISO-Standard 27002 erläutert die einzelnen Sicherheitselemente des ISO-Standards 27001 ausführlich. Die Familie der ISO-Standards 27000 beinhaltet einen Prozess zur Risikoskalierung und Ressourcenbewertung mit der Zielsetzung, den Schutz der Vertraulichkeit, Integrität und Verfügbarkeit geschriebener, mündlicher und elektronischer Informationen sicherzustellen.
 
 {{site.data.keyword.Bluemix_notm}} ist eine geprüfte Drittanbietersicherheitsfirma und erfüllt alle Anforderungen für den ISO-Standard 27001: [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
 
@@ -322,39 +312,31 @@ Ein auf Japanisch verfasstes {{site.data.keyword.Bluemix_notm}}-Selbstbeurteilun
   * Anbietermanagementprogramm
   * Interne Prozesse für Corporate Governance und Risikomanagement
   * Beaufsichtigung der Einhaltung gesetzlicher Bestimmungen
- 
+
 {{site.data.keyword.Bluemix_notm}} verwendet die Cloud-Services von IBM SoftLayer Infrastructure-as-a-Service (IaaS) und nutzt deren Sicherheitsarchitektur optimal aus. Weitere Informationen erhalten Sie vom [{{site.data.keyword.Bluemix_notm}}-Vertriebsteam](mailto:bmxcert1@us.ibm.com){:new_window}.
 
-## Sicherheitsberichte
-{: #reports}
+### Plattform- und Servicekonformität
+Die folgende Tabelle zeigt, welche Services in {{site.data.keyword.Bluemix_notm}} mit welchem der Standards konform sind.
 
-Mit {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated generiert {{site.data.keyword.Bluemix_notm}} verschiedene Sicherheitsberichte und -protokolle, die Sie auf der Verwaltungsseite anzeigen können. Anweisungen zum Anzeigen und Verwenden der Berichte finden Sie unter [Berichte anzeigen](../admin/index.html#oc_report).
+|{{site.data.keyword.Bluemix_notm}}-Komponenten		|FISC		|ISO 27001	|SOC 2 Typ 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}}-Plattform		|J			|J	|J	|
+|{{site.data.keyword.APIM}}			|J	|J |			|
+|{{site.data.keyword.autoscaling}}			|J	|J |			|
+|{{site.data.keyword.bigicloudst}}			|J |J |J |
+|{{site.data.keyword.cloudant}}				|J |J |J	|
+|{{site.data.keyword.dashdbshort}}			|J	|J	|J	|
+|{{site.data.keyword.datacshort}}			|J	|J	|			|
+|{{site.data.keyword.jazzhub_short}}					|J	|J	|			|
+|{{site.data.keyword.containerlong}}			|J		|J	|			|
+|{{site.data.keyword.mql}}				|J	|J	|	 		|
+|{{site.data.keyword.SecureGateway}}			|J	|J |	 		|
+|{{site.data.keyword.sescashort}}     |J |J | |
 
-In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated generiert werden.
+*Tabelle 1. Plattform- und Servicekonformität*
 
-| **Kategorie** | **Bericht** | **Beschreibung** |      
-|-----------------|-------------------|---------------------|
-| Firewall | Firewall-Anmeldungen | Ereignisse im Zusammenhang mit der Administratoranmeldung an den Vyatta-Firewall-Geräten. |
-| Firewall | Firewall-Ablehnungen | Ereignisse, die von den Vyatta-Firewall-Geräten generiert werden, wenn eine Zugriffsanforderung im Einklang mit den bestehenden Firewallregeln abgelehnt wird. |
-| {{site.data.keyword.Bluemix_notm}}-Administrator-Anmeldeereignisse | {{site.data.keyword.Bluemix_notm}}-Administratoranmeldung | Ereignisse, die vom Betriebssystem generiert werden, wenn ein Administrator eine SSH-Sitzung auf einem beliebigen {{site.data.keyword.Bluemix_notm}}-System startet. |
-| {{site.data.keyword.Bluemix_notm}}-Anwendungsentwickler-Anmeldeereignisse | {{site.data.keyword.Bluemix_notm}}-Anwendungsentwickleranmeldung | Ereignisse, die von der Anmeldungskomponente der {{site.data.keyword.Bluemix_notm}}-Plattform generiert werden, wenn ein {{site.data.keyword.Bluemix_notm}}-Plattformbenutzer eine Sitzung über die Befehlszeile, die REST-APIs oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle startet. |
-| {{site.data.keyword.Bluemix_notm}}-Administrator-Verwaltungsereignisse | {{site.data.keyword.Bluemix_notm}}-Administrator-Verwaltungsereignisse des Betriebssystems | Ereignisse, die vom Betriebssystem generiert werden, wenn ein Administrator eine Aktion innerhalb einer aktuellen Arbeitssitzung ausführt. |
-| {{site.data.keyword.Bluemix_notm}}-Anwendungsentwickler-Verwaltungsereignisse | {{site.data.keyword.Bluemix_notm}}-Verwaltungsereignisse (Cloud Foundry) | Ereignisse im Zusammenhang mit Operationen, die vom {{site.data.keyword.Bluemix_notm}}-Plattformbenutzer über die Befehlszeile, die REST-APIs oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle ausgeführt werden. |
-| {{site.data.keyword.Bluemix_notm}}-Administrator-Datenbankverwaltungsereignisse | Datenbankverwaltungsereignisse | Ereignisse im Zusammenhang mit Operationen, die von einem Datenbankadministrator in den internen {{site.data.keyword.Bluemix_notm}}-Datenbanken ausgeführt werden. |
-| Verwaltungsereignisse | Benutzerverwaltungsereignisse | Ereignisse im Zusammenhang mit Benutzerverwaltungsaktionen, die auf der Verwaltungsseite ausgeführt werden. |
-| Verwaltungsereignisse | Katalog | Ereignisse im Zusammenhang mit Änderungen am Servicekatalog |
-| Verwaltungsereignisse | Sicherheitsbericht-Verwaltungsereignisse | Ereignisse im Zusammenhang mit Sicherheitsbericht-Verwaltungsaktionen, die auf der Verwaltungsseite ausgeführt werden. |
-| Zugriffsprüfungen | Bericht über Zugriffsprüfungen | Prüfungen für berechtigte Zugriffe. |
-| Änderungsmanagement | Management von Softwareänderungen | Änderungsmanagementaktivität. |
-| Schlüsselmanagement | Verwaltung von angepassten SSL-Zertifikaten | Angepasste SSL-Zertifikate, die hochgeladen und gespeichert wurden. |
-| Verschlüsselung | Verschlüsselung von Daten bei der Übertragung | Konfigurierte Verschlüsselung von Daten bei der Übertragung. |
-| Virenschutz | Bericht zum Virenscan | Installierte Virenschutzsoftware. |
-| Software-Fix-Management | Patchanwendungsbericht | Angewendete Software-Fixes. |
-| Verwaltung von Sicherheitsvorfällen | Bericht zur Korrektur von Sicherheitsvorfällen | Nachweis von Sicherheitsvorfällen für die Verwaltung von Sicherheitsvorfällen. |
-
-*Tabelle 1. Liste der Sicherheitsberichte für {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated*
 
 # Zugehörige Links
-## Allgemein 
+## Allgemein
 * [Einhaltung von Sicherheitsbestimmungen von SoftLayer](http://www.softlayer.com/security)
 * [Einführung in Single Sign-On](../services/SingleSignOn/index.html)

@@ -16,7 +16,7 @@ copyright:
 # Mandatos {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 15 de abril de 2016*
 
 La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} proporciona un conjunto de mandatos que se agrupan por espacio de nombres para que los usuarios interactúen con {{site.data.keyword.Bluemix_notm}}. Algunos de los mandatos {{site.data.keyword.Bluemix_notm}} son envoltorios de mandatos cf, mientras que otros proporcionan posibilidades ampliadas para usuarios de {{site.data.keyword.Bluemix_notm}}. La información que se indica a continuación lista todos los mandatos soportados por {{site.data.keyword.Bluemix_notm}} CLI e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos.
 {:shortdesc}
@@ -30,16 +30,16 @@ La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} pr
 <dt>Target</dt>
 <dd>El mandato <code>bluemix target</code> debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
 <dt>Docker</dt>
-<dd>La CLI de Docker CLI (docker) debe estar instalada para poder ejecutar este mandato. </dd>
+<dd>La CLI de Docker CLI (docker) debe estar instalada para poder ejecutar este mandato.</dd>
 </dl>
 
-Puede usar los mandatos de {{site.data.keyword.Bluemix_notm}} siguientes: 
+Puede usar los mandatos de {{site.data.keyword.Bluemix_notm}} siguientes:
 
  <table role="presentation"> 
  <tbody> 
  <tr> 
- <td> 
- [ayuda de bluemix](index.html#bluemix_help)</td> 
+ <td>[bluemix help
+](index.html#bluemix_help)</td> 
  <td>[api de bluemix](index.html#bluemix_api)</td> 
  <td>[inicio de sesión de bluemix](index.html#bluemix_login)</td>
  <td>[cierre de sesión de bluemix](index.html#bluemix_logout)</td>
@@ -72,8 +72,8 @@ Puede usar los mandatos de {{site.data.keyword.Bluemix_notm}} siguientes:
  
  <tr> 
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete) </td> 
- <td>[bluemix iam user-create](index.html#bluemix_iam_user_create)</td> 
- <td>[bluemix iam user-delete](index.html#bluemix_iam_user_delete)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users) </td> 
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
@@ -260,11 +260,17 @@ Puede usar los mandatos de {{site.data.keyword.Bluemix_notm}} siguientes:
  <tr> 
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
- <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
- <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
-
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
  </tr>
  
+ <tr>
+ <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
+ </tr>
  
  
  </tbody> 
@@ -280,7 +286,7 @@ Muestra la ayuda general para mandatos incorporados de primer nivel y nombres de
 ayuda de bluemix [COMMAND|NAMESPACE]
 ```
 
-**Prerrequisitos**: Ninguno
+**Requisitos previos**: Ninguno
 
 **Opciones de mandatos**:
 
@@ -312,7 +318,7 @@ o
 bluemix ic help
 ```
 
-Muestra ayuda para el mandato `group-create` en el espacio de nombres `ic`: 
+Muestra ayuda para el mandato `group-create` en el espacio de nombres `ic`:
 
 ```
 bluemix ic help group-create
@@ -327,7 +333,7 @@ Establezca o visualice el punto final de su API de {{site.data.keyword.Bluemix_n
 api de bluemix [API_ENDPOINT][--unset]
 ```
 
-**Prerrequisitos**: Ninguno
+**Requisitos previos**: Ninguno
 
 **Opciones de mandato**:
 
@@ -365,7 +371,7 @@ Inicio de sesión de usuario. Este mandato acomoda el mandato `cf login`. Las op
 bluemix login [OPTIONS...]
 ```
 
-**Prerrequisitos**: Punto final
+**Requisitos previos**: Punto final
 
 **Opciones de mandato**:
 Para obtener información sobre las opciones soportadas por el mandato `login`, consulte la información de uso del mandato `cf login` para que los mandatos cf gestionen apps.
@@ -380,7 +386,7 @@ Cerrar sesión de usuario. Este mandato acomoda el mandato `cf logout`.
 cierre de sesión de bluemix
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 
 ## destino de bluemix
@@ -393,7 +399,7 @@ Establezca o visualice el espacio o la organización de destino. Este mandato ac
 destino bluemix [-o ORG_NAME] [-s SPACE_NAME]
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
@@ -427,7 +433,7 @@ Vea la información básica de {{site.data.keyword.Bluemix_notm}}, incluida la r
 información de bluemix
 ```
 
-**Prerrequisitos**:  Punto final
+**Requisitos previos**:  Punto final
 
 
 ## bluemix config
@@ -440,7 +446,7 @@ Escriba valores predeterminados en el archivo de configuración.
 bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/file) | --color (true|false) | --locale (LOCALE|CLEAR)
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 **Opciones de mandato**:
 
@@ -502,7 +508,7 @@ Lista todas las apps cf, los contenedores, los grupos de contenedor y los grupos
 lista de bluemix [apps|contenedores|container-groups|vm-groups]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
@@ -548,7 +554,7 @@ Escala verticalmente u horizontalmente la app cf o el grupo de contenedores a un
 bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT][-k DISK_QUOTA] [-m MEMORY_SIZE]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
@@ -584,44 +590,98 @@ escala bluemix mi-app-java -i 3 -k 8G -m 1024M
 ## curl bluemix
 {: #bluemix_curl}
 
-Ejecuta una solicitud HTTP sin procesar a {{site.data.keyword.Bluemix_notm}}. *Content-Type* se establece en *application/json* de forma predeterminada. Este mandato envía una solicitud al servidor de la consola {{site.data.keyword.Bluemix_notm}} (por ejemplo, https://console.ng.bluemix.net) en lugar del punto final API cf (por ejemplo, https://api.ng.bluemix.net).
+Ejecuta una solicitud HTTP sin procesar a {{site.data.keyword.Bluemix_notm}}. *Content-Type* se establece en *application/json* de forma predeterminada. Este mandato envía la solicitud a {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. Para obtener las vías de acceso admitidas, consulte las definiciones de vías de acceso de API en el [documento de API CloudFoundry](http://apidocs.cloudfoundry.org/){: new_window}.
 
 ```
 RUTA bluemix curl [OPCIONES...]
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
-*PATH*  (obligatorio):  vía de acceso de la URL del recurso. Por ejemplo, /rest/v2/apps.
+*PATH*  (obligatorio):  vía de acceso de la URL del recurso. Por ejemplo, /v2/apps.
 
 *OPTIONS*  (opcional):  las opciones a las que da soporte el mandato `bluemix curl` son las mismas que las del mandato `cf curl`.
 
 **Ejemplos**:
 
-Ver la información para todas las plantillas de contenedor modelo: 
+Vea la información para todas las organizaciones de la cuenta actual:
 
 ```
-bluemix curl /rest/templates
+bluemix curl /v2/organizations
 ```
 
 
 ## bluemix iam orgs
 {: #bluemix_iam_orgs}
-Este mandato tiene la misma función y opciones que el mandato `cf orgs`, excepto que también se muestran dichas regiones donde existen las organizaciones.
 
+Listar todas las organizaciones
+
+```
+bluemix iam orgs [-r REGION --guid]
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*-r REGION*  (opcional): para qué región se muestra la información de organización. Si se establece en 'all', se listan todas las organizaciones de todas las regiones. 
+
+*--guid* (opcional): Visualiza la GUID de las organizaciones.
+
+**Ejemplos**:
+Listar todas las organizaciones en la región: `us-south` con la GUID visualizada
+
+```
+bluemix iam orgs -r us-south --guid
+```
 
 ## bluemix iam org
 {: #bluemix_iam_org}
 
-Este mandato tiene la misma función y opciones que el mandato `cf org`, excepto que se muestran dichas regiones donde existe la organización.
+Mostrar la información para la organización especificada.
 
+```
+bluemix iam org ORG_NAME [--guid]
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*ORG_NAME* (obligatorio): El nombre de la organización.
+
+*--guid* (opcional): Visualiza la GUID de la organización.
+
+
+**Ejemplos**:
+Muestra la información de la organización `IBM` con el GUID visualizado
+
+```
+bluemix iam org IBM --guid
+```
 
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-org`.
+Crear una nueva organización. Esta operación solamente puede realizarla el propietario de cuenta.
+
+```
+bluemix iam org-create ORG_NAME
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*ORG_NAME* (obligatorio): El nombre de la organización que se está creando.
+
+**Ejemplos**: Crear una organización denominada `IBM`.
+
+```
+bluemix iam org-create IBM
+```
 
 
 ## bluemix iam org-replicate
@@ -633,7 +693,7 @@ Replicar una organización desde la región actual a otra región.
 bluemix iam org-replicate ORG_NAME REGION_NAME
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
@@ -643,24 +703,49 @@ bluemix iam org-replicate ORG_NAME REGION_NAME
 
 **Ejemplos**:
 
-Replicar la organización `OE_Runtimes_Scaling` en la región `eu-gb`:
+Replicar la organización `myorg` en la región `eu-gb`:
 
 ```
-bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
+bluemix iam org-replicate myorg eu-gb
 ```
 
 
 ## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf rename-org`.
+Cambiar el nombre de una organización. Esta operación solamente la puede llevar a cabo un gestor de organización.
+
+```
+bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*OLD_ORG_NAME* (obligatorio):  El nombre anterior de la organización que se va a renombrar.
+
+*NEW_ORG_NAME*  (obligatorio):  El nuevo nombre de la organización que se ha renombrado.
 
 
 ## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
+Suprimir la organización especificada en la región actual.
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-org`.
+```
+bluemix iam org-delete ORG_NAME [-f --all]
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*ORG_NAME* (obligatorio):  El nombre de la organización existente que se suprimirá.
+
+*-f* (opcional): Forzar supresión sin confirmación.
+
+*--all* (opcional): Suprimir la organización de todas las regiones.
 
 
 ## bluemix iam spaces
@@ -695,266 +780,465 @@ Este mandato tiene la misma función y las mismas opciones que el mandato que el
 Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-space`.
 
 
-## bluemix iam user-create
-{: #bluemix_iam_user_create}
+## bluemix iam account-users
+{: #bluemix_iam_account_users}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-user`.
+Muestra usuarios asociados con la cuenta. Esta operación solamente puede llevarla a cabo el propietario de cuenta.
+
+```
+bluemix iam account-users
+```
+
+## bluemix iam account-user-invite
+{: #bluemix_iam_account-user_inviate}
 
 
-## bluemix iam user-delete
-{: #bluemix_iam_user_delete}
+Invita a un usuario a la cuenta con una organización y un rol de espacio ya establecido. Esta operación solamente puede llevarla a cabo el propietario de cuenta.
+
+```
+bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-user`.
+**Opciones de mandato**:
 
+*USER_NAME* (obligatorio): El nombre del usuario que se invita.
+
+*ORG_NAME* (obligatorio): El nombre de la organización a la que se invita este usuario.
+
+*ORG_ROLE* (obligatorio): El nombre del rol de la organización a la que se invita este usuario. Por ejemplo:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, seleccionar y cambiar planes y establecer límites de gasto.</dd>
+<dt>BillingManager</dt>
+<dd>Este role puede crear y gestionar la cuenta de facturación y la información de pago.</dd>
+<dt>OrgAuditor</dt>
+<dd>Este rol tiene acceso de sólo lectura a informes e información de organización.</dd>
+</dl> 
+
+*SPACE_NAME* (obligatorio): El nombre del espacio al que se invita este usuario.
+
+*SPACE_ROLE* (obligatorio): El nombre del rol de espacio al que se invita este usuario. Por ejemplo:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, y habilitar características para un espacio dado.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>Este rol puede crear y gestionar apps y servicios, y ver registros e informes.</dd>
+<dt>SpaceAuditor</dt>
+<dd>Este rol puede ver los registros, informes y valores para el espacio.</dd>
+</dl> 
+
+**Ejemplos**:
+
+Invite al usuario `Mary` a la organización `IBM` como rol `OrgManager` y el espacio `Cloud` como rol `SpaceAuditor`:
+
+```
+bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+```
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf org-users`.
+Visualice usuarios en el archivo de organización según el rol.
+
+```
+bluemix iam org-users ORG_NAME [-a]
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*ORG_NAME* (obligatorio): El nombre de la organización.
+
+*-a* (opcional): Listar todos los usuarios de la organización especificada, no agrupada por role.
 
 
 ## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf set-org-role`.
+Asignar un rol de organización a un usuario. Esta operación solamente la puede llevar a cabo un gestor de  organización.
+
+```
+bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*USER_NAME* (obligatorio): El nombre del usuario que se asigna.
+
+*ORG_NAME* (obligatorio): El nombre de la organización a la que se asigna este usuario.
+
+*ORG_ROLE* (obligatorio): El nombre del rol de la organización a la que se asigna este usuario. Por ejemplo:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, seleccionar y cambiar planes y establecer límites de gasto.</dd>
+<dt>BillingManager</dt>
+<dd>Este role puede crear y gestionar la cuenta de facturación y la información de pago.</dd>
+<dt>OrgAuditor</dt>
+<dd>Este rol tiene acceso de sólo lectura a informes e información de organización.</dd>
+</dl> 
+
+**Ejemplos**:
+
+Asigne el usuario `Mary` a la organización `IBM` como rol `OrgManager`. 
+
+```
+bluemix iam org-role-set Mary IBM OrgManager
+```
 
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf unset-org-role`.
+Elimine un rol de organización de un usuario. Esta operación solamente la puede llevar a cabo un gestor de  organización.
+
+```
+bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*USER_NAME* (obligatorio): El nombre del usuario que se elimina.
+
+*ORG_NAME* (obligatorio): El nombre de la organización de la que se elimina el usuario.
+
+*ORG_ROLE* (obligatorio): El nombre del rol de la organización de la que se elimina este usuario. Por ejemplo:
+
+<dl>
+<dt>OrgManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, seleccionar y cambiar planes y establecer límites de gasto.</dd>
+<dt>BillingManager</dt>
+<dd>Este role puede crear y gestionar la cuenta de facturación y la información de pago.</dd>
+<dt>OrgAuditor</dt>
+<dd>Este rol tiene acceso de sólo lectura a informes e información de organización.</dd>
+</dl> 
+
+**Ejemplos**:
+
+Elimine el usuario `Mary` de la organización `IBM` como rol `OrgManager`:
+
+```
+bluemix iam org-role-unset Mary IBM OrgManager
+```
 
 
 ## bluemix iam space-users
 {: #bluemix_iam_space_users}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf space-users`.
+Visualice usuarios en el espacio especificado según el rol.
+
+```
+bluemix iam space-users ORG_NAME SPACE_NAME
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*ORG_NAME* (obligatorio): El nombre de la organización
+
+*SPACE_NAME* (obligatorio): El nombre del espacio.
 
 
 ## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf set-space-role`.
+Asignar un rol de espacio a un usuario. Esta operación solamente la puede llevar a cabo un gestor de espacios.
 
+```
+bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*USER_NAME* (obligatorio): El nombre del usuario que se asigna.
+
+*ORG_NAME* (obligatorio): El nombre de la organización a la que se asigna este usuario.
+
+*SPACE_NAME* (obligatorio): El nombre del espacio al que se asigna este usuario.
+
+*SPACE_ROLE* (obligatorio): El nombre del rol de espacio al que se asigna este usuario. Por ejemplo:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, y habilitar características para un espacio dado.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>Este rol puede crear y gestionar apps y servicios, y ver registros e informes.</dd>
+<dt>SpaceAuditor</dt>
+<dd>Este rol puede ver los registros, informes y valores para el espacio.</dd>
+</dl> 
+
+
+**Ejemplos**:
+
+Asigne el usuario `Mary` a la organización `IBM` y el espacio `Cloud` como rol `SpaceManager`:
+
+```
+bluemix iam space-role-set Mary IBM Cloud SpaceManager
+```
 
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf unset-space-role`.
+Elimine un rol de espacio de un usuario. Esta operación solamente la puede llevar a cabo un gestor de espacios.
+
+```
+bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**Requisitos previos**:  Punto final, Inicio de sesión
+
+**Opciones de mandato**:
+
+*USER_NAME* (obligatorio): El nombre del usuario que se elimina.
+
+*ORG_NAME* (obligatorio): El nombre de la organización de la que se elimina el usuario.
+
+*SPACE_NAME* (obligatorio): El nombre del espacio del que se elimina este usuario.
+
+*SPACE_ROLE* (obligatorio): El nombre del rol de espacio del que se elimina este usuario. Por ejemplo:
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>Este rol puede invitar y gestionar usuarios, y habilitar características para un espacio dado.</dd>
+<dt>SpaceDeveloper</dt>
+<dd>Este rol puede crear y gestionar apps y servicios, y ver registros e informes.</dd>
+<dt>SpaceAuditor</dt>
+<dd>Este rol puede ver los registros, informes y valores para el espacio.</dd>
+</dl> 
+
+**Ejemplos**:
+
+Elimine el usuario `Mary` de la organización `IBM` y el espacio `Cloud` como rol `SpaceManager`: 
+
+```
+bluemix iam space-role-unset Mary IBM Cloud SpaceManager
+```
 
 
 ## bluemix app push
 {: #bluemix_app_push}
 
-Este mandato tiene la misma función y opciones que el mandato `cf push`. 
+Este mandato tiene la misma función y opciones que el mandato `cf push`.
 
 
 ## bluemix app list
 {: #bluemix_app_list}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf apps`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf apps`.
 
 
 ## bluemix app show
 {: #bluemix_app_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf app`. 
+Este mandato tiene la misma función y opciones que el mandato `cf app`.
 
 
 ## bluemix app scale
 {: #bluemix_app_scale}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf scale`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf scale`.
 
 
 ## bluemix app delete
 {: #bluemix_app_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete`. 
+Este mandato tiene la misma función y opciones que el mandato `cf delete`.
 
 
 ## bluemix app rename
 {: #bluemix_app_rename}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf rename`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf rename`.
 
 
 ## bluemix app start
 {: #bluemix_app_start}
 
-Este mandato tiene la misma función y opciones que el mandato `cf start`. 
+Este mandato tiene la misma función y opciones que el mandato `cf start`.
 
 
 ## bluemix app stop
 {: #bluemix_app_stop}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf stop`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf stop`.
 
 
 ## bluemix app restart
 {: #bluemix_app_restart}
 
-Este mandato tiene la misma función y opciones que el mandato `cf restart`. 
+Este mandato tiene la misma función y opciones que el mandato `cf restart`.
 
 
 ## bluemix app restage
 {: #bluemix_app_restage}
 
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf restage`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf restage`.
 
 
 ## bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
-Este mandato tiene la misma función y opciones que el mandato `cf restart-app-instance`. 
+Este mandato tiene la misma función y opciones que el mandato `cf restart-app-instance`.
 
 
 ## bluemix app events
 {: #bluemix_app_events}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf events`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf events`.
 
 
 ## bluemix app files
 {: #bluemix_app_files}
 
-Este mandato tiene la misma función y opciones que el mandato `cf files`. 
+Este mandato tiene la misma función y opciones que el mandato `cf files`.
 
 
 ## bluemix app logs
 {: #bluemix_app_logs}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf logs`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf logs`.
 
 
 ## bluemix app env
 {: #bluemix_app_env}
 
-Este mandato tiene la misma función y opciones que el mandato `cf env`. 
+Este mandato tiene la misma función y opciones que el mandato `cf env`.
 
 
 ## bluemix app env-set
 {: #bluemix_app_env_set}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf set-env`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf set-env`.
 
 
 ## bluemix app env-unset
 {: #bluemix_app_env_unset}
 
-Este mandato tiene la misma función y opciones que el mandato `cf unset-env`. 
+Este mandato tiene la misma función y opciones que el mandato `cf unset-env`.
 
 
 ## bluemix app stacks
 {: #bluemix_app_stacks}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf stacks`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf stacks`.
 
 
 ## bluemix app stack
 {: #bluemix_app_stack}
 
-Este mandato tiene la misma función y opciones que el mandato `cf stack`. 
+Este mandato tiene la misma función y opciones que el mandato `cf stack`.
 
 
 ## bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-app-manifest`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-app-manifest`.
 
 
 ## bluemix service offerings
 {: #bluemix_service_offerings}
 
 
-Este mandato tiene la misma función y opciones que el mandato `cf marketplace`. 
+Este mandato tiene la misma función y opciones que el mandato `cf marketplace`.
 
 
 ## bluemix service list
 {: #bluemix_service_list}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf services`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf services`.
 
 
 ## bluemix service show
 {: #bluemix_service_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf service`. 
+Este mandato tiene la misma función y opciones que el mandato `cf service`.
 
 
 ## bluemix service create
 {: #bluemix_service_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service`.
 
 
 ## bluemix service update
 {: #bluemix_service_update}
 
-Este mandato tiene la misma función y opciones que el mandato `cf update-service`. 
+Este mandato tiene la misma función y opciones que el mandato `cf update-service`.
 
 
 ## bluemix service delete
 {: #bluemix_service_delete}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-service`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf delete-service`.
 
 
 ## bluemix service rename
 {: #bluemix_service_rename}
 
-Este mandato tiene la misma función y opciones que el mandato `cf rename-service`. 
+Este mandato tiene la misma función y opciones que el mandato `cf rename-service`.
 
 
 ## bluemix service bind
 {: #bluemix_service_bind}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf bind-service`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf bind-service`.
 
 
 ## bluemix service unbind
 {: #bluemix_service_unbind}
 
-Este mandato tiene la misma función y opciones que el mandato `cf unbind-service`. 
+Este mandato tiene la misma función y opciones que el mandato `cf unbind-service`.
 
 
 ## bluemix service key-create
 {: #bluemix_service_key_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service-key`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-service-key`.
 
 
 ## bluemix service key-delete
 {: #bluemix_service_key_delete}
 
-Este mandato tiene la misma función y opciones que el mandato `cf delete-service-key`. 
+Este mandato tiene la misma función y opciones que el mandato `cf delete-service-key`.
 
 
 ## bluemix service keys
 {: #bluemix_service_keys}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf service-keys`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf service-keys`.
 
 
 ## bluemix service key-show
 {: #bluemix_service_key_show}
 
-Este mandato tiene la misma función y opciones que el mandato `cf service-key`. 
+Este mandato tiene la misma función y opciones que el mandato `cf service-key`.
 
 
 ## bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
-Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-user-provided-service`. 
+Este mandato tiene la misma función y las mismas opciones que el mandato `cf create-user-provided-service`.
 
 
 ## bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
-Este mandato tiene la misma función y opciones que el mandato `cf update-user-provided-service`. 
+Este mandato tiene la misma función y opciones que el mandato `cf update-user-provided-service`.
 
 
 ## bluemix catalog templates
@@ -966,7 +1250,7 @@ Visualizar las plantillas de contenedor modelo en Bluemix.
 plantillas de catálogo de bluemix [-d]
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
@@ -976,21 +1260,21 @@ plantillas de catálogo de bluemix [-d]
 ## bluemix catalog template
 {: #bluemix_catalog_template}
 
-Ver la información detallada de una plantilla de contenedor modelo especificada. 
+Ver la información detallada de una plantilla de contenedor modelo especificada.
 
 ```
 bluemix catalog template TEMPLATE_ID
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
-*TEMPLATE_ID* (obligatorio):  El ID de la plantilla de contenedor modelo. Utilice 'bluemix templates' para ver todos los ID de plantillas. 
+*TEMPLATE_ID* (obligatorio):  El ID de la plantilla de contenedor modelo. Utilice 'bluemix templates' para ver todos los ID de plantillas.
 
 **Ejemplos**:
 
-Ver detalles de la plantilla `mobileBackendStarter`: 
+Ver detalles de la plantilla `mobileBackendStarter`:
 
 ```
 bluemix catalog template mobileBackendStarter
@@ -1006,7 +1290,7 @@ Crea una app cf que se base en la plantilla específica con la URL y la descripc
 bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -1050,7 +1334,7 @@ Visualiza la información para todas las regiones en {{site.data.keyword.Bluemix
 regiones de red bluemix
 ```
 
-**Prerrequisitos**:  Punto final
+**Requisitos previos**:  Punto final
 
 
 ## bluemix network region-set
@@ -1062,11 +1346,11 @@ Se dirige a la región que se ha especificado. Este mandato vuelve a dirigirse a
 bluemix network region-set REGION_NAME
 ```
 
-**Prerrequisitos**:  Punto final
+**Requisitos previos**:  Punto final
 
 **Opciones de mandato**:
 
-*REGION_NAME* (obligatorio): El nombre de la región a la que desea cambiar. Puede utilizar el mandato `bluemix network regions` para visualizar todos los nombres de región. 
+*REGION_NAME* (obligatorio): El nombre de la región a la que desea cambiar. Puede utilizar el mandato `bluemix network regions` para visualizar todos los nombres de región.
 
 **Ejemplos**:
 
@@ -1098,7 +1382,7 @@ Correlacione una ruta a una app cf o grupo de contenedores que tenga un dominio 
 bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
@@ -1132,7 +1416,7 @@ Elimina la correlación entre la ruta específica y una app cf existente o grupo
 bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAME]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
@@ -1208,21 +1492,21 @@ Este mandato tiene la misma función y las mismas opciones que el mandato `cf de
 ## bluemix security cert
 {: #bluemix_security_cert}
 
-Listar la información de certificado para el host especificado.
+Liste la información de certificado de un dominio.
 
 ```
-bluemix security cert HOST_NAME
+bluemix security cert DOMAIN_NAME
 ```
 
-**Prerrequisitos**:  Punto final, Inicio de sesión
+**Requisitos previos**:  Punto final, Inicio de sesión
 
 **Opciones de mandato**:
 
-*HOST_NAME* (obligatorio):  El nombre del servidor que aloja el certificado.
+*DOMAIN_NAME* (obligatorio): El dominio que aloja el certificado.
 
 **Ejemplos**:
 
-Ver el certificado en el host `ibmcxo-eventconnect.com`:
+Ver la información de certificado del dominio `ibmcxo-eventconnect.com`:
 
 ```
 bluemix security cert ibmcxo-eventconnect.com
@@ -1238,7 +1522,7 @@ Añadir un certificado para el dominio especificado en la organización actual.
 bluemix security cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD][-i INTERMEDIATE_CERT_FILE] [--verify-client]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -1272,7 +1556,7 @@ Eliminar un certificado del dominio especificado en la organización actual.
 bluemix security cert-remove DOMAIN [-f]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -1295,7 +1579,7 @@ Cree una lista de todos los repositorios de plugin que se registran en {{site.da
 bluemix plugin repos
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 
 ## bluemix plugin repo-add
@@ -1307,7 +1591,7 @@ Agrega un nuevo repositorio de plugin a {{site.data.keyword.Bluemix_notm}} CLI.
 bluemix plugin repo-add REPO_NAME REPO_URL
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 **Opciones de mandato**:
 
@@ -1333,7 +1617,7 @@ Elimina el repositorio de plugins de {{site.data.keyword.Bluemix_notm}} CLI.
 bluemix plugin repo-remove REPO_NAME
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 **Opciones de mandato**:
 
@@ -1357,7 +1641,7 @@ Crea una lista de todos los plugins disponibles en todos los repositorios o repo
 bluemix plugin repo-plugins [-r REPO_NAME]
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 **Opciones de mandato**:
 
@@ -1387,7 +1671,7 @@ Crea una lista de todos los plugins instalados en {{site.data.keyword.Bluemix_no
 bluemix plugin list
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 
 ## bluemix plugin install
@@ -1399,7 +1683,7 @@ Instalar la versión específica del plugin en {{site.data.keyword.Bluemix_notm}
 bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME][-v VERSION]
 ```
 
-**Prerrequisitos**: Ninguno
+**Requisitos previos**: Ninguno
 
 **Opciones de mandatos**:
 
@@ -1447,7 +1731,7 @@ Desinstala el plugin especificado desde {{site.data.keyword.Bluemix_notm}} CLI.
 bluemix plugin uninstall PLUGIN_NAME
 ```
 
-**Prerrequisitos**:  Ninguno
+**Requisitos previos**:  Ninguno
 
 **Opciones de mandato**:
 
@@ -1465,19 +1749,19 @@ bluemix plugin uninstall IBM-Containers
 ## bluemix ic init
 {: #bluemix_ic_init}
 
-Inicializar el entorno de contenedores en su máquina local para usar todas las posibilidades del servicio IBM Containers. 
+Inicializar el entorno de contenedores en su máquina local para usar todas las posibilidades del servicio IBM Containers.
 
 ```
 bluemix ic init
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
-**Nota:** antes de la inicialización, asegúrese de que la CLI de Docker (docker) esté instalada y configurada en su variable de entorno PATH. Para cambiar a otra región, utilice el mandato `bluemix region-set`.  
+**Nota:** antes de la inicialización, asegúrese de que la CLI de Docker (docker) esté instalada y configurada en su variable de entorno PATH. Para cambiar a otra región, utilice el mandato `bluemix region-set`. 
 
 **Ejemplos**:
 
-Cambiar a la región `us-south`: 
+Cambiar a la región `us-south`:
 
 ```
 bluemix region-set us-south
@@ -1487,7 +1771,7 @@ bluemix region-set us-south
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Controlar un contenedor en ejecución o ver su resultado. Utilice `CTRL+C` para salir y detener el contenedor. Este mandato llama a la CLI de Docker. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/attach/" target="_blank">attach</a> en la ayuda de Docker.  
+Controlar un contenedor en ejecución o ver su resultado. Utilice `CTRL+C` para salir y detener el contenedor. Este mandato llama a la CLI de Docker. Para obtener más información, consulte el mandato [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} en la ayuda de Docker. 
 
 ```
 bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
@@ -1497,11 +1781,11 @@ bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
 
 **Opciones de mandato**:
 
---no-stdin  (opcional):  no incluir la entrada estándar. 
+--no-stdin  (opcional):  no incluir la entrada estándar.
 
---sig-proxy  (opcional):  usar proxy de todas las señales recibidas para el proceso. El valor predeterminado es **true**. 
+--sig-proxy  (opcional):  usar proxy de todas las señales recibidas para el proceso. El valor predeterminado es **true**.
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Ejemplos**:
 
@@ -1514,7 +1798,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-Llama al servicio de compilación de IBM Containers para compilar una imagen Docker en local o en su repositorio privado de {{site.data.keyword.Bluemix_notm}}. Este mandato llama a la CLI de Docker. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/build/" target="_blank">build</a> en la ayuda de Docker.  
+Llama al servicio de compilación de IBM Containers para compilar una imagen Docker en local o en su repositorio privado de {{site.data.keyword.Bluemix_notm}}. Este mandato llama a la CLI de Docker. Para obtener más información, consulte el mandato [build](https://docs.docker.com/reference/commandline/build/){: new_window} en la ayuda de Docker. 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -1524,13 +1808,13 @@ bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFIL
 
 **Opciones de mandato**:
 
--t *TAG*|--tag *TAG*  (obligatorio): el nombre de repositorio a aplicar a la imagen que se crea. 
+-t *TAG*|--tag *TAG*  (obligatorio): el nombre de repositorio a aplicar a la imagen que se crea.
 
---no-cache  (opcional): no utilizar la caché cuando se construye la imagen. El valor predeterminado es **false**. 
+--no-cache  (opcional): no utilizar la caché cuando se construye la imagen. El valor predeterminado es **false**.
 
--p|--pull  (opcional): Intenta obtener (pull) la imagen base del registro, aunque esté en la memoria caché. 
+-p|--pull  (opcional): Intenta obtener (pull) la imagen base del registro, aunque esté en la memoria caché.
 
--q|--quiet  (opcional): Elimina la salida detallada que generan los contenedores. El valor predeterminado es **false**. 
+-q|--quiet  (opcional): Elimina la salida detallada que generan los contenedores. El valor predeterminado es **false**.
 
 *DOCKERFILE_LOCATION*  (obligatorio): La vía de acceso a Dockerfile y contexto en el host local.
 
@@ -1545,35 +1829,35 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ## bluemix ic create
 {: #bluemix_ic_create}
 
-Crear un nuevo contenedor en su repositorio de {{site.data.keyword.Bluemix_notm}}. Este mandato envuelve el mandato `docker create`. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/create/" target="_blank">create</a> en la ayuda de Docker. 
+Crear un nuevo contenedor en su repositorio de {{site.data.keyword.Bluemix_notm}}. Este mandato envuelve el mandato `docker create`. Para obtener más información, consulte el mandato [create](https://docs.docker.com/reference/commandline/create/){: new_window} en la ayuda de Docker.
 
 
 ## bluemix ic cpi
 {: #bluemix_ic_cpi}
 
-Acceder a una imagen Docker Hub o una imagen desde su registro local y copiar la imagen en su repositorio privado de {{site.data.keyword.Bluemix_notm}}. 
+Acceder a una imagen Docker Hub o una imagen desde su registro local y copiar la imagen en su repositorio privado de {{site.data.keyword.Bluemix_notm}}.
 
 ```
 bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*SOURCE_IMAGE*  (obligatorio): El repositorio de origen y el nombre de la imagen. 
+*SOURCE_IMAGE*  (obligatorio): El repositorio de origen y el nombre de la imagen.
 
 *DESTINATION_IMAGE*  (obligatorio): el URL del repositorio {{site.data.keyword.Bluemix_notm}} privado, que incluye el espacio de nombres y el nombre de la imagen de destino. La etiqueta de la imagen es opcional.
 
 **Ejemplos**:
 
-Copiar una imagen del repositorio de origen a su repositorio privado y añadir una etiqueta a la imagen: 
+Copiar una imagen del repositorio de origen a su repositorio privado y añadir una etiqueta a la imagen:
 
 ```
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
 ```
 
-Copiar la imagen `sinatra` desde el repositorio `training` a su repositorio privado `registry.ng.bluemix.net/mynamespace` y llamar a la imagen `mysinatra`. Añadir una etiqueta `v1` a la imagen `mysinatra`.  
+Copiar la imagen `sinatra` desde el repositorio `training` a su repositorio privado `registry.ng.bluemix.net/mynamespace` y llamar a la imagen `mysinatra`. Añadir una etiqueta `v1` a la imagen `mysinatra`. 
 
 ```
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
@@ -1584,7 +1868,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 {: #bluemix_ic_exec}
 
 
-Ejecutar un mandato dentro de un contenedor. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/exec/" target="_blank">exec</a> en la ayuda de Docker. 
+Ejecutar un mandato dentro de un contenedor. Para obtener más información, consulte el mandato [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -1594,25 +1878,25 @@ bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
 
 **Opciones de mandato**:
 
--d|--detach  (opcional): ejecutar el mandato especificado en segundo plano. 
+-d|--detach  (opcional): ejecutar el mandato especificado en segundo plano.
 
--it  (opcional): modalidad interactiva. Mantenga visualizada la entrada estándar. Escriba `exit` para salir. 
+-it  (opcional): modalidad interactiva. Mantenga visualizada la entrada estándar. Escriba `exit` para salir.
 
--u *USER*|--user *USER*  (opcional): El nombre de usuario. 
+-u *USER*|--user *USER*  (opcional): El nombre de usuario.
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
-*CMD*  (opcional): el mandato a ejecutar dentro del contenedor o contenedores especificados. 
+*CMD*  (opcional): el mandato a ejecutar dentro del contenedor o contenedores especificados.
 
 **Ejemplos**:
 
-Ejecute el mandato `bash` dentro del contenedor `my_container` en modalidad interactiva: 
+Ejecute el mandato `bash` dentro del contenedor `my_container` en modalidad interactiva:
 
 ```
 bluemix ic exec -it my_container bash
 ```
 
-Ejecutar el mandato `date` dentro del contenedor `my_container`: 
+Ejecutar el mandato `date` dentro del contenedor `my_container`:
 
 ```
 bluemix ic exec my_container date
@@ -1622,25 +1906,25 @@ bluemix ic exec my_container date
 ## bluemix ic groups
 {: #bluemix_ic_groups}
 
-Listar grupos de contenedor en el repositorio privado de {{site.data.keyword.Bluemix_notm}} de la organización. 
+Listar grupos de contenedor en el repositorio privado de {{site.data.keyword.Bluemix_notm}} de la organización.
 
 ```
 bluemix ic groups
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 
 ## bluemix ic group-inspect
 {: #bluemix_ic_group_inspect}
 
-Ver información detallada, como variables de entorno, puertos o memoria, especificada para un grupo de contenedores cuando se crea. 
+Ver información detallada, como variables de entorno, puertos o memoria, especificada para un grupo de contenedores cuando se crea.
 
 ```
 bluemix ic group-inspect CONTAINER_GROUP
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -1657,13 +1941,13 @@ bluemix ic group-inspect my_group
 ## bluemix ic group-instances
 {: #bluemix_ic_group_instances}
 
-Listar instancias de un grupo de contenedores especificado. 
+Listar instancias de un grupo de contenedores especificado.
 
 ```
 bluemix ic group-instances CONTAINER_GROUP
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
@@ -1680,85 +1964,85 @@ bluemix ic group-instances my_group
 ## bluemix ic group-create
 {: #bluemix_ic_group_create}
 
-Crear un grupo de contenedores escalable. 
+Crear un grupo de contenedores escalable.
 
 ```
 bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e ENV|--env ENV][-v VOLUME:CONTAINER_PATH] [--min MIN][--max MAX] [--desired DESIRED][--auto] [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
--m *MEMORY*|--memory *MEMORY*  (opcional): asignar límite de memoria al grupo en MB. Cuando crea un grupo de contenedores desde la CLI, el valor predeterminado para cada contenedor de instancia es `64` MB. Cuando crea un grupo de contenedores desde el Panel de control de {{site.data.keyword.Bluemix_notm}}, el valor predeterminado para cada instancia es `256` MB. Los valores que se aceptan son `64`, `256`, `512`, `1024` y `2048`. Una vez asignado el límite de memoria, el valor no se puede cambiar. 
+-m *MEMORY*|--memory *MEMORY*  (opcional): asignar límite de memoria al grupo en MB. Cuando crea un grupo de contenedores desde la CLI, el valor predeterminado para cada contenedor de instancia es `64` MB. Cuando crea un grupo de contenedores desde el Panel de control de {{site.data.keyword.Bluemix_notm}}, el valor predeterminado para cada instancia es `256` MB. Los valores que se aceptan son `64`, `256`, `512`, `1024` y `2048`. Una vez asignado el límite de memoria, el valor no se puede cambiar.
 
--e *ENV*|--env *ENV*  (opcional):  establecer la variable de entorno, donde **ENV** es un par `key=value`. Listar varias claves por separado. Si se incluyen comillas, inclúyalas para el nombre para el valor de la variable de entorno. Por ejemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  En la tabla siguiente se muestran algunas variables de entorno usadas con frecuencia que puede especificar: 
+-e *ENV*|--env *ENV*  (opcional):  establecer la variable de entorno, donde **ENV** es un par `key=value`. Listar varias claves por separado. Si se incluyen comillas, inclúyalas para el nombre para el valor de la variable de entorno. Por ejemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  En la tabla siguiente se muestran algunas variables de entorno usadas con frecuencia que puede especificar:
 
 |  Variable de entorno                              |     Descripción                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Enlazar un servicio con un contenedor. Usar la variable de entorno `CCS_BIND_APP` para enlazar una app con el contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">Enlazar un servicio a un
-contenedor</a>.  |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Añadir una clave SSH a un contenedor al crear el contenedor. Puede añadir la clave SSH utilizando la variable de entorno al crear el contenedor desde el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} o desde la CLI. Para obtener más información sobre claves SSH, consulte <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">Inicio de sesión en un contenedor</a>.  |
-| LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro.  |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Enlazar un servicio con un contenedor. Usar la variable de entorno `CCS_BIND_APP` para enlazar una app con el contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un
+contenedor](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Añadir una clave SSH a un contenedor al crear el contenedor. Puede añadir la clave SSH utilizando la variable de entorno al crear el contenedor desde el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} o desde la CLI. Para obtener más información sobre claves SSH, consulte [Inicio de sesión en un contenedor](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
+| LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
 *Tabla 1. Variables de entorno más utilizadas*
 
--v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]  (optional):  adjuntar un volumen a un contenedor especificando los detalles en formato `VolumeId:ContainerPath[:ro]`. 
+-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]  (optional):  adjuntar un volumen a un contenedor especificando los detalles en formato `VolumeId:ContainerPath[:ro]`.
 
-- *VOLUME*: el ID de volumen o nombre. 
+- *VOLUME*: el ID de volumen o nombre.
 - *CONTAINER_PATH*: La vía de acceso absoluta al volumen en el contenedor.
-- ro: opcional. Si se especifica `ro`, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación). 
+- ro: opcional. Si se especifica `ro`, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación).
 
--p *PORT*|--publish *PORT*  (opcional):  ofrecer el puerto para el tráfico HTTP. Los contenedores de su grupo deben atender a su puerto HTTP. No se pueden hacer solicitudes HTTPS. Para grupos de contenedor, no puede incluir varios puertos. 
+-p *PORT*|--publish *PORT*  (opcional):  ofrecer el puerto para el tráfico HTTP. Los contenedores de su grupo deben atender a su puerto HTTP. No se pueden hacer solicitudes HTTPS. Para grupos de contenedor, no puede incluir varios puertos.
 
-Cuando especifique un puerto, haga que su app esté disponible para el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} o los contenedores que intentan establecer contacto con el host en el mismo espacio de {{site.data.keyword.Bluemix_notm}}. Si especifica un puerto en el archivo de Docker para la imagen que está utilizando, incluya dicho puerto. 
+Cuando especifique un puerto, haga que su app esté disponible para el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} o los contenedores que intentan establecer contacto con el host en el mismo espacio de {{site.data.keyword.Bluemix_notm}}. A continuación, los contenedores y el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} pueden utilizar el puerto para alcanzar el host y la app en el mismo espacio de {{site.data.keyword.Bluemix_notm}}. Si especifica un puerto en el archivo de Docker para la imagen que está utilizando, incluya dicho puerto.
 
 **Sugerencia:**
 
-- Para la imagen Liberty Server certificada de IBM o una versión modificada, especifique el puerto 9080. 
-- Para la imagen Node.js certificada de IBM o una versión modificada de esta imagen, especifique el puerto 8000. 
+- Para la imagen Liberty Server certificada de IBM o una versión modificada, especifique el puerto 9080.
+- Para la imagen Node.js certificada de IBM o una versión modificada de esta imagen, especifique el puerto 8000.
 
---min *MIN*  (opcional):  el número mínimo de instancias. El valor predeterminado es **1**. Si establece un número mínimo de instancias, el valor no se puede cambiar una vez creado el grupo de contenedor. 
+--min *MIN*  (opcional):  el número mínimo de instancias. El valor predeterminado es **1**. Si establece un número mínimo de instancias, el valor no se puede cambiar una vez creado el grupo de contenedor.
 
---max *MAX*  (opcional):  el número máximo de instancias. El valor predeterminado es **2**. Si establece un número máximo de instancias, el valor no se puede cambiar una vez creado el grupo de contenedor. 
+--max *MAX*  (opcional):  el número máximo de instancias. El valor predeterminado es **2**. Si establece un número máximo de instancias, el valor no se puede cambiar una vez creado el grupo de contenedor.
 
 --desired *DESIRED*  (opcional):  el número de instancias que necesite. El valor predeterminado es **2**.
 
---auto  (opcional):  cuando el grupo de contenedores se crea y se habilita la recuperación automática, IBM Containers comprueba el estado de cada instancia con una solicitud HTTP para el puerto que se asigna. 
+--auto  (opcional):  cuando el grupo de contenedores se crea y se habilita la recuperación automática, IBM Containers comprueba el estado de cada instancia con una solicitud HTTP para el puerto que se asigna.
 
 Si no se recibe respuesta desde una instancia de contenedor en 2 intervalos subsecuentes de 90 segundos, la instancia se elimina y se sustituye por una instancia nueva. Si el contenedor no responde, no debe llevarse a cabo ninguna acción. Este proceso se repite continuamente. En un espacio de tiempo de 30 minutos, si el número total de contenedores distintos que son miembros del grupo es igual a (o supera) 3 veces el tamaño máximo observado del grupo, la recuperación automática se inhabilita de forma permanente para el grupo de contenedores. Para habilitar de nuevo la recuperación automática, debe volver a crear el grupo de contenedores.
 
--n *HOST*|--hostname *HOST*  (opcional):  el nombre de host, como `mycontainerhost`. El host y el dominio se combinan para formar un URL de direccionamiento público completo, como `http://mycontainerhost.mybluemix.net`. Cuando revise los detalles de un grupo de contenedores con el mandato `bluemix ic group-inspect`, el host y el dominio se listan juntos como la ruta. 
+-n *HOST*|--hostname *HOST*  (opcional):  el nombre de host, como `mycontainerhost`. El host y el dominio se combinan para formar un URL de direccionamiento público completo, como `http://mycontainerhost.mybluemix.net`. Cuando revise los detalles de un grupo de contenedores con el mandato `bluemix ic group-inspect`, el host y el dominio se listan juntos como la ruta.
 
--d *DOMAIN*|--domain *DOMAIN*  (opcional): por lo general, el dominio es `.mybluemix.net`. El host y el dominio se combinan para formar el URL de direccionamiento público completo, como `http://mycontainerhost.mybluemix.net`. Cuando revise los detalles de un grupo de contenedores con el mandato `bluemix ic group-inspect`, el host y el dominio se listan juntos como la ruta. 
+-d *DOMAIN*|--domain *DOMAIN*  (opcional): por lo general, el dominio es `.mybluemix.net`. El host y el dominio se combinan para formar el URL de direccionamiento público completo, como `http://mycontainerhost.mybluemix.net`. Cuando revise los detalles de un grupo de contenedores con el mandato `bluemix ic group-inspect`, el host y el dominio se listan juntos como la ruta.
 
---name *NAME*  (obligatorio): asignar un nombre al grupo. `-n` está en desuso. 
+--name *NAME*  (obligatorio): asignar un nombre al grupo. `-n` está en desuso.
 
-**Sugerencia:** el nombre de contenedor debe empezar por una letra. El nombre puede incluir mayúsculas, minúsculas, números, puntos `.`, subrayados `_` o guiones `-`. 
+**Sugerencia:** el nombre de contenedor debe empezar por una letra. El nombre puede incluir mayúsculas, minúsculas, números, puntos `.`, subrayados `_` o guiones `-`.
 
-*IMAGE*  (obligatorio): la imagen a incluir en cada instancia de contenedor en el grupo de contenedores. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen. 
+*IMAGE*  (obligatorio): la imagen a incluir en cada instancia de contenedor en el grupo de contenedores. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen.
 
 Si utiliza una imagen en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización, especifique la imagen en el formato: `registry.ng.bluemix.net/NAMESPACE/IMAGE`.
 
 Si usa una imagen proporcionada por IBM Containers, no incluya el espacio de nombres de la organización. Especifique la imagen en el formato:
 `registry.ng.bluemix.net/IMAGE`.
 
-*CMD*  (opcional): el mandato y los argumentos se pasan al grupo de contenedor a ejecutar. Este mandato debe ser un mandato de larga ejecución. No utilice un mandato breve que no se ejecute durante mucho tiempo, como por ejemplo **/bin/date**, porque los mandatos de vida breve podrían hacer que el contenedor se bloqueara. 
+*CMD*  (opcional): el mandato y los argumentos se pasan al grupo de contenedor a ejecutar. Este mandato debe ser un mandato de larga ejecución. No utilice un mandato breve que no se ejecute durante mucho tiempo, como por ejemplo **/bin/date**, porque los mandatos de vida breve podrían hacer que el contenedor se bloqueara.
 
 **Nota:**
-- El mandato y sus argumentos deben finalizar en la línea de mandatos de `bluemix ic run`. 
-- Si los argumentos del mandato incluyen un guión `-`, como en `-c` en el mandato de ejemplo anterior, el mandato debe ir precedido por dos guiones. `--`. 
+- El mandato y sus argumentos deben finalizar en la línea de mandatos de `bluemix ic run`.
+- Si los argumentos del mandato incluyen un guión `-`, como en `-c` en el mandato de ejemplo anterior, el mandato debe ir precedido por dos guiones. `--`.
 
 
 
 **Ejemplos**:
 
-Cree un grupo de contenedores `my_container_group` usando la imagen `registry.ng.bluemix.net/ibmnode` que proporciona IBM Containers y luego use el mandato de larga ejecución `ping localhost` sobre dicho grupo de contenedores: 
+Cree un grupo de contenedores `my_container_group` usando la imagen `registry.ng.bluemix.net/ibmnode` que proporciona IBM Containers y luego use el mandato de larga ejecución `ping localhost` sobre dicho grupo de contenedores:
 
 ```
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
 ```
 
-Cree un grupo de contenedores `my_container_group` usando la imagen `registry.ng.bluemix.net/ibmnode` que proporciona IBM Containers y luego use el mandato de larga ejecución `tail -f /dev/null` sobre dicho grupo de contenedores: 
+Cree un grupo de contenedores `my_container_group` usando la imagen `registry.ng.bluemix.net/ibmnode` que proporciona IBM Containers y luego use el mandato de larga ejecución `tail -f /dev/null` sobre dicho grupo de contenedores:
 
 ```
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
@@ -1768,14 +2052,14 @@ Cree un grupo escalable `mygroup` con la recuperación automática habilitada us
 `registry.ng.bluemix.net/ibmliberty`. El puerto es `9080`, el nombre de host es
 `mycontainerhost`, el nombre de dominio es `.mybluemix.net`.
 ```
-bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
+bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty 
 ```
 
 
 ## bluemix ic group-update
 {: #bluemix_ic_group_update}
 
-Actualizar un grupo de contenedores. 
+Actualizar un grupo de contenedores.
 
 
 ```
@@ -1783,29 +2067,30 @@ bluemix ic group-update [--min MIN][--max MAX] [--desired DESIRED][--auto] CONTA
 ```
 
 **Sugerencia:** para actualizar el nombre de host o dominio de un grupo de contenedores, utilice
-`bluemix ic route-map  [-n HOST][-d DOMAIN] CONTAINER_GROUP`. 
+`bluemix ic route-map  [-n HOST][-d DOMAIN] CONTAINER_GROUP`.
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 --min *MIN*  (opcional):  el número mínimo de instancias. El valor predeterminado es
-**1**. Tras establecer un número mínimo de instancias, el valor no se puede cambiar. 
+**1**. Tras establecer un número mínimo de instancias, el valor no se puede cambiar.
 
 --max *MAX*  (opcional):  el número máximo de instancias. El valor predeterminado es
-**2**. Tras establecer un número máximo de instancias, el valor no se puede cambiar. 
+**2**. Tras establecer un número máximo de instancias, el valor no se puede cambiar.
 
 --desired *DESIRED*  (opcional):  el número de instancias que necesite. El valor predeterminado es **2**.
 
-**Sugerencia:** solo se puede especificar una opción de las siguientes `--min MIN`, `--max MAX` o `--desired DESIRED` de una vez. 
+**Sugerencia:** solo se puede especificar una opción de las siguientes `--min MIN`, `--max MAX` o `--desired DESIRED` de una vez.
 
---auto  (opcional): reiniciar automáticamente las instancias erróneas habilitando la recuperación automática. 
+--auto  (opcional): reiniciar automáticamente las instancias erróneas habilitando la recuperación automática.
 
 *CONTAINER_GROUP*  (obligatorio): el nombre o ID del grupo de contenedores.
 
 **Ejemplos**:
 
-El ejemplo siguiente muestra una solicitud para actualizar el grupo de contenedores ``my_group``: ```
+El ejemplo siguiente muestra una solicitud para actualizar el grupo de contenedores `my_group`:
+```
 bluemix ic group-update --max 5 my_group
 ```
 
@@ -1813,23 +2098,24 @@ bluemix ic group-update --max 5 my_group
 ## bluemix ic group-remove
 {: #bluemix_ic_group_remove}
 
-Eliminar un grupo de contenedores desde el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización. 
+Eliminar un grupo de contenedores desde el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización.
 
 ```
 bluemix ic group-remove [-f|--force] CONTAINER_GROUP
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
--f|--force  (opcional): fuerza la eliminación de un contenedor erróneo o en ejecución. 
+-f|--force  (opcional): fuerza la eliminación de un contenedor erróneo o en ejecución.
 
 *CONTAINER_GROUP*  (obligatorio): el nombre o ID del grupo de contenedores.
 
 **Ejemplos**:
 
-El ejemplo siguiente muestra una solicitud para eliminar un grupo de contenedores, donde ``my_group`` es el nombre del grupo. ```
+El ejemplo siguiente muestra una solicitud para eliminar un grupo de contenedores, donde `my_group` es el nombre del grupo.
+```
 bluemix ic group-remove my_group
 ```
 
@@ -1837,7 +2123,7 @@ bluemix ic group-remove my_group
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Ver una lista de todas las imágenes disponibles en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/images" target="_blank">images</a> en la ayuda de Docker. La lista incluye el ID de imagen, la fecha de creación y el nombre de imagen. 
+Ver una lista de todas las imágenes disponibles en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización. Para obtener más información, consulte el mandato [images](https://docs.docker.com/reference/commandline/images){: new_window} en la ayuda de Docker. La lista incluye el ID de imagen, la fecha de creación y el nombre de imagen.
 
 ```
 bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
@@ -1848,15 +2134,16 @@ bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
 **Opciones de mandato**:
 
 -a|--all  (opcional): incluye todas las capas de la imagen por cada imagen del repositorio de la organización,
-no solo la más reciente. 
+no solo la más reciente.
 
---no-trunc  (opcional): no trunca la salida. 
+--no-trunc  (opcional): no trunca la salida.
 
--q|--quiet  (opcional): muestra solo los id numéricos. 
+-q|--quiet  (opcional): muestra solo los id numéricos.
 
 **Ejemplos**:
 
-El ejemplo siguiente muestra una solicitud para recibir una lista de imágenes disponibles para la organización: ```
+El ejemplo siguiente muestra una solicitud para recibir una lista de imágenes disponibles para la organización:
+```
 bluemix ic images
 ```
 
@@ -1865,7 +2152,7 @@ bluemix ic images
 {: #bluemix_ic_inspect}
 
 Ver la información sobre un contenedor. Para obtener más información, consulte el
-mandato <a href="https://docs.docker.com/reference/commandline/inspect" target="_blank">inspect</a> en la ayuda de Docker. 
+mandato [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -1875,18 +2162,18 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
 **Opciones de mandato**:
 
-*IMAGE*  (obligatorio): ver información detallada sobre una imagen específica indicando el nombre o ID de la imagen. 
+*IMAGE*  (obligatorio): ver información detallada sobre una imagen específica indicando el nombre o ID de la imagen.
 
-images  (obligatorio): ver información detallada sobre todas las imágenes del repositorio. 
+images  (obligatorio): ver información detallada sobre todas las imágenes del repositorio.
 
 *CONTAINER*  (obligatorio): ver información detallada sobre un contenedor específico, mediante la especificación del
-nombre de contenedor o el ID. 
+nombre de contenedor o el ID.
 
-**Sugerencia:** solo se permite especificar *IMAGE*, images o *CONTAINER* de una vez.  
+**Sugerencia:** solo se permite especificar *IMAGE*, images o *CONTAINER* de una vez. 
 
 **Ejemplos**:
 
-El ejemplo siguiente muestra una solicitud para inspeccionar un contenedor llamado `proxy`:
+El ejemplo siguiente muestra una solicitud para inspeccionar un contenedor llamado `proxy`: 
 ```
 bluemix ic inspect proxy
 ```
@@ -1898,25 +2185,25 @@ bluemix ic inspect proxy
 Ver un conjunto de información que describe el estado de la instancia de servicio de nube del contenedor. La información incluye
 el límite de contenedores, el uso de los contenedores, los contenedores en ejecución, el límite de memoria, el límite de
 dirección IP flotante, el uso de dirección IP flotante, el URL de host CCS, el URL de host de registro y estado de la modalidad de
-depuración. 
+depuración.
 
 ```
 bluemix ic info
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 
 ## bluemix ic ips
 {: #bluemix_ic_ips}
 
-Mostrar una lista de las direcciones IP flotantes disponibles para el usuario que ha iniciado la sesión. La lista incluye direcciones IP y el ID de contenedor al que están enlazadas las direcciones IP. Si la dirección IP no se utiliza, no se mostrará ID de contenedor. 
+Mostrar una lista de las direcciones IP flotantes disponibles para el usuario que ha iniciado la sesión. La lista incluye direcciones IP y el ID de contenedor al que están enlazadas las direcciones IP. Si la dirección IP no se utiliza, no se mostrará ID de contenedor.
 
 ```
 bluemix ic ips [-a|--all]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
@@ -1932,13 +2219,13 @@ bluemix ic ips -a
 
 ## bluemix ic ip-request
 {: #ip_request}
-Solicitar un nueva dirección IP flotante. 
+Solicitar un nueva dirección IP flotante.
 
 ```
 bluemix ic ip-request
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 
 ## bluemix ic ip-release
@@ -1950,11 +2237,11 @@ Liberar una dirección IP flotante de la instancia de servicio de nube del conte
 bluemix ic ip-release IP_ADDRESS
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*IP_ADDRESS*  (obligatorio): la dirección IP a liberar. 
+*IP_ADDRESS*  (obligatorio): la dirección IP a liberar.
 
 
 ## bluemix ic ip-bind
@@ -1966,13 +2253,13 @@ Enlazar una dirección IP flotante disponible a un contenedor.
 bluemix ic ip-bind IP_ADDRESS CONTAINER
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*IP_ADDRESS*  (obligatorio): la dirección IP a enlazar. 
+*IP_ADDRESS*  (obligatorio): la dirección IP a enlazar.
 
-*CONTAINER*  (obligatorio): el ID de contenedor o nombre a enlazar. 
+*CONTAINER*  (obligatorio): el ID de contenedor o nombre a enlazar.
 
 **Ejemplos**:
 
@@ -1987,19 +2274,19 @@ bluemix ic ip-bind 192.123.12.12 proxy
 
 Desenlazar una dirección IP flotante de su contenedor.
 
-Las direcciones IP públicas son un recurso limitado en IBM Containers. Por lo tanto, las direcciones IP públicas con permiso asignadas a un espacio y no enlazadas a un contenedor se reclamen de forma periódica desde usuarios de prueba gratuitos, aproximadamente de forma semanal. Las direcciones IP públicas no enlazadas nunca se reclaman a clientes de suscripción o en fórmulas de pago previo. 
+Las direcciones IP públicas son un recurso limitado en IBM Containers. Por lo tanto, las direcciones IP públicas con permiso asignadas a un espacio y no enlazadas a un contenedor se reclamen de forma periódica desde usuarios de prueba gratuitos, aproximadamente de forma semanal. Las direcciones IP públicas no enlazadas nunca se reclaman a clientes de suscripción o en fórmulas de pago previo.
 
 ```
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*IP_ADDRESS*  (obligatorio): la dirección IP a desenlazar. 
+*IP_ADDRESS*  (obligatorio): la dirección IP a desenlazar.
 
-*CONTAINER*  (obligatorio): el ID de contenedor o nombre a desenlazar. 
+*CONTAINER*  (obligatorio): el ID de contenedor o nombre a desenlazar.
 
 **Ejemplos**:
 
@@ -2012,19 +2299,19 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Detener un proceso en ejecución en un contenedor sin detener el contenedor. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/kill/" target="_blank">kill</a> en la ayuda de Docker. 
+Detener un proceso en ejecución en un contenedor sin detener el contenedor. Para obtener más información, consulte el mandato [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
--s *CMD*|--signal *CMD*  (opcional):  enviar un mandato al proceso que se está ejecutando en el contenedor. 
+-s *CMD*|--signal *CMD*  (opcional):  enviar un mandato al proceso que se está ejecutando en el contenedor.
 
-*CONTAINER*  (obligatorio): el ID de contenedor o el nombre. 
+*CONTAINER*  (obligatorio): el ID de contenedor o el nombre.
 
 **Ejemplos**:
 
@@ -2037,37 +2324,37 @@ bluemix ic kill proxy
 ## bluemix ic namespace-get
 {: #bluemix_ic_namespace_get}
 
-Ver el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_notm}} privado para la organización en la que inicia sesión. 
+Ver el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_notm}} privado para la organización en la que inicia sesión.
 
 ```
 bluemix ic namespace-get
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 
 ## bluemix ic namespace-set
 {: #bluemix_ic_namespace_set}
 
-Establecer el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_notm}} privado para la organización en la que inicia sesión. 
+Establecer el nombre del repositorio de imágenes {{site.data.keyword.Bluemix_notm}} privado para la organización en la que inicia sesión.
 
-*Restricción*: no puede utilizar un guión `-` en el nombre del espacio de nombres del repositorio. 
+*Restricción*: no puede utilizar un guión `-` en el nombre del espacio de nombres del repositorio.
 
 ```
 bluemix ic namespace-set NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*NAME*  (obligatorio): función de una sola vez, para establecer el espacio de nombres del repositorio para su organización, si aún no está establecido. Después de establecer el espacio de nombres, reinicialice IBM Containers con el mandato `bluemix ic init` antes de continuar. 
+*NAME*  (obligatorio): función de una sola vez, para establecer el espacio de nombres del repositorio para su organización, si aún no está establecido. Después de establecer el espacio de nombres, reinicialice IBM Containers con el mandato `bluemix ic init` antes de continuar.
 
 
 ## bluemix ic pause
 {: #pause}
 
-Colocar en pausa todos los procesos dentro de un contenedor en ejecución. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/pause/" target="_blank">pause</a> en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic unpause](#unpause). 
+Colocar en pausa todos los procesos dentro de un contenedor en ejecución. Para obtener más información, consulte el mandato [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTAINER
@@ -2077,11 +2364,11 @@ bluemix ic pause CONTAINER
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Respuestas**:
 
-- El contenedor se ha puesto en pausa correctamente. 
+- El contenedor se ha puesto en pausa correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor.
 
@@ -2102,7 +2389,7 @@ bluemix ic pause proxy
 ## bluemix ic unpause
 {: #unpause}
 
-Reanudar todos los procesos de un contenedor en ejecución. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/unpause/" target="_blank">unpause</a> en la ayuda de Docker. Para poner en pausa un contenedor, consulte el mandato [bluemix ic pause](#pause). 
+Reanudar todos los procesos de un contenedor en ejecución. Para obtener más información, consulte el mandato [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} en la ayuda de Docker. Para poner en pausa un contenedor, consulte el mandato [bluemix ic pause](#pause).
 
 ```
 bluemix ic unpause CONTAINER
@@ -2112,11 +2399,11 @@ bluemix ic unpause CONTAINER
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Respuestas**:
 
-- El contenedor se ha reactivado de la pausa correctamente. 
+- El contenedor se ha reactivado de la pausa correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor. 
 
@@ -2137,12 +2424,12 @@ bluemix ic unpause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-Listar correlación de puertos o una correlación específica para el contenedor. Este mandato envuelve el mandato `docker port`. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/port/" target="_blank">port</a> en la ayuda de Docker. 
+Listar correlación de puertos o una correlación específica para el contenedor. Este mandato envuelve el mandato `docker port`. Para obtener más información, consulte el mandato [port](https://docs.docker.com/reference/commandline/port/){: new_window} en la ayuda de Docker.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-Ver una lista de los contenedores que se ejecutan en el espacio de nombres del usuario con la sesión iniciada. De forma predeterminada, este mandato muestra solo los contenedores en ejecución. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/ps/" target="_blank">ps</a> en la ayuda de Docker. 
+Ver una lista de los contenedores que se ejecutan en el espacio de nombres del usuario con la sesión iniciada. De forma predeterminada, este mandato muestra solo los contenedores en ejecución. Para obtener más información, consulte el mandato [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
@@ -2152,15 +2439,15 @@ bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
 
 **Opciones de mandato**:
 
--a|--all  (opcional): mostrar todos los contenedores, en ejecución o detenidos. 
+-a|--all  (opcional): mostrar todos los contenedores, en ejecución o detenidos.
 
--s|--size  (opcional): mostrar los tamaños de los contenedores. 
+-s|--size  (opcional): mostrar los tamaños de los contenedores.
 
--l *NUM*|--limit *NUM*  (opcional): listar los contenedores más recientes, donde *NUM* es el número de contenedores recientes que desea devolver. 
+-l *NUM*|--limit *NUM*  (opcional): listar los contenedores más recientes, donde *NUM* es el número de contenedores recientes que desea devolver.
 
-Por ejemplo, si ha creado los contenedores del `node1` al `node5` de forma secuencial, el mandato `bluemix ic ps --limit 2` devuelve node4 y node5, porque son los dos últimos contenedores que se crean. 
+Por ejemplo, si ha creado los contenedores del `node1` al `node5` de forma secuencial, el mandato `bluemix ic ps --limit 2` devuelve node4 y node5, porque son los dos últimos contenedores que se crean.
 
--q|--quiet  (opcional): mostrar solo los ID de contenedor. 
+-q|--quiet  (opcional): mostrar solo los ID de contenedor.
 
 **Ejemplos**:
 
@@ -2173,23 +2460,23 @@ bluemix ic ps -a
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-Reiniciar un contenedor. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/restart/" target="_blank">restart</a> en la ayuda de Docker. 
+Reiniciar un contenedor. Para obtener más información, consulte el mandato [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
-*CONTAINER*  (obligatorio): el nombre de contenedor o ID. 
+*CONTAINER*  (obligatorio): el nombre de contenedor o ID.
 
--t *SECS*|--time *SECS*  (opcional): segundos de espera antes de reiniciar el contenedor. 
+-t *SECS*|--time *SECS*  (opcional): segundos de espera antes de reiniciar el contenedor.
 
 **Respuestas**:
 
-- El contenedor se ha reiniciado correctamente. 
+- El contenedor se ha reiniciado correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor. 
 
@@ -2210,23 +2497,23 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Eliminar un contenedor. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/rm/" target="_blank">rm</a> en la ayuda de Docker. 
+Eliminar un contenedor. Para obtener más información, consulte el mandato [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
--f|--force  (opcional): fuerza la eliminación de un contenedor erróneo o en ejecución. 
+-f|--force  (opcional): fuerza la eliminación de un contenedor erróneo o en ejecución.
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Respuestas**:
 
-- El contenedor se ha eliminado correctamente. 
+- El contenedor se ha eliminado correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor. 
 
@@ -2234,7 +2521,7 @@ bluemix ic rm [-f|--force] CONTAINER
  
  Donde `{message}` es el error relacionado.
  
-- El mandato ha fallado: no se ha podido conectar con el servicio en la nube del contenedor. 
+- El mandato ha fallado: no se ha podido conectar con el servicio en la nube del contenedor.
 
 **Ejemplos**:
 
@@ -2247,17 +2534,17 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Eliminar una imagen del espacio de nombres del usuario con la sesión iniciada. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/rmi/" target="_blank">rmi</a> en la ayuda de Docker. 
+Eliminar una imagen del espacio de nombres del usuario con la sesión iniciada. Para obtener más información, consulte el mandato [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
--R *REGISTRY*|--registry *REGISTRY*  (opcional): cambiar el host de registro. El valor predeterminado es usar el registro que especifique en el mandato `bluemix ic init`. 
+-R *REGISTRY*|--registry *REGISTRY*  (opcional): cambiar el host de registro. El valor predeterminado es usar el registro que especifique en el mandato `bluemix ic init`.
 
 *IMAGE*  (obligatorio): el nombre de la imagen que quiere eliminar. Si no se especifica una etiqueta en el nombre de la imagen, la imagen etiquetada como `latest` se suprime de forma predeterminada.
 
@@ -2267,7 +2554,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
  Donde `{IMAGE}` es el nombre de la imagen que se ha eliminado.
  
-- Error. No se ha especificado host de registro. 
+- Error. No se ha especificado host de registro.
 
 - Error de eliminación de imagen: no se ha podido conectar al registro de nube de contenedor
 
@@ -2288,75 +2575,75 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-Iniciar un nuevo contenedor en el servicio de nube del contenedor desde un nombre de imagen. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/run/" target="_blank">run</a> en la ayuda de Docker. 
+Iniciar un nuevo contenedor en el servicio de nube del contenedor desde un nombre de imagen. Para obtener más información, consulte el mandato [run](https://docs.docker.com/reference/commandline/run/){: new_window} en la ayuda de Docker.
 
 
 
 ```
 bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS][-it] IMAGE [CMD [CMD ...]]
 ```
-**Nota:** Asegúrese de que la herramienta de mandatos de Cloud Foundry esté instalada y de que tiene una señal de Cloud Foundry. El inicio de sesión correcto usando `bluemix login` y `bluemix ic init` genera la señal y certificados necesarios.  
+**Nota:** Asegúrese de que la herramienta de mandatos de Cloud Foundry esté instalada y de que tiene una señal de Cloud Foundry. El inicio de sesión correcto usando `bluemix login` y `bluemix ic init` genera la señal y certificados necesarios. 
 
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
--p *PORT*|--publish *PORT*  (opcional):  ofrecer el puerto para el tráfico HTTP. Incluir los puertos que se especifiquen en el archivo de Docker para la imagen que está utilizando. Puede incluir varios puertos con varias opciones `-p`. Al ofrecer un puerto se enlaza automáticamente una dirección IP al contenedor si hay disponible una dirección IP pública. 
+-p *PORT*|--publish *PORT*  (opcional):  ofrecer el puerto para el tráfico HTTP. Incluir los puertos que se especifiquen en el archivo de Docker para la imagen que está utilizando. Puede incluir varios puertos con varias opciones `-p`. Al ofrecer un puerto se enlaza automáticamente una dirección IP al contenedor si hay disponible una dirección IP pública.
 
 Si tiene una dirección IP existente en el espacio que quiere enlazar al contenedor, puede especificar la dirección IP en lugar de enlazarlo más adelante. La dirección IP se debe especificar en el formato: *&lt;dirección-ip&gt;:&lt;puerto-contenedor&gt;:&lt;puerto-contenedor&gt;*
 
-Para obtener más información sobre la solicitud de direcciones IP para un espacio, consulte el mandato [bluemix ic ip-request](#ip_request). 
+Para obtener más información sobre la solicitud de direcciones IP para un espacio, consulte el mandato [bluemix ic ip-request](#ip_request).
 
-Cuando especifica un puerto, hace que la app esté disponible para el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} o los contenedores que están en el mismo espacio de {{site.data.keyword.Bluemix_notm}} y que intentan acceder al host. Si especifica un puerto en el archivo de Docker para la imagen que está utilizando, incluya dicho puerto. 
+Cuando especifica un puerto, hace que la app esté disponible para el equilibrador de carga de {{site.data.keyword.Bluemix_notm}} o los contenedores que están en el mismo espacio de {{site.data.keyword.Bluemix_notm}} y que intentan acceder al host. Si especifica un puerto en el archivo de Docker para la imagen que está utilizando, incluya dicho puerto.
 
 **Sugerencia:**
 
-- Para la imagen Liberty Server certificada de IBM o una versión modificada, especifique el puerto 9080. 
-- Para la imagen Node.js certificada de IBM o una versión modificada de esta imagen, especifique el puerto 8000. 
+- Para la imagen Liberty Server certificada de IBM o una versión modificada, especifique el puerto 9080.
+- Para la imagen Node.js certificada de IBM o una versión modificada de esta imagen, especifique el puerto 8000.
 
--P  (opcional): ofrecer automáticamente los puertos especificados en el archivo de Docker de la imagen para el tráfico HTTP. 
+-P  (opcional):  Ofrecer automáticamente los puertos especificados en el archivo de Docker de la imagen para el tráfico HTTP.
 
 -m *MEMORY*|--memory *MEMORY*  (opcional):  asignar límite de memoria al grupo en MB. Cuando crea un
-grupo de contenedores desde la CLI, el valor predeterminado para cada contenedor de instancia es `64` MB.  Cuando crea un grupo de contenedores desde el Panel de control de {{site.data.keyword.Bluemix_notm}}, el valor predeterminado para cada instancia es `256` MB. Los valores que se aceptan son `64`, `256`, `512`, `1024` y `2048`. Una vez asignado el límite de memoria, el valor no se puede cambiar. 
+grupo de contenedores desde la CLI, el valor predeterminado para cada contenedor de instancia es `64` MB.  Cuando crea un grupo de contenedores desde el Panel de control de {{site.data.keyword.Bluemix_notm}}, el valor predeterminado para cada instancia es `256` MB. Los valores que se aceptan son `64`, `256`, `512`, `1024` y `2048`. Una vez asignado el límite de memoria, el valor no se puede cambiar.
 
--e *ENV*|--env *ENV*  (opcional):  establecer la variable de entorno, donde **ENV** es un par `key=value`. Listar varias claves por separado. Si se incluyen comillas, inclúyalas para el nombre para el valor de la variable de entorno. Por ejemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  En la tabla siguiente se muestran algunas variables de entorno usadas con frecuencia que puede especificar: 
+-e *ENV*|--env *ENV*  (opcional):  establecer la variable de entorno, donde **ENV** es un par `key=value`. Listar varias claves por separado. Si se incluyen comillas, inclúyalas para el nombre para el valor de la variable de entorno. Por ejemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`. En la tabla siguiente se muestran algunas variables de entorno usadas con frecuencia que puede especificar:
 
 |      Variable de entorno                          |   Descripción                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Enlazar un servicio con un contenedor. Usar la variable de entorno `CCS_BIND_APP` para enlazar una app con el contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">Enlazar un servicio a un
-contenedor</a>.  |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Añadir una clave SSH a un contenedor al crear el contenedor. Puede añadir la clave SSH utilizando la variable de entorno al crear un contenedor desde el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} o desde la CLI. Para obtener más información sobre claves SSH, consulte <a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">Inicio de sesión en un contenedor</a>.  |
-| LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro.  |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Enlazar un servicio con un contenedor. Usar la variable de entorno `CCS_BIND_APP` para enlazar una app con el contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un
+contenedor](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | Añadir una clave SSH a un contenedor al crear el contenedor. Puede añadir la clave SSH utilizando la variable de entorno al crear un contenedor desde el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} o desde la CLI. Para obtener más información sobre claves SSH, consulte [Inicio de sesión en un contenedor](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
+| LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
 *Tabla 2. Variables de entorno utilizadas con frecuencia*
 
--v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]  (optional):  Attach a volume to a container by specifying the details in the following format `VolumeId:ContainerPath[:ro]`.
+-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro](optional):  Attach a volume to a container by specifying the details in the following format `VolumeId:ContainerPath[:ro]`.
 
-- *VOLUME*: el ID de volumen o nombre. 
+- *VOLUME*: el ID de volumen o nombre.
 - *CONTAINER_PATH*: La vía de acceso absoluta al volumen en el contenedor.
-- ro: opcional. Si se especifica `ro`, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación). 
+- ro: opcional. Si se especifica `ro`, el volumen será de solo lectura, en lugar de tomar el valor predeterminado (lectura/grabación).
 
--n *NAME*|--name *NAME*  (obligatorio): asignar un nombre al contenedor. 
+-n *NAME*|--name *NAME*  (obligatorio): asignar un nombre al contenedor.
 
-*Sugerencia:* el nombre de contenedor debe empezar por una letra. El nombre puede incluir mayúsculas, minúsculas, números, puntos `.`, subrayados `_` o guiones `-`. 
+*Sugerencia:* el nombre de contenedor debe empezar por una letra. El nombre puede incluir mayúsculas, minúsculas, números, puntos `.`, subrayados `_` o guiones `-`.
 
---link *NAME*:*ALIAS*  (opcional): siempre que quiera que un contenedor se comunique con otro contenedor que esté en ejecución, puede hacer referencia al mismo por medio de un alias para el nombre de host. 
+--link *NAME*:*ALIAS*  (opcional): siempre que quiera que un contenedor se comunique con otro contenedor que esté en ejecución, puede hacer referencia al mismo por medio de un alias para el nombre de host.
 
 -it  (opcional):  ejecute el contenedor en modalidad interactiva. Una vez creado el contenedor, mantenga la entrada estándar visualizada. Escriba `exit` para salir.
 
-*IMAGE*  (obligatorio): la imagen a incluir en el contenedor. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen. 
+*IMAGE*  (obligatorio): la imagen a incluir en el contenedor. Puede listar mandatos tras la imagen, pero no opciones. Todas las opciones deben ir antes de especificar una imagen.
 
-Si utiliza una imagen en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización, especifique la imagen en el formato: *registry.ng.bluemix.net/NAMESPACE/IMAGE*. 
+Si utiliza una imagen en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización, especifique la imagen en el formato: *registry.ng.bluemix.net/NAMESPACE/IMAGE*.
 
-Si está utilizando una imagen proporcionada por IBM Containers, especifíquela en el formato: *registry.ng.bluemix.net/IMAGE*. 
+Si está utilizando una imagen proporcionada por IBM Containers, especifíquela en el formato: *registry.ng.bluemix.net/IMAGE*.
 
-*CMD*  (opcional): el mandato y los argumentos se pasan al contenedor a ejecutar. Este mandato debe ser un mandato de larga ejecución. No utilice un mandato breve que no se ejecute durante mucho tiempo, como por ejemplo `/bin/date`, porque los mandatos de vida breve podrían hacer que el contenedor se bloqueara. 
+*CMD*  (opcional): el mandato y los argumentos se pasan al contenedor a ejecutar. Este mandato debe ser un mandato de larga ejecución. No utilice un mandato breve que no se ejecute durante mucho tiempo, como por ejemplo `/bin/date`, porque los mandatos de vida breve podrían hacer que el contenedor se bloqueara.
 
 
 
 **Ejemplos**:
 
-Ejecute el mandato de larga duración `sh -c "while true; do date; sleep 20; done"` en el contenedor `my_container` que se construye en la imagen `registry.ng.bluemix.net/ibmnode`.
+Ejecute el mandato de larga duración `sh -c "while true; do date; sleep 20; done"` en el contenedor `my_container` que se construye en la imagen `registry.ng.bluemix.net/ibmnode`. 
 ```
 bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
 ```
@@ -2382,21 +2669,21 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ## bluemix ic route-map
 {: #bluemix_ic_route_map}
 
-Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de contenedores. Puede utilizar este mandato para establecer una nueva ruta o actualizar una ruta existente. 
+Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de contenedores. Puede utilizar este mandato para establecer una nueva ruta o actualizar una ruta existente.
 
 ```
 bluemix ic route-map [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
--n *HOST*|--hostname *HOST*  (opcional): el nombre de host para la ruta. El nombre de host es la primera parte del URL de ruta pública completa, como `mycontainerhost` en el URL `mycontainerhost.mybluemix.net`. 
+-n *HOST*|--hostname *HOST*  (opcional): el nombre de host para la ruta. El nombre de host es la primera parte del URL de ruta pública completa, como `mycontainerhost` en el URL `mycontainerhost.mybluemix.net`.
 
 -d *DOMAIN*|--domain *DOMAIN*  (opcional):  el nombre de dominio para la ruta, que es la segunda parte del URL de ruta pública completa. En la mayoría de los casos, el dominio es `mybluemix.net`. También puede utilizar este parámetro para especificar un dominio privado.
 
-*CONTAINER_GROUP*  (obligatorio): el ID o nombre del grupo de contenedores. 
+*CONTAINER_GROUP*  (obligatorio): el ID o nombre del grupo de contenedores.
 
 **Ejemplos**:
 
@@ -2409,21 +2696,21 @@ bluemix ic route-map -n my_host -d organization.com GROUP1
 ## bluemix ic route-unmap
 {: #bluemix_ic_route_unmap}
 
-Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de contenedores. Puede utilizar este mandato para establecer una nueva ruta o actualizar una ruta existente. 
+Establecer la ruta que utiliza el tráfico de Internet para acceder al grupo de contenedores. Puede utilizar este mandato para establecer una nueva ruta o actualizar una ruta existente.
 
 ```
 bluemix ic route-unmap [-n HOST|--hostname HOST][-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandatos**:
 
--n *HOST*|--hostname *HOST*  (opcional): el nombre de host para la ruta. 
+-n *HOST*|--hostname *HOST*  (opcional): el nombre de host para la ruta.
 
--d *DOMAIN*|--domain *DOMAIN*  (opcional):  el nombre de dominio para la ruta. 
+-d *DOMAIN*|--domain *DOMAIN*  (opcional):  el nombre de dominio para la ruta.
 
-*CONTAINER_GROUP*  (obligatorio): el ID o nombre del grupo de contenedores. 
+*CONTAINER_GROUP*  (obligatorio): el ID o nombre del grupo de contenedores.
 
 **Ejemplos**:
 
@@ -2436,7 +2723,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 
 ## bluemix ic start
 {: #ic_start}
-Iniciar un contenedor detenido. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/start/" target="_blank">start</a> en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic stop](#ic_stop). 
+Iniciar un contenedor detenido. Para obtener más información, consulte el mandato [start](https://docs.docker.com/reference/commandline/start/){: new_window} en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic stop](#ic_stop).
 
 ```
 bluemix ic start CONTAINER
@@ -2446,11 +2733,11 @@ bluemix ic start CONTAINER
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Respuestas**:
 
-- El contenedor se ha iniciado correctamente. 
+- El contenedor se ha iniciado correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor.
 
@@ -2470,23 +2757,23 @@ bluemix ic start proxy
 
 ## bluemix ic stop  
 {: #ic_stop}
-Detener un contenedor en ejecución. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/stop/" target="_blank">stop</a> en la ayuda de Docker. Para iniciar un contenedor, consulte el mandato [bluemix ic start](#ic_start). 
+Detener un contenedor en ejecución. Para obtener más información, consulte el mandato [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} en la ayuda de Docker. Para iniciar un contenedor, consulte el mandato [bluemix ic start](#ic_start).
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino, Docker
+**Requisitos previos**:  Punto final, inicio de sesión, destino, Docker
 
 **Opciones de mandatos**:
 
-*CONTAINER*  (obligatorio): el nombre de contenedor o ID. 
+*CONTAINER*  (obligatorio): el nombre de contenedor o ID.
 
--t *SECS*|--time *SECS*  (opcional): segundos de espera antes de interrumpir el contenedor. 
+-t *SECS*|--time *SECS*  (opcional): segundos de espera antes de interrumpir el contenedor.
 
 **Respuestas**:
 
-- El contenedor se ha detenido correctamente. 
+- El contenedor se ha detenido correctamente.
 
 - El mandato ha fallado con un servicio en la nube de contenedor.
 
@@ -2507,7 +2794,7 @@ bluemix ic stop proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-Para uno o varios contenedores, vea las estadísticas de uso activo. Utilice `CTRL+C` para salir. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/stats/" target="_blank">stats</a> en la ayuda de Docker. 
+Para uno o varios contenedores, vea las estadísticas de uso activo. Utilice `CTRL+C` para salir. Para obtener más información, consulte el mandato [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -2517,9 +2804,9 @@ bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
---no-stream  (opcional): mostrar solo el resultado más reciente y no incluir información anterior. 
+--no-stream  (opcional): mostrar solo el resultado más reciente y no incluir información anterior.
 
 **Ejemplos**:
 
@@ -2532,7 +2819,7 @@ bluemix ic stats --no-stream my_container
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Mostrar los procesos que están en ejecución en el contenedor.Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/top/" target="_blank">top</a> en la ayuda de Docker. 
+Mostrar los procesos que están en ejecución en el contenedor. Para obtener más información, consulte el mandato [top](https://docs.docker.com/reference/commandline/top/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -2542,7 +2829,7 @@ bluemix ic top CONTAINER [CONTAINER]
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Ejemplos**:
 
@@ -2561,70 +2848,70 @@ Listar los volúmenes.
 bluemix ic volumes
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 
 ## bluemix ic volume-inspect
 {: #bluemix_ic_volume_inspect}
 
-Inspeccionar un volumen. 
+Inspeccionar un volumen.
 
 ```
 bluemix ic volume-inspect VOLUME_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*VOLUME_NAME*  (obligatorio): el nombre del volumen. 
+*VOLUME_NAME*  (obligatorio): el nombre del volumen.
 
 **Ejemplos**:
 
 El ejemplo siguiente es una solicitud para inspeccionar un volumen, donde `volume_name` es el nombre del volumen.
 ```
-bluemix ic volume inspect volume_name
+bluemix ic volume-inspect volume_name
 ```
 
 
 ## bluemix ic volume-create
 {: #bluemix_ic_volume_create}
 
-Crea un volumen. 
+Crea un volumen.
 
 ```
 bluemix ic volume-create VOLUME_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
 *VOLUME_NAME*  (obligatorio): el nombre del volumen. El nombre puede contener letras en minúsculas, números, subrayados
-`_` y guiones `-`. 
+`_` y guiones `-`.
 
 **Ejemplos**:
 
 El ejemplo siguiente muestra una solicitud para crear un volumen.
 ```
-bluemix ic volume-create volume_name
+bluemix ic volume-create volume_name 
 ```
 
 
 ## bluemix ic volume-remove
 {: #bluemix_ic_volume_remove}
 
-Eliminar un volumen. 
+Eliminar un volumen.
 
 ```
 bluemix ic volume-remove VOLUME_NAME
 ```
 
-**Prerrequisitos**:  Punto final, inicio de sesión, destino
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 **Opciones de mandato**:
 
-*VOLUME_NAME*  (obligatorio): el nombre del volumen. 
+*VOLUME_NAME*  (obligatorio): el nombre del volumen.
 
 **Ejemplos**:
 
@@ -2633,12 +2920,97 @@ El ejemplo siguiente muestra una solicitud para eliminar un volumen, donde `volu
 bluemix ic volume-remove volume_name
 ```
 
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+Listar sistemas de archivos.
+
+```
+bluemix ic volume-fs
+```
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+Crear un nuevo sistema de archivos.
+
+```
+bluemix ic volume-fs-create FILE_SYSTEM_NAME
+```
+
+**Requisitos previos**:  Punto final, inicio de sesión, destino
+
+**Opciones de mandato**:
+
+*FILE_SYSTEM_NAME*  (obligatorio):  El nombre del sistema de archivos. El nombre puede contener letras en minúsculas, números, subrayados
+`_` y guiones `-`.
+
+**Ejemplos**:
+
+El siguiente ejemplo muestra una solicitud para crear un sistema de archivos:
+```
+bluemix ic volume-fs-create my_file_system 
+```
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+Eliminar un sistema de archivos.
+
+```
+bluemix ic volume-fs-remove FILE_SYSTEM_NAME
+```
+
+**Requisitos previos**:  Punto final, inicio de sesión, destino
+
+**Opciones de mandato**:
+
+*FILE_SYSTEM_NAME*  (obligatorio):  El nombre del sistema de archivos. 
+
+**Ejemplos**:
+
+El siguiente ejemplo muestra una solicitud para eliminar un sistema de archivos, donde `my_file_system` es el nombre del sistema de archivos.
+```
+bluemix ic volume-fs-remove my_file_system
+```
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+Inspeccionar un sistema de archivos.
+
+```
+bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
+```
+
+**Requisitos previos**:  Punto final, inicio de sesión, destino
+
+**Opciones de mandato**:
+
+*FILE_SYSTEM_NAME*  (obligatorio):  El nombre del sistema de archivos. 
+
+**Ejemplos**:
+
+El siguiente ejemplo es una solicitud para inspeccionar un sistema de archivos, donde `my_file_system` es el nombre del volumen.
+```
+bluemix ic volume-fs-inspect my_file_system
+```
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+Listar todos los tipos de sistemas de archivos.
+
+```
+bluemix ic volume-fs-flavors
+```
+
+**Requisitos previos**:  Punto final, inicio de sesión, destino
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
 Salir de un contenedor y visualizar el código de salida como confirmación. Para obtener más información, consulte el
-mandato <a href="https://docs.docker.com/reference/commandline/wait/" target="_blank">wait</a> en la ayuda de Docker. 
+mandato [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} en la ayuda de Docker.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -2648,7 +3020,7 @@ bluemix ic wait CONTAINER [CONTAINER]
 
 **Opciones de mandato**:
 
-*CONTAINER*  (necesario): el nombre de contenedor o ID. 
+*CONTAINER*  (necesario): el nombre de contenedor o ID.
 
 **Ejemplos**:
 
@@ -2661,12 +3033,12 @@ bluemix ic wait my_container
 ## bluemix ic version
 {: #bluemix_ic_version}
 
-Muestra la versión de Docker.  
+Muestra la versión de Docker. 
 
 ```
 bluemix ic version
 ```
 
-**Prerrequisitos**: Docker
+**Requisitos previos**: Docker
 
-Para ver la versión de IBM Containers, ejecute `bluemix ic info`. Para obtener más información, consulte el mandato <a href="https://docs.docker.com/reference/commandline/version/" target="_blank">version</a> en la ayuda de Docker. 
+Para ver la versión de IBM Containers, ejecute `bluemix ic info`. Para obtener más información, consulte el mandato [version](https://docs.docker.com/reference/commandline/version/){: new_window} en la ayuda de Docker.

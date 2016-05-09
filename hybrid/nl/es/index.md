@@ -39,7 +39,7 @@ la sindicación de catálogo. Más información sobre [{{site.data.keyword.Bluem
 
 ## Local
 
-Con {{site.data.keyword.Bluemix_notm}} Local, puede aprovechar el valor verdadero de una nube privada en su centro de datos. {{site.data.keyword.Bluemix_notm}} Local se distribuye como-un-servicio y en constante colaboración con su equipo de TI. También le permite
+Con {{site.data.keyword.Bluemix_notm}} Local, puede aprovechar el valor verdadero de una nube privada en su centro de datos.  {{site.data.keyword.Bluemix_notm}} Local se distribuye como-un-servicio y en constante colaboración con su equipo de TI. También le permite
 aprovechar sus sistemas principales existentes, la arquitectura orientada a servicios, procesos y datos en
 una plataforma de nube moderna. Más información sobre [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html).
 

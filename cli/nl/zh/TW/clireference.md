@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# 指令行介面參照
+# 指令行介面參考資料
 
 
 *前次更新：2016 年 2 月 17 日*

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
  
 
@@ -18,7 +18,7 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 16 février 2016*
+*Dernière mise à jour : 30 mars 2016*
 
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -31,6 +31,11 @@ Téléchargez et installez des interfaces de ligne de commande pour votre expér
 d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
 {{site.data.keyword.Bluemix_notm}} permet de gérer l'environnement {{site.data.keyword.Bluemix_notm}} en plus des applications Cloud
 Foundry.
+
+Les deux outils CLI utilisent par défaut le port 433. Si un proxy HTTP est interposé entre les outils CLI et l'environnement
+{{site.data.keyword.Bluemix_notm}}, vous devez configurer la variable d'environnement `http-proxy` en spécifiant l'URL
+réelle et le port du proxy HTTP s'il est présent. Voir [Using the CLI with an HTTP Proxy
+Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} pour plus d'informations.
 
 
 | *{{site.data.keyword.Bluemix_notm}} : bx* | *Cloud Foundry : cf* |
@@ -58,11 +63,10 @@ bluemix plugin install nom_plug-in -r bluemix-bx-staging
 
 | *{{site.data.keyword.activedeployshort}} interface CLI* | *{{site.data.keyword.autoscaling}} interface CLI* | *Network Security Groups* |
 |-----|-----|-----|
-| Nom du plug-in : active-deploy <br> [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](./plugins/auto-scaling/index.html) |  
-Nom du plug-in : nsg<br> [Afficher la documentation](./plugins/networksecuritygroups/index.html)  |
+| Nom du plug-in : active-deploy <br> [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](./plugins/auto-scaling/index.html) |  Nom du plug-in : nsg <br> [Afficher la documentation](./plugins/networksecuritygroups/index.html)  |
 
 
-### Etendez votre interface de ligne de commande Cloud Foundry : cf 
+### Etendez votre interface de ligne de commande Cloud Foundry : cf
 
 1. Pour installer des plug-in d'interface de ligne de commande cf depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
 final du registre des
@@ -77,8 +81,7 @@ cf install-plugin nom_plug-in -r bluemix-cf-staging
 
 | *Active Deploy* | *Console d'administration* | *Mode développement* |
 |-----------------|-----------------|-----------------|
-| Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](../cli/plugins/bluemix_admin/index.html) | 
-Nom du plug-in : dev_mode <br> [Afficher la documentation](./plugins/dev_mode/index.html) |
+| Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](../cli/plugins/bluemix_admin/index.html) | Nom du plug-in : dev_mode <br> [Afficher la documentation](./plugins/dev_mode/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *réseau privé virtuel (VPN)* |
 |-----------------|-----------------|

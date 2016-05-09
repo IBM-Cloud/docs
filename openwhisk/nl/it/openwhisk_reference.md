@@ -18,7 +18,7 @@ copyright:
 
 # Dettagli del sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-*Ultimo aggiornamento: 22 febbraio 2016*
+*Ultimo aggiornamento: 14 aprile 2016*
 
 Le seguenti sezioni forniscono ulteriori dettagli sul sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -88,7 +88,7 @@ L'input da/l'output verso un'azione costituiscono un dizionario di coppie chiave
 
 Le chiamate di un'azione non sono ordinate. Se l'utente richiama un'azione due volte dalla riga di comando o dall'API REST, la seconda chiamata potrebbe essere eseguita prima della precedente. Se le azioni hanno effetti secondari, questi potrebbero essere osservati in qualsiasi ordine.
 
-Inoltre, non vi è alcuna garanzia che le azioni vengano eseguire automaticamente. Due azioni possono essere eseguite contemporaneamente e avere effetti secondari interfoliati.{{site.data.keyword.openwhisk_short}} non garantisce uno specifico modello di coerenza simultanea per gli effetti secondari. Qualsiasi effetto secondario dipenderà dall'implementazione.
+Inoltre, non vi è alcuna garanzia che le azioni vengano eseguire automaticamente. Due azioni possono essere eseguite contemporaneamente e avere effetti secondari interfoliati. Qualsiasi effetto secondario dipenderà dall'implementazione.
 
 ### Semantica at most once
 {: #openwhisk_atmostonce}
@@ -187,7 +187,7 @@ function main(params) {
 ```
 {: codeblock}
 
-Un'attivazione dell'azione JavaScript è **asincrona** se la funzione principale termina richiamando ```return whisk.async();```. In questo caso, il sistema presuppone che l'azione sia ancora in esecuzione, finché essa non esegue:
+Un'attivazione dell'azione JavaScript è **asincrona** se la funzione principale termina richiamando ```return whisk.async();```.  In questo caso, il sistema presuppone che l'azione sia ancora in esecuzione, finché essa non esegue:
 - ```return whisk.done();``` o
 - ```return whisk.error();```
 
@@ -229,7 +229,7 @@ La funzione `whisk.invoke()` richiama un'altra azione. Essa prende come argoment
 
 - *name*: il nome completo dell'azione da richiamare,
 - *parameters*: un oggetto JSON che rappresenta l'input dell'azione richiamata. Se omesso, il valore predefinito è un oggetto vuoto.
-- *apiKey*: la chiave di autorizzazione con cui richiamare l'azione. L'azione è in esecuzione. Il valore predefinito è `whisk.getAuthKey()`. 
+- *apiKey*: la chiave di autorizzazione con cui richiamare l'azione. Il valore predefinito è `whisk.getAuthKey()`. 
 - *blocking*: indica se l'azione deve essere richiamata in modalità bloccante o non bloccante. Il valore predefinito è `false`, che indica una chiamata non bloccante.
 - *next*: una funzione di callback facoltativa da eseguire al completamento della chiamata.
 

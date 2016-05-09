@@ -13,7 +13,7 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-*Ultimo aggiornamento: 12 gennaio 2016* 
+*Ultimo aggiornamento: 12 gennaio 2016*
 
 # Utilizzo delle applicazioni starter
 {: #using_starter_applications}
@@ -34,4 +34,4 @@ passa alla sezione Runtime.
   * Segui la procedura per la ridistribuzione dell'applicazione starter.
 7. Modifica l'applicazione e distribuiscila nuovamente.
 
-La directory che contiene l'applicazione starter scaricata contiene un file README. Consulta il file README per una descrizione dei file del package applicazione starter. Apporta le modifiche al codice, distribuisci nuovamente l'applicazione e vedi l'effetto di queste operazioni sulla tua applicazione in esecuzione.  
+La directory che contiene l'applicazione starter scaricata contiene un file README.  Consulta il file README per una descrizione dei file del package applicazione starter.  Apporta le modifiche al codice, distribuisci nuovamente l'applicazione e vedi l'effetto di queste operazioni sulla tua applicazione in esecuzione.  

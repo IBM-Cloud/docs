@@ -66,7 +66,7 @@ contextes d'exécution fournis par {{site.data.keyword.Bluemix_notm}} pour exéc
 l'application. Votre
 application peut effectuer son véritable travail tout en laissant la gestion des services à l'infrastructure.
 
-## Architecture de l'environnement {{site.data.keyword.Bluemix_notm}} public 
+## Architecture de l'environnement {{site.data.keyword.Bluemix_notm}} public
 {: #publicarch}
 
 
@@ -127,10 +127,10 @@ Lorsque vous créez une application et que vous la déployez dans {{site.data.ke
 représentés par
 l'application sont envoyés. Pour une application mobile, une projection de back end mobile est créée dans {{site.data.keyword.Bluemix_notm}}. Tout code de l'application mobile exécuté sur le cloud l'est finalement dans l'environnement {{site.data.keyword.Bluemix_notm}}. Pour une application Web, le code exécuté sur le cloud correspond à
 l'application elle-même, que le développeur déploie dans {{site.data.keyword.Bluemix_notm}}. Le choix du serveur virtuel dépend de plusieurs
-facteurs, dont : 
+facteurs, dont :
 
 * La charge actuelle de la machine
-* Les environnements d'exécution ou les infrastructures pris en charge par le serveur virtuel 
+* Les environnements d'exécution ou les infrastructures pris en charge par le serveur virtuel
 
 Une fois le serveur virtuel choisi, un gestionnaire d'application sur chaque serveur virtuel installe l'infrastructure et l'environnement
 d'exécution requis pour
@@ -139,7 +139,7 @@ dans cette infrastructure. Ensuite, les artefacts d'application sont démarrés.
 
 La figure suivante présente la structure d'un serveur virtuel, aussi appelé agent DEA (Droplet Execution Agent), sur lequel
 plusieurs
-applications sont déployées : 
+applications sont déployées :
 
 ![Conception d'un serveur virtuel](images/container.png)
 

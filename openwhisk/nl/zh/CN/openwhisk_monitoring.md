@@ -27,7 +27,7 @@ copyright:
 ## 活动摘要
 {: #summary}
 
-此视图提供了您的 {{site.data.keyword.openwhisk_short}} 环境的高级别摘要。使用**活动摘要**视图可监视启用了 {{site.data.keyword.openwhisk_short}} 的服务的总体运行状况和性能。通过此视图中的度量值，可以执行以下操作：
+此视图提供了您的 {{site.data.keyword.openwhisk_short}} 环境的高层次摘要。使用**活动摘要**视图可监视启用了 {{site.data.keyword.openwhisk_short}} 的服务的总体运行状况和性能。通过此视图中的度量值，可以执行以下操作：
 * 对于服务的启用了 {{site.data.keyword.openwhisk_short}} 的操作，通过查看调用这些操作的次数，确定这些操作的使用率。
 * 确定所有操作中的总体故障率。如果发现错误，可以通过查看**活动直方图**视图来确定哪些服务或操作发生了错误。通过查看**活动日志**来确定错误本身。
 * 通过查看与每个操作关联的平均完成时间，确定操作的执行情况。 

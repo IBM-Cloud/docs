@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016 
+  years: 2014, 2016
 
  
 
@@ -246,7 +246,7 @@ dal tuo ambiente di sviluppo al tuo ambiente di test e, quindi, al tuo ambiente 
 
     Per ulteriori informazioni su {{site.data.keyword.IBM_notm}} Containers, vedi [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
-    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} è un ambiente cloud ospitato, appartenente a {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, che puoi utilizzare per creare, eseguire, gestire e monitorare le tue applicazioni, pur mantenendo il massimo controllo sulle tue applicazioni e sul middleware su cui vengono eseguite. Utilizza {{site.data.keyword.virtualmachinesshort}} per isolare le tue soluzioni aziendali, soprattutto quando distribuisci le tue applicazioni in un cloud pubblico.</p>
+    <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} è un ambiente cloud ospitato, appartenente a {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, che puoi utilizzare per creare, eseguire, gestire e monitorare le tue applicazioni, pur mantenendo il massimo controllo sulle tue applicazioni e sul middleware su cui vengono eseguite. Utilizza {{site.data.keyword.virtualmachinesshort}} per isolare le tue soluzioni aziendali, soprattutto quando distribuisci le tue applicazioni in un cloud pubblico. </p>
 <p>    
 Puoi eseguire e gestire i server virtuali in cloud pubblici e privati (in loco) che utilizzano software OpenStack. Puoi creare, avviare e gestire i tuoi server virtuali attraverso l'interfaccia utente {{site.data.keyword.Bluemix_notm}} o il client OSC (OpenStackClient). Puoi utilizzare le immagini del server virtuale fornite da {{site.data.keyword.IBM_notm}} o creare server virtuali partendo dalle tue immagini personalizzate. Puoi utilizzare le funzioni {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} per eliminare gran parte delle complessità associate all'ospitare e gestire applicazioni basate sul cloud, quali la registrazione,il ridimensionamento automatico e il monitoraggio. Puoi utilizzare i servizi OpenStack e servizi {{site.data.keyword.Bluemix_notm}} insieme, per creare ed eseguire applicazioni ibride. Puoi eseguire il provisioning di risorse di infrastruttura come necessario in base alle politiche operative a alla domanda di carico di lavoro. </p>
 <p>

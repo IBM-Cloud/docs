@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -18,7 +18,8 @@ copyright:
 
 *上次更新时间：2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。{:shortdesc}
+{{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 基于 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 开放式源代码技术构建，通过平台即服务 (PaaS) 使开发者能够更轻松地进行应用程序开发。另外，{{site.data.keyword.Bluemix_notm}} 还提供预构建的移动后端即服务 (MBaaS) 功能。目标是通过提供各种可随时立即使用的服务以及托管功能来实现互联网大规模开发，从而简化应用程序的交付过程。
 
@@ -225,7 +226,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ### 入门模板
 {: #starters}
 
-*入门模板*是一种模板，包含预定义的服务和使用特定 buildpack 配置的应用程序代码。入门模板有两种类型：样板和运行时。入门模板可以是用特定编程语言编写的应用程序代码，也可以是应用程序代码和一组服务的组合。
+*入门模板*是一种模板，其中包含预定义的服务以及使用特定 buildpack 配置的应用程序代码。入门模板有两种类型：样板和运行时。入门模板可以是用特定编程语言编写的应用程序代码，也可以是应用程序代码和一组服务的组合。
 
 ### 样板
 {: #boilerplates}
@@ -235,7 +236,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 ### 运行时
 {: #runtimes}
 
-*运行时*是用于运行应用程序的一组资源。{{site.data.keyword.Bluemix_notm}} 提供运行时环境来作为不同类型应用程序的容器。运行时环境将作为 buildpack 集成到 {{site.data.keyword.Bluemix_notm}} 中，并由系统自动配置使用。
+*运行时*是用于运行应用程序的一组资源。{{site.data.keyword.Bluemix_notm}} 提供了多种运行时环境，用于包含不同类型的应用程序。运行时环境是以 buildpack 的形式集成到 {{site.data.keyword.Bluemix_notm}} 中，由系统自动配置使用。
 
 ### buildpack
 {: #buildpacks}

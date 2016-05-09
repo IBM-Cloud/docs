@@ -18,7 +18,7 @@ copyright:
 
 # Usando e criando pacotes do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Última atualização: 22 de fevereiro de 2016*
+*Última atualização: 28 de março de 2016*
 
 No {{site.data.keyword.openwhisk}}, é possível usar pacotes para empacotar um conjunto de ações relacionadas juntas e compartilhá-las com outras pessoas.
 
@@ -456,11 +456,11 @@ Após as ações e os feeds que formam um pacote serem depuradas e testadas, o p
 1. Compartilhe o pacote com todos os usuários:
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: pacote sample atualizado
+  ok: pacote custom atualizado
   ```
   {: screen}
 

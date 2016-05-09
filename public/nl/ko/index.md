@@ -18,7 +18,8 @@ copyright:
 *마지막 업데이트 날짜: 2016년 2월 22일*
 
 
-{{site.data.keyword.Bluemix_notm}}는 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다. {:shortdesc}
+{{site.data.keyword.Bluemix_notm}}는 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다.
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}}는 사용자의 요구사항에 맞는 클라우드 배치를 가지고 있습니다. 확장을 계획 중인 소기업이든 추가적인 분리가 필요한 대기업이든 규모에 관계없이 클라우드에서 경계 없이 개발을 할 수 있으며 이를 통해 사용자 전용 서비스를 {{site.data.keyword.IBM_notm}} 및 써드파티 제공자에서 제공하는 공용 {{site.data.keyword.Bluemix_notm}} 서비스에 연결할 수 있습니다. 모든 서비스 인스턴스는 {{site.data.keyword.IBM_notm}}에서 관리하고 사용하도록 선택한 서비스에 대해서만
 요금이 청구됩니다. 
@@ -185,7 +186,7 @@ Eclipse 도구를 사용하고 있는 경우
 {{site.data.keyword.Bluemix_notm}} 서버를 작성하고
 지역의 API 엔드포인트를 지정하여
 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다.
-Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치 ](../manageapps/eclipsetools/eclipsetools.html#toolsinstall)를 참조하십시오..
+Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html#toolsinstall)를 참조하십시오.
 
 각 지역에
 고유한 접두부가 지정됩니다. {{site.data.keyword.Bluemix_notm}}는

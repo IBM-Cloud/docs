@@ -86,12 +86,12 @@ l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche
         Nom d'hôte sur la route que vous désirez utiliser pour votre application.
 	
 Une fois le domaine personnalisé configuré dans {{site.data.keyword.Bluemix_notm}}, vous devez le mapper au domaine de système
-{{site.data.keyword.Bluemix_notm}} sur votre serveur DNS enregistré : 
+{{site.data.keyword.Bluemix_notm}} sur votre serveur DNS enregistré :
 
-  1. Configurez un enregistrement 'CNAME' pour le nom de domaine personnalisé sur votre serveur DNS. 
+  1. Configurez un enregistrement 'CNAME' pour le nom de domaine personnalisé sur votre serveur DNS.
   2. Mappez le nom de domaine personnalisé au noeud final sécurisé pour la région {{site.data.keyword.Bluemix_notm}} dans laquelle s'exécute
 votre application. Utilisez les noeuds finaux de région suivants pour fournir la route d'URL allouée à votre organisation dans
-{{site.data.keyword.Bluemix_notm}} : 
+{{site.data.keyword.Bluemix_notm}} :
   
     * SUD DES ETATS-UNIS : `secure.us-south.bluemix.net`
     * EUROPE-ROYAUME-UNI : `secure.eu-gb.bluemix.net`

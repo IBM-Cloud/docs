@@ -15,22 +15,22 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # 管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*上次更新时间：2016 年 2 月 18 日*
+*上次更新时间：2016 年 4 月 19 日*
 
-如果您具有 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员访问权，请转至**管理**页面来管理资源、监视配额使用情况、管理用户许可权、安排升级通知，以及查看安全报告和日志等。您可以通过创建空间并设置用户角色和许可权来管理组织；请参阅[管理组织](../admin/adminpublic.html#orgmng)。{:shortdesc}
+如果您具有 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员访问权，请转至**管理**页面来管理资源、监视配额使用情况、管理用户许可权、安排升级通知，以及查看安全报告和日志等。您可以通过创建空间并设置[用户角色和许可权](index.html#oc_useradmin)来管理组织；请参阅[管理组织](../admin/adminpublic.html#orgmng)。
+{:shortdesc}
 
 *表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} Local 或 Dedicated 实例的管理任务*
 
 | 我能执行哪些操作？ | 详细信息 |    
 |----------------|---------|
-|监视系统使用情况 | 单击**管理 &gt; 使用情况**。查看系统信息、监视 CPU 使用情况以及计划使用量，以便做出最佳业务决策。请参阅[查看使用情况信息](index.html#oc_resource)。|
+|监视系统使用情况 | 单击**管理 &gt; 使用情况**。查看系统信息、监视 CPU 使用情况以及计划使用情况，以便做出最佳业务决策。请参阅[查看使用情况信息](index.html#oc_resource)。|
 |管理目录 | 单击**管理 &gt; 目录管理**可管理哪些服务对用户和组织可视。请参阅[管理目录](index.html#oc_catalog)。|
 |管理组织 | 单击**管理 &gt; 组织管理**可创建组织、监视组织配额以及基于需求快速做出决策。请参阅[管理组织](index.html#oc_organizations)。|
 |创建空间和分配用户角色 | 单击**帐户和支持**图标 ![帐户和支持](../support/images/account_support.svg)，然后选择**管理组织**可在您的组织内创建空间。添加用户并为用户分配组织和空间角色。请参阅[管理组织](../admin/adminpublic.html#orgmng)。 |
-|对管理用户许可权进行管理 | 单击**管理 &gt; 用户管理**可添加用户、除去用户和调整用户许可权。请参阅[管理用户和许可权](index.html#oc_user)。 |
+|对管理用户许可权进行管理 | 单击**管理 &gt; 用户管理**可添加用户、除去用户和调整用户许可权。请参阅[管理用户和许可权](index.html#oc_useradmin)。 |
 |查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](index.html#oc_report)。 |
 |查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。还可以访问日历订阅源和事件预订来扩展“暂挂更新”部分中的通知。请参阅[查看系统信息](index.html#oc_system)。 |
 |扩展通知和设置事件预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂更新**。可以使用 Web Hook 来与所选 Web Service 集成，以设置某个更新或事件的事件通知预订。请参阅[通知和事件预订](index.html#oc_eventsubscription)。 |
@@ -45,13 +45,13 @@ copyright:
 
 可以查看 IBM 发来的有关您本地或专用环境的通知，并监视您环境的状态。查看下表以获取有关不同类型通知的信息以及通知发布位置。
 
+表 2. 事件类型和通知方法
+
 | **事件类型** | **通知方法** |       
 |-----------------|-------------------|
 | 维护更新 | 您将在“管理”页面的“通知”中获得有关即将到来的维护更新的警报。转至**管理**页面，然后选择**通知**图标 ![通知](images/icon_announcement.svg)。要查看暂挂和完成的通知的完整列表和历史记录，请单击**管理 &gt; 系统信息** &gt; *Number* **个暂挂更新**。您可以通过设置事件预订来扩展通知功能，此事件预订将“管理”页面中的维护更新警报与所选 Web Service 集成在一起，以将消息路由到帮助台电子邮件地址或向所选电话号码发送短信。 |
 | 严重事件 | 您将在“状态”页面上获得有关严重事件的警报。单击**帐户和支持**图标 ![帐户和支持](../support/images/account_support.svg)，然后选择**状态**。您可以通过设置事件预订来扩展通知功能，此事件预订将“状态”页面中的事件警报与所选 Web Service 集成在一起，以将消息路由到帮助台电子邮件地址或向所选电话号码发送短信。 |  
 | 状态 | 可以查看平台、服务和您的 {{site.data.keyword.Bluemix_notm}} 实例的最新状态。单击**帐户和支持**图标 ![帐户和支持](../support/images/account_support.svg)，然后选择**状态**。  |
-
-*表 2. 事件类型和通知方法*
 
 ### 设置事件预订
 
@@ -59,16 +59,16 @@ copyright:
 
 要使用 Web Hook 来设置特定事件预订，请完成以下步骤：
 
-1. 转至**管理**页面：
-
-- 对于维护更新通知，请转至**系统信息** &gt; *Number* **个暂挂更新**，然后单击**预订**图标 ![预订](images/icon_subscribe.svg)。
-- 对于事件警报通知，请单击**帐户和支持** 图标 ![帐户和支持](../support/images/account_support.svg) &gt; **状态**，然后单击**预订**图标 ![预订](images/icon_subscribe.svg)。
+* 对于维护更新通知，请转至**系统信息** &gt; *Number* **个暂挂更新**，然后单击**预订**图标 ![预订](images/icon_subscribe.svg)。
+* 对于事件警报通知，请单击**帐户和支持** 图标 ![帐户和支持](../support/images/account_support.svg) &gt; **状态**，然后单击**预订**图标 ![预订](images/icon_subscribe.svg)。
 
 **注**：可以使用上述两种方法之一来访问事件预订页面以获取这两种类型的通知。
 
-2. 单击**添加预订**。
+1. 单击**添加预订**。
 
-3. 填写事件预订表单。有关表单上字段的信息，请查看下表：
+2. 填写事件预订表单。有关表单上字段的信息，请查看下表：
+
+*表 3. 事件预订表单字段*
 
 | **字段** | **描述** |
 |-----------------|-------------------|
@@ -80,8 +80,6 @@ copyright:
 | 用户名 | 输入您的 Web Service 的用户名。如果不想使用个人凭证，那么可以设置功能标识以专门用于 {{site.data.keyword.Bluemix_notm}}。 |
 | 密码 | 输入您的 Web Service 的密码。 |
 | 有效内容 | 如果选择了 POST 方法，请输入特定于要使用的 Web Service 的属性，以及与属性成对的用于 IBM 通知的值。例如，如果要在来自 Web Service 的通知中显示标题、消息和严重性，那么必须定义 {{site.data.keyword.Bluemix_notm}} 值以及匹配的 Web Service 属性。以下值可用于从 {{site.data.keyword.Bluemix_notm}} 通知拉取通知标题、消息体和严重性级别的信息：`"{{title}}"`、`"{{message}}"` 和 `"{{severity}}"`。如果未在此部分中输入信息，您会收到不含任何附加信息的通知。  |
-
-表 3. 事件预订表单字段
 
 保存事件预订时，您会通过借助 Web Service 设置的方法接收通知。对于事件，通知仍会发布在“状态”页面上，对于维护更新，将发布在“管理”页面的“通知”区域中。
 
@@ -102,8 +100,8 @@ copyright:
 <ol>
 <li>单击 <strong><em>Number</em> 个暂挂更新</strong>以查看所有暂挂更新。</li>
 <li>选择要执行的更新，或查看更新详细信息，包括更新时段、安排的日期或中断状态。</li>
-<li>单击<strong>设置不可用的日期</strong>以在更新时段中设置不方便应用更新的特定日期。如果设置了不可用的日期，IBM 将根据您的选择来批准并安排更新。更新得到批准并安排后，您将收到通知。</li>
-<li>单击<strong>批准</strong>以批准更新（如果没有任何不可用的日期）。如果批准，那么将在安排的更新时段应用更新。更新部署开始和结束后，IBM 都会发送通知。</li>
+<li>单击<strong>选择不可用的日期</strong>以在更新时段中设置不方便应用更新的特定日期。如果设置了不可用的日期，IBM 将根据您的选择来批准并安排更新。更新得到批准并安排后，您将收到通知。</li>
+<li>单击<strong>批准更新</strong>以批准更新（如果没有任何不可用的日期）。如果批准，那么将在安排的更新时段应用更新。更新部署开始和结束后，IBM 都会发送通知。</li>
 </ol>
 
 **注**：如果未设置不可用日期或未批准更新，那么更新会在 21 天时段结束时应用，以确保您的平台保持最新。
@@ -221,6 +219,8 @@ copyright:
 
 下表显示了为 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 生成的安全报告的列表。
 
+*表 4. 安全报告列表*
+
 | **类别** | **报告** | **描述** |      
 |-----------------|-------------------|---------------------|
 | 防火墙 | 防火墙登录 | 与管理员登录到 Vyatta 防火墙设备相关的事件。 |
@@ -240,8 +240,6 @@ copyright:
 | 防病毒 | 防病毒扫描报告 | 已就位的防病毒软件。 |
 | 软件修订管理 | 补丁安装报告 | 已应用的软件修订。 |
 | 安全事件管理 | 安全事件补救报告 | 用于安全事件管理的安全事件证据。 |
-
-*表 4. 安全报告列表*
 
 ## 查看状态
 {: #oc_status}
@@ -281,13 +279,13 @@ copyright:
 
 要注册服务代理程序，请完成以下步骤：
 
-1\. [实现 Cloud Foundry 服务代理程序 API](http://docs.cloudfoundry.org/services/api.html){: new_window} 以支持您的服务与 {{site.data.keyword.Bluemix_notm}} 之间的通信。服务代理程序 API 是由 {{site.data.keyword.Bluemix_notm}} 使用的一组 REST 端点。
-
-要实现服务代理程序时，在 `GET /v2/catalog` 的 JSON 响应中，必须提供服务和服务套餐的定义，包括要显示的服务信息。例如，查看目录 (GET) 响应的以下样本 JSON：
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">实现 Cloud Foundry 服务代理程序 API</a> 以支持您的服务与 {{site.data.keyword.Bluemix_notm}} 之间的通信。服务代理程序 API 是由 {{site.data.keyword.Bluemix_notm}} 使用的一组 REST 端点。<br />
+<br />
+<p>要实现服务代理程序时，在 <code>GET /v2/catalog</code> 的 JSON 响应中，必须提供服务和服务套餐的定义，包括要显示的服务信息。例如，查看目录 (GET) 响应的以下样本 JSON：</p>
+<p><pre>
 "services": [ 
-{
+   {
       "bindable":true,
       "description":"Cool Service is a data warehousing and analytics solution.",
       "id":"cool-service-id",
@@ -371,33 +369,26 @@ copyright:
    }
 ]
 }
-```
-{: codeblock}
-
-**注**：为本地或专用环境创建服务代理程序时，必须在服务定义 JSON 文件的“tags”字段中指定 `customer_dedicated`。
-
-2\. 已实现服务代理程序 API 后，请转至**管理 &gt; 目录管理**。
-
-3\. 单击**注册服务代理程序**。
-
-4\. 通过在以下字段中输入值来填写表单：
-
-- 服务代理程序名称
-- 服务代理程序 URL
-- 服务代理程序用户名
-- 服务代理程序密码
-
-5\. 单击**连接**。
-
-6\. 查看服务的信息，包括可用套餐、图标和服务描述。
-
-**注**：如果需要更改服务的目录信息，请更新服务代理程序，然后通过填写表单来再次启动注册过程。
-
-7\. 单击**注册**。
-
-8\. 选择启用服务的所有套餐，或只启用特定套餐。缺省情况下，会禁用所有套餐。
-
-9\. 为所有组织或特定组织启用服务实例。
+</pre></p>
+<p><strong>注</strong>：为本地或专用环境创建服务代理程序时，必须在服务定义 JSON 文件的“tags”字段中指定 `customer_dedicated`。</p>
+</li>
+<li>在实现服务代理程序 API 后，请转至<strong>管理</strong> &gt; <strong>目录管理</strong>。</li>
+<li>单击<strong>注册服务代理程序</strong>。</li>
+<li>通过在以下字段中输入值来填写表单：<ul>
+<li>服务代理程序名称</li>
+<li>服务代理程序 URL</li>
+<li>服务代理程序用户名</li>
+<li>服务代理程序密码</li>
+</ul>
+</li>
+<li>单击<strong>连接</strong>。</li>
+<li>查看服务的信息，包括可用套餐、图标和服务描述。<br />
+<p><strong>注</strong>：如果需要更改服务的目录信息，请更新服务代理程序，然后通过填写表单来再次启动注册过程。</p>
+</li>
+<li>单击<strong>注册</strong>。</li>
+<li>选择启用服务的所有套餐，或只启用特定套餐。缺省情况下，会禁用所有套餐。</li>
+<li>为所有组织或特定组织启用服务实例。</li>
+</ol>
 
 现在，可以在 {{site.data.keyword.Bluemix_notm}}“目录”的“定制服务”类别中查看您的服务。转至**管理 &gt; 目录管理**，然后选择目录中的磁贴。可以启用不同套餐，并随时编辑组织的套餐可视性。
 
@@ -408,7 +399,7 @@ copyright:
 
 单击**管理 &gt; 组织管理**。
 
-可以展开并查看各个部分。您还可以查看和管理组织的配额计划。
+可以展开并查看各个部分。您还可以审查和管理组织的配额计划。
 
 ### 创建组织
 
@@ -498,6 +489,8 @@ copyright:
 
 可以为用户分配以下许可权：
 
+*表 5. 许可权*
+
 | **用户许可权** | **描述** |       
 |-----------------|-------------------|
 | admin | 拥有 `admin` 许可权的用户可以编辑其他用户的许可权。 |
@@ -506,11 +499,9 @@ copyright:
 | Reports | 可以为拥有 `reports` 许可权的用户分配针对安全报告执行 `view`（查看）或 `write`（写入，即修改）操作的访问权。 |
 | Users | 可以为拥有 `users` 许可权的用户分配针对用户列表执行 `view`（查看）操作或针对用户执行 `write`（写入，即添加或除去）操作的访问权。此许可权不允许设置其他用户的许可权。|
 
-*表 5. 许可权*
-
 可以启用这些许可权，或者可以授予用户对该许可权的 `view` 或 `write` 访问权，如以下图标所示：
 
-* 许可权旁边的 ![“已启用”，用复选标记表示](images/icon_enabled.svg) 图标表示已启用。
+* 许可权的 ![“已启用”，用复选标记表示](images/icon_enabled.svg) 图标表示此许可权已启用。
 * ![“查看”，用眼睛表示](images/icon_read.svg) 图标表示用户具有对该许可权的 `view`（只读）访问权。
 * ![“写入”，用画笔表示](images/icon_write.svg) 图标表示用户具有对该许可权的 `write`（编辑、添加或除去）访问权。
 
@@ -833,6 +824,8 @@ POST /codi/v1/serviceBrokers
 ### 请求
 {: #registerrequest}
 
+*表 6. 字段*
+
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。 |
@@ -841,7 +834,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
 
-*表 6. 字段*
 
 #### 主体
 {: #registerbody}
@@ -913,6 +905,8 @@ Content-Type: application/json
 ### 请求
 {: #updaterequest}
 
+*表 7. 字段*
+
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。此名称是创建服务时使用的名称，无法更改。 |
@@ -921,7 +915,6 @@ Content-Type: application/json
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
 
-*表 7. 字段*
 
 #### 主体
 {: #updatebody}
@@ -984,11 +977,12 @@ Content-Type: application/json
 
 要删除服务，请使用以下 API 和代码示例。
 
+*表 8. 参数*
+
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。此名称是创建服务时使用的名称，无法更改。 |
 
-*表 8. 参数*
 
 ### 路径
 

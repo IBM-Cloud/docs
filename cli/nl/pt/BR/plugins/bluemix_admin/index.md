@@ -465,7 +465,8 @@ organização no comando.</dd>
 
 Use os comandos a seguir para listar todos os brokers de serviço, incluir ou excluir um broker de serviço ou atualizar um broker de serviço.
 
-* É possível listar todos os brokers de serviço inserindo o comando a seguir:
+* É possível listar um broker de serviço
+inserindo o comando a seguir:
 
 ```
 cf ba service-brokers <broker_name>

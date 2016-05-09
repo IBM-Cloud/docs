@@ -14,7 +14,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Commandes Cloud Foundry (cf) 
+# Commandes Cloud Foundry (cf)
 
 *Dernière mise à jour : 29 janvier 2016*
 

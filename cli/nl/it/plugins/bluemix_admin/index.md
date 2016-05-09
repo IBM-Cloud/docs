@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} Admin CLI
 {: #bluemixadmincli}
 
-*Ultimo aggiornamento: 3 marzo 2016* 
+*Ultimo aggiornamento: 3 marzo 2016*
 
 Puoi gestire gli utenti per il tuo ambiente
 {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato
@@ -472,7 +472,7 @@ nome comando **ba edit-service-plan-visibility**.
 
 Utilizza i seguenti comandi per elencare tutti i broker dei servizi, aggiungere o eliminare un broker dei servizi o aggiornare un broker di servizi.
 
-* Puoi elencare tutti i broker dei servizi
+* Puoi elencare i broker dei servizi
 immettendo il seguente comando:
 
 ```

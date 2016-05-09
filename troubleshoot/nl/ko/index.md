@@ -15,7 +15,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-*마지막 업데이트 날짜: 2016년 3월 15일*
+*마지막 업데이트 날짜: 2016년 4월 13일*
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한
 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
@@ -109,7 +109,7 @@ DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_not
 `nslookup` 명령을 사용하십시오. 예를 들어,
 명령행 창에 다음 명령을 입력할 수 있습니다.
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -230,13 +230,10 @@ nslookup mybluemix.net
 
     
 
-## {{site.data.keyword.Bluemix_notm}} 페이지를
-로드할 수 없음
+## {{site.data.keyword.Bluemix_notm}} 페이지를 로드할 수 없음
 {: #ts_err}
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를
-사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를
-로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를 로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
  
 
 {{site.data.keyword.Bluemix_notm}}
@@ -250,18 +247,14 @@ nslookup mybluemix.net
 
  
 
-필요한 경우 다음 조치 중
-하나 이상을 수행할 수 있습니다.
+필요한 경우 다음 조치 중 하나 이상을 수행할 수 있습니다.
 {: tsResolve}
 
   * 브라우저를 새로 고치거나 다시 시작하십시오.
-  * {{site.data.keyword.Bluemix_notm}}에서 로그아웃한 후
-다시 로그인하십시오.
+  * {{site.data.keyword.Bluemix_notm}}에서 로그아웃한 후 다시 로그인하십시오.
   * 브라우저의 개인용 브라우징 모드를 사용하십시오. 
   * 브라우저의 쿠키와 캐시를 지우십시오.
-  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서
-지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}}
-전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오.
+  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}}전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오.
   * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여
 애플리케이션이 실행 중인지 확인하십시오.
   
@@ -311,6 +304,87 @@ nslookup mybluemix.net
 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 경우가 있습니다. 그러나 대부분의 경우
 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
 {:shortdesc}
+
+
+
+
+
+## 앱을 디버그 모드로 전환할 수 없음
+{: #ts_debug}
+
+JVM(Java Virtual Machine)이 버전 8 이하인 경우에는 디버그 모드를 사용하지 못할 수 있습니다.  
+
+
+**애플리케이션 디버그 사용**을 선택한 이후, 도구는 해당 애플리케이션을 디버그 모드로 전환하려고 시도합니다. 그리고 Eclipse 워크벤치는 디버그 세션을 시작합니다. 도구에서 디버그 모드를 정상적으로 사용하는 경우, 웹 애플리케이션 상태는 `업데이트 모드`, `개발` 및 `디버깅`을 표시합니다.
+{: tsSymptoms}
+
+그러나 도구에서 디버그 모드를 사용할 수 없는 경우, 웹 애플리케이션 상태는
+`업데이트 모드` 및 `개발`만 표시하며 `디버깅`은 표시하지 않습니다. 도구가 콘솔 보기에서 다음 오류 메시지를 표시할 수도 있습니다.
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual Machine) 버전은 디버그 세션을 설정할 수 없습니다.
+{: tsCauses}
+
+워크벤치 JVM이 이 버전 중 하나인 경우에는 디버그 세션을 작성할 때 문제가 발생할 수 있습니다. 워크벤치 JVM 버전은 일반적으로 로컬 컴퓨터의 시스템 JVM입니다. 시스템 JVM은 실행 중인 Bluemix Java 애플리케이션의 JVM과 동일하지 않습니다. Bluemix Java 애플리케이션은 거의 항상 IBM JVM에서 실행되며, 가끔은 OpenJDK JVM에서 실행됩니다.
+  
+
+IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면 다음 단계를 완료하십시오.
+{: tsResolve}
+
+  1. IBM Eclipse Tools for Bluemix에서 **도움말** > **Eclipse 정보** > **설치 세부사항** > **구성**을 선택하십시오.
+  2. 목록에서 `eclipse.vm` 특성을 찾으십시오. 다음 행은 `eclipse.vm` 특성의 예입니다.
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. 명령행에서, Java 설치의 `bin` 디렉토리에서 `java -version`을 입력하십시오. IBM JVM 버전 정보가 표시됩니다.
+
+워크벤치 JVM이 IBM JVM 7 또는 8, 또는 Oracle JVM 8의 이전 버전인 경우에는 다음 단계를 완료하여 Oracle JVM 8로 전환하십시오.
+
+  1. Oracle JVM 8을 다운로드한 후에 이를 설치하십시오. 세부사항은 [Java SE 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}를 참조하십시오.
+  2. Eclipse를 다시 시작하십시오.
+  3. `eclipse.vm` 특성이 Oracle JVM 8의 새 설치를 지시하는지 확인하십시오.
+
 
 
 
@@ -434,8 +508,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 ## 디스크 할당량이 초과됨
 {: #ts_disk_quota}
 
-디스크 공간이 부족한 경우에는 디스크 할당량을 수동으로
-수정하여 추가 디스크 공간을 얻을 수 있습니다.
+디스크 공간이 부족한 경우에는 디스크 할당량을 수동으로 수정하여 추가 디스크 공간을 얻을 수 있습니다.
 
   
 
@@ -507,8 +580,7 @@ Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM 푸시 서
 
  
 
-Bluemix 앱을 위한 푸시 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수
-없습니다. 
+Bluemix 앱을 위한 푸시 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
 
  
@@ -579,7 +651,7 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책�
 cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 예:
-    ```
+```
 cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
@@ -594,8 +666,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms} 
 
-`서버
-실패 오류, 상태 코드: 400, 오류 코드: 100005, 메시지: 조직의 메모리 한계를 초과했습니다. `
+`서버 실패 오류, 상태 코드: 400, 오류 코드: 100005, 메시지: 조직의 메모리 한계를 초과했습니다. `
 
  
 
@@ -661,6 +732,7 @@ cf push <appname> -p <app_path>
 앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 Manifest 파일에 변수를 저장하지 않으면 지정한 값이 재설정됩니다.
 
 
+
 앱을 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.Bluemix_notm}}로 푸시한 후 지정한 변수가 손실됩니다.
 {: tsSymptoms} 
 
@@ -724,27 +796,20 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인할 수는 있지만, cf 명령행 인터페이스 또는 Eclipse 플러그인을 사용하여 앱을 푸시할 수 없습니다.
 {: tsSymptoms}
 
-cf 명령행 인터페이스를 사용하여
-애플리케이션을 {{site.data.keyword.Bluemix_notm}}로
-푸시하려고 할 때 다음과 같은 오류 메시지가 표시되고
-해당 메시지에 지정된 조직 이름도 함께 표시됩니다. 
+cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하려고 할 때 다음과 같은 오류 메시지가 표시되고 해당 메시지에 지정된 조직 이름도 함께 표시됩니다. 
 
 `조직을 찾는 중 오류 발생`
 
 `조직을 찾을 수 없음`
 
 
-Cloud Foundry Eclipse 플러그인을 사용하여
-애플리케이션을 {{site.data.keyword.Bluemix_notm}}로
-푸시하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
+Cloud Foundry Eclipse 플러그인을 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 
 `cloudspace를 찾을 수 없습니다.`
 
 
 
-이 문제점은
-작업하는 지역의 API 엔드포인트를 지정하지 않은 경우에 발생합니다. 찾고 있는 조직이
-다른 지역에 있을 수 있습니다.
+이 문제점은 작업하는 지역의 API 엔드포인트를 지정하지 않은 경우에 발생합니다. 찾고 있는 조직이 다른 지역에 있을 수 있습니다.
 {: tsCauses} 
 
    
@@ -755,13 +820,7 @@ cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.k
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse 도구를
-사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로
-푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를
-작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의
-API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는
-[IBM Eclipse Tools
-for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html){: new_window}를 참조하십시오.
+Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는 [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html){: new_window}를 참조하십시오.  
   
   
 
@@ -780,23 +839,19 @@ for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.
 
 
 
-이 문제점은
-지정한 호스트 이름이 이미 사용 중일 경우에 발생합니다.
+이 문제점은 지정한 호스트 이름이 이미 사용 중일 경우에 발생합니다.
 {: tsCauses} 
 
 
   
-지정한 호스트 이름은
-사용 중인 도메인 내에서 고유해야 합니다. 다른 호스트 이름을 지정하려면 다음 방법 중 하나를
-사용하십시오.
+지정한 호스트 이름은 사용 중인 도메인 내에서 고유해야 합니다. 다른 호스트 이름을 지정하려면 다음 방법 중 하나를 사용하십시오.
 {: tsResolve} 
 
   * `manifest.yml` 파일을 사용하여 애플리케이션을 배치하는 경우 host 옵션에 호스트 이름을 지정하십시오.	 
     ```
     host: <hostname>	
 	```
-  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf
-push` 명령을 **-n** 옵션과 함께 사용하십시오. 
+  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf push` 명령을 **-n** 옵션과 함께 사용하십시오.
     ```
     cf push <appname> -p <app_path> -n <hostname>
     ```
@@ -1257,7 +1312,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 이 문제점은 한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에 발생할 수 있습니다.
 {: tsCauses}
 
-예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
+예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
 
  
 

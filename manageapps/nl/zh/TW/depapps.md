@@ -22,11 +22,11 @@ copyright:
 ##應用程式部署
 {: #appdeploy}
 
-將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 有兩個階段：編譯打包應用程式及啟動應用程式。
+將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 包含兩個階段：編譯打包應用程式及啟動應用程式。
 
 ###編譯打包應用程式
 
-在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構、{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
+在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構、{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
 
 在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 執行時期，或 .js 檔的 Node.js 執行時期。然後，DEA 會建立隔離的儲存器，其中包含建置套件及應用程式碼。儲存器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
@@ -34,7 +34,7 @@ copyright:
 
 啟動應用程式時，即會建立 Warden 儲存器實例。您可以使用 **cf files** 指令來查看儲存在 Warden 儲存器檔案系統中的檔案，例如日誌。如果應用程式無法啟動，則 DEA 會停止該應用程式並移除 Warden 儲存器的所有內容。因此，如果應用程式停止或應用程式的編譯打包處理程序失敗，您將無法使用日誌檔。
 
-如果無法再使用應用程式的日誌，也就無法再使用 **cf files** 指令來查看編譯打包錯誤的原因，您可以改用 **cf logs** 指令。**cf logs** 指令使用 Cloud Foundry 日誌聚集器來收集應用程式日誌及系統日誌的詳細資料，而且您可以看見在日誌聚集器中緩衝的項目。如需日誌聚集器的相關資訊，請參閱[於 Cloud Foundry 記載](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
+如果無法再使用應用程式的日誌，也就無法再使用 **cf files** 指令來查看編譯打包錯誤的原因，您可以改用 **cf logs** 指令。**cf logs** 指令使用 Cloud Foundry 日誌聚集器來收集應用程式日誌及系統日誌的詳細資料，而且您可以看見在日誌聚集器中緩衝的項目。如需日誌聚集器的相關資訊，請參閱 [Application Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
 
 **附註：**緩衝區大小有限制。如果應用程式執行一段很長的時間且未重新啟動，則當您輸入 `cf logs appname --recent` 時，可能不會顯示日誌，因為日誌緩衝區可能已被清除。因此，若要針對大型應用程式編譯打包錯誤進行除錯，您可以在不同於 cf 指令行介面的個別指令行中輸入 `cf logs appname`，以在部署應用程式時追蹤日誌。
 
@@ -80,7 +80,7 @@ copyright:
   cf push appname -p app_path
   ```
   
-對於要由 Node.js 建置套件辨識的應用程式，`package.json` 檔案必須位於 Node.js 應用程式中。`app.js` 檔案是應用程式的登錄 Script，可以指定在 `package.json` 檔案中。下列範例顯示簡式 `package.json` 檔案：
+對於要由 Node.js 建置套件辨識的應用程式，`package.json` 檔案必須位於 Node.js 應用程式中。`app.js` 檔案是應用程式的登錄 Script，可以在 `package.json` 檔案中指定。下列範例顯示簡式 `package.json` 檔案：
 
   ```
   {
@@ -111,7 +111,7 @@ copyright:
 
 ###在多個空間中部署應用程式
 
-應用程式專屬於它部署到的空間。您無法在 {{site.data.keyword.Bluemix_notm}} 將應用程式從一個空間移動或複製到另一個空間。若要在多個空間中部署應用程式，您必須在要使用應用程式的每個空間部署應用程式，步驟如下：
+應用程式專屬於它部署到的空間。您無法在 {{site.data.keyword.Bluemix_notm}} 中，將應用程式從一個空間移動或複製到另一個空間。若要在多個空間中部署應用程式，您必須在要使用應用程式的每個空間部署應用程式，步驟如下：
 
   1. 使用 **cf target** 指令與 **-s** 選項，切換至您要部署應用程式的空間：
   
@@ -128,7 +128,7 @@ copyright:
 ##應用程式資訊清單
 {: #appmanifest}
 
-應用程式資訊清單包含套用於 **cf push** 指令的選項。您可以使用應用程式資訊清單來減少每次將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時必須指定的部署詳細資料數量。
+應用程式資訊清單包含套用於 **cf push** 指令的選項。您可以使用應用程式資訊清單來減少每次將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，必須指定的部署詳細資料數量。
 
 在應用程式資訊清單中，您可以指定一些選項，例如要建立的應用程式實例數、要配置給應用程式的記憶體數量和磁碟限額，以及應用程式的其他環境變數。您還可以使用應用程式資訊清單，將應用程式部署自動化。資訊清單檔的預設名稱是 `manifest.yml`。
 
@@ -146,17 +146,17 @@ cf push -f appManifest.yml
 |選項	|說明	|用法或範例|
 |:----------|:--------------|:---------------|
 |**buildpack**	|自訂建置套件的 URL 或名稱。	|`buildpack: ` *buildpack_URL*|
-|**disk_quota**	|配置給應用程式的磁碟限額。預設值是 1 G。	|`disk_quota: 500M`|
+|**disk_quota**	|配置給應用程式的磁碟限額。預設值為 1 G。	|`disk_quota: 500M`|
 |**domain**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的網域名稱。	|`domain:` ng.bluemix.net|
 |**host**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的主機名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。	|`host: ` *host_name*|
 |**name**	|{{site.data.keyword.Bluemix_notm}} 中的應用程式名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。	|`name: ` *appname*|
 |**path**	|應用程式的位置。此值可以是相對路徑或絕對路徑。	|`path: ` *path_to_application*|
 |**command**	|應用程式的自訂啟動指令，或執行 Script 檔的指令。	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|要配置給應用程式的記憶體數量。預設值是 1G。	|`memory: 512M`|
+|**memory**	|要配置給應用程式的記憶體數量。預設值為 1G。	|`memory: 512M`|
 |**instances**	|要為應用程式建立的實例數。	|`instances: 2`|
-|**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值是 60 秒。	|`timeout: 80`|
-|**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值是 **false**。	|`no-route: true`|
-|**random-route**	|布林值，指派隨機路徑給應用程式。預設值是 **false**。	|`random-route: true`|
+|**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值為 60 秒。	|`timeout: 80`|
+|**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值為 **false**。	|`no-route: true`|
+|**random-route**	|布林值，指派隨機路徑給應用程式。預設值為 **false**。	|`random-route: true`|
 |**services**	|要連結至應用程式的服務。	|`services:   - mysql_maptest`|
 |**env**	|應用程式的自訂環境變數。|`env: DEV_ENV: production`|
 *表 1. manifest.yml 檔案中支援的選項*
@@ -271,14 +271,14 @@ cf push -f appManifest.yml
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -395,7 +395,7 @@ if (process.env.VCAP_SERVICES) {
 ### 新增使用者定義的環境變數
 {: #ud_env}
 
-使用者定義的環境變數是應用程式的特定變數。您有下列選項，可將使用者定義的環境變數新增至執行中的應用程式：
+使用者定義的環境變數，是應用程式特有的變數。您有下列選項，可將使用者定義的環境變數新增至執行中的應用程式：
 
   * 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面。請完成下列步驟：
 
@@ -436,7 +436,7 @@ export NODE_ENV=production;
 
 **附註：**`.cfignore` 檔案必須採用 UTF-8 格式。
 
-`.cfignore` 檔案包含您要忽略的檔案及目錄名稱，每行放置一個名稱。您可以使用星號 (*) 作為萬用字元。當您指定目錄時，也會忽略該目錄底下的所有檔案及子目錄。例如，`.cfignore` 檔案中的下列內容表示，所有 `.swp` 檔案，以及在 `tmp/` 目錄下的所有檔案和子目錄都將不會上傳至 {{site.data.keyword.Bluemix_notm}}。
+`.cfignore` 檔案包含您要忽略的檔案名稱及目錄名稱，每行放置一個名稱。您可以使用星號 (*) 作為萬用字元。當您指定目錄時，也會忽略該目錄底下的所有檔案及子目錄。例如，`.cfignore` 檔案中的下列內容表示，所有 `.swp` 檔案，以及在 `tmp/` 目錄下的所有檔案和子目錄都將不會上傳至 {{site.data.keyword.Bluemix_notm}}。
 
 ```
 *.swp

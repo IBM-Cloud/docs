@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Référence de l'interface de ligne de commande 
+# Référence de l'interface de ligne de commande
 
 
 *Dernière mise à jour : 17 février 2016*

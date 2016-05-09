@@ -16,7 +16,8 @@ copyright:
 # Ibrida
 {: #hybrid}
 
-Grazie ai modelli di distribuzione integrata pubblica, dedicata e locale, {{site.data.keyword.Bluemix_notm}} rappresenta un nuovo modo di utilizzo del cloud. {{site.data.keyword.Bluemix_notm}} dispone di distribuzioni cloud adatte alle tue esigenze, a prescindere che tu rappresenti una piccola attività che intende ingrandirsi o una grande azienda che richiede ulteriore isolamento. Con un cloud puoi sviluppare la tua attività senza limiti, connettendo i tuoi servizi privati ai servizi {{site.data.keyword.Bluemix_notm}} pubblici offerti da IBM. Inoltre, tu e il tuo team potete utilizzare i dati, i sistemi e i processi esistenti con gli strumenti SaaS disponibili in {{site.data.keyword.Bluemix_notm}}.{:shortdesc}
+Grazie ai modelli di distribuzione integrata pubblica, dedicata e locale, {{site.data.keyword.Bluemix_notm}} rappresenta un nuovo modo di utilizzo del cloud. {{site.data.keyword.Bluemix_notm}} dispone di distribuzioni cloud adatte alle tue esigenze, a prescindere che tu rappresenti una piccola attività che intende ingrandirsi o una grande azienda che richiede ulteriore isolamento. Con un cloud puoi sviluppare la tua attività senza limiti, connettendo i tuoi servizi privati ai servizi {{site.data.keyword.Bluemix_notm}} pubblici offerti da IBM. Inoltre, tu e il tuo team potete utilizzare i dati, i sistemi e i processi esistenti con gli strumenti SaaS disponibili in {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 ## Pubblico
 
@@ -31,7 +32,7 @@ pronte per l'uso. {{site.data.keyword.Bluemix_notm}} pubblico astrae e nasconde 
 
 ## Locale
 
-Con {{site.data.keyword.Bluemix_notm}} locale, puoi sfruttare il valore reale di un cloud privato all'interno del tuo data center. {{site.data.keyword.Bluemix_notm}} locale viene fornito come un servizio e in collaborazione costante con il tuo team IT. Inoltre, ti permette di sfruttare il mainframe, l'architettura orientata ai servizi, i processi e i dati esistenti in una piattaforma cloud moderna. Ulteriori informazioni su [{{site.data.keyword.Bluemix_notm}} locale](../local/index.html).
+Con {{site.data.keyword.Bluemix_notm}} locale, puoi sfruttare il valore reale di un cloud privato all'interno del tuo data center.  {{site.data.keyword.Bluemix_notm}} locale viene fornito come un servizio e in collaborazione costante con il tuo team IT. Inoltre, ti permette di sfruttare il mainframe, l'architettura orientata ai servizi, i processi e i dati esistenti in una piattaforma cloud moderna. Ulteriori informazioni su [{{site.data.keyword.Bluemix_notm}} locale](../local/index.html).
 
 # rellinks
 ## generale

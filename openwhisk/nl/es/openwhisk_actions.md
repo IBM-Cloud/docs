@@ -16,7 +16,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creación e invocación de acciones de {{site.data.keyword.openwhisk_short}} 
+# Creación e invocación de acciones de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
 *Última actualización: 22 de marzo de 2016*
@@ -30,23 +30,23 @@ conjunto de llamadas de API o publicar un Tweet.
 Las acciones se pueden invocar explícitamente, o ejecutarse como respuesta a un suceso. En cualquier caso, la ejecución de una
 acción tiene como resultado un registro de activación que se identifica mediante un ID de activación exclusivo. La entrada a una
 acción y el resultado de la acción son un diccionario de pares de clave/valor, en el que la clave es una serie y
-el valor es un valor JSON válido. 
+el valor es un valor JSON válido.
 
-Las acciones se pueden componer de llamadas a otras acciones, o de una secuencia definida de acciones. 
+Las acciones se pueden componer de llamadas a otras acciones, o de una secuencia definida de acciones.
 
 ## Creación e invocación de acciones de JavaScript
 {: #openwhisk_create_action_js}
 
 Las secciones siguientes le guían en la forma de trabajar con acciones en JavaScript. Empezando por la creación e invocación de una acción
-sencilla, pasaremos a añadir parámetros a una acción e invocarla con parámetros, establecer parámetros predeterminados e invocarlos, crear acciones asíncronas y, finalmente, trabajar con secuencia de acciones. 
+sencilla, pasaremos a añadir parámetros a una acción e invocarla con parámetros, establecer parámetros predeterminados e invocarlos, crear acciones asíncronas y, finalmente, trabajar con secuencia de acciones.
 
 
 ### Creación e invocación de una acción JavaScript sencilla
 {: #openwhisk_single_action_js}
 
-Revise los pasos y ejemplos siguientes para crear su primera acción JavaScript. 
+Revise los pasos y ejemplos siguientes para crear su primera acción JavaScript.
 
-1. Cree un archivo JavaScript con el contenido siguiente. Para este ejemplo, el nombre de archivo es 'hello.js'. 
+1. Cree un archivo JavaScript con el contenido siguiente. Para este ejemplo, el nombre de archivo es 'hello.js'.
   
   ```
   function main() {
@@ -56,9 +56,9 @@ Revise los pasos y ejemplos siguientes para crear su primera acción JavaScript.
   {: codeblock}
 
   El archivo JavaScript podría tener funciones adicionales. No obstante, por convenio, debe existir una función
-llamada `main` para proporcionar un punto de entrada para la acción. 
+llamada `main` para proporcionar un punto de entrada para la acción.
 
-2. Crear una acción desde la función JavaScript siguiente. Para este ejemplo, la acción se llama 'hello'. 
+2. Crear una acción desde la función JavaScript siguiente. Para este ejemplo, la acción se llama 'hello'.
 
   ```
   wsk action create hello hello.js
@@ -69,7 +69,7 @@ llamada `main` para proporcionar un punto de entrada para la acción.
   ```
   {: screen}
 
-3. Listar las acciones que ha creado: 
+3. Listar las acciones que ha creado:
   
   ```
   wsk action list
@@ -81,12 +81,12 @@ llamada `main` para proporcionar un punto de entrada para la acción.
   ```
   {: screen}
 
-  Puede ver la acción `hello` que acaba de crear. 
+  Puede ver la acción `hello` que acaba de crear.
 
 4. Tras crear su acción, puede ejecutarla en la nube en {{site.data.keyword.openwhisk_short}} con el mandato 'invoke'. Puede
 invocar acciones con una invocación *blocking* o *non-blocking*, especificando un distintivo en el mandato. Una invocación
 de bloqueo (blocking) espera hasta que la acción se ejecute completamente, y devuelve un resultado. En este ejemplo se utiliza
-el parámetro de bloqueo, `-blocking`: 
+el parámetro de bloqueo, `-blocking`:
 
   ```
   wsk action invoke --blocking hello
@@ -105,15 +105,15 @@ el parámetro de bloqueo, `-blocking`:
   ```
   {: screen}
 
-  La salida del mandato son dos elementos de información importantes: 
+  La salida del mandato son dos elementos de información importantes:
   * El ID de activación (`44794bd6aab74415b4e42a308d880e5b`)
   * El resultado de la invocación
 
   El resultado en este caso es la serie `Hello world` devuelta por la función JavaScript. El ID de activación se puede
-utilizar para recuperar los registros o el resultado de la invocación a posteriori.   
+utilizar para recuperar los registros o el resultado de la invocación a posteriori.  
 
 5. Si no necesita el resultado de la acción inmediatamente, puede omitir el distintivo `--blocking`
-para hacer una invocación sin bloqueo. Puede obtener el resultado posteriormente, usando el ID de activación. Observe el ejemplo siguiente: 
+para hacer una invocación sin bloqueo. Puede obtener el resultado posteriormente, usando el ID de activación. Observe el ejemplo siguiente:
 
   ```
   wsk action invoke hello
@@ -135,7 +135,7 @@ para hacer una invocación sin bloqueo. Puede obtener el resultado posteriorment
   ```
   {: screen}
 
-6. Si olvida registrar el ID de activación, puede obtener una lista de activaciones ordenadas de la más reciente a la más antigua. Ejecute el mandato siguiente para obtener una lista de sus activaciones: 
+6. Si olvida registrar el ID de activación, puede obtener una lista de activaciones ordenadas de la más reciente a la más antigua. Ejecute el mandato siguiente para obtener una lista de sus activaciones:
 
   ```
   wsk activation list
@@ -151,9 +151,9 @@ para hacer una invocación sin bloqueo. Puede obtener el resultado posteriorment
 ### Paso de parámetros a una acción
 {: #openwhisk_adding_parameters_js}
 
-Los parámetros se pueden pasar a la acción cuando se invoca. 
+Los parámetros se pueden pasar a la acción cuando se invoca.
 
-1. Usar parámetros en la acción. Por ejemplo, actualizar el archivo 'hello.js' con el contenido siguiente: 
+1. Usar parámetros en la acción. Por ejemplo, actualizar el archivo 'hello.js' con el contenido siguiente:
   
   ```
   function main(params) {
@@ -163,9 +163,9 @@ Los parámetros se pueden pasar a la acción cuando se invoca.
   {: codeblock}
 
   Los parámetros de entrada se pasan como un parámetro de objeto JSON a la función `main`. Fíjese
-cómo los parámetros `name` y `place` se recuperan del objeto `params` en este ejemplo. 
+cómo los parámetros `name` y `place` se recuperan del objeto `params` en este ejemplo.
 
-2. Actualizar la acción `hello` e invocar la acción, mientras se pasan los valores de los parámetros `name` y `place`. Observe el ejemplo siguiente: 
+2. Actualizar la acción `hello` e invocar la acción, mientras se pasan los valores de los parámetros `name` y `place`. Observe el ejemplo siguiente:
   
   ```
   wsk action update hello hello.js
@@ -183,25 +183,25 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
   {: screen}
 
   Fíjese en el uso de la opción `--param` para especificar un nombre y valor, y la opción
-`--result` para mostrar solo el resultado de la invocación. 
+`--result` para mostrar solo el resultado de la invocación.
 
 ### Configuración de los parámetros predeterminados
 {: #openwhisk_binding_actions}
 
 Las acciones se pueden invocar con varios parámetros con nombre. Recuerde que la acción `hello`
-del ejemplo anterior espera dos parámetros: *name* (nombre) de una persona y *place* (lugar) del que es. 
+del ejemplo anterior espera dos parámetros: *name* (nombre) de una persona y *place* (lugar) del que es.
 
 En lugar de pasar todos los parámetros a una acción cada vez, puede enlazar determinados parámetros. El ejemplo siguiente enlaza
-el parámetro *place* para que el valor predeterminado de la acción sea el lugar (place) "Vermont": 
+el parámetro *place* para que el valor predeterminado de la acción sea el lugar (place) "Vermont":
  
-1. Actualizar la acción usando la opción `--param` para enlazar valores de parámetros. 
+1. Actualizar la acción usando la opción `--param` para enlazar valores de parámetros.
 
   ```
   wsk action update hello --param place 'Vermont'
   ```
   {: pre}
 
-2. Invocar la acción, pasando solo el parámetro `name` esta vez. 
+2. Invocar la acción, pasando solo el parámetro `name` esta vez.
 
   ```
   wsk action invoke --blocking --result hello --param name 'Bernie'
@@ -215,10 +215,10 @@ el parámetro *place* para que el valor predeterminado de la acción sea el luga
   {: screen}
 
   Tenga en cuenta no necesitaba especificar el parámetro place al invocar la acción. Los parámetros enlazados aún se pueden
-sobrescribir especificando el valor de parámetro en el momento de la invocación. 
+sobrescribir especificando el valor de parámetro en el momento de la invocación.
 
 3. Invoca la acción, pasando los valores `name` y `place`. El segundo sobrescribe el
-valor enlazado a la acción. 
+valor enlazado a la acción.
 
   ```
   wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
@@ -236,9 +236,9 @@ valor enlazado a la acción.
 
 Las funciones de JavaScript que continúan su ejecución en una función de devolución de llamada podrían necesitar devolver el resultado
 de la activación tras el retorno de la función `main`. Puede lograrlo usando las funciones `whisk.async()` y
-`whisk.done()` en su acción. 
+`whisk.done()` en su acción.
 
-1. Guardar el contenido siguiente en un archivo llamado `asyncAction.js`. 
+1. Guardar el contenido siguiente en un archivo llamado `asyncAction.js`.
 
   ```
   function main() {
@@ -251,12 +251,12 @@ de la activación tras el retorno de la función `main`. Puede lograrlo usando l
   {: codeblock}
 
   Observe que la función `main` retorna inmediatamente, y el valor de retorno `whisk.async()`
-indica que la activación debería continuar la ejecución. 
+indica que la activación debería continuar la ejecución.
 
   La función `setTimeout()` de JavaScript en este caso espera 20 segundos antes de invocar la función de devolución de llamada,
-en la que la llamada a `whisk.done()` indica que la activación está completada. 
+en la que la llamada a `whisk.done()` indica que la activación está completada.
 
-2. Ejecute los mandatos siguientes para crear la acción e invocarla: 
+2. Ejecute los mandatos siguientes para crear la acción e invocarla:
 
   ```
   wsk action create asyncAction asyncAction.js
@@ -273,9 +273,9 @@ en la que la llamada a `whisk.done()` indica que la activación está completada
   ```
   {: screen}
 
-  Tenga en cuenta que ha realizado una invocación de bloqueo de una acción asíncrona. 
+  Tenga en cuenta que ha realizado una invocación de bloqueo de una acción asíncrona.
 
-3. Recupere el registro de activación para ver cuánto tiempo ha tardado la activación en completarse: 
+3. Recupere el registro de activación para ver cuánto tiempo ha tardado la activación en completarse:
 
   ```
   wsk activation list --limit 1 asyncAction
@@ -302,17 +302,18 @@ en la que la llamada a `whisk.done()` indica que la activación está completada
   {: screen}
 
   Si se comparan los registros de fecha y hora de `start` y `end` en el registro de activación,
-puede ver que esta activación ha tardado poco más de 20 segundos en completarse. 
+puede ver que esta activación ha tardado poco más de 20 segundos en completarse.
 
 
 ### Uso de acciones para invocar una API externa
 {: #openwhisk_apicall_action}
 
-Los ejemplos hasta ahora han sido funciones JavaScript autocontenidas. También puede crear una acción que invoque una API externa. 
+Los ejemplos hasta ahora han sido funciones JavaScript autocontenidas. También puede crear una acción que invoque una API externa.
 
-En este ejemplo se invoca a un servicio Yahoo Weather para obtener la meteorología actual de una ubicación específica.  
+En este ejemplo se invoca a un servicio Yahoo Weather para obtener la meteorología actual de una ubicación específica. 
 
-1. Guardar el contenido siguiente en un archivo llamado ``weather.js``. ```
+1. Guardar el contenido siguiente en un archivo llamado `weather.js`.
+  ```
     var request = require('request');
     
     function main(msg) {
@@ -335,12 +336,12 @@ En este ejemplo se invoca a un servicio Yahoo Weather para obtener la meteorolog
   Tenga en cuenta que la acción en este ejemplo utiliza la biblioteca `request` de JavaScript para
 realizar una solicitud HTTP a la API Yahoo Weather, y extra campos del resultado JSON. Las
 [Referencias](./openwhisk_reference.html#runtime_ref_runtime_environment) detallan los paquetes Node.js que
-puede utilizar en sus acciones. 
+puede utilizar en sus acciones.
   
   En este ejemplo también se muestra la necesidad de acciones asíncronas. La acción devuelve `whisk.async()` para
 indicar que el resultado de esta acción no está aún disponible cuando la función retorna. En su lugar, el
 resultado está disponible en la devolución de llamada `request` tras completarse la llamada HTTP, y la pasa como
-argumento a la función `whisk.done()`. 
+argumento a la función `whisk.done()`.
 
 2. Ejecute los mandatos siguientes para crear la acción e invocarla:
   ```
@@ -361,12 +362,12 @@ argumento a la función `whisk.done()`.
 ### Creación de secuencias de acciones
 {: #openwhisk_create_action_sequence}
 
-Puede crear una acción que encadene juntas una secuencia de acciones. 
+Puede crear una acción que encadene juntas una secuencia de acciones.
 
 Se proporcionan varias acciones de utilidad en un paquete llamado `/whisk.system/util` que puede utilizar para crear su
-primera secuencia. Puede obtener más información sobre los paquetes en la sección [Paquetes](./openwhisk_packages.html). 
+primera secuencia. Puede obtener más información sobre los paquetes en la sección [Paquetes](./openwhisk_packages.html).
 
-1. Mostrar las acciones del paquete `/whisk.system/util`. 
+1. Mostrar las acciones del paquete `/whisk.system/util`.
   
   ```
   wsk package get --summary /whisk.system/util
@@ -381,18 +382,18 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   ```
   {: screen}
 
-  Usaremos las acciones `cat` y `sort` en este ejemplo. 
+  Usaremos las acciones `cat` y `sort` en este ejemplo.
 
-2. Crear una secuencia de acciones para que el resultado de una acción se pase como argumento a la acción siguiente. 
+2. Crear una secuencia de acciones para que el resultado de una acción se pase como argumento a la acción siguiente.
   
   ```
   wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
   ```
   {: pre}
 
-  Esta secuencia de acciones convierte algunas líneas de texto en una matriz, y ordena las líneas. 
+  Esta secuencia de acciones convierte algunas líneas de texto en una matriz, y ordena las líneas.
 
-3. Antes de invocar la secuencia de acciones, cree un archivo de texto llamado 'haiku.txt' con algunas líneas de texto: 
+3. Antes de invocar la secuencia de acciones, cree un archivo de texto llamado 'haiku.txt' con algunas líneas de texto:
 
   ```
   Over-ripe sushi,
@@ -401,7 +402,7 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   ```
   {: codeblock}
 
-4. Invoque la acción: 
+4. Invoque la acción:
   
   ```
   wsk action invoke --blocking --result myAction --param payload "$(cat haiku.txt)"
@@ -419,7 +420,7 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   ```
   {: screen}
 
-  En el resultado, puede ver que las líneas se ordenan. 
+  En el resultado, puede ver que las líneas se ordenan.
 
 **Nota**: Para obtener más información sobre la invocación de secuencias de acciones con varios parámetros con nombre,
 consulte [Establecimiento de parámetros predeterminados](./openwhisk_actions.html##openwhisk_binding_actions)
@@ -428,16 +429,16 @@ consulte [Establecimiento de parámetros predeterminados](./openwhisk_actions.ht
 {: #openwhisk_actions_swift}
 
 El proceso de creación de acciones Swift es parecido a de las acciones JavaScript. En las secciones siguientes se proporcionar una guía
-para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción. 
+para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción.
 
 También puede usar el recinto de pruebas [Swift Sandbox](https://swiftlang.ng.bluemix.net) en línea para probar
-el código Swift sin tener que instalar Xcode en su máquina. 
+el código Swift sin tener que instalar Xcode en su máquina.
 
 ### Creación e invocación de una acción
 {: #openwhisk_actions_invoke_swift}
 
 Una acción es sencillamente una función Swift de nivel superior. Por ejemplo, cree un archivo llamado
-`hello.swift` con el contenido siguiente: 
+`hello.swift` con el contenido siguiente:
 
 ```
   func main(args: [String:Any]) -> [String:Any] {
@@ -451,9 +452,9 @@ Una acción es sencillamente una función Swift de nivel superior. Por ejemplo, 
 {: codeblock}
 
 Tenga en cuenta que al igual que las acciones JavaScript, las acciones Swift siempre consumen un
-diccionario y generan un diccionario. 
+diccionario y generan un diccionario.
 
-Puede crear una acción de {{site.data.keyword.openwhisk_short}} llamada `helloSwift` desde esta función, según se indica a continuación: 
+Puede crear una acción de {{site.data.keyword.openwhisk_short}} llamada `helloSwift` desde esta función, según se indica a continuación:
 
 ```
 wsk action create helloSwift hello.swift
@@ -462,9 +463,9 @@ wsk action create helloSwift hello.swift
 
 Cuando se utiliza la línea de mandatos y un archivo de origen `.swift`, no es necesario especificar que
 está creando una acción Swift (al contrario de lo que sucede con una acción JavaScript); la herramienta lo determina
-a partir de la extensión de archivo. 
+a partir de la extensión de archivo.
 
-La invocación de la acción es la misma para acciones Swift que para acciones JavaScript: 
+La invocación de la acción es la misma para acciones Swift que para acciones JavaScript:
 
 ```
 wsk action invoke --blocking --result helloSwift --param name World
@@ -481,24 +482,24 @@ wsk action invoke --blocking --result helloSwift --param name World
 **Atención:** Acciones Swift se ejecutan en un entorno Linux. Swift en Linux aún está en desarrollo, y
 {{site.data.keyword.openwhisk_short}} suele utilizar el release disponible más reciente, que no es necesariamente estable. Además, la versión
 de Swift que se utiliza con {{site.data.keyword.openwhisk_short}} podría no ser coherente con versiones de Swift de releases estables
-de XCode en MacOS. 
+de XCode en MacOS.
 
 ## Creación de acciones Docker
 {: #openwhisk_actions_docker}
 
-Con acciones Docker de {{site.data.keyword.openwhisk_short}}, puede escribir sus acciones en cualquier lenguaje. 
+Con acciones Docker de {{site.data.keyword.openwhisk_short}}, puede escribir sus acciones en cualquier lenguaje.
 
 Su código se compila en un binario ejecutable y se incluye en una imagen Docker. El programa binario interactúa con el sistema
-aceptando la entrada desde `stdin` y respondiendo por medio de `stdout`. 
+aceptando la entrada desde `stdin` y respondiendo por medio de `stdout`.
 
-Como requisito previo, debe tener una cuenta de Docker Hub. Para configurar un ID y cuenta gratuitos de Docker, acceda a
-[Docker Hub](https://hub.docker.com){: new_window}. 
+Como requisito previo, debe tener una cuenta de Docker Hub.  Para configurar un ID y cuenta gratuitos de Docker, acceda a
+[Docker Hub](https://hub.docker.com){: new_window}.
 
 Para las instrucciones siguientes, supondremos que el ID de usuario es "janesmith" y la contraseña es "janes_password".  Suponiendo que
 la CLI ya se ha configurado, son necesarios tres pasos para configurar un binario personalizado para que lo use
-{{site.data.keyword.openwhisk_short}}.  Tras hacerlo, la imagen de Docker subida se podrá utilizar como una acción. 
+{{site.data.keyword.openwhisk_short}}.  Tras hacerlo, la imagen de Docker subida se podrá utilizar como una acción.
 
-1. Descargar el esqueleto de Docker. Puede descargarlo usando la CLI de la siguiente manera: 
+1. Descargar el esqueleto de Docker. Puede descargarlo usando la CLI de la siguiente manera:
 
   ```
   wsk sdk install docker
@@ -506,7 +507,7 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   {: pre}
   ```
   El esqueleto Docker estará ahora instalado en el directorio actual.
-```
+  ```
   {: screen}
 
   ```
@@ -518,9 +519,9 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   ```
   {: screen}
 
-  El esqueleto es una plantilla de contenedor de Docker en la que puede inyectar código en forma de binarios personalizados. 
+  El esqueleto es una plantilla de contenedor de Docker en la que puede inyectar código en forma de binarios personalizados.
 
-2. Configure su binario personalizado en el esqueleto blackbox. El esqueleto ya incluye un programa en C que puede usar. 
+2. Configure su binario personalizado en el esqueleto blackbox. El esqueleto ya incluye un programa en C que puede usar.
 
   ```
   cat ./dockerSkeleton/client/example.c
@@ -537,10 +538,10 @@ la CLI ya se ha configurado, son necesarios tres pasos para configurar un binari
   ```
   {: screen}
 
-  Puede modificar este valor cuando sea necesario. 
+  Puede modificar este valor cuando sea necesario.
 
 3. Construya la imagen de Docker y súbala mediante un script proporcionado. Antes debe ejecutar `docker login` para
-la autenticación y, a continuación, ejecute el script con el nombre de imagen elegido. 
+la autenticación y, a continuación, ejecute el script con el nombre de imagen elegido.
 
   ```
   docker login -u janesmith -p janes_password
@@ -556,10 +557,10 @@ la autenticación y, a continuación, ejecute el script con el nombre de imagen 
   {: pre}
 
   Tenga en cuenta que parte del archivo example.c está compilado como parte del proceso de compilación de imagen de Docker,
-por lo que no necesita C compilado en su máquina. 
+por lo que no necesita C compilado en su máquina.
 
 4. Para crear una acción a partir de una imagen de Docker en lugar de un archivo JavaScript proporcionado, añada
-`--docker` y sustituya el nombre del archivo JavaScript por el nombre de la imagen de Docker. 
+`--docker` y sustituya el nombre del archivo JavaScript por el nombre de la imagen de Docker.
 
   ```
   wsk action create --docker example janesmith/blackboxdemo
@@ -578,25 +579,26 @@ por lo que no necesita C compilado en su máquina.
 
 
 Podrá obtener más información sobre la creación de acciones de Docker en la sección
-[Referencias](./openwhisk_reference.html#openwhisk_ref_docker). 
+[Referencias](./openwhisk_reference.html#openwhisk_ref_docker).
 
 
 ## Supervisión de salida de acción
 {: #openwhisk_actions_polling}
 
 Las acciones de {{site.data.keyword.openwhisk_short}} se podrían invocar por otros usuarios, en respuesta a varios sucesos,
-o como parte de una secuencia de acciones. En tales casos, puede ser útil supervisar las invocaciones. 
+o como parte de una secuencia de acciones. En tales casos, puede ser útil supervisar las invocaciones.
 
-Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resultado de la salida de las acciones a medida que se invocan. 
+Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resultado de la salida de las acciones a medida que se invocan.
 
-1. Emita el siguiente mandato desde un shell: ```
+1. Emita el siguiente mandato desde un shell:
+  ```
   wsk activation poll
   ```
   {: pre}
 
-  Este mandato inicia un bucle de sondeo que comprueba continuamente los registros de las activaciones. 
+  Este mandato inicia un bucle de sondeo que comprueba continuamente los registros de las activaciones.
 
-2. Cambie a otra ventana e invoque la acción: 
+2. Cambie a otra ventana e invoque la acción:
 
   ```
   wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
@@ -607,7 +609,7 @@ Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resul
   ```
   {: screen}
 
-3. Observe el registro de activación en la ventana de sondeo: 
+3. Observe el registro de activación en la ventana de sondeo:
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
@@ -616,12 +618,12 @@ Puede utilizar la CLI de {{site.data.keyword.openwhisk_short}} para ver el resul
   {: screen}
 
   De la misma forma, cuando ejecute el programa de utilidad de sondeo, verá en tiempo real los registros de las acciones que
-ejecute de su parte, en {{site.data.keyword.openwhisk_short}}. 
+ejecute de su parte, en {{site.data.keyword.openwhisk_short}}.
 
 ## Supresión de acciones
 {: #openwhisk_delete_action}
 
-Puede realizar una limpieza mediante la supresión de acciones que no quiera usar. 
+Puede realizar una limpieza mediante la supresión de acciones que no quiera usar.
 
 1. Ejecute el mandato siguiente para suprimir una acción:
   ```

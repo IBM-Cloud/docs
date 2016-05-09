@@ -450,9 +450,9 @@ Com as ações Docker do {{site.data.keyword.openwhisk_short}}, é possível esc
 
 Seu código é compilado em um binário executável e integrado a uma imagem do Docker. O programa binário interage com o sistema aceitando entrada de `stdin` e respondendo por meio de `stdout`.
 
-Como um pré-requisito, deve-se ter uma conta do Docker Hub. Para configurar um ID e uma conta do Docker grátis, acesse o [Docker Hub](https://hub.docker.com){: new_window}.
+Como um pré-requisito, deve-se ter uma conta do Docker Hub.  Para configurar um ID e uma conta do Docker grátis, acesse o [Docker Hub](https://hub.docker.com){: new_window}.
 
-Para as instruções a seguir, suponha que o ID do usuário seja "janesmith" e a senha seja "janes_password". Supondo que a CLI já tenha sido configurada, três etapas são necessárias para configurar um binário customizado para ser usado pelo {{site.data.keyword.openwhisk_short}}. Depois disso, a imagem do Docker transferida por upload poderá ser usada como uma ação.
+Para as instruções a seguir, suponha que o ID do usuário seja "janesmith" e a senha seja "janes_password".  Supondo que a CLI já tenha sido configurada, três etapas são necessárias para configurar um binário customizado para ser usado pelo {{site.data.keyword.openwhisk_short}}.  Depois disso, a imagem do Docker transferida por upload poderá ser usada como uma ação.
 
 1. Faça download da estrutura básica do Docker. É possível fazer download da mesma usando a CLI da seguinte forma:
 
@@ -580,7 +580,7 @@ As ações do {{site.data.keyword.openwhisk_short}} podem ser chamadas por outro
   ```
   {: pre}
   ```
-  ok: hello excluída
+  ok: deleted hello
   ```
   {: screen}
 

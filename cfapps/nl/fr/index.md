@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  2015，2016
 
  
 
@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Création d'applications Cloud Foundry
-*Dernière mise à jour : 4 décembre 2015*
+*Dernière mise à jour : 18 avril 2016*
 
 Avec {{site.data.keyword.Bluemix}}, vous pouvez créer votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez ensuite choisir de continuer à employer l'interface utilisateur,
 l'interface de ligne de commande cf ou {{site.data.keyword.jazzhub_title}} pour développer, contrôler, planifier et déployer votre
@@ -36,7 +36,10 @@ codage.
 application s'affiche dans le tableau de bord.
   5. Vous pouvez ajouter un service à votre application en cliquant sur **AJOUTER UN SERVICE OU UNE API** dans la page
 Vue d'ensemble de votre application
-dans l'interface utilisateur Bluemix. Ou bien, vous pouvez utiliser l'interface de ligne de commande cf. Voir Options pour apprendre à utiliser les
+dans l'interface utilisateur Bluemix. Parcourez et sélectionnez des services dans le catalogue ou accédez à la fin du catalogue et cliquez sur
+**Services expérimentaux {{site.data.keyword.Bluemix_notm}}** pour examiner ces services. Vous pouvez aussi
+utiliser l'interface de
+ligne de commande cf. Voir Options pour apprendre à utiliser les
 applications.
   6. Dans la page Vue d'ensemble de l'application, cliquez sur Ajouter un référentiel Git pour sauvegarder la source de votre application
 dans un
@@ -56,9 +59,8 @@ Une fois que vous avez créé votre application, vous disposez de quelques optio
 <dt>Interface utilisateur {{site.data.keyword.Bluemix_notm}}</dt>
 <dd>L'interface utilisateur {{site.data.keyword.Bluemix_notm}} permet de construire une application, et de choisir les services et les contextes d'exécution à combiner afin de résoudre vos problèmes métier.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. 
-Les services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont proposés dans le
-catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également dans Web IDE et Git Hosting. </dd>
+<dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. Les services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont proposés dans le
+catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également dans Web IDE et Git Hosting.</dd>
 </dl>
 
 ## Conseils

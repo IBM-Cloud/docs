@@ -18,7 +18,7 @@ copyright:
 
 # Usando serviços ativados pelo {{site.data.keyword.openwhisk_short}} 
 {: #openwhisk_ecosystem}
-*Última atualização: 22 de fevereiro de 2016*
+*Última atualização: 28 de março de 2016*
 
 No {{site.data.keyword.openwhisk}}, um catálogo de pacotes fornece uma maneira fácil de aprimorar seu app com recursos úteis e de acessar serviços externos no ecossistema. Exemplos de serviços externos que são ativados pelo {{site.data.keyword.openwhisk_short}} incluem Cloudant, The Weather Company, Slack e GitHub.
 {: shortdesc}
@@ -260,12 +260,7 @@ O pacote inclui o feed a seguir.
 
 O feed `/whisk.system/alarms/alarm` configura o serviço de Alarme para disparar um evento acionador a uma frequência especificada. Os parâmetros são como segue:
 
-- `cron`: uma sequência, baseada na sintaxe Unix crontab, que indica quando disparar o acionador. A sequência é composta por seus campos separados por espaços: `X X X X X X`. Aqui estão alguns exemplos de frequência indicada pela sequência:
-
-  - `* * * * * *`: a cada segundo.
-  - `0 * * * * *`: início de cada minuto.
-  - `* 0 * * * *`: início de cada hora.
-  - `* * * 8 * *`: em algum momento no oitavo dia de cada mês
+- `cron`: Uma sequência, baseada na sintaxe Unix crontab, que indica quando disparar o acionador na Hora Universal Coordenada (UTC). A sequência é composta por seus campos separados por espaços: `X X X X X X`. Para obter mais detalhes sobre como usar a sintaxe cron, veja: https://github.com/ncb000gt/node-cron.
 
 - `trigger_payload`: o valor desse parâmetro torna-se o conteúdo do acionador toda vez que o acionador for disparado.
 
@@ -482,7 +477,7 @@ O pacote inclui o feed a seguir:
 | `/whisk.system/github` | pacote | username, repository, accessToken | Interagir com a API do GitHub |
 | `/whisk.system/github/webhook` | alimentação | events, username, repository, accessToken | Disparar eventos acionadores na atividade do GitHub |
 
-Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `username`, `repository` e `accessToken`. Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
+Embora não seja obrigatório, é recomendável criar uma ligação de pacote com os valores de `username`, `repository` e `accessToken`.  Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
 
 ### Disparando um evento acionador com atividade do GitHub
 

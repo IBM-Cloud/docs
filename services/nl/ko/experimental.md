@@ -8,9 +8,9 @@ copyright:
 # 시범
 {: #experimental}
 
-*마지막 업데이트 날짜: 2015년 12월 9일*
+*마지막 업데이트 날짜: 2015년 4월 4일*
 
-시범 서비스를 사용해보려면 {{site.data.keyword.Bluemix_notm}} 랩 카탈로그에서 체크아웃하십시오.
+{{site.data.keyword.Bluemix_notm}} 시범 서비스를 체크아웃하여 시범 서비스를 사용해 보십시오.
 {: shortdesc} 
 
 

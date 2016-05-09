@@ -10,8 +10,11 @@
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
-				"name": "Cloud Foundry-Apps",
+				"name": "Cloud Foundry-Anwendungen",
 				"href": "cfapps/index.html"
+			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
 			}, {
 				"name": "Container",
 				"href": "containers/container_index.html"
@@ -26,6 +29,9 @@
 			"links": [{
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
+			}, {
+				"name": "Network Security Groups",
+				"href": "services/networksecuritygroups/index.html"
 			}, {
 				"name": "Virtual Private Network (VPN)",
 				"href": "services/vpn/index.html"
@@ -46,9 +52,6 @@
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
-				"href": "services/AnalyticsforHadoop/index.html"
-			}, {
 				"name": "Analytics for Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
@@ -141,6 +144,9 @@
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
 			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
+			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
@@ -152,17 +158,11 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
@@ -218,9 +218,6 @@
 				"name": "Data Cache",
 				"href": "services/DataCache/index.html"
 			}, {
-				"name": "Language Translation",
-				"href": "services/LanguageTranslation/index.html"
-			}, {
 				"name": "Message Hub",
 				"href": "services/MessageHub/index.html"
 			}, {
@@ -242,14 +239,20 @@
 		}, {
 			"title": "Mobile",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/mobile.html",
 			"links": [{
+				"name": "Mobile Bluemix-Services testen",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -270,9 +273,24 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "APIs",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "Ressourcen",
 		"descriptionTitle": "Ressourcen",
 		"items": [{
 			"title": "Warum Bluemix?",
@@ -283,7 +301,7 @@
 			"img": "homepage/images/Softlayer-icon.svg",
 			"href": "https://knowledgelayer.softlayer.com"
 		}, {
-			"title": "Preise",
+			"title": "Preisstruktur",
 			"img": "homepage/images/Pricing-icon.svg",
 			"href": "/pricing/"
 		}, {
@@ -291,7 +309,7 @@
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
 		}, {
-			"title": "CLI- und Dev-Tools",
+			"title": "CLI- und Entwicklungstools",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {

@@ -17,7 +17,8 @@ copyright:
 # 使用 Eclipse Tools 进行开发
 *上次更新时间：2015 年 11 月 11 日*
 
-{{site.data.keyword.eclipsetoolsfull}} 提供了轻量级 Eclipse 工具，用于快速开发应用程序以及将应用程序与 {{site.data.keyword.Bluemix}} 或 Cloud Foundry 云集成。{:shortdesc}
+{{site.data.keyword.eclipsetoolsfull}} 提供了轻量级 Eclipse 工具，用于快速开发应用程序以及将应用程序与 {{site.data.keyword.Bluemix}} 或 Cloud Foundry 云集成。
+{:shortdesc}
 
   1. 如果您还没有 Eclipse，请安装 Eclipse Luna for Java EE Developers (4.4.1)。
   2. 单击并按住以下按钮，将其拖放到 Eclipse 工具栏中，然后按照提示安装 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}：

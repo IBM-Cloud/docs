@@ -15,23 +15,17 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.Bluemix_notm}} iFrame에 배치 플로우 임베드{: #embed-d2bm-iframe} 
+#{{site.data.keyword.Bluemix_notm}} iFrame에 배치 플로우 임베드 {: #embed-d2bm-iframe} 
 
 *마지막 업데이트 날짜: 2015년 12월 8일* 
 
-{{site.data.keyword.Bluemix_notm}}에 배치 플로우를 iFrame으로 마크업을 지원하는
-다양한 종류의 컨텐츠에 임베드할 수 있습니다. 예를 들어, iFrame을 readme 파일, 블로그 및
-웹 페이지에 임베드할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}}에 배치 플로우를 iFrame으로 마크업을 지원하는 다양한 종류의 컨텐츠에 임베드할 수 있습니다. 예를 들어, iFrame을 readme 파일, 블로그 및 웹 페이지에 임베드할 수 있습니다. 
 
 {: shortdesc} 
 
-iFrame 플로우는 회사 브랜드를 유지하려는 경우에
-유용합니다. 사용자가 임베디드 iFrame을 클릭하면, bluemix.net 웹 사이트로
-경로 재지정되는 대신 사용자 컨텐츠에 머무르게 됩니다. 회사 브랜드에 관심이 없는 경우,
-iFrame 대신 표준 [{{site.data.keyword.Bluemix_notm}}에 배치 단추](../develop/deploy_button.html)를
-사용자 컨텐츠에 삽입할 수 있습니다. 
+iFrame 플로우는 회사 브랜드를 유지하려는 경우에 유용합니다. 사용자가 임베디드 iFrame을 클릭하면, bluemix.net 웹 사이트로 경로 재지정되는 대신 사용자 컨텐츠에 머무르게 됩니다. 회사 브랜드에 관심이 없는 경우, iFrame 대신 표준 [{{site.data.keyword.Bluemix_notm}}에 배치 단추](../develop/deploy_button.html)를 사용자 컨텐츠에 삽입할 수 있습니다. 
 
-##iFrame 플로우의 단계{: #iframe-steps} 
+##iFrame 플로우의 단계 {: #iframe-steps} 
 
 1. 활성 {{site.data.keyword.Bluemix_notm}} 계정이 없는 경우, 평가판 계정을
 작성합니다.  
@@ -48,7 +42,7 @@ iFrame 대신 표준 [{{site.data.keyword.Bluemix_notm}}에 배치 단추](../de
 
 5. 앱이 사용자의 {{site.data.keyword.Bluemix_notm}} 조직에 배치됩니다. 
 
-##iFrame 플로우의 예{: #iframe-example} 
+##iFrame 플로우의 예 {: #iframe-example} 
 
 <p>
 <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(새 탭 또는 창에서 열림)">IBM Bluemix D2BM iFrame 샘플</a>은
@@ -60,7 +54,7 @@ iFrame 대신 표준 [{{site.data.keyword.Bluemix_notm}}에 배치 단추](../de
 클릭하십시오.
 </p>
 
-##iFrame 플로우 임베드{: #embed-iframe}  
+##iFrame 플로우 임베드  {: #embed-iframe}  
 
 <ol>
 <li><a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>에서 JavaScript 유틸리티를 로드하십시오. 이 유틸리티는 jQuery에 따라 달라지며, 다음 스크립트 태그를

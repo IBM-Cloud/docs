@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系统详细信息
 {: #openwhisk_reference}
-*上次更新时间：2016 年 2 月 22 日*
+*上次更新时间：2016 年 4 月 14 日*
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 系统的更多详细信息。
 {: shortdesc}
@@ -84,7 +84,7 @@ copyright:
 
 操作的调用并未排序。如果用户通过命令行或 REST API 调用一个操作两次，那么第二个调用可能会先于第一个调用运行。如果操作有副作用，那么可能会以任意顺序观察到这些副作用。
 
-此外，不保证操作以原子方式执行。两个操作可以并行运行，其副作用可能会交错。{{site.data.keyword.openwhisk_short}} 无法确保副作用的任何特定并行一致性模型。任何并行副作用都将依赖于实施。
+此外，不保证操作以原子方式执行。两个操作可以并行运行，其副作用可能会交错。任何并行副作用都将依赖于实施。
 
 ### 至多一次语义
 {: #openwhisk_atmostonce}
@@ -220,8 +220,7 @@ function main() {
 
 - *name*：要调用的操作的标准名称。
 - *parameters*：表示所调用操作的输入的 JSON 对象。如果省略，缺省值为空对象。
-- *apiKey*：用于调用操作的授权密钥。
-操作正在运行。缺省值为 `whisk.getAuthKey()`。 
+- *apiKey*：用于调用操作的授权密钥。缺省值为 `whisk.getAuthKey()`。 
 - *blocking*：操作应该以阻塞还是非阻塞方式调用。缺省值为 `false`，指示非阻塞调用。
 - *next*：调用完成时要执行的可选回调函数。
 

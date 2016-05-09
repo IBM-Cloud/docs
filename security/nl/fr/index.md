@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  2014, 2016
 
  
 
@@ -187,7 +187,7 @@ principe du moindre privilège.
 Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
 gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Voir
-[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng) pour des détails. 
+[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng) pour des détails.
 </dd>
 </dl>
 
@@ -281,27 +281,6 @@ applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemi
 Pour plus d'informations, voir [IBM
 Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
-### SQL Database
-
-Le service SQL Database ajoute une base de données relationnelle complète à votre application. Il utilise le protocole LDAP d'IBM Directory Server
-pour l'authentification et IBM InfoSphere® Guardium® Data Activity Monitor pour protéger la base de données à laquelle accèdent des applications. La connexion entre les applications et la base de données est
-protégée par le certificat SSL que DigiCert signe.
-
-Dans certains plans incluant ce service, vous pouvez utiliser la console de base de données
-SQL dans {{site.data.keyword.Bluemix_notm}} afin d'obtenir des rapports contenant les informations suivantes :
-
- * Les données sensibles qui peuvent exister dans la base de données à laquelle des applications accèdent.
- * Les utilisateurs de l'application qui ont accédé à la base de données au cours d'une période spécifique.
- * Les utilisateurs de l'application qui accèdent à des données sensibles se trouvant dans la base de données.
-
-Pour masquer les données via SQL, les applications peuvent appeler les fonctions de masquage
-définies par l'utilisateur (UDF)
-qui sont déployées avec la base de données. Par exemple, vous pouvez masquer les données que vous voulez utiliser pour effectuer des tests dans un autre
-contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim.
-
-Le plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
-[Initiation à SQL Database](../services/SQLDB/index.html).
-
 ### dashDB
 
 Le service dashDB utilise un serveur LDAP imbriqué pour l'authentification d'utilisateur. La connexion entre les applications et la base de données est protégée par des certificats SSL. Ce service utilise la capacité de chiffrement native de DB2® pour chiffrer automatiquement votre base de données déployée et vos sauvegardes de base de
@@ -329,7 +308,28 @@ l'emplacement distant auquel vous voulez vous connecter. Vous pouvez configurer 
 
 Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/secure_gateway.html).
 
-### Gestion des événements et des informations de sécurité 
+### SQL Database
+
+Le service SQL Database ajoute une base de données relationnelle complète à votre application. Il utilise le protocole LDAP d'IBM Directory Server
+pour l'authentification et IBM InfoSphere® Guardium® Data Activity Monitor pour protéger la base de données à laquelle accèdent des applications. La connexion entre les applications et la base de données est
+protégée par le certificat SSL que DigiCert signe.
+
+Dans certains plans incluant ce service, vous pouvez utiliser la console de base de données
+SQL dans {{site.data.keyword.Bluemix_notm}} afin d'obtenir des rapports contenant les informations suivantes :
+
+ * Les données sensibles qui peuvent exister dans la base de données à laquelle des applications accèdent.
+ * Les utilisateurs de l'application qui ont accédé à la base de données au cours d'une période spécifique.
+ * Les utilisateurs de l'application qui accèdent à des données sensibles se trouvant dans la base de données.
+
+Pour masquer les données via SQL, les applications peuvent appeler les fonctions de masquage
+définies par l'utilisateur (UDF)
+qui sont déployées avec la base de données. Par exemple, vous pouvez masquer les données que vous voulez utiliser pour effectuer des tests dans un autre
+contexte. Les fonctions définies par l'utilisateur implémentent les algorithmes de masquage des données depuis IBM Infosphere Optim.
+
+Le plan premium pour ce service inclut également le chiffrement de données. Pour plus d'informations, voir
+[Initiation à SQL Database](../services/SQLDB/index.html).
+
+### Gestion des événements et des informations de sécurité
 
 Vous pouvez utiliser les outils SIEM (gestion des événements et des informations de sécurité) pour analyser les alertes de sécurité dans les
 journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
@@ -383,7 +383,7 @@ physique et des analyses au sein de votre pare-feu.
  * Le renforcement du système d'exploitation en appliquant des correctifs régulièrement avec IBM Endpoint Manager.
  * La gestion des risques avec protection contre les intrusions.
  * La surveillance de la sécurité avec QRadar.
- * La génération de rapports de sécurité disponibles dans la page Administration. 
+ * La génération de rapports de sécurité disponibles dans la page Administration.
 
 ## Conformité en matière de sécurité
 {: #compliance}
@@ -410,12 +410,12 @@ Vous pourrez trouver un document d'auto-évaluation {{site.data.keyword.Bluemix_
 
 {{site.data.keyword.Bluemix_notm}} utilise les services cloud d'IBM SoftLayer Infrastructure-as-a-Service (IaaS) et bénéficie de tous les avantages de leur architecture de sécurité. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
 
-### Conformité de la plateforme et des services 
-Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.Bluemix_notm}} qui sont conformes à chaque norme. 
+### Conformité de la plateforme et des services
+Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.Bluemix_notm}} qui sont conformes à chaque norme.
 
 |Composants {{site.data.keyword.Bluemix_notm}}		|FISC		|ISO 27001	|SOC 2 Type 1		|
 |:----------------------|:---------:|:---------:|:---------:|
-|Plateforme {{site.data.keyword.Bluemix_notm}} 		|O			|O	|O	|
+|Plateforme {{site.data.keyword.Bluemix_notm}}		|O			|O	|O	|
 |{{site.data.keyword.APIM}}			|O	|O |			|
 |{{site.data.keyword.autoscaling}}			|O	|O |			|
 |{{site.data.keyword.bigicloudst}}			|O |O |O |

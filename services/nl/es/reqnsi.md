@@ -199,7 +199,7 @@ instancia_servicio es el nombre que desea utilizar para esta instancia de servic
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de aplicaciones que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
 un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas
 los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para
-usar servicios de {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}. 
+usar servicios de {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
 
 
 ## Configuración de la aplicación para interactuar con un servicio 
@@ -295,12 +295,12 @@ Ahora puede configurar la aplicación para que utilice recursos externos. Para o
 ## Utilización de servicios en otra región
 {: #cross_region_service}
 
-Si tiene una instancia de servicio creada y enlazada a apps en una región, puede utilizar eta instancia de servicio en otra región mediante uno de los métodos siguientes: 
+Si tiene una instancia de servicio creada y enlazada a apps en una región, puede utilizar eta instancia de servicio en otra región mediante uno de los métodos siguientes:
 
   * Utilice las credenciales del servicio para configurar directamente su instancia de app. Para obtener detalles, consulte
 [Habilitación de apps externas para usar el servicio de {{site.data.keyword.Bluemix_notm}}
-](#accser_external){: new_window}. 
-  * Crear un servicio proporcionado por el usuario como un puente. 
+](#accser_external){: new_window}.
+  * Crear un servicio proporcionado por el usuario como un puente.
     
 	Supongamos que va a iniciar la región en la que desea utilizar la instancia de servicio. Para utilizar una instancia de servicio existente en otra región, siga estos pasos:
 

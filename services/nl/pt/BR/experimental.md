@@ -8,9 +8,9 @@ copyright:
 # Experimental
 {: #experimental}
 
-*Última atualização: 9 de dezembro de 2015*
+*Última atualização: 4 de abril de 2015*
 
-Efetue check-out do {{site.data.keyword.Bluemix_notm}} Labs Catalog para tentar serviços experimentais.
+Efetue check-out do {{site.data.keyword.Bluemix_notm}} Experimental Services para tentar serviços experimentais.
 {: shortdesc} 
 
 

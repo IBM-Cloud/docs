@@ -14,7 +14,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Caricamento della tua applicazione
-*Ultimo aggiornamento: 17 febbraio 2016* 
+*Ultimo aggiornamento: 17 febbraio 2016*
 
 Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix}}, puoi caricare la tua applicazione con il comando cf push.
 {:shortdesc}
@@ -22,7 +22,7 @@ Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix}}, puoi caricare l
 Prima di iniziare, devi:
   1. Installa le interfacce riga di comando {{site.data.keyword.Bluemix}} e Cloud Foundry.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a> 
 
   2. Stabilisci una connessione a {{site.data.keyword.Bluemix}}.
 

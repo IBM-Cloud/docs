@@ -15,7 +15,7 @@ copyright:
 # Debug
 {: #debugging}
 
-*Ultimo aggiornamento: 3 marzo 2016* 
+*Ultimo aggiornamento: 3 marzo 2016*
 
 Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori. 
 {:shortdesc}
@@ -43,7 +43,7 @@ la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Pe
   
   3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
-	cf logs nomeapplicazione --recent | grep '\[STG\]'
+	cf logs appname --recent | grep '\[STG\]'
 	```
   4. Visualizza il primo errore mostrato nel log.
   

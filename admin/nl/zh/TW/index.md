@@ -15,14 +15,14 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # 管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用
 {: #mng}
-*前次更新：2016 年 2 月 18 日*
+*前次更新：2016 年 4 月 19 日*
 
-如果您具有「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定使用者角色和許可權來管理組織；請參閱[管理組織](../admin/adminpublic.html#orgmng)。{:shortdesc}
+如果您具有「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定[使用者角色和許可權](index.html#oc_useradmin)來管理組織；請參閱[管理組織](../admin/adminpublic.html#orgmng)。
+{:shortdesc}
 
-*表格 1. 用於管理 {{site.data.keyword.Bluemix_notm}} 本端或專用實例的管理作業*
+*表 1. 用於管理 {{site.data.keyword.Bluemix_notm}} 本端或專用實例的管理作業*
 
 | 我能執行哪些操作？ | 詳細資料 |    
 |----------------|---------|
@@ -30,10 +30,10 @@ copyright:
 |管理型錄 | 按一下**管理 &gt; 型錄管理**，以管理您的使用者及組織可以看見哪些服務。請參閱[管理型錄](index.html#oc_catalog)。|
 |管理組織 | 按一下**管理 &gt; 組織管理**，以建立組織、監視組織配額，以及快速做出基於需求的決策。請參閱[管理組織](index.html#oc_organizations)。|
 |建立空間和指派使用者角色 | 按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**管理組織**，以在組織內建立空間。新增使用者並將組織和空間角色指派給使用者。請參閱[管理組織](../admin/adminpublic.html#orgmng)。 |
-|對管理使用者許可權進行管理 | 按一下**管理 &gt; 使用者管理**，以新增使用者、移除使用者以及調整使用者許可權。請參閱[管理使用者及許可權](index.html#oc_user)。 |
+|對管理使用者許可權進行管理 | 按一下**管理 &gt; 使用者管理**，以新增使用者、移除使用者以及調整使用者許可權。請參閱[管理使用者及許可權](index.html#oc_useradmin)。 |
 |檢視報告和日誌 | 按一下**管理 &gt; 報告和日誌**，以檢視您實例的安全報告及審核日誌。請參閱[檢視報告](index.html#oc_report)。 |
 |檢視系統資訊 | 按一下**管理 &gt; 系統資訊**，以檢視系統資訊，例如擱置更新、實例的名稱和版本、地區、API URL、CLI URL、LDAP 配置詳細資料、群組和使用者對映、統計資料以及共用網域。您也可以在「擱置更新」區段中存取行事曆資訊來源及事件訂閱，以擴充通知。請參閱[檢視系統資訊](index.html#oc_system)。 |
-|擴充通知以及設定事件訂閱 | 按一下**管理 &gt; 系統資訊 &gt; *Number* 個更新擱置**。您可以使用 Webhook 與您選擇的 Web 服務整合，以設定更新項目或發生事件的事件通知訂閱。請參閱[通知及事件訂閱](index.html#oc_eventsubscription)。 |
+|擴充通知以及設定事件訂閱 | 按一下**管理 &gt; 系統資訊 &gt; *Number* 個擱置的更新**。您可以使用 Webhook 與您選擇的 Web 服務整合，以設定更新或發生事件的事件通知訂閱。請參閱[通知及事件訂閱](index.html#oc_eventsubscription)。 |
 
 
 ## 通知及事件訂閱
@@ -45,45 +45,43 @@ copyright:
 
 您可以檢視來自 IBM 有關您本端或專用環境的通知，以及監視您環境的狀態。如需不同類型通知以及通知張貼位置的相關資訊，請檢閱下表。
 
+表 2. 事件類型及通知方法
+
 | **事件類型** | **通知方法** |       
 |-----------------|-------------------|
-| 維護更新項目 | 您可以在「管理」頁面的「通知」中收到有關即將到來的維護更新項目的警示。移至**管理**頁面，然後選取**通知**圖示 ![通知](images/icon_announcement.svg)。若要查看擱置及完成通知的完整清單及歷程，請按一下**管理 &gt; 系統資訊** &gt; *Number* **個更新擱置**。擴充通知功能的方式是設定事件訂閱，以整合「管理」頁面中的維護更新項目警示與所選擇的 Web 服務，將訊息遞送至服務台電子郵件位址，或將 SMS 訊息遞送至所選擇的電話號碼。 |
+| 維護更新 | 您可以在「管理」頁面的「通知」中收到有關即將到來的維護更新的警示。移至**管理**頁面，然後選取**通知**圖示 ![通知](images/icon_announcement.svg)。若要查看擱置及完成通知的完整清單及歷程，請按一下**管理 &gt; 系統資訊** &gt; *Number* **個更新擱置**。擴充通知功能的方式是設定事件訂閱，以整合「管理」頁面中的維護更新警示與所選擇的 Web 服務，將訊息遞送至服務台電子郵件位址，或將 SMS 訊息遞送至所選擇的電話號碼。 |
 | 重要發生事件 | 您可以在「狀態」頁面上收到有關重要發生事件的警示。按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**狀態**。擴充通知功能的方式是設定事件訂閱，以整合「狀態」頁面中的發生事件警示與所選擇的 Web 服務，將訊息遞送至服務台電子郵件位址，或將 SMS 訊息遞送至所選擇的電話號碼。 |  
 | 狀態 | 您可以檢視平台、服務及 {{site.data.keyword.Bluemix_notm}} 實例的最新狀態。按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg)，然後選取**狀態**。  |
 
-*表格 2. 事件類型及通知方法*
-
 ### 設定事件訂閱
 
-您可以使用實作 Webhook 的事件訂閱，來擴充傳送至「管理」頁面及「狀態」頁面的通知功能。Webhook 會將您的通知直接遞送至您選擇的目的地，例如，服務台電子郵件位址（透過電子郵件）或電話號碼（透過 SMS 訊息）。您可以自訂通知類型（特別是維護更新項目或重要發生事件警示），以及通知中內含的資訊。
+您可以使用實作 Webhook 的事件訂閱，來擴充傳送至「管理」頁面及「狀態」頁面的通知功能。Webhook 會將您的通知直接遞送至您選擇的目的地，例如，服務台電子郵件位址（透過電子郵件）或電話號碼（透過 SMS 訊息）。您可以自訂通知類型（具體而言是維護更新或重要發生事件警示），以及通知中內含的資訊。
 
 若要使用 Webhook 設定特定事件訂閱，請完成下列步驟：
 
-1. 移至**管理**頁面：
-
-- 對於維護更新項目通知，移至**系統資訊** &gt; *Number* **個更新擱置**，然後按一下**訂閱**圖示 ![訂閱](images/icon_subscribe.svg)。
-- 對於發生事件警示通知，按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg) &gt; **狀態**，然後按一下**訂閱**圖示 ![訂閱](images/icon_subscribe.svg)。
+* 對於維護更新通知，移至**系統資訊** &gt; *Number* **個攔置的更新**，然後按一下**訂閱**圖示 ![訂閱](images/icon_subscribe.svg)。
+* 對於發生事件警示通知，按一下**帳戶和支援**圖示 ![帳戶和支援](../support/images/account_support.svg) &gt; **狀態**，然後按一下**訂閱**圖示 ![訂閱](images/icon_subscribe.svg)。
 
 **附註**：您可以使用所述的兩種方法的之一，來存取這兩種類型通知的事件訂閱頁面。
 
-2. 按一下**新增訂閱**。
+1. 按一下**新增訂閱**。
 
-3. 填寫事件訂閱表單。如需表單上各欄位的相關資訊，請檢閱下表：
+2. 填寫事件訂閱表單。如需表單上各欄位的相關資訊，請檢閱下表：
+
+*表 3. 事件訂閱表單欄位*
 
 | **欄位** | **說明** |
 |-----------------|-------------------|
 | 類型 | 選取  Webhook。 |
 | 方法 | 選取 GET 或 POST。 |
-| 事件 | 選取要訂閱更新項目或發生事件的通知。 |
+| 事件 | 選取要訂閱更新或發生事件的通知。 |
 | URL | 輸入要連結至您 Web 服務的 URL。 |
 | 說明 | 新增您要建立的事件訂閱的說明。 |
 | 使用者名稱 | 輸入您 Web 服務的使用者名稱。如果您不想使用個人認證，則可以設定有效的 ID，以專門與 {{site.data.keyword.Bluemix_notm}} 搭配使用。 |
 | 密碼 | 輸入您 Web 服務的密碼。 |
-| 有效負載 | 如果您已選取 POST 方法，請輸入 Web 服務特有的內容，以與用於 IBM 通知的值搭配使用。例如，如果您要在通知中顯示 Web 服務的標題、訊息及嚴重性，則必須使用 Web 服務的相符內容來定義 {{site.data.keyword.Bluemix_notm}} 值。下列值可以用來從 {{site.data.keyword.Bluemix_notm}} 通知中取回通知標題、訊息內文及嚴重性層次的資訊：`"{{title}}"`、`"{{message}}"` 及 `"{{severity}}"`。如果您未在此區段中輸入資訊，則會收到沒有任何其他資訊的通知。  |
+| 有效負載 | 如果您已選取 POST 方法，請輸入 Web 服務特有的內容，以和 IBM 通知所用的值搭配使用。例如，如果您要在通知中顯示 Web 服務的標題、訊息及嚴重性，則必須使用 Web 服務的相符內容來定義 {{site.data.keyword.Bluemix_notm}} 值。下列值可以用來從 {{site.data.keyword.Bluemix_notm}} 通知中取回通知標題、訊息內文及嚴重性層次的資訊：`"{{title}}"`、`"{{message}}"` 及 `"{{severity}}"`。如果您未在此區段中輸入資訊，則會收到沒有任何其他資訊的通知。  |
 
-表格 3. 事件訂閱表單欄位
-
-儲存您的事件訂閱時，會透過 Web 服務所設定的方法來接收通知。發生事件的通知仍然會張貼在「狀態」頁面上，維護更新項目的通知則會張貼在「管理」頁面的「通知」區域中。
+儲存您的事件訂閱時，會透過 Web 服務所設定的方法來接收通知。發生事件的通知仍然會張貼在「狀態」頁面上，維護更新的通知則會張貼在「管理」頁面的「通知」區域中。
 
 您可以選取任何儲存的事件訂閱，以及檢視最近的活動。您可以按一下來展開任何最近的活動項目，以檢視其詳細資料。詳細資料中包括可在有效負載區段中使用的通知的 IBM 值。若要查看這些值，請展開最近的活動項目，展開**事件**，然後展開**物件**。
 
@@ -102,11 +100,11 @@ copyright:
 <ol>
 <li>按一下 <strong><em>Number</em> 個更新擱置</strong>，以檢視所有擱置更新。</li>
 <li>選取更新，以採取動作或檢視更新的詳細資料，其中包括更新時間範圍、排定日期或服務中斷狀態。</li>
-<li>按一下<strong>設定無法使用的日期</strong>，以設定更新時間範圍中不方便套用更新的特定日期。如果您已設定無法使用的日期，IBM 會根據您的選擇來核准及排定更新。在核准及排定更新時，您會收到通知。</li>
-<li>如果您沒有任何無法使用的日期，請按一下<strong>核准</strong>來核准更新。如果您核准，則會在排定的更新時間範圍期間套用更新。IBM 會在更新部署開始及結束時傳送通知。</li>
+<li>按一下<strong>選取無法進行的日期</strong>，以設定更新時間範圍中不方便套用更新的特定日期。如果您已設定無法進行的日期，IBM 會根據您的選擇來核准及排定更新。在核准及排定更新時，您會收到通知。</li>
+<li>如果您沒有任何無法進行的日期，請按一下<strong>核准更新</strong>來核准更新。如果您核准，則會在排定的更新時間範圍期間套用更新。IBM 會在更新部署開始及結束時傳送通知。</li>
 </ol>
 
-**附註**：如果您未設定無法使用日期，或未核准更新，則會在 21 天時間範圍結束時套用，以確保您的平台保有最新資訊且為最新版本。
+**附註**：如果您未設定無法進行的日期，或未核准更新，則會在 21 天時間範圍結束時套用，以確保您的平台保有最新資訊且為最新版本。
 
 從「擱置更新」頁面中，按一下**行事曆**圖示 ![行事曆](images/icon_calendar.svg)，然後下載 `.ics` 檔案，以將排定的更新匯入您選擇的行事曆應用程式中，即可選擇追蹤更新排程：
 
@@ -117,7 +115,7 @@ copyright:
 <li>檢視您的已排定更新。</li>
 </ol>
 
-您也可以使用事件訂閱來擴充「管理」頁面的通知功能，以與所選擇的 Web 服務整合。若要設定更新項目或發生事件的事件通知訂閱，請參閱[事件訂閱及通知](index.html#oc_eventsubscription)。
+您也可以使用事件訂閱來擴充「管理」頁面的通知功能，以與所選擇的 Web 服務整合。若要設定更新或發生事件的事件通知訂閱，請參閱[事件訂閱及通知](index.html#oc_eventsubscription)。
 
 ### 一般系統資訊
 
@@ -221,6 +219,8 @@ copyright:
 
 下表顯示針對「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」所產生的安全報告清單。
 
+*表 4. 安全報告清單*
+
 | **種類** | **報告** | **說明** |      
 |-----------------|-------------------|---------------------|
 | 防火牆 | 防火牆登入 | 與 Vyatta 防火牆裝置的管理者登入有關的事件。 |
@@ -233,15 +233,13 @@ copyright:
 | 管理事件 | 使用者管理事件 | 在「管理」頁面上執行之使用者管理動作的相關事件。 |
 | 管理事件 | 型錄 | 服務型錄變更的相關事件 |
 | 管理事件 | 安全報告管理事件 | 在「管理」頁面上執行之安全報告管理動作的相關事件。 |
-| 檢查檢閱 | 存取檢閱報告 | 特許存取權的檢閱。 |
+| 存取檢閱 | 存取檢閱報告 | 特許存取權的檢閱。 |
 | 變更管理 | 軟體變更管理 | 變更管理活動。 |
 | 金鑰管理 | 自訂 SSL 憑證管理 | 已上傳及儲存的自訂 SSL 憑證。 |
 | 加密 | data-in-transit 加密 | 已配置的 data-in-transit 加密。 |
 | 防毒 | 防毒掃描報告 | 現有的防毒軟體。 |
 | 軟體修正程式管理 | 修補程式應用程式報告 | 已套用的軟體修正程式。 |
 | 資安事件管理 | 資安事件補救報告 | 進行資安事件管理的資安事件證明。 |
-
-*表格 4. 安全報告清單*
 
 ## 檢視狀態
 {: #oc_status}
@@ -281,13 +279,13 @@ copyright:
 
 請完成下列步驟，以登錄服務分配管理系統：
 
-1\. [實作 Cloud Foundry 服務分配管理系統 API](http://docs.cloudfoundry.org/services/api.html){: new_window}，以啟用服務與 {{site.data.keyword.Bluemix_notm}} 之間的通訊。「服務分配管理系統 API」是 {{site.data.keyword.Bluemix_notm}} 所取用的一組 REST 端點。
-
-實作服務分配管理系統時，在 `GET /v2/catalog` 的 JSON 回應中，您必須提供服務及服務方案的定義（包括您要顯示的服務資訊）。例如，請檢閱 Catalog (GET) 回應的下列範例 JSON：
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">實作 Cloud Foundry 服務分配管理系統 API</a>，以啟用服務與 {{site.data.keyword.Bluemix_notm}} 之間的通訊。「服務分配管理系統 API」是 {{site.data.keyword.Bluemix_notm}} 所取用的一組 REST 端點。<br />
+<br />
+<p>實作服務分配管理系統時，在 <code>GET /v2/catalog</code> 的 JSON 回應中，您必須提供服務及服務方案的定義（包括您要顯示的服務資訊）。例如，請檢閱 Catalog (GET) 回應的下列範例 JSON：</p>
+<p><pre>
 "services": [ 
-{
+   {
       "bindable":true,
       "description":"Cool Service is a data warehousing and analytics solution.",
       "id":"cool-service-id",
@@ -371,33 +369,26 @@ copyright:
    }
 ]
 }
-```
-{: codeblock}
-
-**附註**：當您建立本端或專用環境的服務分配管理系統時，必須在服務定義 JSON 檔案的 "tags" 欄位中指定 `customer_dedicated`。
-
-2\. 實作「服務分配管理系統 API」之後，請移至**管理 &gt; 型錄管理**。
-
-3\. 按一下**登錄服務分配管理系統**。
-
-4\. 在下列欄位中輸入值，以完成表單：
-
-- 服務分配管理系統名稱
-- 服務分配管理系統 URL
-- 服務分配管理系統使用者名稱
-- 服務分配管理系統密碼
-
-5\. 按一下**連接**。
-
-6\. 檢閱服務的資訊，包括可用方案、圖示及服務說明。
-
-**附註**：如果您需要變更服務的型錄資訊，請更新服務分配管理系統，然後填寫表單來重新啟動登錄程序。
-
-7\. 按一下**登錄**。
-
-8\. 選擇啟用服務的所有方案或僅特定方案。預設會停用所有方案。
-
-9\. 啟用所有組織或特定組織的服務實例。
+</pre></p>
+<p><strong>附註</strong>：當您建立本端或專用環境的服務分配管理系統時，必須在服務定義 JSON 檔案的 "tags" 欄位中指定 `customer_dedicated`。</p>
+</li>
+<li>實作「服務分配管理系統 API」之後，請移至<strong>管理</strong> &gt; <strong>型錄管理</strong>。</li>
+<li>按一下<strong>登錄服務分配管理系統</strong>。</li>
+<li>在下列欄位中輸入值，以完成表單：<ul>
+<li>服務分配管理系統名稱</li>
+<li>服務分配管理系統 URL</li>
+<li>服務分配管理系統使用者名稱</li>
+<li>服務分配管理系統密碼</li>
+</ul>
+</li>
+<li>按一下<strong>連接</strong>。</li>
+<li>檢閱服務的資訊，包括可用方案、圖示及服務說明。<br />
+<p><strong>附註</strong>：如果您需要變更服務的型錄資訊，請更新服務分配管理系統，然後填寫表單來重新啟動登錄程序。</p>
+</li>
+<li>按一下<strong>登錄</strong>。</li>
+<li>選擇啟用服務的所有方案或僅特定方案。預設會停用所有方案。</li>
+<li>啟用所有組織或特定組織的服務實例。</li>
+</ol>
 
 您現在可以在「{{site.data.keyword.Bluemix_notm}} 型錄」的「自訂服務」種類中看到您的服務。請移至**管理 &gt; 型錄管理**，然後選取型錄中的磚。您可以啟用不同的方案，並且隨時編輯您組織的方案可見性。
 
@@ -501,6 +492,8 @@ copyright:
 
 使用者可獲指派下列許可權：
 
+*表 5. 許可權*
+
 | **使用者許可權** | **說明** |       
 |-----------------|-------------------|
 | Admin | 具有 `admin` 許可權的使用者，可編輯其他使用者的許可權。 |
@@ -508,8 +501,6 @@ copyright:
 | Login | 擁有 `login` 許可權的使用者可以查看「管理」頁面。沒有此許可權，使用者無法查看「管理」功能表選項。 |
 | Reports | 具有 `reports` 許可權的使用者，可獲指派對安全報告進行 `view` 或 `write`（修改）的存取權。 |
 | Users | 具有 `users` 許可權的使用者，可獲指派對使用者清單進行 `view`，或對使用者進行 `write`（新增或移除）的存取權。此許可權不容許您設定其他使用者的許可權。|
-
-*表格 5. 許可權*
 
 可以啟用許可權，或是可以授與使用者該許可權的 `view` 或 `write` 存取權，如下列圖示所代表：
 
@@ -524,7 +515,7 @@ copyright:
 
 下列工具是利用下面範例的必要條件。您也可以選擇使用其他工具。
 * cURL，用來以指令方式輸入 REST API 要求。cURL 是一種免費公用程式，您可以用來透過指令行介面，將 HTTP 要求傳送給伺服器，以及接收伺服器回應。您可以從 [cURL 下載網站](http://curl.haxx.se/download.html){: new_window}下載 cURL。
-* Python，用來使用 Python pretty-print JSON 工具。這個選用性的工具會以 JSON 文字為輸入，並提供易讀的輸出。您可以從 [Python 下載網站](https://www.python.org/downloads){: new_window}下載 Python。
+* Python，用來使用 Python 細緻列印 JSON 工具。這個選用性的工具會以 JSON 文字為輸入，並提供易讀的輸出。您可以從 [Python 下載網站](https://www.python.org/downloads){: new_window}下載 Python。
 
 ### 登入管理主控台
 
@@ -839,6 +830,8 @@ POST /codi/v1/serviceBrokers
 ### 要求
 {: #registerrequest}
 
+*表 6. 欄位*
+
 | **名稱** | **說明** |
 |-----------------|-------------------|
 | name | 服務分配管理系統的名稱。 |
@@ -847,7 +840,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | 用於連接服務分配管理系統的 URL。 |
 | owningOrganization | 將服務列入白名單時要使用的起始組織。 |
 
-*表格 6. 欄位*
 
 #### 內文
 {: #registerbody}
@@ -919,6 +911,8 @@ Content-Type: application/json
 ### 要求
 {: #updaterequest}
 
+*表 7. 欄位*
+
 | **名稱** | **說明** |
 |-----------------|-------------------|
 | name | 服務分配管理系統的名稱。此名稱是建立服務時使用的名稱，無法變更。 |
@@ -927,7 +921,6 @@ Content-Type: application/json
 | broker_url | 用於連接服務分配管理系統的 URL。 |
 | owningOrganization | 將服務列入白名單時要使用的起始組織。 |
 
-*表格 7. 欄位*
 
 #### 內文
 {: #updatebody}
@@ -990,11 +983,12 @@ Content-Type: application/json
 
 請使用下列 API 和程式碼範例來刪除服務。
 
+*表 8. 參數*
+
 | **名稱** | **說明** |
 |-----------------|-------------------|
 | name | 服務分配管理系統的名稱。此名稱是建立服務時使用的名稱，無法變更。 |
 
-*表格 8. 參數*
 
 ### 路徑
 
@@ -1030,7 +1024,7 @@ Content-Type: application/json
 ## 使用 cf CLI 管理使用者
 {: #usingadmincli}
 
-您可以利用 Cloud Foundry 指令行介面與「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式搭配，來管理 {{site.data.keyword.Bluemix_notm}} 環境的使用者。例如，您可以從 LDAP 登錄新增使用者。
+您可以利用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式搭配，來管理 {{site.data.keyword.Bluemix_notm}} 環境的使用者。例如，您可以從 LDAP 登錄新增使用者。
 
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理
 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
@@ -1039,10 +1033,9 @@ CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指�
 
 ### 新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理
-CLI 外掛程式。
+安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式。
 
-**附註**：如果您先前已安裝「{{site.data.keyword.Bluemix_notm}} 管理」外掛程式，則可能需要解除安裝外掛程式，刪除儲存庫，然後重新安裝以取得最新更新。
+**附註**：如果您先前已安裝 {{site.data.keyword.Bluemix_notm}} 管理外掛程式，則可能需要解除安裝外掛程式，刪除儲存庫，然後重新安裝以取得最新更新。
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 
@@ -1056,7 +1049,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 <dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。</dd>
 </dl>
 </li>
-<li>若要安裝「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式，請執行下列指令：<br/><br/>
+<li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
@@ -1071,4 +1064,4 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 如需指令的其他說明，請使用 `-help` 選項。
 
-如需如何使用「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 管理](../cli/plugins/bluemix_admin/index.html)。
+如需如何使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 管理](../cli/plugins/bluemix_admin/index.html)。

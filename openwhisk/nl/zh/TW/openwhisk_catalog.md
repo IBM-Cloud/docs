@@ -18,7 +18,7 @@ copyright:
 
 # 使用已啟用 {{site.data.keyword.openwhisk_short}} 功能的服務 
 {: #openwhisk_ecosystem}
-*前次更新：2016 年 2 月 22 日*
+*前次更新：2016 年 3 月 28 日*
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
 {: shortdesc}
@@ -259,16 +259,11 @@ copyright:
 
 `/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
 
-- `cron`：指出何時發動觸發程式的字串（根據 Unix crontab 語法）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。以下是該字串所指出頻率的一些範例：
-
-  - `* * * * * *`：每秒。
-  - `0 * * * * *`：每分鐘的最頂端。
-  - `* 0 * * * *`：每小時的最頂端。
-  - `* * * 8 * *`：每個月第八天的某個時間
+- `cron`：指出何時發動觸發程式的字串（根據 Unix crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值是 1000。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。
 
 以下範例使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
 

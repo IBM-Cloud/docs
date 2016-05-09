@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
 
 
@@ -15,12 +15,13 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #mng}
-*Dernière mise à jour : 18 février 2016*
+*Dernière mise à jour : 19 avril 2016*
 
-Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer vos organisations en créant des espaces et en définissant des rôles utilisateur et des droits d'accès, voir [Gestion de vos organisations](../admin/adminpublic.html#orgmng).
+Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous
+pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir
+[Gestion de vos organisations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Table 1. Tâches d'administration permettant de gérer une instance {{site.data.keyword.Bluemix_notm}} locale ou dédiée*
@@ -39,32 +40,32 @@ surveiller les quotas pour les organisations et prendre des décisions rapidemen
 créer des espaces dans vos organisations. Ajoutez des utilisateurs et affectez des organisations et des espaces aux utilisateurs. Voir
 [Gestion de vos organisations](../admin/adminpublic.html#orgmng). |
 |Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs,
-retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](index.html#oc_user). |
+retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](index.html#oc_useradmin). |
 |Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de
 sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](index.html#oc_report). |
 |Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système,
 telles que les mises à jour en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de
-commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés.
-Vous pouvez aussi accéder aux abonnements à des événements et au flux de calendrier afin d'étendre vos notifications dans la section Mises à jour en
+commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Vous pouvez aussi accéder aux abonnements à des événements et au flux de calendrier afin d'étendre vos notifications dans la section Mises à jour en
 attente. Voir
 [Affichage des informations système](index.html#oc_system). |
-|Etendre des notifications et configurer des abonnements à des événements  | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt;
+|Etendre des notifications et configurer des abonnements à des événements | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt;
 *Nombre* mises à jour en attente **. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement à une notification d'événement pour une mise à jour ou un incident. Voir [Notifications et
 abonnements à des événements](index.html#oc_eventsubscription). |
 
 
-## Notifications et abonnements à des événements 
+## Notifications et abonnements à des événements
 {: #oc_eventsubscription}
 
 Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. {{site.data.keyword.Bluemix_notm}}
 envoie également des notifications dans la zone Notifications de la page Administration concernant des événements tels que la maintenance et les mises à
-niveau prévues. Les incidents sont signalés dans la page Statut. 
+niveau prévues. Les incidents sont signalés dans la page Statut.
 
 ### Notifications
 
 Vous pouvez afficher les notifications d'IBM pour votre environnement local ou dédié et surveiller le statut de votre environnement. Reportez-vous au
 tableau ci-dessous pour des informations sur les différents types de notification et les emplacements auxquels les notifications sont publiées.
 
+Tableau 2. Types d'événement et méthodes de notification
 
 | **Type d'événement** | **Méthode de notification** |       
 |-----------------|-------------------|
@@ -74,19 +75,16 @@ afficher la liste complète ainsi que l'historique de vos notifications en atten
 INFORMATIONS SYSTEME** &gt; *Nombre* **mises à jour en attente**. Vous pouvez étendre la capacité de
 notification en configurant un abonnement à un événement qui intègre les alertes relatives aux mises à jour de maintenance de la page Administration à un
 service Web de votre choix afin d'acheminer les messages vers l'adresse électronique d'un centre d'assistance ou afin d'envoyer un message SMS à un
-numéro de téléphone de votre choix.  |
+numéro de téléphone de votre choix. |
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur l'icône **Compte et support**
 ![Compte et support](../support/images/account_support.svg), puis sélectionnez **Statut**. Vous pouvez étendre la
 capacité de notification en configurant un abonnement à un événement qui intègre les alertes relatives aux incidents de la page
 Statut à un service Web de votre choix afin d'acheminer les messages vers l'adresse électronique d'un centre d'assistance ou afin d'envoyer un
-message SMS à un numéro de téléphone de votre choix.  |  
-| Statut | Vous pouvez afficher le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}}. 
-Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
-sélectionnez **Statut**.   |
+message SMS à un numéro de téléphone de votre choix. |  
+| Statut | Vous pouvez afficher le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
+sélectionnez **Statut**.  |
 
-*Tableau 2. Types d'événement et méthodes de notification*
-
-### Configuration d'abonnements à des événements 
+### Configuration d'abonnements à des événements
 
 Vous pouvez étendre la fonctionnalité des notifications qui sont envoyées dans la page Administration et dans la page Statut en utilisant des
 abonnements à des événements qui utilisent des webhooks. Les webhooks routent vos notifications directement vers une destination de votre choix, par
@@ -94,49 +92,45 @@ exemple l'adresse électronique d'un centre d'assistance (par courrier électron
 le type de notification, notamment les alertes relatives aux mises à jour de maintenance ou aux incidents critiques, ainsi que les informations qui sont
 incluses dans la notification.
 
+Pour utiliser des webhooks afin de configurer un abonnement à un événement spécifique, procédez comme suit :
 
-Pour utiliser des webhooks afin de configurer un abonnement à un événement spécifique, procédez comme suit : 
-
-1. Accédez à la page **ADMINISTRATION** : 
-
-- Pour les notifications relatives aux mises à jour de maintenance, accédez à **INFORMATIONS SYSTEME** &gt;
+* Pour les notifications relatives aux mises à jour de maintenance, accédez à **INFORMATIONS SYSTEME** &gt;
 *Nombre* **mises à jour en attente**, puis cliquez sur l'icône **S'abonner**
 ![S'abonner](images/icon_subscribe.svg).
-- Pour les notifications d'alerte relatives aux incidents, cliquez sur l'icône **Compte et support**
+* Pour les notifications d'alerte relatives aux incidents, cliquez sur l'icône **Compte et support**
 ![Compte et support](../support/images/account_support.svg) &gt; **Statut**, puis cliquez sur l'icône
 **S'abonner** ![S'abonner](images/icon_subscribe.svg).
 
 **Remarque** : vous pouvez accéder à la page des abonnements à des événements pour les deux types de notification en appliquant
-l'une des deux méthodes décrites. 
+l'une des deux méthodes décrites.
 
-2. Cliquez sur **Ajouter un abonnement**.
+1. Cliquez sur **Ajouter un abonnement**.
 
-3. Remplissez le formulaire d'abonnement à un événement. Pour des informations sur les zones du formulaire, reportez-vous au tableau suivant :
+2. Remplissez le formulaire d'abonnement à un événement. Pour des informations sur les zones du formulaire, reportez-vous au tableau suivant :
 
+*Tableau 3. Zones du formulaire d'abonnement à un événement *
 
 | **Zone** | **Description** |
 |-----------------|-------------------|
-| Type | Sélectionnez un webhook.  |
-| Méthode | Sélectionnez GET ou POST.  |
-| Evénement | Choisissez de vous abonner aux notifications relatives aux mises à jour ou aux incidents.  |
-| URL | Entrez l'adresse URL afin d'ancrer votre service Web.  |
-| Description | Ajoutez une description pour l'abonnement à un événement que vous créez.  |
+| Type | Sélectionnez un webhook. |
+| Méthode | Sélectionnez GET ou POST. |
+| Evénement | Choisissez de vous abonner aux notifications relatives aux mises à jour ou aux incidents. |
+| URL | Entrez l'adresse URL afin d'ancrer votre service Web. |
+| Description | Ajoutez une description pour l'abonnement à un événement que vous créez. |
 | Nom d'utilisateur | Entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous
 pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
-| Mot de passe | Entrez le mot de passe pour votre service Web.  |
+| Mot de passe | Entrez le mot de passe pour votre service Web. |
 | Contenu | Si vous avez sélectionné la méthode POST, entrez les propriétés propres au service Web que vous utilisez, associées aux valeurs
 appliquées pour
 la notification IBM. Par exemple, pour afficher le titre, le message et la gravité dans la notification émise par votre service Web, vous devez définir les
 valeurs {{site.data.keyword.Bluemix_notm}} avec la propriété correspondante pour votre service Web. Vous pouvez utiliser les valeurs suivantes pour
 extraire des informations depuis la notification {{site.data.keyword.Bluemix_notm}}, comme le titre de la notification, le corps du
 message et le niveau de gravité : `"{{title}}`, `"{{message}},"` et `"{{severity}}"`. Si
-vous n'entrez pas d'informations dans cette section, vous recevrez la notification sans information supplémentaire.   |
-
-Tableau 3. Zones du formulaire d'abonnement à un événement 
+vous n'entrez pas d'informations dans cette section, vous recevrez la notification sans information supplémentaire.  |
 
 Une fois votre abonnement à un événement sauvegardé, vous recevez des notifications via la méthode que vous avez configurée par le biais de votre
 service Web. Les notifications continuent d'être publiées dans la page Statut pour les incidents et dans la zone Notifications de la page Administration
-pour les mises à jour de maintenance. 
+pour les mises à jour de maintenance.
 
 Vous pouvez sélectionner n'importe quel abonnement à un événement et afficher l'activité récente. Vous pouvez cliquer pour développer toute entrée
 d'activité récente afin d'afficher les détails. Les valeurs IBM pour la notification que vous pouvez utiliser dans la section du contenu sont incluses
@@ -151,7 +145,7 @@ Pour afficher les informations système, cliquez sur **ADMINISTRATION &gt; INFOR
 Vous pouvez développer et afficher diverses sections sur les mises à jour en attente, les informations système générales et les détails de
 la configuration LDAP.
 
-### Mises à jour en attente et notifications 
+### Mises à jour en attente et notifications
 
 La section Mises à jour affiche le nombre de notifications relatives à des mises à jour en attente qui requièrent une intervention de votre part. Afin d'effectuer une action pour une mise à jour spécifique, procédez comme suit :
 
@@ -159,28 +153,25 @@ La section Mises à jour affiche le nombre de notifications relatives à des mis
 <li>Cliquez sur <strong><em>Nombre</em> mises à jour en attente</strong> pour afficher toutes les mises à jour en attente.</li>
 <li>Sélectionnez une mise à jour pour effectuer une action ou afficher les détails de la mise à jour, qui incluent la fenêtre de mise à jour, la date
 planifiée ou le statut d'interruption.</li>
-<li>Cliquez sur <strong>SELECTIONNER LES DATES D'INDISPONIBILITE</strong> pour définir des jours
-spécifiques dans la fenêtre de mise à jour qui ne vous conviennent pas pour
-l'application de la mise à jour. Si vous définissez des dates d'indisponibilité, IBM approuve et planifie votre mise à jour en fonction de vos sélections. Vous
+<li>Cliquez sur <strong>Sélectionner les dates d'indisponibilité</strong> pour définir des journées spécifiques sur le créneau de mise à jour qui ne
+conviennent pas à l'application de la mise à jour. Si vous définissez des dates d'indisponibilité, IBM approuve et planifie votre mise à jour en fonction de vos sélections. Vous
 recevez une notification lorsque la mise à jour est approuvée et planifiée.</li>
-<li>Cliquez sur <strong>Approuver la mise à jour</strong> pour approuver la mise à jour si toutes les dates vous conviennent. Si vous approuvez la mise à jour, celle-ci est appliquée au cours de la fenêtre de mise à jour planifiée. IBM envoie une notification au début et à la fin
+<li>Cliquez sur <strong>Approuver la mise à jour</strong> pour approuver la mise à jour si vous n'avez pas de dates d'indisponibilité. Si vous approuvez la mise à jour, celle-ci est appliquée au cours de la fenêtre de mise à jour planifiée. IBM envoie une notification au début et à la fin
 du déploiement de la mise à jour.</li>
 </ol>
 
 **Remarque** : si vous ne définissez pas de date d'indisponibilité ou si vous n'approuvez pas la mise à jour, celle-ci est
 appliquée à la fin d'une fenêtre de 21 jours pour garantir que votre plateforme reste à jour.
 
-
 Dans la page Mises à jour en attente, vous pouvez choisir d'effectuer le suivi du planning des mises à jour en cliquant
 sur l'icône **Calendrier** ![Calendrier](images/icon_calendar.svg) et en téléchargeant le fichier
 `.ics` afin d'importer les mises à jour planifiées dans une application de calendrier de votre choix :
-
 
 <ol>
 <li>Ouvrez votre application de calendrier.</li>
 <li>Téléchargez le fichier de calendrier en cliquant sur l'icône **Calendrier**
 ![Calendrier](images/icon_calendar.svg), puis importez-le dans votre application de calendrier en utilisant le fichier
-`.ics`. </li>
+`.ics`.</li>
 <li>Entrez vos données d'identification.</li>
 <li>Affichez vos mises à jour planifiées.</li>
 </ol>
@@ -189,7 +180,7 @@ Vous pouvez également étendre la fonctionnalité de notification pour la page 
 l'intégration à un service Web de votre choix. Pour configurer un abonnement à des notifications d'événement relatives à une mise à jour ou un incident,
 voir [Notifications et abonnements à des événements](index.html#oc_eventsubscription).
 
-### Informations système générales 
+### Informations système générales
 
 Dans la section Informations générales, vous pouvez consulter les informations suivantes :
 
@@ -198,17 +189,16 @@ Dans la section Informations générales, vous pouvez consulter les informations
 - Des informations sur le domaine partagé concernant votre système et votre service.
 - Des statistiques sur le nombre total d'applications, d'utilisateurs et d'organisations.
 
-### Détails de la configuration LDAP 
+### Détails de la configuration LDAP
 
 Dans la section Détails de la configuration LDAP, vous pouvez sélectionner le serveur LDAP et afficher des informations sur les mappages des
-utilisateurs et des groupes. Si vous utilisez un ID Web {{site.data.keyword.IBM}}, il est indiqué dans cette section. 
+utilisateurs et des groupes. Si vous utilisez un ID Web {{site.data.keyword.IBM}}, il est indiqué dans cette section.
 
 ## Affichage des informations relatives à l'utilisation
 {: #oc_resource}
 
 Vous pouvez afficher différents types d'informations sur l'utilisation pour votre instance locale ou dédiée et pour votre compte
 {{site.data.keyword.Bluemix_notm}} :
-
 
 - Des informations sur les ressources, notamment l'espace disque, l'utilisation de l'unité centrale, l'utilisation du réseau et les temps de réponse
 moyens. Voir [Utilisation des ressources](index.html#resourceusage).
@@ -241,75 +231,67 @@ minutes précédentes, de l'heure précédente ou du jour précédent.
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au
 cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
 
-### Utilisation du compte 
+### Utilisation du compte
 {: #accountusage}
 
-Vous pouvez afficher l'utilisation mensuelle pour votre compte, pour votre environnement dédié ou local. Vous pouvez utiliser ces données afin
-de déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
-
+Vous pouvez afficher l'utilisation mensuelle pour votre compte, pour votre environnement dédié ou local. Vous pouvez utiliser ces données afin de
+déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
 
 <ol>
 <li>Cliquez sur l'icône <strong>Compte et support</strong> ![Compte et support](../support/images/account_support.svg) &gt;
 <strong>Compte</strong> &gt; <strong>Détails sur l'utilisation</strong>.</li>
-<li>Sélectionnez l'organisation pour laquelle afficher les données. </li>
+<li>Sélectionnez l'organisation pour laquelle afficher les données.</li>
 <li>Vous pouvez afficher des détails sur l'utilisation pour les catégories suivantes :
 <ul>
-<li>Les applications de contexte d'exécution qui sont utilisées </li>
-<li>L'utilisation totale des applications de contexte d'exécution en Go/heure </li>
-<li>Les instances de service qui sont utilisées </li>
+<li>Les applications de contexte d'exécution qui sont utilisées</li>
+<li>L'utilisation totale des applications de contexte d'exécution en Go/heure</li>
+<li>Les instances de service qui sont utilisées</li>
 </ul>
 </li>
 <li>Facultatif : affichez vos données pour un mois spécifique en utilisant le menu <strong>Votre activité de cloud</strong> pour sélectionner le mois de
-votre choix. </li>
+votre choix.</li>
 <li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos
-données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>. </li>
+données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
 </ol>
 
 Vous pouvez aussi afficher l'utilisation mensuelle et les frais associés au niveau du compte pour vos contextes d'exécution, vos applications et vos
 services qui sont mis à disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public. Vous pouvez utiliser ces données afin de
 déterminer les frais à facturer à des organisations spécifiques en fonction de leur consommation.
 
-
 <ol>
 <li>Cliquez sur l'icône <strong>Compte et support</strong> ![Compte et support](../support/images/account_support.svg) &gt;
 <strong>Compte</strong> &gt; <strong>Détails sur l'utilisation</strong>.</li>
 <li>Cliquez sur <strong>Public</strong>.</li>
 <li>Sélectionnez l'organisation pour laquelle afficher les données ou sélectionnez <strong>Toutes les organisations</strong> afin d'afficher les données
-simultanément pour toutes les organisations.
-</li>
+simultanément pour toutes les organisations.</li>
 <li>Vous pouvez afficher des détails sur l'utilisation pour les catégories suivantes :
 <ul>
-<li>Les applications de contexte d'exécution qui sont utilisées </li>
-<li>L'utilisation totale des applications de contexte d'exécution en Go/heure </li>
-<li>Les instances de service qui sont utilisées </li>
-<li>Un récapitulatif des frais pour tous les contextes d'exécution, tous les services et toutes les applications qui sont mis à disposition
-</li>
+<li>Les applications de contexte d'exécution qui sont utilisées</li>
+<li>L'utilisation totale des applications de contexte d'exécution en Go/heure</li>
+<li>Les instances de service qui sont utilisées</li>
+<li>Un récapitulatif des frais pour tous les contextes d'exécution, tous les services et toutes les applications qui sont mis à disposition</li>
 </ul>
 </li>
 <li>Facultatif : affichez vos données pour un mois spécifique en sélectionnant le mois de votre choix dans le graphique à barres. Les données pour le mois
-en cours s'affichent par défaut.
-</li>
+en cours s'affichent par défaut.</li>
 <li>Facultatif : cliquez sur <strong>EXPORTER DES DONNEES</strong> et sélectionnez <strong>CSV</strong> ou <strong>JSON</strong> afin d'exporter vos
-données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>. </li>
+données pour le mois sélectionné dans un fichier <code>CSV</code> ou <code>JSON</code>.</li>
 </ol>
 
 
-### Utilisation des organisations 
+### Utilisation des organisations
 {: #orgusage}
 
 Pour afficher l'utilisation par organisation, cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS**, puis
-sélectionnez une organisation dans **Liste des organisations**. La page **Gérer les organisations** de l'organisation
-sélectionnée affiche les informations suivantes sur l'utilisation :
+sélectionnez une organisation dans **Liste des organisations**. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
 
-
-- Le nombre de services utilisés 
-- Le nombre de routes utilisées 
-- Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé 
-- Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé 
+- Le nombre de services utilisés
+- Le nombre de routes utilisées
+- Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé
+- Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
 - Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application
-déployée. Vous pouvez sélectionner **Vue de liste** afin d'afficher des données pour toutes les applications, notamment l'allocation de
-mémoire par application et la consommation de Go/heure mesurée pour les trois derniers mois.
-
+déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par
+application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
 Pour plus d'informations sur l'affichage de l'utilisation par organisation, l'ajustement des plans d'établissement des quotas et la gestion de vos
 organisations, voir [Administration des organisations](../admin/index.html#oc_organizations).
@@ -333,6 +315,8 @@ contenu textuel des rapports et des journaux. Vous pouvez aussi choisir de filtr
 
 Le tableau ci-dessous présente la liste des rapports de sécurité qui sont générés pour l'environnement {{site.data.keyword.Bluemix_notm}}
 local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
+
+*Tableau 4. Liste des rapports de sécurité*
 
 | **Catégorie** | **Rapport** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -369,14 +353,11 @@ dans la page Administration. |
 | Gestion des incidents de sécurité | Rapport de résolution des incidents de sécurité | Preuve des incidents de sécurité pour la gestion des
 incidents de sécurité. |
 
-*Tableau 4. Liste des rapports de sécurité*
-
 ## Affichage du statut
 {: #oc_status}
 
-Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de {{site.data.keyword.Bluemix_notm}}. 
-Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
-sélectionnez **Statut**. 
+Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **Compte et support** ![Compte et support](../support/images/account_support.svg), puis
+sélectionnez **Statut**.
 
 La page Statut est l'emplacement central pour rechercher des notifications et des annonces sur les événements clés affectant la plateforme {{site.data.keyword.Bluemix_notm}} et les principaux services dans {{site.data.keyword.Bluemix_notm}}.
 
@@ -400,13 +381,12 @@ la visibilité, sélectionnez l'une des options suivantes :
 
 <!-- staging only start -->
 
-### Enregistrement d'un courtier de services 
+### Enregistrement d'un courtier de services
 {: #servicebrokerui}
 
 Si vous voulez afficher un service particulier dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer
 un courtier de services. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance
 locale ou dédiée.
-
 
 Les méthodes d'utilisation du courtier de services varient selon le nombre de services qu'il gère ou selon qu'il a déjà été enregistré dans {{site.data.keyword.Bluemix_notm}}.
 
@@ -423,21 +403,20 @@ cf avec le plug-in d'[interface de ligne de commande
 d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande ba) ou utilisez
 l'[API de service personnalisé](index.html#servicebrokerapi).
 
-#### Enregistrement d'un courtier de services qui gère un service 
+#### Enregistrement d'un courtier de services qui gère un service
 {: #registerbrokerui}
 
-Procédez comme suit pour enregistrer votre courtier de services : 
+Procédez comme suit pour enregistrer votre courtier de services :
 
-1\. [Implémentez l'API de courtier de services Cloud Foundry](http://docs.cloudfoundry.org/services/api.html){: new_window}
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implémentez l'API de courtier de services Cloud Foundry</a>
 pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds
-finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
-
-Lorsque vous implémentez le courtier de services, dans la réponse JSON de `GET /v2/catalog`, vous devez fournir les définitions pour
-vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, appuyez-vous sur le modèle
-de fichier JSON suivant de réponse de catalogue (GET) :
-
-
-```
+finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.<br />
+<br />
+<p>Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour
+vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Examinez, par exemple, l'exemple
+JSON suivant de la réponse (GET) du Catalogue :</p>
+<p><pre>
 "services": [
    {
       "bindable":true,
@@ -526,50 +505,39 @@ commencer à analyser vos données immédiatement à l'aide d'outils familiers."
    }
 ]
 }
-```
-{: codeblock}
-
-**Remarque** : lorsque vous créez un courtier de services pour un environnement local ou dédié, vous devez spécifier
-`customer_dedicated` dans la zone "tags" dans votre fichier JSON de définition de service. 
-
-2\. Une fois l'API de courtier de services implémentée, accédez à **ADMINISTRATION &gt; GESTION DES CATALOGUES**.
-
-3\. Cliquez sur **Enregistrement d'un courtier de services**.
-
-4\. Remplissez le formulaire en entrant des valeurs dans les zones suivantes :
-
-- Nom du courtier de services
-- Adresse URL du courtier de services
-- Nom d'utilisateur du courtier de services
-- Mot de passe du courtier de services
-
-5\. Cliquez sur **CONNECTER**.
-
-6\. Passez en revue les informations relatives à votre service, notamment les plans disponibles, l'icône et la description du service.
-
-
-**Remarque** : si vous devez changer les informations de catalogue pour le service, mettez à jour votre courtier de services et
-lancez à nouveau le processus d'enregistrement en remplissant le formulaire.
-
-
-7\. Cliquez sur **ENREGISTRER**.
-
-8\. Choisissez d'activer tous les plans ou des plans spécifiques seulement pour le service. Tous les plans sont désactivés par défaut. 
-
-9\. Activez l'instance de service pour toutes les organisations ou pour des organisations spécifiques.
-
+</pre></p>
+<p><strong>Remarque</strong> : lorsque vous créez un courtier de services pour un environnement local ou dédié, vous devez spécifier
+`customer_dedicated` dans la zone "tags" dans votre fichier JSON de définition de service.</p>
+</li>
+<li>Après avoir implémenté l'API Service Broker, accédez à <strong>Administration</strong> &gt; <strong>Gestion du catalogue</strong>.</li>
+<li>Cliquez sur <strong>Enregistrement d'un courtier de services</strong>.</li>
+<li>Remplissez le formulaire en entrant des valeurs dans les zones suivantes :
+<ul>
+<li>Nom du courtier de services</li>
+<li>Adresse URL du courtier de services</li>
+<li>Nom d'utilisateur du courtier de services</li>
+<li>Mot de passe du courtier de services</li>
+</ul>
+</li>
+<li>Cliquez sur <strong>CONNECTER</strong>.</li>
+<li>Passez en revue les informations relatives à votre service, notamment les plans disponibles, l'icône et la description du service.<br />
+<p><strong>Remarque</strong> : si vous devez changer les informations de catalogue pour le service, mettez à jour votre courtier de services et
+lancez à nouveau le processus d'enregistrement en remplissant le formulaire.</p>
+</li>
+<li>Cliquez sur <strong>ENREGISTRER</strong>.</li>
+<li>Choisissez d'activer tous les plans ou des plans spécifiques seulement pour le service. Tous les plans sont désactivés par défaut.</li>
+<li>Activez l'instance de service pour toutes les organisations ou pour des organisations spécifiques.</li>
+</ol>
 
 A présent, votre service apparaît dans la catégorie Services personnalisés de votre catalogue {{site.data.keyword.Bluemix_notm}}. Accédez à
 **ADMINISTRATION &gt; GESTION DES CATALOGUES** et sélectionnez la vignette dans le catalogue. Vous pouvez activer différents plans et
 éditer la visibilité d'un plan pour vos organisations à tout moment.
-
 
 ## Administration des organisations
 {: #oc_organizations}
 
 Vous pouvez gérer vos organisations en créant et en supprimant des organisations, en ajoutant ou en retirant des responsables pour les
 organisations, et en surveillant l'utilisation des quotas afin de prendre les meilleures décisions pour votre entreprise.
-
 
 Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS**.
 
@@ -578,14 +546,14 @@ organisations.
 
 ### Création d'organisations
 
-Pour créer une organisation et ajouter des responsables, procédez comme suit : 
+Pour créer une organisation et ajouter des responsables, procédez comme suit :
 
 1. Cliquez sur <strong>CREATION D'ORGANISATION</strong>.
-2. Entrez un nom pour l'organisation. 
+2. Entrez un nom pour l'organisation.
 3. Entrez le nom ou l'adresse électronique de la personne à ajouter en tant que responsable. Vous pouvez ajouter plusieurs responsables en entrant et en sélectionnant plusieurs noms.
 4. Cliquez sur <strong>CREATION D'ORGANISATION</strong> pour sauvegarder vos modifications et créer l'organisation.
 
-### Surveillance des quotas 
+### Surveillance des quotas
 
 Vous pouvez développer la section Surveillance des quotas pour afficher les informations suivantes :
 
@@ -611,7 +579,7 @@ n'utilisent pas toutes la totalité de leur quota d'allocation de mémoire simul
 quota déployé pour chaque organisation. Le graphique fournit des informations triées en fonction de l'utilisation de la mémoire la plus élevée par
 organisation ; par défaut, l'organisation qui utilise la quantité de mémoire la plus élevée est répertoriée en premier. Vous pouvez effectuer un tri en
 fonction du paramètre **Utilisation de la mémoire la plus élevée** et du paramètre **Allocation de mémoire
-superflue**. 
+superflue**.
 
 	<dl>
 	<dt><strong>Utilisation de la mémoire la plus élevée</strong></dt>
@@ -622,44 +590,41 @@ superflue**.
 quota qui leur a été alloué. </dd>
 	</dl>
 
-### Ajustement des plans d'établissement des quotas 
+### Ajustement des plans d'établissement des quotas
 
-Afin de changer le plan d'établissement des quotas pour une organisation, procédez comme suit : 
+Afin de changer le plan d'établissement des quotas pour une organisation, procédez comme suit :
 
 <ol>
 <li>Cliquez dans le graphique sur la barre correspondant à l'organisation que
 vous voulez éditer dans la section Utilisation de la mémoire de l'organisation ou sélectionnez le nom de l'organisation dans la section Liste des
-organisations. </li>
-<li>Dans la page Gérer l'organisation, vous pouvez changer le plan d'établissement des quotas, modifier le nom de l'organisation, et ajouter ou retirer des responsables. <br />
+organisations.</li>
+<li>Dans la page Gérer l'organisation, vous pouvez changer le plan d'établissement des quotas, modifier le nom de l'organisation, et ajouter ou retirer des responsables.<br />
 <p><strong>Remarque</strong> : vous recevez un message si vous sélectionnez un plan d'établissement des quotas qui n'est pas suffisant pour l'utilisation en
-cours pour l'organisation. </p>
+cours pour l'organisation.</p>
 </li>
 <li>Pour sauvegarder les modifications que vous avez apportées dans la page Gérer l'organisation, cliquez sur <strong>SAUVEGARDER</strong>.</li>
 </ol>
 
-### Gestion de vos organisations depuis la liste des organisations 
+### Gestion de vos organisations depuis la liste des organisations
 
 Dans la section Liste des organisations, vous pouvez afficher toutes les organisations de l'environnement
 {{site.data.keyword.Bluemix_notm}}, et vous pouvez effectuer des actions pour des organisations individuelles en cliquant sur le nom de
-l'organisation. 
+l'organisation.
 
 - Pour supprimer une organisation, cliquez sur l'icône **Supprimer** ![Supprimer](images/icon_trash.svg) dans
-la colonne Actions. 
-- Afin d'afficher le plan d'établissement des quotas et l'utilisation pour une organisation, cliquez sur le nom de l'organisation dans la liste.
-La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
+la colonne Actions.
+- Afin d'afficher le plan d'établissement des quotas et l'utilisation pour une organisation, cliquez sur le nom de l'organisation dans la liste. La page **Gérer les organisations** de l'organisation sélectionnée affiche les informations suivantes sur l'utilisation :
 
-
-  - Le nombre de services utilisés 
-  - Le nombre de routes utilisées 
-  - Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé 
-  - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé 
+  - Le nombre de services utilisés
+  - Le nombre de routes utilisées
+  - Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé
+  - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
   - Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application
-déployée. Vous pouvez sélectionner **Vue de liste** afin d'afficher les données pour toutes les applications, notamment l'allocation de
-mémoire par application et la consommation de Go/heure mesurée pour les trois derniers mois.
-
+déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par
+application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
 - Pour éditer le nom de l'organisation et ajouter ou retirer des responsables, cliquez sur le nom de l'organisation dans la liste et suivez les
-invites à l'écran. 
+invites à l'écran.
 
 ## Gestion des utilisateurs et des droits
 {: #oc_useradmin}
@@ -710,6 +675,8 @@ Pour supprimer un utilisateur, localisez-le et cliquez sur l'icône ![Supprimer]
 
 Les droits suivants peuvent être accordés aux utilisateurs :
 
+*Tableau 5. Droits*
+
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
 | Admin | Les utilisateurs disposant du droit `Admin` peuvent éditer les droits des autres utilisateurs. |
@@ -717,16 +684,14 @@ Les droits suivants peuvent être accordés aux utilisateurs :
 | Connexion | Les utilisateurs disposant du droit `Connexion` sont autorisés à voir la page Administration. Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu Administration. |
 | Rapports | Les utilisateurs disposant du droit `Rapports` peuvent afficher (accès `view`) ou modifier
 (accès `write`) les rapports de sécurité. |
-| Utilisateurs  | Les utilisateurs disposant du droit `Utilisateurs` peuvent afficher (accès `view`) la liste des
+| Utilisateurs | Les utilisateurs disposant du droit `Utilisateurs` peuvent afficher (accès `view`) la liste des
 utilisateurs ou
 ajouter ou retirer (accès `write`) des utilisateurs. Ce droit ne vous permet pas de définir des droits pour d'autres utilisateurs.|
-
-*Tableau 5. Droits*
 
 Les droits peuvent être activés, ou l'utilisateur peut se voir attribuer l'accès `view` (afficher) ou `write`
 (écrire) pour ces droits, comme représenté par les icônes suivantes :
 
-* L'icône ![Activé, représentée par une coche](images/icon_enabled.svg) à côté d'un droit signifie que le droit est activé.
+* L'icône ![Activée, représentée par une coche](images/icon_enabled.svg) d'autorisation indique que celle-ci est activée.
 * L'icône ![Afficher, représentée par un oeil](images/icon_read.svg) signifie que l'utilisateur dispose de l'accès `view` (afficher en lecture seule) pour ce droit.
 * L'icône ![Ecrire, représentée par un crayon](images/icon_write.svg) signifie que l'utilisateur dispose de l'accès `write` (écrire, c'est-à-dire éditer, ajouter ou supprimer) pour ce droit.
 
@@ -1087,6 +1052,8 @@ POST /codi/v1/serviceBrokers
 ### Demande
 {: #registerrequest}
 
+*Tableau 6. Zones*
+
 | **Nom** | **Description** |
 |-----------------|-------------------|
 | name | Nom du courtier de services. |
@@ -1095,7 +1062,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL utilisée pour se connecter au courtier de services. |
 | owningOrganization | Organisation initiale avec laquelle enregistrer le service sur la liste blanche. |
 
-*Tableau 6. Zones*
 
 #### Corps
 {: #registerbody}
@@ -1167,6 +1133,8 @@ Utilisez l'API et les exemples de code suivants pour mettre à jour un service.
 ### Demande
 {: #updaterequest}
 
+*Tableau 7. Zones*
+
 | **Nom** | **Description** |
 |-----------------|-------------------|
 | name | Nom du courtier de services. Ce nom ne peut pas varier du nom avec lequel a été créé le service. |
@@ -1175,7 +1143,6 @@ Utilisez l'API et les exemples de code suivants pour mettre à jour un service.
 | broker_url | URL utilisée pour se connecter au courtier de services. |
 | owningOrganization | Organisation initiale avec laquelle enregistrer le service sur la liste blanche. |
 
-*Tableau 7. Zones*
 
 #### Corps
 {: #updatebody}
@@ -1238,11 +1205,12 @@ Content-Type: application/json
 
 Utilisez l'API et les exemples de code suivants pour supprimer un service.
 
+*Tableau 8. Paramètre*
+
 | **Nom** | **Description** |
 |-----------------|-------------------|
 | name | Nom du courtier de services. Ce nom ne peut pas varier du nom avec lequel a été créé le service. |
 
-*Tableau 8. Paramètre*
 
 ### Route
 
@@ -1293,7 +1261,6 @@ Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le 
 
 **Remarque** : si vous avez déjà installé le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, il peut être
 nécessaire de le désinstaller, de supprimer le référentiel, puis de réinstaller le plug-in afin de bénéficier des mises à jour les plus récentes.
-
 
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 

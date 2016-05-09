@@ -5,13 +5,14 @@ copyright:
 
 ---
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # 取得客戶支援
 {: #getting-customer-support}
 
-*前次更新：2016 年 3 月 15 日*
+*前次更新：2016 年 4 月 19 日*
 
 
 如果遇到 {{site.data.keyword.Bluemix}} 的問題，您有數個支援選項，例如透過 Stack Overflow 取得協助或開啟支援問題單。
@@ -19,7 +20,8 @@ copyright:
 
 ## 取得協助
 {: #getting-help}
-若要取得協助，您可以移至「帳戶和支援」，也可以直接前往 Stack Overflow，在這裡您可以搜尋資訊或張貼問題。{:shortdesc}
+若要取得協助，您可以移至「帳戶和支援」，也可以直接前往 Stack Overflow，在這裡您可以搜尋資訊或張貼問題。
+{:shortdesc}
 
 ### 使用帳戶和支援
 「帳戶和支援」特性可讓您檢查帳戶資訊、檢視狀態、透過通知掌握最新資訊、選取地區、選取及管理組織，以及登出。此外，您也可以取得協助並提供意見。
@@ -64,7 +66,7 @@ copyright:
 
 ### 訂閱 RSS 資訊來源
 
-您也可以透過訂閱 {{site.data.keyword.Bluemix_notm}}「狀態」頁面的 RSS 資訊來源，來獲得任何通知的警示。這種方式讓您不需要定期查閱狀態頁面即可取得更新項目。
+您也可以透過訂閱 {{site.data.keyword.Bluemix_notm}}「狀態」頁面的 RSS 資訊來源，來獲得任何通知的警示。這種方式讓您不需要定期查閱狀態頁面即可取得更新。
 
 若要訂閱，請遵循下列步驟：
 
@@ -87,8 +89,7 @@ copyright:
   * www.feedmailer.com
   * www.iftt.com
 
-{{site.data.keyword.Bluemix_notm}} 每個月通常約有
-50 個更新項目。
+{{site.data.keyword.Bluemix_notm}} 每個月通常約有 50 次更新。
 
 ### 監視狀態的最佳作法
 
@@ -101,7 +102,7 @@ copyright:
   * 檢查現行維護時間範圍或進行中的事件
 
 	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的事件。
-若要提報狀態頁面上尚未列出的事件，請透過頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg) 或 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟支援問題單。
+若要提報狀態頁面上尚未列出的發生事件，請透過頂端功能表列中的**帳戶和支援**圖示 ![帳戶和支援](images/account_support.svg) 或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
 
   * 充分運用多個 {{site.data.keyword.Bluemix_notm}} 地區
 
@@ -124,29 +125,41 @@ copyright:
 ## 與支援中心聯絡
 {: #contacting-support}
 
-如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，便可開啟支援問題單。「{{site.data.keyword.Bluemix_notm}} 專用」或「{{site.data.keyword.Bluemix_notm}} 本端」客戶也可以選擇購買其他高階支援，以能夠遠端聯繫身為 {{site.data.keyword.Bluemix_notm}} 技術顧問及產品專家的指定支援領導人。所有 {{site.data.keyword.Bluemix_notm}} 客戶也可以針對註冊或計費問題與 IBM 聯絡。
+如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，便可開啟支援問題單。  
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 公用」的支援中心聯絡
 {: #contacting-bluemix-support}
 
+所有 {{site.data.keyword.Bluemix_notm}} 客戶都可以透過 Bluemix 社群或 Stack Overflow 擁有免費技術支援。此外，還會提供不同層次的支援，以符合不同的客戶需求。請參閱下表，以選擇免費、基本、標準和高階支援層次。 
+
+層次 | 免費 |  基本 | 標準 | 高階
+--- | --- | --- | --- | --- |
+說明 | 支援所有 Bluemix 試用客戶。  |  支援不需要傳統嚴重性及回應時間的非正式作業環境或工作量。 | 支援有限企業關鍵應用程式數目的環境。「{{site.data.keyword.Bluemix_notm}} 專用」和「{{site.data.keyword.Bluemix_notm}} 本端」客戶接收標準支援。 | 支援與 {{site.data.keyword.Bluemix_notm}} 具有策略相依關係的關鍵任務環境。
+高嚴重性支援 |  N/A | N/A | 內含 | 內含
+支援語言 | 英文 | 英文 | 英文 | 英文
+指派的客戶成功經理 (CSM) | 不包括 | 不包括 | 不包括 | 內含於<br> 每週 8 小時
+*表 1. 支援層次*
+
+#### 開啟支援問題單
+{: #open-ticket}
+
 如果無法透過疑難排解及說明選項來解決您的技術問題，您可以要求支援。不過，因技術問題而聯絡支援中心之前，請檢查 {{site.data.keyword.Bluemix_notm}} 狀態，以確定問題不是由於運作中斷而造成。
 
-如果問題不是由於運作中斷而造成，您可以使用下列其中一個選項來開啟支援問題單：
+如果問題不是由於作業中斷而造成，請使用下列其中一個選項來開啟支援問題單：
 
   * 從「帳戶和支援」，按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**磚之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看左導覽窗格中[服務](../services/index.html){: new_window}下方的種類。
+  * 從 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}。登入入口網站之後，請按一下**開啟問題單**，然後填寫支援表單。 
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**磚之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看左導覽窗格中[服務](../services/index.html){: new_window}下方的種類。  
+  
 
 
-使用下列選項可提供支援：
+開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性及回應時間](index.html#support-ticket-severity){: new_window}。如果您的要求很緊急，但是您只有免費或基本支援，則可以升級帳戶來提交高嚴重性（層次 1、2 及 3）問題單。若要將您的帳戶升級至較高的支援層次，請透過電子郵件 sales@bluemix.net 來聯絡 IBM 業務代表。
 
-  * 最初 30 天試用訂閱（免費提供）
-  * 「{{site.data.keyword.Bluemix_notm}} 專用」環境（已包括）
-  * 「{{site.data.keyword.Bluemix_notm}} 本端」環境（已包括）
-  * 附加支援的隨收隨付制
-  * 附加支援的訂閱
+#### 檢查支援問題單狀態
+{: #check-ticket-status}
 
+每一個支援問題單都會獲指派一個唯一的問題單號碼，以供參照。您可以使用問題單號碼，在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 檢閱支援問題單進度以及更新支援問題單。更新和回應會透過電子郵件傳送給您，並且記錄在問題單注意事項中。  
 
-開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性](index.html#support-ticket-severity){: new_window}。如果您的要求很緊急，但您帳戶的 30 天試用訂閱期間已過期，而且您沒有「支援」附加程式，則可以升級帳戶來提交高嚴重性（層次 1、2 及 3）問題單。若要將您的帳戶升級至 {{site.data.keyword.Bluemix_notm}} Standard Support，請透過電子郵件 sales@bluemix.net 來聯絡 IBM 業務代表。
 
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 專用」的支援中心聯絡
@@ -157,8 +170,8 @@ copyright:
 如果您是「{{site.data.keyword.Bluemix_notm}} 專用」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。然而，因為您可能沒有 IBM ID，所以會有一些不同的選項可以得到支援。
 
 <ul>
-<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。為 {{site.data.keyword.Bluemix_notm}} 地區欄位選取**專用**選項。
-<p>IBM 會在星期日晚上 10 點 (UTC) 到星期五午夜 12 點 (UTC) 監視表單的提交。</p>
+<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。為「地區」欄位選取 **{{site.data.keyword.Bluemix_notm}} 專用**選項。
+<p>IBM 會在星期日晚上 10:00 UTC 到星期五晚上 11:59 UTC 監視表單的提交。</p>
 </li>
 <li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，請按一下頂端功能表列中的**帳戶和支援**圖示 <img src="images/account_support.svg" alt="帳戶和支援" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
 <li>如果沒有 IBM ID，您可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
@@ -174,7 +187,8 @@ copyright:
 如果您是「{{site.data.keyword.Bluemix_notm}} 本端」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。然而，因為您可能沒有 IBM ID，所以會有一些不同的選項可以得到支援。
 
 <ul>
-<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。<p>IBM 會在星期日晚上 10 點 (UTC) 到星期五午夜 12 點 (UTC) 監視表單的提交。</p>
+<li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。在此表單中，您可以使用電子郵件位址或您的 IBM ID。為「地區」欄位選取 **{{site.data.keyword.Bluemix_notm}} 本端**選項。
+<p>IBM 會在星期日晚上 10:00 UTC 到星期五晚上 11:59 UTC 監視表單的提交。</p>
 </li>
 <li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，請按一下頂端功能表列中的**帳戶和支援**圖示 <img src="images/account_support.svg" alt="帳戶和支援" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
 <li>如果沒有 IBM ID，您可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
@@ -182,33 +196,54 @@ copyright:
 </ul>
 
 
-### 支援問題單嚴重性
+
+
+### 支援問題單嚴重性及回應時間
 {: #support-ticket-severity}
+
 聯絡支援中心時，您可以要求特定嚴重性層次（視問題的類型及緊急性而定）。嚴重性層次可能會影響解決問題的快慢。
 
-下表列出支援問題及建議嚴重性層次的一些常見範例。這些範例是一般準則，僅供參考。
+下表列出支援問題、建議嚴重性層次及回應時間目標的一些常見範例。回應時間目標僅用來說明 IBM 的目標，並不保證效能。
 
-嚴重性 | 範例
-------|--------
-嚴重性 1 | <ul><li>用戶端無法存取您的應用程式</li><li>資料毀損</li></ul>			   
-嚴重性 2 | <ul><li>影響多位使用者的應用程式錯誤</li><li>個別使用者無法登入</li></ul>
-嚴重性 3 | <ul><li>一般問題</li><li>影響個別使用者的應用程式錯誤</li></ul>
-嚴重性 4 | <ul><li>次要應用程式問題</li><li>操作方式問題</li><li>加強功能</li></ul>
-*表 1. 嚴重性範例*
+**作業時間：**星期日晚上 10:00 GMT - 星期五晚上 11:59 GMT（不包括美國/義大利/澳洲假日）。如需假日排程的相關資訊，請參閱 [Bluemix Support Holidays](http://ibm.biz/bluemixholidays){: new_window}。 
 
-24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單則會在平日正常上班時間 7:00 am UTC 到 1:00 am UTC 處理。
 
+嚴重性 | 嚴重性定義 | 回應時間目標 | 回應時間涵蓋範圍
+------|-------- | --- | --- |
+嚴重性 1 | <strong>嚴重業務影響，或服務已關閉。</strong><br> 重要業務功能未作業，或重要介面失敗。此嚴重性通常會套用至正式作業環境，指出無法存取服務將嚴重影響作業。必須立即解決此狀況。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>1 小時內</li><li><strong>高階：</strong>1 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>24 小時全年無休</li><li><strong>高階：</strong>24 小時全年無休</li></ul> 			   
+嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>高階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
+嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>高階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
+嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>高階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
+*表 2. 嚴重性定義及回應時間*
+
+
+### 報告潛在的安全漏洞
+{: #report-security-vulnerability}
+
+如果您相信會發生潛在的安全漏洞，請開啟支援問題單，以向 Bluemix 報告。 
+
+若要報告潛在的安全漏洞，請完成下列步驟：
+  1. 開啟嚴重性 1 問題單，或具有您支援所容許的最高嚴重性層次的問題單。如需如何開啟問題單的相關資訊，請參閱[開啟支援問題單](#open-ticket){: new_window}。 
+  2. 在問題單摘要中，清楚說明問題單是有關潛在的安全漏洞。
+  2. 包括下列其中一個項目，以提供潛在安全漏洞的詳細資料：
+       * 可以聯絡到您一起討論問題的電話號碼。
+	   * 問題的詳細資料。您必須將詳細資料加密為問題單主體中的一個文字區塊，並提供「IBM 支援中心」如何安全聯絡您以取得解密指示的指示。
+	   
+	   
+	   
 
 ### 提升支援問題單
 {: #escalation}
 
-如果您未接收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
+使用標準或高階支援時，如果您未接收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
 
 若要提交呈報要求，請完成下列步驟：
-  1. 開啟主題為**呈報要求**的新支援問題單。
+  1. 開啟摘要為**呈報要求**的新支援問題單。
   2. 若要確定您的呈報要求與原始支援問題單相符，請在問題單的內文中併入下列資訊：
        * 需要呈報的已開啟支援問題單的問題單號碼。
 	   * 需要呈報的原因的簡單摘要。
+
+
 
 
 ## 收集診斷資訊
@@ -239,6 +274,7 @@ Script 使用 cf 指令行介面來擷取應用程式環境的下列資訊：
   * 事件
   * 佈建的服務
 
+
 ## {{site.data.keyword.Bluemix_notm}} 的國家語言支援
 {: #lang}
 
@@ -257,7 +293,13 @@ Script 使用 cf 指令行介面來擷取應用程式環境的下列資訊：
 | 簡體中文 | zh_CN |
 | 繁體中文 | zh_TW |
 
-*表格 2. 支援的國家語言及語言碼*
+*表 3. 支援的國家語言及語言碼*
+
+
+## {{site.data.keyword.Bluemix_notm}} 支援的滿意度意見調查  
+{: #survey}
+
+IBM 會定期將意見調查傳送給 Bluemix 客戶，以取得他們對最近客戶支援中心體驗的意見。意見調查著重在支援品質和整體體驗。IBM 管理會檢閱意見調查結果，來改善支援體驗。 
 
 
 # 相關鏈結

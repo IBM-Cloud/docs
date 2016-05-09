@@ -19,12 +19,14 @@ copyright:
 {: #administer}
 *마지막 업데이트 날짜: 2016년 2월 29일*
 
-**계정 및 지원** 아이콘 ![계정 및 지원](../support/images/account_support.svg)을 클릭하여 조직, 영역 및 지정된 사용자를 관리하고 **조직 관리**를 선택하십시오. {{site.data.keyword.Bluemix_notm}} Local 또는 {{site.data.keyword.Bluemix_notm}} Dedicated 사용자인 경우, 로컬 또는 전용 인스턴스 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](../admin/index.html#mng)를 참조하십시오.{:shortdesc}
+**계정 및 지원** 아이콘 ![계정 및 지원](../support/images/account_support.svg)을 클릭하여 조직, 영역 및 지정된 사용자를 관리하고 **조직 관리**를 선택하십시오. {{site.data.keyword.Bluemix_notm}} Local 또는 {{site.data.keyword.Bluemix_notm}} Dedicated 사용자인 경우, 로컬 또는 전용 인스턴스 관리에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](../admin/index.html#mng)를 참조하십시오.
+{:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} Public 관리
 {: #mngacct}
 
-{{site.data.keyword.Bluemix}} Public에서 사용자 인터페이스의 대시보드를 통해 사용자 액세스 권한을 비롯한 모든 조직 및 영역을 관리할 수 있습니다. 사용량 및 청구 정보를 모니터링할 수도 있습니다. {:shortdesc}
+{{site.data.keyword.Bluemix}} Public에서 사용자 인터페이스의 대시보드를 통해 사용자 액세스 권한을 비롯한 모든 조직 및 영역을 관리할 수 있습니다. 사용량 및 청구 정보를 모니터링할 수도 있습니다.
+{:shortdesc}
 
 ### 조직 및 영역
 {: #orgsandspaces}
@@ -176,7 +178,7 @@ copyright:
 있습니다. </dd>
 </dl>
 
-**참고**: 관리자 또는 개발자 역할이 지정된 사용자는 VCAP_SERVICES 환경 변수에 액세스할 수 있습니다. 그러나 감사 역할이 지정된 사용자는 VCAP_SERVICES에 액세스할 수 없습니다. 또한 VCAP_SERVICES의 컨텐츠는 사용자 역할을 기반으로 부분적으로 편집되지 않습니다.
+**참고**: 관리자 또는 개발자 역할이 지정된 사용자는 VCAP_SERVICES 환경 변수에 액세스할 수 있습니다. 그러나 감사자 역할이 지정된 사용자는 VCAP_SERVICES에 액세스할 수 없습니다. 
 
 ### 조직 관리
 {: #orgmng}

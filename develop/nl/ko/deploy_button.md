@@ -159,7 +159,7 @@ Manifest 파일을 사용하여 다음을
 	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank"><code>manifest.yml</code> 파일 작성 방법을 알아보십시오.</a>  
 <pre class="codeblock">
 	---
-    #템플리트 manifest.yml
+    #Template manifest.yml
 
   declared-services:
     &lt;`arbitrary_service_instance_name`&gt;:  # [required] 
@@ -174,7 +174,7 @@ Manifest 파일을 사용하여 다음을
 
 <pre class="codeblock">
 	---
-    #예제 manifest.yml
+    #Example manifest.yml
 
   declared-services: 
       sample-java-cloudant-cloudantNoSQLDB: 

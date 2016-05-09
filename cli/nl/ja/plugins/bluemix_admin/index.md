@@ -431,7 +431,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 すべてのサービス・ブローカーのリスト、サービス・ブローカーの追加または削除、あるいはサービス・ブローカーの更新を行うには、以下のコマンドを使用します。
 
-* 特定のサービス・ブローカーをリストするには、次のコマンドを入力します。
+* サービス・ブローカーをリストするには、次のコマンドを入力します。
 
 ```
 cf ba service-brokers <broker_name>

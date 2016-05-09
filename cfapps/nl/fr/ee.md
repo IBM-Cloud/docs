@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  2015，2016
 
  
 
@@ -18,7 +18,7 @@ copyright:
 # Scénario : Développement de bout en bout
 {: #ee}
 
-*Dernière mise à jour : 6 novembre 2015*
+*Dernière mise à jour : 18 avril 2016*
 
 La plateforme et l'interface utilisateur {{site.data.keyword.Bluemix}}, ainsi qu'une sélection d'outils associés,
 vous permettent de construire, exécuter et déployer vos applications. Suivez ce scénario de développement de bout en bout pour
@@ -48,8 +48,8 @@ disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
-utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Une fois connecté à {{site.data.keyword.Bluemix_notm}}, sélectionnez la région **Sud
-des Etats-Unis** dans le coin supérieur droit de l'interface utilisateur. Ensuite, procédez comme suit pour créer une application :
+utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Une fois connecté à {{site.data.keyword.Bluemix_notm}},
+sélectionnez la région **US South**. Ensuite, procédez comme suit pour créer une application :
   1. Cliquez sur **Créer une application**.
   2. Sélectionnez **Web**.
   3. Sélectionnez le module de démarrage SDK for Node.js pour votre application Web et cliquez sur **Continuer**.
@@ -142,11 +142,11 @@ cf.
   3. Une fois que vous avez installé l'interface de ligne de commande **cf**, vous devez spécifier la région
 {{site.data.keyword.Bluemix_notm}} que vous voulez utiliser avec la commande **cf api**. L'interface de ligne de commande
 **cf** utilise *https://api.URL_Bluemix*, où *URL_Bluemix* est l'adresse URL de la région. L'adresse URL de la
-région Sud des Etats-Unis est ng.bluemix.net. Entrez
+région Sud des Etats-Unis est stage1.ng.bluemix.net. Entrez
 la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}} :
   
   ```
-  cf api https://api.ng.bluemix.net
+  cf api https://api.stage1.ng.bluemix.net
   ```
   
   Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}. Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
@@ -169,7 +169,7 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   
   6. A présent, vous pouvez accéder à l'application en entrant l'adresse URL de l'application suivante dans un navigateur :
   ```
-  http://TestNode.mybluemix.net
+  http://TestNode.stage1.mybluemix.net
   ```
 
 Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page
@@ -301,14 +301,13 @@ ne vous facture rien sauf si votre utilisation dépasse les franchises.
 {{site.data.keyword.Bluemix_notm}} met à disposition un estimateur et une calculatrice pour que vous puissiez
 afficher le coût de votre application. Vous pouvez afficher le coût de TestNode de plusieurs façons :
 
-  * Dans votre tableau de bord, cliquez sur TestNode. Ensuite, dans la page Vue d'ensemble, cliquez sur **Estimer le coût de cette
-application** en bas à
-droite pour afficher le prix du contexte d'exécution **SDK for Node.js** et du support, ainsi que le prix mensuel total de votre application dans le coin
-supérieur droit.
+  * Dans votre tableau de bord, cliquez sur TestNode. Puis, sur la page de présentation, cliquez sur **Estimer le coût de cette
+application** pour examiner la tarification de l'environnement d'exécution et du support de **SDK for Node.js**, et le prix mensuel
+total de
+votre application.
   
   * Ou bien, dans la page Fiche des prix, entrez l'utilisation mensuelle du contexte d'exécution et des services pour votre application, par
-exemple 3 instances de **SDK for Node.js** avec 1 Go de mémoire pour chaque instance. Le prix mensuel est calculé et affiché dans le
-coin supérieur droit de la fenêtre.
+exemple 3 instances de **SDK for Node.js** avec 1 Go de mémoire pour chaque instance. Le prix mensuel est calculé et affiché.
 
 Vous pouvez aussi calculer le coût de votre application manuellement en ajoutant les prix de vos contextes d'exécution et de vos services et en
 déduisant les franchises. Pour plus d'informations, voir Calcul manuel de vos coûts.

@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# CLI de admin de {{site.data.keyword.Bluemix_notm}} 
+# CLI de admin de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
 *Última actualización: 3 de marzo de 2016*
@@ -25,7 +25,7 @@ Puede gestionar usuarios del entorno Local o Dedicado de
 la interfaz de línea de mandatos de Cloud Foundry con el plug-in CLI de administración de
 {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede añadir usuarios de un registro
 de LDAP. Si busca información sobre la gestión de su cuenta {{site.data.keyword.Bluemix_notm}} pública, consulte
-[Administración](../../../admin/adminpublic.html#administer). 
+[Administración](../../../admin/adminpublic.html#administer).
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
@@ -38,7 +38,7 @@ de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 Una vez instalada la interfaz de línea de mandatos cf, puede añadir el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}.
 
 **Nota**: si ha instalado previamente el plugin Admin de {{site.data.keyword.Bluemix_notm}}, es posible que
-tenga que desinstalarlo, suprimir el repositorio y luego volver a instalarlo para obtener las actualizaciones más recientes. 
+tenga que desinstalarlo, suprimir el repositorio y luego volver a instalarlo para obtener las actualizaciones más recientes.
 
 Siga estos pasos para añadir el repositorio e instalar el plug-in:
 
@@ -110,7 +110,7 @@ cf ba add-user <nombre_usuario> <organización>
 </dl>
 
 **Sugerencia:** También puede usar **ba au** como alias para un nombre de mandato
-de **ba add-user** más largo. 
+de **ba add-user** más largo.
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -131,7 +131,7 @@ cf ba search-users <nombre_usuario>
 </dl>
 
 **Sugerencia:** También puede usar **ba su** como alias para un nombre de mandato
-de **ba search-users** más largo. 
+de **ba search-users** más largo.
 
 ### Establecer permisos para un usuario
 
@@ -142,20 +142,20 @@ cf ba set-permissions <nombre_usuario> <permisos> <acceso>
 ```
 {: codeblock}
 
-**Nota**: puede establecer los permisos de uno en uno. 
+**Nota**: puede establecer los permisos de uno en uno.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
 <dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;permiso&gt;</dt>
 <dd class="pd">Establecer los permisos para el usuario: Admin, Iniciar sesión, Catálogo (acceso de lectura o escritura),
-Informes (acceso de lectura o escritura) o Usuarios (acceso de lectura o escritura). </dd>
+Informes (acceso de lectura o escritura) o Usuarios (acceso de lectura o escritura).</dd>
 <dt class="pt dlterm">&lt;acceso&gt;</dt>
-<dd class="pd">Para permisos del Catálogo, Informes o Usuarios, también debe tener el nivel de acceso <code>read</code> o <code>write</code> (lectura o escritura). </dd>
+<dd class="pd">Para permisos del Catálogo, Informes o Usuarios, también debe tener el nivel de acceso <code>read</code> o <code>write</code> (lectura o escritura).</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba sp** como alias para el nombre de mandato
-**ba set-permissions** más largo. 
+**ba set-permissions** más largo.
 
 <!-- staging-only commands end -->
 
@@ -178,7 +178,7 @@ cf ba remove-user <nombre_usuario>
 </dl>
 
 **Sugerencia:** También puede usar **ba ru** como alias para un nombre de mandato
-de **ba remove-user** más largo. 
+de **ba remove-user** más largo.
 
 ### Adición y supresión de una organización
 
@@ -199,7 +199,7 @@ cf ba create-organization <organización> <gestor>
 </dl>
 
 **Sugerencia:** También puede usar **ba co** como alias para el nombre de mandato
-**ba create-organization** más largo. 
+**ba create-organization** más largo.
 
 * Para suprimir una organización, ejecute el siguiente mandato:
 
@@ -214,7 +214,7 @@ cf ba delete-organization <organización>
 </dl>
 
 **Sugerencia:** También puede usar **ba do** como alias para un nombre de mandato
-de **ba delete-organization** más largo. 
+de **ba delete-organization** más largo.
 
 ### Asignación de un usuario a una organización
 
@@ -237,7 +237,7 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 </dl>
 
 **Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
-**ba set-org** más largo. 
+**ba set-org** más largo.
 
 ### Eliminación de la asignación de un usuario de una organización
 
@@ -260,7 +260,7 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 </dl>
 
 **Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
-de **ba unset-org** más largo. 
+de **ba unset-org** más largo.
 
 ### Roles
 
@@ -296,7 +296,7 @@ cf ba set-quota <organización> <plan>
 </dl>
 
 **Sugerencia:** También puede usar **ba sq** como alias para el nombre de mandato
-**ba set-quota** más largo. 
+**ba set-quota** más largo.
 
 ### Adición, supresión y recuperación de informes
 
@@ -320,7 +320,7 @@ cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 </dl>
 
 **Sugerencia:** También puede usar **ba ar** como alias para un nombre de mandato
-de **ba add-report** más largo. 
+de **ba add-report** más largo.
 
 * Para suprimir un informe, ejecute el siguiente mandato:
 
@@ -339,7 +339,7 @@ cf ba delete-report <categoría> <fecha> <nombre>
 </dl>
 
 **Sugerencia:** También puede usar **ba dr** como alias para el nombre de mandato
-**ba delete-report** más largo. 
+**ba delete-report** más largo.
 
 * Para recuperar un informe, ejecute el siguiente mandato:
 
@@ -358,7 +358,7 @@ cf ba retrieve-report <categoría> <fecha> <nombre>
 </dl>
 
 **Sugerencia:** También puede usar **ba rr** como alias para un nombre de mandato
-de **ba retrieve-report** más largo. 
+de **ba retrieve-report** más largo.
 
 ### Habilitación e inhabilitación de servicios para todas las organizaciones
 
@@ -379,7 +379,7 @@ se le solicitará que elija un plan de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba esp** como alias para el nombre de mandato
-**ba enable-service-plan** más largo. 
+**ba enable-service-plan** más largo.
 
 * Para no permitir que un servicio sea visible en el Catálogo de {{site.data.keyword.Bluemix_notm}} para todas las organizaciones,
 ejecute el siguiente mandato:
@@ -396,7 +396,7 @@ se le solicitará que elija un plan de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba dsp** como alias para un nombre de mandato
-de **ba disable-service-plan** más largo. 
+de **ba disable-service-plan** más largo.
 
 ### Adición, eliminación y edición de la visibilidad de los servicios de las organizaciones
 
@@ -418,7 +418,7 @@ se le solicitará que elija un plan de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba aspv** como alias para el nombre de mandato
-**ba add-service-plan-visibility** más largo. 
+**ba add-service-plan-visibility** más largo.
 
 * Para eliminar la visibilidad de un servicio en el Catálogo de {{site.data.keyword.Bluemix_notm}} para una organización, especifique el siguiente mandato:
 
@@ -436,7 +436,7 @@ se le solicitará que elija un plan de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba rspv** como alias para un nombre de mandato
-de **ba remove-service-plan-visibility** más largo. 
+de **ba remove-service-plan-visibility** más largo.
 
 * Para sustituir todos los servicios visibles existentes de una o varias organizaciones, utilice el mandato siguiente:
 
@@ -456,14 +456,14 @@ se le solicitará que elija un plan de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba espv** como alias para el nombre de mandato
-**ba edit-service-plan-visibility** más largo. 
+**ba edit-service-plan-visibility** más largo.
 
 ### Trabajar con intermediarios de servicio
 
 Utilice los mandatos siguientes para mostrar una lista de todos los intermediarios de servicio, añadir o suprimir
-intermediarios de servicio, o para actualizar un intermediario de servicio. 
+intermediarios de servicio, o para actualizar un intermediario de servicio.
 
-* Puede mostrar una lista de todos los intermediarios de servicio especificando el mandato siguiente: 
+* Puede mostrar una lista de los intermediarios de servicio especificando el mandato siguiente: 
 
 ```
 cf ba service-brokers <nombre_intermediario>
@@ -471,19 +471,19 @@ cf ba service-brokers <nombre_intermediario>
 {: codeblock}
 
 **Nota**: Para mostrar una lista de todos los intermediarios de servicio, especifique el mandato sin el parámetro
-`nombre_intermediario`.  
+`nombre_intermediario`. 
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
 <dd class="pd">Opcional: El nombre del intermediario de servicio personalizado. Utilice este parámetro, si quiere obtener información
-para un intermediario de servicio específico. </dd>
+para un intermediario de servicio específico.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba sb** como alias para un nombre de mandato
-de **ba service-brokers** más largo. 
+de **ba service-brokers** más largo.
 
 * Puede añadir un intermediario de servicio, con lo que puede añadir un servicio personalizado a su catálogo de
-{{site.data.keyword.Bluemix_notm}} especificando el mandato siguiente: 
+{{site.data.keyword.Bluemix_notm}} especificando el mandato siguiente:
 
 ```
 cf ba add-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <url_intermediario>
@@ -492,20 +492,20 @@ cf ba add-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
-<dd class="pd">El nombre del intermediario de servicio personalizado. </dd>
+<dd class="pd">El nombre del intermediario de servicio personalizado.</dd>
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios. </dd>
+<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios.</dd>
 <dt class="pt dlterm">&lt;contraseña&gt;</dt>
-<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios. </dd>
+<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios.</dd>
 <dt class="pt dlterm">&lt;url_intermediario&gt;</dt>
-<dd class="pd">El URL del intermediario de servicio. </dd>
+<dd class="pd">El URL del intermediario de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba asb** como alias para el nombre de mandato
-**ba add-service-broker** más largo. 
+**ba add-service-broker** más largo.
 
 * Puede suprimir un intermediario de servicio; para suprimir el servicio personalizado a su catálogo de
-{{site.data.keyword.Bluemix_notm}} especificando el mandato siguiente: 
+{{site.data.keyword.Bluemix_notm}} especificando el mandato siguiente:
 
 ```
 cf ba delete-service-broker <intermediario_servicio>
@@ -514,27 +514,27 @@ cf ba delete-service-broker <intermediario_servicio>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;intermediario_servicio&gt;</dt>
-<dd class="pd">El nombre o GUID del intermediario de servicio personalizado. </dd>
+<dd class="pd">El nombre o GUID del intermediario de servicio personalizado.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba dsb** como alias para un nombre de mandato
-de **ba delete-service-broker** más largo. 
+de **ba delete-service-broker** más largo.
 
-* Puede actualizar un intermediario de servicio especificando el mandato siguiente: 
+* Puede actualizar un intermediario de servicio especificando el mandato siguiente:
 
 `cf ba update-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <url_intermediario>`
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_intermediario&gt;</dt>
-<dd class="pd">El nombre del intermediario de servicio personalizado. </dd>
+<dd class="pd">El nombre del intermediario de servicio personalizado.</dd>
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios. </dd>
+<dd class="pd">El nombre de usuario de la cuenta que tiene acceso al intermediario de servicios.</dd>
 <dt class="pt dlterm">&lt;contraseña&gt;</dt>
-<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios. </dd>
+<dd class="pd">La contraseña de la cuenta que tiene acceso al intermediario de servicios.</dd>
 <dt class="pt dlterm">&lt;url_intermediario&gt;</dt>
-<dd class="pd">El URL del intermediario de servicio. </dd>
+<dd class="pd">El URL del intermediario de servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba usb** como alias para el nombre de mandato
-**ba update-service-broker** más largo. 
+**ba update-service-broker** más largo.

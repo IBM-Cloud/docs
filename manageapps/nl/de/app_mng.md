@@ -1,16 +1,23 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#App-Management
+#Liberty- und Node.js-Apps verwalten
 {: #app_management}
 
-*Letzte Aktualisierung: 8. Dezember 2015*
+*Letzte Aktualisierung: 17. März 2016*
 
-Beim App-Management handelt es sich um eine Reihe von Entwicklungs- und
-Debugging-Dienstprogrammen, die für Ihre Liberty- und Node.js-Anwendungen in
-{{site.data.keyword.Bluemix}} aktiviert werden können. {:shortdesc}
+Beim App-Management handelt es sich um eine Reihe von Entwicklungs- und Debugging-Dienstprogrammen, die für Ihre Liberty- und Node.js-Anwendungen in {{site.data.keyword.Bluemix}} aktiviert werden können.
+{:shortdesc}
 
 ##Dienstprogramme für das App-Management
 {: #Utilities}
@@ -66,12 +73,6 @@ Diese Dienstprogramme unterstützen nur Node.js.
   Das Dienstprogramm *inspector* startet auch *proxy*.
   
   2. *strongpm*: Aktiviert die Verwendung von [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} zur Analyse Ihrer Node.js-Anwendung mit Dienstprogrammen wie [StrongLoop Metrics, Profiling und Tracing](https://strongloop.com/node-js/devops-tools/){:new_window}.
-  
-  **HINWEIS:** Sie benötigen Version '0.12' von 'engines.node', um das Dienstprogramm **strongpm** verwenden zu können. Die Version von 'engines.node' ist in der Datei 'package.json' angegeben. Beispiel: 
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   Das Dienstprogramm *strongpm* startet auch *proxy*.
   
@@ -117,14 +118,14 @@ Diese Dienstprogramme unterstützen nur Node.js.
 
   Das Dienstprogramm *trace* startet *proxy* nicht.
 
-##Vorgehensweise zum Konfigurieren des App-Managements 
+##Vorgehensweise zum Konfigurieren des App-Managements
 {: #configure}
 
 Für eine
 Aktivierung der Dienstprogramme für das App-Management legen Sie die
-Umgebungsvariable *BLUEMIX_APP_MGMT_ENABLE* fest und führen ein erneutes Staging für Ihre Anwendung aus. Es können mehrere Dienstprogramme aktiviert werden; hierfür trennen Sie diese durch ein Pluszeichen “+” voneinander. 
+Umgebungsvariable *BLUEMIX_APP_MGMT_ENABLE* fest und führen ein erneutes Staging für Ihre Anwendung aus. Es können mehrere Dienstprogramme aktiviert werden; hierfür trennen Sie diese durch ein Pluszeichen “+” voneinander.
 
-Führen Sie beispielsweise zur Aktivierung der Dienstprogramme 'devconsole' und *shell* den folgenden Befehl aus: 
+Führen Sie beispielsweise zur Aktivierung der Dienstprogramme 'devconsole' und *shell* den folgenden Befehl aus:
 
 ```
 cf set-env myApp BLUEMIX_APP_MGMT_ENABLE devconsole+shell
@@ -138,9 +139,9 @@ cf restage myApp
 
 Wenn die Dienstprogramme für das App-Management nicht mit Ihrer Anwendung installiert werden sollen,
 setzen Sie die Umgebungsvariable
-*BLUEMIX_APP_MGMT_INSTALL* auf 'false' und führen Sie für Ihre Anwendung ein erneutes Staging durch. 
+*BLUEMIX_APP_MGMT_INSTALL* auf 'false' und führen Sie für Ihre Anwendung ein erneutes Staging durch.
 
-Beispiel: 
+Beispiel:
 
 ```
 cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
@@ -159,12 +160,12 @@ cf restage myApp
 
 Der Entwicklungsmodus ist ein Feature von [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools), das
 es Entwicklern ermöglicht,
-mit ihren Anwendungen zu arbeiten, während diese in der Cloud ausgeführt werden. 
+mit ihren Anwendungen zu arbeiten, während diese in der Cloud ausgeführt werden.
 
 Während die Entwickler mit ihren Anwendungen unter
 {{site.data.keyword.Bluemix_notm}} arbeiten, könnten sie den Eindruck
 gewinnen, dass normale Entwicklungsaktivitäten nicht so ausgeführt werden können, wie es in einer lokalen Umgebung möglich gewesen wäre. Hierfür
-bietet Ihnen der Entwicklungsmodus über Eclipse Tools eine Methode zum Arbeiten in der Cloud, wobei Sie sich in einem temporären, sicheren Arbeitsbereich befinden. 
+bietet Ihnen der Entwicklungsmodus über Eclipse Tools eine Methode zum Arbeiten in der Cloud, wobei Sie sich in einem temporären, sicheren Arbeitsbereich befinden.
 
 Der Entwicklungsmodus wird sowohl für Liberty- als auch für Node.js-Anwendungen unterstützt. Mit dem für Ihre Liberty- oder Node.js-Anwendung aktivierten
 Entwicklungsmodus können Sie Anwendungsdateien inkrementell aktualisieren, ohne
@@ -172,4 +173,4 @@ eine Push-Operation für Ihre Anwendung durchführen zu müssen. Sie können mit
 Debugsitzung einrichten. Der Entwicklungsmodus für Liberty-Anwendungen entspricht
 der Aktivierung der Dienstprogramme 'debug' und 'jmx' für das
 App-Management. Für Node.js-Anwendungen entspricht er der Aktivierung
-der Dienstprogramme *devconsole*, *inspector* und *shell*. 
+der Dienstprogramme *devconsole*, *inspector* und *shell*.

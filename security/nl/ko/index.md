@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -24,12 +24,12 @@ copyright:
 보안 애플리케이션 개발을 위한 명확한 선택사항을 보유한 플랫폼이 됩니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 침해사고 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
 해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} Local의 경우
 사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} Local을
-호스트하여 실제 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
+호스트하여 물리적 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
 다양한 카테고리(플랫폼, 데이터 및 애플리케이션)의 PaaS(Platform as a Service) 계층에서 보안 기능을 추가합니다.
 
 ## {{site.data.keyword.Bluemix_notm}} 플랫폼 보안
@@ -37,7 +37,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}}는 코어 플랫폼에 대해 (IBM SoftLayer를 통한) 기능, 인프라, 운영 및 물리적 보안을 제공합니다. 그러나
 {{site.data.keyword.Bluemix_notm}} Local은 고객이 제공하는 인프라와 데이터 센터에서
-고유하며 실제 보안을 소유합니다.
+고유하며 물리적 보안을 소유합니다.
 
 {{site.data.keyword.Bluemix_notm}} 환경은 산업 표준을 충족하거나 그 이상을 충족하는 가장 제한적인 IBM 정보 기술(IT) 보안 표준을 준수합니다. 표준에는 네트워크, 데이터 암호화 및
 액세스 제어가 포함되어 있습니다.
@@ -47,7 +47,7 @@ copyright:
  * 서비스 무결성 및 가용성
  * 취약성 및 수정사항 관리
  * 서비스 거부(DoS) 및 조직적 공격 발견
- * 보안 침해사고 대응
+ * 보안 인시던트 대응
 
 ![Bluemix 플랫폼 보안 개요](images/platform_sec.svg)
 
@@ -182,7 +182,7 @@ Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여
 {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지에 의존합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여
 권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록
 할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 로컬 인스턴스에 대한
-실제 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
+물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
 
 SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 네트워크 계층은 호스팅된 웹 사이트 또는 온라인 자원에 대한 공용 트래픽을 처리합니다. 사설 네트워크 계층을 사용하면 SSL, PPTP 또는 IPSec VPN 게이트웨이에서 개별 독립형 써드파티 업체를 통해 진정한 대역 외 관리를 수행할 수 있습니다. 데이터 센터 간 네트워크 계층은 개별 SoftLayer 설비에 포함된 서버 간의 무료 보안 연결을 제공합니다.
 
@@ -258,28 +258,6 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 플러�
 
 자세한 정보는 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}로 이동하십시오.
 
-### SQL Database
-
-SQL Database 서비스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. 이 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 인증용 IBM Directory Server LDAP 및 IBM InfoSphere® Guardium® Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
-DigiCert가 서명하는 SSL 인증서에 의해 보호됩니다.
-
-이 서비스의 특정 플랜에서, {{site.data.keyword.Bluemix_notm}}의
-SQL 데이터베이스 콘솔을 사용하여 다음 정보가 포함된 보고서를 가져올 수 있습니다. 
-
- * 애플리케이션이 액세스하는 데이터베이스에 있을 수 있는
-민감한 데이터
- * 지정된 기간 내에 데이터베이스에 액세스한
-애플리케이션 사용자
- * 데이터베이스에 있는 민감한 데이터에 액세스하는
-애플리케이션 사용자
-
-SQL을 사용하여 데이터를 마스킹하기 위해
-애플리케이션은 데이터베이스와 함께 배치되는
-마스킹 사용자 정의 기능(UDF)을 호출할 수 있습니다. 예를 들어, 테스트를 위해 다른 곳에 사용하려는
-데이터를 마스킹할 수 있습니다. UDF는 IBM Infosphere Optim™에서 데이터 마스킹 알고리즘을 구현합니다.
-
-이 서비스의 프리미엄 플랜에는 데이터 암호화도 포함됩니다. 이 서비스에 대한 자세한 정보는 [SQL Database 시작하기](../services/SQLDB/index.html)를 참조하십시오.
-
 ### dashDB
 
 dashDB 서비스는 사용자 인증을 위한 내장된 LDAP 서버를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
@@ -304,6 +282,28 @@ Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에
 API 패키지를 사용하여 보안 게이트웨이를 구성하고 작성할 수 있습니다.
 
 자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/secure_gateway.html)를 참조하십시오.
+
+### SQL Database
+
+SQL Database 서비스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. 이 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 인증용 IBM Directory Server LDAP 및 IBM InfoSphere® Guardium® Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
+DigiCert가 서명하는 SSL 인증서에 의해 보호됩니다.
+
+이 서비스의 특정 플랜에서, {{site.data.keyword.Bluemix_notm}}의
+SQL 데이터베이스 콘솔을 사용하여 다음 정보가 포함된 보고서를 가져올 수 있습니다. 
+
+ * 애플리케이션이 액세스하는 데이터베이스에 있을 수 있는
+민감한 데이터
+ * 지정된 기간 내에 데이터베이스에 액세스한
+애플리케이션 사용자
+ * 데이터베이스에 있는 민감한 데이터에 액세스하는
+애플리케이션 사용자
+
+SQL을 사용하여 데이터를 마스킹하기 위해
+애플리케이션은 데이터베이스와 함께 배치되는
+마스킹 사용자 정의 기능(UDF)을 호출할 수 있습니다. 예를 들어, 테스트를 위해 다른 곳에 사용하려는
+데이터를 마스킹할 수 있습니다. UDF는 IBM Infosphere Optim™에서 데이터 마스킹 알고리즘을 구현합니다.
+
+이 서비스의 프리미엄 플랜에는 데이터 암호화도 포함됩니다. 이 서비스에 대한 자세한 정보는 [SQL Database 시작하기](../services/SQLDB/index.html)를 참조하십시오.
 
 ### 보안 정보 및 이벤트 관리
 
@@ -346,7 +346,7 @@ You can use security information and event management (SIEM) 도구를 사용하
  4. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 관리 페이지에 도달합니다.
 
 이 경로에서 기술된 사용자와 더불어 인가된 IBM 보안 운영 팀은 다음과 같은 다양한 운영 보안 태스크를 수행합니다.
- * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 실제 보안 및 스캔을 소유합니다.
+ * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 물리적 보안 및 스캔을 소유합니다.
  * 사용자 액세스 관리.
  * IBM Endpoint Manager로 수정사항을 주기적으로 적용하여 운영 체제 강화.
  * 침입 방지로 위험성 관리.

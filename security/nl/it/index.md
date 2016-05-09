@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016 
+  years: 2014, 2016
 
  
 
@@ -250,24 +250,6 @@ Il plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm
 
 Per ulteriori informazioni, vai a [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
-### SQL Database
-
-Il servizio SQL Database aggiunge alla tua applicazione un database relazionale con provisioning completo. Questo servizio utilizza LDAP IBM Directory Server per l'autenticazione
-e IBM InfoSphere® Guardium® Data Activity Monitor per proteggere il database a cui accedono le applicazioni. La connessione tra le applicazioni e il database è protetta dal certificato SSL firmato da DigiCert.
-
-In alcuni piani disponibili con questo servizio, puoi
-utilizzare la console del database SQL in {{site.data.keyword.Bluemix_notm}} per
-ottenere i report che contengono le seguenti informazioni:
-
- * I dati sensibili che possono essere presenti nel database a cui accedono le applicazioni.
- * Gli utenti dell'applicazione che hanno eseguito un accesso al database in uno specifico periodo.
- * Gli utenti dell'applicazione che stanno accedendo a dati sensibili presenti nel database.
-
-Per mascherare i dati utilizzando SQL, le applicazioni possono richiamare le UDF (user-defined function) di mascheramento distribuite insieme al database. Puoi ad esempio mascherare i dati che intendi utilizzare altrove per
-attività di test. Le UDF implementano gli algoritmi di mascheramento dei dati da IBM Infosphere Optim™.
-
-Il piano Premium per questo servizio include anche la crittografia dei dati. Per ulteriori informazioni su questo servizio, vedi [Introduzione a SQL Database](../services/SQLDB/index.html).
-
 ### dashDB
 
 Il servizio dashDB utilizza un server LDAP integrato per l'autenticazione utente. La connessione tra le applicazioni e il database è protetta da certificati SSL. Questo servizio utilizza la capacità di crittografia nativa di DB2® per crittografare automaticamente il tuo database distribuito e i tuoi backup di database. La rotazione della chiave master è automatica e si verifica ogni 90 giorni.
@@ -293,6 +275,24 @@ e creare un gateway sicuro utilizzando l'interfaccia utente {{site.data.keyword.
 o un pacchetto API.
 
 Per ulteriori informazioni, vedi [Introduzione a Secure Gateway](../services/SecureGateway/secure_gateway.html).
+
+### SQL Database
+
+Il servizio SQL Database aggiunge alla tua applicazione un database relazionale con provisioning completo. Questo servizio utilizza LDAP IBM Directory Server per l'autenticazione
+e IBM InfoSphere® Guardium® Data Activity Monitor per proteggere il database a cui accedono le applicazioni. La connessione tra le applicazioni e il database è protetta dal certificato SSL firmato da DigiCert.
+
+In alcuni piani disponibili con questo servizio, puoi
+utilizzare la console del database SQL in {{site.data.keyword.Bluemix_notm}} per
+ottenere i report che contengono le seguenti informazioni:
+
+ * I dati sensibili che possono essere presenti nel database a cui accedono le applicazioni.
+ * Gli utenti dell'applicazione che hanno eseguito un accesso al database in uno specifico periodo.
+ * Gli utenti dell'applicazione che stanno accedendo a dati sensibili presenti nel database.
+
+Per mascherare i dati utilizzando SQL, le applicazioni possono richiamare le UDF (user-defined function) di mascheramento distribuite insieme al database. Puoi ad esempio mascherare i dati che intendi utilizzare altrove per
+attività di test. Le UDF implementano gli algoritmi di mascheramento dei dati da IBM Infosphere Optim™.
+
+Il piano Premium per questo servizio include anche la crittografia dei dati. Per ulteriori informazioni su questo servizio, vedi [Introduzione a SQL Database](../services/SQLDB/index.html).
 
 ### SIEM (Security Information and Event Management)
 

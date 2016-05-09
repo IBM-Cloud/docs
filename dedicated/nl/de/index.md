@@ -1,38 +1,141 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Letzte Aktualisierung: 18. Januar 2016*
+*Letzte Aktualisierung: 19. April 2016*
+
 
 {{site.data.keyword.Bluemix}} ist eine cloudbasierte Plattform mit offenen Standards für das Erstellen, Ausführen und Verwalten von Anwendungen. Mit {{site.data.keyword.Bluemix_notm}} Dedicated erhalten Sie die Leistung und Einfachheit von {{site.data.keyword.Bluemix_notm}} &mdash; und zwar in Ihrer eigenen dedizierten SoftLayer-Umgebung, die sowohl mit der {{site.data.keyword.Bluemix_notm}} Public-Umgebung als auch Ihrem eigenen Netz sicher verbunden ist.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated umfasst einen privaten Katalog, in dem die dedizierten Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst außerdem zusätzliche Services, die aus {{site.data.keyword.Bluemix_notm}} Public syndiziert werden und die Sie verwenden können.
+Alle dedizierten Bereitstellungen von {{site.data.keyword.Bluemix_notm}} beinhalten die folgenden Leistungen und Funktionen ohne gesonderte Berechnung: VPN, privates virtuelles LAN (VLAN), Firewall, Konnektivität mit Ihrem LDAP, Möglichkeit zur Nutzung lokal (d. h. am eigenen Standort) vorhandener Datenbanken und Apps, 24/7-Sicherheit vor Ort, dedizierte Hardware und Standardunterstützung.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated basiert auf SoftLayer. Das bedeutet, dass Ihnen eine besonders leistungsfähige Cloudinfrastruktur zur Verfügung steht. In jedem Rechenzentrum besteht rund um die Uhr die ganze Woche über ein Sicherheitsschutz mit strengen Kontrollen. Sie und IBM greifen über einen VPN-Tunnel und ein privates VLAN auf die {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zu.
+{{site.data.keyword.Bluemix_notm}} Dedicated wird mit allen integrierten {{site.data.keyword.Bluemix_notm}}-Laufzeiten und 64 GB Speicher für Rechenressourcen geliefert.
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/detaileddedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_notm}} Dedicated-Services verfügbar. In der folgenden Tabelle sind die Services aufgeführt, die inbegriffen sind oder optional käuflich erworben werden können.
 
-*Abbildung 1. Ausführliches Diagramm zu {{site.data.keyword.Bluemix_notm}} Dedicated*
-
-{{site.data.keyword.Bluemix_notm}} Dedicated-Umgebungen besitzen in Hinblick auf Infrastruktur, Betriebssicherheit und physische Sicherheit dieselben Sicherheitsstandards wie die öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform. Der Zugriff von Entwicklern auf die dedizierte {{site.data.keyword.Bluemix_notm}}-Plattform wird jedoch durch Ihre LDAP-Richtlinien gesteuert, die bei der Einrichtung Ihrer Umgebung durch das {{site.data.keyword.Bluemix_notm}}-Team konfiguriert werden können. Sie können innerhalb der dedizierten Umgebung Benutzerrollen und Berechtigungen verwalten. Weitere Informationen finden Sie unter [Benutzer und Berechtigungen verwalten](../admin/index.html#oc_useradmin).
-
-{{site.data.keyword.Bluemix_notm}} Dedicated wird mit vollständig integrierten {{site.data.keyword.Bluemix_notm}}-Laufzeiten und 128 GB Anwendungsspeicher ausgeliefert.
-
-Des Weiteren gibt es eine Reihe inbegriffener Standardservices sowie optionale Services, die Sie für Ihre dedizierte Instanz auswählen können.
+*Tabelle 1. Dedizierte Services*
 
 | **Typ**        | **Name**            | **Beschreibung** |      
 |-----------------|-------------------|-------------------|
+|Inbegriffen | {{site.data.keyword.Bluemix_notm}}-Laufzeiten | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zur Verfügung.|
 | Inbegriffen | {{site.data.keyword.autoscaling}} | Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung unbegrenzt nutzen. |
-| Inbegriffen | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
+| Optional | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
+|Optional | {{site.data.keyword.sescashort}} | Um die Redundanz zu erhöhen, stellt {{site.data.keyword.sescashort}} eine Replik für eine Sitzung bereit, die im Cache gespeichert ist. Daher kann Ihre Clientanwendung auch im Falle eines Spannungsabfalls oder einer Betriebsunterbrechung weiterhin auf die im Cache gespeicherte Sitzung zugreifen. Der Service unterstützt das Sitzungs-Caching für Webanwendungen und mobile Anwendungen. |
 | Optional | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} ist ein cloudbasierter Nachrichtenübertragungsservice, der flexible und benutzerfreundliche Messaging-Funktionalität für {{site.data.keyword.Bluemix_notm}}-Apps zur Verfügung stellt. {{site.data.keyword.mql}} bietet eine Messaging-Lösung mit geringem Verwaltungsaufwand. Mit {{site.data.keyword.mql}} können Sie Ihre Apps reaktionsfähiger und flexibler gestalten und mithilfe einer einfachen und leistungsfähigen API die Arbeitslast zwischen Apps aufteilen und auslagern. |
 | Optional | {{site.data.keyword.dashdbshort}} | Verwenden Sie dashDB zum Speichern relationaler Daten (einschließlich spezieller Datentypen wie Geodaten). Analysieren Sie die Daten anschließend mit SQL oder mit erweiterten integrierten Analyseverfahren wie Vorhersageanalyse, Data Mining oder Geodatenanalyse. |
 |Optional | {{site.data.keyword.APIM}} | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
 |Optional | {{site.data.keyword.SecureGateway}} | Der {{site.data.keyword.SecureGateway}}-Service stellt eine sichere Methode zur Verbindung von {{site.data.keyword.Bluemix_notm}}-Anwendungen mit fernen Standorten lokal oder in der Cloud bereit.  |
+|Optional | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. |
+| Optional | {{site.data.keyword.iot_full}} | Dieser Service ermöglicht Ihren Apps die Kommunikation mit und die Nutzung der erfassten Daten von Ihren verbundenen Geräten, Sensoren und Gateways. Das Basisangebot ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_full}} in der dedizierten Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 1,6 Terabyte (TB) für den Datenaustausch. |
 
-*Tabelle 1. Dedizierte Services*
+Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können Sie die Kapazität Ihrer Ressourcen und Services skalieren und erweitern. Wenden Sie sich zum Kauf dieser Optionen an das Vertriebsteam unter [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs), um Kontakt mit einem Vertriebsbeauftragten aufzunehmen. Um Ihren Serviceplan zu erweitern, können Sie den Plan über die Kachel für den Service in Ihrem Katalog auswählen.
+
+*Tabelle 2. Kostenpflichtige optionale Komponenten*
+
+| **Name**            | **Beschreibung** |      
+|-------------------|-------------------|
+|Dedicated {{site.data.keyword.cloudant}} - Kapazitätserweiterung auf 1,6 TB | Beinhaltet die Ausführung einer privaten Version von {{site.data.keyword.cloudantfull}} in der dedizierten Umgebung mit einer Designkapazität von 1,6 Terabyte.  |
+|Dedicated-Laufzeiten - Kapazitätserweiterung um 16 GB  | Diese Erweiterung der Laufzeitumgebung stellt zusätzlich 16 GB Laufzeitkapazität zur Verfügung. |
+|Dedicated {{site.data.keyword.datacshort}} und {{site.data.keyword.sescashort}} -  Kapazitätserweiterung auf 50 GB | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von {{site.data.keyword.datacshort}}- und {{site.data.keyword.sescashort}}-Instanzen mit einer kumulativen Kapazität bis zu 50 GB. |
+|Dedicated Direct Link mit 1 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 1 Gb/s. |
+|Dedicated Direct Link mit 10 Gb/s Nutzungsvolumen | Eine dedizierte direkte Netzverbindung mit dem zugehörigen SoftLayer-Netzbereitstellungspunkt für Datenübertragungsvolumen bis 10 Gb/s. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | Eine Datenbank pro Serviceinstanz auf einem dedizierten Server mit 64 GB RAM und 16 vCPUs. Empfohlen für vorheriges Laden von Daten bis 1 TB bei normaler Komprimierung.  |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | Eine Datenbank pro Serviceinstanz auf einem dedizierten Bare-Metal-Server mit 256 GB RAM und 32 Kernen. Empfohlen für vorheriges Laden von Daten bis 4 TB bei normaler Komprimierung. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | Eine Datenbank pro Serviceinstanz auf einem dedizierten Bare-Metal-Server mit 256 GB RAM und 32 Kernen. Empfohlen für vorheriges Laden von Daten bis 12 TB bei normaler Komprimierung. Dieser Plan mit hoher Speicherdichte eignet sich für Umgebungen mit höheren Datenvolumen, wenn Abfragen nicht mit speicherinternen Geschwindigkeiten ausgeführt werden müssen. |
+|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 1000 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.APIM}} in der dedizierten Umgebung mit einer Kapazität von 1.000 API-Aufrufen pro Sekunde. |
+|Dedicated {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 500 API-Aufrufe  | Diese Umgebung ermöglicht die Ausführung einer privaten Version von IBM API Management for Bluemix in der dedizierten Umgebung mit einer Kapazität von 500 API-Aufrufen pro Sekunde.  |
+|{{site.data.keyword.Bluemix_notm}} Dedicated-Community-Services  | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von bis zu 50 Instanzen für jeden Community-Service.  |
+|IBM Bluemix Dedicated Hardware Firewall - High Availability | Eine redundante Hardware-Firewall mit 1 Gb/s, konfiguriert für den Schutz von einzelnen, mehreren oder allen Servern in demselben VLAN innerhalb der Dedicated-Umgebung. |
+|Dedicated Vyatta VPN mit 1 Gb/s, konfiguriert für Hochverfügbarkeit  | Ein Vyatta VPN mit 1 Gb/s, konfiguriert für Hochverfügbarkeit zur Verwendung in der Dedicated-Umgebung.  |
+|IBM Dedicated {{site.data.keyword.mql}} PR - Kapazitätserweiterung auf 30 Instanzen | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von {{site.data.keyword.mql}}-Instanzen bis zu einer Gesamtkapazität von 30 Serviceinstanzen. |
+|Dedicated {{site.data.keyword.mobilepushshort}}-Services - Kapazitätserweiterung auf 12 GB | Diese Umgebung ermöglicht die Bereitstellung und Ausführung des {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}}-Service mit Liberty- und Node.js-Laufzeiten in der dedizierten Umgebung. Der {{site.data.keyword.mobilepushshort}}-Service verfügt über eine vorausgesetzte Abhängigkeit von {{site.data.keyword.cloudant}} mit einer Designkapazität von mindestens 500 GB. |
+|{{site.data.keyword.iot_short}} Dedicated - inkrementelle Erhöhung | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_short}} in der dedizierten Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 0,5 TB für den Datenaustausch. |
+
+**Hinweis**: Für {{site.data.keyword.Bluemix_notm}} Dedicated-Komponenten wird möglicherweise eine bestimmte konfigurierte Kapazität (z. B. Gigabyte oder Transaktionen pro Sekunde) angegeben. Da die tatsächliche Kapazität im realen Einsatz für eine bestimmte Konfiguration des Cloud-Service von vielen verschiedenen Faktoren abhängt, kann die tatsächliche Kapazität in der Praxis nach oben oder unten von der konfigurierten Kapazität abweichen.
+
+
+### Syndizierter Katalog
+{: #catalogdedicated}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated umfasst einen privaten Katalog, in dem die lokalen Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst außerdem Services, die zu Ihrer Verwendung aus {{site.data.keyword.Bluemix_notm}} Public verfügbar gemacht werden.
+
+Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen, die aus öffentlichen und privaten Services bestehen. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen. Wenn Sie über eine private Serviceinstanz für Ihre dedizierte Umgebung verfügen, werden bestimmte Symbole den Servicekacheln in Ihrem Katalog zugeordnet (z. B. ![Symbol für dedizierten Service](images/dedicatedicon.png "Symbol für dedizierten Service")).
+
+*Tabelle 3. Für Syndikation verfügbare Services aus {{site.data.keyword.Bluemix_notm}} Public nach Region*
+
+|Service    |Verfügbar in Region 'US South'   |Verfügbar in Region 'Europe United Kingdom' |Verfügbar in Region 'Australia Sydney'|
+|:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.alchemyapishort}} 		|Ja	   	|Ja  		|Ja|
+|{{site.data.keyword.alertnotificationshort}}		|Ja		|Ja			|Ja		|
+|{{site.data.keyword.appseccloudshort}}		|Ja		|Ja		|Ja |
+|{{site.data.keyword.amashort}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.hadoopst}}			|Ja		|Nein		|Nein |
+|{{site.data.keyword.APIM}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.rules_short}}		|Ja		|Ja		|Ja |
+|{{site.data.keyword.cloudant}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.conceptexpansionshort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.conceptinsightsshort}}	|Ja		|Ja		|Ja |
+|{{site.data.keyword.dashdbshort}}		|Ja		|Ja		|Nein |
+|{{site.data.keyword.DB2OnCloud_short}}		|Ja		|Ja		|Nein |
+|{{site.data.keyword.dialogshort}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.documentconversionshort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.game}}			|Nein		|Nein		|Ja |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Ja	|Ja		|Ja |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Ja		| Ja		| Ja |
+|{{site.data.keyword.dataworks_short}}		|Ja		|Ja		|Nein|
+|{{site.data.keyword.twittershort}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.weather_short}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.iot_short}}		|Ja		|Ja		|Nein|
+|{{site.data.keyword.languagetranslationshort}}	|Ja		|Ja		|Ja |
+|{{site.data.keyword.messagehub}}		|Ja		|Ja		|Nein|
+|{{site.data.keyword.macm_short}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.manda}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.mqa}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.mql}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.nlclassifierlshort}} 	|Ja 		|Ja 		|Ja|
+|{{site.data.keyword.personalityinsightsshort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.mobilepush}}		|Ja		|Ja		|Ja |
+|{{site.data.keyword.questionandanswershort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.relationshipextractionshort}}	|Ja	|Ja		|Ja|
+|{{site.data.keyword.retrieveandrankshort}}	|Ja 		|Ja 		|Ja|
+|{{site.data.keyword.SecureGateway}}		|Ja		|Ja		|Ja |
+|{{site.data.keyword.ssofull}}			|Ja		|Nein		|Nein|
+|{{site.data.keyword.speechtotextshort}}	|Ja 		|Ja	 	|Ja|
+|{{site.data.keyword.streaminganalyticsshort}}	|Ja		|Ja		|Ja |
+|{{site.data.keyword.texttospeechshort}} 	|Ja 		|Ja	 	|Ja|
+|{{site.data.keyword.toneanalyzershort}} 	|Ja 		|Ja 		|Ja|
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.visualinsightsshort}}	|Ja		|Ja		|Ja|
+|{{site.data.keyword.workflow}}			|Ja		|Ja		|Ja |
+|{{site.data.keyword.workloadscheduler}}	|Ja		|Ja		|Ja |
+
+## {{site.data.keyword.Bluemix_notm}} Dedicated-Architektur
+{: #dedicatedarch}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated basiert auf SoftLayer. Das bedeutet, dass Ihnen eine besonders leistungsfähige Cloudinfrastruktur zur Verfügung steht. In jedem Rechenzentrum besteht rund um die Uhr die ganze Woche über ein Sicherheitsschutz mit strengen Kontrollen. Sie und IBM greifen über einen VPN-Tunnel und ein privates VLAN auf die {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz zu.
+
+Die {{site.data.keyword.Bluemix_notm}} Dedicated ist über ein VPN (privates VLAN) oder über eine direkte Netzverbindung mit Ihrem Netz verbunden. Ihre Single-Tenant-Hardware kann in einem beliebigen SoftLayer-Rechenzentrum auf der Welt eingerichtet sein. {{site.data.keyword.IBM_notm}} verwaltet die dedizierte Plattform und dedizierte Services, sodass Sie sich auf die Erstellung von angepassten Apps konzentrieren können. Darüber hinaus führt {{site.data.keyword.IBM_notm}} alle Wartungsoperationen an dedizierten Instanzen während eines von Ihnen ausgewählten Wartungsfensters durch.
+
+![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+
+*Abbildung 1. Ausführliches Diagramm zu {{site.data.keyword.Bluemix_notm}} Dedicated*
+
+{{site.data.keyword.Bluemix_notm}} Dedicated-Umgebungen besitzen in Hinblick auf Infrastruktur, Betriebssicherheit und physische Sicherheit dieselben Sicherheitsstandards wie die öffentliche {{site.data.keyword.Bluemix_notm}}-Plattform. Der Zugriff von Entwicklern auf die dedizierte {{site.data.keyword.Bluemix_notm}}-Plattform wird jedoch durch Ihre LDAP-Richtlinien gesteuert, die bei der Einrichtung Ihrer Umgebung durch das {{site.data.keyword.Bluemix_notm}}-Team konfiguriert werden können. Sie können innerhalb der dedizierten Umgebung Benutzerrollen und Berechtigungen verwalten. Weitere Informationen finden Sie unter [Benutzer und Berechtigungen verwalten](../admin/index.html#oc_useradmin).
 
 
 ##{{site.data.keyword.Bluemix_notm}} Dedicated einrichten
@@ -99,13 +202,12 @@ In der folgenden Liste sind die Kundenrollen und -zuständigkeiten enthalten, di
 <dd>Arbeitet mit dem IBM Ansprechpartner zusammen an der Einrichtung Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung. Dazu gehört das Ermitteln geeigneter Personen in Ihrer Organisation für die Arbeit an den einzelnen Aspekten des Projekts. Die Person, die dieser Rolle zugewiesen ist, übernimmt eine Projektmanagementrolle und überwacht die Musterauswahl, geschäftlichen Vereinbarungen und die Regelung für den Zugang zu Kundenressourcen. Dieser zentrale Ansprechpartner ist der allgemeine Ansprechpartner für die Einrichtung der dedizierten Instanz und die Überwachung des Bereitstellungsprozesses.</dd>
 <dt>**Compliance-Manager**</dt>
 <dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um eine Topologie
-und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. Die Person, die dieser Rolle zugewiesen ist, legt gemeinsam mit dem IBM Compliance-Berater fest, mit welchen Implementierungsmustern die Compliance-Ziele erreicht werden. </dd>
+und eine Bereitstellungsoption auszuwählen, die Ihren Sicherheitsanforderungen entsprechen. Die Person, die dieser Rolle zugewiesen ist, legt gemeinsam mit dem IBM Compliance-Berater fest, mit welchen Implementierungsmustern die Compliance-Ziele erreicht werden.</dd>
 <dt>**Netzspezialist**</dt>
-<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an den Netzplänen für die {{site.data.keyword.Bluemix_notm}}-Bereitstellung.
-Die Person, die dieser Rolle zugewiesen ist, überprüft die von IBM vorausgesetzten Netzspezifikationen und arbeitet gemeinsam mit IBM an einem Implementierungsplan. Am Ende der Installations- und Verifizierungsphase prüft die Person, die dieser Rolle zugewiesen ist, dass die Netzkonfiguration im Einklang mit den Unternehmensstandards ist. </dd>
+<dd>Arbeitet mit dem IBM Ansprechpartner zusammen an den Netzplänen für die {{site.data.keyword.Bluemix_notm}}-Bereitstellung. Die Person, die dieser Rolle zugewiesen ist, überprüft die von IBM vorausgesetzten Netzspezifikationen und arbeitet gemeinsam mit IBM an einem Implementierungsplan. Am Ende der Installations- und Verifizierungsphase prüft die Person, die dieser Rolle zugewiesen ist, dass die Netzkonfiguration im Einklang mit den Unternehmensstandards ist.</dd>
 <dt>**Zentraler DevOps-Ansprechpartner**</dt>
 <dd>Arbeitet mit dem IBM Ansprechpartner zusammen, um die für die {{site.data.keyword.Bluemix_notm}}-Plattform, -Services und -Laufzeiten benötigten Wartungsaktualisierungen zu planen und anzuwenden. Die Person, die dieser Rolle zugewiesen ist, arbeitet auch mit dem
-IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz. </dd>
+IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz.</dd>
 </dl>
 
 Ihre Ansprechpartner beim Kunden arbeiten mit dem Dedicated-Fachmann und anderen IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Der Dedicated-Fachmann ist Ihr Ansprechpartner im {{site.data.keyword.Bluemix_notm}}-Entwicklungssupport-Team, der die folgenden Tasks ausführt:
@@ -120,7 +222,7 @@ Das {{site.data.keyword.Bluemix_notm}}-Support- und -Operationsteam, das gemeins
 
 <ul>
 <li>Zum Antworten auf Alerts und zum Durchführen einer Betriebswartung</li>
-<li>Zum Reproduzieren eines Problems, das in einem Supportticket berichtet wurde</li>
+<li>Zum Reproduzieren eines Problems, das in einem Support-Ticket berichtet wurde</li>
 </ul>
 
 ###Zuständigkeiten
@@ -134,7 +236,7 @@ In der Konzeptionsphase wird die {{site.data.keyword.Bluemix_notm}} Dedicated-Um
 - Definition und Einrichtung der Netzkonnektivität zwischen Ihrem Unternehmensnetz und {{site.data.keyword.Bluemix_notm}}-Operationen.
 - Ermittlung und Zuweisung von Rollen für Ihr Verwaltungsteam.
 
-*Tabelle 1. Tasks in der Konzeptionsphase*
+*Tabelle 4. Tasks in der Konzeptionsphase*
 
 | **Task** | **Taskdetails** | **Zuständiges Team** |
 |----------|------------------|-----------------------|
@@ -145,12 +247,12 @@ In der Konzeptionsphase wird die {{site.data.keyword.Bluemix_notm}} Dedicated-Um
 |Auswählen der Architektur | Wählen Sie die Architektur auf der Basis vordefinierter Optionen aus, die Hochverfügbarkeits- und Disaster-Recovery-Anforderungen berücksichtigen. | IBM |
 |Definieren von Disaster-Recovery-Zielen | Definieren Sie die Disaster-Recovery-Anforderungen für die Umgebung. | Kunde |
 |Erstellen eines Disaster-Recovery-Plans | Konsultieren und definieren Sie den Disaster-Recovery-Plan. IBM erstellt ein Disaster-Recovery-Modell und berät mit Ihnen, wo Sie Feedback bereitstellen und den Plan genehmigen. | IBM und Kunde |
-|Erstellen eines Sicherungs- und Wiederherstellungsplans | Erstellen Sie einen Sicherungs- und Wiederherstellungsplan, der die Häufigkeit und die Anforderungen einer zentralen bzw. dezentralen Verteilung der Sicherung definiert. IBM sichert Fabric-Komponenten, IBM Services, Servicemetadaten wie Benutzerrollen und vieles mehr. Sie sichern alle anwendungsspezifischen Daten, für die Sie verantwortlich sind. | IBM und Kunde |
+|Erstellen eines Sicherungs- und Wiederherstellungsplans | Erstellen Sie einen Sicherungs- und Wiederherstellungsplan, der die Häufigkeit und die Anforderungen einer zentralen bzw. dezentralen Verteilung der Sicherung definiert. IBM sichert Plattformkomponenten, IBM Services, Servicemetadaten wie Benutzerrollen und vieles mehr. Sie sichern alle anwendungsspezifischen Daten, für die Sie verantwortlich sind. | IBM und Kunde |
 |Angeben von Tools für Ereigniserkennung und Problembestimmung | Geben Sie IBM Tools und Tools von Drittanbietern für die Ereigniserkennung und Problembestimmung auf der {{site.data.keyword.Bluemix_notm}}-Plattformebene an. | IBM |
 |Definieren eines Eskalationsplans | Definieren Sie den Eskalationsplan zur Klassifizierung und Auflösung von Ereignissen, die von Überwachungskomponenten erkannt werden. | IBM |
-|Unterzeichnen von Infrastruktur-, Plattform- und Supportvereinbarungen | Unterzeichnen Sie die Abonnementvereinbarung, einschließlich der finanziellen Vertragsbedingungen für die Umgebung. Unterzeichnen Sie eine Vereinbarung zur Netz- und Sicherheitsüberwachung. Unterzeichnen Sie ein Supportabonnement. | Kunde |
+|Unterzeichnen von Infrastruktur-, Plattform- und Supportvereinbarungen | Unterzeichnen Sie die Abonnementvereinbarung, einschließlich der finanziellen Vertragsbedingungen für die Umgebung. Unterzeichnen Sie das Supportabonnement. | Kunde |
 |Beschaffen einer Umgebung | Beschaffen Sie Rechenressourcen, Netz und Speicher, einschließlich Core- und Services-VLAN zum Hosten von {{site.data.keyword.Bluemix_notm}} sowie Bare-Metal-Services zum Hosten von Data Power und SoftLayer-Firewall. Stellen Sie eine Infrastruktur bereit, die einen VPN-Tunnel ermöglicht. | Kunde |
-|Installieren von Fabric-, Anwendungs- sowie Überwachungs- und Verwaltungskomponenten | Installieren, konfigurieren und überprüfen Sie Fabric-Komponenten wie BOSH Director, Cloud-Controller, Statusmanager, Messaging, Routers, DEAs und Service-Provider sowie die Überwachungskomponenten, die im Eskalations- und Problemerkennungsplan definiert sind. | IBM |
+|Installieren von Plattform-, Anwendungs- sowie Überwachungs- und Verwaltungskomponenten | Installieren, konfigurieren und überprüfen Sie Plattformkomponenten wie BOSH Director, Cloud-Controller, Statusmanager, Messaging, Routers, DEAs und Service-Provider sowie die Überwachungskomponenten, die im Eskalations- und Problemerkennungsplan definiert sind. | IBM |
 |Installieren und Konfigurieren von Sicherheitskomponenten | Installieren und konfigurieren Sie Sicherheitskomponenten, die in den Überwachungs- und Eskalationsplan eingebunden sind, darunter IBM QRadar, Vault für Berechtigungsnachweise, Abwehrsystem gegen Angriffe von außen, IBM BigFix und IBM Security Privileged Identity Management. | IBM |
 |Installieren und Konfigurieren von angepassten Komponenten |  	Installieren und konfigurieren Sie angepasste Komponenten, die sich außerhalb des Geltungsbereichs des {{site.data.keyword.Bluemix_notm}}-Produkts und der -Services befinden. | Kunde |
 |Einrichten einer Netzerstkonfiguration | Richten Sie eine Netzerstkonfiguration mit Firewalls, DataPower, Fortigate und DNS ein. | IBM |
@@ -163,13 +265,13 @@ In der Konzeptionsphase wird die {{site.data.keyword.Bluemix_notm}} Dedicated-Um
 |Untersuchen der Überwachungssoftware | Untersuchen Sie Überwachungs- und Verwaltungskomponenten, wie im Eskalations- und Problembestimmungsplan definiert. | Kunde |
 |Untersuchen des Betriebssystems | Stellen Sie sicher, dass das Betriebssystemimage Konfomitätsstandards entspricht. IBM stellt Zugriff auf das Betriebssystemimage bereit. | IBM und Kunde |
 
-Als nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die laufende, interaktive Beziehung zwischen Ihnen und IBM Cloud. Die primären Ziele dieser Phase sind unter anderem:
+Als Nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die laufende, interaktive Beziehung zwischen Ihnen und IBM Cloud. Die primären Ziele dieser Phase sind unter anderem:
 
 - Überprüfen der Kapazität und Koordinieren von erforderlichen Anpassungen.
 - Überprüfen von Wartungs- und Plattformverbesserungen.
 - Koordinieren der Aktivitäten für Fehlerbehebung und Ursachenanalyse.
 
-*Tabelle 2. Tasks in der Fortschrittsphase*
+*Tabelle 5. Tasks in der Fortschrittsphase*
 
 | **Task** | **Taskdetails** | **Zuständiges Team** |
 |----------|------------------|-----------------------|
@@ -179,7 +281,7 @@ Als nächstes folgt die Fortschrittsphase. Die Fortschrittsphase beschreibt die 
 |Überprüfen von Projektionen | Überprüfen Sie die Kapazitätsprojektionen hinsichtlich externer Ereignisse, die sich auf die Kapazität auswirken können. | Kunde |
 |Anpassen der Kapazität |  Fügen Sie Kapazität hinzu oder entfernen Sie Kapazität nach Bedarf. | IBM |
 |Veröffentlichen zukünftiger Aktualisierungen und Wartungen | Erstellen Sie eine Dokumentation für die erforderliche Wartung von IBM Komponenten. | IBM |
-|Durchführen einer Wartung | Planen Sie gemeinsam mit IBM die erforderliche Wartung in einem 30-tägigen Zeitraum. Sie können innerhalb des 30-tägigen Zeitraums Daten angeben, an denen keine Arbeit ausgeführt wird, und IBM bemüht sich, die Wartung entsprechend zu planen. | IBM und Kunde |
+|Durchführen einer Wartung | Planen Sie gemeinsam mit IBM die erforderlicher Wartung innerhalb eines 21-tägigen Zeitraums. Sie können innerhalb des 30-tägigen Zeitraums Daten angeben, an denen keine Arbeit ausgeführt wird, und IBM bemüht sich, die Wartung entsprechend zu planen. | IBM und Kunde |
 |Adressieren von Bereitstellungsfehlern | Beheben Sie ggf. auftretende Bereitstellungsfehler für vom Kunden erstellte Services, die im Katalog implementiert werden. | IBM |
 |Durchführen von Netz- und IP-Scans | Führen Sie tägliche und monatliche Netz- und IP-Scans durch. | IBM und Kunde |
 |Bereitstellen von Zugriff auf Prüfprotokolle | Stellen Sie Zugriff auf alle Sicherheits- und Verwaltungsprüfprotokolle bereit.   | IBM und Kunde |
@@ -194,7 +296,7 @@ Die finale Phase der Fertigstellung stellt das Ende der Beziehung zwischen Ihnen
 * Entfernen aller Netzverbindungen
 * Recyceln der Infrastruktur
 
-*Tabelle 3. Tasks in der Fertigstellungsphase*
+*Tabelle 6. Tasks in der Fertigstellungsphase*
 
 | **Task** | **Taskdetails** | **Zuständiges Team** |
 |----------|------------------|-----------------------|
@@ -210,15 +312,10 @@ IBM wartet und installiert Aktualisierungen und Fixes, sofern IBM dies für die
 {{site.data.keyword.Bluemix_notm}} Dedicated-Plattform, -Laufzeiten und
 -Services für angemessen hält.
 
-**Wichtig**: IBM behält sich das Recht vor,
-Services zu unterbrechen, um im Bedarfsfall Notfallwartungen vorzunehmen. IBM
-kann die geplanten Wartungszeiten ändern, wird Sie aber über solche Änderungen sowie über eventuelle
-Notfallwartungen benachrichtigen.
-
 Die folgenden Wartungsarten sind für
 {{site.data.keyword.Bluemix_notm}} Dedicated erforderlich:
 <dl>
-<dt>**Standardwartungsfenster**</dt>
+<dt>**Standardwartung für Services**</dt>
 <dd>Die Services verwenden vordefinierte Standardwartungsfenster, die dazu führen können, dass die Services nicht verfügbar sind. IBM benötigt nicht die Genehmigung des Kunden, um Wartungsarbeiten durchzuführen, versucht jedoch, die Auswirkungen auf Ihre Services so gering wie möglich zu halten.<br />
 <br />
 IBM übermittelt per E-Mail, Telefon oder über andere Medien Rundsendungen zu den jeweils für ein Wartungsfenster
@@ -226,24 +323,44 @@ geplanten Änderungen.<br />
 <br />
 **Wichtig**: Einige Services stehen Ihnen während des Wartungszeitraums möglicherweise nicht zur Verfügung.</dd>
 
-<dt>**Monatliches Änderungsfenster**</dt>
-<dd>Das monatliche Änderungsfenster wird basierend auf der entsprechenden Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Fensters angewendet. Sie können IBM bestimmte Daten oder Zeiten innerhalb dieses 21-tägigen Zeitfensters mitteilen, die für Sie ungünstig sind. IBM wird sich bemühen, Aktualisierungen außerhalb dieser angegebenen Daten oder Zeiten zu planen. Basierend auf den Anfragen teilt Ihnen IBM das Wartungsfenster mit. Monatliche Änderungsfenster haben für gewöhnlich keinerlei Auswirkungen auf die aktive Bluemix Dedicated-Umgebung.<br />
+<dt>**Standardwartung für {{site.data.keyword.Bluemix_notm}}**</dt>
+<dd>Wartungsaktualisierung werden basierend auf der Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Zeitfensters angewendet. Sie können IBM bestimmte Daten oder Zeiten innerhalb dieses 21-tägigen Zeitfensters mitteilen, die für Sie ungünstig sind. IBM wird sich bemühen, Aktualisierungen außerhalb dieser angegebenen Daten oder Zeiten zu planen. Basierend auf den Anfragen teilt Ihnen IBM das Wartungsfenster mit. Monatliche Änderungsfenster haben für gewöhnlich keinerlei Auswirkungen auf die aktive Bluemix Dedicated-Umgebung.
+<p>Die folgende Abbildung zeigt den Prozess, der mit dem Empfang einer Benachrichtigung über eine anstehende Aktualisierung beginnt, mit der Festlegung von Datumsangaben fortgesetzt wird, die für Sie möglicherweise ungünstig sind, und schließlich mit dem Empfang der Benachrichtigung über das geplante Datum endet:</p>
+<p><img src="../local/images/maintenance_dates.png" alt="Prozess zur Festlegung von Datumsangaben für nicht verfügbare Tage für eine Wartungsaktualisierung"></p>
 <br />
-**Hinweis:** Wenn Sie für die Aktualisierung keine bestimmte Zeit anfordern, wird die Wartung automatisch am Ende des Zeitfensters durchgeführt.<br />
+**Hinweis:** Wenn Sie keine Datumsangaben für Tage machen müssen, die für die Aktualisierung nicht verfügbar sind, können Sie die Aktualisierung genehmigen. IBM benachrichtigt Sie über das geplante Datum für die anzuwendende Wartung.<br />
 <br />
-Wechseln Sie zu **ADMINISTRATION > SYSTEM INFORMATION**, um anstehende Aktualisierungen anzuzeigen, nicht verfügbare Daten festzulegen und Aktualisierungen zu genehmigen. Weitere Informationen zu Benachrichtigungen und zum Planen anstehender Aktualisierungen finden Sie unter <a href="../admin/index.html#oc_system">Systeminformationen anzeigen</a>.</dd>
-
-<dt>**Sonstige**</dt>
-<dd>IBM beabsichtigt, alle Wartungstätigkeiten, die Ihre Services
-beeinträchtigen, insbesondere die Verfügbarkeit Ihrer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung, -Laufzeiten und -Services auf die monatlichen und Standardaktualisierungen zu beschränken. In Ausnahmefällen können andere Änderungsfenster für die Verwaltung der Umgebung verwendet werden. IBM
-wird sich in angemessenem Maße bemühen, die Auswirkungen auf Sie während solcher Änderungsfenster zu minimieren
-und Sie im Voraus benachrichtigen.</dd>
+Wechseln Sie zu **Verwaltung > Systeminformationen**, um anstehende Aktualisierungen anzuzeigen, Datumsangaben für nicht verfügbare Tage festzulegen und Aktualisierungen zu genehmigen. Weitere Informationen zu Benachrichtigungen und zum Planen anstehender Aktualisierungen finden Sie unter <a href="../admin/index.html#oc_system">Systeminformationen anzeigen</a>.</dd>
 </dl>
 
-Arbeiten Sie mit Ihrem von IBM zugewiesenen Kundenbeauftragten zusammen, um die Wartung Ihrer dedizierten
-Instanz festzulegen und sich auf ein Fenster für die Standardwartung zu einigen.
+**Wichtig**: IBM behält sich das Recht vor,
+Services zu unterbrechen, um im Bedarfsfall Notfallwartungen vorzunehmen. IBM
+kann die geplanten Wartungszeiten ändern, wird Sie aber über solche Änderungen sowie über eventuelle
+Notfallwartungen benachrichtigen.
 
-Falls nach einer Wartungsaktualisierung ein Problem berichtet wird, entscheiden Sie gemeinsam mit Ihrem IBM Ansprechpartner, ob es sinnvoll wäre, dass IBM die Aktualisierung rückgängig macht. Nachdem Sie sich geeinigt haben, macht IBM die Aktualisierung rückgängig und stellt die Umgebung in ihrem ursprünglichen Zustand wieder her.
+Arbeiten Sie mit Ihrem von IBM zugewiesenen Kundenbeauftragten zusammen, um die Wartung Ihrer dedizierten Instanz festzulegen und sich auf ein Fenster für die Standardwartung zu einigen. Falls nach einer Wartungsaktualisierung ein Problem berichtet wird, entscheiden Sie gemeinsam mit Ihrem IBM Ansprechpartner, ob es sinnvoll wäre, dass IBM die Aktualisierung rückgängig macht. Nachdem Sie sich geeinigt haben, macht IBM die Aktualisierung rückgängig und stellt die Umgebung in ihrem ursprünglichen Zustand wieder her.
+
+## Intervention und Unterstützung bei Vorfällen
+{: #incidentresponse}
+
+### Von Kunden erkannte Probleme
+
+Wenn Sie ein Problem feststellen, das durch den IBM Support und durch IBM Operationen behandelt werden muss, können Sie mit verschiedenen Methoden Kontakt mit dem Support aufnehmen. Informationen zur Kontaktaufnahme mit dem Support finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support-local). Die Behebung des Problems erfolgt je nach Problem entweder durch Sie selbst, durch IBM oder in Zusammenarbeit von Ihnen und IBM.
+
+### Von IBM erkannte kritische Probleme
+
+Kritische Probleme (Vorfälle) sind dringende, nicht erwartete Serviceausfälle und Stabilitätsprobleme, die sich auf Ihre Umgebung oder Ihre Benutzer auswirken. Wenn IBM ein kritisches Problem in Ihrer Umgebung erkennt, werden Sie durch eine Benachrichtigung auf der Seite **Status** darüber informiert. Auf der Statusseite finden Sie außerdem bekannte Probleme mit Ihrer Plattform oder Ihren Services. Weitere Informationen zur Seite 'Status' finden Sie in [Status anzeigen](../admin/index.html#oc_status).
+
+Wenn Sie Ihre Benachrichtigungen in einen Web-Service, der Web-Hooks unterstützt, integrieren wollen, finden Sie Informationen zur Erweiterung der Benachrichtigungsfunktionalität unter [Benachrichtigungen und Ereignisabonnements](../admin/index.html#oc_eventsubscription).
+
+![Problembehebungsprozess](../local/images/incidentresponseprocess.png "Problembehebungsprozess")
+
+*Abbildung 2. Problembehebungsprozess*
+
+Die Behebung des Problems erfolgt je nach Problem entweder durch Sie selbst, durch IBM oder in Zusammenarbeit von Ihnen und IBM. Wenn Sie eine Frage in Bezug auf das Problem haben oder wenn Sie Hilfe durch einen IBM Ansprechpartner bei der Lösung des Problems benötigen, können Sie ein Support-Ticket öffnen. Informationen zur Kontaktaufnahme mit dem Support finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support-local).
+
+**Hinweis:** Support-Tickets der Priorität 1 werden 24 Stunden täglich und 7 Tage die Woche überwacht. Andere Ticket werden in der Zeit zwischen Sonntag 22:00 Uhr GMT und Samstag 12:00 GMT bearbeitet. Weitere Informationen zu Prioritätsstufen von Support-Tickets sowie zur Zusammenarbeit mit dem Support finden Sie unter <a href="../support/index.html#contacting-bluemix-support-local">Support kontaktieren</a>.
+
 
 ## Disaster-Recovery
 {: #dr}
@@ -269,7 +386,7 @@ Standardmäßig wird {{site.data.keyword.Bluemix_notm}} Public an mehreren Stand
 Für eine Bereitstellung an einem zweiten Standort bzw. an mehreren Standorten müssen Sie einen Prozess ganz ähnlich dem zur Aktivierung Ihres primären Standorts ausführen:
 
 1. Aktivieren Sie eine neue dedizierte Umgebung, in der zusätzliche Instanzen Ihrer Anwendungen gehostet werden sollen. Wenden Sie sich zum Erstellen einer neuen Umgebung an Ihr IBM Vertriebsteam, das den Prozess einleitet. Weitere Informationen zum Einrichten einer dedizierten Instanz finden Sie unter [{{site.data.keyword.Bluemix_notm}} Dedicated einrichten](../dedicated/index.html#setupdedicated). Für den Zugriff auf die einzelnen Umgebungen müssen Sie sich bei jeder Umgebung separat anmelden. Die Standorte für die gehosteten Umgebungen sollten mindestens 200 km entfernt von dem ursprünglichen Standort liegen, damit ihre Verfügbarkeit sichergestellt werden kann.
-2. Rufen Sie den eindeutigen Namen der Domäne ab, in der Ihre neue bereitgestellte App gehostet wird. Beispiel: Wenn Ihre ursprüngliche Domäne *mycompany.east.bluemix.net* ist, können Sie eine neue lokale Umgebung mit einer neuen Domäne wie *mycompany.west.bluemix.net* erstellen und die App in der neuen Domäne bereitstellen.
+2. Rufen Sie den eindeutigen Namen der Domäne ab, in der Ihre neue bereitgestellte App gehostet wird.  Beispiel: Wenn Ihre ursprüngliche Domäne *mycompany.east.bluemix.net* ist, können Sie eine neue lokale Umgebung mit einer neuen Domäne wie *mycompany.west.bluemix.net* erstellen und die App in der neuen Domäne bereitstellen.
 3. Stellen Sie Ihre ursprüngliche App jedes Mal auch an dem neuen Standort bereit. Weitere Informationen zur Bereitstellung finden Sie unter [Anwendung hochladen](../starters/upload_app.html).
 
 
@@ -290,16 +407,18 @@ Sie können eine globale Lastausgleichsfunktion wie Akamai oder Dyn auswählen. 
 ### Hochverfügbarkeit
 {: #ha}
 
-Zusätzlich zur Aktivierung einer kontinuierlichen Verfügbarkeit stellt {{site.data.keyword.Bluemix_notm}} durch den Einsatz von Technologien, die in Cloud Foundry, Docker und andere Komponenten integriert sind, auch eine plattformübergreifende Hochverfügbarkeit bereit.
+Zusätzlich zur Aktivierung einer kontinuierlichen Verfügbarkeit stellt {{site.data.keyword.Bluemix_notm}} durch den Einsatz von Technologien, die in Cloud Foundry und andere Komponenten integriert sind, auch eine plattformübergreifende Hochverfügbarkeit bereit.
 
 Zu diesen Technologien zählen die folgenden:
 
 <dl>
-<dt>Skalierbarkeit in Cloud Foundry</dt>
-<dd>Ein Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> führt Diagnosen der integrierten Apps aus. Falls ein Problem mit der App oder dem DEA selbst auftritt, werden zusätzliche Instanzen der App in einem alternativen DEA bereitgestellt, um das Problem zu beheben. Weitere Informationen finden Sie unter <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
+<dt>DEA-Skalierbarkeit in Cloud Foundry</dt>
+<dd>Ein Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> führt Diagnosen der integrierten Apps aus. Falls ein Problem mit der App oder dem DEA selbst auftritt, werden zusätzliche Instanzen der App in einem alternativen DEA bereitgestellt, um das Problem zu beheben. Weitere Informationen finden Sie unter <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.<br />
+<p>Um die Hochverfügbarkeit für Ihre Anwendungen sicherzustellen, benötigen Sie genügend Rechenressourcen für den Lastausgleich sowie gegebenenfalls weitere Rechenressourcen zur Unterstützung einer möglichen Störung. Wenn Sie Ihre Umgebung skalieren möchten, indem Sie den DEA-Pool vergrößern, um für eine Störung vorbereitet zu sein oder eine Lastspitze für Ihre App-Instanzen auszugleichen, können Sie in Absprache mit Ihrem IBM Ansprechpartner zusätzliche DEAs bestellen.
+</p>
 </dd>
 <dt>SoftLayer-Redundanz</dt>
-<dd>Mit SoftLayer in dedizierten Umgebungen werden Daten in den einzelnen Cloudspeicherclustern mehrfach geschrieben und Speichercluster werden für den Fall eines Laufwerkausfalls mit Selbstheilungsfunktionen konfiguriert. Falls ein Problem mit einer virtuellen Maschine auftritt, versucht SoftLayer, die virtuelle Maschine auf einem anderen Host erneut zu starten.</dd>
+<dd>Mit SoftLayer in dedizierten Umgebungen werden Daten in den einzelnen Cloudspeicherclustern mehrfach geschrieben und Speichercluster werden für den Fall eines Laufwerkausfalls mit Selbstheilungsfunktionen konfiguriert. Falls ein Problem mit einem virtuellen Server auftritt, versucht SoftLayer, den virtuellen Server auf einem anderen Host erneut zu starten.</dd>
 <dt>Metadatensicherung</dt>
 <dd>Metadaten werden mithilfe von SoftLayer EVault Backup an einem Standort in mindestens 200 km Entfernung gesichert.</dd>
 </dl>
@@ -329,5 +448,7 @@ Da der Schutz privater Daten kritisch ist, ist IBM beim Umgang mit dem Sicherung
 # Zugehörige Links
 ## Allgemein
 * [Entdecken Sie: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
+* [Neuerungen in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}}-Glossar](glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten](../admin/index.html#mng)
 * [Support kontaktieren](../troubleshoot/getting_customer_support.html#bluemix_support)

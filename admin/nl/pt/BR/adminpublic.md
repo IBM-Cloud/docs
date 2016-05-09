@@ -184,7 +184,7 @@ sobre o espaço, por exemplo, informações sobre aplicativos e serviços, confi
 relatórios e logs.</dd>
 </dl>
 
-**Nota**: os usuários designados à função de gerente ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um usuário designado à função de auditor não pode acessar VCAP_SERVICES. Além disso, o conteúdo em VCAP_SERVICES não é parcialmente editado para publicação com base na função de usuário.
+**Nota**: os usuários designados à função de gerente ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um usuário designado à função de auditor não pode acessar VCAP_SERVICES. 
 
 ### Gerenciando suas organizações
 {: #orgmng}
