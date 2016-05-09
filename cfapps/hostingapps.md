@@ -17,7 +17,7 @@ copyright:
 
 #Hosting apps in {{site.data.keyword.Bluemix_notm}}
 
-*Last updated: 18 April 2016*
+*Last updated: 9 May 2016*
 
 <!--The whole topic is staging only -->
 
@@ -184,8 +184,12 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 To ensure that your application can run in a local environment after you modify the application for {{site.data.keyword.Bluemix_notm}}, check for the presence of the VCAP_SERVICES environment variable, which is set for all {{site.data.keyword.Bluemix_notm}} Cloud Foundry applications.
 
 
-# rellinks
-## general 
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Getting started with Delivery Pipeline](../services/DeliveryPipeline/index.html)
