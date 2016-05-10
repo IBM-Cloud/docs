@@ -14,17 +14,18 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobilepushfull}} 透過為存取 {{site.data.keyword.Bluemix_notm}} 上管理的「雲端資源」的行動式應用程式提供監視服務，測量行動式應用程式、行動式使用者及行動式裝置的狀態、行為及環境定義。用戶端日誌及使用情形資料會自動收集，並視需要傳送至 Mobile Analytics 服務。開發者及管理者可以使用 {{site.data.keyword.mobileanalytics_short}} 服務儀表板來檢視 Client SDK 收集的資料。
+{{site.data.keyword.mobilepushfull}} 服務透過為存取 {{site.data.keyword.Bluemix_notm}} 上管理的「雲端資源」的行動式應用程式提供監視服務，測量行動式應用程式、行動式使用者及行動式裝置的狀態、行為及環境定義。用戶端日誌及使用情形資料會自動收集，並視需要傳送至 Mobile Analytics 服務。開發者及管理者可以使用 {{site.data.keyword.mobileanalytics_short}} 服務儀表板來檢視 Client SDK 收集的資料。
 {:shortdesc}
 
 Push Notifications Service 提供統一的平台，來傳送及管理以 iOS 及 Android 平台為目標的行動式推送通知。此服務可管理應用程式使用者與其裝置的對映、裝置平台，以及處理將推送通知分派給他們的作業。使用此服務，您可以將播送、單點播送（根據 deviceID）以及標籤（或主題）推送通知傳送給您的行動式應用程式使用者。也可以使用 SDK 及 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/) 來進一步開發用戶端應用程式。
 
-本節說明如何設定基本推送通知。當您使用基本通知時，通知就是播送，而不是使用標籤來到達一組特定使用者。
+本節說明如何設定基本推送通知。當您使用基本通知時，通知會是播送，而不是使用標籤來送達一組特定使用者。
 
 1. [配置通知提供者的認證](t__main_push_config_provider.html)
-2. [啟用行動式應用程式來接收通知](c_enable_push.html)
+2. [讓行動式應用程式可接收通知](c_enable_push.html)
 3. [傳送基本通知](t_send_push_notifications.html)
-          # 相關鏈結
+
+# 相關鏈結
 {: #rellinks}
 
 * [概觀](c_overview_push.md){: new_window}

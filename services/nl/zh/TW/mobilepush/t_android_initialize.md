@@ -10,7 +10,7 @@ copyright:
 
 放置起始設定碼的一般位置位於 Android 應用程式之主要活動的 onCreate 方法中。
 
-按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式路徑及 applicationGUID。將這些值用於您的路徑和應用程式 GUID。修改程式碼 Snippet，以使用 Bluemix 應用程式 appRoute 及 appGUID 參數。
+按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式的路徑及應用程式 GUID。將這些值用於您的路徑和應用程式 GUID。修改程式碼 Snippet，以使用 Bluemix 應用程式 appRoute 及 appGUID 參數。
 
 
 ##起始設定 Core SDK

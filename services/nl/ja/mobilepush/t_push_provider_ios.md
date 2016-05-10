@@ -123,7 +123,7 @@ Bluemix は、その証明書を使用して APNs との SSL 接続を確立し�
 	![証明書とキーのエクスポート](images/export_p12.jpg)
 19. 「**Key Access.app** が、キーチェーンの鍵の書き出しを必要としています (Key Access.app wants to export key from your keychain)」画面で、ご使用の Mac の管理パスワードを入力して、システムによるそれらの項目の書き出しを許可し、**「常に許可」**を選択します。.p12 証明書がデスクトップ上に生成されます。
 
-20. 次のステップ。[開発および配布プロビジョニング・プロファイルの作成](#create-push-credentials-dev-profile)を行います。
+20. 次のステップ[開発および配布プロビジョニング・プロファイルの作成](#create-push-credentials-dev-profile)を行います。
 
 ##開発プロビジョニング・プロファイルの作成
 {: #create-push-credentials-dev-profile}
@@ -187,7 +187,7 @@ Push ダッシュボードで APNs をセットアップします。
 	![「IBM Push Notifications」](images/bluemixdashboard_push.jpg)
 
 	「Push」ダッシュボードが表示されます。
-
+	
 	![プッシュ通知の設定](images/wizard.jpg)
 1
 2. **「構成」**タブで、**「Apple のプッシュ証明書 (Apple Push Certificate)」**セクションに移動し、**「サンドボックス」** (開発) または **「実動」** (配布) を選択して、p.12 証明書を Bluemix にアップロードします。

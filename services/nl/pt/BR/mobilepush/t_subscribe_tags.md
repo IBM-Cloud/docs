@@ -107,12 +107,12 @@ identificação.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
+	if (error != nil) { 
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-}
+} 
 ```
 
 **Cancelar assinatura de tags**

@@ -38,7 +38,7 @@ já tiver criado um app backend, certifique-se de ligar o app ao Push
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift

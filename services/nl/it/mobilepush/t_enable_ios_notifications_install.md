@@ -11,7 +11,7 @@ Per un progetto Xcode esistente, puoi impostare il Bluemix Mobile Services Clien
 ```
 $ sudo gem install cocoapods
 ```
-2. Immetti il seguente comando nel terminale per inizializzare CocoaPods. Quando immetti questo comando, assicurati di eseguirlo nella directory dove si trova il tuo progetto Xcode. Il comando `pod init` file denominato Podfile.
+2. Immetti il seguente comando nel terminale per inizializzare CocoaPods. Quando immetti questo comando, assicurati di eseguirlo nella directory dove si trova il tuo progetto Xcode. Il comando `pod init` file denominato Podfile.  
 ```
 $ pod init
 ```
@@ -43,7 +43,7 @@ $ pod init
 ```
 $ pod update
 ```
-Tale comando installa le tue dipendenze e crea un nuovo spazio di lavoro Xcode. git **Nota**: assicurati di aprire sempre il nuovo spazio di lavoro Xcode invece del file di progetto Xcode originale.
+Tale comando installa le tue dipendenze e crea un nuovo spazio di lavoro Xcode.  **Nota**: assicurati di aprire sempre il nuovo spazio di lavoro Xcode invece del file di progetto Xcode originale:
 
 	```
 	$ open App.xcworkspace
@@ -88,4 +88,4 @@ import BMSPush
 
 Vai a **Xcode > Build Settings > Build Options e imposta Enable Bitcode** su **No**.
 
-**Attenzione**: a partire da iOS 9, le modifiche alla funzione ATS (App Transport Security) potrebbero influenzare il modo in cui gestisci il processo di autenticazione. I seguenti post del blog descrivono in maggiore dettaglio le modifiche:[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) e [Connect your iOS 9 app to Bluemix today](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+**Attenzione**: a partire da iOS 9, le modifiche alla funzione ATS (App Transport Security) potrebbero influenzare il modo in cui gestisci il processo di autenticazione. I seguenti post del blog descrivono in maggiore dettaglio le modifiche:[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) e [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

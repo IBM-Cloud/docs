@@ -15,9 +15,7 @@ $ sudo gem install cocoapods
 이 명령을 실행할 경우 Xcode 프로젝트가 있는 디렉토리에서 실행해야 합니다. ``pod init`` 명령에서 파일 제목을 작성합니다.```
 $ pod init
 ``
-3. 생성된 Podfile에서 필요한 SDK 종속 항목을 추가하십시오.
-다음 Podfile을 복사하십시오.
-
+3. 생성된 Podfile에서 필요한 SDK 종속 항목을 추가하십시오. 다음 Podfile을 복사하십시오.
 
    Objective-C
 
@@ -45,8 +43,7 @@ $ pod init
 ```
 $ pod update
 ```
-해당 명령은 종속 항목을 설치하고 새 Xcode 작업공간을 작성합니다. git **Note**: 원래
-Xcode 프로젝트 파일 대신에 항상 새 Xcode 작업공간을 열어야 합니다. 
+해당 명령은 종속 항목을 설치하고 새 Xcode 작업공간을 작성합니다. **참고**: 원래 Xcode 프로젝트 파일 대신, 반드시 항상 새 Xcode 작업공간을 여십시오. 
 
 	```
 	$ open App.xcworkspace
@@ -93,6 +90,4 @@ import BMSPush
 
 **Xcode > 빌드 설정 > 빌드 옵션 및 Bitcode 사용 설정**으로 이동하여 **No**로 설정하십시오.
 
-**주의**: iOS 9의 경우, ATS(App Transport Security) 기능을 변경하면 인증 프로세스의 처리 방식에 영향이 미칠 수 있습니다.
-다음 블로그 포스팅에서 이러한 변경에 대해 자세히 설명합니다. [iOS 9의 ATS 및 Bitcode](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 및 [지금 Bluemix에 iOS 9 앱 연결](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
-
+**주의**: iOS 9의 경우, ATS(App Transport Security) 기능을 변경하면 인증 프로세스의 처리 방식에 영향이 미칠 수 있습니다. 다음 블로그 포스팅에서 이러한 변경에 대해 자세히 설명합니다. [iOS 9의 ATS 및 Bitcode](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 및 [지금 Bluemix에 iOS 9 앱 연결](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

@@ -15,7 +15,7 @@ Notification
 Service Cordova, é necessário inicializá-lo transmitindo a rota e o
 GUID do aplicativo. Depois de inicializar o plug-in, é possível conectar-se ao app de
 servidor criado no painel do Bluemix. O plug-in Cordova é o wrapper dos SDKs de cliente
-Android e iOS para permitir que um app Cordova se comunique com serviços Bluemix. 
+Android e iOS para permitir que um app Cordova se comunique com serviços Bluemix.
 
 1. Inicialize o BMSClient copiando e colando o fragmento de código a seguir no
 arquivo JavaScript principal (em geral, localizado no diretório **www/js**).

@@ -29,3 +29,4 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
        //Le dictionnaire UserInfo contiendra les données envoyées depuis le serveur
    }
 ```
+

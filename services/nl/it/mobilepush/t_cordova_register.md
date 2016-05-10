@@ -132,7 +132,7 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
-##Passi successivi 
+##Passi successivi
 {: #cordova_register_next}
 
 1. Crea il tuo progetto e quindi eseguilo utilizzando i seguenti comandi:

@@ -20,7 +20,7 @@ copyright:
 
 要获取 REST API 的基本 URL，请执行以下操作：
 
-1. 在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notification Service。
+1. 在 Bluemix®“目录”的“样板”部分中创建后端应用程序，这会自动将该 Push 服务绑定到此应用程序。如果已创建后端应用程序，请务必将该应用程序绑定到 Push Notification Service。 
 
 1. 在 Bluemix“仪表板”的主页中，转至**应用程序**区域，然后单击您的应用程序。
 
@@ -62,7 +62,7 @@ copyright:
    }
  ]
 }
-```
+``` 
 
 ##Push REST API 过滤器
 {: #push-api-rest-filters}
@@ -87,7 +87,7 @@ copyright:
 - 对于 AND 和 OR 逻辑，单个查询可以同时包含 AND 和 OR 逻辑。使用 AND 表达式组合多个过滤器时，会先对每个过滤器单独求值，然后再执行 AND 运算。
 
 对于设备 GET API，将支持以下组合：
--名称为 platform 字段。
+- 名称为 platform 字段。
 - 运算符可以为 == 或 =@，但 platform 除外
 - 对于 platform，运算符必须是 ==。如果使用运算符 =@，那么值可以为子字符串。
 - 如果使用 ==，那么值必须为完全匹配的字符串。

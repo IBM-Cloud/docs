@@ -17,6 +17,5 @@ copyright:
 
 
 
--  태그 기반 알림을 사용하려면 [태그 기반 알림](t_push_tagsmain.md)을 참조하십시오.
-
+-  태그 기반 알림을 사용하려면 [태그 기반 알림](t_push_tagsmain.md)을 참조하십시오. 
 -  고급 알림 옵션을 사용하려면 [고급 푸시 알림](t_advance_notifications.md)을 참조하십시오. 

@@ -19,9 +19,9 @@ copyright:
 
 1. 使用 PUT ApplicationID 设置 REST API 调用
 2. 在 JSON 主体中，确认是否已使用 [GET ApplicationID 设置 REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} API 调用切换了该方式。响应应该为 "mode": "PRODUCTION"
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

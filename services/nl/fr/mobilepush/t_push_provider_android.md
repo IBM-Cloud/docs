@@ -1,4 +1,4 @@
-﻿
+
 ---
 
 Copyright :
@@ -14,9 +14,9 @@ Obtenez vos données d'identification Google Cloud Messaging (GCM), puis configu
 
 ##Obtention de votre ID d'émetteur et de la clé d'API
 
-La clé d'API est stockée de façon sécurisée et utilisée par le service Push Notifications pour la connexion au serveur GCM. L'ID d'émetteur (numéro de projet) est utilisé par le logiciel SDK Android côté client. 
+La clé d'API est stockée de façon sécurisée et utilisée par le service Push Notifications pour la connexion au serveur GCM. L'ID d'émetteur (numéro de projet) est utilisé par le logiciel SDK Android côté client.
 
-1.s/ Créez un compte de développement Google à l'aide de la [console des développeurs Google](https://console.developers.google.com/start){: new_window}. Pour plus d'informations sur Google Cloud Messaging (GCM), voir [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
+1. Créez un compte de développement Google à l'aide de la [console des développeurs Google](https://console.developers.google.com/start){: new_window}. Pour plus d'informations sur Google Cloud Messaging (GCM), voir [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
 
 2. Dans la console des développeurs Google, créez un projet, par exemple "hello world".
 
@@ -42,35 +42,34 @@ La clé d'API est stockée de façon sécurisée et utilisée par le service Pus
 	![Données d'identification d'API](images/api_credentials.jpg)
 
 8. Cliquez sur l'option **Server Key** pour générer une clé d'API GCM que vous utiliserez dans le tableau de bord Push de Bluemix.
-9. Dans la zone **Name**, entrez le nom de la clé d'API de serveur. 
+9. Dans la zone **Name**, entrez le nom de la clé d'API de serveur.
 
 	![Clé de serveur GCM](images/gcm_serverkey.jpg)
 
-10. Cliquez sur le bouton **Create**. La clé d'API est affichée.
+10. Cliquez sur le bouton **Create**. 
+La clé d'API est affichée.
 
 	![Clé d'API GCM](images/gcm_apikey.jpg)
 
-11. Copiez votre clé d'API GCM, puis cliquez sur le bouton **OK**. Vous aurez besoin du numéro de projet (ID d'émetteur) et de la clé d'API pour configurer vos données d'identification dans l'écran Configuration du tableau de bord Push Notifications de Bluemix.
-
-12. Etapes suivantes. Configuration du service Push Notifications pour Android. 
+11. Copiez votre clé d'API GCM, puis cliquez sur le bouton **OK**. Vous aurez besoin du numéro de projet (ID d'émetteur) et de la clé d'API pour configurer vos données d'identification dans l'écran Configuration du tableau de bord Push Notifications de Bluemix. 
+12. Etapes suivantes. Configuration du service Push Notifications pour Android.
 
 ##Configuration du service Push Notifications pour Android
 
 **Avant de commencer**
 
-Obtenez une clé d'API GCM et un ID d'émetteur (numéro de projet).
+Obtenez une clé d'API GCM et un ID d'émetteur (numéro de projet). 
 
 1. Ouvrez votre application de back end dans le tableau de bord Bluemix, puis cliquez sur IBM Push Notifications pour ouvrir le tableau de bord du service Push Notifications.
-
-
+ 
 	![Tableau de bord Push](images/bluemixdashboard_push.jpg)
 
-	Le tableau de bord Push s'affiche. 
-
+	Le tableau de bord Push s'affiche.
+	
 	![Configuration de Push](images/setup_push_main.jpg)
 
-2. Cliquez sur le bouton **Setup Push** pour configurer les données d'identification GCM. 
-1. Sur l'onglet **Configuration**, accédez à la section **Google Cloud Messaging** et configurez l'ID d'émetteur (numéro de projet CGM) et la clé d'API. 
+2. Cliquez sur le bouton **Setup Push** pour configurer les données d'identification GCM.
+1. Sur l'onglet **Configuration**, accédez à la section **Google Cloud Messaging** et configurez l'ID d'émetteur (numéro de projet CGM) et la clé d'API.
 
 4. Cliquez sur le bouton **Save**. 
 5. Etapes suivantes. [Activation des notifications pour Android](c_enable_push.html).

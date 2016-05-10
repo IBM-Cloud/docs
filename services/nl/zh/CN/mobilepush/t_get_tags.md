@@ -14,9 +14,9 @@
 ```
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
-   @Override
-   public void onSuccess(List<String> tags){
-   updateTextView("Retrieved available tags: " + tags);  
+@Override
+    public void onSuccess(List<String> tags) {
+    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
 subscribeToTag();
@@ -62,7 +62,8 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Retrieve an array of tags to which the device is subscribed.
+
+
 ```
 
 ```
@@ -80,9 +81,9 @@ MFPPush.getSubscriptionStatus(function(tags) {
 使用以下 **retrieveAvailableTags** API 可获取设备可预订的可用标记的列表。
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
+^(IMFResponse *response, NSError *error){ 
  if(error){    
 [self updateMessage:error.description];
   
@@ -94,7 +95,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 }
 }];
 ```
-
+       
 使用以下 **retrieveSubscriptions** API 可获取设备所预订的标记的列表。
 
 
@@ -152,3 +153,6 @@ print( "Error during retrieving subscribed tags \(error) ")
     }
 }
 ```
+
+
+

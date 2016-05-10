@@ -27,7 +27,7 @@ disponíveis as quais o dispositivo podem assinar.
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags){
+    public void onSuccess(List<String> tags) { 
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
@@ -73,7 +73,7 @@ Recupere uma matriz de tags que estão disponíveis para assinatura.
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Recupere uma matriz de tags nas quais o dispositivo está inscrito.
+
 ```
 
 ```
@@ -93,10 +93,10 @@ Use a API **retrieveAvailableTags** a seguir para obter uma
 lista de tags disponíveis as quais o dispositivo pode assinar.
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
+^(IMFResponse *response, NSError *error){ 
+ if (error){    
    [self updateMessage:error.description];  
  } else {
    [self updateMessage:@"Successfully retrieved available tags."];
@@ -106,7 +106,7 @@ lista de tags disponíveis as quais o dispositivo pode assinar.
 }
 }];
 ```
-
+       
 Use a API **retrieveSubscriptions** para obter uma
 lista de tags nas quais o dispositivo está inscrito.
 
@@ -171,3 +171,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
     }
 }
 ```
+
+
+

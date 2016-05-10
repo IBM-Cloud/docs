@@ -35,7 +35,7 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift

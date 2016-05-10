@@ -31,7 +31,7 @@ Push Notification Service 提供一个统一平台来发送和管理针对 iOS �
 
 * [概述](c_overview_push.md){: new_window}
 
-## 教程和样本{:id="samples"}
+## 教程和样本 {:id="samples"}
 {: #samples}
 * [Android helloPush 样本应用程序](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [Cordova 样本应用程序](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}

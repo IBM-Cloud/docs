@@ -22,9 +22,9 @@ Para conmutar la modalidad de operación del servicio push de pruebas a producci
 
 1. Utilice la llamada de la API PUT ApplicationID Settings REST
 2. En el cuerpo de JSON, confirme que la modalidad se ha cambiado utilizando la llamada de la API [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. La respuesta esperada es "mode": "PRODUCTION
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

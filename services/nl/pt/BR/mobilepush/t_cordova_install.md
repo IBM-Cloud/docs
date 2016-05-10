@@ -23,8 +23,8 @@ obter informações sobre como fazer download e instalar essa ferramenta, consul
 [Git](https://git-scm.com/downloads).
 
 1. Instale o Node.js e a ferramenta Node Package Manager (NPM). A ferramenta de
-linha de comandos NPM é empacotada com o Node.js. Para obter informações sobre como
-fazer download e instalar o [Node.js](https://nodejs.org/en/download/).
+linha de comandos NPM é empacotada com o Node.js. Para obter informações sobre como fazer download e instalar o Node.js, consulte
+[Node.js](https://nodejs.org/en/download/).
 1. Na linha de comandos, instale as ferramentas de linha de comandos Cordova
 usando o comando **npm install -g cordova**. Isso é
 necessário para usar o plug-in Push do Cordova. Para obter informações sobre como

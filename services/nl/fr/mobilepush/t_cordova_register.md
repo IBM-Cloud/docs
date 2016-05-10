@@ -58,7 +58,7 @@ Vous pouvez accéder au contenu du paramètre de réponse success dans Javascrip
 
 Les clés disponibles sont les suivantes : ```token```, ```userId`` et ```deviceId``.
 
-Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un périphérique à l'aide du service Notification push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript. 
+Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un périphérique à l'aide du service Notification push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript.
 
 
 
@@ -102,7 +102,7 @@ onDeviceReady: function() {
 
 ## Objective-C
 {: #cordova_register_objective}
-Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué d'application : 
+Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué d'application :
 
 ```
 	// Enregistrez le jeton de périphérique auprès du service Notification push de Bluemix

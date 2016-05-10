@@ -28,4 +28,5 @@ Para registrar el objeto notificationListener con Push, invoque el método **MFP
 2. Cree el proyecto y ejecútelo en el dispositivo o en el emulador. Cuando se invoque el método onSuccess() para la escucha de respuestas en el método register(), confirmará que el dispositivo se ha registrado correctamente con el Servicio de notificaciones Push. En este momento puede enviar un mensaje tal como se describe en Envío de notificaciones push básicas.
 3. Verifique que los dispositivos hayan recibido la notificación. Si la aplicación se encuentra en segundo
           plano, la notificación se manejará mediante el
-            **MFPPushNotificationListener**. Si la aplicación se encuentra en segundo plano, se mostrará un mensaje en la barra de notificaciones.//Receive push notifications on Android devices
+            **MFPPushNotificationListener**. Si la aplicación se encuentra en segundo plano, se mostrará un
+          mensaje en la barra de notificaciones.

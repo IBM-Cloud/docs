@@ -8,8 +8,9 @@ copyright:
 # Registrando dispositivos Android
 {: #android_register}
 
-Use a API **IMFPush.register()** para registrar o dispositivo em
-um Serviço de notificação push.
+Use a API ```IMFPush.register()``` para registrar o dispositivo com um Serviço de notificação push. Para o registro de dispositivos Android, primeiro
+inclua as informações do Google Cloud Messaging (GCM) no painel de configuração de serviço de push do Bluemix. Para obter mais informações,
+consulte [Configurando credenciais para o Google Cloud Messaging](t_push_provider_android.html).
 
 Copie e cole os seguintes fragmentos de códigos em seu
 aplicativo móvel Android.

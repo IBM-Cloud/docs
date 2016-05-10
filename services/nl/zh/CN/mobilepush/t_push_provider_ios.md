@@ -66,15 +66,15 @@ APNs 可在两种方式下使用：沙箱和生产。
 1. 转至 [Apple Developer](https://developer.apple.com)，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 在 **Identifiers** 区域中，单击 **App IDs**。
 3. 在您的应用程序标识列表中，选择您新创建的应用程序标识，然后选择 **Settings**。
-4. 在 **Push Notifications** 区域中，创建开发 SSL 证书，然后创建生产 SSL 证书。![推送通知 SSL 证书](images/certificate_createssl.jpg)
+4. 在 **Push Notifications** 区域中，创建开发 SSL 证书，然后创建生产 SSL 证书。
+ ![推送通知 SSL 证书](images/certificate_createssl.jpg)
 
 	这将显示 About Creating a Certificate a Signing Request 屏幕。
 
 	![创建证书签名请求](images/request.jpg)
 
 5. 在 Mac 上，启动**钥匙串访问**应用程序来创建一个证书签名请求 (CSR)。
-6. 选择**钥匙串访问 > 证书助理 > 从证书颁发机构请求证书...**
-![钥匙串访问](images/keychain_request_certificate.jpg)
+6. 选择**钥匙串访问 > 证书助理 > 从证书颁发机构请求证书...** ![钥匙串访问](images/keychain_request_certificate.jpg)
 7. 在**证书信息**中，输入与您的 Apple Developer 帐户相关联的电子邮件地址和常用名称。提供有意义的名称来帮助您识别此为开发（沙箱）证书还是分发（生产）证书；例如，**sandbox_apns_certificate** 或 **production_apns_certificate**。
 
 8. 选择**存储到磁盘**，以将 **.certSigningRequest** 文件下载到桌面，然后单击**继续**。
@@ -157,7 +157,7 @@ APNs 所需的证书为 .p12 证书，其中包含构建和发布应用程序所
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	这将显示“推送”仪表板。
-
+	
 	![设置推送通知](images/wizard.jpg)
 1
 2. 在**配置**选项卡上，转至 **Apple 推送证书**部分，选择**沙箱**（开发）或**生产**（分发），然后将 p.12 证书上传到 Bluemix。

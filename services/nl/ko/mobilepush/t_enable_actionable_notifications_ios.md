@@ -8,9 +8,7 @@ copyright:
 # iOS에 조치 가능 알림 사용
 {: #enable-actionable-notifications-ios}
 
-일반적인 조치 알림과 달리, 조치 가능 알림은 알림 경고 수신 시 앱을 열지 않고
-수행할 동작을 선택할 수 있는 프롬프트를 사용자에게 표시합니다. 애플리케이션에서 조치 가능 푸시 알림을
-사용하려면 다음 지시사항을 따르십시오. 
+일반적인 조치 알림과 달리, 조치 가능 알림은 알림 경고 수신 시 앱을 열지 않고 수행할 동작을 선택할 수 있는 프롬프트를 사용자에게 표시합니다. 애플리케이션에서 조치 가능 푸시 알림을 사용하려면 다음 지시사항을 따르십시오. 
 
 1. 사용자 응답 조치를 작성하십시오. 
 
@@ -45,8 +43,7 @@ copyright:
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. 알림 카테고리를 작성하고 조치를 설정하십시오. 올바른 컨텍스트는 **UIUserNotificationActionContextDefault** 또는
-**UIUserNotificationActionContextMinimal**입니다.
+2. 알림 카테고리를 작성하고 조치를 설정하십시오. 올바른 컨텍스트는 **UIUserNotificationActionContextDefault** 또는 **UIUserNotificationActionContextMinimal**입니다.
 
 	Objective-C
 
@@ -94,7 +91,7 @@ copyright:
 
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
-```
+	```
 
 	Swift
 
