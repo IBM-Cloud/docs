@@ -2,9 +2,9 @@
 	"identifier": "id",
 	"label": "title",
 	"items": [{
-		"id": "始めに"
+		"id": "GetStarted"
 	}, {
-		"id": "カテゴリー",
+		"id": "Categories",
 		"items": [{
 			"title": "計算",
 			"img": "homepage/images/compute.svg",
@@ -290,7 +290,7 @@
 		}]
 		
 	}, {
-		"id": "リソース",
+		"id": "Resources",
 		"descriptionTitle": "リソース",
 		"items": [{
 			"title": "Why Bluemix?",
