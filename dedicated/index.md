@@ -193,7 +193,7 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You can start using your dedicated instance that is monitored by the IBM operations team in order to respond to alerts.</li>
 </ol>
 
-After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../administer/index.html#mng). For information about upgrades and maintenance, see [Maintaining your dedicated instance](index.html#maintaindedicated).
+After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../admin/index.html#mng). For information about upgrades and maintenance, see [Maintaining your dedicated instance](index.html#maintaindedicated).
 
 ##Roles and responsibilities
 {: #rolesresponsibilities}
