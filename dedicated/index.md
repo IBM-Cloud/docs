@@ -447,6 +447,6 @@ Because protection of private data is critical, IBM needs your collaboration whe
 ## general
 * [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossary](glossary/index.html)
+* [{{site.data.keyword.Bluemix_notm}} glossary](../overview/glossary/index.html)
 * [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
 * [Contacting support](../troubleshoot/getting_customer_support.html#bluemix_support)
