@@ -304,6 +304,8 @@ IBM periodically sends surveys to Bluemix customers to obtain their feedback on 
 {: #rellinks}
 
 ## general
+{: #general}
+
   * [Bluemix support portal](https://support.ibmcloud.com){: new_window}
   * [Installing the cf command tool](../starters/install_cli.html){: new_window}
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
