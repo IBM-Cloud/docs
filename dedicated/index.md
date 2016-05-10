@@ -113,12 +113,10 @@ The syndicated catalog provides the function to create hybrid applications that 
 |{{site.data.keyword.presenceinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.redis}} Cloud	|Yes		|No		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.runbook_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.SendGrid}}	|Yes		|Yes		|No|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
 |{{site.data.keyword.streaminganalyticsshort}}	|Yes		|Yes		|Yes |
