@@ -7,7 +7,8 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# 資産の管理{: #manage-assets}
+# 資産の管理
+{: #manage-assets}
 
 {{site.data.keyword.iotrtinsights_full}} の強力な機能の一部として、デバイスを管理対象資産にマップすること、および資産にマップされるすべてのデバイスに適用されるルールを作成することができます。
 {: shortdesc}
