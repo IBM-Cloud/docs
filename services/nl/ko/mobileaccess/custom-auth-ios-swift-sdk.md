@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2016
+copyright:
+  years: 2016
 
 ---
 
@@ -168,7 +168,7 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -192,3 +192,14 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 
+사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 
+
+ 로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

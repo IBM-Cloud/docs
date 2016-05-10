@@ -213,8 +213,10 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
+         
      print ("response:\(response?.responseText), no error")
   } else {
      print ("error: \(error)")
@@ -245,3 +247,15 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ ユーザーが Facebook にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Facebook を使用することについての許可を求めるプロンプトが出されます。
+
+ ユーザーを切り替えるには、このコードを呼び出す必要があり、ユーザーはブラウザーで Facebook からログアウトしなければなりません。
+
+ ログアウト機能へ ```callBack``` を渡すことは、オプションです。`nil` を渡すこともできます。

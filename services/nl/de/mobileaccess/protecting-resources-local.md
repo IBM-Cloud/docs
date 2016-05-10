@@ -31,7 +31,7 @@ Ersetzen Sie die Variable *appGUID* durch den Wert aus dem entsprechenden Feld u
 
 1. Klicken Sie auf **Berechtigungsnachweise anzeigen** auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrer mobilen Back-End-Anwendung im {{site.data.keyword.Bluemix_notm}}-Dashboard. Es wird ein JSON-Objekt mit Zugriffsberechtigungsnachweisen angezeigt, die {{site.data.keyword.amashort}} für Ihre mobile Back-End-Anwendung bereitstellt.
 
-1. Legen Sie in Ihrer lokalen Entwicklungsumgebung die Umgebungsvariable `VCAP_SERVICES` fest. Der Wert dieser Variablen muss ein in eine Zeichenfolge konvertiertes JSON-Objekt sein, das die {{site.data.keyword.amashort}}-Berechtigungsnachweise enthält. Weitere Informationen finden Sie im folgenden Beispiel.
+1. Legen Sie in Ihrer lokalen Entwicklungsumgebung die Umgebungsvariable `VCAP_SERVICES` fest. Der Wert dieser Variablen muss ein in eine Zeichenfolge konvertiertes JSON-Objekt sein, das die {{site.data.keyword.amashort}}-Berechtigungsnachweise enthält.  Weitere Informationen finden Sie im folgenden Beispiel.
 
 ## Beispielcode
 {: #local-dev-sample}

@@ -216,8 +216,8 @@ npm install -save bms-mca-oauth-sdk
 ## カスタム ID プロバイダーのサンプル
 {: #customidprovider}
 
-[Git リポジトリーおよび API リファレンス](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-
+[簡単なサンプル Git repo](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[高度なサンプル Git repo](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}

@@ -20,17 +20,34 @@ copyright:
 {: #google-auth-ios-project}
 若要開始使用 Google 作為身分提供者，請在 Google Developer Console 中建立專案來取得 Google 用戶端 ID。此用戶端 ID 是唯一 ID，可讓 Google 知道哪一個應用程式正在嘗試連接。如果您已有 Google 專案，則可以跳過說明專案建立的步驟，並開始新增認證。
 
-1. 開啟 [Google Developer Console](https://console.developers.google.com)。
 
-1. 建立專案。按一下**建立專案**。
 
-1. 選取您的專案，然後按一下**使用 Google API**。您也可以按一下**啟用 API 及取得認證（如金鑰）**。
+1. 在 [Google Developer Console](https://console.developers.google.com) 中建立專案。
+如果您已有專案，則可以跳過說明專案建立的步驟，並開始新增認證。
+   1.    開啟新建專案功能表。 
+         
+         ![影像](images/FindProject.jpg)
 
-1. 在 API 清單中，選擇 Google+ API，然後按一下**啟用 API**。
+   2.    按一下**建立專案**。
+   
+         ![影像](images/CreateAProject.jpg)
 
-1. 按一下**認證 > 新增認證**，然後選取 **OAuth 2.0 用戶端 ID**。
 
-1. 系統可能會要求您在 **OAuth 同意畫面**標籤上設定產品名稱。請繼續進行這項作業。
+1. 從**社交 API** 清單中，選擇 **Google+ API**。
+
+     ![影像](images/chooseGooglePlus.jpg)
+
+1. 從下一個畫面中，按一下**啟用**。
+
+1. 選取**同意畫面**標籤，並提供向使用者顯示的產品名稱。其他值是選用的。按一下**儲存**。
+
+    ![影像](images/consentScreen.png)
+    
+1. 從**認證**清單中，選擇 OAuth 用戶端 ID。
+
+     ![影像](images/chooseCredentials.png)
+     
+
 
 1. 此時會向您呈現應用程式類型選項。請選取 **iOS**。
 
@@ -54,6 +71,8 @@ copyright:
 
 1. 在 **iOS 的應用程式 ID** 中，指定 Android 的「iOS 用戶端 ID」，然後按一下**儲存**。
 
+	附註：除了 Google 用戶端 ID 之外，還需要反向值以進行用戶端配置（請參閱下面）。若要存取這兩個值，請使用鉛筆圖示來下載範例 plist：![info.plist file download](images/download_plist.png)
+
 ## 配置 {{site.data.keyword.amashort}} Client SDK for iOS
 {: #google-auth-ios-sdk}
 
@@ -70,18 +89,18 @@ copyright:
 
 1. 儲存 `Podfile`，然後從指令行執行 `pod install`。CocoaPods 將安裝相依關係。您會看到進度及新增的元件。
 
-**重要事項**：您現在必須使用 CocoaPods 所產生的 `xcworkspace` 檔案來開啟專案。名稱通常為 `{your-project-name}.xcworkspace`。  
+  **重要事項**：您現在必須使用 CocoaPods 所產生的 `xcworkspace` 檔案來開啟專案。名稱通常為 `{your-project-name}.xcworkspace`。  
 
 1. 從指令行執行 `open {your-project-name}.xcworkspace`，以開啟您的 iOS 專案工作區。
 
 ### 配置 iOS 專案進行 Google 鑑別
 {: #google-auth-ios-googleauth}
-更新 `info.plist` 檔案來配置 Google 整合。`info.plist` 檔案通常位於 Xcode 專案的 `Supporting files` 資料夾中。您可以在適當列出的編輯器中或使用文字編輯器編輯檔案。
+更新 `info.plist` 檔案來配置 Google 整合。`info.plist` 檔案通常位於 Xcode 專案的 `Supporting files` 資料夾中。您可以在內容清單編輯器中或使用文字編輯器編輯檔案。
 
 * 將下列 URL 綱目新增至 `info.plist` 檔案，以配置 Google 整合。
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
-	第一個「URL 綱目」為反向的「用戶端 ID」版本（來自「Google 開發人員主控台」）。例如，如果「用戶端 ID」為 `123123-abcabc.apps.googleusercontent.com`，則「URL 綱目」為 `com.googleusercontent.apps.123123-abcabc`。
+	第一個「URL 綱目」為反向的「用戶端 ID」版本（來自「Google 開發人員主控台」）。例如，如果「用戶端 ID」為 `123123-abcabc.apps.googleusercontent.com`，則「URL 綱目」為 `com.googleusercontent.apps.123123-abcabc`。 
 
 	第二個「URL 綱目」為應用程式的軟體組 ID。
 
@@ -168,7 +187,7 @@ copyright:
 
 
 
-1. 將下面程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以登錄「Google 鑑別處理程式」。請在已起始設定 IMFClient 的位置後面新增此程式碼：
+1. 將下面程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以登錄「Google 鑑別處理程式」。請在起始設定 IMFClient 之後立即新增此程式碼：
 
 	Objective-C：
 
@@ -247,7 +266,7 @@ copyright:
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -280,3 +299,23 @@ copyright:
 1. 	您的要求應該會成功。您應該會在 LogCat 中看到下列輸出：
 
 	![影像](images/ios-google-login-success.png)
+	
+	
+	您也可以新增下列程式碼，來新增登出功能：
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift：
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 Mobile Client Access 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一位使用者來登入。
+
+	將 `callBack` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。

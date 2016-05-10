@@ -11,7 +11,7 @@ copyright:
 
 ## 开始之前
 {: #before-you-begin}
-* 您必须熟悉如何在 {{site.data.keyword.bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)。
+* 您必须熟悉如何在 {{site.data.keyword.Bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)。
 
 ## 安装 {{site.data.keyword.amashort}} 服务器 SDK
 {: #installing-server-sdk}

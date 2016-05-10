@@ -165,7 +165,8 @@ customizada, é possível começar a fazer solicitações ao backend móvel.
 
 1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
 abrindo `{applicationRoute}/protected`, por exemplo,
-`http://my-mobile-backend.mybluemix.net/protected`.O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+`http://my-mobile-backend.mybluemix.net/protected`.
+  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo iOS para fazer solicitação ao mesmo terminal. Inclua o
 código a seguir depois de inicializar `BMSClient` e registrar a
@@ -174,7 +175,7 @@ delegação de autenticação customizada:
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -198,3 +199,13 @@ delegação de autenticação customizada:
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.
+
+ Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.

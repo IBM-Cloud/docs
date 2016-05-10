@@ -32,7 +32,7 @@ d'application HelloAuthentication.
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova** : ([SDK](getting-started-cordova.html))
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (SDK Swift)** : ([SDK](getting-started-ios-swift-sdk.html))
+   * **iOS (SDK Swift-C)** : ([SDK](getting-started-ios-swift-sdk.html))
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (SDK Objective-C)** : ([SDK](getting-started-ios.html))
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
@@ -64,6 +64,10 @@ ou Google+ existant. Ou bien, vous pouvez définir le mode de connexion des util
 * [Core SDK (plug-in Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 * [Core SDK (iOS - Objective-C) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [Authentification personnalisée -
+exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [Authentification personnalisée -
+exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Référence d'API
 {: api}

@@ -253,7 +253,7 @@ if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -284,3 +284,25 @@ if (error){
 
 1. 	要求が成功すると、以下の出力が Xcode コンソールに表示されます。
 	![image](images/ios-facebook-login-success.png)
+
+
+
+	次のコードを追加してログアウト機能を追加することもできます。
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	ユーザーが Facebook にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、Mobile Client Access が認証を目的として Facebook を使用することについての許可を求めるプロンプトが出されます。
+
+	ユーザーを切り替えるには、このコードを呼び出す必要があり、ユーザーはブラウザーで Facebook からログアウトしなければなりません。ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。
+

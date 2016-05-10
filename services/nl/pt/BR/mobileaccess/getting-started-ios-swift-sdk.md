@@ -60,8 +60,7 @@ seu destino Xcode em vez de tê-lo no Podfile.
  Inicialize o SDK passando os parâmetros `applicationRoute` e
 `applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
-1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. 
-Os valores `applicationRoute` e `applicationGUID` são
+1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os valores `applicationRoute` e `applicationGUID` são
 exibidos nos campos **Rota** e **GUID do app**.
 
 1. Importe as estruturas necessárias na classe em que deseja usar o

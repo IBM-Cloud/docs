@@ -36,11 +36,11 @@ Después de haber configurado el ID y la aplicación de Facebook para dar servic
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix}}.
 
-1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).Necesitará estos valores cuando inicialice el SDK.
+1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`). Necesitará estos valores cuando inicialice el SDK.
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Facebook**. 
+1. Pulse el mosaico **Facebook**.
 
 1. Especifique el ID de aplicación de Facebook y haga clic en **Guardar**.
 
@@ -172,7 +172,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 	* Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo:`$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Asegúrese de que la cabecera puente se selecciona en Xcode al crear el proyecto. No debería ver mensajes de error.
 
-3. Inicialice el SDK del cliente.	Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+3. Inicialice el SDK del cliente.	Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C**
 
@@ -237,7 +237,8 @@ Después de inicializar el SDK del cliente y registrar el gestor de autenticaci�
 {: #facebook-auth-ios-testing-before}
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
+1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`.
+Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final.
@@ -256,7 +257,7 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -287,4 +288,25 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 
 1. 	Cuando la solicitud se realiza correctamente, se muestra la salida siguiente en la consola de Xcode:
 ![image](images/ios-facebook-login-success.png)
+
+
+
+	También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	Si invoca este código después de que el usuario haya iniciado sesión en Facebook y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice acceso al cliente móvil para utilizar Facebook para llevar a cabo la autenticación. 
+
+	Para cambiar de usuario, debe invocar este código y el usuario debe finalizar su sesión en Facebook desde su navegador. Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.
 

@@ -4,7 +4,7 @@ Copyright : 2015, 2016
 
 ---
 
-# Présentation de {{site.data.keyword.amashort}}
+# À propos de {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 Le service {{site.data.keyword.amafull}} fournit des services d'authentification et de surveillance pour les applications mobiles qui accèdent à des ressources de cloud hébergées dans {{site.data.keyword.Bluemix_notm}}.

@@ -34,21 +34,19 @@ import Foundation
 
 class ViewController : UIViewController, NSURLConnectionDataDelegate {
 
-
 	func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
 
-
 		println("\(response.description)")
-}
+	}
 
 	func connection(connection: NSURLConnection, didReceiveData data: NSData) {
-var text = NSString(data: data, encoding: NSUTF8StringEncoding)
+		var text = NSString(data: data, encoding: NSUTF8StringEncoding)
 		println("\(text)")
 	}
 
 	func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-println("\(error.description)")
-}
+		println("\(error.description)")
+	}
 }
 ```
 
@@ -59,7 +57,6 @@ println("\(error.description)")
 let URL_RESOURCE = "http://myapp.mybluemix.net/protectedResource"
 
 @IBAction func onSendURLProtocol(sender: AnyObject) {
-
 
 	IMFURLProtocol.sharedInstance().registerIMFURLProtocol()
 	IMFURLProtocol.sharedInstance().registerProtectedResourceWithPath(URL_RESOURCE)

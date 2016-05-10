@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2016
+copyright:
+  years: 2016
 
 ---
 
@@ -217,8 +217,10 @@ pod 'BMSFacebookAuthentication'
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
+         
      print ("response:\(response?.responseText), no error")
   } else {
      print ("error: \(error)")
@@ -249,3 +251,16 @@ pod 'BMSFacebookAuthentication'
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ Facebook에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우,
+사용자에게는 인증 용도로 Facebook을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 
+
+ 사용자를 전환하려면, 이 코드를 호출해야 하며 사용자는 자체 브라우저에서 Facebook에서 로그아웃해야 합니다. 
+
+ 로그아웃 기능에 ```callBack``` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

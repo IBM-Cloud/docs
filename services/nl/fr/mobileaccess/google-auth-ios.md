@@ -11,8 +11,7 @@ Copyright : 2015, 2016
 
 ## Avant de commencer
 {: #google-auth-ios-before}
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  
-Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Objective-C d'iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Objective-C d'iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
@@ -20,17 +19,34 @@ Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](ht
 {: #google-auth-ios-project}
 Pour commencer à utiliser Google en tant que fournisseur d'identité, vous devez créer un projet dans Google Developer Console pour obtenir un ID client Google.  Cet ID client est un identificateur unique qui permet à Google de savoir quelle application tente de se connecter.   Si vous avez déjà un projet Google, vous pouvez passer les étapes qui décrivent la création du projet et commencer par l'ajout des droits d'accès.
 
-1. Ouvrez [Google Developer Console](https://console.developers.google.com).
 
-1. Créez un projet. Cliquez sur **Create project (Créer un projet)**.
 
-1. Sélectionnez votre projet et cliquez sur **Use Google APIs (Utiliser les API Google)**. Vous pouvez aussi cliquer sur **Enable APIs and get credentials like keys (Activer les API et obtenir des données d'identification telles que des clés)**.
+1. Créez un projet dans [Google Developer Console](https://console.developers.google.com).
+Si vous avez déjà un projet, vous pouvez passer les étapes qui décrivent la création du projet et commencer par l'ajout des droits d'accès.
+   1.    Ouvrez le menu de nouveau projet. 
+         
+         ![image](images/FindProject.jpg)
 
-1. Dans la liste des API, sélectionnez l'API Google+ et cliquez sur **Enable API (Activer l'API)**.
+   2.    Cliquez sur **Créer un projet**.
+   
+         ![image](images/CreateAProject.jpg)
 
-1. Cliquez sur **Credentials (Données d'identification) > Add credentials (Ajouter des données d'identification)** et sélectionnez **OAuth 2.0 client ID (ID client OAuth 2.0)**.
 
-1. Vous pouvez être invité à définir un nom de produit dans la console d'accord. Faites-le.
+1. Dans la liste **Social APIs**, sélectionnez **Google+ API**.
+
+     ![image](images/chooseGooglePlus.jpg)
+
+1. Cliquez sur **Enable** dans l'écran suivant.
+
+1. Sélectionnez l'onglet **Consent Screen** et indiquez le nom de produit affiché aux utilisateurs. les autres valeurs sont facultatives. Cliquez sur **Sauvegarder**.
+
+    ![image](images/consentScreen.png)
+    
+1. Dans la liste **Credentials**, sélectionnez OAuth client ID.
+
+     ![image](images/chooseCredentials.png)
+     
+
 
 1. Puis, vous serez invité à choisir un type d'application. Sélectionnez **iOS**.
 
@@ -55,6 +71,10 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 1. Dans **ID application pour iOS**, indiquez votre ID client iOS pour Android et cliquez sur **Sauvegarder**.
 
+	Remarque : en plus de l'ID client Google, la valeur inverse est également requise pour votre configuration client (voir ci-dessous). Pour accéder aux deux
+valeurs, téléchargez le fichier d'exemple plist en cliquant sur l'icône en forme de crayon :
+		![téléchargement du fichier info.plist](images/download_plist.png)
+
 ## Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
 {: #google-auth-ios-sdk}
 
@@ -71,21 +91,22 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 1. Enregistrez le `Podfile` et lancez `pod install` depuis la ligne de commande. CocoaPods installe les dépendances. La progression et les composants ajoutés s'affichent.
 
-**Important** : Vous devez à présent ouvrir votre projet en utilisant le fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.  
+  **Important** : Vous devez à présent ouvrir votre projet en utilisant le fichier `xcworkspace` généré par CocoaPods. Son nom est généralement `{your-project-name}.xcworkspace`.  
 
 1. Exécutez `open {nom_projet}.xcworkspace` depuis la ligne de commande pour ouvrir votre espace de travail de projet iOS.
 
 ### Configuration d'un projet iOS pour l'authentification Google
 {: #google-auth-ios-googleauth}
 Configurez l'intégration Google en mettant à jour le fichier `info.plist`. Le fichier `info.plist` est généralement situé dans
-le dossier `Supporting files` de votre projet Xcode. Vous pouvez éditer le fichier dans l'éditeur de liste ou avec un éditeur de texte.
+le dossier `Supporting files` de votre projet Xcode. Vous pouvez éditer ce fichier à l'aide de l'éditeur de liste de propriétés ou d'un éditeur de
+texte.
 
 * Configurez l'intégration Google en ajoutant les schémas d'URL suivants à votre fichier
 `info.plist`.
 	![Fichier info.plist](images/ios-google-infoplist-settings.png)
 
 	Le premier schéma d'URL est une version inversée de l'ID client dans Google Developer Console.  Par exemple, si votre ID client est
-`123123-abcabc.apps.googleusercontent.com`, votre schéma d'URL sera : `com.googleusercontent.apps.123123-abcabc`.
+`123123-abcabc.apps.googleusercontent.com`, votre schéma d'URL sera : `com.googleusercontent.apps.123123-abcabc`. 
 
 	Le second schéma d'URL est l'ID de bundle de votre application.
 
@@ -114,7 +135,7 @@ Code source**. Ajoutez le code XML suivant au fichier :
 	</array>
 
 	```
-	Mettez à jour les deux schémas d'URL. 
+	Mettez à jour les deux schémas d'URL.
 
 	**Important** : Ne modifiez pas les propriétés existantes dans le fichier `info.plist`. Si certaines propriétés se
 chevauchent, vous devrez les fusionner manuellement. Pour plus d'informations, voir [Try Sign-In
@@ -159,7 +180,7 @@ suivants :
 `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet.
 
-3. Utilisez le code suivant pour initialiser le SDK client. Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
+3. Utilisez le code suivant pour initialiser le SDK client.  Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
 **Route** et **Identificateur global unique de l'application** de la section **Options pour application mobile**.
 
 	Objective-C :
@@ -180,7 +201,7 @@ suivants :
 
 
 1. Enregistrez le gestionnaire d'authentification en ajoutant le code suivant à la méthode `application:didFinishLaunchingWithOptions`
-dans votre délégué d'application. Ajoutez ce code juste après l'emplacement où vous avez initialisé le client IMFClient.
+dans votre délégué d'application. Ajoutez ce code immédiatement après l'initialisation d'IMFClient :
 
 	Objective-C :
 
@@ -258,7 +279,7 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -291,3 +312,26 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 1. 	Votre demande doit aboutir. La sortie suivante figure alors dans l'outil LogCat :
 
 	![image](images/ios-google-login-success.png)
+	
+	
+	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift :
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser
+Mobile Client Access à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur à l'angle supérieur droit de
+l'écran pour sélectionner et se connecter sous un autre nom d'utilisateur.
+
+	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
+`nil`.

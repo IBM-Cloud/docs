@@ -11,7 +11,7 @@ El SDK del servidor de {{site.data.keyword.amashort}} proporciona un módulo OAu
 
 ## Antes de empezar
 {: #before-you-begin}
-* Debe estar familiarizado con el desarrollo de aplicaciones Liberty for Java en {{site.data.keyword.bluemix}}. Para obtener más información, consulte [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
+* Debe estar familiarizado con el desarrollo de aplicaciones Liberty for Java en {{site.data.keyword.Bluemix}}. Para obtener más información, consulte [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## Instalación del SDK del servidor de {{site.data.keyword.amashort}}
 {: #installing-server-sdk}

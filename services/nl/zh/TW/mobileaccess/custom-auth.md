@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # 使用自訂身分提供者來鑑別使用者
@@ -79,7 +79,13 @@ copyright:
 	}
 	```
 
+### 自訂身分提供者範例實作
+{: #custom-sample}
+在您開發自訂身分提供者時，可以使用自訂身分提供者的下列任何 Node.js 範例實作作為參照。請從 GitHub 儲存庫下載完整應用程式碼。
 
+ * [簡式範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [進階範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## {{site.data.keyword.amashort}} Server 與自訂身分提供者之間的一般通訊
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} 服務會將 `startAuthorization` 要求傳送給自訂身分提供者。
@@ -96,7 +102,7 @@ copyright:
 ## 自訂領域
 {: #custom-id-custom}
 
-自訂身分提供者支援一個自訂鑑別領域。若要處理送入的鑑別盤查，請在行動式用戶端應用程式中建立並登錄 AuthenticationDelegate/AuthenticationListener 實例。在 {{site.data.keyword.amashort}} 儀表板中配置自訂身分提供者時，請定義自訂鑑別領域名稱。它可以用來識別要求是來自特定 {{site.data.keyword.amashort}} 服務實例。 
+自訂身分提供者支援一個自訂鑑別領域。若要處理送入的鑑別盤查，請在行動式用戶端應用程式中建立並登錄 AuthenticationDelegate/AuthenticationListener 實例。在 {{site.data.keyword.amashort}} 儀表板中配置自訂身分提供者時，請定義自訂鑑別領域名稱。它可以用來識別要求是來自特定 {{site.data.keyword.amashort}} 服務實例。
 
 ## 後續步驟
 {: #next-steps}

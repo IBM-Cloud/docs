@@ -11,7 +11,7 @@
 	</topicmeta>
 	<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Client Access"
 		scope="peer">
-		<topicref format="html" href="overview.html" navtitle="概述" outputclass="subsection"
+		<topicref format="html" href="overview.html" navtitle="关于" outputclass="subsection"
 			scope="peer">
 			<topicref format="html" href="sdks-samples-apis.html"
 				navtitle="SDK、样本和 API 参考" scope="peer"/>
@@ -21,7 +21,7 @@
 			<topicref format="html" href="getting-started-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="getting-started-cordova.html" navtitle="Cordova" scope="peer"/>
 			<topicref format="html" href="getting-started-ios-swift-sdk.html"
-				navtitle="iOS (Swift SDK)" scope="peer"/>
+				navtitle="iOS (Swift SDK)" audience="blue" scope="peer"/>
 			<topicref format="html" href="getting-started-ios.html" navtitle="iOS (Objective-C SDK)"
 				scope="peer"/>
 		</topicref>
@@ -39,7 +39,7 @@
 			<topicref format="html" href="facebook-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="facebook-auth-cordova.html" navtitle="Cordova" scope="peer"/>
 			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
-				scope="peer"/>
+				audience="blue" scope="peer"/>
 			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS (Objective-C SDK)"
 				scope="peer"/>
 		</topicref>
@@ -48,7 +48,7 @@
 			<topicref format="html" href="google-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="google-auth-cordova.html" navtitle="Cordova" scope="peer"/>
 			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
-				scope="peer"/>
+				audience="blue" scope="peer"/>
 			<topicref format="html" href="google-auth-ios.html" navtitle="iOS (Objective-C SDK)"
 				scope="peer"/>
 		</topicref>
@@ -61,7 +61,7 @@
 			<topicref format="html" href="custom-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="custom-auth-cordova.html" navtitle="Cordova" scope="peer"/>
 			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS (Swift SDK)"
-				scope="peer"/>
+				audience="blue" scope="peer"/>
 			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS (Objective-C SDK)"
 				scope="peer"/>
 		</topicref>

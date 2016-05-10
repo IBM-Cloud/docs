@@ -218,7 +218,8 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 	```Swift
   let protectedResourceURL = "<URL della tua risorsa protetta>" // qualsiasi risorsa protetta
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
      print ("response:\(response?.responseText), no error")
   } else {
@@ -250,3 +251,15 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
  })
  response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
  ```
+
+1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione. 
+
+ Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
+
+ Il passaggio di ```callBack``` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

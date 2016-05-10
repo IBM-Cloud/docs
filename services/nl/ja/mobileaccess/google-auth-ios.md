@@ -20,17 +20,33 @@ copyright:
 {: #google-auth-ios-project}
 Google を ID プロバイダーとして使用することを開始するには、Google Developer Console にプロジェクトを作成して、Google クライアント ID を取得します。このクライアント ID は、どのアプリケーションが接続を試行しているかを Google に知らせるための固有 ID です。既に Google プロジェクトがある場合は、プロジェクトの作成について説明している手順をスキップし、資格情報の追加を開始できます。
 
-1. [Google Developer Console](https://console.developers.google.com) を開きます。
 
-1. プロジェクトを作成します。**「Create project (プロジェクトの作成)」**をクリックします。
 
-1. プロジェクトを選択し、**「Use Google APIs (Google API の使用)」**をクリックします。さらに、**「Enable APIs and get credentials like keys (API の使用可能化および鍵などの資格情報の取得)」**をクリックすることもできます。
+1. [Google Developer Console](https://console.developers.google.com)にプロジェクトを作成します。既にプロジェクトがある場合は、プロジェクト作成について説明している手順をスキップし、資格情報の追加を開始してください。
+   1.    新規プロジェクトのメニューを開きます。 
+         
+         ![image](images/FindProject.jpg)
 
-1. API リストから Google+ API を選択し、**「Enable API (API の使用可能化)」**をクリックします。
+   2.    **「プロジェクトの作成 (Create a project)」**をクリックします。
+   
+         ![image](images/CreateAProject.jpg)
 
-1. **「資格情報 (Credentials)」>「Add credentials (資格情報の追加)」**をクリックし、**「OAuth 2.0 client ID (OAuth 2.0 クライアント ID)」**を選択します。
 
-1. 同意コンソールで製品名を設定するよう要求される可能性があります。その場合は、設定してください。
+1. **「Social API」**リストから、**「Google+ API」**を選択します。
+
+     ![image](images/chooseGooglePlus.jpg)
+
+1. 次の画面から、**「使用可能 (Enable)」**をクリックします。
+
+1. **「同意取得」**タブを選択し、ユーザーに表示する製品名を指定します。その他の値はオプションです。**「保存」**をクリックします。
+
+    ![image](images/consentScreen.png)
+    
+1. **「資格情報」**リストから、「OAuth クライアント ID」を選択します。
+
+     ![image](images/chooseCredentials.png)
+     
+
 
 1. この時点で、アプリケーション・タイプの選択が表示されます。**「iOS」**を選択します。
 
@@ -54,6 +70,8 @@ Google を ID プロバイダーとして使用することを開始するには
 
 1. **「iOS のアプリケーション ID (Application ID for iOS)」**で、Android の iOS クライアント ID を指定し、**「保存」**をクリックします。
 
+	注: Google クライアント ID に加えて、クライアント構成にはリバース値も必要です (下記を参照)。両方の値にアクセスするには、鉛筆のアイコンを使用してサンプルの plist をダウンロードします。![info.plist file download](images/download_plist.png)
+
 ## iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #google-auth-ios-sdk}
 
@@ -70,7 +88,7 @@ Google を ID プロバイダーとして使用することを開始するには
 
 1. `Podfile` を保存し、コマンド・ラインから `pod install` を実行します。CocoaPods は依存関係をインストールします。進行状況と、どのコンポーネントが追加されたかが表示されます。
 
-**重要**: この時点で、CocoaPods によって生成された `xcworkspace` ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。  
+  **重要**: この時点で、CocoaPods によって生成された `xcworkspace` ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。  
 
 1. コマンド・ラインから `open {your-project-name}.xcworkspace` を実行して、iOS プロジェクトのワークスペースを開きます。
 
@@ -82,7 +100,7 @@ Google を ID プロバイダーとして使用することを開始するには
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
 	最初の URL スキーマは、Google Developer Console からのクライアント ID を逆にしたバージョンです。ユーザーのクライアント ID が `123123-abcabc.apps.googleusercontent.com` の場合、URL スキーマは `com.googleusercontent.apps.123123-abcabc` となります。
-
+ 
 
 	2 番目の URL スキーマは、アプリケーションのバンドル ID です。
 
@@ -173,7 +191,7 @@ Google を ID プロバイダーとして使用することを開始するには
 
 
 
-1. アプリ代行内の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加して、Google 認証ハンドラーを登録します。このコードは IMFClient を初期化した直後に追加してください。
+1. アプリ代行内の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加して、Google 認証ハンドラーを登録します。このコードは、IMFClient の初期化の直後に追加してください。
 
 	Objective-C:
                     
@@ -258,7 +276,7 @@ if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -291,3 +309,23 @@ if (error){
 1. 	ユーザーの要求は正常に処理されます。LogCat に以下の出力が表示されます。
 
 	![image](images/ios-google-login-success.png)
+	
+	
+	次のコードを追加してログアウト機能を追加することもできます。
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、Mobile Client Access が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+
+	ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

@@ -157,7 +157,7 @@ copyright:
  ```Swift
  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
@@ -177,13 +177,21 @@ copyright:
 1. 	您的要求應該會成功。您應該會在日誌中看到下列輸出。
 
  ```
- onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
+ onAuthenticationSuccess info = Optional({attributes = {};
      deviceId = 105747725068605084657;
      displayName = "donlonqwerty@gmail.com";
      isUserAuthenticated = 1;
      userId = 105747725068605084657;
  })
- response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
+ response:Optional("Hello, this is a protected resource!"), no error
  ```
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```
+ GoogleAuthenticationManager.sharedInstance.logout(callBack)
+ ```
+
+  如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下畫面右上角的使用者名稱來進行選取，並使用另一位使用者來登入。
+
+   將 `callBack` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。

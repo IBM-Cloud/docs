@@ -23,10 +23,10 @@ Añada funciones de seguridad y supervisión a la app para móvil con el servici
 Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}, siga estos pasos:
 
 1. Configure el entorno de desarrollo del cliente.
-Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, Cordova o iOS existente. También puede descargar la aplicación de ejemplo HelloAuthentication. 
+Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, Cordova o iOS existente. También puede descargar la aplicación de ejemplo HelloAuthentication.
    * **Android**: ([SDK](getting-started-android.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (SDK de Swift)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (SDK de Swift-C)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (SDK de Objective-C)**: ([SDK](getting-started-ios.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. Recursos seguros del lado del servidor. Proteja los recursos del programa de fondo móvil que se estén ejecutando en los tiempos de ejecución Node.js o Liberty for Java&trade; con la seguridad OAuth habilitada para móvil. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
@@ -53,6 +53,8 @@ Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, Cordova
 * [Core SDK (plug-in de Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 * [Core SDK (iOS - Objective-C) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [Autenticación personalizada: ejemplo simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [Autenticación personalizada: ejemplo avanzado](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Referencia de API
 {: api}

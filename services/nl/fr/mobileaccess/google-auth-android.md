@@ -15,23 +15,36 @@ Copyright : 2015, 2016
 
 ## Configuration d'un projet Google pour la plateforme Android
 {: #google-auth-android-project}
-Pour commencer à utiliser Google en tant que fournisseur d'identité, vous devez créer un projet dans Google Developer Console. Une partie de la création d'une projet consiste à obtenir un ID client Google.  L'ID client est un identificateur unique pour votre application.
+Pour commencer à utiliser Google en tant que fournisseur d'identité, vous devez créer un projet dans Google Developer Console. Une partie de la création d'une projet consiste à obtenir un ID client Google.  L'ID
+client Google est un identificateur unique utilisé par l'authentification Google.
 
 1. Créez un projet dans [Google Developer Console](https://console.developers.google.com).
 Si vous avez déjà un projet, vous pouvez passer les étapes qui décrivent la création du projet et commencer par l'ajout des droits d'accès.
+   1.    Ouvrez le menu de nouveau projet. 
+         
+         ![image](images/FindProject.jpg)
 
-1. Créez un projet. Cliquez sur **Create project (Créer un projet)**.
+   2.    Cliquez sur **Créer un projet**.
+   
+         ![image](images/CreateAProject.jpg)
 
-1. Sélectionnez votre projet et cliquez sur **Use Google APIs (Utiliser les API Google)** (vous pouvez aussi cliquer sur **Enable APIs and get credentials like keys (Activer les API et obtenir des données d'identification telles que des clés)**)
 
-1. Dans la liste des API, sélectionnez l'API Google+ et cliquez sur **Enable API (Activer l'API)**.
+   1. Dans la liste **Social APIs**, sélectionnez **Google+ API**.
 
-1. Cliquez sur **Credentials (Données d'identification)** dans le menu.
+     ![image](images/chooseGooglePlus.jpg)
 
-1. Cliquez sur **New credentials (Nouvelles données d'identification)** et sélectionnez **OAuth 2.0 client ID (ID client
-OAuth 2.0)**.
+   1. Cliquez sur **Enable** dans l'écran suivant.
 
-1. Indiquez un nom de produit dans l'onglet **OAuth consent screen (écran de consentement OAuth)**.
+1. Sélectionnez l'onglet **Consent Screen** et indiquez le nom de produit affiché aux utilisateurs. les autres valeurs sont
+facultatives. Cliquez sur **Sauvegarder**.
+
+    ![image](images/consentScreen.png)
+    
+1. Dans la liste **Credentials**, sélectionnez OAuth client ID.
+
+     ![image](images/chooseCredentials.png)
+     
+
 
 1. Sélectionnez un type d'application. Cliquez sur **Android**. Donnez un nom parlant à votre client Android.
 
@@ -41,7 +54,7 @@ OAuth 2.0)**.
 
 1. Un magasin de clés contenant un certificat pour les environnements de développement est stocké dans un fichier `~/.android/debug.keystore`. Le mot de passe du magasin de clés par défaut est `android`. Ce certificat est utilisé pour générer des applications en mode Debug.
 
-1. Extrayez l'empreinte digitale de votre certificat signataire :
+     1. Extrayez l'empreinte digitale de votre certificat signataire :
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -52,13 +65,15 @@ OAuth 2.0)**.
 
 1. Entrez le nom du package de votre application Android. Pour trouver ce nom, ouvrez le fichier `AndroidManifest.xml` dans Android Studio et recherchez : `<manifest package="{your-package-name}">`. Lorsque vous avez terminé, cliquez sur **Create (Créer)**.
 
-1. Notez l'ID de votre nouveau client Android. Vous devrez fournir cette valeur à {{site.data.keyword.Bluemix}}.
+Une boîte de dialogue s'affiche et présente votre ID client Google. Notez cette valeur. Vous devrez l'enregistrer dans
+{{site.data.keyword.Bluemix}}.
 
 
 ## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
 {: #google-auth-android-config}
 
-Maintenant que vous disposez d'un ID client Android, vous pouvez activer l'authentification Google dans le tableau de bord {{site.data.keyword.amashort}}.
+A présent que vous disposez d'un ID client Google pour Android, vous pouvez activer l'authentification Google dans le tableau de bord
+{{site.data.keyword.amashort}}.
 
 1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
@@ -69,7 +84,8 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 1. Cliquez sur la vignette **Google** .
 
-1. Dans **ID application pour Android** indiquez votre ID client Android pour Android et cliquez sur **Sauvegarder**.
+1. Dans **ID d'application pour Android**, indiquez votre ID client pour Android et cliquez sur
+**Sauvegarder**.
 
 ## Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
 {: #google-auth-android-sdk}
@@ -171,14 +187,27 @@ Vous devez disposer d'un système de back end mobile créé avec un conteneur bo
 	});
 ```
 
-1. Lancez votre application. Un écran de connexion Google s'affiche :
+1. Lancez votre application. Un écran de connexion Google s'affiche. Après la connexion, l'application demande à être autorisée à accéder aux ressources :
 
 	![image](images/android-google-login.png)
 
 	L'interface peut varier en fonction de votre périphérique Android et selon que vous êtes, ou non, connecté à Google.
 
-1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Google pour l'authentification.
+  Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Google pour l'authentification.
 
 1. 	Lorsque votre demande aboutit, la sortie suivante figure dans l'outil LogCat :
 
 	![image](images/android-google-login-success.png)
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ Si vous appelez ce code lorsqu'un utilisateur est connecté via Google, l'utilisateur est déconnecté de Google. Lorsque l'utilisateur tente à nouveau de se
+connecter, il doit alors sélectionner le compte Google sous lequel se reconnecter. S'il tente de se reconnecter avec un ID Google qu'il a déjà utilisé, ses données
+d'identification ne lui sont pas redemandées. Pour que des données d'identification de connexion lui soient réclamées à nouveau, l'utilisateur soit supprimer
+son compte Google du périphérique Android.
+
+ La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.

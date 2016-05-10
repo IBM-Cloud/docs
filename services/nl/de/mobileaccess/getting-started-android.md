@@ -26,7 +26,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK wird mit Gradle, einem Abhängigke
 1. Öffnen Sie die Datei `build.gradle`.
 **Tipp**: Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine für das Projekt und eine für das Anwendungsmodul. Verwenden Sie die Datei für das Anwendungsmodul.
 
-1. Suchen Sie den Abschnitt **dependencies** in der Datei `build.gradle`. Fügen Sie eine Abhängigkeit 'compile' für das {{site.data.keyword.amashort}}-Client-SDK hinzu:
+1. Suchen Sie den Abschnitt **dependencies** in der Datei `build.gradle`.  Fügen Sie eine Abhängigkeit 'compile' für das {{site.data.keyword.amashort}}-Client-SDK hinzu:
 
 	```Gradle
 	dependencies {
@@ -55,7 +55,7 @@ Initialisieren Sie das SDK, indem Sie die Parameter für den Kontext, für 'appl
 
 1. Klicken Sie auf der Hauptseite des {{site.data.keyword.Bluemix_notm}}-Dashboards auf Ihre App. Klicken Sie auf **Mobile Systemerweiterungen**. Sie benötigen die Werte für die **Anwendungsroute** und die **Anwendungs-GUID** für die Initialisierung des SDK.
 
-2. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK in Ihrer Android-Anwendung. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
+2. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK in Ihrer Android-Anwendung.  Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
 <br/>Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte unter **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
 	```Java

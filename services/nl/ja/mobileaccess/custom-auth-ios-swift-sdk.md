@@ -157,7 +157,7 @@ Client SDK を初期化し、カスタム認証代行を登録した後、モバ
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -181,3 +181,13 @@ Client SDK を初期化し、カスタム認証代行を登録した後、モバ
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
+
+ ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

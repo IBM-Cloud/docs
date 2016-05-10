@@ -214,3 +214,13 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 1. 	请求成功后，将在 LogCat 工具中显示以下输出：
 
 	![图像](images/android-custom-login-success.png)
+
+1. 通过添加以下代码，您还可以添加注销功能：
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
+
+ 传递给注销功能的 `listener` 值可以为空值。

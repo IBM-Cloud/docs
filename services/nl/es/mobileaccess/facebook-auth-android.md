@@ -66,11 +66,11 @@ Cuando disponga de un ID de la aplicación de Facebook y cuando haya configurado
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
-1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).Necesitará estos valores cuando inicialice el SDK.
+1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`). Necesitará estos valores cuando inicialice el SDK.
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Facebook**. 
+1. Pulse el mosaico **Facebook**.
 
 1. Especifique el ID de aplicación de Facebook y haga clic en **Guardar**.
 
@@ -147,7 +147,7 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 
 1. Inicialice el SDK del cliente y registre el gestor de autenticación de Facebook. Para inicializar el SDK de cliente de {{site.data.keyword.amashort}}, especifique los parámetros de contexto, identificador exclusivo global de la app (`applicationGUID`) y ruta (`applicationRoute`).<br/>
  Un lugar habitual, aunque no obligatorio, donde colocar el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.<br/>
- Sustituya *applicationRoute* y *applicationGUID* por los valores correspondientes a **Ruta** y a **Identificador exclusivo global de la app** del menú **Opciones móviles** de la página principal de la app del panel de control de Bluemix. 
+ Sustituya *applicationRoute* y *applicationGUID* por los valores correspondientes a **Ruta** y a **Identificador exclusivo global de la app** del menú **Opciones móviles** de la página principal de la app del panel de control de Bluemix.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -213,3 +213,13 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 1. 	Cuando la solicitud se realiza correctamente, se muestra la siguiente salida en la utilidad LogCat:
 
 	![imagen](images/android-facebook-login-success.png)
+
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Si invoca este código después de que un usuario haya iniciado sesión en Facebook, dicha sesión de Facebook se cerrará. Cuando el usuario intente iniciar sesión de nuevo, se le solicitarán sus credenciales de Facebook. 
+
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 

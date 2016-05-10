@@ -117,11 +117,15 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 ## 自訂身分提供者範例實作
 {: #custom-sample}
-在您開發自訂身分提供者時，可以使用自訂身分提供者的下列 Node.js 範例實作作為參照。請從 [Github 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下載完整應用程式碼。
+在您開發自訂身分提供者時，可以使用自訂身分提供者的下列任何 Node.js 範例實作作為參照。請從 GitHub 儲存庫下載完整應用程式碼。
 
-### JSON 結構
+* [簡式範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [進階範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-此實作假設提供的鑑別盤查回答是具有下列結構的 JSON 物件：
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -130,7 +134,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
  }
  ```
 
-### 自訂身分提供者範例程式碼
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -209,6 +213,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## 後續步驟
 {: #next-steps}

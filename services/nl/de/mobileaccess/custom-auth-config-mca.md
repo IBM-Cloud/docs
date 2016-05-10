@@ -12,14 +12,14 @@ Zur Verwendung einer angepassten Authentifizierung mit Ihrer mobilen App müssen
 ## Vorbereitungen
 {: #custom-dash-begin}
 * Lesen Sie die Informationen in [Einführung](getting-started.html).
-* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
+* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK.  Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
 * Führen Sie eine aktive Anwendung eines Identitätsproviders aus.
 
 ## Angepasste Authentifizierung im {{site.data.keyword.Bluemix}}-Dashboard konfigurieren
 {: #custom-dash-config}
 Verwenden Sie das {{site.data.keyword.amashort}}-Dashboard, um die angepasste Authentifizierung zu konfigurieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix}}-Dashboard. 
+1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix}}-Dashboard.
 
 1. Klicken Sie auf **Mobile Systemerweiterungen** und notieren Sie die Werte für **Route** (`applicationRoute`) und **App-GUID** (`applicationGUID`). Sie benötigen diese Werte, wenn Sie das SDK initialisieren.
 

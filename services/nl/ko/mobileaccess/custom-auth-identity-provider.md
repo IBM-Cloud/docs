@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -152,14 +152,16 @@ JSON 오브젝트를 지정합니다.
 
 ## 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}
-사용자 정의 ID 제공자를 개발할 때 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을
-사용할 수 있습니다. 전체 애플리케이션 코드는
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)에서
-다운로드하십시오. 
+사용자 정의 ID 제공자를 개발할 때는 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용할 수 있습니다. 
+GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
 
-### JSON 구조
+* [단순 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [고급 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-이 구현은 제공된 인증 확인 응답이 다음 구조의 JSON 오브젝트라고 가정합니다. 
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -168,7 +170,7 @@ JSON 오브젝트를 지정합니다.
  }
  ```
 
-### 사용자 정의 ID 제공자 샘플 코드
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -231,7 +233,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 			}
 		}
 	} else {
-logger.debug("Login failure for userId ::", username);
+		logger.debug("Login failure for userId ::", username);
 	}
 
 	res.status(200).json(responseJson);
@@ -247,6 +249,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## 다음 단계
 {: #next-steps}

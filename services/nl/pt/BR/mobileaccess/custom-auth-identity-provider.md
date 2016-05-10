@@ -113,8 +113,7 @@ O objeto de identidade do usuário é usado pelo serviço {{site.data.keyword.am
 ## Considerações de segurança
 {: #custom-security}
 
-Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor de identidade customizado contém um cabeçalho de autorização para que o provedor de identidade customizado possa verificar se a solicitação está vindo de uma origem autorizada. Embora não seja estritamente obrigatório, considere validar o cabeçalho de autorização instrumentando seu provedor de identidade customizado com um {{site.data.keyword.amashort}} Server SDK. 
-Para usar esse SDK, seu aplicativo provedor de identidade customizado deve ser
+Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor de identidade customizado contém um cabeçalho de autorização para que o provedor de identidade customizado possa verificar se a solicitação está vindo de uma origem autorizada. Embora não seja estritamente obrigatório, considere validar o cabeçalho de autorização instrumentando seu provedor de identidade customizado com um {{site.data.keyword.amashort}} Server SDK. Para usar esse SDK, seu aplicativo provedor de identidade customizado deve ser
 implementado com o Node.js ou o Liberty for Java&trade;&trade; e executado no
 {{site.data.keyword.Bluemix_notm}}.
 
@@ -122,11 +121,15 @@ O cabeçalho de autorização contém informações sobre o cliente móvel e o a
 
 ## Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}
-É possível usar a implementação de amostra Node.js a seguir de um provedor de identidade customizado como uma referência ao desenvolver seu provedor de identidade customizado. Faça download do código do aplicativo completo a partir do [repositório do Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+É possível usar qualquer uma das implementações de amostra Node.js a seguir de um provedor de identidade customizado como referência ao desenvolver seu provedor de identidade customizado. Faça download do código do aplicativo completo dos repositórios GitHub.
 
-### Estrutura JSON
+* [Amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Amostra avançada](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-Essa implementação supõe que a resposta do desafio de autenticação fornecido seja um objeto JSON com a estrutura a seguir:
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -135,7 +138,7 @@ Essa implementação supõe que a resposta do desafio de autenticação fornecid
  }
  ```
 
-### Código de amostra do provedor de identidade customizado
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -143,7 +146,7 @@ var cfenv = require('cfenv');
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
 
-// Usando repositório do usuário codificado permanentemente
+// Using hardcoded user repository
 var userRepository = {
 	"john.lennon":      { password: "12345", displayName:"John Lennon", dob:"October 9, 1940"},
 	"paul.mccartney":   { password: "67890", displayName:"Paul McCartney", dob:"June 18, 1942"},
@@ -214,6 +217,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Próximas Etapas
 {: #next-steps}

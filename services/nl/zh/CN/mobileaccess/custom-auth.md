@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # 使用定制身份提供者来认证用户
@@ -79,7 +79,13 @@ copyright:
 	}
 	```
 
+### 定制身份提供者的样本实现
+{: #custom-sample}
+开发定制身份提供者时，可以将定制身份提供者的以下任何 Node.js 样本实现用作参考。请从 GitHub 存储库下载完整应用程序代码。
 
+ * [简单样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [高级样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## {{site.data.keyword.amashort}} 服务器与定制身份提供者之间的典型通信
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} 服务向定制身份提供者发送 `startAuthorization` 请求。
@@ -96,7 +102,7 @@ copyright:
 ## 定制域
 {: #custom-id-custom}
 
-一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在移动客户端应用程序中创建并注册 AuthenticationDelegate/AuthenticationListener 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。此域名可用于确定请求是从特定 {{site.data.keyword.amashort}} 服务实例传入的。 
+一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在移动客户端应用程序中创建并注册 AuthenticationDelegate/AuthenticationListener 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。此域名可用于确定请求是从特定 {{site.data.keyword.amashort}} 服务实例传入的。
 
 ## 后续步骤
 {: #next-steps}

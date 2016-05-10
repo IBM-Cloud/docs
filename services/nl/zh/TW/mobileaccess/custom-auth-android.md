@@ -212,3 +212,13 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 1. 	當要求成功時，LogCat 工具中會有下列輸出：
 
 	![影像](images/android-custom-login-success.png)
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答接收自伺服器的盤查。
+
+ 傳遞給 logout 函數的 `listener` 值可以是空值。

@@ -14,7 +14,8 @@ copyright:
 {: #gettingstarted}
 *前次更新：2016 年 3 月 21 日*
 
-利用 {{site.data.keyword.amafull}} 服務，將安全及監視功能新增至您的行動式應用程式。您可以配置用戶端鑑別和身分提供者，讓使用者可以利用其現有的 Google 或 Facebook 帳戶登入應用程式。此外，還可以將監視功能新增至應用程式，以同時啟用用戶端記載和使用情形統計資料。{:shortdesc}
+利用 {{site.data.keyword.amafull}} 服務，將安全及監視功能新增至您的行動式應用程式。您可以配置用戶端鑑別和身分提供者，讓使用者可以利用其現有的 Google 或 Facebook 帳戶登入應用程式。此外，還可以將監視功能新增至應用程式，以同時啟用用戶端記載和使用情形統計資料。
+{:shortdesc}
 
 **附註：**{{site.data.keyword.amashort}} 服務先前稱為 Advanced Mobile Access。
 
@@ -25,7 +26,7 @@ copyright:
 您可以將 {{site.data.keyword.amashort}} SDK 新增至現有的 Android、Cordova 或 iOS 應用程式。您也可以下載 HelloAuthentication 範例應用程式。
    * **Android**：([SDK](getting-started-android.html))（[範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)）
    * **Cordova**：([SDK](getting-started-cordova.html))（[範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication)）
-   * **iOS (Swift SDK)**：([SDK](getting-started-ios-swift-sdk.html))（[範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication)）
+   * **iOS (Swift-C SDK)**：([SDK](getting-started-ios-swift-sdk.html))（[範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication)）
    * **iOS (Objective-C SDK)**：([SDK](getting-started-ios.html))（[範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)）
 
 1. 保護伺服器端資源的安全。使用已啟用行動式功能的 OAuth 安全，來保護 Node.js 或 Liberty for Java&trade; 執行時期上執行的行動式後端資源。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
@@ -52,6 +53,8 @@ copyright:
 * [Core SDK（Cordova 外掛程式）](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 * [Core SDK (iOS - Objective-C) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [自訂鑑別 - 簡式範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [自訂鑑別 - 進階範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## API 參考資料
 {: api}

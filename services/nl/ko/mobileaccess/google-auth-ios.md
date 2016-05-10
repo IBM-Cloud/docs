@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -20,17 +20,34 @@
 {: #google-auth-ios-project}
 ID 제공자로 Google 사용을 시작하려면 Google 클라이언트 ID를 확보하기 위해 Google 개발자 콘솔에서 프로젝트를 작성하십시오. 이 클라이언트 ID는 연결하려고 시도하는 애플리케이션을 Google에서 인지할 수 있게 하는 고유 ID입니다. 이미 Google 프로젝트가 있는 경우 프로젝트 작성에 대해 설명하는 단계를 건너뛰고 신임 정보 추가를 시작할 수 있습니다. 
 
-1. [Google 개발자 콘솔](https://console.developers.google.com)을 여십시오. 
 
-1. 프로젝트를 작성하십시오. **프로젝트 작성**을 클릭하십시오. 
 
-1. 프로젝트를 선택하고 **Google API 사용**을 클릭하십시오. 또한 **API 사용 및 키와 같은 신임 정보 가져오기**를 클릭할 수 있습니다. 
+1. [Google 개발자 콘솔](https://console.developers.google.com)에서 프로젝트를 작성하십시오.
+이미 프로젝트가 있는 경우 프로젝트 작성에 대해 설명하는 단계를 건너뛰고 신임 정보 추가를 시작할 수 있습니다. 
+   1.    새 프로젝트 메뉴를 여십시오.  
+         
+         ![이미지](images/FindProject.jpg)
 
-1. API 목록에서 Google+ API를 선택하고 **API 사용**을 클릭하십시오. 
+   2.    **프로젝트 작성**을 클릭하십시오. 
+   
+         ![이미지](images/CreateAProject.jpg)
 
-1. **신임 정보 > 신임 정보 추가**를 클릭하고 **OAuth 2.0 클라이언트 ID**를 선택하십시오. 
 
-1. 승인 콘솔에서 제품 이름을 설정하도록 요청받을 수 있습니다. 계속 진행하십시오. 
+1. **소셜 API** 목록에서 **Google+ API**를 선택하십시오. 
+
+     ![이미지](images/chooseGooglePlus.jpg)
+
+1. 다음 화면에서 **사용**을 클릭하십시오. 
+
+1. **동의 화면** 탭을 선택하고 사용자에게 표시된 제품 이름을 제공하십시오. 기타 값은 선택사항입니다. **저장**을 클릭하십시오.
+
+    ![이미지](images/consentScreen.png)
+    
+1. **신임 정보** 목록에서 OAuth 클라이언트 ID를 선택하십시오. 
+
+     ![이미지](images/chooseCredentials.png)
+     
+
 
 1. 이 시점에 애플리케이션 유형 선택사항이 표시됩니다. **iOS**를 선택하십시오. 
 
@@ -54,6 +71,10 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 
 1. **iOS용 애플리케이션 ID**에서 Android용 iOS 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
 
+	참고: Google 클라이언트 id와 함께, 클라이언트 구성에 대해 반대 값도 필요합니다(아래 참조). 
+두 값에 모두 액세스하려면 연필 아이콘을 사용하여 예제 plist를 다운로드하십시오.
+![info.plist 파일 다운로드](images/download_plist.png)
+
 ## iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #google-auth-ios-sdk}
 
@@ -70,18 +91,19 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 
 1. `Podfile`을 저장하고 명령행에서 `pod install`을 실행하십시오. CocoaPods가 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트를 확인할 수 있습니다. 
 
-**중요**: 이제 CocoaPods에서 생성한 `xcworkspace` 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다.   
+  **중요**: 이제 CocoaPods에서 생성한 `xcworkspace` 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다.   
 
 1. 명령행에서 `open {your-project-name}.xcworkspace`를 실행하여 iOS 프로젝트 작업공간을 여십시오.
 
 ### Google 인증을 위해 iOS 프로젝트 구성
 {: #google-auth-ios-googleauth}
-`info.plist` 파일을 업데이트하여 Google 통합을 구성하십시오. `info.plist` 파일은 보통 Xcode 프로젝트의 `지원 파일` 폴더에 있습니다. 특성 목록 편집기에서 또는 문서 편집기를 사용하여 해당 파일을 편집할 수 있습니다.
+`info.plist` 파일을 업데이트하여 Google 통합을 구성하십시오. `info.plist` 파일은 보통 Xcode 프로젝트의 `지원 파일` 폴더에 있습니다. 
+특성 목록 편집기에서 또는 문서 편집기를 사용하여 해당 파일을 편집할 수 있습니다. 
 
 * 다음 URL 스키마를 `info.plist` 파일에 추가하여 Google 통합을 구성하십시오.
 	![info.plist 파일](images/ios-google-infoplist-settings.png)
 
-	첫 번째 URL 스키마는 Google 개발자 콘솔에서 가져온 클라이언트 ID의 역방향 버전입니다. 예를 들어, 클라이언트 ID가 `123123-abcabc.apps.googleusercontent.com`이면 URL 스키마는 `com.googleusercontent.apps.123123-abcabc`입니다.
+	첫 번째 URL 스키마는 Google 개발자 콘솔에서 가져온 클라이언트 ID의 역방향 버전입니다. 예를 들어, 클라이언트 ID가 `123123-abcabc.apps.googleusercontent.com`이면 URL 스키마는 `com.googleusercontent.apps.123123-abcabc`입니다. 
 
 	두 번째 URL 스키마는 애플리케이션의 번들 ID입니다.
 
@@ -176,7 +198,8 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시
 
 
 
-1. 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Google 인증 핸들러를 등록하십시오. IMFClient를 초기화한 후에 바로 이 코드를 추가하십시오.
+1. 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Google 인증 핸들러를 등록하십시오. 
+IMFClient를 초기화한 이후 즉시 이 코드를 추가하십시오. 
 
 	Objective-C:
                     
@@ -264,7 +287,7 @@ if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -298,3 +321,26 @@ if (error){
 1. 	요청이 성공적으로 처리되어야 합니다. LogCat에 다음 출력이 표시되어야 합니다. 
 
 	![이미지](images/ios-google-login-success.png)
+	
+	
+	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우,
+사용자에게는 인증 용도로 Google을 사용하도록 Mobile Client Access 권한 부여 프롬프트가 제시됩니다. 
+이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
+
+	로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

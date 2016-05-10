@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -306,8 +306,7 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의
 보호를 받는 자원이 있어야 합니다. 
 
-
- 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을
 전송하십시오. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의
 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다.
 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 갖춘 모바일 애플리케이션에서만
@@ -354,7 +353,26 @@ if (error){
 	};
 
 	```
-
 1. 	요청이 성공하면 Xcode 콘솔에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/ios-custom-login-success.png)
+	
+	
+	
+	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	Swift:
+ 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 
+사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 
+

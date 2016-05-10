@@ -1,8 +1,8 @@
 ---
 
-저작권:
-  연도: 2015, 2016
-  
+copyright:
+  years: 2015, 2016
+
 ---
 
 # 사용자 정의 ID 제공자를 사용하여 사용자 인증
@@ -106,7 +106,14 @@ HTTP 401 및 권한 범위를 리턴합니다.
 	}
 	```
 
+### 사용자 정의 ID 제공자의 샘플 구현
+{: #custom-sample}
+사용자 정의 ID 제공자를 개발할 때는 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용할 수 있습니다. 
+GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
 
+ * [단순 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [고급 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## {{site.data.keyword.amashort}} 서버와 사용자 정의 ID 제공자 간 일반적 통신
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} 서비스에서
@@ -143,7 +150,7 @@ HTTP 401 및 권한 범위를 리턴합니다.
 인스턴스를 작성하고 등록하십시오. {{site.data.keyword.amashort}} 대시보드에서
 사용자 정의 ID 제공자를 구성할 때 사용자 정의 인증 영역 이름을 정의하십시오. 이 이름으로
 요청이 특정 {{site.data.keyword.amashort}} 서비스 인스턴스에서 제공됨을
-식별할 수 있습니다.  
+식별할 수 있습니다. 
 
 ## 다음 단계
 {: #next-steps}

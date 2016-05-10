@@ -1,6 +1,6 @@
 ---
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 ---
 # iOS 애플리케이션에서 IMFURLProtocol 사용
 {: #imfurl}

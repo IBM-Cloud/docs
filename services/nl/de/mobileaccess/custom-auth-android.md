@@ -11,7 +11,7 @@ Konfigurieren Sie Ihre Android-Anwendung, die mit der angepassten Authentifizier
 
 ## Vorbereitungen
 {: #before-you-begin}
-Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist. Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein. Weitere Informationen finden Sie über die folgenden Links:
+Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist.  Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  Weitere Informationen finden Sie über die folgenden Links:
  * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Android-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -46,7 +46,8 @@ Fügen Sie die Internetzugriffsberechtigung unter dem Element `<manifest>` hinzu
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
 
-1. Initialisieren Sie das SDK. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
+1. Initialisieren Sie das SDK.  
+Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
 Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die angezeigt werden, wenn Sie auf **Mobile Systemerweiterungen** in Ihrer App im {{site.data.keyword.Bluemix_notm}}-Dashboard klicken.
 
 	```Java
@@ -70,11 +71,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argumente
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: Wird vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellt, sodass Sie Antworten auf Authentifizierungsanforderungen oder Fehler bei der Erfassung von Berechtigungsnachweisen zurückmelden können. Dadurch können Sie zum Beispiel reagieren, wenn ein Benutzer die Authentifizierung abbricht.
+* `AuthenticationContext`: Wird vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellt, sodass Sie Antworten auf Authentifizierungsanforderungen oder Fehler bei der Erfassung von Berechtigungsnachweisen zurückmelden können.  Dadurch können Sie zum Beispiel reagieren, wenn ein Benutzer die Authentifizierung abbricht.
 * `JSONObject`: Enthält eine angepasste Authentifizierungsanforderung, wie sie durch einen angepassten Identitätsprovider zurückgegeben wird.
 * `Context`: Eine Referenz auf den Android-Kontext, der beim Senden der Anforderung verwendet wurde. In der Regel stellt dieses Argument eine Android-Aktivität dar.
 
-Durch Aufrufen der Methode `onAuthenticationChallengeReceived` delegiert das {{site.data.keyword.amashort}}-Client-SDK die Steuerung an den Entwickler. Der Service wartet auf Berechtigungsnachweise. Der Entwickler muss Berechtigungsnachweise erfassen durch eine der Methoden der Schnittstelle `AuthenticationContext` an das {{site.data.keyword.amashort}}-Client-SDK zurückmelden.
+Durch Aufrufen der Methode `onAuthenticationChallengeReceived` delegiert das {{site.data.keyword.amashort}}-Client-SDK die Steuerung an den Entwickler.  Der Service wartet auf Berechtigungsnachweise. Der Entwickler muss Berechtigungsnachweise erfassen durch eine der Methoden der Schnittstelle `AuthenticationContext` an das {{site.data.keyword.amashort}}-Client-SDK zurückmelden.
 
 ### Methode 'onAuthenticationSuccess'
 {: #custom-android-authlistener-onsuccess}
@@ -117,7 +118,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CustomAuthenticationListener implements AuthenticationListener {
-
 	@Override
 	public void onAuthenticationChallengeReceived (AuthenticationContext authContext,
 											JSONObject challenge, Context context) {
@@ -214,3 +214,13 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
 
 	![Bild](images/android-custom-login-success.png)
+
+1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
+
+ Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann null sein.

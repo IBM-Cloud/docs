@@ -21,21 +21,21 @@ Anmerkung: Der Mobile Client Access-Service wurde früher als Advanced Mobile Ac
    * [Facebook](facebook-auth-overview.html)
    * [Google](google-auth-overview.html)
    * [Angepasst](custom-auth.html)
-1. Konfigurieren Sie die Überwachung und Protokollierung der App. Weitere Informationen finden Sie in [Überwachung von Apps](app-monitoring.html).
+1. Konfigurieren Sie die Überwachung und Protokollierung der App.  Weitere Informationen finden Sie in [Überwachung von Apps](app-monitoring.html).
 
 
-># Zugehörige Links{:class="linklist"}
->## Lernprogramme und Beispiele{:id="samples"}
+># Zugehörige Links {:class="linklist"}
+>## Lernprogramme und Beispiele {:id="samples"}
 >* [android-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)
 >* [ios-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)
 >
-># Zugehörige Links{:class="linklist"}
+># Zugehörige Links {:class="linklist"}
 >## API-Referenz{:id="api"}
 >* [API-Kernreferenz (Android)](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 >* [API-Kernreferenz (iOS)](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 >
-># Zugehörige Links{:class="linklist"}
->## SDK{:id="sdk"}
+># Zugehörige Links {:class="linklist"}
+>## SDK {:id="sdk"}
 >* [Kern-SDK (iOS)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
 >* [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 >* [bms-clientsdk-cordova-plugin-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)

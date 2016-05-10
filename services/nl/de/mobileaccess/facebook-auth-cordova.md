@@ -11,7 +11,7 @@ Zur Konfiguration von Cordova-Anwendungen für die Integration in die Facebook-A
 
 ## Vorbereitungen
 {: #facebook-auth-before}
-* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein Cordova-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
+* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein Cordova-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Erstellen Sie eine Facebook-Anwendungs-ID. Weitere Informationen finden Sie in [Facebook-Anwendungs-ID vom Facebook-Entwicklerportal anfordern](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 * (optional) Machen Sie sich mit den folgenden Abschnitten vertraut:

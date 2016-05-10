@@ -20,17 +20,33 @@ copyright:
 {: #google-auth-ios-project}
 要开始将 Google 用作身份提供者，请在 Google 开发者控制台中创建项目以获取 Google 客户端标识。此客户端标识是供 Google 用于确定哪个应用程序正在尝试进行连接的唯一标识。如果已经有 Google 项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
 
-1. 打开 [Google 开发者控制台](https://console.developers.google.com)。
 
-1. 创建项目。单击**创建项目**。
 
-1. 选择项目，然后单击**使用 Google API**。您还可以单击**启用 API 并获取密钥等凭证**。
+1. 在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。如果已经有项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
+   1.    打开新项目菜单。 
+         
+         ![图像](images/FindProject.jpg)
 
-1. 在 API 列表中，选择 Google+ API，然后单击**启用 API**。
+   2.    单击**创建项目**。
+   
+         ![图像](images/CreateAProject.jpg)
 
-1. 单击**凭证 > 添加凭证**，然后选择 **OAuth 2.0 客户端标识**。
 
-1. 系统可能会要求您在同意控制台上设置产品名称。请照办。
+1. 从**社交 API** 列表中，选择 **Google+ API**。
+
+     ![图像](images/chooseGooglePlus.jpg)
+
+1. 在下一个屏幕中，单击**启用**。
+
+1. 选择**同意屏幕**选项卡，然后提供向用户显示的产品名称。其他值为可选项。单击 **保存**。
+
+    ![图像](images/consentScreen.png)
+    
+1. 从**凭证**列表中，选择 OAuth 客户端标识。
+
+     ![图像](images/chooseCredentials.png)
+     
+
 
 1. 此时，将向您显示应用程序类型选项。请选择 **iOS**。
 
@@ -54,6 +70,8 @@ copyright:
 
 1. 在 **iOS 的应用程序标识**中，指定 Android 的 iOS 客户端标识，然后单击**保存**。
 
+	注：除了 Google 客户端标识，您还需要逆向值进行客户端配置（请参见下文）。要访问这两个值，请使用画笔图标下载示例 plist：![下载 info.plist 文件](images/download_plist.png)
+
 ## 针对 iOS 配置 {{site.data.keyword.amashort}} 客户端 SDK
 {: #google-auth-ios-sdk}
 
@@ -70,7 +88,7 @@ copyright:
 
 1. 保存 `Podfile`，然后在命令行中运行 `pod install`。CocoaPods 会安装依赖关系。您将看到进度和添加的组件。
 
-**重要信息**：您现在必须使用 CocoaPods 生成的 `xcworkspace` 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。  
+  **重要信息**：您现在必须使用 CocoaPods 生成的 `xcworkspace` 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。  
 
 1. 在命令行中运行 `open {your-project-name}.xcworkspace` 以打开 iOS 项目工作空间。
 
@@ -81,7 +99,7 @@ copyright:
 * 通过将以下 URL 方案添加到 `info.plist` 文件来配置 Google 集成。
  ![info.plist 文件](images/ios-google-infoplist-settings.png)
 
-	第一个 URL 方案是从 Google 开发者控制台获得的反序客户端标识版本。例如，如果客户端标识为 `123123-abcabc.apps.googleusercontent.com`，那么 URL 方案为：`com.googleusercontent.apps.123123-abcabc`。
+	第一个 URL 方案是从 Google 开发者控制台获得的反序客户端标识版本。例如，如果客户端标识为 `123123-abcabc.apps.googleusercontent.com`，那么 URL 方案为：`com.googleusercontent.apps.123123-abcabc`。 
 
 	第二个 URL 方案是应用程序的捆绑软件标识。
 
@@ -169,7 +187,7 @@ copyright:
 
 
 
-1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，注册 Google 认证处理程序。在初始化 IMFClient 实例之后，立即添加以下代码：
+1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，注册 Google 认证处理程序。初始化 IMFClient 后，立即添加以下代码：
 
 	Objective-C:
 
@@ -248,7 +266,7 @@ copyright:
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -281,3 +299,23 @@ copyright:
 1. 	您的请求应该会成功。您应该会在 LogCat 中看到以下输出
 
 	![图像](images/ios-google-login-success.png)
+	
+	
+	通过添加以下代码，您还可以添加注销功能：
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 Mobile Client Access 权限，以使用 Google 进行认证。此时，用户可以单击屏幕右上角的用户名，以选择其他用户并登录。
+
+	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

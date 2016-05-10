@@ -215,3 +215,13 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 1. 	请求成功后，将在 LogCat 实用程序中显示以下输出：
 
 	![图像](images/android-facebook-login-success.png)
+
+1. 通过添加以下代码，您还可以添加注销功能：
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 如果您在用户登录 Facebook 之后调用此代码，那么用户将从 Facebook 注销。当用户尝试重新登录时，系统将提示他们输入 Facebook 凭证。
+
+ 传递给注销功能的 `listener` 值可以为空值。
