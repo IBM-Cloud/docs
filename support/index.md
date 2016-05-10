@@ -15,12 +15,12 @@ copyright:
 *Last updated: 19 April 2016*
 
 
-If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through Stack Overflow or opening a support ticket.
+If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through a forum, or opening a support ticket.
 {:shortdesc}
 
 ## Getting help
 {: #getting-help}
-To get help, you can go to Account and Support, or you can go directly to Stack Overflow, where you can search information or post questions.
+To open a support ticket or find other help options, you can go to Account and Support. You can also go directly to the Stack Overflow or developerWorks Answers forum to search information or post questions.
 {:shortdesc}
 
 ### Using Account and Support
@@ -30,17 +30,18 @@ To open Account and Support, log in to the {{site.data.keyword.Bluemix_notm}} us
 
 Click **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
 
-
 ### Asking a question
-Whether accessed directly or through Account and Support, Stack Overflow is a website that serves as a platform for users to ask and answer questions. The {{site.data.keyword.Bluemix_notm}} development and support teams are active on Stack Overflow, and follow the questions that are tagged with **bluemix**.
+The Stack Overflow and dW Answers forums both provide a wide variety of searchable answers to your Bluemix questions. If you don't find an existing answer, it's easy to ask a new question. 
 
-To ask a question in Stack Overflow, choose from the following options:
-  * From Account and Support, click **Get help**. On the page that is displayed, type your question in the search field to find answers. If the expected answer is not returned, you can click **POST TO STACK OVERFLOW** to post your question.
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} for technical questions about developing applications with the Bluemix platform and services
+  * [developerWorks Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} for questions about the Bluemix offering, and about getting started
 
-  * Go directly to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+You can also ask a question in Stack Overflow directly from Account and Support:
+  1. From Account and Support, click **Get help**. 
+  2. On the page that is displayed, type your question in the search field to find answers. 
+  3. If the expected answer is not returned, click **POST TO STACK OVERFLOW** to post your question.
 
-When you create a question in Stack Overflow, add a **bluemix** tag to your question to ensure that it is seen by the {{site.data.keyword.Bluemix_notm}} development and support teams.
-
+The {{site.data.keyword.Bluemix_notm}} development and support teams actively monitor Stack Overflow and dW Answers, and follow the questions that are tagged with **bluemix**. When you create a question in either forum, add a **bluemix** tag to ensure that the question is seen by the {{site.data.keyword.Bluemix_notm}} development and support teams.
 
 
 ## Viewing {{site.data.keyword.Bluemix_notm}} status
