@@ -10,9 +10,7 @@ copyright:
 
 {: #push-send-notifications}
 
-Depois de implementar seus aplicativos, é possível
-enviar notificações push básicas (sem usar tags, badges,
-cargas úteis adicionais ou arquivos de som).
+Depois de desenvolver seus aplicativos, é possível enviar notificações push básicas (sem usar tags, badges, cargas úteis adicionais ou arquivos de som).
 
 
 Envie notificações push básicas.
@@ -42,4 +40,4 @@ notificação push em primeiro plano em um dispositivo Android e iOS.
 	![Notificação push em primeiro plano no iOS](images/iOS_Screenshot.jpg)
 
 	A captura de tela a seguir mostra uma notificação push no plano de fundo para Android.
-![Notificação push no plano de fundo no Android](images/background.jpg)
+	![Notificação push no plano de fundo no Android](images/background.jpg)

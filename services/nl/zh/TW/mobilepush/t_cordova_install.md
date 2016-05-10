@@ -16,14 +16,14 @@ copyright:
 1. 設定您的模擬器。若為 Android Studio，請使用支援 Google Play API 的模擬器。
 1. 安裝 Git 指令行工具。若為 Windows，請確保選取**從 Windows 命令提示字元執行 Git** 選項。如需如何下載並安裝此工具的相關資訊，請參閱 [Git](https://git-scm.com/downloads)。
 
-1. 安裝 Node.js 及「節點套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載並安裝 Node.js 的相關資訊，請參閱 [Node.js](https://nodejs.org/en/download/)。
+1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載並安裝 Node.js 的相關資訊，請參閱 [Node.js](https://nodejs.org/en/download/)。
 1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache](https://cordova.apache.org/#getstarted)。
 
 	**附註**：若要檢視 Cordova Push 外掛程式 Readme 檔，請移至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
 
 
 ## 安裝 Cordova Push 外掛程式
-1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現有 Cordova 應用程式，請移至步驟 3。
+1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現存的 Cordova 應用程式，請移至步驟 3。
 
 
 	cordova create your_app_name
@@ -38,12 +38,12 @@ copyright:
 	若要修正此問題，請在 Xcode 或 Cordova 應用程式 **config.xml** 檔案中指定正確的「軟體組 ID」。
 
 1. 將最低支援的 API 或部署目標宣告新增至 Cordova 應用程式的 config.xml 檔案。minSdkVersion 值必須高於 15。targetSdkVersion 值必須一律反映可從 Google 取得的最新 Android SDK。
-	* **Android** - 使用編輯器開啟 config.xml 檔案，然後使用最低的目標 SDK 版本更新
+	* **Android** - 使用編輯器開啟 config.xml 檔案，然後使用最低及目標 SDK 版本更新
 ```<platform name="android">``` 元素：
 
 	```
 	<!-- add deployment target declaration -->
-	<platform name="android">    
+	<platform name="android">  
 			  <preference name="android-minSdkVersion" value="15" />
 			  <preference name="android-targetSdkVersion" value="23" />
 			</platform>
@@ -77,7 +77,7 @@ copyright:
 
 	```
 	ibm-mfp-core 1.0.0 "MFPCore"
-	ibm-mfp-push 1.0.0 “MFPPush"
+	ibm-mfp-push 1.0.0 "MFPPush"
 	```
 1. （僅限 iOS）- 配置 iOS 開發環境。
 	a. 使用 Xcode 開啟 *your-app-name***/platforms/ios** 目錄中的 your-app-name.xcodeproj 檔案。

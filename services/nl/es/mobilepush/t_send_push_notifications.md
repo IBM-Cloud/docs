@@ -11,7 +11,7 @@ copyright:
 {: #push-send-notifications}
 
 Una vez que haya desarrollado sus aplicaciones, puede enviar notificaciones push básicas (sin
-  utilizar etiquetas, identificadores, cargas útiles adicionales o archivos de sonido).
+  utilizar etiquetas, identificadores, cargas útiles adicionales o archivos de sonido).  
 
 
 Enviar notificaciones push básicas.

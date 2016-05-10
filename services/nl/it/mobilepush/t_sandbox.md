@@ -22,9 +22,9 @@ Per passare alla modalità di operazione del servizio di push dal sandbox alla p
 
 1. Utilizza la chiamata API REST delle impostazioni ApplicationID PUT
 2. Nel corpo JSON, conferma che la modalità è stata passata utilizzando la chiamata API [REST delle impostazioni ApplicationID PUT](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} . La risposta prevista è "mode": "PRODUCTION
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

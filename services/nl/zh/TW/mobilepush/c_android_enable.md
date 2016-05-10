@@ -5,9 +5,9 @@ copyright:
 ---
 
 
-# 啟用 Android 應用程式來接收推送通知
+# 讓 Android 應用程式可接收推送通知
 {: #tag_based_notifications}
 
 
 
-啟用 Android 應用程式來接收推送通知，並且將推送通知傳送給您的裝置。
+讓 Android 應用程式可接收推送通知，以及將推送通知傳送給您的裝置。

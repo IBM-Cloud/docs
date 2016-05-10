@@ -82,8 +82,8 @@ MFPPush.unsubscribe(tag, success, failure);
 ^(IMFResponse *response, NSError *error) {
    if (error){
        [self updateMessage:error.description];
- } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
+   } else {
+     NSDictionary* subStatus = [[NSDictionary alloc]init];
        subStatus = [response unsubscribeStatus];
        [self updateMessage:subStatus.description];
   }
@@ -106,7 +106,7 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-}
+} 
 ```
 
 **タグからのアンサブスクライブ**

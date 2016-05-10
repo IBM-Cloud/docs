@@ -30,8 +30,7 @@ Android에서는 이 설정 매개변수를 사용하지 않습니다. Android �
 
 ##	iOS
 {: #cordova_register_ios}
-경보, 배지 및 사운드 특성을 사용자 정의하려면
-다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
+경보, 배지 및 사운드 특성을 사용자 정의하려면 다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
 
 ```
 	var settings = {

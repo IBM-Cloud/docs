@@ -20,7 +20,7 @@ Com a API REST Push, aplicativos do servidor backend e clientes podem acessar fu
 
 Para obter a URL base para a API REST:
 
-1. Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que ligará automaticamente o serviço de Push a esse aplicativo. Se também já tiver criado um app backend, certifique-se de ligar o app ao Push Notification Service.
+1. Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos que ligará automaticamente o serviço de Push a esse aplicativo. Se também já tiver criado um app backend, certifique-se de ligar o app ao Push Notification Service. 
 
 1. Na página principal do painel Bluemix, acesse a área **Aplicativos** e depois clique em seu app.
 
@@ -31,7 +31,8 @@ Para obter a URL base para a API REST:
 ## Aceitar cabeçalho do idioma
 {: #push-api-rest-accept}
 
-O cabeçalho "Aceitar idioma" especifica qual idioma usar para as mensagens de erro geradas pela [API REST de Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}I. Os idiomas a seguir são suportados para as mensagens de erro: chinês (simplificado), chinês (tradicional), inglês (EUA), alemão, francês, italiano, japonês, coreano, português e espanhol.
+O cabeçalho "Accept-Language" especifica qual idioma a ser usado para mensagens de erro geradas pela [API
+REST de Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. Os idiomas a seguir são suportados para as mensagens de erro: chinês (simplificado), chinês (tradicional), inglês (EUA), alemão, francês, italiano, japonês, coreano, português e espanhol.
 
 ## appSecret
 {: #push-api-rest-secret}
@@ -62,7 +63,7 @@ A tela **Mostrar credenciais** mostra informações sobre o AppSecret:
    }
  ]
 }
-```
+``` 
 
 ##Filtros de API REST de Push
 {: #push-api-rest-filters}
@@ -93,7 +94,7 @@ Para a API GET da assinatura, as combinações a seguir são suportadas:
 - O nome pode ser um destes campos: tagName ou deviceId
 - Exceto para a plataforma, o operador pode ser == ou =@
 - Para a plataforma, o operador deve ser ==
-- Se o operador =@ for usado, o valor poderá ser uma subsequência. Se o operador == for usado, o valor deverá ser uma sequência de correspondência exata. 
+- Se o operador =@ for usado, o valor poderá ser uma subsequência. Se o operador == for usado, o valor deverá ser uma sequência de correspondência exata.
 - Para a API GET de identificação, as combinações a seguir são suportadas:
 - O nome pode ser um destes campos: “name” ou “description”
 - Se o operador =@ for usado, o valor poderá ser uma subsequência.

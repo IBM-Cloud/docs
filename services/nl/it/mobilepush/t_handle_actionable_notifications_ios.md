@@ -26,10 +26,12 @@ scelto.
 ```
 
 ###Swift
-
+ 
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
       //è necessario richiamare il gestore del completamente quando finito
       completionHandler()
   }
 ```    
+    
+

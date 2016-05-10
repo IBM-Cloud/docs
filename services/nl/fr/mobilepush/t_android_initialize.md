@@ -8,10 +8,9 @@ Copyright :
 # Initialisation du logiciel SDK Push pour les applis Android
 {: #android_initialize}
 
-Le code d'initialisation se trouve généralement dans la méthode onCreate de l'activité principale de votre application Android. 
+Le code d'initialisation se trouve généralement dans la méthode onCreate de l'activité principale de votre application Android.
 
-Cliquez sur le lien **Options pour application mobile** dans le tableau de bord de votre application Bluemix pour obtenir la route et l'identificateur global unique de l'application.
-Utilisez ces valeurs pour vos paramètres de route et d'identificateur global unique d'application. Modifiez le fragment de code pour qu'il utilise les paramètres appRoute et appGUID de votre appli Bluemix. 
+Cliquez sur le lien **Options pour application mobile** dans le tableau de bord de votre application Bluemix pour obtenir la route et l'identificateur global unique de l'application. Utilisez ces valeurs pour vos paramètres de route et d'identificateur global unique d'application. Modifiez le fragment de code pour qu'il utilise les paramètres appRoute et appGUID de votre appli Bluemix.
 
 
 ##Initialisation du logiciel SDK de base

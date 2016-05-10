@@ -32,7 +32,7 @@
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift

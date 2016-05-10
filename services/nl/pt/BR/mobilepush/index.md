@@ -41,7 +41,7 @@ atingirem um conjunto específico de usuários usando tags.
 credenciais para um provedor de notificação](t__main_push_config_provider.html)
 2. [Ative o app móvel para receber
 notificações](c_enable_push.html)
-3. [Envie notificações básicas](t_send_push_notifications.html)
+3. [Enviar notificações básicas](t_send_push_notifications.html)
 
 # Links relacionados
 {: #rellinks}

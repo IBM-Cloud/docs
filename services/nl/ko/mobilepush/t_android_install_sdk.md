@@ -10,8 +10,7 @@ copyright:
 
 이 섹션에서는 클라이언트 푸시 SDK를 설치하고 이를 사용하여 추가적으로 Android 애플리케이션을 개발하는 방법에 대해 설명합니다.
 
-Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템 설정 방법에 대한 자세한 정보는
-[Android Studio 개요](https://developer.android.com/tools/studio/index.html)를 참조하십시오. Gradle에 대한 자세한 정보는 [Gradle 빌드 구성](http://developer.android.com/tools/building/configuring-gradle.html)을 참조하십시오.
+Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템 설정 방법에 대한 자세한 정보는 [Android Studio 개요](https://developer.android.com/tools/studio/index.html)를 참조하십시오. Gradle에 대한 자세한 정보는 [Gradle 빌드 구성](http://developer.android.com/tools/building/configuring-gradle.html)을 참조하십시오.
 
 1. Android Studio에서 모바일 애플리케이션을 작성하고 연 다음에 애플리케이션 **build.gradle** 파일을 여십시오. 다음 종속 항목을 모바일 애플리케이션에 추가하십시오. 이러한 가져오기 명령은 다음에 나열된 코드 스니펫에 필요합니다.
 

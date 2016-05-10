@@ -18,7 +18,5 @@ Añada estas características de Servicio de notificaciones push a la aplicació
 
 
 
-
 -  Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](t_push_tagsmain.md).
-
 -  Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_notifications.md).

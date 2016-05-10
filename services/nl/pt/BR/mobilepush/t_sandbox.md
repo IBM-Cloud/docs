@@ -19,9 +19,9 @@ Para alternar o modo de operação do serviço de push de ambiente de simulaçã
 
 1. Use a chamada de API REST PUT ApplicationID Settings
 2. No corpo de JSON, confirme se o modo foi alternado usando a chamada de API [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. A resposta esperada é "mode": "PRODUCTION
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

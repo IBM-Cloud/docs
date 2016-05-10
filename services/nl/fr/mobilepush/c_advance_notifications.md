@@ -10,4 +10,3 @@ Copyright :
 {: #push-advanced-notifications-main}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
-

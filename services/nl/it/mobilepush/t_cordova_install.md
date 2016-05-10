@@ -10,13 +10,13 @@ copyright:
 
 Installa e utilizza il plugin di Push client per sviluppare ulteriormente le tue applicazioni Cordova. Questo installa anche il plugin Cordova Core, che inizializza la tua connessione a Bluemix.
 
-### Prima di cominciare 
+### Prima di cominciare
 
 1. Scarica le ultime versioni dell'SDK Android Studio e Xcode.
 1. Configura il tuo emulatore. Per Android Studio, utilizza un emulatore che supporti l'API Google Play.
 1. Installa lo strumento della riga di comando Git. Per Windows, assicurati di selezionare l'opzione **Esegui Git dal prompt dei comandi della finestra**. Per informazioni su come scaricare e installare questo strumento, consulta [Git](https://git-scm.com/downloads).
 
-1. Installa lo strumento Node.js e il gestore pacchetti di nodi (NPM). Lo strumento della riga comandi NPM è integrato con Node.js. Per informazioni su come scaricare e installare [Node.js](https://nodejs.org/en/download/).
+1. Installa lo strumento Node.js e il gestore pacchetti di nodi (NPM). Lo strumento della riga comandi NPM è integrato con Node.js. Per informazioni su come scaricare e installare Node.js, consulta [Node.js](https://nodejs.org/en/download/).
 1. Dalla riga comandi, installa gli strumenti della riga di comando Cordova utilizzando il comando **npm install -g cordova**. È necessario per utilizzare il plugin Push Cordova. Per informazioni su come installare Cordova e configurare la tua applicazione Cordova, consulta [Cordova Apache](https://cordova.apache.org/#getstarted).
 
 	**Nota**: per visualizzare il file readme del plugin Push Cordova, vai a [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)

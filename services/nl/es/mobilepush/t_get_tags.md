@@ -20,7 +20,7 @@ Utilice la API **getTags** siguiente para obtener una lista de etiquetas disponi
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags){
+    public void onSuccess(List<String> tags) { 
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
@@ -64,7 +64,7 @@ Recupere una matriz de etiquetas disponibles a las que suscribirse.
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Retrieve an array of tags to which the device is subscribed.
+
 ```
 
 ```
@@ -81,9 +81,9 @@ Copie los siguientes fragmentos de código en la aplicación iOS desarrollada ut
 Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de etiquetas disponibles a las que está suscrito el dispositivo.
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
+^(IMFResponse *response, NSError *error){ 
  if(error){    
    [self updateMessage:error.description];  
  } else {
@@ -94,7 +94,7 @@ Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de eti
 }
 }];
 ```
-
+       
 Utilice la API **retrieveSubscriptions** para obtener una lista de etiquetas a las que está suscrito
        el dispositivo.
 
@@ -153,3 +153,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
     }
 }
 ```
+
+
+

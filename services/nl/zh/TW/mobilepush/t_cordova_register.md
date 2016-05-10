@@ -53,13 +53,12 @@ alert: true,
 ```
 MFPPush.registerDevice({}, success, failure);```
 
-您可以使用 JSON.parse 存取 JavaScript 中成功回應參數的內容：
-**var token = JSON.parse(response).token**
+您可以使用 JSON.parse 存取 JavaScript 中成功回應參數的內容：**var token = JSON.parse(response).token**
 
 
 可用的索引鍵如下：```token```、```userId`` 及 ```deviceId``。
 
-下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
+下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Push Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
 
 
 
@@ -77,7 +76,7 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
-within the **onDeviceReady: function()**.
+在 **onDeviceReady: function()** 內。
 
 ```
 onDeviceReady: function() {
@@ -87,7 +86,7 @@ onDeviceReady: function() {
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
-alert: true,
+             alert: true,
              badge: true,
              sound: true
          }   

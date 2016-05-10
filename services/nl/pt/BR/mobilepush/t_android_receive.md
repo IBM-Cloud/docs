@@ -33,6 +33,4 @@ dispositivo foi registrado com sucesso no Serviço de notificação push. Nesse 
 possível enviar uma mensagem conforme descrito em Enviando notificações push básicas.
 3. Verifique se seus dispositivos receberam sua notificação. Se o
 aplicativo estiver em execução no primeiro plano, a notificação será
-manipulada por **MFPPushNotificationListener**. Se o aplicativo
-estiver no plano de fundo, uma mensagem será exibida na barra de notificação.//Receber
-notificações push em dispositivos Android
+manipulada por **MFPPushNotificationListener**. Se o aplicativo estiver em segundo plano, uma mensagem será exibida na barra de notificações.

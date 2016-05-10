@@ -34,8 +34,8 @@ Android 不使用 settings 参数。如果要仅构建 Android 应用程序，�
 
 ```
 	var settings = {
-ios: {
-alert: true,
+	   ios: {
+	       alert: true,
 	       badge: true,
 	       sound: true
 	   }
@@ -49,14 +49,15 @@ alert: true,
 {: #cordova_register_js}
 
 ```
-MFPPush.registerDevice({}, success, failure);```
+MFPPush.registerDevice({}, success, failure);
+```
 
 可使用 JSON.parse 访问 JavaScript 中成功响应参数的内容：**var token = JSON.parse(response).token**
 
 
 可用键如下所示：```token```、```userId`` 和 ```deviceId``。
 
-以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 客户机 SDK，向 Push Notification Service 注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
+以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 推送客户机 SDK，向 Push Notification Service 注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
 
 
 

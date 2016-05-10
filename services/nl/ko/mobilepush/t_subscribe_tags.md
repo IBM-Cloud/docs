@@ -64,8 +64,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 [push subscribeToTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if (error){
-
+  if(error){
      [self updateMessage:error.description];
   }else{
       NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -78,12 +77,10 @@ MFPPush.unsubscribe(tag, success, failure);
 
 태그 구독을 취소하려면 **unsubscribeFromTags** API를 사용하십시오.
 
-
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if (error){
-
+   if(error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -101,22 +98,19 @@ MFPPush.unsubscribe(tag, success, failure);
 
 태그를 구독하려면 **subscribeToTags** API를 사용하십시오.
 
-
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
 	if (error != nil) {
 //error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-}
+} 
 ```
 
 **태그 구독 해지**
 
 태그 구독을 취소하려면 **unsubscribeFromTags** API를 사용하십시오.
-
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
@@ -126,7 +120,7 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {
-print( "Error during  unsubscribed tags \(error) ")
+        print( "Error during  unsubscribed tags \(error) ")
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }

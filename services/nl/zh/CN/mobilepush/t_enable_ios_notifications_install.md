@@ -7,12 +7,14 @@
 
 ##安装 CocoaPods
 
-1. 在 Mac 终端中，使用以下命令安装 CocoaPods：```
+1. 在 Mac 终端中，使用以下命令安装 CocoaPods：
+```
 $ sudo gem install cocoapods
 ```
-2. 在终端中输入以下命令来初始化 CocoaPods。发出此命令时，确保此命令是在 Xcode 项目所在目录中运行。``pod init`` 命令会创建文件标题。```
+2. 在终端中输入以下命令来初始化 CocoaPods。发出此命令时，确保此命令是在 Xcode 项目所在目录中运行。`pod init` 命令会创建文件标题。
+```
 $ pod init
-``
+```
 3. 在生成的 Podfile 中，添加所需的 SDK 依赖关系。复制以下 Podfile。
 
    Objective-C
@@ -37,11 +39,11 @@ $ pod init
 	    pod 'BMSPush'
 	end
 	```
-3. 在终端中，转至项目文件夹，然后使用以下命令安装依赖关系：```
+3. 在终端中，转至项目文件夹，然后使用以下命令安装依赖关系：
+```
 $ pod update
 ```
 该命令会安装依赖关系并创建新的 Xcode 工作空间。**注**：确保始终打开新的 Xcode 工作空间，而不是原始 Xcode 项目文件：
-
 
 	```
 	$ open App.xcworkspace
@@ -87,4 +89,4 @@ import BMSPush
 
 转至 **Xcode > 构建设置 > 构建选项**，然后将**启用位代码**设置为**否**。
 
-**注意**：自 iOS 9 起，对应用程序传输安全性 (ATS) 功能的更改可能会影响您处理认证过程的方式。以下博客帖子描述了有关这些更改的更多信息：[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 和 [Connect your iOS 9 app to Bluemix today](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+**注意**：自 iOS 9 起，对应用程序传输安全性 (ATS) 功能的更改可能会影响您处理认证过程的方式。以下博客帖子描述了有关这些更改的更多信息：[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 和 [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

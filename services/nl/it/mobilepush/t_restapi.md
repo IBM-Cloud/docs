@@ -23,7 +23,7 @@ Per ottenere l'URL di base per la API REST:
 
 1. Crea un'applicazione di backend nella sezione Contenitori tipo del catalogo Bluemix®, che esegue automaticamente il bind del servizio Push a questa applicazione. Se già hai
                         creato un'applicazione di backend, assicurati di eseguirne il bind al Push
-                        Notification Service.
+                        Notification Service. 
 
 1. Nella pagina principale del dashboard Bluemix, vai nell'area **Applicazioni** e quindi fai clic sulla tua applicazione.
 
@@ -35,7 +35,7 @@ Per ottenere l'URL di base per la API REST:
 ## Intestazione Accept-Language
 {: #push-api-rest-accept}
 
-L'intestazione "Accept-Language" specifica quale lingua utilizzare per i messaggi di errore generati in output dalla [API REST di Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}I. Per i messaggi di errore sono supportate le
+L'intestazione "Accept-Language" specifica quale lingua utilizzare per i messaggi di errore generati in output dalla [API REST di Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. Per i messaggi di errore sono supportate le
                 seguenti lingue: cinese (semplificato), cinese, (tradizionale), inglese (US), tedesco, francese,
                 italiano, giapponese, coreano, portoghese e spagnolo.
 
@@ -73,7 +73,7 @@ La schermata **Visualizza credenziali** mostra le informazioni sull'AppSecret:
    }
  ]
 }
-```
+``` 
 
 ##Filtri API REST di Push
 {: #push-api-rest-filters}

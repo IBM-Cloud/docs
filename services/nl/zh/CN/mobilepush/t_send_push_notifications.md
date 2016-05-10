@@ -30,4 +30,5 @@ copyright:
 
 	![iOS 上的前台推送通知](images/iOS_Screenshot.jpg)
 
-	以下屏幕快照显示了 Android 后台的推送通知。![Android 上的后台推送通知](images/background.jpg)
+	以下屏幕快照显示了 Android 后台的推送通知。
+ ![Android 上的后台推送通知](images/background.jpg)

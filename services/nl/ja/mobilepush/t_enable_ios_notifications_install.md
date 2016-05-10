@@ -88,4 +88,4 @@ import BMSPush
 
 **「Xcode」>「ビルド設定」>「ビルド・オプション」に移動し、「Bitcode を使用可能に設定 (Set Enable Bitcode)」**を**「いいえ」**に設定します。
 
-**重要**: iOS 9 現在では、App Transport Security (ATS) 機能に対する変更が、認証プロセスの処理方法に影響する可能性があります。以下のブログ投稿に、変更に関する詳細情報が記載されています。 [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) および [Connect your iOS 9 app to Bluemix today](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+**重要**: iOS 9 現在では、App Transport Security (ATS) 機能に対する変更が、認証プロセスの処理方法に影響する可能性があります。以下のブログ投稿に、変更に関する詳細情報が記載されています。 [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) および [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

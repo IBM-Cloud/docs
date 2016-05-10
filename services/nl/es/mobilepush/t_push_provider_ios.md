@@ -35,7 +35,7 @@ El servicio de notificaciones Push de Apple (APN) permite al desarrollador de la
 
 
 El ID de app (el identificador de paquete) es un identificador exclusivo que identifica una
-            aplicación específica. Cada aplicación requiere un ID de app. Los servicios como por ejemplo el Servicio de notificaciones Push se configuran en el ID de App. 
+            aplicación específica. Cada aplicación requiere un ID de app. Los servicios como por ejemplo el Servicio de notificaciones Push se configuran en el ID de App.
 
 
 
@@ -211,7 +211,7 @@ Configurar APN en el Panel de control de Push.
 	![Notificaciones Push de IBM](images/bluemixdashboard_push.jpg)
 
 	Se mostrará el panel de control de Push.
-
+	
 	![Establecer notificaciones push](images/wizard.jpg)
 1
 2. En el separador **Configuración**, vaya a la sección **Certificado Push de Apple**, seleccione **Pruebas** (desarrollo) o **Producción** (distribución) y, a continuación, cargue el certificado p.12 en Bluemix.
