@@ -16,7 +16,8 @@ copyright:
 {:codeblock: .codeblock}
 
 
-#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成{: #deploy-button} 
+#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成
+{: #deploy-button} 
 
 *最終更新日: 2016 年 3 月 2 日* 
 
