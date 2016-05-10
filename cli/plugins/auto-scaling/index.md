@@ -121,7 +121,9 @@ You can show the history of the auto-scaling activity of a specific app. A table
 **Tip:** You can also use the **--json** option to pretty print the original JSON response.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [{{site.data.keyword.autoscaling}} service](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
