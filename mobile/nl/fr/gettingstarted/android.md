@@ -1,7 +1,7 @@
 <!-- Attribute definitions -->
 {:codeblock: .codeblock}
 
-# Initiation à l'exemple HelloWorld 
+# Initiation à l'exemple HelloWorld
 {: #gettingstarted-android}
 *Dernière mise à jour : 28 janvier 2016*  
 
@@ -67,4 +67,4 @@ services Bluemix.
    * [Logiciel SDK de base](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## api
-   * [API Core](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [API Core](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

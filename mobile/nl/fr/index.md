@@ -1,4 +1,4 @@
-﻿# Création d'applications mobiles
+# Création d'applications mobiles
 {: #mobile}
 *Dernière mise à jour : 28 janvier 2016* 
 
@@ -59,7 +59,7 @@ La section sur le développement des applications de back end mobiles présente 
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="Icône du service {{site.data.keyword.amashort}}"> <b>{{site.data.keyword.amashort}}</b><br/>Utilisez le service {{site.data.keyword.amafull}} pour protéger les applications Node.js et Java for Liberty applications hébergées sur {{site.data.keyword.Bluemix_notm}}. En instrumentant votre application mobile avec le logiciel SDK de
+<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} - icône du service"> <b>{{site.data.keyword.amashort}}</b><br/>Utilisez le service {{site.data.keyword.amafull}} pour protéger les applications Node.js et Java for Liberty applications hébergées sur {{site.data.keyword.Bluemix_notm}}. En instrumentant votre application mobile avec le logiciel SDK de
 {{site.data.keyword.amashort}}, vous pouvez exiger des utilisateurs qu'ils se connectent pour accéder à Node.js ou aux services mobiles
 {{site.data.keyword.Bluemix_notm}}. En plus de proposer des fonctions de sécurité, {{site.data.keyword.amashort}} recueille également des données d'analyse
 pour que vous puissiez surveiller les performances de vos applications mobiles et collecter les journaux de client et les statistiques d'utilisation. </td>

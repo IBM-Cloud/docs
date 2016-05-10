@@ -1,6 +1,6 @@
 # Logiciels SDK, exemples et référence d'API
 {: #sdk}
-*Dernière mise à jour : 28 janvier 2016* 
+*Dernière mise à jour : 28 janvier 2016*
 
 Afin d'ajouter des logiciels SDK pour les services mobiles Bluemix à votre application, choisissez les logiciels SDK à utiliser, puis configurez votre gestionnaire de dépendances afin d'extraire les logiciels SDK dans votre application.
 
@@ -27,11 +27,11 @@ Afin d'ajouter des logiciels SDK pour les services mobiles Bluemix à votre appl
 </ul>
 <ul>
 <li><strong>Références d'API :</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Facebook</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Google</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">API REST Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Facebook</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Google</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">API REST Push</a></li>
 </ul>
 </td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
@@ -76,12 +76,12 @@ SDK</a></p> --->
 <p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">Logiciel SDK dans IBM DevOps</a></p>
 <ul>
 <li><strong>Références d'API :</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Facebook</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Google</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">API REST Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Facebook</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Authentification Google</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)" target="_blank">API REST Push</a></li>
 </ul>
 </td>
 </tr>

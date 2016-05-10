@@ -2,7 +2,7 @@
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Initiation à l'exemple HelloWorld 
+# Initiation à l'exemple HelloWorld
 {: #gettingstarted-ios}
 *Dernière mise à jour : 28 janvier 2016*
 Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
@@ -83,4 +83,4 @@ services {{site.data.keyword.Bluemix}}.
 
 ## api
    *
-[API Core](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[API Core](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
