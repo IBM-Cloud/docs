@@ -216,7 +216,7 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You can start using your local instance that is monitored by the IBM operations team in order to respond to alerts.</li>
 </ol>
 
-After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../administer/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
+After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_notm}} Local and Dedicated](../admin/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
 
 ##Roles and responsibilities
 {: #rolesresponsibilities}
@@ -585,4 +585,4 @@ Because protection of private data is critical, IBM needs your collaboration whe
 * [What's new in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](glossary/index.html)
 * [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
-* [Contacting support](troubleshoot/getting_customer_support.html#bluemix_support)
+* [Contacting support](../troubleshoot/getting_customer_support.html#bluemix_support)
