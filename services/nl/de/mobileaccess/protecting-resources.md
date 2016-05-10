@@ -13,14 +13,15 @@ Mit dem {{site.data.keyword.amashort}}-Service können Sie Ihre Node.js- und Jav
 {:shortdesc}
 ## Berechtigungsfilter
 {: #auth-filter}
-Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können. Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
+Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können.  Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
 ## Berechtigungsheader
 {: #auth-header}
 Der Berechtigungsheader in der eingehenden Anforderung besteht aus drei Teilen: Träger (Bearer), Zugriffstoken und ID-Token, die durch Leerzeichen voneinander getrennt sind. Das `Zugriffstoken` ist eine verbindliche Komponente, während das `ID-Token` optional ist.
 
 Der eingehende Berechtigungsheader wird von dem entsprechenden Berechtigungsfilter verarbeitet. Der Filter validiert die Signaturen des Zugriffstokens und des ID-Tokens, das Ablaufdatum und die strukturelle Integrität. Wenn die Validierung erfolgreich war, wird dem Anforderungsobjekt ein Sicherheitskontextobjekt hinzugefügt. Sie können eine Referenz auf den Sicherheitskontext mithilfe einer entsprechenden API abrufen.
 
-Der Sicherheitskontext enthält die Informationen zu Subjekt, Benutzer, Gerät und Anwendung, die mit der folgenden Struktur gespeichert werden:```JSON
+Der Sicherheitskontext enthält die Informationen zu Subjekt, Benutzer, Gerät und Anwendung, die mit der folgenden Struktur gespeichert werden:
+```JSON
 {
     "imf.sub":"myclientid",
     "imf.user": {

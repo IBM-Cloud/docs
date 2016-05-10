@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # カスタム ID プロバイダーを使用したユーザー認証
@@ -79,7 +79,13 @@ copyright:
 	}
 	```
 
+### カスタム ID プロバイダーのサンプル実装
+{: #custom-sample}
+カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。GitHub リポジトリーから、完全なアプリケーション・コードをダウンロードしてください。
 
+ * [簡単なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [高度なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## {{site.data.keyword.amashort}} Server とカスタム ID プロバイダーとの間の標準的な通信
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} サービスが `startAuthorization` 要求をカスタム ID プロバイダーに送信します。
@@ -96,7 +102,7 @@ copyright:
 ## カスタム・レルム
 {: #custom-id-custom}
 
-カスタム ID プロバイダーは、1 つのカスタム認証レルムをサポートします。着信認証チャレンジを処理するために、モバイル・クライアント・アプリケーションで AuthenticationDelegate / AuthenticationListener のインスタンスを作成して登録します。{{site.data.keyword.amashort}} ダッシュボードでカスタム ID プロバイダーを構成するときに、カスタム認証レルム名を定義します。それを使用して、要求が特定の {{site.data.keyword.amashort}} サービス・インスタンスから着信していることを識別できます。 
+カスタム ID プロバイダーは、1 つのカスタム認証レルムをサポートします。着信認証チャレンジを処理するために、モバイル・クライアント・アプリケーションで AuthenticationDelegate / AuthenticationListener のインスタンスを作成して登録します。{{site.data.keyword.amashort}} ダッシュボードでカスタム ID プロバイダーを構成するときに、カスタム認証レルム名を定義します。それを使用して、要求が特定の {{site.data.keyword.amashort}} サービス・インスタンスから着信していることを識別できます。
 
 ## 次のステップ
 {: #next-steps}

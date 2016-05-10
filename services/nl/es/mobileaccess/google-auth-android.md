@@ -16,22 +16,34 @@ copyright:
 
 ## Configuración de un proyecto de Google para la plataforma Android
 {: #google-auth-android-project}
-Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en Google Developers Console. Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente es un identificador exclusivo de la aplicación.
+Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en Google Developers Console. Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente de Google es un identificador exclusivo para la aplicación que se utiliza en la autenticación de Google. 
 
 1. Cree un proyecto en [Google Developers Console](https://console.developers.google.com).
 Si ya dispone de un proyecto, puede omitir los pasos que describen la creación de proyectos y empezar a añadir credenciales.
+   1.    Abre el menú del proyecto nuevo.  
+         
+         ![imagen](images/FindProject.jpg)
 
-1. Cree un proyecto. Pulse **Crear proyecto**.
+   2.    Pulse **Crear un proyecto**.
+   
+         ![imagen](images/CreateAProject.jpg)
 
-1. Seleccione el proyecto y haga clic en **Utilizar API de Google** (también puede hacer clic en **Habilitar API y obtener credenciales como claves**).
 
-1. En la lista de API, elija la API Google+ y pulse **Habilitar API**.
+   1. En la lista **API sociales**, seleccione **API Google+**.
 
-1. Pulse **Credenciales** en el menú.
+     ![imagen](images/chooseGooglePlus.jpg)
 
-1. Pulse **Nuevas credenciales** y seleccione **ID de cliente de OAuth 2.0**.
+   1. Pulse **Habilitar** en la pantalla siguiente. 
 
-1. Defina un nombre de producto en el separador **Pantalla de consentimiento de OAuth**. 
+1. Seleccione la pestaña **Pantalla de consentimiento** y especifique el nombre de producto que se muestra a los usuarios. Los demás valores son opcionales. Pulse **Guardar**.
+
+    ![imagen](images/consentScreen.png)
+    
+1. En la lista **Credenciales**, elija el ID de cliente OAuth. 
+
+     ![imagen](images/chooseCredentials.png)
+     
+
 
 1. Seleccione un tipo de aplicación. Pulse **Android**. Indique un nombre para el cliente Android.
 
@@ -41,7 +53,7 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 
 1. Un almacén de claves con un certificado para entornos de desarrollo se almacena en un archivo `~/.android/debug.keystore`. La contraseña del almacén de claves por defecto es `android`. Este certificado se utiliza para compilar aplicaciones en modo de depuración.
 
-1. Recupere la huella dactilar del certificado para firmas:
+     1. Recupere la huella dactilar del certificado para firmas:
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -52,23 +64,23 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 
 1. Especifique el nombre del paquete de la aplicación de Android. Para encontrar el nombre del paquete de la aplicación de Android, abra el archivo `AndroidManifest.xml` en Android Studio y busque: `<manifest package="{nombre-paquete}">`. Cuando haya terminado, haga clic en **Crear**.
 
-1. Anote el nuevo ID de cliente de Android. Tendrá que indicar este valor en {{site.data.keyword.Bluemix}}.
+Aparece un diálogo que muestra su ID de cliente de Google. Anote este valor. Deberá registrar este valor en {{site.data.keyword.Bluemix}}.
 
 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-android-config}
 
-Ahora que ya dispone de un ID de cliente de Android, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}.
+Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}. 
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
-1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).Necesitará estos valores cuando inicialice el SDK.
+1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`). Necesitará estos valores cuando inicialice el SDK.
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Google**. 
+1. Pulse el mosaico **Google**.
 
-1. En **ID de aplicación para Android**, escriba el ID de cliente Android para Android y pulse **Guardar**.
+1. En **ID de aplicación para Android**, especifique su ID de cliente de Google para Android y pulse **Guardar**.
 
 ## Configuración del SDK del cliente de {{site.data.keyword.amashort}} para Android
 {: #google-auth-android-sdk}
@@ -110,7 +122,7 @@ Ahora que ya dispone de un ID de cliente de Android, puede activar la autenticac
 
 	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método onCreate de la actividad principal de la aplicación de Android.
 
-1. Inicialice el SDK del cliente y registre el gestor de autenticación de Google. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** de la sección **Opciones móviles** del panel de control. 
+1. Inicialice el SDK del cliente y registre el gestor de autenticación de Google. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** de la sección **Opciones móviles** del panel de control.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -140,7 +152,7 @@ Después de inicializar el SDK del cliente y registrar el gestor de autenticaci�
 Debe disponer de un programa de fondo móvil que se haya creado con el contenedor modelo de MobileFirst Services Starter y que tenga un recurso protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)
 
 1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
-El punto final `/protected` de un programa de fondo móvil creado con un contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}. Por eso, solo las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}} pueden acceder a él. Como resultado, verá `Unauthorized` en el navegador de escritorio.
+ El punto final `/protected` de un programa de fondo móvil creado con un contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}. Por eso, solo las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}} pueden acceder a él. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 
 1. Utilice la aplicación de Android para realizar solicitudes al mismo punto final. Añada el código siguiente después de inicializar la instancia `BMSClient` y registrar `GoogleAuthenticationManager`.
 
@@ -165,14 +177,24 @@ El punto final `/protected` de un programa de fondo móvil creado con un contene
 	});
 ```
 
-1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Google:
+1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Google. Después de iniciar sesión, la aplicación solicita permisos para acceder a recursos: 
 
 	![imagen](images/android-google-login.png)
 
 	En función del dispositivo Android y si ha iniciado sesión en Google, es posible que tenga una IU diferente.
 
-1. Si pulsa **Aceptar** está autorizando que {{site.data.keyword.amashort}} utilice su identidad de usuario de Google para fines de autenticación.
+  Si pulsa **Aceptar** está autorizando que {{site.data.keyword.amashort}} utilice su identidad de usuario de Google para fines de autenticación.
 
 1. 	Después de que la solicitud se haya completado correctamente, se mostrará la siguiente salida en la herramienta LogCat:
 
 	![imagen](images/android-google-login-success.png)
+
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ Si invoca este código después de que un usuario haya iniciado sesión en Google, dicha sesión se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá seleccionar una cuenta de Google para poder hacerlo. Si el usuario intenta iniciar sesión con un ID de Google con el que haya iniciado sesión anteriormente, no se le pedirán de nuevo las credenciales. Para pedir de nuevo las credenciales, el usuario debe eliminar su cuenta de Google del dispositivo Android. 
+
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 

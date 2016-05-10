@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -16,22 +16,35 @@
 
 ## Android 플랫폼에 대한 Google 프로젝트 구성
 {: #google-auth-android-project}
-ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부는 Google 클라이언트 ID를 확보하는 것입니다. 클라이언트 ID는 애플리케이션에 대한 고유 ID입니다. 
+ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 프로젝트를 작성하십시오. 프로젝트 작성의 일부는 Google 클라이언트 ID를 확보하는 것입니다. 
+Google 클라이언트 ID는 Google 인증에서 사용하는 애플리케이션의 고유 ID입니다. 
 
 1. [Google 개발자 콘솔](https://console.developers.google.com)에서 프로젝트를 작성하십시오.
 이미 프로젝트가 있는 경우 프로젝트 작성에 대해 설명하는 단계를 건너뛰고 신임 정보 추가를 시작할 수 있습니다. 
+   1.    새 프로젝트 메뉴를 여십시오.  
+         
+         ![이미지](images/FindProject.jpg)
 
-1. 프로젝트를 작성하십시오. **프로젝트 작성**을 클릭하십시오. 
+   2.    **프로젝트 작성**을 클릭하십시오. 
+   
+         ![이미지](images/CreateAProject.jpg)
 
-1. 프로젝트를 선택하고 **Google API 사용**을 클릭하십시오(또는 **API 사용 및 신임 정보 가져오기(예: 키)**를 클릭할 수 있음). 
 
-1. API 목록에서 Google+ API를 선택하고 **API 사용**을 클릭하십시오. 
+   1. **소셜 API** 목록에서 **Google+ API**를 선택하십시오. 
 
-1. 메뉴에서 **신임 정보**를 클릭하십시오. 
+     ![이미지](images/chooseGooglePlus.jpg)
 
-1. **새 신임 정보**를 클릭하고 **OAuth 2.0 클라이언트 ID**를 선택하십시오.
+   1. 다음 화면에서 **사용**을 클릭하십시오. 
 
-1. **OAuth 승인 화면** 탭에서 제품 이름을 설정하십시오.
+1. **동의 화면** 탭을 선택하고 사용자에게 표시된 제품 이름을 제공하십시오. 기타 값은 선택사항입니다. **저장**을 클릭하십시오.
+
+    ![이미지](images/consentScreen.png)
+    
+1. **신임 정보** 목록에서 OAuth 클라이언트 ID를 선택하십시오. 
+
+     ![이미지](images/chooseCredentials.png)
+     
+
 
 1. 애플리케이션 유형을 선택하십시오. **Android**를 클릭하십시오. Android 클라이언트에 대한 의미있는 이름을 지정하십시오. 
 
@@ -41,7 +54,7 @@ ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 �
 
 1. 개발 환경에 대한 인증서를 포함하는 키 저장소는 `~/.android/debug.keystore` 파일에 저장됩니다. 기본 키 저장소 비밀번호는 `android`입니다. 이 인증서는 디버그 모드로 애플리케이션을 빌드하는 데 사용됩니다. 
 
-1. 서명 인증 지문 검색: 
+     1. 서명 인증 지문 검색: 
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -52,13 +65,14 @@ ID 제공자로 Google 사용을 시작하려면 Google 개발자 콘솔에서 �
 
 1. Android 애플리케이션의 패키지 이름을 지정하십시오. Android 애플리케이션의 패키지 이름을 찾으려면 Android Studio에서 `AndroidManifest.xml` 파일을 열고 `<manifest package="{your-package-name}">`을 검색하십시오. 완료되면 **작성**을 클릭하십시오. 
 
-1. 새 Android 클라이언트 ID를 기록해 놓으십시오. 이 값을 {{site.data.keyword.Bluemix}}에 제공해야 합니다. 
+사용자의 Google 클라이언트 id를 표시하는 대화 상자가 표시됩니다. 이 값을 기록하십시오. 
+{{site.data.keyword.Bluemix}}에서 이 값을 등록해야 합니다. 
 
 
 ## Google 인증을 위해 {{site.data.keyword.amashort}} 구성
 {: #google-auth-android-config}
 
-Android 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다. 
+이제 Android용 Google 클라이언트 ID를 보유 중이므로 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용할 수 있습니다. 
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
@@ -68,7 +82,7 @@ Android 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시
 
 1. **Google** 타일을 클릭하십시오.
 
-1. **Android용 애플리케이션 ID**에서 Android용 Android 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
+1. **Android용 애플리케이션 ID**에서 Android용 Google 클라이언트 ID를 지정하고 **저장**을 클릭하십시오. 
 
 ## Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #google-auth-android-sdk}
@@ -165,14 +179,27 @@ MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드�
 	});
 ```
 
-1. 애플리케이션을 실행하십시오. Google 로그인 화면이 팝업으로 표시됩니다. 
+1. 애플리케이션을 실행하십시오. Google 로그인 화면이 팝업됩니다. 로그인 후에는 앱에서 자원에 액세스하려고 권한을 요청합니다. 
 
 	![이미지](images/android-google-login.png)
 
 	Android 디바이스에 따라 그리고 현재 Google에 로그인되어 있는지에 따라 다른 UI를 가질 수 있습니다. 
 
-1. **확인**을 클릭하여 인증하도록 {{site.data.keyword.amashort}}에 Google 사용자 ID를 사용할 수 있는 권한을 부여합니다. 
+  **확인**을 클릭하여 인증하도록 {{site.data.keyword.amashort}}에 Google 사용자 ID를 사용할 수 있는 권한을 부여합니다. 
 
 1. 	요청에 성공하면 LogCat 도구에서 다음 출력을 확인할 수 있습니다. 
 
 	![이미지](images/android-google-login-success.png)
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ Google에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Google에서 로그아웃됩니다. 
+사용자가 다시 로그인을 시도하는 경우 다시 로그인되는 Google 계정을 선택해야 합니다. 
+이전에 로그인한 Google ID로 로그인을 시도하는 경우, 사용자에게는 다시 해당 신임 정보에 대한 프롬프트가 제시되지 않습니다. 
+다시 로그인 신임 정보에 대한 프롬프트를 받으려면, 사용자가 Android 디바이스에서 해당 Google 계정을 제거해야 합니다. 
+
+ 로그아웃 기능에 전달된 `listener`의 값은 널일 수 있습니다. 

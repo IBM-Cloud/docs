@@ -1,7 +1,7 @@
 ---
 
 Copyright : 2015, 2016
-  
+
 ---
 
 # Utilisation d'un fournisseur d'identité personnalisé pour authentifier les utilisateurs
@@ -78,7 +78,15 @@ Exemple de réponse personnalisée à une demande d'authentification envoyée pa
 	}
 	```
 
+### Exemple d'implémentation d'un fournisseur d'identité personnalisé
+{: #custom-sample}
+Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé
+lorsque vous développez votre fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels
+GitHub.
 
+ * [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Communications standard entre le serveur {{site.data.keyword.amashort}} et un fournisseur d'identité personnalisé
 {: #custom-id-comm}
 1. Le service {{site.data.keyword.amashort}} envoie une demande `startAuthorization` au fournisseur
@@ -101,7 +109,7 @@ doit transmettre l'ID d'état dans les demandes qui font partie de la suite du p
 ## Domaine personnalisé
 {: #custom-id-custom}
 
-Un fournisseur d'identité personnalisé prend en charge un domaine d'authentification personnalisé. Pour gérer les demandes d'authentification entrantes, créez et enregistrez une instance AuthenticationDelegate/AuthenticationListener dans votre application de client mobile. Définissez le nom du domaine d'authentification personnalisé lorsque vous configurez un fournisseur d'identité personnalisé dans le tableau de bord {{site.data.keyword.amashort}}. Il peut permettre d'identifier l'instance de service {{site.data.keyword.amashort}} dont provient la demande. 
+Un fournisseur d'identité personnalisé prend en charge un domaine d'authentification personnalisé. Pour gérer les demandes d'authentification entrantes, créez et enregistrez une instance AuthenticationDelegate/AuthenticationListener dans votre application de client mobile. Définissez le nom du domaine d'authentification personnalisé lorsque vous configurez un fournisseur d'identité personnalisé dans le tableau de bord {{site.data.keyword.amashort}}. Il peut permettre d'identifier l'instance de service {{site.data.keyword.amashort}} dont provient la demande.
 
 ## Etapes suivantes
 {: #next-steps}

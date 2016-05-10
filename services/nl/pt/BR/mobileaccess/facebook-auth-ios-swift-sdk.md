@@ -155,6 +155,7 @@ pod 'BMSFacebookAuthentication'
 ```
    Atualize o esquema URL e as propriedades FacebookappID com seu ID do aplicativo Facebook. Atualize
 o FacebookDisplayName com o nome do seu aplicativo do Facebook.
+
     **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, consulte [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
 
 ## Inicializando o {{site.data.keyword.amashort}} Client Swift SDK
@@ -164,8 +165,7 @@ Inicialize o Client SDK passando os parâmetros `applicationGUID` e `application
 
 Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
 
-1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. 
-Os valores `applicationRoute` e `applicationGUID` são
+1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os valores `applicationRoute` e `applicationGUID` são
 exibidos nos campos **Rota** e **GUID do app**.
 
 1. Importe a estrutura necessária na classe em que deseja usar o {{site.data.keyword.amashort}} Client SDK incluindo os cabeçalhos a seguir:
@@ -228,16 +228,18 @@ Depois que o Client SDK for inicializado e o Gerenciador de autenticação do Fa
 
 Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado no navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. 
-Essa mensagem é retornada porque esse terminal só pode ser acessado somente por
+1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado no navegador. Abra a URL a seguir: `{applicationRoute}/protected`.
+Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado somente por
 aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal.
 
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) em
+
   if error == nil {
      print ("response:\(response?.responseText), no error")
   } else {
@@ -269,3 +271,15 @@ aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client S
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ Se você chamar esse código depois que um usuário estiver conectado ao Facebook e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Facebook para propósitos de autenticação.
+
+ Para alternar usuários, deve-se chamar esse código e o usuário deve efetuar logout do Facebook em seu navegador.
+
+ Passar ```callBack``` para a função de logout é opcional. Também é possível passar `nil`.

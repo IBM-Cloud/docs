@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Angepassten Identitätsprovider zur Authentifizierung von Benutzern verwenden
@@ -22,8 +22,7 @@ Sie können einen angepassten Identitätsprovider erstellen und eigene Logik zur
 * Der {{site.data.keyword.amashort}}-Service kommuniziert mit dem angepassten Identitätsprovider, um den Authentifizierungsprozess zu starten.
 * Der angepasste Identitätsprovider gibt eine Authentifizierungsanforderung (Challenge) an den {{site.data.keyword.amashort}}-Service zurück.
 * Der {{site.data.keyword.amashort}}-Service gibt die Authentifizierungsanforderung an das {{site.data.keyword.amashort}}-Client-SDK zurück.
-* Das {{site.data.keyword.amashort}}-Client-SDK delegiert die Authentifizierung an eine benutzerdefinierte Klasse, die Sie erstellt haben. 
-Sie sind dafür verantwortlich, die Berechtigungsnachweise zu erfassen und diese an das {{site.data.keyword.amashort}}-Client-SDK zurückzugeben.
+* Das {{site.data.keyword.amashort}}-Client-SDK delegiert die Authentifizierung an eine benutzerdefinierte Klasse, die Sie erstellt haben. Sie sind dafür verantwortlich, die Berechtigungsnachweise zu erfassen und diese an das {{site.data.keyword.amashort}}-Client-SDK zurückzugeben.
 * Wenn der Entwickler Berechtigungsnachweise an das {{site.data.keyword.amashort}}-SDK übergeben hat, werden diese an den {{site.data.keyword.amashort}}-Service als Antwort auf die Authentifizierungsanforderung (Challenge) gesendet.
 * Der {{site.data.keyword.amashort}}-Service validiert die Antwort auf die Authentifizierungsanforderung mit dem angepassten Identitätsprovider.
 * Wenn die Validierung erfolgreich ist, generiert der {{site.data.keyword.amashort}}-Service einen Berechtigungsheader und gibt diesen an das {{site.data.keyword.amashort}}-Client-SDK zurück. Der Berechtigungsheader enthält zwei Tokens: ein Zugriffstoken, das Informationen zu Zugriffsberechtigungen enthält, und ein ID-Token, das Informationen zum aktuellen Benutzer, zum Gerät und zur Anwendung enthält.
@@ -80,7 +79,13 @@ Beispiel für eine Antwort auf eine angepasste Authentifizierungsanforderung, di
 	}
 	```
 
+### Beispielimplementierung eines angepassten Identitätsproviders
+{: #custom-sample}
+Sie können beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz verwenden, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
+ * [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Erweitertes Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}} Server und einem angepassten Identitätsprovider
 {: #custom-id-comm}
 1. Der {{site.data.keyword.amashort}}-Service sendet eine Anforderung `startAuthorization` an den angepassten Identitätsprovider.
@@ -97,7 +102,7 @@ Der angepasste Identitätsprovider wird standardmäßig als statusunabhängige A
 ## Angepasster Realm
 {: #custom-id-custom}
 
-Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von AuthenticationDelegate / AuthenticationListener in Ihrer mobilen Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Diese kann dazu verwendet werden, die Anforderung zu identifizieren, die von einer bestimmten {{site.data.keyword.amashort}}-Serviceinstanz eingeht. 
+Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von AuthenticationDelegate / AuthenticationListener in Ihrer mobilen Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Diese kann dazu verwendet werden, die Anforderung zu identifizieren, die von einer bestimmten {{site.data.keyword.amashort}}-Serviceinstanz eingeht.
 
 ## Nächste Schritte
 {: #next-steps}

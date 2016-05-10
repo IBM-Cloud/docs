@@ -17,22 +17,34 @@ dell'SDK Android](https://console.{DomainName}/docs/services/mobileaccess/gettin
 
 ## Configurazione di un progetto Google per la piattaforma Android
 {: #google-auth-android-project}
-Per iniziare a usare Google come un provider di identità, creare un progetto nella Google Developers Console. Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client è un identificativo univoco per la tua applicazione.
+Per iniziare a usare Google come un provider di identità, creare un progetto nella Google Developers Console. Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google.
 
 1. Crea un progetto nella [Google Developers Console](https://console.developers.google.com).
 Se già hai un progetto, puoi tralasciare i passi che descrivono la creazione del progetto e iniziare con l'aggiunta delle credenziali.
+   1.    Apri il menu di nuovo progetto. 
+         
+         ![immagine](images/FindProject.jpg)
 
-1. Crea un progetto. Fai clic su **Create project**.
+   2.    Fai clic su **Create a project**.
+   
+         ![immagine](images/CreateAProject.jpg)
 
-1. Seleziona il tuo progetto e fai clic su **Use Google APIs** (puoi anche fare clic su **Enable APIs and get credentials like keys**)
 
-1. Nell'elenco delle API, scegli l'API Google+ e fai clic su **Enable API**.
+   1. Dall'elenco **Social APIs**, scegli **Google+ API**.
 
-1. Nel menu, fai clic su **Credentials**.
+     ![immagine](images/chooseGooglePlus.jpg)
 
-1. Fai clic su **New credentials** e seleziona **OAuth 2.0 client ID**.
+   1. Fai clic su **Enable** nella schermata successiva.
 
-1. Imposta un nome prodotto nella scheda **OAuth consent screen**.
+1. Seleziona la scheda **Consent Screen** e fornisci il nome prodotto visualizzato agli utenti. Altri valori sono facoltativi. Fai clic su **Save**.
+
+    ![immagine](images/consentScreen.png)
+    
+1. Dall'elenco **Credentials**, scegli l'ID client OAuth.
+
+     ![immagine](images/chooseCredentials.png)
+     
+
 
 1. Seleziona un tipo di applicazione. Fai clic su **Android**. Fornisci un nome significativo per il tuo client Android.
 
@@ -43,7 +55,7 @@ vedi il documento relativo alla [firma delle tue applicazioni Android](http://de
 
 1. Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizzato in un file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Questo certificato viene utilizzato per mettere a punto applicazioni in modalità di debug.
 
-1. Recupera la tua impronta digitale di certificato di firma:
+     1. Recupera la tua impronta digitale di certificato di firma:
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -57,13 +69,13 @@ eseguendo il comando **keytool** nella Google Developers Console.
 il file `AndroidManifest.xml` in Android Studio e cerca: `<manifest package="{il-tuo-nome-pacchetto}">`. Al termine, fai
 clic su **Crea**.
 
-1. Annota il tuo nuovo ID client Android. Devi fornire questo valore a {{site.data.keyword.Bluemix}}.
+Viene presentata una finestra di dialogo che visualizza il tuo ID client Google. Annota questo valore. Devi registrare questo valore presso {{site.data.keyword.Bluemix}}.
 
 
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
 {: #google-auth-android-config}
 
-Ora che hai un ID client Android, puoi abilitare l'autenticazione Google nel dashboard {{site.data.keyword.amashort}}.
+Ora che hai un ID client Google per Android, puoi abilitare l'autenticazione Google nel dashboard {{site.data.keyword.amashort}}.
 
 1. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
@@ -73,7 +85,7 @@ Ora che hai un ID client Android, puoi abilitare l'autenticazione Google nel das
 
 1. Fai clic sul tile **Google**.
 
-1. In **Application ID for Android**, specifica il tuo ID client Android per Android e fai clic su **Save**.
+1. In **Application ID for Android**, specifica il tuo ID client Google per Android e fai clic su **Save**.
 
 ## Configurazione dell'SDK client {{site.data.keyword.amashort}} per Android
 {: #google-auth-android-sdk}
@@ -172,14 +184,24 @@ Devi disporre di un backend mobile creato con il contenitore tipo MobileFirst Se
 	});
 ```
 
-1. Esegui la tua applicazione. Viene visualizzata una schermata di accesso a Google:
+1. Esegui la tua applicazione. Viene visualizzata una schermata di accesso a Google. Dopo l'accesso, l'applicazione richiede l'autorizzazione ad accedere alle risorse.
 
 	![immagine](images/android-google-login.png)
 
 	A seconda del tuo dispositivo Android e del fatto che tu sia collegato o meno a Google, potresti avere un'interfaccia utente diversa.
 
-1. Facendo clic su **OK**, stai autorizzando {{site.data.keyword.amashort}} a utilizzare la tua identità utente Google per scopi di autenticazione.
+  Facendo clic su **OK**, stai autorizzando {{site.data.keyword.amashort}} a utilizzare la tua identità utente Google per scopi di autenticazione.
 
 1. 	Dopo che la tua richiesta ha avuto esito positivo, puoi vedere il seguente output nello strumento LogCat:
 
 	![immagine](images/android-google-login-success.png)
+
+1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google, l'utente viene disconnesso da Google. Quando l'utente prova ad eseguire nuovamente l'accesso, deve selezionare un account Google con il quale verrà nuovamente eseguito il suo accesso. Quando prova ad accedere con un ID Google che aveva già in precedenza eseguito l'accesso, non gli vengono richieste nuovamente le credenziali. Perché gli vengano richieste nuovamente le credenziali di accesso, è necessario che l'utente rimuova il suo account Google dal dispositivo Android.
+
+ Il valore per `listener` passato alla funzione di disconnessione può essere null.

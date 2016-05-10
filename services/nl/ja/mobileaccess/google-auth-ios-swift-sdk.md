@@ -158,7 +158,7 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
  ```Swift
  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
@@ -178,13 +178,21 @@ Client SDK が初期化され、Google 認証マネージャーが登録され�
 1. 	ユーザーの要求は正常に処理されます。ログに以下の出力が表示されます。
 
  ```
- onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
+ onAuthenticationSuccess info = Optional({attributes = {};
      deviceId = 105747725068605084657;
      displayName = "donlonqwerty@gmail.com";
      isUserAuthenticated = 1;
      userId = 105747725068605084657;
  })
- response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
+ response:Optional("Hello, this is a protected resource!"), no error
  ```
+
+1. 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```
+ GoogleAuthenticationManager.sharedInstance.logout(callBack)
+ ```
+
+  ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+
+   ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

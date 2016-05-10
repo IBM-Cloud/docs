@@ -17,8 +17,7 @@ a autenticação do Google em apps iOS (Swift SDK)](https://console.{DomainName}
 
 ## Antes de Começar
 {: #google-auth-ios-before}
-* Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do iOS que seja instrumentado com o {{site.data.keyword.amashort}} Client SDK.  
-Para obter mais informações, consulte
+* Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do iOS que seja instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter mais informações, consulte
 [Introdução
 ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e
 [Configurando
@@ -30,17 +29,34 @@ o iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/g
 {: #google-auth-ios-project}
 Para iniciar o uso do Google como provedor de identidade, crie um projeto no Console do desenvolvedor do Google para obter um identificador de cliente do Google.  Esse identificador de cliente é um identificador exclusivo para que o Google saiba qual aplicativo está tentando se conectar.   Se você já tiver o projeto do Google, poderá ignorar as etapas que descrevem a criação do projeto e iniciar com a inclusão de credenciais.
 
-1. Abra o [Console do desenvolvedor do Google](https://console.developers.google.com).
 
-1. Crie um projeto. Clique em **Criar projeto**.
 
-1. Selecione seu projeto e clique em **Usar APIs do Google**. Também é possível clicar em **Ativar APIs e obter credenciais como chaves**.
+1. Crie um projeto no [Console do desenvolvedor do Google](https://console.developers.google.com).
+Se você já tiver um projeto, poderá ignorar as etapas que descrevem a criação do projeto e iniciar com a inclusão de credenciais.
+   1.    Abra o menu do novo projeto. 
+         
+         ![image](images/FindProject.jpg)
 
-1. Na lista de APIs, escolha a API Google+ e clique em **Ativar API**.
+   2.    Clique em **Criar um projeto**.
+   
+         ![image](images/CreateAProject.jpg)
 
-1. Clique em **Credenciais > Incluir credenciais** e selecione **Identificador de cliente OAuth 2.0**.
 
-1. Você pode ser solicitado a configurar um nome de produto no console de consentimento. Continue para fazer isso.
+1. Na lista **APIs sociais**, escolha **API do Google+**.
+
+     ![image](images/chooseGooglePlus.jpg)
+
+1. Clique em **Ativar** na próxima tela.
+
+1. Selecione a guia **Tela de consentimento** e forneça o nome do produto mostrado aos usuários. Outros valores são opcionais. Clique em **Salvar**.
+
+    ![image](images/consentScreen.png)
+    
+1. Na lista **Credenciais**, escolha o identificador de cliente OAuth.
+
+     ![image](images/chooseCredentials.png)
+     
+
 
 1. Neste momento, será apresentada a você uma opção de tipo de aplicativo. Selecione **iOS**.
 
@@ -71,6 +87,9 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 1. Em **ID do aplicativo para iOS**, especifique o ID do
 cliente iOS para Android e clique em **Salvar**.
 
+	Nota: além do identificador de cliente do Google, o valor reverso também é necessário para sua configuração do cliente (veja abaixo). Para acessar ambos os valores, faça download da plist de exemplo usando o ícone de lápis:
+		![download do arquivo info.plist](images/download_plist.png)
+
 ## Configurando o {{site.data.keyword.amashort}} Client SDK para iOS
 {: #google-auth-ios-sdk}
 
@@ -89,7 +108,7 @@ CocoaPods
 1. Salve o `Podfile` e execute `pod install` na
 linha de comandos. O CocoaPods instala as dependências. Você verá o progresso e os componentes que foram incluídos.
 
-**Importante**: deve-se abrir agora o projeto usando o arquivo
+  **Importante**: deve-se abrir agora o projeto usando o arquivo
 `xcworkspace` que é gerado pelo CocoaPods. Normalmente, o nome é `{your-project-name}.xcworkspace`.  
 
 1. Execute `open {your-project-name}.xcworkspace` na linha de
@@ -99,16 +118,16 @@ comandos para abrir sua área de trabalho de projeto do iOS.
 {: #google-auth-ios-googleauth}
 Configure a integração do Google atualizando o arquivo `info.plist`. O
 arquivo `info.plist` normalmente está na pasta `Arquivos de
-apoio` em seu projeto Xcode. É possível editar o arquivo no editor de lista de
-propriedades ou com um editor de texto.
+apoio` em seu projeto Xcode. É possível editar o arquivo no editor de lista de propriedades ou com um editor de texto.
 
 * Configure a integração do Google incluindo os esquemas de URL a seguir no
-arquivo `info.plist`![info.plist file](images/ios-google-infoplist-settings.png)
+arquivo `info.plist`
+	![info.plist file](images/ios-google-infoplist-settings.png)
 
 	O primeiro Esquema de URL é uma versão reservada do ID do cliente do Google
-Developer Console. Por exemplo, se o ID do cliente for
+Developer Console.  Por exemplo, se o ID do cliente for
 `123123-abcabc.apps.googleusercontent.com`, o Esquema de URL será:
-`com.googleusercontent.apps.123123-abcabc`.
+`com.googleusercontent.apps.123123-abcabc`. 
 
 	O segundo Esquema de URL é o ID do pacote configurável de seu aplicativo
 
@@ -185,7 +204,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	7. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto.
 
-3. Use o código a seguir para inicializar o Client SDK. Substitua
+3. Use o código a seguir para inicializar o Client SDK.  Substitua
 *applicationRoute* e *applicationGUID* pelos valores de
 **Rota** e **GUID do app** que você obteve das
 **Opções móveis**.
@@ -209,7 +228,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 
 1. Registre o Manipulador de autenticação do Google incluindo o código a seguir no
 método `application:didFinishLaunchingWithOptions` na delegação do seu
-app. Inclua esse código imediatamente após a inicialização do IMFClient.
+app. Inclua este código imediatamente após a inicialização do IMFClient:
 
 	Objective-C:
 
@@ -288,7 +307,7 @@ exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -321,3 +340,23 @@ exemplo, `http://my-mobile-backend.mybluemix.net/protected`
 1. 	Sua solicitação deve ser bem-sucedida. Você deverá ver a saída a seguir no LogCat
 
 	![image](images/ios-google-login-success.png)
+	
+	
+	Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+	
+	Objective C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o Mobile Client Access a usar o Google para propósitos de autenticação. Neste ponto, o usuário pode clicar no nome do usuário no canto superior direito da tela para selecionar e efetuar login com outro usuário.
+
+	Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.

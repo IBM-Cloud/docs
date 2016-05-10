@@ -244,8 +244,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## Enregistrement d'un délégué d'authentification IMF personnalisé
 
-Après avoir créé un IMFAuthenticationDelegate personnalisé, enregistrez-le avec `IMFClient`.
-Le code ci-dessous doit être appelé dans votre application avant l'envoi de demandes à vos ressources protégées. Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.data.keyword.amashort}}.
+Après avoir créé un IMFAuthenticationDelegate personnalisé, enregistrez-le avec `IMFClient`. Le code ci-dessous doit être appelé dans votre application avant l'envoi de demandes à vos ressources protégées. Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.data.keyword.amashort}}.
 
 Applications Objective-C :
 
@@ -267,16 +266,15 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 ## Test de l'authentification
 {: #custom-ios-testing}
 Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé
-(`IMFAuthenticationDelegate`), vous pouvez commencer à envoyer des demandes à votre back end mobile. 
+(`IMFAuthenticationDelegate`), vous pouvez commencer à envoyer des demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #custom-ios-testing-before}
  Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
-
- 1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant
+1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant
 `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
- Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
+  Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` et enregistré votre `IMFAuthenticationDelegate` personnalisé.
 
 	Objective-C :
@@ -314,7 +312,26 @@ Après avoir initialisé le SDK client et enregistré un délégué d'authentifi
 	};
 
 	```
-
 1. 	Lorsque vos demandes aboutissent, la sortie suivante figure dans la console Xcode :
 
 	![image](images/ios-custom-login-success.png)
+	
+	
+	
+	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	Swift : 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
+soumettre ses données d'identification.La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
+la valeur `nil`.
+

@@ -43,7 +43,7 @@ Wenn die Auswahl zwischen einer iOS-Anwendung oder einer Android-Anwendung angeb
 
 1. Legen Sie den Anzeigenamen der Anwendung nach Ihrer Wahl fest und wählen Sie eine Kategorie aus. Klicken Sie auf **Create App ID**, um fortzufahren.
 
-1. Kopieren Sie den angezeigten Wert für **App ID**. Dieser Wert ist Ihre Facebook-Anwendungs-ID. Sie benötigen diesen Wert, um die Facebook-Authentifizierung für Ihre mobile App zu konfigurieren.
+1. Kopieren Sie den angezeigten Wert für **App ID**. Dieser Wert ist Ihre Facebook-Anwendungs-ID.  Sie benötigen diesen Wert, um die Facebook-Authentifizierung für Ihre mobile App zu konfigurieren.
 
 ## Nächste Schritte
 {: #next-steps}

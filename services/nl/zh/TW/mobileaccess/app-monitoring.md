@@ -32,11 +32,11 @@ copyright:
 ## 使用 {{site.data.keyword.amashort}} 監視儀表板
 {: #monitoring-dashboard}
 
-1. 開啟「{{site.data.keyword.Bluemix}} 儀表板」，然後按一下 {{site.data.keyword.Bluemix_notm}} 應用程式
+1. 開啟 {{site.data.keyword.Bluemix}}「儀表板」，然後按一下 {{site.data.keyword.Bluemix_notm}} 應用程式
 
 2. 開啟 {{site.data.keyword.Bluemix_notm}} 應用程式儀表板時，請按一下 {{site.data.keyword.amashort}} 磚
 
-3. 在「{{site.data.keyword.amashort}} 儀表板」中，按一下左側功能表中的`監視`鏈結
+3. 在 {{site.data.keyword.amashort}}「儀表板」中，按一下左側功能表中的`監視`鏈結
 
 ## 後續步驟
 {: #next-steps}

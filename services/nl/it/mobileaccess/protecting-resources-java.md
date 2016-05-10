@@ -11,7 +11,7 @@ L'SDK server {{site.data.keyword.amashort}} fornisce un modulo OAuthTAI per le a
 
 ## Prima di cominciare
 {: #before-you-begin}
-* Devi avere dimestichezza con lo sviluppo di applicazioni Liberty for Java su {{site.data.keyword.bluemix}}. Per ulteriori informazioni, vedi [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
+* Devi avere dimestichezza con lo sviluppo di applicazioni Liberty for Java su {{site.data.keyword.Bluemix}}. Per ulteriori informazioni, vedi [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## Installazione dell'SDK server {{site.data.keyword.amashort}}
 {: #installing-server-sdk}

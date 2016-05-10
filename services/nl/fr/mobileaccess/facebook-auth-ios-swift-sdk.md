@@ -12,8 +12,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans vos applications iOS, 
 ## Avant de commencer
 {: #facebook-auth-ios-before}
 
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  
-Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Créez un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
@@ -72,7 +71,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 
  ```
 use_frameworks!
- pod 'BMSFacebookAuthentication'
+pod 'BMSFacebookAuthentication'
 	```
  **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
@@ -125,9 +124,10 @@ use_frameworks!
 ```
    Mettez à jour les propriétés de schéma d'URL et d'ID d'appli Facebook avec votre ID d'application Facebook. Mettez à jour le nom d'affichage
 Facebook (FacebookDisplayName) avec le nom de votre application Facebook.
+
     **Important** : Veillez à ne pas remplacer les propriétés existantes du fichier `info.plist`. Si certaines propriétés se chevauchent, vous devez les fusionner manuellement. Pour plus d'informations, voir [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) et [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
 
-## Initialisation du SDK Swift client {{site.data.keyword.amashort}} 
+## Initialisation du SDK Swift client {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize-swift}
 
 Initialisez le SDK en passant les paramètres suivants : l'identificateur unique global de l'application (`applicationGUID`) et la route de l'application (`applicationRoute`).
@@ -135,8 +135,7 @@ Initialisez le SDK en passant les paramètres suivants : l'identificateur unique
 Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent placé dans la méthode
 `application:didFinishLaunchingWithOptions` de votre délégué d'application
 
-1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. 
-Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
+1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
 **Identificateur global unique de l'application**.
 
 1. Importez l'infrastructure requise dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant les en-têtes suivants :
@@ -202,17 +201,19 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
 	```Swift
-  let protectedResourceURL = "<URL de votre ressource protégée>" // Ressource protégée de votre choix
-  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let protectedResourceURL = "<URL de votre ressource protégée>" // ressource protégée de votre choix
+ let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
      print ("response:\(response?.responseText), no error")
  } else {
-    print ("error: \(error)")
+     print ("error: \(error)")
  }
- }
+  }
 
-  request.sendWithCompletionHandler(callBack)```
+  request.sendWithCompletionHandler(callBack)
+ ```
 
 1. Lancez votre application. Un écran de connexion à Facebook s'affiche.
 
@@ -235,3 +236,18 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
  })
  response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
  ```
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ Si vous appelez ce code alors que l'utilisateur était connecté via Facebook et qu'il tente à nouveau de se connecter, il est invité à autoriser
+{{site.data.keyword.amashort}} à utiliser Facebook aux fins d'authentification. 
+
+ Les utilisateurs de switch doivent appeler ce code et l'utilisateur doit se déconnecter de Facebook
+dans son navigateur.
+
+ La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
+`nil`.

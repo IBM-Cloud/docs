@@ -16,22 +16,34 @@ copyright:
 
 ## 配置 Android 平台的 Google 專案
 {: #google-auth-android-project}
-若要開始使用 Google 作為身分提供者，請在 Google Developer Console 中建立專案。建立專案的一部分是取得 Google 用戶端 ID。用戶端 ID 是您應用程式的唯一 ID。
+若要開始使用 Google 作為身分提供者，請在 Google Developer Console 中建立專案。建立專案的一部分是取得 Google 用戶端 ID。Google 用戶端 ID 是 Google 鑑別所使用的您應用程式的唯一 ID。
 
 1. 在 [Google Developer Console](https://console.developers.google.com) 中建立專案。
 如果您已有專案，則可以跳過說明專案建立的步驟，並開始新增認證。
+   1.    開啟新建專案功能表。 
+         
+         ![影像](images/FindProject.jpg)
 
-1. 建立專案。按一下**建立專案**。
+   2.    按一下**建立專案**。
+   
+         ![影像](images/CreateAProject.jpg)
 
-1. 選取您的專案，然後按一下**使用 Google API**（您也可以按一下**啟用 API 及取得認證（如金鑰）**）。
 
-1. 在 API 清單中，選擇 Google+ API，然後按一下**啟用 API**。
+   1. 從**社交 API** 清單中，選擇 **Google+ API**。
 
-1. 按一下功能表中的**認證**。
+     ![影像](images/chooseGooglePlus.jpg)
 
-1. 按一下**新建認證**，然後選取 **OAuth 2.0 用戶端 ID**。
+   1. 從下一個畫面中，按一下**啟用**。
 
-1. 在 **OAuth 同意畫面**標籤上，設定產品名稱。
+1. 選取**同意畫面**標籤，並提供向使用者顯示的產品名稱。其他值是選用的。按一下**儲存**。
+
+    ![影像](images/consentScreen.png)
+    
+1. 從**認證**清單中，選擇 OAuth 用戶端 ID。
+
+     ![影像](images/chooseCredentials.png)
+     
+
 
 1. 選取應用程式類型。按一下 **Android**。提供 Android 用戶端的有意義名稱。
 
@@ -41,7 +53,7 @@ copyright:
 
 1. 包含開發環境憑證的金鑰儲存庫儲存在 `~/.android/debug.keystore` 檔案中。預設金鑰儲存庫密碼為 `android`。此憑證用來以除錯模式建置應用程式。
 
-1. 擷取簽署憑證指紋：
+     1. 擷取簽署憑證指紋：
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -52,13 +64,13 @@ copyright:
 
 1. 指定 Android 應用程式的套件名稱。若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找：`<manifest package="{your-package-name}">`。完成時，請按一下**建立**。
 
-1. 記下您的新「Android 用戶端 ID」。您需要將此值提供給 {{site.data.keyword.Bluemix}}。
+即會出現對話框，顯示您的 Google 用戶端 ID。請記下此值。您需要在 {{site.data.keyword.Bluemix}} 上登錄此值。
 
 
 ## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
 {: #google-auth-android-config}
 
-現在，您有「Android 用戶端 ID」，可以在「{{site.data.keyword.amashort}} 儀表板」中啟用 Google 鑑別。
+現在，您有適用於 Android 的「Google 用戶端 ID」，可以在「{{site.data.keyword.amashort}} 儀表板」中啟用 Google 鑑別。
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。
 
@@ -68,7 +80,7 @@ copyright:
 
 1. 按一下 **Google** 磚。
 
-1. 在 **Android 的應用程式 ID** 中，指定 Android 的「Android 用戶端 ID」，然後按一下**儲存**。
+1. 在**適用於 Android 的應用程式 ID** 中，指定適用於 Android 的「Google 用戶端 ID」，然後按一下**儲存**。
 
 ## 配置 {{site.data.keyword.amashort}} Client SDK for Android
 {: #google-auth-android-sdk}
@@ -165,14 +177,24 @@ copyright:
 	});
 ```
 
-1. 執行您的應用程式。即會蹦現「Google 登入」畫面：
+1. 執行您的應用程式。即會蹦現「Google 登入」畫面。登入之後，應用程式會要求資源的存取權：
 
 	![影像](images/android-google-login.png)
 
 	根據 Android 裝置以及目前是否登入 Google，您可能會有不同的使用者介面。
 
-1. 按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
+  按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
 
 1. 	要求成功之後，您會在 LogCat 工具中看到下列輸出：
 
 	![影像](images/android-google-login-success.png)
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ 如果您在使用者使用 Google 登入之後呼叫此程式碼，則會將使用者登出 Google。使用者嘗試再次登入時，必須選取將用來再次登入的 Google 帳戶。他們嘗試使用先前登入的 Google ID 進行登入時，不會提示使用者再次輸入其認證。若要讓系統再次提示輸入登入認證，使用者必須從 Android 裝置中移除其 Google 帳戶。
+
+ 傳遞給 logout 函數的 `listener` 值可以是空值。

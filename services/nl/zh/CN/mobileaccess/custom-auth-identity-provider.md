@@ -118,11 +118,15 @@ Authorization 头包含有关触发了认证过程的移动客户端和移动应
 
 ## 定制身份提供者的样本实现
 {: #custom-sample}
-开发定制身份提供者时，可以将定制身份提供者的以下 Node.js 样本实现用作参考。可从 [Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载完整应用程序代码。
+开发定制身份提供者时，可以将定制身份提供者的以下任何 Node.js 样本实现用作参考。请从 GitHub 存储库下载完整应用程序代码。
 
-### JSON 结构
+* [简单样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [高级样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-此实现假定提供的认证质询回复是具有以下结构的 JSON 对象：
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -131,7 +135,7 @@ Authorization 头包含有关触发了认证过程的移动客户端和移动应
  }
  ```
 
-### 定制身份提供者样本代码
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -194,7 +198,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 			}
 		}
 	} else {
-logger.debug("Login failure for userId ::", username);
+		logger.debug("Login failure for userId ::", username);
 	}
 
 	res.status(200).json(responseJson);
@@ -210,6 +214,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## 后续步骤
 {: #next-steps}

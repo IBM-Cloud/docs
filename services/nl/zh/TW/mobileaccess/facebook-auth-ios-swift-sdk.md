@@ -214,8 +214,10 @@ pod 'BMSFacebookAuthentication'
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
+         
      print ("response:\(response?.responseText), no error")
   } else {
      print ("error: \(error)")
@@ -246,3 +248,15 @@ pod 'BMSFacebookAuthentication'
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ 如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Facebook 進行鑑別。
+
+ 若要切換使用者，您必須呼叫此程式碼，而且使用者必須在其瀏覽器中登出 Facebook。
+
+ 將 ```callBack``` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。

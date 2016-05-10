@@ -130,7 +130,8 @@ i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mob
       }
 
  // [START openurl]
-      func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,annotation: AnyObject) -> Bool {
+      func application(application: UIApplication, openURL url: NSURL,
+					sourceApplication: String?, annotation: AnyObject) -> Bool {
              return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
@@ -158,9 +159,9 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 
  ```Swift
-  let protectedResourceURL = "<URL della tua risorsa protetta>" // qualsiasi risorsa protetta
-  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let protectedResourceURL = "<URL della tua risorsa protetta>" // qualsiasi risorsa protetta
+ let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
@@ -180,13 +181,21 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 1. 	La tua richiesta dovrebbe avere esito positivo. Nel log dovresti vedere il seguente output.
 
  ```
- onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
+ onAuthenticationSuccess info = Optional({attributes = {};
      deviceId = 105747725068605084657;
      displayName = "donlonqwerty@gmail.com";
      isUserAuthenticated = 1;
      userId = 105747725068605084657;
  })
- response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
+ response:Optional("Salve, questa è una risorsa protetta!"), no error
  ```
+
+1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+ ```
+ GoogleAuthenticationManager.sharedInstance.logout(callBack)
+ ```
+
+  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A tal punto, l'utente può fare clic sul nome utente nell'angolo superiore destro dello schermo per selezionare, ed eseguire l'accesso con, un altro utente.
+
+   Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

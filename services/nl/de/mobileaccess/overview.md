@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# Übersicht über {{site.data.keyword.amashort}}
+# Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungs- und Überwachungsservices für mobile Anwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung werden.
@@ -41,7 +41,7 @@ Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwe
 * Nach einer erfolgreichen Authentifizierung gibt {{site.data.keyword.amashort}} ein Berechtigungstoken zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK fügt das Berechtigungstoken automatisch der ursprünglichen Anforderung hinzu und sendet die Anforderung erneut an die Cloudressource.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert das Zugriffstoken (accessToken) aus der Anforderung und validiert es mit dem {{site.data.keyword.amashort}}-Service.
-* Der Zugriff wird erteilt. Die Antwort wird an die mobile Anwendung zurückgegeben.
+* Der Zugriff wird erteilt.  Die Antwort wird an die mobile Anwendung zurückgegeben.
 
 ## {{site.data.keyword.amashort}}-Anforderungsablauf
 {: #flow}

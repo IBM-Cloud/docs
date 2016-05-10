@@ -188,7 +188,6 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
 
 1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant
 `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
- 
 
 1. Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
@@ -218,3 +217,14 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
 1. 	Lorsque votre demande aboutit, la sortie suivante figure dans l'outil LogCat :
 
 	![image](images/android-custom-login-success.png)
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
+soumettre ses données d'identification.
+
+ La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.

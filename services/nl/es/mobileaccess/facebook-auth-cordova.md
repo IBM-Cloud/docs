@@ -59,9 +59,9 @@ Los pasos necesarios para configurar la plataforma iOS de una aplicación de Cor
 
 1. Añada el archivo `FacebookSDK.framework` a la lista de bibliotecas enlazadas en **Enlace binario con bibliotecas**.
 
- Consulte el apartado sobre [Configuración de la plataforma iOS para la autenticación de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Registre la API `IMFFacebookAuthenticationHandler` en código nativo, tal como se describe en la sección **Inicialización del SDK de cliente de {{site.data.keyword.amashort}}**. No inicialice `IMFClient` en código nativo. 
+ Consulte el apartado sobre [Configuración de la plataforma iOS para la autenticación de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Registre la API `IMFFacebookAuthenticationHandler` en código nativo, tal como se describe en la sección **Inicialización del SDK de cliente de {{site.data.keyword.amashort}}**. No inicialice `IMFClient` en código nativo.
 
-Añada la línea siguiente al método `application:openURL:sourceApplication:annotation` del delegado de la aplicación. Este código garantiza que todos los plug-ins de Cordova reciban notificación de los sucesos correspondientes. 
+Añada la línea siguiente al método `application:openURL:sourceApplication:annotation` del delegado de la aplicación. Este código garantiza que todos los plug-ins de Cordova reciban notificación de los sucesos correspondientes.
 
 ```
 [[ NSNotificationCenter defaultCenter] postNotification:
@@ -81,7 +81,7 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores correspondiente
 
 ## Prueba de autenticación
 {: #facebook-auth-cordova-test}
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil. 
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
 
 ### Antes de empezar
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).

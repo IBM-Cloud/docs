@@ -226,3 +226,13 @@ terminal pode ser acessado somente por aplicativos móveis que sejam instrumenta
 1. 	Quando sua solicitação for bem-sucedida, a saída a seguir estará na ferramenta LogCat:
 
 	![image](images/android-custom-login-success.png)
+
+1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.
+
+ O valor para `listener` passado para a função de logout pode ser nulo.

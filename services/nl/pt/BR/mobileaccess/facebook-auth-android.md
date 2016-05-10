@@ -224,3 +224,13 @@ o código a seguir depois de inicializar `BMSClient` e registrar
 1. 	Quando sua solicitação for bem-sucedida, a saída a seguir estará no utilitário LogCat:
 
 	![image](images/android-facebook-login-success.png)
+
+1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Se você chamar esse código depois que um usuário estiver conectado ao Facebook, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele será solicitado a fornecer as credenciais do Facebook.
+
+ O valor para `listener` passado para a função de logout pode ser nulo.

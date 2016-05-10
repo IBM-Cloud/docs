@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2016
+copyright:
+  years: 2016
 
 ---
 
@@ -159,7 +159,7 @@ return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openU
  ```Swift
  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
@@ -179,13 +179,23 @@ return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openU
 1. 	요청이 성공적으로 처리되어야 합니다. 로그에 다음 출력이 표시되어야 합니다.
 
  ```
- onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
+ onAuthenticationSuccess info = Optional({attributes = {};
      deviceId = 105747725068605084657;
      displayName = "donlonqwerty@gmail.com";
      isUserAuthenticated = 1;
      userId = 105747725068605084657;
  })
- response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
+ response:Optional("Hello, this is a protected resource!"), no error
  ```
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```
+ GoogleAuthenticationManager.sharedInstance.logout(callBack)
+ ```
+
+  Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우,
+사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 
+이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
+
+   로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

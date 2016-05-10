@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# {{site.data.keyword.amashort}} 概觀
+# 關於 {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 {{site.data.keyword.amafull}} 服務針對存取 {{site.data.keyword.Bluemix_notm}} 上所管理雲端資源的行動式應用程式，提供鑑別及監視服務。

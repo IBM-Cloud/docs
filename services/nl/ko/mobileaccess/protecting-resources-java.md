@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
   
 ---
 
@@ -11,7 +11,7 @@
 
 ## 시작하기 전에
 {: #before-you-begin}
-* {{site.data.keyword.bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)를 참조하십시오. 
+* {{site.data.keyword.Bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 서버 SDK 설치
 {: #installing-server-sdk}

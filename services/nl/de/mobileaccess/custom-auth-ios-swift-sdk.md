@@ -13,7 +13,7 @@ Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung 
 ## Vorbereitungen
 {: #before-you-begin}
 
-Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist. Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein. Weitere Informationen finden Sie über die folgenden Links:
+Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist.  Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  Weitere Informationen finden Sie über die folgenden Links:
  * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [iOS-Swift-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -24,7 +24,7 @@ Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.da
 ## {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
  {: #custom-auth-ios-configmca}
 
- 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard. 
+ 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
  1. Klicken Sie auf **Mobile Systemerweiterungen** und notieren Sie die Werte für **Route** (*applicationRoute*) und **App-GUID** (*applicationGUID*). Sie benötigen diese Werte, wenn Sie das SDK initialisieren.
 
@@ -155,7 +155,7 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -179,3 +179,13 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
+
+ Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.
