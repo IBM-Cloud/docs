@@ -60,4 +60,4 @@ Para obter informações sobre como obter o SDK e o integrar ao app móvel, cons
    * [SDK principal](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## interface de programação de aplicativos
-   * [API do Núcleo](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [API do Núcleo](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

@@ -39,7 +39,7 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 {: #next}
 如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱有關設定 Bluemix 服務的資訊。
    * [Mobile Client Access](../../services/mobileaccess/index.html)
-   * [推送](../../services/mobilepush/index.html)
+   * [Push](../../services/mobilepush/index.html)
 
 # 相關鏈結
 
@@ -50,4 +50,4 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## API
-   * [核心 API](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [核心 API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

@@ -61,7 +61,7 @@ return true
 {: #next}
 如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱有關設定 {{site.data.keyword.Bluemix}} 服務的資訊。
    * [Mobile Client Access](../../services/mobileaccess/index.html)
-   * [推送](../../services/mobilepush/index.html)
+   * [Push](../../services/mobilepush/index.html)
 
 # 相關鏈結
 
@@ -72,5 +72,5 @@ return true
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## API
-   *
-[核心 API](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+*
+[核心 API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)

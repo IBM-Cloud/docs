@@ -49,4 +49,4 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## api
-   * [Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

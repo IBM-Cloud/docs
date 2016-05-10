@@ -77,4 +77,4 @@ Para obter informações sobre como obter o SDK e o integrar ao app móvel, cons
 
 ## interface de programação de aplicativos
    *
-[API do núcleo](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[API do núcleo](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
