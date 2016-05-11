@@ -7,22 +7,21 @@ copyright:
 
 {:new_window: target="_blank"}
 
-
-#Enabling Advanced push notifications
+# Enabling Advanced push notifications
+{: #push-advanced-notifications-main}
 
 Configure an iOS badge, sound, additional JSON payload, actionable notifications, and holding notifications.
 
-## Configure sound, and payload and iOS badge
+## Configure sound, payload, iOS badge
 {: #badge-sound-payload}
 
 Configure an iOS badge, sound and additional JSON payload.
 
 1. On the Push Notifications dashboard, go to the **Notifications** tab.
 2. Go to the **Optional Fields** section to configure the following push notification features. 
-	- **Sound File** - Enter a string to point to the sound file in your mobile app. In the payload, specify the string name of the sound file to use.
-	- **iOS Badge** - For iOS devices, the number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
-	
-	
+	a. **iOS Badge** - For iOS devices, the number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
+
+	b. **Sound File** - Enter a string to point to the sound file in your mobile app. In the payload, specify the string name of the sound file to use.
 
 
 ###Android
@@ -53,7 +52,8 @@ Configure an iOS badge, sound and additional JSON payload.
 ```
 
 
-## Holding Android notifications 
+
+## Holding Android notifications  
 {: #hold-notifications-android}
 
 When your application goes into background, you probably want Push to hold back notifications that are sent to your application. To hold notifications, call the hold() method in the onPause() method of the activity that is handling push notifications.
@@ -69,46 +69,47 @@ protected void onPause() {
 } 
 ```
 
-## Enabling iOS actionable notifications  
+
+
+## Enabling actionable iOS notifications 
 {: #enable-actionable-notifications-ios}
+
 
 Unlike traditional push notifications, actionable notifications prompt users to make a selection upon receipt of the notification alert without opening the app. Use the following instructions to enable actionable push notifications in your application.
 
 1. Create a user response action.
 
-   Objective-C
+     Objective-C
 
-	```
-	// For Objective-C
-	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	    acceptAction.identifier = @"ACCEPT_ACTION";
-	    acceptAction.title = @"Accept";
-	     /* Optional properties
-	     acceptAction.destructive = NO;
-	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
-   Swift
+```
+UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
+    acceptAction.identifier = @"ACCEPT_ACTION";
+    acceptAction.title = @"Accept";
+     /* Optional properties
+     acceptAction.destructive = NO;
+  acceptAction.authenticationRequired = NO; */
+```
 
-	```
-	//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
-	```
+    Swift
+
 	
-	```
-	//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-	```
+```
+let acceptAction = UIMutableUserNotificationAction()
+acceptAction.identifier = "ACCEPT_ACTION"
+acceptAction.title = "Accept"
+acceptAction.destructive = false
+acceptAction.authenticationRequired = false
+acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+```
+	
+```
+let declineAction = UIMutableUserNotificationAction()
+declineAction.identifier = "DECLINE_ACTION"
+declineAction.title = "Decline"
+declineAction.destructive = true
+declineAction.authenticationRequired = false
+declineAction.activationMode = UIUserNotificationActivationMode.Background
+```
 
 2. Create the notification category and set an action. **UIUserNotificationActionContextDefault** or **UIUserNotificationActionContextMinimal** are valid contexts.
 
@@ -168,9 +169,10 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	application.registerUserNotificationSettings(notificationSettings)
 	application.registerForRemoteNotifications()
 	```
-	
-## Handling actionable iOS notifications  
+
+## Handling iOS actionable notifications 
 {: #actionable-notifications}
+
 
 When an actionable notification is received, the control is passed onto the following method based on the identifier chosen.
 
