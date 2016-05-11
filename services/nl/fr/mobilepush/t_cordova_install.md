@@ -13,8 +13,8 @@ Installez et utilisez le plug-in Push client pour développer davantage vos appl
 
 ### Avant de commencer
 
-1. Téléchargez les dernières versions d'Android Studio SDK et Xcode. 
-1. Configurez votre émulateur. Pour Android Studio, utilisez un émulateur qui prend en charge l'API Google Play. 
+1. Téléchargez les dernières versions d'Android Studio SDK et Xcode.
+1. Configurez votre émulateur. Pour Android Studio, utilisez un émulateur qui prend en charge l'API Google Play.
 1. Installez l'outil de ligne de commande Git. Pour Windows, prenez soin de sélectionner l'option **Run Git from the Window Command Prompt**. Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir [Git](https://git-scm.com/downloads).
 
 1. Installez Node.js et l'outil Node Package Manager (NPM). L'outil de ligne de commande NPM est intégré à Node.js. Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir [Node.js](https://nodejs.org/en/download/).
@@ -33,15 +33,13 @@ Installez et utilisez le plug-in Push client pour développer davantage vos appl
 1. Facultatif : Editez le fichier **config.xml** et remplacez le nom de l'application dans l'élément <name> par le
 nom de votre choix, plutôt que d'utiliser le nom HelloCordova par défaut.
 
-
 	**Remarque** : Prenez soin de spécifier l'ID de bundle approprié. A défaut, les messages d'erreur suivants s'afficheront dans Xcode :
 	* The executable was signed with invalid entitlements.
 	* The entitlements specified in your application’s Code Signing Entitlements file do not match those specified in your provisioning profile.
 
-	Pour corriger ce problème, spécifiez l'ID de bundle approprié dans Xcode ou dans le fichier **config.xml** de votre appli Cordova. 
+	Pour corriger ce problème, spécifiez l'ID de bundle approprié dans Xcode ou dans le fichier **config.xml** de votre appli Cordova.
 
 1. Ajoutez l'API minimale prise en charge ou la déclaration de cible de déploiement dans le fichier config.xml de votre application Cordova. La valeur de minSdkVersion doit être supérieure à 15. La valeur de targetSdkVersion doit toujours refléter le logiciel SDK Android le plus récent disponible auprès de Google.
-
 	* **Android** - A l'aide de votre éditeur, ouvrez le fichier config.xml et mettez à jour
 l'élément ```<platform name="android">``` avec les versions minimum et cible de SDK :
 
@@ -104,6 +102,6 @@ commande suivante : **cordova plugin list**.
 1. (Android uniquement) - Générez votre projet Android à l'aide de la commande suivante :
 **cordova build android**.
 
-	**Remarque** : Avant d'ouvrir votre projet dans Android Studio, vous devez d'abord générer votre application Cordova via l'interface CLI Cordova. A défaut, des erreurs de génération seront émises. 
+	**Remarque** : Avant d'ouvrir votre projet dans Android Studio, vous devez d'abord générer votre application Cordova via l'interface CLI Cordova. A défaut, des erreurs de génération seront émises.
 
 1. Etape suivante. [Initialisation du plug-in Cordova](t_cordova_initalize.html).

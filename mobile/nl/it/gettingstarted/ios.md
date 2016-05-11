@@ -79,4 +79,4 @@ Per informazioni su come ottenere l'SDK e integrarlo nella tua applicazione mobi
 
 ## api
    *
-[API Core](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[API Core](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)

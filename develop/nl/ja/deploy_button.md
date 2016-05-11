@@ -16,7 +16,8 @@ copyright:
 {:codeblock: .codeblock}
 
 
-#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成{: #deploy-button} 
+#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成
+{: #deploy-button} 
 
 *最終更新日: 2016 年 3 月 2 日* 
 
@@ -41,7 +42,8 @@ copyright:
 
 7. アプリがユーザーの {{site.data.keyword.Bluemix_notm}} 組織にデプロイされます。 
 
-##このボタンの例{: #button-examples} 
+##このボタンの例
+{: #button-examples} 
 
 パブリック {{site.data.keyword.jazzhub_short}} リポジトリーのアプリ・ボタンの例を以下に示します。
 
@@ -61,7 +63,8 @@ copyright:
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/deploy_buttonx2.png" alt="Bluemix にデプロイ" /></a>
 </p> 
 
-##ボタンの作成{: #create-button}
+##ボタンの作成
+{: #create-button}
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成するには、以下のようにします。 
 
@@ -105,7 +108,8 @@ copyright:
 </li>
 </ol>
 
-##このボタンのスニペットの考慮事項{: #button-snippet}
+##このボタンのスニペットの考慮事項
+{: #button-snippet}
 
 「Bluemix にデプロイ」ボタンのスニペットをカスタマイズする際は、以下の考慮事項を検討してください。 
 
@@ -119,7 +123,8 @@ copyright:
 	
 	* 翻訳版のボタンを使用したい場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) からダウンロードすることができます。 
 	
-##このボタンのリポジトリーの考慮事項{: #button-repo} 
+##このボタンのリポジトリーの考慮事項
+{: #button-repo} 
 
 「Bluemix にデプロイ」ボタンで使用するプロジェクト・リポジトリーについての以下の考慮事項を検討してください。 
 

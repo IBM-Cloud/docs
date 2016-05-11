@@ -3,7 +3,8 @@
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.deliverypipeline}} 入门{: #delivery-pipeline}  
+#{{site.data.keyword.deliverypipeline}} 入门
+{: #delivery-pipeline}  
 
 *上次更新时间：2016 年 1 月 21 日*
 

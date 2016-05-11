@@ -60,7 +60,7 @@ cd your_app_name
 1. From the Cordova command-line interface (CLI), add your platforms: iOS, Android, or both by using the following commands.
 
 	```
-	cordova platform add ios
+	cordova platform add ios@3.9.0
 	cordova platform add android
 	```
 1. From your Cordova application root directory, enter the following command to install the Cordova Push plug-in: **cordova plugin add ibm-mfp-push**.

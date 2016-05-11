@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  2015, 2016
 
 ---
 
@@ -15,7 +15,7 @@ copyright:
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 15 mars 2016*
+*Dernière mise à jour : 13 avril 2016*
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -104,7 +104,7 @@ Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses 
 dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la
 commande `nslookup`. Par exemple, vous pouvez entrer la commande suivante dans une fenêtre de ligne de commande :
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -302,6 +302,99 @@ jour, les caractères codés sur deux octets ne sont pas affichés. Toutefois, d
 
 
 
+## Impossible de faire passer les applications en mode débogage
+{: #ts_debug}
+
+Il se peut que vous ne puissiez pas activer le mode débogage si votre version de machine virtuelle Java
+(JVM) est la version 8 ou antérieure. 
+
+
+Après avoir sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan
+de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web
+affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+{: tsSymptoms}
+
+Par contre, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du
+mode` et `Développement`, sans afficher `Débogage`. 
+Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion
+WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+à java.util.concurrent.FutureTask.run(FutureTask.java:277)
+à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+à java.lang.Thread.run(Thread.java:785)
+Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
+org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 autres
+Provoquée par : java.util.concurrent.TimeoutException
+à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 autres
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour
+MyWebProj com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la
+connexion WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+à java.util.concurrent.FutureTask.run(FutureTask.java:277)
+à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+à java.lang.Thread.run(Thread.java:785)
+Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
+org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 autres
+Provoquée par : java.util.concurrent.TimeoutException
+à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 autres
+```
+ 
+
+Les versions de machine virtuelle Java (JVM) suivantes ne peuvent pas établir une session de débogage : IBM JVM 7, IBM
+JVM 8, et versions antérieures d'Oracle JVM 8.
+{: tsCauses}
+
+Si la machine virtuelle Java (JVM) de votre plan de travail relève de ces versions, vous pouvez rencontrer des problèmes lorsque vous créez une session de
+débogage. La version de machine virtuelle Java de votre plan de travail est généralement celle de la JVM système de votre ordinateur local. Ce n'est pas la même que
+celle de votre application Java Bluemix en exécution. L'application Java Bluemix opère presque toujours sur la JVM IBM, et parfois sur la JVM
+OpenJDK.
+  
+
+Pour vérifier la version Java utilisée par IBM Eclipse Tools for Bluemix, procédez comme suit :
+{: tsResolve}
+
+  1. Dans IBM Eclipse Tools for Bluemix, sélectionnez **Aide** > **A propos d'Eclipse** > **Détails
+de l'installation** > **Configuration**.
+  2. Localisez la propriété `eclipse.vm` dans la liste. La ligne suivante est un exemple de propriété
+`eclipse.vm` :
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll 	```
+
+  3. Sur la ligne de commande, entrez `java -version` depuis le répertoire `bin` de votre installation Java. Les
+informations de version de votre JVM IBM s'affichent.
+
+Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IBM, ou une version antérieure à la JVM 8 d'Oracle 8, procédez comme suit pour
+passer à la JVM 8 d'Oracle :
+
+  1. Téléchargez et installez la JVM 8 d'Oracle. Voir
+[Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} pour plus d'informations.
+  2. Redémarrez Eclipse.
+  3. Vérifiez que la propriété `eclipse.vm` pointe sur votre nouvelle installation de la JVM 8 d'Oracle.
+
+
+
+
+
+
 
 ## Impossible d'effectuer les actions demandées
 {: #ts_authority}
@@ -330,7 +423,7 @@ Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suiva
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
  * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle
-Développeur. Voir [Gestion de vos organisations](../admin/adminpublic.html#orgmng){: new_window} pour des détails. 
+Développeur. Voir [Gestion de vos organisations](../admin/adminpublic.html#orgmng){: new_window} pour des détails.
  
 
  
@@ -989,7 +1082,8 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
   * Spécifiez la commande de démarrage en appliquant l'une des méthodes suivantes : 
       * Utilisez l'interface de ligne de commande cf. Par exemple : 
         ```
-		cf push MonNoeudJsUnique01 -p chemin_app -c "node app.js"	```
+		cf push MonNoeudJsUnique01 -p chemin_app -c "node app.js"
+		```
 	  * Utilisez le fichier [package.json](https://docs.npmjs.com/json){: new_window}. Exemple :
 	    ```
 		{
@@ -1146,7 +1240,7 @@ avec l'option buildpack. Par exemple :
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf
 push` et spécifiez votre pack de construction personnalisé avec l'option **-b**. Par exemple :
     ```
-	cf push nom_app -p chemin_app -b https://github.com/Sing-Li/bluemix-bp-meteor
+	cf push nom_app -p chemin_app -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1358,8 +1452,8 @@ Ce problème peut se produire lorsque vous affectez la même route d'adresse URL
 {: tsCauses}
 
 Par exemple, vous envoyez par commande push l'application mon_App1 dans {{site.data.keyword.Bluemix_notm}} et définissez le nom de domaine
-"manouvelleapp.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez ses routes
-d'adresse URL "manouvelleapp.mybluemix.net". La route est désormais mappée aux deux applications.
+"manouvelleapp.stage1.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez ses routes
+d'adresse URL "manouvelleapp.stage1.mybluemix.net". La route est désormais mappée aux deux applications.
 
  
 

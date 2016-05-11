@@ -14,7 +14,7 @@ copyright:
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 17 March 2016*
+*Last updated: 9 May 2016*
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -441,8 +441,12 @@ The `.cfignore` file contains the names of files and directories that you want t
 tmp/
 ```
 
-# rellinks
-## general 
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

@@ -8,7 +8,7 @@ copyright:
 # Habilitación de la autenticación de Facebook en apps de iOS (SDK de Swift)
 {: #facebook-auth-ios}
 
-Para utilizar Facebook como proveedor de identidad en las aplicaciones de iOS, añada y configure la plataforma iOS para la aplicación de Facebook. 
+Para utilizar Facebook como proveedor de identidad en las aplicaciones de iOS, añada y configure la plataforma iOS para la aplicación de Facebook.
 
 ## Antes de empezar
 {: #facebook-auth-ios-before}
@@ -22,7 +22,7 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de iOS, a
 
 1. Inicie una sesión en el [panel de control de la app de Facebook](https://developers.facebook.com/apps/).
 
-1. Anote el **ID de app** correspondiente a su app. Necesitará este valor cuando configure el proyecto iOS para la autenticación de Facebook. 
+1. Anote el **ID de app** correspondiente a su app. Necesitará este valor cuando configure el proyecto iOS para la autenticación de Facebook.
 
 1. Pulse **Valores > Añadir plataforma > iOS**.
 
@@ -38,11 +38,11 @@ Después de haber configurado el ID y la aplicación de Facebook para dar servic
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix}}.
 
-1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (*applicationRoute*) y a **Identificador exclusivo global de la app** (*applicationGUID*).Necesitará estos valores cuando inicialice el SDK.
+1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (*applicationRoute*) y a **Identificador exclusivo global de la app** (*applicationGUID*). Necesitará estos valores cuando inicialice el SDK.
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Facebook**. 
+1. Pulse el mosaico **Facebook**.
 
 1. Especifique el ID de aplicación de Facebook y haga clic en **Guardar**.
 
@@ -152,7 +152,7 @@ Inicialice el SDK del cliente pasando los parámetros `applicationGUID` y `appli
 
 Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
-1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**. 
+1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**.
 
 1. Para importar la infraestructura necesaria a la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}, añada las cabeceras siguientes:
 
@@ -161,7 +161,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
  import BMSCore
  import BMSSecurity
  ```
-2. Inicialice el SDK del cliente.	Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.  
+2. Inicialice el SDK del cliente.	Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -176,13 +176,13 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
  FacebookAuthenticationManager.sharedInstance.register()
  ```
 
-1. Notifique la activación de la app al SDK de Facebook y registre el manejador de autenticación de Facebook añadiendo el código siguiente al método `application:didFinishLaunchingWithOptions` en el delegado de la app. Añada este código justo después de inicializar la instancia de BMSClient y registrar Facebook como gestor de autenticación. 
+1. Notifique la activación de la app al SDK de Facebook y registre el manejador de autenticación de Facebook añadiendo el código siguiente al método `application:didFinishLaunchingWithOptions` en el delegado de la app. Añada este código justo después de inicializar la instancia de BMSClient y registrar Facebook como gestor de autenticación.
 
  ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
  ```
 
-1. Copie el archivo `FacebookAuthenticationManager.swift` de los archivos fuente de pod `BMSFacebookAuthentication` en el directorio del proyecto. 
+1. Copie el archivo `FacebookAuthenticationManager.swift` de los archivos fuente de pod `BMSFacebookAuthentication` en el directorio del proyecto.
 
 1. Añada el código siguiente al delegado de la app.
 
@@ -204,7 +204,8 @@ Después de inicializar el SDK del cliente y registrar el gestor de autenticaci�
 
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
+1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil recién creado en su navegador. Abra el siguiente URL: `{rutaAplicación}/protected`.
+Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se puede acceder a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final.
@@ -212,7 +213,8 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
      print ("response:\(response?.responseText), no error")
   } else {
@@ -227,7 +229,7 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 
    ![imagen](images/ios-facebook-login.png)
 
-   Esta pantalla puede ser ligeramente diferente si no ha iniciado una sesión en Facebook. 
+   Esta pantalla puede ser ligeramente diferente si no ha iniciado una sesión en Facebook.
 
 1. Pulse **Aceptar** para autorizar que {{site.data.keyword.amashort}} utilice su identidad de usuario de Facebook para fines de autenticación.
 
@@ -244,3 +246,15 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ Si invoca este código después de que el usuario haya iniciado sesión en Facebook y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Facebook para llevar a cabo la autenticación. 
+
+ Para cambiar de usuario, debe invocar este código y el usuario debe finalizar su sesión en Facebook desde su navegador. 
+
+ Es opcional pasar ```callBack``` a la función de cierre de sesión. También puede pasar `nil`.

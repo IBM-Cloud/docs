@@ -61,7 +61,7 @@ copyright:
 運用現在可用的資料量，應用程式開發需要處理新資料的能力，而且可能會對它做出反應。此需求包括處理結構化資料庫記錄以及非結構化文件、映像檔或視訊。
 
 ### IoT
-Internet of Things 實務範例通常為固有的感應器驅動。例如，如果需要反應超出特定溫度的感應器，則無法觸發 {{site.data.keyword.openwhisk_short}} 中的動作。
+Internet of Things 情境本質上經常是由感應器所驅動。例如，如果需要針對感應器超過特定溫度做出反應，可能會觸發 {{site.data.keyword.openwhisk_short}} 中的動作。
 
 
 

@@ -16,13 +16,13 @@ copyright:
 
 *前次更新：2016 年 3 月 17 日*
 
-「應用程式管理」是一組開發及除錯公用程式，可以針對您在 {{site.data.keyword.Bluemix}}
-上的 Liberty 和 Node.js 應用程式啟用。{:shortdesc}
+「應用程式管理」是一組開發及除錯公用程式，可以針對您在 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 應用程式啟用。
+{:shortdesc}
 
 ##「應用程式管理」公用程式
 {: #Utilities}
 
-這些公用程式都支援 Liberty 及 Node.js。
+這些公用程式同時支援 Liberty 及 Node.js。
 
   1. *proxy*：作為應用程式與 {{site.data.keyword.Bluemix_notm}} 間之 Proxy 的最小應用程式管理。
 
@@ -33,7 +33,7 @@ copyright:
     http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
 	
-    使用開發主控台，使用者可以重新啟動、停止或暫停其應用程式。使用者也可以啟用或存取 Shell 及檢查程式公用程式。
+    使用開發主控台，使用者可以重新啟動、停止或暫停其應用程式。使用者也可以啟用或存取 shell 及 inspector 公用程式。
 
     devconsole 公用程式也會啟動 *proxy*。
 	
@@ -41,12 +41,12 @@ copyright:
 
     「性能檢測中心」支援透過使用 IBM Monitoring and Diagnostic Tools 來分析 Liberty 及 Node.js 應用程式的效能。如需相關資訊，請參閱 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。</p></li>
 	
-  4. *shell*：啟用可從 devconsole 公用程式或透過存取下列 URL 所存取的 Web 型 Shell：
+  4. *shell*：啟用可從 devconsole 公用程式或透過存取下列 URL 進行存取的 Web 型 Shell：
     ```
     http://<yourappname>.mybluemix.net/bluemix-debug/shell
     ```
 	
-    在您存取 Shell 公用程式之後，即會顯示終端機視窗，內含對應用程式的 Shell 存取。您可以執行一般 Shell 中所支援的所有作業（例如，編輯檔案、檢查記憶體用量，或執行診斷指令）。
+    在您存取 shell 公用程式之後，即會顯示終端機視窗，在視窗中會以 Shell 方式連入應用程式。您可以執行一般 Shell 中所支援的所有作業，例如編輯檔案、檢查記憶體用量，或執行診斷指令。
 	
     *shell* 公用程式也會啟動 *proxy*。
 
@@ -68,7 +68,7 @@ copyright:
 
   1. *inspector*：啟用可從 *devconsole* 公用程式或 *https://myApp.mybluemix.net/bluemix-debug/inspector* 存取的 Node Inspector 除錯器介面。
   
-  檢查程式處理程序是在應用程式儲存器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
+  inspector 處理程序是在應用程式儲存器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 公用程式也會啟動 *proxy*。
   
@@ -85,7 +85,7 @@ copyright:
     cf restage <appname>
     ```
 	
-    2. 從 Cloud Foundry 指令行中，新增應用程式的路徑，其中路徑具有附加至應用程式名稱後面的 "-pm"（例如 <appname>-pm.mybluemix.net）。
+    2. 從 Cloud Foundry 指令行中，新增應用程式的路徑，其中路徑裡的應用程式名稱後面附加了 "-pm"，例如 <appname>-pm.mybluemix.net。
     
 	```
     cf map-route <appname> ng.bluemix.net -n <appname>-pm
@@ -149,12 +149,12 @@ cf restage myApp
 
 * 「應用程式管理」僅支援單一實例應用程式。
 * 使用「應用程式管理」對應用程式進行的變更是暫時性的，會在結束此模式之後遺失。此模式僅供暫時開發使用，而且基於效能原因，不是用來作為正式作業環境。
-* 如果您在 manifest.yml 檔案 (command) 或 CF CLI (-c) 中設定 start 指令，則大部分「應用程式管理」公用程式不會運作。這些方法是建置套件置換，而且是啟動 Node.js 應用程式的反面模式 (anti-pattern)。若要獲得最佳的結果，請在 package.json 檔案或 Procfile 檔案中設定 start 指令。
+* 如果您在 manifest.yml 檔案 (command) 或 CF CLI (-c) 中設定啟動指令，則大部分「應用程式管理」公用程式不會運作。這些方法是建置套件置換，而且是啟動 Node.js 應用程式的反面模式 (anti-pattern)。若要獲得最佳的結果，請在 package.json 檔案或 Procfile 中設定啟動指令。
 
 ##Eclipse Tools 的開發模式
 {: #devmode}
 
-開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在應用程式於雲端執行的同時，使用他們的應用程式。
+開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在應用程式於雲端執行的同時，處理他們的應用程式。
 
 在 {{site.data.keyword.Bluemix_notm}} 上處理應用程式時，開發人員可能感覺他們無法像在本端環境中那樣地執行正常的開發活動。為了處理此問題，Eclipse Tools
 的開發模式讓您能夠在暫時性的安全工作區裡，在雲端工作。

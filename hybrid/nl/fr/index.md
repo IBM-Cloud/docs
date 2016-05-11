@@ -30,8 +30,7 @@ est essentiellement un environnement dans lequel vous pouvez développer des app
 utiliser des services qui fournissent des fonctions prêtes à l'emploi. L'environnement {{site.data.keyword.Bluemix_notm}} public fait abstraction de la
 plupart des aspects complexes associés à l'hébergement et à la gestion des applications reposant sur le cloud et les masque. En tant que développeur d'applications, vous pouvez vous consacrer au développement de votre application sans avoir à gérer l'infrastructure
 requise pour son
-hébergement. Vous pouvez également bénéficier de plus de 100 services IBM et de tiers qui facilitent l'assemblage d'applications.
-En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}} public](../public/index.html).
+hébergement. Vous pouvez également bénéficier de plus de 100 services IBM et de tiers qui facilitent l'assemblage d'applications. En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}} public](../public/index.html).
 
 ## Dédié
 
@@ -44,10 +43,9 @@ catalogue. En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}
 ## Local
 
 Avec l'environnement {{site.data.keyword.Bluemix_notm}} local, vous pouvez tirer parti de la véritable valeur d'un cloud privé au sein de
-votre centre de données. L'environnement {{site.data.keyword.Bluemix_notm}} local est distribué sous forme de service, en collaboration
+votre centre de données.  L'environnement {{site.data.keyword.Bluemix_notm}} local est distribué sous forme de service, en collaboration
 constante avec votre équipe informatique. Il vous permet également d'optimiser vos grands systèmes, votre architecture orientée services, vos processus et
-vos données existants sur une plateforme cloud moderne.
-En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}} local](../local/index.html).
+vos données existants sur une plateforme cloud moderne. En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}} local](../local/index.html).
 
 # rellinks
 ## general

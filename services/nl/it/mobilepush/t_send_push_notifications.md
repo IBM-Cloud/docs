@@ -10,8 +10,7 @@ copyright:
 
 {: #push-send-notifications}
 
-Dopo che hai sviluppato le tue applicazioni, puoi inviare delle notifiche di push di base (senza utilizzare tag,
-badge, payload aggiuntivi o file audio).
+Dopo che hai sviluppato le tue applicazioni, puoi inviare delle notifiche di push di base (senza utilizzare tag, badge, payload aggiuntivi o file audio).
 
 
 Invia notifiche di push di base.

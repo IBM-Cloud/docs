@@ -17,13 +17,15 @@ copyright:
 
 *上次更新时间：2015 年 12 月 9 日*
 
-以下是关于在 {{site.data.keyword.Bluemix}} 中使用 SendGrid 的问题解答。{:shortdesc}
+以下是关于在 {{site.data.keyword.Bluemix}} 中使用 SendGrid 的问题解答。
+{:shortdesc}
 
 
 ## 无法使用 SendGrid 发送电子邮件
 {: #ts_sendgrid_email}
 
-如果无法使用 SendGrid 服务发送电子邮件，那么可能是因为已达到每个服务实例所允许的电子邮件数限制。{:shortdesc}
+如果无法使用 SendGrid 服务发送电子邮件，那么可能是因为已达到每个服务实例所允许的电子邮件数限制。
+{:shortdesc}
 
 
 如果所发送的电子邮件数达到所允许的最大电子邮件数，那么就无法再使用 SendGrid 服务发送更多电子邮件。

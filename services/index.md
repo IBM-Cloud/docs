@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 4 May 2016*
+*Last updated: 10 May 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -41,7 +41,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 
 |Service	|Available in US South region	|Available in Europe United Kingdom region |Available in Australian Sydney region|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|Yes		|No		|No|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Yes		|No		|No|
 |{{site.data.keyword.activedeployshort}}			|Yes		|Yes		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Yes	   	|Yes  		|Yes|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|Yes			|Yes		|
@@ -88,8 +88,8 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepush}}	|Yes		|Yes		|Yes|
-|Push for iOS 8					|Yes		|Yes		|No|
+|{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes|
+|{{site.data.keyword.mobilepushshort}}				|Yes		|Yes		|Yes|
 |{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Yes	|Yes		|Yes|

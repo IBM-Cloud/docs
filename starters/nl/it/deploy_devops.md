@@ -21,7 +21,7 @@ Puoi creare un repository Git ospitato che viene distribuito automaticamente a {
 delle modifiche nel repository Git. 
 {:shortdesc}
 
-1. Per iniziare, nella pagina Panoramica dell'applicazione, fai clic su **Aggiungi pipeline e repository Git** o, nella modalità classica {{site.data.keyword.Bluemix_notm}}, fai clic su **AGGIUNGI GIT**.  
+1. Per iniziare, nella pagina Panoramica dell'applicazione, fai clic su **Aggiungi pipeline e repository Git** o, nella modalità classica {{site.data.keyword.Bluemix_notm}}, fai clic su **AGGIUNGI GIT**. 
 2. Nella finestra così visualizzata, assicurati che la casella di spunta **Inserisci il pacchetto dell'applicazione starter nel repository e abilita la pipeline Crea e distribuisci** sia selezionata. Il repository Git viene creato. Se il codice di starter è disponibile,
 è caricato nel repository. Inoltre, l'applicazione viene distribuita dal servizio Delivery Pipeline in esecuzione in {{site.data.keyword.jazzhub}}.  
 3. Per aggiornare la tua applicazione, puoi utilizzare la riga comandi o il Web IDE.  

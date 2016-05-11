@@ -12,7 +12,7 @@ copyright:
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 21 marzo 2016*
+*Ultimo aggiornamento: 5 aprile 2016*
 
 {{site.data.keyword.Bluemix_notm}} ti consente di implementare, ospitare o ridimensionare facilmente servizi e applicazioni. Potrai così concentrarti sulla logica e
 sulla progettazione dell'applicazione.
@@ -35,7 +35,9 @@ renderli generalmente disponibili.	|Viene fornito supporto per i problemi consid
 laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](../support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
 
-{{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla parte inferiore del Catalogo e fai quindi clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}Servizi sperimentali**.
+##Servizi sperimentali
+
+{{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla parte inferiore del catalogo e fai quindi clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}Servizi sperimentali**.
 
 I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo modalità non compatibili con le versioni precedenti. L'uso di questi servizi negli ambienti di produzione è sconsigliato. Il supporto per i servizi sperimentali viene fornito tramite la Community di sviluppatori {{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM
 e tale problema viene considerato come un difetto in un servizio sperimentale,
@@ -50,6 +52,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 
 |Servizio	|Disponibile nella regione Stati Uniti Sud	|Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.cloudaccesstrailshort}}	|Sì		|No		|No|
 |{{site.data.keyword.activedeployshort}}			|Sì		|Sì		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Sì	   	|Sì  		|Sì|
 |{{site.data.keyword.alertnotificationshort}}		|Sì		|Sì			|Sì		|
@@ -76,7 +79,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.creshort}}			|Sì		|No		|No|
 |{{site.data.keyword.game}}			|Sì		|Sì		|Sì|
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sì	|Sì		|Sì|
-|{{site.data.keyword.globalizationshort}}	|Sì		|Sì		|Sì|
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.dataworks_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.twittershort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
@@ -103,7 +106,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
 |{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.servicediscoveryshort}}		|Sì		|No		|No|
+|{{site.data.keyword.servicediscoveryshort}}		|Sì		|Sì		|No|
 |{{site.data.keyword.serviceproxyshort}}		|Sì		|No		|No|
 |{{site.data.keyword.sescashort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.ssofull}}			|Sì		|No		|No|
@@ -122,3 +125,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.xpagesservice_short}}	|Sì		|Sì		|No|
 *Tabella 2. Disponibilità dei servizi*
+
+## Deprecazione servizio
+
+IBM fornirà un avviso di almeno 30 giorni se intende sospendere o sostituire un servizio generalmente disponibile. Se non viene fornita una sostituzione equivalente, per almeno 12 mesi dalla data dell'annuncio, IBM si impegna a prendere tutte le misure necessarie per continuare l'operazione e supportare le istanze del servizio distribuite precedentemente. 

@@ -1,30 +1,31 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
+
 
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-#Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
+# Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-*Last Updated: 22 March 2016*
+*Last Updated: 29 April 2016*
 
-To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}} (the {{site.data.keyword.deliverypipeline}} service).
-{: shortdesc} 
+To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+{: shortdesc}
 
-As you develop an app in the cloud, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
+With the Delivery Pipeline service, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
 
-Build jobs compile and package your app source code from Git or Jazz source control management (SCM) repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. Each time the source code changes, a build is triggered.  
+Build jobs compile and package your app source code from Git or Jazz source control management (SCM) repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. Each time the source code changes, a build is triggered.
 
 A deployment job takes output from a build job and deploys it to either IBM Containers or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.  
 
@@ -32,7 +33,7 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 Complete these steps to set up your {{site.data.keyword.deliverypipeline}}:    
 
-1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **Add Git Repo and Pipeline**. 
+1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **Add Git Repo and Pipeline**.
 1. Make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected and then click **CONTINUE**.   
 1. After your Git repository is created, click **CLOSE**. The Add Git button is replaced by an Edit Code button and your Git URL.  
 1. To add the {{site.data.keyword.deliverypipeline}} service to the associated space or spaces, click **Connect New**, click the **DevOps** category, click **Delivery Pipeline**, and click **Create**.

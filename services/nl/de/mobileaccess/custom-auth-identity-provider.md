@@ -43,9 +43,9 @@ Ein angepasster Identitätsprovider kann mit Authentifizierungsanforderung ('cha
 * `status`: Gibt `success`, `challenge` oder `failure` für die Anforderung an.
 * `stateId` (optional): Gibt eine zufällig generierte Zeichenfolgekennung an, die die Authentifizierungssitzung mit dem mobilen Client identifiziert. Dieses Attribut kann weggelassen werden, wenn der angepasste Identitätsprovider keinen Status speichert.
 * `challenge`: Gibt ein JSON-Objekt an, dass eine Authentifizierungsanforderung darstellt, die zurück an den mobilen Client gesendet wird. Dieses Attribut wird nur dann an den Client gesendet, wenn der Status auf den Wert `challenge` gesetzt wird.
-* `userIdentity`: Gibt ein JSON-Objekt an, das eine Benutzeridentität darstellt. Die Benutzeridentität besteht aus Eigenschaften wie `userName` (Benutzername), `displayName` (Anzeigename) und Attributen. Weitere Informationen finden Sie in [Benutzeridentitätsobjekt](#custom-user-identity). Diese Eigenschaft wird nur dann an den mobilen Client gesendet, wenn der Status auf `success` gesetzt wird.
+* `userIdentity`: Gibt ein JSON-Objekt an, das eine Benutzeridentität darstellt.  Die Benutzeridentität besteht aus Eigenschaften wie `userName` (Benutzername), `displayName` (Anzeigename) und Attributen.  Weitere Informationen finden Sie in [Benutzeridentitätsobjekt](#custom-user-identity). Diese Eigenschaft wird nur dann an den mobilen Client gesendet, wenn der Status auf `success` gesetzt wird.
 
-Beispiel: 
+Beispiel:
 
 ```
 {
@@ -117,11 +117,15 @@ Der Berechtigungsheader enthält Informationen zum mobilen Client und zur mobile
 
 ## Beispielimplementierung eines angepassten Identitätsproviders
 {: #custom-sample}
-Sie können das folgende Beispiel für eine Node.js-Implementierung eines angepassten Identitätsproviders als Referenz verwenden, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus dem [Github-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample) herunter.
+Sie können beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz verwenden, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
-### JSON-Struktur
+* [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Erweitertes Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-Die folgende Implementierung geht davon aus, dass die bereitgestellte Antwort auf eine Authentifizierungsanforderung (Challenge) ein JSON-Objekt mit der folgenden Struktur ist:
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -130,7 +134,7 @@ Die folgende Implementierung geht davon aus, dass die bereitgestellte Antwort au
  }
  ```
 
-### Beispielcode für einen angepassten Identitätsprovider
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -138,7 +142,7 @@ var cfenv = require('cfenv');
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
 
-// Verwendung eines fest codierten Benutzerrepositorys
+// Using hardcoded user repository
 var userRepository = {
 	"john.lennon":      { password: "12345", displayName:"John Lennon", dob:"October 9, 1940"},
 	"paul.mccartney":   { password: "67890", displayName:"Paul McCartney", dob:"June 18, 1942"},
@@ -193,7 +197,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 			}
 		}
 	} else {
-logger.debug("Login failure for userId ::", username);
+		logger.debug("Login failure for userId ::", username);
 	}
 
 	res.status(200).json(responseJson);
@@ -209,6 +213,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Nächste Schritte
 {: #next-steps}

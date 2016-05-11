@@ -39,12 +39,12 @@ con un repositorio Git nuevo.
 4. Si la app requiere un archivo de compilación, este se detectará automáticamente y se compilará la app. 
 
 5. Si se configura un conducto para la compilación y el proceso de despliegue, se utiliza un archivo `pipeline.yml`
-para desplegar la app. 
+para desplegar la app.
 
 6. Si
 una app necesita un contenedor, se utilizan un `pipeline.yml` que
 defina el servicio **IBM Containers** y un Dockerfile
-que defina una imagen, para desplegar la app en un contenedor {{site.data.keyword.Bluemix_notm}}.  
+que defina una imagen, para desplegar la app en un contenedor {{site.data.keyword.Bluemix_notm}}. 
 
 7. Se desplegará la app en la organización de {{site.data.keyword.Bluemix_notm}} del usuario. 
 
@@ -187,17 +187,18 @@ En el archivo de manifiesto puede especificar:
 	   </ul>
 	</li>	
 	<li>Para configurar el conducto para el proyecto, en un directorio <code>.bluemix</code>, incluya un archivo
-<code>pipeline.yml</code>. Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un archivo pipeline.yml a partir de un proyecto de {{site.data.keyword.jazzhub_short}} y añadirlo al repositorio, siga estos pasos.
+<code>pipeline.yml</code>. Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un archivo pipeline.yml a partir de un proyecto de {{site.data.keyword.jazzhub_short}} y añadirlo al repositorio, siga estos pasos. 
 <ol>
 <li>Abra el proyecto de DevOps Services en un navegador y pulse <b>Crear y desplegar</b>.</li>
-<li>Configure su conducto con los trabajos de creación y despliegue. </li>
+<li>Configure su conducto con los trabajos de creación y despliegue.</li>
 <li>En el navegador, añada <code>/yaml</code> al URL del conducto del proyecto y pulse Intro. 
 <br>Ejemplo: <code>https://hub.jazz.net/pipeline/<propietario>/<nombre_proyecto>/yaml</code></li>
 <li>Guarde el archivo resultante <code>pipeline.yml</code>.</li>
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>
 <li>Suba el archivo <code>pipeline.yml</code> al repositorio <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. <ul>
+	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
+	<ul>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte la documentación de Docker</a>. </li>
 	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un <code>pipeline.yml</code> manualmente que sea específicamente para contenedores, <a href="https://github.com/Puquios/" target="_blank">consulte los ejemplos en GitHub</a>. </li>
         </ul>

@@ -1,11 +1,16 @@
+---
 
+copyright:
+  years: 2015, 2016
+
+---
 
 # Experimentelle Services
 {: #experimental}
 
-*Letzte Aktualisierung: 9. Dezember 2015*
+*Letzte Aktualisierung: 4. April 2015*
 
-Verwenden Sie den {{site.data.keyword.Bluemix_notm}} Labs-Katalog, um die experimentellen Services auszuprobieren.
+In der Kategorie für experimentelle {{site.data.keyword.Bluemix_notm}}-Services können Sie experimentelle Services ausprobieren.
 {: shortdesc} 
 
 

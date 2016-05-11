@@ -105,7 +105,7 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-}
+} 
 ```
 
 **取消訂閱標籤**

@@ -33,7 +33,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is https://api.{{site.data.keyword.domainname}}
+<dd>The URL of the Bluemix API endpoint that you must specify when you connect to {{site.data.keyword.Bluemix_notm}}. Typically, this URL is https://api.{DomainName}. 
 If you want to display the URL of the API endpoint that you are currently using, you do not need to specify this parameter for the cf api command.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disables the SSL validation process. Use of this parameter might cause security problems.</dd>
@@ -156,7 +156,7 @@ cf login
 ```
 You can use one or more of the following parameters when you issue the cf login command:
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>The URL of the API endpoint of {{site.data.keyword.Bluemix_notm}}. This parameter is optional.</dd>
 <dt>*-u* user_name</dt>
 <dd>Your user name. This parameter is optional.</dd>
@@ -204,7 +204,7 @@ cf push appname
 <dt>appname</dt>
 <dd>The name of the application.</dd>
 <dt>*-b* buildpack_name</dt>
-<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name or a Git URL, for example, my-buildpack or https://github.com/heroku/heroku-buildpack-play.git.</dd>
+<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name or a Git URL, for example, `my-buildpack` or `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c* start_command</dt>
 <dd>The start command of your application. To use the default start command, specify a value of null for this option. For example:</dd>
 <dd>```
@@ -309,5 +309,7 @@ cf -v
 ```
 
 # rellinks
+{: #rellinks}
 ## general 
+{: #general}
 * [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

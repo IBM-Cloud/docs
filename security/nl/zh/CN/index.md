@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -17,7 +17,8 @@ copyright:
 {: #security}
 *上次更新时间：2016 年 3 月 17 日*
 
-{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。{:shortdesc}
+{{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全性服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 遵循由 IBM 中的最佳做法驱动的系统、网络和安全工程方面的安全策略，从而确保安全就绪性。这些策略包括源代码扫描、动态扫描、威胁建模和渗透测试等做法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM 产品安全事件响应小组 (PSIRT) 的安全事件管理流程。有关详细信息，请参阅 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 站点。
 
@@ -207,20 +208,6 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 有关更多信息，请转至 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
-### SQL Database
-
-SQL Database 服务会将完整配置的关系数据库添加到您的应用程序。此服务使用 IBM Directory Server LDAP 进行认证，并使用 IBM InfoSphere® Guardium® Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 DigiCert 签署的 SSL 证书保护。
-
-在包含此服务的某些套餐中，可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 数据库控制台来获取包含以下信息的报告：
-
- * 应用程序所访问的数据库中可能存在的敏感数据。
- * 指定时间段内访问过数据库的应用程序用户。
- * 正在访问数据库中敏感数据的应用程序用户。
-
-要使用 SQL 来掩蔽数据，应用程序可以调用与数据库一起部署的掩蔽用户定义的函数 (UDF)。例如，可以掩蔽要在其他地方用于测试的数据。UDF 从 IBM Infosphere Optim™ 实施数据掩蔽算法。
-
-此服务的高级套餐还包含数据加密。有关此服务的更多信息，请参阅 [SQL Database 入门](../services/SQLDB/index.html)。
-
 ### dashDB
 
 dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和数据库之间的连接由 SSL 证书保护。此服务使用 DB2® 本机加密功能，以自动加密已部署的数据库和数据库备份。主密钥轮替每 90 天自动执行一次。
@@ -238,6 +225,20 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 通过 Secure Gateway 服务，可以将 {{site.data.keyword.Bluemix_notm}} 应用程序安全地连接到内部部署或云中的远程位置。该服务可提供安全连接，并在您的 {{site.data.keyword.Bluemix_notm}} 组织与要连接到的远程位置之间建立隧道。可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 API 软件包来配置和创建安全网关。
 
 有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/secure_gateway.html)。
+
+### SQL Database
+
+SQL Database 服务会将完整配置的关系数据库添加到您的应用程序。此服务使用 IBM Directory Server LDAP 进行认证，并使用 IBM InfoSphere® Guardium® Data Activity Monitor 来保护应用程序所访问的数据库。应用程序和数据库之间的连接由 DigiCert 签署的 SSL 证书保护。
+
+在包含此服务的某些套餐中，可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 数据库控制台来获取包含以下信息的报告：
+
+ * 应用程序所访问的数据库中可能存在的敏感数据。
+ * 指定时间段内访问过数据库的应用程序用户。
+ * 正在访问数据库中敏感数据的应用程序用户。
+
+要使用 SQL 来掩蔽数据，应用程序可以调用与数据库一起部署的掩蔽用户定义的函数 (UDF)。例如，可以掩蔽要在其他地方用于测试的数据。UDF 从 IBM Infosphere Optim™ 实施数据掩蔽算法。
+
+此服务的高级套餐还包含数据加密。有关此服务的更多信息，请参阅 [SQL Database 入门](../services/SQLDB/index.html)。
 
 ### 安全信息和事件管理
 
@@ -287,7 +288,8 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 ## 安全合规性
 {: #compliance}
 
-{{site.data.keyword.Bluemix}} 提供了一个您可以信任的安全云平台。{{site.data.keyword.Bluemix_notm}} 合规性是通过基于业界最佳安全标准（包括 ISO 27001 和 ISO 27002）构建的平台和服务来实现的。{:shortdesc}
+{{site.data.keyword.Bluemix}} 提供了一个您可以信任的安全云平台。{{site.data.keyword.Bluemix_notm}} 合规性是通过基于业界最佳安全标准（包括 ISO 27001 和 ISO 27002）构建的平台和服务来实现的。
+{:shortdesc}
 
 ![欧盟 (EU) 数据保护示范条款](images/icon_eumc.png) **欧盟 (EU) 示范条款**是一种协议，用于保护从欧盟 (EU) 或欧洲经济区 (EEA) 传输到第三方国家或地区的个人数据。“欧盟 (EU) 示范条款”是由位于 EU 或 EEA 的客户（数据导出方）与位于第三方国家或地区的 IBM 数据处理方（数据导入方）之间签订的。[IBM SaaS 欧盟 (EU) 示范条款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含数据导出方和数据导入方的权利和责任，以及数据主体的权利。“IBM SaaS 欧盟示范条款”可确保个人数据在第三方国家或地区处理时仍能受到像在 EU 或 EEA 中一样的保护。
 

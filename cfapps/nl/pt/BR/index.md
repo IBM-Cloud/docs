@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Criando apps Cloud Foundry
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 18 de abril de 2016*
 
 Com
 o {{site.data.keyword.Bluemix}}, é possível
@@ -53,7 +53,7 @@ Para iniciar a criação de seu aplicativo, execute as etapas a seguir:
 para escolher um iniciador, especificar um nome e selecionar como deseja codificar.
   4. Quando concluir a experiência orientada, clique em **VISUALIZAR
 A VISÃO GERAL DO APP**. A Visão geral de seu app é exibida no Painel.
-  5. É possível incluir um serviço no app clicando em **INCLUIR UM SERVIÇO OU UMA API** na Visão geral do app na interface com o usuário do Bluemix. Ou, é possível usar a interface de linha de comandos cf. Consulte Opções para trabalhar com apps.
+  5. É possível incluir um serviço no app clicando em **INCLUIR UM SERVIÇO OU UMA API** na Visão geral do app na interface com o usuário do Bluemix. Procure e selecione serviços a partir do catálogo ou role até o término do catálogo e clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}** para procurar serviços experimentais. Ou, é possível usar a interface de linha de comandos cf. Consulte Opções para trabalhar com apps.
   6. Na Visão geral do app, clique em Incluir Git para salvar a origem do aplicativo em um repositório Git e criar um projeto hospedado pelo Git. Também é possível implementar o aplicativo a partir de
 {{site.data.keyword.jazzhub_title}}.
 

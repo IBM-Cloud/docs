@@ -19,7 +19,7 @@ copyright:
 
 *上次更新时间：2016 年 2 月 25 日*
 
-您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，并且提供与 Auto-Scaling RESTful API 所提供功能类似的功能。
+您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，提供的功能类似于 Auto-Scaling RESTful API。
 {: shortdesc}
 
 开始之前，请先安装 {{site.data.keyword.Bluemix_notm}} CLI。有关指示信息，请参阅[下载 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}。

@@ -17,7 +17,8 @@ copyright:
 
 *上次更新时间：2016 年 3 月 3 日*
 
-如果您遇到 {{site.data.keyword.Bluemix}} 问题，那么可以查看日志文件来调查问题并调试错误。{:shortdesc}
+如果您遇到 {{site.data.keyword.Bluemix}} 问题，那么可以查看日志文件来调查问题并调试错误。
+{:shortdesc}
 
 日志提供了相关信息，例如，作业运行成功还是失败。另外，还提供了可用于调试和确定问题原因的相关信息。
 
@@ -29,7 +30,7 @@ copyright:
 {: #debugging-staging-errors}
 当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以查看日志以了解错误的原因并从问题进行恢复。
 
-要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，您需要了解应用程序如何部署到 {{site.data.keyword.Bluemix_notm}} 并在其上运行。有关详细信息，请参阅[应用程序部署](../manageapps/depapps.html#appdeploy){: new_window}。
+要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关详细信息，请参阅[应用程序部署](../manageapps/depapps.html#appdeploy){: new_window}。
 
 以下过程显示您可以如何使用 `cf logs` 命令来调试编译打包错误。在执行以下步骤之前，确保您已安装 cf 命令行界面。有关安装命令行界面的更多信息，请参阅[安装 cf 命令行界面](../starters/install_cli.html){: new_window}。
 
@@ -72,7 +73,7 @@ copyright:
 {: screen}
 
 
-对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。从此错误，您可以看到模块发生错误。因此，您可能需要查看 `package.json` 文件中的第 18 行。 
+对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。从此错误，您可以看到模块发生错误。因此，您可能需要复查 `package.json` 文件中的第 18 行。 
 
 ```
 15   "jade": "~1.3.0",
@@ -98,7 +99,7 @@ copyright:
 {: #debugging-runtime-errors}
 如果在运行时遇到应用程序问题，应用程序日志可帮助查明错误原因并从该问题中进行恢复。 
 
-尤其是，可以启用 stdout 和 stderr 登录。有关如何为通过使用 {{site.data.keyword.Bluemix_notm}} 内置 buildpack 部署的应用程序配置日志文件的更多信息，请参阅以下列表：
+尤其是，可以启用 stdout 和 stderr 日志记录。有关如何为通过使用 {{site.data.keyword.Bluemix_notm}} 内置 buildpack 部署的应用程序配置日志文件的更多信息，请参阅以下列表：
 
   * 对于 Liberty for Java™ 应用程序，请参阅 [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}。
   * 对于 Node.js 应用程序，请参阅 [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。 
@@ -123,8 +124,8 @@ Analytics</a>。</dd>
   * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在日志目录下的 `messages.log` 文件中。分别查找以 SystemOut 和 SystemErr 为前缀的条目。
   * 对于 Node.js 应用程序，可以覆盖 console.log 函数以明确写入日志目录中的文件。
   * 对于 PHP 应用程序，您可以使用 error_log 函数来写入日志目录中的文件。
-  * 对于 Python 应用程序，您可以将记录器写入日志目录中的文件：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
-  * 对于 Ruby 应用程序，您可以将记录器写入日志目录中的文件。
+  * 对于 Python 应用程序，您可以让记录器将日志写入日志目录中的文件：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * 对于 Ruby 应用程序，您可以让记录器将日志写入日志目录中的文件。
  
 
 # 相关链接

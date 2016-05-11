@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 
 # Web and Application
@@ -5,7 +13,7 @@
 
 *Letzte Aktualisierung: 9. Dezember 2015*
 
-Mit diesen Services können Sie Funktionen rasch hinzufügen oder entfernen, während Sie Webanwendungen in der Cloud entwickeln. Außerdem können Sie Management-Tasks vereinfachen sowie Ihre Geschäftsprozesse und -regeln verwalten.
+Mit diesen Services können Sie Funktionen rasch hinzufügen oder entfernen, während Sie Webanwendungen in der Cloud entwickeln. Außerdem können Sie Management-Tasks vereinfachen sowie Ihre Geschäftsprozesse und -regeln verwalten. 
 {:shortdesc}
 
 

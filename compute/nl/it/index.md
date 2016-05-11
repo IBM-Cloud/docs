@@ -14,7 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Calcolo
-*Ultimo aggiornamento: 19 febbraio 2016* 
+*Ultimo aggiornamento: 19 febbraio 2016*
 
 La funzione Calcolo include l'infrastruttura e le risorse da cui puoi scegliere per creare applicazioni {{site.data.keyword.Bluemix}}. Le risorse di calcolo comprendono {{site.data.keyword.openwhisk_short}}, applicazioni Cloud Foundry, contenitori {{site.data.keyword.IBM_notm}} e {{site.data.keyword.virtualmachinesshort}} {{site.data.keyword.IBM_notm}}.
 {:shortdesc}

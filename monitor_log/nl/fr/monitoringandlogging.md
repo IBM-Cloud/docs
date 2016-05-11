@@ -59,7 +59,7 @@ performances de votre application. De plus, ce service fournit également des fo
 
 Des fichiers journaux sont créés automatiquement lorsque vous utilisez l'infrastructure Cloud
 Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}. Si vous rencontrez des erreurs au cours d'une étape entre le
-déploiement et l'exécution, vous pouvez consulter les journaux pour déterminer comment résoudre le problème. 
+déploiement et l'exécution, vous pouvez consulter les journaux pour déterminer comment résoudre le problème.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -136,7 +136,7 @@ deuxième instance, etc.</dd>
 ###Affichage des journaux
 {: #viewing_logs}
 
-Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois endroits : 
+Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois endroits :
 
   * [Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
   * [Dans l'interface de ligne de commande](#viewing_logs_cli){:new_window}
@@ -145,19 +145,18 @@ Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois e
 #### Affichage des journaux dans le tableau de bord {{site.data.keyword.Bluemix_notm}}
 {: #viewing_logs_UI}
 
-Pour afficher les journaux de déploiement ou d'exécution, procédez comme suit : 
+Pour afficher les journaux de déploiement ou d'exécution, procédez comme suit :
 1. Connectez-vous à {{site.data.keyword.Bluemix_notm}}, puis cliquez sur la vignette de votre application dans le tableau de bord. La page des détails de l'application s'ouvre.
 2. Dans la barre de navigation de gauche, cliquez sur **Journaux**.
 
 Dans la console **Journaux**, vous pouvez afficher les journaux récents pour votre application ou afficher les dernières lignes des
-journaux en temps réel. De plus, vous pouvez filtrer les journaux par type et canal. 
+journaux en temps réel. De plus, vous pouvez filtrer les journaux par type et canal.
 
 **Remarque :** les journaux ne sont pas conservés en cas de panne ou après un déploiement d'application.
 
 
 
-
-#### Affichage des journaux dans l'interface de ligne de commande 
+#### Affichage des journaux dans l'interface de ligne de commande
 {: #viewing_logs_cli}
 
 Choisissez l'une des options suivantes pour afficher les journaux depuis l'interface de ligne de commande :
@@ -237,7 +236,7 @@ Pour plus d'informations sur l'option **grep**, entrez `grep --help`.
 
 
 
-### Configuration d'hôtes de journaux externes 
+### Configuration d'hôtes de journaux externes
 {: #thirdparty_logging}
 
 {{site.data.keyword.Bluemix_notm}} conserve une quantité limitée d'informations de
@@ -245,91 +244,86 @@ journal en mémoire. Lorsque des informations sont journalisées, les anciennes 
 conserver toutes les informations de journal, vous pouvez sauvegarder vos journaux sur un hôte de journaux externe, par exemple dans un service de gestion des
 journaux tiers ou sur un autre hôte.
 
-
 Pour transférer les journaux de votre application et du système vers un hôte de journaux externe, procédez comme suit :
 
-
-  1. Déterminez le noeud final de journalisation.  
+  1. Déterminez le noeud final de journalisation. 
      
 	 Vous pouvez envoyer des journaux à un regroupeur de journaux tiers, comme Papertrail,
 Splunk ou Sumologic. Vous pouvez aussi envoyer des journaux à un hôte syslog, un hôte syslog chiffré avec TLS (Transport Layer Security) ou un noeud final
 HTTPS POST. Les méthodes d'obtention de noeuds finaux de journalisation varient selon l'hôte de journaux.
 
-
   2. Créez une instance de service fournie par l'utilisateur.
      
 	 Utilisez la commande ```cf create-user-provided-service``` (ou la version courte de la commande, ```cups``) pour
-créer une instance de service fournie par l'utilisateur :
-```
+créer une instance de service fournie par l'utilisateur : 
+	 ```
 	 cf create-user-provided-service <nom_service> -l <noeud_final_journalisation>
 	 ```
 	 **nom_service**
 	 
-	 Nom de l'instance de service fournie par l'utilisateur. 
+	 Nom de l'instance de service fournie par l'utilisateur.
 	 
 	 **noeud_final_journalisation**
 	 
 	 Noeud final de journalisation auquel {{site.data.keyword.Bluemix_notm}} envoie des journaux. Reportez-vous au tableau suivant pour
-remplacer *noeud_final_journalisation* par la valeur appropriée : 
+remplacer *noeud_final_journalisation* par la valeur appropriée :
 	 
 	 <table>
      <thead>
      <tr>
-     <th>Noeud final de journalisation </th>
-     <th>Commande </th>
+     <th>Noeud final de journalisation</th>
+     <th>Commande</th>
 	 <th>Remarques</th>
      </tr>
      </thead>
      <tbody>
      <tr>
-     <td>hôte syslog </td>
+     <td>hôte syslog</td>
      <td>`cf cups my-logs -l syslog://HOTE:PORT`</td>
 	 <td>Par exemple, pour activer la journalisation dans Papertrail, entrez `cf cups my-logs -l
 syslog://<url_papertrail>`. Remplacez `<url_papertrail>` par l'adresse URL de votre noeud final de journalisation
 pour Papertrail.</td>
      </tr>
 	 <tr>
-     <td>hôte syslog-tls </td>
+     <td>hôte syslog-tls</td>
      <td>`cf cups my-logs -l syslog-tls://HOTE:PORT`</td>
-	 <td>Le certificat doit être considéré comme digne de confiance par une autorité de certification. N'utilisez pas de certificat autosigné. </td>
+	 <td>Le certificat doit être considéré comme digne de confiance par une autorité de certification. N'utilisez pas de certificat autosigné.</td>
      </tr>
 	 <tr>
      <td>HTTPS POST</td>
      <td>`cf cups my-logs -l https://HOTE:PORT`</td>
-	 <td>Ce noeud final doit se trouver sur l'Internet public et {{site.data.keyword.Bluemix_notm}} doit pouvoir y accéder. </td>
+	 <td>Ce noeud final doit se trouver sur l'Internet public et {{site.data.keyword.Bluemix_notm}} doit pouvoir y accéder.</td>
      </tr>
      </tbody>
      </table>	
   3. Liez l'instance de service à votre application.
 
-	 Utilisez la commande suivante pour lier l'instance de service à votre application :  
+	 Utilisez la commande suivante pour lier l'instance de service à votre application : 
 	
 	 ```
 	 cf bind-service nom_app <nom_service>
 	 ```
 	 **nom_app**
 	 
-	 Nom de votre application. 
+	 Nom de votre application.
 	 
 	 **nom_service**
 	 
-	 Nom de l'instance de service fournie par l'utilisateur. 
+	 Nom de l'instance de service fournie par l'utilisateur.
 	 
-  4. Reconstituez l'application.
-     Entrez ```cf restage nom_app``` pour que les modifications soient appliquées.  
+  4. Reconstituez l'application. 
+     Entrez ```cf restage nom_app``` pour que les modifications soient appliquées. 
 
-#### Affichage des journaux à partir d'hôtes externes 
+#### Affichage des journaux à partir d'hôtes externes
 {: #viewing_logs_external}
 
 	 
 Lorsque des journaux sont générés, vous pouvez consulter les messages après un bref délai sur votre hôte de journaux externe. Ceux-ci sont similaires
 aux messages que vous pouvez afficher dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} ou dans l'interface de ligne de commande
-cf. S'il existe plusieurs instances de votre application, les journaux sont regroupés et vous pouvez tous les afficher. De plus, ils sont conservés en cas
+cf.  S'il existe plusieurs instances de votre application, les journaux sont regroupés et vous pouvez tous les afficher. De plus, ils sont conservés en cas
 de panne et après un déploiement.
 
-
 **Remarque :** les journaux que vous affichez dans l'interface de ligne de commande ne sont pas au format syslog et il se peut
-qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe.
- 
+qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe. 
 
 

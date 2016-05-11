@@ -18,7 +18,8 @@ copyright:
 
 *前次更新：2016 年 1 月 29 日*
 
-您可以使用 Cloud Foundry (cf) 指令來管理應用程式。{:shortdesc}
+您可以使用 Cloud Foundry (cf) 指令來管理應用程式。
+{:shortdesc}
 
 下列資訊會列出最常用來管理應用程式的 cf 指令。若要列出所有 cf 指令及其說明資訊，請使用 `cf help`。使用 `cf command_name -h` 可檢視特定指令的詳細說明資訊。
 
@@ -41,10 +42,9 @@ cf api BluemixServerURL
 
 ## cf apps
 
-列出您在現行空間已部署的所有應用程式。
-也會顯示每個應用程式的狀態。
+列出您已部署在現行空間的所有應用程式。也會顯示每個應用程式的狀態。
 
-假設您有一個應用程式的實例，則如果您的應用程式啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，或者您可以透過 `cf logs appname` 指令來讀取日誌的尾端，查看應用程式是否正在產生日誌內容。
+假設您有一個應用程式的實例，則如果您的應用程式啟動，則會在 cf apps 指令回應的實例直欄中看到 1/1，如果您的應用程式關閉，則會看到 0/1。如果您看到指出應用程式實例狀態不明的 ?/1，則可以將應用程式 URL 複製到瀏覽器，以檢查應用程式是否有回應，或者您可以透過 `cf logs appname` 指令來讀取日誌尾端的內容，查看應用程式是否正在產生日誌內容。
 
 ## cf bind-service
 
@@ -121,7 +121,7 @@ cf delete-space space_name
 <dd>空間的名稱。</dd>
 <dt>*-f*</dt>
 <dd>強制刪除空間而不進行任何確認。這是選用性的參數。</dd>
-*附註：* 刪除空間是一項無法回復的作業。
+*附註：*刪除空間是一項無法回復的作業。
 </dl>
 
 ## cf events
@@ -143,7 +143,7 @@ cf help command_name
 ```
 <dl>
 <dt>command_name</dt>
-<dd>指令的名稱。如果您需要特定指令的說明資訊，可以使用此參數。</dd>
+<dd>指令的名稱。如果您需要指令特有的說明資訊，可以使用此參數。</dd>
 <dd>如果不指定此參數，則會顯示所有 cf 指令的說明資訊。</dd>
 </dl>
 
@@ -162,7 +162,7 @@ cf login
 <dd>您的使用者名稱。這是選用性的參數。</dd>
 <dt>*-p* password</dt>
 <dd>您的密碼。</dd>
-<dd>*重要事項：* 如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
+<dd>*重要事項：*如果您在指令行介面上使用 *-p* 參數提供密碼，密碼可能會記錄在指令行歷程中。為了安全因素，請避免使用 -p 參數提供密碼。請改為在指令行介面提示您時再輸入密碼。</dd>
 <dt>*-o* organization_name</dt>
 <dd>您要登入的組織名稱。</dd>
 <dt>*-s* space_name</dt>
@@ -171,7 +171,7 @@ cf login
 <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
 </dl>
 
-*附註：* 如果您在此指令的 *-p* 參數中提供密碼，您的密碼可能會記錄在 Shell 指令歷程檔案，且可能被本端作業系統的其他使用者看到。
+*附註：*如果您在此指令的 *-p* 參數中提供密碼，您的密碼可能會記錄在 Shell 指令歷程檔案，且可能被本端作業系統的其他使用者看到。
 
 
 ## cf logs
@@ -206,7 +206,7 @@ cf push appname
 <dt>*-b* buildpack_name</dt>
 <dd>建置套件的名稱。buildpack_name 可以是依名稱或 Git URL 的自訂建置套件，例如，my-buildpack 或 https://github.com/heroku/heroku-buildpack-play.git。</dd>
 <dt>*-c* start_command</dt>
-<dd>應用程式的 start 指令。若要使用預設的 start 指令，請針對這個選項指定 null 的值。例如：</dd>
+<dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定 null 值。例如：</dd>
 <dd>```
 cf push appname -c null
 ```</dd>
@@ -229,7 +229,7 @@ cf push appname -c "bash ./<run.sh>"
 <dt>*-t* timeout</dt>
 <dd>應用程式啟動的時間上限（秒）。其他伺服器端的逾時可能會置換此值。</dd>
 <dt>*-s* stackname</dt>
-<dd>要執行應用程式的堆疊。堆疊是根據建置的檔案系統（包括作業系統）。使用 `cf stacks`，以檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
+<dd>要執行應用程式的堆疊。堆疊是預先建置的檔案系統（包括作業系統）。使用 `cf stacks`，以檢視 {{site.data.keyword.Bluemix_notm}} 中的可用堆疊。</dd>
 <dt>*--no-hostname*</dt>
 <dd>將 Bluemix 系統網域對映到此應用程式。</dd>
 <dt>*--no-manifest*</dt>
@@ -237,7 +237,7 @@ cf push appname -c "bash ./<run.sh>"
 <dt>*--no-route*</dt>
 <dd>不要對映路徑至此應用程式。</dd>
 <dt>*--no-start*</dt>
-<dd>應用程式部署之後不要啟動應用程式。</dd>
+<dd>部署應用程式之後不要啟動應用程式。</dd>
 <dt>*--random-route*</dt>
 <dd>建立應用程式的隨機路徑。</dd>
 </dl>

@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# {{site.data.keyword.amashort}} 概述
+# 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 {{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动应用程序提供认证和监视服务。

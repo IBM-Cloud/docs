@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-*Letzte Aktualisierung: 8. Dezember 2015*
+*Letzte Aktualisierung: 27. Januar 2016*
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
 {:shortdesc}
@@ -36,7 +44,11 @@ Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der
 ##Protokollierung für Apps, die in Cloud Foundry ausgeführt werden
 {: #logging_for_bluemix_apps}
 
-Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen. Sie können die Protokolle entweder im {{site.data.keyword.Bluemix_notm}}-Dashboard oder über die Befehlszeilenschnittstelle 'cf' anzeigen. Sie können die Protokolle auch filtern, um nur die für Sie relevanten Teile anzuzeigen.
+Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen. Wenn in einer der Phasen von der Entwicklung bis zur Laufzeit Fehler auftreten, können Sie die Protokolle auf Hinweise prüfen, die Ihnen bei der Lösung des Problems möglicherweise helfen.
+
+<!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
+
+
 
 ###Protokollformat
 {: #log_format}
@@ -107,21 +119,33 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste finden Sie e
 ###Protokolle anzeigen
 {: #viewing_logs}
 
-Protokolle können Sie entweder im {{site.data.keyword.Bluemix_notm}}-Dashboard oder über die Befehlszeilenschnittstelle anzeigen.
+Sie können die Protokolle für Ihre Cloud Foundry-Apps an drei Positionen anzeigen:
 
-####Protokolle im {{site.data.keyword.Bluemix_notm}}-Dashboard anzeigen
+  * [{{site.data.keyword.Bluemix_notm}}-Dashboard](#viewing_logs_UI){:new_window}
+  * [Befehlszeilenschnittstelle](#viewing_logs_cli){:new_window}
+  * [Externe Protokollhosts](#thirdparty_logging){:new_window}
 
-Führen Sie die folgenden Schritte aus, um die Protokolle zur **Bereitstellung** oder zur **Laufzeit** anzuzeigen:
-1. Klicken Sie auf die Kachel für Ihre App. Die Seite mit den Anwendungsdetails wird angezeigt.
+#### Protokolle im {{site.data.keyword.Bluemix_notm}}-Dashboard anzeigen
+{: #viewing_logs_UI}
+
+Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen:
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App auf dem Dashboard. Die Seite mit den Anwendungsdetails wird angezeigt.
 2. Klicken Sie in der linken Navigationsleiste auf **Protokolle**.
 
-####Protokolle über die Befehlszeilenschnittstelle anzeigen
+In der Konsole für **Protokolle** können Sie die kürzlich generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Protokolltyp und Kanal filtern.
+
+**Hinweis:** Protokolle werden nicht über App-Abstürze und App-Bereitstellungen hinweg gespeichert.
+
+
+
+#### Protokolle über die Befehlszeilenschnittstelle anzeigen
+{: #viewing_logs_cli}
 
 Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die Befehlszeilenschnittstelle aus:
 
 <ul>
 <li>Tailing-Protokolle beim Bereitstellen von Apps.
-<p>Verwenden Sie den Befehl **cf logs**, um Protokolle aus Ihrer App und aus den Systemkomponenten anzuzeigen, die mit Ihrer App interagieren, wenn Sie Apps in {{site.data.keyword.Bluemix_notm}} bereitstellen. Sie können die folgenden Befehle in die Befehlszeilenschnittstelle 'cf' eingeben. Weitere Informationen zum Befehl 'cf logs' finden Sie unter [Log Types and Their Messages in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}. </p>
+<p>Verwenden Sie den Befehl **cf logs**, um Protokolle aus Ihrer App und aus den Systemkomponenten anzuzeigen, die mit Ihrer App interagieren, wenn Sie Apps in {{site.data.keyword.Bluemix_notm}} bereitstellen. Sie können die folgenden Befehle in die Befehlszeilenschnittstelle 'cf' eingeben. Weitere Informationen zum Befehl 'cf logs' finden Sie in der Beschreibung der <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Protokolltypen und ihrer Nachrichten in Cloud Foundry</a>. </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">App-Name</var> --recent</strong></dt>
 <dd>Zeigt kürzlich erstellte Protokolle an.</dd>
@@ -130,8 +154,7 @@ Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die B
 <dd>Zeigt Protokolle an, die in dem Moment generiert werden, in dem Sie diesen Befehl eingeben.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf
-start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen.
-</div>
+start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
 </li>
 
 <li>Protokolle anzeigen, nachdem die Apps bereitgestellt wurden.
@@ -150,7 +173,7 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 </dd>
 
 <dt><strong>staging_task.log</strong></dt>
-<dd><p>Diese Protokolldatei zeichnet Nachrichten nach den wichtigsten Schritten der Staging-Task auf. Mithilfe dieses Protokolls können Sie Probleme beim Staging beheben. </p>
+<dd><p>Diese Protokolldatei zeichnet Nachrichten nach den wichtigsten Schritten der Staging-Task auf. Mithilfe dieses Protokolls können Sie Probleme beim Staging beheben.</p>
 <p>Geben Sie den folgenden Befehl ein, um dieses Protokoll anzuzeigen:
 <pre class="pre">cf files <var class="keyword varname">App-Name</var> logs/staging_task.log</pre>
 </p>
@@ -161,6 +184,9 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 
 **Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](../troubleshoot/debugging.html#debug_runtime).
 
+
+
+
 ###Protokolle filtern
 {: #filtering_logs}
 
@@ -168,7 +194,7 @@ Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inha
 
 * Wenn Sie nur einen Teil statt des gesamten ausführlichen Protokolls anzeigen möchten, verwenden Sie die Option **cut**. Geben Sie beispielsweise den folgenden Befehl ein, um die Komponenten- und Nachrichteninformationen anzuzeigen:
 ```
-cf logs App-Name --recent | cut -c 29-40,46-
+cf logs App-Name --recent | cut -c 29-40,46- 
 ```
 
 Für weitere Informationen zur Option **grep** geben Sie 'cut --help' ein.
@@ -178,61 +204,83 @@ cf logs App-Name --recent | grep '\[App'
 ```
 Für weitere Informationen zur Option **grep** geben Sie `grep --help` ein.
 
-###Protokollierung durch Drittanbieter konfigurieren
+
+
+### Externe Protokollhosts konfigurieren
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} bewahrt eine
-begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten
-werden die alten Informationen durch die neueren Daten ersetzt.
-Zur Aufbewahrung sämtlicher Protokolldaten können Sie Ihre Protokolle
-in einem Protokoll-Management-Service eines anderen Anbieters speichern. 
+{{site.data.keyword.Bluemix_notm}} bewahrt eine begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten werden die alten Informationen durch die neueren Daten ersetzt. Zur Aufbewahrung aller Protokolldaten können Sie Ihre Protokolle auf einem externen Protokollhost, wie zum Beispiel einem Protokoll-Management-Service eines anderen Anbieters, oder auf einem anderen Host speichern.
 
-Führen Sie die folgenden Schritte aus, um Protokolle von Ihrer Anwendung
-und dem System an den Protokoll-Management-Service eines anderen Anbieters zu übermitteln: 
+Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem System an einen externen Protokollhost zu übermitteln:
 
-1. Registrieren Sie sich bei einem Protokoll-Management-Service eines anderen Anbieters.
-    
-    Sie können jeden beliebigen Protokoll-Management-Service eines anderen Anbieters
-nutzen, der das [syslog-Protokoll](http://tools.ietf.org/html/rfc5424){:new_window}
-unterstützt, z. B. Papertail, Splunk Storm, SumoLogic und Logentries.
-Registrieren Sie sich bei einem Protokoll-Management-Service eines anderen Anbieters und konfigurieren
-Sie den Service anschließend, um ein Ziel für Ihre Protokolle
-in {{site.data.keyword.Bluemix_notm}} anzugeben.
-Nach Abschluss der Konfiguration stellt der Service standardmäßig
-eine syslog-URL als Ziel für Ihre Protokolle in {{site.data.keyword.Bluemix_notm}} bereit. Informationen
-zur Konfiguration von Protokoll-Management-Services anderer Anbieter finden Sie unter
-[Configuring Selected Third-Party Log Management Services](http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html){:new_window}. 
+  1. Bestimmen Sie den Protokollierungsendpunkt. 
+     
+	 Sie können Protokolle an einen Protokollaggregator eines Drittanbieters wie Papertrail, Splunk oder Sumologic senden. Sie können Protokolle auch an einen Syslog-Host, einen Syslog-Host mit TLS-Verschlüsselung (Transport Layer Security) oder an einen HTTP-POST-Endpunkt senden. Die Methoden zum Anfordern von Protokollierungsendpunkten sind für verschiedene Protokollhosts unterschiedlich.
 
-2. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz.
+  2. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz.
+     
+	 Verwenden Sie den Befehl ```cf create-user-provided-service``` (oder die Kurzversion des Befehls ```cups``), um eine vom Benutzer bereitgestellte Serviceinstanz zu erstellen: 
+	 ```
+	 cf create-user-provided-service <Servicename> -l <Protokollierungsendpunkt>
+	 ```
+	 **Servicename**
+	 
+	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
+	 
+	 **Protokollierungsendpunkt**
+	 
+	 Der Protokollierungsendpunkt, an den {{site.data.keyword.Bluemix_notm}} Protokolle sendet. In der folgenden Tabelle finden Sie Informationen zu den Werten, durch die die Variable *Protokollierungsendpunkt* in Ihrem Fall ersetzt werden kann:
+	 
+	 <table>
+     <thead>
+     <tr>
+     <th>Protokollierungsendpunkt</th>
+     <th>Befehl</th>
+	 <th>Anmerkungen</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+     <td>Syslog-Host</td>
+     <td>`cf cups my-logs -l syslog://HOST:PORT`</td>
+	 <td>Beispiel: Zum Aktivieren der Protokollierung an Papertrail geben Sie den Befehl `cf cups my-logs -l syslog://<papertrail-url>` ein. Ersetzen Sie `<papertrail-url>` durch die URL für Ihren Protokollierungsendpunkt von Papertrail.</td>
+     </tr>
+	 <tr>
+     <td>Syslog-TLS-Host</td>
+     <td>`cf cups my-logs -l syslog-tls://HOST:PORT`</td>
+	 <td>Dem Zertifikat muss von einer Zertifizierungsstelle vertraut werden. Verwenden Sie keine selbst signierten Zertifikate.</td>
+     </tr>
+	 <tr>
+     <td>HTTPS POST</td>
+     <td>`cf cups my-logs -l https://HOST:PORT`</td>
+	 <td>Dieser Endpunkt muss sich im öffentlichen Internet befinden und für {{site.data.keyword.Bluemix_notm}} zugänglich sein.</td>
+     </tr>
+     </tbody>
+     </table>	
+  3. Binden Sie die Serviceinstanz an Ihre App.
+
+	 Verwenden Sie den folgenden Befehl, um die Serviceinstanz an Ihre App zu binden: 
 	
-	Um Protokolle in {{site.data.keyword.Bluemix_notm}} an
-den Protokoll-Management-Service des anderen Anbieters zu übermitteln,
-müssen Sie zunächst eine vom Benutzer bereitgestellte Serviceinstanz erstellen. Verwenden Sie für die Erstellung
-einer vom Benutzer bereitgestellten Serviceinstanz den folgenden Befehl; dabei ist 'Servicename' der
-Name der vom Benutzer bereitgestellten Serviceinstanz und 'syslog-URL' ist die
-URL, die Sie vom Protokollierungsservice des anderen Anbieters erhalten. 
-	
-	```
-	cf create-user-provided-service <Servicename> -l <syslog-URL>
-	```
-	
-3. Binden Sie die Serviceinstanz an Ihre Anwendung.
+	 ```
+	 cf bind-service App-Name <Servicename>
+	 ```
+	 **App-Name**
+	 
+	 Der Name Ihrer App.
+	 
+	 **Servicename**
+	 
+	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
+	 
+  4. Führen Sie ein erneutes Staging für die App durch. 
+     Geben Sie den Befehl ```cf restage appname``` ein, damit die Änderungen wirksam werden. 
 
-	Verwenden Sie zum Binden der Serviceinstanz an Ihre Anwendung den folgenden Befehl;
-dabei ist 'App-Name' der Name Ihrer Anwendung und
-'Servicename' ist der Name für die vom Benutzer bereitgestellte Serviceinstanz. 
-	
-	```
-	cf bind-service App-Name <Servicename>
-	```
-	
-	Anschließend
-werden Sie dazu aufgefordert, für die Anwendung ein erneutes Staging durchzuführen; geben Sie hierfür 'cf
-restage App-Name' ein, damit die Änderungen wirksam werden. Wenn Protokolle generiert werden,
-können Sie nach einer kurzen Verzögerung ähnliche Nachrichten im Protokoll-Management-Service des anderen Anbieters sehen.
+#### Protokolle in externen Hosts anzeigen
+{: #viewing_logs_external}
+
+	 
+Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nachrichten in Ihrem externen Protokollhost anzeigen, die den Nachrichten ähnlich sind, die Sie über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die Befehlszeilenschnittstelle 'cf' anzeigen.  Wenn Sie mehrere Instanzen Ihrer App haben, werden die Protokolle zusammengefasst und Sie können alle Protokolle für Ihre App anzeigen. Darüber hinaus werden die Protokolle über App-Abstürze und App-Bereitstellungen hinweg gespeichert.
+
+**Hinweis:** Protokolle, die Sie über die Befehlszeilenschnittstelle anzeigen, haben nicht das Syslog-Format und stimmen daher möglicherweise nicht genau mit den Nachrichten überein, die in Ihren externen Protokollhost angezeigt werden. 
 
 
-**Hinweis:** Protokolle, die Sie in der Befehlszeilenschnittstelle sehen,
-weisen nicht das syslog-Format auf und stimmen möglicherweise nicht genau
-mit den Nachrichten überein, die in den Protokoll-Management-Services anderer Anbieter angezeigt
-werden. 

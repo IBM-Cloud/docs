@@ -19,7 +19,8 @@ copyright:
 # 使用社群建置套件
 *前次更新：2016 年 3 月 15 日*
 
-如果您在 {{site.data.keyword.Bluemix}}「型錄」中，找不到提供您想要之執行時期的入門範本，則可將外部建置套件帶到 {{site.data.keyword.Bluemix_notm}}。利用 cf push 指令部署應用程式時，可指定與 Cloud Foundry 相容的自訂建置套件。{:shortdesc}
+如果您在 {{site.data.keyword.Bluemix}}「型錄」中，找不到提供您想要之執行時期的入門範本，則可將外部建置套件帶到 {{site.data.keyword.Bluemix_notm}}。利用 cf push 指令部署應用程式時，可指定與 Cloud Foundry 相容的自訂建置套件。
+{:shortdesc}
 
 外部建置套件是由 Cloud Foundry 社群提供，可用來作為您自己的建置套件。在將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}} 之前，請確定已安裝 cf 指令行介面。
 
@@ -27,8 +28,7 @@ copyright:
 
 ## 內建社群建置套件
 
-在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Cloud
-Foundry 社群所提供的內建建置套件。若要查看內建的社群建置套件，請執行 cf buildpacks 指令：
+在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Cloud Foundry 社群所提供的內建建置套件。若要查看內建的社群建置套件，請執行 cf buildpacks 指令：
 
 ```
 cf buildpacks
@@ -52,7 +52,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 </li>
 
 <li>
-<p>對於 IBM 建立的建置套件不支援、但內建社群建置套件支援的執行時期或架構，則不需要使用 -b 選項與 cf push 指令搭配。</p><p>例如，若為 Ruby 應用程式，則沒有 IBM 建立的建置套件。您可以輸入下列指令來使用內建社群建置套件：</p>
+<p>對於 IBM 建立的建置套件不支援、但內建社群建置套件支援的執行時期或架構，則不需要使用 -b 選項與 cf push 指令搭配。</p><p>例如，對於 Ruby 應用程式，就沒有 IBM 建立的建置套件。您可以輸入下列指令來使用內建社群建置套件：</p>
 <pre class="pre"><code>cf push app_name -p app_path</code></pre>
 </li>
 </ul>
@@ -87,7 +87,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 使用 <strong>cf set-env</strong> 指令。例如，請輸入下列指令將 Java 版本設為 1.7.0：
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
 <p>然後，重新編譯打包應用程式，以讓變更生效：
 </p>
 <pre class="pre"><code>cf restage app_name</code></pre>

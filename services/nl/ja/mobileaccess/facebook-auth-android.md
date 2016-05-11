@@ -215,3 +215,13 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 1. 	要求が成功すると、以下の出力が LogCat ユーティリティーに表示されます。
 
 	![image](images/android-facebook-login-success.png)
+
+1. 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ ユーザーが Facebook にログインした後で、このコードを呼び出すと、そのユーザーは Facebook からログアウトされます。そのユーザーが再度ログインしようとする場合は、Facebook 資格情報を求めるプロンプトが出されます。
+
+ ログアウト機能に渡される `listener` の値は、ヌルにすることができます。

@@ -22,7 +22,7 @@ Depois de ter efetuado login no {{site.data.keyword.Bluemix}}, é possível faze
 Antes de iniciar, deve-se:
   1. Instale as interfaces de linha de comandos do {{site.data.keyword.Bluemix}} e do Cloud Foundry.
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download da interface da linha de comandos do {{site.data.keyword.Bluemix}} " /></a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_cf_commandline.svg" alt="Fazer download da interface da linha de comandos do Cloud Foundry" /> </a>
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download da interface da linha de comandos do {{site.data.keyword.Bluemix}} " /></a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_cf_commandline.svg" alt="Fazer download da interface da linha de comandos do Cloud Foundry" /> </a> 
 
   2. Conecte-se ao {{site.data.keyword.Bluemix}}.
 

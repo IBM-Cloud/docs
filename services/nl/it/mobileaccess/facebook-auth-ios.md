@@ -143,7 +143,7 @@ Inizializza l'SDK client passando la rotta della tua applicazione (`applicationR
 
 Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
 
-1. Apri la pagina principale del dashboard {{site.data.keyword.Bluemix_notm}} e fai clic sulla tua applicazione. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`). 
+1. Apri la pagina principale del dashboard {{site.data.keyword.Bluemix_notm}} e fai clic sulla tua applicazione. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`).
 
 1. Importa il framework richiesto nella classe che desideri utilizzi l'SDK client {{site.data.keyword.amashort}} aggiungendo le seguenti intestazioni:
 
@@ -260,7 +260,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -291,3 +291,26 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. 	Quando la tua richiesta ha esito positivo, nella console Xcode viene visualizzato il seguente output:
 	![immagine](images/ios-facebook-login-success.png)
+
+
+
+	Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare Mobile Client Access a utilizzare Facebook per scopi di autenticazione. 
+
+	Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
+Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+

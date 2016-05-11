@@ -14,7 +14,7 @@ reçoivent l'alerte de notification sans ouvrir l'application. Utilisez les
 instructions ci-après pour activer les notifications push interactives dans
 votre application.
 
-1. Créez une réponse utilisateur. 
+1. Créez une réponse utilisateur.
 
 	Objective-C
 

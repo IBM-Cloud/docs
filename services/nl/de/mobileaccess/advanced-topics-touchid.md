@@ -10,7 +10,6 @@ copyright:
 
 Touch ID ist eine Fingerabdruckerkennungsfunktion für iOS-Geräte. Sie können Touch ID verwenden, um Berechtigungsinformationen für eine zukünftige Verwendung automatisch zu schützen. Zur Konfiguration des Sicherheitsgrads legen Sie eine der folgenden Persistenzrichtlinien mit der Methode `IMFAuthorizationManager.setAuthorizationPersistencePolicy()` fest.
 
-
 * **IMFAuthorizationPersistencePolicyNever** (höchste Sicherheit): Berechtigungsinformationen nie auf dem Gerät speichern. Ein Berechtigungsheader ist nur während einer Anwendungssitzung gültig. Die Berechtigungsinformationen werden in der iOS-Schlüsselkette (Keychain) gespeichert.
 
 * **IMFAuthorizationPersistencePolicyAlways** (geringste Sicherheit): Berechtigungsinformationen immer auf dem Gerät speichern, unabhängig davon, ob Touch ID vorhanden ist, unterstützt wird oder aktiviert ist. Touch ID und die Gerätekenncodeauthentifizierung sind niemals erforderlich.

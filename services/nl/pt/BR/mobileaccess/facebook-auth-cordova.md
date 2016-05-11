@@ -22,8 +22,7 @@ Para configurar aplicativos Cordova para integração da autenticação do Faceb
 ## Configurando a plataforma Android
 {: #facebook-auth-cordova-android}
 
-As etapas necessárias para configurar a plataforma Android de um aplicativo Cordova para integração da autenticação do Facebook são muito semelhantes às etapas necessárias para aplicativos Android nativos. 
-Para obter mais informações, consulte [Ativando a autenticação do Facebook em apps Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Execute as etapas a seguir:
+As etapas necessárias para configurar a plataforma Android de um aplicativo Cordova para integração da autenticação do Facebook são muito semelhantes às etapas necessárias para aplicativos Android nativos. Para obter mais informações, consulte [Ativando a autenticação do Facebook em apps Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Execute as etapas a seguir:
 
 * Configurando o aplicativo Facebook para a plataforma Android
 * Configurando o {{site.data.keyword.amashort}} para autenticação do Facebook

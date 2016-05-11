@@ -80,10 +80,10 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
         El nombre de host de la ruta que desea utilizar para la aplicación.
 	
 Tras configurar su dominio personalizado en {{site.data.keyword.Bluemix_notm}}, debe correlacionarlo con el
-dominio del sistema {{site.data.keyword.Bluemix_notm}} en su servidor DNS registrado: 
+dominio del sistema {{site.data.keyword.Bluemix_notm}} en su servidor DNS registrado:
 
-  1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS. 
-  2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.Bluemix_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}: 
+  1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS.
+  2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.Bluemix_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}:
   
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`

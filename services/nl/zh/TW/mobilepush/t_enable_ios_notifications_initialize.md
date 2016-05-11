@@ -8,7 +8,7 @@ copyright:
 # 起始設定 Push SDK for iOS 應用程式
 {: #enable-push-ios-notifications-initialize}
 
-放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式」儀表板中的**行動式選項**鏈結，以取得應用程式路徑及 GUID。
+放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
 
 ##起始設定 Core SDK
 
@@ -46,7 +46,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 let push = BMSPushClient.sharedInstance
 ```
 
-## 路徑、GUID 及 Bluemix 區域
+## 路徑、GUID 及 Bluemix 地區
 
 **appRoute**
 

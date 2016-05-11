@@ -143,7 +143,7 @@ En général, vous pouvez placer le code d'initialisation dans la méthode `appl
 
 1. Ouvrez la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}} et cliquez sur votre appli. Cliquez sur **Options pour
 application mobile** et notez la valeur de **Route** (`applicationRoute`) et **Identificateur global unique de
-l'application** (`applicationGUID`). 
+l'application** (`applicationGUID`).
 
 1. Importez l'infrastructure requise dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant les en-têtes suivants :
 
@@ -264,7 +264,7 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -295,3 +295,27 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 
 1. 	Si votre demande aboutit, la sortie suivante s'affiche dans la console Xcode :
 	![image](images/ios-facebook-login-success.png)
+
+
+
+	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	Si vous appelez ce code alors que l'utilisateur était connecté via Facebook et qu'il tente à nouveau de se connecter, il est invité à autoriser Mobile
+Client Access à utiliser Facebook aux fins d'authentification. 
+
+	Les utilisateurs de switch doivent appeler ce code et l'utilisateur doit se déconnecter de Facebook dans son navigateur.La transmission de
+`callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur `nil`.
+

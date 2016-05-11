@@ -35,7 +35,7 @@ IDE(Integrated Development Environment) 또는 문서 편집기를 사용하여
 
 {{site.data.keyword.jazzhub_short}}는
 {{site.data.keyword.trackplan}} 및 {{site.data.keyword.deliverypipeline}}이라는 두 개의 서비스를 제공합니다. {{site.data.keyword.trackplan}} 서비스는
-Agile 계획에 사용되고, {{site.data.keyword.deliverypipeline}} 서비스는 빌드 및 배치를 자동으로 수행합니다. 이러한 서비스는
+Agile 플랜에 사용되고, {{site.data.keyword.deliverypipeline}} 서비스는 빌드 및 배치를 자동으로 수행합니다. 이러한 서비스는
 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 찾을 수 있습니다. 이러한 서비스를 사용하는 방법에 대한 자세한 정보는
 [Track & Plan 시작하기](../services/TrackPlan/index.html#gettingstartedtemplate) 및
 [Delivery Pipeline 시작하기](../services/DeliveryPipeline/index.html#getstartwithCD)를 참조하십시오. 

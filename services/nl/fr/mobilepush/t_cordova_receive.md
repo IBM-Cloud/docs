@@ -43,11 +43,11 @@ action-loc-key - Chaîne utilisée comme clé pour obtenir une chaîne localisé
 
 ##Objective-C
 
-Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application : 
+Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application :
 
 ```
 // Traitez la réception d'une notification distante
- -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
  [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
 }
@@ -63,7 +63,7 @@ Ajoutez les fragments de code Objective-C suivants à la classe de votre délég
 
 ##Swift
 
-Ajoutez les fragments de code Swift suivants à à la classe de votre délégué d'application :  
+Ajoutez les fragments de code Swift suivants à la classe de votre délégué d'application :
 
 ```
 // Traitez la réception d'une notification distante

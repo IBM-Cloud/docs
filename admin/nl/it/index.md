@@ -15,12 +15,11 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
 {: #mng}
-*Ultimo aggiornamento: 18 febbraio 2016* 
+*Ultimo aggiornamento: 19 aprile 2016*
 
-Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei ruoli e delle autorizzazioni per gli utenti; vedi [Gestione delle tue organizzazioni](../admin/adminpublic.html#orgmng).
+Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Tabella 1. Attività amministrative per la gestione della tua istanza di {{site.data.keyword.Bluemix_notm}} locale o dedicato*
@@ -31,7 +30,7 @@ Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_notm
 |Gestire il tuo catalogo | Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** per stabilire quali servizi sono visibili ai tuoi utenti e organizzazioni. Vedi [Gestione del tuo catalogo](index.html#oc_catalog).|
 |Amministrare le organizzazioni | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE** per creare organizzazioni, monitorare le quote per le organizzazioni e prendere decisioni rapide basate sulle esigenze. Vedi [Amministrazione delle organizzazioni](index.html#oc_organizations).|
 |Creare spazi e assegnare i ruoli utente | Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni** per creare spazi nelle tue organizzazioni. Aggiungi utenti e assegna loro dei ruoli per l'organizzazione e lo spazio. Vedi [Gestione delle tue organizzazioni](../admin/adminpublic.html#orgmng). |
-|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](index.html#oc_user). |
+|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](index.html#oc_useradmin). |
 |Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](index.html#oc_report). |
 |Visualizzare le informazioni di sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Puoi inoltre accedere al feed calendario e alle sottoscrizioni evento per ampliare le tue notifiche nella sezione Aggiornamenti in sospeso. Vedi [Visualizzazione delle informazioni sul sistema](index.html#oc_system). |
 |Estendere le notifiche e impostare le sottoscrizioni evento | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* aggiornamenti in sospeso**. Puoi utilizzare gli hook Web da integrare con un servizio Web a scelta, per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di eventi](index.html#oc_eventsubscription). |
@@ -46,13 +45,13 @@ Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. {{s
 
 Puoi visualizzare le notifiche inviate da IBM per il tuo ambiente locale o dedicato e monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui punti in cui vengono pubblicate.
 
+Tabella 2. Tipi di evento e metodi di notifica
+
 | **Tipo di evento** | **Metodo di notifica** |       
 |-----------------|-------------------|
 | Aggiornamenti di manutenzione | Vieni avvisato dei prossimi aggiornamenti di manutenzione nella pagina Notifiche per l'amministrazione. Vai alla pagina **Amministrazione**, quindi seleziona l'icona **Notifiche** ![Notifiche](images/icon_announcement.svg). Per visualizzare un storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di aggiornamento di manutenzione provenienti dalla pagina Amministrazione con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |
 | Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che integri gli avvisi di incidente provenienti dalla pagina Stato con un servizio Web a scelta che instradi i messaggi a un indirizzo e-mail di help desk o che invii un messaggio SMS a un numero telefonico prescelto. |  
-| Stato | Puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.   |
-
-*Tabella 2. Tipi di evento e metodi di notifica*
+| Stato | Puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.  |
 
 ### Impostazione di sottoscrizioni evento
 
@@ -60,16 +59,16 @@ Puoi estendere la funzionalità delle notifiche inviate alle pagine Amministrazi
 
 Per utilizzare gli hook Web per l'impostazione di una sottoscrizione evento specifica, completa la seguente procedura:
 
-1. Vai alla pagina **AMMINISTRAZIONE**:
-
-- Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI DI SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
-- Per le notifiche di avviso di incidente, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+* Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI DI SISTEMA** &gt; *Numero* **aggiornamenti in sospeso**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+* Per le notifiche di avviso di incidente, fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
 
 **Nota**: puoi accedere alla pagina di sottoscrizione evento per entrambi i tipi di notifica, utilizzando uno qualsiasi dei due metodi descritti.
 
-2. Fai clic su **Aggiungi sottoscrizione**.
+1. Fai clic su **Aggiungi sottoscrizione**.
 
-3. Compila il modulo di sottoscrizione evento. Per informazioni sui campi del modulo, consulta la seguente tabella:
+2. Compila il modulo di sottoscrizione evento. Per informazioni sui campi del modulo, consulta la seguente tabella:
+
+*Tabella 3. Campi del modulo di sottoscrizione evento*
 
 | **Campo** | **Descrizione** |
 |-----------------|-------------------|
@@ -81,8 +80,6 @@ Per utilizzare gli hook Web per l'impostazione di una sottoscrizione evento spec
 | Nome utente | Immetti il tuo nome utente per il tuo servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
 | Password | Immetti la password per il tuo servizio Web. |
 | Payload | Se hai selezionato il metodo POST, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori utilizzati per la notifica IBM. Ad esempio, se desideri che la notifica proveniente dal servizio Web riporti il titolo, il messaggio e il grado di severità, devi definire i valori {{site.data.keyword.Bluemix_notm}} con la proprietà corrispondente per il tuo servizio Web. I seguenti valori possono essere utilizzati per estrarre informazioni dalla notifica {{site.data.keyword.Bluemix_notm}} in relazione a livello di severità, corpo del messaggio e titolo della notifica: `"{{title}}`, `"{{message}},"` e `"{{severity}}"`. Se non immetti informazioni in questa sezione, ricevi la notifica priva di informazioni supplementari.  |
-
-Tabella 3. Campi del modulo di sottoscrizione evento
 
 Quando salvi la tua sottoscrizione evento, ricevi notifiche attraverso il metodo che hai impostato attraverso il tuo servizio Web. Le notifiche vengono ancora pubblicate nella pagina Stato per quanto riguarda gli incidenti e nell'area Notifiche della pagina Amministrazione per quanto riguarda gli aggiornamenti di manutenzione.
 
@@ -106,10 +103,10 @@ aggiornamenti in sospeso che richiedono un tuo intervento. Per intervenire per u
 gli aggiornamenti in sospeso.</li>
 <li>Seleziona un aggiornamento per intervenire o per visualizzare i relativi dettagli, che
 includono la finestra di aggiornamento, la data pianificata e lo stato di interruzione del servizio.</li>
-<li>Fai clic su <strong>IMPOSTA DATE NON DISPONIBILI</strong> per impostare degli specifici giorni nella finestra
+<li>Fai clic su <strong>SELEZIONA DATE NON DISPONIBILI</strong> per impostare degli specifici giorni nella finestra
 di aggiornamenti che non siano opportuni per l'applicazione dell'aggiornamento. Se imposti delle date non disponibili, IBM approva
 e pianifica il tuo aggiornamento in base alle tue selezioni. Ricevi una notifica quando l'aggiornamento viene approvato e pianificato.</li>
-<li>Fai clic su <strong>APPROVA</strong> per approvare l'aggiornamento, se non hai alcuna data non disponibile. Se approvi, l'aggiornamento viene applicato durante la finestra di aggiornamento pianificata. IBM invia una notifica quando la distribuzione dell'aggiornamento inizia e finisce.</li>
+<li>Fai clic su <strong>APPROVA AGGIORNAMENTO</strong> per approvare l'aggiornamento, se non hai alcuna data non disponibile. Se approvi, l'aggiornamento viene applicato durante la finestra di aggiornamento pianificata. IBM invia una notifica quando la distribuzione dell'aggiornamento inizia e finisce.</li>
 </ol>
 
 **Nota**: se non imposti le date non disponibili o non approvi l'aggiornamento, quest'ultimo viene applicato alla fine della finestra temporale di 21 giorni per assicurare che la tua piattaforma resti attuale e aggiornata.
@@ -239,6 +236,8 @@ per scaricare il report.
 
 La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato.
 
+*Tabella 4. Elenco dei report di sicurezza*
+
 | **Categoria** | **Report** | **Descrizione** |      
 |-----------------|-------------------|---------------------|
 | Firewall | Accessi firewall | Eventi relativi all'accesso dell'amministratore ai dispositivi firewall Vyatta. |
@@ -259,12 +258,10 @@ La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.
 | Gestione delle correzioni software | Report di applicazione patch | Correzioni software applicate. |
 | Gestione degli incidenti di sicurezza | Report di correzione incidenti di sicurezza | Prove di incidenti di sicurezza per consentirne la gestione. |
 
-*Tabella 4. Elenco dei report di sicurezza*
-
 ## Visualizzazione dello stato
 {: #oc_status}
 
-Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**. 
+Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Stato**.
 
 La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}.
 
@@ -304,11 +301,11 @@ Le modalità d'uso del tuo broker dei servizi variano a seconda del numero di se
 
 Completa la seguente procedura per registrare il tuo broker dei servizi:
 
-1\. [Implementa l'API broker dei servizi Cloud Foundry](http://docs.cloudfoundry.org/services/api.html){: new_window} per consentire la comunicazione tra il tuo servizio e {{site.data.keyword.Bluemix_notm}}. L'API broker dei servizi è un insieme di endpoint REST utilizzati da {{site.data.keyword.Bluemix_notm}}.
-
-Quando implementi il broker dei servizi, nella risposta JSON di `GET /v2/catalog` devi fornire le definizioni per i tuoi piani di servizio e servizi, incluse le informazioni sul servizio che desideri visualizzare. Ad esempio, consulta il seguente file JSON di esempio della risposta del catalogo (GET):
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implementa l'API broker dei servizi Cloud Foundry</a> per consentire la comunicazione tra il tuo servizio e {{site.data.keyword.Bluemix_notm}}. L'API broker dei servizi è un insieme di endpoint REST utilizzati da {{site.data.keyword.Bluemix_notm}}.<br />
+<br />
+<p>Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/catalog</code> devi fornire le definizioni per i tuoi piani di servizio e servizi, incluse le informazioni sul servizio che desideri visualizzare. Ad esempio, consulta il seguente file JSON di esempio della risposta del catalogo (GET)</p>
+<p><pre>
 "services":[
    {
       "bindable":true,
@@ -394,33 +391,27 @@ Quando implementi il broker dei servizi, nella risposta JSON di `GET /v2/catalog
    }
 ]
 }
-```
-{: codeblock}
-
-**Nota**: quando crei un broker dei servizi per un ambiente locale o dedicato, devi specificare `customer_dedicated` nel campo "tags" del tuo file JSON di definizione dei servizi.
-
-2\. Una volta implementata l'API broker dei servizi, vai a **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
-
-3\. Fai clic su **REGISTRA UN BROKER DEI SERVIZI**.
-
-4\. Completa il modulo immettendo valori nei seguenti campi:
-
-- Nome del broker dei servizi
-- URL del broker dei servizi
-- Nome utente del broker dei servizi
-- Password del broker dei servizi
-
-5\. Fai clic su **CONNETTI**.
-
-6\. Controlla le informazioni sul tuo servizio, inclusi i piani disponibili, l'icona e la descrizione del servizio.
-
-**Nota**: se devi modificare le informazioni di catalogo del servizio, aggiorna il tuo broker di servizi e riavvia il processo di registrazione, compilando il modulo.
-
-7\. Fai clic su **REGISTRA**.
-
-8\. Scegli di abilitare tutti i piani o solo piani specifici per il servizio. Tutti i piani sono disabilitati per impostazione predefinita.
-
-9\. Abilita l'istanza del servizio per tutte le organizzazioni o solo per organizzazioni specifiche.
+</pre></p>
+<p><strong>Nota</strong>: quando crei un broker dei servizi per un ambiente locale o dedicato, devi specificare `customer_dedicated` nel campo "tags" del tuo file JSON di definizione dei servizi.</p>
+</li>
+<li>Una volta implementata l'API broker dei servizi, vai a <strong>AMMINISTRAZIONE</strong> &gt; <strong>GESTIONE CATALOGO</strong>.</li>
+<li>Fai clic su <strong>REGISTRA UN BROKER DEI SERVIZI</strong>.</li>
+<li>Completa il modulo immettendo valori nei seguenti campi:
+<ul>
+<li>Nome del broker dei servizi</li>
+<li>URL del broker dei servizi</li>
+<li>Nome utente del broker dei servizi</li>
+<li>Password del broker dei servizi</li>
+</ul>
+</li>
+<li>Fai clic su <strong>CONNETTI</strong>.</li>
+<li>Controlla le informazioni sul tuo servizio, inclusi i piani disponibili, l'icona e la descrizione del servizio.<br />
+<p><strong>Nota</strong>: se devi modificare le informazioni di catalogo del servizio, aggiorna il tuo broker di servizi e riavvia il processo di registrazione, compilando il modulo.</p>
+</li>
+<li>Fai clic su <strong>REGISTRA</strong>.</li>
+<li>Scegli di abilitare tutti i piani o solo piani specifici per il servizio. Tutti i piani sono disabilitati per impostazione predefinita.</li>
+<li>Abilita l'istanza del servizio per tutte le organizzazioni o solo per organizzazioni specifiche.</li>
+</ol>
 
 Ora puoi vedere il tuo servizio nella categoria Servizi personalizzati del tuo catalogo {{site.data.keyword.Bluemix_notm}}. Vai a **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** e seleziona il tile del catalogo. Puoi abilitare differenti piani e modificarne la visibilità per le tue organizzazioni in qualsiasi momento.
 
@@ -555,12 +546,15 @@ selezionare dalle opzioni e facendo clic su **AGGIUNGI**.
 	* Rimuovi un utente da un'organizzazione facendo clic sull'icona ![Rimuovi, rappresentato da un segno meno](images/icon_remove.svg).
 Al termine, fai clic su **SALVA**.
 * Rimuovere utenti. Se disponi dell'autorizzazione `ammin` o
-dell'autorizzazione `utenti` con accesso in `scrittura`, puoi rimuovere utenti. Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/icon_trash.svg) e quindi su **Rimuovi**.
+dell'autorizzazione `utenti` con accesso in `scrittura`, puoi rimuovere utenti.
+Per rimuovere un utente, individualo e fai clic sull'icona ![Elimina](images/icon_trash.svg) e quindi su **Rimuovi**.
 
 ### Autorizzazioni
 {: #permissions}
 
 È possibile assegnare agli utenti le seguenti autorizzazioni:
+
+*Tabella 5. Autorizzazioni*
 
 | **Autorizzazione utente** | **Descrizione** |       
 |-----------------|-------------------|
@@ -571,12 +565,10 @@ modificare le autorizzazioni per gli altri utenti. |
 | Report | Agli utenti con autorizzazione `report` può essere assegnato l'accesso in `visualizzazione` o in `scrittura` (modifica) per i report di sicurezza. |
 | Utenti | Agli utenti con autorizzazione `utenti` può essere assegnato l'accesso in `visualizzazione` per l'elenco di utenti o in `scrittura` (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti.|
 
-*Tabella 5. Autorizzazioni*
-
 È possibile abilitare le autorizzazioni o fornire agli utenti l'accesso in `visualizzazione` o
 in `scrittura` per l'autorizzazione indicata, come indicato dalle seguenti icone:
 
-* L'icona ![Abilitato, rappresentata da un segno di spunta](images/icon_enabled.svg) accanto a un'autorizzazione significa che essa è abilitata.
+* L'icona ![Abilitato, rappresentata da un segno di spunta](images/icon_enabled.svg) con un'autorizzazione significa che essa è abilitata.
 * L'icona ![Visualizza, rappresentata da un occhio](images/icon_read.svg) indica che l'utente dispone di un accesso in `visualizzazione` (sola lettura) per tale autorizzazione.
 * L'icona ![Scrittura, rappresentata da una matita](images/icon_write.svg) indica che l'utente dispone di un accesso in `scrittura` (modifica, aggiunta o rimozione) per tale autorizzazione.
 
@@ -939,6 +931,8 @@ POST /codi/v1/serviceBrokers
 ### Richiesta
 {: #registerrequest}
 
+*Tabella 6. Campi*
+
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. |
@@ -947,7 +941,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
 
-*Tabella 6. Campi*
 
 #### Corpo
 {: #registerbody}
@@ -1019,6 +1012,8 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 ### Richiesta
 {: #updaterequest}
 
+*Tabella 7. Campi*
+
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
@@ -1027,7 +1022,6 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
 
-*Tabella 7. Campi*
 
 #### Corpo
 {: #updatebody}
@@ -1090,11 +1084,12 @@ Content-Type: application/json
 
 Utilizza i seguenti esempi di API e codice per eliminare un servizio.
 
+*Tabella 8. Parametro*
+
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
 
-*Tabella 8. Parametro*
 
 ### Rotta
 

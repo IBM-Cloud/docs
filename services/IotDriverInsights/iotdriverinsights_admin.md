@@ -61,7 +61,7 @@ The following table describes the behavior parameters:
 |Speed Limit (km/h)|Unknown|Speed limit for Unknown|120|
 |Turn|Angular Velocity (Min \- Max, deg/s)|Normal angular velocity value in turn. Min value is used as threshold to identify turn segment. Max value is used to detect sharp turn behavior.|10 \- 25|
 |Turn|Average Speed (km/h)|Normal speed during turn. This value is used to identify behaviors in turn segment in conjunction with Angular Velocity values.|60|
-
+|Fatigue Driving|Time of Continuous Driving (s)|If a vehicle is driven continuously for more than this value, service identifies it as "Fatigue Driving".|10800|
 
 The following table describes the context parameters:
 

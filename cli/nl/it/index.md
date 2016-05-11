@@ -18,7 +18,7 @@ copyright:
 # CLI e strumenti di sviluppo
 {: #cli}
 
-*Ultimo aggiornamento: 16 febbraio 2016* 
+*Ultimo aggiornamento: 30 marzo 2016* 
 
 Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali un'interfaccia riga di comando unificata e i plug-in delle CLI. Ciascuno di questi download di CLI è disponibile a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,6 +27,9 @@ Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali 
 {: #downloads}
 
 Scarica e installa le interfacce riga di comando a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}. Lo strumento riga di comando cf Cloud Foundry è un prerequisito per tutti gli altri strumenti CLI {{site.data.keyword.Bluemix_notm}}. Lo strumento riga di comando {{site.data.keyword.Bluemix_notm}} fornisce un'esperienza ampliata per gestire il tuo ambiente {{site.data.keyword.Bluemix_notm}} oltre le applicazioni Cloud Foundry.
+
+Entrambi gli strumenti CLI utilizzano la porta 433 per impostazione predefinita. Se è presente un proxy tra gli strumenti CLI e l'ambiente {{site.data.keyword.Bluemix_notm}}, devi configurare la variabile di ambiente `http-proxy` con la porta e l'url del proxy HTTP attuali se presenti. Per ulteriori dettagli, consulta [Utilizzo della CLI con un server proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
+
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|

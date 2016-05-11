@@ -479,7 +479,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
   스켈레톤은 사용자 정의 2진 형식으로 사용자의 코드를 삽입할 수 있는 Docker 컨테이너 템플리트입니다.
 
-2. 블랙박스 스켈레톤에 사용자 정의 2진을 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
+2. Docker 스켈레톤에 사용자 정의 2진을 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
 
   ```
   cat ./dockerSkeleton/client/example.c

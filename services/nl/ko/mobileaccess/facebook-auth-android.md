@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -54,7 +54,7 @@ Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 And
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
 	```
 
-	**팁**: 릴리스 모드 인증서의 키 해시를 검색하는 경우에도 동일한 구문을 사용할 수 있습니다. 명령에서 별명과 키 저장소 경로를 대체하십시오. 
+	**팁**: 릴리스 모드 인증서의 키 해시를 검색하는 경우에도 동일한 구문을 사용할 수 있습니다. 명령에서 별명 및 키 저장소 경로를 대체하십시오. 
 
 1. **keytool** 명령으로 얻은 키 해시를 복사하여 Facebook 개발자 포털의 개발/릴리스 키 해시 프롬프트에 붙여넣으십시오. 
 
@@ -219,3 +219,14 @@ Android 프로젝트에는 두 개의 `build.gradle` 파일(프로젝트용 및 
 1. 	요청이 성공하면 LogCat 유틸리티에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/android-facebook-login-success.png)
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Facebook에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Facebook에서 로그아웃됩니다. 
+다시 로그인을 시도하는 경우, 사용자에게는 자체 Facebook 신임 정보에 대한 프롬프트가 제시됩니다. 
+
+ 로그아웃 기능에 전달된 `listener`의 값은 널일 수 있습니다. 

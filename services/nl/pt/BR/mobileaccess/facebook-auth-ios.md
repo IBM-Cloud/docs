@@ -154,10 +154,9 @@ Inicialize o Client SDK passando a rota do app (`applicationRoute`) e o GUID do 
 
 Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
 
-1. Abra a página principal do painel do {{site.data.keyword.Bluemix_notm}} e clique em seu app. 
-Clique em **Opções móveis** e anote a **Rota**
+1. Abra a página principal do painel do {{site.data.keyword.Bluemix_notm}} e clique em seu app. Clique em **Opções móveis** e anote a **Rota**
 (`applicationRoute`) e o **GUID do app**
-(`applicationGUID`). 
+(`applicationGUID`).
 
 1. Importe a estrutura necessária na classe em que deseja usar o {{site.data.keyword.amashort}} Client SDK incluindo os cabeçalhos a seguir:
 
@@ -258,8 +257,8 @@ Depois que o Client SDK for inicializado e o Gerenciador de autenticação do Fa
 {: #facebook-auth-ios-testing-before}
 Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado no navegador. 
-Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado no navegador. Abra a URL a seguir: `{applicationRoute}/protected`.
+Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 <br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa
 mensagem é retornada porque esse terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK.
 
@@ -279,7 +278,7 @@ mensagem é retornada porque esse terminal pode ser acessado somente por aplicat
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -310,3 +309,26 @@ mensagem é retornada porque esse terminal pode ser acessado somente por aplicat
 
 1. 	Quando sua solicitação for bem-sucedida, a saída a seguir será exibida no
 console do Xcode:	![image](images/ios-facebook-login-success.png)
+
+
+
+	Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	Se você chamar esse código depois que um usuário estiver conectado ao Facebook e ele tentar efetuar login novamente, ele será solicitado a autorizar o Mobile Client Access a usar o Facebook para propósitos de autenticação.
+
+	Para alternar usuários, deve-se chamar esse código e o usuário deve efetuar logout do Facebook em seu navegador.
+Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.
+

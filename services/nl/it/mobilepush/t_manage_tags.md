@@ -20,10 +20,11 @@ Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i disp
 1. Fai clic sul pulsante + **Crea tag**.   
 
    a. Nel campo **Nome**, immetti il nome della tag. Ad esempio, "coupons".
-
+   
    b. Nel campo **Descrizione**, immetti una descrizione della tag.
+   
    c. Fai clic su **Salva**.
-
+   
 1. Nell'area **Frammenti di codice**, seleziona la piattaforma per la tua applicazione mobile.
 1. Modifica i frammenti di codice per gestire gli errori e copiali quindi per ogni tag nella tua applicazione mobile.
 
@@ -39,3 +40,9 @@ Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i disp
 1. Dalla scheda **Tag**, seleziona la tag che vuoi modificare.
 1. Fai clic sull'icona modifica.
 1. Modifica la descrizione della tag e fai quindi clic sul pulsante **Salva**.
+
+
+
+
+
+

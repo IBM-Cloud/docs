@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Administration de 
+# Administration
 {: #administer}
 *Dernière mise à jour : 29 février 2016*
 
@@ -42,7 +42,7 @@ paramètres de l'organisation ou de l'espace, notamment l'accès utilisateur. Po
 Une organisation est définie par les éléments suivants :
 
 <dl>
-<dt>Les utilisateurs </dt>
+<dt>Les utilisateurs</dt>
 <dd>Rôle disposant du droit de base dans les organisations et les espaces. Vous devez être affecté à une organisation pour pouvoir obtenir d'autres
 droits dans les espaces de l'organisation. Pour des informations détaillées, voir
 [Utilisateurs et rôles](adminpublic.html#userroles).</dd>
@@ -168,9 +168,7 @@ informations sur les applications et les services, aux paramètres, aux rapports
 </dl>
 
 **Remarque** : les utilisateurs qui possèdent le rôle de responsable ou de développeur peuvent accéder à la variable
-d'environnement VCAP_SERVICES. Par contre, un utilisateur qui possède le rôle d'auditeur ne peut pas y accéder. De plus, le contenu de la variable
-d'environnement VCAP_SERVICES n'est pas occulté partiellement selon le rôle de l'utilisateur.
-
+d'environnement VCAP_SERVICES. Toutefois, un utilisateur affecté au rôle auditeur ne peut pas accéder à VCAP_SERVICES.
 
 ### Gestion de vos organisations
 {: #orgmng}
@@ -227,7 +225,6 @@ Selon que l'invité possède un ID IBM ou non, il se voit attribuer un rôle de 
 de `collaborateur` pour le compte. Le tableau ci-dessous explique en détail l'affectation des rôles de compte en
 fonction du type d'invitation.
 
-
 *Tableau 1. Affectations de rôle de compte*
 
 | **Type d'adresse électronique invitée** | **Rôle de compte affecté** | 
@@ -238,18 +235,16 @@ fonction du type d'invitation.
 
 Procédez comme suit pour ajouter des utilisateurs avec des rôles affectés à des espaces spécifiques pour l'organisation de votre choix :
 
-
 <ol>
 <li>Accédez à **Compte et support** &gt; **Compte** &gt; **Gérer les organisations**.</li>
 <li>Sélectionnez **Inviter des utilisateurs**.</li>
-<li>Entrez l'adresse électronique de la personne à inviter. </li>
-<li>Sélectionnez le rôle pour l'organisation dans laquelle vous prévoyez d'inviter le nouvel utilisateur. </li>
-<li>Sélectionnez le rôle pour l'espace dans lequel vous prévoyez d'inviter le nouvelle utilisateur. </li>
+<li>Entrez l'adresse électronique de la personne à inviter.</li>
+<li>Sélectionnez le rôle pour l'organisation dans laquelle vous prévoyez d'inviter le nouvel utilisateur.</li>
+<li>Sélectionnez le rôle pour l'espace dans lequel vous prévoyez d'inviter le nouvelle utilisateur.</li>
 <li>Cliquez sur **Inviter**.</li>
-<li>Affichez la confirmation de l'envoi de l'invitation dans la section **En attente**.
-Cliquez sur **Renvoyer le courrier électronique** ou **Annuler l'invitation** pour prendre une
+<li>Affichez la confirmation de l'envoi de l'invitation dans la section **En attente**. Cliquez sur **Renvoyer le courrier électronique** ou **Annuler l'invitation** pour prendre une
 décision
-concernant une invitation en attente. </li>
+concernant une invitation en attente.</li>
 </ol>
 
 #### Modifications de rôles utilisateur

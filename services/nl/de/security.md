@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 
 
@@ -6,7 +14,7 @@
 
 *Letzte Aktualisierung: 9. Dezember 2015*
 
-Mit diesen Sicherheitsservices können Sie den Zugriff auf Anwendungen und Workloads schützen sowie Anwendungen auf Sicherheitslücken überprüfen. Außerdem können Sie Sicherheitsmaßnahmen in das Datenmanagement und in Services für große Datenmengen (Big Data) integrieren.
+Mit diesen Sicherheitsservices können Sie den Zugriff auf Anwendungen und Workloads schützen sowie Anwendungen auf Sicherheitslücken überprüfen. Außerdem können Sie Sicherheitsmaßnahmen in das Datenmanagement und in Services für große Datenmengen (Big Data) integrieren. 
 {:shortdesc}
 
 

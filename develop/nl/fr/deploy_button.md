@@ -37,10 +37,10 @@ Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produise
 4. Si l'application requiert un fichier de génération, le fichier de génération est détecté automatiquement et l'application est générée. 
 
 5. Si un pipeline est configuré pour le processus de génération et de déploiement, un fichier `pipeline.yml` est utilisé pour
-déployer l'application. 
+déployer l'application.
 
 6. Si l'application requiert un conteneur, un fichier `pipeline.yml` définissant le service **IBM Containers**
-et un document Dockerfile définissant une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.Bluemix_notm}}.  
+et un document Dockerfile définissant une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.Bluemix_notm}}. 
 
 7. L'application est déployée dans l'organisation {{site.data.keyword.Bluemix_notm}} de la personne. 
 
@@ -169,7 +169,8 @@ Le fichier manifeste vous permet d'indiquer :
    </li>
    </ul>
 	<li> Si le référentiel doit être généré avant le déploiement de l'application, une génération automatisée du code dans le référentiel est déclenchée avant le déploiement. Les
-générations automatisées ont lieu lorsqu'un fichier script de génération est détecté dans le répertoire racine du référentiel.  	
+générations automatisées ont lieu lorsqu'un fichier script de génération est détecté dans le répertoire racine du référentiel. 
+	
 	Générateurs pris en charge : 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant :</a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
@@ -181,7 +182,7 @@ générations automatisées ont lieu lorsqu'un fichier script de génération es
 	<li>Afin de configurer un pipeline pour le projet, incluez un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer un fichier pipeline.yml à partir d'un projet {{site.data.keyword.jazzhub_short}} et l'ajouter à votre référentiel, procédez comme suit. 
 <ol>
 <li>Ouvrez votre projet DevOps Services dans un navigateur et cliquez sur <b>Build and Deploy</b>.</li>
-<li>Configurez votre pipeline avec des travaux de génération et de déploiement. </li>
+<li>Configurez votre pipeline avec des travaux de génération et de déploiement.</li>
 <li>Dans votre navigateur, ajoutez <code>/yaml</code> à l'adresse URL du pipeline du projet et appuyez sur Entrée. 
 <br>Exemple :
 <code>https://hub.jazz.net/pipeline/<propriétaire>/<nom_projet>/yaml</code></li>
@@ -189,8 +190,7 @@ générations automatisées ont lieu lorsqu'un fichier script de génération es
 <li>Dans le répertoire racine de votre projet, créez un répertoire <code>.bluemix</code>.</li>
 <li>Téléchargez le fichier <code>pipeline.yml</code> dans le référentiel <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>.
-
+	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. 
 	<ul>
 	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">voir la documentation Docker</a>. </li>
 	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a href="https://github.com/Puquios/" target="_blank">consultez les exemples dans GitHub</a>. </li>

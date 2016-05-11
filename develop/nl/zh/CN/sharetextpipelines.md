@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#共享 {{site.data.keyword.jazzhub_short}} 样本项目中基于文本的管道{: #share-pipeline}
+#共享 {{site.data.keyword.jazzhub_short}} 样本项目中基于文本的管道 {: #share-pipeline}
 
 *上次更新时间：2015 年 12 月 7 日* 
 
@@ -82,7 +82,7 @@ stages:
 ```
 {: codeblock} 
 
-##YAML 文件语法{: #yaml-syntax}
+##YAML 文件语法 {: #yaml-syntax}
 
 任何管道都可以使用以下语法以文本形式进行表示。
 
@@ -159,11 +159,11 @@ space: <space name>
 ```
 {: codeblock} 
 
-##扩展作业和扩展定义{: #extension-jobs} 
+##扩展作业和扩展定义 {: #extension-jobs} 
 
 扩展定义用于定义可供扩展作业使用的属性集。指定了 `extension_id` 属性时，作业被视为是扩展作业。要找出哪些属性可用于扩展，请查阅其文档。 
 
-##通过使用 YAML 文件与管道交互{: #pipeline-yaml} 
+##通过使用 YAML 文件与管道交互 {: #pipeline-yaml} 
 
 **环境变量和解决方法** 
 <!-- Formating for this? -->

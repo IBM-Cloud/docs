@@ -20,12 +20,13 @@ Después de iniciar sesión en {{site.data.keyword.Bluemix}}, puede cargar su ap
 {:shortdesc}
 
 Antes de empezar, debe:
-  1. Instalar las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry. 
+  1. Instalar las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry.
 
   <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Se abre en una pestaña o ventana
 nueva)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar la interfaz de línea de mandatos de
 {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre
-en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a>
+en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a> 
+
   2. Conecte con {{site.data.keyword.Bluemix}}.
 
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span></pre>

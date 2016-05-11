@@ -18,14 +18,18 @@ copyright:
 # CLI 和開發工具
 {: #cli}
 
-*前次更新：2016 年 2 月 16 日*
+*前次更新：2016 年 3 月 30 日*
 
-使用 {{site.data.keyword.Bluemix_short}}，您可以存取各種功能強大的工具，例如統一指令行介面和 CLI 外掛程式。其中每個 CLI 下載都可用來增強您的 {{site.data.keyword.Bluemix_notm}} 體驗。{:shortdesc}
+使用 {{site.data.keyword.Bluemix_short}}，您可以存取各種功能強大的工具，例如統一指令行介面和 CLI 外掛程式。其中每個 CLI 下載都可用來增強您的 {{site.data.keyword.Bluemix_notm}} 體驗。
+{:shortdesc}
 
 ## ![指令行介面](./images/CLI.svg) 指令行介面
 {: #downloads}
 
 下載及安裝指令行介面，以支援您的 {{site.data.keyword.Bluemix_notm}} 體驗。Cloud Foundry cf 指令行工具是所有其他 {{site.data.keyword.Bluemix_notm}} CLI 工具的必備項目。{{site.data.keyword.Bluemix_notm}} 指令行工具提供管理 {{site.data.keyword.Bluemix_notm}} 環境及 Cloud Foundry 應用程式的延伸體驗。
+
+這兩個 CLI 工具預設都會使用 433 埠。如果您在 CLI 工具與 {{site.data.keyword.Bluemix_notm}} 環境之間有 HTTP Proxy，則必須使用實際 HTTP Proxy URL 及埠（如果有的話）來配置 `http-proxy` 環境變數。如需詳細資料，請參閱 [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}。
+
 
 | *{{site.data.keyword.Bluemix_notm}}：bx* | *Cloud Foundry：cf* |
 |---------------------|---------------|
@@ -34,7 +38,7 @@ copyright:
 
 ## ![指令行介面外掛程式](./images/CLI_Plugin.svg) 指令行介面外掛程式
 
-使用其他指令，輕鬆延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面。若要存取 {{site.data.keyword.Bluemix_notm}} 指令行介面外掛程式，請參閱 [ CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/)。
+使用其他指令，輕鬆延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面。若要存取 {{site.data.keyword.Bluemix_notm}} 指令行介面外掛程式，請參閱 [CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/)。
 
 ### 延伸您的 {{site.data.keyword.Bluemix_notm}} 指令行介面：bx
 

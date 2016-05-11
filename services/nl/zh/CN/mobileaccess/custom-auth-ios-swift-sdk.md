@@ -155,7 +155,7 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -179,3 +179,13 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. 通过添加以下代码，您还可以添加注销功能：
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ 如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
+
+ 您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

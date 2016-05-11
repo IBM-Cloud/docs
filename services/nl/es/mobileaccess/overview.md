@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# Visión general de {{site.data.keyword.amashort}}
+# Acerca de {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 El servicio de {{site.data.keyword.amafull}} proporciona servicios de autenticación y supervisión para aplicaciones móviles que acceden a recursos alojados en {{site.data.keyword.Bluemix_notm}}.
@@ -19,7 +19,7 @@ Puede utilizar el servicio de {{site.data.keyword.amashort}} para proteger las a
 
 * **Panel de control de {{site.data.keyword.amashort}}**: configure diversos tipos de autenticación y supervise los registros de dispositivo, las estadísticas de uso, las analíticas y el rendimiento de la aplicación móvil.
 * **SDK del cliente de {{site.data.keyword.amashort}}**: prepare las aplicaciones móviles para que utilicen la funcionalidad {{site.data.keyword.amashort}}. Las plataformas admitidas son: iOS 8+, Android 4+, Cordova.
-* **SDK del servidor de {{site.data.keyword.amashort}}**: proteja los recursos que se alojan en {{site.data.keyword.Bluemix_notm}}. Los tiempos de ejecución que se admiten actualmente son Node.js y Liberty for Java&trade;. 
+* **SDK del servidor de {{site.data.keyword.amashort}}**: proteja los recursos que se alojan en {{site.data.keyword.Bluemix_notm}}. Los tiempos de ejecución que se admiten actualmente son Node.js y Liberty for Java&trade;.
 
 ## Tipos de autenticación
 {: #authtypes}

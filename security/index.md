@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 17 March 2016*
+*Last updated: 9 May 2016*
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
@@ -336,7 +336,11 @@ The following table displays which services in {{site.data.keyword.Bluemix_notm}
 *Table 1. Platform and service compliance*
 
 
-# rellinks
-## general
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [Getting started with Single Sign On](../services/SingleSignOn/index.html)

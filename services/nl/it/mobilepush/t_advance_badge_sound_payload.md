@@ -6,7 +6,7 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configurazione di badge, audio e payload e badge iOS
+# Configurazione di audio e payload e badge iOS
 
 {: #badge-sound-payload}
 
@@ -14,8 +14,7 @@ Configura un badge, l'audio e del payload JSON aggiuntivo iOS.
 
 1. Nel dashboard Push Notifications, vai alla scheda **Notifications**.
 2. Vai alla sezione **Optional Fields** per configurare le seguenti funzioni di notifica di
-                    push. badge ios, audio e payload aggiuntivo.
-
+                    push. 
 	a. **Badge iOS** - per i dispositivi iOS, il numero da visualizzare come badge dell'icona applicazione. Se questa proprietà
                             non è presente, il badge non viene modificato. Per rimuovere il badge, imposta
                             il valore di questa proprietà su 0.

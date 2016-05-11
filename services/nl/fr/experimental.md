@@ -1,16 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  2015, 2016
 
 ---
 
 # Services expérimentaux
 {: #experimental}
 
-*Dernière mise à jour : 9 décembre 2015*
+*Dernière mise à jour : 4 avril 2015*
 
-Consultez le catalogue {{site.data.keyword.Bluemix_notm}} Labs pour essayer des contextes d'exécution et des services expérimentaux.
+Extraction de {{site.data.keyword.Bluemix_notm}} Experimental Services pour tester les services expérimentaux.
 {: shortdesc} 
 
 

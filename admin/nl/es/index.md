@@ -15,31 +15,30 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Gestión de {{site.data.keyword.Bluemix_notm}} Local y {{site.data.keyword.Bluemix_notm}} Dedicado
 {: #mng}
-*Última actualización: 18 de febrero de 2016*
+*Última actualización: 19 de abril de 2016*
 
-Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de roles y permisos de usuarios; consulte [Gestión de las organizaciones](../admin/adminpublic.html#orgmng).
+Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](index.html#oc_useradmin); consulte [Gestión de las organizaciones](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de {{site.data.keyword.Bluemix_notm}}*
 
 | ¿Qué puedo hacer? | Detalles |    
 |----------------|---------|
-|Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](index.html#oc_resource). |
+|Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](index.html#oc_resource).|
 |Gestionar el catálogo | Pulse **ADMINISTRATION &gt; CATALOG MANAGEMENT** para gestionar qué servicios están visibles a sus
-usuarios y orgs. Consulte [Gestión de su catálogo](index.html#oc_catalog). |
+usuarios y orgs. Consulte [Gestión de su catálogo](index.html#oc_catalog).|
 |Administrar organizaciones | Pulse **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](index.html#oc_organizations).|
 |Crear espacios y asignar roles de usuario | Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) y, a continuación, seleccione **Gestionar
-organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](../admin/adminpublic.html#orgmng).  |
+organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](../admin/adminpublic.html#orgmng). |
 |Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRATION &gt; USER ADMINISTRATION** para añadir usuarios,
-eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](index.html#oc_user).  |
+eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](index.html#oc_useradmin). |
 |Revisar informes y registros | Pulse **ADMINISTRATION &gt; REPORTS AND LOGS** para ver informes de seguridad y
 registros de auditoría para su instancia. Ver [Visualización de informes](index.html#oc_report). |
 |Ver información del sistema | Pulse **ADMINISTRATION &gt; SYSTEM INFORMATION** para ver información del sistema como actualizaciones pendientes, el nombre y la versión de la instancia, la región, la URL de API, la URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. También puede acceder a suscripciones de sucesos e información de entrada de calendario
-para la aplicación de sus notificaciones en la sección Actualizaciones pendientes. Consulte [Visualización de información del sistema](index.html#oc_system).  |
-|Ampliar notificaciones y configurar suscripciones de sucesos | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones y sucesos](index.html#oc_eventsubscription).  |
+para la aplicación de sus notificaciones en la sección Actualizaciones pendientes. Consulte [Visualización de información del sistema](index.html#oc_system). |
+|Ampliar notificaciones y configurar suscripciones de sucesos | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones y sucesos](index.html#oc_eventsubscription). |
 
 
 ## Suscripción de notificaciones y sucesos
@@ -47,12 +46,14 @@ para la aplicación de sus notificaciones en la sección Actualizaciones pendien
 
 Siempre pueda saber el estado de su entorno comprobando la página Estado. {{site.data.keyword.Bluemix_notm}} también envía
 notificaciones al área Notificaciones para la página Administración para sucesos como actualizaciones y mantenimiento planificados. Las
-incidencias se informan en la página Estado. 
+incidencias se informan en la página Estado.
 
 ### Notificaciones
 
 Puede ver notificaciones de IBM para su entorno local o dedicado y supervisar el estado de su entorno. Revise la
-tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publican. 
+tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publican.
+
+Tabla 2. Tipos de sucesos y métodos de notificación
 
 | **Tipo de suceso** | **Método de notificación** |       
 |-----------------|-------------------|
@@ -61,36 +62,34 @@ a la página **Administración** y seleccione el icono **Notificaciones** ![Noti
 completas, pulse **ADMNISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones
 pendientes**. Puede ampliar la posibilidad de notificación configurando una suscripción de sucesos que integra alertas de
 actualización de mantenimiento desde la página Administración con el servicio web que elija para direccionar los mensajes
-a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija.  |
+a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija. |
 | Incidencias críticas | Se aleta sobre incidencias críticas en la página Estado. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**. Puede ampliar la posibilidad de notificación configurando una suscripción de sucesos que integra alertas de incidencias
 desde la página Estado con el servicio web que elija para direccionar los mensajes
-a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija.  |  
-| Estado | Puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.   |
-
-*Tabla 2. Tipos de sucesos y métodos de notificación*
+a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija. |  
+| Estado | Puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.  |
 
 ### Configuración de suscripciones de sucesos
 
 Puede ampliar la funcionalidad de las notificaciones que se envía a las páginas Administración y Estado usando las
 suscripciones de sucesos que implementan los webhooks. Los webhooks direccionan sus notificaciones directamente al destino que elija (por
 correo electrónico) o a un número de teléfono (por mensaje SMS). Puede personalizar el tipo de notificación, específicamente
-actualizaciones de mantenimiento o alertas de incidencias críticas, y la información que se incluye en la notificación. 
+actualizaciones de mantenimiento o alertas de incidencias críticas, y la información que se incluye en la notificación.
 
-Para usar los webhooks para configurar una suscripción de sucesos específica, realice los pasos siguientes: 
+Para usar los webhooks para configurar una suscripción de sucesos específica, realice los pasos siguientes:
 
-1. Acceda a la página **ADMINISTRACIÓN**: 
-
-- Para notificaciones de actualización de mantenimiento, acceda a **INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones pendientes** y pulse el icono **Suscribir**
-![Suscribir](images/icon_subscribe.svg). 
-- Para notificaciones de alerta de incidencias, pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) &gt; **Estado**, y pulse el icono
+* Para notificaciones de actualización de mantenimiento, acceda a **INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones pendientes** y pulse el icono **Suscribir**
+![Suscribir](images/icon_subscribe.svg).
+* Para notificaciones de alerta de incidencias, pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) &gt; **Estado**, y pulse el icono
 **Suscribir** ![Suscribir](images/icon_subscribe.svg).
 
 **Nota**: Puede acceder a la página de suscripción de sucesos para ambos tipos de notificaciones, utilizando
-cualquiera de los dos métodos descritos. 
+cualquiera de los dos métodos descritos.
 
-2. Pulse **Añadir suscripción**. 
+1. Pulse **Añadir suscripción**.
 
-3. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario, revise la tabla siguiente: 
+2. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario, revise la tabla siguiente:
+
+*Tabla 3. Campos de formulario de suscripción de sucesos*
 
 | **Campo** | **Descripción** |
 |-----------------|-------------------|
@@ -98,7 +97,7 @@ cualquiera de los dos métodos descritos.
 | Método | Seleccionar GET o POST. |
 | Suceso | Seleccionar la suscripción a notificaciones para actualizaciones o incidencias. |
 | URL | Especificar el URL a la que enganchar su servicio web. |
-| Descripción | Añadir una descripción para la suscripción de sucesos que está creando.  |
+| Descripción | Añadir una descripción para la suscripción de sucesos que está creando. |
 | Nombre de usuario | Especificar el nombre de usuario para su servicio web. Si no quiere usar sus credenciales personales, puede configurar
 un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Especificar la contraseña de su servicio web. |
@@ -107,16 +106,14 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 extraer información desde la notificación de {{site.data.keyword.Bluemix_notm}} para el título de notificación,
 cuerpo del mensaje y nivel de gravedad: `"{{title}}`, `"{{message}},"` y
 `"{{severity}}"`. Si no especifica información en esta sección, recibirá la notificación sin
-información adicional.   |
-
-Tabla 3. Campos de formulario de suscripción de sucesos
+información adicional.  |
 
 Cuando se guarda su suscripción de sucesos, recibe notificaciones a través del método que haya configurado por medio del servicio web. Las
-notificaciones se siguen publicando en la página Estado para las incidencias y en el área Notificaciones de la página Administración para las actualizaciones de mantenimiento. 
+notificaciones se siguen publicando en la página Estado para las incidencias y en el área Notificaciones de la página Administración para las actualizaciones de mantenimiento.
 
 Puede seleccionar cualquier suscripción de sucesos guardada y ver la actividad reciente. Puede pulsar para expandir cualquier entrada de actividad
 reciente para ver los detalles. Incluidos en los detalles están los valores de IBM para la notificación que puede usar en la sección payload. Para
-ver estos valores, expanda la entrada de actividad reciente, expanda **Suceso** y luego **Objeto**. 
+ver estos valores, expanda la entrada de actividad reciente, expanda **Suceso** y luego **Objeto**.
 
 
 ## Visualización de la información del sistema
@@ -135,30 +132,29 @@ que requieren acción por su parte. Para realizar una acción para una actualiza
 <li>Pulse <strong><em>Número</em> de actualizaciones pendientes</strong> para ver todas las actualizaciones pendientes.</li>
 <li>Seleccione una actualización para realizar una acción o ver los detalles de la actualización, que incluyen la ventana de actualización,
 el estado planificado o el estado de interrupción.</li>
-<li>Pulse <strong>ESTABLECER FECHAS DE NO DISPONIBILIDAD</strong> para establecer días específicos en la ventana de actualización
-que no son convenientes para que se aplique la actualización. Si establece fechas de no disponibilidad, IBM aprobará y planificará
+<li>Pulse <strong>SELECCIONAR FECHAS DE NO DISPONIBILIDAD</strong> para establecer días específicos en la ventana de actualización que no son convenientes para que se aplique la actualización. Si establece fechas de no disponibilidad, IBM aprobará y planificará
 la actualización en función de las selecciones. Recibirá una notificación cuando se apruebe y se planifique la actualización.</li>
-<li>Pulse <strong>APROBAR</strong> para aprobar la actualización, si no tiene ninguna fecha no disponible. Si aprueba, la actualización se aplicará durante la ventana de actualización planificada. IBM enviará una
+<li>Pulse <strong>APROBAR ACTUALIZACIÓN</strong> para aprobar la actualización, si no tiene ninguna fecha no disponible. Si aprueba, la actualización se aplicará durante la ventana de actualización planificada. IBM enviará una
 notificación cuando se inicie y se detenga el despliegue de actualización.</li>
 </ol>
 
 **Nota**: si no establece fechas no disponibles o aprueba la actualización, se aplica al final del plazo de 21 días
-para asegurar que su plataforma permanece actualizada. 
+para asegurar que su plataforma permanece actualizada.
 
 En la página Actualizaciones pendientes, puede elegir el seguimiento de su planificación de actualizaciones pulsando en el icono
 **Calendario** ![Calendario](images/icon_calendar.svg) y descargar el archivo `.ics` para importar sus actualizaciones
-planificadas en la app de calendario que prefiera: 
+planificadas en la app de calendario que prefiera:
 
 <ol>
 <li>Abra la app de calendario.</li>
-<li>Descargue el archivo de calendario pulsando el icono **Calendario** ![Calendario](images/icon_calendar.svg), y luego impórtelo en su app de calendario usando el archivo `.ics`. </li>
+<li>Descargue el archivo de calendario pulsando el icono **Calendario** ![Calendario](images/icon_calendar.svg), y luego impórtelo en su app de calendario usando el archivo `.ics`.</li>
 <li>Escriba sus credenciales.</li>
 <li>Visualice las actualizaciones planificadas.</li>
 </ol>
 
 También puede ampliar la funcionalidad de notificación para la página Administración usando las suscripciones de sucesos para
 la integración con el servicio web que quiera. Para configurar una suscripción de notificación de sucesos para una actualización o incidencia,
-consulte [Suscripciones de suceso y notificaciones](index.html#oc_eventsubscription). 
+consulte [Suscripciones de suceso y notificaciones](index.html#oc_eventsubscription).
 
 ### Información general del sistema
 
@@ -173,18 +169,18 @@ En la sección Información general, puede ver la siguiente información:
 
 En la sección Detalles de la configuración de LDAP, puede seleccionar el servidor de LDAP
 y ver información sobre las correlaciones de usuarios y grupos. Si utiliza el WebID de
-{{site.data.keyword.IBM}}, se indica en esta sección. 
+{{site.data.keyword.IBM}}, se indica en esta sección.
 
 ## Visualización de la información de uso
 {: #oc_resource}
 
 Puede ver distintos tipos de información de uso para su instancia local o dedicada y cuenta de
-{{site.data.keyword.Bluemix_notm}}: 
+{{site.data.keyword.Bluemix_notm}}:
 
-- Información de recursos, incluyendo espacio en disco, uso de CPU, uso de red y tiempos de respuesta medios. Consulte [Uso de recursos](index.html#resourceusage). 
+- Información de recursos, incluyendo espacio en disco, uso de CPU, uso de red y tiempos de respuesta medios. Consulte [Uso de recursos](index.html#resourceusage).
 - Uso de cuenta por org, incluyendo el número de apps de tiempo de ejecución con uso, el número total de GB-horas de tiempo de ejecución y el número de instancias de servicio con uso. Consulte [Uso de la cuenta](index.html#accountusage).
 - Uso de cuota de memoria de org, memoria de app asignada en base al total de la cuota de memoria usada y una vista del uso GB-hora por app para una org específica. También puede ver el uso de la cuota para todas las orgs de la página Administración de organización en la sección
-Supervisión de cuota. Consultar [Administración de organización](../admin/index.html#orgusage). 
+Supervisión de cuota. Consultar [Administración de organización](../admin/index.html#orgusage).
 
 
 ### Uso de recursos
@@ -208,11 +204,11 @@ minutos, hora y día.
 {: #accountusage}
 
 Puede ver el uso mensual de su cuenta para su entorno local o dedicado. Puede utilizar estos datos para identificar cuánto cargar
-a organizaciones específicas según su uso. 
+a organizaciones específicas según su uso.
 
 <ol>
-<li>Pulse en el icono <strong>Cuenta y soporte</strong> ![Cuenta y soporte](../support/images/account_support.svg) &gt; <strong>Cuenta</strong> &gt; <strong>Detalles de uso</strong>. </li>
-<li>Seleccione la organización para la que quiere ver los datos. </li>
+<li>Pulse en el icono <strong>Cuenta y soporte</strong> ![Cuenta y soporte](../support/images/account_support.svg) &gt; <strong>Cuenta</strong> &gt; <strong>Detalles de uso</strong>.</li>
+<li>Seleccione la organización para la que quiere ver los datos.</li>
 <li>Puede ver los detalles de uso de las categorías siguientes:
 <ul>
 <li>Apps de tiempo de ejecución que tienen uso</li>
@@ -220,20 +216,20 @@ a organizaciones específicas según su uso.
 <li>Instancias de servicio que tienen uso</li>
 </ul>
 </li>
-<li>Opcional: ver sus datos para un mes concreto usando el menú <strong>Su actividad de nube</strong> para seleccionar el mes que quiera. </li>
+<li>Opcional: ver sus datos para un mes concreto usando el menú <strong>Su actividad de nube</strong> para seleccionar el mes que quiera.</li>
 <li>Opcional: pulse <strong>EXPORT DATA</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
-mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>. </li>
+mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>.</li>
 </ol>
 
 También puede ver el uso mensual y los cargos asociados al nivel de cuenta para sus ejecutables, apps y servicios sindicados desde
-el {{site.data.keyword.Bluemix_notm}} público. Puede utilizar estos datos para identificar cuánto cargar a organizaciones específicas
-según su uso. 
+el {{site.data.keyword.Bluemix_notm}} público. Puede utilizar estos datos para identificar cuánto cargar
+a organizaciones específicas según su uso.
 
 <ol>
-<li>Pulse en el icono <strong>Cuenta y soporte</strong> ![Cuenta y soporte](../support/images/account_support.svg) &gt; <strong>Cuenta</strong> &gt; <strong>Detalles de uso</strong>. </li>
+<li>Pulse en el icono <strong>Cuenta y soporte</strong> ![Cuenta y soporte](../support/images/account_support.svg) &gt; <strong>Cuenta</strong> &gt; <strong>Detalles de uso</strong>.</li>
 <li>Pulse <strong>Público</strong>.</li>
 <li>Seleccione la organización para la que quiere ver los datos, o seleccione <strong>Todas las organizaciones</strong> para ver los datos de
-todas las organizaciones a la vez. </li>
+todas las organizaciones a la vez.</li>
 <li>Puede ver los detalles de uso de las categorías siguientes:
 <ul>
 <li>Apps de tiempo de ejecución que tienen uso</li>
@@ -243,9 +239,9 @@ todas las organizaciones a la vez. </li>
 </ul>
 </li>
 <li>Opcional: ver sus datos para un mes específico, seleccionando el mes que quiera del gráfico de barras. Los datos del mes actual
-se muestran de forma predeterminada. </li>
+se muestran de forma predeterminada.</li>
 <li>Opcional: pulse <strong>EXPORT DATA</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
-mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>. </li>
+mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>.</li>
 </ol>
 
 
@@ -254,18 +250,18 @@ mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>. </li>
 
 Para ver el uso por organización, pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE ORGANIZACIÓN**, y luego seleccione una
 organización de la **Lista de organizaciones**. En la página **Gestionar organizaciones** para la
-organización que ha seleccionado, puede ver la información de uso siguiente: 
+organización que ha seleccionado, puede ver la información de uso siguiente:
 
-- Número de servicios que hay actualmente en uso. 
-- Número de rutas que hay actualmente en uso. 
-- Gráfico de cuota de memoria que muestra qué parte de la cuota está en uso y qué parte no se usa actualmente. 
-- Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada. 
+- Número de servicios que hay actualmente en uso.
+- Número de rutas que hay actualmente en uso.
+- Gráfico de cuota de memoria que muestra qué parte de la cuota está en uso y qué parte no se usa actualmente.
+- Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
 - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses. 
+el uso de GB-hora medido para los últimos tres meses.
 
 Para obtener más información sobre la visualización del uso por organización, el ajuste de planes de cuota y la gestión de sus
-organizaciones, consulte [Administración de organizaciones](../admin/index.html#oc_organizations). 
+organizaciones, consulte [Administración de organizaciones](../admin/index.html#oc_organizations).
 
 ## Visualización de informes
 {: #oc_report}
@@ -287,6 +283,8 @@ para descargar el informe.
 
 La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado.
 
+*Tabla 4. Lista de informe de seguridad*
+
 | **Categoría** | **Informe** | **Descripción** |      
 |-----------------|-------------------|---------------------|
 | Cortafuegos | Inicios de sesión de cortafuegos | Sucesos relacionados con el inicio de sesión del administrador en los dispositivos de cortafuegos Vyatta. |
@@ -307,12 +305,10 @@ La tabla siguiente muestra la lista de los informes de seguridad generados para 
 | Gestión de arreglos de software | Informe de app de parches | Arreglos de software aplicados. |
 | Gestión de incidentes de seguridad | Informe de solución de incidentes de seguridad | Pruebas de incidentes de seguridad para la gestión de incidentes de seguridad. |
 
-*Tabla 4. Lista de informe de seguridad*
-
 ## Visualización del estado
 {: #oc_status}
 
-Puede supervisar el estado de la instancia de {{site.data.keyword.Bluemix_notm}} mediante la página de Estado de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**. 
+Puede supervisar el estado de la instancia de {{site.data.keyword.Bluemix_notm}} mediante la página de Estado de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.
 
 La página Estado es el recurso central para buscar notificaciones y anuncios sobre sucesos clave que afectan a la plataforma {{site.data.keyword.Bluemix_notm}} y a los servicios principales de {{site.data.keyword.Bluemix_notm}}.
 
@@ -338,29 +334,28 @@ seleccione **INHABILITAR TODOS LOS PLANES**.
 
 Si tiene un servicio que quiere mostrar en su catálogo de {{site.data.keyword.Bluemix_notm}}, debe implementar y registrar un
 intermediario de servicio. Tras registrar su intermediario, puede elegir las organizaciones que pueden tener acceso al
-servicio en su instancia dedicada o local. 
+servicio en su instancia dedicada o local.
 
 Los métodos para trabajar con su intermediario de servicio varía según la cantidad de servicios que gestiona, o si ya se ha registrado con
-{{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}}.
 
 - Si su intermediario de servicio gestiona un servicio, puede utilizar la interfaz de usuario para registrarlo tras haber implementado
-la [API de intermediario de servicio](http://docs.cloudfoundry.org/services/api.html){: new_window}. Consulte [Registro de un intermediario de servicio que gestiona un servicio](index.html#registerbrokerui). 
-- Si su intermediario de servicio gestiona varios servicios, en este momento no puede registrarlo tras haber implementado la API de intermediario de servicio. En su lugar, utilice la CLI cf con el plugin [CLI admin de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (submandato `ba`) o use la [API de servicio personalizado](index.html#servicebrokerapi). 
-- Si su intermediario de servicio ya está registrado y quiere actualizarlo o suprimirlo, utilice la CLI cf con el plugin [CLI admin de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (submandato `ba`) o use la [API de servicio personalizado](index.html#servicebrokerapi). 
+la [API de intermediario de servicio](http://docs.cloudfoundry.org/services/api.html){: new_window}. Consulte [Registro de un intermediario de servicio que gestiona un servicio](index.html#registerbrokerui).
+- Si su intermediario de servicio gestiona varios servicios, en este momento no puede registrarlo tras haber implementado la API de intermediario de servicio. En su lugar, utilice la CLI cf con el plugin [CLI admin de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (submandato `ba`) o use la [API de servicio personalizado](index.html#servicebrokerapi).
+- Si su intermediario de servicio ya está registrado y quiere actualizarlo o suprimirlo, utilice la CLI cf con el plugin [CLI admin de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (submandato `ba`) o use la [API de servicio personalizado](index.html#servicebrokerapi).
 
 #### Registro de un intermediario de servicio que gestiona un servicio
 {: #registerbrokerui}
 
-Realice los pasos siguientes para registrar su intermediario de servicio: 
+Realice los pasos siguientes para registrar su intermediario de servicio:
 
-1\. [Implemente la API del intermediario de servicio de Cloud Foundry
-](http://docs.cloudfoundry.org/services/api.html){: new_window} para habilitar la comunicación entre su servicio y {{site.data.keyword.Bluemix_notm}}. La API del intermediario de servicio es un conjunto de puntos finales de REST que {{site.data.keyword.Bluemix_notm}} consume. 
-
-Cuando implementa el intermediario de servicio, en la respuesta JSON de `GET /v2/catalog`, debe proporcionar
-las definiciones para su servicio y planes de servicio, incluyendo la información de servicio que quiere visualizar. Por ejemplo, revise
-el JSON de ejemplo siguiente de la respuesta del catálogo (GET): 
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implemente la API del intermediario de servicio de Cloud Foundry
+</a> para habilitar la comunicación entre su servicio y {{site.data.keyword.Bluemix_notm}}. La API del intermediario de servicio es un conjunto de puntos finales de REST que {{site.data.keyword.Bluemix_notm}} consume.<br />
+<br />
+<p>Cuando implementa el intermediario de servicio, en la respuesta JSON de <code>GET /v2/catalog</code>, debe proporcionar
+las definiciones para su servicio y planes de servicio, incluyendo la información de servicio que quiere visualizar. Por ejemplo, revise el JSON de ejemplo siguiente de la respuesta del catálogo (GET)</p>
+<p><pre>
 "services": [
    {
       "bindable":true,
@@ -446,45 +441,39 @@ el JSON de ejemplo siguiente de la respuesta del catálogo (GET):
    }
 ]
 }
-```
-{: codeblock}
-
-**Nota**: cuando crea un intermediario de servicio para un entorno local o dedicado, debe especificar
-`customer_dedicated` en el campo "tags" de su archivo JSON de definición de servicio. 
-
-2\. Tras implementar la API del intermediario de servicio, acceda a **ADMINISTRACIÓN &gt; GESTIÓN DEL CATÁLOGO**.
-
-3\. pULSE **REGISTRAR UN INTERMEDIARIO DE SERVICIO**.
-
-4\. Complete el formulario especificando los valores en los campos siguientes: 
-
-- Nombre de intermediario de servicio
-- URL de intermediario de servicio
-- Nombre de usuario del intermediario de servicio
-- Contraseña del intermediario de servicio
-
-5\. Pulse **CONECTAR**.
-
-6\. Revise la información de su servicio, incluyendo los planes disponibles, el icono y la descripción del servicio. 
-
-**Nota**: si necesita cambiar la información del catálogo para el servicio, actualice su intermediario de servicio e
-inicie el proceso de registro otra vez rellenado el formulario. 
-
-7\. Pulse **REGISTRAR**. 
-
-8\. Elija para habilitar todos los planes o solo los planes específicos para su servicio. De forma predeterminada se inhabilitan
-todos los planes. 
-
-9\. Habilite la instancia de servicio para todas las organizaciones o para organizaciones específicas. 
+</pre></p>
+<p><strong>Nota</strong>: cuando crea un intermediario de servicio para un entorno local o dedicado, debe especificar
+`customer_dedicated` en el campo "tags" de su archivo JSON de definición de servicio.</p>
+</li>
+<li>Tras implementar la API del intermediario de servicio, acceda a <strong>ADMINISTRACIÓN</strong> &gt; <strong>GESTIÓN DEL CATÁLOGO</strong>.</li>
+<li>pULSE <strong>REGISTRAR UN INTERMEDIARIO DE SERVICIO</strong>.</li>
+<li>Complete el formulario especificando los valores en los campos siguientes:
+<ul>
+<li>Nombre de intermediario de servicio</li>
+<li>URL de intermediario de servicio</li>
+<li>Nombre de usuario del intermediario de servicio</li>
+<li>Contraseña del intermediario de servicio</li>
+</ul>
+</li>
+<li>Pulse <strong>CONECTAR</strong>.</li>
+<li>Revise la información de su servicio, incluyendo los planes disponibles, el icono y la descripción del servicio.<br />
+<p><strong>Nota</strong>: si necesita cambiar la información del catálogo para el servicio, actualice su intermediario de servicio e
+inicie el proceso de registro otra vez rellenado el formulario.</p>
+</li>
+<li>Pulse <strong>REGISTRAR</strong>.</li>
+<li>Elija para habilitar todos los planes o solo los planes específicos para su servicio. De forma predeterminada se inhabilitan
+todos los planes.</li>
+<li>Habilite la instancia de servicio para todas las organizaciones o para organizaciones específicas.</li>
+</ol>
 
 Ahora puede ver su servicio en la categoría Servicios personalizados en su catálogo de {{site.data.keyword.Bluemix_notm}}. Acceda a
-**ADMINISTRACIÓN &gt; GESTIÓN DEL CATÁLOGO**, y seleccione el icono en el catálogo. Puede habilitar distintos planes y editar la visibilidad del plan para sus organizaciones en cualquier momento. 
+**ADMINISTRACIÓN &gt; GESTIÓN DEL CATÁLOGO**, y seleccione el icono en el catálogo. Puede habilitar distintos planes y editar la visibilidad del plan para sus organizaciones en cualquier momento.
 
 ## Administración de organizaciones
 {: #oc_organizations}
 
 Puede gestionar sus organizaciones creando y suprimiendo organizaciones, añadiendo o eliminando gestores para organizaciones y
-supervisando el uso de la cuota para tomar las mejores decisiones en su negocio. 
+supervisando el uso de la cuota para tomar las mejores decisiones en su negocio.
 
 Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE LA ORGANIZACIÓN**.
 
@@ -492,9 +481,9 @@ Puede expandir y visualizar diversas secciones. También puede revisar y gestion
 
 ### Creación de organizaciones
 
-Para crear una nueva organización y añadir gestores, realice los pasos siguientes: 
+Para crear una nueva organización y añadir gestores, realice los pasos siguientes:
 
-1. Pulse <strong>CREAR ORGANIZACIÓN</strong>. 
+1. Pulse <strong>CREAR ORGANIZACIÓN</strong>.
 2. Especifique un nombre para la organización
 3. Especifique el nombre o correo electrónico de la persona que quiera añadir como gestor. Puede añadir más de un gestor especificando y seleccionando varios nombres.
 4. Pulse <strong>CREAR ORGANIZACIÓN</strong> para guardar los cambios y crear la organización.
@@ -531,12 +520,12 @@ En la sección Supervisión de cuotas puede expandir la sección y ver la siguie
 
 ### Ajuste de planes de cuota
 
-Para cambiar el plan de cuota para una organización, realice los pasos siguientes: 
+Para cambiar el plan de cuota para una organización, realice los pasos siguientes:
 
 <ol>
-<li>Pulse la barra del gráfico de la organización que desea editar en la sección Uso de memoria de la organización, o bien seleccione el nombre de la organización en la sección Lista de organizaciones. </li>
-<li>En la página Gestionar organización puede cambiar el plan de cuotas, cambiar el nombre de la organización y añadir o eliminar gestores. <br />
-<p><strong>Nota</strong>: Si selecciona un plan de cuotas insuficiente para el uso actual de la organización, recibirá un mensaje. </p>
+<li>Pulse la barra del gráfico de la organización que desea editar en la sección Uso de memoria de la organización, o bien seleccione el nombre de la organización en la sección Lista de organizaciones.</li>
+<li>En la página Gestionar organización puede cambiar el plan de cuotas, cambiar el nombre de la organización y añadir o eliminar gestores.<br />
+<p><strong>Nota</strong>: Si selecciona un plan de cuotas insuficiente para el uso actual de la organización, recibirá un mensaje.</p>
 </li>
 <li>Para guardar los cambios que haya efectuado en la página Gestionar
 organización, pulse <strong>GUARDAR</strong>.</li>
@@ -545,21 +534,21 @@ organización, pulse <strong>GUARDAR</strong>.</li>
 ### Gestión de sus organizaciones desde la lista de organizaciones
 
 En la sección Lista de organizaciones, puede ver todas las organizaciones del entorno
-de {{site.data.keyword.Bluemix_notm}}, y puede realizar acciones para organizaciones individuales pulsando en el nombre de la organización. 
+de {{site.data.keyword.Bluemix_notm}}, y puede realizar acciones para organizaciones individuales pulsando en el nombre de la organización.
 
-- Para suprimir la organización, pulse el icono **Suprimir** ![Suprimir](images/icon_trash.svg) en la columna Acciones. 
+- Para suprimir la organización, pulse el icono **Suprimir** ![Suprimir](images/icon_trash.svg) en la columna Acciones.
 - Para ver el plan de cuotas y uso de una organización, pulse el nombre de la organización en la lista. En la página **Gestionar organizaciones** para la
-organización que ha seleccionado, puede ver la información de uso siguiente: 
+organización que ha seleccionado, puede ver la información de uso siguiente:
 
-  - Número de servicios que hay actualmente en uso. 
-  - Número de rutas que hay actualmente en uso. 
-  - Gráfico de cuota de memoria que muestra qué parte de la cuota está en uso y qué parte no se usa actualmente. 
-  - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada. 
+  - Número de servicios que hay actualmente en uso.
+  - Número de rutas que hay actualmente en uso.
+  - Gráfico de cuota de memoria que muestra qué parte de la cuota está en uso y qué parte no se usa actualmente.
+  - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
   - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses. 
+el uso de GB-hora medido para los últimos tres meses.
 
-- Para editar el nombre de la organización y añadir o eliminar gestores, pulse el nombre de la organización en la lista y siga las indicaciones en pantalla. 
+- Para editar el nombre de la organización y añadir o eliminar gestores, pulse el nombre de la organización en la lista y siga las indicaciones en pantalla.
 
 ## Gestión de usuarios y permisos
 {: #oc_useradmin}
@@ -586,29 +575,30 @@ Para editar organizaciones, seleccione una de las siguientes opciones:
 	* Para añadir el usuario a una organización, utilice el campo de búsqueda para localizar una organización, pulse para seleccionar una de las opciones y pulse **AÑADIR**.
 	* Para eliminar un usuario de una organización, pulse el icono ![Eliminar, representado mediante un signo menos](images/icon_remove.svg).
 Cuando termine, pulse **GUARDAR**.
-* Eliminar usuarios. Si tiene el permiso `admin` o el permiso `users` con el acceso `write`, puede eliminar usuarios. Para eliminar un usuario, localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg) y, a continuación, **Eliminar**.
+* Eliminar usuarios. Si tiene el permiso `admin` o el permiso `users` con el acceso `write`, puede eliminar usuarios.
+Para eliminar un usuario, localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg) y, a continuación, **Eliminar**.
 
 ### Permisos
 {: #permissions}
 
 Se pueden asignar los siguientes permisos a los usuarios:
 
+*Tabla 5. Permisos*
+
 | **Permiso de usuario** | **Descripción** |       
 |-----------------|-------------------|
 | Admin | Los usuarios con el permiso `admin` pueden editar los permisos de otros usuarios. |
-| Catálogo | A los usuarios con el permiso `catalaog` se les puede asignar el acceso para `view` o `write` (modificar) los servicios que están disponibles en la instancia local o dedicada.  |  
+| Catálogo | A los usuarios con el permiso `catalaog` se les puede asignar el acceso para `view` o `write` (modificar) los servicios que están disponibles en la instancia local o dedicada. |  
 | Login | Los usuarios con el permiso `login` pueden ver la página Administración. Sin este permiso, los usuarios no pueden ver la opción de menú Administración. |
 | Reports | A los usuarios con el permiso `reports` se les puede asignar acceso `view` o `write` (modificar) sobre los informes de seguridad. |
 | Users | A los usuarios con el permiso `users` se les puede asignar el acceso `view` sobre la lista de usuarios o `write` (añadir o eliminar) sobre los usuarios. Este permiso no le permite definir permisos para otros usuarios.|
 
-*Tabla 5. Permisos*
+Los permisos se pueden habilitar o bien se puede asignar al usuario acceso `view` o `write` para dicho permiso, representado mediante los siguientes iconos:
 
-Los permisos se pueden habilitar o bien se puede asignar al usuario acceso `view` o `write` para dicho permiso, representado mediante los siguientes iconos: 
-
-* El icono ![Habilitado, representado mediante una marca de selección](images/icon_enabled.svg) junto a un permiso significa que está habilitado.
-* El icono ![Ver, representado mediante un ojo](images/icon_read.svg) significa que el usuario tiene el acceso `view` (solo lectura) sobre dicho permiso. 
+* El icono ![Habilitado, representado mediante una marca de selección](images/icon_enabled.svg) con un permiso significa que está habilitado.
+* El icono ![Ver, representado mediante un ojo](images/icon_read.svg) significa que el usuario tiene el acceso `view` (solo lectura) sobre dicho permiso.
 * El icono ![Grabar, representado por un lápiz](images/icon_write.svg) significa que el usuario tiene
-acceso `write` (editar, añadir o eliminar) para dicho permiso. 
+acceso `write` (editar, añadir o eliminar) para dicho permiso.
 
 ## Gestión de usuarios con la API REST de administración
 {: #usingadminapi}
@@ -668,7 +658,7 @@ El siguiente ejemplo muestra la salida de este mandato:
 
 Cuando añada un usuario, debe especificar una organización. Puede utilizar la API REST `Admin` para obtener una lista de todas las organizaciones. Debe tener el permiso
 `users` con acceso `read` para poder listar
-organizaciones. Para listar todas las organizaciones, ejecute el mandato siguiente: 
+organizaciones. Para listar todas las organizaciones, ejecute el mandato siguiente:
 
 `curl -b ./cookies.txt https://<su_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
@@ -712,7 +702,7 @@ Puede determinar si un usuario ya se ha añadido al entorno de
 {{site.data.keyword.Bluemix_notm}} mediante
 la API REST de `Admin` para obtener una lista de los usuarios registrados. Debe tener
 el permiso `users` con acceso `read` para poder listar usuarios registrados.
-Para listar todos los usuarios, ejecute el mandato siguiente: 
+Para listar todos los usuarios, ejecute el mandato siguiente:
 
 `curl -b ./cookies.txt https://<su_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
@@ -786,10 +776,10 @@ El siguiente ejemplo muestra la salida de este mandato:
 ### Adición de un usuario
 
 Puede utilizar la API REST `Admin` para añadir usuarios a la instancia de
-{{site.data.keyword.Bluemix_notm}}. Debe tener el permiso `users` con acceso `write` para poder añadir usuarios. 
+{{site.data.keyword.Bluemix_notm}}. Debe tener el permiso `users` con acceso `write` para poder añadir usuarios.
 
 Puede añadir un usuario o una lista de usuarios. Puede añadir usuarios a una única
-organización, o a varias organizaciones. Para añadir un usuario, debe proporcionar la información siguiente: 
+organización, o a varias organizaciones. Para añadir un usuario, debe proporcionar la información siguiente:
 
 * Nombre y apellido del usuario. Especifique
 `"nombre"` y `"apellido"` de [Listado de usuarios](index.html#listingusr).
@@ -885,7 +875,7 @@ El siguiente ejemplo muestra la salida de este mandato:
 ### Eliminación de un usuario
 
 Puede utilizar la API REST `Admin` para eliminar usuarios de la instancia de
-{{site.data.keyword.Bluemix_notm}}. Debe tener el permiso `users` con acceso `write` para poder eliminar usuarios. 
+{{site.data.keyword.Bluemix_notm}}. Debe tener el permiso `users` con acceso `write` para poder eliminar usuarios.
 
 Para eliminar un usuario, debe especificar el ID del usuario. Ejecute el mandato siguiente:
 
@@ -926,7 +916,7 @@ El siguiente ejemplo muestra la salida de este mandato:
 
 Hay tres API que puede utilizar para registrar o crear un nuevo servicio, actualizar un servicio y suprimir un servicio.
 
-Todas las API son relativas a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>. 
+Todas las API son relativas a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
 <dl>
 <dt><strong>&lt;subdominio&gt;</strong></dt>
@@ -949,6 +939,8 @@ POST /codi/v1/serviceBrokers
 ### Solicitud
 {: #registerrequest}
 
+*Tabla 6. Campos*
+
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
 | name | Nombre del intermediario de servicio. |
@@ -957,7 +949,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL utilizada para conectarse al intermediario de servicio. |
 | owningOrganization | Organización inicial con la que incluir en la lista blanca el servicio. |
 
-*Tabla 6. Campos*
 
 #### Cuerpo
 {: #registerbody}
@@ -1029,6 +1020,8 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 ### Solicitud
 {: #updaterequest}
 
+*Tabla 7. Campos*
+
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
 | name | Nombre del intermediario de servicio. Este nombre no puede modificarse a partir del nombre con el que se ha creado el servicio. |
@@ -1037,7 +1030,6 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 | broker_url | URL utilizada para conectarse al intermediario de servicio. |
 | owningOrganization | Organización inicial con la que incluir en la lista blanca el servicio. |
 
-*Tabla 7. Campos*
 
 #### Cuerpo
 {: #updatebody}
@@ -1100,11 +1092,12 @@ Content-Type: application/json
 
 Utilice la siguiente API y ejemplos de código para suprimir un servicio.
 
+*Tabla 8. Parámetro*
+
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
 | name | Nombre del intermediario de servicio. Este nombre no puede modificarse a partir del nombre con el que se ha creado el servicio. |
 
-*Tabla 8. Parámetro*
 
 ### Ruta
 
@@ -1157,9 +1150,10 @@ de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 Una vez instalada la interfaz de línea de mandatos cf, puede añadir el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}.
 
 **Nota**: si ha instalado previamente el plugin Admin de {{site.data.keyword.Bluemix_notm}}, es posible que
-tenga que desinstalarlo, suprimir el repositorio y luego volver a instalarlo para obtener las actualizaciones más recientes. 
+tenga que desinstalarlo, suprimir el repositorio y luego volver a instalarlo para obtener las actualizaciones más recientes.
 
-Siga estos pasos para añadir el repositorio e instalar el plug-in:
+Siga estos pasos para añadir el repositorio e instalar
+el plug-in:
 
 <ol>
 <li>Para añadir el repositorio de plugin de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato siguiente:<br/><br/> <code>

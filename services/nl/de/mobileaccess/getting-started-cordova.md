@@ -38,20 +38,18 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	<platform name="android">  
 		<preference name="android-minSdkVersion" value="15"/>
   	<preference name="android-targetSdkVersion" value="23"/>
-  	<!-- add minimum and target Android API level declaration -->
+		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
 
 	Der Wert für *minSdkVersion* muss höher als `15` sein. Der Wert für *targetSdkVersion* muss das neueste Android-SDK angeben, das über Google verfügbar ist.
-
-
 
 1. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
 
 	```XML
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
-     <!-- add deployment target declaration -->
+		<!-- add deployment target declaration -->
 	</platform>
 	```
 
@@ -94,7 +92,6 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 		4. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
 
 1. Überprüfen Sie, ob das Plug-in erfolgreich installiert wurde, indem Sie den folgenden Befehl ausführen:
-    
 
 	```Bash
 	cordova plugin list
@@ -125,8 +122,6 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
 	```
 
 	Der Endpunkt `/protected` eines mobilen Back-Ends, der mit der Boilerplate 'MobileFirst Services Starter' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben. Diese Nachricht wird deshalb zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
-
-
 
 1. Verwenden Sie Ihre Cordova-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben:
 

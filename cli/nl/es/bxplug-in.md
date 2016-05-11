@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Plugins de la Interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} (bx cli) 
+# Plugins de la Interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} (bx cli)
 
 *Última actualización: 24 de febrero de 2016*
 

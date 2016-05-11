@@ -66,7 +66,8 @@ Le SDK client de {{site.data.keyword.amashort}} pour Cordova est un plug-in Cord
 de génération.
 
 		```
-		cordova build android 		```
+		cordova build android
+		```
 
 	* **iOS**
 
@@ -89,7 +90,8 @@ Bridging Header (En-tête de pontage Objective-C) ** et ajoutez le chemin suivan
 d'exécution) ** et ajoutez le paramètre Frameworks suivant :
 
 			```
-			@executable_path/Frameworks 			```
+			@executable_path/Frameworks
+			```
 
 		4. Générez et exécutez votre application avec Xcode.
 
@@ -124,7 +126,8 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
 `{applicationRoute}/protected`. Exemple :
 
 	```
-	http://my-mobile-backend.mybluemix.net/protected 	```
+	http://my-mobile-backend.mybluemix.net/protected
+	```
 
 	Le noeud final `/protected` d'un système de back end mobile créé avec le conteneur boilerplate MobileFirst Services
 est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.

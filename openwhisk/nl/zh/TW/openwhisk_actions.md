@@ -75,7 +75,7 @@ copyright:
 
   您可以看到剛剛建立的 `hello` 動作。
 
-4. 建立動作之後，即可使用 'invoke' 指令透過 {{site.data.keyword.openwhisk_short}} 在雲端執行它。在指令中指定旗標，即可透過*封鎖*呼叫或*非封鎖*呼叫來呼叫動作。封鎖呼叫會等待動作執行完成並傳回結果。這個範例使用封鎖參數 `-blocking`：
+4. 建立動作之後，即可使用 'invoke' 指令透過 {{site.data.keyword.openwhisk_short}} 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫或*非封鎖* 呼叫來呼叫動作。封鎖呼叫會等待動作執行完成並傳回結果。這個範例使用封鎖參數 `-blocking`：
 
   ```
   wsk action invoke --blocking hello

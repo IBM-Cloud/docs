@@ -33,7 +33,7 @@ Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: ne
 ## Débogage des erreurs de constitution
 {: #debugging-staging-errors}
 Vous pouvez rencontrer des problèmes lorsque vous constituez vos applications dans {{site.data.keyword.Bluemix_notm}}. Si la constitution de votre
-application échoue, vous pouvez consulter les journaux afin d'identifier la cause de l'erreur et de résoudre le problème. 
+application échoue, vous pouvez consulter les journaux afin d'identifier la cause de l'erreur et de résoudre le problème.
 
 Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment
 une
@@ -140,8 +140,7 @@ récents s'affichent. Pour accéder aux erreurs précédentes, vous devez extrai
 </dl>
 
 Auparavant, les fichiers `stdout.log` et `stderr.log` étaient accessibles par défaut via la vue d'application dans
-le tableau de bord {{site.data.keyword.Bluemix_notm}}, sous **Fichiers** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. 
-Pour que la journalisation de sortie standard et d'erreur standard reste accessible via le tableau de bord {{site.data.keyword.Bluemix_notm}} sous
+le tableau de bord {{site.data.keyword.Bluemix_notm}}, sous **Fichiers** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. Pour que la journalisation de sortie standard et d'erreur standard reste accessible via le tableau de bord {{site.data.keyword.Bluemix_notm}} sous
 **Fichiers** > **journaux**, vous pouvez rediriger la journalisation vers d'autres fichiers du système de
 fichiers {{site.data.keyword.Bluemix_notm}}, selon le contexte d'exécution que vous utilisez. 
 

@@ -18,7 +18,7 @@ copyright:
 
 #Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Ultimo aggiornamento: 2 marzo 2016*  
+*Ultimo aggiornamento: 2 marzo 2016* 
 
 Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
 richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
@@ -144,7 +144,6 @@ Con il file manifest, puoi specificare:
     <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
 di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
 il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store"> caalogo {{site.data.keyword.Bluemix_notm}}</a>.
-
     
     <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
 	
@@ -182,7 +181,7 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
    </ul>
 	<li> Se il repository deve essere creato prima che venga distribuita l'applicazione, viene attivato un build automatico del codice nel repository
 prima della distribuzione. I build automatici si verificano quando nella directory root del repository viene rilevato un file script di
-build.
+build. 
 	
 	Builder supportati: 
 	    <ul>
@@ -204,10 +203,10 @@ crea l'output nella cartella <code>./target/</code></li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
 <li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>.
+	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. 
 	<ul>
-	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>.</li>
-	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>.</li>
+	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>. </li>
+	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. </li>
         </ul>
 
  </li>

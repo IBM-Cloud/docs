@@ -17,7 +17,7 @@ copyright:
 
 # Amministrazione di 
 {: #administer}
-*Ultimo aggiornamento: 29 febbraio 2016* 
+*Ultimo aggiornamento: 29 febbraio 2016*
 
 Gestisci le tue organizzazioni, i tuoi spazi e i tuoi utenti assegnati facendo clic sull'icona **Account e supporto** ![Account e supporto](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni**. Se sei un utente {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato](../admin/index.html#mng) per ulteriori informazioni sull'amministrazione della tua istanza locale o dedicata.
 {:shortdesc}
@@ -172,7 +172,7 @@ a tutte e informazioni sullo spazio, quali le informazioni su applicazioni e ser
 impostazioni, report e log.</dd>
 </dl>
 
-**Nota**: gli utenti a cui è stato assegnato il ruolo di manager o sviluppatore possono accedere alla variabile di ambiente VCAP_SERVICES. Se all'utente viene assegnato il ruolo di revisore, non può invece accedere a VCAP_SERVICES. Inoltre, il contenuto di VCAP_SERVICES non è parzialmente oscurato in base al ruolo utente.
+**Nota**: gli utenti a cui è stato assegnato il ruolo di manager o sviluppatore possono accedere alla variabile di ambiente VCAP_SERVICES. Se all'utente viene assegnato il ruolo di revisore non può invece accedere a VCAP_SERVICES.
 
 ### Gestione delle tue organizzazioni
 {: #orgmng}
@@ -232,7 +232,7 @@ spazio al quale sono stati aggiunti.
 
 A seconda che l'invitato disponga o meno di un ID IBM, gli viene assegnato un ruolo `membro` o `collaboratore` per l'account. La seguente tabella indica dettagliatamente in che modo vengono assegnati i ruoli in base al tipo di invito.
 
-*Tabella 1. Assegnazioni ruoli account* 
+*Tabella 1. Assegnazioni ruoli account*
 
 | **Tipo di e-mail dell'invitato** | **Ruolo account assegnato** | 
 |----------------|------------------|

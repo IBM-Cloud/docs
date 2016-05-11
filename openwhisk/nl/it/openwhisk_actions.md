@@ -19,9 +19,10 @@ copyright:
 # Creazione e chiamata di azioni {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
-*Ultimo aggiornamento: 22 marzo 2016* 
+*Ultimo aggiornamento: 22 marzo 2016*
 
-Le azioni sono frammenti di codice senza stato eseguiti sulla piattaforma {{site.data.keyword.openwhisk}}. Un'azione può essere una funzione JavaScript, una funzione Swift o un programma eseguibile personalizzato contenuto in un contenitore Docker. Ad esempio, un'azione può essere utilizzata per rilevare i volti in un'immagine, aggregare una serie di chiamate API o pubblicare un Tweet.{:shortdesc}
+Le azioni sono frammenti di codice senza stato eseguiti sulla piattaforma {{site.data.keyword.openwhisk}}. Un'azione può essere una funzione JavaScript, una funzione Swift o un programma eseguibile personalizzato contenuto in un contenitore Docker. Ad esempio, un'azione può essere utilizzata per rilevare i volti in un'immagine, aggregare una serie di chiamate API o pubblicare un Tweet.
+{:shortdesc}
 
 Le azioni possono essere richiamate esplicitamente o eseguite in risposta a un evento. In entrambi i casi, l'esecuzione di un'azione dei risultati sfocia in un record di attivazione identificato da un ID di attivazione univoco. L'input in un'azione e i risultati di un'azione fungono da dizionario di coppie chiave-valore, in cui la chiave è una stringa e il valore è un valore JSON valido.
 
@@ -313,7 +314,7 @@ Questo esempio richiama un servizio Yahoo Meteo per ottenere le condizioni attua
   Questo esempio mostra anche la necessità di eseguire azioni asincrone. L'azione restituisce `whisk.async()` per indicare che il risultato di questa azione non è ancora disponibile nel momento in cui viene restituita la funzione. Il risultato sarà invece disponibile nel callback `request` al completamento della chiamata HTTP e verrà trasmesso come argomento alla funzione `whisk.done()`.
 
 2. Esegui i seguenti comandi per creare l'azione e richiamarla:
- ```
+  ```
   wsk action create weather weather.js
   ```
   {: pre}
@@ -455,9 +456,9 @@ Le azioni {{site.data.keyword.openwhisk_short}} Docker ti permettono di scrivere
 
 Il tuo codice viene compilato in un file binario eseguibile e incorporato in un'immagine Docker. Il programma binario interagisce con il sistema, prendendo l'input proveniente da `stdin` e rispondendo tramite `stdout`.
 
-È necessario, come requisito, disporre di un account Docker Hub. Per impostare un account e un ID Docker gratuiti, passa a [Docker Hub](https://hub.docker.com){: new_window}.
+È necessario, come requisito, disporre di un account Docker Hub.  Per impostare un account e un ID Docker gratuiti, passa a [Docker Hub](https://hub.docker.com){: new_window}.
 
-Per le seguenti istruzioni, poniamo che l'ID utente sia "janesmith" e che la password sia "janes_password". Supponendo che la CLI sia già stata configurata, l'impostazione di un file binario personalizzato che venga utilizzato da {{site.data.keyword.openwhisk_short}} richiede tre passaggi. Al termine di questa procedura, l'immagine Docker caricata può essere utilizzata come azione.
+Per le seguenti istruzioni, poniamo che l'ID utente sia "janesmith" e che la password sia "janes_password".  Supponendo che la CLI sia già stata configurata, l'impostazione di un file binario personalizzato che venga utilizzato da {{site.data.keyword.openwhisk_short}} richiede tre passaggi.  Al termine di questa procedura, l'immagine Docker caricata può essere utilizzata come azione.
 
 1. Scarica la struttura di base Docker. Puoi effettuare questa operazione utilizzando la CLI come segue:
 
@@ -467,7 +468,7 @@ Per le seguenti istruzioni, poniamo che l'ID utente sia "janesmith" e che la pas
   {: pre}
   ```
   La struttura di base Docker è ora installata nella directory corrente.
- ```
+  ```
   {: screen}
 
   ```
@@ -580,7 +581,7 @@ Puoi utilizzare la CLI {{site.data.keyword.openwhisk_short}} per visualizzare l'
 Puoi effettuare una pulizia eliminando le azioni che non desideri utilizzare.
 
 1. Esegui il seguente comando per eliminare un'azione:
- ```
+  ```
   wsk action delete hello
   ```
   {: pre}

@@ -17,7 +17,7 @@ L'infrastructure de journalisation du SDK client de {{site.data.keyword.amashort
 les niveaux de journalisation suivants, répertoriés du moins prolixe au plus prolixe, avec leur utilisation recommandée :
 
 * `FATAL` - Pour les pannes ou les blocages irrémédiables. Le niveau FATAL est réservé à la consignation d'erreurs irrémédiables qui se
-matérialisent pour l'utilisateur sous forme de panne de l'application. 
+matérialisent pour l'utilisateur sous forme de panne de l'application.
 * `ERROR` - Destiné aux exceptions inattendues ou aux erreurs de protocole réseau inattendues.
 * `WARN` - Destiné à consigner des avertissements qui ne sont pas considérés comme des erreurs critiques, comme l'utilisation
 d'API obsolètes ou une lenteur des réponses réseau.

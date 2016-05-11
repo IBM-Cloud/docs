@@ -8,7 +8,7 @@ Copyright :
 # Enregistrement de périphériques Android
 {: #android_register}
 
-Utilisez l'API **IMFPush.register()** pour enregistrer le périphérique auprès d'un service Notification push. 
+Utilisez l'API ```IMFPush.register()``` pour enregistrer le périphérique auprès d'un service Notification push. Pour enregistrer des périphériques Android, vous devez entrer au préalable des informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service Push Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
 
 Copiez et collez les fragments de code suivants dans votre application mobile Android :
 

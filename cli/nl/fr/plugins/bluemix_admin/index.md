@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}} 
+# Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
 *Dernière mise à jour : 3 mars 2016*
@@ -36,7 +36,6 @@ Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le 
 
 **Remarque** : si vous avez déjà installé le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, il peut être
 nécessaire de le désinstaller, de supprimer le référentiel, puis de réinstaller le plug-in afin de bénéficier des mises à jour les plus récentes.
-
 
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 
@@ -135,7 +134,7 @@ cf ba search-users <nom_utilisateur>
 **Astuce :** vous pouvez aussi utiliser **ba su** comme alias pour le nom de commande plus long **ba
 search-users**.
 
-### Définition des droits d'un utilisateur 
+### Définition des droits d'un utilisateur
 
 Vous pouvez définir les droits d'un utilisateur spécifié. Entrez la commande suivante :
 
@@ -144,15 +143,14 @@ cf ba set-permissions <nom_utilisateur> <droit> <accès>
 ```
 {: codeblock}
 
-**Remarque** : vous ne pouvez définir qu'un droit à la fois. 
+**Remarque** : vous ne pouvez définir qu'un droit à la fois.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;droit&gt;</dt>
 <dd class="pd">Définissez les droits pour l'utilisateur : Admin, Connexion, Catalogue (accès en lecture ou en écriture), Rapports (accès en lecture ou en
-écriture) ou Utilisateurs (accès en lecture ou en écriture).
-</dd>
+écriture) ou Utilisateurs (accès en lecture ou en écriture).</dd>
 <dt class="pt dlterm">&lt;accès&gt;</dt>
 <dd class="pd">Pour les droits Catalogue, Rapports ou Utilisateurs, vous devez aussi définir le niveau d'accès <code>read</code> (lecture) ou
 <code>write</code> (écriture).</dd>
@@ -479,13 +477,12 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
-### Utilisation de courtiers de services 
+### Utilisation de courtiers de services
 
 Utilisez les commandes ci-après pour répertorier tous les courtiers de services, ajouter ou supprimer un courtier de services, ou mettre à jour un
-courtier de services. 
+courtier de services.
 
-* Vous pouvez afficher un courtier de services spécifique avec la commande suivante :
-
+* Vous pouvez répertorier un courtier de services en entrant la commande suivante :
 
 ```
 cf ba service-brokers <nom_courtier>
@@ -493,14 +490,12 @@ cf ba service-brokers <nom_courtier>
 {: codeblock}
 
 **Remarque** : pour répertorier tous les courtiers de services, entrez la commande sans le paramètre
-`nom_courtier`.
- 
+`nom_courtier`. 
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
 <dd class="pd">Facultatif : nom du courtier de services personnalisé. Utilisez ce paramètre pour obtenir des informations sur un courtier de services
-spécifique.
-</dd>
+spécifique.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba sb** comme alias pour le nom de commande plus long **ba
@@ -509,7 +504,6 @@ service-brokers**.
 * Vous pouvez ajouter un courtier de services pour pouvoir ajouter un service personnalisé à votre catalogue
 {{site.data.keyword.Bluemix_notm}} avec la commande suivante :
 
-
 ```
 cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
 ```
@@ -517,13 +511,13 @@ cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_co
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
-<dd class="pd">Nom du courtier de services personnalisé. </dd>
+<dd class="pd">Nom du courtier de services personnalisé.</dd>
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services. </dd>
+<dd class="pd">Nom d'utilisateur du compte ayant accès au courtier de services.</dd>
 <dt class="pt dlterm">&lt;mot_de_passe&gt;</dt>
-<dd class="pd">Mot de passe du compte ayant accès au courtier de services. </dd>
+<dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
 <dt class="pt dlterm">&lt;url_courtier&gt;</dt>
-<dd class="pd">Adresse URL du courtier de services. </dd>
+<dd class="pd">Adresse URL du courtier de services.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba asb** comme alias pour le nom de commande plus long **ba
@@ -532,7 +526,6 @@ add-service-broker**.
 * Vous pouvez supprimer un courtier de services pour retirer le service personnalisé de votre catalogue
 {{site.data.keyword.Bluemix_notm}} avec la commande suivante :
 
-
 ```
 cf ba delete-service-broker <courtier_services>
 ```
@@ -540,7 +533,7 @@ cf ba delete-service-broker <courtier_services>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;courtier_services&gt;</dt>
-<dd class="pd">Nom ou identificateur global unique du courtier de services personnalisé. </dd>
+<dd class="pd">Nom ou identificateur global unique du courtier de services personnalisé.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba dsb** comme alias pour le nom de commande plus long **ba
@@ -548,19 +541,18 @@ delete-service-broker**.
 
 * Vous pouvez mettre à jour un courtier de services avec la commande suivante :
 
-
 `cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>`
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_courtier&gt;</dt>
-<dd class="pd">Nom du courtier de services personnalisé. </dd>
+<dd class="pd">Nom du courtier de services personnalisé.</dd>
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom d'utilisateur pour le compte ayant accès au courtier de services. </dd>
+<dd class="pd">Nom d'utilisateur pour le compte ayant accès au courtier de services.</dd>
 <dt class="pt dlterm">&lt;mot_de_passe&gt;</dt>
-<dd class="pd">Mot de passe du compte ayant accès au courtier de services. </dd>
+<dd class="pd">Mot de passe du compte ayant accès au courtier de services.</dd>
 <dt class="pt dlterm">&lt;url_courtier&gt;</dt>
-<dd class="pd">Adresse URL du courtier de services. </dd>
+<dd class="pd">Adresse URL du courtier de services.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba usb** comme alias pour le nom de commande plus long **ba

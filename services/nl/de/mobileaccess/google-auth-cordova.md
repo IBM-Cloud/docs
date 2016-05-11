@@ -11,7 +11,7 @@ Zur Konfiguration von Cordova-Anwendungen für die Integration in die Google-Aut
 
 ## Vorbereitungen
 {: #before-you-begin}
-* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein Cordova-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein Cordova-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * (optional) Machen Sie sich mit den folgenden Abschnitten vertraut:
    * [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
@@ -32,7 +32,7 @@ Der einzige Unterschied bei der Konfiguration von Cordova-Anwendungen besteht da
 ## iOS-Plattform konfigurieren
 {: #google-auth-cordova-ios}
 
-Die Schritte, die zur Konfiguration der iOS-Plattform einer Cordova-Anwendung für die Integration der Google-Authentifizierung erforderlich sind, sind den Schritten für native Anwendungen ähnlich. Der Hauptunterschied besteht darin, dass die Cordova-CLI gegenwärtig den CocoaPods-Abhängigkeitenmanager nicht unterstützt. Sie müssen die erforderlichen Dateien für die Integration in die Google-Authentifizierung manuell hinzufügen. Weitere Informationen finden Sie in [Google-Authentifizierung in iOS-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Führen Sie die folgenden Schritte aus:
+Die Schritte, die zur Konfiguration der iOS-Plattform einer Cordova-Anwendung für die Integration der Google-Authentifizierung erforderlich sind, sind den Schritten für native Anwendungen ähnlich. Der Hauptunterschied besteht darin, dass die Cordova-CLI gegenwärtig den CocoaPods-Abhängigkeitenmanager nicht unterstützt.  Sie müssen die erforderlichen Dateien für die Integration in die Google-Authentifizierung manuell hinzufügen. Weitere Informationen finden Sie in [Google-Authentifizierung in iOS-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html). Führen Sie die folgenden Schritte aus:
 
 * Google-Projekt für die iOS-Plattform konfigurieren
 * {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren

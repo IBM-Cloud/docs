@@ -7,10 +7,11 @@ Pour un projet Xcode existant, vous pouvez configurer le logiciel SDK du client 
 
 ##Installation de CocoaPods
 
-1. Installez CocoaPods en exécutant la commande suivante sur votre terminal Mac :```
+1. Installez CocoaPods en exécutant la commande suivante sur votre terminal Mac :
+```
 $ sudo gem install cocoapods
 ```
-2. Entrez la commande ci-dessous dans le terminal pour initialiser CocoaPods. Prenez soin d'exécuter cette commande dans le répertoire où se trouve votre Xcode. La commande  `pod init` permet de créer un titre de fichier.
+2. Entrez la commande ci-dessous dans le terminal pour initialiser CocoaPods. Prenez soin d'exécuter cette commande dans le répertoire où se trouve votre Xcode. La commande `pod init` permet de créer un titre de fichier.
 ```
 $ pod init
 ```
@@ -42,7 +43,7 @@ $ pod init
 ```
 $ pod update
 ```
-Cette commande installe vos dépendances et crée un espace de travail Xcode. **Remarque** : Prenez soin de toujours ouvrir le nouvel espace de travail Xcode au
+Cette commande installe vos dépendances et crée un espace de travail Xcode.  **Remarque** : Prenez soin de toujours ouvrir le nouvel espace de travail Xcode au
 lieu du fichier de projet Xcode d'origine : 
 
 	```
@@ -91,4 +92,4 @@ import BMSPush
 
 Accédez à **Xcode > Build Settings > Build Options** et affectez à l'option Set Enable Bitcode la valeur **No**.
 
-**Attention** : Depuis iOS 9, des modifications apportées à la fonction App Transport Security (ATS) peuvent avoir un impact sur la façon dont vous gérez le processus d'authentification. Les articles de blogue suivants contiennent d'autres informations sur les modifications : [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) et [Connect your iOS 9 app to Bluemix today](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+**Attention** : Depuis iOS 9, des modifications apportées à la fonction App Transport Security (ATS) peuvent avoir un impact sur la façon dont vous gérez le processus d'authentification. Les articles de blogue suivants contiennent d'autres informations sur les modifications : [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) et [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

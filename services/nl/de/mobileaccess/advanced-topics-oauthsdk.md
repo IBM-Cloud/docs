@@ -34,7 +34,7 @@ var options = {
 
 	// Tokens können im Cache gespeichert werden, um zusätzliche Umläufe
  // bei jeder Anforderung zu vermeiden.
-	// Diese Eigenschaft definiert die Anzahl Token, die im Cache gespeichert werden. 
+	// Diese Eigenschaft definiert die Anzahl Token, die im Cache gespeichert werden.
 
 	cacheSize: 100,
 
@@ -43,7 +43,7 @@ var options = {
  // {{site.data.keyword.amashort}}-Service gebunden ist.
 	// Alternativ können Sie diese Eigenschaftswerte ermitteln, indem Sie auf
 	// 'Berechtigungsnachweise anzeigen' auf der Kachel für den {{site.data.keyword.amashort}}-Service
- // in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken. 
+ // in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken.
 
 	appId: "appId",				// Bluemix applicationGUID, auch: tenantId
 	clientId: "clientId",			

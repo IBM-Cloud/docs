@@ -17,7 +17,8 @@ copyright:
 # 使用 Git 开始编码
 *上次更新时间：2016 年 3 月 2 日*  
 
-您可以创建托管的 Git 存储库，该存储库将自动部署到 {{site.data.keyword.Bluemix}}。然后，可以通过将更改推送到 Git 存储库来修改应用程序中运行的代码。{:shortdesc}
+您可以创建托管的 Git 存储库，该存储库将自动部署到 {{site.data.keyword.Bluemix}}。然后，可以通过将更改推送到 Git 存储库来修改应用程序中运行的代码。
+{:shortdesc}
 
 1. 要开始操作，请单击应用程序的“概述”页面上的**添加 Git 存储库和管道**，或者单击 {{site.data.keyword.Bluemix_notm}}“典型经验”中的**添加 GIT**。 
 2. 在打开的窗口中，确保已选中**使用入门模板应用程序包填充存储库并启用“构建和部署”管道**复选框。这将创建 Git 存储库。如果入门模板代码可用，系统会将代码装入到存储库中。此外，应用程序由 {{site.data.keyword.jazzhub}} 中运行的 Delivery Pipeline 服务来部署。  

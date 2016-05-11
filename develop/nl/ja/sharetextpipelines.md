@@ -15,7 +15,8 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有{: #share-pipeline}
+#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有
+{: #share-pipeline}
 
 *最終更新日: 2015 年 12 月 7 日* 
 
@@ -82,7 +83,8 @@ stages:
 ```
 {: codeblock} 
 
-##YAML ファイルの構文{: #yaml-syntax}
+##YAML ファイルの構文
+{: #yaml-syntax}
 
 どのようなパイプラインも、以下の構文を使用してテキストで表現することができます。
 

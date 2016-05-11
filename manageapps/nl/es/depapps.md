@@ -26,7 +26,7 @@ El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases
 
 ###Transferencia de una app
 
-Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte Arquitectura de [{{site.data.keyword.Bluemix_notm}}, Cómo funciona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch). 
+Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte Arquitectura de [{{site.data.keyword.Bluemix_notm}}, Cómo funciona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
 
 Durante el proceso de transferencia, el DEA comprueba si el paquete de compilación coincide con la app. Por ejemplo, un tiempo de ejecución de Liberty para un archivo .war o un tiempo de ejecución Node.js para archivos .js. El DEA crea a continuación un contenedor aislado que contiene el paquete de compilación y el código de app. El componente
 Warden es el encargado de gestionar el contenedor. Para obtener más información, consulte [Cómo se transfieren las apps](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
@@ -51,7 +51,7 @@ Cuando despliegue sus apps en {{site.data.keyword.Bluemix_notm}} desde la interf
 
 Si utiliza un paquete de compilación externo, debe especificar el URL del paquete de compilación mediante la opción **-b** cuando despliegue la app en {{site.data.keyword.Bluemix_notm}} desde el indicador de mandatos.
 
-  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente, desde su directorio de origen: 
+  * Para desplegar paquetes del servidor Liberty en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente, desde su directorio de origen:
   
   ```
   cf push
@@ -127,7 +127,7 @@ Una app es específica del espacio en el que se ha desplegado. No puede mover ni
   cf target -s <nombre_espacio>
   ```
   
-  2. Acceda al directorio de la app y despliéguela con el mandato **cf push**, donde nombre_app debe ser exclusivo dentro del dominio. 
+  2. Acceda al directorio de la app y despliéguela con el mandato **cf push**, donde nombre_app debe ser exclusivo dentro del dominio.
   
   ```
   cf push nombre_app
@@ -249,7 +249,7 @@ mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keywor
   }
   ```
         
-También tiene acceso a las variables de entorno establecidas por DEA y los paquetes de compilación. 
+También tiene acceso a las variables de entorno establecidas por DEA y los paquetes de compilación.
 
 Las siguientes variables están definidas por el DEA:
 
@@ -280,14 +280,14 @@ Las siguientes variables están definidas por el DEA:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -351,8 +351,8 @@ Las variables definidas por un paquete de compilación varían según cada paque
 	  <dd>La ubicación de las salidas que se generen como archivos de registro y directorios de trabajo de una instancia de servidor de un perfil de Liberty en ejecución.</dd>
 	  </dl>
 </li>   
-<li>Las variables siguientes están definidas por el paquete de compilación de Node.js: 	
-	  <dl>
+<li>Las variables siguientes están definidas por el paquete de compilación de Node.js:
+	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>El directorio del entorno de ejecución de Node.js.</dd>
 	<dt><strong>CACHE_DIR</strong></dt>
@@ -364,7 +364,7 @@ Las variables definidas por un paquete de compilación varían según cada paque
 </li>
 </ul>	
 
-Puede utilizar el código de ejemplo siguiente de Node.js para obtener el valor de la variable de entorno VCAP_SERVICES: 
+Puede utilizar el código de ejemplo siguiente de Node.js para obtener el valor de la variable de entorno VCAP_SERVICES:
 
 ```
 if (process.env.VCAP_SERVICES) {
@@ -424,7 +424,7 @@ Las variables de entorno definidas por el usuario son específicas para una apli
     ```
 	
 Tras añadir una variable de entorno definida por el usuario, puede usar el código de ejemplo Node.js siguiente para obtener el
-valor de la variable que ha definido: 
+valor de la variable que ha definido:
 
 ```
 var myEnv = process.env.env_var_name;

@@ -121,11 +121,17 @@ L'en-tête d'autorisation contient des informations sur le client mobile et l'ap
 
 ## Exemple d'implémentation d'un fournisseur d'identité personnalisé
 {: #custom-sample}
-L'implémentation de fournisseur d'identité personnalisé Node.js qui figure ci-dessous est un exemple sur lequel vous pouvez vous appuyer pour développer votre propre fournisseur d'identité personnalisé. Téléchargez l'intégralité du code de l'application depuis le [référentiel Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé lorsque vous
+développez votre
+fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels GitHub.
 
-### Structure JSON
+* [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-Dans cette implémentation, on suppose que la réponse à la demande d'authentification est un objet JSON avec la structure suivante :
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -134,7 +140,7 @@ Dans cette implémentation, on suppose que la réponse à la demande d'authentif
  }
  ```
 
-### Exemple de code d'un fournisseur d'identité personnalisé
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -213,6 +219,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Etapes suivantes
 {: #next-steps}

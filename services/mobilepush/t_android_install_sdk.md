@@ -12,7 +12,7 @@ This section describes how to install and use the client Push SDK to further dev
 
 Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Make sure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file. Then add the following dependencies to your mobile application. These import statements are required for the code snippets that are listed below.
+1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file. Then add the following dependencies to your mobile application. These import statements are required for the code snippets:
 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;

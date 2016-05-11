@@ -51,7 +51,7 @@ copyright:
 # Prezzi
 {: #pricing}
 
-*Ultimo aggiornamento: 4 gennaio 2016*
+*Ultimo aggiornamento: 29 marzo 2016* 
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
 e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. Bluemix fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la vista Dettagli di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
@@ -376,10 +376,13 @@ per creare e ospitare la tua applicazione.
 * Il calcolatore del costo nella pagina Prezzi di {{site.data.keyword.Bluemix_notm}} fornisce dei prezzi delle applicazioni accurati basati sul tuo input relativo agli utilizzi di runtime e servizi.
 * Puoi anche calcolare il costo in modo manuale.
 
-###Utilizzo del calcolatore del costo
+###Utilizzo dei calcolatori del costo
 {: #calculator}
 
-Puoi stabilire rapidamente il prezzo della tua applicazione utilizzando il calcolatore del costo nella pagina Prezzi di {{site.data.keyword.Bluemix_notm}}. Vai alla pagina Prezzi di {{site.data.keyword.Bluemix_notm}} e fai clic su **Apri calcolatore**.
+Puoi stabilire rapidamente il prezzo della tua applicazione utilizzando i calcolatori forniti da {{site.data.keyword.Bluemix_notm}}.
+
+1. Vai alla pagina dei costi {{site.data.keyword.Bluemix_notm}} [](https://console.{DomainName}/pricing/). 
+2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi ridotti al penny**.
 
 Per utilizzare il calcolatore, digita il tuo utilizzo mensile previsto delle
 risorse elencate, ad esempio il numero di istanze o le notifiche di push. Fai clic nel campo **Utilizzo mensile**

@@ -16,16 +16,14 @@ copyright:
 1. 에뮬레이터를 설정하십시오. Android Studio의 경우 Google Play API를 지원하는 에뮬레이터를 사용하십시오.
 1. Git 명령행 도구를 설치하십시오. Windows의 경우 **Window 명령 프롬프트에서 Git 실행** 옵션을 선택하십시오. 이 도구의 다운로드 및 설치에 대한 정보는 [Git](https://git-scm.com/downloads)을 참조하십시오.
 
-1. Node.js 및 NPM(Node Package Manager) 도구를 설치하십시오. NPM 명령행 도구는 Node.js와 함께 번들로 제공됩니다. [Node.js](https://nodejs.org/en/download/) 다운로드 및 설치에 대한 정보를 참조하십시오.
-1. 명령행에서 **npm install -g cordova** 명령을 사용하여 Cordova 명령행 도구를 설치하십시오. Cordova 푸시 플러그인을 사용하려면 필요합니다.
-Cordova 설치 및 Cordova 앱 설정 정보를 보려면 [Cordova Apache](https://cordova.apache.org/#getstarted)를 참조하십시오. 
+1. Node.js 및 NPM(Node Package Manager) 도구를 설치하십시오. NPM 명령행 도구는 Node.js와 함께 번들로 제공됩니다. Node.js를 다운로드하고 설치하는 방법에 대한 정보는 [Node.js](https://nodejs.org/en/download/)를 참조하십시오. 
+1. 명령행에서 **npm install -g cordova** 명령을 사용하여 Cordova 명령행 도구를 설치하십시오. Cordova 푸시 플러그인을 사용하려면 필요합니다. Cordova 설치 및 Cordova 앱 설정 정보를 보려면 [Cordova Apache](https://cordova.apache.org/#getstarted)를 참조하십시오. 
 
 	**참고**: Cordova 푸시 플러그인 Readme 파일을 보려면 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)로 이동하십시오. 
 
 
 ## Cordova 푸시 플러그인 설치
-1. Cordova 앱을 작성하려는 폴더로 변경하고 다음 명령을 실행하여 Cordova 애플리케이션을 작성하십시오.
-기존의 Cordova 앱이 있을 경우 3단계로 가십시오. 
+1. Cordova 앱을 작성하려는 폴더로 변경하고 다음 명령을 실행하여 Cordova 애플리케이션을 작성하십시오. 기존의 Cordova 앱이 있을 경우 3단계로 가십시오. 
 
 
 	cordova create your_app_name
@@ -68,7 +66,6 @@ Cordova 설치 및 Cordova 앱 설정 정보를 보려면 [Cordova Apache](https
 	```
 1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 입력하여 Cordova 푸시 플러그인을 설치하십시오. **cordova plugin add ibm-mfp-push**
 
-
 	추가한 플랫폼에 따라 다음과 유사하게 표시됩니다. 
 
 	```
@@ -100,7 +97,8 @@ Cordova 설치 및 Cordova 앱 설정 정보를 보려면 [Cordova Apache](https
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 	```
 	e. Xcode를 사용하여 애플리케이션을 빌드하고 실행하십시오.
-1. (Android만 해당) - 다음 명령을 사용하여 Android 프로젝트를 빌드하십시오. **cordova build android**.
+1. (Android만 해당) - 다음 명령을 사용하여 Android 프로젝트를 빌드하십시오.
+**cordova build android**.
 
 	**참고**: Android Studio에서 프로젝트를 열기 전에 먼저 Cordova CLI를 통해 Cordova 애플리케이션을 빌드해야 합니다. 그렇지 않으면 빌드 오류가 발생합니다. 
 

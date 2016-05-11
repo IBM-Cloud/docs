@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -18,7 +18,8 @@ copyright:
 
 *前次更新：2016 年 1 月 18 日*
 
-{{site.data.keyword.Bluemix}} 是一種 {{site.data.keyword.IBM}} 開放雲端平台，提供 {{site.data.keyword.IBM_notm}} 軟體的存取權給行動式和 Web 開發人員，以使用整合、安全、交易以及其他關鍵功能，還可以存取事業夥伴提供的軟體。{:shortdesc}
+{{site.data.keyword.Bluemix}} 是一種 {{site.data.keyword.IBM}} 開放雲端平台，提供 {{site.data.keyword.IBM_notm}} 軟體的存取權給行動式和 Web 開發人員，以使用整合、安全、交易以及其他關鍵功能，還可以存取事業夥伴提供的軟體。
+{:shortdesc}
 
 以 [Cloud Foundry](https://www.cloudfoundry.org/){: new_window} 開放程式碼技術為建置基礎，{{site.data.keyword.Bluemix_notm}} 利用「平台即服務 (PaaS)」讓應用程式開發更為簡單。{{site.data.keyword.Bluemix_notm}} 也提供預先建置的「行動式後端即服務 (MBaaS)」功能。目標是透過提供已經可立即使用的服務，以及啟用網際網路擴充開發的管理功能，來簡化應用程式的交付。
 
@@ -35,7 +36,7 @@ copyright:
 - 最佳化的彈性工作量。
 - 持續可用性。
 
-{{site.data.keyword.Bluemix_notm}} 可抽象化並隱藏與管理雲端型應用程式相關聯的大部分複雜事宜。身為應用程式開發人員，您可以將焦點放在開發應用程式，而不需要對管理該應用程式所需的基礎架構進行管理。對於行動式及 Web 應用程式，您可以使用 {{site.data.keyword.Bluemix_notm}} 提供的預先建置服務。您可以將 Web 應用程式上傳至 {{site.data.keyword.Bluemix_notm}}，並指出要執行的實例數。部署應用程式之後，您可以在應用程式的用量或負載發生變化時，輕鬆地擴充或縮編應用程式。
+{{site.data.keyword.Bluemix_notm}} 可抽象化並隱藏與管理雲端型應用程式相關聯的大部分複雜事宜。身為應用程式開發人員，您可以將焦點放在開發應用程式，而不需要對管理該應用程式所需的基礎架構進行管理。對於行動式及 Web 應用程式，您可以使用 {{site.data.keyword.Bluemix_notm}} 提供的預先建置服務。您可以將 Web 應用程式上傳至 {{site.data.keyword.Bluemix_notm}}，並指出要執行的實例數。部署應用程式之後，您可以在應用程式的用量或負載發生變化時，輕鬆地擴充或縮減應用程式。
 
 您可以使用 {{site.data.keyword.Bluemix_notm}}，以最熱門的程式設計語言來快速開發應用程式。可以在 iOS、Android 和 HTML 中使用 JavaScript 來開發行動式應用程式。對於 Web 應用程式，您可以使用 Ruby、PHP、Java&trade;、Go 及 Python 之類的語言。您也可以將現有應用程式移轉至 {{site.data.keyword.Bluemix_notm}}，以及使用 {{site.data.keyword.Bluemix_notm}} 提供以執行應用程式的執行時期。
 
@@ -73,7 +74,7 @@ copyright:
 ### {{site.data.keyword.Bluemix_notm}} 專用
 {: #dedicated}
 
-「{{site.data.keyword.Bluemix_notm}} 專用」是您專用的 SoftLayer 環境，此環境同時安全地連接至公用 {{site.data.keyword.Bluemix_notm}} 及您自己的網路。「{{site.data.keyword.Bluemix_notm}} 專用」位於透過 VPN 或直接網路連線的網路。您的單一承租戶硬體可以設定於全球的任何 SoftLayer 資料中心。{{site.data.keyword.IBM_notm}} 會管理專用平台及專用服務，因此您可以專注於建置自訂應用程式。此外，{{site.data.keyword.IBM_notm}} 還會在您選取的維護時間範圍執行專用實例的所有維護。
+「{{site.data.keyword.Bluemix_notm}} 專用」是您專用的 SoftLayer 環境，此環境同時安全地連接至公用 {{site.data.keyword.Bluemix_notm}} 及您自己的網路。「{{site.data.keyword.Bluemix_notm}} 專用」位於透過 VPN 或直接網路連線的網路。您的單一承租戶硬體可以設定於全球的任何 SoftLayer 資料中心。{{site.data.keyword.IBM_notm}} 會管理專用平台及專用服務，因此您可以專注於建置自訂應用程式。此外，{{site.data.keyword.IBM_notm}} 還會在您選取的維護時間範圍內，執行專用實例的所有維護。
 
 {{site.data.keyword.IBM_notm}} 具有可用於您專用環境的數種服務，但您可以連接至所有公用服務。所有執行時期都可用於專用環境。{{site.data.keyword.Bluemix_notm}} 的所有專用部署都包括下列好處及特性，而且不需額外付費：VPN、專用 VLAN、防火牆、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力、24 小時全年無休的現場安全防護、專用硬體及標準支援。 
 
@@ -89,8 +90,7 @@ copyright:
 「{{site.data.keyword.Bluemix_notm}} 本端」包含一份專用聯合型錄，它會顯示只供您使用的本端服務。它也包含來自「{{site.data.keyword.Bluemix_notm}}
 公用」，用來形成聯合組織且可供您使用的服務。所有執行時期都可用於本端環境。{{site.data.keyword.Bluemix_notm}} 的本端部署包括下列好處及特性，而且不需額外付費：轉遞管理技術、與 LDAP 的連線功能、利用現有內部部署資料庫及應用程式的能力，以及標準支援。
 
-IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專注於事業。轉遞是「{{site.data.keyword.Bluemix_notm}} 本端」所含的交付功能，讓 IBM
-能自動且一致地交付更新項目，讓您始終保有最新、穩定且安全的系統。轉遞會透過源自初始虛擬機器的開放式、出埠 SSL、VPN 通道來達成連線功能。透過此通道，IBM 可以為您的實例提供及維護平台、運算資源及服務。請參閱 [{{site.data.keyword.Bluemix_notm}} 本端](../local/index.html#local)。
+IBM 使用轉遞技術來安全地監視及維護您的環境，讓您可以專注於事業。轉遞是「{{site.data.keyword.Bluemix_notm}} 本端」所含的交付功能，讓 IBM 能自動且一致地交付更新，讓您隨時擁有最新、穩定且安全的系統。轉遞會透過源自初始虛擬機器的開放式、出埠 SSL、VPN 通道來達成連線功能。透過此通道，IBM 可以為您的實例提供及維護平台、運算資源及服務。請參閱 [{{site.data.keyword.Bluemix_notm}} 本端](../local/index.html#local)。
 
 ![{{site.data.keyword.Bluemix_notm}} 本端。](images/localarch.png "Bluemix 本端")
 
@@ -140,7 +140,7 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 ### {{site.data.keyword.Bluemix_notm}} 復原力
 {: #resiliency}
 
-{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與復原力。
+{{site.data.keyword.Bluemix_notm}} 的設計旨在於管理可擴充、具復原力的應用程式及應用程式構件，這些應用程式與應用程式構件不僅可擴充以符合您的需要，還能維持高度可用性且可快速從問題中回復。{{site.data.keyword.Bluemix_notm}} 會隔開追蹤互動狀態的元件（有狀態）與不追蹤互動狀態的元件（無狀態）。這項分隔容許 {{site.data.keyword.Bluemix_notm}} 視需要彈性地移動應用程式，以達到可擴充性與復原力。
 
 您的應用程式可以有一個以上的實例處於執行中狀態。一個應用程式有多個實例時，該應用程式只會上傳一次。不過，{{site.data.keyword.Bluemix_notm}} 會部署所要求的應用程式實例數，並將它們盡可能地分散在眾多 VM。
 
@@ -200,7 +200,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}（測試版）</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} 是受管理的雲端環境（{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 的一部分），可用來建置、執行、管理及監視應用程式，同時維護應用程式及其執行所在的中介軟體的最大控制權。{{site.data.keyword.virtualmachinesshort}} 可用來找出您的商業解決方案，特別是在公用雲端中部署應用程式時。</p>
 <p>    
-您可以在使用 OpenStack 軟體的公開和私密（內部部署）雲端中執行及管理虛擬伺服器。您可以使用 {{site.data.keyword.Bluemix_notm}} UI 或 OpenStackClient (OSC) 用戶端來建立、啟動及管理虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} 所提供的虛擬伺服器映像檔，或從您自己的自訂映像檔建立虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 功能，來移除與管理雲端型應用程式相關聯的大部分複雜事宜（例如記載、自動調整及監視）。您可以一起使用 OpenStack 服務與 {{site.data.keyword.Bluemix_notm}} 服務，以建置及執行混合式應用程式。您可以視需要根據作業原則及工作量需求來佈建基礎架構資源。</p>
+您可以在使用 OpenStack 軟體的公開和私密（內部部署）雲端中執行及管理虛擬伺服器。您可以使用 {{site.data.keyword.Bluemix_notm}} UI 或 OpenStackClient (OSC) 用戶端來建立、啟動及管理虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} 所提供的虛擬伺服器映像檔，或從您自己的自訂映像檔建立虛擬伺服器。您可以使用 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 功能，來移除與管理雲端型應用程式相關聯的大部分複雜事宜（例如記載、自動擴充及監視）。您可以一起使用 OpenStack 服務與 {{site.data.keyword.Bluemix_notm}} 服務，以建置及執行混合式應用程式。您可以視需要根據作業原則及工作量需求來佈建基礎架構資源。</p>
 <p>
 若要進一步瞭解 {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}，請參閱 [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html)。</p> </dd>
 </dl>
@@ -327,7 +327,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 簡體中文 | zh_CN |
 | 繁體中文 | zh_TW |
 
-*表格 2. 支援的國家語言及語言碼*
+*表 2. 支援的國家語言及語言碼*
 
 # 相關鏈結
 ## 一般 

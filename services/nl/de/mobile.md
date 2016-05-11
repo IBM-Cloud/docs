@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc} 
 
 # Mobile
@@ -5,7 +13,7 @@
 
 *Letzte Aktualisierung: 9. Dezember 2015*
 
-Mit den mobilen Services können Sie Anwendungen für mehrere Plattformen, native Anwendungen oder Hybridanwendungen sowie Android- und iOS-Anwendungen erstellen.
+Mit den mobilen Services können Sie Anwendungen für mehrere Plattformen, native Anwendungen oder Hybridanwendungen sowie Android- und iOS-Anwendungen erstellen. 
 {:shortdesc}
 
 

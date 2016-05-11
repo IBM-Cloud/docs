@@ -18,7 +18,7 @@ copyright:
 # Caso de ejemplo: Desarrollo completo
 {: #ee}
 
-*Última actualización: 6 de noviembre de 2015*
+*Última actualización: 18 de abril de 2016*
 
 Puede utilizar la interfaz de usuario y la plataforma de {{site.data.keyword.Bluemix}} y una selección de herramientas para compilar, ejecutar y desplegar sus apps. Para empezar, puede seguir este caso de ejemplo completo de desarrollo.
 {:shortdesc}
@@ -40,7 +40,7 @@ Después de iniciar la sesión, puede empezar a crear la primera app mediante la
 En {{site.data.keyword.Bluemix_notm}}, las apps están asociados a organizaciones y espacios. Una organización es propiedad de varios colaboradores, quienes la utilizan. Inicialmente, obtiene una organización predeterminada que se llama como su nombre de usuario y cuyo único colaborador es usted. También obtiene un espacio dentro de esta organización. El espacio es un entorno en el que ejecutar sus apps; por ejemplo, puede tener un espacio dev como entorno de desarrollo, un espacio test como entorno de prueba y un espacio production como entorno de producción. Además, cada uno de los entornos pertenece a una región. Con {{site.data.keyword.Bluemix_notm}}, puede desplegar las apps en una determinada región geográfica para reducir la latencia de la red, y mejorar la privacidad de los datos y la disponibilidad. Consulte Regiones para obtener detalles.
 
 En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Tras iniciar sesión en {{site.data.keyword.Bluemix_notm}}, selecciona la región **EE. UU.
-sur** de la esquina superior derecha de la interfaz de usuario. A continuación, puede llevar a cabo los
+sur**. A continuación, puede llevar a cabo los
 siguientes pasos para crear una app:
   1. Pulse **CREAR UNA APP**.
   2. Seleccione **Web**.
@@ -108,10 +108,10 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
 	```
 	
     **Requisito:** Asegúrese de utilizar siempre la última versión de la herramienta de línea de mandatos cf.
-  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la región EE. UU. sur es ng.bluemix.net. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
+  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la región EE. UU. sur es stage1.ng.bluemix.net. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.ng.bluemix.net
+  cf api https://api.stage1.ng.bluemix.net
   ```
   
   Para obtener más información sobre cómo conectarse a otras regiones de {{site.data.keyword.Bluemix_notm}}, consulte Regiones de {{site.data.keyword.Bluemix_notm}}. Después de especificar la región de {{site.data.keyword.Bluemix_notm}}, la información sobre ubicación que ha especificado se guarda.
@@ -132,7 +132,7 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
   
   6. Ahora puede acceder a la app especificando el siguiente URL de app en un navegador:
   ```
-  http://TestNode.mybluemix.net
+  http://TestNode.stage1.mybluemix.net
   ```
 
 También puede elegir otras herramientas para crear la
@@ -243,12 +243,10 @@ de las infraestructuras y servicios en tiempo de ejecución, incluso si se pasa 
 {{site.data.keyword.Bluemix_notm}} proporciona
 un estimador y una calculadora para que calcule el coste de su app. Puede ver el coste de TestNode de las siguientes maneras:
 
-  * En el panel de control, pulse TestNode. A continuación, en la página
-Visión general, pulse **Estimar el coste de esta app** en la parte inferior derecha para ver el precio del tiempo de ejecución **SDK para Node.js** y del soporte y el precio mensual total de la app en la esquina superior derecha.
+  * En el panel de control, pulse TestNode. A continuación, en la página Visión general, pulse **Estimar el coste de esta app** para ver el precio del tiempo de ejecución **SDK para Node.js** y del soporte y el precio mensual total de la app.
   
   * En la página Hoja de precios también puede escribir el uso mensual del tiempo de ejecución y de los
-servicios de su app. Por ejemplo, 3 instancias de **SDK para Node.js** con 1 GB memoria para cada instancia. El precio mensual
-se calcula y se muestra en la esquina superior derecha de la ventana.
+servicios de su app. Por ejemplo, 3 instancias de **SDK para Node.js** con 1 GB memoria para cada instancia. El precio mensual se calcula y se muestra.
 
 También puede calcular el coste de su app de forma manual; para ello, añada el precio
 de los tiempos de ejecución y servicios y deduzca la concesión gratuita. Para obtener más información, consulte Cálculo manual de los costes.

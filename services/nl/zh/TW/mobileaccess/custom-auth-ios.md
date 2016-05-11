@@ -267,8 +267,7 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 {: #custom-ios-testing-before}
 您必須具有使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立的應用程式，並在 `/protected` 端點具有 {{site.data.keyword.amashort}} 所保護的資源。
 
-
- 1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），以在瀏覽器中將要求傳送給行動式後端的受保護端點。使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立之行動式後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。只有使用 {{site.data.keyword.amashort}} Client SDK 所檢測的行動式應用程式才能存取這個端點。因此，會在瀏覽器中顯示 `Unauthorized` 訊息。
+1. 開啟 `{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`），以在瀏覽器中將要求傳送給行動式後端的受保護端點。使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立之行動式後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。只有使用 {{site.data.keyword.amashort}} Client SDK 所檢測的行動式應用程式才能存取這個端點。因此，會在瀏覽器中顯示 `Unauthorized` 訊息。
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 並登錄自訂 `IMFAuthenticationDelegate` 之後，請新增下列程式碼：
 
 	Objective-C：
@@ -306,7 +305,25 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 	};
 
 	```
-
 1. 	當要求成功時，您會在 Xcode 主控台中看到下列輸出：
 
 	![影像](images/ios-custom-login-success.png)
+	
+	
+	
+	您也可以新增下列程式碼，來新增登出功能：
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	Swift： 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答接收自伺服器的盤查。
+將 `callBack` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。
+

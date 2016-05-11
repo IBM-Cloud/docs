@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 移动 SDK
 {: #openwhisk_mobile_sdk}
-*上次更新时间：2016 年 3 月 22 日*
+*上次更新时间：2016 年 3 月 28 日*
 
 {{site.data.keyword.openwhisk}} 提供了用于 iOS 和 watchOS 2 设备的移动 SDK，支持移动应用程序轻松触发远程触发器以及调用远程操作。Android 版本当前不可用；Android 开发者可直接使用 {{site.data.keyword.openwhisk}} REST API。
 {: shortdesc}
@@ -51,7 +51,7 @@ end
 
 在应用程序的项目目录中创建文件并命名为“Cartfile”。在 Cartfile 中放入以下行：
 ```
-github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
+github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
@@ -59,7 +59,7 @@ github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
 
 ### 通过源代码安装
 
-源代码在 https://github.com/openwhisk/swift-client-sdk 中提供。使用 Xcode 中的 OpenWhisk.xcodeproj 文件打开项目。该项目包含“OpenWhisk”和“OpenWhiskWatch”这两个方案，分别用于 iOS 和 WathOS2。针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+源代码在 https://github.com/openwhisk//openwhisk-client-swift.git 中提供。使用 Xcode 中的 OpenWhisk.xcodeproj 文件打开项目。该项目包含“OpenWhisk”和“OpenWhiskWatch”这两个方案，分别用于 iOS 和 WathOS2。针对需要的目标构建项目，然后将生成的框架添加到应用程序（通常位于 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安装入门模板应用程序示例
 {: #openwhisk_install_sdkstart}
@@ -68,7 +68,7 @@ github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
 
 要安装入门模板应用程序示例，请输入以下命令：
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
 这将下载包含入门模板应用程序的 zip 文件。在项目目录中有一个 Podfile。通过终端运行“pod install”以安装 SDK。
 {: pre}

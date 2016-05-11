@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Usando um provedor de identidade customizado para autenticar usuários
@@ -79,7 +79,13 @@ Exemplo de uma resposta de desafio de autenticação customizada enviada pelo cl
 	}
 	```
 
+### Implementação de amostra do provedor de identidade customizado
+{: #custom-sample}
+É possível usar qualquer uma das implementações de amostra Node.js a seguir de um provedor de identidade customizado como referência ao desenvolver seu provedor de identidade customizado. Faça download do código do aplicativo completo dos repositórios GitHub.
 
+ * [Amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Amostra avançada](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Comunicação típica entre o {{site.data.keyword.amashort}} Server e um provedor de identidade customizado
 {: #custom-id-comm}
 1. O serviço {{site.data.keyword.amashort}} envia uma solicitação `startAuthorization` para o provedor de identidade customizado.
@@ -97,7 +103,7 @@ Por padrão, o provedor de identidade customizado é considerado um aplicativo s
 ## Domínio customizado
 {: #custom-id-custom}
 
-Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para lidar com os desafios de autenticação recebidos, crie e registre uma instância de AuthenticationDelegate/AuthenticationListener em seu aplicativo de cliente móvel. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. Ele pode ser usado para identificar que a solicitação está sendo recebida de uma instância de serviço específica do {{site.data.keyword.amashort}}. 
+Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para lidar com os desafios de autenticação recebidos, crie e registre uma instância de AuthenticationDelegate/AuthenticationListener em seu aplicativo de cliente móvel. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. Ele pode ser usado para identificar que a solicitação está sendo recebida de uma instância de serviço específica do {{site.data.keyword.amashort}}.
 
 ## Próximas Etapas
 {: #next-steps}

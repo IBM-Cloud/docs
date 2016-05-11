@@ -32,7 +32,7 @@
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift
@@ -74,7 +74,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-從 APNS 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分。
+從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

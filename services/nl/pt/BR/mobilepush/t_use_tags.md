@@ -14,8 +14,7 @@ notificação que se destinam a todos os dispositivos inscritos
 em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Esta seção
 descreve como enviar notificações baseadas em tag. As assinaturas são mantidas pela
 instância do Bluemix do serviço de notificação push. Quando uma tag é excluída, todas as
-informações associadas a ela, incluindo seus assinantes e dispositivos são excluídos. 
-Nenhum cancelamento de assinatura automático é necessário para essa tag, uma vez que ela
+informações associadas a ela, incluindo seus assinantes e dispositivos são excluídos. Nenhum cancelamento de assinatura automático é necessário para essa tag, uma vez que ela
 não existe mais e nenhuma ação adicional é necessária no lado do cliente.
 
 **Antes de começar**

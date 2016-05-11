@@ -18,7 +18,7 @@ copyright:
 # Scenario: sviluppo end-to-end
 {: #ee}
 
-*Ultimo aggiornamento: 6 novembre 2015*
+*Ultimo aggiornamento: 18 aprile 2016*
 
 Puoi utilizzare l'interfaccia utente, la piattaforma e una selezione di strumenti {{site.data.keyword.Bluemix}}
 per la creazione, esecuzione e
@@ -53,7 +53,7 @@ per una bassa latenza di rete, riservatezza dei dati e maggiore disponibilità. 
 
 Per questo scenario, vuoi distribuire un'applicazione Web che utilizza Node.js. Supponiamo che ti trovi negli Stati Uniti così come la maggior parte degli utenti della
 tua applicazione. Decidi di creare ed eseguire la tua applicazione vicino alla base
-dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, seleziona la regione **Stati Uniti Sud** dall'angolo superiore destro dell'interfaccia utente. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
+dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
   1. Fai clic su **CREA UN'APPLICAZIONE**.
   2. Seleziona **Web**.
   3. Seleziona lo starter SDK for Node.js per la tua applicazione Web e fai clic su **Continua**.
@@ -149,11 +149,11 @@ esempio:
     **Requisito:** assicurati di usare sempre la versione più recente dello strumento riga di comando cf.
   3. Dopo che hai installato l'interfaccia riga di comando **cf**,
 devi specificare qual è la regione {{site.data.keyword.Bluemix_notm}} che
-desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti sud è ng.bluemix.net. Immetti il seguente comando per
+desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti sud è stage1.ng.bluemix.net. Immetti il seguente comando per
 stabilire una connessione a {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.ng.bluemix.net
+  cf api https://api.stage1.ng.bluemix.net
   ```
   
   Per ulteriori informazioni sulla connessione ad altre regioni {{site.data.keyword.Bluemix_notm}}, vedi Regioni {{site.data.keyword.Bluemix_notm}}. Dopo che hai specificato la regione {{site.data.keyword.Bluemix_notm}},
@@ -178,7 +178,7 @@ comando:
   6. Puoi ora accedere all'applicazione immettendo il seguente URL
 in un browser:
   ```
-  http://TestNode.mybluemix.net
+  http://TestNode.stage1.mybluemix.net
   ```
 
 Per creare la tua applicazione puoi scegliere anche altri strumenti, ad esempio
@@ -309,11 +309,10 @@ non ti addebita niente a meno che l'utilizzo non superi le franchigie concesse.
 {{site.data.keyword.Bluemix_notm}} fornisce
 una funzione di stima e un calcolatore per consentirti di visualizzare il costo della tua applicazione. Puoi visualizzare il costo di TestNode nei seguenti modi:
 
-  * Nel tuo dashboard, fai clic su TestNode. Quindi, nella pagina Panoramica, fai clic su **Stima il costo di questa applicazione** nell'angolo inferiore destro per vedere il prezzo del runtime e del supporto **SDK for Node.js** e il prezzo totale mensile della tua applicazione nell'angolo superiore destro.
+  * Nel tuo dashboard, fai clic su TestNode. Quindi, nella pagina Panoramica, fai clic su **Stima il costo di questa applicazione** per vedere il prezzo del runtime e del supporto **SDK for Node.js** e il prezzo totale mensile della tua applicazione.
   
   * In alternativa, nella pagina Listino prezzi, immetti l'utilizzo mensile del runtime e dei servizi della tua applicazione. Ad esempio 3 istanze di **SDK for Node.js** con 1 GB
-di memoria per ciascuna istanza. Il prezzo mensile viene calcolato e visualizzato nell'angolo superiore destro della
-finestra.
+di memoria per ciascuna istanza. Il prezzo mensile viene calcolato e visualizzato.
 
 Puoi anche calcolare il costo della tua applicazione manualmente sommando i prezzi dei tuoi runtime e servizi
 e sottraendo la franchigia. Per ulteriori informazioni, vedi Calcolo manuale dei tuoi costi.

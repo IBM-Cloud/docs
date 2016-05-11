@@ -5,7 +5,7 @@
 
 ## Android
 
-**getTags** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收傳送給該標籤的任何推送通知。
+**getTags** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收針對該標籤傳送的任何推送通知。
 
 將下列程式碼 Snippet 複製到 Android 行動式應用程式來取得裝置訂閱的標籤清單，以及取得可用標籤清單。
 
@@ -19,13 +19,10 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
-subscribeToTag();
-   
+   subscribeToTag();   
   }    
-@Override
-    
-public void onFailure(MFPPushException ex) {
-
+  @Override    
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -36,7 +33,6 @@ public void onFailure(MFPPushException ex) {
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-
     @Override
     public void onSuccess(List<String> tags) {
     updateTextView("Retrieved subscriptions : " + tags);
@@ -62,13 +58,12 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Retrieve an array of tags to which the device is subscribed.
+
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-
     alert(tags);
 }, null);
 ```
@@ -80,21 +75,20 @@ MFPPush.getSubscriptionStatus(function(tags) {
 使用下列 **retrieveAvailableTags** API 來取得裝置可訂閱的可用標籤清單。
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
+^(IMFResponse *response, NSError *error){ 
  if(error){    
-[self updateMessage:error.description];
-  
-} else {
-[self updateMessage:@"Successfully retrieved available tags."];
+   [self updateMessage:error.description];  
+ } else {
+   [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
 }
 }];
 ```
-
+       
 使用 **retrieveSubscriptions** API 來取得裝置訂閱的標籤清單。
 
 
@@ -115,11 +109,11 @@ subscribedTags = [response subscriptions];
 
 ## Swift
 
-**retrieveAvailableTagsWithCompletionHandler** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收傳送給該標籤的任何推送通知。
+**retrieveAvailableTagsWithCompletionHandler** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收針對該標籤傳送的任何推送通知。
 
 呼叫 Push 服務來取得標籤的訂閱。
 
-將下列程式碼 Snippet 複製到 Swift 行動式應用程式來取得裝置訂閱的可用標籤清單，以及取得裝置可訂閱的可用標籤清單。
+將下列程式碼 Snippet 複製到 Swift 行動式應用程式，來取得裝置訂閱的可用標籤清單，以及取得裝置可訂閱的可用標籤清單。
 
 
 ```
@@ -152,3 +146,6 @@ print( "Error during retrieving subscribed tags \(error) ")
     }
 }
 ```
+
+
+

@@ -20,9 +20,9 @@ copyright:
 
 若要取得 REST API 的基本 URL，請執行下列動作：
 
-1. 在 Bluemix® 型錄的「樣板」區段中建立後端應用程式，以自動將 Push 服務連結至此應用程式。如果您已建立後端應用程式，請確定將應用程式連結至 Push Notification Service。
+1. 在 Bluemix® 型錄的「樣板」區段中建立後端應用程式，以自動將 Push 服務連結至此應用程式。如果您已建立後端應用程式，請確定將應用程式連結至 Push Notification Service。 
 
-1. 在 Bluemix 儀表板的主頁面中，移至**應用程式**區域，然後按一下您的應用程式。
+2. 在 Bluemix 儀表板的主頁面中，移至**應用程式**區域，然後按一下您的應用程式。
 
 3. 按一下「行動式選項」。路徑及應用程式 GUID 值會顯示在應用程式的詳細資料頁面頂端。
 
@@ -31,12 +31,12 @@ copyright:
 ## Accept-Language（接受語言）標頭
 {: #push-api-rest-accept}
 
-"Accept-Language" 標頭指定 [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} 所輸出之錯誤訊息要使用的語言。下列是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
+"Accept-Language" 標頭指定 [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} 所輸出之錯誤訊息要使用的語言。以下是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
 
 ## appSecret
 {: #push-api-rest-secret}
 
-應用程式連結至 Push Notifications 時，服務會產生 appSecret（唯一索引鍵）並透過回應標頭進行傳遞。如果您使用的是 IBM® Push Notifications for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需 REST API 的相關資訊，請參閱「REST API 參考資料」。
+應用程式連結至 Push Notifications 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM® Push Notifications for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需 REST API 的相關資訊，請參閱「REST API 參考資料」。
 
 要求標頭必須包含 appSecret。如果沒有，則伺服器會傳回「401 未獲授權」的錯誤碼。將 Push Notifications 新增至應用程式時，會建立特定的 AppID。在回應中有一個稱為 appSecret 的標頭，它用來建立「標籤」或傳送訊息。作業是透過型錄或樣板中的服務進行。
 
@@ -62,7 +62,7 @@ copyright:
    }
  ]
 }
-```
+``` 
 
 ##Push REST API 過濾器
 {: #push-api-rest-filters}
@@ -87,7 +87,7 @@ copyright:
 - 對於 AND 及 OR 邏輯：單一查詢可以同時包含 AND 及 OR 邏輯。會先個別評估每一個過濾器，再使用 AND 表示式結合過濾器。
 
 若為裝置 GET API，支援下列組合：
--名稱為平台欄位。
+- 名稱為 platform 欄位。
 - 除了 platform 之外，運算子可以是 == 或 =@。
 - 若為 platform，運算子必須是 ==。如果使用運算子 =@，則值可以是子字串。
 - 如果使用 ==，則值必須是完全相符的字串。

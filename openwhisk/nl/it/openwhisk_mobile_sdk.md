@@ -13,7 +13,7 @@ copyright:
 
 # Utilizzo dell'SDK mobile {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-*Ultimo aggiornamento: 22 marzo 2016* 
+*Ultimo aggiornamento: 28 marzo 2016* 
 
 {{site.data.keyword.openwhisk}} fornisce un SDK mobile per dispositivi iOS e watchOS 2 che abilita le applicazioni mobili ad attivare facilmente dei trigger remoti e richiamare azioni remote. Una versione per Android non è attualmente disponibile; gli sviluppatori Android possono utilizzare la API REST {{site.data.keyword.openwhisk}} direttamente.
 {: shortdesc}
@@ -45,13 +45,13 @@ end
 ```
 {: codeblock}
 
-Dalla riga di comando, immetti "pod install". Questo installerà l'SDK per un'applicazione iOS con un'estensione watchOS 2. Utilizza il file di spazio di lavoro che Cocoapods crea per la tua applicazione per aprire il progetto in Xcode.
+Dalla riga di comando, immetti "pod install". Questo installerà l'SDK per un'applicazione iOS con un'estensione watchOS 2.  Utilizza il file di spazio di lavoro che Cocoapods crea per la tua applicazione per aprire il progetto in Xcode.
 
 ### Installazione utilizzando Carthage
 
 Crea un file nella directory del progetto della tua applicazione e denominalo 'Cartfile'. Inserisci le seguenti righe nel Cartfile:
 ```
-github "openwhisk/swift-client-sdk.git" ~> 0.1.0 # Or latest version
+github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
@@ -59,7 +59,7 @@ Dalla riga di comando, immetti 'carthage update --platform ios'. Carthage scaric
 
 ### Installazione dal codice sorgente
 
-Il codice sorgente è disponibile in https://github.com/openwhisk/swift-client-sdk. Apri il progetto utilizzando il file OpenWhisk.xcodeproj in Xcode.  Il progetto contiene due schemi "OpenWhisk" e "OpenWhiskWatch" destinati, rispettivamente, a iOS e WathOS2. Genera il progetto per le destinazioni che ti servono e aggiungi i framework risultanti alla tua applicazione (di norma in ~/Library/Developer/Xcode/DerivedData/il nome della tua applicazione).
+Il codice sorgente è disponibile in https://github.com/openwhisk//openwhisk-client-swift.git. Apri il progetto utilizzando il file OpenWhisk.xcodeproj in Xcode.  Il progetto contiene due schemi "OpenWhisk" e "OpenWhiskWatch" destinati, rispettivamente, a iOS e WathOS2.  Genera il progetto per le destinazioni che ti servono e aggiungi i framework risultanti alla tua applicazione (di norma in ~/Library/Developer/Xcode/DerivedData/il nome della tua applicazione).
 
 ## Installazione dell'esempio di applicazione starter
 {: #openwhisk_install_sdkstart}
@@ -68,9 +68,9 @@ Puoi utilizzare la CLI {{site.data.keyword.openwhisk_short}} per scaricare il co
 
 Per installare l'esempio di applicazione starter, immetti il seguente comando:
 ```
-wsk sdk install ios
+wsk sdk install iOS
 ```
-Verrà scaricato un file zip che contiene l'applicazione starter. Nella directory del progetto è presente un Podfile.  Esegui "pod install" da un terminale per l'installare l'SDK.
+Verrà scaricato un file zip che contiene l'applicazione starter.  Nella directory del progetto è presente un Podfile.  Esegui "pod install" da un terminale per l'installare l'SDK.
 {: pre}
 
 ## Introduzione all'SDK
@@ -104,7 +104,7 @@ Le stringhe prima e dopo il carattere due punti sono, rispettivamente, la tua ch
 {: #openwhisk_sdk_invoke}
 
 
-Per richiamare un'azione remota, puoi richiamare `invokeAction` con il nome dell'azione. Puoi specificare lo spazio dei nomi a cui appartiene l'azione oppure limitarti a lasciarlo vuoto per accettare lo spazio dei nomi predefinito. Utilizza un dizionario per passare i parametri all'azione come richiesto.
+Per richiamare un'azione remota, puoi richiamare `invokeAction` con il nome dell'azione. Puoi specificare lo spazio dei nomi a cui appartiene l'azione oppure limitarti a lasciarlo vuoto per accettare lo spazio dei nomi predefinito.  Utilizza un dizionario per passare i parametri all'azione come richiesto.
 
 Ad esempio:
 
@@ -235,7 +235,7 @@ Tutte le altre combinazioni generano un errore WhiskError.QualifiedName. Pertant
 
 ### Pulsante SDK
 
-Per praticità, l'SDK include un `WhiskButton`, che estende il `UIButton` per consentirgli di richiamare le azioni. Per utilizzare il `WhiskButton`, attieniti a questo esempio:
+Per praticità, l'SDK include un `WhiskButton`, che estende il `UIButton` per consentirgli di richiamare le azioni.  Per utilizzare il `WhiskButton`, attieniti a questo esempio:
 
 ```
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))

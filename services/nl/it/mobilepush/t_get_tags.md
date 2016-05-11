@@ -21,7 +21,7 @@ Utilizza l'API **getTags** per ottenere un elenco delle tag disponibili a cui pu
 // Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags){
+    public void onSuccess(List<String> tags) { 
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
@@ -64,7 +64,7 @@ Richiama un array delle tag disponibili per la sottoscrizione.
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Retrieve an array of tags to which the device is subscribed.
+
 ```
 
 ```
@@ -94,7 +94,7 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 }
 }];
 ```
-
+       
 Utilizza la API **retrieveSubscriptions** per ottenere un elenco delle tag sottoscritte dal dispositivo.
 
 
@@ -155,3 +155,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
     }
 }
 ```
+
+
+

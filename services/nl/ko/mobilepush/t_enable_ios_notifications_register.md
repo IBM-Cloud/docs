@@ -2,9 +2,7 @@
 {: #enable-push-ios-notifications-register}
 
 
-일반적으로 앱이 디바이스에 설치된 후에 발생하는 원격 알림을 수신하려면
-APNs에 애플리케이션(앱)을 등록해야 합니다. APNs에 의해 생성된 디바이스 토큰을 애플리케이션에서 수신한 후에는
-푸시 알림 서비스에 이를 되돌려 보내야 합니다. 
+일반적으로 앱이 디바이스에 설치된 후에 발생하는 원격 알림을 수신하려면 APNs에 애플리케이션(앱)을 등록해야 합니다. APNs에 의해 생성된 디바이스 토큰을 애플리케이션에서 수신한 후에는 푸시 알림 서비스에 이를 되돌려 보내야 합니다. 
 
 iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하십시오. 
 
@@ -23,7 +21,7 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플�
 
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
-[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 	    [[UIApplication sharedApplication] registerForRemoteNotifications];
 	    }
 	    else{
@@ -34,12 +32,12 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플�
 	}
 ```
 
-###Swfit
+###Swift
 
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
+  let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 		application.registerUserNotificationSettings(notificationSettings)
 		application.registerForRemoteNotifications()

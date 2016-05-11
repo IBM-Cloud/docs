@@ -18,17 +18,17 @@ copyright:
 
 *마지막 업데이트 날짜: 2016년 1월 29일*
 
-Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다. {:shortdesc}
+Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다.
+{:shortdesc}
 
-다음 정보는 앱 관리에 가장 일반적으로 사용되는 cf 명령을 나열합니다. cf 명령과
-도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
+다음 정보는 앱 관리에 가장 일반적으로 사용되는 cf 명령을 나열합니다. cf 명령과 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
 
 *참고:* 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여 프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 자세한 정보는 [HTTP 프록시 서버에 cf CLI 사용](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html)을 참조하십시오.
 
 ## cf api
 
-{{site.data.keyword.Bluemix_notm}}API 엔드포인트의
-URL을 지정하거나 표시합니다. ```
+{{site.data.keyword.Bluemix_notm}}API 엔드포인트의 URL을 지정하거나 표시합니다.
+```
 cf api BluemixServerURL
 ```
 <dl>
@@ -43,20 +43,18 @@ cf api 명령을 위해 이 매개변수를 지정할 필요가 없습니다. </
 
 ## cf apps
 
-현재 영역에 배치된 모든 애플리케이션을
-나열합니다. 각 애플리케이션의 상태도 표시됩니다. 
+현재 영역에 배치된 모든 애플리케이션을 나열합니다. 각 애플리케이션의 상태도 표시됩니다. 
 
 앱에 대해 하나의 인스턴스가 있는 것으로 가정할 때 cf 앱 명령 응답의 인스턴스 열에 앱이 실행 중이면 1/1이, 앱이 중단되었으면 0/1이 표시됩니다. 앱 인스턴스 상태를 알 수 없음을 의미하는 ?/1이 표시되면 앱 URL을 브라우저로 복사하여 앱의 응답 여부를 확인하거나 `cf logs appname` 명령으로 로그를 추적하여 앱이 로그 컨텐츠를 생성하는지 확인할 수 있습니다.
 
 ## cf bind-service
 
-기존 서비스 인스턴스를 애플리케이션에 바인딩합니다. ```
+기존 서비스 인스턴스를 애플리케이션에 바인딩합니다.
+```
 cf bind-service appname service_instance
 ```
 
-예를 들어 현재 조직 및 영역에 `my_dataworks`라는 서비스 인스턴스가
-있는 경우 `cf bind-service my_app my_dataworks`를 사용하여
-이 서비스 인스턴스를 애플리케이션에 바인딩할 수 있습니다. 
+예를 들어 현재 조직 및 영역에 `my_dataworks`라는 서비스 인스턴스가 있는 경우 `cf bind-service my_app my_dataworks`를 사용하여 이 서비스 인스턴스를 애플리케이션에 바인딩할 수 있습니다. 
 
 <dl>
 <dt>appname</dt>
@@ -67,12 +65,11 @@ cf bind-service appname service_instance
 
 ## cf create-service
 
-서비스 인스턴스를 작성합니다. ```
+서비스 인스턴스를 작성합니다.
+```
 cf create-service service_name service_plan service_instance
 ```
-예를 들어 `cf create-service DataWorks free my_dataworks`를 사용하여
-무료 사용제가 있는 {{site.data.keyword.dataworks_short}} 서비스의
-인스턴스를 작성할 수 있습니다. 
+예를 들어 `cf create-service DataWorks free my_dataworks`를 사용하여 무료 사용제가 있는 {{site.data.keyword.dataworks_short}} 서비스의 인스턴스를 작성할 수 있습니다. 
 
 <dl>
 <dt>service_name</dt>
@@ -100,7 +97,8 @@ cf create-space space_name
 
 ## cf delete
 
-기존 애플리케이션을 삭제합니다. ```
+기존 애플리케이션을 삭제합니다.
+```
 cf delete appname
 ```
 <dl>
@@ -128,7 +126,8 @@ cf delete-space space_name
 
 ## cf events
 
-애플리케이션과 관련된 런타임 이벤트를 표시합니다. ```
+애플리케이션과 관련된 런타임 이벤트를 표시합니다.
+```
 cf events appname
 ```
 <dl>
@@ -152,8 +151,10 @@ cf help command_name
 
 ## cf login
 
-{{site.data.keyword.Bluemix_notm}}에 로그인됩니다. ```
-cf login```
+{{site.data.keyword.Bluemix_notm}}에 로그인됩니다.
+```
+cf login
+```
 cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용할 수 있습니다.
 <dl>
 <dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
@@ -178,7 +179,8 @@ URL입니다. 이 매개변수는 선택적 매개변수입니다. </dd>
 
 ## cf logs
 
-애플리케이션의 STDOUT 및 STDERR 로그 스트림을 표시합니다. ```
+애플리케이션의 STDOUT 및 STDERR 로그 스트림을 표시합니다.
+```
 cf logs appname
 ```
 <dl>
@@ -192,7 +194,8 @@ cf logs appname
 
 Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
 ```
-cf marketplace```
+cf marketplace
+```
 
 ## cf push
 
@@ -208,7 +211,8 @@ cf push appname
 <dd>```
 cf push appname -c null
 ```</dd>
-<dd>이 옵션을 사용하여 스크립트 파일을 실행할 수도 있습니다. 예: ```
+<dd>이 옵션을 사용하여 스크립트 파일을 실행할 수도 있습니다. 예:
+```
 cf push appname -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f*manifest_path</dt> <dd>Manifest 파일의 경로입니다. 기본 Manifest 파일은 애플리케이션의 루트 디렉토리 아래에 있는 manifest.yml입니다.</dd>
@@ -233,31 +237,32 @@ cf push appname -c “bash ./<run.sh>"
 
 ## cf scale
 
-애플리케이션에 대한 인스턴스 번호, 디스크 공간 한계 및 메모리 한계를
-표시하거나 변경합니다. ```
+애플리케이션에 대한 인스턴스 번호, 디스크 공간 한계 및 메모리 한계를 표시하거나 변경합니다.
+```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
 <dl>
 <dt>appname</dt>
 <dd>애플리케이션 이름입니다. </dd>
 <dt>*-i*instance_number</dt> <dd>인스턴스 수입니다. </dd>
-<dt>*-k*disk_limit</dt> <dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M*
-또는 *1G*). </dd>
+<dt>*-k*disk_limit</dt> <dd>애플리케이션에 대한 디스크 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
 <dt>*-m* memory_limit</dt>
-<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M*
-또는 *1G*). </dd>
+<dd>애플리케이션에 대한 메모리 한계입니다(예: *256M*, *1024M* 또는 *1G*). </dd>
 <dt>*-f*</dt>
 <dd>프롬프트 없이 애플리케이션을 강제로 다시 시작합니다. </dd>
 </dl>
 
 ## cf services
 
-현재 영역에서 사용 가능한 모든 서비스를 나열합니다. ```
-cf services```
+현재 영역에서 사용 가능한 모든 서비스를 나열합니다.
+```
+cf services
+```
 
 ## cf set-env
 
-애플리케이션에 대한 환경 변수를 설정합니다. ```
+애플리케이션에 대한 환경 변수를 설정합니다.
+```
 cf set-env appname var_name var_value
 ```
 <dl>
@@ -271,13 +276,15 @@ cf set-env appname var_name var_value
 
 ## cf stacks
 
-모든 스택을 나열합니다. 스택은 앱을 실행할 수 있는 운영 체제를 포함하여
-미리 빌드된 파일 시스템입니다. ```
-cf stacks```
+모든 스택을 나열합니다. 스택은 앱을 실행할 수 있는 운영 체제를 포함하여 미리 빌드된 파일 시스템입니다.
+```
+cf stacks
+```
 
 ## cf stop
 
-애플리케이션을 중지합니다. ```
+애플리케이션을 중지합니다.
+```
 cf stop appname
 ```
 <dl>
@@ -287,7 +294,8 @@ cf stop appname
 
 ## cf -v
 
-명령행 인터페이스의 버전을 표시합니다. ```
+명령행 인터페이스의 버전을 표시합니다.
+```
 cf -v
 ```
 

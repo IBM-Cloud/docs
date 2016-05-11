@@ -32,7 +32,8 @@ I trigger sono un canale indicato per una classe di eventi. Di seguito vengono r
 
 I trigger possono essere *attivati* attraverso un dizionario di coppie chiave/valore. Tale dizionario viene talvolta denominato *evento*. Così come con le azioni, ogni attivazione di un trigger comporta un ID di attivazione.
 
-I trigger possono essere attivati esplicitamente da un utente o attivati per conto di un utente da un'origine eventi esterna. Un *feed* rappresenta un modo utile per configurare un'origine eventi esterna
+I trigger possono essere attivati esplicitamente da un utente o attivati per conto di un utente da un'origine eventi esterna.
+Un *feed* rappresenta un modo utile per configurare un'origine eventi esterna
 per l'attivazione di eventi trigger utilizzabili da {{site.data.keyword.openwhisk_short}}. Sono esempi di feed:
 - Un feed di modifica dati Cloudant che attiva un evento trigger ad ogni aggiunta o modifica di documenti in un database.
 - Un feed Git che attiva un evento trigger per ogni commit con un repository Git.
@@ -125,7 +126,7 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   {: codeblock}
 
 2. Accertati che il trigger e l'azione esistano.
- ```
+  ```
   wsk trigger update locationUpdate
   ```
   {: pre}
@@ -136,13 +137,13 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   {: pre}
 
 3. Crea e abilita la regola. I tre parametri sono il nome della regola, il trigger e l'azione.
- ```
+  ```
   wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
 4. Attiva il trigger locationUpdate. Ogni volta attivi un evento, l'azione "hello" viene richiamata con i parametri dell'evento.
- ```
+  ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
@@ -153,7 +154,7 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   {: screen}
 
 5. Verifica che l'azione sia stata richiamata, controllando l'attivazione più recente.
- ```
+  ```
   wsk activation list --limit 1 hello
   ```
   {: pre}

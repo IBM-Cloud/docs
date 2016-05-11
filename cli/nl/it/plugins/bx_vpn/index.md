@@ -25,7 +25,6 @@ Puoi utilizzare il plugin CLI Bluemix per VPN per configurare e gestire il tuo s
 
 Le seguenti informazioni elencano tutti i comandi supportati dal plugin CLI Bluemix per VPN e ne includono i nomi, le opzioni, l'utilizzo, i prerequisiti, le descrizioni e gli esempi.
 
-
 **Nota:** i *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I prerequisiti possono includere una o più delle seguenti azioni:
 <dl>
 <dt>**Endpoint**</dt>
@@ -354,11 +353,11 @@ bluemix vpn connection-update NOME_CONNESSIONE[-g NOME_GATEWAY][-k PRESHARED_KEY
 
 -admin_state *STATO_AMMINISTRAZIONE*  (facoltativo): lo stato della connessione VPN. I valori validi sono `UP` o `DOWN`.
 
--dpd-action *AZIONE*  (facoltativo): l'azione da eseguire quando viene rilevato che il peer è inattivo. I valori validi sono `hold`, `clear`, `disabled`, `restart` o `restart-by-peer`. 
+-dpd-action *AZIONE*  (facoltativo): l'azione da eseguire quando viene rilevato che il peer è inattivo. I valori validi sono `hold`, `clear`, `disabled`, `restart` o `restart-by-peer`.
 
 -gateway_ip *INDIRIZZO_IP*  (facoltativo): l'indirizzo IP dell'endpoint del tunnel VPN locale.
 
--i *STATO_INIZIATORE*  (facoltativo):  lo stato dell'iniziatore. 
+-i *STATO_INIZIATORE*  (facoltativo):  lo stato dell'iniziatore.
 
 -dpd-timeout *VALORE*  (facoltativo): il valore di timeout, espresso in secondi, dopo il quale la sessione viene terminata. Intervallo: 6 - 86400 secondi.
 
@@ -386,9 +385,9 @@ bluemix vpn ike-update NOME_POLITICA [-g NOME_GATEWAY][-d DESCRIPTION] [-pfs GRU
 
 -d *DESCRIZIONE*  (facoltativo): la descrizione dei parametri specificati.
 
--pfs *GRUPPO*  (facoltativo): l'identificativo del gruppo DH (Diffie-Hellman). I valori validi sono `Group2`, `Group5` o `Group14`. 
+-pfs *GRUPPO*  (facoltativo): l'identificativo del gruppo DH (Diffie-Hellman). I valori validi sono `Group2`, `Group5` o `Group14`.
 
--e *ALGORITMO_DI_CRITTOGRAFIA*  (facoltativo): l'algoritmo di crittografia. I valori validi sono `aes-128`, `aes-192`, `aes-256` o `3des`. 
+-e *ALGORITMO_DI_CRITTOGRAFIA*  (facoltativo): l'algoritmo di crittografia. I valori validi sono `aes-128`, `aes-192`, `aes-256` o `3des`.
 
 -lv *VALORE_DURATA*  (facoltativo): il valore di durata dell'associazione di sicurezza IKE. Intervallo: 60 - 86400 secondi.
 
@@ -410,9 +409,9 @@ bluemix vpn ipsec-update NOME_POLITICA [-g NOME_GATEWAY][-d DESCRIPTION] [-pfs G
 
 -d *DESCRIZIONE*  (facoltativo): la descrizione dei parametri specificati.
 
--pfs *GRUPPO*  (facoltativo): l'identificativo del gruppo DH (Diffie-Hellman). I valori validi sono `Group2`, `Group5` o `Group14`. 
+-pfs *GRUPPO*  (facoltativo): l'identificativo del gruppo DH (Diffie-Hellman). I valori validi sono `Group2`, `Group5` o `Group14`.
 
--e *ALGORITMO_DI_CRITTOGRAFIA*  (facoltativo): l'algoritmo di crittografia. I valori validi sono `aes-128`, `aes-192`, `aes-256` o `3des`. 
+-e *ALGORITMO_DI_CRITTOGRAFIA*  (facoltativo): l'algoritmo di crittografia. I valori validi sono `aes-128`, `aes-192`, `aes-256` o `3des`.
 
 -lv *VALORE_DURATA*  (facoltativo): il valore di durata dell'associazione di sicurezza. Intervallo: 60 - 86400 secondi.
 
@@ -430,7 +429,7 @@ bluemix vpn gateway-update NOME_GATEWAY [-t TIPO][-gateway_ip IP_ADDRESS] [-subn
 
 *NOME_GATEWAY* (obbligatorio): il nome del gateway.
 
--t *TIPO*  (facoltativo): contenitori per i quali vuoi abilitare il servizio. I valori validi sono `allSingleContainers`, `allContainerGroups` o `allContainers`. 
+-t *TIPO*  (facoltativo): contenitori per i quali vuoi abilitare il servizio. I valori validi sono `allSingleContainers`, `allContainerGroups` o `allContainers`.
 
 -gateway_ip *INDIRIZZO_IP*  (facoltativo); l'indirizzo IP del gateway.
 

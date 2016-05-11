@@ -25,10 +25,12 @@ transmis à la méthode suivante en fonction de l'identificateur choisi.
 ```
 
 ###Swift
-
+ 
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
       //must call completion handler when finished
       completionHandler()
   }
 ```    
+    
+

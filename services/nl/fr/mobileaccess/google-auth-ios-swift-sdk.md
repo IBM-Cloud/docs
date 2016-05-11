@@ -98,7 +98,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 1. Copiez dans votre répertoire de projet le fichier `GoogleAuthenticationManager.swift` depuis les fichiers pod source
 `BMSGoogleAuthentication`.
 
-## Initialisation du SDK Swift client {{site.data.keyword.amashort}} 
+## Initialisation du SDK Swift client {{site.data.keyword.amashort}}
 {: #google-auth-ios-initialize}
 
 Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres
@@ -170,9 +170,9 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
  ```Swift
- let protectedResourceURL = "<URL de votre ressource protégée>" // Ressource protégée de votre choix
+ let protectedResourceURL = "<URL de votre ressource protégée>" // ressource protégée de votre choix
  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
     print ("response:\(response?.responseText), no error")
  } else {
@@ -193,13 +193,24 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 1. 	Votre demande doit aboutir. La sortie suivante devrait figurer dans le journal.
 
  ```
- onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
+ onAuthenticationSuccess info = Optional({attributes = {};
      deviceId = 105747725068605084657;
      displayName = "donlonqwerty@gmail.com";
      isUserAuthenticated = 1;
      userId = 105747725068605084657;
  })
- response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
+ response:Optional("Bonjour, cette ressource est protégée !"), no error
  ```
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```
+ GoogleAuthenticationManager.sharedInstance.logout(callBack)
+ ```
+
+  Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser
+{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur à l'angle
+supérieur droit de l'écran pour sélectionner et se connecter sous un autre nom d'utilisateur.
+
+   La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
+`nil`.

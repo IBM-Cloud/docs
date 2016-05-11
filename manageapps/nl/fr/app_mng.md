@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Gestion des applications Liberty et Node.js 
+#Gestion des applications Liberty et Node.js
 {: #app_management}
 
 *Dernière mise à jour : 17 mars 2016*

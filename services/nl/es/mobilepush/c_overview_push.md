@@ -52,8 +52,7 @@ El servicio de notificaciones push gestiona toda la información relacionada con
 
 **Pasarelas**
 
-Los servicios de nube específicos de plataformas de dispositivos móviles tales como Mensajería en la nube de Google
-                        (GCM) o APN (Apple Push Notification Service) utilizan el Servicio de notificaciones Push
+Los servicios de nube específicos de plataformas de dispositivos móviles tales como Google Cloud Messaging (GCM) o Apple Push Notification Service(APNs) utilizan el Servicio de notificaciones Push
                         para asignar notificaciones a las aplicaciones móviles.
 
 ## Tipos de notificación de envío

@@ -24,10 +24,12 @@ Al recibir una notificación que necesita reacciones, el control se pasa al sigu
 ```
 
 ###Swift
-
+ 
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
       //must call completion handler when finished
       completionHandler()
   }
 ```    
+    
+

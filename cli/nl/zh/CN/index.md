@@ -18,14 +18,18 @@ copyright:
 # CLI 和开发工具
 {: #cli}
 
-*上次更新时间：2016 年 2 月 16 日*
+*上次更新时间：2016 年 3 月 30 日*
 
-通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于增强您的 {{site.data.keyword.Bluemix_notm}} 体验。{:shortdesc}
+通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于支持您的 {{site.data.keyword.Bluemix_notm}} 体验。
+{:shortdesc}
 
 ## ![命令行界面](./images/CLI.svg) 命令行界面
 {: #downloads}
 
-下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。Cloud Foundry cf 命令行工具是所有其他 {{site.data.keyword.Bluemix_notm}} CLI 工具的必备软件。{{site.data.keyword.Bluemix_notm}} 命令行工具提供了在 Cloud Foundry 应用程序之外管理 {{site.data.keyword.Bluemix_notm}} 环境的不同体验。
+下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。Cloud Foundry cf 命令行工具是所有其他 {{site.data.keyword.Bluemix_notm}} CLI 工具的必备软件。{{site.data.keyword.Bluemix_notm}} 命令行工具提供了管理 {{site.data.keyword.Bluemix_notm}} 环境以及 Cloud Foundry 应用程序的延伸体验。
+
+
+缺省情况下，这两种 CLI 工具均使用 433 端口。如果在 CLI 工具与 {{site.data.keyword.Bluemix_notm}} 环境之间有 HTTP 代理，那么必须使用实际 HTTP 代理 URL 和端口（如有）来配置 `http-proxy` 环境变量。请参阅 [Using the CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} 以获取更多详细信息。
 
 
 | *{{site.data.keyword.Bluemix_notm}}：bx* | *Cloud Foundry：cf* |

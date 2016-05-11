@@ -19,9 +19,7 @@ Inclua esses recursos do Serviço de notificações push em seu app.
 
 
 
-
 -  Para usar notificações baseadas em tag, consulte
 [Notificações baseadas em tag](t_push_tagsmain.md).
-
 -  Para usar opções de notificações avançadas, consulte
 [Notificações push avançadas](t_advance_notifications.md).

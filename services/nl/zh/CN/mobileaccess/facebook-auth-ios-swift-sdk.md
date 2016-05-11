@@ -214,8 +214,10 @@ pod 'BMSFacebookAuthentication'
 	```Swift
   let protectedResourceURL = "<Your protected resource URL>" // any protected resource
   let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+
   if error == nil {
+         
      print ("response:\(response?.responseText), no error")
   } else {
      print ("error: \(error)")
@@ -246,3 +248,15 @@ pod 'BMSFacebookAuthentication'
  })
  response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
+
+1. 通过添加以下代码，您还可以添加注销功能：
+
+ ```
+FacebookAuthenticationManager.sharedInstance.logout(callBack)
+```
+
+ 如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Facebook 进行认证。
+
+ 要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
+
+ 您可以选择是否将 ```callBack``` 传递给注销功能。您还可以传递 `nil`。

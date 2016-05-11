@@ -476,7 +476,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
   框架是一种 Docker 容器模板，可以在其中以定制二进制文件的形式插入代码。
 
-2. 在黑匣框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
+2. 在 Docker 框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
 
   ```
   cat ./dockerSkeleton/client/example.c
@@ -558,7 +558,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   ```
   {: screen}
 
-3. 观察轮询窗口中的激活登录：
+3. 观察轮询窗口中的激活日志：
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)

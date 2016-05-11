@@ -18,7 +18,7 @@ copyright:
 
 # Utilizzo e creazione di pacchetti {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-*Ultimo aggiornamento: 22 febbraio 2016*
+*Ultimo aggiornamento: 28 marzo 2016* 
 
 In {{site.data.keyword.openwhisk}}, puoi utilizzare i pacchetti per raggruppare una serie di azioni correlate e condividerle con altri.
 
@@ -457,11 +457,11 @@ Una volta eseguiti i test e il debug delle azioni e dei feed compresi in un pacc
 1. Condividi i pacchetti con tutti gli utenti:
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package sample
+  ok: updated package custom
   ```
   {: screen}
 

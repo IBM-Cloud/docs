@@ -39,13 +39,13 @@ You can specify the version of Go to be used by your app by setting the GoVersio
 }
 ```
 {: codeblock}
-For more information, see [godep](https://github.com/tools/godep).
+For more information, see [godep](https://github.com/tools/godep){: new_window}.
 
 ### Available versions:
 {: #available_versions}
 
 The following Go versions are available in the
-[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2)
+[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}
 currently installed in {{site.data.keyword.Bluemix}}:
 
 * 1.2.1
@@ -59,10 +59,10 @@ currently installed in {{site.data.keyword.Bluemix}}:
 
 If your app requires a Go version that is not listed,
 you can use the external
-[Go buildpack](https://github.com/cloudfoundry/go-buildpack.git) to
+[Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} to
 deploy the application.
 
 # rellinks
 ## general
-* [GoLang](http://golang.org/)
-* [Cloud Foundry buildpack for Go](https://github.com/cloudfoundry/go-buildpack)
+* [GoLang](http://golang.org/){: new_window}
+* [Cloud Foundry buildpack for Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

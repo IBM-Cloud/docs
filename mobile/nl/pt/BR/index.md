@@ -15,7 +15,7 @@ infraestrutura de backend.
 Provisiona uma instância de cada um dos {{site.data.keyword.Bluemix_notm}} Mobile Services e vincula o serviço ao aplicativo Node.js. </li>
 		</ul>
 	</td>
-	<td> <img src="images/mf_boiler_icon.png" alt="Serviços móveis do Bluemix" width="500"> Modelo do {{site.data.keyword.mobilefirstbp}} Starter</td>
+	<td> <img src="images/mf_boiler_icon.png" alt="Serviços móveis do Bluemix" width="500"> Modelo do {{site.data.keyword.mobilefirstbp}} Starter </td>
 </tr>
 </table>
 
