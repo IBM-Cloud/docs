@@ -11,20 +11,12 @@ copyright:
 {: #push-send-notifications}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7601a87184d7edd455bb7ed7d8608f03204f4b29
 
 
 Send basic push notifications.
 
 1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**. 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7601a87184d7edd455bb7ed7d8608f03204f4b29
 	**Note**: When you select the **All Devices** option, all the devices that have subscribed to push notifications receive your notification.
 	
 	![Notifications screen](images/tag_notification.jpg)
