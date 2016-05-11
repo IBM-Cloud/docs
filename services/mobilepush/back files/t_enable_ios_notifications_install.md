@@ -1,24 +1,13 @@
----
-
-copyright:
- years: 2015, 2016
-
----
-
-# Enabling iOS applications to receive push notifications
-{: #enable-push-ios-notifications}
-
-Enable iOS applications to receive push notifications and send push notifications to your devices.
-
-
-##Installing CocoaPods
+# Initializing Push SDK for iOS apps
 {: #enable-push-ios-notifications-install}
 
 For an existing Xcode project, you can set up the Bluemix Mobile Services Client SDK using the CocoaPods dependency management tool. An alternative is to install the SDK manually.
 
 **Note**: To view the Swift Push readme file, go https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master
 
+##Installing CocoaPods
 
+{: #enable-push-ios-notifications-install}
 
 1. Install CocoaPods by using the following command in your Mac terminal.
 ```
@@ -106,14 +95,15 @@ Go to **Xcode > Build Settings > Build Options and Set Enable Bitcode** to **No*
 
 
 
-## Initializing Push SDK for iOS apps
+# Initializing Push SDK for iOS apps
 {: #enable-push-ios-notifications-initialize}
 
-A common place to put the initialization code is in the application delegate for the iOS application. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and GUID.
+A common place to put the initialization code is in the application delegate for the iOS application.
+Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and GUID.
 
-###Initializing the Core SDK
+##Initializing the Core SDK
 
-####Objective-C
+###Objective-C
 
 ```
 // Initialize the SDK for Object-C with IBM Bluemix GUID and route
@@ -121,7 +111,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
 ```
 
-####Swift
+###Swift
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
@@ -132,23 +122,23 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
 
-###Initializing the client Push SDK
+##Initializing the client Push SDK
 
-####Objective-C
+###Objective-C
 
 ```
 //Initialize client Push SDK for Objective-C
 IMFPushClient _pushService = [IMFPushClient sharedInstance];
 ```
 
-####Swift
+###Swift
 
 ```
 //Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
 ```
 
-### Route, GUID, and Bluemix region
+## Route, GUID, and Bluemix region
 
 **appRoute**
 
@@ -169,7 +159,7 @@ Specifies the location where the app is hosted. The ```bluemixRegion``` paramete
 
 
 
-## Registering iOS applications and devices
+# Registering iOS applications and devices
 {: #enable-push-ios-notifications-register}
 
 
@@ -181,11 +171,11 @@ To register iOs applications and devices:
 2. Pass the token to Push Notifications
 
 
-###Create a backend application
+##Create a backend application
 
 Create a backend application in the Boilerplates section Bluemix® catalog, which automatically binds the Push service to this application. If you already created a backend app, make sure that you bind the app to the Push Notification Service.
 
-####Objective-C
+###Objective-C
 
 ```
 	//For Objective-C
@@ -202,7 +192,7 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 	}
 ```
 
-####Swift
+###Swift
 
 ```
 	//For Swift
@@ -214,11 +204,11 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 	}
 ```
 
-###Pass the token to Push Notifications
+##Pass the token to Push Notifications
 
 After the token is received from APNs, pass the token to Push Notifications as part of the ```registerDevice:withDeviceToken``` method.
 
-####Objective-C
+###Objective-C
 
 ```
 //For Objective-C
@@ -240,7 +230,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 }];
 ```
 
-####Swift
+###Swift
 
 After the token is received from APNS, pass the token to Push Notifications as part of the ```didRegisterForRemoteNotificationsWithDeviceToken``` method.
 
@@ -254,7 +244,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
         }
         else{
             print( "Error during device registration \(error) ")
-            print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
+            Print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
     }
 
@@ -263,12 +253,12 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 
 
-## Receiving push notifications on iOS devices
+# Receiving push notifications on iOS devices
 {: #enable-push-ios-notifications-receiving}
 
 Receive push notifications on iOS devices.
 
-###Objective-C
+##Objective-C
 To receive push notifications on iOS devices, add the following Objective-C method to the application delegate of your application.
 
 ```
@@ -278,7 +268,7 @@ To receive push notifications on iOS devices, add the following Objective-C meth
 }
 ```
 
-###Swift
+##Swift
 To receive push notifications on iOS devices, add the following Swift method to the application delegate of your application.
 
 ```
@@ -291,8 +281,8 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 
 
-## Sending basic push notifications
-{: #send}
+# Sending basic push notifications
+{: #push-send-notifications}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
 
@@ -321,7 +311,7 @@ notification in the foreground on a Android and iOS device.
 
 
  
-## Next steps
+# Next steps
 {: #next_steps_tags}
 
 After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.

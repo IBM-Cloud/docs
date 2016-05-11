@@ -1,18 +1,11 @@
 ---
 
 copyright:
- years: 2015 2016
- 
+ years: 2015, 2016
+
 ---
 
-
-# Enabling Android applications to receive push notifications
-{: #tag_based_notifications}
-
-
-Enable Android applications to receive push notifications and send push notifications to your devices.
-
-## Installing the client Push SDK with Gradle
+# Installing the client Push SDK with Gradle
 {: #android_install}
 
 This section describes how to install and use the client Push SDK to further develop your Android applications.
@@ -86,7 +79,8 @@ Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatical
 	```
 
 
-## Initializing the Push SDK for Android apps
+
+# Initializing the Push SDK for Android apps
 {: #android_initialize}
 
 A common place to put the initialization code is in the onCreate method of the main activity in your Android application.
@@ -94,7 +88,7 @@ A common place to put the initialization code is in the onCreate method of the m
 Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application route and applicationGUID. Use these values for your route and App GUID. Modify the code snippet to use your Bluemix app appRoute and appGUID parameters.
 
 
-###Initialize the Core SDK
+##Initialize the Core SDK
 
 ```
 // Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
@@ -118,7 +112,7 @@ Specifies the location where the app hosted. You can use one of three values:
 - BMSClient.REGION_UK
 - BMSClient.REGION_SYDNEY
 
-###Initialize the client Push SDK
+##Initialize the client Push SDK
 
 ```
 //Initialize client Push SDK for Java
@@ -126,7 +120,9 @@ MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```
 
-## Registering Android devices
+
+
+# Registering Android devices
 {: #android_register}
 
 Use the ```IMFPush.register()``` API to register the device with a Push Notification Service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
@@ -158,7 +154,8 @@ Copy and paste the following code snippets into your Android mobile application.
 ```
 
 
-## Receiving push notifications on Android devices
+
+# Receiving push notifications on Android devices
 {: #android_receive}
 
 To register the notificationListener object with Push, call the **MFPPush.listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
@@ -178,8 +175,11 @@ To register the notificationListener object with Push, call the **MFPPush.listen
 3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.
 
 
-## Sending basic push notifications
-{: #send}
+
+
+# Sending basic push notifications
+
+{: #push-send-notifications}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
 
@@ -207,7 +207,7 @@ notification in the foreground on a Android and iOS device.
 
 
 
-## Next steps
+# Next steps
 {: #next_steps_tags}
 
 After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
@@ -215,4 +215,3 @@ After you have successfully set up basic notifications, you can configure config
 Add these Push Notifications Service features to your app.
 To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html).
 To use advanced notifications options, see [Advanced push notifications](t_advance_notifications.html).
-

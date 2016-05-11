@@ -5,17 +5,7 @@ copyright:
 
 ---
 
-# Enabling Cordova applications to receive push notifications
-{: #cordova_enable}
-
-Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} supports development of Cordova-based iOS and Android applications.
-
-Enable Cordova applications to receive push notifications and send push notifications to your devices.
-
-
-
-
-## Installing the Cordova Push plug-in
+# Installing the Cordova Push plug-in
 {: #cordova_install}
 
 Install and use the client Push plug-in to further develop your Cordova applications. This also installs the Cordova Core plug-in, which initializes your connection to Bluemix.
@@ -32,6 +22,7 @@ Install and use the client Push plug-in to further develop your Cordova applicat
 	**Note**: To view the Cordova Push plug-in readme file, go to [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
 
 
+## Installing the Cordova Push plug-in
 1. Change to the folder that you want to create your Cordova app in and run the following command to create a Cordova application. If you have an existing Cordova app, go to step 3.
 
 ```
@@ -111,7 +102,7 @@ cd your_app_name
 	**Note**: Before opening your project in Android Studio, you must first build your Cordova application through the Cordova CLI. Otherwise, you will encounter build errors.
 
 
-## Initializing the Cordova plug-in
+# Initializing the Cordova plug-in
 {: #cordova_initialize}
 
 Before you can use the Push Notification Service Cordova plug-in, you need to initialize it by passing the application route and application GUID. After initializing the plug-in, you can connect to the server app that you have created in the Bluemix dashboard. The Cordova plug-in is the wrapper for the Android and iOS client SDKs to enable a Cordova app to communicate with Bluemix services.
@@ -132,7 +123,8 @@ onDeviceReady: function() {
     },
 ```
 
-## Registering devices
+# Registering devices
+
 {: #cordova_register}
 
 To register a device with the Push Notification Service, call the register method.
@@ -145,7 +137,7 @@ Copy and paste the following code snippet into your Cordova application to regis
 	MFPPush.registerDevice({}, success, failure);
 ```
 
-### Android
+## Android
 {: #cordova_register_android}
 Android does not use of the settings parameter. If you are only building an Android app, pass an empty object; for example:
 
@@ -154,7 +146,7 @@ Android does not use of the settings parameter. If you are only building an Andr
 	MFPPush.unregisterDevice(success, failure);
 ```
 
-### iOS
+##	iOS
 {: #cordova_register_ios}
 If you want to customize the alert, badge, and sound properties, add the following JavaScript code snippet to the web part of your Cordova application.
 
@@ -171,7 +163,7 @@ If you want to customize the alert, badge, and sound properties, add the followi
 
 
 
-### JavaScript
+##JavaScript
 {: #cordova_register_js}
 
 ```
@@ -226,7 +218,7 @@ onDeviceReady: function() {
  }
 ```
 
-### Objective-C
+## Objective-C
 {: #cordova_register_objective}
 Add the following Objective-C code snippet to your application delegate class
 
@@ -241,7 +233,7 @@ Add the following Objective-C code snippet to your application delegate class
 	}
 ```
 
-###Swift
+##Swift
 {: #cordova_register_swift}
 Add the following Swift code snippet to your application delegate class.
 
@@ -259,7 +251,7 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
  
 {: #cordova_register_next}
 
-Build your project and then run your project by using the following commands:
+1. Build your project and then run your project by using the following commands:
 
 	* Android - **cordova build android** and then **cordova run android**
 
@@ -267,12 +259,12 @@ Build your project and then run your project by using the following commands:
 	
 	
 
-## Receiving push notifications on devices
+# Receiving push notifications on devices
 {: #cordova_receive}
 
 Copy and paste the following code snippets to receive push notifications on devices.
 
-###JavaScript
+##JavaScript
 
 Add the following JavaScript code snippet to the web part of your Cordova application.
 
@@ -285,7 +277,7 @@ var notification = function(notification){
 MFPPush.registerNotificationsCallback(notification);
 ```
 
-###Android notification properties
+##Android notification properties
 
 The following section lists the Android notification properties:
 
@@ -293,7 +285,7 @@ The following section lists the Android notification properties:
 * payload - JSON object containing a notification payload
 
 
-###iOS notification properties
+##iOS notification properties
 
 The following section lists the iOS notification properties:
 
@@ -303,7 +295,7 @@ action-loc-key - The string is used as a key to get a localized string in the cu
 * badge - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 * sound - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 
-###Objective-C
+##Objective-C
 
 Add the following Objective-C code snippets to your application delegate class.
 
@@ -323,7 +315,7 @@ Add the following Objective-C code snippets to your application delegate class.
 }
 ```
 
-###Swift
+##Swift
 
 Add the following Swift code snippets to your application delegate class.
 
@@ -345,9 +337,9 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 ```
 
 
-{: #push-send-notifications}
-## Sending basic push notifications
 
+# Sending basic push notifications
+{: #push-send-notifications}
 
 After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
 
@@ -375,7 +367,7 @@ notification in the foreground on a Android and iOS device.
  
 
 
-## Next steps
+# Next steps
 {: #next_steps_tags}
 
 After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
