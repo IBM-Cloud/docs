@@ -79,7 +79,7 @@ cf plugins```
  <tr> 
  <td>[help](#help)</td> 
  <td>[mode](#mode)</td> 
- <td>[状态](#status)</td>
+ <td>[status](#status)</td>
  <td>[update-file](#update_file)</td>
  </tr> 
  <tr> 
@@ -120,7 +120,7 @@ cf mode <appName> <dev|normal>
    </dl>
 
 
-## 状态
+## status
 {: #status}
 
 显示应用程序方式和运行时状态。```
