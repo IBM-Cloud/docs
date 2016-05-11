@@ -83,7 +83,8 @@ stages:
 ```
 {: codeblock} 
 
-##YAML ファイルの構文{: #yaml-syntax}
+##YAML ファイルの構文
+{: #yaml-syntax}
 
 どのようなパイプラインも、以下の構文を使用してテキストで表現することができます。
 
