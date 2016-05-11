@@ -27,7 +27,8 @@ copyright:
 
 ## cf api
 
-显示或指定 {{site.data.keyword.Bluemix_notm}} API 端点的 URL。```
+显示或指定 {{site.data.keyword.Bluemix_notm}} API 端点的 URL。
+```
 cf api BluemixServerURL
 ```
 <dl>
@@ -47,7 +48,8 @@ cf api BluemixServerURL
 
 ## cf bind-service
 
-将现有服务实例绑定到应用程序。```
+将现有服务实例绑定到应用程序。
+```
 cf bind-service appname service_instance
 ```
 
@@ -63,7 +65,8 @@ my_dataworks` 将此服务实例绑定到应用程序。
 
 ## cf create-service
 
-创建服务实例。```
+创建服务实例。
+```
 cf create-service service_name service_plan service_instance
 ```
 例如，您可以使用 `cf create-service DataWorks free my_dataworks` 来创建使用免费计划的 {{site.data.keyword.dataworks_short}} 服务的实例。
@@ -94,7 +97,8 @@ cf create-space space_name
 
 ## cf delete
 
-删除现有应用程序。```
+删除现有应用程序。
+```
 cf delete appname
 ```
 <dl>
@@ -121,7 +125,8 @@ cf delete-space space_name
 
 ## cf events
 
-显示与应用程序有关的运行时事件。```
+显示与应用程序有关的运行时事件。
+```
 cf events appname
 ```
 <dl>
@@ -144,8 +149,10 @@ cf help command_name
 
 ## cf login
 
-登录到 {{site.data.keyword.Bluemix_notm}}。```
-cf login```
+登录到 {{site.data.keyword.Bluemix_notm}}。
+```
+cf login
+```
 发出 cf login 命令时，可以使用以下一个或多个参数：
 <dl>
 <dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
@@ -168,7 +175,8 @@ cf login```
 
 ## cf logs
 
-显示应用程序的 STDOUT 和 STDERR 日志流。```
+显示应用程序的 STDOUT 和 STDERR 日志流。
+```
 cf logs appname
 ```
 <dl>
@@ -182,7 +190,8 @@ cf logs appname
 
 列出 Marketplace 中可用的所有服务。此命令列出的服务还会显示在 {{site.data.keyword.Bluemix_notm}}“目录”中。
 ```
-cf marketplace```
+cf marketplace
+```
 
 ## cf push
 
@@ -200,7 +209,8 @@ cf push appname
 <dd>```
 cf push appname -c null
 ```</dd>
-<dd>您也可以使用此选项来运行脚本文件。例如：```
+<dd>您也可以使用此选项来运行脚本文件。例如：
+```
 cf push appname -c “bash ./<run.sh>"
 ```</dd>
 <dt>*-f* manifest_path</dt>
@@ -233,7 +243,8 @@ cf push appname -c “bash ./<run.sh>"
 
 ## cf scale
 
-显示或更改应用程序的实例编号、磁盘空间限制和内存限制。```
+显示或更改应用程序的实例编号、磁盘空间限制和内存限制。
+```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
 <dl>
@@ -251,12 +262,15 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 
 ## cf services
 
-列出当前空间中可用的所有服务。```
-cf services```
+列出当前空间中可用的所有服务。
+```
+cf services
+```
 
 ## cf set-env
 
-设置应用程序的环境变量。```
+设置应用程序的环境变量。
+```
 cf set-env appname var_name var_value
 ```
 <dl>
@@ -270,12 +284,15 @@ cf set-env appname var_name var_value
 
 ## cf stacks
 
-列出所有堆栈。堆栈是预构建的文件系统，包括可运行应用程序的操作系统。```
-cf stacks```
+列出所有堆栈。堆栈是预构建的文件系统，包括可运行应用程序的操作系统。
+```
+cf stacks
+```
 
 ## cf stop
 
-停止应用程序。```
+停止应用程序。
+```
 cf stop appname
 ```
 <dl>
@@ -285,7 +302,8 @@ cf stop appname
 
 ## cf -v
 
-显示 cf 命令行界面的版本。```
+显示 cf 命令行界面的版本。
+```
 cf -v
 ```
 
