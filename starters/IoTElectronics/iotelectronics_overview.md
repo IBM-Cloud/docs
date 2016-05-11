@@ -37,9 +37,9 @@ The Starter boilerplate deploys the integrated {{site.data.keyword.iotelectronic
 
 **{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps, and provides enhanced performance, security, and serviceability.
 
-**Sample mobile app** lets you view the status and communicate with a simulated appliance by using your iOS smartphone.  
+**Sample mobile app** lets you view the status and communicate with a simulated appliance by using your iOS smartphone. Find out how to get the mobile app [here](iotelectronics_config_mobile.html).
 
-
+<!--
 ## Getting started with the sample mobile app
 {: #iotforelectronics_getmobileapp}
 
@@ -79,7 +79,7 @@ To register an appliance, follow these steps:
     - To register another device, click the plus sign on the Appliances Overview page, and then select **QR code scanner**. Scan the QR code of your washer, then click **Register**. The device is displayed in the mobile app.
   3. After your device is registered, you can see the status of the washer on your phone and on your computer.  On your phone, select **Start wash** to start a wash cycle. You can see the changing washer status on both your phone and your computer.
   4. On your computer, select a problem with the washer (such as Board Failure or Strong Vibration).  The problem sends an alert to your iPhone that shows your washer is unavailable.  On your computer, select **Fix machine** to correct the problem. You can see the changing status on both your phone and your computer.
-
+-->
 
 # Related Links
 {: #rellinks}
