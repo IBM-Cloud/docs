@@ -14,7 +14,7 @@ copyright:
 #Securing apps
 {: #securingapps}
 
-*Last updated: 30 March 2016*
+*Last updated: 9 May 2016*
 
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
@@ -72,15 +72,12 @@ For every organization in {{site.data.keyword.Bluemix_notm}} with an account own
 
 Before you can upload certificates, you must create a certificate signing request. See [Creating certificate signing requests](#ssl_csr).
 
-To properly serve the SSL certificate, you must use the following IP addresses to configure the DNS server when creating a custom domain to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}.
+When you use a custom domain, to serve the SSL certificate, use the following region endpoints to provide the URL route that is allocated to your organization in Bluemix:
 
-* US-SOUTH: 75.126.81.68
-* EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.166
+  * US-South: secure.us-south.bluemix.net 
+  * EU-GB: secure.eu-gb.bluemix.net
+  * AU-SYD: secure.au-syd.bluemix.net 
 
-The IP addresses that you use for dedicated environments are different. Contact your IBM representative to get the IP address for a dedicated environment.
-
-For more information about creating a custom domain, see [Creating and using a custom domain](updapps.html#domain).
 
 To upload a certificate for your application:
 
@@ -95,6 +92,8 @@ To upload a certificate for your application:
   **Certificate**
     
     A digital document that binds a public key to the identity of the certificate owner, thereby enabling the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
+    
+    A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes you might use a self-signed certificate.
     
     The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
