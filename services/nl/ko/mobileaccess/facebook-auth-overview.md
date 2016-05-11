@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Facebook 신임 정보로 사용자 인증
 {: #facebook-auth-overview}
 ID 제공자로 Facebook을 사용하여 자원을 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 모바일 애플리케이션 사용자는 인증을 위해 Facebook 신임 정보를 사용할 수 있습니다. 
@@ -42,5 +49,6 @@ iOS 또는 Android 애플리케이션을 선택하도록 요청되는 경우 둘
 {: #next-steps}
 
 * [Android 앱에서 Facebook 인증 사용](facebook-auth-android.html)
-* [iOS 앱에서 Facebook 인증 사용](facebook-auth-ios.html)
+* [iOS 앱(Swift SDK)에서 Facebook 인증 사용](facebook-auth-ios-swift-sdk.html)
+* [iOS 앱(Objective-C SDK)에서 Facebook 인증 사용](facebook-auth-ios.html)
 * [Cordova 앱에서 Facebook 인증 사용](facebook-auth-cordova.html)

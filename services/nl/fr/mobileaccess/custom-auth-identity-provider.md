@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+
+---
+
 # Création d'un fournisseur d'identité personnalisé
 {: #custom-create}
 Pour créer un fournisseur d'identité personnalisé, développez une application Web qui expose une API RESTful :
@@ -8,7 +14,8 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 * `base_url`: URL de base de l'application de fournisseur d'identité personnalisé. L'URL de base est l'adresse URL à enregistrer
 dans le tableau de bord {{site.data.keyword.amashort}}.
-* `tenant_id` : Identificateur unique du titulaire. Lorsqu'{{site.data.keyword.amashort}} appelle cette API, il fournit toujours l'identificateur global unique de l'application {{site.data.keyword.Bluemix}}.
+* `tenant_id` : Identificateur unique du titulaire. Lorsque {{site.data.keyword.amashort}} appelle cette API, il fournit toujours
+l'identificateur global unique de l'application {{site.data.keyword.Bluemix}} (`applicationGUID`).
 * `realm_name` : Nom de domaine personnalisé défini dans le tableau de bord {{site.data.keyword.amashort}}.
 * `request_type` : Un type parmi :
 	* `startAuthorization` : Première étape du processus d'authentification. Le fournisseur d'identité personnalisé doit répondre par le statut "challenge", "success" ou "failure".
@@ -36,11 +43,9 @@ Le fournisseur d'identité personnalisé peut répondre par une demande d'authen
 par un succès ou un échec immédiat. Le statut de la réponse HTTP doit être `HTTP 200`, et son JSON doit contenir les propriétés suivantes :
 
 * `status` : Statut de la demande : `success`(succès), `challenge` (demande) ou `failure` (échec).
-* `stateId` (facultatif) : Identificateur de type chaîne généré de façon aléatoire pour identifier la session auprès du client mobile.
-Cet attribut peut être omis si le fournisseur d'identité personnalisé ne stocke pas les états.
+* `stateId` (facultatif) : Identificateur de type chaîne généré de façon aléatoire pour identifier la session auprès du client mobile. Cet attribut peut être omis si le fournisseur d'identité personnalisé ne stocke pas les états.
 * `challenge` : Objet JSON qui représente une demande d'authentification à renvoyer au client mobile. Cet attribut n'est envoyé au client que si le statut est défini sur `challenge`.
-* `userIdentity` : Objet JSON qui représente l'identité d'un utilisateur.  L'identité de l'utilisateur est constitué de propriétés telles que `userName` (nom d'utilisateur) et `displayName` (nom affiché), et d'attributs.
-Pour plus d'informations, voir [Objet identité de l'utilisateur](#custom-user-identity). Cette propriété n'est envoyée au client mobile que si le statut est défini sur `success`.
+* `userIdentity` : Objet JSON qui représente l'identité d'un utilisateur.  L'identité de l'utilisateur est constitué de propriétés telles que `userName` (nom d'utilisateur) et `displayName` (nom affiché), et d'attributs.  Pour plus d'informations, voir [Objet identité de l'utilisateur](#custom-user-identity). Cette propriété n'est envoyée au client mobile que si le statut est défini sur `success`.
 
 Exemple :
 
@@ -62,8 +67,7 @@ Exemple :
 
 L'API `handleChallengeAnswer` gère la réponse à une demande d'authentification d'un client mobile. Comme l'API `startAuthorization`, l'API `handleChallengeAnswer` répond par le statut `challenge` (demande), `success` (succès) ou `failure` (échec).
 
-Comme pour la demande `startAuthorization`, le fournisseur d'identité personnalisé a accès à tous les en-têtes HTTP qui sont envoyés par un client mobile dans le corps de la demande.
-Outre les en-têtes de la demande du client mobile, le corps de la demande `handleChallengeAnswer` comprend également les propriétés `stateId` et `challengeAnswer`.
+Comme pour la demande `startAuthorization`, le fournisseur d'identité personnalisé a accès à tous les en-têtes HTTP qui sont envoyés par un client mobile dans le corps de la demande. Outre les en-têtes de la demande du client mobile, le corps de la demande `handleChallengeAnswer` comprend également les propriétés `stateId` et `challengeAnswer`.
 
 ### Exemple de corps d'une demande `handleChallengeAnswer`
 {: #custom-handleChallengeAnswer-example}
@@ -109,19 +113,25 @@ L'objet identité de l'utilisateur est utilisé par le service {{site.data.keywo
 ## Remarques sur la sécurité
 {: #custom-security}
 
-Chaque demande du service {{site.data.keyword.amashort}} à un fournisseur d'identité personnalisé contient un en-tête d'autorisation lui permettant de vérifier que la demande provient d'une source autorisée. Même si cette opération n'est pas obligatoire, il est recommandé de valider l'en-tête d'autorisation en instrumentant le fournisseur d'identité personnalisé avec un SDK serveur de {{site.data.keyword.amashort}}. Pour utiliser ce logiciel SDK, votre application de fournisseur d'identité personnalisé doit être implémentée avec Node.js ou Liberty for Java et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
+Chaque demande du service {{site.data.keyword.amashort}} à un fournisseur d'identité personnalisé contient un en-tête d'autorisation lui permettant de vérifier que la demande provient d'une source autorisée. Même si cette opération n'est pas obligatoire, il est recommandé de valider l'en-tête d'autorisation en instrumentant le fournisseur d'identité personnalisé avec un SDK serveur de {{site.data.keyword.amashort}}. Pour
+utiliser ce SDK, votre fournisseur d'identité personnalisé doit être implémenté avec Node.js ou Liberty
+for Java&trade;&trade; et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
 
-L'en-tête d'autorisation contient des informations sur le client mobile et l'appli mobile qui a déclenché le processus d'authentification.
-Vous pouvez utiliser le contexte de sécurité pour récupérer ces données. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
+L'en-tête d'autorisation contient des informations sur le client mobile et l'appli mobile qui a déclenché le processus d'authentification. Vous pouvez utiliser le contexte de sécurité pour récupérer ces données. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
 
 ## Exemple d'implémentation d'un fournisseur d'identité personnalisé
 {: #custom-sample}
-L'implémentation de fournisseur d'identité personnalisé Node.js qui figure ci-dessous est un exemple sur lequel vous pouvez vous appuyer pour développer votre propre fournisseur d'identité personnalisé.
-Téléchargez l'intégralité du code de l'application depuis le [référentiel Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé lorsque vous
+développez votre
+fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels GitHub.
 
-### Structure JSON
+* [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-Dans cette implémentation, on suppose que la réponse à la demande d'authentification est un objet JSON avec la structure suivante :
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -130,7 +140,7 @@ Dans cette implémentation, on suppose que la réponse à la demande d'authentif
  }
  ```
 
-### Exemple de code d'un fournisseur d'identité personnalisé
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -209,6 +219,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Etapes suivantes
 {: #next-steps}

@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
@@ -23,7 +35,7 @@
 ```
 {: codeblock} 
 
-YAML 檔案格式是單一 YAML 文件，其中包含管線規格。下列範例 {{site.data.keyword.jazzhub_short}} 管線會在一個階段中使用 Ant 建置 Java 應用程式。然後在另一個階段，管線會將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
+YAML 檔案格式是單一 YAML 文件，其中包含管線規格。下列範例 {{site.data.keyword.jazzhub_short}} 管線會在某一個階段中使用 Ant 建置 Java 應用程式。然後在另一個階段，管線會將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。 
 
 ``` 
 ---
@@ -65,7 +77,7 @@ stages:
       application: JavaSampleUnitTest
     script: |
       cf push "${CF_APP}"
-      # 檢視日誌
+      # View logs
       #cf logs "${CF_APP}" --recent
 ```
 {: codeblock} 
@@ -86,12 +98,12 @@ stages:
 ```
 ---
 name: <name>
-[inputs:
-	<sequence of inputs>]
+[inputs: 
+	<sequence of inputs>] 
 [triggers:   
-	<sequence of triggers>]
+	<sequence of triggers>] 
 [properties:   
-	<sequence of properties>]
+	<sequence of properties>] 
 [jobs:   
 	<sequence of jobs>]
 ```

@@ -1,17 +1,26 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #custom-ios}
 
 {{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。
 
+**ヒント:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。Swift SDK を使用する手順については、[iOS用の {{site.data.keyword.amashort}} Client SDK の構成 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html) を参照してください。
+
 ## 開始する前に
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](getting-started.html)
- * [iOS SDK のセットアップ](getting-started-ios.html)
- * [カスタム ID プロバイダーの使用](custom-auth.html)
- * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [iOS Objective-C SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
+ * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 
@@ -30,7 +39,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 1. コマンド・ラインで `pod install` を実行します。
 追加された依存関係が CocoaPods によってインストールされます。進行状況および追加されたコンポーネントが表示されます。
 
-**重要**: この時点で、CocoaPods によって生成された xcworkspace ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。  
+**重要**: この時点で、CocoaPods によって生成された xcworkspace ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。
 
 1. コマンド・ラインから `open {your-project-name}.xcworkspace` を実行して、iOS プロジェクトのワークスペースを開きます。
 
@@ -39,9 +48,9 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 ### Client SDK の初期化 
 {: #custom-ios-sdk-initialize}
 
-applicationGUID および applicationRoute パラメーターを渡すことによって、SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
+アプリケーションの経路 (`applicationRoute`) および GUID (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
 
-1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。「**Mobile オプション**」をクリックします。*「アプリケーションの経路 (Application Route)」*および*「アプリケーション GUID (Application GUID)」*の値が表示されます。
+1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。**「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) の値を確認します。
 
 1. Client SDK を使用したいクラスに `IMFCore` フレームワークをインポートします。
 
@@ -66,7 +75,7 @@ applicationGUID および applicationRoute パラメーターを渡すことに�
 	* `BridgingHeader.h` ファイルの場所に値を設定します。例: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* プロジェクトをビルドすることによって、Xcode によってブリッジング・ヘッダーが選出されることを検証します。
 
-1. Client SDK を初期化します。applicationRoute および applicationGUID を、**「モバイル・オプション」**から入手した値で置き換えます。
+1. Client SDK を初期化します。applicationRoute および applicationGUID を、**「モバイル・オプション」**で取得した**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) の値に置き換えます。
 
 	Objective-C:
                     
@@ -82,8 +91,8 @@ applicationGUID および applicationRoute パラメーターを渡すことに�
 
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("https://abms.mybluemix.net",
-	 							backendGUID: "c3f8f2ba-5892-4362-95cf-744692cc7341")
+	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
+	 							backendGUID: "applicationGUID")
 	```
 
 
@@ -138,7 +147,9 @@ applicationGUID および applicationRoute パラメーターを渡すことに�
 
 IMFAuthenticationDelegate サンプルは、カスタム ID プロバイダーのサンプルと連携するよう設計されています。このサンプルは [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
 
-Objective-C 実装:
+Objective-C:
+                    
+
 
 ``` Objective-C
 CustomAuthenticationDelegate.h
@@ -161,7 +172,7 @@ CustomAuthenticationDelegate.m
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
-	// In this sample the IMFAuthenticationDelegate immediatelly returns a hardcoded
+	// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
 	// set of credentials. In a real life scenario this is where developer would
 	// show a login screen, collect credentials and invoke
 	// [context submitAuthenticationChallengeAnswer:] API
@@ -205,7 +216,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		NSLog("didReceiveAuthenticationChallenge :: %@", challenge)
 
-		// In this sample the IMFAuthenticationDelegate immediatelly returns a hardcoded
+		// In this sample the IMFAuthenticationDelegate immediately returns a hardcoded
 		// set of credentials. In a real life scenario this is where developer would
 		// show a login screen, collect credentials and invoke
 		// context.submitAuthenticationChallengeAnswer() API
@@ -236,7 +247,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## カスタム IMFAuthenticationDelegate の登録
 
-カスタム IMFAuthenticationDelegate を作成した後、それを `IMFClient` に登録します。アプリケーション内で、保護リソースに要求を送信する前に、以下のコードを呼び出します。realmName には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
+カスタム IMFAuthenticationDelegate を作成した後に、`IMFClient` に登録します。アプリケーション内で、保護リソースに要求を送信する前に、以下のコードを呼び出します。realmName には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
 
 Objective-C アプリケーション:
 
@@ -263,8 +274,7 @@ Client SDK を初期化し、カスタム `IMFAuthenticationDelegate` を登録�
 {: #custom-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
-
- 1. ブラウザーで `http://{appRoute}/protected`、たとえば `http://my-mobile-backend.mybluemix.net/protected` を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
 その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 1. iOS アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化し、カスタム `IMFAuthenticationDelegate` を登録した後に、以下のコードを追加します。
 
@@ -306,7 +316,25 @@ if (error){
 	};
 
 	```
-
 1. 	要求が成功したら、Xcode コンソールに次のような出力が表示されます。
 
 	![image](images/ios-custom-login-success.png)
+	
+	
+	
+	次のコードを追加してログアウト機能を追加することもできます。
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	Swift:
+ 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。
+

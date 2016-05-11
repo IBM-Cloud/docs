@@ -1,9 +1,16 @@
-# Visão geral do {{site.data.keyword.amashort}}
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+# Sobre {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 O serviço {{site.data.keyword.amafull}} fornece serviços de autenticação e monitoramento para aplicativos móveis que acessam recursos em nuvem hospedados no {{site.data.keyword.Bluemix_notm}}.
 
-É possível usar o serviço {{site.data.keyword.amashort}} para proteger os aplicativos Node.js e Java for Liberty que estão hospedados no {{site.data.keyword.Bluemix_notm}} com vários tipos de autenticação. Ao instrumentar seus aplicativos móveis com o {{site.data.keyword.amashort}} SDK, é possível usar os recursos de autenticação fornecidos pelo serviço {{site.data.keyword.amashort}}. Logs de monitoramento e do lado do cliente são reunidos automaticamente e enviados para o serviço {{site.data.keyword.amashort}} sob demanda. Use o painel do {{site.data.keyword.amashort}} para configurar os vários tipos de autenticação e ver dados que são reunidos pelo SDK do lado do cliente.
+É possível usar o serviço {{site.data.keyword.amashort}} para proteger os aplicativos Node.js e Liberty for Java&trade; que são hospedados no {{site.data.keyword.Bluemix_notm}} com vários tipos de autenticação. Ao instrumentar seus aplicativos móveis com o {{site.data.keyword.amashort}} SDK, é possível usar os recursos de autenticação fornecidos pelo serviço {{site.data.keyword.amashort}}. Logs de monitoramento e do lado do cliente são reunidos automaticamente e enviados para o serviço {{site.data.keyword.amashort}} sob demanda. Use o painel do {{site.data.keyword.amashort}} para configurar os vários tipos de autenticação e ver dados que são reunidos pelo SDK do lado do cliente.
 
 **Nota**: o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access.
 
@@ -13,7 +20,7 @@ do {{site.data.keyword.amashort}}
 
 * **Painel do {{site.data.keyword.amashort}}**: configure vários tipos de autenticação e monitore desempenho, analítica, estatísticas de uso e logs do dispositivo do aplicativo móvel.
 * **{{site.data.keyword.amashort}} Client SDK**: instrumente aplicativos móveis para usar a funcionalidade do {{site.data.keyword.amashort}}. As plataformas suportadas são: iOS 8+, Android 4+, Cordova.
-* **{{site.data.keyword.amashort}} Server SDK**: proteja os recursos que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Atualmente, os tempos de execução suportados são Node.js e Java for Liberty.
+* **{{site.data.keyword.amashort}} Server SDK**: proteja os recursos que estão hospedados no {{site.data.keyword.Bluemix_notm}}. Atualmente, os tempos de execução suportados são Node.js e Liberty for Java&trade;.
 
 ## Tipos de autenticação
 {: #authtypes}
@@ -35,7 +42,7 @@ do {{site.data.keyword.amashort}}
 * Após a autenticação bem-sucedida, o {{site.data.keyword.amashort}} retorna um token de autorização.
 * O {{site.data.keyword.amashort}} Client SDK inclui automaticamente o token de autorização na solicitação original e a envia novamente para o recurso em nuvem.
 * O {{site.data.keyword.amashort}} Server SDK extrai o accessToken da solicitação e valida-o com o serviço {{site.data.keyword.amashort}}.
-* O acesso é concedido. A resposta é retornada para o aplicativo móvel.
+* O acesso é concedido.  A resposta é retornada para o aplicativo móvel.
 
 ## Fluxo de solicitação do {{site.data.keyword.amashort}}
 {: #flow}

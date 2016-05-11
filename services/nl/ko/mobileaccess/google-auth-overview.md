@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # 사용자 인증을 위해 Google 사용
 {: #google-auth}
 ID 제공자로 Google을 사용하여 자원을 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 그러면 모바일 애플리케이션 사용자가 인증을 위해 Google 신임 정보를 사용할 수 있습니다. 

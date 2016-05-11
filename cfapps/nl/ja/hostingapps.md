@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 
 #{{site.data.keyword.Bluemix_notm}} でのアプリのホスティング
 
-*最終更新日: 2015 年 12 月 1 日*
+*最終更新日: 2016 年 4 月 18 日*
 
 <!--The whole topic is staging only -->
 
@@ -79,13 +91,15 @@
 
 {{site.data.keyword.Bluemix_notm}} が提供する以下のツールおよびサービスを使用できます。
 
+*表 1. {{site.data.keyword.Bluemix_notm}} ツール*
+
 | ツール	|  方法  |
 |:------|:--------|
 |Cloud Foundry コマンド・ライン・インターフェース (cf cli)	|ローカル・クライアントでコードを管理し、Cloud Foundry コマンド・ライン・インターフェースを使用してアプリケーションを手動で {{site.data.keyword.Bluemix_notm}} にプッシュします。詳しくは、『[アプリケーションのアップロード](../starters/upload_app.html)』を参照してください。|
 |Eclipse	|Eclipse でコードを管理し、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリケーションをプッシュします。|
 |Git 統合	|GitHub でコードを管理し、Git を {{site.data.keyword.Bluemix_notm}} に統合します。他の開発者と共同作業することができます。コードの変更をコミットすると、アプリケーションは自動的に {{site.data.keyword.Bluemix_notm}} にデプロイされます。アプリケーションを手動でプッシュする必要はありません。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub リポジトリーでコードを管理し、DevOps Delivery Pipeline を使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。|
-*表 1. {{site.data.keyword.Bluemix_notm}} ツール*
+
 
 アプリケーションの要件が Cloud Foundry プラットフォームではサポートされない場合、カスタマイズされた追加のオプションを使用してランタイムがセットアップされ、構成され、保守される、コンテナーまたは VM を使用できます。
 
@@ -118,7 +132,7 @@
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](../manageapps/deployingapps.html#appmanifest)』を参照してください。
+<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](../manageapps/depapps.html#appmanifest)』を参照してください。
 
 </p></li></ol>
 </li>

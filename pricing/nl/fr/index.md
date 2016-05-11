@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -39,7 +51,7 @@
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 4 janvier 2016*
+*Dernière mise à jour : 29 mars 2016*
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
 {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
@@ -121,7 +133,7 @@ Avec un compte de type Paiement à la carte, vous êtes facturé en fonction de 
 {{site.data.keyword.Bluemix_notm}}. Avec un compte de type Abonnement, vous pouvez bénéficier d'une remise mensuelle contre un engagement financier
 mensuel minimum. L'environnement {{site.data.keyword.Bluemix_notm}} dédié et l'environnement {{site.data.keyword.Bluemix_notm}} local sont facturés selon des contrats annuels.
 
-Vous pouvez convertir votre essai gratuit en compte de facturation à tout moment. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
+Vous pouvez convertir à tout moment votre version d'évaluation en compte facturable. Toutes les informations du compte sans facturation dans le cadre de votre essai gratuit, ainsi que les solutions {{site.data.keyword.Bluemix_notm}} seront fusionnées directement dans le nouveau compte de facturation.
 
 Après avoir créé un compte de facturation, vous pouvez éditer les informations que vous avez indiquées. Cliquez sur l'icône **Paramètres de
 profil** dans le coin supérieur droit de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Compte &gt; Type de compte** pour éditer
@@ -231,7 +243,7 @@ volume en fonction de votre utilisation réelle. Les services peuvent proposer d
 général, la tarification différenciée est utilisée pour les paramètres de calcul des frais pour lesquels des quantités élevées par mois sont prévues, comme
 les appels d'API. |
 | Réservé | La tarification réservée repose sur un engagement à long terme pour un service, qui permet d'obtenir une remise. Avec un plan réservé, vous
-obtenez une instance de service dédiée facile à configurer, à déployer et à distribuer dans l'environnement {{site.data.keyword.Bluemix_notm}} public.  | Services | DB2 on Cloud propose des plans réservés.|
+obtenez une instance de service dédiée facile à configurer, à déployer et à distribuer dans l'environnement {{site.data.keyword.Bluemix_notm}} public. | Services | DB2 on Cloud propose des plans réservés.|
 
 ###Prix des ressources de traitement
 {: #compute}
@@ -268,8 +280,7 @@ la franchise mensuelle est facturée.</dd>
     <dd><p>En tant que propriétaire d'un compte de type Paiement à la carte ou Abonnement, vous pouvez réserver une instance de service avec un engagement à
 long terme en échange d'une remise. Par exemple, vous pouvez réserver l'offre DB2 on Cloud de grande taille standard pour 12 mois.</p> 
     <p>Certains services {{site.data.keyword.Bluemix_notm}} offrent des plans réservés. Vous pouvez demander un plan réservé à partir du <strong>Catalogue</strong> {{site.data.keyword.Bluemix_notm}} en cliquant sur le titre du service. Ensuite, sélectionnez le plan de service le mieux adapté à vos besoins. Si un plan réservé est disponible, cliquez sur <strong>Demande</strong> et suivez les invites pour envoyer votre demande. Vous
-recevrez un courrier électronique contenant les informations sur le prix du plan réservé. Un ingénieur commercial {{site.data.keyword.Bluemix_notm}} prendra également contact avec vous rapidement pour finaliser l'achat.
-</p></dd>
+recevrez un courrier électronique contenant les informations sur le prix du plan réservé. Un ingénieur commercial {{site.data.keyword.Bluemix_notm}} prendra également contact avec vous rapidement pour finaliser l'achat.</p></dd>
 <dt>Tarification différenciée</dt>
     <dd>A l'instar de la tarification au compteur, le prix que vous payez dépend de la consommation que vous faites des contextes d'exécution et des
 services. Toutefois, la tarification différenciée propose des tranches de tarification supplémentaires et permet souvent de bénéficier de remises dans les tranches de consommation élevée. La tarification différenciée peut être par tranches simples, graduées ou fixes.</dd>
@@ -391,10 +402,15 @@ application.
 contextes d'exécution et des services que vous avez entrées.
 * Vous pouvez aussi calculer votre coût manuellement.
 
-###Utilisation de la calculatrice des coûts
+###Utilisation des calculatrices de coût
 {: #calculator}
 
-Vous pouvez estimer rapidement le prix de votre application à l'aide de la calculatrice des coûts dans la page Tarification de {{site.data.keyword.Bluemix_notm}}. Accédez à la page Tarification de {{site.data.keyword.Bluemix_notm}} et cliquez sur **Ouvrir la calculatrice**.
+Vous pouvez évaluer rapidement la tarification de votre application en utilisant les calculatrices de coût fournies par
+{{site.data.keyword.Bluemix_notm}}.
+
+1. Accédez à la page {{site.data.keyword.Bluemix_notm}} [Tarification](https://console.{DomainName}/pricing/). 
+2. Utilisez l'un des widgets **Estimez vos coûts** ou cliquez sur **Ouvrir la calculatrice** pour utiliser
+la **calculatrice de prix au centime près**.
 
 Pour utiliser la calculatrice, entrez votre utilisation mensuelle prévue pour les ressources répertoriées, par exemple le nombre d'instances ou de
 notifications push. Cliquez dans la zone **Utilisation mensuelle**
@@ -498,7 +514,8 @@ Une fois tous les éléments additionnés, le prix total de l'application est 38
 ##Détails sur l'utilisation
 {: #usage}
 
-En tant que propriétaire de compte ou responsable de la facturation, vous pouvez vous servir de la vue Détails sur l'utilisation afin d'afficher les
+En tant que propriétaire de compte, utilisateur disposant du droit *Auditeur* dans l'espace ou responsable de la facturation, vous pouvez
+vous servir de la vue Détails sur l'utilisation afin d'afficher les
 frais en temps réel pour les contextes d'exécution et les services que vous utilisez par mois dans vos organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
 régions, ou sélectionner une région et un espace particuliers, pour les 12 derniers mois.
 

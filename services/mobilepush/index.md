@@ -14,7 +14,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-The {{site.data.keyword.mobilepushfull}} service measures the state, behavior, and context of your mobile apps, mobile users, and mobile devices by providing monitoring services for mobile applications that access Cloud Resources hosted on {{site.data.keyword.Bluemix_notm}}. Client side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
+
 {:shortdesc}
 
 The Push Notifications service provides a unified platform to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts, (based on deviceID), and also tags (or topics) push notifications to your mobile application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpushrestapidocs/) to further develop your client applications.

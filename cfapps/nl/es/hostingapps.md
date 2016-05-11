@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 
 #Alojamiento de apps en {{site.data.keyword.Bluemix_notm}}
 
-*Última actualización: 1 de diciembre de 2015*
+*Última actualización: 18 de abril de 2016*
 
 <!--The whole topic is staging only -->
 
@@ -107,8 +119,7 @@ base de datos estándar, consultas y conexiones de servicio web.
   Si ya
 ha utilizado características específicas del sistema operativo, puede
 solucionarlo mediante el uso de bibliotecas de compatibilidad, como
-Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows.
-Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux. 
+Cygwin y Mono. Cygwin es una biblioteca de compatibilidad que proporciona un conjunto de herramientas Linux en un entorno Windows. Mono es una biblioteca de compatibilidad que proporciona capacidades de Windows .NET en Linux.
 
   Evite las dependencias
 de un sistema operativo específico; en su lugar, utilice servicios proporcionados
@@ -149,10 +160,11 @@ Para desplegar su app en {{site.data.keyword.Bluemix_notm}} como una app de Clou
 seleccione un ejecutable del Catálogo de {{site.data.keyword.Bluemix_notm}}. El ejecutable contiene una app Hello World iniciadora que puede sustituir por su propia app. Si no encuentra un iniciador que proporcione
 el ejecutable que quiere, puede aportar un paquete de compilación personalizado
 compatible con Cloud Foundry a {{site.data.keyword.Bluemix_notm}}, utilizando la opción -b con el
-mandato cf push.
-Para obtener detalles, consulte [Utilización de paquetes de compilación de la comunidad](../cfapps/byob.html).
+mandato cf push. Para obtener detalles, consulte [Utilización de paquetes de compilación de la comunidad](../cfapps/byob.html).
 
 Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.Bluemix_notm}} proporciona:
+
+*Tabla 1. Herramientas de {{site.data.keyword.Bluemix_notm}}*
 
 | Herramienta	| Método |
 |:------|:--------|
@@ -160,14 +172,14 @@ Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.B
 interfaz de línea de mandatos de Cloud Foundry para enviar por push su app manualmente a
 {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](../starters/upload_app.html).|
 |Eclipse	|Gestione su código en Eclipse y utilice IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para
-enviar por push su app. |
+enviar por push su app.|
 |Integración con Git	|Gestione su código en GitHub e integre Git en {{site.data.keyword.Bluemix_notm}}. Puede colaborar con otros desarrolladores. Su app se despliega automáticamente en
 {{site.data.keyword.Bluemix_notm}} cuando confirma los cambios en el código. No necesita enviar por push manualmente
 la app.|
 |{{site.data.keyword.Bluemix_notm}} DevOps
 Delivery Pipeline	|Gestione su código en el repositorio DevOps GitHub y despliegue su app en
 {{site.data.keyword.Bluemix_notm}} utilizando DevOps Delivery Pipeline.|
-*Tabla 1. Herramientas de {{site.data.keyword.Bluemix_notm}}*
+
 
 Si la plataforma Cloud Foundry no admite los requisitos de su app,
 puede utilizar un contenedor o MV en la que el tiempo de ejecución se establezca,
@@ -196,9 +208,11 @@ más reciente de la interfaz de línea de mandatos de cf.
 
 <li>Opcional: Si quiere especificar y guardar los detalles de despliegue antes de enviar por push
 una app a {{site.data.keyword.Bluemix_notm}},
-puede añadir el manifiesto de la app realizando los pasos siguientes: <ol>
-<li>Acceda al directorio de trabajo de su app y cree un archivo llamado manifest.yml, que es el nombre predeterminado. </li>
-<li>Especifique los detalles de despliegue en el archivo de manifiesto. El ejemplo siguiente muestra un archivo de manifiesto de una app Java™. <pre class="pre codeblock"><code>applications:
+puede añadir el manifiesto de la app realizando los pasos siguientes:
+<ol>
+<li>Acceda al directorio de trabajo de su app y cree un archivo llamado manifest.yml, que es el nombre predeterminado.</li>
+<li>Especifique los detalles de despliegue en el archivo de manifiesto. El ejemplo siguiente muestra un archivo de manifiesto de una app Java™.
+<pre class="pre codeblock"><code>applications:
 - disk_quota: 1024M
   host: myjavatest
   name: MyJavaTest
@@ -207,7 +221,7 @@ puede añadir el manifiesto de la app realizando los pasos siguientes: <ol>
   instances: 1
   memory: 512M</code></pre>
 <p>Para obtener más información sobre las opciones admitidas que puede utilizar en este archivo, consulte
-[manifiesto de la app](../manageapps/deployingapps.html#appmanifest).
+[manifiesto de la app](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -232,8 +246,7 @@ con el mandato push de cf. Por ejemplo:
 
 **Notas:**
 
-* Cuando se utiliza el mandato cf push, la interfaz de línea de mandatos de copia todos los archivos y directorios del directorio actual en {{site.data.keyword.Bluemix_notm}}.
-Asegúrese de tener solo los archivos necesarios en su directorio de app.
+* Cuando se utiliza el mandato cf push, la interfaz de línea de mandatos de copia todos los archivos y directorios del directorio actual en {{site.data.keyword.Bluemix_notm}}. Asegúrese de tener solo los archivos necesarios en su directorio de app.
 * Asegúrese de que su organización dispone de memoria suficiente para todas las instancias de su
 app. Para ver la cuota de memoria para su organización, utilice cf org org_name.
 * Para obtener más información sobre cf push, consulte [Mandatos cf](../cli/reference/cfcommands/index.html).

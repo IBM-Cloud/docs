@@ -1,12 +1,19 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Ativando a autenticação do Facebook em apps Android
 {: #facebook-auth-android}
 Para usar o Facebook como provedor de identidade nos aplicativos Android, inclua e configure a plataforma Android do aplicativo Facebook.
 
 ## Antes de Começar
 {: #facebook-auth-android-before}
- * Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do Android que seja instrumentado com o {{site.data.keyword.amashort}} Client SDK. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.amashort}}](getting-started.html) e [Configurando o Android SDK](getting-started-android.html).  
- * Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} Server SDK. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
- * Crie um ID do aplicativo Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](facebook-auth-overview.html#facebook-appID).
+ * Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do Android que seja instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter mais informações, consulte [Introdução ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurando o Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} Server SDK. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+ * Crie um ID do aplicativo Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configurando um aplicativo Facebook para a plataforma Android
@@ -35,7 +42,7 @@ Para usar o Facebook como provedor de identidade nos aplicativos Android, deve-s
 1. Para que o Facebook assegure a autenticidade de seu aplicativo, deve-se especificar um hash de seu certificado de desenvolvedor SHA1.
 
 	**Mais sobre a segurança do Android:** o sistema operacional Android requer que todos os aplicativos instalados em um dispositivo Android sejam assinados com um certificado de desenvolvedor. O aplicativo Android pode ser construído em dois modos: depuração e liberação. <br/>
-  Use certificados diferentes para os modos de depuração e liberação. Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK que, em geral, é instalado automaticamente pelo Android Studio. Quando desejar liberar seu app no armazenamento do Google Play, você deverá assinar seu app com outro certificado que, em geral, você mesmo gera. <br/>É possível inserir dois conjuntos de hashes chaves com o facebook: um hash chave para aplicativos construídos no modo de depuração com um certificado de depuração e outro hash chave para aplicativos construídos no modo de liberação com um certificado de liberação. Para obter mais informações, consulte [Assinando aplicativos Android](http://developer.android.com/tools/publishing/app-signing.html).
+  Use certificados diferentes para os modos de depuração e liberação.  Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK que, em geral, é instalado automaticamente pelo Android Studio. Quando desejar liberar seu app no armazenamento do Google Play, você deverá assinar seu app com outro certificado que, em geral, você mesmo gera. <br/>É possível inserir dois conjuntos de hashes chaves com o facebook: um hash chave para aplicativos construídos no modo de depuração com um certificado de depuração e outro hash chave para aplicativos construídos no modo de liberação com um certificado de liberação. Para obter mais informações, consulte [Assinando aplicativos Android](http://developer.android.com/tools/publishing/app-signing.html).
 
 1. O keystore que contém o certificado que você está usando para o ambiente de desenvolvimento é armazenado no arquivo `~/.android/debug.keystore`. A senha do keystore padrão é: `android`. Use esse certificado para construir aplicativos no modo de depuração.
 
@@ -57,13 +64,15 @@ Para usar o Facebook como provedor de identidade nos aplicativos Android, deve-s
 {: #facebook-auth-android-mca}
 Depois que você tiver o ID do aplicativo Facebook e tiver configurado o aplicativo Facebook para atender clientes Android, será possível ativar a autenticação do Facebook no painel do {{site.data.keyword.amashort}}.
 
-1. Abra o painel do {{site.data.keyword.Bluemix}} e clique no aplicativo {{site.data.keyword.Bluemix_notm}}.
+1. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}.
 
-1. Clique em **Opções de dispositivo móvel** e anote os valores *applicationRoute* e *applicationGUID*. Esses valores serão necessários nas etapas a seguir.
+1. Clique em **Opções móveis** e anote a
+**Rota** (`applicationRoute`) e o **GUID do
+app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
-1. Clique no quadro do {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é exibido.
+1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
 
-1. Clique em **Configurar autenticação > Facebook**.
+1. Clique no ladrilho **Facebook**.
 
 1. Especifique o ID do aplicativo Facebook e clique em **Salvar**.
 
@@ -138,9 +147,15 @@ Seu projeto Android pode ter dois arquivos `build.gradle`: para o projeto e para
 	</application>
 ```
 
-1. Inicialize o Client SDK e registre o gerenciador de autenticação do Facebook. Inicialize o {{site.data.keyword.amashort}} Client SDK, passando os parâmetros context, applicationGUID e applicationRoute.<br/>
-Um local comum, mas não obrigatório, para colocar o código de inicialização é no método `onCreate` da atividade principal no aplicativo Android.<br/>
-Substitua applicationRoute e applicationGUID pelos valores do menu **Opções de dispositivo móvel** na página principal do app no painel do Bluemix.
+1. Inicialize o Client SDK e registre o gerenciador de autenticação do Facebook. Inicialize
+o {{site.data.keyword.amashort}} Client SDK passando os parâmetros de contexto,
+GUID do app (`applicationGUID`) e rota
+(`applicationRoute`).<br/>
+ Um local comum, embora não obrigatório, para colocar o código de inicialização está no
+método `onCreate` da atividade principal em seu aplicativo Android.<br/>
+ Substitua *applicationRoute* e *applicationGUID* pelos valores
+de **Rota** e **GUID do app** no menu
+**Opções móveis** da página principal de seu app no painel Bluemix.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -167,12 +182,15 @@ Após a inicialização do Client SDK e do registro do Gerenciador de autentica�
 
 ### Antes de Começar
 {: #facebook-auth-android-testing-before}
-Deve-se estar usando o texto padrão do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
+Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra a URL a seguir: `http://{appRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel criado com o Texto padrão do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra
+a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client SDK.
 
-1. Use seu aplicativo Android para fazer solicitação para o mesmo terminal. Inclua o código abaixo depois de inicializar o `BMSClient` e registrar o `FacebookAuthenticationManager`
+1. Use seu aplicativo Android para fazer solicitação para o mesmo terminal. Inclua
+o código a seguir depois de inicializar `BMSClient` e registrar
+`FacebookAuthenticationManager`.
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
@@ -206,3 +224,13 @@ Deve-se estar usando o texto padrão do {{site.data.keyword.mobilefirstbp}} e j�
 1. 	Quando sua solicitação for bem-sucedida, a saída a seguir estará no utilitário LogCat:
 
 	![image](images/android-facebook-login-success.png)
+
+1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Se você chamar esse código depois que um usuário estiver conectado ao Facebook, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele será solicitado a fornecer as credenciais do Facebook.
+
+ O valor para `listener` passado para a função de logout pode ser nulo.

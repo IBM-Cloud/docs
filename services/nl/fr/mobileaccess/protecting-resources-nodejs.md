@@ -1,3 +1,9 @@
+---
+
+Copyright : 2015, 2016
+
+---
+
 # Protection des ressources Node.js à l'aide de {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
@@ -6,20 +12,18 @@ Vous pouvez utiliser le logiciel SDK serveur de {{site.data.keyword.amashort}} p
 ### Avant de commencer
 {: #before-you-begin}
 
-* Vous devez savoir développer des applications Node.js sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Création d'applications à l'aide de SDK for Node.js](https://www.{DomainName}/docs/starters/nodejs/index.html)
-* Le SDK serveur de {{site.data.keyword.amashort}} nécessite que le serveur Node.js soit implémenté avec l'infrastructure `Express`.
-Notez que d'autres infrastructures utilisent les infrastructures `Express`, par exemple, LoopBack.
-Vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} avec toutes ces infrastructures. Pour plus d'informations sur l'infrastructure Express,
+* Vous devez savoir développer des applications Node.js sur {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Création d'applications à l'aide de SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* Le SDK serveur de {{site.data.keyword.amashort}} nécessite que le serveur Node.js soit implémenté avec l'infrastructure `Express`. Notez que d'autres infrastructures utilisent les infrastructures `Express`, par exemple, LoopBack. Vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} avec toutes ces infrastructures. Pour plus d'informations sur l'infrastructure Express,
 voir [Expressjs.com](http://expressjs.com/).
 
 ### A propos du SDK serveur de {{site.data.keyword.amashort}}
 {: #about}
 
-Le SDK serveur de {{site.data.keyword.amashort}} fournit une stratégie de passeport `MCABackendStrategy` destinées aux applications de back end déployées sur IBM {{site.data.keyword.Bluemix_notm}}. Pour protéger votre appli des accès non autorisés et obtenir des informations de surveillance, vous devez instrumenter votre serveur Node.js avec `MCABackendStrategy`.
-Le module npm `bms-mca-token-validation-strategy` fournit la stratégie de passeport `MCABackendStrategy` et la méthode de vérification permettant de valider le jeton d'accès et le jeton d'ID émis par {{site.data.keyword.amashort}}. Ce module fournit aussi automatiquement les informations de surveillance relatives aux événements de sécurité.
+Le SDK serveur de {{site.data.keyword.amashort}} fournit une stratégie de passeport `MCABackendStrategy` destinées aux applications de back end déployées sur IBM {{site.data.keyword.Bluemix_notm}}. Pour protéger votre appli des accès non autorisés et obtenir des informations de surveillance, vous devez instrumenter votre serveur Node.js avec `MCABackendStrategy`. Le
+module npm `bms-mca-token-validation-strategy` fournit la stratégie de passeport `MCABackendStrategy` et la méthode de
+vérification pour valider le jeton d'accès et le jeton d'ID émis par {{site.data.keyword.amashort}}. Ce module fournit aussi automatiquement les informations de surveillance relatives aux événements de sécurité.
 
-Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastrucure `Passport` pour mettre en oeuvre l'autorisation.
-Pour plus d'informations, voir [Passportjs.org](http://passportjs.org/).
+Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastrucure `Passport` pour mettre en oeuvre l'autorisation.  Pour plus d'informations, voir [Passportjs.org](http://passportjs.org/).
 
 ### Installation du SDK serveur de {{site.data.keyword.amashort}}
 {: #protecting-resources-serversdk}
@@ -35,7 +39,7 @@ npm install -save bms-mca-token-validation-strategy
 ### Protection des ressources dans Node.js
 {: #protecting-resources-nodesdk}
 
-Le fragment de code suivant illustre la manière d'utiliser `MCABackendStrategy` dans une application Express simple pour protéger les méthodes GET du noeud final `/protected`. 
+Le fragment de code suivant illustre la manière d'utiliser `MCABackendStrategy` dans une application Express simple pour protéger les méthodes GET du noeud final `/protected`.
 
 ```JavaScript
 var express = require('express');

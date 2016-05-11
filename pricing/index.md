@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 29 March 2016*
+*Last updated: 9 May 2016*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage details view for you to check the actual cost after you build your apps.
 {:shortdesc}
@@ -83,7 +83,7 @@ If you convert your account during your free trial, your free allowances are lim
 ##What it costs
 {: #what_it_costs}
 
-Charges vary depending on the resources used by a particular service, runtime, container, virtual machine, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage details* view. For more detailed information about charges, see [How you are charged](index.html#charges).
+Charges vary depending on the resources used by a particular service, runtime, container, virtual server, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage details* view. For more detailed information about charges, see [How you are charged](index.html#charges).
  
 
 ##Promo code
@@ -281,12 +281,12 @@ The following table illustrates how much you pay with a plan that is based on a 
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
 *Table 6. Charge calculation by using the block tier pricing model*
 
-###Free allowances for virtual machines
+### Free allowances for virtual servers
 {: #vms}
 
-You can use {{site.data.keyword.Bluemix_notm}} virtual machines in the IBM public cloud as beta features at no charge. Free allowances are provided for the number of VM images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
+You can use {{site.data.keyword.Bluemix_notm}} virtual servers in the IBM public cloud as beta features at no charge. Free allowances are provided for the number of virtual server images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
 
-The following items are the free allowances for the {{site.data.keyword.Bluemix_notm}} virtual machines beta:
+The following items are the free allowances for the {{site.data.keyword.Bluemix_notm}} virtual servers beta:
 
 * 8 instances
 * 8 virtual CPUs
@@ -294,7 +294,7 @@ The following items are the free allowances for the {{site.data.keyword.Bluemix_
 * 200 GB block storage
 * 4 public IP addresses
 
-In addition, you can use the virtual machines infrastructure to provision VMs in your {{site.data.keyword.Bluemix_notm}} private clouds, subject only to the limits and quotas of your private clouds.
+In addition, you can use the virtual servers infrastructure to provision virtual servers in your {{site.data.keyword.Bluemix_notm}} private clouds, subject only to the limits and quotas of your private clouds.
 
 
 ##How to estimate your costs

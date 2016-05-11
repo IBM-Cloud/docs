@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Raccolta dell'analisi dell'utilizzo
 {: #usage-analytics}
 
@@ -12,23 +19,23 @@ Utilizza le seguenti API per avviare la registrazione e inviare l'analisi dell'u
 
 ```Java
 // Abilita la registrazione dell'analisi dell'utilizzo
-MFPAnalytics.enable()
+MFPAnalytics.enable();
 
 // Avvia la registrazione dell'ora di avvio dell'applicazione
 // Aggiungi questo codice nel metodo onCreate della tua attività principale
-MFPAnalytics.startLoggingApplicationStartup()
+MFPAnalytics.startLoggingApplicationStartup();
 
 // Registra la durata dell'avvio dell'applicazione
-// Aggiungi questo codice nel metodo onStarted della tua attività principale
-MFPAnalytics.logApplicationStartup()
+// Aggiungi questo codice nel metodo onStart della tua attività principale
+MFPAnalytics.logApplicationStartup();
 
 // Registra gli eventi in primo piano e in background dell'applicazione
 // Aggiungi questo codice nei metodi onPause e onResume della tua attività principale
-MFPAnalytics.logSessionStart()
-MFPAnalytics.logSessionEnd()
+MFPAnalytics.logSessionStart();
+MFPAnalytics.logSessionEnd();
 
-// Invia le analisi di utilizzo registrate al servizio {{site.data.keyword.amashort}}
-MFPAnalytics.send()
+// Invia l'analisi dell'utilizzo registrata al servizio {{site.data.keyword.amashort}}
+MFPAnalytics.send();
 ```
 
 ### iOS - Objective-C

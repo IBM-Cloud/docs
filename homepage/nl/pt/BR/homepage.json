@@ -1,22 +1,25 @@
 {
-	"identifier": "id",
-	"label": "title",
+	"identifier": "ID",
+	"label": "título",
 	"items": [{
-		"id": "GetStarted"
+		"id": "Introdução"
 	}, {
-		"id": "Categories",
+		"id": "Categorias",
 		"items": [{
-			"title": "Calcular",
+			"title": "Cálculo",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
-				"name": "Apps Cloud Foundry",
+				"name": "Apps do Cloud Foundry",
 				"href": "cfapps/index.html"
+			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
 			}, {
 				"name": "Contêineres",
 				"href": "containers/container_index.html"
 			}, {
-				"name": "Servidor virtual",
+				"name": "Servidores Virtuais",
 				"href": "virtualmachines/vm_index.html"
 			}]
 		}, {
@@ -27,11 +30,14 @@
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
-				"name": "Rede privada virtual (VPN)",
+				"name": "Grupos de segurança de rede",
+				"href": "services/networksecuritygroups/index.html"
+			}, {
+				"name": "Rede Pivada Virtual (VPN)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
-			"title": "Armazenamento",
+			"title": "Storage",
 			"img": "homepage/images/storage.svg",
 			"href": "services/storage.html",
 			"links": [{
@@ -42,20 +48,17 @@
 				"href": "services/ObjectStorage/index.html"
 			}]
 		}, {
-			"title": "Dados & Analytics",
+			"title": "Data & Analytics",
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
-				"href": "services/AnalyticsforHadoop/index.html"
-			}, {
 				"name": "Analytics for Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
 				"name": "BigInsights",
 				"href": "services/BigInsights/index.html"
 			}, {
-				"name": "Banco de dados NoSQL Cloudant",
+				"name": "Cloudant NoSQL Database",
 				"href": "services/Cloudant/index.html"
 			}, {
 				"name": "dashDB",
@@ -67,13 +70,13 @@
 				"name": "Elasticsearch by Compose",
 				"href": "services/ElasticsearchByCompose/index.html"
 			}, {
-				"name": "Análise geo-espacial",
+				"name": "Geospatial Analytics",
 				"href": "services/geospatial/index.html"
 			}, {
 				"name": "IBM DataWorks",
 				"href": "services/dataworks1/index.html"
 			}, {
-				"name": "Gráfico IBM",
+				"name": "IBM Graph",
 				"href": "services/graphdb/index.html"
 			}, {
 				"name": "Insights for Twitter",
@@ -94,13 +97,13 @@
 				"name": "Redis by Compose",
 				"href": "services/RedisByCompose/index.html"
 			}, {
-				"name": "Banco de dados SQL",
+				"name": "SQL Database",
 				"href": "services/SQLDB/index.html"
 			}, {
-				"name": "Analytics de fluxo",
+				"name": "Streaming Analytics",
 				"href": "services/StreamingAnalytics/index.html"
 			}, {
-				"name": "Banco de dados de séries temporais",
+				"name": "Time Series Database",
 				"href": "services/TimeSeries/index.html"
 			}]
 		}, {
@@ -111,22 +114,22 @@
 				"name": "AlchemyAPI",
 				"href": "services/AlchemyAPI/index.html"
 			}, {
-				"name": "Expansão de conceito",
+				"name": "Concept Expansion",
 				"href": "services/ConceptExpansion/index.html"
 			}, {
-				"name": "Insights de conceito",
+				"name": "Concept Insights",
 				"href": "services/ConceptInsights/index.html"
 			}, {
 				"name": "Diálogo",
 				"href": "services/Dialog/index.html"
 			}, {
-				"name": "Tradução de idioma",
+				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
 			}, {
-				"name": "Classificador de idioma natural",
+				"name": "Natural Language Classifier",
 				"href": "services/NaturalLanguageClassifier/index.html"
 			}, {
-				"name": "Insights de personalidade",
+				"name": "Personality Insights",
 				"href": "services/PersonalityInsights/index.html"
 			}, {
 				"name": "Relationship Extraction",
@@ -138,13 +141,16 @@
 				"name": "Fala para texto",
 				"href": "services/Speechtotext/index.html"
 			}, {
-				"name": "Texto para fala",
+				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
+			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
 			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
-				"name": "Reconhecimento visual",
+				"name": "Visual Recognition",
 				"href": "services/VisualRecognition/index.html"
 			}]
 		}, {
@@ -152,19 +158,13 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "Gerenciamento de API",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Conectar & editar",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Gateway seguro",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
-				"name": "Descoberta de serviço",
+				"name": "Descoberta de Serviço",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
 			}]
 		}, {
@@ -175,13 +175,13 @@
 				"name": "Active Deploy",
 				"href": "services/ActiveDeploy/index.html"
 			}, {
-				"name": "Notificação de alerta",
+				"name": "Alert Notification",
 				"href": "services/AlertNotification/index.html"
 			}, {
-				"name": "Ajuste automático de escala",
+				"name": "Auto-Scaling",
 				"href": "services/Auto-Scaling/index.html"
 			}, {
-				"name": "Pipeline de entrega",
+				"name": "Delivery Pipeline",
 				"href": "services/DeliveryPipeline/index.html"
 			}, {
 				"name": "Globalization Pipeline",
@@ -190,35 +190,35 @@
 				"name": "Monitoring and Analytics",
 				"href": "services/monana/index.html"
 			}, {
-				"name": "Controlar & planejar",
+				"name": "Track & Plan",
 				"href": "services/TrackPlan/index.html"
 			}]
 		}, {
-			"title": "Segurança",
+			"title": "Security",
 			"img": "homepage/images/security.svg",
 			"href": "services/security.html",
 			"links": [{
 				"name": "Segurança do aplicativo em nuvem",
 				"href": "services/ApplicationSecurityonCloud/index.html"
 			}, {
-				"name": "Proteção chave",
+				"name": "Proteção de chave",
 				"href": "services/keymgmt/index.html"
 			}, {
-				"name": "Conexão única",
+				"name": "Single Sign On",
 				"href": "services/SingleSignOn/index.html"
 			}]
 		}, {
-			"title": "Application Services",
+			"title": "Serviços de Aplicativos",
 			"img": "homepage/images/app-services.svg",
 			"href": "services/application_services.html",
 			"links": [{
-				"name": "Regras de negócios",
+				"name": "Business Rules",
 				"href": "services/rules/index.html"
 			}, {
-				"name": "Cache de dados",
+				"name": "Data Cache",
 				"href": "services/DataCache/index.html"
 			}, {
-				"name": "Hub de mensagens",
+				"name": "Message Hub",
 				"href": "services/MessageHub/index.html"
 			}, {
 				"name": "MQ Light",
@@ -230,34 +230,40 @@
 				"name": "WebSphere Application Server",
 				"href": "services/ApplicationServeronCloud/index.html"
 			}, {
-				"name": "Fluxo de trabalho",
+				"name": "Fluxo de Trabalho",
 				"href": "services/workflow/index.html"
 			}, {
 				"name": "Workload Scheduler",
 				"href": "services/WorkloadScheduler/index.html"
 			}]
 		}, {
-			"title": "Móvel",
+			"title": "Mobile",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/mobile.html",
 			"links": [{
+				"name": "Tentar serviços móveis do Bluemix",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
 				"name": "Presence Insights",
 				"href": "services/presenceinsights/index.html"
 			}, {
-				"name": "Notificações push",
+				"name": "Push Notifications",
 				"href": "services/mobilepush/index.html"
 			}]
 		}, {
-			"title": "Internet das coisas",
+			"title": "Internet of Things",
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
@@ -267,9 +273,24 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "APIs",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "Recursos",
 		"descriptionTitle": "Recursos",
 		"items": [{
 			"title": "Por que Bluemix?",
@@ -280,7 +301,7 @@
 			"img": "homepage/images/Softlayer-icon.svg",
 			"href": "https://knowledgelayer.softlayer.com"
 		}, {
-			"title": "Precificação",
+			"title": "Venda",
 			"img": "homepage/images/Pricing-icon.svg",
 			"href": "/pricing/"
 		}, {
@@ -288,7 +309,7 @@
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
 		}, {
-			"title": "CLI e ferramentas de desenvolvimento",
+			"title": "Ferramentas CLI e de desenvolvimento",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015,2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # Start using {{site.data.keyword.iotrtinsights_short}} {: #start-using}

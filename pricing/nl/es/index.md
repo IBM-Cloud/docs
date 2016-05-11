@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -39,7 +51,7 @@
 # Tarifas
 {: #pricing}
 
-*Última actualización: 4 de enero de 2016*
+*Última actualización: 29 de marzo de 2016*
 
 Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista de detalles de uso para comprobar el coste real después de crear las apps.
 {:shortdesc}
@@ -311,10 +323,13 @@ Puede utilizar distintos métodos para saber lo que debe pagar por utilizar {{si
 * La calculadora de costes de la página {{site.data.keyword.Bluemix_notm}} Precios contiene precios precisos de la app en función de la entrada del tiempo de ejecución y del uso de los servicios.
 * También puede calcular el coste manualmente.
 
-###Utilización de la calculadora de costes
+###Utilización de las calculadoras de costes
 {: #calculator}
 
-Puede calcular rápidamente el precio de la app utilizando la calculadora de costes en la página {{site.data.keyword.Bluemix_notm}} Precios. Acceda a la página {{site.data.keyword.Bluemix_notm}} Precios y pulse **Abrir calculadora**.
+Puede calcular rápidamente el precio de la app utilizando las calculadoras de costes que se proporcionan en la página {{site.data.keyword.Bluemix_notm}}. 
+
+1. Vaya a la {{site.data.keyword.Bluemix_notm}} [página de precios](https://console.{DomainName}/pricing/). 
+2. Utilice uno de los widgets **Estime los costes** o pulse **Abrir calculadora** para utilizar la **Calculadora de tarifas de gran precisión**.
 
 Para utilizar la calculadora, escriba el uso mensual proyectado de los recursos listados; por ejemplo, el número de instancias o notificaciones por push. Pulse dentro el campo **Uso mensual** para obtener sugerencias sobre las unidades que están previstas en el campo. La calculadora muestra inmediatamente el precio de la entrada. También puede ajustar la calculadora para que muestre costes anuales en lugar de costes mensuales.
 
@@ -396,7 +411,7 @@ Cuando se añaden todos los elementos, el precio total de la app es de 384,15 d�
 ##Detalles de uso
 {: #usage}
 
-Como propietario de cuenta o gestor de facturación, puede utilizar la vista Detalles de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
+Como propietario de cuenta, usuario con permisos de *Auditor* en el espacio o gestor de facturación, puede utilizar la vista Detalles de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
 
 Para abrir la vista Detalles de uso, pulse el icono **Cuenta y soporte** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y seleccione **Cuenta**. En la página que se muestra, pulse **Detalles de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta.
 

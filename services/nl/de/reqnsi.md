@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 20. Januar 2015*
+*Letzte Aktualisierung: 20. Januar 2016*
 
 Verfügbare Services finden Sie im **Katalog** unter **Services** in der
 {{site.data.keyword.Bluemix}}-Benutzerschnittstelle.
@@ -41,11 +48,11 @@ danach die Community-Services aufgeführt.</dd>
 |Typ	|Beschreibung	|Details zu Unterstützung|
 |:------|:--------------|:--------------|
 |IBM	|Ein Service, der von IBM bereitgestellt wird und zur allgemeinen Verfügung bereitsteht.	|Für Probleme, die sich als Mängel eines von IBM bereitgestellten, allgemein verfügbaren Service
-erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf dem von Ihnen festgelegten Schweregrad. Weitere Informationen zum Schweregrad von Tickets finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support){: new_window}.|
+erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von Ihnen festgelegten Prioritätsstufe. Weitere Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support){: new_window}.|
 |Drittanbieter	|Ein Service, der von einem anderen Unternehmen als IBM bereitgestellt wird.	|Support für Services von Drittanbietern wird durch den Service-Provider bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Service eines Drittanbieters herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. IBM teilt die Analyse mit dem anderen Service-Provider auf, sofern erforderlich.|
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
 |Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der
-Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket ein Schweregrad von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zum Schweregrad von Tickets finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support){: new_window}.|
+Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabelle 1. Supportinformationen für {{site.data.keyword.Bluemix_notm}}-Services*
 
 
@@ -94,6 +101,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.conceptinsightsshort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.dashdbshort}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.datacshort}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.DB2OnCloud_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.deliverypipeline}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.dialogshort}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.documentconversionshort}}	|Ja		|Ja		|Ja|
@@ -106,6 +114,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.weather_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.IntegrationTestingshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.iot_short}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.keymanagementserviceshort}}|Nein		|Ja		|Nein|
 |{{site.data.keyword.languagetranslationshort}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.messagehub}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.messageresonanceshort}}	|Ja		|Ja		|Nein|
@@ -126,6 +135,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.relationshipextractionshort}}	|Ja	|Ja		|Ja|
 |{{site.data.keyword.retrieveandrankshort}}	|Ja 		|Ja 		|Ja|
 |{{site.data.keyword.SecureGateway}}		|Ja		|Ja		|Nein|
+|{{site.data.keyword.servicediscoveryshort}}	|Ja		|Nein		|Nein|
 |{{site.data.keyword.sescashort}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.ssofull}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.speechtotextshort}}	|Ja 		|Ja	 	|Ja|
@@ -147,12 +157,11 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 
 # Service zur Anwendung hinzufügen
 {: #add_service}
-*Letzte Aktualisierung: 19. November 2015*
+*Letzte Aktualisierung: 8 March 2016*
 
 {{site.data.keyword.Bluemix}} bietet eine Liste von Services an, die im Auftrag des Entwicklers verwaltet werden. Um einen Service hinzuzufügen, den Ihre Anwendung verwenden kann, müssen Sie eine Instanz dieses Service anfordern und die Anwendung für die Interaktion mit dem Service konfigurieren.
 
-Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren
-Services anzuzeigen:
+Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren Services anzuzeigen:
 
 * Über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
 * Über die Befehlszeilenschnittstelle 'cf'. Verwenden Sie hier den Befehl **cf marketplace**.
@@ -211,9 +220,8 @@ der Serviceinstanz.
     cf bind-service appname service_instance
     ```
 
-**Hinweis:** Eine Serviceinstanz ist für einen Bereich spezifisch, in dem die Serviceinstanz erstellt wird. Es ist nicht möglich, eine Serviceinstanz in einen
-anderen Bereich oder eine andere Organisation zu verschieben. Sie müssen stattdessen für jeden Bereich,
-in dem Sie eine Serviceinstanz verwenden möchten, eine neue Serviceinstanz anfordern.
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich im selben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+
 
 ## Die eigene Anwendung für die Interaktion mit einem Service konfigurieren 
 {: #config}
@@ -223,29 +231,15 @@ Nachdem Sie eine Serviceinstanz an Ihre Anwendung gebunden haben, müssen Sie Ih
 Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen anderen Mechanismus erfordern. Wenn Sie Anwendungen entwickeln, werden diese Mechanismen zu Informationszwecken als Teil der Servicedefinition dokumentiert. Aus Konsistenzgründen sind diese Mechanismen für die Interaktion Ihrer Anwendung mit dem Service erforderlich.
 
 * Um mit Datenbankservice zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Benutzer-ID, das Kennwort und den Zugriffs-URI für die Anwendung.
-* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten
-miteinander, sodass Kontextinformationen wie z. B. der Name des
-Anwendungsentwicklers oder des Benutzers, der die Anwendung
-verwendet, in der gesamten Servicegruppe genutzt werden kann.
-* Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das
-Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate
-gezogen werden.
+* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie z. B. der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden kann.
+* Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
-Wenn ein Service, den Sie an eine Anwendung binden,
-ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder
-die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der
-Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern
-wiederhergestellt werden kann. Weitere Informationen
-finden Sie im Abschnitt, in dem beschrieben wird, dass
-[Apps nicht automatisch neu gestartet werden](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}.
+Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie im Abschnitt, in dem beschrieben wird, dass [Apps nicht automatisch neu gestartet werden](../troubleshoot/index.html#ts_topmenubar).
 
 ## Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen
 {: #accser_external}
 
-Möglicherweise verfügen Sie über Anwendungen, die außerhalb von {{site.data.keyword.Bluemix_notm}}
-eingerichtet und in Betrieb genommen wurden, oder Sie verwenden Tools anderer Hersteller. Sofern ein
-{{site.data.keyword.Bluemix_notm}}-Service Endpunkte zur Verfügung stellt, die über das Internet
-zugänglich sind, können Sie diese Services mit Ihren lokalen Anwendungen oder Tools anderer Hersteller verwenden.
+Möglicherweise verfügen Sie über Anwendungen, die außerhalb von {{site.data.keyword.Bluemix_notm}} eingerichtet und in Betrieb genommen wurden, oder Sie verwenden Tools anderer Hersteller. Sofern ein {{site.data.keyword.Bluemix_notm}}-Service Endpunkte zur Verfügung stellt, die über das Internet zugänglich sind, können Sie diese Services mit Ihren lokalen Anwendungen oder Tools anderer Hersteller verwenden.
 
 Um einer externen App oder einem Tool eines anderen Herstellers die Verwendung eines {{site.data.keyword.Bluemix_notm}}-Service zu ermöglichen, führen Sie die folgenden Schritte durch:
 
@@ -254,32 +248,21 @@ Um einer externen App oder einem Tool eines anderen Herstellers die Verwendung e
     2. Wählen Sie im Katalog den gewünschten Service aus, indem Sie auf die Kachel für den Service klicken. Die Seite mit den Servicedetails wird geöffnet.
     3. Lassen Sie im Fenster 'Service hinzufügen' für die Liste **App**: die Option **Nicht binden** ausgewählt. Diese Auswahl bedeutet, dass keine Verbindung zwischen dem Service und einer {{site.data.keyword.Bluemix_notm}}-App hergestellt wird.
     4. Wählen Sie die anderen Optionen je nach Bedarf entsprechend aus. Klicken Sie anschließend auf **Erstellen**. Es wird eine Serviceinstanz erstellt und das Service-Dashboard wird angezeigt.
-2. Im linken Navigationsbereich des Service-Dashboards können Sie die Option **Serviceberechtigungsnachweise** auswählen, um
-Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Verwenden Sie den angezeigten API-Schlüssel als
-Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
+2. Im linken Navigationsbereich des Service-Dashboards können Sie die Option **Serviceberechtigungsnachweise** auswählen, um Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Verwenden Sie den angezeigten API-Schlüssel als Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
 
-Ihre Anwendung, die außerhalb von {{site.data.keyword.Bluemix_notm}} ausgeführt wird,
-kann nun auf den {{site.data.keyword.Bluemix_notm}}-Service zugreifen.
+Ihre Anwendung, die außerhalb von {{site.data.keyword.Bluemix_notm}} ausgeführt wird, kann nun auf den {{site.data.keyword.Bluemix_notm}}-Service zugreifen.
 
 **Hinweis:** Wenn Sie Serviceinstanzen löschen oder die Rechnungsangaben überprüfen möchten, müssen Sie zu Ihrem Dashboard in der Benutzerschnittstelle zurückkehren, um die Serviceinstanzen zu verwalten.
 
 ## Vom Benutzer zur Verfügung gestellte Serviceinstanz erstellen
 {: #user_provide_services}
 
-Sie verfügen möglicherweise über Ressourcen, die außerhalb
-von {{site.data.keyword.Bluemix_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Ressourcen über das Internet
-verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.Bluemix_notm}}-Serviceinstanzen
-erstellen, die Ihre externen Ressourcen darstellen und die Kommunikation mit diesen Ressourcen ermöglichen.
+Sie verfügen möglicherweise über Ressourcen, die außerhalb von {{site.data.keyword.Bluemix_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Ressourcen über das Internet verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.Bluemix_notm}}-Serviceinstanzen erstellen, die Ihre externen Ressourcen darstellen und die Kommunikation mit diesen Ressourcen ermöglichen.
 
-Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gestellte Serviceinstanz
-zu erstellen und an eine Anwendung zu binden:
+Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gestellte Serviceinstanz zu erstellen und an eine Anwendung zu binden:
 
-1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz entweder mit
-dem Befehl **cf create-user-provided-service** oder mit dem Befehl **cf
-cups**:
-    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten
-Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die cf-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen
-Parameter auf. Beispiel:
+1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz entweder mit dem Befehl **cf create-user-provided-service** oder mit dem Befehl **cf cups**:
+    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die cf-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
         ```
         cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -291,9 +274,7 @@ Parameter auf. Beispiel:
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine
-Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option **-l**
-und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option **-l** und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
 
         ```
         cf cups testups2 -l syslog://example.com
@@ -301,12 +282,9 @@ und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitg
         OK
         ```
 
-    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz
-aktualisieren möchten, verwenden Sie entweder den Befehl **cf update-user-provided-service** oder
-den Befehl **cf uups**.
+    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz aktualisieren möchten, verwenden Sie entweder den Befehl **cf update-user-provided-service** oder den Befehl **cf uups**.
 
-    * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten
-Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
+    * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
 
         ```
         cf uups testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -330,47 +308,39 @@ Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -wert
 	OK
 	```
 
-Sie können Ihre Anwendung nun für die Verwendung der externen Ressourcen konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie
-unter [Anwendung für die Interaktion mit einem Service konfigurieren](#config){: new_window}.
+Sie können Ihre Anwendung nun für die Verwendung der externen Ressourcen konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren](#config){: new_window}.
 
 ## Services in einer anderen Region verwenden
 {: #cross_region_service}
 
-Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer einzigen
-Region gebunden wurde, können Sie durch die Erstellung eines vom Benutzer bereitgestellten Service diese
-Serviceinstanz in einer anderen Region verwenden.
+Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer einzigen Region gebunden wurde, können Sie diese Serviceinstanz mit einer der folgenden Methoden in einer anderen Region verwenden:
 
-Angenommen, Sie beginnen in der Region, in der Sie die
-Serviceinstanz verwenden möchten. Führen Sie die folgenden Schritte aus, um eine Serviceinstanz
-zu verwenden, die in einer anderen Region existiert:
+  * Verwenden Sie die Serviceberechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Details finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+  * Erstellen Sie einen vom Benutzer bereitgestellten Service als Bridge.
+    
+	Angenommen, Sie beginnen in der Region, in der Sie die Serviceinstanz verwenden möchten. Führen Sie die folgenden Schritte aus, um eine Serviceinstanz zu verwenden, die in einer anderen Region existiert:
 
-1. Wechseln Sie in die Region, in der die Serviceinstanz existiert. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}}
-die Option **Region** oder klicken Sie auf das Symbol für **Region**
-und wählen Sie anschließend die Region aus, in der sich die Serviceinstanz befindet.
+      1. Wechseln Sie in die Region, in der die Serviceinstanz existiert. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der sich die Serviceinstanz befindet.
 
-2. Rufen Sie die Berechtigungsnachweise und Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES der Serviceinstanz in der Region ab, in der sich der Service befindet. Führen Sie die folgenden Schritte aus:
+      2. Rufen Sie die Berechtigungsnachweise und Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES der Serviceinstanz in der Region ab, in der sich der Service befindet. Führen Sie die folgenden Schritte aus:
 
-	1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendungskachel. Die Übersichtsseite wird angezeigt.
-	2. Klicken Sie im linken Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden
-im rechten Fensterbereich angezeigt. Dokumentieren Sie den JSON-Inhalt für die
-Serviceinstanz.
+	       1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendungskachel. Die Übersichtsseite wird angezeigt.
+	       2. Klicken Sie im linken Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden im rechten Fensterbereich angezeigt. Dokumentieren Sie den JSON-Inhalt für die Serviceinstanz.
 
-3. Wechseln Sie zu der Region, in der Sie die
-Serviceinstanz verwenden möchten. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}}
-die Option **Region** oder klicken Sie auf das Symbol für **Region**
-und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
+      3. Wechseln Sie zu der Region, in der Sie die Serviceinstanz verwenden möchten. Erweitern Sie in der oberen Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
 
-4. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie die
-Berechtigungsnachweise und Verbindungsparameter verwenden, die Sie aus der Umgebungsvariablen
-*VCAP_SERVICES* aufgezeichnet haben. Informationen zur Erstellung einer vom Benutzer bereitgestellten
-Serviceinstanz finden Sie im Abschnitt zur [Erstellung
-einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services){: new_window}.
+      4. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie die Berechtigungsnachweise und Verbindungsparameter verwenden, die Sie aus der Umgebungsvariablen *VCAP_SERVICES* aufgezeichnet haben. Informationen zur Erstellung einer vom Benutzer bereitgestellten Serviceinstanz finden Sie im Abschnitt zur [Erstellung einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services){: new_window}.
 
-5. Binden Sie die vom Benutzer bereitgestellte Serviceinstanz mit dem folgenden Befehl an Ihre App:
+      5. Binden Sie die vom Benutzer bereitgestellte Serviceinstanz mit dem folgenden Befehl an Ihre App:
 
-	```
-	cf bind-service myapp user-provided_service_instance
-	```
+	     ```
+	     cf bind-service myapp user-provided_service_instance
+	     ```
+
+
+
+
+
 
 ## Services in einem anderen Service verwenden
 {: #s2s_binding}
@@ -386,8 +356,8 @@ Führen Sie die folgenden Schritte aus, um eine Serviceinstanz von einem anderen
 # Zugehörige Links
 {: #rellinks}
 
-## Allgemein 
-* [Service mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle binden](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [VCAP_SERVICES abrufen](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## Allgemein
+* [Service mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle binden](../cfapps/ee.html#ee_bindui)
+* [VCAP_SERVICES abrufen](../cli/vcapsvc.html#retrieving)
 
 

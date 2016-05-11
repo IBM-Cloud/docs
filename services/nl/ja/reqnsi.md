@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 
 {:new_window: target="_blank"}  
 {:shortdesc: .shortdesc}
@@ -5,7 +12,7 @@
 
 #サービス
 {: #services}
-*最終更新日: 2015 年 1 月 20 日*
+*最終更新日: 2016 年 1 月 20 日*
 
 {{site.data.keyword.Bluemix}} ユーザー・インターフェースの**「サービス」**の下の**「カタログ」**で、使用可能なサービスを見つけることができます。
 {:shortdesc}
@@ -41,12 +48,11 @@
 
 
 
-
 {{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の下部にスクロールし、**「{{site.data.keyword.Bluemix_notm}} ラボ・カタログ ({{site.data.keyword.Bluemix_notm}} Lab Catalog)」**をクリックします。
 
 試験的サービスは安定していない可能性があり、前のバージョンとは互換性のない方向で変更される場合があります。これらのサービスを実稼働環境で使用することは推奨されません。試験的サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community を通じて提供されます。IBM が問題を調査し、その問題が試験的サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、cf コマンド・ライン・インターフェース、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services、またはサポートされる任意のツールでサービスを使用するには、以下のステップを実行します。
+サービスを {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、cf コマンド・ライン・インターフェース、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services、またはサポートされる任意のツールで使用するには、以下のステップを実行します。
 
 1. サービスのインスタンスを作成します。ほとんどの場合、アプリケーションを作成するときに、サービスのインスタンスを作成できます。
 
@@ -81,6 +87,7 @@
 |{{site.data.keyword.conceptinsightsshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.dashdbshort}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.datacshort}}		|はい		|はい		|はい|
+|{{site.data.keyword.DB2OnCloud_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.deliverypipeline}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.dialogshort}}		|はい		|はい		|はい|
 |{{site.data.keyword.documentconversionshort}}	|はい		|はい		|はい|
@@ -93,6 +100,7 @@
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.iot_short}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.keymanagementserviceshort}}|いいえ		|はい		|いいえ|
 |{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.messageresonanceshort}}	|はい		|はい		|いいえ|
@@ -113,6 +121,7 @@
 |{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
 |{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
 |{{site.data.keyword.SecureGateway}}		|はい		|はい		|いいえ|
+|{{site.data.keyword.servicediscoveryshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
 |{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.speechtotextshort}}	|はい 		|はい	 	|はい|
@@ -134,7 +143,7 @@
 
 # アプリケーションへのサービスの追加
 {: #add_service}
-*最終更新日: 2015 年 11 月 19 日*
+*最終更新日: 2016 年 3 月 8 日*
 
 {{site.data.keyword.Bluemix}} にはサービスのリストがあり、開発者に代わってそれらのサービスを管理します。アプリケーションで使用するサービスを追加するには、そのサービスのインスタンスを要求し、そのサービスと対話するようアプリケーションを構成する必要があります。
 
@@ -186,7 +195,8 @@ cf コマンド・ライン・インターフェースを使用してサービ�
     cf bind-service appname service_instance
     ```
 
-**注:** サービス・インスタンスは、サービス・インスタンスが作成されたスペースに固有のものです。サービス・インスタンスを別のスペースまたは組織に移動することはできません。代わりに、サービス・インスタンスを使用するスペースごとに新しいサービス・インスタンスを要求する必要があります。
+サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
+
 
 ## サービスと対話するようアプリケーションを構成する 
 {: #config}
@@ -199,7 +209,7 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 * モバイル・バックエンド・サービスと対話するには、アプリケーション ID (アプリ ID)、クライアント固有のセキュリティー情報、およびアプリケーションのアクセス URI など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。アプリケーション開発者の名前やアプリケーションを使用するユーザーなどのコンテキスト情報を一連のサービスで共有できるように、モバイル・サービスは、通常、互いのコンテキストで作業します。
 * Web アプリケーションと、またはモバイル・アプリケーションのサーバー・サイドのクラウド・コードと対話するには、アプリケーションの *VCAP_SERVICES* 環境変数内のランタイム資格情報など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。*VCAP_SERVICES* 環境変数の値は、JSON オブジェクトの直列化です。変数には、アプリケーションにバインドされているサービスと対話するために必要なランタイム・データが含まれます。データのフォーマットは、サービスごとに異なります。期待される情報と、情報の各部分を解釈する方法について、サービスの文書を読み取る必要が生じる場合もあります。
 
-アプリケーションにバインドしたサービスが異常終了すると、そのアプリケーションが稼動を停止したり、エラーを起こしたりする場合があります。{{site.data.keyword.Bluemix_notm}} がアプリケーションを自動的に再始動してこれらの問題から復旧することはありません。障害、例外、および接続失敗を識別して復旧するように、アプリケーションのコーディングを検討してください。詳しくは、[アプリの非自動再始動](https://www.ng.bluemix.net/docs/troubleshoot/managingapps.html#tr_appnotautorestarted){: new_window}のトラブルシューティングのトピックを参照してください。
+アプリケーションにバインドしたサービスが異常終了すると、そのアプリケーションが稼動を停止したり、エラーを起こしたりする場合があります。{{site.data.keyword.Bluemix_notm}} がアプリケーションを自動的に再始動してこれらの問題から復旧することはありません。障害、例外、および接続失敗を識別して復旧するように、アプリケーションのコーディングを検討してください。詳しくは、[アプリの非自動再始動](../troubleshoot/index.html#ts_topmenubar)のトラブルシューティングのトピックを参照してください。
 
 ## 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする
 {: #accser_external}
@@ -277,26 +287,34 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 ## 他の地域でサービスを利用する
 {: #cross_region_service}
 
-ある地域でサービス・インスタンスを作成してアプリにバインドした場合、ユーザー提供のサービスを作成すると、そのサービス・インスタンスを他の地域で利用できます。
+ある地域でサービス・インスタンスを作成してアプリにバインドした場合、以下のいずれかの方法でそのサービス・インスタンスを他の地域で利用できます。
 
-サービス・インスタンスを利用する地域で開始すると想定します。他の地域にあるサービス・インスタンスを利用するには、以下のステップを実行します。
+  * サービス資格情報を使用して、アプリ・インスタンスを直接構成します。詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
+  * ブリッジとしてユーザー提供サービスを作成します。
+    
+	サービス・インスタンスを利用する地域で開始すると想定します。他の地域にあるサービス・インスタンスを利用するには、以下のステップを実行します。
 
-1. サービス・インスタンスが存在する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックしてから、 サービス・インスタンスの存在する地域を選択します。
+      1. サービス・インスタンスが存在する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックしてから、 サービス・インスタンスの存在する地域を選択します。
 
-2. サービスの存在する地域にあるサービス・インスタンスの VCAP_SERVICES 環境変数から、資格情報と接続パラメーターを取り出します。以下のステップを実行します。
+      2. サービスの存在する地域にあるサービス・インスタンスの VCAP_SERVICES 環境変数から、資格情報と接続パラメーターを取り出します。以下のステップを実行します。
 
-	1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーション・タイルをクリックします。「概要」ページが表示されます。
-	2. 左方のナビゲーション・ペインで、**「環境変数」**をクリックします。*VCAP_SERVICES* 環境変数の詳細が、右方のペインに表示されます。サービス・インスタンスの JSON コンテンツを記録します。
+	       1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーション・タイルをクリックします。「概要」ページが表示されます。
+	       2. 左方のナビゲーション・ペインで、**「環境変数」**をクリックします。*VCAP_SERVICES* 環境変数の詳細が、右方のペインに表示されます。サービス・インスタンスの JSON コンテンツを記録します。
 
-3. サービス・インスタンスを利用する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックして、サービス・インスタンスを利用する地域を選択します。
+      3. サービス・インスタンスを利用する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} の上部メニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックして、サービス・インスタンスを利用する地域を選択します。
 
-4. *VCAP_SERVICES* 環境変数から記録した資格情報と接続パラメーターを使用して、ユーザー提供のサービス・インスタンスを作成します。ユーザー提供のサービス・インスタンスを作成する方法について詳しくは、[ユーザー提供のサービス・インスタンスの作成](#user_provide_services){: new_window} を参照してください。
+      4. *VCAP_SERVICES* 環境変数から記録した資格情報と接続パラメーターを使用して、ユーザー提供のサービス・インスタンスを作成します。ユーザー提供のサービス・インスタンスを作成する方法について詳しくは、[ユーザー提供のサービス・インスタンスの作成](#user_provide_services){: new_window} を参照してください。
 
-5. 以下のコマンドを使用して、ユーザー提供のサービス・インスタンスをアプリにバインドします。
+      5. 以下のコマンドを使用して、ユーザー提供のサービス・インスタンスをアプリにバインドします。
 
+	     ```
+	     cf bind-service myapp user-provided_service_instance
 	```
-	cf bind-service myapp user-provided_service_instance
-	```
+
+
+
+
+
 
 ## 他のサービスでのサービスの使用
 {: #s2s_binding}
@@ -313,8 +331,8 @@ cf コマンド・ライン・インターフェースを使用してサービ�
 # 関連リンク
 {: #rellinks}
 
-## 一般 
-* [{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用したサービスのバインド](https://www.ng.bluemix.net/docs/starters/ee.html#ee_bindui){: new_window}
-* [VCAP_SERVICES の取得](https://www.ng.bluemix.net/docs/cli/retrieving.html){: new_window}
+## 一般
+* [{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用したサービスのバインド](../cfapps/ee.html#ee_bindui)
+* [VCAP_SERVICES の取得](../cli/vcapsvc.html#retrieving)
 
 

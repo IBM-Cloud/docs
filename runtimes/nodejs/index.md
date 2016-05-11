@@ -10,7 +10,7 @@ copyright:
 {:codeblock: .codeblock}
 
 
-# SDK for Node.js
+# SDK for Nodejs
 {: #nodejs_runtime}
 *Last updated: 16 March 2016*
 
@@ -41,17 +41,17 @@ Save the **Procfile** in the root directory of your application.
 If a **Procfile** is not present, the IBM Bluemix Node.js buildpack checks for a scripts.start entry in the **package.json** file. Again in the example below, app.js is the startup js script for your application.
 ```
 {
-  ...   
-  "scripts": {
-    "start": "node app.js"
-  }
+    ...   
+    "scripts": {
+      "start": "node app.js"
+    }
 }
 ```
 {: codeblock}
 
 If a start script entry is present in the **package.json**, a **Procfile** is generated automatically. The content of the auto-generated **Procfile** is:
 ```
-web: npm start
+    web: npm start
 ```
 {: codeblock}
 
@@ -115,7 +115,7 @@ NPM provides a scripting facility allowing you to run scripts, including **prein
 
 Use the NODE_MODULES_CACHE variable to determine whether or not the Node buildpack uses or ignores the cache from previous builds. The default value is true.  To disable caching set NODE_MODULES_CACHE to false, for example via the cf command line:
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
@@ -129,6 +129,41 @@ You can use a **cacheDirectories** array in your top-level **package.json** to a
 }
 ```
 {: codeblock}
+
+### FIPS MODE
+{: #fips_mode}
+
+Nodejs buildpack versions v3.2-20160315-1257 and later support [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  To enable FIPS set the environment variable FIPS_MODE to true.
+For example:
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+It is important to understand that when FIPS_MODE is true some node modules may not work.  For example, **node modules which use [MD5](https://en.wikipedia.org/wiki/MD5) will fail**, such as [Express](http://expressjs.com/).  For Express, setting [etag](http://expressjs.com/en/api.html) to false in your
+Expess app may help work around that. For example you can do the following in your code:
+```
+    app.set('etag', false);
+```
+{: codeblock}
+See this [stackoverflow post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
+for more information.
+
+To verify if FIPS_MODE is true in your app, check the value of **process.versions.openssl**. For example:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblock}
+
+If the SSl version contains "fips", then the app is running in FIPS mode.  Additionally the staging_task.log for your application will include 
+a message similar to the following message when FIPS is enabled.    
+```
+    Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
+```
+{: codeblock}
+
+**NOTE** [App Management](../../manageapps/app_mng.html) and FIPS_MODE are not simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
 
 ## Node.js buildpacks
 

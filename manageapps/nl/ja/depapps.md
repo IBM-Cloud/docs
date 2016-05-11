@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #アプリのデプロイ
 {: #deployingapps}
 
-*最終更新日: 2015 年 12 月 4 日*
+*最終更新日: 2016 年 3 月 17 日*
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
 {:shortdesc}
@@ -18,7 +26,7 @@
 
 ###アプリケーションのステージング
 
-ステージングの段階では、Droplet Execution Agent (DEA) が cf コマンド・ライン・インターフェースまたは `manifest.yml` ファイルでユーザーが指定した情報を使用して、アプリケーションのステージング用に何を作成するかを決定します。DEA は、アプリケーションのステージングのために適切なビルドパックを選択します。このステージング・プロセスの結果が Droplet です。{{site.data.keyword.Bluemix_notm}} へのアプリケーションのデプロイについて詳しくは、「[{{site.data.keyword.Bluemix_notm}} アーキテクチャー、{{site.data.keyword.Bluemix_notm}} の動作 ({{site.data.keyword.Bluemix_notm}} architecture, How {{site.data.keyword.Bluemix_notm}} works)](../overview/index.html#ov_arch)」を参照してください。
+ステージングの段階では、Droplet Execution Agent (DEA) が cf コマンド・ライン・インターフェースまたは `manifest.yml` ファイルでユーザーが指定した情報を使用して、アプリケーションのステージング用に何を作成するかを決定します。DEA は、アプリケーションのステージングのために適切なビルドパックを選択します。このステージング・プロセスの結果が Droplet です。{{site.data.keyword.Bluemix_notm}} へのアプリケーションのデプロイについて詳しくは、[{{site.data.keyword.Bluemix_notm}} アーキテクチャー、{{site.data.keyword.Bluemix_notm}} の動作](../public/index.html#publicarch)を参照してください。
 
 ステージングのプロセス中、DEA はビルドパックがアプリケーションと一致するかどうかをチェックします。例えば、.war ファイルに対する Liberty ランタイム、または .js ファイルに対する Node.js ランタイムなどです。DEA はその後、ビルドパックおよびアプリケーション・コードが含まれる独立したコンテナーを作成します。このコンテナーは Warden コンポーネントによって管理されます。詳しくは、「[How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}」を参照してください。
 
@@ -30,7 +38,7 @@
 
 **注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf logs appname --recent` を入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、その cf コマンド・ライン・インターフェースとは別のコマンド・ラインで `cf logs appname` を入力してください。そうすれば、アプリケーションをデプロイしたときのログがトラッキングできます。
 
-{{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging staging errors)」](../troubleshoot/debugging.html#debug_stgerr)のステップに従って問題を解決することができます。
+{{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging staging errors)」](../debug/index.html#debugging-staging-errors)のステップに従って問題を解決することができます。
 
 ##cf コマンドを使用してのアプリケーションのデプロイ
 {: #dep_apps}
@@ -41,7 +49,7 @@
 
 外部ビルドパックを使用する場合、アプリケーションをコマンド・プロンプトから {{site.data.keyword.Bluemix_notm}} にデプロイする際に **-b** オプションを使用して、ビルドパックの URL を指定する必要があります。
 
-  * Liberty サーバー・パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
+  * Liberty サーバー・パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、ソース・ディレクトリーから以下のコマンドを使用します。
   
   ```
   cf push
@@ -52,7 +60,7 @@
   * Java Tomcat アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * WAR パッケージを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
@@ -69,8 +77,8 @@
   * Node.js アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
   ```
-  cf push appname 
-```
+  cf push appname -p app_path
+  ```
   
 アプリケーションが Node.js ビルドパックによって認識されるようにするには、`package.json` ファイルがご使用の Node.js アプリケーション内にある必要があります。`app.js` ファイルはアプリケーションのエントリー・スクリプトで、`package.json` ファイル内に指定できます。以下は単純な `package.json` ファイルの例です。
 
@@ -111,7 +119,7 @@
   cf target -s <space_name>
   ```
   
-  2. **cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
+  2. アプリケーション・ディレクトリーに移動し、**cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
   
   ```
   cf push appname 
@@ -181,9 +189,9 @@ cf push -f appManifest.yml
 環境変数には、{{site.data.keyword.Bluemix_notm}} にデプロイされたアプリケーションの環境情報が含まれています。*Droplet Execution Agent (DEA)* およびビルドパックによって設定される環境変数に加えて、{{site.data.keyword.Bluemix_notm}} 上のアプリケーション用にアプリケーション固有の環境変数を設定することも可能です。
 
 **cf env** コマンドを使用するか、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから、実行中の {{site.data.keyword.Bluemix_notm}} アプリケーションの以下の環境変数を表示できます。
-
+	
   * アプリケーションに固有のユーザー定義の変数。ユーザー定義変数をアプリに追加する方法については、『[ユーザー定義環境変数の追加](#ud_env){:new_window}』を参照してください。
-	  
+	 
   * サービス・インスタンスにアクセスするための接続情報を含む VCAP_SERVICES 変数。ご使用のアプリケーションが複数のサービスにバインドされている場合、VCAP_SERVICES 変数には各サービス・インスタンスの接続情報が含まれます。例えば次のようにします。
   
   ```
@@ -232,11 +240,11 @@ cf push -f appManifest.yml
   }
   ```
         
-ユーザーは DEA およびビルドパックによって設定された環境変数にアクセスすることができます。
+DEA およびビルドパックによって設定された環境変数にもアクセスできます。
 
-<ul>
-<li>DEA によって定義された変数を以下に示します。
-  <dl>
+DEA によって定義された変数を以下に示します。
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>デプロイ済みアプリケーションのルート・ディレクトリー。</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -314,11 +322,14 @@ cf push -f appManifest.yml
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} を参照してください。
+</dl>
 
-    <li>Liberty ビルドパックによって定義された変数。
+ビルドパックによって定義される変数は、各ビルドパックによって異なります。互換性のある他のビルドパックについては、[Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} を参照してください。
+
+    
+
+<ul>
+    <li>Liberty ビルドパックによって定義された変数を以下に示します。
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -333,7 +344,7 @@ cf push -f appManifest.yml
 	  <dd>実行中の Liberty プロファイルのサーバー・インスタンスのログ・ファイルや作業ディレクトリーなど、生成された出力のロケーション。</dd>
 	  </dl>
 </li>   
-<li>Node.js ビルドパックによって定義された変数。
+<li>Node.js ビルドパックによって定義された変数を以下に示します。
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>Node.js ランタイム環境のディレクトリー。</dd>
@@ -345,7 +356,16 @@ cf push -f appManifest.yml
 </li>
 </li>
 </ul>	
-	
+
+以下のサンプル Node.js コードを使用して、VCAP_SERVICES 環境変数の値を取得できます。
+
+```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 各環境変数に関する詳細については、[「Cloud Foundry 環境変数 (Cloud Foundry Environment Variables)」](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}を参照してください。
 
 ## アプリケーション・デプロイメントのカスタマイズ
@@ -363,7 +383,7 @@ cf push -f appManifest.yml
   * **cf push** コマンドを使用して -c パラメーターを指定します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドを -c パラメーターに指定することができます。
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * `manifest.yml` ファイルで command パラメーターを使用します。例えば、Node.js アプリケーションをデプロイする場合、**node app.js** 開始コマンドをマニフェスト・ファイルで指定することができます。
@@ -372,8 +392,7 @@ cf push -f appManifest.yml
   command: node app.js
 ```
   
-  
-  
+
 ### ユーザー定義環境変数の追加
 {: #ud_env}
 
@@ -396,9 +415,13 @@ cf push -f appManifest.yml
       VAR2:value2
     ```
 	
+ユーザー定義の環境変数を追加した後、以下のサンプル Node.js コードを使用して、定義した変数の値を取得できます。
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### 開始環境の構成
 
 アプリケーションの開始環境を構成するには、`/.profile.d` ディレクトリーにシェル・スクリプトを追加することができます。`/.profile.d` ディレクトリーは、アプリケーションのビルド・ディレクトリーの下にあります。`/.profile.d` ディレクトリー内のスクリプトは、アプリケーションの実行前に {{site.data.keyword.Bluemix_notm}} によって実行されます。例えば、以下のコンテンツを含む `node_env.sh` ファイルを `/.profile.d` ディレクトリーの下に置くことで、NODE_ENV 環境変数を **production** に設定することができます。

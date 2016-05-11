@@ -1,7 +1,18 @@
-# Configurando o SDK do iOS
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+# Configurando o iOS Objective-C SDK
 {: #getting-started-ios}
 
-Instrumente seu aplicativo iOS com o {{site.data.keyword.amashort}} SDK, inicialize o SDK e faça solicitações aos recursos protegidos e desprotegidos. 
+Instrumente seu aplicativo iOS com o {{site.data.keyword.amashort}} SDK, inicialize o SDK e faça solicitações aos recursos protegidos e desprotegidos.
+
+**Dica:** Se você estiver desenvolvendo seu app iOS no Swift,
+considere o {{site.data.keyword.amashort}} Client Swift SDK. Para obter detalhes,
+consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -11,14 +22,19 @@ Instrumente seu aplicativo iOS com o {{site.data.keyword.amashort}} SDK, inicial
 
 ## Instalando o {{site.data.keyword.amashort}} Client SDK
 {: #install-mca-sdk-ios}
-O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS. 
+O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
 
 
 ### Instalar o CocoaPods
 {: #install-cocoapods}
-1. Abra o Terminal e execute o comando `pod --version`. Se você já tiver o CocoaPods instalado, o número da versão é exibido. É possível pular para a próxima seção para instalar o SDK.
+1. Abra o Terminal e execute o comando **pod --version**. Se você já tiver o CocoaPods instalado, o número da versão é exibido. É possível pular para a próxima seção para instalar o SDK.
 
-1. Se você não tiver o CocoaPods instalado, execute: `sudo gem install cocoapods`. Para obter mais informações, veja o [website do Cocoapods](https://cocoapods.org/).
+1. Se você não tiver o CocoaPods instalado, execute:
+```
+sudo gem install cocoapods
+```
+Para obter mais informações, consulte o
+[website do CocoaPods](https://cocoapods.org/).
 
 ### Instalar o {{site.data.keyword.amashort}} Client SDK com CocoaPods
 {: #install-sdk-cocoapods}
@@ -35,27 +51,32 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
 	```
 
 1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. <br/>Cocoapods instalam dependências incluídas. É possível ver o progresso e quais componentes foram incluídos.<br/>
-**Importante**: o CocoaPods gera um arquivo `xcworkspace`. Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
+**Importante**: o CocoaPods gera um arquivo `xcworkspace`.  Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
 
 1. Abra sua área de trabalho do projeto iOS. Abra o arquivo `xcworkspace` que foi gerado por CocoaPods. Por exemplo: `{your-project-name}.xcworkspace`. Execute `open {your-project-name}.xcworkspace`.
 
 ## Inicializando o {{site.data.keyword.amashort}} Client SDK
 {: #init-mca-sdk-ios}
 
-Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar o SDK passando os parâmetros **applicationGUID** e **applicationRoute**.
+Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar
+o SDK passando os parâmetros **Rota**
+(`applicationRoute`) e **GUID do app**
+(`applicationGUID`).
 
 
-1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Os valores **Rota do aplicativo** e **GUID do aplicativo** são necessários para inicializar o SDK.
+1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Você
+precisa dos valores **Rota** e **GUID do app** para
+inicializar o SDK.
 
-1. Inclua o cabeçalho a seguir para importar a estrutura `IMFCore` na classe para a qual você deseja usar o
-{{site.data.keyword.amashort}} Client SDK incluindo o cabeçalho a seguir:
+1. Importe a estrutura `IMFCore` na classe em que você deseja usar
+o {{site.data.keyword.amashort}} Client SDK, incluindo o cabeçalho a seguir:
 
-	Objective-C:
+	**Objective-C:**
 	 ```Objective-C
 	#import <IMFCore/IMFCore.h>
 	```
 
-	Swift:
+	**Swift:**
 
 	O {{site.data.keyword.amashort}} Client SDK é implementado com Objective-C. Pode ser necessário incluir um cabeçalho de ponte em seu projeto Swift:
 
@@ -67,11 +88,11 @@ Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar o SDK
 	1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo, `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} Client SDK. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
+1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} Client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
 
-
-
-	Objective-C:
+	**Objective-C:
+                    
+**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -79,7 +100,7 @@ Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar o SDK
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
+	**Swift:**
 
 	```Swift
 IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
@@ -90,14 +111,16 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 
 Depois que o {{site.data.keyword.amashort}} Client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra a URL a seguir: `http://{appRoute}/protected`.
-Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o texto padrão do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
+1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
 mensagem `Unauthorized` é retornada no navegador, pois esse terminal pode ser acessado somente por aplicativos móveis que sejam
 instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `IMFClient`:
 
-	Objective-C:
+	**Objective-C:
+                    
+**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -115,7 +138,7 @@ instrumentados com o {{site.data.keyword.amashort}} Client SDK.
 	}];
 	```
 
-	Swift:
+	**Swift:**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

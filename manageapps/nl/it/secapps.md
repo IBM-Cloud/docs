@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Protezione delle applicazioni
 {: #securingapps}
 
-*Ultimo aggiornamento: 4 dicembre 2015*
+*Ultimo aggiornamento: 30 marzo 2016* 
 
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}
@@ -50,9 +58,7 @@ Marketing.
 
   Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.
   
-I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio
-mostra come creare un CSR utilizzando [lo strumento di comando
-OpenSSH](http://www.openssl.org/){:new_window}:
+I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -82,14 +88,11 @@ caricamento di un certificato gratuito.
 Prima di poter caricare i certificati, devi creare una
 richiesta di firma del certificato. Vedi [Creazione di richieste di firma del certificato](#ssl_csr).
 
-Per servire adeguatamente il
-certificato SSL, devi utilizzare i seguenti indirizzi IP per configurare
-il DNS oppure un file host durante la creazione di un dominio personalizzato per fornire la
-rotta URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}.
+Per servire adeguatamente il certificato SSL, devi utilizzare i seguenti indirizzi IP per configurare il server DNS durante la creazione di un dominio personalizzato per fornire la rotta URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}.
 
 * STATI UNITI SUD: 75.126.81.68
 * EUROPA REGNO UNITO: 5.10.124.142
-* AU-SYD: 168.1.35.169
+* AU-SYD: 168.1.35.166
 
 Gli indirizzi IP che utilizzi per gli ambienti dedicati sono
 diversi. Contatta il tuo rappresentante IBM per ottenere l'indirizzo IP
@@ -107,7 +110,7 @@ rotta e accesso all'applicazione** dal menu dell'applicazione.
 3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
 
 4. Sfoglia per caricare un certificato, una chiave privata e,
-facoltativamente, un certificato intermedio. Puoi anche selezionare la casella di spunta per abilitare la richiesta di un certificato client.
+facoltativamente, un certificato intermedio. Puoi anche selezionare la casella di spunta per abilitare le richieste di un certificato client. Se abiliti l'opzione di richiesta di un certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
 
   **Certificato**
     
@@ -116,10 +119,10 @@ consentendo così al proprietario del certificato di essere autenticato. Un cert
 certificazione e viene firmato in maniera digitale da tale autorità.
     
     In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
-    
-      * PEM (pem, .crt, .cer e .cert)
-	  * DER (.der o .cer )
-      * PKCS #7 (p7b, p7r, spc)
+
+	* PEM (pem, .crt, .cer e .cert)
+	* DER (.der o .cer )
+	* PKCS #7 (p7b, p7r, spc)
 	  
   **Chiave privata**
   
@@ -146,14 +149,23 @@ di un certificato intermedio durante il test della tua applicazione, prima della
   
   **Abilita richiesta di certificato client**
   
-    Se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire
-un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
-il browser web gli richiede di fornire un certificato client per il dominio.
+    Se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
+il browser web gli richiede di fornire un certificato client per il dominio. Utilizza l'opzione di caricamento file **Truststore certificato client** per definire i certificati lato client a cui consenti di accedere al tuo dominio personalizzato.
   
   **Nota:** la funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.Bluemix_notm}} dipende dall'estensione Server Name Indication (SNI) del protocollo TLS (Transport Layer Security). Pertanto, il codice
 client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}}
 protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione
 TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 del RFC
 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+
+  **Truststore certificato client**
+  
+  Il truststore certificato client è un file che contiene i certificati client per gli utenti per cui desideri consentire l'accesso alla tua applicazione. Se abiliti l'opzione di richiesta di un certificato client, carica un file truststore certificato client. 
+  
+   In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
+    
+      * PEM (pem, .crt, .cer e .cert)
+	  * DER (.der o .cer )
+      * PKCS #7 (p7b, p7r, spc)
 
 Per eliminare un certificato oppure sostituirne uno esistente con uno nuovo, vai in **Gestisci organizzazioni** > **Domini** > **Visualizza certificato** per gestire i tuoi certificati.

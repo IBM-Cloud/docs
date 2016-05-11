@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-*最終更新日: 2015 年 1 月 6 日*
+*最終更新日: 2016 年 4 月 13 日*
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -45,7 +51,7 @@
 {: #ts_unsaved_changes}
 
 
-アプリの詳細ページでナビゲートしている時に、アクションを実行できず、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。 
+アプリの詳細ページでナビゲートしている時に、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。 
 
 
 アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージを受信し続けます。
@@ -242,6 +248,86 @@ nslookup stage1.mybluemix.net
 
 
 
+## アプリをデバッグ・モードに切り替えられない
+{: #ts_debug}
+
+Java 仮想マシン (JVM) バージョンが 8 以下の場合、デバッグ・モードを有効にできないことがあります。 
+
+
+**「アプリケーションのデバッグを有効にする (Enable application debug)」**を選択すると、ツールはアプリケーションをデバッグ・モードに切り替えようとします。これにより、Eclipse ワークベンチはデバッグ・セッションを開始します。ツールがデバッグ・モードを有効にするのに成功した場合、Web アプリケーションの状況には `Updating mode`、`Developing`、および `Debugging` が表示されます。
+{: tsSymptoms}
+
+しかし、ツールがデバッグ・モードを有効にするのに失敗した場合は、Web アプリケーションの状況には、`Updating mode` と `Developing` のみが表示され、`Debugging` は表示されません。ツールは、「コンソール」ビューに以下のエラー・メッセージを表示することもあります。
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、または Oracle JVM 8 より前のバージョンである場合、デバッグ・セッションを確立できません。
+{: tsCauses}
+
+ワークベンチの JVM が、これらのバージョンのいずれかである場合、デバッグ・セッションの作成時に問題が生じることがあります。ワークベンチの JVM バージョンは、通常はローカル・コンピューターのシステム JVM です。システム JVM は、実行中の Bluemix Java アプリケーションの JVM と同じではありません。Bluemix Java アプリケーションは、ほとんどの場合、IBM JVM 上で実行され、時には OpenJDK JVM 上で実行されることもあります。
+  
+
+IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを確認するには、以下の手順を実行します。
+{: tsResolve}
+
+  1. IBM Eclipse Tools for Bluemix で、**「ヘルプ」** > **「Eclipse について」** > **「インストールの詳細」** > **「構成」**を選択します。
+  2. リストから `eclipse.vm` プロパティーを検索します。次の行は、`eclipse.vm` プロパティーの例を示しています。
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. コマンド・ラインで、Java のインストール先の `bin` ディレクトリーから `java -version` を入力します。IBM JVM バージョン情報が表示されます。
+
+ワークベンチの JVM が、IBM JVM 7 または 8、あるいは Oracle JVM 8 より前のバージョンである場合は、以下の手順を実行して、Oracle JVM 8 に切り替えます。
+
+  1. Oracle JVM 8 をダウンロードして、インストールします。詳しくは、「[Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}」を参照してください。
+  2. Eclipse を再始動します。
+  3. `eclipse.vm` プロパティーが、Oracle JVM 8 の新しいインストール先を指しているかどうかを確認します。
+
+
+
+
+
+
 
 ## 要求したアクションを実行できない
 {: #ts_authority}
@@ -268,7 +354,7 @@ nslookup stage1.mybluemix.net
 適切な権限レベルを取得するには、以下のいずれかの方法を使用します。
 {: tsResolve}
  * 開発者役割を備えている別の組織およびスペースを選択します。 
- * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織の管理](../acctmgmt/index.html#mngorg){: new_window}』を参照してください。
+ * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織の管理](../admin/adminpublic.html#orgmng){: new_window}』を参照してください。
  
 
  
@@ -380,7 +466,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 	```
   * アプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときに、`cf push` コマンドで **-k** オプションを使用します。
 ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -469,7 +555,7 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 	  1. 次を入力して、アプリケーションからサービス・インスタンスをアンバインドします: `cf unbind-service <appname> <service_instance_name>`。
 	  2. 次を入力して、サービス・インスタンスを削除します: `cf delete-service <service_instance_name>`。
 	  3. サービス・インスタンスを削除した後、次を入力して、サービス・インスタンスがバインドされていたアプリケーションを再ステージングしなければならない場合があります: `cf restage <appname>`.
-  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../acctmgmt/bill_usage.html#bil_plan){: new_window}』を参照してください。
+  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[プラン変更方法](../pricing/index.html#changing){: new_window}』を参照してください。
 
   
   
@@ -494,11 +580,10 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
-以下に例を示します。
-```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+以下に例を示します。```
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -524,7 +609,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
 {: tsResolve} 
 
-  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../acctmgmt/bill_usage.html#bil_plan){: new_window}』を参照してください。 
+  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../pricing/index.html#pay-accounts){: new_window}』を参照してください。 
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースのいずれかを使用します。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する場合、以下のステップを実行してください。
 	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーションを選択します。アプリ詳細ページが開きます。
@@ -537,7 +622,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 	     cf apps コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。
       2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. アプリを再始動して、変更を有効にします。
 
@@ -566,7 +651,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。 
 
@@ -666,7 +751,7 @@ cf コマンド・ライン・インターフェースを使用して {{site.dat
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}』を参照してください。  
+Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html){: new_window}』を参照してください。  
   
   
 
@@ -699,7 +784,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 	```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、``cf
 push`` コマンドを **-n** オプションで使用します。```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ``
 
 
@@ -801,9 +886,8 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 {: tsResolve} 
 
   * 以下のいずれかの方法で開始コマンドを指定します。 
-      * cf コマンド・ライン・インターフェースを使用します。以下に例を示します。
-```
-		cf push MyUniqueNodejs01 -c "node app.js"
+      * cf コマンド・ライン・インターフェースを使用します。以下に例を示します。```
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * [package.json](https://docs.npmjs.com/json){: new_window} ファイルを使用します。例:
 	    ```
@@ -815,7 +899,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 	}
 	    ```
 	  * `manifest.yml` ファイルを使用します。例:
-	    ```
+```
 		applications:
   name: MyUniqueNodejs01
   ...
@@ -907,7 +991,7 @@ DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプ�
 
  
 
-この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[「アプリケーション・マニフェスト (Application manifest)」](../manageapps/deployingapps.html#appmanifest){: new_window}を参照してください。
+この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[「アプリケーション・マニフェスト (Application manifest)」](../manageapps/depapps.html#appmanifest){: new_window}を参照してください。
 {: tsResolve}	
 	
 
@@ -940,7 +1024,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
   ```
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。以下に例を示します。
 ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
 	
   
@@ -953,7 +1037,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
   * [Bluemix DevOps Services プロジェクトが作成できない](#project-cannot-be-created)
   * [Git リポジトリーが見つからず、DevOps Services で複製できない](#repo-not-found)
   * [Git リポジトリーは DevOps Services で複製されるが、アプリが {{site.data.keyword.Bluemix_notm}} にデプロイされない](#repo-cloned-app-not-deployed)
-当該ボタンの作成方法について詳しくは、『「{{site.data.keyword.Bluemix_notm}} へのデプロイ」ボタンの作成 (Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button)』を参照してください。
+当該ボタンの作成方法について詳しくは、『「{{site.data.keyword.Bluemix_notm}} へのデプロイ」ボタンの作成』を参照してください。
 
 ### Bluemix DevOps Services プロジェクトが作成できない
 {: #project-cannot-be-created}
@@ -1219,11 +1303,11 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
   ```
   3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリをプッシュします。このステップを完了すると、アプリのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
 ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。
 ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

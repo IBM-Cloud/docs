@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 
 #Host delle applicazioni in {{site.data.keyword.Bluemix_notm}}
 
-*Ultimo aggiornamento: 1 dicembre 2015*
+*Ultimo aggiornamento: 18 aprile 2016*
 
 <!--The whole topic is staging only -->
 
@@ -149,6 +161,8 @@ applicazione Cloud Foundry, seleziona un runtime dal Catalogo {{site.data.keywor
 
 Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix_notm}}:
 
+*Tabella 1. Strumenti {{site.data.keyword.Bluemix_notm}}*
+
 | Strumento	| Metodo |
 |:------|:--------|
 |Interfaccia riga di comando Cloud Foundry (cf cli)	|Gestisci il tuo codice su un client locale e utilizza l'interfaccia riga di comando
@@ -162,7 +176,7 @@ quando esegui il commit delle modifiche nel codice. Non devi eseguire manualment
 Delivery Pipeline	|Gestisci il tuo codice sul repository DevOps GitHub
 e distribuisci la tua applicazione su {{site.data.keyword.Bluemix_notm}}
 utilizzando DevOps Delivery Pipeline.|
-*Tabella 1. Strumenti {{site.data.keyword.Bluemix_notm}}*
+
 
 Se la piattaforma Cloud Foundry non risponde ai requisiti della tua applicazione,
 puoi utilizzare un contenitore o una VM in cui il runtime venga configurato
@@ -204,7 +218,7 @@ dell'interfaccia riga di comando cf:
   instances: 1
   memory: 512M</code></pre>
 <p>Per ulteriori informazioni sulle
-opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](../manageapps/deployingapps.html#appmanifest).
+opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>

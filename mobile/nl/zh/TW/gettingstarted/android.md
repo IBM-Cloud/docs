@@ -3,6 +3,7 @@
 
 # 開始使用 HelloWorld 範例
 {: #gettingstarted-android}
+*前次更新：2016 年 1 月 28 日*  
 
 如果您要開始使用新的 Android 應用程式，可以使用 HelloWorld 應用程式。這個應用程式會示範如何從行動式應用程式連接到
 {{site.data.keyword.Bluemix}} 後端而不需鑑別。
@@ -34,19 +35,19 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
  * 驗證您已正確地貼上路徑及 GUID 值。
  * 如需相關資訊，您也可以檢查除錯日誌。
 
-## 下一步：
+## 後續步驟：
 {: #next}
 如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱有關設定 Bluemix 服務的資訊。
    * [Mobile Client Access](../../services/mobileaccess/index.html)
-   * [推送](../../services/mobilepush/index.html)
+   * [Push](../../services/mobilepush/index.html)
 
 # 相關鏈結
 
 ## 範例
-   * [HelloWorld (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [HelloWorld 範例](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## SDK
-   * [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## API
-   * [核心 API](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [核心 API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

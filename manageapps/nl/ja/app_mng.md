@@ -1,12 +1,20 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#アプリ管理
+#Liberty アプリおよび Node.js アプリの管理
 {: #app_management}
 
-*最終更新日: 2015 年 12 月 8 日*
+*最終更新日: 2016 年 3 月 17 日*
 
 アプリ管理は、開発用およびデバッグ用のユーティリティーの一式であり、{{site.data.keyword.Bluemix}} 上の Liberty および Node.js アプリケーション用に使用可能にすることができます。
 {:shortdesc}
@@ -66,12 +74,6 @@
   *inspector* ユーティリティーは *proxy* も開始します。
   
   2. *strongpm*: [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} を使用して、[StrongLoop Metrics、Profiling、Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} などのユーティリティーによって Node.js アプリケーションを分析できるようにします。
-  
-  **注:** **strongpm** ユーティリティーを使用するには、engines.node バージョン 0.12 を使用している必要があります。engines.node のバージョンは、package.json ファイルで指定します。例えば次のようにします。
-  
-  ```
-  "engines":{"node":"0.12"}
-  ```
     
   *strongpm* ユーティリティーは *proxy* も開始します。
   

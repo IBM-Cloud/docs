@@ -1,5 +1,6 @@
 # SDK, esempi e guida di riferimento alle API
 {: #sdk}
+*Ultimo aggiornamento: 28 gennaio 2016*
 
 Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli gli SDK che vuoi utilizzare e configura quindi il gestore dipendenze per introdurre gli SDK nella tua applicazione.
 
@@ -26,13 +27,13 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 </ul>
 <ul>
 <li><strong>Guide di riferimento API:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
 </ul>
-</td><td valign="top"><img src="images/cdova_sdk_icon.png" alt="cordova">
+</td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
 <p class="cta"><a href="test">Get SDK</a></p>
 --->
@@ -40,6 +41,15 @@ Per aggiungere gli SDK di Bluemix Mobile Services alla tua applicazione, scegli 
 <ul><li><strong>Samples:</strong></li>
 <li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
 -->
+</ul>
+
+<ul><li><strong>Esempi:</strong></li>
+<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloPush</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">HelloAuthentication</a>
+</li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Hello ToDo</a></li>
 </ul>
 
 <ul><li><strong>SDK su github:</strong></li>
@@ -67,12 +77,12 @@ SDK</a></p> --->
 DevOps</a></p>
 <ul>
 <li><strong>Guide di riferimento API:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Core</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Facebook</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Autenticazione Google</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Si apre in una nuova scheda o finestra)" target="_blank">Push REST API</a></li>
 </ul>
 </td>
 </tr>

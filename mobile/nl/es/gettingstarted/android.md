@@ -3,6 +3,7 @@
 
 # Cómo empezar con el ejemplo HelloWorld
 {: #gettingstarted-android}
+*Última actualización: 28 de enero de 2016*  
 
 Si desea empezar a trabajar con una aplicación para Android nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el programa de fondo de {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
 
@@ -46,10 +47,10 @@ Para obtener información sobre cómo obtener el SDK e integrarlo en la app para
 # rellinks
 
 ## samples
-   * [HelloWorld (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Ejemplo HelloWorld](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
-   * [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
+   * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## api
-   * [API principal](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [API principal](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

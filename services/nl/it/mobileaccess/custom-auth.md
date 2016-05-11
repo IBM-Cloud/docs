@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Utilizzo di un provider di identità personalizzato per autenticare gli utenti
 {: #custom-id}
 Puoi creare un provider di identità personalizzato e implementare la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
@@ -72,7 +79,13 @@ Esempio di una risposta a una richiesta di verifica dell'autenticazione personal
 	}
 	```
 
+### Implementazione di esempio del provider di identità personalizzato
+{: #custom-sample}
+Puoi utilizzare una qualsiasi delle seguenti implementazioni di esempio Node.js di un provider di identità personalizzato come un riferimento quando sviluppi il tuo provider di identità personalizzato. Scarica il codice dell'applicazione integrale dai repository GitHub.
 
+ * [Esempio semplice](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Esempio avanzato](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Tipiche comunicazioni tra il server {{site.data.keyword.amashort}} e un provider di identità personalizzato
 {: #custom-id-comm}
 1. Il servizio {{site.data.keyword.amashort}} invia una richiesta `startAuthorization` al provider di identità personalizzato.
@@ -91,7 +104,7 @@ Per impostazione predefinita, il provider di identità personalizzato è conside
 ## Area di autenticazione personalizzata
 {: #custom-id-custom}
 
-Un provider di identità personalizzato fornisce un'area di autenticazione personalizzata. Per gestire le richieste di verifica dell'autenticazione in entrata, crea e registra un'istanza diAuthenticationDelegate / AuthenticationListener nella tua applicazione client mobile. Definisci il nome dell'area di autenticazione personalizzata dove configuri un provider di identità personalizzato nel dashboard {{site.data.keyword.amashort}}. Può essere utilizzata per identificare che la richiesta proviene da una specifica istanza del servizio {{site.data.keyword.amashort}}. 
+Un provider di identità personalizzato fornisce un'area di autenticazione personalizzata. Per gestire le richieste di verifica dell'autenticazione in entrata, crea e registra un'istanza diAuthenticationDelegate / AuthenticationListener nella tua applicazione client mobile. Definisci il nome dell'area di autenticazione personalizzata dove configuri un provider di identità personalizzato nel dashboard {{site.data.keyword.amashort}}. Può essere utilizzata per identificare che la richiesta proviene da una specifica istanza del servizio {{site.data.keyword.amashort}}.
 
 ## Fasi successive
 {: #next-steps}

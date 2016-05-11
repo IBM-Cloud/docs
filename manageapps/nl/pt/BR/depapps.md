@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Implementando apps
 {: #deployingapps}
 
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 17 de março de 2016*
 
 É possível implementar aplicativos no
 {{site.data.keyword.Bluemix}}
@@ -27,7 +35,7 @@ Durante a fase de preparação, um
 Droplet Execution Agent (DEA) usa as informações que você fornece na interface de linha
 de comandos cf ou o arquivo `manifest.yml` para
 decidir o que criar para preparação do aplicativo. O DEA seleciona um buildpack
-apropriado para preparar o aplicativo e o resultado do processo de preparação é um droplet. Para obter mais informações sobre a implementação de um aplicativo no {{site.data.keyword.Bluemix_notm}}, consulte Arquitetura do [{{site.data.keyword.Bluemix_notm}}, Como o {{site.data.keyword.Bluemix_notm}} funciona](../overview/index.html#ov_arch).
+apropriado para preparar o aplicativo e o resultado do processo de preparação é um droplet. Para obter mais informações sobre a implementação de um aplicativo no {{site.data.keyword.Bluemix_notm}}, consulte Arquitetura do [{{site.data.keyword.Bluemix_notm}}, Como o {{site.data.keyword.Bluemix_notm}} funciona](../public/index.html#publicarch).
 
 Durante
 o processo de preparação, o DEA verifica se o buildpack corresponde ao aplicativo. Por
@@ -64,7 +72,7 @@ você tiver problemas ao preparar seus aplicativos no
 {{site.data.keyword.Bluemix_notm}}, é possível
 seguir as etapas em
 [Depurando
-erros de preparação](../troubleshoot/debugging.html#debug_stgerr) para resolver o problema.
+erros de preparação](../debug/index.html#debugging-staging-errors) para resolver o problema.
 
 ##Implementando aplicativos usando o comando cf
 {: #dep_apps}
@@ -84,9 +92,7 @@ usando a opção **-b** quando implementar seu aplicativo no
 {{site.data.keyword.Bluemix_notm}}
 a partir do prompt de comandos.
 
-  * Para implementar os pacotes do servidor Liberty no
-{{site.data.keyword.Bluemix_notm}},
-use o comando a seguir:
+  * Para implementar os pacotes do servidor Liberty no {{site.data.keyword.Bluemix_notm}}, use o comando a seguir a partir de seu diretório de origem:
   
   ```
   cf push
@@ -100,7 +106,7 @@ for Java](../starters/liberty/index.html#liberty).
   * Para implementar aplicativos Java Tomcat no {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * Para implementar pacotes do WAR no
@@ -123,7 +129,7 @@ comando a seguir:
 use o comando a seguir:
   
   ```
-  cf push appname
+  cf push appname -p app_path
   ```
   
 Um
@@ -172,7 +178,7 @@ usando o comando **cf target** com a opção **-s**:
   cf target -s <space_name>
   ```
   
-  2. Implemente seu app usando o comando **cf push**, em que appname deve ser exclusivo dentro de seu domínio.
+  2. Acesse seu diretório de app e implemente seu app usando o comando **cf push**, em que appname deve ser exclusivo dentro de seu domínio.
   
   ```
   cf push appname
@@ -261,9 +267,9 @@ ambiente específicas do aplicativo para aplicativos no {{site.data.keyword.Blue
 {{site.data.keyword.Bluemix_notm}} em execução
 utilizando o comando **cf env** ou a partir da interface com o usuário do
 {{site.data.keyword.Bluemix_notm}}:
-
+	
   * Variáveis definidas pelo usuário que são específicas de um aplicativo. Para obter informações sobre como incluir uma variável definida pelo usuário em um app, veja [Incluindo variáveis de ambiente definidas pelo usuário](#ud_env){:new_window}.
-	  
+	 
   * A variável VCAP_SERVICES, que contém informações de conexão para acessar uma instância de serviço. Se o aplicativo estiver ligado a vários serviços, a variável VCAP_SERVICES incluirá as informações de conexão de cada instância de serviço. Por
 exemplo:
   
@@ -313,12 +319,11 @@ exemplo:
   }
   ```
         
-É possível acessar variáveis de ambiente configuradas pelo DEA e por
-buildpacks.
+Também é possível acessar as variáveis de ambiente configuradas pelo DEA e por buildpacks.
 
-<ul>
-<li>As variáveis a seguir são definidas pelo DEA:
-  <dl>
+As variáveis a seguir são definidas pelo DEA:
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>O diretório-raiz do aplicativo implementado.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -401,13 +406,14 @@ em que o aplicativo atingiu seu estado atual e assim por diante. Por exemplo:
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>As variáveis que são definidas por buildpacks são diferentes para cada buildpack. Consulte
+</dl>
+
+As variáveis que são definidas por buildpacks são diferentes para cada buildpack. Consulte
 [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}
 para obter qualquer outro buildpack compatível.
 
-    <li>Variáveis que são definidas pelo Liberty Buildpack:
+<ul>
+    <li>As variáveis a seguir são definidas pelo Buildpack do Liberty:
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -424,7 +430,7 @@ instância de servidor de perfil do Liberty no DEA.</dd>
 servidor de perfil do Liberty em execução.</dd>
 	  </dl>
 </li>   
-<li>Variáveis que são definidas pelo Node.js Buildpack:
+<li>As variáveis a seguir são definidas pelo Buildpack do Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>O diretório do ambiente de tempo de execução do Node.js.</dd>
@@ -436,7 +442,16 @@ servidor de perfil do Liberty em execução.</dd>
 </li>
 </li>
 </ul>	
-	
+
+É possível usar o código de amostra do Node.js a seguir para obter o valor da variável de ambiente VCAP_SERVICES:
+
+```
+if (process.env.VCAP_SERVICES) {
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 Para obter mais informações sobre cada variável de ambiente, consulte
 [Variáveis
 de ambiente do Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
@@ -460,7 +475,7 @@ comandos iniciais padrão que o buildpack fornece.
   * Use o comando **cf push** e especifique o parâmetro -c. Por exemplo, ao implementar um aplicativo Node.js, é possível especificar o comando inicial **node app.js** no parâmetro -c:
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * Use o parâmetro de comando no arquivo `manifest.yml`. Por exemplo, ao implementar um aplicativo Node.js, é possível especificar o
@@ -470,12 +485,11 @@ comando inicial **node app.js** no arquivo manifest:
   command: node app.js
   ```
   
-  
-  
+
 ### Incluindo variáveis de ambiente definidas pelo usuário
 {: #ud_env}
 
-As variáveis de ambiente definidas pelo usuário são específicas de um aplicativo. Você tem as opções a seguir para incluir uma variável de ambiente definida pelo usuário em um app em execução: 
+As variáveis de ambiente definidas pelo usuário são específicas de um aplicativo. Você tem as opções a seguir para incluir uma variável de ambiente definida pelo usuário em um app em execução:
 
   * Use a interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Conclua
 as etapas a seguir:
@@ -495,9 +509,13 @@ as etapas a seguir:
       VAR2:value2
     ```
 	
+Após incluir uma variável de ambiente definida pelo usuário, será possível usar o código de amostra do Node.js a seguir para obter o valor da variável definida:
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### Configurando o ambiente de inicialização
 
 Para configurar o ambiente de inicialização de seu aplicativo, é possível

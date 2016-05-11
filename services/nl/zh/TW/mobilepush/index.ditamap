@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--````````````Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+<map xml:lang="zh-tw">
+<title>Push</title>
+<!--
+Overview
+Configuring the APN service
+Adding Push to the Bluelist sample
+USING tags and subscriptions (12/17)
+Managing notifications
+<<8/11/2015 Removed monitoring topic in sprint 8, DS 79883>>
+-->
+ <!--CLM PRODUCTION NAVIGATION: -->
+ <!--CLM NEW NAVIGATION : -->
+ <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer">
+<topicref href="c_overview_push.html" navtitle="關於" linking="sourceonly" format="html"
+outputclass="subsection" scope="peer"/>
+<topicref outputclass="subsection" navtitle="配置通知提供者" linking="normal"
+href="t__main_push_config_provider.html" format="html" chunk="to-content" scope="peer">
+<topicref href="t_push_provider_ios.html" format="html" navtitle="Apple Push Notifications"
+scope="peer"/>
+<topicref href="t_push_provider_android.html" navtitle="Google Cloud Messaging" format="html"
+scope="peer"/>
+</topicref>
+<topicref outputclass="subsection" navtitle="啟用推送通知" href="c_enable_push.html"
+format="html" scope="peer">
+<topicref href="c_android_enable.html" chunk="to-content" format="html" navtitle="Android"
+scope="peer">
+<topicref href="t_android_install_sdk.html" format="html"
+navtitle="使用 Gradle 安裝 Client Push SDK" scope="peer"/>
+<topicref href="t_android_initialize.html" format="html"
+navtitle="起始設定 Push SDK for Android 應用程式" scope="peer"/>
+<topicref href="t_android_register.html" format="html" navtitle="登錄 Android 裝置"
+scope="peer"/>
+<topicref href="t_android_receive.html" format="html"
+navtitle="在 Android 裝置上接收推送通知" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html" navtitle="傳送基本通知"
+scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="後續步驟" scope="peer"/>
+</topicref>
+<topicref href="c_cordova_enable.html" chunk="to-content" format="html" navtitle="Cordova"
+scope="peer">
+<topicref href="t_cordova_install.html" format="html" navtitle="安裝 Cordova Push 外掛程式"
+scope="peer"/>
+<topicref href="t_cordova_initialize.html" format="html" navtitle="起始設定 Cordova 外掛程式"
+scope="peer"/>
+<topicref href="t_cordova_register.html" format="html" navtitle="登錄裝置" scope="peer"/>
+<topicref href="t_cordova_receive.html" format="html"
+navtitle="在裝置上接收推送通知" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html" navtitle="傳送基本通知"
+scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="後續步驟" scope="peer"/>
+</topicref>
+<topicref chunk="to-content" href="c_ios_enable.html" navtitle="iOS" format="html" scope="peer">
+<topicref href="t_enable_ios_notifications_install.html" format="html"
+navtitle="使用 CocoaPods 安裝 Bluemix Mobile Services Client SDK" scope="peer"/>
+<topicref href="t_enable_ios_notifications_initialize.html" format="html"
+navtitle="起始設定 Push SDK for iOS 應用程式" scope="peer"/>
+<topicref href="t_enable_ios_notifications_register.html" format="html"
+navtitle="登錄 iOS 應用程式及裝置" scope="peer"/>
+<topicref href="t_enable-ios-notifications-receive.html"
+navtitle="在 iOS 裝置上接收推送通知" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html"
+navtitle="傳送基本推送通知" scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="後續步驟" scope="peer"/>
+</topicref>
+</topicref>
+<topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"
+format="html" navtitle="啟用標籤型通知" scope="peer">
+<topicref href="t_manage_tags.html" format="html" navtitle="管理標籤" scope="peer"/>
+<topicref href="t_get_tags.html" format="html" navtitle="取得標籤" scope="peer"/>
+<topicref href="t_subscribe_tags.html" format="html" navtitle="訂閱及取消訂閱標籤"
+scope="peer"/>
+<topicref href="t_use_tags.html" format="html" navtitle="使用標籤型通知" scope="peer"
+/>
+</topicref>
+<topicref href="c_advance_notifications.html" outputclass="subsection" chunk="to-content"
+navtitle="進階通知" format="html" scope="peer">
+<topicref href="t_advance_badge_sound_payload.html"
+navtitle="配置 iOS 徽章、音效及有效負載" format="html" scope="peer"/>
+<topicref href="t_holding_notifications_android.html" navtitle="保存 Android 的通知"
+format="html" scope="peer"/>
+<topicref href="t_enable_actionable_notifications_ios.html"
+navtitle="啟用可採取動作的 iOS 通知" format="html" scope="peer"/>
+<topicref href="t_handle_actionable_notifications_ios.html"
+navtitle="處理可採取動作的通知" format="html" scope="peer"/>
+</topicref>
+
+<topicref navtitle="使用 REST API" href="t_restapi.html" format="html" outputclass="subsection"
+scope="peer" linking="sourceonly"
+><!--hide silent notifications because it is not in the dashboard--></topicref>
+<topicref href="troubleshooting.html" navtitle="疑難排解" format="html"
+outputclass="subsection" scope="peer" linking="sourceonly"/>
+</topicref>
+</map>
+

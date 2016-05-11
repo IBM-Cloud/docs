@@ -3,7 +3,8 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.trackplan}} サービスの概要{: #track-plan}  
+#{{site.data.keyword.trackplan}} サービスの概要
+{: #track-plan}  
 
 *最終更新日: 2016 年 1 月 21 日*
 

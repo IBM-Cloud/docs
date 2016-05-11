@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} system details
 {: #openwhisk_reference}
-*Last updated: 22 February 2016*
+*Last updated: 14 April 2016*
 
 The following sections provide more details about the {{site.data.keyword.openwhisk}} system.
 {: shortdesc}
@@ -88,7 +88,7 @@ The input to and output from an action is a dictionary of key-value pairs. The k
 
 Invocations of an action are not ordered. If the user invokes an action twice from the command-line or the REST API, the second invocation might run before the first. If the actions have side effects, they might be observed in any order.
 
-Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved.  {{site.data.keyword.openwhisk_short}} does not ensure any particular concurrent consistency model for side effects. Any concurrency side effects will be implementation dependent.
+Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved. Any concurrency side effects will be implementation dependent.
 
 ### At most once semantics
 {: #openwhisk_atmostonce}
@@ -219,7 +219,7 @@ It is possible for an action is synchronous on some inputs and asynchronous on o
 ```
 {: codeblock}
 
-- In this case, the `main` function should return `whisk.async()`. When the activation result is available, the `whisk.done()` function should be called with the result is passed as a JSON object. This is referred to as an *asynchronous* activation.
+- In this case, the `main` function should return `whisk.async()`. When the activation result is available, the `whisk.done()` function should be called with the result passed as a JSON object. This is referred to as an *asynchronous* activation.
 
 Note that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
@@ -229,8 +229,7 @@ The `whisk.invoke()` function invokes another action. It takes as an argument a 
 
 - *name*: The fully qualified name of the action to invoke,
 - *parameters*: A JSON object representing the input to the invoked action. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to invoke the action.
-action is running. Defaults to `whisk.getAuthKey()`. 
+- *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`. 
 - *blocking*: Whether the action should be invoked in blocking or non-blocking mode. Defaults to `false`, indicating a non-blocking invocation.
 - *next*: An optional callback function to be executed when the invocation completes.
 

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  años: 2015, 2016
+  
+---
+
 # Características avanzadas de {{site.data.keyword.amashort}}
 {: #before-you-begin}
 El servicio de {{site.data.keyword.amashort}} ofrece características para utilizarlas en situaciones avanzadas.

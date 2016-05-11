@@ -3,11 +3,12 @@
 
 # Introdução à amostra de HelloWorld
 {: #gettingstarted-android}
+*Última atualização: 28 de janeiro de 2016*  
 
 Se desejar iniciar com um novo aplicativo Android, é possível usar o app HelloWorld. Esse app demonstra como se conectar ao backend do {{site.data.keyword.Bluemix}} a partir de um app móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
 
 1. Crie seu backend móvel em {{site.data.keyword.Bluemix_notm}}.
-    1. Na seção Textos padrão do catálogo do {{site.data.keyword.Bluemix_notm}}, clique em MobileFirst Services Starter.
+    1. Na seção Modelos do catálogo do {{site.data.keyword.Bluemix_notm}}, clique em MobileFirst Services Starter.
     2. Insira um nome e um host para seu app e clique em **Criar**.
     3. Clique em **Concluir**.
 2. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu
@@ -32,7 +33,7 @@ No simulador, clique em **Executar ping no
                 {{site.data.keyword.Bluemix_notm}}**. O app de amostra envia uma solicitação Get para um recurso protegido no tempo de execução de Node.js no {{site.data.keyword.Bluemix_notm}}. Se a
 solicitação for bem-sucedida, a conexão será verificada e o texto no
 simulador será atualizado.
-<br/>**Nota:** o código de tempo de execução de Node.js é fornecido no texto padrão do MobileFirst Services Starter. Se o aplicativo backend não tiver sido criado com o texto padrão do MobileFirst Services Starter, o aplicativo não será conectado com êxito.<br/>
+<br/>**Nota:** o código de tempo de execução de Node.js é fornecido no modelo do MobileFirst Services Starter. Se o aplicativo backend não tiver sido criado com o modelo do MobileFirst Services Starter, o aplicativo não será conectado com êxito.<br/>
 Quando você se conectar com êxito ao {{site.data.keyword.Bluemix_notm}} a partir do app móvel no Android Studio, uma mensagem que diz "Oba! você está conectado" será exibida:<br/>
 ![Aplicativo Hello World conectado com êxito ao {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Aplicativo Hello World conectado com êxito ao Bluemix")
 
@@ -53,10 +54,10 @@ Para obter informações sobre como obter o SDK e o integrar ao app móvel, cons
 # rellinks
 
 ## exemplos
-   * [HelloWorld (Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
+   * [Amostra de HelloWorld](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)
 
 ## sdk
-   * [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
+   * [SDK principal](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 
 ## interface de programação de aplicativos
-   * [API do Núcleo](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+   * [API do Núcleo](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)

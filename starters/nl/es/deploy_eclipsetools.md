@@ -1,3 +1,16 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:download: .download}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
@@ -14,10 +27,8 @@ Cloud Foundry.
   
   ![Arrastre y suelte en un espacio de trabajo de Eclipse Luna en ejecución para instalar IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
-  3. Descargue el código del iniciador e impórtelo en Eclipse seleccionando **Archivo>Importar proyectos existentes en el espacio de trabajo>Archivo de archivado**.
-
-  <p>
-  <a class="xref" href="http://bluemix.net" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código iniciador" /> </a>
-  </p>
+  3. {: download} Descargue el código del iniciador e impórtelo en Eclipse seleccionando **Archivo>Importar proyectos existentes en el espacio de trabajo>Archivo de archivado**.
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código iniciador" /> </a> 
 
 Para ver instrucciones paso a paso sobre cómo desplegar apps, consulte [Despliegue de apps con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.

@@ -1,16 +1,25 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS
 {: #custom-ios}
 
 Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
 
+**Suggerimento:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo dell'SDK Swift, vedi [Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
+
 ## Prima di cominciare
 {: #before-you-begin}
-Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
- * [Introduzione a {{site.data.keyword.amashort}}](getting-started.html)
- * [Configurazione dell'SDK iOS](getting-started-ios.html)
- * [Utilizzo di un provider di identità personalizzato](custom-auth.html)
- * [Creazione di un provider di identità personalizzato](custom-auth-identity-provider.html)
- * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
+Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
+ * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Configurazione dell'SDK Objective-C iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
+ * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 
@@ -30,7 +39,7 @@ Utilizza il gestore dipendenze CocoaPods per installare l'SDK client {{site.data
 CocoaPods installa le dipendenze aggiunte. Vengono visualizzati lo stato di avanzamento e quali componenti sono stati aggiunti.
 
 **Importante**: devi ora aprire il tuo progetto utilizzando un file xcworkspace che è stato generato da CocoaPods. Di norma, il
-nome è `{il-tuo-nome-progetto}.xcworkspace`.  
+nome è `{il-tuo-nome-progetto}.xcworkspace`.
 
 1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
 
@@ -39,9 +48,9 @@ nome è `{il-tuo-nome-progetto}.xcworkspace`.
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
 
-Inizializza l'SDK passando i parametri applicationGUID e applicationRoute. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
+Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`applicationGUID`) dell'applicazione. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
 
-1. Ottieni i valori di parametro della tua applicazione. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. Vengono visualizzati i valori di rotta applicazione (*Application Route*) e GUID applicazione (*Application GUID*).
+1. Ottieni i valori di parametro della tua applicazione. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili** per visualizzare i valori per **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`).
 
 1. Importa il framework `IMFCore` nella classe che desideri utilizzi l'SDK client.
 
@@ -63,7 +72,7 @@ Inizializza l'SDK passando i parametri applicationGUID e applicationRoute. Un pu
 	* Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verifica che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto.
 
-1. Inizializza l'SDK client. Sostituisci applicationRoute e applicationGUID con i valori che hai ottenuto da **Opzioni mobili**.
+1. Inizializza l'SDK client. Sostituisci applicationRoute e applicationGUID con i valori per **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`) che hai ottenuto da **Opzioni mobili**.
 
 	Objective-C:
 
@@ -76,8 +85,8 @@ Inizializza l'SDK passando i parametri applicationGUID e applicationRoute. Un pu
 	Swift:
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("https://abms.mybluemix.net",
-	 							backendGUID: "c3f8f2ba-5892-4362-95cf-744692cc7341")
+	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
+	 							backendGUID: "applicationGUID")
 	```
 
 
@@ -133,9 +142,9 @@ i metodi `IMFAuthenticationContext` per restituire credenziali all'SDK client {{
 
 
 L'esempio IMFAuthenticationDelegate è progettato per funzionare con l'esempio di provider di identità personalizzato. Puoi scaricare
-l'esempio da [questo repository Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+l'esempio dal [repository Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
 
-Implementazione Objective-C:
+Objective-C:
 
 ``` Objective-C
 CustomAuthenticationDelegate.h
@@ -236,7 +245,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 ## Registrazione di un IMFAuthenticationDelegate personalizzato
 
-Dopo che hai creato un IMFAuthenticationDelegate personalizzato, registralo con `IMFClient`. Richiama il seguente codice nella tua applicazione prima di inviare richieste alle tue risorse protette. Utilizza il nome di area di autenticazione (realmName) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
+Dopo che hai creato un IMFAuthenticationDelegate personalizzato, registralo presso `IMFClient`. Richiama il seguente codice nella tua applicazione prima di inviare richieste alle tue risorse protette. Utilizza il nome di area di autenticazione (realmName) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
 
 Applicazioni Objective-C:
 
@@ -261,11 +270,10 @@ Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelega
 
 ### Prima di cominciare
 {: #custom-ios-testing-before}
-Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
+ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
-
- 1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `http://{appRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
- L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con
+1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+  L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con
 l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo aver inizializzato `BMSClient` e registrato il tuo `IMFAuthenticationDelegate` personalizzato:
 
@@ -304,7 +312,25 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
 	};
 
 	```
-
 1. 	Quando la tua richiesta ha esito positivo, nella console Xcode vedi il seguente output:
 
 	![immagine](images/ios-custom-login-success.png)
+	
+	
+	
+	Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+	Objective C: 
+
+	```Objective-C
+	[[IMFAuthorizationManager sharedInstance] logout : callBack]
+	```
+	Swift: 
+
+	```Swift
+	IMFAuthorizationManager.sharedInstance().logout(callBack)
+	```
+
+Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
+Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+

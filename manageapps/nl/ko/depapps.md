@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #앱 배치
 {: #deployingapps}
 
-*마지막 업데이트 날짜: 2015년 12월 4일*
+*마지막 업데이트 날짜: 2016년 3월 17일*
 
 명령행 인터페이스 및 IDE(Integrated Development Environment) 등의 다양한 방법을
 사용하여 {{site.data.keyword.Bluemix}}에
@@ -26,7 +34,7 @@
 스테이징 단계 중 DEA(Droplet Execution Agent)에서는
 cf 명령행 인터페이스 또는 `manifest.yml` 파일에 제공된 정보를 사용하여
 애플리케이션 스테이징을 위해 작성할 항목을 결정합니다. DEA는 애플리케이션 스테이징에
-적합한 빌드팩을 선택하며, 스테이징 프로세스의 결과가 드롭릿(droplet)입니다. {{site.data.keyword.Bluemix_notm}}에 배치하는 방법에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 아키텍처, {{site.data.keyword.Bluemix_notm}} 작동 방식](../overview/index.html#ov_arch)을 참조하십시오.
+적합한 빌드팩을 선택하며, 스테이징 프로세스의 결과가 드롭릿(droplet)입니다. {{site.data.keyword.Bluemix_notm}}에 배치하는 방법에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 아키텍처, {{site.data.keyword.Bluemix_notm}} 작동 방식](../public/index.html#publicarch)을 참조하십시오.
 
 스테이징 프로세스 중 DEA에서 빌드팩이 애플리케이션과 일치하는지
 확인합니다. 예를 들어 .war 파일의 경우 Liberty 런타임이고, .js 파일의 경우
@@ -53,7 +61,7 @@ Warden 컨테이너의 파일 시스템에 저장된 파일(예: 로그)을 볼 
 
 {{site.data.keyword.Bluemix_notm}}에서
 애플리케이션을 스테이징할 때 문제점이 발견될 경우 [스테이징 오류
-디버깅](../troubleshoot/debugging.html#debug_stgerr)에 설명된 단계에 따라 문제점을 해결하십시오.
+디버깅](../debug/index.html#debugging-staging-errors)에 설명된 단계에 따라 문제점을 해결하십시오.
 
 ##cf 명령을 사용하여 애플리케이션 배치
 {: #dep_apps}
@@ -70,8 +78,7 @@ Cloud Foundry를 기반으로 빌드되었으므로 명령이 기본적으로 �
 {{site.data.keyword.Bluemix_notm}}에
 배치할 때 **-b** 옵션을 사용하여 빌드팩의 URL을 지정해야 합니다.
 
-  * Liberty 서버 패키지를 {{site.data.keyword.Bluemix_notm}}에
-배치하려면 다음 명령을 사용하십시오.
+  * Liberty 서버 패키지를 {{site.data.keyword.Bluemix_notm}}에 배치하려면 소스 디렉토리에서 다음 명령을 사용하십시오.
   
   ```
   cf push
@@ -84,7 +91,7 @@ for Java](../starters/liberty/index.html#liberty)를 참조하십시오.
   * Java Tomcat 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 다음 명령을 사용하십시오.
   
   ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git
+  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
   
   * WAR 패키지를 {{site.data.keyword.Bluemix_notm}}에
@@ -104,7 +111,7 @@ for Java](../starters/liberty/index.html#liberty)를 참조하십시오.
 배치하려면 다음 명령을 사용하십시오.
   
   ```
-  cf push appname
+  cf push appname -p app_path
   ```
   
 Node.js
@@ -154,7 +161,7 @@ Node.js 애플리케이션에 있어야 합니다. `app.js` 파일은 애플리�
   cf target -s <space_name>
   ```
   
-  2. **cf push** 명령을 사용하여 앱을 배치하십시오. 여기서, appname은 도메인 내에서 고유해야 합니다.
+  2. 앱 디렉토리로 이동한 후 **cf push** 명령을 사용하여 앱을 배치하십시오. 여기서, appname은 도메인 내에서 고유해야 합니다.
   
   ```
   cf push appname
@@ -240,9 +247,9 @@ cf push -f appManifest.yml
 **cf env** 명령을 사용하거나 {{site.data.keyword.Bluemix_notm}}
 사용자 인터페이스를 통해 실행 중인 {{site.data.keyword.Bluemix_notm}}
 애플리케이션의 다음 환경 변수를 확인할 수도 있습니다.
-
+	
   * 애플리케이션에만 해당되는 사용자 정의 변수. 사용자 정의 변수를 앱에 추가하는 방법에 대한 자세한 정보는 [사용자 정의 환경 변수 추가](#ud_env){:new_window}를 참조하십시오.
-	  
+	 
   * 서비스 인스턴스에 액세스하는 데 필요한 연결 정보가 포함된 VCAP_SERVICES 변수. 애플리케이션이 여러 개의 서비스에 바인딩된 경우, VCAP_SERVICES 변수에 각 서비스 인스턴스에 대한 연결 정보가 포함되어 있습니다. 예:
   
   ```
@@ -291,11 +298,12 @@ cf push -f appManifest.yml
   }
   ```
         
-DEA 및 빌드팩을 통해 설정된 환경 변수에 액세스할 수 있습니다.
+DEA 및 빌드팩을 통해 설정된 환경 변수에 액세스할 수도 있습니다.
 
-<ul>
-<li>DEA를 통해 정의된 변수는 다음과 같습니다.
-  <dl>
+DEA를 통해 정의된 변수는 다음과 같습니다.
+  
+
+<dl>
   <dt><strong>HOME</strong></dt>
   <dd>배치된 애플리케이션의 루트 디렉토리입니다.</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
@@ -377,13 +385,16 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 }
 </code></pre></dd>
 
-  </dl>
-</li>
-<li>빌드팩을 통해 정의되는 변수는 빌드팩마다 다릅니다. 호환되는 기타 빌드팩은
+</dl>
+
+빌드팩을 통해 정의되는 변수는 빌드팩마다 다릅니다. 호환되는 기타 빌드팩은
 [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}를
 참조하십시오.
 
-    <li>Liberty 빌드팩을 통해 정의되는 변수:
+    
+
+<ul>
+    <li>Liberty 빌드팩으로 정의되는 변수는 다음과 같습니다.
 	
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
@@ -400,7 +411,7 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 같은 생성된 출력의 위치입니다.</dd>
 	  </dl>
 </li>   
-<li>Node.js 빌드팩을 통해 정의되는 변수:
+<li>Node.js 빌드팩으로 정의되는 변수는 다음과 같습니다.
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
 	<dd>Node.js 런타임 환경의 디렉토리입니다.</dd>
@@ -412,7 +423,17 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 </li>
 </li>
 </ul>	
-	
+
+다음 샘플 Node.js 코드를 사용하여 VCAP_SERVICES 환경 변수의 값을 가져올 수 있습니다. 
+
+```
+if (process.env.VCAP_SERVICES) {
+
+    var env = JSON.parse (process.env.VCAP_SERVICES);
+    myvar = env.foo[bar].foo;
+}
+```
+
 각 환경 변수에 대한
 자세한 정보는 [Cloud Foundry
 Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}를 참조하십시오.
@@ -435,7 +456,7 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
   * **cf push** 명령을 사용하고 -c 매개변수를 지정하십시오. 예를 들어, Node.js 애플리케이션을 배치하는 경우에는 **node app.js** 시작 명령을 -c 매개변수에 지정할 수 있습니다.
   
   ```
-  cf push appname -c "node app.js"
+  cf push appname -p app_path -c "node app.js"
   ```
   
   * `manifest.yml` 파일에 command 매개변수를 사용하십시오. 예를 들어 Node.js 애플리케이션을 배치할 경우
@@ -446,8 +467,7 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
   command: node app.js
   ```
   
-  
-  
+
 ### 사용자 정의 환경 변수 추가
 {: #ud_env}
 
@@ -471,9 +491,13 @@ Environment Variables](http://docs.cloudfoundry.org/devguide/deploy-apps/environ
       VAR2:value2
     ```
 	
+사용자 정의 환경 변수를 추가한 후에는 다음 샘플 Node.js 코드를 사용하여 정의한 변수의 값을 가져올 수 있습니다.
 
-
-  
+```
+var myEnv = process.env.env_var_name;
+console.log("My user defined = " + myEnv);
+```
+	
 ### 스타트업 환경 구성
 
 애플리케이션 스타트업 환경을 구성하려면 `/.profile.d`
@@ -510,7 +534,7 @@ cf 명령행 인터페이스를 사용하여 애플리케이션을
 tmp/
 ```
 
-# rellinks
+# 관련 링크
 ## 일반 
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}

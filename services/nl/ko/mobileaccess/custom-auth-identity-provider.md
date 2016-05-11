@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # 사용자 정의 ID 제공자 작성
 {: #custom-create}
 사용자 정의 ID 제공자를 작성하려면 RESTful API를 표시하는 웹 애플리케이션을
@@ -9,8 +16,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 * `base_url`: 사용자 정의 ID 제공자 웹 애플리케이션의 기본 URL입니다.
 기본 URL은 {{site.data.keyword.amashort}} 대시보드에 등록할 URL입니다. 
-* `tenant_id`: 테넌트의 고유 ID입니다. {{site.data.keyword.amashort}}는
-이 API를 호출할 때 항상 {{site.data.keyword.Bluemix}} applicationGUID를 제공합니다. 
+* `tenant_id`: 테넌트의 고유 ID입니다. {{site.data.keyword.amashort}}는 이 API를 호출할 때 항상 {{site.data.keyword.Bluemix}} 앱 GUID(`applicationGUID`)를 제공합니다.
 * `realm_name`: {{site.data.keyword.amashort}} 대시보드에 정의된
 사용자 정의 영역 이름을 지정합니다. 
 * `request_type`: 다음 중 하나를 지정합니다. 
@@ -138,9 +144,7 @@ JSON 오브젝트를 지정합니다.
 {{site.data.keyword.amashort}} 서비스에서 사용자 정의 ID 제공자로 전송되는
 각 요청에는 권한 헤더가 포함되어 있습니다. 필수적인 사항은 아니지만, 사용자 정의 ID 제공자에
 {{site.data.keyword.amashort}} 서버 SDK를 제공하여 권한 헤더의 유효성을
-검증하십시오. 이 SDK를 사용하려면 사용자 정의 ID 제공자 애플리케이션이
-Node.js 또는 Liberty for Java를 사용하여 구현되고, {{site.data.keyword.Bluemix_notm}}에서
-실행되어야 합니다. 
+검증하십시오. 이 SDK를 사용하려면 사용자 정의 ID 제공자 애플리케이션이 Node.js 또는 Liberty for Java&trade;&trade;를 사용하여 구현되고 {{site.data.keyword.Bluemix_notm}}에서 실행되어야 합니다.
 
 권한 헤더에는 인증 프로세스를 트리거한 모바일 클라이언트 및 모바일 앱에 대한 정보가
 포함되어 있습니다. 보안 컨텍스트를 사용하여 이 데이터를 검색할 수 있습니다.
@@ -148,14 +152,16 @@ Node.js 또는 Liberty for Java를 사용하여 구현되고, {{site.data.keywor
 
 ## 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}
-사용자 정의 ID 제공자를 개발할 때 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을
-사용할 수 있습니다. 전체 애플리케이션 코드는
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)에서
-다운로드하십시오. 
+사용자 정의 ID 제공자를 개발할 때는 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용할 수 있습니다. 
+GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
 
-### JSON 구조
+* [단순 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [고급 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-이 구현은 제공된 인증 확인 응답이 다음 구조의 JSON 오브젝트라고 가정합니다. 
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -164,7 +170,7 @@ Node.js 또는 Liberty for Java를 사용하여 구현되고, {{site.data.keywor
  }
  ```
 
-### 사용자 정의 ID 제공자 샘플 코드
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -227,7 +233,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 			}
 		}
 	} else {
-logger.debug("Login failure for userId ::", username);
+		logger.debug("Login failure for userId ::", username);
 	}
 
 	res.status(200).json(responseJson);
@@ -243,6 +249,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## 다음 단계
 {: #next-steps}

@@ -1,9 +1,21 @@
+---
+
+ 
+
+copyright:
+
+  years: 2014, 2016
+
+ 
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2015년 12월 15일*
+*마지막 업데이트 날짜: 2016년 3월 17일*
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
@@ -12,12 +24,12 @@
 보안 애플리케이션 개발을 위한 명확한 선택사항을 보유한 플랫폼이 됩니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 침해사고 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고
 해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션 및 데이터에 대한 다중의 중첩된 보안 계층을 제공합니다. {{site.data.keyword.Bluemix_notm}} Local의 경우
 사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} Local을
-호스트하여 실제 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
+호스트하여 물리적 보안을 소유하고 인프라를 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}}는
 다양한 카테고리(플랫폼, 데이터 및 애플리케이션)의 PaaS(Platform as a Service) 계층에서 보안 기능을 추가합니다.
 
 ## {{site.data.keyword.Bluemix_notm}} 플랫폼 보안
@@ -25,7 +37,7 @@
 
 {{site.data.keyword.Bluemix_notm}}는 코어 플랫폼에 대해 (IBM SoftLayer를 통한) 기능, 인프라, 운영 및 물리적 보안을 제공합니다. 그러나
 {{site.data.keyword.Bluemix_notm}} Local은 고객이 제공하는 인프라와 데이터 센터에서
-고유하며 실제 보안을 소유합니다.
+고유하며 물리적 보안을 소유합니다.
 
 {{site.data.keyword.Bluemix_notm}} 환경은 산업 표준을 충족하거나 그 이상을 충족하는 가장 제한적인 IBM 정보 기술(IT) 보안 표준을 준수합니다. 표준에는 네트워크, 데이터 암호화 및
 액세스 제어가 포함되어 있습니다.
@@ -35,7 +47,7 @@
  * 서비스 무결성 및 가용성
  * 취약성 및 수정사항 관리
  * 서비스 거부(DoS) 및 조직적 공격 발견
- * 보안 침해사고 대응
+ * 보안 인시던트 대응
 
 ![Bluemix 플랫폼 보안 개요](images/platform_sec.svg)
 
@@ -110,7 +122,7 @@ HTTP 비활성 제한시간은 2분입니다.
 </dd>
 
 <dt>보안 개발 방식 실행</dt>
-<dd> {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated의 경우 주기적 보안 취약성 스캔은 IBM Security AppScan® Dynamic Analyzer 및 정적 분석기 오퍼링을 사용하여 다양한 {{site.data.keyword.Bluemix_notm}} 컴포넌트에서 수행됩니다. 위협 모델링 및 침입 테스트는 모든 {{site.data.keyword.Bluemix_notm}} 배치 유형에 대해 잠재적 취약점을 발견하고 해결하기 위해 사용됩니다. 또한 애플리케이션 개발자는 AppScan Dynamic Analyzer 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치된 자체 웹 앱을 보호할 수 있습니다.</dd>
+<dd> {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated의 경우 주기적 보안 취약성 스캔은 IBM Security AppScan® Dynamic Analyzer를 사용하여 다양한 {{site.data.keyword.Bluemix_notm}} 컴포넌트에서 수행됩니다. 위협 모델링 및 침입 테스트는 모든 {{site.data.keyword.Bluemix_notm}} 배치 유형에 대해 잠재적 취약점을 발견하고 해결하기 위해 사용됩니다. 또한 애플리케이션 개발자는 AppScan Dynamic Analyzer 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치된 자체 웹 앱을 보호할 수 있습니다.</dd>
 </dl>
 
 ### 인프라 보안
@@ -161,7 +173,7 @@ Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여
 <dt>사용자 액세스 관리</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 내에서는 업무 분리 가이드라인에 따라 사용자에게 세부 단위의 액세스 권한을 지정하며 사용자가 최소 권한 원칙에 따라 자체 작업의 수행에 필요한 액세스 권한만 갖도록 보장합니다.
 
-{{site.data.keyword.Bluemix_notm}} Dedicated 및 Local 환경 내에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할 및 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}}](../admin/index.html#mng) 관리를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} Dedicated 및 Local 환경 내에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할 및 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 로컬 및 전용 관리](../admin/index.html#mng)를 참조하십시오.
 </dd>
 </dl>
 
@@ -170,7 +182,7 @@ Tenable Network Security 취약성 스캔 도구 Nessus를 사용하여
 {{site.data.keyword.Bluemix_notm}} Public 및 Dedicated에서는 실제 네트워크 보안을 위해 SoftLayer의 네트워크 내 네트워크(network-within-a-network) 토폴로지에 의존합니다. 이러한 네트워크 내 네트워크 아키텍처를 사용하여
 권한 있는 사용자만 시스템에 완전히 액세스할 수 있도록
 할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 로컬 인스턴스에 대한
-실제 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
+물리적 보안을 소유합니다. 데이터 센터는 회사 방화벽 뒤에서 보호됩니다.
 
 SoftLayer 네트워크 내 네트워크(network-within-a-network)에서 공용 네트워크 계층은 호스팅된 웹 사이트 또는 온라인 자원에 대한 공용 트래픽을 처리합니다. 사설 네트워크 계층을 사용하면 SSL, PPTP 또는 IPSec VPN 게이트웨이에서 개별 독립형 써드파티 업체를 통해 진정한 대역 외 관리를 수행할 수 있습니다. 데이터 센터 간 네트워크 계층은 개별 SoftLayer 설비에 포함된 서버 간의 무료 보안 연결을 제공합니다.
 
@@ -236,70 +248,15 @@ Single Sign On 서비스는 사용자의 신임 정보가 저장된 다수의 ID
 
 자세한 정보는 [Single Sign-On 시작하기](../services/SingleSignOn/index.html)를 참조하십시오.
 
-### AppScan Mobile Analyzer
+### Application Security on Cloud
 
-이 서비스는 Android 모바일 애플리케이션의
-보안 분석을 제공합니다. 이 서비스를 사용하려면
-컴파일된 Android 앱을 APK 파일로 업로드해야 합니다. 보안 분석 스캔이 완료되면
-보고서를 다운로드할 수 있습니다.
-
-자세한 정보는 [AppScan Mobile Analyzer 시작하기](../services/AppScanMobileAnalyzer/index.html)를 참조하십시오.
-
-### AppScan Dynamic Analyzer
-
-이 서비스는 동적 분석 도구를 사용한
-웹 애플리케이션의 보안 분석을 제공합니다. 이 도구는 앱 소스 코드가 아니라 배치된 웹 앱에서 작동하고
-언어 또는 기술에 관계없이
-임의의 {{site.data.keyword.Bluemix_notm}} 웹 앱을
-스캔할 수 있습니다. 사용자가 속해 있는 조직의 애플리케이션만
-스캔할 수 있습니다. 스캔을 작성하려면
-웹 앱 URL과 로그인 신임 정보(있는 경우)를
-구성해야 합니다. 스캔이 완료되면
-보고서를 다운로드할 수 있습니다.
-
-자세한 정보는 [AppScan Dynamic Analyzer 시작하기](../services/AppScanDynamicAnalyzer/index.html)를 참조하십시오.
-
-### Mobile Analyzer for iOS(베타)
-
-Mobile Analyzer for iOS 서비스는 iOS 모바일 애플리케이션에 대한 AppScan 동적 보안 분석을 제공합니다. 이는 iOS 모바일 앱의 보안 문제를 식별하는 데 도움이 됩니다.
-
-자세한 정보는 [Mobile Analyzer for iOS 시작하기](../services/AppScanIOS/index.html)를 참조하십시오.
-
-### Static Analyzer(베타)
-
-Static Analyzer 서비스는 클라우드에서 정적 애플리케이션 보안 테스트를 사용합니다. 이는 소프트웨어 개발 라이프사이클의 초기에 소스 코드 취약점을 찾는 데 도움이 되므로, 배치 전에 해당 취약점을 수정할 수 있습니다.
-
-Static Analyzer로 로컬 디스크에서 명령행 인터페이스(CLI)를 사용하여 Java 및 Java 웹 컨텐츠를 스캔할 수 있습니다. 또한 Static Analyzer 플러그인을 Eclipse 또는 Maven에 추가하는 소형 설치 프로그램을 실행할 수 있습니다. 클라이언트 유틸리티를 사용하면 아카이브 파일에 사용자 파일에 대한 정보를 스캔 및 수집할 수 있으며,
-이 파일을 다시 스캔 결과를 위해 클라우드에 제출할 수 있습니다.
-
-자세한 정보는 [IBM Analyzer for Bluemix 시작하기](../services/StaticAnalyzer/index.html)를 참조하십시오.
+이 서비스는 모바일 및 웹 앱에 대한 보안 분석을 제공하며 사용자가 보안 취약점에 대한 소스 코드를 스캔할 수 있도록 허용합니다. 자세한 정보는 [Application Security on Cloud 시작하기](../services/ApplicationSecurityonCloud/index.html)를 참조하십시오.
 
 ### 애플리케이션 보안 테스트를 위한 IBM UrbanCode 플러그인
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 플러그인을 사용하면 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 사용자 웹 또는 Android 앱에서 보안 스캔을 실행할 수 있습니다. 이 플러그인은 IBM Bluemix DevOps 서비스 플랫폼에서 IBM UrbanCode™ Deploy 커뮤니티에 의해 개발되고 지원됩니다.
 
 자세한 정보는 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}로 이동하십시오.
-
-### SQL Database
-
-SQL Database 서비스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. 이 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 인증용 IBM Directory Server LDAP 및 IBM InfoSphere® Guardium® Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
-DigiCert가 서명하는 SSL 인증서에 의해 보호됩니다.
-
-이 서비스의 특정 플랜에서 {{site.data.keyword.Bluemix_notm}}x의 SQL 데이터베이스 콘솔을 사용하여 다음 정보가 포함된 보고서를 가져올 수 있습니다.
-
- * 애플리케이션이 액세스하는 데이터베이스에 있을 수 있는
-민감한 데이터
- * 지정된 기간 내에 데이터베이스에 액세스한
-애플리케이션 사용자
- * 데이터베이스에 있는 민감한 데이터에 액세스하는
-애플리케이션 사용자
-
-SQL을 사용하여 데이터를 마스킹하기 위해
-애플리케이션은 데이터베이스와 함께 배치되는
-마스킹 사용자 정의 기능(UDF)을 호출할 수 있습니다. 예를 들어, 테스트를 위해 다른 곳에 사용하려는
-데이터를 마스킹할 수 있습니다. UDF는 IBM Infosphere Optim™에서 데이터 마스킹 알고리즘을 구현합니다.
-
-이 서비스의 프리미엄 플랜에는 데이터 암호화도 포함됩니다. 이 서비스에 대한 자세한 정보는 [SQL Database 시작하기](../services/SQLDB/index.html)를 참조하십시오.
 
 ### dashDB
 
@@ -324,7 +281,29 @@ Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에
 연결하고자 하는 원격 위치 간에 터널을 설정합니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는
 API 패키지를 사용하여 보안 게이트웨이를 구성하고 작성할 수 있습니다.
 
-자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/index.html)를 참조하십시오.
+자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/secure_gateway.html)를 참조하십시오.
+
+### SQL Database
+
+SQL Database 서비스는 완전히 프로비저닝된 관계형 데이터베이스를 앱에 추가합니다. 이 서비스는 애플리케이션에서 액세스하는 데이터베이스를 보호하기 위해 인증용 IBM Directory Server LDAP 및 IBM InfoSphere® Guardium® Data Activity Monitor를 사용합니다. 애플리케이션 및 데이터베이스 사이의 연결은
+DigiCert가 서명하는 SSL 인증서에 의해 보호됩니다.
+
+이 서비스의 특정 플랜에서, {{site.data.keyword.Bluemix_notm}}의
+SQL 데이터베이스 콘솔을 사용하여 다음 정보가 포함된 보고서를 가져올 수 있습니다. 
+
+ * 애플리케이션이 액세스하는 데이터베이스에 있을 수 있는
+민감한 데이터
+ * 지정된 기간 내에 데이터베이스에 액세스한
+애플리케이션 사용자
+ * 데이터베이스에 있는 민감한 데이터에 액세스하는
+애플리케이션 사용자
+
+SQL을 사용하여 데이터를 마스킹하기 위해
+애플리케이션은 데이터베이스와 함께 배치되는
+마스킹 사용자 정의 기능(UDF)을 호출할 수 있습니다. 예를 들어, 테스트를 위해 다른 곳에 사용하려는
+데이터를 마스킹할 수 있습니다. UDF는 IBM Infosphere Optim™에서 데이터 마스킹 알고리즘을 구현합니다.
+
+이 서비스의 프리미엄 플랜에는 데이터 암호화도 포함됩니다. 이 서비스에 대한 자세한 정보는 [SQL Database 시작하기](../services/SQLDB/index.html)를 참조하십시오.
 
 ### 보안 정보 및 이벤트 관리
 
@@ -358,7 +337,7 @@ You can use security information and event management (SIEM) 도구를 사용하
     2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
     3. 네트워크 라우터를 통해.
     4. Cloud Foundry 클라우드 제어기를 사용한 권한 부여를 통해(개발자가 작성한 앱 및 서비스 인스턴스에 대한 액세스만 보장할 수 있도록).
-  
+
 {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local *관리자*의 경우,
 **관리자 플로우**는 다음과 같습니다.
  1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음).
@@ -367,12 +346,12 @@ You can use security information and event management (SIEM) 도구를 사용하
  4. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 관리 페이지에 도달합니다.
 
 이 경로에서 기술된 사용자와 더불어 인가된 IBM 보안 운영 팀은 다음과 같은 다양한 운영 보안 태스크를 수행합니다.
- * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 실제 보안 및 스캔을 소유합니다.
+ * 취약성 스캔. {{site.data.keyword.Bluemix_notm}} Local에 대해 사용자는 방화벽 내 물리적 보안 및 스캔을 소유합니다.
  * 사용자 액세스 관리.
  * IBM Endpoint Manager로 수정사항을 주기적으로 적용하여 운영 체제 강화.
  * 침입 방지로 위험성 관리.
  * QRadar로 보안 모니터링.
- * 관리 콘솔을 통해 사용 가능한 보안 보고서
+ * 관리 페이지에서 사용 가능한 보안 보고서
 
 ## 보안 준수
 {: #compliance}
@@ -385,8 +364,8 @@ You can use security information and event management (SIEM) 도구를 사용하
 ![금융 기관 정보 시스템](images/FISC.gif)  일본의 은행 및 관련 금융 기관에 구축된 컴퓨터 시스템에는 FISC(Center for Financial Industry Information Systems) 보안 지침을 기반으로 하는 보안 절차가 마련되어 있어야 합니다. **FISC** 보안 지침은 일본 금융 기관(FSA), 일본 은행(BOJ) 및 FISC에서 적용됩니다.
 
 [IBM Bluemix 위험성 설문조사 결과](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}에서 FISC 보안 지침과 관련된 {{site.data.keyword.Bluemix_notm}} 자가 진단 문서(일본어로 작성됨)를 확인할 수 있습니다.  
- 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}}는 최상의 정보 보안 관리 프로세스 방안을 정의하는 **국제 표준화 기구(ISO) 27001 및 27002 표준**에 의거하여 인증되었습니다. ISO 27001 표준은 개별 조직의 요구에 따라 정보 보안 관리 시스템(ISMS)의 설정, 구현 및 문서화를 위한 요구사항과 보안 제어 구현을 위한 요구사항을 지정합니다. ISO 27002 표준은 ISO 27001의 각 보안 제어를 상세히 설명합니다. ISO 27000 표준 모음은 서면, 구두 또는 전자식 정보의 신뢰성, 무결성 및 가용성 보호를 목적으로 자산의 가치와 위험을 척도화하는 프로세스를 통합한 것입니다. 
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}}는 최상의 정보 보안 관리 프로세스 방안을 정의하는 **국제 표준화 기구(ISO) 27001 및 27002 표준**에 의거하여 인증되었습니다. ISO 27001 표준은 개별 조직의 요구에 따라 정보 보안 관리 시스템(ISMS)의 설정, 구현 및 문서화를 위한 요구사항과 보안 제어 구현을 위한 요구사항을 지정합니다. ISO 27002 표준은 ISO 27001의 각 보안 제어를 상세히 설명합니다. ISO 27000 표준 모음은 서면, 구두 또는 전자식 정보의 신뢰성, 무결성 및 가용성 보호를 목적으로 자산의 가치와 위험을 척도화하는 프로세스를 통합한 것입니다.
 
 {{site.data.keyword.Bluemix_notm}}는 제3의 보안 회사에 의한 감사를 거치며 ISO 27001의 모든 요구사항을 충족합니다([Bluemix ISO 27001:2013 등록 인증서](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}).
 
@@ -395,40 +374,31 @@ You can use security information and event management (SIEM) 도구를 사용하
   * 공급업체 관리 프로그램
   * 내부 기업 통제 및 위험 관리 프로세스
   * 규제 감시
- 
+
 {{site.data.keyword.Bluemix_notm}}는 IBM SoftLayer IaaS(Infrastructure-as-a-Service) 클라우드 서비스를 사용하고 해당 보안 아키텍처를 최대한 활용합니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 영업](mailto:bmxcert1@us.ibm.com){:new_window} 팀에 문의하십시오.
 
-## 보안 보고서
-{: #reports}
+### 플랫폼 및 서비스 준수
+다음은 각 표준을 준수하는 {{site.data.keyword.Bluemix_notm}} 서비스를 표시하는 표입니다.
 
-{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하여 {{site.data.keyword.Bluemix_notm}}는 관리 페이지를 통해 볼 수 있는 다양한 보안 보고서와 로그를 생성합니다. 보고서 보기 및 사용에 대한 지시사항은 [보고서 보기](../admin/index.html#oc_report)를 참조하십시오. 
+|{{site.data.keyword.Bluemix_notm}} 컴포넌트		|FISC		|ISO 27001	|SOC 2 유형 1		|
+|:----------------------|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} 플랫폼		|Y			|Y	|Y	|
+|{{site.data.keyword.APIM}}			|Y	|Y |			|
+|{{site.data.keyword.autoscaling}}			|Y	|Y |			|
+|{{site.data.keyword.bigicloudst}}			|Y |Y |Y |
+|{{site.data.keyword.cloudant}}				|Y |Y |Y	|
+|{{site.data.keyword.dashdbshort}}			|Y	|Y	|Y	|
+|{{site.data.keyword.datacshort}}			|Y	|Y	|			|
+|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|			|
+|{{site.data.keyword.containerlong}}			|Y		|Y	|			|
+|{{site.data.keyword.mql}}				|Y	|Y	|	 		|
+|{{site.data.keyword.SecureGateway}}			|Y	|Y |	 		|
+|{{site.data.keyword.sescashort}}     |Y |Y | |
 
-다음 표는 {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated에 대해 생성되는
-보안 보고서 목록을 보여줍니다.
+*표 1. 플랫폼 및 서비스 준수*
 
-| **카테고리** | **보고서** | **설명** |      
-|-----------------|-------------------|---------------------|
-| 방화벽 | 방화벽 로그인 | Vyatta 방화벽 디바이스에 대한 관리자 로그인과 관련한 이벤트. |
-| 방화벽 | 방화벽 거부 | 적용 중인 방화벽 규칙에 따라 액세스 요청이 거부되는 경우 Vyatta 방화벽 디바이스가 생성하는 이벤트. |
-| {{site.data.keyword.Bluemix_notm}} 관리자 로그인 이벤트 | {{site.data.keyword.Bluemix_notm}} 관리자 로그인 | 관리자가 모든 {{site.data.keyword.Bluemix_notm}} 시스템에서 SSH 세션을 시작할 때 운영 체제가 생성하는 이벤트. |
-| {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 로그인 이벤트 | {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 로그인 | {{site.data.keyword.Bluemix_notm}} 플랫폼 사용자가 명령행, REST API 또는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 세션을 시작할 때 {{site.data.keyword.Bluemix_notm}} 플랫폼 로그인 컴포넌트가 생성하는 이벤트. |
-| {{site.data.keyword.Bluemix_notm}} 관리자 관리 이벤트 | {{site.data.keyword.Bluemix_notm}} 관리자 운영 체제 관리 이벤트 | 관리자가 현재 작업 세션 내에서 조치를 수행할 때 운영 체제가 생성하는 이벤트. |
-| {{site.data.keyword.Bluemix_notm}} 애플리케이션 개발자 관리 이벤트 | {{site.data.keyword.Bluemix_notm}}(Cloud Foundry) 관리 이벤트 | 명령행, REST API 또는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 플랫폼 사용자가 수행하는 오퍼레이션과 관련된 이벤트. |
-| {{site.data.keyword.Bluemix_notm}} 관리자 데이터베이스 관리 이벤트 | 데이터베이스 관리 이벤트 | {{site.data.keyword.Bluemix_notm}} 내부 데이터베이스에서 데이터베이스 관리자가 수행하는 오퍼레이션과 관련한 이벤트. |
-| 관리 이벤트 | 사용자 관리 이벤트 | 관리 페이지에서 수행되는 사용자 관리 조치와 관련한 이벤트. |
-| 관리 이벤트 | 카탈로그 | 서비스 카탈로그 변경과 관련한 이벤트. |
-| 관리 이벤트 | 보안 보고서 관리 이벤트 | 관리 페이지에서 수행되는 보안 보고서 관리 조치와 관련한 이벤트. |
-| 액세스 검토 | 액세스 검토 보고서 | 권한이 부여된 액세스에 대한 검토. |
-| 변경 관리 | 소프트웨어 변경 관리 | 변경 관리 활동. |
-| 키 관리 | 사용자 정의 SSL 인증서 관리 | 업로드 및 저장된 사용자 정의 SSL 인증. |
-| 암호화 | 전송 중 데이터 암호화 | 구성된 전송 중 데이터 암호화. |
-| 안티 바이러스 | 안티 바이러스 스캔 보고서 | 적용 중인 안티 바이러스 소프트웨어. |
-| 소프트웨어 수정사항 관리 | 패치 애플리케이션 보고서 | 적용된 소프트웨어 수정사항. |
-| 보안 침해사고 관리 | 보안 침해사고 조치방안 보고서 | 보안 침해사고 관리를 위한 보안 침해사고 증거. |
 
-*표 1. {{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 보안 보고서 목록*
-
-# rellinks
-## 일반 
+# 관련 링크
+## 일반
 * [SoftLayer 보안 규제 준수](http://www.softlayer.com/security)
 * [Single Sign On 시작하기](../services/SingleSignOn/index.html)

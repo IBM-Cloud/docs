@@ -1,10 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}
 {{site.data.keyword.amashort}} Server SDK は、{{site.data.keyword.Bluemix}} にデプロイされる Liberty for Java&trade; アプリケーション用の OAuthTAI モジュールを提供します。Liberty サーバーに OAuthTAI モジュールを装備してサーバーを無許可アクセスから保護し、モニタリング情報を取得する必要があります。
 
 ## 開始する前に
 {: #before-you-begin}
-* {{site.data.keyword.bluemix}} での Liberty for Java アプリケーションの開発に精通している必要があります。詳細については、[Liberty for Java](https://www.{DomainName}/docs/starters/liberty/index.html) を参照してください。
+* {{site.data.keyword.Bluemix}} での Liberty for Java アプリケーションの開発に精通している必要があります。詳細については、[Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html) を参照してください。
 
 ## {{site.data.keyword.amashort}} Server SDK のインストール
 {: #installing-server-sdk}
@@ -17,7 +24,7 @@
 1. `OAuthTai-1.0.mf` ディレクトリーを `$<wlp.user.dir>/extension/lib/features` ディレクトリーにコピーします。
 
 
-## {{site.data.keyword.amashort}} Server SDK を使用するための Java for Liberty サーバーの構成
+## {{site.data.keyword.amashort}} Server SDK を使用するための Liberty for Java サーバーの構成
 {: #configuring-liberty}
 
 1. `server.xml` ファイルを編集し、必要なフィーチャーを追加します。

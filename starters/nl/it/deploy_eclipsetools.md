@@ -1,3 +1,16 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
+{:download: .download}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
@@ -14,10 +27,8 @@ Cloud Foundry.
   
   ![Trascinalo e rilascialo in uno spazio di lavoro Eclipse Luna in esecuzione per installare IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
-  3. Scarica il tuo codice di starter e importalo in Eclipse andando a **File>Importa progetti esistenti nello spazio di lavoro>File di archivio**.
-
-  <p>
-  <a class="xref" href="http://bluemix.net" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_starter-code.svg" alt="Scarica codice di starter" /> </a>
-    </p>
+  3. {: download} Scarica il tuo codice di starter e importalo in Eclipse andando a **File>Importa progetti esistenti nello spazio di lavoro>File di archivio**.
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_starter-code.svg" alt="Scarica codice di starter" /> </a> 
 
 Per istruzioni dettagliate relative alla distribuzione delle applicazioni, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.

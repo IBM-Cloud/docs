@@ -1,8 +1,20 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 
 # Criando apps Cloud Foundry
-*Última atualização: 4 de dezembro de 2015*
+*Última atualização: 18 de abril de 2016*
 
 Com
 o {{site.data.keyword.Bluemix}}, é possível
@@ -17,12 +29,14 @@ Ao criar um app no
 começa com um iniciador. Um *iniciador* é um modelo
 que inclui serviços predefinidos e código do aplicativo que é configurado
 com um buildpack específico. Há
-dois tipos de iniciadores: textos padrão e tempos de execução.
+dois tipos de iniciadores: modelos e tempos de execução.
 
-Um *texto padrão* é um contêiner para um aplicativo e
+Um *modelo* é um contêiner para um
+aplicativo e
 seu ambiente de tempo de execução associado e serviços predefinidos para
 um domínio específico. Por exemplo, o
-texto padrão Nuvem para dispositivo móvel inclui um tempo de execução do Node.js, bem
+modelo Nuvem para dispositivo móvel inclui um tempo de execução do
+Node.js, bem
 como Dados móveis, Segurança do dispositivo móvel e Envio por push. Ele também inclui um
 SDK e aplicativos de amostra para começar a desenvolver apps móveis que acessam esses serviços.
 
@@ -39,7 +53,7 @@ Para iniciar a criação de seu aplicativo, execute as etapas a seguir:
 para escolher um iniciador, especificar um nome e selecionar como deseja codificar.
   4. Quando concluir a experiência orientada, clique em **VISUALIZAR
 A VISÃO GERAL DO APP**. A Visão geral de seu app é exibida no Painel.
-  5. É possível incluir um serviço no app clicando em **INCLUIR UM SERVIÇO OU UMA API** na Visão geral do app na interface com o usuário do Bluemix. Ou, é possível usar a interface de linha de comandos cf. Consulte Opções para trabalhar com apps.
+  5. É possível incluir um serviço no app clicando em **INCLUIR UM SERVIÇO OU UMA API** na Visão geral do app na interface com o usuário do Bluemix. Procure e selecione serviços a partir do catálogo ou role até o término do catálogo e clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}** para procurar serviços experimentais. Ou, é possível usar a interface de linha de comandos cf. Consulte Opções para trabalhar com apps.
   6. Na Visão geral do app, clique em Incluir Git para salvar a origem do aplicativo em um repositório Git e criar um projeto hospedado pelo Git. Também é possível implementar o aplicativo a partir de
 {{site.data.keyword.jazzhub_title}}.
 
@@ -61,7 +75,7 @@ construir seu aplicativo, incluindo a escolha de quais serviços e tempos de exe
 combinar para resolver seu problema de negócios.</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
 <dd>Use o {{site.data.keyword.jazzhub_title}} para criar um aplicativo na nuvem e implementá-lo no
-{{site.data.keyword.Bluemix_notm}}. Os serviços fornecidos por {{site.data.keyword.jazzhub_title}}s incluem Track & Plan e Delivery Pipeline, listados no Catálogo do {{site.data.keyword.Bluemix_notm}} em DevOps, bem como Web IDE e hosting Git.</dd>
+{{site.data.keyword.Bluemix_notm}}. Os serviços fornecidos pelo {{site.data.keyword.jazzhub_title}} incluem Track & Plan e Delivery Pipeline, listados no Catálogo do {{site.data.keyword.Bluemix_notm}} sob DevOps, assim com o Web IDE e hosting Git.</dd>
 </dl>
 
 ## Dicas

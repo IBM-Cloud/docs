@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última actualización: 6 de enero de 2015*
+*Última actualización: 13 de abril de 2016*
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
 {:shortdesc}
@@ -54,11 +60,11 @@ Cuando intente comprobar la app o los servicios en la página de detalles de la 
 `Hay cambios sin guardar en la página app_name. Guarde o cancele los cambios.`
 
 
-Cuando desplace el ratón sobre el campo **INSTANCES** o **MEMORY QUOTA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es mediante diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder navegar fuera de la página.
+Cuando desplace el ratón sobre el campo **INSTANCES** o **MEMORY QUOTA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es mediante diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder navegar fuera de la página. 
 {: tsCauses}
 
 
-Cierre la ventana de mensajes y, a continuación, pulse el botón **RESET** en el panel de tiempo de ejecución.
+Cierre la ventana de mensajes y, a continuación, pulse el botón **RESET** en el panel de tiempo de ejecución. 
 {: tsResolve} 
 
 
@@ -257,6 +263,88 @@ las aplicaciones que no se pueden actualizar y los caracteres de doble byte que 
 
 
 
+## No se pueden conmutar apps en modalidad de depuración
+{: #ts_debug}
+
+Es posible que no pueda habilitar la modalidad de depuración si la versión de la máquina virtual Java (JVM) es 8 o inferior.
+ 
+
+
+Después de seleccionar **Habilitar depuración de aplicación**, las herramientas intentan conmutar la aplicación a la modalidad de depuración. A continuación, el entorno de trabajo de Eclipse empieza una sesión de depuración. Cuando las herramientas habilitan satisfactoriamente la modalidad de depuración, el estado de la aplicación web visualiza `Modalidad de actualización`, `Desarrollo` y `Depuración`.
+{: tsSymptoms}
+
+Sin embargo, cuando has herramientas no pueden habilitar la modalidad de depuración, el estado de aplicación web visualiza solamente `Modalidad de actualización` y `Desarrollo`, pero no visualiza `Depuración`. Las herramientas también pueden visualizar el siguiente mensajes de error en la vista de consola. 
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+Las siguientes versiones de JVM (Java Virtual Machine) no pueden establecer una sesión de depuración:IBM JVM 7, IBM JVM 8 y versiones anteriores de Oracle JVM 8.
+{: tsCauses}
+
+Si la JVM del entorno de trabajo es de una de estas versiones, es posible que tenga problemas al crear una sesión de depuración. La versión de JVM del entorno de trabajo es normalmente la JVM del sistema local.
+La JVM del sistema no es la misma que la JVM de la aplicación Bluemix Java. La aplicación Bluemix Java casi siempre se ejecuta en IBM JVM, y algunas veces se ejecuta en OpenJDK JVM.
+  
+
+Para comprobar la versión de Java que IBM Eclipse Tools for Bluemix ejecuta, realice los siguientes pasos:
+{: tsResolve}
+
+  1. En IBM Eclipse Tools for Bluemix, seleccione **Ayuda** > **Acerca de Eclipse** > **Detalles de instalación** > **Configuración**.
+  2. Busque la propiedad `eclipse.vm` en la lista. La siguiente línea muestra un ejemplo de una propiedad `eclipse.vm`:
+	
+	```
+	eclipse.vm=C:\Archivos de programa\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. En la línea de mandatos, escriba `java -version` desde el directorio `bin` de la instalación Java. Se visualiza la información de la versión de IBM JVM.
+
+Si la JVM del entorno de trabajos de IBM es IBM JVM 7 o 8, o una versión anterior de Oracle JVM 8, complete los siguientes pasos para conmutar a Oracle JVM 8:
+
+  1. Descargue y, a continuación, vuelva a instalar Oracle JVM 8, consulte [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obtener detalles.
+  2. Reinicie Eclipse.
+  3. Compruebe si la propiedad `eclipse.vm` apunta a la nueva instalación de Oracle JVM 8.
+
+
+
+
+
+
 
 ## No se pueden efectuar las acciones solicitadas
 {: #ts_authority}
@@ -283,7 +371,7 @@ No tiene el nivel adecuado de autorización necesario para realizar las acciones
 Para obtener el nivel de autorización adecuado, utilice uno de estos métodos: 
 {: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
- * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de la organización](../acctmgmt/index.html#mngorg){: new_window} para obtener detalles.
+ * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de organizaciones](../admin/adminpublic.html#orgmng){: new_window} para obtener detalles.
  
 
  
@@ -400,7 +488,7 @@ Utilice uno de estos métodos para especificar la cuota de disco. La cuota de di
 	```
   * Utilice la opción **-k** con el mandato `cf push` cuando envíe la app por push a {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <cuota de disco>
 	```
 
 	
@@ -492,7 +580,7 @@ unbind-service <nombre_app> <nombre_instancia_servicio>`.
 	  2. Suprima la instancia de servicio escribiendo `cf delete-service <nombre_instancia_servicio>`.
 	  3. Después de suprimir la instancia de servicio, vuelva a transferir la app a la cual estaba enlazada la instancia de servicio escribiendo `cf
 restage <nombre_app>`.
-  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cómo cambiar su plan](../pricing/index.html#changing){: new_window}.
 
   
   
@@ -518,11 +606,11 @@ debe especificar un paquete de compilación nulo, que indica que no se requiere 
 {: tsResolve}
 
 ```
-cf push -c <mandato_inicio> -b <paquete_compilación_nulo>
+cf push appname -p <vía_acceso_app> -c <mandato_inicio> -b <null-buildpack>
 ```
 Por ejemplo:
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <vía_acceso_app> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -548,7 +636,7 @@ Este error se produce cuando la cantidad de memoria que queda para la organizaci
 Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps.
 {: tsResolve} 
 
-  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
+  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../pricing/index.html#pay-accounts){: new_window}. 
   * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
     Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
@@ -561,7 +649,7 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 	     El mandato cf apps lista todas las apps desplegadas en el espacio actual. También se visualiza el estado de cada app.
       2. Para reducir la cantidad de memoria que utiliza la app, puede reducir el número de instancias de la app, el límite máximo de memoria o ambos:
 	  ```
-	  cf push <nombre_app> -i <número_instancia> -m <límite_memoria>
+	  cf push <nombre_app> -p <vía_acceso_app> -i <número_instancia> -m <límite_memoria>
       ```
 	  3. Reinicie la app para que se apliquen los cambios.
 
@@ -590,7 +678,7 @@ Puede reiniciar la app manualmente si escribe el mandato siguiente en la interfa
 {: tsResolve}
 
 ```
-cf push <nombre_app>
+cf push <nombre_app> -p <vía_acceso_app>
 ```
 Además, puede codificar la app para identificar y recuperarse de problemas como paradas, excepciones o intentos de reconexión. 
 
@@ -707,7 +795,7 @@ envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando
 las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}}
 y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}}
 en la que se ha creado su organización. Para obtener más información
-sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}.  
+sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -743,7 +831,7 @@ que está utilizando. Para especificar otro nombre de host debe utilizar uno de 
   * Si despliega su app desde el indicador de mandatos, utilice el mandato `cf
 push` con la opción **-n**. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <nombre_app> -p <vía_acceso_app> -n <nombreHost>
     ```
 
 
@@ -851,7 +939,7 @@ Emprenda una de las siguientes acciones en función de la causa del problema:
   * Especifique el mandato start siguiendo uno de estos métodos: 
       * Utilice la interfaz de línea de mandatos cf. Por ejemplo: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * Utilice el archivo [package.json](https://docs.npmjs.com/json){: new_window}. Por ejemplo:
 	    ```
@@ -957,7 +1045,7 @@ Este problema puede deberse a que DevOps Services necesita un archivo `manifest.
 
  
 
-Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](../manageapps/deployingapps.html#appmanifest){: new_window}.
+Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](../manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -992,7 +1080,7 @@ Para utilizar un paquete de compilación personalizado para las apps de Meteor, 
 push` y especifique el paquete de compilación personalizado mediante la opción
 **-b**. Por ejemplo:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1273,11 +1361,11 @@ Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los
   ```
   3. Envíe por push la app con el paquete de compilación nulo que ha sido modificado para suprimir la memoria caché utilizando el siguiente mandato. Después de completar este paso, se suprimirá todo el contenido del directorio de memoria caché de su app.
   ```
-  cf push nombre_app -b <paquete_compilación_nulo_modificado>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. Envíe por push la app con el último paquete de compilación que desee utilizar mediante el mandato siguiente: 
   ```
-  cf push nombre_app -b <último_paquete_compilación>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

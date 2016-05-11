@@ -1,10 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # {{site.data.keyword.amashort}}로 Liberty for Java 자원 보호
 {: #protecting-liberty}
 {{site.data.keyword.amashort}} 서버 SDK는 {{site.data.keyword.Bluemix}}에 배치된 Liberty for Java&trade; 애플리케이션에 대해 OAuthTAI 모듈을 제공합니다. 권한이 없는 액세스에서 Liberty 서버를 보호하고 모니터링 정보를 가져오려면 OAuthTAI 모듈을 사용하여 Liberty 서버를 계측해야 합니다. 
 
 ## 시작하기 전에
 {: #before-you-begin}
-* {{site.data.keyword.bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://www.{DomainName}/docs/starters/liberty/index.html)를 참조하십시오. 
+* {{site.data.keyword.Bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 서버 SDK 설치
 {: #installing-server-sdk}

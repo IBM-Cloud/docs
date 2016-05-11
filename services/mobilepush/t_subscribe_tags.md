@@ -99,12 +99,12 @@ Use the **subscribeToTags** API to subscribe to a tag.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
+	if (error != nil) { 
 		//error while subscribing to tags
 	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
+		//successfully subscribed to tags var subStatus = response.subscribeStatus(); 
 	}
-}
+} 
 ```
 
 **Unsubscribe Tags**

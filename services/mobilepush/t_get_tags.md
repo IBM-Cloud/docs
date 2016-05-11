@@ -15,7 +15,7 @@ Use the following **getTags** API to get a list of available tags to which the d
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-   public void onSuccess(List<String> tags){
+   public void onSuccess(List<String> tags){ 
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
@@ -58,7 +58,7 @@ Retrieve an array of tags that are available to subscribe to.
 MFPPush.retrieveAvailableTags(function(tags) {
     alert(tags);
 }, null);
-Retrieve an array of tags to which the device is subscribed.
+
 ```
 
 ```
@@ -75,20 +75,20 @@ Copy the following code snippets into your iOS application developed using Objec
 Use the following **retrieveAvailableTags** API to get a list of available tags to which the device can subscribe.
 
 ```
-//Get a list of available tags to which the device can subscribe
+//Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
+^(IMFResponse *response, NSError *error){ 
  if(error){    
    [self updateMessage:error.description];  
  } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
+   [self updateMessage:@"Successfully retrieved available tags."]; 
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
 }
 }];
 ```
-
+       
 Use the **retrieveSubscriptions** API to get a list of tags that to which the device is subscribed.
 
 
@@ -146,3 +146,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
     }
 }
 ```
+
+
+

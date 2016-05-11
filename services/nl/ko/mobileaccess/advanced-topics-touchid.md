@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Touch ID로 권한 보안 설정
 {: #before-you-begin}
 

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDK, 샘플, API 참조
@@ -9,8 +16,8 @@
 
 ### Android
 {: #coresdk-android}
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 
 #### Gradle로 코어 SDK 설치
 {: #coresdk-android-gradle}
@@ -24,11 +31,24 @@
     	transitive: true
 ```
 
-### iOS
+### iOS(Swift SDK)
+{: #coresdk-ios-swift}
+
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+
+#### CocoaPods로 코어 SDK 설치
+{: #coresdk-ios-siwft-cocoapods}
+
+```
+use_frameworks!
+pod 'BMSCore'
+```
+
+### iOS(Objective-C SDK)
 {: #coresdk-ios}
 
-[Github 저장소](#),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 
 #### CocoaPods로 코어 SDK 설치
 {: #coresdk-ios-cocoapods}
@@ -40,7 +60,7 @@ pod 'IMFCore'
 ### Cordova
 {: #coresdk-cordova}
 
-[Github 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[Git 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 #### Cordova CLI로 코어 SDK 설치
 {: #coresdk-cordova-cli}
@@ -55,8 +75,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #facebooksdk-android}
 
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication),
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
 
 #### Gradle로 Facebook SDK 설치
 {: #facebooksdk-android-gradle}
@@ -70,11 +90,24 @@ cordova plugin add ibm-mfp-core
     	transitive: true
 ```
 
-### iOS
+### iOS(Swift SDK)
+{: #facebooksdk-ios-swift}
+
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+
+#### CocoaPods로 Facebook SDK 설치
+{: #facebooksdk-ios-swift-cocoapods}
+
+```
+use_frameworks!
+pod 'BMSFacebookAuthentication'
+ ```
+
+### iOS(Objective-C SDK)
 {: #facebooksdk-ios}
 
-[Github 저장소(곧 출시 예정)](#),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
+[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
 #### CocoaPods로 Facebook SDK 설치
 {: #facebooksdk-ios-cocoapods}
@@ -102,7 +135,7 @@ cordova plugin add ibm-mfp-core
 {: #googlesdk-android}
 
 [Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
 
 #### Gradle로 Google+ SDK 설치
 {: #googlesdk-android-gradle}
@@ -116,11 +149,24 @@ cordova plugin add ibm-mfp-core
     	transitive: true
 ```
 
-### iOS
+### iOS(Swift SDK)
+{: #googlesdk-ios-swift}
+
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
+
+#### CocoaPods로 Google+ SDK 설치
+{: #googlesdk-ios-swift-cocoapods}
+
+```
+use_frameworks!
+pod 'BMSGoogleAuthentication'
+```
+
+### iOS(Objective-C SDK)
 {: #googlesdk-ios}
 
-[Github 저장소(곧 출시 예정)](#),
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
+[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
 
 #### CocoaPods로 Google+ SDK 설치
 {: #googlesdk-ios-cocoapods}
@@ -132,7 +178,7 @@ pod 'IMFGoogleAuthentication'
 ### Cordova
 {: #googlesdk-cordova}
 
-[Github 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[Git 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
 
 #### Cordova CLI로 Google+ SDK 설치
 {: #googlesdk-cordova-cli}
@@ -144,7 +190,7 @@ cordova plugin add ibm-mfp-core
 ## Node.js 서버를 위한 {{site.data.keyword.amashort}} 서버 SDK
 {: #serversdk}
 
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
 
 #### npm으로 서버 SDK 설치
 {: #serversdk-npm}
@@ -153,7 +199,7 @@ cordova plugin add ibm-mfp-core
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## Liberty for Java 서버용 {{site.data.keyword.amashort}} 서버 SDK
+## Liberty for Java&trade; 서버용 {{site.data.keyword.amashort}} 서버 SDK
 {: #serverlibertysdk}
 
 [TAI 아티팩트 다운로드](https://imf-tai.{DomainName}/public/TAI.zip)
@@ -161,7 +207,7 @@ npm install -save bms-mca-token-validation-strategy
 ## {{site.data.keyword.amashort}} Node.js OAuth SDK
 {: #serverlibertysdk-github}
 
-[Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
+[Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
 
 #### npm으로 OAuth SDK 설치
 {: #oauthsdk}
@@ -173,13 +219,13 @@ npm install -save bms-mca-oauth-sdk
 ## 사용자 정의 ID 제공자 샘플
 {: #customidprovider}
 
-[Github 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-
+[단순 샘플 Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[고급 샘플 Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}
 
-[API 참조](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
+[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
 
 #### CocoaPods로 IMFURLProtocol 설치
 {: #IMFURLProtocol-cocoapods}

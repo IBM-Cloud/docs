@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# 用于管理应用程序的 cf 命令
+# Cloud Foundry (cf) 命令
 
-*上次更新时间：2015 年 11 月 10 日*
+*上次更新时间：2016 年 1 月 29 日*
 
 您可以使用 Cloud Foundry (cf) 命令来管理应用程序。
 {:shortdesc}
@@ -253,7 +264,8 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 
 列出当前空间中可用的所有服务。
 ```
-cf services```
+cf services
+```
 
 ## cf set-env
 
@@ -274,7 +286,8 @@ cf set-env appname var_name var_value
 
 列出所有堆栈。堆栈是预构建的文件系统，包括可运行应用程序的操作系统。
 ```
-cf stacks```
+cf stacks
+```
 
 ## cf stop
 
@@ -294,6 +307,6 @@ cf stop appname
 cf -v
 ```
 
-# rellinks
-## general 
+# 相关链接
+## 常规 
 * [快速参考卡 - cf 命令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

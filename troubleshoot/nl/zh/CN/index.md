@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,9 +15,9 @@
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2015 年 1 月 6 日*
+*上次更新时间：2016 年 4 月 13 日*
 
-访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。 
+访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 ## 无法登录到 {{site.data.keyword.Bluemix_notm}}
@@ -222,7 +228,7 @@ nslookup stage1.mybluemix.net
 {: tsCauses}
  
 
-请改为使用左上角的侧边抽屉菜单。
+请改用左上角的侧边抽屉菜单。
 {: tsResolve}
 
 
@@ -235,8 +241,88 @@ nslookup stage1.mybluemix.net
 # 有关管理应用程序的故障诊断
 {: #managingapps}
 
-有关管理应用程序的一般性问题可能包括：无法更新应用程序；未显示双字节字符。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。
+有关管理应用程序的一般性问题可能包括：无法更新应用程序；未显示双字节字符。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
+
+
+
+
+
+## 无法将应用程序切换到调试方式
+{: #ts_debug}
+
+如果 Java 虚拟机 (JVM) 版本为 8 或更低版本，那么可能无法启用调试方式。 
+
+
+选择**启用应用程序调试**后，工具会尝试将应用程序切换到调试方式。然后，Eclipse 工作台会启动调试会话。工具成功启用调试方式时，Web 应用程序状态会依次显示 `Updating mode`、`Developing` 和 `Debugging`。
+{: tsSymptoms}
+
+但是，工具启用调试方式失败时，Web 应用程序状态只会依次显示 `Updating mode` 和 `Developing`，而不会显示 `Debugging`。工具还可能会在“控制台”视图中显示以下错误消息：
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+以下 Java 虚拟机 (JVM) 版本无法建立调试会话：IBM JVM 7、IBM JVM 8 以及早于 Oracle JVM 8 的版本。
+{: tsCauses}
+
+如果工作台 JVM 是上述其中一个版本，那么在创建调试会话时可能会发生问题。工作台 JVM 版本通常是本地计算机的系统 JVM。系统 JVM 与运行中 Bluemix Java 应用程序的 JVM 不同。Bluemix Java 应用程序几乎总是在 IBM JVM 上运行，但有时会在 OpenJDK JVM 上运行。
+  
+
+要检查 IBM Eclipse Tools for Bluemix 运行的 Java 版本，请完成以下步骤：
+{: tsResolve}
+
+  1. 在 IBM Eclipse Tools for Bluemix 中，选择**帮助** > **关于 Eclipse** > **安装详细信息** > **配置**。
+  2. 从列表中找到 `eclipse.vm` 属性。以下行是 `eclipse.vm` 属性的示例：
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. 在命令行中，从 Java 安装的 `bin` 目录输入 `java -version`。这将显示 IBM JVM 版本信息。
+
+如果工作台 JVM 为 IBM JVM 7 或 8，或者为早于 Oracle JVM 8 的版本，请完成以下步骤来切换到 Oracle JVM 8：
+
+  1. 下载并安装 Oracle JVM 8；请参阅 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} 以获取详细信息。
+  2. 重新启动 Eclipse。
+  3. 检查 `eclipse.vm` 属性是否指向 Oracle JVM 8 的新安装。
+
 
 
 
@@ -268,7 +354,7 @@ nslookup stage1.mybluemix.net
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../acctmgmt/index.html#mngorg){: new_window}。
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../admin/adminpublic.html#orgmng){: new_window}。
  
 
  
@@ -286,7 +372,7 @@ nslookup stage1.mybluemix.net
 {: tsCauses}
 
 
-不要将凭证硬编码到应用程序中，请改为使用 VCAP_SERVICES 环境变量中的连接参数。具体如何使用 VCAP_SERVICES 环境变量中的连接参数取决于程序语言。例如，对于 Node.js 应用程序，可以使用以下命令：
+不要将凭证硬编码到应用程序中，请改用 VCAP_SERVICES 环境变量中的连接参数。具体如何使用 VCAP_SERVICES 环境变量中的连接参数取决于程序语言。例如，对于 Node.js 应用程序，可以使用以下命令：
 {: tsResolve}
 
 ```
@@ -308,26 +394,19 @@ process.env.VCAP_SERVICES
 
  
 
-使用 Cloud Foundry CLI 可将应用程序成功部署到
-{{site.data.keyword.Bluemix_notm}}。但是，无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且会看到以下错误消息：`项目构面 <facet_name> 不受支持。` 例如，`项目构面 Cloud Foundry Standalone Application V1.0 不受支持。`
+使用 Cloud Foundry CLI 可将应用程序成功部署到 {{site.data.keyword.Bluemix_notm}}。但是，无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且会看到以下错误消息：`项目构面 <facet_name> 不受支持。` 例如，`项目构面 Cloud Foundry Standalone Application V1.0 不受支持。`
 {: tsSymptoms}
 
  
 
-IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}} 通过项目构面将项目映射到 {{site.data.keyword.Bluemix_notm}} 运行时。 
-构面为 Eclipse 中的 Java EE 项目定义需求，并用作运行时配置的一部分，以便将不同运行时与不同项目关联。如果应用于项目的构面不受
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 支持，那么可能无法使用 IBM Eclipse
-Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将项目映射到 {{site.data.keyword.Bluemix_notm}} 运行时。构面为 Eclipse 中的 Java EE 项目定义需求，并用作运行时配置的一部分，以便将不同运行时与不同项目关联。如果应用于项目的构面不受 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 支持，那么可能无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 {: tsCauses}
 
 
-必须从 Eclipse 项目中除去该构面，才能使用 IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}} 部署应用程序。
+必须从 Eclipse 项目中除去该构面，才能使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 {: tsResolve} 
 
-要除去该构面，请在 IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}} 中单击该项目的**项目>属性>项目构面**。然后，清除不受支持构面的复选框。 
+要除去该构面，请在 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 中单击该项目的**项目>属性>项目构面**。然后，清除不受支持构面的复选框。 
 
 
 
@@ -387,7 +466,7 @@ Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 	```
   * 在用于将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 的 `cf push` 命令中使用 **-k** 选项：
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -473,12 +552,10 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 	  2. 在要删除的服务磁贴上，单击**菜单**图标。
 	  3. 单击**删除服务**。在删除服务实例之后，会提示您重新编译打包绑定该服务实例的应用程序。 
     要使用命令行界面删除服务实例，请完成下列步骤：
-	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf
-unbind-service <appname> <service_instance_name>`。
+	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf unbind-service <appname> <service_instance_name>`。
 	  2. 删除服务实例，方法是输入 `cf delete-service <service_instance_name>`。
-	  3. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序，方法是输入 `cf
-restage <appname>`。
-  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](../acctmgmt/bill_usage.html#bil_plan){: new_window}。
+	  3. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序，方法是输入 `cf restage <appname>`。
+  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](../pricing/index.html#changing){: new_window}。
 
   
   
@@ -503,10 +580,11 @@ restage <appname>`。
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
-例如：```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+例如：
+```
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -532,7 +610,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve} 
 
-  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](../acctmgmt/bill_usage.html#bil_plan){: new_window}。 
+  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅 [付费帐户](../pricing/index.html#pay-accounts){: new_window}。 
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面。
     如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面，请完成下列步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
@@ -545,7 +623,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	     cf apps 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
       2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. 重新启动应用程序以使更改生效。
 
@@ -574,7 +652,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。 
 
@@ -674,7 +752,7 @@ cf push <appname>
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}。  
+如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html){: new_window}。  
   
   
 
@@ -707,7 +785,7 @@ cf api https://api.eu-gb.bluemix.net
 	```
   * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `cf push` 命令。 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -809,8 +887,9 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve} 
 
   * 通过以下其中一种方法来指定启动命令： 
-      * 使用命令行界面。例如：```
-		cf push MyUniqueNodejs01 -c "node app.js"
+      * 使用命令行界面。例如：
+        ```
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 文件。例如：
 	    ```
@@ -914,7 +993,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](../manageapps/deployingapps.html#appmanifest){: new_window}。
+要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](../manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 
@@ -941,12 +1020,13 @@ cf push MyUniqueAppName02 -p "./app.war"
 要对 Meteor 应用程序使用定制 buildpack，请使用以下其中一种方法：
 {: tsResolve}
 
-  * 如果使用 ``manifest.yml`` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：```
+  * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
+```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
-  ``
+  ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1025,7 +1105,8 @@ cf push MyUniqueAppName02 -p "./app.war"
   * {{site.data.keyword.Bluemix_notm}} 空间中可能没有足够的空间来部署应用程序。 
   * 可能未在 `manifest.yml` 文件中声明必需的服务。
   * 可能在 `manifest.yml` 文件中声明了必需的服务，但该服务已存在于目标空间中。
-  * 存储库中的代码可能存在问题。要诊断问题，请查看该部署的构建和部署日志：
+  * 存储库中的代码可能存在问题。
+要诊断问题，请查看该部署的构建和部署日志：
   1. “部署到 Bluemix”步骤未成功完成时，请单击上述“配置管道”步骤中的链接，以打开 Delivery Pipeline。
   2. 识别失败的构建或部署阶段。
   3. 在失败的阶段中，单击**查看日志和历史记录**。
@@ -1072,7 +1153,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 # 有关管理帐户的故障诊断
 {: #managingaccounts}
 
-管理帐户时，可能会遇到问题。例如，不同的应用程序共享同一域名；管理员无法查看所有组织。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。
+管理帐户时，可能会遇到问题。例如，不同的应用程序共享同一域名；管理员无法查看所有组织。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 
@@ -1098,7 +1179,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。
-  * 要在其中创建应用程序的组织的名称。此信息可帮助支持团队确定在您所在组织内是否为您分配了正确的角色或成员资格。
+  * 要在其中创建应用程序的组织的名称。此信息可帮助支持团队确定在您组织内是否为您分配了正确的角色或成员资格。
 
 
 
@@ -1186,7 +1267,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 # 有关运行时的故障诊断
 {: #runtimes}
 
-使用 IBM® Bluemix™ 运行时的时候，可能会遇到问题。然而，在大多数情况下，您可以遵循一些简单的步骤，从这些问题中进行恢复。
+使用 IBM® Bluemix™ 运行时的时候，可能会遇到问题。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 
@@ -1224,11 +1305,11 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
   ```
   3. 通过使用以下命令，使用修改用于删除高速缓存的空 buildpack 推送应用程序。完成此步骤后，会删除应用程序高速缓存目录中的所有内容。
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 通过使用以下命令，使用想要使用的最新 buildpack 推送应用程序： 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	
@@ -1264,7 +1345,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-`注意`消息可供参考，但未必表明发生了问题。要停止记录这些消息，可以将 buildpack 的 nginx-defaults.conf 文件中的日志记录级别从 stderr notice 更改为 stderr error。例如： 	
+`注意`消息可供参考，但未必表明发生问题。要停止记录这些消息，可以将 buildpack 的 nginx-defaults.conf 文件中的日志记录级别从 stderr notice 更改为 stderr error。例如： 	
 {: tsResolve}
 
 ```
@@ -1305,7 +1386,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	有关如何配置 `requirements.txt` 文件的更多信息，请参阅 [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)。 
 	 
   2. 将 `Procfile` 文件添加到 Python 应用程序的根目录中。
-`Procfile` 文件中必须包含 Python 应用程序的 start 命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果不在 start 命令中指定 PORT，那么会改为使用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。 
+`Procfile` 文件中必须包含 Python 应用程序的 start 命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果不在 start 命令中指定 PORT，那么会改用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。
 	```
 	web: python <yourappname>.py $PORT
 	```

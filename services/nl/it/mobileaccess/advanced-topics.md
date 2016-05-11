@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+  
+---
+
 # Funzioni avanzate {{site.data.keyword.amashort}}
 {: #before-you-begin}
 Il servizio {{site.data.keyword.amashort}} fornisce funzioni da utilizzare in scenari avanzati.

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #Atualizando apps
 {: #updatingapps}
 
-*Última atualização: 8 de dezembro de 2015*
+*Última atualização: 17 de março de 2016*
 
 
 É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} DevOps Services para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
@@ -21,8 +29,6 @@ Os domínios fornecem a rota da URL que é alocada para sua organização no {{s
 {{site.data.keyword.Bluemix_notm}}, as
 solicitações de seu domínio customizado serão roteadas para seu aplicativo no
 {{site.data.keyword.Bluemix_notm}}.
-
-**Nota:** é possível usar o comando **nslookup** para obter o endereço IP público do domínio de sistema do {{site.data.keyword.Bluemix_notm}}. Por exemplo, em um prompt de comandos, insira `nslookup mybluemix.net`.
 
 É possível criar e usar um domínio customizado no {{site.data.keyword.Bluemix_notm}} usando a interface com o usuário do
 {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
@@ -81,6 +87,15 @@ seguir:
     
         O nome do host na rota que você deseja usar para seu aplicativo.
 	
+Após configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}, deve-se mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} em seu servidor DNS registrado:
+
+  1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS.
+  2. Mapeie o nome do domínio customizado para o terminal seguro para a região do {{site.data.keyword.Bluemix_notm}} em que seu aplicativo está em execução. Use os terminais da região a seguir para fornecer a rota da URL alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}:
+  
+    * US-SOUTH: `secure.us-south.bluemix.net`
+    * EU-GB: `secure.eu-gb.bluemix.net`
+    * AU-SYD: `secure.au-syd.bluemix.net`
+  
 Em um navegador ou uma interface de linha de comandos, insira a URL a seguir para acessar o aplicativo myapp:
 
 ```
@@ -298,7 +313,6 @@ estiver em vigor.
 
 # rellinks
 ## general 
-* [Organizações e espaços](../acctmgmt/index.html#organdspaces)
 * [Implementações azul/verde](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

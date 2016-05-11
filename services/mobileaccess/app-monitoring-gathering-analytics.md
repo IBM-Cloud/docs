@@ -8,7 +8,7 @@ copyright:
 # Gathering usage analytics
 {: #usage-analytics}
 
-You can configure the {{site.data.keyword.amashort}} Client SDK to record usage analytics and send the recorded data to the {{site.data.keyword.amashort}} service.
+You can configure the {{site.data.keyword.amashort}} client SDK to record usage analytics and send the recorded data to the {{site.data.keyword.amashort}} service.
 
 **Note:** Ensure that you have enabled logging capture before you start recording usage analytics.
 

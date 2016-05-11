@@ -67,6 +67,7 @@ Create a development and distribution SSL certificate.
 2. In the **Identifiers** area, click **App IDs**.
 3. From your list of App IDs, select your newly created App ID, then select **Settings**.
 4. In the **Push Notifications** area, create a Development SSL certificate and then a Production SSL certificate.
+ 
 	![Push Notification SSL certificates](images/certificate_createssl.jpg)
 
 	The About Creating a Certificate a Signing Request screen is displayed.
@@ -92,16 +93,15 @@ Create a development and distribution SSL certificate.
 
 	![Export certificate and keys](images/keychain_export_key.jpg)
 
-17. In the **Save As**, give the certificate a meaningful name so that you can identify it later; for example **sandbox_apns.p12_certifcate** or **production_apns.p12**, then click **Save**.
+17. In the **Save As** field, give the certificate a meaningful name so that you can identify it later; for example **sandbox_apns.p12_certifcate** or **production_apns.p12**, then click **Save**.
 
    	![Export certificate and keys](images/certificate_p12v2.jpg)
 
-
-18. In the **Enter a password** screen, enter a password to protect the exported items, then click **OK**. You use this password to later configure your APNs settings on the Push dashboard.
+18. In the **Enter a password** field, enter a password to protect the exported items, then click **OK**. You use this password to later configure your APNs settings on the Push dashboard.
 
 	![Export certificate and keys](images/export_p12.jpg)
-19. In the **Key Access.app** wants to export key from your keychain screen, enter your administrative password for your Mac to allow your system to export these items, and then select **Always Allow**. A .p12 certificate is generated on your desktop.
-20. Next Ste[Create a development and distribution provisioning profile](#create-push-credentials-dev-profile)file
+19. The **Key Access.app** prompts you to export your key from the **Keychain** screen. Enter your administrative password for your Mac to allow your system to export these items, and then select **Always Allow** option. A .p12 certificate is generated on your desktop.
+
 
 ##Creating a development provisioning profile
 {: #create-push-credentials-dev-profile}
@@ -120,7 +120,7 @@ Create a development provisioning profile.
 	**Note**: When you configure a development provision profile, select the following options:
 	* **iOS App Development**
 	* **For iOS and watchOS apps**
-3. Next step. [Create a store distribution provisioning profile.](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##Creating a store distribution provisioning profile
@@ -130,8 +130,6 @@ Use the store provisioning profile to submit your app for distribution to the Ap
 
 1. Go the Go to [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 2. Double-click the downloaded provisioning profile to install it into Xcode.
-3. Next step. [Set up APNS on the Push Dashboard.](#create-push-credentials-apns-dashboard).
-
 
 ##Setting up APNs on the Push Notification Dashboard
 {: #create-push-credentials-apns-dashboard}
@@ -157,7 +155,7 @@ Set up APNs on the Push dashboard.
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	The Push dashboard is displayed.
-
+	
 	![Set push notifications](images/wizard.jpg)
 1
 2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the p.12 certificate to Bluemix.
@@ -165,4 +163,4 @@ Set up APNs on the Push dashboard.
 	![Set push notifications](images/credential_screen.jpg)
 3. In the **Password** field, enter the password that is associated with the **.p12** certificate file, then click **Save**.
 After the certificates are uploaded successfully with a valid password, you can start sending notifications.
-1. Next steps. [Enable Notifications for iOS](c_ios_enable.html).
+

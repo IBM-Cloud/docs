@@ -1,27 +1,34 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Ultimo aggiornamento: 12 gennaio 2016*
 
-# Runtime Go
+# Go
 {: #go_runtime}
+*Ultimo aggiornamento: 16 marzo 2016*
 
-Il runtime Go su {{site.data.keyword.Bluemix}} si avvale del go_buildpack.
-Il go_buildpack fornisce un ambiente di runtime completo per le applicazioni Go.
+Il runtime Go su {{site.data.keyword.Bluemix}} si avvale della tecnologia go_buildpack.
+go_buildpack fornisce un ambiente di runtime completo per la applicazione GO.
 {: shortdesc}
 
-Il go_buildpack viene utilizzato se la tua applicazione contiene un file denominato *.go.
+go_buildpack viene utilizzato se la tua applicazione contiene un file denominato *.go.
 
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Go. L'applicazione starter Go è una semplice applicazione Go che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente Bluemix. Consulta il documento relativo all'[utilizzo delle applicazioni starter](../../cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Go.  L'applicazione starter Go è un'applicazione Go semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente Bluemix  Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
 
-Puoi specificare la versione di Go che deve essere utilizzata dalla tua applicazione impostando la proprietà GoVersion nel file Godeps/Godeps.json alla root della tua applicazione. Ad esempio:
+Puoi specificare la versione di Go che deve essere utilizzata dalla tua applicazione impostando la proprietà GoVersion nel file Godeps/Godeps.json a livello della root della tua applicazione. Ad esempio:
 
 ```
 {
@@ -31,13 +38,13 @@ Puoi specificare la versione di Go che deve essere utilizzata dalla tua applicaz
 }
 ```
 {: codeblock}
-Per ulteriori informazioni,
-vedi [godep](https://github.com/tools/godep).
+Per ulteriori informazioni, consulta [godep](https://github.com/tools/godep){: new_window}.
 
-### Versioni disponibili
+### Versioni disponibili:
 {: #available_versions}
 
-Le seguenti versioni Go sono disponibili nel [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2)
+Le seguenti versioni Go sono disponibili nel
+[pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}
 attualmente installato in {{site.data.keyword.Bluemix}}:
 
 * 1.2.1
@@ -50,10 +57,10 @@ attualmente installato in {{site.data.keyword.Bluemix}}:
 * 1.5.1
 
 Se la tua applicazione richiede una versione di Go che non è elencata, puoi utilizzare
-il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git) esterno
-per distribuire l'applicazione.
+il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window}
+esterno per distribuire l'applicazione.
 
-## LINK CORRELATI
-{: #related_links}
-* [GoLang](http://golang.org/)
-* [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack)
+# rellinks
+## general
+* [GoLang](http://golang.org/){: new_window}
+* [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

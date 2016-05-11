@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# 'cf'-Befehle für die Verwaltung von Anwendungen
+# Cloud Foundry-Befehle (cf-Befehle)
 
-*Letzte Aktualisierung: 10. November 2015*
+*Letzte Aktualisierung: 29. Januar 2016*
 
 Sie können Cloud Foundry-Befehle ('cf'-Befehle) zur Verwaltung Ihrer Apps verwenden.
 {:shortdesc}

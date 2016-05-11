@@ -8,7 +8,7 @@ copyright:
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-Instrument your Cordova application with {{site.data.keyword.amashort}} Client SDK, initialize the SDK and make requests to protected and unprotected resources.
+Instrument your Cordova application with {{site.data.keyword.amashort}} client SDK, initialize the SDK and make requests to protected and unprotected resources.
 
 ## Before you begin
 {: #before-you-begin}
@@ -20,7 +20,7 @@ Instrument your Cordova application with {{site.data.keyword.amashort}} Client S
 ## Installing the {{site.data.keyword.amashort}} Cordova Plug-in
 {: #getting-started-cordova-plugin}
 
-The {{site.data.keyword.amashort}} Client SDK for Cordova is a Cordova plug-in that is wrapping the native {{site.data.keyword.amashort}} Client SDKs. It is distributed using the Cordova Command Line Interface (CLI) and `npmjs`, a plug-in repository for Cordova projects. The Cordova CLI automatically downloads plug-ins from repositories and makes them available to your Cordova application.
+The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in that is wrapping the native {{site.data.keyword.amashort}} client SDKs. It is distributed using the Cordova Command Line Interface (CLI) and `npmjs`, a plug-in repository for Cordova projects. The Cordova CLI automatically downloads plug-ins from repositories and makes them available to your Cordova application.
 
 1. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line:
 
@@ -97,14 +97,14 @@ The {{site.data.keyword.amashort}} Client SDK for Cordova is a Cordova plug-in t
 	cordova plugin list
 	```
 
-## Initializing the {{site.data.keyword.amashort}} Client plug-in
+## Initializing the {{site.data.keyword.amashort}} client plug-in
 {: #getting-started-cordova-initialize}
 
-To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SDK by passing the *applicationGUID* and *applicationRoute* parameters.
+To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SDK by passing the *applicationGUID* and *applicationRoute* parameters.
 
 1. Find your route and app GUID values on the main page of the {{site.data.keyword.Bluemix_notm}} dashboard. Click your app name and then **Mobile Options** to display the **Application route** and **Application GUID** values to initialize the SDK.
 
-3. Add the following call to your `index.js` file to initialize the {{site.data.keyword.amashort}} Client SDK. Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+3. Add the following call to your `index.js` file to initialize the {{site.data.keyword.amashort}} client SDK. Replace the *applicationRoute* and *applicationGUID* with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -113,7 +113,7 @@ To use the {{site.data.keyword.amashort}} Client SDK, you must initialize the SD
 ## Making a request to the mobile backend
 {: #getting-started-request}
 
-After the {{site.data.keyword.amashort}} Client SDK is initialized, you can start making requests to your mobile backend.
+After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile backend.
 
 1. Try to send a request to a protected endpoint of your new mobile backend. In your browser, open the following URL: `{applicationRoute}/protected`. For example:
 
@@ -121,7 +121,7 @@ After the {{site.data.keyword.amashort}} Client SDK is initialized, you can star
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint is accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} Client SDK.
+	The `/protected` endpoint of a mobile backend that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint is accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 
 1. Use your Cordova application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 

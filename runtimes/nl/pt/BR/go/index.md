@@ -1,11 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Última atualização: 12 de janeiro de 2016*
 
-# Tempo de execução
+# Ir
 {: #go_runtime}
+*Última atualização: 16 de março de 2016*
 
 O tempo de execução Go no {{site.data.keyword.Bluemix}} foi desenvolvido com o go_buildpack.
 O go_buildpack fornece um ambiente de tempo de execução completo para apps Go.
@@ -35,13 +42,12 @@ Godeps/Godeps.json na raiz de seu aplicativo. Por exemplo:
 }
 ```
 {: codeblock}
-Para obter mais informações,
-consulte [godep](https://github.com/tools/godep).
+Para obter mais informações, veja [godep](https://github.com/tools/godep){: new_window}.
 
 ### Versões disponíveis:
 {: #available_versions}
 
-As seguintes versões do Go estão disponíveis no [buildpack Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2)
+As seguintes versões do Go estão disponíveis no [buildpack Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}
 atualmente instalado no {{site.data.keyword.Bluemix}}:
 
 * 1.2.1
@@ -50,13 +56,13 @@ atualmente instalado no {{site.data.keyword.Bluemix}}:
 * 1.3.3
 * 1.4.2
 * 1.4.3
-* 1.5
+* 1,5
 * 1.5.1
 
 Se o seu app requer uma versão do Go não listada,
-é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git) externo para implementar o aplicativo.
+é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para implementar o aplicativo.
 
-## LINKS RELACIONADOS
-{: #related_links}
-* [GoLang](http://golang.org/)
-* [Buildpack do Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack)
+# rellinks
+## geral
+* [GoLang](http://golang.org/){: new_window}
+* [Buildpack do Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

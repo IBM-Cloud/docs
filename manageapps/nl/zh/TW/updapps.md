@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +14,7 @@
 #更新應用程式
 {: #updatingapps}
 
-*前次更新：2015 年 12 月 8 日*
+*前次更新：2016 年 3 月 17 日*
 
 
 您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
@@ -18,8 +26,6 @@
 您可以在應用程式的 URL 中使用自訂網域，而非預設 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
 
 網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域，然後將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
-
-**附註：**您可以使用 **nslookup** 指令，來取得 {{site.data.keyword.Bluemix_notm}} 系統網域的公用 IP 位址。例如，在命令提示字元中輸入 `nslookup mybluemix.net`。
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面，在 {{site.data.keyword.Bluemix_notm}} 中建立及使用自訂網域。
 
@@ -73,6 +79,15 @@
     
         您要用於應用程式的路徑中的主機名稱。
 	
+在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，您必須將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
+
+  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。
+  2. 將自訂網域名稱對映至應用程式執行所在的 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑：
+  
+    * US-SOUTH：`secure.us-south.bluemix.net`
+    * EU-GB：`secure.eu-gb.bluemix.net`
+    * AU-SYD：`secure.au-syd.bluemix.net`
+  
 在瀏覽器或指令行介面中，輸入下列 URL 以存取 myapp 應用程式：
 
 ```
@@ -90,12 +105,12 @@ cf delete-route domain -n hostname -f
 ##藍綠部署
 {: #blue_green}
 
-{{site.data.keyword.Bluemix_notm}} 支援使用藍綠部署技術來啟用持續交付及最少關閉時間事件。
+{{site.data.keyword.Bluemix_notm}} 支援使用藍綠部署技術來啟用持續交付並使中斷時間事件減到最少。
 
-*藍綠部署* 是一種零關閉時間部署技術，由兩個幾乎相同的正式作業環境（稱為 Blue 及 Green）組成。它們的差別在於開發人員有意變更的構件，通常是應用程式版本。在任何給定時間，至少會有一個環境是作用中。使用藍綠部署技術，可以有下列好處：
+*藍綠部署* 是一種零中斷時間的部署技術，由兩個幾乎相同的正式作業環境（稱為 Blue 及 Green）組成。它們的差別在於開發人員有意變更的構件，通常是由應用程式版本變更。在任何給定時間，至少會有一個環境是作用中。使用藍綠部署技術，可以有下列好處：
 
-* 將軟體快速地從測試的最終階段帶到實際正式作業。
-* 部署新版本的應用程式，而無需中斷應用程式的資料流量。
+* 快速地讓軟體從測試的最終階段進入實際正式作業。
+* 部署新版本的應用程式時不會中斷應用程式的資料流量。
 * 快速回復。如果其中一個環境有問題，您可以快速切換至其他環境。
 
 如果已經將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，且想要將應用程式更新成新版本，您可以使用下列兩種方法其中之一來確保藍綠部署。
@@ -129,7 +144,7 @@ cf delete-route domain -n hostname -f
   
   **結果：** *Green* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
 
-3. 進行必要變更，並備妥更新的 *Blue* 版本。將更新的 *Blue* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}：
+3. 進行必要變更，並備妥已更新的 *Blue* 版本。將已更新的 *Blue* 應用程式推送至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
   cf push Blue
@@ -147,7 +162,7 @@ cf delete-route domain -n hostname -f
   
   **結果：**
     * 已部署兩個應用程式實例：*Blue* 及 *Green*。
-	* *Green* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
+	* 該 *Green* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
 	
 4. 選用項目：如果您要刪除舊版 (*Green*) 的應用程式，請使用 **cf delete** 指令。
   
@@ -197,7 +212,7 @@ cf delete-route domain -n hostname -f
   **結果：**
   
     * 已部署兩個應用程式實例：*Blue* 及 *Green*。
-	* *Blue* 應用程式正在回應 URL `Blue.mybluemix.net`。且 *Green* 應用程式正在回應 URL `Green.mybluemix.net`。
+	* 該 *Blue* 應用程式正在回應 URL `Blue.mybluemix.net`。且 *Green* 應用程式正在回應 URL `Green.mybluemix.net`。
 	
 3. 將 *Blue* 應用程式對映至 *Green* 應用程式，讓 `Blue.mybluemix.net` 的所有資料流量同時遞送至 *Blue* 應用程式及 *Green* 應用程式。
   
@@ -266,6 +281,5 @@ cf delete-route domain -n hostname -f
 
 # 相關鏈結
 ## 一般 
-* [組織及空間](../acctmgmt/index.html#organdspaces)
 * [藍綠部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

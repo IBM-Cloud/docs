@@ -1,11 +1,16 @@
+---
 
+copyright:
+  years: 2015, 2016
+
+---
 
 # Experimental
 {: #experimental}
 
-*Última actualización: 9 de diciembre de 2015*
+*Última actualización: 4 de abril de 2015*
 
-Consulte el catálogo {{site.data.keyword.Bluemix_notm}} Labs para probar los servicios experimentales.
+Consulte los Servicios experimentales {{site.data.keyword.Bluemix_notm}} para probar los servicios experimentales.
 {: shortdesc} 
 
 

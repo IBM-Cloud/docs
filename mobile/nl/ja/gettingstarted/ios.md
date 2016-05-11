@@ -4,6 +4,7 @@
 
 # HelloWorld サンプル入門
 {: #gettingstarted-ios}
+*最終更新日: 2016 年 1 月 28 日*
 新規 iOS アプリを始める場合は、HelloWorld というアプリが使用できます。このアプリは、モバイル・アプリから {{site.data.keyword.Bluemix}} バックエンドへ認証を行わずに接続する方法を示す実例となっています。
 このアプリには既に SDK がインストールされています。準備ができたら、アプリで使用したい特定のライブラリーが取得できます。
 
@@ -62,11 +63,11 @@ SDK の取得方法および SDK とモバイル・アプリの統合方法に�
 # 関連リンク
 
 ## サンプル
-   * [HelloWorld (iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
+   * [HelloWorld サンプル](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld)
 
 ## sdk
-   * [bms-clientsdk-ios-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
+   * [コア SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
-  *
-[コア API](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+*
+[コア API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)

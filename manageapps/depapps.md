@@ -14,7 +14,7 @@ copyright:
 #Deploying apps
 {: #deployingapps}
 
-*Last updated: 17 March 2016*
+*Last updated: 9 May 2016*
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -55,7 +55,7 @@ If you use an external buildpack, you must specify the URL of the buildpack by u
   cf push
   ```
   
-  For more information about Liberty Buildpack, see [Liberty for Java](../starters/liberty/index.html#liberty).
+  For more information about Liberty Buildpack, see [Liberty for Java](../runtimes/liberty/index.html).
   
   * To deploy Java Tomcat applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
   
@@ -271,14 +271,14 @@ The following variables are defined by the DEA:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -441,8 +441,12 @@ The `.cfignore` file contains the names of files and directories that you want t
 tmp/
 ```
 
-# rellinks
-## general 
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

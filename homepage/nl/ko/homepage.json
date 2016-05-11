@@ -13,6 +13,9 @@
 				"name": "Cloud Foundry 앱",
 				"href": "cfapps/index.html"
 			}, {
+				"name": "IBM Bluemix OpenWhisk",
+				"href": "openwhisk/index.html"
+			}, {
 				"name": "컨테이너",
 				"href": "containers/container_index.html"
 			}, {
@@ -24,10 +27,13 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
-				"name": "Content Delivery Network (CDN)",
+				"name": "CDN(Content Delivery Network)",
 				"href": "services/cdn/index.html"
 			}, {
-				"name": "Virtual Private Network (VPN)",
+				"name": "Network Security Groups",
+				"href": "services/networksecuritygroups/index.html"
+			}, {
+				"name": "VPN(Virtual Private Network)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
@@ -46,9 +52,6 @@
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
-				"name": "Analytics for Apache Hadoop",
-				"href": "services/AnalyticsforHadoop/index.html"
-			}, {
 				"name": "Analytics for Apache Spark",
 				"href": "services/AnalyticsforApacheSpark/index.html"
 			}, {
@@ -141,6 +144,9 @@
 				"name": "Text to Speech",
 				"href": "services/TexttoSpeech/index.html"
 			}, {
+				"name": "Tone Analyzer",
+				"href": "services/ToneAnalyzer/index.html"
+			}, {
 				"name": "Tradeoff Analytics",
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
@@ -152,17 +158,11 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "API Management",
-				"href": "services/APIManagement/index.html"
-			}, {
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Connect & Compose",
-				"href": "services/ConnectandCompose/index.html"
-			}, {
 				"name": "Secure Gateway",
-				"href": "services/SecureGateway/index.html"
+				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
 				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
@@ -239,14 +239,20 @@
 		}, {
 			"title": "모바일",
 			"img": "homepage/images/mobile.svg",
-			"href": "mobile/index.html",
+			"href": "services/mobile.html",
 			"links": [{
+				"name": "Bluemix 모바일 서비스 시도",
+				"href": "mobile/index.html"
+			},{
 				"name": "Mobile Application Content Manager",
 				"href": "services/macm/index.html"
 			}, {
 				"name": "Mobile Client Access",
 				"href": "services/mobileaccess/index.html"
 			}, {
+				"name": "Mobile Foundation",
+				"href": "services/mobilefoundation/index.html"
+			},{
 				"name": "Mobile Quality Assurance",
 				"href": "services/MobileQualityAssurance/index.html"
 			}, {
@@ -267,9 +273,24 @@
 				"name": "IoT Real-Time Insights",
 				"href": "services/iotrtinsights/index.html"
 			}]
+		}, {
+			"title": "API",
+			"img": "homepage/images/private-apis.svg",
+			"href": "services/apis.html",
+			"links": [{
+				"name": "API Connect",
+				"href": "services/apiconnect/index.html"
+			}, {
+				"name": "API Management",
+				"href": "services/APIManagement/index.html"
+			}, {
+				"name": "Connect & Compose",
+				"href": "services/ConnectandCompose/index.html"
+			}]
 		}]
+		
 	}, {
-		"id": "Resources",
+		"id": "자원",
 		"descriptionTitle": "자원",
 		"items": [{
 			"title": "Bluemix를 사용해야 하는 이유",
@@ -288,7 +309,7 @@
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
 		}, {
-			"title": "CLI 및 Dev 도구",
+			"title": "CLI 및 개발 도구",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Cordova에 대해 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #custom-cordova}
 사용자 정의 인증을 사용하는 Cordova 애플리케이션이 {{site.data.keyword.amashort}}
@@ -9,28 +16,25 @@
 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스
 인스턴스의 보호를 받는 자원이 있어야 합니다. 모바일 앱은 {{site.data.keyword.amashort}}
 클라이언트 SDK도 갖추고 있어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
- * [{{site.data.keyword.amashort}}](getting-started.html) 시작하기
- * [Cordova SDK 설정](getting-started-cordova.html)
- * [사용자 정의 ID 제공자 사용](custom-auth.html)
- * [사용자 정의 ID 제공자 작성](custom-auth-identity-provider.html)
- * [사용자 정의 인증을 사용하도록 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Cordova SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
+ * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [사용자 정의 인증을 사용하도록 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #custom-cordova-sdk}
 SDK를 초기화하려면 applicationGUID 및 applicationRoute 매개변수를 전달하십시오. 
 
 1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서
-앱을 여십시오. **모바일 옵션**을 클릭하십시오. 애플리케이션 라우트 및
-애플리케이션 GUID 값이 표시됩니다.
+앱을 여십시오. **모바일 옵션**을 클릭하십시오. **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`) 값이 표시됩니다.
 1. 클라이언트 SDK를 초기화하십시오. 
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- *applicationRoute* 및 *applicationGUID*를
-{{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의
-**모바일 옵션** 패널에 있는 값으로 대체하십시오. 
+ *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의 **모바일 옵션** 패널에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
 ## 인증 리스너 인터페이스
 {: #custom-cordva-auth}
@@ -167,8 +171,8 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 보호를 받는 자원이 있어야 합니다. 
 
 
-1. `http://{appRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를
-열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
+ {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의
 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다.
 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 갖춘 모바일 애플리케이션에서만
 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 

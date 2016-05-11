@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
 {: #protecting-local}
 
@@ -24,7 +31,7 @@ Substitua a variável *appGUID* pelo valor do campo **Opções de dispositivo m�
 
 1. Clique em **Mostrar credenciais** no quadro do serviço {{site.data.keyword.amashort}} em seu aplicativo backend móvel no painel do {{site.data.keyword.Bluemix_notm}}. Um objeto JSON é exibido com as credenciais de acesso que o {{site.data.keyword.amashort}} fornece para seu aplicativo backend móvel.
 
-1. Em seu ambiente de desenvolvimento local, configure a variável de ambiente `VCAP_SERVICES`. O valor dessa variável deve ser um objeto JSON em sequência que contém as credenciais do {{site.data.keyword.amashort}}. Consulte a amostra a seguir para obter mais informações.
+1. Em seu ambiente de desenvolvimento local, configure a variável de ambiente `VCAP_SERVICES`. O valor dessa variável deve ser um objeto JSON em sequência que contém as credenciais do {{site.data.keyword.amashort}}.  Consulte a amostra a seguir para obter mais informações.
 
 ## Código de amostra
 {: #local-dev-sample}

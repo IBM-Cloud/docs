@@ -1,3 +1,9 @@
+---
+
+copyright:
+  2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 6 janvier 2015*
+*Dernière mise à jour : 13 avril 2016*
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -60,11 +66,11 @@ Lorsque vous essayez de vérifier votre appli ou vos services sur la page des d�
 `Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
 
 
-Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant de quitter la page.
+Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant de quitter la page. 
 {: tsCauses}
 
 
-Fermez la fenêtre de message, puis cliquez sur le bouton **REINITIALISER** de votre contexte d'exécution.
+Fermez la fenêtre de message, puis cliquez sur le bouton **REINITIALISER** de votre contexte d'exécution. 
 {: tsResolve} 
 
 
@@ -296,6 +302,99 @@ jour, les caractères codés sur deux octets ne sont pas affichés. Toutefois, d
 
 
 
+## Impossible de faire passer les applications en mode débogage
+{: #ts_debug}
+
+Il se peut que vous ne puissiez pas activer le mode débogage si votre version de machine virtuelle Java
+(JVM) est la version 8 ou antérieure. 
+
+
+Après avoir sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan
+de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web
+affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+{: tsSymptoms}
+
+Par contre, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du
+mode` et `Développement`, sans afficher `Débogage`. 
+Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion
+WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+à java.util.concurrent.FutureTask.run(FutureTask.java:277)
+à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+à java.lang.Thread.run(Thread.java:785)
+Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
+org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 autres
+Provoquée par : java.util.concurrent.TimeoutException
+à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 autres
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour
+MyWebProj com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la
+connexion WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+à java.util.concurrent.FutureTask.run(FutureTask.java:277)
+à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+à java.lang.Thread.run(Thread.java:785)
+Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
+org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 autres
+Provoquée par : java.util.concurrent.TimeoutException
+à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 autres
+```
+ 
+
+Les versions de machine virtuelle Java (JVM) suivantes ne peuvent pas établir une session de débogage : IBM JVM 7, IBM
+JVM 8, et versions antérieures d'Oracle JVM 8.
+{: tsCauses}
+
+Si la machine virtuelle Java (JVM) de votre plan de travail relève de ces versions, vous pouvez rencontrer des problèmes lorsque vous créez une session de
+débogage. La version de machine virtuelle Java de votre plan de travail est généralement celle de la JVM système de votre ordinateur local. Ce n'est pas la même que
+celle de votre application Java Bluemix en exécution. L'application Java Bluemix opère presque toujours sur la JVM IBM, et parfois sur la JVM
+OpenJDK.
+  
+
+Pour vérifier la version Java utilisée par IBM Eclipse Tools for Bluemix, procédez comme suit :
+{: tsResolve}
+
+  1. Dans IBM Eclipse Tools for Bluemix, sélectionnez **Aide** > **A propos d'Eclipse** > **Détails
+de l'installation** > **Configuration**.
+  2. Localisez la propriété `eclipse.vm` dans la liste. La ligne suivante est un exemple de propriété
+`eclipse.vm` :
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll 	```
+
+  3. Sur la ligne de commande, entrez `java -version` depuis le répertoire `bin` de votre installation Java. Les
+informations de version de votre JVM IBM s'affichent.
+
+Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IBM, ou une version antérieure à la JVM 8 d'Oracle 8, procédez comme suit pour
+passer à la JVM 8 d'Oracle :
+
+  1. Téléchargez et installez la JVM 8 d'Oracle. Voir
+[Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} pour plus d'informations.
+  2. Redémarrez Eclipse.
+  3. Vérifiez que la propriété `eclipse.vm` pointe sur votre nouvelle installation de la JVM 8 d'Oracle.
+
+
+
+
+
+
 
 ## Impossible d'effectuer les actions demandées
 {: #ts_authority}
@@ -324,7 +423,7 @@ Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suiva
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
  * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle
-Développeur. Voir [Gestion de votre organisation](../acctmgmt/index.html#mngorg){: new_window} pour des détails.
+Développeur. Voir [Gestion de vos organisations](../admin/adminpublic.html#orgmng){: new_window} pour des détails.
  
 
  
@@ -480,7 +579,7 @@ tel que [Object Store](../services/ObjectStorage/index.html){: new_window}.
   * Utilisez l'option **-k** avec la commande `cf push` lorsque vous exécutez une commande push sur votre
 application dans {{site.data.keyword.Bluemix_notm}} :
     ```
-	cf push nom_app -k <quota_disque>
+	cf push nom_app -p chemin_app -k <quota_disque>
 	```
 
 	
@@ -592,8 +691,8 @@ unbind-service <nom_app> <nom_instance_service>`.
 	  3. Une fois l'instance de service supprimée, vous pouvez reconstituer l'application à laquelle l'instance de service était liée en entrant
 `cf restage <nom_app>`.
   * Pour supprimer la limite relative au nombre d'instances de service dont vous pouvez disposer, convertissez votre compte d'essai en compte
-payant. Pour des informations sur la conversion
-de votre compte d'essai en compte payant, voir [Comptes payants](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+payant. Pour des informations sur la conversion de votre compte d'essai en compte payant, voir [Comment
+changer votre plan ?](../pricing/index.html#changing){: new_window}.
 
   
   
@@ -626,11 +725,11 @@ construction n'est requis. Spécifiez la valeur null-buildpack avec l'option **-
 {: tsResolve}
 
 ```
-cf push -c <commande_démarrage> -b <null-buildpack>
+cf push nom_app -p <chemin_app> -c <commande_démarrage> -b <null-buildpack>
 ```
 Par exemple :
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push nom_app -p <chemin_app> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -660,7 +759,7 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou réduire la mémoi
 {: tsResolve} 
 
   * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour des informations sur la conversion
-de votre compte d'essai en compte payant, voir [Comptes payants](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
+de votre compte d'essai en compte payant, voir [Comptes payants](../pricing/index.html#pay-accounts){: new_window}. 
   * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou
 de l'interface de ligne de commande cf.
     Si vous employez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
@@ -679,7 +778,7 @@ pour votre application.
 mémoire
 maximale, ou les deux :
 	  ```
-	  cf push <nom_app> -i <nombre_instances> -m <limite_mémoire>
+	  cf push <nom_app> -p <chemin_app> -i <nombre_instances> -m <limite_mémoire>
       ```
 	  3. Redémarrez votre application pour que les modifications soient appliquées.
 
@@ -710,7 +809,7 @@ Vous pouvez redémarrer manuellement l'application en entrant la commande suivan
 {: tsResolve}
 
 ```
-cf push <nom_app>
+cf push <nom_app> -p <chemin_app>
 ```
 De plus, vous pouvez coder l'application afin d'identifier les problèmes et d'assurer la reprise après une indisponibilité, une exception ou un échec de
 connexion. 
@@ -836,7 +935,7 @@ Si vous envoyez votre application par commande push à
 {{site.data.keyword.Bluemix_notm}} et spécifier le noeud final d'API de la région
 {{site.data.keyword.Bluemix_notm}} dans laquelle votre organisation a été créée. Pour plus d'informations sur l'utilisation des outils Eclipse, voir
 [Déploiement d'applications avec IBM Eclipse Tools for
-Bluemix](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}.
+Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.
   
   
 
@@ -874,7 +973,7 @@ utilisez. Pour spécifier un autre nom d'hôte, utilisez l'une des méthodes sui
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf
 push` avec l'option **-n**. 
     ```
-    cf push <nom_app> -n <nom_hôte>
+    cf push <nom_app> -p <chemin_app> -n <nom_hôte>
     ```
 
 
@@ -983,7 +1082,7 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
   * Spécifiez la commande de démarrage en appliquant l'une des méthodes suivantes : 
       * Utilisez l'interface de ligne de commande cf. Par exemple : 
         ```
-		cf push MonNoeudJsUnique01 -c "node app.js"
+		cf push MonNoeudJsUnique01 -p chemin_app -c "node app.js"
 		```
 	  * Utilisez le fichier [package.json](https://docs.npmjs.com/json){: new_window}. Exemple :
 	    ```
@@ -1104,7 +1203,7 @@ Ce problème peut survenir car DevOps Services requiert un fichier `manifest.yml
 
  
 
-Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](../manageapps/deployingapps.html#appmanifest){: new_window}.
+Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](../manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1141,7 +1240,7 @@ avec l'option buildpack. Par exemple :
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf
 push` et spécifiez votre pack de construction personnalisé avec l'option **-b**. Par exemple :
     ```
-	cf push nom_app -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push nom_app -p chemin_app -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1420,7 +1519,7 @@ de l'envoyer par commande push ou de la reconstituer.
 
  
 
-Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction. Les mises à jour qui ont été appliquées au pack de construction depuis le dernier envoi de l'application par commande push ne sont pas implémentées.
+Lorsque vous envoyez une application par commande push ou que vous la reconstituez une fois le pack de construction mis à jour, les composants les plus récents du pack de construction ne sont pas automatiquement chargés. Par conséquent, votre application utilise les composants obsolètes du pack de construction. Les mises à jour qui ont été appliquées au pack de construction depuis le dernier envoi de l'application par commande push ne sont pas implémentées. 
 {: tsSymptoms}
 
 
@@ -1447,11 +1546,11 @@ Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme perm
   3. Envoyez votre application par commande push avec le pack de construction null modifié pour supprimer
 le cache à l'aide de la commande suivante. Une fois cette étape réalisée, l'intégralité du contenu du répertoire cache de votre application est supprimée.
   ```
-  cf push nom_app -b <pack_construction_null_modifié>
+  cf push nom_app -p chemin_app -b <pack_construction_null_modifié>
   ```
   4. Envoyez votre application par commande push avec le pack de construction le plus récent que vous souhaitez utiliser à l'aide de la commande suivante : 
   ```
-  cf push nom_app -b <pack_construction_le_plus_récent>
+  cf push nom_app -p chemin_app -b <pack_construction_le_plus_récent>
   ```
   
 	

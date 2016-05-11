@@ -1,11 +1,22 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Mandatos cf para gestionar apps
+# Mandatos de Cloud Foundry (cf)
 
-*Última actualización: 10 de noviembre de 2015*
+*Última actualización: 29 de enero de 2016*
 
 Puede utilizar mandatos de Cloud Foundry (cf) para gestionar apps.
 {:shortdesc}

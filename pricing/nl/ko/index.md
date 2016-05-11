@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -39,7 +51,7 @@
 # 가격 책정
 {: #pricing}
 
-*마지막 업데이트 날짜: 2016년 1월 4일*
+*마지막 업데이트 날짜: 2016년 3월 29일*
 
 {{site.data.keyword.Bluemix}}에서 애플리케이션을
 실행하고 {{site.data.keyword.Bluemix_notm}} 서비스를 무료로
@@ -123,7 +135,7 @@
 
 종량과금제 계정을 사용할 경우 {{site.data.keyword.Bluemix_notm}} 컴퓨팅 및 서비스 사용량을 기준으로 비용이 청구됩니다. 구독 계정을 사용할 경우 매월 최소 지출 약정에 따라 월별 할인이 적용됩니다. {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local은 연간 계약으로 비용이 청구됩니다.
 
-무료 평가판을 청구 가능 계정으로 언제든지 변환할 수 있습니다. 청구 대상이 아닌 모든 무료 평가판 계정 정보 및 {{site.data.keyword.Bluemix_notm}} 솔루션이 새로운 청구 가능 계정에 완전히 병합됩니다.
+무료 평가판을 청구 가능한 계정으로 언제든지 변환할 수 있습니다. 청구 대상이 아닌 모든 무료 평가판 계정 정보 및 {{site.data.keyword.Bluemix_notm}} 솔루션이 새로운 청구 가능 계정에 완전히 병합됩니다.
 
 청구 가능 계정을 작성한 후에는 제공한 정보를 편집할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 오른쪽 위에 있는 **프로파일 설정** 아이콘을 클릭한 다음 **계정 &gt; 계정 유형**을 클릭하여 정보를 편집하십시오.
 
@@ -390,7 +402,10 @@ VM을 프로비저닝할 수 있습니다. 단, 이는 프라이빗 클라우드
 ###비용 계산기 사용
 {: #calculator}
 
-{{site.data.keyword.Bluemix_notm}} 가격 책정 페이지에서 비용 계산기를 사용하면 앱의 비용을 신속하게 산정할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 가격 책정 페이지로 이동하여 **계산기 열기**를 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}}에서 제공하는 비용 계산기를 사용하면 앱의 비용을 신속하게 계산할 수 있습니다.
+
+1. {{site.data.keyword.Bluemix_notm}} [가격 책정 페이지](https://console.{DomainName}/pricing/)로 이동하십시오. 
+2. **비용 추정** 위젯 중 하나를 사용하거나 **계산기 열기**를 사용하여 **정밀 가격 책정 계산기**를 사용하십시오.
 
 계산기를 사용하려면 나열된 자원(예: 인스턴스 수 또는
 푸시 알림 수)의 매월 예상 사용량을 입력하십시오.
@@ -503,7 +518,7 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 ##사용량 세부사항
 {: #usage}
 
-계정 소유자 또는 청구 관리자는 사용량 세부사항 보기를 사용하여 조직에서 매달 사용하는 런타임 및 서비스에 대한 실시간 비용을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나,
+계정 소유자, 영역 내의 *감사자* 권한이 있는 사용자 또는 청구 관리자는 사용량 세부사항 보기를 사용하여 조직에서 매달 사용하는 런타임 및 서비스에 대한 실시간 비용을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나,
 특정 지역 및 영역을 선택하여 지난 12개월 동안의 사용량을 확인할 수 있습니다. 
 
 사용량 세부사항 보기를 열려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 오른쪽 위에 있는 **계정 및 지원** 아이콘을 클릭하고 **계정**을 선택하십시오. 표시되는 페이지에서 **사용량 세부사항**을 클릭하십시오. 이 보기에서 계정의 런타임 및 서비스 사용량에 대한 요약 정보를
@@ -554,7 +569,7 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 플랜을 업데이트하려면 다음 명령을
 입력하십시오.```
 cf update-service <service_name> [-p <new_plan>]```
-# rellinks
+# 관련 링크
 ## 일반 
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티 포럼](https://developer.ibm.com/bluemix/)

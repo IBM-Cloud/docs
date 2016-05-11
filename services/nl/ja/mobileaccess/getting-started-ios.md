@@ -1,7 +1,16 @@
-# iOS SDK のセットアップ
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+# iOS Objective-C SDK のセットアップ
 {: #getting-started-ios}
 
 iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+
+**ヒント:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。詳細については、[iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)を参照してください。
 
 ## 開始する前に
 {: #before-you-begin}
@@ -16,9 +25,12 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 
 ### CocoaPods のインストール
 {: #install-cocoapods}
-1. 端末を開き、`pod --version` コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
+1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
 
-1. CocoaPods をインストールしていない場合は、`sudo gem install cocoapods` を実行します。詳細情報については、[Cocoapods の Web サイト](https://cocoapods.org/)を参照してください。
+1. CocoaPods をインストールしていない場合は、以下を実行します。
+```
+sudo gem install cocoapods```
+詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
@@ -41,20 +53,19 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #init-mca-sdk-ios}
 
-{{site.data.keyword.amashort}} Client SDK を使用するには、**applicationGUID** パラメーターと **applicationRoute** パラメーターを渡して SDK を初期化する必要があります。
+{{site.data.keyword.amashort}} Client SDK を使用するには、**「経路」** (`applicationRoute`) および **「アプリ GUID」** (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化する必要があります。
 
 
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「アプリケーション経路 (Application route)」**と**アプリケーション GUID (Application GUID)」**の値が必要です。
+1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「経路」**および**「アプリ GUID」**の値が必要です。
 
-1. 以下のヘッダーを追加して、{{site.data.keyword.amashort}} Client SDK を使用するクラス内に `IMFCore` フレームワークをインポートします。
+1. 以下のヘッダーを追加することで、{{site.data.keyword.amashort}} Client SDK を使用するクラスに `IMFCore` フレームワークをインポートします。
 
-	Objective-C:
+	**Objective-C:**
 	 ```Objective-C
 	#import <IMFCore/IMFCore.h>
 	```
 
-	Swift:
-
+	**Swift:**
 
 	{{site.data.keyword.amashort}} Client SDK は Objective-C によって実装されます。以下の手順に従って、Swift プロジェクトにブリッジング・ヘッダーを追加する必要がある場合があります。
 
@@ -69,9 +80,9 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 1. 以下のコードを使用して、{{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。<br/>
 *applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
 
-	Objective-C:
+	**Objective-C:
                     
-
+**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -79,8 +90,7 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 			backendGUID:@"applicationGUID"];
 	```
 
-	Swift:
-
+	**Swift:**
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -92,13 +102,13 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
 
-1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。 次の URL を開きます。`http://{appRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 1. iOS アプリケーションを使用して同じエンドポイントに対する要求を作成します。`IMFClient` を初期化した後に、以下のコードを追加します。
 
-	Objective-C:
+	**Objective-C:
                     
-
+**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -116,8 +126,7 @@ if (error){
 }];
 	```
 
-	Swift:
-
+	**Swift:**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

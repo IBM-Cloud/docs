@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # カスタム ID プロバイダーの作成
 {: #custom-create}
 カスタム ID プロバイダーを作成するには、次の RESTful API を公開する Web アプリケーションを開発します。
@@ -7,7 +14,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ```
 
 * `base_url`: カスタム ID プロバイダー Web アプリケーションのベース URL を指定します。このベース URL は、{{site.data.keyword.amashort}} ダッシュボードに登録される URL です。
-* `tenant_id` : テナントの固有 ID を指定します。{{site.data.keyword.amashort}} は、この API を起動するときに、常に {{site.data.keyword.Bluemix}} applicationGUID を提供します。
+* `tenant_id` : テナントの固有 ID を指定します。{{site.data.keyword.amashort}} は、この API を起動するときに、常に {{site.data.keyword.Bluemix}} アプリ GUID (`applicationGUID`) を提供します。
 * `realm_name` : {{site.data.keyword.amashort}} ダッシュボードで定義されたカスタム・レルム名を指定します。
 * `request_type` : 以下のいずれかを指定します。
 	* `startAuthorization`: 認証プロセスの最初のステップを指定します。カスタム ID プロバイダーは、「challenge」、「success」、または「failure」のいずれかの状況とともに応答する必要があります。
@@ -104,17 +111,21 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ## セキュリティーに関する考慮事項
 {: #custom-security}
 
-{{site.data.keyword.amashort}} サービスからカスタム ID プロバイダーへの各要求には許可ヘッダーが含まれ、それによってカスタム ID プロバイダーは、許可されたソースからその要求が着信していることを検証できます。厳密には必須ではありませんが、カスタム ID プロバイダーに {{site.data.keyword.amashort}} Server SDK を装備することによって許可ヘッダーを検証することを検討してください。この SDK を使用するには、カスタム ID プロバイダー・アプリケーションは Node.js または Liberty for Java で実装され、{{site.data.keyword.Bluemix_notm}} 上で実行される必要があります。
+{{site.data.keyword.amashort}} サービスからカスタム ID プロバイダーへの各要求には許可ヘッダーが含まれ、それによってカスタム ID プロバイダーは、許可されたソースからその要求が着信していることを検証できます。厳密には必須ではありませんが、カスタム ID プロバイダーに {{site.data.keyword.amashort}} Server SDK を装備することによって許可ヘッダーを検証することを検討してください。この SDK を使用するには、カスタム ID プロバイダー・アプリケーションが Node.js または Liberty for Java&trade;&trade; を使用して実装され、{{site.data.keyword.Bluemix_notm}} 上で実行される必要があります。
 
 許可ヘッダーは、認証プロセスをトリガーしたモバイル・クライアントおよびモバイル・アプリについての情報を含みます。セキュリティー・コンテキストを使用して、このデータを取得できます。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
 
 ## カスタム ID プロバイダーのサンプル実装
 {: #custom-sample}
-カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。全アプリケーション・コードを [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
+カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。GitHub リポジトリーから、完全なアプリケーション・コードをダウンロードしてください。
 
-### JSON 構造
+* [簡単なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [高度なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-この実装では、提供される認証チャレンジ応答は以下の構造の JSON オブジェクトであると想定しています。
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -123,7 +134,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
  }
  ```
 
-### カスタム ID プロバイダーのサンプル・コード
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -186,7 +197,7 @@ app.post('/apps/:tenantId/:realmName/handleChallengeAnswer', jsonParser, functio
 			}
 		}
 	} else {
-logger.debug("Login failure for userId ::", username);
+		logger.debug("Login failure for userId ::", username);
 	}
 
 	res.status(200).json(responseJson);
@@ -202,6 +213,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## 次のステップ
 {: #next-steps}

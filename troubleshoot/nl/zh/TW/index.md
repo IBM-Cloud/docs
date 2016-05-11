@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,9 +15,9 @@
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2015 年 1 月 6 日*
+*前次更新：2016 年 4 月 13 日*
 
-一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 ## 無法登入 {{site.data.keyword.Bluemix_notm}}
@@ -183,10 +189,10 @@ nslookup stage1.mybluemix.net
 當您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面時，您可能會看到下列其中一則錯誤訊息：
 {: tsSymptoms}
 
-`BXNUI0001E: 未載入頁面，因為 Bluemix 未偵測到是否存在階段作業。`
+`BXNUI0001E: 由於 Bluemix 未偵測到階段作業是否存在，因此未載入頁面。`
 
 
-`BXNUI0016E: 未擷取應用程式及服務，因為未載入 Bluemix 頁面。`
+`BXNUI0016E: 由於未載入 Bluemix 頁面，因此未擷取應用程式及服務。`
 
  
 
@@ -232,8 +238,88 @@ nslookup stage1.mybluemix.net
 # 管理應用程式疑難排解
 {: #managingapps}
 
-管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
+
+
+
+
+
+## 無法將應用程式切換為除錯模式
+{: #ts_debug}
+
+如果 Java 虛擬機器 (JVM) 版本是第 8 版或更舊版本，則您可能無法啟用除錯模式。 
+
+
+在您選取**啟用應用程式除錯**之後，工具會嘗試將應用程式切換為除錯模式。然後，Eclipse 工作台會開始除錯階段作業。工具順利啟用除錯模式時，Web 應用程式狀態會顯示`更新模式`、`開發中`及`除錯中`。
+{: tsSymptoms}
+
+不過，工具無法啟用除錯模式時，Web 應用程式狀態只會顯示`更新模式`及`開發中`，並不會顯示`除錯中`。工具可能也會在「主控台」視圖中顯示下列錯誤訊息：
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+下列 Java 虛擬機器 (JVM) 版本無法建立除錯階段作業：IBM JVM 7、IBM JVM 8 及舊版 Oracle JVM 8。
+{: tsCauses}
+
+如果您的工作台 JVM 為上述其中一種版本，則可能會在建立除錯階段作業時發生問題。您的工作台 JVM 版本一般是本端電腦的系統 JVM。您的系統 JVM 與執行中 Bluemix Java 應用程式的 JVM 不同。Bluemix Java 應用程式幾乎一律會在 IBM JVM 上執行，但有時會在 OpenJDK JVM 上執行。
+  
+
+若要檢查 IBM Eclipse Tools for Bluemix 所執行的 Java 版本，請完成下列步驟：
+{: tsResolve}
+
+  1. 在 IBM Eclipse Tools for Bluemix 中，選取**說明** > **關於 Eclipse** > **安裝詳細資料** > **配置**。
+  2. 從清單中尋找 `eclipse.vm` 內容。下列這一行是 `eclipse.vm` 內容範例：
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. 在指令行中，從 Java 安裝的 `bin` 目錄中輸入 `java -version`。即會顯示 IBM JVM 版本資訊。
+
+如果您的工作台 JVM 是 IBM JVM 7 或 8，或舊版 Oracle JVM 8，請完成下列步驟來切換至 Oracle JVM 8：
+
+  1. 下載並安裝 Oracle JVM 8，如需詳細資料，請參閱 [Java SE 下載](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}。
+  2. 重新啟動 Eclipse。
+  3. 檢查 `eclipse.vm` 內容是否指向新的 Oracle JVM 8 安裝。
+
 
 
 
@@ -265,7 +351,7 @@ nslookup stage1.mybluemix.net
 若要取得適當的權限層級，請使用下列其中一種方法：
 {: tsResolve}
  * 選取另一個您具有開發人員角色的組織及空間。 
- * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織](../acctmgmt/index.html#mngorg){: new_window}。
+ * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織](../admin/adminpublic.html#orgmng){: new_window}。
  
 
  
@@ -360,7 +446,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
   
 
-當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴充應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 調整為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
+當您耗盡磁碟空間時，可能會看到一則指出已超出磁碟限額的訊息。為解決此問題，您可能已嘗試擴充應用程式實例以取得更多磁碟空間。例如，您可能透過變更應用程式詳細資料頁面上的記憶體配額，從 256 MB 擴充為 1256 MB。不過，因為磁碟限額保持不變，所以您並未取得更多磁碟空間。
 {: tsSymptoms}
 
 
@@ -377,7 +463,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 	```
   * 當您將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，使用 **-k** 選項與 `cf push` 指令搭配：
 ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -463,7 +549,7 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 	  1. 鍵入 `cf unbind-service <appname> <service_instance_name>`，將服務實例與應用程式取消連結。
 	  2. 鍵入 `cf delete-service <service_instance_name>`，以刪除服務實例。
 	  3. 刪除服務實例之後，您可能會想要鍵入 `cf restage <appname>`，以重新編譯打包服務實例所連結的應用程式。
-  * 若要移除您可以擁有之服務實例數目的限制，請將您的試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../acctmgmt/bill_usage.html#bil_plan){: new_window}。
+  * 若要移除您可以擁有之服務實例數目的限制，請將您的試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[如何變更方案](../pricing/index.html#changing){: new_window}。
 
   
   
@@ -488,11 +574,11 @@ IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 例如：
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -518,7 +604,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。
 {: tsResolve} 
 
-  * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../acctmgmt/bill_usage.html#bil_plan){: new_window}。 
+  * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../pricing/index.html#pay-accounts){: new_window}。 
   * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面。如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面，請完成下列步驟：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，選取您的應用程式。即會開啟應用程式詳細資料頁面。
 	  2. 在「執行時期」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。如果您使用 cf 指令行介面，請完成下列步驟：
@@ -529,7 +615,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	     cf apps 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
       2. 若要減少應用程式所使用的記憶體數量，請減少應用程式實例的數目及（或）記憶體上限：
 ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. 重新啟動應用程式，讓變更生效。
 
@@ -544,7 +630,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 	  
  
 
-當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。
+當連結至應用程式的服務損毀時，應用程式可能會發生運作中斷、異常狀況和連線失敗之類的問題。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。
 {: tsSymptoms}
 
 
@@ -558,7 +644,7 @@ cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 此外，您可以將應用程式編碼成可識別運作中斷、異常狀況和連線失敗之類的問題，並從其中回復。 
 
@@ -658,7 +744,7 @@ cf push <appname>
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 地區的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}。  
+如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 地區的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html){: new_window}。  
   
   
 
@@ -691,7 +777,7 @@ cf api https://api.eu-gb.bluemix.net
 	```
   * 如果您從命令提示字元部署應用程式，請搭配使用 `cf push` 指令與 **-n** 選項。
 ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -783,7 +869,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 下列原因是問題的可能原因：
 {: tsCauses}
  
-  * 未指定 start 指令。
+  * 未指定啟動指令。
   * 部署 Node.js 應用程式所需的檔案從應用程式中遺漏，或是放在非根目錄的資料夾中。
   
 
@@ -792,10 +878,10 @@ cf push MyUniqueAppName02 -p "./app.war"
 請根據導致問題的原因採取下列動作：
 {: tsResolve} 
 
-  * 以下列其中一種方法指定 start 指令： 
+  * 以下列其中一種方法指定啟動指令： 
       * 使用 cf 指令行介面。例如：
 ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 檔案。例如：
 	    ```
@@ -851,7 +937,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，區域環境中沒有 `runtime-vars.xml` 檔案。
+Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，本端環境中沒有 `runtime-vars.xml` 檔案。
 {: tsCauses}
 
  
@@ -898,7 +984,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](../manageapps/deployingapps.html#appmanifest){: new_window}。
+若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](../manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 
@@ -931,7 +1017,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
   ```
   * 如果您從命令提示字元部署應用程式，請使用 `cf push` 指令，並使用 **-b** 選項指定自訂建置套件。例如：
   ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1057,7 +1143,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 管理帳戶疑難排解
 {: #managingaccounts}
 
-您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+您可能會在管理帳戶時遇到問題，例如不同的應用程式共用相同的網域名稱、管理者無法檢視所有組織等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 
@@ -1130,7 +1216,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零關閉時間。如需相關資訊，請參閱藍綠部署。
+這是 {{site.data.keyword.Bluemix_notm}} 的支援行為，而且您可以使用此作法，讓應用程式升級達到零中斷時間。如需相關資訊，請參閱藍綠部署。
 {: tsResolve}
   
 	
@@ -1171,7 +1257,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 # 執行時期疑難排解
 {: #runtimes}
 
-您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題回復。
+您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 
@@ -1183,12 +1269,12 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-當您在建置套件更新之後推送或重新編譯打包應用程式時，不會自動載入最新的建置套件元件。因此，您的應用程式會使用已作廢的建置套件元件。將不會實作自從您前次推送應用程式後已套用至建置套件的更新項目。
+當您在建置套件更新之後推送或重新編譯打包應用程式時，不會自動載入最新的建置套件元件。因此，您的應用程式會使用已作廢的建置套件元件。將不會實作自從您前次推送應用程式後已套用至建置套件的更新。
 {: tsSymptoms}
 
 
 
-部分建置套件未配置為自動從網際網路下載所有更新的元件，以確保您一律使用最新的版本。
+部分建置套件未配置為自動從網際網路下載所有更新的元件，以確保您隨時使用最新的版本。
 {: tsCauses} 
 
  
@@ -1209,11 +1295,11 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
   ```
   3. 使用下列指令，用已修改的空值建置套件推送應用程式，以刪除快取。完成此步驟之後，應用程式快取目錄中的所有內容都會刪除。
 ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 使用下列指令，用您想要使用的最新建置套件來推送應用程式：
 ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	
@@ -1288,7 +1374,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	 ```
 	如需如何配置 `requirements.txt` 檔案的相關資訊，請參閱[需求檔案](https://pip.readthedocs.org/en/1.1/requirements.html)。 
 	 
-  2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的 start 指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於 start 指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。
+  2. 在 Python 應用程式的根目錄中，新增 `Procfile` 檔案。`Procfile` 檔案必須包含 Python 應用程式的啟動指令。在下列指令中，*yourappname* 是 Python 應用程式的名稱，而 *PORT* 是 Python 應用程式必須用來接收應用程式使用者要求的埠號。*$PORT* 是選用項目。如果您未於啟動指令中指定 PORT，則會改用應用程式內部的 `VCAP_APP_PORT` 環境變數下的埠號。
 ```
 	web: python <yourappname>.py $PORT
 	```

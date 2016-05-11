@@ -1,10 +1,18 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 #애플리케이션 관리
 {: #manageapps}
 
-*마지막 업데이트 날짜: 2015년 12월 4일*
+*마지막 업데이트 날짜: 2015년 3월 17일*
 
 {{site.data.keyword.Bluemix}} 사용자 인터페이스의 대시보드를 사용하여 애플리케이션과 서비스를 확인 및 관리하고, 할당량 게이지를 통해 자원 사용량을 모니터링할 수 있습니다.
 {:shortdesc}

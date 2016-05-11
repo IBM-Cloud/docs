@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--````````````Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+<map xml:lang="es-es">
+<title>Push</title>
+<!--
+Overview
+Configuring the APN service
+Adding Push to the Bluelist sample
+USING tags and subscriptions (12/17)
+Managing notifications
+<<8/11/2015 Removed monitoring topic in sprint 8, DS 79883>>
+-->
+ <!--CLM PRODUCTION NAVIGATION: -->
+ <!--CLM NEW NAVIGATION : -->
+ <topicref href="index.html" linking="none" navtitle="Notificaciones push" format="html" scope="peer">
+<topicref href="c_overview_push.html" navtitle="Acerca de" linking="sourceonly" format="html"
+outputclass="subsection" scope="peer"/>
+<topicref outputclass="subsection" navtitle="Configuración de un proveedor de notificaciones" linking="normal"
+href="t__main_push_config_provider.html" format="html" chunk="to-content" scope="peer">
+<topicref href="t_push_provider_ios.html" format="html" navtitle="Notificaciones push de Apple"
+scope="peer"/>
+<topicref href="t_push_provider_android.html" navtitle="Google Cloud Messaging" format="html"
+scope="peer"/>
+</topicref>
+<topicref outputclass="subsection" navtitle="Habilitación de notificaciones push" href="c_enable_push.html"
+format="html" scope="peer">
+<topicref href="c_android_enable.html" chunk="to-content" format="html" navtitle="Android"
+scope="peer">
+<topicref href="t_android_install_sdk.html" format="html"
+navtitle="Instalación del SDK Push del cliente con Gradle" scope="peer"/>
+<topicref href="t_android_initialize.html" format="html"
+navtitle="Inicialización del SDK push para aplicaciones Android" scope="peer"/>
+<topicref href="t_android_register.html" format="html" navtitle="Registro de dispositivos Android"
+scope="peer"/>
+<topicref href="t_android_receive.html" format="html"
+navtitle="Recepción de notificaciones push en dispositivos Android" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html" navtitle="Envío de notificaciones básicas"
+scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="Siguientes pasos" scope="peer"/>
+</topicref>
+<topicref href="c_cordova_enable.html" chunk="to-content" format="html" navtitle="Cordova"
+scope="peer">
+<topicref href="t_cordova_install.html" format="html" navtitle="Instalación del plug-in Push de Cordova"
+scope="peer"/>
+<topicref href="t_cordova_initialize.html" format="html" navtitle="Inicialización del plug-in de Cordova"
+scope="peer"/>
+<topicref href="t_cordova_register.html" format="html" navtitle="Registro de dispositivos" scope="peer"/>
+<topicref href="t_cordova_receive.html" format="html"
+navtitle="Recepción de notificaciones push en dispositivos" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html" navtitle="Envío de notificaciones básicas"
+scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="Siguientes pasos" scope="peer"/>
+</topicref>
+<topicref chunk="to-content" href="c_ios_enable.html" navtitle="iOS" format="html" scope="peer">
+<topicref href="t_enable_ios_notifications_install.html" format="html"
+navtitle="Instalación del SDK del cliente de Bluemix Mobile Services mediante CocoaPods" scope="peer"/>
+<topicref href="t_enable_ios_notifications_initialize.html" format="html"
+navtitle="Inicialización de SDK Push para aplicaciones iOS" scope="peer"/>
+<topicref href="t_enable_ios_notifications_register.html" format="html"
+navtitle="Registro de dispositivos y aplicaciones iOS" scope="peer"/>
+<topicref href="t_enable-ios-notifications-receive.html"
+navtitle="Recepción de notificaciones push en dispositivos iOS" scope="peer"/>
+<topicref href="t_send_push_notifications.html" format="html"
+navtitle="Envío de notificaciones push básicas" scope="peer"/>
+<topicref href="next_steps_tags.html" format="html" navtitle="Siguientes pasos" scope="peer"/>
+</topicref>
+</topicref>
+<topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"
+format="html" navtitle="Habilitación de notificaciones basadas en etiquetas" scope="peer">
+<topicref href="t_manage_tags.html" format="html" navtitle="Gestión de etiquetas" scope="peer"/>
+<topicref href="t_get_tags.html" format="html" navtitle="Obtención de etiquetas" scope="peer"/>
+<topicref href="t_subscribe_tags.html" format="html" navtitle="Suscripción y cancelación de la suscripción a las etiquetas"
+scope="peer"/>
+<topicref href="t_use_tags.html" format="html" navtitle="Utilización de notificaciones basadas en etiquetas" scope="peer"
+/>
+</topicref>
+<topicref href="c_advance_notifications.html" outputclass="subsection" chunk="to-content"
+navtitle="Notificaciones avanzadas" format="html" scope="peer">
+<topicref href="t_advance_badge_sound_payload.html"
+navtitle="Configuración de un identificador, sonido y carga útil de iOS" format="html" scope="peer"/>
+<topicref href="t_holding_notifications_android.html" navtitle="Retención de notificaciones para Android"
+format="html" scope="peer"/>
+<topicref href="t_enable_actionable_notifications_ios.html"
+navtitle="Habilitar notificaciones iOS accionables" format="html" scope="peer"/>
+<topicref href="t_handle_actionable_notifications_ios.html"
+navtitle="Gestión de notificaciones accionables" format="html" scope="peer"/>
+</topicref>
+
+<topicref navtitle="Utilización de API REST" href="t_restapi.html" format="html" outputclass="subsection"
+scope="peer" linking="sourceonly"
+><!--hide silent notifications because it is not in the dashboard--></topicref>
+<topicref href="troubleshooting.html" navtitle="Resolución de problemas" format="html"
+outputclass="subsection" scope="peer" linking="sourceonly"/>
+</topicref>
+</map>
+

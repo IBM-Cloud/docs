@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,9 +14,10 @@
 #保护应用程序
 {: #securingapps}
 
-*上次更新时间：2015 年 12 月 4 日*
+*上次更新时间：2016 年 3 月 30 日*
 
-您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。{:shortdesc}
+您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。
+{:shortdesc}
 
 ##创建证书签名请求
 {: #ssl_csr}
@@ -43,7 +52,7 @@ CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签�
 
   为其请求 SSL 证书的标准域名 (FQDN)。
   
-根据操作系统，创建 CSR 的方法也有所不同。以下示例显示如何使用 [OpenSSH 命令工具](http://www.openssl.org/){:new_window}创建 CSR：
+根据操作系统，创建 CSR 的方法也有所不同。以下示例显示如何使用 [OpenSSL 命令行工具](http://www.openssl.org/){:new_window}创建 CSR：
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -63,11 +72,11 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 在上传证书之前，必须创建证书签名请求。请参阅[创建证书签名请求](#ssl_csr)。
 
-要正确提供 SSL 证书，在创建定制域以提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径时，必须使用以下 IP 地址来配置 DNS 或 hosts 文件。
+要正确提供 SSL 证书，在创建定制域以提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径时，必须使用以下 IP 地址来配置 DNS 服务器。
 
 * US-SOUTH：75.126.81.68
 * EU-GB：5.10.124.142
-* AU-SYD：168.1.35.169
+* AU-SYD：168.1.35.166
 
 您用于专用环境的 IP 地址会有所不同。联系您的 IBM 代表以获取专用环境的 IP 地址。
 
@@ -81,17 +90,17 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 3. 对于定制域，单击**上传证书**。
 
-4. 浏览以上传证书和专用密钥，并可选择上传中间证书。还可以选中相应复选框来启用客户机证书请求。
+4. 浏览以上传证书和专用密钥，并可选择上传中间证书。还可以选中相应复选框来启用客户机证书请求。如果启用此选项来请求客户机证书，您必须上传客户机证书信任库文件，此文件定义对定制域所允许的用户访问权。
 
   **证书**
     
     一种数字文档，用于将公用密钥绑定到证书所有者的标识，从而使证书所有者得到认证。证书由认证中心发放并由该认证中心进行数字签名。
     
     {{site.data.keyword.Bluemix_notm}} 中支持以下类型的证书：
-    
-      * PEM（pem、.crt、.cer 和 .cert）
-	  * DER（.der 或 .cer）
-      * PKCS #7（p7b、p7r 和 spc）
+
+	* PEM（pem、.crt、.cer 和 .cert）
+	* DER（.der 或 .cer）
+	* PKCS #7（p7b、p7r 和 spc）
 	  
   **专用密钥**
   
@@ -112,10 +121,20 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
   
   **启用客户机证书请求**
   
-    如果启用此选项，那么会要求尝试访问受 SSL 保护的域的用户提供客户机端证书。例如，在 Web 浏览器中，当用户尝试访问受 SSL 保护的域时，Web 浏览器会提示用户提供该域的客户机证书。
+    如果启用此选项，那么会要求尝试访问受 SSL 保护的域的用户提供客户机端证书。例如，在 Web 浏览器中，当用户尝试访问受 SSL 保护的域时，Web 浏览器会提示用户提供该域的客户机证书。使用**客户机证书信任库**文件上传选项可定义您允许访问定制域的客户机端证书。
   
   **注：**{{site.data.keyword.Bluemix_notm}} 域管理中的定制证书功能取决于传输层安全性 (TLS) 协议的服务器名称指示 (SNI) 扩展。因此，用于访问定制证书所保护的 {{site.data.keyword.Bluemix_notm}}
 应用程序的客户机代码在 TLS 实现中必须支持 SNI 扩展。有关更多信息，请参阅 [RFC
 4346 的第 7.4.2 部分](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}。
+
+  **客户机证书信任库**
+  
+  客户机证书信任库是包含客户机证书的文件，供您希望允许访问您应用程序的用户使用。如果启用此选项来请求客户机证书，请上传客户机证书信任库文件。 
+  
+   {{site.data.keyword.Bluemix_notm}} 中支持以下类型的证书：
+    
+      * PEM（pem、.crt、.cer 和 .cert）
+	  * DER（.der 或 .cer）
+      * PKCS #7（p7b、p7r 和 spc）
 
 要删除证书或将现有证书替换为新证书，请转至**管理组织** > **域** > **查看证书**来管理您的证书。

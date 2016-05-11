@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -6,7 +18,7 @@
 # Caso de ejemplo: Desarrollo completo
 {: #ee}
 
-*Última actualización: 6 de noviembre de 2015*
+*Última actualización: 18 de abril de 2016*
 
 Puede utilizar la interfaz de usuario y la plataforma de {{site.data.keyword.Bluemix}} y una selección de herramientas para compilar, ejecutar y desplegar sus apps. Para empezar, puede seguir este caso de ejemplo completo de desarrollo.
 {:shortdesc}
@@ -28,7 +40,7 @@ Después de iniciar la sesión, puede empezar a crear la primera app mediante la
 En {{site.data.keyword.Bluemix_notm}}, las apps están asociados a organizaciones y espacios. Una organización es propiedad de varios colaboradores, quienes la utilizan. Inicialmente, obtiene una organización predeterminada que se llama como su nombre de usuario y cuyo único colaborador es usted. También obtiene un espacio dentro de esta organización. El espacio es un entorno en el que ejecutar sus apps; por ejemplo, puede tener un espacio dev como entorno de desarrollo, un espacio test como entorno de prueba y un espacio production como entorno de producción. Además, cada uno de los entornos pertenece a una región. Con {{site.data.keyword.Bluemix_notm}}, puede desplegar las apps en una determinada región geográfica para reducir la latencia de la red, y mejorar la privacidad de los datos y la disponibilidad. Consulte Regiones para obtener detalles.
 
 En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Tras iniciar sesión en {{site.data.keyword.Bluemix_notm}}, selecciona la región **EE. UU.
-sur** de la esquina superior derecha de la interfaz de usuario. A continuación, puede llevar a cabo los
+sur**. A continuación, puede llevar a cabo los
 siguientes pasos para crear una app:
   1. Pulse **CREAR UNA APP**.
   2. Seleccione **Web**.
@@ -52,7 +64,8 @@ Para utilizar servicios dentro de la app, debe crear una instancia de servicio y
   
 Ahora la app está enlazada al servicio {{site.data.keyword.cloudant}}. Encontrará todos los datos necesarios para que la app se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Por ejemplo, como {{site.data.keyword.Bluemix_notm}} aloja varias apps en la misma máquina virtual, las apps no pueden utilizar el mismo número de puerto HTTP para recibir las solicitudes entrantes. Para evitar conflictos, se asigna un número de puerto exclusivo a cada app. Este número de puerto está disponible bajo la variable VCAP_APP_PORT.
 
-Pulse **Variables de entorno** en la página Visión general de la app para ver toda la lista completa de VCAP_SERVICES para obtener más información:```
+Pulse **Variables de entorno** en la página Visión general de la app para ver toda la lista completa de VCAP_SERVICES para obtener más información:
+```
 {
    "cloudantNoSQLDB": [
       {
@@ -71,8 +84,7 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
 }
 ```
 
-**Nota:** Esta variable de entorno es la serialización de un objeto JSON con una entrada para cada instancia de servicio al que la app está enlazada. La cantidad y el tipo de datos que proporciona cada instancia de servicio dependen del servicio. Cuando la app no utiliza ningún servicio, VCAP_SERVICES es un objeto JSON vacío.
-Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
+**Nota:** Esta variable de entorno es la serialización de un objeto JSON con una entrada para cada instancia de servicio al que la app está enlazada. La cantidad y el tipo de datos que proporciona cada instancia de servicio dependen del servicio. Cuando la app no utiliza ningún servicio, VCAP_SERVICES es un objeto JSON vacío. Esta variable de entorno solo se utiliza cuando se añade un servicio a la app.
 
 ## Creación de una app con la cli cf
 {: #ee_cf}
@@ -141,7 +153,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
   
-  También puede utilizar el mandato cf services para ver la lista de las instancias de servicio que ha creado. 
+  También puede utilizar el mandato cf services para ver la lista de las instancias de servicio que ha creado.
   
   ```
   cf services
@@ -163,7 +175,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   
   3. Utilizar la instancia de servicio.
   
-  En este caso de ejemplo, la variable de entorno VCAP_SERVICES incluye información, como por ejemplo los elementos siguientes, que una app puede utilizar para conectar con esta instancia de {{site.data.keyword.cloudant}}: 
+  En este caso de ejemplo, la variable de entorno VCAP_SERVICES incluye información, como por ejemplo los elementos siguientes, que una app puede utilizar para conectar con esta instancia de {{site.data.keyword.cloudant}}:
   
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
@@ -231,12 +243,10 @@ de las infraestructuras y servicios en tiempo de ejecución, incluso si se pasa 
 {{site.data.keyword.Bluemix_notm}} proporciona
 un estimador y una calculadora para que calcule el coste de su app. Puede ver el coste de TestNode de las siguientes maneras:
 
-  * En el panel de control, pulse TestNode. A continuación, en la página
-Visión general, pulse **Estimar el coste de esta app** en la parte inferior derecha para ver el precio del tiempo de ejecución **SDK para Node.js** y del soporte y el precio mensual total de la app en la esquina superior derecha.
+  * En el panel de control, pulse TestNode. A continuación, en la página Visión general, pulse **Estimar el coste de esta app** para ver el precio del tiempo de ejecución **SDK para Node.js** y del soporte y el precio mensual total de la app.
   
   * En la página Hoja de precios también puede escribir el uso mensual del tiempo de ejecución y de los
-servicios de su app. Por ejemplo, 3 instancias de **SDK para Node.js** con 1 GB memoria para cada instancia. El precio mensual
-se calcula y se muestra en la esquina superior derecha de la ventana.
+servicios de su app. Por ejemplo, 3 instancias de **SDK para Node.js** con 1 GB memoria para cada instancia. El precio mensual se calcula y se muestra.
 
 También puede calcular el coste de su app de forma manual; para ello, añada el precio
 de los tiempos de ejecución y servicios y deduzca la concesión gratuita. Para obtener más información, consulte Cálculo manual de los costes.

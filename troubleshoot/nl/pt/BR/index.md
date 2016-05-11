@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,12 +15,12 @@
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 6 de janeiro de 2015*
+*Última atualização: 13 de abril de 2016*
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
 uma conta paralisada em um estado pendente etc. No entanto, em vários casos, é possível recuperar-se desses
-problemas seguindo algumas etapas simples. 
+problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}
@@ -62,11 +68,11 @@ Ao tentar verificar seu app ou serviços na página de detalhes do app, você co
 `Você possui mudanças não salvas na página app_name. Salve ou cancele as mudanças.`
 
 
-Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página.
+Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página. 
 {: tsCauses}
 
 
-Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na área de janela de tempo de execução.
+Feche a janela da mensagem e, em seguida, clique no botão **RECONFIGURAR** na área de janela de tempo de execução. 
 {: tsResolve} 
 
 
@@ -203,31 +209,25 @@ fornece a capacidade para registrar diversos usuários ao mesmo tempo.
 {: tsSymptoms}
  
 
-O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}},
-deve-se registrar cada usuário individualmente.
+O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}}, deve-se registrar cada usuário individualmente.
 {: tsCauses}
  
 
-Para registrar vários usuários para o {{site.data.keyword.Bluemix_notm}},
-deve-se concluir as etapas a seguir para cada usuário:
+Para registrar vários usuários para o {{site.data.keyword.Bluemix_notm}}, deve-se concluir as etapas a seguir para cada usuário:
 {: tsResolve}
 
-  1. Clique em **SIGN UP** no canto superior direito
-da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+  1. Clique em **SIGN UP** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
   2. Conclua as etapas seguindo o assistente.
 
     
 
-## Uma página {{site.data.keyword.Bluemix_notm}}
-não pode ser carregada
+## Uma página {{site.data.keyword.Bluemix_notm}} não pode ser carregada
 {: #ts_err}
 
-Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}},
-talvez não possa carregar uma página do {{site.data.keyword.Bluemix_notm}}. Em vez disso, talvez você veja as mensagens de erro BXNUI0001E ou BXNUI0016E.
+Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, talvez não possa carregar uma página do {{site.data.keyword.Bluemix_notm}}. Em vez disso, talvez você veja as mensagens de erro BXNUI0001E ou BXNUI0016E.
  
 
-É possível ver uma das mensagens de erro a seguir ao
-usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}:
+É possível ver uma das mensagens de erro a seguir ao usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}:
 {: tsSymptoms}
 
 `BXNUI0001E: A página não foi carregada, pois o Bluemix não detectou se existe uma sessão.`
@@ -242,8 +242,7 @@ a seguir, conforme for necessário:
 {: tsResolve}
 
   * Atualizar ou reiniciar seu navegador.
-  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e
-efetuar login novamente.
+  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e efetuar login novamente.
   * Usar o modo de navegação privada do seu navegador. 
   * Limpar os cookies e o cache do navegador.
   * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [{{site.data.keyword.Bluemix_notm}} Pré-requisitos](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
@@ -253,8 +252,7 @@ efetuar login novamente.
   
   
   
-## A barra de menus superior do {{site.data.keyword.Bluemix_notm}}
-desaparece
+## A barra de menus superior do {{site.data.keyword.Bluemix_notm}} desaparece
 {: #ts_topmenubar}
 
 Você pode não conseguir ver a barra de menus superior do {{site.data.keyword.Bluemix_notm}}
@@ -266,7 +264,7 @@ Ao diminuir o tamanho da janela do navegador ou
 usar um dispositivo móvel, a barra de menus superior do{{site.data.keyword.Bluemix_notm}}
 desaparece. Quando a barra de menus superior desaparece, o menu de gaveta
 lateral que é exibido como um ícone de linha empilhada aparece no canto superior
-esquerdo. 
+esquerdo.
 {: tsSymptoms}
 
  
@@ -274,7 +272,7 @@ esquerdo.
 A interface com o usuário do {{site.data.keyword.Bluemix_notm}}
 possui um design responsivo. Quando o ambiente de visualização é alterado,
 o layout da interface com o usuário do {{site.data.keyword.Bluemix_notm}}
-também pode ser alterado. 
+também pode ser alterado.
 {: tsCauses}
  
 
@@ -295,6 +293,86 @@ Problemas gerais com o gerenciamento de aplicativos podem incluir
 aplicativos que não podem ser atualizados e caracteres de byte duplo que não são exibidos. No entanto, em vários casos, é possível recuperar-se desses
 problemas seguindo algumas etapas simples.
 {:shortdesc}
+
+
+
+
+
+## Impossível alternar apps para o modo de depuração 
+{: #ts_debug}
+
+Você poderá não ser capaz de ativar o modo de depuração se a versão da Java virtual machine (JVM) for 8 ou inferior.  
+
+
+Depois que você seleciona **Ativar depuração de aplicativo**, as ferramentas tentam alternar o aplicativo para o modo de depuração. Em seguida, o ambiente de trabalho Eclipse inicia uma sessão de depuração. Quando as ferramentas ativam o modo de depuração com êxito, o status do aplicativo da web exibe `Atualizando modo`, `Desenvolvendo` e `Depurando`.
+{: tsSymptoms}
+
+No entanto, quando as ferramentas falham em ativar o modo de depuração, o status do aplicativo da web exibe somente `Atualizando modo` e `Desenvolvendo` e não exibe `Depurando`. As ferramentas também podem exibir a mensagem de erro a seguir na visualização de Console: 
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERRO --- ClientProxyImpl: Não é possível criar a conexões de websocket para MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+em java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+em java.util.concurrent.FutureTask.run(FutureTask.java:277)
+em java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+em java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+em java.lang.Thread.run(Thread.java:785)
+Causado por: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 mais
+Causado por: java.util.concurrent.TimeoutException
+em org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+em org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 mais
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERRO --- ClientProxyImpl: Não é possível criar a conexões de websocket para MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+em java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+em java.util.concurrent.FutureTask.run(FutureTask.java:277)
+em java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+em java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+em java.lang.Thread.run(Thread.java:785)
+Causado por: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 mais
+Causado por: java.util.concurrent.TimeoutException
+em org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+em org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 mais
+```
+ 
+
+As versões da Java virtual machine (JVM) a seguir não podem estabelecer uma sessão de depuração: IBM JVM 7, IBM JVM 8 e versões anteriores do Oracle JVM 8.
+{: tsCauses}
+
+Se a sua JVM de ambiente de trabalho for uma dessas versões, você poderá ter problemas ao criar uma sessão de depuração. Sua JVM de ambiente de trabalho é geralmente a JVM do sistema de seu computador local. Sua JVM do sistema não é a mesma que a JVM de seu aplicativo Java do Bluemix em execução. O aplicativo Java do Bluemix quase sempre é executado no IBM JVM e, às vezes, no OpenJDK JVM. 
+  
+
+Para verificar a versão do Java que o IBM Eclipse Tools for Bluemix executa, conclua as etapas a seguir:
+{: tsResolve}
+
+  1. No IBM Eclipse Tools for Bluemix, selecione **Ajuda** > **Sobre o Eclipse** > **Detalhes da instalação** > **Configuração**.
+  2. Localize a propriedade `eclipse.vm` na lista. A linha a seguir é um exemplo de uma propriedade `eclipse.vm`:
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. Na linha de comandos, insira `java -version` a partir do diretório `bin` de sua instalação do Java. Suas informações da versão do IBM JVM são exibidas.
+
+Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior do Oracle JVM 8, conclua as etapas a seguir para alternar para o Oracle JVM 8: 
+
+  1. Faça download e, em seguida, instale o Oracle JVM 8, veja [Downloads do Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obter detalhes. 
+  2. Reinicie o Eclipse.
+  3. Verifique se a propriedade `eclipse.vm` aponta para sua nova instalação do Oracle JVM 8. 
+
 
 
 
@@ -326,7 +404,7 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
- * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando sua organização](../acctmgmt/index.html#mngorg){: new_window} para obter detalhes.
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte [Gerenciando suas organizações](../admin/adminpublic.html#orgmng){: new_window} para obter detalhes.
  
 
  
@@ -465,7 +543,7 @@ especificar sua cota do disco. A cota máxima de disco que você pode especifica
   * Use a opção **-k** com o comando `cf push` quando enviar por push seu
 app para {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -584,8 +662,7 @@ unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
   * Para remover o limite no número de instâncias de serviços que você pode
-ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste em uma conta paga, consulte [Como mudar seu plano](../pricing/index.html#changing){: new_window}.
 
   
   
@@ -619,11 +696,11 @@ com o comando `cf push`:
 {: tsResolve}
 
 ```
-cf push -c <start_command> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 Por exemplo:
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -654,7 +731,7 @@ de memória para uma conta de avaliação é 2 GB.
 
   * Para aumentar a cota de memória de sua conta,
 converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
+como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
@@ -668,7 +745,7 @@ seguintes etapas:
 	     O comando cf apps lista todos os aplicativos que você implementou no espaço atual. O status de cada app também é exibido.
       2. Para reduzir a quantia de memória que é usada por seu app, reduza o número de instâncias do app ou o limite máximo de memória, ou ambos:
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. Reinicie seu app para que as mudanças entrem em vigor.
 
@@ -698,7 +775,7 @@ Esse comportamento é de acordo com o design do Cloud Foundry.
 {: tsResolve}
 
 ```
-cf push <appname>
+cf push <appname> -p <app_path>
 ```
 Além disso, é possível codificar o app para identificar e recuperar de problemas como indisponibilidades, exceções e falhas na conexão. 
 
@@ -818,7 +895,7 @@ Se
 você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
 Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
 API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
-sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}.  
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -855,7 +932,7 @@ dos métodos a seguir:
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` com a opção **-n**. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -972,7 +1049,7 @@ ao problema:
   * Especifique o comando inicial por um dos métodos a seguir: 
       * Use a interface de linha de comandos cf. Por exemplo: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
 exemplo:
@@ -1087,7 +1164,7 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
 Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
-aplicativo](../manageapps/deployingapps.html#appmanifest){: new_window}.
+aplicativo](../manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1123,7 +1200,7 @@ Para usar um buildpack customizado para apps Meteor, use um dos métodos a segui
 push` e especifique seu buildpack customizado usando
 a opção **-b**. Por exemplo:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1455,12 +1532,12 @@ consulte [Git Basics - Recording Changes to the Repository](http://www.git-scm.c
 o cache usando o comando a seguir. Depois de concluir essa
 etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. Envie seu app por push com o buildpack mais recente que você deseja usar
 usando o comando a seguir: 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

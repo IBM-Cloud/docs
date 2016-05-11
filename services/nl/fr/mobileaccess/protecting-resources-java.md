@@ -1,10 +1,16 @@
+---
+
+Copyright : 2015, 2016
+  
+---
+
 # Protection des ressources Liberty for Java à l'aide de {{site.data.keyword.amashort}}
 {: #protecting-liberty}
 Le SDK serveur de {{site.data.keyword.amashort}} fournit un module OAuthTAI destiné aux applications Liberty for Java déployées sur {{site.data.keyword.Bluemix}}. Vous devez instrumenter votre serveur Liberty avec le module OAuthTAI pour le protéger des accès non autorisés et collecter des informations de surveillance.
 
 ## Avant de commencer
 {: #before-you-begin}
-* Vous devez savoir développer des applications Liberty for Java sur {{site.data.keyword.bluemix}}. Pour plus d'informations, voir [Liberty for Java](https://www.{DomainName}/docs/starters/liberty/index.html).
+* Vous devez savoir développer des applications Liberty for Java sur {{site.data.keyword.Bluemix}}. Pour plus d'informations, voir [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## Installation du SDK serveur de {{site.data.keyword.amashort}}
 {: #installing-server-sdk}
@@ -18,7 +24,7 @@ le répertoire utilisateur pour le contexte d'exécution Liberty for Java. So no
 1. Copiez le répertoire `OAuthTai-1.0.mf` dans le répertoire `$<wlp.user.dir>/extension/lib/features`.
 
 
-## Configuration de l'utilisation du SDK serveur de {{site.data.keyword.amashort}} par Liberty for Java
+## Configuration du serveur Liberty for Java pour utilisation du SDK serveur de {{site.data.keyword.amashort}}
 {: #configuring-liberty}
 
 1. Editez le fichier `server.xml` et ajoutez les fonctionnalités requises.
@@ -51,8 +57,7 @@ mappé à un sujet spécial appelé `ALL_AUTHENTICATED_USERS`. Le fragment de co
 	</application>
 	```
 
-1. Ajoutez la propriété suivante qui contient l'URL du service {{site.data.keyword.amashort}} aux variables d'environnement de votre application de back end.
-Vous pouvez l'ajouter au fichier `manifest.yml` ou `server.env`.
+1. Ajoutez la propriété suivante qui contient l'URL du service {{site.data.keyword.amashort}} aux variables d'environnement de votre application de back end. Vous pouvez l'ajouter au fichier `manifest.yml` ou `server.env`.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
@@ -61,8 +66,7 @@ Vous pouvez l'ajouter au fichier `manifest.yml` ou `server.env`.
 ### Protection des ressources Liberty for Java
 {: #protecting-liberty-resources}
 
-Pour protéger les ressources hébergées par votre application Liberty for Java, vous devez définir `TAIUserRole` comme le rôle de sécurité Java.
-Vous pouvez le définir dans le fichier `web.xml` ou sous forme d'annotation.
+Pour protéger les ressources hébergées par votre application Liberty for Java, vous devez définir `TAIUserRole` comme le rôle de sécurité Java. Vous pouvez le définir dans le fichier `web.xml` ou sous forme d'annotation.
 
 * Pour définir `TAIUserRole` dans le fichier `web.xml`, définissez
 `TAIUserRole` dans l'élément `<security-role>`, puis utilisez ce rôle pour sécuriser la ressource Web dans un élément `security-constraint`.

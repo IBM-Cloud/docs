@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # Android에 대해 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #custom-android}
 사용자 정의 인증을 사용하는 Android 애플리케이션이 {{site.data.keyword.amashort}}
@@ -8,11 +15,11 @@
 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스
 인스턴스의 보호를 받는 자원이 있어야 합니다. 모바일 앱은 {{site.data.keyword.amashort}}
 클라이언트 SDK도 갖추고 있어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
- * [{{site.data.keyword.amashort}}](getting-started.html) 시작하기
- * [Android SDK 설정](getting-started-android.html)
- * [사용자 정의 ID 제공자 사용](custom-auth.html)
- * [사용자 정의 ID 제공자 작성](custom-auth-identity-provider.html)
- * [사용자 정의 인증을 사용하도록 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Android SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
+ * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+ * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+ * [사용자 정의 인증을 사용하도록 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
@@ -47,9 +54,7 @@
 	```
 
 1. SDK를 초기화하십시오. 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 Android 애플리케이션에서
-기본 활동의 `onCreate` 메소드에 있습니다.*applicationRoute* 및
-*applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서
-애플리케이션의 **모바일 옵션** 패널에 있는 값으로 대체하십시오. 
+기본 활동의 `onCreate` 메소드에 있습니다. *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱의 **모바일 옵션**을 클릭하면 얻을 수 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -212,8 +217,7 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 보호를 받는 자원이 있어야 합니다. 
 
 
-1. `http://{appRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를
-열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오. 
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
 
 1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의
 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다.
@@ -245,6 +249,17 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 	});
 ```
 
-1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다.  
+1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/android-custom-login-success.png)
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 
+사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 
+
+ 로그아웃 기능에 전달된 `listener`의 값은 널일 수 있습니다. 

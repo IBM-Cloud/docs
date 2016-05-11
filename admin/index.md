@@ -15,12 +15,11 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 5 April 2016*
+*Last updated: 2 May 2016*
 
-If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting user roles and permissions; see [Managing your organizations](../admin/adminpublic.html#orgmng).
+If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
@@ -31,7 +30,7 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
 |Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/adminpublic.html#orgmng). |
-|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_user). |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. You can also access the calendar feed and event subscriptions for extending your notifications in the Pending Updates section. See [Viewing system information](index.html#oc_system). |
 |Extend notifications and set up event subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**. You can use web hooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and event subscriptions](index.html#oc_eventsubscription). |
@@ -46,13 +45,13 @@ You can always know the status of your environment by checking the Status page. 
 
 You can view notifications from IBM for your local or dedicated environment and monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
 
+*Table 2. Event types and notifications methods*
+
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
 | Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications for the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **updates pending**. You can extend the notification capability by setting up an event subscription that integrates the maintenance update alerts from the Administration page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |
 | Critical incidents | You are alerted about critical incidents on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that integrates the incident alerts from the Status page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |  
 | Status | You can view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.  |
-
-*Table 2. Event types and notifications methods*
 
 ### Setting up event subscriptions
 
@@ -60,16 +59,16 @@ You can extend the functionality of the notifications that are sent to the Admin
 
 To use web hooks to set up a specific event subscription, complete the following steps:
 
-1. Go to the **ADMINISTRATION** page:
-
-- For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
-- For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+* For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+* For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 
 **Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
 
-2. Click **Add Subscription**.
+1. Click **Add Subscription**.
 
-3. Fill in the event subscription form. For information about the fields on the form, review the following table:
+2. Fill in the event subscription form. For information about the fields on the form and the values to use in the payload section, review the following tables:
+
+*Table 3. Event subscription form fields*
 
 | **Field** | **Description** |
 |-----------------|-------------------|
@@ -80,14 +79,26 @@ To use web hooks to set up a specific event subscription, complete the following
 | Description | Add a description for the event subscription that you are creating. |
 | User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
 | Password | Enter the password for your web service. |
-| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. For example, if you want to display the title, message, and severity in the notification from your web service, you must define the {{site.data.keyword.Bluemix_notm}} values with the matching property for your web service. The following values can be used to pull information from the {{site.data.keyword.Bluemix_notm}} notification for the notification title, message body, and severity level: `"{{title}}`, `"{{message}},"` and `"{{severity}}"`. If you do not enter information in this section, you receive the notification without any additional information.  |
+| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. See the following table for the IBM values that you can use to populate your notification. If you do not enter information in this section, you receive a notification that does not have any additional information. |
 
-Table 3. Event subscription form fields
+*Table 4. Payload section values*
+
+| **IBM value** | **Description** | **Event type** |
+|----------------|----------------|------------------------|
+| {{content.title}} | Message title |  Update and incident  |
+| {{status}} | Status of the update or incident. | Update and incident |
+| {{type}} | Update or incident | Update and incident | 
+| {{region}} | Affected region | Update and incident |
+| {{content.message}} | Message description |   Update and incident  |
+| {{content.severity}} | Severity rating | Incident |
+| {{content.category}} | Affected services | Incident |
+| {{content.subCategoryName}} | Affected components | Incident |
+| {{content.scheduleWindow}} | The scheduled date for the update | Update |
+| {{content.disruption}} | Affected components | Update |
 
 When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
 You can select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
-
 
 ## Viewing system information
 {: #oc_system}
@@ -247,6 +258,8 @@ icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
 
+*Table 5. Security report list*
+
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
 | Firewall | Firewall logins | Events related to administrator login to the Vyatta firewall devices. |
@@ -267,16 +280,22 @@ The following table shows the list of security reports that are generated for {{
 | Software fix management | Patch application report | Software fixes that were applied. |
 | Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
 
-*Table 4. Security report list*
-
 ## Viewing status
 {: #oc_status}
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.
+You can view status for the {{site.data.keyword.Bluemix_notm}} environment and for the administration console.
 
-The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}.
+### {{site.data.keyword.Bluemix_notm}} environment status
 
-You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.
+
+The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+
+### Administration console status
+
+After the initial deployment of your {{site.data.keyword.Bluemix_notm}} environment, a verification check is completed automatically on the components that are used to administer your environment. You can go to the Admin Console Verification Check page to check the status of the components after the verification check has run. To access the page, go to <code>https://console.&lt;subdomain&gt;.bluemix.net/check</code>, where `<subdomain>` is the name of your local or dedicated instance.
+
+You can run a verification at any time. You must be logged in to select the option to run the verification. If you encounter failures while you are adding a user, editing an org, or managing your services, run this check to identify whether any components are failing or disconnected. You can open a support ticket with the information from the check to get the issue resolved quickly.
 
 ## Managing your Catalog
 {: #oc_catalog}
@@ -311,11 +330,11 @@ The methods for working with you service broker vary depending on how many servi
 
 Complete the following steps to register your service broker:
 
-1\. [Implement the Cloud Foundry Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window} to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.
-
-When you are implementing the service broker, in the JSON response of `GET /v2/catalog`, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response:
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implement the Cloud Foundry Service Broker API</a> to enable communication between your service and {{site.data.keyword.Bluemix_notm}}. The Service Broker API is a set of REST endpoints that are consumed by {{site.data.keyword.Bluemix_notm}}.<br />
+<br />
+<p>When you are implementing the service broker, in the JSON response of <code>GET /v2/catalog</code>, you must provide the definitions for your service and service plans, including the service information that you want to display. For example, review the following sample JSON of the Catalog (GET) response</p>
+<p><pre>
 "services":[
    {
       "bindable":true,
@@ -401,33 +420,27 @@ When you are implementing the service broker, in the JSON response of `GET /v2/c
    }
 ]
 }
-```
-{: codeblock}
-
-**Note**: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.
-
-2\. After you have implement the Service Broker API, go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
-
-3\. Click **REGISTER A SERVICE BROKER**.
-
-4\. Complete the form by entering values in the following fields:
-
-- Service broker name
-- Service broker URL
-- Service broker user name
-- Service broker password
-
-5\. Click **CONNECT**.
-
-6\. Review the information for your service including the available plans, icon, and the service description.
-
-**Note**: If you need to change the catalog information for the service, update your service broker, and start the registration process again by filling in the form.
-
-7\. Click **REGISTER**.
-
-8\. Choose to enable all plans or only specific plans for the service. All plans are disabled by default.
-
-9\. Enable the service instance for all orgs or specific orgs.
+</pre></p>
+<p><strong>Note</strong>: When you create a service broker for a local or dedicated environment, you must specify `customer_dedicated` in the "tags" field of your service definition JSON file.</p>
+</li>
+<li>After you have implement the Service Broker API, go to <strong>ADMINISTRATION</strong> &gt; <strong>CATALOG MANAGEMENT</strong>.</li>
+<li>Click <strong>REGISTER A SERVICE BROKER</strong>.</li>
+<li>Complete the form by entering values in the following fields:
+<ul>
+<li>Service broker name</li>
+<li>Service broker URL</li>
+<li>Service broker user name</li>
+<li>Service broker password</li>
+</ul>
+</li>
+<li>Click <strong>CONNECT</strong>.</li>
+<li>Review the information for your service including the available plans, icon, and the service description.<br />
+<p><strong>Note</strong>: If you need to change the catalog information for the service, update your service broker, and start the registration process again by filling in the form.</p>
+</li>
+<li>Click <strong>REGISTER</strong>.</li>
+<li>Choose to enable all plans or only specific plans for the service. All plans are disabled by default.</li>
+<li>Enable the service instance for all orgs or specific orgs.</li>
+</ol>
 
 You can now see your service in the Custom Services category in your {{site.data.keyword.Bluemix_notm}} Catalog. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**, and select the tile in the catalog. You can enable different plans, and edit the plan visibility for your orgs at any time.
 
@@ -544,41 +557,42 @@ user can be given `view` or `write` access for that
 permission, as represented by icons. See [Permissions](#permissions) for descriptions
 of each type and explanation of the icons.
 
-Choose from the following options:
+### Working with users
+
+You can search for existing users, remove users, and add users individually or by a group. Choose from the following options:
 
 * Locate users.You can locate users in the table by using the **Search**
 field.
-* Add users. If you have `admin` permission or
-`users` permission with `write` access, you can add users. To
-add a user or group of users, click **ADD SINGLE USER** or **ADD USER
-GROUP**. In the **Search** field, type a user name or group name to
-search, and select the organization to add the user or user group to from the
-**Org** list. When you find the user or group that you want to add, click the
-user name, then click **ADD USER** or **ADD USERS** to add.
-Groups of more than 50 users are added through a background batch job. When the add operation
-is successful, the user or group is added to the table for you to view and search. When users are
-added, they have no assigned permissions.
-* Edit permissions and organizations. If you have `admin` permission,
-you can edit permissions and organizations for other users. To edit permissions, locate the user and
-click the user name. To enable or disable permissions, select from the following options in the
-window that opens:
-	* Select **On** from the list to enable a permission.
-	* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or **Write**
-	to allow `write` (edit, or add and remove) access for that permission.
-	* Select **Off** to disable the permission.
-To edit organizations, select from the following options:
-	* Add the user to an organization by using the search field to locate an organization, clicking to
-	select from the options, and clicking **ADD**.
-	* Remove a user from an organization by clicking the ![Remove, represented by a minus sign](images/icon_remove.svg) icon.
-When finished, click **SAVE**.
-* Remove users. If you have `admin` permission or
-`users` permission with `write` access, you can remove users.
-To remove a user, locate the user and click the ![Delete](images/icon_trash.svg) icon and then **Remove**.
+
+* Add a single user. If you have `admin` permission or
+`users` permission with `write` access, you can add users.
+
+  1. To add a single user from your LDAP directory, click **Add User**.
+  2. In the **Search** field, type the email address for the user, and then select the user from the populated list.
+  3. Next, from the **Org** field, choose the org to which you want to add the user by entering the org name and selecting it from the populated list.
+  4. To add the user to the selected org, click **Add User**.
+
+  **Note**: When the add operation is successful, the user is added to the table for you to view and search. When users are added, they have no assigned permissions.
+
+* Add a group of users from your LDAP directory.
+
+  1. Click **Add User Group**.
+  2. In the **Search** field, type a group name to search, and select the group name from the populated list.
+  3. Next, from the **Org** field, choose the org to which you want to add the user group by entering the org name and selecting it from the populated list.
+  4. To add the user group to the selected org, click **Add Users**.
+  **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
+
+* Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
+
+    1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
+    2. Click **Remove**.
 
 ### Permissions
 {: #permissions}
 
 Users can be assigned the following permissions:
+
+*Table 6. Permissions*
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
@@ -588,7 +602,6 @@ Users can be assigned the following permissions:
 | Reports | Users with `reports` permission can be assigned the access to `view` or `write` (modify) security reports. |
 | Users | Users with `users` permission can be assigned the access to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
 
-*Table 5. Permissions*
 
 Permissions can be enabled, or the user can be given `view` or
 `write` access for that permission, as represented by the following icons:
@@ -596,6 +609,19 @@ Permissions can be enabled, or the user can be given `view` or
 * The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
 * The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
+
+Editing permissions and organizations for other users requires you to have `admin` permission. To edit permissions, locate the user and
+click the user name. From the **Edit User** page, you can enable or disable permissions:
+
+* Select **On** from the list to enable a permission.
+* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or select **Write**
+to allow `write` (edit, or add and remove) access for that permission.
+* Select **Off** to disable the permission.
+
+To add or remove a user from an org, select from the following options:
+
+* To add a user to an org, select the user name from the table to access the **Edit User** screen. Then, use the search field to locate an org, and select the org from the list, and then click **Save**.
+* To remove a user from an org, select the user name from the table to access the **Edit User** screen. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
@@ -957,6 +983,8 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
+*Table 7. Fields*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. |
@@ -965,7 +993,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-*Table 6. Fields*
 
 #### Body
 {: #registerbody}
@@ -1037,6 +1064,8 @@ Use the following API and code examples to update a service.
 ### Request
 {: #updaterequest}
 
+*Table 8. Fields*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
@@ -1045,7 +1074,6 @@ Use the following API and code examples to update a service.
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
 
-*Table 7. Fields*
 
 #### Body
 {: #updatebody}
@@ -1108,11 +1136,12 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
+*Table 9. Parameter*
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
 
-*Table 8. Parameter*
 
 ### Route
 

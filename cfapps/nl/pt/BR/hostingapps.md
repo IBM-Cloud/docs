@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015，2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc} 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -5,7 +17,7 @@
 
 #Hospedando apps no {{site.data.keyword.Bluemix_notm}}
 
-*Última atualização: 1 de dezembro de 2015*
+*Última atualização: 18 de abril de 2016*
 
 <!--The whole topic is staging only -->
 
@@ -64,7 +76,7 @@ servidor.
   Se não for possível eliminar o estado de sessão completamente, envie-o
 para um disponível altamente disponível que seja externo ao seu servidor
 de aplicativos. Os armazenamentos incluem IBM WebSphere Extreme Scale, Redis ou
-Memcached, ou um banco de dados externo.
+Memcached ou um banco de dados externo.
 
 * Não use dependência de infraestrutura específica.
 
@@ -77,7 +89,7 @@ ser mudados.
 
   A extração de dependências específicas do ambiente para um
 conjunto de arquivos de propriedade é uma melhoria, mas ainda é inadequada. A melhor prática é usar um registro de serviço externo para resolver
-terminais em serviço, ou delegar a função de roteamento inteira para um barramento de serviço
+terminais em serviço ou delegar a função de roteamento inteira para um barramento de serviço
 ou um balanceador de carga com um nome virtual.
 
 * Não use APIs de infraestrutura em seu aplicativo.
@@ -148,6 +160,8 @@ um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{sit
 
 É possível usar as ferramentas e serviços a seguir que o {{site.data.keyword.Bluemix_notm}} fornece:
 
+*Tabela 1. Ferramentas do {{site.data.keyword.Bluemix_notm}}*
+
 | Ferramenta	| Método |
 |:------|:--------|
 |Interface da linha de comandos do Cloud Foundry (cf cli)	|Gerencie seu código no cliente local e use a interface
@@ -162,7 +176,7 @@ manualmente.|
 Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub
 e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}}
 usando o DevOps Delivery Pipeline.|
-*Tabela 1. Ferramentas do {{site.data.keyword.Bluemix_notm}}*
+
 
 Se a plataforma Cloud Foundry não suportar os requisitos de
 seu aplicativo, será possível usar um contêiner ou máquina virtual em que o tempo de execução é
@@ -203,7 +217,7 @@ da linha de comandos cf:
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>Para obter mais informações sobre as opções suportadas que podem ser usadas nesse arquivo, consulte [Manifest do aplicativo](../manageapps/deployingapps.html#appmanifest).
+<p>Para obter mais informações sobre as opções suportadas que podem ser usadas nesse arquivo, consulte [Manifest do aplicativo](../manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>

@@ -333,6 +333,8 @@ the tile for the service that you want to access. The dashboard for the service 
 {: #rellinks}
 
 ## general
+{: #general}
+
 * [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](../cfapps/ee.html#ee_bindui)
 * [Retrieving VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

@@ -1,3 +1,10 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
+
 # 시작하기
 {: #getting-started}
 {{site.data.keyword.amashort}}를 시작하려면, {{site.data.keyword.amashort}} 서비스를 기존 {{site.data.keyword.Bluemix}} 애플리케이션에 추가하거나 표준 유형을 사용하여 새 앱을 작성할 수 있습니다.   
@@ -30,5 +37,6 @@ MobileFirst Services Starter를 사용하는 경우 사용자 정의 백엔드 �
 {{site.data.keyword.amashort}} SDK를 사용하기 위해 모바일 앱을 설정할 수 있습니다. SDK를 설정하면 앱에서 인증 및 모니터링 설정을 시작할 수 있습니다. 사용자 모바일 개발 플랫폼에 대한 지시사항을 따르십시오. 
 
 * [Android](getting-started-android.html)
-* [iOS](getting-started-ios.html)
+* [iOS(Swift SDK)](getting-started-ios.html)
+* [iOS(Objective-C SDK)](getting-started-ios.html)
 * [Cordova](getting-started-cordova.html)
