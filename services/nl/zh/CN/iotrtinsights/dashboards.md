@@ -7,14 +7,16 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# 管理仪表板和模板{: #managing-dashboards}
+# 管理仪表板和模板
+{: #managing-dashboards}
 
 来自 IoT 设备的实时数据会显示在可定制仪表板中。可以手动创建仪表板来显示实时度量值、显示图形，以及显示一个或多个设备的其他信息。此外，仪表板还可以包含过滤的设备列表以及其他仪表板的链接。
 {: shortdesc}
 
 除了手动创建的仪表板外，{{site.data.keyword.iotrtinsights_short}} 还在**仪表板 > 概述**中随附有预定义的设备警报仪表板，并可根据创建的消息模式动态创建设备仪表板。
 
-## 仪表板{: #dashboards}
+## 仪表板
+{: #dashboards}
 
 管理员可以创建新仪表板，也可以修改现有仪表板来显示关注的设备数据。  
 要创建仪表板，请执行以下步骤：
