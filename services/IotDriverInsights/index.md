@@ -11,9 +11,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.iotdriverinsights_short}} (Experimental)
+# Getting started with {{site.data.keyword.iotdriverinsights_short}}
 {: #gettingstartedtemplate}
-*Last updated: 6 May 2016*
+*Last updated: 12 May 2016*
 
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on drivers' behavior by using the {{site.data.keyword.iotdriverinsights_short}} API to gather and analyze car probe data and contextual data.
 {:shortdesc}
@@ -47,17 +47,25 @@ The following sequence diagram shows the sequence of steps.
 ![Typical analysis sequence](images/sequence_diagram.png "Typical analysis sequence")
 
 See the [About {{site.data.keyword.iotdriverinsights_short}}](iotdriverinsights_overview.html) topic for details about analyzable behaviors and contexts. 
+Use the [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window} to try a sample application with sample car probe data.
 
 
 # Related Links
 {: #rellinks}
+## Tutorials and Samples
+{: #samples}
+
+* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 
 ## API Reference
 {: #api}
+
 * [API docs](https://new-console.ng.bluemix.net/apidocs/193){:new_window}
 
 ## Related Links
 {: #general}
+
 * [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
 * [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-driver-behavior){:new_window}
