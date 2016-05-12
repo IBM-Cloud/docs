@@ -33,7 +33,8 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。通常這個 URL 是 https://api.{{site.data.keyword.domainname}}。如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
+<dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。通常這個 URL 是 https://api.{{site.data.keyword.domainname}}。
+如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
 <dt>*--unset*</dt>
