@@ -14,7 +14,7 @@ copyright:
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 27 January 2016*
+*Last updated: 11 May 2016*
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -188,7 +188,7 @@ staging task. You can use this log to troubleshoot staging problems.</p>
 </li></ul>
 
 
-**Note:** For information about how to enable application logging, see [Debugging runtime errors](../troubleshoot/debugging.html#debug_runtime).
+**Note:** For information about how to enable application logging, see [Debugging runtime errors](../debug/index.html#debugging-runtime-errors).
 
 
 
