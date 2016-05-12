@@ -336,7 +336,7 @@ bluemix api [API_ENDPOINT][--unset]
 
 **命令选项**：
 
-*API_ENDPOINT*（可选）：作为目标的 API 端点，例如 https://api.ng.bluemix.net。如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。
+*API_ENDPOINT*（可选）：作为目标的 API 端点，例如 https://api.ng.bluemix.net。 如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。
 
 `--unset`（可选）：除去 API 端点设置。
 
