@@ -3,7 +3,8 @@
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#開始使用 {{site.data.keyword.trackplan}} 服務{: #track-plan}  
+#開始使用 {{site.data.keyword.trackplan}} 服務 
+{: #track-plan}  
 
 *前次更新：2016 年 1 月 21 日*
 
