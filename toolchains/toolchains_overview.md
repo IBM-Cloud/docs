@@ -11,12 +11,12 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 28 April 2016*  
+*Last updated: 11 May 2016*  
 
-A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
+A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
 
-You can create a toolchain in two ways: use a template to create a toolchain or add a toolchain to an app. Depending on the template or toolchain that you use, the toolchain might include a GitHub repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.Bluemix}}.
+You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. Depending on the template or toolchain that you use, the toolchain might include a GitHub repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.Bluemix}}.
 
 As a starting point, you can use a toolchain template to create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to.
 
@@ -34,8 +34,7 @@ After your request to access toolchains is approved, you can use a template as a
 ![Toolchain diagram](images/toolchain_diagram.png)
 
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.  
-1. If you want to create the toolchain before you configure tool integrations, click **CREATE** and confirm that you want to create the toolchain without tool integrations. Continue to the [Creating a toolchain](#creating_a_toolchain) section that describes the steps that run automatically to set up your toolchain.  
-1. If you want to configure tool integrations before you create the toolchain, in the Configurable Integrations section, select each tool integration that you want to configure. For information about configuring the tool integrations, see [Configuring tool integrations](../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. For information about configuring the tool integrations, see [Configuring tool integrations](../toolchains/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.
