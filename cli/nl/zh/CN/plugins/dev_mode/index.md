@@ -64,7 +64,8 @@ copyright:
 **要显示所有 dev_mode CLI 命令，请使用以下命令：**
 
 ```
-cf plugins```
+cf plugins
+```
 
 ## dev_mode CLI 命令索引
 {: #dev_mode_cmds_index}
@@ -123,7 +124,8 @@ cf mode <appName> <dev|normal>
 ## status
 {: #status}
 
-显示应用程序方式和运行时状态。```
+显示应用程序方式和运行时状态。
+```
 cf status <appName>
 ```
 
