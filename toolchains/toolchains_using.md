@@ -11,7 +11,7 @@ copyright:
 # Using toolchains
 {: #toolchains-using}
 
-*Last updated: 28 April 2016*
+*Last updated: 4 May 2016*
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
@@ -25,11 +25,13 @@ You can configure a tool integration for the first time or update the configurat
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
 1. If you need to configure a tool integration for the first time, on its tile, click **Configure**.
+
   ![Configure button](images/toolchain_tile_configure.png)
 
  When you are finished configuring the tool integration, click **Save Integration**.
  
 1. If you need to update a tool integration's configuration, on its tile, click the menu to access the configuration options.
+
   ![Configuration menu](images/toolchain_tile_menu.png)
  
  When you are finished updating the settings, click **Save Integration**.
