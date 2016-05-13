@@ -326,7 +326,7 @@ IBM sends broadcast messages of the changes that are planned for each maintenanc
 <dt>**Standard maintenance for the {{site.data.keyword.Bluemix_notm}} platform**</dt>
 <dd>Maintenance updates are applied based on coordination between you and IBM within a 21-day window. You provide IBM with preapproved maintenance windows and specific dates or times that might not work for you, and IBM works to schedule updates during or around the dates that you selected.
 <p>
-<p>Go to **ADMINISTRATION > SYSTEM INFORMATION** to view scheduled and pending maintenance updates. For more information about setting your preapproved windows, unavailable dates, and viewing or approving scheduled maintenance updates, see <a href="../admin/index.html#oc_schedulemaintenance">Maintenance updates</a></p>.</dd>
+<p>Go to **ADMINISTRATION > SYSTEM INFORMATION** to view scheduled and pending maintenance updates. For more information about setting your preapproved windows, unavailable dates, and viewing or approving maintenance updates, see <a href="../admin/index.html#oc_schedulemaintenance">Maintenance updates</a></p>.</dd>
 </dl>
 
 **Important**: IBM reserves the right to interrupt services to apply emergency maintenance as needed. IBM might change scheduled maintenance hours, but will notify you of any such changes, as well as any emergency maintenance information.
