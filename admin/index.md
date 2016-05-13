@@ -520,6 +520,16 @@ selecting multiple names.
 4. Click <strong>CREATE ORGANIZATION</strong> to save your changes and
 create the org.
 
+### Creating spaces
+
+You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
+
+1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+2. Select the org that you want to add a space to.
+3. Click **Create a Space**.
+4. Enter a space name.
+5. Click **Create**.
+
 ### Quota monitoring
 
 In the Quota Monitoring section, you can expand the section and view the following information:
