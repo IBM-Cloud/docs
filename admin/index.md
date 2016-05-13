@@ -105,7 +105,7 @@ You can select any saved event subscription, and view the recent activity. You c
 
 You can view scheduled and pending maintenance updates by going to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending** to access the **System Updates** page. 
 
-**Note**: See the following section for [Setting preapproved maintenance windows](admin/index.html#preapprovedmaintenance) to get you started. These windows must be set in order for IBM to schedule maintenance for your environment.
+**Note**: See the following section for Setting preapproved maintenance windows to get started. These windows must be set in order for IBM to schedule maintenance for your environment.
 
 <dl>
 <dt>Non-disruptive updates</dt>
