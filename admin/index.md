@@ -649,14 +649,13 @@ field.
 
 * Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user.
 
-**Note**: Enter user IDs that match the values used in your user registry. 
-
   1. Click **Import users**.
   2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or create your own with at least the required column headers: **User ID**, **Email**, **Organization**.
   3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required column and optional column headers, **First Name** and **Last Name**, for your user import.
   4. Save your file, and click **Upload file**.
+ 
 
-  **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. You receive a confirmation message stating that all users were added, if the import was successful. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
+  **Note**: Enter user IDs that match the values used in your user registry. The columns within your spreadsheet can be in any order as long as you have all of the required columns. You receive a confirmation message stating that all users were added, if the import was successful. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
 * Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
 
