@@ -336,7 +336,7 @@ bluemix api [API_ENDPOINT][--unset]
 
 **コマンド・オプション**:
 
-*API_ENDPOINT* (オプション): ターゲットの API エンドポイント (例えば https://api.ng.bluemix.net)。*API_ENDPOINT* オプションと `--unset` オプションのどちらも指定されない場合、現行 API エンドポイントが表示されます。
+*API_ENDPOINT* (オプション): ターゲットの API エンドポイント (例えば https://api.ng.bluemix.net)。 *API_ENDPOINT* オプションと `--unset` オプションのどちらも指定されない場合、現行 API エンドポイントが表示されます。
 
 `--unset` (オプション): API エンドポイント設定を削除します。
 

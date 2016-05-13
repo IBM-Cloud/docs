@@ -160,11 +160,11 @@ JSON 字串：{0}。
 
 # 相關鏈結
 ## 範例
-* [指導教學：在 {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/developerworks/cloud/library/cl-autoscale-app/index.html){:new_window} 上讓您的應用程式具有彈性
+* [指導教學：在 {{site.data.keyword.Bluemix_notm}} 上讓您的應用程式具有彈性](http://www.ibm.com/developerworks/cloud/library/cl-autoscale-app/index.html){:new_window} 
 * [Cloud Foundry 架構實驗室](https://developer.ibm.com/bluemix/docs/category/cloud-foundry-docs/){:new_window}
 
 ## sdk
-* [IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html){:new_window} 的 Rest API
+* [IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}} 的 Rest API](https://www.{DomainName}/docs/api/content/api/auto-scaling/index.html){:new_window} 
 
 ## 一般
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{DomainName}/pricing/){:new_window}
