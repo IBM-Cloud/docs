@@ -554,7 +554,7 @@ Permissions for each user are displayed. Permissions can be the following: None,
 `Admin`, `Catalog`, `Login`,
 `Reports`, and `Users`. Permissions can be enabled, or the
 user can be given `view` or `write` access for that
-permission, as represented by icons. See [Permissions](#permissions) for descriptions
+permission, as represented by icons. See [Permissions](index.html#permissions) for descriptions
 of each type and explanation of the icons.
 
 ### Working with users
