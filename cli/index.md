@@ -18,7 +18,7 @@ copyright:
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 4 May 2016*
+*Last updated: 12 May 2016*
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
 {:shortdesc}
@@ -69,9 +69,9 @@ cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 cf install-plugin plugin_name -r bluemix-cf-staging
 ```
 
-| *Active Deploy* | *Admin Console* | *Development Mode* |
-|-----------------|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | Plug-in name: dev_mode <br> [View Docs](./plugins/dev_mode/index.html) |
+| *Active Deploy* | *Admin Console* | 
+|-----------------|-----------------|
+| Plug-in name: active-deploy <br>  [View Docs](../services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](../cli/plugins/bluemix_admin/index.html) | 
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
