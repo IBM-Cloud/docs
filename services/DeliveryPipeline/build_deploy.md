@@ -18,7 +18,7 @@ copyright:
 
 # Building and deploying from pipelines
 {: #deliverypipeline_build_deploy}
-*Last updated: 29 April 2016*
+*Last updated: 13 May 2016*
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service allows you to implement a repeatable continuous integration and continuous delivery process.
 {:shortdesc}
@@ -28,7 +28,7 @@ Complete the following tasks to create and configure a pipeline.
 ## Adding a stage
 {: #deliverypipeline_add_stage}
 
-1. On the All Pipelines page, click **ADD STAGE**. The Stage Configuration page opens.
+1. On the Pipeline: All Stages page, click **ADD STAGE**. The Stage Configuration page opens.
 2. Configure the stage.
   1. On the **INPUT** tab, select an input for the stage.
   2. On the **JOBS** tab, add and configure at least one job. The first stage usually has at least a build job.
@@ -48,7 +48,7 @@ Complete the following tasks to create and configure a pipeline.
 ## Running a stage
 {: #deliverypipeline_run_stage}
 
-You can manually run a stage by clicking the **Run Stage** icon on the All Pipelines page.
+You can manually run a stage by clicking the **Run Stage** icon on the Pipeline: All Stages page.
 
 ![Clicking the Run Stage icon on a stage](./images/RunStage.png)
 
