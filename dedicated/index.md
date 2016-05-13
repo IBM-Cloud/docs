@@ -72,9 +72,9 @@ There are optional components that are available for you to purchase to scale an
 ### Syndicated catalog
 {: #catalogdedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
+{{site.data.keyword.Bluemix_notm}} Dedicated includes a private catalog that displays the local services that are available exclusively to you. It also includes services that are made available to you to use from {{site.data.keyword.Bluemix_notm}} Public.
 
-The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If you have a private instance of the service for your dedicated environment, you see specific icons attached to service tiles in your catalog, such as ![Dedicated service icon](images/dedicatedicon.png "Dedicated service icon").
+The syndicated catalog provides the function to create hybrid applications that consist of public and private services. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria. If it is private instance of the service for your dedicated environment, you see a "Dedicated" tag with the service tiles in your catalog. Similarly, if it is a custom service, you see "Custom" listed with the service tile.
 
 *Table 3. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region*
 
