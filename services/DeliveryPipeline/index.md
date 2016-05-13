@@ -18,7 +18,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-*Last Updated: 29 April 2016*
+*Last Updated: 13 May 2016*
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
@@ -33,7 +33,7 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 Complete these steps to set up your {{site.data.keyword.deliverypipeline}}:    
 
-1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **Add Git Repo and Pipeline**.
+1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, create a Git-hosted project for the app by clicking **Add Git**.
 1. Make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected and then click **CONTINUE**.   
 1. After your Git repository is created, click **CLOSE**. The Add Git button is replaced by an Edit Code button and your Git URL.  
 1. To add the {{site.data.keyword.deliverypipeline}} service to the associated space or spaces, click **Connect New**, click the **DevOps** category, click **Delivery Pipeline**, and click **Create**.
