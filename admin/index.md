@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 2 May 2016*
+*Last updated: 13 May 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
 {:shortdesc}
@@ -582,6 +582,17 @@ field.
   4. To add the user group to the selected org, click **Add Users**.
   **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
 
+* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user.
+
+**Note**: Enter user IDs that match the values used in your user registry. 
+
+  1. Click **Import users**.
+  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or create your own with at least the required column headers: **User ID**, **Email**, **Organization**.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required column and optional column headers, **First Name** and **Last Name**, for your user import.
+  4. Save your file, and click **Upload file**.
+
+  **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. You receive a confirmation message stating that all users were added, if the import was successful. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
+
 * Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
 
     1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
@@ -622,6 +633,7 @@ To add or remove a user from an org, select from the following options:
 
 * To add a user to an org, select the user name from the table to access the **Edit User** screen. Then, use the search field to locate an org, and select the org from the list, and then click **Save**.
 * To remove a user from an org, select the user name from the table to access the **Edit User** screen. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
+
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
