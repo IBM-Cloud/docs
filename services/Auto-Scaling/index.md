@@ -248,7 +248,7 @@ Table 1. Policy fields in the scaling policy
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
 | *JVM heap* |	The usage percentage of the JVM heap memory.	| Liberty for Java |
-| *Memory*   |	The usage percentage of the memory.	|  Go <br/> Liberty for Java <br/> Node.js <br/> PHP <br/> Python <br/> Ruby <br/> Swift <br/> |
+| *Memory*   |	The usage percentage of the memory.	|  All |
 | *Throughput* | The number of the processed requests per second.| Liberty for Java |
 | *Response time* |	The response time of the processed requests.	| Liberty for Java |
 
