@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 3 March 2016*
+*Last updated: 16 May 2016*
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
@@ -240,7 +240,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](../../../admin/adminpublic.html#orgsandspaces) for
+<dd class="pd">See [Roles](../../../admin/users_roles.html#userrolesinfo) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
