@@ -17,7 +17,7 @@ copyright:
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
-*Last updated: 13 May 2016*
+*Last updated: 16 May 2016*
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
 {:shortdesc}
@@ -62,4 +62,3 @@ The account owner is charged for the total usage that is incurred across all org
 
 As the account owner, you can edit, add, or remove saved credit card information that is associated with your {{site.data.keyword.Bluemix_notm}} account. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Billing**.
 
-If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, see [Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts](../admin/softlayerlink.html#view_usage) for more information about how you are billed.
