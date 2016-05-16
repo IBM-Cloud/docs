@@ -82,8 +82,6 @@ Account owners and organization managers can invite team members to orgs from th
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
 
-If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, you can add your SoftLayer team members. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Invite Team Member** page. Then, click **Add** in the **Add SoftLayer Team Members** section.
-
 ## Editing roles
 {: #editinguserroles}
 
