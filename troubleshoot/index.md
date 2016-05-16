@@ -15,7 +15,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 22 April 2016*
+*Last updated: 16 May 2016*
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
 {:shortdesc}
@@ -354,7 +354,7 @@ You do not have the appropriate level of authority that is required to perform t
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organizations](../admin/adminpublic.html#orgmng){: new_window} for details.
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organizations](../admin/orgs_spaces.html) for details.
  
 
  
