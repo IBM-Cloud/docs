@@ -384,7 +384,7 @@ bluemix api [API_ENDPOINT] [--unset]
 <strong>Command options</strong>:
    <dl>
    <dt>API_ENDPOINT (optional)</dt>
-   <dd>The API endpoint that is targeted, for example, https://api.ng.bluemix.net.  If both *API_ENDPOINT* and `--unset` options are not specified, the current API endpoint is displayed.</dd>
+   <dd>The API endpoint that is targeted, for example, `https://api.ng.bluemix.net`. If both *API_ENDPOINT* and `--unset` options are not specified, the current API endpoint is displayed.</dd>
    <dt>--unset (optional)</dt>
    <dd>Remove the API endpoint setting.</dd>
     </dl>
