@@ -290,7 +290,7 @@
 		}]
 		
 	}, {
-		"id": "자원",
+		"id": "Resources",
 		"descriptionTitle": "자원",
 		"items": [{
 			"title": "Bluemix를 사용해야 하는 이유",
