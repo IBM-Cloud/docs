@@ -13,7 +13,7 @@ copyright:
 # About Insights for Weather
 {: #about_weather}
 
-*Last updated: 06 April 2016*
+*Last updated: 19 May 2016*
 
 Use {{site.data.keyword.weatherfull}} to incorporate weather data from
 The Weather Company (TWC) into your {{site.data.keyword.Bluemix}} applications.
@@ -65,11 +65,10 @@ limit of its plan by checking the number of items that are returned by the API c
 
 If you have technical questions about creating an app with Insights for Weather,
 post your question on [Stack Overflow](http://stackoverflow.com/search?q=weather+bluemix){:new_window}
- and tag your question with **bluemix** and **weather**.
+and tag your question with **bluemix** and **weather**.
 
 If you experience any issues with this service, use the [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
-Include the **insights-weather** and **bluemix** tags to enhance your experience and allow IBM to support you better.
+Include the **insights-weather** and **bluemix** tags to allow IBM to support you better.
 
-You can also view the [status of the Bluemix Platform](https://developer.ibm.com/bluemix/support/#status){:new_window}
-or [open a support ticket](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-For more information, see [Troubleshooting](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+For information about troubleshooting problems with Bluemix, see [Troubleshooting](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+For details about searching for information and asking questions through forums, and about contacting support, see [Getting customer support](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
