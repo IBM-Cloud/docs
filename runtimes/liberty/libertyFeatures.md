@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Liberty features supported in Bluemmix
+# Liberty features supported in Bluemix
 {: #liberty_features}
 
 *Last Updated: 23 March 2016*
