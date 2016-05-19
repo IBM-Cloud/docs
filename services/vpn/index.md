@@ -90,15 +90,18 @@ To get started, select the **Virtual Private Network** service instance tile on 
  
 # rellinks
 ## samples 
+{: #samples}  
 * [On-premises strongSwan Gateway Configuration Example](vpn_onpremises.html#strongswan){: new_window}
 * [On-premises Vyatta Gateway Configuration Example](vpn_onpremises.html#vyatta){: new_window}
 * [On-premises SoftLayer Gateway Appliance Service (GaaS) Configuration Example](vpn_onpremises.html#gaas){: new_window}
 * [On-premises Cisco ASA Configuration Example](vpn_onpremises.html#cisco){: new_window}
 
-## api 
+## api  
+{: #api}  
 * [IBM VPN RESTful APIs](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## general 
+## general  
+{: #general}  
 * [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN FAQs](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix Pricing Sheet](https://console.{DomainName}/pricing/){: new_window}

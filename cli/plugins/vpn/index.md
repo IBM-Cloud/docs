@@ -398,6 +398,7 @@ IP address of the gateway.
 Subnet address in CIDR format. 
 
 # rellinks
-## general
+## general  
+{: #general}  
 * [IBM VPN service](../../../services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}
