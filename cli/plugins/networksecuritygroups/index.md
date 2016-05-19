@@ -1,13 +1,13 @@
----
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
-copyright:
+# IBM Network Security Groups CLI
 
-  years: 2016
+*Last updated:* 01 March 2016
 
----
+*Version:* 0.1.1
 
-
-# IBM Network Security Groups Command Line Interface
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.networksecuritygroups_full}} service. The IBM Network Security Groups CLI is a plug-in that is used with the [Bluemix&reg; CLI](http://clis.ng.bluemix.net/ui/home.html). The plug-in is available for Windows, Mac OS, and Linux operating systems. Ensure that you use the plug-in that is applicable to you.
 
 Before you begin, install the IBM Bluemix CLI. See [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
@@ -529,3 +529,9 @@ bluemix network security-group-unassign [-i <virtual server name or ID> | -ig <v
 		Unassigned network security group [default] for instance [test-inst-2]
 		Unassigned network security group [default] for instance group [test-stack-1]
 		Unassigned network security group [default] for instance group [test-stack-2]
+
+# rellinks
+## general  
+{: #general}  
+* [IBM Network Security Groups service](../../../services/networksecuritygroups/index.html)
+* [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)
