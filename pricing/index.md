@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 16 May 2016*
+*Last updated: 19 May 2016*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
 {:shortdesc}
@@ -284,17 +284,17 @@ The following table illustrates how much you pay with a plan that is based on a 
 ### Free allowances for virtual servers
 {: #vms}
 
-You can use {{site.data.keyword.Bluemix_notm}} virtual servers in the IBM public cloud as beta features at no charge. Free allowances are provided for the number of virtual server images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
+You can use {{site.data.keyword.virtualmachineslong}} in the IBM public cloud as a beta feature at no charge. Free allowances are provided for the number of virtual server images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
 
-The following items are the free allowances for the {{site.data.keyword.Bluemix_notm}} virtual servers beta:
+The following items are the free allowances for the {{site.data.keyword.virtualmachineslong}} beta:
 
-* 8 instances
-* 8 virtual CPUs
-* 12 GB memory
+* 2 instances
+* 2 virtual CPUs
+* 8 GB memory
 * 200 GB block storage
-* 4 public IP addresses
+* 5 public IP addresses
 
-In addition, you can use the virtual servers infrastructure to provision virtual servers in your {{site.data.keyword.Bluemix_notm}} private clouds, subject only to the limits and quotas of your private clouds.
+In addition, you can use the virtual servers infrastructure to provision virtual servers in your {{site.data.keyword.Bluemix_notm}} private environments, subject only to the limits and quotas of your private environment.
 
 
 ##How to estimate your costs
