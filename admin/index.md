@@ -651,7 +651,7 @@ field.
 
   1. Click **Import users**.
   2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or create your own with at least the required column headers: **User ID**, **Email**, **Organization**.
-  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required column and optional column headers, **First Name** and **Last Name**, for your user import.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required column headers for your user import.
   4. Save your file, and click **Upload file**.
  
 
