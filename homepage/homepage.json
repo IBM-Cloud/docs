@@ -290,6 +290,15 @@
 				"name": "Connect & Compose",
 				"href": "services/ConnectandCompose/index.html"
 			}]
+		},
+		{
+			"title": "Platform API",
+			"img": "homepage/images/platformAPI-icon.svg",
+			"href": "platform-api/index.html",
+			"links": [{
+				"name": "Basic Authentication Guide",
+				"href": "platform-api/basic-authentication-guide.html"
+			}]
 		}]
 		
 	}, {
