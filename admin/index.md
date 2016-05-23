@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 16 May 2016*
+*Last updated: 23 May 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -650,8 +650,8 @@ field.
 * Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user.
 
   1. Click **Import users**.
-  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or create your own with at least the required column headers: **User ID**, **Email**, **Organization**.
-  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required column headers for your user import.
+  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, **Organization**.  There are two optional columns that are also included in the template: **First Name** and **Last Name**.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for your importing users.
   4. Save your file, and click **Upload file**.
  
 
