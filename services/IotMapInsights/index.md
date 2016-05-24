@@ -88,4 +88,5 @@ Follow these steps to use the analytics functions of the {{site.data.keyword.iot
 * [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-context-mapping){:new_window}
 * [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
 * [OpenStreetMap](http://www.openstreetmap.org/){:new_window}
-
+* [&copy; OpenStreetMap contributors](http://www.openstreetmap.org/copyright){:new_window}
+* [Open Data Commons Open Database License (ODbL)](http://opendatacommons.org/licenses/odbl/){:new_window}
