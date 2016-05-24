@@ -1,6 +1,6 @@
 ---
 
-copyright: años: 2015, 2016
+copyright: 2015, 2016
 
 ---
 
