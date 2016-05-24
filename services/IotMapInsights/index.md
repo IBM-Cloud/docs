@@ -14,7 +14,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_short}}
 {: #gettingstartedtemplate}
-*Last updated: 13 May 2016*
+*Last updated: 24 May 2016*
 
 {{site.data.keyword.iotmapinsights_full}} makes it easy for developers to enable their applications to use geospatial functions such as map matching and shortest path search based on the road networks across the globe.
 {:shortdesc}
@@ -69,8 +69,10 @@ Follow these steps to use the analytics functions of the {{site.data.keyword.iot
 {: #rellinks}
 ## Tutorials and Samples
 {: #samples}
+
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
 
 ## API Reference
 {: #api}
@@ -79,6 +81,7 @@ Follow these steps to use the analytics functions of the {{site.data.keyword.iot
 
 ## Related Links
 {: #general}
+
 * [Getting started with {{site.data.keyword.iotdriverinsights_short}}](../IotDriverInsights/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
 * [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-context-mapping){:new_window}

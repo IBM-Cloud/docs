@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotdriverinsights_short}}
 {: #gettingstartedtemplate}
-*Last updated: 13 May 2016*
+*Last updated: 24 May 2016*
 
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on drivers' behavior by using the {{site.data.keyword.iotdriverinsights_short}} API to gather and analyze car probe data and contextual data.
 {:shortdesc}
@@ -57,6 +57,7 @@ Use the [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdri
 
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} / {{site.data.keyword.iotdriverinsights_short}} Tutorial Part2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+* [IoT for Automotive Starter Application](https://iot-automotive-starter.mybluemix.net){:new_window}
 
 ## API Reference
 {: #api}
