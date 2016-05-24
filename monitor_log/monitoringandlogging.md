@@ -14,7 +14,7 @@ copyright:
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 20 May 2016*
+*Last updated: 24 May 2016*
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -295,7 +295,7 @@ When logs are generated, after a short delay you can view messages in your exter
 ### Example: Streaming Cloud Foundry application logs to Splunk 
 {: #splunk}
 
-In this example, a developer named Jane creates a virtual machine by using IBM Virtual Servers Beta and the Ubuntu image.  Jane tries to stream Cloud Foundry app logs from {{site.data.keyword.Bluemix_notm}} to Splunk. 
+In this example, a developer named Jane creates a virtual server by using IBM Virtual Servers Beta and the Ubuntu image.  Jane tries to stream Cloud Foundry app logs from {{site.data.keyword.Bluemix_notm}} to Splunk. 
 
   1. To begin, Jane sets up Splunk.
 
@@ -331,7 +331,7 @@ In this example, a developer named Jane creates a virtual machine by using IBM V
 
      c. After Splunk is set up, Jane must open some ports on the Ubuntu machine to accept the incoming syslog drain (port 5140) and Splunk web UI (port 8000) because {{site.data.keyword.Bluemix_notm}} virtual server has the firewall set up by default.
 	   
-	    Note: The iptable confiration is done here for Jane's evaluation purpose and is temporary. To configure the firewall setting in Bluemix virtual server in production, see the [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} documentation for details.
+	    **Note:** The iptable confiration is done here for Jane's evaluation purpose and is temporary. To configure the firewall setting in Bluemix virtual server in production, see the [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} documentation for details.
 	 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -371,7 +371,7 @@ In this example, a developer named Jane creates a virtual machine by using IBM V
      cf cups splunk -l syslog://dummyhost:5140
      ```
         
-     Note: *dummyhost* is not the real name. It is used to hide the actual host name. 
+     **Note:** *dummyhost* is not the real name. It is used to hide the actual host name. 
 
      b. Jane binds the syslog drain service to an app in her space, and then restages the app.
 	 
@@ -387,7 +387,7 @@ Jane tries out her app, and then she types the following query string in the Spl
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane sees a stream of logs in her Splunk web interface.  Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day. 
+Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day. 
 
 
 
