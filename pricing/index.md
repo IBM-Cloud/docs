@@ -294,8 +294,6 @@ The following items are the free allowances for the {{site.data.keyword.virtualm
 * 200 GB block storage
 * 5 public IP addresses
 
-In addition, you can use the virtual servers infrastructure to provision virtual servers in your {{site.data.keyword.Bluemix_notm}} private environments, subject only to the limits and quotas of your private environment.
-
 
 ##How to estimate your costs
 {: #cost}
