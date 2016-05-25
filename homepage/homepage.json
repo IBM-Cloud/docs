@@ -126,6 +126,9 @@
 				"name": "Dialog",
 				"href": "services/Dialog/index.html"
 			}, {
+				"name": "Document Conversion",
+				"href": "services/DocumentConversion/index.html"
+			}, {
 				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
 			}, {
