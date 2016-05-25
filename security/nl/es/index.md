@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -144,7 +144,7 @@ Nessus, para detectar cualquier problema en la configuración de la red y del ho
 <dt>Gestión de accesos de usuario</dt>
 <dd>Dentro de {{site.data.keyword.Bluemix_notm}}, se siguen directrices de separación de responsabilidades para asignar a los usuarios privilegios de acceso granulares y para garantizar que los usuarios solo tienen el acceso que necesitan para realizar su trabajo según el principio de privilegio menor.
 
-En un entorno {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para el usuario de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. para obtener detalles, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../admin/index.html#mng). 
+En un entorno {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para el usuario de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. para obtener detalles, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local y dedicado](../admin/index.html#mng).
 </dd>
 </dl>
 
@@ -215,31 +215,13 @@ Para obtener más información, consulte [Guía de iniciación a Single Sign On]
 ### Seguridad de aplicaciones en la nube
 
 Este servicio proporciona un análisis de seguridad para apps web y móviles, y le permite explorar el código fuente en busca
-de vulnerabilidad de seguridad. Para obtener más información, consulte [Guía de iniciación para seguridad de aplicaciones en la nube](../services/ApplicationSecurityonCloud/index.html). 
+de vulnerabilidad de seguridad. Para obtener más información, consulte [Guía de iniciación para seguridad de aplicaciones en la nube](../services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in IBM UrbanCode para la prueba de seguridad de apps
 
 El plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} le permite ejecutar exploraciones de seguridad en la web o en las apps Android alojadas en {{site.data.keyword.Bluemix_notm}}. Este plug-in ha sido desarrollado y recibe soporte de IBM UrbanCode™ Deploy Community en la plataforma IBM Bluemix DevOps Services.
 
 Para obtener más información, vaya a [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
-
-### SQL Database
-
-El servicio SQL Database incorpora a la app una base de datos relacional con todas sus funciones. Este servicio utiliza IBM Directory Server LDAP para la autenticación e IBM InfoSphere® Guardium® Data Activity Monitor para proteger la base de datos a la que acceden las apps. La conexión entre
-las apps y la base de datos está protegida mediante el certificado SSL
-firmado por DigiCert.
-
-En determinados planes con este servicio, puede utilizar la consola de base de datos SQL en
-{{site.data.keyword.Bluemix_notm}} para obtener informes que contengan la información siguiente: 
-
- * Datos sensible que puedan encontrarse en la base de datos a la que acceden
-las apps.
- * Los usuarios de las apps que han accedido a la base de datos en un período especificado.
- * Los usuarios de las apps que acceden a los datos sensibles de la base de datos.
-
-Para enmascarar los datos mediante SQL, las apps pueden llamar a las funciones de enmascaramiento definidas por el usuario (UDF) que se despliegan junto con la base de datos. Por ejemplo, puede enmascarar los datos que desee utilizar en otro lugar para efectuar pruebas. Las UDF implementan los algoritmos de enmascaramiento de datos de IBM Infosphere Optim™.
-
-El plan premium de este servicio también incluye cifrado de datos. Para obtener más información sobre este servicio, consulte [Guía de iniciación a SQL Database](../services/SQLDB/index.html).
 
 ### dashDB
 
@@ -259,6 +241,24 @@ Para obtener más información, consulte [Guía de iniciación a Cloud Integrati
 El servicio Secure Gateway le permite conectar de forma segura apps {{site.data.keyword.Bluemix_notm}} con ubicaciones remotas, tanto locales como en la nube. Proporciona conectividad segura y establece un túnel entre la organización {{site.data.keyword.Bluemix_notm}} y la ubicación remota a la que desea conectarse. Puede configurar y crear una pasarela segura mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o un paquete de API.
 
 Para obtener más información, consulte [Guía de iniciación a Secure Gateway](../services/SecureGateway/secure_gateway.html).
+
+### SQL Database
+
+El servicio SQL Database incorpora a la app una base de datos relacional con todas sus funciones. Este servicio utiliza IBM Directory Server LDAP para la autenticación e IBM InfoSphere® Guardium® Data Activity Monitor para proteger la base de datos a la que acceden las apps. La conexión entre
+las apps y la base de datos está protegida mediante el certificado SSL
+firmado por DigiCert.
+
+En determinados planes con este servicio, puede utilizar la consola de base de datos SQL en
+{{site.data.keyword.Bluemix_notm}} para obtener informes que contengan la información siguiente:
+
+ * Datos sensible que puedan encontrarse en la base de datos a la que acceden
+las apps.
+ * Los usuarios de las apps que han accedido a la base de datos en un período especificado.
+ * Los usuarios de las apps que acceden a los datos sensibles de la base de datos.
+
+Para enmascarar los datos mediante SQL, las apps pueden llamar a las funciones de enmascaramiento definidas por el usuario (UDF) que se despliegan junto con la base de datos. Por ejemplo, puede enmascarar los datos que desee utilizar en otro lugar para efectuar pruebas. Las UDF implementan los algoritmos de enmascaramiento de datos de IBM Infosphere Optim™.
+
+El plan premium de este servicio también incluye cifrado de datos. Para obtener más información sobre este servicio, consulte [Guía de iniciación a SQL Database](../services/SQLDB/index.html).
 
 ### Información sobre seguridad y gestión de sucesos
 
@@ -303,7 +303,7 @@ Además de los usuarios suscritos a estos métodos, un equipo de operaciones de 
  * Refuerzo del sistema operativo mediante la app periódica de arreglos con IBM Endpoint Manager.
  * Gestión de riesgos con protección frente a intrusiones.
  * Supervisión de la seguridad con QRadar.
- * Informes de seguridad disponibles en la página de administración. 
+ * Informes de seguridad disponibles en la página de administración.
 
 ## Conformidad de la seguridad
 {: #compliance}
@@ -331,11 +331,11 @@ Los informes de ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **SOC (Service Organiz
 
 ### Conformidad de plataforma y servicio
 En la tabla siguiente se muestran los servicios de {{site.data.keyword.Bluemix_notm}} que son conformes
-para cada uno de los estándares. 
+para cada uno de los estándares.
 
 |Componentes de {{site.data.keyword.Bluemix_notm}}		|FISC		|ISO 27001	|SOC 2 Tipo 1		|
 |:----------------------|:---------:|:---------:|:---------:|
-|Plataforma {{site.data.keyword.Bluemix_notm}} 		|S			|S	|S	|
+|Plataforma {{site.data.keyword.Bluemix_notm}}		|S			|S	|S	|
 |{{site.data.keyword.APIM}}			|S	|S |			|
 |{{site.data.keyword.autoscaling}}			|S	|S |			|
 |{{site.data.keyword.bigicloudst}}			|S |S |S |

@@ -1,9 +1,16 @@
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Getting started with {{site.data.keyword.iotelectronics}}
+# About {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Last updated: 29 April 2016*
+*Last updated: 16 May 2016*
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}
@@ -18,28 +25,28 @@ Quickly explore the features of the {{site.data.keyword.iotelectronics}} solutio
 Create simulated appliances and connect them to the platform to see streaming live data. Use a web-based app to simulate how an appliance receives commands and performs operations. Mimic failures to generate notices and alerts.
 
 ### Try a sample consumer mobile app
-Use an iOS phone to see how an appliance owner could interact with the appliance. Send commands to the appliance and receive updates from the appliance via the platform and Bluemix. Mimic failure events and view the results in the mobile app.
+Use an iOS phone to see how an appliance owner can interact with the appliance. Send commands to the appliance and receive updates from the appliance by using the platform and Bluemix. Mimic failure events and view the results in the mobile app.
 
 ### Connect your own electronic devices
-Connect your own devices securely to the cloud and start customizing your own apps. We'll provide a set of verified examples and recipes, which you can modify and use for proof of concepts, testing, and experimentation.
+Connect your own devices securely to the cloud and start customizing your own apps. A set of verified examples and recipes is available that you can modify and use for proofs of concept, testing, and experimentation.
 
 ## What's in the {{site.data.keyword.iotelectronics}} Starter
 {: #whatsInStarter}
-The Starter boilerplate deploys the integrated {{site.data.keyword.iotelectronics}} solution.  All components are bound and deployed automatically for you. The Starter app lets you quickly explore the features of the solution by using simulated appliances and data. The sample mobile app shows you how a consumer could register, receive alerts, and control a connected appliance. You can use the samples as starting points for creating your own applications and collecting data from your own appliances. The following services and applications are included in the solution:
+The Starter boilerplate deploys the integrated {{site.data.keyword.iotelectronics}} solution.  All components are bound and deployed automatically for you. The Starter app lets you quickly explore the features of the solution by using simulated appliances and data. The sample mobile app shows you how a consumer can register, receive alerts, and control a connected appliance. You can use the samples as starting points for creating your own applications and collecting data from your own appliances. The following services and applications are included in the solution:
 
 **{{site.data.keyword.iotelectronics}} service** supports user and device registration and notifications.
 
 **{{site.data.keyword.iot_full}}** lets your apps communicate with and use data that is collected by your connected devices, sensors, and gateways.
 
-**{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your devices, visualize what's happening now, and respond to emerging conditions through automated actions.
+**{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your devices, visualize what's happening now, and respond to emerging conditions by using automated actions.
 
-**{{site.data.keyword.amafull}}** enables users of mobile apps to log in with existing social accounts and ensures that communications with back-end systems are secure.
+**{{site.data.keyword.amafull}}** enables users of mobile apps to log in by using existing social accounts and ensures that communications with back-end systems are secure.
 
-**{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps, and provides enhanced performance, security, and serviceability.
+**{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps and provides enhanced performance, security, and serviceability.
 
-**Sample mobile app** lets you view the status and communicate with a simulated appliance by using your iOS smartphone.  
+**Sample mobile app** lets you view the status and communicate with a simulated appliance by using your iOS phone. Find out how to get the mobile app [here](iotelectronics_config_mobile.html).
 
-
+<!--
 ## Getting started with the sample mobile app
 {: #iotforelectronics_getmobileapp}
 
@@ -79,7 +86,7 @@ To register an appliance, follow these steps:
     - To register another device, click the plus sign on the Appliances Overview page, and then select **QR code scanner**. Scan the QR code of your washer, then click **Register**. The device is displayed in the mobile app.
   3. After your device is registered, you can see the status of the washer on your phone and on your computer.  On your phone, select **Start wash** to start a wash cycle. You can see the changing washer status on both your phone and your computer.
   4. On your computer, select a problem with the washer (such as Board Failure or Strong Vibration).  The problem sends an alert to your iPhone that shows your washer is unavailable.  On your computer, select **Fix machine** to correct the problem. You can see the changing status on both your phone and your computer.
-
+-->
 
 # Related Links
 {: #rellinks}

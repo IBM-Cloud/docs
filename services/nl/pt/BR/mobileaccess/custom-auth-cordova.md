@@ -93,7 +93,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## Implementação de amostra de um listener de autenticação customizado
 {: #custom-cordova-authlisten-sample}
 
-Essa amostra de listener de autenticação foi projetada para trabalhar com um provedor de identidade customizado. É possível fazer download do provedor de identidade customizado a partir [deste repositório do Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Essa amostra de listener de autenticação foi projetada para trabalhar com um provedor de identidade customizado. É possível fazer download do provedor de identidade customizado a partir [deste repositório Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -145,7 +145,8 @@ Deve-se ter um aplicativo criado com o modelo do {{site.data.keyword.mobilefirst
 
 1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
 abrindo `{applicationRoute}/protected`, por exemplo,
-`http://my-mobile-backend.mybluemix.net/protected`.O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+`http://my-mobile-backend.mybluemix.net/protected`.
+ O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar o AuthenticationListener customizado.
 

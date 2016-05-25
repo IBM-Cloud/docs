@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#嵌入“部署到 {{site.data.keyword.Bluemix_notm}}”iFrame 流{: #embed-d2bm-iframe} 
+#嵌入“部署到 {{site.data.keyword.Bluemix_notm}}”iFrame 流 {: #embed-d2bm-iframe} 
 
 *上次更新时间：2015 年 12 月 8 日* 
 
@@ -25,7 +25,7 @@ copyright:
 
 希望保留公司标记时，iFrame 流会非常有用。用户单击嵌入的 iFrame 时，会停留在您的内容中，而不会重定向到 bluemix.net Web 站点。如果不涉及公司标记，那么可以将标准的[“部署到 {{site.data.keyword.Bluemix_notm}}”按钮](../develop/deploy_button.html)插入到您的内容中，而不使用 iFrame。 
 
-##iFrame 流中的步骤{: #iframe-steps} 
+##iFrame 流中的步骤 {: #iframe-steps} 
 
 1. 如果您没有活动的 {{site.data.keyword.Bluemix_notm}} 帐户，请创建试用帐户。 
 
@@ -37,7 +37,7 @@ copyright:
 
 5. 应用程序将部署到您的 {{site.data.keyword.Bluemix_notm}} 组织。 
 
-##iFrame 流的示例{: #iframe-example} 
+##iFrame 流的示例 {: #iframe-example} 
 
 <p>
 <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="（在新选项卡或窗口中打开）">IBM Bluemix D2BM iFrame Sample</a> 提供了用于公共 Git 存储库的 iFrame 流示例。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="“部署到 Bluemix”iFrame 流样本" /></div>
@@ -46,7 +46,7 @@ copyright:
 <p>
 要查看此样本的源代码，请单击 <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="（在新选项卡或窗口中打开）">source</a>。</p>
 
-##嵌入 iFrame 流{: #embed-iframe}  
+##嵌入 iFrame 流 {: #embed-iframe}  
 
 <ol>
 <li>从 <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a> 装入 JavaScript 实用程序。此实用程序依赖于 jQuery，并通过向文档添加以下脚本标记来装入：

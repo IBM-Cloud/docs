@@ -14,7 +14,7 @@ copyright:
 
 # Administering
 {: #1stanchor}
-*Last updated: 11 April 2016*
+*Last updated: 6 May 2016*
 
 
 Administering {{site.data.keyword.iotmapinsights_full}} includes the following activities:
@@ -42,4 +42,4 @@ In the **Tenant Information** view:
 
 1. Click **RESET**.
 2. On the confirmation dialog, click **OK**. Then, the new password is shown in the **Tenant Information** view.
-3. If you want to exit the **Admin Console**, click **LOG OUT** in upper right of the view.
+3. If you want to exit the **Admin Console**, click **LOG OUT** in the view.

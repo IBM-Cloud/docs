@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Registrazione e traccia 
+# Registrazione e traccia
 {: #logging_tracing}
 
 *Ultimo aggiornamento: 23 marzo 2016*

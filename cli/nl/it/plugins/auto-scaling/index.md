@@ -17,7 +17,7 @@ copyright:
 # CLI Auto-Scaling
 {: #autoscalingcli}
 
-*Ultimo aggiornamento: 25 febbraio 2016* 
+*Ultimo aggiornamento: 25 febbraio 2016*
 
 Puoi configurare il servizio {{site.data.keyword.autoscaling}} utilizzando la CLI {{site.data.keyword.autoscaling}} per {{site.data.keyword.Bluemix_notm}}. La CLI {{site.data.keyword.autoscaling}} supporta Linux64, Win64 e OSX e fornisce delle funzionalità simili a quelle fornite dall'API RESTful di ridimensionamento automatico.
 {: shortdesc}
@@ -47,7 +47,7 @@ Puoi collegare una politica di ridimensionamento automatico a una specifica appl
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
-<dd class="pd">Il nome dell'applicazione a cui collegare una politica di ridimensionamento automatico. </dd>
+<dd class="pd">Il nome dell'applicazione a cui collegare una politica di ridimensionamento automatico.</dd>
 <dt class="pt dlterm">&lt;policy_file&gt;</dt>
 <dd class="pd">Il nome del file JSON che descrive la politica di ridimensionamento automatico. Vedi la <a href="https://new-console.{DomainName}/apidocs/48" target="_blank">documentazione dell'API RESTful {{site.data.keyword.autoscaling}}</a> per ulteriori dettagli.</dd>
 </dl>
@@ -85,7 +85,7 @@ Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. 
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
-<dd class="pd">Il nome dell'applicazione per la quale scollegare la politica di ridimensionamento automatico. </dd>
+<dd class="pd">Il nome dell'applicazione per la quale scollegare la politica di ridimensionamento automatico.</dd>
 </dl>
 
 
@@ -113,16 +113,16 @@ Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico d
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">Il nome dell'applicazione per cui visualizzare la cronologia della politica di ridimensionamento automatico.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">La data e ora di inizio dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata su 50 ore avanti rispetto all'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data / ora.
+<dd class="pd">La data e ora di inizio dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata su 50 ore avanti rispetto all'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data / ora. 
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">La data e ora di fine dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata sull'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora.
+<dd class="pd">La data e ora di fine dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata sull'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora. 
 </dl>
 
 **Suggerimento:** puoi anche utilizzare l'opzione **--json** per stampare invece la riposta JSON originale.
 
 # rellinks
 ## generale
-* [{{site.data.keyword.autoscaling}} servizio](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}}servizio](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 

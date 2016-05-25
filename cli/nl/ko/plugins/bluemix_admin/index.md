@@ -487,7 +487,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 모든 서비스 브로커를 나열하거나 서비스 브로커를 추가 또는 삭제하거나 서비스 브로커를 업데이트하려면 다음 명령을 사용하십시오.
 
-* 다음 명령을 입력하여 모든 서비스 브로커를 나열할 수 있습니다. 
+* 다음 명령을 입력하여 서비스 브로커를 나열할 수 있습니다. 
 
 ```
 cf ba service-brokers <broker_name>

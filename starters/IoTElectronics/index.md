@@ -1,30 +1,48 @@
+---
+
+copyright:
+  years: 2016
+
+---
+
 {:new_window: target="_blank"}
 
 {:shortdesc: .shortdesc}
 
 
 
-# Explore {{site.data.keyword.iotelectronics}}
+# Getting started with {{site.data.keyword.iotelectronics}}
+*Last updated: 16 May 2016*
 
-Wait for the status to display "Your app is running," and then click ![View App](images/viewapp80.png "View App") to explore the starter app.  
+{{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances.
+{:shortdesc}
 
-If you are using Bluemix Classic, click the **Routes** link.  
+To see what {{site.data.keyword.iotelectronics}} can do, complete these tasks:
 
-## What is {{site.data.keyword.iotelectronics}} Starter?
-{: #iotelectronics_Starter}
+1. Configure {{site.data.keyword.amafull}}.
+2. Explore the {{site.data.keyword.iotelectronics}} Starter.
 
-{{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances. Quickly explore the features of the solution by using simulated appliances and data, and then start adding your own appliances.
-
-
-## Configuring the solution
-Before you can use the mobile app, you must configure {{site.data.keyword.amafull}}, as follows:
-1. In your Bluemix dashboard, open {{site.data.keyword.amashort}}. *(This might appear as Advanced Mobile Access.)*
-2. Under **Custom**, click **Configure**.
+## Configuring {{site.data.keyword.amashort}}
+{: #configureMCA}
+Before you can use the mobile app, you must configure {{site.data.keyword.amafull}}.
+1. In your Bluemix dashboard, open {{site.data.keyword.amashort}} or Advanced Mobile Access.
+2. In the **Custom** section, select **Configure**.
 3. Enter the following authentication credentials:
   - **Realm name**: myRealm
   - **URL**: https://<*myIoT4eStarterApp*>.mybluemix.net  
-(*This is the URL of your {{site.data.keyword.iotelectronics}} Starter app. You can find your Starter app name in the heading of this page.*)
+  **Tip:** Be sure to use the secure "https://" prefix in the URL. You can find the name of your Starter app in the Starter app or in the heading of the {{site.data.keyword.amashort}} credentials page.)  
 4. Save.
+
+## Exploring {{site.data.keyword.iotelectronics}}
+{: #explore}
+
+To start exploring, wait for the "Your app is running" status message and then click **View App** to explore the Starter app.
+
+In the Starter app, you'll explore the following tasks:
+- How to monitor appliances that are connected to the {{site.data.keyword.iot_short}}.
+- How to use a mobile app to control and monitor your appliances.
+  - In the Starter app, you are prompted to download the mobile app, which you can find in the App store or on iTunes. Instructions [here](iotelectronics_overview.html#iotforelectronics_getmobileapp).  
+  - All QR codes that are required by the mobile app are located in the Starter app.  
 
 # Related Links
 {: #rellinks}

@@ -3,7 +3,8 @@
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.deliverypipeline}} の概要{: #delivery-pipeline}  
+#{{site.data.keyword.deliverypipeline}} の概要
+{: #delivery-pipeline}  
 
 *最終更新日: 2016 年 1 月 21 日*
 

@@ -17,7 +17,8 @@ Copyright :
 ## Fichiers journaux
 {: #log_files}
 
-Les journaux Liberty standard, tels que le fichier messages.log ou le répertoire ffdc, sont disponibles dans IBM Bluemix, dans le répertoire logs de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console IBM Bluemix ou à l'aide des commandes cf logs et cf files. Par exemple, pour afficher le fichier messages.log, exécutez la commande suivante :
+Les journaux Liberty standard, tels que le fichier messages.log ou le répertoire ffdc, sont disponibles dans IBM Bluemix, dans le répertoire logs de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console IBM Bluemix ou à l'aide des commandes cf logs et cf files.
+Par exemple, pour afficher le fichier messages.log, exécutez la commande suivante :
 ```
     $ cf files <yourappname> logs/messages.log
 ```
@@ -38,7 +39,7 @@ traceSpecification de journalisation Liberty sur les instances d'application en 
 * Utilisez la fonction Vidage pour créer et manipuler les clichés d'unité d'exécution et de pile sur les instances d'application en cours d'exécution.
 
 Pour
-ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Depuis Contexte d'exécution dans le panneau de navigation sur la gauche, vous pouvez ouvrir la page des détails de l'instance. Sélectionnez une ou plusieurs instances. Sous le menu Actions, vous pouvez sélectionner TRACE ou DUMP. 
+ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Depuis Contexte d'exécution dans le panneau de navigation sur la gauche, vous pouvez ouvrir la page des détails de l'instance. Sélectionnez une ou plusieurs instances. Sous le menu Actions, vous pouvez sélectionner TRACE ou DUMP.
 
 # rellinks
 ## general

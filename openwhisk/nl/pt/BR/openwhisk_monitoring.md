@@ -19,7 +19,7 @@ copyright:
 # Monitorando a atividade de seu {{site.data.keyword.openwhisk_short}} de atividade com o Painel do {{site.data.keyword.openwhisk_short}}
 *Última atualização: 9 de fevereiro de 2016*
 
-O [Painel do {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) fornece um resumo gráfico de sua atividade. Utilize o painel para determinar o desempenho e o funcionamento de suas ações do {{site.data.keyword.openwhisk_short}}.
+O [Painel do {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) fornece um resumo gráfico de sua atividade. Utilize o painel para determinar o desempenho e o funcionamento de suas ações do {{site.data.keyword.openwhisk_short}}. 
 {:shortdesc}
 
 Clique em Recarregar a qualquer momento para atualizar o painel com os dados do log de ativação mais recentes.
@@ -47,7 +47,7 @@ A visualização **Histograma de atividade** exibe um gráfico de barras horizon
 ## Log de atividades
 {: #log}
 
-Essa visualização exibe uma versão formatada do log de ativação. Ela mostra os detalhes de cada ativação, mas pesquisa uma vez por minuto se há novas ativações. Clique em uma ação para exibir um log detalhado.
+Essa visualização exibe uma versão formatada do log de ativação. Ela mostra os detalhes de cada ativação, mas pesquisa uma vez por minuto se há novas ativações. Clique em uma ação para exibir um log detalhado. 
 **Nota**: para obter a saída exibida no Log de atividades usando a CLI, use o comando a seguir: 
 
   ```

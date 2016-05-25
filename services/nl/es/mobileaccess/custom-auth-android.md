@@ -48,7 +48,7 @@ Añada el permiso de acceso a Internet al elemento `<manifest>`:
 
 1. Inicialice el SDK.  
 Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
-Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que se obtienen al pulsar **Opciones móviles** en la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que se obtienen al pulsar **Opciones móviles** en la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -184,7 +184,7 @@ Después de inicializar el SDK del cliente y registrar una AuthenticationListene
 Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`. 
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
 
 1. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
@@ -214,3 +214,13 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
 1. 	Cuando la solicitud se realiza correctamente, se muestra la siguiente salida en la herramienta LogCat:
 
 	![imagen](images/android-custom-login-success.png)
+
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor. 
+
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 

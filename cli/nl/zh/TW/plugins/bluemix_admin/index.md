@@ -20,17 +20,15 @@ copyright:
 
 *前次更新：2016 年 3 月 3 日*
 
-您可以使用 Cloud Foundry 指令行介面與「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](../../../admin/adminpublic.html#administer)。
+您可以使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](../../../admin/adminpublic.html#administer)。
 
-在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理
-CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
+在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支援 Cloud Foundry 指令行介面。請在非 Cygwin 指令行視窗的指令行視窗中使用 Cloud Foundry 指令行介面。
 
 ## 新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理
-CLI 外掛程式。
+安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式。
 
 **附註**：如果您先前已安裝「{{site.data.keyword.Bluemix_notm}} 管理」外掛程式，則可能需要解除安裝外掛程式，刪除儲存庫，然後重新安裝以取得最新更新。
 
@@ -46,7 +44,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 <dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。</dd>
 </dl>
 </li>
-<li>若要安裝「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式，請執行下列指令：<br/><br/>
+<li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
@@ -104,7 +102,7 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">要新增使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba au** 作為較長 **ba add-user** 指令名稱的別名。
+**提示：**您也可以使用 **ba au** 作為較長的 **ba add-user** 指令名稱的別名。
 
 <!-- staging-only commands start. Live for interconnect -->
 
@@ -124,7 +122,7 @@ cf ba search-users <user_name>
 
 </dl>
 
-**提示：**您也可以使用 **ba su** 作為較長 **ba search-users** 指令名稱的別名。
+**提示：**您也可以使用 **ba su** 作為較長的 **ba search-users** 指令名稱的別名。
 
 ### 設定使用者的許可權
 
@@ -146,7 +144,7 @@ cf ba set-permissions <user_name> <permission> <access>
 <dd class="pd">對於 Catalog、Reports 或 Users 許可權，您還必須將存取層次設定為 <code>read</code> 或 <code>write</code>。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba sp** 作為較長 **ba set-permissions** 指令名稱的別名。
+**提示：**您也可以使用 **ba sp** 作為較長的 **ba set-permissions** 指令名稱的別名。
 
 <!-- staging-only commands end -->
 
@@ -166,7 +164,7 @@ cf ba remove-user <user_name>
 
 </dl>
 
-**提示：**您也可以使用 **ba ru** 作為較長 **ba remove-user** 指令名稱的別名。
+**提示：**您也可以使用 **ba ru** 作為較長的 **ba remove-user** 指令名稱的別名。
 
 ### 新增及刪除組織
 
@@ -186,7 +184,7 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">組織管理員的使用者名稱。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba co** 作為較長 **ba create-organization** 指令名稱的別名。
+**提示：**您也可以使用 **ba co** 作為較長的 **ba create-organization** 指令名稱的別名。
 
 * 若要刪除組織，請輸入下列指令：
 
@@ -200,7 +198,7 @@ cf ba delete-organization <organization>
 <dd class="pd">要刪除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba do** 作為較長 **ba delete-organization** 指令名稱的別名。
+**提示：**您也可以使用 **ba do** 作為較長的 **ba delete-organization** 指令名稱的別名。
 
 ### 將使用者指派至組織
 
@@ -220,7 +218,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dd class="pd">請參閱[角色](../../../admin/adminpublic.html#orgsandspaces)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba so** 作為較長 **ba set-org** 指令名稱的別名。
+**提示：**您也可以使用 **ba so** 作為較長的 **ba set-org** 指令名稱的別名。
 
 ### 從組織取消指派使用者
 
@@ -240,7 +238,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dd class="pd">請參閱[角色](../../../admin/adminpublic.html#orgsandspaces)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba uo** 作為較長 **ba unset-org** 指令名稱的別名。
+**提示：**您也可以使用 **ba uo** 作為較長的 **ba unset-org** 指令名稱的別名。
 
 ### 角色
 
@@ -253,7 +251,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 </ul>
 </dd>
 <dt class="pt dlterm">BillingManager</dt>
-<dd class="pd">計費管理員。計費管理員可以檢視組織的執行時期及服務用量資訊。</dd>
+<dd class="pd">帳單管理員。帳單管理員可以檢視組織的執行時期及服務用量資訊。</dd>
 <dt class="pt dlterm">OrgAuditor</dt>
 <dd class="pd">組織審核員。組織審核員可以檢視空間中的應用程式及服務內容。</dd>
 </dl>
@@ -274,7 +272,7 @@ cf ba set-quota <organization> <plan>
 <dd class="pd">組織的配額方案。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba sq** 作為較長 **ba set-quota** 指令名稱的別名。
+**提示：**您也可以使用 **ba sq** 作為較長的 **ba set-quota** 指令名稱的別名。
 
 ### 新增、刪除及擷取報告
 
@@ -297,7 +295,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 <dd class="pd">用來包含 PDF 之「Rich Text 格式 (RTF)」版本的選項。只有在您包含報告 PDF 的路徑時，此選項才適用。RTF 版本用於編製索引及進行搜尋。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba ar** 作為較長 **ba add-report** 指令名稱的別名。
+**提示：**您也可以使用 **ba ar** 作為較長的 **ba add-report** 指令名稱的別名。
 
 * 若要刪除報告，請輸入下列指令：
 
@@ -315,7 +313,7 @@ cf ba delete-report <category> <date> <name>
 <dd class="pd">報告的名稱。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba dr** 作為較長 **ba delete-report** 指令名稱的別名。
+**提示：**您也可以使用 **ba dr** 作為較長的 **ba delete-report** 指令名稱的別名。
 
 * 若要擷取報告，請輸入下列指令：
 
@@ -333,11 +331,11 @@ cf ba retrieve-report <category> <date> <name>
 <dd class="pd">報告的名稱。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba rr** 作為較長 **ba retrieve-report** 指令名稱的別名。
+**提示：**您也可以使用 **ba rr** 作為較長的 **ba retrieve-report** 指令名稱的別名。
 
 ### 啟用及停用所有組織的服務
 
-您可以針對所有組織，啟用或停用服務在 {{site.data.keyword.Bluemix_notm}}「型錄」中的顯示情形。
+您可以針對所有組織，啟用或停用服務在 {{site.data.keyword.Bluemix_notm}}「型錄」中的顯示。
 
 * 若要讓所有組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見服務，請輸入下列指令：
 
@@ -348,10 +346,10 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
+<dd class="pd">您要啟用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會提示您服務方案以從中進行選擇。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba esp** 作為較長 **ba enable-service-plan** 指令名稱的別名。
+**提示：**您也可以使用 **ba esp** 作為較長的 **ba enable-service-plan** 指令名稱的別名。
 
 * 若要讓所有組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中看不見服務，請輸入下列指令：
 
@@ -362,10 +360,10 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要停用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
+<dd class="pd">您要停用之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會提示您服務方案以從中進行選擇。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba dsp** 作為較長 **ba disable-service-plan** 指令名稱的別名。
+**提示：**您也可以使用 **ba dsp** 作為較長的 **ba disable-service-plan** 指令名稱的別名。
 
 ### 新增、移除及編輯組織的服務可見性
 
@@ -381,12 +379,12 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要新增可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
+<dd class="pd">您要新增可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會提示您服務方案以從中進行選擇。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要新增至服務可見性清單的 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba aspv** 作為較長 **ba add-service-plan-visibility** 指令名稱的別名。
+**提示：**您也可以使用 **ba aspv** 作為較長的 **ba add-service-plan-visibility** 指令名稱的別名。
 
 * 若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請輸入下列指令：
 
@@ -397,12 +395,12 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要移除可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
+<dd class="pd">您要移除可見性之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會提示您服務方案以從中進行選擇。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要從服務的可見性清單中移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba rspv** 作為較長 **ba remove-service-plan-visibility** 指令名稱的別名。
+**提示：**您也可以使用 **ba rspv** 作為較長的 **ba remove-service-plan-visibility** 指令名稱的別名。
 
 * 若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
 
@@ -415,18 +413,18 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要使其可見之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會以服務方案提示您進行選擇。</dd>
+<dd class="pd">您要使其可見之服務的名稱或 GUID。如果輸入非唯一的服務名稱，系統會提示您服務方案以從中進行選擇。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要新增可見性之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。您可以在指令中輸入其他組織名稱或 GUID，針對多個組織啟用服務的可見性。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba espv** 作為較長 **ba edit-service-plan-visibility** 指令名稱的別名。
+**提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
 
 ### 使用服務分配管理系統
 
 下列指令可用來列出所有服務分配管理系統、新增或刪除服務分配管理系統，或更新服務分配管理系統。
 
-* 您可以輸入下列指令來列出所有服務分配管理系統：
+* 您可以輸入下列指令來列出服務分配管理系統：
 
 ```
 cf ba service-brokers <broker_name>
@@ -440,9 +438,9 @@ cf ba service-brokers <broker_name>
 <dd class="pd">選用項目：自訂服務分配管理系統的名稱。如果您要取得特定服務分配管理系統的資訊，請使用此參數。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba sb** 作為較長 **ba service-brokers** 指令名稱的別名。
+**提示：**您也可以使用 **ba sb** 作為較長的 **ba service-brokers** 指令名稱的別名。
 
-* 您可以輸入下列指令來新增服務分配管理系統，以將自訂服務新增至「{{site.data.keyword.Bluemix_notm}} 型錄」：
+* 您可以輸入下列指令來新增服務分配管理系統，以將自訂服務新增至 {{site.data.keyword.Bluemix_notm}}「型錄」：
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -460,9 +458,9 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 <dd class="pd">服務分配管理系統的 URL。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba asb** 作為較長 **ba add-service-broker** 指令名稱的別名。
+**提示：**您也可以使用 **ba asb** 作為較長的 **ba add-service-broker** 指令名稱的別名。
 
-* 您可以輸入下列指令來刪除服務分配管理系統，以從「{{site.data.keyword.Bluemix_notm}} 型錄」中移除自訂服務：
+* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」中移除自訂服務：
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -471,10 +469,10 @@ cf ba delete-service-broker <service_broker>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;service_broker&gt;</dt>
-<dd class="pd">自訂服務分配管理系統的名稱或 guid。</dd>
+<dd class="pd">自訂服務分配管理系統的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba dsb** 作為較長 **ba delete-service-broker** 指令名稱的別名。
+**提示：**您也可以使用 **ba dsb** 作為較長的 **ba delete-service-broker** 指令名稱的別名。
 
 * 您可以輸入下列指令來更新服務分配管理系統：
 
@@ -492,4 +490,4 @@ cf ba delete-service-broker <service_broker>
 <dd class="pd">服務分配管理系統的 URL。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba usb** 作為較長 **ba update-service-broker** 指令名稱的別名。
+**提示：**您也可以使用 **ba usb** 作為較長的 **ba update-service-broker** 指令名稱的別名。

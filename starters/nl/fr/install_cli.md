@@ -27,26 +27,28 @@ copyright:
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 
-# Déploiement de votre application avec l'interface de ligne de commande 
+# Déploiement de votre application avec l'interface de ligne de commande
 *Dernière mise à jour : 24 février 2016*
 
-Vous pouvez utiliser l'interface de ligne de commande pour déployer et modifier des applications et des instances de service. {:shortdesc}
+Vous pouvez utiliser l'interface de ligne de commande pour déployer et modifier des applications et des instances de service.
+{:shortdesc}
 
-Avant de commencer, installez les interfaces de ligne de commande {{site.data.keyword.Bluemix}} et Cloud Foundry. 
+Avant de commencer, installez les interfaces de ligne de commande {{site.data.keyword.Bluemix}} et Cloud Foundry.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a>
+<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> 
 </p>
 
 **Restriction :** les outils de ligne de commande ne sont pas pris en charge par Cygwin. Utilisez-les dans une fenêtre de ligne
 de commande autre que Cygwin.
 {:prereq}
 
-Une fois les interfaces de ligne de commande installées, vous pouvez commencer : 
+Une fois les interfaces de ligne de commande installées, vous pouvez commencer :
 
   1. {: download} Téléchargez votre code de démarrage. 
       
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de démarrage" /> </a>   
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de démarrage" /> </a>
+  
   2. Décompressez le package dans un nouveau répertoire pour configurer votre environnement de développement.
   3. Placez-vous dans le nouveau répertoire.
   
@@ -56,7 +58,7 @@ Une fois les interfaces de ligne de commande installées, vous pouvez commencer 
 le fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix}}, il est
 utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels. Vous pouvez
 [en apprendre plus sur le fichier manifeste](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} dans la
-documentation Cloud Foundry. 
+documentation Cloud Foundry.
   
   5. Connectez-vous à {{site.data.keyword.Bluemix}}.
   

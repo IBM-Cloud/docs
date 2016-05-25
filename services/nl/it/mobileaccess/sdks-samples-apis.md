@@ -213,11 +213,11 @@ npm install -save bms-mca-token-validation-strategy
 npm install -save bms-mca-oauth-sdk
 ```
 
-## Esempio di provider di identità personalizzato
+## Esempi di provider di identità personalizzato
 {: #customidprovider}
 
-[Repository Git e guida di riferimento API](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-
+[Semplice repository Git di esempio](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[Avanzato repository Git di esempio](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}

@@ -15,13 +15,11 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Última atualização: 18 de fevereiro de 2016*
+*Última atualização: 19 de abril de 2016*
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando funções e permissões de usuário; veja [Gerenciando suas organizações](../admin/adminpublic.html#orgmng).
-{:shortdesc}
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/adminpublic.html#orgmng). {:shortdesc}
 
 *Tabela 1. Tarefas administrativas para gerenciar a instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
 
@@ -31,7 +29,7 @@ Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}}
 |Gerenciar seu catálogo | Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** para gerenciar quais serviços estão visíveis para seus usuários e organizações. Consulte [Gerenciando seu catálogo](index.html#oc_catalog).|
 |Administrar organizações | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO** para criar organizações, monitorar cotas para organizações e tomar decisões baseadas em necessidades rapidamente. Consulte [Administrando organizações](index.html#oc_organizations).|
 |Criar espaços e designar funções de usuário | Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg), em seguida, selecione **Gerenciar organizações** para criar espaços dentro de suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte [Gerenciando suas organizações](../admin/adminpublic.html#orgmng). |
-|Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Consulte [Gerenciando usuários e permissões](index.html#oc_user). |
+|Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Veja [Gerenciando usuários e permissões](index.html#oc_useradmin). |
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](index.html#oc_report). |
 |Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Também é possível acessar o feed de calendário e as inscrições de eventos para a extensão de suas notificações na seção Atualizações pendentes. Consulte [Visualizando informações do sistema](index.html#oc_system). |
 |Estender notificações e configurar inscrições de eventos | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes**. É possível usar ganchos da web para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou incidente. Consulte [Notificações e inscrições de eventos](index.html#oc_eventsubscription). |
@@ -48,13 +46,13 @@ Também é possível sempre saber o status de seu ambiente, verificando a págin
 a tabela a seguir para obter informações sobre os diferentes tipos de
 notificações e onde as notificações são postadas.
 
+Tabela 2. Tipos de eventos e métodos de notificações 
+
 | **Tipo de evento** | **Método de Notificação** |       
 |-----------------|-------------------|
 | Atualizações de Manutenção | Você é alertado sobre atualizações de manutenção futuras na página Notificações para a administração. Acesse a página **Administração** e, em seguida, selecione o ícone **Notificações** ![Notificações](images/icon_announcement.svg). Para ver uma lista completa e o histórico de suas notificações pendentes e completas, clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** &gt; *Número* **atualizações pendentes**. É possível estender o recurso de notificação, configurando uma inscrição de evento que integra os alertas de atualização de manutenção a partir da página Administração com um serviço da web de sua opção para rotear as mensagens para um endereço de e-mail do help desk ou uma mensagem SMS para um número de telefone de sua opção. |
 | Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**. É possível estender o recurso de notificação configurando uma inscrição de evento que integra os alertas de incidentes a partir da página Status com um serviço da web de sua opção para rotear as mensagens para um endereço de e-mail do help desk ou uma mensagem SMS para um número de telefone de sua opção. |  
 | Barra de Status | É possível visualizar o status mais recente para a plataforma, os serviços e sua instância do {{site.data.keyword.Bluemix_notm}}. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**.  |
-
-*Tabela 2. Tipos de eventos e métodos de notificações*
 
 ### Configurando assinaturas de eventos
 
@@ -62,16 +60,16 @@ notificações e onde as notificações são postadas.
 
 Para usar ganchos da web para configurar uma assinatura de evento específica, conclua as etapas a seguir:
 
-1. Acesse a página **ADMINISTRAÇÃO**:
-
-- Para notificações de atualização de manutenção, acesse **INFORMAÇÕES DO SISTEMA** &gt; *Número* **atualizações pendentes** e, em seguida, clique no ícone **Assinar** ![Assinar](images/icon_subscribe.svg).
-- Para notificações de alertas de incidentes, clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) &gt; **Status** e, em seguida, clique no ícone **Assinar** ![Assinar](images/icon_subscribe.svg).
+* Para notificações de atualização de manutenção, acesse **INFORMAÇÕES DO SISTEMA** &gt; *Número* **atualizações pendentes** e, em seguida, clique no ícone **Assinar** ![Assinar](images/icon_subscribe.svg).
+* Para notificações de alertas de incidentes, clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) &gt; **Status** e, em seguida, clique no ícone **Assinar** ![Assinar](images/icon_subscribe.svg).
 
 **Nota**: é possível acessar a página de inscrição de evento para ambos os tipos de notificações usando um dos dois métodos descritos.
 
-2. Clique em **Incluir assinatura**.
+1. Clique em **Incluir assinatura**.
 
-3. Preencha o formulário de inscrição de evento. Para obter informações sobre os campos do formulário, revise a tabela a seguir:
+2. Preencha o formulário de inscrição de evento. Para obter informações sobre os campos do formulário, revise a tabela a seguir:
+
+*Tabela 3. Campos de formulário de inscrição de evento* 
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
@@ -83,8 +81,6 @@ Para usar ganchos da web para configurar uma assinatura de evento específica, c
 | Nome de Usuário | Insira seu nome de usuário para o seu serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
 | Senha | Insira a senha para o seu serviço da web. |
 | Carga Útil | Se tiver selecionado o método POST, insira as propriedades específicas para o serviço da web que você está usando em pares com os valores usados para a notificação da IBM. Por exemplo, se deseja exibir o título, a mensagem e a gravidade na notificação de seu serviço da web, deve-se definir os valores do {{site.data.keyword.Bluemix_notm}} com a propriedade correspondente para seu serviço da web. Os valores a seguir podem ser usados para obter informações da notificação do {{site.data.keyword.Bluemix_notm}} para o título, o corpo da mensagem e o nível de gravidade da notificação: `"{{title}}`, `"{{message}}"` e `"{{severity}}"`. Se você não inserir as informações nesta seção, receberá a notificação sem quaisquer informações adicionais.  |
-
-Tabela 3. Campos do formulário de inscrição de evento
 
 Quando sua inscrição de evento é salva, você recebe notificações por meio do método que você configura por meio do seu serviço da web. Notificações ainda são postadas na página Status para incidentes e na área Notificações da página Administração para atualizações de manutenção.
 
@@ -109,13 +105,12 @@ Na seção Atualizações, é possível ver o número de notificações de atual
 <li>Clique em <strong><em>Number</em> atualizações pendentes</strong>
 para visualizar todas as atualizações pendentes.</li>
 <li>Selecione uma atualização para tomar uma ação ou visualizar os detalhes da atualização, que incluem a janela de atualização, data planejada ou status de interrupção.</li>
-<li>Clique em <strong>CONFIGURAR DATAS INDISPONÍVEIS</strong> para
-configurar dias específicos na janela de atualização que não são
-convenientes para a aplicação da atualização. Se você configurar
+<li>Clique em <strong>SELECIONAR DATAS INDISPONÍVEIS</strong> para configurar dias específicos na janela de atualização
+que não são convenientes para a aplicação da atualização. Se você configurar
 datas indisponíveis, a IBM aprova e planeja sua atualização com base em suas seleções. Você
 recebe uma notificação quando a atualização é aprovada e planejada.</li>
-<li>Clique em <strong>APROVAR</strong> para aprovar a atualização,
-se não tiver datas indisponíveis. Se você aprovar, a atualização será
+<li>Clique em <strong>APROVAR ATUALIZAÇÃO</strong> para aprovar a atualização, se não tiver datas
+indisponíveis. Se você aprovar, a atualização será
 aplicada durante a janela de atualização planejada. A IBM envia uma notificação quando a implementação de atualização começa e termina.</li>
 </ol>
 
@@ -252,6 +247,8 @@ para fazer download do relatório.
 
 A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated.
 
+*Tabela 4. Lista de relatórios de segurança*
+
 | **Categoria** | **Relatório** | **Descrição** |      
 |-----------------|-------------------|---------------------|
 | Firewall | Logins de firewall | Eventos relacionados a login do administrador para os dispositivos de firewall Vyatta. |
@@ -271,8 +268,6 @@ A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{s
 | Anti-virus | Relatório de varredura antivírus | Software antivírus que está em vigor. |
 | Gerenciamento de correção de software | Relatório de aplicativo de correção | Correções de software que foram aplicadas. |
 | Gerenciamento de incidentes de segurança | Relatório de correção de incidentes de segurança | Evidência de incidentes de segurança para gerenciamento de incidentes de segurança. |
-
-*Tabela 4. Lista de relatórios de segurança*
 
 ## Visualizando o status
 {: #oc_status}
@@ -319,11 +314,11 @@ Os métodos para trabalhar com seu broker de serviço variam, dependendo de quan
 
 Conclua as etapas a seguir para registrar seu broker de serviço:
 
-1\. [Implemente a API do broker de serviço Cloud Foundry](http://docs.cloudfoundry.org/services/api.html){: new_window} para ativar a comunicação entre seu serviço e o {{site.data.keyword.Bluemix_notm}}. A API do broker de serviço é um conjunto de terminais REST que são consumidos pelo {{site.data.keyword.Bluemix_notm}}.
-
-Quando você estiver implementando o broker de serviço, na resposta JSON de `GET /v2/catalog`, deve-se fornecer as definições para seu serviço e planos de serviço, incluindo as informações de serviço que deseja exibir. Por exemplo, revise o JSON de amostra a seguir da resposta do Catálogo (GET):
-
-```
+<ol>
+<li><a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implemente a API do broker de serviço Cloud Foundry</a> para ativar a comunicação entre seu serviço e o {{site.data.keyword.Bluemix_notm}}. A API do broker de serviço é um conjunto de terminais REST que são consumidos pelo {{site.data.keyword.Bluemix_notm}}.<br />
+<br />
+<p>Quando você estiver implementando o broker de serviço, na resposta JSON de <code>GET /v2/catalog</code>, deve-se fornecer as definições para seu serviço e planos de serviço, incluindo as informações de serviço que deseja exibir. Por exemplo, revise o JSON de amostra a seguir da resposta do Catálogo (GET)</p>
+<p><pre>
 "services": [
    {
       "bindable": true,
@@ -407,33 +402,27 @@ Quando você estiver implementando o broker de serviço, na resposta JSON de `GE
    }
 ]
 }
-```
-{: codeblock}
-
-**Nota**: ao criar um broker de serviço para um ambiente local ou dedicado, deve-se especificar `customer_dedicated` no campo "tags" de seu arquivo JSON de definição de serviço.
-
-2\. Após implementar a API do broker de serviço, acesse **ADMINISTRAÇÃO &gt; GERENCIAMENTO DE CATÁLOGO**.
-
-3\. Clique em **REGISTRAR UM BROKER DE SERVIÇO**.
-
-4\. Preencha o formulário inserindo valores nos campos a seguir:
-
-- Nome do broker de serviço
-- URL do broker de serviço
-- Nome do usuário do broker de serviço
-- Senha do broker de serviço
-
-5\. Clique em **CONECTAR**.
-
-6\. Revise as informações de seu serviço, incluindo os planos disponíveis, o ícone e a descrição do serviço.
-
-**Nota**: se precisar mudar as informações do catálogo para o serviço, atualize seu broker de serviço e inicie o processo de registro novamente preenchendo o formulário.
-
-7\. Clique em **REGISTRAR**.
-
-8\. Escolha ativar todos os planos ou apenas planos específicos para o serviço. Todos os planos são desativados por padrão.
-
-9\. Ative a instância de serviço para todas as organizações ou organizações específicas.
+</pre></p>
+<p><strong>Nota</strong>: ao criar um broker de serviço para um ambiente local ou dedicado, deve-se especificar `customer_dedicated` no campo "tags" de seu arquivo JSON de definição de serviço.</p>
+</li>
+<li>Após implementar a API do broker de serviço, acesse <strong>ADMINISTRAÇÃO </strong> &gt; <strong>GERENCIAMENTO DE CATÁLOGO</strong>.</li>
+<li>Clique em <strong>REGISTRAR UM BROKER DE SERVIÇO</strong>.</li>
+<li>Preencha o formulário inserindo valores nos campos a seguir:
+<ul>
+<li>Nome do broker de serviço</li>
+<li>URL do broker de serviço</li>
+<li>Nome do usuário do broker de serviço</li>
+<li>Senha do broker de serviço</li>
+</ul>
+</li>
+<li>Click <strong>CONNECT</strong>.</li>
+<li>Revise as informações de seu serviço, incluindo os planos disponíveis, o ícone e a descrição do serviço.<br />
+<p><strong>Nota</strong>: se precisar mudar as informações do catálogo para o serviço, atualize seu broker de serviço e inicie o processo de registro novamente preenchendo o formulário.</p>
+</li>
+<li>Clique em <strong>REGISTRAR</strong>.</li>
+<li>Escolha ativar todos os planos ou apenas planos específicos para o serviço. Todos os planos são desativados por padrão.</li>
+<li>Ative a instância de serviço para todas as organizações ou organizações específicas.</li>
+</ol>
 
 Agora é possível ver seu serviço na categoria Serviços customizados em seu Catálogo do {{site.data.keyword.Bluemix_notm}}. Acesse **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** e selecione o quadro no catálogo. É possível ativar diferentes planos e editar a visibilidade do plano de suas organizações a qualquer momento.
 
@@ -573,6 +562,8 @@ Para remover um usuário, localize o usuário e clique no ícone ![Excluir](imag
 
 Os usuários podem ser designados com as permissões a seguir:
 
+*Tabela 5. Permissões*
+
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
 | Administrador | Usuários com a permissão `admin` podem
@@ -582,13 +573,9 @@ editar permissões para outros usuários. |
 | Relatórios | Usuários com a permissão `reports` podem ter o acesso designado para `view` ou `write` (modificar) relatórios de segurança. |
 | Usuários | Usuários com a permissão `users` podem ter designado o acesso para `view` a lista de usuários ou `write` (incluir ou remover) usuários. Essa permissão não permite configurar permissões para outros usuários.|
 
-*Tabela 5. Permissões*
-
 Permissões podem ser ativadas ou o pode ser fornecido ao usuário acesso de `view` ou `write` para essa permissão, conforme representado pelos ícones a seguir:
 
-* O ícone ![Ativado,
-representado por uma marca de seleção](images/icon_enabled.svg) ao lado de uma
-permissão significa que ela está ativada.
+* O ícone ![Ativado, representado por uma marca de seleção](images/icon_enabled.svg) com uma permissão significa que ela está ativada. 
 * O ícone ![Visualizar, representado por um olho](images/icon_read.svg) significa que o usuário tem acesso de `view` (somente leitura) para essa permissão.
 * O ícone ![Gravar, representado por um lápis](images/icon_write.svg) significa que o usuário tem acesso de `write` (editar, incluir ou remover) para essa permissão.
 
@@ -944,6 +931,8 @@ POST /codi/v1/serviceBrokers
 ### Pedido
 {: #registerrequest}
 
+*Tabela 6. Campos*
+
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. |
@@ -952,7 +941,6 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
 
-*Tabela 6. Campos*
 
 #### Corpo
 {: #registerbody}
@@ -1024,6 +1012,8 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 ### Pedido
 {: #updaterequest}
 
+*Tabela 7. Campos*
+
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
@@ -1032,7 +1022,6 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
 
-*Tabela 7. Campos*
 
 #### Corpo
 {: #updatebody}
@@ -1095,11 +1084,12 @@ Content-Type: application/json
 
 Use a API a seguir e os exemplos de código para excluir um serviço.
 
+*Tabela 8. Parâmetro*
+
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
 
-*Tabela 8. Parâmetro*
 
 ### Rotear
 

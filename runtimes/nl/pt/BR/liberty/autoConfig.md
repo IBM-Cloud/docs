@@ -47,6 +47,7 @@ O buildpack Liberty fornece configuração automática para os tipos de serviço
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 Conforme observado, alguns serviços podem ser gerenciados por aplicativo ou por contêiner. Mongo
 e SQLDB são exemplos desses serviços. Por padrão, o buildpack do Liberty assume que esses serviços são gerenciados por
@@ -68,7 +69,7 @@ Ao enviar por push um aplicativo independente, o buildpack do Liberty gera a sub
 
 Ao fornecer um arquivo server.xml e ligar aos serviços gerenciados por contêiner, o buildpack do Liberty:
 
-* gera a configuração para os serviços ligados, se o arquivo server.xml fornecido não contiver sub-rotinas de configuração para os serviços ligados. 
+* gera a configuração para os serviços ligados, se o arquivo server.xml fornecido não contiver sub-rotinas de configuração para os serviços ligados.
 * atualiza a configuração para os serviços ligados, se o arquivo server.xml fornecido contiver a sub-rotina de configuração para os serviços ligados.
 
 Consulte a documentação para o tipo de serviço ligado para obter
@@ -83,7 +84,7 @@ ligados. Considere os cenários a seguir:
 
 * Meu aplicativo usa MongoDB, mas desejo que o aplicativo gerencie diretamente a conexão ao banco de dados. O  aplicativo contém o jar do driver cliente necessário. Eu não deseja que o buildpack do Liberty configure
 automaticamente o serviço Mongo.
-* Estou fornecendo um arquivo server.xml e forneci as sub-rotinas de configuração para a instância SQLDB porque preciso de uma configuração de origem de dados não padrão. Eu não desejo que o buildpack do Liberty atualize meu arquivo server.xml, mas ainda preciso que o buildpack do Liberty assegure que o software de apoio apropriado esteja instalado. 
+* Estou fornecendo um arquivo server.xml e forneci as sub-rotinas de configuração para a instância SQLDB porque preciso de uma configuração de origem de dados não padrão. Eu não desejo que o buildpack do Liberty atualize meu arquivo server.xml, mas ainda preciso que o buildpack do Liberty assegure que o software de apoio apropriado esteja instalado.
 
 Para executar opt-out da configuração automática de serviço, use a variável de ambiente
 services_autoconfig_excludes. É possível incluir esta variável de ambiente em um
@@ -99,7 +100,7 @@ manifest.yml ou configurá-la usando o cliente cf.
 as especificações individuais de opt-out deverão ser separadas por um único caractere
 de espaço em branco.
 
-Mais formalmente, a gramática da Sequência é conforme a seguir. 
+Mais formalmente, a gramática da Sequência é conforme a seguir.
 
 ```
     Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
@@ -114,8 +115,7 @@ Mais formalmente, a gramática da Sequência é conforme a seguir.
 **Importante**: Nenhum espaço em branco é permitido em um <service_type_specification>. O único uso permitido de espaço em branco é
 separar diversas instâncias de <service_type_specification>.
 
-Use a opção “all” para executar opt-out
-de todas as ações de configuração automática para um serviço, como no cenário Mongo acima. Use a opção “config”  para fazer opt-out somente das ações de atualização de configuração como no cenário SQLDB acima.
+Use a opção "all" para fazer opt-out de todas as ações de configuração automática para um serviço, como no cenário Mongo acima. Use a opção "config" para fazer opt-out somente das ações de atualização da configuração como no cenário SQLDB acima.
 
 Aqui estão especificações de opt-out de amostra em um arquivo manifest.yml para os cenários Mongo e SQLDB.
 

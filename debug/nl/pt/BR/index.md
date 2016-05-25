@@ -17,7 +17,7 @@ copyright:
 
 *Última atualização: 3 de março de 2016*
 
-Se você tiver problemas com o {{site.data.keyword.Bluemix}}, será possível visualizar os arquivos de log para investigar os problemas e depurar os erros.
+Se você tiver problemas com o {{site.data.keyword.Bluemix}}, será possível visualizar os arquivos de log para investigar os problemas e depurar os erros. 
 {:shortdesc}
 
 Os logs fornecem informações, tais como se uma tarefa é executada com sucesso ou se ela falha. Eles também fornecem informações relevantes que podem ser usadas para depurar e determinar a causa de um problema.
@@ -33,7 +33,8 @@ Para entender por que seu app pode estar falhando no {{site.data.keyword.Bluemix
 
 O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface de linha de comandos cf, veja [Instalando a interface de linha de comandos cf](../starters/install_cli.html){: new_window}.
 
-  1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface de linha de comandos: ```
+  1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface de linha de comandos:
+     ```
 	 cf api https://api.ng.bluemix.net
 	 ```
 	 

@@ -11,15 +11,15 @@
 <ol>
 	<li>在 {{site.data.keyword.Bluemix_notm}}“目录”的“样板”部分中，单击 **MobileFirst Services Starter**。</li>
     <li>输入应用程序的名称和主机，并单击**创建**。</li>
-    <li>单击**完成**。
-</li>
+    <li>单击**完成**。</li>
 </ol>
-2. 从 GitHub 获取项目。从计算机，打开终端并输入以下命令：```
-git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld```
+2. 从 GitHub 获取项目。从计算机，打开终端并输入以下命令：
+```
+git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld
+```
 
 3. 初始化项目。要初始化 SDK，请将以下代码复制到应用程序代表中的 `didFinishLaunchingWithOptions` 方法内。
    * Objective-C：
-
 ```
 // initialize SDK with IBM Bluemix application ID and route
 IMFClient *imfClient = [IMFClient sharedInstance];
@@ -33,11 +33,14 @@ IMFClient.sharedInstance().initializeWithBackendRoute("<insert route>", backendG
 return true
 ```{: codeblock}
 
-4. 在开发环境中运行样本。在 Xcode 中，单击**产品&gt;运行**。这将启动 iOS 模拟器。在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会从 Mobile Client Access 服务获取 Authorization 头。如果 ping 操作成功，模拟器中的文本将更新。
-<br/>在 Xcode 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，将显示消息“恭喜！您已建立连接”：<br/>
-![Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "图 1. Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}") <br/>
-如果连接成功，调试登录 Xcode 会包含以下消息：`您已成功连接到 {{site.data.keyword.Bluemix_notm}}`
-5. 解决任何问题。连接失败时，将显示消息“糟糕，出错了”。此外，还会提供有关该错误的更多信息。<br/>
+4. 在开发环境中运行样本。在 Xcode 中，单击**产品&gt;运行**。这将启动 iOS 模拟器。
+在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会从 Mobile Client Access 服务获取 Authorization 头。如果 ping 操作成功，模拟器中的文本将更新。
+<br/>在 Xcode 中从移动应用程序成功连接到 {{site.data.keyword.Bluemix_notm}} 后，将显示消息“Yay! You are connected”：<br/>
+![Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "图 1. Hello World 应用程序已成功连接到 {{site.data.keyword.Bluemix_notm}}")
+<br/>
+如果连接成功，调试登录 Xcode 会包含以下消息：
+`您已成功连接到 {{site.data.keyword.Bluemix_notm}}`
+5. 解决任何问题。连接失败时，将显示消息“Bummer Something went wrong”。此外，还会提供有关该错误的更多信息。<br/>
 ![Hello World 应用程序未连接到 {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "图 2. Hello World 应用程序未连接到 Bluemix")
 <br/>请验证是否正确地粘贴了路径和 GUID 值：
    * Objective-C：
@@ -68,5 +71,5 @@ return true
    * [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-ios-core)
 
 ## api
-   *
-[Core API](https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+*
+[Core API](https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)

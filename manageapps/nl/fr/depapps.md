@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -49,7 +49,7 @@ Lorsque vous déployez vos applications sur {{site.data.keyword.Bluemix_notm}} d
 
 Si vous utilisez un pack de construction externe, vous devez spécifier son URL à l'aide de l'option **-b** lorsque vous déployez votre application sur {{site.data.keyword.Bluemix_notm}} depuis l'invite de commande.
 
-  * Pour déployer des packages serveur Liberty dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante depuis votre répertoire source : 
+  * Pour déployer des packages serveur Liberty dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante depuis votre répertoire source :
   
   ```
   cf push
@@ -61,7 +61,7 @@ Si vous utilisez un pack de construction externe, vous devez spécifier son URL 
   
   ```
   cf push nom_app -b https://github.com/cloudfoundry/java-buildpack.git -p chemin_app
-```
+  ```
   
   * Pour déployer des packages WAR dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
   
@@ -78,7 +78,7 @@ Si vous utilisez un pack de construction externe, vous devez spécifier son URL 
   
   ```
   cf push nom_app -p chemin_app
-```
+  ```
   
 Un fichier `package.json` doit se trouver dans votre application Node.js pour que l'application soit reconnue par le pack de construction Node.js. Le fichier `app.js` est le script d'entrée pour l'application et peut être spécifié dans le fichier `package.json`. L'exemple suivant représente un fichier `package.json` simple :
 
@@ -251,7 +251,7 @@ plusieurs services, la variable VCAP_SERVICES inclut les informations de connexi
   }
   ```
         
-Vous avez aussi accès aux variables d'environnement qui sont définies par l'agent DEA et les packs de construction. 
+Vous avez aussi accès aux variables d'environnement qui sont définies par l'agent DEA et les packs de construction.
 
 Les variables suivantes sont définies par l'agent DEA :
 
@@ -282,14 +282,14 @@ Les variables suivantes sont définies par l'agent DEA :
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainNamestage1.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -368,7 +368,6 @@ Les variables définies par les packs de construction sont différentes pour cha
 
 Vous pouvez utiliser l'exemple de code Node.js suivant pour obtenir la valeur de la variable d'environnement VCAP_SERVICES :
 
-
 ```
 if (process.env.VCAP_SERVICES) {
     var env = JSON.parse (process.env.VCAP_SERVICES);
@@ -427,7 +426,6 @@ Variables d'environnement définies par l'utilisateur spécifiques à une applic
 	
 Une fois que vous avez ajouté une variable d'environnement définie par l'utilisateur, vous pouvez utiliser l'exemple de code Node.js suivant pour
 obtenir la valeur de la variable que vous avez définie :
-
 
 ```
 var myEnv = process.env.nom_var_env;

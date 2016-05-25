@@ -15,12 +15,12 @@ Para comenzar con {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}
 
 1. Si no tiene una aplicación Bluemix, debe
                                         crearla; por ejemplo, la app Node.js. Para crear una aplicación Bluemix, vaya al Panel de control de Bluemix y pulse **Crear app**.
-
+	
 	**Nota**: Si dispone de una aplicación, vaya al paso 7 para añadir un servicio.![Crear una instancia de servicio](images/create_service_instance1.jpg "Crear una instancia de servicio")
 
 1. Desde **Elija su plantilla de app**, pulse **WEB**
 
-3. En el área **Seleccionar punto de inicio**, seleccione **SDK para Node.js** y, a continuación, pulse **CONTINUAR**.![Punto de partida](images/create_service_nodejs2.jpg)
+3. En el área **Seleccionar punto de inicio**, seleccione **SDK para Node.js** y, a continuación, pulse **CONTINUAR**.![Punto de partida](images/create_service_nodejs2.jpg) 
 
 4. Desde el menú desplegable **Espacio**, seleccione
                                         el espacio de la organización.

@@ -1,25 +1,47 @@
-# Bluemix-CLI 'dev_mode'
-Der Entwicklungsmodus ist ein Bluemix-Feature, das Sie für die Arbeit mit Ihren Apps nutzen können, während diese in der Cloud aktiv sind. Der Entwicklungsmodus schließt die Befehlszeilenschnittstelle 'dev_mode' ein. Die CLI 'dev_mode' wurde als cf-CLI-Plug-in aufgebaut und unterstützt sowohl Liberty- als auch IBM Node.js-Apps.
+---
 
-Die CLI 'dev_mode' stellt die folgenden Features zur Verfügung:
+ 
+
+copyright:
+
+  years: 2015，20166
+
+ 
+
+---
+
+{:codeblock: .codeblock}
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+
+# Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus
+{: #devmodecli}
+
+*Letzte Aktualisierung: 11. April 2016*
+
+Die Bluemix-Befehlszeile für den Entwicklungsmodus (CLI 'dev_mode') ermöglicht das Aktualisieren Ihrer Apps, während sie in der Cloud ausgeführt werden. Die CLI 'dev_mode' wurde als cf-CLI-Plug-in aufgebaut und unterstützt sowohl Liberty- als auch IBM Node.js-Apps.
+{: shortdesc}
+ 
+
+Mit der CLI 'dev_mode' können Sie die folgenden Tasks ausführen:
 - Wechseln der App zwischen Entwicklungsmodus und normalem Modus.
 - Inkrementelles Aktualisieren der Anwendungsdateien ohne neue Push-Operation.
 - Starten, Stoppen oder Neustarten Ihrer App im vorhandenen Container.
 
-## Einführung
+## Plug-in 'dev_mode' installieren
 **Voraussetzung:** Zuerst müssen Sie die Cloud Foundry-CLI installieren. Details hierzu finden Sie unter [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli). 
 
 
 Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Methoden:
 - Lokale Installation.
-  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.ng.bluemix.net) herunter.
+  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.{DomainName}) herunter.
   2. Installieren Sie das dev_mode-Plug-in mithilfe des Befehls 'cf install-plugin':
   
         ```
         cf install-plugin dev_mode-linux_amd64
         ```
 
-- Installation aus dem Bluemix-CLI-Repository.
+- Installation aus dem Bluemix-CLI-Repository
   1. Fügen Sie das Repository 'bluemix-repo' zu den Cloud Foundry-CLI-Repositorys hinzu, indem Sie den folgenden Befehl verwenden:
   
         ```
@@ -38,92 +60,157 @@ Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Metho
         cf install-plugin dev_mode -r bluemix-repo
         ```
 
-## Verwendung
-**Um alle Befehle der CLI 'dev_mode' anzuzeigen, verwenden Sie den folgenden Befehl:**
+## Befehle der CLI 'dev_mode' anzeigen
+**Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen.**
 
 ```
 cf plugins
 ```
 
-### Befehle für dev_mode
+## Index für Befehle der CLI 'dev_mode'
+{: #dev_mode_cmds_index}
 
-### mode
+Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig verwendeten Befehle der CLI 'dev_mode':
+
+<table summary="Index der Befehle für dev_mode">
+ <thead>
+ <th colspan="4">Befehle für dev_mode</th>
+ </thead>
+ <tbody> 
+ <tr> 
+ <td>[help](#help)</td> 
+ <td>[mode](#mode)</td> 
+ <td>[status](#status)</td>
+ <td>[update-file](#update_file)</td>
+ </tr> 
+ <tr> 
+ <td>[delete-file](#delete_file)</td>
+ <td>[start-inplace](#start_inplace)</td>
+ <td>[stop-inplace](#stop_inplace)</td>
+ <td>[restart-inplace](#restart_inplace)</td>
+ </tr>
+  </tbody> 
+ </table> 
+*Tabelle 1. Befehle für dev_mode*
+
+
+
+## help
+{: #help}
+
+Es wird Hilfetext zu einem Befehl angezeigt.
+
+```
+cf help <Befehlsname>
+```
+
+
+## mode
+{: #mode}
+
+Ändern des App-Modus.
 
 ```
 cf mode <App-Name> <dev|normal>
 ```
+<strong>Befehlsoptionen</strong>:
 
-Ändern des App-Modus.
+   <dl>
+   <dt>dev</dt>
+   <dd>Entwicklungsmodus</dd>
+   <dt>normal</dt>
+   <dd>Produktionsmodus</dd>
+   </dl>
 
-### status
 
+## status
+{: #status}
+
+Anzeigen des App-Modus und des Laufzeitstatus.
 ```
 cf status <App-Name>
 ```
 
-Anzeigen des App-Modus und des Laufzeitstatus.
 
-### update-file
+
+## update-file
+{: #update_file}
+
+Aktualisieren von Anwendungsdateien in der Cloud.
 
 ```
 cf update-file <ferner Pfad> <localPath> [Befehlsoptionen]
 ```
 
-Aktualisieren von Anwendungsdateien in der Cloud.
 
-Befehlsoptionen:
+<strong>Befehlsoptionen</strong>:
 
-**expand**
+   <dl>
+   <dt>expand</dt>
+   <dd>Gibt an, ob die hochgeladenen Dateien aus der ZIP-Datei extrahiert werden müssen.</dd>
+   <dt>restart</dt>
+   <dd>Die App-Laufzeit wird nach der Dateiaktualisierung neu gestartet.</dd>
+   </dl>
 
-Gibt an, ob die hochgeladenen Dateien aus der ZIP-Datei extrahiert werden müssen.
 
-**restart**
-
-Die App-Laufzeit wird nach der Dateiaktualisierung neu gestartet.
   
-### delete-file
+## delete-file
+{: #delete_file}
+
+Löschen von Anwendungsdateien in der Cloud.
 
 ```
 cf delete-file <ferner Pfad> [Befehlsoptionen]
 ```
 
-Löschen von Anwendungsdateien in der Cloud.
 
-Befehlsoptionen:
+<strong>Befehlsoptionen</strong>:
+ <dl>
+   <dt>restart</dt>
+   <dd>Die App-Laufzeit wird nach der Dateiaktualisierung neu gestartet.</dd>
+  </dl>
 
-**restart**
 
-Die App-Laufzeit wird nach der Dateilöschung neu gestartet.
-
-### start-inplace
+## start-inplace
+{: #start_inplace}
+Die App wird im vorhandenen Container gestartet.
 
 ```
 cf start-inplace <App-Name>
 ```
 
-Die App wird im vorhandenen Container gestartet.
 
-### stop-inplace
+
+## stop-inplace
+{: #stop_inplace}
+Die App wird im vorhandenen Container gestoppt.
 
 ```
 cf stop-inplace <App-Name>
 ```
 
-Die App wird im vorhandenen Container gestoppt.
 
-### restart-inplace
+
+## restart-inplace
+{: #restart_inplace}
+
+Die App wird im vorhandenen Container neu gestartet.
 
 ```
 cf restart-inplace <App-Name>
 ```
 
-Die App wird im vorhandenen Container neu gestartet.
 
 
+# Zugehörige Links
+{: #rellinks}
 
-### help
+## Zugehörige Links
+{: #general}
 
-```
-cf help <Befehlsname>
-```
-Es wird Hilfetext zu einem Befehl angezeigt.
+<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
+
+
+* [CLI- und Dev-Tools](../../index.html#cli){:new_window}
+
+

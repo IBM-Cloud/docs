@@ -51,7 +51,7 @@ copyright:
 # 가격 책정
 {: #pricing}
 
-*마지막 업데이트 날짜: 2016년 1월 4일*
+*마지막 업데이트 날짜: 2016년 3월 29일*
 
 {{site.data.keyword.Bluemix}}에서 애플리케이션을
 실행하고 {{site.data.keyword.Bluemix_notm}} 서비스를 무료로
@@ -135,7 +135,7 @@ copyright:
 
 종량과금제 계정을 사용할 경우 {{site.data.keyword.Bluemix_notm}} 컴퓨팅 및 서비스 사용량을 기준으로 비용이 청구됩니다. 구독 계정을 사용할 경우 매월 최소 지출 약정에 따라 월별 할인이 적용됩니다. {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local은 연간 계약으로 비용이 청구됩니다.
 
-무료 평가판을 청구 가능 계정으로 언제든지 변환할 수 있습니다. 청구 대상이 아닌 모든 무료 평가판 계정 정보 및 {{site.data.keyword.Bluemix_notm}} 솔루션이 새로운 청구 가능 계정에 완전히 병합됩니다.
+무료 평가판을 청구 가능한 계정으로 언제든지 변환할 수 있습니다. 청구 대상이 아닌 모든 무료 평가판 계정 정보 및 {{site.data.keyword.Bluemix_notm}} 솔루션이 새로운 청구 가능 계정에 완전히 병합됩니다.
 
 청구 가능 계정을 작성한 후에는 제공한 정보를 편집할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 오른쪽 위에 있는 **프로파일 설정** 아이콘을 클릭한 다음 **계정 &gt; 계정 유형**을 클릭하여 정보를 편집하십시오.
 
@@ -402,7 +402,10 @@ VM을 프로비저닝할 수 있습니다. 단, 이는 프라이빗 클라우드
 ###비용 계산기 사용
 {: #calculator}
 
-{{site.data.keyword.Bluemix_notm}} 가격 책정 페이지에서 비용 계산기를 사용하면 앱의 비용을 신속하게 산정할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 가격 책정 페이지로 이동하여 **계산기 열기**를 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}}에서 제공하는 비용 계산기를 사용하면 앱의 비용을 신속하게 계산할 수 있습니다.
+
+1. {{site.data.keyword.Bluemix_notm}} [가격 책정 페이지](https://console.{DomainName}/pricing/)로 이동하십시오. 
+2. **비용 추정** 위젯 중 하나를 사용하거나 **계산기 열기**를 사용하여 **정밀 가격 책정 계산기**를 사용하십시오.
 
 계산기를 사용하려면 나열된 자원(예: 인스턴스 수 또는
 푸시 알림 수)의 매월 예상 사용량을 입력하십시오.

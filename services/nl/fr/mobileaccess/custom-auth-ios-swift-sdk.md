@@ -4,7 +4,7 @@ Copyright : 2016
 
 ---
 
-# Configuration du SDK client pour iOS (Swift SDK) de {{site.data.keyword.amashort}} 
+# Configuration du SDK client pour iOS (Swift SDK) de {{site.data.keyword.amashort}}
 {: #custom-ios}
 
 Configurez votre application iOS qui utilise l'authentification personnalisée de manière qu'elle utilise le SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
@@ -84,17 +84,16 @@ CocoaPods installe les dépendances qui ont été ajoutées. La progression et l
 Initialisez le SDK en passant les paramètres `applicationRoute` et `applicationGUID`. Bien que ceci ne soit pas obligatoire,
 le code d'initialisation est souvent placé dans la méthode `application:didFinishLaunchingWithOptions` de votre délégué d'application
 
-1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. 
-Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
+1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
 **Identificateur global unique de l'application**.
 
-1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}. 
+1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}.
 
  ```Swift
  import UIKit
  import BMSCore
  import BMSSecurity
- ```
+```
 
 1. Initialisez le SDK client {{site.data.keyword.amashort}}, stipulez MCAAuthorizationManager comme nouveau gestionnaire d'authentification,
 définissez un délégué d'authentification et enregistrez-le. Remplacez `<applicationRoute>` et `<applicationGUID>` par
@@ -164,7 +163,7 @@ et enregistré votre délégué d'authentification personnalisé :
  ```Swift
  let customResourceURL = "<chemin de votre ressource protégée>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
  if error == nil {
       print ("response:\(response?.responseText), aucune erreur")
   } else {
@@ -172,7 +171,8 @@ et enregistré votre délégué d'authentification personnalisé :
   }
  }
 
- request.sendWithCompletionHandler(callBack)```
+ request.sendWithCompletionHandler(callBack)
+ ```
 
 1. 	Lorsque vos demandes aboutissent, la sortie suivante figure dans la console Xcode :
 
@@ -187,3 +187,15 @@ et enregistré votre délégué d'authentification personnalisé :
  })
  response:Optional("Bonjour Don Lon"), no error
  ```
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter,
+il doit à nouveau soumettre ses données d'identification.
+
+ La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
+`nil`.

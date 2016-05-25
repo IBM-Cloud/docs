@@ -16,8 +16,7 @@ Copyright :
 
 Le comportement du serveur Liberty dans Bluemix est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
 pack de construction Liberty fournit un conteneur WebSphere Liberty capable d'exécuter des applications Java EE 7 et OSGi. Il prend en charge les
-infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud.
-Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty  dans Bluemix, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient indiquées sous forme de variables de configuration sur le serveur Liberty.
+infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud. Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty  dans Bluemix, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient indiquées sous forme de variables de configuration sur le serveur Liberty.
 
 Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Liberty sur Bluemix :
 
@@ -25,16 +24,15 @@ Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Lib
 * Envoi par commande push d'un répertoire de serveur
 * Envoi par commande push d'un package de serveur
 
-Important : Lorsque vous déployez une application avec le pack de construction Liberty,
-attribuez une valeur d'au moins 512 Mo au paramètre Limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](memoryLimits.html).
+Important : quand vous déployez une application avec le pack de construction Liberty, attribuez une valeur d'au moins 512 Mo comme limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](memoryLimits.html).
 
 ## Applications autonomes
 {: #stand_alone_apps}
 
 Les applications autonomes, par exemple, des fichiers WAR ou EAR, peuvent être déployées sur Liberty dans Bluemix.
 
-
-Pour déployer une application autonome, exécutez la commande cf push avec le paramètre -p qui indique le fichier WAR ou EAR. Par exemple :
+Pour déployer une application autonome, exécutez la commande cf push avec le paramètre -p qui indique le fichier WAR ou EAR.
+Par exemple :
 
 ```
     $ cf push <yourappname> -p myapp.war
@@ -135,7 +133,8 @@ server.xml complet est le suivant :
 
 Pour des raisons de performance, lors du déploiement des fichiers WAR et EAR seulement,
 l'[examen
-des archives de bean implicites CDI 1.2](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html) est désactivé par défaut. L'examen des archives de bean implicites peut être activé avec la variable d'environnement JBP_CONFIG_LIBERTY. Par exemple :
+des archives de bean implicites CDI 1.2](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html) est désactivé par défaut. L'examen des archives de bean implicites peut être activé avec la variable d'environnement JBP_CONFIG_LIBERTY.
+Par exemple :
 
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
@@ -143,7 +142,7 @@ des archives de bean implicites CDI 1.2](https://www.ibm.com/support/knowledgece
 {: #codeblock}
 
 Important : Pour que les modifications que vous apportez aux variables d'environnement soient appliquées, vous devez reconstituer votre
-application : 
+application :
 
 ```
     $ cf restage myapp
@@ -153,14 +152,10 @@ application :
 ## Répertoire de serveur
 {: #server_directory}
 
-Dans certains cas, vous devez fournir une configuration de serveur Liberty
-personnalisée avec votre application. Cette configuration personnalisée peut s'avérer nécessaire lorsque vous déployez un fichier EAR ou WAR et que le fichier
-server.xml par défaut ne comporte pas certains des paramètres requis par votre application. 
+Dans certains cas, vous devez fournir une configuration de serveur Liberty personnalisée avec votre application. Cette configuration personnalisée peut s'avérer nécessaire lorsque vous déployez un fichier EAR ou WAR et que le fichier server.xml par défaut ne comporte pas certains des paramètres requis par votre application.
 
-Si vous avez installé le profil Liberty sur votre poste de travail et
-que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez
-envoyer par commande push le contenu de ce répertoire à Bluemix. Par
-exemple, si votre serveur Liberty se nomme defaultServer, exécutez la commande suivante :
+Si vous avez installé le profil Liberty sur votre poste de travail et que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez envoyer par commande push le contenu de ce répertoire à Bluemix.
+Par exemple, si votre serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -172,13 +167,13 @@ installé sur votre poste de travail, vous pouvez suivre la procédure ci-après
 
 1. Créez un répertoire nommé defaultServer.
 2. Créez un répertoire apps dans le répertoire defaultServer.
-3. Copiez le fichier WAR ou EAR dans le répertoire defaultServer/apps. 
-4. Dans le répertoire defaultServer, créez un fichier server.xml avec l'exemple de contenu exemple ci-après.
-De plus :
+3. Copiez le fichier WAR ou EAR dans le répertoire defaultServer/apps.
+4. Dans le répertoire defaultServer, créez un fichier server.xml avec l'exemple de contenu exemple ci-après.  De plus :
   * Prenez soin de mettre à jour l'attribut location ou type de l'élément d'application afin de le faire
 correspondre au nom de fichier et au type de votre application.
   * Le fichier server.xml dans le diagramme affiche un jeu minimal de fonctions. Vous devrez ajuster le jeu de fonctions en fonction des besoins de
 votre application.
+
 
 ```
     <server>
@@ -193,7 +188,7 @@ votre application.
 ```
 {: #codeblock}
 
-Lorsque le répertoire de serveur est prêt, vous pouvez le déployer sur Bluemix. 
+Lorsque le répertoire de serveur est prêt, vous pouvez le déployer sur Bluemix.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -211,22 +206,22 @@ applications Web déployées avec le répertoire de serveur sont accessibles sou
 ## Package de serveur
 {: #packaged_server}
 
-Vous pouvez également envoyer par commande push un fichier de package de serveur à Bluemix.
-Pour créer le fichier de package de serveur, utilisez la commande server
+Vous pouvez également envoyer par commande push un fichier de package de serveur à Bluemix. Pour créer le fichier de package de serveur, utilisez la commande server
 package de Liberty. Outre les fichiers de l'application et de configuration, le
 fichier de package de serveur peut contenir des ressources partagées et les
 fonctions utilisateur Liberty requises par l'application.
 
 Pour conditionner un serveur Liberty, utilisez la commande ./bin/server package à partir du répertoire d'installation de Liberty. Indiquez le nom de votre serveur et précisez l'option '––include=usr' option.
-Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante : 
+Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
 Cette commande génère un fichier serverName.zip dans le répertoire du serveur. Vous pouvez ensuite envoyer par commande push le fichier
-compressé à Bluemix à l'aide de la commande cf push.Par exemple :
+compressé à Bluemix à l'aide de la commande cf push.
+Par exemple :
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
@@ -235,20 +230,19 @@ compressé à Bluemix à l'aide de la commande cf push.Par exemple :
 
 Remarque : Les applications Web déployées avec le package de serveur sont accessibles sous la
 racine
-de contexte, comme spécifié par le profil Liberty. 
+de contexte, comme spécifié par le profil Liberty.
 
 ### Modification du fichier server.xml
 {: #modifications_of_serverxml}
 
 Lors de l'envoi par commande push d'un package de serveur ou d'un répertoire de serveur
-Liberty, le pack de construction Liberty détecte le fichier server.xml, en même temps que votre application. Le pack de construction Liberty apporte les modifications suivantes au fichier server.xml. 
+Liberty, le pack de construction Liberty détecte le fichier server.xml, en même temps que votre application. Le pack de construction Liberty apporte les modifications suivantes au fichier server.xml.
 
 * Le pack de construction vérifie que le fichier contient exactement un élément httpEndpoint.
 * Le pack de construction vérifie que l'attribut httpPort dans l'élément httpEndpoint pointe sur une variable système qui se nomme ${port}. Le
 pack de construction remplace également l'attribut host.
-* Le pack de construction définit l'attribut logDirectory de l'élément logging de telle sorte qu'il pointe sur un répertoire de journal système. 
-* Le pack de construction fait en sorte qu'un fichier runtime-vars.xml soit fusionné sur une base logique avec votre fichier server.xml.
-Plus spécifiquement, il ajoute la ligne *&lt;include location="runtime-vars.xml" /&gt;* à votre fichier server.xml.
+* Le pack de construction définit l'attribut logDirectory de l'élément logging de telle sorte qu'il pointe sur un répertoire de journal système.
+* Le pack de construction fait en sorte qu'un fichier runtime-vars.xml soit fusionné sur une base logique avec votre fichier server.xml. Plus spécifiquement, il ajoute la ligne *&lt;include location="runtime-vars.xml" /&gt;* à votre fichier server.xml.
 
 ### Variables référençables
 {: #referenceable_variables}
@@ -275,8 +269,8 @@ d'environnement VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/e
 automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des
 entrées de liaison de service peuvent être dans l'un des formats suivants :
 
-* cloud.services.<service-name>.<property>, qui décrit les informations telles que le nom, le type et le plan du service.
-* cloud.services.<service-name>.connection.<property>, qui décrit les informations de connexion du service.
+* cloud.services.&lt;service-name&gt;.&lt;property&gt;, qui décrit les informations telles que le nom, le type et le plan du service.
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, qui décrit les informations de connexion du service.
 
 L'ensemble d'informations habituel est le suivant :
 * name : Nom du service. Par exemple, mysql-e3abd.

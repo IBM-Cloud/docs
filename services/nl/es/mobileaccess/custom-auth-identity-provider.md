@@ -117,11 +117,15 @@ La cabecera de autorización contiene información sobre el cliente móvil y la 
 
 ## Implementación de ejemplo de un proveedor de identidad personalizado
 {: #custom-sample}
-Puede hacer referencia al siguiente ejemplo de implementación de Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue todo el código de aplicación desde el [repositorio Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Puede hacer referencia a cualquiera de las siguientes implementaciones del ejemplo Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue el código completo de la aplicación desde los repositorios de GitHub. 
 
-### Estructura de JSON
+* [Ejemplo simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [Ejemplo avanzado](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+
+<!---
+ ### JSON structure (simple sample)
 {: #custom-sample-json}
-Esta implementación presupone que la respuesta al cambio de autenticación proporcionada es un objeto JSON con la estructura siguiente:
+This implementation assumes that the supplied authentication challenge answer is a JSON object with the following structure:
 
 ```
 {
@@ -130,7 +134,7 @@ Esta implementación presupone que la respuesta al cambio de autenticación prop
  }
  ```
 
-### Código de ejemplo del proveedor de identidad personalizado
+### Custom identity provider sample code (simple sample)
 {: #custom-sample-code}
 ```JavaScript
 var express = require('express');
@@ -138,7 +142,7 @@ var cfenv = require('cfenv');
 var log4js = require('log4js');
 var jsonParser = require('body-parser').json();
 
-// Utilización del repositorio de usuarios codificado
+// Using hardcoded user repository
 var userRepository = {
 	"john.lennon":      { password: "12345", displayName:"John Lennon", dob:"October 9, 1940"},
 	"paul.mccartney":   { password: "67890", displayName:"Paul McCartney", dob:"June 18, 1942"},
@@ -209,6 +213,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 	logger.info('Server listening at %s:%s', host, port);
 });
 ```
+--->
 
 ## Próximos pasos
 {: #next-steps}

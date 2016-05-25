@@ -12,25 +12,42 @@ copyright:
 
 ## Vorbereitungen
 {: #google-auth-ios-before}
-* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein iOS-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [iOS-Objective-C-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein iOS-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [iOS-Objective-C-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
 * Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
 ## Google-Projekt für die iOS-Plattform konfigurieren
 {: #google-auth-ios-project}
-Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in Google Developer Console, um eine Google-Client-ID zu erhalten. Diese Client-ID ist eine eindeutige Kennung, an der Google erkennen kann, welche Anwendung versucht, eine Verbindung herzustellen. Wenn Sie bereits ein Google-Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
+Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in Google Developer Console, um eine Google-Client-ID zu erhalten.  Diese Client-ID ist eine eindeutige Kennung, an der Google erkennen kann, welche Anwendung versucht, eine Verbindung herzustellen.   Wenn Sie bereits ein Google-Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
 
-1. Öffnen Sie [Google Developer Console](https://console.developers.google.com).
 
-1. Erstellen Sie ein Projekt. Klicken Sie auf **Create project** (Projekt erstellen).
 
-1. Wählen Sie Ihr Projekt aus und klicken Sie auf **Use Google APIs**. Sie können auch auf **Enable APIs and get credentials like keys** (APIs aktivieren und Berechtigungsnachweise wie Schlüssel abrufen) klicken.
+1. Erstellen Sie ein Projekt in [Google Developer Console](https://console.developers.google.com).
+Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
+   1.    Öffnen Sie ein neues Projektmenü. 
+         
+         ![Bild](images/FindProject.jpg)
 
-1. Wählen Sie in der API-Liste die API Google+ aus und klicken Sie auf **Enable API**.
+   2.    Klicken Sie auf **Create a project**.
+   
+         ![Bild](images/CreateAProject.jpg)
 
-1. Klicken Sie auf **Credentials > Add credentials** und wählen Sie **OAuth 2.0 client ID** aus.
 
-1. Sie werden möglicherweise aufgefordert, einen Produktnamen in der Einverständniskonsole festzulegen. Fahren Sie fort, indem Sie dies tun.
+1. Wählen Sie in der Liste **Social APIs** den Eintrag **Google+ API** aus.
+
+     ![Bild](images/chooseGooglePlus.jpg)
+
+1. Klicken Sie in der nächsten Anzeige auf **Enable**.
+
+1. Wählen Sie die Registerkarte **Consent Screen** aus und geben Sie den Produktnamen an, der den Benutzern angezeigt wird. Weitere Werte sind optional. Klicken Sie auf **Save**.
+
+    ![Bild](images/consentScreen.png)
+    
+1. Wählen Sie in der Liste **Credentials** die OAuth-Client-ID aus.
+
+     ![Bild](images/chooseCredentials.png)
+     
+
 
 1. An diesem Punkt wird eine Auswahl für den Anwendungstyp angezeigt. Wählen Sie **iOS** aus.
 
@@ -44,7 +61,7 @@ Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in G
 
 Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung im {{site.data.keyword.Bluemix_notm}}-Dashboard aktivieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard. 
+1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 
 1. Klicken Sie auf **Mobile Systemerweiterungen** und notieren Sie die Werte für **Route** (`applicationRoute`) und **App-GUID** (`applicationGUID`). Sie benötigen diese Werte, wenn Sie das SDK initialisieren.
 
@@ -54,13 +71,16 @@ Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung
 
 1. Geben Sie in **Application ID for iOS** (Anwendungs-ID für iOS) Ihre iOS-Client-ID für Android an und klicken Sie auf **Save** (Speichern).
 
+	Anmerkung: Zusätzlich zur Google-Client-ID ist auch der Umkehrwert für Ihre Clientkonfiguration erforderlich (siehe unten). Um auf beide Werte zuzugreifen, müssen Sie mithilfe des Stiftsymbols die Beispiel-PList herunterladen:
+		![Download der Datei info.plist](images/download_plist.png)
+
 ## {{site.data.keyword.amashort}}-Client-SDK für iOS konfigurieren
 {: #google-auth-ios-sdk}
 
 ### {{site.data.keyword.amashort}}-Client-SDK mit CocoaPods installieren
 {: #google-auth-ios-sdk-cocoapods}
 
-1. Navigieren Sie zu Ihrem iOS-Projekt. 
+1. Navigieren Sie zu Ihrem iOS-Projekt.
 
 1. Bearbeiten Sie die `Podfile`-Datei und fügen Sie die folgende Zeile hinzu:
 
@@ -70,7 +90,7 @@ Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung
 
 1. Speichern Sie die `Podfile`-Datei und führen Sie den Befehl `pod install` über die Befehlszeile aus. CocoaPods installiert die Abhängigkeiten. Der Fortschritt und die hinzugefügten Komponenten werden angezeigt.
 
-**Wichtig**: Sie müssen Ihr Projekt von jetzt an über die von CocoaPods generierte Datei `xcworkspace` öffnen. In der Regel hat die Datei den Namen `{your-project-name}.xcworkspace`.  
+  **Wichtig**: Sie müssen Ihr Projekt von jetzt an über die von CocoaPods generierte Datei `xcworkspace` öffnen. In der Regel hat die Datei den Namen `{your-project-name}.xcworkspace`.  
 
 1. Führen Sie den Befehl `open {your-project-name}.xcworkspace` über die Befehlszeile aus, um Ihren iOS-Projektarbeitsbereich zu öffnen.
 
@@ -81,11 +101,11 @@ Konfigurieren Sie die Google-Integration, indem Sie die Datei `info.plist` aktua
 * Konfigurieren Sie die Google-Integration, indem Sie die folgenden URL-Schemas in Ihrer Datei `info.plist` hinzufügen.
 	![Datei 'info.plist'](images/ios-google-infoplist-settings.png)
 
-	Das erste URL-Schema ist eine umgekehrte Version der Client-ID aus Google Developer Console. Beispiel: Wenn Ihre Client-ID `123123-abcabc.apps.googleusercontent.com` ist, sollte Ihr URL-Schema `com.googleusercontent.apps.123123-abcabc` sein.
+	Das erste URL-Schema ist eine umgekehrte Version der Client-ID aus Google Developer Console.  Beispiel: Wenn Ihre Client-ID `123123-abcabc.apps.googleusercontent.com` ist, sollte Ihr URL-Schema `com.googleusercontent.apps.123123-abcabc` sein. 
 
-	Das zweite URL-Schema ist die Bundle-ID Ihrer Anwendung. 
+	Das zweite URL-Schema ist die Bundle-ID Ihrer Anwendung.
 
-* Verwenden Sie einen Texteditor. Klicken Sie mit der rechten Maustaste auf `info.plist` und wählen Sie die Optionen **Open as > Source code** aus. Fügen Sie den folgenden XML-Code zu der Datei hinzu: 
+* Verwenden Sie einen Texteditor. Klicken Sie mit der rechten Maustaste auf `info.plist` und wählen Sie die Optionen **Open as > Source code** aus. Fügen Sie den folgenden XML-Code zu der Datei hinzu:
 
 	```XML
 	<key>CFBundleURLTypes</key>
@@ -118,15 +138,13 @@ Konfigurieren Sie die Google-Integration, indem Sie die Datei `info.plist` aktua
 
 Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK initialisieren, indem Sie die Parameter 'applicationGUID' und 'applicationRoute' übergeben.
 
-Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats. 
+Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
 
 1. Ermitteln Sie die Werte für 'applicationGUID' und 'applicationRoute'. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf Ihre App. Klicken Sie auf **Mobile Systemerweiterungen**. Die Werte für die Anwendungsroute und die GUID der Anwendung werden angezeigt.
 
 1. Importieren Sie die erforderlichen Frameworks in die Klasse, in der Sie das {{site.data.keyword.amashort}}-Client-SDK verwenden möchten. Fügen Sie die folgenden Header hinzu:
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
@@ -135,11 +153,10 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
 	Swift:
 
-
 	Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Sie müssen Ihrem Swift-Projekt möglicherweise einen Überbrückungsheader hinzufügen, um das SDK verwenden zu können.
 
 	1. Klicken Sie mit der rechten Maustaste auf Ihr Projekt in Xcode und wählen Sie **New File...** aus.
-	2. Wählen Sie in der Kategorie **iOS Source** die Option **Header file** aus. 
+	2. Wählen Sie in der Kategorie **iOS Source** die Option **Header file** aus.
 	3. Geben Sie der Datei den Namen `BridgingHeader.h`.
 	4. Fügen Sie die folgenden Importe zu Ihrem Überbrückungsheader hinzu:
 
@@ -150,13 +167,11 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	5. Klicken Sie auf Ihr Projekt in Xcode und wählen Sie die Registerkarte **Build Settings** (Buildeinstellungen) aus.
 	6. Suchen Sie nach `Objective-C Bridging Header`.
 	7. Setzen Sie den Wert auf die Position Ihrer Datei `BridgingHeader.h` (z. B. `$(SRCROOT)/MyApp/BridgingHeader.h`).
-	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build). 
+	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
-3. Verwenden Sie den folgenden Code, um das SDK zu initialisieren. Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
+3. Verwenden Sie den folgenden Code, um das SDK zu initialisieren.  Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -166,7 +181,6 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
 	Swift:
 
-
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
@@ -174,18 +188,15 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
 
 
-1. Registrieren Sie den Google-Authentifizierungshandler, indem Sie den folgenden Code in der Methode `application:didFinishLaunchingWithOptions` in Ihrem App-Delegat hinzufügen. Fügen Sie diesen Code direkt nach dem Initialisieren von 'IMFClient' hinzu:
+1. Registrieren Sie den Google-Authentifizierungshandler, indem Sie den folgenden Code in der Methode `application:didFinishLaunchingWithOptions` in Ihrem App-Delegat hinzufügen. Fügen Sie diesen Code direkt nach dem Initialisieren des IMFClients hinzu:
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 	```
 
 	Swift:
-
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
@@ -194,8 +205,6 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 1. Fügen Sie Ihrem App-Delegat den folgenden Code hinzu.
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -214,7 +223,6 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	```
 
 	Swift:
-
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -246,8 +254,6 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden.
 
 	Objective-C:
-                    
-
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -257,17 +263,16 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 																method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-if (error){
+		if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
 
 	Swift:
-
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -295,3 +300,23 @@ if (error){
 1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe sollte in LogCat angezeigt werden.
 
 	![Bild](images/ios-google-login-success.png)
+	
+	
+	Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+	
+	Objective-C:
+	
+	```Objective-C
+	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	Swift:
+
+	```Swift
+	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+
+	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei Mobile Client Access für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer in der rechten oberen Ecke der Anzeige auf den Benutzernamen klicken, um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
+
+	Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

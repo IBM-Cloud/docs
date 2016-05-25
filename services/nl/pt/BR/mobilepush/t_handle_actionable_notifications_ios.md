@@ -25,10 +25,12 @@ método a seguir com base no identificador escolhido.
 ```
 
 ###Swift
-
+ 
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
       //must call completion handler when finished
       completionHandler()
   }
 ```    
+    
+

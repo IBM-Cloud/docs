@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 {:shortdesc: .shortdesc}
@@ -15,24 +15,24 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última actualización: 23 de marzo de 2016*  
+*Última actualización: 08 de abril de 2016*  
 
 Si está creando una app Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla.   
-{: shortdesc} 
+{: shortdesc}
 
 Cuando realice un cambio, puede verlo de inmediato en la app {{site.data.keyword.Bluemix_notm}} en ejecución. {{site.data.keyword.Bluemix_notm}} Live Sync funciona tanto con la línea de mandatos
 como con Web IDE. Puede depurar apps escritas en Node.js utilizando {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
-{{site.data.keyword.Bluemix_notm}} Live Sync consta de tres características. 
+{{site.data.keyword.Bluemix_notm}} Live Sync consta de tres características.
 
 **Desktop Sync**  
     Puede sincronizar cualquier árbol de directorio de escritorio con un espacio de trabajo de proyectos basados en la nube similar al modo de trabajo de Dropbox. Web IDE edita directamente el mismo espacio de trabajo basado en la nube, de manera que ambos están sincronizados. Desktop
 Sync funciona para cualquier tipo de app. Para utilizar Desktop Sync debe descargar e instalar la interfaz de línea de mandatos BL.  
-	
-**Edición en directo**	
+
+**Edición en directo**
     Puede hacer cambios en una app Node.js que se ejecuta en {{site.data.keyword.Bluemix_notm}} y probarlos en el navegador inmediatamente. Todos los cambios que haga en un directorio de escritorio sincronizado o en Web IDE se propagarán
 inmediatamente al sistema de archivos de la app.  
-	
+
 **Debug**  
     Mientras una app Node.js está en la modalidad de edición en directo puede aplicarle un shell y depurarla. Con el depurador de node Inspector puede, de manera dinámica, editar el código, insertar puntos de interrupción, recorrer el código, reiniciar el tiempo de ejecución, entre otras características.  
 
@@ -41,29 +41,29 @@ con el espacio de trabajo de proyectos basados en la nube que edita directamente
 a la app en ejecución. Puede utilizar una o ambas características. Además, si utiliza Desktop Sync o Edición en directo para colocar su
 app en la modalidad de edición en directo, puede depurar la app en ejecución.
 
-En el siguiente diagrama se muestra el proceso de Bluemix Live Sync.	
+En el siguiente diagrama se muestra el proceso de Bluemix Live Sync.
 
 *Figura 1. Proceso de Bluemix Live Sync*
 ![Imagen del proceso de Bluemix Live Sync](images/bluemix-live-sync.png)
- 
+
 Si está desarrollando una app Java
 que se ejecuta en Liberty, puede depurarla de forma remota mediante [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
-##Desktop Sync {: #desktop-sync} 
+##Desktop Sync {: #desktop-sync}
 
 Puede utilizar la característica Desktop Sync de Bluemix Live Sync para
-actualizar con rapidez la instancia de app en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio. 
+actualizar con rapidez la instancia de app en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio.
 
-Desktop Sync tiene las siguientes consideraciones: 
-* Desktop Sync se ejecuta en estos sistemas operativos: 
+Desktop Sync tiene las siguientes consideraciones:
+* Desktop Sync se ejecuta en estos sistemas operativos:
   * Windows 7 u 8
   * Mac OS X versión 10.9 o posterior
       **Nota:** Windows requiere .NET Framework versión 4.5. Si no tiene .NET instalado, se le solicitará que lo instale cuando instale la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} Live Sync.  
-* No es necesario clonar el repositorio Git. 
-* Independientemente del tipo de app que esté desarrollando, puede sincronizar su proyecto de escritorio con el espacio de trabajo en la nube. 
+* No es necesario clonar el repositorio Git.
+* Independientemente del tipo de app que esté desarrollando, puede sincronizar su proyecto de escritorio con el espacio de trabajo en la nube.
 * Si la app está escrita en Node.js, puede propagar los cambios en las apps que están en ejecución.
 
-Para obtener más detalles sobre los mandatos, consulte [Mandatos de Bluemix Live Sync (bl)](bluemixlive.html#bl-commands).  
+Para obtener más detalles sobre los mandatos, consulte [Mandatos de Bluemix Live Sync (bl)](bluemixlive.html#bl-commands).
 
 <ol>
 <li>Registre gratis una cuenta de <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a>.</li>
@@ -78,12 +78,12 @@ Para obtener más detalles sobre los mandatos, consulte [Mandatos de Bluemix Liv
 <pre class="codeblock">bl login</pre>
 </li>
 
-<li>Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato: 
+<li>Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato:
 <pre class="codeblock">bl projects</pre>
 <p>Busque el nombre de proyecto en la lista que coincida con la app. El nombre del proyecto tiene el formato de su <i>alias</i> | <i>nombre app</i>. </p>
 </li>
 <li>Sincronice el entorno local con el proyecto en {{site.data.keyword.Bluemix_notm}} especificando
-el siguiente mandato. Si es el propietario del proyecto, solo debe especificar nombre-app para nombreProyecto. 
+el siguiente mandato. Si es el propietario del proyecto, solo debe especificar nombre-app para nombreProyecto.
 <pre class="codeblock">bl sync nombre_proyecto -d directorio_local --verbose</pre>
 <p>Este mandato seguirá ejecutándose (y la sincronización continuará) hasta que se especifique una "q". La opción --verbose muestra la información de estado e inicio de sesión. Si alguno de los argumentos contiene un espacio,
 deberá escribir el nombre entre comillas. </p></li>
@@ -100,23 +100,23 @@ en {{site.data.keyword.Bluemix_notm}} y
 en el espacio de trabajo de la nube del proyecto. Si tiene que reiniciar la app Node
 puede utilizar el siguiente mandato:
 ```
-bl start --restart 
+bl start --restart
 ```
 
-##Edición en directo {: #live-edit} 
+##Edición en directo {: #live-edit}
 
-Si está creando una app Node.js, al efectuar cambios en el proyecto mediante Web IDE, la característica de edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync puede actualizar rápidamente la instancia de app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. La edición en directo le permite desarrollar como lo haría en el escritorio sin tener que volver a desplegar. 
+Si está creando una app Node.js, al efectuar cambios en el proyecto mediante Web IDE, la característica de edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync puede actualizar rápidamente la instancia de app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. La edición en directo le permite desarrollar como lo haría en el escritorio sin tener que volver a desplegar.
 
-La característica Edición en directo solo se admite en las apps Node.js. 
+La característica Edición en directo solo se admite en las apps Node.js.
 
-En Web IDE, en la barra de ejecución, pulse **Edición en directo**. 
+En Web IDE, en la barra de ejecución, pulse **Edición en directo**.
 
-![Imagen de la barra de ejecución con la edición en directo](images/run-bar-live-edit.png) 
+![Imagen de la barra de ejecución con la edición en directo](images/run-bar-live-edit.png)
 
 Edición en directo le permite obtener una vista previa rápida de los cambios en las apps Node.js
 que se ejecutan en {{site.data.keyword.Bluemix_notm}}. Al actualizar
 el código con la característica Edición en directo activada, puede renovar la ventana del navegador de su app web
-para ver dichos cambios reflejados pocos segundos después de efectuarlos. 
+para ver dichos cambios reflejados pocos segundos después de efectuarlos.
 
 Para ver un tutorial sobre cómo utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, vea el tutorial [Pruebe y depure una app Node.js con Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync).
 
@@ -124,22 +124,24 @@ Al cambiar los archivos de Web IDE, se volverán a desplegar
 automáticamente en la app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, puede utilizar el botón **Reiniciar**
 de la barra de ejecución.
 
+**Nota:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Edit, son necesarios 256 MB de memoria adicional y se añadirán. 
+
 ##{{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
 
-Puede acceder a la característica de {{site.data.keyword.Bluemix_notm}} Live Sync Debug cuando {{site.data.keyword.Bluemix_notm}} Live Sync esté habilitado para la app Node.js. 
+Puede acceder a la característica de {{site.data.keyword.Bluemix_notm}} Live Sync Debug cuando {{site.data.keyword.Bluemix_notm}} Live Sync esté habilitado para la app Node.js.
 
 Con la característica debug, puede editar código, insertar puntos de interrupción, recorrer el código,
-reiniciar el tiempo de ejecución de forma dinámica, entre otras características, mientras la app está en servicio en {{site.data.keyword.Bluemix_notm}}. Puede desarrollar la app de forma incremental con agilidad mientras elige entre una larga lista de servicios de {{site.data.keyword.Bluemix_notm}}. 
+reiniciar el tiempo de ejecución de forma dinámica, entre otras características, mientras la app está en servicio en {{site.data.keyword.Bluemix_notm}}. Puede desarrollar la app de forma incremental con agilidad mientras elige entre una larga lista de servicios de {{site.data.keyword.Bluemix_notm}}.
 
 {{site.data.keyword.Bluemix_notm}} Live
 Debug incluye las siguientes características:
 
 * Control del tiempo de ejecución de la aplicación
 * Depuración mediante [node-inspector](https://github.com/node-inspector/node-inspector)
-* Acceso a shell 
+* Acceso a shell
 
-###Control del tiempo de ejecución de la aplicación {: #app-runtime} 
+###Control del tiempo de ejecución de la aplicación {: #app-runtime}
 
 Con el control del tiempo de ejecución de la app, puede utilizar Debug
 para inspeccionar el estado de la app en el momento inicial. Esta función resulta útil para solucionar los problemas de una app que falla al iniciarse.
@@ -149,62 +151,62 @@ Mientras esté desarrollando la app, puede elegir entre las siguientes acciones:
 * Realizar un reinicio rápido de la app
 * Suspender la app antes de que se ejecute ningún código de la app
 
-###Depurar {: #debug} 
+###Depurar {: #debug}
 
 Debug incluye las siguientes funciones:
 
 **Restricción:** Se necesita Google Chrome.
 
 * Establecer puntos de interrupción en el código de la app para detener la ejecución en una línea específica.
-* Editar las condiciones de los puntos de interrupción cuando se cumplan ciertos criterios. 
-* Inspeccionar el estado de las variables locales y los campos. 
+* Editar las condiciones de los puntos de interrupción cuando se cumplan ciertos criterios.
+* Inspeccionar el estado de las variables locales y los campos.
 * Visualizar la salida de la depuración de manera inmediata desde las llamadas `console.log()`. Esta opción es más rápida que la supervisión de registros cf.
 * Utilizar el editor de código fuente incorporado para introducir cambios inmediatos (aunque temporales) al código de la app en ejecución.
 
-###Shell {: #shell} 
+###Shell {: #shell}
 
-Esta herramienta le da acceso de shell al contenedor en el que se ejecuta la app. Con el uso de este terminal puede ejecutar, de manera remota, mandatos de diagnóstico de shell para administrar la app. 
+Esta herramienta le da acceso de shell al contenedor en el que se ejecuta la app. Con el uso de este terminal puede ejecutar, de manera remota, mandatos de diagnóstico de shell para administrar la app.
 
-Supervise el uso de la memoria y de la CPU en la instancia que utiliza mandatos estándares de Linux, como por ejemplo **top**, **ps** y **kill**. 
+Supervise el uso de la memoria y de la CPU en la instancia que utiliza mandatos estándares de Linux, como por ejemplo **top**, **ps** y **kill**.
 
 ###Configuración de una app para habilitar {{site.data.keyword.Bluemix_notm}} Live
-Debug {: #configure_app_debug} 
+Debug {: #configure_app_debug}
 
-La app debe usar el paquete de compilación IBM SDK for Node.js. No se da soporte a los paquetes de compilación personalizados. 
+La app debe usar el paquete de compilación IBM SDK for Node.js. No se da soporte a los paquetes de compilación personalizados.
 
 1. Permita que el paquete de compilación detecte el mandato de inicio de la app. El paquete de compilación debe detectar automáticamente el mandato start y no se debe establecer en el archivo `manifest.yml`.  
-    
+
     a. Asegúrese de que el archivo `package.json` contenga un script
 de inicio que incluya un mandato start para la app.  
     b. Si el archivo `manifest.yml` de la app contiene un mandato, establézcalo en null.  
 
 2. Establezca la variable de entorno.  
-    
-    a. En el archivo `manifest.yml`, añada esta variable: 
+
+    a. En el archivo `manifest.yml`, añada esta variable:
 	```
 	env:
-      ENABLE_BLUEMIX_DEV_MODE: "true" 
+      ENABLE_BLUEMIX_DEV_MODE: "true"
 	```
 
 3. Aumente la memoria.  
-    
-    a. En el archivo `manifest.yml` de la app, añada 128M o más al valor especificado para el atributo memory. 
-	
+
+    a. En el archivo `manifest.yml` de la app, añada 128M o más al valor especificado para el atributo memory.
+
 Una vez instalado {{site.data.keyword.Bluemix_notm}} Live
 Debug, puede utilizar las herramientas de depuración.
 
-Envíe la app por push y vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite, escriba el ID y la contraseña de IBM para autenticarse. 
+Envíe la app por push y vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite, escriba el ID y la contraseña de IBM para autenticarse.
 
 ###Restauración de configuraciones de app e inhabilitación de Bluemix Live
-Debug {: #restore_live_debug} 
+Debug {: #restore_live_debug}
 
 1. Elimine la variable de entorno ENABLE_BLUEMIX_DEV_MODE del archivo `manifest.yml` de la app.
 
-2. Restaure el mandato start y el valor memory originales de la app. 
+2. Restaure el mandato start y el valor memory originales de la app.
 
 3. Envíe la app por push.
 
-## Mandatos de {{site.data.keyword.Bluemix_notm}} Live Sync (bl) {: #bl-commands}
+## Mandatos de {{site.data.keyword.Bluemix_notm}} Live Sync (bl)  {: #bl-commands}
 
 Si está creando una aplicación Node.js, puede utilizar {{site.data.keyword.Bluemix_live}}
 para actualizar rápidamente la instancia de la aplicación que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla. Cuando realice un cambio, puede verlo de inmediato en la app {{site.data.keyword.Bluemix_notm}} en ejecución. La interfaz de línea de mandatos de {{site.data.keyword.Bluemix_live}} se llama *bl*.
@@ -222,7 +224,7 @@ Para obtener más información sobre cómo descargar y utilizar el mandato bl, c
 
 ## Mandatos bl
 
-La línea de mandatos de {{site.data.keyword.Bluemix_live}}, **bl**, tiene la sintaxis siguiente: 
+La línea de mandatos de {{site.data.keyword.Bluemix_live}}, **bl**, tiene la sintaxis siguiente:
 
 ```
 bl mandato [argumentos][options] [--help]
@@ -286,7 +288,7 @@ El mandato siguiente muestra la lista de mandatos:
 
 ```bl --help```
 
-El mandato siguiente muestra información detallada sobre el mandato sync: 
+El mandato siguiente muestra información detallada sobre el mandato sync:
 
 ```bl sync --help```
 
@@ -301,7 +303,7 @@ Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_not
 **Advertencia:** No se recomienda proporcionar su contraseña como una opción de línea de mandatos, porque será visible a otros usuarios y se registrará como parte del historial de mandatos.
 
 **Nota:** para poder iniciar sesión, antes debe registrar una cuenta gratuita de
-<a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a>. 
+<a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a>.
 
 ### Opciones
 
@@ -324,7 +326,7 @@ Este mandato inicia la sesión del usuario `name@company.com:`
 
 ```bl login –u name@company.com –p pa55w0rd```
 
-Este mandato inicia la sesión del usuario `name@company.com` con la contraseña pa55 w0rd que contiene un espacio, por lo que necesita comillas: 
+Este mandato inicia la sesión del usuario `name@company.com` con la contraseña pa55 w0rd que contiene un espacio, por lo que necesita comillas:
 
 ```bl login –u name@company.com –p “pa55 w0rd”```
 
@@ -367,7 +369,7 @@ bl sync|s nombreProyecto -d directorioLocal [ --overwritelocal ][ --overwriterem
 ### Argumento
 
 <dl>
-<dt>nombreProyecto </dt>
+<dt>nombreProyecto</dt>
 <dd>El nombre del proyecto con el formato <i>“alias | mproject”</i> o solo <i>myproject</i>, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
 </dl>
 
@@ -402,7 +404,7 @@ Este mandato inicia la sincronización con el proyecto <code>my pro ject</code>,
 
 ```bl sync “my pro ject”```
 
-Este mandato inicia la sincronización del proyecto <code>myproject</code> con el directorio myfolder: 
+Este mandato inicia la sincronización del proyecto <code>myproject</code> con el directorio myfolder:
 
 ```bl sync myproject –d  myfolder```
 
@@ -467,8 +469,8 @@ bl status|ss [ nombreProyecto ]
 ###Argumento
 
 <dl>
-<dt>nombreProyecto </dt>
-<dd>El nombre del proyecto con el formato “alias | myproject” o solo myproject, si el propietario del proyecto es el usuario que ha iniciado sesión. </dd>
+<dt>nombreProyecto</dt>
+<dd>El nombre del proyecto con el formato “alias | myproject” o solo myproject, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
 </dl>
 
 ### Ejemplos
@@ -504,7 +506,7 @@ vez iniciado, se muestran las URL para la aplicación, las herramienta de depura
 ### Argumento
 
 <dl>
-<dt>nombreProyecto </dt>
+<dt>nombreProyecto</dt>
 <dd>El nombre del proyecto con el formato <i>“alias | myproject”</i> o solo <i>myproject</i>, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
 </dl>
 
@@ -561,7 +563,7 @@ bl stop|sp nombreProyecto [ -l launchConfiguration ]
 
 <dl>
 <dt>nombreProyecto</dt>
-<dd>El nombre del proyecto con el formato “alias | mproject” o solo mproject, si el propietario del proyecto es el usuario que ha iniciado sesión. </dd>
+<dd>El nombre del proyecto con el formato “alias | mproject” o solo mproject, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
 </dl>
 
 ### Opciones

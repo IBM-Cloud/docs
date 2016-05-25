@@ -22,7 +22,7 @@ Liberty 애플리케이션을 Bluemix에 배치하려면 다음 방법을 사용
 * 서버 디렉토리 푸시
 * 패키지된 서버 푸시
 
-중요: Liberty 빌드팩을 사용하여 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 제한으로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](memoryLimits.html)을 참조하십시오.
+중요: Liberty 빌드팩으로 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 제한으로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](memoryLimits.html)을 참조하십시오.
 
 ## 독립형 앱
 {: #stand_alone_apps}
@@ -187,14 +187,16 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 
 패키지된 서버 파일을 Bluemix에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 자원 및 Liberty 사용자 기능이 포함되어 있습니다.
 
-Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/server package 명령을 사용하십시오. 서버 이름을 지정하고 '––include=usr' 옵션을 포함하십시오. 예를 들어, Liberty 서버가 defaultServer이면 다음 명령을 실행하십시오.
+Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/server package 명령을 사용하십시오. 서버 이름을 지정하고 '––include=usr' 옵션을 포함하십시오.
+예를 들어, Liberty 서버가 defaultServer이면 다음 명령을 실행하십시오.
 
-<pre>
-    $ wlp/bin/server package defaultServer &dash;&dash;include=usr
-</pre>
+```
+    $ wlp/bin/server package defaultServer --include=usr
+```
 {: #codeblock}
 
-이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 그러면 사용자가 cf push 명령을 사용하여 해당 압축 파일을 Bluemix에 푸시할 수 있습니다. 예: 
+이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 그러면 사용자가 cf push 명령을 사용하여 해당 압축 파일을 Bluemix에 푸시할 수 있습니다.
+예: 
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
@@ -231,12 +233,10 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/ser
 ### 바인드된 서비스 정보 액세스
 {: #accessing_info_of_bound_services}
 
-서비스를 애플리케이션에 바인드하려는 경우, Cloud Foundry가 애플리케이션에 대해 설정하는
-[VCAP_SERVICES 환경 변수](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 연결 신임 정보와 같은 서비스 관련 정보가 포함됩니다.
-[자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
+서비스를 애플리케이션에 바인드하려는 경우, Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 연결 신임 정보와 같은 서비스 관련 정보가 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
 
-* cloud.services.<service-name>.<property> 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다. 
-* cloud.services.<service-name>.connection.<property> 서비스의 연결 정보를 설명합니다.
+* cloud.services.&lt;service-name&gt;.&lt;property&gt; 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다. 
+* cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; 서비스의 연결 정보를 설명합니다.
 
 일반적인 정보 세트는 다음과 같습니다.
 * name: 서비스의 이름입니다. 예: mysql-e3abd.

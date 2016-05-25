@@ -17,9 +17,9 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 2 May 2016*
+*Last updated: 23 May 2016*
 
-If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/adminpublic.html#orgmng).
+If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
@@ -29,7 +29,7 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 |Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](index.html#oc_resource).|
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](index.html#oc_organizations).|
-|Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/adminpublic.html#orgmng). |
+|Create spaces and assign user roles | Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](../admin/orgs_spaces.html). |
 |Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. You can also access the calendar feed and event subscriptions for extending your notifications in the Pending Updates section. See [Viewing system information](index.html#oc_system). |
@@ -43,7 +43,7 @@ You can always know the status of your environment by checking the Status page. 
 
 ### Notifications
 
-You can view notifications from IBM for your local or dedicated environment and monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
+You can view notifications from IBM for your local or dedicated environment to monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
 
 *Table 2. Event types and notifications methods*
 
@@ -100,36 +100,72 @@ When your event subscription is saved, you receive notifications through the met
 
 You can select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
 
-## Viewing system information
-{: #oc_system}
+## Maintenance updates
+{: #oc_schedulemaintenance}
 
-To view system information, click **ADMINISTRATION &gt; SYSTEM INFORMATION**.
+You can view scheduled and pending maintenance updates by going to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending** to access the **System Updates** page. 
 
-You can expand and view various sections about pending updates, general system information, and
-LDAP configuration details.
+**Note**: See the following section for Setting preapproved maintenance windows to get started. These windows must be set in order for IBM to schedule maintenance for your environment.
 
-### Pending updates and notifications
+<dl>
+<dt>Non-disruptive updates</dt>
+<dd>A non-disruptive update does not affect your environment, your running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied during the preapproved, available maintenance windows that you set from the System Updates page.</dd>
+<dt>Disruptive updates</dt>
+<dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the allotted 21-day maintenance window. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional times and dates for IBM to choose from when scheduling the update.</dd>
+</dl>
 
-In the Updates section, you can see the number of pending
-update notifications that require action on your part. To take action for a specific update, complete the following steps:
 
-<ol>
-<li>Click <strong><em>Number</em> updates pending</strong> to view all pending
-updates.</li>
-<li>Select an update to take action or view the details of the update, which include the update
-window, scheduled date, or disruption status.</li>
-<li>Click <strong>SELECT UNAVAILABLE DATES</strong> to set specific days in the update window
-that are not convenient for the update to be applied. If you set unavailable dates, IBM approves and
-schedules your update based on your selections. You receive a notification when the update is
-approved and scheduled.</li>
-<li>Click <strong>APPROVE UPDATE</strong> to approve the update, if you do not have any unavailable
-dates. If you approve, the update is applied during the scheduled update window. IBM sends a
-notification when the update deployment starts and ends.</li>
-</ol>
+### Setting preapproved maintenance windows
+{: #preapprovedmaintenance}
 
-**Note**: If you do not set unavailable dates or approve the update, it is applied at the end of the 21-day window to ensure that your platform remains current and up-to-date.
+Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved times. A non-disruptive update does not affect your environment, running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied in the preapproved available maintenance windows that you set from the System Updates page.
 
-From the Pending Updates page, you can choose to track your update schedule by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg) and downloading the `.ics` file to import your scheduled updates into a calendar app of your choice:
+You are required to set a minimum of 24 available hours for a week for a minimum of 3 days during that week. For example, you can set three 8 hour windows across three separate days, or you can set 6 hour windows across four separate days. To ensure the windows provide enough time for an update to be applied, each window much be a minimum of 4 hours in duration.
+
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending &gt; Manage Availability**.
+2. Expand the **Manage Available Update Windows** section.
+3. Click **Add new** ![Add new](images/add-new.png).
+4. Set your first availability window by selecting the frequency, duration, and start time for the window.
+5. Click **Submit**.
+6. Repeat this process until you have met the minimum requirements for weekly windows.
+
+### Setting unavailable maintenance windows
+
+After you set your preapproved available maintenance windows, you can choose to set specific dates and times that your environment is not available for updates. For example, you might choose a high traffic weekend or holiday when you do not want any maintenance applied to ensure that your applications are available for your users.
+
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending &gt; Manage Availability**.
+2. Expand the **Manage Unavailable Update Windows** section.
+3. Click **Add new** ![Add new](images/add-new.png).
+4. Set your unavailable window by selecting the frequency, duration, and start time for the window.
+5. Click **Submit**.
+
+### Scheduling and approving updates
+{: #scheduleandapprove}
+
+After you set your preapproved maintenance windows, non-disruptive updates will be automatically scheduled during those times. Your explicit approval for these types of updates is not required. However, you can view the details for each maintenance update including what is being updated, how long the update will take, and when the update is scheduled. 
+
+To view the details for a non-disruptive update, complete the following steps:
+
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**.
+2. Identify any update rows that have **Customer Scheduling Required** set to **No**.
+3. Select the row for that update to view the details.
+
+A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the alloted 21-day maintenance window. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional time and dates for IBM to choose from when scheduling the update.
+
+For disruptive updates that do require your approval, complete the following steps:
+
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**.
+2. Identify any update rows that have **Customer Scheduling Required** set to **Yes**.
+3. Select the row for that update to review the details for the update including the update description, suggested date and time for the update, the affected components, and duration for the update.
+4. Select **Schedule and Approve**.
+5. Choose from the following options: **Suggested date**, **Alternative dates**, or **All preapproved windows**.
+6. Select **Submit**. 
+
+Based on your selection, the update is applied during the suggested date that you accepted, during one of your preapproved windows, or one of the alternative dates and times. When the schedule date for your update is finalized by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page.
+
+### Setting up a calendar feed for scheduled updates
+
+From the System Updates page, you can choose to track your update schedule by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg) and downloading the `.ics` file to import your scheduled updates into a calendar app of your choice:
 
 <ol>
 <li>Open your calendar app.</li>
@@ -139,6 +175,28 @@ From the Pending Updates page, you can choose to track your update schedule by c
 </ol>
 
 You can also extend the notification functionality for the Administration page by using event subscriptions to integrate with a web service of your choice. To set up an event notification subscription for an update or incident, see [Event subscriptions and notifications](index.html#oc_eventsubscription).
+
+## Viewing system information
+{: #oc_system}
+
+To view system information, click **ADMINISTRATION &gt; SYSTEM INFORMATION**.
+
+You can expand and view various sections about pending maintenance updates, general system information, and
+LDAP configuration details.
+
+### Pending system updates
+
+In the Updates section, you can see the number of pending
+update notifications that require action on your part. There are two types of maintenance updates that you might see:
+
+<dl>
+<dt>Non-disruptive updates</dt>
+<dd>A non-disruptive update does not affect your environment, your running applications, or your users' access to your applications. This update type does not require case-by-case approval. These updates are applied in the preapproved, available maintenance windows that you set from the System Updates page.</dd>
+<dt>Disruptive updates</dt>
+<dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You have the ability to schedule and approve each of these maintenance updates within the allotted 21-day maintenance window to ensure that the update is not applied during critical business hours. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional times and dates for IBM to choose from when applying the update.</dd>
+</dl>
+
+For more information about setting preapproved maintenance windows, setting specific unavailable dates for maintenance, and setting up a calendar feed, see [Maintenance updates](index.html#oc_schedulemaintenance).
 
 ### General system information
 
@@ -154,10 +212,10 @@ In the General Information section, you can view the following information:
 In the LDAP Configuration Details section, you can select the LDAP
 server, and view information about user and group mappings. If you are using {{site.data.keyword.IBM}} WebID, it is indicated in this section.
 
-## Viewing usage information
+## Viewing usage and reports
 {: #oc_resource}
 
-You can view different types of usage information for your local or dedicated instance and {{site.data.keyword.Bluemix_notm}} account:
+You can view different types of usage information for your local or dedicated instance and {{site.data.keyword.Bluemix_notm}} account. You can also download and view security reports and logs for your {{site.data.keyword.Bluemix_notm}} instance.
 
 - Resource information including disk space, CPU usage, network usage, and average response times. See [Resource usage](index.html#resourceusage).
 - Account usage per org including number of runtime apps with usage, total number of runtime GB-hours, and the number of service instances with usage. See [Account usage](index.html#accountusage).
@@ -167,7 +225,7 @@ You can view different types of usage information for your local or dedicated in
 ### Resource usage
 {: #resourceusage}
 
-To view resource information, click **ADMINISTRATION &gt; USAGE**.
+To view resource usage information, click **ADMINISTRATION &gt; USAGE**.
 
 In the Resource Monitoring section, you can view the following
 information:
@@ -237,13 +295,10 @@ To view usage per org, click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**
 
 For more information about viewing usage per org, adjusting quota plans, and managing your orgs, see [Administering organizations](../admin/index.html#oc_organizations).
 
-## Viewing reports
+### Reports
 {: #oc_report}
 
-You can view security reports and logs, such as DataPower&trade;, firewall, and login audit, for
-your {{site.data.keyword.Bluemix_notm}} instance.
-
-To view reports and logs, click **ADMINISTRATION &gt; REPORTS AND LOGS**.
+You can view security reports and logs, such as DataPower&trade;, firewall, and login audit, for your {{site.data.keyword.Bluemix_notm}} instance. To view reports and logs, click **ADMINISTRATION &gt; REPORTS AND LOGS**.
 
 Select from the following options:
 
@@ -465,6 +520,16 @@ selecting multiple names.
 4. Click <strong>CREATE ORGANIZATION</strong> to save your changes and
 create the org.
 
+### Creating spaces
+
+You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
+
+1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+2. Select the org that you want to add a space to.
+3. Click **Create a Space**.
+4. Enter a space name.
+5. Click **Create**.
+
 ### Quota monitoring
 
 In the Quota Monitoring section, you can expand the section and view the following information:
@@ -554,7 +619,7 @@ Permissions for each user are displayed. Permissions can be the following: None,
 `Admin`, `Catalog`, `Login`,
 `Reports`, and `Users`. Permissions can be enabled, or the
 user can be given `view` or `write` access for that
-permission, as represented by icons. See [Permissions](#permissions) for descriptions
+permission, as represented by icons. See [Permissions](index.html#permissions) for descriptions
 of each type and explanation of the icons.
 
 ### Working with users
@@ -581,6 +646,16 @@ field.
   3. Next, from the **Org** field, choose the org to which you want to add the user group by entering the org name and selecting it from the populated list.
   4. To add the user group to the selected org, click **Add Users**.
   **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
+
+* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user.
+
+  1. Click **Import users**.
+  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, **Organization**.  There are two optional columns that are also included in the template: **First Name** and **Last Name**.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for your importing users.
+  4. Save your file, and click **Upload file**.
+ 
+
+  **Note**: Enter user IDs that match the values used in your user registry. The columns within your spreadsheet can be in any order as long as you have all of the required columns. You receive a confirmation message stating that all users were added, if the import was successful. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
 * Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
 
@@ -622,6 +697,7 @@ To add or remove a user from an org, select from the following options:
 
 * To add a user to an org, select the user name from the table to access the **Edit User** screen. Then, use the search field to locate an org, and select the org from the list, and then click **Save**.
 * To remove a user from an org, select the user name from the table to access the **Edit User** screen. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
+
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}

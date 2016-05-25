@@ -29,9 +29,17 @@ Liberty beta features available in Bluemix
 <tr>
 <td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
+<td>logmetCollector-1.0</td>
 <td>osgiBundle-1.0</td>
-<td>passwordUtilities-1.0</td>
 </tr>
+
+<tr>
+<td>passwordUtilities-1.0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
 </table>
 
 In order to use the Liberty beta features in Bluemix you will need to do either:
@@ -49,16 +57,16 @@ In order to use the Liberty beta features in Bluemix you will need to do either:
 
 2.  Set the IBM_LIBERTY_BETA environment variable to **true**. This variable directs the Liberty buildpack to install and enable the beta features for your application.  See the following examples:
   * using the cf command line tool:
-<pre>
+```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+```
 {: #codeblock}
 
   * or, using the manifest.yml file:
-<pre>
+```
       env:
           IBM_LIBERTY_BETA: "true"
-</pre>
+```
 {: #codeblock}
 
 # rellinks

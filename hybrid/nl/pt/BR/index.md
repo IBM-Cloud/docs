@@ -33,7 +33,7 @@ O {{site.data.keyword.Bluemix_notm}} Dedicated é uma nuvem particular com hardw
 
 ## Local
 
-Com o {{site.data.keyword.Bluemix_notm}} Local, é possível tirar vantagem do valor verdadeiro de uma nuvem particular dentro de seu datacenter. O {{site.data.keyword.Bluemix_notm}} Local é entregue como um serviço e em colaboração constante com sua equipe de TI. Ele também permite alavancar mainframes, arquitetura orientada a serviços, processos e dados existentes em uma plataforma de nuvem moderna. Saiba mais sobre o [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html).
+Com o {{site.data.keyword.Bluemix_notm}} Local, é possível tirar vantagem do valor verdadeiro de uma nuvem particular dentro de seu datacenter.  O {{site.data.keyword.Bluemix_notm}} Local é entregue como um serviço e em colaboração constante com sua equipe de TI. Ele também permite alavancar mainframes, arquitetura orientada a serviços, processos e dados existentes em uma plataforma de nuvem moderna. Saiba mais sobre o [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html).
 
 # rellinks
 ## gerais

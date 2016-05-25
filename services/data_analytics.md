@@ -5,10 +5,9 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc} 
 
-# Data and Analytics
+# Data & Analytics
 {: #data_analytics}
 
 *Last updated: 9 March 2016*

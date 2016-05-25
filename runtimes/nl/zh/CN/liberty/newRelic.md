@@ -36,15 +36,12 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 {: #add_new_relic}
 
 对于 IBM Bluemix 中要使用 New Relic 监视的现有 Java 应用程序，请执行以下步骤。
-1. 在 IBM Bluemix 中创建 New Relic 服务实例。
-<pre>
-    $ cf create-service newrelic standard mynewrelic
-</pre>
+1. 在 IBM Bluemix 中创建 New Relic 服务实例。```
+    $ cf create-service newrelic standard mynewrelic```
 {: #codeblock}
 
-2. 使用 New Relic 服务将应用程序部署到 IBM Bluemix。请参阅以下样本应用程序清单：
-<pre>
-        &dash;&dash;&dash;
+2. 使用 New Relic 服务将应用程序部署到 IBM Bluemix。请参阅以下样本应用程序清单：```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -53,8 +50,7 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic```
 {: #codeblock}
 
 3. 直接从应用程序的 IBM Bluemix 仪表板访问应用程序的 New Relic 仪表板。
@@ -70,9 +66,8 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 ```
 {: #codeblock}
 
-2. 使用用户提供的 New Relic 服务实例将应用程序部署到 IBM Bluemix。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：
-<pre>
-        &dash;&dash;&dash;
+2. 使用用户提供的 New Relic 服务实例将应用程序部署到 IBM Bluemix。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -81,8 +76,7 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic```
 {: #codeblock}
 
 3. 访问 New Relic 仪表板来查看应用程序度量值。

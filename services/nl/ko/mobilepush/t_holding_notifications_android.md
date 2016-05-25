@@ -19,5 +19,5 @@ protected void onPause() {
     if (push != null) {
 push.hold();
     }
-}
+} 
 ```

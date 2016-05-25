@@ -18,17 +18,17 @@ copyright:
 
 # 使用及建立 {{site.data.keyword.openwhisk_short}} 套件
 {: #openwhisk_packages}
-*前次更新：2016 年 2 月 22 日*
+*前次更新：2016 年 3 月 28 日*
 
 在 {{site.data.keyword.openwhisk}} 中，您可以使用套件以將一組相關動作組合在一起，並與其他人共用。
 
-套件可以包括*動作*及*資訊來源*。
+套件可以包括*動作* 及*資訊來源*。
 - 動作是在 {{site.data.keyword.openwhisk_short}} 上執行的程式碼片段。例如，Cloudant 套件包括在 Cloudant 資料庫中讀取及寫入記錄的動作。
 - 資訊來源是用來配置外部事件來源，以發動觸發程式事件。例如，「警示」套件包括可依指定的頻率發動觸發程式的資訊來源。
 
 每個 {{site.data.keyword.openwhisk_short}} 實體（包括套件）都屬於*名稱空間*，而實體的完整名稱是 `/namespaceName[/packageName]/entityName`。如需相關資訊，請參閱[命名準則](./openwhisk_reference.html#openwhisk_entities)。
 
-下列各節說明如何瀏覽套件，以及如何使用其中的觸發程式及資訊來源。此外，如果是對將其專屬套件提出至型錄感興趣的使用者，請閱讀有關建立及共用套件的各小節。
+下列各節說明如何瀏覽套件，以及如何使用其中的觸發程式及資訊來源。此外，如果是對將自己的套件提出至型錄感興趣的使用者，請閱讀有關建立及共用套件的各小節。
 
 ## 瀏覽套件
 {: #openwhisk_packagedisplay}
@@ -456,11 +456,11 @@ copyright:
 1. 與所有使用者共用套件：
 
   ```
-  wsk package update sample --shared
+  wsk package update custom --shared
   ```
   {: pre}
   ```
-  ok: updated package sample
+  ok: updated package custom
   ```
   {: screen}
 

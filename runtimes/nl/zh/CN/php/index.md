@@ -24,7 +24,7 @@ copyright:
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}
@@ -37,8 +37,7 @@ copyright:
 }
 ```
 {: codeblock}
-有关更多信息，请参阅 [Composer
-Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages)。
+有关更多信息，请参阅 [Composer Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages)。
 
 如果未指定版本，缺省情况下会选择 V5.5.30。
 

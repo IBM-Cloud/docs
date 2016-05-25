@@ -14,7 +14,8 @@ copyright:
 {: #gettingstarted}
 *上次更新时间：2016 年 3 月 21 日*
 
-使用 {{site.data.keyword.amafull}} 服务，将安全和监视功能添加到移动应用程序。您可以配置客户端认证和身份提供者，以便用户可使用其现有 Google 或 Facebook 帐户登录应用程序。此外，还可以向应用程序添加监视功能，以同时支持客户机日志记录和使用情况统计信息。{:shortdesc}
+使用 {{site.data.keyword.amafull}} 服务，将安全和监视功能添加到移动应用程序。您可以配置客户端认证和身份提供者，以便用户可使用其现有 Google 或 Facebook 帐户登录应用程序。此外，还可以向应用程序添加监视功能，以同时支持客户机日志记录和使用情况统计信息。
+{:shortdesc}
 
 **注：**{{site.data.keyword.amashort}} 服务先前称为 Advanced Mobile Access。
 
@@ -51,6 +52,8 @@ copyright:
 * [核心 SDK（Cordova 插件）](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [核心 SDK (iOS - Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 * [核心 SDK (iOS - Objective-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [定制认证 - 简单样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [定制认证 - 高级样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## API 参考
 {: api}

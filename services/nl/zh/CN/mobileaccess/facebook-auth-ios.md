@@ -254,7 +254,7 @@ if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -285,3 +285,26 @@ if (error){
 
 1. 	请求成功后，将在 Xcode 控制台中显示以下输出：
 	![图像](images/ios-facebook-login-success.png)
+
+
+
+	通过添加以下代码，您还可以添加注销功能：
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 Mobile Client Access 权限，以使用 Facebook 进行认证。
+
+	要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
+您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。
+

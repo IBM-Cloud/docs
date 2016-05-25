@@ -56,11 +56,10 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 
  Initialisez le SDK en passant les paramètres `applicationRoute` et `applicationGUID`. En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
-1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. 
-Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
+1. Récupérez les valeurs de ces paramètres pour votre application. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones **Route** et
 **Identificateur global unique de l'application**.
 
-1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}. 
+1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}.
 
  ```Swift
  import BMSCore
@@ -78,12 +77,13 @@ la section **Options pour application mobile** dans le tableau de bord {{site.da
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Initialisez le SDK client.  
-BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  return true
-      }```
+      }
+ ```
 
 ## Envoi d'une demande au système de back end mobile
 {: #request}
@@ -91,8 +91,7 @@ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUI
 Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
 1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre système de back end mobile. Ouvrez l'URL suivante :
-`http://{applicationRoute}/protected`.
-Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
+`http://{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
@@ -108,7 +107,8 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
      }
  }
 
- request.sendWithCompletionHandler(callBack)```
+ request.sendWithCompletionHandler(callBack)
+ ```
 
 1.  Lorsque votre demande aboutit, la sortie suivante figure dans la console Xcode :
 

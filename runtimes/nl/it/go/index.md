@@ -38,13 +38,13 @@ Puoi specificare la versione di Go che deve essere utilizzata dalla tua applicaz
 }
 ```
 {: codeblock}
-Per ulteriori informazioni, consulta [godep](https://github.com/tools/godep).
+Per ulteriori informazioni, consulta [godep](https://github.com/tools/godep){: new_window}.
 
 ### Versioni disponibili:
 {: #available_versions}
 
 Le seguenti versioni Go sono disponibili nel
-[pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2)
+[pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window}
 attualmente installato in {{site.data.keyword.Bluemix}}:
 
 * 1.2.1
@@ -57,10 +57,10 @@ attualmente installato in {{site.data.keyword.Bluemix}}:
 * 1.5.1
 
 Se la tua applicazione richiede una versione di Go che non è elencata, puoi utilizzare
-il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git)
+il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window}
 esterno per distribuire l'applicazione.
 
 # rellinks
 ## general
-* [GoLang](http://golang.org/)
-* [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack)
+* [GoLang](http://golang.org/){: new_window}
+* [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

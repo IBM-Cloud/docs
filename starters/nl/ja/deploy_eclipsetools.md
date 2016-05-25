@@ -23,8 +23,7 @@ copyright:
   1. まだ Eclipse を持っていない場合は、Eclipse Luna for Java EE Developers (4.4.1) をインストールします。
   2. この下のボタンをクリックしたままにして、そのボタンを Eclipse ツールバーにドラッグ・アンド・ドロップしてから、プロンプトに従って IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} をインストールします。
   
-  ![実行中の Eclipse Luna ワークスペースにドラッグ・アンド・ドロップして IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}} をインストールします。](images/installbutton.png)
+  ![実行中の Eclipse Luna ワークスペースにドラッグ・アンド・ドロップして IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png) をインストールします。
 
   3. {: download} スターター・コードをダウンロードし、**「ファイル」>「既存プロジェクトをワークスペースへインポート」>「アーカイブ・ファイル」**と移動して、そのスターター・コードを Eclipse にインポートします。
   

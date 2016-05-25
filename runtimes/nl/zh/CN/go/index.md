@@ -14,8 +14,7 @@ copyright:
 {: #go_runtime}
 *上次更新时间：2016 年 3 月 16 日*
 
-{{site.data.keyword.Bluemix}} 上的 Go 运行时由 go_buildpack 提供支持。
-go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Go 运行时由 go_buildpack 提供支持。go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
 
 如果您的应用程序中包含名为 *.go 的文件，那么将使用 go_buildpack。
@@ -38,14 +37,12 @@ go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
 }
 ```
 {: codeblock}
-有关更多信息，请参阅 [godep](https://github.com/tools/godep)。
+有关更多信息，请参阅 [godep](https://github.com/tools/godep){: new_window}。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的
-[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2) 内
-提供了以下 Go 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window} 内提供了以下 Go 版本：
 
 * 1.2.1
 * 1.2.2
@@ -56,9 +53,9 @@ go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
 * 1.5
 * 1.5.1
 
-如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git) 来部署应用程序。
+如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} 来部署应用程序。
 
 # 相关链接
 ## 常规
-* [GoLang](http://golang.org/)
-* [用于 Go 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/go-buildpack)
+* [GoLang](http://golang.org/){: new_window}
+* [用于 Go 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/go-buildpack){: new_window}

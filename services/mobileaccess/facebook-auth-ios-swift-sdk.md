@@ -258,4 +258,4 @@ FacebookAuthenticationManager.sharedInstance.logout(callBack)
 
  To switch users, you must call this code and the user must logout from Facebook in their browser.
 
- Passing ```callBack``` to the logout function is optional. You can also pass `nil`.
+ Passing `callBack` to the logout function is optional. You can also pass `nil`.

@@ -6,7 +6,7 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configurar badge, som, carga útil e badge iOS
+# Configure o som, a carga útil e o badge do iOS
 
 {: #badge-sound-payload}
 
@@ -15,8 +15,7 @@ Configure um badge iOS, som e carga útil JSON adicional.
 1. No painel Notificações push, vá para a guia
                         **Notificações**.
 2. Vá para a seção **Campos opcionais**
-para configurar os seguintes recursos de notificação push. badge ios, som e carga útil adicional.
-
+para configurar os seguintes recursos de notificação push. 
 	a. **Badge iOS** - Para dispositivos iOS, o número a ser
 exibido como badge do ícone de app. Se essa propriedade
 estiver ausente, o badge não será mudado. Para remover o badge,

@@ -219,3 +219,13 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
 1. 	Quando la tua richiesta ha esito positivo, nello strumento LogCat è presente il seguente output:
 
 	![immagine](images/android-custom-login-success.png)
+
+1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
+
+ Il valore per `listener` passato alla funzione di disconnessione può essere null.

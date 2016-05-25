@@ -19,9 +19,9 @@ copyright:
 
 1. 使用 PUT ApplicationID Settings REST API 呼叫
 2. 在 JSON 主體中，使用 [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} API 呼叫來確認已切換模式。預期的回應為 "mode": "PRODUCTION"
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

@@ -13,7 +13,7 @@ Cette section explique comment installer et utiliser le logiciel SDK Push du cli
 Le logiciel SDK Push de Bluemix Mobile Services peut être ajouté à l'aide de Gradle. Gradle télécharge automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application Android. Assurez-vous de configurer correctement Android Studio et le logiciel SDK Android Studio. Pour plus d'informations sur la configuration de votre système,
 voir [Android Studio Overview](https://developer.android.com/tools/studio/index.html). Pour plus d'informations sur Gradle, voir [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. Dans Android Studio, après avoir créé et ouvert une application mobile, ouvrez le fichier **build.gradle** de votre application. Ensuite, ajoutez les dépendances suivantes à votre application mobile. Ces instructions d'importation sont requises pour les fragments de code répertoriés ci-après. 
+1. Dans Android Studio, après avoir créé et ouvert une application mobile, ouvrez le fichier **build.gradle** de votre application. Ensuite, ajoutez les dépendances suivantes à votre application mobile. Ces instructions d'importation sont requises pour les fragments de code répertoriés ci-après.
 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -26,7 +26,6 @@ voir [Android Studio Overview](https://developer.android.com/tools/studio/index.
 
 
 1. Ajoutez les dépendances ci-après à votre application mobile. Les lignes suivantes ajoutent le logiciel SDK Push du client Bluemix Mobile Services et le logiciel SDK des services Google Play à vos dépendances de compilation :
-
 
 	```
 	dependencies {
@@ -47,7 +46,7 @@ voir [Android Studio Overview](https://developer.android.com/tools/studio/index.
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	```
 
-	Vous trouverez davantage d'informations sur les [droits Android](http://developer.android.com/guide/topics/security/permissions.html) ici. 
+	Vous trouverez davantage d'informations sur les [droits Android](http://developer.android.com/guide/topics/security/permissions.html) ici.
 
 1. Ajoutez les paramètres d'intention de notification pour l'activité. Ce paramètre démarre l'application lorsque l'utilisateur clique sur la
 notification reçue dans la zone de notification.

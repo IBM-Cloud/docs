@@ -80,7 +80,7 @@ Variáveis de ambiente suportadas pelo Liberty for Java.
 
 <tr>
 <td>JVM_ARGS</td>
-<td>Configure os [argumentos da JVM](customizingJRE.html) </td>
+<td>Configure os [argumentos da JVM](customizingJRE.html)</td>
 </tr>
 
 <tr>

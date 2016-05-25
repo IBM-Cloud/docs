@@ -8,7 +8,7 @@ Copyright :
 # Abonnement à des balises et désabonnement
 {: #Subscribe_tags}
 
-Utilisez les fragments de code ci-après pour permettre à vos périphériques de s'abonner à une balise et de s'en désabonner. 
+Utilisez les fragments de code ci-après pour permettre à vos périphériques de s'abonner à une balise et de s'en désabonner.
 
 ## Android
 
@@ -74,7 +74,7 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 }];
 ```
 
-Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise. 
+Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 
 ```
 [push unsubscribeFromTags:tags completionHandler:
@@ -99,17 +99,17 @@ Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
+	if (error != nil) { 
 		//erreur lors de l'abonnement à des balises
 	} else {
 		//l'abonnement aux balises var a abouti (subStatus = response.subscribeStatus();)
 	}
-}
+} 
 ```
 
 **Désabonnement de balises**
 
-Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise. 
+Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in

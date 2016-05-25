@@ -1,3 +1,9 @@
+---
+
+copyright:
+  years: 2015, 2016
+
+---
 
 {:tsSymptoms: .tsSymptoms} 
 {:tsCauses: .tsCauses} 
@@ -9,7 +15,7 @@
 # Fehlerbehebung für den Zugriff auf {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Letzte Aktualisierung: 6. Januar 2015*
+*Letzte Aktualisierung: 13. April 2016*
 
 Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix}} kann sein, dass sich ein Benutzer nicht an {{site.data.keyword.Bluemix_notm}} anmelden kann oder dass sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
@@ -54,11 +60,11 @@ Wenn Sie versuchen, Ihre App oder Services auf der Detailsseite der App zu prüf
 `Es gibt nicht gespeicherte Änderungen auf Seite 'Name der App'. Speichern oder verwerfen Sie die Änderungen.`
 
 
-Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie von der Seite wegnavigieren.
+Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie von der Seite wegnavigieren. 
 {: tsCauses}
 
 
-Schließen Sie das Nachrichtenfenster und klicken Sie auf die Schaltfläche **ZURÜCKSETZEN** in Ihrem Laufzeitfenster.
+Schließen Sie das Nachrichtenfenster und klicken Sie auf die Schaltfläche **ZURÜCKSETZEN** in Ihrem Laufzeitfenster. 
 {: tsResolve} 
 
 
@@ -94,7 +100,7 @@ einer {{site.data.keyword.Bluemix_notm}}-Region
 den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
 den folgenden Befehl eingeben:
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -109,6 +115,8 @@ Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert 
 {: tsSymptoms}
 
 <code>Your account is pending. (Ihr Konto befindet sich im Zustand 'Anstehend'.) Please wait up to 24 hours for email confirmation and also check your spam folder. (Warten Sie bitte maximal 24 Stunden auf die E-Mail-Bestätigung und überprüfen Sie auch Ihren Spamordner.) Wenn Sie trotzdem keine E-Mail-Bestätigung erhalten haben, wenden Sie sich für weitere Hilfe an den <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix-Support</a>.</code>
+
+
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, erhalten Sie eine Bestätigungs-E-Mail. Sie müssen auf den Link in dieser Bestätigungs-E-Mail klicken, um den Registrierungsprozess abzuschließen.
 {: tsCauses} 
 
@@ -259,6 +267,86 @@ oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie die
 
 
 
+## Apps können nicht in den Debugmodus versetzt werden
+{: #ts_debug}
+
+Möglicherweise können Sie den Debugmodus nicht aktivieren, wenn die JVM-Version 8 oder eine frühere Version verwendet wird (JVM = Java Virtual Machine). 
+
+
+Wenn Sie die Option zum Aktivieren des Anwendungsdebuggings**** auswählen, versuchen die Tools, die Anwendung in den Debugmodus zu versetzen. Daraufhin startet die Eclipse-Workbench eine Debugsitzung. Wenn die Tools den Debugmodus erfolgreich aktivieren können, wird als Status für die Webanwendung `Updating mode` (Aktualisierungsmodus), `Developing` (Entwicklung) und `Debugging` (Fehlerbehebung) angezeigt.
+{: tsSymptoms}
+
+Wenn die Tools den Debugmodus jedoch nicht aktivieren können, wird als Status für die Webanwendung lediglich `Updating mode` (Aktualisierungsmodus) und `Developing` (Entwicklung) ohne die Angabe `Debugging` (Fehlerbehebung) angezeigt. Außerdem zeigen die Tools möglicherweise die folgende Fehlernachricht in der Konsolenansicht an:
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 more
+```
+ 
+
+Die folgende JVM-Versionen (JVM = Java Virtual Machine) können keine Debugsitzung erstellen: IBM JVM 7, IBM JVM 8 sowie frühere Versionen als Oracle JVM 8.
+{: tsCauses}
+
+Wenn Ihre Workbench eine dieser JVM-Versionen verwendet, treten möglicherweise Probleme beim Erstellen einer Debugsitzung auf. Ihre Workbench verwendet in der Regel dieselbe JVM-Version, die auf Ihrem lokalen Computer als System-JVM installiert ist. Ihre System-JVM ist nicht identisch mit der JVM Ihrer aktiven Bluemix-Java-Anwendung. Die Bluemix-Java-Anwendung wird fast immer unter IBM JVM und in manchen Fällen unter OpenJDK JVM ausgeführt.
+  
+
+Führen Sie die folgenden Schritte aus, um zu überprüfen, welche Java-Version von IBM Eclipse Tools for Bluemix verwendet wird:
+{: tsResolve}
+
+  1. Wählen Sie in IBM Eclipse Tools for Bluemix select **Hilfe** > **Informationen zu Eclipse** > **Installationsdetails** > **Konfiguration** aus.
+  2. Suchen Sie in der Liste die Eigenschaft `eclipse.vm`. Die folgende Zeile enthält ein Beispiel für die Eigenschaft `eclipse.vm`:
+	
+	```
+	eclipse.vm=C:\Programme\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. Geben Sie in der Befehlszeile `java -version` im Verzeichnis `bin` Ihrer Java-Installation ein. Die Informationen zu Ihrer IBM JVM-Version werden angezeigt.
+
+Wenn Ihre Workbench IBM JVM 7 oder 8 verwendet bzw. eine frühere Version als Oracle JVM 8, führen Sie die folgenden Schritte aus, um zu Oracle JVM 8 zu wechseln:
+
+  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie in [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}).
+  2. Starten Sie Eclipse erneut.
+  3. Überprüfen Sie, ob die Eigenschaft `eclipse.vm` auf Ihre neue Oracle JVM 8-Installation verweist.
+
+
+
+
+
+
 
 ## Angeforderte Aktionen konnten nicht ausgeführt werden
 {: #ts_authority}
@@ -267,7 +355,7 @@ Möglicherweise können Sie die Aktionen ohne entsprechende Zugriffsberechtigung
 
  
 
-Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz auszuführen, können Sie die angeforderten Aktionen nicht abschließen und es wird eine der folgenden Fehlernachrichten angezeigt:
+Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz auszuführen, können Sie die angeforderten Aktionen nicht abschließen und es wird eine der folgenden Fehlernachrichten angezeigt: 
 {: tsSymptoms}
 
 `BXNUI0514E: Sie sind kein Entwickler für die Bereiche in der Organisation <Organisationsname>.`
@@ -277,13 +365,15 @@ Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz ausz
 
  
 
-Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen der Aktionen. {: tsCauses}
+Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen der Aktionen. 
+{: tsCauses}
 
   
 
-Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: {: tsResolve}
+Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
+{: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie unter [Organisation verwalten](../acctmgmt/index.html#mngorg){: new_window}.
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie unter [Organisationen verwalten](../admin/adminpublic.html#orgmng){: new_window}.
  
 
  
@@ -301,7 +391,7 @@ Die fest codierten Berechtigungsnachweise in der App sind möglicherweise nicht 
 {: tsCauses}
 
 
-Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES. Die Methoden für die Verwendung von Verbindungsparametern aus der Umgebungsvariablen VCAP_SERVICES variieren abhängig von den Programmsprachen. Für Node.js-Apps können Sie beispielsweise den folgenden Befehl verwenden:
+Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES. Die Methoden für die Verwendung von Verbindungsparametern aus der Umgebungsvariablen VCAP_SERVICES variieren abhängig von den Programmsprachen. Für Node.js-Apps können Sie beispielsweise den folgenden Befehl verwenden: 
 {: tsResolve}
 
 ```
@@ -322,7 +412,7 @@ Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwe
 Wird eine nicht unterstützte Facette auf Ihr Eclipse-Projekt angewendet,
 können Sie Ihre Apps möglicherweise
 nicht mithilfe von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}}
-bereitstellen.  
+bereitstellen. 
 
  
 
@@ -438,7 +528,7 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
   * Verwenden Sie die Option **-k** in Kombination mit dem Befehl `cf push`,
 wenn Sie Ihre App mit Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen:
     ```
-	cf push appname -k <disk_quota>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 	
@@ -519,8 +609,7 @@ Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine Anwend
 Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms}
 
-`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your
-organization's services limit." (Cloud Foundry-Nachricht: "Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
+`BXNUI2032E: Die Ressource <service_instances> wurde nicht erstellt. Während der Kontaktaufnahme mit Cloud Foundry zum Erstellen der Ressource ist ein Fehler aufgetreten. Cloud Foundry-Nachricht: "You have exceeded your organization's services limit." ("Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
 
 
 
@@ -541,7 +630,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise Ihre Anwendung, an die die Serviceinstanz gebunden war, erneut bereitstellen, indem Sie `cf restage <appname>` eingeben.
-  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../acctmgmt/bill_usage.html#bil_plan){: new_window}.
+  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](../pricing/index.html#changing){: new_window}.
 
   
   
@@ -566,11 +655,11 @@ Wenn Sie die ausführbare Datei per Push-Operation an {{site.data.keyword.Bluemi
 {: tsResolve}
 
 ```
-cf push -c <startbefehl> -b <null-buildpack>
+cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 Beispiel:
 ```
-cf push -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
@@ -596,7 +685,7 @@ Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speicherme
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Anwendungen verwendeten Speicherplatz verringern.
 {: tsResolve} 
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../acctmgmt/bill_usage.html#bil_plan){: new_window}. 
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../pricing/index.html#pay-accounts){: new_window}. 
   * Zum Verringern des von Ihren Anwendungen verwendeten Speicherplatzes verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die cf-Befehlszeilenschnittstelle.
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 	  1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre Anwendung aus. Die Seite mit den Anwendungsdetails wird geöffnet.
@@ -609,7 +698,7 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.
       2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
 	  ```
-	  cf push <appname> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
       ```
 	  3. Starten Sie Ihre Anwendung erneut, damit die Änderungen wirksam werden.
 
@@ -638,7 +727,7 @@ Sie können die Anwendung manuell starten, indem Sie den folgenden Befehl in die
 {: tsResolve}
 
 ```
-cf push <App-Name>
+cf push <appname> -p <app_path>
 ```
 Darüber hinaus können Sie die Anwendung so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird. 
 
@@ -741,7 +830,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 cf api https://api.eu-gb.bluemix.net
 ```
 Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#toolsinstall){: new_window}.  
+der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -774,7 +863,7 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
 	```
   * Wenn Sie die Anwendung über die Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` mit der Option **-n**. 
     ```
-    cf push <appname> -n <hostname>
+    cf push <appname> -p <app_path> -n <hostname>
     ```
 
 
@@ -881,7 +970,7 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
   * Geben Sie unter Verwendung einer der folgenden Methoden den Startbefehl an: 
       * Mithilfe der Befehlszeilenschnittstelle 'cf'. Beispiel: 
         ```
-		cf push MyUniqueNodejs01 -c "node app.js"
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
 	  * Mithilfe der Datei [package.json](https://docs.npmjs.com/json){: new_window}. Beispiel:
 	    ```
@@ -966,8 +1055,7 @@ Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Id
 
  
 
-Mit dem Befehl [git update](http://git-scm.com/docs/git-update-index){: new_window}
-können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
+Mit dem Befehl [git update](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 	
 	
@@ -990,7 +1078,7 @@ Dieses Problem kann auftreten, weil für DevOps Services die Datei `manifest.yml
  
 
 Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
-[Abschnitt zum Anwendungsmanifest](../manageapps/deployingapps.html#appmanifest){: new_window}.
+[Abschnitt zum Anwendungsmanifest](../manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1023,7 +1111,7 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
   ```
   * Wenn Sie die Anwendung in einer Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` und geben Sie das angepasste Buildpack mit der Option **-b** an. Beispiel:
     ```
-	cf push appname -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
 	
   
@@ -1044,7 +1132,8 @@ Wenn Sie feststellen, dass Ihr DevOps Services-Projekt nicht erstellt werden kan
 
 
 
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber der Schritt zum Erstellen eines Projekts wird nicht erfolgreich abgeschlossen. {: tsSymptoms} 
+Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber der Schritt zum Erstellen eines Projekts wird nicht erfolgreich abgeschlossen.
+{: tsSymptoms} 
 
 
 Möglicherweise ist Ihr {{site.data.keyword.Bluemix_notm}}-Konto abgelaufen.
@@ -1064,8 +1153,7 @@ Wenn Sie feststellen, dass das Git-Repository nicht geklont wurde, besteht mögl
 
 
 
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber das Git-Repository wird nicht gefunden und kann in DevOps Services nicht geklont werden. Der Schritt zum Klonen eines Repositorys wird nicht erfolgreich abgeschlossen.
-Die App kann daher nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. 
+Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber das Git-Repository wird nicht gefunden und kann in DevOps Services nicht geklont werden. Der Schritt zum Klonen eines Repositorys wird nicht erfolgreich abgeschlossen. Die App kann daher nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. 
 {: tsSymptoms} 
 
 Dieses Problem kann aufgrund folgender Ursachen auftreten:
@@ -1079,8 +1167,8 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 {: tsResolve}
 
   * Überprüfen Sie, dass das Git-Repository vorhanden ist, dass der öffentliche Zugriff möglich ist und dass die URL richtig ist.
-  * Überprüfen Sie, dass das Snippet keine Fehler im HTML- oder Markdown-Code enthält. 
-  * Wenn Sonderzeichen, Abfrageparameter oder Fragmente ein Problem mit der URL des Git-Repositorys verursachen, codieren Sie die URL im Schaltflächen-Snippet. 
+  * Überprüfen Sie, dass das Snippet keine Fehler im HTML- oder Markdown-Code enthält.
+  * Wenn Sonderzeichen, Abfrageparameter oder Fragmente ein Problem mit der URL des Git-Repositorys verursachen, codieren Sie die URL im Schaltflächen-Snippet.
   
 
   
@@ -1092,8 +1180,7 @@ Wenn Sie feststellen, dass die App nicht bereitgestellt wurde, bestehen möglich
      
 
 
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen** und das Git-Repository wird in DevOps Services geklont, die App wird jedoch nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt. 
-Der Schritt für die Bereitstellung in Bluemix wird nicht erfolgreich abgeschlossen.
+Sie klicken auf die Schaltfläche **In Bluemix bereitstellen** und das Git-Repository wird in DevOps Services geklont, die App wird jedoch nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt. Der Schritt für die Bereitstellung in Bluemix wird nicht erfolgreich abgeschlossen.
 {: tsSymptoms} 
 
 Dieses Problem kann aufgrund folgender Ursachen auftreten:
@@ -1101,9 +1188,10 @@ Dieses Problem kann aufgrund folgender Ursachen auftreten:
 
   * Möglicherweise ist in Ihrem {{site.data.keyword.Bluemix_notm}}-Bereich nicht ausreichend Speicherplatz zum Bereitstellen einer App vorhanden. 
   * Möglicherweise wurde ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert.
-  * Möglicherweise ist ein erforderlicher Service in der Datei `manifest.yml` deklariert, aber der Service befindet sich bereits im Zielbereich. 
-  * Möglicherweise besteht ein Problem mit dem Code im Repository. Zum Diagnostizieren des Problems überprüfen Sie den Build und stellen Sie Protokolle aus der Bereitstellung (Implementierung) bereit:
-  1. Wenn der Schritt für die Bereitstellung in Bluemix nicht erfolgreich ausgeführt wird, klicken Sie auf den Link im vorherigen Schritt zum Konfigurieren einer Pipeline, um 'Delivery Pipeline' zu öffnen. 
+  * Möglicherweise ist ein erforderlicher Service in der Datei `manifest.yml` deklariert, aber der Service befindet sich bereits im Zielbereich.
+  * Möglicherweise besteht ein Problem mit dem Code im Repository.
+Zum Diagnostizieren des Problems überprüfen Sie den Build und stellen Sie Protokolle aus der Bereitstellung (Implementierung) bereit:
+  1. Wenn der Schritt für die Bereitstellung in Bluemix nicht erfolgreich ausgeführt wird, klicken Sie auf den Link im vorherigen Schritt zum Konfigurieren einer Pipeline, um 'Delivery Pipeline' zu öffnen.
   2. Ermitteln Sie die fehlgeschlagene Build- oder Bereitstellungsphase.
   3. Klicken Sie in der fehlgeschlagenen Phase auf die Option **Protokolle und Verlauf anzeigen**.
   4. Suchen Sie nach der Fehlernachricht.
@@ -1112,7 +1200,7 @@ Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen:
 {: tsResolve}
 
   * Wenn in der Fehlernachricht angegeben wird, dass im {{site.data.keyword.Bluemix_notm}}-Bereich nicht genügend Speicherplatz für die Bereitstellung der App vorhanden ist, wählen Sie als Ziel einen anderen Bereich aus.
-  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert wurde, benachrichtigen Sie den Repository-Eigner darüber, dass der erforderliche Service hinzugefügt werden muss. 
+  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert wurde, benachrichtigen Sie den Repository-Eigner darüber, dass der erforderliche Service hinzugefügt werden muss.
   * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service im Zielbereich bereits vorhanden ist, wählen Sie aus, dass ein anderer Bereich verwendet werden soll.
   * Wenn in der Fehlernachricht angegeben wird, dass mit dem Build ein Problem besteht, beheben Sie alle Fehler im Code, die verhindern, dass für die App ein Build erfolgen kann. Zum Überprüfen, dass der Code keine Probleme enthält, erstellen Sie den Code mithilfe von Git-Befehlen:
     1. Klonen Sie das Git-Repository:
@@ -1156,7 +1244,7 @@ Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Be
 ## Konto ist inaktiv
 {: #ts_accnt_inactive}
 
-Wenn Ihr Konto inaktiv ist, können Sie keine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team. 
+Wenn Ihr Konto inaktiv ist, können Sie keine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team.
 
 
 
@@ -1175,7 +1263,7 @@ Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.b
 {: tsResolve}
 
   * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
-  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden. 
+  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
 
 
 
@@ -1221,7 +1309,7 @@ Es kann vorkommen, dass in {{site.data.keyword.Bluemix_notm}} von mehreren Anwen
 Dieses Problem kann auftreten, wenn Sie unterschiedlichen Anwendungen in einem Bereich dieselbe URL-Route zuweisen.
 {: tsCauses}
 
-Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen Sie als Domäne 'mynewapp.mybluemix.net' fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' in demselben Bereich per Push-Operation und legen für eine ihrer URL-Routen unter den Namen 'mynewapp.mybluemix.net' fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
+Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen Sie als Domäne 'mynewapp.stage1.mybluemix.net' fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' in demselben Bereich per Push-Operation und legen für eine ihrer URL-Routen unter den Namen 'mynewapp.stage1.mybluemix.net' fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
 
  
 
@@ -1319,12 +1407,12 @@ und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änd
   3. Führen Sie für Ihre App eine Push-Operation mit dem modifizierten Null-Buildpack durch,
 um den Inhalt des Cache zu löschen. Verwenden Sie hierzu den folgenden Befehl: Nach der Ausführung dieses Schritts ist der gesamte Inhalt des Cacheverzeichnisses Ihrer App gelöscht.
   ```
-  cf push appname -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. Führen Sie für Ihre App eine Push-Operation mit dem neuesten Buildpack durch,
 das Sie verwenden möchten. Geben Sie hierzu den folgenden Befehl ein: 
   ```
-  cf push appname -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

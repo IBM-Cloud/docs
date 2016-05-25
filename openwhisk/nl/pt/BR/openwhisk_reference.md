@@ -18,7 +18,7 @@ copyright:
 
 # Detalhes do sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-*Última atualização: 22 de fevereiro de 2016*
+*Última atualização: 14 de abril de 2016*
 
 As seções a seguir fornecem mais detalhes sobre o sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -32,7 +32,7 @@ Ações, acionadores e regras do {{site.data.keyword.openwhisk_short}} devem est
 
 Os pacotes podem conter ações e feeds. Um pacote não pode conter outro pacote, portanto, o aninhamento de pacote não é permitido. Além disso, as entidades não precisam estar contidas em um pacote.
 
-No Bluemix, um par organização+espaço corresponde a um namespace do {{site.data.keyword.openwhisk_short}}. Por exemplo, a organização `BobsOrg` e o espaço `dev` corresponderiam ao namespace do {{site.data.keyword.openwhisk_short}} `/BobsOrg_dev`.
+No Bluemix, um par de organização+espaço corresponde a um namespace do {{site.data.keyword.openwhisk_short}}. Por exemplo, a organização `BobsOrg` e o espaço `dev` corresponderiam ao namespace do {{site.data.keyword.openwhisk_short}} `/BobsOrg_dev`.
 
 É possível criar seus próprios namespaces se estiver autorizado a fazer isso. O namespace `/whisk.system` é reservado para entidades distribuídas com o sistema {{site.data.keyword.openwhisk_short}}.
 
@@ -88,7 +88,7 @@ segunda chamada poderá ser executada antes da primeira. Se
 as ações tiverem efeitos colaterais, elas poderão ser observadas em
 qualquer ordem.
 
-Além disso, não há garantia de execução de ações atomicamente. Duas ações podem ser executadas simultaneamente e seus efeitos secundários podem ser intercalados. O {{site.data.keyword.openwhisk_short}} não assegura qualquer modelo de consistência simultâneo específico para efeitos colaterais. Quaisquer efeitos colaterais de simultaneidade serão dependentes da implementação.
+Além disso, não há garantia de execução de ações atomicamente. Duas ações podem ser executadas simultaneamente e seus efeitos secundários podem ser intercalados. Quaisquer efeitos colaterais de simultaneidade serão dependentes da implementação.
 
 ### No máximo uma vez semântica
 {: #openwhisk_atmostonce}
@@ -97,8 +97,7 @@ O sistema suporta no máximo uma chamada de ações.
 
 Quando uma solicitação de chamada é recebida, o sistema registra a solicitação e despacha uma ativação.
 
-O sistema retorna um ID de ativação (no caso de uma chamada não de bloqueio) para confirmar que a chamada foi recebida.
-Observe que mesmo na ausência dessa resposta (talvez devido a uma conexão de rede interrompida), é possível que a chamada tenha sido recebida.
+O sistema retorna um ID de ativação (no caso de uma chamada não de bloqueio) para confirmar que a chamada foi recebida. Observe que mesmo na ausência dessa resposta (talvez devido a uma conexão de rede interrompida), é possível que a chamada tenha sido recebida.
 
 O sistema tenta chamar a ação uma vez, resultando em um dos quatro resultados a seguir:
 - *sucesso*: a chamada da ação foi concluída com sucesso.
@@ -123,7 +122,7 @@ Um registro de ativação contém os campos a seguir:
 - *logs*: uma matriz de sequências com os logs produzidos pela ação durante sua ativação. Cada elemento de matriz corresponde a uma saída de linha para stdout ou stderr pela ação e inclui a hora e o fluxo da saída do log. A estrutura é a seguinte: `'TIMESTAMP STREAM: LOG_OUTPUT'`.
 - *response*: um dicionário que define as chaves `success`, `status` e `result`:
   - *status*: o resultado de ativação, que pode ser um dos valores a seguir: "sucesso", "erro de aplicativo", "erro de desenvolvedor da ação", "erro interno do whisk".
-  - *success*: é `true` se e somente se o status for `"sucesso"`
+  - *success*: é `true` se, e somente se, o status for `"sucesso"`
 - *result*: um dicionário que contém o resultado da ativação. Se a ativação foi bem-sucedida, conterá o valor retornado pela ação. Se a ativação foi mal sucedida, `result` terá a chave `error`, geralmente com uma explicação da falha.
 
 
@@ -157,7 +156,7 @@ Os parâmetros de entrada de ação são passados como um objeto JSON como um pa
 A ativação de uma ação JavaScript é **síncrona** se a função principal sair sob uma das condições a seguir:
 
 - A função principal sai sem executar uma instrução `'return'`.
-- As função principal sai executando uma instrução `'return'` que retorna qualquer valor *exceto* `'whisk.async()'`.
+- A função principal sai executando uma instrução `'return'` que retorna qualquer valor *exceto* `'whisk.async()'`.
 
 Aqui estão dois exemplos de ações síncronas.
 
@@ -182,7 +181,7 @@ function main(params) {
 ```
 {: codeblock}
 
-A ativação de uma ação JavaScript é **assíncrona** se a função principal sair chamando a função `'return whisk.async();'`. Nesse caso, o sistema assume que a ação ainda está em execução, até que a ação execute um dos seguintes:
+A ativação de uma ação JavaScript é **assíncrona** se a função principal sair chamando a função `'return whisk.async();'`.  Nesse caso, o sistema assume que a ação ainda está em execução, até que a ação execute um dos seguintes:
 - ```return whisk.done();```
 - ```return whisk.error();```
 
@@ -214,7 +213,7 @@ function main() {
 ```
 {: codeblock}
 
-- Nesse caso, a função `main` deve retornar `whisk.async()`. Quando o resultado da ativação estiver disponível, a função `whisk.done()` deve ser chamada com o resultado passado como um objeto JSON. Isso é referido como uma ativação *assíncrona*.
+- Nesse caso, a função `main` deve retornar `whisk.async()`. Quando o resultado da ativação está disponível, a função `whisk.done()` deve ser chamada com o resultado passado como um objeto JSON. Isso é referido como uma ativação *assíncrona*.
 
 Observe que, independentemente de se uma ativação é síncrona ou assíncrona, a chamada da ação pode ser bloqueada ou sem bloqueio.
 
@@ -224,8 +223,7 @@ A função `whisk.invoke()` chama outra ação. Ela aceita como um argumento um 
 
 - *name*: o nome completo da ação a ser chamada,
 - *parameters*: um objeto JSON que representa a entrada para a ação chamada. Se omitido, usa como padrão um objeto vazio.
-- *apiKey*: a chave de autorização com a qual chamar a ação.
-A ação está em execução. Usa como padrão `whisk.getAuthKey()`. 
+- *apiKey*: a chave de autorização com a qual chamar a ação. Usa como padrão `whisk.getAuthKey()`. 
 - *blocking*: se a ação deve ser chamada no modo de bloqueio ou sem bloqueio. Usa como padrão `false`, indicando uma chamada sem bloqueio.
 - *next*: uma função de retorno de chamada opcional a ser executada quando a chamada for concluída.
 
@@ -321,8 +319,8 @@ O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo
 | minuteRate | um usuário não pode chamar mais do que este número de ações por minuto | por usuário | number | 120 |
 | hourRate | um usuário não pode chamar mais do que este número de ações por hora | por usuário | number | 3600 |
 
-### Tempo limite (ms) por ação (Padrão: 60 s)
-* O limite N de tempo limite está no intervalo [100ms..300000ms] e é configurado por ação em milissegundos.
+### Tempo limite (ms) por ação (Padrão: 60s)
+* O limite N de tempo limite está no intervalo [100ms..300.000ms] e é configurado por ação em milissegundos.
 * Um usuário pode mudar o limite ao criar a ação.
 * Um contêiner executado mais de N milissegundos é finalizado.
 
@@ -337,7 +335,7 @@ O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo
 * Um usuário atualmente não é capaz de mudar os limites.
 
 
-### Chamadas por minuto/hora (Nº) (Fixo: 120/3600)
-* O limite de taxa N é configurado para 120/3600 e limita o número de chamadas de ações em janelas de um minuto/hora.
+### Chamadas por minuto/hora (Nº) (Fixo: 120/3.600)
+* O limite de taxa N é configurado para 120/3.600 e limita o número de chamadas de ações em janelas de um minuto/hora.
 * Um usuário não pode mudar esse limite ao criar a ação.
 * Uma chamada da CLI que exceder esse limite receberá um código de erro correspondente a TOO_MANY_REQUESTS.

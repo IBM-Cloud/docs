@@ -15,7 +15,7 @@ Pour enregistrer les applications et les périphériques iOs :
 ##Créez une application de back end
 
 Créez une application de back end dans la section Conteneurs boilerplate du catalogue Bluemix, qui lie automatiquement le service Push à cette application. Si vous avez déjà créé une application de
-back end, veillez à lier l'application au service Notification push. 
+back end, veillez à lier l'application au service Notification push.
 
 ###Objective-C
 
@@ -48,7 +48,7 @@ back end, veillez à lier l'application au service Notification push.
 
 ##Transmettez le jeton au service Notification push
 
-Une fois que le jeton envoyé par APNs a été reçu, transmettez-le au service Notification push dans le cadre de la méthode ```registerDevice:withDeviceToken```. 
+Une fois que le jeton envoyé par APNs a été reçu, transmettez-le au service Notification push dans le cadre de la méthode ```registerDevice:withDeviceToken```.
 
 ###Objective-C
 
@@ -74,14 +74,14 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service Notification push dans le cadre de la méthode ```didRegisterForRemoteNotificationsWithDeviceToken```. 
+Une fois que le jeton envoyé par APNS a été reçu, transmettez-le au service Notification push dans le cadre de la méthode ```didRegisterForRemoteNotificationsWithDeviceToken```.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
         if error.isEmpty {
-        print( "Response during device registration : \(response)")
+            print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
         }
         else{

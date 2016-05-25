@@ -14,12 +14,12 @@ copyright:
 
 
 1. 如果没有 Bluemix 应用程序，那么需要创建 Bluemix 应用程序；例如，Node.js 应用程序。要创建 Bluemix 应用程序，请转至 Bluemix“仪表板”，然后单击**创建应用程序**。
-
+	
 	**注**：如果已有应用程序，请转至步骤 7 来添加服务。![创建服务实例](images/create_service_instance1.jpg "创建服务实例")
 
 1. 在**选择应用程序模板**中，单击 **WEB**。
 
-3. 在**选择起点**区域中，选择 **SDK for Node.js**，然后单击**继续**。![起点](images/create_service_nodejs2.jpg)
+3. 在**选择起点**区域中，选择 **SDK for Node.js**，然后单击**继续**。![起点](images/create_service_nodejs2.jpg) 
 
 4. 在**空间**下拉菜单中，选择组织空间。
 

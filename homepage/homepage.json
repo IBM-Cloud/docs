@@ -126,6 +126,9 @@
 				"name": "Dialog",
 				"href": "services/Dialog/index.html"
 			}, {
+				"name": "Document Conversion",
+				"href": "services/DocumentConversion/index.html"
+			}, {
 				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
 			}, {
@@ -154,7 +157,7 @@
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
 				"name": "Visual Recognition",
-				"href": "services/VisualRecognition/index.html"
+				"href": "services/VisualRecognition/VisualRecognition.html"
 			}]
 		}, {
 			"title": "Integrate",

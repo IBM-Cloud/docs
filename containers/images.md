@@ -34,6 +34,6 @@ You can create containers from IBM images. Images can be deployed as a single co
 <li>
 <p class="runtimeIcon"><img src="images/container-image_ibm.svg" alt="IBM images" /></p>
 <p class="runtimeTitle">IBM StrongLoop</p>
-<p class="runtimeLink"><a format="html" href="../images/ibmnode_strong_pm/ibmnode_strong-pm_starter.html" scope="peer">VIEW DOCS</a></p>
+<p class="runtimeLink"><a format="html" href="../images/ibmnode_strong_pm/ibmnode-strong-pm_starter.html" scope="peer">VIEW DOCS</a></p>
 </li>
 </ul>

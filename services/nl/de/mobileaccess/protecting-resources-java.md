@@ -11,7 +11,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Lib
 
 ## Vorbereitungen
 {: #before-you-begin}
-* Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.keyword.bluemix}} vertraut sein. Weitere Informationen finden Sie in [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
+* Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.keyword.Bluemix}} vertraut sein. Weitere Informationen finden Sie in [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
 
 ## {{site.data.keyword.amashort}}-Server-SDK installieren
 {: #installing-server-sdk}
@@ -68,7 +68,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Lib
 Zum Schützen der Ressourcen, die von Ihrer Liberty for Java-Anwendung gehostet werden, müssen Sie `TAIUserRole` als Java-Sicherheitsrolle angeben. Sie können die Sicherheitsrolle in der Datei `web.xml` oder als Annotation definieren.
 
 * Zur Angabe von `TAIUserRole` in der Datei `web.xml` definieren Sie `TAIUserRole` im Element `<security-role>` und verwenden diese Rolle dann, um die Webressource in einem Element `security-constraint` zu schützen.
-Beispiel: 
+Beispiel:
 
 	```XML
 	<security-constraint>

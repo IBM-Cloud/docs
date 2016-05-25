@@ -18,7 +18,7 @@ copyright:
 
 # Utilizzo di servizi abilitati a {{site.data.keyword.openwhisk_short}} 
 {: #openwhisk_ecosystem}
-*Ultimo aggiornamento: 22 febbraio 2016*
+*Ultimo aggiornamento: 28 marzo 2016* 
 
 In {{site.data.keyword.openwhisk}}, un catalogo di pacchetti mette a tua disposizione un modo facile per migliorare la tua applicazione con delle utili funzionalità e di accedere ai servizi interni nell'ecosistema. Sono esempi di servizi esterni con attivazione {{site.data.keyword.openwhisk_short}}: Cloudant, The Weather Company, Slack e GitHub.
 {: shortdesc}
@@ -259,12 +259,7 @@ Il pacchetto include il seguente feed.
 
 Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un evento di trigger con una specifica frequenza. I parametri sono i seguenti:
 
-- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger. La stringa è una sequenza di sei campi separati da spazi: `X X X X X X `. Ecco alcuni esempi della frequenza indicata dalla stringa:
-
-  - `* * * * * *`: ogni secondo.
-  - `0 * * * * *`: all'inizio di ogni minuto.
-  - `* 0 * * * *`: all'inizio di ogni ora.
-  - `* * * 8 * *`: a un certo momento dell'ottavo giorno di ogni mese
+- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger in UTC (Coordinated Universal Time). La stringa è una sequenza di sei campi separati da spazi: `X X X X X X `. Per ulteriori dettagli sull'utilizzo della sintassi cron, consulta: https://github.com/ncb000gt/node-cron.
 
 - `trigger_payload`: il valore di questo parametro diventa il contenuto del trigger ogni volta che il trigger viene attivato.
 
@@ -478,7 +473,7 @@ Il pacchetto include il seguente feed:
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/github` | package | username, repository, accessToken | Interagire con la API GitHub |
+| `/whisk.system/github` | pacchetto | username, repository, accessToken | Interagire con la API GitHub |
 | `/whisk.system/github/webhook` | feed | events, username, repository, accessToken | Attivare gli eventi di trigger in caso di attività GitHub |
 
 Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con i valori `username`, `repository` e `accessToken`.  Con il bind, non dovrai specificare i valori ogni volta che usi il feed nel pacchetto.

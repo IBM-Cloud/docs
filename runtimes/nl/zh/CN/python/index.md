@@ -33,6 +33,7 @@ python-3.4.3
 ```
 {: codeblock}
 
+如果未指定版本，缺省情况下会选择 V2.7.10。
 
 ### 可用版本：
 {: #available_versions}

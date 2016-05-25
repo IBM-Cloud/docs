@@ -28,10 +28,11 @@ nenhuma ação adicional é necessária no lado do cliente.
 1. Clique no botão + **Criar tag**.   
 
    a. No campo **Nome**, insira o nome da tag. Por exemplo, "coupons".
-
+   
    b. No campo **Descrição**, insira uma descrição da tag.
+   
    c. Clique em  **Salvar**.
-
+   
 1. Na área **Fragmentos de códigos**,
 selecione a plataforma para seu aplicativo móvel.
 1. Modifique os fragmentos de códigos para manipular erros e
@@ -53,3 +54,9 @@ editar.
 1. Clique no ícone de edição.
 1. Edite a descrição d tag e clique no botão
 **Salvar**.
+
+
+
+
+
+

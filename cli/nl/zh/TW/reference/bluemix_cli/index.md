@@ -16,15 +16,15 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) 指令
 {: #bluemix_cli}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 4 月 15 日*
 
 {{site.data.keyword.Bluemix_notm}} 指令行介面 (CLI) 提供一組依名稱空間分組的指令，讓使用者與 {{site.data.keyword.Bluemix_notm}} 互動。部分 {{site.data.keyword.Bluemix_notm}} 指令是現有指令的封套，其他則提供延伸功能供 {{site.data.keyword.Bluemix_notm}} 使用者使用。下列資訊列出 {{site.data.keyword.Bluemix_notm}} CLI 支援的所有指令，並包括其名稱、選項、使用情形、必要條件、說明及範例。
 {:shortdesc}
  
-**附註：***必要條件*列出使用指令之前需要哪些動作。沒有必要動作的指令會列示為**無**。否則，必要條件可能包括下列一個以上的動作：
+**附註：***必要條件* 列出使用指令之前需要哪些動作。沒有必要動作的指令會列為**無**。否則，必要條件可能包括下列一個以上的動作：
 <dl>
 <dt>端點</dt>
-<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能設定使用此指令。</dd>
+<dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用此指令。</dd>
 <dt>登入</dt>
 <dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用此指令。</dd>
 <dt>目標</dt>
@@ -38,8 +38,7 @@ copyright:
  <table role="presentation"> 
  <tbody> 
  <tr> 
- <td> 
- [bluemix help](index.html#bluemix_help)</td> 
+ <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
  <td>[bluemix login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
@@ -72,8 +71,8 @@ copyright:
  
  <tr> 
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete) </td> 
- <td>[bluemix iam user-create](index.html#bluemix_iam_user_create)</td> 
- <td>[bluemix iam user-delete](index.html#bluemix_iam_user_delete)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td> 
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
@@ -260,11 +259,17 @@ copyright:
  <tr> 
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
- <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
- <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
-
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
  </tr>
  
+ <tr>
+ <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
+ </tr>
  
  
  </tbody> 
@@ -331,7 +336,7 @@ bluemix api [API_ENDPOINT][--unset]
 
 **指令選項**：
 
-*API_ENDPOINT*（選用）：已設定目標的 API 端點，例如 https://api.ng.bluemix.net。如果未同時指定 *API_ENDPOINT* 及 `--unset` 選項，則會顯示現行 API 端點。
+*API_ENDPOINT*（選用）：已設定目標的 API 端點，例如 https://api.ng.bluemix.net。 如果未同時指定 *API_ENDPOINT* 及 `--unset` 選項，則會顯示現行 API 端點。
 
 `--unset`（選用）：移除 API 端點設定。
 
@@ -443,7 +448,7 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 
 **指令選項**：
 
---http-timeout *TIMEOUT_IN_SECONDS*：HTTP 要求的逾時值。預設值是 60 秒。
+--http-timeout *TIMEOUT_IN_SECONDS*：HTTP 要求的逾時值。預設值為 60 秒。
 
 --trace true|false|*path/to/file*：追蹤對終端機或指定檔案的 HTTP 要求。
 
@@ -583,7 +588,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 ## bluemix curl
 {: #bluemix_curl}
 
-對 {{site.data.keyword.Bluemix_notm}} 執行原始 HTTP 要求。依預設，*Content-Type* 會設為 *application/json*。此指令會對 {{site.data.keyword.Bluemix_notm}} 主控台伺服器（例如，https://console.ng.bluemix.net）傳送要求，而不是對 cf API 端點（例如，https://api.ng.bluemix.net）傳送要求。
+對 {{site.data.keyword.Bluemix_notm}} 執行原始 HTTP 要求。依預設，*Content-Type* 會設為 *application/json*。此指令會將要求傳送至「{{site.data.keyword.Bluemix_notm}} 多雲端控制 Proxy」。如需支援的路徑，請參閱 [CloudFoundry API 文件](http://apidocs.cloudfoundry.org/){: new_window}中的 API 路徑定義。
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -593,34 +598,86 @@ bluemix curl PATH [OPTIONS...]
 
 **指令選項**：
 
-*PATH*（必要）：資源的 URL 路徑。例如，/rest/v2/apps。
+*PATH*（必要）：資源的 URL 路徑。例如，/v2/apps。
 
 *OPTIONS*（選用）：`bluemix curl` 指令所支援的選項與 `cf curl` 指令的選項相同。
 
 **範例**：
 
-檢視所有樣板範本的資訊：
+檢視現行帳戶的所有組織的資訊：
 
 ```
-bluemix curl /rest/templates
+bluemix curl /v2/organizations
 ```
 
 
 ## bluemix iam orgs
 {: #bluemix_iam_orgs}
-此指令的功能和選項與 `cf orgs` 指令的相同。不同的是，該指令還會顯示組織所在的地區。
 
+列出所有組織
+
+```
+bluemix iam orgs [-r REGION --guid]
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*-r REGION*（選用）：顯示其組織資訊的地區。如果設為 'all'，則會列出所有地區中的所有組織。
+
+*--guid*（選用）：顯示組織的 GUID。
+
+**範例**：列出已顯示 GUID 的 `us-south` 地區中的所有組織
+
+```
+bluemix iam orgs -r us-south --guid
+```
 
 ## bluemix iam org
 {: #bluemix_iam_org}
 
-此指令的功能和選項與 `cf org` 指令的相同。不同的是，該指令會顯示組織所在的地區。
+顯示所指定組織的資訊。
 
+```
+bluemix iam org ORG_NAME [--guid]
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*ORG_NAME*（必要）：組織的名稱。
+
+*--guid*（選用）：顯示組織的 GUID。
+
+
+**範例**：顯示已顯示 GUID 的 `IBM` 組織的資訊
+
+```
+bluemix iam org IBM --guid
+```
 
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
-此指令的函數及選項與 `cf create-org` 指令相同。
+建立新的組織。只有帳戶擁有者才能執行此作業。
+
+```
+bluemix iam org-create ORG_NAME
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*ORG_NAME*（必要）：所建立的組織的名稱。
+
+**範例**：建立名稱為 `IBM` 的組織。
+
+```
+bluemix iam org-create IBM
+```
 
 
 ## bluemix iam org-replicate
@@ -642,24 +699,49 @@ bluemix iam org-replicate ORG_NAME REGION_NAME
 
 **範例**：
 
-將組織 `OE_Runtimes_Scaling` 抄寫到地區 `eu-gb`：
+將組織 `myorg` 抄寫到地區 `eu-gb`：
 
 ```
-bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
+bluemix iam org-replicate myorg eu-gb
 ```
 
 
 ## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
-此指令的函數及選項與 `cf rename-org` 指令相同。
+重新命名組織。只有組織管理員才能執行此作業。
+
+```
+bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*OLD_ORG_NAME*（必要）：要重新命名的組織的舊名稱。
+
+*NEW_ORG_NAME*（必要）：組織重新命名後的新名稱。
 
 
 ## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
+刪除現行區域中的指定組織。
 
-此指令的函數及選項與 `cf delete-org` 指令相同。
+```
+bluemix iam org-delete ORG_NAME [-f --all]
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*ORG_NAME*（必要）：要刪除的現有組織的名稱。
+
+*-f*（選用）：強制刪除，而不進行確認。
+
+*--all*（選用）：刪除所有地區中的組織。
 
 
 ## bluemix iam spaces
@@ -694,53 +776,252 @@ bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
 此指令的函數及選項與 `cf delete-space` 指令相同。
 
 
-## bluemix iam user-create
-{: #bluemix_iam_user_create}
+## bluemix iam account-users
+{: #bluemix_iam_account_users}
 
-此指令的函數及選項與 `cf create-user` 指令相同。
+顯示與帳戶相關聯的使用者。只有帳戶擁有者才能執行此作業。
+
+```
+bluemix iam account-users
+```
+
+## bluemix iam account-user-invite
+{: #bluemix_iam_account-user_inviate}
 
 
-## bluemix iam user-delete
-{: #bluemix_iam_user_delete}
+邀請使用者加入已設定組織和空間角色的帳戶。只有帳戶擁有者才能執行此作業。
+
+```
+bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
+```
+
+**必要條件**：端點、登入
 
 
-此指令的函數及選項與 `cf delete-user` 指令相同。
+**指令選項**：
 
+*USER_NAME*（必要）：所邀請的使用者的名稱。
+
+*ORG_NAME*（必要）：邀請此使用者加入的組織的名稱。
+
+*ORG_ROLE*（必要）：邀請此使用者加入的組織角色的名稱。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以建立和管理計費帳戶及付款資訊。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有組織資訊和報告的唯讀權。</dd>
+</dl> 
+
+*SPACE_NAME*（必要）：邀請此使用者加入的空間的名稱。
+
+*SPACE_ROLE*（必要）：邀請此使用者加入的空間角色的名稱。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀請和管理使用者，以及啟用給定空間的特性。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以檢視空間的日誌、報告和設定。</dd>
+</dl> 
+
+**範例**：
+
+以 `OrgManager` 角色，邀請使用者 `Mary` 加入組織 `IBM`，以及以 `SpaceAuditor` 角色加入空間 `Cloud`：
+
+```
+bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+```
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
-此指令的函數及選項與 `cf org-users` 指令相同。
+依角色顯示指定組織中的使用者。
+
+```
+bluemix iam org-users ORG_NAME [-a]
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*ORG_NAME*（必要）：組織的名稱。
+
+*-a*（選用）：列出指定組織中的所有使用者，而不依角色進行分組。
 
 
 ## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
-此指令的函數及選項與 `cf set-org-role` 指令相同。
+將組織角色指派給使用者。只有組織管理員才能執行此作業。
+
+```
+bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*USER_NAME*（必要）：所指派的使用者的名稱。
+
+*ORG_NAME*（必要）：獲指派此使用者的組織的名稱。
+
+*ORG_ROLE*（必要）：獲指派此使用者的組織角色的名稱。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以建立和管理計費帳戶及付款資訊。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有組織資訊和報告的唯讀權。</dd>
+</dl> 
+
+**範例**：
+
+以 `OrgManager` 角色，將使用者 `Mary` 指派給組織 `IBM`：
+
+```
+bluemix iam org-role-set Mary IBM OrgManager
+```
 
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
-此指令的函數及選項與 `cf unset-org-role` 指令相同。
+移除使用者的組織角色。只有組織管理員才能執行此作業。
+
+```
+bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*USER_NAME*（必要）：所移除的使用者的名稱。
+
+*ORG_NAME*（必要）：從中移除此使用者的組織的名稱。
+
+*ORG_ROLE*（必要）：從中移除此使用者的組織角色的名稱。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀請和管理使用者、選取和變更方案，以及設定消費限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以建立和管理計費帳戶及付款資訊。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有組織資訊和報告的唯讀權。</dd>
+</dl> 
+
+**範例**：
+
+以 `OrgManager` 角色，從組織 `IBM` 中移除使用者 `Mary`：
+
+```
+bluemix iam org-role-unset Mary IBM OrgManager
+```
 
 
 ## bluemix iam space-users
 {: #bluemix_iam_space_users}
 
-此指令的函數及選項與 `cf space-users` 指令相同。
+依角色顯示指定空間中的使用者。
+
+```
+bluemix iam space-users ORG_NAME SPACE_NAME
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*ORG_NAME*（必要）：組織的名稱
+
+*SPACE_NAME*（必要）：空間的名稱。
 
 
 ## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
-此指令的函數及選項與 `cf set-space-role` 指令相同。
+將空間角色指派給使用者。只有空間管理員才能執行此作業。
 
+```
+bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*USER_NAME*（必要）：所指派的使用者的名稱。
+
+*ORG_NAME*（必要）：獲指派此使用者的組織的名稱。
+
+*SPACE_NAME*（必要）：獲指派此使用者的空間的名稱。
+
+*SPACE_ROLE*（必要）：獲指派此使用者的空間角色的名稱。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀請和管理使用者，以及啟用給定空間的特性。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以檢視空間的日誌、報告和設定。</dd>
+</dl> 
+
+
+**範例**：
+
+以 `SpaceManager` 角色，將使用者 `Mary` 指派給組織 `IBM` 和空間 `Cloud`：
+
+```
+bluemix iam space-role-set Mary IBM Cloud SpaceManager
+```
 
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
-此指令的函數及選項與 `cf unset-space-role` 指令相同。
+移除使用者的空間角色。只有空間管理員才能執行此作業。
+
+```
+bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**必要條件**：端點、登入
+
+**指令選項**：
+
+*USER_NAME*（必要）：所移除的使用者的名稱。
+
+*ORG_NAME*（必要）：從中移除此使用者的組織的名稱。
+
+*SPACE_NAME*（必要）：從中移除此使用者的空間的名稱。
+
+*SPACE_ROLE*（必要）：從中移除此使用者的空間角色的名稱。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀請和管理使用者，以及啟用給定空間的特性。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以建立和管理應用程式及服務，以及查看日誌和報告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以檢視空間的日誌、報告和設定。</dd>
+</dl> 
+
+**範例**：
+
+以 `SpaceManager` 角色，從組織 `IBM` 和空間 `Cloud` 中移除使用者 `Mary`：
+
+```
+bluemix iam space-role-unset Mary IBM Cloud SpaceManager
+```
 
 
 ## bluemix app push
@@ -1207,21 +1488,21 @@ bluemix network route-unmap my-container-group ng.bluemix.net -n abc
 ## bluemix security cert
 {: #bluemix_security_cert}
 
-列出指定主機的憑證資訊。
+列出網域的憑證資訊。
 
 ```
-bluemix security cert HOST_NAME
+bluemix security cert DOMAIN_NAME
 ```
 
 **必要條件**：端點、登入
 
 **指令選項**：
 
-*HOST_NAME*（必要）：管理憑證的伺服器的名稱。
+*DOMAIN_NAME*（必要）：管理憑證的網域。
 
 **範例**：
 
-檢視主機 `ibmcxo-eventconnect.com` 上的憑證：
+檢視網域 `ibmcxo-eventconnect.com` 的憑證資訊：
 
 ```
 bluemix security cert ibmcxo-eventconnect.com
@@ -1485,7 +1766,7 @@ bluemix region-set us-south
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-控制執行中儲存器，或檢視其輸出。使用 `CTRL+C` 以結束並停止儲存器。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/attach/" target="_blank">attach</a> 指令。 
+控制執行中儲存器，或檢視其輸出。使用 `CTRL+C` 以結束並停止儲存器。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} 指令。 
 
 ```
 bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
@@ -1497,7 +1778,7 @@ bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
 
 --no-stdin（選用）：不包括標準輸入。
 
---sig-proxy（選用）：將所有接收到的信號 Proxy 到處理程序。預設值是 **true**。
+--sig-proxy（選用）：將所有接收到的信號 Proxy 到處理程序。預設值為 **true**。
 
 *CONTAINER*（必要）：儲存器名稱或 ID。
 
@@ -1512,7 +1793,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-呼叫 IBM Containers 建置服務，以在本端或專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中建置 Docker 映像檔。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/build/" target="_blank">build</a> 指令。 
+呼叫 IBM Containers 建置服務，以在本端或專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中建置 Docker 映像檔。此指令會呼叫 Docker CLI。如需相關資訊，請參閱 Docker 說明中的 [build](https://docs.docker.com/reference/commandline/build/){: new_window} 指令。 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -1524,11 +1805,11 @@ bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFIL
 
 -t *TAG*|--tag *TAG*（必要）：要套用至所建立映像檔的儲存庫名稱。
 
---no-cache（選用）：建置映像檔時不要使用快取。預設值是 **false**。
+--no-cache（選用）：建置映像檔時不要使用快取。預設值為 **false**。
 
 -p|--pull（選用）：嘗試從登錄中取回基礎映像檔，即使已快取也是一樣。
 
--q|--quiet（選用）：抑制儲存器所產生的詳細輸出。預設值是 **false**。
+-q|--quiet（選用）：抑制儲存器所產生的詳細輸出。預設值為 **false**。
 
 *DOCKERFILE_LOCATION*（必要）：本端主機上 Dockerfile 及環境定義的路徑。
 
@@ -1543,7 +1824,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ## bluemix ic create
 {: #bluemix_ic_create}
 
-在 {{site.data.keyword.Bluemix_notm}} 儲存庫中，建立新儲存器。此指令會覆蓋 `docker create` 指令。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/create/" target="_blank">create</a> 指令。
+在 {{site.data.keyword.Bluemix_notm}} 儲存庫中，建立新儲存器。此指令會覆蓋 `docker create` 指令。如需相關資訊，請參閱 Docker 說明中的 [create](https://docs.docker.com/reference/commandline/create/){: new_window} 指令。
 
 
 ## bluemix ic cpi
@@ -1582,7 +1863,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 {: #bluemix_ic_exec}
 
 
-在儲存器內執行指令。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/exec/" target="_blank">exec</a> 指令。
+在儲存器內執行指令。如需相關資訊，請參閱 Docker 說明中的 [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} 指令。
 
 ```
 bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -1688,16 +1969,16 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 **指令選項**：
 
--m *MEMORY*|--memory *MEMORY*（選用）：指派給群組的記憶體限制 (MB)。從 CLI 建立儲存器群組時，每一個儲存器實例的預設值都是 `64` MB。從「{{site.data.keyword.Bluemix_notm}} 儀表板」建立儲存器群組時，每一個儲存器實例的預設值都是 `256` MB。接受值是 `64`、`256`、`512`、`1024` 及 `2048`。指派記憶體限制之後，即無法變更其值。
+-m *MEMORY*|--memory *MEMORY*（選用）：指派給群組的記憶體限制 (MB)。從 CLI 建立儲存器群組時，每一個儲存器實例的預設值都是 `64` MB。從 {{site.data.keyword.Bluemix_notm}}「儀表板」建立儲存器群組時，每一個儲存器實例的預設值都是 `256` MB。接受值是 `64`、`256`、`512`、`1024` 及 `2048`。指派記憶體限制之後，即無法變更其值。
 
 -e *ENV*|--env *ENV*（選用）：設定環境變數，其中 **ENV** 是 `key=value` 配對。個別列出多個索引鍵。如果包括引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表顯示一些您可以指定的常用環境變數：
 
 |  環境變數                              |     說明                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至儲存器。使用 'CCS_BIND_APP' 環境變數，以將應用程式連結至儲存器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中儲存器實例。如需建立橋接器應用程式的相關資訊，請參閱<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">將服務連結至儲存器</a>。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 建立儲存器時，在其中新增 SSH 金鑰。從 {{site.data.keyword.Bluemix_notm}} 儀表板或從 CLI 建立儲存器時，您可以使用環境變數來新增 SSH 金鑰。如需 SSH 金鑰的相關資訊，請參閱<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">登入儲存器</a>。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至儲存器。使用 'CCS_BIND_APP' 環境變數，以將應用程式連結至儲存器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中儲存器實例。如需建立橋接器應用程式的相關資訊，請參閱[將服務連結至儲存器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 建立儲存器時，在其中新增 SSH 金鑰。從 {{site.data.keyword.Bluemix_notm}} 儀表板或從 CLI 建立儲存器時，您可以使用環境變數來新增 SSH 金鑰。如需 SSH 金鑰的相關資訊，請參閱[登入儲存器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在儲存器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表格 1. 常用環境變數*
+*表 1. 常用環境變數*
 
 -v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]  （選用）：以 `VolumeId:ContainerPath[:ro]` 格式指定詳細資料，將磁區連接至儲存器。
 
@@ -1707,7 +1988,7 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 -p *PORT*|--publish *PORT*（選用）：公開 HTTP 資料流量的埠。群組中的儲存器必須接聽 HTTP 埠。無法提出 HTTPS 要求。若為儲存器群組，您無法包含多個埠。
 
-在您指定埠時，即將應用程式設為可供「{{site.data.keyword.Bluemix_notm}} 負載平衡器」或相同 {{site.data.keyword.Bluemix_notm}} 空間中嘗試連接主機的儲存器使用。如果在 Dockerfile 中針對您要使用的映像檔指定了埠，請包含該埠。
+在您指定埠時，即將應用程式設為可供「{{site.data.keyword.Bluemix_notm}} 負載平衡器」或相同 {{site.data.keyword.Bluemix_notm}} 空間中嘗試連接主機的儲存器使用。然後，{{site.data.keyword.Bluemix_notm}} 負載平衡器或儲存器可以使用此埠來連接相同 {{site.data.keyword.Bluemix_notm}} 空間中的主機和應用程式。如果在 Dockerfile 中針對您要使用的映像檔指定了埠，請包含該埠。
 
 **提示：**
 
@@ -1718,7 +1999,7 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 --max *MAX*（選用）：實例數上限。預設值為 **2**。如果設定實例數上限，則在建立儲存器群組之後，無法變更此值。
 
---desired *DESIRED*（選用）：所需的實例數。預設值是 **2**。
+--desired *DESIRED*（選用）：所需的實例數。預設值為 **2**。
 
 --auto（選用）：建立儲存器群組並啟用自動回復時，IBM Containers 會使用對所指派埠的 HTTP 要求，來檢查每一個實例的性能。
 
@@ -1786,7 +2067,7 @@ bluemix ic group-update [--min MIN][--max MAX] [--desired DESIRED][--auto] CONTA
 
 --max *MAX*（選用）：實例數上限。預設值為 **2**。在設定實例數上限之後，無法變更此值。
 
---desired *DESIRED*（選用）：所需的實例數。預設值是 **2**。
+--desired *DESIRED*（選用）：所需的實例數。預設值為 **2**。
 
 **提示：**一次只能指定下列其中一個選項：`--min MIN`、`--max MAX` 或 `--desired DESIRED`。
 
@@ -1830,7 +2111,7 @@ bluemix ic group-remove my_group
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-檢視組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中所有可用映像檔的清單。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/images" target="_blank">images</a> 指令。此清單包括映像檔 ID、建立日期及映像檔名稱。
+檢視組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中所有可用映像檔的清單。如需相關資訊，請參閱 Docker 說明中的 [images](https://docs.docker.com/reference/commandline/images){: new_window} 指令。此清單包括映像檔 ID、建立日期及映像檔名稱。
 
 ```
 bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
@@ -1857,7 +2138,7 @@ bluemix ic images
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-檢視儲存器的相關資訊。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/inspect" target="_blank">inspect</a> 指令。
+檢視儲存器的相關資訊。如需相關資訊，請參閱 Docker 說明中的 [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} 指令。
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2000,7 +2281,7 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-停止儲存器中的執行中處理程序，而不停止儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/kill/" target="_blank">kill</a> 指令。
+停止儲存器中的執行中處理程序，而不停止儲存器。如需相關資訊，請參閱 Docker 說明中的 [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} 指令。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2055,7 +2336,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-暫停執行中儲存器內的所有處理程序。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/pause/" target="_blank">pause</a> 指令。若要停止儲存器，請參閱 [bluemix ic unpause](#unpause) 指令。
+暫停執行中儲存器內的所有處理程序。如需相關資訊，請參閱 Docker 說明中的 [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} 指令。若要停止儲存器，請參閱 [bluemix ic unpause](#unpause) 指令。
 
 ```
 bluemix ic pause CONTAINER
@@ -2090,7 +2371,7 @@ bluemix ic pause proxy
 ## bluemix ic unpause
 {: #unpause}
 
-取消暫停執行中儲存器內的所有處理程序。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/unpause/" target="_blank">unpause</a> 指令。若要暫停儲存器，請參閱 [bluemix ic pause](#pause) 指令。
+取消暫停執行中儲存器內的所有處理程序。如需相關資訊，請參閱 Docker 說明中的 [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} 指令。若要暫停儲存器，請參閱 [bluemix ic pause](#pause) 指令。
 
 ```
 bluemix ic unpause CONTAINER
@@ -2125,12 +2406,12 @@ bluemix ic unpause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-列出儲存器的埠對映或特定對映。此指令會覆蓋 `docker port` 指令。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/port/" target="_blank">port</a> 指令。
+列出儲存器的埠對映或特定對映。此指令會覆蓋 `docker port` 指令。如需相關資訊，請參閱 Docker 說明中的 [port](https://docs.docker.com/reference/commandline/port/){: new_window} 指令。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-檢視已登入使用者之名稱空間中的執行中儲存器清單。此指令預設只會顯示執行中儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/ps/" target="_blank">ps</a> 指令。
+檢視已登入使用者之名稱空間中的執行中儲存器清單。此指令預設只會顯示執行中儲存器。如需相關資訊，請參閱 Docker 說明中的 [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} 指令。
 
 ```
 bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
@@ -2161,7 +2442,7 @@ bluemix ic ps -a
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-重新啟動儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/restart/" target="_blank">restart</a> 指令。
+重新啟動儲存器。如需相關資訊，請參閱 Docker 說明中的 [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} 指令。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2198,7 +2479,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-移除儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/rm/" target="_blank">rm</a> 指令。
+移除儲存器。如需相關資訊，請參閱 Docker 說明中的 [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} 指令。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2235,7 +2516,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-移除已登入使用者之名稱空間中的映像檔。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/rmi/" target="_blank">rmi</a> 指令。
+移除已登入使用者之名稱空間中的映像檔。如需相關資訊，請參閱 Docker 說明中的 [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} 指令。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2245,7 +2526,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
 **指令選項**：
 
--R *REGISTRY*|--registry *REGISTRY*（選用）：變更登錄主機。預設值是使用您在 `bluemix ic init` 指令中指定的登錄。
+-R *REGISTRY*|--registry *REGISTRY*（選用）：變更登錄主機。預設值為使用您在 `bluemix ic init` 指令中指定的登錄。
 
 *IMAGE*（必要）：您要移除之映像檔的名稱。如果映像檔名稱中未指定標籤，則預設會刪除標記為 `latest` 的映像檔。
 
@@ -2276,7 +2557,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-在儲存器雲端服務中，從映像檔名稱啟動新的儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/run/" target="_blank">run</a> 指令。
+在儲存器雲端服務中，從映像檔名稱啟動新的儲存器。如需相關資訊，請參閱 Docker 說明中的 [run](https://docs.docker.com/reference/commandline/run/){: new_window} 指令。
 
 
 
@@ -2305,16 +2586,16 @@ bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|-
 
 -P（選用）：自動公開映像檔的 Dockerfile 中針對 HTTP 資料流量所指定的埠。
 
--m *MEMORY*|--memory *MEMORY*（選用）：指派給群組的記憶體限制 (MB)。從 CLI 建立儲存器群組時，每一個儲存器實例的預設值都是 '64' MB。從「{{site.data.keyword.Bluemix_notm}} 儀表板」建立儲存器群組時，每一個實例的預設值都是 `256` MB。接受值是 `64`、`256`、`512`、`1024` 及 `2048`。指派記憶體限制之後，即無法變更其值。
+-m *MEMORY*|--memory *MEMORY*（選用）：指派給群組的記憶體限制 (MB)。從 CLI 建立儲存器群組時，每一個儲存器實例的預設值都是 '64' MB。從 {{site.data.keyword.Bluemix_notm}}「儀表板」建立儲存器群組時，每一個實例的預設值都是 `256` MB。接受值是 `64`、`256`、`512`、`1024` 及 `2048`。指派記憶體限制之後，即無法變更其值。
 
 -e *ENV*|--env *ENV*（選用）：設定環境變數，其中 **ENV** 是 `key=value` 配對。個別列出多個索引鍵。如果您併入引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表顯示一些您可以指定的常用環境變數：
 
 |      環境變數                          |   說明                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至儲存器。使用 'CCS_BIND_APP' 環境變數，以將應用程式連結至儲存器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中儲存器實例。如需建立橋接器應用程式的相關資訊，請參閱<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">將服務連結至儲存器</a>。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 建立儲存器時，在其中新增 SSH 金鑰。從 {{site.data.keyword.Bluemix_notm}} 儀表板或從 CLI 建立儲存器時，可以使用環境變數來新增 SSH 金鑰。如需 SSH 金鑰的相關資訊，請參閱<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">登入儲存器</a>。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至儲存器。使用 'CCS_BIND_APP' 環境變數，以將應用程式連結至儲存器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中儲存器實例。如需建立橋接器應用程式的相關資訊，請參閱[將服務連結至儲存器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 建立儲存器時，在其中新增 SSH 金鑰。從 {{site.data.keyword.Bluemix_notm}} 儀表板或從 CLI 建立儲存器時，可以使用環境變數來新增 SSH 金鑰。如需 SSH 金鑰的相關資訊，請參閱[登入儲存器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在儲存器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表格 2. 常用環境變數*
+*表 2. 常用環境變數*
 
 -v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]  （選用）：以 `VolumeId:ContainerPath[:ro]` 格式指定詳細資料，將磁區連接至儲存器。
 
@@ -2420,7 +2701,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 
 ## bluemix ic start
 {: #ic_start}
-啟動已停止的儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/start/" target="_blank">start</a> 指令。若要停止儲存器，請參閱 [bluemix ic stop](#ic_stop) 指令。
+啟動已停止的儲存器。如需相關資訊，請參閱 Docker 說明中的 [start](https://docs.docker.com/reference/commandline/start/){: new_window} 指令。若要停止儲存器，請參閱 [bluemix ic stop](#ic_stop) 指令。
 
 ```
 bluemix ic start CONTAINER
@@ -2454,7 +2735,7 @@ bluemix ic start proxy
 
 ## bluemix ic stop  
 {: #ic_stop}
-停止執行中的儲存器。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/stop/" target="_blank">stop</a> 指令。若要啟動儲存器，請參閱 [bluemix ic start](#ic_start) 指令。
+停止執行中的儲存器。如需相關資訊，請參閱 Docker 說明中的 [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} 指令。若要啟動儲存器，請參閱 [bluemix ic start](#ic_start) 指令。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -2491,7 +2772,7 @@ bluemix ic stop proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-對於一個以上的儲存器，檢視即時使用情形統計資料。使用 `CTRL+C` 以結束。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/stats/" target="_blank">stats</a> 指令。
+對於一個以上的儲存器，檢視即時使用情形統計資料。使用 `CTRL+C` 以結束。如需相關資訊，請參閱 Docker 說明中的 [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} 指令。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -2516,7 +2797,7 @@ bluemix ic stats --no-stream my_container
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-顯示正在儲存器中執行的處理程序。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/top/" target="_blank">top</a> 指令。
+顯示正在儲存器中執行的處理程序。如需相關資訊，請參閱 Docker 說明中的 [top](https://docs.docker.com/reference/commandline/top/){: new_window} 指令。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -2567,7 +2848,7 @@ bluemix ic volume-inspect VOLUME_NAME
 
 下列範例是檢查磁區的要求，其中 `volume_name` 是磁區的名稱。
 ```
-bluemix ic volume inspect volume_name
+bluemix ic volume-inspect volume_name
 ```
 
 
@@ -2616,11 +2897,95 @@ bluemix ic volume-remove VOLUME_NAME
 bluemix ic volume-remove volume_name
 ```
 
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+列出檔案系統。
+
+```
+bluemix ic volume-fs
+```
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+建立新的檔案系統。
+
+```
+bluemix ic volume-fs-create FILE_SYSTEM_NAME
+```
+
+**必要條件**：端點、登入、目標
+
+**指令選項**：
+
+*FILE_SYSTEM_NAME*（必要）：檔案系統名稱。名稱可以包含小寫字母、數字、底線 `_` 及連字號 `-`。
+
+**範例**：
+
+下列範例顯示建立檔案系統的要求。
+```
+bluemix ic volume-fs-create my_file_system 
+```
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+移除檔案系統。
+
+```
+bluemix ic volume-fs-remove FILE_SYSTEM_NAME
+```
+
+**必要條件**：端點、登入、目標
+
+**指令選項**：
+
+*FILE_SYSTEM_NAME*（必要）：檔案系統名稱。
+
+**範例**：
+
+下列範例顯示移除檔案系統的要求，其中 `my_file_system` 是檔案系統的名稱。
+```
+bluemix ic volume-fs-remove my_file_system
+```
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+檢查檔案系統。
+
+```
+bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
+```
+
+**必要條件**：端點、登入、目標
+
+**指令選項**：
+
+*FILE_SYSTEM_NAME*（必要）：檔案系統名稱。
+
+**範例**：
+
+下列範例是檢查檔案系統的要求，其中 `my_file_system` 是磁區的名稱。
+```
+bluemix ic volume-fs-inspect my_file_system
+```
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+列出所有檔案系統特性。
+
+```
+bluemix ic volume-fs-flavors
+```
+
+**必要條件**：端點、登入、目標
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-結束儲存器，並顯示結束碼作為確認。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/wait/" target="_blank">wait</a> 指令。
+結束儲存器，並顯示結束碼作為確認。如需相關資訊，請參閱 Docker 說明中的 [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} 指令。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -2651,4 +3016,4 @@ bluemix ic version
 
 **必要條件**：Docker
 
-若要查看 IBM Containers 的版本，請執行 `bluemix ic info`。如需相關資訊，請參閱 Docker 說明中的 <a href="https://docs.docker.com/reference/commandline/version/" target="_blank">version</a> 指令。
+若要查看 IBM Containers 的版本，請執行 `bluemix ic info`。如需相關資訊，請參閱 Docker 說明中的 [version](https://docs.docker.com/reference/commandline/version/){: new_window} 指令。

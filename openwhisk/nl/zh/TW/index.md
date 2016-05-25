@@ -25,7 +25,7 @@ copyright:
 如需 {{site.data.keyword.openwhisk_short}} 運作方式的詳細資料，請參閱[關於 {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html)。
 
 ## 設定 {{site.data.keyword.openwhisk_short}}
-您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://console.{DomainName}/openwhisk/cli){: new_window}，並遵循引導體驗來進行安裝。請注意，您必須已在系統上安裝 Python 2.7，才能使用 CLI。
+您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://console.{DomainName}/openwhisk/cli){: new_window}，並遵循引導式體驗來進行安裝。請注意，您必須已在系統上安裝 Python 2.7，才能使用 CLI。
 
 使用 CLI 設定 {{site.data.keyword.openwhisk_short}} 之後，您可以從指令行或透過 REST API 開始使用它。
 

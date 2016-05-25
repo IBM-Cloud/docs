@@ -23,7 +23,7 @@ El paquete de compilación sdk-for-nodejs se utiliza cuando la aplicación conti
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Node.js. La aplicación de inicio Node.js es una app Node.js sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Node.js.  La aplicación de inicio Node.js es una app Node.js sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Mandato de inicio
 {: #starup_commmand}
@@ -73,7 +73,7 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 Con este código, cuando la aplicación se esté ejecutando en Bluemix, las variables de entorno VCAP_APP_HOST y VCAP_APP_PORT contienen los valores host y puerto que son internos para Bluemix, y en el que la app escucha conexiones entrantes. Cuando la aplicación se ejecute de manera local, VCAP_APP_HOST y VCAP_APP_PORT no están definidas, de modo que **localhost** se utiliza como el host y **3000** se utiliza como el número de puerto. Grabados de esta forma, puede ejecutar la aplicación localmente a efectos de prueba y en Bluemix sin realizar más cambios.
 
 ## App Management
-{{site.data.keyword.Bluemix}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js. Consulte [App Management](../../manageapps/app_mng.html) para obtener más detalles.
+{{site.data.keyword.Bluemix}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js.  Consulte [App Management](../../manageapps/app_mng.html) para obtener más detalles.
 
 ## Versiones disponibles
 {: #available_versions}
@@ -109,21 +109,21 @@ Debería especificarse siempre una versión de nodo en el archivo **package.json
 
 ### Scripts NPM
 {: #npm_scripts}
-NPM proporciona un recurso de creación de scripts que le permite ejecutar scripts, incluidos los scripts **previos a la instalación** y **posteriores a la instalación** que se aplican antes y después de que estén instalados los node_modules. Consulte [npm-scripts](https://docs.npmjs.com/misc/scripts) para obtener más detalles.
+NPM proporciona un recurso de creación de scripts que le permite ejecutar scripts, incluidos los scripts **previos a la instalación** y **posteriores a la instalación** que se aplican antes y después de que estén instalados los node_modules.  Consulte [npm-scripts](https://docs.npmjs.com/misc/scripts) para obtener más detalles.
 
-### Comportamiento de la antememoria
+### Comportamiento de la memoria caché
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app. Por ejemplo, suponga que myapp depende de **express**. A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**. En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
+{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**.  En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
 
-Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true. Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de cf:
+Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true.  Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de cf:
 ```
-cf set-env myapp NODE_MODULES_CACHE false
+    $ cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 
 Tenga en cuenta que los node_modules que se incluyen en la aplicación no se almacenan en la memoria caché.
 
-Puede utilizar una matriz **cacheDirectories** en el **package.json** de nivel superior para conseguir un control específico a través de los módulos que se almacenan en la memoria caché. Cuando el elemento **cacheDirectories** ya se encuentra presente en el **package.json**, solo se almacenarán en la memoria caché los módulos que se encuentren en la matriz **cacheDirectories**. En el ejemplo siguiente, solo se almacenan en la memoria caché los node_modules y bower_components.
+Puede utilizar una matriz **cacheDirectories** en el **package.json** de nivel superior para conseguir un control específico a través de los módulos que se almacenan en la memoria caché.  Cuando el elemento **cacheDirectories** ya se encuentra presente en el **package.json**, solo se almacenarán en la memoria caché los módulos que se encuentren en la matriz **cacheDirectories**.  En el ejemplo siguiente, solo se almacenan en la memoria caché los node_modules y bower_components.
 ```
 {
   "cacheDirectories": ["node_modules","bower_components"],
@@ -131,6 +131,36 @@ Puede utilizar una matriz **cacheDirectories** en el **package.json** de nivel s
 }
 ```
 {: codeblock}
+
+### FIPS MODE
+{: #fips_mode}
+
+Las versiones del paquete de compilación de Nodejs v3.2-20160315-1257 y posteriores soportan [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards). Para habilitar FIPS, establezca la variable de entorno FIPS_MODE en true.
+Por ejemplo:
+
+```
+    $ cf set-env myapp FIPS_MODE true
+```
+{: codeblock}
+
+Es importante comprender que cuando FIPS_MODE es true, **los módulos de nodo que utilizan [MD5](https://en.wikipedia.org/wiki/MD5) fallarán**. Por ejemplo,
+los módulos [Express](http://expressjs.com/) fallarán. El establecimiento de [etag](http://expressjs.com/en/api.html) en false en la app
+Expess puede ayudar a solucionarlo. Por ejemplo, puede realizar lo siguiente en el código:
+```
+    app.set('etag', false);
+```
+{: codeblock}
+Consulte esta [publicación de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
+para obtener más información.
+
+Para comprobar si FIPS_MODE es true en la app, compruebe el valor de **process.versions.openssl**. Por ejemplo:
+```
+    console.log('ssl version is [' +process.versions.openssl +']');
+```
+{: codeblockd}
+
+Si la versión de SSl contiene "fips", la app se ejecutará en modalidad FIPS.    
+
 
 ## Paquetes de compilación Node.js
 
@@ -140,7 +170,7 @@ Bluemix proporciona varias versiones del paquete de compilación Node.js.
 
 El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre el **nodejs_buildpack** en Bluemix. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
 
-Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** actual y una versión de nivel anterior. Para ver todos los paquetes de compilación disponibles, utilice el mandato **cf buildpacks**. Por ejemplo:
+Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** actual y una versión de nivel anterior.  Para ver todos los paquetes de compilación disponibles, utilice el mandato **cf buildpacks**.  Por ejemplo:
 <pre>
       cf buildpacks
       Getting buildpacks...

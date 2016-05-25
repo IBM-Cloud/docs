@@ -1,3 +1,15 @@
+---
+
+ 
+
+copyright:
+
+  years: 2015, 2016
+
+ 
+
+---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
@@ -8,32 +20,27 @@
 *Letzte Aktualisierung: 7. Dezember 2015* 
 
 Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie {{site.data.keyword.jazzhub_short}}-Pipelinekonfigurationen
-als YAML-Dateien definieren.
-Pipelines, die als Text definiert sind, können gemeinsam genutzt werden,
-sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen.
-Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung
-können sich zu jedem beliebigen Zeitpunkt ändern.
-Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung,
-die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden.
+als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden,
+sodass Personen, die über Verzweigungen mit Ihrem Projekt arbeiten, keine eigenen Pipelines konfigurieren müssen. Dieses Feature befindet sich im Entwicklungsstadium: Das YAML-Format und dessen Implementierung
+können sich zu jedem beliebigen Zeitpunkt ändern. Zurzeit steht dieses Feature nur für Projekte mit Git- und GitHub-Repositorys zur Verfügung,
+die {{site.data.keyword.Bluemix_notm}} als Ziel verwenden. 
 {: shortdesc} 
 
 Im Stammverzeichnis des Beispielprojekts muss sich ein Ordner mit dem Namen `.bluemix` befinden, der die Datei `pipeline.yml` enthält.
 
+Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, erstellt {{site.data.keyword.jazzhub_short}} eine Pipeline auf der Basis der Datei `pipeline.yml`. 
 
-Wenn ein Projekt über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' geklont wird, erstellt {{site.data.keyword.jazzhub_short}} eine Pipeline auf der Basis der Datei `pipeline.yml`.
- 
-
-Beispiel: ``` 
+Beispiel: 
+``` 
 <Beispielstammverzeichnis>
 	.bluemix
 		pipeline.yml
-	<sonstiger Beispielinhalt> ```
+	<sonstiger Beispielinhalt>
+```
 {: codeblock} 
 
 Das YAML-Dateiformat besteht aus einem einzelnen YAML-Dokument, das eine Pipelinespezifikation enthält. Mit der folgenden {{site.data.keyword.jazzhub_short}}-Beispielpipeline
-wird eine Java-App mit Ant in einer Stage erstellt.
-In einer weiteren Stage stellt dann die Pipeline die App in {{site.data.keyword.Bluemix_notm}} bereit.
- 
+wird eine Java-App mit Ant in einer Stage erstellt. In einer weiteren Stage stellt dann die Pipeline die App in {{site.data.keyword.Bluemix_notm}} bereit. 
 
 ``` 
 ---
@@ -80,10 +87,9 @@ stages:
 ```
 {: codeblock} 
 
-##YAML-Dateisyntax{: #yaml-syntax}
+##YAML-Dateisyntax {: #yaml-syntax}
 
 Jede beliebige Pipeline kann mithilfe der folgenden Syntax in Textformat dargestellt werden.
-
 
 Pipeline:
 ```
@@ -93,7 +99,7 @@ stages:
 ```
 {: codeblock} 
 
-Stage:
+Stage: 
 ```
 ---
 name: <Name>
@@ -104,7 +110,8 @@ name: <Name>
 [properties:   
 	<Eigenschaftenfolge>]
 [jobs:   
-	<Jobfolge>]```
+	<Jobfolge>]
+```
 {: codeblock} 
 
 Eingabe:
@@ -157,19 +164,17 @@ space: <Bereichsname>
 ```
 {: codeblock} 
 
-##Erweiterungsjobs und Erweiterungsdefinitionen{: #extension-jobs} 
+##Erweiterungsjobs und Erweiterungsdefinitionen {: #extension-jobs} 
 
 Mit Erweiterungsdefinitionen wird die Gruppe von Eigenschaften definiert, die
-den Eigenschaftsjobs zur Verfügung stehen. Ein Job wird als Erweiterungsjob behandelt, wenn die Eigenschaft `extension_id` angegeben ist.
-Informationen zu den für eine Erweiterung verfügbaren Eigenschaften finden Sie in der zugehörigen Dokumentation.
- 
+den Eigenschaftsjobs zur Verfügung stehen. Ein Job wird als Erweiterungsjob behandelt, wenn die Eigenschaft `extension_id` angegeben ist. Informationen zu den für eine Erweiterung verfügbaren Eigenschaften finden Sie in der zugehörigen Dokumentation. 
 
 ##Interaktion mit Pipelines mithilfe einer YAML-Datei {: #pipeline-yaml} 
 
 **Umgebungsvariablen und Auflösung** 
 <!-- Formating for this? -->
 
-Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden durch die Funktion 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' alle Umgebungsvariablen in der Datei durch Informationen ersetzt, die Sie in der {{site.data.keyword.Bluemix_notm}}-Schnittstelle angeben (z. B. Ihre Organisation betreffend). YAML-Werte werden nur verwendet, wenn sie ausschließlich aus einer Umgebungsvariablen bestehen.  
+Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden durch die Funktion 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' alle Umgebungsvariablen in der Datei durch Informationen ersetzt, die Sie in der {{site.data.keyword.Bluemix_notm}}-Schnittstelle angeben (z. B. Ihre Organisation betreffend). YAML-Werte werden nur verwendet, wenn sie ausschließlich aus einer Umgebungsvariablen bestehen. 
 
 ```
 {
@@ -193,14 +198,12 @@ Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden
 {: codeblock} 
 
 In diesem Beispiel wird die Zielorganisation anhand der Ziel-URL aufgelöst
-und beim dem in der Pipelinekonfiguration erhaltenen Wert handelt es sich um die Organisations-GUID.
-Für das Vorkommen im Bereitstellungsscript findet keine Ersetzung statt. 
+und beim dem in der Pipelinekonfiguration erhaltenen Wert handelt es sich um die Organisations-GUID. Für das Vorkommen im Bereitstellungsscript findet keine Ersetzung statt.
 
 Die Ziel-URL muss als Umgebungsvariable oder als realer Wert angegeben werden und
-es müssen entweder die GUIDs oder die Namen der Organisation und des Bereichs angegeben werden.
-Wird ein Wert angegeben, wird auch der andere ersetzt. 
+es müssen entweder die GUIDs oder die Namen der Organisation und des Bereichs angegeben werden. Wird ein Wert angegeben, wird auch der andere ersetzt.
 
-Variable | Beschreibung
+Variable | Beschreibung 
 ---------------- | ---------------- 
 CF_TARGET_URL |	Bluemix-Ziel-URL
 CF_ORGANIZATION	| Organisationsname
@@ -213,19 +216,18 @@ CF_APP	| App-Name
 
 **YAML-Datei aus einer Pipeline generieren** 
 
-Sie können eine YAML-Datei aus einer Pipeline generieren.  
+Sie können eine YAML-Datei aus einer Pipeline generieren. 
 
 Generieren Sie die Datei aus einer vorhandenen
-Pipeline mit einer URL im folgenden Format: 
+Pipeline mit einer URL im folgenden Format:
 
 ```
 <DevOps Services-Domäne>/pipeline/user/project/yaml
 ```
 {: codeblock} 
 
-Dieser Aufruf erfordert keinen Header 'Accept'. Sie können diesen Aufruf in einem Browser verwenden.  
+Dieser Aufruf erfordert keinen Header 'Accept'. Sie können diesen Aufruf in einem Browser verwenden. 
 
 **Hinweis:** Aus Sicherheitsgründen sind die Umgebungseigenschaftswerte für die Stage 'secure'
-nicht in den generierten Pipeline-YAML-Dateien enthalten.
- 
+nicht in den generierten Pipeline-YAML-Dateien enthalten. 
 

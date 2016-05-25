@@ -30,7 +30,7 @@ La propiedad de la versión se puede establecer en un rango de versiones. Hay do
 ## OpenJDK
 {: #openjdk}
 
-De forma opcional, las aplicaciones se pueden configurar para ejecutarse con OpenJDK como JRE. Para permitir que una aplicación se ejecute con OpenJDK, establezca la variable de entorno JVM en “openjdk”. Por ejemplo, con la herramienta de línea de mandatos cf, ejecute el mandato:
+De forma opcional, las aplicaciones se pueden configurar para ejecutarse con OpenJDK como JRE. Para permitir que una aplicación se ejecute con OpenJDK, establezca la variable de entorno JVM en "openjdk". Por ejemplo, con la herramienta de línea de mandatos cf, ejecute el mandato:
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
@@ -52,7 +52,7 @@ La propiedad de la versión se puede establecer en un rango de versiones como 1.
 
 El paquete de compilación de Liberty configura las opciones predeterminadas de JVM teniendo en cuenta los siguientes aspectos:
 
-* Límite de memoria de una aplicación. Los valores aplicados del almacenamiento dinámico de JVM se calculan en función de:
+* Límite de memoria de una aplicación.  Los valores aplicados del almacenamiento dinámico de JVM se calculan en función de:
   * el límite de memoria de una aplicación, tal y como se detalla en [Límites de memoria y el paquete de compilación de Liberty](memoryLimits.html#memory_limits)
   * el tipo de JRE, ya que las opciones del almacenamiento dinámico de la JVM pueden variar en función de las opciones admitidas de JRE.
 
@@ -67,7 +67,7 @@ El paquete de compilación de Liberty configura las opciones predeterminadas de 
   * direccionamiento de la información en los recursos de memoria disponible de la aplicación en el momento de producirse el error en Loggregator.
   * si se ha configurado una aplicación para habilitar los volcados de memoria de JVM, se inhabilitará la interrupción de los procesos Java, y los volcados de memoria de JVM se direccionan a un directorio común "volcados" de la aplicación. Estos volcados pueden visualizarse desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) CF.
 
-A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:   
+A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -94,7 +94,8 @@ Las aplicaciones pueden personalizar las opciones de JVM con las especificacione
 
 <tr>
 <td>IBM JRE</td>
-<td>incluye opciones de tiempo de ejecución (con el prefijo -X), cualquier propiedad de sistema Java (con el prefijo -D) y no recomienda -XX para un uso casual (estas opciones están sujetas a cambios)</td>
+<td>incluye opciones de tiempo de ejecución (con el prefijo -X), cualquier propiedad de sistema Java (con el prefijo -D) y no recomienda -XX para un uso casual (estas opciones están sujetas a cambios)
+</td>
 <td>[Opciones de línea de mandatos de Versión 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [opciones de línea de mandatos de Versión 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
 </td>
 </tr>
@@ -137,7 +138,7 @@ Nota: Es posible que algunas opciones no surtan efecto a no ser que las desencad
 <td>JAVA_OPTS</td>
 <td>una variable de entorno a través de la infraestructura de opciones Java del paquete de compilación de Liberty</td>
 <td>Todos</td>
-<td>Vuelva a transferir la aplicación</td>
+<td>Vuelva a transferir la app</td>
 <td>Sí</td>
 </tr>
 
@@ -146,7 +147,7 @@ Nota: Es posible que algunas opciones no surtan efecto a no ser que las desencad
 <td>jvm.options</td>
 <td>un archivo de configuración de JVM admitido por el servidor empaquetado o directorio de servidores de tiempo de ejecución de Liberty</td>
 <td>Paquete de servidor</td>
-<td>Vuelva a transferir la aplicación</td>
+<td>Vuelva a transferir la app</td>
 <td>Sí</td>
 </tr>
 
@@ -155,7 +156,7 @@ Nota: Es posible que algunas opciones no surtan efecto a no ser que las desencad
 <td>JVM_ARGS</td>
 <td>una variable de entorno admitida por el tiempo de ejecución de Liberty</td>
 <td>Todos</td>
-<td>Reinicie o vuelva a transferir la aplicación</td>
+<td>Reinicie o vuelva a transferir la app</td>
 <td>Sí</td>
 </tr>
 </table>
@@ -171,9 +172,10 @@ Las opciones JVM para la aplicación Java autónoma se mantienen como opciones d
 ```
 {: #codeblock}
 
-Las opciones para despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options. 
+Las opciones para despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options.
 
-Para ver el archivo jvm.options para WAR, EAR y directorio de servidor, ejecute el mandato: ```
+Para ver el archivo jvm.options para WAR, EAR y directorio de servidor, ejecute el mandato:
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: #codeblock}
@@ -228,7 +230,7 @@ Defina la variable de entorno de la aplicación con la opción de JVM y reinicie
 
 En algunos casos es necesario empaquetar los archivos con el JRE para disponer de su funcionalidad. El desarrollador de aplicaciones puede suministrar archivos JRE para su personalización.
 
-Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml. 
+Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml.
 
 * archivo WAR
   * WEB-INF
@@ -261,7 +263,8 @@ Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o
 
 El directorio .java-overlay contiene archivos específicos en la misma jerarquía de archivos que el Java JRE que se está solapando, empezando por .java/jre.
 
-Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar estos archivos de política de Java:```
+Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar estos archivos de política de Java:
+```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
@@ -269,7 +272,7 @@ Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar est
 
 Descargue los archivos de política sin restricciones adecuados y añádalos a su aplicación como:
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}

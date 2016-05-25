@@ -40,15 +40,15 @@ Vedi la configurazione di esempio generata dal pacchetto di build Liberty per l'
 
 Per fare in modo che un'applicazione Java esistente sia monitorata con New Relic in IBM Bluemix, attieniti alla seguente procedura.
 1. Crea un'istanza del servizio New Relic in IBM Bluemix.
-<pre>
+```
     $ cf create-service newrelic standard mynewrelic
-</pre>
+```
 {: #codeblock}
 
 2. Distribuisci la tua applicazione a IBM Bluemix con il servizio New Relic.  Consulta il seguente manifest dell'applicazione
 di esempio:
-<pre>
-        &dash;&dash;&dash;
+```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -57,8 +57,8 @@ di esempio:
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic
+```
 {: #codeblock}
 
 3. Accedi al dashboard New Relic dalla tua applicazione direttamente dal dashboard IBM Bluemix della tua applicazione.
@@ -78,8 +78,8 @@ Se hai un account e una chiave di licenza New Relic esistenti, puoi eseguire il 
 2. Distribuisci la tua applicazione a IBM Bluemix con l'istanza del servizio New Relic fornito dall'utente.  Il seguente è un manifest
 dell'applicazione di esempio che utilizza un'istanza del servizio New Relic
 fornito dall'utente:
-<pre>
-        &dash;&dash;&dash;
+```
+        ---
         applications:
         - name: myapp
          memory: 1G
@@ -88,8 +88,8 @@ fornito dall'utente:
          domain: mybluemix.net
          path: myapp.war
          services:
-         - mynewrelic
-</pre>
+          - mynewrelic
+```
 {: #codeblock}
 
 3. Accedi al dashboard New Relic per visualizzare le metriche dell'applicazione.

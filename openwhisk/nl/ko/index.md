@@ -16,9 +16,7 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# 
-{{site.data.keyword.openwhisk_short}}
-시작하기
+# {{site.data.keyword.openwhisk_short}} 시작하기
 *마지막 업데이트 날짜: 2016년 2월 17일*
 
 {{site.data.keyword.openwhisk}}는 이벤트 주도적인 분배된 계산 서비스입니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱의 직접 호출 또는 이벤트에 응답하여 애플리케이션 로직을 실행합니다. 이벤트는 Cloudant와 같은 Bluemix 서비스 및 외부 소스에서 제공될 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 결과적으로 스케일링, 복원성 및 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.

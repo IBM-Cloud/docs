@@ -1,7 +1,7 @@
 ---
 
-저작권:
-  연도: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -252,3 +252,14 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/android-custom-login-success.png)
+
+1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 
+사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 
+
+ 로그아웃 기능에 전달된 `listener`의 값은 널일 수 있습니다. 

@@ -13,20 +13,21 @@ copyright:
 {: #ruby_runtime}
 *Letzte Aktualisierung: 16. März 2016*
 
-Die Laufzeit von Ruby in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ruby_buildpack'. Das Buildpack 'ruby_buildpack' bietet eine vollständige Laufzeitumgebung für Ruby-Apps.
+Die Laufzeit von Ruby in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ruby_buildpack'.
+Das Buildpack 'ruby_buildpack' bietet eine vollständige Laufzeitumgebung für Ruby-Apps.
 {: shortdesc}
 
-Das Buildpack 'ruby_buildpack' wird verwendet, wenn im Stammverzeichnis Ihrer App das Element 'Gemfile' enthalten ist. Es wird zum Installieren Ihrer Abhängigkeiten anschließend Bundler verwendet. 
+Das Buildpack 'ruby_buildpack' wird verwendet, wenn im Stammverzeichnis Ihrer App das Element 'Gemfile' enthalten ist. Es wird zum Installieren Ihrer Abhängigkeiten anschließend Bundler verwendet.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Ruby-Starteranwendung bereit. Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html). 
+{{site.data.keyword.Bluemix}} stellt eine Ruby-Starteranwendung bereit.  Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
 
-Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im Element 'Gemfile' Ihrer Anwendung angeben. Beispiel: 
+Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im Element 'Gemfile' Ihrer Anwendung angeben. Beispiel:
 
 
 ```
@@ -38,7 +39,7 @@ Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im El
 ```
 {: codeblock}
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 2.2.2 ausgewählt. 
+Wenn keine Version angegeben ist, wird standardmäßig Version 2.2.2 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
@@ -52,7 +53,6 @@ Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfound
 * 2.2.3
 
 Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
-
 
 # Zugehörige Links
 ## Allgemein

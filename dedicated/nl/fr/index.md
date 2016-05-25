@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  2015, 2016
 
  
 
@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicated}
 
-*Dernière mise à jour : 7 mars 2016*
+*Dernière mise à jour : 19 avril 2016*
 
 
 {{site.data.keyword.Bluemix}} est une plateforme à normes ouvertes reposant sur le cloud qui permet de construire, d'exécuter et de gérer des applications. Avec l'environnement {{site.data.keyword.Bluemix_notm}} dédié, vous bénéficiez de la puissance et de la simplicité de {{site.data.keyword.Bluemix_notm}}&mdash;et ce, dans votre propre environnement SoftLayer dédié, connecté de façon sécurisée à l'environnement {{site.data.keyword.Bluemix_notm}} public et à votre propre réseau.
@@ -25,17 +25,15 @@ copyright:
 Tous les déploiements dédiés de {{site.data.keyword.Bluemix_notm}} incluent les fonctions et les avantages suivants gratuitement : réseau
 privé virtuel (VPN), réseau local virtuel (VLAN) privé, connectivité avec votre protocole LDAP, possibilité d'optimiser des applications et des bases de
 données sur
-site existantes, sécurité sur site 24 heures sur 24 et 7 jours sur 7, matériel dédié et support standard. 
-
-L'environnement {{site.data.keyword.Bluemix_notm}} dédié inclut un catalogue privé qui affiche les services dédiés disponibles exclusivement pour vous. Il
-inclut également des services supplémentaires qui sont à votre disposition depuis l'environnement {{site.data.keyword.Bluemix_notm}} public.
+site existantes, sécurité sur site 24 heures sur 24 et 7 jours sur 7, matériel dédié et support standard.
 
 L'environnement {{site.data.keyword.Bluemix_notm}} dédié est fourni avec tous les contextes d'exécution
-{{site.data.keyword.Bluemix_notm}} et 64 Go de mémoire pour les ressources de traitement. 
+{{site.data.keyword.Bluemix_notm}} et 64 Go de mémoire pour les ressources de traitement.
 
-De plus, vous disposez d'un ensemble de services et de composants inclus ou facultatifs.
+Par ailleurs, un éventail de services est disponible en tant que Services dédiés
+{{site.data.keyword.Bluemix_notm}}. Examinez le tableau suivant pour déterminer les éléments inclus et ceux dont vous pouvez faire l'acquisition.
 
-
+*Tableau 1. Services dédiés*
 
 | **Type**        | **Nom **            | **Description** |      
 |-----------------|-------------------|-------------------|
@@ -44,6 +42,10 @@ opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gér
 contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} dédiée.|
 | Inclus | {{site.data.keyword.autoscaling}} | Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix_notm}} dédié. |
 | Facultatif | {{site.data.keyword.datacshort}} | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
+|Facultatif | {{site.data.keyword.sescashort}} | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
+qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client
+peut continuer à accéder à la session en cache. Le service prend en charge des scénarios de mise en cache de session pour les applications Web et
+mobiles. |
 | Facultatif | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} for {{site.data.keyword.Bluemix_notm}} est un service de messagerie reposant sur le cloud qui fournit une messagerie souple et facile à utiliser pour les applications {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.mql}} constitue une solution d'administration simple pour la messagerie. Vous pouvez utiliser {{site.data.keyword.mql}} pour rendre vos applications plus réactives et plus évolutives, et vous pouvez partager et décharger le travail entre des applications à l'aide d'une API puissante et simple. |
 | Facultatif | {{site.data.keyword.dashdbshort}} | Utilisez dashDB pour stocker les données relationnelles, notamment les types spéciaux tels que les données géospatiales. Ensuite, analysez ces données avec l'analyse intégrée avancée ou SQL, comme l'analyse prédictive et l'exploration de données, l'analyse avec R et l'analyse géospatiale. |
 |Facultatif | {{site.data.keyword.APIM}} | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
@@ -51,10 +53,128 @@ contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{
 |Facultatif | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
 entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
 d'application mobile et Web. |
+| Facultatif | {{site.data.keyword.iot_full}} | Ce service permet à vos applications de communiquer et de consommer
+les données collectées par vos périphériques connectés, capteurs et passerelles. Le service de base permet d'exécuter une version privée de
+{{site.data.keyword.iot_full}} dans l'environnement dédié, avec une capacité de 100000 périphériques ou applications connectés simultanément et avec
+1,6 To d'échange de données. |
 
-*Tableau 1. Services dédiés*
+Vous pouvez acquérir des composants facultatifs pour élargir la capacité de vos ressources et périphériques. Vous pouvez acquérir ces composants en contactant
+l'équipe commerciale. Accédez à la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for
+pour plus d'informations sur la manière de contacter un ingénieur commercial. Pour rehausser votre plan pour un service, vous pouvez sélectionner un plan
+depuis la vignette Service dans votre catalogue.
 
-## Architecture de l'environnement {{site.data.keyword.Bluemix_notm}} dédié 
+*Tableau 2. Composant facultatifs dont vous pouvez faire l'acquisition*
+
+| **Nom **            | **Description** |      
+|-------------------|-------------------|
+|Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Inclut l'exécution d'une version privée de
+{{site.data.keyword.cloudantfull}} dans l'environnement dédié avec une capacité de conception de
+1,6 téraoctets  |
+|Dedicated runtimes 16 GB capacity increase  | Extension de l'environnement d'exécution en lui ajoutant une capacité de
+16 Go. |
+|Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | Environnement permettant le déploiement et
+l'exécution d'instances {{site.data.keyword.datacshort}} et {{site.data.keyword.sescashort}} jusqu'à une capacité cumulée de
+50 Go. |
+|Dedicated Direct Link 1 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau
+SoftLayer approprié, conçu pour des transferts de données jusqu'à 1 Gbit/s. |
+|Dedicated Direct Link 10 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau SoftLayer approprié, conçu pour des transferts de
+données jusqu'à 10 Gbit/s. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | Une base de données par instance de service sur un serveur dédié avec
+64 Go de mémoire RAM, 16 UC virtuelles. Recommandé pour jusqu'à 1 To de pré-chargement de données, en fonction du type de compression.  |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | Une base de données par instance de service sur un serveur dédié sans système
+d'exploitation avec 256 Go de mémoire RAM, 32 coeurs. Recommandé pour jusqu'à 4 To de de pré-chargement de données, en fonction de la compression classique. |
+|Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | Une base de données par instance de service sur un serveur dédié sans système
+d'exploitation avec 256 Go de mémoire RAM, 32 coeurs. Recommandé pour jusqu'à 12 To de pré-chargement de données, en fonction du type de compression. Il s'agit
+d'un plan de stockage dense pour les environnements où les volumes de données sont plus importants et où les requêtes n'ont pas besoin de s'exécuter à la vitesse de
+la mémoire. |
+|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | Environnement permettant l'exécution d'une version privée de
+{{site.data.keyword.APIM}} dans l'environnement dédié avec une capacité de 1000 appels d'API par seconde. |
+|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | Environnement permettant l'exécution d'une version privée d'IBM API Management for
+Bluemix dans l'environnement privé avec une capacité de 500 appels d'API par seconde.  |
+|{{site.data.keyword.Bluemix_notm}} Dedicated community services  | Environnement permettant le déploiement et l'exécution de services de communauté pouvant
+comprendre chacun jusqu'à 50 instances.  |
+|IBM Bluemix Dedicated Hardware Firewall - High Availability | Pare-feu matériel d'1 Gbit/s configuré pour la protection d'un serveur unique, de plusieurs serveurs
+ou de tous les serveurs sur le même réseau local virtuel dans l'environnement Bluemix Dedicated. |
+|Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité  | Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité
+et son utilisation par l'environnement dédié. |
+|IBM Dedicated {{site.data.keyword.mql}} PR 30 capacity increase | Environnement permettant le déploiement et l'exécution
+d'instances {{site.data.keyword.mql}} jusqu'à une capacité cumulée de 30 instances de service. |
+|Dedicated {{site.data.keyword.mobilepushshort}} services 12 GB capacity increase | Environnement permettant le déploiement et l'exécution
+du service {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}} en impliquant les environnements d'exécution Liberty et Node.js
+dans l'environnement dédié. Le service {{site.data.keyword.mobilepushshort}} a une dépendance prérequise envers
+{{site.data.keyword.cloudant}} avec une capacité de conception d'au moins 500 Go. |
+|{{site.data.keyword.iot_short}} Dedicated incremental increase | Elargissement de l'environnement permettant l'exécution d'une
+version privée de
+{{site.data.keyword.iot_short}} dans l'environnement dédié avec une capacité de 100000 périphériques ou applications connectés simultanément
+et 0,5 To d'échange de données. |
+
+**Remarque **: Les composants {{site.data.keyword.Bluemix_notm}} Dedicated peuvent indiquer une capacité configurée
+spécifique, par exemple en gigaoctets ou transactions par seconde. Comme
+la capacité effective concrète pour chaque configuration du service de cloud varie en fonction de nombreux facteurs, elle peut être supérieure ou inférieure à la
+capacité configurée.
+
+
+### Catalogue mixte
+{: #catalogdedicated}
+
+{{site.data.keyword.Bluemix_notm}} Dedicated inclut un catalogue privé qui affiche les services locaux disponibles exclusivement pour vous. Il inclut
+également des services de {{site.data.keyword.Bluemix_notm}} Public que vous pouvez utiliser.
+
+Le catalogue mixte fournit la fonction permettant de créer des applications hybrides composées de
+services publics et privés. Vous pouvez choisir les services publics qui satisfont les exigences pour votre activité selon vos critères de
+sécurité et de confidentialité des données. Si vous disposez d'une instance privée du service pour votre environnement dédié, vous pouvez distinguer des icônes
+spécifiques associées à des vignettes de service dans votre catalogue (par exemple, une ![icône de service dédié](images/dedicatedicon.png "icône de servicedédié").
+
+
+*Tableau 3. Services disponibles pour syndication depuis {{site.data.keyword.Bluemix_notm}} Public par région*
+
+|Service    |Disponible dans la région Sud des Etats-Unis   |Disponible dans la région Europe/Royaume-Uni |Disponible dans la région Sydney|
+|:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.alchemyapishort}} 		|Oui	   	|Oui  		|Oui|
+|{{site.data.keyword.alertnotificationshort}}		|Oui		|Oui			|Oui		|
+|{{site.data.keyword.appseccloudshort}}		|Oui		|Oui		|Oui |
+|{{site.data.keyword.amashort}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.hadoopst}}			|Oui		|Non		|Non |
+|{{site.data.keyword.APIM}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.rules_short}}		|Oui		|Oui		|Oui |
+|{{site.data.keyword.cloudant}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.conceptexpansionshort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.conceptinsightsshort}}	|Oui		|Oui		|Oui |
+|{{site.data.keyword.dashdbshort}}		|Oui		|Oui		|Non |
+|{{site.data.keyword.DB2OnCloud_short}}		|Oui		|Oui		|Non |
+|{{site.data.keyword.dialogshort}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.documentconversionshort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.game}}			|Non		|Non		|Oui |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Oui	|Oui		|Oui |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Oui		| Oui		| Oui |
+|{{site.data.keyword.dataworks_short}}		|Oui		|Oui		|Non|
+|{{site.data.keyword.twittershort}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.iot_short}}		|Oui		|Oui		|Non|
+|{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Oui |
+|{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
+|{{site.data.keyword.macm_short}}		|Oui		|Oui		|Oui|
+|{{site.data.keyword.manda}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.mqa}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.mql}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Oui |
+|{{site.data.keyword.questionandanswershort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.relationshipextractionshort}}	|Oui	|Oui		|Oui|
+|{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Oui |
+|{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
+|{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
+|{{site.data.keyword.streaminganalyticsshort}}	|Oui		|Oui		|Oui |
+|{{site.data.keyword.texttospeechshort}} 	|Oui 		|Oui	 	|Oui|
+|{{site.data.keyword.toneanalyzershort}} 	|Oui 		|Oui 		|Oui|
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.visualinsightsshort}}	|Oui		|Oui		|Oui|
+|{{site.data.keyword.workflow}}			|Oui		|Oui		|Oui |
+|{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Oui |
+
+## Architecture de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicatedarch}
 
 L'environnement {{site.data.keyword.Bluemix_notm}} dédié s'appuie sur SoftLayer pour que vous puissiez bénéficier de l'infrastructure de cloud la plus performante. Chaque centre de données applique des contrôles rigoureux de sécurité 24 heures sur 24, 7 jours sur 7. Vous et IBM accédez à votre instance {{site.data.keyword.Bluemix_notm}} dédiée via un tunnel de réseau privé virtuel et un réseau local virtuel privé.
@@ -183,7 +303,7 @@ sont les suivants :
 - Définir et établir la connectivité du réseau entre votre réseau d'entreprise et les opérations {{site.data.keyword.Bluemix_notm}}.
 - Identifier et affecter des rôles pour votre équipe d'administration.
 
-*Tableau 1. Tâches de la phase de création*
+*Tableau 4. Tâches de la phase de création*
 
 | **Tâche** | **Détails de la tâche** | **Partie responsable** |
 |----------|------------------|-----------------------|
@@ -212,14 +332,13 @@ détection d'événements et l'identification des problèmes au niveau de la pla
 |Définir un plan d'escalade | Définir le plan d'escalade pour analyser les besoins et résoudre les événements détectés depuis les composants de
 surveillance. | IBM |
 |Signer des accords relatifs à l'infrastructure, la plateforme et le support | Signer le contrat d'abonnement incluant les dispositions financières
-pour l'environnement. Signer l'accord de surveillance du réseau et de la sécurité. Signer le contrat d'assistance. | Client |
+pour l'environnement. Signer l'abonnement au support. | Client |
 |Procurer l'environnement | Procurer les ressources de traitement, le réseau et le stockage, notamment le réseau local virtuel des services et de base
 pour héberger {{site.data.keyword.Bluemix_notm}}, des services non virtualisés pour héberger Data Power, et le pare-feu SoftLayer. Fournir
 l'infrastructure pour autoriser un tunnel de réseau privé virtuel. | Client |
 |Installer les composants de plateforme, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de plateforme,
 comme BOSH Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi
-que les composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes.
- | IBM |
+que les composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes. | IBM |
 |Installer et configurer les composants de sécurité | Installer et configurer les composants de sécurité qui sont liés dans le plan de surveillance et
 d'escalade, notamment IBM QRadar, le coffre des identifications, le système de prévention des intrusions, IBM BigFix et IBM Security
 Privileged Identity
@@ -251,7 +370,7 @@ cette phase sont les suivants :
 - Réviser les améliorations de la maintenance et de la plateforme.
 - Coordonner les activités relatives à la résolution des problèmes et à l'analyse de la cause première.
 
-*Tableau 2. Tâches de la phase de progression*
+*Tableau 5. Tâches de la phase de progression*
 
 | **Tâche** | **Détails de la tâche** | **Partie responsable** |
 |----------|------------------|-----------------------|
@@ -265,7 +384,7 @@ responsabilité |
 |Réviser les projections | Réviser les projections de capacité car elles sont liées à des événements externes pouvant avoir un impact sur la capacité. | Client |
 |Ajuster la capacité |  Ajouter ou retirer de la capacité au fur et à mesure que vos besoins changent. | IBM |
 |Publier la maintenance et les mises à jour entrantes | Créer une documentation pour la maintenance requise des composants IBM. | IBM |
-|Assurer la maintenance | Collaborer avec IBM pour planifier la maintenance requise dans une fenêtre de 30 jours. Vous pouvez fournir les dates qui ne
+|Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise sur un créneau de 21 jours. Vous pouvez fournir les dates qui ne
 vous conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la
 responsabilité |
 |Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont
@@ -289,7 +408,7 @@ cette phase sont les suivantes :
 * Suppression de toutes les connexions réseau
 * Recyclage de l'infrastructure
 
-*Tableau 3. Tâches de la phase d'achèvement*
+*Tableau 6. Tâches de la phase de réalisation*
 
 | **Tâche** | **Détails de la tâche** | **Partie responsable** |
 |----------|------------------|-----------------------|
@@ -307,13 +426,10 @@ responsabilité |
 IBM gère et installe les mises à jour et les correctifs qu'elle juge nécessaires pour la plateforme, les contextes d'exécution et les services de
 l'environnement {{site.data.keyword.Bluemix_notm}} dédié.
 
-**Important** : IBM se réserve le droit d'interrompre des services afin de procéder à une maintenance d'urgence si nécessaire. IBM
-peut changer les heures de maintenance planifiées et vous fera part de tels changements et de toute information relative à la maintenance d'urgence.
-
 Les types suivants de maintenance sont requis pour l'environnement {{site.data.keyword.Bluemix_notm}}
 dédié :
 <dl>
-<dt>**Fenêtres de maintenance standard**</dt>
+<dt>**Maintenance standard des services**</dt>
 <dd>Les services utilisent des fenêtres de maintenance standard prédéfinies qui peuvent entraîner leur indisponibilité. IBM n'exige pas l'approbation du client avant de procéder à la maintenance, mais tente de réduire
 l'impact sur vos services.<br />
 <br />
@@ -322,69 +438,59 @@ téléphone ou par d'autres moyens.<br />
 <br />
 **Important** : certains services peuvent ne pas être disponibles au cours de la période de maintenance.</dd>
 
-<dt>**Fenêtre de maintenance mensuelle**</dt>
-<dd>La fenêtre de maintenance mensuelle est convenue entre vous et IBM dans une fenêtre de 21 jours. Vous pouvez fournir à IBM des dates ou des heures
+<dt>**Maintenance standard de {{site.data.keyword.Bluemix_notm}}**</dt>
+<dd>Les mises à jour de maintenance sont appliquées en coordination entre le client et IBM sur un créneau de 21 jours. Vous pouvez fournir à IBM des dates ou des heures
 spécifiques qui ne vous conviennent pas dans la fenêtre de 21 jours. IBM tente de planifier les mises à jour en dehors de ces dates ou de ces heures. En
 fonction des demandes, IBM vous communique la fenêtre de maintenance planifiée. Les fenêtres de maintenance mensuelle n'ont généralement pas d'impact
 sur l'environnement Bluemix dédié en cours d'exécution.
 <p>L'image suivante représente le processus, de la réception d'une notification relative à une mise à jour en attente à la définition de dates ne convenant
-pas, jusqu'à la réception de la notification relative à la date planifiée :
-</p>
+pas, jusqu'à la réception de la notification relative à la date planifiée :</p>
 <p><img src="../local/images/maintenance_dates.png" alt="Processus de définition des dates d'indisponibilité pour une mise à jour de maintenance"></p>
 <br />
-**Remarque** : si vous n'avez pas besoin de définir de dates d'indisponibilité pour la mise à jour, vous pouvez l'approuver. IBM vous
-signale la date planifiée pour la maintenance. <br />
-<p>L'image suivante représente le processus, de la réception d'une notification relative à une mise à jour en attente à l'approbation de la mise à jour,
-jusqu'à la réception de la date planifiée pour la mise à jour :
-</p>
-<p><img src="../local/images/maintenance_nodates.png" alt="Processus d'approbation de la mise à jour sans date d'indisponibilité"></p>
+**Remarque** : si vous n'avez pas besoin de définir de dates d'indisponibilité pour la mise à jour, vous pouvez l'approuver. IBM vous avise
+alors de la date planifiée pour l'application de la maintenance.<br />
 <br />
 Accédez à **ADMINISTRATION > SYSTEM INFORMATION** pour afficher les mises à jour en attente, définir des dates d'indisponibilité et
 approuver des mises à jour. Pour plus d'informations sur les notifications et la planification des mises à jour en attente, voir
 <a href="../admin/index.html#oc_system">Affichage des informations système</a>.</dd>
-
-<dt>**Autre**</dt>
-<dd>IBM entend regrouper les maintenances pouvant avoir un impact sur vos services, en particulier la disponibilité de votre environnement
-{{site.data.keyword.Bluemix_notm}} dédié, de vos
-contextes d'exécution et de vos services, dans les mises à jour standard et mensuelles. D'autres fenêtres de maintenance peuvent être utilisées exceptionnellement pour la gestion de l'environnement. IBM fera de son mieux pour limiter l'impact
-sur vos activités pendant ces fenêtres de maintenance et vous avertira à l'avance.</dd>
 </dl>
 
-Pour configurer la maintenance de votre instance dédiée, collaborez avec votre représentant de compte IBM afin de convenir d'une fenêtre pour la
-maintenance standard.
+**Important** : IBM se réserve le droit d'interrompre des services afin de procéder à une maintenance d'urgence si nécessaire. IBM
+peut changer les heures de maintenance planifiées et vous fera part de tels changements et de toute information relative à la maintenance d'urgence.
 
-Si un problème est signalé suite à une mise à jour de maintenance, vous décidez avec votre interlocuteur IBM s'il est judicieux pour vous qu'IBM
-annule la mise à jour. Si vous parvenez à un accord, IBM annule la mise à jour afin de restaurer l'état précédent de l'environnement.
+Pour configurer la maintenance de votre instance dédiée, collaborez avec votre représentant de compte IBM afin de convenir d'une fenêtre pour la
+maintenance standard. Si un problème est signalé suite à une mise à jour de maintenance, vous décidez avec votre interlocuteur IBM s'il convient
+de permettre à IBM
+d'annuler la mise à jour. Si vous parvenez à un accord, IBM annule la mise à jour afin de restaurer l'état précédent de l'environnement.
 
 ## Réponse aux incidents et support
 {: #incidentresponse}
 
-### Problèmes détectés par le client 
+### Problèmes détectés par le client
 
 Si vous identifiez un problème nécessitant l'attention du centre des opérations et du support IBM, vous pouvez prendre contact avec le support de
 plusieurs façons. Pour des informations sur la façon de contacter le support, voir
 [Contacter le support](../support/index.html#contacting-bluemix-support-local). Selon le problème, vous et IBM travaillerez ensemble ou
 individuellement pour le résoudre.
 
-
-### Incidents critiques détectés par IBM 
+### Incidents critiques détectés par IBM
 
 Les incidents critiques sont des problèmes dont la résolution est urgente, comme des indisponibilités de service inattendues ou des problèmes de
 stabilité ayant un impact sur votre environnement ou vos utilisateurs. Si IBM détecte un incident critique dans votre environnement, elle vous envoie une
 notification sur la page **Statut**. Vous pouvez également rechercher dans la page Statut les problèmes connus pour la plateforme ou vos
-services. Si vous voulez intégrer vos notifications à un service Web qui prend en charge les webhooks, voir
+services. Pour plus d'informations sur la page Statut, voir [Affichage du statut](../admin/index.html#oc_status).
+
+Si vous voulez intégrer vos notifications à un service Web qui prend en charge les webhooks, voir
 [Notifications et abonnements à des événements](../admin/index.html#oc_eventsubscription) pour des informations sur l'extension de vos
 fonctions de notification.
-
 
 ![Processus de réponse à un incident](../local/images/incidentresponseprocess.png "Processus de réponse à un incident")
 
 *Figure 2. Processus de réponse à un incident*
 
-Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre.
-En cas de question relative à l'incident ou si vous avez besoin de l'aide d'un interlocuteur IBM pour résoudre le problème, vous pouvez ouvrir un ticket de
+Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre. En cas de question relative à l'incident ou si vous avez besoin de l'aide d'un interlocuteur IBM pour résoudre le problème, vous pouvez ouvrir un ticket de
 demande de service. Pour des informations sur la façon de contacter le support, voir
-[Contacter le support](../support/index.html#contacting-bluemix-support-local). 
+[Contacter le support](../support/index.html#contacting-bluemix-support-local).
 
 **Remarque** : les tickets de demande de service de gravité 1 sont surveillés 24 heures sur 24, 7 jours sur 7. Les autres tickets
 sont traités du dimanche 22:00 GMT au samedi 12:00 GMT. Pour plus d'informations sur la gravité des tickets de demande de service et la collaboration avec
@@ -458,24 +564,28 @@ plus d'informations sur l'utilisation de Dyn comme équilibreur de charge global
 ### Haute disponibilité
 {: #ha}
 
-En plus d'assurer la disponibilité continue, {{site.data.keyword.Bluemix_notm}} fournit également la haute disponibilité sur la plateforme en
-utilisant des technologies intégrées dans Cloud Foundry, Docker et d'autres composants.
+En plus de permettre une disponibilité en continu, {{site.data.keyword.Bluemix_notm}} permet également une haute disponibilité
+à travers la plateforme en utilisant des technologies intégrées dans Cloud Foundry et d'autres composants.
 
 Ces technologies incluent les points suivants :
 
 <dl>
-<dt>L'évolutivité dans Cloud Foundry</dt>
+<dt>Evolutivité DEA dans Cloud Foundry</dt>
 <dd>Un agent <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent
 (DEA)</a> Cloud Foundry effectue des diagnostics d'intégrité pour les applications qu'il exécute. S'il existe un problème lié à l'application ou à l'agent DEA lui-même, il déploie des instances supplémentaires de l'application dans un autre agent DEA
-afin de traiter le problème. Pour plus d'informations, voir
-la page relative à la <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">configuration de CF pour la haute
-disponibilité avec redondance</a>.
+afin de traiter le problème. Pour plus d'informations, voir la page relative à la
+<a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">configuration de CF pour la haute disponibilité avec
+redondance</a>.<br />
+<p>Pour garantir une haute disponibilité de vos applications, vous avez besoin de suffisamment de ressources de traitement pour équilibrer la charge, et
+éventuellement d'un supplément pour faire face à une panne. Si vous avez besoin d'étoffer votre environnement en élargissant votre pool
+DEA pour pouvoir faire face à une panne ou à une pointe de la charge de vos instances d'application, vous pouvez contacter votre ingénieur commercial
+IBM pour commander des DEA supplémentaires.
+</p>
 </dd>
 <dt>Redondance SoftLayer</dt>
 <dd>Avec SoftLayer dans les environnements dédiés, les données de chaque cluster de stockage en cloud sont écrites plusieurs fois et les clusters de
 stockage sont configurés avec des capacités de rétablissement automatique en cas d'échec d'unité. En cas de problème lié à un serveur virtuel, SoftLayer
-tente de redémarrer le serveur virtuel sur un autre hôte.
-</dd>
+tente de redémarrer le serveur virtuel sur un autre hôte.</dd>
 <dt>Sauvegarde des métadonnées</dt>
 <dd>Les métadonnées sont sauvegardées avec SoftLayer EVault Backup dans une zone qui se trouve à au moins 200 kilomètres.</dd>
 </dl>

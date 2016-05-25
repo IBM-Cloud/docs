@@ -102,12 +102,12 @@ Utilizza la API **subscribeToTags** per sottoscrivere a una
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
+	if (error != nil) { 
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-}
+} 
 ```
 
 **Annullare la sottoscrizione alle tag**

@@ -11,7 +11,7 @@ copyright:
 # Dynatrace の使用
 {: #using_dynatrace}
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日: 2016 年 4 月 8 日*
 
 Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。
 
@@ -32,7 +32,7 @@ Dynatrace エージェントは Web サーバー上でホストされる必要�
 ```
       ---
       6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
-```  
+```
 {: #codeblock}
      * URL 末尾の jar ファイルの名前は **dynatrace-agent-version-unix.jar** でなければなりません。バージョンは **6.3.0** または **6.3.0_nnnn** でなければなりません。nnnn はミクロ・バージョン ID です。これは、Dynatrace で使用される jar ファイル名とは異なる場合があるため、jar の名前変更が必要になることがあります。       
      * **dynatrace-agent-6.3.0-unix.jar** ファイルは、index.yml ファイルで指定されたロケーションで使用可能でなければなりません。jar ファイルと index.yml の両方のロケーションを同じディレクトリーにすることができます。
@@ -44,47 +44,44 @@ Dynatrace エージェントは Web サーバー上でホストされる必要�
   1. Dynatrace コレクターをセットアップします。
     * Dynatrace コレクターのダウンロード手順およびセットアップ手順については、[Dynatrace コミュニティー Web サイト](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace)を参照してください。
     * コレクターは、Bluemix 内のアプリケーションで実行されている Dynatrace エージェントにアクセス可能なロケーションでセットアップする必要があります。
-  2. 実行中の Dynatrace コレクターを指すユーザー提供サービスを作成します。例えば、次のコマンドを使用します。
-<pre>
-    $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
-</pre>
+  2. 実行中の Dynatrace コレクターを指すユーザー提供サービスを作成します。<b>注</b> ユーザー提供のサービスの名前には <b>dynatrace</b> が含まれている必要があります。例えば、次のコマンドを使用します。```
+    $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'```
 {: #codeblock}
-この例では、DynatraceCollectorIPaddress は構成済み Dynatrace コレクターの IP アドレス、profile はこのモニター対象アプリケーションに関連付けられたオプションの Dynatrace プロファイルです。デフォルト・プロファイル値は Monitoring です。オプション・パラメーターは次の例のように指定できます。
-<pre>
+この例では、my-dynatrace-collector はサービスに付けられた名前、DynatraceCollectorIPaddress は構成済み Dynatrace コレクターの IP アドレス、profile はこのモニター対象アプリケーションに関連付けられたオプションの Dynatrace プロファイル名です。デフォルト・プロファイル値は Monitoring です。オプション・パラメーターは次の例のように指定できます。
+```
     $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                                           "options" : {
                                                        "dynatrace-parameter-1": "value",
                                                        "dynatrace-parameter-2": "value"
                                          }}'
-</pre>
+```
 {: #codeblock}
 使用可能なオプションについて詳しくは、Dynatrace コミュニティー Web サイトの[『Agent Configuration』の『Agent Setting』セクション](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration)を参照してください。例えば、exclude オプションを使用すると、Dynatrace のモニター対象からクラスを除外できます。ユーザー提供サービスの構成について詳しくは、[『DynaTrace Agent Framework』](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md)を参照してください。
-  3. アプリケーションを Bluemix にプッシュ後、作成したユーザー提供サービスをアプリケーションにバインドします。例えば、次のコマンドを使用します。
-<pre>
-    $ cf bs myApp my-dynatrace-service
-</pre>  
+
+  3. アプリケーションを Bluemix にプッシュ後、作成したユーザー提供サービスをアプリケーションにバインドします。例えば、次のコマンドを使用します。```
+    $ cf bs myApp my-dynatrace-service```
 **注**: サービスのバインド後にアプリケーションを再ステージングする必要があります。
+
+
 ## Liberty アプリケーションの構成
 {: #configuring_liberty_app}
 
 モニター対象の Liberty アプリケーションは、以前にセットアップしたエージェント jar をホストするサーバーを検出するように構成する必要があります。**JBP_CONFIG_DYNATRACEAGENT** 環境変数を使用してアプリケーションを構成できます。**JBP_CONFIG_DYNATRACEAGENT** 環境変数は、Dynatrace エージェントのダウンロード元となるビルドパックを指示します。この環境変数を設定するには、以下の手順に従ってください。
 <ol>
    <li> 値が *"repository_root: URL_of_server_hosting_index.yml"* になるように変数 **JBP_CONFIG_DYNATRACEAGENT** を設定します。例えば、アプリケーションのプッシュ後に次のコマンドを発行します。
-<pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
-</pre>
+```
+    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'```
 {: #codeblock}
-この例では、*my-dynatrace-agent-host.mybluemix.net* は、以前に構成したサーバーでホストされる index.yml ファイルの URL です。</li>
+この例では、*my-dynatrace-agent-host.mybluemix.net* は、以前に構成したサーバーでホストされる index.yml ファイルの URL です。
+  </li>
   <li> 環境変数の設定後、アプリケーションを再ステージングします。Liberty アプリケーションの staging_task.log には、エージェント・ホスティング・サーバーからの Dynatrace エージェントの正常なダウンロードを示すメッセージが出されます。例えば、次のように指定します。
-<pre>
-    Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
-</pre>
+```
+    Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)```
 {: #codeblock}
 </li>
 <li>staging_task.log を見るには、次のコマンドを実行します。
-<pre>
-    $ cf files myAppName logs/staging_task.log
-</pre>  
+```
+    $ cf files myAppName logs/staging_task.log```
 {: #codeblock}
 </li>
 </ol>

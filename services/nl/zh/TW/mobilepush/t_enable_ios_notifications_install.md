@@ -42,7 +42,7 @@ $ pod init
 3. 從「終端機」中，移至您的專案資料夾，並使用下列指令來安裝相依關係：```
 $ pod update
 ```
-該指令會安裝相依關係並建立新的 Xcode 工作區。git **附註**：請確定您一律開啟新的 Xcode 工作區，而不是原始 Xcode 專案檔：
+該指令會安裝相依關係並建立新的 Xcode 工作區。**附註**：請確定您一律開啟新的 Xcode 工作區，而不是原始 Xcode 專案檔：
 
 	```
 	$ open App.xcworkspace
@@ -88,4 +88,4 @@ import BMSPush
 
 移至 **Xcode > 建置設定 > 建置選項，然後將啟用位元碼**設為**否**。
 
-**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明了這些變更的相關資訊：[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 及 [Connect your iOS 9 app to Bluemix today](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明了這些變更的相關資訊：[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 及 [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

@@ -158,7 +158,7 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
  ```Swift
  let customResourceURL = "<il percorso della tua risorsa protetta>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -182,3 +182,13 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
  })
  response:Optional("Salve Don Lon"), no error
  ```
+
+1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
+
+ Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

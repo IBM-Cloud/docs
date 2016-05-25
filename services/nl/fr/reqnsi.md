@@ -362,11 +362,10 @@ service](#config){: new_window}.
 Si une instance de service est créée et liée à des applications dans une région, vous pouvez l'utiliser dans une autre région de l'une des façons
 suivantes :
 
-
   * Utilisez les données d'identification du service pour configurer votre instance d'application directement. Voir
 [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}
-pour des détails. 
-  * Créez un service fourni par l'utilisateur comme pont. 
+pour des détails.
+  * Créez un service fourni par l'utilisateur comme pont.
     
 	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
 existe dans une autre région, procédez comme suit :

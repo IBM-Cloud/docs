@@ -30,20 +30,22 @@ copyright:
 # Despliegue de la app con la interfaz de línea de mandatos
 *Última actualización: 24 de febrero de 2016*
 
-Puede utilizar la interfaz de línea de mandatos para desplegar y modificar app e instancias de servicio. {:shortdesc}
+Puede utilizar la interfaz de línea de mandatos para desplegar y modificar app e instancias de servicio.
+{:shortdesc}
 
-Antes de empezar, instale las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry. 
+Antes de empezar, instale las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry.
 
 <p>
 <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Se abre en una pestaña o ventana
 nueva)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar la interfaz de línea de mandatos de
 {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre
-en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a>
+en una pestaña o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a> 
 </p>
 
-**Restricción:** Las herramientas de línea de mandatos no se admiten en Cygwin. Utilice las herramientas en una ventana de línea de mandatos que no sea la ventana de Cygwin. {:prereq}
+**Restricción:** Las herramientas de línea de mandatos no se admiten en Cygwin. Utilice las herramientas en una ventana de línea de mandatos que no sea la ventana de Cygwin.
+{:prereq}
 
-Tras instalar las interfaces de línea de mandatos, puede empezar: 
+Tras instalar las interfaces de línea de mandatos, puede empezar:
 
   1. {: download} Descargue el código de iniciador. 
       
@@ -55,10 +57,10 @@ Tras instalar las interfaces de línea de mandatos, puede empezar:
   <pre class="pre">cd <var class="keyword varname">su_nuevo_directorio</var></pre>
   
    4.  Realice los cambios que considere adecuados al código de su app. Le recomendamos asegurarse de que la app se ejecuta en loca,
-antes de volver a desplegarla en {{site.data.keyword.Bluemix}}. <br><br>Un archivo que debería anotar es
+antes de volver a desplegarla en {{site.data.keyword.Bluemix}}.<br><br>Un archivo que debería anotar es
 el archivo `manifest.yml`. Cuando despliegue su app nuevamente en
 {{site.data.keyword.Bluemix}}, este archivo se utiliza para determinar el URL de la aplicación, la
-asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [leer más sobre el archivo manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} en la documentación de Cloud Foundry. 
+asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [leer más sobre el archivo manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} en la documentación de Cloud Foundry.
   
   5. Conecte con {{site.data.keyword.Bluemix}}.
   

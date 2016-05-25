@@ -13,7 +13,7 @@ copyright:
 {: #ruby_runtime}
 *上次更新时间：2016 年 3 月 16 日*
 
-{{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了一个完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。
 {: shortdesc}
 
 如果您应用程序的根目录中包含 Gemfile，那么将使用 ruby_buildpack。然后，它将使用 Bundler 来安装依赖项。

@@ -214,3 +214,13 @@ Android 專案可能會有兩個 `build.gradle` 檔案：用於專案和應用�
 1. 	當要求成功時，LogCat 公用程式中會有下列輸出：
 
 	![影像](images/android-facebook-login-success.png)
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ 如果您在使用者使用 Facebook 登入之後呼叫此程式碼，則會將使用者登出 Facebook。使用者嘗試再次登入時，系統會提示輸入其 Facebook 認證。
+
+ 傳遞給 logout 函數的 `listener` 值可以是空值。

@@ -24,18 +24,18 @@ copyright:
 1. 配置应用程序监视和日志记录。有关更多信息，请参阅[应用程序监视](app-monitoring.html)。
 
 
-># 相关链接{:class="linklist"}
->## 教程和样本{:id="samples"}
+># 相关链接 {:class="linklist"}
+>## 教程和样本 {:id="samples"}
 >* [android-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)
 >* [ios-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)
 >
-># 相关链接{:class="linklist"}
->## API 参考{:id="api"}
+># 相关链接 {:class="linklist"}
+>## API 参考 {:id="api"}
 >* [核心 API 参考 (Android)](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 >* [核心 API 参考 (iOS)](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 >
-># 相关链接{:class="linklist"}
->## SDK{:id="sdk"}
+># 相关链接 {:class="linklist"}
+>## SDK {:id="sdk"}
 >* [核心 SDK (iOS) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
 >* [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 >* [bms-clientsdk-cordova-plugin-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)

@@ -39,7 +39,7 @@ Le SDK Core comprend des API permettant l'activation de l'authentification perso
 
 ```
 use_frameworks!
- pod 'BMSCore'
+pod 'BMSCore'
 ```
 
 ### iOS (SDK Objective-C)
@@ -97,7 +97,8 @@ cordova plugin add ibm-mfp-core
 
 ```
 use_frameworks!
- pod 'BMSFacebookAuthentication'```
+pod 'BMSFacebookAuthentication'
+ ```
 
 ### iOS (SDK Objective-C)
 {: #facebooksdk-ios}
@@ -154,8 +155,8 @@ cordova plugin add ibm-mfp-core
 
 ```
 use_frameworks!
- pod 'BMSGoogleAuthentication'
- ```
+pod 'BMSGoogleAuthentication'
+```
 
 ### iOS (SDK Objective-C)
 {: #googlesdk-ios}
@@ -211,11 +212,13 @@ npm install -save bms-mca-token-validation-strategy
 npm install -save bms-mca-oauth-sdk
 ```
 
-## Exemple de fournisseur d'identité personnalisé
+## Exemples de fournisseur d'identité personnalisé
 {: #customidprovider}
 
-[Référentiel Git et référence d'API](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
-
+[Simple sample Git repo (Référentiel Git d'exemples
+simples)](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[Advanced sample Git repo (Référentiel Git
+d'exemples avancés)](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 ## IMFURLProtocol
 {: #IMFURLProtocol}

@@ -12,7 +12,7 @@ This section describes how to install and use the client Push SDK to further dev
 
 Bluemix® mobile services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Make sure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file. Then add the following dependencies to your mobile application. These import statements are required for the code snippets that are listed below.
+1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file. Then add the following dependencies to your mobile application. These import statements are required for the code snippets:
 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -181,28 +181,28 @@ To register the notificationListener object with Push, call the **MFPPush.listen
 
 {: #push-send-notifications}
 
-After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files). 
+After you have developed your applications, you can send basic push notifications (without using tags, badges, additional payloads, or sound files).
 
 
 Send basic push notifications.
 
-1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**. 
+1. In **Choose the Audience**, select one of the following audiences: **All Devices**, or by platform: **Only iOS devices** or **Only Anroid devices**.
 
 	**Note**: When you select the **All Devices** option, all the devices that have subscribed to push notifications receive your notification.
-	
+
 	![Notifications screen](images/tag_notification.jpg)
 
 2. In the **Create your Notification**, enter your message and then click **Send**.
 3. Verify that your devices have received your notification.
 
-	The following screen shot shows an alert box handling a push 
+	The following screen shot shows an alert box handling a push
 notification in the foreground on a Android and iOS device.
 
 	![Foreground push notification on Android](images/Android_Screenshot.jpg)
 
 	![Foreground push notification on iOS](images/iOS_Screenshot.jpg)
-	
-	The following following screen shot shows a push notification in the background for Android.	
+
+	The following following screen shot shows a push notification in the background for Android.
 	![Background push notification on Android](images/background.jpg)
 
 

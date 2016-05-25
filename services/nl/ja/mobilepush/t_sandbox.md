@@ -19,9 +19,9 @@ copyright:
 
 1. PUT ApplicationID Settings REST API 呼び出しを使用します。
 2. JSON 本体で、[GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} API 呼び出しを使用して、モードが切り替えられたことを確認します。予想される応答は、"mode": "PRODUCTION です。
-
+ 
  ```
- {
+ { 
  "mode": "PRODUCTION"
  }
  ```

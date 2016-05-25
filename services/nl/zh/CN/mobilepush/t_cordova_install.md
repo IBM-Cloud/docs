@@ -16,7 +16,7 @@ copyright:
 1. 设置仿真器。对于 Android Studio，请使用支持 Google Play API 的仿真器。
 1. 安装 Git 命令行工具。对于 Windows，请确保选择**从 Windows 命令提示符运行 Git** 选项。有关如何下载并安装此工具的信息，请参阅 [Git](https://git-scm.com/downloads)。
 
-1. 安装 Node.js 和 Node 软件包管理器 (NPM) 工具。NPM 命令行工具与 Node.js 捆绑在一起。有关如何下载和安装 Node.js 的信息，请参阅 [Node.js](https://nodejs.org/en/download/)。
+1. 安装 Node.js 和 Node 软件包管理器 (NPM) 工具。NPM 命令行工具与 Node.js 捆绑在一起。有关如何下载并安装 Node.js 的信息，请参阅 [Node.js](https://nodejs.org/en/download/)。
 1. 在命令行中，使用 **npm install -g cordova** 命令来安装 Cordova 命令行工具。必须有该工具才能使用 Cordova 推送插件。有关如何安装 Cordova 和设置 Cordova 应用程序的信息，请参阅 [Cordova Apache](https://cordova.apache.org/#getstarted)。
 
 	**注**：要查看 Cordova 推送插件自述文件，请转至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
@@ -96,7 +96,8 @@ copyright:
 	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
 	```
 	e. 使用 Xcode 构建并运行应用程序。
-1. （仅限 Android）- 使用以下命令来构建 Android 项目：**cordova build android**。
+1. （仅限 Android）- 使用以下命令来构建 Android 项目：
+**cordova build android**。
 
 	**注**：在 Android Studio 中打开项目之前，必须先通过 Cordova CLI 构建 Cordova 应用程序。否则，将遇到构建错误。
 

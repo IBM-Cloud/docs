@@ -2,7 +2,7 @@
 
 copyright:
   años: 2015, 2016
-  
+
 ---
 
 # Utilización de un proveedor de identidad personalizado
@@ -79,7 +79,13 @@ Ejemplo de respuesta a un cambio de autenticación personalizada enviado por el 
 	}
 	```
 
+### Implementación de ejemplo de un proveedor de identidad personalizado
+{: #custom-sample}
+Puede hacer referencia a cualquiera de las siguientes implementaciones del ejemplo Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue el código completo de la aplicación desde los repositorios de GitHub. 
 
+ * [Ejemplo simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+ * [Ejemplo avanzado](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ 
 ## Comunicación típica entre el servidor de {{site.data.keyword.amashort}} y un proveedor de identidad personalizado
 {: #custom-id-comm}
 1. El servicio de {{site.data.keyword.amashort}} envía una solicitud `startAuthorization` al proveedor de identidad personalizado.
@@ -96,7 +102,7 @@ De forma predeterminada, el proveedor de identidad personalizado se considera un
 ## Reino personalizado
 {: #custom-id-custom}
 
-Un proveedor de identidad personalizado da soporte a un reino de autenticación personalizado. Para manejar los cambios de autenticación entrannte, cree y registre una instancia de AuthenticationDelegate/AuthenticationListener en la aplicación del cliente móvil. Defina el nombre de reino de autenticación personalizado al configurar un proveedor de identidad personalizado en el panel de control de {{site.data.keyword.amashort}}. Se puede utilizar para identificar que la solicitud proviene de una determinada instancia de servicio de {{site.data.keyword.amashort}}. 
+Un proveedor de identidad personalizado da soporte a un reino de autenticación personalizado. Para manejar los cambios de autenticación entrannte, cree y registre una instancia de AuthenticationDelegate/AuthenticationListener en la aplicación del cliente móvil. Defina el nombre de reino de autenticación personalizado al configurar un proveedor de identidad personalizado en el panel de control de {{site.data.keyword.amashort}}. Se puede utilizar para identificar que la solicitud proviene de una determinada instancia de servicio de {{site.data.keyword.amashort}}.
 
 ## Próximos pasos
 {: #next-steps}

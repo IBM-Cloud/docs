@@ -1,8 +1,8 @@
 # SDK, 샘플 및 API 참조
 {: #sdk}
-*마지막 업데이트 날짜: 2016년 1월 28일* 
+*마지막 업데이트 날짜: 2016년 1월 28일*
 
-앱에 Bluemix Mobile Services SDK를 추가하려면 사용할 SDK를 선택한 다음 앱에 SDK를 가져오도록 종속성 관리자를 구성하십시오.
+앱에 Bluemix 모바일 서비스 SDK를 추가하려면 사용할 SDK를 선택한 다음 앱에 SDK를 가져오도록 종속성 관리자를 구성하십시오.
 
 <table id="sdk__sdk-table-mbaas" class="mobile-dl"><tbody><tr class="doc-tr-even"><td><img src="images/Droid_SDK_icon.png" alt="android">
 <!---
@@ -27,11 +27,11 @@
 </ul>
 <ul>
 <li><strong>API 참조:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">푸시</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">REST API 푸시</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">푸시</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">REST API 푸시</a></li>
 </ul>
 </td><td valign="top"><img src="images/cordova_logo_white.png" alt="cordova">
 <!---
@@ -77,12 +77,12 @@ SDK</a></p> --->
 DevOps의 SDK</a></p>
 <ul>
 <li><strong>API 참조:</strong></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">푸시</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">REST API 푸시</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">코어</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Facebook 인증</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">Google 인증</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">IMFURLProtocol</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">푸시</a></li>
+<li><a href="https://classicdocs.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(새 탭 또는 창에 열림)" target="_blank">REST API 푸시</a></li>
 </ul>
 </td>
 </tr>

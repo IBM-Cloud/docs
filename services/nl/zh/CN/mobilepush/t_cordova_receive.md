@@ -37,7 +37,7 @@ MFPPush.registerNotificationsCallback(notification);
 
 * message - 推送通知消息
 * payload - 包含通知有效内容的 JSON 对象
-action-loc-key - 此字符串用作键以从当前本地化版本中获取本地化字符串，用于正确按钮的标题，而不是“View”。
+* action-loc-key - 此字符串用作键以从当前本地化版本中获取本地化字符串，用于正确按钮的标题，而不是“View”。
 * badge - 要显示为应用程序图标角标的数字。如果缺少此属性，那么角标不会改变。要除去角标，请将此属性的值设置为 0。
 * sound - 应用程序捆绑包中或应用程序数据容器的 Library/Sounds 文件夹中声音文件的名称。
 

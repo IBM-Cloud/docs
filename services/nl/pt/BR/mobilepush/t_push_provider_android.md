@@ -20,9 +20,7 @@ A chave de API é armazenada com segurança e usada pelo Serviço de notificaç�
 para se conectar ao servidor GCM e o ID do emissor (número de projeto) é usado pelo
 Android SDK no lado do cliente.
 
-1.s/ Obtenha uma conta do Google Development em
-[Google Dev
-Console](https://console.developers.google.com/start){: new_window}. Para obter mais informações sobre o Google Cloud Messaging
+1. Obtenha uma conta do Google Development em [Console do Google Dev](https://console.developers.google.com/start){: new_window}. Para obter mais informações sobre o Google Cloud Messaging
 (GCM), consulte [Criando
 um projeto de API do Google](https://developers.google.com/console/help/new/){: new_window}.
 
@@ -55,8 +53,7 @@ seu projeto.
 	![Ativar API ](images/gcm_enable_api.jpg)
 
 7. Vá para a tela **APIs & Autorizações ->
-Credenciais**. Clique em **Incluir
-credenciais** e em **Chave de API**.
+Credenciais**. Clique em **Incluir credenciais** e depois em **Chave de API**.
 
 	![Credenciais de API](images/api_credentials.jpg)
 
@@ -66,7 +63,7 @@ para gerar a chave de API GCM que você usará no painel Push do Bluemix.
 
 	![chave do servidor GCM](images/gcm_serverkey.jpg)
 
-10. Clique no botão **Criar**.
+10. Clique no botão **Criar**. 
 A chave de API
 é exibida.
 
@@ -74,7 +71,7 @@ A chave de API
 
 11. Copie a chave de API GCM e depois clique no botão **OK**. Você
 precisará do número de projeto (ID do emissor) e da chave de API para configurar
-suas credenciais na tela Configuração do painel Notificação push do Bluemix.
+suas credenciais na tela Configuração do painel Notificação push do Bluemix. 
 12. Próximas etapas. Configurando o Serviço de notificação push para Android.
 
 ##Configurando o Push Notification Service for Android
@@ -82,16 +79,15 @@ suas credenciais na tela Configuração do painel Notificação push do Bluemix.
 **Antes de começar**
 
 Obtenha uma chave de API GCM e ID de emissor
-(número de projeto).
+(número de projeto). 
 
 1. Abra seu aplicativo backend no painel do Bluemix e clique no serviço IBM Push
 Notifications para abrir o painel Serviço de notificação push.
-
-
+ 
 	![painel Push](images/bluemixdashboard_push.jpg)
 
 	O painel Push é exibido.
-
+	
 	![Configuração de push](images/setup_push_main.jpg)
 
 2. Clique no botão **Configurar push** para
@@ -100,5 +96,5 @@ configurar as credenciais de GCM.
 Cloud Messaging** e configure o ID do emissor (número do projeto GCM) e a chave
 de API.
 
-4. Clique no botão **Salvar**.
+4. Clique no botão **Salvar**. 
 5. Próximas etapas. [Ativando notificações para Android](c_enable_push.html).

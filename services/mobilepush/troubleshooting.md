@@ -11,7 +11,7 @@ copyright:
 Use this section as a guide to troubleshooting common Push Notification issues.
 
 
-## Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)
+### Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)
 
 ####Explanation
 

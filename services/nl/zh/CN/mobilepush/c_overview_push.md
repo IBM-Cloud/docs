@@ -31,9 +31,7 @@ copyright:
 
 创建移动后端应用程序的角色，该移动后端应用程序捆绑了 Push Notification Service 实例。此人员会配置并设置 Push Notification Service，以适合使用 Push Notification Service 的后端应用程序和作为推送通知目标的移动应用程序。
 
-**Push
-Notification
-Service**
+**Push Notification Service**
 
 Push Notification Service 管理与注册通知的设备相关的所有信息。对于如何将通知发送给这些异构移动平台，您的应用程序无需了解详细的技术信息，该服务会在其内部对所有这一切进行处理。
 

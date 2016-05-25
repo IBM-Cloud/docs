@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 사용 가능 서비스 사용 
 {: #openwhisk_ecosystem}
-*마지막 업데이트 날짜: 2016년 2월 22일*
+*마지막 업데이트 날짜: 2016년 3월 28일*
 
 {{site.data.keyword.openwhisk}}에서 패키지 카탈로그는 유용한 기능으로 앱을 강화하고 에코시스템 내에서 외부 서비스에 액세스할 수 있는 쉬운 방법을 제공합니다. {{site.data.keyword.openwhisk_short}} 사용 가능 외부 서비스의 예로는 Cloudant, The Weather Company, Slack 및 GitHub 등이 있습니다.
 {: shortdesc}
@@ -259,12 +259,7 @@ copyright:
 
 `/whisk.system/alarms/alarm` 피드는 지정된 빈도로 트리거 이벤트를 실행하기 위해 알람 서비스를 구성합니다. 매개변수는 다음과 같습니다.
 
-- `cron`: Unix crontab 구문을 기반으로 하는 문자열이며 트리거를 실행할 시기를 표시합니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. 다음은 문자열에 의해 표시되는 빈도의 몇 가지 예입니다.
-
-  - `* * * * * *`: 매초입니다.
-  - `0 * * * * *`: 매분의 맨 위입니다.
-  - `* 0 * * * *`: 매 시간의 맨 위입니다.
-  - `* * * 8 * *`: 매월 여덟 번째 날의 한 시점입니다.
+- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 Unix crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. cron 구문 사용에 대한 세부사항은 https://github.com/ncb000gt/node-cron을 참조하십시오. 
 
 - `trigger_payload`: 이 매개변수의 값은 트리거가 실행될 때마다 트리거의 컨텐츠가 됩니다.
 
@@ -443,16 +438,16 @@ copyright:
 
 `/whisk.system/slack/post` 조치는 메시지를 지정된 Slack 채널에 게시합니다. 매개변수는 다음과 같습니다.
 
-- `url`: Slack Webhook URL입니다.
+- `url`: Slack 웹후크 URL입니다.
 - `channel`: 메시지를 게시할 Slack 채널입니다.
 - `username`: 메시지를 게시할 사용자 이름입니다.
 - `text`: 게시할 메시지입니다.
 
 다음은 Slack을 구성하고 패키지 바인딩을 작성하여 메시지를 채널에 게시하는 예입니다.
 
-1. 팀을 위해 Slack [수신 Webhook](https://api.slack.com/incoming-webhooks)을 구성하십시오.
+1. 팀을 위해 Slack [수신 웹후크](https://api.slack.com/incoming-webhooks)를 구성하십시오.
 
-  Slack이 구성된 후에 `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`와 같은 Webhook URL을 가져와야 합니다. 다음 단계에서 이 URL이 필요합니다.
+  Slack이 구성된 후에 `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`와 같은 웹후크 URL을 가져와야 합니다. 다음 단계에서 이 URL이 필요합니다.
 
 2. Slack 신임 정보, 게시할 채널 및 게시할 때 사용할 사용자 이름을 사용하여 패키지 바인딩을 작성하십시오.
 
@@ -489,7 +484,7 @@ copyright:
 
 - `username`: GitHub 저장소의 사용자 이름입니다.
 - `repository`: GitHub 저장소입니다.
-- `accessToken`: GitHub 개인 액세스 토큰입니다. [토큰을 작성](https://github.com/settings/tokens)할 때, repo:status 및 public_repo 범위를 선택하십시오. 또한 저장소에 미리 정의된 Webhook이 없는지 확인하십시오.
+- `accessToken`: GitHub 개인 액세스 토큰입니다. [토큰을 작성](https://github.com/settings/tokens)할 때, repo:status 및 public_repo 범위를 선택하십시오. 또한 저장소에 미리 정의된 웹후크가 없는지 확인하십시오.
 - `events`: 관심 있는 [GitHub 활동 유형](https://developer.github.com/v3/activity/events/types/)입니다.
 
 다음은 GitHub 저장소에 대한 새 커미트가 있을 때마다 실행될 트리거를 작성하는 예입니다.

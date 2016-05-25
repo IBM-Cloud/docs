@@ -23,7 +23,7 @@ Liberty ビルドパックは、以下のような種類のアプリケーショ
 * [WAR ファイル](optionsForPushing.html#stand_alone_apps)
 * [EAR ファイル](optionsForPushing.html#stand_alone_apps)
 * [Liberty サーバー・ディレクトリー](optionsForPushing.html#server_directory)
-* [Liberty パッケージ化サーバー](optionsForPushing.html#packaged_server)
+* [パッケージされた Liberty サーバー](optionsForPushing.html#packaged_server)
 * Java メイン
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 

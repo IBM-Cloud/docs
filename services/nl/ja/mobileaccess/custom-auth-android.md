@@ -214,3 +214,13 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
 	![image](images/android-custom-login-success.png)
+
+1. 次のコードを追加してログアウト機能を追加することもできます。
+
+ ```Java
+ AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
+
+ ログアウト機能に渡される `listener` の値は、ヌルにすることができます。

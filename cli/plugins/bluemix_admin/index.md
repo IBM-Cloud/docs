@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 3 March 2016*
+*Last updated: 19 May 2016*
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
@@ -240,7 +240,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](../../../admin/adminpublic.html#orgsandspaces) for
+<dd class="pd">See [Roles](../../../admin/users_roles.html#userrolesinfo) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
@@ -265,7 +265,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](../../../admin/adminpublic.html#orgsandspaces) for
+<dd class="pd">See [Roles](../../../admin/users_roles.html#userrolesinfo) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
@@ -392,8 +392,8 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service that you want to enable. If you enter a non-unique service name,
-you are prompted with service plans to choose from.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service name,
+you are prompted with service plans to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view which pricing plans are available for that service. </dd>
 </dl>
 
 **Tip:** You can also use **ba esp** as an alias for the longer
@@ -410,8 +410,8 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service that you want to disable. If you enter a non-unique service
-name, you are prompted with service plans to choose from.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service name,
+you are prompted with service plans to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view which pricing plans are available for that service.</dd>
 </dl>
 
 **Tip:** You can also use **ba dsp** as an alias for the longer
@@ -434,8 +434,8 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service that you want to add visibility for. If you enter a non-unique
-service name, you are prompted with service plans to choose from.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service name,
+you are prompted with service plans to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view which pricing plans are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add to the service's visibility list.</dd>
 </dl>
@@ -454,8 +454,8 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service that you want to remove visibility for. If you enter a
-non-unique service name, you are prompted with service plans to choose from.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service name,
+you are prompted with service plans to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view which pricing plans are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to remove from the service's visibility list.</dd>
 </dl>
@@ -477,8 +477,8 @@ specify in the command.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">The name or GUID of the service that you want to make visible. If you enter a non-unique service
-name, you are prompted with service plans to choose from.</dd>
+<dd class="pd">The name or GUID of the service plan that you want to enable. If you enter a non-unique service name,
+you are prompted with service plans to choose from. To identify a service plan name, select the service category from the homepage, then select **Add** to view the services for that category. Click the service name to open the details view, then you can view which pricing plans are available for that service.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to add visibility for. You can enable visibility of the service for more than
 one organization by entering additional organization names or GUIDs in the command.</dd>
@@ -499,7 +499,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**Note**: To list all service brokers, enter the command without the `broker_name` parameter. 
+**Note**: To list all service brokers, enter the command without the `broker_name` parameter.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>

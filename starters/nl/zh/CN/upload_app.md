@@ -16,7 +16,8 @@ copyright:
 # 上传应用程序
 *上次更新时间：2016 年 2 月 17 日*
 
-登录到 {{site.data.keyword.Bluemix}} 后，可以使用 cf push 命令来上传应用程序。{:shortdesc}
+登录到 {{site.data.keyword.Bluemix}} 后，可以使用 cf push 命令来上传应用程序。
+{:shortdesc}
 
 开始之前，您必须：
   1. 安装 {{site.data.keyword.Bluemix}} 和 Cloud Foundry 命令行界面。
@@ -47,10 +48,11 @@ copyright:
 
   <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var> -b buildpack_URL</pre>
   
-  **提示：**使用 **cf push** 命令时，**cf** 命令行界面会将当前目录中的所有文件和目录复制到 Bluemix 中。确保应用程序目录中只包含必需的文件。
+  **提示：**使用 **cf push** 命令时，**cf** 命令行界面会将当前目录中的所有文件和目录复制到 Bluemix 中。请确保应用程序目录中只包含必需的文件。
 
   cf push 命令会上传应用程序并将其部署到 {{site.data.keyword.Bluemix_notm}}。有关 cf push 的更多信息，请参阅 [cf 命令](../cli/reference/cfcommands/index.html)。有关 buildpack 的信息，请参阅[使用社区 buildpack](../cfapps/byob.html)。
 
-  2. 如果更改了应用程序，可以通过再次输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项以及您对提示的响应来通过新的代码段更新应用程序正在运行的任何实例。
+  2. 如果更改了应用程序，可以通过再次输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新任何运行中应用程序实例。
+
 
 **提示：**您还可以从 DevOps Services 上传或部署应用程序。请参阅[在 Node.js 中使用 Web IDE 开发 {{site.data.keyword.Bluemix_notm}} 应用程序](https://hub.jazz.net/tutorials/devopsweb/){: new_window}。

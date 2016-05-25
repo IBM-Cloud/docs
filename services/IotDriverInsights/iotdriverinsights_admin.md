@@ -13,7 +13,7 @@ copyright:
 
 # Administering {{site.data.keyword.iotdriverinsights_short}}
 {: #1stanchor}
-*Last updated: 11 April 2016*
+*Last updated: 6 May 2016*
 
 
 Administering {{site.data.keyword.iotdriverinsights_full}} includes viewing tenant information and resetting the tenant password, configuring parameters for the service, and managing data stored in the service.
@@ -61,7 +61,7 @@ The following table describes the behavior parameters:
 |Speed Limit (km/h)|Unknown|Speed limit for Unknown|120|
 |Turn|Angular Velocity (Min \- Max, deg/s)|Normal angular velocity value in turn. Min value is used as threshold to identify turn segment. Max value is used to detect sharp turn behavior.|10 \- 25|
 |Turn|Average Speed (km/h)|Normal speed during turn. This value is used to identify behaviors in turn segment in conjunction with Angular Velocity values.|60|
-
+|Fatigue Driving|Time of Continuous Driving (s)|If a vehicle is driven continuously for more than this value, service identifies it as "Fatigue Driving".|10800|
 
 The following table describes the context parameters:
 
@@ -73,7 +73,7 @@ The following table describes the context parameters:
 |Time Range|Night Time|Time range of night time|2030 \- 0700|
 |Time Range|Morning Peak|Time range of morning peak time|0700 \- 1030|
 |Time Range|Evening Peak|Time range of evening peak time|1730 \- 2030|
-|Road Type|\-|These values are used to map the user road type value in the input data to {{site.data.keyword.iotdriverinsights_short}}-unique road type classifications. If you do not have a Road Type value, you can retrieve the Road Type value by using the "getLinkInformation" REST API, which is provided by "{{site.data.keyword.iotmapinsights_short}}". The road type value is stored in the "properties > type" in the response. [Sample JSON](#sampleJson) represents the position of "type" in the response.|\-|
+|Road Type|\-|These values are used to map the user road type value in the input data to {{site.data.keyword.iotdriverinsights_short}}-unique road type classifications. If you do not have a Road Type value, you can retrieve the Road Type value by using the `getLinkInformation` REST API, which is provided by **{{site.data.keyword.iotmapinsights_short}}**. The road type value is stored in the **properties > type** in the response. [Sample JSON](#sampleJson) represents the position of `type` in the response.|\-|
 |Road Type|Motorway|Road type value map to Motorway|1|
 |Road Type|Urban Highway|Road type value map to Urban Highway|2|
 |Road Type|Urban Primary|Road type value map to Urban Primary|3|

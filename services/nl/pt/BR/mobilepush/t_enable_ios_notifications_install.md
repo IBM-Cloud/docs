@@ -15,9 +15,10 @@ $ sudo gem install cocoapods
 ```
 2. Insira o comando a seguir no terminal para inicializar o CocoaPods. Ao emitir
 esse comando, certifique-se de executá-lo no diretório em que está o projeto Xcode. O
-comando ``pod init`` cria um título de arquivo.```
+comando `pod init` cria um título de arquivo.  
+```
 $ pod init
-``
+```
 3. No Podfile gerado, inclua as dependências necessárias de SDK. Copie o Podfile a
 seguir.
 
@@ -48,9 +49,8 @@ com o comando a seguir:
 ```
 $ pod update
 ```
-Esse comando instala suas dependências e cria uma nova área de trabalho Xcode. git
-**Nota**: Assegure-se de sempre abrir a nova área de trabalho do
-Xcode, em vez do arquivo de projeto Xcode original:
+Esse comando instala suas dependências e cria uma nova área de trabalho Xcode.  **Nota**: assegure-se de sempre abrir a nova área de trabalho do Xcode,
+em vez do arquivo de projeto do Xcode original:
 
 	```
 	$ open App.xcworkspace
@@ -110,4 +110,4 @@ postagens do blog a seguir descrevem mais informações sobre as
 mudanças:[ATS
 e Bitcode no iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) e
 [Conecte
-seu app iOS 9 ao Bluemix hoje](https://www.ng.bluemix.net/docs/services/mobilepush/%20https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/%20)
+seu app iOS 9 ao Bluemix hoje](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)

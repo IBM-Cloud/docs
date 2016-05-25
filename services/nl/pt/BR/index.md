@@ -12,7 +12,7 @@ copyright:
 
 #Serviços
 {: #services}
-*Última atualização: 21 de março de 2016*
+*Última atualização: 5 de abril de 2016*
 
 O {{site.data.keyword.Bluemix_notm}} facilita a implementação, a hospedagem e os serviços de escala e apps. O foco pode ser a lógica e o
 design do aplicativo.
@@ -37,7 +37,9 @@ fornecer uma correção. Além disso,
 o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](../support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabela 1. Informações de suporte de serviços do {{site.data.keyword.Bluemix_notm}}*
 
-O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para visualizar todos os serviços experimentais, modelos e tempos de execução, efetue login no {{site.data.keyword.Bluemix_notm}}, role até a parte inferior do Catálogo e, em seguida, clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}**.
+##Serviços experimentais 
+
+O {{site.data.keyword.Bluemix_notm}} também tem serviços experimentais que você pode tentar. Para visualizar todos os serviços experimentais, modelos e tempos de execução, efetue login no {{site.data.keyword.Bluemix_notm}}, role para a parte inferior do catálogo e, em seguida, clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}**. 
 
 Os serviços experimentais podem não ser estáveis e podem ser alterados de formas que não sejam compatíveis com versões anteriores. Esses serviços não são recomendados para uso em ambientes de produção. O suporte para serviços experimentais é fornecido por meio da Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM
 e for determinado que é um defeito em um serviço experimental,
@@ -51,6 +53,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 
 |Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney, na Austrália|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.cloudaccesstrailshort}}	|Sim		|Não		|Não|
 |{{site.data.keyword.activedeployshort}}			|Sim		|Sim		|Não|
 |{{site.data.keyword.alchemyapishort}} 		|Sim	   	|Sim  		|Sim|
 |{{site.data.keyword.alertnotificationshort}}		|Sim		|Sim			|Sim		|
@@ -77,7 +80,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.creshort}}			|Sim		|Não		|Não|
 |{{site.data.keyword.game}}			|Sim		|Sim		|Sim|
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sim	|Sim		|Sim|
-|{{site.data.keyword.globalizationshort}}	|Sim		|Sim		|Sim|
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.dataworks_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.twittershort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
@@ -104,7 +107,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.relationshipextractionshort}}	|Sim	|Sim		|Sim|
 |{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.servicediscoveryshort}}		|Sim		|Não		|Não|
+|{{site.data.keyword.servicediscoveryshort}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.serviceproxyshort}}		|Sim		|Não		|Não|
 |{{site.data.keyword.sescashort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
@@ -123,3 +126,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.xpagesservice_short}}	|Sim		|Sim		|Não|
 *Tabela 2. Disponibilidade do serviço*
+
+## Descontinuação de serviço
+
+A IBM fornecerá um aviso de pelo menos 30 dias da sua intenção de descontinuar ou substituir um serviço geralmente disponível. Se uma substituição equivalente não for fornecida, por pelo menos 12 meses a partir da data desse núncio, a IBM usará meios comercialmente razoáveis para continuar a operação e o suporte de instâncias do serviço implementadas anteriormente. 

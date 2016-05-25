@@ -111,6 +111,7 @@ Variable | Description
 `{{tenantId}}` | The ID of the Real-Time Insights service
 `{{deviceId}}` | The ID of the device
 `{{ruleName}}` | The name of the rule that includes the action
+`{{ruleId}}` | The unique ID of the rule that includes the action
 **Body only** |
 `{{ruleDescription}}`| The description of the rule that includes the action
 `{{ruleCondition}}` | The rule condition that triggered the action

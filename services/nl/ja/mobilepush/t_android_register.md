@@ -8,7 +8,7 @@ copyright:
 # Android デバイスの登録
 {: #android_register}
 
-**IMFPush.register()** API を使用して、Push Notification Service にデバイスを登録します。
+```IMFPush.register()``` API を使用して、Push Notification Service にデバイスを登録します。Android デバイスを登録する場合、まず、Google Cloud Messaging (GCM) 情報を Bluemix プッシュ・サービス構成ダッシュボードに追加します。詳しくは、[Google Cloud Messaging の資格情報の構成](t_push_provider_android.html)を参照してください。
 
 以下のコード・スニペットを Android モバイル・アプリケーションにコピーして貼り付けます。
 

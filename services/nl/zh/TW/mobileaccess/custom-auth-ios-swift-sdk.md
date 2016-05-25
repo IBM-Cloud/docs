@@ -154,7 +154,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
  ```Swift
  let customResourceURL = "<your protected resource's path>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
   } else {
@@ -178,3 +178,13 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
  })
  response:Optional("Hello Don Lon"), no error
  ```
+
+1. 您也可以新增下列程式碼，來新增登出功能：
+
+ ```
+ MCAAuthorizationManager.sharedInstance.logout(callBack)
+ ```  
+
+ 如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答接收自伺服器的盤查。
+
+ 將 `callBack` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。

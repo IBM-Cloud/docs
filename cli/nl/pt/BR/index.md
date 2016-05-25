@@ -18,7 +18,7 @@ copyright:
 # Ferramentas de CLI e de desenvolvimento
 {: #cli}
 
-*Última atualização: 16 de fevereiro de 2016*
+*Última atualização: 30 de março de 2016*
 
 Com o {{site.data.keyword.Bluemix_short}}, você tem acesso a poderosas ferramentas, tais como uma interface da linha de comandos unificada e plug-ins de CLI. Todos esses downloads de CLI estão disponíveis para suportar sua experiência no {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,6 +27,9 @@ Com o {{site.data.keyword.Bluemix_short}}, você tem acesso a poderosas ferramen
 {: #downloads}
 
 Faça download e instale as interfaces da linha de comandos para suportar sua experiência com o {{site.data.keyword.Bluemix_notm}}. A ferramenta de linha de comandos cf do Cloud Foundry é um pré-requisito para todas as outras ferramentas {{site.data.keyword.Bluemix_notm}} CLI. A ferramenta de linha de comandos do {{site.data.keyword.Bluemix_notm}} fornece experiência estendida para gerenciar seu ambiente {{site.data.keyword.Bluemix_notm}} além dos aplicativos Cloud Foundry.
+
+Ambas as ferramentas da CLI usam a porta 433 por padrão. Se você tiver proxy HTTP entre as ferramentas da CLI e o ambiente {{site.data.keyword.Bluemix_notm}}, deverá configurar a variável de ambiente `http-proxy` com a URL e a porta do proxy HTTP reais, se houver alguma. Veja [Usando a CLI com um servidor proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} para obter mais detalhes.
+
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|

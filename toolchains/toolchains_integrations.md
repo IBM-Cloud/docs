@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 28 April 2016*
+*Last updated: 11 May 2016*
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
@@ -82,7 +82,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
 
-## Adding Eclipse Orion {{site.data.keyword.webide}} integration
+## Adding the Eclipse Orion {{site.data.keyword.webide}}
 {: #webide}
 
 The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based environment where you can create, edit, run, debug, and complete source control tasks. You can seamlessly move from editing to running to submitting to deploying. 

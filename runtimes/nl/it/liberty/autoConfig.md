@@ -48,6 +48,7 @@ Il pacchetto di build Liberty fornisce la configurazione automatica per i seguen
 * [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
+* [Dynatrace](dynatrace.html)
 
 Come indicato, alcuni servizi possono essere gestiti dall'applicazione oppure gestiti dal
 contenitore. Mongo e SQLDB sono degli esempi di tali servizi. Per impostazione predefinita,
@@ -120,10 +121,7 @@ In modo più formale, la grammatica della stringa è la seguente.
 **Importante**: non è consentito alcuno spazio vuoto in una <specifica_tipo_di_servizio>. Il solo
 utilizzo consentito dello spazio vuoto è per separare più istanze <specifica_di_tipo_servizio>.
 
-Utilizza l'opzione “all” per optare
-per l'esclusione da tutte le azioni di configurazione automatica per un servizio, come nello scenario
-Mongo sopra riportato. Utilizza l'opzione “config” per optare per l'esclusione solo dalle azioni di aggiornamento
-della configurazione come nello scenario SQLDB sopra riportato.
+Utilizza l'opzione "all" per optare per l'esclusione da tutte le azioni di configurazione automatica per un servizio, come nello scenario Mongo sopra riportato. Utilizza l'opzione "config" per optare per l'esclusione solo dalle azioni di aggiornamento della configurazione come nello scenario SQLDB sopra riportato.
 
 Di seguito sono riportate delle specifiche di opzione di esclusione di esempio in un file manifest.yml per gli scenari Mongo e SQLDB.
 

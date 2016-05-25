@@ -7,7 +7,8 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# 管理资产{: #manage-assets}
+# 管理资产
+{: #manage-assets}
 
 {{site.data.keyword.iotrtinsights_full}} 的其中一个功能是将设备映射到受管资产，并创建应用于已映射到某个资产的所有设备的规则。
 {: shortdesc}

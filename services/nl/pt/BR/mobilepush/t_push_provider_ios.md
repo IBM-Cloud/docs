@@ -23,8 +23,7 @@ APNs como um provedor.
 1. Obtenha uma conta do [Apple Developers](https://developer.apple.com/).
 2. [Registre
 um ID de app](#create-push-credentials-apns-register)
-3. [Crie um certificado
-APNs SSL de desenvolvimento e distribuição](#create-push-credentials-apns-ssl)
+3. [Crie um certificado SSL de APNs de desenvolvimento e distribuição](#create-push-credentials-apns-ssl)
 4. [Crie um
 perfil de fornecimento de desenvolvimento](#create-push-credentials-dev-profile)
 5. [Crie um perfil de
@@ -168,14 +167,8 @@ informações pessoais (formato .p12).
 
 	![Exportar certificado e chaves](images/keychain_export_key.jpg)
 
-17. Em **Salvar como**, nomeie o certificado
-com um nome significativo para que você possa identificá-lo
-posteriormente, por exemplo**
-sandbox_apns.p12_certifcate** ou
-
-**production_apns.p12**, depois clique em
-                            **Salvar**.
-
+17. Em **Salvar como**, dê ao certificado um nome significativo para que você possa identificá-lo mais tarde, por exemplo,
+**sandbox_apns.p12_certifcate** ou **production_apns.p12**, e clique em **Salvar**.
 
    	![Exportar certificado e
 chaves](images/certificate_p12v2.jpg)
@@ -190,8 +183,7 @@ definições de APNs no painel Push.
 keychain, insira sua senha administrativa do Mac para permitir que o sistema exporte
 esses itens e, em seguida, selecione **Sempre permitir**. Um certificado .p12
 é gerado em sua área de trabalho.
-20. Próxima etapa[Criar um
-arquivo de perfil de fornecimento de desenvolvimento e distribuição](#create-push-credentials-dev-profile)
+20. Próxima etapa[Crie um arquivo de perfil de fornecimento de distribuição e de desenvolvimento](#create-push-credentials-dev-profile)
 
 ##Criando um perfil de fornecimento de desenvolvimento
 {: #create-push-credentials-dev-profile}
@@ -225,8 +217,7 @@ desenvolvimento** e siga as instruções para criar um perfil de desenvolvimento
 desenvolvimento, selecione as opções a seguir:
 	* **iOS App Development**
 	* **Para apps iOS e watchOS **
-3. Próxima etapa. [Crie
-um perfil de fornecimento de destribuição de armazenamento.](#create-push-credentials-apns-distribute_profile)
+3. Próxima etapa. [Crie um perfil de fornecimento de distribuição de armazenamento.](#create-push-credentials-apns-distribute_profile)
 
 
 ##Criando um perfil de fornecimento de distribuição de
@@ -283,7 +274,7 @@ Push.
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	O painel Push é exibido.
-
+	
 	![Configurar notificações push](images/wizard.jpg)
 1
 2. Na guia **Configuração**, acesse a seção

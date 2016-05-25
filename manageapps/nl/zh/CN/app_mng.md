@@ -16,7 +16,8 @@ copyright:
 
 *上次更新时间：2016 年 3 月 17 日*
 
-应用程序管理实用程序是一组开发和调试实用程序，可以对 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 应用程序启用这些实用程序。{:shortdesc}
+应用程序管理实用程序是一组开发和调试实用程序，可以对 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 应用程序启用这些实用程序。
+{:shortdesc}
 
 ##应用程序管理实用程序
 {: #Utilities}
@@ -65,7 +66,7 @@ copyright:
 
   1. *inspector*：启用 Node Inspector 调试器接口，该接口可通过 *devconsole* 实用程序或在 *https://myApp.mybluemix.net/bluemix-debug/inspector* 上进行访问。
   
-  inspector 进程在应用程序容器中运行。使用此实用程序可创建 CPU 使用量概要文件，添加断点和调试代码，所有这些操作都可在应用程序在 {{site.data.keyword.Bluemix_notm}} 上运行的同时执行。有关 Node Inspector 模块的更多信息，请参阅 [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}。
+  inspector 进程在应用程序容器中运行。使用此实用程序可创建 CPU 使用情况概要文件，添加断点和调试代码，所有这些操作都可在应用程序在 {{site.data.keyword.Bluemix_notm}} 上运行的同时执行。有关 Node Inspector 模块的更多信息，请参阅 [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 实用程序还会启动 *proxy*。
   

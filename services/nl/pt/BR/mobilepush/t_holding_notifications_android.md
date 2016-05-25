@@ -11,7 +11,7 @@ Android
 
 Quando seu aplicativo entrar no plano de fundo, você provavelmente desejará que Push
 restrinja as notificações enviadas para ele. Para reter notificações, chame o método
-hold() no método onPause() da atividade que está manipulando as notificações push. 
+hold() no método onPause() da atividade que está manipulando as notificações push.
 
 ```
 @Override
@@ -21,5 +21,5 @@ protected void onPause() {
     if (push != null) {
         push.hold();
     }
-}
+} 
 ```

@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}}에서 앱 호스팅
 
-*마지막 업데이트 날짜: 2015년 12월 1일*
+*마지막 업데이트 날짜: 2016년 4월 18일*
 
 <!--The whole topic is staging only -->
 
@@ -146,6 +146,8 @@ OS 특정 종속성을 피하십시오. 대신 미들웨어 인프라 또는 서
 
 {{site.data.keyword.Bluemix_notm}}에서 제공하는 다음의 도구 및 서비스를 사용할 수 있습니다. 
 
+*표 1. {{site.data.keyword.Bluemix_notm}} 도구*
+
 | 도구	| 방법 |
 |:------|:--------|
 |Cloud Foundry 명령행 인터페이스(cf cli)	|로컬 클라이언트에서 코드를 관리하고 Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을
@@ -158,7 +160,7 @@ OS 특정 종속성을 피하십시오. 대신 미들웨어 인프라 또는 서
 애플리케이션을 수동으로 푸시할 필요가 없습니다. |
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub 저장소에서 코드를 관리하고 DevOps Delivery Pipeline을 사용하여
 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. |
-*표 1. {{site.data.keyword.Bluemix_notm}} 도구*
+
 
 Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않는 경우에는
 보다 사용자 정의된 옵션으로 런타임이 설정, 구성되고 유지보수되는 VM 또는 컨테이너를 사용할 수 있습니다. 

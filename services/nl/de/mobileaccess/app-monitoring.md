@@ -22,7 +22,7 @@ Sie können Ihre mobilen Anwendungen so konfigurieren, dass sie mit einigen einf
 ### Clientseitige Protokollerfassung
 {: #client-side-logcapture}
 
-Bei Anwendungen in diesem Bereich kommt es ab und zu zu Problemen, die von einem Entwickler behoben werden müssen. Es ist häufig schwer, diese Probleme zu reproduzieren. <!--in R&D.--> Entwickler, die an dem Code gearbeitet haben, verfügen möglicherweise nicht über die Umgebung oder das richtige Gerät, um die entsprechenden Tests durchzuführen. In diesen Situationen ist es hilfreich, die Debugprotokolle von den Clientgeräten abrufen zu können, da die Probleme in der Umgebung auftreten, in der die Ereignisse stattfinden. 
+Bei Anwendungen in diesem Bereich kommt es ab und zu zu Problemen, die von einem Entwickler behoben werden müssen. Es ist häufig schwer, diese Probleme zu reproduzieren. <!--in R&D.--> Entwickler, die an dem Code gearbeitet haben, verfügen möglicherweise nicht über die Umgebung oder das richtige Gerät, um die entsprechenden Tests durchzuführen. In diesen Situationen ist es hilfreich, die Debugprotokolle von den Clientgeräten abrufen zu können, da die Probleme in der Umgebung auftreten, in der die Ereignisse stattfinden.
 
 ## Erfasste Daten aufbewahren
 {: #preserve-captureddata}

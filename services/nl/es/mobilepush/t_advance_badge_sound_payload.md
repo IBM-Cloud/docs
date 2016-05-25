@@ -6,7 +6,7 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Configure un identificador, sonido y carga útil e identificador iOS
+# Configure un sonido y carga útil e identificador iOS
 
 {: #badge-sound-payload}
 
@@ -15,8 +15,7 @@ Configure un identificador de iOS, un sonido y la carga útil adicional de JSON.
 1. En el panel de control Notificaciones Push, vaya al
                         separador **Notificaciones**.
 2. Vaya a la sección **Campos opcionales** para configurar las
-                    siguientes características de notificaciones push. Identificador de iOS, sonido y carga útil adicional.
-
+                    siguientes características de notificaciones push. 
 	a. **Identificador iOS**: Para dispositivos iOS, el número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el
                             identificador no se modificará. Para eliminar el identificador, establezca el valor de esta
                             propiedad en 0.

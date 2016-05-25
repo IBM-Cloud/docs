@@ -254,7 +254,7 @@ copyright:
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-			NSLog("%@", IMFAuthorizationManager.sharedInstance().userIdentity)
+			NSLog(@"%@", [[IMFAuthorizationManager sharedInstance] userIdentity]);
 		}
 	}];
 	```
@@ -284,3 +284,26 @@ copyright:
 1. 按一下**確定**，以授權 {{site.data.keyword.amashort}} 使用 Facebook 使用者身分來進行鑑別。
 
 1. 	當要求成功時，會在 Xcode 主控台中顯示下列輸出：![影像](images/ios-facebook-login-success.png)
+
+
+
+	您也可以新增下列程式碼，來新增登出功能：
+
+
+	**Objective-C**
+
+	```Objective-C
+	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
+	```
+
+	**Swift**
+
+	```Swift
+	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
+	```
+
+	如果您在使用者使用 Facebook 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 Mobile Client Access 使用 Facebook 進行鑑別。
+
+	若要切換使用者，您必須呼叫此程式碼，而且使用者必須在其瀏覽器中登出 Facebook。
+將 `callBack` 傳遞給 logout 函數是選用的。您也可以傳遞 `nil`。
+

@@ -8,12 +8,28 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-*Last Updated: 16 March 2016*
-
 # Latest Updates to the sdk-for-nodejs buildpack
 {: #latest_updates}
 
+*Last Updated: 22 March 2016*
+
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## April 29, 2016: Updated Node.js Buildpack v3.3-20160428-1409
+
+This release of the buildpack adds IBM SDK for Node.js runtime versions 0.10.44, 0.12.13, 4.4.0, 4.4.1, 4.4.2, and 4.4.3. The default is now 4.4.3. 
+i
+For 4.3.1 and up, it is now possible to use a FIPS-enabled version of the runtime by setting the `FIPS_MODE=true` environment variable for your app.
+
+The updated buildpack and the new runtime versions also contain fixes for security vulnerabilities:
+* [CVE-2016-2515](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-2537](http://www-01.ibm.com/support/docview.wss?uid=swg21977578)
+* [CVE-2016-3956](http://www-01.ibm.com/support/docview.wss?uid=swg21980827)
+
+The updated buildpack also contains fixes for several bugs:
+* Now IBM SDK for Node.js builds will always be used if one is available matching the requested range. Previously this was only true for 4.x runtime versions.
+* Now the App Management inspector utiliy will work with 4.x runtime versions.
+* Fixed a regression in the strongpm App Management utility.
+
 ## March 18, 2016: Updated Node.js Buildpack v3.2-20160315-1257
 
 This release of the buildpack moves the the default IBM SDK for Node.js runtime from version 4.3.0 to 4.3.2. It also includes IBM SDK for Node.js versions 0.10.43, 0.12.12, and 4.3.1. Users should use these recent Node.js versions to pick up fixes for several security vulnerabilities.

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -222,7 +222,7 @@ Foundry</dt>
     Los {{site.data.keyword.IBM_notm}} Containers se utilizan para ejecutar contenedores de Docker en un entorno de nube alojado. Docker
 añade un motor para desplegar una app al entorno virtual para ejecutar los contenedores. También proporciona un entorno para ejecutar el código. Cuando esté preparado, proporcionará los medios por los cuales transferir el código desde el entorno de desarrollo a su entorno de prueba y luego al entorno de producción.
 
-    Para obtener más información sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html). </dd>
+    Para obtener más información sobre {{site.data.keyword.IBM_notm}} Containers, consulte [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html).</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (BETA)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} es un entorno de nube alojado,
 parte de {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}, que puede utilizar para construir,
@@ -238,7 +238,7 @@ para eliminar la mayoría de las complejidades asociadas al alojamiento y gesti�
 aplicaciones basadas en nube, como el registro, escalado automático y la supervisión. Puede usar servicios OpenStack y servicios {{site.data.keyword.Bluemix_notm}} juntos para construir y ejecutar aplicaciones híbridas. Puede suministrar recursos de
 infraestructura según sea necesario, en base a las políticas operativas y la demanda de carga de trabajo. </p>
 <p>
-Para más información sobre {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, consulte [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html). </p> </dd>
+Para más información sobre {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}, consulte [{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}](../virtualmachines/vm_index.html).</p> </dd>
 </dl>
 
 ### Aplicaciones

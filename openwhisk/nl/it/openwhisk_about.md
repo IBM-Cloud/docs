@@ -18,7 +18,7 @@ copyright:
 
 # Informazioni su {{site.data.keyword.openwhisk}}
 
-*Ultimo aggiornamento: 22 febbraio 2016* 
+*Ultimo aggiornamento: 22 febbraio 2016*
 
 Le seguenti sezioni forniscono informazioni dettagliate su {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -57,7 +57,7 @@ La natura modulare e intrinsecamente scalabile di {{site.data.keyword.openwhisk_
 Numerose applicazioni mobile richiedono una logica lato server. Posto che solitamente gli sviluppatori mobile non hanno esperienza nella gestione della logica lato server e si concentrerebbero invece sull'applicazione in esecuzione sul dispositivo, l'utilizzo di {{site.data.keyword.openwhisk_short}} come back-end lato server rappresenta una buona soluzione. Inoltre, il supporto integrato per Swift consente agli sviluppatori di riutilizzare le proprie competenze di programmazione iOS.
 
 ### Elaborazione dati
-Data la quantità di dati attualmente disponibile, lo sviluppo di applicazioni richiede la capacità di elaborare nuovi dati e, potenzialmente, rispondere agli stessi. Questa necessità include il bisogno di elaborare record di database strutturati e documenti non strutturati, immagini o video. 
+Data la quantità di dati attualmente disponibile, lo sviluppo di applicazioni richiede la capacità di elaborare nuovi dati e, potenzialmente, rispondere agli stessi. Questa necessità include il bisogno di elaborare record di database strutturati e documenti non strutturati, immagini o video.
 
 ### IoT
 Gli scenari dell'Internet delle cose sono spesso intrinsecamente guidati dai sensori. Ad esempio, un'azione potrebbe essere avviata in {{site.data.keyword.openwhisk_short}} se occorre rispondere al superamento di una determinata temperatura da parte di un sensore.

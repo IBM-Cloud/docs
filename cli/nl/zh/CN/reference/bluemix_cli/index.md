@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 4 月 15 日*
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。一些 {{site.data.keyword.Bluemix_notm}} 命令是现有 cf 命令的包装程序，而另一些为 {{site.data.keyword.Bluemix_notm}} 用户提供了扩展功能。以下信息列出了 {{site.data.keyword.Bluemix_notm}} CLI 支持的所有命令，并包含命令名称、选项、用法、先决条件、描述和示例。
 {:shortdesc}
@@ -38,8 +38,7 @@ copyright:
  <table role="presentation"> 
  <tbody> 
  <tr> 
- <td> 
- [bluemix help](index.html#bluemix_help)</td> 
+ <td>[bluemix help](index.html#bluemix_help)</td> 
  <td>[bluemix api](index.html#bluemix_api)</td> 
  <td>[bluemix login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
@@ -72,8 +71,8 @@ copyright:
  
  <tr> 
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete) </td> 
- <td>[bluemix iam user-create](index.html#bluemix_iam_user_create)</td> 
- <td>[bluemix iam user-delete](index.html#bluemix_iam_user_delete)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td> 
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
@@ -260,11 +259,17 @@ copyright:
  <tr> 
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
- <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
- <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
-
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
  </tr>
  
+ <tr>
+ <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
+ </tr>
  
  
  </tbody> 
@@ -331,7 +336,7 @@ bluemix api [API_ENDPOINT][--unset]
 
 **命令选项**：
 
-*API_ENDPOINT*（可选）：作为目标的 API 端点，例如 https://api.ng.bluemix.net。如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。
+*API_ENDPOINT*（可选）：作为目标的 API 端点，例如 https://api.ng.bluemix.net。 如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。
 
 `--unset`（可选）：除去 API 端点设置。
 
@@ -584,7 +589,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 ## bluemix curl
 {: #bluemix_curl}
 
-执行针对 {{site.data.keyword.Bluemix_notm}} 的原始 HTTP 请求。缺省情况下，*Content-Type* 设置为 *application/json*。此命令会将请求发送到 {{site.data.keyword.Bluemix_notm}} 控制台服务器（例如 https://console.ng.bluemix.net），而不是发送到 cf API 端点（例如 https://api.ng.bluemix.net）。
+执行针对 {{site.data.keyword.Bluemix_notm}} 的原始 HTTP 请求。缺省情况下，*Content-Type* 设置为 *application/json*。此命令会向 {{site.data.keyword.Bluemix_notm}} 多云控制代理发送请求。有关受支持的路径，请参阅 [Cloud Foundry API 文档](http://apidocs.cloudfoundry.org/){: new_window}中的 API 路径定义。
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -594,34 +599,86 @@ bluemix curl PATH [OPTIONS...]
 
 **命令选项**：
 
-*PATH*（必需）：资源的 URL 路径。例如，/rest/v2/apps。
+*PATH*（必需）：资源的 URL 路径。例如，/v2/apps。
 
 *OPTIONS*（可选）：`bluemix curl` 命令支持的选项与 `cf curl` 命令支持的那些选项相同。
 
 **示例**：
 
-查看所有样板模板的信息：
+查看当前帐户的所有组织的信息：
 
 ```
-bluemix curl /rest/templates
+bluemix curl /v2/organizations
 ```
 
 
 ## bluemix iam orgs
 {: #bluemix_iam_orgs}
-此命令的功能和选项与 `cf orgs` 命令的相同。不同的是，该命令还会显示组织所在的区域。
 
+列出所有组织
+
+```
+bluemix iam orgs [-r REGION --guid]
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*-r REGION*（可选）：显示其组织信息的区域。如果设置为“all”，将列出所有区域中的所有组织。
+
+*--guid*（可选）：显示组织的 GUID。
+
+**示例**：列出区域 `us-south` 中的所有组织并显示 GUID
+
+```
+bluemix iam orgs -r us-south --guid
+```
 
 ## bluemix iam org
 {: #bluemix_iam_org}
 
-此命令的功能和选项与 `cf org` 命令的相同。不同的是，该命令还会显示组织所在的区域。
+显示指定组织的信息。
 
+```
+bluemix iam org ORG_NAME [--guid]
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*ORG_NAME*（必需）：组织的名称。
+
+*--guid*（可选）：显示组织的 GUID。
+
+
+**示例**：显示组织 `IBM` 的信息并显示 GUID
+
+```
+bluemix iam org IBM --guid
+```
 
 ## bluemix iam org-create
 {: #bluemix_iam_org_create}
 
-此命令的功能和选项与 `cf create-org` 命令的相同。
+创建新组织。此操作只能由帐户所有者执行。
+
+```
+bluemix iam org-create ORG_NAME
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*ORG_NAME*（必需）：要创建的组织的名称。
+
+**示例**：创建名为 `IBM` 的组织。
+
+```
+bluemix iam org-create IBM
+```
 
 
 ## bluemix iam org-replicate
@@ -643,24 +700,49 @@ bluemix iam org-replicate ORG_NAME REGION_NAME
 
 **示例**：
 
-将组织 `OE_Runtimes_Scaling` 复制到区域 `eu-gb`：
+将组织 `myorg` 复制到区域 `eu-gb`：
 
 ```
-bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
+bluemix iam org-replicate myorg eu-gb
 ```
 
 
 ## bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
-此命令的功能和选项与 `cf rename-org` 命令的相同。
+重命名组织。此操作只能由组织管理员执行。
+
+```
+bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*OLD_ORG_NAME*（必需）：要重命名的组织的旧名称。
+
+*NEW_ORG_NAME*（必需）：组织要重命名为的新名称。
 
 
 ## bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
+删除当前区域中的指定组织。
 
-此命令的功能和选项与 `cf delete-org` 命令的相同。
+```
+bluemix iam org-delete ORG_NAME [-f --all]
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*ORG_NAME*（必需）：要删除的现有组织的名称。
+
+*-f*（可选）：强制删除，而不进行确认。
+
+*--all*（可选）：从所有区域中删除该组织。
 
 
 ## bluemix iam spaces
@@ -695,53 +777,252 @@ bluemix iam org-replicate OE_Runtimes_Scaling eu-gb
 此命令的功能和选项与 `cf delete-space` 命令的相同。
 
 
-## bluemix iam user-create
-{: #bluemix_iam_user_create}
+## bluemix iam account-users
+{: #bluemix_iam_account_users}
 
-此命令的功能和选项与 `cf create-user` 命令的相同。
+显示与帐户关联的用户。此操作只能由帐户所有者执行。
+
+```
+bluemix iam account-users
+```
+
+## bluemix iam account-user-invite
+{: #bluemix_iam_account-user_inviate}
 
 
-## bluemix iam user-delete
-{: #bluemix_iam_user_delete}
+邀请用户加入已设置组织和空间角色的帐户。此操作只能由帐户所有者执行。
+
+```
+bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROLE
+```
+
+**先决条件**：端点和登录
 
 
-此命令的功能和选项与 `cf delete-user` 命令的相同。
+**命令选项**：
 
+*USER_NAME*（必需）：要邀请的用户的名称。
+
+*ORG_NAME*（必需）：要邀请此用户加入的组织的名称。
+
+*ORG_ROLE*（必需）：要邀请此用户加入的组织角色的名称。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以创建和管理缴费账户和付款信息。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有对组织信息和报告的只读访问权。</dd>
+</dl> 
+
+*SPACE_NAME*（必需）：要邀请此用户加入的空间的名称。
+
+*SPACE_ROLE*（必需）：要邀请此用户加入的空间角色的名称。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀请和管理用户，以及启用给定空间的功能。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以创建和管理应用程序与服务，以及查看日志和报告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以查看空间的日志、报告和设置。</dd>
+</dl> 
+
+**示例**：
+
+邀请用户 `Mary` 以 `OrgManager` 角色加入组织 `IBM`，并以 `SpaceAuditor` 角色加入空间 `Cloud`：
+
+```
+bluemix iam account-user-inviate Mary IBM OrgManager Cloud SpaceAuditor
+```
 
 ## bluemix iam org-users
 {: #bluemix_iam_org_users}
 
-此命令的功能和选项与 `cf org-users` 命令的相同。
+按角色显示指定组织中的用户。
+
+```
+bluemix iam org-users ORG_NAME [-a]
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*ORG_NAME*（必需）：组织的名称。
+
+*-a*（可选）：列出指定组织中的所有用户，但不按角色分组。
 
 
 ## bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
-此命令的功能和选项与 `cf set-org-role` 命令的相同。
+向用户分配组织角色。此操作只能由组织管理员执行。
+
+```
+bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*USER_NAME*（必需）：要向其分配角色的用户的名称。
+
+*ORG_NAME*（必需）：要将此用户分配到的组织的名称。
+
+*ORG_ROLE*（必需）：要向此用户分配的组织角色的名称。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以创建和管理缴费账户和付款信息。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有对组织信息和报告的只读访问权。</dd>
+</dl> 
+
+**示例**：
+
+将用户 `Mary` 以 `OrgManager` 角色分配给组织 `IBM`：
+
+```
+bluemix iam org-role-set Mary IBM OrgManager
+```
 
 
 ## bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
-此命令的功能和选项与 `cf unset-org-role` 命令的相同。
+除去用户的组织角色。此操作只能由组织管理员执行。
+
+```
+bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*USER_NAME*（必需）：要除去的用户的名称。
+
+*ORG_NAME*（必需）：要从中除去此用户的组织的名称。
+
+*ORG_ROLE*（必需）：要从中除去此用户的组织角色的名称。例如：
+
+<dl>
+<dt>OrgManager</dt>
+<dd>此角色可以邀请和管理用户，选择并更改套餐，以及设置花费限制。</dd>
+<dt>BillingManager</dt>
+<dd>此角色可以创建和管理缴费账户和付款信息。</dd>
+<dt>OrgAuditor</dt>
+<dd>此角色具有对组织信息和报告的只读访问权。</dd>
+</dl> 
+
+**示例**：
+
+从组织 `IBM` 中除去用户 `Mary` 的 `OrgManager` 角色：
+
+```
+bluemix iam org-role-unset Mary IBM OrgManager
+```
 
 
 ## bluemix iam space-users
 {: #bluemix_iam_space_users}
 
-此命令的功能和选项与 `cf space-users` 命令的相同。
+按角色显示指定空间中的用户。
+
+```
+bluemix iam space-users ORG_NAME SPACE_NAME
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*ORG_NAME*（必需）：组织的名称。
+
+*SPACE_NAME*（必需）：空间的名称。
 
 
 ## bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
-此命令的功能和选项与 `cf set-space-role` 命令的相同。
+向用户分配空间角色。此操作只能由空间管理员执行。
 
+```
+bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*USER_NAME*（必需）：要向其分配角色的用户的名称。
+
+*ORG_NAME*（必需）：要将此用户分配到的组织的名称。
+
+*SPACE_NAME*（必需）：要将此用户分配到的空间的名称。
+
+*SPACE_ROLE*（必需）：要向此用户分配的空间角色的名称。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀请和管理用户，以及启用给定空间的功能。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以创建和管理应用程序与服务，以及查看日志和报告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以查看空间的日志、报告和设置。</dd>
+</dl> 
+
+
+**示例**：
+
+将用户 `Mary` 以 `SpaceManager` 角色分配给组织 `IBM` 和空间 `Cloud`：
+
+```
+bluemix iam space-role-set Mary IBM Cloud SpaceManager
+```
 
 ## bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
-此命令的功能和选项与 `cf unset-space-role` 命令的相同。
+除去用户的空间角色。此操作只能由空间管理员执行。
+
+```
+bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
+```
+
+**先决条件**：端点和登录
+
+**命令选项**：
+
+*USER_NAME*（必需）：要除去的用户的名称。
+
+*ORG_NAME*（必需）：要从中除去此用户的组织的名称。
+
+*SPACE_NAME*（必需）：要从中除去此用户的空间的名称。
+
+*SPACE_ROLE*（必需）：要从中除去此用户的空间角色的名称。例如：
+
+<dl>
+<dt>SpaceManager</dt>
+<dd>此角色可以邀请和管理用户，以及启用给定空间的功能。</dd>
+<dt>SpaceDeveloper</dt>
+<dd>此角色可以创建和管理应用程序与服务，以及查看日志和报告。</dd>
+<dt>SpaceAuditor</dt>
+<dd>此角色可以查看空间的日志、报告和设置。</dd>
+</dl> 
+
+**示例**：
+
+从组织 `IBM` 和空间 `Cloud` 中除去用户 `Mary` 的 `SpaceManager` 角色：
+
+```
+bluemix iam space-role-unset Mary IBM Cloud SpaceManager
+```
 
 
 ## bluemix app push
@@ -1208,21 +1489,21 @@ bluemix network route-unmap my-container-group ng.bluemix.net -n abc
 ## bluemix security cert
 {: #bluemix_security_cert}
 
-列出指定主机的证书信息。
+列出域的证书信息。
 
 ```
-bluemix security cert HOST_NAME
+bluemix security cert DOMAIN_NAME
 ```
 
 **先决条件**：端点和登录
 
 **命令选项**：
 
-*HOST_NAME*（必需）：托管证书的服务器的名称。
+*DOMAIN_NAME*（必需）：托管证书的域。
 
 **示例**：
 
-查看主机 `ibmcxo-eventconnect.com` 上的证书：
+查看域 `ibmcxo-eventconnect.com` 的证书信息：
 
 ```
 bluemix security cert ibmcxo-eventconnect.com
@@ -1487,7 +1768,7 @@ bluemix region-set us-south
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/attach/" target="_blank">attach</a> 命令。 
+控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} 命令。 
 
 ```
 bluemix ic attach [--no-stdin][--sig-proxy] CONTAINER
@@ -1514,7 +1795,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/build/" target="_blank">build</a> 命令。 
+调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build](https://docs.docker.com/reference/commandline/build/){: new_window} 命令。 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache][-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -1545,7 +1826,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ## bluemix ic create
 {: #bluemix_ic_create}
 
-在 {{site.data.keyword.Bluemix_notm}} 存储库中创建新容器。此命令会对 `docker create` 命令打包。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/create/" target="_blank">create</a> 命令。
+在 {{site.data.keyword.Bluemix_notm}} 存储库中创建新容器。此命令会对 `docker create` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [create](https://docs.docker.com/reference/commandline/create/){: new_window} 命令。
 
 
 ## bluemix ic cpi
@@ -1584,7 +1865,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 {: #bluemix_ic_exec}
 
 
-在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/exec/" target="_blank">exec</a> 命令。
+在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} 命令。
 
 ```
 bluemix ic exec [-d|--detach][-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -1696,8 +1977,8 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 |  环境变量                              |     描述                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用“CCS_BIND_APP”环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">将服务绑定到容器</a>。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}}“仪表板”或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">登录到容器</a>。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用“CCS_BIND_APP”环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}}“仪表板”或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅[登录到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
 *表 1. 常用环境变量*
 
@@ -1709,7 +1990,7 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 -p *PORT*|--publish *PORT*（可选）：公开用于 HTTP 流量的端口。组中的容器必须侦听该 HTTP 端口。无法发出 HTTPS 请求。对于容器组，不能包含多个端口。
 
-指定端口时，您使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。
+指定端口时，您使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。然后，{{site.data.keyword.Bluemix_notm}} 负载均衡器或容器可以使用该端口来访问同一 {{site.data.keyword.Bluemix_notm}} 空间中的主机和应用程序。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。
 
 **提示：**
 
@@ -1726,7 +2007,7 @@ bluemix ic group-create [-p PORT|--publish port][-m MEMORY|--memory MEMORY] [-e 
 
 在接下来的两个 90 秒的时间间隔内，如果没有收到来自某个容器实例的响应，那么会除去该实例并替换为新实例。如果该容器有响应，那么不会执行任何操作。此过程会持续重复。在 30 分钟的时段内，如果容器组中不同容器的总数等于或超过该容器组最大大小的 3 倍，那么会对该容器组永久禁用自动恢复。要重新启用自动恢复，必须重新创建容器组。
 
--n *HOST*|--hostname *HOST*（可选）：主机名，例如“mycontainerhost”。主机和域组合在一起构成了完整的公共路径 URL，例如“http://mycontainerhost.mybluemix.net”。使用“bluemix ic group-inspect”命令来查看容器组的详细信息时，主机和域会作为路径一起列出。
+-n *HOST*|--hostname *HOST*（可选）：主机名，例如“mycontainerhost”。主机和域组合在一起构成了完整的公共路径 URL，例如“http://mycontainerhost.mybluemix.net”。使用“bluemix ic group-inspect”命令来复查容器组的详细信息时，主机和域会作为路径一起列出。
 
 -d *DOMAIN*|--domain *DOMAIN*（可选）：通常，域为 `.mybluemix.net`。主机和域组合在一起构成了完整的公共路径 URL，例如 `http://mycontainerhost.mybluemix.net`。使用 `bluemix ic group-inspect` 命令来查看容器组的详细信息时，主机和域会作为路径一起列出。
 
@@ -1817,7 +2098,7 @@ bluemix ic group-remove [-f|--force] CONTAINER_GROUP
 
 **命令选项**：
 
--f|--force（必需）：强制除去正在运行的或发生故障的容器。
+-f|--force（可选）：强制除去正在运行的或发生故障的容器。
 
 *CONTAINER_GROUP*（必需）：容器组标识或名称。
 
@@ -1832,7 +2113,7 @@ bluemix ic group-remove my_group
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/images" target="_blank">images</a> 命令。此列表包含映像标识、创建日期和映像名称。
+查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 [images](https://docs.docker.com/reference/commandline/images){: new_window} 命令。此列表包含映像标识、创建日期和映像名称。
 
 ```
 bluemix ic images [-a|--all][--no-trunc] [-q|--quiet]
@@ -1859,7 +2140,7 @@ bluemix ic images
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/inspect" target="_blank">inspect</a> 命令。
+查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} 命令。
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2002,7 +2283,7 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/kill/" target="_blank">kill</a> 命令。
+停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} 命令。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2057,7 +2338,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/pause/" target="_blank">pause</a> 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
+暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
 
 ```
 bluemix ic pause CONTAINER
@@ -2092,7 +2373,7 @@ bluemix ic pause proxy
 ## bluemix ic unpause
 {: #unpause}
 
-取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/unpause/" target="_blank">unpause</a> 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
+取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
 
 ```
 bluemix ic unpause CONTAINER
@@ -2127,12 +2408,12 @@ bluemix ic unpause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/port/" target="_blank">port</a> 命令。
+列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [port](https://docs.docker.com/reference/commandline/port/){: new_window} 命令。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/ps/" target="_blank">ps</a> 命令。
+查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} 命令。
 
 ```
 bluemix ic ps [-a|--all][-s|--size] [-l NUM|--limit NUM][-q|--quiet]
@@ -2163,7 +2444,7 @@ bluemix ic ps -a
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-重新启动容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/restart/" target="_blank">restart</a> 命令。
+重新启动容器。有关更多信息，请参阅 Docker 帮助中的 [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} 命令。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2200,7 +2481,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-除去容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/rm/" target="_blank">rm</a> 命令。
+除去容器。有关更多信息，请参阅 Docker 帮助中的 [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} 命令。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2210,7 +2491,7 @@ bluemix ic rm [-f|--force] CONTAINER
 
 **命令选项**：
 
--f|--force（必需）：强制除去正在运行的或发生故障的容器。
+-f|--force（可选）：强制除去正在运行的或发生故障的容器。
 
 *CONTAINER*（必需）：容器名称或标识。
 
@@ -2237,7 +2518,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/rmi/" target="_blank">rmi</a> 命令。
+从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} 命令。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2278,7 +2559,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/run/" target="_blank">run</a> 命令。
+通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 [run](https://docs.docker.com/reference/commandline/run/){: new_window} 命令。
 
 
 
@@ -2313,8 +2594,8 @@ bluemix ic run [-p PORT|--publish PORT][-P] [-m MEMORY|--memory MEMORY][-e ENV|-
 
 |      环境变量                          |   描述                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用“CCS_BIND_APP”环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov" target="_blank">将服务绑定到容器</a>。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}} 仪表板或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅<a href="http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh" target="_blank">登录到容器</a>。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用“CCS_BIND_APP”环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
+| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}} 仪表板或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅[登录到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
 *表 2. 常用环境变量*
 
@@ -2422,7 +2703,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 
 ## bluemix ic start
 {: #ic_start}
-启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/start/" target="_blank">start</a> 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
+启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 [start](https://docs.docker.com/reference/commandline/start/){: new_window} 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
 
 ```
 bluemix ic start CONTAINER
@@ -2456,7 +2737,7 @@ bluemix ic start proxy
 
 ## bluemix ic stop  
 {: #ic_stop}
-停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/stop/" target="_blank">stop</a> 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
+停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -2493,7 +2774,7 @@ bluemix ic stop proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/stats/" target="_blank">stats</a> 命令。
+对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} 命令。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -2518,7 +2799,7 @@ bluemix ic stats --no-stream my_container
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/top/" target="_blank">top</a> 命令。
+显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 [top](https://docs.docker.com/reference/commandline/top/){: new_window} 命令。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -2569,7 +2850,7 @@ bluemix ic volume-inspect VOLUME_NAME
 
 以下示例是用于检查卷的请求，其中 `volume_name` 是卷的名称。
 ```
-bluemix ic volume inspect volume_name
+bluemix ic volume-inspect volume_name
 ```
 
 
@@ -2618,11 +2899,95 @@ bluemix ic volume-remove VOLUME_NAME
 bluemix ic volume-remove volume_name
 ```
 
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+列出文件系统。
+
+```
+bluemix ic volume-fs
+```
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+创建新文件系统。
+
+```
+bluemix ic volume-fs-create FILE_SYSTEM_NAME
+```
+
+**先决条件**：端点、登录和目标
+
+**命令选项**：
+
+*FILE_SYSTEM_NAME*（必需）：文件系统名称。名称可以包含小写字母、数字、下划线 `_` 和连字符 `-`。
+
+**示例**：
+
+以下示例显示用于创建文件系统的请求。
+```
+bluemix ic volume-fs-create my_file_system 
+```
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+除去文件系统。
+
+```
+bluemix ic volume-fs-remove FILE_SYSTEM_NAME
+```
+
+**先决条件**：端点、登录和目标
+
+**命令选项**：
+
+*FILE_SYSTEM_NAME*（必需）：文件系统名称。
+
+**示例**：
+
+以下示例显示用于除去文件系统的请求，其中 `my_file_system` 是文件系统的名称。
+```
+bluemix ic volume-fs-remove my_file_system
+```
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+检查文件系统。
+
+```
+bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
+```
+
+**先决条件**：端点、登录和目标
+
+**命令选项**：
+
+*FILE_SYSTEM_NAME*（必需）：文件系统名称。
+
+**示例**：
+
+以下示例是用于检查文件系统的请求，其中 `my_file_system` 是文件系统的名称。
+```
+bluemix ic volume-fs-inspect my_file_system
+```
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+列出所有文件系统类型模板。
+
+```
+bluemix ic volume-fs-flavors
+```
+
+**先决条件**：端点、登录和目标
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/wait/" target="_blank">wait</a> 命令。
+退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} 命令。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -2653,4 +3018,4 @@ bluemix ic version
 
 **先决条件**：Docker
 
-要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 <a href="https://docs.docker.com/reference/commandline/version/" target="_blank">version</a> 命令。
+要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 [version](https://docs.docker.com/reference/commandline/version/){: new_window} 命令。

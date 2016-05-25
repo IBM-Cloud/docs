@@ -23,22 +23,21 @@ copyright:
 ### サーバー・パッケージのプッシュ
 {: #push_server_package}
 
-アプリケーションを含んでいるサーバー・パッケージを、単一インスタンスに制限してプッシュします。server.xml ファイルには、monitor-1.0 フィーチャーおよび restConnector-1.0 フィーチャーが含まれていなければなりません。また、basicRegistry エレメントおよび administrator-role エレメントも含まれている必要があります。
-<pre>
-       &lt;featureManager&gt;
-    	   &lt;feature&gt;jsp-2.2&lt;/feature&gt;
-    	   &lt;feature&gt;monitor-1.0&lt;/feature&gt;
-    	   &lt;feature&gt;restConnector-1.0&lt;/feature&gt;
-       &lt;/featureManager&gt;
+アプリケーションを含んでいるサーバー・パッケージを、単一インスタンスに制限してプッシュします。server.xml ファイルには ``monitor-1.0`` フィーチャーおよび ``restConnector-1.0` フィーチャーが含まれている必要があります。また、basicRegistry エレメントおよび administrator-role エレメントも含まれている必要があります。```xml
+       <featureManager>
+           <feature>jsp-2.2</feature>
+           <feature>monitor-1.0</feature>
+           <feature>restConnector-1.0</feature>
+       </featureManager>
 
-       &lt;basicRegistry&gt;
-    	   &lt;user name="jconuser" password="jconpassw0rd"/&gt;
-       &lt;/basicRegistry&gt;
+       <basicRegistry>
+           <user name="jconuser" password="jconpassw0rd"/>
+       </basicRegistry>
 
-       &lt;administrator-role&gt;
-    	   &lt;user&gt;jconuser&lt;/user&gt;
-       &lt;/administrator-role&gt;
-</pre>
+       <administrator-role>
+           <user>jconuser</user>
+       </administrator-role>
+```
 {: #codeblock}
 
    * 注: パスワードは、Liberty によって提供される securityUtility ツールを使用してエンコードする必要があります。
@@ -46,32 +45,27 @@ copyright:
 ### JConsole アプリケーションの開始
 {: #start_jconsole_app}
 
-JConsole は Java インストールに含まれています。JConsole アプリケーションを開始するには、<java-home>/bin (Java 1.7 以上) に移動し、次のコマンドを実行します。
-<pre>
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
-</pre>
+JConsole は Java インストール済み環境に含まれています。JConsole アプリケーションを開始するには、&lt;java-home&gt;/bin に移動し、次のコマンドを実行します。
+```
+    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar```
 {: #codeblock}
 
-  * ほとんどの場合に機能するトラストストア・パラメーターのデフォルトを以下に示します。
-<pre>
-    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/acerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
-</pre>
+Java trustStore を構成するために追加のパラメーターを渡さなければならない場合があります。次のパラメーターはほとんどの場合に機能します。
+```
+    -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks```
 {: #codeblock}
-  * 必要な場合は、トラストストアに関するパラメーターに適切な値を指定してください。
 
 ### 接続の実行
 {: #start_jconsole_app}
-  * 次の URL を「リモート・プロセス」フィールドに入力します。    
-    * service:jmx:rest://<appName>.mybluemix.net:443/IBMJMXConnectorREST  
+  * 次の URL を「リモート・プロセス」フィールドに入力します。
+    * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST
   *  「ユーザー名」フィールドと「パスワード」 フィールドに、server.xml ファイルからの administrator-role ロールのユーザーとパスワードを指定します。
   * 「接続」をクリックします。
 
 接続が成功すると、JConsole はモニターを開始します。
 
 接続が失敗する場合、問題の診断に役立てるためにログを生成できます。
-最初に、jconsole コマンドに **-J-Djava.util.logging.config.file=c:/tmp/logging.properties** を追加することによって、クライアント・サイドのトレースを収集してみてください。ロギング・プロパティー・ファイルのサンプルを以下に示します。
-
-<pre>
+最初に、jconsole コマンドに **-J-Djava.util.logging.config.file=c:/tmp/logging.properties** を追加することによって、クライアント・サイドのトレースを収集してみてください。ロギング・プロパティー・ファイルのサンプルを以下に示します。```
     handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
     java.util.logging.FileHandler.limit = 50000
@@ -79,14 +73,12 @@ JConsole は Java インストールに含まれています。JConsole アプ�
     java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
     javax.management.level=FINEST
     javax.management.remote.level=FINER
-    com.ibm.level=FINEST
-</pre>
+    com.ibm.level=FINEST```
 {: #codeblock}
 
-jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加することもできます。そうすると、別の JConsole 出力ウィンドウに SSL 診断トレースが生成されます。最後に、以下を server.xml ファイルに追加することにより、サーバー・サイドでトレースを有効にすることができます。
-<pre>
-    &lt;logging traceSpecification="com.ibm.ws.jmx.&ast;=all"/&gt;
-</pre>
+jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加することもできます。そうすると、別の JConsole 出力ウィンドウに SSL 診断トレースが生成されます。最後に、以下を server.xml ファイルに追加することにより、サーバー・サイドでトレースを有効にすることができます。```
+    <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
+```
 {: codeblock}
 
 # 関連リンク

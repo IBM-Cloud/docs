@@ -79,7 +79,6 @@ BMSClient.initialize(appRoute , appGUID);
 
 var logger = MFPLogger.getInstance("myLogger");
 
-
 logger.debug("debug info");
 logger.info("info message");
 logger.warn("warning message");

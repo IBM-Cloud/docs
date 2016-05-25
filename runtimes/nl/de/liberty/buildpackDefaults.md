@@ -36,7 +36,7 @@ wird.
 Anwendung angibt. Weitere Informationen finden Sie in [Eigenständige Anwendungen](optionsForPushing.html#stand_alone_apps).
 * Stellen Sie Ihre Anwendung als
 [Serververzeichnis](optionsForPushing.html#server_directory) oder
-[paketierten Server](optionsForPushing.html#packaged_server) bereit. Passen Sie die Datei 'server.xml' so an, dass sie das exakte für Ihre Anwendung benötigte Feature-Set enthält, und stellen Sie sie bereit. 
+[paketierten Server](optionsForPushing.html#packaged_server) bereit. Passen Sie die Datei 'server.xml' so an, dass sie das exakte für Ihre Anwendung benötigte Feature-Set enthält, und stellen Sie sie bereit.
 
 Anwendungen, die als Serververzeichnis oder
 paketierter Server bereitgestellt werden, werden durch Änderungen an den Liberty-Featurestandardwerten nicht beeinträchtigt.

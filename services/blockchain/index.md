@@ -13,7 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
-*Last updated: 28 April 2016*
+*Last updated: 25 May 2016*
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix, you can quickly spin up a blockchain network and circumvent the complexities involved with manually creating a development environment.  Rather than creating and managing a network, developers can spend their time generating applications and working with chaincode.  The service is a peer-to-peer permissioned network built on top of the Linux Foundation's Hyperledger [fabric code](https://github.com/hyperledger/fabric).
 {:shortdesc}
@@ -37,7 +37,7 @@ To get started, follow these steps to create and deploy an unbound service insta
   - View real-time logs and troubleshoot chaincode that fails to execute.
   - View the world state for your ledger.
   - Access the Swagger UI and interact with your network via the REST API.
-  - Deploy one of three available chaincode templates. 
+  - Deploy one of three available chaincode examples. 
 
 
 # Related Links
@@ -46,10 +46,11 @@ To get started, follow these steps to create and deploy an unbound service insta
 {: #samples}
 * [IBM Marbles Demo (GitHub)](https://github.com/IBM-Blockchain/marbles)
 * [IBM Commercial Paper Demo (GitHub)](https://github.com/IBM-Blockchain/cp-web#readme)
+* [IBM Car Lease Demo (Github)](https://github.com/jpayne23/Car-Lease-Demo/blob/master/README.md)
 
 ## API Reference
 {: #api}
-* [API (Swagger UI)](https://ibmblockchainapi.mybluemix.net)
+* [API (Swagger UI)](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
 * [API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
 * [IBM JS (Node.js SDK)](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md)
 

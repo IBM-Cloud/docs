@@ -51,9 +51,9 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 29 March 2016*
+*Last updated: 19 May 2016*
 
-You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage details view for you to check the actual cost after you build your apps.
+You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
 {:shortdesc}
 
 ## Free trial
@@ -83,7 +83,7 @@ If you convert your account during your free trial, your free allowances are lim
 ##What it costs
 {: #what_it_costs}
 
-Charges vary depending on the resources used by a particular service, runtime, container, virtual machine, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage details* view. For more detailed information about charges, see [How you are charged](index.html#charges).
+Charges vary depending on the resources used by a particular service, runtime, container, virtual server, or support option. The resources can be the number of API calls, the number of instances, memory, storage, and so on. {{site.data.keyword.Bluemix_notm}} also provides detailed cost estimators, and a down-to-the-penny cost calculator to help you plan for charges. You can check the actual cost after you build your apps by using the *Usage Dashboard* view. For more detailed information about charges, see [How you are charged](index.html#charges).
  
 
 ##Promo code
@@ -281,20 +281,18 @@ The following table illustrates how much you pay with a plan that is based on a 
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
 *Table 6. Charge calculation by using the block tier pricing model*
 
-###Free allowances for virtual machines
+### Free allowances for virtual servers
 {: #vms}
 
-You can use {{site.data.keyword.Bluemix_notm}} virtual machines in the IBM public cloud as beta features at no charge. Free allowances are provided for the number of VM images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
+You can use {{site.data.keyword.virtualmachineslong}} in the IBM public cloud as a beta feature at no charge. Free allowances are provided for the number of virtual server images that you can create, the number of IP addresses that are assigned, as well as the amount of memory that can be used.
 
-The following items are the free allowances for the {{site.data.keyword.Bluemix_notm}} virtual machines beta:
+The following items are the free allowances for the {{site.data.keyword.virtualmachineslong}} beta:
 
-* 8 instances
-* 8 virtual CPUs
-* 12 GB memory
+* 2 instances
+* 2 virtual CPUs
+* 8 GB memory
 * 200 GB block storage
-* 4 public IP addresses
-
-In addition, you can use the virtual machines infrastructure to provision VMs in your {{site.data.keyword.Bluemix_notm}} private clouds, subject only to the limits and quotas of your private clouds.
+* 5 public IP addresses
 
 
 ##How to estimate your costs
@@ -389,12 +387,12 @@ The total price is 148 + 13.5 + 13.5 = $175.</p></dd>
 
 When all the items are added, the total price of the application is $384.15.
 
-##Usage details
+##Usage dashboard
 {: #usage}
 
-As an account owner, a user with *Auditor* permission in the space, or a billing manager,, you can use the Usage Details view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
+As an account owner or a billing manager, you can use the Usage Dashboard view to see the real-time charges for the runtimes and services that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region and space, for the past 12 months.
 
-To open the Usage Details view, click the **Account and Support** icon in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface and select **Account** On the page that is displayed, click **Usage Details**. In the view, you can see a summary of the runtime and service usage for the account.
+To open the Usage Dashboard view, click the **Account and Support** icon &gt; **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. In the view, you can see a summary of the runtime and service usage for the account. Billing managers can see the details for only the organizations in which they are billing managers.
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. Each billing cycle lasts one month.
 
@@ -402,14 +400,12 @@ Account owners can filter the usage summary by region and organization. If you a
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
 
-Billing managers can see the details for only the organizations in which they are billing managers.
-
 ##Notifications
 {: #notifications}
 
 As an account manager of a Pay-As-You-Go account, you can set spending notifications against the total cost of your account, for your runtime, services, and for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify.
 
-To open the **Notifications** view, click the **Profile Settings** icon in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface and select **Account &gt; Notifications**. Check the check box before a notification to make it effective. You can also add and delete notifications for individual services.
+To open the **Notifications** view, click the **Account and Support** icon &gt; **Account** &gt; *your_account_name* &gt; **Spending Notifications**. Enter a numeric value to set the spending threshold for triggering a notification for each type of spending notification as needed. You can also add and delete notifications for individual services.
 
 ##How to change your plan
 {: #changing}

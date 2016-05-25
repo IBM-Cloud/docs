@@ -48,17 +48,13 @@ Bluemix で Liberty ベータ・フィーチャーを使用するには、以下
 {: #codeblock}
 
 2.  IBM_LIBERTY_BETA 環境変数を **true** に設定します。この変数は、アプリケーション用にベータ・フィーチャーをインストールして使用可能にするよう Liberty ビルドパックに指示します。以下の例を参照してください。
-  * cf コマンド・ライン・ツールを使用する場合
-<pre>
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-</pre>
+  * cf コマンド・ライン・ツールを使用する場合```
+       $ cf set-env <yourappname> IBM_LIBERTY_BETA true```
 {: #codeblock}
 
-  * manifest.yml ファイルを使用する場合
-<pre>
+  * manifest.yml ファイルを使用する場合```
       env:
-          IBM_LIBERTY_BETA: "true"
-</pre>
+          IBM_LIBERTY_BETA: "true"```
 {: #codeblock}
 
 # 関連リンク

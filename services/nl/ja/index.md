@@ -12,7 +12,7 @@ copyright:
 
 #サービス
 {: #services}
-*最終更新日: 2016 年 3 月 21 日*
+*最終更新日: 2016 年 4 月 5 日*
 
 {{site.data.keyword.Bluemix_notm}} によって、サービスとアプリの実装、ホスト、および拡大を簡単に行うことができます。それにより、
 アプリケーション・ロジックとアプリケーション設計に集中することができます。
@@ -33,6 +33,7 @@ copyright:
 
 
 
+##試験的サービス
 
 {{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の下部にスクロールし、**「{{site.data.keyword.Bluemix_notm}} Experimental Services」**をクリックします。
 
@@ -47,6 +48,7 @@ copyright:
 
 |サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
 |:----------|:------------------------------|:------------------|:------------------|
+|{{site.data.keyword.cloudaccesstrailshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.activedeployshort}}			|はい		|はい		|いいえ|
 |{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
 |{{site.data.keyword.alertnotificationshort}}		|はい		|はい			|はい		|
@@ -73,7 +75,7 @@ copyright:
 |{{site.data.keyword.creshort}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.game}}			|はい		|はい		|はい|
 |{{site.data.keyword.geospatialshort_Geospatial}}	|はい	|はい		|はい|
-|{{site.data.keyword.globalizationshort}}	|はい		|はい		|はい|
+|{{site.data.keyword.GlobalizationPipeline_short}}	|はい		|はい		|はい|
 |{{site.data.keyword.dataworks_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
@@ -100,7 +102,7 @@ copyright:
 |{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
 |{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
 |{{site.data.keyword.SecureGateway}}		|はい		|はい		|はい|
-|{{site.data.keyword.servicediscoveryshort}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.servicediscoveryshort}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.serviceproxyshort}}		|はい		|いいえ		|いいえ|
 |{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
 |{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
@@ -119,3 +121,8 @@ copyright:
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい|
 |{{site.data.keyword.xpagesservice_short}}	|はい		|はい		|いいえ|
 *表 2. サービスの利用可能性*
+
+
+## サービスの非推奨化
+
+IBM は、一般出荷可能サービスを終了または置換する場合、その意図を通知するために少なくとも 30 日間の通知期間を設けます。同等の交換品が提供されない場合、IBM は発表日から少なくとも 12 カ月間、商業的に妥当な手段を使用して、前にデプロイされたサービスのインスタンスの運用とサポートを継続します。 

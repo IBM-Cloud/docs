@@ -30,15 +30,17 @@ copyright:
 # Distribuzione della tua applicazione con l'interfaccia riga di comando
 *Ultimo aggiornamento: 24 febbraio 2016*
 
-Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazioni e istanze del servizio.{:shortdesc}
+Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazioni e istanze del servizio.
+{:shortdesc}
 
 Prima di iniziare, installa le interfacce riga di comando Cloud Foundry e {{site.data.keyword.Bluemix}}.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>
+<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a> 
 </p>
 
-**Limitazione:** gli strumenti della riga di comando non sono supportati da Cygwin. Utilizzali in una finestra della riga di comando diversa da quella di Cygwin.{:prereq}
+**Limitazione:** gli strumenti della riga di comando non sono supportati da Cygwin. Utilizzali in una finestra della riga di comando diversa da quella di Cygwin.
+{:prereq}
 
 Una volta installate le interfacce riga di comando, puoi iniziare a lavorare:
 
@@ -51,7 +53,7 @@ Una volta installate le interfacce riga di comando, puoi iniziare a lavorare:
   
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
   
-   4.  Apporta le modifiche al codice della tua applicazione, adattandolo. Ti suggeriamo di accertarti che l'applicazione venga eseguita in locale prima di eseguirne la distribuzione a {{site.data.keyword.Bluemix}}. <br><br>Presta particolare attenzione al file `manifest.yml`. Quando ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix}}, questo file viene utilizzato per determinare l'URL, l'allocazione di memoria, il numero di istanze e altri parametri fondamentali della tua applicazione. Per [ulteriori informazioni sul file manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}, consulta la documentazione Cloud Foundry.
+   4.  Apporta le modifiche al codice della tua applicazione, adattandolo. Ti suggeriamo di accertarti che l'applicazione venga eseguita in locale prima di eseguirne la distribuzione a {{site.data.keyword.Bluemix}}.<br><br>Presta particolare attenzione al file `manifest.yml`. Quando ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix}}, questo file viene utilizzato per determinare l'URL, l'allocazione di memoria, il numero di istanze e altri parametri fondamentali della tua applicazione. Per [ulteriori informazioni sul file manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}, consulta la documentazione Cloud Foundry.
   
   5. Stabilisci una connessione a {{site.data.keyword.Bluemix}}.
   

@@ -29,7 +29,8 @@ conhecido anteriormente como Advanced Mobile Access.
 Para ativação e execução do serviço {{site.data.keyword.amashort}}, siga
 estas etapas:
 
-1. Configure o ambiente de desenvolvimento no lado do cliente. É possível incluir o
+1. Configure o ambiente de desenvolvimento no lado do cliente.
+É possível incluir o
 {{site.data.keyword.amashort}} SDK em seu app Android, Cordova ou iOS existente. É
 possível também fazer download do aplicativo de amostra HelloAuthentication.
    * **Android**: ([SDK](getting-started-android.html)) ([Amostra](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
@@ -65,6 +66,8 @@ segurança do OAuth ativada para dispositivo móvel. Para obter mais informaçõ
 * [Core SDK (plug-in do Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 * [Core SDK (iOS - Objective-C) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [Autenticação customizada - amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [Autenticação customizada - amostra avançada](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
 ## Referência de API
 {: api}

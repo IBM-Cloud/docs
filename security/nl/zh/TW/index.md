@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2015, 2016
+  years: 2014, 2016
 
  
 
@@ -17,7 +17,8 @@ copyright:
 {: #security}
 *前次更新：2016 年 3 月 17 日*
 
-{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。{:shortdesc}
+{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
 
@@ -207,20 +208,6 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛�
 
 如需相關資訊，請造訪 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
-### SQL Database
-
-SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料庫。此服務使用 IBM Directory Server LDAP 進行鑑別，並使用 IBM InfoSphere® Guardium® Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 DigiCert 簽署的 SSL 憑證保護。
-
-在含有此服務的某些方案中，您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 資料庫主控台來取得包含下列資訊的報告：
-
- * 應用程式所存取的資料庫中可能存在的機密資料。
- * 在指定期間內存取資料庫的應用程式使用者。
- * 存取資料庫中的機密資料的應用程式使用者。
-
-若要利用 SQL 來遮罩資料，應用程式可以呼叫與資料庫一起部署的遮罩使用者定義函數 (UDF)。例如，您可以遮罩要用來在其他地方測試的資料。UDF 會實作來自 IBM Infosphere Optim™ 的資料遮罩演算法。
-
-此服務的高階方案也包括資料加密。如需此服務的相關資訊，請參閱[開始使用 SQL Database](../services/SQLDB/index.html)。
-
 ### dashDB
 
 dashDB 服務使用內嵌式 LDAP 伺服器進行使用者鑑別。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
@@ -238,6 +225,20 @@ Cloud Integration 服務可讓您整合雲端與內部部署資料。您可以�
 Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程式安全地連接至遠端位置（內部部署或雲端）。它提供安全連線功能，並在您的 {{site.data.keyword.Bluemix_notm}} 組織與您要連接的遠端位置之間建立通道。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 API 套件，來配置及建立安全閘道。
 
 如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/secure_gateway.html)。
+
+### SQL Database
+
+SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料庫。此服務使用 IBM Directory Server LDAP 進行鑑別，並使用 IBM InfoSphere® Guardium® Data Activity Monitor 來保護應用程式存取的資料庫。應用程式與資料庫之間的連線受到 DigiCert 簽署的 SSL 憑證保護。
+
+在含有此服務的某些方案中，您可以使用 {{site.data.keyword.Bluemix_notm}} 中的 SQL 資料庫主控台來取得包含下列資訊的報告：
+
+ * 應用程式所存取的資料庫中可能存在的機密資料。
+ * 在指定期間內存取資料庫的應用程式使用者。
+ * 存取資料庫中的機密資料的應用程式使用者。
+
+若要利用 SQL 來遮罩資料，應用程式可以呼叫與資料庫一起部署的遮罩使用者定義函數 (UDF)。例如，您可以遮罩要用來在其他地方測試的資料。UDF 會實作來自 IBM Infosphere Optim™ 的資料遮罩演算法。
+
+此服務的高階方案也包括資料加密。如需此服務的相關資訊，請參閱[開始使用 SQL Database](../services/SQLDB/index.html)。
 
 ### 安全資訊及事件管理
 
@@ -284,10 +285,10 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
  * 使用 QRadar 進行安全監視。
  * 可在「管理」頁面上取得安全報告。
 
-## 安全相符性
+## 安全規範
 {: #compliance}
 
-{{site.data.keyword.Bluemix}} 提供了一個您可以信任的安全雲端平台。{{site.data.keyword.Bluemix_notm}} 相符性是透過根據業界最佳安全標準（包括 ISO 27001 和 ISO 27002）建置的平台和服務來實現。
+{{site.data.keyword.Bluemix}} 提供了一個您可以信任的安全雲端平台。{{site.data.keyword.Bluemix_notm}} 規範來自於根據業界最佳安全標準（包括 ISO 27001 和 ISO 27002）建置的平台和服務。
 {:shortdesc}
 
 ![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家的 IBM 資料處理方（資料匯入方）之間簽訂的。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家處理時仍能受到像在 EU 或 EEA 中一樣的保護。

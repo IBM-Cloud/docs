@@ -1,6 +1,6 @@
 ---
 
-
+ 
 
 copyright:
 
@@ -27,7 +27,6 @@ La información que sigue nombra todos los mandatos
 compatibles con el plugin de la CLI de Bluemix e incluye sus nombres, opciones, uso,
 requisitos previos, descripciones y ejemplos.
 
-
 **Nota:** *Requisitos previos* lista las acciones que son necesarias antes de utilizar el mandato. Los requisitos previos pueden incluir una o varias de las acciones siguientes:
 <dl>
 <dt>**Punto final**</dt>
@@ -40,7 +39,7 @@ requisitos previos, descripciones y ejemplos.
 
 
 ## bluemix vpn connection-create
-Crea una conexión VPN. 
+Crea una conexión VPN.
 
 ```
 bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -subnets "SUBNET/MASK" -cip CUSTOMER_GATEWAY_IP_ADDRESS [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
@@ -52,35 +51,35 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 *CONNECTION_NAME*  (obligatorio): nombre de la conexión
 
--g *GATEWAY_NAME*  (obligatorio): nombre de la pasarela. 
+-g *GATEWAY_NAME*  (obligatorio): nombre de la pasarela.
 
--k *PRESHARED_KEY*  (obligatorio): clave compartida previamente. 
+-k *PRESHARED_KEY*  (obligatorio): clave compartida previamente.
 
--subnets "*SUBNET*/*MASK*"  (obligatorio): dirección de subred remota en formato CIDR. 
+-subnets "*SUBNET*/*MASK*"  (obligatorio): dirección de subred remota en formato CIDR.
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS*  (obligatorio): dirección IP de punto final remoto del túnel VPN. 
+-cip *CUSTOMER_GATEWAY_IP_ADDRESS*  (obligatorio): dirección IP de punto final remoto del túnel VPN.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--peer_id *PEER_ID*  (opcional):  ID del igual remoto. Otro punto final del túnel VPN. 
+-peer_id *PEER_ID*  (opcional):  ID del igual remoto. Otro punto final del túnel VPN.
 
--admin_state *ADMIN_STATE*  (opcional):  estado de la conexión VPN. El valor válido es `UP` o `DOWN`. 
+-admin_state *ADMIN_STATE*  (opcional):  estado de la conexión VPN. El valor válido es `UP` o `DOWN`.
 
 -dpd-action *ACTION*  (opcional):  acción a realizar cuando el igual se detecta como inactivo. El valor válido es `hold`, `clear`, `disabled`, `restart` o `restart-by-peer`. El valor predeterminado es
-`hold`. 
+`hold`.
 
--gateway_ip *IP_ADDRESS*  (opcional):  dirección IP del punto final de túnel de VPN local. 
+-gateway_ip *IP_ADDRESS*  (opcional):  dirección IP del punto final de túnel de VPN local.
 
--i *INITIATOR_STATE*  (opcional):  estado del iniciador. El valor predeterminado es `bi-directional`. 
+-i *INITIATOR_STATE*  (opcional):  estado del iniciador. El valor predeterminado es `bi-directional`.
 
--dpd-timeout *VALUE*  (opcional):  valor de tiempo de espera en segundos tras el cual la sesión se termina. Rango: 6 - 86400 segundos. El valor predeterminado es `120` segundos. 
+-dpd-timeout *VALUE*  (opcional):  valor de tiempo de espera en segundos tras el cual la sesión se termina. Rango: 6 - 86400 segundos. El valor predeterminado es `120` segundos.
 
 -dpd-interval *VALUE*  (opcional):  intervalo de estado activo en segundos. Enviar mensajes de estado activo
-en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-86399 segundos. El valor predeterminado es `15` segundos. 
+en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-86399 segundos. El valor predeterminado es `15` segundos.
 
--ike *NAME*  (opcional):  nombre de la política IKE. 
+-ike *NAME*  (opcional):  nombre de la política IKE.
 
--ipsec *NAME*  (opcional):  nombre de la política IPSec. 
+-ipsec *NAME*  (opcional):  nombre de la política IPSec.
 
 **Ejemplos**:
 
@@ -91,7 +90,7 @@ bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "19
 
 
 ## bluemix vpn ike-create
-Crea una política IKE. 
+Crea una política IKE.
 
 ```
 bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] [-e ENCRYPTION_ALGORITHM][-lv LIFETIME_VALUE]
@@ -101,17 +100,17 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio):  nombre de la política IKE. 
+*POLICY_NAME*  (obligatorio):  nombre de la política IKE.
 
--g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela. 
+-g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. El valor predeterminado es `Group2`. 
+-pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. El valor predeterminado es `Group2`.
 
--e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. El valor predeterminado es `aes-128`. 
+-e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. El valor predeterminado es `aes-128`.
 
--lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos. El valor predeterminado es `86400` segundos. 
+-lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos. El valor predeterminado es `86400` segundos.
 
 **Ejemplos**:
 
@@ -132,17 +131,17 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio):  nombre de la política IPSec. 
+*POLICY_NAME*  (obligatorio):  nombre de la política IPSec.
 
--g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela. 
+-g *GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. El valor predeterminado es `Group2`. 
+-pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. El valor predeterminado es `Group2`.
 
--e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. El valor predeterminado es `aes-128`. 
+-e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. El valor predeterminado es `aes-128`.
 
--lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad. Rango: 60 - 86400 segundos. El valor predeterminado es `3600` segundos. 
+-lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad. Rango: 60 - 86400 segundos. El valor predeterminado es `3600` segundos.
 
 **Ejemplos**:
 
@@ -153,7 +152,7 @@ bluemix vpn ipsec-create my_policy -g my_gateway
 
 
 ## bluemix vpn gateway-create
-Crea una pasarela VPN. 
+Crea una pasarela VPN.
 
 ```
 bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnets SUBNET_ADDRESS]
@@ -163,13 +162,13 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 
 **Opciones de mandato**:
 
-*GATEWAY_NAME*  (obligatorio):  nombre de la pasarela. 
+*GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
 
--t *TYPE*  (obligatorio):  los contenedores para los que quiere habilitar el servicio. El valor válido es `allSingleContainers`, `allContainerGroups` o `allContainers`. No hay valor predeterminado; debe especificar un tipo. 
+-t *TYPE*  (obligatorio):  los contenedores para los que quiere habilitar el servicio. El valor válido es `allSingleContainers`, `allContainerGroups` o `allContainers`. No hay valor predeterminado; debe especificar un tipo.
 
--gateway_ip *IP_ADDRESS*  (opcional):  dirección IP de la pasarela. 
+-gateway_ip *IP_ADDRESS*  (opcional):  dirección IP de la pasarela.
 
--subnets *SUBNET_ADDRESS*  (opcional):  dirección de subred en formato CIDR. 
+-subnets *SUBNET_ADDRESS*  (opcional):  dirección de subred en formato CIDR.
 
 **Ejemplos**:
 
@@ -180,7 +179,7 @@ bluemix vpn gateway-create my_gateway -t allContainerGroups
 
 
 ## bluemix vpn connections
-Muestra información sobre todas las conexiones actuales. 
+Muestra información sobre todas las conexiones actuales.
 
 ```
 bluemix vpn connections
@@ -190,7 +189,7 @@ bluemix vpn connections
 
 
 ## bluemix vpn ikes
-Muestra información sobre las conexiones IKE actuales. 
+Muestra información sobre las conexiones IKE actuales.
 
 ```
 bluemix vpn ikes
@@ -200,7 +199,7 @@ bluemix vpn ikes
 
 
 ## bluemix vpn ipsecs
-Muestra información sobre las conexiones IPSec actuales. 
+Muestra información sobre las conexiones IPSec actuales.
 
 ```
 bluemix vpn ipsecs
@@ -210,7 +209,7 @@ bluemix vpn ipsecs
 
 
 ## bluemix vpn gateways
-Muestra información sobre las pasarelas actuales. 
+Muestra información sobre las pasarelas actuales.
 
 ```
 bluemix vpn gateways
@@ -220,7 +219,7 @@ bluemix vpn gateways
 
 
 ## bluemix vpn connection
-Muestra toda la información sobre una conexión particular. 
+Muestra toda la información sobre una conexión particular.
 
 ```
 bluemix vpn connection CONNECTION_NAME
@@ -230,11 +229,11 @@ bluemix vpn connection CONNECTION_NAME
 
 **Opciones de mandato**:
 
-*CONNECTION_NAME*  (obligatorio): nombre de la conexión a mostrar. 
+*CONNECTION_NAME*  (obligatorio): nombre de la conexión a mostrar.
 
 
 ## bluemix vpn ike
-Muestra información sobre una conexión IKE. 
+Muestra información sobre una conexión IKE.
 
 ```
 bluemix vpn ike POLICY_NAME
@@ -244,11 +243,11 @@ bluemix vpn ike POLICY_NAME
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio): nombre de la política IKE a mostrar. 
+*POLICY_NAME*  (obligatorio): nombre de la política IKE a mostrar.
 
 
 ## bluemix vpn ipsec
-Muestra información sobre una conexión IPSec. 
+Muestra información sobre una conexión IPSec.
 
 ```
 bluemix vpn ipsec POLICY_NAME
@@ -258,11 +257,11 @@ bluemix vpn ipsec POLICY_NAME
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio): nombre de la política IPSec a mostrar. 
+*POLICY_NAME*  (obligatorio): nombre de la política IPSec a mostrar.
 
 
 ## bluemix vpn gateway
-Muestra información de conexión sobre una pasarela. 
+Muestra información de conexión sobre una pasarela.
 
 ```
 bluemix vpn gateway GATEWAY_NAME
@@ -272,11 +271,11 @@ bluemix vpn gateway GATEWAY_NAME
 
 **Opciones de mandato**:
 
-*GATEWAY_NAME*  (obligatorio): nombre de la pasarela a mostrar. 
+*GATEWAY_NAME*  (obligatorio): nombre de la pasarela a mostrar.
 
 
 ## bluemix vpn connection-delete
-Suprima una conexión existente. 
+Suprima una conexión existente.
 
 ```
 bluemix vpn connection-delete CONNECTION_NAME
@@ -286,11 +285,11 @@ bluemix vpn connection-delete CONNECTION_NAME
 
 **Opciones de mandato**:
 
-*CONNECTION_NAME*  (obligatorio): nombre de la conexión a suprimir. 
+*CONNECTION_NAME*  (obligatorio): nombre de la conexión a suprimir.
 
 
 ## bluemix vpn ike-delete
-Suprime una política IKE existente. 
+Suprime una política IKE existente.
 
 ```
 bluemix vpn ike-delete POLICY_NAME
@@ -300,11 +299,11 @@ bluemix vpn ike-delete POLICY_NAME
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio): nombre de la política IKE a suprimir. 
+*POLICY_NAME*  (obligatorio): nombre de la política IKE a suprimir.
 
 
 ## bluemix vpn ipsec-delete
-Suprime una política IPSec existente. 
+Suprime una política IPSec existente.
 
 ```
 bluemix vpn ipsec-delete POLICY_NAME
@@ -314,11 +313,11 @@ bluemix vpn ipsec-delete POLICY_NAME
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio): nombre de la política IPSec a suprimir. 
+*POLICY_NAME*  (obligatorio): nombre de la política IPSec a suprimir.
 
 
 ## bluemix vpn gateway-delete
-Suprime una pasarela existente. 
+Suprime una pasarela existente.
 
 ```
 bluemix vpn gateway-delete GATEWAY_NAME
@@ -328,11 +327,11 @@ bluemix vpn gateway-delete GATEWAY_NAME
 
 **Opciones de mandato**:
 
-*GATEWAY_NAME*  (obligatorio): nombre de la pasarela a suprimir. 
+*GATEWAY_NAME*  (obligatorio): nombre de la pasarela a suprimir.
 
 
 ## bluemix vpn connection-update
-Actualiza una conexión VPN existente. 
+Actualiza una conexión VPN existente.
 
 ```
 bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY] [-subnets "SUBNET/MASK"][-cip CUSTOMER_GATEWAY_IP_ADDRESS] [-d DESCRIPTION][-peer_id PEER_ID] [-admin_state ADMIN_STATE][-dpd-action ACTION] [-gateway_ip IP_ADDRESS][-i INITIATOR_STATE] [-dpd-timeout VALUE][-dpd-interval VALUE] [-ike NAME][-ipsec NAME]
@@ -344,38 +343,38 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 
 *CONNECTION_NAME*  (obligatorio): nombre de la conexión
 
--g *GATEWAY_NAME*  (opcional):  nombre de la pasarela. 
+-g *GATEWAY_NAME*  (opcional):  nombre de la pasarela.
 
--k *PRESHARED_KEY*  (opcional): clave compartida previamente. 
+-k *PRESHARED_KEY*  (opcional): clave compartida previamente.
 
--subnets "*SUBNET*/*MASK*"  (opcional):  dirección de subred en formato CIDR. 
+-subnets "*SUBNET*/*MASK*"  (opcional):  dirección de subred en formato CIDR.
 
--cip *CUSTOMER_GATEWAY_IP_ADDRESS*  (opcional): dirección IP de punto final remoto del túnel VPN. 
+-cip *CUSTOMER_GATEWAY_IP_ADDRESS*  (opcional): dirección IP de punto final remoto del túnel VPN.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--peer_id *PEER_ID*  (opcional):  ID del igual remoto. Otro punto final del túnel VPN. 
+-peer_id *PEER_ID*  (opcional):  ID del igual remoto. Otro punto final del túnel VPN.
 
--admin_state *ADMIN_STATE*  (opcional):  estado de la conexión VPN. El valor válido es `UP` o `DOWN`. 
+-admin_state *ADMIN_STATE*  (opcional):  estado de la conexión VPN. El valor válido es `UP` o `DOWN`.
 
--dpd-action *ACTION*  (opcional):  acción a realizar cuando el igual se detecta como inactivo. El valor válido es `hold`, `clear`, `disabled`, `restart` o `restart-by-peer`. 
+-dpd-action *ACTION*  (opcional):  acción a realizar cuando el igual se detecta como inactivo. El valor válido es `hold`, `clear`, `disabled`, `restart` o `restart-by-peer`.
 
--gateway_ip *IP_ADDRESS*  (opcional):  dirección IP del punto final de túnel de VPN local. 
+-gateway_ip *IP_ADDRESS*  (opcional):  dirección IP del punto final de túnel de VPN local.
 
--i *INITIATOR_STATE*  (opcional):  estado del iniciador. 
+-i *INITIATOR_STATE*  (opcional):  estado del iniciador.
 
--dpd-timeout *VALUE*  (opcional):  valor de tiempo de espera en segundos tras el cual la sesión se termina. Rango: 6 - 86400 segundos. 
+-dpd-timeout *VALUE*  (opcional):  valor de tiempo de espera en segundos tras el cual la sesión se termina. Rango: 6 - 86400 segundos.
 
 -dpd-interval *VALUE*  (opcional):  intervalo de estado activo en segundos. Enviar mensajes de estado activo
-en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-86399 segundos. 
+en el intervalo configurado para comprobar el estado activo del igual. Rango: 5-86399 segundos.
 
--ike *NAME*  (opcional):  nombre de la política IKE. 
+-ike *NAME*  (opcional):  nombre de la política IKE.
 
--ipsec *NAME*  (opcional):  nombre de la política IPSec. 
+-ipsec *NAME*  (opcional):  nombre de la política IPSec.
 
 
 ## bluemix vpn ike-update
-Actualiza una política IKE. 
+Actualiza una política IKE.
 
 ```
 bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
@@ -385,21 +384,21 @@ bluemix vpn ike-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio):  nombre de la política IKE. 
+*POLICY_NAME*  (obligatorio):  nombre de la política IKE.
 
--g *GATEWAY_NAME*  (opcional):  nombre de la pasarela. 
+-g *GATEWAY_NAME*  (opcional):  nombre de la pasarela.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. 
+-pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`.
 
--e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. 
+-e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`.
 
--lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos. 
+-lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos.
 
 
 ## bluemix vpn ipsec-update
-Actualiza una política IPSec. 
+Actualiza una política IPSec.
 
 ```
 bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GROUP][-e ENCRYPTION_ALGORITHM] [-lv LIFETIME_VALUE]
@@ -409,21 +408,21 @@ bluemix vpn ipsec-update POLICY_NAME [-g GATEWAY_NAME][-d DESCRIPTION] [-pfs GRO
 
 **Opciones de mandato**:
 
-*POLICY_NAME*  (obligatorio):  nombre de la política IPSec. 
+*POLICY_NAME*  (obligatorio):  nombre de la política IPSec.
 
--g *GATEWAY_NAME*  (opcional):  nombre de la pasarela. 
+-g *GATEWAY_NAME*  (opcional):  nombre de la pasarela.
 
--d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados. 
+-d *DESCRIPTION*  (opcional):  descripción de los parámetros especificados.
 
--pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`. 
+-pfs *GROUP*  (opcional):  identificador de grupo Diffie-Hellman (DH). El valor válido es `Group2`, `Group5` o `Group14`.
 
--e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`. 
+-e *ENCRYPTION_ALGORITHM*  (opcional):  algoritmo de cifrado. El valor válido es `aes-128`, `aes-192`, `aes-256` o `3des`.
 
--lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad. Rango: 60 - 86400 segundos. 
+-lv *LIFETIME_VALUE*  (opcional):  el valor de duración de la asociación de seguridad. Rango: 60 - 86400 segundos.
 
 
 ## bluemix vpn gateway-update
-Actualiza una pasarela VPN existente. 
+Actualiza una pasarela VPN existente.
 
 ```
 bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subnets SUBNET_ADDRESS]
@@ -433,10 +432,10 @@ bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subn
 
 **Opciones de mandato**:
 
-*GATEWAY_NAME*  (obligatorio):  nombre de la pasarela. 
+*GATEWAY_NAME*  (obligatorio):  nombre de la pasarela.
 
--t *TYPE*  (opcional):  los contenedores para los que quiere habilitar el servicio. El valor válido es `allSingleContainers`, `allContainerGroups` o `allContainers`. 
+-t *TYPE*  (opcional):  los contenedores para los que quiere habilitar el servicio. El valor válido es `allSingleContainers`, `allContainerGroups` o `allContainers`.
 
--gateway_ip *IP_ADDRESS*  (opcional):  dirección IP de la pasarela. 
+-gateway_ip *IP_ADDRESS*  (opcional):  dirección IP de la pasarela.
 
--subnets *SUBNET_ADDRESS*  (opcional):  dirección de subred en formato CIDR. 
+-subnets *SUBNET_ADDRESS*  (opcional):  dirección de subred en formato CIDR.

@@ -35,7 +35,7 @@ Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es wer
 ## OpenJDK
 {: #openjdk}
 
-Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu aktivieren, legen Sie die JVM-Umgebungsvariable auf 'openjdk' fest. Führen Sie zum
+Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu ermöglichen, legen Sie die JVM-Umgebungsvariable auf "openjdk" fest. Führen Sie zum
 Beispiel mithilfe des Befehlszeilentools 'cf' den folgenden Befehl aus:
 ```
     $ cf set-env myapp JVM 'openjdk'
@@ -62,25 +62,25 @@ verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x8
 Das Liberty-Buildpack
 konfiguriert die JVM-Standardoptionen unter Berücksichtigung der folgenden Punkte:
 
-* Speicherbegrenzung einer Anwendung. Die angewendeten JVM-Heapspeichereinstellungen werden basierend auf
+* Speicherbegrenzung einer Anwendung.  Die angewendeten JVM-Heapspeichereinstellungen werden basierend auf
 den folgenden Faktoren berechnet:
-  * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html#memory_limits) erläutert. 
+  * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html#memory_limits) erläutert.
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den
 unterstützten JRE-Optionen variieren.
 
 * [In Bluemix unterstützte Liberty-Features](libertyFeatures.html#libertyfeatures).
-  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in Bluemix nicht unterstützt und deshalb durch die Einstellung '-Dcom.ibm.tx.jta.disable2PC=true' inaktiviert. 
+  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in Bluemix nicht unterstützt und deshalb durch die Einstellung '-Dcom.ibm.tx.jta.disable2PC=true' inaktiviert.
 
 * Bluemix-Umgebung.
 
-    Die Konfiguration der JVM-Optionen sorgt für Optimierung in einer Bluemix-Umgebung und unterstützt die Diagnose von speicherbezogenen Fehlerbedingungen. 
+    Die Konfiguration der JVM-Optionen sorgt für Optimierung in einer Bluemix-Umgebung und unterstützt die Diagnose von speicherbezogenen Fehlerbedingungen.
   * Schnelle Fehlerdiagnose und -behebung für eine Anwendung wird durch Inaktivierung der
 JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherkapazität der Anwendung konfiguriert.
   * Virtualisierungsoptimierung (nur IBM JRE).
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
-  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das Bluemix-Dashboard oder die CF-CLI angezeigt werden. 
+  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
 
-Im Folgenden finden Sie ein Beispiel für eine JVM-Standardkonfiguration, die vom Buildpack für eine Anwendung generiert wird, die mit einer Speicherbegrenzung von 512 MB implementiert wurde:   
+Im Folgenden finden Sie ein Beispiel für eine JVM-Standardkonfiguration, die vom Buildpack für eine Anwendung generiert wird, die mit einer Speicherbegrenzung von 512 MB bereitgestellt wurde:
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -110,7 +110,8 @@ aus der JRE-Dokumentation, da die Optionen je nach JRE variieren.
 
 <tr>
 <td>IBM JRE</td>
-<td>Enthält Laufzeitoptionen (Präfix '-X') und Java-Systemeigenschaften (Präfix '-D'). Die Angabe von '-XX' bei gelegentlicher Nutzung wird nicht empfohlen (Änderungen an diesen Optionen vorbehalten).</td>
+<td>Enthält Laufzeitoptionen (Präfix '-X') und Java-Systemeigenschaften (Präfix '-D'). Die Angabe von '-XX' bei gelegentlicher Nutzung wird nicht empfohlen (Änderungen an diesen Optionen vorbehalten).
+</td>
 <td>[Befehlszeilenoptionen für Version 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Befehlszeilenoptionen für Version 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
 </td>
 </tr>
@@ -182,21 +183,24 @@ Hinweis: Einige Optionen werden nur wirksam, wenn die Option durch einen Agenten
 ### Angewendete JVM-Optionen einer aktiven Anwendung bestimmen
 {: #determining_applied_jvm_options}
 
-Mit Ausnahme der anwendungsdefinierten Optionen, die mit der Umgebungsvariablen JVM_ARGS angegeben sind, werden die resultierenden Optionen entweder als Befehlszeilenoptionen (eigenständige Java-Anwendungen) oder in einer jvm.options-Datei (keine eigenständigen Java-Anwendungen) in der Laufzeitumgebung gespeichert. Die angewendeten JVM-Optionen für die Anwendung können entweder über das Bluemix-Dashboard oder die CF-CLI angezeigt werden. 
+Mit Ausnahme der anwendungsdefinierten Optionen, die mit der Umgebungsvariablen JVM_ARGS angegeben sind, werden die resultierenden Optionen entweder als Befehlszeilenoptionen (eigenständige Java-Anwendungen) oder in einer jvm.options-Datei (keine eigenständigen Java-Anwendungen) in der Laufzeitumgebung gespeichert. Die angewendeten JVM-Optionen für die Anwendung können entweder über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
 
-Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei 'staging_info.yml' angezeigt werden. ```
+Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei 'staging_info.yml' angezeigt werden.
+```
     $ cf files myapp staging_info.yml
 ```
 {: #codeblock}
 
-Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in einer jvm.options-Datei gespeichert. 
+Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in einer jvm.options-Datei gespeichert.
 
-Führen Sie den folgenden Befehl aus, um die Datei 'jvm.options' für WAR- und EAR-Dateien sowie Serververzeichnisse anzuzeigen: ```
+Führen Sie den folgenden Befehl aus, um die Datei 'jvm.options' für WAR- und EAR-Dateien sowie Serververzeichnisse anzuzeigen:
+```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: #codeblock}
 
-Zeigen Sie die Datei 'jvm.options' für einen paketierten Server an, indem Sie <serverName> durch den Namen Ihres Servers ersetzen und den folgenden Befehl ausführen: ```
+Zeigen Sie die Datei 'jvm.options' für einen paketierten Server an, indem Sie <serverName> durch den Namen Ihres Servers ersetzen und den folgenden Befehl ausführen:
+```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: #codeblock]
@@ -205,7 +209,8 @@ Zeigen Sie die Datei 'jvm.options' für einen paketierten Server an, indem Sie <
 {: #example_usage}
 
 Implementieren einer Anwendung mit angepassten JVM-Optionen, um die ausführliche JVM-Garbage-Collection-Protokollierung der IBM JRE zu aktivieren:
-* In der Datei 'manifest.yml' einer Anwendung enthaltene JVM-Optionen:```
+* In der Datei 'manifest.yml' einer Anwendung enthaltene JVM-Optionen:
+```
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
 ```
@@ -249,7 +254,7 @@ um deren Funktionen bereitzustellen. Der Anwendungsentwickler kann JRE-Dateien f
 angeben.
 
 Die zu überschreibenden Dateien können mit der WAR-, EAR- oder JAR-Anwendungsdatei in
-einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für einen Server (komprimierte Datei oder Serververzeichnis) können die Dateien in einem Ressourcenordner im Serververzeichnis mit der Datei 'server.xml' gepackt werden. 
+einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für einen Server (komprimierte Datei oder Serververzeichnis) können die Dateien in einem Ressourcenordner im Serververzeichnis mit der Datei 'server.xml' gepackt werden.
 
 * WAR-Datei
   * WEB-INF
@@ -280,9 +285,10 @@ einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für eine
     * other files
     * .java-overlay
 
-Das Verzeichnis '.java-overlay' enthält in derselben Dateihierarchie wie die zu überschreibende JRE bestimmte Dateien, die mit '.java/jre' beginnen. 
+Das Verzeichnis '.java-overlay' enthält in derselben Dateihierarchie wie die zu überschreibende JRE bestimmte Dateien, die mit '.java/jre' beginnen.
 
-Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, müssen die folgenden Java-Richtliniendateien überschrieben werden:```
+Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, müssen die folgenden Java-Richtliniendateien überschrieben werden:
+```
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
@@ -291,13 +297,12 @@ Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, mü
 Laden Sie die entsprechenden uneingeschränkten Richtliniendateien
 herunter und fügen Sie sie Ihrer Anwendung wie folgt hinzu:
 ```
-    resources\.java-overlay\.java\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: #codeblock}
 
-Bei Durchführung einer Push-Operation für Ihre Anwendung überschreiben diese JAR-Dateien die JAR-Standardrichtliniendateien in der Java-Laufzeit.
-Dieser Prozess aktiviert die 256-Bit-AES-Verschlüsselung.
+Bei Durchführung einer Push-Operation für Ihre Anwendung überschreiben diese JAR-Dateien die JAR-Standardrichtliniendateien in der Java-Laufzeit. Dieser Prozess aktiviert die 256-Bit-AES-Verschlüsselung.
 
 # Zugehörige Links
 ## Allgemein

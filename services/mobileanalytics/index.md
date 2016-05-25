@@ -109,7 +109,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	  }
 	}
 	```
-See the [Instrumenting your application](sdk.html) topic for more information about...
+See the [Instrumenting your application](sdk.html) topic.
 5. Compile and run the application on your emulator or device.
 
 6. Go to the {{site.data.keyword.mobileanalytics_short}} **Dashboard** to see usage analytics, such as new devices and total devices using the application. You can also monitor your app by [creating custom charts](app-monitoring.html#custom-charts), [setting alerts](app-monitoring.html#alerts), and [monitoring app crashes](app-monitoring.html#monitor-app-crash). 

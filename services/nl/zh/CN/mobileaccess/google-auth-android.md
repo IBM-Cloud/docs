@@ -16,21 +16,33 @@ copyright:
 
 ## 针对 Android 平台配置 Google 项目
 {: #google-auth-android-project}
-要开始将 Google 用作身份提供者，请在 Google 开发者控制台中创建项目。创建项目的步骤之一是获取 Google 客户端标识。客户端标识是应用程序的唯一标识。
+要开始将 Google 用作身份提供者，请在 Google 开发者控制台中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识。
 
 1. 在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。如果已经有项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
+   1.    打开新项目菜单。 
+         
+         ![图像](images/FindProject.jpg)
 
-1. 创建项目。单击**创建项目**。
+   2.    单击**创建项目**。
+   
+         ![图像](images/CreateAProject.jpg)
 
-1. 选择项目，然后单击**使用 Google API**（还可以单击**启用 API 并获取密钥等凭证**）
 
-1. 在 API 列表中，选择 Google+ API，然后单击**启用 API**。
+   1. 从**社交 API** 列表中，选择 **Google+ API**。
 
-1. 单击菜单中的**凭证**。
+     ![图像](images/chooseGooglePlus.jpg)
 
-1. 单击**新建凭证**，然后选择 **OAuth 2.0 客户端标识**。
+   1. 在下一个屏幕中，单击**启用**。
 
-1. 在 **OAuth 同意屏幕**选项卡上设置产品名称。
+1. 选择**同意屏幕**选项卡，然后提供向用户显示的产品名称。其他值为可选项。单击 **保存**。
+
+    ![图像](images/consentScreen.png)
+    
+1. 从**凭证**列表中，选择 OAuth 客户端标识。
+
+     ![图像](images/chooseCredentials.png)
+     
+
 
 1. 选择应用程序类型。单击 **Android**。为 Android 客户端提供有意义的名称。
 
@@ -40,7 +52,7 @@ copyright:
 
 1. 包含用于开发环境的证书的密钥库存储在 `~/.android/debug.keystore` 文件中。缺省密钥库密码为 `android`。此证书用于在调试方式下构建应用程序。
 
-1. 检索签署证书指纹：
+     1. 检索签署证书指纹：
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
@@ -51,13 +63,13 @@ copyright:
 
 1. 指定 Android 应用程序的软件包名称。要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找：`<manifest package="{your-package-name}">`。完成后，单击**创建**。
 
-1. 记录新的 Android 客户端标识。您需要向 {{site.data.keyword.Bluemix}} 提供此值。
+此时将出现对话框，其中显示您的 Google 客户端标识。请记录此值。您需要在 {{site.data.keyword.Bluemix}} 上注册此值。
 
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
 {: #google-auth-android-config}
 
-现在，您已经有 Android 客户端标识，可以在 {{site.data.keyword.amashort}}“仪表板”中启用 Google 认证。
+现在，您已经具有 Android 的 Google 客户端标识，可以在 {{site.data.keyword.amashort}}“仪表板”中启用 Google 认证。
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
 
@@ -67,7 +79,7 @@ copyright:
 
 1. 单击 **Google** 磁贴。
 
-1. 在 **Android 的应用程序标识**中，指定 Android 的 Android 客户端标识，然后单击**保存**。
+1. 在 **Android 的应用程序标识**中，指定 Android 的 Google 客户端标识，然后单击**保存**。
 
 ## 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
 {: #google-auth-android-sdk}
@@ -162,14 +174,24 @@ copyright:
 	});
 ```
 
-1. 运行应用程序。这将弹出 Google 登录屏幕：
+1. 运行应用程序。这将弹出 Google 登录屏幕。登录之后，应用程序将请求授予许可权以访问资源：
 
 	![图像](images/android-google-login.png)
 
 	根据您的 Android 设备以及您当前是否登录到 Google，您看到的 UI 可能会不同。
 
-1. 通过单击**确定**，您将授权 {{site.data.keyword.amashort}} 使用您的 Google 用户身份进行认证。
+  通过单击**确定**，您将授权 {{site.data.keyword.amashort}} 使用您的 Google 用户身份进行认证。
 
 1. 	请求成功后，可在 LogCat 工具中看到以下输出：
 
 	![图像](images/android-google-login-success.png)
+
+1. 通过添加以下代码，您还可以添加注销功能：
+
+ ```Java
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ ```
+
+ 如果您在用户登录 Google 之后调用此代码，那么用户将从 Google 注销。当用户尝试重新登录时，他们必须重新选择将要登录的 Google 帐户。如果他们尝试登录先前所登录的 Google 标识，那么不再提示用户输入凭证。如果要重新提示输入登录凭证，用户必须从 Android 设备移除其 Google 帐户。
+
+ 传递给注销功能的 `listener` 值可以为空值。

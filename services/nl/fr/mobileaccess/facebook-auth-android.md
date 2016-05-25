@@ -188,7 +188,7 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé
-le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook (`FacebookAuthenticationManager`). 
+le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook (`FacebookAuthenticationManager`).
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
@@ -222,3 +222,14 @@ le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook
 1. 	Lorsque votre demande aboutit, la sortie suivante figure dans l'utilitaire LogCat :
 
 	![image](images/android-facebook-login-success.png)
+
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+
+ ```
+FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ ```
+
+ Si vous appelez ce code lorsqu'un utilisateur est connecté via Facebook, l'utilisateur est déconnecté de Facebook. Lorsque l'utilisateur tente de se
+reconnecter, il doit à nouveau soumettre ses données d'identification Facebook.
+
+ La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.

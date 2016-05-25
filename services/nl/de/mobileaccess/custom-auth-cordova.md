@@ -12,7 +12,7 @@ Konfigurieren Sie Ihre Cordova-Anwendung, die mit der angepassten Authentifizier
 
 ## Vorbereitungen
 {: #before-you-begin}
-Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist. Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein. Weitere Informationen finden Sie über die folgenden Links:
+Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist.  Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  Weitere Informationen finden Sie über die folgenden Links:
  * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Cordova-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
  * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -126,7 +126,7 @@ var customAuthenticationListener = {
 ## Angepassten Authentifizierungslistener registrieren
 {: #custom-cordova-authreg}
 
-Nach dem Erstellen eines angepassten Authentifizierungslisteners registrieren Sie diesen in `BMSClient`, bevor Sie mit seiner Verwendung beginnen. Fügen Sie Ihrer Anwendung den folgenden Code hinzu. Rufen Sie diesen Code auf, bevor Sie Anforderungen an Ihre geschützten Ressourcen senden.
+Nach dem Erstellen eines angepassten Authentifizierungslisteners registrieren Sie diesen in `BMSClient`, bevor Sie mit seiner Verwendung beginnen. Fügen Sie Ihrer Anwendung den folgenden Code hinzu.  Rufen Sie diesen Code auf, bevor Sie Anforderungen an Ihre geschützten Ressourcen senden.
 
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
@@ -144,7 +144,7 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 
 
 1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
-  Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
+ Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 
 1. Senden Sie eine Anforderung über Ihre Cordova-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihre angepasste Schnittstelle 'AuthenticationListener' registriert haben.
 

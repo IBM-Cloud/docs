@@ -7,7 +7,8 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# ダッシュボードおよびテンプレートの管理{: #managing-dashboards}
+# ダッシュボードおよびテンプレートの管理
+{: #managing-dashboards}
 
 カスタマイズ可能なダッシュボードに、IoT デバイスからのリアルタイム・データが表示されます。リアルタイム・メトリック、グラフ、および 1 つ以上のデバイスに関する他の情報を表示するダッシュボードを手動で作成できます。ダッシュボードには、フィルターに掛けられたデバイス・リストや他のダッシュボードへのリンクを含めることもできます。
 {: shortdesc}
@@ -252,7 +253,8 @@ Link to this template from a predefined device template:
 *Predefined device dashboard layout with link to template* -->
 
 
-## 定義済みのダッシュボードおよびテンプレートのリセット{: #resetting-dashboards}
+## 定義済みのダッシュボードおよびテンプレートのリセット
+{: #resetting-dashboards}
 定義済みのテンプレートを変更した場合、そのテンプレートは、メッセージ・スキーマを更新しても動的に更新されなくなります。また、元のレイアウトおよびウィジェットを復元するには、ダッシュボードまたはテンプレートをリセットする必要があります。
 定義済みのダッシュボードおよびテンプレートをリセットするには、以下のようにします。
 1.	**「ダッシュボード (Dashboards)」>「テンプレートの管理 (Manage Templates)」**または**「ダッシュボード (Dashboards)」>「ダッシュボードの参照 (Browse Dashboards)」**に移動します。

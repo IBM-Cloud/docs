@@ -15,12 +15,12 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última atualização: 15 de março de 2016*
+*Última atualização: 13 de abril de 2016*
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
 uma conta paralisada em um estado pendente etc. No entanto, em vários casos, é possível recuperar-se desses
-problemas seguindo algumas etapas simples. 
+problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 ## Não é possível efetuar login no {{site.data.keyword.Bluemix_notm}}
@@ -105,7 +105,7 @@ de uma região do {{site.data.keyword.Bluemix_notm}},
 use o comando `nslookup`. Por exemplo, é possível
 digitar o comando a seguir em uma janela de linha de comandos:
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -209,31 +209,25 @@ fornece a capacidade para registrar diversos usuários ao mesmo tempo.
 {: tsSymptoms}
  
 
-O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}},
-deve-se registrar cada usuário individualmente.
+O {{site.data.keyword.Bluemix_notm}} não suporta registro de lote de usuários. Para registrar usuários para o {{site.data.keyword.Bluemix_notm}}, deve-se registrar cada usuário individualmente.
 {: tsCauses}
  
 
-Para registrar vários usuários para o {{site.data.keyword.Bluemix_notm}},
-deve-se concluir as etapas a seguir para cada usuário:
+Para registrar vários usuários para o {{site.data.keyword.Bluemix_notm}}, deve-se concluir as etapas a seguir para cada usuário:
 {: tsResolve}
 
-  1. Clique em **SIGN UP** no canto superior direito
-da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+  1. Clique em **SIGN UP** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
   2. Conclua as etapas seguindo o assistente.
 
     
 
-## Uma página {{site.data.keyword.Bluemix_notm}}
-não pode ser carregada
+## Uma página {{site.data.keyword.Bluemix_notm}} não pode ser carregada
 {: #ts_err}
 
-Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}},
-talvez não possa carregar uma página do {{site.data.keyword.Bluemix_notm}}. Em vez disso, talvez você veja as mensagens de erro BXNUI0001E ou BXNUI0016E.
+Quando você usa a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, talvez não possa carregar uma página do {{site.data.keyword.Bluemix_notm}}. Em vez disso, talvez você veja as mensagens de erro BXNUI0001E ou BXNUI0016E.
  
 
-É possível ver uma das mensagens de erro a seguir ao
-usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}:
+É possível ver uma das mensagens de erro a seguir ao usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}:
 {: tsSymptoms}
 
 `BXNUI0001E: A página não foi carregada, pois o Bluemix não detectou se existe uma sessão.`
@@ -248,8 +242,7 @@ a seguir, conforme for necessário:
 {: tsResolve}
 
   * Atualizar ou reiniciar seu navegador.
-  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e
-efetuar login novamente.
+  * Efetuar logout do {{site.data.keyword.Bluemix_notm}} e efetuar login novamente.
   * Usar o modo de navegação privada do seu navegador. 
   * Limpar os cookies e o cache do navegador.
   * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [{{site.data.keyword.Bluemix_notm}} Pré-requisitos](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
@@ -259,8 +252,7 @@ efetuar login novamente.
   
   
   
-## A barra de menus superior do {{site.data.keyword.Bluemix_notm}}
-desaparece
+## A barra de menus superior do {{site.data.keyword.Bluemix_notm}} desaparece
 {: #ts_topmenubar}
 
 Você pode não conseguir ver a barra de menus superior do {{site.data.keyword.Bluemix_notm}}
@@ -272,7 +264,7 @@ Ao diminuir o tamanho da janela do navegador ou
 usar um dispositivo móvel, a barra de menus superior do{{site.data.keyword.Bluemix_notm}}
 desaparece. Quando a barra de menus superior desaparece, o menu de gaveta
 lateral que é exibido como um ícone de linha empilhada aparece no canto superior
-esquerdo. 
+esquerdo.
 {: tsSymptoms}
 
  
@@ -280,7 +272,7 @@ esquerdo.
 A interface com o usuário do {{site.data.keyword.Bluemix_notm}}
 possui um design responsivo. Quando o ambiente de visualização é alterado,
 o layout da interface com o usuário do {{site.data.keyword.Bluemix_notm}}
-também pode ser alterado. 
+também pode ser alterado.
 {: tsCauses}
  
 
@@ -301,6 +293,86 @@ Problemas gerais com o gerenciamento de aplicativos podem incluir
 aplicativos que não podem ser atualizados e caracteres de byte duplo que não são exibidos. No entanto, em vários casos, é possível recuperar-se desses
 problemas seguindo algumas etapas simples.
 {:shortdesc}
+
+
+
+
+
+## Impossível alternar apps para o modo de depuração 
+{: #ts_debug}
+
+Você poderá não ser capaz de ativar o modo de depuração se a versão da Java virtual machine (JVM) for 8 ou inferior.  
+
+
+Depois que você seleciona **Ativar depuração de aplicativo**, as ferramentas tentam alternar o aplicativo para o modo de depuração. Em seguida, o ambiente de trabalho Eclipse inicia uma sessão de depuração. Quando as ferramentas ativam o modo de depuração com êxito, o status do aplicativo da web exibe `Atualizando modo`, `Desenvolvendo` e `Depurando`.
+{: tsSymptoms}
+
+No entanto, quando as ferramentas falham em ativar o modo de depuração, o status do aplicativo da web exibe somente `Atualizando modo` e `Desenvolvendo` e não exibe `Depurando`. As ferramentas também podem exibir a mensagem de erro a seguir na visualização de Console: 
+
+```
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERRO --- ClientProxyImpl: Não é possível criar a conexões de websocket para MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+em java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+em java.util.concurrent.FutureTask.run(FutureTask.java:277)
+em java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+em java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+em java.lang.Thread.run(Thread.java:785)
+Causado por: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 mais
+Causado por: java.util.concurrent.TimeoutException
+em org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+em org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 mais
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERRO --- ClientProxyImpl: Não é possível criar a conexões de websocket para MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+em java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+em java.util.concurrent.FutureTask.run(FutureTask.java:277)
+em java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+em java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+em java.lang.Thread.run(Thread.java:785)
+Causado por: javax.websocket.DeploymentException: A solicitação de HTTP para iniciar a conexão de WebSocket falhou
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+em com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 mais
+Causado por: java.util.concurrent.TimeoutException
+em org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+em org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+em org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+... 7 mais
+```
+ 
+
+As versões da Java virtual machine (JVM) a seguir não podem estabelecer uma sessão de depuração: IBM JVM 7, IBM JVM 8 e versões anteriores do Oracle JVM 8.
+{: tsCauses}
+
+Se a sua JVM de ambiente de trabalho for uma dessas versões, você poderá ter problemas ao criar uma sessão de depuração. Sua JVM de ambiente de trabalho é geralmente a JVM do sistema de seu computador local. Sua JVM do sistema não é a mesma que a JVM de seu aplicativo Java do Bluemix em execução. O aplicativo Java do Bluemix quase sempre é executado no IBM JVM e, às vezes, no OpenJDK JVM. 
+  
+
+Para verificar a versão do Java que o IBM Eclipse Tools for Bluemix executa, conclua as etapas a seguir:
+{: tsResolve}
+
+  1. No IBM Eclipse Tools for Bluemix, selecione **Ajuda** > **Sobre o Eclipse** > **Detalhes da instalação** > **Configuração**.
+  2. Localize a propriedade `eclipse.vm` na lista. A linha a seguir é um exemplo de uma propriedade `eclipse.vm`:
+	
+	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
+
+  3. Na linha de comandos, insira `java -version` a partir do diretório `bin` de sua instalação do Java. Suas informações da versão do IBM JVM são exibidas.
+
+Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior do Oracle JVM 8, conclua as etapas a seguir para alternar para o Oracle JVM 8: 
+
+  1. Faça download e, em seguida, instale o Oracle JVM 8, veja [Downloads do Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obter detalhes. 
+  2. Reinicie o Eclipse.
+  3. Verifique se a propriedade `eclipse.vm` aponta para sua nova instalação do Oracle JVM 8. 
+
 
 
 
@@ -1347,7 +1419,7 @@ Esse problema pode ocorrer quando você designa a mesma
 rota de URL para diferentes aplicativos dentro de um espaço.
 {: tsCauses}
 
-Por exemplo, você envia por push o aplicativo myApp1 para o {{site.data.keyword.Bluemix_notm}} e configura o domínio como "mynewapp.mybluemix.net". Em seguida, você envia por push outro aplicativo myApp2 para o mesmo espaço e configura uma de suas rotas de URL como "mynewapp.mybluemix.net". A rota agora é mapeada para ambos os aplicativos.
+Por exemplo, você envia por push o aplicativo myApp1 para o {{site.data.keyword.Bluemix_notm}} e configura o domínio como "mynewapp.stage1.mybluemix.net". Em seguida, você envia por push outro aplicativo myApp2 para o mesmo espaço e configura uma de suas rotas de URL como "mynewapp.stage1.mybluemix.net". A rota agora é mapeada para ambos os aplicativos.
 
  
 

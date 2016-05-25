@@ -13,7 +13,15 @@ copyright:
 
 ## A list of the latest updates in the Liberty buildpack.
 
-*Last Updated: 23 March 2016*
+*Last Updated: 4 May 2016*
+
+### May 5, 2016: Updated Liberty buildpack v2.8-20160430-1011
+* The buildpack contains an updated version of WebSphere Liberty based on the [April beta](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). The updated version of Liberty makes the *logstashCollector-1.0* GA feature and the *logmetCollector-1.0* beta feature available in Bluemix.
+* The buildpack also contains updated versions of IBM JRE: 8 SR3 and 7.1 SR3 FP40. 
+* The buildpack adds initial support for the [AppDynamics](https://www.appdynamics.com/) application monitoring agent.
+* The [Dynatrace](dynatrace.html) support was improved to simplify the installation of the agent.
+* The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview). It contains a fix for a problem with collection of the max heap data.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](../../manageapps/app_mng.html#app_management) was updated to the latest 0.12.13 version.
 
 ### March 25, 2016: Updated Liberty buildpack v2.7-20160321-1358
 * The buildpack contains an updated version of WebSphere Liberty based on the [March beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). The updated version of Liberty makes the cloudant-1.0 beta feature available in Bluemix.
