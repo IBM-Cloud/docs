@@ -11,7 +11,7 @@ copyright:
 # Using the beta features
 {: #using_beta_features}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 23 May 2016*
 
 The Liberty beta features provide early access to new functionality and programming models that might be included in a future Liberty release. Most of the beta features can also be used in applications deployed to Bluemix.
 
@@ -27,13 +27,14 @@ Liberty beta features available in Bluemix
 </tr>
 
 <tr>
+<td>bluemixLogCollector-1.1</td>
 <td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
-<td>logmetCollector-1.0</td>
-<td>osgiBundle-1.0</td>
+<td>logstashCollector-1.1</td>
 </tr>
 
 <tr>
+<td>osgiBundle-1.0</td>
 <td>passwordUtilities-1.0</td>
 <td></td>
 <td></td>
