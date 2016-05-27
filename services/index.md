@@ -96,7 +96,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.servicediscoveryshort}}		|Yes		|Yes		|No|
-|{{site.data.keyword.serviceproxyshort}}		|Yes		|No		|No|
+|{{site.data.keyword.serviceproxyshort}}		|Yes		|Yes		|No|
 |{{site.data.keyword.sescashort}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.ssofull}}			|Yes		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Yes 		|Yes	 	|Yes|
