@@ -11,195 +11,698 @@ copyright:
 # Liberty features supported in Bluemix
 {: #liberty_features}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 20 May 2016*
 
-The following table shows Liberty features supported in Bluemix
+The Liberty for Java instant runtime in Bluemix does not and cannot include the assets for all features in the Liberty profile. Some features simply do not make sense in a cloud server environment. However, as of v2.0 of the buildpack, the runtime does include features for these Java EE platforms:
+* Java EE 7 (Full platform)
+* Java EE 7 Web profile
+* Java EE 6 Web profile
+* Several dozen additional features
+
+The table below shows the features that are available in the Liberty for Java runtime and which convenience features, if any, include each feature. Use this table to decide which convenience feature to enable in your local server’s configuration. The table also shows additional, miscellaneous features you can optionally enable. Do not enable any features other than the ones listed here; although they might work in your local server, they won’t be available in Bluemix.
+
+The table below is intended to be used  as a reference to determine:
+* A list of all features available in the runtime.
+* Which Java EE platforms each feature is part of (if any).
+* Which features are included in a particular Java EE platform.
+
+The first column lists all features that are available in Bluemix. Columns 2-4 represent Java EE platforms; for each, it shows the corresponding Liberty convenience features, and which features each includes (as described in 
+<a href="http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_feat.html">Liberty features</a>). The convenience features correspond to Java EE specifications. The individual Java EE features and their corresponding JSRs are listed in 
+<a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_support.html">Java EE 7 programming model support</a>.
+
+The Miscellaneous column lists features that do not correspond to parts of the supported Java EE platforms. Those are features in these categories:
+* Extended Programming Models
+* Enterprise OSGi
+* Operations
+* Java EE 6 technologies
+* Bluemix-specific: <code>appState-1.0</code>, <code>cloudAutowiring-1.0</code>, and <code>logAnalysis-1.0</code>
+
+Convenience features are shown in <strong>bold</strong> type. The table is current for Liberty buildpack v2.1.
 
 <table>
 
 <tr>
-<th align="left">Feature</th>
-<th align="left">Feature</th>
-<th align="left">Feature</th>
-<th align="left">Feature</th>
-</tr>
+  <th scope="col" align="center">Feature in Liberty for Java runtime</th>
+  <th scope="col" align="center">Java EE 7
+      <br>Full Platform
+      </th>
+      <th scope="col" align="center">Java EE 7
+          <br>Web Profile
+          </th>
+          <th scope="col" align="center">Java EE 6
+              <br>Web Profile
+              </th>
+              <th scope="col" align="center">Miscellaneous</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>
+                  <strong>javaee-7.0</strong>
+              </td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>
+                  <strong>webProfile-7.0</strong>
+              </td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>
+                  <strong>webProfile-6.0</strong>
+              </td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>appSecurity-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>appSecurity-2.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>appState-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>batch-1.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>batchManagement-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>beanValidation-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>beanValidation-1.1</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>bells-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>blueprint-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>cdi-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>cdi-1.2</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>cloudAutowiring-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>concurrent-1.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>couchdb-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>distributedMap-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>
+                  <strong>ejb-3.2</strong>
+              </td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ejbHome-3.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ejbLite-3.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ejbLite-3.2</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ejbPersistentTimer-3.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ejbRemote-3.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>el-3.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>eventLogging-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>j2eeManagement-1.1</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jacc-1.5</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jaspic-1.1</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>javaMail-1.5</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jaxb-2.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jaxrs-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>jaxrs-2.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jaxrsClient-2.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jaxws-2.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jca-1.6</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>jca-1.7</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jcaInboundSecurity-1.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jdbc-4.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jdbc-4.1</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jms-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>jms-2.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jmsMdb-3.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>jmsMdb-3.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jndi-1.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jpa-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jpa-2.1</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jsf-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jsf-2.2</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>json-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>jsonp-1.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jsp-2.2</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>jsp-2.3</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>ldapRegistry-3.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>localConnector-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>logAnalysis-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>managedBeans-1.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>mdb-3.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>mdb-3.2</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>mongodb-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>monitor-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>oauth-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>openid-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>openidConnectClient-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>openidConnectServer-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>osgiAppIntegration-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>osgiConsole-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>osgi.jpa-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>restConnector-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>requestTiming-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>rtcomm-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>rtcommGateway-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>samlWeb-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>servlet-3.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>servlet-3.1</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>sessionDatabase-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>sipServlet-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>ssl-1.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>timedOperations-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>wab-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>wasJmsClient-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>wasJmsClient-2.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>wasJmsSecurity-1.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>wasJmsServer-1.0</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>webCache-1.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>websocket-1.0</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>websocket-1.1</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>—</td>
+              <td>—</td>
+          </tr>
+          <tr>
+              <td>wmqJmsClient-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>wmqJmsClient-2.0</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+          <tr>
+              <td>wsSecurity-1.1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>yes</td>
+          </tr>
+      </tbody>
+  </table>
+The Liberty for Java runtime also makes some Liberty beta features available. Those features are not listed in the table; instead, consider these as additional miscellaneous features. See <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Using the beta features</a>.
 
-<tr>
-<td>apiDiscovery-1.0</td>
-<td>appSecurity-1.0</td>
-<td>appSecurity-2.0</td>
-<td>appState-1.0</td>
-</tr>
+Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See 
+    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
 
-<tr>
-<td>batch-1.0</td>
-<td>batchManagement-1.0</td>
-<td>beanValidation-1.0</td>
-<td>beanValidation-1.1</td>
-</tr>
-
-<tr>
-<td>bells-1.0</td>
-<td>blueprint-1.0 </td>
-<td>cdi-1.0</td>
-<td>cdi-1.2</td>
-</tr>
-
-<tr>
-<td>cloudAutowiring-1.0</td>
-<td>concurrent-1.0</td>
-<td>couchdb-1.0</td>
-<td>distributedMap-1.0</td>
-</tr>
-
-<tr>
-<td>ejb-3.2*</td>
-<td>ejbHome-3.2</td>
-<td>ejbLite-3.1</td>
-<td>ejbLite-3.2</td>
-</tr>
-
-<tr>
-<td>ejbPersistentTimer-3.2</td>
-<td>ejbRemote-3.2*</td>
-<td>el-3.0</td>
-<td>eventLogging-1.0</td>
-</tr>
-
-<tr>
-<td>federatedRegistry-1.0</td>
-<td>j2eeManagement-1.1</td>
-<td>jacc-1.5</td>
-<td>jaspic-1.1</td>
-</tr>
-
-<tr>
-<td>javaee-7.0</td>
-<td>javaMail-1.5</td>
-<td>jaxb-2.2</td>
-<td>jaxrs-1.1</td>
-</tr>
-
-<tr>
-<td>jaxrs-2.0</td>
-<td>jaxrsClient-2.0</td>
-<td>jaxws-2.2</td>
-<td>jca-1.6</td>
-</tr>
-
-<tr>
-<td>jca-1.7</td>
-<td>jcaInboundSecurity-1.0</td>
-<td>jdbc-4.0</td>
-<td>jdbc-4.1</td>
-</tr>
-
-<tr>
-<td>jms-1.1</td>
-<td>jms-2.0</td>
-<td>jmsMdb-3.1</td>
-<td>jmsMdb-3.2</td>
-</tr>
-
-<tr>
-<td>jndi-1.0</td>
-<td>jpa-2.0</td>
-<td>jpa-2.1</td>
-<td>jsf-2.0</td>
-</tr>
-
-<tr>
-<td>jsf-2.2</td>
-<td>json-1.0</td>
-<td>jsonp-1.0</td>
-<td>jsp-2.2</td>
-</tr>
-
-<tr>
-<td>jsp-2.3 </td>
-<td>ldapRegistry-3.0</td>
-<td>localConnector-1.0</td>
-<td>logAnalysis-1.0</td>
-</tr>
-
-<tr>
-<td>logstashCollector-1.0</td>
-<td>managedBeans-1.0</td>
-<td>mdb-3.1</td>
-<td>mdb-3.2</td>
-</tr>
-
-<tr>
-<td>mediaServerControl-1.0</td>
-<td>mongodb-2.0</td>
-<td>monitor-1.0</td>
-<td>oauth-2.0</td>
-</tr>
-
-<tr>
-<td>openid-2.0</td>
-<td>openidConnectClient-1.0</td>
-<td>openidConnectServer-1.0</td>
-<td>osgiAppIntegration-1.0</td>
-</tr>
-
-<tr>
-<td>osgiConsole-1.0</td>
-<td>osgi.jpa-1.0</td>
-<td>restConnector-1.0</td>
-<td>requestTiming-1.0</td>
-</tr>
-
-<tr>
-<td>rtcomm-1.0</td>
-<td>rtcommGateway-1.0</td>
-<td>samlWeb-2.0</td>
-<td>scim-1.0</td>
-</tr>
-
-<tr>
-<td>servlet-3.0</td>
-<td>servlet-3.1</td>
-<td>sessionDatabase-1.0</td>
-<td>sipServlet-1.1</td>
-</tr>
-
-<tr>
-<td>spnego-1.0</td>
-<td>ssl-1.0</td>
-<td>timedOperations-1.0</td>
-<td>wab-1.0</td>
-</tr>
-
-<tr>
-<td>wasJmsClient-1.1</td>
-<td>wasJmsClient-2.0</td>
-<td>wasJmsSecurity-1.0</td>
-<td>wasJmsServer-1.0</td>
-</tr>
-
-<tr>
-<td>webCache-1.0</td>
-<td>webProfile-6.0</td>
-<td>webProfile-7.0</td>
-<td>websocket-1.0</td>
-</tr>
-
-<tr>
-<td>websocket-1.1</td>
-<td>wmqJmsClient-1.1</td>
-<td>wmqJmsClient-2.0</td>
-<td>wsSecurity-1.1</td>
-</tr>
-
-<tr>
-<td>wsSecuritySaml-1.1</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
+Unlike other Liberty environments (such as, Liberty profile installed on-premise, or a Docker container with Liberty installed), additional features cannot be downloaded and installed in the Liberty for Java runtime. The runtime does not have a command line for you to run installUtility. So the set of features listed above installed by the buildpack are the only ones available for the server to load.
+            
 Applications that use remote EJBs can be deployed to Bluemix
 however, the remote EJBs are not remotely accessible with the CORBA/IIOP
 protocol due to port restrictions in the Bluemix environment.
