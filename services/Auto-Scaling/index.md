@@ -17,7 +17,7 @@ copyright:
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
 
-*Last updated: 26 May 2015*
+*Last updated: 30 May 2015*
 
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the  {{site.data.keyword.autoscalingfull}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
 {:shortdesc} 
@@ -86,6 +86,10 @@ Table 1. Policy fields in the scaling policy
 | *Response time* |	The response time of the processed requests.	| Liberty for Java |
 
 Table 2. Supported metric names
+
+*Note:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
+For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.
+
 
 ## Error messages
 {: #errmsgs}
