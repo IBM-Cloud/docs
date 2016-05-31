@@ -6,7 +6,13 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # CLI de IBM VPN
+*Última actualización: 03 de mayo de 2016*
+
 Puede utilizar la interfaz de línea de mandatos (CLI) para configurar y gestionar el servicio IBM® Virtual Private Network (VPN). La CLI de IBM VPN es un plug-in que se utiliza con el plug-in de CLI de Cloud Foundry. El plug-in está disponible para los sistemas operativos Windows, MAC y Linux. Asegúrese de utilizar el que sea pertinente para usted.
 
 Antes de empezar, instale la CLI de Cloud Foundry. Consulte [Interfaz de línea de mandatos de Cloud Foundry](https://console.{DomainName}/docs/cli/downloads.html) para obtener detalles. 
@@ -52,22 +58,8 @@ cf uninstall-plugin vpn
 	```  
 2. Ejecute el siguiente mandato:  
 
-	**Para MS Windows OS:**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Para Apple MAC OS:**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Para Linux OS:**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##Lista de mandatos del servicio IBM VPN
 
@@ -332,7 +324,7 @@ cf vpn-update ike <nombre de política> -g <nombre de pasarela> -d <descripción
 
 **-e:** algoritmo de cifrado. Valores: aes-128; aes-192; aes-256; 3des. Valor predeterminado: aes-128
 
-**-lv:** el valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos. Valor predeterminado: 86400 segundos
+**-lv:** El valor de duración de la asociación de seguridad IKE. Rango: 60 - 86400 segundos. Valor predeterminado: 86400 segundos
 
 
 ### cf vpn-update ipsec
@@ -383,6 +375,7 @@ cf vpn-update gateway <nombre de pasarela> -t <tipo> -gateway_ip <dirección IP>
 **-subnets:** dirección de subred en formato CIDR. 
 
 # rellinks
-## general
+## general  
+{: #general}  
 * [Servicio IBM VPN](../../../services/vpn/index.html)
 * [CLI de Cloud Foundry](https://console.{DomainName}/docs/cli/downloads.html){: new_window}
