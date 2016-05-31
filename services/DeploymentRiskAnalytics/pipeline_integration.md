@@ -14,7 +14,7 @@ copyright:
 # Configuring the {{site.data.keyword.deliverypipeline}}
 {: #DRA_toolchain_configure_pipeline}
 
-*Last updated: 24 May 2016*
+*Last updated: 31 May 2016*
 
 After you define the criteria for {{site.data.keyword.DRA_short}} to monitor, the next step is to add {{site.data.keyword.DRA_short}} to a toolchain and then configure the {{site.data.keyword.deliverypipeline}}.
 {:shortdesc}
@@ -31,21 +31,21 @@ To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{
 
 4. Click **Create Integration**.
 
-5. In your toolchain, click the **{{site.data.keyword.deliverypipeline}}** tile that you would like to configure.  {{site.data.keyword.DRA_short}} can be configured in any number of pipelines.
+5. In your toolchain, click the {{site.data.keyword.deliverypipeline}} tile that you want to configure.  {{site.data.keyword.DRA_short}} can be configured in any number of pipelines.
 
 
 ## Updating test jobs for {{site.data.keyword.DRA_short}}
 {: #DRA_toolchain_pipeline_upload}
 
-1. To get started, retrieve the setup information from an existing testing job.
+To get started, retrieve the setup information from a test job.
 
-	1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png). Click **Configure Stage**. 
-	2. Select a Test job that uses the **Simple** Tester Type and copy the information that is in the **Test Command** and **Working Directory** fields to an editor.  This information will be used later in the configuration.
-
-2. From the same **Simple** test job, change the Tester Type to **Upload Results to DevOps Analytics** from the drop down menu.
-3. In the **Test Command** field, paste the commands that you copied from the **Test Command** field of the **Simple** test job.
-4. In the **Working Directory** field, paste the path that you copied from the **Working Directory** field of the **Simple** test job.
-5. Complete the next five fields to upload test results for a particular test type.
+1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png). Click **Configure Stage**. 
+2. Create a job. For the job type, select **Test**. 
+3. Select a test job that uses the Simple tester type and copy the information that is in the **Test Command** and **Working Directory** fields to an editor. You need that information later in the configuration.
+4. From the same Simple test job, change the tester type by selecting **Upload Results to DevOps Analytics**.
+5. In the **Test Command** field, paste the commands that you copied from the **Test Command** field of the Simple test job.
+6. In the **Working Directory** field, paste the path that you copied from the **Working Directory** field of the Simple test job.
+7. Complete the remaining fields to upload test results for a particular test type. If you want to upload results for a second test type in the same job, also complete the fields that are prefixed with *Additional*.
 
  * Environment Name
  * Application Name
@@ -53,23 +53,17 @@ To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{
  * Format
  * Result File Location
  
-**Note:** The **Type of Metric** and **Result File Location** specified must match the correct **Format**.
+   **Note:** The values for the **Type of Metric** and **Result File Location** fields must match the correct format.
 
-| Type of metric | Supported formats |
-|----------------|-------------------|
-| Functional Verification Test | Mocha, JUnit |
-| Unit Test | Mocha, JUnit, Karma / Mocha |
-| Code Coverage | Istanbul, Blanket.js |
+   | Type of metric | Supported formats |
+   |----------------|-------------------|
+   | Functional Verification Test | Mocha, JUnit |
+   | Unit Test | Mocha, JUnit, Karma/Mocha |
+   | Code Coverage | Istanbul, Blanket.js |
 
-**Optional:** To upload results for a second test type within the same job, complete the remaining fields that are prefixed with *Additional*.
+8. Click **Save** to return to the pipeline.
 
-* Additional Type of Metric
-* Additional Format
-* Additional Result File Location
-
-Click **Save** to return to the pipeline.
-
-*Figure 1* shows a test job that is configured to run Unit Tests, then upload the results in the Mocha format as well as Code Coverage results in the Istanbul format."
+*Figure 1* shows a test job that is configured to run unit tests, upload the results in Mocha format, and upload the code coverage results in Istanbul format."
 
 ![Deployment Risk Analytics upload job](images/DRA_upload_job.png)
 *Figure 1. Upload results to DevOps Analytics*
@@ -77,22 +71,22 @@ Click **Save** to return to the pipeline.
 ## Defining {{site.data.keyword.DRA_short}} gates in the pipeline.
 {: #DRA_toolchain_pipeline_gates}
 
-{{site.data.keyword.DRA_short}} Gates will check whether your test results comply with the defined criteria. If the criteria is not met, the {{site.data.keyword.DRA_short}} Gate will fail.  Usually, gates are placed at the end of each stage of your pipeline. This location is ideal to check the quality of the build against your criteria to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criteria to be checked.
+{{site.data.keyword.DRA_short}} gates check whether your test results comply with the defined criteria. If the criteria is not met, the {{site.data.keyword.DRA_short}} gate fails.  Usually, gates are placed at the end of each stage of your pipeline. This location is ideal to check the quality of the build against your criteria to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked.
 
 1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
 2. Click **Add Job**. For the job type, select **Test**.
 3. Enter a name for the new job, such as *Gate (Unit Test)*.
 4. For tester type, select **DevOps Analytics Gate**.
-5. Specify the environment name and application name.  These values should match what was defined in your [testing jobs](#DRA_toolchain_pipeline_upload).
+5. Specify the environment name and application name. Make sure that these values match what was defined in your [testing jobs](#DRA_toolchain_pipeline_upload).
 6. Define the criteria name that is to be checked at this gate.
 
- **note:** This name must exactly match one of the criteria names that was defined in the Criteria UI.  Also, you can only specify criteria that has been defined in the same {{site.data.keyword.Bluemix_notm}} organization as your toolchain.
+ **Note:** This name must exactly match one of the criteria names that you defined. You can specify only criteria that are defined in the same {{site.data.keyword.Bluemix_notm}} organization as your toolchain. 
 
-7. **Optional** To make a gate function in advisory mode, uncheck the **Stop running this stage if this job fails** checkbox.  {{site.data.keyword.DRA_short}} will perform the same criteria analysis at the gate and generate reports, but it will not halt the pipeline in the event of a failure.
+7. Optional: To make a gate function in advisory mode, clear the **Stop running this stage if this job fails** check box. In advisory mode, {{site.data.keyword.DRA_short}} completes the same criteria analysis at the gate and generates reports, but if a failure occurs, the pipeline is not stopped.
 8. Click **Save** to return to the pipeline.
 9. Repeat these steps to set up gates for all of your {{site.data.keyword.DRA_short}} criteria.
 
 ![Deployment Risk Analytics Mocha job](images/DRA_gate_job.png)
-*Figure 2. DevOps Analytics Gate*
+*Figure 2. DevOps Analytics gate*
 
-After your pipeline has been configured, see [Running the Delivery Pipeline](./pipeline_decision_reports.html#DRA_toolchain_reports) to start using {{site.data.keyword.DRA_short}}.
+After your pipeline is configured, see [Running the Delivery Pipeline](./pipeline_decision_reports.html#DRA_toolchain_reports) to start using {{site.data.keyword.DRA_short}}.
