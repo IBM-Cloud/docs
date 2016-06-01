@@ -282,24 +282,26 @@ Each generated event will include as parameters the properties specified in the 
 ## Using the Weather package
 {: #openwhisk_catalog_weather}
 
-The `/whisk.system/weather` package offers a convenient way to call The Weather Company API.
+The `/whisk.system/weather` package offers a convenient way to call the IBM Weather Insights API.
 
 The package includes the following action.
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | package | apiKey | Services from The Weather Company |
-| `/whisk.system/weather/forecast` | action | apiKey, latitude, longitude | Weather.com 10-day forecast |
+| `/whisk.system/weather` | package | apiKey | Services from IBM Weather Insights API  |
+| `/whisk.system/weather/forecast` | action | apiKey, latitude, longitude, timePeriod | forecast for specified time period|
 
 While not required, it's suggested that you create a package binding with the `apiKey` value. This way you don't need to specify the key every time you invoke the actions in the package.
 
 ### Getting a weather forecast for a location
 
-The `/whisk.system/weather/forecast` action returns a 10-day weather forecast for a location by calling an API from The Weather Company. The parameters are as follows:
+The `/whisk.system/weather/forecast` action returns a weather forecast for a location by calling an API from The Weather Company. The parameters are as follows:
 
-- `apiKey`: An API key for The Weather Company that is entitled to invoke the 10-day forecast API.
+- `apiKey`: An API key for The Weather Company that is entitled to invoke the forecast API.
 - `latitude`: The latitude coordinate of the location.
 - `longitude`: The longitude coordinate of the location.
+- `timeperiod`: Time period for the forecast. Valid options are '10day' - (default) Returns a daily 10-day forecast , '24hour' - Returns an hourly 2-day forecast, , 'current' - Returns the current weather conditions, 'timeseries' - Returns both the current observations and up to 24 hours of past observations, from the current date and time. 
+
 
 Here is an example of creating a package binding and then getting a 10-day forecast.
 
@@ -354,6 +356,7 @@ The package includes the following actions.
 | `/whisk.system/watson` | package | username, password | Actions for the Watson analytics APIs |
 | `/whisk.system/watson/translate` | action | translateFrom, translateTo, translateParam, username, password | Translate text |
 | `/whisk.system/watson/languageId` | action | payload, username, password | Identify language |
+| `/whisk.system/watson/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convert text into audio |
 
 While not required, it's suggested that you create a package binding with the `username` and `password` values. This way you don't need to specify these credentials every time you invoke the actions in the package.
 
@@ -419,6 +422,40 @@ Here is an example of creating a package binding and identifying the language of
     "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
+  }
+  ```
+  {: screen}
+
+
+### Converting some text to speech
+
+The `/whisk.system/watson/textToSpeech` action converts some text into an audio speech. The parameters are as follows:
+
+- `username`: The Watson API username.
+- `password`: The Watson API password.
+- `payload`: The text to convert into speech.
+- `voice`: The voice of the speaker.
+- `accept`: The format of the speech file.
+- `encoding`: The encoding of the speech binary data.
+
+Here is an example of creating a package binding and converting some text to speech.
+
+1. Create a package binding with your Watson credentials.
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. Invoke the `textToSpeech` action in your package binding to convert the text.
+
+  ```
+  $ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
   }
   ```
   {: screen}

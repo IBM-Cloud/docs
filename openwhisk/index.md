@@ -17,7 +17,7 @@ copyright:
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.openwhisk_short}}
-*Last updated: 17 February 2016*
+*Last updated: 06 June 2016*
 
 {{site.data.keyword.openwhisk}} is a distributed, event-driven compute service. {{site.data.keyword.openwhisk_short}} executes application logic in response to events or direct invocations from web or mobile apps over HTTP. Events can be provided from Bluemix services like Cloudant, and from external sources. Developers can focus on writing application logic, and creating actions that are executed on demand. The rate of executing actions always matches the event rate, resulting in inherent scaling and resiliency, and optimal utilization. You pay for only what you use and you don't have to manage a server. You can also get the [source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
 {: shortdesc}
