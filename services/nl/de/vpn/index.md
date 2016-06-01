@@ -11,7 +11,7 @@ copyright:
 
 # Einführung in {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Letzte Aktualisierung: 17. März 2016*
+*Letzte Aktualisierung: 09. Mai 2016*
 
 Mit dem Service {{site.data.keyword.vpn_full}} für Bluemix&reg; kann innerhalb der IBM Bluemix-Cloudumgebung sicher auf IBM Container (Docker-Container) zugegriffen werden. Sie können die IBM Bluemix-Cloudumgebung als Erweiterung des Rechenzentrums Ihres Unternehmens verwenden. Sie können mithilfe des Service IBM VPN außerdem eine Verbindung zu den SoftLayer-Servern herstellen.
 {:shortdesc}
@@ -25,7 +25,8 @@ Wählen Sie zu Beginn die Kachel für eine Instanz des Service **Virtual Private
 
   1. Wählen Sie **Bearbeiten** aus.  
   2. Geben Sie den Gateway-Namen an.  
-  3. Wählen Sie die Container oder Gruppen aus, mit denen Sie den VPN-Service verwenden wollen.  
+  3. Wählen Sie den Container und die Containergruppe aus, mit denen Sie den VPN-Service verwenden wollen.
+	**Anmerkung:** Die privaten Teilnetze des Containers und der Containergtuppe werden vorab ausgewählt, damit Sie darauf über die VPN-Verbindung zugreifen können.
   4. Wählen Sie **SPEICHERN** aus.  
 
  Sie können die standardmäßigen IKE- und IPSec-Richtlinien verwenden oder angepasste Richtlinien konfigurieren. Wenn Sie die Standardrichtlinien verwenden wollen, springen Sie zu Schritt 4.
@@ -57,15 +58,15 @@ Wählen Sie zu Beginn die Kachel für eine Instanz des Service **Virtual Private
 4. Geben Sie die Details für das Herstellen einer Verbindung zwischen dem VPN-Gateway Ihres Rechenzentrums oder des SoftLayer-Servers und dem IBM VPN-Gateway an.  
 {: #site}  
 
-  1. Wählen Sie die Registerkarte **VPN-Gateway-Appliance** aus.
-  2. Wählen Sie **Neues Element hinzufügen** im Abschnitt **VPN-Siteverbindungen** aus.
+  1. Wählen Sie die Registerkarte **Gateway Appliance** aus.
+  2. Wählen Sie **Verbindung erstellen** im Abschnitt **Siteverbindungen** aus.
   3. Geben Sie folgende Siteverbindungsdetails an:  
   	* **Name**: Name der Verbindung  
   	* **Beschreibung**: Beschreibung der Verbindung (optional)  
   	* **Vorab bekannter gemeinsamer Schlüssel**: Vorab bekannter gemeinsamer (geheimer) Schlüssel zur Verwendung bei der Authentifizierung
   	* **Administratorstatus**: Status der VPN-Verbindung. Treffen Sie eine Auswahl in der Dropdown-Liste: UP (aktiv) oder DOWN (inaktiv). Standardwert: UP  
   	* **IP-Adresse des Kundengateways**: IP-Adresse des fernen Endpunkts des VPN-Tunnels.  
-  	* **Kundenteilnetz**: Adresse des fernen Teilnetzes im CIDR-Format. Wählen Sie das Pluszeichen aus, um die Teilnetzdetails zu speichern.
+  	* **Kundenteilnetz**: Adresse des fernen Teilnetzes im CIDR-Format. Wählen Sie das Pluszeichen aus, um ein weiteres Teilnetz hinzuzufügen.
   4. (Optional) Konfigurieren Sie folgende Parameter für **Erweiterte Einstellungen**:  
   	* **IKE-Richtlinie**: Wählen Sie die IKE-Richtlinie aus.  
   	* **Keepalive-Intervall**: Keepalive-Intervall in Sekunden. Senden Sie im konfigurierten Intervall Keepalive-Nachrichten, um den Aktivitätszustands des Peers zu überprüfen. Standardwert: 15. Bereich: 5 bis 86399
@@ -89,15 +90,18 @@ Wählen Sie zu Beginn die Kachel für eine Instanz des Service **Virtual Private
  
 # Zugehörige Links
 ## Beispiele 
+{: #samples}  
 * [Konfigurationsbeispiel für lokales strongSwan-Gateway](vpn_onpremises.html#strongswan){: new_window}
 * [Konfigurationsbeispiel für lokales Vyatta-Gateway](vpn_onpremises.html#vyatta){: new_window}
 * [Konfigurationsbeispiel für lokalen SoftLayer-Gateway Appliance Service (GaaS)](vpn_onpremises.html#gaas){: new_window}
 * [Konfigurationsbeispiel für lokale Cisco ASA](vpn_onpremises.html#cisco){: new_window}
 
-## API 
+## API  
+{: #api}  
 * [IBM VPN-REST-konforme APIs](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## Allgemein 
+## Allgemein  
+{: #general}  
 * [IBM VPN-Befehlszeilenschnittstelle](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN - Häufig gestellte Fragen](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix - Preisliste](https://console.{DomainName}/pricing/){: new_window}
