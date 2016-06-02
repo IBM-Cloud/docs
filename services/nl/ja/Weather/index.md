@@ -18,6 +18,8 @@ copyright:
 {{site.data.keyword.weatherfull}} を使用して、The Weather Company (TWC) からの気象データをご使用の {{site.data.keyword.Bluemix}} アプリケーションに取り込みます。
 {:shortdesc}
 
+現在、日本ではInsights for Weather サービス をご使用いただけません。
+
 以下の手順では、アプリケーションの作成、
 Insights for Weather サービスへのアプリケーションのバインディング、
 および [REST API](https://twcservice.{APPDomain}/rest-api/) と相互作用するためのサービス資格情報の取得のプロセスについて説明します。

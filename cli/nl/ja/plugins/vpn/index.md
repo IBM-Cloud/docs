@@ -6,13 +6,19 @@ copyright:
 
 ---
 
-# IBM VPN CLI
-コマンド・ライン・インターフェース (CLI) を使用して、IBM® Virtual Private Network (VPN) サービスの構成と管理を行うことができます。IBM VPN CLI は、Cloud Foundry CLI プラグインと共に使用するプラグインです。このプラグインは、Windows、MAC、そして Linux オペレーティング・システムで使用可能です。実際に適用可能なものを使用するようにしてください。
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 
-始めに、Cloud Foundry CLI をインストールします。詳しくは、[Cloud Foundry コマンド・ライン・インターフェース](https://console.{DomainName}/docs/cli/downloads.html)を参照してください。 
+
+# IBM VPN CLI
+*最終更新日: 2016 年 5 月 3 日*
+
+コマンド・ライン・インターフェース (CLI) を使用して、IBM® Virtual Private Network (VPN) サービスの構成と管理を実行できます。IBM VPN CLI は、Cloud Foundry CLI プラグインと共に使用するプラグインです。このプラグインは、Windows、MAC、Linux オペレーティング・システム用に使用可能です。環境に適したものを使用してください。
+
+始めに、Cloud Foundry CLI をインストールします。詳しくは、「[Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html)」を参照してください。 
 
 ##IBM VPN CLI プラグインのインストール
-**注:** 以前のバージョンの IBM VPN CLI プラグインがインストールされている場合、まずそれをアンインストールする必要があります。次のコマンドを使用してください。 
+**注:** 以前のバージョンの IBM VPN CLI プラグインがインストールされている場合は、まずそれをアンインストールする必要があります。次のコマンドを使用してください。 
 
 ```
 cf uninstall-plugin vpn
@@ -20,9 +26,9 @@ cf uninstall-plugin vpn
 
 **ローカルでのインストール**
 
-1. プラットフォームに応じた IBM VPN プラグインを [IBM Bluemix CLI プラグイン・リポジトリー](http://plugins.ng.bluemix.net)からダウンロードします。
-2. 次のコマンドを使用して、IBM VPN プラグインをインストールします。
-**注:** VPN プラグインの場所に移動するか、またはプラグインの場所へのパスを指定してください。  
+1. 使用するプラットフォームに対応した IBM VPN プラグインを「[IBM Bluemix CLI プラグイン・リポジトリー](http://plugins.ng.bluemix.net)」からダウンロードします。
+2. 以下のコマンドを使用して、IBM VPN プラグインをインストールします。
+**注:** VPN プラグインの場所に移動するか、またはプラグインの場所のパスを指定します。  
 
 	**MS Windows OS の場合:**
 
@@ -43,33 +49,19 @@ cf uninstall-plugin vpn
 	```  
 
 
-**Bluemix リポジトリーからのインストール**  
+**Bluemix Repository からのインストール**  
 
 1. Bluemix リポジトリーを Cloud Foundry CLI リポジトリーに追加します。次のコマンドを使用してください。
 
 	```
 	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
 	```  
-2. 以下のコマンドを実行します。  
-
-	**MS Windows OS の場合:**
+2. 次のコマンドを実行します。  
 
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
-
-	**Apple MAC OS の場合:**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Linux OS の場合:**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
-	```
-##IBM VPN サービス・コマンドのリスト
+##IBM VPN サービスのコマンドのリスト
 
 ### cf vpn-create connection
 
@@ -93,27 +85,27 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 **subnet/mask:**
 CIDR フォーマットでのリモート・サブネット・アドレス。 
 
-**カスタマー・ゲートウェイ IP アドレス:**
+**customer gateway IP address:**
 VPN トンネルのリモート・エンドポイント IP アドレス。 
 
 ##### オプション・パラメーター:
 {: #op1}
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-peer_id:** リモート・ピアの ID。VPN トンネルの他のエンドポイント。
 
 **-admin_state:** VPN 接続の状況。値: UP または DOWN。
 
-**-dpd-action:** ピアが非活動として検出された場合に取るアクション。値: hold、clear、disabled、restart、restart-by-peer。デフォルト値: hold
+**-dpd-action:** ピアが非活動として検出された場合に実行するアクション。値: hold、clear、disabled、restart、restart-by-peer。デフォルト値: hold
 
 **-gateway_ip:** ローカル VPN トンネル・エンドポイントの IP アドレス。 
 
 **-i:** イニシエーターの状態。デフォルト値: bi-directional。
 
-**-dpd-timeout:** セッション終了後のタイムアウト値 (秒)。範囲: 6 秒から 86400 秒。デフォルト値: 120 秒。キープアライブ・タイムアウトの値は、キープアライブ間隔の値よりも高くなければなりません。
+**-dpd-timeout:** セッションが終了するまでのタイムアウト値 (秒)。範囲: 6 秒以上 86400 秒以下。デフォルト値: 120 秒。キープアライブ・タイムアウトの値は、キープアライブ間隔の値よりも高くなければなりません。
 
-**-dpd-interval:** キープアライブ間隔 (秒)。ピアの活動状態を検査するために、構成された間隔でキープアライブ・メッセージを送信します。範囲: 5 秒から 86399 秒。デフォルト値: 15 秒
+**-dpd-interval:** キープアライブ間隔 (秒)。ピアの活動状態を検査するために、構成された間隔でキープアライブ・メッセージを送信します。範囲: 5 秒以上 86399 秒以下。デフォルト値: 15 秒
 
 **-ike:** IKE ポリシーの名前。
 
@@ -139,13 +131,13 @@ IKE ポリシーの名前。
 ##### オプション・パラメーター:
 {: #op2}
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-pfs:** Diffie-Hellman (DH) グループ ID。値: Group2、Group5、Group14。デフォルト値: Group2 
 
 **-e:** 暗号化アルゴリズム。値: aes-128、aes-192、aes-256、3des。デフォルト値: aes-128
 
-**-lv:** IKE セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒から 86400 秒。デフォルト値: 86400 秒
+**-lv:** IKE セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒以上 86400 秒以下。デフォルト値: 86400 秒
 
 
 ### cf vpn-create ipsec
@@ -167,13 +159,13 @@ IPSec ポリシーの名前。
 ##### オプション・パラメーター:
 {: #op3}
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-pfs:** Diffie-Hellman (DH) グループ ID。値: Group2、Group5、Group14。デフォルト値: Group2  
 
 **-e:** 暗号化アルゴリズム。値: aes-128、aes-192、aes-256、3des。デフォルト値: aes-128
 
-**-lv:** セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒から 86400 秒。デフォルト値: 3600 秒
+**-lv:** セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒以上 86400 秒以下。デフォルト値: 3600 秒
 
 ### cf vpn-create gateway
 
@@ -188,7 +180,7 @@ cf vpn-create gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 **gateway name:**
 ゲートウェイの名前。
 
-**-t:** サービスが有効になるコンテナー。値: allSingleContainers、allContainerGroups、allContainers。デフォルト値: デフォルト値はありません。タイプを指定する必要があります。 
+**-t:** サービスを有効にするコンテナー。値: allSingleContainers、allContainerGroups、allContainers。デフォルト値: デフォルト値はありません。いずれかのタイプを指定する必要があります。 
 
 #####オプション・パラメーター:
 {: #op4}
@@ -201,56 +193,56 @@ CIDR フォーマットでのサブネット・アドレス。
 
 ### cf vpn-show gateways
 
-現在のゲートウェイについての情報が表示されます。
+現在のゲートウェイに関する情報を表示します。
 
 ```
 cf vpn-show gateways
 ```
 ### cf vpn-show ikes
 
-現在の IKE 接続についての情報が表示されます。
+現在の IKE 接続に関する情報を表示します。
 
 ```
 cf vpn-show ikes
 ```
 ### cf vpn-show ipsecs
 
-現在の IPSec 接続についての情報が表示されます。
+現在の IPSec 接続に関する情報を表示します。
 
 ```
 cf vpn-show ipsecs
 ```
 ### cf vpn-show connections
 
-現在の接続すべてについての情報が表示されます。
+すべての現行接続に関する情報を表示します。
 
 ```
 cf vpn-show connections
 ```
 ### cf vpn-show ike
 
-IKE 接続についての情報が表示されます。
+IKE 接続に関する情報を表示します。
 
 ```
 cf vpn-show ike <policy name>
 ```
 ### cf vpn-show ipsec
 
-IPSec 接続についての情報が表示されます。
+IPSec 接続に関する情報を表示します。
 
 ```
 cf vpn-show ipsec <policy name>
 ```
 ### cf vpn-show gateway
 
-ゲートウェイについての接続情報が表示されます。
+ゲートウェイに関する接続情報を表示します。
 
 ```
 cf vpn-show gateway <gateway name>
 ```
 ### cf vpn-show connection
 
-特定の接続についてのすべての情報が表示されます。
+特定の接続に関するすべての情報を表示します。
 
 ```
 cf vpn-show connection <connection name>
@@ -296,7 +288,7 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 **gateway name:**
 ゲートウェイの名前。
 
-**カスタマー・ゲートウェイ IP アドレス:**
+**customer gateway IP address:**
 VPN トンネルのリモート・エンドポイント IP アドレス。 
 
 **subnet/mask:**
@@ -305,21 +297,21 @@ CIDR フォーマットでのサブネット・アドレス。
 **-k:**
 事前共有鍵。
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-peer_id:** リモート・ピアの ID。VPN トンネルの他のエンドポイント。
 
 **-admin_state:** VPN 接続の状況。値: UP または DOWN。
 
-**-dpd-action:** ピアが非活動として検出された場合に取るアクション。値: hold、clear、disabled、restart、restart-by-peer。デフォルト値: hold
+**-dpd-action:** ピアが非活動として検出された場合に実行するアクション。値: hold、clear、disabled、restart、restart-by-peer。デフォルト値: hold
 
 **-gateway_ip:** ローカル VPN トンネル・エンドポイントの IP アドレス。 
 
 **-i:** イニシエーターの状態。デフォルト値: bi-directional。
 
-**-dpd-timeout:** セッション終了後のタイムアウト値 (秒)。範囲: 6 秒から 86400 秒。デフォルト値: 120 秒
+**-dpd-timeout:** セッションが終了するまでのタイムアウト値 (秒)。範囲: 6 秒以上 86400 秒以下。デフォルト値: 120 秒
 
-**-dpd-interval:** キープアライブ間隔 (秒)。ピアの活動状態を検査するために、構成された間隔でキープアライブ・メッセージを送信します。範囲: 5 秒から 86399 秒。デフォルト値: 15 秒
+**-dpd-interval:** キープアライブ間隔 (秒)。ピアの活動状態を検査するために、構成された間隔でキープアライブ・メッセージを送信します。範囲: 5 秒以上 86399 秒以下。デフォルト値: 15 秒
 
 **-ike:** IKE ポリシーの名前。
 
@@ -344,13 +336,13 @@ IKE ポリシーの名前。
 
 **gateway name:** ゲートウェイの名前。 
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-pfs:** Diffie-Hellman (DH) グループ ID。値: Group2、Group5、Group14。デフォルト値: Group2 
 
 **-e:** 暗号化アルゴリズム。値: aes-128、aes-192、aes-256、3des。デフォルト値: aes-128
 
-**-lv:** IKE セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒から 86400 秒。デフォルト値: 86400 秒
+**-lv:** IKE セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒以上 86400 秒以下。デフォルト値: 86400 秒
 
 
 ### cf vpn-update ipsec
@@ -373,13 +365,13 @@ IPSec ポリシーの名前。
 **gateway name:**
 ゲートウェイの名前。
 
-**-d:** 指定したパラメーターの説明。
+**-d:** 指定されたパラメーターについての説明。
 
 **-pfs:** Diffie-Hellman (DH) グループ ID。値: Group2、Group5、Group14。デフォルト値: Group2 
 
 **-e:** 暗号化アルゴリズム。値: aes-128、aes-192、aes-256、3des。デフォルト値: aes-128
 
-**-lv:** セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒から 86400 秒。デフォルト値: 3600 秒
+**-lv:** セキュリティー・アソシエーションの存続時間の値。範囲: 60 秒以上 86400 秒以下。デフォルト値: 3600 秒
 
 ### cf vpn-update gateway
 
@@ -397,7 +389,7 @@ cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 #####オプション・パラメーター:
 {: #op8}
 
-**-t:** サービスが有効になるコンテナー。値: allSingleContainers、allContainerGroups、allContainers。デフォルト値: デフォルト値はありません。タイプを指定する必要があります。
+**-t:** サービスを有効にするコンテナー。値: allSingleContainers、allContainerGroups、allContainers。デフォルト値: デフォルト値はありません。いずれかのタイプを指定する必要があります。
 
 **-gateway_ip:**
 ゲートウェイの IP アドレス。 
@@ -406,6 +398,7 @@ cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 CIDR フォーマットでのサブネット・アドレス。 
 
 # 関連リンク
-## 一般
-* [IBM VPN サービス](../../../services/vpn/index.html)
+## 一般  
+{: #general}  
+* [IBM VPN service](../../../services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

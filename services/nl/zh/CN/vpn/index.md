@@ -11,7 +11,7 @@ copyright:
 
 # {{site.data.keyword.vpn_short}} 入门
 {: #vpn}  
-*上次更新时间：2016 年 3 月 17 日*
+*上次更新时间：2016 年 5 月 9 日*
 
 Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服务可用于安全访问 IBM Bluemix 云环境中的 IBM Containers（Docker 容器）。您可以将 IBM Bluemix 云环境用作公司数据中心的扩展。此外，还可以使用 IBM VPN 服务与 SoftLayer 服务器进行连接。
 {:shortdesc}
@@ -25,7 +25,8 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服务可用于安全访问 IBM 
 
   1. 选择**编辑**。  
   2. 指定网关名称。  
-  3. 选择要使用 VPN 服务的容器或组。  
+  3. 选择要使用 VPN 服务的容器和容器组。
+	**注：**会预先选择容器和容器组专用子网，以便您可以通过 VPN 连接进行访问。
   4. 选择**保存**。  
 
  可以使用缺省 IKE 和 IPSec 策略，也可以配置定制策略。如果要使用缺省策略，请跳至步骤 4。
@@ -57,15 +58,15 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服务可用于安全访问 IBM 
 4. 提供用于在数据中心或 SoftLayer 服务器 VPN 网关与 IBM VPN 网关之间建立连接的详细信息。
 {: #site}  
 
-  1. 选择 **VPN 网关设备**选项卡。
-  2. 在 **VPN 站点连接**部分中，选择**添加新项**。
+  1. 选择**网关设备**选项卡。
+  2. 在**站点连接**部分中选择**创建连接**。
   3. 指定以下站点连接详细信息：  
   	* **名称**：连接的名称  
   	* **描述**：连接的描述（可选）  
   	* **预共享密钥字符串**：要用于认证的预共享密钥
   	* **管理状态**：VPN 连接的状态。从下拉列表中进行选择：UP 或 DOWN。缺省值：UP  
   	* **客户网关 IP**：VPN 隧道的远程端点 IP 地址  
-  	* **客户子网**：CIDR 格式的远程子网地址。选择加号可保存子网详细信息。
+  	* **客户子网**：CIDR 格式的远程子网地址。选择加号可添加其他子网。
   4. （可选）配置以下**高级设置**参数：  
   	* **IKE 策略**：选择 IKE 策略。  
   	* **保持活动时间间隔**：保持活动的时间间隔（以秒为单位）。按配置的时间间隔发送保持活动消息，以检查同级的活动状态。缺省值：15。范围：5-86399。
@@ -89,15 +90,18 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服务可用于安全访问 IBM 
  
 # 相关链接
 ## 样本 
+{: #samples}  
 * [内部部署 strongSwan Gateway 配置示例](vpn_onpremises.html#strongswan){: new_window}
 * [内部部署 Vyatta Gateway 配置示例](vpn_onpremises.html#vyatta){: new_window}
 * [内部部署 SoftLayer Gateway Appliance Service (GaaS) 配置示例](vpn_onpremises.html#gaas){: new_window}
 * [内部部署 Cisco ASA 配置示例](vpn_onpremises.html#cisco){: new_window}
 
-## API 
+## API  
+{: #api}  
 * [IBM VPN RESTful API](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## 常规 
+## 常规  
+{: #general}  
 * [IBM VPN 命令行界面](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN 常见问题解答](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix 价格表](https://console.{DomainName}/pricing/){: new_window}

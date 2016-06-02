@@ -11,7 +11,7 @@ copyright:
 
 # Introduzione a {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Ultimo aggiornamento: 17 marzo 2016*
+*Ultimo aggiornamento: 9 maggio 2016*
 
 Il servizio {{site.data.keyword.vpn_full}} per Bluemix&reg; è disponibile per l'accesso sicuro a IBM Containers (contenitori Docker) nell'ambiente cloud IBM Bluemix. Puoi utilizzare l'ambiente cloud IBM Bluemix come un'estensione del tuo data center aziendale. Puoi inoltre collegarti con i server SoftLayer utilizzando il servizio IBM VPN.
 {:shortdesc}
@@ -20,12 +20,13 @@ Prima di iniziare, assicurati di avere un contenitore IBM Docker pronto per l'ut
 
 Per iniziare, seleziona il tile dell'istanza del servizio **VPN (Virtual Private Network)** nel dashboard Bluemix. Completa la seguente procedura:
 
-1. Configura il gateway {{site.data.keyword.vpn_short}} selezionando **CREA GATEWAY**. Viene creato un gateway predefinito. Se necessario, modifica la configurazione del gateway come mostrato nei seguenti passi.
+1. Configura il gateway {{site.data.keyword.vpn_short}} selezionando **CREA GATEWAY**. Viene creato un gateway predefinito. Se necessario, modifica la configurazione del gateway come mostrato nei seguenti passi.  
 {: #gateway}  
 
   1. Seleziona **MODIFICA**.  
   2. Specifica il nome del gateway.  
-  3. Seleziona i contenitori o i gruppi con i quali desideri utilizzare il servizio VPN.  
+  3. Seleziona il contenitore e il gruppo di contenitori con cui vuoi utilizzare il servizio VPN.
+	**Nota:** i sottoinsiemi privati di contenitori e gruppi di contenitori sono preselezionati per consentirti così di accedere a essi sulla connessione VPN.
   4. Seleziona **SALVA**.  
 
  Puoi utilizzare le politiche IKE e IPSec predefinite o configurare delle politiche personalizzate. Se desideri utilizzare le politiche predefinite, vai al passo 4.
@@ -54,22 +55,22 @@ Per iniziare, seleziona il tile dell'istanza del servizio **VPN (Virtual Private
   	* **Modalità di incapsulamento**: Tunnel; non può essere modificata
   3. Seleziona **SALVA**.  
 
-4. Fornisce i dettagli per stabilire una connessione tra il tuo data center o il tuo gateway VPN server SoftLayer e il gateway IBM VPN.
+4. Fornisce i dettagli per stabilire una connessione tra il tuo data center o il tuo gateway VPN server SoftLayer e il gateway IBM VPN.  
 {: #site}  
 
-  1. Seleziona la scheda **Applicazione gateway VPN**.
-  2. Seleziona **AGGIUNGI NUOVA** nella sezione **Connessioni sito VPN**.
+  1. Seleziona la scheda **Applicazione gateway**.
+  2. Seleziona **Crea connessione** nella sezione **Connessioni sito**.
   3. Specifica i seguenti dettagli di connessione al sito:  
   	* **Nome**: Nome della connessione  
   	* **Descrizione**: Descrizione della connessione (facoltativa)  
   	* **Stringa chiave precondivisa**: Chiave (segreto) precondivisa da utilizzare per l'autenticazione
   	* **Stato ammin**: Stato della connessione VPN. Seleziona dall'elenco a discesa: UP o DOWN. Valore predefinito: UP  
   	* **IP gateway cliente**: Indirizzo IP endpoint remoto del tunnel VPN  
-  	* **Sottorete cliente**: Indirizzo di sottorete remoto nel formato CIDR. Seleziona il segno più per salvare i dettagli della sottorete.
+  	* **Sottorete cliente**: Indirizzo di sottorete remoto nel formato CIDR. Seleziona il segno più per aggiungere un altro sottoinsieme.
   4. (Facoltativo) Configura i seguenti parametri delle **Impostazioni avanzate**:  
   	* **Politica IKE**: Seleziona la politica IKE.  
   	* **Intervallo keepalive**: Intervallo keepalive in secondi. Invia i messaggi keepalive all'intervallo configurato per controllare lo stato di attività del peer. Valore predefinito: 15. Intervallo: 5-86399
-  	* **Azione per peer inattivo**: Azione da intraprendere quando il peer viene individuato come inattivo.
+  	* **Azione per peer inattivo**: Azione da intraprendere quando il peer viene individuato come inattivo.  
     	Valori: 
   		* hold (valore predefinito): l'associazione di sicurezza (SA) viene impostata su hold 
   		* clear: la SA viene eliminata
@@ -89,15 +90,18 @@ Per iniziare, seleziona il tile dell'istanza del servizio **VPN (Virtual Private
  
 # rellinks
 ## samples 
+{: #samples}  
 * [Esempio di configurazione gateway strongSwan in loco](vpn_onpremises.html#strongswan){: new_window}
 * [Esempio di configurazione gateway Vyatta in loco](vpn_onpremises.html#vyatta){: new_window}
 * [Esempio di configurazione GaaS (SoftLayer Gateway Appliance Service) in loco](vpn_onpremises.html#gaas){: new_window}
 * [Esempio di configurazione Cisco ASA in loco](vpn_onpremises.html#cisco){: new_window}
 
-## api 
+## api  
+{: #api}  
 * [IBM VPN RESTful APIs](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## general 
+## general  
+{: #general}  
 * [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN FAQs](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix Pricing Sheet](https://console.{DomainName}/pricing/){: new_window}

@@ -11,7 +11,7 @@ copyright:
 
 # Introdução ao {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Última atualização: 17 de março de 2016*
+*Última atualização: 09 de maio de 2016*
 
 O serviço {{site.data.keyword.vpn_full}} para Bluemix&reg; está disponível para acesso com segurança somente aos Contêineres IBM (contêineres Docker) dentro do ambiente de nuvem do IBM Bluemix. É possível usar o ambiente de nuvem do IBM Bluemix como uma extensão de seu datacenter corporativo. Também é possível conectar a servidores SoftLayer usando o serviço IBM VPN.
 {:shortdesc}
@@ -20,12 +20,13 @@ Antes de começar, assegure-se de que tenha um contêiner do IBM Docker pronto p
 
 Para começar, selecione o quadro da instância de serviço **Rede privada virtual** no painel Bluemix. Conclua as etapas a seguir:
 
-1. Configure o gateway {{site.data.keyword.vpn_short}} selecionando **CRIAR GATEWAY**. Um gateway padrão é criado. Se necessário, edite a configuração de gateway conforme mostrado nas etapas a seguir.
+1. Configure o gateway {{site.data.keyword.vpn_short}} selecionando **CRIAR GATEWAY**. Um gateway padrão é criado. Se necessário, edite a configuração de gateway conforme mostrado nas etapas a seguir.  
 {: #gateway}  
 
   1. Selecione **EDITAR**.  
   2. Especifique o nome do gateway.  
-  3. Selecione os contêineres ou grupos com os quais deseja usar o serviço VPN (rede privada virtual).  
+  3. Selecione o contêiner e o grupo de contêiner com os quais você deseja usar o serviço da VPN.
+	**Observação:** as sub-redes privadas do contêiner e do grupo de contêiner são pré-selecionadas de forma que você possa acessá-las por meio da conexão da VPN.
   4. Selecione **SALVAR**.  
 
  É possível usar as políticas IKE e IPSec padrão ou configurar políticas customizadas. Se desejar usar as políticas padrão, ignore a etapa 4.
@@ -54,22 +55,22 @@ Para começar, selecione o quadro da instância de serviço **Rede privada virtu
   	* **Modo de encapsulamento**: túnel; não pode ser mudado
   3. Selecione **SALVAR**.  
 
-4. Forneça os detalhes para estabelecer uma conexão entre seu datacenter ou o gateway VPN (rede privada virtual) do servidor SoftLayer e o gateway VPN (rede privada virtual) da IBM.
+4. Forneça os detalhes para estabelecer uma conexão entre seu datacenter ou o gateway VPN (rede privada virtual) do servidor SoftLayer e o gateway VPN (rede privada virtual) da IBM.  
 {: #site}  
 
-  1. Selecione a guia **Dispositivo de gateway VPN (rede privada virtual)**.
-  2. Selecione **INCLUIR NOVO** na seção **Conexões do site VPN (rede privada virtual)**.
+  1. Selecione a guia **Dispositivo de gateway**.
+  2. Selecione **Criar conexão** na seção **Conexões do site**.
   3. Especifique os detalhes de conexão do site a seguir:  
   	* **Nome**: o nome da conexão  
   	* **Descrição**: a descrição da conexão (opcional)  
   	* **Sequência de chave pré-compartilhada**: chave pré-compartilhada (segredo) a ser usada para autenticação
   	* **Estado do administrador**: status da conexão VPN (rede privada virtual). Selecione no menu suspenso: PARA CIMA ou PARA BAIXO. Valor padrão: Para cima  
   	* **IP do gateway do cliente**: endereço IP do terminal remoto do túnel VPN  
-  	* **Sub-rede do cliente**: endereço de sub-rede remota em formato CIDR (Classless Inter-Domain Routing). Selecione o sinal de mais para salvar os detalhes da sub-rede.
+  	* **Sub-rede do cliente**: endereço de sub-rede remota em formato CIDR (Classless Inter-Domain Routing). Selecione o sinal de mais para incluir outra sub-rede.
   4. (Opcional) Configure os parâmetros das **Configurações avançadas** a seguir:  
   	* **Política IKE**: selecione a política IKE.  
   	* **Intervalo keep-alive**: o intervalo keep-alive em segundos. Envie mensagens keep-alive no intervalo configurado para verificar se o peer está ativo. Valor padrão: 15. Intervalo: de 5 a 86399
-  	* **Ação no peer inativo**: ação a ser tomada quando o peer for detectado como inativo.
+  	* **Ação no peer inativo**: ação a ser tomada quando o peer for detectado como inativo.  
     	Valores: 
   		* suspenso (valor padrão): a associação de segurança (SA) é colocada em suspensão 
   		* limpar: a SA é excluída
@@ -89,15 +90,18 @@ Para começar, selecione o quadro da instância de serviço **Rede privada virtu
  
 # rellinks
 ## amostras 
+{: #samples}  
 * [Exemplo de configuração de gateway strongSwan no local](vpn_onpremises.html#strongswan){: new_window}
 * [Exemplo de configuração de gateway Vyatta no local](vpn_onpremises.html#vyatta){: new_window}
 * [Exemplo de configuração do SoftLayer Gateway Appliance Service (GaaS) no local](vpn_onpremises.html#gaas){: new_window}
 * [Exemplo de configuração do Cisco ASA no local](vpn_onpremises.html#cisco){: new_window}
 
-## api 
+## api  
+{: #api}  
 * [APIs IBM VPN RESTful](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## gerais 
+## gerais  
+{: #general}  
 * [Interface da linha de comandos IBM VPN](../../cli/plugins/vpn/index.html){: new_window}
 * [Perguntas mais frequentes do IBM VPN](vpn_faq.html#vpn_faq){: new_window}
 * [Folha de precificação do IBM Bluemix](https://console.{DomainName}/pricing/){: new_window}

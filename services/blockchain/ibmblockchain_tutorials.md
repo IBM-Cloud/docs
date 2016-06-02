@@ -13,12 +13,12 @@ copyright:
 
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
-*Last updated: 28 April 2016*
+*Last updated: 25 May 2016*
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
 {:shortdesc}
 
-You can immediately deploy the Marbles or Commercial Paper demos to see chaincode applications in action.  Keep reading to explore the Hello Chaincode tutorial.
+You can immediately deploy the Marbles, Commercial Paper or Car Lease demos to see chaincode applications in action.  Keep reading to explore the Hello Chaincode tutorial.
 
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**

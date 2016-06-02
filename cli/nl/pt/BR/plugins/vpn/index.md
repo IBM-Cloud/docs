@@ -6,7 +6,13 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # IBM VPN CLI
+*Última atualização: 03 de maio de 2016*
+
 É possível usar a interface da linha de comandos (CLI) para configurar e gerenciar o serviço IBM® Virtual Private Network (VPN). O IBM VPN CLI é um plug-in usado com o plug-in Cloud Foundry CLI. O plug-in está disponível para os sistemas operacionais Windows, MAC e Linux. Assegure-se de usar aquele que for aplicável a você.
 
 Antes de iniciar, instale o Cloud Foundry CLI. Veja [Interface da linha de comandos do Cloud Foundry](https://console.{DomainName}/docs/cli/downloads.html) para obter detalhes. 
@@ -52,22 +58,8 @@ cf uninstall-plugin vpn
 	```  
 2. Execute o seguinte comando:  
 
-	**Para o sistema operacional MS Windows:**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Para o sistema operacional Apple MAC:**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Para o sistema operacional Linux:**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##Lista de comandos do serviço IBM VPN
 
@@ -407,6 +399,7 @@ Endereço IP do gateway.
 Endereço de sub-rede no formato CIDR. 
 
 # rellinks
-## gerais
+## gerais  
+{: #general}  
 * [Serviço IBM VPN](../../../services/vpn/index.html)
 * [Cloud Foundry CLI ](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

@@ -11,7 +11,7 @@ copyright:
 # Liberty features supported in Bluemix
 {: #liberty_features}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 19 May 2016*
 
 The following table shows Liberty features supported in Bluemix
 
