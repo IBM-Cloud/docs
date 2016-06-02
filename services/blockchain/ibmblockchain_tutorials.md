@@ -13,7 +13,7 @@ copyright:
 
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
-*Last updated: 28 April 2016*
+*Last updated: 2 June 2016*
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
 {:shortdesc}
@@ -22,7 +22,7 @@ You can immediately deploy the Marbles or Commercial Paper demos to see chaincod
 
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/jpayne23/Car-Lease-Demo.git)  **Car Lease**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**
 
 ## Using the Hello Chaincode tutorial
 {: #hellocc}
@@ -67,7 +67,7 @@ The {{site.data.keyword.blockchain}} service currently requires chaincode to be 
 Therefore, you must register a GitHub account and set up Git locally on your computer. Go to [set up git](https://help.github.com/articles/set-up-git/) for more information.  
 1. Visit [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) and fork this repo.  
 2. Now clone your fork to your $GOPATH.  
-3. Notice that in this repo there are two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build. 
+3. Notice that in this repo there are two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build.
 4. Make sure that it builds in your local environment:
 - Open a terminal or command prompt.
 - Browse to the folder that contains `chaincode_start.go` and enter:
@@ -379,7 +379,7 @@ Change the value of `hello_world` to "go away".
 		"id": 3
 	}
 	```
-	
+
 The response should look like:
 
 ![Invoke Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG)
@@ -391,7 +391,7 @@ To test if it's stuck, just re-run the query above, and you should get:
 That’s all it takes to write basic chaincode.
 
 
-## Requirements for Marbles, Commercial Paper, and Car Lease demos 
+## Requirements for Marbles, Commercial Paper, and Car Lease demos
 {: #requirements}
 
 The following prerequisites are necessary to run the Marbles, Commercial Paper, and Car Lease applications:
@@ -400,7 +400,7 @@ The following prerequisites are necessary to run the Marbles, Commercial Paper, 
 - Node.js 0.12.0+ and npm v2+ (only needed if you want to run the app locally, npm comes with Node.js).
 - Node.js + express experience. Marbles is a very simple blockchain app but it's still a fairly involved node app. You should be comfortable with node and the express module.
 - Golang Environment (needed only to build your own chaincode, not needed if you just run the application as-is).
-- You have a conceptual understanding of the terms 'chaincode', 'ledger', and 'peer' in a blockchain context. See the [Hyperledger Project Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md) for more information on blockchain terminology. 
+- You have a conceptual understanding of the terms 'chaincode', 'ledger', and 'peer' in a blockchain context. See the [Hyperledger Project Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md) for more information on blockchain terminology.
 
 ## Using the Marbles demo
 {: #marbles}
@@ -417,7 +417,7 @@ The Commercial Paper (CP) application demonstrates how a commercial paper tradin
 ## Using the Car Lease demo
 {: #carlease}
 
-The Car Lease application demonstrates the lifecycle of a vehicle from creation to manufacture, through a series of owners, and finishing with the vehicle being scrapped. The demo makes use of Node.js for the server side programming, with Golang used for the chaincode running on the IBM Blockchain network. The demo has two chaincodes, the first defines the rules about what can and can't happen to a vehicle (similar to a v5c), and the second stores a log of what has happened to a vehicle during its lifetime. Both chaincodes use JSON objects to store their data.  Vist the [Car Lease README](https://github.com/jpayne23/Car-Lease-Demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy immediately to Bluemix.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/jpayne23/Car-Lease-Demo.git)
+The Car Lease application demonstrates the lifecycle of a vehicle from creation to manufacture, through a series of owners, and finishing with the vehicle being scrapped. The demo makes use of Node.js for the server side programming, with Golang used for the chaincode running on the IBM Blockchain network. The demo has two chaincodes, the first defines the rules about what can and can't happen to a vehicle (similar to a v5c), and the second stores a log of what has happened to a vehicle during its lifetime. Both chaincodes use JSON objects to store their data.  Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy immediately to Bluemix.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)
 
 ## Using Node SDK
 {: #nodesdk}
