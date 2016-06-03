@@ -18,7 +18,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-*Last Updated: 13 May 2016*
+*Last Updated: 2 June 2016*
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
@@ -46,15 +46,20 @@ After you add this service, you can create a multi-stage deployment pipeline in 
 <div class="linklist" id="general"><h3 class="linklistlabel">Related Links</h3>
 <ul>
 <li><img src="./sout.gif" alt=""><a href="https://developer.ibm.com/bluemix/support/#prereqs" rel="external" title="(Opens in a new tab or window)">{{site.data.keyword.Bluemix_notm}} Prerequisites</a></li>
+<li><img src="./sout.gif" alt=""><a href="https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/" rel="external" title="(Opens in a new tab or window)">IBM Bluemix Garage Method: Delivery pipeline</a></li>
 </ul>
 </div>
 
 <div class="linklist" id="samples">
 <h3 class="linklistlabel">Tutorials and Samples</h3>
 <ul>
+
+<!--
 <li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/devopsweb/" rel="external" title="(Opens in a new tab or window)">Clone, edit, and deploy an app</a></li>
 <li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditor" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Node.js app</a></li>
 <li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditorjava" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Java app</a></li>
+-->
+
 <li><img src="./sout.gif" alt=""><a href="http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service" rel="external" title="(Opens in a new tab or window)">developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service</a></li>
 </ul>
 </div>
