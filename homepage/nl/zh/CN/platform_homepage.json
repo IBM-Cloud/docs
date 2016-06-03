@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "文档主页平台部分",
+	"items": [{
+		"title": "CLI 和开发工具",
+		"description": "访问多种工具，例如统一命令行界面和 CLI 插件。",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "管理应用程序",
+		"description": "使用 Bluemix 用户界面中的“仪表板”可查看和管理应用程序和服务。",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "帐户管理",
+		"description": "管理组织和空间，包括用户访问权。",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "监视和日志记录",
+		"description": "跟进应用程序的使用情况和数据流，从而更好地了解部署情况。",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "定价",
+		"description": "使用计算器估算成本，并通过使用情况详细视图来查看实际成本。",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "故障诊断",
+		"description": "如果您遇到平台问题，请使用这些故障诊断任务来确定要执行哪些步骤。",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "平台安全性",
+		"description": "了解 Bluemix 如何提供功能性、基础架构、操作和物理安全。",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "混合",
+		"description": "跨公共、专用和内部部署模型作为服务交付。",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

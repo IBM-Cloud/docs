@@ -12,15 +12,15 @@ copyright:
 # Richiesta di assistenza clienti
 {: #getting-customer-support}
 
-*Ultimo aggiornamento: 19 aprile 2016*
+*Ultimo aggiornamento: 11 maggio 2016*
 
 
-Se riscontri dei problemi con {{site.data.keyword.Bluemix}}, hai diverse opzioni di supporto, quali l'ottenimento di una guida mediante Stack Overflow o l'apertura di un ticket di supporto.
+Se riscontri dei problemi con {{site.data.keyword.Bluemix}}, hai diverse opzioni di supporto, quali l'ottenimento di una guida mediante un forum o l'apertura di un ticket di supporto.
 {:shortdesc}
 
 ## Come ottenere supporto
 {: #getting-help}
-Per ottenere assistenza, puoi andare ad Account e supporto oppure puoi andare direttamente a Stack Overflow, dove puoi cercare informazioni o inviare domande.
+Per aprire un ticket di supporto o trovare altre opzioni di guida, puoi andare ad Account e supporto. Puoi anche andare direttamente ai forum di Stack Overflow o developerWorks (dW) Answers per cercare informazioni o pubblicare domande.
 {:shortdesc}
 
 ### Utilizzo di Account e supporto
@@ -33,16 +33,23 @@ trovare delle risposte alle tue domande. Nella pagina che viene visualizzata, im
 
 
 ### Porre una domanda
-Sia che si acceda ad esso direttamente o tramite Account e supporto, Stack Overflow è un sito Web che funge da piattaforma in cui gli utenti possono chiedere e rispondere a domande. I team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}} sono attivi su Stack Overflow e seguono le domande che hanno la tag **bluemix**.
+{: #asking-a-question}
 
-Per fare una domanda in Stack Overflow, scegli dalle seguenti opzioni:
-  * Da Account e supporto, fai clic su **Richiedi assistenza**. Nella pagina così visualizzata,
-immetti la tua domanda all'interno del campo di ricerca per cercare risposte. Se non viene restituita la risposta prevista, puoi fare clic su **PUBBLICA IN STACK OVERFLOW** per pubblicare la tua domanda.
+I forum di Stack Overflow e dW Answers forniscono entrambi un'ampia gamma di risposte alle tue domande relative a Bluemix e su cui è possibile eseguire ricerche. Se non trovi una risposta esistente, poni una nuova domanda. 
 
-  * Vai direttamente a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+  * Vai a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} per porre domande tecniche sullo sviluppo di applicazioni con la piattaforma e i servizi Bluemix.
+  * Vai a [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} per porre domande sull'offerta
+{{site.data.keyword.Bluemix_notm}} e su istruzioni introduttive.
 
-Quando crei una domanda in Stack Overflow, aggiungi una tag **bluemix** alla tua domanda per accertarti che venga vista dai team di sviluppo e supporto {{site.data.keyword.Bluemix_notm}}.
+Puoi anche porre una domanda in Stack Overflow direttamente da Account e supporto completando la seguente procedura:
+  1. Da Account e supporto, fai clic su **Richiedi assistenza**. 
+  2. Nella pagina così visualizzata,
+immetti la tua domanda all'interno del campo di ricerca per cercare risposte. 
+  3. Se non viene restituita la risposta prevista, fai clic su **PUBBLICA in STACK OVERFLOW** per pubblicare la tua domanda.
 
+I team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}} monitorano attivamente Stack Overflow e dW Answers e seguono le domande
+che hanno la tag **bluemix**. Quando crei una domanda nell'uno o nell'altro forum, aggiungi una tag **bluemix** alla tua domanda per accertarti che venga vista dai team di sviluppo e supporto di {{site.data.keyword.Bluemix_notm}}.
+ 
 
 
 ## Visualizzazione dello stato di {{site.data.keyword.Bluemix_notm}}
@@ -151,7 +158,7 @@ A tutti gli utenti di {{site.data.keyword.Bluemix_notm}} viene fornito supporto 
 
 Livelli | Gratuito |  Di base | Standard | Premium
 --- | --- | --- | --- | --- |
-Descrizione | Supporto per tutti i clienti in prova di Bluemix.  |  Supporto per gli ambienti di non produzione o per i carichi di lavoro per cui le severità e i tempi di risposta tradizionali non sono necessari. | Supporto per gli ambienti con un numero limitato di applicazioni critiche di business. I clienti {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale ricevono il supporto standard. | Supporto per gli ambienti di importanza critica che hanno una dipendenza strategica da {{site.data.keyword.Bluemix_notm}}.
+Descrizione | Supporto per tutti i clienti in prova di Bluemix.  |  Supporto per gli ambienti di non produzione o per i carichi di lavoro per cui le severità e i tempi di risposta tradizionali non sono necessari. | Supporto per gli ambienti con un numero limitato di applicazioni critiche di business. I clienti {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale ricevono il supporto standard. | Supporto per gli ambienti di importanza critica che hanno una dipendenza strategica da {{site.data.keyword.Bluemix_notm}}. 
 Supporto di severità elevata |  N/D | N/D | Incluso | Include
 il supporto lingua | Inglese | Inglese | Inglese | CSM (client success manager)
 assegnato inglese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
@@ -229,10 +236,10 @@ La seguente tabella elenca alcuni esempi comuni di problemi di supporto, di live
 
 Severità | Definizione di gravità | Obiettivi del tempo di risposta | Copertura del tempo di risposta
 ------|-------- | --- | --- |
-Severità 1 | <strong>Impatto sul business critico o il servizio non funziona.</strong> <br> La funzionalità critica di business non è utilizzabile o un'interfaccia critica ha avuto un malfunzionamento. Questa gravità normalmente si applica all'ambiente di produzione e indica l'impossibilità ad accedere ai servizi ed è segno di un impatto critico sulle operazioni.  Questa condizione richiede una soluzione immediata.  | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> in 1 ora</li><li><strong>Premium:</strong> in 1 ora</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Severità 2 | <strong>Impatto sul business significativo.</strong> <br> L'utilizzo di una funzione o funzionalità è severamente limitato o sei a rischio di saltare delle scadenze di business. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> in 2 ore</li><li><strong>Premium:</strong> in 90 minuti </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
-Severità 3 | <strong>Impatto sul business minore.</strong> <br> Una funzione o funzionalità è utilizzabile ma riscontra dei problemi che ne influenzano l'utilizzo. Non viene causato alcun impatto critico sulle operazioni. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> in 4 ore</li><li><strong>Premium:</strong> in 2 ore</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
-Severità 4 | <strong>Impatto sul business minimo.</strong> <br> Una domanda o una richiesta non tecnica. | <ul><li><strong>Gratuito:</strong> Massimo impegno </li><li><strong>Di base:</strong> Massimo impegno </li><li><strong>Standard:</strong> in 8 ore</li><li><strong>Premium:</strong> in 4 ore</li></ul> | <ul><li><strong>Gratuito:</strong> Orario di operatività </li><li><strong>Di base:</strong> Orario di operatività </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
+Severità 1 | <strong>Impatto sul business critico o il servizio non funziona.</strong> <br> La funzionalità critica di business non è utilizzabile o un'interfaccia critica ha avuto un malfunzionamento. Questa gravità normalmente si applica all'ambiente di produzione e indica l'impossibilità ad accedere ai servizi ed è segno di un impatto critico sulle operazioni.  Questa condizione richiede una soluzione immediata. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> in 1 ora</li><li><strong>Premium:</strong> in 1 ora</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
+Severità 2 | <strong>Impatto sul business significativo.</strong> <br> L'utilizzo di una funzione o funzionalità è severamente limitato o sei a rischio di saltare delle scadenze di business. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 2 ore</li><li><strong>Premium:</strong> in 90 minuti </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
+Severità 3 | <strong>Impatto sul business minore.</strong> <br> Una funzione o funzionalità è utilizzabile ma riscontra dei problemi che ne influenzano l'utilizzo. Non viene causato alcun impatto critico sulle operazioni. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 4 ore</li><li><strong>Premium:</strong> in 2 ore</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
+Severità 4 | <strong>Impatto sul business minimo.</strong> <br> Una domanda o una richiesta non tecnica. | <ul><li><strong>Gratuito:</strong> Massimo impegno </li><li><strong>Di base:</strong> Massimo impegno</li><li><strong>Standard:</strong> in 8 ore</li><li><strong>Premium:</strong> in 4 ore</li></ul> | <ul><li><strong>Gratuito:</strong> Orario di operatività </li><li><strong>Di base:</strong> Orario di operatività </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
 *Tabella 2. Definizione di severità e tempo di risposta*
 
 
@@ -335,6 +342,11 @@ IBM invia periodicamente i sondaggi ai clienti Bluemix per ottenere i loro feedb
 {: #rellinks}
 
 ## general
-  * [Portale di supporto Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Installazione dello strumento di comando cf](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Portale di supporto Bluemix](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [Installazione dello strumento di comando cf](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

@@ -36,8 +36,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Di norma,
-questo URL è https://api.{{site.data.keyword.domainname}}
+<dd>L'URL dell'endpoint API Bluemix che devi specificare quando stabilisci una connessione a {{site.data.keyword.Bluemix_notm}}. Di norma, questo URL è https://api.{DomainName}.
 Se vuoi visualizzare l'URL dell'endpoint API che stai attualmente utilizzando, non hai bisogno di specificare questo parametro per il comando cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Disabilita il processo di convalida SSL. L'utilizzo di questo parametro può causare problemi di sicurezza.</dd>
@@ -57,7 +56,7 @@ Presumi di avere una istanza per un'applicazione; nella colonna delle istanze de
 Esegue il bind di un'istanza del servizio
 esistente alla tua applicazione.
 ```
-cf bind-service nome_applicazione istanza_servizio
+cf bind-service nomeapplicazione istanza_servizio
 ```
 
 Ad esempio, se
@@ -66,7 +65,7 @@ nel tuo spazio correnti, puoi utilizzare `cf bind-service
 my_app my_dataworks` per eseguire il bind di questa istanza del servizio alla tua applicazione.
 
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>istanza_servizio</dt>
 <dd>Il nome dell'istanza del servizio esistente.</dd>
@@ -114,10 +113,10 @@ cf create-space nome_spazio
 Elimina
 un'applicazione esistente.
 ```
-cf delete nome_applicazione
+cf delete nomeapplicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.<dd>
 <dt>*-f*</dt>
 <dd>Forza l'eliminazione dell'applicazione senza alcuna conferma. Questo parametro è facoltativo.</dd>
@@ -144,10 +143,10 @@ cf delete-space nome_spazio
 Visualizza
 gli eventi di runtime che sono correlati ad un'applicazione.
 ```
-cf events nome_applicazione
+cf events nomeapplicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 </dl>
 
@@ -174,7 +173,7 @@ cf login
 ```
 Puoi utilizzare uno o più dei seguenti parametri quando immetti il comando cf login:
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>L'URL dell'endpoint API di {{site.data.keyword.Bluemix_notm}}. Questo parametro è facoltativo.</dd>
 <dt>*-u*nome_utente</dt>
 <dd>Il tuo nome utente. Questo parametro è facoltativo.</dd>
@@ -201,7 +200,7 @@ STDOUT e STDERR di un'applicazione.
 cf logs nomeapplicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*--recent*</dt>
 <dd>Richiama i log recenti.</dd>
@@ -219,13 +218,13 @@ cf marketplace
 
 Distribuisce una nuova applicazione a Bluemix oppure aggiorna un'applicazione esistente in Bluemix.
 ```
-cf push nome_applicazione 
+cf push nomeapplicazione 
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-b*nome_pacchettodibuild</dt>
-<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome oppure un URL Git, ad esempio my-buildpack o https://github.com/heroku/heroku-buildpack-play.git.</dd>
+<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome oppure un URL GIT, ad esempio `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*comando_di_avvio</dt>
 <dd>Il comando di avvio della tua applicazione. Per utilizzare il comando di avvio predefinito, specifica un valore null per questa opzione. Ad
 esempio:</dd>
@@ -274,10 +273,10 @@ sovrascrivere questo valore.</dd>
 Visualizza o modifica il numero di istanze,
 il limite di spazio su disco e il limite di memoria per un'applicazione.
 ```
-cf scale nome_applicazione -i numero_istanze -k limite_disco -m limite_memoria
+cf scale nomeapplicazione -i numero_istanze -k limite_disco -m limite_memoria
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-i*numero_istanze</dt>
 <dd>Il numero di istanze</dd>
@@ -304,10 +303,10 @@ cf services
 Imposta una
 variabile di ambiente per un'applicazione.
 ```
-cf set-env nome_applicazione nome_var valore_var
+cf set-env nomeapplicazione nome_var valore_var
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>nome_var</dt>
 <dd>Il nome della variabile di ambiente.</dd>
@@ -328,10 +327,10 @@ cf stacks
 
 Arresta un'applicazione.
 ```
-cf stop nome_applicazione
+cf stop nomeapplicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 </dl>
 
@@ -344,5 +343,7 @@ cf -v
 ```
 
 # rellinks
+{: #rellinks}
 ## general 
+{: #general}
 * [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "Sezione della piattaforma di home page dei documenti",
+	"items": [{
+		"title": "CLI e strumenti di sviluppo",
+		"description": "Strumenti di accesso, come un'interfaccia riga di comando unificata e i plug-in delle CLI.",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "Gestione di applicazioni",
+		"description": "Utilizza il dashboard nell'interfaccia utente Bluemix per visualizzare e gestire le tue applicazioni e i tuoi servizi.",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "Amministrazione degli account",
+		"description": "Gestisci organizzazioni e spazi, compreso l'accesso utente.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "Monitoraggio e registrazione",
+		"description": "Segui il flusso dei dati e l'utilizzo delle applicazioni per comprendere meglio la tua distribuzione.",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Prezzi",
+		"description": "Stima i costi con il calcolatore e vedi i costi effettivi con la vista dei dettagli di utilizzo.",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Risoluzione dei problemi",
+		"description": "Se riscontri dei problemi con la piattaforma, utilizza queste attività di risoluzione dei problemi per determinare le azioni da eseguire.",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Sicurezza della piattaforma",
+		"description": "Informazioni su come Bluemix fornisce la sicurezza funzionale, delle infrastrutture, operativa e fisica.",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "Ibrida",
+		"description": "Fornito come un servizio su modelli di distribuzione pubblici, dedicati e installati in loco.",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

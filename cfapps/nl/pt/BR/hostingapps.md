@@ -17,7 +17,7 @@ copyright:
 
 #Hospedando apps no {{site.data.keyword.Bluemix_notm}}
 
-*Última atualização: 18 de abril de 2016*
+*Última atualização: 9 de maio de 2016*
 
 <!--The whole topic is staging only -->
 
@@ -293,8 +293,12 @@ a qual está configurada para todos os aplicativos {{site.data.keyword.Bluemix_n
 Foundry.
 
 
-# rellinks
-## general 
+# Links Relacionados
+{: #rellinks}
+
+## Links Relacionados
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Máquinas virtuais](../virtualmachines/vm_index.html)
 * [Introdução ao Delivery Pipeline](../services/DeliveryPipeline/index.html)

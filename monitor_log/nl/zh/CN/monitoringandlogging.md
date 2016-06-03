@@ -14,7 +14,7 @@ copyright:
 #监视和日志记录
 {: #monitoringandlogging}
 
-*上次更新时间：2016 年 1 月 27 日*
+*上次更新时间：2016 年 5 月 11 日*
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
 {:shortdesc}
@@ -175,7 +175,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 </li></ul>
 
 
-**注：**有关如何启用应用程序日志记录的信息，请参阅[调试运行时错误](../troubleshoot/debugging.html#debug_runtime)。
+**注：**有关如何启用应用程序日志记录的信息，请参阅[调试运行时错误](../debug/index.html#debugging-runtime-errors)。
 
 
 

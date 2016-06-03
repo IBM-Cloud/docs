@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "Sección de plataforma de página inicial de documentos",
+	"items": [{
+		"title": "Herramientas CLI y Dev",
+		"description": "Acceso a herramientas, como una interfaz de línea de mandatos unificada y plug-ins de CLI.",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "Gestión de apps",
+		"description": "Utilice el panel de control en la interfaz de usuario de Bluemix para ver y gestionar las apps y los servicios. ",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "Administración de cuentas",
+		"description": "Gestionar organizaciones y espacios, incluido el acceso de usuario.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "Supervisión y registro",
+		"description": "Seguir el flujo de datos y uso de aplicaciones para comprender mejor su despliegue. ",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Tarifas",
+		"description": "Calcular los costes con la calculadora y ver los costes reales con la vista de detalles de uso. ",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Resolución de problemas",
+		"description": "Si tiene problemas con la plataforma, utilice estas tareas de resolución de problemas para determinar qué pasos debe emprender. ",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Seguridad de la plataforma",
+		"description": "Aprender cómo Bluemix proporciona seguridad funcional, de infraestructura, operativa y física. ",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "Híbrido",
+		"description": "Se distribuye como un servicio entre modelos de despliegue locales, públicos y dedicados. ",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

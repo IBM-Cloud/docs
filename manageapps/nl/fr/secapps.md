@@ -14,7 +14,7 @@ copyright:
 #Sécurisation des applications
 {: #securingapps}
 
-*Dernière mise à jour : 30 mars 2016*
+*Dernière mise à jour : 9 mai 2016*
 
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
@@ -83,18 +83,14 @@ d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléch
 Pour
 pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat. Voir [Création de demandes de signature de certificat](#ssl_csr).
 
-Pour servir correctement le certificat SSL, vous devez utiliser les adresses IP ci-après afin de configurer le serveur DNS lors
-de la création d'un domaine personnalisé, dans le but de fournir la route d'URL allouée à votre organisation dans
-{{site.data.keyword.Bluemix_notm}}.
+Lorsque vous utilisez un domaine personnalisé, pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route
+d'URL allouée à votre organisation dans Bluemix :
 
-* SUD DES ETATS-UNIS : 75.126.81.68
-* EUROPE-ROYAUME-UNI : 5.10.124.142
-* AUSTRALIE-SYDNEY : 168.1.35.166
 
-Les adresses IP que vous utilisez pour les environnements dédiés sont différentes. Prenez contact avec votre
-interlocuteur IBM afin d'obtenir l'adresse IP pour un environnement dédié.
+  * Sur des Etats-Unis : secure.us-south.bluemix.net 
+  * Europe-Royaume-Uni : secure.eu-gb.bluemix.net
+  * Australie-Sydney : secure.au-syd.bluemix.net 
 
-Pour plus d'informations sur la création d'un domaine personnalisé, voir [Création et utilisation d'un domaine personnalisé](updapps.html#domain).
 
 Pour télécharger un certificat pour votre application, procédez comme suit :
 
@@ -112,6 +108,9 @@ client définissant les accès utilisateur autorisés à votre domaine personnal
     
     Document numérique qui associe une clé publique à l'identité du propriétaire
 du certificat, permettant ainsi l'authentification du propriétaire du certificat. Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme.
+    
+    En général, un certificat est émis et signé par une autorité de certification. Toutefois, pour le test et le développement, vous pouvez
+utiliser un certificat autosigné. 
     
     Les types de certificat suivants sont pris en charge dans
 {{site.data.keyword.Bluemix_notm}}:

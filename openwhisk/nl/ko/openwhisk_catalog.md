@@ -242,7 +242,7 @@ copyright:
   {: screen}
 
 
-## 알람 패키지 사용
+## Alarm 패키지 사용
 {: #openwhisk_catalog_alarm}
 
 `/whisk.system/alarms` 패키지는 지정된 빈도로 트리거를 실행하기 위해 사용할 수 있습니다. 이는 시스템 백업 조치를 매시간마다 호출하는 것과 같이 반복 작업 또는 태스크를 설정하는 데 유용합니다.
@@ -275,7 +275,7 @@ copyright:
 생성된 각 이벤트는 `trigger_payload` 값에서 지정된 값을 매개변수로 포함합니다. 이 경우, 각 트리거 이벤트는 `name=Odin` 및 `place=Asgard` 매개변수를 갖게 됩니다.
 
 
-## 날씨 패키지 사용
+## Weather 패키지 사용
 {: #openwhisk_catalog_weather}
 
 `/whisk.system/weather` 패키지는 The Weather Company API를 호출하는 편리한 방법을 제공합니다.

@@ -344,6 +344,8 @@ el mosaico para el servicio al que desee acceder. Se mostrará el panel de contr
 {: #rellinks}
 
 ## general
+{: #general}
+
 * [Enlace de un servicio mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
 * [Recuperación de VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

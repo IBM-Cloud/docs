@@ -29,7 +29,7 @@ conjunto de ferramentas para o Cloud Foundry também funcionam com o {{site.data
 <li>
 <p class="runtimeIcon"><img src="images/javaweb_featured.svg" alt="Java Liberty" /></p>
 <p class="runtimeTitle">Liberty for Java</p>
-<p class="runtimeLink"><a format="html" href="../starters/liberty/index.html" scope="peer">VISUALIZAR
+<p class="runtimeLink"><a format="html" href="../runtimes/liberty/index.html" scope="peer">VISUALIZAR
 DOCS</a></p>
 </li>
 <li>

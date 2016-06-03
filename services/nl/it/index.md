@@ -12,7 +12,7 @@ copyright:
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 5 aprile 2016*
+*Ultimo aggiornamento: 10 maggio 2016*
 
 {{site.data.keyword.Bluemix_notm}} ti consente di implementare, ospitare o ridimensionare facilmente servizi e applicazioni. Potrai così concentrarti sulla logica e
 sulla progettazione dell'applicazione.
@@ -52,7 +52,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 
 |Servizio	|Disponibile nella regione Stati Uniti Sud	|Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|Sì		|No		|No|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Sì		|No		|No|
 |{{site.data.keyword.activedeployshort}}			|Sì		|Sì		|No|
 |{{site.data.keyword.alchemyapishort}} 		|Sì	   	|Sì  		|Sì|
 |{{site.data.keyword.alertnotificationshort}}		|Sì		|Sì			|Sì		|
@@ -84,7 +84,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.twittershort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.iot_short}}		|Sì		|No		|No|
+|{{site.data.keyword.iot_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.keymanagementserviceshort}}	|No		|Sì		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.messagehub}}		|Sì		|Sì		|No|
@@ -99,8 +99,8 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.nlclassifierlshort}} 	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.objectstorageshort}}	|Sì		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.mobilepush}}	|Sì		|Sì		|Sì|
-|Push for iOS 8					|Sì		|Sì		|No|
+|{{site.data.keyword.mobilepush}}		|Sì		|Sì		|Sì|
+|{{site.data.keyword.mobilepushshort}}				|Sì		|Sì		|Sì|
 |{{site.data.keyword.questionandanswershort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.rapidApps}}		|Sì		|Sì		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
@@ -125,6 +125,23 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.xpagesservice_short}}	|Sì		|Sì		|No|
 *Tabella 2. Disponibilità dei servizi*
+
+## Disponibilità continua per i servizi
+{{site.data.keyword.Bluemix_notm}} ha identificato una serie di servizi come di Livello 1. IBM non ritirerà alcun servizio di Livello 1 senza rendere disponibile un suo equivalente funzionale o senza fornire almeno un preavviso di ritiro di cinque anni. 
+
+I seguenti servizi sono classificati come di Livello 1:
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB da Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL da Compose
+  * {{site.data.keyword.ssofull}}
+
+Per ulteriori informazioni sui termini di utilizzo per i servizi, vedi [Termini di {{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
 
 ## Deprecazione servizio
 

@@ -57,7 +57,8 @@ Liberty ランタイム・アプリケーションのログ分析も提供され
 ### Node.js アプリケーションのステージング・エラーのデバッグ
 
 以下の例は、`cf logs appname --recent` を入力した後に表示されるログを示しています。この例では、Node.js
- アプリケーションに対するステージング・エラーが発生したと想定しています。```
+ アプリケーションに対するステージング・エラーが発生したと想定しています。
+```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
 2014-08-11T14:20:44.19+0100 [App/0]   ERR
@@ -141,6 +142,7 @@ SystemErr のエントリーをそれぞれ探してください。
 {: #rellinks}
 
 ## 一般
+{: #general}
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [IBM Monitoring and Analytics for Bluemix サービス入門](../services/monana/index.html#gettingstartedtemplate){: new_window}

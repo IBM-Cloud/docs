@@ -93,7 +93,7 @@ La spesa di investimento preliminare, a consumo per lo sviluppo completo e la di
 
 Un elemento di lavoro di sviluppo che tiene traccia di quando le modifiche apportate da un team devono essere adottate da un altro team.
 
-### AES (Advanced Encryption Standard) 
+### AES (Advanced Encryption Standard)
 {: #x2897510}
 
 Una tecnica di crittografia dei dati che migliora e sostituisce ufficialmente DES (Data Encryption Standard).
@@ -355,7 +355,7 @@ Una raccolta di script che preparano il tuo codice all'esecuzione su Bluemix. I 
 ### caso di business
 {: #x2214436}
 
-Un template utilizzato in Sistema di gestione trasformazione di business (BTMS) per fornire informazioni sul caso di business per un programma (durante la gestione portfolio BT) o un progetto (durante le fasi di elaborazione delle operazioni BT). Include informazioni sulle aree dei valori (contenimento dei costi, riduzione dei costi, rinnovo incrementale, rinnovo per migrazione su base web, ecc.) e la quantificazione del valore per tutta la durata dell'investimento. 
+Un template utilizzato in Sistema di gestione trasformazione di business (BTMS) per fornire informazioni sul caso di business per un programma (durante la gestione portfolio BT) o un progetto (durante le fasi di elaborazione delle operazioni BT). Include informazioni sulle aree dei valori (contenimento dei costi, riduzione dei costi, rinnovo incrementale, rinnovo per migrazione su base web, ecc.) e la quantificazione del valore per tutta la durata dell'investimento.
 
 ### controllo progettazione di business (BDA)
 {: #x2214441}
@@ -1014,9 +1014,9 @@ Un raggruppamento dei piani del progetto composto da due tipi di stato projects-
 ### proposta progetto iniziale (IPP)
 {: #x2214662}
 
-Sviluppata dal PDT durante la fase concetto. È formata dalla seguente documentazione: template statuto PDT, primo foglio del processo delle operazioni di trasformazione di business (BTOP), template di business BTOP (elementi della fase concetto), documento della proposta di soluzione dell'architettura (APD) e piano del progetto integrato (normalmente questo piano viene creato dal gestore del progetto della soluzione o dal gestore del progetto tecnico). Il IPP può contenere ulteriore documentazione proveniente da altre origini come ritenuto appropriato dal PDTL. 
+Sviluppata dal PDT durante la fase concetto. È formata dalla seguente documentazione: template statuto PDT, primo foglio del processo delle operazioni di trasformazione di business (BTOP), template di business BTOP (elementi della fase concetto), documento della proposta di soluzione dell'architettura (APD) e piano del progetto integrato (normalmente questo piano viene creato dal gestore del progetto della soluzione o dal gestore del progetto tecnico). Il IPP può contenere ulteriore documentazione proveniente da altre origini come ritenuto appropriato dal PDTL.
 
-### iniziativa 
+### iniziativa
 {: #x2214669}
 
 Un gruppo di soluzioni, progetti e asset correlati che, quando sviluppati e distribuiti, effettuano una trasformazione del business. Le iniziative sono sviluppate nella pianificazione della trasformazione del business.
@@ -1138,7 +1138,7 @@ Vedi [JavaScript Object Notation](#x3292165).
 ## L
 {: #glossl}
 
-### livello 
+### livello
 {: #x2028320}
 
 Una versione modificata di un'immagine principale. Le immagini sono costituite da livelli, dove la versione modificata viene sovrapposta all'immagine principale per creare la nuova immagine. Vedi anche [contenitore](#x2010901), [immagine](#x2024928).
@@ -1694,7 +1694,7 @@ Un processo di autenticazione in cui un utente può accedere a più di un sistem
 ### SLA
 {: #x2094369}
 
-Vedi [SLA (Service Level Agreement)](#x2038403). 
+Vedi [SLA (Service Level Agreement)](#x2038403).
 
 ### software as a service (SaaS)
 {: #x4585386}

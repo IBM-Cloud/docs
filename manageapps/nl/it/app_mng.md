@@ -31,7 +31,7 @@ Questi programmi di utilità supportano sia Liberty che Node.js.
 	
   2. *devconsole*: abilita il programma di utilità della console di sviluppo che è accessibile al seguente URL:
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/manage
+    http://<ilnomedellatuaapplicazione>.mybluemix.net/bluemix-debug/manage
     ```
 	
     Mediante la console di sviluppo, gli utenti possono riavviare, arrestare o sospendere le proprie applicazioni. Gli utenti possono anche abilitare o accedere ai programmi di utilità shell e inspector.
@@ -44,7 +44,7 @@ Questi programmi di utilità supportano sia Liberty che Node.js.
 	
   4. *shell*: abilita una shell basata su Web a cui è possibile accedere dal programma di utilità devconsole o mediante il seguente URL:
     ```
-    http://<yourappname>.mybluemix.net/bluemix-debug/shell
+    http://<ilnomedellatuaapplicazione>.mybluemix.net/bluemix-debug/shell
     ```
 	
     Dopo aver effettuato l'accesso al programma di utilità shell, viene visualizzata una finestra di terminale con l'accesso shell nella tua applicazione. Puoi effettuare tutte le attività supportate in una normale shell, ad esempio modificare i file, controllare l'utilizzo della memoria o eseguire i comandi di diagnostica.
@@ -82,28 +82,28 @@ Questi programmi di utilità supportano solo Node.js.
     1. Configura la variabile di ambiente *strongpm* BlUEMIX_APP_MGMT_ENABLE e prepara di nuovo l'applicazione.
     
 	```
-    cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
+    cf set-env <nomeapplicazione> BLUEMIX_APP_MGMT_ENABLE strongpm
+    cf restage <nomeapplicazione>
+```
 	
-    2. Dalla riga di comando Cloud Foundry, aggiungi una rotta alla tua applicazione, dove la rotta ha "-pm" aggiunto al nome applicazione, ad esempio <appname>-pm.mybluemix.net.
+    2. Dalla riga di comando Cloud Foundry, aggiungi una rotta alla tua applicazione, dove la rotta ha "-pm" aggiunto al nome applicazione, ad esempio <nomeapplicazione>-pm.mybluemix.net.
     
 	```
-    cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
+    cf map-route <nomeapplicazione> ng.bluemix.net -n <nomeapplicazione>-pm
+```
 	
     3. Installa il [modulo StrongLoop npm](https://www.npmjs.com/package/strongloop){:new_window} sulla tua workstation locale.
     
 	```
     npm install -g strongloop
-    ```
+```
 	
-    4. Crea un account sul[sito Web di StrongLoop](https://strongloop.com/register/){:new_window}.
+    4. Crea un account sul [sito Web di StrongLoop](https://strongloop.com/register/){:new_window}.
     5. Avvia Arc sulla tua workstation locale e accedi con l'account creato.
     
 	```
     slc arc
-    ```
+```
 	
     6. Passa alla vista Process Manager all'interno di Arc. Immetti la rotta appena creata con la porta 80 in Process Manager. Premi il pulsante Attiva. Per ulteriori dettagli, consulta la [documentazione completa sull'utilizzo di Arc](https://docs.strongloop.com/display){:new_window}.
 	

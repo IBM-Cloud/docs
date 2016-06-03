@@ -1,0 +1,46 @@
+﻿
+	"id": "docs_homepage",
+	"descriptionTitle": "Section de la plateforme de page d'accueil de la documentation ",
+	"items": [{
+		"title": "Interface de ligne de commande et outils de développement",
+		"description": "Accédez à des outils tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in d'interface de ligne de commande. ",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "Gestion des applications",
+		"description": "Utilisez le tableau de bord dans l'interface utilisateur Bluemix pour afficher et gérer vos applications et vos services. ",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "Administration de compte ",
+		"description": "Gérez les organisations et les espaces, y compris l'accès utilisateur. ",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "Surveillance et journalisation",
+		"description": "Effectuez le suivi du flux de données et de l'utilisation des applications afin de mieux comprendre votre déploiement. ",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Tarification",
+		"description": "Estimez les coûts avec la calculatrice et affichez les coûts réels dans la vue Détails sur l'utilisation. ",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Traitement des incidents",
+		"description": "Si vous rencontrez des problèmes liés à la plateforme, procédez à une opération de traitement des incidents afin de déterminer les actions à mener.",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Sécurité de la plateforme ",
+		"description": "Découvrez comment Bluemix assure une sécurité fonctionnelle, d'infrastructure, opérationnelle et physique. ",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "Environnement hybride",
+		"description": "Distribué en tant que service dans des modèles de déploiement publics, dédiés et sur site. ",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

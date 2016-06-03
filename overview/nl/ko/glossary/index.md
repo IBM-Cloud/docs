@@ -138,7 +138,7 @@ IBM은 업계 선도 소프트웨어 개발자와 개발 및 마케팅 관계(�
 
 [API(Application Programming Interface)](#x2000186)를 참조하십시오. 
 
-### app
+### 앱(app)
 {: #x4281528}
 
 웹 또는 모바일 디바이스 애플리케이션입니다. [모바일 애플리케이션](#x4258535), [웹 애플리케이션](#x2116500)도 참조하십시오.
@@ -163,7 +163,7 @@ IBM Mobile Quality Assurance에 데이터를 보고할 때 애플리케이션이
 
 고급 언어로 작성되는 애플리케이션 프로그램이 특정 데이터 또는 운영 체제나 다른 프로그램의 기능을 사용할 수 있도록 허용하는 인터페이스입니다.
 
-### ASCA(application systems control and auditability)
+### ASCA(Application Systems Control and Auditability)
 {: #x2214361}
 
 
@@ -181,7 +181,7 @@ e-business 아키텍처 블루프린트, 애플리케이션/데이터 아키텍�
 ### ASCA
 {: #x2214363}
 
-[ASCA(application systems control and auditability)](#x2214361)를 참조하십시오.
+[ASCA(Application Systems Control and Auditability)](#x2214361)를 참조하십시오.
 
 ### 자산 소유자 역할(asset owner role)
 {: #x2214339}
@@ -247,7 +247,7 @@ Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우�
 ### BDA
 {: #x2214443}
 
-[BDA(business design assurance)](#x2214441)를 참조하십시오.
+[BDA(Business Design Assurance)](#x2214441)를 참조하십시오.
 
 ### 베타 서비스(beta service)
 {: #x7470455}
@@ -257,7 +257,7 @@ Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우�
 ### BIE
 {: #x2214380}
 
-[BIE(business information executive)](#x2214378)를 참조하십시오.
+[BIE(Business Information Executive)](#x2214378)를 참조하십시오.
 
 ### 바인드(bind)
 {: #x2000361}
@@ -292,7 +292,7 @@ Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우�
 ### BPE
 {: #x2149376}
 
-[BPE(business process executive)](#x2214384)를 참조하십시오.
+[BPE(Business Process Executive)](#x2214384)를 참조하십시오.
 
 ### 분기(branch)
 {: #x2050278}
@@ -308,7 +308,7 @@ Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우�
 ### BT CIO
 {: #x2214406}
 
-[BT CIO(business transformation/chief information officer)](#x2214404)를 참조하십시오.
+[BT CIO(Business Transformation/Chief Information Officer)](#x2214404)를 참조하십시오.
 
 ### BTMS
 {: #x2205929}
@@ -323,7 +323,7 @@ Agile 개발에서 개발 팀이 작업을 지정하기 위해 평가하고 우�
 ### BTOP
 {: #x2214427}
 
-[BTOP(business transformation operations process)](#x2214425)를 참조하십시오.
+[BTOP(Business Transformation Operations Process)](#x2214425)를 참조하십시오.
 
 ### BTOP Lite
 {: #x2214431}
@@ -345,12 +345,12 @@ Bluemix에서 실행할 코드를 준비하는 스크립트의 콜렉션입니�
 
 프로그램(BT 포트폴리오 관리 중에) 또는 프로젝트(BT 운영 프로세스 단계 중에)에 대한 비즈니스 케이스 관련 정보를 제공하기 위해 BTMS(Business Transformation Management System)에서 사용되는 템플리트입니다. 여기에는 가치 영역(비용 차단, 비용 절감, 수익 증가, 웹 베이스로 수익 이전 등) 및 투자 수명에서 가치 규정에 관한 정보가 포함됩니다.
 
-### BDA(business design assurance)
+### BDA(Business Design Assurance)
 {: #x2214441}
 
 비즈니스 프로세스 디자인을 비즈니스 규칙, 비즈니스 전략 및 목표, 관련 애플리케이션 아키텍처에 링크하고 이의 유효성을 검증하기 위한 구조화된 접근 방법을 제공하는 프로세스입니다.
 
-### BIE(business information executive)
+### BIE(Business Information Executive)
 {: #x2214378}
 
 
@@ -360,7 +360,7 @@ Bluemix에서 실행할 코드를 준비하는 스크립트의 콜렉션입니�
 
 IBM 포트폴리오를 분석하고, 이를 경쟁적 상황과 비교하며, 전략을 사용하여 방향을 유도하고, 최종적으로는 최상의 변환 기회를 결정함으로써 IBM이 시장에서 경쟁력을 유지할 수 있도록 보장하는 일련의 프로세스입니다.
 
-### BPE(business process executive)
+### BPE(Business Process Executive)
 {: #x2214384}
 
 프로세스와 애플리케이션이 회사 전략 및 IT 인프라와 맞도록 작업하는 비즈니스 변환 관리 시스템의 핵심 역할입니다.
@@ -375,12 +375,12 @@ IBM 포트폴리오를 분석하고, 이를 경쟁적 상황과 비교하며, �
 
 조치 또는 이벤트의 투영된 과정에 대한 기술 또는 개요입니다. 이 시나리오는 주요 엔드-투-엔드 비즈니스 트랜잭션을 정의하고 문서화하며, 사람과 조직이 상호작용하여 정의된 프로세스, 비즈니스 트랜잭션을 실행하는 방법 및 최종적으로 엔드-투-엔드 프로세스 디자인을 지원하는 시스템 및 애플리케이션을 활용하는 방법을 알려줍니다. 시스템과 사용자의 상호작용을 정의하기 위해 비즈니스 디자인 보증 프로세스에서 사용됩니다.
 
-### BT(business transformation)
+### BT(Business Transformation)
 {: #x2214398}
 
 
 
-### BT CIO(business transformation/chief information officer)
+### BT CIO(Business Transformation/Chief Information Officer)
 {: #x2214404}
 
 
@@ -400,7 +400,7 @@ IBM 및 시장의 요구사항을 충족하기 위해 IBM 포트폴리오를 관
 
 BTMS의 솔루션 개발 프로세스를 통한 솔루션, 프로젝트 및 자산 개발을 관리하기 위해 BT-CIO에서 개발한 워크플로우 도구입니다. BTMT는 마케팅 활동 시작, 새 웹 사이트 요청, 임의의 자산 유형(애플리케이션, 도구, 팀 룸, 데이터 저장소, 양식 또는 인프라시스템 서비스)의 개발 새로 시작, 임의의 자산 유형의 배치, 일단 배치된 자산의 관리 또는 IT 펀딩 요청(IPP#)의 요구 등을 완수하기 위해 사용됩니다.
 
-### BTOP(business transformation operations process)
+### BTOP(Business Transformation Operations Process)
 {: #x2214425}
 
 
@@ -549,7 +549,7 @@ BIE, BPE 또는 BTE에 대한 일반 용어입니다.
 ### 개념 단계(concept phase)
 {: #x2214500}
 
-PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발하기 위한 기능과 요구사항을 확인하고, 템플리트를 포함한 초기 프로젝트 제안을 개발하며, 차기 단계에 대한 펀딩을 결정하는 BTOP(Business transformation operations process) 단계입니다.
+PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발하기 위한 기능과 요구사항을 확인하고, 템플리트를 포함한 초기 프로젝트 제안을 개발하며, 차기 단계에 대한 펀딩을 결정하는 BTOP(Business Transformation Operations Process) 단계입니다.
 
 ### 컨테이너(container)
 {: #x2010901}
@@ -658,7 +658,7 @@ PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발
 ### 인도물 승인 인증서(deliverable acceptance certificate)
 {: #x2214515}
 
-이 인증서는 고객의 단계 종료 검토에 대한 입력입니다. 일단 고객의 PDTL(project development team leader) 및 IGS의 (SPM(solution project manager)에 의해 서명되면, 이는 해당 단계의 SOW(statement of work)에서 지정된 대로 인도물의 완료를 확인하고 식별합니다.
+이 인증서는 고객의 단계 종료 검토에 대한 입력입니다. 일단 고객의 PDTL(project development team leader) 및 IGS의 (SPM(solution project manager)에 의해 서명되면, 이는 해당 단계의 SOW(Statement Of Work)에서 지정된 대로 인도물의 완료를 확인하고 식별합니다.
 
 ### DPE(Delivery Project Executive)
 {: #x2214525}
@@ -679,7 +679,7 @@ PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발
 ### 개발 단계(develop phase)
 {: #x2214537}
 
-솔루션이 개발되는 BTOP(business transformation operations process) 단계입니다.
+솔루션이 개발되는 BTOP(Business Transformation Operations Process) 단계입니다.
 
 ### DevOps
 {: #x5784896}
@@ -735,7 +735,7 @@ PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발
 
 솔루션파트너(ISV) 및 기타 도구 개발자에게 플러그 호환 애플리케이션 개발 도구의 개발을 위한 표준 플랫폼을 제공하는 오픈 소스 이니셔티브입니다.
 
-### EOL(end of life)
+### EOL(End Of Life)
 {: #x2214573}
 
 애플리케이션의 유효 수명에 대한 종료를 의미합니다. 운영 관리 팀은 수명주기의 종료 시에 애플리케이션을 중단하는 활동을 조정합니다.
@@ -763,7 +763,7 @@ PDT가 요구사항을 파악하고, 개념을 개발하며, 솔루션을 개발
 ### EOL
 {: #x2214575}
 
-[EOL(end of life)](#x2214573)을 참조하십시오.
+[EOL(End Of Life)](#x2214573)을 참조하십시오.
 
 ### epic
 {: #x5788994}
@@ -784,10 +784,10 @@ Agile 개발에서 대규모 작업 또는 작업의 양을 알 수 없는 큰 �
 
 Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리지 영역입니다.
 
-### FPP(final project proposal)
+### FPP(Final Project Proposal)
 {: #x2214585}
 
-플랜 단계에서 PDT에 의해 개발되며, 플랜 단계에서 합의된 IPMT/PDT 계약의 기반입니다. 이는 BTOP(business transformation operations process) 탑시트, BTOP 비즈니스 템플리트(플랜 단계 항목), ADD(architecture solution definition document), IPMT/PDT 계약 및 통합 프로젝트 플랜(이 플랜은 일반적으로 솔루션 프로젝트 관리자 또는 기술 프로젝트 관리자에 의해 수행됨) 등의 문서로 구성됩니다. FPP에는 PDTL에 의해 적합하다고 간주되는 기타 소스의 추가 문서가 포함될 수 있습니다. 템플리트(BTOP 비즈니스 템플리트, BTOP 아키텍처 및 기술 템플리트) 및 통합 프로젝트 플랜은 프로젝트가 전개되면서 지속적으로 단계별로 업데이트됩니다. 그러나 프로젝트가 플랜 IPMT/PDT 계약의 한계를 초과하여 확장 중임을 결과에서 표시하는 경우에는 IPMT와의 중간 DCP가 유지되어야 합니다.
+플랜 단계에서 PDT에 의해 개발되며, 플랜 단계에서 합의된 IPMT/PDT 계약의 기반입니다. 이는 BTOP(Business Transformation Operations Process) 탑시트, BTOP 비즈니스 템플리트(플랜 단계 항목), ADD(architecture solution definition document), IPMT/PDT 계약 및 통합 프로젝트 플랜(이 플랜은 일반적으로 솔루션 프로젝트 관리자 또는 기술 프로젝트 관리자에 의해 수행됨) 등의 문서로 구성됩니다. FPP에는 PDTL에 의해 적합하다고 간주되는 기타 소스의 추가 문서가 포함될 수 있습니다. 템플리트(BTOP 비즈니스 템플리트, BTOP 아키텍처 및 기술 템플리트) 및 통합 프로젝트 플랜은 프로젝트가 전개되면서 지속적으로 단계별로 업데이트됩니다. 그러나 프로젝트가 플랜 IPMT/PDT 계약의 한계를 초과하여 확장 중임을 결과에서 표시하는 경우에는 IPMT와의 중간 DCP가 유지되어야 합니다.
 
 ### 재무 리드 역할(finance lead role)
 {: #x2214580}
@@ -803,7 +803,7 @@ Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리�
 ### FPP
 {: #x2214587}
 
-[FPP(final project proposal)](#x2214585)를 참조하십시오.
+[FPP(Final Project Proposal)](#x2214585)를 참조하십시오.
 
 ### 프레임워크(framework)
 {: #x2023472}
@@ -813,9 +813,9 @@ Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리�
 ### FRMP
 {: #x2214594}
 
-[FRMP(fulfillment reengineering management plan)](#x2214592)를 참조하십시오.
+[FRMP(Fulfillment Reengineering Management Plan)](#x2214592)를 참조하십시오.
 
-### FRMP(fulfillment reengineering management plan)
+### FRMP(Fulfillment Reengineering Management Plan)
 {: #x2214592}
 
 
@@ -827,7 +827,7 @@ Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리�
 ### GAMSD
 {: #x2214605}
 
-[GAMSD(global application management services delivery)](#x2214603)를 참조하십시오. 
+[GAMSD(Global Application Management Services Delivery)](#x2214603)를 참조하십시오. 
 
 ### GB-시간(GB-hour)
 {: #x7470477}
@@ -844,7 +844,7 @@ Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리�
 
 소스 제어 관리를 위한 오픈 소스 프로그램입니다.
 
-### GAMSD(global application management services delivery)
+### GAMSD(Global Application Management Services Delivery)
 {: #x2214603}
 
 
@@ -854,12 +854,12 @@ Bluemix에서, 볼륨이 포함된 클라우드 기반 공유 파일 스토리�
 
 시스템 내의 엔티티를 고유하게 식별하는 알고리즘에 따라 결정된 숫자입니다. [앱 ID](#x7909906)도 참조하십시오.
 
-### GNA(global notes architecture)
+### GNA(Global Notes Architecture)
 {: #x2214612}
 
 
 
-### GPE(global project executive)
+### GPE(Global Project Executive)
 {: #x2214622}
 
 IBM Global Services 역할입니다.
@@ -867,12 +867,12 @@ IBM Global Services 역할입니다.
 ### GNA
 {: #x2214614}
 
-[GNA(global notes architecture)](#x2214612)를 참조하십시오. 
+[GNA(Global Notes Architecture)](#x2214612)를 참조하십시오. 
 
 ### GPE
 {: #x2214624}
 
-[GPE(global project executive)](#x2214622)를 참조하십시오.
+[GPE(Global Project Executive)](#x2214622)를 참조하십시오.
 
 ### GUID
 {: #x2390457}
@@ -960,7 +960,7 @@ IGA 용량 관리 팀은 배치된 포트폴리오의 운영 관리 단계 전�
 ### IMP
 {: #x2214647}
 
-[IMP(infrastructure master plan)](#x2214645)를 참조하십시오.
+[IMP(Infrastructure Master Plan)](#x2214645)를 참조하십시오.
 
 ### 장애(impediment)
 {: #x4015600}
@@ -977,15 +977,15 @@ IGA 용량 관리 팀은 배치된 포트폴리오의 운영 관리 단계 전�
 
 비즈니스/변환 이니셔티브 또는 기술 목표의 지원에서 인프라 변경을 달성하기 위한 인프라 프로그램 또는 프로젝트의 세트입니다. 
 
-### IMP(infrastructure master plan)
+### IMP(Infrastructure Master Plan)
 {: #x2214645}
 
 공통 인프라에 대해 구현된 두 프로젝트 유형(정적 상태 및 변경 에이전트)으로 구성된 프로젝트 플랜의 그룹화입니다. IMP는 인프라 관리 목적을 위해 단일 플랜으로서 팀의 개별 프로젝트 관리자가 개발하고 실행하는 모든 플랜을 봅니다. 
 
-### IPP(initial project proposal)
+### IPP(Initial Project Proposal)
 {: #x2214662}
 
-개념 단계 중에 PDT에 의해 개발됩니다. 이는 PDT 차터 템플리트, BTOP(business transformation operations process) 탑시트, BTOP 비즈니스 템플리트(개념 단계 항목), APD(architecture solution proposal document), 그리고 초기 통합 프로젝트 플랜(이 플랜은 일반적으로 솔루션 프로젝트 관리자 또는 기술 프로젝트 관리자에 의해 수행됨) 등의 문서로 구성됩니다. IPP에는 PDTL에 의해 적합하다고 간주되는 기타 소스의 추가 문서가 포함될 수 있습니다.
+개념 단계 중에 PDT에 의해 개발됩니다. 이는 PDT 차터 템플리트, BTOP(Business Transformation Operations Process) 탑시트, BTOP 비즈니스 템플리트(개념 단계 항목), APD(architecture solution proposal document), 그리고 초기 통합 프로젝트 플랜(이 플랜은 일반적으로 솔루션 프로젝트 관리자 또는 기술 프로젝트 관리자에 의해 수행됨) 등의 문서로 구성됩니다. IPP에는 PDTL에 의해 적합하다고 간주되는 기타 소스의 추가 문서가 포함될 수 있습니다.
 
 ### 이니셔티브(initiative)
 {: #x2214669}
@@ -1005,7 +1005,7 @@ IGA 용량 관리 팀은 배치된 포트폴리오의 운영 관리 단계 전�
 ### IPMT(Integrated Portfolio Management Team)
 {: #x2118026}
 
-글로벌 레벨에서 제품 오퍼링의 포트폴리오에 대한 WW 비즈니스 성과를 책임지는 그룹입니다. 교차 기능 팀은 지속적인 비즈니스 투자 의사결정을 내리는 책임을 지는 BPE, BIE, WWPL 및 GS의 선임 실무자로 구성됩니다. [PDT(project development team)](#x2422165)도 참조하십시오.
+글로벌 레벨에서 제품 오퍼링의 포트폴리오에 대한 WW 비즈니스 성과를 책임지는 그룹입니다. 교차 기능 팀은 지속적인 비즈니스 투자 의사결정을 내리는 책임을 지는 BPE, BIE, WWPL 및 GS의 선임 실무자로 구성됩니다. [PDT(Project Development Team)](#x2422165)도 참조하십시오.
 
 ### IPD(Integrated Product Development)
 {: #x2213501}
@@ -1065,7 +1065,7 @@ IM은 웹 사이트 디자인 및 탐색, 애플리케이션 개발 및 호스�
 ### IPP
 {: #x2214664}
 
-[IPP(initial project proposal)](#x2214662)를 참조하십시오.
+[IPP(Initial Project Proposal)](#x2214662)를 참조하십시오.
 
 ### IRB
 {: #x2205862}
@@ -1308,12 +1308,12 @@ Bluemix의 사용자를 위한 그룹화 방법입니다. 조직은 할당량을
 ### PDR
 {: #x2214726}
 
-[PDR(preliminary design review)](#x2214724)을 참조하십시오.
+[PDR(Preliminary Design Review)](#x2214724)을 참조하십시오.
 
 ### PDT
 {: #x2118295}
 
-[PDT(project development team)](#x2422165)를 참조하십시오.
+[PDT(Project Development Team)](#x2422165)를 참조하십시오.
 
 ### PDT 설계자 리드(PDT architect lead)
 {: #x2214734}
@@ -1338,7 +1338,7 @@ IBM의 변환 이니셔티브 및 IBM의 비즈니스 결과에 대한 이의 �
 ### 플랜 단계(plan phase)
 {: #x2214756}
 
-프로젝트 플랜을 개발하고, 스케줄 및 자원(fINAL pROJECT pRoposal, IPMT 및 PDT 계약)을 커미트하며, 다음 두 단계에 대한 펀딩을 릴리스하는 BTOP(Business transformation operations process) 단계입니다.
+프로젝트 플랜을 개발하고, 스케줄 및 자원(fINAL pROJECT pRoposal, IPMT 및 PDT 계약)을 커미트하며, 다음 두 단계에 대한 펀딩을 릴리스하는 BTOP(Business Transformation Operations Process) 단계입니다.
 
 ### PaaS(Platform as a Service)
 {: #x2029786}
@@ -1354,9 +1354,9 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.
 ### PMI
 {: #x2063298}
 
-[PMI(project management institute)](#x2214765)를 참조하십시오.
+[PMI(Project Management Institute)](#x2214765)를 참조하십시오.
 
-### PDR(preliminary design review)
+### PDR(Preliminary Design Review)
 {: #x2214724}
 
 플랜 단계 중에 시스템 엔지니어(SE)가 수행하는 검토입니다.
@@ -1435,12 +1435,12 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.
 
 폴더 또는 패키지를 그룹화하는 데 사용되는 조직화된 콜렉션입니다. 프로젝트는 단일 작업과 관련된 빌드, 버전 관리, 공유 및 자원 구성에 사용됩니다.
 
-### PDT(project development team)
+### PDT(Project Development Team)
 {: #x2422165}
 
 새 오퍼링의 솔루션 개발 주기를 실행하기 위해 스폰서링 IPMT에서 임명하는 기술 및 비즈니스 팀입니다. [IPMT(Integrated Portfolio Management Team)](#x2118026)도 참조하십시오.
 
-### PMI(project management institute)
+### PMI(Project Management Institute)
 {: #x2214765}
 
 
@@ -1482,7 +1482,7 @@ Java 및 웹 2.0 런타임 환경 등 컴퓨팅 플랫폼을 제공합니다.
 ### 품질보증 단계(qualify phase)
 {: #x2214800}
 
-품질보증 및 확인하는 BTOP(Business transformation operations process) 단계입니다. 활동에는 솔루션을 프로덕션으로 승격, 인프라 준비 확인, 수명 종료 및 다음 펀딩 단계로 이동하기 위한 펀드 릴리스 등이 포함됩니다.
+품질보증 및 확인하는 BTOP(Business Transformation Operations Process) 단계입니다. 활동에는 솔루션을 프로덕션으로 승격, 인프라 준비 확인, 수명 종료 및 다음 펀딩 단계로 이동하기 위한 펀드 릴리스 등이 포함됩니다.
 
 
 ## R
@@ -1686,7 +1686,7 @@ IT 솔루션의 개발 및 배치를 위한 중심입니다. SPM은 기술 제�
 ### SOR
 {: #x2214822}
 
-[SOR(System of Record)](#x6735061)을 참조하십시오. [SOR(statement of requirements)](#x2214820)을 참조하십시오.
+[SOR(System of Record)](#x6735061)을 참조하십시오. [SOR(Statement Of Requirements)](#x2214820)을 참조하십시오.
 
 ### 소스 제어 관리(SCM, source control management)
 {: #x3579285}
@@ -1696,7 +1696,7 @@ IT 솔루션의 개발 및 배치를 위한 중심입니다. SPM은 기술 제�
 ### SOW
 {: #x2214903}
 
-[SOW(statement of work)](#x2214901)를 참조하십시오.
+[SOW(Statement Of Work)](#x2214901)를 참조하십시오.
 
 ### 영역(space)
 {: #x2039442}
@@ -1756,12 +1756,12 @@ IT 솔루션의 개발 및 배치를 위한 중심입니다. SPM은 기술 제�
 
 특정 빌드팩으로 구성된 미리 정의된 서비스와 애플리케이션 코드를 포함하는 템플리트입니다. 스타터는 특정 프로그래밍 언어로 작성된 애플리케이션 코드 또는 애플리케이션 코드와 일련의 서비스의 조합일 수 있습니다. [런타임](#x2391929)도 참조하십시오.
 
-### SOR(statement of requirements)
+### SOR(Statement Of Requirements)
 {: #x2214820}
 
 
 
-### SOW(statement of work)
+### SOW(Statement Of Work)
 {: #x2214901}
 
 고객의 서비스 요청에 대한 응답으로 프로젝트 관리자(PM)가 준비하는 문서입니다. 프로젝트 SOW는 기술 솔루션 제안이며, 이는 인도물을 기술하고 모든 글로벌 서비스 위험성 및 영향, 인프라 투자, 용량, 비용 요소, 가정 및 종속 항목을 식별해야 합니다.
@@ -1776,7 +1776,7 @@ IT 솔루션의 개발 및 배치를 위한 중심입니다. SPM은 기술 제�
 
 IBM 내부 비즈니스 프로세스의 지원에서 활용되는 중요한 제휴입니다.
 
-### SPT(strategy and plans team)
+### SPT(Strategy and Plans Team)
 {: #x2214912}
 
 세그먼트 전략 및 플랜의 개발에서 지원하는 그룹입니다. 
@@ -2040,7 +2040,7 @@ IBM DevOps Services에서 Eclipse의 오픈 소스 Orion 플랫폼에 빌드되�
 
 
 
-### WWQA(worldwide quality assurance)
+### WWQA(WorldWide Quality Assurance)
 {: #x2215010}
 
 
@@ -2053,7 +2053,7 @@ IBM DevOps Services에서 Eclipse의 오픈 소스 Orion 플랫폼에 빌드되�
 ### WWQA
 {: #x2215012}
 
-[WWQA(worldwide quality assurance)](#x2215010)를 참조하십시오.
+[WWQA(WorldWide Quality Assurance)](#x2215010)를 참조하십시오.
 
 
 ## X

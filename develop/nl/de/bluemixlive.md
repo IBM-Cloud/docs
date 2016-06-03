@@ -4,18 +4,20 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，20166
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Letzte Aktualisierung: 8. April 2016*  
+*Letzte Aktualisierung: 7. April 2016*  
 
 Wenn Sie eine Node.js-Anwendung erstellen, können Sie {{site.data.keyword.Bluemix}} Live Sync dazu verwenden, die Anwendungsinstanz ohne großen Zeitaufwand in {{site.data.keyword.Bluemix_notm}} zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.   
 {: shortdesc}
@@ -31,7 +33,7 @@ Wenn Sie eine Änderung vornehmen, ist diese Änderung sofort in der aktiven {{s
     Sie können Änderungen an einer in {{site.data.keyword.Bluemix_notm}} ausgeführten Node.js-Anwendung vornehmen und diese sofort in Ihrem Browser testen. Alle Änderungen in einem synchronisierten Desktop-Verzeichnis oder in der Web-IDE werden umgehend an das Dateisystem der Anwendung weitergegeben.  
 
 **Debug**  
-    Wenn sich eine Node.js-Anwendung im Live Edit-Modus befindet, können Sie einen Shellzugriff einrichten und die Anwendung debuggen. Sie können Code dynamisch bearbeiten, Unterbrechnungspunkte einfügen, Code schrittweise durchgehen, die Laufzeit erneut starten und weitere Aktionen mit dem Node Inspector-Debugger durchführen.  
+    Wenn sich eine Node.js-Anwendung im Live Edit-Modus befindet, können Sie einen Shellzugriff einrichten und die Anwendung debuggen. Sie können Code dynamisch bearbeiten, Unterbrechungspunkte einfügen, Code schrittweise durchgehen, die Laufzeit erneut starten und weitere Aktionen mit dem Node Inspector-Debugger durchführen.  
 
 Mit Desktop Sync können Sie den Desktop-Arbeitsbereich mit dem cloudbasierten Projektarbeitsbereich synchron halten, den Sie direkt mit der Web-IDE bearbeiten. Mit Live Edit können Sie Änderungen am cloudbasierten Projektarbeitsbereich an die aktive Anwendung weitergeben. Sie können eines oder beide dieser Features verwenden. Wenn Sie mit Desktop Sync oder Live Edit die Anwendung in den Live Edit-Modus versetzen, können Sie die aktive Anwendung auch debuggen.
 
@@ -194,79 +196,88 @@ Mithilfe der Befehle der **bl**-Befehlszeilenschnittstelle können Sie die folge
 Weitere Informationen zum Herunterladen und Verwenden des Befehls 'bl' finden Sie in der Veröffentlichung [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## bl-Befehle
+{: #bl_commands}
 
 Die {{site.data.keyword.Bluemix_live}}-Befehlszeile **bl** hat die folgende Syntax:
 
 ```
 bl Befehl [Argumente][options] [--help]
 ```
+{: pre}
 
-### Befehle
-<dl>
-<dt>login, l</dt>
-<dd>Anmeldung bei {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>logout, lo</dt>
-<dd>Abmeldung des Benutzers.</dd>
-<dt>sync, s</dt>
-<dd>Synchronisationsprozess zwischen Desktop und Server starten.</dd>
-<dt>create, c</dt>
-<dd>Privates Projekt erstellen, mit dem Git-Repository in diesem Verzeichnis verknüpfen und den Inhalt in {{site.data.keyword.Bluemix_notm}} bereitstellen.</dd>
-<dt>projects, p</dt>
-<dd>Alle für die Synchronisation verfügbaren Projekte auflisten.</dd>
-<dt>start, st</dt>
-<dd>Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} starten.</dd>
-<dt>stop, sp</dt>
-<dd>Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} stoppen.</dd>
-<dt>status, ss</dt>
-<dd>Status der aktiven Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} auflisten.</dd>
-</dl>
+**Befehle**
 
-### Argumente
-<dl>
-<dd>Argumente für den Befehl.</dd>
-</dl>
+l *login*: Anmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
-### Optionen
-<dl>
-<dd>Optionen für den Befehl.</dd>
-</dl>
+lo *logout*: Abmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
-### Globale Optionen
-<dl>
-<dt>--help</dt>
-<dd>Hilfetextseite für den angegebenen Befehl anzeigen.</dd>
-<dt>--verbose</dt>
-<dd>Ausführliche Protokollierung aktivieren.</dd>
-</dl>
+s *sync*: Synchronisationsprozess zwischen Desktop und Server starten. 
+
+c *create*: Privates Projekt erstellen, mit dem Git-Repository in diesem Verzeichnis verknüpfen und den Inhalt in {{site.data.keyword.Bluemix_notm}} bereitstellen.
+
+p *projects*: Alle für die Synchronisation verfügbaren Projekte auflisten.
+
+st *start*: Die Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} starten.
+
+sp *stop*: Die Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} stoppen.
+
+ss *status*: Den Ausführungsstatus der Anwendungsinstanz in {{site.data.keyword.Bluemix_notm}} auflisten.
+
+
+**Argumente**
+
+Argumente für den Befehl.
+
+
+**Optionen**
+
+Optionen für den Befehl.
+
+**Globale Optionen**
+
+*--help*: Die Hilfetextseite für den angegebenen Befehl anzeigen.
+
+*--verbose*: die ausführliche Protokollierung aktivieren.
 
 **Hinweis:** Wenn ein Argument oder eine Option ein Leerzeichen enthält, schließen Sie den Wert in doppelte Anführungszeichen ein.
 
-## help
+## Hilfe
+{: bl_help}
 
 ```
-bl [ Befehl ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### Verwendung
-<dl>
-<dd>Verwenden Sie diesen Befehl, um Hilfetext zu einem Befehl oder zur Befehlsliste anzuzeigen.</dd>
-</dl>
+**Verwendung**
 
-### Beispiele
+Verwenden Sie diesen Befehl, um Hilfetext zu einem Befehl oder zur Befehlsliste anzuzeigen.
 
-Mit dem folgenden Befehl wird die Liste der Befehle angezeigt:
+**Beispiele**
 
-```bl --help```
+Die Liste der Befehle anzeigen: 
 
-Mit dem folgenden Befehl werden detaillierte Informationen zum Befehl sync angezeigt:
+```
+bl --help
+```
+{: pre}
 
-```bl sync --help```
+Detaillierte Informationen über den Synchronisationsbefehl (sync) anzeigen: 
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-```bl login|l [ -u username ][-p password ][ -s server ]```
+## Anmeldung
+{: bl_login}
 
-### Zweck
+```
+bl login | l [ -u username ][-p password ][ -s server ]
+```
+{: pre}
+
+**Zweck**
 
 Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_notm}}. Die Anmeldung muss nur einmal pro Sitzung erfolgen.
 
@@ -274,286 +285,310 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 **Hinweis:** Sie müssen sich für ein kostenloses Konto für <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> registrieren, bevor Sie sich anmelden.
 
-### Optionen
+**Optionen**
 
-<dl>
-<dt>-u username</dt>
-<dd>Ihre IBM ID für die Anmeldung bei {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>-p password</dt>
-<dd>Das zugehörige Kennwort zu Ihrer IBM ID.</dd>
-<dt>-s server</dt>
-<dd>Servername oder IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.</dd>
-</dl>
+-u *username*: Ihre IBM ID für die Anmeldung bei {{site.data.keyword.Bluemix_notm}}.
 
-### Beispiele
+-p *password*: Ihr Kennwort für die IBM ID. 
+
+-s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.
+
+**Beispiele**
 
 Der folgende Befehl fordert zur Eingabe von *Benutzername* und *Kennwort* auf:
 
-```bl login```
+```
+bl login
+```
+{: pre}
 
-Mithilfe des folgenden Befehls wird der Benutzer `name@company.com` angemeldet:
-
-```bl login –u name@company.com –p pa55w0rd```
-
-Mithilfe des folgenden Befehls wird der Benutzer `name@company.com` mit dem Kennwort pa55 w0rd angemeldet. Das Kennwort enthält ein Leerzeichen und muss daher in Anführungszeichen gesetzt werden:
-
-```bl login –u name@company.com –p “pa55 w0rd”```
-
-## logout
+Melden Sie den Benutzer `name@company.com` an:
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd
 ```
+{: pre}
 
-### Zweck
+Melden Sie den Benutzer `name@company.com` mit dem Kennwort *pa55 w0rd* an, das ein Leerzeichen enthält und daher in Anführungszeichen stehen muss: 
 
-<dl>
-<dd>Verwenden Sie diesen Befehl zum Abmelden.</dd>
-</dl>
+```
+bl login –u name@company.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Abmeldung
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**Zweck**
+
+Verwenden Sie diesen Befehl zum Abmelden.
 
 ## Projekte
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### Zweck
+**Zweck**
 
-<dl>
-<dd>Verwenden Sie diesen Befehl, um alle Projekte aufzulisten, die für die Synchronisation durch den angemeldeten Benutzer verfügbar sind.</dd>
-</dl>
+Verwenden Sie diesen Befehl, um alle Projekte aufzulisten, die für die Synchronisation durch den angemeldeten Benutzer verfügbar sind.
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### Zweck
+**Zweck**
 
-<dl>
-<dd>Verwenden Sie diesen Befehl, um die Synchronisation des Inhalts eines Projekts mit Ihrem lokalen Verzeichnis zu starten. Dieser Befehl wird ausgeführt, bis ein <code>q</code> eingegeben wird. Der Befehl kann optional ein Protokoll aller Datei- und Anwendungsstatusänderungen anzeigen.</dd>
-</dl>
+Verwenden Sie diesen Befehl, um die Synchronisation des Inhalts eines Projekts mit Ihrem lokalen Verzeichnis zu starten. Dieser Befehl wird ausgeführt, bis ein <code>q</code> eingegeben wird. Der Befehl kann optional ein Protokoll aller Datei- und Anwendungsstatusänderungen anzeigen.
 
-### Argument
+**Argument**
 
-<dl>
-<dt>projectName</dt>
-<dd>Der Projektname im Format <i>“alias | myproject”</i> oder nur <i>myproject</i>, wenn der angemeldete Benutzer der Eigner des Projekts ist.</dd>
-</dl>
+*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
 
-### Optionen
+**Optionen**
 
-<dl>
-<dt>-d localDirectory</dt>
-<dd>Pfad des lokalen Verzeichnisses. Ist standardmäßig der aktuelle Ordner ".".</dd>
-<dt>--overwritelocal</dt>
-<dd>Lokales Verzeichnis mit Inhalten des Projektarbeitsbereichs überschreiben.</dd>
-<dt>--overwriteremote</dt>
-<dd>Projektarbeitsbereich mit den Inhalten des lokalen Verzeichnisses überschreiben.</dd>
-<dt>--verbose</dt>
-<dd>Ausführliche Protokollierung anzeigen.</dd>
-</dl>
+-d *localDirectory*: Lokaler Verzeichnispfad. Ist standardmäßig der aktuelle Ordner ".".
 
-### Beispiele
+*--overwritelocal*: Übersicht über das lokale Verzeichnis mit dem Inhalt des Projektarbeitsplatzes. 
 
-Der folgende Befehl beginnt mit der Synchronisation mit dem zugeordneten Projekt, wenn das aktuelle Verzeichnis ein vorhandenes Synchronisationsziel ist. Wenn das aktuelle Verzeichnis leer und kein vorhandenes Synchronisationsziel ist, fordert der Befehl zur Eingabe eines Projektnamens (*projectName*) auf. Wenn das aktuelle Verzeichnis nicht leer und kein vorhandenes Synchronisationsziel ist, ist eine Option zum Überschreiben erforderlich.
+*--overwriteremote*: Projektarbeitsplatz mit dem Inhalt des lokalen Verzeichnisses überschreiben. 
+
+*--verbose*: Ausführliche Protokollierung anzeigen. 
+
+**Beispiele**
+
+Der folgende Befehl beginnt mit der Synchronisation mit dem zugeordneten Projekt, wenn das aktuelle Verzeichnis ein vorhandenes Synchronisationsziel ist. Wenn das aktuelle Verzeichnis leer ist und kein vorhandenes Synchronisationsziel ist, fordert der Befehl zur Eingabe eines Projektnamens *projectName* auf. Wenn das aktuelle Verzeichnis nicht leer und kein vorhandenes Synchronisationsziel ist, ist eine Option zum Überschreiben erforderlich.
 
 ```
 bl sync
 ```
+{: pre}
 
-Der folgende Befehl startet die Synchronisation und ist äquivalent zu diesem Befehl:
-```bl sync “alias | myproject”```
-Dies setzt voraus, dass der angemeldete Benutzer der Eigner des Projekts ist.
-
-```bl sync  myproject```
-
-Der folgende Befehl startet die Synchronisation mit dem Projekt <code>my pro ject</code>, dessen Name Leerzeichen enthält und daher in Anführungszeichen gesetzt ist:
-
-```bl sync “my pro ject”```
-
-Der folgende Befehl startet die Synchronisation des Projekts <code>myproject</code> mit dem Verzeichnis myfolder:
-
-```bl sync myproject –d  myfolder```
-
-## create
+Dieser Befehl beginnt mit der Synchronisation und entspricht `bl sync “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
 
 ```
-bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync  myproject
 ```
+{: pre}
 
-### Zweck
-<dl>
-<dd>Mit diesem Befehl können Sie aus einem Verzeichnis mit Code ein privates Projekt erstellen, dieses mit einem Git-Repository verknüpfen und den Inhalt des Repositorys in {{site.data.keyword.Bluemix_notm}} bereitstellen.</dd>
-</dl>
+Der folgende Befehl startet die Synchronisation mit dem Projekt `my pro ject`, dessen Name Leerzeichen enthält und daher in Anführungszeichen gesetzt ist:
 
-### Optionen
+```
+bl sync “my pro ject”
+```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>Ein Name für das Projekt. Standardwert: Der Name des aktuellen Verzeichnisses.</dd>
-<dt>-r REGION</dt>
-<dd>Eine {{site.data.keyword.Bluemix_notm}}-Region. Standardwert: Vereinigte Staaten (Süden)</dd>
-<dt>-o ORG</dt>
-<dd>Eine {{site.data.keyword.Bluemix_notm}}-Organisation. Standardwert: Die erste Organisation, die gefunden wird.</dd>
-<dt>-s SPACE</dt>
-<dd>Ein {{site.data.keyword.Bluemix_notm}}-Bereich. Standardwert: Der erste Bereich, der gefunden wird.</dd>
-<dt>-g GIT_REPO</dt>
-<dd>Der Name des fernen Repositorys zur Verwendung für sämtliche vorhandenen Git-Repositorys. Standardwert: 'origin'.</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Der vollständige Pfad zu einer ausführbaren Git-Datei. Standardwert: 'detected'.</dd>
-<dt>--creds</dt>
-<dd>Die Eingabeaufforderung für Ihre Git-Berechtigungsnachweise.</dd>
-<dt>--fork</dt>
-<dd>Verzweigung für dieses Verzeichnis sowie ein Projekt und ein Repositiory erstellen.</dd>
-<dt>--public</dt>
-<dd>Das neue Projekt öffentlich zugänglich machen.</dd>
-<dt>--prompt</dt>
-<dd>Eingabeaufforderung für alle erforderlichen Optionen mit verfügbaren Auswahlmöglichkeiten.</dd>
-</dl>
+Dieser Befehl startet die Synchronisation des Projekts `myproject` mit dem Verzeichnis `myfolder`:
 
-### Beispiele
+```
+bl sync myproject –d  myfolder
+```
+{: pre}
+
+## Erstellen
+{: bl_create}
+
+```
+bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+{: pre}
+
+**Zweck**
+
+Mit diesem Befehl können Sie aus einem Verzeichnis mit Code ein privates Projekt erstellen, dieses mit einem Git-Repository verknüpfen und den Inhalt des Repositorys in {{site.data.keyword.Bluemix_notm}} bereitstellen.
+
+**Optionen**
+
+-n *PROJECT_NAME*: Ein Name für Ihr Projekt. Standardwert: Der Name des aktuellen Verzeichnisses.
+
+-r *REGION*: Eine {{site.data.keyword.Bluemix_notm}}-Region. Standardwert:  Vereinigte Staaten (Süden)
+
+-o *ORG*: Eine {{site.data.keyword.Bluemix_notm}}-Organisation. Standardwert: Die erste Organisation, die gefunden wird.
+
+-s *SPACE*: Ein {{site.data.keyword.Bluemix_notm}}-Bereich. Standardwert: Der erste Bereich, der gefunden wird.
+
+-g *GIT_REPO*: Name des fernen Repositorys zur Verwendung für ein beliebiges, vorhandenes Git-Repository. Standardwert: 'origin'.
+
+-e *GIT_EXE*: Vollständiger Pfad zu einer ausführbaren Git-Datei. Standardwert: 'detected'.
+
+*--creds*: Eingabeaufforderung für Ihre Git-Berechtigungsnachweise. 
+
+*--fork*: Dieses Verzeichnis verzweigen und ein Projekt und ein Repository erstellen. 
+
+*--public*: Das neue Projekt öffentlich machen. 
+
+*--prompt*: Eingabeaufforderung für alle erforderlichen Optionen mit verfügbaren Auswahlmöglichkeit. 
+
+**Beispiele**
 
 Der folgende Befehl startet den Prozess der Erstellung eines privaten Projekts und fordert zur Eingabe eines zu verwendenden Projektnamens auf.
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
-Der folgende Befehl erstellt ein öffentliches Projekt mit dem Namen <code>myNewProject</code>.
-
-```bl create -n myNewProject --public```
-
-## status
+Der folgende Befehl erstellt ein öffentliches Projekt mit dem Namen `myNewProject`.
 
 ```
-bl status|ss [ projectName ]
+bl create -n myNewProject --public
 ```
+{: pre}
 
-### Zweck
+## Status
+{: bl_status}
 
-<dl>
-<dd>Verwenden Sie diesen Befehl, um den Status der Anwendungen aufzulisten, die den Startkonfigurationen im Verzeichnis <code>./launchConfigurations</code> zugeordnet sind.</dd>
-</dl>
+```
+bl status | ss [ projectName ]
+```
+{: pre}
 
-###Argument
+**Zweck**
 
-<dl>
-<dt>projectName</dt>
-<dd>Der Projektname im Format “alias | myproject” oder nur myproject, wenn der angemeldete Benutzer der Eigner des Projekts ist.</dd>
-</dl>
+Verwenden Sie diesen Befehl, um den Status der Anwendungen aufzulisten, die den Startkonfigurationen im Verzeichnis `./launchConfigurations` zugeordnet sind.
 
-### Beispiele
+**Argument**
+
+*projectName*: Der Projektname in der Form `“alias | myproject”` oder einfach nur `myproject`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+
+**Beispiele**
 
 In diesem Beispiel wird der Status der aktiven Anwendungen angezeigt. Wenn das aktuelle Verzeichnis ein vorhandenes
 Synchronisationsziel ist, wird das zugeordnete Projekt verwendet. Wenn das aktuelle Verzeichnis kein vorhandenes Synchronisationsziel ist,
-fordert der Befehl zur Eingabe von <i>Projektname</i> auf.
+fordert der Befehl zur Eingabe von `Projektname` auf.
 
-````bl status```
+``
+bl status
+```
+{: pre}
 
-Dieser Beispielbefehl zeigt den Status des Projekts 'myproject' an und ist äquivalent zu folgendem Befehl:
-```bl status “alias | myproject”```
-Dies setzt voraus, dass der angemeldete Benutzer der Eigner des Projekts ist.
-
-```bl status myproject```
-
-Dieser Beispielbefehl zeigt den Status der aktiven Anwendung an, die dem Projekt <code>my pro ject</code> zugeordnet ist, dessen Name Leerzeichen enthält und daher in Anführungszeichen gesetzt ist:
-
-```bl status “my pro ject”```
-
-## start
+Dieses Beispiel zeigt den Status des Projekts *myproject* an und entspricht `bl status “alias | myproject”`, falls der angemeldete Benutzer der Eigner des Projekts ist. 
 
 ```
-bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl status myproject
 ```
+{: pre}
 
-### Zweck
-
-<dl>
-<dd>Verwenden Sie diesen Befehl zum Starten der Anwendungsinstanz, die von der Start- oder Manifestdatei beschrieben wird. Die Anwendung wird im Live-Bearbeitungsmodus gestartet, sofern das Buildpack der Anwendung die Live-Bearbeitung unterstützt. Nach dem Starten werden die URLs für die Anwendung, die Debug Tools und das {{site.data.keyword.Bluemix_notm}}-Dashboard angezeigt.</dd>
-</dl>
-
-### Argument
-
-<dl>
-<dt>projectName</dt>
-<dd>Der Projektname im Format <i>“alias | myproject”</i> oder nur <i>myproject</i>, wenn der angemeldete Benutzer der Eigner des Projekts ist.</dd>
-</dl>
-
-### Optionen
-
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>Der Name der Startkonfiguration (zum Beispiel <code>mylaunchconfig</code>), der Dateiname (zum Beispiel <code>mylaunchconfig.launch</code> oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-<dt>-m manifestPath</dt>
-<dd>Der projektbezogene Pfad zur Manifestdatei (zum Beispiel <code>manifest.yml</code>).</dd>
-<dt>--liveedit</dt>
-<dd>Die zugeordnete Anwendung im Live-Bearbeitungsmodus starten oder mit einem Fehler beenden, wenn das Buildpack den Live-Bearbeitungsmodus nicht unterstützt.</dd>
-<dt>--noliveedit</dt>
-<dd>Die zugeordnete Anwendung im normalen Modus starten.</dd>
-<dt>--view</dt>
-<dd>Einen Browser der aktiven Anwendung öffnen.</dd>
-<dt>--restart</dt>
-<dd>Eine bereits aktive Anwendung im Live-Bearbeitungsmodus erneut starten, ohne sie erneut zu implementieren.</dd>
-</dl>
-
-### Beispiele
-
-Der folgende Befehl startet eine Anwendungsinstanz des Projekts <code>myproject</code>, das der Startdatei <code>launchConfigurations/my.launch</code> zugeordnet ist.
-
-```bl start myproject –l “launchConfigurations/my.launch”```
-
-Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Startdatei <code>launchConfigurations/my.launch</code>. Wenn das aktuelle Verzeichnis kein Synchronisationsziel ist, wird ein Fehler angezeigt.
-
-```bl start –l “launchConfigurations/my.launch” ```
-
-Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Manifestdatei <code>manifest.yml</code>. Die im Manifest angegebenen Informationen werden zum Erstellen einer neuen Startkonfigurationsdatei verwendet. Der Befehl fordert Sie zur Eingabe der übrigen erforderlichen Informationen auf und startet anschließend die von der Startkonfiguration beschriebene Anwendung:
-
-```bl start –m “mymanifest.yml” ```
-
-Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Manifestdatei <code>manifest.yml</code> und ist äquivalent zu folgendem Befehl:
-```bl start –m manifest.yml```.
-
-```bl start```
-
-## stop
+Dieser Beispielbefehl zeigt den Status der aktiven Anwendung an, die dem Projekt `my pro ject` zugeordnet ist, dessen Name Leerzeichen enthält und daher in Anführungszeichen gesetzt ist:
 
 ```
-bl stop|sp projectName [ -l launchConfiguration ]
+bl status “my pro ject”
 ```
+{: pre}
 
-### Zweck
+## Starten
+{: bl_start}
 
-<dl>
-<dd>Verwenden Sie diesen Befehl zum Stoppen der Anwendungsinstanz, die der Startdatei zugeordnet ist.</dd>
-</dl>
+```
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+{: pre}
 
-### Argument
+**Zweck**
 
-<dl>
-<dt>projectName</dt>
-<dd>Der Projektname im Format “alias | mproject” oder nur mproject, wenn der angemeldete Benutzer der Eigner des Projekts ist.</dd>
-</dl>
+Verwenden Sie diesen Befehl zum Starten der Anwendungsinstanz, die von der Start- oder Manifestdatei beschrieben wird. Die Anwendung wird im Live-Bearbeitungsmodus gestartet, sofern das Buildpack der Anwendung die Live-Bearbeitung unterstützt. Nach dem Starten werden die URLs für die Anwendung, die Debug Tools und das {{site.data.keyword.Bluemix_notm}}-Dashboard angezeigt.
 
-### Optionen
+**Argument**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>Der Name der Startkonfiguration (zum Beispiel <code>mylaunchconfig</code>), der Dateiname (zum Beispiel <code>mylaunchconfig.launch</code> oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-</dl>
+*projectName*: Der Projektname in der Form *“alias | myproject”* oder einfach nur *myproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
 
-### Beispiele
+**Optionen**
+
+-l *launchConfiguration*: Der Startkonfigurationsname (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch`) oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
+
+-m *manifestPath*: Der projektbezogene Pfade zur Manifestdatei (zum Beispiel `manifest.yml`).
+
+*--liveedit*: Die zugeordnete Anwendung im Live-Bearbeitungsmodus starten oder mit einem Fehler beenden, wenn das Buildpack den Live-Bearbeitungsmodus nicht unterstützt.
+
+*--noliveedit*: Die zugeordnete Anwendung im normalen Modus starten.
+
+*--view*: Einen Browser der aktiven Anwendung öffnen.
+
+*--restart*: Eine bereits aktive Anwendung im Live-Bearbeitungsmodus erneut starten, ohne sie erneut zu implementieren.
+
+**Beispiele**
+
+Der folgende Befehl startet eine Anwendungsinstanz des Projekts `myproject`, das der Startdatei `launchConfigurations/my.launch` zugeordnet ist.
+
+```
+bl start myproject –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Startdatei `launchConfigurations/my.launch`. Wenn das aktuelle Verzeichnis kein Synchronisationsziel ist, wird ein Fehler angezeigt.
+
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Manifestdatei `manifest.yml`. Die im Manifest angegebenen Informationen werden zum Erstellen einer neuen Startkonfigurationsdatei verwendet. Der Befehl fordert Sie zur Eingabe der übrigen erforderlichen Informationen auf und startet anschließend die von der Startkonfiguration beschriebene Anwendung:
+
+```
+bl start –m “mymanifest.yml”
+```
+{: pre}
+
+Der folgende Befehl startet eine Anwendungsinstanz des Projekts, das dem aktuellen Verzeichnis zugeordnet ist, mit der Manifestdatei `manifest.yml` und ist äquivalent zu folgendem Befehl: `bl start –m manifest.yml`.
+
+```
+bl start
+```
+{: pre}
+
+## Stoppen
+{: bl_stop}
+
+```
+bl stop | sp projectName [ -l launchConfiguration ]
+```
+{: pre}
+
+**Zweck**
+
+Verwenden Sie diesen Befehl zum Stoppen der Anwendungsinstanz, die der Startdatei zugeordnet ist.
+
+**Argument**
+
+*projectName*: Der Projektname in der Form *“alias | mproject”* oder einfach nur *mproject*, falls der angemeldete Benutzer der Eigner des Projekts ist. 
+
+**Optionen**
+
+-l *launchConfiguration*: Der Name der Startkonfiguration (zum Beispiel `mylaunchconfig`), Dateiname (zum Beispiel `mylaunchconfig.launch` oder ein projektbezogener Pfad zur Startkonfigurationsdatei (zum Beispiel `launchConfigurations/mylaunchconf.launch`).
+
+**Beispiele**
 
 Der folgende Befehl stoppt die Anwendung, wenn das aktuelle Verzeichnis ein Synchronisationsziel ist. Andernfalls wird die Anwendung mit einem Fehler beendet. Falls keine Startkonfigurationen vorhanden sind, wird dieser Befehl mit einem Fehler beendet. Sind mehrere Startkonfigurationen vorhanden, fordert der Befehl Sie zur Eingabe der zu stoppenden Startkonfiguration auf.
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
-Der folgende Befehl stoppt eine Anwendungsinstanz des Projekts, das mit der Startdatei <code>mylaunchConfig</code> ausgeführt wird.
+Der folgende Befehl stoppt eine Anwendungsinstanz des Projekts, das mit der Startdatei `mylaunchConfig` ausgeführt wird.
 
-```bl stop myproject –l “mylaunchConfig” ```
+```
+bl stop myproject –l “mylaunchConfig”
+```
+{: pre}
 
-Der folgende Befehl stoppt die Anwendung, wenn das aktuelle Verzeichnis ein Synchronisationsziel des zugeordneten Projekts ist, das mit der Startdatei <code>launchConfigurations/mylaunchconfig.launch</code> gestartet wurde. Andernfalls wird der Befehl mit einem Fehler beendet.
+Der folgende Befehl stoppt die Anwendung, wenn das aktuelle Verzeichnis ein Synchronisationsziel des zugeordneten Projekts ist, das mit der Startdatei `launchConfigurations/mylaunchconfig.launch` gestartet wurde. Andernfalls wird der Befehl mit einem Fehler beendet.
 
-```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
+{: pre}
 
 ># Zugehörige Links {:class="linklist"}
 >## Lerntexte und Beispiele {:id="samples"}

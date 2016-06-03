@@ -9,13 +9,15 @@ copyright:
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*前次更新：2016 年 4 月 8 日*  
+*前次更新：2016 年 4 月 7 日*  
 
 如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。   
 {: shortdesc}
@@ -104,7 +106,7 @@ bl start --restart
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。如果您需要重新啟動 Node 應用程式，可以使用執行列中的**重新啟動**按鈕。
 
-**附註：**如需使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時的更一致體驗，則需要且將會新增 256MB 的額外記憶體。
+**附註：**為達到使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時的更一致體驗，則需要且將會新增 256MB 的額外記憶體。
 
 ##{{site.data.keyword.Bluemix_notm}} 即時除錯 {: #live-debug}
 
@@ -194,79 +196,88 @@ bl start --restart
 如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](../develop/bluemixlive.html)。
 
 ## bl 指令
+{: #bl_commands}
 
 {{site.data.keyword.Bluemix_live}} 指令行 (**bl**) 的語法如下：
 
 ```
 bl command [arguments][options] [--help]
 ```
+{: pre}
 
-### 指令
-<dl>
-<dt>login、l</dt>
-<dd>登入 {{site.data.keyword.Bluemix_notm}}。</dd>
-<dt>logout、lo</dt>
-<dd>將使用者登出。</dd>
-<dt>sync、s</dt>
-<dd>啟動桌上型電腦與伺服器之間的同步化處理程序。</dd>
-<dt>create、c</dt>
-<dd>建立專用專案、將它鏈結至此目錄中的 Git 儲存庫，然後將內容部署至 {{site.data.keyword.Bluemix_notm}}。</dd>
-<dt>projects、p</dt>
-<dd>列出可用於同步化的所有專案。</dd>
-<dt>start、st</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 中啟動應用程式實例。</dd>
-<dt>stop、sp</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 中停止應用程式實例。</dd>
-<dt>status、ss</dt>
-<dd>列出 {{site.data.keyword.Bluemix_notm}} 中的執行中應用程式實例狀態。</dd>
-</dl>
+**指令**
 
-### 引數
-<dl>
-<dd>指令的引數。</dd>
-</dl>
+l *login*：登入 {{site.data.keyword.Bluemix_notm}}。
 
-### 選項
-<dl>
-<dd>指令的選項。</dd>
-</dl>
+lo *logout*：登出 {{site.data.keyword.Bluemix_notm}}。
 
-### 廣域選項
-<dl>
-<dt>--help</dt>
-<dd>顯示所指定指令的說明頁面</dd>
-<dt>--verbose</dt>
-<dd>啟用詳細記載。</dd>
-</dl>
+s *sync*：啟動桌上型電腦與伺服器之間的同步化處理程序。
+
+c *create*：建立專用專案，將它鏈結至此目錄中的 Git 儲存庫，然後將內容部署至 {{site.data.keyword.Bluemix_notm}}。
+
+p *projects*：列出可用於同步化的所有專案。
+
+st *start*：在 {{site.data.keyword.Bluemix_notm}} 中啟動應用程式實例。
+
+sp *stop*：在 {{site.data.keyword.Bluemix_notm}} 中停止應用程式實例。
+
+ss *status*：列出 {{site.data.keyword.Bluemix_notm}} 中的執行中應用程式實例狀態。
+
+
+**引數**
+
+指令的引數。
+
+
+**選項**
+
+指令的選項。
+
+**廣域選項**
+
+*--help*：顯示所指定指令的說明頁面
+
+*--verbose*：啟用詳細記載。
 
 **附註：**如果您的任何引數或選項包含空格，請將值含括在雙引號中。
 
-## help
+## Help
+{: bl_help}
 
 ```
-bl [ command ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### 用法
-<dl>
-<dd>使用這個指令來顯示有關指令或指令清單的說明。</dd>
-</dl>
+**用法**
 
-### 範例
+使用這個指令來顯示有關指令或指令清單的說明。
 
-下列指令顯示指令清單：
+**範例**
 
-```bl --help```
+顯示指令清單：
 
-下列指令顯示 sync 指令的詳細資訊：
+```
+bl --help
+```
+{: pre}
 
-```bl sync --help```
+顯示 sync 指令的詳細資訊：
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-```bl login|l [ -u username ][-p password ][ -s server ]```
+## Login
+{: bl_login}
 
-### 用途
+```
+bl login | l [ -u username ][-p password ][ -s server ]
+```
+{: pre}
+
+**用途**
 
 使用這個指令來登入 {{site.data.keyword.Bluemix_notm}}。每個階段作業只需要執行一次登入。
 
@@ -275,290 +286,311 @@ bl [ command ] --help
 
 **附註：**您必須先註冊免費 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帳戶，才能登入。
 
-### 選項
+**選項**
 
-<dl>
-<dt>-u username</dt>
-<dd>用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。</dd>
-<dt>-p password</dt>
-<dd>IBM ID 密碼。</dd>
-<dt>-s server</dt>
-<dd>{{site.data.keyword.jazzhub_short}} 伺服器的「伺服器名稱」或「IP 位址」。</dd>
-</dl>
+-u *username*：您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。
 
-### 範例
+-p *password*：IBM ID 密碼。
+
+-s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的「伺服器名稱」或「IP 位址」。
+
+**範例**
 
 這個指令會提示輸入 *username* 及 *password*：
 
-```bl login```
+```
+bl login
+```
+{: pre}
 
-這個指令會將使用者 `name@company.com` 登入：
-
-```bl login –u name@company.com –p pa55w0rd```
-
-這個指令使用包含空格的密碼 pa55 w0rd 將使用者 `name@company.com` 登入，因此密碼需要引號：
-
-```bl login –u name@company.com –p "pa55 w0rd"```
-
-## logout
+將使用者 `name@company.com` 登入：
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd
 ```
+{: pre}
 
-### 用途
+將使用者 `name@company.com` 登入的密碼 *pa55 w0rd* 包含空格，因此需要加上引號：
 
-<dl>
-<dd>使用這個指令來登出。</dd>
-</dl>
+```
+bl login –u name@company.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Logout
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**用途**
+
+使用這個指令來登出。
 
 ## projects
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### 用途
+**用途**
 
-<dl>
-<dd>使用這個指令來列出已登入使用者可用於同步化的所有專案。</dd>
-</dl>
+使用這個指令來列出已登入使用者可用於同步化的所有專案。
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### 用途
+**用途**
 
-<dl>
-<dd>使用這個指令來啟動專案內容與本端目錄的同步化。在輸入 <code>q</code> 之前，這個指令會持續執行。這個指令可以選擇性地顯示所有檔案及應用程式狀態變更的日誌。</dd>
-</dl>
+使用這個指令來啟動專案內容與本端目錄的同步化。在輸入 <code>q</code> 之前，這個指令會持續執行。這個指令可以選擇性地顯示所有檔案及應用程式狀態變更的日誌。
 
-### 引數
+**引數**
 
-<dl>
-<dt>projectName</dt>
-<dd>形式為 <i>"alias | myproject"</i> 或只有 <i>myproject</i>（如果已登入使用者擁有此專案）的專案名稱。</dd>
-</dl>
+*projectName*：形式為 *"alias | myproject"* 或只有 *myproject*（如果已登入使用者擁有此專案）的專案名稱。
 
-### 選項
+**選項**
 
-<dl>
-<dt>-d localDirectory</dt>
-<dd>本端目錄路徑。預設為現行資料夾 "."。</dd>
-<dt>--overwritelocal</dt>
-<dd>使用專案工作區內容改寫本端目錄。</dd>
-<dt>--overwriteremote</dt>
-<dd>使用本端目錄內容改寫專案工作區。</dd>
-<dt>--verbose</dt>
-<dd>顯示詳細記載。</dd>
-</dl>
+-d *localDirectory*：本端目錄路徑。預設為現行資料夾 "."。
 
-### 範例
+*--overwritelocal*：使用專案工作區內容改寫本端目錄。
+
+*--overwriteremote*：使用本端目錄內容改寫專案工作區。
+
+*--verbose*：顯示詳細記載。
+
+**範例**
 
 如果現行目錄是現有同步目標，則這個指令會開始與關聯的專案進行同步化。如果現行目錄是空的而且不是現有同步目標，則指令會提示輸入 *projectName*。如果現行目錄不是空的而且不是現有同步目標，則需要改寫選項。
 
 ```
 bl sync```
+{: pre}
 
-此指令開始同步化，並且相當於
-```bl sync "alias | myproject"```
-（如果已登入使用者擁有此專案）。
-
-```bl sync  myproject```
-
-這個指令會開始與其名稱包含空格的專案 <code>my pro ject</code> 進行同步化，因此會使用引號括住該名稱：
-
-```bl sync "my pro ject"```
-
-這個指令會開始進行 <code>myproject</code> 專案與 myfolder 目錄的同步化：
-
-```bl sync myproject –d  myfolder```
-
-## create
+這個指令會開始同步化，且相當於 `bl sync "alias | myproject"`（如果已登入使用者擁有此專案）。
 
 ```
-bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync  myproject
 ```
+{: pre}
 
-### 用途
-<dl>
-<dd>從包含程式碼的目錄使用此指令來建立專用專案、將它鏈結至 Git 儲存庫，然後將儲存庫內容部署至
-{{site.data.keyword.Bluemix_notm}}。</dd>
-</dl>
+這個指令會開始與其名稱包含空格的專案 `my pro ject` 進行同步化，因此會使用引號括住該名稱：
 
-### 選項
+```
+bl sync "my pro ject"
+```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>專案的名稱。預設值：現行目錄名稱。</dd>
-<dt>-r REGION</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 地區。
-預設值：美國南部。</dd>
-<dt>-o ORG</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 組織。
-預設值：第一個發現的組織。</dd>
-<dt>-s SPACE</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 空間。
-預設值：第一個發現的空間。</dd>
-<dt>-g GIT_REPO</dt>
-<dd>要用於任何現有 Git 儲存庫的遠端儲存庫名稱。預設值：origin。</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Git 執行檔的完整路徑。預設值：detected。</dd>
-<dt>--creds</dt>
-<dd>提示輸入您的 Git 認證。</dd>
-<dt>--fork</dt>
-<dd>分出 (fork) 此目錄並建立專案和儲存庫。</dd>
-<dt>--public</dt>
-<dd>使新專案成為公用。</dd>
-<dt>--prompt</dt>
-<dd>提示輸入所有必要的選項，並提供可用的選擇。</dd>
-</dl>
+這個指令會開始進行 `myproject` 專案與 `myfolder` 目錄的同步化：
 
-### 範例
+```
+bl sync myproject –d  myfolder
+```
+{: pre}
+
+## Create
+{: bl_create}
+
+```
+bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+{: pre}
+
+**用途**
+
+從包含程式碼的目錄使用此指令來建立專用專案、將它鏈結至 Git 儲存庫，然後將儲存庫內容部署至
+{{site.data.keyword.Bluemix_notm}}。
+
+**選項**
+
+-n *PROJECT_NAME*：您專案的名稱。預設值：現行目錄名稱。
+
+-r *REGION*：{{site.data.keyword.Bluemix_notm}} 地區。預設值：美國南部。
+
+-o *ORG*：{{site.data.keyword.Bluemix_notm}} 組織。預設值：第一個發現的組織。
+
+-s *SPACE*：{{site.data.keyword.Bluemix_notm}} 空間。預設值：第一個發現的空間。
+
+-g *GIT_REPO*：要用於任何現有 Git 儲存庫的遠端儲存庫名稱。預設值：origin。
+
+-e *GIT_EXE*：Git 執行檔的完整路徑。預設值：detected。
+
+*--creds*：提示輸入您的 Git 認證。
+
+*--fork*：分出此目錄並建立專案和儲存庫。
+
+*--public*：使新專案成為公用專案。
+
+*--prompt*：提示輸入所有必要的選項，並提供可用的選擇。
+
+**範例**
 
 這個指令會開始建立專用專案的程序，並提示輸入要使用的專案名稱。
 
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
-這個指令會建立名為 <code>myNewProject</code> 的公用專案。
+這個指令會建立名為 `myNewProject` 的公用專案。
 
-
-```bl create -n myNewProject --public```
-
-## status
 
 ```
-bl status|ss [ projectName ]
+bl create -n myNewProject --public
 ```
+{: pre}
 
-### 用途
-
-<dl>
-<dd>使用這個指令來列出與 <code>./launchConfigurations</code> 目錄裡的啟動配置相關聯之應用程式的狀態。</dd>
-</dl>
-
-###引數
-
-<dl>
-<dt>projectName</dt>
-<dd>形式為 "alias | myproject" 的專案名稱，或只是 myproject（如果已登入使用者擁有此專案）。</dd>
-</dl>
-
-### 範例
-
-此範例顯示執行中應用程式的狀態。如果現行目錄是現有同步目標，則會使用關聯的專案。如果現行目錄不是現有同步目標，則指令會提示輸入 <i>projectName</i>。
-
-````bl status```
-
-此範例顯示 myproject 專案的狀態，而其相當於
-```bl status "alias | myproject"```
-（如果已登入使用者擁有此專案）。
-
-```bl status myproject```
-
-此範例會顯示與其名稱包含空格的專案 <code>my pro ject</code> 相關聯之執行中應用程式的狀態，因此會使用引號括住該名稱：
-
-```bl status "my pro ject"```
-
-## start
+## Status
+{: bl_status}
 
 ```
-bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl status | ss [ projectName ]
 ```
+{: pre}
 
-### 用途
+**用途**
 
-<dl>
-<dd>使用這個指令來啟動由啟動或資訊清單檔說明的應用程式實例。如果應用程式的建置套件支援即時編輯，則應用程式預設會以即時編輯模式啟動。啟動之後，即會顯示應用程式的 URL、除錯工具及 {{site.data.keyword.Bluemix_notm}} 儀表板。</dd>
-</dl>
+使用這個指令來列出與 `./launchConfigurations` 目錄裡的啟動配置相關聯之應用程式的狀態。
 
-### 引數
+**引數**
 
-<dl>
-<dt>projectName</dt>
-<dd>形式為 <i>"alias | myproject"</i> 或只有 <i>myproject</i>（如果已登入使用者擁有此專案）的專案名稱。</dd>
-</dl>
+*projectName*：形式為 `"alias | myproject"` 或只有 `myproject`（如果已登入使用者擁有此專案）的專案名稱。
 
-### 選項
+**範例**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>啟動配置名稱（例如，<code>mylaunchconfig</code>）、檔名（例如，<code>mylaunchconfig.launch</code>）或啟動配置檔的專案相對路徑（例如，<code>launchConfigurations/mylaunchconf.launch</code>）。</dd>
-<dt>-m manifestPath</dt>
-<dd>資訊清單檔的專案相對路徑（例如，<code>manifest.yml</code>）。</dd>
-<dt>--liveedit</dt>
-<dd>以即時編輯模式啟動關聯的應用程式，或者，如果建置套件不支援即時編輯模式，則會結束，並發生錯誤。</dd>
-<dt>--noliveedit</dt>
-<dd>以標準模式啟動關聯的應用程式。</dd>
-<dt>--view</dt>
-<dd>開啟執行中應用程式的瀏覽器。</dd>
-<dt>--restart</dt>
-<dd>重新啟動已經以即時編輯模式執行的應用程式，而不是重新進行部署。</dd>
-</dl>
+此範例顯示執行中應用程式的狀態。如果現行目錄是現有同步目標，則會使用關聯的專案。如果現行目錄不是現有同步目標，則指令會提示輸入 `projectName`。
 
-### 範例
+``
+bl status
+```
+{: pre}
 
-這個指令會啟動與啟動檔 <code>launchConfigurations/my.launch</code> 相關聯之 <code>myproject</code> 的應用程式實例。
-
-```bl start myproject –l "launchConfigurations/my.launch"```
-
-這個指令會啟動與現行目錄（含啟動檔 <code>launchConfigurations/my.launch</code>）相關聯之專案的應用程式實例。如果現行目錄不是同步目標，則會顯示一則錯誤。
-
-```bl start –l "launchConfigurations/my.launch" ```
-
-這個指令會啟動與現行目錄（含資訊清單檔 <code>manifest.yml</code>）相關聯之專案的應用程式實例。資訊清單中指定的資訊是用來建立新的啟動配置檔。這個指令會提示您輸入其餘的必要資訊，然後啟動由啟動配置說明的應用程式：
-
-```bl start –m "mymanifest.yml" ```
-
-此指令會啟動專案的應用程式實例，而專案是與現行目錄（含資訊清單檔 <code>manifest.yml</code>）相關聯且相當於
-```bl start –m manifest.yml```。
-
-```bl start```
-
-## stop
+這個範例顯示專案 *myproject* 的狀態，相當於 `bl status "alias | myproject"`（如果已登入使用者擁有此專案）。
 
 ```
-bl stop|sp projectName [ -l launchConfiguration ]
+bl status myproject
 ```
+{: pre}
 
-### 用途
+此範例會顯示與其名稱包含空格的專案 `my pro ject` 相關聯之執行中應用程式的狀態，因此會使用引號括住該名稱：
 
-<dl>
-<dd>使用這個指令來停止與啟動檔相關聯的應用程式實例。</dd>
-</dl>
+```
+bl status "my pro ject"
+```
+{: pre}
 
-### 引數
+## Start
+{: bl_start}
 
-<dl>
-<dt>projectName</dt>
-<dd>形式為 "alias | mproject" 的專案名稱，或只是 mproject（如果已登入使用者擁有此專案）。</dd>
-</dl>
+```
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+{: pre}
 
-### 選項
+**用途**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>啟動配置名稱（例如，<code>mylaunchconfig</code>）、檔名（例如，<code>mylaunchconfig.launch</code>）或啟動配置檔的專案相對路徑（例如，<code>launchConfigurations/mylaunchconf.launch</code>）。</dd>
-</dl>
+使用這個指令來啟動由啟動或資訊清單檔說明的應用程式實例。如果應用程式的建置套件支援即時編輯，則應用程式預設會以即時編輯模式啟動。啟動之後，即會顯示應用程式的 URL、除錯工具及 {{site.data.keyword.Bluemix_notm}} 儀表板。
 
-### 範例
+**引數**
+
+*projectName*：形式為 *"alias | myproject"* 或只有 *myproject*（如果已登入使用者擁有此專案）的專案名稱。
+
+**選項**
+
+-l *launchConfiguration*：啟動配置名稱（例如，`mylaunchconfig`）、檔名（例如，`mylaunchconfig.launch`）或啟動配置檔的專案相對路徑（例如，`launchConfigurations/mylaunchconf.launch`）。
+
+-m *manifestPath*：資訊清單檔的專案相對路徑（例如，`manifest.yml`）。
+
+*--liveedit*：以即時編輯模式啟動關聯的應用程式，或者，如果建置套件不支援即時編輯模式，則會結束，並發生錯誤。
+
+*--noliveedit*：以標準模式啟動關聯的應用程式。
+
+*--view*：開啟執行中應用程式的瀏覽器。
+
+*--restart*：重新啟動已經以即時編輯模式執行的應用程式，而不是重新進行部署。
+
+**範例**
+
+這個指令會啟動與啟動檔 `launchConfigurations/my.launch` 相關聯之 `myproject` 的應用程式實例。
+
+```
+bl start myproject –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+這個指令會啟動與現行目錄（含啟動檔 `launchConfigurations/my.launch`）相關聯之專案的應用程式實例。如果現行目錄不是同步目標，則會顯示一則錯誤。
+
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
+
+這個指令會啟動與現行目錄（含資訊清單檔 `manifest.yml`）相關聯之專案的應用程式實例。資訊清單中指定的資訊是用來建立新的啟動配置檔。這個指令會提示您輸入其餘的必要資訊，然後啟動由啟動配置說明的應用程式：
+
+```
+bl start –m “mymanifest.yml”
+```
+{: pre}
+
+這個指令會啟動專案的應用程式實例，而專案是與現行目錄（含資訊清單檔 `manifest.yml`）相關聯且相當於 `bl start –m manifest.yml`。
+
+```
+bl start
+```
+{: pre}
+
+## Stop
+{: bl_stop}
+
+```
+bl stop | sp projectName [ -l launchConfiguration ]
+```
+{: pre}
+
+**用途**
+
+使用這個指令來停止與啟動檔相關聯的應用程式實例。
+
+**引數**
+
+*projectName*：形式為 *"alias | mproject"* 或只有 *mproject*（如果已登入使用者擁有此專案）的專案名稱。
+
+**選項**
+
+-l *launchConfiguration*：啟動配置名稱（例如，`mylaunchconfig`）、檔名（例如，`mylaunchconfig.launch`）或啟動配置檔的專案相對路徑（例如，`launchConfigurations/mylaunchconf.launch`）。
+
+**範例**
 
 如果現行目錄是同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤。如果沒有啟動配置，則這個指令會結束，並發生錯誤。如果有多個啟動配置，則這個指令會提示您輸入要停止的啟動配置。
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
-這個指令會停止使用啟動檔 <code>mylaunchConfig</code> 執行之專案的應用程式實例。
+這個指令會停止使用啟動檔 `mylaunchConfig` 執行之專案的應用程式實例。
 
 
-```bl stop myproject –l "mylaunchConfig" ```
+```
+bl stop myproject –l “mylaunchConfig”
+```
+{: pre}
 
-如果現行目錄是使用啟動檔 <code>launchConfigurations/mylaunchconfig.launch</code> 啟動之關聯專案的同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤：
+如果現行目錄是使用啟動檔 `launchConfigurations/mylaunchconfig.launch` 啟動之關聯專案的同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤：
 
-```bl stop –l "launchConfigurations/mylaunchconfig.launch" ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
+{: pre}
 
 ># 相關鏈結 {:class="linklist"}
 >## 指導教學及範例 {:id="samples"}

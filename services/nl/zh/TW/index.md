@@ -12,7 +12,7 @@ copyright:
 
 #服務
 {: #services}
-*前次更新：2016 年 4 月 5 日*
+*前次更新：2016 年 5 月 10 日*
 
 {{site.data.keyword.Bluemix_notm}} 讓您能輕鬆地實作、管理及擴充服務和應用程式。您可以將焦點放在應用程式邏輯和應用程式設計。
 {:shortdesc}
@@ -41,7 +41,7 @@ copyright:
 
 |服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|是		|否		|否|
+|{{site.data.keyword.cloudaccesstrailshort}}			|是		|否		|否|
 |{{site.data.keyword.activedeployshort}}			|是		|是		|否|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
@@ -73,7 +73,7 @@ copyright:
 |{{site.data.keyword.twittershort}}		|是		|是		|是|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
-|{{site.data.keyword.iot_short}}		|是		|否		|否|
+|{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.keymanagementserviceshort}}	|否		|是		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|是|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
@@ -88,8 +88,8 @@ copyright:
 |{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
 |{{site.data.keyword.objectstorageshort}}	|是		|否		|否|
 |{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.mobilepush}}	|是		|是		|是|
-|Push for iOS 8					|是		|是		|否|
+|{{site.data.keyword.mobilepush}}		|是		|是		|是|
+|{{site.data.keyword.mobilepushshort}}				|是		|是		|是|
 |{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
 |{{site.data.keyword.rapidApps}}		|是		|是		|否|
 |{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
@@ -115,6 +115,23 @@ copyright:
 |{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
 *表 2. 服務可用性*
 
+
+## 服務的持續可用性
+{{site.data.keyword.Bluemix_notm}} 已將一組服務識別為「層級 1」。若未將功能對等項目設為可用，或提供至少五年的撤銷通知，IBM 就不會撤銷任何「層級 1」服務。 
+
+下列服務分類為「層級 1」：
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB by Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL by Compose
+  * {{site.data.keyword.ssofull}}
+
+若要進一步閱讀服務的使用條款，請參閱：[{{site.data.keyword.Bluemix_notm}} 條款](../navigation/notices.html#terms)。
 
 ## 服務淘汰
 

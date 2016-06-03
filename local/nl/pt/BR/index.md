@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Última atualização: 19 de abril de 2016*
+*Última atualização: 16 de maio de 2016*
 
 {{site.data.keyword.Bluemix}} Local traz a eficiência e agilidade da plataforma baseada em nuvem do {{site.data.keyword.Bluemix_notm}} para seu datacenter. Com o
 {{site.data.keyword.Bluemix_notm}} Local, é possível proteger
@@ -45,36 +45,38 @@ memória de computação.
 
 Além disso, há um conjunto de serviços que estão disponíveis como serviços do {{site.data.keyword.Bluemix_notm}} Local. Revise a tabela a seguir para ver o que está incluído e o que está disponível para compra.
 
-*Tabela 1. Serviços e tempos de execução locais* 
+*Tabela 1. Serviços e tempos de execução locais*
 
 | **Tipo** | **Nome** | **Descrição** |
 |----------|----------|-----------------|
 |Incluído | Tempos de execução do {{site.data.keyword.Bluemix_notm}} | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do
 {{site.data.keyword.Bluemix_notm}} estão disponíveis
 para uso em sua instância do {{site.data.keyword.Bluemix_notm}} Local.|
-|Incluído | {{site.data.keyword.autoscaling}}| Aumente ou diminua dinamicamente a capacidade de recursos de cálculo do aplicativo com base em políticas. Com esse serviço, você
-tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix}} Local.|
 |Opcional | {{site.data.keyword.APIM}} | Use o serviço {{site.data.keyword.APIMfull}} para compor, gerenciar e socializar APIs. É
 possível importar APIs com recursos usando uma URL de proxy ou montando dados a partir de origens de dados HTTP. O
 benefício do uso do serviço {{site.data.keyword.APIM}}
 é que é possível gerenciar como suas APIs são usadas. |
+|Incluído | {{site.data.keyword.autoscaling}}| Aumente ou diminua dinamicamente a capacidade de recursos de cálculo do aplicativo com base em políticas. Com esse serviço, você
+tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix}} Local.|
 |Opcional | {{site.data.keyword.datacshort}} | Esse serviço fornece uma grade de dados da memória
 que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
  50 GB de cache na memória. |
 |Opcional | {{site.data.keyword.sescashort}} | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
-|Opcional | {{site.data.keyword.iot_full}} | Esse serviço permite que os apps se comuniquem e consumam dados que são coletados por seus dispositivos conectados, sensores e gateways. A oferta de base local inclui um ambiente inicial que permite executar uma versão privada do IBM {{site.data.keyword.iot_full}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados.  |
+|Opcional | {{site.data.keyword.iot_full}} | Esse serviço permite que os apps se comuniquem e consumam dados que são coletados por seus dispositivos conectados, sensores e gateways. A oferta de base local inclui um ambiente inicial que permite executar uma versão privada do IBM {{site.data.keyword.iot_full}} dentro do ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
 
-Há componentes opcionais que estão disponíveis para você comprar para escalar e ampliar a capacidade de seus recursos e serviços. É possível comprar qualquer um desses componentes entrando em contato com a equipe de vendas; acesse [Contate-nos](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter informações sobre como contatar um representante de vendas. Para aumentar seu plano para um serviço, é possível selecionar o plano a partir do ladrilho do serviço em seu catálogo. 
+
+Há componentes opcionais que estão disponíveis para você comprar para escalar e ampliar a capacidade de seus recursos e serviços. É possível comprar qualquer um desses componentes entrando em contato com a equipe de vendas; acesse [Contate-nos](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter informações sobre como contatar um representante de vendas. Para aumentar seu plano para um serviço, é possível selecionar o plano a partir do ladrilho do serviço em seu catálogo.
 
 *Tabela 2. Componentes opcionais para compra*
 
 | **Nome** | **Descrição** |
 |----------|-----------------|
-|Configuração única de acesso do {{site.data.keyword.Bluemix_notm}} Local | Um encargo de configuração única para implementar e configurar o ambiente local.  |
-|Aumento de capacidade de 16 GB de recursos de cálculo do {{site.data.keyword.Bluemix_notm}} Local | Uma extensão dos recursos de cálculo do IBM {{site.data.keyword.Bluemix_notm}} Local para fornecer um extra de 16 GB de capacidade de memória.  |
-|Aumento de capacidade de 50 GB de Dados e Sessão do {{site.data.keyword.Bluemix_notm}} | Um ambiente que permite implementar e executar as instâncias de Cache de Dados e Cache de Sessão até uma capacidade acumulativa de 50 GB.  |
-|Aumento de capacidade de 500 chamadas API do {{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} | Um ambiente que permite executar uma versão privada do {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} com uma capacidade de 500 chamadas API por segundo.  |
-|Aumento incremental do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local | Um ambiente adicional para a oferta de serviços de base do {{site.data.keyword.iot_full}} Local que permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados.  |
+|Configuração única de acesso do {{site.data.keyword.Bluemix_notm}} Local | Um encargo de configuração única para implementar e configurar o ambiente local. |
+|Aumento de capacidade de 16 GB de recursos de cálculo do {{site.data.keyword.Bluemix_notm}} Local | Uma extensão dos recursos de cálculo do IBM {{site.data.keyword.Bluemix_notm}} Local para fornecer um extra de 16 GB de capacidade de memória. |
+|Aumento de capacidade de 50 GB de Dados e Sessão do {{site.data.keyword.Bluemix_notm}} | Um ambiente que permite implementar e executar as instâncias de Cache de Dados e Cache de Sessão até uma capacidade acumulativa de 50 GB. |
+|Aumento de capacidade de 500 chamadas API do {{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} | Um ambiente que permite executar uma versão privada do {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} com uma capacidade de 500 chamadas API por segundo. |
+|Aumento incremental do {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local | Um ambiente adicional para a oferta de serviços de base do {{site.data.keyword.iot_full}} Local que permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente local com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados. |
+
 
 **Nota**: Os componentes do {{site.data.keyword.Bluemix_notm}} Local podem indicar uma capacidade configurada específica, como gigabytes ou transações por segundo. Como a capacidade real na prática para qualquer configuração do serviço de nuvem varia dependendo de vários fatores, a capacidade real pode ser mais ou menos que a capacidade configurada.
 
@@ -82,45 +84,51 @@ Há componentes opcionais que estão disponíveis para você comprar para escala
 
 O {{site.data.keyword.Bluemix_notm}} Local inclui um catálogo privado organizado que exibe os serviços locais que estão disponíveis exclusivamente para você. Ele também inclui serviços adicionais que são disponibilizadas para você para uso a partir do {{site.data.keyword.Bluemix_notm}} Public.
 
-O catálogo organizado fornece a função para criar aplicativos híbridos que consistem em serviços públicos e privados. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança. Se tiver uma instância privada do serviço para seu ambiente local, você verá ícones específicos conectados a ladrilhos de serviço em seu catálogo, como ![Ícone de serviço local](images/localicon.png "Ícone de serviço dedicado"). 
+O catálogo organizado fornece a função para criar aplicativos híbridos que consistem em serviços públicos e privados. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança. Se
+for uma instância privada do serviço para o seu ambiente local, você verá uma identificação "Local" com os ladrilhos de serviço em seu catálogo. Da mesma forma, se for um serviço customizado, você verá
+"Customizado" listado com o ladrilho do serviço. 
 
-*Tabela 3. Serviços disponíveis para organização a partir do {{site.data.keyword.Bluemix_notm}} Public por região* 
+*Tabela 3. Serviços disponíveis para organização a partir do {{site.data.keyword.Bluemix_notm}} Public por região*
 
 |Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney, na Austrália|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|Sim	   	|Sim  		|Sim|
 |{{site.data.keyword.alertnotificationshort}}		|Sim		|Sim			|Sim		|
 |{{site.data.keyword.appseccloudshort}}		|Sim		|Sim		|Sim |
-|{{site.data.keyword.amashort}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.hadoopst}}			|Sim		|Não		|Não |
 |{{site.data.keyword.APIM}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.rules_short}}		|Sim		|Sim		|Sim |
 |{{site.data.keyword.cloudant}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.conceptexpansionshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.conceptinsightsshort}}	|Sim		|Sim		|Sim |
-|{{site.data.keyword.dashdbshort}}		|Sim		|Sim		|Não |
-|{{site.data.keyword.DB2OnCloud_short}}		|Sim		|Sim		|Não |
+|{{site.data.keyword.dashdbshort}}		|Sim		|Sim		|Sim |
+|{{site.data.keyword.dataworks_short}}		|Sim		|Sim		|Não|
+|{{site.data.keyword.DB2OnCloud_short}}		|Sim		|Sim		|Sim |
 |{{site.data.keyword.dialogshort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.documentconversionshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.game}}			|Não		|Não		|Sim |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sim	|Sim		|Sim |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Sim		| Sim		| Sim |
-|{{site.data.keyword.dataworks_short}}		|Sim		|Sim		|Não|
+|{{site.data.keyword.identitymixershort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.twittershort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.iot_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.languagetranslationshort}}	|Sim		|Sim		|Sim |
+|{{site.data.keyword.eventhubshort}}		|Sim		|Não		|Não|
 |{{site.data.keyword.messagehub}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.macm_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.manda}}			|Sim		|Sim		|Sim |
+|{{site.data.keyword.amashort}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.mqa}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.mql}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.nlclassifierlshort}} 	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.personalityinsightsshort}}	|Sim		|Sim		|Sim|
+|{{site.data.keyword.pm_short}}			|Sim		|Sim		|Não |
+|{{site.data.keyword.presenceinsightsshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.mobilepush}}		|Sim		|Sim		|Sim |
 |{{site.data.keyword.questionandanswershort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.relationshipextractionshort}}	|Sim	|Sim		|Sim|
 |{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
+|{{site.data.keyword.runbook_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Sim |
 |{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
 |{{site.data.keyword.speechtotextshort}}	|Sim 		|Sim	 	|Sim|
@@ -129,6 +137,8 @@ O catálogo organizado fornece a função para criar aplicativos híbridos que c
 |{{site.data.keyword.toneanalyzershort}} 	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.visualinsightsshort}}	|Sim		|Sim		|Sim|
+|{{site.data.keyword.visualrecognitionshort}}	|Sim 		|Sim	 	|Sim|
+|{{site.data.keyword.iot_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.workflow}}			|Sim		|Sim		|Sim |
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Sim |
 
@@ -249,7 +259,7 @@ informações:
 <li>Você e a IBM trabalham juntos para validar as credenciais fornecidas na tarefa anterior.</li>
 <li>Forneça 7 endereços IP em sua rede. Se houver um proxy da web seguro que permita acesso de saída para a Internet para componentes internos do {{site.data.keyword.Bluemix_notm}}, então deve-se fornecer as credenciais para conectar a ele.
 <p>**Nota**: se o seu proxy da web não for seguro, então não será necessário fornecer as credenciais. Além disso, observe que nem todos os clientes do {{site.data.keyword.Bluemix_notm}} Local usam um proxy da web.</p></li>
-<li>A IBM fornece uma lista de desbloqueio de URLs à qual você deve ser permitido por meio do proxy da web antes de iniciar a implementação. <br />
+<li>A IBM fornece uma lista de desbloqueio de URLs à qual você deve ser permitido por meio do proxy da web antes de iniciar a implementação.<br />
 <p>**Nota**: A lista de desbloqueio de URLs contém websites como twitter.com, facebook.com e youtube.com. Se essas URLs não forem permitidas, determinados serviços e áreas do {{site.data.keyword.Bluemix_notm}} poderão não estar disponíveis para uso.</p>
 </li>
 <li>Especifique os nomes de domínio para a implementação e os IDs que deseja usar. Você obtém dois domínios definidos parcialmente ao configurar sua instância local e selecione o prefixo para os dois domínios. Por exemplo, selecione o prefixo para <code>*mycompany*.bluemix.net</code> e <code>*mycompany*.mybluemix.net</code>. E, em seguida, também é possível escolher o domínio completo para criar um domínio customizado.
@@ -266,7 +276,9 @@ informações:
 <li>É possível começar a usar sua instância local que é monitorada pela equipe de operações da IBM para responder aos alertas.</li>
 </ol>
 
-Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para obter mais informações, veja [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../administer/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância local](index.html#maintainlocal).
+Depois que a instância do {{site.data.keyword.Bluemix_notm}} estiver configurada, será possível monitorar e gerenciar sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Administração. Para
+obter mais informações, consulte
+[Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e Dedicated](../admin/index.html#mng). Para obter informações sobre upgrades e manutenção, veja [Mantendo sua instância local](index.html#maintainlocal).
 
 ##Funções e Responsabilidades
 {: #rolesresponsibilities}
@@ -298,7 +310,9 @@ serviços e tempos de execução do
 <dd>Trabalha com os representantes IBM no plano de implementação do VMware. Geralmente, é alguém que é um administrador do VMware no datacenter. A pessoa designada a essa função revisa os <a href="../local/index.html#localinfra">requisitos de infraestrutura do {{site.data.keyword.Bluemix_notm}} Local</a> e trabalha junto com a IBM em um plano de implementação. No término da implementação, a pessoa designada a essa função aprovará que a implementação está em conformidade com os padrões corporativos na camada IaaS.</dd>
 </dl>
 
-Seus representantes de serviços trabalham com especialistas IBM, que trabalham juntos para assegurar que você sempre tenha o suporte necessário. Um Client Success Manager (CSM) é fornecido por 6 meses. O CSM conclui as tarefas a seguir:
+Seus representantes de serviços trabalham com especialistas IBM, que trabalham juntos para assegurar que você sempre tenha o suporte necessário. É possível fazer upgrade para a camada de suporte
+Premium, para trabalhar com um Client Success Manager (CSM) dedicado para a sua conta. Para obter mais informações sobre as camadas de suporte diferentes, consulte
+[Entrando em contato com o suporte](../support/index.html#contacting-support). O CSM conclui os tipos de tarefas a seguir:
 
 <ul>
 <li>Fornece coordenação técnica entre você e a IBM.</li>
@@ -325,7 +339,7 @@ A fase de concepção é usada para estabelecer o ambiente do {{site.data.keywor
 - Definir e estabelecer conectividade de rede entre a rede corporativa e as operações do {{site.data.keyword.Bluemix_notm}}.
 - Identificar e designar funções para sua equipe administrativa.
 
-*Tabela 4. Tarefas da fase de concepção* 
+*Tabela 4. Tarefas da fase de concepção*
 
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
@@ -359,7 +373,7 @@ A fase seguinte é a de progressão. A fase de progressão descreve o relacionam
 - Revisar as melhorias de manutenção e plataforma.
 - Coordenar as atividades para resolução de problemas e análise de causa raiz.
 
-*Tabela 5. Tarefas da fase de progressão* 
+*Tabela 5. Tarefas da fase de progressão*
 
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
@@ -368,7 +382,8 @@ A fase seguinte é a de progressão. A fase de progressão descreve o relacionam
 |Revisar projeções de capacidade | Revisar as projeções de capacidade, visto que estão relacionadas a eventos externos que podem causar impacto na capacidade, bem como novas implementações previstas de apps. Trabalhe com a IBM para revisar as projeções e planejar adequadamente. | A IBM e o cliente compartilham a responsabilidade |
 |Ajustar a capacidade |  Incluir ou remover capacidade conforme suas necessidades mudarem. | IBM |
 |Publicar atualizações e manutenção futuras | Criar documentação para a manutenção necessária de componentes da IBM. | IBM |
-|Executar manutenção | Trabalhe com a IBM para planejar a manutenção necessária dentro de uma janela de 21 dias. É possível fornecer datas que podem não funcionar para você na janela de 30 dias e a IBM trabalhará para planejar a manutenção adequadamente. | A IBM e o cliente compartilham a responsabilidade |
+|Executar manutenção | Trabalhe com a IBM para planejar a manutenção necessária dentro de uma janela de 21 dias. É possível fornecer datas que podem não funcionar para você na janela de 21 dias e a IBM
+trabalha para planejar a manutenção adequadamente. | A IBM e o cliente compartilham a responsabilidade |
 |Tratar de falhas de fornecimento | Corrigir falhas de fornecimento, se ocorrerem, para serviços criados pelo cliente que estejam implementados no Catálogo. | IBM |
 |Executar varreduras de rede e de IP | Executar varreduras diárias e mensais de rede e de IP. | A IBM e o cliente compartilham a responsabilidade |
 |Fornecer acesso aos logs de auditoria | Fornecer acesso a todos os logs de auditoria de segurança e administrativos.   | A IBM e o cliente compartilham a responsabilidade |
@@ -383,7 +398,7 @@ O estágio final da conclusão representa o término do relacionamento entre voc
 * Remoção de todas as conexões de rede
 * Infraestrutura de reciclagem
 
-*Tabela 6. Tarefas da fase de conclusão* 
+*Tabela 6. Tarefas da fase de conclusão*
 
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
@@ -535,47 +550,31 @@ para cada um dos quatro DEAs. Esse exemplo é baseado em um DEA configurado com 
 ## Mantendo sua instância local
 {: #maintainlocal}
 
-A IBM mantém e instala atualizações e correções conforme
-julga adequado para a plataforma, tempos de execução e serviços do
-Bluemix Local. Os serviços podem não estar disponíveis durante
-as janelas de manutenção.
+A IBM mantém e instala atualizações e correções nos tempos de execução e serviços do {{site.data.keyword.Bluemix_notm}}, conforme julga adequado. Os serviços podem não estar disponíveis durante
+as janelas de manutenção. Além disso, a IBM trabalha com você para planejar atualizações de manutenção para a plataforma do {{site.data.keyword.Bluemix_notm}}.
 
 Os tipos de manutenção a seguir são necessários para o {{site.data.keyword.Bluemix_notm}} Local:
 <dl>
-<dt>**Manutenção padrão para serviços** </dt>
+<dt>**Manutenção padrão para serviços**</dt>
 <dd>Os serviços utilizam janelas de manutenção predefinidas padrão,
-o que pode fazer com que os serviços fiquem indisponíveis. A IBM não requer aprovação do cliente para executar manutenção, mas tenta minimizar o impacto em seus serviços.<br />
+o que pode fazer com que os serviços fiquem indisponíveis. A IBM não requer aprovação do cliente para executar manutenção, mas tenta minimizar o impacto nos serviços do cliente.<br />
 <br />
-A IBM envia mensagens transmitidas das mudanças que estão planejadas para cada janela de manutenção, por meio de e-mail, telefone ou outros métodos.<br />
+A IBM envia mensagens transmitidas detalhando as mudanças que estão planejadas para cada janela de manutenção, na página Status.<br />
 <br />
-**Importante**: Algum serviço pode não ficar
-disponível durante o período de manutenção.</dd>
+**Importante**: alguns serviços podem não ficar disponíveis durante o período de manutenção.</dd>
 
-<dt>**Manutenção padrão para o {{site.data.keyword.Bluemix_notm}}**</dt>
-<dd>As atualizações de manutenção são aplicadas com base na coordenação entre você e a IBM dentro de uma janela de 21 dias. É possível fornecer à
-IBM datas ou horas específicas dentro da janela de 21 dias, o que
-pode não funcionar para você. A IBM tenta planejar atualizações
-nesses momentos. Com base nas solicitações, a IBM
-comunica a janela de manutenção planejada para você. Não
-espera-se que Janelas de mudança mensal causem impacto no ambiente do
-Bluemix Local em execução.
-<p>A imagem a seguir mostra o processo de receber uma notificação sobre uma atualização pendente para datas de configuração que podem não funcionar para você e, então, finalmente receber a notificação sobre a data planejada:</p>
-<p><img src="images/maintenance_dates.png" alt="Processo para configurar datas indisponíveis para uma atualização de manutenção"></p>
-<br />
-**Nota**: se você não precisar configurar quaisquer datas indisponíveis para a atualização, então, será possível aprovar a atualização. A IBM notifica você sobre a data planejada para a manutenção a ser aplicada. <br />
-<br />
-Acesse **ADMINISTRAÇÃO > INFORMAÇÕES DO SISTEMA**
-para visualizar atualizações pendentes, configurar datas
-indisponíveis e aprovar atualizações. Para obter mais informações
-sobre notificações e planejamento de atualizações pendentes,
-consulte <a href="../admin/index.html#oc_system">Visualizando
-informações do sistema</a>.</dd>
+<dt>**Manutenção padrão para a plataforma do {{site.data.keyword.Bluemix_notm}}**</dt>
+<dd>As atualizações de manutenção são aplicadas com base na coordenação entre você e a IBM dentro de uma janela de 21 dias. Você fornece à IBM janelas de manutenção pré-aprovadas e datas ou horas específicas
+que podem não funcionar para você e a IBM trabalha para planejar atualizações durante ou em torno das datas que você selecionou.<br />
+<p>Acesse **ADMINISTRAÇÃO > INFORMAÇÕES DO SISTEMA**, para visualizar atualizações de manutenção planejadas e pendentes. Para obter mais informações sobre como configurar as suas janelas
+pré-aprovadas, as datas indisponíveis e visualizar ou aprovar atualizações de manutenção, consulte <a href="../admin/index.html#oc_schedulemaintenance">Atualizações de manutenção</a></p>.</dd>
 </dl>
 
 **Importante**: A IBM se reserva o direito de interromper os serviços para aplicar manutenção emergencial, conforme necessário. A
 IBM pode mudar os horários de manutenção planejados, mas o notifica sobre quaisquer mudanças, bem como quaisquer informações de manutenção emergencial.
 
-Para configurar a manutenção de sua instância local, trabalhe com seu CSM para identificar uma janela acordada para a manutenção padrão. Se houver um problema relatado após uma atualização de manutenção, você acordará com seu CSM se for de seu melhor interesse permitir que a IBM retroceda a atualização. Em concordância, a IBM reverterá a atualização para restaurar o ambiente para o estado anterior.
+Se houver um problema relatado após uma atualização de manutenção, você concordará com o Suporte do {{site.data.keyword.Bluemix_notm}} se for de seu melhor interesse permitir que a IBM
+recupere a atualização. Em concordância, a IBM reverterá a atualização para restaurar o ambiente para o estado anterior.
 
 ## Resposta ao incidente e suporte
 {: #incidentresponse}
@@ -586,7 +585,7 @@ Se você identificar um problema que precisa de atenção do suporte e operaçõ
 
 ### Incidentes críticos detectados pela IBM
 
-Os incidentes críticos são indisponibilidades de serviço urgentes e inesperadas e problemas de estabilidade que afetam seu ambiente ou seus usuários. Se a IBM detectar um incidente crítico em seu ambiente, você será notificado por uma notificação na página **Status**. Também é possível verificar a página Status para quaisquer problemas conhecidos da plataforma ou de seus serviços. Para obter mais informações sobre a página Status, veja [Visualizando o status](../admin/index.html#oc_status).  
+Os incidentes críticos são indisponibilidades de serviço urgentes e inesperadas e problemas de estabilidade que afetam seu ambiente ou seus usuários. Se a IBM detectar um incidente crítico em seu ambiente, você será notificado por uma notificação na página **Status**. Também é possível verificar a página Status para quaisquer problemas conhecidos da plataforma ou de seus serviços. Para obter mais informações sobre a página Status, veja [Visualizando o status](../admin/index.html#oc_status). 
 
 Se deseja integrar suas notificações a um serviço da web que suporta o ganchos da web, consulte [Notificações e inscrições de eventos](../admin/index.html#oc_eventsubscription) para obter informações sobre como estender seus recursos de notificação.
 
@@ -601,7 +600,10 @@ Dependendo do problema, você, a IBM ou ambos trabalham juntos para corrigir o p
 ## Recuperação de desastre
 {: #dr}
 
-O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação. Várias medidas de segurança asseguram que suas organizações, espaços e apps estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
+A recuperação de desastre para o {{site.data.keyword.Bluemix_short}} Local pode ser configurada de forma semelhante à maneira que funciona quando você usa o
+{{site.data.keyword.Bluemix_short}}
+Public. O {{site.data.keyword.Bluemix_short}} Public fornece uma plataforma continuamente disponível para inovação com várias medidas à prova de falhas, a fim de assegurar que as suas organizações,
+os seus espaços e aplicativos estejam sempre disponíveis. Implementar apps em várias regiões geográficas permite disponibilidade contínua que protege contra perda simultânea não planejada de vários componentes de hardware ou software, ou a perda de um datacenter inteiro, para que, mesmo no caso de um desastre natural em uma localização geográfica, as instâncias de app distribuídas do {{site.data.keyword.Bluemix_notm}} Public em localizações geográficas alternativas fiquem disponíveis.
 {: shortdesc}
 
 A recuperação de desastre do {{site.data.keyword.Bluemix_short}} Local torna-se possível por meio de disponibilidade contínua para seus apps, da alta disponibilidade inerente da plataforma e da capacidade de restaurar sua instância no caso de uma falha. Você é responsável por ativar a disponibilidade contínua de seus apps implementando em várias regiões. A alta disponibilidade é construída no nível de plataforma por meio de tecnologias incluídas no Cloud Foundry e de outros componentes. Além disso, é possível trabalhar junto com a IBM para assegurar que seus dados sejam corretamente submetidos a backup no caso de você precisar restaurar sua instância a qualquer momento.
@@ -643,14 +645,15 @@ Um balanceador de carga global não apenas assegura disponibilidade contínua e 
 ### Alta disponibilidade
 {: #ha}
 
-Além de permitir a disponibilidade contínua, o {{site.data.keyword.Bluemix_notm}} também fornece alta disponibilidade na plataforma usando tecnologias construídas no Cloud Foundry e outros componentes. 
+Além de permitir a disponibilidade contínua, o {{site.data.keyword.Bluemix_notm}} também fornece alta disponibilidade na plataforma usando tecnologias construídas no Cloud Foundry e outros componentes.
 
 Essas tecnologias incluem os itens a seguir:
 
 <dl>
 <dt>Escalabilidade de DEA no Cloud Foundry</dt>
 <dd>Um <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> do Cloud Foundry executa verificações de funcionamento nos apps nele executados. Se houver um problema com o app ou com o próprio DEA, ele implementará instâncias adicionais do app em um DEA alternativo para tratar do problema. Para obter mais informações, consulte <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configurando o CF para alta disponibilidade com redundância</a>.<br />
-<p>Para garantir a alta disponibilidade para seus aplicativos, é necessário calcular recursos suficientes para equilibrar a carga e você também pode requerer recursos de cálculo adicionais para suportar uma possível falha. Se precisar escalar seu ambiente aumentando o conjunto de DEA para ser preparado para uma falha ou direcionar um aumento na carga para suas instâncias de app, será possível trabalhar com seu representante IBM para pedir DEAs adicionais e que tenha o hardware apropriado para suportar os recursos incluídos. </p>
+<p>Para garantir a alta disponibilidade para seus aplicativos, é necessário calcular recursos suficientes para equilibrar a carga e você também pode requerer recursos de cálculo adicionais para suportar uma possível falha. Se precisar escalar seu ambiente aumentando o conjunto de DEA para ser preparado para uma falha ou direcionar um aumento na carga para suas instâncias de app, será possível trabalhar com seu representante IBM para pedir DEAs adicionais e que tenha o hardware apropriado para suportar os recursos incluídos.
+</p>
 </dd>
 <dt>Backup de metadados</dt>
 <dd>Os metadados são submetidos a backup em um local secundário, geralmente uma máquina virtual local. Se possível, convém replicar o backup para seu próprio ambiente com pelo menos 200 km de distância.</dd>
@@ -683,6 +686,6 @@ Como a proteção de dados privados é crítica, a IBM precisa da sua colaboraç
 ## general
 * [Descobrir: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossário](glossary/index.html)
+* [{{site.data.keyword.Bluemix_notm}} glossário](../overview/glossary/index.html)
 * [Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
-* [Entrando em contato com o suporte](troubleshoot/getting_customer_support.html#bluemix_support)
+* [Entrando em contato com o suporte](../support/index.html#getting-customer-support)

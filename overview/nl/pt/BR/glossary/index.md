@@ -107,7 +107,7 @@ Criptografia Avançado](#x2897510).
 ### intermediário da agência
 {: #x2214318}
 
-Pessoa que facilita o relacionamento da IBM com as suas agências interativas em todo o mundo e é responsável por gerenciar o portfólio do projeto interativo no mundo inteiro, incluindo prever os compromissos de ordem de compra de gasto e monitoramento interativos da IBM com relação à previsão; alavancando o conhecimento de designações da agência, a carga de trabalho e o desempenho em toda a empresa. 
+Pessoa que facilita o relacionamento da IBM com as suas agências interativas em todo o mundo e é responsável por gerenciar o portfólio do projeto interativo no mundo inteiro, incluindo prever os compromissos de ordem de compra de gasto e monitoramento interativos da IBM com relação à previsão; alavancando o conhecimento de designações da agência, a carga de trabalho e o desempenho em toda a empresa.
 
 ### desenvolvimento ágil de software
 {: #x2907651}
@@ -122,12 +122,12 @@ Um nome curto exclusivo, visível publicamente e usado em clientes de desktop e 
 ### aliança
 {: #x2013525}
 
-A IBM mantém relacionamentos de desenvolvimento e de marketing (alianças) com os desenvolvedores de software líderes de mercado, permitindo-nos oferecer soluções completas aos clientes, correspondendo tecnologias IBM com o aplicativo de fornecedores de software independentes (ISV) e ativando o software. 
+A IBM mantém relacionamentos de desenvolvimento e de marketing (alianças) com os desenvolvedores de software líderes de mercado, permitindo-nos oferecer soluções completas aos clientes, correspondendo tecnologias IBM com o aplicativo de fornecedores de software independentes (ISV) e ativando o software.
 
 ### portfólio de aliança
 {: #x2214331}
 
-O portfólio de aliança mapeia os processos de negócios internos com relação a cada uma das soluções de aliança estratégicas (Ariba, i2, SAP, Siebel) para mostrar a cobertura e utilização. 
+O portfólio de aliança mapeia os processos de negócios internos com relação a cada uma das soluções de aliança estratégicas (Ariba, i2, SAP, Siebel) para mostrar a cobertura e utilização.
 
 ### AM
 {: #x2214303}
@@ -159,7 +159,7 @@ do IBM Mobile Quality Assurance.
 ### portfólio de aplicativo
 {: #x2214344}
 
-Um conjunto de aplicativos relacionados que são de propriedade de um processo (por exemplo, CRM) ou uma unidade de negócios (por exemplo, PCD). 
+Um conjunto de aplicativos relacionados que são de propriedade de um processo (por exemplo, CRM) ou uma unidade de negócios (por exemplo, PCD).
 
 ### interface de programação de aplicativos (API)
 {: #x2000186}
@@ -174,7 +174,7 @@ Uma interface que permite que um programa aplicativo escrito em uma linguagem de
 ### placa de arquitetura (AB)
 {: #x2214349}
 
-Um órgão de decisão de arquitetura funcional cruzada que configura as direções da arquitetura e as entregas da arquitetura funcional cruzada de patrocinadores, incluindo o blueprint de arquitetura de e-business, padrões de arquitetura de aplicativos/dados e equipes de soluções comuns que direcionam problemas e questões de arquitetura de alta prioridade. 
+Um órgão de decisão de arquitetura funcional cruzada que configura as direções da arquitetura e as entregas da arquitetura funcional cruzada de patrocinadores, incluindo o blueprint de arquitetura de e-business, padrões de arquitetura de aplicativos/dados e equipes de soluções comuns que direcionam problemas e questões de arquitetura de alta prioridade.
 
 ### artefato
 {: #x2262995}
@@ -235,7 +235,7 @@ No desenvolvimento ágil, uma lista de recursos ou tarefas técnicas que são ne
 ### plano de backup/recuperação
 {: #x2214370}
 
-Um plano que identifica a abordagem, os procedimentos e as ações a serem executadas no caso de operação ou execução malsucedida. Isso não implica a intenção de reverter para o ambiente original, mas, em vez disso, o Plano de Backup/Recuperação identifica o plano alternativo para continuar. Ele constrói as informações (dumps, conjuntos de dados de backup, logs, etc.) necessárias para recuperar de um erro sério ou uma exceção de processamento e continuar em frente. 
+Um plano que identifica a abordagem, os procedimentos e as ações a serem executadas no caso de operação ou execução malsucedida. Isso não implica a intenção de reverter para o ambiente original, mas, em vez disso, o Plano de Backup/Recuperação identifica o plano alternativo para continuar. Ele constrói as informações (dumps, conjuntos de dados de backup, logs, etc.) necessárias para recuperar de um erro sério ou uma exceção de processamento e continuar em frente.
 
 ### imagem base
 {: #x5366487}
@@ -284,7 +284,7 @@ Uma técnica de implementação que possibilita a entrega contínua e minimiza o
 
 Uma plataforma de padrões abertos baseada em nuvem para construir, gerenciar e executar apps de todos os tipos, como web, móveis, big data e dispositivos inteligentes. Os recursos incluem Java, desenvolvimento de backend móvel e monitoramento de aplicativos, bem como recursos de parceiros de ecossistema e software livre&mdash;todos fornecidos como serviço na nuvem.
 
-### texto padrão
+### modelo
 {: #x7233930}
 
 Um modelo que inclui um aplicativo e seu ambiente de tempo de execução e
@@ -334,7 +334,7 @@ Veja [processo de operações de transformação de negócios](#x2214425).
 ### BTOP Lite
 {: #x2214431}
 
-Uma versão abreviada do processo de operações de transformação de negócios (BTOP) destinada a alguns projetos que não requerem o processo BTOP integral. 
+Uma versão abreviada do processo de operações de transformação de negócios (BTOP) destinada a alguns projetos que não requerem o processo BTOP integral.
 
 ### construtor
 {: #x2197543}
@@ -354,7 +354,7 @@ Um modelo usado no Business Transformation Management System (BTMS) para fornece
 ### garantia de design de negócios (BDA)
 {: #x2214441}
 
-Processo que fornece uma abordagem estruturada para vincular e validar designs de processo de negócios para regras de negócios, estratégias e objetivos de negócios e arquiteturas do aplicativo relacionadas. 
+Processo que fornece uma abordagem estruturada para vincular e validar designs de processo de negócios para regras de negócios, estratégias e objetivos de negócios e arquiteturas do aplicativo relacionadas.
 
 ### executivo de informações de negócios (BIE)
 {: #x2214378}
@@ -364,12 +364,12 @@ Processo que fornece uma abordagem estruturada para vincular e validar designs d
 ### planejamento de negócios
 {: #x2214448}
 
-Uma série de processos que analisam o portfólio da IBM, o comparam com o cenário competitivo, usam a estratégia para derivar a direção e, finalmente, decidem sobre as melhores oportunidades de transformação para assegurar que a IBM continue competitiva no mercado de trabalho. 
+Uma série de processos que analisam o portfólio da IBM, o comparam com o cenário competitivo, usam a estratégia para derivar a direção e, finalmente, decidem sobre as melhores oportunidades de transformação para assegurar que a IBM continue competitiva no mercado de trabalho.
 
 ### executivo do processo de negócios (BPE)
 {: #x2214384}
 
-A função chave no Sistema de Business Transformation Management que trabalha para alinhar os processos e aplicativos com a estratégia corporativa e a infraestrutura de TI. 
+A função chave no Sistema de Business Transformation Management que trabalha para alinhar os processos e aplicativos com a estratégia corporativa e a infraestrutura de TI.
 
 ### regra de negócios
 {: #x2266457}
@@ -379,7 +379,7 @@ Uma representação sobre como as políticas ou práticas de negócios se aplica
 ### cenário de negócios
 {: #x2214458}
 
-Uma conta ou sinopse de um curso projetado de ação ou eventos. O cenário define e documenta uma grande transação de negócios de ponta a ponta, destaca a forma como as pessoas e organizações interagem para executar o processo definido, a transação de negócios e como elas finalmente utilizarão os sistemas e aplicativos que suportam o design do processo de ponta a ponta. Usado no processo de garantia de design de negócios para definir as interações dos usuários com os sistemas. 
+Uma conta ou sinopse de um curso projetado de ação ou eventos. O cenário define e documenta uma grande transação de negócios de ponta a ponta, destaca a forma como as pessoas e organizações interagem para executar o processo definido, a transação de negócios e como elas finalmente utilizarão os sistemas e aplicativos que suportam o design do processo de ponta a ponta. Usado no processo de garantia de design de negócios para definir as interações dos usuários com os sistemas.
 
 ### transformação de negócios (BT)
 {: #x2214398}
@@ -394,17 +394,17 @@ Uma conta ou sinopse de um curso projetado de ação ou eventos. O cenário defi
 ### iniciativa de transformação de negócios
 {: #x2214464}
 
-Um conjunto de programas ou projetos (processo e TI) para alcançar um objetivo de negócios. 
+Um conjunto de programas ou projetos (processo e TI) para alcançar um objetivo de negócios.
 
 ### Business Transformation Management System (BTMS)
 {: #x2205904}
 
-Uma estrutura de sistema de gerenciamento integrado para gerenciar o portfólio da IBM para atender às necessidades da IBM e do mercado de trabalho. O portfólio da IBM consiste em soluções planejadas, soluções em andamento, soluções implementadas e soluções removidas. 
+Uma estrutura de sistema de gerenciamento integrado para gerenciar o portfólio da IBM para atender às necessidades da IBM e do mercado de trabalho. O portfólio da IBM consiste em soluções planejadas, soluções em andamento, soluções implementadas e soluções removidas.
 
 ### Business Transformation Management Tool (BTMT)
 {: #x2214418}
 
-Uma ferramenta de fluxo de trabalho desenvolvida pelo BT-CIO para gerenciar o desenvolvimento de soluções, projetos e ativos por meio dos processos de Desenvolvimento de Solução de BTMS. O BTMT é usado para executar o seguinte: iniciar atividade de marketing na web, solicitar um novo website, iniciar um novo desenvolvimento de qualquer tipo de ativo (aplicativo, ferramenta, sala de equipe, repositório de dados, formulário ou serviço do sistema de infraestrutura), implementar qualquer tipo de ativo, gerenciar um ativo após implementado ou fazer uma Solicitação de Fundos de TI (IPP#). 
+Uma ferramenta de fluxo de trabalho desenvolvida pelo BT-CIO para gerenciar o desenvolvimento de soluções, projetos e ativos por meio dos processos de Desenvolvimento de Solução de BTMS. O BTMT é usado para executar o seguinte: iniciar atividade de marketing na web, solicitar um novo website, iniciar um novo desenvolvimento de qualquer tipo de ativo (aplicativo, ferramenta, sala de equipe, repositório de dados, formulário ou serviço do sistema de infraestrutura), implementar qualquer tipo de ativo, gerenciar um ativo após implementado ou fazer uma Solicitação de Fundos de TI (IPP#).
 
 ### processo de operações de transformação de negócios (BTOP)
 {: #x2214425}
@@ -540,7 +540,7 @@ Uma interface de computador em que a entrada e a saída se baseiam em texto.
 ### teste de desenvolvimento comum (CDT)
 {: #x2214490}
 
-Um ambiente de desenvolvimento e teste para aplicativos GNA/GWA, projetado e construído em conformidade com os requisitos dos clientes e as normas de GWA e GNA. 
+Um ambiente de desenvolvimento e teste para aplicativos GNA/GWA, projetado e construído em conformidade com os requisitos dos clientes e as normas de GWA e GNA.
 
 ### componente
 {: #x2017871}
@@ -552,17 +552,17 @@ Um ambiente de desenvolvimento e teste para aplicativos GNA/GWA, projetado e con
 ### projeto do componente
 {: #x2214495}
 
-Um dos projetos individuais em um programa; pode consistir em vários projetos dentro da mesma organização. 
+Um dos projetos individuais em um programa; pode consistir em vários projetos dentro da mesma organização.
 
 ### calcular
 {: #x3723424}
 
-Infraestrutura ou recursos que servem como base para construir apps na nuvem. 
+Infraestrutura ou recursos que servem como base para construir apps na nuvem.
 
 ### fase de conceito
 {: #x2214500}
 
-Fase do processo de operações de transformação de negócios (BTOP) na qual a PDT entende os requisitos e desenvolve os conceitos, confirma a necessidade e capacidade de desenvolver uma solução, desenvolve a proposta de projeto inicial incluindo modelos, determina os fundos para a próxima fase. 
+Fase do processo de operações de transformação de negócios (BTOP) na qual a PDT entende os requisitos e desenvolve os conceitos, confirma a necessidade e capacidade de desenvolver uma solução, desenvolve a proposta de projeto inicial incluindo modelos, determina os fundos para a próxima fase.
 
 ### contêiner
 {: #x2010901}
@@ -577,12 +577,12 @@ Uma prática de desenvolvimento de software que usa técnicas, como teste contí
 ### melhoria contínua
 {: #x8635788}
 
-A prática de avaliar um produto, serviço ou processo em uma base contínua para assegurar que ele seja eficiente e efetivo e fazer mudanças incrementalmente ou todas de uma vez, conforme necessário. 
+A prática de avaliar um produto, serviço ou processo em uma base contínua para assegurar que ele seja eficiente e efetivo e fazer mudanças incrementalmente ou todas de uma vez, conforme necessário.
 
 ### integração contínua (CI)
 {: #x6009572}
 
-Uma prática de desenvolvimento de software em que os membros de uma equipe integram seu trabalho frequentemente para que haja várias integrações todos os dias. As integrações são verificadas por uma construção automatizada para detectar erros de integração o mais rapidamente possível. 
+Uma prática de desenvolvimento de software em que os membros de uma equipe integram seu trabalho frequentemente para que haja várias integrações todos os dias. As integrações são verificadas por uma construção automatizada para detectar erros de integração o mais rapidamente possível.
 
 ### credencial
 {: #x2018813}
@@ -592,17 +592,17 @@ Informações adquiridas durante a autenticação, que descrevem um usuário, as
 ### revisão crítica de design (CDR)
 {: #x2214475}
 
-Uma revisão executada pelo Engenheiro de Sistemas (SE) durante a Fase de Desenvolvimento. 
+Uma revisão executada pelo Engenheiro de Sistemas (SE) durante a Fase de Desenvolvimento.
 
 ### teste de tensão de confiabilidade de desempenho aplicativo cruzado (teste de XPRS)
 {: #x2215016}
 
-Fornece certificação de linha de base de desempenho e de teste de tensão para os aplicativos do NOTES e da WEB identificados para serem implementados em plataformas IBM. 
+Fornece certificação de linha de base de desempenho e de teste de tensão para os aplicativos do NOTES e da WEB identificados para serem implementados em plataformas IBM.
 
 ### transformação organizacional cruzada
 {: #x2214505}
 
-Um programa ou projeto que se beneficia da entrada fornecida por outras unidades de negócios envolvidas e que fornece informações de retorno para elas. Os componentes do programa/projeto podem ser desenvolvidos e gerenciados por uma ou mais organizações. 
+Um programa ou projeto que se beneficia da entrada fornecida por outras unidades de negócios envolvidas e que fornece informações de retorno para elas. Os componentes do programa/projeto podem ser desenvolvidos e gerenciados por uma ou mais organizações.
 
 ### Responsável pelo atendimento ao cliente
 {: #x2140147}
@@ -628,7 +628,7 @@ para executar funções contínuas ou periódicas, como controle de rede.
 ### painel
 {: #x2363941}
 
-Um componente de interface com o usuário que fornece um resumo abrangente de informações pertinentes de várias origens para o usuário. 
+Um componente de interface com o usuário que fornece um resumo abrangente de informações pertinentes de várias origens para o usuário.
 
 ### origem de dados
 {: #x2176124}
@@ -668,17 +668,17 @@ Um elemento de projeto que permite que as partes interessadas controlem erros e 
 ### distribuível
 {: #x2214520}
 
-Qualquer resultado ou item mensurável, tangível, verificável que deve ser produzido para concluir um projeto ou parte de um projeto. Usado geralmente de modo mais limitado em referência a uma entrega externa, que é uma entrega sujeita à aprovação pelo patrocinador do projeto ou cliente. 
+Qualquer resultado ou item mensurável, tangível, verificável que deve ser produzido para concluir um projeto ou parte de um projeto. Usado geralmente de modo mais limitado em referência a uma entrega externa, que é uma entrega sujeita à aprovação pelo patrocinador do projeto ou cliente.
 
 ### certificado de aceitação de entrega
 {: #x2214515}
 
-Esse certificado é a entrada para a revisão de saída de fase para o cliente. Uma vez assinado pelo líder da equipe de desenvolivmento do projeto (PDTL) do cliente e pelo gerenciador do projeto de solução (SPM) do IGS, ele confirma e identifica a conclusão de entregas conforme especificado na descrição do trabalho (SOW) para essa fase.
+Esse certificado é a entrada para a revisão de saída de fase para o cliente. Uma vez assinado pelo líder da equipe de desenvolvimento do projeto (PDTL) do cliente e pelo gerenciador do projeto de solução (SPM) do IGS, ele confirma e identifica a conclusão de entregas conforme especificado na descrição do trabalho (SOW) para essa fase.
 
 ### Delivery Project Executive (DPE)
 {: #x2214525}
 
-Um representante-chefe de entrega que é responsável por todos os aspectos de entrega de um contrato, incluindo satisfação do cliente, excelência na entrega, crescimento da conta e taxa de atingimento com aceleradores de lucro, com a entrega de serviço como a responsabilidade primária. 
+Um representante-chefe de entrega que é responsável por todos os aspectos de entrega de um contrato, incluindo satisfação do cliente, excelência na entrega, crescimento da conta e taxa de atingimento com aceleradores de lucro, com a entrega de serviço como a responsabilidade primária.
 
 ### implementação
 {: #x2104544}
@@ -704,7 +704,7 @@ Uma metodologia de software que integra desenvolvimento de aplicativo e operaç�
 ### document of understanding (DOU)
 {: #x2214542}
 
-Um documento formal que define os termos de um relacionamento entre um consumidor de um serviço e o provedor desse serviço. 
+Um documento formal que define os termos de um relacionamento entre um consumidor de um serviço e o provedor desse serviço.
 
 ### domínio
 {: #x2021210}
@@ -753,7 +753,7 @@ Uma iniciativa de software livre que fornece aos fornecedores de software indepe
 ### término de vida (EOL)
 {: #x2214573}
 
-Refere-se ao término da vida útil de um aplicativo. A equipe de gerenciamento de operações coordena as atividades para descontinuar um aplicativo no término de vida. 
+Refere-se ao término da vida útil de um aplicativo. A equipe de gerenciamento de operações coordena as atividades para descontinuar um aplicativo no término de vida.
 
 ### terminal
 {: #x2026820}
@@ -763,17 +763,17 @@ O endereço de uma API ou um serviço em um ambiente. Uma API expõe um terminal
 ### de ponta a ponta
 {: #x2214553}
 
-Um princípio de design de transformação de negócios baseado em uma abordagem de loop fechado para definição de processos, políticas/regras, estruturas de dados, sistemas de TI e sistemas de gerenciamento. 
+Um princípio de design de transformação de negócios baseado em uma abordagem de loop fechado para definição de processos, políticas/regras, estruturas de dados, sistemas de TI e sistemas de gerenciamento.
 
 ### design de negócio corporativo
 {: #x2214563}
 
-A missão do design de negócio corporativo é criar e tornar operacional o blueprint do processo de e-business da IBM, conduzir a comunidade de processo de negócios da IBM à liderança de classe mundial, vincular o desempenho da IBM a objetivos do processo e alinhar-se com e suportar as principais prioridades do CIO. 
+A missão do design de negócio corporativo é criar e tornar operacional o blueprint do processo de e-business da IBM, conduzir a comunidade de processo de negócios da IBM à liderança de classe mundial, vincular o desempenho da IBM a objetivos do processo e alinhar-se com e suportar as principais prioridades do CIO.
 
 ### ponto de controle corporativo
 {: #x2214568}
 
-Um controle mensurável e auditável sobre processos, dados, aplicativos e infraestrutura entre a empresa e a cadeia de valor para suportar os objetivos corporativos; por exemplo, cliente e padrões de dados financeiros. 
+Um controle mensurável e auditável sobre processos, dados, aplicativos e infraestrutura entre a empresa e a cadeia de valor para suportar os objetivos corporativos; por exemplo, cliente e padrões de dados financeiros.
 
 ### EOL
 {: #x2214575}
@@ -797,17 +797,17 @@ Um serviço que não está pronto para produção e pode ser removido da produç
 ### compartilhamento de arquivos
 {: #x2022902}
 
-No Bluemix, uma área de armazenamento de arquivo compartilhado baseada em nuvem que contém volumes. 
+No Bluemix, uma área de armazenamento de arquivo compartilhado baseada em nuvem que contém volumes.
 
 ### proposta de projeto final (FPP)
 {: #x2214585}
 
-Desenvolvido pela PDT na fase de plano e é a base para o contrato da IPMT/PDT que é acordado na fase de Plano. Consiste na documentação a seguir: Planilha principal do processo de operações de transformação de negócios (BTOP), modelo de negócio do BTOP (itens da fase de plano), architecture solution definition document (ADD), contrato e plano de projeto integrado da IPMT/PDT (este plano é geralmente executado pelo gerente de projeto da solução ou gerente de projeto técnico). A FPP pode conter documentação adicional de outras origens quando considerado apropriado pela PDTL. Os modelos (modelo de negócio BTOP, modelo de arquitetura e tecnologia BTOP) e o plano do projeto integrado continuam a ser atualizados pela fase à medida que o projeto se desenvolve. No entanto, se os resultados indicarem que o projeto está se estendendo além dos limites do contrato da IPMT/PDT do plano, um DCP provisório com a IPMT deverá ser retido. 
+Desenvolvido pela PDT na fase de plano e é a base para o contrato da IPMT/PDT que é acordado na fase de Plano. Consiste na documentação a seguir: Planilha principal do processo de operações de transformação de negócios (BTOP), modelo de negócio do BTOP (itens da fase de plano), architecture solution definition document (ADD), contrato e plano de projeto integrado da IPMT/PDT (este plano é geralmente executado pelo gerente de projeto da solução ou gerente de projeto técnico). A FPP pode conter documentação adicional de outras origens quando considerado apropriado pela PDTL. Os modelos (modelo de negócio BTOP, modelo de arquitetura e tecnologia BTOP) e o plano do projeto integrado continuam a ser atualizados pela fase à medida que o projeto se desenvolve. No entanto, se os resultados indicarem que o projeto está se estendendo além dos limites do contrato da IPMT/PDT do plano, um DCP provisório com a IPMT deverá ser retido.
 
 ### função de chefe de finanças
 {: #x2214580}
 
-O chefe de finanças que é o ponto focal para o suporte financeiro necessário para a solução e consolida os planos individuais e executa avaliações financeiras do plano integrado. 
+O chefe de finanças que é o ponto focal para o suporte financeiro necessário para a solução e consolida os planos individuais e executa avaliações financeiras do plano integrado.
 
 ### bifurcar
 {: #x2023301}
@@ -829,9 +829,9 @@ Uma arquitetura para um aplicativo que fornece uma estrutura padrão para um apl
 ### FRMP
 {: #x2214594}
 
-Veja [plano de gerencimaneto de reengenharia de cumprimento](#x2214592).
+Consulte [plano de gerenciamento de reengenharia de cumprimento](#x2214592).
 
-### plano de gerencimaneto de reengenharia de cumprimento (FRMP)
+### plano de gerenciamento de reengenharia de cumprimento (FRMP)
 {: #x2214592}
 
 
@@ -853,7 +853,7 @@ A quantia acumulativa de memória (em gigabytes) que está sendo executada para 
 ### GCP
 {: #x2193525}
 
-O processo usado pela equipe de capacidade e alocação de global services para reservar e alocar a capacidade de servidor e de rede para projetos. 
+O processo usado pela equipe de capacidade e alocação de global services para reservar e alocar a capacidade de servidor e de rede para projetos.
 
 ### Git
 {: #x7494416}
@@ -963,7 +963,7 @@ Consulte [ambiente de desenvolvimento integrado](#x2116934).
 ### representante da equipe de gerenciamento da capacidade do IGA
 {: #x2214640}
 
-A equipe de gerenciamento de capacidade do IGA é responsável por assegurar que os problemas de prontidão do IGA sejam comunicados ao OMTL em toda a fase de gerenciamento de operações para o portfólio implementado. A equipe de gerenciamento de capacidade do IGA é responsável por fornecer relatórios de capacidade. 
+A equipe de gerenciamento de capacidade do IGA é responsável por assegurar que os problemas de prontidão do IGA sejam comunicados ao OMTL em toda a fase de gerenciamento de operações para o portfólio implementado. A equipe de gerenciamento de capacidade do IGA é responsável por fornecer relatórios de capacidade.
 
 ### IM
 {: #x2141735}
@@ -993,22 +993,22 @@ A entrega de uma infraestrutura de computador, incluindo funcionalidade do servi
 ### iniciativa de infraestrutura
 {: #x2214657}
 
-Um conjunto de programas ou projetos de infraestrutura para alcançar uma mudança de infraestrutura no suporte de um objetivo de iniciativa ou tecnologia de negócio/transformação. 
+Um conjunto de programas ou projetos de infraestrutura para alcançar uma mudança de infraestrutura no suporte de um objetivo de iniciativa ou tecnologia de negócio/transformação.
 
 ### plano de infraestrutura mestre (IMP)
 {: #x2214645}
 
-Um agrupamento de planos do projeto composto por dois tipos de projetos, estado estável e agente de mudança, implementados com relação a uma infraestrutura comum. O IMP visualiza todos os planos do projeto desenvolvidos e executados pelos gerentes de projetos individuais da equipe como um único plano para o propósito de gerenciar a infraestrutura. 
+Um agrupamento de planos do projeto composto por dois tipos de projetos, estado estável e agente de mudança, implementados com relação a uma infraestrutura comum. O IMP visualiza todos os planos do projeto desenvolvidos e executados pelos gerentes de projetos individuais da equipe como um único plano para o propósito de gerenciar a infraestrutura.
 
 ### proposta de projeto inicial (IPP)
 {: #x2214662}
 
-Desenvolvida pela PDT durante a fase de conceito. Consiste na documentação a seguir: modelo de licença de PDT, planilha principal do processo de operações de transformação de negócios (BTOP), modelo de negócios BTOP (itens da fase de conceito), architecture solution proposal document (APD) e plano do projeto integrado inicial (este plano é geralmente executado pelo gerente de projeto da solução ou gerente de projeto técnico). A IPP pode conter documentação adicional de outras origens quando considerado apropriado pela PDTL. 
+Desenvolvida pela PDT durante a fase de conceito. Consiste na documentação a seguir: modelo de licença de PDT, planilha principal do processo de operações de transformação de negócios (BTOP), modelo de negócios BTOP (itens da fase de conceito), architecture solution proposal document (APD) e plano do projeto integrado inicial (este plano é geralmente executado pelo gerente de projeto da solução ou gerente de projeto técnico). A IPP pode conter documentação adicional de outras origens quando considerado apropriado pela PDTL.
 
 ### iniciativa
 {: #x2214669}
 
-Um grupo de soluções, projetos e ativos relacionados que, quando desenvolvidos e implementados, têm um efeito de transformação nos negócios. As iniciativas são desenvolvidas no planejamento de transformação de negócios. 
+Um grupo de soluções, projetos e ativos relacionados que, quando desenvolvidos e implementados, têm um efeito de transformação nos negócios. As iniciativas são desenvolvidas no planejamento de transformação de negócios.
 
 ### instância
 {: #x2002531}
@@ -1028,7 +1028,7 @@ Grupo responsável pelo desempenho de negócios WW de um portfólio de ofertas d
 ### Integrated Product Development (IPD)
 {: #x2213501}
 
-Um dos dois principais processos de negócios corporativos (com o Gerenciamento de Relacionamento com o Cliente) na IBM. O IPD define como as ofertas são desenvolvidas e entregues. 
+Um dos dois principais processos de negócios corporativos (com o Gerenciamento de Relacionamento com o Cliente) na IBM. O IPD define como as ofertas são desenvolvidas e entregues.
 
 ### integração
 {: #x2267187}
@@ -1039,7 +1039,7 @@ executável por inteiro.
 ### agência interativa
 {: #x2214674}
 
-Um fornecedor preferencial pela IBM para ajudar a organização com o design de website, desenvolvimento de conteúdo e geração de banner. 
+Um fornecedor preferencial pela IBM para ajudar a organização com o design de website, desenvolvimento de conteúdo e geração de banner.
 
 ### certificado intermediário
 {: #x3753781}
@@ -1063,12 +1063,12 @@ A rede de objetos interconectados que simula uma "internet" de dispositivos cone
 ### gerenciador de intranet (IM)
 {: #x2214679}
 
-O IM é responsável por avaliar e aprovar todas as solicitações de aplicativo e planejar recursos para fornecer orientação no design e navegação de website, desenvolvimento de aplicativo e hosting. 
+O IM é responsável por avaliar e aprovar todas as solicitações de aplicativo e planejar recursos para fornecer orientação no design e navegação de website, desenvolvimento de aplicativo e hosting.
 
 ### Investment Review Board (IRB)
 {: #x2205860}
 
-As partes interessadas do executivo responsáveis por configurar a direção estratégica e a visão de transformação de negócios para a unidade de organização ou de negócios. 
+As partes interessadas do executivo responsáveis por configurar a direção estratégica e a visão de transformação de negócios para a unidade de organização ou de negócios.
 
 ### IoT
 {: #x6714346}
@@ -1104,7 +1104,7 @@ Consulte [sprint](#x6248609).
 ### Iniciativa de TI
 {: #x2214694}
 
-Um conjunto de programas ou projetos de TI para alcançar uma transformação/mudança de TI no suporte de um objetivo de iniciativa ou tecnologia de negócio/transformação. 
+Um conjunto de programas ou projetos de TI para alcançar uma transformação/mudança de TI no suporte de um objetivo de iniciativa ou tecnologia de negócio/transformação.
 
 
 ## J
@@ -1229,7 +1229,7 @@ Uma representação física ou de negócios da estrutura dos dados de uma ou mai
 ### monitoramento
 {: #x2200930}
 
-O captura, análise e relatório de desempenho do projeto, geralmente quando comparado ao plano. 
+O captura, análise e relatório de desempenho do projeto, geralmente quando comparado ao plano.
 
 
 ## N
@@ -1275,7 +1275,7 @@ Refere-se ao software cujo código-fonte está disponível publicamente para uso
 ### Equipe de gerenciamento de operações (OMT)
 {: #x2214710}
 
-A Equipe de gerenciamento de operações é responsável por um portfólio de aplicativos que abordam um segmento específico dos negócios. A equipe gerencia e monitora o desempenho da solução e recomenda ações corretivas. Ela identifica novos requisitos, executa planos de gerenciamento do Gerenciamento de Operações e atividades de término de vida. 
+A Equipe de gerenciamento de operações é responsável por um portfólio de aplicativos que abordam um segmento específico dos negócios. A equipe gerencia e monitora o desempenho da solução e recomenda ações corretivas. Ela identifica novos requisitos, executa planos de gerenciamento do Gerenciamento de Operações e atividades de término de vida.
 
 ### org
 {: #x7470494}
@@ -1319,22 +1319,22 @@ Veja [equipe de desenvolvimento de projeto](#x2422165).
 ### chefe de arquiteto da PDT
 {: #x2214734}
 
-Responsável por definir a arquitetura do projeto, assegurando a sua integração com outros sistemas e a conformidade com o blueprint da arquitetura de e-business e as normas e diretrizes do BT-CIO. 
+Responsável por definir a arquitetura do projeto, assegurando a sua integração com outros sistemas e a conformidade com o blueprint da arquitetura de e-business e as normas e diretrizes do BT-CIO.
 
 ### medidas de desempenho
 {: #x2214746}
 
-Métricas que fornecem uma fonte isolada de informações sobre as iniciativas de transformação da IBM e seu impacto sobre os resultados dos negócios da IBM. 
+Métricas que fornecem uma fonte isolada de informações sobre as iniciativas de transformação da IBM e seu impacto sobre os resultados dos negócios da IBM.
 
 ### teste piloto
 {: #x2214751}
 
-Um teste de pré-implementação de novas funções com uso limitado, dados limitados e escopo limitado, para determinar se as funções e seus processos e procedimentos relacionados funcionam adequadamente 
+Um teste de pré-implementação de novas funções com uso limitado, dados limitados e escopo limitado, para determinar se as funções e seus processos e procedimentos relacionados funcionam adequadamente
 
 ### processamento de canais
 {: #x2063222}
 
-Um serviço de construção e implementação repetido que divide a entrega de software em estágios. Os pipelines suportam entrega e integração contínuas, incluindo teste automatizado. 
+Um serviço de construção e implementação repetido que divide a entrega de software em estágios. Os pipelines suportam entrega e integração contínuas, incluindo teste automatizado.
 
 ### fase do plano
 {: #x2214756}
@@ -1359,7 +1359,7 @@ Veja [instituto de gerenciamento de projetos](#x2214765).
 ### revisão preliminar de design (PDR)
 {: #x2214724}
 
-A revisão executada pelo engenheiro de sistemas (SE) durante a fase de plano. 
+A revisão executada pelo engenheiro de sistemas (SE) durante a fase de plano.
 
 ### biblioteca de pré-produção
 {: #x7290106}
@@ -1402,7 +1402,7 @@ especificada.
 ### iniciativa de processo
 {: #x2214769}
 
-Um conjunto de programas ou projetos de processo para alcançar uma transformação/mudança de processo no suporte de uma iniciativa de negócio/transformação. 
+Um conjunto de programas ou projetos de processo para alcançar uma transformação/mudança de processo no suporte de uma iniciativa de negócio/transformação.
 
 ### biblioteca de produção
 {: #x2034919}
@@ -1417,12 +1417,12 @@ Um estado de operação em que clientes usam um conjunto limitado de recursos de
 ### revisão pronta para produção (PRR)
 {: #x2214787}
 
-A revisão executada pelo engenheiro de sistemas (SE) durante a fase de qualificação. 
+A revisão executada pelo engenheiro de sistemas (SE) durante a fase de qualificação.
 
 ### programar
 {: #x2034977}
 
-Uma grande transformação que consiste em vários projetos cruzando os limites organizacionais. Os projetos individuais são gerenciados por sua própria PDT e IPMT, mas são interbloqueados com a PDT e IPMT do programa. 
+Uma grande transformação que consiste em vários projetos cruzando os limites organizacionais. Os projetos individuais são gerenciados por sua própria PDT e IPMT, mas são interbloqueados com a PDT e IPMT do programa.
 
 ### projeto
 {: #x2035151}
@@ -1476,7 +1476,7 @@ Um alerta indicando uma mudança ou uma atualização que aparece em um ícone d
 ### fase de qualificação
 {: #x2214800}
 
-Fase do processo de operações de transformação de negócios (BTOP): qualificar e certificar. As atividades incluem promover solução para a produção e assegurar a prontidão da Infraestrutura, liberar fundos para usar até o término de vida ou no próximo estágio de fundos. 
+Fase do processo de operações de transformação de negócios (BTOP): qualificar e certificar. As atividades incluem promover solução para a produção e assegurar a prontidão da Infraestrutura, liberar fundos para usar até o término de vida ou no próximo estágio de fundos.
 
 
 ## R
@@ -1581,7 +1581,7 @@ implementada como regras, tabelas de decisão e fluxos de regra.
 ### runbook
 {: #x2830619}
 
-Uma compilação de procedimentos e operações que um administrador do sistema ou operador usa como uma referência para execução e manutenção de um sistema de computador ou rede. 
+Uma compilação de procedimentos e operações que um administrador do sistema ou operador usa como uma referência para execução e manutenção de um sistema de computador ou rede.
 
 ### tempo de execução
 {: #x2391929}
@@ -1616,7 +1616,7 @@ Veja [gerenciamento de controle de fonte](#x3579285).
 {: #x2037763}
 
 - Em gerenciamento de identidade, o conjunto de entidades que uma política ou um item de controle de acesso (ACI) pode afetar.
-- A soma dos produtos e serviços a serem fornecidos como um projeto. 
+- A soma dos produtos e serviços a serem fornecidos como um projeto.
 
 ### Scrum
 {: #x7474016}
@@ -1636,7 +1636,7 @@ Um protocolo de segurança que fornece privacidade de comunicação. Com SSL, ap
 ### chefe de segurança e privacidade
 {: #x2214812}
 
-Pessoa com responsabilidade de assegurar que a solução em todas as suas fases obedeça a todas as normas de segurança e privacidade IBM, requisitos de ASCA, requisitos legais e obrigações morais. Ela é responsável pela Liderança da PDT e OMT para assegurar que a segurança, privacidade, ASCA e requisitos relacionados sejam identificados e direcionados pelos planos de solução até o término de vida. 
+Pessoa com responsabilidade de assegurar que a solução em todas as suas fases obedeça a todas as normas de segurança e privacidade IBM, requisitos de ASCA, requisitos legais e obrigações morais. Ela é responsável pela Liderança da PDT e OMT para assegurar que a segurança, privacidade, ASCA e requisitos relacionados sejam identificados e direcionados pelos planos de solução até o término de vida.
 
 ### serviço
 {: #x2038343}
@@ -1687,7 +1687,7 @@ Um modelo de implementação de software pelo qual o software, incluindo process
 ### gerenciador do projeto da solução (SPM)
 {: #x2214907}
 
-O ponto focal para o desenvolvimento e a implementação da solução de TI. O SPM é responsável pelo desempenho do esforço do IGS, incluindo proposta técnica, desenvolvimento da solução, entrega da solução e lançamento. 
+O ponto focal para o desenvolvimento e a implementação da solução de TI. O SPM é responsável pelo desempenho do esforço do IGS, incluindo proposta técnica, desenvolvimento da solução, entrega da solução e lançamento.
 
 ### SOR
 {: #x2214822}
@@ -1772,7 +1772,7 @@ Um modelo que inclui serviços predefinidos e código do aplicativo que é confi
 ### descrição do trabalho (SOW)
 {: #x2214901}
 
-Um documento preparado por um Gerente de Projeto (PM) como uma resposta a uma Solicitação de Serviço a partir de um cliente. A SOW do projeto é a proposta de solução técnica e deve descrever as entregas e identificar todos os riscos e impactos do Global Services, os investimentos de infraestrutura, a capacidade, os elementos de custo, as suposições e as dependências. 
+Um documento preparado por um Gerente de Projeto (PM) como uma resposta a uma Solicitação de Serviço a partir de um cliente. A SOW do projeto é a proposta de solução técnica e deve descrever as entregas e identificar todos os riscos e impactos do Global Services, os investimentos de infraestrutura, a capacidade, os elementos de custo, as suposições e as dependências.
 
 ### história
 {: #x5027530}
@@ -1782,12 +1782,12 @@ Um item de trabalho de desenvolvimento que define parte de um caso de uso ou uma
 ### aliança estratégica
 {: #x2214931}
 
-Uma aliança chave que é usada em apoio aos processos de negócios internos da IBM. 
+Uma aliança chave que é usada em apoio aos processos de negócios internos da IBM.
 
 ### equipe de planos e estratégia (SPT)
 {: #x2214912}
 
-Grupo que ajuda no desenvolvimento da estratégia de segmento e planos. 
+Grupo que ajuda no desenvolvimento da estratégia de segmento e planos.
 
 ### subdomínio
 {: #x2040080}
@@ -1817,12 +1817,12 @@ Um sistema de armazenamento de informações (como um banco de dados ou um aplic
 ### revisão dos requisitos do sistema (SRR)
 {: #x2214919}
 
-Revisão executada pelo engenheiro de sistemas (SE) na fase de conceito. 
+Revisão executada pelo engenheiro de sistemas (SE) na fase de conceito.
 
 ### engenheiro de sistemas
 {: #x2214941}
 
-A pessoa que é responsável pelas soluções integradas de TI de ponta a ponta para atender aos requisitos de negócios, assegurando planos de teste de ponta a ponta e testando para soluções integradas, integrando especialidades de engenharia de sistema, como desempenho e disponibilidade, e assegurando a integração da solução no ambiente de produção. 
+A pessoa que é responsável pelas soluções integradas de TI de ponta a ponta para atender aos requisitos de negócios, assegurando planos de teste de ponta a ponta e testando para soluções integradas, integrando especialidades de engenharia de sistema, como desempenho e disponibilidade, e assegurando a integração da solução no ambiente de produção.
 
 
 ## T
@@ -1846,7 +1846,7 @@ Uma estrutura predefinida de um artefato.
 ### revisão pronta para teste (TRR)
 {: #x2214953}
 
-Revisão executada pelo engenheiro de sistemas (SE) no término da fase de desenvolvimento. 
+Revisão executada pelo engenheiro de sistemas (SE) no término da fase de desenvolvimento.
 
 ### terceiro
 {: #x2877945}
@@ -1930,7 +1930,7 @@ Consulte [Localizador Uniforme de Recursos](#x2042491).
 ### Design Centrado em Usuário (UCD)
 {: #x2214960}
 
-Uma abordagem de desenvolvimento que ajuda a assegurar que os designs do aplicativo atendam às necessidades do usuário e forneçam aplicativos utilizáveis. 
+Uma abordagem de desenvolvimento que ajuda a assegurar que os designs do aplicativo atendam às necessidades do usuário e forneçam aplicativos utilizáveis.
 
 ### impressão do usuário
 {: #x7290116}
@@ -1945,7 +1945,7 @@ usuários das principais lojas de aplicativo de varejo online (por exemplo, iTun
 ### cadeia de valores
 {: #x2118588}
 
-A sequência de todas as atividades necessárias para prever, criar, projetar, produzir, distribuir, comercializar e vender um conjunto de produtos ou serviços relacionados. O valor percebido pelo consumidor final do produto ou serviço é derivado em parte de cada etapa na cadeia, embora nem todas as etapas criem a mesma quantia de valor ou entreguem o mesmo potencial de lucro. Cada etapa na cadeia requer ativos e recursos distintos. 
+A sequência de todas as atividades necessárias para prever, criar, projetar, produzir, distribuir, comercializar e vender um conjunto de produtos ou serviços relacionados. O valor percebido pelo consumidor final do produto ou serviço é derivado em parte de cada etapa na cadeia, embora nem todas as etapas criem a mesma quantia de valor ou entreguem o mesmo potencial de lucro. Cada etapa na cadeia requer ativos e recursos distintos.
 
 ### design da cadeia de valor
 {: #x2214970}
@@ -1955,7 +1955,7 @@ Os componentes do design da cadeia de valor são: escopo, partes interessadas, l
 ### estrutura de implementação da cadeia de valor
 {: #x2214975}
 
-A estrutura que fornece uma abordagem comum para implementação consistente de cadeias de valor em toda a organização IBM, mas também permite os requisitos exclusivos de cada cadeia de valor. 
+A estrutura que fornece uma abordagem comum para implementação consistente de cadeias de valor em toda a organização IBM, mas também permite os requisitos exclusivos de cada cadeia de valor.
 
 ### sistema de gerenciamento de cadeia de valor
 {: #x2214980}
@@ -2032,7 +2032,7 @@ Um formato de arquivo compactado, definido pelo padrão Java EE, para armazenar 
 ### webhook
 {: #x8558303}
 
-Um retorno de chamada customizado de HTTP que altera o comportamento de uma página da web ou aplicativo da web. 
+Um retorno de chamada customizado de HTTP que altera o comportamento de uma página da web ou aplicativo da web.
 
 ### IDE da web
 {: #x7494461}

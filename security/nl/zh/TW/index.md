@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-*前次更新：2016 年 3 月 17 日*
+*前次更新：2016 年 5 月 9 日*
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
 {:shortdesc}
@@ -331,6 +331,10 @@ SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料�
 
 
 # 相關鏈結
-## 一般
+{: #rellinks}
+
+## 相關鏈結
+{: #general}
+
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [開始使用 Single Sign On](../services/SingleSignOn/index.html)

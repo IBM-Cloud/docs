@@ -27,6 +27,9 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
+				"name": "블록체인",
+				"href": "services/blockchain/index.html"
+			}, {
 				"name": "CDN(Content Delivery Network)",
 				"href": "services/cdn/index.html"
 			}, {
@@ -267,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things Foundation",
+				"name": "Internet of Things 플랫폼",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",

@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*마지막 업데이트 날짜: 2016년 4월 19일*
+*마지막 업데이트 날짜: 2016년 5월 16일*
 
 {{site.data.keyword.Bluemix}} Local은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} Local을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} Public 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
 {:shortdesc}
@@ -33,12 +33,12 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 | **유형** | **이름** | **설명** |
 |----------|----------|-----------------|
 |포함 | {{site.data.keyword.Bluemix_notm}} 런타임 | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} Local 인스턴스에서 사용자에게 사용 가능합니다.|
+|선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
 |포함 | {{site.data.keyword.autoscaling}}| 정책에 따라 애플리케이션의 계산 자원 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} Local 환경에서 무제한 사용이 가능합니다.|
-|선택사항 | {{site.data.keyword.APIM}} | {{site.data.keyword.APIMfull}} 서비스는
-API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 자원들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
 |선택사항 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 |선택사항 | {{site.data.keyword.sescashort}} | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | {{site.data.keyword.iot_full}} | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 로컬 기본 오퍼링에는 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 IBM {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 초기 환경이 포함됩니다. |
+
 
 자원 및 서비스의 용량을 스케일링하고 확장하기 위해 구입할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
 
@@ -52,13 +52,14 @@ API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL�
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API 호출 용량 증가 | 초당 500개 API 호출의 용량을 지닌 {{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.APIM}}의 개인용 버전 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_full}} Local 기본 서비스 오퍼링에 대한 추가 환경입니다. |
 
+
 **참고**: {{site.data.keyword.Bluemix_notm}} Local 컴포넌트는 특정 구성 용량(예: 기가바이트 또는 초당 트랜잭션)을 표시할 수 있습니다. 클라우드 서비스의 구성에 대한 사실상의 실제 용량이 수많은 요인에 따라 다양하므로, 사실상의 실제 용량은 구성된 용량보다 크거나 작을 수 있습니다.
 
 ### 신디케이트된 카탈로그
 
 {{site.data.keyword.Bluemix_notm}} Local에는 사용자가 독점적으로 사용 가능한 로컬 서비스를 표시하는 신디케이트된 개인용 카탈로그가 포함되어 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} Public에서 사용 가능한 추가 서비스도 포함되어 있습니다. 
 
-신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다. 로컬 환경에 대한 서비스의 개인용 인스턴스가 있는 경우, 카탈로그의 서비스 타일에 연결된 특정 아이콘(예: ![Local 서비스 아이콘](images/localicon.png "Dedicated 서비스 아이콘"))이 표시됩니다.
+신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션 작성 기능을 제공합니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다. 로컬 환경에 대한 서비스의 개인용 인스턴스가 있으면 카탈로그의 서비스 타일에 "로컬" 태그가 표시됩니다. 이와 유사하게 사용자 정의 서비스가 있으면 서비스 타일에 "사용자 정의"가 나열됩니다. 
 
 *표 3. 지역별로 {{site.data.keyword.Bluemix_notm}} Public에서 신디케이션에 사용 가능한 서비스*
 
@@ -67,36 +68,40 @@ API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL�
 |{{site.data.keyword.alchemyapishort}} 		|예	   	|예  		|예|
 |{{site.data.keyword.alertnotificationshort}}		|예		|예			|예		|
 |{{site.data.keyword.appseccloudshort}}		|예		|예		|예 |
-|{{site.data.keyword.amashort}}			|예		|예		|예 |
 |{{site.data.keyword.hadoopst}}			|예		|아니오		|아니오 |
 |{{site.data.keyword.APIM}}			|예		|예		|예 |
 |{{site.data.keyword.rules_short}}		|예		|예		|예 |
 |{{site.data.keyword.cloudant}}			|예		|예		|예 |
 |{{site.data.keyword.conceptexpansionshort}}	|예		|예		|예|
 |{{site.data.keyword.conceptinsightsshort}}	|예		|예		|예 |
-|{{site.data.keyword.dashdbshort}}		|예		|예		|아니오 |
-|{{site.data.keyword.DB2OnCloud_short}}		|예		|예		|아니오 |
+|{{site.data.keyword.dashdbshort}}		|예		|예		|예 |
+|{{site.data.keyword.dataworks_short}}		|예		|예		|아니오|
+|{{site.data.keyword.DB2OnCloud_short}}		|예		|예		|예 |
 |{{site.data.keyword.dialogshort}}		|예		|예		|예|
 |{{site.data.keyword.documentconversionshort}}	|예		|예		|예|
 |{{site.data.keyword.game}}			|아니오		|아니오		|예 |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|예	|예		|예 |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|예		| 예		| 예 |
-|{{site.data.keyword.dataworks_short}}		|예		|예		|아니오|
+|{{site.data.keyword.identitymixershort}}		|예		|예		|예|
 |{{site.data.keyword.twittershort}}		|예		|예		|예|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
-|{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.languagetranslationshort}}	|예		|예		|예 |
+|{{site.data.keyword.eventhubshort}}		|예		|아니오		|아니오|
 |{{site.data.keyword.messagehub}}		|예		|예		|아니오|
 |{{site.data.keyword.macm_short}}		|예		|예		|예|
 |{{site.data.keyword.manda}}			|예		|예		|예 |
+|{{site.data.keyword.amashort}}			|예		|예		|예 |
 |{{site.data.keyword.mqa}}			|예		|예		|예 |
 |{{site.data.keyword.mql}}			|예		|예		|예 |
 |{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
 |{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
+|{{site.data.keyword.pm_short}}			|예		|예		|아니오 |
+|{{site.data.keyword.presenceinsightsshort}}	|예		|예		|예|
 |{{site.data.keyword.mobilepush}}		|예		|예		|예 |
 |{{site.data.keyword.questionandanswershort}}	|예		|예		|예|
 |{{site.data.keyword.relationshipextractionshort}}	|예	|예		|예|
 |{{site.data.keyword.retrieveandrankshort}}	|예 		|예 		|예|
+|{{site.data.keyword.runbook_short}}		|예		|예		|예|
 |{{site.data.keyword.SecureGateway}}		|예		|예		|예 |
 |{{site.data.keyword.ssofull}}			|예		|아니오		|아니오|
 |{{site.data.keyword.speechtotextshort}}	|예 		|예	 	|예|
@@ -105,6 +110,8 @@ API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL�
 |{{site.data.keyword.toneanalyzershort}} 	|예 		|예 		|예|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|예		|예		|예|
 |{{site.data.keyword.visualinsightsshort}}	|예		|예		|예|
+|{{site.data.keyword.visualrecognitionshort}}	|예 		|예	 	|예|
+|{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.workflow}}			|예		|예		|예 |
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
 
@@ -210,7 +217,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <li>경보에 대응하기 위해 IBM 운영 팀에서 모니터링하는 로컬 인스턴스의 사용을 시작할 수 있습니다.</li>
 </ol>
 
-{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 Dedicated 관리](../administer/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} Local 및 Dedicated 관리](../admin/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
 
 ##역할 및 책임
 {: #rolesresponsibilities}
@@ -234,7 +241,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <dd>VMware의 배치 플랜에 따라 IBM 담당자와 함께 작업합니다. 일반적으로 데이터 센터의 VMware 관리자입니다. 이 역할에 지정된 사용자는 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 인프라 요구사항</a>을 검토하고 구현 플랜에 따라 IBM과 함께 작업합니다. 배치 단계의 끝에서 이 역할에 지정된 사용자는 배치가 laaS 계층의 기업 표준에 부합함을 승인합니다.</dd>
 </dl>
 
-사용자의 고객 대표는 IBM 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. CSM(Client Success Manager)은 6개월간 제공됩니다. CSM은 다음 태스크를 완료합니다.
+사용자의 고객 대표는 IBM 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정에 대한 전용 CSM(Client Success Manager)을 사용하여 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
 
 <ul>
 <li>사용자와 IBM 사이에서 기술적 중재를 제공합니다.</li>
@@ -304,7 +311,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |용량 예측 검토 | 용량 예측은 예상되는 앱의 새 배치뿐 아니라 용량에 영향을 줄 수 있는 외부 이벤트와 관련되므로 이를 검토합니다. IBM과 함께 예측 및 플랜을 검토합니다. | IBM 및 고객 책임 공유 |
 |용량 조정 |  변경이 필요할 때 용량을 추가하거나 제거합니다. | IBM |
 |다음 업데이트 및 유지보수 공개 | IBM 컴포넌트의 필수 유지보수를 위한 문서를 작성합니다. | IBM |
-|유지보수 수행 | IBM과 공동 작업하여 21일 기간 내에서 필수 유지보수를 스케줄합니다. 사용자는 30일 기간에서 작업이 없는 날짜를 제공하고 IBM은 이에 따라 유지보수 일정을 스케줄합니다. | IBM 및 고객 책임 공유 |
+|유지보수 수행 | IBM과 공동 작업하여 21일 기간 내에서 필수 유지보수를 스케줄합니다. 사용자는 21일 기간에서 작업이 없는 날짜를 제공할 수 있으며 IBM은 이에 따라 유지보수를 스케줄하도록 작업합니다. | IBM 및 고객 책임 공유 |
 |프로비저닝 장애 해결 | 카탈로그에 배치된 고객 작성 서비스의 프로비지닝 장애(발생하는 경우)를 수정합니다. | IBM |
 |네트워크 및 IP 스캔 수행 | 네트워크 및 IP 스캔을 일별 및 월별로 수행합니다. | IBM 및 고객 책임 공유 |
 |감사 로그에 대한 액세스 권한 제공 | 모든 보안 및 관리 감사 로그에 대한 액세스 권한을 제공합니다.   | IBM 및 고객 책임 공유 |
@@ -460,29 +467,25 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 ## 로컬 인스턴스 유지보수
 {: #maintainlocal}
 
-IBM은 Bluemix Local 플랫폼, 런타임 및 서비스에 대해 IBM이 적합하다고 판단되면 업데이트 및 수정사항을 유지보수하고 설치합니다. 유지보수 창 중에는 서비스를 사용하지 못할 수 있습니다.
+IBM은 적합하다고 판단하면 {{site.data.keyword.Bluemix_notm}} 런타임 및 서비스에 대한 업데이트 및 수정사항을 유지보수하고 설치합니다. 유지보수 기간 중에는 서비스를 사용하지 못할 수 있습니다.또한 IBM은 {{site.data.keyword.Bluemix_notm}} 플랫폼에 대한 유지보수 업데이트를 스케줄하도록 사용자와 함께 작업합니다.
 
 다음 유형의 유지보수가 {{site.data.keyword.Bluemix_notm}} Local에 필요합니다.
 <dl>
 <dt>**서비스의 표준 유지보수**</dt>
-<dd>해당 서비스는 사전 정의된 표준 유지보수 창을 이용하며 서비스가 사용 불가능할 수 있습니다. IBM은 유지보수를 수행하기 위해 고객 승인을 요구하지 않지만 서비스에 미치는 영향을 최소화하기 위해 시도합니다.<br />
+<dd>해당 서비스는 사전 정의된 표준 유지보수 기간을 이용하며 서비스가 사용 불가능할 수 있습니다. IBM은 서비스 유지보수를 수행하는 데 고객 승인이 필요하지 않지만 서비스에 미치는 영향을 최소화하도록 시도합니다.<br />
 <br />
-IBM은 각각의 유지보수 창에 대해 계획된 변경사항의 브로드캐스트 메시지를 이메일, 전화 또는 기타 방법을 통해 전송합니다.<br />
+IBM은 각 유지보수 기간에 대해 계획된 변경사항을 자세히 설명하는 브로드캐스트 메시지를 상태 페이지에 보냅니다.<br />
 <br />
 **중요**: 유지보수 기간 중에는 일부 서비스를 사용하지 못할 수도 있습니다.</dd>
 
-<dt>**{{site.data.keyword.Bluemix_notm}}의 표준 유지보수**</dt>
-<dd>유지보수 업데이트는 21일 기간 내에서 사용자와 IBM 간의 조정을 기반으로 적용됩니다. 사용자는 작동하지 않을 수 있는 21일 기간 내에 특정 날짜 또는 시간을 IBM에 제공할 수 있습니다. IBM은 해당 시간을 중심으로 업데이트를 스케줄하기 위해 시도합니다. 요청을 기반으로 IBM은 사용자에게 스케줄된 유지보수 창을 전달합니다. 월별 변경 창은 실행 중인 Bluemix Local 환경에 영향을 미칠 것으로 예상되지 않습니다.<p>다음 이미지는 보류 중인 업데이트에 대한 알림을 수신하는 것부터 사용자에게 작동하지 않을 수 있는 날짜를 설정한 후 마지막으로 스케줄된 날짜에 대한 알림을 수신하기까지의 과정을 보여줍니다.</p>
-<p><img src="images/maintenance_dates.png" alt="유지보수 업데이트에 사용 불가능한 날짜를 설정하는 프로세스"></p>
-<br />
-**참고**: 업데이트에 사용 불가능한 날짜를 설정하지 않아도 되는 경우 업데이트를 승인할 수 있습니다. 그리고 IBM은 유지보수가 적용되는 스케줄된 날짜를 사용자에게 알립니다.<br />
-<br />
-**관리 > 시스템 정보**로 이동하여 보류 중인 업데이트를 확인하고 사용 불가능한 날짜를 설정하며 업데이트를 승인하십시오. 알림 및 보류 중인 업데이트 스케줄링에 대한 자세한 정보는 <a href="../admin/index.html#oc_system">시스템 정보 보기</a>를 참조하십시오.</dd>
+<dt>**{{site.data.keyword.Bluemix_notm}} 플랫폼의 표준 유지보수**</dt>
+<dd>유지보수 업데이트는 21일 기간 내에서 사용자와 IBM 간의 조정을 기반으로 적용됩니다. 사용자는 IBM에 사전 승인된 유지보수 기간 및 작업이 없는 특정 날짜 또는 시간을 제공하고 IBM은 사용자가 선택한 날짜 동안이나 날짜에 맞춰 업데이트를 스케줄하도록 작업합니다.<br />
+<p>**관리 > 시스템 정보**로 이동하여 스케줄 및 보류 중인 유지보수 업데이트를 확인하십시오. 사전 승인된 기간 설정, 사용 불가능한 날짜, 유지보수 업데이트 보기 또는 승인에 대한 자세한 정보는 <a href="../admin/index.html#oc_schedulemaintenance">유지보수 업데이트</a>를 참조하십시오</p>.</dd>
 </dl>
 
 **중요**: IBM은 필요에 따라 비상 유지보수를 적용할 수 있도록 서비스를 인터럽트할 수 있는 권한을 보유합니다. IBM은 스케줄된 유지보수 시간을 변경할 수 있지만 그러한 변경은 물론 비상 유지보수 정보에 대해서도 사용자에게 알려드릴 것입니다.
 
-로컬 인스턴스의 유지보수를 설정하려면 CSM과 공동 작업하여 표준 유지보수에 대해 합의된 기간을 식별하십시오. 유지보수 업데이트 이후 문제가 보고되는 경우에는 IBM이 업데이트를 롤백하도록 허용하는 것이 최선인지 여부를 CSM과 협의하십시오. 협의가 이루어지면 IBM은 업데이트를 롤백하여 환경을 이전 단계로 복원합니다.
+유지보수 업데이트 이후 문제가 보고되는 경우에는 IBM이 업데이트를 롤백하도록 허용하는 것이 최선인지 여부를 {{site.data.keyword.Bluemix_notm}} 지원 센터와 협의합니다. 협의가 이루어지면 IBM은 업데이트를 롤백하여 환경을 이전 단계로 복원합니다.
 
 ## 인시던트 대응 및 지원
 {: #incidentresponse}
@@ -508,7 +511,7 @@ IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하�
 ## 재해 복구
 {: #dr}
 
-{{site.data.keyword.Bluemix_short}} Public은 지속적으로 혁신 가능한 플랫폼을 제공합니다. 다중 고장 안전 조치로 사용자 조직, 공간 및 앱은 항상 사용 가능 상태를 유지합니다. 지리적으로 여러 위치에 앱을 배치하면 불시의 동시 다발성 하드웨어 또는 소프트웨어 컴포넌트 유실, 전체 데이터 센터의 유실로부터 보호되어 지속적으로 가용성이 보장되므로, 지리적으로 한 위치에서 자연 재해가 발생하여도 대체 위치의 Distributed {{site.data.keyword.Bluemix_notm}} Public 앱 인스턴스는 사용 가능합니다.
+{{site.data.keyword.Bluemix_short}} Local의 재해 복구는 {{site.data.keyword.Bluemix_short}} Public을 사용할 때 작동하는 방식과 유사하게 설정할 수 있습니다. {{site.data.keyword.Bluemix_short}} Public은 다중 고장 안전 조치로 지속적으로 혁신 가능한 플랫폼을 제공하여 사용자 조직, 영역 및 앱이 항상 사용 가능하도록 합니다. 지리적으로 여러 위치에 앱을 배치하면 불시의 동시 다발성 하드웨어 또는 소프트웨어 컴포넌트 유실, 전체 데이터 센터의 유실로부터 보호되어 지속적으로 가용성이 보장되므로, 지리적으로 한 위치에서 자연 재해가 발생하여도 대체 위치의 Distributed {{site.data.keyword.Bluemix_notm}} Public 앱 인스턴스는 사용 가능합니다.
 {: shortdesc}
 
 {{site.data.keyword.Bluemix_short}} Local의 재해 복구는 사용자 앱의 지속적 가용성, 플랫폼의 내재적 고가용성, 장애 시 인스턴스 복구 능력 등을 통해 가능해집니다. 여러 지역에 앱을 배치하여 앱의 지속적 가용성을 보장하는 것은 사용자의 책임입니다. 고가용성은 Cloud Foundry 및 기타 컴포넌트에 포함된 기술을 통해 플랫폼 레벨에서 빌드됩니다. 또한 IBM과 협력하여 언제든 인스턴스 복원이 필요한 시점에 데이터를 적절히 백업할 수도 있습니다.
@@ -592,6 +595,6 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 ## 일반
 * [탐색: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 용어집](glossary/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 용어집](../overview/glossary/index.html)
 * [{{site.data.keyword.Bluemix_notm}} Local 및 {{site.data.keyword.Bluemix_notm}} Dedicated 관리](../admin/index.html#mng)
-* [지원 문의](troubleshoot/getting_customer_support.html#bluemix_support)
+* [지원 문의](../support/index.html#getting-customer-support)

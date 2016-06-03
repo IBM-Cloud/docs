@@ -15,7 +15,7 @@ copyright:
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Última actualización: 13 de abril de 2016*
+*Última actualización: 16 de mayo de 2016*
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
 {:shortdesc}
@@ -91,7 +91,7 @@ Puede utilizar un proveedor de DNS que dé soporte a la migración tras error in
 
 Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.Bluemix_notm}} en la que se ejecutan sus apps. Para obtener la dirección IP pública de una región de {{site.data.keyword.Bluemix_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una ventana de línea de mandatos:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -266,14 +266,13 @@ las aplicaciones que no se pueden actualizar y los caracteres de doble byte que 
 ## No se pueden conmutar apps en modalidad de depuración
 {: #ts_debug}
 
-Es posible que no pueda habilitar la modalidad de depuración si la versión de la máquina virtual Java (JVM) es 8 o inferior.
- 
+Es posible que no pueda habilitar la modalidad de depuración si la versión de la máquina virtual Java (JVM) es 8 o inferior. 
 
 
-Después de seleccionar **Habilitar depuración de aplicación**, las herramientas intentan conmutar la aplicación a la modalidad de depuración. A continuación, el entorno de trabajo de Eclipse empieza una sesión de depuración. Cuando las herramientas habilitan satisfactoriamente la modalidad de depuración, el estado de la aplicación web visualiza `Modalidad de actualización`, `Desarrollo` y `Depuración`.
+Después de seleccionar **Habilitar depuración de aplicación**, las herramientas intentan conmutar la aplicación a la modalidad de depuración. A continuación, el entorno de trabajo de Eclipse empieza una sesión de depuración. Cuando las herramientas habilitan satisfactoriamente la modalidad de depuración, el estado de la aplicación web visualiza `Modalidad de actualización`, `Desarrollo` y `Depuración`. 
 {: tsSymptoms}
 
-Sin embargo, cuando has herramientas no pueden habilitar la modalidad de depuración, el estado de aplicación web visualiza solamente `Modalidad de actualización` y `Desarrollo`, pero no visualiza `Depuración`. Las herramientas también pueden visualizar el siguiente mensajes de error en la vista de consola. 
+Sin embargo, cuando has herramientas no pueden habilitar la modalidad de depuración, el estado de aplicación web visualiza solamente `Modalidad de actualización` y `Desarrollo`, pero no visualiza `Depuración`. Las herramientas también pueden visualizar el siguiente mensajes de error en la vista de consola.
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
@@ -318,8 +317,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 Las siguientes versiones de JVM (Java Virtual Machine) no pueden establecer una sesión de depuración:IBM JVM 7, IBM JVM 8 y versiones anteriores de Oracle JVM 8.
 {: tsCauses}
 
-Si la JVM del entorno de trabajo es de una de estas versiones, es posible que tenga problemas al crear una sesión de depuración. La versión de JVM del entorno de trabajo es normalmente la JVM del sistema local.
-La JVM del sistema no es la misma que la JVM de la aplicación Bluemix Java. La aplicación Bluemix Java casi siempre se ejecuta en IBM JVM, y algunas veces se ejecuta en OpenJDK JVM.
+Si la JVM del entorno de trabajo es de una de estas versiones, es posible que tenga problemas al crear una sesión de depuración. La versión de JVM del entorno de trabajo es normalmente la JVM del sistema local. La JVM del sistema no es la misma que la JVM de la aplicación Bluemix Java. La aplicación Bluemix Java casi siempre se ejecuta en IBM JVM, y algunas veces se ejecuta en OpenJDK JVM.
   
 
 Para comprobar la versión de Java que IBM Eclipse Tools for Bluemix ejecuta, realice los siguientes pasos:
@@ -371,7 +369,7 @@ No tiene el nivel adecuado de autorización necesario para realizar las acciones
 Para obtener el nivel de autorización adecuado, utilice uno de estos métodos: 
 {: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
- * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de organizaciones](../admin/adminpublic.html#orgmng){: new_window} para obtener detalles.
+ * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de organizaciones](../admin/orgs_spaces.html) para obtener detalles.
  
 
  
@@ -1002,7 +1000,7 @@ El paquete de compilación de Liberty utiliza el archivo `server.xml` para confi
 
  
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Creación de apps con Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1278,7 +1276,7 @@ Puede que observe que varias apps comparten el mismo URL en {{site.data.keyword.
 Este problema puede producirse cuando se asigna la misma ruta de URL a distintas apps de un espacio.
 {: tsCauses}
 
-Por ejemplo, supongamos que envía la app myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.stage1.mybluemix.net". Luego envía otra app myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.stage1.mybluemix.net". Ahora la ruta está correlacionada a ambas apps.
+Por ejemplo, supongamos que envía la app myApp1 a {{site.data.keyword.Bluemix_notm}} y establece el dominio en "mynewapp.mybluemix.net". Luego envía otra app myApp2 al mismo espacio y establece una de sus rutas de URL en "mynewapp.mybluemix.net". Ahora la ruta está correlacionada a ambas apps.
 
  
 

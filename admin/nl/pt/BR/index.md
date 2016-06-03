@@ -17,9 +17,10 @@ copyright:
 
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Última atualização: 19 de abril de 2016*
+*Última atualização: 16 de maio de 2016*
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/adminpublic.html#orgmng). {:shortdesc}
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
+{:shortdesc}
 
 *Tabela 1. Tarefas administrativas para gerenciar a instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
 
@@ -28,7 +29,8 @@ Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_notm}}
 |Monitorar o uso do sistema | Clique em **ADMINISTRAÇÃO &gt; USO**. Visualize as informações do sistema, monitore o uso da CPU e o uso do plano para tomar as melhores decisões para seus negócios. Consulte [Visualizando informações de uso](index.html#oc_resource).|
 |Gerenciar seu catálogo | Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** para gerenciar quais serviços estão visíveis para seus usuários e organizações. Consulte [Gerenciando seu catálogo](index.html#oc_catalog).|
 |Administrar organizações | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO** para criar organizações, monitorar cotas para organizações e tomar decisões baseadas em necessidades rapidamente. Consulte [Administrando organizações](index.html#oc_organizations).|
-|Criar espaços e designar funções de usuário | Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg), em seguida, selecione **Gerenciar organizações** para criar espaços dentro de suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte [Gerenciando suas organizações](../admin/adminpublic.html#orgmng). |
+|Criar espaços e designar funções de usuário | Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg), em seguida, selecione **Gerenciar organizações** para criar espaços dentro de suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte
+[Gerenciando as suas organizações](../admin/orgs_spaces.html). |
 |Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Veja [Gerenciando usuários e permissões](index.html#oc_useradmin). |
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](index.html#oc_report). |
 |Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Também é possível acessar o feed de calendário e as inscrições de eventos para a extensão de suas notificações na seção Atualizações pendentes. Consulte [Visualizando informações do sistema](index.html#oc_system). |
@@ -42,11 +44,11 @@ Também é possível sempre saber o status de seu ambiente, verificando a págin
 
 ### Notificações
 
-É possível visualizar notificações da IBM para seu ambiente local ou dedicado e monitorar o status de seu ambiente. Revise
+É possível visualizar notificações da IBM para o seu ambiente local ou dedicado, a fim de monitorar o status de seu ambiente. Revise
 a tabela a seguir para obter informações sobre os diferentes tipos de
 notificações e onde as notificações são postadas.
 
-Tabela 2. Tipos de eventos e métodos de notificações 
+*Tabela 2. Tipos de eventos e métodos de notificações*
 
 | **Tipo de evento** | **Método de Notificação** |       
 |-----------------|-------------------|
@@ -67,9 +69,9 @@ Para usar ganchos da web para configurar uma assinatura de evento específica, c
 
 1. Clique em **Incluir assinatura**.
 
-2. Preencha o formulário de inscrição de evento. Para obter informações sobre os campos do formulário, revise a tabela a seguir:
+2. Preencha o formulário de inscrição de evento. Para obter informações sobre os campos no formulário e os valores a serem usados na seção de carga útil, revise as tabelas a seguir:
 
-*Tabela 3. Campos de formulário de inscrição de evento* 
+*Tabela 3. Campos de formulário de inscrição de evento*
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
@@ -80,43 +82,113 @@ Para usar ganchos da web para configurar uma assinatura de evento específica, c
 | Descrição | Inclua uma descrição para a inscrição de evento que você está criando. |
 | Nome de Usuário | Insira seu nome de usuário para o seu serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
 | Senha | Insira a senha para o seu serviço da web. |
-| Carga Útil | Se tiver selecionado o método POST, insira as propriedades específicas para o serviço da web que você está usando em pares com os valores usados para a notificação da IBM. Por exemplo, se deseja exibir o título, a mensagem e a gravidade na notificação de seu serviço da web, deve-se definir os valores do {{site.data.keyword.Bluemix_notm}} com a propriedade correspondente para seu serviço da web. Os valores a seguir podem ser usados para obter informações da notificação do {{site.data.keyword.Bluemix_notm}} para o título, o corpo da mensagem e o nível de gravidade da notificação: `"{{title}}`, `"{{message}}"` e `"{{severity}}"`. Se você não inserir as informações nesta seção, receberá a notificação sem quaisquer informações adicionais.  |
+| Carga Útil | Se tiver selecionado o método POST, insira as propriedades específicas para o serviço da web que você está usando em pares com os valores usados para a notificação da IBM. Consulte a tabela a
+seguir, para obter os valores da IBM que podem ser usados para preencher a sua notificação. Se você não inserir informações nesta seção, receberá uma notificação sem quaisquer informações adicionais. |
+
+*Tabela 4. Valores da seção de carga útil*
+
+| **Valor IBM** | **Descrição** | **Tipo do evento** |
+|----------------|----------------|------------------------|
+| {{content.title}} | título Message |  Atualização e incidente  |
+| {{status}} | Status da atualização ou incidente. | Atualização e incidente |
+| {{type}} | Atualização ou incidente | Atualização e incidente | 
+| {{region}} | Região afetada | Atualização e incidente |
+| {{content.message}} | Descrição da mensagem |   Atualização e incidente  |
+| {{content.severity}} | Classificação de gravidade | Incidente |
+| {{content.category}} | Serviços afetados | Incidente |
+| {{content.subCategoryName}} | Componentes afetados | Incidente |
+| {{content.scheduleWindow}} | A data planejada para a atualização | Atualizar |
+| {{content.disruption}} | Componentes afetados | Atualizar |
 
 Quando sua inscrição de evento é salva, você recebe notificações por meio do método que você configura por meio do seu serviço da web. Notificações ainda são postadas na página Status para incidentes e na área Notificações da página Administração para atualizações de manutenção.
 
 É possível selecionar qualquer assinatura de evento salva e visualizar a atividade recente. É possível clicar para expandir qualquer entrada de atividade recente para visualizar os detalhes. Na seção de carga útil, é possível usar os valores da IBM para a notificação que estão incluídos nessa seção. Para ver esses valores, expanda a entrada de atividade recente, expanda **Evento** e, em seguida, expanda **Objeto**.
 
+## Atualizações de Manutenção
+{: #oc_schedulemaintenance}
 
-## Visualizando as informações do sistema
-{: #oc_system}
+É possível visualizar atualizações de manutenção planejadas e pendentes, acessando **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes**, para acessar
+a página de **Atualizações do sistema**. 
 
-Para visualizar informações do sistema, clique em
-**ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA**.
+**Nota**: consulte a seção a seguir, para Configurar janelas de manutenção pré-aprovadas para iniciar. Essas janelas devem ser configuradas em ordem para a IBM planejar a manutenção
+para o seu ambiente.
 
-É possível expandir e visualizar várias seções sobre
-atualizações pendentes, informações gerais do sistema e detalhes de
-configuração de LDAP.
+<dl>
+<dt>Atualizações sem interrupção</dt>
+<dd>Uma atualização sem interrupção não afeta o seu ambiente, os seus aplicativos em execução ou o acesso de seus usuários aos seus aplicativos. Esse tipo de atualização não requer aprovação caso a caso e
+será aplicado durante as janelas de manutenção pré-aprovadas, disponíveis que você configurar a partir da página Atualizações do sistema.</dd>
+<dt>Atualizações disruptivas</dt>
+<dd>Uma atualização disruptiva pode afetar o seu ambiente, os aplicativos em execução ou o acesso de seus usuários aos aplicativos. Deve-se planejar e aprovar cada uma dessas atualizações de manutenção
+dentro da janela de manutenção atribuída de 21 dias. É possível selecionar a data e hora sugeridas de implementação, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois
+horários e datas adicionais para a IBM escolher ao planejar a atualização.</dd>
+</dl>
 
-### Atualizações e notificações pendentes
 
-Na seção Atualizações, é possível ver o número de notificações de atualizações pendentes que requerem ação de sua parte. Para tomar ação para uma atualização específica, conclua as seguintes etapas:
+### Configurando janelas de manutenção pré-aprovadas
+{: #preapprovedmaintenance}
 
-<ol>
-<li>Clique em <strong><em>Number</em> atualizações pendentes</strong>
-para visualizar todas as atualizações pendentes.</li>
-<li>Selecione uma atualização para tomar uma ação ou visualizar os detalhes da atualização, que incluem a janela de atualização, data planejada ou status de interrupção.</li>
-<li>Clique em <strong>SELECIONAR DATAS INDISPONÍVEIS</strong> para configurar dias específicos na janela de atualização
-que não são convenientes para a aplicação da atualização. Se você configurar
-datas indisponíveis, a IBM aprova e planeja sua atualização com base em suas seleções. Você
-recebe uma notificação quando a atualização é aprovada e planejada.</li>
-<li>Clique em <strong>APROVAR ATUALIZAÇÃO</strong> para aprovar a atualização, se não tiver datas
-indisponíveis. Se você aprovar, a atualização será
-aplicada durante a janela de atualização planejada. A IBM envia uma notificação quando a implementação de atualização começa e termina.</li>
-</ol>
+Antes de iniciar o planejamento e aprovar atualizações, deve-se configurar as janelas de manutenção pré-aprovadas. Atualizações sem interrupção são planejadas durante os horários pré-aprovados. Uma
+atualização sem interrupção não afeta o seu ambiente, os seus aplicativos em execução ou o acesso de seus usuários aos seus aplicativos. Esse tipo de atualização não requer aprovação caso a caso e será
+aplicado nas janelas de manutenção disponíveis e pré-aprovadas, que você configurar a partir da página Atualizações do sistema.
 
-**Nota**: se você não configurar datas indisponíveis ou aprovar a atualização, ela será aplicada no final da janela de 21 dias para assegurar que sua plataforma permaneça corrente e atualizada.
+É necessário configurar um mínimo de 24 horas disponíveis por uma semana para um mínimo de 3 dias durante essa semana. Por exemplo, é possível configurar três janelas de 8 horas ao longo de três dias
+separados ou é possível configurar janelas de 6 horas ao longo de quatro dias separados. Para assegurar que as janelas forneçam tempo suficiente para uma atualização a ser aplicada, cada janela deve ter um
+mínimo de 4 horas de duração.
 
-Na página Atualizações pendentes, é possível optar por rastrear seu planejamento de atualização clicando no ícone **Calendário** ![Calendário](images/icon_calendar.svg) e fazendo download do arquivo `.ics` para importar suas atualizações planejadas para um app de calendário de sua opção:
+1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes &gt; Gerenciar disponibilidade**.
+2. Expanda a seção **Gerenciar janelas de atualização disponíveis**.
+3. Clique em **Incluir novo** ![Incluir novo](images/add-new.png).
+4. Configure a sua primeira janela de disponibilidade, selecionando a frequência, a duração e o horário de início para a janela.
+5. Clique em
+**Enviar**.
+6. Repita esse processo até ter atendido aos requisitos mínimos para janelas semanais.
+
+### Configurando janelas de manutenção indisponíveis
+
+Após configurar as suas janelas de manutenção pré-aprovadas, é possível optar por configurar datas e horas específicas em que o seu ambiente não está disponível para atualizações. Por exemplo, é possível
+escolher um final de semana ou feriado de alto tráfego quando você não deseja que nenhuma manutenção seja aplicada, para assegurar que os seus aplicativos estejam disponíveis para os usuários.
+
+1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes &gt; Gerenciar disponibilidade**.
+2. Expanda a seção **Gerenciar janelas de atualização indisponíveis**.
+3. Clique em **Incluir novo** ![Incluir novo](images/add-new.png).
+4. Configure a sua janela indisponível, selecionando a frequência, a duração e o horário de início para a janela.
+5. Clique em
+**Enviar**.
+
+### Planejando e aprovando atualizações
+{: #scheduleandapprove}
+
+Após você configurar as suas janelas de manutenção pré-aprovadas, atualizações sem interrupção serão planejadas automaticamente durante esses horários. A sua aprovação explícita para esses tipos de
+atualizações não é necessária. No entanto, é possível visualizar os detalhes de cada atualização de manutenção incluindo o que está sendo atualizado, quanto tempo a atualização levará e para quando a
+atualização está planejada. 
+
+Para visualizar os detalhes para uma atualização sem interrupção, conclua as etapas a seguir:
+
+1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes**.
+2. Identifique quaisquer linhas de atualização que tenham **Planejamento de cliente necessário** configurado como **Não**.
+3. Selecione a linha para essa atualização, para visualizar os detalhes.
+
+Uma atualização disruptiva pode afetar o seu ambiente, os aplicativos em execução ou o acesso de seus usuários aos aplicativos. Deve-se planejar e aprovar cada uma dessas atualizações de manutenção
+dentro da janela de manutenção atribuída de 21 dias. É possível selecionar a data e hora sugeridas de implementação, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois
+horários e datas adicionais para a IBM escolher ao planejar a atualização.
+
+Para atualizações disruptivas que requerem a sua aprovação, conclua as etapas a seguir:
+
+1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* atualizações pendentes**.
+2. Identifique quaisquer linhas de atualização que tenham **Planejamento de cliente necessário** configurado como **Sim**.
+3. Selecione a linha para essa atualização para revisar os detalhes para a atualização, incluindo a descrição da atualização, a data e hora sugeridas para a atualização, os componentes afetados e a
+duração para a atualização.
+4. Selecione **Planejar e aprovar**.
+5. Escolha entre as seguintes opções: **Data sugerida**, **Datas alternativas** ou **Todas as janelas pré-aprovadas**.
+6. Selecione **Submeter**. 
+
+Com base em sua seleção, a atualização será aplicada durante a data sugerida que você aceitou, durante uma de suas janelas pré-aprovadas ou uma das datas e horas alternativas. Quando a data de
+planejamento para sua atualização é finalizada pela IBM, você vê a data planejada refletida nos detalhes para a atualização na página **Atualizações do sistema**.
+
+### Configurando um feed de calendário para atualizações planejadas
+
+A partir da página Atualizações do sistema, é possível optar por rastrear o seu planejamento de atualização clicando no ícone **Calendário**
+![Calendário](images/icon_calendar.svg) e fazendo o download do arquivo `.ics` para importar as suas atualizações planejadas para um aplicativo de calendário de sua preferência:
 
 <ol>
 <li>Abra seu app de calendário.</li>
@@ -126,6 +198,31 @@ Na página Atualizações pendentes, é possível optar por rastrear seu planeja
 </ol>
 
 Também é possível estender a funcionalidade de notificação para a página Administração usando inscrições de eventos para integração com um serviço da web de sua opção. Para configurar uma assinatura de notificação de eventos para uma atualização ou incidente, consulte [Inscrições de eventos e notificações](index.html#oc_eventsubscription).
+
+## Visualizando as informações do sistema
+{: #oc_system}
+
+Para visualizar informações do sistema, clique em
+**ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA**.
+
+É possível expandir e visualizar várias seções sobre atualizações de manutenção pendentes, informações gerais do sistema e detalhes de configuração de LDAP.
+
+### Atualizações do sistema pendentes
+
+Na seção Atualizações, é possível ver o número de notificações de atualizações pendentes que requerem ação de sua parte. Há dois tipos de atualizações de manutenção que você pode ver:
+
+<dl>
+<dt>Atualizações sem interrupção</dt>
+<dd>Uma atualização sem interrupção não afeta o seu ambiente, os seus aplicativos em execução ou o acesso de seus usuários aos seus aplicativos. Esse tipo de atualização não requer aprovação caso a caso. 
+Essas atualizações são aplicadas nas janelas de manutenção pré-aprovadas e disponíveis que você configura na página Atualizações do sistema.</dd>
+<dt>Atualizações disruptivas</dt>
+<dd>Uma atualização disruptiva pode afetar o seu ambiente, os aplicativos em execução ou o acesso de seus usuários aos aplicativos. Você tem a capacidade de planejar e aprovar cada uma dessas atualizações de
+manutenção dentro da janela de manutenção atribuída de 21 dias, para assegurar que a atualização não seja aplicada durante as horas críticas de negócios. É possível selecionar a data e hora sugeridas de
+implementação, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois horários e datas adicionais para a IBM escolher ao aplicar a atualização.</dd>
+</dl>
+
+Para obter mais informações sobre a configuração de janelas de manutenção pré-aprovadas, de datas indisponíveis específicas e de um feed de calendário, consulte
+[Atualizações de manutenção](index.html#oc_schedulemaintenance).
 
 ### Informações gerais do sistema
 
@@ -141,10 +238,11 @@ Na seção Informações gerais, é possível visualizar as informações a segu
 Na seção Detalhes de configuração LDAP, é possível selecionar o servidor
 LDAP e visualizar informações sobre os mapeamentos de usuários e de grupos. Se estiver usando o {{site.data.keyword.IBM}} WebID, ele será indicado nesta seção.
 
-## Visualizando informações de uso
+## Visualizando o uso e relatórios
 {: #oc_resource}
 
-É possível visualizar diferentes tipos de informações de uso para sua instância local ou dedicada e conta do {{site.data.keyword.Bluemix_notm}}:
+É possível visualizar diferentes tipos de informações de uso para a sua instância local ou dedicada e a conta do {{site.data.keyword.Bluemix_notm}}. Também é possível fazer o download e
+visualizar relatórios de segurança e logs para a sua instância do {{site.data.keyword.Bluemix_notm}}.
 
 - Informações do recurso, incluindo espaço em disco, uso de CPU, uso de rede e tempos médios de resposta. Consulte [Uso de recursos](index.html#resourceusage).
 - Uso da conta por organização, incluindo o número de apps do tempo de execução com uso, número total de GB/horas de tempo de execução e o número de instâncias de serviço com uso. Consulte [Uso da conta](index.html#accountusage).
@@ -154,8 +252,7 @@ LDAP e visualizar informações sobre os mapeamentos de usuários e de grupos. S
 ### Uso do Recurso
 {: #resourceusage}
 
-Para visualizar informações de recursos, clique em
-**ADMINISTRAÇÃO &gt; USO**.
+Para visualizar informações de uso de recursos, clique em **ADMINISTRAÇÃO &gt; USO**.
 
 Na seção Monitoramento de recurso, é possível visualizar as
 informações a seguir:
@@ -223,14 +320,12 @@ Para visualizar o uso por organização, clique em **ADMINISTRAÇÃO &gt; ADMINI
 
 Para obter mais informações sobre como visualizar o uso por organização, ajustar planos de cotas e gerenciar suas organizações, consulte [Administrando organizações](../admin/index.html#oc_organizations).
 
-## Visualizando relatórios
+### Relatórios
 {: #oc_report}
 
 É possível visualizar os logs e relatórios de segurança, como
 DataPower&trade;, firewall, e auditoria de login, para a instância
-do {{site.data.keyword.Bluemix_notm}}.
-
-Para visualizar relatórios e logs, clique em
+do {{site.data.keyword.Bluemix_notm}}. Para visualizar relatórios e logs, clique em
 **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS**.
 
 Selecione a partir das opções a seguir:
@@ -247,7 +342,7 @@ para fazer download do relatório.
 
 A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{site.data.keyword.Bluemix_notm}} Local e o {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-*Tabela 4. Lista de relatórios de segurança*
+*Tabela 5. Lista de relatórios de segurança*
 
 | **Categoria** | **Relatório** | **Descrição** |      
 |-----------------|-------------------|---------------------|
@@ -272,11 +367,23 @@ A tabela a seguir mostra a lista de relatórios de segurança gerados para o {{s
 ## Visualizando o status
 {: #oc_status}
 
-É possível monitorar o status de sua instância do {{site.data.keyword.Bluemix_notm}} usando a página Status do {{site.data.keyword.Bluemix_notm}}. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**.
+É possível visualizar o status para o ambiente do {{site.data.keyword.Bluemix_notm}} e para o console de administração.
 
-A página Status é o local central para localizar notificações e anúncios sobre os eventos principais que estão afetando a plataforma do {{site.data.keyword.Bluemix_notm}} e os serviços principais no {{site.data.keyword.Bluemix_notm}}.
+### Status do ambiente do {{site.data.keyword.Bluemix_notm}}
 
-É possível assinar um feed RSS para notificações de modo que não seja necessário verificá-las. Para obter mais informações sobre a página Status e a configuração do feed RSS, veja [Visualizando o {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+É possível monitorar o status para a sua instância do {{site.data.keyword.Bluemix_notm}}, usando a página Status do {{site.data.keyword.Bluemix_notm}}. Clique no ícone **Conta e suporte** ![Conta e suporte](../support/images/account_support.svg) e, em seguida, selecione **Status**.
+
+A página Status é o local central para localizar notificações e anúncios sobre os eventos principais que estão afetando a plataforma do {{site.data.keyword.Bluemix_notm}} e os serviços principais no {{site.data.keyword.Bluemix_notm}}. É possível assinar um feed RSS para notificações de modo que não seja necessário verificá-las. Para obter mais informações sobre a página Status e a configuração do feed RSS, veja [Visualizando o {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+
+### Status do console de administração
+
+Após a implementação inicial do seu ambiente do {{site.data.keyword.Bluemix_notm}}, uma verificação é concluída automaticamente nos componentes que são usados para administrar o seu ambiente. 
+É possível acessar a página Verificação do console administrativo, para verificar o status dos componentes após a verificação ter sido executada. Para acessar a página, acesse
+<code>https://console.&lt;subdomain&gt;.bluemix.net/check</code>, em que `<subdomain>` é o nome de sua instância local ou dedicada.
+
+É possível executar uma verificação a qualquer momento. Deve-se ter efetuado login a fim de selecionar a opção para executar a verificação. Se você encontrar falhas enquanto estiver incluindo um
+usuário, editando uma organização ou gerenciando os seus serviços, execute esta verificação para identificar se quaisquer componentes estão falhando ou estão desconectados. É possível abrir um chamado de
+suporte com as informações da verificação, para ter o problema resolvido rapidamente.
 
 ## Gerenciando seu catálogo
 {: #oc_catalog}
@@ -444,6 +551,22 @@ Para criar uma nova organização e incluir gerenciadores, conclua as etapas a s
 3. Insira o nome ou o e-mail da pessoa que deseja incluir como um gerente. É possível incluir mais de um gerenciador inserindo e selecionando múltiplos nomes.
 4. Clique em <strong>CRIAR ORGANIZAÇÃO</strong> para salvar suas mudanças e criar a organização.
 
+### Criando Espaços
+
+É possível criar espaços em
+sua organização, por exemplo, um espaço *dev* como
+um ambiente de desenvolvimento, um espaço *test* como um ambiente
+de teste e um espaço *production* como um ambiente de
+produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
+
+1. Acesse o ícone **Conta e suporte**
+![ícone Conta e
+suporte](../admin/images/account_support.svg) &gt; página Gerenciar organizações.
+2. Selecione a organização na qual deseja incluir um espaço.
+3. Clique em **Criar um espaço**.
+4. Insira um nome de espaço.
+5. Clique **Criar**.
+
 ### Monitoramento de cota
 
 Na seção Monitoramento de cota, é possível expandir a seção e visualizar as informações a
@@ -532,37 +655,61 @@ instância local ou dedicada.
 Permissões para cada usuário são exibidas. As permissões podem ser as seguintes: Nenhuma,
 `Admin`, `Catalog`, `Login`,
 `Reports` e `Users`. Permissões podem ser ativadas ou pode ser fornecido ao usuário acesso de `view` ou `write` para essa permissão, conforme representado por ícones. Consulte
-[Permissões](#permissions) para obter descrições de cada tipo e explicação dos ícones.
+[Permissões](index.html#permissions) para obter descrições de cada tipo e explicação dos ícones.
 
-Escolha a partir das opções a seguir:
+### Trabalhando com Usuários
+
+É possível procurar usuários existentes, remover usuários e incluir usuários individualmente ou por um grupo. Escolha a partir das opções a seguir:
 
 * Localizar usuários. É possível localizar usuários na tabela usando o campo de **Procura**.
-* Incluir usuários. Se você tiver a permissão `admin` ou `users` com acesso de `write`, será possível incluir usuários. Para incluir um usuário ou um grupo de usuários, clique em **INCLUIR ÚNICO USUÁRIO** ou **INCLUIR
-GRUPO DE USUÁRIOS**. No campo **Procurar**, digite um nome de usuário ou um nome de grupo para
-procurar e selecione a organização na qual incluir o usuário ou o grupo de usuários na
-lista **Org.**. Ao localizar o usuário ou o grupo que deseja incluir, clique no
-nome do usuário e, em seguida, clique em **INCLUIR USUÁRIO** ou **INCLUIR USUÁRIOS** para incluir.
-Grupos de mais de 50 usuários são incluídos por meio de uma tarefa em lote de segundo plano. Quando a operação de inclusão
+
+* Incluir um único usuário. Se você tiver a permissão `admin` ou `users` com acesso de `write`, será possível incluir usuários.
+
+  1. Para incluir um único usuário a partir de seu diretório LDAP, clique em **Incluir usuário**.
+  2. No campo de **Procura**, digite o endereço de e-mail para o usuário e, em seguida, selecione o usuário a partir da lista preenchida.
+  3. Em seguida, a partir do campo **Org**, escolha a organização na qual você deseja incluir o usuário inserindo o nome da organização e selecionando-o a partir da lista preenchida.
+  4. Para incluir o usuário na organização selecionada, clique em **Incluir usuário**.
+
+  **Nota**: quando a operação de inclusão é bem-sucedida, o usuário é incluído na tabela para você visualizar e procurar. Quando os usuários são
+incluídos, eles não possuem permissões designadas.
+
+* Incluir um grupo de usuário a partir do seu diretório LDAP.
+
+  1. Clique em **Incluir grupo de usuários**.
+  2. No campo de **Procura**digite um nome do grupo para procurar e selecione o nome do grupo na lista preenchida.
+  3. Em seguida, a partir do campo **Org**, escolha a organização na qual você deseja incluir o grupo de usuários inserindo o nome da organização e selecionando-o a partir da lista
+preenchida.
+  4. Para incluir o grupo de usuários na organização selecionada, clique em **Incluir usuários**.**Nota**:
+grupos de mais de 50 usuários são incluídos por meio de
+uma tarefa em lote de segundo plano. Quando a operação de inclusão
 é bem-sucedida, o usuário ou o grupo é incluído na tabela para você visualizar e procurar. Quando os usuários são
 incluídos, eles não possuem permissões designadas.
-* Editar permissões e organizações. Se você tiver a permissão `admin`, poderá editar
-permissões e organizações para outros usuários. Para editar permissões, localize o usuário e clique no nome do usuário. Para ativar ou desativar permissões, selecione as opções a seguir na janela que se abre:
-	* Selecione **On** na lista para ativar uma permissão.
-	* Selecione **Ler** na lista para permitir que o usuário tenha acesso de `view` (somente leitura) para essa permissão ou **Gravar** para permitir o acesso de `write` (editar ou incluir e remover) para essa permissão.
-	* Selecione **Off** para desativar a permissão.
-Para editar organizações, selecione as opções a seguir:
-	* Inclua o usuário em uma organização usando o campo de procura para localizar uma organização, clicando para selecionar a partir das opções e clicando em **INCLUIR**.
-	* Remova um usuário de uma organização clicando no ícone ![Remover, representado por um sinal de menos](images/icon_remove.svg).
-Ao concluir, clique em **SALVAR**.
+
+* Inclua um grupo de usuários, importando uma planilha que inclua IDs de usuário, endereços de e-mail do usuário e a organização à qual você planeja incluir o usuário.
+
+  1. Clique em **Importar usuários**.
+  2. Clique em **Fazer download do modelo (.CSV)** para fazer o download de uma planilha com as colunas necessárias que você pode preencher ou criar a sua própria com pelo menos os
+cabeçalhos de coluna requeridos: **ID do usuário**, **E-mail**, **Organização**.
+  3. Preencha os valores de usuário para as colunas necessárias. Se você não estiver usando um diretório LDAP, use a coluna necessária e os cabeçalhos de coluna opcionais,
+**Nome** e **Sobrenome**, para a sua importação de usuário.
+  4. Salve o arquivo e clique em **Fazer upload de arquivo**.
+ 
+
+  **Nota**: insira IDs de usuário que correspondem aos valores usados em seu registro do usuário. As colunas em sua planilha podem estar em qualquer ordem desde que você tenha todas as
+colunas necessárias. Você recebe uma mensagem de confirmação informando que todos os usuários foram incluídos, se a importação foi bem-sucedida. Se a importação foi bem-sucedida para alguns usuários, mas
+não para outros, revise a mensagem de erro para tomar ação sobre os usuários que não puderam ser incluídos.
+
 * Remover usuários. Se você tiver a permissão `admin` ou `users` com o acesso de `write`, será possível remover usuários.
-Para remover um usuário, localize o usuário e clique no ícone ![Excluir](images/icon_trash.svg) e, em seguida, em **Remover**.
+
+    1. Localize o usuário e clique no ícone ![Excluir](images/icon_trash.svg).
+    2. Clique em **Remove**.
 
 ### Permissões
 {: #permissions}
 
 Os usuários podem ser designados com as permissões a seguir:
 
-*Tabela 5. Permissões*
+*Tabela 6. Permissões*
 
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
@@ -573,11 +720,30 @@ editar permissões para outros usuários. |
 | Relatórios | Usuários com a permissão `reports` podem ter o acesso designado para `view` ou `write` (modificar) relatórios de segurança. |
 | Usuários | Usuários com a permissão `users` podem ter designado o acesso para `view` a lista de usuários ou `write` (incluir ou remover) usuários. Essa permissão não permite configurar permissões para outros usuários.|
 
+
 Permissões podem ser ativadas ou o pode ser fornecido ao usuário acesso de `view` ou `write` para essa permissão, conforme representado pelos ícones a seguir:
 
-* O ícone ![Ativado, representado por uma marca de seleção](images/icon_enabled.svg) com uma permissão significa que ela está ativada. 
+* O ícone ![Ativado,
+representado por uma marca de seleção](images/icon_enabled.svg) ao lado de uma
+permissão significa que ela está ativada.
 * O ícone ![Visualizar, representado por um olho](images/icon_read.svg) significa que o usuário tem acesso de `view` (somente leitura) para essa permissão.
 * O ícone ![Gravar, representado por um lápis](images/icon_write.svg) significa que o usuário tem acesso de `write` (editar, incluir ou remover) para essa permissão.
+
+Editar permissões e organizações para outros usuários requer que você tenha permissão de `administrador`. Para editar permissões, localize o usuário e clique no nome do usuário. A
+partir da página **Editar usuário**, é possível ativar ou desativar permissões:
+
+* Selecione **On** na lista para ativar uma permissão.
+* Selecione **Ler** a partir da lista, para permitir que o usuário tenha acesso de `view` (somente leitura) para essa permissão ou
+selecione **Gravar** para permitir o acesso de `write` (editar ou incluir e remover) para essa permissão.
+* Selecione **Off** para desativar a permissão.
+
+Para incluir ou remover um usuário de uma organização, selecione a partir das opções a seguir:
+
+* Para incluir um usuário em uma organização, selecione o nome do usuário a partir da tabela para acessar a tela **Editar usuário**. Em seguida, use o campo de procura para localizar
+uma organização e selecione a organização a partir da lista e, em seguida, clique em **Salvar**.
+* Para remover um usuário de uma organização, selecione o nome do usuário a partir da tabela, para acessar a tela **Editar usuário**. Em seguida, clique em
+![Remover](images/icon_remove.svg) para a organização a partir da qual você deseja remover o usuário e clique em **Salvar**.
+
 
 ## Gerenciando usuários com a API REST Admin
 {: #usingadminapi}
@@ -931,7 +1097,7 @@ POST /codi/v1/serviceBrokers
 ### Pedido
 {: #registerrequest}
 
-*Tabela 6. Campos*
+*Tabela 7. Campos*
 
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
@@ -1012,7 +1178,7 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 ### Pedido
 {: #updaterequest}
 
-*Tabela 7. Campos*
+*Tabela 8. Campos*
 
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
@@ -1084,7 +1250,7 @@ Content-Type: application/json
 
 Use a API a seguir e os exemplos de código para excluir um serviço.
 
-*Tabela 8. Parâmetro*
+*Tabela 9. Parâmetro*
 
 | **Nome** | **Descrição** |
 |-----------------|-------------------|

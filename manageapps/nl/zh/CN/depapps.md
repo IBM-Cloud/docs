@@ -14,7 +14,7 @@ copyright:
 #部署应用程序
 {: #deployingapps}
 
-*上次更新时间：2016 年 3 月 17 日*
+*上次更新时间：2016 年 5 月 9 日*
 
 您可以使用各种方法（例如，命令行界面和集成开发环境 (IDE)）将应用程序部署到 {{site.data.keyword.Bluemix}}。您还可以使用应用程序清单来部署应用程序。通过使用应用程序清单，可减少每次将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时必须指定的部署详细信息的数量。
 {:shortdesc}
@@ -55,7 +55,7 @@ copyright:
   cf push
   ```
   
-  有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](../starters/liberty/index.html#liberty)。
+  有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](../runtimes/liberty/index.html)。
   
   * 要将 Java Tomcat 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
@@ -273,15 +273,15 @@ cf push -f appManifest.yml
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
-],
+        "testapp.AppDomainNameng.mybluemix.net"
+    ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
-],
+        "testapp.AppDomainNameng.mybluemix.net"
+    ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
     "instance_id": "09f50e22848d4ec0b943e9e487c23569",
@@ -444,7 +444,11 @@ tmp/
 ```
 
 # 相关链接
-## 常规 
+{: #rellinks}
+
+## 相关链接
+{: #general}
+
 * [使用应用程序清单进行部署](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF 清单生成器](http://cfmanigen.mybluemix.net/){:new_window}
 * [cf V6 入门](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

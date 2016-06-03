@@ -15,7 +15,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2016 年 4 月 13 日*
+*前次更新：2016 年 5 月 16 日*
 
 一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
@@ -91,7 +91,7 @@ copyright:
 
 當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令：
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -351,7 +351,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 若要取得適當的權限層級，請使用下列其中一種方法：
 {: tsResolve}
  * 選取另一個您具有開發人員角色的組織及空間。 
- * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織](../admin/adminpublic.html#orgmng){: new_window}。
+ * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織](../admin/orgs_spaces.html)。
  
 
  
@@ -942,7 +942,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱[使用 Liberty for Java 建立應用程式](../starters/liberty/index.html#liberty){: new_window}。
+您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](../runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -1212,7 +1212,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 將相同的 URL 路徑指派給空間內的不同應用程式時，可能會發生此問題。
 {: tsCauses}
 
-例如，您將 myApp1 應用程式推送至 {{site.data.keyword.Bluemix_notm}}，並將網域設為 "mynewapp.stage1.mybluemix.net"。然後，將另一個 myApp2 應用程式推送至相同的空間，並將它的其中一個 URL 路徑設為 "mynewapp.stage1.mybluemix.net"。路徑現在對映至兩個應用程式。
+例如，您將 myApp1 應用程式推送至 {{site.data.keyword.Bluemix_notm}}，並將網域設為 "mynewapp.mybluemix.net"。然後，將另一個 myApp2 應用程式推送至相同的空間，並將它的其中一個 URL 路徑設為 "mynewapp.mybluemix.net"。路徑現在對映至兩個應用程式。
 
  
 

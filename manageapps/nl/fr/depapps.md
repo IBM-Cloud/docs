@@ -14,7 +14,7 @@ copyright:
 #Déploiement d'applications
 {: #deployingapps}
 
-*Dernière mise à jour : 17 mars 2016*
+*Dernière mise à jour : 9 mai 2016*
 
 Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via diverses méthodes, notamment en utilisant l'interface de ligne de commande et des environnements de développement intégré (IDE). Vous pouvez également utiliser des manifestes d'application afin de déployer des applications. L'utilisation d'un manifeste d'application vous permet de réduire le nombre d'informations de déploiement que vous devez spécifier à chaque fois que vous déployez une application dans {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -55,7 +55,7 @@ Si vous utilisez un pack de construction externe, vous devez spécifier son URL 
   cf push
   ```
   
-  Pour plus d'informations sur le pack de construction Liberty, voir [Liberty for Java](../starters/liberty/index.html#liberty).
+  Pour plus d'informations sur le pack de construction Liberty, voir [Liberty for Java](../runtimes/liberty/index.html).
   
   * Pour déployer des applications Java Tomcat dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
   
@@ -282,14 +282,14 @@ Les variables suivantes sont définies par l'agent DEA :
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -464,8 +464,12 @@ fichier et sous-répertoire se trouvant dans le répertoire `tmp/` ne sera tél�
 tmp/
 ```
 
-# rellinks
-## general 
+# Liens connexes
+{: #rellinks}
+
+## Liens connexes
+{: #general}
+
 * [Déploiement à l'aide de manifestes d'application](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [Générateur de manifeste CF](http://cfmanigen.mybluemix.net/){:new_window}
 * [Initiation à cf version 6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

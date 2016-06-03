@@ -51,9 +51,9 @@ copyright:
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 29. März 2016*
+*Letzte Aktualisierung: 16. Mai 2016*
 
-Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdetails', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
+Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdashboard', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
 {:shortdesc}
 
 ## Kostenloser Test
@@ -92,7 +92,7 @@ während der kostenlosen Testperiode angeboten werden.
 ##Kosten
 {: #what_it_costs}
 
-Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit, virtuellen Maschine oder Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdetails* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
+Die Höhe der Gebühren hängt von den jeweiligen Ressourcen ab, die von einem bestimmten Service oder Container bzw. einer bestimmten Laufzeit, einem virtuellen Server oder einer Unterstützungsoption verwendet werden. Bei den Ressourcen kann es sich um die Anzahl der API-Aufrufe, die Anzahl der Instanzen, die Hauptspeichermenge, den Speicherplatz, usw. handeln. {{site.data.keyword.Bluemix_notm}} stellt auch eine detaillierte Kostenschätzungsfunktionen und eine Kostenberechnungsfunktion bis auf den letzten Cent bereit, die Ihnen beim Planen der Gebühren behilflich sein können. Sie können die tatsächlichen Kosten nach dem Erstellen der Apps in der Ansicht *Nutzungsdashboard* überprüfen. Genauere Informationen zu den Gebühren finden Sie unter [Berechnung der Gebühren](index.html#charges).
  
 
 ##Werbecode
@@ -331,14 +331,14 @@ die im Rahmen eines Plans anfallen, der auf dem Preismodell mit Blockpreisstufe 
 |5200 |	Die Anzahl der Posten fällt in die Preisstufe 5, d. h., der Gesamtpreis beträgt $ 5000 USD. |	$ 5000 USD|
 *Tabelle 6. Gebührenberechnung anhand des Preismodells mit Blockpreisstufe*
 
-###Kostenfreie Leistungen für virtuelle Maschinen
+### Kostenfreie Leistungen für virtuelle Server
 {: #vms}
 
-Sie können die virtuellen {{site.data.keyword.Bluemix_notm}}-Maschinen in der öffentlichen IBM Cloud als kostenlose Beta-Features nutzen. Kostenlose Leistungen werden für die Anzahl der von Ihnen erstellten
-VM-Images, für die Anzahl der zugeordneten IP-Adressen und für die nutzbare Speichermenge zur Verfügung gestellt.
+Sie können die virtuellen {{site.data.keyword.Bluemix_notm}}-Server in der öffentlichen IBM Cloud als kostenlose Beta-Features nutzen. Kostenlose Leistungen werden für die Anzahl der von Ihnen erstellten
+Images virtueller Server, für die Anzahl der zugeordneten IP-Adressen und für die nutzbare Speichermenge zur Verfügung gestellt.
 
 Im Folgenden sind die kostenlosen Leistungen für
-die Betaversion der virtuellen {{site.data.keyword.Bluemix_notm}}-Maschinen aufgeführt:
+die Betaversion der virtuellen {{site.data.keyword.Bluemix_notm}}-Server aufgeführt:
 
 * 8 Instanzen
 * 8 virtuelle CPUs
@@ -346,9 +346,9 @@ die Betaversion der virtuellen {{site.data.keyword.Bluemix_notm}}-Maschinen aufg
 * 200 GB Blockspeicher
 * 4 öffentliche IP-Adressen
 
-Sie können zudem mithilfe der VM-Infrastruktur
-VMs in Ihren nicht öffentlichen {{site.data.keyword.Bluemix_notm}}-Clouds
-bereitstellen, wobei nur die Einschränkungen und Quoten Ihrer nicht öffentlichen Clouds zu berücksichtigen sind.
+Sie können zudem mithilfe der Infrastruktur virtueller Server
+in Ihren nicht öffentlichen {{site.data.keyword.Bluemix_notm}}-Clouds
+virtuelle Server bereitstellen, wobei nur die Einschränkungen und Quoten Ihrer nicht öffentlichen Clouds zu berücksichtigen sind.
 
 
 ##Vorgehensweise zum Schätzen der Kosten
@@ -472,12 +472,12 @@ Der Gesamtpreis beträgt 148 + 13,5 + 13,5 = $175.</p></dd>
 Wenn alle Positionen addiert werden, beträgt der Gesamtpreis
 der Anwendung $384,15.
 
-##Nutzungsdetails
+##Nutzungsdashboard
 {: #usage}
 
-Als Kontoeigner, Benutzer mit der Berechtigung *Auditor* im Bereich oder Abrechnungsmanager können Sie in der Ansicht 'Nutzungsdetails' die Echtzeitgebühren für Laufzeiten und Services pro Monat prüfen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
+Als Kontoeigner oder Abrechnungsmanager können Sie die Ansicht 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
 
-Klicken Sie zum Öffnen der Ansicht 'Nutzungsdetails' auf das Symbol **Konto und Unterstützung** in der rechten oberen Ecke der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, wählen Sie **Konto** auf der angezeigten Seite aus und klicken Sie auf **Nutzungsdetails**. In dieser Ansicht finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto.
+Um die Ansicht 'Nutzungsdashboard' zu öffnen, klicken Sie auf das Symbol **Konto und Unterstützung** &gt; **Konto** &gt; *ihr_kontoname* &gt; **Nutzungsdashboard**. In dieser Ansicht finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
 
 Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Jeder Abrechnungszyklus dauert einen Monat.
 
@@ -485,18 +485,12 @@ Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation fil
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
 
-Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
-
 ##Benachrichtigungen
 {: #notifications}
 
 Als Manager eines Kontos vom Typ Nutzungsabhängige Zahlung können Sie Benachrichtigungen über Ausgaben für die Gesamtkosten Ihres Kontos, für Laufzeit, Services und für individuelle Services einrichten, mit Ausnahme von Services anderer Anbieter. Sie erhalten Benachrichtigungen, wenn Sie 80 %, 90 % und 100 % des angegebenen Schwellenwerts für die Ausgaben erreicht haben.
 
-Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf das Symbol
-**Profileinstellungen** in der rechten oberen Ecke der
-{{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle und
-wählen Sie **Konto&gt;Benachrichtigungen** aus. Wählen Sie das
-Kontrollkästchen vor einer Benachrichtigung aus, um diese zu aktivieren. Sie können auch Benachrichtigungen
+Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf das Symbol **Konto und Unterstützung** &gt; **Konto** &gt; *ihr_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen
 für einzelne Services hinzufügen und löschen.
 
 ##Vorgehensweise zum Ändern des Plans

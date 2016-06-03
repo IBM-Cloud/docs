@@ -347,6 +347,8 @@ copyright:
 {: #rellinks}
 
 ## 一般
+{: #general}
+
 * [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](../cfapps/ee.html#ee_bindui)
 * [擷取 VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

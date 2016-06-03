@@ -90,7 +90,7 @@ kann. Mithilfe von aktiven Berichten können Fachanwender ihre Daten analysieren
 ### ADM-Ausgaben
 {: #x2214308}
 
-Die einmalig im Voraus anfallenden Kosten für die gesamte Entwicklung und Bereitstellung der Anwendung. 
+Die einmalig im Voraus anfallenden Kosten für die gesamte Entwicklung und Bereitstellung der Anwendung.
 
 ### Übernahmeelement
 {: #x7494374}
@@ -386,7 +386,7 @@ Eine in BTMS (Business Transformation Management System) verwendete Vorlage zum 
 ### Business Design Assurance (BDA)
 {: #x2214441}
 
-Ein strukturierter Prozessansatz zum Verknüpfen und Validieren von Geschäftsprozessdesigns anhand von Geschäftsregeln, Geschäftsstrategien und -zielen sowie anhand von zugehörigen Anwendungsarchitekturen. 
+Ein strukturierter Prozessansatz zum Verknüpfen und Validieren von Geschäftsprozessdesigns anhand von Geschäftsregeln, Geschäftsstrategien und -zielen sowie anhand von zugehörigen Anwendungsarchitekturen.
 
 ### Business Information Executive (BIE)
 {: #x2214378}
@@ -401,7 +401,7 @@ Eine Reihe von Prozessen zum Analysieren des IBM Portfolios und zum Vergleichen 
 ### Business Process Executive (BPE)
 {: #x2214384}
 
-Ein zentraler Aufgabenbereich im Business Transformation Management System, der Prozesse und Anwendungen nach der Unternehmensstrategie und der IT-Infrastruktur ausrichtet. 
+Ein zentraler Aufgabenbereich im Business Transformation Management System, der Prozesse und Anwendungen nach der Unternehmensstrategie und der IT-Infrastruktur ausrichtet.
 
 ### Geschäftsregel
 {: #x2266457}
@@ -627,7 +627,7 @@ Prüfung oder Delegierung verwendet werden. Eine Benutzer-ID und ein Kennwort si
 ### Kritische Designprüfung (Critical Design Review, CDR)
 {: #x2214475}
 
-Eine Prüfung, die in der Entwicklungsphase vom Systementwickler (SE) durchgeführt wird. 
+Eine Prüfung, die in der Entwicklungsphase vom Systementwickler (SE) durchgeführt wird.
 
 ### Anwendungsübergreifender Belastungstest für zuverlässiges Leistungsverhalten (Cross-application Performance Reliability Stress Test, XPRS-Test)
 {: #x2215016}
@@ -1110,7 +1110,7 @@ Der IM ist verantwortlich für die Bewertung und Genehmigung sämtlicher Anwendu
 ### Investment Review Board (IRB)
 {: #x2205860}
 
-Verantwortliche Entscheidungsträger zum Festlegen der strategischen Ausrichtung der Geschäftstransformation sowie der grundsätzlichen Zielsetzung für die Organisation oder den Geschäftsbereich. 
+Verantwortliche Entscheidungsträger zum Festlegen der strategischen Ausrichtung der Geschäftstransformation sowie der grundsätzlichen Zielsetzung für die Organisation oder den Geschäftsbereich.
 
 ### IoT
 {: #x6714346}
@@ -1591,7 +1591,7 @@ Beispiel SOAP auskommt.
 ### Ressource
 {: #x2004267}
 
-Eine physische oder logische Komponente, die für eine Anwendung oder Serviceinstanz bereitgestellt oder reserviert werden kann. Zu den Beispielen für Ressourcen gehören Datenbanken und Konten, Prozessoren, Speicher und Speichergrenzwerte.
+Eine physische oder logische Komponente, die für eine Anwendung oder Serviceinstanz bereitgestellt oder reserviert werden kann.  Zu den Beispielen für Ressourcen gehören Datenbanken und Konten, Prozessoren, Speicher und Speichergrenzwerte.
 
 ### REST
 {: #x3220987}
@@ -1840,7 +1840,7 @@ Zeilengruppe, die eine Hierarchie vieler verschiedener Zeilengruppen enthält.
 ### Starter
 {: #x7470511}
 
-Eine Vorlage, die vordefinierte Services sowie Anwendungscode enthält, der mit einem bestimmten Buildpack konfiguriert ist. Ein Starter kann
+Eine Vorlage, die vordefinierte Services sowie Anwendungscode enthält, der mit einem bestimmten Buildpack konfiguriert ist.  Ein Starter kann
 Anwendungscode sein, der in einer bestimmten Programmiersprache geschrieben ist, oder eine Kombination aus Anwendungscode und einer Gruppe von
 Services. Siehe auch [Laufzeit](#x2391929).
 

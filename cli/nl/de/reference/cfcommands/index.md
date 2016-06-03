@@ -34,7 +34,8 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>Die URL des Bluemix-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel handelt es sich bei dieser URL um 'https://api.{{site.data.keyword.domainname}}'. Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben.</dd>
+<dd>Die URL des Bluemix-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel handelt es sich bei dieser URL um: URLhttps://api.{DomainName}. 
+Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben. </dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Inaktiviert den Prozess der SSL-Validierung. Die Verwendung dieses Parameters kann zu Sicherheitsproblemen führen.</dd>
 <dt>*--unset*</dt>
@@ -156,7 +157,7 @@ cf login
 ```
 Für das Absetzen des Befehls 'cf login' können Sie mindestens einen der folgenden Parameter verwenden:
 <dl>
-<dt>*-a*https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>Die URL des API-Endpunkts von {{site.data.keyword.Bluemix_notm}}. Dieser Parameter ist optional.</dd>
 <dt>*-u* user_name</dt>
 <dd>Ihr Benutzername. Dieser Parameter ist optional.</dd>
@@ -207,7 +208,7 @@ cf push appname
 <dt>appname</dt>
 <dd>Der Name der Anwendung.</dd>
 <dt>*-b* buildpack_name</dt>
-<dd>Der Name des Buildpacks. Der Name des Buildpacks kann der Name oder die Git-URL eines benutzerdefinierten Buildpacks sein, zum Beispiel 'mein-buildpack' oder 'https://github.com/heroku/heroku-buildpack-play.git'.</dd>
+<dd>Der Name des Buildpacks. Der Name des Buildpacks (buildpack_name) kann der Name eines benutzerdefinierten Buildpacks oder eine Git-URL sein. Zum Beispiel `mein-buildpack` oder `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c* start_command</dt>
 <dd>Der Startbefehl Ihrer Anwendung. Geben Sie für die Verwendung des standardmäßigen Startbefehls für diese Option den Wert null an. Beispiel:</dd>
 <dd>```
@@ -312,5 +313,7 @@ cf -v
 ```
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein 
+{: #general}
 * [Referenzkarte - 'cf'-Befehle](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

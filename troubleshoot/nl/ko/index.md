@@ -15,7 +15,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-*마지막 업데이트 날짜: 2016년 4월 13일*
+*마지막 업데이트 날짜: 2016년 5월 16일*
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한
 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
@@ -81,35 +81,26 @@ IBM ID 및/또는 비밀번호가 올바르지 않습니다. 다시 시도하십
 
     
     
-## {{site.data.keyword.Bluemix_notm}} 지역 간의
-자동 장애 복구를 사용할 수 없음
+## {{site.data.keyword.Bluemix_notm}} 지역 간의 자동 장애 복구를 사용할 수 없음
 {: #ts_failover}
 
-{{site.data.keyword.Bluemix_notm}} 지역 간의
-자동 장애 복구를 사용할 수 없습니다. 하지만 여러 IP 주소 간의 장애 복구를 지원하는 DNS 제공자를
-임시 해결책으로 사용할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 지역 간의 자동 장애 복구를 사용할 수 없습니다. 하지만 여러 IP 주소 간의 장애 복구를 지원하는 DNS 제공자를 임시 해결책으로 사용할 수 있습니다.
  
 
 {{site.data.keyword.Bluemix_notm}} 지역을 사용할 수 없게 되면 동일한 앱이 다른 {{site.data.keyword.Bluemix_notm}} 지역에서 실행 중이더라도 해당 지역에서 실행 중인 앱도 사용할 수 없습니다.
 {: tsSymptoms}
 
  
-{{site.data.keyword.Bluemix_notm}}는
-아직 한 지역에서 다른 지역으로의 자동 장애 복구를 제공하지 않습니다.
+{{site.data.keyword.Bluemix_notm}}는 아직 한 지역에서 다른 지역으로의 자동 장애 복구를 제공하지 않습니다.
 {: tsCauses}
 
  
-여러 IP 주소 간의 지능형 장애 복구를 지원하는 DNS 제공자를
-사용하여 {{site.data.keyword.Bluemix_notm}}
-지역 간의 자동 장애 복구를 지원하도록 DNS 설정을 수동으로 구성할 수 있습니다. 이 기능이 있는 DNS 제공자에는 NSONE, Akamai, Dyn이 포함됩니다.
+여러 IP 주소 간의 지능형 장애 복구를 지원하는 DNS 제공자를 사용하여 {{site.data.keyword.Bluemix_notm}} 지역 간의 자동 장애 복구를 지원하도록 DNS 설정을 수동으로 구성할 수 있습니다. 이 기능이 있는 DNS 제공자에는 NSONE, Akamai, Dyn이 포함됩니다.
 {: tsResolve}
 
-DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의
-공용 IP 주소를 가져오려면
-`nslookup` 명령을 사용하십시오. 예를 들어,
-명령행 창에 다음 명령을 입력할 수 있습니다.
+DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다.
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -255,35 +246,24 @@ nslookup stage1.mybluemix.net
   * 브라우저의 개인용 브라우징 모드를 사용하십시오. 
   * 브라우저의 쿠키와 캐시를 지우십시오.
   * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}}전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오.
-  * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여
-애플리케이션이 실행 중인지 확인하십시오.
+  * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여 애플리케이션이 실행 중인지 확인하십시오.
   
   
   
   
   
-## {{site.data.keyword.Bluemix_notm}} 맨 위
-메뉴 표시줄이 사라짐
+## {{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄이 사라짐
 {: #ts_topmenubar}
 
-브라우저 창의 크기를 조정하거나 모바일 디바이스를 사용할 때
-{{site.data.keyword.Bluemix_notm}} 맨 위
-메뉴 표시줄을 볼 수 없습니다.
+브라우저 창의 크기를 조정하거나 모바일 디바이스를 사용할 때 {{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄을 볼 수 없습니다.
 
 
-브라우저 창의 크기를 조정하거나 모바일 디바이스를 사용할 때
-{{site.data.keyword.Bluemix_notm}} 맨 위
-메뉴 표시줄이 사라집니다. 맨 위 메뉴 표시줄이 사라지면
-누적 꺾은선형 아이콘으로 표시되는 측면 드로어 메뉴가 왼쪽 위 모서리에
-나타납니다. 
+브라우저 창의 크기를 조정하거나 모바일 디바이스를 사용할 때 {{site.data.keyword.Bluemix_notm}} 맨 위 메뉴 표시줄이 사라집니다. 맨 위 메뉴 표시줄이 사라지면 누적 꺾은선형 아이콘으로 표시되는 측면 드로어 메뉴가 왼쪽 위 모서리에 나타납니다.
 {: tsSymptoms}
 
  
 
-{{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스는 반응형으로 설계되었습니다. 보기 환경이 변경되면
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의
-레이아웃도 변경될 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스는 반응형으로 설계되었습니다. 보기 환경이 변경되면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 레이아웃도 변경될 수 있습니다.
 {: tsCauses}
  
 
@@ -416,7 +396,7 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
  * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오. 
- * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 관리](../admin/adminpublic.html#orgmng){: new_window}를 참조하십시오.
+ * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 관리](../admin/orgs_spaces.html)를 참조하십시오.
  
 
  
@@ -893,12 +873,10 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-## Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로
-푸시할 때 2바이트 문자가 올바르게 표시되지 않음
+## Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 2바이트 문자가 올바르게 표시되지 않음
 {: #ts_doublebytes}
 
-서블릿 또는 JSP 파일에 대해 유니코드 지원이 제대로 구성되지 않은 경우
-2바이트 문자가 올바르게 표시되지 않을 수 있습니다.
+서블릿 또는 JSP 파일에 대해 유니코드 지원이 제대로 구성되지 않은 경우 2바이트 문자가 올바르게 표시되지 않을 수 있습니다.
 
  
 
@@ -1026,8 +1004,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty
-for Java를 사용하여 앱 작성](../starters/liberty/index.html#liberty){: new_window}을 참조하십시오.
+이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](../runtimes/liberty/index.html){: new_window}를 참조하십시오.
 {: tsResolve}
 	
 	
@@ -1052,7 +1029,7 @@ for Java를 사용하여 앱 작성](../starters/liberty/index.html#liberty){: n
 	
 	
 	
-## 앱을 DevOps Services에서 {{site.data.keyword.Bluemix_notm}}로 배치할 수 없습니다.
+## 앱을 DevOps Services에서 {{site.data.keyword.Bluemix_notm}}로 배치할 수 없음
 {: #ts_devops_to_bm}
 
 앱 내에 `manifest.yml` 파일이 없는 경우 앱을 IBM Bluemix DevOps Services에서 {{site.data.keyword.Bluemix_notm}}로 푸시할 수 없습니다.
@@ -1312,7 +1289,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 이 문제점은 한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에 발생할 수 있습니다.
 {: tsCauses}
 
-예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
+예를 들어, myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 푸시하고 도메인을 "mynewapp.mybluemix.net"으로 설정합니다. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역에 푸시하고 URL 라우트 중 하나를 "mynewapp.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
 
  
 

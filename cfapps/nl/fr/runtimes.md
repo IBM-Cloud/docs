@@ -26,7 +26,7 @@ de communauté ou les plug-in d'outils pour Cloud Foundry fonctionnent égalemen
 <li>
 <p class="runtimeIcon"><img src="images/javaweb_featured.svg" alt="Java Liberty" /></p>
 <p class="runtimeTitle">Liberty for Java</p>
-<p class="runtimeLink"><a format="html" href="../starters/liberty/index.html" scope="peer">Afficher la documentation</a></p>
+<p class="runtimeLink"><a format="html" href="../runtimes/liberty/index.html" scope="peer">Afficher la documentation</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/node_featured.svg" alt="Node.js" /></p>
