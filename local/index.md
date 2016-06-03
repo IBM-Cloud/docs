@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Last updated: 16 May 2016*
+*Last updated: 3 June 2016*
 
 {{site.data.keyword.Bluemix}} Local brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_notm}} Local, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -453,6 +453,8 @@ For example, if the ESXi host size is 256 GB of memory with 16x cores, then eigh
 
 IBM maintains and installs updates and fixes to the {{site.data.keyword.Bluemix_notm}} runtimes and services, as IBM deems appropriate. Services might not be available during maintenance windows. In addition, IBM works with you to schedule maintenance updates for the {{site.data.keyword.Bluemix_notm}} platform.
 
+### {{site.data.keyword.Bluemix_notm}} maintenance
+
 The following types of maintenance are required for {{site.data.keyword.Bluemix_notm}} Local:
 <dl>
 <dt>**Standard maintenance for services**</dt>
@@ -470,6 +472,17 @@ IBM sends broadcast messages detailing the changes that are planned for each mai
 **Important**: IBM reserves the right to interrupt services to apply emergency maintenance as needed. IBM might change scheduled maintenance hours, but notifies you of any such changes, as well as any emergency maintenance information.
 
 If there is a reported issue following a maintenance update, you agree with {{site.data.keyword.Bluemix_notm}} Support as to whether it is in your best interest to allow IBM to roll back the update. Upon agreement, IBM rolls back the update to restore the environment to the previous state.
+
+### Customer infrastructure maintenance
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} Local is deployed onto the ESXi hypervisor, and the vCenter application is used to centrally manage virtual machines and ESXi hosts. {{site.data.keyword.Bluemix_notm}} supports the latest three versions of ESXi and vCenter, including all intermediate updates and patches. You can always find the latest supported versions in the [Local infrastructure requirements](../local/index.html#localinfra) documentation.
+
+**Important**: With {{site.data.keyword.Bluemix_notm}} Local being deployed onto the ESXi hypervisor, upgrades and patches to ESXi can disrupt the availability of the local environment, including all applications and services running within environment. You must notify {{site.data.keyword.Bluemix_notm}} by using a support ticket prior to completing an upgrade or patch to ensure that the disruption does not alert the operations team in error. If you have an assigned client success manager (CSM), you can work with the CSM to communicate the upgrade schedule.
+
+To ensure that your local instance is compatible with the latest supported versions, the {{site.data.keyword.Bluemix_notm}} Operations team monitors the environment for unsupported versions that might not match the latest {{site.data.keyword.Bluemix_notm}} Local environment updates. Some {{site.data.keyword.Bluemix_notm}} updates, such as Cloud Foundry version updates, require you to update the ESXi or vCenter software. {{site.data.keyword.Bluemix_notm}} support will alert you regarding what must be updated and by when. You are provided a window of time to complete this update.
+
+{{site.data.keyword.Bluemix_notm}} makes every effort to keep the local environments compatible with the latest ESXi and vCenter versions. However, there might be short periods of time where the most recent ESXi and vCenter versions are not supported. Refer to the [Local infrastructure requirements](../local/index.html#localinfra) documentation for the latest compatible versions prior to applying any updates.
 
 ## Incident response and support
 {: #incidentresponse}
