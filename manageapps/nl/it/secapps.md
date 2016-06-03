@@ -14,7 +14,7 @@ copyright:
 #Protezione delle applicazioni
 {: #securingapps}
 
-*Ultimo aggiornamento: 30 marzo 2016* 
+*Ultimo aggiornamento: 9 maggio 2016*
 
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}
@@ -88,17 +88,12 @@ caricamento di un certificato gratuito.
 Prima di poter caricare i certificati, devi creare una
 richiesta di firma del certificato. Vedi [Creazione di richieste di firma del certificato](#ssl_csr).
 
-Per servire adeguatamente il certificato SSL, devi utilizzare i seguenti indirizzi IP per configurare il server DNS durante la creazione di un dominio personalizzato per fornire la rotta URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}.
+Quando utilizzi un dominio personalizzato, per servire il certificato SSL, utilizza i seguenti endpoint della regione per fornire la rotta URL assegnata alla tua organizzazione in Bluemix.
 
-* STATI UNITI SUD: 75.126.81.68
-* EUROPA REGNO UNITO: 5.10.124.142
-* AU-SYD: 168.1.35.166
+  * Stati Uniti Sud: secure.us-south.bluemix.net 
+  * EUROPA-REGNO UNITO: secure.eu-gb.bluemix.net
+  * AUSTRALIA-SYDNEY: secure.au-syd.bluemix.net 
 
-Gli indirizzi IP che utilizzi per gli ambienti dedicati sono
-diversi. Contatta il tuo rappresentante IBM per ottenere l'indirizzo IP
-per un ambiente dedicato.
-
-Per ulteriori informazioni sulla creazione di un dominio personalizzato, consulta [Creazione e utilizzo di un dominio personalizzato](updapps.html#domain).
 
 Per caricare un certificato per la tua applicazione:
 
@@ -117,6 +112,8 @@ facoltativamente, un certificato intermedio. Puoi anche selezionare la casella d
     Un documento digitale che esegue il bind di una chiave pubblica all'identità del proprietario del certificato,
 consentendo così al proprietario del certificato di essere autenticato. Un certificato viene emesso da un'autorità di
 certificazione e viene firmato in maniera digitale da tale autorità.
+    
+    Un certificato viene in genere emesso e firmato da un'autorità di certificazione. Tuttavia, per scopi di test e di sviluppo, puoi utilizzare un certificato autofirmato.
     
     In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
 

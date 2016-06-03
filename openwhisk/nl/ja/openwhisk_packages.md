@@ -445,7 +445,6 @@ Alarm パッケージ内のフィードを使用して毎秒トリガーを発�
   ```
   {: pre}
   ```
-  ok: invoked sample/identity with id cccaf61a77054101952494522f36c1ca
   {
       "city": "Austin",
       "country": "USA"

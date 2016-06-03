@@ -51,10 +51,11 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 29 de março de 2016*
+*Última atualização: 16 de maio de 2016*
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
-experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O Bluemix fornece uma calculadora de custo para estimar o custo antecipadamente e a visualização Detalhes de uso para verificar o custo real após a construção de apps.
+experimentar grátis serviços do {{site.data.keyword.Bluemix_notm}}. É possível assinar para uma avaliação gratuita por 30 dias com abonos adicionais, incluindo suporte grátis. Após 30 dias, é possível escolher um tipo de conta e pagar somente o que usar além dos abonos grátis. O
+Bluemix fornece uma calculadora de custo para que você estime o custo antecipadamente e a visualização Detalhes de uso, para verificar o custo real após a construção de seus aplicativos.
 {:shortdesc}
 
 ## Avaliação grátis
@@ -93,8 +94,9 @@ avaliação grátis.
 ##Qual é o custo
 {: #what_it_costs}
 
-Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner, máquina virtual ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória,
-o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus apps usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
+Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner, servidor virtual ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória,
+o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É
+possível verificar o custo real após a construção de seus aplicativos, usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
  
 
 ##Código promocional
@@ -346,12 +348,13 @@ baseia em um modelo de precificação de camada em bloco:
 |5.200 |	O número de itens se enquadra na Camada 5, assim o preço total é US$ 5.000. |	US$ 5.000|
 *Tabela 6. Cálculo de encargo usando o modelo de precificação de camada de bloco*
 
-###Abonos grátis para máquinas virtuais
+### Abonos grátis para servidores virtuais
 {: #vms}
 
-É possível usar máquinas virtuais do {{site.data.keyword.Bluemix_notm}} na nuvem pública da IBM como recursos beta sem encargos. Abonos grátis são fornecidos para o número de imagens de MV que você pode criar, o número de endereços IP que são designados, bem como a quantia de memória que pode ser usada.
+É possível usar servidores virtuais {{site.data.keyword.Bluemix_notm}} na nuvem pública da IBM como recursos beta sem encargos. Abonos grátis são fornecidos para o número de imagens do servidor
+virtual que você pode criar, o número de endereços IP que são designados, bem como a quantia de memória que pode ser usada.
 
-Os itens a seguir são abonos grátis para as máquinas virtuais beta do {{site.data.keyword.Bluemix_notm}}:
+Os itens a seguir são os abonos grátis para os servidores virtuais {{site.data.keyword.Bluemix_notm}} beta:
 
 * 8 instâncias
 * 8 CPUs virtuais
@@ -359,9 +362,8 @@ Os itens a seguir são abonos grátis para as máquinas virtuais beta do {{site.
 * 200 GB de armazenamento de bloco
 * 4 endereços IP públicos
 
-Além disso, é possível usar a infraestrutura de máquinas virtuais
-para provisão de VMs nas nuvens particulares do {{site.data.keyword.Bluemix_notm}},
-sujeito apenas aos limites e cotas de suas nuvens particulares.
+Além disso, é possível usar a infraestrutura de servidores virtuais para provisionar servidores virtuais em suas nuvens particulares do {{site.data.keyword.Bluemix_notm}}, sujeitas apenas aos
+limites e cotas de suas nuvens particulares.
 
 
 ##Como estimar seus custos
@@ -374,10 +376,10 @@ precisa pagar para usar o {{site.data.keyword.Bluemix_notm}} para construir e ho
 * A calculadora de custo na página Precificação do {{site.data.keyword.Bluemix_notm}} fornece preços de apps precisos com base em sua entrada de usos de tempo de execução e de serviço.
 * Também é possível calcular seu custo manualmente.
 
-###Usando os calculadores de custo 
+###Usando os calculadores de custo
 {: #calculator}
 
-É possível precificar rapidamente seu app usando os calculadores de custo que são fornecidos pelo {{site.data.keyword.Bluemix_notm}}. 
+É possível precificar rapidamente seu app usando os calculadores de custo que são fornecidos pelo {{site.data.keyword.Bluemix_notm}}.
 
 1. Acesse a [página de precificação](https://console.{DomainName}/pricing/) do {{site.data.keyword.Bluemix_notm}}. 
 2. Use um dos widgets **Estimar seus custos** ou clique em **Abrir calculadora** para usar a **Calculadora de preços até o último centavo**.
@@ -491,20 +493,21 @@ e saída é livre de encargo.</dd>
 Quando todos os itens são
 incluídos, o preço total do aplicativo é de $384,15.
 
-##Detalhes de uso
+##Painel de uso
 {: #usage}
 
-Como um proprietário da conta, um usuário com permissão de *Auditor* no espaço ou um gerente de faturamento, é possível usar a visualização Detalhes de uso para ver os encargos em tempo real para os tempos de execução e os e serviços que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
+Como um proprietário da conta ou um gerente de faturamento, é possível usar a visualização Painel de uso para ver os encargos em tempo real para os tempos de execução e serviços que são usados por mês
+em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
 
-Para abrir a visualização Detalhes de uso, clique no ícone **Conta e suporte** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}} e selecione **Conta**. Na página que é exibida, clique em **Detalhes de uso**. Na visualização, é possível ver um resumo do tempo de execução e do uso do serviço para a conta.
+Para abrir a visualização Painel de uso, clique no ícone
+**Conta e suporte** &gt; **Conta** &gt; *o_nome_de_sua_conta* &gt; **Painel
+de uso**. Na visualização, é possível ver um resumo do tempo de execução e do uso do serviço para a conta. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Cada ciclo de faturamento dura um mês.
 
 Proprietários de conta podem filtrar o resumo de uso por região e organização. Se você for um proprietário da conta, configure **Organização** como **Todas as organizações** para ver o uso da conta inteira para um período de 12 meses. Clique em um determinado mês para ver o uso para aquele mês. Os encargos mostrados representam a quantia pela qual você, como proprietário da conta, é faturado para aquele mês.
 
 Se você selecionar uma organização específica para a **Organização**, é possível ver o uso total para essa organização, incluindo qualquer uso como parte de uma camada grátis. Os encargos mostrados para a organização não são os encargos pelos quais você é faturado. O uso da camada grátis é mostrado como grátis no nível de conta, mas não no nível organizacional. Portanto, ao visualizar o uso organizacional, você verá o uso real para essa organização, incluindo uso grátis e cobrado. Todo uso organizacional é acumulado para o uso da conta depois que a camada grátis é removida.
-
-Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 ##Notificações
 {: #notifications}
@@ -513,8 +516,9 @@ Como gerente de contas de uma conta Pagamento por uso, é possível configurar a
 notificações ao atingir 80%, 90% e 100 dos limites de gastos
 especificados.
 
-Para abrir a visualização **Notificações**  clique no ícone **Configurações de perfil** no canto superior direito da interface com o usuário do {{site.data.keyword.Bluemix_notm}} e selecione **Conta e notificações**. Marque a caixa de
-seleção antes de uma notificação para torná-la efetiva. Também é possível incluir e
+Para abrir a visualização **Notificações**,
+clique no ícone **Conta e suporte** &gt; **Conta** &gt; *o_nome_de_sua_conta* &gt;
+**Notificações de gastos**. Insira um valor numérico para configurar o limite de gastos para acionar uma notificação para cada tipo de notificação de gastos, conforme necessário. Também é possível incluir e
 excluir notificações para serviços individuais.
 
 ##Como mudar seu plano

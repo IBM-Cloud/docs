@@ -26,7 +26,7 @@ copyright:
 
   1. *proxy*：最少应用程序管理，用作应用程序和 {{site.data.keyword.Bluemix_notm}} 之间的代理。
 
-    启用该项时，buildpack 会启动位于应用程序的运行时与容器之间的代理。*proxy* 实用程序会处理应用程序接收到的所有请求。它会执行应用程序管理操作或将请求转发给应用程序，具体取决于请求的类型。通过 *proxy*，可以启用大多数其他应用程序管理实用程序。启用 *proxy* 后，即使应用程序崩溃，应用程序容器也会继续存在。此代理还允许增量文件更新，这使您能够使用 Node.js 应用程序的“实时编辑”方式。
+    启用该项时，buildpack 会启动位于应用程序的运行时与容器之间的代理。*proxy* 实用程序会处理应用程序接收到的所有请求。它会执行应用程序管理操作或将请求转发给应用程序，具体取决于请求的类型。通过 *proxy*，可以启用大多数其他应用程序管理实用程序。启用 *proxy* 后，即使应用程序崩溃，应用程序容器也会继续保持活动。此代理还允许增量文件更新，这使您能够使用 Node.js 应用程序的“实时编辑”方式。
 	
   2. *devconsole*：启用开发控制台实用程序，该实用程序可通过以下 URL 进行访问：```
     http://<yourappname>.mybluemix.net/bluemix-debug/manage
@@ -70,7 +70,7 @@ copyright:
   
   *inspector* 实用程序还会启动 *proxy*。
   
-  2. *strongpm*：启用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} 以通过 [StrongLoop 度量值、概要分析和跟踪](https://strongloop.com/node-js/devops-tools/){:new_window}等实用程序来分析 Node.js 应用程序。
+  2. *strongpm*：启用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} 以通过 [StrongLoop Metrics、Profiling 和 Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} 等实用程序来分析 Node.js 应用程序。
     
   *strongpm* 实用程序还会启动 *proxy*。
   
@@ -83,7 +83,7 @@ copyright:
     cf restage <appname>
     ```
 	
-    2. 在 Cloud Foundry 命令行中，添加应用程序路径，路径中有“-pm”附加到应用程序名称上，例如 <appname>-pm.mybluemix.net。
+    2. 在 Cloud Foundry 命令行中，向应用程序添加路径，该路径将“-pm”附加到应用程序名称，例如 <appname>-pm.mybluemix.net。
     
 	```
     cf map-route <appname> ng.bluemix.net -n <appname>-pm
@@ -152,6 +152,6 @@ cf restage myApp
 
 开发方式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一种功能，该功能使开发者能够在应用程序在云中运行的同时处理应用程序。
 
-在 {{site.data.keyword.Bluemix_notm}} 上使用应用程序时，开发人员可能会觉得，他们不能像在本地环境中那样正常执行开发活动。为了解决此问题，通过 Eclipse Tools 的开发方式提供了一种在云中工作的方法，即在一个临时的安全工作空间中工作。
+在 {{site.data.keyword.Bluemix_notm}} 上处理应用程序时，开发人员可能会觉得，他们不能像在本地环境中那样正常执行开发活动。为了解决此问题，通过 Eclipse Tools 的开发方式提供了一种在云中工作的方法，即在一个临时的安全工作空间中工作。
 
 Liberty 和 Node.js 应用程序都支持开发方式。Liberty 或 Node.js 应用程序启用开发方式后，您可以通过递增方式更新应用程序文件，不需要推送应用程序。您还可以使用应用程序建立调试会话。Liberty 应用程序的开发方式相当于启用了调试和 jmx 应用程序管理实用程序。Node.js 应用程序的开发方式相当于启用了 *devconsole*、*inspector* 和 *shell* 实用程序。

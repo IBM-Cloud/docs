@@ -27,7 +27,7 @@ Sie können Anwendungen in einer integrierten Entwicklungsumgebung (Integrated D
 ##Anwendungen mit Bluemix DevOps Services entwickeln
 {: #dev_ops}
 
-Mit {{site.data.keyword.jazzhub_short}} können Sie eine Anwendung in der Cloud entwickeln, überwachen und planen und diese dann in {{site.data.keyword.Bluemix_notm}} bereitstellen. Sie können innerhalb von Minuten aus einem Quellcode eine aktive Anwendung erhalten.  
+Mit {{site.data.keyword.jazzhub_short}} können Sie eine Anwendung in der Cloud entwickeln, verfolgen und planen und diese dann in {{site.data.keyword.Bluemix_notm}} bereitstellen. Sie können innerhalb von Minuten aus einem Quellcode eine aktive Anwendung erhalten.  
 
 {{site.data.keyword.jazzhub_short}} stellt zwei Services bereit: {{site.data.keyword.trackplan}} und {{site.data.keyword.deliverypipeline}}. Der {{site.data.keyword.trackplan}}-Service
 wird für agiles Planen verwendet. Mit dem {{site.data.keyword.deliverypipeline}}-Service werden Builds und Bereitstellungen automatisiert. Diese Services finden Sie im {{site.data.keyword.Bluemix_notm}}-Katalog. Weitere Informationen zur Verwendung dieser Services finden Sie unter [Einführung in Track & Plan](../services/TrackPlan/index.html#gettingstartedtemplate) und [Einführung in Delivery Pipeline](../services/DeliveryPipeline/index.html#getstartwithCD). 

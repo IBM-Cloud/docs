@@ -15,7 +15,7 @@ copyright:
 
 # Sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Ultimo aggiornamento: 17 marzo 2016*
+*Ultimo aggiornamento: 9 maggio 2016*
 
 Sviluppata con procedure di progettazione sicura, la piattaforma {{site.data.keyword.Bluemix}} offre diversi livelli di controlli di sicurezza tra
 la rete e l'infrastruttura. {{site.data.keyword.Bluemix_notm}} fornisce un gruppo di servizi di sicurezza che possono essere utilizzati dagli sviluppatori di applicazioni per proteggere le proprie applicazioni mobili e Web. Questi elementi si combinano per rendere {{site.data.keyword.Bluemix_notm}} una piattaforma con scelte chiare
@@ -349,7 +349,7 @@ Oltre agli utenti descritti in questi percorsi, un team per le operazioni di sic
 {{site.data.keyword.Bluemix}} fornisce una piattaforma cloud sicura di cui ti puoi fidare. La conformità {{site.data.keyword.Bluemix_notm}} deriva da una piattaforma e da servizi basati sui migliori standard di sicurezza, tra cui ISO 27001 e ISO 27002.
 {:shortdesc}
 
-![Clausola del modello di protezione dati UE](images/icon_eumc.png)  una **Clausola del modello dell'Unione Europea (UE)** è un accordo studiato per proteggere i dati personali che vengono trasferiti dall'Unione Europea (UE) o dallo Spazio economico europeo (SEE) verso un terzo paese. La Clausola del modello UE viene firmato tra il client ubicato nell'UE o SEE come esportatore di dati e il processore di dati IBM ubicato nel paese terzo come importatore dei dati. La [Clausola del modello UE IBM SaaS](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contiene i diritti e gli obblighi dell'esportatore e dell'importatore dei dati nonché i diritti dei soggetti interessati. La Clausola del modello UE IBM SaaS garantisce che i dati personali, quando elaborati in un paese terzo, siano posti sotto una protezione analoga a quella disponibile all'interno dell'UE o SEE.
+![Clausola del modello di protezione dati UE](images/icon_eumc.png)  una **Clausola del modello dell'Unione Europea (UE)** è un accordo studiato per proteggere i dati personali che vengono trasferiti dall'Unione Europea (UE) o dallo Spazio economico europeo (SEE) verso un terzo paese. La Clausola del modello UE viene firmato tra il client ubicato nell'UE o SEE come esportatore di dati e il processore di dati IBM ubicato nel paese terzo come importatore dei dati. La [IBM SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} contiene i diritti e gli obblighi dell'esportatore e dell'importatore dei dati nonché i diritti dei soggetti interessati. La Clausola del modello UE IBM SaaS garantisce che i dati personali, quando elaborati in un paese terzo, siano posti sotto una protezione analoga a quella disponibile all'interno dell'UE o SEE.
 
 ![Financial Industry Information Systems](images/FISC.gif)  Per le istituzioni bancarie e finanziarie correlate in Giappone, i sistemi informatici devono disporre di procedure di sicurezza in vigore basate sulle linee guida di sicurezza FICS (Center for Financial Industry Information Systems). Le linee guida di sicurezza **FISC** vengono fatte rispettare dal Japan Financial Services Agency (FSA), Bank of Japan (BOJ) e FISC.
 
@@ -388,7 +388,11 @@ La seguente tabella mostra quali servizi {{site.data.keyword.Bluemix_notm}} sono
 *Tabella 1. Conformità di servizi e piattaforme*
 
 
-# rellinks
-## general
+# Link correlati
+{: #rellinks}
+
+## Link correlati
+{: #general}
+
 * [Conformità di sicurezza SoftLayer](http://www.softlayer.com/security)
 * [Introduzione a Single Sign On](../services/SingleSignOn/index.html)

@@ -4,18 +4,20 @@
 
 copyright:
 
-  2015, 2016
+  years: 2015，2016
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Dernière mise à jour : 8 avril 2016*  
+*Dernière mise à jour : 7 avril 2016*  
 
 Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix}} Live Sync pour mettre rapidement à jour
 l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement sans redéploiement, comme vous le feriez sur le bureau.   
@@ -129,8 +131,8 @@ Pour suivre un tutoriel sur l'utilisation de la fonction Live Edit de {{site.dat
 Lorsque vous modifiez les fichiers dans votre environnement de développement intégré Web, ceux-ci sont redéployés automatiquement dans votre application
 qui s'exécute dans {{site.data.keyword.Bluemix_notm}}. Si vous devez redémarrer l'application de noeud, vous pouvez utiliser le bouton **Redémarrer** dans la barre d'exécution.
 
-**Remarque :** Pour une expérience plus cohérente lors de l'utilisation de la fonction Live
-Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire sont requis et seront ajoutés.
+**REMARQUE :** pour une expérience plus cohérente lors de l'utilisation de la fonction Live Edit de
+{{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire sont requis et seront ajoutés.
 
 ##{{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
@@ -239,80 +241,89 @@ Vous pouvez utiliser l'interface de ligne de commande **bl** pour effectuer les 
 Pour plus d'informations sur le téléchargement et l'utilisation de la commande bl, voir [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## Commandes bl
+{: #bl_commands}
 
 La ligne de commande {{site.data.keyword.Bluemix_live}}, **bl**, applique la syntaxe suivante :
 
 ```
 bl commande [arguments][options] [--help]
 ```
+{: pre}
 
-### Commandes
-<dl>
-<dt>login, l</dt>
-<dd>Connectez-vous à {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>logout, lo</dt>
-<dd>Déconnecte l'utilisateur.</dd>
-<dt>sync, s</dt>
-<dd>Démarre le processus de synchronisation entre le bureau et le serveur.</dd>
-<dt>create, c</dt>
-<dd>Crée un projet privé, le lie au référentiel Git dans ce répertoire et déploie le contenu dans
-{{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>projects, p</dt>
-<dd>Répertorie tous les projets disponibles pour la synchronisation.</dd>
-<dt>start, st</dt>
-<dd>Démarre l'instance d'application dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>stop, sp</dt>
-<dd>Arrête l'instance d'application dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>status, ss</dt>
-<dd>Affiche le statut de l'instance d'application en cours d'exécution dans {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+**Commandes**
 
-### Arguments
-<dl>
-<dd>Arguments de la commande.</dd>
-</dl>
+l *login* : connectez-vous à {{site.data.keyword.Bluemix_notm}}.
 
-### Options
-<dl>
-<dd>Options de la commande.</dd>
-</dl>
+lo *logout* : déconnectez-vous de {{site.data.keyword.Bluemix_notm}}.
 
-### Options globales
-<dl>
-<dt>--help</dt>
-<dd>Affiche la page d'aide pour la commande spécifiée.</dd>
-<dt>--verbose</dt>
-<dd>Active la consignation prolixe.</dd>
-</dl>
+s *sync* : démarre le processus de synchronisation entre le bureau et le serveur.
+
+c *create* : crée un projet privé, le lie au référentiel Git dans ce répertoire et déploie le contenu dans
+{{site.data.keyword.Bluemix_notm}}.
+
+p *projects* : répertorie tous les projets disponibles pour la synchronisation.
+
+st *start* : démarre l'instance d'application dans {{site.data.keyword.Bluemix_notm}}.
+
+sp *stop* : arrête l'instance d'application dans {{site.data.keyword.Bluemix_notm}}.
+
+ss *status* : affiche le statut de l'instance d'application en cours d'exécution dans {{site.data.keyword.Bluemix_notm}}.
+
+
+**Arguments**
+
+Arguments de la commande.
+
+
+**Options**
+
+Options de la commande.
+
+**Options globales**
+
+*--help* : affiche la page d'aide pour la commande spécifiée.
+
+*--verbose* : active la journalisation prolixe.
 
 **Remarque :** si l'un de vos arguments ou l'une de vos options comporte un espace, placez la valeur entre guillemets.
 
-## help
+## Help
+{: bl_help}
 
 ```
-bl [ commande ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### Syntaxe
-<dl>
-<dd>Utilisez cette commande pour afficher l'aide sur une commande ou sur la liste des commandes.</dd>
-</dl>
+**Syntaxe**
 
-### Exemples
+Utilisez cette commande pour afficher l'aide sur une commande ou sur la liste des commandes.
 
-La commande suivante affiche la liste des commandes :
+**Exemples**
 
-```bl --help```
+Affichez la liste des commandes : 
 
-La commande suivante affiche des informations détaillées sur la commande sync :
+```
+bl --help
+```
+{: pre}
 
-```bl sync --help```
+Affichez des informations détaillées sur la commande sync : 
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-```bl login|l [ -u nom_utilisateur ][-p mot_de_passe ][ -s serveur ]```
+## Login
+{: bl_login}
 
-### Objet
+```
+bl login | l [ -u nom_utilisateur ][-p password ][ -s serveur ]
+```
+{: pre}
+
+**Objet**
 
 Utilisez cette commande pour vous connecter à {{site.data.keyword.Bluemix_notm}}. Il suffit d'établir la connexion une fois par session.
 
@@ -320,305 +331,343 @@ Utilisez cette commande pour vous connecter à {{site.data.keyword.Bluemix_notm}
 
 **Remarque :** vous devez vous inscrire pour ouvrir un compte <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> gratuit avant de vous connecter.
 
-### Options
+**Options**
 
-<dl>
-<dt>-u nom_utilisateur</dt>
-<dd>Votre ID IBM à utiliser pour la connexion à {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>-p mot_de_passe</dt>
-<dd>Mot de passe associé à votre ID IBM.</dd>
-<dt>-s serveur</dt>
-<dd>Nom ou adresse IP du serveur {{site.data.keyword.jazzhub_short}}.</dd>
-</dl>
+-u *nom_utilisateur* : votre ID IBM à utiliser pour la connexion à  {{site.data.keyword.Bluemix_notm}}.
 
-### Exemples
+-p *mot_de_passe* : le mot de passe associé à votre ID IBM. 
+
+-s *serveur* : nom ou adresse IP du serveur {{site.data.keyword.jazzhub_short}}. 
+
+**Exemples**
 
 Cette commande exige la saisie d'un *nom_utilisateur* et d'un *mot_de_passe* :
 
-```bl login```
+```
+bl login
+```
+{: pre}
 
-Cette commande connecte l'utilisateur `nom@société.com` :
-
-```bl login –u nom@société.com –p pa55w0rd```
-
-Cette commande connecte l'utilisateur `nom@société.com` avec le mot de passe pa55 w0rd, qui doit être placé entre guillemets car il contient un espace :
-
-```bl login –u nom@société.com –p “pa55 w0rd”```
-
-## logout
+Connectez l'utilisateur `nom@société.com` :
 
 ```
-bl logout|lo
+bl login –u nom@société.com –p pa55w0rd
 ```
+{: pre}
 
-### Objet
+Connectez l'utilisateur `nom@société.com` avec le mot de passe *pa55 w0rd* qui contient un espace
+et doit
+donc être placé entre guillemets :
 
-<dl>
-<dd>Utilisez cette commande pour vous déconnecter.</dd>
-</dl>
+```
+bl login –u nom@société.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Logout
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**Objet**
+
+Utilisez cette commande pour vous déconnecter.
 
 ## Projets
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### Objet
+**Objet**
 
-<dl>
-<dd>Utilisez cette commande pour répertorier tous les projets disponibles pour la synchronisation par l'utilisateur connecté.</dd>
-</dl>
+Utilisez cette commande pour répertorier tous les projets disponibles pour la synchronisation par l'utilisateur connecté.
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s nom_projet -d répertoire_local [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s nom_projet -d répertoire_local [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### Objet
+**Objet**
 
-<dl>
-<dd>Utilisez cette commande pour démarrer la synchronisation du contenu d'un projet avec votre répertoire local. Cette commande s'exécute jusqu'à ce que
+Utilisez cette commande pour démarrer la synchronisation du contenu d'un projet avec votre répertoire local. Cette commande s'exécute jusqu'à ce que
 vous entriez la lettre <code>q</code>. Si vous le souhaitez, cette commande peut afficher un journal de tous les changements d'état de fichier et
-d'application.</dd>
-</dl>
+d'application.
 
-### Argument
+**Argument**
 
-<dl>
-<dt>nom_projet</dt>
-<dd>Nom du projet au format <i>“alias | monprojet”</i> ou juste <i>monprojet</i> si le projet appartient à l'utilisateur connecté.</dd>
-</dl>
+*nom_projet* : nom du projet au format *“alias | monprojet”* ou juste *monprojet* si le projet
+appartient à
+l'utilisateur connecté.
 
-### Options
+**Options**
 
-<dl>
-<dt>-d répertoire_local</dt>
-<dd>Chemin d'accès au répertoire local. Par défaut, il s'agit du dossier en cours ".".</dd>
-<dt>--overwritelocal</dt>
-<dd>Remplace le répertoire local par le contenu de l'espace de travail de projet.</dd>
-<dt>--overwriteremote</dt>
-<dd>Remplace l'espace de travail de projet par le contenu du répertoire local.</dd>
-<dt>--verbose</dt>
-<dd>Affiche la consignation prolixe.</dd>
-</dl>
+-d *répertoire_local* : chemin d'accès au répertoire local. Par défaut, il s'agit du dossier en cours ".".
 
-### Exemples
+*--overwritelocal* : remplace le répertoire local par le contenu de l'espace de travail de projet.
 
-Cette commande démarre la synchronisation avec le projet associé si le répertoire de travail est une cible de synchronisation existante. Si le répertoire de travail est vide et ne constitue pas une cible de synchronisation existante, la commande demande un *nom de projet*. Si le répertoire de travail n'est pas vide et ne constitue pas une cible de synchronisation existante, une option de remplacement doit être spécifiée.
+*--overwriteremote* : remplace l'espace de travail de projet par le contenu du répertoire local.
+
+*--verbose* : affiche la journalisation prolixe. 
+
+**Exemples**
+
+Cette commande démarre la synchronisation avec le projet associé si le répertoire de travail est une cible de synchronisation existante. Si le répertoire
+de travail est vide et ne constitue pas une cible de synchronisation existante, la commande demande un nom de projet (*nom_projet*). Si le répertoire de travail n'est pas vide et ne constitue pas une cible de synchronisation existante, une option de remplacement doit être spécifiée.
 
 ```
 bl sync
 ```
+{: pre}
 
-Cette commande lance la synchronisation et équivaut à
-```bl sync “alias | monprojet”```
-si le projet appartient à l'utilisateur connecté.
-
-```bl sync  monprojet```
-
-Cette commande lance la synchronisation avec le projet <code>mon pro jet</code>, dont le nom doit être placé entre guillemets car il contient un espace :
-
-```bl sync “mon pro jet”```
-
-Cette commande lance la synchronisation du projet <code>monprojet</code> avec le répertoire mondossier :
-
-```bl sync monprojet –d  mondossier```
-
-## create
+Cette
+commande lance la synchronisation ; elle est équivalente à `bl sync “alias | monprojet”`  si le projet est possédé par l'utilisateur connecté.
 
 ```
-bl create|c [ -n NOM_PROJET ][ -r REGION ] [ -o ORG ][ -s ESPACE ] [ -g
-REFERENTIEL_GIT ][-e EXE_GIT ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync  monprojet
 ```
+{: pre}
 
-### Objet
-<dl>
-<dd>Utilisez cette commande depuis un répertoire contenant un code pour créer un projet privé, le lier à un référentiel Git, et déployer le contenu
-du référentiel dans {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+Cette commande lance la synchronisation avec le projet `mon pro jet`, dont le nom doit être placé entre guillemets car il contient un espace :
 
-### Options
+```
+bl sync “mon pro jet”
+```
+{: pre}
 
-<dl>
-<dt>-n NOM_PROJET</dt>
-<dd>Nom de votre projet. Par défaut : le nom du répertoire de travail.</dd>
-<dt>-r REGION</dt>
-<dd>Une région {{site.data.keyword.Bluemix_notm}}. Par défaut : Sud des Etats-Unis</dd>
-<dt>-o ORG</dt>
-<dd>Une organisation {{site.data.keyword.Bluemix_notm}}. Par défaut : première organisation trouvée.</dd>
-<dt>-s ESPACE</dt>
-<dd>Un espace {{site.data.keyword.Bluemix_notm}}. Par défaut : premier espace trouvé.</dd>
-<dt>-g REFERENTIEL_GIT</dt>
-<dd>Nom du référentiel distant à utiliser pour tout référentiel Git existant. Par défaut : origin.</dd>
-<dt>-e EXE_GIT</dt>
-<dd>Chemin d'accès complet à un exécutable Git. Par défaut : détecté.</dd>
-<dt>--creds</dt>
-<dd>Invite pour vos données d'identification Git.</dd>
-<dt>--fork</dt>
-<dd>Dévie ce répertoire et crée un projet, ainsi qu'un référentiel.</dd>
-<dt>--public</dt>
-<dd>Rend le nouveau projet public.</dd>
-<dt>--prompt</dt>
-<dd>Demande toutes les options requises avec les choix possibles.</dd>
-</dl>
+Cette commande démarre la synchronisation du projet `monprojet` avec le
+répertoire `mondossier` :
 
-### Exemples
+```
+bl sync monprojet –d  mondossier
+```
+{: pre}
+
+## Create
+{: bl_create}
+
+```
+bl create | c [ -n NOM_PROJET ][ -r REGION ] [ -o ORG ][ -s ESPACE ] [ -g REFERENTIEL_GIT ][-e EXE_GIT ] [ --creds ][ --fork ] [ --public ][ --prompt ] ```
+{: pre}
+
+**Objet**
+
+Utilisez cette commande depuis un répertoire contenant un code pour créer un projet privé, le lier à un référentiel Git, et déployer le contenu
+du référentiel dans {{site.data.keyword.Bluemix_notm}}.
+
+**Options**
+
+-n *NOM_PROJET* : nom de votre projet. Par défaut : nom du répertoire de travail.
+
+-r *REGION* : une région {{site.data.keyword.Bluemix_notm}}. Par défaut : Sud des Etats-Unis. 
+
+-o *ORG* : une organisation {{site.data.keyword.Bluemix_notm}}. Par défaut : première organisation trouvée.
+
+-s *ESPACE* : un espace {{site.data.keyword.Bluemix_notm}}. Par défaut : premier espace trouvé.
+
+-g *REFERENTIEL_GIT* : nom du référentiel distant à utiliser pour tout référentiel Git existant. Par défaut : origin.
+
+-e *EXE_GIT* : chemin d'accès complet à un exécutable Git. Par défaut : détecté.
+
+*--creds* : invite de saisie de vos données d'identification Git. 
+
+*--fork* : dévie ce répertoire et crée un projet, ainsi qu'un référentiel.
+
+*--public* : rend le nouveau projet public.
+
+*--prompt* : demande toutes les options requises avec les choix possibles.
+
+**Exemples**
 
 Cette commande lance le processus de création d'un projet privé et vous invite à entrer le nom de projet à utiliser :
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
-Cette commande crée un projet public appelé <code>monNouveauProjet</code> :
-
-```bl create -n monNouveauProjet --public```
-
-## statut
+Cette commande crée un projet public appelé `monNouveauProjet` :
 
 ```
-bl status|ss [ nom_projet ]
+bl create -n monNouveauProjet --public
 ```
+{: pre}
 
-### Objet
+## Status
+{: bl_status}
 
-<dl>
-<dd>Utilisez cette commande pour répertorier les statuts des applications qui sont associées aux configurations de lancement dans le répertoire
-<code>./launchConfigurations</code>.</dd>
-</dl>
+```
+bl status | ss [ nom_projet ]
+```
+{: pre}
 
-###Argument
+**Objet**
 
-<dl>
-<dt>nom_projet</dt>
-<dd>Nom du projet au format “alias | monprojet” ou juste monprojet si le projet appartient à l'utilisateur connecté.</dd>
-</dl>
+Utilisez cette commande pour répertorier les statuts des applications qui sont associées aux configurations de lancement dans le répertoire
+`./launchConfigurations`.
 
-### Exemples
+**Argument**
+
+*nom_projet* : nom du projet au format `“alias | monprojet”` ou juste `monprojet` si le projet
+appartient à l'utilisateur connecté.
+
+**Exemples**
 
 Cet exemple affiche le statut des applications en cours d'exécution. Si le répertoire de travail est une cible de synchronisation existante, il utilise
 le projet associé. Si le répertoire de travail ne constitue pas une cible de synchronisation existante, la commande demande le nom de projet
-(<i>nom_projet</i>).
+(`nom_projet`).
 
-````bl status```
+``
+bl status
+```
+{: pre}
 
-L'exemple suivant affiche le statut du projet monprojet qui équivaut à
-```bl status “alias | monprojet”```
-si le projet appartient à l'utilisateur connecté.
-
-```bl status monprojet```
-
-L'exemple suivant affiche le statut de l'application en cours d'exécution qui est associée au projet <code>mon pro jet</code> dont le nom contient un espace et qui doit donc être placé entre guillemets :
-
-```bl status “mon pro jet”```
-
-## start
+Cet exemple affiche le statut du projet *monprojet*, équivalent à
+`bl status “alias | monprojet”` si le projet est possédé par l'utilisateur connecté.
 
 ```
-bl start|st nom_projet [ -l chemin_config_lancement ] -m chemin_manifeste ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl status monprojet
 ```
+{: pre}
 
-### Objet
+L'exemple suivant affiche le statut de l'application en cours d'exécution qui est associée au projet `mon pro jet` dont le nom contient un espace et qui doit donc être placé entre guillemets :
 
-<dl>
-<dd>Utilisez cette commande pour démarrer l'instance d'application, décrite par le fichier de lancement ou le fichier manifeste. L'application est lancée en
+```
+bl status “mon pro jet”
+```
+{: pre}
+
+## Start
+{: bl_start}
+
+```
+bl start | st nom_projet [ -l chemin_config_lancement ] -m chemin_manifeste ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+{: pre}
+
+**Objet**
+
+Utilisez cette commande pour démarrer l'instance d'application, décrite par le fichier de lancement ou le fichier manifeste. L'application est lancée en
 mode édition directe par défaut si le pack de construction de l'application prend en charge l'édition directe. Une fois l'application démarrée, les adresses
-URL pour l'application, les outils de débogage et le tableau de bord {{site.data.keyword.Bluemix_notm}} s'affichent.</dd>
-</dl>
+URL pour l'application, les outils de débogage et le tableau de bord {{site.data.keyword.Bluemix_notm}} s'affichent.
 
-### Argument
+**Argument**
 
-<dl>
-<dt>nom_projet</dt>
-<dd>Nom du projet au format <i>“alias | monprojet”</i> ou juste <i>monprojet</i> si le projet appartient à l'utilisateur connecté.</dd>
-</dl>
+*nom_projet* : nom du projet au format *“alias | monprojet”* ou juste *monprojet* si le projet appartient à
+l'utilisateur connecté.
 
-### Options
+**Options**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>Nom de la configuration de lancement (par exemple <code>maconfiglancement</code>), nom de fichier (par exemple <code>maconfiglancement.launch</code> ou
-chemin relatif au projet d'accès au fichier de configuration de lancement (par exemple <code>launchConfigurations/maconfiglancement.launch</code>).</dd>
-<dt>-m chemin_manifeste</dt>
-<dd>Chemin relatif au projet d'accès au fichier manifeste (par exemple <code>manifest.yml</code>).</dd>
-<dt>--liveedit</dt>
-<dd>Démarre l'application associée en mode édition directe, ou quitte avec une erreur si le pack de construction ne prend pas en charge le mode
-édition directe.</dd>
-<dt>--noliveedit</dt>
-<dd>Démarre l'application associée en mode normal.</dd>
-<dt>--view</dt>
-<dd>Ouvre un navigateur pour l'application en cours d'exécution.</dd>
-<dt>--restart</dt>
-<dd>Redémarre une application qui s'exécute déjà en mode édition directe sans la redéployer.</dd>
-</dl>
+-l *chemin_config_lancement* : nom de la configuration de lancement (par exemple `maconfiglancement`),
+nom de fichier
+(par exemple `maconfiglancement.launch` ou chemin relatif au projet d'accès au fichier de configuration de lancement (par exemple
+`launchConfigurations/maconfiglancement.launch`).
 
-### Exemples
+-m *chemin_manifeste* : chemin relatif au projet d'accès au fichier manifeste (par exemple `manifest.yml`).
 
-Cette commande démarre une instance d'application de <code>monprojet</code> associée au fichier de configuration
-<code>launchConfigurations/my.launch</code> :
+*--liveedit* : démarre l'application associée en mode édition directe, ou quitte avec une erreur si le pack de construction ne prend pas
+en charge le mode édition
+directe.
 
-```bl start monprojet –l “launchConfigurations/my.launch”```
+*--noliveedit* : démarre l'application associée en mode normal.
+
+*--view* : ouvre un navigateur pour l'application en cours d'exécution.
+
+*--restart* : redémarre une application qui s'exécute déjà en mode édition directe sans la redéployer.
+
+**Exemples**
+
+Cette commande démarre une instance d'application de `monprojet` associée au fichier de configuration
+`launchConfigurations/my.launch` :
+
+```
+bl start monprojet –l “launchConfigurations/my.launch”
+```
+{: pre}
 
 Cette commande démarre une instance d'application du projet associé au répertoire de travail avec le fichier de configuration
-<code>launchConfigurations/my.launch</code>. Si le répertoire de travail n'est pas une cible de synchronisation, une erreur s'affiche.
+`launchConfigurations/my.launch`. Si le répertoire de travail n'est pas une cible de synchronisation, une erreur s'affiche.
 
-```bl start –l “launchConfigurations/my.launch” ```
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
 
 Cette commande démarre une
 instance d'application du projet associé au
-répertoire de travail avec le fichier manifeste <code>manifest.yml</code>. Les informations spécifiées dans le manifeste sont utilisées pour créer un
+répertoire de travail avec le fichier manifeste `manifest.yml`. Les informations spécifiées dans le manifeste sont utilisées pour créer un
 nouveau fichier de configuration de lancement. La commande vous invite à entrer les autres informations requises, puis démarre l'application décrite par la
 configuration de lancement :
 
-```bl start –m “mymanifest.yml” ```
+```
+bl start –m “monmanifeste.yml”
+```
+{: pre}
 
 Cette commande démarre une instance d'application du projet qui est associé au répertoire de travail avec le fichier manifeste
-<code>manifest.yml</code> et équivaut à
-```bl start –m manifest.yml```.
+`manifest.yml` et équivaut à `bl start –m manifest.yml`.
 
-```bl start```
-
-## stop
 
 ```
-bl stop|sp nom_projet [ -l configuration_lancement ]
+bl start
 ```
+{: pre}
 
-### Objet
+## Stop
+{: bl_stop}
 
-<dl>
-<dd>Utilisez cette commande pour arrêter l'instance d'application associée au fichier de lancement.</dd>
-</dl>
+```
+bl stop | sp nom_projet [ -l configuration_lancement ]
+```
+{: pre}
 
-### Argument
+**Objet**
 
-<dl>
-<dt>nom_projet</dt>
-<dd>Nom du projet au format “alias | monprojet” ou juste monprojet si le projet appartient à l'utilisateur connecté.</dd>
-</dl>
+Utilisez cette commande pour arrêter l'instance d'application associée au fichier de lancement.
 
-### Options
+**Argument**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>Nom de la configuration de lancement (par exemple <code>maconfiglancement</code>), nom de fichier (par exemple <code>maconfiglancement.launch</code> ou
-chemin relatif au projet d'accès au fichier de configuration de lancement (par exemple <code>launchConfigurations/maconfiglancement.launch</code>).</dd>
-</dl>
+*nom_projet* : nom du projet au format *“alias | monprojet”* ou juste *monprojet* si le projet appartient à
+l'utilisateur connecté.
 
-### Exemples
+**Options**
+
+-l *chemin_config_lancement* : nom de la configuration de lancement (par exemple `maconfiglancement`), nom de fichier
+(par exemple `maconfiglancement.launch` ou chemin relatif au projet d'accès au fichier de configuration de lancement (par exemple
+`launchConfigurations/maconfiglancement.launch`).
+
+**Exemples**
 
 Cette commande arrête l'application si le répertoire de travail est une cible de synchronisation ; sinon, elle se ferme avec une erreur. S'il n'existe
 pas de configuration de lancement, elle se ferme également avec une erreur. S'il existe plusieurs configurations de lancement, la commande vous invite à
 indiquer la configuration de lancement à arrêter.
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
-Cette commande arrête une instance d'application du projet en cours d'exécution avec le fichier de lancement <code>maConfigLancement</code>.
+Cette commande arrête une instance d'application du projet en cours d'exécution avec le fichier de lancement `maconfiglancement`.
 
-```bl stop monprojet –l “maConfigLancement” ```
+```
+bl stop monprojet –l “maconfiglancement”
+```
+{: pre}
 
-Cette commande arrête l'application si le répertoire de travail est une cible de synchronisation du projet associé qui a été démarré avec le fichier de lancement <code>launchConfigurations/maconfiglancement.launch</code> ; sinon, elle échoue avec une erreur :
+Cette commande arrête l'application si le répertoire de travail est une cible de synchronisation du projet associé qui a été démarré avec le fichier de lancement `launchConfigurations/maconfiglancement.launch` ; sinon, elle échoue avec une erreur :
 
-```bl stop –l “launchConfigurations/maconfiglancement.launch” ```  
+```
+bl stop –l “launchConfigurations/maconfiglancement.launch”
+```
+{: pre}
 
 ># Liens connexes {:class="linklist"}
 >## Tutoriels et exemples {:id="samples"}

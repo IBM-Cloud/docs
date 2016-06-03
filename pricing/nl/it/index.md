@@ -51,10 +51,10 @@ copyright:
 # Prezzi
 {: #pricing}
 
-*Ultimo aggiornamento: 29 marzo 2016* 
+*Ultimo aggiornamento: 16 maggio 2016*
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
-e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. Bluemix fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la vista Dettagli di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
+e provare i servizi {{site.data.keyword.Bluemix_notm}} gratuitamente. Puoi registrarti per una versione di prova di 30 giorni gratuita che ti offre delle franchigie aggiuntive, compreso un supporto gratuito. Dopo 30 giorni, puoi scegliere un tipo di account e pagare solo per quello che usi oltre i limiti concessi dalle franchigie. Bluemix fornisce un calcolatore del costo che ti consente di stimare in anticipo il costo e la vista Dashboard di utilizzo che ti consente di controllare il costo effettivo dopo che hai creato le tue applicazioni.
 {:shortdesc}
 
 ## Versione di prova gratuita
@@ -92,8 +92,8 @@ normalmente fornite da ciascun servizio. Le franchigie non sono più quelle di u
 ##Costi
 {: #what_it_costs}
 
-Gli addebiti variano a seconda delle risorse utilizzate da una specifica opzione di servizio, runtime, contenitore, macchina virtuale o supporto. Le risorse possono essere il numero di chiamate API, il numero di istanze, la
-memoria, l'archiviazione e così via. {{site.data.keyword.Bluemix_notm}} fornisce anche degli stimatori del costo dettagliati e un calcolatore dei costi accurato per aiutarti a pianificare i tuoi addebiti. Puoi controllare il costo effettivo dopo che hai creato le tue applicazioni utilizzando la vista *Dettagli di utilizzo*. Per informazioni più dettagliate sugli addebiti, vedi [Modalità di addebito](index.html#charges).
+Gli addebiti variano a seconda delle risorse utilizzate da una specifica opzione di servizio, runtime, contenitore, server virtuale o supporto. Le risorse possono essere il numero di chiamate API, il numero di istanze, la
+memoria, l'archiviazione e così via. {{site.data.keyword.Bluemix_notm}} fornisce anche degli stimatori del costo dettagliati e un calcolatore dei costi accurato per aiutarti a pianificare i tuoi addebiti. Puoi controllare il costo effettivo dopo che hai creato le tue applicazioni utilizzando la vista *Dashboard di utilizzo*. Per informazioni più dettagliate sugli addebiti, vedi [Modalità di addebito](index.html#charges).
  
 
 ##Codice promozionale
@@ -347,13 +347,12 @@ il prezzo totale è $1900 USD. |	$1900 USD|
 il prezzo totale è $5000 USD. |	$5000 USD|
 *Tabella 6. Calcolo dell'addebito utilizzando il modello di prezzi di livello a blocchi*
 
-###Franchigie per le macchine virtuali
+### Franchigie per i server virtuali
 {: #vms}
 
-Puoi utilizzare le macchine virtuali {{site.data.keyword.Bluemix_notm}} nel cloud pubblico IBM come funzioni beta senza alcun addebito. Delle franchigie sono fornite per le immagini di macchina virtuale da te create, il numero di indirizzi IP assegnati e la quantità di memoria che può essere utilizzata.
+Puoi utilizzare i server virtuali {{site.data.keyword.Bluemix_notm}} nel cloud pubblico IBM come funzioni beta senza alcun addebito. Delle franchigie sono fornite per le immagini di server virtuale da te create, il numero di indirizzi IP assegnati e la quantità di memoria che può essere utilizzata. 
 
-Per il beta di macchine virtuali {{site.data.keyword.Bluemix_notm}},
-le franchigie consistono nei seguenti elementi:
+Per il beta di server virtuali {{site.data.keyword.Bluemix_notm}}, le franchigie consistono nei seguenti elementi:
 
 * 8 istanze
 * 8 CPU virtuali
@@ -361,8 +360,7 @@ le franchigie consistono nei seguenti elementi:
 * 200 GB di archiviazione blocchi
 * 4 indirizzi IP pubblici
 
-Puoi inoltre utilizzare l'infrastruttura di macchine virtuali
-per fornire macchine virtuali nei tuoi cloud privati {{site.data.keyword.Bluemix_notm}},
+Puoi inoltre utilizzare l'infrastruttura di server virtuali per fornire server virtuali nei tuoi cloud privati {{site.data.keyword.Bluemix_notm}},
 soggetto solo ai limiti e alle quote dei tuoi cloud privati.
 
 
@@ -381,8 +379,8 @@ per creare e ospitare la tua applicazione.
 
 Puoi stabilire rapidamente il prezzo della tua applicazione utilizzando i calcolatori forniti da {{site.data.keyword.Bluemix_notm}}.
 
-1. Vai alla pagina dei costi {{site.data.keyword.Bluemix_notm}} [](https://console.{DomainName}/pricing/). 
-2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi ridotti al penny**.
+1. Vai alla {{site.data.keyword.Bluemix_notm}} [pagina dei prezzi](https://console.{DomainName}/pricing/). 
+2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi preciso al centesimo**.
 
 Per utilizzare il calcolatore, digita il tuo utilizzo mensile previsto delle
 risorse elencate, ad esempio il numero di istanze o le notifiche di push. Fai clic nel campo **Utilizzo mensile**
@@ -485,16 +483,16 @@ e in uscita è gratuito.</dd>
 Una volta aggiunti tutti gli elementi, il prezzo totale dell'applicazione è di
            $384,15.
 
-##Dettagli di utilizzo
+##Dashboard di utilizzo
 {: #usage}
 
-In qualità di proprietario dell'account, utente con autorizzazione *Revisore* spazio o gestore della fatturazione, puoi utilizzare la vista Dettagli di utilizzo per visualizzare gli addebiti in tempo reale per i runtime e i servizi utilizzati ciascun mese nelle tue organizzazioni. Puoi
+In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare gli addebiti in
+tempo reale per i runtime e i servizi utilizzati al mese nelle tue organizzazioni. Puoi
 vedere i GB-ora di runtime e il consumo dei servizi in tutte le regioni oppure puoi
 selezionare la visualizzazione di una regione e di uno spazio specifici per gli ultimi
 12 mesi.
 
-Per aprire la vista Dettagli di utilizzo, fai clic sull'icona **Account e supporto** nell'angolo superiore destro
-dell'interfaccia utente {{site.data.keyword.Bluemix_notm}} e seleziona **Account**; nella pagina che viene visualizzata, fai clic su **Dettagli di utilizzo**. Nella vista, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account.
+Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **Account e supporto** &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. Nella vista, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
 
 Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. Ogni ciclo di fatturazione dura un mese.
 
@@ -502,17 +500,13 @@ I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a
 
 Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere l'utilizzo totale per tale organizzazione, compresi gli eventuali utilizzi come parte di un periodo di prova gratuito. Gli addebiti visualizzati per l'organizzazione non sono gli addebiti che ti verranno fatturati. L'utilizzo del periodo di prova gratuito viene visualizzato come gratuito, a livello dell'account, ma non a livello dell'organizzazione. Pertanto, quando visualizzi l'utilizzo dell'organizzazione, vedi l'utilizzo reale per tale organizzazione, compresi sia l'utilizzo a titolo gratuito che quello che viene invece addebitato. Tutto l'utilizzo dell'organizzazione viene sommato all'utilizzo dell'account dopo la rimozione del periodo di prova gratuito.
 
-I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
-
 ##Notifiche
 {: #notifications}
 
 In quanto gestore dell'account di un account Pagamento a consumo, puoi impostare le notifiche di spesa rispetto al costo totale del tuo account per il tuo
 runtime, i tuoi servizi e per i singoli servizi, esclusi quelli di terze parti. Ricevi le notifiche quando raggiungi l'80%, il 90% e il 100% delle soglie di spesa da te specificate.
 
-Per aprire la vista **Notifiche**, fai clic sull'icona **Impostazioni
-profilo** nell'angolo superiore destro dell'interfaccia utente {{site.data.keyword.Bluemix_notm}}
-e seleziona **Account&gt;Notifiche**. Seleziona la casella di spunta davanti a una notifica per attivarla. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
+Per aprire la vista **Notifiche**, fai clic sull'icona **Account e supporto** &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Notifiche di spesa**. Immetti un valore numerico per impostare la soglia di spesa per l'attivazione di una notifica per ciascun tipo di notifica di spesa, come necessario. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
 
 ##Come modificare il tuo piano
 {: #changing}

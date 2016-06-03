@@ -17,9 +17,9 @@ copyright:
 
 # Gestión de {{site.data.keyword.Bluemix_notm}} Local y {{site.data.keyword.Bluemix_notm}} Dedicado
 {: #mng}
-*Última actualización: 19 de abril de 2016*
+*Última actualización: 16 de mayo de 2016*
 
-Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](index.html#oc_useradmin); consulte [Gestión de las organizaciones](../admin/adminpublic.html#orgmng).
+Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](index.html#oc_useradmin); consulte [Gestión de las organizaciones](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de {{site.data.keyword.Bluemix_notm}}*
@@ -27,16 +27,16 @@ Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o
 | ¿Qué puedo hacer? | Detalles |    
 |----------------|---------|
 |Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](index.html#oc_resource).|
-|Gestionar el catálogo | Pulse **ADMINISTRATION &gt; CATALOG MANAGEMENT** para gestionar qué servicios están visibles a sus
-usuarios y orgs. Consulte [Gestión de su catálogo](index.html#oc_catalog).|
-|Administrar organizaciones | Pulse **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](index.html#oc_organizations).|
+|Gestionar el catálogo | Pulse **ADMINISTRACIÓN &gt; GESTIÓN DE CATÁLOGO** para gestionar qué servicios están visibles a sus
+usuarios y organizaciones. Consulte [Gestión de su catálogo](index.html#oc_catalog).|
+|Administrar organizaciones | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE ORGANIZACIÓN ** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](index.html#oc_organizations).|
 |Crear espacios y asignar roles de usuario | Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) y, a continuación, seleccione **Gestionar
-organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](../admin/adminpublic.html#orgmng). |
-|Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRATION &gt; USER ADMINISTRATION** para añadir usuarios,
+organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](../admin/orgs_spaces.html). |
+|Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE USUARIOS** para añadir usuarios,
 eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](index.html#oc_useradmin). |
-|Revisar informes y registros | Pulse **ADMINISTRATION &gt; REPORTS AND LOGS** para ver informes de seguridad y
+|Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y
 registros de auditoría para su instancia. Ver [Visualización de informes](index.html#oc_report). |
-|Ver información del sistema | Pulse **ADMINISTRATION &gt; SYSTEM INFORMATION** para ver información del sistema como actualizaciones pendientes, el nombre y la versión de la instancia, la región, la URL de API, la URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. También puede acceder a suscripciones de sucesos e información de entrada de calendario
+|Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones pendientes, el nombre y la versión de la instancia, la región, la URL de API, la URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. También puede acceder a suscripciones de sucesos e información de entrada de calendario
 para la aplicación de sus notificaciones en la sección Actualizaciones pendientes. Consulte [Visualización de información del sistema](index.html#oc_system). |
 |Ampliar notificaciones y configurar suscripciones de sucesos | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones y sucesos](index.html#oc_eventsubscription). |
 
@@ -50,16 +50,16 @@ incidencias se informan en la página Estado.
 
 ### Notificaciones
 
-Puede ver notificaciones de IBM para su entorno local o dedicado y supervisar el estado de su entorno. Revise la
+Puede ver notificaciones de IBM para el entorno local o dedicado para supervisar el estado del entorno. Revise la
 tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publican.
 
-Tabla 2. Tipos de sucesos y métodos de notificación
+*Tabla 2. Tipos de sucesos y métodos de notificación*
 
 | **Tipo de suceso** | **Método de notificación** |       
 |-----------------|-------------------|
 | Actualizaciones de mantenimiento | En las notificaciones de la página Administración se avisa de las próximas actualizaciones de mantenimiento. Acceda
 a la página **Administración** y seleccione el icono **Notificaciones** ![Notificaciones](images/icon_announcement.svg). Para ver un listado completo y el historial de notificaciones pendientes y
-completas, pulse **ADMNISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones
+completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones
 pendientes**. Puede ampliar la posibilidad de notificación configurando una suscripción de sucesos que integra alertas de
 actualización de mantenimiento desde la página Administración con el servicio web que elija para direccionar los mensajes
 a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija. |
@@ -87,7 +87,7 @@ cualquiera de los dos métodos descritos.
 
 1. Pulse **Añadir suscripción**.
 
-2. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario, revise la tabla siguiente:
+2. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario y los valores que se deben utilizar en la sección de carga útil, revise la tabla siguiente: 
 
 *Tabla 3. Campos de formulario de suscripción de sucesos*
 
@@ -101,12 +101,22 @@ cualquiera de los dos métodos descritos.
 | Nombre de usuario | Especificar el nombre de usuario para su servicio web. Si no quiere usar sus credenciales personales, puede configurar
 un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Especificar la contraseña de su servicio web. |
-| Carga útil | Si ha seleccionado el método POST, especifique las propiedades específicas del servicio web que usa, junto con los valores utilizados para la notificación a IBM. Por ejemplo, si quiere mostrar el título, mensaje y gravedad en la notificación desde su servicio web, debe definir los valores de
-{{site.data.keyword.Bluemix_notm}} con la propiedad coincidente para su servicio web. Los valores siguientes se pueden usar para
-extraer información desde la notificación de {{site.data.keyword.Bluemix_notm}} para el título de notificación,
-cuerpo del mensaje y nivel de gravedad: `"{{title}}`, `"{{message}},"` y
-`"{{severity}}"`. Si no especifica información en esta sección, recibirá la notificación sin
-información adicional.  |
+| Carga útil | Si ha seleccionado el método POST, especifique las propiedades específicas del servicio web que usa, junto con los valores utilizados para la notificación a IBM. Consulte la siguiente tabla para los valores de IBM que puede utilizar para rellenar la notificación. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional.  |
+
+*Tabla 4. Valores de sección de carga útil*
+
+| **Valor de IBM** | **Descripción** | **Tipo de suceso** |
+|----------------|----------------|------------------------|
+| {{content.title}} | Título de mensaje |  Actualización e incidencia  |
+| {{status}} | Estado de la actualización o incidencia. | Actualización e incidencia |
+| {{type}} | Actualización o incidencia | Actualización e incidencia | 
+| {{region}} | Región afectada | Actualización e incidencia |
+| {{content.message}} | Descripción del mensaje |   Actualización e incidencia  |
+| {{content.severity}} | Puntuación de gravedad | Incidencia |
+| {{content.category}} | Servicios afectados | Incidencia |
+| {{content.subCategoryName}} | Componentes afectados | Incidencia |
+| {{content.scheduleWindow}} | La fecha planificada para la actualización | Actualización |
+| {{content.disruption}} | Componentes afectados | Actualización |
 
 Cuando se guarda su suscripción de sucesos, recibe notificaciones a través del método que haya configurado por medio del servicio web. Las
 notificaciones se siguen publicando en la página Estado para las incidencias y en el área Notificaciones de la página Administración para las actualizaciones de mantenimiento.
@@ -115,35 +125,77 @@ Puede seleccionar cualquier suscripción de sucesos guardada y ver la actividad 
 reciente para ver los detalles. Incluidos en los detalles están los valores de IBM para la notificación que puede usar en la sección payload. Para
 ver estos valores, expanda la entrada de actividad reciente, expanda **Suceso** y luego **Objeto**.
 
+## Actualizaciones de mantenimiento
+{: #oc_schedulemaintenance}
 
-## Visualización de la información del sistema
-{: #oc_system}
+Para ver las actualizaciones de mantenimiento planificadas y pendientes, vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA&gt; *Número* de actualizaciones pendientes** para acceder a la página **Actualizaciones del sistema**.  
 
-Para ver información del sistema, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA**.
+**Nota**: consulte la siguiente sección para establecer ventanas de mantenimiento con aprobación previa para empezar. Estas ventanas deben establecerse para que IBM planifique el mantenimiento para el entorno. 
 
-Puede expandir y visualizar diversas secciones sobre detalles de configuración de actualizaciones pendientes, información general del sistema y LDAP.
+<dl>
+<dt>Actualizaciones no disruptivas</dt>
+<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará durante las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema. </dd>
+<dt>Actualizaciones disruptivas</dt>
+<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para planificar la actualización. </dd>
+</dl>
 
-### Actualizaciones y notificaciones pendientes
 
-En la sección Actualizaciones, puede ver el número de notificaciones de actualizaciones pendientes
-que requieren acción por su parte. Para realizar una acción para una actualización específica, siga estos pasos:
+### Configuración de ventanas de mantenimiento con aprobación previa
+{: #preapprovedmaintenance}
 
-<ol>
-<li>Pulse <strong><em>Número</em> de actualizaciones pendientes</strong> para ver todas las actualizaciones pendientes.</li>
-<li>Seleccione una actualización para realizar una acción o ver los detalles de la actualización, que incluyen la ventana de actualización,
-el estado planificado o el estado de interrupción.</li>
-<li>Pulse <strong>SELECCIONAR FECHAS DE NO DISPONIBILIDAD</strong> para establecer días específicos en la ventana de actualización que no son convenientes para que se aplique la actualización. Si establece fechas de no disponibilidad, IBM aprobará y planificará
-la actualización en función de las selecciones. Recibirá una notificación cuando se apruebe y se planifique la actualización.</li>
-<li>Pulse <strong>APROBAR ACTUALIZACIÓN</strong> para aprobar la actualización, si no tiene ninguna fecha no disponible. Si aprueba, la actualización se aplicará durante la ventana de actualización planificada. IBM enviará una
-notificación cuando se inicie y se detenga el despliegue de actualización.</li>
-</ol>
+Antes de empezar a planificar y aprobar actualizaciones, debe establecer las ventanas de mantenimiento con aprobación previa. Las actualizaciones no disruptivas se planifican durante los tiempos con aprobación previa. Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará en las ventanas de mantenimiento disponibles con aprobación previa que se establezcan en la página Actualizaciones del sistema. 
 
-**Nota**: si no establece fechas no disponibles o aprueba la actualización, se aplica al final del plazo de 21 días
-para asegurar que su plataforma permanece actualizada.
+Es necesario establecer un mínimo de 24 horas disponibles para una semana de como mínimo 3 días durante esa semana. Por ejemplo, puede establecer tres ventanas de 8 horas en tres días distintos, o puede establecer ventanas d 6 horas en cuatro días distintos. Para asegurarse de que las ventanas proporcionan el tiempo suficiente para aplicar una actualización, cada ventana debe tener una duración de 4 horas como mínimo. 
 
-En la página Actualizaciones pendientes, puede elegir el seguimiento de su planificación de actualizaciones pulsando en el icono
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes &gt; Gestionar disponibilidad**.
+2. Expanda la sección **Gestionar ventanas de actualización disponibles**.
+3. Pulse **Añadir nuevo** ![Añadir nuevo](images/add-new.png).
+4. Establezca la primera ventana de disponibilidad seleccionando la frecuencia, duración y hora de inicio para la ventana. 
+5. Pulse **Enviar**.
+6. Repita este proceso hasta que haya satisfecho los requisitos mínimos para ventanas semanales.
+
+### Configuración de ventanas de mantenimiento no disponibles
+
+Después de establecer las ventanas de mantenimiento disponibles con aprobación previa, puede elegir establecer fechas y horas específicas en las que el entorno no está disponible para realizar actualizaciones. Por ejemplo, puede elegir vacaciones o un fin de semana con mucho tráfico cuando no desea que se aplique ningún mantenimiento para garantizar que las aplicaciones están disponibles para los usuarios.
+
+
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes &gt; Gestionar disponibilidad**.
+2. Expanda la sección **Gestionar ventanas de actualización no disponibles**.
+3. Pulse **Añadir nuevo** ![Añadir nuevo](images/add-new.png).
+4. Establezca una ventana no disponible seleccionando la frecuencia, duración y hora de inicio para la ventana. 
+5. Pulse **Enviar**.
+
+### Planificación y aprobación de actualizaciones
+{: #scheduleandapprove}
+
+Después de establecer las ventanas de mantenimiento con aprobación previa, las actualizaciones no disruptivas se planificarán automáticamente durante estas horas.
+La aprobación explícita para estos tipos de actualizaciones no es necesaria. Sin embargo, puede ver los detalles para cada actualización de mantenimiento incluyendo lo que se está actualizando, el tiempo que tardará la actualización y cuando se ha planificado la actualización.  
+
+Para ver los detalles para una actualización no disruptiva, realice los siguientes pasos: 
+
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. 
+2. Identifique todas las filas de actualización que tengan **Planificación de cliente necesaria** establecida en **No**.
+3. Seleccione la fila para esa actualización para ver los detalles.
+
+Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para planificar la actualización. 
+
+Para las actualizaciones disruptivas que no requieran su aprobación, realice los siguientes pasos: 
+
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. 
+2. Identifique todas las filas de actualización que tengan **Planificación de cliente necesaria** establecida en **Sí**.
+3. Seleccione la fila para esa actualización para revisar los detalles para la actualización incluida la descripción de la actualización, la fecha y hora sugerida para la actualización, los componentes afectados y la duración para la actualización. 
+4. Seleccione **Planificar y aprobar**.
+5. Elija una de las opciones siguientes: **Fecha sugerida**, **Fechas alternativas** o **Todas las ventanas con aprobación previa**.
+6. Seleccione **Enviar**. 
+
+Basándose en la selección, la actualización se aplica durante la fecha sugerida que acepte, durante una de las ventanas con aprobación previa, o una de las fechas y horas alternativas.
+Cuando la fecha de planificación para la actualización se ha completado por IBM, verá la fecha planificada reflejada en los detalles para la actualización en la página **Actualizaciones del sistema**.
+
+### Configuración de un canal de información de calendario para actualizaciones planificadas
+
+En la página Actualizaciones del sistema, puede elegir el seguimiento de su planificación de actualizaciones pulsando en el icono
 **Calendario** ![Calendario](images/icon_calendar.svg) y descargar el archivo `.ics` para importar sus actualizaciones
-planificadas en la app de calendario que prefiera:
+planificadas en la app de calendario que prefiera: 
 
 <ol>
 <li>Abra la app de calendario.</li>
@@ -155,6 +207,27 @@ planificadas en la app de calendario que prefiera:
 También puede ampliar la funcionalidad de notificación para la página Administración usando las suscripciones de sucesos para
 la integración con el servicio web que quiera. Para configurar una suscripción de notificación de sucesos para una actualización o incidencia,
 consulte [Suscripciones de suceso y notificaciones](index.html#oc_eventsubscription).
+
+## Visualización de la información del sistema
+{: #oc_system}
+
+Para ver información del sistema, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA**.
+
+Puede expandir y visualizar diversas secciones sobre actualizaciones de mantenimiento pendientes, información del sistema general y detalles de configuración LDAP. 
+
+### Actualizaciones del sistema pendientes
+
+En la sección Actualizaciones, puede ver el número de notificaciones de actualizaciones pendientes
+que requieren acción por su parte. Hay dos tipos de actualizaciones de mantenimiento que se pueden  ver: 
+
+<dl>
+<dt>Actualizaciones no disruptivas</dt>
+<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso. Estas actualizaciones se aplican en las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema. </dd>
+<dt>Actualizaciones disruptivas</dt>
+<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. El usuario tiene la capacidad de planificar y aprobar cada una de estas actualizaciones de mantenimiento con la ventana de mantenimiento de 21 días asignada para asegurarse de que la actualización no se aplica durante las horas empresariales críticas. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para aplicar la actualización. </dd>
+</dl>
+
+Para obtener más información sobre cómo establecer ventanas de mantenimiento con aprobación previa, cómo establecer fechas no disponibles específicas para el mantenimiento y cómo establecer un canal información de calendario, consulte [Actualizaciones de mantenimiento](index.html#oc_schedulemaintenance).
 
 ### Información general del sistema
 
@@ -171,11 +244,10 @@ En la sección Detalles de la configuración de LDAP, puede seleccionar el servi
 y ver información sobre las correlaciones de usuarios y grupos. Si utiliza el WebID de
 {{site.data.keyword.IBM}}, se indica en esta sección.
 
-## Visualización de la información de uso
+## Visualización de uso e informes
 {: #oc_resource}
 
-Puede ver distintos tipos de información de uso para su instancia local o dedicada y cuenta de
-{{site.data.keyword.Bluemix_notm}}:
+Puede ver distintos tipos de información de uso para su instancia local o dedicada y cuenta de {{site.data.keyword.Bluemix_notm}}. También puede descargar y ver informes de seguridad y registros para la instancia de {{site.data.keyword.Bluemix_notm}}.
 
 - Información de recursos, incluyendo espacio en disco, uso de CPU, uso de red y tiempos de respuesta medios. Consulte [Uso de recursos](index.html#resourceusage).
 - Uso de cuenta por org, incluyendo el número de apps de tiempo de ejecución con uso, el número total de GB-horas de tiempo de ejecución y el número de instancias de servicio con uso. Consulte [Uso de la cuenta](index.html#accountusage).
@@ -186,7 +258,7 @@ Supervisión de cuota. Consultar [Administración de organización](../admin/ind
 ### Uso de recursos
 {: #resourceusage}
 
-Para ver información de recursos, pulse **ADMINISTRACIÓN &gt; USO**.
+Para ver información de uso de los recursos, consulte **ADMINISTRACIÓN &gt; USO**.
 
 En la sección Supervisión de recursos, puede ver la siguiente
 información:
@@ -217,7 +289,7 @@ a organizaciones específicas según su uso.
 </ul>
 </li>
 <li>Opcional: ver sus datos para un mes concreto usando el menú <strong>Su actividad de nube</strong> para seleccionar el mes que quiera.</li>
-<li>Opcional: pulse <strong>EXPORT DATA</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
+<li>Opcional: pulse <strong>EXPORTAR DATOS</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
 mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>.</li>
 </ol>
 
@@ -240,7 +312,7 @@ todas las organizaciones a la vez.</li>
 </li>
 <li>Opcional: ver sus datos para un mes específico, seleccionando el mes que quiera del gráfico de barras. Los datos del mes actual
 se muestran de forma predeterminada.</li>
-<li>Opcional: pulse <strong>EXPORT DATA</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
+<li>Opcional: pulse <strong>EXPORTAR DATOS</strong>, y seleccione <strong>CSV</strong> o <strong>JSON</strong> para exportar sus datos para el
 mes seleccionado a un archivo <code>CSV</code> o <code>JSON</code>.</li>
 </ol>
 
@@ -263,13 +335,11 @@ el uso de GB-hora medido para los últimos tres meses.
 Para obtener más información sobre la visualización del uso por organización, el ajuste de planes de cuota y la gestión de sus
 organizaciones, consulte [Administración de organizaciones](../admin/index.html#oc_organizations).
 
-## Visualización de informes
+### Reports
 {: #oc_report}
 
 Puede ver informes de seguridad y registros, como por ejemplo DataPower&trade;, el cortafuegos y la auditoría de inicio de sesión, para
-la instancia de {{site.data.keyword.Bluemix_notm}}.
-
-Para visualizar informes y registros, pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS**.
+la instancia de {{site.data.keyword.Bluemix_notm}}. Para visualizar informes y registros, pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS**.
 
 Seleccione una de las opciones siguientes:
 
@@ -283,7 +353,7 @@ para descargar el informe.
 
 La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado.
 
-*Tabla 4. Lista de informe de seguridad*
+*Tabla 5. Lista de informes de seguridad*
 
 | **Categoría** | **Informe** | **Descripción** |      
 |-----------------|-------------------|---------------------|
@@ -308,11 +378,19 @@ La tabla siguiente muestra la lista de los informes de seguridad generados para 
 ## Visualización del estado
 {: #oc_status}
 
-Puede supervisar el estado de la instancia de {{site.data.keyword.Bluemix_notm}} mediante la página de Estado de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.
+Puede ver el estado para el entorno {{site.data.keyword.Bluemix_notm}} y para la consola de administración. 
 
-La página Estado es el recurso central para buscar notificaciones y anuncios sobre sucesos clave que afectan a la plataforma {{site.data.keyword.Bluemix_notm}} y a los servicios principales de {{site.data.keyword.Bluemix_notm}}.
+### Estado de entorno de {{site.data.keyword.Bluemix_notm}}
 
-Puede suscribirse a un hilo RSS para recibir notificaciones de forma que no tenga que comprobar si se han publicado. Para obtener más información sobre la página Estado y la configuración del hilo RSS, consulte [Visualización de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+Puede supervisar el estado para su instancia de {{site.data.keyword.Bluemix_notm}} utilizando la página Estado de {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.
+
+La página Estado es el recurso central para buscar notificaciones y anuncios sobre sucesos clave que afectan a la plataforma {{site.data.keyword.Bluemix_notm}} y a los servicios principales de {{site.data.keyword.Bluemix_notm}}. Puede suscribirse a un hilo RSS para recibir notificaciones de forma que no tenga que comprobar si se han publicado. Para obtener más información sobre la página Estado y la configuración del hilo RSS, consulte [Visualización de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+
+### Estado de consola de administración
+
+Después del despliegue inicial del entorno {{site.data.keyword.Bluemix_notm}}, se lleva a cabo automáticamente una comprobación de verificación en los componentes que se utilizan para administrar el entorno. Puede ir a la página Comprobación de verificación de consola de administración para comprobar el estado de los componentes después de ejecutar la comprobación de verificación. Para acceder a la página, vaya a <code>https://console.&lt;subdominio&gt;.bluemix.net/check</code>, donde `<subdominio>` es el nombre de la instancia local o dedicada.
+
+Puede ejecutar una verificación en cualquier momento. Debe iniciar la sesión para seleccionar la opción para ejecutar la verificación. Si encuentra errores al añadir un usuario, editar una organización o gestionar los servicios, ejecute esta comprobación para identificar si cualquiera de los componentes está fallando o está desconectado. Puede abrir una incidencia de soporte con la información de la comprobación para resolver el problema rápidamente. 
 
 ## Gestión del catálogo
 {: #oc_catalog}
@@ -488,6 +566,16 @@ Para crear una nueva organización y añadir gestores, realice los pasos siguien
 3. Especifique el nombre o correo electrónico de la persona que quiera añadir como gestor. Puede añadir más de un gestor especificando y seleccionando varios nombres.
 4. Pulse <strong>CREAR ORGANIZACIÓN</strong> para guardar los cambios y crear la organización.
 
+### Creación de espacios
+
+Puede crear espacios en la organización; por ejemplo, un espacio *dev* como entorno de desarrollo, un espacio *test* como entorno de prueba y un espacio *production* como entorno de producción. Luego puede asociar sus apps a los espacios. Complete los siguientes pasos para crear un espacio:
+
+1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+2. Seleccione la organización a la que desea añadir un espacio. 
+3. Pulse **Crear un espacio**.
+4. Especifique un nombre de espacio.
+5. Pulse **Crear**.
+
 ### Supervisión de cuota
 
 En la sección Supervisión de cuotas puede expandir la sección y ver la siguiente información:
@@ -557,48 +645,84 @@ Puede añadir usuarios a la instancia de {{site.data.keyword.Bluemix_notm}} del 
 
 La página Administración de usuarios muestra todos los usuarios para la instancia local o dedicada.
 Se muestran los permisos para cada usuario. Los permisos pueden ser los siguientes: Ninguno, `Admin`, `Catalog`, `Login`,
-`Reports` y `Users`. Los permisos se pueden habilitar o bien se puede asignar al usuario acceso para `view` o `write` para dicho permiso, representado mediante iconos. Consulte [Permisos](#permissions) para ver las descripciones
+`Reports` y `Users`. Los permisos se pueden habilitar o bien se puede asignar al usuario acceso para `view` o `write` para dicho permiso, representado mediante iconos. Consulte [Permisos](index.html#permissions) para ver las descripciones
 de cada tipo y las explicaciones de los iconos.
 
-Elija una de las opciones siguientes:
+### Trabajar con usuarios
+
+Puede buscar usuarios existentes, eliminar usuarios y añadir usuarios individualmente o por un grupo. Elija una de las opciones siguientes:
 
 * Localizar usuarios. Puede localizar usuarios en la tabla mediante el campo **Buscar**.
-* Añadir usuarios. Si tiene el permiso `admin` o el permiso `users` con la acceso `write`, puede añadir usuarios. Para añadir un usuario o un grupo de usuarios, pulse **AÑADIR UN SOLO USUARIO** o **AÑADIR GRUPO DE USUARIOS**. En el campo **Buscar**, escriba el nombre de usuario o nombre de grupo que desea buscar y seleccione la organización a la que desea añadir el usuario o el grupo de usuarios en la lista **Org**. Cuando encuentre el usuario o grupo que desea añadir, pulse el nombre de usuario y luego pulse **AÑADIR USUARIO** o **AÑADIR USUARIOS** para añadirlos.
-Los grupos de más de 50 usuarios se añaden mediante un trabajo por lotes en segundo plano. Cuando la operación de añadir finaliza correctamente, el usuario o grupo se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
-* Editar permisos y organizaciones. Si tiene el permiso `admin`, puede editar permisos y organizaciones de otros usuarios. Para editar permisos, localice el usuario y pulse el nombre de usuario. Para habilitar o inhabilitar permisos, seleccione una de las opciones siguientes en la ventana que se abre:
-	* Seleccione **Activado** en la lista para habilitar un permiso.
-	* Seleccione **Leer** en la lista para que el usuario tenga el acceso
-`view` (solo lectura) sobre dicho permiso, o seleccione **Escribir** para asignar el
-acceso `write` (editar o añadir y eliminar) para dicho permiso.
-	* Seleccione **Desactivado** para inhabilitar el permiso.
-Para editar organizaciones, seleccione una de las siguientes opciones:
-	* Para añadir el usuario a una organización, utilice el campo de búsqueda para localizar una organización, pulse para seleccionar una de las opciones y pulse **AÑADIR**.
-	* Para eliminar un usuario de una organización, pulse el icono ![Eliminar, representado mediante un signo menos](images/icon_remove.svg).
-Cuando termine, pulse **GUARDAR**.
+
+* Añadir un único usuario. Si tiene el permiso `admin` o el permiso `users` con la acceso `write`, puede añadir usuarios.
+
+  1. Para añadir un único usuario desde el directorio LDAP, pulse **Añadir usuario**.
+  2. En el campo **Buscar**, escriba la dirección de correo electrónico para el usuario y, a continuación, seleccione el usuario en la lista rellenada. 
+  3. A continuación, en el campo **Organización**, elija la organización a la que desea añadir el usuario especificando el nombre de organización y seleccionándolo en la lista rellenada. 
+  4. Para añadir el usuario a la organización seleccionada, pulse **Añadir usuario**.
+
+  **Nota**: cuando la operación de adición es satisfactoria, el usuario se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
+
+* Añadir un grupo de usuarios desde el directorio LDAP.
+
+  1. Pulse **Añadir grupo de usuarios**.
+  2. En el campo **Buscar**, escriba un nombre de grupo en el que buscar y seleccione el nombre de grupo en la lista rellenada. 
+  3. A continuación, desde el campo **Organización**, elija la organización a la que desea añadir el grupo de usuarios entrando el nombre de organización y seleccionándola de la lista rellenada. 
+  4. Para añadir el grupo de usuarios a la organización seleccionada, pulse **Añadir usuarios**.
+**Nota**: los grupos de más de 50 usuarios se añaden mediante un trabajo por lotes en segundo plano. Cuando la operación de añadir finaliza correctamente, el usuario o grupo se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
+
+* Añada un grupo de usuarios importando una hoja de cálculo que incluya ID de usuario, direcciones de correo electrónico de usuario y la organización a la que tiene previsto añadir el usuario. 
+
+  1. Pulse **Importar usuarios**.
+  2. Pulse **Descargar plantilla (.CSV)** para descargar una hoja de cálculo con las columnas necesarias que puede rellenar, o cree una propia con al menos las cabeceras de columna necesarias: **ID de usuario**, **Correo electrónico**, **Organización**.
+  3. Rellene los valores de usuario para las columnas necesarias. Si no está utilizando un directorio LDAP, utilice las cabeceras de columna opcionales y columnas necesarias, **Nombre** y **Apellido**, para la importación de usuario. 
+  4. Guarde el archivo y pulse **Cargar archivo**.
+ 
+
+  **Nota**: escriba los ID de usuario que coincidan con los valores utilizados en el registro de usuario. Las columnas dentro de la hoja de cálculo puede estar en cualquier orden siempre que tenga todas las columnas necesarias. Recibirá un mensaje de confirmación indicando que se han añadido todos los usuarios, si la importación ha sido satisfactoria. Si la importación ha sido satisfactoria para algunos usuarios pero no para otros, revise los mensajes de error para realizar una acción en los usuarios que no se han podido añadir.
+
 * Eliminar usuarios. Si tiene el permiso `admin` o el permiso `users` con el acceso `write`, puede eliminar usuarios.
-Para eliminar un usuario, localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg) y, a continuación, **Eliminar**.
+
+    1. Localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg). 
+    2. Pulse **Eliminar**.
 
 ### Permisos
 {: #permissions}
 
 Se pueden asignar los siguientes permisos a los usuarios:
 
-*Tabla 5. Permisos*
+*Tabla 6. Permisos*
 
 | **Permiso de usuario** | **Descripción** |       
 |-----------------|-------------------|
 | Admin | Los usuarios con el permiso `admin` pueden editar los permisos de otros usuarios. |
-| Catálogo | A los usuarios con el permiso `catalaog` se les puede asignar el acceso para `view` o `write` (modificar) los servicios que están disponibles en la instancia local o dedicada. |  
+| Catálogo | A los usuarios con el permiso `catalog` se les puede asignar el acceso para `view` o `write` (modificar) los servicios que están disponibles en la instancia local o dedicada. |  
 | Login | Los usuarios con el permiso `login` pueden ver la página Administración. Sin este permiso, los usuarios no pueden ver la opción de menú Administración. |
 | Reports | A los usuarios con el permiso `reports` se les puede asignar acceso `view` o `write` (modificar) sobre los informes de seguridad. |
 | Users | A los usuarios con el permiso `users` se les puede asignar el acceso `view` sobre la lista de usuarios o `write` (añadir o eliminar) sobre los usuarios. Este permiso no le permite definir permisos para otros usuarios.|
 
+
 Los permisos se pueden habilitar o bien se puede asignar al usuario acceso `view` o `write` para dicho permiso, representado mediante los siguientes iconos:
 
-* El icono ![Habilitado, representado mediante una marca de selección](images/icon_enabled.svg) con un permiso significa que está habilitado.
+* El icono ![Habilitado, representado mediante una marca de selección](images/icon_enabled.svg) junto a un permiso significa que está habilitado.
 * El icono ![Ver, representado mediante un ojo](images/icon_read.svg) significa que el usuario tiene el acceso `view` (solo lectura) sobre dicho permiso.
 * El icono ![Grabar, representado por un lápiz](images/icon_write.svg) significa que el usuario tiene
 acceso `write` (editar, añadir o eliminar) para dicho permiso.
+
+La edición de permisos y organizaciones para otros usuarios requiere tener el permiso `admin`. Para editar permisos, localice el usuario y pulse el nombre de usuario. En la página **Editar usuario**, puede habilitar o inhabilitar permisos: 
+
+* Seleccione **Activado** en la lista para habilitar un permiso.
+* Seleccione **Leer** en la lista para que el usuario tenga el acceso
+`view` (solo lectura) sobre dicho permiso, o seleccione  **Escribir** para asignar el
+acceso `write` (editar o añadir y eliminar) para dicho permiso.
+* Seleccione **Desactivado** para inhabilitar el permiso.
+
+Para añadir o eliminar un usuario de una organización, seleccione una de las siguientes opciones:
+
+
+* Para añadir un usuario a una organización, seleccione el nombre de usuario en la tabla para acceder a la pantalla **Editar usuario**. A continuación, utilice el campo de búsqueda para localizar una organización y seleccionar la organización en la lista, y a continuación, pulse **Guardar**.
+* Para eliminar un usuario de una organización, seleccione el nombre de usuario de la tabla para acceder a la pantalla **Editar usuario**. A continuación, pulse ![Eliminar](images/icon_remove.svg) para la organización de la que desea eliminar el usuario y pulse **Guardar**.
+
 
 ## Gestión de usuarios con la API REST de administración
 {: #usingadminapi}
@@ -939,7 +1063,7 @@ POST /codi/v1/serviceBrokers
 ### Solicitud
 {: #registerrequest}
 
-*Tabla 6. Campos*
+*Tabla 7. Campos*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1020,7 +1144,7 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 ### Solicitud
 {: #updaterequest}
 
-*Tabla 7. Campos*
+*Tabla 8. Campos*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1092,7 +1216,7 @@ Content-Type: application/json
 
 Utilice la siguiente API y ejemplos de código para suprimir un servicio.
 
-*Tabla 8. Parámetro*
+*Tabla 9. Parámetro*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|

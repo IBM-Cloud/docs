@@ -4,18 +4,20 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*最終更新日: 2016 年 4 月 08 日*  
+*最終更新日: 2016 年 4 月 07 日*  
 
 Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix}} Live Sync を使用すると、{{site.data.keyword.Bluemix_notm}} にあるアプリケーション・インスタンスを迅速に更新して、デスクトップにある場合と同じように再デプロイせずに開発することができます。   
 {: shortdesc}
@@ -105,7 +107,7 @@ Live Edit を使用すれば、{{site.data.keyword.Bluemix_notm}} で実行中�
 
 Web IDE 内でファイルを変更すると、それらのファイルは {{site.data.keyword.Bluemix_notm}} で実行中のアプリケーションに自動的に再デプロイされます。Node アプリケーションの再始動が必要な場合、実行バーにある **「再始動」**ボタンを使用できます。
 
-**注:** {{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、より一貫性のある動作をさせるためには、256MB の追加メモリーが必要であり、メモリーが追加されます。
+**注:** {{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、内容がより整合したものになるには、256 MB の追加メモリーが必要であり、メモリーが追加されます。
 
 ##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
@@ -198,80 +200,88 @@ Node.js アプリケーションを構築する場合、{{site.data.keyword.Blue
 bl コマンドのダウンロードと使用について詳しくは、[Bluemix Live Sync](../develop/bluemixlive.html) を参照してください。
 
 ## bl コマンド
+{: #bl_commands}
 
 {{site.data.keyword.Bluemix_live}} コマンド・ライン **bl** の構文は次のとおりです。
 
 ```
 bl command [arguments][options] [--help]
 ```
+{: pre}
 
-### command
-<dl>
-<dt>login、l</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} にログインします。</dd>
-<dt>logout、lo</dt>
-<dd>ユーザーをログアウトします。</dd>
-<dt>sync、s</dt>
-<dd>デスクトップとサーバー間の同期処理を開始します。</dd>
-<dt>create、c</dt>
-<dd>プライベート・プロジェクトを作成し、それをこのディレクトリー内の Git リポジトリーにリンクして、コンテンツを {{site.data.keyword.Bluemix_notm}} にデプロイします。</dd>
-<dt>projects、p</dt>
-<dd>同期に使用可能なすべてのプロジェクトをリストします。</dd>
-<dt>start、st</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを開始します。</dd>
-<dt>stop、sp</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを停止します。</dd>
-<dt>status、ss</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} の実行中のアプリケーション・インスタンスの状況をリストします。</dd>
-</dl>
+**command**
 
-### arguments
-<dl>
-<dd>コマンドの引数。</dd>
-</dl>
+l *login*: {{site.data.keyword.Bluemix_notm}} にログインします。
 
-### options
-<dl>
-<dd>コマンドのオプション。</dd>
-</dl>
+lo *logout*: {{site.data.keyword.Bluemix_notm}} からログアウトします。
 
-### グローバル・オプション
-<dl>
-<dt>--help</dt>
-<dd>指定されたコマンドのヘルプ・ページを表示します。</dd>
-<dt>--verbose</dt>
-<dd>詳細ロギングを有効にします。</dd>
-</dl>
+s *sync*: デスクトップとサーバー間の同期化処理を開始します。
+
+c *create*: プライベート・プロジェクトを作成し、それをこのディレクトリー内の Git リポジトリーにリンクして、コンテンツを {{site.data.keyword.Bluemix_notm}} にデプロイします。
+
+p *projects*: 同期に使用可能なすべてのプロジェクトをリストします。
+
+st *start*: {{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを開始します。
+
+sp *stop*: {{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを停止します。
+
+ss *status*: {{site.data.keyword.Bluemix_notm}} の実行中のアプリケーション・インスタンスの状況をリストします。
+
+
+**arguments**
+
+コマンドの引数。
+
+
+**options**
+
+コマンドのオプション。
+
+**グローバル・オプション**
+
+*--help*: 指定されたコマンドのヘルプ・ページを表示します。
+
+*--verbose*: 詳細ロギングを有効にします。
 
 **注:** 引数またはオプションにスペースが含まれる場合、値を二重引用符で囲んでください。
 
 ## help
+{: bl_help}
 
 ```
-bl [ command ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### 使用量
-<dl>
-<dd>このコマンドを使用して、コマンドまたはコマンド・リストに関するヘルプを表示します。</dd>
-</dl>
+**使用量**
 
-### 例
+このコマンドを使用して、コマンドまたはコマンド・リストに関するヘルプを表示します。
 
-次のコマンドは、コマンドのリストを表示します。
+**例**
 
+コマンドのリストを表示します。
 
-```bl --help```
+```
+bl --help
+```
+{: pre}
 
-次のコマンドは、sync コマンドに関する詳細情報を表示します。 
+sync コマンドに関する詳細情報を表示します。
 
-```bl sync --help```
+```
+bl sync --help
+```
+{: pre}
 
 ## login
+{: bl_login}
 
-```bl login|l [ -u username ][-p password ][ -s server ]```
+```
+bl login | l [ -u username ][-p password ][ -s server ]
+```
+{: pre}
 
-### 目的
+**目的**
 
 このコマンドは、{{site.data.keyword.Bluemix_notm}} にログインするために使用します。ログインは、セッションごとに 1 回のみ行う必要があります。
 
@@ -280,94 +290,90 @@ bl [ command ] --help
 
 **注:** ログインする前に、<a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> の無料アカウントを登録する必要があります。
 
-### options
+**options**
 
-<dl>
-<dt>-u username</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} へのログインに使用する IBM ID。</dd>
-<dt>-p password</dt>
-<dd>IBM ID のパスワード。</dd>
-<dt>-s server</dt>
-<dd>{{site.data.keyword.jazzhub_short}} サーバーのサーバー名または IP アドレス。</dd>
-</dl>
+-u *username*: {{site.data.keyword.Bluemix_notm}} へのログインに使用する IBM ID。
 
-### 例
+-p *password*: IBM ID のパスワード。
+
+-s *server*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名または IP アドレス。
+
+**例**
 
 次のコマンドを実行すると、*username* と *password* の両方の入力を求めるプロンプトが出されます。
 
 
-```bl login```
+```
+bl login```
+{: pre}
 
-このコマンドを実行すると、ユーザー `name@company.com:` でログインします。
-
-```bl login –u name@company.com –p pa55w0rd```
-
-次のコマンドを実行すると、ユーザー `name@company.com` をパスワード pa55 w0rd でログインします。 パスワードにスペースが含まれているため、引用符で囲む必要があります。
-
-```bl login –u name@company.com –p “pa55 w0rd”```
-
-## logout
+ユーザー `name@company.com` でログインします。
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd```
+{: pre}
+
+ユーザー `name@company.com`、パスワード *pa55 w0rd* でログインします。このパスワードはスペースを含むため、引用符で囲む必要があります。
+
 ```
+bl login –u name@company.com –p “pa55 w0rd”```
+{: pre}
 
-### 目的
+## ログアウト
+{: bl_logout}
 
-<dl>
-<dd>このコマンドを使用して、ログアウトします。</dd>
-</dl>
+```
+bl logout | lo
+```
+{: pre}
+
+**目的**
+
+このコマンドを使用して、ログアウトします。
 
 ## プロジェクト
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### 目的
+**目的**
 
-<dl>
-<dd>このコマンドを使用して、ログイン・ユーザーが同期の対象として選択できるすべてのプロジェクトをリストします。
-</dd>
-</dl>
+このコマンドを使用して、ログイン・ユーザーが同期の対象として選択できるすべてのプロジェクトをリストします。
+
 
 ## sync
+{: bl_sync}
 
 ```
-bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### 目的
+**目的**
 
-<dl>
-<dd>このコマンドを使用して、ローカル・ディレクトリーとのプロジェクト内容の同期を開始します。
+このコマンドを使用して、ローカル・ディレクトリーとのプロジェクト内容の同期を開始します。
 このコマンドは、<code>q</code> が入力されるまで実行されます。
 このコマンドでは、オプションで、ファイルおよびアプリケーションのすべての状態変更のログを表示することができます。
-</dd>
-</dl>
 
-### 引数
 
-<dl>
-<dt>projectName</dt>
-<dd><i>“alias | mproject”</i> という形式のプロジェクト名、
-あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に <i>myproject</i> のみの形式のプロジェクト名。</dd>
-</dl>
+**引数**
 
-### options
+*projectName*: *“alias | mproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *myproject* のみのプロジェクト名。
 
-<dl>
-<dt>-d localDirectory</dt>
-<dd>ローカル・ディレクトリー・パス。デフォルトでは、現行フォルダー "." です。</dd>
-<dt>--overwritelocal</dt>
-<dd>プロジェクト・ワークスペースの内容でローカル・ディレクトリーを上書きします。</dd>
-<dt>--overwriteremote</dt>
-<dd>ローカル・ディレクトリーの内容でプロジェクト・ワークスペースを上書きします。</dd>
-<dt>--verbose</dt>
-<dd>詳細ロギングを表示します。</dd>
-</dl>
+**options**
 
-### 例
+-d *localDirectory*: ローカル・ディレクトリー・パス。デフォルトでは、現行フォルダー "." です。
+
+*--overwritelocal*: プロジェクト・ワークスペースの内容でローカル・ディレクトリーを上書きします。
+
+*--overwriteremote*: ローカル・ディレクトリーの内容でプロジェクト・ワークスペースを上書きします。
+
+*--verbose*: 詳細ロギングを表示します。
+
+**例**
 
 次のコマンドは、現行ディレクトリーが既存の同期ターゲットであれば、関連プロジェクトとの同期を開始します。
 現行ディレクトリーが空であり既存の同期ターゲットではない場合に、このコマンドを実行すると、*projectName* の入力を求めるプロンプトが出されます。
@@ -376,203 +382,212 @@ bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote 
 
 ```
 bl sync```
+{: pre}
 
-次のコマンドは、同期を開始し、プロジェクトをログイン・ユーザーが所有している場合は ```bl sync “alias | myproject”``` と同等の処理を行います。
+該当プロジェクトをログイン・ユーザーが所有する場合、
+このコマンドは同期を開始し、`bl sync “alias |
+myproject”` と同等の処理を行います。
 
-```bl sync  myproject```
+
+```
+bl sync  myproject```
+{: pre}
 
 次のコマンドは、
-プロジェクト <code>my pro ject</code> との同期を開始します。この名前はスペースを含むため、引用符で囲みます。
+プロジェクト `my pro ject` との同期を開始します。この名前はスペースを含むため、引用符で囲みます。
 
-
-```bl sync “my pro ject”```
-
-次のコマンドは、プロジェクト <code>myproject</code> とディレクトリー myfolder の同期を開始します。
-
-```bl sync myproject –d  myfolder```
-
-## create
 
 ```
-bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync “my pro ject”
 ```
+{: pre}
 
-### 目的
-<dl>
-<dd>このコマンドをコードが入っているディレクトリーから使用して、プライベート・プロジェクトを作成し、そのプロジェクトを Git リポジトリーにリンクし、そのリポジトリーのコンテンツを {{site.data.keyword.Bluemix_notm}} にデプロイします。</dd>
-</dl>
+次のコマンドは、
+プロジェクト `myproject` とディレクトリー `myfolder` の同期を開始します。
 
-### options
+```
+bl sync myproject –d  myfolder```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>プロジェクトの名前。デフォルト: 現行ディレクトリー名。</dd>
-<dt>-r REGION</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 地域。
-デフォルト: 米国南部</dd>
-<dt>-o ORG</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 組織。
-デフォルト: 検出された最初の組織。</dd>
-<dt>-s SPACE</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} スペース。
-デフォルト: 検出された最初のスペース。</dd>
-<dt>-g GIT_REPO</dt>
-<dd>既存の Git リポジトリーで使用するリモート・リポジトリーの名前。デフォルト: 発信元。</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Git 実行可能ファイルの絶対パス。デフォルト: detected。</dd>
-<dt>--creds</dt>
-<dd>Git 資格情報を求めるプロンプト。</dd>
-<dt>--fork</dt>
-<dd>このディレクトリーをフォークしてプロジェクトおよびリポジトリーを作成します。</dd>
-<dt>--public</dt>
-<dd>新規プロジェクトを公開します。</dd>
-<dt>--prompt</dt>
-<dd>すべての必須指定のオプションと有効な選択を求めるプロンプト。</dd>
-</dl>
+## 作成
+{: bl_create}
 
-### 例
+```
+bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+{: pre}
+
+**目的**
+
+このコマンドをコードが入っているディレクトリーから使用して、プライベート・プロジェクトを作成し、そのプロジェクトを Git リポジトリーにリンクし、そのリポジトリーのコンテンツを {{site.data.keyword.Bluemix_notm}} にデプロイします。
+
+**options**
+
+-n *PROJECT_NAME*: プロジェクトの名前。デフォルト: 現行ディレクトリー名。
+
+-r *REGION*: {{site.data.keyword.Bluemix_notm}} 地域。デフォルト: 米国南部。
+
+-o *ORG*: {{site.data.keyword.Bluemix_notm}} 組織。デフォルト: 検出された最初の組織。
+
+-s *SPACE*: {{site.data.keyword.Bluemix_notm}} スペース。デフォルト: 検出された最初のスペース。
+
+-g *GIT_REPO*: 既存の Git リポジトリーで使用するリモート・リポジトリーの名前。デフォルト: 発信元。
+
+-e *GIT_EXE*: Git 実行可能ファイルの絶対パス。デフォルト: detected。
+
+*--creds*: Git 資格情報を求めるプロンプトを出します。
+
+*--fork*: このディレクトリーをフォークしてプロジェクトおよびリポジトリーを作成します。
+
+*--public*: 新規プロジェクトをパブリックにします。
+
+*--prompt*: すべての必須指定のオプションを求めるプロンプトを出し、有効な選択項目を示します。
+
+**例**
 
 以下のコマンドは、プライベート・プロジェクトの作成プロセスを開始し、使用するプロジェクト名を求めるプロンプトを出します。
 
-```bl create```
+```
+bl create```
+{: pre}
 
-以下のコマンドは、<code>myNewProject</code> という名前のパブリック・プロジェクトを作成します。
-
-```bl create -n myNewProject --public```
-
-## status
+以下のコマンドは、`myNewProject` という名前のパブリック・プロジェクトを作成します。
 
 ```
-bl status|ss [ projectName ]
+bl create -n myNewProject --public```
+{: pre}
+
+## 状況
+{: bl_status}
+
 ```
+bl status | ss [ projectName ]
+```
+{: pre}
 
-### 目的
+**目的**
 
-<dl>
-<dd>このコマンドを使用して、<code>./launchConfigurations</code> ディレクトリーの起動構成に関連付けられたアプリケーションの状況をリストします。</dd>
-</dl>
+このコマンドを使用して、`./launchConfigurations` ディレクトリーの起動構成に関連付けられたアプリケーションの状況をリストします。
 
-###引数
+**引数**
 
-<dl>
-<dt>projectName</dt>
-<dd>“alias | myproject” という形式、
-あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に myproject のみの形式のプロジェクト名。</dd>
-</dl>
+*projectName*: `“alias | myproject”` という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に `myproject` のみのプロジェクト名。
 
-### 例
+**例**
 
 この例では、実行中のアプリケーションの状況を表示します。現行ディレクトリーが既存の同期ターゲットであれば、関連付けられたプロジェクトを使用します。
-現行ディレクトリーが既存の同期ターゲットではない場合にこのコマンドを実行すると、<i>projectName</i> の入力を求めるプロンプトが出されます。
+現行ディレクトリーが既存の同期ターゲットではない場合にこのコマンドを実行すると、`projectName` の入力を求めるプロンプトが出されます。
 
 
-````bl status```
+``
+bl status ```
+{: pre}
 
-次の例は、プロジェクト myproject の状況を表示します。このプロジェクトをログイン・ユーザーが所有している場合は ```bl status “alias | myproject”``` と同等です。
+該当プロジェクトをログイン・ユーザーが所有する場合、
+この例は、プロジェクト *myproject* の状況を表示し、`bl status “alias |
+myproject”` と同等です。
 
-```bl status myproject```
-
-次の例では、プロジェクト <code>my pro ject</code> に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
-
-
-```bl status “my pro ject”```
-
-## start
 
 ```
-bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl status myproject```
+{: pre}
+
+次の例では、プロジェクト `my pro ject` に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
+
+
 ```
+bl status “my pro ject”```
+{: pre}
 
-### 目的
+## 開始
+{: bl_start}
 
-<dl>
-<dd>このコマンドを使用して、起動ファイルまたはマニフェスト・ファイルによって記述されたアプリケーション・インスタンスを開始します。
+```
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+{: pre}
+
+**目的**
+
+このコマンドを使用して、起動ファイルまたはマニフェスト・ファイルによって記述されたアプリケーション・インスタンスを開始します。
 アプリケーションのビルドパックがライブ編集をサポートする場合、アプリケーションは、デフォルトでライブ編集モードで起動されます。
-開始されると、アプリケーションの URL、デバッグ・ツール、および {{site.data.keyword.Bluemix_notm}} ダッシュボードが表示されます。</dd>
-</dl>
+開始されると、アプリケーションの URL、デバッグ・ツール、および {{site.data.keyword.Bluemix_notm}} ダッシュボードが表示されます。
 
-### 引数
+**引数**
 
-<dl>
-<dt>projectName</dt>
-<dd><i>“alias | myproject”</i> という形式、
-あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に <i>myproject</i> のみの形式のプロジェクト名。</dd>
-</dl>
+*projectName*: *“alias | myproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *myproject* のみのプロジェクト名。
 
-### options
+**options**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>起動構成名 (例えば <code>mylaunchconfig</code>)、ファイル名 (例えば <code>mylaunchconfig.launch</code>)、または起動構成ファイルのプロジェクト相対パス
-(例えば <code>launchConfigurations/mylaunchconf.launch</code>)。</dd>
-<dt>-m manifestPath</dt>
-<dd>マニフェスト・ファイルのプロジェクト相対パス (例えば <code>manifest.yml</code>)。</dd>
-<dt>--liveedit</dt>
-<dd>関連付けられたアプリケーションをライブ編集モードで開始します。
-ビルドパックがライブ編集モードをサポートしない場合は、エラーで終了します。</dd>
-<dt>--noliveedit</dt>
-<dd>関連付けられたアプリケーションを通常モードで開始します。</dd>
-<dt>--view</dt>
-<dd>実行中のアプリケーションのブラウザーを開きます。</dd>
-<dt>--restart</dt>
-<dd>ライブ編集モードで既に実行中のアプリケーションを再デプロイせずに再始動します。</dd>
-</dl>
+-l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
-### 例
+-m *manifestPath*: マニフェスト・ファイルのプロジェクト相対パス (例えば `manifest.yml`)。
 
-次のコマンドは、起動ファイル <code>launchConfigurations/my.launch</code> に関連付けられた
-<code>myproject</code> のアプリケーション・インスタンスを開始します。
+*--liveedit*: 関連付けられたアプリケーションをライブ編集モードで開始します。ビルドパックがライブ編集モードをサポートしない場合は、エラーで終了します。
+
+*--noliveedit*: 関連付けられたアプリケーションを通常モードで開始します。
+
+*--view*: 実行中のアプリケーションのブラウザーを開きます。
+
+*--restart*: ライブ編集モードで既に実行中のアプリケーションを再デプロイせずに再始動します。
+
+**例**
+
+次のコマンドは、起動ファイル `launchConfigurations/my.launch` に関連付けられた
+`myproject` のアプリケーション・インスタンスを開始します。
 
 
-```bl start myproject –l “launchConfigurations/my.launch”```
+```
+bl start myproject –l “launchConfigurations/my.launch”```
+{: pre}
 
-次のコマンドは、起動ファイル <code>launchConfigurations/my.launch</code>
+次のコマンドは、起動ファイル `launchConfigurations/my.launch`
 で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始します。
 現行ディレクトリーが同期ターゲットではない場合、エラーが表示されます。
 
 
-```bl start –l “launchConfigurations/my.launch” ```
+```
+bl start –l “launchConfigurations/my.launch” ```
+{: pre}
 
-次のコマンドは、マニフェスト・ファイル <code>manifest.yml</code>
+次のコマンドは、マニフェスト・ファイル `manifest.yml`
 で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始します。
 このマニフェストに指定された情報を使用して、新しい起動構成ファイルを作成します。
 このコマンドは、必要な残りの情報の入力を求めるプロンプトを出してから、起動構成で記述されたアプリケーションを開始します。
 
 
-```bl start –m “mymanifest.yml” ```
+```
+bl start –m “mymanifest.yml” ```
+{: pre}
 
-このコマンドは、マニフェスト・ファイル <code>manifest.yml</code> で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、```bl start –m manifest.yml``` と同等です。
+次のコマンドは、マニフェスト・ファイル `manifest.yml` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始します。これは、` bl start –m manifest.yml` と同等です。
 
-```bl start```
-
-## stop
 
 ```
-bl stop|sp projectName [ -l launchConfiguration ]
+bl start```
+{: pre}
+
+## 停止
+{: bl_stop}
+
 ```
+bl stop | sp projectName [ -l launchConfiguration ]
+```
+{: pre}
 
-### 目的
+**目的**
 
-<dl>
-<dd>このコマンドを使用して、起動ファイルに関連付けられたアプリケーション・インスタンスを停止します。</dd>
-</dl>
+このコマンドを使用して、起動ファイルに関連付けられたアプリケーション・インスタンスを停止します。
 
-### 引数
+**引数**
 
-<dl>
-<dt>projectName</dt>
-<dd>“alias | mproject”という形式のプロジェクト名、あるいは、該当プロジェクトをログイン・ユーザーが所有している場合は単に mproject のみの形式のプロジェクト名。</dd>
-</dl>
+*projectName*: *“alias | mproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *mproject* のみのプロジェクト名。
 
-### options
+**options**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>起動構成名 (例えば <code>mylaunchconfig</code>)、ファイル名 (例えば <code>mylaunchconfig.launch</code>)、または起動構成ファイルのプロジェクト相対パス
-(例えば <code>launchConfigurations/mylaunchconf.launch</code>)。</dd>
-</dl>
+-l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
-### 例
+**例**
 
 次のコマンドは、現行ディレクトリーが同期ターゲットの場合に、アプリケーションを停止します。
 そうでない場合は、エラーで終了します。
@@ -580,21 +595,27 @@ bl stop|sp projectName [ -l launchConfiguration ]
 複数の起動構成がある場合には、停止する構成を指定するように求めるプロンプトがコマンドによって出されます。
 
 
-```bl stop```
+```
+bl stop```
+{: pre}
 
-次のコマンドは、起動ファイル <code>mylaunchConfig</code>
+次のコマンドは、起動ファイル `mylaunchConfig`
 を使用して実行中のプロジェクトのアプリケーション・インスタンスを停止します。
 
 
-```bl stop myproject –l “mylaunchConfig” ```
+```
+bl stop myproject –l “mylaunchConfig” ```
+{: pre}
 
 次のコマンドは、現行ディレクトリーが、
-起動ファイル <code>launchConfigurations/mylaunchconfig.launch</code>
+起動ファイル `launchConfigurations/mylaunchconfig.launch`
 で開始された関連プロジェクトの同期ターゲットである場合に、アプリケーションを停止します。
 そうでない場合は、エラーで終了します。
 
 
-```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch” ```
+{: pre}
 
 ># 関連リンク{:class="linklist"}
 >## チュートリアルおよびサンプル{:id="samples"}

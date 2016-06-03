@@ -26,7 +26,7 @@ Cloud Foundry를 기반으로 합니다. 즉, Cloud Foundry에 대한
 <li>
 <p class="runtimeIcon"><img src="images/javaweb_featured.svg" alt="Java Liberty" /></p>
 <p class="runtimeTitle">Liberty for Java</p>
-<p class="runtimeLink"><a format="html" href="../starters/liberty/index.html" scope="peer">문서 보기</a></p>
+<p class="runtimeLink"><a format="html" href="../runtimes/liberty/index.html" scope="peer">문서 보기</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/node_featured.svg" alt="Node.js" /></p>
@@ -39,8 +39,8 @@ Cloud Foundry를 기반으로 합니다. 즉, Cloud Foundry에 대한
 <p class="runtimeLink"><a format="html" href="../starters/xpages/index.html" scope="peer">문서 보기</a></p>
 </li>
 <li>
-<p class="runtimeIcon"><img src="images/go_featured.svg" alt="이동" /></p>
-<p class="runtimeTitle">이동</p>
+<p class="runtimeIcon"><img src="images/go_featured.svg" alt="Go" /></p>
+<p class="runtimeTitle">Go</p>
 <p class="runtimeLink"><a format="html" href="../runtimes/go/index.html" scope="peer">문서 보기</a></p>
 </li>
 <li>

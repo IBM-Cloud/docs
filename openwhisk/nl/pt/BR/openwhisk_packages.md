@@ -424,7 +424,6 @@ Para criar um pacote customizado com uma ação simples nele, tente o exemplo a 
   ```
   {: pre}
   ```
-  ok: sample/identity chamada com id cccaf61a77054101952494522f36c1ca
   {
       "city": "Austin",
       "country": "USA"

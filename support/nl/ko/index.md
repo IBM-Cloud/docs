@@ -12,16 +12,15 @@ copyright:
 # 고객 지원 받기
 {: #getting-customer-support}
 
-*마지막 업데이트 날짜: 2016년 4월 19일*
+*마지막 업데이트 날짜: 2016년 5월 11일*
 
 
-{{site.data.keyword.Bluemix}}에 문제점이 발생하면
-스택 오버플로우를 통해 도움을 받거나 지원 티켓을 여는 등 여러 방식으로 지원을 받을 수 있습니다.
+{{site.data.keyword.Bluemix}}에서 문제점이 발생하면 포럼을 통해 도움을 받거나 지원 티켓을 여는 등 여러 방식으로 지원을 받을 수 있습니다.
 {:shortdesc}
 
 ## 도움 받기
 {: #getting-help}
-도움을 받으려면 계정 및 지원으로 이동하거나, 스택 오버플로우로 바로 이동하여 정보를 검색하거나 질문을 게시할 수 있습니다.
+지원 티켓을 열거나 다른 도움말 옵션을 찾으려면 계정 및 지원으로 이동할 수 있습니다. 또한 스택 오버플로우 또는 developerWorks(dW) 응답 포럼으로 직접 이동하여 정보를 검색하거나 질문을 게시할 수 있습니다.
 {:shortdesc}
 
 ### 계정 및 지원 사용
@@ -33,18 +32,20 @@ copyright:
 
 
 ### 질문하기
-바로 액세스하든 계정 및 지원을 통해 액세스하든, 스택 오버플로우는 사용자들이 질문하고 답변하는 플랫폼 역할을 하는 웹 사이트입니다. {{site.data.keyword.Bluemix_notm}} 개발 및 지원 팀은 스택 오버플로우에서 활동하고
-**bluemix** 태그가 붙은 질문을 팔로우합니다.
+{: #asking-a-question}
 
-스택 오버플로우에서 질문하려면 다음 옵션 중에서 선택하십시오.
-  * 계정 및 지원에서 **도움 받기**를 클릭하십시오. 표시되는 페이지에서
-검색 필드에 질문을 입력하여 답변을 찾으십시오. 예상한 답변이 리턴되지 않는 경우 **스택 오버플로우에 게시**를 클릭하여 질문을 게시할 수 있습니다.
+스택 오버플로우 및 dW 응답 포럼 모두 사용자의 Bluemix 질문에 대해 매우 다양하고 검색 가능한 응답을 제공합니다. 기존 응답이 없는 경우 새 질문을 하십시오. 
 
-  * [스택 오버플로우](http://stackoverflow.com/questions/tagged/bluemix){: new_window}로 직접 이동하십시오. 
+  * Bluemix 플랫폼 및 서비스를 사용한 앱 개발에 대한 기술적 질문을 하려면 [스택 오버플로우](http://stackoverflow.com/questions/tagged/bluemix){: new_window}로 이동하십시오.
+  * {{site.data.keyword.Bluemix_notm}} 오퍼링 및 시작하기 지시사항에 대한 질문을 하려면 [dW 응답](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}으로 이동하십시오.
 
-스택 오버플로우에서 질문을 작성하는 경우,
-{{site.data.keyword.Bluemix_notm}} 개발 및 지원 팀이 볼 수 있도록 질문에 **bluemix** 태그를 추가하십시오.
+다음 단계를 완료하여 계정 및 지원에서 직접 스택 오버플로우에 질문할 수도 있습니다.
+  1. 계정 및 지원에서 **도움 받기**를 클릭하십시오.  
+  2. 표시되는 페이지에서 검색 필드에 질문을 입력하여 답변을 찾으십시오.  
+  3. 예상한 응답이 리턴되지 않는 경우 **스택 오버플로우에 게시**를 클릭하여 질문을 게시하십시오.
 
+{{site.data.keyword.Bluemix_notm}} 개발 및 지원 팀은 스택 오버플로우 및 dW 응답을 적극적으로 모니터하고 **bluemix** 태그가 붙은 질문을 팔로우합니다. 포럼에서 질문을 작성하는 경우에도 {{site.data.keyword.Bluemix_notm}} 개발 및 지원 팀이 볼 수 있도록 **bluemix** 태그를 추가하십시오.
+ 
 
 
 ## {{site.data.keyword.Bluemix_notm}} 상태 보기
@@ -55,11 +56,9 @@ copyright:
 상태 페이지에서는 다음과 같은 정보를 찾을 수 있습니다.
 
   * 모든 {{site.data.keyword.Bluemix_notm}} 지역에 있는 컴포넌트 및 서비스의 현재 상태
-  * 인시던트 및 유지보수에 대한 공지사항 목록(시간 순서). 목록을 필터링하거나
-개별 공지사항을 열어 자세한 내용을 확인할 수 있습니다.
-  * 계획된 유지보수 창(극한 상황을 제외하고 최소한 24시간 전에 게시됨)
-  * 계획되지 않은 인시던트 또는 정전({{site.data.keyword.Bluemix_notm}} 팀에서
-인식하는 즉시 게시됨). 인시던트 알림은 해결될 때까지 정기적으로 업데이트됩니다.
+  * 인시던트 및 유지보수에 대한 공지사항 목록(시간 순서). 목록을 필터링하거나 개별 공지사항을 열어 자세한 내용을 확인할 수 있습니다.
+  * 계획된 유지보수 기간(극한 상황을 제외하고 최소한 24시간 전에 게시됨)
+  * 계획되지 않은 인시던트 또는 정전({{site.data.keyword.Bluemix_notm}} 팀에서 인식하는 즉시 게시됨). 인시던트 알림은 해결될 때까지 정기적으로 업데이트됩니다.
   * 다양한 {{site.data.keyword.Bluemix_notm}} 서비스 또는 플랫폼에 영향을 미치는 보안 게시판 참조
   * 사용자가 일반적으로 관심을 가지는 기타 플랫폼 전반의 공지사항
   * 구독할 RSS 피드
@@ -79,16 +78,13 @@ copyright:
   1. RSS 리더를 다운로드하여 설치하십시오.
   2. 다음 방법 중 하나를 사용하여 리더를 통해 피드를 구독하십시오.
        * ![RSS](images/rss.svg) 아이콘을 RSS 리더로 끄십시오. 
-       * 마우스 오른쪽 단추로 RSS 아이콘을 클릭하고 **링크 주소 복사**를 선택한 다음 URL을
-RSS 리더에 붙여넣으십시오.
+       * 마우스 오른쪽 단추로 RSS 아이콘을 클릭하고 **링크 주소 복사**를 선택한 다음 URL을 RSS 리더에 붙여넣으십시오.
 
-	자세한 정보는 리더의 **도움말** 섹션을
-참조하십시오. 	   
+	자세한 정보는 리더의 **도움말** 섹션을 참조하십시오. 	   
 
 웹 브라우저 플러그인(Chrome용 [RSS Feed](http://feeder.co/){: new_window} Reader 또는 Firefox용 [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} 추가 기능)이나 기타 뉴스 소스(예: [Feedly](http://www.feedly.com/){: new_window} 또는 [G2reader](http://www.g2reader.com/en/){: new_window})를 통해서도 RSS 피드를 읽을 수 있습니다.
 
-써드파티 서비스를 사용하여 각 RSS 업데이트에 대한
-이메일을 자동으로 전송할 수도 있습니다. 다음 목록은 써드파티 서비스의 예입니다.
+써드파티 서비스를 사용하여 각 RSS 업데이트에 대한 이메일을 자동으로 전송할 수도 있습니다. 다음 목록은 써드파티 서비스의 예입니다.
 
   * www.feedmyinbox.com
   * www.rssforward.com
@@ -97,24 +93,19 @@ RSS 리더에 붙여넣으십시오.
   * www.feedmailer.com
   * www.iftt.com
 
-{{site.data.keyword.Bluemix_notm}}에는
-일반적으로 매월 약 50개의 업데이트가 있습니다.
+{{site.data.keyword.Bluemix_notm}}에는 일반적으로 매월 약 50개의 업데이트가 있습니다.
 
 ### 상태 모니터링 우수 사례
 
-  * 다가오는 유지보수 창 확인
+  * 다가오는 유지보수 기간 확인
 
-	다음 옵션 중 하나를 사용하여 최소한 24시간마다 한 번씩 상태 페이지에
-게시되는 다가오는 유지보수 창 확인
+	다음 옵션 중 하나를 사용하여 최소한 24시간마다 한 번씩 상태 페이지에 게시되는 다가오는 유지보수 기간 확인
 	  * [상태](https://status.eu-gb.bluemix.net/){: new_window} 페이지로 직접 이동
 	  * RSS 피드 또는 RSS에서 이메일로 전달자 사용
 
-  * 진행 중인 인시던트 또는 현재 유지보수 창 확인
+  * 진행 중인 인시던트 또는 현재 유지보수 기간 확인
 
-	{{site.data.keyword.Bluemix_notm}}가
-예상대로 작동하고 있지 않다고 의심하는 경우에는 상태 페이지에서 진행 중인 인시던트 또는
-현재 유지보수 창을 확인하십시오. 상태 페이지에 아직 나열되지 않은 인시던트를 보고하려면,
-[IBM Bluemix 지원](https://support.eu-gb.bluemix.net/gethelp/){: new_window} 도움말 페이지 또는 맨 위 메뉴 표시줄의
+	{{site.data.keyword.Bluemix_notm}}가 예상대로 작동하고 있지 않다고 의심하는 경우에는 상태 페이지에서 진행 중인 인시던트 또는 현재 유지보수 기간을 확인하십시오. 상태 페이지에 아직 나열되지 않은 인시던트를 보고하려면, [IBM Bluemix 지원](https://support.eu-gb.bluemix.net/gethelp/){: new_window} 도움말 페이지 또는 맨 위 메뉴 표시줄의
 **계정 및 지원** 아이콘 ![계정 및 지원](images/account_support.svg)을 통해 지원 티켓을 여십시오. 
 
   * 다중 {{site.data.keyword.Bluemix_notm}} 지역 활용
@@ -129,11 +120,7 @@ RSS 리더에 붙여넣으십시오.
 
   * 사소한 인터럽트에 대비
 
-    대부분의 경우 {{site.data.keyword.Bluemix_notm}}는
-정상적으로 계속 사용할 수 있습니다(유지보수 창에 있는 동안에도 마찬가지임). 하지만 사소한 서비스 인터럽트를 항상 방지할 수는 없습니다. 실행 중인 애플리케이션은 {{site.data.keyword.Bluemix_notm}}의
-애플리케이션 관리 기능(예: 앱 시작 및 중지)이 일시적으로 인터럽트되는 경우에도
-일반적으로 계속 사용할 수 있습니다. 실행 중인 애플리케이션의 가용성을 최대화하려면
-각 애플리케이션의 인스턴스를 셋 이상 실행하십시오.
+    대부분의 경우 {{site.data.keyword.Bluemix_notm}}는 정상적으로 계속 사용할 수 있습니다(유지보수 기간에 있는 동안에도 마찬가지임). 하지만 사소한 서비스 인터럽트를 항상 방지할 수는 없습니다. 실행 중인 애플리케이션은 {{site.data.keyword.Bluemix_notm}}의 애플리케이션 관리 기능(예: 앱 시작 및 중지)이 일시적으로 인터럽트되는 경우에도 일반적으로 계속 사용할 수 있습니다. 실행 중인 애플리케이션의 가용성을 최대화하려면 각 애플리케이션의 인스턴스를 셋 이상 실행하십시오.
 
 
 
@@ -145,16 +132,14 @@ RSS 리더에 붙여넣으십시오.
 ### {{site.data.keyword.Bluemix_notm}} Public에 대한 지원 요청
 {: #contacting-bluemix-support}
 
-{{site.data.keyword.Bluemix_notm}}의 모든 고객은 Bluemix 커뮤니티 또는 스택 오버플로우를 통해 무료로 기술 지원을 받습니다. 
-또한 다양한 고객 요구사항을 충족할 수 있도록 다양한 레벨의 지원이 제공됩니다. 다음 표를 참조하여 무료, 기본, 표준 및 프리미엄 지원 레벨 간에 선택할 수 있습니다.  
+{{site.data.keyword.Bluemix_notm}}의 모든 고객은 Bluemix 커뮤니티 또는 스택 오버플로우를 통해 무료로 기술 지원을 받습니다. 또한 다양한 고객 요구사항을 충족할 수 있도록 다양한 레벨의 지원이 제공됩니다. 다음 표를 참조하여 무료, 기본, 표준 및 프리미엄 지원 레벨 간에 선택할 수 있습니다.  
 
 레벨 | 무료 |  기본 | 표준 | 프리미엄
 --- | --- | --- | --- | --- |
-설명 | Bluemix의 모든 시험판 고객을 지원합니다.  |  기존의 심각도 및 응답 시간이 필요하지 않은 프로덕션 이외의 환경이나 워크로드를 지원합니다. | 
-제한된 수의 비즈니스 핵심 애플리케이션이 있는 환경을 지원합니다. {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local 고객이 표준 지원을 받습니다. | 
-{{site.data.keyword.Bluemix_notm}}에서 전략적 의존성이 있는 매우 중요한 환경을 지원합니다.
-고심각도 지원 |  해당사항 없음 | 해당사항 없음 | 포함 | 포함된 지원 언어 | 영어 | 영어 | 영어 | 
-영어 지정된 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
+설명 | Bluemix의 모든 시험판 고객을 지원합니다.  |  기존의 심각도 및 응답 시간이 필요하지 않은 프로덕션 이외의 환경이나 워크로드를 지원합니다. | 제한된 수의 비즈니스 핵심 애플리케이션이 있는 환경을 지원합니다. {{site.data.keyword.Bluemix_notm}} Dedicated 및 {{site.data.keyword.Bluemix_notm}} Local 고객이 표준 지원을 받습니다. | {{site.data.keyword.Bluemix_notm}}에서 전략적 의존성이 있는 매우 중요한 환경을 지원합니다.
+고심각도 지원 |  해당사항 없음 | 해당사항 없음 | 포함 | 포함된
+지원 언어 | 영어 | 영어 | 영어 | 영어
+지정된 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
 *표 1. 지원 레벨*
 
 #### 지원 티켓 열기
@@ -170,9 +155,7 @@ RSS 리더에 붙여넣으십시오.
   
 
 
-지원 티켓을 열 때, 티켓에 적합한 심각도를 지정하도록 하십시오. 심각도에 따라 티켓 처리 방식이 결정되기 때문입니다. 서로 다른 심각도에 대한 정보는 [지원 티켓 심각도 및 응답 시간](index.html#support-ticket-severity){: new_window}을 참조하십시오. 
-긴급한 요청이지만 무료 또는 기본 지원만 받는 경우에는 계정을 업그레이드하여 높은 심각도(레벨 1, 2 및 3) 티켓을 제출할 수 있습니다. 
-계정을 보다 높은 지원 레벨로 업그레이드하려면 sales@bluemix.net에 이메일로 IBM 영업 담당자에게 문의하십시오. 
+지원 티켓을 열 때, 티켓에 적합한 심각도를 지정하도록 하십시오. 심각도에 따라 티켓 처리 방식이 결정되기 때문입니다. 서로 다른 심각도에 대한 정보는 [지원 티켓 심각도 및 응답 시간](index.html#support-ticket-severity){: new_window}을 참조하십시오. 긴급한 요청이지만 무료 또는 기본 지원만 받는 경우에는 계정을 업그레이드하여 높은 심각도(레벨 1, 2 및 3) 티켓을 제출할 수 있습니다. 계정을 보다 높은 지원 레벨로 업그레이드하려면 sales@bluemix.net에 이메일로 IBM 영업 담당자에게 문의하십시오. 
 
 #### 지원 티켓 상태 확인
 {: #check-ticket-status}
@@ -181,8 +164,7 @@ RSS 리더에 붙여넣으십시오.
 
 
 
-### {{site.data.keyword.Bluemix_notm}}
-Dedicated에 대한 지원 요청
+### {{site.data.keyword.Bluemix_notm}} Dedicated에 대한 지원 요청
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
@@ -268,32 +250,24 @@ Dedicated에 대한 지원 요청
 
 ## 진단 정보 수집
 {: #collecting-diagnostic-information}
-{{site.data.keyword.Bluemix_notm}} 애플리케이션 및
-서비스에 대한 문제점을 진단하고 해결하기 위해 {{site.data.keyword.Bluemix_notm}}
-지원 팀에서 진단 정보 수집을 요청할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 애플리케이션 및 서비스에 대한 문제점을 진단하고 해결하기 위해 {{site.data.keyword.Bluemix_notm}} 지원 팀에서 진단 정보 수집을 요청할 수 있습니다.
 
 진단 정보를 수집하기 전에 다음 단계를 수행하십시오.
 
-  1. 최신 cf 명령행 인터페이스를 설치했는지 확인하십시오. 자세한 정보는 [ cf 명령행 인터페이스 설치](../starters/install_cli.html){: new_window}를
-참조하십시오.
+  1. 최신 cf 명령행 인터페이스를 설치했는지 확인하십시오. 자세한 정보는 [ cf 명령행 인터페이스 설치](../starters/install_cli.html){: new_window}를 참조하십시오.
 
      **참고:** 최신 cf 명령행 인터페이스가 설치되어 있지 않은 경우, cf 명령행이 {{site.data.keyword.Bluemix_notm}}에 연결된 후 `cf logs` 명령이 출력을 리턴하지 않을 수 있습니다.
 
-  2. `cf api` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}가
-실행 중인 cf 명령행 인터페이스에 연결되었는지 확인하십시오.
+  2. `cf api` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}가 실행 중인 cf 명령행 인터페이스에 연결되었는지 확인하십시오.
 
-  3. [{{site.data.keyword.Bluemix_notm}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}에서
-모든 전제조건을 충족하는지 확인하십시오.
+  3. [{{site.data.keyword.Bluemix_notm}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}에서 모든 전제조건을 충족하는지 확인하십시오.
 
 진단 정보를 수집하려면 다음 스크립트를 사용하십시오.
 
-  * Windows 운영 체제의 경우 [bmdiag-general.bat](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window}
-파일을 다운로드하여 실행하십시오.
-  * Linux 및 Mac 운영 체제의 경우 [bmdiag-general.sh](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window}
-파일을 다운로드하여 실행하십시오.
+  * Windows 운영 체제의 경우 [bmdiag-general.bat](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} 파일을 다운로드하여 실행하십시오.
+  * Linux 및 Mac 운영 체제의 경우 [bmdiag-general.sh](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} 파일을 다운로드하여 실행하십시오.
 
-스크립트는 cf 명령행 인터페이스를 사용하여
-애플리케이션 환경에서 다음 정보를 추출합니다.
+스크립트는 cf 명령행 인터페이스를 사용하여 애플리케이션 환경에서 다음 정보를 추출합니다.
 
   * 애플리케이션 로그
   * 애플리케이션 메타데이터
@@ -305,8 +279,7 @@ Dedicated에 대한 지원 요청
 ## {{site.data.keyword.Bluemix_notm}}에 대한 자국어 지원
 {: #lang}
 
-{{site.data.keyword.Bluemix_notm}}는
-영어 이외의 자국어를 지원합니다. 하지만 {{site.data.keyword.Bluemix_notm}}를 통해 제공되는 일부 컨텐츠는 번역되지 않습니다.다음 표에는
+{{site.data.keyword.Bluemix_notm}}는 영어 이외의 자국어를 지원합니다. 하지만 {{site.data.keyword.Bluemix_notm}}를 통해 제공되는 일부 컨텐츠는 번역되지 않습니다.다음 표에는
 {{site.data.keyword.Bluemix_notm}}에 대해 지원되는 자국어 및 언어 코드가 나와 있습니다.
 
 | **자국어** | **언어 코드** |
@@ -335,6 +308,11 @@ IBM에서는 고객 지원에 대한 최근의 경험에 대해 피드백을 받
 {: #rellinks}
 
 ## 일반
-  * [Bluemix 지원 포털](https://support.ibmcloud.com){: new_window}
-  * [cf 명령 도구 설치](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Bluemix 지원 포털](https://support.ibmcloud.com){: new_window} 
+  * [dW 응답](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [cf 명령 도구 설치](../starters/install_cli.html){: new_window} 
   * [SaaS 지원 핸드북](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [스택 오버플로우](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

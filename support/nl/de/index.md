@@ -12,15 +12,15 @@ copyright:
 # Kundenunterstützung abrufen
 {: #getting-customer-support}
 
-*Letzte Aktualisierung: 19. April 2016*
+*Letzte Aktualisierung: 11. Mai 2016*
 
 
-Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, stehen Ihnen unterschiedliche Unterstützungsoptionen zur Verfügung, z. B. das Anfordern von Hilfe über Stack Overflow oder das Öffnen eines Support-Tickets.
+Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, stehen Ihnen unterschiedliche Unterstützungsoptionen zur Verfügung, z. B. das Anfordern von Hilfe über ein Forum oder das Öffnen eines Support-Tickets.
 {:shortdesc}
 
 ## Hilfe anfordern
 {: #getting-help}
-Zum Anfordern von Hilfe können Sie die Ansicht 'Konto und Unterstützung' aufrufen oder direkt zu 'Stack Overflow' wechseln; dort können Sie nach Informationen suchen oder Fragen posten.
+Um ein Support-Ticket zu öffnen oder um andere Hilfeoptionen zu finden, können Sie auf 'Konto und Unterstützung' klicken. Sie können auch direkt an die Foren von Stack Overflow oder developerWorks (dW) Answers posten oder dort nach Informationen suchen.
 {:shortdesc}
 
 ### 'Konto und Unterstützung' verwenden
@@ -32,15 +32,20 @@ Klicken Sie auf **Hilfe anfordern**, um nach Antworten auf Ihre Fragen zu suchen
 
 
 ### Fragen stellen
-'Stack Overflow' ist eine Website, die Benutzern als Plattform zum Stellen und Beantworten von Fragen dient, ganz gleich, ob der Zugriff direkt oder über 'Konto und Unterstützung' stattfindet. Die {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams sind bei Stack Overflow aktiv und verfolgen die Fragen, die mit dem Tag **bluemix** versehen sind.
+{: #asking-a-question}
 
-Für das Stellen einer Frage in Stack Overflow haben Sie die folgenden Auswahlmöglichkeiten:
-  * Klicken Sie in der Anzeige 'Konto und Unterstützung' auf die Option **Hilfe anfordern**. Geben Sie auf der angezeigten Seite im Suchfeld Ihre Frage ein, um nach Antworten darauf zu suchen. Wird die erwartete Antwort nicht zurückgegeben, können Sie auf **An Stack Overflow posten** klicken, um Ihre Frage zu posten.
+Die Foren Stack Overflow und dW Answers bieten beide eine breite Palette durchsuchbarer Antworten für Ihre Fragen zu Bluemix. Wenn Sie keine Antwort vorfinden, stellen Sie eine neue Frage.  
 
-  * Rufen Sie [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} direkt auf.
+  * Wechseln Sie zu [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}, um technische Fragen zu Entwicklungs-Apps auf der Bluemix-Plattform und zu Services zu stellen.
+  * Wechseln Sie zu [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}, um Fragen zu {{site.data.keyword.Bluemix_notm}}-Angeboten zu stellen und um einführende Anweisungen zu erhalten. 
 
-Wenn Sie eine Frage in Stack Overflow stellen, fügen Sie den Tag **bluemix** zu Ihrer Frage hinzu, um sicherzustellen, dass die Frage auch von den {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams wahrgenommen wird.
+Sie können eine Frage in Stack Overflow auch direkt von 'Konto und Unterstützung' aus stellen, indem Sie die folgenden Schritte ausführen: 
+  1. Klicken Sie in der Anzeige 'Konto und Unterstützung' auf die Option **Hilfe anfordern**. 
+  2. Geben Sie auf der angezeigten Seite im Suchfeld Ihre Frage ein, um nach Antworten darauf zu suchen. 
+  3. Wird die erwartete Antwort nicht zurückgegeben, klicken Sie auf **An Stack Overflow posten**, um Ihr Problem zu posten. 
 
+Die {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams überwachen Stack Overflow und dW Answers aktiv und verfolgen die Fragen, die mit der Kennung **bluemix** versehen sind. Wenn Sie eine Frage in einem der Foren stellen, fügen Sie die Kennung **bluemix** zu Ihrer Frage hinzu, um sicherzustellen, dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams wahrgenommen wird. 
+ 
 
 
 ## {{site.data.keyword.Bluemix_notm}}-Status anzeigen
@@ -126,11 +131,11 @@ Sie können Support-Tickets öffnen, wenn Sie über ein gültiges {{site.data.ke
 ### Kontaktaufnahme mit dem Support für {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
-Alle {{site.data.keyword.Bluemix_notm}}-Kunden erhalten kostenlose technische Unterstützung in der Bluemix-Community oder über Stack Overflow. Darüber hinaus werden entsprechend den Kundenanforderungen verschiedene Supportstufen angeboten. Informationen zu den Merkmalen der Supportstufen 'Free', 'Basic', 'Standard' und 'Premium' finden Sie in der folgenden Tabelle. 
+Alle {{site.data.keyword.Bluemix_notm}}-Kunden erhalten kostenlose technische Unterstützung in der Bluemix-Community oder über Stack Overflow.  Darüber hinaus werden entsprechend den Kundenanforderungen verschiedene Supportstufen angeboten. Informationen zu den Merkmalen der Supportstufen 'Free', 'Basic', 'Standard' und 'Premium' finden Sie in der folgenden Tabelle. 
 
 Stufen | Free |  Basic | Standard | Premium
 --- | --- | --- | --- | --- |
-Beschreibung | Support für alle Bluemix-Testkunden.  |  Support für Nicht-Produktionsumgebungen oder -Workloads, für die keine konventionellen Prioritäten und Reaktionszeiten benötigt werden. | Support für Umgebungen mit einer begrenzten Anzahl geschäftskritischer Anwendungen. Kunden mit {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local erhalten den Standard-Support. | Support für geschäftskritische Umgebungen mit strategischer Abhängigkeit von {{site.data.keyword.Bluemix_notm}}.
+Beschreibung | Support für alle Bluemix-Testkunden.  |  Support für Nicht-Produktionsumgebungen oder -Workloads, für die keine konventionellen Prioritäten und Reaktionszeiten benötigt werden. | Support für Umgebungen mit einer begrenzten Anzahl geschäftskritischer Anwendungen. Kunden mit {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local erhalten den Standard-Support. | Support für geschäftskritische Umgebungen mit strategischer Abhängigkeit von {{site.data.keyword.Bluemix_notm}}. 
 Support mit hoher Priorität |  Nicht zutreffend | Nicht zutreffend | Inbegriffen | Inbegriffene
 Support-Sprache | Englisch | Englisch | Englisch | Englisch
 Zugeordneter Client Success Manager (CSM) | Nicht inbegriffen | Nicht inbegriffen | Nicht inbegriffen | Inbegriffen für<br> 8 Stunden pro Woche
@@ -206,10 +211,10 @@ In der folgenden Tabelle sind einige allgemeine Beispiele für Supportfälle mit
 
 Priorität | Prioritätsdefinition | Angestrebte Reaktionszeiten | Abgedeckte Reaktionszeiten
 ------|-------- | --- | --- |
-Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Serviceausfall.</strong> <br> Geschäftskritische Funktionen nicht betriebsbereit oder kritische Schnittstelle ausgefallen. Diese Prioritätsstufe gilt in der Regel für eine Produktionsumgebung und zeigt an, dass nicht erreichbare Services kritische Auswirkungen für Betriebsabläufe haben. Für diesen Zustand ist eine sofortige Lösung erforderlich. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb einer Stunde</li><li><strong>Premium:</strong> Innerhalb einer Stunde</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten</li><li><strong>Premium:</strong> Betriebszeiten</li></ul>
-Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten</li><li><strong>Premium:</strong> Betriebszeiten</li></ul>
-Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten</li><li><strong>Basic:</strong> Betriebszeiten</li><li><strong>Standard:</strong> Betriebszeiten</li><li><strong>Premium:</strong> Betriebszeiten</li></ul>
+Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Serviceausfall.</strong> <br> Geschäftskritische Funktionen nicht betriebsbereit oder kritische Schnittstelle ausgefallen. Diese Prioritätsstufe gilt in der Regel für eine Produktionsumgebung und zeigt an, dass nicht erreichbare Services kritische Auswirkungen für Betriebsabläufe haben.  Für diesen Zustand ist eine sofortige Lösung erforderlich. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb einer Stunde</li><li><strong>Premium:</strong> Innerhalb einer Stunde</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
+Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten </li><li><strong>Basic:</strong> Betriebszeiten </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 *Tabelle 2. Prioritätsdefinition und Reaktionszeit*
 
 
@@ -221,7 +226,7 @@ Wenn Sie vermuten, dass eine potenziell Sicherheitslücke vorliegt, melden Sie d
 Führen Sie die folgenden Schritte aus, um eine potenzielle Sicherheitslücke zu melden:
   1. Öffnen Sie ein Ticket mit der Prioritätsstufe 1 oder ein Ticket mit der höchsten zulässigen Support-Priorität. Informationen zum Öffnen eines Tickets finden Sie in [Support-Ticket öffnen](#open-ticket){: new_window}. 
   2. Beschreiben Sie in der Ticket-Zusammenfassung deutlich, dass es um ein potenzielle Sicherheitslücke geht.
-  2. Stellen Sie in den Details für die potenzielle Sicherheitslücke eines der folgenden Elemente bereit: 
+  2. Stellen Sie in den Details für die potenzielle Sicherheitslücke eines der folgenden Elemente bereit:
        * Eine Telefonnummer, unter der Sie für Rückfragen erreichbar sind.
 	   * Problemdetails. Verschlüsseln Sie die Details als Textblock im Hauptteil des Tickets und geben Sie an, auf welchem sicheren Kommunikationsweg der IBM Support die Entschlüsselungsanweisungen bei Ihnen anfordern kann.
 	   
@@ -298,13 +303,18 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 ## Zufriedenheitsumfragen für den {{site.data.keyword.Bluemix_notm}}-Support  
 {: #survey}
 
-IBM sendet regelmäßig Umfragen an Bluemix-Kunden, um Feedback zu ihren jüngsten Erfahrungen mit dem Kundendienst zu erhalten. In den Umfragen geht es hauptsächlich um die Support-Qualität und den allgemeinen Eindruck des Kunden. Die Umfrageergebnisse werden vom IBM Management ausgewertet, um die Support-Qualität zu verbessern. 
+IBM sendet regelmäßig Umfragen an Bluemix-Kunden, um Feedback zu ihren jüngsten Erfahrungen mit dem Kundendienst zu erhalten.  In den Umfragen geht es hauptsächlich um die Support-Qualität und den allgemeinen Eindruck des Kunden.  Die Umfrageergebnisse werden vom IBM Management ausgewertet, um die Support-Qualität zu verbessern. 
 
 
 # Zugehörige Links
 {: #rellinks}
 
 ## Allgemein
-  * [Bluemix-Support-Portal](https://support.ibmcloud.com){: new_window}
-  * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Bluemix-Support-Portal](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window} 
   * [Handbuch für SaaS-Support](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

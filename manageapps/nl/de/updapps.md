@@ -14,7 +14,7 @@ copyright:
 #Anwendungen aktualisieren
 {: #updatingapps}
 
-*Letzte Aktualisierung: 17. März 2016*
+*Letzte Aktualisierung: 9. Mai 2016*
 
 
 Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
@@ -310,6 +310,10 @@ delete`.
 
 
 # Zugehörige Links
-## Allgemein 
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
 * [Blue-Green-Bereitstellungen](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

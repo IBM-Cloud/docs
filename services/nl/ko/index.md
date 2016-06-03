@@ -12,7 +12,7 @@ copyright:
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2016년 4월 5일*
+*마지막 업데이트 날짜: 2016년 5월 10일*
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 및 앱을 손쉽게 구현, 호스팅 및 스케일링할 수 있습니다. 애플리케이션 로직 및 애플리케이션 디자인에 집중할 수 있습니다.
 {:shortdesc}
@@ -41,7 +41,7 @@ copyright:
 
 |서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|예		|아니오		|아니오|
+|{{site.data.keyword.cloudaccesstrailshort}}			|예		|아니오		|아니오|
 |{{site.data.keyword.activedeployshort}}			|예		|예		|아니오|
 |{{site.data.keyword.alchemyapishort}} 		|예	   	|예  		|예|
 |{{site.data.keyword.alertnotificationshort}}		|예		|예			|예		|
@@ -73,7 +73,7 @@ copyright:
 |{{site.data.keyword.twittershort}}		|예		|예		|예|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
-|{{site.data.keyword.iot_short}}		|예		|아니오		|아니오|
+|{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.keymanagementserviceshort}}	|아니오		|예		|아니오|
 |{{site.data.keyword.languagetranslationshort}}	|예		|예		|예|
 |{{site.data.keyword.messagehub}}		|예		|예		|아니오|
@@ -88,8 +88,8 @@ copyright:
 |{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
 |{{site.data.keyword.objectstorageshort}}	|예		|아니오		|아니오|
 |{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.mobilepush}}	|예		|예		|예|
-|Push for iOS 8					|예		|예		|아니오|
+|{{site.data.keyword.mobilepush}}		|예		|예		|예|
+|{{site.data.keyword.mobilepushshort}}				|예		|예		|예|
 |{{site.data.keyword.questionandanswershort}}	|예		|예		|예|
 |{{site.data.keyword.rapidApps}}		|예		|예		|아니오|
 |{{site.data.keyword.relationshipextractionshort}}	|예	|예		|예|
@@ -115,6 +115,23 @@ copyright:
 |{{site.data.keyword.xpagesservice_short}}	|예		|예		|아니오|
 *표 2. 서비스 공급 여부*
 
+
+## 지속적 서비스 가용성
+{{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1으로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다. 
+
+계층 1으로 분류되는 서비스는 다음과 같습니다.
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB by Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL by Compose
+  * {{site.data.keyword.ssofull}}
+
+서비스 이용 약관에 대한 세부사항을 읽어보려면 [{{site.data.keyword.Bluemix_notm}} 이용 약관](../navigation/notices.html#terms)을 참조하십시오.
 
 ## 서비스 폐지
 

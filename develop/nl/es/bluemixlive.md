@@ -4,18 +4,20 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015 2016
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última actualización: 08 de abril de 2016*  
+*Última actualización: 07 de abril de 2016*  
 
 Si está creando una app Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla.   
 {: shortdesc}
@@ -124,7 +126,7 @@ Al cambiar los archivos de Web IDE, se volverán a desplegar
 automáticamente en la app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, puede utilizar el botón **Reiniciar**
 de la barra de ejecución.
 
-**Nota:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Edit, son necesarios 256 MB de memoria adicional y se añadirán. 
+**NOTA:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Edit, son necesarios 256 MB de memoria adicional y se añadirán. 
 
 ##{{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
@@ -223,80 +225,89 @@ Puede utilizar la interfaz de línea de mandatos **bl** para realizar las tareas
 Para obtener más información sobre cómo descargar y utilizar el mandato bl, consulte [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## Mandatos bl
+{: #bl_commands}
 
 La línea de mandatos de {{site.data.keyword.Bluemix_live}}, **bl**, tiene la sintaxis siguiente:
 
 ```
 bl mandato [argumentos][options] [--help]
 ```
+{: pre}
 
-### Mandatos
-<dl>
-<dt>login, l</dt>
-<dd>Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>logout, lo</dt>
-<dd>Cierra la sesión del usuario.</dd>
-<dt>sync, s</dt>
-<dd>Inicia el proceso de sincronización entre el escritorio y el servidor.</dd>
-<dt>create, c</dt>
-<dd>Crea un proyecto privado; enlácelo al repositorio de Git en este directorio y
-despliegue el contenido en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>projects, p</dt>
-<dd>Lista todos los proyectos que están disponibles para sincronización.</dd>
-<dt>start, st</dt>
-<dd>Inicia la instancia de la aplicación en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>stop, sp</dt>
-<dd>Detiene la instancia de aplicación en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>status, ss</dt>
-<dd>Lista el estado de la instancia de aplicación en ejecución en {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+**Mandatos**
 
-### Argumentos
-<dl>
-<dd>Argumentos para el mandato.</dd>
-</dl>
+l *login*: Inicia la sesión en {{site.data.keyword.Bluemix_notm}}.
 
-### Opciones
-<dl>
-<dd>Opciones para el mandato.</dd>
-</dl>
+lo *logout*: Finaliza la sesión de {{site.data.keyword.Bluemix_notm}}.
 
-### Opciones globales
-<dl>
-<dt>--help</dt>
-<dd>Muestra la página de ayuda para el mandato especificado</dd>
-<dt>--verbose</dt>
-<dd>Habilita el registro detallado.</dd>
-</dl>
+s *sync*: Inicia el proceso de sincronización entre el escritorio y el servidor.
+
+c *create*: Crea un proyecto privado, lo enlaza al repositorio de Git en este directorio y despliega el contenido en {{site.data.keyword.Bluemix_notm}}.
+
+p *projects*: Lista todos los proyectos disponibles para la sincronización.
+
+st *start*: Inicia la instancia de aplicación en {{site.data.keyword.Bluemix_notm}}.
+
+sp *stop*: Detiene la instancia de aplicación en {{site.data.keyword.Bluemix_notm}}.
+
+ss *status*: Lista el estado de la instancia de aplicación en ejecución en
+{{site.data.keyword.Bluemix_notm}}.
+
+
+**Argumentos**
+
+Argumentos para el mandato.
+
+
+**Opciones**
+
+Opciones para el mandato.
+
+**Opciones globales**
+
+*--help*: Muestra la página de ayuda para el mandato especificado
+
+*--verbose*: Habilita el registro detallado.
 
 **Nota:** Si alguno de los argumentos u opciones contiene un espacio, escriba el valor entre comillas dobles.
 
-## help
+## Help
+{: bl_help}
 
 ```
-bl [ mandato ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### Uso
-<dl>
-<dd>Utilice este mandato para visualizar la ayuda de un mandato o lista de mandatos.</dd>
-</dl>
+**Uso**
 
-### Ejemplos
+Utilice este mandato para visualizar la ayuda de un mandato o lista de mandatos.
 
-El mandato siguiente muestra la lista de mandatos:
+**Ejemplos**
 
-```bl --help```
+Muestra la lista de mandatos:
 
-El mandato siguiente muestra información detallada sobre el mandato sync:
+```
+bl --help
+```
+{: pre}
 
-```bl sync --help```
+Muestra información detallada sobre el mandato sync:
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-```bl login|l [ -u nombre_usuario ][-p password ][ -s servidor ]```
+## Login
+{: bl_login}
 
-### Finalidad
+```
+bl login | l [ -u nombre de usuario ][-p contraseña ][ -s servidor ]
+```
+{: pre}
+
+**Finalidad**
 
 Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_notm}}. El inicio de sesión debe realizarse solo una vez por sesión.
 
@@ -305,287 +316,312 @@ Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_not
 **Nota:** para poder iniciar sesión, antes debe registrar una cuenta gratuita de
 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a>.
 
-### Opciones
+**Opciones**
 
-<dl>
-<dt>-u nombre_usuario</dt>
-<dd>Su ID de IBM que se utiliza para iniciar sesión en {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>-p contraseña</dt>
-<dd>La contraseña de su ID de IBM.</dd>
-<dt>-s servidor</dt>
-<dd>El nombre del servidor o la dirección IP del servidor de {{site.data.keyword.jazzhub_short}}.</dd>
-</dl>
+-u *nombre de usuario*: El ID de IBM que utiliza para iniciar sesión en
+{{site.data.keyword.Bluemix_notm}}.
 
-### Ejemplos
+-p *contraseña*: La contraseña de su ID de IBM.
+
+-s *servidor*: El nombre de servidor o la dirección IP del servidor de  {{site.data.keyword.jazzhub_short}}.
+
+**Ejemplos**
 
 Este mandato solicita tanto un *nombre de usuario* como una *contraseña*:
 
-```bl login```
+```
+bl login
+```
+{: pre}
 
-Este mandato inicia la sesión del usuario `name@company.com:`
-
-```bl login –u name@company.com –p pa55w0rd```
-
-Este mandato inicia la sesión del usuario `name@company.com` con la contraseña pa55 w0rd que contiene un espacio, por lo que necesita comillas:
-
-```bl login –u name@company.com –p “pa55 w0rd”```
-
-## logout
+Inicie la sesión del usuario, `name@company.com`:
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd
 ```
+{: pre}
 
-### Finalidad
+Inicie la sesión del usuario `name@company.com` con la contraseña *pa55 w0rd* que contiene un espacio, por lo que necesita comillas:
 
-<dl>
-<dd>Utilice este mandato para cerrar la sesión.</dd>
-</dl>
+```
+bl login –u name@company.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Logout
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**Finalidad**
+
+Utilice este mandato para cerrar la sesión.
 
 ## Proyectos
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### Finalidad
+**Finalidad**
 
-<dl>
-<dd>Utilice este mandato para listar todos los proyectos que están disponibles para la sincronización por parte del usuario que ha iniciado sesión.</dd>
-</dl>
+Utilice este mandato para listar todos los proyectos que están disponibles para la sincronización por parte del usuario que ha iniciado sesión.
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s nombreProyecto -d directorioLocal [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s nombreProyecto -d directorioLocal [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### Finalidad
+**Finalidad**
 
-<dl>
-<dd>Utilice este mandato para iniciar la sincronización del contenido de un proyecto con su directorio local. Este mandato se ejecuta hasta que se especifica <code>q</code>. Este mandato puede mostrar de forma opcional un registro de todos los cambios de estado en aplicaciones y archivos.</dd>
-</dl>
+Utilice este mandato para iniciar la sincronización del contenido de un proyecto con su directorio local. Este mandato se ejecuta hasta que se especifica <code>q</code>. Este mandato puede mostrar de forma opcional un registro de todos los cambios de estado en aplicaciones y archivos.
 
-### Argumento
+**Argumento**
 
-<dl>
-<dt>nombreProyecto</dt>
-<dd>El nombre del proyecto con el formato <i>“alias | mproject”</i> o solo <i>myproject</i>, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
-</dl>
+*nombreProyecto*: El nombre del proyecto con el formato *“alias | mproject”* o solo *myproject*, si el propietario del proyecto es el usuario que ha iniciado sesión.
 
-### Opciones
+**Opciones**
 
-<dl>
-<dt>-d directorioLocal</dt>
-<dd>La vía de acceso al directorio local. El valor predeterminado es la carpeta actual ".".</dd>
-<dt>--overwritelocal</dt>
-<dd>Sobrescribe el directorio local con el contenido del espacio de trabajo del proyecto.</dd>
-<dt>--overwriteremote</dt>
-<dd>Sobrescribe el espacio de trabajo del proyecto con el contenido del directorio local.</dd>
-<dt>--verbose</dt>
-<dd>Muestra el registro detallado.</dd>
-</dl>
+-d *directorioLocal*: La vía de acceso al directorio local. El valor predeterminado es la carpeta actual ".".
 
-### Ejemplos
+*--overwritelocal*: Sobrescribe el directorio local con el contenido del espacio de trabajo del proyecto. 
+
+*--overwriteremote*: Sobrescribe el espacio de trabajo del proyecto con el contenido del directorio local. 
+
+*--verbose*: Muestra el registro detallado.
+
+**Ejemplos**
 
 Este mandato inicia la sincronización con el proyecto asociado si el directorio actual es un destino de sincronización existente. Si el directorio actual está vacío y no es un destino de sincronización existente, el mandato solicita un *nombreProyecto*. Si el directorio actual no está vacío y no es un destino de sincronización existente, se necesita una opción de sobrescritura.
 
 ```
 bl sync
 ```
+{: pre}
 
-Este mandato inicia la sincronización y es equivalente a
-```bl sync “alias | myproject”```
-si el propietario del proyecto es el usuario que ha iniciado sesión.
-
-```bl sync  myproject```
-
-Este mandato inicia la sincronización con el proyecto <code>my pro ject</code>, cuyo nombre contiene espacios, por lo que se debe indicar entre comillas:
-
-```bl sync “my pro ject”```
-
-Este mandato inicia la sincronización del proyecto <code>myproject</code> con el directorio myfolder:
-
-```bl sync myproject –d  myfolder```
-
-## create
+Este mandato empieza la sincronización y es equivalente a `bl sync “alias | myproject”` si el propietario del proyecto es el usuario que ha iniciado sesión. 
 
 ```
-bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync  myproject
 ```
+{: pre}
 
-### Finalidad
-<dl>
-<dd>Utilice este mandato desde un directorio que contenga código para crear un proyecto privado, enlácelo a un repositorio de Git y despliegue el contenido del repositorio en {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+Este mandato inicia la sincronización con el proyecto `my pro ject`, cuyo nombre contiene espacios, por lo que se debe indicar entre comillas:
 
-### Opciones
+```
+bl sync “my pro ject”
+```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>Un nombre para su proyecto. Valor predeterminado: nombre del directorio actual.</dd>
-<dt>-r REGION</dt>
-<dd>Una región de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: sur de EE.UU.</dd>
-<dt>-o ORG</dt>
-<dd>Una org de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: la primera org que se encuentre.</dd>
-<dt>-s SPACE</dt>
-<dd>Un espacio de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: el primer espacio que se encuentre.</dd>
-<dt>-g GIT_REPO</dt>
-<dd>Nombre del repositorio que se debe utilizar para los repositorios existentes de Git. Valor predeterminado: origen.</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Vía de acceso completo de un ejecutable de Git. Valor predeterminado: detectado.</dd>
-<dt>--creds</dt>
-<dd>Solicita las credenciales de Git.</dd>
-<dt>--fork</dt>
-<dd>Usar Fork para este directorio y crear un proyecto y repositorio.</dd>
-<dt>--public</dt>
-<dd>Hace que el proyecto nuevo sea público.</dd>
-<dt>--prompt</dt>
-<dd>Solicita todas las opciones necesarias con las elecciones disponibles.</dd>
-</dl>
+Este mandato inicia la sincronización del proyecto `myproject` con el directorio `myfolder`:
 
-### Ejemplos
+```
+bl sync myproject –d  myfolder
+```
+{: pre}
+
+## Create
+{: bl_create}
+
+```
+bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+{: pre}
+
+**Finalidad**
+
+Utilice este mandato desde un directorio que contenga código para crear un proyecto privado, enlácelo a un repositorio de Git y despliegue el contenido del repositorio en {{site.data.keyword.Bluemix_notm}}.
+
+**Opciones**
+
+-n *PROJECT_NAME*: Un nombre para su proyecto. Valor predeterminado: nombre del directorio actual.
+
+-r *REGION*: Una región de {{site.data.keyword.Bluemix_notm}}. Vaor predeterminado: EE. UU. sur.
+
+-o *ORG*: Una organización de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: la primera org que se encuentre.
+
+-s *SPACE*: Un espacio de {{site.data.keyword.Bluemix_notm}}. Valor predeterminado: el primer espacio que se encuentre.
+
+-g *GIT_REPO*: Nombre del repositorio que se debe utilizar para los repositorios existentes de Git. Valor predeterminado: origen.
+
+-e *GIT_EXE*: Vía de acceso completo de un ejecutable de Git. Valor predeterminado: detectado.
+
+*--creds*: Solicita las credenciales de Git. 
+
+*--fork*: Usar Fork para este directorio y crear un proyecto y repositorio. 
+
+*--public*: Hace que el proyecto nuevo sea público. 
+
+*--prompt*: Solicita todas las opciones necesarias con las elecciones disponibles. 
+
+**Ejemplos**
 
 Este mandato inicia del proceso de creación de un proyecto privado y solicita un nombre de proyecto a utilizar.
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
-Este mandato crea un proyecto público denominado <code>myNewProject</code>.
-
-```bl create -n myNewProject --public```
-
-## status
+Este mandato crea un proyecto público denominado `myNewProject`.
 
 ```
-bl status|ss [ nombreProyecto ]
+bl create -n myNewProject --public
 ```
+{: pre}
 
-### Finalidad
-
-<dl>
-<dd>Utilice este mandato para listar el estado de las aplicaciones que están asociadas con las configuraciones de lanzamiento en el directorio <code>./launchConfigurations</code>.</dd>
-</dl>
-
-###Argumento
-
-<dl>
-<dt>nombreProyecto</dt>
-<dd>El nombre del proyecto con el formato “alias | myproject” o solo myproject, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
-</dl>
-
-### Ejemplos
-
-Este ejemplo muestra el estado de las aplicaciones en ejecución. Si el directorio actual es un destino de sincronización existente, se utiliza el proyecto asociado. Si el directorio no es un destino de sincronización existente, el mandato solicita el <i>nombreProyecto</i>.
-
-````bl status```
-
-Este ejemplo muestra el estado del proyecto myproject, que es equivalente a
-```bl status “alias | myproject”```
-si el propietario del proyecto es el usuario que ha iniciado sesión.
-
-```bl status myproject```
-
-Este ejemplo muestra el estado de la aplicación en ejecución que está asociada con el proyecto <code>my pro ject</code>, cuyo nombre contiene espacios, por lo que se debe indicar entre comillas:
-
-```bl status “my pro ject”```
-
-## start
+## Status
+{: bl_status}
 
 ```
-bl start|st nombreProyecto [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl status | ss [ nombreProyecto ]
 ```
+{: pre}
 
-### Finalidad
+**Finalidad**
 
-<dl>
-<dd>Utilice este mandato para iniciar la instancia de aplicación que se describe en el archivo de manifiesto o lanzamiento. De forma predeterminada, la aplicación se inicia en la modalidad de edición en directo, si el paquete de compilación de la aplicación admite la edición en directo. Una
+Utilice este mandato para listar el estado de las aplicaciones que están asociadas con las configuraciones de lanzamiento en el directorio `./launchConfigurations`.
+
+**Argumento**
+
+*nombreProyecto*: El nombre del proyecto con el formato `“alias | myproject”` o solo `myproject`, si el propietario del proyecto es el usuario que ha iniciado sesión.
+
+**Ejemplos**
+
+Este ejemplo muestra el estado de las aplicaciones en ejecución. Si el directorio actual es un destino de sincronización existente, se utiliza el proyecto asociado. Si el directorio no es un destino de sincronización existente, el mandato solicita el `nombreProyecto`.
+
+``
+bl status
+```
+{: pre}
+
+Este ejemplo muestra el estado del proyecto *myproject* que es equivalente a `bl status “alias | myproject”` si el propietario del proyecto es el usuario que ha iniciado sesión.
+
+
+```
+bl status myproject
+```
+{: pre}
+
+Este ejemplo muestra el estado de la aplicación en ejecución que está asociada con el proyecto `my pro ject`, cuyo nombre contiene espacios, por lo que se debe indicar entre comillas:
+
+```
+bl status “my pro ject”
+```
+{: pre}
+
+## Start
+{: bl_start}
+
+```
+bl start | st nombreProyecto [ -l víaAccesoConfiguraciónLanzamiento ] -m víaAccesoManifiesto ] [ --liveedit ][--noliveedit ] [ --restart ]
+```
+{: pre}
+
+**Finalidad**
+
+Utilice este mandato para iniciar la instancia de aplicación que se describe en el archivo de manifiesto o lanzamiento. De forma predeterminada, la aplicación se inicia en la modalidad de edición en directo, si el paquete de compilación de la aplicación admite la edición en directo. Una
 vez iniciado, se muestran las URL para la aplicación, las herramienta de depuración y el panel de control de
-{{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+{{site.data.keyword.Bluemix_notm}}.
 
-### Argumento
+**Argumento**
 
-<dl>
-<dt>nombreProyecto</dt>
-<dd>El nombre del proyecto con el formato <i>“alias | myproject”</i> o solo <i>myproject</i>, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
-</dl>
+*nombreProyecto*: El nombre del proyecto con el formato *“alias | myproject”* o solo *myproject*, si el propietario del proyecto es el usuario que ha iniciado sesión.
 
-### Opciones
+**Opciones**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>El nombre de la configuración de lanzamiento (por ejemplo, <code>mylaunchconfig</code>), el nombre del archivo (por ejemplo, <code>mylaunchconfig.launch</code>) o una vía de acceso relativa al proyecto del archivo de configuración de lanzamiento (por ejemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-<dt>-m manifestPath</dt>
-<dd>La vía de acceso relativa al proyecto del archivo de manifiesto (por ejemplo,
-<code>manifest.yml</code>).</dd>
-<dt>--liveedit</dt>
-<dd>Inicia la aplicación asociada en modalidad de edición en directo o sale sin errores si el paquete de compilación no admite la modalidad de edición en directo.</dd>
-<dt>--noliveedit</dt>
-<dd>Inicia la aplicación asociada en modalidad normal.</dd>
-<dt>--view</dt>
-<dd>Abre un navegador de la aplicación en ejecución.</dd>
-<dt>--restart</dt>
-<dd>Reinicia una aplicación que ya se está ejecutando en modalidad de edición en directo sin volver a desplegarla.</dd>
-</dl>
+-l *víaAccesoConfiguraciónLanzamiento*: El nombre de la configuración de lanzamiento (por ejemplo, `mylaunchconfig`), el nombre del archivo (por ejemplo, `mylaunchconfig.launch`) o una vía de acceso relativa al proyecto del archivo de configuración de lanzamiento (por ejemplo, `launchConfigurations/mylaunchconf.launch`).
 
-### Ejemplos
+-m *víaAccesoManifiesto*: La vía de acceso relativa al proyecto del archivo de manifiesto (por ejemplo, `manifest.yml`).
 
-Este mandato inicia una instancia de aplicación de <code>myproject</code> asociada con el archivo de lanzamiento <code>launchConfigurations/my.launch</code>.
+*--liveedit*: Inicia la aplicación asociada en modalidad de edición en directo o sale sin errores si el paquete de compilación no admite la modalidad de edición en directo.
 
-```bl start myproject –l “launchConfigurations/my.launch”```
+*--noliveedit*: Inicia la aplicación asociada en modalidad normal.
 
-Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de lanzamiento <code>launchConfigurations/my.launch</code>. Si el directorio actual no es un destino de sincronización, se muestra un error.
+*--view*: Abre un navegador de la aplicación en ejecución.
 
-```bl start –l “launchConfigurations/my.launch” ```
+*--restart*: Reinicia una aplicación que ya se está ejecutando en modalidad de edición en directo sin volver a desplegarla.
 
-Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de manifiesto <code>manifest.yml</code>. Se utiliza la información especificada en el manifiesto para crear un nuevo archivo de configuración de lanzamiento. El mandato le pedirá la información restante que se necesite y después iniciará la aplicación que se describe en la configuración de lanzamiento:
+**Ejemplos**
 
-```bl start –m “mymanifest.yml” ```
-
-Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de manifiesto <code>manifest.yml</code>, y es equivalente a
-```bl start –m manifest.yml```.
-
-```bl start```
-
-## stop
+Este mandato inicia una instancia de aplicación de `myproject` asociada con el archivo de lanzamiento `launchConfigurations/my.launch`.
 
 ```
-bl stop|sp nombreProyecto [ -l launchConfiguration ]
+bl start myproject –l “launchConfigurations/my.launch”
 ```
+{: pre}
 
-### Finalidad
+Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de lanzamiento `launchConfigurations/my.launch`. Si el directorio actual no es un destino de sincronización, se muestra un error.
 
-<dl>
-<dd>Utilice este mandato para detener la instancia de aplicación que está asociada con el archivo de lanzamiento.</dd>
-</dl>
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
 
-### Argumento
+Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de manifiesto `manifest.yml`. Se utiliza la información especificada en el manifiesto para crear un nuevo archivo de configuración de lanzamiento. El mandato le pedirá la información restante que se necesite y después iniciará la aplicación que se describe en la configuración de lanzamiento:
 
-<dl>
-<dt>nombreProyecto</dt>
-<dd>El nombre del proyecto con el formato “alias | mproject” o solo mproject, si el propietario del proyecto es el usuario que ha iniciado sesión.</dd>
-</dl>
+```
+bl start –m “mymanifest.yml”
+```
+{: pre}
 
-### Opciones
+Este mandato inicia una instancia de aplicación del proyecto que está asociada con el directorio actual con el archivo de manifiesto `manifest.yml`, y es equivalente a `bl start –m manifest.yml`.
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>El nombre de la configuración de lanzamiento (por ejemplo, <code>mylaunchconfig</code>), el nombre del archivo (por ejemplo, <code>mylaunchconfig.launch</code>) o una vía de acceso relativa al proyecto del archivo de configuración de lanzamiento (por ejemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-</dl>
+```
+bl start
+```
+{: pre}
 
-### Ejemplos
+## Stop
+{: bl_stop}
+
+```
+bl stop | sp nombreProyecto [ -l ConfiguraciónLanzamiento ]
+```
+{: pre}
+
+**Finalidad**
+
+Utilice este mandato para detener la instancia de aplicación que está asociada con el archivo de lanzamiento.
+
+**Argumento**
+
+*nombreProyecto*: El nombre del proyecto con el formato *“alias | mproject”* o solo *mproject*, si el propietario del proyecto es el usuario que ha iniciado sesión.
+
+**Opciones**
+
+-l *víaAccesoConfiguraciónLanzamiento*: El nombre de la configuración de lanzamiento (por ejemplo, `mylaunchconfig`), el nombre del archivo (por ejemplo, `mylaunchconfig.launch`) o una vía de acceso relativa al proyecto del archivo de configuración de lanzamiento (por ejemplo, `launchConfigurations/mylaunchconf.launch`).
+
+**Ejemplos**
 
 Este mandato detiene la aplicación si el directorio actual es un destino de sincronización. De lo contrario, finalizará con un error. Si no hay ninguna configuración de lanzamiento, este mandato finalizará con un error. Si hay más de una configuración de lanzamiento, el mandato le pedirá que configuración se debe detener.
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
-Este mandato detiene una instancia de aplicación del proyecto que se está ejecutando con el archivo de lanzamiento <code>mylaunchConfig</code>.
+Este mandato detiene una instancia de aplicación del proyecto que se está ejecutando con el archivo de lanzamiento `mylaunchConfig`.
 
-```bl stop myproject –l “mylaunchConfig” ```
+```
+bl stop myproject –l “mylaunchConfig”
+```
+{: pre}
 
-Este mandato detiene la aplicación si el directorio actual es un destino de sincronización que se ha iniciado con el archivo de lanzamiento <code>launchConfigurations/mylaunchconfig.launch</code>. De lo contrario, finalizará con un error:
+Este mandato detiene la aplicación si el directorio actual es un destino de sincronización que se ha iniciado con el archivo de lanzamiento `launchConfigurations/mylaunchconfig.launch`. De lo contrario, finalizará con un error:
 
-```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
+{: pre}
 
 ># Enlaces relacionados {:class="linklist"}
 >## Guías de aprendizaje y ejemplos {:id="samples"}

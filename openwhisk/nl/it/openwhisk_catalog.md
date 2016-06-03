@@ -18,7 +18,7 @@ copyright:
 
 # Utilizzo di servizi abilitati a {{site.data.keyword.openwhisk_short}} 
 {: #openwhisk_ecosystem}
-*Ultimo aggiornamento: 28 marzo 2016* 
+*Ultimo aggiornamento: 28 marzo 2016*
 
 In {{site.data.keyword.openwhisk}}, un catalogo di pacchetti mette a tua disposizione un modo facile per migliorare la tua applicazione con delle utili funzionalità e di accedere ai servizi interni nell'ecosistema. Sono esempi di servizi esterni con attivazione {{site.data.keyword.openwhisk_short}}: Cloudant, The Weather Company, Slack e GitHub.
 {: shortdesc}
@@ -50,7 +50,7 @@ Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword
 
 2. Assicurati che la CLI {{site.data.keyword.openwhisk_short}} si trovi nello spazio dei nomi corrispondente all'organizzazione e allo spazio {{site.data.keyword.Bluemix_notm}} che hai utilizzato nel passo precedente.
 
-  ```
+```
   wsk property set --namespace my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space
   ```
   {: pre}
@@ -59,35 +59,35 @@ Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword
 
 3. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Cloudant da te creata.
 
-  ```
+```
   wsk package refresh
   ```
   {: pre}
-  ```
+```
   created bindings:
   {{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
-  ```
+```
   {: screen}
 
-  ```
+```
   wsk package list
-  ```
+```
   {: pre}
-  ```
+```
   packages
   /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1 private binding
-  ```
+```
   {: screen}
 
   Dovresti vedere il nome completo del bind di pacchetto che corrisponde alla tua istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
 
 4. Verifica che il bind di pacchetto creato precedentemente sia configurato con il tuo host e le tue credenziali dell'istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
 
-  ```
+```
   wsk package get /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
-  ```
+```
   {: pre}
-  ```
+```
   ok: got package /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1, projecting parameters
   [
       ...
@@ -105,7 +105,7 @@ Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword
       }
       ...
   ]
-  ```
+```
   {: screen}
 
 ### Configurazione di un database Cloudant esternamente a {{site.data.keyword.Bluemix_notm}}
@@ -114,21 +114,21 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 
 1. Crea un bind di pacchetto configurato per il tuo account Cloudant.
 
-  ```
+```
   wsk package bind /whisk.system/cloudant myCloudant -p username 'MIONOMEUTENTE' -p password 'MIAPASSWORD' -p host 'MIOACCOUNTCLOUDANT.cloudant.com'
-  ```
+```
   {: pre}
 
 2. Verifica che il bind di pacchetto esista.
 
-  ```
+```
   wsk package list
-  ```
+```
   {: pre}
-  ```
+```
   packages
   /myNamespace/myCloudant private binding
-  ```
+```
   {: screen}
 
 
@@ -138,20 +138,20 @@ Puoi utilizzare il feed `changes` per configurare un servizio per attivare un tr
 
 1. Crea un trigger con il feed `changes` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
-  ```
+```
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
-  ```
+```
   {: pre}
-  ```
+```
   ok: created trigger feed myCloudantTrigger
-  ```
+```
   {: screen}
 
 2. Esegui il polling per le attivazioni.
 
-  ```
+```
   wsk activation poll
-  ```
+```
   {: pre}
 
 3. Nel tuo dashboard Cloudant, modifica un documento esistente oppure creane uno nuovo.
@@ -164,13 +164,13 @@ Puoi ora creare le regole e associarle alle azioni per reagire agli aggiornament
 
 Il contenuto degli eventi generati dipende dal valore del parametro `includeDocs` quando si crea il trigger. Se è impostato su true, ogni evento di trigger che viene attivato include il documento Cloudant modificato. Considera, ad esempio, il seguente documento modificato:
 
-  ```
+```
   {
     "_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
-  ```
+```
   {: screen}
 
 Il codice in questo esempio genera un evento di trigger con i parametri `_id`, `_rev` e `name` corrispondenti. In effetti, la rappresentazione JSON dell'evento di trigger è identica al documento.
@@ -183,7 +183,7 @@ Altrimenti, se `includeDocs` è false, gli eventi includono i seguenti parametri
 
 La rappresentazione JSON dell'evento di trigger è la seguente:
 
-  ```
+```
   {
       "id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
@@ -193,7 +193,7 @@ La rappresentazione JSON dell'evento di trigger è la seguente:
           }
       ]
   }
-  ```
+```
 
 
 ### Scrittura in un database Cloudant
@@ -202,11 +202,11 @@ Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant d
 
 1. Memorizza un documento utilizzando l'azione `write` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
-  ```
+```
   wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
-  ```
+```
   {: pre}
-  ```
+```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
   response:
   {
@@ -214,7 +214,7 @@ Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant d
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
-  ```
+```
   {: screen}
 
 2. Verifica che il documento esista sfogliando il tuo dashboard Cloudant per individuarlo.
@@ -228,17 +228,17 @@ Puoi utilizzare un'azione per recuperare un documento da un database Cloudant de
 
 1. Recupera un documento utilizzando l'azione `read` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
-  ```
+```
   wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
-  ```
+```
   {: pre}
-  ```
+```
   {
     "_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
-  ```
+```
   {: screen}
 
 
@@ -267,9 +267,9 @@ Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un
 
 Il seguente è un esempio di creazione di un trigger che verrà attivato una volta ogni 20 secondi con i valori `name` e `place` nell'evento di trigger.
 
-  ```
+```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
-  ```
+```
   {: pre}
 
 Ogni evento generato includerà come parametri le proprietà specificate nel valore `trigger_payload`. In questo caso, ogni evento di trigger avrà i parametri `name=Odin` e `place=Asgard`.
@@ -301,19 +301,19 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di successivo o
 
 1. Crea un bind di pacchetto con la tua chiave API.
 
-  ```
+```
   wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
-  ```
+```
   {: pre}
 
 2. Richiama l'azione `forecast` nel tuo bind di pacchetto per ottenere la previsione meteo.
 
-  ```
+```
   wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
   ```
   {: pre}
 
-  ```
+```
   {
       "forecasts": [
           {
@@ -334,7 +334,7 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di successivo o
           ...
       ],
   }
-  ```
+```
   {: screen}
 
 
@@ -367,23 +367,23 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di traduzione d
 
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
-  ```
+```
   wsk package bind /whisk.system/watson myWatson --param username 'MIO_NOMEUTENTE_WATSON' --param password 'MIA_PASSWORD_WATSON'
-  ```
+```
   {: pre}
 
 2. Richiama l'azione `translate` nel tuo bind di pacchetto per tradurre del testo dall'inglese al francese.
 
-  ```
+```
   wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
-  ```
+```
   {: pre}
 
-  ```
+```
   {
       "payload": "Ciel bleu a venir"
   }
-  ```
+```
   {: screen}
 
 
@@ -399,24 +399,24 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di identificazi
 
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
-  ```
+```
   wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
-  ```
+```
   {: pre}
 
 2. Richiama l'azione `languageId` nel tuo bind di pacchetto per identificare la lingua.
 
-  ```
+```
   wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
-  ```
+```
   {: pre}
-  ```
+```
   {
     "payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
-  ```
+```
   {: screen}
 
 
@@ -451,16 +451,16 @@ Il seguente è un esempio di configurazione di Slack, creazione di un bind di pa
 
 2. Crea un bind di pacchetto con le tue credenziali Slack, il canale in cui vuoi pubblicare il messaggio e il nome utente con il quale vuoi farlo.
 
-  ```
+```
   wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
-  ```
+```
   {: pre}
 
 3. Richiama l'azione `post` nel tuo bind di pacchetto per pubblicare un messaggio nel canale Slack.
 
-  ```
+```
   wsk action invoke mySlack/post --blocking --result --param text 'Salve da OpenWhisk!'
-  ```
+```
   {: pre}
 
 
@@ -496,15 +496,15 @@ Il seguente è un esempio di creazione di un trigger che verrà attivato ogni vo
 
 2. Crea un bind di pacchetto configurato per il tuo repository GitHub e con il tuo token di accesso.
 
-  ```
+```
   wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
-  ```
+```
   {: pre}
 
 3. Crea un trigger per il tipo di evento `push` di GitHub utilizzando il tuo feed `myGit/webhook`.
 
-  ```
+```
   wsk trigger create myGitTrigger --feed myGit/webhook --param events push
-  ```
+```
   {: pre}
 

@@ -13,7 +13,7 @@ copyright:
 
 # Utilizzo dell'SDK mobile {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-*Ultimo aggiornamento: 28 marzo 2016* 
+*Ultimo aggiornamento: 28 marzo 2016*
 
 {{site.data.keyword.openwhisk}} fornisce un SDK mobile per dispositivi iOS e watchOS 2 che abilita le applicazioni mobili ad attivare facilmente dei trigger remoti e richiamare azioni remote. Una versione per Android non è attualmente disponibile; gli sviluppatori Android possono utilizzare la API REST {{site.data.keyword.openwhisk}} direttamente.
 {: shortdesc}

@@ -14,7 +14,7 @@ copyright:
 #Monitoramento e criação de log
 {: #monitoringandlogging}
 
-*Última atualização: 27 de janeiro de 2016*
+*Última atualização: 11 de maio de 2016*
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
 {:shortdesc}
@@ -192,7 +192,7 @@ tarefa de preparação. É possível usar esse log para solucionar problemas de 
 </li></ul>
 
 
-**Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](../troubleshoot/debugging.html#debug_runtime).
+**Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](../debug/index.html#debugging-runtime-errors).
 
 
 

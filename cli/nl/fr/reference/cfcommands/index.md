@@ -38,9 +38,9 @@ cf api URLServeurBluemix
 <dl>
 <dt>URLServeurBluemix</dt>
 <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général,
-il s'agit de https://api.{{site.data.keyword.domainname}}. Si vous
-voulez afficher l'adresse URL du noeud final d'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la commande cf
-api.</dd>
+cette adresse URL est https://api.{DomainName}. 
+Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la
+commande cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
 <dt>*--unset*</dt>
@@ -87,7 +87,7 @@ Par exemple, vous pouvez utiliser `cf create-service DataWorks free mon_datawork
 <dl>
 <dt>nom_service</dt>
 <dd>Nom du service.</dd>
-<dt>plan_ service</dt>
+<dt>plan_service</dt>
 <dd>Nom du plan de service.</dd>
 <dt>instance_service</dt>
 <dd>Nom à utiliser pour la nouvelle instance de service que vous créez.</dd>
@@ -169,7 +169,7 @@ cf login
 ```
 Vous pouvez utiliser un ou plusieurs des paramètres suivants lorsque vous émettez la commande cf login :
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>Adresse URL du noeud final d'API de {{site.data.keyword.Bluemix_notm}}. Ce paramètre est facultatif.</dd>
 <dt>*-u*nom_utilisateur</dt>
 <dd>Votre nom d'utilisateur. Ce paramètre est facultatif.</dd>
@@ -224,7 +224,8 @@ cf push nom_app
 <dd>Nom de l'application.</dd>
 <dt>*-b*nom_pack_construction</dt>
 <dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un pack de construction personnalisé ou une adresse URL Git, par exemple
-mon-pack_construction ou https://github.com/heroku/heroku-buildpack-play.git.</dd>
+`mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.
+</dd>
 <dt>*-c*commande_démarrage</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. Par exemple :</dd>
 <dd>```
@@ -333,5 +334,7 @@ cf -v
 ```
 
 # rellinks
+{: #rellinks}
 ## general 
+{: #general}
 * [Fiche de référence rapide - Commandes cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

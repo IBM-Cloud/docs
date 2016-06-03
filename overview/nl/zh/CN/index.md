@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 概述
 {: #overview}
 
-*上次更新时间：2016 年 1 月 18 日*
+*上次更新时间：2016 年 5 月 9 日*
 
 {{site.data.keyword.Bluemix}} 是一种 {{site.data.keyword.IBM}} 开放云平台。通过该平台，移动应用程序和 Web 应用程序开发者可以访问 {{site.data.keyword.IBM_notm}} 软件来执行集成、安全、事务以及其他关键功能，还可以访问业务合作伙伴提供的软件。
 {:shortdesc}
@@ -325,7 +325,11 @@ buildpack 是脚本的集合，用于预编译代码以便在目标 PaaS 上执�
 *表 2. 支持的本地语言和语言代码*
 
 # 相关链接
-## 常规 
+{: #rellinks}
+
+## 相关链接
+{: #general}
+
 * [{{site.data.keyword.Bluemix_notm}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}} 中的新增功能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 已知问题](https://developer.ibm.com/bluemix/support/#issues)

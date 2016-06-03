@@ -14,7 +14,7 @@ copyright:
 #Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-*Letzte Aktualisierung: 27. Januar 2016*
+*Letzte Aktualisierung: 11. Mai 2016*
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
 {:shortdesc}
@@ -182,7 +182,7 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 </li></ul>
 
 
-**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](../troubleshoot/debugging.html#debug_runtime).
+**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](../debug/index.html#debugging-runtime-errors).
 
 
 

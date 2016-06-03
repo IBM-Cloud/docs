@@ -16,7 +16,7 @@ copyright:
 # Übersicht über {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Letzte Aktualisierung: 18. Januar 2016*
+*Letzte Aktualisierung: 9. Mai 2016*
 
 {{site.data.keyword.Bluemix}} ist die offene {{site.data.keyword.IBM}} Cloudplattform, die Entwicklern von mobilen Anwendungen und Webanwendungen Zugriff auf {{site.data.keyword.IBM_notm}} Software für Integration, Sicherheit, Transaktion und andere Schlüsselfunktionen sowie auf Software von Geschäftspartnern zur Verfügung stellt.
 {:shortdesc}
@@ -127,7 +127,7 @@ ist über ein VPN (privates VLAN) oder über eine direkte Netzverbindung mit Ihr
 auf der Welt eingerichtet sein. {{site.data.keyword.IBM_notm}} verwaltet die dedizierte Plattform und dedizierte Services,
 sodass Sie sich auf die Erstellung von angepassten Apps konzentrieren können. Darüber hinaus führt {{site.data.keyword.IBM_notm}} alle
 Wartungsoperationen an dedizierten Instanzen während eines von Ihnen ausgewählten
-Wartungsfensters durch.
+Wartungszeitraums durch.
 
 {{site.data.keyword.IBM_notm}} hat verschiedene Services, die in Ihrer dedizierten Umgebung
 verfügbar sind, Sie können jedoch eine Verbindung zu allen öffentlichen Services herstellen. Alle Laufzeiten sind in der dedizierten Umgebung verfügbar.
@@ -239,8 +239,8 @@ Instanzen der App für den Empfang der Anforderung aus.
 wurde zum Hosten skalierbarer, ausfallsicherer Apps und Anwendungsartefakte
 entworfen, die eine bedarfsorientierte Skalierung ermöglichen und gleichzeitig eine hohe Verfügbarkeit
 sowie eine rasche Wiederherstellbarkeit nach Problemen bieten. {{site.data.keyword.Bluemix_notm}} unterscheidet zwischen
-Komponenten, die den Zustand von Interaktionen überwachen (mit Zustandsüberwachung) und Komponenten,
-die den Zustand von Interaktionen nicht überwachen (ohne Zustandsüberwachung). Diese Unterscheidung
+Komponenten, die den Zustand von Interaktionen verfolgen (mit Zustandsüberwachung) und Komponenten,
+die den Zustand von Interaktionen nicht verfolgen (ohne Zustandsüberwachung). Diese Unterscheidung
 ermöglicht es {{site.data.keyword.Bluemix_notm}}, Apps so flexibel
 wie nötig zu versetzen, um Skalierbarkeit und Ausfallsicherheit zu erreichen.
 
@@ -568,7 +568,11 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 *Tabelle 2. Unterstützte Landessprachen und Sprachencodes*
 
 # Zugehörige Links
-## Allgemein 
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
 * [Voraussetzungen für {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Bekannte Probleme in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)

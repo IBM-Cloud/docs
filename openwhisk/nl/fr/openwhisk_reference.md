@@ -241,7 +241,7 @@ Une action peut être synchrone pour certaines entrées et asynchrone pour d'aut
 {: codeblock}
 
 - Dans ce cas, la fonction `main` doit renvoyer `whisk.async()`. Lorsque le résultat de l'activation est
-disponible, la fonction `whisk.done()` devrait être appelée en lui transmettant le résultat sous forme d'objet JSON. Il s'agit d'une activation
+disponible, la fonction `whisk.done()` doit être appelée avec le résultat transmis sous forme d'objet JSON. Il s'agit d'une activation
 *asynchrone*.
 
 Que l'activation soit synchrone ou asynchrone, l'appel de l'action peut être bloquant ou non bloquant.

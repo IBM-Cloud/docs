@@ -8,7 +8,7 @@ copyright:
 
 {:shortdesc: .shortdesc} 
 
-# Mobile
+# Móvel
 {: #mobile}
 
 *Última atualização: 9 de dezembro de 2015*

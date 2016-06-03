@@ -33,7 +33,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。通常這個 URL 是 https://api.{{site.data.keyword.domainname}}。
+<dd>Bluemix API 端點的 URL，您在連接至 {{site.data.keyword.Bluemix_notm}} 時必須予以指定。這個 URL 通常是 https://api.{DomainName}。
 如果您要顯示目前所使用 API 端點的 URL，則不需要針對 cf api 指令指定此參數。</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>停用 SSL 驗證處理程序。使用此參數可能導致安全問題。</dd>
@@ -157,7 +157,7 @@ cf login
 ```
 您可以在發出 cf login 指令時使用下列一個以上參數：
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} API 端點的 URL。這是選用性的參數。</dd>
 <dt>*-u* user_name</dt>
 <dd>您的使用者名稱。這是選用性的參數。</dd>
@@ -205,7 +205,7 @@ cf push appname
 <dt>appname</dt>
 <dd>應用程式的名稱。</dd>
 <dt>*-b* buildpack_name</dt>
-<dd>建置套件的名稱。buildpack_name 可以是依名稱或 Git URL 的自訂建置套件，例如，my-buildpack 或 https://github.com/heroku/heroku-buildpack-play.git。</dd>
+<dd>建置套件的名稱。buildpack_name 可以是依名稱或 Git URL 的自訂建置套件，例如，`my-buildpack` 或 `https://github.com/heroku/heroku-buildpack-play.git`。</dd>
 <dt>*-c* start_command</dt>
 <dd>應用程式的啟動指令。若要使用預設的啟動指令，請針對這個選項指定 null 值。例如：</dd>
 <dd>```
@@ -310,5 +310,7 @@ cf -v
 ```
 
 # 相關鏈結
+{: #rellinks}
 ## 一般 
+{: #general}
 * [快速參照卡 - cf 指令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

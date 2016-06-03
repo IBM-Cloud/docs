@@ -27,6 +27,9 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
+				"name": "Encadenamiento de bloques",
+				"href": "services/blockchain/index.html"
+			}, {
 				"name": "Red de entrega de contenido (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
@@ -267,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Fundación Internet of Things (Internet de las cosas)",
+				"name": "Plataforma Internet de las cosas",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",

@@ -6,7 +6,7 @@
 	}, {
 		"id": "Catégories",
 		"items": [{
-			"title": "Traitement",
+			"title": "Calcul ",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
@@ -27,6 +27,9 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
+				"name": "Blockchain",
+				"href": "services/blockchain/index.html"
+			}, {
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
@@ -267,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things Foundation",
+				"name": "Internet of Things Platform",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",

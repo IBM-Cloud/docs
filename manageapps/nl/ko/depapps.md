@@ -14,7 +14,7 @@ copyright:
 #앱 배치
 {: #deployingapps}
 
-*마지막 업데이트 날짜: 2016년 3월 17일*
+*마지막 업데이트 날짜: 2016년 5월 9일*
 
 명령행 인터페이스 및 IDE(Integrated Development Environment) 등의 다양한 방법을
 사용하여 {{site.data.keyword.Bluemix}}에
@@ -86,7 +86,7 @@ Cloud Foundry를 기반으로 빌드되었으므로 명령이 기본적으로 �
   
   Liberty
 빌드팩에 대한 자세한 정보는 [Liberty
-for Java](../starters/liberty/index.html#liberty)를 참조하십시오.
+for Java](../runtimes/liberty/index.html)를 참조하십시오.
   
   * Java Tomcat 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 다음 명령을 사용하십시오.
   
@@ -334,14 +334,14 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -535,7 +535,11 @@ tmp/
 ```
 
 # 관련 링크
-## 일반 
+{: #rellinks}
+
+## 관련 링크
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

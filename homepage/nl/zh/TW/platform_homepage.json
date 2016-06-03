@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "文件首頁平台區段",
+	"items": [{
+		"title": "CLI 及開發工具",
+		"description": "存取工具，例如統一指令行介面和 CLI 外掛程式。",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "管理應用程式",
+		"description": "使用 Bluemix 使用者介面中的儀表板來檢視及管理應用程式與服務。",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "帳戶管理",
+		"description": "管理組織和空間（包括使用者存取）。",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "監視及記載",
+		"description": "遵循應用程式使用及資料流程，以深入瞭解部署。",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "定價",
+		"description": "利用計算機來預估成本，以及利用「使用情形詳細資料」視圖來查看實際成本。",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "疑難排解",
+		"description": "如果您遇到平台問題，請使用這些疑難排解作業來判定要採取的步驟。",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "平台的安全",
+		"description": "瞭解 Bluemix 如何提供功能安全、基礎架構安全、作業安全及實體安全。",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "混合",
+		"description": "以服務形式跨公用、專用及內部部署部署模型交付。",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

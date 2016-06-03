@@ -14,7 +14,7 @@ copyright:
 #Surveillance et journalisation
 {: #monitoringandlogging}
 
-*Dernière mise à jour : 27 janvier 2016*
+*Dernière mise à jour : 11 mai 2016*
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
 comprendre votre déploiement. De plus, vous pouvez réduire le temps et l'effort qui sont requis pour identifier les problèmes et les résoudre.
@@ -208,7 +208,7 @@ identifier les problèmes liés à la constitution.</p>
 </li></ul>
 
 
-**Remarque :** pour des informations sur l'activation de la journalisation des applications, voir [Débogage d'erreurs d'exécution](../troubleshoot/debugging.html#debug_runtime).
+**Remarque :** pour des informations sur l'activation de la journalisation des applications, voir [Débogage d'erreurs d'exécution](../debug/index.html#debugging-runtime-errors).
 
 
 

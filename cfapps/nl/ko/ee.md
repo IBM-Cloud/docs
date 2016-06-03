@@ -53,11 +53,11 @@ copyright:
 
 이 시나리오에서는 Node.js를 사용하여 웹 앱을 개발하고자 합니다.
 현재 미국에 거주하고 있으며 대부분의 앱 사용자도 미국에 있다고 가정합니다. 
-네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
-  1. **앱 작성**을 클릭하십시오.
-  2. **웹**을 선택하십시오.
-  3. 웹 앱에 대해 스타터 SDK for Node.js를 선택하고 **계속**을 클릭하십시오.
-  4. 앱에 대한 고유 이름(예: TestNode)을 입력하고 **완료**를 클릭하십시오. 앱 이름은 전체 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다. 
+네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인한 후 오른쪽 상단에서 계정 이름을 클릭하고 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
+
+  1. 더하기 단추를 클릭하십시오.
+  2. **계산**>**CF 애플리케이션**>**SDK for Node.js**를 선택하십시오.
+  3. 앱의 고유 이름(예: TestNode)을 입력하고 **작성**을 클릭하십시오. 앱 이름은 전체 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다. 
   
 이제 **코딩 시작** 지시사항이 표시됩니다.
 지시사항에 따라 TestNode의 스타터 코드를 다운로드하고 이를 수정 및 배치할 수 있습니다.
@@ -143,12 +143,12 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
 사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을
 지정해야 합니다.
 **cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은
-지역의 URL입니다. 미국 남부 지역의 URL은 stage1.ng.bluemix.net입니다. 다음 명령을 입력하여
+지역의 URL입니다. 미국 남부 지역의 URL은 {{Domain}}입니다. 다음 명령을 입력하여
 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
-  ```
+  cf api https://api.ng.bluemix.net
+	 ```
   
   기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
 {{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에
@@ -170,7 +170,7 @@ VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애
   **cf push** 명령에 대한 자세한 정보는 앱 업로드를 참조하십시오.
   
   6. 이제 브라우저에서 다음 앱 URL을 입력하여 앱에 액세스할 수 있습니다.```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 또한 Eclipse 도구와 같은 다른 앱 빌드 도구를 선택할 수도 있습니다. 자세한 정보는
@@ -233,7 +233,8 @@ VCAP_SERVICES 환경 변수가 업데이트되지 않습니다. 애플리케이�
   <dt>url</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
   
-  예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다. ```
+  예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다.
+```
   if (process.env.VCAP_SERVICES) {
 
         var env = JSON.parse(process.env.VCAP_SERVICES);

@@ -14,7 +14,7 @@ copyright:
 #保护应用程序
 {: #securingapps}
 
-*上次更新时间：2016 年 3 月 30 日*
+*上次更新时间：2016 年 5 月 9 日*
 
 您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。
 {:shortdesc}
@@ -42,7 +42,7 @@ CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签�
   
 **组织**
 
-  在您的区域合法注册的企业或公司的全名或个人名称。对于公司，请确保包含注册后缀，例如，Ltd.、Inc. 或 NV。
+  在您的区域合法注册的企业或公司的全名或个人姓名。对于公司，请确保包含注册后缀，例如，Ltd.、Inc. 或 NV。
   
 **组织单元**
 
@@ -72,15 +72,12 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 在上传证书之前，必须创建证书签名请求。请参阅[创建证书签名请求](#ssl_csr)。
 
-要正确提供 SSL 证书，在创建定制域以提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径时，必须使用以下 IP 地址来配置 DNS 服务器。
+使用定制域时，要提供 SSL 证书，请使用以下区域端点来提供在 Bluemix 中分配给您组织的 URL 路径：
 
-* US-SOUTH：75.126.81.68
-* EU-GB：5.10.124.142
-* AU-SYD：168.1.35.166
+  * US-South：secure.us-south.bluemix.net 
+  * EU-GB：secure.eu-gb.bluemix.net
+  * AU-SYD：secure.au-syd.bluemix.net 
 
-您用于专用环境的 IP 地址会有所不同。联系您的 IBM 代表以获取专用环境的 IP 地址。
-
-有关创建定制域的更多信息，请参阅[创建和使用定制域](updapps.html#domain)。
 
 要上传应用程序的证书，请执行以下操作：
 
@@ -95,6 +92,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
   **证书**
     
     一种数字文档，用于将公用密钥绑定到证书所有者的标识，从而使证书所有者得到认证。证书由认证中心发放并由该认证中心进行数字签名。
+    
+    证书通常由认证中心发放并签名。但是，对于测试和开发用途，您可以使用自签名证书。
     
     {{site.data.keyword.Bluemix_notm}} 中支持以下类型的证书：
 
