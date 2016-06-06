@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*Last updated: 23 May 2016*
+*Last updated: 6 June 2016*
 {: .last-updated}
 
 
@@ -53,17 +53,21 @@ There are optional components that are available for you to purchase to scale an
 | **Name**            | **Description** |      
 |-------------------|-------------------|
 |Dedicated runtimes 16 GB capacity increase  | An extension of the runtimes environment to provide an extra 16 GB of runtime capacity. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} within the dedicated environment with a capacity of 5 million API Calls a month targeted towards departmental API projects. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Professional environment to provide additional capacity of 100 thousand API Calls a month. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} within the dedicated environment with a capacity of 25 million API Calls a month targeted towards enterprise wide API projects. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Enterprise environment to provide additional capacity of 100 thousand API Calls a month. |
+|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | An environment that permits running a private version of {{site.data.keyword.APIM}} within the dedicated environment with a capacity of 1,000 API calls per second. |
+|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | An environment that permits execution of a private version of IBM API Management for Bluemix within the dedicated environment with a capacity of 500 API calls per second.  |
 |Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Includes running a private version of the {{site.data.keyword.cloudantfull}} within the dedicated environment with a design capacity of 1.6 terabytes.  |
 |Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | An environment that permits deploying and running {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} instances up to a cumulative capacity of 50 GB. |
-|Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 1 Gbps. |
-|Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 10 Gbps. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | One database per service instance on a dedicated server with 64 GB RAM, 16 vCPUs. Recommended for up to 1 TB of pre-load data, based on typical compression.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 cores. Recommended for up to 4 TB of pre-load data, based on typical compression. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 Cores. Recommended for up to 12 TB of pre-load data, based on typical compression. This is a storage dense plan suitable for environments where data volumes are higher and queries do not need to run at in-memory speeds. |
-|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | An environment that permits running a private version of {{site.data.keyword.APIM}} within the dedicated environment with a capacity of 1,000 API calls per second. |
-|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | An environment that permits execution of a private version of IBM API Management for Bluemix within the dedicated environment with a capacity of 500 API calls per second.  |
+|Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 1 Gbps. |
+|Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate SoftLayer network point of presence designed for data transfers of up to 10 Gbps. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | An environment that permits deploying and running  community services up to a total of 50 instances for each community service.  |
-|IBM Bluemix Dedicated Hardware Firewall - High Availability | A redundant 1 Gbps hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated Hardware Firewall - High Availability | A redundant 1 Gbps hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
 |Dedicated 1 Gbps Vyatta VPN configured for high availability  | A 1 Gbps Vyatta VPN configured for high availability for use by the dedicated environment. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | An environment that permits deployment and execution of {{site.data.keyword.mobilepushshort}} instances with ability to accept 300 requests per second. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
