@@ -11,7 +11,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Last updated: 09 May 2016*
+*Last updated: 04 June 2016*
 
 The {{site.data.keyword.vpn_full}} service for Bluemix&reg; is available to securely access IBM Containers (Docker containers) inside the IBM Bluemix cloud environment. You can use the IBM Bluemix cloud environment as an extension of your corporate data center. You can also connect with the SoftLayer servers using the IBM VPN service.
 {:shortdesc}
@@ -35,7 +35,7 @@ To get started, select the **Virtual Private Network** service instance tile on 
   1. Select **ADD NEW**.  
   2. Specify the following details:
 	* **Name**: Name of the IKE policy
-	* **Authorization Algorithm**: sha1; cannot be changed  
+	* **Authorization Algorithm**: sha1 or sha256  
 	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default), aes-192, aes-256, 3des
 	* **Key Lifetime**: Lifetime value (in seconds) of the IKE security association. Range: 60-86400. Default Value: 86400
 	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2, Group5, Group14. Default value: Group2
@@ -47,7 +47,7 @@ To get started, select the **Virtual Private Network** service instance tile on 
   1. Select **ADD NEW**.  
   2. Specify the following details:
   	* **Name**: Name of the IPSec policy  
-  	* **Authorization Algorithm**: sha1; cannot be changed  
+  	* **Authorization Algorithm**: sha1 or sha256  
   	* **Encryption Algorithm**: Select from drop-down. Values: aes-128 (default), aes-192, aes-256, 3des
   	* **Key Lifetime**: Lifetime value (in seconds) of the security association. Range: 60-86400. Default Value: 3600
   	* **PFS**: Diffie-Hellman (DH) group identifier. Values: Group2, Group5, Group14. Default value: Group2
@@ -58,34 +58,35 @@ To get started, select the **Virtual Private Network** service instance tile on 
 4. Provide the details to establish a connection between your data center or SoftLayer server VPN gateway, and the IBM VPN gateway.  
 {: #site}  
 
-  1. Select the **Gateway Appliance** tab.
-  2. Select **Create Connection** in the **Site Connections** section.
-  3. Specify the following site connection details:  
+  1. Select **Create Connection** in the **Site Connections** section.
+  2. Specify the following site connection details:  
   	* **Name**: Name of the connection  
   	* **Description**: Description of the connection (optional)  
-  	* **Preshared Key String**: Preshared (secret) key to be used for authentication
+  	* **Preshared Key String**: Preshared (secret) key to be used for authentication. Select **SHOW** to view the key in plain text.
   	* **Admin State**: Status of the VPN connection. Select from drop-down: UP or DOWN. Default value: UP  
+  	**Note:** You must do the initial configuration with the admin state as ***UP*** and save it. Later, you can change the admin state to ***DOWN***, if required.  
   	* **Customer Gateway IP**: Remote endpoint IP address of the VPN tunnel  
   	* **Customer Subnet**: Remote subnet address in CIDR format. Select the plus sign to add another subnet.
-  4. (Optional) Configure the following **Advanced Settings** parameters:  
+  3. (Optional) Configure the following **Advanced Settings** parameters:  
   	* **IKE Policy**: Select the IKE policy.  
   	* **Keep Alive Interval**: Keepalive interval in seconds. Send keepalive messages at the configured interval to check liveliness of the peer. Default value: 15. Range: 5-86399
   	* **Action on dead peer**: Action to be taken when the peer is detected as dead.  
     	Values: 
-  		* hold (default value): the security association (SA) is put on hold 
-  		* clear: the SA is deleted
-  		* disabled: the SA is disabled
-  		* restart: the SA is renegotiated
-  		* restart-by-peer: all SAs with the dead peer are renegotiated  
+  		* hold (default value): the security association (SA) is put on hold.  
+  		**Note:** To resume the SA negotiation after recovery of the dead peer, set the connection admin state to **DOWN**, save it, and then reset it to **UP**.
+  		* clear: the SA is deleted immediately
+  		* disabled: the SA is disabled until the timeout value expires
+  		* restart: the SA is put on hold until the timeout value expires, after which the SA is renegotiated
+  		* restart-by-peer: the SA is put on hold and the connection information is retained; a new connection is established after the peer initiates a connection request  
   	* **IPSec Policy**: Select the IPSec policy.
   	* **Keep Alive Timeout**: Timeout value in seconds after which the session is terminated. Default value: 120. Range: 6-86400. The keep alive timeout value must be higher than the keep alive interval value.
-  5. Select **SAVE**.
+  4. Select **SAVE**.
 
-  **Note:** When the connection is being established, the connection status displays as ***pending create***. When you see this status, refresh the screen a few times to see the connection active status.
+  **Note:** The connection can take up to a minute to activate. During this time, the GUI does auto refresh to reflect the most recent status. If the connection is not active even after a minute, manually refresh the screen to see the status. If the status is still inactive, verify the connection information.
 
 **Important:** If you are using a web application, you must bind the web application to the Docker container you are using. This binding is required for the traffic to pass through the IPSec VPN tunnel.
 
-**Important:** The IBM VPN service currently operates in responder mode. To initiate the VPN connection, a data packet must flow out from the IBM VPN gateway to your on-premises data center or SoftLayer server. Once the VPN connection is established, traffic can flow in either direction between endpoints of the VPN connection.
+**Important:** The IBM VPN service currently operates in initiator mode. To initiate the VPN connection, a data packet must flow out from the IBM VPN gateway to your on-premises data center or SoftLayer server. Once the VPN connection is established, traffic can flow in either direction between endpoints of the VPN connection.
 
  
 # rellinks
@@ -103,6 +104,3 @@ To get started, select the **Virtual Private Network** service instance tile on 
 ## general  
 {: #general}  
 * [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
-* [IBM VPN FAQs](vpn_faq.html#vpn_faq){: new_window}
-* [IBM Bluemix Pricing Sheet](https://console.{DomainName}/pricing/){: new_window}
-* [IBM Bluemix Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs)

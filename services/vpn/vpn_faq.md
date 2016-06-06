@@ -11,7 +11,7 @@ copyright:
 
 # {{site.data.keyword.vpn_short}} FAQs
 {: #vpn_faq}
-*Last updated: 09 May 2016*
+*Last updated: 06 June 2016*
 
 Following are some frequently asked questions.
 {:shortdesc}
@@ -57,4 +57,15 @@ Following are some frequently asked questions.
 
 8. Can I access the container and container group using their private IP addresses?
 
-	The container and container group private subnets are preselected so that you can access them over the VPN connection.
+	The container and container group private subnets are preselected so that you can access them over the VPN connection.  
+
+9. How do I change the security setting of an existing, in-use VPN policy?
+
+	If your current VPN security policy uses SHA1 and you want to migrate to SHA256, you can do so as given in the following steps.  
+	1. Open the IBM VPN service dashboard and complete the following tasks.
+		1. Create an IKE policy with SHA256 as the authorization algorithm.
+		2. Create an IPSec policy with SHA256 as the authorization algorithm.
+		3. Delete the existing connection that uses SHA1 as the authorization algorithm for IKE and IPSec.
+		4. Create a connection with the IKE and IPSec policies that you created with SHA256 as the authorization algorithm.
+		5. Complete the remaining configurations to enable the VPN connection. See the [Getting Started](https://console.stage1.ng.bluemix.net/docs/services/vpn/index.html) page.
+	2. Configure or update the remote end (your on-premises VPN gateway) IKE and IPSec policies with SHA256. Restart the IPSec connection.
