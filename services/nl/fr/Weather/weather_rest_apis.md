@@ -1,7 +1,7 @@
 ---
 
-copyright :
-   years: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -15,8 +15,7 @@ copyright :
 
 *Dernière mise à jour : 6 avril 2016*
 
-Vous pouvez utiliser les [API REST d'Insights for Weather](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques.
-Vous pouvez tester le fonctionnement des API et visualiser immédiatement les résultats pour accélérer la génération de vos applications. 
+Vous pouvez utiliser les [API REST d'Insights for Weather](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques. Vous pouvez tester le fonctionnement des API et visualiser immédiatement les résultats pour accélérer la génération de vos applications.
 
 Dans la documentation de référence, cliquez sur **List Operations** pour afficher le détail de chaque opération.
 Lorsque vous entrez des paramètres et que vous cliquez sur **Try it out!**, vous pouvez être invité à indiquer vos données d'identification.
@@ -32,8 +31,8 @@ Vous pouvez utiliser les API suivantes.
 
 |**API**                                  |**Description**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v2/forecast/daily/10day`           |Renvoie les prévisions météorologiques relatives à la journée en cours et aux neufs prochains jours pour une géolocalisation. Chaque prévision jour par jour peut contenir une prévision diurne et une prévision nocturne. Ces segments sont des objets distincts dans les réponses JSON. Les données de prévision diurne de la prévision jour par jour ne sont plus disponibles après 15 heures (heure locale). A partir de 15 heures (heure locale), votre application ne doit plus afficher la prévision jour par jour. |
-|`GET /v2/forecast/hourly/24hour`         |Renvoie une prévision heure par heure relative à la journée en cours et aux neufs prochains jours pour une géolocalisation. Les données heure par heure comprennent jusqu'à 24 heures de prévisions pour un lieu donné. Vous devez supprimer toutes les précédentes prévisions heure par heure pour un lieu lorsque vous en recevez de nouvelles. |
+|`GET /v2/forecast/daily/10day`           |Renvoie les prévisions météorologiques relatives à la journée en cours et aux neufs prochains jours pour une géolocalisation. Chaque prévision jour par jour peut contenir une prévision diurne et une prévision nocturne. Ces segments sont des objets distincts dans les réponses JSON. Les données de prévision diurne de la prévision jour par jour ne sont plus disponibles après 15 heures (heure locale). A partir de 15 heures (heure locale), votre application ne doit plus afficher la prévision jour par jour.|
+|`GET /v2/forecast/hourly/24hour`         |Renvoie une prévision heure par heure relative à la journée en cours et aux neufs prochains jours pour une géolocalisation. Les données heure par heure comprennent jusqu'à 24 heures de prévisions pour un lieu donné. Vous devez supprimer toutes les précédentes prévisions heure par heure pour un lieu lorsque vous en recevez de nouvelles.|
 |`GET /v2/observations/current`           |Renvoie les conditions météorologiques en cours pour une géolocalisation. Ces observations récentes sont conservées dans la base de données pendant 10 minutes au maximum sur certaines stations d'observation et 24 heures d'observations par station. Les données d'observations sont continuellement mises à jour et remplacées selon la méthode premier entré premier sorti (rotation des données avec l'insertion des dernières observations et le déplacement des observations les plus anciennes dans les archives) sur la base de leur horodatage.|
 |`GET /v2/observations/timeseries/24hour` |Renvoie les observations en cours, et jusqu'à 24 heures d'observations passées, à partir de la date du jour et de l'heure en cours, pour une géolocalisation. Les observations rassemblent des données collectées par des stations d'observation réparties dans le monde et les observations en cours.|
 *Tableau 1. Récapitulatif des API D'Insights for Weather*
@@ -52,7 +51,8 @@ d'observations est déterminé par leur type.
 ## Construction de l'URL
 {: #url_construction}
 
-Les API d'Insights for Weather utilisent une structure d'URL et des paramètres de requête communs pour demander et filtrer les données météorologiques. Les URL transmises aux API d'Insights for Weather ont le format suivant : 
+Les API d'Insights for Weather utilisent une structure d'URL et des paramètres de requête communs pour demander et filtrer les données météorologiques.
+Les URL transmises aux API d'Insights for Weather ont le format suivant :
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format type}&geocode={latitude,longitude}&language={language code}&units={units code}

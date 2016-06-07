@@ -13,7 +13,7 @@ copyright:
 # Acerca de Insights for Weather
 {: #about_weather}
 
-*Última actualización: 06 de abril de 2016*
+*Última actualización: 19 de mayo de 2016*
 
 Utilice {{site.data.keyword.weatherfull}} para incorporar datos
 meteorológicos de The Weather Company (TWC) en las aplicaciones
@@ -25,7 +25,7 @@ The Weather Company es el proveedor
 más completo de datos meteorológicos históricos y previstos. Se capturan datos para todas las formas de tiempo meteorológico,
 incluyendo precipitaciones, presión barométrica, viento y tormentas eléctricas.
 
-Puede utilizar las API REST para recuperar la información siguiente: 
+Puede utilizar las API REST para recuperar la información siguiente:
 
 * Una previsión meteorológica por hora para las próximas 24 horas que se inicie a partir del momento actual
 para un geolocalización especificada.
@@ -43,7 +43,7 @@ hasta e incluyendo las 24 horas anteriores.
 
 Para obtener más información sobre las frases y los iconos de meteorología de The Weather Company,
 consulte [Código de icono, frases e imágenes](https://docs.google.com/document/d/1MZwWYqki8Ee-V7c7InBuA5CDVkjb3XJgpc39hI9FsI0/edit?pli=1){:new_window}.
-También puede [descargar un conjunto de iconos](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} para utilizarlos en la aplicación. 
+También puede [descargar un conjunto de iconos](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} para utilizarlos en la aplicación.
 
 ## Modelo de precios
 {: #pricing_models}
@@ -78,9 +78,6 @@ en [Stack Overflow](http://stackoverflow.com/search?q=weather+bluemix){:new_wind
 
 Si tiene algún problema con el servicio, utilice el [foro de IBM developerWorks Answers](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
 Incluya las etiquetas
-**insights-weather** y **bluemix** para mejorar la
-experiencia y permitir que IBM le proporcione un soporte mejor.
+**insights-weather** y **bluemix** para permitir que IBM le proporcione un soporte mejor. 
 
-También puede ver el [estado de la plataforma Bluemix](https://developer.ibm.com/bluemix/support/#status){:new_window}
-o [abrir una incidencia de soporte](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-Para obtener más información, consulte [Resolución de problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Para obtener información sobre la resolución de problemas con Bluemix, consulte [Resolución de problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}. Para obtener detalles sobre la búsqueda de información y la realización de preguntas a través de foros y sobre cómo contactar con el soporte, consulte [Obtención de soporte al cliente](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.

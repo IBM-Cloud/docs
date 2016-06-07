@@ -1,7 +1,7 @@
 ---
 
-copyright :
-   years: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -13,7 +13,7 @@ copyright :
 # A propos d'Insights for Weather
 {: #about_weather}
 
-*Dernière mise à jour : 6 avril 2016*
+*Dernière mise à jour : 19 mai 2016*
 
 A l'aide d'{{site.data.keyword.weatherfull}}, incorporez les données météorologiques de The Weather Company (TWC) à vos applications {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -33,7 +33,7 @@ la pression barométrique, le point de rosée, la visibilité et le rayonnement 
 * Les données météorologiques observées pour une géolocalisation et une période données. Ces données proviennent de stations d'observation physiques. Cette API revoie les observations météorologiques en cours et celles des 24 dernières heures au maximum.
 
 Pour plus d'informations sur les descriptions et les icônes utilisées par The Weather Company, voir [Icon Code, Phrases and Images](https://docs.google.com/document/d/1MZwWYqki8Ee-V7c7InBuA5CDVkjb3XJgpc39hI9FsI0/edit?pli=1){:new_window}.
-Vous pouvez aussi [télécharger un ensemble d'icônes](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} que vous pouvez utiliser dans votre application. 
+Vous pouvez aussi [télécharger un ensemble d'icônes](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} que vous pouvez utiliser dans votre application.
 
 ## Modèle de tarification
 {: #pricing_models}
@@ -50,8 +50,7 @@ est effectué n'aboutit pas tant que votre application n'est pas autorisée à d
 
 Par exemple, si vous utilisez le forfait
 de base, votre application peut effectuer 500 appels d'API par minute même si elle dépasse la limite définie par le forfait, mais l'appel d'API suivant
-n'est autorisé qu'au bout de cinq minutes. Par conséquent, un utilisateur pourra constater un délai lors de l'actualisation des données météorologiques dans votre application. Veillez à développer votre application de sorte qu'elle gère ces limites et qu'elle n'effectue pas un nombre trop élevé d'appels d'API. Vous pouvez surveiller l'utilisation des appels d'API de votre application.
-Vous pouvez déterminer si votre application atteint les
+n'est autorisé qu'au bout de cinq minutes. Par conséquent, un utilisateur pourra constater un délai lors de l'actualisation des données météorologiques dans votre application. Veillez à développer votre application de sorte qu'elle gère ces limites et qu'elle n'effectue pas un nombre trop élevé d'appels d'API. Vous pouvez surveiller l'utilisation des appels d'API de votre application. Vous pouvez déterminer si votre application atteint les
 limites du forfait sélectionné en vérifiant le nombre d'éléments qui sont renvoyés par l'appel d'API.
 
 ## Commentaires et support
@@ -62,7 +61,7 @@ posez-la sur [Stack Overflow](http://stackoverflow.com/search?q=weather+bluemix)
 
 Si vous rencontrez des problèmes avec le service, utilisez le forum [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
 Utilisez les étiquettes
-**insights-weather** et **bluemix** pour améliorer votre expérience et permettre à IBM de mieux vous aider.
+**insights-weather** et **bluemix** pour permettre à IBM de mieux vous aider.
 
-Vous pouvez aussi afficher le [statu de la plateforme Bluemix](https://developer.ibm.com/bluemix/support/#status){:new_window} ou [ouvrir un ticket de support](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-Pour plus d'informations, voir [Identification et résolution des problèmes](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Pour plus d'informations sur le traitement des incidents liés à Bluemix, voir [Traitement des incidents](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Pour plus de détails sur la recherche d'informations et la procédure pour poser des questions sur les forums, ainsi que sur la façon dont vous pouvez contacter le support, voir [Support client](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.

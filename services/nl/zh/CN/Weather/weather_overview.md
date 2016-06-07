@@ -13,7 +13,7 @@ copyright:
 # 关于 Insights for Weather
 {: #about_weather}
 
-*上次更新时间：2016 年 4 月 6 日*
+*上次更新时间：2016 年 5 月 19 日*
 
 使用 {{site.data.keyword.weatherfull}} 可将来自 The Weather Company (TWC) 的数据合并到 {{site.data.keyword.Bluemix}} 应用程序中。
 {:shortdesc}
@@ -45,6 +45,7 @@ copyright:
 
 如果对使用 Insights for Weather 创建应用程序有技术方面的问题，请在 [Stack Overflow](http://stackoverflow.com/search?q=weather+bluemix){:new_window} 上发布您的问题，并使用 **bluemix** 和 **weather** 标记您的问题。
 
-如果使用此服务时遇到任何问题，请使用 [IBM developerWorks Answers 论坛](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}。请包含 **insights-weather** 和 **bluemix** 标记以改善您的体验，并且 IBM 可以更好地为您提供支持。
+如果使用此服务时遇到任何问题，请使用 [IBM developerWorks Answers 论坛](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}。请包含 **insights-weather** 和 **bluemix** 标记以允许 IBM 可以更好地为您提供支持。
 
-您还可以查看 [Bluemix 平台状态](https://developer.ibm.com/bluemix/support/#status){:new_window}或[打开支持凭单](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}。有关更多信息，请参阅[故障诊断](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。
+有关对 Bluemix 问题进行故障诊断的相关信息，请参阅[故障诊断](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。
+有关通过论坛搜索信息与询问问题，以及联系支持的详细信息，请参阅[获取客户支持](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}。

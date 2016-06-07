@@ -13,45 +13,21 @@ copyright:
 # Insights for Weather 시작하기
 {: #insights_weather_overview}
 
-*마지막 업데이트 날짜: 2016년 4월 6일*
+*마지막 업데이트 날짜: 2016년 5월 19일*
 
 {{site.data.keyword.weatherfull}}를 사용하여 TWC(The Weather Company)의 기상 데이터를
 {{site.data.keyword.Bluemix}} 애플리케이션에 통합할 수 있습니다.
 {:shortdesc}
 
-다음 지시사항에서는 애플리케이션 작성, Insights for Weather 서비스에 애플리케이션 바인딩,
-그리고 [REST API](https://twcservice.{APPDomain}/rest-api/)와의 상호작용을 위한
-서비스 신임 정보 검색 프로세스를 전체적으로 안내합니다. 
+**참고:** Insights for Weather 서비스는 현재 일본에서는 사용할 수 없습니다. 
 
-### 애플리케이션 작성
-{: #create_an_app}
+시작하기 전에, Liberty for Java 등의 런타임으로 대시보드에서 {{site.data.keyword.Bluemix_notm}} 웹 앱을 작성하십시오. 
+앱이 프로비저닝될 때까지 기다린 후에 Insights for Weather 서비스를 앱에 추가하십시오. 
 
-데모 용도로 사용자는 Liberty for Java 런타임을 사용하여 애플리케이션을
-작성하지만, 다음 일반 프로세스가 기타 런타임에 적용될 수 있습니다. 
+앱을 Insights for Weather에 바인드할 때 사용자는 고유 신임 정보로 서비스 인스턴스를 프로비저닝합니다. 
+앱은 [REST API](https://twcservice.{APPDomain}/rest-api/){:new_window}에서 이 신임 정보를 사용하여 기상 데이터를 검색합니다. 
 
-1. 기존 애플리케이션이 없으면 대시보드에서 **앱 작성**을 클릭하십시오.
-2. 앱 템플리트를 선택하라는 요청을 받으면 **웹**을 클릭하십시오.
-3. 시작 프로그램을 선택하라는 요청을 받으면 **Liberty for Java**를 클릭하십시오.
-4. **계속**을 클릭하십시오.
-5. **앱 이름** 필드에 앱의 이름을 입력하십시오.
-6. **완료**를 클릭하십시오.애플리케이션이 프로비저닝될 때까지 기다리십시오.
-
-### Insights for Weather 서비스 추가
-{: #add_insights_for_weather_service}
-
-Insights for Weather 서비스를 앱에 추가하려면 다음 단계를 따르십시오.
-1. **카탈로그** 메뉴를 여십시오.
-2. **데이터 & 분석** 섹션에서 **Insights for Weather** 타일을 클릭하십시오. 
-3. **앱** 드롭 다운 목록에서 앱을 선택하십시오.
-4. **사용**을 클릭하십시오.
-5. 프롬프트가 표시되면 **다시 스테이징**을 클릭하여 애플리케이션을 다시 시작하십시오.
-
-### Insights for Weather 신임 정보 검색
-{: #retrieve_weather_credentials}
-
-애플리케이션을 Insights for Weather에 바인드할 때 사용자는
-고유 신임 정보로 서비스 인스턴스를 프로비저닝합니다. 이 신임 정보는 애플리케이션의
-`VCAP_SERVICES`에 저장되며 서비스 간의 상호작용을 지원하는 데 필수적입니다. 
+`VCAP_SERVICES`에서 신임 정보를 검색하고 서비스 인스턴스를 앱과 통합하려면 다음 단계를 수행하십시오. 
 
 1. 애플리케이션 개요 페이지로 이동하십시오.
 2. **환경 변수** 섹션으로 이동하십시오. 각 서비스에 대한 `VCAP_SERVICES` 정보가 표시됩니다.
@@ -79,17 +55,25 @@ Insights for Weather 서비스를 앱에 추가하려면 다음 단계를 따르
 }
 ```
 
+**참고:** 각 지역은 독립적입니다. 한 지역에서 사용자에게
+프로비저닝된 서비스 신임 정보를 사용하여 다른 지역의 서비스에 대해 인증할 수 없습니다.
+적절한 신임 정보를 입력하지 않으면 응답 본문에 "권한 없음" 메시지가 포함됩니다.  
+
 # 관련 링크
+{: #rellinks}
 ## 샘플
+{: #samples}
 * [Insights for Weather 데모](http://insights-for-weather-demo.mybluemix.net/){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 * [What's the weather like in Bluemix?](https://developer.ibm.com/bluemix/2015/12/08/insights-weather-sample-overview){: new_window}
 
 ## api
+{: #api}
 * [REST API](https://twcservice.{APPDomain}/rest-api/){: new_window}
 
-## 호환 가능 런타임 {:id="buildpacks"}
-* [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html){: new_window}
+## 호환 가능 런타임 
+{: #buildpacks}
+* [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}
 * [Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html){: new_window}
 * [Ruby](https://console.{DomainName}/docs/runtimes/ruby/index.html){: new_window}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
@@ -97,8 +81,8 @@ Insights for Weather 서비스를 앱에 추가하려면 다음 단계를 따르
 * [Python](https://console.{DomainName}/docs/runtimes/python/index.html){: new_window}
 
 ## 일반
-* [Insights for Weather 정보](https://console.{DomainName}/docs/services/Weather/weather_overview.html){: new_window}
-* [애플리케이션에 서비스 추가](https://console.{DomainName}/docs/services/reqnsi.html#add_service){: new_window}
+{: #general}
+* [애플리케이션에 서비스 추가](../reqnsi.html){: new_window}
 * [엔드-투-엔드 개발](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

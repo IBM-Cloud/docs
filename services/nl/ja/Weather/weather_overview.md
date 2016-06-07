@@ -13,7 +13,7 @@ copyright:
 # Insights for Weather の概要
 {: #about_weather}
 
-*最終更新日: 2016 年 4 月 6 日*
+*最終更新日: 2016 年 5 月 19 日*
 
 {{site.data.keyword.weatherfull}} を使用して、The Weather Company (TWC) からの気象データをご使用の {{site.data.keyword.Bluemix}} アプリケーションに取り込みます。
 {:shortdesc}
@@ -49,6 +49,7 @@ Insights for Weather を使用するアプリの作成方法について技術�
 質問に **bluemix** と **weather** のタグを付けてください。
 
 このサービスに関して問題がある場合は、[IBM developerWorks Answers フォーラム](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}をご利用ください。
-**insights-weather** タグおよび **bluemix** タグを含めると、エクスペリエンスが向上し、IBM からより良いサポートをご提供できます。
+**insights-weather** タグや **bluemix** タグを含めると、IBM からより良いサポートをご提供できます。
 
-[Bluemix Platform の状況](https://developer.ibm.com/bluemix/support/#status){:new_window}を確認したり、[サポート・チケットのオープン](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}したりすることもできます。詳しくは、[トラブルシューティング](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}を参照してください。
+Bluemix の問題を解決するための情報は、[トラブルシューティング](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}を参照してください。
+フォーラムを介して情報を探したり質問する方法、サポートに連絡する方法について詳しくは、[お客様サポートの利用](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}を参照してください。

@@ -1,7 +1,7 @@
 ---
 
-copyright: 
-	years: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -15,7 +15,7 @@ copyright:
 
 *Letzte Aktualisierung: 6. April 2016*
 
-Sie können die [REST-APIs von Insights for Weather](https://twcservice.{APPDomain}/rest-api/){:new_window} verwenden, um Wetterdaten abzurufen. Sie können API-Operationen testen und sofort die Ergebnisse anzeigen, um so Ihre Anwendungen schneller erstellen zu können. 
+Sie können die [REST-APIs von Insights for Weather](https://twcservice.{APPDomain}/rest-api/){:new_window} verwenden, um Wetterdaten abzurufen. Sie können API-Operationen testen und sofort die Ergebnisse anzeigen, um so Ihre Anwendungen schneller erstellen zu können.
 
 Klicken Sie in der Referenzdokumentation auf **Operationen auflisten**,
 um Details zu den einzelnen Operationen anzuzeigen.
@@ -24,13 +24,13 @@ können Sie zur Angabe von Berechtigungsnachweisen aufgefordert werden.
 Sie müssen den Benutzernamen und das Kennwort aus Ihren Umgebungsvariablen des Typs
 `VCAP_SERVICES` angeben.
 Diese Informationen erhalten Sie,
-wenn Sie Ihre Anwendung öffnen und im Inhaltsverzeichnis auf die Option für die **Umgebungsvariablen** klicken. 
+wenn Sie Ihre Anwendung öffnen und im Inhaltsverzeichnis auf die Option für die **Umgebungsvariablen** klicken.
 
 **Hinweis:** Alle Bereiche sind voneinander unabhängig. Sie können die Berechtigungsnachweise des Service,
 die Ihnen in einer Region bereitgestellt wurden, nicht für die Authentifizierung
 bei einem Service in einer anderen Region verwenden.
 Wenn Sie keine gültigen Berechtigungsnachweise eingeben, wird im
-Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben. 
+Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben.
 
 Mit den APIs von Insights for Weather können Sie durch die Angabe von Koordinaten für Breiten- und Längengrade Wetterdaten abrufen.
 Sie können die folgenden APIs verwenden.
@@ -39,7 +39,7 @@ Sie können die folgenden APIs verwenden.
 |-----------------------------------------|-----------------------------|
 |`GET /v2/forecast/daily/10day`           |Gibt Wettervorhersagen für den aktuellen Tag und die nächsten neun Tage für eine Geoortung zurück. Jede Tagesvorhersage kann eine Tag- und eine Nachtvorhersage enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten. Vorhersagedaten für den Tag einer Tagesvorhersage stehen nach 15:00 Uhr Ortszeit nicht mehr zur Verfügung. Nach dieser Uhrzeit wird die Vorhersage für den Tag in Ihrer Anwendung
 nicht mehr angezeigt.|
-|`GET /v2/forecast/hourly/24hour`         |Gibt eine stündliche Vorhersage für den aktuellen Tag und die nächsten 24 Stunden für eine Geoortung zurück. Die stündlichen Vorhersagedaten können bis zu 24 stündliche Vorhersagen für jeden Standort enthalten. Wenn neue Daten empfangen werden, müssen Sie alle vorherigen stündlichen Vorhersagen für einen Standort löschen. |
+|`GET /v2/forecast/hourly/24hour`         |Gibt eine stündliche Vorhersage für den aktuellen Tag und die nächsten 24 Stunden für eine Geoortung zurück. Die stündlichen Vorhersagedaten können bis zu 24 stündliche Vorhersagen für jeden Standort enthalten. Wenn neue Daten empfangen werden, müssen Sie alle vorherigen stündlichen Vorhersagen für einen Standort löschen.|
 |`GET /v2/observations/current`           |Gibt die aktuellen Wetterbedingungen für eine Geoortung zurück. Diese aktuellen Beobachtungen werden in der Datenbank bis zu 10 Minuten bei bestimmten Berichtsstationen gespeichert. Ferner werden 24 Stunden der Beobachtungen pro Station gespeichert. Die aktuellen Beobachtungsdaten werden fortlaufend aktualisiert
 und anhand der FIFO-Methode (Daten mit neuester Beobachtung austauschen und die alten Beobachtungen
 in den Archivierungsspeicher verschieben) basierend auf den Datums-/Zeitangaben der Beobachtungen ersetzt.|
@@ -74,7 +74,7 @@ der entsprechenden Beobachtung festgelegt.
 
 Die Insights for Weather-APIs verwenden
 zum Abrufen und Filtern von Wetterdaten eine allgemeine URL-Struktur und verschiedene Abfrageparameter.
-Die URLs, die an die Insights for Weather-APIs übergeben wurden, sind folgendermaßen aufgebaut: 
+Die URLs, die an die Insights for Weather-APIs übergeben wurden, sind folgendermaßen aufgebaut:
 
 ```
 https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format type}&geocode={latitude,longitude}&language={language code}&units={units code}
@@ -142,12 +142,12 @@ für den UV-Index durch die Bereitstellung der zugehörigen Risikostufe für die
 {: #handling_null_or_missing}
 
 Wenn ein Datenfeld null ist, da die Daten nicht verfügbar sind, geben die Insights for Weather-APIs entweder
-die entsprechenden Feldtags mit dem Wort "null" zurück oder sie geben das Feld überhaupt nicht zurück. 
+die entsprechenden Feldtags mit dem Wort "null" zurück oder sie geben das Feld überhaupt nicht zurück.
 
 ## Handhabung von Fehlern
 {: #handling_errors}
 
-Die folgenden Fehlercodes sind allen APIs gemeinsam: 
+Die folgenden Fehlercodes sind allen APIs gemeinsam:
 
 |**Fehler** |**Beschreibung**                                    |
 |----------|---------------------------------------------------|
@@ -155,7 +155,7 @@ Die folgenden Fehlercodes sind allen APIs gemeinsam:
 Syntax nicht verstanden. Dieser Fehlercode wird für alle APIs implementiert. Die API lehnt die Anforderung ab, wenn ungültige Parameter angegeben werden.|
 |401       |Nicht autorisiert. Für die Anforderung ist eine Authentifizierung erforderlich.|
 |403       |Nicht zulässig. Der Server hat die Anforderung verstanden, lehnt eine Verarbeitung jedoch ab.|
-|404       |Nicht gefunden. Wenn in der API-Anforderung ein erforderlicher Parameter nicht vorhanden ist, wird der Fehler "MissingParameterException" mit dem Fehlercode 404 zurückgegeben. |
+|404       |Nicht gefunden. Wenn in der API-Anforderung ein erforderlicher Parameter nicht vorhanden ist, wird der Fehler "MissingParameterException" mit dem Fehlercode 404 zurückgegeben.|
 |405       |Methode nicht zulässig. Beispiel: Anstelle einer GET-Anforderung wird eine POST-Anforderung gesendet.|
 |406       |Nicht zulässig. Beispiel: Mit GZIP komprimierte Antworten werden nicht akzeptiert.|
 |408       |Zeitlimitüberschreitung für Anforderung. Der Client hat in dem Zeitrahmen,

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-	years: 2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -13,7 +13,7 @@ copyright:
 # Informationen zu Insights for Weather
 {: #about_weather}
 
-*Letzte Aktualisierung: 6. April 2016*
+*Letzte Aktualisierung: 19. Mai 2016*
 
 Verwenden Sie {{site.data.keyword.weatherfull}},
 um Wetterdaten von "The Weather Company" (TWC) in Ihre {{site.data.keyword.Bluemix}}-Anwendungen einzubinden.
@@ -23,7 +23,7 @@ Sie können Wetterbeobachtungen und -vorhersagen zu Ihrer {{site.data.keyword.Bl
 für ein durch Geoortungsdaten angegebenes Gebiet mit den [REST-APIs von Insights](https://twcservice.{APPDomain}/rest-api/){:new_window} anzeigen.
 "The Weather Company" ist der Anbieter mit den umfassendsten Langzeitwetterdaten und Vorhersagen. Es werden Daten zu allen Wetterphänomenen erfasst, darunter Niederschlag, Luftdruck, Wind und Gewitter.
 
-Sie können die REST-APIs zum Abrufen der folgenden Informationen verwenden: 
+Sie können die REST-APIs zum Abrufen der folgenden Informationen verwenden:
 
 * Eine stündliche Wettervorhersage für die nächsten 24 Stunden, beginnend mit
 dem aktuellen Zeitpunkt, für angegebene Geoortungsdaten.
@@ -39,7 +39,7 @@ für aktuelle Bedingungen sowie zurückliegende Beobachtungen für einen Zeitrau
 
 Weitere Informationen zu Wetterbezeichnungen und Wettersymbolen von "The Weather Company"
 finden Sie in [Icon Code, Phrases and Images](https://docs.google.com/document/d/1MZwWYqki8Ee-V7c7InBuA5CDVkjb3XJgpc39hI9FsI0/edit?pli=1){:new_window}.
-Sie können auch eine [Reihe von Symbolen herunterladen](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}, um Sie in Ihrer App zu verwenden. 
+Sie können auch eine [Reihe von Symbolen herunterladen](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window}, um Sie in Ihrer App zu verwenden.
 
 ## Preismodell
 {: #pricing_models}
@@ -72,10 +72,7 @@ Wenn Sie technische Fragen zum Erstellen einer App mit "Insights for Weather" ha
 und versehen Sie Ihre Frage mit den Tags **bluemix** und **weather**.
 
 Wenn Sie Probleme mit diesem Service haben sollten, verwenden Sie das Forum [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
-Schließen Sie die Tags
-**insights-weather** und **bluemix**
-in Ihre Beiträge ein, um das Forum optimal nutzen zu können und IBM eine bessere
-Unterstützung zu ermöglichen.
+Schließen Sie die Tags **insights-weather** und **bluemix** in Ihre Beiträge ein, um IBM eine bessere Unterstützung für Sie zu ermöglichen.
 
-Sie können auch den [Status der Bluemix-Plattform](https://developer.ibm.com/bluemix/support/#status){:new_window} anzeigen oder [ein Support-Ticket öffnen](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-Weitere Informationen finden Sie im [Thema Fehlerbehebung](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Informationen zur Fehlerbehebung bei Bluemix finden Sie im Thema zur [Fehlerbehebung](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Details zur Suche nach Informationen und für das Stellen Fragen in Foren sowie zur Kontaktaufnahme mit dem Support finden Sie im Thema zum [Abrufen der Kundenunterstützung](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
