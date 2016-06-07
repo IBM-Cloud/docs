@@ -17,7 +17,7 @@ copyright:
 
 #Alojamiento de apps en {{site.data.keyword.Bluemix_notm}}
 
-*Última actualización: 18 de abril de 2016*
+*Última actualización: 9 de mayo de 2016*
 
 <!--The whole topic is staging only -->
 
@@ -292,8 +292,12 @@ apps de {{site.data.keyword.Bluemix_notm}} Cloud
 Foundry.
 
 
-# rellinks
-## general 
+# Enlaces relacionados
+{: #rellinks}
+
+## Enlaces relacionados
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Cómo empezar con Delivery Pipeline](../services/DeliveryPipeline/index.html)

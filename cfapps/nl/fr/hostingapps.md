@@ -17,7 +17,7 @@ copyright:
 
 #Hébergement d'applications dans {{site.data.keyword.Bluemix_notm}}
 
-*Dernière mise à jour : 18 avril 2016*
+*Dernière mise à jour : 9 mai 2016*
 
 <!--The whole topic is staging only -->
 
@@ -249,8 +249,12 @@ VCAP_SERVICES, qui est définie pour toutes les applications {{site.data.keyword
 Foundry.
 
 
-# rellinks
-## general 
+# Liens connexes
+{: #rellinks}
+
+## Liens connexes
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Initiation à Delivery Pipeline](../services/DeliveryPipeline/index.html)

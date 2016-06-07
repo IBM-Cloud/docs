@@ -12,7 +12,7 @@ copyright:
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 5. April 2016*
+*Letzte Aktualisierung: 10. Mai 2016*
 
 {{site.data.keyword.Bluemix_notm}} macht es Ihnen leicht, Services und Apps zu implementieren, zu hosten und zu skalieren. Sie können sich voll auf Ihre Anwendungslogik und den Anwendungsentwurf konzentrieren.
 {:shortdesc}
@@ -42,7 +42,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 
 |Service	|Verfügbar in Region 'US South'	|Verfügbar in Region 'Europe United Kingdom' |Verfügbar in Region 'Australia Sydney'|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|Ja		|Nein		|Nein|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.activedeployshort}}			|Ja		|Ja		|Nein|
 |{{site.data.keyword.alchemyapishort}} 		|Ja	   	|Ja  		|Ja|
 |{{site.data.keyword.alertnotificationshort}}		|Ja		|Ja			|Ja		|
@@ -74,7 +74,7 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.twittershort}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.weather_short}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.IntegrationTestingshort}}	|Ja		|Ja		|Nein|
-|{{site.data.keyword.iot_short}}		|Ja		|Nein		|Nein|
+|{{site.data.keyword.iot_short}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.keymanagementserviceshort}}	|Nein		|Ja		|Nein|
 |{{site.data.keyword.languagetranslationshort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.messagehub}}		|Ja		|Ja		|Nein|
@@ -89,8 +89,8 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.nlclassifierlshort}} 	|Ja 		|Ja 		|Ja|
 |{{site.data.keyword.objectstorageshort}}	|Ja		|Nein		|Nein|
 |{{site.data.keyword.personalityinsightsshort}}	|Ja		|Ja		|Ja|
-|{{site.data.keyword.mobilepush}}	|Ja		|Ja		|Ja|
-|Push für iOS 8					|Ja		|Ja		|Nein|
+|{{site.data.keyword.mobilepush}}		|Ja		|Ja		|Ja|
+|{{site.data.keyword.mobilepushshort}}				|Ja		|Ja		|Ja|
 |{{site.data.keyword.questionandanswershort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.rapidApps}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.relationshipextractionshort}}	|Ja	|Ja		|Ja|
@@ -116,6 +116,23 @@ Nicht alle Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region ver
 |{{site.data.keyword.xpagesservice_short}}	|Ja		|Ja		|Nein|
 *Tabelle 2. Serviceverfügbarkeit*
 
+## Fortgesetzte Verfügbarkeit für Services
+{{site.data.keyword.Bluemix_notm}} hat eine Gruppe von Services als Tier 1 ermittelt. IBM wird keine Tier 1-Service entfernen, ohne ein Funktionsäquivalent zur Verfügung zu stellen oder wenigstens fünf Jahre vorher die Rücknahme des Service bekannt zu machen.  
+
+Die folgenden Services sind als Tier 1 klassifiziert:
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB von Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL von Compose
+  * {{site.data.keyword.ssofull}}
+
+Um mehr über die Nutzungsbedingungen für Services zu erfahren, siehe [{{site.data.keyword.Bluemix_notm}}-Nutzungsbedingungen](../navigation/notices.html#terms).
+
 ## Serviceeinstellung
 
-IBM kündigt die Absicht, einen allgemein verfügbaren Service einzustellen oder zu ersetzen, mindestens 30 Tage im Voraus an. Wenn nicht spätestens 12 Monate nach der Ankündigung ein funktional entsprechender Ersatz bereitgestellt wird, setzt IBM wirtschaftlich vertretbare Methoden ein, um den Betrieb und die Unterstützung der zuvor bereitgestellten Instanzen des Service fortzusetzen.  
+IBM kündigt die Absicht, einen allgemein verfügbaren Service einzustellen oder zu ersetzen, mindestens 30 Tage im Voraus an. Wenn nicht spätestens 12 Monate nach der Ankündigung ein funktional entsprechender Ersatz bereitgestellt wird, setzt IBM wirtschaftlich vertretbare Methoden ein, um den Betrieb und die Unterstützung der zuvor bereitgestellten Instanzen des Service fortzusetzen. 

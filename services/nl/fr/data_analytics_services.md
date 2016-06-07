@@ -7,7 +7,7 @@ copyright:
 
 {:shortdesc: .shortdesc} 
 
-# Services Data & Analytics 
+# Services Data & Analytics
 {: #data_analytics_services}
 
 *Dernière mise à jour : 7 avril 2016*

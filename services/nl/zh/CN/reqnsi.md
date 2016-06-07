@@ -326,6 +326,8 @@ copyright:
 {: #rellinks}
 
 ## 常规
+{: #general}
+
 * [使用 {{site.data.keyword.Bluemix_notm}} 用户界面绑定服务](../cfapps/ee.html#ee_bindui)
 * [检索 VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

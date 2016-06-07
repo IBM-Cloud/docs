@@ -15,7 +15,7 @@ copyright:
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Última atualização: 17 de março de 2016*
+*Última atualização: 9 de maio de 2016*
 
 Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento seguro do aplicativo.
 {:shortdesc}
@@ -337,7 +337,11 @@ A tabela a seguir exibe quais serviços do {{site.data.keyword.Bluemix_notm}} s�
 *Tabela 1. Conformidade de plataforma e serviço*
 
 
-# rellinks
-## general
+# Links Relacionados
+{: #rellinks}
+
+## Links Relacionados
+{: #general}
+
 * [Conformidade de segurança do SoftLayer](http://www.softlayer.com/security)
 * [Introdução ao Single Sign On](../services/SingleSignOn/index.html)

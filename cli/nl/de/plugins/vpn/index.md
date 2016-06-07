@@ -6,7 +6,13 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # IBM VPN-Befehlszeilenschnittstelle
+*Letzte Aktualisierung: 03. Mai 2016*
+
 Mit der Befehlszeilenschnittstelle können Sie den Service IBM® Virtual Private Network (VPN) konfigurieren und verwalten. Die IBM VPN-Befehlszeilenschnittstelle ist ein Plug-in, das zusammen mit dem Plug-in der Cloud Foundry-Befehlszeilenschnittstelle verwendet wird. Das Plug-in steht für die Betriebssysteme Windows, MAC und Linux zur Verfügung. Stellen Sie sicher, dass Sie das für Sie gültige Plug-in auswählen.
 
 Installieren Sie zu Anfang die Cloud Foundry-Befehlszeilenschnittstelle. Details finden Sie in [Cloud Foundry-Befehlszeilenschnittstelle](https://console.{DomainName}/docs/cli/downloads.html). 
@@ -52,22 +58,8 @@ cf uninstall-plugin vpn
 	```  
 2. Führen Sie folgenden Befehl aus:  
 
-	**Betriebssystem Microsoft Windows:**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Betriebssystem Apple MAC:**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Betriebssystem Linux:**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##Liste der Befehle des Service IBM VPN
 
@@ -405,6 +397,7 @@ IP-Adresse des Gateways.
 Teilnetzadresse im CIDR-Format. 
 
 # Zugehörige Links
-## Allgemein
+## Allgemein  
+{: #general}  
 * [Service IBM VPN](../../../services/vpn/index.html)
 * [Cloud Foundry-Befehlszeilenschnittstelle](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

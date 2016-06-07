@@ -12,7 +12,7 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 4 月 5 日*
+*上次更新时间：2016 年 5 月 10 日*
 
 通过 {{site.data.keyword.Bluemix_notm}}，您可以轻松地实施、托管和扩展服务和应用程序。您可以关注应用程序逻辑和应用程序设计。
 {:shortdesc}
@@ -44,7 +44,7 @@ copyright:
 
 |服务	|在美国南部区域中可用	|在欧洲英国区域中可用 |在澳洲悉尼区域中可用|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|是		|否		|否|
+|{{site.data.keyword.cloudaccesstrailshort}}			|是		|否		|否|
 |{{site.data.keyword.activedeployshort}}			|是		|是		|否|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
 |{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
@@ -76,7 +76,7 @@ copyright:
 |{{site.data.keyword.twittershort}}		|是		|是		|是|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
-|{{site.data.keyword.iot_short}}		|是		|否		|否|
+|{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.keymanagementserviceshort}}	|否		|是		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|是|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
@@ -91,8 +91,8 @@ copyright:
 |{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
 |{{site.data.keyword.objectstorageshort}}	|是		|否		|否|
 |{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.mobilepush}}	|是		|是		|是|
-|Push for iOS 8					|是		|是		|否|
+|{{site.data.keyword.mobilepush}}		|是		|是		|是|
+|{{site.data.keyword.mobilepushshort}}				|是		|是		|是|
 |{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
 |{{site.data.keyword.rapidApps}}		|是		|是		|否|
 |{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
@@ -118,6 +118,23 @@ copyright:
 |{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
 *表 2. 服务可用性*
 
+
+## 服务持续可用性
+{{site.data.keyword.Bluemix_notm}} 已将一组服务确定为第 1 层。IBM 在未提供等效功能的情况下，不会撤销任何第 1 层服务，或者撤销前至少提前五年通知。 
+
+以下服务分类为第 1 层：
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB by Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL by Compose
+  * {{site.data.keyword.ssofull}}
+
+要阅读有关服务使用条款的更多信息，请参阅：[{{site.data.keyword.Bluemix_notm}} 条款](../navigation/notices.html#terms)。
 
 ## 服务废弃
 

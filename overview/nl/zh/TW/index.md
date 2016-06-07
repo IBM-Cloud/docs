@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 概觀
 {: #overview}
 
-*前次更新：2016 年 1 月 18 日*
+*前次更新：2016 年 5 月 9 日*
 
 {{site.data.keyword.Bluemix}} 是一種 {{site.data.keyword.IBM}} 開放雲端平台，提供 {{site.data.keyword.IBM_notm}} 軟體的存取權給行動式和 Web 開發人員，以使用整合、安全、交易以及其他關鍵功能，還可以存取事業夥伴提供的軟體。
 {:shortdesc}
@@ -330,7 +330,11 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 *表 2. 支援的國家語言及語言碼*
 
 # 相關鏈結
-## 一般 
+{: #rellinks}
+
+## 相關鏈結
+{: #general}
+
 * [{{site.data.keyword.Bluemix_notm}} 必要條件](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 已知問題](https://developer.ibm.com/bluemix/support/#issues)

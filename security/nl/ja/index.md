@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-*最終更新日: 2016 年 3 月 17 日*
+*最終更新日: 2016 年 5 月 9 日*
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
 {:shortdesc}
@@ -339,6 +339,10 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 
 
 # 関連リンク
-## 一般
+{: #rellinks}
+
+## 関連リンク
+{: #general}
+
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [Single Sign On 入門 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)

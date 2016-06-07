@@ -16,7 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 개요
 {: #overview}
 
-*마지막 업데이트 날짜: 2016년 1월 18일*
+*마지막 업데이트 날짜: 2016년 5월 9일*
 
 {{site.data.keyword.Bluemix}}는 모바일 및 웹 개발자에게 통합, 보안, 트랜잭션 및 기타 핵심 기능을 지원하는 {{site.data.keyword.IBM_notm}} 소프트웨어 및 비즈니스 파트너의 소프트웨어에 대한 액세스를 제공하는 {{site.data.keyword.IBM}}의 개방형 클라우드 플랫폼입니다.
 {:shortdesc}
@@ -251,7 +251,7 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 ### 인프라
 {: #infrastructure}
 
-{{site.data.keyword.Bluemix_notm}}는 사용자의 코드를 실행하기 위한 3가지 방법, 즉 Cloud Foundry, {{site.data.keyword.IBM_notm}} 컨테이너 및 가상 머신을 제공합니다. {{site.data.keyword.IBM_notm}} 컨테이너 및 가상 머신은 미국 남부 및 유럽 영국 지역에서만 사용할 수 있습니다. 사용자는 앱을 배치하기 위한 적절한 인프라를 선택할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}}는 사용자의 코드를 실행하기 위한 3가지 방법, 즉 Cloud Foundry, {{site.data.keyword.IBM_notm}} Containers 및 가상 머신을 제공합니다. {{site.data.keyword.IBM_notm}} Containers 및 가상 머신은 미국 남부 및 유럽 영국 지역에서만 사용할 수 있습니다. 사용자는 앱을 배치하기 위한 적절한 인프라를 선택할 수 있습니다. 
 
 <dl>
 <dt>Cloud Foundry</dt>
@@ -260,21 +260,21 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 {{site.data.keyword.Bluemix_notm}}는
 해당 앱 기능을 제공하는 인프라의 관리 및 유지보수를 담당합니다.</dd>
 <dt>{{site.data.keyword.IBM_notm}}Containers</dt>
-    <dd>{{site.data.keyword.IBM_notm}} 컨테이너 인프라를 사용하여 컨테이너 배치를 지원하는 어디에서나 웹 앱을 실행할 수 있습니다. *컨테이너*는 앱 실행에
+    <dd>{{site.data.keyword.IBM_notm}} Containers 인프라를 사용하여 컨테이너 배치를 지원하는 어디에서나 웹 앱을 실행할 수 있습니다. *컨테이너*는 앱 실행에
 필요한 모든 것이 들어 있는 오브젝트입니다. 이 인프라에는 이미지를 업로드, 저장 및 검색할 수 있도록
 신뢰할 수 있는 이미지를 위한 개인용 레지스트리가 포함되어 있습니다. 그런 다음 이 이미지를
 {{site.data.keyword.Bluemix_notm}}에서 사용할 수 있게 만들고 플랫폼에서 컨테이너를
-관리할 수 있습니다. {{site.data.keyword.IBM_notm}} 컨테이너 인프라는 수직 또는 수평으로 스케일링됩니다. 공용 Docker Hub에서 사용할 수 있는
+관리할 수 있습니다. {{site.data.keyword.IBM_notm}} Containers 인프라는 수직 또는 수평으로 스케일링됩니다. 공용 Docker Hub에서 사용할 수 있는
 모든 이미지를 사용하고 Docker API 및 명령행 인터페이스를 사용하여
 {{site.data.keyword.Bluemix_notm}}에서
-컨테이너를 관리할 수 있습니다. {{site.data.keyword.IBM_notm}}은 또한 사용하고 확장할 수 있는 컨테이너 레지스트리에 몇 가지 공용 이미지를 제공합니다.     {{site.data.keyword.IBM_notm}} 컨테이너는 호스팅되는 클라우드 환경에서
+컨테이너를 관리할 수 있습니다. {{site.data.keyword.IBM_notm}}은 또한 사용하고 확장할 수 있는 컨테이너 레지스트리에 몇 가지 공용 이미지를 제공합니다.     {{site.data.keyword.IBM_notm}} Containers는 호스팅되는 클라우드 환경에서
 Docker 컨테이너를 실행하는 데 사용됩니다. Docker는
 컨테이너 실행에 사용하는 가상 환경에 앱을 배치해 주는
 엔진을 추가합니다. Docker는 또한 코드를 실행하는 데 사용할 수 있는
 환경을 제공합니다. 준비가 완료되면 개발 환경에서 테스트 환경 및 프로덕션 환경으로
 코드를 전송할 수 있는 방법을 제공합니다.
 
-    {{site.data.keyword.IBM_notm}} 컨테이너에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} 컨테이너](../containers/container_index.html)를 참조하십시오.</dd>
+    {{site.data.keyword.IBM_notm}} Containers에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)를 참조하십시오.</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}(베타)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}은 호스트되는 클라우드 환경이며 앱 및 앱이 실행되는 미들웨어에 대한 제어를 유지하면서 사용자의 애플리케이션을 빌드, 실행, 관리 및 모니터할 수 있는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}의 일부입니다. 비즈니스 솔루션을 격리할 때, 특히 앱을 퍼블릭 클라우드에 배치할 때 {{site.data.keyword.virtualmachinesshort}}을 사용하십시오.</p>
 <p>    
@@ -479,7 +479,11 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 *표 2. 지원되는 자국어 및 언어 코드*
 
 # 관련 링크
-## 일반 
+{: #rellinks}
+
+## 관련 링크
+{: #general}
+
 * [{{site.data.keyword.Bluemix_notm}} 필수 소프트웨어](https://developer.ibm.com/bluemix/support/#prereqs)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](../whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 알려진 문제](https://developer.ibm.com/bluemix/support/#issues)

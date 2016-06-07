@@ -17,7 +17,7 @@ copyright:
 
 #Host delle applicazioni in {{site.data.keyword.Bluemix_notm}}
 
-*Ultimo aggiornamento: 18 aprile 2016*
+*Ultimo aggiornamento: 9 maggio 2016*
 
 <!--The whole topic is staging only -->
 
@@ -233,10 +233,10 @@ e il tuo spazio.
 <li>Dalla directory della tua applicazione, immetti il comando cf push
 seguito dal nome dell'applicazione. Tale nome deve essere univoco
 nell'ambiente {{site.data.keyword.Bluemix_notm}}.
-<pre>cf push appname</pre></li>
+<pre>cf push nomeapplicazione</pre></li>
 <li>Facoltativo: se utilizzi un pacchetto di build esterno, devi utilizzare l'opzione -b con il comando cf push. Ad
                                     esempio:
-<pre>cf push appname -b buildpack_URL</pre>
+<pre>cf push nomeapplicazione -b buildpack_URL</pre>
 <p>Per ulteriori informazioni, vedi
 Utilizzo di pacchetti di build della community.</p>
 </li></ol>
@@ -298,8 +298,12 @@ che viene impostata per tutte le applicazioni {{site.data.keyword.Bluemix_notm}}
 Foundry.
 
 
-# rellinks
-## general 
+# Link correlati
+{: #rellinks}
+
+## Link correlati
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machine](../virtualmachines/vm_index.html)
 * [Introduzione a Delivery Pipeline](../services/DeliveryPipeline/index.html)

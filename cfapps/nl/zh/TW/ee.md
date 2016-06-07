@@ -35,11 +35,11 @@ copyright:
 
 在 {{site.data.keyword.Bluemix_notm}} 中，應用程式與組織及空間相關聯。組織是由多個合作人員所擁有及使用。一開始，您會得到預設組織，它是以您的使用者名稱來命名，且您是唯一的合作人員。您也會在這個組織內得到一個空間。該空間是用來執行您應用程式的環境；例如，您可以有 dev 空間作為開發環境、test 空間作為測試環境，以及 production 空間作為正式作業環境。此外，每一個環境都屬於一個地區。使用 {{site.data.keyword.Bluemix_notm}}，您可以將應用程式部署至特定的地理區域，以獲得較低的網路延遲、資料隱私及更好的可用性。如需詳細資料，請參閱「地區」。
 
-針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
-  1. 按一下**建立應用程式**。
-  2. 選取 **Web**。
-  3. 為您的 Web 應用程式選取入門範本 SDK for Node.js，然後按一下**繼續**。
-  4. 為您的應用程式鍵入唯一名稱（例如，TestNode），然後按一下**完成**。應用程式名稱在整個 {{site.data.keyword.Bluemix_notm}} 環境中必須是唯一的。
+針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下您位於右上方的帳戶名稱，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
+
+  1. 按一下加號按鈕。
+  2. 選取**計算**>**CF 應用程式**>**SDK for Node.js**。
+  3. 為您的應用程式鍵入唯一名稱（例如，TestNode），然後按一下**建立**。應用程式名稱在整個 {{site.data.keyword.Bluemix_notm}} 環境中必須是唯一的。
   
 現在您會看到**開始撰寫程式碼**指示。您可以遵循指示來下載 TestNode 的入門範本程式碼，然後加以修改及部署。
 
@@ -103,11 +103,11 @@ copyright:
 	```
 	
     **需求：**請確定您隨時都使用最新版本的 cf 指令行工具。
-  3. 安裝 **cf** 指令行介面之後，您必須使用 **cf api** 指令，來指定您工作時要使用的 {{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。「美國南部」地區 URL 是 stage1.ng.bluemix.net。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
+  3. 安裝 **cf** 指令行介面之後，您必須使用 **cf api** 指令，來指定您工作時要使用的 {{site.data.keyword.Bluemix_notm}} 地區。**cf** 指令行介面使用 *https://api.Bluemix_URL*，其中 *Bluemix_URL* 是地區的 URL。「美國南部」地區 URL 是 {{Domain}}。請輸入下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}：
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
-  ```
+  cf api https://api.ng.bluemix.net
+	 ```
   
   如需連接至其他 {{site.data.keyword.Bluemix_notm}} 地區的相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 地區。指定 {{site.data.keyword.Bluemix_notm}} 地區之後，會儲存您指定的位置資訊。
   
@@ -127,7 +127,7 @@ copyright:
   
   6. 現在，您可以在瀏覽器裡輸入下列應用程式 URL，來存取應用程式：
 ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 您也可以選擇其他工具來建置您的應用程式，例如 Eclipse 工具。如需相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 使用者介面上應用程式的「開始撰寫程式碼」頁面。

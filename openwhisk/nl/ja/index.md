@@ -78,7 +78,6 @@ function main(params) {
 
     このコマンドの出力は以下のとおりです。
 
-
     ```
     {
         "payload": "Hello, World!"
@@ -92,7 +91,6 @@ function main(params) {
     {: pre}  
 
     このコマンドの出力は以下のとおりです。
-
 
     ```
     {

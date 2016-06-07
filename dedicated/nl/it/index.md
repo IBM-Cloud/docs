@@ -16,7 +16,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} dedicato
 {: #dedicated}
 
-*Ultimo aggiornamento: 19 aprile 2016*
+*Ultimo aggiornamento: 16 maggio 2016*
 
 
 {{site.data.keyword.Bluemix}} è
@@ -35,30 +35,32 @@ Inoltre, è presente una serie di servizi disponibili come servizi dedicati {{si
 | **Tipo**        | **Nome**            | **Descrizione** |      
 |-----------------|-------------------|-------------------|
 |Incluso | Runtime {{site.data.keyword.Bluemix_notm}} | Utilizza i runtime per avere un'applicazione subito operativa, senza dover impostare e gestire macchine e sistemi operativi. Tutti i runtime {{site.data.keyword.Bluemix_notm}} sono a tua disposizione per la tua istanza di {{site.data.keyword.Bluemix_notm}} dedicato.|
-| Incluso | {{site.data.keyword.autoscaling}} | Ti permette di aumentare o ridurre dinamicamente la capacità
+|Incluso | {{site.data.keyword.autoscaling}} | Ti permette di aumentare o ridurre dinamicamente la capacità
 di elaborazione della tua applicazione in base alle politiche. Con questo servizio,
 avrai un uso illimitato nel tuo ambiente {{site.data.keyword.Bluemix_notm}}
 dedicato. |
-| Facoltativo | {{site.data.keyword.datacshort}} | Questo servizio fornisce una griglia di dati in memoria
-che supporta scenari di cache distribuita per le tue applicazioni. Include
-50 GB di cache in memoria. |
-|Facoltativo | {{site.data.keyword.sescashort}} | Per aumentare la ridondanza, {{site.data.keyword.sescashort}} fornisce una replica di una sessione memorizzata nella cache. Pertanto, nel caso di un'interruzione o di un calo di tensione, la tua applicazione client mantiene l'accesso alla sessione nella cache. Il servizio supporta scenari di memorizzazione di sessioni nella cache per applicazioni Web e mobili. |
-| Facoltativo | {{site.data.keyword.mql}} | {{site.data.keyword.mqlfull}} per {{site.data.keyword.Bluemix_notm}} è un servizio di messaggistica basato sul cloud che fornisce una messaggistica flessibile e facile da usare per le applicazioni {{site.data.keyword.Bluemix_notm}}. {{site.data.keyword.mql}} fornisce una soluzione con ridotte esigenze gestionali alla messaggistica. Puoi utilizzare {{site.data.keyword.mql}} per rendere le tue applicazioni più reattive e ridimensionabili e puoi condividere e scaricare lavoro tra le applicazioni con una semplice e potente API. |
-| Facoltativo | {{site.data.keyword.dashdbshort}} | Usa dashDB per memorizzare dati relazionali, inclusi i tipi speciali quali i dati geospaziali. Quindi, analizza tali dati utilizzando l'analisi integrata SQL o avanzata come l'analisi predittiva e il data mining, l'analisi con R e l'analisi geospaziale. |
+|Facoltativo | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} integra {{site.data.keyword.APIM}} e IBM StrongLoop in una singola offerta che fornisce una soluzione completa per creare, eseguire, gestire e implementare API e microservizi. |
 |Facoltativo | {{site.data.keyword.APIM}} | Utilizza il servizio {{site.data.keyword.APIMfull}}
 per comporre, gestire e socializzare le API. Puoi importare delle API con risorse utilizzando un URL proxy o assemblando dati dalle origini dati HTTP. Il servizio {{site.data.keyword.APIM}} offre il vantaggio che puoi gestire la modalità di utilizzo delle tue API. |
-|Facoltativo | {{site.data.keyword.SecureGateway}} | Il servizio {{site.data.keyword.SecureGateway}} fornisce un modo sicuro per connettere le applicazioni {{site.data.keyword.Bluemix_notm}} da posizioni remote installate in loco o nel cloud.  |
 |Facoltativo | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} fornisce l'accesso a un livello di dati JSON NoSQL interamente gestito sempre attivo. Questo servizio è compatibile con CouchDB e accessibile mediante un'interfaccia HTTP di facile utilizzo per i modelli di applicazione web e mobile. |
-| Facoltativo | {{site.data.keyword.iot_full}} | Questo servizio consente alle tue applicazioni di comunicare tra loro e utilizzare i dati raccolti dai tuoi dispositivi, sensori e gateway connessi. L'offerta di base consente l'esecuzione di una versione privata di {{site.data.keyword.iot_full}} nell'ambiente dedicato con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 1.6 TB di scambio dati. |
+|Facoltativo | {{site.data.keyword.dashdbshort}} | Usa dashDB per memorizzare dati relazionali, inclusi i tipi speciali quali i dati geospaziali. Quindi, analizza tali dati utilizzando l'analisi integrata SQL o avanzata come l'analisi predittiva e il data mining, l'analisi con R e l'analisi geospaziale. |
+|Facoltativo | {{site.data.keyword.datacshort}} | Questo servizio fornisce una griglia di dati in memoria
+che supporta scenari di cache distribuita per le tue applicazioni. Include
+50 GB di cache in memoria. |
+|Facoltativo | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} è un servizio che puoi utilizzare per inviare notifiche a dispositivi iOS e Android.Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare i dispositivi, le tag e le sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. |
+|Facoltativo | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} è un bus di messaggi a velocità elevata scalabile e distribuito per unire le tue tecnologie installate in loco con quelle installate invece altrove. {{site.data.keyword.messagehub}} è basato su Apache Kafka, che è un motore di messaggistica in tempo reale rapido, scalabile e durevole.  |
+|Facoltativo | {{site.data.keyword.SecureGateway}} | Il servizio {{site.data.keyword.SecureGateway}} fornisce un modo sicuro per connettere le applicazioni {{site.data.keyword.Bluemix_notm}} da posizioni remote installate in loco o nel cloud.  |
+|Facoltativo | {{site.data.keyword.sescashort}} | Per aumentare la ridondanza, {{site.data.keyword.sescashort}} fornisce una replica di una sessione memorizzata nella cache. Pertanto, nel caso di un'interruzione o di un calo di tensione, la tua applicazione client mantiene l'accesso alla sessione nella cache. Il servizio supporta scenari di memorizzazione di sessioni nella cache per applicazioni Web e mobili. |
+|Facoltativo | {{site.data.keyword.iot_full}} | Questo servizio consente alle tue applicazioni di comunicare tra loro e utilizzare i dati raccolti dai tuoi dispositivi, sensori e gateway connessi. L'offerta di base consente l'esecuzione di una versione privata di {{site.data.keyword.iot_full}} nell'ambiente dedicato con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 1.6 TB di scambio dati. |
 
-Sono presenti dei componenti facoltativi disponibili per te da acquistare per ridimensionare e estendere la capacità dei tuoi servizi o risorse. Puoi acquistare tutti questi componenti contattando il team di vendite; vai all'indirizzo [Contattaci](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) per informazioni su come contattare un rappresentante delle vendite. Per incrementare il tuo piano per un servizio, puoi selezionare il piano dal tile del servizio nel tuo catalogo.
+Sono presenti dei componenti facoltativi disponibili per te da acquistare per ridimensionare e estendere la capacità dei tuoi servizi o risorse. Puoi acquistare tutti questi componenti contattando il team di vendite; vai all'indirizzo [Contatti](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) per informazioni su come contattare un rappresentante delle vendite. Per incrementare il tuo piano per un servizio, puoi selezionare il piano dal tile del servizio nel tuo catalogo.
 
 *Tabella 2. Componenti facoltativi per l'acquisto*
 
 | **Nome**            | **Descrizione** |      
 |-------------------|-------------------|
-|Incremento della capacità di 16 TB dedicato per {{site.data.keyword.cloudant}} | Include l'esecuzione di una versione privata di {{site.data.keyword.cloudantfull}} nell'ambiente dedicato con una capacità di 1.6 terabyte.  |
 |Incremento della capacità di 16 GB dedicato per i runtime  | Un'estensione dell'ambiente dei runtime che fornisce una capacità di runtime extra di 16 GB. |
+|Incremento della capacità di 16 TB dedicato per {{site.data.keyword.cloudant}} | Include l'esecuzione di una versione privata di {{site.data.keyword.cloudantfull}} nell'ambiente dedicato con una capacità di 1.6 terabyte.  |
 |Incremento della capacità di 50 GB dedicato per {{site.data.keyword.datacshort}} e {{site.data.keyword.sescashort}} | Un ambiente che consente la distribuzione e l'esecuzione di istanze {{site.data.keyword.datacshort}} e {{site.data.keyword.sescashort}} fino a una capacità cumulativa di 50 GB. |
 |Capacità di 1 Gbps dedicata per Direct Link | Un link di rete dedicato che si connette direttamente al POP (point of presence) di rete SoftLayer designato per i trasferimenti dati fino a 1 Gbps. |
 |Capacità di 10 Gbps dedicata per Direct Link | Un link di rete dedicato che si connette direttamente al POP (point of presence) di rete SoftLayer designato per i trasferimenti dati fino a 10 Gbps. |
@@ -70,9 +72,9 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |Servizi di community dedicati per {{site.data.keyword.Bluemix_notm}}  | Un ambiente che consente la distribuzione e l'esecuzione di servizi di community fino a un totale di 50 istanze per ogni servizio di community.  |
 |Firewall hardware dedicato per IBM Bluemix  - Elevata disponibilità | Un firewall hardware di 1 Gbps ridondante configurato per la protezione di uno, alcuni o tutti i server nella stessa VLAN nell'ambiente dedicato. |
 |VPN Vyatta di 1 Gbps dedicata configurata per l'elevata disponibilità  | Una Vyatta VPN di 1 Gbps configurata per l'elevata disponibilità per l'utilizzo da un ambiente dedicato. |
-|Incremento della capacità di PR 30 dedicato per IBM {{site.data.keyword.mql}} | Un ambiente che consente la distribuzione e l'esecuzione di istanze {{site.data.keyword.mql}} fino a una capacità totale di 30 istanze del servizio. |
-|Incremento della capacità di 12 GB per i servizi dedicato per {{site.data.keyword.mobilepushshort}} | Un ambiente che consente la distribuzione e l'esecuzione del servizio {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilepushshort}} che interessa i runtime Liberty e Node.js nell'ambiente dedicato. Il servizio {{site.data.keyword.mobilepushshort}} dispone di una dipendenza prerequisita {{site.data.keyword.cloudant}} con una capacità di progettazione di almeno 500 GB. |
+|IBM {{site.data.keyword.Bluemix_notm}} dedicato {{site.data.keyword.mobilepushshort}} | Un ambiente che consente la distribuzione e l'esecuzione di istanze {{site.data.keyword.mobilepushshort}} con la capacità di accettare 300 richieste al secondo. |
 |Aumento incrementale dedicato per {{site.data.keyword.iot_short}} | Un incremento dell'ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.iot_short}} nell'ambiente dedicato con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 0.5 TB di scambio dati. |
+
 
 **Nota**: i componenti dedicati {{site.data.keyword.Bluemix_notm}} possono indicare una capacità configurata specifica, come ad esempio gigabyte o transazioni al secondo. Poiché la capacità attuale messa in pratica per ogni configurazione del servizio cloud varia in base a molti fattori, la capacità attuale messa in pratica può essere maggiore o inferiore alla capacità configurata.
 
@@ -82,45 +84,49 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 
 {{site.data.keyword.Bluemix_notm}} dedicato include un catalogo privato che consente di visualizzare i servizi locali disponibili in esclusiva per te. Sono compresi inoltre dei servizi messi a tua disposizione da {{site.data.keyword.Bluemix_notm}} pubblico.
 
-Il catalogo diffuso fornisce la funzione per creare applicazioni ibride composte da servizi pubblici e privati. Hai la possibilità di decidere quali servizi pubblici rispondono ai tuoi requisiti aziendali, sulla base di criteri di sicurezza e privacy dei dati. Se disponi di un'istanza privata del servizio per il tuo ambiente dedicato, vedi le icone specifiche allegate ai tile del servizio nel tuo catalogo, come ad esempio ![Icona servizio dedicato](images/dedicatedicon.png "Icona servizio dedicato").
+Il catalogo diffuso fornisce la funzione per creare applicazioni ibride composte da servizi pubblici e privati. Hai la possibilità di decidere quali servizi pubblici rispondono ai tuoi requisiti aziendali, sulla base di criteri di sicurezza e privacy dei dati. Se si tratta di un'istanza privata del servizio per il tuo ambiente dedicato, vedi una tag "Dedicato" con i tile dei servizi nel tuo catalogo. Analogamente, se si tratta di un servizio personalizzato, vedi "Personalizzato" elencato nel tile del servizio.
 
 *Tabella 3. Servizi disponibili per la diffusione da {{site.data.keyword.Bluemix_notm}} pubblico per regione*
 
-|Servizio    |Disponibile nella regione Stati Uniti Sud   |Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
+|Servizio	|Disponibile nella regione Stati Uniti Sud	|Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|Sì	   	|Sì  		|Sì|
 |{{site.data.keyword.alertnotificationshort}}		|Sì		|Sì			|Sì		|
 |{{site.data.keyword.appseccloudshort}}		|Sì		|Sì		|Sì |
-|{{site.data.keyword.amashort}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.hadoopst}}			|Sì		|No		|No |
 |{{site.data.keyword.APIM}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.rules_short}}		|Sì		|Sì		|Sì |
 |{{site.data.keyword.cloudant}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.conceptexpansionshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.conceptinsightsshort}}	|Sì		|Sì		|Sì |
-|{{site.data.keyword.dashdbshort}}		|Sì		|Sì		|No |
-|{{site.data.keyword.DB2OnCloud_short}}		|Sì		|Sì		|No |
+|{{site.data.keyword.dashdbshort}}		|Sì		|Sì		|Sì |
+|{{site.data.keyword.dataworks_short}}		|Sì		|Sì		|No|
+|{{site.data.keyword.DB2OnCloud_short}}		|Sì		|Sì		|Sì |
 |{{site.data.keyword.dialogshort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.documentconversionshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.game}}			|No		|No		|Sì |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|Sì	|Sì		|Sì |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Sì		| Sì		| Sì |
-|{{site.data.keyword.dataworks_short}}		|Sì		|Sì		|No|
+|{{site.data.keyword.identitymixershort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.twittershort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.iot_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.languagetranslationshort}}	|Sì		|Sì		|Sì |
+|{{site.data.keyword.eventhubshort}}		|Sì		|No		|No|
 |{{site.data.keyword.messagehub}}		|Sì		|Sì		|No|
 |{{site.data.keyword.macm_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.manda}}			|Sì		|Sì		|Sì |
+|{{site.data.keyword.amashort}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.mqa}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.mql}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.nlclassifierlshort}} 	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.personalityinsightsshort}}	|Sì		|Sì		|Sì|
+|{{site.data.keyword.pm_short}}			|Sì		|Sì		|No |
+|{{site.data.keyword.presenceinsightsshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.mobilepush}}		|Sì		|Sì		|Sì |
 |{{site.data.keyword.questionandanswershort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
 |{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
+|{{site.data.keyword.runbook_short}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|Sì |
 |{{site.data.keyword.ssofull}}			|Sì		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sì 		|Sì	 	|Sì|
@@ -129,6 +135,8 @@ Il catalogo diffuso fornisce la funzione per creare applicazioni ibride composte
 |{{site.data.keyword.toneanalyzershort}} 	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.visualinsightsshort}}	|Sì		|Sì		|Sì|
+|{{site.data.keyword.visualrecognitionshort}}	|Sì 		|Sì	 	|Sì|
+|{{site.data.keyword.iot_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.workflow}}			|Sì		|Sì		|Sì |
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|Sì |
 
@@ -218,7 +226,7 @@ Per la distribuzione e configurazione iniziale del tuo ambiente puoi prevedere u
 <li>Puoi iniziare a utilizzare la tua istanza dedicata, monitorata dal team operativo IBM, al fine di rispondere agli avvisi.</li>
 </ol>
 
-Una volta configurata la tua istanza {{site.data.keyword.Bluemix_notm}}, puoi monitorare e gestire l'istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Amministrazione. Per ulteriori informazioni, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e dedicato](../administer/index.html#mng). Per informazioni su aggiornamenti e manutenzione, vedi [Manutenzione dell'istanza dedicata](index.html#maintaindedicated).
+Una volta configurata la tua istanza {{site.data.keyword.Bluemix_notm}}, puoi monitorare e gestire l'istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Amministrazione. Per ulteriori informazioni, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e dedicato](../admin/index.html#mng). Per informazioni su aggiornamenti e manutenzione, vedi [Manutenzione dell'istanza dedicata](index.html#maintaindedicated).
 
 ##Ruoli e responsabilità
 {: #rolesresponsibilities}
@@ -240,7 +248,8 @@ Il seguente elenco mostra i ruoli e le responsabilità dei clienti che puoi asse
 <dd>Lavora con il rappresentante IBM per pianificare e applicare gli aggiornamenti di manutenzione necessari per la piattaforma, i servizi e i runtime {{site.data.keyword.Bluemix_notm}}. La persona assegnata a questo ruolo lavora anche con il rappresentante IBM sulla configurazione della tua istanza di {{site.data.keyword.Bluemix_notm}} dedicato.</dd>
 </dl>
 
-I tuoi rappresentanti dei clienti collaborano con il tuo rappresentante dedicato e altri specialisti IBM che lavorano insieme per garantirti tutto il supporto di cui hai bisogno. Il rappresentante dedicato è il tuo unico punto di contatto all'interno del team di supporto allo sviluppo {{site.data.keyword.Bluemix_notm}} che svolge le seguenti attività:
+I tuoi rappresentanti dei clienti collaborano con gli specialisti IBM che lavorano insieme per garantirti tutto il supporto di cui hai bisogno. Puoi eseguire l'upgrade al livello di supporto Premium per lavorare con un CSM (Client Success Manager) dedicato per il tuo account. Per ulteriori informazioni sui diversi livelli di supporto,
+vedi [Come contattare il supporto](../support/index.html#contacting-support). Il CSM completa i seguenti tipi di attività:
 
 <ul>
 <li>Consente una rapida adozione del tuo ambiente {{site.data.keyword.Bluemix_notm}} dedicato.</li>
@@ -248,7 +257,7 @@ I tuoi rappresentanti dei clienti collaborano con il tuo rappresentante dedicato
 <li>Promuove una relazione a lungo termine tra te e lo sviluppo, il supporto e i servizi {{site.data.keyword.Bluemix_notm}} che utilizzi.</li>
 </ul>
 
-Il team operativo e di supporto {{site.data.keyword.Bluemix_notm}} che insieme a te gestisce l'istanza {{site.data.keyword.Bluemix_notm}} potrebbe accedere al tuo ambiente locale, ma lo fa solo per i seguenti motivi.
+Il team operativo e di supporto di {{site.data.keyword.Bluemix_notm}} che insieme a te gestisce l'istanza {{site.data.keyword.Bluemix_notm}} potrebbe accedere al tuo ambiente dedicato, ma lo fa solo per i seguenti motivi.
 
 <ul>
 <li>Per rispondere agli avvisi ed eseguire la manutenzione operativa</li>
@@ -311,7 +320,7 @@ La fase successiva è quella di avanzamento. La fase di avanzamento descrive il 
 |Esaminare le proiezioni | Esaminare le proiezioni della capacità relative ad eventi esterni che potrebbero influire sulle capacità. | Cliente |
 |Regolare la capacità |  Aggiungere o rimuovere capacità al mutare delle esigenze. | IBM |
 |Pubblicare gli aggiornamenti e la manutenzione previsti | Creare la documentazione per la manutenzione richiesta dei componenti IBM. | IBM |
-|Effettuare la manutenzione | Lavorare con IBM per pianificare la manutenzione richiesta all'interno di una finestra di 21 giorni. Puoi fornire delle date di non disponibilità all'interno della finestra di 30 giorni e IBM organizzerà di conseguenza la manutenzione. | Responsabilità condivisa tra IBM e il cliente |
+|Effettuare la manutenzione | Lavorare con IBM per pianificare la manutenzione richiesta all'interno di una finestra di 21 giorni. Puoi fornire le date che per te potrebbero non andare bene all'interno della finestra di 21 giorni; IBM provvederà a pianificare la manutenzione di conseguenza.  | Responsabilità condivisa tra IBM e il cliente |
 |Rilevamento di errori di provisioning | Correggere gli errori di provisioning, se presenti, per i servizi creati dal cliente che vengono distribuiti nel catalogo. | IBM |
 |Eseguire scansioni di rete e IP | Eseguire scansioni di rete e IP giornaliere e mensili. | Responsabilità condivisa tra IBM e il cliente |
 |Fornire accesso ai log di controllo | Fornire accesso a tutti i log di controllo amministrativo e della sicurezza.   | Responsabilità condivisa tra IBM e il cliente |
@@ -338,31 +347,27 @@ La fase finale di completamento rappresenta la fine del rapporto tra te e IBM {{
 ##Gestione della tua istanza dedicata
 {: #maintaindedicated}
 
-IBM effettua la manutenzione e l'installazione di aggiornamenti e correzioni ogni qualvolta lo ritenga appropriato per la piattaforma, i runtime e i servizi di {{site.data.keyword.Bluemix_notm}} dedicato.
+IBM effettua la manutenzione e l'installazione di aggiornamenti e correzioni ogni qualvolta lo ritenta appropriato per i runtime e i servizi {{site.data.keyword.Bluemix_notm}}. I servizi potrebbero non essere disponibili durante le finestre di manutenzione. Inoltre, IBM collabora con te per pianificare gli aggiornamenti di manutenzione per la piattaforma {{site.data.keyword.Bluemix_notm}}.
 
 Per
 {{site.data.keyword.Bluemix_notm}} dedicato sono richiesti i seguenti tipi di manutenzione:
 <dl>
 <dt>**Manutenzione standard per i servizi**</dt>
-<dd>I servizi utilizzano delle finestre di manutenzione standard predefinite, che potrebbero causare la non disponibilità del servizi. IBM non richiede l'approvazione dei clienti per eseguire la manutenzione, ma prova a ridurre al minimo l'impatto sui tuoi servizi.<br />
+<dd>I servizi utilizzano delle finestre di manutenzione standard predefinite, che potrebbero causare la non disponibilità del servizi. IBM non richiede l'approvazione dei clienti per eseguire la manutenzione dei servizi, ma prova a ridurre al minimo l'impatto sui tuoi servizi.<br />
 <br />
-IBM invia messaggi broadcast relativi alle modifiche pianificate per ciascuna finestra di manutenzione tramite email, telefono o altri metodi.<br />
+IBM invia dei messaggi di broadcast relativi alle modifiche pianificate per ciascuna finestra di manutenzione nella pagina Stato.<br />
 <br />
 **Importante**: alcuni servizi potrebbero non essere a tua disposizione durante il periodo di manutenzione.</dd>
 
-<dt>**Manutenzione standard per {{site.data.keyword.Bluemix_notm}}**</dt>
-<dd>Gli aggiornamenti di manutenzione vengono applicati in base al coordinamento tra te e IBM entro una finestra di 21 giorni. Puoi fornire a IBM date od orari specifici entro la finestra di 21 giorni che potrebbero non andare bene per te. IBM prova a pianificare gli aggiornamenti tenendo conto di tali indicazioni temporali. In base alle richieste, IBM ti comunica la finestra di manutenzione pianificata. Non si prevede che le finestre di modifica mensili abbiano un impatto sull'ambiente Bluemix dedicato in esecuzione.
-<p>La seguente immagine mostra il processo, dalla ricezione di una notifica su un aggiornamento in sospeso all'impostazione di date potenzialmente non funzionali, fino alla ricezione della notifica della data pianificata:</p>
-<p><img src="../local/images/maintenance_dates.png" alt="Processo di impostazione di date non disponibili per un aggiornamento di manutenzione"></p>
-<br />
-**Nota**: se non devi impostare alcuna data non disponibile per l'aggiornamento, puoi approvare l'aggiornamento. IBM notifica quindi la data prevista per l'esecuzione della manutenzione.<br />
-<br />
-Vai a **AMMINISTRAZIONE > INFORMAZIONI DI SISTEMA** per visualizzare gli aggiornamenti in sospeso, impostare le date non disponibili e approvare gli aggiornamenti. Per ulteriori informazioni sulle notifiche e sulla pianificazione degli aggiornamenti in sospeso, vedi <a href="../admin/index.html#oc_system">Visualizzazione delle informazioni sul sistema</a>.</dd>
+<dt>**Manutenzione standard per la piattaforma {{site.data.keyword.Bluemix_notm}}**</dt>
+<dd>Gli aggiornamenti di manutenzione vengono applicati in base al coordinamento tra te e IBM entro una finestra di 21 giorni. Fornisci a IBM le finestre di manutenzione preapprovate e le date o gli orari specifici che potrebbero non andare bene per te; IBM cercherà di pianificare gli aggiornamenti durante o intorno alle date da te selezionate.<p>
+<p>Vai a **AMMINISTRAZIONE > INFORMAZIONI DI SISTEMA** per visualizzare gli aggiornamenti di manutenzione pianificati e in sospeso. Per ulteriori informazioni sull'impostazione delle tue finestre preapprovate, e la visualizzazione o l'approvazione degli aggiornamenti di manutenzione, vai a <a href="../admin/index.html#oc_schedulemaintenance">Aggiornamenti di manutenzione</a></p>.</dd>
 </dl>
 
 **Importante**: IBM si riserva il diritto di interrompere i servizi per applicare la manutenzione di emergenza a seconda delle necessità. IBM potrebbe modificare le ore di manutenzione pianificate, ma verrai avvisato di tali modifiche nonché di tutte le informazioni relative alla manutenzione di emergenza.
 
-Per configurare la manutenzione della tua istanza dedicata, collabora con il rappresentante designato IBM per identificare una finestra concordata per la manutenzione standard. Se viene segnalato un problema dopo l'aggiornamento di manutenzione, insieme al rappresentante IBM puoi stabilire se sia utile consentire a IBM di eseguire il rollback dell'aggiornamento. Previo accordo, IBM esegue il rollback dell'aggiornamento per ripristinare l'ambiente allo stato precedente.
+Se viene segnalato un problema dopo l'aggiornamento di manutenzione, insieme al rappresentante del supporto {{site.data.keyword.Bluemix_notm}} puoi stabilire se ti è utile consentire a IBM di eseguire il rollback dell'aggiornamento. Previo accordo, IBM esegue il rollback dell'aggiornamento per ripristinare l'ambiente allo stato precedente.
+
 
 ## Supporto e risposta agli incidenti
 {: #incidentresponse}
@@ -389,7 +394,7 @@ A seconda del problema, dovrà essere risolto da te e/o da IBM. Se hai domande s
 ## Ripristino di emergenza
 {: #dr}
 
-{{site.data.keyword.Bluemix_short}} pubblico fornisce una piattaforma costantemente disponibile per l'innovazione. Le diverse misure alternative fanno sì che le tue organizzazioni, gli spazi e le applicazioni siano sempre disponibili. La distribuzione delle applicazioni in più regioni geografiche consente una disponibilità continua che protegge contro l'imprevista perdita simultanea di più componenti hardware o software o la perdita di un intero data center; in tal modo, anche in caso di catastrofe naturale in una posizione geografica, le istanze distribuite della tua applicazione {{site.data.keyword.Bluemix_notm}} pubblico saranno disponibili in posizioni geografiche alternative.
+Il ripristino di emergenza per {{site.data.keyword.Bluemix_short}} dedicato può essere configurato in modo analogo a quello valido quando si utilizza {{site.data.keyword.Bluemix_short}} pubblico. {{site.data.keyword.Bluemix_short}} pubblico fornisce una piattaforma costantemente disponibile per l'innovazione con più misure di sicurezza per garantire che le tue organizzazioni, i tuoi spazi e le tue applicazioni siano sempre disponibili. La distribuzione delle applicazioni in più regioni geografiche consente una disponibilità continua che protegge contro l'imprevista perdita simultanea di più componenti hardware o software o la perdita di un intero data center; in tal modo, anche in caso di catastrofe naturale in una posizione geografica, le istanze distribuite della tua applicazione {{site.data.keyword.Bluemix_notm}} pubblico saranno disponibili in posizioni geografiche alternative.
 {: shortdesc}
 
 Il ripristino di emergenza per {{site.data.keyword.Bluemix_short}} dedicato è reso possibile grazie alla disponibilità continua per le tue applicazioni, all'alta disponibilità intrinseca della piattaforma e alla possibilità di ripristinare l'istanza in caso di errore. Sei responsabile dell'abilitazione della disponibilità continua delle tue applicazioni mediante la distribuzione a più regioni. L'alta disponibilità viene integrata a livello della piattaforma tramite le tecnologie incluse in Cloud Foundry e altri componenti. Inoltre, puoi collaborare con IBM per assicurarti che il backup dei tuoi dati venga eseguito correttamente nel caso in cui sia necessario ripristinare la tua istanza.
@@ -410,7 +415,7 @@ Per impostazione predefinita, {{site.data.keyword.Bluemix_notm}} pubblico viene 
 Per eseguire la distribuzione in una seconda posizione o in più posizioni, devi seguire un processo simile a quello effettuato per abilitare la posizione geografica primaria:
 
 1. Abilita un nuovo ambiente dedicato per ospitare istanze aggiuntive delle tue applicazioni. Per creare un nuovo ambiente, contatta il team del settore vendite IBM per avviare il processo. Per ulteriori informazioni sulla configurazione di un'istanza dedicata, vedi [Configurazione di {{site.data.keyword.Bluemix_notm}} dedicato](../dedicated/index.html#setupdedicated). Devi effettuare un accesso distinto per ogni ambiente. Ciascuna posizione fisica degli ambienti host deve trovarsi ad almeno 200 km di distanza dalla posizione originale per garantire la disponibilità.
-2. Ottieni il nome di dominio univoco in cui verrà ospitata la tua nuova applicazione distribuita.  Ad esempio, se il dominio originale è *mycompany.east.bluemix.net*, puoi creare un nuovo ambiente locale con un nuovo dominio come, ad esempio, *mycompany.west.bluemix.net* e distribuire al nuovo dominio.
+2. Ottieni il nome di dominio univoco in cui verrà ospitata la tua nuova applicazione distribuita. Ad esempio, se il dominio originale è *mycompany.east.bluemix.net*, puoi creare un nuovo ambiente dedicato con un nuovo dominio come, ad esempio, *mycompany.west.bluemix.net* e distribuire al nuovo dominio.
 3. Ogni volta che distribuisci l'applicazione originale, esegui anche la distribuzione nella nuova posizione. Per ulteriori informazioni sulla distribuzione, vedi [Caricamento della tua applicazione](../starters/upload_app.html).
 
 
@@ -473,6 +478,6 @@ Poiché la protezione dei dati privati è di importanza critica, IBM ha bisogno 
 ## general
 * [Scopri: {{site.data.keyword.Bluemix_notm}} dedicato](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [Novità in {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossario](glossary/index.html)
+* [{{site.data.keyword.Bluemix_notm}} glossario](../overview/glossary/index.html)
 * [Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato](../admin/index.html#mng)
-* [Come contattare il supporto](../troubleshoot/getting_customer_support.html#bluemix_support)
+* [Come contattare il supporto](../support/index.html#getting-customer-support)

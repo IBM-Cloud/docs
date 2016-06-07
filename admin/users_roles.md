@@ -17,7 +17,7 @@ copyright:
 
 # Managing team members and roles
 {: #userroles}
-*Last updated: 16 May 2016*
+*Last updated: 1 June 2016*
 
 From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 
 {:shortdesc}
@@ -81,6 +81,8 @@ Account owners and organization managers can invite team members to orgs from th
 </ol>
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
+
+If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, you can add your SoftLayer team members. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Invite Team Members** page. Then, click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account. For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
 
 ## Editing roles
 {: #editinguserroles}

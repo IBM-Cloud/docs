@@ -42,16 +42,14 @@ copyright:
 [ cf 명령행 인터페이스 설치](../starters/install_cli.html){: new_window}를
 참조하십시오.
 
-  1. cf 명령행 인터페이스에 다음 코드를 입력하여
-{{site.data.keyword.Bluemix_notm}}에 연결하십시오. ```
+  1. cf 명령행 인터페이스에 다음 코드를 입력하여 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
+```
 	 cf api https://api.ng.bluemix.net
 	 ```
 	 
-  2. `cf login`을 입력하여 {{site.data.keyword.Bluemix_notm}}에
-로그인하십시오. 
+  2. `cf login`을 입력하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 
   
-  3. `cf logs appname --recent`를 입력하여 최근 로그를 검색하십시오. 자세한 로그를 필터링하려면 `grep` 옵션을
-사용하십시오. 예를 들어 다음 코드를 입력하여 [STG] 로그만 표시할 수 있습니다.
+  3. `cf logs appname --recent`를 입력하여 최근 로그를 검색하십시오. 자세한 로그를 필터링하려면 `grep` 옵션을 사용하십시오. 예를 들어 다음 코드를 입력하여 [STG] 로그만 표시할 수 있습니다.
 ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
@@ -59,11 +57,7 @@ copyright:
   
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 플러그인을 사용하여 애플리케이션을 배치하는 경우 Eclipse 도구의 **콘솔** 탭에서 cf logs 출력과 유사한 로그를 확인할 수 있습니다. 별도의 Eclipse 창을 열어 애플리케이션을 배치할 때 `로그`를 추적할 수도 있습니다. 
 
-`cf logs`
-명령 이외에도, {{site.data.keyword.Bluemix_notm}}에서
-Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집할 수도 있습니다.
-또한 Monitoring and Analytics 서비스는 애플리케이션의 성능, 상태 및 가용성을
-모니터링하며, Node.js 및 Liberty 런타임 애플리케이션에 대한 로그 분석을 제공합니다.   
+`cf logs` 명령 이외에도, {{site.data.keyword.Bluemix_notm}}에서 Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집할 수도 있습니다. 또한 Monitoring and Analytics 서비스는 애플리케이션의 성능, 상태 및 가용성을 모니터링하며, Node.js 및 Liberty 런타임 애플리케이션에 대한 로그 분석을 제공합니다.   
 
 ### Node.js 애플리케이션에 대한 스테이징 오류 디버깅
 
@@ -172,6 +166,7 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
 {: #rellinks}
 
 ## 일반
+{: #general}
 
   * [DEA(Droplet Execution Agent)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [IBM Monitoring and Analytics for Bluemix 서비스 시작하기](../services/monana/index.html#gettingstartedtemplate){: new_window}

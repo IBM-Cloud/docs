@@ -14,7 +14,7 @@ copyright:
 #アプリのデプロイ
 {: #deployingapps}
 
-*最終更新日: 2016 年 3 月 17 日*
+*最終更新日: 2016 年 5 月 9 日*
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
 {:shortdesc}
@@ -55,7 +55,7 @@ copyright:
   cf push
   ```
   
-  Liberty ビルドパックの詳細については、[「Liberty for Java」](../starters/liberty/index.html#liberty)を参照してください。
+  Liberty ビルドパックの詳細については、[「Liberty for Java」](../runtimes/liberty/index.html)を参照してください。
   
   * Java Tomcat アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
@@ -271,14 +271,14 @@ DEA によって定義された変数を以下に示します。
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -444,7 +444,11 @@ tmp/
 ```
 
 # 関連リンク
-## 一般 
+{: #rellinks}
+
+## 関連リンク
+{: #general}
+
 * [アプリケーション・マニフェストを使用したデプロイ](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF マニフェスト生成プログラム](http://cfmanigen.mybluemix.net/){:new_window}
 * [cf v6 入門](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

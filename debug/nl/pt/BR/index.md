@@ -12,7 +12,7 @@ copyright:
 {:screen: .screen}
 
 
-# Depurando
+# Depuração
 {: #debugging}
 
 *Última atualização: 3 de março de 2016*
@@ -135,6 +135,7 @@ Os arquivos `stdout.log` e `stderr.log` anteriormente estavam disponíveis por p
 {: #rellinks}
 
 ## general
+{: #general}
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Introdução ao serviço IBM Monitoring and Analytics for Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}

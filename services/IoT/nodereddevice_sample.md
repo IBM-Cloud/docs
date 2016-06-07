@@ -4,21 +4,15 @@ copyright:
   years: 2016
 
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
-<!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Creating and connecting a Node-RED device simulator
-Use Node-RED to create a device simulator and send simulated device data to your {{site.data.keyword.iot_short}} organization.  
+Use Node-RED to create a device simulator and send simulated device data to your {{site.data.keyword.iot_full}} organization.  
 {:shortdesc}
 
 Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways. For more information, see the [Node-RED](http://nodered.org/) web site.  
@@ -28,7 +22,7 @@ You can run your Node-RED instance in your own environment or use it as a {{site
 To create and connect the Node-RED device simulator:
 
 1. Create the Node-RED device simulator
-   Use the device simulator to send MQTT device messages to {{site.data.keyword.iot_short}}. The device simulator simulated sending data for a freight container to an MQTT broker such as {{site.data.keyword.iot_short}}.
+   Use the device simulator to send MQTT device messages to {{site.data.keyword.iot_short_notm}}. The device simulator simulated sending data for a freight container to an MQTT broker such as {{site.data.keyword.iot_short_notm}}.
     1. Log in to {{site.data.keyword.Bluemix_notm}} at: https://console.ng.bluemix.net
     2. Select the **Catalog** tab.
     3. Locate the Boilerplates section of the service catalog and click  **Node-RED Starter Community BETA**. **Tip:** Click  [here](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) to go directly to the Node-RED Starter page.
@@ -49,12 +43,12 @@ To create and connect the Node-RED device simulator:
     6. Paste the clipboard into the import nodes input field and and click **Ok**.
     The device simulator flow is imported to the flow editor.
 
-2. Register your device with {{site.data.keyword.iot_short}}  
+2. Register your device with {{site.data.keyword.iot_short_notm}}  
 Follow these steps to connect the the Node-RED sample device:
  1. In {{site.data.keyword.Bluemix_notm}}, go to Dashboard
- 2. Select the space in which you deployed {{site.data.keyword.iot_short}}.
- 3. Click the **{{site.data.keyword.iot_short}}** tile.
- 4. Click **Launch dashboard** to open the {{site.data.keyword.iot_short}} dashboard.
+ 2. Select the space in which you deployed {{site.data.keyword.iot_short_notm}}.
+ 3. Click the **{{site.data.keyword.iot_short_notm}}** tile.
+ 4. Click **Launch dashboard** to open the {{site.data.keyword.iot_short_notm}} dashboard.
  5. Select **Devices**
  6. Click **Add Device**
  7. Click **Create device type**.
@@ -77,12 +71,12 @@ Follow these steps to connect the the Node-RED sample device:
   </ul>
   **Tip:** You will need Organization ID, Authentication Token, Device Type, and Device ID in the next few steps to finalize the configuration of the Node-RED application to complete the connection.
 
-2. Connect your device to {{site.data.keyword.iot_short}}  
+2. Connect your device to {{site.data.keyword.iot_short_notm}}  
  1. Open the Node-RED flow editor.
  2. Double-click the Publish to IoT node.
  3. Verify that the topic entry is: `iot-2/evt/event_name/fmt/json` **Tip:** The /event_name part of the topic sets the event name for the published events.
  4. Click the edit icon next to the Server field.
- 5. Update the Server name to correspond to your {{site.data.keyword.iot_short}} organization.  
+ 5. Update the Server name to correspond to your {{site.data.keyword.iot_short_notm}} organization.  
  ```
  {organization_ID}.messaging.internetofthings.ibmcloud.com
  ```  
@@ -100,7 +94,7 @@ Follow these steps to connect the the Node-RED sample device:
  13. Verify that the Publish to IoT node connection status displays *connected*.  **Tip:** If the connection is not made, double check the settings that you entered. Even a small cut and paste error will cause the connection to fail.
 
 4. Validate the device connection
- 1. In another browser tab or window, open the {{site.data.keyword.iot_short}} dashboard.
+ 1. In another browser tab or window, open the {{site.data.keyword.iot_short_notm}} dashboard.
  2. Select **Devices** and click **Device001** or the name of the device that you added, if different.  
  The device information page opens. This view lets you see the connection status for your device. The device should show as disconnected at this stage.   
  3. Back in your Node-RED flow editor, click the button on the Inject node to generate an asset payload.  
@@ -121,7 +115,7 @@ Follow these steps to connect the the Node-RED sample device:
   {:codeblock}  
 
  3. In the debug tab of the right pane, verify that messages are created.  
- 4. Back in the {{site.data.keyword.iot_short}} device information page, the device should now be connected. Verify that you see the same data points received from the device.  
+ 4. Back in the {{site.data.keyword.iot_short_notm}} device information page, the device should now be connected. Verify that you see the same data points received from the device.  
  ```
  Event	Datapoint	 Value	Time Received
  event_name	d.name	My Device	May 16, 2016 2:22:18 PM
@@ -132,7 +126,7 @@ Follow these steps to connect the the Node-RED sample device:
  ```  
   {:codeblock}  
 
- You have now connected your sample IoT device to {{site.data.keyword.iot_short}} and can see device data.
+ You have now connected your sample IoT device to {{site.data.keyword.iot_short_notm}} and can see device data.
 
 ## Node-RED node flow data
 {: #flow_data}  

@@ -24,7 +24,7 @@ copyright:
 
 패키지는 *조치* 및 *피드*를 포함할 수 있습니다.
 - 조치는 {{site.data.keyword.openwhisk_short}}에서 실행되는 코드 조각입니다. 예를 들어, Cloudant 패키지에는 Cloudant 데이터베이스에 대한 레코드를 읽고 쓰는 조치가 포함됩니다.
-- 피드는 트리거 이벤트를 실행하기 위해 외부 이벤트 소스를 구성하는 데 사용됩니다. 예를 들어, 알람 패키지에는 지정된 빈도로 트리거를 실행할 수 있는 피드가 포함됩니다.
+- 피드는 트리거 이벤트를 실행하기 위해 외부 이벤트 소스를 구성하는 데 사용됩니다. 예를 들어, Alarm 패키지에는 지정된 빈도로 트리거를 실행할 수 있는 피드가 포함됩니다.
 
 패키지를 포함하여 모든 {{site.data.keyword.openwhisk_short}} 엔티티는 *네임스페이스*에 속하며 엔티티의 완전한 이름은 `/namespaceName[/packageName]/entityName`입니다. 자세한 정보는 [이름 지정 가이드라인](./openwhisk_reference.html#openwhisk_entities)을 참조하십시오.
 
@@ -210,7 +210,7 @@ copyright:
 ## 트리거 피드 작성 및 사용
 {: #openwhisk_package_trigger}
 
-피드는 {{site.data.keyword.openwhisk_short}} 트리거에 대해 해당 이벤트를 실행하도록 외부 이벤트 소스를 구성하는 편리한 방법을 제공합니다. 이 예는 알람 패키지에서 피드를 사용하여 매초 트리거를 실행하고 규칙을 사용하여 매초 조치를 호출하는 방법을 보여줍니다.
+피드는 {{site.data.keyword.openwhisk_short}} 트리거에 대해 해당 이벤트를 실행하도록 외부 이벤트 소스를 구성하는 편리한 방법을 제공합니다. 이 예는 Alarm 패키지에서 피드를 사용하여 매초 트리거를 실행하고 규칙을 사용하여 매초 조치를 호출하는 방법을 보여줍니다.
 
 1. `/whisk.system/alarms` 패키지에서 피드의 설명을 가져오십시오.
 
@@ -425,7 +425,6 @@ copyright:
   ```
   {: pre}
   ```
-  ok: invoked sample/identity with id cccaf61a77054101952494522f36c1ca
   {
       "city": "Austin",
       "country": "USA"

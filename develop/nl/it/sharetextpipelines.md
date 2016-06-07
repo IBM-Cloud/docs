@@ -216,7 +216,7 @@ anche l'altro.
 Variabile | Descrizione 
 ---------------- | ---------------- 
 CF_TARGET_URL |	URL di destinazione Bluemix
-CF_ORGANIZATION	| Nome organizzazione
+CF_ORGANIZATION	| Nome dell'organizzazione
 CF_ORGANIZATION_ID	| GUID organizzazione
 CF_SPACE |	Nome spazio
 CF_SPACE_ID |	GUID spazio

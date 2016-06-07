@@ -35,11 +35,11 @@ Nachdem Sie sich registriert haben, beginnen Sie in der {{site.data.keyword.Blue
 
 In {{site.data.keyword.Bluemix_notm}} werden Apps Organisationen und Bereichen zugeordnet. Eine Organisation wird von mehreren Mitarbeitern verwendet, die ihr Eigner sind. Zunächst erhalten Sie eine Standardorganisation, die nach Ihrem Benutzernamen benannt ist, und Sie sind der einzige Mitarbeiter. Sie erhalten auch einen Bereich innerhalb dieser Organisation. Der Bereich ist eine Umgebung, in der Ihre Apps ausgeführt werden. Beispiel: Sie können einen Entwicklungsbereich als Entwicklungsumgebung verwenden, einen Testbereich als Testumgebung und einen Produktionsbereich als Produktionsumgebung. Darüber hinaus gehört jede Umgebung zu einer Region. Mit {{site.data.keyword.Bluemix_notm}} können Sie Ihre Anwendungen in einer bestimmten geografischen Region bereitstellen, um die Netzlatenz zu verringern und den Datenschutz und die Verfügbarkeit zu verbessern. Details finden Sie unter 'Regionen'.
 
-In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Wählen Sie nach der Anmeldung bei {{site.data.keyword.Bluemix_notm}} die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
-  1. Klicken Sie auf **Anwendung erstellen**.
-  2. Wählen Sie die Option **Web** aus.
-  3. Wählen Sie für Ihre Web-App das Starter-SDK 'SDK for Node.js' aus und klicken Sie auf **Weiter**.
-  4. Geben Sie einen eindeutigen Namen für die App ein, z. B. TestNode, und klicken Sie auf **Fertigstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
+In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach dem Anmelden bei {{site.data.keyword.Bluemix_notm}} in der oberen, rechten Ecke auf Ihren Kontonamen und wählen Sie die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
+
+  1. Klicken Sie auf die Schaltfläche mit dem Pluszeichen.
+  2. Wählen Sie **Compute**>**CF-Anwendungen**>**SDK for Node.js** aus.
+  3. Geben Sie einen eindeutigen Namen für Ihre App ein. Zum Beispiel: TestNode. Klicken Sie anschließend auf **Erstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
   
 Jetzt werden die **Coding beginnen**-Anweisungen angezeigt. Sie können die Anweisungen befolgen, um den Startercode von TestNode herunterzuladen, zu ändern und bereitzustellen.
 
@@ -113,11 +113,11 @@ TestNode zu beginnen.
 	```
 	
     **Anforderung:** Vergewissern Sie sich, dass Sie stets die neueste Version des Befehlszeilentools 'cf' verwenden.
-  3. Nach der Installation der Befehlszeilenschnittstelle **cf** müssen Sie angeben, mit welcher {{site.data.keyword.Bluemix_notm}}-Region Sie arbeiten wollen, indem Sie den Befehl **cf api** verwenden. Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet wie folgt: stage1.ng.bluemix.net. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
+  3. Nach der Installation der Befehlszeilenschnittstelle **cf** müssen Sie angeben, mit welcher {{site.data.keyword.Bluemix_notm}}-Region Sie arbeiten wollen, indem Sie den Befehl **cf api** verwenden. Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet: {{Domain}}. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
 {{site.data.keyword.Bluemix_notm}} herzustellen:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Weitere Informationen zum Herstellen einer Verbindung zu anderen {{site.data.keyword.Bluemix_notm}}-Regionen finden Sie im Abschnitt zu den {{site.data.keyword.Bluemix_notm}}-Regionen. Nach Angabe der {{site.data.keyword.Bluemix_notm}}-Region werden die von Ihnen angegebenen Positionsinformationen
@@ -139,7 +139,7 @@ gespeichert.
   
   6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Sie können auch andere Tools zum Erstellen der App verwenden, z. B. Eclipse-Tools. Weitere Informationen finden Sie auf der Seite 'Coding beginnen' Ihrer App in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.

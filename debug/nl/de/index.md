@@ -138,6 +138,7 @@ Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig üb
 {: #rellinks}
 
 ## Allgemein
+{: #general}
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Erste Schritte mit dem IBM Bluemix-Service 'Monitoring and Analytics'](../services/monana/index.html#gettingstartedtemplate){: new_window}

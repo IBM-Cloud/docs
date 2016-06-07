@@ -14,7 +14,7 @@ copyright:
 #部署應用程式
 {: #deployingapps}
 
-*前次更新：2016 年 3 月 17 日*
+*前次更新：2016 年 5 月 9 日*
 
 若要將應用程式部署至 {{site.data.keyword.Bluemix}}，您可以使用各種方式，例如，指令行介面及整合開發環境 (IDE)。還可以使用應用程式資訊清單來部署應用程式。使用應用程式資訊清單，可讓您減少每次將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，所必須指定的部署詳細資料數量。
 {:shortdesc}
@@ -26,7 +26,7 @@ copyright:
 
 ###編譯打包應用程式
 
-在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構、{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
+在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構：{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
 
 在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 執行時期，或 .js 檔的 Node.js 執行時期。然後，DEA 會建立隔離的儲存器，其中包含建置套件及應用程式碼。儲存器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
@@ -55,7 +55,7 @@ copyright:
   cf push
   ```
   
-  如需「Liberty 建置套件」的相關資訊，請參閱 [Liberty for Java](../starters/liberty/index.html#liberty)。
+  如需「Liberty 建置套件」的相關資訊，請參閱 [Liberty for Java](../runtimes/liberty/index.html)。
   
   * 若要將 Java Tomcat 應用程式部署至 {{site.data.keyword.Bluemix_notm}}，請使用下列指令：
   
@@ -80,7 +80,7 @@ copyright:
   cf push appname -p app_path
   ```
   
-對於要由 Node.js 建置套件辨識的應用程式，`package.json` 檔案必須位於 Node.js 應用程式中。`app.js` 檔案是應用程式的登錄 Script，可以在 `package.json` 檔案中指定。下列範例顯示簡式 `package.json` 檔案：
+`package.json` 檔案必須位於 Node.js 應用程式中，Node.js 建置套件才能辨識該應用程式。`app.js` 檔案是應用程式的登錄 Script，可以在 `package.json` 檔案中指定。下列範例顯示簡式 `package.json` 檔案：
 
   ```
   {
@@ -271,14 +271,14 @@ cf push -f appManifest.yml
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -444,7 +444,11 @@ tmp/
 ```
 
 # 相關鏈結
-## 一般 
+{: #rellinks}
+
+## 相關鏈結
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

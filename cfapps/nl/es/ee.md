@@ -39,13 +39,12 @@ Después de iniciar la sesión, puede empezar a crear la primera app mediante la
 
 En {{site.data.keyword.Bluemix_notm}}, las apps están asociados a organizaciones y espacios. Una organización es propiedad de varios colaboradores, quienes la utilizan. Inicialmente, obtiene una organización predeterminada que se llama como su nombre de usuario y cuyo único colaborador es usted. También obtiene un espacio dentro de esta organización. El espacio es un entorno en el que ejecutar sus apps; por ejemplo, puede tener un espacio dev como entorno de desarrollo, un espacio test como entorno de prueba y un espacio production como entorno de producción. Además, cada uno de los entornos pertenece a una región. Con {{site.data.keyword.Bluemix_notm}}, puede desplegar las apps en una determinada región geográfica para reducir la latencia de la red, y mejorar la privacidad de los datos y la disponibilidad. Consulte Regiones para obtener detalles.
 
-En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Tras iniciar sesión en {{site.data.keyword.Bluemix_notm}}, selecciona la región **EE. UU.
-sur**. A continuación, puede llevar a cabo los
+En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Después de iniciar la sesión en {{site.data.keyword.Bluemix_notm}}, pulse el nombre de cuenta en la parte superior derecha y seleccione la región **EE. UU. sur**. A continuación, puede llevar a cabo los
 siguientes pasos para crear una app:
-  1. Pulse **CREAR UNA APP**.
-  2. Seleccione **Web**.
-  3. Seleccione el SDK iniciador de Node.js para la app web y pulse **Continuar**.
-  4. Escriba un nombre exclusivo para la app, como por ejemplo NodoPrueba, y pulse **Finalizar**. El nombre de la app debe ser exclusivo en todo el entorno {{site.data.keyword.Bluemix_notm}}.
+
+  1. Pulse el botón más.
+  2. Seleccione **Calcular**>**Aplicaciones CF**>**SDK for Node.js**.
+  3. Escriba un nombre exclusivo para la app, como por ejemplo NodoPrueba, y pulse **Crear**. El nombre de la app debe ser exclusivo en todo el entorno {{site.data.keyword.Bluemix_notm}}.
   
 Ahora puede ver las instrucciones **Empezar a escribir código**. Puede seguir las instrucciones para descargar el código del iniciador de NodoPrueba, modificarlo y desplegarlo.
 
@@ -108,10 +107,10 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
 	```
 	
     **Requisito:** Asegúrese de utilizar siempre la última versión de la herramienta de línea de mandatos cf.
-  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la región EE. UU. sur es stage1.ng.bluemix.net. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
+  3. Después de instalar la interfaz de línea de mandatos **cf**, debe especificar la región de {{site.data.keyword.Bluemix_notm}} con la que desea trabajar mediante el mandato **cf api**. La interfaz de línea de mandatos **cf** utiliza *https://api.URL_Bluemix*, donde *URL_Bluemix* es el URL de la región. El URL de la Región EE.UU. sur es {{Domain}}. Especifique el mandato siguiente para conectarse a {{site.data.keyword.Bluemix_notm}}:
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Para obtener más información sobre cómo conectarse a otras regiones de {{site.data.keyword.Bluemix_notm}}, consulte Regiones de {{site.data.keyword.Bluemix_notm}}. Después de especificar la región de {{site.data.keyword.Bluemix_notm}}, la información sobre ubicación que ha especificado se guarda.
@@ -132,7 +131,7 @@ Pulse **Variables de entorno** en la página Visión general de la app para ver 
   
   6. Ahora puede acceder a la app especificando el siguiente URL de app en un navegador:
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 También puede elegir otras herramientas para crear la

@@ -15,7 +15,7 @@ copyright:
 # Fehlerbehebung für den Zugriff auf {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Letzte Aktualisierung: 13. April 2016*
+*Letzte Aktualisierung: 16. Mai 2016*
 
 Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix}} kann sein, dass sich ein Benutzer nicht an {{site.data.keyword.Bluemix_notm}} anmelden kann oder dass sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
@@ -100,7 +100,7 @@ einer {{site.data.keyword.Bluemix_notm}}-Region
 den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
 den folgenden Befehl eingeben:
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -273,7 +273,7 @@ oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie die
 Möglicherweise können Sie den Debugmodus nicht aktivieren, wenn die JVM-Version 8 oder eine frühere Version verwendet wird (JVM = Java Virtual Machine). 
 
 
-Wenn Sie die Option zum Aktivieren des Anwendungsdebuggings**** auswählen, versuchen die Tools, die Anwendung in den Debugmodus zu versetzen. Daraufhin startet die Eclipse-Workbench eine Debugsitzung. Wenn die Tools den Debugmodus erfolgreich aktivieren können, wird als Status für die Webanwendung `Updating mode` (Aktualisierungsmodus), `Developing` (Entwicklung) und `Debugging` (Fehlerbehebung) angezeigt.
+Wenn Sie die Option zum Aktivieren des Anwendungsdebuggings**** auswählen, versuchen die Tools, die Anwendung in den Debugmodus zu versetzen. Daraufhin startet die Eclipse-Workbench eine Debugsitzung. Wenn die Tools den Debugmodus erfolgreich aktivieren können, wird als Status für die Webanwendung `Updating mode` (Aktualisierungsmodus), `Developing` (Entwicklung) und `Debugging` (Fehlerbehebung) angezeigt. 
 {: tsSymptoms}
 
 Wenn die Tools den Debugmodus jedoch nicht aktivieren können, wird als Status für die Webanwendung lediglich `Updating mode` (Aktualisierungsmodus) und `Developing` (Entwicklung) ohne die Angabe `Debugging` (Fehlerbehebung) angezeigt. Außerdem zeigen die Tools möglicherweise die folgende Fehlernachricht in der Konsolenansicht an:
@@ -373,7 +373,7 @@ Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen de
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
 {: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie unter [Organisationen verwalten](../admin/adminpublic.html#orgmng){: new_window}.
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Details finden Sie unter [Organisationen verwalten](../admin/orgs_spaces.html).
  
 
  
@@ -1035,7 +1035,7 @@ Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der Anw
 
  
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die Anwendung mit einer Push-Operation als WAR-Anwendung übertragen. Weitere Informationen finden Sie im [Abschnitt zur Erstellung von Anwendungen mit Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die Anwendung mit einer Push-Operation als WAR-Anwendung übertragen. Weitere Informationen finden Sie unter [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1309,7 +1309,7 @@ Es kann vorkommen, dass in {{site.data.keyword.Bluemix_notm}} von mehreren Anwen
 Dieses Problem kann auftreten, wenn Sie unterschiedlichen Anwendungen in einem Bereich dieselbe URL-Route zuweisen.
 {: tsCauses}
 
-Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen Sie als Domäne 'mynewapp.stage1.mybluemix.net' fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' in demselben Bereich per Push-Operation und legen für eine ihrer URL-Routen unter den Namen 'mynewapp.stage1.mybluemix.net' fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
+Beispiel: Sie übertragen die Anwendung 'myApp1' per Push-Operation an {{site.data.keyword.Bluemix_notm}} und legen als Domäne "mynewapp.mybluemix.net" fest. Anschließend übertragen Sie eine weitere Anwendung mit dem Namen 'myApp2' per Push-Operation in denselben Bereich und legen für eine der URL-Routen den Namen "mynewapp.mybluemix.net" fest. Die Route ist jetzt beiden Anwendungen zugeordnet.
 
  
 

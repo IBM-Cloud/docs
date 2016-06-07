@@ -14,7 +14,7 @@ copyright:
 #Actualización de apps
 {: #updatingapps}
 
-*Última actualización: 17 de marzo de 2016*
+*Última actualización: 9 de mayo de 2016*
 
 
 Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las app en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
@@ -289,8 +289,12 @@ delete`.
   **Resultado:** La app *Green* responde al URL `Blue.mybluemix.net`.
 
 
-# rellinks
-## general 
+# Enlaces relacionados
+{: #rellinks}
+
+## Enlaces relacionados
+{: #general}
+
 * [Despliegues Blue-Green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

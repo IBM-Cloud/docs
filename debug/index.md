@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,7 @@ copyright:
 # Debugging
 {: #debugging}
 
-*Last updated: 3 March 2016*
+*Last updated: 25 May 2016*
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors. 
 {:shortdesc}
@@ -27,9 +28,10 @@ Logs are in a fixed format. For verbose logs, you can filter the logs or use ext
 
 ## Debugging staging errors
 {: #debugging-staging-errors}
-You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can view logs to see the cause of the error and to recover from the problem.
+You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for Bluemix apps, see [viewing logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](../manageapps/depapps.html#appdeploy){: new_window}.
+To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](../manageapps/depapps.html#appdeploy){: new_window}.
+
 
 The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
 
@@ -46,7 +48,7 @@ The following procedure shows how you can use the `cf logs` command to debug sta
 	```
   4. View the first error that is displayed in the log.
   
-If you use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plugin to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
+If you use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} plug-in to deploy applications, in the **Console** tab of the Eclipse tool, you can see logs that are similar to the cf logs output. You can also open a separate Eclipse window to track `the logs` when you deploy the application.
 
 In addition to the `cf logs` command, in {{site.data.keyword.Bluemix_notm}} you can also use the Monitoring and Analytics service to collect the log details. In addition, the Monitoring and Analytics service monitors the performance, health, and availability of your applications. It also provides log analytics for Node.js and Liberty runtime applications.  
 
@@ -129,6 +131,18 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
   * For PHP applications, you can use the error_log function write to a file in the logs directory.
   * For Python applications, you can have the logger write to a file in the logs directory: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * For Ruby applications, you can have the logger write to a file in the logs directory.
+ 
+ 
+### Debugging code changes
+{: #debug_code_changes}
+
+If you are making code changes to an app that is already deployed and working, yet your code changes aren't being reflected in {{site.data.keyword.Bluemix_notm}}, you can debug by using the logs. Whether or not your app is running, you can check the logs that are generated during the app deployment or runtime to debug why the new code isn't working.
+
+Depending on the way the new code is deployed, choose one of the following methods to debug the code changes: 
+
+  * For new code that is deployed from the cf command line, check the output from the *cf push* command. In addition, you can use the *cf logs* command to find more clues for solving the problem. For more information about how to use the *cf logs* command, see [viewing logs from the command line interface](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * For new code that is deployed from a GUI such as the {{site.data.keyword.Bluemix_notm}} user interface, DevOps Delivery Pipeline, or Travis-CI, you can check the logs from the interface. For example, if you deploy the new code from {{site.data.keyword.Bluemix_notm}} user interface, you can go to Dashboard, find your app, and then view logs for clues.   For more information about how to view logs from the {{site.data.keyword.Bluemix_notm}} user interface, see [Viewing logs from Bluemix Dashboard](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks

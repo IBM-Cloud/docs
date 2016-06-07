@@ -17,7 +17,7 @@ copyright:
 
 #Apps in {{site.data.keyword.Bluemix_notm}} hosten
 
-*Letzte Aktualisierung: 18. April 2016*
+*Letzte Aktualisierung: 9. Mai 2016*
 
 <!--The whole topic is staging only -->
 
@@ -189,7 +189,11 @@ Wenn Sie sicherstellen möchten, dass die Anwendung nach ihrer Änderung für {{
 
 
 # Zugehörige Links
-## Allgemein 
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Einführung in Delivery Pipeline](../services/DeliveryPipeline/index.html)

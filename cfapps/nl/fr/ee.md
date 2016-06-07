@@ -48,12 +48,12 @@ disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
-utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Une fois connecté à {{site.data.keyword.Bluemix_notm}},
-sélectionnez la région **US South**. Ensuite, procédez comme suit pour créer une application :
-  1. Cliquez sur **Créer une application**.
-  2. Sélectionnez **Web**.
-  3. Sélectionnez le module de démarrage SDK for Node.js pour votre application Web et cliquez sur **Continuer**.
-  4. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Terminer**. Le nom de
+utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Une fois connecté à {{site.data.keyword.Bluemix_notm}}, cliquez
+sur le nom de votre compte dans le coin supérieur droit et sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
+
+  1. Cliquez sur le bouton plus. 
+  2. Sélectionnez **Calcul**>**Applications CF**>**SDK for Node.js**.
+  3. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Créer**. Le nom de
 l'application doit être unique dans l'ensemble de l'environnement {{site.data.keyword.Bluemix_notm}}.
   
 A présent, vous pouvez lire les instructions **Commencer le codage**. Vous pouvez suivre les instructions de téléchargement, de
@@ -142,11 +142,11 @@ cf.
   3. Une fois que vous avez installé l'interface de ligne de commande **cf**, vous devez spécifier la région
 {{site.data.keyword.Bluemix_notm}} que vous voulez utiliser avec la commande **cf api**. L'interface de ligne de commande
 **cf** utilise *https://api.URL_Bluemix*, où *URL_Bluemix* est l'adresse URL de la région. L'adresse URL de la
-région Sud des Etats-Unis est stage1.ng.bluemix.net. Entrez
+région Sud des Etats-Unis est {{Domain}}. Entrez
 la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}} :
   
   ```
-  cf api https://api.stage1.ng.bluemix.net
+  cf api https://api.ng.bluemix.net
   ```
   
   Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}. Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
@@ -169,7 +169,7 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   
   6. A présent, vous pouvez accéder à l'application en entrant l'adresse URL de l'application suivante dans un navigateur :
   ```
-  http://TestNode.stage1.mybluemix.net
+  http://TestNode.mybluemix.net
   ```
 
 Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page

@@ -14,7 +14,7 @@ copyright:
 #Protección de apps
 {: #securingapps}
 
-*Última actualización: 30 de marzo de 2016*
+*Última actualización: 9 de mayo de 2016*
 
 Puede proteger las app subiendo certificados SSL y limitando el acceso a las app.
 {:shortdesc}
@@ -79,15 +79,12 @@ Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario 
 Para poder cargar los certificados, debe crear una
 solicitud de firma de certificado. Consulte [Creación de solicitudes de firma de certificado](#ssl_csr).
 
-Para poder servir correctamente el certificado SSL, debe utilizar la siguiente dirección IP para configurar el servidor DNS al crear un dominio personalizado para proporcionar la ruta URL que esté alojada en su organización en {{site.data.keyword.Bluemix_notm}}.
+Cuando utiliza un dominio personalizado, para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en Bluemix:
 
-* US-SOUTH: 75.126.81.68
-* EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.166
+  * US-South: secure.us-south.bluemix.net 
+  * EU-GB: secure.eu-gb.bluemix.net
+  * AU-SYD: secure.au-syd.bluemix.net 
 
-Las direcciones IP que utiliza para entornos dedicados son diferentes. Contacte con su representante de IBM para conseguir una dirección IP de entorno dedicado.
-
-Para obtener más información sobre cómo crear un dominio personalizado, consulte [Creación y utilización de un dominio personalizado](updapps.html#domain).
 
 Para cargar un certificado para la aplicación:
 
@@ -103,6 +100,9 @@ Para cargar un certificado para la aplicación:
     
     Documento digital que enlaza una clave pública con la identidad del propietario
 del certificado, permitiendo de este modo autenticar al propietario de este certificado. Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente.
+    
+    Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
+
     
     En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
 
@@ -130,14 +130,13 @@ protege mediante una contraseña.
   
   **Habilitar solicitud de certificado de cliente**
   
-    Si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado. 
+    Si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
   
   **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las app {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte la [sección 7.4.2 de RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Almacén de confianza de certificado de cliente**
   
-  El almacén de confianza de certificado de cliente es un archivo que contiene los certificados de cliente para los usuarios que desea que puedan acceder a la aplicación. Si habilita la opción para solicitar un certificado de cliente, cargue un archivo de almacén de confianza de certificado de cliente.
- 
+  El almacén de confianza de certificado de cliente es un archivo que contiene los certificados de cliente para los usuarios que desea que puedan acceder a la aplicación. Si habilita la opción para solicitar un certificado de cliente, cargue un archivo de almacén de confianza de certificado de cliente. 
   
    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
     

@@ -51,9 +51,9 @@ copyright:
 # Tarifas
 {: #pricing}
 
-*Última actualización: 29 de marzo de 2016*
+*Última actualización: 16 de mayo de 2016*
 
-Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista de detalles de uso para comprobar el coste real después de crear las apps.
+Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista Panel de control de uso para comprobar el coste real después de crear las apps.
 {:shortdesc}
 
 ## Prueba gratuita
@@ -83,8 +83,8 @@ Si convierte la cuenta durante el periodo de prueba gratuito, las concesiones gr
 ##Coste
 {: #what_it_costs}
 
-Los cargos varían en función de los recursos utilizados por un servicio concreto, el tiempo de ejecución, el contenedor, la máquina virtual o la opción de soporte. Los recursos pueden ser el número de llamadas de API, el número de instancias,
-memoria, almacenamiento, etc. {{site.data.keyword.Bluemix_notm}} también proporciona estimadores de coste detallado, y una calculadora de coste hasta el último céntimo para ayudarle a planificar los cargos. Puede comprobar el coste real tras crear las apps utilizando la vista *Detalles de uso*. Para obtener información más detallada sobre los cargos, consulte [Cómo se le carga](index.html#charges).
+Los cargos varían en función de los recursos utilizados por un servicio concreto, el tiempo de ejecución, el contenedor, el servidor virtual o la opción de soporte. Los recursos pueden ser el número de llamadas de API, el número de instancias,
+memoria, almacenamiento, etc. {{site.data.keyword.Bluemix_notm}} también proporciona estimadores de coste detallado, y una calculadora de coste hasta el último céntimo para ayudarle a planificar los cargos. Puede comprobar el coste real tras crear las apps utilizando la vista *Panel de control de uso*. Para obtener información más detallada sobre los cargos, consulte [Cómo se le carga](index.html#charges).
  
 
 ##Código promocional
@@ -297,13 +297,13 @@ total es $1900 USD. |	$1900 USD|
 total es $5000 USD. |	$5000 USD|
 *Tabla 6. Cálculo de cargos usando el modelo de precios del nivel por bloque*
 
-###Concesiones gratuitas para máquinas virtuales
+### Concesiones gratuitas para servidores virtuales
 {: #vms}
 
-Puede utilizar máquinas virtuales de {{site.data.keyword.Bluemix_notm}} en la nube pública de IBM como características beta gratuitas. Se proporcionan concesiones gratuitas para el número de imágenes de máquina virtual que puede crear, el número de direcciones IP que tiene asignadas y la cantidad de memoria que se utiliza.
+Puede utilizar servidores virtuales de {{site.data.keyword.Bluemix_notm}} en la nube pública de IBM como características beta gratuitas. Se proporcionan concesiones gratuitas para el número de imágenes de servidor virtual que puede crear, el número de direcciones IP que tiene asignadas y la cantidad de memoria que se utiliza.
 
 Las siguientes elementos son las concesiones gratuitas
-para las máquinas virtuales de {{site.data.keyword.Bluemix_notm}} beta:
+para los servidores virtuales de {{site.data.keyword.Bluemix_notm}} beta:
 
 * 8 instancias
 * 8 CPU virtuales
@@ -311,7 +311,7 @@ para las máquinas virtuales de {{site.data.keyword.Bluemix_notm}} beta:
 * 200 GB de almacenamiento en bloque
 * 4 direcciones IP públicas
 
-Además, puede utilizar la infraestructura de máquinas virtuales para suministrar VM en sus nubes privadas de {{site.data.keyword.Bluemix_notm}}, siempre de acuerdo con los límites y cuotas de sus nubes privadas.
+Además, puede utilizar la infraestructura de servidores virtuales para suministrar servidores virtuales en sus nubes privadas de {{site.data.keyword.Bluemix_notm}}, siempre de acuerdo con los límites y cuotas de sus nubes privadas.
 
 
 ##Cómo estimar sus costes
@@ -326,7 +326,7 @@ Puede utilizar distintos métodos para saber lo que debe pagar por utilizar {{si
 ###Utilización de las calculadoras de costes
 {: #calculator}
 
-Puede calcular rápidamente el precio de la app utilizando las calculadoras de costes que se proporcionan en la página {{site.data.keyword.Bluemix_notm}}. 
+Puede calcular rápidamente el precio de la app utilizando las calculadoras de costes que se proporcionan en la página {{site.data.keyword.Bluemix_notm}}.
 
 1. Vaya a la {{site.data.keyword.Bluemix_notm}} [página de precios](https://console.{DomainName}/pricing/). 
 2. Utilice uno de los widgets **Estime los costes** o pulse **Abrir calculadora** para utilizar la **Calculadora de tarifas de gran precisión**.
@@ -408,12 +408,12 @@ El precio total es 148 + 13.5 + 13.5 = 175 dólares.</p></dd>
 
 Cuando se añaden todos los elementos, el precio total de la app es de 384,15 dólares.
 
-##Detalles de uso
+##Panel de control de uso
 {: #usage}
 
-Como propietario de cuenta, usuario con permisos de *Auditor* en el espacio o gestor de facturación, puede utilizar la vista Detalles de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
+Como propietario de cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
 
-Para abrir la vista Detalles de uso, pulse el icono **Cuenta y soporte** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y seleccione **Cuenta**. En la página que se muestra, pulse **Detalles de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta.
+Para abrir la vista Panel de control de uso, pulse el icono **Cuenta y soporte** &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Panel de control de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
 La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Cada ciclo de factura dura un mes.
 
@@ -421,14 +421,12 @@ Los propietarios de las cuentas pueden filtrar el resumen de uso por región y o
 
 Si selecciona una organización específica para la **Organización**, puede ver la utilización total para esa organización, incluido cualquier uso como parte de un nivel libre. Los cargos que se muestran para la organización no son los cargos que se le facturan. El uso de la capa libre se muestra como gratuita en el nivel de cuenta, pero no a nivel organizativo. Por lo tanto, cuando se ve el uso de la organización, verá el uso real para esa organización incluido el uso gratuito y de pago. Todo el uso organizativo se despliega en el uso de la cuenta una vez que se haya eliminado la capa libre.
 
-Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
-
 ##Notificaciones
 {: #notifications}
 
 Como gestor de cuentas de una cuenta Pago según uso, puede establecer notificaciones de gasto relativas al coste total de su cuenta, para su tiempo de ejecución, servicios y para los servicios individuales, excluidos los servicios de terceros. Recibe notificaciones al alcanzar el 80%, 90%, y 100% de los umbrales de gasto que especifique.
 
-Para abrir la vista **Notificaciones**, pulse el icono **Configuración de perfil** de la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y, a continuación, seleccione **Cuenta&gt;Notificaciones**. Marque el recuadro de selección situado junto a la notificación para que entre en vigor. También puede añadir y suprimir notificaciones para servicios individuales.
+Para abrir la vista **Notificaciones**, pulse el icono **Cuenta y soporte** &gt; **Cuenta** &gt; *su_nombre_cuenta* &gt; **Notificaciones de gasto**. Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación de gasto según sea necesario. También puede añadir y suprimir notificaciones para servicios individuales.
 
 ##Cómo cambiar el plan
 {: #changing}

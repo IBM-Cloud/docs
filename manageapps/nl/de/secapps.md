@@ -14,7 +14,7 @@ copyright:
 #Apps schützen
 {: #securingapps}
 
-*Letzte Aktualisierung: 30. März 2016*
+*Letzte Aktualisierung: 9. Mai 2016*
 
 Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und den Zugriff auf die Anwendungen beschränken.
 {:shortdesc}
@@ -85,15 +85,12 @@ Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, dürfen Sie
 Bevor Sie Zertifikate hochladen können,
 müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
 
-Um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden IP-Adressen verwenden, um den DNS zu konfigurieren, wenn Sie eine angepasste Domäne erstellen, um die URL-Route anzugeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist.
+^Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist. 
 
-* US-SOUTH: 75.126.81.68
-* EU-GB: 5.10.124.142
-* AU-SYD: 168.1.35.166
+  * US-South: secure.us-south.bluemix.net 
+  * EU-GB: secure.eu-gb.bluemix.net
+  * AU-SYD: secure.au-syd.bluemix.net 
 
-Die IP-Adressen, die Sie für dedizierte Umgebungen verwenden, unterscheiden sich. Wenden Sie sich für die IP-Adresse für eine dedizierte Umgebung an Ihren IBM Ansprechpartner.
-
-Weitere Informationen zum Erstellen einer angepassten Domäne finden Sie unter [Angepasste Domäne erstellen und verwenden](updapps.html#domain).
 
 Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
@@ -108,6 +105,8 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
   **Zertifikat**
     
     Ein digitales Dokument, das einen öffentlichen Schlüssel an die Identität des Zertifikatsinhabers bindet, sodass der Zertifikatsinhaber authentifiziert werden kann. Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert.
+    
+    Ein Zertifikat wird in der Regel ausgegeben und von einer Zertifizierungsstelle signiert. Für Test- und Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden. 
     
     Die folgenden Zertifikatstypen werden in {{site.data.keyword.Bluemix_notm}} unterstützt:
 

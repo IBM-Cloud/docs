@@ -37,7 +37,7 @@ copyright:
 
     devconsole 公用程式也會啟動 *proxy*。
 	
-  3. *hc*：「性能檢測中心」代理程式可啟用受「性能檢測中心用戶端」監視的應用程式。
+  3. *hc*：「性能檢測中心」代理程式，可讓「性能檢測中心用戶端」監視您的應用程式。
 
     「性能檢測中心」支援透過使用 IBM Monitoring and Diagnostic Tools 來分析 Liberty 及 Node.js 應用程式的效能。如需相關資訊，請參閱 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。</p></li>
 	
@@ -104,7 +104,7 @@ copyright:
     slc arc
     ```
 	
-    6. 導覽至 Arc 內的「程序管理程式」視圖。使用埠 80，將新建的路徑輸入至「程序管理程式」。按「啟動」按鈕。如需詳細資料，請參閱[有關使用 Arc 的完整文件](https://docs.strongloop.com/display){:new_window}。
+    6. 導覽至 Arc 內的「程序管理程式」視圖。將含有埠 80 的新建路徑輸入「程序管理程式」。按「啟動」按鈕。如需詳細資料，請參閱[有關使用 Arc 的完整文件](https://docs.strongloop.com/display){:new_window}。
 	
   3. *trace*：如果您的應用程式使用 *log4js*、*ibmbluemix* 或 *bunyan* 記載模組，則會動態設定追蹤層次。
   

@@ -14,5 +14,5 @@ copyright:
 # Samples
 {: #samples}
 
-The following topics provide examples of how you can extend your {{site.data.keyword.iot_short}} with additional functionality such as device simulators, connected services, and so on.
+The following topics provide examples of how you can extend your {{site.data.keyword.iot_full}} with additional functionality such as device simulators, connected services, and so on.
 {:shortdesc}

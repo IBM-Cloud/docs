@@ -14,7 +14,7 @@ copyright:
 #Distribuzione delle applicazioni
 {: #deployingapps}
 
-*Ultimo aggiornamento: 17 marzo 2016*
+*Ultimo aggiornamento: 9 maggio 2016*
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
 utilizzando vari metodi, quali ad esempio l'interfaccia riga di comando e gli ambienti di
@@ -68,12 +68,12 @@ raccogliere i dettagli dei tuoi log di applicazione e di sistema e potrai vedere
 ciò che è presente nel buffer all'interno dell'aggregatore di log. Per
 ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
-**Nota:** la dimensione del buffer è limitata. Se un'applicazione viene eseguita per tanto tempo e non viene riavviata, è possibile quando immetti `cf logs appname --recent` i log non vengano visualizzati perché il buffer dei log potrebbe essere stato cancellato. Pertanto, per eseguire il debug degli errori di preparazione di un'applicazione di grandi dimensioni, puoi immettere `cf logs appname` in una riga di comando diversa dall'interfaccia riga di comando cf per tracciare i log quando distribuisci l'applicazione.
+**Nota:** la dimensione del buffer è limitata. Se un'applicazione viene eseguita per tanto tempo e non viene riavviata, è possibile quando immetti `cf logs nomeapplicazione --recent` i log non vengano visualizzati perché il buffer dei log potrebbe essere stato cancellato. Pertanto, per eseguire il debug degli errori di preparazione di un'applicazione di grandi dimensioni, puoi immettere `cf logs nomeapplicazione` in una riga di comando diversa dall'interfaccia riga di comando cf per tracciare i log quando distribuisci l'applicazione.
 
 Se rilevi dei problemi durante la preparazione delle
 tue applicazioni su {{site.data.keyword.Bluemix_notm}},
-puoi seguire le istruzioni che si trovano in [Debugging
-staging errors](../debug/index.html#debugging-staging-errors) per risolvere il problema.
+puoi seguire le istruzioni che si trovano in [Debug degli
+errori di preparazione](../debug/index.html#debugging-staging-errors) per risolvere il problema.
 
 ##Distribuzione delle applicazioni mediante il comando cf
 {: #dep_apps}
@@ -94,51 +94,49 @@ prompt dei comandi.
 
   * Per distribuire pacchetti server Liberty in {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando dalla tua directory di origine:
   
-  ```
+```
   cf push
-  ```
+```
   
   Per ulteriori
 informazioni sul pacchetto di build Liberty, vedi [Liberty
-for Java](../starters/liberty/index.html#liberty).
+for Java](../runtimes/liberty/index.html).
   
   * Per distribuire le applicazioni Java Tomcat a {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando:
   
-  ```
-  cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
-  ```
+```
+  cf push nomeapplicazione -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
+```
   
   * Per distribuire pacchetti WAR in {{site.data.keyword.Bluemix_notm}},
 utilizza il comando
 seguente:
   
-  ```
-  cf push appname -p app.war
-  ```
+```
+  cf push nomeapplicazione -p app.war
+```
   In alternativa, puoi specificare
 una directory contenente i tuoi file applicazione utilizzando il seguente
 comando:
   
-  ```
-  cf push appname -p "./app"
-  ```
+```
+  cf push nomeapplicazione -p "./app"
+```
   
   * Per distribuire le applicazioni Node.js in {{site.data.keyword.Bluemix_notm}}, utilizza il comando
                                                   seguente:
   
-  ```
-  cf push appname -p percorso_applicazione
-  ```
+```
+  cf push nomeapplicazione -p percorso_applicazione
+```
   
-Perché
-                                                  l'applicazione venga riconosciuta dal pacchetto
-                                                  di build Node.js, è necessario che un file
+Perché l'applicazione venga riconosciuta dal pacchetto di build Node.js, è necessario che un file
                                                   `package.json` sia presente nella tua applicazione Node.js. Il file `app.js`
 è lo script di avvio per l'applicazione e può essere specificato nel file `package.json`. Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:
 
-  ```
+```
   {
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -164,9 +162,9 @@ Perché
   * Per distribuire applicazioni PHP, Ruby o Python a {{site.data.keyword.Bluemix_notm}},
 utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
   
-  ```
-  cf push nome_applicazione
-  ```
+```
+  cf push nomeapplicazione
+```
 
 ###Distribuzione di un'applicazione in più spazi
 
@@ -176,15 +174,15 @@ cui desideri utilizzarla attenendoti alla seguente procedura:
   1. Passa allo spazio in cui desideri distribuire la tua applicazione
 utilizzando il comando **cf target** con l'opzione **-s**:
   
-  ```
+```
   cf target -s <space_name>
-  ```
+```
   
-  2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nome_applicazione deve essere univoco all'interno del tuo dominio.
+  2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nomeapplicazione deve essere univoco all'interno del tuo dominio.
   
-  ```
-  cf push nome_applicazione
-  ```
+```
+  cf push nomeapplicazione
+```
   
 ##Manifest dell'applicazione
 {: #appmanifest}
@@ -277,7 +275,7 @@ utilizzando il comando **cf env** oppure dall'interfaccia utente
   * La variabile VCAP_SERVICES, che contiene informazioni di connessione per accedere a un'istanza di servizio. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio. Ad
 esempio:
   
-  ```
+```
   {
    "VCAP_SERVICES": {
     "AppScan Dynamic Analyzer": [
@@ -321,7 +319,7 @@ esempio:
     ]
    }
   }
-  ```
+```
         
 Puoi accedere anche alle variabili di ambiente impostate dal DEA e dai pacchetti di build.
 
@@ -360,14 +358,14 @@ così via. Ad
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -416,7 +414,7 @@ associato all'applicazione distribuita. Ad
 </dl>
 
 Le variabili definite dai pacchetti di build sono diverse
-per ogni pacchetto di build. Vedi [Pacchetti di build](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
+per ogni pacchetto di build. Vedi [Buildpacks](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
 
 <ul>
     <li>Le seguenti variabili sono definite dal pacchetto di build Liberty:
@@ -476,17 +474,17 @@ forniti dal pacchetto di build.
 
   * Utilizza il comando **cf push** e specifica il parametro -c. Ad esempio, quando distribuisci un'applicazione Node.js, puoi specificare il comando di avvio **node app.js** nel parametro -c:
   
-  ```
-  cf push appname -p app_path -c "node app.js"
-  ```
+```
+  cf push nomeapplicazione -p app_path -c "node app.js"
+```
   
   * Utilizza il parametro di comando nel file `manifest.yml`. Ad esempio, quando distribuisci un'applicazione Node.js,
 puoi specificare il comando di avvio **node app.js**
 nel file manifest:
   
-  ```
+```
   command: node app.js
-  ```
+```
   
 
 ### Aggiunta di variabili di ambiente definite dall'utente
@@ -503,7 +501,7 @@ procedura:
   * Utilizza l'interfaccia riga di comando cf. Aggiungi una variabile definita dall'utente utilizzando il comando `cf set-env`. Ad
                                     esempio: 
     ```
-    cf set-env appname env_var_name env_var_value
+    cf set-env nomeapplicazione env_var_name env_var_value
     ```
 	
   * Utilizza il file `manifest.yml`. Aggiungi coppie di valori nel file. Ad
@@ -558,8 +556,12 @@ non verranno caricati in {{site.data.keyword.Bluemix_notm}}.
 tmp/
 ```
 
-# rellinks
-## general 
+# Link correlati
+{: #rellinks}
+
+## Link correlati
+{: #general}
+
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

@@ -225,10 +225,10 @@ Se utilizzi l'interfaccia riga di comando cf per richiedere un'istanza del servi
     cf create-service nome_servizio piano_servizio istanza_servizio
     ```
 
-3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove nome_applicazione è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
+3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove nomeapplicazione è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
 
     ```
-    cf bind-service nome_applicazione istanza_servizio
+    cf bind-service nomeapplicazione istanza_servizio
     ```
 
 Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
@@ -420,6 +420,8 @@ cui vuoi accedere. Viene visualizzato il dashboard per il servizio.
 {: #rellinks}
 
 ## general
+{: #general}
+
 * [Esecuzione del bind di un servizio utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
 * [Richiamo di VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

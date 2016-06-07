@@ -2,9 +2,9 @@
 	"identifier": "ID",
 	"label": "título",
 	"items": [{
-		"id": "Introdução"
+		"id": "GetStarted"
 	}, {
-		"id": "Categorias",
+		"id": "Categories",
 		"items": [{
 			"title": "Cálculo",
 			"img": "homepage/images/compute.svg",
@@ -27,6 +27,9 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
+				"name": "Cadeia de blocos",
+				"href": "services/blockchain/index.html"
+			}, {
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
@@ -267,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things Foundation",
+				"name": "Plataforma do Internet of Things",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",
@@ -290,8 +293,8 @@
 		}]
 		
 	}, {
-		"id": "Recursos",
-		"descriptionTitle": "Recursos",
+		"id": "Resources",
+		"descriptionTitle": "Resources",
 		"items": [{
 			"title": "Por que Bluemix?",
 			"img": "homepage/images/WhatIsBluemix-icon.svg",

@@ -12,7 +12,7 @@ copyright:
 
 #サービス
 {: #services}
-*最終更新日: 2016 年 4 月 5 日*
+*最終更新日: 2016 年 5 月 10 日*
 
 {{site.data.keyword.Bluemix_notm}} によって、サービスとアプリの実装、ホスト、および拡大を簡単に行うことができます。それにより、
 アプリケーション・ロジックとアプリケーション設計に集中することができます。
@@ -48,7 +48,7 @@ copyright:
 
 |サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}	|はい		|いいえ		|いいえ|
+|{{site.data.keyword.cloudaccesstrailshort}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.activedeployshort}}			|はい		|はい		|いいえ|
 |{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
 |{{site.data.keyword.alertnotificationshort}}		|はい		|はい			|はい		|
@@ -80,7 +80,7 @@ copyright:
 |{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.iot_short}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.keymanagementserviceshort}}	|いいえ		|はい		|いいえ|
 |{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
@@ -95,8 +95,8 @@ copyright:
 |{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
 |{{site.data.keyword.objectstorageshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.mobilepush}}	|はい		|はい		|はい|
-|Push for iOS 8					|はい		|はい		|いいえ|
+|{{site.data.keyword.mobilepush}}		|はい		|はい		|はい|
+|{{site.data.keyword.mobilepushshort}}				|はい		|はい		|はい|
 |{{site.data.keyword.questionandanswershort}}	|はい		|はい		|はい|
 |{{site.data.keyword.rapidApps}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
@@ -122,6 +122,24 @@ copyright:
 |{{site.data.keyword.xpagesservice_short}}	|はい		|はい		|いいえ|
 *表 2. サービスの利用可能性*
 
+
+## サービスの継続提供について
+{{site.data.keyword.Bluemix_notm}} は、いくつかのサービスを Tier 1 であると認定しました。
+IBM は、Tier 1 サービスを終了する場合は必ず、機能的に同等のものを用意するか、または、終了についての通知を最低限 5 年は行います。 
+
+以下のサービスが Tier 1 と分類されています。
+  * {{site.data.keyword.apiconnect_short}}
+  * {{site.data.keyword.cloudant}}
+  * {{site.data.keyword.dashdbshort}}
+  * {{site.data.keyword.iot_short}}
+  * {{site.data.keyword.iotrtinsights_short}}
+  * {{site.data.keyword.messagehub}}
+  * MongoDB by Compose
+  * {{site.data.keyword.objectstorageshort}}
+  * PostgresSQL by Compose
+  * {{site.data.keyword.ssofull}}
+
+サービスの利用条件についての詳細を読むには、『[{{site.data.keyword.Bluemix_notm}} 利用条件](../navigation/notices.html#terms)』を参照してください。
 
 ## サービスの非推奨化
 

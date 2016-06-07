@@ -74,7 +74,7 @@ Voir [comité d'architecture](#x2214349).
 
 Valeur utilisée par le consommateur pour obtenir l'accès aux ressources protégées pour le compte de l'utilisateur, au lieu d'utiliser les données d'identification du fournisseur de services de l'utilisateur.
 
-### gestionnaire de compte 
+### gestionnaire de compte
 {: #x2214301}
 
 Personnel avec expérience métier et Internet qui examinent les demandes de site Web en termes d'alignement "OneIBM". Ils collaborent également avec les
@@ -422,7 +422,7 @@ en bout, indique comment les personnes et les organisations interagissent pour e
 compte des systèmes et applications compatibles avec la conception du processus de bout en bout. Utilisé dans le processus business design assurance
 pour définir les interactions des utilisateurs avec les systèmes.
 
-### transformation métier 
+### transformation métier
 {: #x2214398}
 
 
@@ -1108,7 +1108,7 @@ BTOP (business transformation operations
 process), modèle métier BTOP (éléments de la phase concepts), document de proposition de solution d'architecture (APD), et plan de projet intégré
 initial (ce plan est généralement élaboré par le responsable du projet de solution ou par
 le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
-PDTL. 
+PDTL.
 
 ### initiative
 {: #x2214669}
@@ -1305,7 +1305,6 @@ Voir [système de back end mobile sous forme de services (MBaaS)](#x7044858).
 
 Ensemble de petits composants d'architecture indépendants, associés chacun à un objectif spécifique et communiquant via une API légère commune.
 
-
 ### jalon
 {: #x2118203}
 
@@ -1316,7 +1315,7 @@ Evénement important dans un projet ou un processus, permettant de déterminer l
 
 Voir [application mobile](#x4258535).
 
-### application mobile 
+### application mobile
 {: #x4258535}
 
 Application conçue pour une plateforme mobile. Tout comme les applications Web, les applis mobiles fournissent une fonctionnalité qui va au-delà de l'affichage statique d'informations, par exemple, en autorisant l'utilisateur à filtrer des nouvelles pratiquement en temps réel. Voir aussi [appli](#x4281528).
@@ -1371,7 +1370,7 @@ Voir [équipe de gestion des opérations](#x2214710).
 
 Voir [local](#x4561212).
 
-### sur site 
+### sur site
 {: #x4561212}
 
 S'applique à un logiciel installé et exécuté sur les ordinateurs d'un utilisateur ou d'une organisation.
@@ -1392,7 +1391,7 @@ recommande des actions correctives. Elle identifie les nouvelles exigences, exé
 
 Voir [organisation](#x2032585).
 
-### organisation 
+### organisation
 {: #x2032585}
 
 Méthodologie de regroupement pour les utilisateurs dans Bluemix. Les organisations permettent de gérer les quotas. Les utilisateurs d'une
@@ -1890,7 +1889,7 @@ dans un environnement de production. Voir aussi [déploiement](#x2104544).
 ### projet autonome
 {: #x2214926}
 
-Projet unique au sein d'une seule organisation .Peut faire partie d'un projet de composant.
+Projet unique au sein d'une seule organisation . Peut faire partie d'un projet de composant.
 
 ### section
 {: #x2094743}

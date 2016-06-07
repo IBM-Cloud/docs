@@ -12,15 +12,16 @@ copyright:
 # Support client
 {: #getting-customer-support}
 
-*Dernière mise à jour : 19 avril 2016*
+*Dernière mise à jour : 11 mai 2016*
 
 
-Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options d'assistance s'offrent à vous ; par exemple obtenir de l'aide via Stack Overflow ou ouvrir un ticket de demande de service.
+Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options d'assistance s'offrent à vous : vous pouvez par exemple obtenir de l'aide via un forum ou ouvrir un ticket de demande de service.
 {:shortdesc}
 
 ## Comment obtenir de l'aide
 {: #getting-help}
-Vous pouvez obtenir de l'aide en accédant à Compte et support ou directement à Stack Overflow, où vous pouvez rechercher des informations ou publier des questions.
+Pour ouvrir un ticket de demande de service ou rechercher d'autres options d'aide, vous pouvez accéder à Compte et support. Vous pouvez aussi accéder
+directement aux forums Stack Overflow ou developerWorks (dW) Answers afin de rechercher des informations ou de poser des questions.
 {:shortdesc}
 
 ### Utilisation de Compte et support
@@ -32,15 +33,28 @@ Cliquez sur **Obtenir de l'aide** pour trouver les réponses à vos questions. S
 
 
 ### Poser une question
-Stack Overflow est un site Web qui sert de plateforme sur laquelle les utilisateurs peuvent poser des questions et répondre à des questions. Vous pouvez y accéder directement ou via Compte et support. Les équipes de développement et de support {{site.data.keyword.Bluemix_notm}} sont actives sur Stack Overflow et suivent les questions portant l'étiquette **bluemix**
+{: #asking-a-question}
 
-Pour poser une question dans Stack Overflow, procédez de l'une des manières suivantes :
-  * Depuis Compte et support, cliquez sur **Obtenir de l'aide**. Dans la page qui s'affiche, entrez votre question dans la zone de recherche pour trouver des réponses. Si la réponse attendue n'est pas renvoyée, vous pouvez cliquer sur **PUBLIER DANS STACK OVERFLOW** pour publier votre question.
+Les forums Stack Overflow et dW Answers fournissent une grande variété de réponses à vos questions Bluemix, dans lesquelles vous pouvez effectuer
+des recherches. Si vous ne trouvez pas de réponse, posez une nouvelle question.  
 
-  * Accédez directement à [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+  * Accédez à [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} pour toute question technique
+relative au développement d'applications avec la plateforme et les services Bluemix.
 
-Lorsque vous créez une question dans Stack Overflow, ajoutez-lui une étiquette **bluemix** pour vous assurer qu'elle sera vue par les équipes de développement et de support {{site.data.keyword.Bluemix_notm}}.
+  * Accédez à [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} pour toute question
+relative à l'offre {{site.data.keyword.Bluemix_notm}} et pour des instructions de mise en route. 
 
+Vous pouvez aussi poser une question sur Stack Overflow directement depuis Compte et support en procédant comme suit :
+
+  1. Depuis Compte et support, cliquez sur **Obtenir de l'aide**. 
+  2. Dans la page qui s'affiche, entrez votre question dans la zone de recherche pour trouver des réponses. 
+  3. Si vous ne trouvez pas de réponse appropriée, cliquez sur **Publier dans Stack Overflow** pour poser votre question. 
+
+Les équipes de développement et de support {{site.data.keyword.Bluemix_notm}} surveillent activement les forums Stack Overflow
+et dW Answers et suivent les questions
+portant l'étiquette **bluemix**. Lorsque vous créez une question sur ces forums, ajoutez l'étiquette **bluemix** à
+votre question pour vous assurer que celle-ci sera lue par les équipes de développement et de support {{site.data.keyword.Bluemix_notm}}. 
+ 
 
 
 ## Affichage du statut de {{site.data.keyword.Bluemix_notm}}
@@ -79,7 +93,7 @@ Pour vous abonner, procédez comme suit :
 
 D'autres méthodes de lecture des flux RSS sont également disponibles via des plug-in de navigateur Web tels que [RSS Feed](http://feeder.co/){: new_window} Reader pour Chrome ou le module complémentaire [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} pour Firefox, ou d'autres nouvelles sources telles que [Feedly](http://www.feedly.com/){: new_window} ou [G2reader](http://www.g2reader.com/en/){: new_window}.
 
-Vous pouvez également utiliser un service tiers pour envoyer un courrier électronique automatiquement à chaque mise à jour RSS. La liste suivante répertorie des exemples de service tiers :
+Vous pouvez également utiliser un service de tiers pour envoyer un courrier électronique automatiquement à chaque mise à jour RSS. La liste suivante répertorie des exemples de service de tiers :
 
   * www.feedmyinbox.com
   * www.rssforward.com
@@ -141,19 +155,20 @@ valide.
 {: #contacting-bluemix-support}
 
 Tous les clients de {{site.data.keyword.Bluemix_notm}} bénéficient d'un support technique gratuit via la communauté
-Bluemix ou Stack Overflow.
-Par ailleurs, divers niveaux de service sont disponibles pour répondre aux besoins différents des clients. Reportez-vous au tableau suivant
+Bluemix ou Stack Overflow.  Par ailleurs, divers niveaux de service sont disponibles pour répondre aux besoins différents des clients. Reportez-vous au tableau suivant
 pour opter pour le niveau de support gratuit, de base, standard et premium. 
 
 Niveaux | Gratuit |  De base | Standard | Premium
 --- | --- | --- | --- | --- |
 Description | Support pour tous les clients de la version d'évaluation Bluemix.  |  Support pour les environnements non destinés à la production ou pour
 les charges de travail où les gravités et les temps de réponse traditionnels ne sont pas requis. | Support pour les environnements avec un nombre limité
-d'applications stratégiques. Les clients de {{site.data.keyword.Bluemix_notm}} Dedicated et de {{site.data.keyword.Bluemix_notm}} Local
-bénéficient du support standard. | Prise en charge des environnements cruciaux avec une dépendance stratégique envers {{site.data.keyword.Bluemix_notm}}.
+d'applications stratégiques. Les clients de l'environnement {{site.data.keyword.Bluemix_notm}} dédié et de l'environnement
+{{site.data.keyword.Bluemix_notm}} local
+bénéficient du support standard. | Prise en charge des environnements essentiels avec une dépendance stratégique envers
+{{site.data.keyword.Bluemix_notm}}.
 Support des incidents à gravité élevée |  N/A | N/A | Inclus | Inclus
 Prise en charge de langues | Anglais | Anglais | Anglais | Anglais
-CSM (client success manager) affecté | Non inclus | Non inclus | Non inclus | Inclus avec<br> 8 heures par semaine
+Responsable Client Success (CSM) affecté | Non inclus | Non inclus | Non inclus | Inclus avec<br> 8 heures par semaine
 *Tableau 1. Niveaux de support*
 
 #### Ouverture d'un ticket de support
@@ -173,7 +188,7 @@ cliquez sur **Open Ticket** et renseignez le formulaire de support.
 Support](http://ibm.biz/bluemixsupport){: new_window}. Vous pouvez soumettre des tickets pour des problèmes liés à une vente, la facturation, un ID et la connexion,
 ainsi que pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner un groupe technique après avoir cliqué sur la vignette **Technical
 Support**. Par exemple, si vous avez besoin d'aide pour des applications Cloud Foundry, OpenWhisk, Containers, Virtual Servers ou des serveurs
-Bare Metal, choisissez **Application Services**. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de
+Bare Metal, choisissez **Services d'application**. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de
 service correspondante. Pour identifier la catégorie à laquelle votre service appartient, reportez-vous aux catégories sous
 [Services](../services/index.html){: new_window} dans le panneau de navigation de gauche.  
   
@@ -195,7 +210,7 @@ notes sur le ticket.
 
 
 
-### Contacter le support pour {{site.data.keyword.Bluemix_notm}} dédié
+### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
@@ -217,7 +232,7 @@ de l'aide**. Dans la page qui s'affiche, cliquez sur
 </ul>
 
 
-### Contacter le support pour {{site.data.keyword.Bluemix_notm}} local
+### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} local
 {: #contacting-bluemix-support-local}
 
 <!-- Michelle links to this anchor  -->
@@ -252,7 +267,7 @@ Le tableau ci-après répertorie divers exemples de problèmes soumis au support
 objectifs de temps de réponse sont utilisés uniquement pour décrire les intentions d'IBM et ne représentent pas une garantie de
 performance.
 
-**Heures d'opération :** Dimanche 22h00 GMT – Vendredi 23h59 GMT (hors jours fériés aux Etats-Unis, en Italie et en Australie). Pour plus
+**Heures de service :** Dimanche 22h00 GMT – Vendredi 23h59 GMT (hors jours fériés aux Etats-Unis, en Italie et en Australie). Pour plus
 d'informations sur les opérations pendant les jours fériés, voir [Bluemix Support
 Holidays](http://ibm.biz/bluemixholidays){: new_window}. 
 
@@ -261,24 +276,20 @@ Gravité | Définition de la gravité | Objectifs de temps de réponse | Couvert
 ------|-------- | --- | --- |
 Gravité 1 | <strong>Impact métier critique ou panne du service.</strong> <br> Les fonctionnalités métier critiques sont inexploitables ou l'interface critique a
 échoué. Cette gravité s'applique généralement à un environnement de production et indique qu'une incapacité à accéder à des
-services a une incidence critique sur les opérations. Cette situation nécessite une solution immédiate. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De
-base :</strong>
-N/A</li><li><strong>Standard :</strong> Sous 1 heure</li><li><strong>Premium :</strong> Sous 1 heure</li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li>
-<strong>De base :</strong> N/A</li><li><strong>Standard :</strong> 24 heures sur 24, 7 jours sur 7</li><li><strong>Premium :</strong> 24 heures sur 24, 7 jours
+services a une incidence critique sur les opérations.  Cette situation nécessite une solution immédiate. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li><strong>Standard :</strong> Sous 1 heure</li><li><strong>Premium :</strong> Sous 1 heure</li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li><strong>Standard :</strong> 24 heures sur 24, 7 jours sur 7</li><li><strong>Premium :</strong> 24 heures sur 24, 7 jours
 sur 7</li></ul> 			   
 Gravité 2 | <strong>Répercussion importante sur l'activité.</strong> <br> L'utilisation d'un dispositif ou d'une fonction du service est sévèrement
 limitée
-ou vous risquez de ne pas respecter des échéances métier. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li><strong>Standard
-:</strong> Sous 2 heures</li><li><strong>Premium :</strong> Sous 90 minutes </li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li><strong>Standard
-:</strong> Au cours des heures d'opération</li><li><strong>Premium :</strong> Au cours des heures d'opération </li></ul>
+ou vous risquez de ne pas respecter des échéances métier. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A </li><li><strong>Standard
+:</strong> Sous 2 heures</li><li><strong>Premium :</strong> Sous 90 minutes </li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A </li><li><strong>Standard
+:</strong> Heures de service </li><li><strong>Premium :</strong> Heures de service </li></ul>
 Gravité 3 | <strong>Répercussion minime sur l'activité.</strong> <br> Un dispositif ou une fonction du service est exploitable, mais certains problèmes
-affectent son utilisation. Aucune incidence critique sur les opérations ne s'ensuit. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li><strong>Standard
-:</strong> sous 4 heures</li><li><strong>Premium :</strong> Sous 2 heures</li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A</li><li>
-<strong>Standard :</strong> Au cours des heures d'opération</li><li><strong>Premium :</strong> Au cours des heures d'opération </li></ul>
-Gravité 4 | <strong>Répercussion minime sur l'activité.</strong> <br> Question ou demande non technique. | <ul><li><strong>Gratuit :</strong> Pour le mieux </li><li>
-<strong>De base :</strong> Pour le mieux </li><li><strong>Standard :</strong> Sous 8 heures</li><li><strong>Premium :</strong> Sous 4 heures</li></ul> | <ul><li><strong>Gratuit :</strong>
-Heures d'opération </li><li><strong>De base :</strong> Heures d'opération </li><li><strong>Standard :</strong> Heures d'opération </li><li><strong>Premium :</strong>
-Heures d'opération </li></ul>
+affectent son utilisation. Aucune incidence critique sur les opérations ne s'ensuit. | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A </li><li><strong>Standard
+:</strong> sous 4 heures</li><li><strong>Premium :</strong> Sous 2 heures</li></ul> | <ul><li><strong>Gratuit :</strong> N/A</li><li><strong>De base :</strong> N/A </li><li>
+<strong>Standard :</strong> Heures de service </li><li><strong>Premium :</strong> Heures de service </li></ul>
+Gravité 4 | <strong>Répercussion minime sur l'activité.</strong> <br> Question ou demande non technique. | <ul><li><strong>Gratuit :</strong> Pour le mieux </li><li><strong>De base :</strong> Pour le mieux</li><li><strong>Standard :</strong> Sous 8 heures</li><li><strong>Premium :</strong> Sous 4 heures</li></ul> | <ul><li><strong>Gratuit :</strong>
+Heures de service </li><li><strong>De base :</strong> Heures de service </li><li><strong>Standard :</strong> Heures de service </li><li><strong>Premium
+:</strong> Heures de service </li></ul>
 *Tableau 2. Définition de la gravité et temps de réponse*
 
 
@@ -375,7 +386,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 {: #survey}
 
 IBM envoie périodiquement des sondages aux clients Bluemix pour solliciter leurs commentaires sur leurs récentes expériences avec le support
-client. L'enquête se concentre sur la qualité du support et leur expérience globale. La direction d'IBM étudie les résultats de l'enquête pour améliorer
+client.  L'enquête se concentre sur la qualité du support et leur expérience globale.  La direction d'IBM étudie les résultats de l'enquête pour améliorer
 leur expérience avec le support. 
 
 
@@ -383,6 +394,11 @@ leur expérience avec le support.
 {: #rellinks}
 
 ## general
-  * [Portail de support Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Portail de support Bluemix](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window} 
   * [Manuel de support SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

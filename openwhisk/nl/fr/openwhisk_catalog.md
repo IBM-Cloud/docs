@@ -507,7 +507,7 @@ lequel publier le message.
 3. Appelez l'action `post` dans votre liaison de package pour publier un message dans votre canal Slack.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text 'Bonjour d'OpenWhisk!'
   ```
   {: pre}
 

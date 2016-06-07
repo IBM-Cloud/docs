@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-*마지막 업데이트 날짜: 2016년 3월 17일*
+*마지막 업데이트 날짜: 2016년 5월 9일*
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
@@ -399,6 +399,10 @@ You can use security information and event management (SIEM) 도구를 사용하
 
 
 # 관련 링크
-## 일반
+{: #rellinks}
+
+## 관련 링크
+{: #general}
+
 * [SoftLayer 보안 규제 준수](http://www.softlayer.com/security)
 * [Single Sign On 시작하기](../services/SingleSignOn/index.html)

@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "Abschnitt zur Homepageplattform mit Dokumenten",
+	"items": [{
+		"title": "CLI- und Entwicklungstools",
+		"description": "Zugriffstools wie eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins.",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "Apps verwalten",
+		"description": "Verwenden Sie das Dashboard in der Bluemix-Benutzerschnittstelle, um Ihre Apps und Services anzuzeigen und zu verwalten.",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "Kontoverwaltung",
+		"description": "Organisationen und Bereiche einschließlich Benutzerzugriff verwalten.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "Überwachung und Protokollierung",
+		"description": "Befolgen Sie die Anwendungsnutzung und den Datenfluss, um ein besseres Verständnis Ihrer Implementierung zu erlangen.",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "Preisstruktur",
+		"description": "Schätzen Sie die Kosten mit dem Rechner und zeigen Sie die Ist-Kosten mit der Ansicht 'Verwendungsdetails' an. ",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "Fehlerbehebung",
+		"description": "Wenn Probleme mit der Plattform auftreten, können Sie diese Fehlerbehebungstasks ausführen, um festzustellen, welche Schritte erforderlich sind. ",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "Sicherheit der Plattform",
+		"description": "Erfahren Sie, wie Bluemix funktionelle, Infrastruktur-, Betriebs- und physische Sicherheit bereitstellt.",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "Hybrid",
+		"description": "Lieferung als übergreifender Service für öffentliche, dedizierte und lokale Implementierungsmodelle.",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

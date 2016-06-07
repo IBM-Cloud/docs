@@ -53,7 +53,7 @@ erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von 
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
 |Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der
 Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](../support/index.html#contacting-bluemix-support){: new_window}.|
-*Tabelle 1. Supportinformationen für {{site.data.keyword.Bluemix_notm}}-Services*
+*Tabelle 1. Supportinformationen für {{site.data.keyword.Bluemix_notm}}*
 
 
 
@@ -357,6 +357,8 @@ Führen Sie die folgenden Schritte aus, um eine Serviceinstanz von einem anderen
 {: #rellinks}
 
 ## Allgemein
+{: #general}
+
 * [Service mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle binden](../cfapps/ee.html#ee_bindui)
 * [VCAP_SERVICES abrufen](../cli/vcapsvc.html#retrieving)
 

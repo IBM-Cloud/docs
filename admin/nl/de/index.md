@@ -17,9 +17,9 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten
 {: #mng}
-*Letzte Aktualisierung: 19. April 2016*
+*Letzte Aktualisierung: 16. Mai 2016*
 
-Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](../admin/adminpublic.html#orgmng).
+Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabelle 1. Verwaltungstasks zur Verwaltung einer {{site.data.keyword.Bluemix_notm}} Local- oder Dedicated-Instanz*
@@ -29,7 +29,7 @@ Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_notm}} Loca
 |Systemnutzung überwachen | Klicken Sie auf **Verwaltung &gt; Nutzung**. Zeigen Sie Systeminformationen an, überwachen Sie die CPU-Nutzung und planen Sie die Nutzung, um die besten Entscheidungen für Ihr Unternehmen zu treffen. Siehe [Nutzungsinformationen anzeigen](index.html#oc_resource).|
 |Eigenen Katalog verwalten | Klicken Sie auf **Verwaltung &gt; Katalogverwaltung**, um die Services zu verwalten, die für Ihre Benutzer und Organisationen sichtbar sind. Siehe [Eigenen Katalog verwalten](index.html#oc_catalog).|
 |Organisationen verwalten | Klicken Sie auf **Verwaltung &gt; Organisationsadministration**, um Organisationen zu erstellen, Kontingente für Organisationen zu überwachen und rasch bedarfsorientierte Entscheidungen zu treffen. Siehe [Organisationen verwalten](index.html#oc_organizations).|
-|Bereiche erstellen und Benutzerrollen zuweisen | Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus, um Bereiche in Ihren Organisationen zu erstellen. Fügen Sie Benutzer hinzu und weisen Sie Benutzern Organisations- und Bereichsrollen zu. Siehe [Organisationen verwalten](../admin/adminpublic.html#orgmng). |
+|Bereiche erstellen und Benutzerrollen zuweisen | Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus, um Bereiche in Ihren Organisationen zu erstellen. Fügen Sie Benutzer hinzu und weisen Sie Benutzern Organisations- und Bereichsrollen zu. Siehe [Organisationen verwalten](../admin/orgs_spaces.html). |
 |Administratorberechtigungen verwalten | Klicken Sie auf **Verwaltung &gt; Benutzeradministration**, um Benutzer hinzuzufügen, Benutzer zu entfernen und Benutzerberechtigungen anzupassen. Siehe [Benutzer und Berechtigungen verwalten](index.html#oc_useradmin). |
 |Berichte und Protokolle prüfen | Klicken Sie auf **Verwaltung &gt; Berichte und Protokolle**, um Sicherheitsberichte und Prüfprotokolle für Ihre Instanz anzuzeigen. Siehe [Berichte anzeigen](index.html#oc_report). |
 |Systeminformationen anzeigen | Klicken Sie auf **Verwaltung &gt; Systeminformationen**, um Systeminformationen wie anstehende Aktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen anzuzeigen. Sie können außerdem auf den Kalenderfeed und die Ereignisabonnements zur Erweiterung Ihrer Benachrichtigungen im Abschnitt 'Anstehende Aktualisierungen' zugreifen. Siehe [Systeminformationen anzeigen](index.html#oc_system). |
@@ -43,9 +43,9 @@ Sie können den Status Ihrer Umgebung jederzeit über die Seite 'Status' ermitte
 
 ### Benachrichtigungen
 
-Sie können Benachrichtigungen von IBM für Ihre lokale oder dedizierte Umgebung anzeigen und den Status Ihrer Umgebung überwachen. Die folgende Tabelle enthält Informationen zu den verschiedenen Typen von Benachrichtigungen und zu den Positionen, an die diese gesendet werden.
+Sie können Benachrichtigungen von IBM für Ihre lokale oder dedizierte Umgebung anzeigen, um den Status Ihrer Umgebung zu überwachen. Die folgende Tabelle enthält Informationen zu den verschiedenen Typen von Benachrichtigungen und zu den Positionen, an die diese gesendet werden.
 
-Tabelle 2. Ereignistypen und Benachrichtigungsmethoden
+*Tabelle 2. Ereignistypen und Benachrichtigungsmethoden*
 
 | **Ereignistyp** | **Benachrichtigungsmethode** |       
 |-----------------|-------------------|
@@ -66,7 +66,7 @@ Führen Sie die folgenden Schritte aus, um mithilfe von Web-Hooks ein bestimmtes
 
 1. Klicken Sie auf **Abonnement hinzufügen**.
 
-2. Füllen Sie das Formular für das Ereignisabonnement aus. Informationen zu den Feldern des Formulars enthält die folgende Tabelle:
+2. Füllen Sie das Formular für das Ereignisabonnement aus. Informationen zu den Feldern des Formulars und zu den Werten, die für den Abschnitt mit den Nutzdaten verwendet werden können, enthält die folgende Tabelle:
 
 *Tabelle 3. Formularfelder für das Ereignisabonnement*
 
@@ -79,36 +79,94 @@ Führen Sie die folgenden Schritte aus, um mithilfe von Web-Hooks ein bestimmtes
 | Beschreibung | Fügen Sie eine Beschreibung für das Ereignisabonnement hinzu, das Sie erstellen. |
 | Benutzername | Geben Sie Ihren Benutzernamen für den Web-Service ein. Wenn Sie nicht Ihre persönlichen Berechtigungsnachweise verwenden möchten, können Sie eine Funktions-ID speziell zur Verwendung mit {{site.data.keyword.Bluemix_notm}} einrichten. |
 | Kennwort | Geben Sie das Kennwort für Ihren Web-Service ein. |
-| Nutzdaten | Wenn Sie die Methode POST ausgewählt haben, geben Sie die Eigenschaften, die für den bestimmten Web-Service gelten, den Sie verwenden, gepaart mit den Werten, die für die IBM Benachrichtigung verwendet werden, ein. Beispiel: Wenn der Titel, die Nachricht und die Priorität in der Benachrichtigung von Ihrem Web-Service angezeigt werden sollen, müssen Sie die {{site.data.keyword.Bluemix_notm}}-Werte mit der entsprechenden Eigenschaft für Ihren Web-Service definieren. Die folgenden Werte können dazu verwendet werden, Informationen aus der {{site.data.keyword.Bluemix_notm}}-Benachrichtigung für den Titel, den Nachrichtenhauptteil und die Prioritätsstufe zu extrahieren: `"{{title}}`, `"{{message}},"` und `"{{severity}}"`. Wenn Sie keine Informationen in diesem Abschnitt eingeben, empfangen Sie die Benachrichtigung ganz ohne zusätzliche Informationen.  |
+| Nutzdaten | Wenn Sie die Methode POST ausgewählt haben, geben Sie die Eigenschaften, die für den bestimmten Web-Service gelten, den Sie verwenden, gepaart mit den Werten, die für die IBM Benachrichtigung verwendet werden, ein. In der folgenden Tabelle finden Sie IBM Werte, die Sie für das Füllen Ihrer Benachrichtigungen verwenden können. Wenn Sie keine Informationen in diesem Abschnitt eingeben, empfangen Sie die Benachrichtigung ganz ohne zusätzliche Informationen. |
+
+*Tabelle 4. Werte zum Abschnitt mit den Nutzdaten*
+
+| **IBM Wert** | **Beschreibung** | **Ereignistyp** |
+|----------------|----------------|------------------------|
+| {{content.title}} | Nachrichtentitel |  Aktualisierung und Störung  |
+| {{status}} | Status von Aktualisierung und Störung. | Aktualisierung und Störung |
+| {{type}} | Aktualisierung und Störung | Aktualisierung und Störung | 
+| {{region}} | Betroffene Region | Aktualisierung und Störung |
+| {{content.message}} | Nachrichtenbeschreibung |   Aktualisierung und Störung  |
+| {{content.severity}} | Sicherheitseinstufung | Störung |
+| {{content.category}} | Betroffene Services | Störung |
+| {{content.subCategoryName}} | Betroffene Komponenten | Störung |
+| {{content.scheduleWindow}} | Das geplante Datum für die Aktualisierung | Aktualisierung |
+| {{content.disruption}} | Betroffene Komponenten | Aktualisierung |
 
 Nach dem Speichern des Ereignisabonnements empfangen Sie Benachrichtigungen durch die Methode, die Sie durch Ihren Web-Service eingerichtet haben. Benachrichtigungen werden weiterhin auf der Seite 'Status' für Vorfälle und im Bereich 'Benachrichtigungen' der Seite 'Verwaltung' für Wartungsaktualisierungen angezeigt.
 
 Sie können ein beliebiges gespeichertes Ereignisabonnement auswählen und die letzte Aktivität anzeigen. Sie können auf einen Eintrag für eine kürzliche Aktivität klicken, um die zugehörigen Details anzuzeigen. Die Details beinhalten im Abschnitt 'Nutzdaten' die IBM Werte für die Benachrichtigung, die Sie verwenden können. Zum Anzeigen dieser Werte erweitern Sie den Eintrag für die kürzliche Aktivität, erweitern den Eintrag **Ereignis** und erweitern anschließend **Objekt**.
 
+## Wartungsaktualisierungen
+{: #oc_schedulemaintenance}
 
-## Systeminformationen anzeigen
-{: #oc_system}
+Sie können geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **Verwaltung &gt; Systeminformation &gt; *Anzahl* Aktualisierungen stehen an
+** auf die Seite **Systemaktualisierungen** zugreifen.  
 
-Klicken Sie zum Anzeigen von Systeminformationen auf **Verwaltung &gt; Systeminformationen**.
+**Hinweis**: Lesen Sie als Einführung den folgenden Abschnitt zur Einstellung vorab genehmigter Wartungszeiten. Diese Fenster müssen definiert sein, damit IBM die Wartungszeiten für Ihre Umgebung planen kann. 
 
-Sie können verschiedene Bereiche zu anstehenden Aktualisierungen, allgemeinen Systeminformationen und LDAP-Konfigurationsdetails erweitern und anzeigen.
+<dl>
+<dt>Unterbrechungsfreie Aktualisierungen</dt>
+<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung und wird während der vorab genehmigten, verfügbaren Wartungszeiten angewendet, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben. </dd>
+<dt>Aktualisierung mit Unterbrechungen</dt>
+<dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können das vorgeschlagene Datum und die vorgeschlagene Uhrzeit auswählen, die auf den vorab genehmigten Aktualisierungsfenstern basieren, oder Sie können zwei weitere Uhrzeiten und Daten auswählen, aus denen IBM dann bei der Terminierung der Aktualisierung auswählt. </dd>
+</dl>
 
-### Anstehende Aktualisierungen und Benachrichtigungen
 
-Im Bereich für die Aktualisierungen wird die Anzahl der Benachrichtigungen über anstehende Aktualisierungen angezeigt,
-für die eine Aktion Ihrerseits erforderlich ist. Um für eine bestimmte Aktualisierung eine Aktion auszuführen, führen Sie die folgenden Schritte durch:
+### Vorab genehmigte Wartungszeiten einstellen
+{: #preapprovedmaintenance}
 
-<ol>
-<li>Klicken Sie auf die Anzahl der anstehenden Aktualisierungen, um alle anstehenden Aktualisierungen anzuzeigen.</li>
-<li>Wählen Sie eine Aktualisierung aus, für die eine Aktion ausgeführt werden soll, oder zeigen Sie die Details zu dieser Aktualisierung an, darunter das Aktualisierungsfenster, das geplante Datum oder den Unterbrechungsstatus.</li>
-<li>Klicken Sie auf <strong>Datumsangaben für nicht verfügbare Tage auswählen</strong>, um im Aktualisierungsfenster bestimmte Tage anzugeben,
-an denen die Aktualisierung nicht angewendet werden sollte. Wenn Sie solche Daten angeben, genehmigt und plant IBM die Aktualisierung basierend auf Ihrer Auswahl. Sie erhalten eine Benachrichtigung, wenn die Aktualisierung genehmigt und geplant wurde.</li>
-<li>Wenn keine Datumseinschränkungen vorliegen, klicken Sie auf <strong>Aktualisierung genehmigen</strong>, um die Aktualisierung zu genehmigen. Wenn Sie die Aktualisierung genehmigen, wird die Aktualisierung im geplanten Aktualisierungsfenster angewendet. IBM sendet eine Benachrichtigung, wenn die Bereitstellung der Aktualisierung startet und endet.</li>
-</ol>
+Bevor Sie mit der Terminierung und Prüfung von Aktualisierungen beginnen, müssen Sie ihre vorab genehmigten Zeitfenster festlegen. Unterbrechungsfreie Aktualisierungen werden innerhalb der vorab genehmigten Zeiten geplant. Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung und wird innerhalb der vorab genehmigten, verfügbaren Wartungszeiten angewendet, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben. 
 
-**Hinweis:** Wenn Sie keine Datumsangaben für nicht verfügbare Tage festlegen oder die Aktualisierung nicht genehmigen, wird sie am Ende des 21tägigen Fensters angewendet, um sicherzustellen, dass Ihre Plattform auf aktuellem Stand bleibt.
+Sie müssen mindestens 24 verfügbare Stunden pro Woche an mindestens 3 Tagen der Woche festlegen. Sie können zum Beispiel drei 8-Stunden-Zeitfenster an drei verschiedenen Tagen festlegen oder an vier Tagen 6-Stunden-Zeitfenster. Um sicherzustellen, dass die Zeiträume ausreichend Zeit für das Anwenden einer Aktualisierung bieten, muss jeder Zeitraum mindestens 4 Stunden lang sein. 
 
-Auf der Seite 'Anstehende Aktualisierungen' können Sie Ihren Aktualisierungszeitplan verfolgen, indem Sie auf das Symbol **Kalender** ![Kalender](images/icon_calendar.svg) klicken und die ICS-Datei (`.ics`) herunterladen, um Ihre geplanten Aktualisierungen in eine Kalender-App Ihrer Wahl zu importieren:
+1. Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an &gt; Verfügbarkeit verwalten**.
+2. Erweitern Sie den Abschnitt zum Thema **Verfügbare Aktualisierungszeiten verwalten**.
+3. Klicken Sie auf **Neues hinzufügen** ![Neues hinzufügen](images/add-new.png).
+4. Legen Sie das erste verfügbare Zeitfenster fest, indem Sie die Häufigkeit, die Dauer und die Anfangszeit für das Fenster auswählen. 
+5. Klicken Sie auf **Abschicken**.
+6. Wiederholen Sie diesen Vorgang, bis Sie die Mindestanforderungen für die wöchentlichen Zeitfenster erfüllt haben. 
+
+### Nicht verfügbare Wartungszeiten festlegen
+
+Nachdem Sie Ihre bereits genehmigten verfügbaren Wartungszeiten festgelegt haben, können Sie bestimmte Daten und Uhrzeiten festlegen, in denen Ihre Umgebung nicht für Aktualisierungen verfügbar ist. Sie möchten zum Beispiel ein Wochenende oder einen Feiertag mit hohem Datenverkehr auswählen, an denen Sie keine Wartung wünschen, damit die Anwendungen für Ihre Benutzer zur Verfügung stehen. 
+
+1. Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an &gt; Verfügbarkeit verwalten**.
+2. Erweitern Sie den Abschnitt zum Thema **Nicht verfügbare Aktualisierungszeiten verwalten**.
+3. Klicken Sie auf **Neues hinzufügen** ![Neues hinzufügen](images/add-new.png).
+4. Legen Sie das erste nicht verfügbare Zeitfenster fest, indem Sie die Häufigkeit, die Dauer und die Anfangszeit für das Fenster auswählen. 
+5. Klicken Sie auf **Abschicken**.
+
+### Aktualisierungen planen und genehmigen
+{: #scheduleandapprove}
+
+Nachdem Sie Ihre vorab genehmigten Wartungszeiten festgelegt haben, werden unterbrechungsfreie Aktualisierungen automatisch während dieser Zeiten geplant. Ihre explizite Genehmigung für diese Aktualisierungstypen ist nicht erforderlich. Sie können jedoch die Details für jede Wartungsaktualisierung einschließlich der aktualisierten Komponenten, der Dauer der Aktualisierung und des geplanten Aktualisierungstermins anzeigen.  
+
+Um die Details für eine unterbrechungsfreie Aktualisierung anzuzeigen, führen Sie die folgenden Schritte aus: 
+
+1. Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an**.
+2. Suchen Sie Aktualisierungszeilen, bei denen für **Angepasste Terminplanung erforderlich** die Einstellung **Nein** festgelegt ist.
+3. Wählen Sie die Zeile für die Aktualisierung aus, um die Details anzuzeigen.
+
+Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können die vorgeschlagenen Daten und die vorgeschlagenen Uhrzeiten auswählen, die auf den vorab genehmigten Aktualisierungsfenstern basieren, oder Sie können zwei weitere Uhrzeiten und Daten auswählen, aus denen IBM dann bei der Terminierung der Aktualisierung auswählt. 
+
+Führen Sie für Aktualisierungen mit Unterbrechung, die Ihre Genehmigung erfordern, folgende Schritte durch: 
+
+1. Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* Aktualisierungen stehen an**.
+2. Suchen Sie Aktualisierungszeilen, bei denen für **Angepasste Terminplanung erforderlich** die Einstellung **Ja** festgelegt ist.
+3. Wählen Sie die Zeile für die Aktualisierung aus, um die Details für die Aktualisierung einschließlich der Aktualisierungsbeschreibung, des vorgeschlagenen Datums und der vorgeschlagenen Uhrzeit für die Aktualisierung, die betroffenen Komponenten sowie die Dauer der Aktualisierung zu überprüfen. 
+4. Wählen Sie **Planen und Genehmigen** aus.
+5. Wählen Sie aus den folgenden Optionen: **Vorgeschlagenes Datum**, **Alternative Daten** oder **Alle vorab genehmigten Zeiten** aus.
+6. Wählen Sie **Abschicken** aus. 
+
+Die Aktualisierung wird auf Grundlage Ihrer Auswahl an dem vorgeschlagenen Datum, das Sie genehmigt haben, während einer der von Ihnen vorab genehmigten Wartungszeiten oder an einem der alternativen Daten und zu einer der alternativen Uhrzeiten angewendet. Wenn das Plandatum für Ihre Aktualisierung durch IBM abgeschlossen ist, sehen Sie das geplante Datum in den Details zur Aktualisierung auf der Seite **Systemaktualisierungen**.
+
+### Kalenderfeed für geplante Aktualisierungen einrichten
+
+Sie können auf der Seite 'Systemaktualisierungen' auswählen, dass Ihr Plan für die Aktualisierung verfolgt wird, indem Sie auf das Symbol **Kalender** ![Kalender](images/icon_calendar.svg) klicken und die Datei mit der Erweiterung `.ics` herunterladen, um Ihre geplanten Aktualisierungen in eine Kalender-App mit vier Auswahloptionen zu importieren: 
 
 <ol>
 <li>Öffnen Sie die Kalender-App.</li>
@@ -118,6 +176,27 @@ Auf der Seite 'Anstehende Aktualisierungen' können Sie Ihren Aktualisierungszei
 </ol>
 
 Sie können die Benachrichtigungsfunktionalität für die Seite 'Verwaltung' auch durch Ereignisabonnements erweitern, um sie in einen Web-Service Ihrer Wahl zu integrieren. Informationen zur Einrichtung eines Abonnements für Ereignisbenachrichtigungen für eine Aktualisierung oder einen Vorfall finden Sie unter [Benachrichtigungen und Ereignisabonnements](index.html#oc_eventsubscription).
+
+## Systeminformationen anzeigen
+{: #oc_system}
+
+Klicken Sie zum Anzeigen von Systeminformationen auf **Verwaltung &gt; Systeminformationen**.
+
+Sie können verschiedene Abschnitte zu den anstehenden Wartungsaktualisierungen, allgemeinen Systeminformationen und LDAP-Konfigurationsdetails erweitern und anzeigen. 
+
+### Anstehende Systemaktualisierungen
+
+Im Bereich für die Aktualisierungen wird die Anzahl der Benachrichtigungen über anstehende Aktualisierungen angezeigt,
+für die eine Aktion Ihrerseits erforderlich ist. Es gibt zwei Typen von Wartungsaktualisierungen, die Ihnen möglicherweise angezeigt werden: 
+
+<dl>
+<dt>Unterbrechungsfreie Aktualisierungen</dt>
+<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkunge auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung. Diese Aktualisierungen werden in den vorab genehmigten, verfügbaren Wartungszeiten, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben, angewendet. </dd>
+<dt>Aktualisierung mit Unterbrechungen</dt>
+<dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie können jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen, um sicherzustellen, dass die Aktualisierung nicht während kritischer Geschäftszeiten angewendet wird. Sie können das vorgeschlagene Implementierungsdatum und die vorgeschlagene Uhrzeit auswählen, die auf den von Ihnen vorab genehmigten Aktualisierungszeiten basieren, oder Sie können zwei weitere Uhrzeiten und Daten auswählen, aus denen IBM dann bei der Anwendung der Aktualisierung auswählt. </dd>
+</dl>
+
+Weitere Informationen zum Festlegen vorab genehmigter Wartungszeiten, zum Festlegen bestimmter Zeiten, die für die Wartung nicht verfügbar sind und zum Festlegen eines Kalenderfeeds, finden Sie im Abschnitt zu [Wartungsaktualisierungen](index.html#oc_schedulemaintenance).
 
 ### Allgemeines Systeminformationen
 
@@ -133,10 +212,10 @@ Der Bereich für allgemeine Informationen enthält die folgenden Angaben:
 Im Bereich für die LDAP-Konfigurationsdetails können Sie den LDAP-Server
 auswählen und Informationen zu Benutzer- und Gruppenzuordnungen anzeigen. Wenn Sie {{site.data.keyword.IBM}} WebID verwenden, wird dies in diesem Bereich angezeigt.
 
-## Nutzungsinformationen anzeigen
+## Nutzungsinformationen und Berichte anzeigen
 {: #oc_resource}
 
-Sie können verschiedene Typen von Nutzungsinformationen für Ihre lokale oder dedizierte Instanz und Ihr {{site.data.keyword.Bluemix_notm}}-Konto anzeigen:
+Sie können verschiedene Typen von Nutzungsinformationen für Ihre lokale oder dedizierte Instanz und das {{site.data.keyword.Bluemix_notm}}-Konto anzeigen. Sie können ferner Sicherheitsberichte und Protokolle für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz herunterladen und anzeigen. 
 
 - Ressourceninformationen wie Plattenspeicher, CPU-Auslastung, Netzauslastung und durchschnittliche Antwortzeiten. Siehe [Ressourcennutzung](index.html#resourceusage).
 - Kontonutzung pro Organisation, zum Beispiel die Anzahl von Laufzeit-Apps mit Nutzung, Gesamtzahl GB-Stunden für Laufzeiten und die Anzahl von Serviceinstanzen mit Nutzung. Siehe [Kontonutzung](index.html#accountusage).
@@ -146,7 +225,7 @@ Sie können verschiedene Typen von Nutzungsinformationen für Ihre lokale oder d
 ### Ressourcennutzung
 {: #resourceusage}
 
-Klicken Sie zum Anzeigen von Ressourceninformationen auf **Verwaltung &gt; Nutzung**.
+Klicken Sie zum Anzeigen von Informationen zur Ressourcennutzung auf **Verwaltung &gt; Nutzung**.
 
 Im Bereich für die Ressourcenüberwachung können Sie die folgenden Informationen anzeigen:
 
@@ -215,12 +294,10 @@ Zum Anzeigen der Nutzung pro Organisation klicken Sie auf **Verwaltung &gt; Orga
 
 Weitere Informationen zum Anzeigen der Nutzung pro Organisation, zum Anpassen von Kontingentplänen und zum Verwalten der Organisationen finden Sie unter [Organisationen verwalten](../admin/index.html#oc_organizations).
 
-## Berichte anzeigen
+### Reports
 {: #oc_report}
 
-Sie können Sicherheitsberichte und -protokolle, wie DataPower&trade;-, Firewall- und Anmeldeprüfberichte für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz anzeigen.
-
-Klicken Sie zum Anzeigen von Berichten und Protokollen auf **Verwaltung &gt; Berichte und Protokolle**.
+Sie können Sicherheitsberichte und -protokolle, wie DataPower&trade;-, Firewall- und Anmeldeprüfberichte für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz anzeigen. Klicken Sie zum Anzeigen von Berichten und Protokollen auf **Verwaltung &gt; Berichte und Protokolle**.
 
 Es stehen Ihnen nun verschiedene Möglichkeiten zur Auswahl:
 
@@ -234,7 +311,7 @@ Anmeldeprüfungsberichte einsetzen.
 
 In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated generiert werden.
 
-*Tabelle 4. Liste der Sicherheitsberichte*
+*Tabelle 5. Liste der Sicherheitsberichte*
 
 | **Kategorie** | **Bericht** | **Beschreibung** |      
 |-----------------|-------------------|---------------------|
@@ -259,11 +336,19 @@ In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.d
 ## Status anzeigen
 {: #oc_status}
 
-Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite überwachen. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Status** aus.
+Sie können den Status für die {{site.data.keyword.Bluemix_notm}}-Umgebung und für die Administrationskonsole anzeigen. 
 
-Die Seite 'Status' ist die zentrale Position für die Suche nach Benachrichtigungen und Ankündigungen in Bezug auf bedeutende Ereignisse, die die {{site.data.keyword.Bluemix_notm}}-Plattform und die übergeordneten Services in {{site.data.keyword.Bluemix_notm}} betreffen.
+### {{site.data.keyword.Bluemix_notm}}-Umgebungsstatus
 
-Sie können einen RSS-Feed abonnieren, damit Sie nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben. Weitere Informationen zur Seite 'Status' und zur Einrichtung des RSS-Feeds finden Sie in [{{site.data.keyword.Bluemix_notm}} anzeigen](../support/index.html#viewing-bluemix-status).
+Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite anzeigen. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Konto und Unterstützung](../support/images/account_support.svg) und wählen Sie **Status** aus.
+
+Die Seite 'Status' ist die zentrale Position für die Suche nach Benachrichtigungen und Ankündigungen in Bezug auf bedeutende Ereignisse, die die {{site.data.keyword.Bluemix_notm}}-Plattform und die übergeordneten Services in {{site.data.keyword.Bluemix_notm}} betreffen. Sie können einen RSS-Feed abonnieren, damit Sie nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben. Weitere Informationen zur Seite 'Status' und zur Einrichtung des RSS-Feeds finden Sie in [{{site.data.keyword.Bluemix_notm}} anzeigen](../support/index.html#viewing-bluemix-status).
+
+### Status der Administrationskonsole
+
+Nach der ursprünglichen Implementierung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung wird automatisch eine Verifizierungsprüfung für die Komponenten ausgeführt, die für die Verwaltung Ihrer Umgebung verwendet werden. Sie können auf die Seite 'Verifizierungsprüfung für Administratorkonsole' wechseln, um den Status der Komponenten nach dem Ausführen der Verifizierungsprüfung zu überprüfen. Um auf die Seite zuzugreifen, wechseln Sie zu <code>https://console.&lt;subdomain&gt;.bluemix.net/check</code>, wobei `<subdomain>` der Name Ihrer lokalen oder dedizierten Instanz ist. 
+
+Sie können eine Verifizierung jederzeit ausführen. Sie müssen angemeldet sein, um die Option zur Ausführung der Verifizierung auszuführen. Wenn Fehler auftreten, während Sie einen Benutzer hinzufügen, eine Organisation bearbeiten oder Ihre Services verwalten, führen Sie diese Prüfung aus, um festzustellen, ob Komponenten fehlschlagen oder nicht verbunden sind. Sie können ein Support-Ticket mit den Informationen aus der Prüfung öffnen, um das Problem schnell zu beheben. 
 
 ## Eigenen Katalog verwalten
 {: #oc_catalog}
@@ -432,6 +517,16 @@ Führen Sie zum Erstellen einer neuen Organisation sowie zum Hinzufügen von Man
 mehrere Namen ein bzw. wählen Sie mehrere Namen aus, wenn Sie mehrere Manager hinzufügen möchten.
 4. Klicken Sie auf <strong>Organisation erstellen</strong>, um die Änderungen zu speichern und die Organisation zu erstellen.
 
+### Bereiche erstellen
+
+Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* als Entwicklungsumgebung, einen Bereich *test* als Testumgebung und einen Bereich *production* als Produktionsumgebung. Anschließend können Sie Ihre Apps den Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu erstellen: 
+
+1. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und rufen Sie die Seite **Organisationen verwalten** auf. 
+2. Wählen Sie die Organisation aus, der Sie einen Bereich hinzufügen möchten. 
+3. Klicken Sie auf **Bereich erstellen**.
+4. Geben Sie einen Bereichsnamen ein.
+5. Klicken Sie auf **Erstellen**.
+
 ### Kontingentüberwachung
 
 Erweitern Sie den Bereich für die Kontingentüberwachung, um Informationen zu den folgenden Punkten anzuzeigen:
@@ -528,46 +623,57 @@ Die Berechtigungen für jeden Benutzer werden angezeigt. Die folgenden Berechtig
 `Reports` und `Users`. Berechtigungen können aktiviert werden oder dem
 Benutzer kann der Zugriff `view` bzw. `write` für diese Berechtigung
 erteilt werden; diese werden durch Symbole dargestellt. Beschreibungen der
-einzelnen Typen und Erläuterungen der Symbole finden Sie unter [Berechtigungen](#permissions).
+einzelnen Typen und Erläuterungen der Symbole finden Sie unter [Berechtigungen](index.html#permissions).
 
-Es stehen verschiedene Optionen zur Auswahl:
+### Mit Benutzern arbeiten
+
+Sie können nach vorhandenen Benutzern suchen, Benutzer entfernen und Benutzer einzeln oder in Gruppen hinzufügen. Es stehen verschiedene Optionen zur Auswahl:
 
 * Nach Benutzern suchen. Sie können mithilfe des Feldes **Suchen** Benutzer in der Tabelle suchen.
-* Fügen Sie Benutzer hinzu. Wenn Sie die Berechtigung `admin` oder die Berechtigung
-`users` mit dem Zugriff `write` besitzen, können Sie Benutzer hinzufügen. Klicken Sie
-auf **Einzelnen Benutzer hinzufügen** oder **Benutzergruppe hinzufügen**,
-um einen Benutzer oder eine Benutzergruppe hinzuzufügen. Geben Sie im Suchfeld einen Benutzernamen oder den Namen
-einer Gruppe für die Suche ein und wählen Sie die Organisation aus der Organisationsliste aus, der der
-Benutzer oder die Benutzergruppe hinzugefügt werden soll. Wenn Sie den Benutzer oder die Gruppe gefunden haben, den bzw. die
-Sie hinzufügen möchten, klicken Sie auf den Benutzernamen und dann zum Hinzufügen auf
-**Benutzer hinzufügen** oder **Mehrere Benutzer hinzufügen**.
-Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe
+
+* Fügen Sie einen einzelnen Benutzer hinzu. Wenn Sie die Berechtigung `admin` oder die Berechtigung
+`users` mit dem Zugriff `write` besitzen, können Sie Benutzer hinzufügen.
+
+  1. Um einen einzelnen Benutzer aus Ihrem LDAP-Verzeichnis hinzuzufügen, klicken Sie auf **Benutzer hinzufügen**.
+  2. Geben Sie im Feld **Suche** die E-Mail-Adresse für den Benutzer ein und wählen Sie anschließend den Benutzer aus der gefüllten Liste aus.
+  3. Wählen Sie neben dem Feld **Organisation** die Organisation aus, zu der Sie den Benutzer hinzufügen möchten, indem Sie den Namen der Organisation eingeben und diesen aus der gefüllten Liste auswählen. 
+  4. Klicken Sie auf **Benutzer hinzufügen**, um den Benutzer zur ausgewählten Organisation hinzuzufügen.
+
+  **Hinweis**: Wenn die Operation zum Hinzufügen erfolgreich ist, wird der Benutzer für Sie zum Anzeigen und zum Durchsuchen zu der Tabelle hinzugefügt. Wenn Benutzer hinzugefügt werden,
+sind ihnen keine Berechtigungen zugewiesen.
+
+* Fügen Sie eine Benutzergruppe aus Ihrem LDAP-Verzeichnis hinzu. 
+
+  1. Klicken Sie auf **Benutzergruppe hinzufügen**.
+  2. Geben Sie im Feld **Suche** einen Gruppennamen für die Suche ein und wählen Sie den Gruppennamen aus der gefüllten Liste aus. 
+  3. Wählen Sie neben dem Feld **Organisation** die Organisation aus, zu der Sie die Benutzergruppe hinzufügen möchten, indem Sie den Namen der Organisation eingeben und diesen aus der gefüllten Liste auswählen. 
+  4. Klicken Sie auf **Benutzer hinzufügen**, um die Benutzergruppe zu der ausgewählten Organisation hinzuzufügen.
+  **Hinweis**: Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe
 zur Tabelle hinzugefügt und Sie können ihn bzw. sie anzeigen und durchsuchen. Wenn Benutzer hinzugefügt werden,
 sind ihnen keine Berechtigungen zugewiesen.
-* Bearbeiten Sie Berechtigungen und Organisationen. Wenn Sie die Berechtigung `admin`
-besitzen, können Sie Berechtigungen und Organisationen für andere Benutzer bearbeiten. Um Berechtigungen zu bearbeiten,
-suchen Sie den gewünschten Benutzer und klicken Sie auf den Benutzernamen. Um Berechtigungen zu aktivieren oder zu
-inaktivieren, wählen Sie in dem daraufhin angezeigten Fenster die folgenden Optionen aus:
-	* Wählen Sie **On** in der Liste aus, um eine Berechtigung zu aktivieren.
-	* Wählen Sie **Lesen** (Read) in der Liste aus, um dem Benutzer den Zugriff `view` (schreibgeschützt)
-für diese Berechtigung zu erteilen, oder **Schreiben** (Write), um den Zugriff `write`
-(Schreiben, d. h. Bearbeiten, Hinzufügen und Entfernen) für diese Berechtigung zu erteilen.
-	* Wählen Sie **Off** aus, um die Berechtigung zu inaktivieren.
-Um Organisationen zu bearbeiten, wählen Sie die folgenden Optionen aus:
-	* Fügen Sie den Benutzer zu einer Organisation hinzu, indem Sie über das Suchfeld eine Organisation
-suchen und durch Klicken unter den verfügbaren Optionen die Option **HINZUFÜGEN** auswählen.
-	* Entfernen Sie einen Benutzer aus einer Organisation, indem Sie auf das Symbol ![Minuszeichen als Symbol für 'Entfernen'](images/icon_remove.svg) klicken.
-Klicken Sie zum Abschluss auf **Speichern**.
+
+* Eine Gruppe von Benutzern hinzufügen, indem ein Arbeitsblatt importiert wird, das die Benutzer-IDs, E-Mail-Adressen und die Organisation enthält, zu der Sie die Benutzer hinzufügen möchten. 
+
+  1. Klicken Sie auf **Benutzer importieren**.
+  2. Klicken Sie auf **Vorlage herunterladen (.CSV)**, um ein Arbeitsblatt mit den erforderlichen Spalten herunterzuladen, das Sie ausfüllen können, oder um Ihre eigenes Arbeitsblatt zu erstellen, das mindestens die folgenden erforderlichen Spaltenüberschriften enthält: **Benutzer-ID**, **E-Mail**, **Organisation**.
+  3. Geben Sie die Benutzerwerte in die erforderlichen Spalten ein. Falls Sie kein LDAP-Verzeichnis verwenden, verwenden Sie die erforderlichen Spaltenüberschriften **Vorname** und **Nachname** für Ihren Benutzerimport. 
+  4. Speichern Sie Ihre Datei und klicken Sie auf **Datei hochladen**.
+ 
+
+  **Hinweis**: Geben Sie die Benutzer-IDs ein, die mit den in Ihrer Benutzerregistry verwendeten Werten übereinstimmen. Die Spalten innerhalb des Arbeitsblatts können in beliebiger Reihenfolge angeordnet sein, solange Sie über alle erforderlichen Spalten verfügen. Sie empfangen eine Bestätigungsnachricht, die besagt, dass alle Benutzer hinzugefügt wurden, wenn der Import erfolgreich war. Wenn der Import für einige Benutzer erfolgreich war, für andere hingegen nicht, prüfen Sie die Fehlernachricht, um Aktionen für die Benutzer zu ergreifen, die nicht hinzugefügt werden konnten. 
+
 * Entfernen Sie Benutzer. Wenn Sie die Berechtigung `admin` oder die Berechtigung
 `users` mit dem Zugriff `write` besitzen, können Sie Benutzer entfernen.
-Um einen Benutzer zu entfernen, suchen Sie den Benutzer und klicken Sie zunächst auf das Symbol ![Löschen](images/icon_trash.svg) und anschließend auf **Entfernen**.
+
+    1. Suchen Sie den Benutzer und klicken Sie auf das Symbol ![Löschen](images/icon_trash.svg). 
+    2. Klicken Sie auf **Entfernen**.
 
 ### Berechtigungen
 {: #permissions}
 
 Benutzern können die folgenden Berechtigungen zugewiesen werden:
 
-*Tabelle 5. Berechtigungen*
+*Tabelle 6. Berechtigungen*
 
 | **Benutzerberechtigung** | **Beschreibung** |       
 |-----------------|-------------------|
@@ -577,12 +683,26 @@ Benutzern können die folgenden Berechtigungen zugewiesen werden:
 | Reports | Benutzern mit der Berechtigung `reports` kann für Sicherheitsberichte der Zugriff `view` (Anzeigen) oder `write` (Ändern) zugewiesen werden. |
 | Users | Benutzern mit der Berechtigung `users` kann der Zugriff `view` (Anzeigen) für die Benutzerliste oder `write` (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen.|
 
+
 Berechtigungen können aktiviert werden oder dem Benutzer kann der Zugriff `view` bzw.
 `write` für diese Berechtigung erteilt werden; dies wird durch die folgenden Symbole dargestellt:
 
 * Das Symbol ![Aktiviert; dargestellt durch ein Hakensymbol](images/icon_enabled.svg) neben einer Berechtigung bedeutet, dass diese Berechtigung aktiviert ist.
 * Das Symbol ![Anzeigen: dargestellt durch ein Augensymbol](images/icon_read.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff `view` (schreibgeschützt) verfügt.
 * Das Symbol ![Schreiben: dargestellt durch ein Stiftsymbol](images/icon_write.svg) bedeutet, dass der Benutzer für diese Berechtigung über den Zugriff `write` (Bearbeiten, Hinzufügen oder Entfernen) verfügt.
+
+Die Bearbeitung von Berechtigungen und Organisationen für andere Benutzer erfordert, dass Sie über die Berechtigung `admin` verfügen. Um Berechtigungen zu bearbeiten,
+suchen Sie den gewünschten Benutzer und klicken Sie auf den Benutzernamen. Auf der Seite **Benutzer bearbeiten** können Sie die Berechtigungen aktivieren oder inaktivieren. 
+
+* Wählen Sie **On** in der Liste aus, um eine Berechtigung zu aktivieren.
+* Wählen Sie in der Liste **Lesen** (Read) aus, um dem Benutzer Lesezugriff `view` für diese Berechtigung zu erteilen, oder wählen Sie **Schreiben** (Write) aus, um dem Benutzer Schreibzugriff `write` zum Bearbeiten, Hinzufügen und Entfernen für diese Berechtigung zu erteilen. 
+* Wählen Sie **Off** aus, um die Berechtigung zu inaktivieren.
+
+Wählen Sie die folgenden Optionen aus, um einen Benutzer zu einer Organisation hinzuzufügen oder zu entfernen: 
+
+* Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Anzeige **Benutzer bearbeiten** zuzugreifen und einen Benutzer zu einer Organisation hinzuzufügen. Verwenden Sie anschließend das Suchfeld, um eine Organisation zu lokalisieren, und wählen Sie die Organisation aus der Liste aus. Klicken Sie anschließend auf **Speichern**.
+* Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Anzeige **Benutzer bearbeiten** zuzugreifen und einen Benutzer aus einer Organisation zu entfernen. Klicken Sie anschließend für die Organisation, aus der der Benutzer entfernt werden soll, auf ![Entfernen](images/icon_remove.svg) und dann auf **Speichern**.
+
 
 ## Benutzer mit der Admin-REST-API verwalten
 {: #usingadminapi}
@@ -941,7 +1061,7 @@ POST /codi/v1/serviceBrokers
 ### Anforderung
 {: #registerrequest}
 
-*Tabelle 6. Felder*
+*Tabelle 7. Felder*
 
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
@@ -1022,7 +1142,7 @@ Verwenden Sie die folgende API und die folgenden Codebeispiele zum Aktualisieren
 ### Anforderung
 {: #updaterequest}
 
-*Tabelle 7. Felder*
+*Tabelle 8. Felder*
 
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
@@ -1094,7 +1214,7 @@ Content-Type: application/json
 
 Verwenden Sie die folgende API und die folgenden Codebeispiele zum Löschen eines Service.
 
-*Tabelle 8. Parameter*
+*Tabelle 9. Parameter*
 
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|

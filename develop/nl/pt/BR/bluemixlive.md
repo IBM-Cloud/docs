@@ -4,18 +4,20 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
 
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última atualização: 8 de abril de 2016*  
+*Última atualização: 07 de abril de 2016*  
 
 Se você estiver construindo um aplicativo Node.js, será possível usar o {{site.data.keyword.Bluemix}} Live Sync para atualizar rapidamente a instância do aplicativo no {{site.data.keyword.Bluemix_notm}} e desenvolver da forma usual na área de trabalho sem reimplementar.   
 {: shortdesc}
@@ -120,7 +122,8 @@ Para obter um tutorial sobre o uso do recurso Live Edit do {{site.data.keyword.B
 Ao mudar os arquivos no Web IDE, eles são automaticamente reimplementados para seu aplicativo em execução no {{site.data.keyword.Bluemix_notm}}. Se você precisar reiniciar o aplicativo Node, então é possível usar o botão
 **Reiniciar** na barra de execução.
 
-**Nota:** Para uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, memória adicional de 256 MB é necessária e será incluída. 
+**NOTA:** para uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, memória adicional de 256 MB é necessária e
+será incluída.
 
 ##{{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
@@ -228,80 +231,88 @@ imediatamente. A interface da linha de comandos do {{site.data.keyword.Bluemix_l
 Para obter informações adicionais sobre download e uso do comando bl, veja [Bluemix Live Sync](../develop/bluemixlive.html).
 
 ## Comandos bl
+{: #bl_commands}
 
 A linha de comandos do {{site.data.keyword.Bluemix_live}}, **bl**, tem a sintaxe a seguir:
 
 ```
 comando bl [argumentos][options] [--help]
 ```
+{: pre}
 
-### Comandos
-<dl>
-<dt>login, l</dt>
-<dd>Efetue login no {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>logout, lo</dt>
-<dd>Efetue logout do usuário.</dd>
-<dt>sync, s</dt>
-<dd>Inicie o processo de sincronização entre a área de trabalho e o servidor.</dd>
-<dt>create, c</dt>
-<dd>Crie um projeto privado, vincule-o ao Git repo nesse diretório
-e implemente o conteúdo no {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>projects, p</dt>
-<dd>Liste todos os projetos que estão disponíveis para sincronização.</dd>
-<dt>start, st</dt>
-<dd>Inicie a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>stop, sp</dt>
-<dd>Pare a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>status, ss</dt>
-<dd>Liste o status da instância do aplicativo em execução no {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+**Comandos**
 
-### Argumentos
-<dl>
-<dd>Argumentos para o comando.</dd>
-</dl>
+l *login*: efetuar login no {{site.data.keyword.Bluemix_notm}}.
 
-### Opções
-<dl>
-<dd>Opções para o comando.</dd>
-</dl>
+lo *logout*: efetuar logout do {{site.data.keyword.Bluemix_notm}}.
 
-### Opções globais
-<dl>
-<dt>--help</dt>
-<dd>Exiba a página de ajuda para o comando especificado</dd>
-<dt>--verbose</dt>
-<dd>Ative a criação de log detalhado.</dd>
-</dl>
+s *sync*: iniciar o processo de sincronização entre a área de trabalho e o servidor.
+
+c *create*: criar um projeto privado, vinculá-lo ao repositório Git neste diretório e implementar os conteúdos no {{site.data.keyword.Bluemix_notm}}.
+
+p *projects*: listar todos os projetos que estão disponíveis para sincronização.
+
+st *start*: iniciar a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.
+
+sp *stop*: parar a instância do aplicativo no {{site.data.keyword.Bluemix_notm}}.
+
+ss *status*: listar o status da instância do aplicativo em execução no {{site.data.keyword.Bluemix_notm}}.
+
+
+**Argumentos**
+
+Argumentos para o comando.
+
+
+**Opções**
+
+Opções para o comando.
+
+**Opções globais**
+
+*--help*: exibir a página de ajuda para o comando especificado
+
+*--verbose*: ativar a criação de log detalhado.
 
 **Nota:** Se qualquer um de seus argumentos ou opções contiver um espaço, coloque o valor entre aspas duplas.
 
-## help
+## Auxílio
+{: bl_help}
 
 ```
-bl [ command ] --help
+bl [ command ] --help | --h
 ```
+{: pre}
 
-### Uso
-<dl>
-<dd>Use esse comando para exibir a ajuda sobre um comando ou a lista de comandos.</dd>
-</dl>
+**Uso**
 
-### Exemplos
+Use esse comando para exibir a ajuda sobre um comando ou a lista de comandos.
 
-O comando a seguir exibe a lista de comandos:
+**Exemplos**
 
-`'bl --help'`
+Exibir a lista de comandos:
 
-O comando a seguir exibe as informações detalhadas sobre o comando sync:
+```
+bl --help
+```
+{: pre}
 
-`'bl sync --help'`
+Exibir informações detalhadas sobre o comando sync:
 
-## login
+```
+bl sync --help
+```
+{: pre}
 
-`'bl login|l [ -u username ][-p password ][ -s server ]'`
+## Login
+{: bl_login}
 
-### Propósito
+```
+bl login | l [ -u username ][-p password ][ -s server ]
+```
+{: pre}
+
+**Propósito**
 
 Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log precisa ser feito somente uma vez por sessão.
 
@@ -309,324 +320,347 @@ Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log
 
 **Nota:** deve-se fazer a inscrição para uma conta grátis do <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> antes de efetuar login.
 
-### Opções
+**Opções**
 
-<dl>
-<dt>-u username</dt>
-<dd>Seu ID IBM a ser usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>-p password</dt>
-<dd>Sua senha de ID IBM.</dd>
-<dt>-s server</dt>
-<dd>O nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}.</dd>
-</dl>
+-u *username*: seu ID IBM a ser usado para efetuar login no {{site.data.keyword.Bluemix_notm}}.
 
-### Exemplos
+-p *password*: Sua senha de ID IBM.
+
+-s *server*: nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}. 
+
+**Exemplos**
 
 Esse comando solicita um *username* e um *password*:
 
-`'bl login'`
+```
+bl login
+```
+{: pre}
 
-Este comando efetua login do usuário `name@company.com:`
-
-`'bl login –u name@company.com –p pa55w0rd'`
-
-Este comando efetua login do usuário `name@company.com` com a senha pa55 w0rd que contém um espaço, portanto, ela precisa de aspas:
-
-`'bl login –u name@company.com –p “pa55 w0rd”'`
-
-## logout
+Efetue login no usuário, `name@company.com`:
 
 ```
-bl logout|lo
+bl login –u name@company.com –p pa55w0rd
 ```
+{: pre}
 
-### Propósito
+Efetue login no usuário, `name@company.com` com a senha *pa55 w0rd* que contém um espaço; portanto, ele precisa de aspas:
 
-<dl>
-<dd>Use esse comando para efetuar logout.</dd>
-</dl>
+```
+bl login –u name@company.com –p “pa55 w0rd”
+```
+{: pre}
+
+## Logout
+{: bl_logout}
+
+```
+bl logout | lo
+```
+{: pre}
+
+**Propósito**
+
+Use esse comando para efetuar logout.
 
 ## Projetos
+{: bl_projects}
 
 ```
-bl projects|p
+bl projects | p
 ```
+{: pre}
 
-### Propósito
+**Propósito**
 
-<dl>
-<dd>Use esse comando para listar todos os projetos disponíveis para sincronização pelo usuário com login efetuado.</dd>
-</dl>
+Use esse comando para listar todos os projetos disponíveis para sincronização pelo usuário com login efetuado.
 
-## sync
+## Sync
+{: bl_sync}
 
 ```
-bl sync|s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
+bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremote ] [ --verbose ]
 ```
+{: pre}
 
-### Propósito
+**Propósito**
 
-<dl>
-<dd>Use esse comando para iniciar a sincronização do conteúdo de um projeto com seu diretório local. Esse comando é executado
+Use esse comando para iniciar a sincronização do conteúdo de um projeto com seu diretório local. Esse comando é executado
 até que um <code>q</code> seja inserido. Esse comando pode opcionalmente mostrar um log de todas as mudanças
-de estado do aplicativo e do arquivo.</dd>
-</dl>
+de estado do aplicativo e do arquivo.
 
-### Argumento
+**Argumento**
 
-<dl>
-<dt>projectName</dt>
-<dd>O nome do projeto no formato <i>“alias | mproject”</i> ou apenas
-<i>myproject</i>, se o projeto for de propriedade do usuário com login efetuado.</dd>
-</dl>
+*projectName*: o nome do projeto no formato *“alias | mproject”* ou apenas *myproject* se o projeto for de propriedade do usuário com login efetuado.
 
-### Opções
+**Opções**
 
-<dl>
-<dt>-d localDirectory</dt>
-<dd>Caminho do diretório local. Usa como padrão a pasta atual ".".</dd>
-<dt>--overwritelocal</dt>
-<dd>Sobrescreva o diretório local com conteúdo da área de trabalho do projeto.</dd>
-<dt>--overwriteremote</dt>
-<dd>Sobrescreva a área de trabalho do projeto com o conteúdo do diretório local.</dd>
-<dt>--verbose</dt>
-<dd>Exiba a criação de log detalhado.</dd>
-</dl>
+-d *localDirectory*: caminho do diretório local. Usa como padrão a pasta atual ".".
 
-### Exemplos
+*--overwritelocal*: sobrescrever o diretório local com conteúdos da área de trabalho do projeto.
+
+*--overwriteremote*: sobrescrever a área de trabalho do projeto com os conteúdos do diretório local.
+
+*--verbose*: exibir a criação de log detalhado.
+
+**Exemplos**
 
 Este comando inicia a sincronização com o projeto associado, se o diretório atual for um
-destino de sincronização existente. Se o diretório atual estiver vazio e não for um destino de sincronização existente, o comando solicitará um *projectName*. Se o diretório atual não estiver vazio e
+destino de sincronização existente. Se o diretório atual estiver vazio e não for um destino de sincronização existente,
+o comando solicitará um *projectName*. Se o diretório atual não estiver vazio e
 não for um destino de sincronização existente, uma opção de sobrescrita será necessária.
 
 ```
 bl sync
 ```
+{: pre}
 
-Esse comando inicia a sincronização e é equivalente a
-```bl sync “alias | myproject”```
-se o projeto é propriedade do usuário que efetuou login.
+Esse
+comando inicia a sincronização e é equivalente a `bl sync “alias |
+myproject”`, se o projeto for de propriedade do usuário com login efetuado.
 
-```bl sync  myproject```
+```
+bl sync  myproject
+```
+{: pre}
 
 Este
-comando inicia a sincronização com o projeto <code>my pro ject</code> cujo nome contém espaços; portanto,
+comando inicia a sincronização com o projeto `my pro ject` cujo nome contém espaços; portanto,
 ele é colocado entre aspas:
 
-```bl sync “my pro ject”```
+```
+bl sync “my pro ject”
+```
+{: pre}
 
-Este comando inicia a sincronização do projeto <code>myproject</code> com o diretório myfolder:
-
-```bl sync myproject –d  myfolder```
-
-## create
+Este comando inicia a sincronização
+do projeto `myproject` com o diretório `myfolder`:
 
 ```
-bl create|c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+bl sync myproject –d  myfolder
 ```
+{: pre}
 
-### Propósito
-<dl>
-<dd>Use esse comando a partir de um diretório que contém o código para criar um
-projeto privado, vincule-o ao Git repo e implemente o conteúdo do repo
-no {{site.data.keyword.Bluemix_notm}}.</dd>
-</dl>
+## Criar
+{: bl_create}
 
-### Opções
+```
+bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_REPO ][-e GIT_EXE ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
+{: pre}
 
-<dl>
-<dt>-n PROJECT_NAME</dt>
-<dd>Um nome para seu projeto. Padrão: nome dir atual.</dd>
-<dt>-r REGION</dt>
-<dd>Uma região do {{site.data.keyword.Bluemix_notm}}. Padrão: Sul EUA</dd>
-<dt>-o ORG</dt>
-<dd>Uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: Primeiro org localizado.</dd>
-<dt>-s SPACE</dt>
-<dd>Um espaço do {{site.data.keyword.Bluemix_notm}}. Parão: primeiro espaço localizado.</dd>
-<dt>-g GIT_REPO</dt>
-<dd>Nome do repo remoto a ser usado para quaisquer Git repos existentes. Padrão: origem.</dd>
-<dt>-e GIT_EXE</dt>
-<dd>Caminho completo para um executável Git. Padrão: detectado.</dd>
-<dt>--creds</dt>
-<dd>Prompt para credenciais Git.</dd>
-<dt>--fork</dt>
-<dd>Bifurque esse diretório e crie um projeto e repo.</dd>
-<dt>--public</dt>
-<dd>Torne o novo projeto público.</dd>
-<dt>--prompt</dt>
-<dd>Solicita todas as opções necessárias com as opções disponíveis.</dd>
-</dl>
+**Propósito**
 
-### Exemplos
+Use esse comando a partir de um diretório que contém o código para criar um
+projeto privado, vincule-o ao repositório Git e implemente o conteúdo do repositório
+no {{site.data.keyword.Bluemix_notm}}.
+
+**Opções**
+
+-n *PROJECT_NAME*: Um nome para o seu projeto. Padrão: nome dir atual.
+
+-r *REGION*: uma região do {{site.data.keyword.Bluemix_notm}}. Padrão: Sul dos EUA.
+
+-o *ORG*: uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: primeira organização localizada.
+
+-s *SPACE*: um espaço do {{site.data.keyword.Bluemix_notm}}. Padrão: primeiro espaço localizado.
+
+-g *GIT_REPO*: nome do repositório remoto a ser usado para quaisquer repositórios Git existentes. Padrão: origem.
+
+-e *GIT_EXE*: caminho completo para um executável Git. Padrão: detectado.
+
+*--creds*: prompt para as suas credenciais Git.
+
+*--fork*: bifurcar esse diretório e criar um projeto e repositório.
+
+*--public*: tornar público o novo projeto.
+
+*--prompt*: solicitar todas as opções necessárias com as opções disponíveis.
+
+**Exemplos**
 
 Esse comando inicia o processo para criar um projeto privado e
 solicita um nome do projeto a ser usado.
 
-```bl create```
+```
+bl create
+```
+{: pre}
 
 Esse
-comando cria um projeto público denominado <code>myNewProject</code>.
-
-```bl create -n myNewProject --public```
-
-## status
+comando cria um projeto público denominado `myNewProject`.
 
 ```
-bl status|ss [ projectName ]
+bl create -n myNewProject --public
 ```
+{: pre}
 
-### Propósito
+## Barra de Status
+{: bl_status}
 
-<dl>
-<dd>Use esse comando para listar o status dos aplicativos que estão associados às configurações de ativação no diretório <code>./launchConfigurations</code>.</dd>
-</dl>
+```
+bl status | ss [ projectName ]
+```
+{: pre}
 
-###Argumento
+**Propósito**
 
-<dl>
-<dt>projectName</dt>
-<dd>O nome do projeto no formato “alias | myproject” ou myproject apenas se o projeto for de propriedade do usuário com login efetuado.</dd>
-</dl>
+Use esse comando para listar o status dos aplicativos que estão associados às configurações de ativação no diretório `./launchConfigurations`.
 
-### Exemplos
+**Argumento**
+
+*projectName*: o nome do projeto no formato `“alias | myproject”` ou apenas `myproject` se o projeto for de propriedade do usuário com login efetuado.
+
+**Exemplos**
 
 Este exemplo exibe o status dos aplicativos em execução. Se o diretório atual for um destino de sincronização
 existente, ele usará o projeto associado. Se o diretório atual não for um destino de sincronização existente,
-o comando solicitará o <i>projectName</i>.
+o comando solicitará o `projectName`.
 
-````bl status```
+``
+bl status
+```
+{: pre}
 
-Este exemplo exibe o status do projeto myproject que é equivalente a
-```bl status “alias | myproject”```
-se o projeto é propriedade do usuário que efetuou login.
+Esse exemplo
+exibe o status do projeto *myproject* que é equivalente a `bl status “alias |
+myproject”`, se o projeto for de propriedade do usuário com login efetuado.
 
-```bl status myproject```
+```
+bl status myproject
+```
+{: pre}
 
 Este
-exemplo exibe o status do aplicativo em execução que é associado ao projeto <code>my pro ject</code> cujo
+exemplo exibe o status do aplicativo em execução que é associado ao projeto `my pro ject` cujo
 nome contém espaços; portanto, ele é colocado entre aspas:
 
-```bl status “my pro ject”```
+```
+bl status “my pro ject”
+```
+{: pre}
 
-## start
+## Iniciar
+{: bl_start}
 
 ```
-bl start|st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
+bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ][--noliveedit ] [ --restart ]
 ```
+{: pre}
 
-### Propósito
+**Propósito**
 
-<dl>
-<dd>Use esse comando para iniciar a instância do aplicativo que é descrita pela ativação ou arquivo manifest. O aplicativo
+Use esse comando para iniciar a instância do aplicativo que é descrita pela ativação ou arquivo manifest. O aplicativo
 é ativado no modo de edição em tempo real, por padrão, se o buildpack do aplicativo suportar edição em tempo real. Assim
 que é iniciado, as URLs para o aplicativo, as ferramentas de depuração e o painel do {{site.data.keyword.Bluemix_notm}}
-são exibidos.</dd>
-</dl>
+são exibidos.
 
-### Argumento
+**Argumento**
 
-<dl>
-<dt>projectName</dt>
-<dd>O nome do projeto no formato <i>“alias | myproject”</i> ou apenas <i>myproject</i>,
-se o projeto for de propriedade do usuário com login efetuado.</dd>
-</dl>
+*projectName*: o nome do projeto no formato *“alias | myproject”* ou apenas *myproject* se o projeto for de propriedade do usuário com login efetuado.
 
-### Opções
+**Opções**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>O nome da configuração de ativação (por exemplo, <code>mylaunchconfig</code>), nome do arquivo (por exemplo,
-<code>mylaunchconfig.launch</code> ou um caminho relativo ao projeto para o arquivo de configuração de ativação
-(por exemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-<dt>-m manifestPath</dt>
-<dd>O caminho relativo ao projeto para o arquivo manifest (por exemplo, <code>manifest.yml</code>).</dd>
-<dt>--liveedit</dt>
-<dd>Inicie o aplicativo associado no modo de edição em tempo real ou saia com um erro, se o
-buildpack não suportar o modo de edição em tempo real.</dd>
-<dt>--noliveedit</dt>
-<dd>Inicie o aplicativo associado no modo normal.</dd>
-<dt>--view</dt>
-<dd>Abra um navegador do aplicativo em execução.</dd>
-<dt>--restart</dt>
-<dd>Reinicie um aplicativo já em execução no modo de edição em tempo real sem reimplementá-lo.</dd>
-</dl>
+-l *launchConfiguration*: o nome da configuração de ativação (por exemplo, `mylaunchconfig`), nome do arquivo (por exemplo, `mylaunchconfig.launch` ou um
+caminho relativo ao projeto para o arquivo de configuração de ativação (por exemplo, `launchConfigurations/mylaunchconf.launch`).
 
-### Exemplos
+-m *manifestPath*: o caminho relativo ao projeto para o arquivo manifest (por exemplo, `manifest.yml`).
 
-Esse comando inicia uma instância do aplicativo de <code>myproject</code> associada ao arquivo de ativação
-<code>launchConfigurations/my.launch</code>.
+*--liveedit*: iniciar o aplicativo associado no modo de edição em tempo real ou saídas com um erro, se o buildpack não suportar o modo de edição em tempo real.
 
-```bl start myproject –l “launchConfigurations/my.launch”```
+*--noliveedit*: iniciar o aplicativo associado no modo normal.
+
+*--view*: abrir um navegador do aplicativo em execução.
+
+*--restart*: reiniciar um aplicativo já em execução no modo de edição em tempo real sem reimplementá-lo.
+
+**Exemplos**
+
+Esse comando inicia uma instância do aplicativo de `myproject` associada ao arquivo de ativação
+`launchConfigurations/my.launch`.
+
+```
+bl start myproject –l “launchConfigurations/my.launch”
+```
+{: pre}
 
 Esse
 comando inicia uma instância do aplicativo do projeto que é associado ao diretório atual com o arquivo de ativação
-<code>launchConfigurations/my.launch</code>. Se o diretório atual não for um destino de sincronização, um erro
+`launchConfigurations/my.launch`. Se o diretório atual não for um destino de sincronização, um erro
 será exibido.
 
-```bl start –l “launchConfigurations/my.launch” ```
+```
+bl start –l “launchConfigurations/my.launch”
+```
+{: pre}
 
 Esse
 comando inicia uma instância do aplicativo do projeto que é associada ao diretório atual
-com arquivo manifest <code>manifest.yml</code>. As informações especificadas no manifest
+com arquivo manifest `manifest.yml`. As informações especificadas no manifest
 são usadas para criar um novo arquivo de configuração de ativação. O comando solicita as
 informações necessárias restantes e, em seguida, inicia o aplicativo descrito pela
 configuração de ativação:
 
-```bl start –m “mymanifest.yml” ```
+```
+bl start –m “mymanifest.yml”
+```
+{: pre}
 
-Esse
-comando inicia uma instância do aplicativo do projeto que é associada ao diretório atual
-com arquivo manifest <code>manifest.yml</code> e é equivalente a
-```bl start –m manifest.yml```.
-
-```bl start```
-
-## stop
+Esse comando inicia uma instância do aplicativo do projeto que é associada ao diretório atual com arquivo manifest `manifest.yml` e é equivalente a `bl start –m manifest.yml`.
 
 ```
-bl stop|sp projectName [ -l launchConfiguration ]
+bl start
 ```
+{: pre}
 
-### Propósito
+## Parar
+{: bl_stop}
 
-<dl>
-<dd>Use esse comando para parar a instância do aplicativo que é associada ao arquivo de ativação.</dd>
-</dl>
+```
+bl stop | sp projectName [ -l launchConfiguration ]
+```
+{: pre}
 
-### Argumento
+**Propósito**
 
-<dl>
-<dt>projectName</dt>
-<dd>O nome do projeto no formato “alias | mproject” ou mproject apenas se o projeto for de propriedade do usuário com login efetuado.</dd>
-</dl>
+Use esse comando para parar a instância do aplicativo que é associada ao arquivo de ativação.
 
-### Opções
+**Argumento**
 
-<dl>
-<dt>-l launchConfiguration</dt>
-<dd>O nome da configuração de ativação (por exemplo, <code>mylaunchconfig</code>), nome do arquivo (por exemplo,
-<code>mylaunchconfig.launch</code> ou um caminho relativo ao projeto para o arquivo de configuração de ativação
-(por exemplo, <code>launchConfigurations/mylaunchconf.launch</code>).</dd>
-</dl>
+*projectName*: o nome do projeto no formato *“alias | mproject”* ou apenas *mproject* se o projeto for de propriedade do usuário com login efetuado.
 
-### Exemplos
+**Opções**
+
+-l *launchConfiguration*: o nome da configuração de ativação (por exemplo, `mylaunchconfig`), nome do arquivo (por exemplo, `mylaunchconfig.launch` ou um
+caminho relativo ao projeto para o arquivo de configuração de ativação (por exemplo, `launchConfigurations/mylaunchconf.launch`).
+
+**Exemplos**
 
 Este comando para o aplicativo, se o diretório atual for um destino de sincronização; caso contrário,
 sairá com um erro. Se não houver configurações de ativação, esse comando sairá com um erro. Se houver mais de uma
 configuração de ativação, o comando solicitará que você forneça uma para parar.
 
-```bl stop```
+```
+bl stop
+```
+{: pre}
 
 Esse
-comando para uma instância do aplicativo do projeto que está sendo executada com o arquivo de ativação <code>mylaunchConfig</code>.
+comando para uma instância do aplicativo do projeto que está sendo executada com o arquivo de ativação `mylaunchConfig`.
 
-```bl stop myproject –l “mylaunchConfig” ```
+```
+bl stop myproject –l “mylaunchConfig”
+```
+{: pre}
 
 Esse comando para o aplicativo se o diretório
 atual for um destino de sincronização do projeto associado que foi iniciado com o arquivo de ativação
-<code>launchConfigurations/mylaunchconfig.launch</code>; caso contrário, ele sairá com um erro:
+`launchConfigurations/mylaunchconfig.launch`; caso contrário, ele sairá com um erro:
 
-```bl stop –l “launchConfigurations/mylaunchconfig.launch” ```  
+```
+bl stop –l “launchConfigurations/mylaunchconfig.launch”
+```
+{: pre}
 
 ># Links Relacionados {:class="linklist"}
 >## Tutoriais e Amostras {:id="samples"}

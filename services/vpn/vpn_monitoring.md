@@ -13,7 +13,7 @@ copyright:
 
 # Monitoring status and traffic flow
 {: #monitor}  
-*Last updated: 09 May 2016*  
+*Last updated: 30 May 2016*  
 
 Use the monitoring feature to view the connection status and rate of traffic flow between your on-premises or SoftLayer server VPN gateway, and the {{site.data.keyword.vpn_short}} gateway. 
 {:shortdesc}  
@@ -26,7 +26,7 @@ Select the **Monitoring** tab to view the following connection statistics.
 * **Traffic Rate Outbound (bytes/second)** and **Traffic Rate Outbound (packets/second):** Rate of traffic from the IBM VPN gateway to your on-premises or SoftLayer server VPN gateway.  
 * **Traffic Rate Inbound (bytes/second)** and **Traffic Rate Inbound (packets/second):** Rate of traffic from your on-premises or SoftLayer server VPN gateway to the IBM VPN gateway.  
 
-The monitoring statistics are displayed as graphs with data from the last 48 hours. The graphs are automatically updated every 20 minutes. However, you can fetch the latest data any time by switching away from the monitoring tab and returning to it.
+The monitoring statistics are displayed as graphs with data from the last 72 hours. The graphs are automatically updated every 20 minutes. However, you can fetch the latest data any time by switching away from the monitoring tab and returning to it.
 
 **Note:** The graphs use Coordinated Universal Time (UTC) time and not the local time.  
 ##Monitoring on Logmet
