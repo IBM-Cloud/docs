@@ -88,7 +88,7 @@ The input to and output from an action is a dictionary of key-value pairs. The k
 
 Invocations of an action are not ordered. If the user invokes an action twice from the command-line or the REST API, the second invocation might run before the first. If the actions have side effects, they might be observed in any order.
 
-Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved. Any concurrency side effects will be implementation dependent.
+Additionally, there is no guarantee of actions executing atomically. Two actions can run concurrently and their side effects can be interleaved.  OpenWhisk does not ensure any particular concurrent consistency model for side effects. Any concurrency side effects will be implementation dependent.
 
 ### At most once semantics
 {: #openwhisk_atmostonce}
@@ -265,6 +265,7 @@ JavaScript actions are executed in a Node.js version 0.12.9 environment with the
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -288,11 +289,13 @@ JavaScript actions are executed in a Node.js version 0.12.9 environment with the
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -310,6 +313,61 @@ The Docker skeleton is a convenient way to build {{site.data.keyword.openwhisk_s
 The main binary program should be copied to the `dockerSkeleton/client/clientApp` file. Any companion files or library can reside in the `dockerSkeleton/client` directory.
 
 You can also include any compilation steps or dependencies by modifying the `dockerSkeleton/Dockerfile`. For example you can install Python if your action is a Python script.
+
+
+## REST API
+
+All the capabilites in the system are available through a REST API. There are collection and entity endpoints for actions, triggers, rules, packages, activations, and namespaces.
+
+These are the collection endpoints:
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+You can perform a GET request on the collection endpoints to fetch a list of entites in the collection.
+
+There are entity endpoints for each type of entity:
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+The namespace and activation endpoints only support GET requests. The actions, triggers, rules and packages endpoints support GET, PUT and DELETE requests. The endpoints of actions, triggers and rules also support POST requests, which are used to invoke actions and triggers and enable or disable rules. Refer to the [API reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json) for details.
+
+All APIs are protected with HTTP Basic authentication. The Basic auth credentials are in the `AUTH` property in your `~/.wskprops` file, delimited by a colon. You can also retrieve these credentials in the [CLI configuration steps](../README.md#setup-cli).
+
+Here is an example that uses the cURL command to get the list of all packages in the `whisk.system` namespace:
+
+```
+$ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## System limits

@@ -26,7 +26,7 @@ You can install the mobile SDK by using CocoaPods, Carthage, or from the source 
 
 ### Installing by using CocoaPods 
 
-The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming Cocoapods is installed, put the following lines into a file called 'Podfile' inside the starer app project directory. 
+The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -45,21 +45,23 @@ end
 ```
 {: codeblock}
 
-From the command line, type "pod install". This will install the SDK for an iOS app with a watchOS 2 extension.  Use the workspace file Cocoapods creates for your app to open the project in Xcode.
+From the command line, type `pod install`. This will install the SDK for an iOS app with a watchOS 2 extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
 
 ### Installing using Carthage
 
-Create a file in your app's project directory all it 'Cartfile'. Put the following lines in the Cartfile:
+Create a file in your app's project directory all it 'Cartfile'. Put the following line in the Cartfile:
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-From the command line, type 'carthage update --platform ios'. Carthage downloads and builds the SDK, creates a directory called Carthage in your app's project directory, and puts an OpenWhisk.framework file inside Carthage/build/iOS. Add OpenWhisk.framework to the embedded frameworks in your Xcode project.
+From the command line, type `carthage update --platform ios`. Carthage downloads and builds the SDK, creates a directory called Carthage in your app's project directory, and puts an OpenWhisk.framework file inside Carthage/build/iOS.
+
+You must then add OpenWhisk.framework to the embedded frameworks in your Xcode project
 
 ### Installing from source code
 
-Source code is available at https://github.com/openwhisk//openwhisk-client-swift.git. Open project using the OpenWhisk.xcodeproj file in Xcode.  The project contains two schemes "OpenWhisk" and "OpenWhiskWatch" targetted for iOS and WathOS2, respectively.  Build the project for the targets you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
+Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git. Open project using the OpenWhisk.xcodeproj file in Xcode. The project contains two schemes "OpenWhisk" and "OpenWhiskWatch" targetted for iOS and watchOS 2, respectively. Build the project for the targets you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
 
 ## Installing the starter app example
 {: #openwhisk_install_sdkstart}

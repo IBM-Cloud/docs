@@ -491,5 +491,5 @@ Others can now use your `custom` package, including binding to the package or di
   ```
   {: screen}
 
-  In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name..
+  In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
 

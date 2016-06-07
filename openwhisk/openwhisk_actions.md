@@ -75,7 +75,7 @@ Review the following steps and examples to create your first JavaScript action.
 
   You can see the `hello` action you just created.
 
-4. After you create your action, you can run it in the cloud in {{site.data.keyword.openwhisk_short}} with the 'invoke' command. You can invoke actions with a *blocking* invocation or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation waits until the action runs to completion and returns a result. This example uses the blocking parameter, `-blocking`:
+4. After you create your action, you can run it in the cloud in {{site.data.keyword.openwhisk_short}} with the 'invoke' command. You can invoke actions with a *blocking* invocation or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation waits until the action runs to completion and returns a result. This example uses the blocking parameter, `--blocking`:
 
   ```
   wsk action invoke --blocking hello
@@ -390,7 +390,42 @@ Several utility actions are provided in a package called `/whisk.system/util` th
 
   In the result, you see that the lines are sorted.
 
-**Note**: For more information on invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.html##openwhisk_binding_actions)
+**Note**: For more information on invoking action sequences with multiple named parameters, see [Setting default parameters](./actions.md#setting-default-parameters)
+
+
+## Creating Python actions
+
+The process of creating Python actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single Python action, and adding parameters to that action.
+
+### Creating and invoking an action
+
+An action is simply a top-level Python function, which means it is necessary to have a method named `main`. For example, create a file called
+`hello.py` with the following content:
+
+```
+    def main(dict):
+        name = dict.get("name", “stranger")
+        greeting = "Hello " + name + “!"
+        print(greeting)
+        return {"greeting": greeting}
+```
+{: codeblock}
+
+Python actions always consume a dictionary and produce a dictionary.
+
+You can create an OpenWhisk action called `helloPython` from this function as
+follows:
+
+```
+$ wsk action create helloPython hello.py
+```
+{: pre}
+
+When using the command line and a `.py` source file, you do not need to
+specify that you are creating a Python action (as opposed to a JavaScript action);
+the tool determines that from the file extension.
+
+
 
 ## Creating Swift actions
 {: #openwhisk_actions_swift}
@@ -416,8 +451,7 @@ An action is simply a top-level Swift function. For example, create a file calle
 ```
 {: codeblock}
 
-Note that just like JavaScript actions, Swift actions always consume a
-dictionary and produce a dictionary.
+Swift actions always consume a dictionary and produce a dictionary.
 
 You can create a {{site.data.keyword.openwhisk_short}} action called `helloSwift` from this function as
 follows:
@@ -447,6 +481,80 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
+
+## Creating Java actions
+
+The process of creating Java actions is similar to that of JavaScript and Swift actions. The following sections guide you through creating and invoking a single Java action, and adding parameters to that action.
+
+In order to compile, test and archive Java files, you must have a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed locally.
+
+### Creating and invoking an action
+
+A Java action is a Java program with a method called `main` that has the exact signature below:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+For example, create a Java file called `Hello.java` with the following content:
+
+```
+import com.google.gson.JsonObject;
+
+public class Hello {
+
+    public static JsonObject main(JsonObject args) {
+
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+
+    }
+}
+```
+{: codeblock}
+
+Then compile `Hello.java` into a jar file `hello.jar` as follows:
+```
+$ javac Hello.java
+$ jar cvf hello.jar Hello.class
+
+```
+{: pre}
+
+Note that [google-gson](https://github.com/google/gson) must exist in your Java CLASSPATH when compiling the Java file.
+
+You can create a OpenWhisk action called `helloJava` from this jar file as
+follows:
+
+```
+$ wsk action create helloJava hello.jar
+```
+{: pre}
+
+When using the command line and a `.jar` source file, you do not need to
+specify that you are creating a Java action;
+the tool determines that from the file extension.
+
+Action invocation is the same for Java actions as it is for Swift and JavaScript actions:
+
+```
+$ wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+Note that if the jar file has more than one class with a main method matching required signature, the CLI tool will use the first one reported by `jar -tf`.
 
 ## Creating Docker actions
 {: #openwhisk_actions_docker}
