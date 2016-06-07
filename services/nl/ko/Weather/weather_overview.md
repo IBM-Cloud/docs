@@ -13,7 +13,7 @@ copyright:
 # Insights for Weather 정보
 {: #about_weather}
 
-*마지막 업데이트 날짜: 2016년 4월 6일*
+*마지막 업데이트 날짜: 2016년 5월 19일*
 
 {{site.data.keyword.weatherfull}}를 사용하여 TWC(The Weather Company)의 기상 데이터를
 {{site.data.keyword.Bluemix}} 애플리케이션에 통합할 수 있습니다.
@@ -69,8 +69,9 @@ Insights for Weather에서 앱 작성과 관련된 기술적 질문사항이 있
 질문을 게시하고 **bluemix** 및 **weather**로 질문에 태그를 지정하십시오. 
 
 이 서비스에서 문제가 발생하면 [IBM developerWorks Answers 포럼](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}을 활용하십시오.
-경험을 강화하고 IBM으로부터 더 나은 지원을 받으려면 **insights-weather** 및 **bluemix** 태그를 포함하십시오. 
+IBM의 추가 지원을 받으려면 **insights-weather** 및 **bluemix** 태그를 포함하십시오. 
 
-또한 [Bluemix 플랫폼의 상태](https://developer.ibm.com/bluemix/support/#status){:new_window}를 보거나
-[ 지원 티켓을 열 수도](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window} 있습니다.
-자세한 정보는 [문제점 해결](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}을 참조하십시오.
+Bluemix 관련 문제점 해결에 대한 정보는
+[문제점 해결](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}을 참조하십시오.
+정보 검색, 포럼을 통해 질문하기와 지원 문의에 대한 세부사항은
+[고객 지원 받기](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}를 참조하십시오. 

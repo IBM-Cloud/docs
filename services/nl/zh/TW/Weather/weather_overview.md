@@ -13,12 +13,12 @@ copyright:
 # 關於 Insights for Weather
 {: #about_weather}
 
-*前次更新：2016 年 4 月 6 日*
+*前次更新：2016 年 5 月 19 日*
 
 使用 {{site.data.keyword.weatherfull}}，可以將來自 The Weather Company (TWC) 的天氣資料納入 {{site.data.keyword.Bluemix}} 應用程式中。
 {:shortdesc}
 
-您可以使用 [Insights for Weather REST API](https://twcservice.{APPDomain}/rest-api/){:new_window}，將天氣觀測資料和預測新增至 {{site.data.keyword.Bluemix_notm}} 應用程式，以及顯示地理定位所指定區域的天氣資料。The Weather Company 是歷史及預測天氣資料的最完善提供者。將會擷取所有天氣型態（包括降雨、氣壓、風及雷暴雨）的資料。
+您可以使用 [Insights for Weather REST API](https://twcservice.{APPDomain}/rest-api/){:new_window}，將天氣觀測資料和預測新增至 {{site.data.keyword.Bluemix_notm}} 應用程式，以及顯示地理定位所指定區域的天氣資料。The Weather Company 提供最詳盡的歷史及預測天氣資料。將會擷取所有天氣型態（包括降雨、氣壓、風及雷雨）的資料。
 
 您可以使用 REST API 來擷取下列資訊：
 
@@ -52,6 +52,6 @@ API 呼叫傳回的項目數，來驗證應用程式是否到達方案的限制�
 如果您具有使用 Insights for Weather 建立應用程式的技術問題，請在 [Stack Overflow](http://stackoverflow.com/search?q=weather+bluemix){:new_window} 上張貼問題，並以 **bluemix** 和 **weather** 來標記您的問題。
 
 如果遇到此服務的任何問題，請使用 [IBM developerWorks Answers 討論區](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}。
-請包含 **insights-weather** 及 **bluemix** 標籤，以強調您的體驗，並讓 IBM 為您提供更完善的支援。
+請包含 **insights-weather** 及 **bluemix** 標籤，以讓 IBM 為您提供更完善的支援。
 
-您也可以檢視 [Bluemix 平台的狀態](https://developer.ibm.com/bluemix/support/#status){:new_window}或[開啟支援問題單](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}。如需相關資訊，請參閱[疑難排解](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。
+如需疑難排解 Bluemix 問題的相關資訊，請參閱[疑難排解](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}。如需關於透過論壇搜尋資訊及發問，以及關於與支援中心聯絡的詳細資料，請參閱[取得客戶支援](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}。

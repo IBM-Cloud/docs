@@ -13,7 +13,7 @@ copyright:
 # Informazioni su Insights for Weather
 {: #about_weather}
 
-*Ultimo aggiornamento: 06 aprile 2016*
+*Ultimo aggiornamento: 19 maggio 2016*
 
 Utilizza {{site.data.keyword.weatherfull}} per incorporare i dati meteo da
 The Weather Company (TWC) nelle tue applicazioni {{site.data.keyword.Bluemix}}.
@@ -68,8 +68,7 @@ invia la tua domanda a [Stack Overflow](http://stackoverflow.com/search?q=weathe
  e contrassegna la tua domanda con **bluemix** e **weather**.
 
 Se stai riscontrando dei problemi con questo servizio, utilizza il [IBM developerWorks Answers forum](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
-Includi le tag **insights-weather** e **bluemix** per migliorare la tua esperienza e consenti ad IBM di aiutarti nel miglior modo.
+Includi le tag **insights-weather** e **bluemix** per consentire a IBM di aiutarti nel miglior modo.
 
-Puoi inoltre visualizzare lo [stato della piattaforma Bluemix](https://developer.ibm.com/bluemix/support/#status){:new_window}
-o [aprire un ticket di supporto](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-Per ulteriori informazioni, consulta [Risoluzione dei problemi](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Per informazioni sulla risoluzione dei problemi con Bluemix, vedi [Risoluzione dei problemi](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Per informazioni dettagliate su come cercare informazioni e fare domande tramite i forum e su come contattare l'assistenza, vedi [Richiesta di assistenza clienti](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.

@@ -125,7 +125,8 @@ exemplo, a previsão diária pode conter os dados a seguir:
     }
 ```
 
-Cada previsão diária contém uma parte da noite e uma parte do dia para o dia da semana especificado. Por exemplo, ambas as partes podem conter os
+Cada previsão diária contém uma parte da noite e uma parte do dia para o dia da semana especificado.
+Por exemplo, ambas as partes podem conter os
 dados de previsão a seguir:
 
 ```

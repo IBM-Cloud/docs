@@ -1,7 +1,7 @@
 ---
 
-copyright :
-   years: 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -21,7 +21,8 @@ Apprenez à utiliser le service Insights for Weather à l'aide des exemples ci-a
 ## Démonstration Insights for Weather
 {: #insights_weather_demo}
 
-Un exemple d'application vous permet de visualiser les données météorologiques fournies par le service Insights for Weather. L'application est accessible en accédant à [http://insights-for-weather-demo.mybluemix.net/](http://insights-for-weather-demo.mybluemix.net/).
+Un exemple d'application vous permet de visualiser les données météorologiques fournies par le service Insights for Weather.
+L'application est accessible en accédant à [http://insights-for-weather-demo.mybluemix.net/](http://insights-for-weather-demo.mybluemix.net/).
 Elle s'ouvre dans votre navigateur et vous demande si vous souhaitez partager votre emplacement en cours avec elle.
 
 L'application vous permet de visualiser les conditions météorologiques en cours observées là où vous êtes.
@@ -45,7 +46,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v2/fo
 ```
 
 Le nom d'utilisateur (`username`) et le mot de passe (`password`) sont spécifiques à votre application et à votre instance du service.
-Ces informations figurent dans les variables d'environnement `VCAP_SERVICES`. 
+Ces informations figurent dans les variables d'environnement `VCAP_SERVICES`.
 
 Le service renvoie des réponses au format JSON. Si la demande a abouti, la réponse contient le code 200.
 Si la demande a échoué, la réponse contient un code d'erreur.
@@ -109,7 +110,8 @@ Par exemple, la prévision jour par jour peut contenir les données suivantes :
     }
 ```
 
-Chaque prévision jour par jour contient un segment nuit et un segment jour pour le jour de la semaine spécifié. Par exemple, ces deux segments peuvent contenir les données prévisionnelles suivantes :
+Chaque prévision jour par jour contient un segment nuit et un segment jour pour le jour de la semaine spécifié.
+Par exemple, ces deux segments peuvent contenir les données prévisionnelles suivantes :
 
 ```
       "night": {
@@ -193,8 +195,7 @@ Le corps de la réponse contient des métadonnées et un tableau de prévisions 
 }
 ```
 
-Chaque prévision heure par heure contient des informations générales qui s'appliquent à l'heure définie par `num`.
-Par exemple, la prévision heure par heure peut contenir les données suivantes :
+Chaque prévision heure par heure contient des informations générales qui s'appliquent à l'heure définie par `num`. Par exemple, la prévision heure par heure peut contenir les données suivantes :
 
 ```
     {

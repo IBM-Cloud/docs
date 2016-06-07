@@ -44,7 +44,7 @@ GET https://<username>:<password>@twcservice.mybluemix.net:443/api/weather/v2/fo
 }
 ```
 
-`使用者名稱`及`密碼`專用於您的應用程式和服務實例。您可以在 `VCAP_SERVICES` 環境變數中找到這項資訊。
+`username` 及 `password` 專用於您的應用程式和服務實例。您可以在 `VCAP_SERVICES` 環境變數中找到這項資訊。
 
 此服務會傳回 JSON 格式的回應。如果回應成功，會傳回狀態碼 200。如果回應失敗，則會傳回錯誤碼。
 

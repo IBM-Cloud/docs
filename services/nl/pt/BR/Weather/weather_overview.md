@@ -13,7 +13,7 @@ copyright:
 # Sobre o Insights for Weather
 {: #about_weather}
 
-*Última atualização: 06 de abril de 2016*
+*Última atualização: 19 maio de 2016*
 
 Use o
 {{site.data.keyword.weatherfull}}
@@ -82,12 +82,10 @@ poste sua pergunta no [Stack Overflow](http://stackoverflow.com/search?q=weather
 e identifique-a com **bluemix** e **weather**.
 
 Se você tiver problemas com esse serviço, use o [fórum do IBM developerWorks Answers](https://developer.ibm.com/answers/topics/insights-weather/?smartspace=bluemix){:new_window}.
-Inclua as tags
-**insights-weather** e
-**bluemix** para aprimorar sua experiência e
-permitir que a IBM forneça o melhor suporte.
+Inclua as tags **insights-weather** e **bluemix** para permitir que a IBM ofereça o melhor suporte.
 
-Também é possível
-visualizar o [status
-do Bluemix Platform](https://developer.ibm.com/bluemix/support/#status){:new_window} ou [abrir um chamado de suporte](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&amp;offering=ibmbluemix){:new_window}.
-Para obter mais informações, consulte  [Resolução de Problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Para obter informações sobre resolução de problemas com o
+Bluemix, consulte
+[Resolução
+de problemas](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Para obter detalhes sobre a procura de informações, realização de perguntas nos fóruns e entrar em contato com o suporte, consulte [Obtendo suporte ao cliente](https://console.{DomainName}/docs/support/index.html#getting-customer-support){: new_window}.
