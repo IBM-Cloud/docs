@@ -45,18 +45,17 @@ suivant décrit les informations de support générales pour les services {{site
 |:------|:--------------|:--------------|
 |IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
 gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le support](../support/index.html#contacting-bluemix-support){: new_window}.|
-|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services tiers est assuré par le fournisseur de service. Si IBM examine un
-problème et détermine qu'il s'agit d'un défaut d'un service tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
-fournisseur de service tiers si nécessaire.|
+[Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un
+problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
+fournisseur de service de tiers si nécessaire.|
 |Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs
 {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas
 obligée de fournir un correctif.|
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les
 problèmes
 identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
-applicable. Pour des informations sur la gravité des tickets, voir [Contacter le
-support](../support/index.html#contacting-bluemix-support){: new_window}.|
+applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
 *Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
 
 
@@ -88,7 +87,7 @@ services qui sont fournis par IBM.
 
 
 
-|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe/Royaume-Uni |Disponible dans la région Sydney|
+|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe-Royaume-Uni |Disponible dans la région Australie-Sydney|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.activedeployshort}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.alchemyapishort}} 		|Oui	   	|Oui  		|Oui|
@@ -418,6 +417,8 @@ panneau de navigation de gauche, puis utilisez *Révoquer* pour supprimer la lia
 {: #rellinks}
 
 ## general
+{: #general}
+
 * [Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
 * [Extraction de VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

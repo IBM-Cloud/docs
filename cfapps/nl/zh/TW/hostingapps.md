@@ -17,7 +17,7 @@ copyright:
 
 #在 {{site.data.keyword.Bluemix_notm}} 中管理應用程式
 
-*前次更新：2016 年 4 月 18 日*
+*前次更新：2016 年 5 月 9 日*
 
 <!--The whole topic is staging only -->
 
@@ -181,7 +181,11 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 
 
 # 相關鏈結
-## 一般 
+{: #rellinks}
+
+## 相關鏈結
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [開始使用 Delivery Pipeline](../services/DeliveryPipeline/index.html)

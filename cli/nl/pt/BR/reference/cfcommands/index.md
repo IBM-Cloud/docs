@@ -33,8 +33,8 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>A URL do terminal da API do Bluemix que você deve especificar ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, essa URL é https://api.{{site.data.keyword.domainname}}
-Se você desejar exibir a URL do terminal de API que está usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
+<dd>A URL do terminal da API do Bluemix que você deve especificar ao se conectar ao {{site.data.keyword.Bluemix_notm}}. Normalmente, essa URL é https://api.{DomainName}.
+Se você deseja exibir a URL do terminal da API que estiver usando atualmente, não será necessário especificar esse parâmetro para o comando cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
 <dt>*--unset*</dt>
@@ -161,7 +161,7 @@ cf login
 ```
 É possível usar um ou mais dos parâmetros a seguir ao emitir o comando cf login:
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>A URL do terminal da API do
 {{site.data.keyword.Bluemix_notm}}. Esse parâmetro é opcional.</dd>
 <dt>*-u*user_name</dt>
@@ -211,7 +211,8 @@ cf push appname
 <dt>appname</dt>
 <dd>O nome do aplicativo.</dd>
 <dt>*-b*buildpack_name</dt>
-<dd>O nome do buildpack. O buildpack_name pode ser um buildpack customizado por nome ou uma URL do Git, por exemplo, my-buildpack ou https://github.com/heroku/heroku-buildpack-play.git.</dd>
+<dd>O nome do buildpack. O buildpack_name pode ser um buildpack customizado por nome ou uma URL Git, por exemplo, `my-buildpack` ou
+`https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*start_command</dt>
 <dd>O comando start do seu aplicativo. Para usar o comando inicial padrão, especifique um valor de null para essa opção. Por
 exemplo:</dd>
@@ -326,5 +327,7 @@ cf -v
 ```
 
 # rellinks
+{: #rellinks}
 ## general 
+{: #general}
 * [Cartão de referência rápida - comandos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

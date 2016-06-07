@@ -11,7 +11,7 @@ copyright:
 
 # 開始使用 {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*前次更新：2016 年 3 月 17 日*
+*前次更新：2016 年 5 月 9 日*
 
 Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服務可用來安全地在 IBM Bluemix 雲端環境中存取 IBM Containers（Docker 儲存器）。您可以使用 IBM Bluemix 雲端環境作為公司資料中心的延伸。您也可以使用 IBM VPN 服務與 SoftLayer 伺服器連接。
 {:shortdesc}
@@ -25,7 +25,8 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服務可用來安全地在 IBM 
 
   1. 選取**編輯**。  
   2. 指定閘道名稱。  
-  3. 選取您要用來搭配 VPN 服務的儲存器或群組。  
+  3. 選取您要用來搭配 VPN 服務的儲存器或儲存器群組。
+	**附註：**會預先選取儲存器及儲存器群組專用子網路，以便您可以透過 VPN 連線存取它們。
   4. 選取**儲存**。  
 
  您可以使用預設的 IKE 及 IPSec 原則，或是配置自訂原則。如果您想要使用預設原則，請跳到步驟 4。
@@ -57,15 +58,15 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服務可用來安全地在 IBM 
 4. 提供詳細資料，以建立資料中心或 SoftLayer 伺服器 VPN 閘道與 IBM VPN 閘道之間的連線。
 {: #site}  
 
-  1. 選取 **VPN 閘道應用裝置**標籤。
-  2. 在 **VPN 網站連線**區段中，選取**新增**。
+  1. 選取**閘道應用裝置**標籤。
+  2. 在**網站連線**區段中，選取**建立連線**。
   3. 指定下列網站連線詳細資料：  
   	* **名稱**：連線的名稱  
   	* **說明**：連線的說明（選用）  
   	* **預先共用金鑰字串**：要用於鑑別的預先共用（秘密）金鑰
   	* **管理狀態**：VPN 連線的狀態。從下拉清單選取：UP 或 DOWN。預設值：UP  
   	* **客戶閘道 IP**：VPN 通道的遠端端點 IP 位址  
-  	* **客戶子網路**：CIDR 格式的遠端子網路位址。選取加號以儲存子網路詳細資料。
+  	* **客戶子網路**：CIDR 格式的遠端子網路位址。選取加號以新增另一個子網路。
   4. （選用）配置下列**進階設定**參數：  
   	* **IKE 原則**：選取 IKE 原則。  
   	* **保留作用中間隔**：保留作用中間隔（秒）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。預設值：15。範圍：5-86399
@@ -89,15 +90,18 @@ Bluemix&reg; 的 {{site.data.keyword.vpn_full}} 服務可用來安全地在 IBM 
  
 # 相關鏈結
 ## 範例 
+{: #samples}  
 * [內部部署的 strongSwan 閘道配置範例](vpn_onpremises.html#strongswan){: new_window}
 * [內部部署的 Vyatta 閘道配置範例](vpn_onpremises.html#vyatta){: new_window}
 * [內部部署的 SoftLayer Gateway Appliance Service (GaaS) 配置範例](vpn_onpremises.html#gaas){: new_window}
 * [內部部署的 Cisco ASA 配置範例](vpn_onpremises.html#cisco){: new_window}
 
-## API 
+## API  
+{: #api}  
 * [IBM VPN RESTful API](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## 一般 
+## 一般  
+{: #general}  
 * [IBM VPN 指令行介面](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN 常見問題 (FAQ)](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix 定價單](https://console.{DomainName}/pricing/){: new_window}

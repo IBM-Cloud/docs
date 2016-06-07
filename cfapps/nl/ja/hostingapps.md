@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} でのアプリのホスティング
 
-*最終更新日: 2016 年 4 月 18 日*
+*最終更新日: 2016 年 5 月 9 日*
 
 <!--The whole topic is staging only -->
 
@@ -184,7 +184,11 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 
 
 # 関連リンク
-## 一般 
+{: #rellinks}
+
+## 関連リンク
+{: #general}
+
 * [IBM Containers](../containers/container_cli_ov.html)
 * [Virtual Machines](../virtualmachines/vm_index.html)
 * [Delivery Pipeline 入門](../services/DeliveryPipeline/index.html)

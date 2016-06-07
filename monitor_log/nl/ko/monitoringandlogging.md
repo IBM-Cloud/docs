@@ -14,7 +14,7 @@ copyright:
 #모니터링 및 로깅
 {: #monitoringandlogging}
 
-*마지막 업데이트 날짜: 2016년 1월 27일*
+*마지막 업데이트 날짜: 2016년 5월 11일*
 
 앱을 모니터링하고 로그를 검토하면서 애플리케이션 실행을 따라 가면 배치에 대해 더 잘 이해할 수 있습니다. 또한 문제를 찾아 이를 해결하는 데 드는 시간과 노력을 줄일 수 있습니다.
 {:shortdesc}
@@ -186,7 +186,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 </li></ul>
 
 
-**참고:** 애플리케이션 로깅 사용 방법에 대한 정보는 [런타임 오류 디버깅](../troubleshoot/debugging.html#debug_runtime)을 참조하십시오. 
+**참고:** 애플리케이션 로깅 사용 방법에 대한 정보는 [런타임 오류 디버깅](../debug/index.html#debugging-runtime-errors)을 참조하십시오. 
 
 
 

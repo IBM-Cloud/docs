@@ -65,7 +65,7 @@ Una volta installate le interfacce riga di comando, puoi iniziare a lavorare:
   
   7. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul comando cf push, vedi [Caricamento della tua applicazione](./upload_app.html).
   
-  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nome_applicazione</var></pre>
+  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nomeapplicazione</var></pre>
   
   8. Accedi alla tua applicazione immettendo il seguente URL
 nel browser:

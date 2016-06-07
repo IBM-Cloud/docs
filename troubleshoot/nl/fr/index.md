@@ -15,7 +15,7 @@ copyright:
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 13 avril 2016*
+*Dernière mise à jour : 16 mai 2016*
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -104,7 +104,7 @@ Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses 
 dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la
 commande `nslookup`. Par exemple, vous pouvez entrer la commande suivante dans une fenêtre de ligne de commande :
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -311,12 +311,11 @@ Il se peut que vous ne puissiez pas activer le mode débogage si votre version d
 
 Après avoir sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan
 de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web
-affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+affiche `Mise à jour du mode`, `Développement`, et `Débogage`. 
 {: tsSymptoms}
 
 Par contre, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du
-mode` et `Développement`, sans afficher `Débogage`. 
-Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
+mode` et `Développement`, sans afficher `Débogage`. Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour MyWebProj
@@ -377,7 +376,8 @@ de l'installation** > **Configuration**.
 `eclipse.vm` :
 	
 	```
-	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll 	```
+	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
+	```
 
   3. Sur la ligne de commande, entrez `java -version` depuis le répertoire `bin` de votre installation Java. Les
 informations de version de votre JVM IBM s'affichent.
@@ -423,7 +423,7 @@ Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suiva
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
  * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle
-Développeur. Voir [Gestion de vos organisations](../admin/adminpublic.html#orgmng){: new_window} pour des détails.
+Développeur. Voir [Gestion de vos organisations](../admin/orgs_spaces.html) pour des détails.
  
 
  
@@ -630,7 +630,7 @@ Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-coo
 {: #ts_push}
 
 Dans certaines régions où Google n'est pas accessible, les applications Android
-ne peuvent pas recevoir les notifications que vous envoyez via le service push d'IBM. Dans ce cas, vous pouvez utiliser des services tiers comme solution palliative.
+ne peuvent pas recevoir les notifications que vous envoyez via le service push d'IBM. Dans ce cas, vous pouvez utiliser des services de tiers comme solution palliative.
 
  
 
@@ -645,7 +645,7 @@ les régions où le service GCM n'est pas accessible aux applications Android, c
 {: tsCauses}
 
  
-Utilisez des services tiers qui ne sont pas basés sur le service GCM comme solution palliative, par exemple [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window} et [jpush](https://www.jpush.cn/){: new_window}.
+Utilisez des services de tiers qui ne sont pas basés sur le service GCM comme solution palliative, par exemple [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window} et [jpush](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -1153,8 +1153,7 @@ vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe
  
 
 Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière
-dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Création d'applications
-à l'aide de Liberty for Java](../starters/liberty/index.html#liberty){: new_window}.
+dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1452,8 +1451,10 @@ Ce problème peut se produire lorsque vous affectez la même route d'adresse URL
 {: tsCauses}
 
 Par exemple, vous envoyez par commande push l'application mon_App1 dans {{site.data.keyword.Bluemix_notm}} et définissez le nom de domaine
-"manouvelleapp.stage1.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez ses routes
-d'adresse URL "manouvelleapp.stage1.mybluemix.net". La route est désormais mappée aux deux applications.
+"manouvelleapp.mybluemix.net". 
+Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez l'une de ses routes d'URL sur
+"manouvelleapp.mybluemix.net".
+La route est désormais mappée aux deux applications.
 
  
 

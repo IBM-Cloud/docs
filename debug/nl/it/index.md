@@ -17,7 +17,7 @@ copyright:
 
 *Ultimo aggiornamento: 3 marzo 2016*
 
-Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori. 
+Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i file di log per analizzare i problemi ed eseguire il debug degli errori.
 {:shortdesc}
 
 I log forniscono informazioni quali la corretta esecuzione di un lavoro o la sua mancata riuscita. Forniscono anche informazioni pertinenti che possono essere utilizzate per eseguire il debug e determinare la causa di un problema.
@@ -32,7 +32,7 @@ Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazio
 Per comprendere il motivo per cui la tua applicazione potrebbe provocare errori in {{site.data.keyword.Bluemix_notm}}, devi sapere come vengono distribuite ed eseguite le applicazioni in {{site.data.keyword.Bluemix_notm}}. Per informazioni dettagliate, vedi [Distribuzione delle applicazioni](../manageapps/depapps.html#appdeploy){: new_window}.
 
 La seguente procedura mostra come puoi utilizzare il comando `cf logs` per eseguire il debug degli errori di preparazione. Prima di iniziare
-la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
+la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installazione dell'interfaccia della riga di comando cf](../starters/install_cli.html){: new_window}.
 
   1. Connettiti a {{site.data.keyword.Bluemix_notm}} immettendo il seguente codice nell'interfaccia riga di comando cf:
      ```
@@ -43,7 +43,7 @@ la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Pe
   
   3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
-	cf logs appname --recent | grep '\[STG\]'
+	cf logs nomeapplicazione --recent | grep '\[STG\]'
 	```
   4. Visualizza il primo errore mostrato nel log.
   
@@ -113,7 +113,7 @@ che vengono distribuite tramite i pacchetti di build integrati {{site.data.keywo
   * Per le applicazioni Node.js, vedi [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
   * Per le applicazioni PHP, vedi [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Per le applicazioni Python, vedi [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * 1Per le applicazioni Ruby on Rails, vedi [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Per le applicazioni Ruby on Rails, vedi [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Per le applicazioni Ruby Sinatra, vedi [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
   
 Quando immetti `cf logs nomeapplicazione --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
@@ -140,6 +140,7 @@ con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword
 {: #rellinks}
 
 ## general
+{: #general}
 
   * [DEA (Droplet Execution Agent)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Introduzione al servizio IBM Monitoring and Analytics per Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}

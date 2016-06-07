@@ -12,15 +12,15 @@ copyright:
 # お客様サポートの利用
 {: #getting-customer-support}
 
-*最終更新日: 2016 年 4 月 19 日*
+*最終更新日: 2016 年 5 月 11 日*
 
 
-{{site.data.keyword.Bluemix}} で問題が発生している場合、Stack Overflow からヘルプを取得したり、サポート・チケットをオープンしたりするなど、いくつかのサポート・オプションがあります。
+{{site.data.keyword.Bluemix}} で問題が発生した場合は、フォーラムでヘルプを受けたり、サポート・チケットをオープンするなど、サポートに関するいくつかの選択肢があります。
 {:shortdesc}
 
 ## ヘルプの取得
 {: #getting-help}
-ヘルプを取得するには、「アカウントとサポート (Account and Support)」へ進むか、直接 Stack Overflow にアクセスし、そこで情報を検索したり質問を投稿したりすることができます。
+サポート・チケットをオープンするか、他のヘルプ・オプションを見つけるには、「アカウントとサポート」にアクセスします。Stack Overflow または developerWorks (dW) Answers フォーラムに直接アクセスして、そこで情報を検索したり質問を投稿したりすることもできます。
 {:shortdesc}
 
 ### アカウントとサポートの使用
@@ -32,15 +32,20 @@ copyright:
 
 
 ### 質問する
-Stack Overflow に直接アクセスしたか、「アカウントとサポート (Account and Support)」からアクセスしたかに関係なく、Stack Overflow は、ユーザーが質疑応答するためのプラットフォームとして使用できる Web サイトです。{{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームは、Stack Overflow で積極的に活動しており、**bluemix** のタグが付いた質問をフォローしています。
+{: #asking-a-question}
 
-Stack Overflow で質問するには、以下のオプションから選択します。
-  * 「アカウントとサポート (Account and Support)」から、**「ヘルプの取得 (Get help)」**をクリックします。表示されたページで、検索フィールドに質問を入力して答えを見つけます。期待した答えが返されない場合は、**「Stack Overflow への投稿」**をクリックして質問を投稿できます。
+Stack Overflow フォーラムおよび dW Answers フォーラムには、Bluemix に関するさまざまな質問と回答があり、それらを検索することができます。既存の回答が見つからない場合、新しい質問を投稿できます。 
 
-  * 直接、[「Stack Overflow」](http://stackoverflow.com/questions/tagged/bluemix){: new_window}にアクセスします。
+  * Bluemix プラットフォームおよびサービスを使用したアプリの開発に関する技術的な質問がある場合、[Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} にアクセスしてください。
+  * {{site.data.keyword.Bluemix_notm}} オファリングについて、および使用開始手順についての質問がある場合、[dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} にアクセスしてください。
 
-Stack Overflow で質問を作成する際は、その質問が {{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームによって確実に読まれるように、**bluemix** タグを質問に追加してください。
+以下の手順を実行することによって、「アカウントとサポート」から直接 Stack Overflow に質問することもできます。
+  1. 「アカウントとサポート (Account and Support)」から、**「ヘルプの取得 (Get help)」**をクリックします。 
+  2. 表示されたページで、検索フィールドに質問を入力して答えを見つけます。 
+  3. 期待した答えが返されない場合は、**「Stack Overflow への投稿 (POST TO STACK OVERFLOW)」**をクリックして質問を投稿します。
 
+{{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームは、Stack Overflow と dW Answers を積極的にモニターしており、**bluemix** のタグが付いた質問をフォローしています。いずれかのフォーラムで質問を作成する際は、その質問が {{site.data.keyword.Bluemix_notm}} の開発チームとサポート・チームによって確実に読まれるように、**bluemix** タグを質問に追加してください。
+ 
 
 
 ## {{site.data.keyword.Bluemix_notm}} 状況の表示
@@ -146,7 +151,9 @@ RSS フィードを読み取るには、Web ブラウザー・プラグイン (C
 レベル | 無料 |  基本 | 標準 | プレミアム
 --- | --- | --- | --- | --- |
 説明 | Bluemix を試用するすべてのお客様に対するサポート。  |  従来の重大度および応答時間を必要としない非実稼働環境およびワークロードに対するサポート。 | ビジネスに不可欠なアプリケーションを少しだけ使用する環境に対するサポート。{{site.data.keyword.Bluemix_notm}} Dedicated と {{site.data.keyword.Bluemix_notm}} Local のお客様は標準サポートを受けます。 |  {{site.data.keyword.Bluemix_notm}} への戦略的な依存関係を持つ基幹業務向け環境に対するサポート。
-重大度の高いサポート |  N/A | N/A | 組み込み | 含まれているサポート言語 | 英語 | 英語 | 英語 | 英語 CSM (client success manager) 割り当て | 含まれない | 含まれない | 含まれない | 含まれる<br> (週 8 時間)
+重大度の高いサポート |  N/A | N/A | 組み込み | 組み込み
+サポート言語 | 英語 | 英語 | 英語 | 英語
+CSM (client success manager) 割り当て | 含まれない | 含まれない | 含まれない | 含まれる<br> (週 8 時間)
 *表 1. サポート・レベル*
 
 #### サポート・チケットのオープン
@@ -312,6 +319,11 @@ IBM は、お客様サポートでの最近の体験に関するフィードバ�
 {: #rellinks}
 
 ## 一般
-  * [Bluemix サポート・ポータル](https://support.ibmcloud.com){: new_window}
-  * [cf コマンド・ツールのインストール](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Bluemix サポート・ポータル](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [cf コマンド・ツールのインストール](../starters/install_cli.html){: new_window} 
   * [SaaS サポート・ハンドブック](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [スタック・オーバーフロー](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

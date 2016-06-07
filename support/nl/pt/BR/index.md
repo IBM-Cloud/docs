@@ -12,16 +12,16 @@ copyright:
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-*Última atualização: 19 de abril de 2016*
+*Última atualização: 11 de maio de 2016*
 
 
-Se encontrar problemas com o {{site.data.keyword.Bluemix}}, você tem várias opções de suporte, como obter ajuda por meio do
-Stack Overflow ou abrir um chamado de suporte.
+Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opções de suporte, como obter ajuda por meio de um fórum ou abrir um chamado de suporte.
 {:shortdesc}
 
 ## Obtendo Ajuda
 {: #getting-help}
-Para obter ajuda, é possível acessar Conta e suporte ou acessar diretamente Stack Overflow, no qual é possível procurar informações ou postar perguntas.
+Para abrir um chamado de suporte ou encontrar outras opções de ajuda, é possível acessar Conta e Suporte. Também é possível acessar diretamente os fóruns de Stack Overflow ou developerWorks (dW) Answers,
+para procurar informações ou postar perguntas.
 {:shortdesc}
 
 ### Usando Conta e suporte
@@ -36,20 +36,26 @@ campo de procura. Respostas da documentação do
 
 
 ### Fazendo uma pergunta
-Quer acessado diretamente, quer por meio de Conta e suporte, o Stack Overflow é um website que serve como um plataforma para que os usuários perguntem e respondam às perguntas. As equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}} estão ativas no Stack Overflow e
-seguem as perguntas que são identificadas com **bluemix**.
+{: #asking-a-question}
 
-Para fazer uma pergunta no Stack Overflow, escolha a partir das
-opções a seguir:
-  * Na Conta e suporte, clique em **Obter ajuda**. Na página exibida,
-digite sua pergunta no campo de procura para localizar respostas. Se a resposta esperada não for retornada, será possível clicar em **POSTAR NO ESTOURO DA CAPACIDADE** para postar sua pergunta.
+Os fóruns de Stack Overflow e dW Answers, ambos, fornecem uma ampla variedade de respostas pesquisáveis para as suas perguntas do Bluemix. Se você não encontrar uma
+resposta existente, faça uma nova pergunta. 
 
-  * Acesse diretamente [Estouro da capacidade](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+  * Acesse [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} para fazer perguntas técnicas sobre como desenvolver aplicativos com a plataforma e
+serviços do Bluemix.
+  * Acesse [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} para fazer perguntas sobre a oferta do
+{{site.data.keyword.Bluemix_notm}} e sobre como obter instruções de introdução.
 
-Ao criar uma pergunta no Stack Overflow,
-inclua uma identificação **bluemix** em sua pergunta para assegurar que ela seja vista
-pelas equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}}.
+Também é possível fazer uma pergunta no Stack Overflow diretamente a partir de Conta e Suporte, concluindo as etapas a seguir:
+  1. Na Conta e suporte, clique em **Obter ajuda**. 
+  2. Na página exibida,
+digite sua pergunta no campo de procura para localizar respostas. 
+  3. Se a resposta esperada não for retornada, clique em **POSTAR NO STACK OVERFLOW** para postar a sua pergunta.
 
+As equipes de desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}} monitoram ativamente o Stack Overflow e dW Answers e seguem as perguntas que são identificadas com
+**bluemix**. Ao criar uma pergunta em qualquer dos fóruns, inclua uma identificação **bluemix** em sua pergunta, para assegurar que ela seja vista pelas equipes de
+desenvolvimento e suporte do {{site.data.keyword.Bluemix_notm}}.
+ 
 
 
 ## Visualizando o status do {{site.data.keyword.Bluemix_notm}}
@@ -120,7 +126,7 @@ usando uma das opções a seguir:
 
 	Se você suspeitar que o {{site.data.keyword.Bluemix_notm}} não está
 funcionando conforme o esperado, verifique a página de status para janelas atualmente em manutenção ou para um incidente em
-andamento. Para relatar um incidente que ainda não está listado na página de status, abra um chamado de Suporte por meio do ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior ou da página da ajuda [Suporte do IBM Bluemix](https://support.eu-gb.bluemix.net/gethelp/){: new_window}. 
+andamento. Para relatar um incidente que ainda não está listado na página de status, abra um chamado de Suporte por meio do ícone **Conta e suporte** ![Conta e suporte](images/account_support.svg) na barra de menus superior ou da página da ajuda [Suporte do IBM Bluemix](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Aproveite as diversas regiões do {{site.data.keyword.Bluemix_notm}}
 
@@ -150,11 +156,11 @@ aplicativos em execução, execute pelo menos três instâncias de cada aplicati
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
 
-Todos os clientes do {{site.data.keyword.Bluemix_notm}} são fornecidos com suporte técnico grátis por meio da comunidade do Bluemix ou do Stack Overflow. Além disso, diferentes níveis de suporte são fornecidos para atender às diferentes necessidades do cliente. Consulte a tabela a seguir para escolher entre os níveis de suporte grátis, básico, padrão e premium.  
+Todos os clientes do {{site.data.keyword.Bluemix_notm}} são fornecidos com suporte técnico grátis por meio da comunidade do Bluemix ou do Stack Overflow.  Além disso, diferentes níveis de suporte são fornecidos para atender às diferentes necessidades do cliente. Consulte a tabela a seguir para escolher entre os níveis de suporte grátis, básico, padrão e premium. 
 
 Níveis | Grátis |  Básica | Padrão | Premium
 --- | --- | --- | --- | --- |
-Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Suporte para ambientes que não sejam de produção ou cargas de trabalho em que severidades e tempos de resposta tradicionais não são necessários. | Suporte para ambientes com um número limitado de aplicativos críticos aos negócios. Clientes do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local recebem suporte padrão. | Suporte para ambientes essenciais que têm uma dependência estratégica no {{site.data.keyword.Bluemix_notm}}.
+Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Suporte para ambientes que não sejam de produção ou cargas de trabalho em que severidades e tempos de resposta tradicionais não são necessários. | Suporte para ambientes com um número limitado de aplicativos críticos aos negócios. Clientes do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local recebem suporte padrão. | Suporte para ambientes essenciais que têm uma dependência estratégica no {{site.data.keyword.Bluemix_notm}}. 
 Suporte de alta severidade |  N/A | N/A | Incluído | Incluído
 Idioma de suporte | Inglês | Inglês | Inglês | Inglês
 Client Success Manager (CSM) designado | Não incluído | Não incluído | Não incluído | Incluído em<br> 8 horas por semana
@@ -174,12 +180,12 @@ do suporte técnico.
   
 
 
-Ao abrir um chamado de suporte, assegure que você indique uma gravidade apropriada para seu chamado. A gravidade determina como o chamado será manipulado. Veja [Severidade e tempo de resposta do chamado de suporte](index.html#support-ticket-severity){: new_window} para obter informações sobre as diferentes severidades. Se a sua solicitação for urgente, mas você tiver somente suporte grátis ou básico, será possível fazer upgrade de sua conta para enviar chamados de alta severidade (nível 1, 2 e 3). Para fazer upgrade de sua conta para um nível de suporte mais alto, entre em contato com o representante de vendas da IBM por e-mail em sales@bluemix.net. 
+Ao abrir um chamado de suporte, assegure que você indique uma gravidade apropriada para seu chamado. A gravidade determina como o chamado será manipulado. Veja [Severidade e tempo de resposta do chamado de suporte](index.html#support-ticket-severity){: new_window} para obter informações sobre as diferentes severidades. Se a sua solicitação for urgente, mas você tiver somente suporte grátis ou básico, será possível fazer upgrade de sua conta para enviar chamados de alta severidade (nível 1, 2 e 3). Para fazer upgrade de sua conta para um nível de suporte mais alto, entre em contato com o representante de vendas da IBM por e-mail em sales@bluemix.net.
 
 #### Verificando o status do chamado de suporte
 {: #check-ticket-status}
 
-Cada chamado de suporte é designado a um número de chamado exclusivo para referência. É possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte no [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.   
+Cada chamado de suporte é designado a um número de chamado exclusivo para referência. É possível usar o número de chamado para revisar o progresso do chamado de suporte e atualizar o chamado de suporte no [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. As atualizações e respostas são enviadas a você por e-mail e registradas nas notas do chamado.  
 
 
 
@@ -193,7 +199,7 @@ Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated, o supor
 
 <ul>
 <li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
-<p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira 23h59 UTC.</p>
+<p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
 <li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
 <li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
@@ -210,7 +216,7 @@ Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte s
 
 <ul>
 <li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
-<p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira 23h59 UTC.</p>
+<p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
 <li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone **Conta e suporte** <img src="images/account_support.svg" alt="Conta e suporte" /> na barra de menus superior e, em seguida, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
 <li>Se você não tiver um ID IBM, é possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com o seu representante IBM.
@@ -232,24 +238,24 @@ A tabela a seguir lista alguns exemplos comuns de problemas de suporte, níveis 
 
 Severidade | Definição de severidade | Objetivos de tempo de resposta | Cobertura de tempo de resposta
 ------|-------- | --- | --- |
-Severidade 1 | <strong>Impacto crítico nos negócios ou o serviço está inativo.</strong> <br> A funcionalidade crítica aos negócios está inoperável ou a interface crítica está com falha. Essa severidade geralmente se aplica a um ambiente de produção e indica que uma incapacidade de acessar os serviços está levando a um impacto crítico nas operações. Essa condição requer uma solução imediata. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Dentro de 1 hora</li><li><strong>Premium:</strong> Dentro de 1 hora</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Severidade 2 | <strong>Impacto significativo nos negócios.</strong> <br> Um recurso ou função de serviço está seriamente restrito em seu uso ou há o risco de perder os prazos finais dos negócios. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
-Severidade 3 | <strong>Impacto menor nos negócios.</strong> <br> Um recurso ou função de serviço é utilizável, mas tem alguns problemas que afetam seu uso. Nenhum impacto crítico é causado nas operações. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
-Severidade 4 | <strong>Impacto mínimo nos negócios.</strong> <br> Uma consulta ou solicitação não técnica. | <ul><li><strong>Grátis:</strong> Melhor esforço </li><li><strong>Básico:</strong> Melhor esforço </li><li><strong>Padrão:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Livre:</strong> Horas de operação </li><li><strong>Básico:</strong> Horas de operação </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
+Severidade 1 | <strong>Impacto crítico nos negócios ou o serviço está inativo.</strong> <br> A funcionalidade crítica aos negócios está inoperável ou a interface crítica está com falha. Essa severidade geralmente se aplica a um ambiente de produção e indica que uma incapacidade de acessar os serviços está levando a um impacto crítico nas operações.  Essa condição requer uma solução imediata. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> Dentro de 1 hora</li><li><strong>Premium:</strong> Dentro de 1 hora</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Padrão:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
+Severidade 2 | <strong>Impacto significativo nos negócios.</strong> <br> Um recurso ou função de serviço está seriamente restrito em seu uso ou há o risco de perder os prazos finais dos negócios. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos </li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
+Severidade 3 | <strong>Impacto menor nos negócios.</strong> <br> Um recurso ou função de serviço é utilizável, mas tem alguns problemas que afetam seu uso. Nenhum impacto crítico é causado nas operações. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
+Severidade 4 | <strong>Impacto mínimo nos negócios.</strong> <br> Uma consulta ou solicitação não técnica. | <ul><li><strong>Grátis:</strong> Melhor esforço </li><li><strong>Básico:</strong> Melhor esforço</li><li><strong>Padrão:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Livre:</strong> Horas de operação </li><li><strong>Básico:</strong> Horas de operação </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
 *Tabela 2. Definição e tempo de resposta de severidade*
 
 
 ### Relatando uma potencial vulnerabilidade de segurança
 {: #report-security-vulnerability}
 
-Se você achar que uma potencial vulnerabilidade de segurança está ocorrendo, relate-a ao Bluemix abrindo um chamado de suporte.  
+Se você achar que uma potencial vulnerabilidade de segurança está ocorrendo, relate-a ao Bluemix abrindo um chamado de suporte. 
 
-Para relatar uma potencial vulnerabilidade de segurança, conclua as etapas a seguir: 
+Para relatar uma potencial vulnerabilidade de segurança, conclua as etapas a seguir:
   1. Abra um chamado de severidade 1 ou um chamado do nível de severidade mais alto que seu suporte permita. Para obter informações sobre como abrir um chamado, veja [Abrindo um chamado de suporte](#open-ticket){: new_window}. 
-  2. Descreva claramente no resumo do chamado que o chamado é sobre uma potencial vulnerabilidade de segurança. 
-  2. Forneça detalhes da potencial vulnerabilidade de segurança, incluindo um dos itens a seguir: 
-       * Um número de telefone no qual é possível contatá-lo para discutir o assunto. 
-	   * Detalhes do problema. Deve-se criptografar os detalhes como um bloco de texto no corpo do chamado e fornecer instruções sobre como o Suporte IBM pode contatá-lo seguramente para obter instruções de decriptografia. 
+  2. Descreva claramente no resumo do chamado que o chamado é sobre uma potencial vulnerabilidade de segurança.
+  2. Forneça detalhes da potencial vulnerabilidade de segurança, incluindo um dos itens a seguir:
+       * Um número de telefone no qual é possível contatá-lo para discutir o assunto.
+	   * Detalhes do problema. Deve-se criptografar os detalhes como um bloco de texto no corpo do chamado e fornecer instruções sobre como o Suporte IBM pode contatá-lo seguramente para obter instruções de decriptografia.
 	   
 	   
 	   
@@ -331,13 +337,18 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 ## Pesquisas de opinião de satisfação para o suporte do {{site.data.keyword.Bluemix_notm}}  
 {: #survey}
 
-Periodicamente, a IBM envia pesquisas de opinião aos clientes do Bluemix para obter feedback sobre as recentes experiências com o suporte ao cliente. A pesquisa de opinião se concentra na qualidade do suporte e na experiência geral. O gerenciamento IBM revisa os resultados da pesquisa de opinião para melhorar a experiência do suporte. 
+Periodicamente, a IBM envia pesquisas de opinião aos clientes do Bluemix para obter feedback sobre as recentes experiências com o suporte ao cliente.  A pesquisa de opinião se concentra na qualidade do suporte e na experiência geral.  O gerenciamento IBM revisa os resultados da pesquisa de opinião para melhorar a experiência do suporte. 
 
 
 # rellinks
 {: #rellinks}
 
 ## general
-  * [Porta de suporte do Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Porta de suporte do Bluemix](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

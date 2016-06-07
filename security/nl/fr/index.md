@@ -15,7 +15,7 @@ copyright:
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Dernière mise à jour : 17 mars 2016*
+*Dernière mise à jour : 9 mai 2016*
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
 possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
@@ -213,8 +213,7 @@ Avec {{site.data.keyword.Bluemix_notm}},
 la sécurisation des données contre l'accès non autorisé est le fruit d'une
 collaboration entre {{site.data.keyword.Bluemix_notm}} et vous.
 
-Les données qui sont associées à une application en cours d'exécution peuvent être dans l'un des trois états suivants : en transit (data-in-transit), au
-repos (data-at-rest) et en cours d'utilisation (data-in-use).
+Les données qui sont associées à une application en cours d'exécution peuvent être dans l'un des trois états suivants : en transit, au repos et en cours d'utilisation. 
 
 <dl>
 <dt>Données en transit</dt>
@@ -431,7 +430,11 @@ Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.B
 *Tableau 1. Conformité de la plateforme et des services*
 
 
-# rellinks
-## general
+# Liens connexes
+{: #rellinks}
+
+## Liens connexes
+{: #general}
+
 * [SoftLayer Security Compliance](http://www.softlayer.com/security)
 * [Initiation à Single Sign On](../services/SingleSignOn/index.html)

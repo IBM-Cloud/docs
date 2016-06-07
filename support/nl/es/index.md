@@ -12,16 +12,16 @@ copyright:
 # Obtención de soporte al cliente
 {: #getting-customer-support}
 
-*Última actualización: 19 de abril de 2016*
+*Última actualización: 11 de mayo de 2016*
 
 
 Si tiene problemas con {{site.data.keyword.Bluemix}},
-tiene varias opciones de soporte, como obtener ayuda desde abriendo una incidencia de soporte.
+tiene varias opciones de soporte, como obtener ayuda a través de un foro o abriendo una incidencia de soporte.
 {:shortdesc}
 
 ## Obtención de ayuda
 {: #getting-help}
-Para obtener ayuda, vaya a Cuenta y soporte o vaya directamente a Stack Overflow, donde puede buscar información o publicar preguntas.
+Para abrir una incidencia de soporte, o encontrar otras opciones de ayuda puede ir a Cuenta y soporte. También puede ir directamente a los foros Stack Overflow o  developerWorks (dW) Answers para buscar información o enviar preguntas.
 {:shortdesc}
 
 ### Uso de Cuenta y soporte
@@ -34,18 +34,21 @@ en **Póngase en contacto**.
 
 
 ### Cómo formular una pregunta
-Si accede directamente o mediante Cuenta y soporte, Stack Overflow es un sitio web que sirve como plataforma para que los usuarios formulen y respondan preguntas. Los equipos de desarrollo y soporte de {{site.data.keyword.Bluemix_notm}} trabajan de forma activa
-en Stack Overflow y realizan un seguimiento de las preguntas que tienen la etiqueta
-**bluemix**.
+{: #asking-a-question}
 
-Para hacer una pregunta en Stack Overflow, elija una de estas opciones:
-  * Desde Cuenta y soporte, pulse **Obtener ayuda**. En la página que se muestra, escriba su pregunta en el campo de búsqueda para encontrar respuestas. Si no obtiene la respuesta esperada, puede pulsar **Publicar en Stack Overflow** para publicar su pregunta.
+Los foros Stack Overflow y dW Answers proporcionan una gran variedad de respuestas en las que se pueden realizar búsquedas para las preguntas de Bluemix. Si no encuentra una respuesta existente, haga una nueva pregunta.  
 
-  * Vaya directamente a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}.
+  * Vaya a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} para hacer preguntas técnicas sobre el desarrollo de apps con los servicios y la plataforma Bluemix.
+  * Vaya a [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} para formular preguntas sobre la oferta de {{site.data.keyword.Bluemix_notm}} y sobre cómo obtener instrucciones para empezar.
 
-Cuando cree una pregunta en Stack Overflow, añada a la misma la etiqueta
+También puede formular una pregunta en Stack Overflow directamente desde Cuenta y soporte llevando a cabo los pasos siguientes: 
+  1. Desde Cuenta y soporte, pulse **Obtener ayuda**. 
+  2. En la página que se muestra, escriba su pregunta en el campo de búsqueda para encontrar respuestas. 
+  3. Si no obtiene la respuesta esperada, pulse **Publicar en Stack Overflow** para publicar su pregunta.
+
+Los equipos de desarrollo y soporte de {{site.data.keyword.Bluemix_notm}} supervisan activamente Stack Overflow y dW Answers, y realizan un seguimiento de las preguntas que tienen la etiqueta **bluemix**. Cuando cree una pregunta en cualquiera de los foros, añada a la misma la etiqueta
 **bluemix** para asegurarse de que los equipos de desarrollo y soporte de {{site.data.keyword.Bluemix_notm}} la han visto.
-
+ 
 
 
 ## Visualización del estado de {{site.data.keyword.Bluemix_notm}}
@@ -139,10 +142,8 @@ A todos los clientes de {{site.data.keyword.Bluemix_notm}} se les proporciona so
 
 Niveles | Gratuito |  Básico | Estándar | Premium
 --- | --- | --- | --- | --- |
-Descripción | Soporte para todos los clientes de prueba de Bluemix.  |  Soporte para entornos de no producción o cargas de trabajo donde no son necesarios las gravedades tradicionales ni los tiempos de respuesta.  | Soporte para entornos con un número limitado de aplicaciones críticas de la empresa. Los clientes de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local reciben soporte estándar. | Soporte para entornos de misión crítica que tienen una dependencia estatégica en {{site.data.keyword.Bluemix_notm}}.
-Soporte de gravedad alta  |  N/D | N/A | Incluido | Idioma de soporte incluido
- | Inglés | Inglés | Inglés | CSM (Client Success Manager) asignado para el inglés
- | No se incluye | No se incluye | No se incluye | Se incluye a las<br> 8 horas por semana
+Descripción | Soporte para todos los clientes de prueba de Bluemix.  |  Soporte para entornos de no producción o cargas de trabajo donde no son necesarios las gravedades tradicionales ni los tiempos de respuesta. | Soporte para entornos con un número limitado de aplicaciones críticas de la empresa. Los clientes de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local reciben soporte estándar. | Soporte para entornos de misión crítica que tienen una dependencia estatégica en {{site.data.keyword.Bluemix_notm}}. 
+Soporte de gravedad alta |  N/A | N/A | Incluido | Idioma de soporte incluido | Inglés | Inglés | Inglés | CSM (Client Success Manager) asignado para el inglés | No se incluye | No se incluye | No se incluye | Se incluye a las<br> 8 horas por semana
 *Tabla 1. Niveles de soporte*
 
 #### Apertura de una incidencia de soporte
@@ -152,10 +153,10 @@ Si no ha podido resolver el problema técnico con las opciones de resolución de
 antes de ponerse en contacto con soporte para un problema técnico, asegúrese de que el problema no sea debido a una parada del
 servicio, comprobando el estado de {{site.data.keyword.Bluemix_notm}}.
 
-Si el problema no es debido a una parada, abra una incidencia de soporte mediante una de las opciones siguientes: 
+Si el problema no es debido a una parada, abra una incidencia de soporte mediante una de las opciones siguientes:
 
   * Desde Cuenta y soporte, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**. Rellene el formulario para indicar qué soporte técnico necesita.
-  * Desde [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Después de iniciar la sesión en el portal, pulse **Open Ticket** y, a continuación, rellene el formulario de soporte.  
+  * Desde [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Después de iniciar la sesión en el portal, pulse **Open Ticket** y, a continuación, rellene el formulario de soporte. 
   * Utilice la página de ayuda de [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias para ventas, facturación, ID e inicio de sesión y problemas de soporte técnico. Para problemas
 de soporte técnico, puede seleccionar un grupo técnico tras pulsar en el icono
 **Soporte técnico**. Por ejemplo,, si necesita ayuda con apps Cloud Foundry, OpenWhisk, contenedores, servidores virtuales o servidores nativos, puede elegir **Application Services**. Si necesita ayuda con un servicio específico, seleccione
@@ -171,7 +172,7 @@ la incidencia. Consulte [Gravedad de la incidencia de soporte y tiempo de respue
 {: #check-ticket-status}
 
 Cada incidencia de soporte está asignada a un número de incidencia exclusivo para su consulta. Puede utilizar el número de incidencia para revisar el progreso de la incidencia de soporte y actualizar la incidencia de soporte en
-[IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Las actualizaciones y respuestas se envían por correo electrónico y se registran en las notas de incidencia.   
+[IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Las actualizaciones y respuestas se envían por correo electrónico y se registran en las notas de incidencia.  
 
 
 
@@ -186,7 +187,7 @@ Si es cliente dedicado de {{site.data.keyword.Bluemix_notm}}, el soporte lo prop
 <ul>
 <li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} dedicado** para el campo Región.
-<p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes. </p>
+<p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes.</p>
 </li>
 <li>Si tiene un ID de IBM y tiene acceso al entorno {{site.data.keyword.Bluemix_notm}} público, pulse el icon
 **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> en la barra de menús de la
@@ -207,7 +208,7 @@ Si es cliente local de {{site.data.keyword.Bluemix_notm}}, el soporte lo proporc
 <ul>
 <li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda
 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} local** para el campo Región.
-<p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes. </p>
+<p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes.</p>
 </li>
 <li>Si tiene un ID de IBM y tiene acceso al entorno {{site.data.keyword.Bluemix_notm}} público, pulse el icon
 **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> en la barra de menús de la
@@ -225,18 +226,17 @@ parte superior y pulse **Obtener ayuda**. En la página que se muestra, pulse **
 Cuando se pone en contacto con soporte, puede solicitar un nivel de gravedad específico, según el tipo y urgencia del problema. El nivel de gravedad
 está relacionado con la celeridad con la que se soluciona el problema.
 
-La siguiente tabla lista algunos ejemplos comunes de los problemas de soporte, niveles de gravedad sugeridos y los objetivos de tiempo de respuesta. Los objetivos de tiempo de respuesta se utilizan únicamente para describir los objetivos de IBM y no representan una garantía de rendimiento. 
+La siguiente tabla lista algunos ejemplos comunes de los problemas de soporte, niveles de gravedad sugeridos y los objetivos de tiempo de respuesta. Los objetivos de tiempo de respuesta se utilizan únicamente para describir los objetivos de IBM y no representan una garantía de rendimiento.
 
 **Horas de operación:** Domingo 22:00 horas GMT – Viernes 23:59 horas (excluyendo las vacaciones de EE.UU./Italia/Australia). Para obtener más información sobre planificación de vacaciones, consulte [Bluemix Support Holidays](http://ibm.biz/bluemixholidays){: new_window}. 
 
 
 Gravedad | Definición de gravedad | Objetivos de tiempo de respuesta | Cobertura de tiempo de respuesta
 ------|-------- | --- | --- |
-Gravedad 1 | <strong>El servicio o impacto empresarial crítico está inactivo.</strong> <br> La funcionalidad crítica de empresa no funciona o la interfaz crítica ha fallado. Esta gravedad normalmente se aplica a un entorno de producción e indica que la incapacidad de acceder a servicios está causando un impacto crítico sobre operaciones.
-Esta condición requiere una solución inmediata.  | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Dentro de 1 hora</li><li><strong>Premium:</strong> Dentro de 1 hora</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Gravedad 2 | <strong>Impacto empresarial importante.</strong> <br> Un función o característica de servicio tiene el uso gravemente restringido o corre el peligro de no cumplir los plazos de la empresa. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
-Gravedad 3 | <strong>Impacto empresarial menor.</strong> <br> Una función o característica de servicio se puede utilizar, pero tiene algunos problemas que afectan su uso. No ha causado ningún impacto crítico en operaciones. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
-Gravedad 4 | <strong>Impacto empresarial mínimo.</strong> <br> Una consulta o solicitud no técnica. | <ul><li><strong>Gratuito:</strong> Máximo esfuerzo </li><li><strong>Básico:</strong> Máximo esfuerzo </li><li><strong>Estándar:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Gratuito:</strong> Horas de operación </li><li><strong>Básico:</strong> Horas de operación </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
+Gravedad 1 | <strong>El servicio o impacto empresarial crítico está inactivo.</strong> <br> La funcionalidad crítica de empresa no funciona o la interfaz crítica ha fallado. Esta gravedad normalmente se aplica a un entorno de producción e indica que la incapacidad de acceder a servicios está causando un impacto crítico sobre operaciones.  Esta condición requiere una solución inmediata. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> Dentro de 1 hora</li><li><strong>Premium:</strong> Dentro de 1 hora</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D</li><li><strong>Estándar:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
+Gravedad 2 | <strong>Impacto empresarial importante.</strong> <br> Un función o característica de servicio tiene el uso gravemente restringido o corre el peligro de no cumplir los plazos de la empresa. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
+Gravedad 3 | <strong>Impacto empresarial menor.</strong> <br> Una función o característica de servicio se puede utilizar, pero tiene algunos problemas que afectan su uso. No ha causado ningún impacto crítico en operaciones. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
+Gravedad 4 | <strong>Impacto empresarial mínimo.</strong> <br> Una consulta o solicitud no técnica. | <ul><li><strong>Gratuito:</strong> Máximo esfuerzo </li><li><strong>Básico:</strong> Máximo esfuerzo</li><li><strong>Estándar:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Gratuito:</strong> Horas de operación </li><li><strong>Básico:</strong> Horas de operación </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
 *Tabla 2. Definición de gravedad y tiempo de respuesta*
 
 
@@ -250,7 +250,7 @@ Para notificar una vulnerabilidad de seguridad potencial, realice los siguientes
   2. Describa claramente en el resumen de incidencia que la incidencia se refiere a una vulnerabilidad de seguridad potencial.
   2. Proporcione detalles de la vulnerabilidad de seguridad potencial incluyendo uno de los siguientes elementos:
        * Un número de teléfono al que puede llamar para tratar el problema.
-	   * Detalles del problema. Debe cifrar los detalles como un bloque de texto en el cuerpo de la incidencia y proporcionar instrucciones sobre cómo el soporte de IBM puede ponerse en contacto con un usted de forma segura para obtener instrucciones de descifrado. 
+	   * Detalles del problema. Debe cifrar los detalles como un bloque de texto en el cuerpo de la incidencia y proporcionar instrucciones sobre cómo el soporte de IBM puede ponerse en contacto con un usted de forma segura para obtener instrucciones de descifrado.
 	   
 	   
 	   
@@ -262,7 +262,7 @@ Con soporte estándar o premium, si no ha recibido una respuesta a tiempo para u
 conjuntamente con usted para mejorar su experiencia de soporte.
 
 Para enviar una solicitud de escalado, realice los pasos siguientes:
-  1. Abra una nueva incidencia de soporte con el resumen **Solicitud de escalado**. 
+  1. Abra una nueva incidencia de soporte con el resumen **Solicitud de escalado**.
   2. Para asegurarse de que su solicitud de escalada se puedan asociar a la incidencia de soporte original, incluya la información siguiente en el cuerpo de la incidencia:
        * El número de incidencia de su incidencia de soporte abierta que necesita ser escalada.
 	   * Un breve resumen de los motivos por las que hace falta escalar.
@@ -325,13 +325,18 @@ La siguiente tabla lista los idiomas nacionales soportados y los códigos de idi
 ## Encuestas de satisfacción para el soporte de {{site.data.keyword.Bluemix_notm}}  
 {: #survey}
 
-IBM envía periódicamente encuestas a clientes de Bluemix para obtener sus comentario sobre experiencias recientes con el soporte de cliente. La encuestra se centra en la calidad de soporte y la experiencia global. La gestión de IBM revisa los resultados de la encuesta para mejorar la experiencia de soporte.  
+IBM envía periódicamente encuestas a clientes de Bluemix para obtener sus comentario sobre experiencias recientes con el soporte de cliente.  La encuestra se centra en la calidad de soporte y la experiencia global.  La gestión de IBM revisa los resultados de la encuesta para mejorar la experiencia de soporte. 
 
 
 # rellinks
 {: #rellinks}
 
 ## general
-  * [Portal de soporte de Bluemix](https://support.ibmcloud.com){: new_window}
-  * [Instalación de la herramienta de mandatos cf](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Portal de soporte de Bluemix](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [Instalación de la herramienta de mandatos cf](../starters/install_cli.html){: new_window} 
   * [Handbook de soporte de SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

@@ -6,7 +6,13 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # IBM VPN CLI
+*前次更新：2016 年 5 月 3 日*
+
 您可以使用指令行介面 (CLI) 來配置和管理 IBM® Virtual Private Network (VPN) 服務。IBM VPN CLI 是與 Cloud Foundry CLI 外掛程式搭配使用的外掛程式。該外掛程式可用於 Windows、MAC 和 Linux 作業系統。請確定您使用適當的作業系統。
 
 開始之前，請安裝 Cloud Foundry CLI。如需詳細資料，請參閱 [Cloud Foundry 指令行介面](https://console.{DomainName}/docs/cli/downloads.html)。 
@@ -52,22 +58,8 @@ cf uninstall-plugin vpn
 	```  
 2. 執行下列指令：  
 
-	**MS Windows 作業系統：**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Apple MAC 作業系統：**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Linux 作業系統：**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##IBM VPN 服務指令的清單
 
@@ -406,6 +398,7 @@ cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 CIDR 格式的子網路位址。 
 
 # 相關鏈結
-## 一般
+## 一般  
+{: #general}  
 * [IBM VPN 服務](../../../services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

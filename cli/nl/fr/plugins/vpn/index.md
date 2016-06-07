@@ -1,12 +1,18 @@
 ---
 
-copyright :
+copyright:
 
-  années : 2015, 2016
+  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # Interface de ligne de commande d'IBM VPN
+*Dernière mise à jour : 03 mai 2016*
+
 Vous pouvez utiliser l'interface de ligne de commande pour configurer et gérer votre service IBM® Virtual Private Network (VPN). L'interface de ligne de commande d'IBM VPN est un
 plug-in qui est utilisé avec le plug-in de l'interface de ligne de commande de Cloud Foundry. Le plug-in est disponible pour les systèmes d'exploitation Windows, MAC et Linux. Assurez-vous d'utiliser celui qui vous correspond.
 
@@ -56,22 +62,8 @@ Bluemix](http://plugins.ng.bluemix.net).
 	```  
 2. Exécutez la commande suivante :  
 
-	**Pour les systèmes d'exploitation MS Windows :**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Pour les systèmes d'exploitation Apple MAC :**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Pour les systèmes d'exploitation Linux :**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##Liste des commandes du service IBM VPN
 
@@ -405,6 +397,7 @@ valeur par défaut. Vous devez spécifier un type.
 **-subnets :** Adresse de sous-réseau au format CIDR. 
 
 # Liens associés
-## Informations générales
+## Informations générales  
+{: #general}  
 * [Service IBM VPN](../../../services/vpn/index.html)
 * [Interface de ligne de commande de Cloud Foundry](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

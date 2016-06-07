@@ -450,7 +450,6 @@ paramètres du package.
   ```
   {: pre}
   ```
-  ok: invoked sample/identity with id cccaf61a77054101952494522f36c1ca
   {
       "city": "Austin",
       "country": "USA"

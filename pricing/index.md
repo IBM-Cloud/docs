@@ -51,7 +51,7 @@ copyright:
 # Pricing
 {: #pricing}
 
-*Last updated: 19 May 2016*
+*Last updated: 1 June 2016*
 
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
 {:shortdesc}
@@ -118,6 +118,8 @@ You can convert your free trial into a billable account at any time. All of your
 After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon** in the upper-right corner of the {{site.data.keyword.Bluemix_notm}} user interface, then click **Account &gt; Account Type** to edit your information.
 
 If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you are using a Pay-As-You-Go or a Subscription account, see [Getting online help](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) for more information.
+
+**Note:** If you link your {{site.data.keyword.Bluemix_notm}} billing account with a SoftLayer account, starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} charges will be on your SoftLayer invoice. For more details, see [Viewing credits](../admin//softlayerlink.html#bill_usage).
 
 ###Pay-As-You-Go account
 {: #pay-as-you-go}
@@ -294,8 +296,6 @@ The following items are the free allowances for the {{site.data.keyword.virtualm
 * 200 GB block storage
 * 5 public IP addresses
 
-In addition, you can use the virtual servers infrastructure to provision virtual servers in your {{site.data.keyword.Bluemix_notm}} private environments, subject only to the limits and quotas of your private environment.
-
 
 ##How to estimate your costs
 {: #cost}
@@ -401,6 +401,13 @@ The account owner is charged for the total usage that is incurred across all org
 Account owners can filter the usage summary by region and organization. If you are an account owner, set **Organization** as **All Organizations** to see the usage for the entire account for a 12-month period. Click a particular month to see the usage for that month. The charges shown represent the amount that you, as account owner, are billed for that month.
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
+
+##Viewing credits
+{: #credits}
+
+As an account owner or a billing manager, you can use the Usage Dashboard view to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
+
+To open the Usage Dashboard view, click the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg), then select **Account**. On the page that is displayed, click **Usage Dashboard**. In the view, you can see any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}

@@ -17,7 +17,7 @@ copyright:
 *Letzte Aktualisierung: 18. April 2016*
 
 In {{site.data.keyword.Bluemix}} können Sie Ihre Anwendung in der
-{{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen. Nachdem die Anwendung erstellt wurde, können Sie wählen, ob Sie weiterhin die Benutzerschnittstelle, die Befehlszeilenschnittstelle 'cf' oder {{site.data.keyword.jazzhub_title}} verwenden möchten, um Ihre Anwendung zu entwickeln, zu überwachen, zu planen und bereitzustellen.
+{{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen. Nachdem die Anwendung erstellt wurde, können Sie wählen, ob Sie weiterhin die Benutzerschnittstelle, die Befehlszeilenschnittstelle 'cf' oder {{site.data.keyword.jazzhub_title}} verwenden möchten, um Ihre Anwendung zu entwickeln, zu verfolgen, zu planen und bereitzustellen.
 {:shortdesc}
 
 Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen, beginnen Sie mit einem

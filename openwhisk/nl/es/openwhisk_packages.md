@@ -448,7 +448,6 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
   ```
   {: pre}
   ```
-  ok: invoked sample/identity with id cccaf61a77054101952494522f36c1ca
   {
       "city": "Austin",
       "country": "USA"

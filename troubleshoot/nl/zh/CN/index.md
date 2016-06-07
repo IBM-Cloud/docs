@@ -15,7 +15,7 @@ copyright:
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2016 年 4 月 13 日*
+*上次更新时间：2016 年 5 月 16 日*
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
@@ -91,7 +91,7 @@ copyright:
 
 配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中键入以下命令：
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 
@@ -354,7 +354,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../admin/adminpublic.html#orgmng){: new_window}。
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织](../admin/orgs_spaces.html)。
  
 
  
@@ -951,7 +951,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅[使用 Liberty for Java 创建应用程序](../starters/liberty/index.html#liberty){: new_window}。
+您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](../runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -1222,7 +1222,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 当您为空间内的不同应用程序分配相同 URL 路径时，可能会发生此问题。
 {: tsCauses}
 
-例如，将 myApp1 应用程序推送到 {{site.data.keyword.Bluemix_notm}}，并将域设置为“mynewapp.stage1.mybluemix.net”。然后，将另一个应用程序 myApp2 推送到同一空间，并将该应用程序的其中一个 URL 路径设置为“mynewapp.stage1.mybluemix.net”。现在，该路径映射到两个应用程序。
+例如，将 myApp1 应用程序推送到 {{site.data.keyword.Bluemix_notm}}，并将域设置为“mynewapp.mybluemix.net”。然后，将另一个应用程序 myApp2 推送到同一空间，并将该应用程序的其中一个 URL 路径设置为“mynewapp.mybluemix.net”。现在，该路径映射到两个应用程序。
 
  
 

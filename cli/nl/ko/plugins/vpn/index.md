@@ -6,7 +6,13 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
+
 # IBM VPN CLI
+*마지막 업데이트 날짜: 2016년 3월 3일*
+
 명령행 인터페이스(CLI)를 사용하여 IBM® VPN(Virtual Private Network) 서비스를 구성 및 관리할 수 있습니다. IBM VPN CLI는 Cloud Foundry CLI 플러그인과 함께 사용되는 플러그인입니다. 이 플러그인은 Windows, MAC 및 Linux 운영 체제에서 사용 가능합니다. 적절한 운영 체제를 사용 중인지 확인하십시오.
 
 시작하기 전에 Cloud Foundry CLI를 설치하십시오. 자세한 정보는 [Cloud Foundry 명령행 인터페이스](https://console.{DomainName}/docs/cli/downloads.html)를 참조하십시오. 
@@ -52,22 +58,8 @@ cf uninstall-plugin vpn
 	```  
 2. 다음 명령을 실행하십시오.  
 
-	**MS Windows OS:**
-
 	```
-	cf install-plugin vpn_windows64.exe -r bluemix
-	```
-
-	**Apple MAC OS:**
-
-	```
-	cf install-plugin vpn_mac_os_amd64 -r bluemix
-	```
-
-	**Linux OS:**
-
-	```
-	cf install-plugin vpn_linuxamd64 -r bluemix
+	cf install-plugin vpn -r bluemix
 	```
 ##IBM VPN 서비스 명령 목록
 
@@ -407,6 +399,7 @@ cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 CIDR 형식의 서브넷 주소입니다. 
 
 # 재링크
-## 일반
+## 일반  
+{: #general}  
 * [IBM VPN 서비스](../../../services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

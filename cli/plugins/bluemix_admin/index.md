@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-*Last updated: 19 May 2016*
+*Last updated: 2 June 2016*
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
@@ -320,6 +320,8 @@ You can add, delete, and retrieve security reports.
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**Note**: If you have write access for the reports permission, you can create a new category and add a report in any of the accepted formats for your users. Enter the new category name for the `category` parameter, or add your new report to an existing category.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>

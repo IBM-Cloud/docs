@@ -16,7 +16,7 @@ copyright:
 # Visão geral do {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Última atualização: 18 de janeiro de 2016*
+*Última atualização: 9 de maio de 2016*
 
 {{site.data.keyword.Bluemix}} é a plataforma em nuvem
 aberta da {{site.data.keyword.IBM}} que fornece aos
@@ -589,8 +589,12 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 
 *Tabela 2. Idiomas nacionais suportados e códigos de idioma*
 
-# rellinks
-## general 
+# Links Relacionados
+{: #rellinks}
+
+## Links Relacionados
+{: #general}
+
 * [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problemas conhecidos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#issues)

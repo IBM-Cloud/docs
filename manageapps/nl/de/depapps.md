@@ -14,7 +14,7 @@ copyright:
 #Anwendungen bereitstellen
 {: #deployingapps}
 
-*Letzte Aktualisierung: 17. März 2016*
+*Letzte Aktualisierung: 9. Mai 2016*
 
 Sie können Anwendungen anhand verschiedener Methoden für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei Verwendung eines Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 {:shortdesc}
@@ -82,7 +82,7 @@ für {{site.data.keyword.Bluemix_notm}} bereitstellen.
   cf push
   ```
   
-  Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](../starters/liberty/index.html#liberty).
+  Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](../runtimes/liberty/index.html).
   
   * Um Java Tomcat-Anwendungen für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl:
   
@@ -305,14 +305,14 @@ Folgende Variablen werden vom DEA definiert:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -476,7 +476,11 @@ tmp/
 ```
 
 # Zugehörige Links
-## Allgemein 
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
 * [Bereitstellung mit Anwendungsmanifesten](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF-Manifestgenerator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Einführung in CF Version 6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

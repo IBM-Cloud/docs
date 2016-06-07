@@ -11,7 +11,7 @@ copyright:
 
 # Iniciación a {{site.data.keyword.vpn_short}}
 {: #vpn}  
-*Última actualización: 17 de marzo de 2016*
+*Última actualización: 09 de mayo de 2016*
 
 El servicio {{site.data.keyword.vpn_full}} para Bluemix&reg; está disponible para acceder a IBM Containers (contenedores de Docker) dentro del entorno de nube de IBM Bluemix. Puede utilizar el entorno de nube de IBM Bluemix como extensión de su centro de datos corporativo. También se puede conectar a los servidores de SoftLayer utilizando el servicio IBM VPN.
 {:shortdesc}
@@ -25,7 +25,7 @@ Para empezar, seleccione el mosaico de instancia de servicio **Red privada virtu
 
   1. Seleccione **EDITAR**.  
   2. Especifique el nombre de la pasarela.  
-  3. Seleccione los contenedores o grupos con los que desee utilizar el servicio VPN.  
+  3. Seleccione el contenedor y el grupo de contenedores con el que desea utilizar el servicio VPN. **Note:** Las subredes privadas del contenedor y del grupo de contenedores están preseleccionadas, de modo que puede acceder a ellas a través de la conexión de VPN. 
   4. Seleccione **GUARDAR**.  
 
  Puede utilizar las políticas predeterminadas IKE e IPSec o configurar políticas personalizadas. Si desea utilizar las políticas predeterminadas, vaya al paso 4.
@@ -57,15 +57,15 @@ Para empezar, seleccione el mosaico de instancia de servicio **Red privada virtu
 4. Proporcione la información para establecer una conexión entre su centro de datos o pasarela de VPN de servidor de SoftLayer y la pasarela de IBM VPN.  
 {: #site}  
 
-  1. Seleccione el separador **Dispositivo de pasarela VPN**.
-  2. Seleccione **AÑADIR NUEVA** en la sección **Conexiones de sitios VPN**.
+  1. Seleccione el separador **Dispositivo de pasarela**.
+  2. Seleccione **Crear conexión** en la sección **Conexiones de sitios**.
   3. Especifique los detalles de conexiones de sitios siguientes:  
   	* **Nombre**: Nombre de la conexión.  
   	* **Descripción**: Descripción de la conexión (opcional).  
   	* **Serie de clave compartida previamente**: Clave compartida previamente (secreta) que se utilizará para la autenticación.
   	* **Estado de administración**: Estado de la conexión de VPN. Selecciónelo en la lista desplegable: ACTIVO O INACTIVO. Valor predeterminado: ACTIVO  
   	* **IP de pasarela de cliente**: Dirección de IP de punto final remoto del túnel de VPN.  
-  	* **Subred de cliente**: Dirección de subred remota en formato CIDR. Seleccione el signo más para guardar los detalles de subred.
+  	* **Subred de cliente**: Dirección de subred remota en formato CIDR. Seleccione el signo más para añadir otra subred. 
   4. (Opcional) Configure los siguientes parámetros de **Opciones avanzadas**:  
   	* **Política IKE**: Seleccione la política IKE.  
   	* **Intervalo de estado activo**: Intervalo de estado activo en segundos. Enviar mensajes de estado activo en el intervalo configurado para comprobar el estado activo del igual. Valor predeterminado: 15. Rango: 5-86399
@@ -89,15 +89,18 @@ Para empezar, seleccione el mosaico de instancia de servicio **Red privada virtu
  
 # rellinks
 ## ejemplos 
+{: #samples}  
 * [Ejemplo de configuración de pasarela strongSwan local](vpn_onpremises.html#strongswan){: new_window}
 * [Ejemplo de configuración de pasarela Vyatta local](vpn_onpremises.html#vyatta){: new_window}
 * [Ejemplo de configuración del servicio de dispositivo de pasarela (Gaas) SoftLayer local](vpn_onpremises.html#gaas){: new_window}
 * [Ejemplo de configuración de Cisco ASA local](vpn_onpremises.html#cisco){: new_window}
 
-## api 
+## api  
+{: #api}  
 * [API RESTful de IBM VPN](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## general 
+## general  
+{: #general}  
 * [Interfaz de línea de mandatos de IBM VPN](../../cli/plugins/vpn/index.html){: new_window}
 * [Preguntas frecuentes de IBM VPN](vpn_faq.html#vpn_faq){: new_window}
 * [Hoja de precios de IBM Bluemix](https://console.{DomainName}/pricing/){: new_window}

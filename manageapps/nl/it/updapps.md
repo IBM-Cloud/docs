@@ -14,7 +14,7 @@ copyright:
 #Aggiornamento di applicazioni
 {: #updatingapps}
 
-*Ultimo aggiornamento: 17 marzo 2016*
+*Ultimo aggiornamento: 9 maggio 2016*
 
 
 Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} DevOps Services. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
@@ -59,7 +59,7 @@ seguente comando:
     
     ```
     cf create-domain <your org name> mydomain
-    ```
+```
     
     *organization_name*
   
@@ -74,7 +74,7 @@ seguente comando:
     
     ```
     cf map-route myapp mydomain -n host_name
-    ```
+```
     
     *myapp*
       
@@ -149,37 +149,37 @@ essere eliminata quando è in funzione la nuova.
   
   ```
   cf push Blue
-  ```
+```
   
   **Risultato:** l'applicazione *Blue* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
   
 2. Utilizza il comando **cf rename** per ridenominare l'applicazione *Blue* in *Green*:
   
-  ```
+```
   cf rename Blue Green
-  ```
+```
   
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf apps**:
   
-  ```
+```
   ...
   name             requested state   instances   memory   disk   urls
   Green            started           1/1         1G       1G	 Blue.mybluemix.net
   ...
-  ```
+```
   
   **Risultato:** l'applicazione *Green* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
 
 3. Apporta le modifiche necessarie e prepara la versione
 *Blue*. Esegui il push dell'applicazione *Blue* aggiornata a {{site.data.keyword.Bluemix_notm}}:
   
-  ```
+```
   cf push Blue
-  ```
+```
   
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf apps**:
   
-  ```
+```
   ...
   name             requested state   instances   memory   disk   urls
   Green            started           1/1         1G       1G	 Blue.mybluemix.net
@@ -193,13 +193,13 @@ essere eliminata quando è in funzione la nuova.
 	
 4. Facoltativo: se vuoi eliminare la versione precedente (*Green*) dell'applicazione, utilizza il comando **cf delete**.
   
-  ```
+```
   cf delete Green -f
-  ```
+```
   
   Elenca le rotte nel tuo spazio utilizzando il comando **cf route**:
   
-  ```
+```
   ...
   host             domain           apps
   Blue             mybluemix.net    Blue
@@ -218,22 +218,22 @@ essere eliminata quando è in funzione la nuova.
 
 1. Esegui il push dell'applicazione *Blue* a {{site.data.keyword.Bluemix_notm}}.
   
-  ```
+```
   cf push Blue
-  ```
+```
   
   **Risultato:** l'applicazione *Blue* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
   
 2. Apportare le modifiche necessarie e preparare la versione
 *Green*. Esegui il push dell'applicazione *Green* a {{site.data.keyword.Bluemix_notm}}:
   
-  ```
+```
   cf push Green
-  ```
+```
   
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf route**:
   
-  ```
+```
   ...
   host             domain           apps
   Blue             mybluemix.net    Blue
@@ -248,19 +248,19 @@ essere eliminata quando è in funzione la nuova.
 	
 3. Associa l'applicazione *Blue* all'applicazione *Green* in modo che tutto il traffico a `Blue.mybluemix.net` venga instradato sia all'applicazione *Blue* che all'applicazione *Green*.
   
-  ```
+```
   cf map-route Green mybluemix.net -n Blue
   ```
   
   Elenca le rotte nel tuo spazio utilizzando il comando cf routes:
   
-  ```
+```
   ...
   host             domain           apps
   Blue             mybluemix.net    Blue, Green
   Green            mybluemix.net    Green
   ...
-  ```
+```
   
   **Risultato:**
 
@@ -269,50 +269,54 @@ essere eliminata quando è in funzione la nuova.
 	
 4. Quando verifichi che *Green* sia in esecuzione nel modo previsto, rimuovi la rotta `Blue.mybluemix.net` dall'applicazione *Blue*:
   
-  ```
+```
   cf unmap-route Blue mybluemix.net -n Blue
-  ```
+```
   
   Elenca le rotte nel tuo spazio utilizzando il comando cf routes:
   
-  ```
+```
   ...
   host             domain           apps
   Blue             mybluemix.net    Green
   Green            mybluemix.net    Green
   ...
-  ```
+```
   
   **Risultato:** il router CF smette di inviare traffico all'applicazione *Blue*. L'applicazione *Green* risponde a entrambi gli URL: `Green.mybluemix.net` e `Blue.mybluemix.net`.
   
 5. Rimuovi la rotta `Green.mybluemix.net` all'applicazione *Green*.
   
-  ```
+```
   cf unmap-route Green mybluemix.net -n Green
-  ```
+```
   
   **Risultato:** il router CF smette di inviare traffico all'applicazione *Blue*. L'applicazione *Green* sta rispondendo all'URL `Blue.mybluemix.net`.
   
 6. Facoltativo: se vuoi eliminare la versione precedente (*Blue*) dell'applicazione, utilizza il comando `cf delete`.
   
-  ```
+```
   cf delete Blue -f
-  ```
+```
   
   Elenca le rotte nel tuo spazio utilizzando il comando cf route:
   
-  ```
+```
   ...
   host             domain           apps
   Blue             mybluemix.net    Green
   ...
-  ```
+```
   
   **Risultato:** l'applicazione *Green* sta rispondendo all'URL `Blue.mybluemix.net`.
 
 
-# rellinks
-## general 
+# Link correlati
+{: #rellinks}
+
+## Link correlati
+{: #general}
+
 * [Distribuzioni blue-green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps
 Services](https://hub.jazz.net/){:new_window}

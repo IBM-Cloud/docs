@@ -32,7 +32,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。通常、この URL は https://api.{{site.data.keyword.domainname}} です。
+<dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。通常、この URL は https://api.{DomainName} です。
 現在使用している API エンドポイントの URL を表示したい場合、cf api コマンドにこのパラメーターを指定する必要はありません。</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>SSL 検証プロセスを使用不可にします。このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
@@ -153,7 +153,9 @@ cf help command_name
 cf login```
 cf login コマンドを実行するときには、以下のパラメーターの 1 つ以上を使用できます。
 <dl>
-<dt>*-a*https://api.{{site.data.keyword.domainname}}</dt> <dd>{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL。このパラメーターはオプションです。</dd>
+<dt>*-a* https://api.{DomainName}
+	 </dt>
+<dd>{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL。このパラメーターはオプションです。</dd>
 <dt>*-u*user_name</dt>
 <dd>自分のユーザー名。このパラメーターはオプションです。</dd>
 <dt>*-p*password</dt>
@@ -198,7 +200,7 @@ cf push appname
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
-<dt>*-b*buildpack_name</dt> <dd>ビルドパックの名前。buildpack_name には、カスタム・ビルドパックの名前または Git URL を指定できます。例えば、my-buildpack または https://github.com/heroku/heroku-buildpack-play.git などです。</dd>
+<dt>*-b*buildpack_name</dt> <dd>ビルドパックの名前。buildpack_name には、カスタム・ビルドパックの名前または Git URL を指定できます。例えば、`my-buildpack` または `https://github.com/heroku/heroku-buildpack-play.git` とします。</dd>
 <dt>*-c*start_command</dt> <dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。例えば次のようにします。</dd>
 <dd>```
 cf push appname -c null
@@ -281,5 +283,7 @@ cf -v
 ```
 
 # 関連リンク
+{: #rellinks}
 ## 一般 
+{: #general}
 * [クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

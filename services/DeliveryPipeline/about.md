@@ -14,7 +14,7 @@ copyright:
 # About {{site.data.keyword.deliverypipeline}}
 
 {: #deliverypipeline_about}
-*Last updated: 29 April 2016*
+*Last updated: 1 June 2016*
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service, also known as pipeline, automates the continuous deployment of your Bluemix projects. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}
@@ -44,6 +44,8 @@ A job is an execution unit within a stage. A stage can contain multiple jobs, an
 ![Build and test jobs within a stage](./images/jobs.png)
 
 Jobs run in discrete working directories within Docker containers that are created for each pipeline run. Before a job is run, its working directory is populated with input that is defined at the stage level. For example, you might have a stage that contains a test job and a deploy job. If you install dependencies on one job, they are not available to the other job. However, if you make the dependencies available in the stage's input, they are available to both jobs.
+
+Except for Simple-type build jobs, when you configure a job, you can include UNIX shell scripts that include build, test, or deployment commands. Because jobs are run in ad hoc containers, the actions of one job cannot affect the run environments of other jobs, even if those jobs are part of the same stage.
 
 After a job runs, the container that was created for it is discarded. The results of a job run can persist, but the environment in which it ran does not.
 
@@ -75,7 +77,13 @@ You can deploy to one or many regions and services. For example, you can set up 
 You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
 
 ### Test jobs
-If you want to require that certain conditions are met, include test jobs before or after your build and deploy jobs. Test jobs are highly customizable. For example, you might run tests on your project code and a deployed instance of your app.
+If you want to require that conditions are met, include test jobs before or after your build and deploy jobs. You can customize test jobs to be as simple or complex as you need. For example, you might issue a cURL command and expect a particular response. You might also run a suite of unit tests or trigger functional tests with third-party test services, such as Sauce Labs.
+
+If your tests produce result files in JUnit XML format, a report that is based on the result files is shown on the **Tests** tab of every test result page. If a test fails, the job also fails.
+
+#### Environment properties for deployment scripts
+
+You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
 
 ## Manifest files
 {: #deliverypipeline_manifest}

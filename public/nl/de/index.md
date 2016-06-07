@@ -211,8 +211,8 @@ stehen die folgenden Regionen und Regionspräfixe zur Verfügung.
 wurde zum Hosten skalierbarer, ausfallsicherer Apps und Anwendungsartefakte
 entworfen, die eine bedarfsorientierte Skalierung ermöglichen und gleichzeitig eine hohe Verfügbarkeit
 sowie eine rasche Wiederherstellbarkeit nach Problemen bieten. {{site.data.keyword.Bluemix_notm}} unterscheidet zwischen
-Komponenten, die den Zustand von Interaktionen überwachen (mit Zustandsüberwachung) und Komponenten,
-die den Zustand von Interaktionen nicht überwachen (ohne Zustandsüberwachung). Diese Unterscheidung
+Komponenten, die den Zustand von Interaktionen verfolgen (mit Zustandsüberwachung) und Komponenten,
+die den Zustand von Interaktionen nicht verfolgen (ohne Zustandsüberwachung). Diese Unterscheidung
 ermöglicht es {{site.data.keyword.Bluemix_notm}}, Apps so flexibel
 wie nötig zu versetzen, um Skalierbarkeit und Ausfallsicherheit zu erreichen.
 

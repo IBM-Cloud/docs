@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -15,16 +15,14 @@ copyright:
 Create boards and cards to create and share your own dashboards that visualize your device data in real time.
 {:shortdesc}
 
-<!-- The raw message data that is sent by a connected device can be viewed in real time by going to Devices and selecting your device. In the window that opens, you can see the basic connection information for your device and also see a list of recent events and the raw message payload of the device, broken into event, data point, value, and time received. -->
-
 By using boards and cards, you can graphically visualize data set values from one or more devices for quick overview and understanding. Create boards and add cards that display the data as raw numbers, real-time graphs, gauges, and more. Add members to your boards to share them with other users in your organization. Arrange the cards and add explanatory text dividers to fine-tune your presentation.  
 
 ![Showing real-time data with cards.](images/boards_and_cards.svg "Showing real-time data with cards.")
 
 ## Visualizing the real-time message payload data
-{{site.data.keyword.iot_short}} provides a built-in dashboard that you can use to display the real-time data that your device is returning. By default, the Overview page displays usage information about your {{site.data.keyword.iot_short}} organization, such as data and the storage space that is consumed. To see real-time device data as it flows in, add device-specific cards to this page.
+{{site.data.keyword.iot_full}} provides a built-in dashboard that you can use to display the real-time data that your device is returning. By default, the Overview page displays usage information about your {{site.data.keyword.iot_short_notm}} organization, such as data and the storage space that is consumed. To see real-time device data as it flows in, add device-specific cards to this page.
 To add a device-specific card to a board:
-1. In the {{site.data.keyword.iot_short}} dashboard, select **Boards**.
+1. In the {{site.data.keyword.iot_short_notm}} dashboard, select **Boards**.
 2. Select a board that you have editing rights for or create a new board.
 3. In the board, click **Add New Card**.
 2. In the Edit Generic Visualization Card box, scroll down to the Devices section.

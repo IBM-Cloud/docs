@@ -35,7 +35,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es https://api.{{site.data.keyword.domainname}}
+<dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es https://api.{DomainName}.
 Si desea visualizar el URL del punto final API que está utilizando actualmente
 no tiene que especificar este parámetro para el mandato cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
@@ -171,7 +171,7 @@ cf login
 Puede utilizar uno o varios de los siguientes parámetros con el mandato cf
 login:
 <dl>
-<dt>*-a* https://api.{{site.data.keyword.domainname}}</dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>El URL del punto final API de {{site.data.keyword.Bluemix_notm}}. Este
 parámetro es opcional.</dd>
 <dt>*-u*nombre_usuario</dt>
@@ -225,7 +225,7 @@ cf push nombre_app
 <dd>El nombre de la app.</dd>
 <dt>*-b*nombre_paquete_compilación</dt>
 <dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede
-ser un paquete de compilación personalizado por nombre o URL Git, como por ejemplo mi_paquete-compilación o https://github.com/heroku/heroku-buildpack-play.git.</dd>
+ser un paquete de compilación personalizado por nombre o URL Git, por ejemplo, `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*mandato_inicio</dt>
 <dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. Por ejemplo:</dd>
@@ -338,5 +338,7 @@ cf -v
 ```
 
 # rellinks
+{: #rellinks}
 ## general 
+{: #general}
 * [Tarjeta de referencia rápida: mandatos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

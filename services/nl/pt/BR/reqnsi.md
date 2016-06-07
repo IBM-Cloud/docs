@@ -421,6 +421,8 @@ no ladrilho para o serviço que você deseja acessar. O painel para o serviço �
 {: #rellinks}
 
 ## general
+{: #general}
+
 * [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
 * [Recuperando VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
 

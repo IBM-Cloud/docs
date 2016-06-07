@@ -11,7 +11,7 @@ copyright:
 
 # {{site.data.keyword.vpn_short}} 시작하기
 {: #vpn}  
-*마지막 업데이트 날짜: 2016년 3월 17일*
+*마지막 업데이트 날짜: 2016년 3월 9일*
 
 Bluemix&reg;용 {{site.data.keyword.vpn_full}} 서비스는 IBM Bluemix 클라우드 환경 내의 IBM Containers(Docker 컨테이너)에 안전하게 액세스하려고 사용할 수 있습니다. 회사 데이터 센터의 확장으로서 IBM Bluemix 클라우드 환경을 사용할 수 있습니다. IBM VPN 서비스를 사용하여 SoftLayer 서버와 연결할 수도 있습니다.
 {:shortdesc}
@@ -25,7 +25,8 @@ Bluemix&reg;용 {{site.data.keyword.vpn_full}} 서비스는 IBM Bluemix 클라�
 
   1. **편집**을 선택하십시오.  
   2. 게이트웨이 이름을 지정하십시오.  
-  3. VPN 서비스를 사용하려는 컨테이너 또는 그룹을 선택하십시오.  
+  3. VPN 서비스를 사용하려는 컨테이너 또는 컨테이너 그룹을 선택하십시오.
+ **참고:** VPN 연결을 통해 컨테이너 및 컨테이너 그룹 개인용 서브넷에 액세스할 수 있도록 컨테이너 및 컨테이너 그룹 개인용 서브넷을 미리 선택합니다.
   4. **저장**을 선택하십시오.  
 
  기본 IKE 및 IPSec 정책을 사용하거나 사용자 정의 정책을 구성할 수 있습니다. 기본 정책을 사용하려면 4단계로 건너뛰십시오.
@@ -57,15 +58,15 @@ Bluemix&reg;용 {{site.data.keyword.vpn_full}} 서비스는 IBM Bluemix 클라�
 4. 데이터 센터 또는 SoftLayer 서버 VPN 게이트웨이와 IBM VPN 게이트웨이 간의 연결을 설정하는 세부사항을 제공하십시오.
 {: #site}  
 
-  1. **VPN 게이트웨이 어플라이언스** 탭을 선택하십시오.
-  2. **VPN 사이트 연결** 섹션에서 **새로 추가**를 선택하십시오.
+  1. **게이트웨이 어플라이언스** 탭을 선택하십시오.
+  2. **사이트 연결** 섹션에서 **연결 작성**을 선택하십시오.
   3. 다음 사이트 연결 세부사항을 지정하십시오.  
   	* **이름**: 연결 이름  
   	* **설명**: 연결에 대한 설명(선택사항)  
   	* **사전공유 키 문자열**: 인증에 사용될 사전공유 (시크릿) 키
   	* **관리 상태**: VPN 연결 상태. 드롭 다운에서 UP 또는 DOWN을 선택하십시오. 기본값: UP  
   	* **고객 게이트웨이 IP**: VPN 터널의 원격 엔드포인트 IP 주소  
-  	* **고객 서브넷**: CIDR 형식의 원격 서브넷 주소. 서브넷 세부사항을 저장하려면 더하기 부호를 선택하십시오.
+  	* **고객 서브넷**: CIDR 형식의 원격 서브넷 주소. 다른 서브넷을 추가하려면 더하기 부호를 선택하십시오.
   4. (선택사항) 다음 **고급 설정** 매개변수를 구성하십시오.  
   	* **IKE 정책**: IKE 정책을 선택하십시오.  
   	* **활성 상태 지속 간격**: 활성 상태 지속 간격(초). 구성된 간격으로 활성 상태 지속 메시지를 보내 피어의 활성 여부를 확인합니다. 기본값: 15. 범위: 5-86399
@@ -89,15 +90,18 @@ Bluemix&reg;용 {{site.data.keyword.vpn_full}} 서비스는 IBM Bluemix 클라�
  
 # 재링크
 ## 샘플 
+{: #samples}  
 * [사내 구축형 strongSwan 게이트웨이 구성 예](vpn_onpremises.html#strongswan){: new_window}
 * [사내 구축형 Vyatta 게이트웨이 구성 예](vpn_onpremises.html#vyatta){: new_window}
 * [사내 구축형 SoftLayer GaaS(Gateway Appliance Service) 구성 예](vpn_onpremises.html#gaas){: new_window}
 * [사내 구축형 Cisco ASA 구성 예](vpn_onpremises.html#cisco){: new_window}
 
-## api 
+## api  
+{: #api}  
 * [IBM VPN RESTful API](https://new-console.ng.bluemix.net/apidocs/101){: new_window}
 
-## 일반 
+## 일반  
+{: #general}  
 * [IBM VPN 명령행 인터페이스](../../cli/plugins/vpn/index.html){: new_window}
 * [IBM VPN FAQ](vpn_faq.html#vpn_faq){: new_window}
 * [IBM Bluemix 가격 책정 시트](https://console.{DomainName}/pricing/){: new_window}

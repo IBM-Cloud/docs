@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 23 May 2016*
+*Last updated: 3 June 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -39,101 +39,126 @@ If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or
 ## Notifications and event subscriptions
 {: #oc_eventsubscription}
 
-You can always know the status of your environment by checking the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area for the Administration page for events such as scheduled maintenance and upgrades. Incidents are reported on the Status page.
+You can always know the status of your environment by checking the Status page. As they occur, incidents are reported on the Status page. {{site.data.keyword.Bluemix_notm}} also sends notifications to the Notifications area on the Administration page for events such as scheduled or pending maintenance updates.
 
 ### Notifications
 
-You can view notifications from IBM for your local or dedicated environment to monitor the status of your environment. Review the following table for information about the different types of notifications and where the notifications are posted.
+You can view notifications for your local or dedicated environment to monitor the status of your environment. Review the following table for information about the different types of notifications and where each notification type is posted.
 
 *Table 2. Event types and notifications methods*
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
-| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications for the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **updates pending**. You can extend the notification capability by setting up an event subscription that integrates the maintenance update alerts from the Administration page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |
-| Critical incidents | You are alerted about critical incidents on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that integrates the incident alerts from the Status page with a web service of your choice to route the messages to a help desk email address or an SMS message to a phone number of your choice. |  
-| Status | You can view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.  |
+| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice. |
+| Critical incidents | You are alerted about critical incidents on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up an event subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
+| {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg), and then select **Status**.  |
 
 ### Setting up event subscriptions
 
-You can extend the functionality of the notifications that are sent to the Administration page and Status page by using event subscriptions that implement web hooks. Web hooks route your notifications directly to a destination of your choice, such as a help desk email address (by email) or a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the notification.
+You can extend the functionality of the notifications that are sent to the Administration page and the Status page by using event subscriptions to set up a custom email or use webhooks to integrate with a tool of your choice. If you select the webhooks option, your notifications are routed directly to a destination of your choice, such as a phone number (by SMS message). You can customize the type of notification, specifically maintenance updates or critical incident alerts, and the information that is included in the body of each notification.
 
-To use web hooks to set up a specific event subscription, complete the following steps:
+**Note**: Only users with the Admin permission (`ops.admin`) can set up event subscriptions.
 
-* For maintenance update notifications, go to **SYSTEM INFORMATION** &gt; *Number* **updates pending**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
-* For incident alert notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
+To access the **Event Subscriptions** page, complete the following steps:
+
+* For maintenance update notifications, go to **SYSTEM INFORMATION &gt; *Number* pending &gt; Subscriptions**.
+* For incident notifications, click the **Account and Support** icon ![Account and Support](../support/images/account_support.svg) &gt; **Status**, and then click the **Subscribe** icon ![Subscribe](images/icon_subscribe.svg).
 
 **Note**: You can access the event subscription page for both types of notifications by using either of the two methods described.
 
+To create an email or webhook subscription from the **Event Subscriptions** page, complete the following steps:
+
 1. Click **Add Subscription**.
+2. Fill in the event subscription form. For information about the fields on the form and the values to use in the payload section and the message body of the email template, review the following tables.
+3. After you complete the form, you can choose from the following options:
 
-2. Fill in the event subscription form. For information about the fields on the form and the values to use in the payload section, review the following tables:
+  * Click **Save** to save the subscription to your event subscription list. 
+  * Click **Save and Test** to save and test the notification. 
+  * Click **Save and Close** to save the subscription to your event subscription list, and return to the previous page.
 
-*Table 3. Event subscription form fields*
+*Table 3. Event subscription form fields for an email subscription*
 
 | **Field** | **Description** |
 |-----------------|-------------------|
-| Type | Select Web hook. |
-| Method | Select GET or POST. |
-| Event | Select to be subscribed to notifications for updates or incidents. |
-| URL | Enter the URL to hook to your web service. |
-| Description | Add a description for the event subscription that you are creating. |
+| Type | Select **Email**. |
+| Event | Select to be subscribed to notifications for an Update or Incident. |
+| Enabled | Select the option to enable the email notifications. Clear the selection to disable the email notification. Subscriptions are enabled by default. |
+| Subject | Enter the subject line for the email. This is a required field.  |
+| Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Payload section values](index.html#payload) table to identify which values you can use. Use basic HTML tags to structure your email. If you do not enter information in this section, you receive a notification that does not have any additional information. This is a required field. |
+| To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
+| Description | Add a unique description for the subscription that you are creating. |
+
+
+*Table 4. Event subscription form fields for a webhook subscription*
+
+| **Field** | **Description** |
+|-----------------|-------------------|
+| Type | Select **Webhook** |
+| Method | Select **GET** or **POST**. |
+| Event | Select to be subscribed to notifications for an Update or Incident. |
+| URL | Enter the URL to connect to your web service. |
+| Description | Add a unique description for the subscription that you are creating. |
 | User name | Enter your user name for your web service. If you don't want to use your personal credentials, you can set up a functional ID to use specifically with {{site.data.keyword.Bluemix_notm}}. |
 | Password | Enter the password for your web service. |
-| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the values used for the IBM notification. See the following table for the IBM values that you can use to populate your notification. If you do not enter information in this section, you receive a notification that does not have any additional information. |
+| Payload | If you selected the POST method, enter the properties that are specific to the web service that you are using paired with the pyaload values used for the IBM notification. See the [Payload section values](index.html#payload) table to identify which values you can use. If you do not enter information in this section, you receive a notification that does not have any additional information. |
 
-*Table 4. Payload section values*
+*Table 5. Payload section values*
+{: #payload}
 
 | **IBM value** | **Description** | **Event type** |
 |----------------|----------------|------------------------|
 | {{content.title}} | Message title |  Update and incident  |
-| {{status}} | Status of the update or incident. | Update and incident |
 | {{type}} | Update or incident | Update and incident | 
 | {{region}} | Affected region | Update and incident |
 | {{content.message}} | Message description |   Update and incident  |
 | {{content.severity}} | Severity rating | Incident |
 | {{content.category}} | Affected services | Incident |
 | {{content.subCategoryName}} | Affected components | Incident |
-| {{content.scheduleWindow}} | The scheduled date for the update | Update |
+| {{status}} | Status of the update | Update |
+| {{content.scheduleWindow.start}} | The scheduled start date for the update | Update |
+| {{content.scheduleWindow.end}} | The scheduled end time for the update | Update |
 | {{content.disruption}} | Affected components | Update |
 
-When your event subscription is saved, you receive notifications through the method that you set up through your web service. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
+When your event subscription is saved, you receive notifications through the method that you set up. Notifications still post on the Status page for incidents and in the Notifications area of the Administration page for maintenance updates.
 
-You can select any saved event subscription, and view the recent activity. You can click to expand any recent activity entry to view the details. Included in the details are the IBM values for the notification that you can use in the payload section. To see these values, expand the recent activity entry, expand **Event**, and then expand **Object**.
+You can select any saved event subscription, view the recent activity, or edit as you need. Click to expand any recent activity entry to view the history details.
 
 ## Maintenance updates
 {: #oc_schedulemaintenance}
 
-You can view scheduled and pending maintenance updates by going to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending** to access the **System Updates** page. 
+You can view scheduled and pending maintenance updates by going to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending** to access the **System Updates** page. 
 
-**Note**: See the following section for Setting preapproved maintenance windows to get started. These windows must be set in order for IBM to schedule maintenance for your environment.
+**Note**: See the following section for [Setting preapproved maintenance windows](index.html#preapprovedmaintenance) to get you started. These windows must be set in order for IBM to schedule maintenance for your environment.
 
 <dl>
 <dt>Non-disruptive updates</dt>
 <dd>A non-disruptive update does not affect your environment, your running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied during the preapproved, available maintenance windows that you set from the System Updates page.</dd>
 <dt>Disruptive updates</dt>
-<dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the allotted 21-day maintenance window. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional times and dates for IBM to choose from when scheduling the update.</dd>
+<dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the allotted 21-day maintenance window. You can select the suggested deployment date and time, the option for any of your preapproved windows, or you can open the calendar to select three specific dates and times for IBM to choose from when scheduling the update.</dd>
 </dl>
 
 
 ### Setting preapproved maintenance windows
 {: #preapprovedmaintenance}
 
-Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved times. A non-disruptive update does not affect your environment, running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied in the preapproved available maintenance windows that you set from the System Updates page.
+Before you start scheduling and approving updates, you must set your preapproved maintenance windows. Non-disruptive updates are scheduled during the preapproved window times. 
 
-You are required to set a minimum of 24 available hours for a week for a minimum of 3 days during that week. For example, you can set three 8 hour windows across three separate days, or you can set 6 hour windows across four separate days. To ensure the windows provide enough time for an update to be applied, each window much be a minimum of 4 hours in duration.
+You are required to set a minimum of 24 available hours for a week for a minimum of three days during each week. For example, you can set three 8-hour windows across three separate days, or you can set 6-hour windows across four separate days. To ensure that the windows provide enough time for an update to be applied, each window must be a minimum of four hours in duration.
 
-1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending &gt; Manage Availability**.
+**Note**: Only users with the Admin permission (`ops.admin`) can schedule and approve maintenance updates.
+
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Available Update Windows** section.
 3. Click **Add new** ![Add new](images/add-new.png).
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
 5. Click **Submit**.
-6. Repeat this process until you have met the minimum requirements for weekly windows.
+6. Repeat this process until you have met the minimum requirements for the weekly windows.
 
 ### Setting unavailable maintenance windows
 
 After you set your preapproved available maintenance windows, you can choose to set specific dates and times that your environment is not available for updates. For example, you might choose a high traffic weekend or holiday when you do not want any maintenance applied to ensure that your applications are available for your users.
 
-1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending &gt; Manage Availability**.
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Unavailable Update Windows** section.
 3. Click **Add new** ![Add new](images/add-new.png).
 4. Set your unavailable window by selecting the frequency, duration, and start time for the window.
@@ -146,35 +171,23 @@ After you set your preapproved maintenance windows, non-disruptive updates will 
 
 To view the details for a non-disruptive update, complete the following steps:
 
-1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**.
-2. Identify any update rows that have **Customer Scheduling Required** set to **No**.
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**.
+2. Identify any rows that have **Customer Scheduling Required** set to **No**.
 3. Select the row for that update to view the details.
 
-A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the alloted 21-day maintenance window. You can select the suggested deployment date and time that is based on your preapproved update windows, or you can select two additional time and dates for IBM to choose from when scheduling the update.
+A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the alloted 21-day maintenance window. You can select the suggested deployment date and time, the option for any of your preapproved windows, or you can open the calendar to select three specific dates and times for IBM to choose from when scheduling the update.
 
 For disruptive updates that do require your approval, complete the following steps:
 
-1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* updates pending**.
-2. Identify any update rows that have **Customer Scheduling Required** set to **Yes**.
+1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**.
+2. Identify any rows that have **Customer Scheduling Required** set to **Yes**.
 3. Select the row for that update to review the details for the update including the update description, suggested date and time for the update, the affected components, and duration for the update.
 4. Select **Schedule and Approve**.
-5. Choose from the following options: **Suggested date**, **Alternative dates**, or **All preapproved windows**.
-6. Select **Submit**. 
+5. Choose from the following options: **Suggested date**, **Specific dates**, or **Any preapproved window**. If you select **Specific dates**, you can open the calendar to select three options for IBM to choose from.
+6. Select **Submit** when you are finished. 
 
-Based on your selection, the update is applied during the suggested date that you accepted, during one of your preapproved windows, or one of the alternative dates and times. When the schedule date for your update is finalized by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page.
+Based on your selection, the update is scheduled for deployment during the suggested date that you accepted, during one of your preapproved windows, or one of the specific dates and times that you selected. When the update is scheduled for deployment by IBM, you see the scheduled date reflected in the details for the update on the **System Updates** page.
 
-### Setting up a calendar feed for scheduled updates
-
-From the System Updates page, you can choose to track your update schedule by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg) and downloading the `.ics` file to import your scheduled updates into a calendar app of your choice:
-
-<ol>
-<li>Open your calendar app.</li>
-<li>Download the calendar file by clicking the **Calendar** icon ![Calendar](images/icon_calendar.svg), and then import it to your calendar app by using the `.ics` file.</li>
-<li>Enter your credentials.</li>
-<li>View your scheduled updates.</li>
-</ol>
-
-You can also extend the notification functionality for the Administration page by using event subscriptions to integrate with a web service of your choice. To set up an event notification subscription for an update or incident, see [Event subscriptions and notifications](index.html#oc_eventsubscription).
 
 ## Viewing system information
 {: #oc_system}
@@ -313,7 +326,7 @@ icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-*Table 5. Security report list*
+*Table 6. Security report list*
 
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -667,7 +680,7 @@ field.
 
 Users can be assigned the following permissions:
 
-*Table 6. Permissions*
+*Table 7. Permissions*
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
@@ -1059,7 +1072,7 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
-*Table 7. Fields*
+*Table 8. Fields*
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1140,7 +1153,7 @@ Use the following API and code examples to update a service.
 ### Request
 {: #updaterequest}
 
-*Table 8. Fields*
+*Table 9. Fields*
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1212,7 +1225,7 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
-*Table 9. Parameter*
+*Table 10. Parameter*
 
 | **Name** | **Description** |
 |-----------------|-------------------|

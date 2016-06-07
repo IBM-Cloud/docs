@@ -14,7 +14,7 @@ copyright:
 #Supervisión y registro
 {: #monitoringandlogging}
 
-*Última actualización: 27 de enero de 2016*
+*Última actualización: 11 de mayo de 2016*
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
 {:shortdesc}
@@ -185,7 +185,7 @@ registros en tiempo real. </div>
 </li></ul>
 
 
-**Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](../troubleshoot/debugging.html#debug_runtime).
+**Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](../debug/index.html#debugging-runtime-errors).
 
 
 

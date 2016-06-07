@@ -136,6 +136,7 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 {: #rellinks}
 
 ## 一般
+{: #general}
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [開始使用 IBM Monitoring and Analytics for Bluemix 服務](../services/monana/index.html#gettingstartedtemplate){: new_window}

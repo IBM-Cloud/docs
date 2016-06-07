@@ -14,7 +14,7 @@ copyright:
 #監視及記載
 {: #monitoringandlogging}
 
-*前次更新：2016 年 1 月 27 日*
+*前次更新：2016 年 5 月 11 日*
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署。此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
 {:shortdesc}
@@ -181,7 +181,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 </li></ul>
 
 
-**附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對執行時期錯誤進行除錯](../troubleshoot/debugging.html#debug_runtime)。
+**附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對執行時期錯誤進行除錯](../debug/index.html#debugging-runtime-errors)。
 
 
 

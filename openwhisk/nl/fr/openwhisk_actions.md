@@ -513,7 +513,7 @@ qu'{{site.data.keyword.openwhisk_short}} utilisera.  Ensuite, l'image Docker té
 
   Le squelette est un modèle de conteneur Docker dans lequel vous pouvez injecter votre code sous la forme de fichiers binaires personnalisés.
 
-2. Configurez votre fichier binaire personnalisé dans le squelette blackbox. Le squelette inclut déjà un programme C que vous pouvez utiliser.
+2. Configurez votre fichier binaire personnalisé dans le squelette Docker. Le squelette inclut déjà un programme C que vous pouvez utiliser.
 
   ```
   cat ./dockerSkeleton/client/example.c

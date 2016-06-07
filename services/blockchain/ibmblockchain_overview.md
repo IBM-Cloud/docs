@@ -14,7 +14,7 @@ copyright:
 
 # About blockchain
 {: #ibmblockchain_overview}
-*Last updated: 28 April 2016*
+*Last updated: 2 June 2016*
 
 You can use blockchain to create private and secure digital assets, which can then be traded quickly and securely over permissioned networks.
 {:shortdesc}

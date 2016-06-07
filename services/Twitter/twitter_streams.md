@@ -25,7 +25,7 @@ Entry Plan users can create customizable tracks to filter messages collected in 
 <dt>Rule</dt>
 <dd>All the messages collected in this track match at least one of the rules associated with the track. You can add, edit, and delete rules within this track type.
 
-The complete [GNIP PowerTrack Rules syntax](http://support.gnip.com/apis/powertrack/rules.html) is supported within rule-based tracks. All queries must conform to the {{site.data.keyword.twittershort}} [Query language](#querylanguage "Query language").
+The complete [GNIP PowerTrack Rules syntax](http://support.gnip.com/apis/powertrack/rules.html) is supported within rule-based tracks. All queries must conform to the {{site.data.keyword.twittershort}} [Query language](twitter_rest_apis.html#querylanguage "Query language").
 </dd>
 
 <dt>Aggregated</dt>

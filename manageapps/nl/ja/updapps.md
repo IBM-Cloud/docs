@@ -14,7 +14,7 @@ copyright:
 #アプリの更新
 {: #updatingapps}
 
-*最終更新日: 2016 年 3 月 17 日*
+*最終更新日: 2016 年 5 月 9 日*
 
 
 cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
@@ -280,6 +280,10 @@ cf delete-route domain -n hostname -f
 
 
 # 関連リンク
-## 一般 
+{: #rellinks}
+
+## 関連リンク
+{: #general}
+
 * [Blue-Green デプロイメント](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}

@@ -14,7 +14,7 @@ copyright:
 #Despliegue de apps
 {: #deployingapps}
 
-*Última actualización: 17 de marzo de 2016*
+*Última actualización: 9 de mayo de 2016*
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -57,7 +57,7 @@ Si utiliza un paquete de compilación externo, debe especificar el URL del paque
   cf push
   ```
   
-  Para obtener más información sobre el paquete de compilación de Liberty, consulte el apartado [Liberty para Java](../starters/liberty/index.html#liberty).
+  Para obtener más información sobre el paquete de compilación de Liberty, consulte el apartado [Liberty para Java](../runtimes/liberty/index.html).
   
   * Para desplegar apps Java Tomcat en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
@@ -280,14 +280,14 @@ Las siguientes variables están definidas por el DEA:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -452,8 +452,12 @@ El archivo `.cfignore` contiene los nombres de los archivos y directorios que de
 tmp/
 ```
 
-# rellinks
-## general 
+# Enlaces relacionados
+{: #rellinks}
+
+## Enlaces relacionados
+{: #general}
+
 * [Despliegue con manifiestos de app](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Iniciación a cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

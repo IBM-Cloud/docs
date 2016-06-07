@@ -11,11 +11,12 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Managing chain code with the blockchain monitor
+# Managing chaincode with the blockchain monitor
 {: #blockchain_dashboard_monitor}
-*Last updated: 28 April 2016*
+*Last updated: 2 June 2016*
 
-Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincodes. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincodes. {:shortdesc}
+Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincodes. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincodes.
+{:shortdesc}
 
 ## Monitor tabs
 {: #blockchain_dashboard_monitor_tabs}
@@ -33,7 +34,7 @@ The following tabs are displayed on your dashboard:
 Figure 1.
 
 
-**Live Logs tab**:  View real-time data for your validating peers and Certificate Authority. The log in Figure 2 show you the results of all transactions on the network. Use this information to investigate and troubleshoot chaincode that fails to properly execute:
+**Live Logs tab**:  View real-time data for your validating peers and Certificate Authority. The logs in Figure 2 show you the results of all transactions on the network. Use this information to investigate and troubleshoot chaincode that fails to properly execute:
 
 ![](images/IBC_BMX_Monitor_LiveLogs.png)
 Figure 2.

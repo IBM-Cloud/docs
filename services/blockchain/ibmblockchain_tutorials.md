@@ -13,15 +13,16 @@ copyright:
 
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
-*Last updated: 28 April 2016*
+*Last updated: 2 June 2016*
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
 {:shortdesc}
 
-You can immediately deploy the Marbles or Commercial Paper demos to see chaincode applications in action.  Keep reading to explore the Hello Chaincode tutorial.
+You can immediately deploy the Marbles, Commercial Paper or Car Lease demos to see chaincode applications in action.  Keep reading to explore the Hello Chaincode tutorial.
 
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git) **Marbles**
-- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git) **Commercial Paper**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
+- [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**
 
 ## Using the Hello Chaincode tutorial
 {: #hellocc}
@@ -44,15 +45,16 @@ Chaincode is a piece of code that lets you interact with a network's shared ledg
 #### Setting up the environment
 1. Download and install Golang for your operating system at [GoLang](https://golang.org/dl/).
 2. Setting your GOPATH
-	- If you jump right to step 3, you might encounter an error similar to this: `$GOPATH must not be set to $GOROOT`.  The $GOPATH is simply a path within your **environment variables** where your go code and future projects will exist.  The $GOPATH must be set to get, build, and install packages outside the standard Go tree.  As a result, this path needs to be unique from the $GOROOT path - where your original go tree resides.  Not too tricky, just create a directory and point your $GOPATH there.
-	- Here's an example for a machine running windows.
-		- Create a workspace for your project.  C:\Users\ADMIN\Documents\GoProjects (Note that we named our workspace "GoProjects").
+	- If you jump right to step 3, you might encounter an error similar to this: `$GOPATH must not be set to $GOROOT`.  The $GOPATH is simply a path within your **environment variables** where your Go code and future projects will exist.  The $GOPATH must be set to get, build, and install packages outside the standard Go tree.  As a result, this path needs to be unique from the $GOROOT path - where your original go tree resides.  It's not too tricky; just create a directory and point your $GOPATH there.
+	- Here's an example for a machine running Windows.
+		- Create a workspace for your project:
+		- C:\Users\ADMIN\Documents\GoProjects (Note that we named our workspace "GoProjects").
 		- Click the **Start** menu and execute a search for "system environment variables."
 		- Click **Edit the system environment variables**.
 		- Make sure you are on the **Advanced** tab, then click **Environment variables**.
 		- Now look through your system variables and find GOPATH and GOROOT.  If you don't see a GOPATH, simply click **New** and create one.  
-		- Again, GOROOT and GOPATH are the two paths that need to be unique.  Your GOROOT is auto-generated when you install Go.  It should be C:\Go\
-		- So all you need to do now is point your GOPATH to the directory you created.  So our path for **Environment Variable: GOPATH** would equal **C:\Users\ADMIN\Documents\GoProjects**.  
+		- Again, GOROOT and GOPATH are the two paths that need to be unique.  Your GOROOT is auto-generated when you install Go.  It should be C:\Go\.
+		- All you need to do now is point your GOPATH to the directory you created.  Our path for **Environment Variable: GOPATH** would equal **C:\Users\ADMIN\Documents\GoProjects**.  
 		- If you're still confused there are some additional resources.  Try typing `go help gopath` into your command terminal, or visit the [Go Documentation](https://golang.org/doc/install).
 3. Add the Hyperledger shim code to your Go path by opening a command prompt or terminal and entering the following:
 
@@ -65,7 +67,7 @@ The {{site.data.keyword.blockchain}} service currently requires chaincode to be 
 Therefore, you must register a GitHub account and set up Git locally on your computer. Go to [set up git](https://help.github.com/articles/set-up-git/) for more information.  
 1. Visit [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) and fork this repo.  
 2. Now clone your fork to your $GOPATH.  
-3. Notice that in this repo there are two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build. 
+3. Notice that in this repo there are two different sets of chaincode:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) - the chaincode you will start building from, and [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) - the chaincode that you will ultimately build.
 4. Make sure that it builds in your local environment:
 - Open a terminal or command prompt.
 - Browse to the folder that contains `chaincode_start.go` and enter:
@@ -77,17 +79,17 @@ Therefore, you must register a GitHub account and set up Git locally on your com
 
 
 #### Implementing the chaincode interface
-The first thing you need to do is implement the chaincode shim interface in your golang code.
+The first thing you need to do is implement the chaincode shim interface in your Golang code.
 The three main functions are **Init**, **Invoke**, and **Query**.
 All three functions have the same prototype; they take in a function name and an array of strings.
 The main difference between the functions is when they will be called.
 We will be building up to a working chaincode to create generic assets.
 
 ### Dependencies
-The `import` statement lists a few dependencies that you will need for your chaincode to build successfully.
+The `import` statement lists a few dependencies that you will need for your chaincode to build successfully:
 - `fmt` - contains `Println` for debugging/logging.
 - `errors` - standard go error format.
-- `github.com/hyperledger/fabric/core/chaincode/shim` - the code that interfaces your golang code with a peer.
+- `github.com/hyperledger/fabric/core/chaincode/shim` - the code that interfaces your Golang code with a peer.
 
 ### Passing values
 
@@ -213,10 +215,10 @@ func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte,
 This `read` function is using the complement to `PutState` called `GetState`.
 This shim function just takes one string argument.
 The argument is the name of the key to retrieve.
-Next, this function returns the value as an array of bytes back to `Query`, who in turn sends it back to the REST handler.
+Next, this function returns the value as an array of bytes back to `Query`, which in turn sends it back to the REST handler.
 
 #### Main()
-Finally, you need to create a short `main` function that will execute when each peer deploys their instance of the chaincode.
+Finally, you need to create a short `main` function that will execute when each peer deploys its instance of the chaincode.
 It simply starts the chaincode and registers it with the peer.
 You don’t need to add any code for this function.  Both chaincode_start.go and chaincode_finished.go have a `main` function that lives at the top of the file.  The function looks like this:
 
@@ -230,11 +232,11 @@ func main() {
 ```
 
 ### Interacting with your first chaincode
-The fastest way to test your chaincode is to use the rest interface on your peers.
+The fastest way to test your chaincode is to use the REST interface on your peers.
 There is a Swagger UI in the dashboard for your service instance that allows you to experiment with deploying chaincode without needing to write any additional code.
 
 #### Swagger API
-The first step is to find the API swagger page.
+The first step is to find the Swagger API page:
 
 1. Log in to [Bluemix](https://console.ng.bluemix.net/login)
 1. You probably landed on the dashboard, but double check the top nav bar.  Click the **Dashboard** tab if you are not already there.
@@ -243,16 +245,16 @@ The first step is to find the API swagger page.
 1. Now you should see a white page with the words "Welcome to the IBM Blockchain..." and there should be a teal **LAUNCH** button on the right. Click it.
 1. You are on the monitor page and you should see two tables, though the bottom one may be empty.
 	- Noteworthy information on the network tab:
-		- **Peer Logs** will be found in the top table. Find the row for **peer 1** and then click the file-like icon in the last row.
+		- **Peer Logs** will be found in the top table. Find the row for **peer 1** and then click the file icon in the last row.
 			- It should have opened a new window. Congratulations you found your peer logs!
 			- In addition to this static view there are live **streaming peer logs** in the **View Logs** tab near the top of the page.
-		- **ChainCode Logs** will be found in the bottom table. There is one row for every chaincode, and they are labeled using the same chaincode hash that was returned to you when it was deployed. Find the chaincode ID you want, and then select the peer. Finally click the file-like icon.
+		- **ChainCode Logs** will be found in the bottom table. There is one row for each chaincode, and they are labeled using the same chaincode hash that was returned to you when it was deployed. Find the chaincode ID you want, and then select the peer. Finally click the file icon.
 			- It should have opened a new window. Congratulations you've found your peer's chaincode logs!
 	- **Swagger Tab** is the one labeled **APIs**. Click it to see the API interactive documentation.
-		- You are now on your swagger api page.
+		- You are now on your Swagger API page.
 1. You should be familiar with this entire process if you already created a service instance back on **Getting Started**.
 ### Implementing secure enrollment
-Calls to the `/chaincode` endpoint of the rest interface require a secure context ID.
+Calls to the `/chaincode` endpoint of the REST interface require a secure context ID.
 This means that you must pass in a registered enrollID from the service credentials list in order for most REST calls to be accepted.
 - Click the link **+ Network's Enroll IDs** to expand a list of enrollIDs and their secrets for your network.
 - Open a notepad and copy a set of credentials.  You will need them later.
@@ -270,11 +272,11 @@ The response body should look like:
 Now that you have enrollID set up, you can use this ID when deploying, invoking, and querying chaincode in the subsequent steps.
 
 ### Deploying the chaincode
-In order to deploy chaincode through the rest interface, you will need to have the chaincode stored in a public git repository.
+In order to deploy chaincode through the REST interface, you will need to have the chaincode stored in a public git repository.
 When you send a deploy request to a peer, you send it the url to your chaincode repository, as well as the parameters necessary to initialize the chaincode.
 
 **Before you deploy** the code, make sure it builds locally!
-- Open terminal/command prompt.
+- Open a terminal/command prompt.
 - Browse to the folder that contains `chaincode_start.go` and type:
 
 	```
@@ -377,7 +379,7 @@ Change the value of `hello_world` to "go away".
 		"id": 3
 	}
 	```
-	
+
 The response should look like:
 
 ![Invoke Example](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG)
@@ -389,16 +391,16 @@ To test if it's stuck, just re-run the query above, and you should get:
 That’s all it takes to write basic chaincode.
 
 
-## Requirements for Marbles and Commercial Paper demos 
+## Requirements for Marbles, Commercial Paper, and Car Lease demos
 {: #requirements}
 
-The following prerequisites are necessary to run the Marbles and Commercial Paper applications:
+The following prerequisites are necessary to run the Marbles, Commercial Paper, and Car Lease applications:
 
 - Bluemix ID https://console.ng.bluemix.net/ (needed to create your IBM Blockchain network).
-- Node.js 0.12.0+ and npm v2+ (only needed if you want to run the app locally, npm comes with node.js).
+- Node.js 0.12.0+ and npm v2+ (only needed if you want to run the app locally, npm comes with Node.js).
 - Node.js + express experience. Marbles is a very simple blockchain app but it's still a fairly involved node app. You should be comfortable with node and the express module.
-- GoLang Environment (needed only to build your own chaincode, not needed if you just run the application as is).
-- You have a conceptual undersanding of the terms 'chaincode', 'ledger', and 'peer' in a blockchain context. See the [Hyperledger Project Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md) for more information on blockchain terminology. 
+- Golang Environment (needed only to build your own chaincode, not needed if you just run the application as-is).
+- You have a conceptual understanding of the terms 'chaincode', 'ledger', and 'peer' in a blockchain context. See the [Hyperledger Project Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md) for more information on blockchain terminology.
 
 ## Using the Marbles demo
 {: #marbles}
@@ -412,17 +414,22 @@ Explore the [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/m
 
 The Commercial Paper (CP) application demonstrates how a commercial paper trading network might be implemented by using the IBM Blockchain service. The CP demo explores a permissioned blockchain network in which participants are assigned roles and corresponding levels of access.  Visit the [Commercial Paper README](https://github.com/IBM-Blockchain/cp-web#readme) to learn more about the components of this demo or deploy immediately to Bluemix and see the trading network in action. [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)
 
+## Using the Car Lease demo
+{: #carlease}
+
+The Car Lease application demonstrates the lifecycle of a vehicle from creation to manufacture, through a series of owners, and finishing with the vehicle being scrapped. The demo makes use of Node.js for the server side programming, with Golang used for the chaincode running on the IBM Blockchain network. The demo has two chaincodes, the first defines the rules about what can and can't happen to a vehicle (similar to a v5c), and the second stores a log of what has happened to a vehicle during its lifetime. Both chaincodes use JSON objects to store their data.  Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy immediately to Bluemix.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)
+
 ## Using Node SDK
 {: #nodesdk}
 
-Use the [Node.js SDK](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) for easier interaction with IBM Blockchain chaincode.  Pay specific attention the `ibc.load()` function.  This is a function that wraps a typical startup using a standard IBM Blockchain Network.  This allows you to integrate your network, registry and chaincodes with the bluemix network.  
+Use the [Node.js SDK](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) for easier interaction with IBM Blockchain chaincode.  Pay specific attention to the `ibc.load()` function.  This is a function that wraps a typical startup using a standard IBM Blockchain Network.  This allows you to integrate your network, registry and chaincodes with the Bluemix network.  
 
 ## Using a web application
 {: #appjs}
 
 View the source code for the [app.js](https://github.com/IBM-Blockchain/marbles/blob/master/app.js) to understand the interaction between the web application, SDK, and chaincode.  You can use this code as a template when developing your own web app.  
 
-One interesting dynamic is the interaction between the web application and the JavaScript SDK.  Your application interacts with a peer on the network through a REST HTTP call. The SDK then abstracts the details of the REST call away, and allows you to use dot notation to call GoLang functions.  The code snippet below shows where the JavaScript SDK is a required variable in your application.  
+One interesting dynamic is the interaction between the web application and the JavaScript SDK.  Your application interacts with a peer on the network through a REST HTTP call. The SDK then abstracts the details of the REST call away, and allows you to use dot notation to call GoLang functions.  The code snippet below shows where the JavaScript SDK is a required variable in your application:
 
 ```javascript
 // =========================================

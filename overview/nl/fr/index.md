@@ -16,7 +16,7 @@ copyright:
 # Présentation de {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-*Dernière mise à jour : 18 janvier 2016*
+*Dernière mise à jour : 9 mai 2016*
 
 {{site.data.keyword.Bluemix}} est la plateforme de cloud ouverte d'{{site.data.keyword.IBM}} qui offre aux développeurs
 d'applications mobiles et Web un accès aux logiciels {{site.data.keyword.IBM_notm}} proposant des fonctions d'intégration, de sécurité, de
@@ -492,7 +492,7 @@ de générer une application mobile riche.
 Tout d'abord, votre développeur d'intégration crée l'application de back end mobile dans {{site.data.keyword.Bluemix_notm}}. Il fait appel au conteneur boilerplate Mobile Cloud utilisant le contexte d'exécution Node.js qu'il connaît le mieux.
 
 Puis, en utilisant le service Cloud Integration dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, il expose une API via un connecteur
-sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son  interface de programme d'application et la base de données. Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
+sécurisé. Le développeur d'application télécharge le connecteur sécurisé et l'installe sur site, afin d'activer la communication sécurisée entre son interface de programme d'application et la base de données. Après avoir créé le noeud final de base de données, il peut consulter tous les schémas et extraire les tables qu'il veut exposer à l'application en tant
 qu'API.
 
 Il ajoute ensuite le service Push pour distribuer des notifications mobiles aux clients intéressés. Il ajoute également un service de partenaire commercial pour écrire un tweet lorsqu'un nouvel enregistrement client est créé avec une interface de programme d'application Twitter.
@@ -522,8 +522,12 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 
 *Tableau 2. Langues nationales prises en charge et codes de langue*
 
-# rellinks
-## general 
+# Liens connexes
+{: #rellinks}
+
+## Liens connexes
+{: #general}
+
 * [Configuration requise pour {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs)
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](../whatsnew/index.html)
 * [Problèmes {{site.data.keyword.Bluemix_notm}} connus](https://developer.ibm.com/bluemix/support/#issues)

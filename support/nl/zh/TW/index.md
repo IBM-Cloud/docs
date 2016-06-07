@@ -12,15 +12,15 @@ copyright:
 # 取得客戶支援
 {: #getting-customer-support}
 
-*前次更新：2016 年 4 月 19 日*
+*前次更新：2016 年 5 月 11 日*
 
 
-如果遇到 {{site.data.keyword.Bluemix}} 的問題，您有數個支援選項，例如透過 Stack Overflow 取得協助或開啟支援問題單。
+如果您遇到 {{site.data.keyword.Bluemix}} 問題，則有數個支援選項，例如透過討論區取得協助，或開啟支援問題單。
 {:shortdesc}
 
 ## 取得協助
 {: #getting-help}
-若要取得協助，您可以移至「帳戶和支援」，也可以直接前往 Stack Overflow，在這裡您可以搜尋資訊或張貼問題。
+若要開啟支援問題單，或尋找其他協助選項，您可以移至「帳戶和支援」。您也可以直接移至 Stack Overflow 或 developerWorks (dW) Answers 討論區，以搜尋資訊或張貼問題。
 {:shortdesc}
 
 ### 使用帳戶和支援
@@ -32,15 +32,20 @@ copyright:
 
 
 ### 發問
-無論是直接存取還是透過「帳戶和支援」存取，Stack Overflow 都是一個網站，可充當讓使用者發問及回答問題的平台。{{site.data.keyword.Bluemix_notm}} 開發與支援團隊在 Stack Overflow 上很活躍，並且會追蹤以 **bluemix** 標示的問題。
+{: #asking-a-question}
 
-若要在 Stack Overflow 問問題，請選擇下列選項：
-  * 從「帳戶和支援」，按一下**取得協助**。在顯示的頁面上，在搜尋欄位鍵入您的問題以尋找答案。如果未傳回預期的答案，您可以按一下**貼文到 STACK OVERFLOW**，以張貼問題。
+Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜尋答案。如果您找不到現有答案，請提出新的問題。 
 
-  * 直接前往 [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}。
+  * 移至 [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}，以提出有關使用 Bluemix 平台和服務來開發應用程式的技術問題。
+  * 移至 [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}，以提出有關 {{site.data.keyword.Bluemix_notm}} 供應項目以及入門指示的問題。
 
-當您在 Stack Overflow 建立問題時，請對您的問題新增一個 **bluemix** 標籤，以確保 {{site.data.keyword.Bluemix_notm}} 開發與支援團隊可以看到它。
+完成下列步驟，也可以直接利用「帳戶和支援」在 Stack Overflow 中提出問題：
+  1. 從「帳戶和支援」，按一下**取得協助**。 
+  2. 在顯示的頁面上，在搜尋欄位鍵入您的問題以尋找答案。 
+  3. 如果未傳回預期的答案，請按一下**貼文到 Stack Overflow**，來張貼您的問題。
 
+{{site.data.keyword.Bluemix_notm}} 開發與支援團隊會主動監視 Stack Overflow 及 dW Answers，並且會追蹤標示有 **bluemix** 的問題。當您在任一討論區建立問題時，請對您的問題新增一個 **bluemix** 標籤，以確保 {{site.data.keyword.Bluemix_notm}} 開發與支援團隊可以看到它。
+ 
 
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} 狀態
@@ -306,6 +311,11 @@ IBM 會定期將意見調查傳送給 Bluemix 客戶，以取得他們對最近�
 {: #rellinks}
 
 ## 一般
-  * [Bluemix 支援入口網站](https://support.ibmcloud.com){: new_window}
-  * [安裝 cf 指令工具](../starters/install_cli.html){: new_window}
+{: #general}
+
+  * [Bluemix 支援入口網站](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [安裝 cf 指令工具](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  

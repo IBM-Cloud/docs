@@ -14,7 +14,7 @@ copyright:
 #Implementando apps
 {: #deployingapps}
 
-*Última atualização: 17 de março de 2016*
+*Última atualização: 9 de maio de 2016*
 
 É possível implementar aplicativos no
 {{site.data.keyword.Bluemix}}
@@ -101,7 +101,7 @@ a partir do prompt de comandos.
   Para obter mais informações sobre
 o Liberty Buildpack, consulte
 [Liberty
-for Java](../starters/liberty/index.html#liberty).
+for Java](../runtimes/liberty/index.html).
   
   * Para implementar aplicativos Java Tomcat no {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
   
@@ -355,14 +355,14 @@ em que o aplicativo atingiu seu estado atual e assim por diante. Por exemplo:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainNameng.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -552,8 +552,12 @@ não serão transferidos por upload para o {{site.data.keyword.Bluemix_notm}}.
 tmp/
 ```
 
-# rellinks
-## general 
+# Links Relacionados
+{: #rellinks}
+
+## Links Relacionados
+{: #general}
+
 * [Implementando com manifests do aplicativo](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [Gerador de manifest CF](http://cfmanigen.mybluemix.net/){:new_window}
 * [Introdução ao cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}

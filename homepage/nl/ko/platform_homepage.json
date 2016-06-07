@@ -1,0 +1,46 @@
+
+	"id": "docs_homepage",
+	"descriptionTitle": "문서 홈 페이지 플랫폼 섹션",
+	"items": [{
+		"title": "CLI 및 개발 도구",
+		"description": "액세스 도구(예: 통합 명령행 인터페이스 및 CLI 플러그인)입니다.",
+		"img": "homepage/images/cli.svg",
+		"href": "cli/index.html"
+	}, {
+		"title": "앱 관리",
+		"description": "Bluemix 사용자 인터페이스의 대시보드를 사용하여 앱과 서비스를 보고 관리할 수 있습니다.",
+		"img": "homepage/images/manage_apps.svg",
+		"href": "manageapps/mngapps.html"
+	}, {
+		"title": "계정 관리",
+		"description": "사용자 액세스를 포함하여 조직과 영역을 관리합니다.",
+		"img": "homepage/images/admin.svg",
+		"href": "admin/index.html"
+	}, {
+		"title": "모니터링 및 로깅",
+		"description": "애플리케이션 사용량 및 데이터 플로우를 따라 가면 배치에 대해 더 잘 이해할 수 있습니다.",
+		"img": "homepage/images/monitor_log.svg",
+		"href": "monitor_log/monitoringandlogging.html"
+	}, {
+		"title": "가격 책정",
+		"description": "계산기를 사용하여 비용을 추정하고 사용량 세부사항 보기를 사용하여 실제 비용을 확인합니다.",
+		"img": "homepage/images/pricing.svg",
+		"href": "pricing/index.html"
+	}, {
+		"title": "문제점 해결",
+		"description": "플랫폼에서 문제점이 발생하는 경우 해당 문제점 해결 태스크를 사용하여 수행할 단계를 판별합니다.",
+		"img": "homepage/images/troubleshoot.svg",
+		"href": "troubleshoot/troubleshoot.html"
+	}, {
+		"title": "플랫폼 보안",
+		"description": "Bluemix가 기능, 인프라, 운영 및 실제 보안을 제공하는 방법을 학습합니다.",
+		"img": "homepage/images/security.svg",
+		"href": "security/index.html"
+	}, {
+		"title": "하이브리드",
+		"description": "공용, 전용 및 사내 구축형 배치 모델에서 서비스로 전달됩니다.",
+		"img": "homepage/images/hybrid.svg",
+		"href": "hybrid/index.html"
+	}]
+}
+

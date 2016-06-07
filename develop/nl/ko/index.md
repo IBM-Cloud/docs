@@ -43,9 +43,7 @@ Agile 플랜에 사용되고, {{site.data.keyword.deliverypipeline}} 서비스�
 {{site.data.keyword.jazzhub_short}}는 소스 제어용 Git 호스팅 및 코드를 편집, 관리 및 배치할 수 있는 Web IDE도
 제공합니다. 앱에서 앱 개요 페이지의 오른쪽 상단에 있는 **Git 추가** 링크를 클릭하여
 Git 호스팅을 설정할 수 있습니다. 그런 다음, **코드 편집**을 클릭하여 Web IDE에서 앱 코드를
-편집할 수 있습니다. Web IDE 쉘에서 컨텐츠 지원을 제공하는 cf 명령을 실행할 수 있습니다. 예를 들어
-다음 명령을 입력하여 모든 Cloud Foundry 명령 목록을
-가져올 수 있습니다.  
+편집할 수 있습니다. Web IDE 쉘에서 컨텐츠 지원을 제공하는 cf 명령을 실행할 수 있습니다. 예를 들어 다음 명령을 입력하여 모든 Cloud Foundry 명령 목록을 가져올 수 있습니다.  
 ```
 help cfo
 ```
