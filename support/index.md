@@ -12,7 +12,7 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 11 May 2016*
+*Last updated: 7 June 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through a forum, or opening a support ticket.
@@ -36,7 +36,7 @@ Click **Get help** to find answers to your questions. On the page that is displa
 
 The Stack Overflow and dW Answers forums both provide a wide variety of searchable answers to your Bluemix questions. If you don't find an existing answer, ask a new question. 
 
-  * Go to [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} to ask technical questions about developing apps with the Bluemix platform and services.
+  * Go to [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} to ask technical questions about developing apps with the Bluemix platform and services.
   * Go to [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} to ask questions about the {{site.data.keyword.Bluemix_notm}} offering, and about getting started instructions.
 
 You can also ask a question in Stack Overflow directly from Account and Support by completing the following steps:
@@ -315,5 +315,5 @@ IBM periodically sends surveys to Bluemix customers to obtain their feedback on 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [Installing the cf command tool](../starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   
