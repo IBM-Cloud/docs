@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 2 June 2016*
+*Last updated: 8 June 2016*
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
@@ -81,6 +81,22 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
+## Adding Deployment Risk Analytics
+{: #dra}
+
+Deployment Risk Analytics collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is halted, preventing risks from being released. You can use Deployment Risk Analytics as a safety net for your continuous delivery environment or as a way to implement and improve quality standards over time. 
+
+ **Tip**: This tool integration is pre-configured. It does not require any configuration parameters and you cannot reconfigure it.
+ 
+Add the Deployment Risk Analytics tool integration to maintain and improve the quality of your code in Bluemix by monitoring your deployments to identify risks before they are released:
+
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
+1. Click the add button (+).
+1. In the Tool Integrations section, click **Deployment Risk Analytics**. 
+1. Click **Create Integration**.
+1. Click the tile for Deployment Risk Analytics to walk through the steps to get started with this tool integration: create criteria, connect the criteria to the pipeline, and then run the pipeline. 
+
+To learn more, see [Deployment Risk Analytics](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
 {: #webide}
