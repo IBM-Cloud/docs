@@ -12,7 +12,7 @@ copyright:
 # Getting customer support
 {: #getting-customer-support}
 
-*Last updated: 7 June 2016*
+*Last updated: 8 June 2016*
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through a forum, or opening a support ticket.
@@ -179,6 +179,8 @@ If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer, support is p
 <li>If you don't have an IBM ID, you can contact someone in your organization who does have one, or work with your IBM representative.
 <p>**Note**: At your request, a list of users in your org who can serve as contacts for support tickets can be displayed on the **Support** page in the {{site.data.keyword.Bluemix_notm}} user interface in your Dedicated environment.</p></li>
 </ul>
+
+If you are a {{site.data.keyword.Bluemix_notm}} Dedicated customer in China, you can request support from the [UNISYS Service Management IBM Bluemix page](https://chinabluemix.itsm.unisysedge.cn){: new_window}. In addition, customers in China can get free support at [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Local

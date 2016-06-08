@@ -16,7 +16,7 @@ copyright:
 # Hybrid
 {: #hybrid}
 
-*Last updated: 31 May 2016*
+*Last updated: 8 June 2016*
 {: .last-updated}
 
 With public, dedicated, and local integrated deployment models, {{site.data.keyword.Bluemix_notm}} represents a new way to experience cloud. {{site.data.keyword.Bluemix_notm}} has cloud deployments that fit your needs whether you are a small business that plans to scale, or a large enterprise that requires additional isolation. You can develop in a cloud without borders, where you can connect your private services to the public {{site.data.keyword.Bluemix_notm}} services available from IBM. And, you and your team can use existing data, systems, and processes along with the SaaS tools available in {{site.data.keyword.Bluemix_notm}}.
@@ -29,6 +29,8 @@ At its core, {{site.data.keyword.Bluemix_notm}} is an environment for you to dev
 ## Dedicated
 
 {{site.data.keyword.Bluemix_notm}} Dedicated is a private cloud with physically isolated hardware in an IBM SoftLayer data center. Single-tenant, and provisioned on a combination of bare metal and virtual servers, your {{site.data.keyword.Bluemix_notm}} environment is created to fit your needs. And, with the syndicated catalog, you can power your apps with a combination of dedicated compute resources and services as well as capabilities made available through catalog syndication. Learn more about [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html).
+
+**Note:** Information that is related to SoftLayer for {{site.data.keyword.Bluemix}} Dedicated is not applicable in China. 
 
 ## Local
 
