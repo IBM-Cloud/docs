@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -10,7 +10,7 @@ Copyright :
 
 Push Notifications est un service que vous pouvez utiliser pour envoyer des notifications à des périphériques iOS ou Android. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et de périphériques à l'aide de balises. Vous pouvez administrer les périphériques, les
 balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos
-applications client.  
+applications client. Pour plus d'informations sur le service dédié Push, voir [Services dédiés](../../dedicated/index.html). 
 
 
 ## Processus du service Push Notifications
@@ -24,12 +24,12 @@ mobiles inscrits.
 ![Présentation de Push](images/overview.jpg)
 
 
-**Applications mobiles**
+###Applications mobiles
 
 Au démarrage, les applications mobiles s'inscrivent et s'abonnent elles-mêmes au service Push Notifications pour
 recevoir des notifications.
 
-**Applications de back end **
+###Applications de back end
 
 Les applications de back end peuvent être sur site ou dans un cloud public. Les
 applications de back end utilisent le service Push Notifications pour envoyer des
@@ -37,18 +37,18 @@ notifications qui dépendent
 du contexte aux utilisateurs mobiles. Elles n'ont pas besoin d'assurer la maintenance et la gestion des périphériques mobiles et des
 informations utilisateur pour l'envoi des notifications push. A la place, elle peuvent utiliser le service Push Notifications.
 
-**Propriétaire d'application de back end**
+###Propriétaire d'application de back end
 
 Il s'agit du rôle qui a créé l'application de back end mobile comportant une instance du service Push Notifications. Cette personne configure et définit le service Push Notifications pour
 l'adapter aux applications de back end qui exploitent le service Push Notifications et
 aux applications mobiles ciblées par les notifications push.
 
-**Service Push Notifications**
+###Service Push Notification
 
-Le service Push Notifications gère toutes les informations liées aux périphériques enregistrés pour recevoir des notifications. Avec ce service, les détails de la technologie permettant d'envoyer des notifications à ces
+Le service Push Notification gère toutes les informations liées aux périphériques qui s'enregistrent pour recevoir des notifications. Avec ce service, les détails de la technologie permettant d'envoyer des notifications à ces
 plateformes mobiles hétérogènes restent transparents pour les applications.
 
-**Passerelles**
+###Passerelles
 
 Il s'agit de services de cloud propres à une plateforme de périphérique mobile, comme Google Cloud Messaging (GCM) ou le service de notifications Push
 Apple (APNs) que le service Push Notifications utilise pour envoyer des notifications aux applications mobiles.
@@ -56,13 +56,13 @@ Apple (APNs) que le service Push Notifications utilise pour envoyer des notifica
 ## Types de notification Push
 {: #overview-push-types}
 
-**Diffusion**
+###Diffusion
 
 Lorsqu'une application mobile s'enregistre elle-même auprès du service Push Notifications, elle peut commencer à recevoir des diffusions. Les notifications de diffusion sont des messages de notification envoyés à tous les périphériques sur lesquels l'application est installée
 et configurée pour le service Push Notifications. Les notifications de diffusion sont activées par défaut dans toute application activée pour les notifications push. Les applications activées pour le service Push Notifications possèdent un abonnement prédéfini à la balise Push.ALL qui est utilisée par le serveur pour diffuser des messages de notification à tous les périphériques. Pour envoyer une notification de diffusion qui utilise l'API REST Push, assurez-vous que la "cible" est un fichier
 JSON vide lors de l'envoi à la ressource de message.
 
-**Notifications basées sur les balises**
+###Notifications basées sur les balises
 
 Les notifications basées sur les balises sont des messages de notification qui sont envoyés à tous les périphériques abonnés à une balise
 particulière. Elles permettent la segmentation des notifications en fonction de domaines ou de rubriques. Les destinataires des notifications peuvent
@@ -72,11 +72,11 @@ abonnés à une balise particulière. Vous devez d'abord créer les balises pour
 notifications en fonction d'une balise. Pour envoyer une notification en fonction d'une balise qui utilise l'API REST, vérifiez que les éléments
 "tagNames" sont fournis lors de l'envoi à la ressource de message.
 
-**Notifications Unicast**
+###Notifications Unicast
 
 Les notifications Unicast sont des messages de notification qui sont envoyés à un périphérique spécifique. Elles ne requièrent pas de configuration supplémentaire et sont activées par défaut lorsque l'application est activée pour les notifications push. Pour envoyer une notification Unicast qui utilise l'API REST, veillez à ce que les ID de périphérique soient fournis lors de l'envoi à une ressource de message.
 
-**Notifications basées sur les plateformes**
+###Notifications en fonction de la plateforme
 
 Les notifications peuvent être ciblées afin de viser une plateforme de périphérique
 particulière. Par exemple, une notification peut être envoyée aux utilisateurs Android seulement. Pour envoyer une notification en fonction de la

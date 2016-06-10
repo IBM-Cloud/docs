@@ -1,7 +1,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 # Configuración de credenciales para un proveedor de notificaciones

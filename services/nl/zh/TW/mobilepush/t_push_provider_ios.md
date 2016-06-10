@@ -66,7 +66,9 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 1. 移至 [Apple Developer](https://developer.apple.com)，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
 2. 在 **Identifiers** 區域中，按一下 **App IDs**。
 3. 從您的應用程式 ID 清單中，選取新建立的「應用程式 ID」，然後選取 **Settings**。
-4. 在 **Push Notifications** 區域中，依序建立「開發 SSL」憑證及「正式作業 SSL」憑證。![Push Notification SSL 憑證](images/certificate_createssl.jpg)
+4. 在 **Push Notifications** 區域中，依序建立「開發 SSL」憑證及「正式作業 SSL」憑證。
+ 
+	![Push Notification SSL 憑證](images/certificate_createssl.jpg)
 
 	即會顯示「關於建立憑證簽署要求」畫面。
 
@@ -91,16 +93,15 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 	![匯出憑證及金鑰](images/keychain_export_key.jpg)
 
-17. 在**另存新檔**中，提供有意義的憑證名稱，讓您之後可以進行識別（例如 **sandbox_apns.p12_certifcate** 或 **production_apns.p12**），然後按一下**儲存**。
+17. 在**另存新檔**欄位中，提供有意義的憑證名稱，讓您之後可以進行識別（例如 **sandbox_apns.p12_certifcate** 或 **production_apns.p12**），然後按一下**儲存**。
 
    	![匯出憑證及金鑰](images/certificate_p12v2.jpg)
 
-
-18. 在**輸入密碼**畫面中，輸入密碼以保護匯出的項目，然後按一下**確定**。您可以使用此密碼，稍後在 Push 儀表板上配置 APNs 設定。
+18. 在**輸入密碼**欄位中，輸入密碼以保護匯出的項目，然後按一下**確定**。您可以使用此密碼，稍後在 Push 儀表板上配置 APNs 設定。
 
 	![匯出憑證及金鑰](images/export_p12.jpg)
-19. 在 **Key Access.app** 中，若想要從金鑰鏈畫面中匯出金鑰，請輸入 Mac 的管理密碼，以容許系統匯出這些項目，然後選取**一律容許**。在桌面上會產生 .p12 憑證。
-20. 後續步驟。[建立開發及配送佈建設定檔](#create-push-credentials-dev-profile)
+19. **Key Access.app** 會提示您從**金鑰鏈**畫面匯出金鑰。請輸入您的管理密碼，以便 Mac 容許您的系統匯出這些項目，然後選取**一律容許**選項。在桌面上會產生 .p12 憑證。
+
 
 ##建立開發佈建設定檔
 {: #create-push-credentials-dev-profile}
@@ -119,7 +120,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 	**附註**：配置開發佈建設定檔時，請選取下列選項：
 	* **iOS 應用程式開發**
 	* **對於 iOS 及 watchOS 應用程式**
-3. 後續步驟。[建立市集配送佈建設定檔。](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##建立市集配送佈建設定檔
@@ -129,8 +130,6 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 1. 移至 [Apple Developer](https://developer.apple.com) 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
 2. 按兩下下載的佈建設定檔，以將它安裝至 Xcode。
-3. 後續步驟。[在 Push 儀表板上設定 APNs](#create-push-credentials-apns-dashboard)。
-
 
 ##在 Push Notifications 儀表板上設定 APNs
 {: #create-push-credentials-apns-dashboard}
@@ -164,4 +163,4 @@ APNs 所需的憑證是 .p12 憑證，其中包含私密金鑰以及建置和發
 	![設定推送通知](images/credential_screen.jpg)
 3. 在**密碼**欄位中，輸入與 **.p12** 憑證檔案相關聯的密碼，然後按一下**儲存**。
 使用有效的密碼順利上傳憑證之後，您就可以開始傳送通知。
-1. 後續步驟。[啟用 iOS 的通知](c_ios_enable.html)。
+

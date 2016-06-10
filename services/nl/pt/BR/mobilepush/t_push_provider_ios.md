@@ -111,6 +111,7 @@ criado e selecione **Configurações**.
 Notifications**, crie um
 certificado SSL de desenvolvimento e depois um certificado SSL de
 produção.
+ 
 	![Certificados SSL de notificação push](images/certificate_createssl.jpg)
 
 	A tela Sobre como criar uma solicitação de assinatura de certificado é exibida.
@@ -167,23 +168,27 @@ informações pessoais (formato .p12).
 
 	![Exportar certificado e chaves](images/keychain_export_key.jpg)
 
-17. Em **Salvar como**, dê ao certificado um nome significativo para que você possa identificá-lo mais tarde, por exemplo,
-**sandbox_apns.p12_certifcate** ou **production_apns.p12**, e clique em **Salvar**.
+17. No campo **Salvar como**, dê um nome
+significativo ao certificado para que você possa identificá-lo mais
+tarde, por exemplo **sandbox_apns.p12_certifcate**
+ou **production_apns.p12** e, em seguida, clique
+em **Salvar**.
 
    	![Exportar certificado e
 chaves](images/certificate_p12v2.jpg)
 
-
-18. Na tela **Inserir uma senha**, insira uma
-senha para proteger os itens exportados, depois clique em **OK**. Você usa essa senha para configurar posteriormente as
+18. No campo **Inserir uma senha**, insira
+uma senha para proteger os itens exportados e clique em **OK**. Você usa essa senha para configurar posteriormente as
 definições de APNs no painel Push.
 
 	![Exportar certificado e chaves](images/export_p12.jpg)
-19. Em **Key Access.app**, deseja exportar a chave da tela de
-keychain, insira sua senha administrativa do Mac para permitir que o sistema exporte
-esses itens e, em seguida, selecione **Sempre permitir**. Um certificado .p12
+19. O **Key Access.app** solicita que
+você exporte sua chave da tela **Keychain**. Insira
+sua senha administrativa para o seu Mac para permitir que seu sistema
+exporte esses itens e selecione a opção **Sempre
+permitir**. Um certificado .p12
 é gerado em sua área de trabalho.
-20. Próxima etapa[Crie um arquivo de perfil de fornecimento de distribuição e de desenvolvimento](#create-push-credentials-dev-profile)
+
 
 ##Criando um perfil de fornecimento de desenvolvimento
 {: #create-push-credentials-dev-profile}
@@ -217,7 +222,7 @@ desenvolvimento** e siga as instruções para criar um perfil de desenvolvimento
 desenvolvimento, selecione as opções a seguir:
 	* **iOS App Development**
 	* **Para apps iOS e watchOS **
-3. Próxima etapa. [Crie um perfil de fornecimento de distribuição de armazenamento.](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##Criando um perfil de fornecimento de distribuição de
@@ -232,8 +237,6 @@ Developer](https://developer.apple.com), clique em Centro de membros e selecione
 **Certificados, identificadores & perfis**.
 2. Dê um clique duplo no perfil de fornecimento
 transferido por download para instalá-lo em Xcode.
-3. Próxima etapa. [Configure APNS no painel Push.](#create-push-credentials-apns-dashboard)
-
 
 ##Configurando APNs no painel Notificação push
 {: #create-push-credentials-apns-dashboard}
@@ -290,5 +293,4 @@ associada ao arquivo de certificado **.p12**; em seguida, clique em
 Após o
 upload bem-sucedido dos certificados com uma senha válida, é possível iniciar
 o envio de notificações.
-1. Próximas etapas. [Ative
-notificações para iOS](c_ios_enable.html).
+

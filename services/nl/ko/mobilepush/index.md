@@ -14,7 +14,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobilepushfull}} 서비스는 {{site.data.keyword.Bluemix_notm}}에 호스트된 Cloud 자원에 액세스하는 모바일 애플리케이션에 모니터링 서비스를 제공하여 모바일 앱, 모바일 사용자 및 모바일 디바이스의 상태, 동작 및 컨텍스트를 측정합니다. 클라이언트측 로그와 사용 데이터가 자동으로 수집되어 요청 시 Mobile Analytics 서비스로 전송됩니다. 개발자와 관리자는 {{site.data.keyword.mobileanalytics_short}} 서비스 대시보드를 사용하여 클라이언트 SDK에서 수집한 데이터를 볼 수 있습니다.
+
 {:shortdesc}
 
 푸시 알림 서비스는 iOS 및 Android 플랫폼을 대상으로 하는 모바일 푸시 알림을 전송 및 관리하는 통합된 플랫폼을 제공합니다. 이 서비스는 애플리케이션 사용자와 해당 디바이스 및 디바이스 플랫폼과의 맵핑을 관리하고 푸시 알림의 디스패치를 처리합니다. 이 서비스를 사용하면 브로드캐스트, 유니캐스트(디바이스 ID 기반) 및 태그(또는 주제) 푸시 알림을 모바일 애플리케이션 사용자에게 보낼 수 있습니다. 또한 SDK 및 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. 

@@ -14,7 +14,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-Il servizio {{site.data.keyword.mobilepushfull}} calcola lo stato, il comportamento e il contesto delle tue applicazioni mobili, utenti mobili e dispositivi mobili fornendo dei servizi di monitoraggio per la applicazioni mobili che accedono alle risorse cloud ospitate su {{site.data.keyword.Bluemix_notm}}. I log del lato client e i dati di utilizzo vengono raccolti automaticamente e inviati al servizio Mobile Analytics su richiesta. Gli sviluppatori e gli amministratori possono utilizzare il dashboard del servizio {{site.data.keyword.mobileanalytics_short}} per visualizzare i dati raccolti dall'SDK client.
+
 {:shortdesc}
 
 Il servizio Push Notifications fornisce una piattaforma unificata per inviare e gestire notifiche di push mobili mirate a piattaforme iOS e Android. Questo servizio gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi e
@@ -44,7 +44,7 @@ Questa sezione descrive come configurare notifiche di push di base. Quando utili
 * [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
 * [iOS SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
 
-## Riferimento API
+## Guida di riferimento API
 {: #api}
 * [Push API Reference (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [IMFPush API reference iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}

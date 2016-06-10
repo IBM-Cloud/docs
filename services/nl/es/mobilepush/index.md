@@ -1,7 +1,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
@@ -14,7 +14,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-El servicio {{site.data.keyword.mobilepushfull}} mide el estado, el comportamiento y el contexto de las aplicaciones móviles, los usuarios móviles y los dispositivos móviles proporcionando servicios de supervisión para aplicaciones móviles que acceden a los recursos de nube alojados en {{site.data.keyword.Bluemix_notm}}. Los registros de lado del cliente y los datos de uso se recopilan automáticamente y se envían al servicio de Mobile Analytics a petición. Los desarrolladores y administradores pueden utilizar el panel de instrumentos del servicio de {{site.data.keyword.mobileanalytics_short}} para ver datos recopilados por el SDK del cliente.
+
 {:shortdesc}
 
 El servicio de Notificaciones push proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles que están pensadas para plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de la aplicación a sus dispositivos, plataforma de dispositivo,

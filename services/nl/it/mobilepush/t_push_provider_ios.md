@@ -86,6 +86,7 @@ Crea un certificato SSL di sviluppo e distribuzione.
                             **Settings**.
 4. Nell'area **Push Notifications**, crea un certificato SSL di sviluppo e quindi
                         un certificato SSL di produzione.
+ 
 	![Certificati SSL Push Notification](images/certificate_createssl.jpg)
 
 	Viene visualizzata la schermata About Creating a Certificate Signing Request.
@@ -120,21 +121,17 @@ Crea un certificato SSL di sviluppo e distribuzione.
 
 	![Esporta certificato e chiavi](images/keychain_export_key.jpg)
 
-17. In **Save As**, dai al certificato un nome significativo in modo da poterlo
-                        identificare successivamente, ad esempio **apns_sandbox.certificato_p12** o
-                            **apns_produzione.p12** e fai quindi clic su **Save**. 
+17. Nel campo **Save As**, dai al certificato un nome significativo in modo da poterlo identificare successivamente, ad esempio **apns_sandbox.certificato_p12** o **apns_produzione.p12** e fai quindi clic su **Save**.
 
    	![Esporta certificato e chiavi](images/certificate_p12v2.jpg)
 
-
-18. Nella schermata **Enter a password**, immetti una password per proteggere gli elementi
-                        esportati e fai quindi clic su **OK**. Utilizzi questa password per configurare successivamente le tue impostazioni APNS sul dashboard
+18. Nel campo **Enter a password**, immetti una password per proteggere gli elementi esportati e fai quindi clic su **OK**. Utilizzi questa password per configurare successivamente le tue impostazioni APNS sul dashboard
                             Push.
 
 	![Esporta certificato e chiavi](images/export_p12.jpg)
-19. Nella schermata **Key Access.app** wants to export key from your keychain, immetti la tua password amministrativa per il tuo Mac per consentire al tuo sistema di esportare questi elementi e seleziona quindi **Always Allow**. Sul tuo desktop viene
+19. **Key Access.app** ti chiede di esportare la tua chiave dalla schermata **Keychain**. Immetti la tua password amministrativa per il tuo Mac per consentire al tuo sistema di esportare questi elementi e seleziona quindi l'opzione **Always Allow**. Sul tuo desktop viene
                         generato un certificato .p12.
-20. Prossimo passo[Crea un file del profilo di provisioning di sviluppo e distribuzione](#create-push-credentials-dev-profile)
+
 
 ##Creazione di profilo di provisioning di sviluppo
 {: #create-push-credentials-dev-profile}
@@ -160,8 +157,7 @@ Crea un profilo di provisioning di sviluppo.
 	**Nota**: quando configuri un profilo di provisioning di sviluppo, seleziona le seguenti opzioni:
 	* **iOS App Development**
 	* **For iOS and watchOS apps **
-3. Fase successiva. [Crea un profilo di
-                            provisioning di distribuzione di archivio](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##Creazione di un profilo di provisioning di distribuzione di archivio
@@ -171,8 +167,6 @@ Utilizza il profilo di provisioning di archivio per inoltrare la tua applicazion
 
 1. Vai al portale [Apple Developer](https://developer.apple.com), fai clic su **Member Center** e seleziona **Certificates, Identifiers & Profiles**.
 2. Fai doppio clic sul file di provisioning scaricato per installarlo in Xcode.
-3. Fase successiva. [Configura APNS sul dashboard Push.](#create-push-credentials-apns-dashboard).
-
 
 ##Configurazione APNS sul dashboard Notifica di push
 {: #create-push-credentials-apns-dashboard}
@@ -216,4 +210,4 @@ Configura APNS sul dashboard Push.
 3. Nel campo **Password**, immetti la password associata al file di certificato **.p12** e quindi fai clic su **Save**.
 Dopo che i certificati sono
                      stati caricati correttamente con una password valida, puoi iniziare a inviare notifiche.
-1. Fasi successive. [Abilita le notifiche per iOS](c_ios_enable.html).
+

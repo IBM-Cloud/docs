@@ -85,7 +85,9 @@ Bluemix は、その証明書を使用して APNs との SSL 接続を確立し�
 2. **「Identifiers (ID)」**エリアで、**「App IDs (アプリ ID)」**をクリックします。
 3. アプリ ID のリストから、新規に作成したアプリ ID を選択し、次に、**「Settings (設定)」**を選択します。
 4. **「Push Notifications (プッシュ通知)」**エリアで、開発 SSL 証明書を作成し、次に実動 SSL 証明書を作成します。
-![プッシュ通知 SSL 証明書](images/certificate_createssl.jpg)
+
+ 
+	![プッシュ通知 SSL 証明書](images/certificate_createssl.jpg)
 
 	「About Creating a Certificate a Signing Request (証明書署名要求の作成について)」画面が表示されます。
 
@@ -113,17 +115,17 @@ Bluemix は、その証明書を使用して APNs との SSL 接続を確立し�
 
 	![証明書とキーのエクスポート](images/keychain_export_key.jpg)
 
-17. **「別名で保存」**で、後で識別できるように証明書に意味のある名前 (例えば、**「sandbox_apns.p12_certifcate」**または**「production_apns.p12」** など) を付け、**「保存」**をクリックします。
+17. **「別名で保存」**フィールドで、後で識別できるように証明書に意味のある名前 (例えば、**「sandbox_apns.p12_certifcate」**や**「production_apns.p12」** など) を付け、**「保存」**をクリックします。
+
    	![証明書とキーのエクスポート](images/certificate_p12v2.jpg)
 
-
-18. **「パスワードの入力」**画面で、書き出した項目を保護するためのパスワードを入力し、**「OK」**をクリックします。このパスワードは、後で Push ダッシュボードで APNs 設定を構成するために使用します。
+18. **「パスワードの入力」**フィールドに、エクスポートする項目を保護するためのパスワードを入力し、**「OK」**をクリックします。このパスワードは、後で Push ダッシュボードで APNs 設定を構成するために使用します。
 
 
 	![証明書とキーのエクスポート](images/export_p12.jpg)
-19. 「**Key Access.app** が、キーチェーンの鍵の書き出しを必要としています (Key Access.app wants to export key from your keychain)」画面で、ご使用の Mac の管理パスワードを入力して、システムによるそれらの項目の書き出しを許可し、**「常に許可」**を選択します。.p12 証明書がデスクトップ上に生成されます。
+19. **「Key Access.app」**により、**「Keychain」**画面から鍵のエクスポートを求めるプロンプトが出されます。Mac の管理パスワードを入力して、システムによるそれらの項目のエクスポートを許可し、**「常に許可」**オプションを選択します。.p12 証明書がデスクトップ上に生成されます。
 
-20. 次のステップ[開発および配布プロビジョニング・プロファイルの作成](#create-push-credentials-dev-profile)を行います。
+
 
 ##開発プロビジョニング・プロファイルの作成
 {: #create-push-credentials-dev-profile}
@@ -146,8 +148,10 @@ Xcode は、開発プロビジョニング・プロファイルを使用して�
 	**注**: 開発プロビジョン・プロファイルを構成する際に、以下のオプションを選択します。
 	* **「iOS App Development (iOS アプリ開発)」**
 	* **「For iOS and watchOS apps (iOS アプリおよび watchOS アプリ用)」 **
-3. 次のステップ。[ストア配布プロビジョニング・プロファイルの作成](#create-push-credentials-apns-distribute_profile)を行います。
-                    ##ストア配布プロビジョニング・プロファイルの作成
+
+
+
+##ストア配布プロビジョニング・プロファイルの作成
 {: #create-push-credentials-apns-distribute_profile}
 
 ストア・プロビジョニング・プロファイルを使用して、ご使用のアプリを配布用にアプリ・ストアにサブミットします。
@@ -156,8 +160,6 @@ Xcode は、開発プロビジョニング・プロファイルを使用して�
 1. [「Apple Developer (Apple 開発者)」](https://developer.apple.com)ポータルに移動し、**「Member Center (メンバー・センター)」**をクリックして、**「Certificates, Identifiers & Profiles (証明書、ID、およびプロファイル)」**を選択します。
 2. ダウンロードしたプロビジョニング・プロファイルをダブルクリックして、Xcode にインストールします。
                     
-3. 次のステップ。[Push ダッシュボードで APNS をセットアップします](#create-push-credentials-apns-dashboard)。
-
 
 ##Push Notification ダッシュボードでの APNs のセットアップ
 {: #create-push-credentials-apns-dashboard}
@@ -194,5 +196,4 @@ Push ダッシュボードで APNs をセットアップします。
 
 	![プッシュ通知の設定](images/credential_screen.jpg)
 3. **「パスワード」**フィールドに、**.p12** 証明書ファイルに関連付けられているパスワードを入力し、次に**「保存」**をクリックします。有効なパスワードを使用して証明書のアップロードに成功したら、通知の送信を開始できます。
-1. 次のステップ。[iOS の通知の使用可能化](c_ios_enable.html)を行います。
 

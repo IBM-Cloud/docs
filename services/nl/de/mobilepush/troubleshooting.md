@@ -8,11 +8,18 @@ copyright:
 # Fehlerbehebung
 {: #errors}
 
+In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern bei Push Notifications.
 
-## Interner Serverfehler aufgetreten
-Wenn Sie vor November 2015 eine Push-Instanz erstellt haben und der folgende Fehler auftritt, löschen Sie die Push-Instanz und erstellen Sie eine neue.  
 
-"Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)"
+### Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)
 
-Anmerkung:  Wenn Sie die Push-Instanz löschen, werden Ihre Tags nicht beibehalten.
+####Erläuterung
+
+**Erläuterung** Dieser Fehler kann auftreten, wenn Sie eine Push-Instanz vor November 2015 erstellt haben.  
+
+####Benutzeraktion
+
+**Aktion**: Um dieses Problem zu lösen, müssen Sie die Push-Instanz löschen und eine neue erstellen.
+
+**Anmerkung:** Wenn Sie die Push-Instanz löschen, werden Ihre Tags nicht beibehalten.
 

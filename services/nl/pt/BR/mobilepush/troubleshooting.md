@@ -8,11 +8,19 @@ copyright:
 # Resolução de problemas
 {: #errors}
 
+Use essa seção como um guia para solucionar problemas de
+problemas de notificação por push comuns.
 
-## Ocorreu um erro do servidor interno
-Se você criou uma instância de push antes de novembro de 2015 e encontrar o erro a seguir, exclua a instância de push e crie uma nova.  
 
-"Ocorreu um erro do servidor interno. Contate o administrador. (Código de erro interno: PUSHD102E)"
+### Ocorreu um erro do servidor interno. Contate o administrador. (Código de erro interno: PUSHD102E)
 
-Nota: quando você exclui a instância de push, suas tags não são preservadas.
+####Explicação
+
+**Explicação** esse erro poderá ocorrer se você tiver criado uma instância de push antes de novembro de 2015.  
+
+####RESPOSTA DO USUÁRIO
+
+**Ação**:  para resolver esse problema, exclua a instância de push e crie uma nova.
+
+**Observação:** quando você excluir a instância de push, as tags não serão preservadas.
 

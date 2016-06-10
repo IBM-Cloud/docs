@@ -18,7 +18,7 @@ depois configure o Push
 
 A chave de API é armazenada com segurança e usada pelo Serviço de notificação push
 para se conectar ao servidor GCM e o ID do emissor (número de projeto) é usado pelo
-Android SDK no lado do cliente.
+Android SDK no lado do cliente. Para obter mais informações sobre o ID do emissor, consulte em [Mensagem do Google Cloud](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Obtenha uma conta do Google Development em [Console do Google Dev](https://console.developers.google.com/start){: new_window}. Para obter mais informações sobre o Google Cloud Messaging
 (GCM), consulte [Criando

@@ -17,7 +17,12 @@ Managing notifications
  <!--CLM NEW NAVIGATION : -->
  <topicref href="index.html" linking="none" navtitle="Push Notifications" format="html" scope="peer">
 <topicref href="c_overview_push.html" navtitle="Produktinformation" linking="sourceonly" format="html"
-outputclass="subsection" scope="peer"/>
+outputclass="subsection" scope="peer">
+<topicref href="c_overview_push.html#overview_push_process" format="html"
+navtitle="Prozess für Push Notifications Service" scope="peer"/>
+<topicref href="c_overview_push.html#overview-push-types" format="html"
+navtitle="Typen von Push-Benachrichtigungen" scope="peer"/>
+</topicref>
 <topicref outputclass="subsection" navtitle="Benachrichtigungsprovider konfigurieren" linking="normal"
 href="t__main_push_config_provider.html" format="html" chunk="to-content" scope="peer">
 <topicref href="t_push_provider_ios.html" format="html" navtitle="Apple Push-Benachrichtigungen"
@@ -27,73 +32,84 @@ scope="peer"/>
 </topicref>
 <topicref outputclass="subsection" navtitle="Push Notifications aktivieren" href="c_enable_push.html"
 format="html" scope="peer">
-<topicref href="c_android_enable.html" chunk="to-content" format="html" navtitle="Android"
-scope="peer">
-<topicref href="t_android_install_sdk.html" format="html"
+<topicref href="c_android_enable.html" format="html" navtitle="Android" scope="peer">
+<topicref href="c_android_enable.html#android_install" format="html"
 navtitle="Client-Push-SDK mit Gradle installieren" scope="peer"/>
-<topicref href="t_android_initialize.html" format="html"
+<topicref href="c_android_enable.html#android_initialize" format="html"
 navtitle="Push-SDK für Android-Apps initialisieren" scope="peer"/>
-<topicref href="t_android_register.html" format="html" navtitle="Android-Geräte registrieren"
-scope="peer"/>
-<topicref href="t_android_receive.html" format="html"
+<topicref href="c_android_enable.html#android_register" format="html"
+navtitle="Android-Geräte registrieren" scope="peer"/>
+<topicref href="c_android_enable.html#android_receive" format="html"
 navtitle="Push-Benachrichtigungen in Android-Geräten empfangen" scope="peer"/>
-<topicref href="t_send_push_notifications.html" format="html" navtitle="Einfache Benachrichtigungen senden"
+<topicref href="c_android_enable.html#send" format="html" navtitle="Einfache Benachrichtigungen senden"
 scope="peer"/>
-<topicref href="next_steps_tags.html" format="html" navtitle="Nächste Schritte" scope="peer"/>
+<topicref href="c_android_enable.html#next_steps_tags" format="html" navtitle="Nächste Schritte"
+scope="peer"/>
 </topicref>
 <topicref href="c_cordova_enable.html" chunk="to-content" format="html" navtitle="Cordova"
 scope="peer">
-<topicref href="t_cordova_install.html" format="html" navtitle="Cordova Push-Plug-in installieren"
+<topicref href="c_cordova_enable.html#cordova_install" format="html"
+navtitle="Cordova Push-Plug-in installieren" scope="peer"/>
+<topicref href="c_cordova_enable.html#cordova_initialize" format="html"
+navtitle="Cordova-Plug-in" scope="peer"/>
+<topicref href="c_cordova_enable.html#cordova_register" format="html" navtitle="Geräte registrieren"
 scope="peer"/>
-<topicref href="t_cordova_initialize.html" format="html" navtitle="Cordova-Plug-in"
-scope="peer"/>
-<topicref href="t_cordova_register.html" format="html" navtitle="Geräte registrieren" scope="peer"/>
-<topicref href="t_cordova_receive.html" format="html"
+<topicref href="c_cordova_enable.html#cordova_receive" format="html"
 navtitle="Push-Benachrichtigungen in Geräten empfangen" scope="peer"/>
-<topicref href="t_send_push_notifications.html" format="html" navtitle="Einfache Benachrichtigungen senden"
+<topicref href="c_cordova_enable.html#push-send-notifications" format="html"
+navtitle="Einfache Benachrichtigungen senden" scope="peer"/>
+<topicref href="c_cordova_enable.html#next_steps_tags" format="html" navtitle="Nächste Schritte"
 scope="peer"/>
-<topicref href="next_steps_tags.html" format="html" navtitle="Nächste Schritte" scope="peer"/>
 </topicref>
 <topicref chunk="to-content" href="c_ios_enable.html" navtitle="iOS" format="html" scope="peer">
-<topicref href="t_enable_ios_notifications_install.html" format="html"
+<topicref href="c_ios_enable.html#enable-push-ios-notifications-install" format="html"
 navtitle="Bluemix Mobile Services-Client-SDK mithilfe von CocoaPods installieren" scope="peer"/>
-<topicref href="t_enable_ios_notifications_initialize.html" format="html"
+<topicref href="c_ios_enable.html#enable-push-ios-notifications-initialize" format="html"
 navtitle="Push-SDK für iOS-Apps initialisieren" scope="peer"/>
-<topicref href="t_enable_ios_notifications_register.html" format="html"
+<topicref href="c_ios_enable.html#enable-push-ios-notifications-register" format="html"
 navtitle="iOS-Anwendungen und -Geräte registrieren" scope="peer"/>
-<topicref href="t_enable-ios-notifications-receive.html"
+<topicref href="c_ios_enable.html#enable-push-ios-notifications-receiving"
 navtitle="Push-Benachrichtigungen in iOS-Geräten empfangen" scope="peer"/>
-<topicref href="t_send_push_notifications.html" format="html"
-navtitle="Einfache Push-Benachrichtigungen senden" scope="peer"/>
-<topicref href="next_steps_tags.html" format="html" navtitle="Nächste Schritte" scope="peer"/>
+<topicref href="c_ios_enable.html#send" format="html" navtitle="Einfache Push-Benachrichtigungen senden"
+scope="peer"/>
+<topicref href="c_ios_enable.html#next_steps_tags" format="html" navtitle="Nächste Schritte" scope="peer"/>
 </topicref>
 </topicref>
 <topicref href="c_tag_basednotifications.html" outputclass="subsection" chunk="to-content"
 format="html" navtitle="Tagbasierte Benachrichtigungen aktivieren" scope="peer">
-<topicref href="t_manage_tags.html" format="html" navtitle="Tags verwalten" scope="peer"/>
-<topicref href="t_get_tags.html" format="html" navtitle="Tags abrufen" scope="peer"/>
-<topicref href="t_subscribe_tags.html" format="html" navtitle="Tags subskribieren und die Subskribierung aufheben"
-scope="peer"/>
-<topicref href="t_use_tags.html" format="html" navtitle="Tagbasierte Benachrichtigungen verwenden" scope="peer"
-/>
+<topicref href="t_manage_tags.html#manage_tags" format="html" navtitle="Tags verwalten" scope="peer"/>
+<topicref href="t_manage_tags.html#get_tags" format="html" navtitle="Tags abrufen" scope="peer"/>
+<topicref href="t_manage_tags.html#Subscribe_tags" format="html"
+navtitle="Tags subskribieren und die Subskribierung aufheben" scope="peer"/>
+<topicref href="t_manage_tags.html#using_tags" format="html"
+navtitle="Tagbasierte Benachrichtigungen verwenden" scope="peer"/>
 </topicref>
-<topicref href="c_advance_notifications.html" outputclass="subsection" chunk="to-content"
+<topicref href="t_advance_badge_sound_payload.html" outputclass="subsection" chunk="to-content"
 navtitle="Erweiterte Benachrichtigungen" format="html" scope="peer">
-<topicref href="t_advance_badge_sound_payload.html"
-navtitle="iOS Badge, Audio und Nutzdaten konfigurieren" format="html" scope="peer"/>
-<topicref href="t_holding_notifications_android.html" navtitle="Benachrichtigungen für Android blockieren"
-format="html" scope="peer"/>
-<topicref href="t_enable_actionable_notifications_ios.html"
+<topicref href="t_advance_badge_sound_payload.html#badge-sound-payload"
+navtitle="Audio, Nutzdaten und iOS-Badge konfigurieren" format="html" scope="peer"/>
+<topicref href="t_advance_badge_sound_payload.html#hold-notifications-android"
+navtitle="Android-Benachrichtigungen blockieren" format="html" scope="peer"/>
+<topicref href="t_advance_badge_sound_payload.html#enable-actionable-notifications-ios"
 navtitle="Umsetzbare iOS-Benachrichtigungen aktivieren" format="html" scope="peer"/>
-<topicref href="t_handle_actionable_notifications_ios.html"
-navtitle="Umsetzbare Benachrichtigungen verarbeiten" format="html" scope="peer"/>
+<topicref href="t_advance_badge_sound_payload.html#actionable-notifications"
+navtitle="Umsetzbare iOS-Benachrichtigungen verarbeiten" format="html" scope="peer"/>
 </topicref>
 
 <topicref navtitle="REST-APIs verwenden" href="t_restapi.html" format="html" outputclass="subsection"
-scope="peer" linking="sourceonly"
-><!--hide silent notifications because it is not in the dashboard--></topicref>
+scope="peer" linking="sourceonly">
+<!--hide silent notifications because it is not in the dashboard-->
+<topicref href="t_restapi.html##push-api-rest-accept" format="html"
+navtitle="Sprachenheader akzeptieren" scope="peer"/>
+<topicref href="t_restapi.html#push-api-rest-secret" format="html" navtitle="appSecret" scope="peer"/>
+<topicref href="t_restapi.html#push-api-rest-filters" format="html" navtitle="Filter für Push-REST-APIs"
+scope="peer"/>
+</topicref>
 <topicref href="troubleshooting.html" navtitle="Fehlerbehebung" format="html"
+outputclass="subsection" scope="peer" linking="sourceonly">
+<topicref href="troubleshooting.html#errors" navtitle="Interner Fehlercode: PUSHD102E" format="html"
 outputclass="subsection" scope="peer" linking="sourceonly"/>
+</topicref>
 </topicref>
 </map>
 

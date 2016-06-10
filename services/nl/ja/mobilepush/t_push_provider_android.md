@@ -14,7 +14,7 @@ Google Cloud Messaging (GCM) 資格情報を取得し、Push ダッシュボー�
 
 ##送信側 ID と API キーの取得
 
-API キーは、Push Notification Service が安全に保管し、GCM サーバーに接続するために使用します。送信側 ID (プロジェクト番号) は、クライアント側の Android SDK が使用します。
+API キーは、Push Notification Service が安全に保管し、GCM サーバーに接続するために使用します。送信側 ID (プロジェクト番号) は、クライアント側の Android SDK が使用します。送信側 ID について詳しくは、[Google Cloud Message](https://developers.google.com/cloud-messaging/gcm#arch) を参照してください。
 
 1. Google 開発アカウントを [Google Dev Console](https://console.developers.google.com/start){: new_window} で取得します。Google Cloud Messaging (GCM) について詳しくは、[「Creating a Google API Project (Google API プロジェクトの作成)」](https://developers.google.com/console/help/new/){: new_window} を参照してください。
 

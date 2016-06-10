@@ -2,7 +2,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
@@ -90,6 +90,7 @@ Crear un certificado SSL de desarrollo y distribución.
                             **Configuración**.
 4. En el área **Notificaciones Push**, cree un certificado SSL de desarrollo
                         y, a continuación, un certificado SSL de producción.
+ 
 	![Certificados SSL de notificación Push](images/certificate_createssl.jpg)
 
 	Se mostrará la pantalla Acerca de la creación de una solicitud de firma de certificado.
@@ -127,22 +128,19 @@ Crear un certificado SSL de desarrollo y distribución.
 
 	![Exportar certificado y claves](images/keychain_export_key.jpg)
 
-17. En **Guardar como**, proporcione al certificado un nombre significativo
-                        para que lo pueda identificar posteriormente; por ejemplo **                            sandbox_apns.p12_certifcate** o
-                            **production_apns.p12** y, a continuación, pulse
-                            **Guardar**. 
+17. En el campo **Guardar como**, proporcione al certificado un nombre significativo para que lo pueda identificar posteriormente; por ejemplo **sandbox_apns.p12_certifcate** o
+**production_apns.p12** y, a continuación, pulse **Guardar**.
+
 
    	![Exportar certificado y claves](images/certificate_p12v2.jpg)
 
-
-18. En la pantalla **Escriba una contraseña**, especifique una contraseña para
-                        proteger los elementos exportados y, a continuación, pulse **Aceptar**. Utilice esta contraseña para configurar posteriormente los valores de APN en el panel de control de
+18. En el campo **Escriba una contraseña**, especifique una contraseña para proteger los elementos exportados y, a continuación, pulse **Aceptar**.Utilice esta contraseña para configurar posteriormente los valores de APN en el panel de control de
                             Push.
 
 	![Exportar certificado y claves](images/export_p12.jpg)
-19. En la **Key Access.app** desea exportar la clave desde la pantalla de cadena de claves, especifique la contraseña de administración para el Mac para permitir al sistema exportar estos elementos y, a continuación, seleccione **Permitir siempre**. Se generará un certificado .p12 en
+19. **Key Access.app** le solicita que exporte su clave desde la pantalla **Cadena de claves**. Especifique la contraseña de administración para Mac para permitir al sistema exportar estos elementos y, a continuación, seleccione la opción **Permitir siempre**. Se generará un certificado .p12 en
                         el escritorio.
-20. Paso siguiente[Crear un perfil de suministro de distribución y de desarrollo](#create-push-credentials-dev-profile)archivo
+
 
 ##Creación de un perfil de suministro de desarrollo
 {: #create-push-credentials-dev-profile}
@@ -167,7 +165,7 @@ Crear un perfil de suministro de desarrollo.
 	**Nota**: Al configurar un perfil de suministro de desarrollo, seleccione las opciones siguientes:
 	* **Desarrollo de apps de iOS**
 	* **Para aplicaciones iOS y watchOS**
-3. Siguiente paso. [Crear un perfil de suministro de distribución del almacén.](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##Creación de un perfil de suministro de distribución del almacén
@@ -178,8 +176,6 @@ Utilice el perfil de suministro del almacén para enviar la app para su distribu
 
 1. Vaya al portal de [Desarrollador de Apple](https://developer.apple.com), pulse **Centro de miembros**, y seleccione **Certificados, identificadores y perfiles**.
 2. Efectúe una doble pulsación en el perfil de suministro descargado para instalarlo en Xcode.
-3. Siguiente paso. [Configurar APN en el Panel de control de Push.](#create-push-credentials-apns-dashboard).
-
 
 ##Configuración de APN en el Panel de control de notificaciones Push
 {: #create-push-credentials-apns-dashboard}
@@ -221,5 +217,4 @@ Configurar APN en el Panel de control de Push.
 Después de
                     subir los certificados satisfactoriamente con una contraseña válida, inicie
                     el envío de notificaciones.
-1. Siguientes pasos. [Habilitar las notificaciones para
-                            iOS](c_ios_enable.html).
+
