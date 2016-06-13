@@ -11,9 +11,9 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 11 May 2016*  
+*Last updated: 8 June 2016*  
 
-A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
+A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
 
 You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. Depending on the template or toolchain that you use, the toolchain might include a GitHub repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.Bluemix}}.
@@ -29,7 +29,7 @@ As a starting point, you can use a toolchain template to create a toolchain that
 After your request to access toolchains is approved, you can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
 
 1. On the DevOps dashboard, on the **Toolchains** tab, click **Create a Toolchain** to create your first toolchain. If you already have a toolchain, click the add button (+) to create another toolchain.
-1. Click a toolchain template. For example, to use an online store sample to create the toolchain, click **Cloud-native toolchain for microservices**. 
+1. Click a toolchain template. For example, to use an online store sample to create the toolchain, click **Microservices Toolchain**. 
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 ![Toolchain diagram](images/toolchain_diagram.png)
 
@@ -69,6 +69,7 @@ After your request to access toolchains is approved, you can create a toolchain 
 
 After the toolchain and all tool integrations are configured, the Tool Integrations page opens.
 
+1. On the DevOps Dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
 1. Review the page to see a visual representation of the toolchain for your app.
 1. To access a tool integration that is in your toolchain, click the tool tile. 
  
@@ -90,6 +91,6 @@ After the toolchain and all tool integrations are configured, the Tool Integrati
 ## Related Links
 {: #general}
 
-* [Cloud-native toolchain for microservices (Experimental)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Microservices toolchain (Experimental)](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
 * [Simple toolchain (Experimental)](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
 * [IBM&reg; Bluemix&reg; Garage Method](https://www.ibm.com/devops/method){:new_window}
