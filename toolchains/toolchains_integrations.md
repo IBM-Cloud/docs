@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 8 June 2016*
+*Last updated: 13 June 2016*
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
@@ -84,19 +84,17 @@ To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content
 ## Adding Deployment Risk Analytics
 {: #dra}
 
-Deployment Risk Analytics collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is halted, preventing risks from being released. You can use Deployment Risk Analytics as a safety net for your continuous delivery environment or as a way to implement and improve quality standards over time. 
+{{site.data.keyword.DRA_full}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is stopped to prevent risks from being released. You can use Deployment Risk Analytics as a safety net for your continuous delivery environment or as a way to implement and improve quality standards. 
 
  **Tip**: This tool integration is pre-configured. It does not require any configuration parameters and you cannot reconfigure it.
  
-Add the Deployment Risk Analytics tool integration to maintain and improve the quality of your code in Bluemix by monitoring your deployments to identify risks before they are released:
+Add Deployment Risk Analytics to maintain and improve the quality of your code in Bluemix by monitoring your deployments to identify risks before they are released:
 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
 1. Click the add button (+).
 1. In the Tool Integrations section, click **Deployment Risk Analytics**. 
 1. Click **Create Integration**.
-1. Click the tile for Deployment Risk Analytics to walk through the steps to get started with this tool integration: create criteria, connect the criteria to the pipeline, and then run the pipeline. 
-
-To learn more, see [Deployment Risk Analytics](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
+1. Click the tile for Deployment Risk Analytics, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [Deployment Risk Analytics](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
 {: #webide}
@@ -129,22 +127,20 @@ Configure GitHub and GitHub Issues to manage your source code on the cloud:
 
  a. In the Configurable Integrations section, click **GitHub**. If you have not authorized {{site.data.keyword.Bluemix}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
  
- b. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
-   
- c. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
+ b. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
  ![Default target repo locations](images/toolchain_github_config.png)
    
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
 1. Click the add button (+).
-1. In the Tool Integrations section, click **GitHub**. If you have not authorized {{site.data.keyword.Bluemix}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
-1. If you have a GitHub repo and want to use it, type the URL for the repo and select **link** as the repository type.
+1. In the Tool Integrations section, click **GitHub**.
+1. If you have a GitHub repo and want to use it, type the URL. For the repository type, click **Link**.
 1. If you want to use a new GitHub repo, type a name for the GitHub repo, type the URL for the repo that you are cloning or forking, and select the repository type: 
 
- a. To create an empty repo, select **new**. 
+ a. To create an empty repo, select **New**. 
  
- b. To create a copy of a GitHub repo, select **clone**.
+ b. To create a copy of a GitHub repo, select **Clone**.
  
- c. To fork a GitHub repo so that you can contribute changes through pull requests, select **fork**.
+ c. To fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**.
  
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. Click **Create Integration**.
