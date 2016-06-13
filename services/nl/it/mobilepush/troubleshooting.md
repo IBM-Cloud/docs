@@ -8,11 +8,18 @@ copyright:
 # Risoluzione dei problemi
 {: #errors}
 
+Utilizza questa sezione come una guida per risolvere i problemi comuni di Push Notification.
 
-## Si è verificato un errore interno
-Se hai creato un'istanza push prima di novembre 2015 e hai riscontrato il seguente errore, elimina l'istanza push e creane una nuova.  
 
-"Si è verificato un errore interno. Per favore contatta l'amministratore. (Codice errore interno: PUSHD102E)"
+### Si è verificato un errore server interno. Per favore contatta l'amministratore. (Codice errore interno: PUSHD102E)
 
-Nota:  quando elimini l'istanza push, le tue tag non vengono conservate.
+####Spiegazione
+
+**Spiegazione** questo errore potrebbe verificarsi se hai creato un'istanza di push prima del novembre 2015.  
+
+####RISPOSTA UTENTE
+
+**Azione**:  per risolvere questo problema, elimina l'istanza di push e creane una nuova.
+
+**Nota:** quando elimini l'istanza di push, le tue tag non vengono conservate.
 

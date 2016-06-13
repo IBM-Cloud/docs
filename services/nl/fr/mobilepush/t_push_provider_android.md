@@ -1,8 +1,8 @@
 
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -14,7 +14,7 @@ Obtenez vos données d'identification Google Cloud Messaging (GCM), puis configu
 
 ##Obtention de votre ID d'émetteur et de la clé d'API
 
-La clé d'API est stockée de façon sécurisée et utilisée par le service Push Notifications pour la connexion au serveur GCM. L'ID d'émetteur (numéro de projet) est utilisé par le logiciel SDK Android côté client.
+La clé d'API est stockée de façon sécurisée et utilisée par le service Push Notifications pour la connexion au serveur GCM. L'ID d'émetteur (numéro de projet) est utilisé par le logiciel SDK Android côté client. Pour plus d'informations sur l'ID émetteur, voir [Google Cloud Message](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Créez un compte de développement Google à l'aide de la [console des développeurs Google](https://console.developers.google.com/start){: new_window}. Pour plus d'informations sur Google Cloud Messaging (GCM), voir [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
 

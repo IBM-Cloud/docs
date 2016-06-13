@@ -14,18 +14,14 @@ copyright:
 
 {: #gettingstartedtemplate}
 
-Der {{site.data.keyword.mobilepushfull}}-Service misst den Status, das Verhalten und Kontext Ihrer mobilen Apps, mobilen Benutzer und mobilen Geräte, indem er Überwachungsservices für mobile Anwendungen bereitstellt, die auf auf {{site.data.keyword.Bluemix_notm}} gehostete Cloudressourcen zugreifen. Clientseitige Protokoll- und Nutzungsdaten werden automatisch erfasst und bei Bedarf an den Mobile Analytics-Service gesendet. Entwickler und Administratoren können über das Dashboard des {{site.data.keyword.mobileanalytics_short}}-Service die Daten anzeigen, die vom Client-SDK erfasst werden.
+
 {:shortdesc}
 
-Push Notifications Service bietet eine gemeinsame
-Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen
-haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Push Notifications Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die als Ziel iOS- und Android-Plattformen haben. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Benutzer aus. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und  [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
-In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung
-verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
+In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
 
-1. [Berechtigungsnachweise
-für einen Benachrichtigungsprovider konfigurieren](t__main_push_config_provider.html)
+1. [Berechtigungsnachweise für einen Benachrichtigungsprovider konfigurieren](t__main_push_config_provider.html)
 2. [Mobile App für den Empfang von Benachrichtungen aktivieren](c_enable_push.html)
 3. [Einfache Push-Benachrichtigungen senden](t_send_push_notifications.html)
 

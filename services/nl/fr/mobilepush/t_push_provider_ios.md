@@ -1,8 +1,8 @@
 
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -76,6 +76,7 @@ Créez un certificat SSL pour le développement et la distribution.
 2. Dans la zone **Identifiers**, cliquez sur **App IDs**.
 3. Dans la liste des ID d'appli, sélectionnez l'ID d'appli que vous venez de créer, puis sélectionnez **Settings**.
 4. Dans la zone **Push Notifications**, créez un certificat SSL de développement, puis un certificat SSL de production.
+ 
 	![Certificats SSL de notification push](images/certificate_createssl.jpg)
 
 	L'écran About Creating a Certificate a Signing Request s'affiche.
@@ -107,18 +108,15 @@ certificat que vous avez sauvegardé sur votre bureau. Ensuite, cliquez sur **Ge
 
 	![Exportation de certificat et de clés](images/keychain_export_key.jpg)
 
-17. Dans **Save As**, attribuez au certificat un nom significatif pour que vous puissiez l'identifier ultérieurement, par exemple
-**bacàsable_apns_p12_certificat** ou **production_apns.p12**, puis cliquez sur **Save**. 
+17. Dans la zone **Save As**, nommez le certificat de façon à pouvoir l'identifier par la suite (par exemple **certificat_sandbox_apns.p12** ou **production_apns.p12**), puis cliquez sur **Save**.
 
    	![Exportation de certificat et de clés](images/certificate_p12v2.jpg)
 
-
-18. Dans l'écran **Enter a password**, entrez un mot de passe pour protéger les éléments exportés, puis cliquez sur **OK**. Vous aurez besoin de ce mot de passe pour configurer ultérieurement vos paramètres APNs dans le tableau de bord Push.
+18. Dans la zone **Enter a password**, entrez un mot de passe pour protéger les éléments exportés, puis cliquez sur **OK**. Vous aurez besoin de ce mot de passe pour configurer ultérieurement vos paramètres APNs dans le tableau de bord Push.
 
 	![Exportation de certificat et de clés](images/export_p12.jpg)
-19. Dans l'écran **Key Access.app** wants to export key from your keychain, entrez votre mot de passe d'administration pour votre Mac afin d'autoriser votre système à exporter ces
-éléments, puis sélectionnez **Always Allow**. Un certificat .p12 est généré sur votre bureau.
-20. Etape suivante[Création d'un profil de mise à disposition pour le développement et la distribution](#create-push-credentials-dev-profile)
+19. **Key Access.app** vous invite à exporter votre clé depuis l'écran **Keychain**. Entrez le mot de passe administrateur pour votre Mac pour permettre au système d'exporter ces éléments, puis sélectionnez l'option **Always Allow**. Un certificat .p12 est généré sur votre bureau.
+
 
 ##Création d'un profil de mise à disposition pour le développement
 {: #create-push-credentials-dev-profile}
@@ -141,7 +139,7 @@ d'un profil de développement.
 	**Remarque** : Lorsque vous configurez un profil de mise à disposition pour le développement, sélectionnez les options suivantes :
 	* **iOS App Development**
 	* **For iOS and watchOS apps **
-3. Etape suivante. [Création d'un profil de mise à disposition pour la distribution dans un magasin](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##Création d'un profil de mise à disposition pour la distribution dans un magasin
@@ -151,8 +149,6 @@ Utilisez le profil de mise à disposition dans un magasin afin de soumettre votr
 
 1. Accédez au portail [Apple Developer](https://developer.apple.com), cliquez sur **Member Center**, puis sélectionnez **Certificates, Identifiers & Profiles**.
 2. Cliquez deux fois sur le profil de mise à disposition téléchargé afin de l'installer dans Xcode.
-3. Etape suivante. [Configuration d'APNs sur le tableau de bord Push Notifications](#create-push-credentials-apns-dashboard)
-
 
 ##Configuration d'APNs sur le tableau de bord Push Notifications
 {: #create-push-credentials-apns-dashboard}
@@ -195,4 +191,4 @@ afin d'ouvrir le tableau de bord Push.
 	![Définition des notifications push](images/credential_screen.jpg)
 3. Dans la zone **Mot de passe**, entrez le mot de passe qui est associé au fichier de certificat **.p12**, puis cliquez sur **Sauvegarde**.
 Une fois les certificats téléchargés avec un mot de passe valide, vous pouvez commencer à envoyer des notifications.
-1. Etapes suivantes. [Activation des notifications pour iOS](c_ios_enable.html)
+

@@ -67,7 +67,9 @@ APNs 可在两种方式下使用：沙箱和生产。
 2. 在 **Identifiers** 区域中，单击 **App IDs**。
 3. 在您的应用程序标识列表中，选择您新创建的应用程序标识，然后选择 **Settings**。
 4. 在 **Push Notifications** 区域中，创建开发 SSL 证书，然后创建生产 SSL 证书。
- ![推送通知 SSL 证书](images/certificate_createssl.jpg)
+
+ 
+	 ![推送通知 SSL 证书](images/certificate_createssl.jpg)
 
 	这将显示 About Creating a Certificate a Signing Request 屏幕。
 
@@ -92,16 +94,15 @@ APNs 可在两种方式下使用：沙箱和生产。
 
 	![导出证书和密钥](images/keychain_export_key.jpg)
 
-17. 在**存储为**中，为证书提供有意义的名称，以便于日后识别；例如 **sandbox_apns.p12_certifcate** 或 **production_apns.p12**，然后单击**存储**。
+17. 在**存储为**字段中，为证书提供有意义的名称，以便于日后识别；例如 **sandbox_apns.p12_certifcate** 或 **production_apns.p12**，然后单击**存储**。
 
    	![导出证书和密钥](images/certificate_p12v2.jpg)
 
-
-18. 在**输入密码**屏幕中，输入用于保护导出项的密码，然后单击**好**。以后在“推送”仪表板上配置 APNs 设置时会用到此密码。
+18. 在**输入密码**字段中，输入用于保护导出项的密码，然后单击**好**。以后在“推送”仪表板上配置 APNs 设置时会用到此密码。
 
 	![导出证书和密钥](images/export_p12.jpg)
-19. 在“**Key Access.app** 想要从您的钥匙串中导出密钥”屏幕中，输入 Mac 的管理员密码，以允许系统导出这些项，然后选择**总是允许**。这将在桌面上生成一个 .p12 证书。
-20. 接下来，[创建开发和分发供应概要文件](#create-push-credentials-dev-profile)
+19. **Key Access.app** 会提示您从**密钥串**屏幕导出密钥。输入 Mac 的管理员密码，以允许系统导出这些项，然后选择**总是允许**选项。这将在桌面上生成一个 .p12 证书。
+
 
 ##创建开发供应概要文件
 {: #create-push-credentials-dev-profile}
@@ -120,7 +121,7 @@ APNs 可在两种方式下使用：沙箱和生产。
 	**注**：配置开发供应概要文件时，请选择以下选项：
 	* **iOS App Development**
 	* **对于 iOS 和 watchOS 应用程序**
-3. 后续步骤：[创建应用商店分发供应概要文件](#create-push-credentials-apns-distribute_profile)。
+
 
 
 ##创建应用商店分发供应概要文件
@@ -130,8 +131,6 @@ APNs 可在两种方式下使用：沙箱和生产。
 
 1. 转至 [Apple Developer](https://developer.apple.com) 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 双击所下载的供应概要文件，以将其安装到 Xcode 中。
-3. 后续步骤：[在推送仪表板上设置 APNs](#create-push-credentials-apns-dashboard)。
-
 
 ##在推送通知仪表板上设置 APNs
 {: #create-push-credentials-apns-dashboard}
@@ -164,4 +163,4 @@ APNs 所需的证书为 .p12 证书，其中包含构建和发布应用程序所
 
 	![设置推送通知](images/credential_screen.jpg)
 3. 在**密码**字段中，输入与 **.p12** 证书文件相关联的密码，然后单击**保存**。使用有效的密码成功上传证书后，即可开始发送通知。
-1. 后续步骤：[为 iOS 启用通知](c_ios_enable.html)。
+

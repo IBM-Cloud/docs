@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -14,7 +14,7 @@ Copyright :
 
 {: #gettingstartedtemplate}
 
-Le service {{site.data.keyword.mobilepushfull}} mesure l'état, le comportement et le contexte de vos applis, utilisateurs et périphériques mobiles en offrant des services de surveillance pour les applications mobiles qui accèdent aux ressources de cloud hébergées sur {{site.data.keyword.Bluemix_notm}}. Les journaux et données d'utilisation côté client sont rassemblés automatiquement et envoyés au service Mobile Analytics sur simple demande. Les développeurs et les administrateurs peuvent utiliser le tableau de bord du service {{site.data.keyword.mobileanalytics_short}} pour afficher les données qui sont collectées par le logiciel SDK du client.
+
 {:shortdesc}
 
 Le service Push Notifications met à disposition une plateforme unifiée pour l'envoi et la gestion de

@@ -2,7 +2,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
@@ -15,7 +15,7 @@ Obtenga las credenciales de Google Cloud Messaging (GCM) y, a continuación, con
 
 ##Cómo obtener el ID de remitente y la clave de la API
 
-La clave de la API se almacena de forma segura y la utiliza el servicio de notificaciones Push para conectarse al servidor de GCM y el ID de remitente (número de proyecto) lo utilizará el SDK de Android en el lado del cliente.
+La clave de la API se almacena de forma segura y la utiliza el servicio de notificaciones Push para conectarse al servidor de GCM y el ID de remitente (número de proyecto) lo utilizará el SDK de Android en el lado del cliente. Para obtener más información sobre el ID de remitente, consulte [Google Cloud Messaging](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Obtenga una cuenta de Google Development en [Google Dev Console](https://console.developers.google.com/start){: new_window}. Para obtener más información sobre Google Cloud Messaging (GCM), consulte [Creación de un proyecto API de Google](https://developers.google.com/console/help/new/){: new_window}.
 

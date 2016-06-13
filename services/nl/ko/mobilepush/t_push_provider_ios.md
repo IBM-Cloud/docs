@@ -67,7 +67,9 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 2. **ID** 영역에서 **앱 ID**를 클릭하십시오. 
 3. 앱 ID 목록에서 새로 작성한 앱 ID를 선택한 다음 **설정**을 선택하십시오. 
 4. **푸시 알림** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
-![푸시 알림 SSL 인증서](images/certificate_createssl.jpg)
+
+ 
+	![푸시 알림 SSL 인증서](images/certificate_createssl.jpg)
 
 	인증서 서명 요청 작성 정보 화면이 표시됩니다.
 
@@ -92,16 +94,15 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
 	![인증서 및 키 내보내기](images/keychain_export_key.jpg)
 
-17. **다른 이름으로 저장**에서 나중에 식별할 수 있도록 인증서에 의미있는 이름(예: **sandbox_apns.p12_certifcate** 또는 **production_apns.p12**)을 지정한 다음 **저장**을 클릭하십시오. 
+17. **다른 이름으로 저장** 필드에 나중에 식별할 수 있도록 인증서에 의미있는 이름(예: **sandbox_apns.p12_certifcate** 또는 **production_apns.p12**)을 지정한 다음 **저장**을 클릭하십시오.
 
    	![인증서 및 키 내보내기](images/certificate_p12v2.jpg)
 
-
-18. **비밀번호 입력** 화면에서 내보낸 항목을 보호하기 위한 비밀번호를 입력하고 **확인**을 클릭하십시오. 나중에 이 비밀번호를 사용하여 푸시 대시보드에서 APNs 설정을 구성하게 됩니다. 
+18. **비밀번호 입력** 필드에 내보낸 항목을 보호하기 위한 비밀번호를 입력한 다음 **확인**을 클릭하십시오. 나중에 이 비밀번호를 사용하여 푸시 대시보드에서 APNs 설정을 구성하게 됩니다. 
 
 	![인증서 및 키 내보내기](images/export_p12.jpg)
-19. 키체인의 키를 내보내려는 **Key Access.app** 화면에서, 시스템이 이들 항목을 내보낼 수 있도록 Mac의 관리 비밀번호를 입력한 다음 **항상 허용**을 선택하십시오. 데스크탑에 .p12 인증서가 생성됩니다. 
-20. 다음 단계[개발 및 배포 프로비저닝 프로파일 작성](#create-push-credentials-dev-profile)파일
+19. **Key Access.app**이 **키 체인** 화면에서 키를 내보내도록 프롬프트를 표시합니다. 시스템이 해당 항목을 내보낼 수 있도록 Mac의 관리 비밀번호를 입력한 다음 **항상 허용** 옵션을 선택하십시오. 데스크탑에 .p12 인증서가 생성됩니다. 
+
 
 ##개발 프로비저닝 프로파일 작성
 {: #create-push-credentials-dev-profile}
@@ -122,7 +123,7 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 	**참고**:개발 프로비저닝 프로파일을 구성할 때 다음 옵션을 선택하십시오. 
 	* **iOS 앱 개발**
 	* **iOS 및 watchOS 앱용**
-3. 다음 단계. [저장소 배포 프로비저닝 프로파일을 작성하십시오.](#create-push-credentials-apns-distribute_profile)
+
 
 
 ##저장소 배포 프로비저닝 프로파일 작성
@@ -132,8 +133,6 @@ APNs는 샌드박스 모드와 프로덕션 모드에서 사용할 수 있습니
 
 1. [Apple 개발자](https://developer.apple.com) 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
 2. 다운로드한 프로비저닝 프로파일을 두 번 클릭하여 이를 Xcode에 설치하십시오. 
-3. 다음 단계. [푸시 대시보드에서 APNS를 설정하십시오.](#create-push-credentials-apns-dashboard)
-
 
 ##푸시 알림 대시보드에서 APNs 설정
 {: #create-push-credentials-apns-dashboard}
@@ -168,4 +167,4 @@ APNs 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push
 	![푸시 알림 설정](images/credential_screen.jpg)
 3. **Password** 필드에서 **.p12** 인증서 파일과 연관된 비밀번호를 입력하고 **저장**을 클릭하십시오.
 올바른 비밀번호를 사용하여 인증서를 업로드한 후 알림 전송을 시작할 수 있습니다. 
-1. 다음 단계. [iOS에서 알림을 사용하도록 설정하십시오](c_ios_enable.html).
+

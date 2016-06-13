@@ -10,12 +10,11 @@ copyright:
 # Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren
 {: #create-push-enable-gcm}
 
-Rufen Sie Ihre Berechtigungsnachweise für Google Cloud Messaging (GCM) ab und richten Sie
-anschließend Push Notifications Service im Push-Dashboard ein.
+Rufen Sie Ihre Berechtigungsnachweise für Google Cloud Messaging (GCM) ab und richten Sie anschließend Push Notifications Service im Push-Dashboard ein.
 
 ##Absender-ID und API-Schlüssel abrufen
 
-Der API-Schlüssel wird geschützt gespeichert und von Push Notifications Service zum Verbinden mit dem GCM-Server verwendet. Die Absender-ID (Projektnummer) wird vom Android-SDK auf der Clientseite verwendet.
+Der API-Schlüssel wird geschützt gespeichert und von Push Notifications Service zum Verbinden mit dem GCM-Server verwendet. Die Absender-ID (Projektnummer) wird vom Android-SDK auf der Clientseite verwendet. Weitere Informationen zur Absender-ID finden Sie unter [Google Cloud Messaging](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Richten Sie ein Google Development-Konto unter [Google Dev Console](https://console.developers.google.com/start){: new_window} ein. Weitere Informationen zu Google Cloud Messaging (GCM) finden Sie in [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
 
@@ -23,8 +22,7 @@ Der API-Schlüssel wird geschützt gespeichert und von Push Notifications Servic
 
 	![Projekt erstellen](images/gcm_createproject.jpg)
 
-3. Geben Sie in das Feld **Project name** (Projektname) den Namen für Ihr Projekt
-ein und klicken Sie anschließend auf die Schaltfläche **Create** (Erstellen).
+3. Geben Sie in das Feld **Project name** (Projektname) den Namen für Ihr Projekt ein und klicken Sie anschließend auf die Schaltfläche **Create** (Erstellen).
 4. Klicken Sie auf **Home** (Ausgangsposition), um die Projektnummer anzuzeigen. Notieren Sie Ihre Projektnummer.
 
 	![GCM-Projektnummer](images/gcm_projectnumber.jpg)
@@ -35,18 +33,15 @@ ein und klicken Sie anschließend auf die Schaltfläche **Create** (Erstellen).
 
 	![APIs](images/gcm_mobileapi.jpg)
 
-6. Klicken Sie auf ** APIs** und anschließend auf die Schaltfläche **Enable API** (API aktivieren),
-um den API-Schlüssel für Ihr Projekt zu erstellen. 
+6. Klicken Sie auf **APIs** und anschließend auf die Schaltfläche **Enable API** (API aktivieren), um den API-Schlüssel für Ihr Projekt zu erstellen. 
 
 	![API aktivieren](images/gcm_enable_api.jpg)
 
-7. Rufen Sie die Anzeige **APIs & Auths -> Credentials** (APIs & Authentifizierung -> Berechtigungsnachweise) auf. Klicken Sie auf **Add Credentials** (Berechtigungsnachweise hinzufügen) und anschließend
-auf **API Key** (API-Schlüssel).
+7. Rufen Sie die Anzeige **APIs & Auths -> Credentials** (APIs & Authentifizierung -> Berechtigungsnachweise) auf. Klicken Sie auf **Add Credentials** (Berechtigungsnachweise hinzufügen) und anschließend auf **API Key** (API-Schlüssel).
 
 	![API-Berechtigungsnachweise](images/api_credentials.jpg)
 
-8. Klicken Sie auf die Option **Server Key** (Serverschlüssel), um einen GCM-API-Schlüssel
-zu generieren, den Sie im Bluemix-Push-Dashboard verwenden können.
+8. Klicken Sie auf die Option **Server Key** (Serverschlüssel), um einen GCM-API-Schlüssel zu generieren, den Sie im Bluemix-Push-Dashboard verwenden können.
 9. Geben Sie in das Feld **Name** den Namen für den Server-API-Schlüssel ein.
 
 	![GCM-Serverschlüssel](images/gcm_serverkey.jpg)

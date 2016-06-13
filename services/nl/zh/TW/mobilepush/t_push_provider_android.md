@@ -14,7 +14,7 @@ copyright:
 
 ##取得傳送端 ID 及 API 金鑰
 
-API 金鑰會安全地儲存並供 Push Notification Service 用來連接至 GCM 伺服器，而 Android SDK 在用戶端上使用傳送端 ID（專案號碼）。
+API 金鑰會安全地儲存並供 Push Notification Service 用來連接至 GCM 伺服器，而 Android SDK 在用戶端上使用傳送端 ID（專案號碼）。如需傳送端 ID 的相關資訊，請參閱 [Google Cloud Message](https://developers.google.com/cloud-messaging/gcm#arch)。
 
 1. 在 [Google Dev Console](https://console.developers.google.com/start){: new_window} 上取得一個 Google Development 帳戶。如需 Google Cloud Messaging (GCM) 的相關資訊，請參閱[建立 Google API 專案](https://developers.google.com/console/help/new/){: new_window}。
 

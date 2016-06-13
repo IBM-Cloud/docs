@@ -13,7 +13,9 @@ dispositivos iOS e Android. É possível direcionar notificações para todos os
 do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas. É
 possível também usar um SDK (kit de desenvolvimento de software) e interfaces de
 programação de aplicativo (APIs) Representational State Transfer (REST) para
-desenvolver ainda mais seus aplicativos cliente.  
+desenvolver ainda mais seus aplicativos cliente. Para obter
+informações sobre o serviço dedicado de push, consulte
+[Serviços dedicados](../../dedicated/index.html). 
 
 
 ## Processo do serviço de notificação push
@@ -29,13 +31,13 @@ despachadas para o servidor Apple Push Notification Service (APNs) ou Google Clo
 ![Visão geral de push](images/overview.jpg)
 
 
-**Aplicativos Remotos**
+###Aplicativos Remotos
 
 Na inicialização, os
 aplicativos móveis se registram e assinam o Push
                 Notification Service para receber notificações.
 
-**Aplicativos backend**
+###Aplicativos backend
 
 Os aplicativos backend podem ser locais ou em uma nuvem pública. Aplicativos backend usam o Push
                         Notification Service para enviar notificações
@@ -45,7 +47,7 @@ móveis e informações do usuário para enviar notificações
 push. Ao contrário, os aplicativos backend podem usar o
 Push Notification Service.
 
-**Proprietário backend do app**
+###Proprietário backend do app
 
 A função que criou o aplicativo backend móvel que
 empacota uma instância do Push Notification Service. Essa pessoa
@@ -53,14 +55,14 @@ configura e instala o Push Notification Service
 para adequar os aplicativos corporativos que usam o Push Notification
 Service e aplicativos  móveis que são o destino das notificações push.
 
-**Push Notification Service**
+###Serviço de notificação push
 
-O serviço de notificação push gerencia todas as informações relacionadas aos
-dispositivos que se registram para notificações. O serviço mantém seus aplicativos
+O Serviço de notificação push gerencia todas as informações
+relacionadas aos dispositivos que são registradas para obter notificações. O serviço mantém seus aplicativos
 transparentes para os detalhes de tecnologia de envio de notificações para essas
 plataformas móveis heterogêneas, manipulando tudo isso.
 
-**Gateways**
+###Gateways
 
 Serviços de nuvem específicos de plataforma do dispositivo
 móvel, como Google Cloud
@@ -72,7 +74,7 @@ notificações para os aplicativos móveis.
 ## Tipos de notificação push
 {: #overview-push-types}
 
-**Difusão**
+###Difusão
 
 Quando um aplicativo móvel se registra no Serviço de notificação push, ele pode
 começar a receber transmissões. Notificações de transmissão são mensagens de
@@ -85,7 +87,7 @@ mensagens de notificação a todos os dispositivos. Para enviar uma
 notificação de transmissão usando a API Push REST, assegure-se de que
 o "destino" seja um JSON vazio ao postar no recurso de mensagens.
 
-**notificações baseadas em tag**
+###Notificações baseadas em tag
 
 Notificações de identificação são mensagens de notificação destinadas a todos os
 dispositivos que assinaram uma identificação específica. As notificações baseadas em identificação
@@ -99,7 +101,7 @@ e, em seguida, iniciar as notificações baseadas em identificação. Para envia
 REST, assegure-se de que os "tagnames" sejam fornecidos ao postar no
 recurso de mensagem.
 
-**Notificações unicast**
+###Notificações unicast
 
 Notificações unicast são mensagens de notificação direcionadas para um dispositivo
 específico. As notificações unicast não requerem
@@ -107,7 +109,7 @@ configuração adicional e são ativadas por padrão quando o aplicativo está a
 para notificações push. Para enviar uma notificação unicast que use a API REST,
 certifique-se de que os deviceIds sejam fornecidos ao postar em um recurso de mensagem.
 
-**Notificações baseadas em plataforma**
+###Notificações com base em plataforma
 
 Notificações podem ser
 destinada a atingir uma plataforma de dispositivo

@@ -15,7 +15,7 @@ Ottieni le tue credenziali GCM (Google Cloud Messaging) e configura
 
 ##Come ottenere il tuo ID mittente e la chiave API
 
-La chiave API è archiviata in modo protetto e utilizzata dal servizio di notifica di push per stabilire una connessione al server GCM e l'ID mittente (numero progetto) viene utilizzato dall'SDK Android sul lato client.
+La chiave API è archiviata in modo protetto e utilizzata dal servizio di notifica di push per stabilire una connessione al server GCM e l'ID mittente (numero progetto) viene utilizzato dall'SDK Android sul lato client. Per ulteriori informazioni sull'ID mittente, vedi [Google Cloud Messaging](https://developers.google.com/cloud-messaging/gcm#arch).
 
 1. Ottieni un account di sviluppo Google all'indirizzo [Google Dev Console](https://console.developers.google.com/start){: new_window}. Per ulteriori informazioni su GCM (Google Cloud Messaging), vedi [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
 

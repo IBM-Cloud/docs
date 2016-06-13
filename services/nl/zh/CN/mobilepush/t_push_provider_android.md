@@ -14,7 +14,7 @@ copyright:
 
 ##获取发送方标识和 API 密钥
 
-API 密钥以安全方式存储，并由 Push Notification Service 用于连接到 GCM 服务器，而发送方标识（项目编号）由客户机端的 Android SDK 使用。
+API 密钥以安全方式存储，并由 Push Notification Service 用于连接到 GCM 服务器，而发送方标识（项目编号）由客户机端的 Android SDK 使用。有关发送方标识的更多信息，请参阅 [Google Cloud Messaging](https://developers.google.com/cloud-messaging/gcm#arch)。
 
 1. 从 [Google Dev Console](https://console.developers.google.com/start){: new_window} 获取一个 Google Development 帐户。有关 Google 云消息传递 (GCM) 的更多信息，请参阅 [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}。
 

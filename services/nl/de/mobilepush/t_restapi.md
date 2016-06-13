@@ -36,11 +36,9 @@ Der Header für das Akzeptieren der Sprache gibt an, welche Sprache für die Feh
 ## appSecret
 {: #push-api-rest-secret}
 
-Wenn eine Anwendung an Push Notifications gebunden wird, generiert der Service einen eindeutigen
-Schlüssel (appSecret) und übergibt ihn an den Antwortheader. Wenn Sie die REST-API von IBM® Push Notifications for Bluemix verwenden, finden Sie in der REST-API-Referenz Informationen dazu, welche APIs Sie schützen müssen. Informationen zur REST-API finden Sie in der REST-API-Referenz.
+Wenn eine Anwendung an Push Notifications gebunden wird, generiert der Service einen eindeutigen Schlüssel (appSecret) und übergibt ihn an den Antwortheader. Wenn Sie die REST-API von IBM® Push Notifications for Bluemix verwenden, finden Sie in der REST-API-Referenz Informationen dazu, welche APIs Sie schützen müssen. Informationen zur REST-API finden Sie in der REST-API-Referenz.
 
-Der Antwortheader muss 'appSecret' enthalten. Andernfalls gibt der Server den Fehlercode
-401 ('Unauthorized Error') zurück. Wenn die Push-Benachrichtigung einer Anwendung hinzugefügt wird, wird eine bestimmte App-ID erstellt. Als Teil der Antwort erhalten Sie einen Header mit der Bezeichnung 'appSecret', der zum Erstellen von Tags oder zum Senden von Nachrichten verwendet wird. Die Operation wird über Services im Katalog oder in der Boilerplate ausgeführt.
+Der Antwortheader muss 'appSecret' enthalten. Andernfalls gibt der Server den Fehlercode 401 ('Unauthorized Error') zurück. Wenn die Push-Benachrichtigung einer Anwendung hinzugefügt wird, wird eine bestimmte App-ID erstellt. Als Teil der Antwort erhalten Sie einen Header mit der Bezeichnung 'appSecret', der zum Erstellen von Tags oder zum Senden von Nachrichten verwendet wird. Die Operation wird über Services im Katalog oder in der Boilerplate ausgeführt.
 
 Gehen Sie wie folgt vor, um den Wert 'appSecret' abzurufen:
 
@@ -69,10 +67,7 @@ In der Anzeige **Berechtigungsnachweise anzeigen** werden Informationen zu 'AppS
 ##Filter für Push-REST-APIs
 {: #push-api-rest-filters}
 
-In Filtern wird ein Suchkriterium definiert, das Daten beschränkt, die von einer GET-API
-durch Push zurückgegeben werden. Wenden Sie die Filter auf das Ergebnis der Abrufoperation (Get) an, die Sie filtern möchten. Der Filter beschränkt die Anzahl der Einträge, die in das Ergebnis eingeschlossen werden. Sie können
-beispielsweise einen Filter verwenden, um einen Tag zu suchen, dessen Name mit 'test' beginnt. Sie können einen
-Filter unter Verwendung der folgenden Syntax generieren.
+In Filtern wird ein Suchkriterium definiert, das Daten beschränkt, die von einer GET-API durch Push zurückgegeben werden. Wenden Sie die Filter auf das Ergebnis der Abrufoperation (Get) an, die Sie filtern möchten. Der Filter beschränkt die Anzahl der Einträge, die in das Ergebnis eingeschlossen werden. Sie können beispielsweise einen Filter verwenden, um einen Tag zu suchen, dessen Name mit 'test' beginnt. Sie können einen Filter unter Verwendung der folgenden Syntax generieren.
 
 **name**
 Der Name des Feldes, auf das der Filter angewendet wird.
@@ -102,8 +97,7 @@ Für die GET-API der Subskription werden folgende Kombinationen unterstützt:
 - Bei dem Namen kann es sich um das Feld 'tagName' oder das Feld 'deviceId' handeln.
 - Der Operator (außer für 'platform') kann == oder =@ lauten.
 - Für 'platform' muss der Operator == lauten.
-- Wird der Operator =@ verwendet, kann es sich bei dem Wert um
-eine Teilzeichenfolge handeln. Wenn der Operator == verwendet wird, muss es sich bei dem Wert um eine Zeichenfolge handeln, die genau übereinstimmt.
+- Wird der Operator =@ verwendet, kann es sich bei dem Wert um eine Teilzeichenfolge handeln. Wenn der Operator == verwendet wird, muss es sich bei dem Wert um eine Zeichenfolge handeln, die genau übereinstimmt.
 - Für die GET-API des Tags werden folgende Kombinationen unterstützt:
 - Der Name kann das Feld 'name' oder 'description' sein.
 - Wird der Operator =@ verwendet, kann es sich bei dem Wert um eine Teilzeichenfolge handeln.
