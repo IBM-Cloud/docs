@@ -19,7 +19,7 @@ copyright:
 
 #Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
 {: #softlayerlink}
-*Last updated: 1 June 2016*
+*Last updated: 10 June 2016*
 
 You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through SoftLayer for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing account, billing through SoftLayer for {{site.data.keyword.Bluemix_notm}} takes effect for the new billing cycle that starts after the accounts are linked.
 {:shortdesc}
@@ -36,6 +36,8 @@ If you have a SoftLayer account, and you want to link SoftLayer and {{site.data.
  1. From the {{site.data.keyword.slportal}}, click **Link a {{site.data.keyword.Bluemix_notm}} Account**. 
  2. Read and accept the terms for linking SoftLayer and {{site.data.keyword.Bluemix_notm}} accounts.
  3. When requested, provide the email address that is associated with your {{site.data.keyword.Bluemix_notm}} account. If you don't have a {{site.data.keyword.Bluemix_notm}} account, provide the email address that you want to use, then follow the instructions to be invited to {{site.data.keyword.Bluemix_notm}} and create an account.
+
+You must be a Master User in the SoftLayer account to link accounts.
 
 After you have linked your accounts, **Go to {{site.data.keyword.Bluemix_notm}}** is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, **SoftLayer** is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
 

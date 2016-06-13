@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-*Last updated: 3 June 2016*
+*Last updated: 13 June 2016*
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -380,7 +380,13 @@ Catalog, select **DISABLE ALL PLANS**.
 - To control the visibility of an individual plan, select the plan name, and then use the
 drop-down menu to select **Enable for all organizations**, **Disable for all organizations**, or **Enable plan for specific organizations**.
 
-<!-- staging only start -->
+You can also manage the priority order of available buildpacks to be chosen based on compatibility for your developers when they are creating apps.
+
+1. Go to **ADMINISTRATION &gt; CATALOG MANAGEMENT**.
+2. Go to the **Compute** section.
+3. Select **Buildpack priority**.
+4. Select the buildpack option that you want to prioritize within the list.
+5. With the option selected, use the arrows to move the option within the list. Priority is set by listing the highest prioirty item first in the list.
 
 ### Registering a service broker
 {: #servicebrokerui}
