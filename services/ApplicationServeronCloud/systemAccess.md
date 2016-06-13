@@ -11,8 +11,23 @@ copyright:
 
 #System Access
 {: #system_access}
-These topics include various ways to access and setup access to your systems.
+These topics include methods of creating and managing a service instance, along with various ways to access and setup access to your systems.
 {: shortdesc}
+
+*Last updated: 13 June 2016*
+
+## REST API Usage in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+{: #restapi_usage}
+
+Instances in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} are created, provisioned, managed, and deleted in one of the following ways:
+
+* From the {{site.data.keyword.Bluemix_notm}} Catalog and Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI.
+* From the creation of an application or script that uses our RESTful APIs.
+
+Through use of our Swagger 2.0 compliant REST APIs, clients have access to the same function as provided through the portal and dashboard. For more information about supported REST APIs and resources, see the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API Documentation](https://new-console.{DomainName}/apidocs/212){: new_window}.
+
+**Note:** After creating a service instance, depending on the Tee-Shirt size that is created, your service might not be immediately ready for use. It is recommended that you query the **Status** field of the JSON returned to determine the current state of the service instance.
+
 
 ## Service Dashboard
 {: #service_dashboard}
@@ -26,8 +41,10 @@ From the service dashboard you can access:
 *  The Hostname.
 *  The admin user and admin password.
 *  A private SSH key.
-*  The WebSphere® admin user and admin password.
+*  The WebSphereÂ® admin user and admin password.
 *  The Admin Center and Admin Console URLS.
+
+**Note**: Due to a specific amount of compute, memory, and I/O resources, clients are charged for accumulated VMs in the STOPPED state at a reduced rate of 5%.  Clients are managed to a fixed number of STOPPED instances with no more than 10 IP addresses or 64 GB of memory.
 
 
 ## Setting up openVPN for WebSphere Application Server for Bluemix instances
@@ -47,7 +64,7 @@ OpenVPN is required for access to any WebSphere Application Server on Bluemix vi
     C:\Program Files\OpenVPN\Config
   </pre>
   {: codeblock}
-  
+
 4. Start the openVPN client program "OpenVPN GUI". Ensure that you select [Run as a Windows Administrator](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window} to start the program. If you do not, you might not be able to connect.
 
 ### Use the following instructions to set up openVPN in Linux:
@@ -55,7 +72,7 @@ OpenVPN is required for access to any WebSphere Application Server on Bluemix vi
   * If you need to manually download and install the RPM Package Manager, go to [openVPN unix/linux download](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}. You might need assistance from your Linux administrator.
 3. Download the VPN configuration files from the OpenVPN download link of the WebSphere Application Server for Bluemix instance in the service dashboard. Extract the files into the directory from which you plan to start the openVPN client. You need all four files in the same directory.
 3. Start the openVPN client program.  Open a terminal window and go to the directory that contains the config files. Run the following command as root:
-  
+
   <pre>
       $ openvpn --config vt-wasaas-wasaas.ovpn
   </pre>
@@ -95,16 +112,16 @@ Use the following instructions to set up SSH access to your WebSphere Applicatio
     $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 5. Gain full sysadmin authority by switching virtuser to root by using the command:
 
   <pre>
     $ sudo su root
   </pre>
   {: codeblock}
-  
+
 6. If you experience problems when you access the system with the private ssh key, use the root password that is provided. Log in as root by running the command that follows and provide the password.
- 
+
  <pre>
     $ ssh root@169.53.246.x
   </pre>
@@ -120,7 +137,7 @@ Use the following instructions to set up SSH access to your WebSphere Applicatio
       IdentityFile /path/privateKeyFileName
   </pre>
   {: codeblock}
-  
+
 9. Run "ssh VM1" to be connected as virtuser.
 
 ## System paths
@@ -128,8 +145,8 @@ Use the following instructions to set up SSH access to your WebSphere Applicatio
 
 * The Liberty Profile commands can be issued from */opt/IBM/WebSphere/Liberty/bin*.
 * The Liberty Profile server profile location is */opt/IBM/WebSphere/Profiles/Liberty/servers/server1*.
-* The traditional WebSphere Application Server commands can be issued from */opt/IBM/WebSphere/AppServer/bin*.
-* The traditional WebSphere Application Server profile location for the server is  */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*.
+* The Traditional WebSphere Application Server commands can be issued from */opt/IBM/WebSphere/AppServer/bin*.
+* The Traditional WebSphere Application Server profile location for the server is  */opt/IBM/WebSphere/Profiles/DefaultAppSrv01/servers/server1*.
 
 ## Using the Admin Center and Admin Console links
 {: #console_links}

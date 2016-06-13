@@ -12,9 +12,14 @@ copyright:
 # Latest updates
 {: #latest_updates}
 
-*Last updated: 26 April 2016*
+*Last updated: 13 June 2016*
 
 A list of the latest updates to the service.
+
+## June 13, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Added ability for clients to build, provision, manage, and delete virtual machine instances through the creation of an application or script that uses WebSphere Application Server for Bluemix RESTful APIs.
+* Added function that allows a client to have a fixed number of STOPPED instances with no more than 10 IP addresses or 64 GB of memory. Clients are now charged for accumulated instances in the STOPPED state at a reduced rate of 5%.
 
 ## April 26, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
@@ -45,6 +50,6 @@ A list of the latest updates to the service.
 
 ## October 15, 2015: Updated Application Server on Cloud
 * Added the following two new plans:
-  * [WebSphere Application Server traditional V9 Beta](https://www-01.ibm.com/marketing/iwm/iwmdocs/web/cc/earlyprograms/websphere.shtml){: new_window}
+  * [WebSphere Application Server Traditional V9 Beta](https://www-01.ibm.com/marketing/iwm/iwmdocs/web/cc/earlyprograms/websphere.shtml){: new_window}
   * WebSphere Application Server ND
 * Miscellaneous service maintenance
