@@ -11,7 +11,8 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Last updated: 16 March 2016*
+*Last Updated: 10 June 2016*
+{: .last-updated}
 
 The PHP runtime on {{site.data.keyword.Bluemix}} is powered by the php_buildpack.
 The php_buildpack provides a complete runtime environment for PHP
@@ -36,11 +37,13 @@ You can specify the version of PHP to be used by your app in the composer.json f
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-For more information, see [Composer Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages).
+For more information, see [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links).
 
 When a version is not specified, version 5.5.30 is chosen by default.
 
