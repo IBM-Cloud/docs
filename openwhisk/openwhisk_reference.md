@@ -346,7 +346,7 @@ All APIs are protected with HTTP Basic authentication. The Basic auth credential
 Here is an example that uses the cURL command to get the list of all packages in the `whisk.system` namespace:
 
 ```
-$ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
 ```
 {: pre}
 ```
