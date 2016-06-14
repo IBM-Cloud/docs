@@ -12,7 +12,7 @@ copyright:
 # 获取客户支持
 {: #getting-customer-support}
 
-*上次更新时间：2016 年 6 月 8 日*
+*上次更新时间：2016 年 5 月 11 日*
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可以使用多个支持选项，例如，通过论坛获取帮助或开具支持凭单。
@@ -178,7 +178,6 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 <li>如果您没有 IBM 标识，那么可以联系您组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Dedicated 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p></li>
 </ul>
 
-对于在中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，您可以通过[UNISYS 服务管理页面](https://chinabluemix.itsm.unisysedge.cn){: new_window} 要求提供支持服务。此外，在中国的用户还可以在 [IBM 中国开发者论坛](https://developer.ibm.com/cn_answers/bluemix/){: new_window}获得免费支持。
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Local 支持
 {: #contacting-bluemix-support-local}

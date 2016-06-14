@@ -27,13 +27,9 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} Dedicated 是 IBM SoftLayer 数据中心内的一种私有云，具有以物理方式隔离的硬件。您的 {{site.data.keyword.Bluemix_notm}} 环境采用单租户方式，并基于裸机和虚拟服务器的组合进行供应，创建此环境是为了满足您的需求。此外，通过联合目录，您可以为应用程序提供专用计算资源和服务组合能力，以及通过目录联合所带来的能力。了解有关 [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html) 的更多信息。
 
-**声明:** SoftLayer 相关的信息不适用于在中国的 {{site.data.keyword.Bluemix}} Dedicated 环境和客户。 
-
 ## 本地
 
 通过 {{site.data.keyword.Bluemix_notm}} Local，您可以充分发挥数据中心内私有云的真实价值。{{site.data.keyword.Bluemix_notm}} Local 作为服务交付，能与您的 IT 团队持续协作。此外，它还支持您在先进的云平台中利用现有大型机、面向服务的体系结构、过程和数据。了解有关 [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html) 的更多信息。
-
-
 
 # 相关链接
 ## 常规
