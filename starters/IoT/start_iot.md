@@ -227,7 +227,7 @@ Now that your simulated device is sending data to {{site.data.keyword.iot_short_
 ## API Reference
 {: #api}
 * [{{site.data.keyword.iot_short}} API Documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/){:new_window}
-* [Developer documentation](http://docs.internetofthings.ibmcloud.com){:new_window}
+
 
 ## Related Links
 {: #general}
