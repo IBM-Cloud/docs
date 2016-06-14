@@ -57,7 +57,7 @@ seamlessly interact with those services without ever leaving the comfort of the 
 may include changes incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
 
-## Historican
+## Historian
 {: #historical-event-storage}
 
 Configure the {{site.data.keyword.iot_short_notm}} to store a record of the events your devices generate.
