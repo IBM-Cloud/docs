@@ -343,19 +343,20 @@ Several utility actions are provided in a package called `/whisk.system/util` th
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
+   action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
    action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  You will be using the `cat` and `sort` actions in this example.
+  You will be using the `split` and `sort` actions in this example.
 
 2. Create an action sequence so that the result of one action is passed as an argument to the next action.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -417,7 +418,7 @@ You can create an OpenWhisk action called `helloPython` from this function as
 follows:
 
 ```
-$ wsk action create helloPython hello.py
+wsk action create helloPython hello.py
 ```
 {: pre}
 
@@ -520,9 +521,8 @@ public class Hello {
 
 Then compile `Hello.java` into a jar file `hello.jar` as follows:
 ```
-$ javac Hello.java
-$ jar cvf hello.jar Hello.class
-
+javac Hello.java
+jar cvf hello.jar Hello.class
 ```
 {: pre}
 
@@ -532,7 +532,7 @@ You can create a OpenWhisk action called `helloJava` from this jar file as
 follows:
 
 ```
-$ wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar
 ```
 {: pre}
 
@@ -543,7 +543,7 @@ the tool determines that from the file extension.
 Action invocation is the same for Java actions as it is for Swift and JavaScript actions:
 
 ```
-$ wsk action invoke --blocking --result helloJava --param name World
+wsk action invoke --blocking --result helloJava --param name World
 ```
 {: pre}
 
