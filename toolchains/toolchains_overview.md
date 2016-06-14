@@ -67,10 +67,10 @@ After your request to access toolchains is approved, you can create a toolchain 
 ##Viewing a toolchain
 {: #viewing_a_toolchain}
 
-After the toolchain and all tool integrations are configured, the Tool Integrations page opens.
+After the toolchain and all tool integrations are configured, you can view a visual representation of the toolchain in the Tool Integrations page.
 
 1. On the DevOps Dashboard, on the **Toolchains** tab, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Tool Integrations**.
-1. Review the page to see a visual representation of the toolchain for your app.
+1. Review the page to see a visual representation of the toolchain.
 1. To access a tool integration that is in your toolchain, click the tool tile. 
  
  **Tip**: If you have more than one GitHub repo, you might have multiple tiles for the same tool integration because each repo needs its own pipeline.
