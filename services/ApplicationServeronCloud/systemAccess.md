@@ -14,7 +14,8 @@ copyright:
 These topics include methods of creating and managing a service instance, along with various ways to access and setup access to your systems.
 {: shortdesc}
 
-*Last updated: 13 June 2016*
+*Last updated: 08 June 2016*
+{: .last-updated}
 
 ## REST API Usage in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
@@ -27,6 +28,11 @@ Instances in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 Through use of our Swagger 2.0 compliant REST APIs, clients have access to the same function as provided through the portal and dashboard. For more information about supported REST APIs and resources, see the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API Documentation](https://new-console.{DomainName}/apidocs/212){: new_window}.
 
 **Note:** After creating a service instance, depending on the Tee-Shirt size that is created, your service might not be immediately ready for use. It is recommended that you query the **Status** field of the JSON returned to determine the current state of the service instance.
+
+**Note:** By default, the API BASE URL points to an endpoint in the [US South Region](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}.  If you are using the UK or Sydney Region, then ensure that your application uses one of the following endpoints:
+
+* [UK Region](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [Sydney Region](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
 
 
 ## Service Dashboard
@@ -41,7 +47,7 @@ From the service dashboard you can access:
 *  The Hostname.
 *  The admin user and admin password.
 *  A private SSH key.
-*  The WebSphereÂ® admin user and admin password.
+*  The WebSphere® admin user and admin password.
 *  The Admin Center and Admin Console URLS.
 
 **Note**: Due to a specific amount of compute, memory, and I/O resources, clients are charged for accumulated VMs in the STOPPED state at a reduced rate of 5%.  Clients are managed to a fixed number of STOPPED instances with no more than 10 IP addresses or 64 GB of memory.
