@@ -16,13 +16,11 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*上次更新时间：2016 年 6 月 8 日*
+*上次更新时间：2016 年 5 月 16 日*
 
 
 {{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以在您自己的专用 SoftLayer 环境中享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性。该专用 SoftLayer 环境是以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境和您自己的网络。
 {:shortdesc}
-
-**Note:** 所有与 SoftLayer 相关的信息包括服务、支持信息、以及销售渠道对于在中国的 {{site.data.keyword.Bluemix}} dedicated 客户均不适用。在中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，您可以通过[UNISYS 服务管理页面](https://chinabluemix.itsm.unisysedge.cn){: new_window} 要求提供支持服务。此外，在中国的用户还可以在 [IBM 中国开发者论坛](https://developer.ibm.com/cn_answers/bluemix/){: new_window}获得免费支持。
 
 无需额外付费，{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能：VPN、专用虚拟局域网 (VLAN)、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。
 
