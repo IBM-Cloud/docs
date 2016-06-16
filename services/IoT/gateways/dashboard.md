@@ -15,6 +15,7 @@ copyright:
 # Connecting and using a gateway device with the {{site.data.keyword.iot_short_notm}} dashboard
 {: #IoT_connectGateway}
 *Last updated: 16 May 2016*
+{: .last-updated}
 
 This task describes the process of connecting a gateway device, which connects itself, and devices behind the gateway, and sends data from itself and devices behind it to the {{site.data.keyword.iot_full}}.
 

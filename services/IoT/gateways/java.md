@@ -15,6 +15,7 @@ copyright:
 # Java for gateway developers
 {: #IoT_JavaGateway}
 *Last updated: 13 May 2016*
+{: .last-updated}
 
 This topic explains how you can use Java to develop gateways in {{site.data.keyword.iot_full}}. For more information, see [iot-java](https://github.com/ibm-messaging/iot-java) in GitHub
 {:shortdesc}

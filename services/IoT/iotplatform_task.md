@@ -14,6 +14,7 @@ copyright:
 # Connecting devices
 {: #iotplatform_task}
 *Last updated: 6 June 2016*
+{: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

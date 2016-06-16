@@ -11,6 +11,7 @@ copyright:
 # Visualizing Device Data
 {: #visualizingdata_data}
 *Last updated: 20 April 2016*
+{: .last-updated}
 
 This sample helps you visualize real-time and historic data from registered devices in your {{site.data.keyword.iot_full}} organization.
 {:shortdesc}

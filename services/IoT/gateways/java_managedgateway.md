@@ -15,6 +15,7 @@ copyright:
 # Java client library - managed Gateway
 {: #IoT_JavaGateway}
 *Last updated: 13 May 2016*
+{: .last-updated}
 
 This topic describes the role played by Gateway in the management of the devices that are connected to it.
 {: shortdesc}

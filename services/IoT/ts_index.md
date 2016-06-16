@@ -14,6 +14,7 @@ copyright:
 # {{site.data.keyword.iot_short_notm}} troubleshooting
 {: #ts}
 *Last updated: 6 June 2016*
+{: .last-updated}
 
 
 Here are the answers to common troubleshooting questions about using {{site.data.keyword.iot_full}} on {{site.data.keyword.Bluemix_notm}}.
