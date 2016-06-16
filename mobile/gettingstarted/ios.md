@@ -5,6 +5,8 @@
 # Getting started with the HelloWorld sample
 {: #gettingstarted-ios}
 *Last Updated: 28 January 2016*
+{: .last-updated}
+
 If you want to get started with a new iOS app, you can use the HelloWorld app. This app demonstrates how to connect to your {{site.data.keyword.Bluemix}} backend from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
 
 1. Create your mobile backend in {{site.data.keyword.Bluemix_notm}}.

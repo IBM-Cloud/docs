@@ -3,7 +3,8 @@
 
 # Getting started with the HelloWorld sample
 {: #gettingstarted-android}
-*Last Updated: 28 January 2016*  
+*Last Updated: 28 January 2016*
+{: .last-updated}  
 
 If you want to get started with a new Android application, you can use the HelloWorld app. This app demonstrates how to connect to your {{site.data.keyword.Bluemix}} backend from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
 

@@ -1,6 +1,7 @@
 # SDKs, samples, and API reference
 {: #sdk}
 *Last Updated: 28 January 2016*
+{: .last-updated}
 
 To add Bluemix Mobile Services SDKs to your app, choose the SDKs that you want to use and then configure your dependency manager to pull the SDKs into your app.
 

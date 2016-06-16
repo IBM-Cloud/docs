@@ -1,6 +1,7 @@
 # Creating mobile apps
 {: #mobile}
-*Last Updated: 28 January 2016* 
+*Last Updated: 28 January 2016*
+{: .last-updated} 
 
 With {{site.data.keyword.Bluemix}} Mobile Services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications without relying on IT involvement. You can focus on building your mobile apps instead of the complexities of managing the back-end infrastructure.
 

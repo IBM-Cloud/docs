@@ -10,6 +10,7 @@ copyright:
 # Getting started with the HelloWorld sample
 {: #gettingstarted-cordova}
 *Last Updated: 17 March 2016*
+{: .last-updated}
 
 If you want to get started with a new Cordova application, you can use the HelloWorld app. This app demonstrates how to connect to your mobile backend on {{site.data.keyword.Bluemix}} from a mobile app without authentication. The app already has the SDK installed. When you're ready, you can get the specific libraries that you want to use in your app.
 
