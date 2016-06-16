@@ -7,6 +7,7 @@
 # {{site.data.keyword.iotelectronics}} service
 {: #gettingstartediote}
 *Last updated: 18 April 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics}} has been preconfigured to work with the {{site.data.keyword.iotelectronics}} boilerplate to get your devices and appliances connected and get your IoT business to market significantly faster.
 
