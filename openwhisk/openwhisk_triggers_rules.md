@@ -19,6 +19,7 @@ copyright:
 # Creating triggers and rules
 {: #openwhisk_triggers}
 *Last updated: 22 February 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
 {: shortdesc}
