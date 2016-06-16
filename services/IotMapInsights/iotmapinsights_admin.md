@@ -15,6 +15,7 @@ copyright:
 # Administering
 {: #1stanchor}
 *Last updated: 6 May 2016*
+{: .last-updated}
 
 
 Administering {{site.data.keyword.iotmapinsights_full}} includes the following activities:

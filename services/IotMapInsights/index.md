@@ -15,6 +15,7 @@ copyright:
 # Getting started with {{site.data.keyword.iotmapinsights_short}}
 {: #gettingstartedtemplate}
 *Last updated: 24 May 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotmapinsights_full}} makes it easy for developers to enable their applications to use geospatial functions such as map matching and shortest path search based on the road networks across the globe.
 {:shortdesc}
