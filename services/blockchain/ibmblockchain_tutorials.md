@@ -14,6 +14,7 @@ copyright:
 # Sample apps and tutorials for {{site.data.keyword.blockchain}}
 {: #1stanchor}
 *Last updated: 2 June 2016*
+{: .last-updated}
 
 Sample applications and tutorials for {{site.data.keyword.blockchainfull}} demonstrate how fundamental applications and chaincodes function in a blockchain network.  To learn more about the fabric code that is underpinning your blockchain network, visit the [Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
 {:shortdesc}

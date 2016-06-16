@@ -14,6 +14,7 @@ copyright:
 # Getting started with {{site.data.keyword.blockchain}} (Beta)
 {: #gettingstartedtemplate}
 *Last updated: 2 June 2016*
+{: .last-updated}
 
 With the {{site.data.keyword.blockchainfull}} service on Bluemix, you can quickly spin up a blockchain network and circumvent the complexities involved with manually creating a development environment.  Rather than creating and managing a network, developers can spend their time generating applications and working with chaincode.  The service is a peer-to-peer permissioned network built on top of the Linux Foundation's Hyperledger [fabric code](https://github.com/hyperledger/fabric).
 {:shortdesc}

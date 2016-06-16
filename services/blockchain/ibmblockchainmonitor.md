@@ -14,6 +14,7 @@ copyright:
 # Managing chaincode with the blockchain monitor
 {: #blockchain_dashboard_monitor}
 *Last updated: 2 June 2016*
+{: .last-updated}
 
 Use the blockchain monitor to retrieve details about your network, such as peer information, logs, ledger state, APIs and chaincodes. The monitor provides you with an overview of your blockchain environment, including performance data and currently-deployed chaincodes.
 {:shortdesc}
