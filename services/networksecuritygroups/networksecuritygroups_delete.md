@@ -14,6 +14,7 @@ copyright:
 # Deleting a security group
 {: #nsgdelete}  
 *Last updated: 04 May 2016*
+{: .last-updated}
 
 You can see the list of security groups on the service dashboard.  
 {: shortdesc}  

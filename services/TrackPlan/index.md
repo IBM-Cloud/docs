@@ -18,6 +18,7 @@ copyright:
 #Getting started with {{site.data.keyword.trackplan}} {: #track-plan}  
 
 *Last Updated: 27 April 2016*
+{: .last-updated}
 
 To view, edit, and plan tasks, use {{site.data.keyword.trackplanlong}}. You can track your work and your team's work, create defects, see what's incoming, maintain your backlog, and plan work for future sprints.
 {: shortdesc}

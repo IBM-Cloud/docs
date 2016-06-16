@@ -14,6 +14,7 @@ copyright:
 # Configuring rules
 {: #nsgrules}  
 *Last updated: 04 May 2016*
+{: .last-updated}
 
 You can configure rules to manage inbound traffic (ingress traffic) to a virtual server, and outbound traffic (egress traffic) from a virtual server. 
 {:shortdesc}

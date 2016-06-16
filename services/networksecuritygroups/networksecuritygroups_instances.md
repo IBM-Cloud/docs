@@ -14,6 +14,7 @@ copyright:
 # Assigning instances
 {: #nsginstances}  
 *Last updated: 04 May 2016*
+{: .last-updated}
 
 You must assign virtual server instances or virtual server groups to a security group.  
 {: shortdesc}

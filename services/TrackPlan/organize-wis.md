@@ -18,6 +18,7 @@ copyright:
 #Organizing and filtering work items {: #tp-organize}  
 
 *Last Updated: 29 April 2016*
+{: .last-updated}
 
 The {{site.data.keyword.trackplan}} service includes several options for sorting and organizing your work items.
 {: shortdesc}

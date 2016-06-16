@@ -12,6 +12,7 @@ copyright:
 # About {{site.data.keyword.networksecuritygroups_full}}
 {: #nsgintro}
 *Last updated: 04 May 2016*
+{: .last-updated}
 
 A security group is a set of IP filter rules. Each IP rule represents a network security rule. Each security group represents a network security policy. You can have up to 10 security groups per space of your Bluemix organization. These security groups include the five predefined security groups. You can assign multiple security groups to a single virtual server or to a virtual server group. 
 {: shortdesc}

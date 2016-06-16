@@ -18,6 +18,7 @@ copyright:
 #Planning your team's work {: #tp-teamwork}  
 
 *Last Updated: 28 April 2016*
+{: .last-updated}
 
 You can manage your team's project with an agile approach by using the {{site.data.keyword.trackplan}} service. The {{site.data.keyword.trackplan}} tools simplify project planning and speed your workflow. 
 {: shortdesc}

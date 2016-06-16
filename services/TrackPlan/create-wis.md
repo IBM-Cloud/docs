@@ -18,6 +18,7 @@ copyright:
 #Creating and displaying work items {: #tp-creatingwis}  
 
 *Last Updated: 29 April 2016*
+{: .last-updated}
 
 You can create and display work items in several ways, depending on your context. 
 {: shortdesc}
