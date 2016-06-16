@@ -12,6 +12,7 @@ copyright:
 # Python
 {: #python_runtime}
 *Last updated: 16 March 2016*
+{: .last-updated}
 
 The Python runtime on {{site.data.keyword.Bluemix}} is powered by the python_buildpack.
 The python_buildpack provides a complete runtime environment for Python

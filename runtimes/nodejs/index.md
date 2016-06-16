@@ -13,6 +13,7 @@ copyright:
 # SDK for Nodejs
 {: #nodejs_runtime}
 *Last updated: 12 May 2016*
+{: .last-updated}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
 The sdk-for-nodejs buildpack provides a complete runtime environment for Node.js apps.

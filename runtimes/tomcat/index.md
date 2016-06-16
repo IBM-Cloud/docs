@@ -13,6 +13,7 @@ copyright:
 # Tomcat
 {: #tomcat_runtime}
 *Last updated: 19 March 2016*
+{: .last-updated}
 
 The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_buildpack.
 {: shortdesc}

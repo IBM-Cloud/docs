@@ -12,6 +12,7 @@ copyright:
 # Ruby
 {: #ruby_runtime}
 *Last updated: 16 March 2016*
+{: .last-updated}
 
 The Ruby runtime on {{site.data.keyword.Bluemix}} is powered by the ruby_buildpack.
 The ruby_buildpack provides a complete runtime environment for Ruby apps.

@@ -12,6 +12,7 @@ copyright:
 {: #latest_updates}
 
 *Last Updated: 20 May 2016*
+{: .last-updated}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
 ## May 20, 2016: Updated Node.js buildpack v3.4-20160518-1653
