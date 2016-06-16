@@ -14,6 +14,7 @@ copyright:
 # Administering {{site.data.keyword.iotdriverinsights_short}}
 {: #1stanchor}
 *Last updated: 6 May 2016*
+{: .last-updated}
 
 
 Administering {{site.data.keyword.iotdriverinsights_full}} includes viewing tenant information and resetting the tenant password, configuring parameters for the service, and managing data stored in the service.

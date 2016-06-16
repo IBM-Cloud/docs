@@ -14,6 +14,7 @@ copyright:
 # Getting started with {{site.data.keyword.iotdriverinsights_short}}
 {: #gettingstartedtemplate}
 *Last updated: 24 May 2016*
+{: .last-updated}
 
 With {{site.data.keyword.iotdriverinsights_full}}, you can run analytics on drivers' behavior by using the {{site.data.keyword.iotdriverinsights_short}} API to gather and analyze car probe data and contextual data.
 {:shortdesc}
