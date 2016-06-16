@@ -13,6 +13,7 @@ copyright:
 {: #latest_updates}
 
 *Last updated: 13 June 2016*
+{: .last-updated}
 
 A list of the latest updates to the service.
 

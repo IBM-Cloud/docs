@@ -16,6 +16,7 @@ These topics include methods of creating and managing a service instance, along 
 
 *Last updated: 08 June 2016*
 {: .last-updated}
+{: .last-updated}
 
 ## REST API Usage in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
