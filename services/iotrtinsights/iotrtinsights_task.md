@@ -13,6 +13,7 @@ copyright:
 # Connecting and viewing your devices
 {: #iotrtinsights_task}
 *Last updated: 11 February 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotrtinsights_short}} uses {{site.data.keyword.iot_short}} for device access and data retrieval. Devices that you connect to {{site.data.keyword.iot_short}} are automatically connected to {{site.data.keyword.iotrtinsights_short}}.
 {: shortdesc}

@@ -13,6 +13,7 @@ copyright:
 # Getting started with {{site.data.keyword.iotrtinsights_full}}
 {: #gettingstartedtemplate}
 *Last updated: 28 April 2016*
+{: .last-updated}
 
 With {{site.data.keyword.iotrtinsights_full}} on {{site.data.keyword.Bluemix_notm}} ({{site.data.keyword.iotrtinsights_short}}), you can perform analytics on real-time data from your Internet of Things devices, and gain insights about their health and the overall state of your operations.
 {:shortdesc}

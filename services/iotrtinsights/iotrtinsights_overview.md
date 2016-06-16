@@ -11,6 +11,7 @@ copyright:
 # About {{site.data.keyword.iotrtinsights_short}}
 {: #iotrtinsights_overview}
 *Last updated: 11 February 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotrtinsights_short}} provides a real-time analytics engine and analytics authoring capability that enables the contextualization and monitoring of IoT device data, speeds understanding of current conditions, and improves decision-making and responses to emerging issues.
 {:shortdesc}
