@@ -11,6 +11,7 @@ copyright:
 # About {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
 *Last updated: 16 May 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}

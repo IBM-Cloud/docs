@@ -13,6 +13,7 @@ copyright:
 {: #getting-customer-support}
 
 *Last updated: 8 June 2016*
+{: .last-updated}
 
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you have several support options, such as getting help through a forum, or opening a support ticket.

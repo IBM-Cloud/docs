@@ -15,6 +15,7 @@ copyright:
 
 # Uploading your application
 *Last updated: 17 February 2016*
+{: .last-updated}
 
 After you are logged in to {{site.data.keyword.Bluemix}}, you can upload your application with the cf push command.
 {:shortdesc}

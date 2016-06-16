@@ -16,6 +16,7 @@ copyright:
 {: #gettingstartedtemplate}
 <!-- Provide and appropriate ID above -->
 *Last updated: 9 June 2016*
+{: .last-updated}
 
 Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter boilerplate. With the Starter, you can quickly simulate a device, create cards, generate data, and begin analyzing and displaying data in the {{site.data.keyword.iot_short_notm}} dashboard.
 {: shortdesc}

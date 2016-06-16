@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # Start coding with Git
-*Last updated: 2 March 2016*  
+*Last updated: 2 March 2016*
+{: .last-updated}  
 
 You can create a hosted Git repository that deploys to {{site.data.keyword.Bluemix}} automatically. Then, you can modify the code that runs in your app by pushing changes to the Git repository. 
 {:shortdesc}

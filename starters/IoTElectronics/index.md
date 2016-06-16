@@ -13,6 +13,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotelectronics}}
 *Last updated: 16 May 2016*
+{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances.
 {:shortdesc}

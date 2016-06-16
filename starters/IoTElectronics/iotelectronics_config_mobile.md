@@ -20,6 +20,7 @@ copyright:
 # Getting started with the mobile app
 {: #iot4e_getting_started_mobile}
 *Last updated: 03 May 2016*
+{: .last-updated}
 
 Get started with the {{site.data.keyword.iotelectronics_full}} mobile app to see how you can receive alerts, send commands, and check the status of your connected appliances.
 {:shortdesc}
