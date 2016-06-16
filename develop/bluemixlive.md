@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Last Updated: 07 April 2016*  
+*Last Updated: 07 April 2016*
+{: .last-updated}  
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
 {: shortdesc}
