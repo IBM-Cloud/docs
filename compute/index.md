@@ -15,6 +15,7 @@ copyright:
 
 # Compute
 *Last updated: 19 February 2016*
+{: .last-updated}
 
 Compute encompasses the infrastructure and resources you can choose from to build {{site.data.keyword.Bluemix}} apps. Compute resources include {{site.data.keyword.openwhisk_short}}, Cloud Foundry apps, {{site.data.keyword.IBM_notm}} Containers, and {{site.data.keyword.IBM_notm}}  {{site.data.keyword.virtualmachinesshort}}.
 {:shortdesc}
