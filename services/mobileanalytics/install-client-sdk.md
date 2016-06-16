@@ -9,6 +9,7 @@ copyright:
 Client SDKs
 {: #mobileanalytics_sdk}
 *Last updated: 21 April 2016*
+{: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_short}}
 Client SDKs are currently available for Android, iOS and WatchOS.

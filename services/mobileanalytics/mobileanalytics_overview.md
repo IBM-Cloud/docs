@@ -8,6 +8,7 @@ copyright:
 
 # About {{site.data.keyword.mobileanalytics_short}}  
 *Last updated: 21 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 The {{site.data.keyword.mobileanalytics_full}} service provides key app usage and performance insights for mobile app developers and app owners.  By using {{site.data.keyword.mobileanalytics_short}} app owners and developers can understand what is happening on the "user side", and they can use this insight to build better apps that are hyper-relevant to users and that stand out in the veritable sea of mobile apps. 

@@ -13,6 +13,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 *Last updated: 28 April 2016*
+{: .last-updated}
 
 Use the {{site.data.keyword.mobileanalytics_full}} service to measure the state, behavior, and context of your mobile apps, mobile users, and mobile devices.
 {: shortdesc}

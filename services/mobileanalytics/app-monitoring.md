@@ -7,6 +7,7 @@ copyright:
 # Monitoring apps with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 *Last updated: 25 April 2016*
+{: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and client logs.
 {: shortdesc}
