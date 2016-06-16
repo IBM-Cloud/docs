@@ -22,6 +22,7 @@ copyright:
 {: #deliverypipeline_extending}
 
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 {:shortdesc}

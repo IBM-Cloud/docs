@@ -19,6 +19,7 @@ copyright:
 # Building and deploying from pipelines
 {: #deliverypipeline_build_deploy}
 *Last updated: 13 May 2016*
+{: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service allows you to implement a repeatable continuous integration and continuous delivery process.
 {:shortdesc}

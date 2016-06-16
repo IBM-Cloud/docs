@@ -15,6 +15,7 @@ copyright:
 
 {: #deliverypipeline_about}
 *Last updated: 1 June 2016*
+{: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service, also known as pipeline, automates the continuous deployment of your Bluemix projects. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}

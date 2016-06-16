@@ -19,6 +19,7 @@ copyright:
 # Managing pipelines
 {: #deliverypipeline_managing}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 You can administer, configure, and extend IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} integrations.
 {:shortdesc}

@@ -20,6 +20,7 @@ copyright:
 {: #deliverypipeline_environment}
 
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 You can use environment properties and pre-installed resources to interact with the IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service. For example, you might use them in a job script or test command.
 {:shortdesc}
