@@ -15,6 +15,7 @@ copyright:
 {: #DRA_toolchain_configure_pipeline}
 
 *Last updated: 31 May 2016*
+{: .last-updated}
 
 After you define the criteria for {{site.data.keyword.DRA_short}} to monitor, the next step is to add {{site.data.keyword.DRA_short}} to a toolchain and then configure the {{site.data.keyword.deliverypipeline}}.
 {:shortdesc}

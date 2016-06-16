@@ -15,6 +15,7 @@ copyright:
 {: #DRA_toolchain_reports}
 
 *Last updated: 09 June 2016*
+{: .last-updated}
 
 To run {{site.data.keyword.DRA_short}} in the pipeline, start the pipeline from the initial stage as you normally would, or if you would prefer to just test {{site.data.keyword.DRA_short}}, run a stage that contains {{site.data.keyword.DRA_short}} jobs.
 {:shortdesc}

@@ -15,6 +15,7 @@ copyright:
 {: #DRA_criteria}
 
 *Last updated: 6 June 2016*
+{: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the criteria for your application is easy. To get started, follow these steps:
 {:shortdesc}

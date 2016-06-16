@@ -15,6 +15,7 @@ copyright:
 {: #DRA_gettingstarted}
 
 *Last updated: 24 May 2016*
+{: .last-updated}
 
 {{site.data.keyword.DRA_full}} allows you to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
 {:shortdesc}
