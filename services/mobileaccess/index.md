@@ -13,6 +13,7 @@ copyright:
 # Getting started with {{site.data.keyword.amashort}}
 {: #gettingstarted}
 *Last updated: 25 April 2016*
+{: .last-updated}
 
 Add security and monitoring functionality to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authentication and identity providers so that users can log in to the app with their existing Google or Facebook accounts. You can also add monitoring function to your app that enables both client logging and usage statistics.
 {:shortdesc}
