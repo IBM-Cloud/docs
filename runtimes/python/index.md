@@ -42,7 +42,7 @@ When a version is not specified, version 2.7.10 is chosen by default.
 {: #available_versions}
 
 The following Python versions are available in the
-[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.1)
+[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.2)
 currently installed in {{site.data.keyword.Bluemix}}:
 
 * 2.7.9
