@@ -7,6 +7,7 @@
 {: #examples}
 
 *Last updated: 13 May 2016*
+{: .last-updated}
 
 To get started with the {{site.data.keyword.twittershort}} service, use the provided samples to gain an understanding of how to leverage the service.
 {: shortdesc}

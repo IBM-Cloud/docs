@@ -14,6 +14,7 @@ copyright:
 {: #rest_apis}
 
 *Last updated: 13 May 2016*
+{: .last-updated}
 
 The {{site.data.keyword.twittershort}} service consists of RESTful APIs to search and consume Twitter content. The query language section below lists the query terms that are supported by the service APIs. Examples are provided to demonstrate how queries can be constructed.
 {:shortdesc}
