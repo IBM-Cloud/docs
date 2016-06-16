@@ -15,6 +15,7 @@ copyright:
 {: #globalizationpipeline_workingwithbundles}
 
 *Last updated: 25 March 2016*
+{: .last-updated}
 
 Each bundle contains a source file and also all of the translations that have been generated from that file.
 {:shortdesc}

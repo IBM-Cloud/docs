@@ -14,6 +14,7 @@ copyright:
 {: #globalizationpipeline_managingtranslations}
 
 *Last updated: 30 March 2016*
+{: .last-updated}
 
 Once you have created bundles and started generating translations for your application, the machine generated content can be used as is or further modified.  This section explains how to perform human post-translation editing and also how you can assign user roles and access restrictions to the people that will need to access to your translations.
 {:shortdesc}

@@ -15,6 +15,7 @@ copyright:
 {: #globalizationpipeline}
 
 *Last updated: 25 March 2016*
+{: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} is a service that provides machine translation and editing capabilities for rapidly translating web or mobile UIs. With its dashboard, RESTful API, and integration with your app's delivery pipeline, you can release to global customers without having to rebuild or re-deploy your app.
 {:shortdesc}

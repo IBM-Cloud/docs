@@ -15,6 +15,7 @@ copyright:
 {: #globalizationpipelinets}
 
 *Last updated: 22 March 2016*
+{: .last-updated}
 
 Here are the answers to several common questions about using {{site.data.keyword.GlobalizationPipeline_short}} in {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
