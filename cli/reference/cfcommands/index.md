@@ -17,6 +17,7 @@ copyright:
 # Cloud Foundry (cf) commands
 
 *Last updated: 29 January 2016*
+{: .last-updated}
 
 You can use Cloud Foundry (cf) commands to manage your apps.
 {:shortdesc}

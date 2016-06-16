@@ -15,6 +15,7 @@ copyright:
 # VCAP services
 
 *Last updated: 15 March 2016*
+{: .last-updated}
 
 
 The VCAP_SERVICES environment variable is a JSON object that contains information that you can use to interact with a service instance in {{site.data.keyword.Bluemix_notm}}.

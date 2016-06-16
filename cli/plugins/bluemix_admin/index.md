@@ -19,6 +19,7 @@ copyright:
 {: #bluemixadmincli}
 
 *Last updated: 2 June 2016*
+{: .last-updated}
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
