@@ -12,6 +12,7 @@ copyright:
 {: #toolchains-using}
 
 *Last updated: 4 May 2016*
+{: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}

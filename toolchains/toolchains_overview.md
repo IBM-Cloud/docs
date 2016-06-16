@@ -11,7 +11,8 @@ copyright:
 # Getting started with toolchains (Experimental)
 {: #toolchains_getting_started}
 
-*Last updated: 8 June 2016*  
+*Last updated: 8 June 2016*
+{: .last-updated}  
 
 A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
