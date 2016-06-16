@@ -18,6 +18,7 @@ copyright:
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
 *Last updated: 1 June 2016*
+{: .last-updated}
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
 {:shortdesc}

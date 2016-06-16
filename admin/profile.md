@@ -18,6 +18,7 @@ copyright:
 # Profile settings
 {: #usersettings}
 *Last updated: 16 May 2016*
+{: .last-updated}
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile** to update your profile settings.
 {:shortdesc}
