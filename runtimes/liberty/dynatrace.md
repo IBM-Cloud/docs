@@ -12,6 +12,7 @@ copyright:
 {: #using_dynatrace}
 
 *Last Updated: 29 April 2016*
+{: .last-updated}
 
 Dynatrace is a third-party service that provides monitoring for your app.
 

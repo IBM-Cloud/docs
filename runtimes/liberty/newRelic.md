@@ -12,6 +12,7 @@ copyright:
 {: #new_relic}
 
 *Last Updated: 28 April 2016*
+{: .last-updated}
 
 New Relic is a third-party service that provides monitoring metrics for your application. For more information on what the New Relic service provides, see [New Relic](http://newrelic.com/java).
 

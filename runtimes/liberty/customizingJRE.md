@@ -12,6 +12,7 @@ copyright:
 {: #customizing_jre}
 
 *Last Updated: 28 April 2016*
+{: .last-updated}
 
 Applications are run in a Java runtime environment (JRE) that is provided and configured by the Liberty buildpack. The Liberty buildpack also makes it possible to configure the JRE version or type, customize the JVM options, or overlay the JRE functions.
 

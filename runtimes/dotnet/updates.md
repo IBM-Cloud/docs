@@ -12,6 +12,7 @@ copyright:
 {: #latest_updates}
 
 *Last Updated: 10 June 2016*
+{: .last-updated}
 
 A list of the latest updates in the aspnet buildpack.
 

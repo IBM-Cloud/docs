@@ -13,6 +13,7 @@ copyright:
 # ASP.NET Core 
 {: #dotnet_core}
 *Last updated: 30 May 2016*
+{: .last-updated}
 
 The ASP.NET Core runtime on {{site.data.keyword.Bluemix}} is powered by the ASP.NET Core buildpack. ASP.NET Core 
 is a modular open source framework for building .NET web applications.

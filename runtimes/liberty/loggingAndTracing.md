@@ -13,6 +13,7 @@ copyright:
 {: #logging_tracing}
 
 *Last Updated: 23 March 2016*
+{: .last-updated}
 
 ## Log files
 {: #log_files}

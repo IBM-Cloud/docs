@@ -14,6 +14,7 @@ copyright:
 {: #environment_variables}
 
 *Last Updated: 23 March 2016*
+{: .last-updated}
 
 Environment variables supported by Liberty for Java.
 

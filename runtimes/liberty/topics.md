@@ -13,6 +13,7 @@ copyright:
 {: #topics}
 
 *Last updated: 23 March 2016*
+{: .last-updated}
 
 * [Liberty runtime](index.html)
 * [Detection](index.html#detection)

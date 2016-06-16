@@ -14,6 +14,7 @@ copyright:
 ## A list of the latest updates in the Liberty buildpack.
 
 *Last Updated: 23 May 2016*
+{: .last-updated}
 
 ### May 25, 2016: Updated Liberty buildpack v2.9-20160519-1249
 * The buildpack contains an updated version of WebSphere Liberty based on the [May beta](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). The updated version of Liberty makes the *bluemixLogCollector-1.1* and *logstashCollector-1.1* beta features available in Bluemix.
