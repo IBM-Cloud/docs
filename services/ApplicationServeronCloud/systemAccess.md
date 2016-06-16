@@ -16,7 +16,6 @@ These topics include methods of creating and managing a service instance, along 
 
 *Last updated: 08 June 2016*
 {: .last-updated}
-{: .last-updated}
 
 ## REST API Usage in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #restapi_usage}
@@ -30,10 +29,10 @@ Through use of our Swagger 2.0 compliant REST APIs, clients have access to the s
 
 **Note:** After creating a service instance, depending on the Tee-Shirt size that is created, your service might not be immediately ready for use. It is recommended that you query the **Status** field of the JSON returned to determine the current state of the service instance.
 
-**Note:** By default, the API BASE URL points to an endpoint in the [US South Region](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}.  If you are using the UK or Sydney Region, then ensure that your application uses one of the following endpoints:
+**Note:** By default, the API BASE URL points to an endpoint in the [US South Region](https://wasaas-broker.ng.bluemix.net/wasaas-broker){: new_window}.  If you are using the UK or Sydney Region, then ensure that your application uses one of the following endpoints:
 
-* [UK Region](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
-* [Sydney Region](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [UK Region](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker){: new_window}
+* [Sydney Region](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker){: new_window}
 
 
 ## Service Dashboard
