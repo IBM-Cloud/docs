@@ -11,7 +11,8 @@ copyright:
 
 # Using the command line interface
 {: #cli}
-*Last updated: 03 May 2016* 
+*Last updated: 03 May 2016*
+{: .last-updated} 
 
 You can create and delete the IBM CDN service by using the command line interface. 
 {:shortdesc}

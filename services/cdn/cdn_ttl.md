@@ -11,7 +11,8 @@ copyright:
 
 # Configuring time to live (TTL)
 {: #ttl}
-*Last updated: 03 May 2016* 
+*Last updated: 03 May 2016*
+{: .last-updated} 
 
 Use the time to live (TTL) option to configure a time limit of content expiry. On expiry, the cache fetches the object from the application server. The default TTL value is 3600 seconds.
 {:shortdesc}

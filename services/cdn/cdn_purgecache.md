@@ -12,6 +12,7 @@ copyright:
 #Purging cache content
 {: #purgecache}
 *Last updated: 03 May 2016*
+{: .last-updated}
 
 Use the {{site.data.keyword.cdn_short}} purge cache option to remove all or selected objects from the CDN cache. You will need to use this option every time you push a new Bluemix application or change content of an existing application.
 {:shortdesc}

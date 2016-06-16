@@ -12,6 +12,7 @@ copyright:
 # Stopping the service  
 {: #stop_cdn}
 *Last updated: 03 May 2016*
+{: .last-updated}
 
 You can stop using the {{site.data.keyword.cdn_short}} service for an application by deleting the service from the dashboard.
 {:shortdesc}

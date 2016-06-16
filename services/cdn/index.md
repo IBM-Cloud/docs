@@ -11,7 +11,8 @@ copyright:
 
 # Getting started with {{site.data.keyword.cdn_short}} (Beta)
 {: #cdn}  
-*Last updated: 03 May 2016*  
+*Last updated: 03 May 2016*
+{: .last-updated}  
 
 Use {{site.data.keyword.cdn_full}} (CDN) to reduce content load time, enhance user experience, and lower bandwidth usage in your Bluemix&reg; or virtual server applications. The service supports only HTTP applications. HTTPS applications are not supported. 
 {:shortdesc}
