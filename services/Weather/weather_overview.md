@@ -14,6 +14,7 @@ copyright:
 {: #about_weather}
 
 *Last updated: 19 May 2016*
+{: .last-updated}
 
 Use {{site.data.keyword.weatherfull}} to incorporate weather data from
 The Weather Company (TWC) into your {{site.data.keyword.Bluemix}} applications.

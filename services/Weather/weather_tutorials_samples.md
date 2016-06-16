@@ -14,6 +14,7 @@ copyright:
 {: #tutorials_samples}
 
 *Last updated: 06 April 2016*
+{: .last-updated}
 
 Learn how to use the Insights for Weather service with the following examples.
 {: shortdesc}

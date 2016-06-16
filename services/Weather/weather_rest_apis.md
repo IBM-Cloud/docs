@@ -14,6 +14,7 @@ copyright:
 {: #rest_apis}
 
 *Last updated: 06 April 2016*
+{: .last-updated}
 
 You can use the [Insights for Weather REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window} 
 to retrieve weather data. You can test API operations and instantly view the results to help you build your applications faster.
