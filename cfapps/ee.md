@@ -19,6 +19,7 @@ copyright:
 {: #ee}
 
 *Last updated: 15 June 2016*
+{: .last-updated}
 
 You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a selection of tools when you build, run, and deploy your apps. Follow this end-to-end development scenario to get started.
 {:shortdesc}
