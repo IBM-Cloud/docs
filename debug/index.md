@@ -17,6 +17,7 @@ copyright:
 {: #debugging}
 
 *Last updated: 25 May 2016*
+{: .last-updated}
 
 If you experience problems with {{site.data.keyword.Bluemix}}, you can view the log files to investigate the problems and debug the errors. 
 {:shortdesc}
