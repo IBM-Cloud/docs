@@ -15,6 +15,7 @@ copyright:
 {: #developingapps}
 
 *Last updated: 17 March 2016*
+{: .last-updated}
 
 You can develop applications by using an integrated development environment (IDE) or a text editor, or you can use {{site.data.keyword.Bluemix}} DevOps Services.
 {:shortdesc} 
