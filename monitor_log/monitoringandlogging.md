@@ -15,6 +15,7 @@ copyright:
 {: #monitoringandlogging}
 
 *Last updated: 24 May 2016*
+{: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
