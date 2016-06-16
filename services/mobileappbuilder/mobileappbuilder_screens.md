@@ -9,6 +9,7 @@ copyright:
 # Customizing your app
 {: #mobileappbuilder_screens}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 Different screens let you customize your app, such as design, data, security, app settings, push, or publish.

@@ -9,6 +9,7 @@ copyright:
 # About {{site.data.keyword.mobileappbuilder_short}}
 {: #mobileappbuilder_about}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 The {{site.data.keyword.mobileappbuilder_full}} service lets you rapidly prototype an app by using a predefined set of app templates. You can then add services to the app and generate the source code for the app, all without writing a single line of code. You can directly install the app on your device or download the source code and use it in your development environment. 

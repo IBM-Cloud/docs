@@ -9,6 +9,7 @@ copyright:
 # Using templates
 {: #mobileappbuilder_templates}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 Select from a set of templates that target various scenarios commonly found in an enterprise, such as Directory, Compliance, or Catalog. You can also design an app from scratch with the empty template.

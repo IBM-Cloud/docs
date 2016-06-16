@@ -9,6 +9,7 @@ copyright:
 # Using the dashboard
 {: #mobileappbuilder_dashboard}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 The {{site.data.keyword.mobileappbuilder_short}} service dashboard is available from your Bluemix dashboard by clicking the {{site.data.keyword.mobileappbuilder_short}} service tile. The dashboard helps you manage all your apps.

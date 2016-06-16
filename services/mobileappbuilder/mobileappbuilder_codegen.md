@@ -9,6 +9,7 @@ copyright:
 # Generating the app code
 {: #mobileappbuilder_codegen}
 *Last updated: 29 April 2016*
+{: .last-updated}
 
 {: shortdesc}
 After the app is designed, you can select the platform and create the app. Creating the app compiles and builds the app in the cloud, and lets you download the source code or the app binary.
