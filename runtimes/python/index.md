@@ -15,8 +15,7 @@ copyright:
 {: .last-updated}
 
 The Python runtime on {{site.data.keyword.Bluemix}} is powered by the python_buildpack.
-The python_buildpack provides a complete runtime environment for Python
-apps.
+The python_buildpack provides a complete runtime environment for both Python 2 and Python 3 apps.
 {: shortdesc}
 
 The python_buildpack will be used if your app's root directory contains a requirements.txt file or a setup.py file.
@@ -33,7 +32,7 @@ environment.  See [Using the starter applications](../../cfapps/starter_app_usag
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.4.3
+python-3.5.0
 ```
 {: codeblock}
 
