@@ -14,6 +14,7 @@ copyright:
 # Configuring the gateway at your data center or SoftLayer server
 {: #vpn_yourdatacenter}
 *Last updated: 17 March 2016*
+{: .last-updated}
 
 You need an IPSec VPN gateway at your data center or SoftLayer server to form a secure connection with the {{site.data.keyword.vpn_short}} service. The following VPN gateway configurations are required at your data center or SoftLayer server:
 

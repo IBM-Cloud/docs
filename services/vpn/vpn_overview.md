@@ -12,6 +12,7 @@ copyright:
 # About {{site.data.keyword.vpn_short}}
 {: #vpn_overview}  
 *Last updated: 17 March 2016*
+{: .last-updated}
 
 The {{site.data.keyword.vpn_full}} (VPN) service provides a secure communication channel between your corporate data center and your resources in the IBM Bluemix&reg; cloud environment. The connection is established over the Internet.
 {:shortdesc}

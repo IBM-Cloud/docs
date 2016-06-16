@@ -14,6 +14,7 @@ copyright:
 # On-premises configuration examples
 {:#onpremises}
 *Last updated: 17 March 2016*
+{: .last-updated}
 
 Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} gateway. You might need to modify the configuration of the on-premises gateway that you are using. 
 {:shortdesc}

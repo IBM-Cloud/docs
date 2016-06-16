@@ -12,6 +12,7 @@ copyright:
 # {{site.data.keyword.vpn_short}} FAQs
 {: #vpn_faq}
 *Last updated: 06 June 2016*
+{: .last-updated}
 
 Following are some frequently asked questions.
 {:shortdesc}

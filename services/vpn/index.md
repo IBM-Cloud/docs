@@ -12,6 +12,7 @@ copyright:
 # Getting started with {{site.data.keyword.vpn_short}}
 {: #vpn}  
 *Last updated: 04 June 2016*
+{: .last-updated}
 
 The {{site.data.keyword.vpn_full}} service for Bluemix&reg; is available to securely access IBM Containers (Docker containers) inside the IBM Bluemix cloud environment. You can use the IBM Bluemix cloud environment as an extension of your corporate data center. You can also connect with the SoftLayer servers using the IBM VPN service.
 {:shortdesc}

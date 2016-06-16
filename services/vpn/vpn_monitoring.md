@@ -13,7 +13,8 @@ copyright:
 
 # Monitoring status and traffic flow
 {: #monitor}  
-*Last updated: 30 May 2016*  
+*Last updated: 30 May 2016*
+{: .last-updated}  
 
 Use the monitoring feature to view the connection status and rate of traffic flow between your on-premises or SoftLayer server VPN gateway, and the {{site.data.keyword.vpn_short}} gateway. 
 {:shortdesc}  
