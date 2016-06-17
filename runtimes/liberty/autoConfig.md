@@ -12,7 +12,7 @@ copyright:
 # Automatic configuration of bound services
 {: #auto_config}
 
-*Last Updated: 31 March 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 You can bind various services to your Liberty application. Services can be container-managed, application-managed, or both, depending on what the developer wants.
@@ -123,6 +123,8 @@ Here are examples of how to set the services_autoconfig_excludes environment var
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,7 @@ copyright:
 # Using the beta features
 {: #using_beta_features}
 
-*Last Updated: 23 May 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 The Liberty beta features provide early access to new functionality and programming models that might be included in a future Liberty release. Most of the beta features can also be used in applications deployed to Bluemix.
@@ -44,7 +44,7 @@ Liberty beta features available in Bluemix
 
 </table>
 
-In order to use the Liberty beta features in Bluemix you will need to do either:
+In order to use the Liberty beta features in Bluemix you will need to do following:
 
 1. [Deploy a server directory or a packaged server](optionsForPushing.html) with one or more beta features enabled in the server.xml file as in the example that follows:
 ```
@@ -57,7 +57,7 @@ In order to use the Liberty beta features in Bluemix you will need to do either:
 ```
 {: #codeblock}
 
-2.  Set the IBM_LIBERTY_BETA environment variable to **true**. This variable directs the Liberty buildpack to install and enable the beta features for your application.  See the following examples:
+2.  Set the **IBM_LIBERTY_BETA** environment variable to **true**. This variable directs the Liberty buildpack to install and enable the beta features for your application.  For example:
   * using the cf command line tool:
 ```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
@@ -69,9 +69,27 @@ In order to use the Liberty beta features in Bluemix you will need to do either:
       env:
           IBM_LIBERTY_BETA: "true"
 ```
+
+3. Set the **JBP_CONFIG_LIBERTY** environment variable to **"version: +"**. This variable enables the [Liberty beta runtime](buildpackDefaults.html#liberty_versions) which supports beta features. For example:
+  * using the cf command line tool:
+```
+       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+```
+{: #codeblock}
+
+  * or, using the manifest.yml file:
+```
+      env:
+          JBP_CONFIG_LIBERTY: "version: +"
+```
+
+If you are enabling the beta features on an existing application, don't forget to re-stage your application after setting the environment variables.
+
 {: #codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

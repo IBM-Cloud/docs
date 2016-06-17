@@ -11,7 +11,7 @@ copyright:
 # Using Dynatrace
 {: #using_dynatrace}
 
-*Last Updated: 29 April 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 Dynatrace is a third-party service that provides monitoring for your app.
@@ -122,6 +122,8 @@ The Liberty app you want to monitor must be configured to locate the server host
 </ol>
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,7 @@ copyright:
 # Using New Relic
 {: #new_relic}
 
-*Last Updated: 28 April 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 New Relic is a third-party service that provides monitoring metrics for your application. For more information on what the New Relic service provides, see [New Relic](http://newrelic.com/java).
@@ -101,6 +101,8 @@ Auto configuration of the New Relic service is different from the auto configura
 * The configuration relies on both VCAP_SERVICES and VCAP_APPLICATION.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

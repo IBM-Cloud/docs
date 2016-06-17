@@ -12,7 +12,7 @@ copyright:
 # Logging and tracing
 {: #logging_tracing}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 ## Log files
@@ -37,6 +37,8 @@ In the IBM Bluemix user interface, there are trace and dump capabilities.
 To do this action, select a Liberty application in the user interface. Under Runtime in the navigation on the left, you can open the instance details. Select an instance or multiple instances. Under the Actions menu, you can choose TRACE or DUMP.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

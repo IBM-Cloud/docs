@@ -11,7 +11,7 @@ copyright:
 # Customizing the JRE
 {: #customizing_jre}
 
-*Last Updated: 28 April 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 Applications are run in a Java runtime environment (JRE) that is provided and configured by the Liberty buildpack. The Liberty buildpack also makes it possible to configure the JRE version or type, customize the JVM options, or overlay the JRE functions.
@@ -282,6 +282,8 @@ Download the appropriate unrestricted policy files and add them to your applicat
 When you push your application, these jars overlay the default policy jars in the Java runtime. This process enables AES 256-bit encryption.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
