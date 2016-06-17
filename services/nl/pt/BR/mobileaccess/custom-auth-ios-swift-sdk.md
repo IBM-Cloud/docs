@@ -5,15 +5,15 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} Client SDK for iOS (Swift SDK)
+# Configurando o {{site.data.keyword.amashort}} client SDK para iOS (Swift SDK)
 {: #custom-ios}
 
-Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} Client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
+Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 ## Antes de iniciar
 {: #before-you-begin}
 
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também devem ser instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
 ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configurando o iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
@@ -42,13 +42,13 @@ autenticação customizada.
 
  1. Clique em **Salvar**.
 
-## Configurando o {{site.data.keyword.amashort}} Client SDK para iOS
+## Configurando o {{site.data.keyword.amashort}} client SDK para iOS
  {: #custom-auth-ios-sdk}
 
 ### Instalando o CocoaPods
  {: #custom-auth-cocoapods}
 
- O {{site.data.keyword.amashort}} Client SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
+ O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um gerenciador de dependência para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
 
  1. Abra o Terminal e execute o comando `pod --version`. Se você já tiver o CocoaPods instalado, o número da versão será exibido. É possível pular para a próxima seção deste tutorial.
 
@@ -60,10 +60,10 @@ autenticação customizada.
 
  1.  Execute `pod init`.
 
-### Instalando o Client SDK com o CocoaPods
+### Instalando o client SDK com o CocoaPods
 {: #custom-ios-sdk-cocoapods}
 
-Use o gerenciador de dependência CocoaPods para instalar o {{site.data.keyword.amashort}} Client SDK.
+Use o gerenciador de dependência CocoaPods para instalar o {{site.data.keyword.amashort}} client SDK.
 
 1. Abra o Terminal e navegue até o diretório-raiz de seu projeto iOS.
 
@@ -83,7 +83,7 @@ O CocoaPods instala as dependências incluídas. O progresso e quais componentes
 
 1. Execute `open {your-project-name}.xcworkspace` a partir da linha de comandos para abrir sua área de trabalho do projeto iOS.
 
-### Inicializando o Client SDK
+### Inicializando o client SDK
 {: #custom-ios-sdk-initialize}
 
 Inicialize o SDK passando os parâmetros `applicationRoute` e
@@ -93,8 +93,7 @@ Inicialize o SDK passando os parâmetros `applicationRoute` e
 valores `applicationRoute` e `applicationGUID` são
 exibidos nos campos **Rota** e **GUID do app**.
 
-1. Importe as estruturas necessárias na classe em que deseja usar o
-{{site.data.keyword.amashort}} Client SDK.
+1. Importe as estruturas necessárias na classe em que deseja usar o {{site.data.keyword.amashort}} client SDK.
 
  ```Swift
  import UIKit
@@ -102,9 +101,7 @@ exibidos nos campos **Rota** e **GUID do app**.
  import BMSSecurity
 ```
 
-1. Inicialize o {{site.data.keyword.amashort}} Client SDK, mude o
-gerenciador de autorização para ser MCAAuthorizationManager e defina uma delegação de
-autenticação e registre-a. Substitua os valores
+1. Inicialize o {{site.data.keyword.amashort}} client SDK, mude o gerenciador de autorização para ser MCAAuthorizationManager e defina uma delegação de autenticação e registre-a. Substitua os valores
 `<applicationRoute>` e
 `<applicationGUID>` pelos valores de **Rota** e
 **GUID do app** que você obteve das **Opções
@@ -155,8 +152,7 @@ móveis** no painel {{site.data.keyword.Bluemix_notm}}.
 ## Testando a Autenticação
 {: #custom-ios-testing}
 
-Depois de inicializar o Client SDK e registrar uma delegação de autenticação
-customizada, é possível começar a fazer solicitações ao backend móvel.
+Depois de inicializar o client SDK e registrar uma delegação de autenticação customizada, será possível começar a fazer solicitações ao seu backend móvel.
 
 ### Antes de iniciar
 {: #custom-ios-testing-before}
@@ -166,7 +162,7 @@ customizada, é possível começar a fazer solicitações ao backend móvel.
 1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
 abrindo `{applicationRoute}/protected`, por exemplo,
 `http://my-mobile-backend.mybluemix.net/protected`.
-  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+  O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo iOS para fazer solicitação ao mesmo terminal. Inclua o
 código a seguir depois de inicializar `BMSClient` e registrar a

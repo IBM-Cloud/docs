@@ -8,7 +8,7 @@ copyright:
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 계측하고, SDK를 초기화하고, 보호 및 비보호 자원에 대한 요청을 작성하십시오. 
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 자원을 요청하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -20,7 +20,7 @@ copyright:
 ## {{site.data.keyword.amashort}} Cordova 플러그인 설치
 {: #getting-started-cordova-plugin}
 
-Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 플러그인을 자동으로 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
+Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 기본 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 플러그인을 자동으로 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
 
 1. Android 및 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령 중 하나 또는 둘 다 실행하십시오. 
 
@@ -42,9 +42,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	</platform>
 	```
 
-	*minSdkVersion* 값은 `15`보다 커야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.
-
-
+	*minSdkVersion* 값은 `15`보다 커야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.  
 
 1. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
 
@@ -58,7 +56,8 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 1. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
 
  	```Bash
-	cordova plugin add ibm-mfp-core```
+	cordova plugin add ibm-mfp-core
+	```
 
 1. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오.
 
@@ -92,8 +91,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 		4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-1. 다음 명령을 실행하여 플러그인이 올바르게 설치되었는지 확인하십시오.
-    
+1. 다음 명령을 실행하여 플러그인이 올바르게 설치되었는지 확인하십시오. 
 
 	```Bash
 	cordova plugin list
@@ -102,11 +100,11 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 ## {{site.data.keyword.amashort}} 클라이언트 플러그인 초기화
 {: #getting-started-cordova-initialize}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면, *applicationGUID* 및 *applicationRoute* 매개변수를 전달하여 SDK를 초기화해야 합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 *applicationGUID* 및 *applicationRoute* 매개변수를 전달하여 SDK를 초기화해야 합니다.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 라우트 및 앱 GUID 값을 찾으십시오. SDK를 초기화하려면 앱 이름을 클릭한 다음 **애플리케이션 라우트** 및 **애플리케이션 GUID** 값을 표시하도록 **모바일 옵션**을 클릭하십시오. 
 
-3. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하려면 `index.js` 파일에 다음 호출을 추가하십시오. *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오.
+3. 다음 호출을 `index.js` 파일에 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오.
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -115,18 +113,15 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 ## 모바일 백엔드에 대한 요청 작성
 {: #getting-started-request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
-1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. 예를 들면 다음과 같습니다.
-
+1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. 예를 들면 다음과 같습니다. 
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
 	```
 
-	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스하기 때문에 이 메시지가 리턴됩니다.
-
-
+	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스되므로 이 메시지가 리턴됩니다.
 
 1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
@@ -141,7 +136,8 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 
-	request.send(success, failure);```
+	request.send(success, failure);
+	```
 
 1. 요청에 성공하는 경우 LogCat 또는 Xcode 콘솔에 다음 출력이 표시됩니다(사용 중인 플랫폼에 따라 다름). 
 

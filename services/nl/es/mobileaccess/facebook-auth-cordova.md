@@ -11,7 +11,7 @@ Para configurar aplicaciones de Cordova para la integración de la autenticació
 
 ## Antes de empezar
 {: #facebook-auth-before}
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Cordova instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del plug-in de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
+* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Cordova instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del plug-in de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Cree un ID de aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 * (opcional) Familiarícese con las secciones siguientes:
@@ -71,7 +71,7 @@ Añada la línea siguiente al método `application:openURL:sourceApplication:ann
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #facebook-auth-cordova-init}
 
-Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}.
+Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -81,7 +81,7 @@ Sustituya *applicationRoute* y *applicationGUID* por los valores correspondiente
 
 ## Prueba de autenticación
 {: #facebook-auth-cordova-test}
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).

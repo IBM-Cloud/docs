@@ -24,12 +24,12 @@ Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in G
 
 1. Erstellen Sie ein Projekt in [Google Developer Console](https://console.developers.google.com).
 Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
-   1.    Öffnen Sie ein neues Projektmenü. 
-         
+   1.    Öffnen Sie ein neues Projektmenü.
+
          ![Bild](images/FindProject.jpg)
 
    2.    Klicken Sie auf **Create a project**.
-   
+
          ![Bild](images/CreateAProject.jpg)
 
 
@@ -42,11 +42,11 @@ Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Proje
 1. Wählen Sie die Registerkarte **Consent Screen** aus und geben Sie den Produktnamen an, der den Benutzern angezeigt wird. Weitere Werte sind optional. Klicken Sie auf **Save**.
 
     ![Bild](images/consentScreen.png)
-    
+
 1. Wählen Sie in der Liste **Credentials** die OAuth-Client-ID aus.
 
      ![Bild](images/chooseCredentials.png)
-     
+
 
 
 1. An diesem Punkt wird eine Auswahl für den Anwendungstyp angezeigt. Wählen Sie **iOS** aus.
@@ -69,7 +69,7 @@ Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung
 
 1. Klicken Sie auf die Kachel für **Google**.
 
-1. Geben Sie in **Application ID for iOS** (Anwendungs-ID für iOS) Ihre iOS-Client-ID für Android an und klicken Sie auf **Save** (Speichern).
+1. Geben Sie bei **Application ID for iOS** (Anwendungs-ID für iOS) Ihre iOS-Client-ID für Android an und klicken Sie auf **Save** (Speichern).
 
 	Anmerkung: Zusätzlich zur Google-Client-ID ist auch der Umkehrwert für Ihre Clientkonfiguration erforderlich (siehe unten). Um auf beide Werte zuzugreifen, müssen Sie mithilfe des Stiftsymbols die Beispiel-PList herunterladen:
 		![Download der Datei info.plist](images/download_plist.png)
@@ -101,7 +101,7 @@ Konfigurieren Sie die Google-Integration, indem Sie die Datei `info.plist` aktua
 * Konfigurieren Sie die Google-Integration, indem Sie die folgenden URL-Schemas in Ihrer Datei `info.plist` hinzufügen.
 	![Datei 'info.plist'](images/ios-google-infoplist-settings.png)
 
-	Das erste URL-Schema ist eine umgekehrte Version der Client-ID aus Google Developer Console.  Beispiel: Wenn Ihre Client-ID `123123-abcabc.apps.googleusercontent.com` ist, sollte Ihr URL-Schema `com.googleusercontent.apps.123123-abcabc` sein. 
+	Das erste URL-Schema ist eine umgekehrte Version der Client-ID aus Google Developer Console.  Beispiel: Wenn Ihre Client-ID `123123-abcabc.apps.googleusercontent.com` ist, sollte Ihr URL-Schema `com.googleusercontent.apps.123123-abcabc` sein.
 
 	Das zweite URL-Schema ist die Bundle-ID Ihrer Anwendung.
 
@@ -169,7 +169,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	7. Setzen Sie den Wert auf die Position Ihrer Datei `BridgingHeader.h` (z. B. `$(SRCROOT)/MyApp/BridgingHeader.h`).
 	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
-3. Verwenden Sie den folgenden Code, um das SDK zu initialisieren.  Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
+3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
 
 	Objective-C:
 
@@ -249,7 +249,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
 
-1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
+1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden.
 
@@ -300,12 +300,11 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Die folgende Ausgabe sollte in LogCat angezeigt werden.
 
 	![Bild](images/ios-google-login-success.png)
-	
-	
+		
 	Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
-	
+
 	Objective-C:
-	
+
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
@@ -316,7 +315,6 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-
-	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei Mobile Client Access für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer in der rechten oberen Ecke der Anzeige auf den Benutzernamen klicken, um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
+	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Google zu Authentifizierungszwecken berechtigen. An dieser Stelle kann der Benutzer in der rechten oberen Ecke der Anzeige auf den Benutzernamen klicken, um einen anderen Benutzer auszuwählen und sich mit diesem anzumelden.
 
 	Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

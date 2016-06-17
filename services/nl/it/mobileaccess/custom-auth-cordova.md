@@ -110,7 +110,7 @@ var customAuthenticationListener = {
 		authenticationContext.submitAuthenticationChallengeAnswer(challengeResponse);
 
 		// Se si è verificato un errore di raccolta delle credenziali, devi
-		// segnalarlo all'authenticationContext. In caso contrario, l'SDK Client Mobile Client
+		// segnalarlo all'authenticationContext. In caso contrario, l'SDK client Mobile Client
 		// Access resterà in uno stato di attesa delle credenziali
 		// per sempre
 
@@ -148,8 +148,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 
 
 1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
- L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con
-l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+ L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
 1. Utilizza la tua applicazione Cordova per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo AuthenticationListener personalizzato.
 

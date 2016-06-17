@@ -16,19 +16,19 @@ Puede crear un proveedor de identidad personalizado e implementar su propia lóg
 ![imagen](images/mca-sequence-custom.jpg)
 
 1. Utilice el SDK de {{site.data.keyword.amashort}} para realizar una solicitud a los recursos de fondo que están protegidos por el SDK del servidor de {{site.data.keyword.amashort}}.
-* El SDK del servidor de {{site.data.keyword.amashort}} detecta una solicitud no autorizada y devuelve HTTP 401 y un ámbito de autorización.
-* El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código HTTP 401 anterior e inicia el proceso de autenticación.
-* El SDK del cliente de {{site.data.keyword.amashort}} contacta con el servicio de {{site.data.keyword.amashort}} y solicita que emita una cabecera de autorización.
+* El SDK del servidor de {{site.data.keyword.amashort}} detecta una solicitud no autorizada y devuelve HTTP 401 y un ámbito de autorización. 
+* El SDK del cliente de {{site.data.keyword.amashort}} detecta automáticamente el código HTTP 401 anterior e inicia el proceso de autenticación. 
+* El SDK del cliente de {{site.data.keyword.amashort}} contacta con el servicio de {{site.data.keyword.amashort}} y solicita que emita una cabecera de autorización. 
 * El servicio de {{site.data.keyword.amashort}} se comunica con el proveedor de identidad personalizado para iniciar el proceso de autenticación.
 * El proveedor de identidad personalizado devuelve un cambio de autenticación al servicio de {{site.data.keyword.amashort}}.
-* El servicio de {{site.data.keyword.amashort}} devuelve una cambio de autenticación al SDK del cliente de {{site.data.keyword.amashort}}.
-* El SDK del cliente de {{site.data.keyword.amashort}} delega la autenticación a una clase personalizada que haya creado. Se encargará de recopilar las credenciales y volver a suministrarlas al SDK del cliente de {{site.data.keyword.amashort}}.
+* El servicio de {{site.data.keyword.amashort}} devuelve una cambio de autenticación al SDK del cliente de {{site.data.keyword.amashort}}. 
+* El SDK del cliente de {{site.data.keyword.amashort}} delega la autenticación a una clase personalizada que haya creado. Se encargará de recopilar las credenciales y volver a suministrarlas al SDK del cliente de {{site.data.keyword.amashort}}. 
 * Después de que el desarrollador haya suministrado las credenciales al SDK de {{site.data.keyword.amashort}}, las credenciales se enviarán al servicio de {{site.data.keyword.amashort}} como respuesta al cambio de autenticación.
 * El servicio de {{site.data.keyword.amashort}} valida esta respuesta con el proveedor de identidad personalizado.
 * Si la validación es correcta, el servicio de {{site.data.keyword.amashort}} genera una cabecera de autorización y la devuelve al SDK del cliente de {{site.data.keyword.amashort}}. La cabecera de autorización contiene dos señales: una señal de acceso con información sobre permisos de acceso y una señal de ID que incluye información sobre la aplicación, el dispositivo y el usuario actuales.
-* A partir de este momento, todas las solicitudes realizadas con el SDK del cliente de {{site.data.keyword.amashort}} tendrán una cabecera de autorización nueva.
-* El SDK del cliente de {{site.data.keyword.amashort}} vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización.
-* El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, la valida con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo.
+* A partir de este momento, todas las solicitudes realizadas con el SDK del cliente de {{site.data.keyword.amashort}} tendrán una cabecera de autorización nueva. 
+* El SDK del cliente de {{site.data.keyword.amashort}} vuelve a enviar automáticamente la solicitud original que activó el flujo de autorización. 
+* El SDK del servidor de {{site.data.keyword.amashort}} extrae la cabecera de autorización de la solicitud, la valida con el servicio de {{site.data.keyword.amashort}} y otorga acceso a un recurso de fondo. 
 
 ## Proveedores de identidad personalizados
 {: #custom-id-about}
@@ -81,11 +81,11 @@ Ejemplo de respuesta a un cambio de autenticación personalizada enviado por el 
 
 ### Implementación de ejemplo de un proveedor de identidad personalizado
 {: #custom-sample}
-Puede hacer referencia a cualquiera de las siguientes implementaciones del ejemplo Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue el código completo de la aplicación desde los repositorios de GitHub. 
+Puede hacer referencia a cualquiera de las siguientes implementaciones del ejemplo Node.js de un proveedor de identidad personalizado cuando desarrolle el proveedor de identidad personalizado. Descargue el código completo de la aplicación desde los repositorios de GitHub.
 
  * [Ejemplo simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Ejemplo avanzado](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## Comunicación típica entre el servidor de {{site.data.keyword.amashort}} y un proveedor de identidad personalizado
 {: #custom-id-comm}
 1. El servicio de {{site.data.keyword.amashort}} envía una solicitud `startAuthorization` al proveedor de identidad personalizado.
@@ -109,5 +109,6 @@ Un proveedor de identidad personalizado da soporte a un reino de autenticación 
 * [Creación de un proveedor de identidad personalizado](custom-auth-identity-provider.html)
 * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](custom-auth-config-mca.html)
 * [Configuración de la autenticación personalizada para Android](custom-auth-android.html)
-* [Configuración de la autenticación personalizada para iOS](custom-auth-ios.html)
+* [Configuración de la autenticación personalizada para iOS (SDK de Swift)](custom-auth-ios-swift-sdk.html)
+* [Configuración de la autenticación personalizada para iOS (SDK de Objective-C)](custom-auth-ios.html)
 * [Configuración de la autenticación personalizada para Cordova](custom-auth-cordova.html)

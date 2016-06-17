@@ -8,9 +8,9 @@ copyright:
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
 {: #protecting-local}
 
-É possível configurar seu ambiente de desenvolvimento local para usar o serviço {{site.data.keyword.amashort}} que está em execução no {{site.data.keyword.Bluemix}}. Especificamente, é possível usar o {{site.data.keyword.amashort}} Server SDK quando você está desenvolvendo código do lado do servidor com um servidor de desenvolvimento local, como Node.js.
+É possível configurar seu ambiente de desenvolvimento local para usar o serviço {{site.data.keyword.amashort}} que está em execução no {{site.data.keyword.Bluemix}}. Especificamente, é possível usar o {{site.data.keyword.amashort}} server SDK quando você está desenvolvendo código do lado do servidor com um servidor de desenvolvimento local, como Node.js.
 
-O {{site.data.keyword.amashort}} Server SDK requer que duas variáveis de ambiente sejam configuradas. Quando você estiver desenvolvendo código do lado do servidor no {{site.data.keyword.Bluemix_notm}}, essas variáveis serão fornecidas pela infraestrutura do {{site.data.keyword.Bluemix_notm}}.
+O {{site.data.keyword.amashort}} server SDK requer que duas variáveis de ambiente sejam configuradas. Quando você estiver desenvolvendo código do lado do servidor no {{site.data.keyword.Bluemix_notm}}, essas variáveis serão fornecidas pela infraestrutura do {{site.data.keyword.Bluemix_notm}}.
 
 * `VCAP_SERVICES`: contém informações sobre serviços que estão ligados ao aplicativo backend móvel.
 * `VCAP_APPLICATION`: contém informações sobre o aplicativo backend móvel.
@@ -71,7 +71,7 @@ Substitua as ocorrências do valor *appGUID* no código pelo seu valor *appGUID*
 ## Configurando aplicativos móveis para funcionarem com um servidor de desenvolvimento local
 {: #configuring-local}
 
-Inicialize os {{site.data.keyword.amashort}} Client SDKs com a URL real do aplicativo {{site.data.keyword.Bluemix_notm}} e use o host local (ou o endereço IP) em cada uma de suas solicitações. Consulte as amostras a seguir.
+Inicialize os {{site.data.keyword.amashort}} client SDKs com a URL real do aplicativo {{site.data.keyword.Bluemix_notm}} e use o host local (ou endereço IP) em cada uma de suas solicitações. Consulte as amostras a seguir.
 
 Pode ser necessário mudar `localhost` para um endereço IP real de seu servidor de desenvolvimento nos exemplos a seguir.
 

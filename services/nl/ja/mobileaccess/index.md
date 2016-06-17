@@ -13,7 +13,7 @@ copyright:
 # {{site.data.keyword.amashort}} 入門
        
 {: #gettingstarted}
-*最終更新日: 2016 年 3 月 21 日*
+*最終更新日: 2016 年 4 月 25 日*
 
 {{site.data.keyword.amafull}} サービスを使用して、セキュリティーおよびモニタリング機能をモバイル・アプリに追加します。ユーザーが既存の Google アカウントまたは Facebook アカウントを使用してアプリにログインできるように、クライアント認証プロバイダーおよび ID プロバイダーを構成することが可能です。また、アプリケーションにモニター機能を追加することにより、クライアントのロギングおよび使用統計の両方が可能になります。
 {:shortdesc}
@@ -26,7 +26,7 @@ copyright:
 1. クライアント・サイドの開発環境をセットアップします。既存の Android アプリ、Cordova アプリ、または iOS アプリに {{site.data.keyword.amashort}} SDK を追加できます。HelloAuthentication サンプル・アプリケーションをダウンロードすることもできます。
    * **Android**: ([SDK](getting-started-android.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (Swift-C SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (Swift SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (Objective-C SDK)**: ([SDK](getting-started-ios.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. サーバー・サイド・リソースを保護します。Node.js ランタイムまたは Liberty for Java&trade; ランタイムで稼働しているモバイル・バックエンド・リソースを、モバイル対応の OAuth セキュリティーによって保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。

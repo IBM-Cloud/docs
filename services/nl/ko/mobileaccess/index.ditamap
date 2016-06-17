@@ -12,73 +12,50 @@
 	<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Client Access"
 		scope="peer">
 		<topicref format="html" href="overview.html" navtitle="정보" outputclass="subsection"
-			scope="peer">
-			<topicref format="html" href="sdks-samples-apis.html"
-				navtitle="SDK, 샘플 및 API 참조" scope="peer"/>
-		</topicref>
-		<topicref format="html" href="getting-started.html" navtitle="시작하기"
+scope="peer"/>
+	<topicref format="html" href="sdks-samples-apis.html" navtitle="SDK, 샘플 및 API 참조" outputclass="subsection"
+scope="peer"/>
+	<topicref format="html" href="protecting-resources.html" navtitle="서버 SDK를 사용하여 자원 보호" outputclass="subsection" scope="peer">
+	<topicref format="html" href="protecting-resources-nodejs.html" navtitle="Node.js" scope="peer"/>
+	<topicref format="html" href="protecting-resources-java.html" navtitle="Liberty for Java"	scope="peer"/>
+	<topicref format="html" href="protecting-resources-local.html" navtitle="로컬 개발" scope="peer"/>
+	</topicref>
+		<topicref format="html" href="getting-started.html" navtitle="코어 클라이언트"
 			outputclass="subsection" scope="peer">
 			<topicref format="html" href="getting-started-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="getting-started-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="getting-started-ios-swift-sdk.html"
-				navtitle="iOS(Swift SDK)" audience="blue" scope="peer"/>
-			<topicref format="html" href="getting-started-ios.html" navtitle="iOS(Objective-C SDK)"
-				scope="peer"/>
+			<topicref format="html" href="getting-started-ios-swift-sdk.html" navtitle="iOS(Swift SDK)" scope="peer"/>
+			<topicref format="html" href="getting-started-ios.html" navtitle="iOS(Objective-C SDK)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="protecting-resources.html" navtitle="클라우드 자원 보호"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="protecting-resources-nodejs.html" navtitle="Node.js"
-				scope="peer"/>
-			<topicref format="html" href="protecting-resources-java.html" navtitle="Liberty for Java"
-				scope="peer"/>
-			<topicref format="html" href="protecting-resources-local.html" navtitle="로컬 개발"
-				scope="peer"/>
-		</topicref>
-		<topicref format="html" href="facebook-auth-overview.html" navtitle="Facebook 인증"
-			outputclass="subsection" scope="peer">
+		
+		<topicref format="html" href="facebook-auth-overview.html" navtitle="Facebook 인증" outputclass="subsection" scope="peer">
 			<topicref format="html" href="facebook-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="facebook-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS(Objective-C SDK)"
-				scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)" scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS(Objective-C SDK)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="google-auth-overview.html" navtitle="Google 인증"
-			outputclass="subsection" scope="peer">
+		<topicref format="html" href="google-auth-overview.html" navtitle="Google 인증" outputclass="subsection" scope="peer">
 			<topicref format="html" href="google-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="google-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="google-auth-ios.html" navtitle="iOS(Objective-C SDK)"
-				scope="peer"/>
+			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)" scope="peer"/>
+			<topicref format="html" href="google-auth-ios.html" navtitle="iOS(Objective-C SDK)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="custom-auth.html" navtitle="사용자 정의 인증"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="custom-auth-identity-provider.html"
-				navtitle="ID 제공자 구성" scope="peer"/>
-			<topicref format="html" href="custom-auth-config-mca.html"
-				navtitle="Mobile Client Access에 대한 사용자 정의 인증 구성" scope="peer"/>
+		<topicref format="html" href="custom-auth.html" navtitle="사용자 정의 인증"	outputclass="subsection" scope="peer">
+		<topicref format="html" href="custom-auth-identity-provider.html" navtitle="사용자 정의 ID 제공자 작성" scope="peer"/>
+			<topicref format="html" href="custom-auth-config-mca.html" navtitle="Mobile Client Access에 대한 사용자 정의 인증 구성" scope="peer"/>
 			<topicref format="html" href="custom-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="custom-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS(Objective-C SDK)"
-				scope="peer"/>
+			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS(Swift SDK)" scope="peer"/>
+			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS(Objective-C SDK)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="advanced-topics.html" navtitle="고급"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="advanced-topics-touchid.html"
-				navtitle="Touch ID로 권한 보안 설정" scope="peer"/>
-			<topicref format="html" href="advanced-topics-oauthsdk.html"
-				navtitle="백엔드 간 통신" scope="peer"/>
-			<topicref format="html" href="advanced-topics-IMFURLProtocol.html"
-				navtitle="iOS 애플리케이션에서 IMFURLProtocol 사용" scope="peer"/>
+		<topicref format="html" href="advanced-topics.html" navtitle="고급" outputclass="subsection" scope="peer">
+			<topicref format="html" href="advanced-topics-touchid.html" navtitle="Touch ID로 권한 보안 설정" scope="peer"/>
+			<topicref format="html" href="advanced-topics-oauthsdk.html" navtitle="백엔드 간 통신" scope="peer"/>
+			<topicref format="html" href="advanced-topics-IMFURLProtocol.html" navtitle="iOS 애플리케이션에서 IMFURLProtocol 사용" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="app-monitoring.html" navtitle="앱 모니터링"
-			outputclass="subsection" scope="peer">
+		<topicref format="html" href="app-monitoring.html" navtitle="앱 모니터링" outputclass="subsection" scope="peer">
 			<topicref format="html" href="app-monitoring-logger.html" navtitle="로거" scope="peer"/>
-			<topicref format="html" href="app-monitoring-gathering-analytics.html"
-				navtitle="분석 수집" scope="peer"/>
+			<topicref format="html" href="app-monitoring-gathering-analytics.html" navtitle="분석 수집" scope="peer"/>
 		</topicref>
 	</topicref>
 </map>

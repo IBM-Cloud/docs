@@ -113,7 +113,7 @@ O objeto de identidade do usuário é usado pelo serviço {{site.data.keyword.am
 ## Considerações de segurança
 {: #custom-security}
 
-Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor de identidade customizado contém um cabeçalho de autorização para que o provedor de identidade customizado possa verificar se a solicitação está vindo de uma origem autorizada. Embora não seja estritamente obrigatório, considere validar o cabeçalho de autorização instrumentando seu provedor de identidade customizado com um {{site.data.keyword.amashort}} Server SDK. Para usar esse SDK, seu aplicativo provedor de identidade customizado deve ser
+Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor de identidade customizado contém um cabeçalho de autorização para que o provedor de identidade customizado possa verificar se a solicitação está vindo de uma origem autorizada. Embora não seja estritamente obrigatório, considere validar o cabeçalho de autorização instrumentando seu provedor de identidade customizado com um {{site.data.keyword.amashort}} server SDK. Para usar esse SDK, seu aplicativo provedor de identidade customizado deve ser
 implementado com o Node.js ou o Liberty for Java&trade;&trade; e executado no
 {{site.data.keyword.Bluemix_notm}}.
 

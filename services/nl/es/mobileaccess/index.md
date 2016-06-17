@@ -12,7 +12,7 @@ copyright:
 
 # Iniciación a {{site.data.keyword.amashort}}
 {: #gettingstarted}
-*Última actualización: 21 Marzo de 2016*
+*Última actualización: 25 de abril de 2016*
 
 Añada funciones de seguridad y supervisión a la app para móvil con el servicio {{site.data.keyword.amafull}}. Puede configurar la autenticación de cliente y los proveedores de identidad de modo que los usuarios puedan iniciar una sesión en la app con sus cuentas existentes de Google o Facebook. También puede añadir funciones de supervisión a la app, los cuales habilitan los registros clientes y las estadísticas de uso.
 {:shortdesc}
@@ -26,7 +26,7 @@ Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}, siga estos 
 Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, Cordova o iOS existente. También puede descargar la aplicación de ejemplo HelloAuthentication.
    * **Android**: ([SDK](getting-started-android.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (SDK de Swift-C)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (SDK de Swift)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (SDK de Objective-C)**: ([SDK](getting-started-ios.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. Recursos seguros del lado del servidor. Proteja los recursos del programa de fondo móvil que se estén ejecutando en los tiempos de ejecución Node.js o Liberty for Java&trade; con la seguridad OAuth habilitada para móvil. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).

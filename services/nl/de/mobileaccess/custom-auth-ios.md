@@ -177,7 +177,7 @@ CustomAuthenticationDelegate.m
 	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt
 	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
 	// Wartestatus für Berechtigungsnachweise.
-}
+	}
 
 -(void)authenticationContext:(id<IMFAuthenticationContext>)context
 					didReceiveAuthenticationSuccess:(NSDictionary *)userInfo{
@@ -221,9 +221,9 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
  	// Sie dies an IMFAuthenticationContext zurückmelden. Andernfalls verbleibt
-		// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
-		// Wartestatus für Berechtigungsnachweise.
-	}
+ 	// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
+	 // Wartestatus für Berechtigungsnachweise.
+	 }
 
 
 	func authenticationContext(context: IMFAuthenticationContext!,
@@ -309,22 +309,21 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Delegat `IMFAuthent
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe in der Xcode-Konsole angezeigt:
 
 	![Bild](images/ios-custom-login-success.png)
-	
-	
-	
+
 	Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
-	Objective-C: 
+	Objective-C:
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]
 	```
-	Swift: 
+
+	Swift:
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
-Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
-Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.
+ Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
 
+ Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

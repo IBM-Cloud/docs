@@ -216,7 +216,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 	![Bild](images/android-facebook-login-success.png)
 
-1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+ Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -224,4 +224,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Facebook angemeldet hat, wird der Benutzer bei Facebook abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er seine Facebook-Berechtigungsnachweise eingeben.
 
- Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann null sein.
+ Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.

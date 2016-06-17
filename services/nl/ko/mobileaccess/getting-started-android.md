@@ -8,7 +8,7 @@ copyright:
 # Android SDK 설정
 {: #getting-started-android}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고, SDK를 초기화하고, 보호 및 비보호 자원에 대한 요청을 작성하십시오. 
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 자원을 요청하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -19,20 +19,18 @@ copyright:
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-mca-sdk}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK는 Android 프로젝트에 대한 종속 항목 관리자인 Gradle을 사용하여 분배됩니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하고
-Android 애플리케이션에서 사용 가능하도록 작성합니다.
+{{site.data.keyword.amashort}} 클라이언트 SDK는 Android 프로젝트용 종속성 관리자인 Gradle을 사용하여 분배됩니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하고 Android 애플리케이션에서 사용 가능하도록 작성합니다.
 
 1. Android Studio 프로젝트를 작성하거나 기존 프로젝트를 여십시오. 
 
 1. `build.gradle` 파일을 여십시오.
 **팁**: Android 프로젝트에 두 개의 `build.gradle` 파일이 있을 수 있습니다. 하나는 프로젝트용이고 다른 하나는 애플리케이션 모듈용입니다. 애플리케이션 모듈 파일을 사용하십시오. 
 
-1. `build.gradle` 파일의 **종속 항목** 섹션을 찾으십시오. {{site.data.keyword.amashort}} 클라이언트 SDK에 대한 컴파일 종속 항목을 추가하십시오. 
+1. `build.gradle` 파일의 **종속 항목** 섹션을 찾으십시오. {{site.data.keyword.amashort}} 클라이언트 SDK에 대한 컴파일 종속성을 추가하십시오.
 
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-    
         name:'core',
         version: '1.+',
         ext: 'aar',
@@ -70,10 +68,10 @@ Android 애플리케이션에서 사용 가능하도록 작성합니다.
 ## 모바일 백엔드에 대한 요청 작성
 {: #request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스할 수 있기 때문에 브라우저에 `권한 없음` 메시지가 리턴됩니다.
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 

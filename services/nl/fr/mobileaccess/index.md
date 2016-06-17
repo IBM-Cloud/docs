@@ -11,7 +11,7 @@ Copyright : 2015, 2016
 
 # Initiation à {{site.data.keyword.amashort}}
 {: #gettingstarted}
-*Dernière mise à jour : 21 mars 2016*
+*Dernière mise à jour : 25 avril 2016*
 
 Ajoutez une fonction de sécurité et de surveillance à votre application mobile avec le service
 {{site.data.keyword.amafull}}. Vous pouvez configurer une authentification client et des fournisseurs d'identité de sorte que les utilisateurs
@@ -32,8 +32,7 @@ d'application HelloAuthentication.
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova** : ([SDK](getting-started-cordova.html))
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (SDK Swift-C)** : ([SDK](getting-started-ios-swift-sdk.html))
-([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (Swift SDK)** : ([SDK](getting-started-ios-swift-sdk.html)) ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (SDK Objective-C)** : ([SDK](getting-started-ios.html))
 ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 

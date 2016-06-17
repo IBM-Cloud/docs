@@ -16,7 +16,7 @@ Instrumente seu aplicativo iOS com o {{site.data.keyword.amashort}} SDK, inicial
 * Assegure-se de ter configurado corretamente o Xcode. Para obter mais informações sobre como configurar o seu ambiente do iOS, consulte o [website do Apple Developer](https://developer.apple.com/support/xcode/).
 
 
-## Instalando o {{site.data.keyword.amashort}} Client SDK
+## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk-ios}
 O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
 
@@ -29,10 +29,10 @@ O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciad
 ```
 sudo gem install cocoapods
 ```
-Para obter mais informações, consulte o [website do
-CocoaPods](https://cocoapods.org/).
+Para obter mais informações, consulte o
+[website do CocoaPods](https://cocoapods.org/).
 
-### Instalar o {{site.data.keyword.amashort}} Client SDK com CocoaPods
+### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
 
 1. No Terminal, navegue para o diretório-raiz do seu projeto iOS.
@@ -54,25 +54,25 @@ seu destino Xcode em vez de tê-lo no Podfile.
 
 1. Abra sua área de trabalho do projeto iOS. Abra o arquivo `xcworkspace` que foi gerado por CocoaPods. Por exemplo: `{your-project-name}.xcworkspace`. Execute `open {your-project-name}.xcworkspace`.
 
-## Inicializando o {{site.data.keyword.amashort}} Client SDK
+## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #init-mca-sdk-ios}
 
  Inicialize o SDK passando os parâmetros `applicationRoute` e
 `applicationGUID`. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
-1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os valores `applicationRoute` e `applicationGUID` são
+1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os
+valores `applicationRoute` e `applicationGUID` são
 exibidos nos campos **Rota** e **GUID do app**.
 
-1. Importe as estruturas necessárias na classe em que deseja usar o
-{{site.data.keyword.amashort}} Client SDK.
+1. Importe as estruturas necessárias na classe em que deseja usar o {{site.data.keyword.amashort}} client SDK.
 
  ```Swift
  import BMSCore
  import BMSSecurity
  ```  
 
-1. Inicialize o {{site.data.keyword.amashort}} Client SDK. Substitua os
-valores `<applicationRoute>` e
+1. Inicialize o {{site.data.keyword.amashort}} client SDK. Substitua os valores
+`<applicationRoute>` e
 `<applicationGUID>` pelos valores de **Rota** e
 **GUID do app** que você obteve das **Opções
 móveis** no painel {{site.data.keyword.Bluemix_notm}}.
@@ -83,7 +83,7 @@ móveis** no painel {{site.data.keyword.Bluemix_notm}}.
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialize the Client SDK.  
+ // Inicialize o client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -95,12 +95,11 @@ móveis** no painel {{site.data.keyword.Bluemix_notm}}.
 ## Fazendo uma solicitação em seu backend móvel
 {: #request}
 
-Após a inicialização do {{site.data.keyword.amashort}} Client SDK, é possível começar a fazer solicitações para seu backend móvel.
+Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
-mensagem `Unauthorized` é retornada no navegador, pois esse terminal pode ser acessado somente por aplicativos móveis que sejam
-instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra
+a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador porque esse terminal pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 

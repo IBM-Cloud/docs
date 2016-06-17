@@ -11,7 +11,7 @@ Para configurar aplicaciones de Cordova para la integración de la autenticació
 
 ## Antes de empezar
 {: #before-you-begin}
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Cordova instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del plug-in de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Cordova instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del plug-in de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * (opcional) Familiarícese con las secciones siguientes:
    * [Habilitación de la autenticación de Google en apps de Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
@@ -67,17 +67,17 @@ Añada la línea siguiente al método `application:openURL:sourceApplication:ann
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #google-auth-cordova-initialize}
 
-Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}.
+Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
 
-Sustituya los valores *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de la sección **Opciones móviles** de la aplicación en el panel de control. 
+Sustituya los valores *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de la sección **Opciones móviles** de la aplicación en el panel de control.
 
 ## Prueba de autenticación
 {: #google-auth-cordova-test}
-Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #google-auth-cordova-testing-before}
@@ -85,7 +85,6 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 
 
 1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
-
 
 1. El punto final `/protected` de un programa de fondo móvil creado con el contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 

@@ -21,12 +21,12 @@ Per iniziare a usare Google come un provider di identità, creare un progetto ne
 
 1. Crea un progetto nella [Google Developers Console](https://console.developers.google.com).
 Se già hai un progetto, puoi tralasciare i passi che descrivono la creazione del progetto e iniziare con l'aggiunta delle credenziali.
-   1.    Apri il menu di nuovo progetto. 
-         
+   1.    Apri il menu di nuovo progetto.
+
          ![immagine](images/FindProject.jpg)
 
    2.    Fai clic su **Create a project**.
-   
+
          ![immagine](images/CreateAProject.jpg)
 
 
@@ -39,11 +39,11 @@ Se già hai un progetto, puoi tralasciare i passi che descrivono la creazione de
 1. Seleziona la scheda **Consent Screen** e fornisci il nome prodotto visualizzato agli utenti. Altri valori sono facoltativi. Fai clic su **Save**.
 
     ![immagine](images/consentScreen.png)
-    
+
 1. Dall'elenco **Credentials**, scegli l'ID client OAuth.
 
      ![immagine](images/chooseCredentials.png)
-     
+
 
 
 1. Seleziona un tipo di applicazione. Fai clic su **Android**. Fornisci un nome significativo per il tuo client Android.
@@ -196,12 +196,12 @@ Devi disporre di un backend mobile creato con il contenitore tipo MobileFirst Se
 
 	![immagine](images/android-google-login-success.png)
 
-1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+ Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
  ```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google, l'utente viene disconnesso da Google. Quando l'utente prova ad eseguire nuovamente l'accesso, deve selezionare un account Google con il quale verrà nuovamente eseguito il suo accesso. Quando prova ad accedere con un ID Google che aveva già in precedenza eseguito l'accesso, non gli vengono richieste nuovamente le credenziali. Perché gli vengano richieste nuovamente le credenziali di accesso, è necessario che l'utente rimuova il suo account Google dal dispositivo Android.
 
- Il valore per `listener` passato alla funzione di disconnessione può essere null.
+ Il valore per `listener` passato alla funzione di disconnessione può essere `null`.

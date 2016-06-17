@@ -13,7 +13,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans vos applications iOS, 
 
 ## Avant de commencer
 {: #facebook-auth-ios-before}
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Objective-C d'iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Objective-C d'iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Créez un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
@@ -55,7 +55,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 
 1. Installez CocoaPods en exécutant `sudo gem install cocoapods`. Reportez-vous au [site Web CocoaPods](https://cocoapods.org/) si vous avez besoin d'autres instructions.
 
-### Installation du logiciel SDK client de {{site.data.keyword.amashort}} avec CocoaPods
+### Installation du SDK client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #facebook-auth-install-cocoapods}
 
 1. Dans votre projet iOS, éditez le fichier `Podfile` et la ligne suivante :
@@ -136,8 +136,7 @@ Mettez à jour les propriétés de schéma d'URL et d'ID d'appli Facebook avec v
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize}
 
-Initialisez le SDK client en transmettant la route de votre application (`applicationRoute`) et l'identificateur global unique de l'application
-(`applicationGUID`).
+Initialisez le SDK client en transmettant la route de votre application (`applicationRoute`) et l'identificateur global unique de l'application (`applicationGUID`).
 
 En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
@@ -174,7 +173,7 @@ l'application** (`applicationGUID`).
 	* Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
-3. Initialisez le logiciel SDK client.	Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
+3. Initialisez le logiciel SDK client.Remplacez *applicationRoute* et *applicationGUID* par les valeurs de
 **Route** et
 **Identificateur global unique de l'application** de la section **Options pour application mobile**
 dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
@@ -237,7 +236,8 @@ dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 ## Test de l'authentification
 {: #facebook-auth-ios-testing}
-Lorsque le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des
+demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #facebook-auth-ios-testing-before}
@@ -296,10 +296,7 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 1. 	Si votre demande aboutit, la sortie suivante s'affiche dans la console Xcode :
 	![image](images/ios-facebook-login-success.png)
 
-
-
 	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
-
 
 	**Objective-C**
 
@@ -313,9 +310,11 @@ Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Si vous appelez ce code alors que l'utilisateur était connecté via Facebook et qu'il tente à nouveau de se connecter, il est invité à autoriser Mobile
-Client Access à utiliser Facebook aux fins d'authentification. 
+	Si vous appelez ce code alors que l'utilisateur était connecté via Facebook et qu'il tente à nouveau de se connecter, il est invité à autoriser
+{{site.data.keyword.amashort}} à utiliser Facebook aux fins d'authentification.
 
-	Les utilisateurs de switch doivent appeler ce code et l'utilisateur doit se déconnecter de Facebook dans son navigateur.La transmission de
+	Les utilisateurs de switch doivent appeler ce code et l'utilisateur doit se déconnecter de Facebook
+dans son navigateur.
+
+  La transmission de
 `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur `nil`.
-

@@ -85,7 +85,7 @@ copyright:
 
  * [簡単なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [高度なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## {{site.data.keyword.amashort}} Server とカスタム ID プロバイダーとの間の標準的な通信
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} サービスが `startAuthorization` 要求をカスタム ID プロバイダーに送信します。
@@ -109,5 +109,6 @@ copyright:
 * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
 * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
 * [Android 用のカスタム認証の構成 ](custom-auth-android.html)
-* [iOS 用のカスタム認証の構成 ](custom-auth-ios.html)
+* [iOS 用のカスタム認証の構成 (Swift SDK)](custom-auth-ios-swift-sdk.html)
+* [iOS 用のカスタム認証の構成 (Objective-C SDK)](custom-auth-ios.html)
 * [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)

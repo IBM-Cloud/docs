@@ -11,74 +11,51 @@
 	</topicmeta>
 	<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Client Access"
 		scope="peer">
-		<topicref format="html" href="overview.html" navtitle="À propos de" outputclass="subsection"
-			scope="peer">
-			<topicref format="html" href="sdks-samples-apis.html"
-				navtitle="Logiciels SDK, exemples et référence d'API" scope="peer"/>
-		</topicref>
-		<topicref format="html" href="getting-started.html" navtitle="Initiation"
+		<topicref format="html" href="overview.html" navtitle="A propos de" outputclass="subsection"
+scope="peer"/>
+	<topicref format="html" href="sdks-samples-apis.html" navtitle="Logiciels SDK, exemples et référence d'API" outputclass="subsection"
+scope="peer"/>
+	<topicref format="html" href="protecting-resources.html" navtitle="Protection des ressources avec le SDK serveur" outputclass="subsection" scope="peer">
+	<topicref format="html" href="protecting-resources-nodejs.html" navtitle="Node.js" scope="peer"/>
+	<topicref format="html" href="protecting-resources-java.html" navtitle="Liberty for Java"	scope="peer"/>
+	<topicref format="html" href="protecting-resources-local.html" navtitle="Développement local" scope="peer"/>
+	</topicref>
+		<topicref format="html" href="getting-started.html" navtitle="Client principal"
 			outputclass="subsection" scope="peer">
 			<topicref format="html" href="getting-started-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="getting-started-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="getting-started-ios-swift-sdk.html"
-				navtitle="iOS (SDK Swift)" audience="blue" scope="peer"/>
-			<topicref format="html" href="getting-started-ios.html" navtitle="iOS (SDK Objective-C)"
-				scope="peer"/>
+			<topicref format="html" href="getting-started-ios-swift-sdk.html" navtitle="iOS (SDK Swift)" scope="peer"/>
+			<topicref format="html" href="getting-started-ios.html" navtitle="iOS (SDK Objective-C)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="protecting-resources.html" navtitle="Protection des ressources de cloud"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="protecting-resources-nodejs.html" navtitle="Node.js"
-				scope="peer"/>
-			<topicref format="html" href="protecting-resources-java.html" navtitle="Liberty for Java"
-				scope="peer"/>
-			<topicref format="html" href="protecting-resources-local.html" navtitle="Développement local"
-				scope="peer"/>
-		</topicref>
-		<topicref format="html" href="facebook-auth-overview.html" navtitle="Authentification Facebook"
-			outputclass="subsection" scope="peer">
+		
+		<topicref format="html" href="facebook-auth-overview.html" navtitle="Authentification Facebook" outputclass="subsection" scope="peer">
 			<topicref format="html" href="facebook-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="facebook-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS (SDK Objective-C)"
-				scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)" scope="peer"/>
+			<topicref format="html" href="facebook-auth-ios.html" navtitle="iOS (SDK Objective-C)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="google-auth-overview.html" navtitle="Authentification Google"
-			outputclass="subsection" scope="peer">
+		<topicref format="html" href="google-auth-overview.html" navtitle="Authentification Google" outputclass="subsection" scope="peer">
 			<topicref format="html" href="google-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="google-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="google-auth-ios.html" navtitle="iOS (SDK Objective-C)"
-				scope="peer"/>
+			<topicref format="html" href="google-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)" scope="peer"/>
+			<topicref format="html" href="google-auth-ios.html" navtitle="iOS (SDK Objective-C)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="custom-auth.html" navtitle="Authentification personnalisée"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="custom-auth-identity-provider.html"
-				navtitle="Configuration d'un fournisseur d'identité" scope="peer"/>
-			<topicref format="html" href="custom-auth-config-mca.html"
-				navtitle="Configuration de l'authentification personnalisée pour Mobile Client Access" scope="peer"/>
+		<topicref format="html" href="custom-auth.html" navtitle="Authentification personnalisée"	outputclass="subsection" scope="peer">
+		<topicref format="html" href="custom-auth-identity-provider.html" navtitle="Création d'un fournisseur d'identité personnalisé" scope="peer"/>
+			<topicref format="html" href="custom-auth-config-mca.html" navtitle="Configuration de l'authentification personnalisée pour Mobile Client Access" scope="peer"/>
 			<topicref format="html" href="custom-auth-android.html" navtitle="Android" scope="peer"/>
 			<topicref format="html" href="custom-auth-cordova.html" navtitle="Cordova" scope="peer"/>
-			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)"
-				audience="blue" scope="peer"/>
-			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS (SDK Objective-C)"
-				scope="peer"/>
+			<topicref format="html" href="custom-auth-ios-swift-sdk.html" navtitle="iOS (SDK Swift)" scope="peer"/>
+			<topicref format="html" href="custom-auth-ios.html" navtitle="iOS (SDK Objective-C)" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="advanced-topics.html" navtitle="Scénarios avancés"
-			outputclass="subsection" scope="peer">
-			<topicref format="html" href="advanced-topics-touchid.html"
-				navtitle="Sécurisation de l'autorisation avec Touch ID" scope="peer"/>
-			<topicref format="html" href="advanced-topics-oauthsdk.html"
-				navtitle="Communications de système de back end à système de back end" scope="peer"/>
-			<topicref format="html" href="advanced-topics-IMFURLProtocol.html"
-				navtitle="Utilisation d'IMFURLProtocol dans les applications iOS" scope="peer"/>
+		<topicref format="html" href="advanced-topics.html" navtitle="Scénarios avancés" outputclass="subsection" scope="peer">
+			<topicref format="html" href="advanced-topics-touchid.html" navtitle="Sécurisation de l'autorisation avec Touch ID" scope="peer"/>
+			<topicref format="html" href="advanced-topics-oauthsdk.html" navtitle="Communications de système de back end à système de back end" scope="peer"/>
+			<topicref format="html" href="advanced-topics-IMFURLProtocol.html" navtitle="Utilisation d'IMFURLProtocol dans les applications iOS" scope="peer"/>
 		</topicref>
-		<topicref format="html" href="app-monitoring.html" navtitle="Surveillance des applications"
-			outputclass="subsection" scope="peer">
+		<topicref format="html" href="app-monitoring.html" navtitle="Surveillance des applications" outputclass="subsection" scope="peer">
 			<topicref format="html" href="app-monitoring-logger.html" navtitle="Logger" scope="peer"/>
-			<topicref format="html" href="app-monitoring-gathering-analytics.html"
-				navtitle="Collecte des données d'analyse" scope="peer"/>
+			<topicref format="html" href="app-monitoring-gathering-analytics.html" navtitle="Collecte des données d'analyse" scope="peer"/>
 		</topicref>
 	</topicref>
 </map>

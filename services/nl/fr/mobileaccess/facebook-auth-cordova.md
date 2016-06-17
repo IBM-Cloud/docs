@@ -10,7 +10,7 @@ Pour configurer l'intégration de l'authentification Facebook dans les applicati
 
 ## Avant de commencer
 {: #facebook-auth-before}
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Cordova instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du plug-in Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Cordova instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du plug-in Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Créez un ID d'application Facebook. Pour plus d'informations, voir
 [Acquisition d'un ID d'application Facebook sur le
@@ -63,8 +63,7 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 aux bibliothèques)**.
 
  Voir [Configuration de la plateforme iOS pour
-authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Enregistrez l'API IMFFacebookAuthenticationHandler dans le code natif comme indiqué dans la section
-**Initialisation du SDK Client de {{site.data.keyword.amashort}}**. N'initialisez pas `IMFClient` dans votre code
+authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios.html). Enregistrez l'API IMFFacebookAuthenticationHandler dans le code natif comme indiqué dans la section Initialisation du SDK client de {{site.data.keyword.amashort}}. N'initialisez pas IMFClient dans votre code
 natif.
 
 Ajoutez la ligne suivante à la méthode `application:openURL:sourceApplication:annotation` de votre délégué d'application. Ce code garantit que
@@ -78,7 +77,7 @@ tous les plug-ins Cordova soient avisés de leurs événements respectifs.
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #facebook-auth-cordova-init}
 
-Utilisez le code JavaScript suivant dans votre application Cordova pour initialiser le SDK client de {{site.data.keyword.amashort}}.
+Utilisez le code JavaScript suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -89,8 +88,7 @@ Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** e
 
 ## Test de l'authentification
 {: #facebook-auth-cordova-test}
-Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre
-back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre back end mobile.
 
 ### Avant de commencer
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).

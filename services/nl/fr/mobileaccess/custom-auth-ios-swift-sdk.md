@@ -7,7 +7,7 @@ Copyright : 2016
 # Configuration du SDK client pour iOS (Swift SDK) de {{site.data.keyword.amashort}}
 {: #custom-ios}
 
-Configurez votre application iOS qui utilise l'authentification personnalisée de manière qu'elle utilise le SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
 
 ## Avant de commencer
 {: #before-you-begin}
@@ -96,9 +96,9 @@ le code d'initialisation est souvent placé dans la méthode `application:didFin
 ```
 
 1. Initialisez le SDK client {{site.data.keyword.amashort}}, stipulez MCAAuthorizationManager comme nouveau gestionnaire d'authentification,
-définissez un délégué d'authentification et enregistrez-le. Remplacez `<applicationRoute>` et `<applicationGUID>` par
-les valeurs de **Route** et **Identificateur global unique de l'application** de la section **Options pour application
-mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+définissez un délégué d'authentification et enregistrez-le. Remplacez `<applicationRoute>` et
+`<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
+de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -115,7 +115,7 @@ mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
  class MyAuthDelegate : AuthenticationDelegate {
       func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
           print("onAuthenticationChallengeReceived")
-              let answer = <Réponse à la demande d'authentification envoyée par le back-end (Doit être du type  [String:AnyObject])>
+              let answer = <Réponse à la demande d'authentification envoyée par le back-end (Doit être du type [String:AnyObject])>
               authContext.submitAuthenticationChallengeAnswer(answer)
       }
 
@@ -145,16 +145,13 @@ mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 ## Test de l'authentification
 {: #custom-ios-testing}
 
-Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé, vous pouvez commencer à envoyer des demandes à votre back end
-mobile.
-
+Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé, vous pouvez commencer à envoyer des demandes à votre back end mobile.
 ### Avant de commencer
 {: #custom-ios-testing-before}
 
  Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
-1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant
-`{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envoyez une demande à un noeud final protégé de votre système de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
   Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient`
@@ -188,14 +185,12 @@ et enregistré votre délégué d'authentification personnalisé :
  response:Optional("Bonjour Don Lon"), no error
  ```
 
-1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
-
- ```
+1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :```
  MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 
- Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter,
-il doit à nouveau soumettre ses données d'identification.
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
+soumettre ses données d'identification.
 
  La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur
 `nil`.

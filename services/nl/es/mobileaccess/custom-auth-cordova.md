@@ -12,7 +12,7 @@ Configure su aplicación de Cordova con autenticación personalizada para que ut
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información,
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información,
 consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
@@ -24,14 +24,14 @@ consulte la siguiente información:
 {: #custom-cordova-sdk}
 Inicialice el SDK pasando los parámetros applicationGUID y applicationRoute.
 
-1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Se muestran los valores **Ruta** (`applicationRoute`) e **Identificador exclusivo global de la app** (`applicationGUID`). 
-1. Inicialice el SDK del cliente.
+1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Se muestran los valores **Ruta** (`applicationRoute`) e **Identificador exclusivo global de la app** (`applicationGUID`).
+1. Inicialice el SDK del cliente. 
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
 
 	```
- Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** del panel **Opciones móviles** de la aplicación en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+ Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** del panel **Opciones móviles** de la aplicación en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 ## Interfaz de escucha de autenticación
 {: #custom-cordva-auth}
@@ -57,7 +57,7 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 
 #### Argumentos
 {: #onAuthenticationChallengeReceived-args}
-* `authenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que el desarrollador pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales, como si el usuario cancela una solicitud de autenticación.
+* `authenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que el desarrollador pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales, como si el usuario cancela una solicitud de autenticación. 
 * `challenge`: un objeto JSON que contiene un cambio de autenticación personalizada, tal como se devuelve desde un proveedor de identidad personalizado.
 
 Llamando al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador. {{site.data.keyword.amashort}} espera las credenciales. El desarrollador debe recopilar las credenciales y volverlas a notificar al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos siguientes de la interfaz `authContext`:
@@ -136,14 +136,15 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## Prueba de autenticación
 {: #custom-cordova-test}
-Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #custom-cordova-testing-before}
 Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
+ El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
 1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el código siguiente después de inicializar `BMSClient` y registrar la clase AuthenticationListener personalizada.
 

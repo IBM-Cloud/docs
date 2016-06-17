@@ -110,7 +110,7 @@ var customAuthenticationListener = {
 
 		// In case there was a failure collecting credentials you need to report
 		// it back to the authenticationContext. Otherwise Mobile Client
-		// Access Client SDK will remain in a waiting-for-credentials state
+		// Access client SDK will remain in a waiting-for-credentials state
 		// forever
 
 	},
@@ -145,8 +145,7 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
-その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
 1. Cordova アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
 

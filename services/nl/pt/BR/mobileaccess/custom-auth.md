@@ -15,20 +15,20 @@ copyright:
 
 ![image](images/mca-sequence-custom.jpg)
 
-1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} Server SDK.
-* O {{site.data.keyword.amashort}} Server SDK detecta uma solicitação não autorizada e retorna HTTP 401 e escopo de autorização.
-* O {{site.data.keyword.amashort}} Client SDK detecta automaticamente o HTTP 401 acima e inicia o processo de autenticação.
-* O {{site.data.keyword.amashort}} Client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e solicita a emissão de um cabeçalho de autorização.
+1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
+* O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna HTTP 401 e escopo de autorização.
+* O {{site.data.keyword.amashort}} client SDK detecta automaticamente o HTTP 401 acima e inicia o processo de autenticação.
+* O {{site.data.keyword.amashort}} client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e solicita a emissão de um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} se comunica com o provedor de identidade customizado para iniciar o processo de autenticação.
 * O provedor de identidade customizado retorna um desafio de autenticação para o serviço {{site.data.keyword.amashort}}.
-* O serviço {{site.data.keyword.amashort}} retorna o desafio de autenticação para o {{site.data.keyword.amashort}} Client SDK.
-* O {{site.data.keyword.amashort}} Client SDK delega a autenticação a uma classe customizada que você criou. Você é responsável por coletar credenciais e fornecê-las de volta para o {{site.data.keyword.amashort}} Client SDK.
+* O serviço {{site.data.keyword.amashort}} retorna o desafio de autenticação para o {{site.data.keyword.amashort}} client SDK.
+* O {{site.data.keyword.amashort}} client SDK delega a autenticação a uma classe customizada que você criou. Você é responsável por coletar credenciais e fornecê-las de volta para o {{site.data.keyword.amashort}} client SDK.
 * Depois que o desenvolvedor fornecer credenciais para o {{site.data.keyword.amashort}} SDK, elas serão enviadas ao serviço {{site.data.keyword.amashort}} como uma resposta do desafio de autenticação.
 * O serviço {{site.data.keyword.amashort}} valida a resposta do desafio de autenticação com o provedor de identidade customizado.
-* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} Client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário atual, o dispositivo e o aplicativo.
-* Desse ponto em diante, todas as solicitações feitas com o {{site.data.keyword.amashort}} Client SDK terão um cabeçalho de autorização recém-obtido.
-* O {{site.data.keyword.amashort}} Client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
-* O {{site.data.keyword.amashort}} Server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
+* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário atual, o dispositivo e o aplicativo.
+* Desse ponto em diante, todas as solicitações feitas com o {{site.data.keyword.amashort}} client SDK terão um cabeçalho de autorização recém-obtido.
+* O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
+* O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
 ## Entendendo os provedores de identidade customizados
 {: #custom-id-about}
@@ -85,8 +85,8 @@ Exemplo de uma resposta de desafio de autenticação customizada enviada pelo cl
 
  * [Amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Amostra avançada](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
-## Comunicação típica entre o {{site.data.keyword.amashort}} Server e um provedor de identidade customizado
+
+## Comunicação típica entre o servidor {{site.data.keyword.amashort}} e um provedor de identidade customizado
 {: #custom-id-comm}
 1. O serviço {{site.data.keyword.amashort}} envia uma solicitação `startAuthorization` para o provedor de identidade customizado.
 1. O provedor de identidade customizado responde com um desafio de autenticação customizado a ser enviado para o cliente.
@@ -110,5 +110,6 @@ Um provedor de identidade customizado suporta um domínio de autenticação cust
 * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
 * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
 * [Configurando a autenticação customizada para Android](custom-auth-android.html)
-* [Configurando a autenticação customizada para iOS](custom-auth-ios.html)
+* [Configurando a autenticação customizada para iOS (Swift SDK)](custom-auth-ios-swift-sdk.html)
+* [Configurando a autenticação customizada para iOS (Objective-C SDK)](custom-auth-ios.html)
 * [Configurando a autenticação customizada para Cordova](custom-auth-cordova.html)

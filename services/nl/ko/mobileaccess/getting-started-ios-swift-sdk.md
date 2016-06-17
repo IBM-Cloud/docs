@@ -18,7 +18,7 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-mca-sdk-ios}
-{{site.data.keyword.amashort}} SDK는 iOS 프로젝트에 대한 종속 항목 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
+{{site.data.keyword.amashort}} SDK는 iOS 프로젝트용 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
 
 
 ### CocoaPods 설치
@@ -27,16 +27,17 @@ copyright:
 
 1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오.
 ```
-sudo gem install cocoapods```
+sudo gem install cocoapods
+```
 자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
 
-### CocoaPods로 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
 
 1. 터미널에서 iOS 프로젝트의 루트 디렉토리로 이동하십시오. 
 
 1. 이미 CocoaPods에 대한 작업공간을 초기화하지 않은 경우 `pod init` 명령을 실행하십시오. <br/>
-CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 프로젝트에 대한 종속 항목을 정의합니다. 
+CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 프로젝트용 종속성을 정의합니다. 
 
 1. `Podfile` 파일을 편집하고 필요한 대상에 다음 행을 추가하십시오. 
 
@@ -56,8 +57,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 
  `applicationRoute` 및 `applicationGUID` 매개변수를 전달하여 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
 
-1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서
-앱을 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 및 `applicationGUID` 값이 **라우트** 및 **앱 GUID** 필드에 표시됩니다.
+1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 및 `applicationGUID` 값이 **라우트** 및 **앱 GUID** 필드에 표시됩니다.
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오.
 
@@ -74,8 +74,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-
- // Initialize the Client SDK.  
+ // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -87,10 +86,10 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 ## 모바일 백엔드에 대한 요청 작성
 {: #request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 1. 브라우저에서 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스할 수 있기 때문에 브라우저에 `권한 없음` 메시지가 리턴됩니다.
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
@@ -119,4 +118,4 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 보호 엔드포인트에 연결된 경우 신임 정보는 필요하지 않습니다. 사용자가 애플리케이션에 로그인하게 하려면 Facebook, Google 또는 사용자 정의 인증을 구성해야 합니다. 
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
-  * [사용자 정의 ](custom-auth-ios-swift-sdk.html)
+  * [사용자 정의](custom-auth-ios-swift-sdk.html)

@@ -11,7 +11,7 @@ copyright:
 ## 시작하기 전에
 {: #google-auth-ios-before}
 
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)을 참조하십시오.  
+* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)을 참조하십시오.  
 * {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 ## Google 로그인을 수행할 수 있도록 앱 준비
@@ -40,7 +40,7 @@ Google에서 제공하는 [Goolge Sign-In for iOS](https://developers.google.com
 ## Google 인증을 위해 {{site.data.keyword.amashort}} 구성
 {: #google-auth-ios-config}
 
-iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다. 
+iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
 
@@ -58,7 +58,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 ### CocoaPods 설치
 {: #google-auth-cocoapods}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK는 iOS 프로젝트에 대한 종속 항목 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK는 iOS 프로젝트용 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
 
 1. 터미널을 열고 `pod --version` 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. 이 학습서의 다음 섹션으로 건너뛸 수 있습니다. 
 
@@ -70,7 +70,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 
 1.  `pod init`를 실행하십시오.
 
-### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SWift SDK 설치
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SWift SDK
 {: #google-auth-ios-sdk-cocoapods}
 
 1. iOS 프로젝트로 이동하십시오.
@@ -98,8 +98,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 
 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
 
-1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서
-앱을 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 및 `applicationGUID` 값이 **라우트** 및 **앱 GUID** 필드에 표시됩니다.
+1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 및 `applicationGUID` 값이 **라우트** 및 **앱 GUID** 필드에 표시됩니다.
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 다음 헤더를 추가하십시오.
 
@@ -117,8 +116,7 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-
- // Initialize the Client SDK.  
+ // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -128,8 +126,9 @@ iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix}} 대시보�
       }
 
  // [START openurl]
-      func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,annotation: AnyObject) -> Bool {
-return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+      func application(application: UIApplication,
+          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+             return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
  @available(iOS 9.0, *)
@@ -141,18 +140,17 @@ return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openU
 ## 인증 테스트
 {: #google-auth-ios-testing}
 
-클라이언트 SDK가 초기화되고 Google 인증 관리자가 등록되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다.
+클라이언트 SDK가 초기화되고 Google 인증 관리자가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 ### 시작하기 전에
 {: #google-auth-ios-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우
-[자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
 
-1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측된 모바일 애플리케이션만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
+1. MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호되므로 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
@@ -194,8 +192,6 @@ return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openU
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우,
-사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 
-이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
+  Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에, 사용자는 화면 상단 오른쪽 모서리에서 사용자 이름을 클릭하여 다른 사용자를 선택하고 이를 사용하여 로그인할 수 있습니다. 
 
    로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

@@ -196,7 +196,7 @@ cordova plugin add ibm-mfp-core
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## {{site.data.keyword.amashort}} SDK server per il server Liberty for Java&trade;
+## SDK server {{site.data.keyword.amashort}} per il server Liberty for Java&trade;
 {: #serverlibertysdk}
 
 [Scarica risorse utente TAI](https://imf-tai.{DomainName}/public/TAI.zip)

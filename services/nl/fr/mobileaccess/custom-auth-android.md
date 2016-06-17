@@ -6,7 +6,7 @@ Copyright : 2015, 2016
 
 # Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
 {: #custom-android}
-Configurez votre application Android qui utilise l'authentification personnalisée de manière qu'elle utilise le SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application Android qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
 
 ## Avant de commencer
 {: #before-you-begin}
@@ -73,11 +73,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Arguments
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext` : Fourni par le SDK client de {{site.data.keyword.amashort}} pour vous permettre de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification.  Par exemple, lorsque l'utilisateur annule la demande d'authentification.
+* `AuthenticationContext` : Fourni par le SDK client de {{site.data.keyword.amashort}} pour vous permettre de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification. Par exemple, lorsque l'utilisateur annule la demande d'authentification.
 * `JSONObject` : Contient une demande d'authentification personnalisée, renvoyée par un fournisseur d'identité personnalisé.
 * `Context` : Référence au contexte Android qui a été utilisé lors de l'envoi de la demande. Cet argument représente généralement une activité Android.
 
-En appelant la méthode `onAuthenticationChallengeReceived`, le SDK client de {{site.data.keyword.amashort}} délègue le contrôle au développeur.  Le service attend les données d'identification. Le développeur doit collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}} par l'une des méthodes de l'interface `AuthenticationContext`.
+En appelant la méthode `onAuthenticationChallengeReceived`, le SDK client de {{site.data.keyword.amashort}} délègue le contrôle au développeur. Le service attend les données d'identification. Le développeur doit collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}} par l'une des méthodes de l'interface `AuthenticationContext`.
 
 ### Méthode onAuthenticationSuccess
 {: #custom-android-authlistener-onsuccess}
@@ -96,7 +96,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ## Interface AuthenticationContext
 {: #custom-android-authcontext}
 
-`AuthenticationContext`` est fourni comme argument de la méthode `onAuthenticationChallengeReceived` d'une interface `AuthenticationListener` personnalisée. Vous devez collecter les données d'identification et utiliser les méthodes `AuthenticationContext`` pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes.
+`AuthenticationContext` est fourni comme argument de la méthode `onAuthenticationChallengeReceived` d'une interface `AuthenticationListener` personnalisée. Vous devez collecter les données d'identification et utiliser les méthodes `AuthenticationContext` pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes.
 
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
@@ -179,7 +179,7 @@ Utilisez le nom de domaine que vous avez défini dans le tableau de bord {{site.
 
 ## Test de l'authentification
 {: #custom-android-testing}
-Lorsque le SDK client est initialisé et qu'un programme d'écoute d'authentification est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et qu'un programme d'écoute d'authentification est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
 ### Avant de commencer
 {: #custom-android-testing-before}
@@ -218,7 +218,7 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
 
 	![image](images/android-custom-login-success.png)
 
-1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+ Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -227,4 +227,4 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
  Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
 soumettre ses données d'identification.
 
- La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.
+ La valeur `listener` transmise à la fonction de déconnexion peut être `null`.

@@ -7,7 +7,7 @@ copyright:
 
 # Configurazione dell'SDK client {{site.data.keyword.amashort}} per Android
 {: #custom-android}
-Configura la tua applicazione Android che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
+Configura la tua applicazione Android che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
 
 ## Prima di cominciare
 {: #before-you-begin}
@@ -72,11 +72,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argomenti
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentirti di notificare a tua volta le risposte alla richiesta di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali.  Un esempio è un utente che annulla l'autenticazione.
+* `AuthenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentirti di notificare a tua volta le risposte alla richiesta di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali. Un esempio è un utente che annulla l'autenticazione.
 * `JSONObject`: contiene una richiesta di verifica dell'autenticazione personalizzata, come restituito da un provider di identità personalizzato.
 * `Context`: un riferimento al contesto Android che è stato utilizzato quando è stata inviata la richiesta. Di norma, questo argomento rappresenta un'attività Android.
 
-Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.data.keyword.amashort}} sta delegando il controllo allo sviluppatore.  Il servizio attende le credenziali. Lo sviluppatore deve raccogliere le credenziali e notificarle a sua volta all'SDK client {{site.data.keyword.amashort}} utilizzando
+Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.data.keyword.amashort}} sta delegando il controllo allo sviluppatore. Il servizio attende le credenziali. Lo sviluppatore deve raccogliere le credenziali e notificarle a sua volta all'SDK client {{site.data.keyword.amashort}} utilizzando
 uno dei metodi di interfaccia `AuthenticationContext`.
 
 ### Metodo onAuthenticationSuccess
@@ -141,7 +141,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 		} catch (JSONException e){
 
 			// Se si è verificato un errore di raccolta delle credenziali, devi
-		// segnalarlo all'AuthenticationContext. In caso contrario, l'SDK Client Mobile Client
+		// segnalarlo all'AuthenticationContext. In caso contrario, l'SDK client Mobile Client
 		// Access resterà in uno stato di attesa delle credenziali
 		// per sempre
 
@@ -190,8 +190,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 
 1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con
-l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+1. L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
 1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo AuthenticationListener personalizzato.
 
@@ -220,7 +219,7 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
 
 	![immagine](images/android-custom-login-success.png)
 
-1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+ Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -228,4 +227,4 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
 
- Il valore per `listener` passato alla funzione di disconnessione può essere null.
+ Il valore per `listener` passato alla funzione di disconnessione può essere `null`.

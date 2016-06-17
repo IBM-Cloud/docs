@@ -73,7 +73,7 @@ sudo gem install cocoapods```
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
 
- // Initialize the Client SDK.  
+ // Initialize the client SDK.  
  BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
@@ -89,6 +89,7 @@ sudo gem install cocoapods```
 
 1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+
 1. iOS アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
  ```Swift

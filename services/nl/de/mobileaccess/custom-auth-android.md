@@ -138,8 +138,8 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// Im Fall eines Fehlers beim Erfassen von Berechtigungsnachweisen müssen
 			// Sie dies an AuthenticationContext zurückmelden. Andernfalls verbleibt
-			// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
-			// Wartestatus für Berechtigungsnachweise.
+		// das Mobile Client Access-Client-SDK unbegrenzte Zeit in einem
+		// Wartestatus für Berechtigungsnachweise.
 
 			log("This should never happen...");
 			authContext.submitAuthenticationFailure(null);
@@ -215,7 +215,7 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 
 	![Bild](images/android-custom-login-success.png)
 
-1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+ Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -223,4 +223,4 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
 
- Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann null sein.
+ Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.

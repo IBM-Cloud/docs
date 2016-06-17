@@ -72,7 +72,7 @@ logger.logFatalWithMessages("fatal");
 
 **Nota:** l'SDK client {{site.data.keyword.amashort}} è implementato con Objective-C, pertanto potresti dover
 aggiungere il file `IMFLoggerExtension.swift` al tuo progetto Swift per utilizzare l'API logger precedente. Puoi trovare questo file
-nell'[archivio dell'SDK client Mobile Client Access](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+nell'[archivio dell'SDK client {{site.data.keyword.amashort}}](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova

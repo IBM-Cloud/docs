@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Google を使用したユーザーの認証
@@ -35,5 +35,6 @@ Google を ID プロバイダーとして使用してリソースを保護する
 {: #google-auth-nextsteps}
 
 * [Android アプリでの Google 認証の使用可能化](google-auth-android.html)
-* [iOS アプリでの Google 認証の使用可能化](google-auth-ios.html)
+* [iOS アプリで Google 認証を使用可能にする (Swift SDK)](google-auth-ios-swift-sdk.html)
+* [iOS アプリで Google 認証を使用可能にする (Objective-C SDK)](google-auth-ios.html)
 * [Cordova アプリでの Google 認証の使用可能化](google-auth-cordova.html)

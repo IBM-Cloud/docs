@@ -50,7 +50,7 @@ var options = {
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
 	// En la solicitud que desea enviar al recurso protegido,
-	// añada el valor authHeader. 
+	// añada el valor authHeader.
 
 	request.headers.Authorization = authHeader;
 

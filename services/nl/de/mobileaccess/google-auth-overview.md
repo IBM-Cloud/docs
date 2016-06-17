@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Google zur Authentifizierung von Benutzern verwenden
@@ -35,5 +35,6 @@ Im folgenden vereinfachten Diagramm wird die Integration von {{site.data.keyword
 {: #google-auth-nextsteps}
 
 * [Google-Authentifizierung in Android-Apps aktivieren](google-auth-android.html)
-* [Google-Authentifizierung in iOS-Apps aktivieren](google-auth-ios.html)
+* [Google-Authentifizierung in iOS-Apps aktivieren (Swift-SDK)](google-auth-ios-swift-sdk.html)
+* [Google-Authentifizierung in iOS-Apps aktivieren (Objective-C-SDK)](google-auth-ios.html)
 * [Google-Authentifizierung in Cordova-Apps aktivieren](google-auth-cordova.html)

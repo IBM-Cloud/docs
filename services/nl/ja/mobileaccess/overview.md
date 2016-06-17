@@ -62,6 +62,6 @@ copyright:
 * 認証チャレンジ応答が取得されると、{{site.data.keyword.amashort}} サービスに送信されます。
 * サービスは、各 ID プロバイダー (Facebook/Google/カスタム) で認証チャレンジ応答を検証します。
 * 検証が正常に行われると、{{site.data.keyword.amashort}} サービスは許可ヘッダーを生成し、そのヘッダーを {{site.data.keyword.amashort}} Client SDK に返します。この許可ヘッダーには、アクセス許可情報を含むアクセス・トークンと、現行のユーザー、デバイス、またはアプリケーションに関する情報を含む ID トークンの、2 つのトークンが含まれています。
-* この時点から、{{site.data.keyword.amashort}} Client SDK を使用して実行されるすべての要求には、新しく取得した許可ヘッダーが含まれます。
+* この時点以降、{{site.data.keyword.amashort}} Client SDK で行われたすべての要求は、新しく入手した許可ヘッダーを含むようになります。
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は、要求から許可ヘッダーを抽出し、そのヘッダーを {{site.data.keyword.amashort}} サービスで検証し、バックエンド・リソースへのアクセス権限を付与します。

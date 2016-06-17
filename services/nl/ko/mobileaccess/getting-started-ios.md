@@ -10,7 +10,7 @@ copyright:
 
 {{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 계측하십시오. SDK를 초기화하고 보호 및 비보호 자원에 대한 요청을 작성하십시오. 
 
-**팁:** Swift로 iOS 앱을 개발하는 경우, {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 세부사항은 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)을 참조하십시오.
+**팁:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 세부사항은 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)을 참조하십시오.
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -20,7 +20,7 @@ copyright:
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-mca-sdk-ios}
-{{site.data.keyword.amashort}} SDK는 iOS 프로젝트에 대한 종속 항목 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
+{{site.data.keyword.amashort}} SDK는 iOS 프로젝트용 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
 
 
 ### CocoaPods 설치
@@ -29,16 +29,17 @@ copyright:
 
 1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오.
 ```
-sudo gem install cocoapods```
+sudo gem install cocoapods
+```
 자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
 
-### CocoaPods로 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
 
 1. 터미널에서 iOS 프로젝트의 루트 디렉토리로 이동하십시오. 
 
 1. 이미 CocoaPods에 대한 작업공간을 초기화하지 않은 경우 `pod init` 명령을 실행하십시오. <br/>
-CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 프로젝트에 대한 종속 항목을 정의합니다. 
+CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 프로젝트용 종속성을 정의합니다. 
 
 1. `Podfile` 파일을 편집하고 필요한 대상에 다음 행을 추가하십시오. 
 
@@ -66,8 +67,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:
-**
+	**Swift:**
 
 	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C로 구현됩니다. 브리징 헤더를 Swift 프로젝트에 추가해야 할 수 있습니다. 
 
@@ -80,8 +80,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	1. 프로젝트를 빌드하여 Xcode가 브리징 헤더를 선택 중인지 확인하십시오. 실패 메시지가 표시되지 않아야 합니다. 
 
 1. 다음 코드를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. <br/>
-*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 대체하십시오.
-
+*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 대체하십시오. 
 
 	**Objective-C:**
 
@@ -91,8 +90,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift:
-**
+	**Swift:**
 
 	```Swift
 IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
@@ -101,10 +99,10 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 ## 모바일 백엔드에 대한 요청 작성
 {: #request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 1. 브라우저에서 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스할 수 있기 때문에 브라우저에 `권한 없음` 메시지가 리턴됩니다.
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `IMFClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
@@ -126,8 +124,7 @@ if (error){
 	}];
 	```
 
-	**Swift:
-**
+	**Swift:**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

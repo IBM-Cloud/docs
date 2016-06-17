@@ -11,7 +11,7 @@ copyright:
 ## Antes de empezar
 {: #google-auth-ios-before}
 
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de iOS instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Swift de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de iOS instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Swift de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
 * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Preparación de la app para el inicio de sesión en Google
@@ -40,7 +40,7 @@ Para preparar la app para el inicio de sesión en Google, siga las instrucciones
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-ios-config}
 
-Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix}}.
+Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix}}. 
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -94,7 +94,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con CocoaPods
 ## Inicialización del SDK de Swift de cliente de {{site.data.keyword.amashort}}
 {: #google-auth-ios-initialize}
 
-Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, inicialícelo pasando los parámetros `applicationGUID` y `applicationRoute`.
+Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, inicialícelo pasando los parámetros `applicationGUID` y `applicationRoute`. 
 
 Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
@@ -139,7 +139,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 ## Prueba de autenticación
 {: #google-auth-ios-testing}
 
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Google, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Google, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #google-auth-ios-testing-before}
@@ -185,12 +185,12 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
  response:Optional("Hello, this is a protected resource!"), no error
  ```
 
-1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar otro usuario para iniciar sesión. 
+  Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar otro usuario para iniciar sesión.
 
    Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

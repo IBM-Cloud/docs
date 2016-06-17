@@ -45,7 +45,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 
 
 
-### Client SDK の初期化 
+### Client SDK の初期化
 {: #custom-ios-sdk-initialize}
 
 アプリケーションの経路 (`applicationRoute`) および GUID (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
@@ -185,7 +185,7 @@ CustomAuthenticationDelegate.m
 
 	// In case there was a failure collecting credentials you need to report
 	// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-	// Access Client SDK will remain in a waiting-for-credentials state
+	// Access client SDK will remain in a waiting-for-credentials state
 	// forever
 }
 
@@ -230,7 +230,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 
 		// In case there was a failure collecting credentials you need to report
 		// it back to the IMFAuthenticationContext. Otherwise Mobile Client
-		// Access Client SDK will remain in a waiting-for-credentials state
+		// Access client SDK will remain in a waiting-for-credentials state
 		// forever
 	}
 
@@ -274,8 +274,7 @@ Client SDK を初期化し、カスタム `IMFAuthenticationDelegate` を登録�
 {: #custom-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
-その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 1. iOS アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化し、カスタム `IMFAuthenticationDelegate` を登録した後に、以下のコードを追加します。
 
 	Objective-C:
@@ -319,22 +318,22 @@ if (error){
 1. 	要求が成功したら、Xcode コンソールに次のような出力が表示されます。
 
 	![image](images/ios-custom-login-success.png)
-	
-	
-	
+
 	次のコードを追加してログアウト機能を追加することもできます。
 
-	Objective C: 
+	Objective C:
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]
 	```
+
 	Swift:
- 
+
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
-ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。
+ ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
 
+ ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

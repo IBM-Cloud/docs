@@ -6,7 +6,7 @@ Copyright : 2015, 2016
 
 # Configuration du SDK client de {{site.data.keyword.amashort}} pour Cordova
 {: #custom-cordova}
-Configurez votre application Cordova qui utilise l'authentification personnalisée de manière qu'elle utilise le SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application Cordova qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} client SDK et connectez-la à {{site.data.keyword.Bluemix}}.
 
 
 ## Avant de commencer
@@ -38,7 +38,7 @@ unique de l'application** du panneau **Options pour application mobile** de votr
 ## Interface du programme d'écoute d'authentification
 {: #custom-cordva-auth}
 
-Le SDK client de {{site.data.keyword.amashort}} fournit une interface du programme d'écoute d'authentification permettant d'implémenter un flux d'authentification personnalisé. Vous devez ajouter les méthodes suivantes, qui sont appelées dans différentes phases du processus d'authentification.
+Le SDK client de {{site.data.keyword.amashort}} fournit une interface du programme d'écoute d'authentification permettant  d'implémenter un flux d'authentification personnalisé. Vous devez ajouter les méthodes suivantes, qui sont appelées dans différentes phases du processus d'authentification.
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -79,7 +79,7 @@ Cette méthode est appelée après un échec d'authentification. Les arguments c
 ## authenticationContext
 {: #custom-cordova-authcontext}
 
-La valeur de `authenticationContext`` est fournie comme argument de la méthode `onAuthenticationChallengeReceived` d'un programme d'écoute d'authentification. Le développeur doit collecter les données d'identification et utiliser les méthodes `AuthenticationContext`` pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes :
+La valeur de `authenticationContext` est fournie comme argument de la méthode `onAuthenticationChallengeReceived` d'un programme d'écoute d'authentification. Le développeur doit collecter les données d'identification et utiliser les méthodes `authenticationContext` pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes :
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
@@ -111,8 +111,8 @@ var customAuthenticationListener = {
 
 		// En cas d'échec de la collecte des données d'identification, vous devez le signaler au
 		// authenticationContext. Sinon le SDK client d'accès de client mobile
-		// demeure indéfiniment à l'état d'attente de données
-		// d'identification
+			// demeure indéfiniment à l'état d'attente de données
+			// d'identification
 
 	},
 
@@ -139,7 +139,7 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## Test de l'authentification
 {: #custom-cordova-test}
-Lorsque le SDK client est initialisé et qu'un programme d'écoute d'authentification est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et qu'un programme d'écoute d'authentification est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
 ### Avant de commencer
 {: #custom-cordova-testing-before}

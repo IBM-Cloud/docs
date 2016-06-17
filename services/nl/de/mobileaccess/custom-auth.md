@@ -85,8 +85,8 @@ Sie können beliebige der folgenden Beispiele für Node.js-Implementierungen ein
 
  * [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Erweitertes Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
-## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}} Server und einem angepassten Identitätsprovider
+
+## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}}-Server und einem angepassten Identitätsprovider
 {: #custom-id-comm}
 1. Der {{site.data.keyword.amashort}}-Service sendet eine Anforderung `startAuthorization` an den angepassten Identitätsprovider.
 1. Der angepasste Identitätsprovider antwortet mit einer angepassten Authentifizierungsanforderung (Challenge), die an den Client gesendet werden soll.
@@ -109,5 +109,6 @@ Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authent
 * [Angepassten Identitätsprovider erstellen](custom-auth-identity-provider.html)
 * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 * [Angepasste Authentifizierung für Android konfigurieren](custom-auth-android.html)
-* [Angepasste Authentifizierung für iOS konfigurieren](custom-auth-ios.html)
+* [Angepasste Authentifizierung für iOS konfigurieren (Swift-SDK)](custom-auth-ios-swift-sdk.html)
+* [Angepasste Authentifizierung für iOS konfigurieren (Objective-C-SDK)](custom-auth-ios.html)
 * [Angepasste Authentifizierung für Cordova konfigurieren](custom-auth-cordova.html)

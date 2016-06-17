@@ -9,8 +9,7 @@ copyright:
 {: #facebook-auth-overview}
 Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile possono utilizzare le loro credenziali Facebook per l'autenticazione.
 
-**Importante**: non devi necessariamente installare separatamente l'SDK Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri
-l'SDK client {{site.data.keyword.amashort}}.
+**Importante**: non devi necessariamente installare separatamente l'SDK Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}.
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
@@ -19,10 +18,10 @@ Consulta il seguente diagramma semplificato per comprendere in che modo {{site.d
 
 ![immagine](images/mca-sequence-facebook.jpg)
 
-1. Usa l'SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di backend protette con l'SDK server {{site.data.keyword.amashort}}.
+1. Usa l'SDK client {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di backend protette con l'SDK server {{site.data.keyword.amashort}}.
 * L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce il codice HTTP 401 e l'ambito di autorizzazione.
 * L'SDK client {{site.data.keyword.amashort}} rileva automaticamente il codice HTTP 401 e avvia il processo di autenticazione.
-* L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e chiede di emettere un'intestazione di autorizzazione.
+* l'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e chiede di emettere un'intestazione di autorizzazione.
 * Il servizio {{site.data.keyword.amashort}} chiede al client di eseguire prima l'autenticazione con Facebook fornendo una richiesta di verifica dell'autenticazione.
 * L'SDK client {{site.data.keyword.amashort}} utilizza l'SDK Facebook per avviare il processo di autenticazione. Dopo un'autenticazione con esito positivo, l'SDK Facebook restituisce un token di accesso Facebook.
 * Il token di accesso Facebook è considerato una risposta alla richiesta di verifica dell'autenticazione. Il token viene inviato al servizio {{site.data.keyword.amashort}}.

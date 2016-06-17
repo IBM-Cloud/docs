@@ -68,7 +68,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**Anmerkung:** Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Daher müssen Sie Ihrem Swift-Projekt möglicherweise die Datei `IMFLoggerExtension.swift` hinzufügen, um die vorherige Protokollierungs-API verwenden zu können. Sie finden diese Datei im [Mobile Client Access-Client-SDK-Archiv](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+**Anmerkung:** Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Daher müssen Sie Ihrem Swift-Projekt möglicherweise die Datei `IMFLoggerExtension.swift` hinzufügen, um die vorherige Protokollierungs-API verwenden zu können. Sie finden diese Datei im [{{site.data.keyword.amashort}}-Client-SDK-Archiv](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova

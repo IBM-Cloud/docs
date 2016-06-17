@@ -5,14 +5,14 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} Client SDK para Cordova
+# Configurando o {{site.data.keyword.amashort}} client SDK para Cordova
 {: #custom-cordova}
-Configure seu aplicativo Cordova que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} Client SDK e conecte o aplicativo ao {{site.data.keyword.Bluemix}}.
+Configure seu aplicativo Cordova que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 
 ## Antes de Começar
 {: #before-you-begin}
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também devem ser instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
 ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configurando o Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
@@ -20,14 +20,14 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
  * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-## Inicializando o {{site.data.keyword.amashort}} Client SDK
+## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #custom-cordova-sdk}
 Inicialize o SDK passando os parâmetros applicationGUID e applicationRoute.
 
 1. Obtenha os valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os
 valores **Route** (`applicationRoute`) e
 **App GUID** (`applicationGUID`) são exibidos.
-1. Inicialize o Client SDK.
+1. Inicialize o client SDK.
 
 	```JavaScript
 	BMSClient.initialize(applicationRoute, applicationGUID);
@@ -41,7 +41,7 @@ valores **Route** (`applicationRoute`) e
 ## Interface do listener de autenticação
 {: #custom-cordva-auth}
 
-O {{site.data.keyword.amashort}} Client SDK fornece uma interface de listener de autenticação para implementar um fluxo de autenticação customizado. Deve-se incluir os métodos a seguir que são chamados em diferentes fases de um processo de autenticação.
+O {{site.data.keyword.amashort}} client SDK fornece uma interface de listener de autenticação para implementar um fluxo de autenticação customizado. Deve-se incluir os métodos a seguir que são chamados em diferentes fases de um processo de autenticação.
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -62,10 +62,10 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 
 #### Argumentos
 {: #onAuthenticationChallengeReceived-args}
-* `authenticationContext`: fornecido pelo {{site.data.keyword.amashort}} Client SDK para que o desenvolvedor possa relatar respostas de desafio ou falha de autenticação durante a coleção de credenciais, como o cancelamento da solicitação de autenticação pelo usuário.
+* `authenticationContext`: fornecido pelo {{site.data.keyword.amashort}} client SDK para que o desenvolvedor possa relatar respostas de desafio ou falha de autenticação durante a coleta de credenciais, como o cancelamento da solicitação de autenticação pelo usuário.
 * `challenge`: um objeto JSON que contém um desafio de autenticação customizado, conforme retornado por um provedor de identidade customizado.
 
-Ao chamar o método `onAuthenticationChallengeReceived`, o {{site.data.keyword.amashort}} Client SDK delega controle ao desenvolvedor. O {{site.data.keyword.amashort}} aguarda credenciais. O desenvolvedor deve coletar credenciais e relatá-las de volta para o {{site.data.keyword.amashort}} Client SDK usando um dos métodos da interface `authContext` a seguir.
+Ao chamar o método `onAuthenticationChallengeReceived`, o {{site.data.keyword.amashort}} client SDK delega controle ao desenvolvedor. O {{site.data.keyword.amashort}} aguarda credenciais. O desenvolvedor deve coletar credenciais e relatá-las de volta para o {{site.data.keyword.amashort}} client SDK usando um dos métodos da interface `authContext` a seguir.
 
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
@@ -82,7 +82,7 @@ Esse método é chamado após uma falha de autenticação. Os argumentos incluem
 ## authenticationContext
 {: #custom-cordova-authcontext}
 
-O valor `authenticationContext` é fornecido como um argumento para o método `onAuthenticationChallengeReceived` de um listener de autenticação customizado. O desenvolvedor deve coletar credenciais e usar os métodos `authenticationContext` para retornar credenciais para o {{site.data.keyword.amashort}} Client SDK ou relatar uma falha. Use um dos métodos a seguir:
+O valor `authenticationContext` é fornecido como um argumento para o método `onAuthenticationChallengeReceived` de um listener de autenticação customizado. O desenvolvedor deve coletar credenciais e usar os métodos `authenticationContext` para retornar credenciais para o {{site.data.keyword.amashort}} client SDK ou relatar uma falha. Use um dos métodos a seguir:
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
@@ -112,8 +112,9 @@ var customAuthenticationListener = {
 
 		authenticationContext.submitAuthenticationChallengeAnswer(challengeResponse);
 
-		// In case there was a failure collecting credentials you need to report 		// it back to the authenticationContext. Otherwise Mobile
-Client 		// Access Client SDK will remain in a waiting-for-credentials state 		// forever
+		// In case there was a failure collecting credentials you need to report 		// it back to the authenticationContext. Otherwise Mobile Client
+		// Access client SDK will remain in a waiting-for-credentials state
+		// forever
 
 	},
 
@@ -136,17 +137,17 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## Testando a Autenticação
 {: #custom-cordova-test}
-Após a inicialização do Client SDK e do registro de um AuthenticationListener customizado, é possível começar a fazer solicitações para seu backend móvel.
+Depois que o client SDK for inicializado e um AuthenticationListener customizado for registrado, será possível começar a fazer solicitações ao seu backend móvel.
 
 ### Antes de Começar
 {: #custom-cordova-testing-before}
-Deve-se ter um aplicativo criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`.
+Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mobilefirstbp}} e ter um recurso que esteja protegido por {{site.data.keyword.amashort}} no terminal `/protected`.
 
 
 1. Envie uma solicitação ao terminal protegido do backend móvel em seu navegador
 abrindo `{applicationRoute}/protected`, por exemplo,
 `http://my-mobile-backend.mybluemix.net/protected`.
- O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal só pode ser acessado por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+ O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar o AuthenticationListener customizado.
 

@@ -55,7 +55,7 @@ Inizializza l'SDK passando i parametri context, applicationGUID e applicationRou
 
 1. Dalla pagina principale del dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sulla tua applicazione. Fai clic su **Opzioni mobili**. Per inizializzare l'SDK ti servono i valori rotta applicazione (**Application Route**) e GUID applicazione (**Application GUID**).
 
-2. Inizializza l'SDK client {{site.data.keyword.amashort}} nella tua applicazione Android.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
+2. Inizializza l'SDK client {{site.data.keyword.amashort}} nella tua applicazione Android. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
 <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	```Java

@@ -13,7 +13,7 @@ Le service {{site.data.keyword.amafull}} apporte à votre application mobile les
 et de surveillance. Vous pouvez configurer l'authentification de client et les fournisseurs d'identité. Vous pouvez aussi ajouter à votre application une fonction de
 surveillance qui active la journalisation client et les statistiques d'utilisation.
 
-Remarque : L'ancien nom du service Mobile Client Access est Advanced Mobile Access.
+Remarque : L'ancien nom du service {{site.data.keyword.amashort}} est Advanced Mobile Access.
 {: shortdesc}
 
 1. Configurez un système de back end mobile dans Bluemix et configurez le logiciel SDK dans votre

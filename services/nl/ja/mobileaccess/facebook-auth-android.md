@@ -12,7 +12,7 @@ Android アプリケーションで Facebook をID プロバイダーとして�
 ## 開始する前に
 {: #facebook-auth-android-before}
  * {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)を参照してください。  
- * {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+ * {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
  * Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 
@@ -74,14 +74,12 @@ Facebook Application ID を取得し、Android クライアントに対して機
 
 1. Facebook Application ID を指定して**「保存」**をクリックします。
 
-## Android 用の {{site.data.keyword.amashort}}  Client SDK の構成
+## Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #facebook-auth-android-sdk}
 Client SDK を Android 用に構成するには、Android Studio 内の Gradle 依存関係マネージャーを使用します。
 
 1.  アプリケーション・モジュールの `build.gradle` ファイルを開きます。
 ご使用の Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用の 2 つの `build.gradle` ファイルが含まれている可能性があります。アプリケーション・モジュールのファイルを使用してください。
-
-
 
 1. `build.gradle` ファイルの依存関係セクションを探し、Client SDK 用の新しいコンパイル依存関係を追加します。
 
@@ -158,7 +156,8 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 					"applicationRoute",
 					"applicationGUID");
 
-	FacebookAuthenticationManager.getInstance().register(this);```
+	FacebookAuthenticationManager.getInstance().register(this);
+```
 
 
 1. 以下のコードをアクティビティーに追加します。
@@ -181,6 +180,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 
 1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントに要求を送信してみてください。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
+
 1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化し、`FacebookAuthenticationManager` を登録した後、次のコードを追加します。
 
 	```Java
@@ -216,7 +216,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 
 	![image](images/android-facebook-login-success.png)
 
-1. 次のコードを追加してログアウト機能を追加することもできます。
+ 次のコードを追加してログアウト機能を追加することもできます。
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -224,4 +224,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
 
  ユーザーが Facebook にログインした後で、このコードを呼び出すと、そのユーザーは Facebook からログアウトされます。そのユーザーが再度ログインしようとする場合は、Facebook 資格情報を求めるプロンプトが出されます。
 
- ログアウト機能に渡される `listener` の値は、ヌルにすることができます。
+ ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

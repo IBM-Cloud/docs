@@ -11,7 +11,7 @@ Configure su aplicación de Android con autenticación personalizada para que ut
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -71,11 +71,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argumentos
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales.  Por ejemplo, cuando un usuario cancela la autenticación.
+* `AuthenticationContext`: proporcionado por el SDK del cliente de {{site.data.keyword.amashort}} para que pueda volver a notificar los errores o las respuestas al cambio de autenticación durante la recopilación de credenciales. Por ejemplo, cuando un usuario cancela la autenticación.
 * `JSONObject`: contiene un cambio de autenticación personalizada, tal como se devuelve desde un proveedor de identidad personalizado.
 * `Context`: una referencia al contexto de Android utilizado cuando se envió la solicitud. Normalmente este argumento representa una actividad de Android.
 
-Al llamar al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador.  El servicio espera las credenciales. El desarrollador debe recopilar las credenciales y notificarlas al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos de la interfaz `AuthenticationContext`.
+Al llamar al método `onAuthenticationChallengeReceived`, el SDK del cliente de {{site.data.keyword.amashort}} delega el control al desarrollador. El servicio espera las credenciales. El desarrollador debe recopilar las credenciales y notificarlas al SDK del cliente de {{site.data.keyword.amashort}} utilizando uno de los métodos de la interfaz `AuthenticationContext`. 
 
 ### Método onAuthenticationSuccess
 {: #custom-android-authlistener-onsuccess}
@@ -138,8 +138,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// En caso de que se produzca un error al recopilar las credenciales, tendrá
 	// que notificarlo a AuthenticationContext. De lo contrario, el SDK del cliente Mobile
-	// Client Access permanecerá siempre en estado de espera
-	// de las credenciales
+	// Client Access permanecerá siempre en estado de espera de las credenciales
 
 			log("This should never happen...");
 			authContext.submitAuthenticationFailure(null);
@@ -177,7 +176,7 @@ Utilice el valor de *realmName* que indicó en el panel de control de {{site.dat
 
 ## Prueba de autenticación
 {: #custom-android-testing}
-Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #custom-android-testing-before}
@@ -215,12 +214,12 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
 
 	![imagen](images/android-custom-login-success.png)
 
-1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+ También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor. 
+ Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.
 
- El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser `null`. 

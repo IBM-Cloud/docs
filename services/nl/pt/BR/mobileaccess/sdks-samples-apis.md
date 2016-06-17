@@ -68,7 +68,7 @@ pod 'IMFCore'
 cordova plugin add ibm-mfp-core
 ```
 
-## {{site.data.keyword.amashort}} Client SDK para autenticação do Facebook
+## {{site.data.keyword.amashort}} client SDK para autenticação do Facebook
 {: #facebooksdk}
 
 ### Android
@@ -126,7 +126,7 @@ pod 'IMFFacebookAuthentication'
 cordova plugin add ibm-mfp-core
 ```
 
-## {{site.data.keyword.amashort}} Client SDK para autenticação do Google
+## {{site.data.keyword.amashort}} client SDK para autenticação do Google
 {: #googlesdk}
 
 ### Android
@@ -184,19 +184,19 @@ pod 'IMFGoogleAuthentication'
 cordova plugin add ibm-mfp-core
 ```
 
-## {{site.data.keyword.amashort}} Server SDK para servidores Node.js
+## {{site.data.keyword.amashort}} server SDK para servidores Node.js
 {: #serversdk}
 
 [Repositório do Git](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
 
-#### Instale o Server SDK com o npm
+#### Instalar o server SDK com o npm
 {: #serversdk-npm}
 
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
 
-## {{site.data.keyword.amashort}} Server SDK para servidor Liberty for Java&trade;
+## {{site.data.keyword.amashort}} server SDK para servidor Liberty for Java&trade;
 {: #serverlibertysdk}
 
 [Fazer download de artefatos TAI](https://imf-tai.{DomainName}/public/TAI.zip)

@@ -9,8 +9,7 @@ Copyright : 2015, 2016
 
 Instrumentez votre application iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
 
-**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de
-{{site.data.keyword.amashort}}. Pour plus d'informations, voir [Configuration du SDK Swift pour
+**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Configuration du SDK Swift pour
 iOS](getting-started-ios-swift-sdk.html)
 
 ## Avant de commencer
@@ -34,7 +33,7 @@ sudo gem install cocoapods
 ```
 Pour plus d'informations, reportez-vous au [site Web CocoaPods](https://cocoapods.org/).
 
-### Installation du logiciel SDK client de {{site.data.keyword.amashort}} avec CocoaPods
+### Installation du SDK client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #install-sdk-cocoapods}
 
 1. Dans Terminal, naviguez jusqu'au répertoire racine de votre projet iOS.
@@ -56,15 +55,13 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #init-mca-sdk-ios}
 
-Pour pouvoir utiliser le SDK client de {{site.data.keyword.amashort}}, vous devez l'initialiser en transmettant les paramètres
-**Route** (`applicationRoute`) et **App GUID** (`applicationGUID`).
+Pour pouvoir utiliser le SDK client de {{site.data.keyword.amashort}}, vous devez l'initialiser en transmettant les paramètres **Route** (`applicationRoute`) et **App GUID** (`applicationGUID`).
 
 
 1. Dans la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre appli. Cliquez sur **Options pour application mobile**. Vous
 aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'application** pour initialiser le SDK.
 
-1. Importez l'infrastructure `IMFCore` dans la classe qui doit utiliser
-le SDK client de {{site.data.keyword.amashort}} en ajoutant l'en-tête suivant :
+1. Importez l'infrastructure `IMFCore` dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant l'en-tête suivant :
 
 	**Objective-C:**
 	 ```Objective-C
@@ -83,7 +80,7 @@ le SDK client de {{site.data.keyword.amashort}} en ajoutant l'en-tête suivant :
 	1. Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
-1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.  En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
+1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}. En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C :**
 
@@ -107,7 +104,6 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
 1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre système de back end mobile. Ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
-
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `IMFClient` :
 
 	**Objective-C :**

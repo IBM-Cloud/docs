@@ -10,7 +10,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans vos applications Andro
 
 ## Avant de commencer
 {: #facebook-auth-android-before}
- * Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Android instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Android instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
  * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
  * Créez un ID d'application Facebook. Pour plus d'informations, voir
 [Acquisition d'un ID d'application Facebook sur le
@@ -147,11 +147,8 @@ Votre projet Android peut contenir deux fichiers `build.gradle` : un pour le pro
 	</application>
 ```
 
-1. Initialisez le SDK client et enregistrez le gestionnaire d'authentification Facebook. Initialisez le SDK client de {{site.data.keyword.amashort}}
-en transmettant les paramètres de contexte, d'identificateur unique global de l'application (`applicationGUID`) et de route
-(`applicationRoute`).<br/>
- Il est courant d'insérer le code d'initialisation dans la méthode `onCreate` de l'activité principale de l'application
-Android, bien que ceci ne soit pas impératif.<br/>
+1. Initialisez le SDK client et enregistrez le gestionnaire d'authentification Facebook. Initialisez le SDK client de {{site.data.keyword.amashort}} en transmettant les paramètres de contexte, d'identificateur unique global de l'application (`applicationGUID`) et de route (`applicationRoute`).<br/>
+ Il est courant d'insérer le code d'initialisation dans la méthode `onCreate` de l'activité principale de l'application Android, bien que ceci ne soit pas impératif.<br/>
  Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** et de **Identificateur global
 unique de l'application** dans le menu **Options pour application mobile** sur la page principale de votre application
 dans le tableau de bord Bluemix.
@@ -177,7 +174,8 @@ dans le tableau de bord Bluemix.
 ```
 
 ## Test de l'authentification
-Lorsque le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des
+demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #facebook-auth-android-testing-before}
@@ -223,7 +221,7 @@ le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook
 
 	![image](images/android-facebook-login-success.png)
 
-1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+ Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -232,4 +230,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
  Si vous appelez ce code lorsqu'un utilisateur est connecté via Facebook, l'utilisateur est déconnecté de Facebook. Lorsque l'utilisateur tente de se
 reconnecter, il doit à nouveau soumettre ses données d'identification Facebook.
 
- La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.
+ La valeur `listener` transmise à la fonction de déconnexion peut être `null`.

@@ -24,7 +24,7 @@ L'SDK server {{site.data.keyword.amashort}} fornisce una strategia di passport `
 applicazioni di backend distribuite su IBM {{site.data.keyword.Bluemix_notm}}. Per proteggere la tua applicazione da accessi non autorizzati e ottenere le informazioni di monitoraggio, devi strumentare il tuo server Node.js con `MCABackendStrategy`. Il modulo npm `bms-mca-token-validation-strategy` fornisce il
 metodo di verifica e la strategia passport `MCABackendStrategy` per convalidare il token di accesso e il token ID emessi da {{site.data.keyword.amashort}}. Questo modulo fornisce anche automaticamente le informazioni di monitoraggio relative agli eventi di sicurezza.
 
-l'SDK server {{site.data.keyword.amashort}} utilizza il framework `Passport` per implementare l'autorizzazione.  Per ulteriori
+l'SDK server {{site.data.keyword.amashort}} utilizza il framework `Passport` per implementare l'autorizzazione. Per ulteriori
 informazioni, vedi [Passportjs.org](http://passportjs.org/).
 
 ### Installazione dell'SDK server {{site.data.keyword.amashort}}

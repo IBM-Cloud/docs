@@ -69,7 +69,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**注:** {{site.data.keyword.amashort}} Client SDK は Objective-C で実装されているため、上記の logger API を使用するためには `IMFLoggerExtension.swift` ファイルを Swift プロジェクトに追加する必要がある場合があります。このファイルは [Mobile Client Access Client SDK アーカイブ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)にあります。
+**注:** {{site.data.keyword.amashort}} Client SDK は Objective-C で実装されているため、上記の logger API を使用するためには `IMFLoggerExtension.swift` ファイルを Swift プロジェクトに追加する必要がある場合があります。このファイルは [{{site.data.keyword.amashort}} Client SDK アーカイブ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)にあります。
 
 
 ### Cordova

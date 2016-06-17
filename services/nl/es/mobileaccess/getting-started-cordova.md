@@ -8,7 +8,7 @@ copyright:
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
 
-Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos. 
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -59,11 +59,11 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	cordova plugin add ibm-mfp-core
 	```
 
-1. Configure la plataforma para Android, iOS o ambos. 
+1. Configure la plataforma para Android, iOS o ambos.
 
 	* **Android**
 
-		Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) para evitar errores de compilación. 
+		Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) para evitar errores de compilación.
 
 		```
 		cordova build android
@@ -71,19 +71,19 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 
 	* **iOS**
 
-		Configure el proyecto Xcode del siguiente modo para evitar errores de compilación. 
+		Configure el proyecto Xcode del siguiente modo para evitar errores de compilación.
 
-		1. Utilice la versión más reciente de Xcode para abrir el archivo xcode.proj en el directorio &lt;*nombre_app*&gt;/platforms/ios. 
+		1. Utilice la versión más reciente de Xcode para abrir el archivo xcode.proj en el directorio &lt;*nombre_app*&gt;/platforms/ios.
 
 		**Importante:** si recibe el mensaje "Convertir a última sintaxis de Swift", pulse Cancelar.
 
-		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C** y añada la siguiente vía de acceso: 
+		2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C** y añada la siguiente vía de acceso:
 
 			```
 			<nombre_proyecto>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
-		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath** y añada los siguientes parámetros de Frameworks: 
+		3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath** y añada los siguientes parámetros de Frameworks:
 
 			```
 			@executable_path/Frameworks
@@ -100,12 +100,11 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 ## Inicialización del plug-in del cliente {{site.data.keyword.amashort}}
 {: #getting-started-cordova-initialize}
 
-Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros *applicationGUID* y *applicationRoute*.
+Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros *applicationGUID* y *applicationRoute*. 
 
 1. Busque los valores de GUID y ruta de la aplicación en la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse el nombre de la app y después **Opciones móviles** para visualizar los valores de **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
 
 3. Añada la llamada siguiente al archivo `index.js` para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
-
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -123,6 +122,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 	```
 
 	El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se accede a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+
 
 1. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 

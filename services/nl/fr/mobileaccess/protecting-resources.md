@@ -12,7 +12,7 @@ Le service {{site.data.keyword.amashort}} permet de protéger les applications d
 {:shortdesc}
 ## Filtre d'autorisation
 {: #auth-filter}
-Le SDK serveur de {{site.data.keyword.amashort}} contient des filtres d'autorisation qui peuvent vous servir à protéger vos applications de back end.  Le filtre d'autorisation intercepte les demandes entrantes et vérifie la présence d'un en-tête d'autorisation. En cas d'absence ou d'invalidité de l'en-tête d'autorisation, le filtre renvoie une réponse d'erreur HTTP 401. Le SDK serveur de {{site.data.keyword.amashort}} sait intercepter une réponse HTTP 401 renvoyée par le SDK serveur de {{site.data.keyword.amashort}} et déclenche le flux d'authentification.
+Le SDK serveur de {{site.data.keyword.amashort}} contient des filtres d'autorisation qui peuvent vous servir à protéger vos applications de back end. Le filtre d'autorisation intercepte les demandes entrantes et vérifie la présence d'un en-tête d'autorisation. En cas d'absence ou d'invalidité de l'en-tête d'autorisation, le filtre renvoie une réponse d'erreur HTTP 401. Le SDK client de {{site.data.keyword.amashort}} sait intercepter une réponse HTTP 401 renvoyée par le SDK serveur de {{site.data.keyword.amashort}} et déclenche le flux d'authentification.
 ## En-tête d'autorisation
 {: #auth-header}
 L'en-tête d'autorisation de la demande entrante se compose de trois parties : Bearer, le jeton d'accès et le jeton d'ID, qui sont

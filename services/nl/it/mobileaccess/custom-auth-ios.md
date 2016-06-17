@@ -104,7 +104,7 @@ L'SDK client {{site.data.keyword.amashort}} fornisce l'interfaccia `IMFAuthentic
 Questo metodo viene richiamato quando viene ricevuta una richiesta di verifica dell'autenticazione personalizzata dal servizio {{site.data.keyword.amashort}}. Gli argomenti includono
 
 * Il protocollo `IMFAuthenticationContext` viene fornito dall'SDK client {{site.data.keyword.amashort}} in modo che lo sviluppatore possa
-a sua volta segnalare le risposte alle richieste di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali (ad es. l'utente ha annullato l'operazione)
+a sua volta notificare le risposte alle richieste di verifica dell'autenticazione oppure gli errori durante la raccolta di credenziali (ad es. l'utente ha annullato l'operazione)
 * `NSDictionary` contenente una richiesta di verifica dell'autenticazione personalizzata come restituita da un provider di identità personalizzato
 
 Richiamando il metodo `authenticationContext:didReceiveAuthenticationChallenge`, l'SDK client {{site.data.keyword.amashort}} sta
@@ -179,7 +179,7 @@ CustomAuthenticationDelegate.m
 	[context submitAuthenticationChallengeAnswer:challengeAnswer];
 
 	// Se si è verificato un errore di raccolta delle credenziali, devi
-		// segnalarlo all'IMFAuthenticationContext. In caso contrario, l'SDK Client Mobile Client
+		// segnalarlo all'IMFAuthenticationContext. In caso contrario, l'SDK client Mobile Client
 		// Access resterà in uno stato di attesa delle credenziali
 		// per sempre
 }
@@ -225,7 +225,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
 		// Se si è verificato un errore di raccolta delle credenziali, devi
-		// segnalarlo all'IMFAuthenticationContext. In caso contrario, l'SDK Client Mobile Client
+		// segnalarlo all'IMFAuthenticationContext. In caso contrario, l'SDK client Mobile Client
 		// Access resterà in uno stato di attesa delle credenziali
 		// per sempre
 }
@@ -273,8 +273,7 @@ Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelega
  Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 1. Invia una richiesta all'endpoint protetto del tuo backend mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
-  L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con
-l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+  L'endpoint `/protected` di un backend mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo aver inizializzato `BMSClient` e registrato il tuo `IMFAuthenticationDelegate` personalizzato:
 
 	Objective-C:
@@ -315,22 +314,21 @@ l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser vie
 1. 	Quando la tua richiesta ha esito positivo, nella console Xcode vedi il seguente output:
 
 	![immagine](images/ios-custom-login-success.png)
-	
-	
-	
+
 	Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
-	Objective C: 
+	Objective C:
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]
 	```
-	Swift: 
+
+	Swift:
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
-Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
-Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
 
+ Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

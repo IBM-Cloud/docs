@@ -10,7 +10,7 @@ Copyright : 2016
 ## Avant de commencer
 {: #google-auth-ios-before}
 
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Préparation de votre application pour connexion Google
@@ -75,7 +75,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 
 1.  Exécutez `pod init`.
 
-### Installation du {{site.data.keyword.amashort}} SDK Swift client à l'aide de CocoaPods
+### Installation du SDK Swift de {{site.data.keyword.amashort}} à l'aide de CocoaPods
 {: #google-auth-ios-sdk-cocoapods}
 
 1. Accédez à votre projet iOS.
@@ -101,8 +101,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 ## Initialisation du SDK Swift client {{site.data.keyword.amashort}}
 {: #google-auth-ios-initialize}
 
-Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres
-`applicationGUID` et `applicationRoute`.
+Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres `applicationGUID` et `applicationRoute`.
 
 En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
@@ -110,8 +109,7 @@ En général, vous pouvez placer le code d'initialisation dans la méthode `appl
 valeurs `applicationRoute` et `applicationGUID` sont affichées dans les zones
 **Route** et **Identificateur global unique de l'application**.
 
-1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client
-{{site.data.keyword.amashort}}. Ajoutez les en-têtes suivants :
+1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}. Ajoutez les en-têtes suivants :
 
  ```Swift
  import UIKit

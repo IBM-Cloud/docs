@@ -8,7 +8,7 @@ copyright:
 # Configuración del SDK de Android
 {: #getting-started-android}
 
-Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
+Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos. 
 
 ## Antes de empezar
 {: #before-you-begin}
@@ -55,7 +55,7 @@ Inicialice el SDK pasando los parámetros de contexto, applicationGUID y applica
 
 1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
 
-2. Inicialice el SDK del cliente de {{site.data.keyword.amashort}} en la aplicación de Android.  Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
+2. Inicialice el SDK del cliente de {{site.data.keyword.amashort}} en la aplicación de Android. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 <br/>
 Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -73,7 +73,6 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 
 1. Intente enviar una solicitud a un punto final protegido del nuevo programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
-
 1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
 	```Java
