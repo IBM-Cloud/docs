@@ -11,7 +11,7 @@ copyright:
 # Liberty features supported in Bluemix
 {: #liberty_features}
 
-*Last Updated: 19 May 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 The following table shows Liberty features supported in Bluemix
@@ -206,6 +206,8 @@ however, the remote EJBs are not remotely accessible with the CORBA/IIOP
 protocol due to port restrictions in the Bluemix environment.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -12,12 +12,26 @@ copyright:
 # Buildpack defaults
 {: #buildpack_defauts}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 The Liberty buildpack is updated frequently in Bluemix. Each release might contain security fixes or feature enhancements.
 
 The buildpack has default values for settings such as the Java version or Liberty feature set for WAR or EAR applications. Some of the default values might change between the buildpack release, which might adversely impact the application. To prevent the application from being affected by the change in buildpack defaults, take steps to configure your application to avoid relying on the buildpack defaults.
+
+## Liberty versions
+{: #liberty_versions}
+
+The buildpack provides two versions of the Liberty runtime:
+1. The stable release
+  * It is the default Liberty runtime.
+  * It does not provide any [beta features](usingBetaFeatures.html).
+  * Typically updated on a quarterly basis.
+
+2. The latest beta release
+  * It must be explicity enabled by setting the **JBP_CONFIG_LIBERTY** environment variable with the **"version: +"** value.
+  * It provides [beta features](usingBetaFeatures.html).
+  * Typically updated on a monthly basis.
 
 ## Liberty features
 {: #liberty_features}
@@ -36,7 +50,10 @@ The buildpack provides a default JRE for the application. The major or minor ver
 
 To ensure that the application is not affected by the major version change, set the environment variable with the appropriate JRE version as described in [Customizing the JRE](customizingJRE.html). For best results, adopt Java 8 for your applications.
 
+
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,7 @@ copyright:
 # Monitoring Liberty in Bluemix with JConsole
 {: #jconsole}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 ## The steps to monitor the Bluemix Liberty runtime with JConsole follow:
@@ -89,6 +89,8 @@ You can also add <b>&dash;J&dash;Djavax.net.debug=ssl</b> to the jconsole comman
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

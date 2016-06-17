@@ -11,7 +11,7 @@ copyright:
 # Memory limits and the Liberty buildpack
 {: #memory_limits}
 
-*Last Updated: 23 March 2016*
+*Last Updated: 10 June 2016*
 {: .last-updated}
 
 A memory limit must be specified when you deploy an application with the Liberty buildpack.
@@ -42,6 +42,8 @@ When you deploy an application, the memory usage of the entire process is monito
 * If the Memory Limit is exceeded while the application is in service, the process is stopped. Cloud Foundry attempts to restart the application. The application might restart, but it is unavailable for some amount of time.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
