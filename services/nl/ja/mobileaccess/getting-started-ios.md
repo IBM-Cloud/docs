@@ -104,6 +104,7 @@ sudo gem install cocoapods```
 
 1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+
 1. iOS アプリケーションを使用して同じエンドポイントに対する要求を作成します。`IMFClient` を初期化した後に、以下のコードを追加します。
 
 	**Objective-C:

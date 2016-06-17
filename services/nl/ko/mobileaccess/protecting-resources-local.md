@@ -8,9 +8,9 @@ copyright:
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
 
-{{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스를 사용하도록 로컬 개발 환경을 구성할 수 있습니다. 특히, Node.js와 같은 로컬 개발 서버를 사용하여 서버 측 코드를 개발하는 경우 {{site.data.keyword.amashort}} 서버 SDK를 사용할 수 있습니다. 
+{{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스를 사용하도록 로컬 개발 환경을 구성할 수 있습니다. 특히 Node.js와 같은 로컬 개발 서버를 사용하여 서버 측 코드를 개발하는 경우 {{site.data.keyword.amashort}} 서버 SDK를 사용할 수 있습니다.
 
-{{site.data.keyword.amashort}} 서버 SDK는 환경 변수가 설정되어 있어야 합니다. {{site.data.keyword.Bluemix_notm}}에서 서버 측 코드를 개발 중인 경우 {{site.data.keyword.Bluemix_notm}} 인프라에서 해당 변수를 제공합니다. 
+{{site.data.keyword.amashort}} 서버 SDK를 사용하려면 두 개의 환경 변수가 설정되어 있어야 합니다. {{site.data.keyword.Bluemix_notm}}에서 서버 측 코드를 개발 중인 경우 {{site.data.keyword.Bluemix_notm}} 인프라에서 해당 변수를 제공합니다. 
 
 * `VCAP_SERVICES`: 모바일 백엔드 애플리케이션에 바인드되는 서비스에 대한 정보를 포함합니다. 
 * `VCAP_APPLICATION`: 모바일 백엔드 애플리케이션에 대한 정보를 포함합니다. 
@@ -71,7 +71,7 @@ var MCABackendStrategy =
 ## 로컬 개발 서버에 대해 작업할 수 있도록 모바일 애플리케이션 구성
 {: #configuring-local}
 
-{{site.data.keyword.Bluemix_notm}} 애플리케이션의 실제 URL로 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하고 각 요청에서 localhost(또는 IP 주소)를 사용하십시오. 다음 샘플을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}} 애플리케이션의 실제 URL로 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하고 각 요청에 localhost(또는 IP 주소)를 사용하십시오. 다음 샘플을 참조하십시오. 
 
 다음 예제에서 `localhost`를 개발 서버의 실제 IP 주소로 변경해야 할 수 있습니다. 
 
@@ -124,7 +124,8 @@ var failure = function(error){
 var request = new MFPRequest(baseRequestUrl +
 							"/resource/path", MFPRequest.GET);
 
-request.send(success, failure);```
+request.send(success, failure);
+```
 
 ### iOS - Objective C
 
@@ -145,7 +146,6 @@ IMFResourceRequest *request =  [IMFResourceRequest
 				method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-
 	if (error){
 		NSLog(@"Error :: %@", [error description]);
 	} else {

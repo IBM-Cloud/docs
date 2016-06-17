@@ -57,7 +57,7 @@ Das folgende Diagramm beschreibt, wie eine Anforderung aus dem SDK an Ihr mobile
 * Das {{site.data.keyword.amashort}}-Client-SDK agiert wie folgt:
    *  **Facebook- oder Google-Authentifizierung:** Es verarbeitet die Authentifizierungsanforderung automatisch (für die Facebook- bzw. Google-Authentifizierung).
    * **Angepasste Authentifizierung:** Es ruft Berechtigungsnachweise nach der vom Entwickler bereitgestellten Logik ab.
-* Wenn eine Facebook- oder Google-Authentifizierung konfiguriert ist, verwendet das {{site.data.keyword.amashort}}-Client-SDK das zugeordnete SDK, um Facebook- bzw. Google-Tokens abzurufen. Diese Tokens dienen als Antwort auf die Authentifizierungsanforderung (Challenge).
+* Wenn eine Facebook- oder Google-Authentifizierung konfiguriert ist, verwendet das {{site.data.keyword.amashort}}-Client-SDK das zugeordnete SDK, um Facebook- bzw. Google-Zugriffstokens abzurufen. Diese Tokens dienen als Antwort auf die Authentifizierungsanforderung (Challenge).
 * Wenn eine angepasste Authentifizierung konfiguriert ist, muss der Entwickler die Antwort auf die Authentifizierungsanforderung (Challenge) erfassen und an das {{site.data.keyword.amashort}}-Client-SDK übergeben.
 * Nach dem Abruf der Antwort auf die Authentifizierungsanforderung wird diese an den {{site.data.keyword.amashort}}-Service gesendet.
 * Der Service validiert die Antwort auf die Authentifizierungsanforderung mit einem entsprechenden Identitätsprovider (Facebook/Google/Angepasst).

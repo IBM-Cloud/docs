@@ -12,7 +12,7 @@ Pour utiliser Facebook comme fournisseur d'identité dans vos applications iOS, 
 ## Avant de commencer
 {: #facebook-auth-ios-before}
 
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet iOS instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * Créez un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
@@ -64,7 +64,7 @@ Le SDK client de {{site.data.keyword.amashort}} est distribué avec CocoaPods, u
 
 1.  Exécutez `pod init`.
 
-### Installation du SDK Swift client {{site.data.keyword.amashort}} avec CocoaPods
+### Installation du SDK Swift client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
 
 1. Dans votre projet iOS, modifiez le fichier `Podfile` en lui ajoutant les lignes suivantes :
@@ -130,7 +130,7 @@ Facebook (FacebookDisplayName) avec le nom de votre application Facebook.
 ## Initialisation du SDK Swift client {{site.data.keyword.amashort}}
 {: #facebook-auth-ios-initalize-swift}
 
-Initialisez le SDK en passant les paramètres suivants : l'identificateur unique global de l'application (`applicationGUID`) et la route de l'application (`applicationRoute`).
+Initialisez le SDK client en passant les paramètres suivants : l'identificateur unique global de l'application `(applicationGUID) ` et la route de l'application `applicationRoute`.
 
 Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent placé dans la méthode
 `application:didFinishLaunchingWithOptions` de votre délégué d'application
@@ -145,7 +145,7 @@ Bien que ceci ne soit pas obligatoire, le code d'initialisation est souvent plac
  import BMSCore
  import BMSSecurity
  ```
-2. Initialisez le logiciel SDK client.	Remplacez `<applicationRoute>` et `<applicationGUID>` par les valeurs de
+2. Initialisez le logiciel SDK client.Remplacez `<applicationRoute>` et `<applicationGUID>` par les valeurs de
 **Route** et **Identificateur global unique de l'application** de la section **Options pour application
 mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
@@ -186,7 +186,8 @@ BMSClient et enregistré Facebook comme gestionnaire d'authentification.
 ## Test de l'authentification
 {: #facebook-auth-ios-testing}
 
-Lorsque le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des
+demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #facebook-auth-ios-testing-before}
@@ -197,7 +198,6 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 `http://{applicationRoute}/protected`.
 Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
-
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final.
 
 	```Swift
@@ -244,7 +244,7 @@ FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
 
  Si vous appelez ce code alors que l'utilisateur était connecté via Facebook et qu'il tente à nouveau de se connecter, il est invité à autoriser
-{{site.data.keyword.amashort}} à utiliser Facebook aux fins d'authentification. 
+{{site.data.keyword.amashort}} à utiliser Facebook aux fins d'authentification.
 
  Les utilisateurs de switch doivent appeler ce code et l'utilisateur doit se déconnecter de Facebook
 dans son navigateur.

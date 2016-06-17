@@ -13,7 +13,8 @@ Com o serviço {{site.data.keyword.amashort}}, é possível proteger seus aplica
 {:shortdesc}
 ## Filtro de autorização
 {: #auth-filter}
-O {{site.data.keyword.amashort}} SDK Server possui filtros de autorização que podem ser usados para proteger seus aplicativos backend.  O filtro de autorização intercepta solicitações recebidas e valida se um cabeçalho de autorização estiver presente. Se o cabeçalho de autorização não estiver presente ou for inválido, o filtro retorna uma resposta com HTTP 401. O {{site.data.keyword.amashort}} Client SDK sabe como interceptar uma resposta HTTP 401 que é retornada pelo {{site.data.keyword.amashort}} Server SDK e aciona o fluxo de autenticação.
+O {{site.data.keyword.amashort}} server SDK tem filtros de autorização que podem ser usados para proteger seus aplicativos backend. O filtro de autorização intercepta solicitações recebidas e valida se um cabeçalho de autorização estiver presente. Se o cabeçalho de autorização não estiver presente ou for inválido, o filtro retorna uma resposta com HTTP 401. 
+O {{site.data.keyword.amashort}} client SDK sabe como interceptar uma resposta HTTP 401 que é retornada pelo {{site.data.keyword.amashort}} server SDK e aciona o fluxo de autenticação.
 ## Cabeçalho de autorização
 {: #auth-header}
 O cabeçalho de autorização na solicitação recebida consiste em três partes: Condutor, Token de acesso e Token do ID, que são separados por espaços em branco. `Token de acesso` é um componente obrigatório, enquanto que `Token do ID` é opcional.

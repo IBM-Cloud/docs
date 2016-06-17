@@ -12,19 +12,19 @@ copyright:
 {: #before-you-begin}
 
 * {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)を参照してください。  
-* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 ## Android プラットフォーム用の Google プロジェクトの構成
 {: #google-auth-android-project}
 Google を ID プロバイダーとして使用することを開始するには、Google Developer Console 内にプロジェクトを作成します。プロジェクト作成の一部は、Google のクライアント ID を取得することです。Google クライアント ID は、Google の認証で使用される、アプリケーションの固有 ID です。
 
 1. [Google Developer Console](https://console.developers.google.com)にプロジェクトを作成します。既にプロジェクトがある場合は、プロジェクト作成について説明している手順をスキップし、資格情報の追加を開始してください。
-   1.    新規プロジェクトのメニューを開きます。 
-         
+   1.    新規プロジェクトのメニューを開きます。
+
          ![image](images/FindProject.jpg)
 
    2.    **「プロジェクトの作成 (Create a project)」**をクリックします。
-   
+
          ![image](images/CreateAProject.jpg)
 
 
@@ -37,11 +37,11 @@ Google を ID プロバイダーとして使用することを開始するには
 1. **「同意取得」**タブを選択し、ユーザーに表示する製品名を指定します。その他の値はオプションです。**「保存」**をクリックします。
 
     ![image](images/consentScreen.png)
-    
+
 1. **「資格情報」**リストから、「OAuth クライアント ID」を選択します。
 
      ![image](images/chooseCredentials.png)
-     
+
 
 
 1. アプリケーション・タイプを選択します。**「Android」**をクリックします。Android クライアントに、意味のある名前を指定します。
@@ -81,7 +81,7 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 
 1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Google クライアント ID を指定し、**「保存」**をクリックします。
 
-## Android 用の {{site.data.keyword.amashort}}  Client SDK の構成
+## Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #google-auth-android-sdk}
 
 1. Android Studio に戻ります。
@@ -188,12 +188,12 @@ MobileFirst Services Starter ボイラープレートを使用して作成され
 
 	![image](images/android-google-login-success.png)
 
-1. 次のコードを追加してログアウト機能を追加することもできます。
+ 次のコードを追加してログアウト機能を追加することもできます。
 
  ```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  ユーザーが Google にログインした後で、このコードを呼び出すと、そのユーザーは Google からログアウトされます。そのユーザーが再度ログインしようとする場合は、再度のログイン先での、Google アカウントを選択する必要があります。以前にログインした Google ID を使用してログインしようとする場合は、資格情報を求めるプロンプトが再度ユーザーに出されることはありません。ログインの資格情報を求めるプロンプトが再度出されるようにするには、ユーザーは、Android デバイスから Google アカウントを削除する必要があります。
 
- ログアウト機能に渡される `listener` の値は、ヌルにすることができます。
+ ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

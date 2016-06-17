@@ -8,10 +8,7 @@ copyright:
 # 백엔드 간 통신
 {: #backend-comm}
 
-일부 고급 시나리오에서는 {{site.data.keyword.Bluemix}}에서 실행 중인 사용자의 백엔드 애플리케이션에서
-{{site.data.keyword.amashort}} 서비스가 보호하는 다른 백엔드 서비스(예:
-{{site.data.keyword.cloudant}} 서비스)로 요청을 전송해야 할 수 있습니다. 이러한 경우
-OAuth 토큰을 요청에 추가해야 합니다. 
+일부 고급 시나리오에서는 {{site.data.keyword.Bluemix}}에서 실행 중인 사용자의 백엔드 애플리케이션에서 {{site.data.keyword.amashort}} 서비스가 보호하는 다른 백엔드 서비스(예: {{site.data.keyword.cloudant}} 서비스)로 요청을 전송해야 할 수 있습니다. 이러한 경우 OAuth 토큰을 요청에 추가해야 합니다. 
 
 OAuth 토큰을 확보하여 요청에 삽입하려면 `bms-mca-oauth-sdk` npmjs 모듈을 사용하십시오. 
 

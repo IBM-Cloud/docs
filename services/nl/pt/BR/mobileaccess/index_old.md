@@ -16,7 +16,7 @@ aplicativo móvel funcionalidade de segurança e monitoramento. É possível con
 de cliente e os provedores de identidade. Também é possível incluir função de monitoramento no app,
 permitindo criação de log e estatísticas de uso do cliente.
 
-Nota: O serviço Mobile Client Access era anteriormente conhecido como Advanced Mobile Access.
+Nota: o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access.
 {: shortdesc}
 
 1. Configure um backend móvel no Bluemix e configure o SDK em seu app móvel. Para obter mais informações, consulte

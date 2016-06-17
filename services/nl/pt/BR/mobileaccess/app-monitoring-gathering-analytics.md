@@ -8,8 +8,7 @@ copyright:
 # Reunindo análise de uso
 {: #usage-analytics}
 
-É possível configurar o {{site.data.keyword.amashort}} Client SDK para registrar a análise de uso e enviar os dados registrados ao
-serviço {{site.data.keyword.amashort}}.
+É possível configurar o {{site.data.keyword.amashort}} client SDK para registrar a análise de uso e enviar os dados registrados ao serviço {{site.data.keyword.amashort}}. 
 
 **Nota:** Assegure-se de que tenha ativado a captura de criação de log antes de iniciar o registro da análise de uso.
 

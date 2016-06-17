@@ -8,7 +8,7 @@ copyright:
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
 
-Instrumente seu aplicativo Cordova com o {{site.data.keyword.amashort}} Client SDK, inicialize o SDK e faça solicitações para recursos protegidos e não protegidos.
+Instrumente seu aplicativo Cordova com o {{site.data.keyword.amashort}} client SDK, inicialize o SDK e faça solicitações para recursos protegidos e não protegidos.
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -20,7 +20,7 @@ Instrumente seu aplicativo Cordova com o {{site.data.keyword.amashort}} Client S
 ## Instalando o plug-in do Cordova do {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
 
-O {{site.data.keyword.amashort}} Client SDK para Cordova é um plug-in do Cordova que está agrupando os {{site.data.keyword.amashort}} Client SDKs nativos. Ele é distribuído usando a interface de linha de comandos (CLI) do Cordova e `npmjs`, um repositório de plug-in para projetos do Cordova. O Cordova CLI faz download automaticamente de plug-ins de repositórios e os torna disponíveis para seu aplicativo Cordova.
+O {{site.data.keyword.amashort}} client SDK para Cordova é um plug-in do Cordova que está agrupando os {{site.data.keyword.amashort}} client SDKs nativos. Ele é distribuído usando a interface de linha de comandos (CLI) do Cordova e `npmjs`, um repositório de plug-in para projetos do Cordova. O Cordova CLI faz download automaticamente de plug-ins de repositórios e os torna disponíveis para seu aplicativo Cordova.
 
 1. Inclua as plataformas Android e iOS em seu aplicativo Cordova. Execute um ou ambos os comandos a seguir a partir da linha de comandos:
 
@@ -101,14 +101,14 @@ Runpath** e inclua o parâmetro Frameworks a seguir:
 	cordova plugin list
 	```
 
-## Inicializando o plug-in do Cliente {{site.data.keyword.amashort}}
+## Inicializando o plug-in do cliente {{site.data.keyword.amashort}}
 {: #getting-started-cordova-initialize}
 
-Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar o SDK passando os parâmetros *applicationGUID* e *applicationRoute*.
+Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK passando os parâmetros *applicationGUID* e *applicationRoute*.
 
 1. Localize os valores de rota e de GUID do app na página principal do painel do {{site.data.keyword.Bluemix_notm}}. Clique no nome do app e, em seguida, em **Opções de dispositivo móvel** para exibir os valores **Application route** e **Application GUID** para inicializar o SDK.
 
-3. Inclua a chamada a seguir no arquivo `index.js` para inicializar o {{site.data.keyword.amashort}} Client SDK. Substitua
+3. Inclua a chamada a seguir no arquivo `index.js` para inicializar o {{site.data.keyword.amashort}} client SDK. Substitua
 *applicationRoute* e *applicationGUID* pelos valores das
 **Opções móveis** no painel
 {{site.data.keyword.Bluemix_notm}}.
@@ -120,9 +120,10 @@ Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar o SDK
 ## Fazendo uma solicitação para o backend móvel
 {: #getting-started-request}
 
-Após a inicialização do {{site.data.keyword.amashort}} Client SDK, é possível começar a fazer solicitações para seu backend móvel.
+Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação para um terminal protegido de seu novo backend móvel. Em seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
+1. Tente enviar uma solicitação para um terminal protegido de seu novo backend móvel. Em
+seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo:
 
 	```
 	http://my-mobile-backend.mybluemix.net/protected
@@ -130,7 +131,8 @@ Após a inicialização do {{site.data.keyword.amashort}} Client SDK, é possív
 
 	O terminal `/protected` de um backend móvel que foi criado com o
 modelo MobileFirst Services Starter é protegido com
-{{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal é acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+{{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal é acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+
 
 1. Use seu aplicativo Cordova para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 

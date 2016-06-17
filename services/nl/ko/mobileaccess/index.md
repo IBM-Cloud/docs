@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.amashort}} 시작하기
 {: #gettingstarted}
-*마지막 업데이트 날짜: 2016년 3월 21일*
+*마지막 업데이트 날짜: 2016년 4월 25일*
 
 {{site.data.keyword.amafull}} 서비스를 사용하여 모바일 앱에 보안 및 모니터링 기능을 추가하십시오. 사용자가 기존 Google 또는 Facebook 계정으로 앱에 로그인할 수 있도록 클라이언트 인증 및 ID 제공자를 구성할 수 있습니다. 또한 모니터링 기능을 사용자 앱에 추가하여 클라이언트 로깅 및 사용 통계를 둘 다 사용할 수 있습니다.
 {:shortdesc}

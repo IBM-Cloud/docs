@@ -1,6 +1,8 @@
 ---
+
 copyright:
   years: 2015, 2016
+  
 ---
 # Utilizzo di IMFURLProtocol nelle applicazioni iOS
 {: #imfurl}

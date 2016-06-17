@@ -14,7 +14,7 @@ iOS アプリケーションで Facebook を ID プロバイダーとして使�
 {: #facebook-auth-ios-before}
 
 * {{site.data.keyword.amashort}} により保護されたリソース、および {{site.data.keyword.amashort}} Client SDK が装備された iOS プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [iOS Swift SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)を参照してください。  
-* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 * Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 ## iOS プラットフォーム用の Facebook アプリケーションの構成
@@ -258,4 +258,4 @@ FacebookAuthenticationManager.sharedInstance.logout(callBack)
 
  ユーザーを切り替えるには、このコードを呼び出す必要があり、ユーザーはブラウザーで Facebook からログアウトしなければなりません。
 
- ログアウト機能へ ```callBack``` を渡すことは、オプションです。`nil` を渡すこともできます。
+ ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

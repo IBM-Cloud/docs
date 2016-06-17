@@ -51,7 +51,7 @@ Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebo
 ### Installazione di CocoaPods
 {: #facebook-auth-cocoapods}
 
-L'SDK client {{site.data.keyword.amashort}} viene distribuito con CocoaPods, un gestore dipendenze per i progetti iOS. CocoaPods scarica automaticamente le risorse utente dai repository e le rende disponibili alla tua applicazione iOS.
+L'SDK client {{site.data.keyword.amashort}} è distribuito con CocoaPods, un gestore dipendenze per i progetti iOS. CocoaPods scarica automaticamente le risorse utente dai repository e le rende disponibili alla tua applicazione iOS.
 
 1. Apri il terminale ed esegui il comando `pod --version`. Se già hai CocoaPods installato, viene visualizzato il numero versione. Puoi passare direttamente alla sezione successiva di questa esercitazione.
 
@@ -174,7 +174,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	* Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
 
-3. Inizializza l'SDK client.	Sostituisci *applicationRoute* e *applicationGUID* con i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
+3. Inizializza l'SDK client. Sostituisci *applicationRoute* e *applicationGUID* con i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C**
 
@@ -292,10 +292,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 1. 	Quando la tua richiesta ha esito positivo, nella console Xcode viene visualizzato il seguente output:
 	![immagine](images/ios-facebook-login-success.png)
 
-
-
 	Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
-
 
 	**Objective-C**
 
@@ -309,8 +306,8 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare Mobile Client Access a utilizzare Facebook per scopi di autenticazione. 
+	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione.
 
 	Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
-Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
 
+  Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

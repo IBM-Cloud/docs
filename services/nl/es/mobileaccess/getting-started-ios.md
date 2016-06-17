@@ -27,7 +27,8 @@ El SDK de {{site.data.keyword.amashort}} se distribuye con CocoaPods, un gestor 
 {: #install-cocoapods}
 1. Abra Terminal y ejecute el mandato **pod --version**. Si ya tiene CocoaPods instalado, se muestra el número de versión. Puede omitir la sección siguiente para instalar el SDK.
 
-1. Si CocoaPods no está instalado, ejecute: ```
+1. Si CocoaPods no está instalado, ejecute:
+```
 sudo gem install cocoapods
 ```
 Para obtener más información, consulte el [sitio web de CocoaPods](https://cocoapods.org/).
@@ -57,7 +58,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 Para poder utilizar el SDK de cliente de {{site.data.keyword.amashort}}, debe inicializar el SDK; para ello, especifique los parámetros **Ruta** (`applicationRoute`) e **Identificador exclusivo global de la app** (`applicationGUID`). 
 
 
-1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta** e **Identificador exclusivo global de la app** para inicializar el SDK. 
+1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta** e **Identificador exclusivo global de la app** para inicializar el SDK.
 
 1. Importe la infraestructura `IMFCore` en la clase en la que desea utilizar el SDK de cliente de {{site.data.keyword.amashort}} añadiendo la siguiente cabecera: 
 
@@ -78,7 +79,7 @@ Para poder utilizar el SDK de cliente de {{site.data.keyword.amashort}}, debe in
 	1. Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo:`$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Asegúrese de que la cabecera puente se selecciona en Xcode al crear el proyecto. No debería ver mensajes de error.
 
-1. Utilice el código siguiente para inicializar el SDK del cliente de {{site.data.keyword.amashort}}.  Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación. <br/>
+1. Utilice el código siguiente para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación. <br/>
 Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C:**
@@ -102,7 +103,6 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 
 1. Intente enviar una solicitud a un punto final protegido del programa de fondo móvil en el navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
-
 1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `IMFClient`
 
 	**Objective-C:**

@@ -12,7 +12,7 @@ copyright:
 
 Der {{site.data.keyword.amafull}}-Service stellt Sicherheits- und Überwachungsfunktionen für Ihre mobile Anwendung bereit. Sie können die Clientauthentifizierung und Identitätsprovider konfigurieren. Zudem können Sie Ihrer App eine Überwachungsfunktion hinzufügen, die sowohl eine Clientprotokollierung als auch das Erstellen von Nutzungsstatistiken ermöglicht.
 
-Anmerkung: Der Mobile Client Access-Service wurde früher als Advanced Mobile Access bezeichnet.
+Anmerkung: Der {{site.data.keyword.amashort}}-Service hieß früher Advanced Mobile Access.
 {: shortdesc}
 
 1. Richten Sie ein mobiles Back-End in Bluemix ein und konfigurieren Sie das SDK in Ihrer mobilen App. Weitere Informationen finden Sie in der [Einführung](getting-started.html).

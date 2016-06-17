@@ -14,7 +14,7 @@ Puoi utilizzare il servizio {{site.data.keyword.amashort}} per proteggere le app
 funzionalità di autenticazione fornite dal servizio {{site.data.keyword.amashort}}. I dati di log lato client e di monitoraggio vengono raccolti automaticamente e
 inviati al servizio {{site.data.keyword.amashort}} su richiesta. Utilizza il dashboard {{site.data.keyword.amashort}} per configurare i diversi tipi di autenticazione e visualizzare i dati raccolti dall'SDK lato client.
 
-**Nota**: il servizio {{site.data.keyword.amashort}}  era precedentemente noto come Advanced Mobile Access.
+**Nota**: il servizio {{site.data.keyword.amashort}} era precedentemente noto come Advanced Mobile Access.
 
 ## Componenti di {{site.data.keyword.amashort}}
 {: #components}
@@ -60,10 +60,8 @@ Il seguente diagramma descrive in che modo una richiesta fluisce dall'SDK ai tuo
 * L'SDK client {{site.data.keyword.amashort}} quindi:
    *  **Autenticazione Facebook o Google:** elabora automaticamente la richiesta di verifica dell'autenticazione (per l'autenticazione Facebook o Google)
    * **Autenticazione Personalizzata**: ottiene le credenziali in base alla logica fornita dallo sviluppatore.
-* Se è configurata l'autenticazione Facebook o Google, l'SDK client {{site.data.keyword.amashort}} utilizza l'SDK associato per ottenere i
-token di accesso Facebook o Google. Questi token fungono da risposta alla richiesta di verifica dell'autenticazione.
-* Se è configurata l'autenticazione Personalizzata, lo sviluppatore deve ottenere la risposta alla richiesta di verifica dell'autenticazione e fornirla
-all'SDK client {{site.data.keyword.amashort}}.
+* Se è configurata l'autenticazione Facebook o Google, l'SDK client {{site.data.keyword.amashort}} utilizza l'SDK associato per ottenere i token di accesso Facebook o Google. Questi token fungono da risposta alla richiesta di verifica dell'autenticazione.
+* Se è configurata l'autenticazione Personalizzata, lo sviluppatore deve ottenere la risposta alla richiesta di verifica dell'autenticazione e fornirla all'SDK client {{site.data.keyword.amashort}}.
 * Dopo essere stata ottenuta, la risposta alla richiesta di verifica dell'autenticazione viene inviata al servizio {{site.data.keyword.amashort}}.
 * Il servizio convalida la risposta alla richiesta di verifica dell'autenticazione con un rispettivo provider di identità (Facebook/Google/Personalizzata).
 * Se la convalida ha esito positivo, il servizio {{site.data.keyword.amashort}} genera un'intestazione di autorizzazione e restituisce l'intestazione all'SDK client {{site.data.keyword.amashort}}. L'intestazione di autorizzazione contiene due token: un token di accesso che contiene le informazioni sulle autorizzazioni di accesso e un token ID che contiene le informazioni su utente, dispositivo o applicazione correnti.

@@ -12,7 +12,7 @@ copyright:
 
 El servicio de {{site.data.keyword.amafull}} le proporciona funcionalidades de seguridad y supervisión para la aplicación móvil. También puede configurar la autenticación de cliente y los proveedores de identidad. También puede añadir funciones de supervisión a la app, los cuales habilitan los registros clientes y las estadísticas de uso.
 
-Nota: el servicio de Mobile Client Access se conocía anteriormente como Advanced Mobile Access.
+Nota: el servicio {{site.data.keyword.amashort}} se conocía anteriormente como Advanced Mobile Access.
 {: shortdesc}
 
 1. Configure un programa de fondo móvil en Bluemix y configure el SDK en su app para móvil. Para obtener más información, consulte

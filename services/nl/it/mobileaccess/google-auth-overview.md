@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-  
+
 ---
 
 # Utilizzo di Google per autenticare gli utenti
@@ -35,5 +35,6 @@ Consulta il seguente diagramma semplificato per comprendere in che modo {{site.d
 {: #google-auth-nextsteps}
 
 * [Abilitazione dell'autenticazione Google nelle applicazioni Android](google-auth-android.html)
-* [Abilitazione dell'autenticazione Google nelle applicazioni iOS](google-auth-ios.html)
+* [Abilitazione dell'autenticazione Google nelle applicazioni iOS (SDK Swift)](google-auth-ios-swift-sdk.html)
+* [Abilitazione dell'autenticazione Google nelle applicazioni iOS (SDK Objective-C)](google-auth-ios.html)
 * [Abilitazione dell'autenticazione Google nelle applicazioni Cordova](google-auth-cordova.html)

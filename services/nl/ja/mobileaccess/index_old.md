@@ -14,7 +14,7 @@ copyright:
 {{site.data.keyword.amafull}} サービスは、
 モバイル・アプリケーションにセキュリティーおよびモニター機能を付与します。クライアントの認証プロバイダーおよび ID プロバイダーを構成できるようになります。また、アプリケーションにモニター機能を追加することにより、クライアントのロギングおよび使用統計の両方が可能になります。
 
-注: Mobile Client Access サービスの以前の名称は Advanced Mobile Access でした。
+注: {{site.data.keyword.amashort}} サービスの以前の名称は Advanced Mobile Access でした。
 {: shortdesc}
 
 1. Bluemix にモバイル・バックエンドをセットアップし、モバイル・アプリに SDK を構成します。詳しくは、[始めに (Getting started) ](getting-started.html)を参照してください。

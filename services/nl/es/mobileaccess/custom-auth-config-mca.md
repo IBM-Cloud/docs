@@ -12,7 +12,7 @@ Para utilizar la autenticación personalizada con su app móvil, debe registrar 
 ## Antes de empezar
 {: #custom-dash-begin}
 * Consulte [Cómo empezar](getting-started.html).
-* Proteja la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
+* Proteja la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
 * Disponga de una aplicación de proveedor de identidad personalizado en ejecución.
 
 ## Configuración de la autenticación personalizada en el panel de control de {{site.data.keyword.Bluemix}}
@@ -21,11 +21,11 @@ Utilice el panel de control de {{site.data.keyword.amashort}} para configurar la
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix}}.
 
-1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).Necesitará estos valores cuando inicialice el SDK.
+1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`). Necesitará estos valores cuando inicialice el SDK.
 
 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Personalizado**. 
+1. Pulse el mosaico **Personalizado**.
 
 1. Introduzca el **Nombre de reino** y el **URL base** del proveedor de identidad personalizado y guarde los cambios.
 

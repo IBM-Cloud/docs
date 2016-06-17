@@ -53,7 +53,7 @@ Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebo
 ### Installazione di CocoaPods
 {: #facebook-auth-cocoapods}
 
-L'SDK client {{site.data.keyword.amashort}} viene distribuito con CocoaPods, un gestore dipendenze per i progetti iOS. CocoaPods scarica automaticamente le risorse utente dai repository e le rende disponibili alla tua applicazione iOS.
+L'SDK client {{site.data.keyword.amashort}} è distribuito con CocoaPods, un gestore dipendenze per i progetti iOS. CocoaPods scarica automaticamente le risorse utente dai repository e le rende disponibili alla tua applicazione iOS.
 
 1. Apri il terminale ed esegui il comando `pod --version`. Se già hai CocoaPods installato, viene visualizzato il numero versione. Puoi passare direttamente alla sezione successiva di questa esercitazione.
 
@@ -163,7 +163,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
  import BMSCore
  import BMSSecurity
  ```
-2. Inizializza l'SDK client.	Sostituisci `<applicationRoute>` e `<applicationGUID>` con
+2. Inizializza l'SDK client. Sostituisci `<applicationRoute>` e `<applicationGUID>` con
 i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
  ```Swift
@@ -211,7 +211,7 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 
 1. Prova a inviare una richiesta all'endpoint protected del backend mobile appena creato nel tuo browser. Apri il seguente URL: `{applicationRoute}/protected`.
 Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>L'endpoint `/protected` di un backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client{{site.data.keyword.amashort}}.
+<br/>L'endpoint `/protected` di un backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 
@@ -258,8 +258,8 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
 
- Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione. 
+ Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione.
 
  Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
 
- Il passaggio di ```callBack``` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+ Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

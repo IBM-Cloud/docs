@@ -8,14 +8,13 @@ copyright:
 # Ativando, configurando e usando o criador de logs
 {: #enable-logger}
 
-O {{site.data.keyword.amashort}} Client SDK fornece uma estrutura de criação de log que é semelhante a outras estruturas de log com as quais você pode estar familiarizado, tais como, `java.util.logging` ou `log4j`. A estrutura de criação de log suporta várias instâncias do criador de logs por pacote, diferentes níveis de log, captura ou rastreios de pilha para um travamento de aplicativo e mais.
+O {{site.data.keyword.amashort}} client SDK fornece uma estrutura de criação de log que é semelhante a outras estruturas de log com as quais você pode estar familiarizado, tais como, `java.util.logging` ou `log4j`. A estrutura de criação de log suporta várias instâncias do criador de logs por pacote, diferentes níveis de log, captura ou rastreios de pilha para um travamento de aplicativo e mais.
 
 Também é possível configurar os dados registrados para que sejam persistidos em um
 armazenamento local, o qual pode ser enviado para o serviço
 {{site.data.keyword.amashort}} on demand.
 
-A estrutura de criação de log do {{site.data.keyword.amashort}} Client SDK suporta os níveis de log a seguir, listados do menos para
-o mais detalhado, com as diretrizes de uso recomendadas:
+A estrutura de criação de log do {{site.data.keyword.amashort}} client SDK suporta os níveis de log a seguir, listados do menos para o mais detalhado, com as diretrizes de uso recomendadas:
 
 * `FATAL` - Usar para travamentos ou interrupções irrecuperáveis. O nível FATAL
 é reservado para registrar erros irrecuperáveis, que aparecem
@@ -28,8 +27,7 @@ dados que possam ser úteis.
 * `DEBUG` - Use para relatar instruções de depuração para ajudar
 os desenvolvedores a resolver defeitos do aplicativo.
 
-Assegure-se de que tenha inicializado o {{site.data.keyword.amashort}} Client SDK antes de usar a estrutura de criação de log. As
-amostras a seguir demonstram o uso básico de uma estrutura de criação de log do {{site.data.keyword.amashort}} Client SDK.
+Assegure-se de que tenha inicializado o {{site.data.keyword.amashort}} client SDK antes de usar a estrutura de criação de log. As amostras a seguir demonstram o uso básico de uma estrutura de criação de log do {{site.data.keyword.amashort}} client SDK.
 
 ### Android
 {: #enable-logger-android}
@@ -77,10 +75,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**Nota:** O {{site.data.keyword.amashort}} Client SDK é implementado com Objective-C, portanto pode ser necessário
-incluir o arquivo `IMFLoggerExtension.swift` em seu projeto Swift para usar a API do criador de logs anterior. É possível
-localizar esse arquivo no [archive do Mobile Client Access
-Client SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+**Nota:** o {{site.data.keyword.amashort}} client SDK é implementado com Objective-C; portanto, pode ser necessário incluir o arquivo `IMFLoggerExtension.swift` em seu projeto Swift para usar a API do criador de logs anterior. É possível localizar esse arquivo no [archive do {{site.data.keyword.amashort}} client SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova
@@ -110,8 +105,7 @@ posteriormente.
 Por exemplo, quando a captura estiver ATIVADA e o nível do criador de logs estiver configurado
 como FATAL, o criador de logs irá capturar exceções não capturadas. Exceções não capturadas geralmente aparecem para os usuários como travamentos do aplicativo, mas não capturam nenhum log que levariam para o evento de travamento. Ou então, um nível de criador de logs mais detalhado garante que os logs que levam a uma entrada do criador de logs FATAL, tal com WARN e ERROR, também sejam capturados.
 
-**Nota:** Localize referências completas da API do criador de logs para cada plataforma em [SDKs, amostras, referência da API](sdks-samples-apis.html). A
-API do criador de logs faz parte do Núcleo do {{site.data.keyword.amashort}} Client SDK.
+**Nota:** Localize referências completas da API do criador de logs para cada plataforma em [SDKs, amostras, referência da API](sdks-samples-apis.html). A API do criador de logs faz parte do Núcleo do {{site.data.keyword.amashort}} client SDK.
 
 
 ## Uso de Amostra
@@ -214,14 +208,12 @@ logger2.info ("info message");
 MFPLogger.send(success, failure);
 ```
 
-## Ativando os logs internos do {{site.data.keyword.amashort}} Client SDK
+## Ativando os logs internos do {{site.data.keyword.amashort}} client SDK
 {: #enable-logger-sdklogs}
-Esse recurso está disponível atualmente somente na versão Android do {{site.data.keyword.amashort}} Client SDK.
+Esse recurso está disponível atualmente somente na versão Android do {{site.data.keyword.amashort}} client SDK.
 
-O {{site.data.keyword.amashort}} Client SDK fornece uma experiência melhor de desenvolvimento por não aumentar desnecessariamente a
-saída Logcat com suas mensagens de depuração interna. Portanto, por padrão, as mensagens de log interno que são produzidas pelo
-{{site.data.keyword.amashort}} SDK com o nível DEBUG não são impressas. É
-possível ativar a impressão de todas as mensagens de log interno do {{site.data.keyword.amashort}} Client SDK com a API a seguir:
+O {{site.data.keyword.amashort}} client SDK fornece uma experiência melhor de desenvolvimento por não aumentar desnecessariamente a saída Logcat com suas mensagens de depuração interna. Portanto, por padrão, as mensagens de log interno que são produzidas pelo
+{{site.data.keyword.amashort}} SDK com o nível DEBUG não são impressas. É possível ativar a impressão de todas as mensagens de log interno do {{site.data.keyword.amashort}} client SDK com a API a seguir:
 
 
 ```

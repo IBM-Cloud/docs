@@ -12,7 +12,7 @@ copyright:
 
 # Einführung in {{site.data.keyword.amashort}}
 {: #gettingstarted}
-*Letzte Aktualisierung: 21. März 2016*
+*Letzte Aktualisierung: 25. April 2016*
 
 Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheits- und Überwachungsfunktionen zu Ihrer mobilen App hinzu. Sie können die Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer mit ihren vorhandenen Google- oder Facebook-Konten bei der App anmelden können. Zudem können Sie Ihrer App eine Überwachungsfunktion hinzufügen, die sowohl eine Clientprotokollierung als auch das Erstellen von Nutzungsstatistiken ermöglicht.
 {:shortdesc}
@@ -26,7 +26,7 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
 Sie können das {{site.data.keyword.amashort}}-SDK zu Ihrer vorhandenen Android-, Cordova- oder iOS-App hinzufügen. Außerdem können Sie die Beispielanwendung 'HelloAuthentication' herunterladen.
    * **Android**: ([SDK](getting-started-android.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
    * **Cordova**: ([SDK](getting-started-cordova.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
-   * **iOS (Swift-C-SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
+   * **iOS (Swift-SDK)**: ([SDK](getting-started-ios-swift-sdk.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
    * **iOS (Objective-C-SDK)**: ([SDK](getting-started-ios.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
 1. Schützen Sie serverseitige Ressourcen. Schützen Sie Ihre mobilen Back-End-Ressourcen, die in Node.js- oder Liberty for Java&trade;-Laufzeiten mit für Mobilgeräte konfigurierter OAuth-Sicherheit ausgeführt werden. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).

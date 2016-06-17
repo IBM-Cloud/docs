@@ -12,7 +12,7 @@ copyright:
 
 ## Antes de empezar
 {: #google-auth-ios-before}
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de iOS instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Objective-C de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de iOS instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Objective-C de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
 * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
@@ -24,12 +24,12 @@ Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en 
 
 1. Cree un proyecto en [Google Developers Console](https://console.developers.google.com).
 Si ya dispone de un proyecto, puede omitir los pasos que describen la creación de proyectos y empezar a añadir credenciales.
-   1.    Abre el menú del proyecto nuevo.  
-         
+   1.    Abre el menú del proyecto nuevo.
+
          ![imagen](images/FindProject.jpg)
 
    2.    Pulse **Crear un proyecto**.
-   
+
          ![imagen](images/CreateAProject.jpg)
 
 
@@ -37,16 +37,16 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 
      ![imagen](images/chooseGooglePlus.jpg)
 
-1. Pulse **Habilitar** en la pantalla siguiente. 
+1. Pulse **Habilitar** en la pantalla siguiente.
 
 1. Seleccione la pestaña **Pantalla de consentimiento** y especifique el nombre de producto que se muestra a los usuarios. Los demás valores son opcionales. Pulse **Guardar**.
 
     ![imagen](images/consentScreen.png)
-    
-1. En la lista **Credenciales**, elija el ID de cliente OAuth. 
+
+1. En la lista **Credenciales**, elija el ID de cliente OAuth.
 
      ![imagen](images/chooseCredentials.png)
-     
+
 
 
 1. En este punto se le presentará una opción de tipo de aplicación. Seleccione **iOS**.
@@ -59,7 +59,7 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-ios-config}
 
-Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación de Google en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -100,7 +100,7 @@ Para configurar la integración de Google, actualice el archivo `info.plist`. El
 * Configure la integración de Google añadiendo los siguientes esquemas de URL al archivo `info.plist`.
 	![Archivo info.plist](images/ios-google-infoplist-settings.png)
 
-	El primer esquema de URL es una versión invertida del ID de cliente de Google Developer Console.  Por ejemplo, si el ID de cliente es `123123-abcabc.apps.googleusercontent.com`, el esquema de URL es: `com.googleusercontent.apps.123123-abcabc`. 
+	El primer esquema de URL es una versión invertida del ID de cliente de Google Developer Console. Por ejemplo, si el ID de cliente es `123123-abcabc.apps.googleusercontent.com`, el esquema de URL es: `com.googleusercontent.apps.123123-abcabc`.
 
 	El segundo esquema de URL es el ID de paquete de la aplicación.
 
@@ -135,7 +135,7 @@ Para configurar la integración de Google, actualice el archivo `info.plist`. El
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #google-auth-ios-initialize}
 
-Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, inicialícelo pasando los parámetros applicationGUID y applicationRoute.
+Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, inicialícelo pasando los parámetros applicationGUID y applicationRoute. 
 
 Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
@@ -168,7 +168,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 	7. Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo:`$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Asegúrese de que la cabecera puente se selecciona en Xcode al crear el proyecto.
 
-3. Utilice el código siguiente para inicializar el SDK del cliente.  Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles**.
+3. Utilice el código siguiente para inicializar el SDK del cliente. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles**.
 
 	Objective-C:
 
@@ -237,7 +237,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 
 ## Prueba de autenticación
 {: #google-auth-ios-testing}
-Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #google-auth-ios-testing-before}
@@ -297,12 +297,11 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 1. 	Su solicitud debería realizarse correctamente. Debería ver la salida siguiente en LogCat.
 
 	![imagen](images/ios-google-login-success.png)
-	
-	
-	También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
-	
+		
+	También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
+
 	Objective C:
-	
+
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
@@ -313,7 +312,6 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-
-	Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice acceso al cliente móvil para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar otro usuario para iniciar sesión. 
+	Si invoca este código después de que el usuario haya iniciado sesión en Google y el usuario intenta iniciar sesión de nuevo, se le solicitará que autorice a {{site.data.keyword.amashort}} para utilizar Google para llevar a cabo la autenticación. En este punto, el usuario puede pulsar el nombre de usuario que aparece en la esquina superior derecha de la pantalla para seleccionar otro usuario para iniciar sesión.
 
 	Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

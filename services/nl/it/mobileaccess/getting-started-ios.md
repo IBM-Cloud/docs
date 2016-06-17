@@ -79,7 +79,7 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 	1. Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
 
-1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
+1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C:**
 

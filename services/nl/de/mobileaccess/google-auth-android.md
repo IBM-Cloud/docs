@@ -20,12 +20,12 @@ Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in G
 
 1. Erstellen Sie ein Projekt in [Google Developer Console](https://console.developers.google.com).
 Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Projekterstellung beschrieben wird, überspringen und mit dem Hinzufügen von Berechtigungsnachweisen beginnen.
-   1.    Öffnen Sie ein neues Projektmenü. 
-         
+   1.    Öffnen Sie ein neues Projektmenü.
+
          ![Bild](images/FindProject.jpg)
 
    2.    Klicken Sie auf **Create a project**.
-   
+
          ![Bild](images/CreateAProject.jpg)
 
 
@@ -38,11 +38,11 @@ Wenn Sie bereits ein Projekt haben, können Sie die Schritte, in denen die Proje
 1. Wählen Sie die Registerkarte **Consent Screen** aus und geben Sie den Produktnamen an, der den Benutzern angezeigt wird. Weitere Werte sind optional. Klicken Sie auf **Save**.
 
     ![Bild](images/consentScreen.png)
-    
+
 1. Wählen Sie in der Liste **Credentials** die OAuth-Client-ID aus.
 
      ![Bild](images/chooseCredentials.png)
-     
+
 
 
 1. Wählen Sie einen Anwendungstyp aus. Klicken Sie auf **Android**. Geben Sie einen aussagekräftigen Namen für Ihren Android-Client an.
@@ -80,7 +80,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 1. Klicken Sie auf die Kachel für **Google**.
 
-1. Geben Sie in **Application ID for Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Save**.
+1. Geben Sie bei **Application ID for Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Save**.
 
 ## {{site.data.keyword.amashort}}-Client-SDK für Android konfigurieren
 {: #google-auth-android-sdk}
@@ -189,12 +189,12 @@ Sie müssen ein mobiles Back-End haben, das mit der Boilerplate 'MobileFirst Ser
 
 	![Bild](images/android-google-login-success.png)
 
-1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+ Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
  ```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, wird der Benutzer bei Google abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er ein Google-Konto auswählen, mit dem er wieder angemeldet wird. Wird die Anmeldung mit einer zuvor angemeldeten Google-ID versucht, wird der Benutzer nicht noch einmal zur Eingabe der Berechtigungsnachweise aufgefordert. Um erneut zur Eingabe der Anmeldeberechtigungsnachweise aufgefordert zu werden, muss der Benutzer sein Google-Konto von dem Android-Gerät entfernen.
 
- Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann null sein.
+ Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.

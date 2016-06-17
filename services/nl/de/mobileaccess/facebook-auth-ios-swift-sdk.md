@@ -161,7 +161,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
  import BMSCore
  import BMSSecurity
  ```
-2. Initialisieren Sie das Client-SDK.	Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben.
+2. Initialisieren Sie das Client-SDK. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -258,4 +258,4 @@ FacebookAuthenticationManager.sharedInstance.logout(callBack)
 
  Um Benutzer zu wechseln, müssen Sie diesen Code aufrufen, und der Benutzer muss sich in seinem Browser bei Facebook abmelden.
 
- Die Übergabe von ```callBack``` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.
+ Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

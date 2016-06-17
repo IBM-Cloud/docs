@@ -56,7 +56,7 @@ Initialisez le SDK en passant les paramètres suivants : le contexte (context), 
 
 1. Dans la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre appli. Cliquez sur **Options pour application mobile**. Les valeurs de **Route de l'application** et d'**Identificateur global unique de l'application** sont nécessaires pour initialiser le SDK.
 
-2. Initialisez le SDK client de {{site.data.keyword.amashort}} dans votre appli Android.  En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
+2. Initialisez le SDK client de {{site.data.keyword.amashort}} dans votre appli Android. En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
 principale dans votre application Android, bien que cet emplacement ne soit pas obligatoire.
 <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
@@ -75,7 +75,6 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
 1. Tentez d'envoyer une demande à un noeud final protégé de votre nouveau système de back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
-
 1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
 	```Java

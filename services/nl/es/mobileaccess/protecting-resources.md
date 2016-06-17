@@ -13,7 +13,7 @@ Con el servicio de {{site.data.keyword.amashort}}, puede proteger las aplicacion
 {:shortdesc}
 ## Filtro de autorización
 {: #auth-filter}
-El SDK del servidor de {{site.data.keyword.amashort}} dispone de filtros de autorización que se pueden utilizar para proteger las aplicaciones de fondo.  El filtro de autorización intercepta las solicitudes entrantes y las valida si existe una cabecera de autorización. Si no existe cabecera de autorización o esta no es válida, el filtro devuelve una respuesta con el código HTTP 401. El SDK del cliente de {{site.data.keyword.amashort}} sabe cómo interceptar una respuesta HTTP 401 devuelta por el SDK del servidor de {{site.data.keyword.amashort}} y activa el flujo de autenticación.
+El SDK del servidor de {{site.data.keyword.amashort}} dispone de filtros de autorización que se pueden utilizar para proteger las aplicaciones de fondo. El filtro de autorización intercepta las solicitudes entrantes y las valida si existe una cabecera de autorización. Si no existe cabecera de autorización o esta no es válida, el filtro devuelve una respuesta con el código HTTP 401. El SDK del cliente de {{site.data.keyword.amashort}} sabe cómo interceptar una respuesta HTTP 401 devuelta por el SDK del servidor de {{site.data.keyword.amashort}} y activa el flujo de autenticación. 
 ## Cabecera de autorización
 {: #auth-header}
 La cabecera de autorización de la solicitud entrante consta de tres partes: bearer, la señal de acceso y la señal de ID separados por espacios. La `señal de acceso` es un componente obligatorio mientras que la `señal de ID` es opcional.

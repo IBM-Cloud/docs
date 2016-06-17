@@ -10,7 +10,7 @@ Pour configurer l'intégration de l'authentification Google dans les application
 
 ## Avant de commencer
 {: #before-you-begin}
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Cordova instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du plug-in Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Cordova instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du plug-in Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 * (Facultatif) Familiarisez-vous avec les sections suivantes :
    * [Activation de l'authentification Google dans les applis Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
@@ -67,7 +67,7 @@ Ajoutez la ligne suivante à la méthode `application:openURL:sourceApplication:
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #google-auth-cordova-initialize}
 
-Utilisez le code JavaScript suivant dans votre application Cordova pour initialiser le SDK client de {{site.data.keyword.amashort}}.
+Utilisez le code JavaScript suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -78,7 +78,7 @@ unique de l'application** de la section **Options pour application mobile** de v
 
 ## Test de l'authentification
 {: #google-auth-cordova-test}
-Lorsque le SDK client est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
 ### Avant de commencer
 {: #google-auth-cordova-testing-before}

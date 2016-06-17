@@ -14,7 +14,7 @@ su {{site.data.keyword.Bluemix_notm}} con monitoraggio e sicurezza OAth abilitat
 {:shortdesc}
 ## Filtro di autorizzazione
 {: #auth-filter}
-l'SDK server {{site.data.keyword.amashort}} ha dei filtri di autorizzazione che puoi utilizzare per proteggere le tue applicazioni di backend.  Il filtro di autorizzazione intercetta le richieste in entrata e convalida se un'intestazione di autorizzazione è presente. Se l'intestazione di autorizzazione non è presente o non è valida, il filtro restituisce una risposta con HTTP 401. L'SDK client {{site.data.keyword.amashort}} sa come intercettare una risposta HTTP 401 restituita dall'SDK server {{site.data.keyword.amashort}} e attiva il flusso di autenticazione.
+l'SDK server {{site.data.keyword.amashort}} ha dei filtri di autorizzazione che puoi utilizzare per proteggere le tue applicazioni di backend. Il filtro di autorizzazione intercetta le richieste in entrata e convalida se un'intestazione di autorizzazione è presente. Se l'intestazione di autorizzazione non è presente o non è valida, il filtro restituisce una risposta con HTTP 401. L'SDK client {{site.data.keyword.amashort}} sa come intercettare una risposta HTTP 401 restituita dall'SDK server {{site.data.keyword.amashort}} e attiva il flusso di autenticazione.
 ## Intestazione di autorizzazione
 {: #auth-header}
 L'intestazione di autorizzazione nella richiesta in entrata consiste di tre parti: Bearer, Token di accesso e Token ID, separate da spazi. Il `Token di accesso` è un componente obbligatorio mentre il `Token ID` è facoltativo.

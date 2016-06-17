@@ -16,7 +16,7 @@ Puoi creare un provider di identità personalizzato e implementare la tua logica
 ![immagine](images/mca-sequence-custom.jpg)
 
 1. Utilizza l'SDK {{site.data.keyword.amashort}} per effettuare una richiesta alle tue risorse di backend che sono protette con l'SDK server {{site.data.keyword.amashort}}.
-* l'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce HTTP 401 e un ambito di autorizzazione.
+* L'SDK server {{site.data.keyword.amashort}} rileva una richiesta non autorizzata e restituisce il codice HTTP 401 e l'ambito di autorizzazione.
 * l'SDK client {{site.data.keyword.amashort}} rileva automaticamente l'HTTP 401 di cui sopra e avvia il processo di autenticazione.
 * L'SDK client {{site.data.keyword.amashort}} contatta il servizio {{site.data.keyword.amashort}} e chiede di emettere un'intestazione di autorizzazione.
 * Il servizio {{site.data.keyword.amashort}} comunica con il provider di identità personalizzato per avviare il processo di autenticazione.
@@ -85,7 +85,7 @@ Puoi utilizzare una qualsiasi delle seguenti implementazioni di esempio Node.js 
 
  * [Esempio semplice](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Esempio avanzato](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## Tipiche comunicazioni tra il server {{site.data.keyword.amashort}} e un provider di identità personalizzato
 {: #custom-id-comm}
 1. Il servizio {{site.data.keyword.amashort}} invia una richiesta `startAuthorization` al provider di identità personalizzato.
@@ -111,5 +111,6 @@ Un provider di identità personalizzato fornisce un'area di autenticazione perso
 * [Creazione di un provider di identità personalizzato](custom-auth-identity-provider.html)
 * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
 * [Configurazione dell'autenticazione personalizzata per Android](custom-auth-android.html)
-* [Configurazione dell'autenticazione personalizzata per iOS](custom-auth-ios.html)
+* [Configurazione dell'autenticazione personalizzata per iOS (SDK Swift)](custom-auth-ios-swift-sdk.html)
+* [Configurazione dell'autenticazione personalizzata per iOS (SDK Objective-C)](custom-auth-ios.html)
 * [Configurazione dell'autenticazione personalizzata per Cordova](custom-auth-cordova.html)

@@ -25,7 +25,8 @@ El SDK de {{site.data.keyword.amashort}} se distribuye con CocoaPods, un gestor 
 {: #install-cocoapods}
 1. Abra Terminal y ejecute el mandato **pod --version**. Si ya tiene CocoaPods instalado, se muestra el número de versión. Puede omitir la sección siguiente para instalar el SDK.
 
-1. Si CocoaPods no está instalado, ejecute: ```
+1. Si CocoaPods no está instalado, ejecute:
+```
 sudo gem install cocoapods
 ```
 Para obtener más información, consulte el [sitio web de CocoaPods](https://cocoapods.org/).
@@ -56,7 +57,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 
  Para inicializar el SDK, especifique los parámetros `applicationRoute` y `applicationGUID`. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
-1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**. 
+1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**.
 
 1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
@@ -65,7 +66,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
  import BMSSecurity
  ```  
 
-1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.  
+1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -89,7 +90,6 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 
 1. Intente enviar una solicitud a un punto final protegido del programa de fondo móvil en el navegador. Abra el siguiente URL: `{rutaAplicación}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
 <br/>El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
-
 1. Utilice la aplicación de iOS para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
  ```Swift

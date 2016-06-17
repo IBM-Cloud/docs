@@ -11,7 +11,7 @@ copyright:
 
 ## 시작하기 전에
 {: #before-you-begin}
-* {{site.data.keyword.Bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)를 참조하십시오. 
+* {{site.data.keyword.Bluemix}}에서 Liberty for Java 애플리케이션을 개발하는 데 익숙해야 합니다. 자세한 정보는 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 서버 SDK 설치
 {: #installing-server-sdk}
@@ -37,8 +37,7 @@ copyright:
 	</featureManager>
 
 	```
-1. `server.xml` 파일을 계속 편집하고 OAuthTAI 기능을 구성하십시오. 보안 역할 `TAIUserRole`은
-`ALL_AUTHENTICATED_USERS`로 이름 지정된 특수 주제로 맵핑됩니다. 다음 스니펫은 `/protected` 엔드포인트 GET 메소드를 보호하는 방법을 보여줍니다. 
+1. `server.xml` 파일을 계속 편집하고 OAuthTAI 기능을 구성하십시오. 보안 역할 `TAIUserRole`은 `ALL_AUTHENTICATED_USERS`로 이름 지정된 특수 주제로 맵핑됩니다. 다음 스니펫은 `/protected` 엔드포인트 GET 메소드를 보호하는 방법을 보여줍니다. 
 
 	```XML
 	<usr_OAuthTAI id="myOAuthTAI" realmName="imfAuthentication">
@@ -69,8 +68,7 @@ copyright:
 Liberty for Java 애플리케이션에서 호스팅하는 자원을 보호하려면 `TAIUserRole`을 Java 보안 역할로 지정해야 합니다. `web.xml` 파일에서 또는 어노테이션으로 보안 역할을 정의할 수 있습니다. 
 
 * `web.xml` 파일에서 `TAIUserRole`을 지정하려면, `<security-role>` 요소에 `TAIUserRole`을 정의한 다음 이 역할을 사용하여 `security-constraint` 요소에서 웹 자원에 보안을 설정하십시오.
-예를 들면 다음과 같습니다.
-
+예를 들면 다음과 같습니다. 
 
 	```XML
 	<security-constraint>
@@ -107,17 +105,14 @@ Liberty for Java 애플리케이션에서 호스팅하는 자원을 보호하려
 #### com.ibm.websphere.security.cred.WSCredential property
 {: #WSCredential}
 
-`WSCredential` 인터페이스는 Liberty for Java 런타임에 대해
-인증된 프린시펄을 나타내는 신임 정보를 정의합니다. 예를 들면 다음과 같습니다.
-
+`WSCredential` 인터페이스는 Liberty for Java 런타임에 대해 인증된 프린시펄을 나타내는 신임 정보를 정의합니다. 예를 들면 다음과 같습니다. 
 
 ```Java
 Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
-    callerSubject.getPublicCredentials(WSCredential.class).iterator().next();```
-자세한 정보는
-[WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)을
-참조하십시오. 
+    callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
+```
+자세한 정보는 [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)을 참조하십시오. 
 
 #### com.worklight.oauth.tai.WLCredential property
 {: #WLCredential}

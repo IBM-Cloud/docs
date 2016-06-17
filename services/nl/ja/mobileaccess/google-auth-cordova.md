@@ -12,7 +12,7 @@ Cordova アプリケーションを Google 認証統合用に構成するには�
 ## 開始する前に
 {: #before-you-begin}
 * {{site.data.keyword.amashort}}、および {{site.data.keyword.amashort}} Client SDK の装備された Cordova プロジェクトによって保護されているリソースが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)を参照してください。  
-* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 * (オプション) 次のセクションの内容をよく理解してください。
    * [Android アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [iOS アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -25,9 +25,9 @@ Cordova アプリケーションの Android プラットフォームを Google �
 
 * Android プラットフォーム用の Google プロジェクトの構成
 * Google 認証用の {{site.data.keyword.amashort}} の構成
-* Android 用の {{site.data.keyword.amashort}}  Client SDK の構成
+* Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 
-Cordova アプリケーションを構成する際の唯一の違いは、 Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要がある点です。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。
+Cordova アプリケーションを構成する際の唯一の違いは、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要がある点です。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。
 
 ## iOS プラットフォームの構成
 {: #google-auth-cordova-ios}

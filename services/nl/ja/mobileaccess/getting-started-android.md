@@ -26,8 +26,6 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 1. `build.gradle` ファイルを開きます。
 **ヒント**: Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用の 2 つの `build.gradle` ファイルがある場合があります。アプリケーション・モジュールのファイルを使用してください。
 
-
-
 1. `build.gradle` ファイルの **Dependencies** セクションを見つけます。以下のようにして、{{site.data.keyword.amashort}} Client SDK のコンパイル依存関係を追加します。
 
 	```Gradle
@@ -72,6 +70,7 @@ context、applicationGUID、および applicationRoute の各パラメーター�
 
 1. 新しいモバイル・バックエンドの保護されているエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+
 1. Android アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
 	```Java

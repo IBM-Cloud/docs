@@ -11,7 +11,7 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de Androi
 
 ## Antes de empezar
 {: #facebook-auth-android-before}
- * Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Android instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Android instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
  * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
  * Cree un ID de aplicación de Facebook. Para obtener más información, consulte [Cómo obtener un ID de aplicación de Facebook desde el portal de desarrolladores de Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
@@ -147,7 +147,7 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 
 1. Inicialice el SDK del cliente y registre el gestor de autenticación de Facebook. Para inicializar el SDK de cliente de {{site.data.keyword.amashort}}, especifique los parámetros de contexto, identificador exclusivo global de la app (`applicationGUID`) y ruta (`applicationRoute`).<br/>
  Un lugar habitual, aunque no obligatorio, donde colocar el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.<br/>
- Sustituya *applicationRoute* y *applicationGUID* por los valores correspondientes a **Ruta** y a **Identificador exclusivo global de la app** del menú **Opciones móviles** de la página principal de la app del panel de control de Bluemix.
+ Sustituya *applicationRoute* y *applicationGUID* por los valores correspondientes a **Ruta** y a **Identificador exclusivo global de la app** del menú **Opciones móviles** de la página principal de la app del panel de control de Bluemix. 
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -170,7 +170,7 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 ```
 
 ## Prueba de autenticación
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Facebook, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #facebook-auth-android-testing-before}
@@ -214,12 +214,12 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 
 	![imagen](images/android-facebook-login-success.png)
 
-1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+ También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- Si invoca este código después de que un usuario haya iniciado sesión en Facebook, dicha sesión de Facebook se cerrará. Cuando el usuario intente iniciar sesión de nuevo, se le solicitarán sus credenciales de Facebook. 
+ Si invoca este código después de que un usuario haya iniciado sesión en Facebook, dicha sesión de Facebook se cerrará. Cuando el usuario intente iniciar sesión de nuevo, se le solicitarán sus credenciales de Facebook.
 
- El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser `null`. 

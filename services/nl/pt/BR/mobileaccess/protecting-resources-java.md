@@ -7,13 +7,13 @@ copyright:
 
 # Protegendo recursos do Liberty for Java com o {{site.data.keyword.amashort}}
 {: #protecting-liberty}
-O {{site.data.keyword.amashort}} Server SDK fornece um módulo OAuthTAI para aplicativos Liberty for Java&trade; implementados no {{site.data.keyword.Bluemix}}. Deve-se instrumentar seu servidor Liberty com o módulo OAuthTAI para protegê-lo contra acesso não autorizado e obter informações de monitoramento.
+O {{site.data.keyword.amashort}} server SDK fornece um módulo OAuthTAI para aplicativos Liberty for Java&trade; implementados no {{site.data.keyword.Bluemix}}. Deve-se instrumentar seu servidor Liberty com o módulo OAuthTAI para protegê-lo contra acesso não autorizado e obter informações de monitoramento.
 
 ## Antes de iniciar
 {: #before-you-begin}
-* Deve-se estar familiarizado com o desenvolvimento de aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, consulte [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html).
+* Deve-se estar familiarizado com o desenvolvimento de aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, consulte [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
 
-## Instalando o {{site.data.keyword.amashort}} Server SDK
+## Instalando o {{site.data.keyword.amashort}} server SDK
 {: #installing-server-sdk}
 
 1. Faça download e extraia os [artefatos de OAuthTAI](https://imf-tai.{DomainName}/public/TAI.zip).
@@ -24,7 +24,7 @@ O {{site.data.keyword.amashort}} Server SDK fornece um módulo OAuthTAI para apl
 1. Copie o diretório `OAuthTai-1.0.mf` para o diretório `$<wlp.user.dir>/extension/lib/features`.
 
 
-## Configurando o servidor Liberty for Java para usar o {{site.data.keyword.amashort}} Server SDK
+## Configurando o servidor Liberty for Java para usar o {{site.data.keyword.amashort}} server SDK
 {: #configuring-liberty}
 
 1. Edite o arquivo `server.xml` e inclua recursos necessários.

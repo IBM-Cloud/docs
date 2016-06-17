@@ -10,7 +10,7 @@ Copyright : 2015, 2016
 ## Avant de commencer
 {: #before-you-begin}
 
-* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Android instrumenté avec le SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+* Vous devez disposer d'une ressource protégée par {{site.data.keyword.amashort}} et d'un projet Android instrumenté avec le SDK client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) et [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
 * Protégez manuellement votre application de back end avec le SDK serveur de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Configuration d'un projet Google pour la plateforme Android
@@ -20,12 +20,12 @@ client Google est un identificateur unique utilisé par l'authentification Googl
 
 1. Créez un projet dans [Google Developer Console](https://console.developers.google.com).
 Si vous avez déjà un projet, vous pouvez passer les étapes qui décrivent la création du projet et commencer par l'ajout des droits d'accès.
-   1.    Ouvrez le menu de nouveau projet. 
-         
+   1.    Ouvrez le menu de nouveau projet.
+
          ![image](images/FindProject.jpg)
 
    2.    Cliquez sur **Créer un projet**.
-   
+
          ![image](images/CreateAProject.jpg)
 
 
@@ -39,11 +39,11 @@ Si vous avez déjà un projet, vous pouvez passer les étapes qui décrivent la 
 facultatives. Cliquez sur **Sauvegarder**.
 
     ![image](images/consentScreen.png)
-    
+
 1. Dans la liste **Credentials**, sélectionnez OAuth client ID.
 
      ![image](images/chooseCredentials.png)
-     
+
 
 
 1. Sélectionnez un type d'application. Cliquez sur **Android**. Donnez un nom parlant à votre client Android.
@@ -72,8 +72,7 @@ Une boîte de dialogue s'affiche et présente votre ID client Google. Notez cett
 ## Configuration de {{site.data.keyword.amashort}} pour l'authentification Google
 {: #google-auth-android-config}
 
-A présent que vous disposez d'un ID client Google pour Android, vous pouvez activer l'authentification Google dans le tableau de bord
-{{site.data.keyword.amashort}}.
+Maintenant que vous disposez d'un ID client iOS, vous pouvez activer l'authentification Google dans le tableau de bord {{site.data.keyword.amashort}}.
 
 1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
@@ -84,8 +83,7 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 1. Cliquez sur la vignette **Google** .
 
-1. Dans **ID d'application pour Android**, indiquez votre ID client pour Android et cliquez sur
-**Sauvegarder**.
+1. Dans **ID d'application pour Android**, spécifiez votre ID client pour Android et cliquez sur **Sauvegarder**.
 
 ## Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
 {: #google-auth-android-sdk}
@@ -154,7 +152,8 @@ section **Options pour application mobile** dans le tableau de bord.
 
 ## Test de l'authentification
 {: #google-auth-android-test}
-Lorsque le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des
+demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #google-auth-android-testing-before}
@@ -199,10 +198,10 @@ Vous devez disposer d'un système de back end mobile créé avec un conteneur bo
 
 	![image](images/android-google-login-success.png)
 
-1. Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+ Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
  ```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
  Si vous appelez ce code lorsqu'un utilisateur est connecté via Google, l'utilisateur est déconnecté de Google. Lorsque l'utilisateur tente à nouveau de se
@@ -210,4 +209,4 @@ connecter, il doit alors sélectionner le compte Google sous lequel se reconnect
 d'identification ne lui sont pas redemandées. Pour que des données d'identification de connexion lui soient réclamées à nouveau, l'utilisateur soit supprimer
 son compte Google du périphérique Android.
 
- La valeur `listener` (programme d'écoute) transmise à la fonction de déconnexion peut être Null.
+ La valeur `listener` transmise à la fonction de déconnexion peut être `null`.

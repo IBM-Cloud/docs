@@ -11,21 +11,21 @@ copyright:
 ## Antes de empezar
 {: #before-you-begin}
 
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Android instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Android instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del SDK de Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
 * Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 ## Configuración de un proyecto de Google para la plataforma Android
 {: #google-auth-android-project}
-Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en Google Developers Console. Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente de Google es un identificador exclusivo para la aplicación que se utiliza en la autenticación de Google. 
+Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en Google Developers Console. Parte de la creación de un proyecto consiste en obtener un ID de cliente de Google.  El ID de cliente de Google es un identificador exclusivo para la aplicación que se utiliza en la autenticación de Google.
 
 1. Cree un proyecto en [Google Developers Console](https://console.developers.google.com).
 Si ya dispone de un proyecto, puede omitir los pasos que describen la creación de proyectos y empezar a añadir credenciales.
-   1.    Abre el menú del proyecto nuevo.  
-         
+   1.    Abre el menú del proyecto nuevo.
+
          ![imagen](images/FindProject.jpg)
 
    2.    Pulse **Crear un proyecto**.
-   
+
          ![imagen](images/CreateAProject.jpg)
 
 
@@ -33,16 +33,16 @@ Si ya dispone de un proyecto, puede omitir los pasos que describen la creación 
 
      ![imagen](images/chooseGooglePlus.jpg)
 
-   1. Pulse **Habilitar** en la pantalla siguiente. 
+   1. Pulse **Habilitar** en la pantalla siguiente.
 
 1. Seleccione la pestaña **Pantalla de consentimiento** y especifique el nombre de producto que se muestra a los usuarios. Los demás valores son opcionales. Pulse **Guardar**.
 
     ![imagen](images/consentScreen.png)
-    
-1. En la lista **Credenciales**, elija el ID de cliente OAuth. 
+
+1. En la lista **Credenciales**, elija el ID de cliente OAuth.
 
      ![imagen](images/chooseCredentials.png)
-     
+
 
 
 1. Seleccione un tipo de aplicación. Pulse **Android**. Indique un nombre para el cliente Android.
@@ -70,7 +70,7 @@ Aparece un diálogo que muestra su ID de cliente de Google. Anote este valor. De
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-android-config}
 
-Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}. 
+Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la autenticación de Google en el panel de instrumentos de {{site.data.keyword.amashort}}. 
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
@@ -118,7 +118,7 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros de contexto, applicationGUID y applicationRoute.
+1. Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicializarlo pasando los parámetros de contexto, applicationGUID y applicationRoute. 
 
 	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método onCreate de la actividad principal de la aplicación de Android.
 
@@ -145,7 +145,7 @@ Ahora que ya tiene un ID de cliente de Google para Android, puede habilitar la a
 
 ## Prueba de autenticación
 {: #google-auth-android-test}
-Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Google, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar el gestor de autenticación de Google, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #google-auth-android-testing-before}
@@ -177,7 +177,7 @@ Debe disponer de un programa de fondo móvil que se haya creado con el contenedo
 	});
 ```
 
-1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Google. Después de iniciar sesión, la aplicación solicita permisos para acceder a recursos: 
+1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Google. Después de iniciar sesión, la aplicación solicita permisos para acceder a recursos:
 
 	![imagen](images/android-google-login.png)
 
@@ -189,12 +189,12 @@ Debe disponer de un programa de fondo móvil que se haya creado con el contenedo
 
 	![imagen](images/android-google-login-success.png)
 
-1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+ También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(),, listener);
+ GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- Si invoca este código después de que un usuario haya iniciado sesión en Google, dicha sesión se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá seleccionar una cuenta de Google para poder hacerlo. Si el usuario intenta iniciar sesión con un ID de Google con el que haya iniciado sesión anteriormente, no se le pedirán de nuevo las credenciales. Para pedir de nuevo las credenciales, el usuario debe eliminar su cuenta de Google del dispositivo Android. 
+ Si invoca este código después de que un usuario haya iniciado sesión en Google, dicha sesión se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá seleccionar una cuenta de Google para poder hacerlo. Si el usuario intenta iniciar sesión con un ID de Google con el que haya iniciado sesión anteriormente, no se le pedirán de nuevo las credenciales. Para pedir de nuevo las credenciales, el usuario debe eliminar su cuenta de Google del dispositivo Android.
 
- El valor para `listener` que se pasa a la función de cierre de sesión puede ser nulo. 
+ El valor para `listener` que se pasa a la función de cierre de sesión puede ser `null`. 

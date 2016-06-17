@@ -8,7 +8,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDK, 샘플, API 참조
-{{site.data.keyword.amashort}} SDK를 앱에 추가하려면, 사용하려는 SDK를 선택한 다음 SDK를 앱으로 풀링하도록 종속 항목 관리자를 구성하십시오. 
+{{site.data.keyword.amashort}} SDK를 앱에 추가하려면, 사용하려는 SDK를 선택한 다음 SDK를 앱으로 풀링하도록 종속성 관리자를 구성하십시오. 
 
 ## 코어 SDK
 {: #coresdk}
@@ -24,7 +24,6 @@ copyright:
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-    
     	name:'core',
     	version: '1.+',
     	ext: 'aar',
@@ -69,7 +68,7 @@ pod 'IMFCore'
 cordova plugin add ibm-mfp-core
 ```
 
-## Facebook 인증을 위한 {{site.data.keyword.amashort}} 클라이언트 SDK
+## Facebook 인증용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #facebooksdk}
 
 ### Android
@@ -83,7 +82,6 @@ cordova plugin add ibm-mfp-core
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-    
     	name:'facebookauthentication',
     	version: '2.+',
     	ext: 'aar',
@@ -128,7 +126,7 @@ pod 'IMFFacebookAuthentication'
 cordova plugin add ibm-mfp-core
 ```
 
-## Google 인증을 위한 {{site.data.keyword.amashort}} 클라이언트 SDK
+## Google 인증용 {{site.data.keyword.amashort}} 클라이언트 SDK
 {: #googlesdk}
 
 ### Android
@@ -142,7 +140,6 @@ cordova plugin add ibm-mfp-core
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-    
     	name:'googleauthentication',
     	version: '2.+',
     	ext: 'aar',
@@ -187,7 +184,7 @@ pod 'IMFGoogleAuthentication'
 cordova plugin add ibm-mfp-core
 ```
 
-## Node.js 서버를 위한 {{site.data.keyword.amashort}} 서버 SDK
+## Node.js 서버용 {{site.data.keyword.amashort}} 서버 SDK
 {: #serversdk}
 
 [Git 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)

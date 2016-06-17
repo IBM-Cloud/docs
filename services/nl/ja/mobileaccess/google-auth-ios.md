@@ -13,7 +13,7 @@ copyright:
 ## 開始する前に
 {: #google-auth-ios-before}
 * {{site.data.keyword.amashort}} によって保護されたリソースと、{{site.data.keyword.amashort}} Client SDK が装備された iOS プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [iOS Objective-C SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)を参照してください。  
-* {{site.data.keyword.amashort}}  Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 
 ## iOS プラットフォーム用の Google プロジェクトの構成
@@ -23,12 +23,12 @@ Google を ID プロバイダーとして使用することを開始するには
 
 
 1. [Google Developer Console](https://console.developers.google.com)にプロジェクトを作成します。既にプロジェクトがある場合は、プロジェクト作成について説明している手順をスキップし、資格情報の追加を開始してください。
-   1.    新規プロジェクトのメニューを開きます。 
-         
+   1.    新規プロジェクトのメニューを開きます。
+
          ![image](images/FindProject.jpg)
 
    2.    **「プロジェクトの作成 (Create a project)」**をクリックします。
-   
+
          ![image](images/CreateAProject.jpg)
 
 
@@ -41,11 +41,11 @@ Google を ID プロバイダーとして使用することを開始するには
 1. **「同意取得」**タブを選択し、ユーザーに表示する製品名を指定します。その他の値はオプションです。**「保存」**をクリックします。
 
     ![image](images/consentScreen.png)
-    
+
 1. **「資格情報」**リストから、「OAuth クライアント ID」を選択します。
 
      ![image](images/chooseCredentials.png)
-     
+
 
 
 1. この時点で、アプリケーション・タイプの選択が表示されます。**「iOS」**を選択します。
@@ -100,7 +100,6 @@ Google を ID プロバイダーとして使用することを開始するには
 	![info.plist file](images/ios-google-infoplist-settings.png)
 
 	最初の URL スキーマは、Google Developer Console からのクライアント ID を逆にしたバージョンです。ユーザーのクライアント ID が `123123-abcabc.apps.googleusercontent.com` の場合、URL スキーマは `com.googleusercontent.apps.123123-abcabc` となります。
- 
 
 	2 番目の URL スキーマは、アプリケーションのバンドル ID です。
 
@@ -309,12 +308,11 @@ if (error){
 1. 	ユーザーの要求は正常に処理されます。LogCat に以下の出力が表示されます。
 
 	![image](images/ios-google-login-success.png)
-	
-	
+		
 	次のコードを追加してログアウト機能を追加することもできます。
-	
+
 	Objective C:
-	
+
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
@@ -325,7 +323,6 @@ if (error){
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-
-	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、Mobile Client Access が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
+	ユーザーが Google にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Google を使用することについての許可を求めるプロンプトが出されます。その時点で、画面の右上隅にあるユーザー名をクリックすると、別のユーザーを選択してログインすることができます。
 
 	ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

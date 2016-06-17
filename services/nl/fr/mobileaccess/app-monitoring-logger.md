@@ -7,8 +7,7 @@ Copyright : 2015, 2016
 # Activation, configuration et utilisation de Logger
 {: #enable-logger}
 
-Le SDK client de {{site.data.keyword.amashort}} fournit une
-infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend notamment en charge plusieurs instances de consignateur par package, différents niveaux de journalisation et la capture des traces de pile.
+Le SDK client de {{site.data.keyword.amashort}} fournit une infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend notamment en charge plusieurs instances de consignateur par package, différents niveaux de journalisation et la capture des traces de pile.
 
 Vous pouvez aussi configurer les données de journal de sorte à les conserver dans un stockage local qui pourra être envoyé sur demande au service
 {{site.data.keyword.amashort}}.
@@ -72,7 +71,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**Remarque :** Le SDK client de {{site.data.keyword.amashort}} est implémenté à l'aide d'Objective-C. Il peut donc être nécessaire d'ajouter le fichier `IMFLoggerExtension.swift` à votre projet Swift pour utiliser l'ancienne API de consignation. Se fichier se trouve dans l'[archive du SDK client de Mobile Client Access](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+**Remarque :** Le SDK client de {{site.data.keyword.amashort}} est implémenté à l'aide d'Objective-C. Il peut donc être nécessaire d'ajouter le fichier `IMFLoggerExtension.swift` à votre projet Swift pour utiliser l'ancienne API de consignation. Ce fichier se trouve dans l'[archive du SDK client de {{site.data.keyword.amashort}}](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 
 ### Cordova

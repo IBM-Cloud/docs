@@ -13,12 +13,12 @@ copyright:
 Il servizio {{site.data.keyword.amafull}} mette a tua disposizione la funzionalità di sicurezza e monitoraggio delle applicazioni mobili. Puoi configurare i provider di identità e di autenticazione del client. Puoi anche aggiungere una funzione di monitoraggio alla tua applicazione che abilita
 sia le statistiche di utilizzo che quelle di registrazione client.
 
-Nota: il servizio Mobile Client Access era precedentemente noto come Advanced Mobile Access.
+Nota: il servizio {{site.data.keyword.amashort}} era precedentemente noto come Advanced Mobile Access.
 {: shortdesc}
 
 1. Configura un backend mobile in Bluemix e configura l'SDK nella tua applicazione mobile. Per ulteriori informazioni, vedi [Introduzione](getting-started.html).
 1. Risorse lato server sicure. Proteggi le tue risorse di backend mobile in esecuzione su runtime Node.js o Liberty for Java&trade; con la sicurezza OAuth abilitata ai dispositivi mobili. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
-1. Facoltativo: configura un provider di identità per la tua applicazione. Puoi configurare un singolo provider di identità per applicazione. La configurazione di un provider di identità abilita gli utenti della tua applicazione mobile ad accedere con il loro             account Facebook o Google+ esistente. In alternativa, puoi definire il modo in cui gli utenti eseguono l'accesso creando
+1. Facoltativo: configura un provider di identità per la tua applicazione. Puoi configurare un singolo provider di identità per applicazione. La configurazione di un provider di identità abilita gli utenti della tua applicazione mobile ad accedere con il loro account Facebook o Google+ esistente. In alternativa, puoi definire il modo in cui gli utenti eseguono l'accesso creando
              un'autenticazione personalizzata.
    * [Facebook](facebook-auth-overview.html)
    * [Google](google-auth-overview.html)

@@ -7,10 +7,9 @@ Copyright : 2015, 2016
 # Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS
 {: #custom-ios}
 
-Configurez votre application iOS qui utilise l'authentification personnalisée de manière qu'elle utilise le SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
 
-**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de
-{{site.data.keyword.amashort}}. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du
+**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de {{site.data.keyword.amashort}}. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du
 SDK Swift, voir [Configuration du SDK client pour iOS (SDK Swift) de {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)
 
 ## Avant de commencer
@@ -108,7 +107,7 @@ Le SDK client de {{site.data.keyword.amashort}} fournit l'interface `IMFAuthenti
 
 Cette méthode est appelée lorsqu'une demande d'authentification personnalisée reçue provient du service {{site.data.keyword.amashort}}. Les arguments sont les suivants :
 
-* Le protocole `IMFAuthenticationContext` est fourni par le SDK client de {{site.data.keyword.amashort}} pour permettre au développeur de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification (par exemple, lorsque l'utilisateur annule la demande d'authentification).
+* Le protocole `IMFAuthenticationContext` est fourni par le SDK client de {{site.data.keyword.amashort}} pour permettre au développeur de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification (en cas d'annulation de la part d'un utilisateur, par exemple).
 * `NSDictionary` contient une demande d'authentification personnalisée, renvoyée par un fournisseur d'identité personnalisé.
 
 En appelant la méthode `authenticationContext:didReceiveAuthenticationChallenge`, le SDK client de {{site.data.keyword.amashort}} délègue le contrôle au développeur et se positionne en mode d'attente des données d'identification. Il est de la responsabilité du développeur de collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}} par l'une des méthodes du protocole `IMFAuthenticationContext` décrites ci-dessous.
@@ -131,7 +130,7 @@ Cette méthode est appelée après un échec d'authentification. Les arguments s
 {: #custom-ios-sdk-authcontext}
 
 
-`IMFAuthenticationContext`` est fourni comme argument de la méthode `authenticationContext:didReceiveAuthenticationChallenge` d'une interface `IMFAuthenticationHandler` personnalisée. Le développeur doit collecter les données d'identification et utiliser les méthodes `AuthenticationContext`` pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes :
+`IMFAuthenticationContext` est fourni comme argument de la méthode `authenticationContext:didReceiveAuthenticationChallenge` d'une interface `IMFAuthenticationHandler` personnalisée. Le développeur doit collecter les données d'identification et utiliser les méthodes `IMFAuthenticationContext`  pour renvoyer des données d'identification au SDK client de {{site.data.keyword.amashort}} ou pour signaler un incident. Utilisez l'une des méthodes suivantes :
 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
@@ -165,7 +164,7 @@ CustomAuthenticationDelegate.m
 @implementation CustomAuthenticationDelegate
 
 -(void)authenticationContext:(id<IMFAuthenticationContext>)context
-					didReceiveAuthenticationChallenge:(NSDictionary *)challenge {
+					didReceiveAuthenticationChallenge:(NSDictionary *)challenge{
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
@@ -226,13 +225,14 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		context.submitAuthenticationChallengeAnswer(challengeAnswer)
 
 		// En cas d'échec de la collecte des données d'identification, vous devez le signaler
-		// à IMFAuthenticationContext. Sinon le SDK client d'accès de client mobile 	
+		// à IMFAuthenticationContext. Sinon le SDK client d'accès de client mobile
 		// demeure indéfiniment à l'état d'attente de données
 		// d'identification
 	}
 
 
-	func authenticationContext(context: IMFAuthenticationContext!, didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
+	func authenticationContext(context: IMFAuthenticationContext!,
+					didReceiveAuthenticationSuccess userInfo: [NSObject : AnyObject]!) {
 		NSLog("didReceiveAuthenticationSuccess")
 	}
 
@@ -265,8 +265,7 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 
 ## Test de l'authentification
 {: #custom-ios-testing}
-Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé
-(`IMFAuthenticationDelegate`), vous pouvez commencer à envoyer des demandes à votre back end mobile.
+Après avoir initialisé le SDK client et enregistré un délégué d'authentification personnalisé `IMFAuthenticationDelegate`, vous pouvez commencer à envoyer des demandes à votre back end mobile.
 
 ### Avant de commencer
 {: #custom-ios-testing-before}
@@ -315,23 +314,23 @@ Après avoir initialisé le SDK client et enregistré un délégué d'authentifi
 1. 	Lorsque vos demandes aboutissent, la sortie suivante figure dans la console Xcode :
 
 	![image](images/ios-custom-login-success.png)
-	
-	
-	
+
 	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
-	Objective C: 
+	Objective C:
 
 	```Objective-C
 	[[IMFAuthorizationManager sharedInstance] logout : callBack]
 	```
-	Swift : 
+
+	Swift :
 
 	```Swift
 	IMFAuthorizationManager.sharedInstance().logout(callBack)
 	```
 
-Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau
-soumettre ses données d'identification.La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
-la valeur `nil`.
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter,
+il doit à nouveau soumettre ses données d'identification.
 
+ La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
+la valeur `nil`.

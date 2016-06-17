@@ -8,13 +8,11 @@ copyright:
 # Monitoramento de Aplicativo
 {: #app-monitoring}
 
-Além de recursos de segurança, o {{site.data.keyword.amafull}} também fornece monitoramento e análise para seus aplicativos móveis. É
-possível registrar logs de clientes e monitorar dados com o {{site.data.keyword.amashort}} Client SDK. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.amashort}}. Todos os eventos de segurança, tais como sucesso ou falha de autenticação, que ocorrem no serviço {{site.data.keyword.amashort}} são registrados automaticamente.
+Além de recursos de segurança, o {{site.data.keyword.amafull}} também fornece monitoramento e análise para seus aplicativos móveis. É possível registrar logs de clientes e monitorar dados com o {{site.data.keyword.amashort}} client SDK. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.amashort}}. Todos os eventos de segurança, tais como sucesso ou falha de autenticação, que ocorrem no serviço {{site.data.keyword.amashort}} são registrados automaticamente.
 
 Quando os dados são entregues para o {{site.data.keyword.amashort}}, é possível usar o Painel de monitoramento do {{site.data.keyword.amashort}} para obter insights da análise sobre seus aplicativos móveis, dispositivos e logs do cliente. As informações sobre solicitações que seu aplicativo faz aos recursos que são protegidos por {{site.data.keyword.amashort}} são registradas por padrão.
 
-Os dados registrados automaticamente incluem informações como número de autenticações, novos dispositivos e novos usuários. Além disso, é
-possível configurar o {{site.data.keyword.amashort}} Client SDK para relatar as informações a seguir:
+Os dados registrados automaticamente incluem informações como número de autenticações, novos dispositivos e novos usuários. Além disso, é possível configurar o {{site.data.keyword.amashort}} client SDK para relatar as informações a seguir:
 
 ### Estatísticas de uso de seus aplicativos móveis
 {: #usage-stats}

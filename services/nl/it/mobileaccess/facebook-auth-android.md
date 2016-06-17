@@ -222,7 +222,7 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 
 	![immagine](images/android-facebook-login-success.png)
 
-1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
+ Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -230,4 +230,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook, l'utente viene disconnesso da Facebook. Quando un utente prova ad eseguire nuovamente l'accesso, gli vengono richieste le sue credenziali Facebook.
 
- Il valore per `listener` passato alla funzione di disconnessione può essere null.
+ Il valore per `listener` passato alla funzione di disconnessione può essere `null`.

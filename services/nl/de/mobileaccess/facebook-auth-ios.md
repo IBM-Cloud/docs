@@ -172,7 +172,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	* Setzen Sie den Wert auf die Position Ihrer Datei `BridgingHeader.h`. Beispiel: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build). Dabei sollten keine Fehlernachrichten angezeigt werden.
 
-3. Initialisieren Sie das Client-SDK.	Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard ermittelt haben.
+3. Initialisieren Sie das Client-SDK. Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard ermittelt haben.
 
 	**Objective-C**
 
@@ -289,10 +289,7 @@ Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe in der Xcode-Konsole angezeigt:
 ![image](images/ios-facebook-login-success.png)
 
-
-
 	Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
-
 
 	**Objective-C**
 
@@ -306,8 +303,8 @@ Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Facebook angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei Mobile Client Access für die Verwendung von Facebook zu Authentifizierungszwecken berechtigen.
+	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Facebook angemeldet hat, und der Benutzer versucht, sich wieder anzumelden, muss er sich bei {{site.data.keyword.amashort}} für die Verwendung von Facebook zu Authentifizierungszwecken berechtigen.
 
 	Um Benutzer zu wechseln, müssen Sie diesen Code aufrufen, und der Benutzer muss sich in seinem Browser bei Facebook abmelden.
-Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.
 
+  Die Übergabe von `callBack` an die Abmeldefunktion ist optional. Sie können auch `nil` übergeben.

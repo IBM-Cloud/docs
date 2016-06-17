@@ -20,7 +20,7 @@ Strumenta la tua applicazione Cordova con l'SDK client {{site.data.keyword.amash
 ## Installazione del plugin Cordova {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
 
-L'SDK client {{site.data.keyword.amashort}} è un plugin Cordova che racchiude gli SDK client {{site.data.keyword.amashort}} nativi. Viene distribuito utilizzando
+L'SDK client {{site.data.keyword.amashort}} per Cordova è un plugin Cordova che racchiude gli SDK client {{site.data.keyword.amashort}} nativi. Viene distribuito utilizzando
 l'interfaccia riga di comando (CLI) Cordova e `npmjs`, un repository di plug-in per i progetti Cordova. La CLI Cordova scarica automaticamente i plugin dai repository e li rende disponibili alla tua applicazione Cordova.
 
 1. Aggiungi le piattaforme Android e iOS alla tua applicazione Cordova. Dalla riga di comando, esegui uno dei seguenti comandi, o entrambi:

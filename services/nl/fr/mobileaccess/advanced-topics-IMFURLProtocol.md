@@ -1,6 +1,8 @@
 ---
-copyright :
-  années : 2015, 2016
+
+copyright:
+  years: 2015, 2016
+  
 ---
 # Utilisation d'IMFURLProtocol dans les applications iOS
 {: #imfurl}

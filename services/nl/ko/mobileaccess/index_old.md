@@ -12,7 +12,7 @@ copyright:
 
 {{site.data.keyword.amafull}} 서비스는 모바일 애플리케이션 보안 및 모니터링 기능을 제공합니다. 클라이언트 인증 및 ID 제공자를 구성할 수 있습니다. 또한 모니터링 기능을 사용자 앱에 추가하여 클라이언트 로깅 및 사용 통계를 둘 다 사용할 수 있습니다. 
 
-참고: Mobile Client Access 서비스를 이전에는 Advanced Mobile Access라고 했습니다.
+참고: {{site.data.keyword.amashort}} 서비스를 이전에는 Advanced Mobile Access라고 했습니다.
 {: shortdesc}
 
 1. Bluemix에서 모바일 백엔드를 설정하고 모바일 앱에 SDK를 구성하십시오. 자세한 정보는 [시작하기](getting-started.html)를 참조하십시오. 
@@ -24,18 +24,18 @@ copyright:
 1. 앱 모니터링 및 로깅을 구성하십시오. 자세한 정보는 [앱 모니터링](app-monitoring.html)을 참조하십시오. 
 
 
-># 관련 링크{:class="linklist"}
->## 학습서 및 샘플{:id="samples"}
+># 관련 링크 {:class="linklist"}
+>## 학습서 및 샘플 {:id="samples"}
 >* [android-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication)
 >* [ios-helloauthentication](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication)
 >
-># 관련 링크{:class="linklist"}
->## API 참조{:id="api"}
+># 관련 링크 {:class="linklist"}
+>## API 참조 {:id="api"}
 >* [코어 API 참조(Android)](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 >* [코어 API 참조(iOS)](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 >
-># 관련 링크{:class="linklist"}
->## SDK{:id="sdk"}
+># 관련 링크 {:class="linklist"}
+>## SDK {:id="sdk"}
 >* [코어 SDK(iOS) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)  
 >* [bms-clientsdk-android-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)
 >* [bms-clientsdk-cordova-plugin-core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)

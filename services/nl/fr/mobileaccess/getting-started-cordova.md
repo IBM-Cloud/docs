@@ -104,8 +104,7 @@ d'exécution) ** et ajoutez le paramètre Frameworks suivant :
 ## Initialisation du plug-in client de {{site.data.keyword.amashort}}
 {: #getting-started-cordova-initialize}
 
-Pour pouvoir utiliser le logiciel SDK client de {{site.data.keyword.amashort}}, vous devez l'initialiser en
-passant les paramètres suivants : l'identificateur unique global de l'application (*applicationGUID*) et la route de l'application (*applicationRoute*).
+Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres *applicationGUID* et *applicationRoute*.
 
 1. L'identificateur unique global et la route de l'application figurent sur la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur le nom de votre appli, puis sur **Options pour application mobile** pour afficher les valeurs de **Route de l'application** et d'**Identificateur global unique de l'application** permettant d'initialiser le SDK.
 

@@ -5,14 +5,13 @@ copyright:
 
 ---
 
-# Configurando o {{site.data.keyword.amashort}} Client SDK para Android
+# Configurando o {{site.data.keyword.amashort}} client SDK para Android
 {: #custom-android}
-Configure seu aplicativo Android que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} Client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
+Configure seu aplicativo Android que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 ## Antes de Começar
 {: #before-you-begin}
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que está configurado para usar um provedor de identidade customizado.  Seu
-app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter informações adicionais, consulte as seguintes informações:
+Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que está configurado para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
 ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configurando o SDK do Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
@@ -21,7 +20,7 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
  * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-## Inicializando o {{site.data.keyword.amashort}} Client SDK
+## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
 1. Em seu projeto Android em Android Studio, abra o arquivo `build.gradle` de seu módulo do app.
 <br/>**Dica:** o projeto Android pode ter dois arquivos `build.gradle`: para o projeto e para o módulo do aplicativo. Use o arquivo do módulo do aplicativo.
@@ -64,8 +63,7 @@ clica em **Opções móveis** em seu app no painel
 ## Interface AuthenticationListener
 {: #custom-android-authlistener}
 
-O {{site.data.keyword.amashort}} Client SDK fornece a interface `AuthenticationListener` para que seja possível
-implementar um fluxo de autenticação customizada. A interface `AuthenticationListener` expõe três métodos que são chamados em fases diferentes do processo de autenticação.
+O {{site.data.keyword.amashort}} client SDK fornece a interface `AuthenticationListener` para que seja possível implementar um fluxo de autenticação customizada. A interface `AuthenticationListener` expõe três métodos que são chamados em fases diferentes do processo de autenticação.
 
 ### Método onAuthenticationChallengeReceived
 {: #custom-onAuth}
@@ -77,12 +75,11 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 #### Argumentos
 {: #custom-android-onAuth-arg}
 
-* `AuthenticationContext`: Fornecido pelo {{site.data.keyword.amashort}} Client SDK para que seja possível relatar as respostas ou falhas dos desafios de autenticação durante a coleta de credenciais.  Por exemplo, quando um usuário cancela a autenticação.
+* `AuthenticationContext`: fornecido pelo {{site.data.keyword.amashort}} client SDK para que seja possível relatar as respostas ou falhas dos desafios de autenticação durante a coleta de credenciais. Por exemplo, quando um usuário cancela a autenticação.
 * `JSONObject`: contém um desafio de autenticação customizada, conforme retornado por um provedor de identidade customizado.
 * `Context`: uma referência ao Contexto Android que foi usado quando a solicitação foi enviada. Geralmente esse argumento representa uma Atividade Android.
 
-Ao chamar o método `onAuthenticationChallengeReceived`, o {{site.data.keyword.amashort}} Client SDK está delegando controle ao desenvolvedor.  O serviço aguarda as credenciais. O
-desenvolvedor deve coletar credenciais e as relatar de volta ao {{site.data.keyword.amashort}} Client SDK usando um dos métodos de interface `AuthenticationContext`.
+Ao chamar o método `onAuthenticationChallengeReceived`, o {{site.data.keyword.amashort}} client SDK está delegando controle ao desenvolvedor. O serviço aguarda as credenciais. O desenvolvedor deve coletar credenciais e as relatar de volta ao {{site.data.keyword.amashort}} client SDK usando um dos métodos de interface `AuthenticationContext`.
 
 ### Método onAuthenticationSuccess
 {: #custom-android-authlistener-onsuccess}
@@ -101,8 +98,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ## Interface AuthenticationContext
 {: #custom-android-authcontext}
 
-O `AuthenticationContext` é fornecido como um argumento para o método `onAuthenticationChallengeReceived` de um `AuthenticationListener` customizado. Deve-se
-coletar credenciais e usar os métodos `AuthenticationContext` para retornar credenciais para o {{site.data.keyword.amashort}} Client SDK ou relatar uma falha. Use um dos métodos a
+O `AuthenticationContext` é fornecido como um argumento para o método `onAuthenticationChallengeReceived` de um `AuthenticationListener` customizado. Deve-se coletar credenciais e usar os métodos `AuthenticationContext` para retornar credenciais para o {{site.data.keyword.amashort}} client SDK ou relatar uma falha. Use um dos métodos a
 seguir.
 
 ```Java
@@ -147,7 +143,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// In case there was a failure collecting credentials you need to report
 			// it back to the AuthenticationContext. Otherwise Mobile Client
-			// Access Client SDK will remain in a waiting-for-credentials state
+			// Access client SDK will remain in a waiting-for-credentials state
 			// forever
 
 			log("This should never happen...");
@@ -186,7 +182,7 @@ Use o *realmName* especificado no painel do {{site.data.keyword.amashort}}.
 
 ## Testando a Autenticação
 {: #custom-android-testing}
-Depois que o Client SDK for inicializado e um AuthenticationListener customizado for registrado, será possível começar a fazer solicitações ao seu backend móvel.
+Depois que o client SDK for inicializado e um AuthenticationListener customizado for registrado, será possível começar a fazer solicitações ao seu backend móvel.
 
 ### Antes de Começar
 {: #custom-android-testing-before}
@@ -197,8 +193,7 @@ Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mob
 abrindo `{applicationRoute}/protected`, por exemplo,
 `http://my-mobile-backend.mybluemix.net/protected`.
 
-1. O terminal `/protected` de um backend móvel que é criado com o modelo do {{site.data.keyword.mobilefirstbp}} está protegido com {{site.data.keyword.amashort}}. O
-terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} Client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+1. O terminal `/protected` de um backend móvel criado com o modelo do {{site.data.keyword.mobilefirstbp}} é protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Android para fazer solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar seu AuthenticationListener customizado.
 
@@ -227,7 +222,7 @@ terminal pode ser acessado somente por aplicativos móveis que sejam instrumenta
 
 	![image](images/android-custom-login-success.png)
 
-1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+ Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -235,4 +230,4 @@ terminal pode ser acessado somente por aplicativos móveis que sejam instrumenta
 
  Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.
 
- O valor para `listener` passado para a função de logout pode ser nulo.
+ O valor para `listener` passado para a função de logout pode ser `null`.

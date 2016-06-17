@@ -9,7 +9,7 @@ copyright:
 {: #facebook-auth-overview}
 É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Facebook como o provedor de identidade. Seus usuários do aplicativo móvel podem usar suas credenciais do Facebook para autenticação.
 
-**Importante**: não é necessário instalar separadamente o Facebook SDK. O Facebook SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} Client SDK.
+**Importante**: não é necessário instalar separadamente o Facebook SDK. O Facebook SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
 
 ## Fluxo de solicitação do {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
@@ -18,18 +18,18 @@ Consulte o diagrama simplificado a seguir para entender como o {{site.data.keywo
 
 ![image](images/mca-sequence-facebook.jpg)
 
-1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} Server SDK.
-* O {{site.data.keyword.amashort}} Server SDK detecta uma solicitação não autorizada e retorna o código HTTP 401 e o escopo de autorização.
-* O {{site.data.keyword.amashort}} Client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação.
-* O {{site.data.keyword.amashort}} Client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e solicita a emissão de um cabeçalho de autorização.
+1. Use o {{site.data.keyword.amashort}} client SDK para fazer uma solicitação aos seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
+* O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna o código HTTP 401 e o escopo de autorização.
+* O {{site.data.keyword.amashort}} client SDK detecta automaticamente o código HTTP 401 e inicia o processo de autenticação.
+* O {{site.data.keyword.amashort}} client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e pede para emitir um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} solicita ao cliente para se autenticar com o Facebook primeiro fornecendo um desafio de autenticação.
-* O {{site.data.keyword.amashort}} Client SDK usa o SDK do Facebook para iniciar o processo de autenticação. Após a autenticação bem-sucedida, o SDK do Facebook retorna um token de acesso do Facebook.
+* O {{site.data.keyword.amashort}} client SDK usa o Facebook SDK para iniciar o processo de autenticação. Após a autenticação bem-sucedida, o SDK do Facebook retorna um token de acesso do Facebook.
 * O token de acesso do Facebook é considerado uma resposta do desafio de autenticação. O token é enviado para o serviço {{site.data.keyword.amashort}}.
 * O serviço valida a resposta do desafio de autenticação com servidores do Facebook.
-* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} Client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário atual, o dispositivo e o aplicativo.
-* Desse ponto em diante, todas as solicitações feitas por meio do {{site.data.keyword.amashort}} Client SDK terão um cabeçalho de autorização recém-obtido.
-* O {{site.data.keyword.amashort}} Client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
-* O {{site.data.keyword.amashort}} Server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
+* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário atual, o dispositivo e o aplicativo.
+* Desse ponto em diante, todas as solicitações feitas por meio do {{site.data.keyword.amashort}} client SDK terão um cabeçalho de autorização recém-obtido.
+* O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
+* O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
 ## Obtendo um ID do aplicativo Facebook do Portal do desenvolvedor do Facebook
 {: #facebook-appID}

@@ -13,7 +13,7 @@ Configure su aplicación de iOS con autenticación personalizada para que utilic
 ## Antes de empezar
 {: #before-you-begin}
 
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
+Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Swift de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -59,7 +59,7 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 ### Instalación del SDK del cliente con CocoaPods
 {: #custom-ios-sdk-cocoapods}
 
-Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de {{site.data.keyword.amashort}}.
+Utilice el gestor de dependencias CocoaPods para instalar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
 1. Abra Terminal y navegue hasta el directorio raíz del proyecto de iOS.
 
@@ -85,7 +85,7 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
 
 1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**.
 
-1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}.
+1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
  ```Swift
  import UIKit
@@ -140,7 +140,7 @@ Para inicializar el SDK, especifique los parámetros `applicationRoute` y `appli
 ## Prueba de autenticación
 {: #custom-ios-testing}
 
-Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes al programa de fondo móvil.
+Después de inicializar el SDK del cliente y registrar un delegado de autorización personalizado, puede empezar a realizar solicitudes al programa de fondo móvil. 
 
 ### Antes de empezar
 {: #custom-ios-testing-before}
@@ -180,12 +180,12 @@ Después de inicializar el SDK del cliente y registrar un delegado de autorizaci
  response:Optional("Hello Don Lon"), no error
  ```
 
-1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código: 
+1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
  ```
  MCAAuthorizationManager.sharedInstance.logout(callBack)
  ```  
 
- Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor. 
+ Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.
 
  Es opcional pasar `callBack` a la función de cierre de sesión. También puede pasar `nil`.

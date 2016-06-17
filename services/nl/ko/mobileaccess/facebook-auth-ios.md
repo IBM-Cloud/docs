@@ -14,8 +14,8 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 
 ## 시작하기 전에
 {: #facebook-auth-ios-before}
-* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 계측되는 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Objective-C SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)을 참조하십시오.  
-* {{site.data.keyword.amashort}} 서버 SDK로 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+* {{site.data.keyword.amashort}}에서 보호하는 자원 및 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) 및 [iOS Objective-C SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)을 참조하십시오.  
+* {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 수동으로 보호하십시오. 자세한 정보는 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 * Facebook 애플리케이션 ID를 작성하십시오. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
 
 ## iOS 플랫폼에 대한 Facebook 애플리케이션 구성
@@ -29,7 +29,7 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 
 1. **설정 저장**을 클릭하십시오. 
 
-## Facebook 인증을 사용하도록 {{site.data.keyword.amashort}} 구성
+## Facebook 인증용 {{site.data.keyword.amashort}} 구성
 {: #facebook-auth-ios-configmca}
 
 iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebook 애플리케이션을 구성한 후 {{site.data.keyword.amashort}}에서 Facebook 인증을 사용하도록 설정할 수 있습니다. 
@@ -50,13 +50,13 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 ### CocoaPods 설치
 {: #facebook-auth-cocoapods}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK는 iOS 프로젝트에 대한 종속 항목 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK는 iOS 프로젝트용 종속성 관리자인 CocoaPods를 사용하여 분배됩니다. CocoaPods는 저장소에서 아티팩트를 자동으로 다운로드하고 iOS 애플리케이션에서 아티팩트를 사용할 수 있게 합니다. 
 
 1. 터미널을 열고 `pod --version` 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. 이 학습서의 다음 섹션으로 건너뛸 수 있습니다. 
 
 1. `sudo gem install cocoapods`를 실행하여 CocoaPods를 설치하십시오. 추가적인 안내가 필요한 경우 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오. 
 
-### CocoaPods로 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
+### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #facebook-auth-install-cocoapods}
 
 1. iOS 프로젝트에서 `Podfile` 및 다음 행을 편집하십시오. 
@@ -70,7 +70,7 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 
 1. iOS 프로젝트 작업공간을 열려면 명령행에서 `open {your-project-name}.xcworkspace`를 실행하십시오. 
 
-### Facebook 인증을 사용하도록 iOS 프로젝트 구성
+### Facebook 인증용 iOS 프로젝트 구성
 {: #facebook-auth-ios-configproject}
 
 1. `info.plist` 파일을 찾으십시오. 이 파일은 보통 Xcode 프로젝트의 `지원 파일` 폴더에 있습니다. 
@@ -130,7 +130,9 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 	    </dict>
 	</dict>
 ```
-Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오.  **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오. 
+Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오.
+
+ **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #facebook-auth-ios-initalize}
@@ -141,7 +143,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지를 열고 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오.
 
-1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 
+1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오.
 
 	**Objective-C**
 
@@ -153,7 +155,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 	**Swift**
 
-	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C를 사용하여 구현되므로 Swift 프로젝트에 브리징 헤더를 추가해야 할 수 있습니다. 
+	{{site.data.keyword.amashort}} 클라이언트 SDK는 Objective-C를 사용하여 구현되므로 Swift 프로젝트에 브리징 헤더를 추가해야 할 수 있습니다.
 
 	1. Xcode에서 마우스 오른쪽 단추로 프로젝트를 클릭하고 **새 파일...**을 선택하십시오. 
 	* **iOS 소스** 카테고리에서 `헤더 파일`을 선택하십시오. 
@@ -213,7 +215,6 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 		return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 
-
 	}
 ```
 
@@ -230,16 +231,15 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 ## 인증 테스트
 {: #facebook-auth-ios-testing}
-클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드에 대한 요청 작성을 시작할 수 있습니다. 
+클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 ### 시작하기 전에
 {: #facebook-auth-ios-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}에서 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우
-[자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용해야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}에서 보호하는 자원이 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [자원 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 1. 브라우저에서 새로 작성된 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오.
 (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 계측되는 모바일 애플리케이션에서만 액세스할 수 있기 때문에 이 메시지가 리턴됩니다.
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
@@ -289,10 +289,7 @@ if (error){
 1. 	요청이 성공하면 Xcode 콘솔에 다음과 같은 출력이 표시됩니다.
 	![이미지](images/ios-facebook-login-success.png)
 
-
-
 	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
-
 
 	**Objective-C**
 
@@ -306,8 +303,8 @@ if (error){
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	Facebook에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우,
-사용자에게는 인증 용도로 Facebook을 사용하도록 Mobile Client Access 권한 부여 프롬프트가 제시됩니다. 
+	Facebook에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Facebook을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 
 
-	사용자를 전환하려면, 이 코드를 호출해야 하며 사용자는 자체 브라우저에서 Facebook에서 로그아웃해야 합니다. 로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 
+	사용자를 전환하려면, 이 코드를 호출해야 하며 사용자는 자체 브라우저에서 Facebook에서 로그아웃해야 합니다. 
 
+  로그아웃 기능에 `callBack` 전달은 선택사항입니다. `nil`을 전달할 수도 있습니다. 

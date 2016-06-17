@@ -10,8 +10,7 @@ copyright:
 
 Instrumente seu aplicativo iOS com o {{site.data.keyword.amashort}} SDK, inicialize o SDK e faça solicitações aos recursos protegidos e desprotegidos.
 
-**Dica:** Se você estiver desenvolvendo seu app iOS no Swift,
-considere o {{site.data.keyword.amashort}} Client Swift SDK. Para obter detalhes,
+**Dica:** se você estiver desenvolvendo seu app iOS no Swift, considere o uso do {{site.data.keyword.amashort}} client Swift SDK. Para obter detalhes,
 consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)
 
 ## Antes de Começar
@@ -20,7 +19,7 @@ consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)
 * Assegure-se de ter configurado corretamente o Xcode. Para obter mais informações sobre como configurar o seu ambiente do iOS, consulte o [website do Apple Developer](https://developer.apple.com/support/xcode/).
 
 
-## Instalando o {{site.data.keyword.amashort}} Client SDK
+## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk-ios}
 O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciador de dependências para projetos iOS. O CocoaPods faz o download automático de artefatos de repositórios e os disponibiliza para o aplicativo iOS.
 
@@ -36,7 +35,7 @@ sudo gem install cocoapods
 Para obter mais informações, consulte o
 [website do CocoaPods](https://cocoapods.org/).
 
-### Instalar o {{site.data.keyword.amashort}} Client SDK com CocoaPods
+### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
 
 1. No Terminal, navegue para o diretório-raiz do seu projeto iOS.
@@ -55,21 +54,17 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
 
 1. Abra sua área de trabalho do projeto iOS. Abra o arquivo `xcworkspace` que foi gerado por CocoaPods. Por exemplo: `{your-project-name}.xcworkspace`. Execute `open {your-project-name}.xcworkspace`.
 
-## Inicializando o {{site.data.keyword.amashort}} Client SDK
+## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #init-mca-sdk-ios}
 
-Para usar o {{site.data.keyword.amashort}} Client SDK, deve-se inicializar
-o SDK passando os parâmetros **Rota**
-(`applicationRoute`) e **GUID do app**
-(`applicationGUID`).
+Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK passando os parâmetros de **Rota** (`applicationRoute`) e **GUID do app** (`applicationGUID`).
 
 
 1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Você
 precisa dos valores **Rota** e **GUID do app** para
 inicializar o SDK.
 
-1. Importe a estrutura `IMFCore` na classe em que você deseja usar
-o {{site.data.keyword.amashort}} Client SDK, incluindo o cabeçalho a seguir:
+1. Importe a estrutura `IMFCore` na classe em que você deseja usar o {{site.data.keyword.amashort}} client SDK incluindo o cabeçalho a seguir:
 
 	**Objective-C:**
 	 ```Objective-C
@@ -78,7 +73,7 @@ o {{site.data.keyword.amashort}} Client SDK, incluindo o cabeçalho a seguir:
 
 	**Swift:**
 
-	O {{site.data.keyword.amashort}} Client SDK é implementado com Objective-C. Pode ser necessário incluir um cabeçalho de ponte em seu projeto Swift:
+	O {{site.data.keyword.amashort}} client SDK é implementado com Objective-C. Pode ser necessário incluir um cabeçalho de ponte em seu projeto Swift:
 
 	1. Clique com o botão direito em seu projeto em Xcode e selecione **Novo arquivo..**.
 	1. Na categoria **Origem iOS**, clique em **Arquivo de cabeçalho**. Atribua um nome ao arquivo `BridgingHeader.h`.
@@ -88,7 +83,7 @@ o {{site.data.keyword.amashort}} Client SDK, incluindo o cabeçalho a seguir:
 	1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo, `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} Client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
+1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C:
                     
@@ -109,12 +104,11 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 ## Fazendo uma solicitação em seu backend móvel
 {: #request}
 
-Depois que o {{site.data.keyword.amashort}} Client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
+Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
 
-1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma
-mensagem `Unauthorized` é retornada no navegador, pois esse terminal pode ser acessado somente por aplicativos móveis que sejam
-instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra
+a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador porque esse terminal pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `IMFClient`:
 

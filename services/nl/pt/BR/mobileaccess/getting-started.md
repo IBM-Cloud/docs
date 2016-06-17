@@ -15,8 +15,7 @@ Para obter uma introdução sobre o {{site.data.keyword.amashort}}, é possível
 É possível criar uma nova instância de um serviço {{site.data.keyword.amashort}} a partir do catálogo do {{site.data.keyword.Bluemix}}.  Se você não usar o modelo para criar um novo backend móvel, deverá configurar o SDK do servidor em seu backend existente.
 
 
-  * **Novo app**: as instruções nas seções a seguir descrevem como criar um novo app que cria um backend móvel e protege
-com o {{site.data.keyword.amashort}} Server SDK. Clique no modelo do **MobileFirst Services Starter** para criar um novo aplicativo com o serviço {{site.data.keyword.amashort}}.
+  * **Novo app**: as instruções nas seções a seguir descrevem como criar um novo app que cria um backend móvel e protege com o {{site.data.keyword.amashort}} server SDK. Clique no modelo do **MobileFirst Services Starter** para criar um novo aplicativo com o serviço {{site.data.keyword.amashort}}.
   * **App existente**: clique no ícone do {{site.data.keyword.amashort}} e crie uma nova instância de serviço que esteja ligada a um aplicativo existente. Para
 configurar o novo server SDK em seu app existente, veja [Protegendo recursos em nuvem](protecting-resources.html).
 

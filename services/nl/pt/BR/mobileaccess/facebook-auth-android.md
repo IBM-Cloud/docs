@@ -11,8 +11,8 @@ Para usar o Facebook como provedor de identidade nos aplicativos Android, inclua
 
 ## Antes de Começar
 {: #facebook-auth-android-before}
- * Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do Android que seja instrumentado com o {{site.data.keyword.amashort}} Client SDK.  Para obter mais informações, consulte [Introdução ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurando o Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
- * Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} Server SDK. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+ * Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do Android que seja instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurando o Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
+ * Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
  * Crie um ID do aplicativo Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -76,7 +76,7 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Especifique o ID do aplicativo Facebook e clique em **Salvar**.
 
-## Configurando o {{site.data.keyword.amashort}} Client SDK para Android
+## Configurando o {{site.data.keyword.amashort}} client SDK para Android
 {: #facebook-auth-android-sdk}
 Para configurar o cliente SDK para Android, use o gerenciador de dependência Gradle no Android Studio.
 
@@ -147,15 +147,11 @@ Seu projeto Android pode ter dois arquivos `build.gradle`: para o projeto e para
 	</application>
 ```
 
-1. Inicialize o Client SDK e registre o gerenciador de autenticação do Facebook. Inicialize
-o {{site.data.keyword.amashort}} Client SDK passando os parâmetros de contexto,
-GUID do app (`applicationGUID`) e rota
-(`applicationRoute`).<br/>
- Um local comum, embora não obrigatório, para colocar o código de inicialização está no
-método `onCreate` da atividade principal em seu aplicativo Android.<br/>
- Substitua *applicationRoute* e *applicationGUID* pelos valores
-de **Rota** e **GUID do app** no menu
-**Opções móveis** da página principal de seu app no painel Bluemix.
+1. Inicialize o client SDK e registre o gerenciador de autenticação do Facebook. Inicialize o {{site.data.keyword.amashort}} client SDK passando os parâmetros de contexto, GUID do app (`applicationGUID`) e
+rota (`applicationRoute`).<br/>
+ Um local comum, embora não obrigatório, para colocar o código de inicialização está no método `onCreate` da atividade principal em seu
+ aplicativo Android.<br/>
+ Substitua *applicationRoute* e *applicationGUID* pelos valores de **Rota** e **GUID do app** no menu **Opções móveis** na página principal do seu app no painel do Bluemix.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
@@ -178,7 +174,7 @@ de **Rota** e **GUID do app** no menu
 ```
 
 ## Testando a Autenticação
-Após a inicialização do Client SDK e do registro do Gerenciador de autenticação do Facebook, é possível começar a fazer solicitações para seu backend móvel.
+Após a inicialização do client SDK e o registro do Gerenciador de autenticação do Facebook, será possível começar a fazer solicitações para seu backend móvel.
 
 ### Antes de Começar
 {: #facebook-auth-android-testing-before}
@@ -186,7 +182,7 @@ Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter u
 
 1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra
 a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} Client SDK.
+<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo Android para fazer solicitação para o mesmo terminal. Inclua
 o código a seguir depois de inicializar `BMSClient` e registrar
@@ -225,7 +221,7 @@ o código a seguir depois de inicializar `BMSClient` e registrar
 
 	![image](images/android-facebook-login-success.png)
 
-1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
+ Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
 
  ```
 FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
@@ -233,4 +229,4 @@ FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), list
 
  Se você chamar esse código depois que um usuário estiver conectado ao Facebook, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele será solicitado a fornecer as credenciais do Facebook.
 
- O valor para `listener` passado para a função de logout pode ser nulo.
+ O valor para `listener` passado para a função de logout pode ser `null`.

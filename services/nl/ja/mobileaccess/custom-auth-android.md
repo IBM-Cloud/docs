@@ -23,9 +23,7 @@ copyright:
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #custom-android-initialize}
 1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます。
-<br/>**ヒント:** Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用に 2 つの `build.gradle` ファイルがある場合があります。アプリケーション・モジュールのファイルを使用してください。
-
-1. `build.gradle` ファイル内で `dependencies` セクションを見つけて、以下のコンパイル依存関係があるか確認します。以下の依存関係がまだない場合は追加します。
+<br/>**ヒント:** Android プロジェクトには、プロジェクト用とアプリケーション・モジュール用に 2 つの `build.gradle` ファイルがある場合があります。アプリケーション・モジュールのファイルを使用してください。1. `build.gradle` ファイル内で `dependencies` セクションを見つけて、以下のコンパイル依存関係があるか確認します。以下の依存関係がまだない場合は追加します。
 
 	```Gradle
 	dependencies {
@@ -137,7 +135,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 
 			// In case there was a failure collecting credentials you need to report
 			// it back to the AuthenticationContext. Otherwise Mobile Client
-			// Access Client SDK will remain in a waiting-for-credentials state
+			// Access client SDK will remain in a waiting-for-credentials state
 			// forever
 
 			log("This should never happen...");
@@ -185,8 +183,7 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 
 1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。
 
-1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。
-その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
 1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
 
@@ -215,7 +212,7 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 
 	![image](images/android-custom-login-success.png)
 
-1. 次のコードを追加してログアウト機能を追加することもできます。
+ 次のコードを追加してログアウト機能を追加することもできます。
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
@@ -223,4 +220,4 @@ Client SDK が初期化され、カスタム AuthenticationListener が登録さ
 
  ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
 
- ログアウト機能に渡される `listener` の値は、ヌルにすることができます。
+ ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

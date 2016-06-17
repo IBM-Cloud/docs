@@ -86,7 +86,7 @@ GitHub.
 
  * [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## Communications standard entre le serveur {{site.data.keyword.amashort}} et un fournisseur d'identité personnalisé
 {: #custom-id-comm}
 1. Le service {{site.data.keyword.amashort}} envoie une demande `startAuthorization` au fournisseur
@@ -116,5 +116,6 @@ Un fournisseur d'identité personnalisé prend en charge un domaine d'authentifi
 * [Création d'un fournisseur d'identité personnalisé](custom-auth-identity-provider.html)
 * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
 * [Configuration de l'authentification personnalisée pour Android](custom-auth-android.html)
-* [Configuration de l'authentification personnalisée pour iOS](custom-auth-ios.html)
+* [Configuration de l'authentification personnalisée pour iOS (SDK Swift)](custom-auth-ios-swift-sdk.html)
+* [Configuration de l'authentification personnalisée pour iOS (SDK Objective-C)](custom-auth-ios.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)
