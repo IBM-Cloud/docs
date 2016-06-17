@@ -37,15 +37,10 @@ Sie können die folgenden APIs verwenden.
 
 |**API**                                  |**Beschreibung**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v2/forecast/daily/10day`           |Gibt Wettervorhersagen für den aktuellen Tag und die nächsten neun Tage für eine Geoortung zurück. Jede Tagesvorhersage kann eine Tag- und eine Nachtvorhersage enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten. Vorhersagedaten für den Tag einer Tagesvorhersage stehen nach 15:00 Uhr Ortszeit nicht mehr zur Verfügung. Nach dieser Uhrzeit wird die Vorhersage für den Tag in Ihrer Anwendung
-nicht mehr angezeigt.|
+|`GET /v2/forecast/daily/10day`           |Gibt Wettervorhersagen für den aktuellen Tag und die nächsten neun Tage für eine Geoortung zurück. Jede Tagesvorhersage kann eine Tag- und eine Nachtvorhersage enthalten. Diese Segmente sind separate Objekte in den JSON-Antworten. Vorhersagedaten für den Tag einer Tagesvorhersage stehen nach 15:00 Uhr Ortszeit nicht mehr zur Verfügung. Nach dieser Uhrzeit wird die Vorhersage für den Tag in Ihrer Anwendung nicht mehr angezeigt.|
 |`GET /v2/forecast/hourly/24hour`         |Gibt eine stündliche Vorhersage für den aktuellen Tag und die nächsten 24 Stunden für eine Geoortung zurück. Die stündlichen Vorhersagedaten können bis zu 24 stündliche Vorhersagen für jeden Standort enthalten. Wenn neue Daten empfangen werden, müssen Sie alle vorherigen stündlichen Vorhersagen für einen Standort löschen.|
-|`GET /v2/observations/current`           |Gibt die aktuellen Wetterbedingungen für eine Geoortung zurück. Diese aktuellen Beobachtungen werden in der Datenbank bis zu 10 Minuten bei bestimmten Berichtsstationen gespeichert. Ferner werden 24 Stunden der Beobachtungen pro Station gespeichert. Die aktuellen Beobachtungsdaten werden fortlaufend aktualisiert
-und anhand der FIFO-Methode (Daten mit neuester Beobachtung austauschen und die alten Beobachtungen
-in den Archivierungsspeicher verschieben) basierend auf den Datums-/Zeitangaben der Beobachtungen ersetzt.|
-|`GET /v2/observations/timeseries/24hour` |Gibt die aktuellen Beobachtungen
-und bis zu 24 Stunden der letzten Beobachtungsdaten ausgehend vom aktuellen Zeitpunkt zurück. Wetterbeobachtungen werden von physischen Einheiten zusammengestellt,
-die weltweit implementiert sind, sowie von den aktuellen Beobachtungen.|
+|`GET /v2/observations/current`           |Gibt die aktuellen Wetterbedingungen für eine Geoortung zurück. Diese aktuellen Beobachtungen werden in der Datenbank bis zu 10 Minuten bei bestimmten Berichtsstationen gespeichert. Ferner werden 24 Stunden der Beobachtungen pro Station gespeichert. Die aktuellen Beobachtungsdaten werden fortlaufend aktualisiert und anhand der FIFO-Methode (Daten mit neuester Beobachtung austauschen und die alten Beobachtungen in den Archivierungsspeicher verschieben) basierend auf den Datums-/Zeitangaben der Beobachtungen ersetzt.|
+|`GET /v2/observations/timeseries/24hour` |Gibt die aktuellen Beobachtungen und bis zu 24 Stunden der letzten Beobachtungsdaten ausgehend vom aktuellen Zeitpunkt zurück. Wetterbeobachtungen werden von physischen Einheiten zusammengestellt, die weltweit implementiert sind, sowie von den aktuellen Beobachtungen.|
 *Tabelle 1. Insights for Weather API-Zusammenfassung*
 
 ## Zeitreihenbeobachtungen
@@ -83,22 +78,12 @@ https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format 
 
 |**Attribut**     |**Beschreibung**                                    |
 |------------------|---------------------------------------------------|
-|`hostname`        |Der per Hosting bereitgestellte URL-Pfad (z. B.
-`https://twcservice.mybluemix.net:443/api/weather`)|
+|`hostname`        |Der per Hosting bereitgestellte URL-Pfad (z. B. `https://twcservice.mybluemix.net:443/api/weather`)|
 |`version`         |Die aktuelle Iteration (z. B. "v2")|
 |`product group`   |Das Produkt (z. B. "observations" oder "forecast")|
-|`geocode`         |Der optionale Breiten- und Längengrad. Zum Beispiel lauten die Daten für Ottawa in Kanada "45.4214,75.6919". Wenn Sie eine geocodierte Koordinate angeben, gibt die API Daten für den Standort zurück,
-der dieser Koordinate am nächsten liegt. Punkte werden als Dezimaltrennzeichen und Kommas
-zum Trennen von Breitengrad- und Längengradwerten verwendet. Wenn Sie einen Geocode bereitstellen,
-werden die tatsächlich verwendeten Werte für Breitengrad und Längengrad in den Metadaten der
-Antwort zurückgegeben.|
-|`language`        |Die Sprache, in der die Antwort zurückgegeben werden soll. Der Standardwert ist 'en-US'. Die Standardsprache oder die angeforderte Übersetzungssprache wird im Sprachparameter (language)
-in den Metadaten der Antwort zurückgegeben.|
-|`units`           |Die optionale Einheit, in der die Antwort zurückgegeben werden soll. Die API
-unterstützt die Maßeinheiten 'English' (e), 'Metric' (m) und 'UK-Hybrid' (h). Wenn Sie die Maßeinheiten angeben, nicht jedoch einen Wert, gibt die API die Daten
-in der Maßeinheit zurück, die dem Sprachencode entspricht. Die Standardeinheit oder
-die angeforderte Einheit wird im Maßeinheitsparameter (units) in den Metadaten
-der Antwort zurückgegeben.|
+|`geocode`         |Der optionale Breiten- und Längengrad. Zum Beispiel lauten die Daten für Ottawa in Kanada "45.4214,75.6919". Wenn Sie eine geocodierte Koordinate angeben, gibt die API Daten für den Standort zurück, der dieser Koordinate am nächsten liegt. Punkte werden als Dezimaltrennzeichen und Kommas zum Trennen von Breitengrad- und Längengradwerten verwendet. Wenn Sie einen Geocode bereitstellen, werden die tatsächlich verwendeten Werte für Breitengrad und Längengrad in den Metadaten der Antwort zurückgegeben.|
+|`language`        |Die Sprache, in der die Antwort zurückgegeben werden soll. Der Standardwert ist 'en-US'. Die Standardsprache oder die angeforderte Übersetzungssprache wird im Sprachparameter (language) in den Metadaten der Antwort zurückgegeben.|
+|`units`           |Die optionale Einheit, in der die Antwort zurückgegeben werden soll. Die API unterstützt die Maßeinheiten 'English' (e), 'Metric' (m) und 'UK-Hybrid' (h). Wenn Sie die Maßeinheiten angeben, nicht jedoch einen Wert, gibt die API die Daten in der Maßeinheit zurück, die dem Sprachencode entspricht. Die Standardeinheit oder die angeforderte Einheit wird im Maßeinheitsparameter (units) in den Metadaten der Antwort zurückgegeben.|
 *Tabelle 2. URL-Details*
 
 ## Maßeinheiten
@@ -127,13 +112,11 @@ Die folgenden Fehler werden übersetzt:
 |`daypart_name`      |Der Name eines Tagesabschnitts von 12 Stunden (darin nicht enthalten die Namen der Tage in den ersten 48 Stunden)|
 |`temp_phrase`       |Die Kurzbeschreibung, die die vorhergesagte Höchst- oder Tiefsttemperatur für den 12-stündigen Vorhersagezeitraum enthält|
 |`shortcast`         |Ein abgekürzter Teil einer beschreibenden Vorhersage|
-|`long_daypart_name` |Der benannte Zeitrahmen für die gültige Wettervorhersage in einem erweiterten Format. Der benannte Zeitrahmen kann entweder für einen
-12-Stunden- oder einen 24-Stunden-Zeitrahmen gelten.|
+|`long_daypart_name` |Der benannte Zeitrahmen für die gültige Wettervorhersage in einem erweiterten Format. Der benannte Zeitrahmen kann entweder für einen 12-Stunden- oder einen 24-Stunden-Zeitrahmen gelten.|
 |`golf_category`     |Die Indexkategorie 'Golf', die als Bezeichnung für die Wetterbedingungen für das Golfspielen ausgedrückt wird|
 |`phrase_nnchar`     |Sinnvolle Wetterbezeichnung für den Tag|
 |`lunar_phrase`      |Kurzcode aus drei Zeichen für Mondphasen|
-|`uv_desc`           |Beschreibung für den UV-Index, die den Wert
-für den UV-Index durch die Bereitstellung der zugehörigen Risikostufe für die Haut durch Sonneneinstrahlung ergänzt|
+|`uv_desc`           |Beschreibung für den UV-Index, die den Wert für den UV-Index durch die Bereitstellung der zugehörigen Risikostufe für die Haut durch Sonneneinstrahlung ergänzt|
 |`sky_cover`         | Beschreibung der Bewölkungssituation in Abhängigkeit von der Wolkendecke (in Prozent)|
 |`ptend_desc`        | Beschreibender Text der Luftdrucktendenz während der letzten drei Stunden|
 *Tabelle 3. Übersetzte Antwortfelder*
@@ -151,19 +134,15 @@ Die folgenden Fehlercodes sind allen APIs gemeinsam:
 
 |**Fehler** |**Beschreibung**                                    |
 |----------|---------------------------------------------------|
-|400       |Fehlerhafte Anforderung. Die Anforderung wurde vom Server aufgrund einer fehlerhaften
-Syntax nicht verstanden. Dieser Fehlercode wird für alle APIs implementiert. Die API lehnt die Anforderung ab, wenn ungültige Parameter angegeben werden.|
+|400       |Fehlerhafte Anforderung. Die Anforderung wurde vom Server aufgrund einer fehlerhaften Syntax nicht verstanden. Dieser Fehlercode wird für alle APIs implementiert. Die API lehnt die Anforderung ab, wenn ungültige Parameter angegeben werden.|
 |401       |Nicht autorisiert. Für die Anforderung ist eine Authentifizierung erforderlich.|
 |403       |Nicht zulässig. Der Server hat die Anforderung verstanden, lehnt eine Verarbeitung jedoch ab.|
 |404       |Nicht gefunden. Wenn in der API-Anforderung ein erforderlicher Parameter nicht vorhanden ist, wird der Fehler "MissingParameterException" mit dem Fehlercode 404 zurückgegeben.|
 |405       |Methode nicht zulässig. Beispiel: Anstelle einer GET-Anforderung wird eine POST-Anforderung gesendet.|
 |406       |Nicht zulässig. Beispiel: Mit GZIP komprimierte Antworten werden nicht akzeptiert.|
-|408       |Zeitlimitüberschreitung für Anforderung. Der Client hat in dem Zeitrahmen,
-in dem der Server gewartet hat, keine Anforderung gesendet.|
-|500       |Interner Serverfehler. Der Server hat eine nicht erwartete Bedingung erkannt,
-die ihn daran gehindert hat, die Anforderung zu verarbeiten.|
-|502 - 504   |Service nicht verfügbar oder Gateway-Fehler. Diese Fehlercodes werden zurückgegeben,
-wenn der Service vorübergehend nicht verfügbar ist.|
+|408       |Zeitlimitüberschreitung für Anforderung. Der Client hat in dem Zeitrahmen, in dem der Server gewartet hat, keine Anforderung gesendet.|
+|500       |Interner Serverfehler. Der Server hat eine nicht erwartete Bedingung erkannt, die ihn daran gehindert hat, die Anforderung zu verarbeiten.|
+|502 - 504   |Service nicht verfügbar oder Gateway-Fehler. Diese Fehlercodes werden zurückgegeben, wenn der Service vorübergehend nicht verfügbar ist.|
 *Tabelle 4. Fehlerantwortcode*
 
 Die Antwort bei einem Fehler ist immer gleich. In einer Antwort können mehrere Fehlercodes zurückgegeben werden.
