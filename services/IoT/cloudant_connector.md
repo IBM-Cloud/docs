@@ -5,7 +5,16 @@ copyright:
 
 ---
 
-# Connecting and configuring a historian service by using a {{site.data.keyword.cloudant}}
+{:new_window: target="\_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
+# Connecting and configuring a historian service by using a {{site.data.keyword.cloudant}}  
+{: #cloudant_main}
+*Last updated: 17 June 2016*
+{: .last-updated}
 
 Connecting a {{site.data.keyword.cloudantfull}} service to your {{site.data.keyword.iot_full}} allows you to store and access your device data. Device data is stored in daily, weekly, or monthly databases depending on your selected bucket interval.
 
@@ -13,7 +22,7 @@ When you begin using a {{site.data.keyword.cloudant}} to store device data three
 
 When device data is sent to a database it can be stored in one of two ways. If the data is valid JSON and the format of the device event is set to `JSON`, the device data will be stored in the following format:
 
-```
+```json
 
 {
   "_id": "78bf4380-3311-11e6-a747-d7b140d1a70a",
@@ -47,7 +56,8 @@ If the device data is not valid JSON or if the format is not set to `JSON` the d
 
 ```
 
-## Before you begin
+## Before you begin  
+{: #byb}
 
 Before connecting a {{site.data.keyword.cloudant}} to your {{site.data.keyword.iot_short}} service, please complete the following tasks:
 
@@ -77,7 +87,8 @@ Complete the following steps to connect a {{site.data.keyword.cloudant}}:
 
 Your device data is now being stored in your {{site.data.keyword.cloudant}}.
 
-## Creating new design documents
+## Creating new design documents  
+{: #design_docs}
 
 New design documents are contained in the configuration database, and are copied to every database created. The configuration database name is `Iotp_<orgid>_<choice>_configuration
 ` using the same parameters are the database names above.
