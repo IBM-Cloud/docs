@@ -61,8 +61,7 @@ https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format 
 
 |**Attribut**     |**Description**                                    |
 |------------------|---------------------------------------------------|
-|`hostname`        |Chemin URL de l'hôte (par exemple,
-`https://twcservice.mybluemix.net:443/api/weather`)|
+|`hostname`        |Chemin URL de l'hôte (par exemple, `https://twcservice.mybluemix.net:443/api/weather`)|
 |`version`         |Itération en cours (par exemple, "v2")|
 |`product group`   |Produit (par exemple, "observations" ou "prévision")|
 |`geocode`         |Latitude et longitude (par exemple, "45.4214,75.6919" représente Ottawa, au Canada). Si vous entrez des coordonnées géographique, l'API renvoie des données pour le lieu disponible le plus proche. Les points sont des séparateurs décimaux et les virgules servent à séparer la latitude et la longitude. Si vous entrez un géocode, la latitude et la longitude effectivement utilisées sont renvoyées dans les métadonnées de la réponse.|

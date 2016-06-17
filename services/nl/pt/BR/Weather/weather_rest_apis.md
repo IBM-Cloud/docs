@@ -41,17 +41,9 @@ Com as APIs do Insights for Weather, é possível recuperar dados de clima forne
 
 |**API**                                  |**Descrição**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v2/forecast/daily/10day`           |Retorna previsões climáticas para o dia atual e para os próximos nove dias de uma localização geográfica. Cada previsão diária pode conter uma previsão diurna e uma previsão noturna. Esses segmentos são objetos
-separados nas respostas JSON. Os dados de previsão diurna da previsão diária não ficam mais disponíveis depois do horário local de 15h. Às 15h, horário local, seu aplicativo não
-deverá mais exibir a previsão do dia.|
-|`GET /v2/forecast/hourly/24hour`         |Retorna previsões de hora em hora para o dia atual e para as próximas 24 horas de uma localização geográfica. Os dados de previsão de hora em hora podem conter até 24
-previsões de hora em hora para cada local. Deve-se descartar todas as previsões de hora em hora anteriores de um local quando novos dados são recebidos|
-|`GET /v2/observations/current`           |Retorna as condições climáticas atuais de uma localização geográfica. As observações recentes são retidas no banco de dados por até 10 minutos em estações de relatório específicas e 24 horas de observações por estação. Os dados de
-observação recentes são atualizados continuamente e substituídos
-com uma metodologia first-in / first-out (dados rotativos com
-observações mais recentes e deslocamento das observações mais
-antigas para o armazenamento de archive)
-com base na formatação do registro de data/hora das observações.|
+|`GET /v2/forecast/daily/10day`           |Retorna previsões climáticas para o dia atual e para os próximos nove dias de uma localização geográfica. Cada previsão diária pode conter uma previsão diurna e uma previsão noturna. Esses segmentos são objetos separados nas respostas JSON. Os dados de previsão diurna da previsão diária não ficam mais disponíveis depois do horário local de 15h. Às 15h, horário local, seu aplicativo não deverá mais exibir a previsão do dia.|
+|`GET /v2/forecast/hourly/24hour`         |Retorna previsões de hora em hora para o dia atual e para as próximas 24 horas de uma localização geográfica. Os dados de previsão de hora em hora podem conter até 24 previsões de hora em hora para cada local. Deve-se descartar todas as previsões de hora em hora anteriores de um local quando novos dados são recebidos|
+|`GET /v2/observations/current`           |Retorna as condições climáticas atuais de uma localização geográfica. As observações recentes são retidas no banco de dados por até 10 minutos em estações de relatório específicas e 24 horas de observações por estação. Os dados de observação recentes são atualizados continuamente e substituídos com uma metodologia first-in / first-out (dados rotativos com observações mais recentes e deslocamento das observações mais antigas para o armazenamento de archive) com base na formatação do registro de data/hora das observações.|
 |`GET /v2/observations/timeseries/24hour` |Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais, de uma localização geográfica. As observações climáticas são reunidas a partir
 de dispositivos físicos implementados em todo o mundo e as observações climáticas
 atuais.|
@@ -97,24 +89,12 @@ https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format 
 
 |**Atributo**     |**Descrição**                                    |
 |------------------|---------------------------------------------------|
-|`nome do host`        |O caminho da URL hospedada (por exemplo,
-`https://twcservice.mybluemix.net:443/api/weather`)|
+|`nome do host`        |O caminho da URL hospedada (por exemplo, `https://twcservice.mybluemix.net:443/api/weather`)|
 |`versão`         |A iteração atual (por exemplo, "v2")|
 |`grupo de produtos`   |O produto (por exemplo, "observations" ou "forecast")|
-|`geocódigo`         |A latitude e longitude opcionais, por exemplo, "45.4214,75.6919" representa Ottawa, Canadá. Se uma coordenada de geocódigo for fornecida, a API
-retornará dados para o local mais próximo disponível. Os pontos são usados como separadores decimais e as vírgulas são
-usadas para separar os valores de latitude e longitude. Se um
-geocódigo for fornecido, os valores de latitude e longitude reais
-que são usados serão retornados nos metadados da resposta.|
-|`linguagem`        |O idioma no qual retornar a resposta. O padrão é en-US. O
-idioma de tradução padrão ou solicitado é retornado no parâmetro de
-idioma nos metadados da resposta.|
-|`units`           |As unidades opcionais nas quais retornar a resposta. A API
-suporta as unidade de medida English (e), Metric (m) e UK-Hybrid (h). Se o Cliente fornecer as unidades de
-medida, mas não fornecer um valor, a API retornará os dados na unidade
-de medida que correspondem ao código de idioma. A unidade de medida
-padrão ou solicitada é retornada no parâmetro das unidades nos
-metadados da resposta.|
+|`geocódigo`         |A latitude e longitude opcionais, por exemplo, "45.4214,75.6919" representa Ottawa, Canadá. Se uma coordenada de geocódigo for fornecida, a API retornará dados para o local mais próximo disponível. Os pontos são usados como separadores decimais e as vírgulas são usadas para separar os valores de latitude e longitude. Se um geocódigo for fornecido, os valores de latitude e longitude reais que são usados serão retornados nos metadados da resposta.|
+|`linguagem`        |O idioma no qual retornar a resposta. O padrão é en-US. O idioma de tradução padrão ou solicitado é retornado no parâmetro de idioma nos metadados da resposta.|
+|`units`           |As unidades opcionais nas quais retornar a resposta. A API suporta as unidade de medida English (e), Metric (m) e UK-Hybrid (h). Se o Cliente fornecer as unidades de medida, mas não fornecer um valor, a API retornará os dados na unidade de medida que correspondem ao código de idioma. A unidade de medida padrão ou solicitada é retornada no parâmetro das unidades nos metadados da resposta.|
 *Tabela 2. Detalhes da URL*
 
 ## Unidades de Medida
@@ -167,22 +147,15 @@ Os códigos de erro a seguir são comuns a todas as APIs:
 
 |**Erro** |**Descrição**                                    |
 |----------|---------------------------------------------------|
-|400       |Solicitação inválida. A solicitação não foi entendida pelo
-servidor devido à sintaxe malformada. Esse código de erro é implementado para todas as APIs. A API rejeita a solicitação
-se quaisquer parâmetros inválidos forem fornecidos.|
+|400       |Solicitação inválida. A solicitação não foi entendida pelo servidor devido à sintaxe malformada. Esse código de erro é implementado para todas as APIs. A API rejeita a solicitação se quaisquer parâmetros inválidos forem fornecidos.|
 |401       |Desautorizado. A solicitação requer autenticação.|
 |403       |Proibido. O servidor entendeu a solicitação mas está se recusando a atendê-la.|
 |404       |Não localizado. Se um parâmetro necessário não estiver presente na solicitação da API, um erro MissingParameterException com um código de erro 404 será retornado.|
-|405       |Método Não Permitido. Por exemplo, enviar um POST, em vez de
-um GET.|
-|406       |Não aceitável. Por exemplo, não aceitar as respostas compactadas
-gzip.|
-|408       |Tempo limite da solicitação. O cliente não produziu a
-solicitação dentro do tempo que o servidor estava disposto a esperar.|
+|405       |Método Não Permitido. Por exemplo, enviar um POST, em vez deum GET.|
+|406       |Não aceitável. Por exemplo, não aceitar as respostas compactadas gzip.|
+|408       |Tempo limite da solicitação. O cliente não produziu a solicitação dentro do tempo que o servidor estava disposto a esperar.|
 |500       |Erro do servidor interno. O servidor encontrou uma condição inesperada que o impediu de atender a solicitação.|
-|502-504   |Problema de Serviço ou Gateway Indisponível. Esses códigos de
-erro são retornados se o serviço estiver temporariamente
-indisponível.|
+|502-504   |Problema de Serviço ou Gateway Indisponível. Esses códigos de erro são retornados se o serviço estiver temporariamente indisponível.|
 *Tabela 4. Código de resposta de erro*
 
 A resposta sobre o erro é sempre a mesma. Vários códigos de
