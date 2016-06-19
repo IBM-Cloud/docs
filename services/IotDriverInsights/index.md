@@ -17,9 +17,10 @@ copyright:
 *Last updated: 16 June 2016*
 {: .last-updated}
 
-{{site.data.keyword.iotdriverinsights_full}} is a set of services on {{site.data.keyword.Bluemix_notm}} that you can use to collect and analyze driver behavior.{:shortdesc}
+{{site.data.keyword.iotdriverinsights_full}} is a set of services on {{site.data.keyword.Bluemix_notm}} that you can use to collect and analyze driver behavior.
 
 {:shortdesc}
+
 
 The {{site.data.keyword.iotdriverinsights_short}} service bundles the following services, which provide powerful automotive analytics:
 

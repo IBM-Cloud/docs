@@ -13,7 +13,7 @@ copyright:
 
 # Administering Driving Behavior Analysis
 {: #1stanchor}
-*Last updated: 16 June 2016*
+*Last updated: 19 June 2016*
 {: .last-updated}
 
 Administer your {{site.data.keyword.iotdriverinsights_full}} service instance by using the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for {{site.data.keyword.iotdriverinsights_short}}, and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.

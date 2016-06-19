@@ -28,7 +28,7 @@ Driving Behavior Analysis is a service that you can use to analyze the behavior 
 
 You can identify and analyze several kinds of driving behavior that relates to speed, turns, and other categories. For example, you can determine instances of harsh acceleration, speeding, sharp turns, frequent or harsh braking, and other types of driver behavior.
 
-### Analytic configuration
+## Analytic configuration
 {: #configurability}  
 
 Analysis threshold parameters determine how the different types of driver behavior are detected and analyzed from car probe and contextual data that is fed into the system. You can configure some of the threshold parameters for the driving behavior analytics from the {{site.data.keyword.iotdriverinsights_short}} service administration console. For example, you can configure the speed range per road type and the turn angle range.
