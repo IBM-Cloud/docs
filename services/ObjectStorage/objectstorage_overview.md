@@ -9,7 +9,7 @@ More information and documentation about using OpenStack Swift and Keystone is a
 
 The {{site.data.keyword.objectstorageshort}} architecture diagram is as follows:
 
-[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/object_storage_solution_archectiture_small.png)](http://www.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
+[![{{site.data.keyword.objectstorageshort}} Architecture Diagram](images/object_storage_solution_archectiture_small.png)](http://www.stage1.ng.bluemix.net/docs/api/content/services/ObjectStorage/images/object_storage_solution_archectiture.png){: new_window}
 
 *Figure 1. {{site.data.keyword.objectstorageshort}} Architecture Diagram*
 
