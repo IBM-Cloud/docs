@@ -28,8 +28,8 @@ When device data is sent to a database it can be stored in one of two ways. If t
   "_id": "78bf4380-3311-11e6-a747-d7b140d1a70a",
   "_rev": "2-d13912b7c089f060a4ba7369fa86e46f",
   "typeId": "t",
-  "deviceId": "0",
-  "eventId": "json_payload",
+  "deviceType": "0",
+  "eventType": "json_payload",
   "format": "json",
   "timestamp": "2016-06-15T16:54:41.464+01",
   "data": {
@@ -41,15 +41,15 @@ When device data is sent to a database it can be stored in one of two ways. If t
 
 If the device data is not valid JSON or if the format is not set to `JSON` the device data will be stored as a base64 encoded string under the `payload` field in the following format:
 
-```
+```json
 
 {
   "_id": "80f1ce10-3311-11e6-a747-d7b140d1a70a",
   "_rev": "1-bfcbf1e74389fe4188a9425c0cd2575a",
   "payload": "eHh4eHg=",
   "typeId": "t",
-  "deviceId": "0",
-  "eventId": "non_json_payload",
+  "deviceType": "0",
+  "eventType": "non_json_payload",
   "format": "notjson",
   "timestamp": "2016-06-15T16:54:55.217+01"
 }
