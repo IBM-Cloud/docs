@@ -6,9 +6,9 @@
 ## How do prices vary depending on which plan I choose? {: #plan-price}
 Pricing varies depending on the chosen plan. For more pricing information, see the [IBM Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/){: new_window} or use the [Calculator](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} for more detailed estimates.
 
-## How do I change my plan from Free to Standard? {: #changeplan}  
+## How do I change to a standard plan? {: #changeplan}  
 
-1.	Click **Plan** from the left navigation bar in the {{site.data.keyword.objectstorageshort}} user interface.
+1.	In the {{site.data.keyword.objectstorageshort}} user interface, click **Plan**.
 2.	Select **Standard** as the new plan and then click **Save**.
 
 ![{{site.data.keyword.objectstorageshort}} Change Pricing Plan](images/Change_plan.png)
@@ -17,7 +17,7 @@ Pricing varies depending on the chosen plan. For more pricing information, see t
 
 Your services instances and customer data are moved to the new plan.
 
-You can also change your payment plan by using the command line interface. For more information, see [How to change your plan](../../pricing/index.html#changing)  
+You can also change your payment plan by using the command line interface. For more information, see [How to change your plan](../../pricing/index.html#changing).
 
 
 ## What accounts and payment plans can I use for {{site.data.keyword.objectstorageshort}}? {: #account-payment}
