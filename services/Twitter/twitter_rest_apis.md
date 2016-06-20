@@ -36,13 +36,6 @@ From the reference documentation, click **List Operations** to view details of e
 
 **Important**: Active tracks that are created using the **Try it out!** feature collects Tweets from Twitter, which count towards your monthly allowance. When tracks are no longer required, change their state to **Inactive** or simply delete the track.
 
-<!-- 
-The following video demonstrates the use of API operations from the API reference documentation and cURL examples entered from the command line. 
-
-[//]: # <iframe width="420" height="315" src="https://www.youtube.com/embed/LZKVn496XJc" frameborder="0" allowfullscreen></iframe>
-
-[//]: # To watch the video in a larger format, go to: [https://youtu.be/LZKVn496XJc](https://youtu.be/LZKVn496XJc){: new.window}
--->
 
 ## Query language {: #querylanguage}
 
