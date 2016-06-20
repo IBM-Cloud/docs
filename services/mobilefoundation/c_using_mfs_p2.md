@@ -65,7 +65,7 @@ The process of provisioning your server starts. This process takes about 10 minu
 
   -	The server route created for you. Use this route to reach your mobile server from the public internet. Your mobile applications use that route to access the server.
 
-  -	Your personal `username`` and `password` to access the {{site.data.keyword.mfp_oc_short_notm}}. The `password` is hidden. Click **Show Password** to visualize it.
+  -	Your personal `username` and `password` to access the {{site.data.keyword.mfp_oc_short_notm}}. The `password` is hidden. Click **Show Password** to visualize it.
 
 *	Click **Launch Console** to open the {{site.data.keyword.mfp_oc_short_notm}}.
 
