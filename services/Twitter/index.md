@@ -60,14 +60,6 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 5. When prompted, click **Restage** to restart your application.
 -->
 
-<!-- 
-The following video demonstrates the use of API operations from our API reference documentation and cURL examples entered from the command line. 
-
-[//]: # <iframe width="420" height="315" src="https://www.youtube.com/embed/LZKVn496XJc" frameborder="0" allowfullscreen></iframe>
-
-[//]: # To watch the video in a larger format, go to: [https://youtu.be/LZKVn496XJc](https://youtu.be/LZKVn496XJc){: new.window}
--->
-
 # rellinks
 ## samples
 * [Interactive decahose search demo](https://cdetestapp.mybluemix.net/){: new_window}
