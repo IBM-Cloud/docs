@@ -65,7 +65,7 @@ The following table lists the currently supported query terms.
 | `country_code:country-code` 	| Matches Tweets whose tagged place or location matches the specified country code. </br>**For a list of supported country codes, please see**: http://en.wikipedia.org/wiki/ISO_3166-1 	| `country_code:us` 	|
 | `followers_count:lowerLimit,upperLimit` 	| Matches Tweets from users that have a number of followers that fall within the specified range. The upper bound is optional and both limits are inclusive. 	| `followers_count:500` 	|
 | `friends_count:lowerLimit,upperLimit` 	| Matches Tweets from users that follow a number of users that fall within the specified range. The upper bound is optional and both limits are inclusive. 	| `friends_count:1000,3000` 	|
-| `from:twitterHandle` 	| Matches Tweets from users with the preferredUsername *twitterHandle*. Must not contain the "@" symbol. 	| `from:alexlang11` 	|
+| `from:twitterHandle` 	| Matches Tweets from users with the preferredUsername *twitterHandle*. Must not contain the &commat; symbol. 	| `from:alexlang11` 	|
 | `has:children` 	| Matches Tweets from users that have children. 	| `has:children` 	|
 | `is:married` 	| Matches Tweets from users that are married. 	| `is:married` 	|
 | `is:verified` 	| Matches Tweets where the author has been verified by Twitter. 	| `analytics is:verified` 	|
