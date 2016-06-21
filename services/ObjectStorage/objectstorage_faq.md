@@ -7,15 +7,15 @@
 Pricing varies depending on the chosen plan. For more pricing information, see the [IBM Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/){: new_window} or use the [Calculator](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} for more detailed estimates.
 
 ## How do I change my plan? {: #changeplan}  
+Instances that are created through the Beta or on the Free plan can be upgraded to the Standard plan. The associated organization must be a {{site.data.keyword.Bluemix_notm}} paid account. Trial accounts with {{site.data.keyword.objectstorageshort}} instances cannot be upgraded to the Standard plan, and instances on the Standard plan cannot be downgraded to other plans. When you upgrade, your service instance and customer data are moved to the new plan.
 
+To ugrade your plan:
 1.	In the {{site.data.keyword.objectstorageshort}} user interface, click **Plan**.
 2.	Select **Standard** as the new plan and then click **Save**.
 
 ![{{site.data.keyword.objectstorageshort}} Change Pricing Plan](images/Change_plan.png)
 
 *Figure 5. {{site.data.keyword.objectstorageshort}} Change Pricing Plan*
-
-Your services instances and customer data are moved to the new plan.
 
 You can also change your payment plan by using the command line interface. For more information, see [How to change your plan](../../pricing/index.html#changing).
 
@@ -25,7 +25,6 @@ The {{site.data.keyword.objectstorageshort}} service comes with multiple plan op
 
 Trial accounts that are still active are able to use the Free plan which allows only one instance to exist in a {{site.data.keyword.Bluemix_notm}} Organization. After the time on the {{site.data.keyword.Bluemix_notm}} trial expires, the associated {{site.data.keyword.objectstorageshort}} service instance will be disabled, meaning that the storage account cannot be accessed either by the {{site.data.keyword.Bluemix_notm}} user interface or command line. After a grace period of 30 days, your {{site.data.keyword.Bluemix_notm}} account will be purged, and all data deleted. To avoid data loss, it is recommended that you upgrade to a {{site.data.keyword.Bluemix_notm}} Paid Account as soon as possible. To upgrade your account, click on the user management menu in the upper-right corner, and select **Account**, which provides instructions about the upgrade process.
 
-Instances that are created on the Free plan can be upgraded to the Standard plan with the steps described in [How do I change my plan from Free to Standard?](#changeplan). To upgrade to the Standard plan, the associated organization must be a {{site.data.keyword.Bluemix_notm}} Paid Account. Trial accounts with {{site.data.keyword.objectstorageshort}} instances cannot be upgraded to the Standard plan, and instances on the Standard plan cannot be downgraded to other plans.
 
 ## How will I be charged and billed for my use of {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
