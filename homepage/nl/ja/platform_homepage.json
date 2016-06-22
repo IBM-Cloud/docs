@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "Docs ホーム・ページ・プラットフォーム・セクション",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "アカウント管理",
 		"description": "ユーザーのアクセス権限を含め、組織およびスペースを管理できます。",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "モニターとロギング",
 		"description": "アプリケーション使用およびデータ・フローをたどって、デプロイメントの理解を深めることができます。",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "プラットフォームのセキュリティー",
 		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "ハイブリッド",

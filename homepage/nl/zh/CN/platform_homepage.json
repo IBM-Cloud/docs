@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "文档主页平台部分",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "帐户管理",
 		"description": "管理组织和空间，包括用户访问权。",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "监视和日志记录",
 		"description": "跟进应用程序的使用情况和数据流，从而更好地了解部署情况。",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "平台安全性",
 		"description": "了解 Bluemix 如何提供功能性、基础架构、操作和物理安全。",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "混合",

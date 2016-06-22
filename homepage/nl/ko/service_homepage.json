@@ -1,0 +1,50 @@
+{
+  "id": "docs_homepage_services",
+  "title": "How to use Bluemix services",
+  "subtitle": "Learn about service types and availability",
+  "subtitleHref": "services/index.html",
+  "items": [{
+    "id": "cfApp",
+    "title": "Cloud Foundry Applications",
+    "href": "cfapps/index.html",
+    "category_id": "compute"
+  }, {
+    "title": "Runtimes",
+    "href": "cfapps/runtimes.html",
+    "category_id": "compute"
+  }, {
+    "title": "Boilerplates",
+    "href": "cfapps/boilerplates.html",
+    "category_id": "compute"
+  }, {
+    "id": "whisk",
+    "title": "IBM OpenWhisk",
+    "href": "openwhisk/index.html",
+    "category_id": "compute"
+  }, {
+    "id": "container",
+    "title": "IBM Containers",
+    "href": "containers/container_index.html",
+    "category_id": "compute"
+  }, {
+    "id": "vm",
+    "title": "IBM Virtual Servers",
+    "href": "virtualmachines/vm_index.html",
+    "category_id": "compute"
+  }, {
+    "type": "extra",
+    "title": "Try working with data",
+    "href": "services/WorkWithData/index.html",
+    "category_id": "data"
+  }, {
+    "type": "extra",
+    "title": "Try toolchains",
+    "href": "toolchains/toolchains_overview.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
+    "title": "Try mobile Bluemix services",
+    "href": "mobile/index.html",
+    "category_id": "mobile"
+  }]
+}

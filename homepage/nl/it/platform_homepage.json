@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "Sezione della piattaforma di home page dei documenti",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "Amministrazione degli account",
 		"description": "Gestisci organizzazioni e spazi, compreso l'accesso utente.",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "Monitoraggio e registrazione",
 		"description": "Segui il flusso dei dati e l'utilizzo delle applicazioni per comprendere meglio la tua distribuzione.",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "Sicurezza della piattaforma",
 		"description": "Informazioni su come Bluemix fornisce la sicurezza funzionale, delle infrastrutture, operativa e fisica.",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "Ibrida",
