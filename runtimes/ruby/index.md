@@ -64,4 +64,4 @@ deploy the app.
 # rellinks
 ## general
 * [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails documentation](http://rubyonrails.org/documentation/)
+* [Ruby on Rails documentation](http://api.rubyonrails.org/)
