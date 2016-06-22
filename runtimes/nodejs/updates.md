@@ -11,10 +11,18 @@ copyright:
 # Latest Updates to the sdk-for-nodejs buildpack
 {: #latest_updates}
 
-*Last Updated: 20 May 2016*
+*Last Updated: 20 June 2016*
 {: .last-updated}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## June 22, 2016: Updated Node.js buildpack v3.5-20160609-1608
+
+This release of the buildpack adds IBM SDK for Node.js runtime versions 4.4.5 and 6.2.0. The default becomes 4.4.5.
+
+The release removes support for older runtime versions as announced in [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). The buildpack now supports 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0, and 6.2.0.
+
+This release includes bug fixes from the [Cloud Foundry’s Node.js buildpack 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
+
 ## May 20, 2016: Updated Node.js buildpack v3.4-20160518-1653
 
 This release of the buildpack adds IBM SDK for Node.js runtime versions 0.10.45, 0.12.14, 4.4.4, 6.0.0, and 6.1.0. The default is now 4.4.4.
@@ -175,5 +183,7 @@ In addition, we revamped the App Management feature in the Node.js buildpack, wh
 The Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.5. This update means you'll get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime for your application, v0.10.29. See more about the IBM Node.js SDKs [here](https://developer.ibm.com/node/sdk/).
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [node.js runtime](index.html)
