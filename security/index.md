@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-*Last updated: 9 May 2016*
+*Last updated: 22 June 2016*
 {: .last-updated}
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
@@ -221,31 +221,11 @@ The dashDB service uses an embedded LDAP server for user authentication. The con
 
 For more information, see [Getting started with dashDB](../services/dashDB/index.html).
 
-### Cloud Integration
-
-The Cloud Integration service enables you to integrate cloud and on-premises data. You can add a service to interact with backend databases such as DB2, Oracle, and SAP. Next, you can move data or create REST APIs for {{site.data.keyword.Bluemix_notm}} applications to access and use. The service enables secure communication with on-premises secure connectors, and exposes backend systems of record as REST APIs to be used by applications.
-
-For more information, see [Getting started with Cloud Integration](../services/CloudIntegration/index.html).
-
 ### Secure Gateway
 
 The Secure Gateway service enables you to securely connect {{site.data.keyword.Bluemix_notm}} apps to remote locations, either on premises or in the cloud. It provides secure connectivity and establishes a tunnel between your {{site.data.keyword.Bluemix_notm}} organization and the remote location that you want to connect to. You can configure and create a secure gateway by using the {{site.data.keyword.Bluemix_notm}} user interface or an API package.
 
 For more information, see [Getting started with Secure Gateway](../services/SecureGateway/secure_gateway.html).
-
-### SQL Database
-
-The SQL Database service adds a fully provisioned relational database to your app. This service uses IBM Directory Server LDAP for authentication and IBM InfoSphere® Guardium® Data Activity Monitor to protect the database that is accessed by applications. The connection between applications and the database is protected by the SSL certificate that DigiCert signs.
-
-In certain plans with this service, you can use the SQL database console in {{site.data.keyword.Bluemix_notm}} to get reports that contain the following information:
-
- * Sensitive data that might exist in the database that is accessed by applications.
- * The application users who accessed the database within a specified period.
- * The application users who are accessing sensitive data that is in the database.
-
-To mask data by using SQL, applications can call the masking user-defined functions (UDFs) that are deployed together with the database. For example, you can mask the data that you want to use elsewhere for testing. The UDFs implement the data masking algorithms from IBM Infosphere Optim™.
-
-The premium plan for this service also includes data encryption. For more information about this service, see [Getting started with SQL Database](../services/SQLDB/index.html).
 
 ### Security information and event management
 
