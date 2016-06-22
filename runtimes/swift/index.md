@@ -5,7 +5,7 @@
 
 # Swift runtime
 {: #swift_runtime}
-*Last updated: 9 June 2016*
+*Last updated: 21 June 2016*
 {: .last-updated}
 
 The Swift runtime on {{site.data.keyword.Bluemix}} is powered by the Swift buildpack for Bluemix (i.e. swift_buildpack).
@@ -32,7 +32,7 @@ swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
 ```
 {: pre}
 
-In addition to including a `.swift-version` file, you'd also need to add the `-b https://github.com/IBM-Swift/swift-buildpack` parameter to the `cf push` command, as shown below:
+In addition to including a `.swift-version` file, you'd also need to add the `-b https://github.com/IBM-Swift/swift-buildpack` parameter to the `cf push` command, as shown in the following example:
 
 ```
 cf push -b https://github.com/IBM-Swift/swift-buildpack
@@ -42,7 +42,7 @@ For a complete list of the Swift-supported versions, refer to the buildpack's [m
 
 For details about the current version of the Swift buildpack that is installed in {{site.data.keyword.Bluemix}}, refer to the buildpack's [release information](https://github.com/IBM-Swift/swift-buildpack/releases/tag/1.1.1).
 
-Because there are frequent Swift language changes, you should include a `.swift-version` file so that your app is "pinned" to the Swift version your application is known to work with. Please also remember that if you are using a version of Swift other than `DEVELOPMENT-SNAPSHOT-2016-05-03-a`, you should then specify the `-b https://github.com/IBM-Swift/swift-buildpack` parameter when pushing your app (as shown above).
+Because there are frequent Swift language changes, you should include a `.swift-version` file so that your app is "pinned" to the Swift version your application is known to work with. Please also remember that if you are using a version of Swift other than `DEVELOPMENT-SNAPSHOT-2016-05-03-a`, you should then specify the `-b https://github.com/IBM-Swift/swift-buildpack` parameter when pushing your app (as shown previously).
 
 # rellinks
 ## general
