@@ -10,7 +10,7 @@
 To get started with {{site.data.keyword.objectstorageshort}}:
 
 1.	Provision your {{site.data.keyword.objectstorageshort}} instance from the {{site.data.keyword.Bluemix_notm}} catalog.
-2.	Configure your {{site.data.keyword.objectstorageshort}} instance and click **Create**. If you initially choose the **Leave Unbound** option for the **App** field, you can still bind the service instance to your {{site.data.keyword.Bluemix_notm}} application after you complete the configuration. For instructions, [see Binding your app](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
+2.	Configure your {{site.data.keyword.objectstorageshort}} instance and click **Create**. If you initially choose the **Leave Unbound** option for the **App** field, you can still bind the service instance to your {{site.data.keyword.Bluemix_notm}} application after you complete the configuration. For instructions, see [Binding your app](https://console.ng.bluemix.net/docs/services/ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
 
 
 ># Related Links {:class="linklist"}
