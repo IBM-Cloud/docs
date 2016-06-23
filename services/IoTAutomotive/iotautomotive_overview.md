@@ -9,12 +9,12 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # About {{site.data.keyword.iot4auto_short}} (Experimental)
-{: #iotAutomotive_overview}
+{: #iotautomotive_overview}
 
-*Last updated: 13 June 2016*
+*Last updated: 23 June 2016*
 {: .last-updated}
 
-{{site.data.keyword.iot4auto_full}} is a service in {{site.data.keyword.Bluemix_notm}} that you can use to view and analyze big data from vehicles.
+{{site.data.keyword.iot4auto_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to view and analyze big data from vehicles.
 
 By using the {{site.data.keyword.iot4auto_short}} service, you can collect and process large volumes of data from vehicles. The analytics of {{site.data.keyword.iot4auto_short}} provide powerful and actionable insights into driver behavior, vehicle location, and other automotive-related activities and events of interest.
 {:shortdesc}
