@@ -12,10 +12,16 @@ copyright:
 # Latest updates
 {: #latest_updates}
 
-*Last updated: 13 June 2016*
+*Last updated: 24 June 2016*
 {: .last-updated}
 
 A list of the latest updates to the service.
+
+## June 24, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Added ability for clients to to choose between V8.5 and V9.0 when you create a new _Traditional ND_ or _Traditional WebSphere_ instance.
+* Upgraded the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} binaries so that new instances of WebSphere Application Server Liberty (Core and ND Plans) will have fixpack 16.0.0.2 installed. 16.0.0.2 is the next fixpack after 8.5.5.9. As of 16.0.0.2, all entitled Liberty optional features supported for these plans are installed by default.
+* Addressed  [potential security vulnerabilities](http://www-01.ibm.com/support/docview.wss?uid=swg21982128){: new_window} in WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} if FIPS 140-2 is enabled and multiple vulnerabilities in Samba - including Badlock.
 
 ## June 13, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
