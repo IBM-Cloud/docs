@@ -431,7 +431,7 @@ Complete the following steps to register your service broker:
             },
             {
                "title":"Connectivity",
-               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
+               "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data immediately with familiar tools."
             }
          ],
          "featuredImageUrl":"http://path/to/icon_64x64.png",
@@ -701,7 +701,7 @@ Users can be assigned the following permissions:
 Permissions can be enabled, or the user can be given `view` or
 `write` access for that permission, as represented by the following icons:
 
-* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon beside a permission means that it is enabled.
+* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon with a permission means that it is enabled.
 * The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
 * The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
 
