@@ -28,12 +28,14 @@ Multiple levels of support are provided for {{site.data.keyword.Bluemix_notm}} s
 *Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
 
 ##Experimental services
+{: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}} also has experimental services that you can try out. To view all available experimental services, boilerplates, and runtimes, log in to {{site.data.keyword.Bluemix_notm}}, scroll to the bottom of the catalog, and then click **{{site.data.keyword.Bluemix_notm}} Experimental Services**.
 
 Experimental services might not be stable and can change in ways that are not compatible with earlier versions. These services are not recommended for use in production environments. Support for experimental services is provided through the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in an experimental service, IBM is not obligated to provide a fix.
 
 ##Services by region
+{: #services_region}
 
 Not all services are available in every {{site.data.keyword.Bluemix_notm}} region. The following table shows the services that are provided by IBM.
 
@@ -116,6 +118,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 *Table 2. Service availability*
 
 ## Continued availability for services
+{: #services_availability}
 {{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal. 
 
 The following services are classified as Tier 1:
@@ -133,5 +136,6 @@ The following services are classified as Tier 1:
 To read more about terms of use for services, see: [{{site.data.keyword.Bluemix_notm}} terms](../navigation/notices.html#terms).
 
 ## Service deprecation
+{: #service_deprecation}
 
 IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service. 
