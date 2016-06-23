@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "文件首頁平台區段",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "帳戶管理",
 		"description": "管理組織和空間（包括使用者存取）。",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "監視及記載",
 		"description": "遵循應用程式使用及資料流程，以深入瞭解部署。",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "平台的安全",
 		"description": "瞭解 Bluemix 如何提供功能安全、基礎架構安全、作業安全及實體安全。",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "混合",

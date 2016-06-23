@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "Sección de plataforma de página inicial de documentos",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "Administración de cuentas",
 		"description": "Gestionar organizaciones y espacios, incluido el acceso de usuario.",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "Supervisión y registro",
 		"description": "Seguir el flujo de datos y uso de aplicaciones para comprender mejor su despliegue. ",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "Seguridad de la plataforma",
 		"description": "Aprender cómo Bluemix proporciona seguridad funcional, de infraestructura, operativa y física. ",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "Híbrido",

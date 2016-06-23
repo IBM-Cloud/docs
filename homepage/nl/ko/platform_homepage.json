@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "문서 홈 페이지 플랫폼 섹션",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "계정 관리",
 		"description": "사용자 액세스를 포함하여 조직과 영역을 관리합니다.",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.htmll"
 	}, {
 		"title": "모니터링 및 로깅",
 		"description": "애플리케이션 사용량 및 데이터 플로우를 따라 가면 배치에 대해 더 잘 이해할 수 있습니다.",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "플랫폼 보안",
 		"description": "Bluemix가 기능, 인프라, 운영 및 실제 보안을 제공하는 방법을 학습합니다.",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "하이브리드",
