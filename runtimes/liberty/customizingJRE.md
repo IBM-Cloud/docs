@@ -45,6 +45,11 @@ If enabled, OpenJDK version 8 is used by default. Use the JBP_CONFIG_OPENJDK env
 
 The version property can be set to a version range such as 1.7.+ or any specific version listed on the [list of available OpenJDK versions](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). For best results, use Java 8.
 
+## Oracle JRE
+{: #oracle_jre}
+
+See [Using Oracle JRE](oracle_jre.html) for information on using the Oracle JRE.
+
 ## Configuring the JRE options
 {: #configuring_jre}
 
