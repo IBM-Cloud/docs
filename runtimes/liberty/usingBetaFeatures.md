@@ -70,7 +70,7 @@ In order to use the Liberty beta features in Bluemix you will need to do followi
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. Set the **JBP_CONFIG_LIBERTY** environment variable to **"version: +"**. This variable enables the [Liberty beta runtime](buildpackDefaults.html#liberty_versions) which supports beta features. For example:
+3. Set the **JBP_CONFIG_LIBERTY** environment variable to **"version: +"**. This variable enables the [Liberty monthly runtime](buildpackDefaults.html#liberty_versions) which supports beta features. For example:
   * using the cf command line tool:
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
