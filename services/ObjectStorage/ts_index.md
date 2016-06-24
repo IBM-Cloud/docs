@@ -3,6 +3,9 @@
 # {{site.data.keyword.objectstorageshort}} troubleshooting
 {: #troubleshooting}
 
+*Last updated: 24 June 2016*
+{: .last-updated}
+
 ## Unrecognized token contentpack returned when using openstack4J with Liberty Profile
 {: #unrecognized_token}
 
