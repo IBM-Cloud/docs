@@ -2,6 +2,9 @@
 
 # FAQ {: #faq} 
 
+*Last updated: 24 June 2016*
+{: .last-updated}
+
 
 ## How do prices vary depending on which plan I choose? {: #plan-price}
 Pricing varies depending on the chosen plan. For more pricing information, see the [IBM Bluemix Pricing Sheet](https://console.ng.bluemix.net/pricing/){: new_window} or use the [Calculator](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} for more detailed estimates.
