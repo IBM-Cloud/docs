@@ -2,6 +2,9 @@
 
 # Start using {{site.data.keyword.objectstorageshort}}  {: #using-object-storage} 
 
+*Last updated: 24 June 2016*
+{: .last-updated}
+
 
 ## Using the {{site.data.keyword.objectstorageshort}} user interface {: #using-object-storage-ui}
 
