@@ -17,7 +17,7 @@ copyright:
 
 # Managing your {{site.data.keyword.Bluemix_notm}} account
 {: #mngacct}
-*Last updated: 1 June 2016*
+Last updated: 23 June 2016
 {: .last-updated}
 
 Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** to set notifications for your account, view your account usage, or view your bill.
@@ -26,9 +26,7 @@ Go to the **Account and Support** icon ![Account and Support icon](../admin/imag
 ## Setting notifications
 {: #notifications}
 
-If you are a Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owner, you can set up email spending notifications. Set notifications for total account, runtime, container, and service spending, as well as spending for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify. You can edit each spending notification at any time as your needs change.
-
-**Note**:  If you own more than one account, you can choose to set spending notifications for each individual account.
+If you are a Subscription or Pay-As-You-Go {{site.data.keyword.Bluemix_notm}} account owner, you can set up email spending notifications. Set notifications for total account, runtime, container, and service spending, as well as spending for individual services, excluding third-party services. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify. You can edit each spending notification at any time as your needs change.
 
 Complete the following steps to set up email notifications for spending limits:
 

@@ -18,7 +18,7 @@ copyright:
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 27 May 2016*
+*Last updated: 24 June 2016*
 {: .last-updated}
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
@@ -41,13 +41,13 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 
 ## ![Command line interface plug-ins](./images/CLI_Plugin.svg) Command line interface plug-ins
 
-Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository](http://plugins.ng.bluemix.net/).
+Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository](https://plugins.ng.bluemix.net/).
 
 ### Extend your {{site.data.keyword.Bluemix_notm}} command line interface: bx
 
 1. To install {{site.data.keyword.Bluemix_notm}} CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
-bluemix plugin repo-add bluemix-bx-staging http://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
 ```
 2. Run the following command to install a plug-in:
 ```
@@ -63,7 +63,7 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 1. To install cf CLI plug-ins from the {{site.data.keyword.Bluemix_notm}} registry, set the plug-in registry endpoint:
 ```
-cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
 ```
 2. Run the following command to install a plug-in:
 ```

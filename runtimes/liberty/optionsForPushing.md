@@ -188,7 +188,7 @@ Note: The web applications that are deployed as part of the server directory are
 
 You can also push a packaged server file to Bluemix. The packaged server file is created by using Liberty's server package command. In addition to the application and configuration files, the packaged server file can contain shared resources and Liberty user features needed by the application.
 
-To package a Liberty server, use the ./bin/server package command from your Liberty installation directory. Specify your server name and include the '––include=usr' option.
+To package a Liberty server, use the `./bin/server package` command from your Liberty installation directory. Specify your server name and include the `--include=usr` option. 
 For example, if your Liberty server is defaultServer, run the command:
 
 ```
@@ -196,7 +196,9 @@ For example, if your Liberty server is defaultServer, run the command:
 ```
 {: codeblock}
 
-This command generates a serverName.zip file in the server's directory. You can then push that compressed file to Bluemix with the cf push command.
+This command generates a serverName.zip file in the server's directory. If you used the `--archive` option to specify a different archive file, make sure it has the `.zip` extension instead of `.jar`. **The buildpack does not support packaged server files created with the `.jar` extension**.
+
+You can then push the generated `.zip` file to Bluemix with the `cf push` command.
 For example:
 
 ```

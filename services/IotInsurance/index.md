@@ -18,7 +18,7 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotinsurance_short}}
 {: #iotins_gettingstarted}
-*Last updated: 20 June 2016*
+*Last updated: 22 June 2016*
 {: .last-updated}
 
 
@@ -28,7 +28,19 @@ is an integrated IoT production instance that collects and analyzes full-context
 
 ## Prerequisites
 {: #iot4i_prereqs}
-You must have a node.js runtime environment in which you can run API calls.
+
+Required:
+ - A [{{site.data.keyword.Bluemix}} account](https://console.ng.bluemix.net/). A 30-day trial account is free.
+ - The {{site.data.keyword.iotinsurance_short}} service deployed in {{site.data.keyword.Bluemix_notm}}.
+ - Git installed on your computer and access to the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples). Alternatively, you can download the [archive with the source code files](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip).
+ - [Node.js](https://nodejs.org/en/) installed on your computer.  
+ - A Node.js-enabled runtime environment such as Eclipse.
+
+## Obtaining and preparing the source code
+{: #iot4i_sourcecode}
+Perform the following tasks:
+1. Clone or download the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples).
+2. Install the project's open source prerequisites by running `npm install` in the folder containing the source code files.
 
 ## Getting started
 {: #iot4i_gettingstarted}
@@ -36,15 +48,32 @@ To get up and running with this service, complete the following steps:
 1. Locate the credentials of your instance of the {{site.data.keyword.iotinsurance_short}} service, as follows:
   1. From the {{site.data.keyword.Bluemix_notm}} dashboard, click the {{site.data.keyword.iotinsurance_short}} tile.
   2. Select the **Service Credentials** tab.
-  3. Make a note of the automatically generated *user name* and *password*. You need them to log onto the {{site.data.keyword.iotinsurance_short}} dashboard and the APIs. Be aware that both the user name and the password are case sensitive.
-2. Modify the config.js file with your {{site.data.keyword.iotinsurance_short}} credentials. For sample APIs, see [IoT for Insurance API Examples](https://github.com/ibm-watson-iot/ioti-samples).
-3. Create at least one user in the {{site.data.keyword.iotinsurance_short}} system by running `node createUser.js`.
-4. Create a shield association for each user by running `node createUserShieldAssociation.js`. For more information about shields, see [Components](iotinsurance_overview.html#components}).
-5. Simulate one or more hazard events by running `node simulateHazard.js`.
-6. (optional) Create a set of simulated historical data by running `node createHistoricalData.js`.
-7. View the users, hazards, and optional simulated data that you created in the previous steps, as follows:
+  3. Make a note of the automatically generated *user name* and *password*. You need them to log onto the {{site.data.keyword.iotinsurance_short}} dashboard and the APIs.
+  4. Make a note of the instance ID located in the *uri*.  For example, in the following uri value, the instance ID is `15`:  
+   `"uri": "https://iot4insurance-api-15.mybluemix.net/"`
+2. Using a text editor, modify the config.js file, as follows:
+  1. Replace the `<instanceid>` placeholder in the **api** and **aggregator** variables with the instance ID you located in the service credentials in the previous step.
+  2. Replace the **user** and **pass** values with your user ID and password that you located in the previous step. Both the user name and the password are case sensitive.
+  3. Save the file.
+3. Create a user in the {{site.data.keyword.iotinsurance_short}} system, as follows:
+  1. Edit the createUser.js file to replace the values in the **user** variable with unique user information.
+  2. Save the file.
+  3. Run `node createUser.js`. The process will take a few moments to complete.
+  4. Make a note of the user name. You will need it in the next step.
+4. Create a shield association for the user, as follows:
+  1. Edit the createUserShieldAssociation.js file to add the user name from the previous step in the **username** variable.
+  2. Save the file.
+  3. Run `node createUserShieldAssociation.js`. For more information about shields, see [Components](iotinsurance_overview.html#components}).
+5. (optional) If you do not see the data you expect, you can refresh the Analytics Engine by running `node updateAnalyticsEngine.js`. This action is usually not necessary because the analytics engine is updated automatically.
+6. Simulate a hazard event for the user, as follows:
+  1. Edit the simulateHazard.js file to add the user name from the previous steps in the **usr** variable.
+  2. Save the file.
+  3. Run `node simulateHazard.js`.
+7. (optional) Create a set of simulated historical data by running `node createHistoricalData.js`.
+8. View the users, hazards, and optional simulated data that you created in the previous steps, as follows:
   1. In the {{site.data.keyword.iotinsurance_short}} console, select the **Manage** tab.
   2. Display the {{site.data.keyword.iotinsurance_short}} dashboard by clicking **Open**.
+  3. Search for an individual user by user ID.  User IDs are case sensitive.
 8. (optional) View or try the APIs by clicking **APIs**.
 9. Install and connect the [sample mobile starter app](#iot4i_mobile) using the credentials of the user that you created previously.
 
@@ -170,3 +199,5 @@ Perform the following tasks to enable push notifications for your mobile device.
 ## Related Links
 {: #general}
 * [{{site.data.keyword.iot_full}} documentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
+* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

@@ -28,7 +28,7 @@ The buildpack provides two versions of the Liberty runtime:
   * It does not provide any [beta features](usingBetaFeatures.html).
   * Typically updated on a quarterly basis.
 
-2. The latest beta release
+2. The monthly release
   * It must be explicity enabled by setting the **JBP_CONFIG_LIBERTY** environment variable with the **"version: +"** value.
   * It provides [beta features](usingBetaFeatures.html).
   * Typically updated on a monthly basis.

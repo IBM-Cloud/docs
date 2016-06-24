@@ -17,7 +17,7 @@ copyright:
 # (Deprecated)Development mode CLI
 {: #devmodecli}
 
-*Last updated: 12 May 2016*
+*Last updated: 23 June 2016*
 {: .last-updated}
 
 **This CLI has been deprecated:** Instead of using the Development mode (dev_mode) CLI, use IBM Eclipse Tools for Bluemix or DevOps Web IDE. You can continue to use the dev_mode CLI until 30 June 2016.
@@ -64,7 +64,8 @@ Use one of the following methods to install the dev_mode command line tool:
         ```
 
 ## Viewing dev_mode commands
-**To display all dev_mode CLI commands, use the following command:**
+
+To display all dev_mode CLI commands, use the following command:
 
 ```
 cf plugins

@@ -1,4 +1,4 @@
-
+{
 	"id": "docs_homepage",
 	"descriptionTitle": "Abschnitt zur Homepageplattform mit Dokumenten",
 	"items": [{
@@ -15,7 +15,7 @@
 		"title": "Kontoverwaltung",
 		"description": "Organisationen und Bereiche einschließlich Benutzerzugriff verwalten.",
 		"img": "homepage/images/admin.svg",
-		"href": "admin/index.html"
+		"href": "/admin/adminpublic.html"
 	}, {
 		"title": "Überwachung und Protokollierung",
 		"description": "Befolgen Sie die Anwendungsnutzung und den Datenfluss, um ein besseres Verständnis Ihrer Implementierung zu erlangen.",
@@ -34,7 +34,7 @@
 	}, {
 		"title": "Sicherheit der Plattform",
 		"description": "Erfahren Sie, wie Bluemix funktionelle, Infrastruktur-, Betriebs- und physische Sicherheit bereitstellt.",
-		"img": "homepage/images/security.svg",
+		"img": "homepage/images/platform_security.svg",
 		"href": "security/index.html"
 	}, {
 		"title": "Hybrid",

@@ -17,7 +17,7 @@ copyright:
 
 # Managing team members and roles
 {: #userroles}
-*Last updated: 1 June 2016*
+Last updated: 1 June 2016
 {: .last-updated}
 
 From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; *your_account_name* &gt; **Team Directory**. 

@@ -17,7 +17,8 @@ copyright:
 {: .last-updated}
 
 ### June 17, 2016: Updated Liberty buildpack v3.0-20160608-1450
-* The buildpack now contains two versions of WebSphere Liberty, the latest stable release and the latest beta release. Specifically, it provides [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) stable release and [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) beta release. The stable release will be used by default. See [Liberty versions](buildpackDefaults.html#liberty_versions) for additional details. 
+* The buildpack now contains two versions of WebSphere Liberty, the latest stable release and the latest monthly release. Specifically, it provides [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) stable release and [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) monthly release. The stable release will be used by default. See [Liberty versions](buildpackDefaults.html#liberty_versions) for additional details. 
+* The buildpack also contains security fixes for the [Apache Standard Taglibs vulnerability](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### May 25, 2016: Updated Liberty buildpack v2.9-20160519-1249
 * The buildpack contains an updated version of WebSphere Liberty based on the [May beta](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). The updated version of Liberty makes the *bluemixLogCollector-1.1* and *logstashCollector-1.1* beta features available in Bluemix.

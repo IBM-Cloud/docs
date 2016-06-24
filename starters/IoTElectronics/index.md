@@ -10,59 +10,79 @@ copyright:
 {:shortdesc: .shortdesc}
 
 
-
-# Getting started with {{site.data.keyword.iotelectronics}}
-*Last updated: 16 May 2016*
+# Creating apps with the {{site.data.keyword.iotelectronics}} starter
+*Last updated: 14 June 2016*
 {: .last-updated}
 
-{{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances.
+{{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances. The starter includes a starter app that lets you create and control simulated appliances and a sample mobile app that lets you control those appliances from your mobile device.
 {:shortdesc}
 
-To see what {{site.data.keyword.iotelectronics}} can do, complete these tasks:
+**Prerequisite**:  
+Ensure that you've deployed the {{site.data.keyword.iotelectronics}} Starter from Boilerplates section of the Bluemix catalog. Doing so automatically deploys the component applications and services of the starter, including {{site.data.keyword.amafull}}.
 
-1. Configure {{site.data.keyword.amafull}}.
-2. Explore the {{site.data.keyword.iotelectronics}} Starter.
+To get started with {{site.data.keyword.iotelectronics}}, complete these tasks as described in the sections that follow:
+
+1. Enable communications with the sample mobile app by configuring {{site.data.keyword.amashort}}.
+2. Create simulated appliances using the {{site.data.keyword.iotelectronics}} starter web application.
+3. Install and connect the sample mobile app.
 
 ## Configuring {{site.data.keyword.amashort}}
 {: #configureMCA}
-Before you can use the mobile app, you must configure {{site.data.keyword.amafull}}.
-1. In your Bluemix dashboard, open {{site.data.keyword.amashort}} or Advanced Mobile Access.
+To use the mobile app, you must configure {{site.data.keyword.amashort}}, as follows:
+1. In your {{site.data.keyword.Bluemix_notm}} dashboard, open [{{site.data.keyword.amashort}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html).
 2. In the **Custom** section, select **Configure**.
 3. Enter the following authentication credentials:
   - **Realm name**: myRealm
   - **URL**: https://<*myIoT4eStarterApp*>.mybluemix.net  
-  **Tip:** Be sure to use the secure "https://" prefix in the URL. You can find the name of your Starter app in the Starter app or in the heading of the {{site.data.keyword.amashort}} credentials page.)  
+
+    **Tip:** Be sure to use the secure `https://` prefix in the URL. You can find the URL of your starter app by clicking **Mobile options**.)
 4. Save.
 
-## Exploring {{site.data.keyword.iotelectronics}}
-{: #explore}
+  For detailed instructions, see [Configuring {{site.data.keyword.amashort}}](iotelectronics_config_mobile.html#iot4e_configureMCA).
 
-To start exploring, wait for the "Your app is running" status message and then click **View App** to explore the Starter app.
+##Creating simulated appliances
+To create a simulated appliance, perform the following steps:
+1. In your {{site.data.keyword.Bluemix_notm}} dashboard, start your {{site.data.keyword.iotelectronics}} application.
+2. Wait for the *Your app is running* status message and then click **View App** to display the starter app.  
+3. Select **Remotely control your connected appliances**.
+4. Scroll to the section labeled **Next, choose or add new simulated washer** and click the Add (+) button. A new washer is created.
 
-In the Starter app, you'll explore the following tasks:
-- How to monitor appliances that are connected to the {{site.data.keyword.iot_short}}.
-- How to use a mobile app to control and monitor your appliances.
-  - In the Starter app, you are prompted to download the mobile app, which you can find in the App store or on iTunes. Instructions [here](iotelectronics_overview.html#iotforelectronics_getmobileapp).  
-  - All QR codes that are required by the mobile app are located in the Starter app.  
+## Installing and connecting the sample mobile app
+To install and connect the sample mobile app, perform the following steps:
+
+*Note*: You must have an iOS device to use the sample mobile app.
+
+1. On your phone, open the App Store and search for `ibm iot`. Choose **IBM IoT for Electronics** and install.
+2. Connect your phone to your organization by scanning the Connection QR code found in your starter app.
+3. Connect your simulated appliance by scanning the Appliance QR code found in your starter app.
+
+  For detailed instructions, see [Connecting the mobile app to your {{site.data.keyword.iotelectronics}} environment](iotelectronics_config_mobile.html#iot4e_connecting_mobile).
+
+##What's next
+See what you can do with {{site.data.keyword.iotelectronics}}.
+
+- Explore the starter app to experience how an enterprise manufacturer can monitor appliances that are connected to the {{site.data.keyword.iot_short_notm}}.
+- Explore the sample mobile app to experience how appliance owners can register and interact with their appliances.
+- Manually cause a device failure to trigger alerts, notifications, and actions to both the manufacturer and the appliance owner.
+- Associate operational data with user data to understand how your products and devices are operating and who is operating them.
+
 
 # Related Links
 {: #rellinks}
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iotrtinsights_short}}](https://iotrti-prod.mam.ibmserviceengage.com/apidoc/)  
-* [{{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
+* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
 
 ## Components
 {: #general}
 
-* [{{site.data.keyword.iotelectronics_full}} documentation](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.iotrtinsights_full}}](https://new-console.ng.bluemix.net/docs/services/iotrtinsights/iotrtinsights_overview.html)
-* [{{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html)
+* [{{site.data.keyword.iot_full}} documentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+*  [{{site.data.keyword.amashort}} documentation](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
+* [{{site.data.keyword.sdk4nodefull}} documentation](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## Samples
 {: #samples}
-* [Sample mobile app](https://new-console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_overview.html#iotforelectronics_getmobileapp)
+* [Sample mobile app](https://new-console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

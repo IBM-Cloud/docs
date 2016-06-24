@@ -14,55 +14,62 @@ copyright:
 
 # About {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}
+*Last updated: 22 June 2016*
+{: .last-updated}
 
-The service provides high-speed access to static road network data, dynamic event data, and road network-based geospatial tools that you can use to integrate geospatial capabilities with your application.
+The {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to get fast access to static road network data and dynamic event data. {{site.data.keyword.iotmapinsights_short}} also provides geospatial tools for road networks, which you can use to integrate geospatial capabilities with your applications.
 {:shortdesc}
 
-The {{site.data.keyword.iotmapinsights_short}} service provides you with the following main feature sets:
+The {{site.data.keyword.iotmapinsights_short}} service provides the following features:
 
 - Static map data
 - Dynamic event data
 - Geospatial tools
 
-The {{site.data.keyword.iotmapinsights_short}} service collects and uses  [OpenStreetMap](http://www.openstreetmap.org/){:new_window} road network data that is stored in the service memory cache for processing.
+The {{site.data.keyword.iotmapinsights_short}} service collects and uses [OpenStreetMap](http://www.openstreetmap.org/){: new_window} road network data that is stored in the service memory cache for processing.
 
 ## Static map data
 {: #static_map_data_query}
 
-One of the key features of the product is the ability to pull in detailed road information for use by your application. Use the Link Query REST API interface to query for static map road attribute data by link ID. The required link ID parameter can be identified by a [map matching function](#map_matching).
+One of the key features of the product is the ability to retrieve detailed road information for use with your applications. Use the Link Query REST API interface to query for static map road attribute data by link ID. Use the [map matching function](#map_matching) function of  {{site.data.keyword.iotmapinsights_short}} to identify the required link ID parameter.
 
-The returned data includes detailed information for each requested link ID such as road type, road length, a detail shape points array, information about adjacent nodes and adjacent links.
+The data that is returned includes the following information about the requested link ID:
 
-By using queried detail link information, your application can traverse a road link network by intelligently using the returned adjacent link information.
+- Road type
+- Road length
+- An array of detailed shape points
+- Information about adjacent nodes and adjacent links
+
+By querying detail road link information, your application can traverse a road link network by intelligently using the adjacent link information that is returned.
 
 ## Dynamic event data
 {: #dynamic_event_data}
 
-In addition to the static map data, the real world condition of roads by necessity includes dynamic events such as traffic congestion and road works. Use {{site.data.keyword.iotmapinsights_short}} to create and manage traffic events, and incorporate them with [affected link searches](#link_search) for route planning purposes.
+In addition to the static map data, the real world condition of roads by necessity includes dynamic events such as traffic congestion and road works. Use {{site.data.keyword.iotmapinsights_short}} to create, manage, and incorporate traffic events with [affected link searches](#link_search) for route planning purposes.
 
-### Event injection and deletion
+### Injecting and deleting events
 {: #inject_event}
 
-Use the {{site.data.keyword.iotmapinsights_short}} service event injection REST API to dynamically inject and remove traffic events in the form of map object models that are placed on specific road links. Each event includes basic attributes such as GPS coordinates, start time, event type, event duration, and affected length of road.
+Use the {{site.data.keyword.iotmapinsights_short}} service event injection REST API to dynamically inject and remove traffic events in the form of map object models that are placed on specific road links. Each event includes basic attributes such as GPS coordinates, start time, event type, event duration, and the affected length of the road.
 
-Use the event deletion REST API interface to remove events from the map when they are no longer in effect.
+Use the event deletion REST API interface to remove events from the map when they are obsolete.
 
 ### Event query
 {: #query_event}
 
-Use the event query REST API to get detailed information about all dynamic events in a certain geographic area. You can query by area with a longitude and a latitude range, and include event attributes to narrow the number of target events that are returned.
+Use the event query REST API to get detailed information about all dynamic events in a certain geographic area. You can query by area with a longitude and a latitude range, and you can include event attributes to narrow the number of target events that are returned.
 
 ## Geospatial tools
 {: #geospatial_tools}
 
-Enhance your application with the {{site.data.keyword.iotmapinsights_short}} geospatial tools that include map matching and route search functions.
+Enhance your application with the map matching and route search functions that are provided by the {{site.data.keyword.iotmapinsights_short}} geospatial tools.
 
 ### Map matching
 {: #map_matching}
 
-Use the map matching REST API interface with your application to map actual device GPS coordinates to [OpenStreetMap](http://www.openstreetmap.org/){:new_window} road network data to increase the location accuracy for inaccurate GPS data. You can also receive information about road attributes based on location. The map matching REST API enables your application to fit raw GPS data point to a matched point on the road link.
+Use the map matching REST API interface with your application to map actual device GPS coordinates to [OpenStreetMap](http://www.openstreetmap.org/){: new_window} road network data to increase the location accuracy for inaccurate GPS data. You can also receive information about road attributes based on location. The map matching REST API enables your application to fit raw GPS data point to a matched point on the road link.
 
-The map matching REST API interface receives one point of longitude and latitude GPS coordinate data and returns a map-matched point. This point is analyzed by considering historical data for each car within a specific time period to find the most probable point in real time. For point that do not have historical location data, the map matching interface returns the nearest point on the road link from the requested GPS point.
+The map matching REST API interface receives one point of longitude and latitude GPS coordinate data and returns a map-matched point. The map-matched point is analyzed by considering historical data for each car within a specific time period to find the most probable point in real time. For points that do not have historical location data, the map matching interface returns the nearest point on the road link from the requested GPS point.
 
 ### Route search
 {: #route_search}
@@ -74,4 +81,4 @@ The route search REST API interface of the {{site.data.keyword.iotmapinsights_sh
 ### Affected link search
 {: #link_search}
 
-When an event occurs on a road, it might affect various road links. You can use REST APIs to search affected links and to find road links where cars might reach the event. The search considers the topology of the road link network, not just the distance from cars to the event.
+When an event occurs on a road, it might affect various road links. You can use REST APIs to search for affected links and to also find road links where cars might reach the event. The search considers the topology of the road link network, not just the distance from cars to the event.

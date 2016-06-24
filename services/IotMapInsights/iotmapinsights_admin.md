@@ -13,36 +13,35 @@ copyright:
 
 
 # Administering
-{: #1stanchor}
-*Last updated: 19 June 2016*
+{: #iotmapinsights_admin}
+*Last updated: 22 June 2016*
 {: .last-updated}
 
-
-Administering {{site.data.keyword.iotmapinsights_full}} includes viewing tenant information and resetting the tenant password, configuring parameters for the service, and managing data stored in the service.
-{:shortdesc}
+Administer your {{site.data.keyword.iotmapinsights_full}} service instance by using the administration console on the {{site.data.keyword.Bluemix_notm}} dashboard. From the administration console, you can configure parameters for  {{site.data.keyword.iotmapinsights_short}} and manage the data that is stored in the service. You can also view the tenant information and reset the tenant password.
 {:shortdesc}
 
-The administration tools are available in the {{site.data.keyword.iotmapinsights_full}} Service Administrative Console (Admin Console).
+## Starting the administration console
+{: #start_admin_console}
 
-To access the Admin Console:
+To access the administration console for the {{site.data.keyword.iotmapinsights_short}}  service:
 
-1. From the {{site.data.keyword.Bluemix_notm}} dashboard, click the {{site.data.keyword.iotmapinsights_short}} tile.
-2. Go to the **Manage** view of your service instance.  
-Note the *Username* and *Password*. These credentials differ from your {{site.data.keyword.Bluemix_notm}} ID and IBM ID and are required to access the admin console.
-3. Click **Launch**, and enter the *Username* and *Password* when prompted, then click **LOG IN**.
-4. The **Admin Console** is opened as a new window.
+1. On the {{site.data.keyword.Bluemix_notm}} dashboard, click the {{site.data.keyword.iotmapinsights_short}} service tile.
+2. Select the **Manage** view of your service instance.
+Make a note of the user name and password credentials because you need them later. To access the administration console, your IBM ID is required, which might not be the same as your {{site.data.keyword.Bluemix_notm}} credentials.
+3. Click **Launch** and, when prompted, enter your IBM ID credentials.
+4. Click **LOG IN**. The **Admin Console** window opens.
 
-## Viewing tenant information
-{: #viewtenantinfo}
+## Managing tenant information
+{: #view_tenant_info}
 
-Select the **Tenant Information** view to view the tenant information and reset the password.
+To view the tenant information, click **Tenant Information**.
 
 ### Resetting the tenant password
-{: #resettenantpassword}
+{: #reset_tenant_password}
 
 To reset the tenant password:
 
-1. Click **RESET**.
-2. On the confirmation dialog box, click **OK**.
-A new password is generated and is listed in the **Tenant Information** view.  
-**Important:** Make sure that you update the password for all applications that access the {{site.data.keyword.iotmapinsights_short}} API.
+1. In the **Tenant Information** window, click **RESET**.
+2. In the dialog box, click **OK**.
+A new password is generated and displayed in the **Tenant Information** view.  
+**Important:** Make sure that you update the password in all of your applications that access the {{site.data.keyword.iotmapinsights_short}} API.
