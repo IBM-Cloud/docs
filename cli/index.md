@@ -18,13 +18,13 @@ copyright:
 # CLI and dev tools
 {: #cli}
 
-*Last updated: 24 June 2016*
+*Last updated: 28 June 2016*
 {: .last-updated}
 
 With {{site.data.keyword.Bluemix_short}}, you have access to powerful tools such as a unified command line interface and CLI plug-ins. Each of these CLI downloads are all available to support your {{site.data.keyword.Bluemix_notm}} experience.
 {:shortdesc}
 
-## ![Command line interfaces](./images/CLI.svg) Command line interfaces
+## ![](./images/CLI.svg) Command line interfaces
 {: #downloads}
 
 Download and install command line interfaces to support your {{site.data.keyword.Bluemix_notm}} experience. 
@@ -39,7 +39,7 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 | [Download CLI](http://clis.ng.bluemix.net/) <br> [View Docs](./reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |
 
 
-## ![Command line interface plug-ins](./images/CLI_Plugin.svg) Command line interface plug-ins
+## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
 
 Easily extend your {{site.data.keyword.Bluemix_notm}} command line interface with more commands. To access the {{site.data.keyword.Bluemix_notm}} command line interface plug-ins, see the [CLI Plug-in Repository](https://plugins.ng.bluemix.net/).
 
@@ -81,7 +81,7 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 <!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
-## ![Integrated development tools](./images/Integrated_Dev_Tools.svg) Integrated development tools
+## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools
 
 Download and install plug-ins to integrate your favorite {{site.data.keyword.Bluemix_notm}} services.
 
