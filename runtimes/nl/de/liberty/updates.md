@@ -13,7 +13,22 @@ copyright:
 
 ## Eine Liste mit den neuesten Aktualisierungen im Liberty-Buildpack.
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 17. Juni 2016*
+{: .last-updated}
+
+### 17. Juni 2016: Liberty-Buildpack v3.0-20160608-1450 aktualisiert
+* Das Buildpack enthält jetzt zwei Versionen von WebSphere Liberty, das neueste stabile Release und die neueste Betaversion. Konkret handelt es sich um das stabile Release [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) und die Betaversion [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). Standardmäßig wird das stabile Release verwendet. Weitere Details finden Sie in [Liberty-Versionen](buildpackDefaults.html#liberty_versions). 
+
+### 25. Mai 2016: Liberty-Buildpack v2.9-20160519-1249 aktualisiert
+* Das Buildpack enthält eine aktualisierte Version von WebSphere Liberty, die auf der [Betaversion vom Mai](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/) basiert. Mit der aktualisierten Version von Liberty werden die Beta-Features *bluemixLogCollector-1.1* und *logstashCollector-1.1* in Bluemix verfügbar gemacht.
+
+### 5. Mai 2016: Liberty-Buildpack v2.8-20160430-1011 aktualisiert
+* Das Buildpack enthält eine aktualisierte Version von WebSphere Liberty, die auf der [Betaversion vom April](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/) basiert. Mit der aktualisierten Version von Liberty werden das GA-Feature *logstashCollector-1.0* und das Beta-Feature *logmetCollector-1.0* in Bluemix verfügbar gemacht.
+* Das Buildpack enthält auch aktualisierte Versionen von IBM JRE: 8 SR3 und 7.1 SR3 FP40. 
+* Das Buildpack fügt einen Erstsupport für den Anwendungsüberwachungsagenten [AppDynamics](https://www.appdynamics.com/) hinzu.
+* Die [Dynatrace](dynatrace.html)-Unterstützung wurde verbessert, um die Installation des Agenten zu vereinfachen.
+* Das Buildpack stellt einen aktualisierten Datenkollektor für den [Service 'Monitoring and Analytics'](../../services/monana/index.html#monana_oview) bereit. Er enthält einen Fix für ein Problem beim Erfassen der maximalen Heapspeicherdaten.
+* Die von den [App-Management-Dienstprogrammen 'devconsole' und 'shell'](../../manageapps/app_mng.html#app_management) verwendete Node.js-Laufzeit wurde auf die neueste Version 0.12.13 aktualisiert.
 
 ### 25. März 2016: Liberty-Buildpack v2.7-20160321-1358 aktualisiert
 * Das Buildpack enthält eine aktualisierte Version von WebSphere Liberty, die auf der [Betaversion vom März](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/) basiert. Mit der aktualisierten Version von Liberty wird das Beta-Feature 'cloudant-1.0' in Bluemix verfügbar gemacht.
@@ -178,7 +193,9 @@ Die aktualisierten JREs enthalten die [neuesten Sicherheitskorrekturen](http://w
 * Die neue Version von IBM SDK for Java ist da!
   * Wenn Sie nun eine weitere Push-Operation für Ihre Anwendungen durchführen, wird IBM SDK for Java Version 7.1-1.0 verwendet. Dies führt zu einer deutlichen Leistungsverbesserung. Der Durchsatz Ihrer Anwendung wird sich erhöhen und die Speicherbelegung wird reduziert. Weitere Informationen zu IBM Java SDK finden Sie [hier](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
 
-  # Zugehörige Links
-  ## Allgemein
+# Zugehörige Links
+{: #rellinks}
+## Allgemein
+{: #general}
   * [Liberty-Laufzeit](index.html)
   * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

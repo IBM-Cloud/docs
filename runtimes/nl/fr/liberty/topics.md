@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -12,7 +12,8 @@ Copyright :
 # Rubriques Liberty
 {: #topics}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 * [Environnement d'exécution Liberty](index.html)
 * [Détection](index.html#detection)
@@ -32,6 +33,8 @@ Copyright :
 * [Dernières mises à jour](updates.html)
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

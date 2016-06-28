@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,7 +11,8 @@ Copyright :
 # Personnalisation de l'environnement d'exécution Java (JRE)
 {: #customizing_jre}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 Les applications sont exécutées dans un environnement d'exécution Java (JRE) fourni et configuré par le
 pack de construction Liberty. Ce dernier permet la configuration de la version ou du type d'environnement d'exécution Java (JRE), la personnalisation des options JVM ou la surimposition
@@ -29,7 +30,7 @@ JRE version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La propriété de version peut être définie avec une plage de versions. Deux plages de versions sont prises en charge : 1.7.+ et 1.8.+. Pour de meilleurs résultats, utilisez Java 8.
 
@@ -37,19 +38,19 @@ La propriété de version peut être définie avec une plage de versions. Deux p
 {: #openjdk}
 
 Si vous le souhaitez, vous pouvez configurer des applications pour qu'elles s'exécutent avec OpenJDK comme environnement d'exécution
-Java. Pour qu'une application s'exécute avec OpenJDK, associez la variable d'environnement JVM à "openjdk". Par exemple, avec l'outil de
+Java. Pour qu'une application puisse s'exécuter avec OpenJDK, associez la variable d'environnement JVM à "openjdk". Par exemple, avec l'outil de
 ligne de commande cf, exécutez la commande suivante :
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
-{: #codeblock}
+{: codeblock}
 
 S'il est activé, OpenJDK version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_OPENJDK afin de spécifier une autre version d'OpenJDK. Par exemple, pour utiliser la version la plus récente
 d'OpenJDK 7, définissez la variable d'environnement suivante :
 ```
     $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La propriété de version peut être définie avec une plage de versions, telle que 1.7.+, ou avec une version spécifique répertoriée dans la [liste des versions OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Pour de meilleurs résultats, utilisez Java 8.
 
@@ -82,6 +83,7 @@ l'application commun. Ces vidages peuvent être affichés depuis le tableau de b
 
 L'exemple ci-après illustre une configuration de machine virtuelle Java par défaut qui est générée par le pack de construction
 pour une application déployée avec une limite de mémoire de 512 Mo :
+   
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -92,7 +94,7 @@ pour une application déployée avec une limite de mémoire de 512 Mo :
     -Xdump:tool:events=systhrow,filter=java/lang/OutOfMemoryError,request=serial+exclusive,exec=../../../../.buildpack-diagnostics/killjava.sh
     -Dcom.ibm.tx.jta.disable2PC=true
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Personnalisation de la configuration de machine virtuelle Java
 {: #customizing_jvm}
@@ -166,7 +168,7 @@ Remarque : Il se peut que certaines options n'aient pas d'effet, sauf si elles s
 <tr>
 <td>3</td>
 <td>jvm.options</td>
-<td>Fichier de configuration de machine virtuelle Java pris en charge par le répertoire de serveur ou le package de serveur du contexte d'exécution
+<td>Fichier de configuration de machine virtuelle Java pris en charge par le répertoire de serveur ou le package de serveur de l'environnement d'exécution
 Liberty</td>
 <td>Package serveur</td>
 <td>Reconstituez l'appli</td>
@@ -176,7 +178,7 @@ Liberty</td>
 <tr>
 <td>4</td>
 <td>JVM_ARGS</td>
-<td>Variable d'environnement prise en charge par le contexte d'exécution Liberty</td>
+<td>Variable d'environnement prise en charge par l'environnement d'exécution Liberty</td>
 <td>Tous</td>
 <td>Redémarrez ou reconstituez l'appli</td>
 <td>Oui</td>
@@ -194,7 +196,7 @@ options JVM pour l'application Java autonome sont conservées sous forme d'optio
 ```
     $ cf files myapp staging_info.yml
 ```
-{: #codeblock}
+{: codeblock}
 
 Les options JVM pour les fichiers WAR, les fichiers EAR, les répertoires de serveur et le déploiement de package de serveur sont conservées dans un fichier jvm.options.
 
@@ -202,42 +204,46 @@ Pour afficher le fichier jvm.options pour les fichiers WAR, les fichiers EAR et 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
-{: #codeblock}
+{: codeblock}
 
 Pour afficher le fichier jvm.options pour un package de serveur, remplacez <serverName> par le nom de votre serveur et exécutez la commande suivante :
 ```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
-{: #codeblock]
+{: codeblock}
 
 #### Exemple d'utilisation
 {: #example_usage}
 
 Déploiement d'une application avec des options JVM personnalisées pour activer la journalisation de la récupération de place en mode prolixe pour la machine virtuelle Java d'IBM JRE :
 * Options JVM incluses dans le fichier manifest.yml d'une application :
-```
+
+  <pre>
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Pour afficher la journalisation de la récupération de place en mode prolixe de la machine virtuelle Java générée :
-```
+
+  <pre>
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-```
-{: #codeblock}    
+  </pre>
+  {: codeblock}    
 
-* Mise à jour de l'option JVM d'IBM JRE pour une application déployée afin de déclencher un vidage heap, snap et javacore sur une condition OutOfMemory :
+* Pour mettre à jour l'option JVM
+d'IBM pour une application déployée afin de déclencher un vidage heap, snap et
+javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option JVM et redémarrez l'application : 
 
-Définissez la variable d'environnement de l'application avec l'option JVM et redémarrez l'application :
-```
+  <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Pour afficher les vidages de machine virtuelle Java générés lorsque la condition d'insuffisance de mémoire est déclenchée :
-```
+
+  <pre>
     $ cf files myapp dumps
 
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
@@ -246,8 +252,8 @@ Définissez la variable d'environnement de l'application avec l'option JVM et re
     Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 ### Surimposition de l'environnement d'exécution Java (JRE)
 {: #overlaying_jre}
@@ -295,18 +301,20 @@ Par exemple, si vous voulez utiliser le chiffrement AES 256 bits, vous devez sur
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Téléchargez les fichiers de règles non restreintes appropriées et ajoutez-les à votre application sous la forme :
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
-Lorsque vous envoyez votre application par commande push, ces fichiers JAR se surimposent aux fichiers JAR de règles par défaut dans le contexte d'exécution Java. Ce processus active le chiffrement AES 256 bits.
+Lorsque vous envoyez votre application par commande push, ces fichiers JAR se surimposent aux fichiers JAR de règles par défaut dans l'environnement d'exécution Java. Ce processus active le chiffrement AES 256 bits.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

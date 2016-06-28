@@ -11,7 +11,8 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Letzte Aktualisierung: 16. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Die Laufzeit von PHP in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'php_buildpack'.
 Das Buildpack 'php_buildpack' stellt eine vollständige Laufzeitumgebung für PHP-Apps zur Verfügung.
@@ -34,11 +35,13 @@ Sie können die Version von PHP, die von Ihrer App verwendet werden soll, in der
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-Weitere Informationen finden Sie in [Composer Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages).
+Weitere Informationen finden Sie in [Composer-Paketlinks](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Wenn keine Version angegeben ist, wird standardmäßig Version 5.5.30 ausgewählt.
 
@@ -58,7 +61,9 @@ Folgende PHP-Versionen stehen im [PHP-Buildpack](https://github.com/cloudfoundry
 Wenn für Ihre App eine PHP-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack.git) implementieren.
 
 # Zugehörige Links
-## Beispiele
+{: #rellinks}
+## Lernprogramme und Beispiele
+{: #samples}
 * [REST-API erstellen und implementieren](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Mobil einsetzbaren Kalorienzähler erstellen und implementieren](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## Allgemein

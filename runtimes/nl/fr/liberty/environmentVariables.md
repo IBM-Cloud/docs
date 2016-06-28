@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -13,7 +13,8 @@ Copyright :
 # Variables d'environnement
 {: #environment_variables}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 Variables d'environnement prises en charge par Liberty for Java.
 
@@ -55,7 +56,7 @@ Variables d'environnement prises en charge par Liberty for Java.
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>Configurer diverses options de contexte d'exécution Liberty, notamment des [fonctions pour les fichiers WAR ou EAR](optionsForPushing.html#stand_alone_apps)</td>
+<td>Configurer diverses options d'environnement d'exécution Liberty, notamment des [fonctions pour les fichiers WAR ou EAR](optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
@@ -100,6 +101,8 @@ Variables d'environnement prises en charge par Liberty for Java.
 </table>
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

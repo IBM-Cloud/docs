@@ -12,10 +12,11 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*前次更新：2016 年 3 月 16 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Node.js 執行時期是採用 sdk-for-nodejs 建置套件的技術。
-sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的執行時期環境。
+{{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。
+sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
 {: shortdesc}
 
 當應用程式的根目錄包含 **package.json** 檔案時，會使用 sdk-for-nodejs 建置套件。
@@ -31,6 +32,7 @@ sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的執行時期�
 為您的 Bluemix Node.js 應用程式指定 start 指令的建議方式，是使用 **Procfile** 或 **package.json** 檔案。
 
 請使用下列格式在 **Procfile** 中指定 startup 指令。這裡的 app.js 是應用程式的 startup JS Script。
+
 ```
 web: node app.js
 ```
@@ -39,6 +41,7 @@ web: node app.js
 將 **Procfile** 儲存在應用程式的根目錄中。
 
 如果 **Procfile** 不存在，IBM Bluemix Node.js 建置套件會檢查 **package.json** 檔案中是否有 scripts.start 項目。同樣地，在以下範例中，app.js 是應用程式的 startup JS Script。
+
 ```
 {
     ...   
@@ -50,6 +53,7 @@ web: node app.js
 {: codeblock}
 
 如果 **package.json** 中有 start Script 項目存在，則會自動產生 **Procfile**。自動產生的 **Procfile** 內容如下：
+
 ```
     web: npm start
 ```
@@ -63,6 +67,7 @@ web: node app.js
 使用此資訊，以協助在本端和 Bluemix 上執行 Node.js 應用程式。
 
 下列範例顯示 **js** 檔案的部分原始碼：
+
 ```
 var port = (process.env.VCAP_APP_PORT || 3000);
 var host = (process.env.VCAP_APP_HOST || 'localhost');
@@ -77,11 +82,11 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 ## 可用的版本
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 執行時期](http://nodejs.org/dist/)。IBM 在其中一些提供了包含加強功能和錯誤修正程式的版本。如需相關資訊，請參閱 [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)。
+{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 運行環境](http://nodejs.org/dist/)。IBM 在其中一些提供了包含加強功能和錯誤修正程式的版本。如需相關資訊，請參閱 [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)。
 
-IBM Node.js 建置套件會快取所有 IBM 執行時期版本。因此，如果您在應用程式中使用 IBM SDK for Node.js 執行時期，當應用程式推送至 Bluemix 時，即可提升應用程式效能。
+IBM Node.js 建置套件會快取所有 IBM 運行環境版本。因此，如果您在應用程式中使用 IBM SDK for Node.js 運行環境，當應用程式推送至 Bluemix 時，即可提升應用程式效能。
 
-請在 **package.json** 檔案的 **engines** 區段中使用 **node** 參數，指定您要執行的 Node.js 執行時期版本。
+請在 **package.json** 檔案的 **engines** 區段中使用 **node** 參數，指定您要執行的 Node.js 運行環境版本。
 
 如果您需要指定非 Node.js 組合版本的 npm 版本，請在 **package.json** 檔案的 **engines** 區段中使用 **npm** 參數。  
 
@@ -92,8 +97,7 @@ IBM Node.js 建置套件會快取所有 IBM 執行時期版本。因此，如果
   "name": "myapp",
   "description": "this is my app",
   "version": "0.1",
-  "engines": {
-     "node": "4.2.4",
+  "engines": {"node": "4.2.4",
      "npm": "2.11.3"
   }
 }
@@ -114,6 +118,7 @@ NPM 提供 Scripting 機能讓您執行 Script，包括安裝 node_modules 之�
 {{site.data.keyword.Bluemix}} 會為每個 node 應用程式維護一個快取目錄，它會在兩次建置之間持續保存。快取會儲存已解析的相依關係，因此不必每次部署應用程式時都進行下載及安裝。例如，假設 myapp 依賴 **express**。那麼，第一次部署 myapp 時，會下載 **expess** 模組。後續部署 myapp 時，則會使用 **express** 的快取實例。預設行為是快取 NPM 安裝的所有 node_modules 以及 bower 安裝的 bower_components。
 
 使用 NODE_MODULES_CACHE 變數，以決定 Node 建置套件會使用還是忽略先前建置的快取。預設值是 true。若要停用快取，則將 NODE_MODULES_CACHE 設為 false，例如透過 cf 指令行：
+
 ```
     $ cf set-env myapp NODE_MODULES_CACHE false
 ```
@@ -122,6 +127,7 @@ NPM 提供 Scripting 機能讓您執行 Script，包括安裝 node_modules 之�
 請注意，不會快取應用程式中所包含的 node_modules。
 
 您可以在最上層 **package.json** 中使用 **cacheDirectories** 陣列，來達到要快取哪些模組的精細控制。當 **cacheDirectories** 元素出現在 **package.json** 中時，只會快取位於 **cacheDirectories** 陣列中的那些模組。在下列範例中，只會快取 node_modules 和 bower_components。
+
 ```
 {
   "cacheDirectories": ["node_modules","bower_components"],
@@ -133,7 +139,7 @@ NPM 提供 Scripting 機能讓您執行 Script，包括安裝 node_modules 之�
 ### FIPS 模式
 {: #fips_mode}
 
-Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。若要啟用 FIPS，請將環境變數 FIPS_MODE 設為 true。
+Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。若要使用已啟用 FIPS 功能的 node 引擎，請將環境變數 FIPS_MODE 設為 true。
 例如：
 
 ```
@@ -141,20 +147,106 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https:
 ```
 {: codeblock}
 
-請務必瞭解，當 FIPS_MODE 為 true 時，**使用 [MD5](https://en.wikipedia.org/wiki/MD5) 的 node 模組將會失敗**。例如，[Express](http://expressjs.com/) 模組會失敗。在您的 Express 應用程式中，將 [etag](http://expressjs.com/en/api.html) 設為 false 可能有助於暫時解決此問題。例如，您可以在程式碼中執行下列動作：
+請務必瞭解，當 FIPS_MODE 為 true 時，部分 node 模組可能會無法運作。例如，**使用 [MD5](https://en.wikipedia.org/wiki/MD5) 的 node 模組將會失敗**（例如 [Express](http://expressjs.com/)）。對於 Express，在 Expess 應用程式中將 [etag](http://expressjs.com/en/api.html) 設為 false 可能有助於暫時解決此問題。例如，您可以在程式碼中執行下列動作：
+
 ```
     app.set('etag', false);
 ```
 {: codeblock}
-如需相關資訊，請參閱這則 [Stack Overflow 貼文](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。
+如需相關資訊，請參閱這則 [Stack Overflow 貼文](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。**附註**：*未* 同時支援[應用程式管理](../../manageapps/app_mng.html) 和 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
 
-若要驗證您的應用程式中 FIPS_MODE 是否為 true，請檢查 **process.versions.openssl** 的值。例如：
-```
-    console.log('ssl version is [' +process.versions.openssl +']');
-```
-{: codeblockd}
+有各種方法可檢查 FIPS_MODE 的狀態：
+<ul>
+<li> 您可以檢查應用程式的 staging_task.log 中是否有與下列類似的訊息：    
 
-如果 SSL 版本包含 "fips"，則應用程式是以 FIPS 模式執行。    
+  <pre>
+  正在從快取中安裝已啟用 FIPS 功能的 IBM SDK for Node.js (4.4.3)
+  </pre>
+  {: codeblock}
+
+這則訊息指出已啟用 FIPS 功能的 node.js 引擎正在執行中，但 FIPS 不一定要正在執行
+</li>
+
+<li> 您可以檢查 **process.versions.openssl** 的值。例如：
+
+  <pre>
+console.log('ssl version is [' +process.versions.openssl +']');
+  </pre>
+  {: codeblock}
+
+如果 SSL 版本包含 "fips"，則使用中的 SSL 版本支援 FIPS。  
+</li>
+
+<li> 若為 node.js 第 6 版及更高版本，您可以在與下面類似的程式碼中檢查 crypto.fips 所傳回的值：
+
+  <pre>
+  console.log('crypto.fips== [' +crypto.fips +']');
+  </pre>
+  {: codeblock}
+
+如果傳回的值是 1，則表示正在使用 FIPS。請注意，若為第 6 版之前的 node.js 版本，crypto.fips 將傳回*未定義*。
+</li>
+</ul>
+
+#### Nodejs 第 4 版
+{: #nodejs_v4_fips}
+
+下表說明 node.js 第 4 版在使用 FIPS 時的行為：
+
+|                 | 結果          |
+| :-------------- | :------------ |
+|FIPS_MODE=true   |成功 (1)       |
+|FIPS_MODE !=true |成功 (2)       |
+
+* 成功 (1)
+  * FIPS 正在使用中。
+  * staging_task.log 將包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * process.versions.openssl 所傳回的值將包含 "fips"。
+* 成功 (2)
+  * FIPS 目前*不* 在使用中。
+  * staging_task.log *不* 會包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * process.versions.openssl 所傳回的值*不* 會包含 "fips"。
+
+#### Nodejs 第 6 版
+{: #nodejs_v6_fips}
+
+若要以 FIPS 模式與 Node.js 第 6 版搭配執行，則除了設定 **FIPS_MODE=true** 之外，您還必須在 start 指令中包括 **--enable-fips**，如下列範例中所示：
+```
+{
+    ...   
+    "scripts": {
+      "start": "node --enable-fips app.js"
+    }
+}
+```
+{: codeblock}
+
+下表說明 node.js 第 6 版在使用 FIPS 時的行為。
+
+|                 |--enable-fips  |NO --enable-fips |
+| :-------------- | :------------ | :-------------- |
+|FIPS_MODE=true   |成功 (1)       |成功 (2)         |
+|FIPS_MODE !=true |失敗 (3)       |成功 (4)         |
+
+* 成功 (1)
+  * 1IPS 正在使用中。
+  * staging_task.log 將包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * process.versions.openssl 所傳回的值將包含 "fips"。
+  * crypto.fips 將傳回 1，指出 FIPS 正在使用中。
+* 成功 (2)
+  * FIPS 目前*不* 在使用中。
+  * staging_task.log 將包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * process.versions.openssl 所傳回的值將包含 "fips"。
+  * crypto.fips 將傳回 0，指出 FIPS 目前*不* 在使用中。
+* 失敗 (3)
+  * FIPS 目前*不* 在使用中。
+  * staging_task.log *不* 會包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * 編譯打包將會失敗，訊息為「ERR node：選項錯誤：--enable-fips」。
+* 成功 (4)
+  * FIPS 目前*不* 在使用中。
+  * staging_task.log *不* 會包括*正在安裝已啟用 FIPS 功能的 IBM SDK for Node.js* 訊息。
+  * process.versions.openssl 所傳回的值*不* 會包含 "fips"。
+  * crypto.fips 將傳回 0，指出 FIPS 目前*不* 在使用中。
 
 
 ## Node.js 建置套件
@@ -167,20 +259,20 @@ Bluemix 提供多個版本的 Node.js 建置套件。
 
 一般而言，可以使用現行 **sdk-for-nodejs** 建置套件和前一版的版本。若要查看所有可用的建置套件，請使用 **cf buildpacks** 指令。例如：
 <pre>
-      cf buildpacks
+cf buildpacks
       Getting buildpacks...
-
       buildpack                                 position   enabled   locked   filename   
 
-      sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
       nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
-      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
-</pre>
+      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip</pre>
 {: codeblock}
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)
+{: #general}
+* [Node.js 建置套件的最新更新項目](updates.html)
 * [應用程式管理](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

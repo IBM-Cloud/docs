@@ -12,7 +12,8 @@ copyright:
 # Buildpack-Standardwerte
 {: #buildpack_defauts}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Das Liberty-Buildpack wird in Bluemix häufig aktualisiert. Jedes Release kann Sicherheitskorrekturen oder Feature-Erweiterungen enthalten.
 
@@ -21,6 +22,20 @@ oder das Liberty-Feature-Set für WAR- oder EAR-Anwendungen. Einige der Standard
 Anwendung beeinträchtigt werden kann. Um zu verhindern, dass die Anwendung durch Änderungen an den Buildpackstandardwerten
 beeinträchtigt wird, führen Sie die entsprechenden Schritte durch, um Ihre Anwendung so zu konfigurieren, dass
 nicht auf die Buildpackstandardwerte zurückgegriffen werden muss.
+
+## Liberty-Versionen
+{: #liberty_versions}
+
+Das Buildpack stellt zwei Versionen der Liberty-Laufzeit bereit:
+1. Das stabile Release
+  * Dies ist die Standard-Liberty-Laufzeit.
+  * Es stellt keine [Beta-Features](usingBetaFeatures.html) bereit.
+  * Es wird normalerweise vierteljährlich aktualisiert.
+
+2. Die neueste Betaversion
+  * Sie muss durch Angabe des Werts **"version: +"** für die Umgebungsvariable **JBP_CONFIG_LIBERTY** explizit aktiviert werden.
+  * Sie stellt [Beta-Features](usingBetaFeatures.html) bereit.
+  * Sie wird normalerweise monatlich aktualisiert.
 
 ## Liberty-Features
 {: #liberty_features}
@@ -49,7 +64,10 @@ während die übergeordnete Version nur selten aktualisiert wird. Änderungen an
 
 Damit sichergestellt ist, dass die Anwendung nicht durch Änderungen an der übergeordneten Version beeinträchtigt wird, legen Sie die Umgebungsvariable wie in [JRE anpassen](customizingJRE.html) beschrieben auf die entsprechende JRE-Version fest. Die besten Ergebnisse erzielen Sie, wenn Sie für Ihre Anwendungen Java 8 verwenden.
 
+
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Ultimo aggiornamento: 16 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Il runtime Python su {{site.data.keyword.Bluemix}} si avvale del python_buildpack.
 Il python_buildpack fornisce un ambiente di runtime completo per le applicazioni Python.
@@ -57,5 +58,7 @@ il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack)
 per distribuire l'applicazione.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Pacchetto di build Cloud Foundry per Python](https://github.com/cloudfoundry/python-buildpack)

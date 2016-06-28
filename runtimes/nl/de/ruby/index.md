@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Letzte Aktualisierung: 16. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Die Laufzeit von Ruby in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ruby_buildpack'.
 Das Buildpack 'ruby_buildpack' bietet eine vollständige Laufzeitumgebung für Ruby-Apps.
@@ -55,6 +56,8 @@ Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfound
 Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Cloud Foundry-Buildpack für Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Dokumentation zu Ruby on Rails](http://rubyonrails.org/documentation/)

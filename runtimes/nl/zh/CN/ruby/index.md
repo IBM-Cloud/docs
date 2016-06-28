@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*上次更新时间：2016 年 3 月 16 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。
 {: shortdesc}
@@ -34,7 +35,8 @@ copyright:
   ruby '2.1.7'
   gem 'sinatra', '>= 0'
 gem 'haml', '>= 0'
-gem 'json', '>=0'```
+gem 'json', '>=0'
+```
 {: codeblock}
 
 如果未指定版本，缺省情况下会选择 V2.2.2。
@@ -53,6 +55,8 @@ gem 'json', '>=0'```
 如果您应用程序所需的 Ruby 版本没有列在上述列表中，那么可以使用外部 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) 来部署应用程序。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [用于 Ruby 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails 文档](http://rubyonrails.org/documentation/)

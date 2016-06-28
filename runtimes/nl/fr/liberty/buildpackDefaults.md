@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -12,7 +12,8 @@ Copyright :
 # Valeurs par défaut du pack de construction
 {: #buildpack_defauts}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 Le pack de construction Liberty est mis à jour régulièrement dans Bluemix. Chaque édition peut contenir des correctifs de sécurité ou des
 améliorations de fonction.
@@ -21,6 +22,20 @@ Le pack de construction possède des valeurs par défaut pour des paramètres te
 applications WAR ou EAR. Certaines des valeurs par défaut peuvent changer d'une édition de pack de construction à l'autre, ce qui peut avoir un impact
 négatif sur l'application. Pour éviter que l'application ne soit affectée par la modification des valeurs par défaut du pack de construction, configurez
 votre application de sorte qu'elle ne s'appuie pas sur les valeurs par défaut du pack de construction.
+
+## Versions de Liberty
+{: #liberty_versions}
+
+Le pack de construction fournit deux versions de l'environnement d'exécution Liberty :
+1. Edition stable
+  * Il s'agit de l'environnement d'exécution Liberty par défaut.
+  * Elle ne fournit pas de [fonction bêta](usingBetaFeatures.html).
+  * Elle est généralement mise à jour tous les trimestres.
+
+2. Edition bêta la plus récente
+  * Elle doit être activée de manière explicite en affectant à la variable d'environnement **JBP_CONFIG_LIBERTY** la valeur **"version: +"**. 
+  * Elle fournit des [fonctions bêta](usingBetaFeatures.html).
+  * Elle est généralement mise à jour tous les mois.
 
 ## Fonctions Liberty
 {: #liberty_features}
@@ -47,7 +62,10 @@ version majeure de l'environnement d'exécution Java (JRE) peut avoir un impact 
 Pour faire en sorte que l'application ne soit pas affectée par la modification de version majeure, affectez à la variable d'environnement la version JRE appropriée, comme indiqué dans la section [Personnalisation de l'environnement d'exécution Java](customizingJRE.html). Pour de meilleurs
 résultats, adoptez Java 8 pour vos applications.
 
+
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

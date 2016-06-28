@@ -13,7 +13,22 @@ copyright:
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 17 giugno 2016*
+{: .last-updated}
+
+### 17 giugno 2016: pacchetto di build Liberty aggiornato v3.0-20160608-1450
+* Il pacchetto di build ora contiene due versioni di WebSphere Liberty, l'ultima release stabile e l'ultima release beta. Nello specifico, fornisce la release stabile [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e la release beta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). La release stabile sarà utilizzata per impostazione predefinita. Consulta [Versioni Liberty](buildpackDefaults.html#liberty_versions) per ulteriori dettagli. 
+
+### 25 maggio 2016: pacchetto di build Liberty aggiornato v2.9-20160519-1249
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di maggio](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versione aggiornata di Liberty rende disponibile le funzioni beta *bluemixLogCollector-1.1* e *logstashCollector-1.1* in Bluemix.
+
+### 5 maggio 2016: pacchetto di build Liberty aggiornato v2.8-20160430-1011
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di aprile](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versione aggiornata di Liberty rende disponibile la funzione GA *logstashCollector-1.0* e la funzione beta *logmetCollector-1.0* in Bluemix.
+* Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR3 e 7.1 SR3 FP40. 
+* Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione [AppDynamics](https://www.appdynamics.com/).
+* Il supporto [Dynatrace](dynatrace.html) è stato migliorato per semplificare l'installazione dell'agent.
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Contiene una correzione per un problema con il raccoglitore dei dati di heap massimi.
+* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../../manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.13 più recente.
 
 ### 25 marzo 2016: pacchetto di build Liberty aggiornato v2.7-20160321-1358
 * Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versione aggiornata di Liberty rende disponibile la funzione beta cloudant-1.0 in Bluemix.
@@ -217,7 +232,9 @@ VCAP_SERVICES e fornire i jar client ektorp non è più necessario.
   * Quando ne verrà eseguito nuovamente il push, le tue applicazioni utilizzeranno IBM SDK for Java Versione 7.1-1.0. Questo si traduce in un notevole miglioramento delle prestazioni. La tua applicazione mostra ora una migliore
 velocità effettiva e un utilizzo della memoria ridotto. Per ulteriori informazioni su IBM Java SDK fai clic [qui](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
 
-  # rellinks
-  ## general
+# rellinks
+{: #rellinks}
+## general
+{: #general}
   * [Runtime Liberty](index.html)
   * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

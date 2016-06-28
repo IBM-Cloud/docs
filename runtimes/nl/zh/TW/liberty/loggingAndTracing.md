@@ -12,12 +12,14 @@ copyright:
 # 記載和追蹤
 {: #logging_tracing}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
 ## 日誌檔
 {: #log_files}
 
 IBM Bluemix 中有標準 Liberty 日誌可供使用，例如 messages.log 或 ffdc 目錄，它們位於每一個應用程式實例的 logs 目錄中。這些日誌可以從 IBM Bluemix 主控台或使用 cf logs 和 cf files 指令進行存取。例如，若要查看 messages.log 檔案，請執行下列指令：
+
 ```
     $ cf files <yourappname> logs/messages.log
 ```
@@ -32,9 +34,11 @@ IBM Bluemix 中有標準 Liberty 日誌可供使用，例如 messages.log 或 ff
 * 使用 Trace 可以檢視及更新執行中之應用程式實例上的 Liberty 記載 traceSpecification。
 * 使用 Dump 可以在執行中的應用程式實例上建立及操作執行緒與資料堆傾出。
 
-若要執行此動作，請在使用者介面中選取 Liberty 應用程式。在左側導覽的「執行時期」之下，您可以開啟實例詳細資料。請選取一個或多個實例。在「動作」功能表下，您可以選擇 TRACE 或 DUMP。
+若要執行此動作，請在使用者介面中選取 Liberty 應用程式。在左側導覽的「運行環境」之下，您可以開啟實例詳細資料。請選取一個或多個實例。在「動作」功能表下，您可以選擇 TRACE 或 DUMP。
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

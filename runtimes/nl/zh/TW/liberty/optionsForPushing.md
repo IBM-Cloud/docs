@@ -12,10 +12,11 @@ copyright:
 # 推送 Liberty 應用程式的選項
 {: #options_for_pushing}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的執行時期環境。
-它們對於在雲端之間提供可攜性以及對開放式雲端架構的貢獻而言很關鍵。Liberty 建置套件提供 WebSphere Liberty 儲存器，可以執行 Java EE 7 及 OSGi 應用程式。
+Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的運行環境。
+它們對於在雲端之間提供可攜性以及對開放式雲端架構的貢獻而言很關鍵。Liberty 建置套件提供 WebSphere Liberty 容器，可以執行 Java EE 7 及 OSGi 應用程式。
 它支援例如 Spring 的熱門架構，且包含了 IBM JRE。WebSphere Liberty 讓您能進行適合雲端的快速應用程式開發。Liberty 建置套件支援部署到單一 Liberty 伺服器的多個應用程式。當 Liberty 建置套件整合到 Bluemix 時，建置套件會確保連結服務的環境變數在 Liberty 伺服器中都顯示為配置變數。
 
 您可以使用下列方法將 Liberty 應用程式部署至 Bluemix。
@@ -37,7 +38,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 部署獨立式應用程式之後，會為該應用程式提供預設的 Liberty 配置。預設配置會啟用下列 Liberty 特性：
 
@@ -63,26 +64,26 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 附註：若要取得最佳結果，請使用 JBP_CONFIG_LIBERTY 環境變數設定 Liberty 特性，或使用自訂 server.xml 檔案，將應用程式部署為[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)。設定此環境變數可確保您的應用程式只使用它需要的特性，且不受建置套件預設 Liberty 特性集變更的影響。如果您需要提供特性集以外的額外 Liberty 配置，請使用[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)選項來部署應用程式。
 
 如果您已部署 WAR 檔，則可以在內嵌的 ibm-web-ext.xml 檔案中所設定的環境定義根目錄下存取 Web 應用程式。如果 ibm-web-ext.xml 檔案不存在，或未指定環境定義根目錄，則可以在根環境定義下存取應用程式。例如，
-				
 
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
-如果您已部署 EAR 檔，可在 EAR 部署描述子所定義的環境定義根目錄下，存取內嵌的 Web 應用程式。例如：
+如果您已部署 EAR 檔，可在 EAR 部署描述子所定義的環境定義根目錄下，存取內嵌的 Web 應用程式。例如，
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 整個預設的 Liberty server.xml 配置檔如下：
+
 ```
     <server>
        <featureManager>
@@ -116,7 +117,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -126,14 +127,14 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 重要事項：為了讓環境變數的變更能夠生效，您必須重新編譯打包應用程式：
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 伺服器目錄
 {: #server_directory}
@@ -145,7 +146,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 如果您的工作站上未安裝 Liberty 設定檔，您可以使用下列步驟，以您的應用程式來建立伺服器目錄：
 
@@ -162,26 +163,26 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
             <feature>jsp-2.3</feature>
         </featureManager>
 
-        <httpEndpoint id='defaultHttpEndpoint' host='*' httpPort='8080' />
+        <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 伺服器目錄備妥之後，您可以將它部署至 Bluemix。
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 附註：已部署為該伺服器目錄一部分的 Web 應用程式，可在[環境定義根目錄（由 Liberty 設定檔決定）](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)下進行存取。例如：
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 包裝伺服器
 {: #packaged_server}
@@ -193,14 +194,14 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 這個指令會在伺服器目錄中產生 serverName.zip 檔案。然後，您可以使用 cf push 指令，將該壓縮檔推送至 Bluemix。例如：
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 附註：已部署為包裝伺服器一部分的 Web 應用程式，可在環境定義根目錄（由 Liberty 設定檔決定）下進行存取。
 
@@ -252,6 +253,8 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 對於 Liberty 建置套件未自動配置的連結服務，應用程式需要自行管理後端資源的存取。
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -12,7 +12,8 @@ copyright:
 # Opciones para enviar aplicaciones Liberty
 {: #options_for_pushing}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 El comportamiento del servidor Liberty en Bluemix se controla mediante el paquete de compilación de Liberty. Los paquetes de compilación pueden ofrecer un entorno de tiempo de ejecución completo para una determinada clase de aplicaciones. Constituyen la clave para ofrecer portabilidad entre nubes y contribuir a una arquitectura de nube abierta. El paquete de compilación de Liberty proporciona un contenedor WebSphere Liberty capaz de ejecutar aplicaciones Java EE 7 y OSGi. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube. El paquete de compilación de Liberty da soporte a varias aplicaciones que se despliegan en un único servidor Liberty. Como parte de la integración del paquete de compilación de Liberty en Bluemix, el paquete de compilación garantiza que las variables de entorno para los servicios de enlace se muestran como variables de configuración en el servidor Liberty.
 
@@ -35,7 +36,7 @@ Por ejemplo:
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 Cuando se despliega una aplicación autónoma, se proporciona una configuración predeterminada de Liberty para la aplicación. La configuración predeterminada activa las siguientes características de Liberty:
 
@@ -61,7 +62,7 @@ Estas características corresponden a las características de Java EE 7 Web Prof
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: Para obtener los mejores resultados, establezca las características de Liberty con la variable de entorno JBP_CONFIG_LIBERTY o despliegue su aplicación como un [directorio de servidor](optionsForPushing.html#server_directory) o [servidor empaquetado](optionsForPushing.html#packaged_server) con un archivo server.xml personalizado. Setting this environment variable ensures that your application uses only the feature that it needs and it is not affected by the buildpack's default Liberty feature set changes. Si necesita proporcionar configuración adicional de Liberty más allá del conjunto de características, utilice el 					[directorio de servidor](optionsForPushing.html#server_directory) o la opción [servidor empaquetado](optionsForPushing.html#packaged_server) para desplegar su aplicación.
 
@@ -70,14 +71,14 @@ Si ha desplegado un archivo WAR, la aplicación web estará accesible bajo la ra
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 Si ha desplegado un archivo EAR, se puede acceder a la aplicación web incorporada bajo la raíz de contexto definida en el descriptor de despliegue de EAR. Por ejemplo,
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 A continuación se muestra el archivo predeterminado de configuración de Liberty server.xml completo:
 ```
@@ -113,7 +114,7 @@ A continuación se muestra el archivo predeterminado de configuración de Libert
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -124,14 +125,14 @@ Por ejemplo:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 Importante: Para que los cambios en las variables de entorno de su entorno se hagan efectivos, debe volver a transferir su aplicación:
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Directorio de servidor
 {: #server_directory}
@@ -144,7 +145,7 @@ Por ejemplo, su el servidor Liberty se denomina defaultServer, ejecute el mandat
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Si un perfil de Liberty no está instalado en la estación de trabajo, puede utilizar los pasos siguientes para crear un directorio del servidor con la aplicación:
 
@@ -166,21 +167,21 @@ Si un perfil de Liberty no está instalado en la estación de trabajo, puede uti
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 Cuando el directorio del servidor esté listo, puede desplegarlo en Bluemix.
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directorio del servidor bajo la [raíz de contexto, tal como determina el perfil de Liberty](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). Por ejemplo:
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Servidor empaquetado
 {: #packaged_server}
@@ -193,7 +194,7 @@ Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 Este mandato genera un archivo serverName.zip en el directorio del servidor. Luego puede enviar por push este archivo comprimido a Bluemix con el mandato cf push.
 Por ejemplo:
@@ -201,7 +202,7 @@ Por ejemplo:
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: Se puede acceder a las aplicaciones web desplegadas como parte del servidor empaquetado bajo la raíz de contexto, tal como determina el perfil de Liberty.
 
@@ -256,6 +257,8 @@ connection.name: identificador exclusivo de la conexión, que adopta el formato 
 Para los servicios enlazados que el paquete de compilación de Liberty no configura automáticamente, la aplicación tiene que gestionar por su cuenta el acceso del recurso de fondo.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

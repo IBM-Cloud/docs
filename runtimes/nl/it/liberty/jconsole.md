@@ -11,7 +11,8 @@ copyright:
 # Monitoraggio di Liberty in Bluemix con JConsole
 {: #jconsole}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 ## La procedura per monitorare il runtime Liberty Bluemix con JConsole è la seguente:
 {: #steps_to_monitor}
@@ -40,27 +41,27 @@ a una singola istanza. Il tuo file server.xml deve contenere le funzioni `monito
            <user>jconuser</user>
        </administrator-role>
 ```
-{: #codeblock}
+{: codeblock}
 
    * Nota: la password deve essere codificata con lo strumento securityUtility fornito da Liberty.
 
 ### Avvia l'applicazione JConsole
-{: #start_jconsole_app}
+{: start_jconsole_app}
 
 La JConsole è inclusa con l'installazione Java.  Per avviare l'applicazione JConsole vai in &lt;java-home&gt;/bin ed esegui il seguente comando:
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Potresti dover trasmettere ulteriori parametri per configurare il trustStore Java. I seguenti parametri dovrebbero funzionare nella maggior parte dei casi:
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Completa la connessione
-{: #start_jconsole_app}
+{: start_jconsole_app}
   * Compila il campo Processo remoto con il seguente URL:
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
   *  Compila inoltre i campi Username e Password con un utente con ruolo administrator-role e una password dal file server.xml.
@@ -82,7 +83,7 @@ Viene qui di seguito riportato un file di proprietà di registrazione di esempio
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
 ```
-{: #codeblock}
+{: codeblock}
 
 Puoi anche aggiungere <b>&dash;J&dash;Djavax.net.debug=ssl</b> al comando jconsole. Ciò produce la traccia di diagnostica SSL in una finestra di output JConsole
 separata.  Infine, puoi abilitare la traccia sul lato server aggiungendo quanto segue al tuo file server.xml:
@@ -92,6 +93,8 @@ separata.  Infine, puoi abilitare la traccia sul lato server aggiungendo quanto 
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

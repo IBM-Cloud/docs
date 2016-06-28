@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -13,7 +13,22 @@ Copyright :
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 17 juin 2016*
+{: .last-updated}
+
+### 17 juin 2016 : Pack de construction Liberty v3.0-20160608-1450 mis à jour
+* Le pack de construction contient désormais deux versions de WebSphere Liberty. Il s'agit de l'édition stable et de l'édition bêta les plus récentes. Plus spécifiquement, il contient l'édition stable [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) et l'édition bêta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). L'édition stable sera utilisée par défaut. Pour plus d'informations, voir [Liberty versions](buildpackDefaults.html#liberty_versions).  
+
+### 25 mai 2016 : Pack de construction Liberty v2.9-20160519-1249 mis à jour
+* Le pack de construction contient une version mise à jour de WebSphere Liberty basée qui repose sur la [version bêta de mai](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La version mise à jour de Liberty met à disposition les fonctions bêta *bluemixLogCollector-1.1* et *logstashCollector-1.1* disponibles dans Bluemix.
+
+### 5 mai 2016 : Pack de construction Liberty v2.8-20160430-1011 mis à jour
+* Le pack de construction contient une version mise à jour de WebSphere Liberty qui repose sur la [version bêta d'avril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La version mise à jour de Liberty met à disposition la fonction GA *logstashCollector-1.0* et la fonction bêta *logmetCollector-1.0* disponibles dans Bluemix.
+* Le pack de construction contient également les versions mises à jour d'IBM JRE : 8 SR3 et 7.1 SR3 FP40. 
+* Le pack de construction ajoute la prise en charge initiale de l'agent de surveillance d'application [AppDynamics](https://www.appdynamics.com/). 
+* La prise en charge de [Dynatrace](dynatrace.html) a été améliorée afin de simplifier l'installation de l'agent. 
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Il contient un correctif destiné à remédier un problème lié à la collecte de données de segment de mémoire maximales. 
+* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell d'App Management](../../manageapps/app_mng.html#app_management) a été mis à jour vers la version 0.12.13 la plus récente. 
 
 ### 25 mars 2016 : Pack de construction Liberty v2.7-20160321-1358 mis à jour
 * Le pack de construction contient une version mise à jour du profil Liberty qui repose sur la [version bêta de mars](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La version mise à jour de Liberty met à disposition la fonction bêta cloudant-1.0 dans Bluemix.
@@ -21,7 +36,7 @@ Copyright :
 * Le pack de construction fournit une version mise à jour de l'agent pour le [service Auto-Scaling](../../services/Auto-Scaling/index.html). 
 * Le pack de construction comporte désormais un nouveau collecteur de données pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Le nouveau collecteur active la configuration des seuils de surveillance et contient un certain nombre de correctifs de bogue.
 * Le pack de construction fournit un pilote JDBC DB2 version 4.19.49 mis à jour. 
-* Le contexte d'exécution Node.js dont se servent les [utilitaires devconsole et shell
+* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell
 d'App Management](../../manageapps/app_mng.html#app_management) a  été mis à jour vers la version 0.12.12 la plus récente.
 
 ### 7 mars 2016 : Pack de construction Liberty v2.6-20160225-1649 mis à jour
@@ -43,7 +58,7 @@ profil Liberty basée sur la [version bêta de décembre](https://developer.ibm.
 * Le pack de construction a été mis à jour pour télécharger le dernier niveau du [pilote JDBC PostgreSQL 9.4.x](https://jdbc.postgresql.org/) et du [pilote JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.2.x lors de l'exécution de la [configuration automatique](autoConfig.html) des types de service PostgreSQL ou MySQL.
 
 ### 23 novembre 2015 : Pack de construction Liberty v2.2-20151119-1720 mis à jour
-* Le pack de construction contient une version mise à jour du contexte d'exécution du profil Liberty et du client WebSphere eXtreme Scale avec des
+* Le pack de construction contient une version mise à jour de l'environnement d'exécution du profil Liberty et du client WebSphere eXtreme Scale avec des
 correctifs de sécurité pour [la vulnérabilité
 d'Apache Commons Collection](http://www-01.ibm.com/support/docview.wss?uid=swg21971426).
 * Le pack de construction contient également une version mise à jour du
@@ -99,14 +114,14 @@ intégralement prises en charge sur la plateforme.
 * Le pack de construction reconnaît et exécute des packages d'applications avec [distZip-style](https://docs.gradle.org/current/userguide/application_plugin.html).
 * Le pack de construction contient un collecteur de données mis à jour pour le
 [service Monitoring and Analytics](../../services/monana/index.html) ainsi que le
-client WebSphere eXtreme Scale qui prennent en charge la nouvelle version du contexte d'exécution Liberty.
+client WebSphere eXtreme Scale qui prennent en charge la nouvelle version de l'environnement d'exécution Liberty.
 
 ### 30 juin 2015 : Pack de construction Liberty v1.19.1-20150622-1509 mis à jour
 * Cette version du pack de construction contient un environnement d'exécution Java IBM JRE mis à jour avec un correctif de sécurité pour la
 [vulnérabilité LogJam](http://www-01.ibm.com/support/docview.wss?uid=swg21961390).
 * L'agent
 [New
-Relic](newRelic.html) a été mis à jour vers la version 3.17. La nouvelle version propose une intégration améliorée au contexte d'exécution du profil Liberty.
+Relic](newRelic.html) a été mis à jour vers la version 3.17. La nouvelle version propose une intégration améliorée à l'environnement d'exécution du profil Liberty.
 
 ### 14 juin 2015 : Pack de construction Liberty v1.19-20150608-1717 mis à jour
 * Le pack de construction contient plusieurs améliorations de la gestion des applications, notamment la prise en charge de la console de développement et
@@ -157,7 +172,7 @@ mars](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-t
 un correctif de sécurité pour la [vulnérabilité FREAK](http://www-01.ibm.com/support/docview.wss?uid=swg21699864).
 * Le service [ SQL Database](services/SQLDB/index.html#SQLDB) propose des plans payants qui
 permettent de se connecter au serveur de base de données via le protocole SSL. La prise en charge de la configuration automatique du pack de construction
-pour le service SQL Database a été mise à jour pour configurer le contexte d'exécution en vue de la connexion à la base de données via SSL si les
+pour le service SQL Database a été mise à jour pour configurer l'environnement d'exécution en vue de la connexion à la base de données via SSL si les
 informations de connexion SSL sont disponibles.
 * Le pack de construction a été mis à jour pour signaler une erreur lorsqu'un fichier WAR ou EAR autonome contenant un fichier de configuration
 **server.xml** dans la racine de l'archive d'application est déployé.
@@ -203,7 +218,7 @@ production :
   * servlet-3.1
   * websocket-1.0.
 * Le pack de construction fournit l'intégration au service New Relic. Une fois qu'une application est liée au service New Relic, le pack de
-construction télécharge et configure automatiquement le contexte d'exécution avec l'agent New Relic.
+construction télécharge et configure automatiquement l'environnement d'exécution avec l'agent New Relic.
 * Les limitations connues suivantes existent pour le pack de construction :
   * En mode développement, un service SessionCache ne peut pas être lié.
   * En mode développement, il n'est pas possible de créer un cliché de l'unité d'exécution.
@@ -254,7 +269,7 @@ facilite et accélère l'utilisation de services Bluemix dans des applications L
 ### 28 août 2014 : Mise à jour du pack de construction version 1.3-20140818-1538
 * Le pack de construction contient une version mise à jour du [profil Liberty](https://developer.ibm.com/wasdev/) avec des correctifs et des améliorations.
 * Cette version du pack de construction adapte la prise en charge de la variable d'environnement JAVA_OPTS
-afin de transmettre des options JVM supplémentaires au contexte d'exécution.
+afin de transmettre des options JVM supplémentaires à l'environnement d'exécution.
 * Elle corrige également un problème empêchant le déploiement d'applications Jar autonomes basées Spring.
 * Vous pouvez à présent générer et télécharger des traces snap de la machine virtuelle Java (JVM) IBM à l'aide de l'interface utilisateur Bluemix. Pour en savoir plus sur
 les traces de snap ou d'autres informations de diagnostic générées par la machine virtuelle Java, voir la rubrique [Troubleshooting](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html) dans la documentation de la machine virtuelle Java (JVM) IBM.
@@ -267,7 +282,9 @@ la mise à disposition des fichiers JAR de client ektorp ne sont plus nécessair
 * La nouvelle version d'IBM SDK for Java est arrivée.
   * Lors du prochain envoi par commande push de vos applications, celles-ci utiliseront dorénavant la version 7.1-1.0 d'IBM SDK for Java. Cela se traduit par une amélioration substantielle des performances. Votre application devrait montrer un meilleur débit et utiliser une quantité de mémoire réduite. Pour plus d'informations sur les SDK IBM Java, cliquez [ici](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
 
-  # rellinks
-  ## general
+# rellinks
+{: #rellinks}
+## general
+{: #general}
   * [Environnement d'exécution Liberty](index.html)
   * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

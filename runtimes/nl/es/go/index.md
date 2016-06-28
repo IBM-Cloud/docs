@@ -62,6 +62,9 @@ puede utilizar el
 desplegar la aplicación.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [Paquete de compilación de Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

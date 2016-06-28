@@ -12,15 +12,15 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*最終更新日時: 2016 年 3 月 19 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Tomcat ランタイムには java_buildpack が採用されています。
 {: shortdesc}
 
 {{site.data.keyword.Bluemix}} で Tomcat ランタイムを使用するには、-b オプションを使用して java_buildpack を指定する必要があります。例えば、次のように指定します。
 <pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack</pre>
 
 Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md) を参照してください。
 
@@ -41,8 +41,8 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
 ```
 {: codeblock}
-現行のデフォルト Tomcat バージョンは 8.0.30 です。現行のデフォルト Java バージョンは 1.8.0_65 です。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases) を参照してください。
-
-# 関連リンク
+現行のデフォルト Tomcat バージョンは 8.0.30 です。現行のデフォルト Java バージョンは 1.8.0_65 です。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases) を参照してください。# 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

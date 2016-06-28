@@ -12,7 +12,8 @@ copyright:
 # Configuración automática de servicios enlazados
 {: #auto_config}
 
-*Última actualización: 31 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 Puede enlazar diversos servicios a su aplicación Liberty. Los servicios se pueden gestionar mediante contenedor, mediante aplicación o ambos, en función de lo que desee el desarrollador.
 
@@ -97,7 +98,7 @@ Es decir, la gramática de la serie es la siguiente:
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **Importante**: El tipo de servicio que especifique debe coincidir con la etiqueta de servicio que aparece en la variable de entorno VCAP_SERVICES. No se permiten espacios en blanco.
 **Importante**: No se permiten espacios en blanco en <service_type_specification>. Sólo se permiten espacios en blanco para separar varias instancias de <service_type_specification>.
@@ -116,7 +117,7 @@ A continuación se muestra un ejemplo de especificaciones opt-out en un archivo 
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 A continuación se muestran ejemplos de cómo establecer la variable
 de entorno services_autoconfig_excludes para la aplicación
@@ -126,9 +127,11 @@ myapp mediante la interfaz de línea de mandatos.
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

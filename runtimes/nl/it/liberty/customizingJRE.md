@@ -11,7 +11,8 @@ copyright:
 # Personalizzazione del JRE
 {: #customizing_jre}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Le applicazioni vengono eseguite in un JRE (Java runtime
 environment) fornito e configurato dal pacchetto di build Liberty. Il pacchetto di build Liberty rende anche possibile configurare la versione o il tipo di JRE, personalizzare
@@ -30,7 +31,7 @@ Per impostazione predefinita, viene utilizzato IBM JRE versione 8. Utilizza la v
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La proprietà version può essere impostata su un intervallo di versioni. Gli intervalli di versione supportati
 sono due: 1.7.+ e 1.8.+. Per dei risultati ottimali, utilizza Java 8.
@@ -44,7 +45,7 @@ lo strumento riga di comando, esegui il comando:
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
-{: #codeblock}
+{: codeblock}
 
 Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJDK  per specificare una versione alternativa di OpenJDK. Ad
 				esempio, per utilizzare l'OpenJDK 7 più recente, imposta la seguente variabile di
@@ -52,7 +53,7 @@ Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. 
 ```
     $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La proprietà version può essere impostata su un intervallo di versioni come 1.7.+ o qualsiasi versione
 				specifica elencata nell'[elenco di versioni OpenJDK disponibili](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Per dei risultati ottimali, utilizza Java 8.
@@ -82,7 +83,7 @@ le opzioni di dump JVM e terminando i processi quando la memoria di un'applicazi
 l'errore al Loggregator.
   * se un'applicazione è configurata per abilitare i dump di memoria JVM, l'interruzione dei processi Java è disabilitata e i dump di memoria JVM vengono instradati a una directory "dumps" dell'applicazione	comune. Questi dump possono essere quindi visualizzati dal dashboard Bluemix o dalla CLI CF.
 
-Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria 512M:
+Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria di 512 M:   
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -93,7 +94,7 @@ Il seguente è un esempio della configurazione JVM predefinita di esempio genera
     -Xdump:tool:events=systhrow,filter=java/lang/OutOfMemoryError,request=serial+exclusive,exec=../../../../.buildpack-diagnostics/killjava.sh
     -Dcom.ibm.tx.jta.disable2PC=true
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Personalizzazione della configurazione della JVM
 {: #customizing_jvm}
@@ -188,7 +189,7 @@ Le opzioni JVM per l'applicazione JAVA autonoma sono mantenute come opzioni dell
 ```
     $ cf files myapp staging_info.yml
 ```
-{: #codeblock}
+{: codeblock}
 
 Le opzioni JVM per la distribuzione di WAR, EAR, directory server e server in pacchetto sono memorizzate in un file jvm.options.
 
@@ -196,42 +197,44 @@ Per visualizzare il file jvm.options per WAR, EAR e directory server, esegui il 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
-{: #codeblock}
+{: codeblock}
 
 Per visualizzare il file jvm.options per un server in pacchetto, sostituisci <nomeServer> con il nome del tuo server ed esegui il comando:
 ```
     $ cf files myapp app/wlp/usr/servers/<nomeServer>jvm.options
 ```
-{: #codeblock]
+{: codeblock}
 
 #### Utilizzo di esempio
 {: #example_usage}
 
 Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare la registrazione della raccolta di dati inutilizzati dettagliata della JVM di IBM JRE:
 * Le opzioni JVM incluse nel file manifest.yml di un'applicazione:
-```
+
+  <pre>
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Per visualizzare la registrazione della raccolta di dati inutilizzati dettagliata della JVM:
-```
+
+  <pre>
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-```
-{: #codeblock}    
+  </pre>
+  {: codeblock}    
 
-* Aggiornamento dell'opzione JVM di IBM JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory):
+* Per aggiornare l'opzione JVM di IBM JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory), impostare la variabile di ambiente dell'applicazione con l'opzione JVM e riavviare l'applicazione:
 
-Imposta la variabile di ambiente dell'applicazione con l'opzione JVM e riavvia l'applicazione.
-```
+  <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Per visualizzare i dump JVM generati quando viene attivata la condizione di memoria esaurita:
-```
+
+  <pre>
     $ cf files myapp dumps
 
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
@@ -240,8 +243,8 @@ Imposta la variabile di ambiente dell'applicazione con l'opzione JVM e riavvia l
     Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 ### Sovrapposizione del JRE
 {: #overlaying_jre}
@@ -289,18 +292,20 @@ Ad esempio, se desideri utilizzare la crittografia AES a 256 bit, devi soprappor
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Scarica i file di politica senza limitazioni appropriati e aggiungili all'applicazione come:
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Quando esegui il push dell'applicazione, questi jar si sovrappongono ai jar di politica predefiniti nel runtime Java. Questi processo abilita la crittografia AES a 256 bit.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

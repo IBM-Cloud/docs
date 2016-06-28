@@ -12,7 +12,8 @@ copyright:
 # Protokollierung und Tracing
 {: #logging_tracing}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 ## Protokolldateien
 {: #log_files}
@@ -36,6 +37,8 @@ In der Benutzerschnittstelle von IBM Bluemix gibt es Trace- und Speicherauszugsf
 Wählen Sie hierzu eine Liberty-Anwendung in der Benutzerschnittstelle aus. Unter 'Laufzeit' in der Navigation auf der linken Seite können die Instanzdetails geöffnet werden. Wählen Sie eine oder mehrere Instanzen aus. Im Menü 'Aktionen' können Sie TRACE oder SPEICHERAUSZUG auswählen.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

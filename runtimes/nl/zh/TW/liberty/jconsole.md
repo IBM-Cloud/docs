@@ -11,9 +11,10 @@ copyright:
 # 使用 JConsole 在 Bluemix 中監視 Liberty
 {: #jconsole}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-## 使用 JConsole 監視 Bluemix Liberty 執行時期的步驟如下：
+## 使用 JConsole 監視 Bluemix Liberty 運行環境的步驟如下：
 {: #steps_to_monitor}
 
 1. 在包含適當 server.xml 的伺服器套件內推送您的應用程式。
@@ -39,27 +40,29 @@ copyright:
            <user>jconuser</user>
        </administrator-role>
 ```
-{: #codeblock}
+{: codeblock}
 
    * 附註：密碼應該使用 Liberty 提供的 securityUtility 工具加以編碼。
 
 ### 啟動 JConsole 應用程式
-{: #start_jconsole_app}
+{: start_jconsole_app}
 
 JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，請移至 &lt;java-home&gt;/bin，並執行下列指令：
+
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 您可能必須傳遞其他參數才能配置 Java 信任儲存庫。下列參數在大部分情況下應該都適用：
+
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
-{: #codeblock}
+{: codeblock}
 
 ### 完成連線
-{: #start_jconsole_app}
+{: start_jconsole_app}
   * 在 Remote Process 欄位中填寫下列 URL：
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST。
   *  同時也在 Username 及 Password 欄位中填寫來自 server.xml 檔案的 administrator-role 角色的使用者和密碼。
@@ -78,7 +81,7 @@ JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，�
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
 ```
-{: #codeblock}
+{: codeblock}
 
 您也可以將 <b>&dash;J&dash;Djavax.net.debug=ssl</b> 新增至 jconsole 指令。這會在個別 JConsole 輸出視窗中產生 SSL 診斷追蹤。最後，您可以在 server.xml 檔案中新增下列內容，以便在伺服器端啟用追蹤功能：
 ```
@@ -87,6 +90,8 @@ JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，�
 {: codeblock}
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

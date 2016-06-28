@@ -11,7 +11,8 @@ copyright:
 # メモリー制限および Liberty ビルドパック
 {: #memory_limits}
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty ビルドパックでアプリケーションをデプロイするときには、メモリー限度を指定する必要があります。
 
@@ -49,6 +50,8 @@ JVM メモリー使用について詳しくは、developerWorks の記事[『Tha
 アプリケーションは再始動する可能性がありますが、一定期間は使用不可になります。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

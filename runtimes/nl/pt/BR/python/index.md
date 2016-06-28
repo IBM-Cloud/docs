@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Última atualização: 16 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 O tempo de execução Python no {{site.data.keyword.Bluemix}} foi desenvolvido pelo python_buildpack.
 O python_buildpack fornece um ambiente de tempo de execução para apps Python.
@@ -58,5 +59,7 @@ Se seu aplicativo requerer uma versão do Python não listada, é possível usar
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Buildpack do Cloud Foundry para Python](https://github.com/cloudfoundry/python-buildpack)

@@ -11,7 +11,8 @@ copyright:
 # Liberty in Bluemix mit JConsole überwachen
 {: #jconsole}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 ## Die Schritte für die Überwachung der Bluemix-Liberty-Laufzeit mit JConsole sind wie folgt:
 {: #steps_to_monitor}
@@ -40,27 +41,27 @@ dabei eine Begrenzung auf eine Instanz vor. Die Datei 'server.xml' muss die Feat
            <user>jconuser</user>
        </administrator-role>
 ```
-{: #codeblock}
+{: codeblock}
 
    * Hinweis: Codieren Sie das Kennwort mit dem von Liberty bereitgestellten Tool 'securityUtility'.
 
 ### JConsole-App starten
-{: #start_jconsole_app}
+{: start_jconsole_app}
 
 JConsole ist in der Java-Installation enthalten.  Wechseln Sie zum Starten der JConsole-App in das Verzeichnis &lt;java-home&gt;/bin und führen Sie den folgenden Befehl aus:
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Für die Konfiguration des Java-Truststores müssen Sie möglicherweise weitere Parameter übergeben. Die folgenden Parameter funktionieren für die meisten Fälle:
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Verbindungsaufbau abschließen
-{: #start_jconsole_app}
+{: start_jconsole_app}
   * Füllen Sie das Feld 'Remote Process' mit der folgenden URL:
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
   *  Geben Sie in die Felder 'Username' und 'Password' ferner einen Benutzer mit einer Administratorrolle und das Kennwort aus der Datei 'server.xml' ein.
@@ -83,7 +84,7 @@ Beispiel für eine Eigenschaftendatei zur Protokollierung:
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
 ```
-{: #codeblock}
+{: codeblock}
 
 Sie können auch <b>&dash;J&dash;Djavax.net.debug=ssl</b> zum Befehl 'jconsole' hinzufügen. Dadurch wird ein SSL-Diagnosetracing in einem separaten JConsole-Ausgabefenster erstellt.  Zuletzt können Sie das Tracing auf der Serverseite aktivieren, indem das Folgende zur Datei 'server.xml' hinzufügen:
 ```
@@ -92,6 +93,8 @@ Sie können auch <b>&dash;J&dash;Djavax.net.debug=ssl</b> zum Befehl 'jconsole' 
 {: codeblock}
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

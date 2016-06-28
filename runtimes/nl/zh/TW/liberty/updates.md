@@ -13,7 +13,22 @@ copyright:
 
 ## Liberty 建置套件中的最新更新項目清單。
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 17 日*
+{: .last-updated}
+
+### 2016 年 6 月 17 日：已更新 Liberty 建置套件 v3.0-20160608-1450
+* 建置套件現在包含兩個版本的 WebSphere Liberty：最新的穩定版本和最新的測試版。具體而言，它提供 [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 穩定版本和 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 測試版。依預設將會使用穩定版本。如需其他詳細資料，請參閱 [Liberty 版本](buildpackDefaults.html#liberty_versions)。 
+
+### 2016 年 5 月 25 日：已更新 Liberty 建置套件 v2.9-20160519-1249
+* 建置套件包含根據 [5 月的測試版](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *bluemixLogCollector-1.1* 和 *logstashCollector-1.1* 測試版特性可在 Bluemix 中使用。
+
+### 2016 年 5 月 5 日：已更新 Liberty 建置套件 v2.8-20160430-1011
+* 建置套件包含根據 [4 月的測試版](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *logstashCollector-1.0* GA 特性和 *logmetCollector-1.0* 測試版特性可在 Bluemix 中使用。
+* 建置套件也包含 IBM JRE 的更新版本：8 SR3 和 7.1 SR3 FP40。 
+* 建置套件新增 [AppDynamics](https://www.appdynamics.com/) 應用程式監視代理程式的起始支援。
+* [Dynatrace](dynatrace.html) 支援已進行改良，可簡化代理程式的安裝。
+* 建置套件提供用於 [Monitoring and Analytics 服務](../../services/monana/index.html#monana_oview)的已更新資料收集器。它包含最大資料堆資料收集問題的修正程式。
+* [devconsole 和 shell 應用程式管理公用程式](../../manageapps/app_mng.html#app_management)所使用的 Node.js 運行環境已經更新至最新的 0.12.13 版。
 
 ### 2016 年 3 月 25 日：已更新 Liberty 建置套件 v2.7-20160321-1358
 * 建置套件包含根據 [3 月的測試版](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 cloudant-1.0 測試版特性可在 Bluemix 中使用。
@@ -21,7 +36,7 @@ copyright:
 * 建置套件提供用於 [Auto-Scaling 服務](../../services/Auto-Scaling/index.html)之代理程式的更新版本。 
 * 現在，建置套件隨附了 [Monitoring and Analytics 服務](../../services/monana/index.html#monana_oview)的新資料收集器。新的收集器可讓您配置監視臨界值，且包含許多錯誤修正程式。
 * 建置套件提供已更新的 DB2® JDBC 驅動程式 4.19.49 版。 
-* [devconsole 和 shell 應用程式管理公用程式](../../manageapps/app_mng.html#app_management)所使用的 Node.js 執行時期已更新至最新的 0.12.12 版。
+* [devconsole 和 shell 應用程式管理公用程式](../../manageapps/app_mng.html#app_management)所使用的 Node.js 運行環境已更新至最新的 0.12.12 版。
 
 ### 2016 年 3 月 7 日：已更新 Liberty 建置套件 v2.6-20160225-1649
 * 建置套件新增了 Dynatrace 應用程式監視的支援。如需詳細資料，請參閱[使用 Dynatrace](dynatrace.html)。
@@ -41,7 +56,7 @@ copyright:
 * 建置套件也已更新，會在[自動配置](autoConfig.html) PostgreSQL 或 MySQL 類型的服務時，下載最新的 [9.4.x PostgreSQL JDBC 驅動程式](https://jdbc.postgresql.org/)和 1.2.x [MariaDB Connector/J JDBC 驅動程式](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
 
 ### 2015 年 11 月 23 日：已更新 Liberty 建置套件 v2.2-20151119-1720
-* 建置套件包含更新版本的 Liberty 設定檔執行時期和 WebSphere eXtreme
+* 建置套件包含更新版本的 Liberty 設定檔運行環境和 WebSphere eXtreme
 Scale Client，以及 [Apache Commons Collection 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21971426)的安全修正程式。
 * 建置套件也包含更新版本的 [Java MongoDB
 Driver](https://docs.mongodb.org/ecosystem/drivers/java/) 2.13.3 版。新的驅動程式與 MongoDB 2.4、2.6 和 3.0 版相容。
@@ -79,12 +94,12 @@ Driver](https://docs.mongodb.org/ecosystem/drivers/java/) 2.13.3 版。新的驅
 * 建置套件包含根據 [8.5.5.6 版](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)之 Liberty 設定檔的更新版本。在此版本中，先前以測試版特性提供的所有 Java EE 7 Liberty 特性，現在提供為可用於正式作業的特性。由於 Bluemix 中的埠及其他限制，部分特性（例如遠端 EJB）在平台中未完全受到支援。
 * 建置套件會辨識並執行包裝成 [distZip 樣式](https://docs.gradle.org/current/userguide/application_plugin.html)的應用程式。
 * 建置套件包含 [Monitoring and Analytics 服務](../../services/monana/index.html)和
-WebSphere eXtreme Scale Client 的已更新資料收集器，它們可支援新的 Liberty 執行時期版本。
+WebSphere eXtreme Scale Client 的已更新資料收集器，它們可支援新的 Liberty 運行環境版本。
 
 ### 2015 年 6 月 30 日：已更新 Liberty 建置套件 v1.19.1-20150622-1509
 * 此版本的建置套件包含已更新的 IBM JRE，以及 [LogJam 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21961390)的安全修正程式。
 * [New Relic](newRelic.html) 代理程式已更新為 3.17 版。新版本提供與
-Liberty 設定檔執行時期的改良整合。
+Liberty 設定檔運行環境的改良整合。
 
 ### 2015 年 6 月 14 日：已更新 Liberty 建置套件 v1.19-20150608-1717
 * 建置套件包含許多應用程式管理加強功能，包括對開發主控台及 Web 型 Shell 存取的支援。如需詳細資料，請參閱[應用程式管理文件](../../manageapps/app_mng.html)。
@@ -112,7 +127,7 @@ Liberty 設定檔執行時期的改良整合。
 ### 2015 年 3 月 20 日：已更新 Liberty 建置套件 v1.14-20150319-1159
 * 這個版本的建置套件包含已更新的 IBM JRE 7.1.2.11 以及 [FREAK 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21699864)安全修正程式。
 * [SQL Database](services/SQLDB/index.html#SQLDB) 服務提供付費方案，這些方案提供選項來透過 SSL
-通訊協定連接資料庫伺服器。建置套件對 SQL Database 服務的自動配置支援已更新，會將執行時期配置為在有 SSL 連線資訊可用時，透過 SSL 與資料庫進行連線。
+通訊協定連接資料庫伺服器。建置套件對 SQL Database 服務的自動配置支援已更新，會將運行環境配置為在有 SSL 連線資訊可用時，透過 SSL 與資料庫進行連線。
 * 建置套件已更新，部署獨立式 WAR 或 EAR 檔時，如果應用程式保存檔的根目錄包含 **server.xml** 配置檔，便會報告錯誤。
 * 建置套件包含 MongoDB 自動配置服務外掛程式的修正程式，此外掛程式在某些情況下會產生無效的 **server.xml** 配置。
 
@@ -140,7 +155,7 @@ Liberty 設定檔執行時期的改良整合。
   * jsonp-1.0
   * servlet-3.1
   * websocket-1.0。
-* 建置套件提供與 New Relic 服務的整合。一旦應用程式連結至 New Relic 服務，建置套件就會自動使用 New Relic 代理程式下載及配置執行時期。
+* 建置套件提供與 New Relic 服務的整合。一旦應用程式連結至 New Relic 服務，建置套件就會自動使用 New Relic 代理程式下載及配置運行環境。
 * 建置套件具有下列已知限制：
   * 在開發模式中，無法連結 SessionCache 服務。
   * 在開發模式中，無法建立執行緒傾出。
@@ -176,7 +191,7 @@ Liberty 設定檔執行時期的改良整合。
 ### 2014 年 8 月 28 日：已更新 Liberty 建置套件 v1.3-20140818-1538
 * 建置套件包含 [Liberty 設定檔](https://developer.ibm.com/wasdev/)的更新版本，以及最新修正程式及改良功能。
 * 這個版本的建置套件會修正 JAVA_OPTS
-環境變數的支援，將其他的 JVM 選項傳給應用程式執行時期。
+環境變數的支援，將其他的 JVM 選項傳給應用程式運行環境。
 
 * 它也修正了導致無法部署獨立式、以 Spring 為基礎之 Jar 應用程式的問題。
 * 現在可以使用 Bluemix 使用者介面來產生及下載 IBM JVM SNAP 追蹤。請參閱 IBM JVM 文件中的[疑難排解主題](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html)，以進一步瞭解 SNAP 追蹤或 JVM 所產生的其他診斷資訊。
@@ -188,7 +203,9 @@ Liberty 設定檔執行時期的改良整合。
 * 現在 IBM SDK for Java 已有新版本！
   * 重新推送您的應用程式時，它們會使用 IBM SDK for Java 7.1-1.0 版。這具有顯著的效能升級。您的應用程式產量會變更好，且使用更少的記憶體。如需進一步瞭解 IBM Java SDK，請查看[這裡](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)。
 
-  # 相關鏈結
-  ## 一般
-  * [Liberty 執行時期](index.html)
+# 相關鏈結
+{: #rellinks}
+## 一般
+{: #general}
+  * [Liberty 運行環境](index.html)
   * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

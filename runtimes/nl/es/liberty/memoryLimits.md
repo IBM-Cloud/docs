@@ -11,7 +11,8 @@ copyright:
 # Límites de memoria y el paquete de compilación de Liberty
 {: #memory_limits}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 Se debe especificar un límite de memoria cuando se despliega una aplicación con el paquete de compilación de Liberty.
 
@@ -44,6 +45,8 @@ Cuando despliega una aplicación, se supervisa el uso de memoria de todo el proc
 * Si el límite memoria se excede mientras la aplicación está en funcionamiento, el proceso se detiene. Cloud Foundry intenta reiniciar la aplicación. Es posible que la aplicación se reinicie, pero no estará disponible durante algún tiempo.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

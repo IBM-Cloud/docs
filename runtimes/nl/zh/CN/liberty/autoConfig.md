@@ -12,7 +12,8 @@ copyright:
 # 自动配置绑定服务
 {: #auto_config}
 
-*上次更新时间：2016 年 3 月 31 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 您可以将各种服务绑定到 Liberty 应用程序。可以是容器管理服务和/或应用程序管理服务，具体取决于开发者的需要。
 
@@ -91,7 +92,7 @@ copyright:
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。**重要信息**：&lt;service_type_specification> 中不允许使用空格。空格只允许用于分隔多个 &lt;service_type_specification> 实例。
 
@@ -101,15 +102,11 @@ copyright:
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
-
-    env:
-      services_autoconfig_excludes: sqldb=config
-
-    env:
+      services_autoconfig_excludes: mongodb-2.2=allenv:
+      services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 下面是如何使用命令行界面为应用程序 myapp 设置 services_autoconfig_excludes 环境变量的示例。
 
@@ -117,9 +114,11 @@ copyright:
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

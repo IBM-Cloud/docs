@@ -12,7 +12,8 @@ copyright:
 # Padrões de buildpack
 {: #buildpack_defauts}
 
-*Última atualização: 23 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 O buildpack do Liberty é atualizado frequentemente no Bluemix. Cada liberação pode conter correções de segurança ou aprimoramentos de recurso.
 
@@ -21,6 +22,20 @@ a versão Java ou o recurso Liberty configurados para os aplicativos WAR ou EAR.
 o que pode impactar de modo adverso o aplicativo. Para evitar que o aplicativo
 seja afetado pela mudança em padrões de buildpack, execute as etapas
 para configurar o aplicativo e evitar o uso dos padrões de buildpack.
+
+## Versões do Liberty
+{: #liberty_versions}
+
+O buildpack fornece duas versões do tempo de execução do Liberty:
+1. A liberação estável
+  * É o tempo de execução padrão do Liberty.
+  * Não fornece quaisquer [recursos beta](usingBetaFeatures.html).
+  * Normalmente, é atualizado por trimestre.
+
+2. A liberação beta mais recente
+  * Deve ser ativada explicitamente configurando a variável de ambiente **JBP_CONFIG_LIBERTY** com o valor **"version: +"**.
+  * Fornece [recursos beta](usingBetaFeatures.html).
+  * Normalmente, é atualizado por mês.
 
 ## Recursos do Liberty
 {: #liberty_features}
@@ -56,7 +71,10 @@ afetar de modo adverso o aplicativo.
 Para assegurar que o aplicativo não seja afetado pela mudança da versão principal, configure a variável de ambiente com a versão apropriada do JRE, conforme descrito em [Customizando o JRE](customizingJRE.html). Para obter os melhores resultados,
 adote o Java 8 para seus aplicativos.
 
+
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Tempo de execução do Liberty](index.html)
 * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

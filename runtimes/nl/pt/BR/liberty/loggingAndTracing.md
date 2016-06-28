@@ -12,7 +12,8 @@ copyright:
 # Criação de Log e Rastreio
 {: #logging_tracing}
 
-*Última atualização: 23 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 ## Arquivos de log
 {: #log_files}
@@ -37,6 +38,8 @@ Na interface com o usuário do IBM Bluemix, existem recursos de rastreio e de du
 Para executar essa ação, selecione um aplicativo Liberty na interface com o usuário. Em Tempo de execução na navegação à esquerda, é possível abrir os detalhes da instância. Selecione uma instância ou diversas instâncias. No menu Ações, é possível escolher TRACE ou DUMP.
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Tempo de execução do Liberty](index.html)
 * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

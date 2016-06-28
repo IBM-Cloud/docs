@@ -11,10 +11,11 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*前次更新：2016 年 3 月 16 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 PHP 執行時期是採用 php_buildpack 技術。
-php_buildpack 為 PHP 應用程式提供完整的執行時期環境。
+{{site.data.keyword.Bluemix}} 上的 PHP 運行環境是採用 php_buildpack 技術。
+php_buildpack 為 PHP 應用程式提供完整的運行環境。
 {: shortdesc}
 
 在下列狀況下將使用 php_buildpack：
@@ -27,18 +28,20 @@ php_buildpack 為 PHP 應用程式提供完整的執行時期環境。
 
 {{site.data.keyword.Bluemix}} 提供 PHP 入門範本應用程式。PHP 入門範本應用程式是簡單的 PHP 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
 
-## 執行時期版本
+## 運行環境版本
 {: #runtime_versions}
 
 您可以在 composer.json 檔案中指定應用程式要使用的 PHP 版本。例如：
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-如需相關資訊，請參閱 [Composer Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages)。
+如需相關資訊，請參閱 [Composer 套件鏈結](https://getcomposer.org/doc/04-schema.md#package-links)。
 
 如果未指定版本，依預設會選擇 5.5.30 版。
 
@@ -58,7 +61,9 @@ php_buildpack 為 PHP 應用程式提供完整的執行時期環境。
 如果您的應用程式需要未列出的 PHP 版本，您可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。
 
 # 相關鏈結
-## 範例
+{: #rellinks}
+## 指導教學及範例
+{: #samples}
 * [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 一般
