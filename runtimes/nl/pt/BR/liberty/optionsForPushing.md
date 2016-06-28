@@ -12,7 +12,8 @@ copyright:
 # Opções para enviar por push os apps Liberty
 {: #options_for_pushing}
 
-*Última atualização: 23 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 O comportamento do servidor Liberty no Bluemix é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no Bluemix, o buildpack assegura que as variáveis de ambiente para os serviços de ligação sejam mostradas como variáveis de configuração no servidor Liberty.
 
@@ -35,7 +36,7 @@ Por exemplo:
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 Quando um aplicativo independente for implementado, uma configuração padrão do Liberty é fornecida ao aplicativo. A configuração padrão permite os recursos do Liberty a seguir:
 
@@ -61,7 +62,7 @@ Esses recursos correspondem aos recursos do Java EE 7 Web Profile. É possível 
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: para obter resultados melhores, configure os recursos do Liberty com a variável de ambiente JBP_CONFIG_LIBERTY ou implemente o aplicativo como um [diretório do servidor](optionsForPushing.html#server_directory) ou [servidor em pacote](optionsForPushing.html#packaged_server) com um arquivo server.xml customizado. Configurar essa variável de ambiente assegura que seu aplicativo use somente o recurso necessário e não seja afetado pelas mudanças do conjunto de recursos padrão do Liberty do buildpack. Se você precisar fornecer configuração Liberty extra além do conjunto de recursos, use o [diretório do servidor](optionsForPushing.html#server_directory) ou a opção [servidor em pacote](optionsForPushing.html#packaged_server) para implementar o seu aplicativo.
 
@@ -70,14 +71,14 @@ Se você implementou um arquivo WAR, o aplicativo da web ficará acessível sob 
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 Se você implementou um arquivo EAR, o aplicativo da Web integrado ficará acessível na raiz do contexto, conforme definido no descritor de implementação do EAR. Por exemplo,
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 O arquivo de configuração server.xml padrão inteiro do Liberty é como a seguir:
 ```
@@ -113,7 +114,7 @@ O arquivo de configuração server.xml padrão inteiro do Liberty é como a seg
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -124,14 +125,14 @@ Por exemplo:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 Importante: para que as mudanças da variável de ambiente entrem em vigor, deve-se remontar seu aplicativo:
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Diretório do servidor
 {: #server_directory}
@@ -144,7 +145,7 @@ Por exemplo, se o seu servidor Liberty for nomeado defaultServer, execute o coma
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Se um perfil Liberty não estiver instalado em sua estação de trabalho, será possível usar as etapas a seguir para criar um diretório do servidor com seu aplicativo:
 
@@ -166,21 +167,21 @@ Se um perfil Liberty não estiver instalado em sua estação de trabalho, será 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 Depois que o diretório do servidor estiver pronto, será possível implementá-lo no Bluemix.
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: os aplicativos da Web que são implementados como parte do diretório do servidor são acessíveis sob a [raiz de contexto, conforme determinado pelo perfil Liberty](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). Por exemplo:
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Servidor em pacote
 {: #packaged_server}
@@ -193,7 +194,7 @@ Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 Esse comando gera um arquivo serverName.zip no diretório do servidor. É possível então enviar por push esse arquivo compactado para o Bluemix com o comando cf push.
 Por exemplo:
@@ -201,7 +202,7 @@ Por exemplo:
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: os aplicativos da web que são implementados como parte do servidor em pacote são acessíveis sob a raiz de contexto, conforme determinado pelo perfil Liberty.
 
@@ -253,6 +254,8 @@ connection.name: um identificador exclusivo para a conexão, que assume a forma 
 Para serviços ligados que não sejam automaticamente configurados pelo buildpack do Liberty, o aplicativo precisa gerenciar o acesso do recurso de backend sozinho.
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Tempo de execução do Liberty](index.html)
 * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

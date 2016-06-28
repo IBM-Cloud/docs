@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -12,13 +12,14 @@ Copyright :
 # Configuration automatique des services liés
 {: #auto_config}
 
-*Dernière mise à jour : 31 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 Vous pouvez lier divers services à votre application Liberty. Les services peuvent être gérés par le conteneur, gérés par l'application, ou les deux, selon le souhait du développeur.
 
 Un service géré par l'application désigne un service complètement géré par l'application, sans aucune assistance de Liberty. L'application lit normalement la variable VCAP_SERVICES pour obtenir des informations sur le service lié et accède directement au service. L'application fournit tout le code d'accès client nécessaire. Il n'existe aucune dépendance par rapport aux fonctions Liberty ou à la configuration du fichier server.xml. La configuration automatique par le pack de construction Liberty ne s'applique pas aux services de ce type.
 
-Un service géré par le conteneur désigne un service qui est géré par le contexte d'exécution Liberty. Dans certains cas, l'application peut rechercher le service lié dans JNDI, alors que dans d'autres cas, le service est utilisé directement par Liberty lui-même. Le pack de construction Liberty lit VCAP_SERVICES afin d'obtenir des informations sur les services liés. Pour chaque service géré par le conteneur, le pack de construction effectue trois opérations :
+Un service géré par le conteneur désigne un service qui est géré par l'environnement d'exécution Liberty. Dans certains cas, l'application peut rechercher le service lié dans JNDI, alors que dans d'autres cas, le service est utilisé directement par Liberty lui-même. Le pack de construction Liberty lit VCAP_SERVICES afin d'obtenir des informations sur les services liés. Pour chaque service géré par le conteneur, le pack de construction effectue trois opérations :
 
 * Génère des [variables de cloud](optionsForPushing.html#accessing_info_of_bound_services) pour le service lié.
 * Il installe les fonctions Liberty et le code d'accès  client requis pour accéder au service lié.
@@ -87,13 +88,13 @@ Vous pouvez résilier la configuration automatique des services sur une base ind
 Plus formellement, la syntaxe de la chaîne est la suivante :
 
 ```
-    Opt_out_string :: <spécification_type_service[<délimiteur>spécification_type_service]*
+    Opt_out_string :: <spécification_type_service[<delimiter>spécification_type_service]*
     <spécification_type_service> :: <type_service>=<option>
     <type_service> :: type de service (label du service tel qu'il figure dans VCAP_SERVICES)
     <option> :: all | config
     <délimiteur> :: un seul espace
 ```
-{: #codeblock}
+{: codeblock}
 
 **Important** : Le type de service que vous indiquez doit correspondre au libellé des services tel qu'il figure dans la variable d'environnement VCAP_SERVICES. Le caractère espace n'est pas admis.
 **Important** : Aucun espace n'est autorisé dans une entrée <spécification_type_service>. L'unique utilisation admise d'un espace est pour la séparation de plusieurs instances de <spécification_type_service>.
@@ -112,7 +113,7 @@ Voici quelques de résiliation de configuration automatique dans un fichier mani
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 Ci-dessous figurent des exemples de définition de la variable d'environnement services_autoconfig_excludes pour l'application myapp à l'aide de l'interface de ligne de commande.
 
@@ -120,9 +121,11 @@ Ci-dessous figurent des exemples de définition de la variable d'environnement s
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

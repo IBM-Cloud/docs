@@ -63,6 +63,9 @@ Se o seu app requer uma versão do Go não listada,
 é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para implementar o aplicativo.
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [Buildpack do Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,7 +11,8 @@ Copyright :
 # Limites mémoire et pack de construction Liberty
 {: #memory_limits}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 Une limite mémoire doit être spécifiée lorsque vous déployez une application à l'aide du pack de construction
 Liberty.
@@ -48,6 +49,8 @@ application, l'utilisation de la mémoire par le processus complet est contrôl�
 le processus est arrêté. Cloud Foundry tente de redémarrer l'application. L'application peut redémarrer, mais reste indisponible pendant un certain temps.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

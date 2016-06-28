@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,9 +11,10 @@ Copyright :
 
 # PHP
 {: #php_runtime}
-*Dernière mise à jour : 16 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
-Le contexte d'exécution PHP dans {{site.data.keyword.Bluemix}} repose sur le pack php_buildpack.
+L'environnement d'exécution PHP dans {{site.data.keyword.Bluemix}} repose sur le pack php_buildpack.
 Le pack php_buildpack fournit un environnement d'exécution complet pour les applis PHP.
 {: shortdesc}
 
@@ -27,20 +28,20 @@ Le pack php_buildpack est utilisé dans les conditions suivantes :
 
 {{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
-## Versions de contexte d'exécution
+## Versions d'environnement d'exécution
 {: #runtime_versions}
 
 Vous pouvez spécifier la version de PHP que votre application doit utiliser en utilisant le fichier composer.json. Par exemple :
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-Pour plus
-d'informations, voir [Composer
-Platform packages](https://getcomposer.org/doc/02-libraries.md#platform-packages).
+Pour plus d'informations, voir les [liens Composer Package](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Si aucune version n'est indiquée, la version 5.5.30 est choisie par défaut.
 
@@ -62,7 +63,9 @@ utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-build
 la déployer.
 
 # rellinks
-## Exemples
+{: #rellinks}
+## Tutoriels et exemples
+{: #samples}
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter ](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## general

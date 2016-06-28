@@ -12,7 +12,8 @@ copyright:
 # Liberty トピック
 {: #topics}
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 * [Liberty ランタイム](index.html)
 * [検出](index.html#detection)
@@ -32,6 +33,8 @@ copyright:
 * [最新の更新](updates.html)
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

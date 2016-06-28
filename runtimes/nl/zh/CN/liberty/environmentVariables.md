@@ -13,7 +13,8 @@ copyright:
 # 环境变量
 {: #environment_variables}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty for Java 支持的环境变量。
 
@@ -100,6 +101,8 @@ Liberty for Java 支持的环境变量。
 </table>
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

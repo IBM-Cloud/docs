@@ -12,7 +12,8 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Última actualización: 19 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 El tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix}} está basado en el java_buildpack.
 {: shortdesc}
@@ -46,5 +47,7 @@ La versión de Tomcat predeterminada actual es 8.0.30.  La versión de Java pred
 Para obtener más información, consulte [releases de java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

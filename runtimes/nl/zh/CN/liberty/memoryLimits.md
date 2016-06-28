@@ -11,7 +11,8 @@ copyright:
 # 内存限制和 Liberty buildpack
 {: #memory_limits}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 使用 Liberty buildpack 部署应用程序时，必须指定内存限制。
 
@@ -41,6 +42,8 @@ copyright:
 * 如果应用程序正在运行时超出“内存限制”，那么进程会停止。Cloud Foundry 会尝试重新启动应用程序。应用程序可能会重新启动，但在一段时间内不可用。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

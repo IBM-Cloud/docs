@@ -12,7 +12,8 @@ copyright:
 # 用于推送 Liberty 应用程序的选项
 {: #options_for_pushing}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。buildpack 可以为特定类的应用程序提供完整运行时环境。这些 buildpack 是在云中提供可移植性并构成开放式云体系结构的关键所在。Liberty buildpack 提供了能够运行 Java EE 7 和 OSGi 应用程序的 WebSphere Liberty 容器。
 它支持 Spring 等流行框架，并包含 IBM JRE。WebSphere Liberty 支持适合云的快速应用程序开发。Liberty buildpack 支持多个部署到单个 Liberty 服务器的应用程序。作为 Liberty buildpack 集成到 Bluemix 的一部分，该 buildpack 会确保用于绑定服务的环境变量在 Liberty 服务器中显示为配置变量。
@@ -36,7 +37,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 系统会为所部署的独立应用程序提供缺省 Liberty 配置。缺省配置会启用以下 Liberty 功能：
 
@@ -62,7 +63,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 注：为了获得最佳结果，请使用 JBP_CONFIG_LIBERTY 环境变量来设置 Liberty 功能，或者使用定制 server.xml 文件将应用程序部署为[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)。设置此环境变量将确保应用程序只使用其所需的功能，并且不受 buildpack 的缺省 Liberty 功能集更改的影响。如果需要提供功能集以外的额外 Liberty 配置，请使用[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)选项来部署应用程序。
 
@@ -71,16 +72,17 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 如果部署了 EAR 文件，那么可在根上下文下访问内嵌的 Web 应用程序，如 EAR 部署描述符中所定义。例如，
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 完整的缺省 Liberty server.xml 配置文件如下所示：
+
 ```
     <server>
        <featureManager>
@@ -114,7 +116,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -125,14 +127,14 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 重要信息：为了使环境变量更改生效，您必须重新编译打包应用程序：
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 服务器目录
 {: #server_directory}
@@ -144,7 +146,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 如果未在工作站上安装 Liberty 概要文件，那么可以使用以下步骤为您的应用程序创建服务器目录：
 
@@ -161,26 +163,26 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
             <feature>jsp-2.3</feature>
         </featureManager>
 
-        <httpEndpoint id='defaultHttpEndpoint' host='*' httpPort='8080' />
+        <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 准备好服务器目录后，可以将其部署到 Bluemix。
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 注：作为服务器目录的一部分部署的 Web 应用程序可在[上下文根下访问，正如在 Liberty 概要文件中确定的那样](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)。例如：
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 打包服务器
 {: #packaged_server}
@@ -192,14 +194,14 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 此命令会在服务器目录中生成 serverName.zip 文件。然后，您可以使用 cf push 命令将该压缩文件推送到 Bluemix。例如：
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 注：作为打包服务器的一部分部署的 Web 应用程序可在上下文根下访问，正如在 Liberty 概要文件中确定的那样。
 
@@ -251,6 +253,8 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 对于 Liberty buildpack 未自动配置的绑定服务，应用程序需要自己管理后端资源的访问。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

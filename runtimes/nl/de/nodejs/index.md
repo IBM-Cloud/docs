@@ -12,7 +12,8 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-*Letzte Aktualisierung: 16. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Die Laufzeit von Node.js in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'sdk-for-nodejs'.
 Das Buildpack 'sdk-for-nodejs' bietet eine vollständige Laufzeitumgebung für Node.js-Apps.
@@ -133,7 +134,7 @@ Sie können das Array **cacheDirectories** im **package.json** der höchsten Ebe
 ### FIPS MODE
 {: #fips_mode}
 
-Die Node.js-Buildpackversionen v3.2-20160315-1257 sowie höhere Versionen unterstützen [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Zur Aktivierung von FIPS müssen Sie die Umgebungsvariable FIPS_MODE auf 'true' setzen.
+Die Node.js-Buildpackversionen v3.2-20160315-1257 sowie höhere Versionen unterstützen [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Setzen Sie die Umgebungsvariable FIPS_MODE auf 'true', wenn Sie eine FIPS-fähige Knotenengine verwenden möchten.
 Beispiel:
 
 ```
@@ -141,8 +142,7 @@ Beispiel:
 ```
 {: codeblock}
 
-Beachten Sie, dass **Knotenmodule, die [MD5](https://en.wikipedia.org/wiki/MD5) nutzen, fehlschlagen**, wenn FIPS_MODE auf 'true' gesetzt ist. So schlagen
-beispielsweise [Express](http://expressjs.com/)-Module fehl.  Um dieses Problem zu umgehen, können Sie [etag](http://expressjs.com/en/api.html) in Ihrer
+Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist. Beispiel: **Knotenmodule, die [MD5](https://en.wikipedia.org/wiki/MD5) nutzen, schlagen fehl**, wie beispielsweise [Express](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag](http://expressjs.com/en/api.html) in Ihrer
 Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
 ```
     app.set('etag', false);
@@ -150,13 +150,101 @@ Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt b
 {: codeblock}
 Weitere Informationen finden Sie in diesem [stackoverflow-Post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-Um zu überprüfen, ob FIPS_MODE in Ihrer App auf 'true' gesetzt ist, müssen Sie den Wert von **process.versions.openssl** prüfen. Beispiel:
-```
-    console.log('ssl version is [' +process.versions.openssl +']');
-```
-{: codeblockd}
+**ANMERKUNG** [App-Management](../../manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt. Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
 
-Wenn die SSL-Version "fips" enthält, wird die App im FIPS-Modus ausgeführt.    
+Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
+<ul>
+<li> Sie können in der Datei staging_task.log für Ihre Anwendung
+nach einer Nachricht ähnlich der folgenden suchen:    
+
+  <pre>
+  Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
+  </pre>
+  {: codeblock}
+
+Diese Nachricht teilt mit, dass eine FIPS-fähige node.js-Engine ausgeführt wird, aber nicht unbedingt, dass FIPS ausgeführt wird
+</li>
+
+<li> Sie können den Wert von **process.versions.openssl** prüfen. Beispiel:
+
+  <pre>
+  console.log('ssl version is [' +process.versions.openssl +']');
+  </pre>
+  {: codeblock}
+
+Wenn die SSL-Version 'fips' enthält, unterstützt die verwendete SSL-Version FIPS.  
+</li>
+
+<li> Bei node.js Version 6 und höher können Sie den von crypto.fips zurückgegebenen Wert in Code wie dem folgenden prüfen:
+
+  <pre>
+  console.log('crypto.fips== [' +crypto.fips +']');
+  </pre>
+  {: codeblock}
+
+Wenn der zurückgegebene Wert '1' ist, wird FIPS verwendet. Beachten Sie, dass crypto.fips für node.js-Versionen vor Version 6 den Wert *undefined* (nicht definiert) zurückgibt.
+</li>
+</ul>
+
+#### Nodejs Version 4
+{: #nodejs_v4_fips}
+
+Die folgende Tabelle erläutert das Verhalten von node.js Version 4 bezüglich FIPS:
+
+|                 | Ergebnis        |
+| :-------------- | :------------ |
+|FIPS_MODE=true   |Erfolg (1)    |
+|FIPS_MODE !=true |Erfolg (2)    |
+
+* Erfolg (1)
+  * FIPS wird verwendet.
+  * Die Datei staging_task.log enthält die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Der von process.versions.openssl zurückgegebene Wert enthält 'fips'.
+* Erfolg (2)
+  * FIPS wird *NICHT* verwendet.
+  * Die Datei staging_task.log enthält *NICHT* die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Der von process.versions.openssl zurückgegebene Wert enthält *NICHT* 'fips'.
+
+#### Nodejs Version 6
+{: #nodejs_v6_fips}
+
+Für die Ausführung im FIPS-Modus müssen Sie bei Node.js Version 6 neben der Einstellung von **FIPS_MODE=true** in Ihrem Startbefehl **--enable-fips** angeben, entsprechend dem folgenden Beispiel:
+```
+{
+    ...   
+    "scripts": {
+      "start": "node --enable-fips app.js"
+    }
+}
+```
+{: codeblock}
+
+Die folgende Tabelle erläutert das Verhalten von node.js Version 6 bezüglich FIPS.
+
+|                 |--enable-fips  |KEIN --enable-fips |
+| :-------------- | :------------ | :-------------- |
+|FIPS_MODE=true   |Erfolg (1)    |Erfolg (2)      |
+|FIPS_MODE !=true |Fehler (3)    |Erfolg (4)      |
+
+* Erfolg (1)
+  * FIPS wird verwendet.
+  * Die Datei staging_task.log enthält die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Der von process.versions.openssl zurückgegebene Wert enthält 'fips'
+  * crypto.fips gibt '1' zurück, was bedeutet, dass FIPS verwendet wird
+* Erfolg (2)
+  * FIPS wird *NICHT* verwendet.
+  * Die Datei staging_task.log enthält die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Der von process.versions.openssl zurückgegebene Wert enthält 'fips'
+  * crypto.fips gibt '0' zurück, was bedeutet, dass FIPS *NICHT* verwendet wird
+* Fehler (3)
+  * FIPS wird *NICHT* verwendet.
+  * Die Datei staging_task.log enthält *NICHT* die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Das Staging schlägt mit der Nachricht 'ERR node: bad option: --enable-fips' fehl
+* Erfolg (4)
+  * FIPS wird *NICHT* verwendet.
+  * Die Datei staging_task.log enthält *NICHT* die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
+  * Der von process.versions.openssl zurückgegebene Wert enthält *NICHT* 'fips'
+  * crypto.fips gibt '0' zurück, was bedeutet, dass FIPS *NICHT* verwendet wird
 
 
 ## Node.js-Buildpacks
@@ -181,8 +269,10 @@ In der Regel stehen das aktuelle Buildpack **sdk-for-nodejs** und eine frühere 
 {: codeblock}
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
-* [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html)
+{: #general}
+* [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html)
 * [App-Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

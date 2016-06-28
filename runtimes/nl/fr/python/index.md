@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,9 +11,10 @@ Copyright :
 
 # Python
 {: #python_runtime}
-*Dernière mise à jour : 16 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
-Le contexte d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
+L'environnement d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
 Le pack python_buildpack fournit un environnement d'exécution complet pour les applis Python.
 {: shortdesc}
 
@@ -24,7 +25,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 
 {{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
-## Versions de contexte d'exécution
+## Versions d'environnement d'exécution
 {: #runtime_versions}
 
 Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
@@ -54,5 +55,7 @@ utiliser le [pack de construction Python](https://github.com/cloudfoundry/python
 la déployer.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

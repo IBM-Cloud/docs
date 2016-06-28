@@ -12,9 +12,10 @@ copyright:
 # Liberty 主題
 {: #topics}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-* [Liberty 執行時期](index.html)
+* [Liberty 運行環境](index.html)
 * [偵測](index.html#detection)
 * [入門範本應用程式](index.html#starter_application)
 * [推送 Liberty 應用程式的選項](optionsForPushing.html)
@@ -32,6 +33,8 @@ copyright:
 * [最新更新項目](updates.html)
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

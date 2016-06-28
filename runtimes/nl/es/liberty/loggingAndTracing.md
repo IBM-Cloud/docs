@@ -12,7 +12,8 @@ copyright:
 # Registro y rastreo
 {: #logging_tracing}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 ## Archivos de registro
 {: #log_files}
@@ -37,6 +38,8 @@ traceSpecification en instancias de la aplicación en ejecución.
 Para realizar esta acción, seleccione una aplicación de Liberty en la interfaz de usuario. Bajo Tiempo de ejecución en el panel de navegación de la izquierda, puede abrir los detalles de la instancia. Seleccione una o varias instancias. Bajo el menú Acciones, puede elegir TRACE o DUMP.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

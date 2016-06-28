@@ -12,7 +12,8 @@ copyright:
 # Valores predeterminados de paquete de compilación
 {: #buildpack_defauts}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 El paquete de compilación Liberty se actualiza con frecuencia en Bluemix. Cada release podría incluir arreglos de seguridad o mejoras de características.
 
@@ -22,6 +23,20 @@ que pueden afectar negativamente a la aplicación. Para evitar que la aplicació
 por el cambio de los valores predeterminados del paquete de compilación, realice acciones para
 configurar su aplicación de forma que evite basarse en los valores predeterminados del paquete
 de compilación.
+
+## Versiones de Liberty
+{: #liberty_versions}
+
+El paquete de compilación proporciona dos versiones del tiempo de ejecución de Liberty:
+1. El release estable
+  * Es el tiempo de ejecución de Liberty predeterminado.
+  * No proporciona ninguna [función beta](usingBetaFeatures.html).
+  * Normalmente se actualiza cada trimestre.
+
+2. El último release beta
+  * Debe habilitarse de forma explícita estableciendo la variable de entorno **JBP_CONFIG_LIBERTY** con el valor **"version: +"**.
+  * Proporciona [características beta](usingBetaFeatures.html).
+  * Normalmente se actualiza cada mes.
 
 ## Características de Liberty
 {: #liberty_features}
@@ -52,7 +67,10 @@ en una versión principal del JRE podría afectar negativamente a la aplicación
 
 Para asegurarse de que la aplicación no se vea afectada por el cambio de versión principal, establezca la variable de entorno con la versión JRE adecuada según se describe en [Personalización del JRE](customizingJRE.html). Se obtendrán los mejores resultados si usa Java 8 en sus aplicaciones.
 
+
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

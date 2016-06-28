@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*마지막 업데이트 날짜: 2016년 3월 16일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Ruby 런타임은 ruby_buildpack을 통해 제공됩니다.
 ruby_buildpack은 Ruby 앱을 위한 완전한 런타임 환경을 제공합니다.
@@ -61,6 +62,8 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 사용하여 애플리케이션을 배치할 수 있습니다. 
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Ruby에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails 문서](http://rubyonrails.org/documentation/)

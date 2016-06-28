@@ -11,7 +11,8 @@ copyright:
 # 使用 Beta 功能
 {: #using_beta_features}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会包含的新功能和编程模型。大部分 Beta 功能还可以在部署到 Bluemix 的应用程序中使用。
 
@@ -27,16 +28,26 @@ Bluemix 中可用的 Liberty Beta 功能
 </tr>
 
 <tr>
+<td>bluemixLogCollector-1.1</td>
 <td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
+<td>logstashCollector-1.1</td>
+</tr>
+
+<tr>
 <td>osgiBundle-1.0</td>
 <td>passwordUtilities-1.0</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
+
 </table>
 
-要在 Bluemix 中使用 Liberty Beta 功能，您将需要执行以下任一操作：
+要在 Bluemix 中使用 Liberty Beta 功能，您需要执行以下操作：
 
-1. [部署服务器目录或打包服务器](optionsForPushing.html)，并在 server.xml 文件中启用一个或多个 Beta 功能，如以下示例中所示：```
+1. [部署服务器目录或打包服务器](optionsForPushing.html)，并在 server.xml 文件中启用一个或多个 Beta 功能，如以下示例中所示：
+```
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
@@ -46,17 +57,39 @@ Bluemix 中可用的 Liberty Beta 功能
 ```
 {: #codeblock}
 
-2.  将 IBM_LIBERTY_BETA 环境变量设置为 **true**。此变量会引导 Liberty buildpack 为您的应用程序安装并启用 Beta 功能。请参阅以下示例：
-  * 使用 cf 命令行工具：```
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true```
+2.  将 **IBM_LIBERTY_BETA** 环境变量设置为 **true**。此变量会引导 Liberty buildpack 为您的应用程序安装并启用 Beta 功能。例如：
+  * 使用 cf 命令行工具：
+```
+       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
+```
 {: #codeblock}
 
-  * 或者，使用 manifest.yml 文件：```
+  * 或者，使用 manifest.yml 文件：
+```
       env:
-          IBM_LIBERTY_BETA: "true"```
+          IBM_LIBERTY_BETA: "true"
+```
+
+3. 将 **JBP_CONFIG_LIBERTY** 环境变量设置为 **"version: +"**。此变量将启用支持 Beta 功能的 [Liberty Beta 运行时](buildpackDefaults.html#liberty_versions)。例如：
+  * 使用 cf 命令行工具：
+```
+       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+```
+{: #codeblock}
+
+  * 或者，使用 manifest.yml 文件：
+```
+      env:
+          JBP_CONFIG_LIBERTY: "version: +"
+```
+
+如果在现有应用程序上启用 Beta 功能，请勿忘记在设置环境变量后重新编译打包应用程序。
+
 {: #codeblock}
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

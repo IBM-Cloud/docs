@@ -12,7 +12,8 @@ copyright:
 # Registrazione e traccia
 {: #logging_tracing}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 ## File di log
 {: #log_files}
@@ -38,6 +39,8 @@ Per eseguire tale azione, seleziona un'applicazione Liberty
 nell'interfaccia utente. Sotto Runtime nella navigazione sulla sinistra, puoi aprire i dettagli dell'istanza. Seleziona una o più istanze. Nel menu Azioni, puoi scegliere TRACCIA o DUMP.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

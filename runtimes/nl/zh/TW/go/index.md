@@ -14,7 +14,7 @@ copyright:
 {: #go_runtime}
 *前次更新：2016 年 3 月 16 日*
 
-{{site.data.keyword.Bluemix}} 上的 Go 執行時期是採用 go_buildpack 技術。go_buildpack 為 Go 應用程式提供完整的執行時期環境。
+{{site.data.keyword.Bluemix}} 上的 Go 運行環境是採用 go_buildpack 技術。go_buildpack 為 Go 應用程式提供完整的運行環境。
 {: shortdesc}
 
 go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
@@ -24,7 +24,7 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 
 {{site.data.keyword.Bluemix}} 提供 Go 入門範本應用程式。Go 入門範本應用程式是簡單的 Go 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
 
-## 執行時期版本
+## 運行環境版本
 {: #runtime_versions}
 
 您可以在應用程式根目錄的 Godeps/Godeps.json 檔案中設定 GoVersion 內容，以指定應用程式要使用的 Go 版本。例如：
@@ -56,6 +56,9 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 如果您的應用程式需要未列出的 Go 版本，則可以使用外部 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack.git){: new_window}來部署該應用程式。
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack){: new_window}

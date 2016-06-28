@@ -12,7 +12,8 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-*Ultimo aggiornamento: 19 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Il runtime Tomcat su {{site.data.keyword.Bluemix}} si avvale del java_buildpack.
 {: shortdesc}
@@ -46,5 +47,7 @@ La versione Tomcat predefinita corrente è 8.0.30.  La versione Java predefinita
 Per ulteriori informazioni, consulta per favore le [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases).
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

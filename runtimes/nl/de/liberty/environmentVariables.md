@@ -13,7 +13,8 @@ copyright:
 # Umgebungsvariablen
 {: #environment_variables}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Von Liberty for Java unterstützte Umgebungsvariablen
 
@@ -100,6 +101,8 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 </table>
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

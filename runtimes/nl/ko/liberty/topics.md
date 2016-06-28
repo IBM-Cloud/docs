@@ -12,7 +12,8 @@ copyright:
 # Liberty 주제
 {: #topics}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 * [Liberty 런타임](index.html)
 * [발견](index.html#detection)
@@ -32,6 +33,8 @@ copyright:
 * [최신 업데이트](updates.html)
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

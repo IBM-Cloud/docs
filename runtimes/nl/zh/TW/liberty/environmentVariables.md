@@ -13,7 +13,8 @@ copyright:
 # 環境變數
 {: #environment_variables}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty for Java 支援的環境變數。
 
@@ -55,7 +56,7 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>配置各種 Liberty 執行時期選項，包括 [WAR 檔或 EAR 檔的特性](optionsForPushing.html#stand_alone_apps)</td>
+<td>配置各種 Liberty 運行環境選項，包括 [WAR 檔或 EAR 檔的特性](optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
@@ -100,6 +101,8 @@ Liberty for Java 支援的環境變數。
 </table>
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

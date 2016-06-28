@@ -12,14 +12,15 @@ copyright:
 # 自動配置已連結的服務
 {: #auto_config}
 
-*前次更新：2016 年 3 月 31 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
-您可以將各種服務連結到您的 Liberty 應用程式。依據開發人員的需求，服務可以由儲存器管理及/或由應用程式管理。
+您可以將各種服務連結到您的 Liberty 應用程式。依據開發人員的需求，服務可以由容器管理及/或由應用程式管理。
 
 應用程式管理的服務是完全由應用程式管理的服務，沒有任何來自 Liberty 的協助。應用程式一般會讀取 VCAP_SERVICES，以取得已連結服務的相關資訊，並直接存取該服務。應用程式提供了所有必要的用戶端存取程式碼。與 Liberty 特性或 server.xml 檔案配置沒有任何相依關係。Liberty 建置套件自動配置不適用於此類型的服務。
 
 
-儲存器管理的服務是由 Liberty 執行時期管理的服務。在某些情況下，應用程式可能會在 JNDI 中查閱已連結的服務，而在其他情況下，Liberty 會自己直接使用服務。Liberty 建置套件會讀取 VCAP_SERVICES，以取得已連結服務的相關資訊。針對每一個儲存器管理的服務，建置套件會執行三項功能。
+容器管理的服務是由 Liberty 運行環境管理的服務。在某些情況下，應用程式可能會在 JNDI 中查閱已連結的服務，而在其他情況下，Liberty 會自己直接使用服務。Liberty 建置套件會讀取 VCAP_SERVICES，以取得已連結服務的相關資訊。針對每一個容器管理的服務，建置套件會執行三項功能。
 
 * 為連結的服務產生[雲端變數](optionsForPushing.html#accessing_info_of_bound_services)。
 * 安裝 Liberty 特性及存取連結服務所需的用戶端存取程式碼。
@@ -44,22 +45,22 @@ copyright:
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
-如前所述，部分服務可以由應用程式管理，也可以由儲存器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由儲存器管理，並自動加以配置。
+如前所述，部分服務可以由應用程式管理，也可以由容器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。
 如果您要讓應用程式管理服務，則可以設定 services_autoconfig_excludes 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](autoConfig.html#opting_out)。
 
 ## 安裝 Liberty 特性及用戶端存取程式碼
 {: #installation_of_liberty_features}
 
-當您連結至儲存器管理的服務時，該服務可能會要求得在 server.xml 檔案的 featureManager 段落中配置 Liberty 特性。Liberty 建置套件會更新 featureManager 段落，並安裝必要的支援二進位檔。如果服務需要用戶端驅動程式 Jar，會將 Jar 下載到 Liberty 安裝中的已知位置。
+當您連結至容器管理的服務時，該服務可能會要求得在 server.xml 檔案的 featureManager 段落中配置 Liberty 特性。Liberty 建置套件會更新 featureManager 段落，並安裝必要的支援二進位檔。如果服務需要用戶端驅動程式 Jar，會將 Jar 下載到 Liberty 安裝中的已知位置。
 
 如需詳細資料，請參閱已連結之服務類型的文件。
 
 ## 產生或更新 server.xml 配置段落
 {: #generating_or_updating_serverxml}
 
-當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，產生 server.xml 段落。當您推送獨立式應用程式並連結至儲存器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
+當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，產生 server.xml 段落。當您推送獨立式應用程式並連結至容器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
 
-當您提供 server.xml 檔案並連結至儲存器管理的服務時，Liberty 建置套件會執行下列動作：
+當您提供 server.xml 檔案並連結至容器管理的服務時，Liberty 建置套件會執行下列動作：
 
 * 如果所提供的 server.xml 檔案不包含已連結服務的配置段落，則會為已連結的服務產生配置。
 * 如果所提供的 server.xml 檔案包含已連結服務的配置段落，則會為已連結的服務更新配置。
@@ -93,7 +94,7 @@ copyright:
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **重要事項**：您指定的服務類型必須符合出現在 VCAP_SERVICES 環境變數中的服務標籤。不接受空格。**重要事項**：在 &lt;service_type_specification> 內不接受空格。唯一接受使用空格的情況是要隔開多個 &lt;service_type_specification> 實例。
 
@@ -103,15 +104,11 @@ copyright:
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
-
-    env:
-      services_autoconfig_excludes: sqldb=config
-
-    env:
+      services_autoconfig_excludes: mongodb-2.2=allenv:
+      services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 以下是如何使用指令行介面來為 myapp 應用程式設定 services_autoconfig_excludes 環境變數的範例。
 
@@ -119,9 +116,11 @@ copyright:
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

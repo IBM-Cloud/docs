@@ -12,7 +12,8 @@ copyright:
 # Valori predefiniti dei pacchetti di build
 {: #buildpack_defauts}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Il pacchetto di build Liberty viene aggiornato frequentemente in Bluemix. Ogni release può contenere delle correzioni per la protezione o dei miglioramenti delle funzioni.
 
@@ -24,6 +25,20 @@ negativo sull'applicazione. Per evitare che l'applicazione risenta delle
 variazioni dei valori predefiniti del pacchetto di build, attieniti
 alla seguente procedura per configurare la tua applicazione in modo che
 non si basi sui valori predefiniti del pacchetto di build.
+
+## Versioni Liberty
+{: #liberty_versions}
+
+Il pacchetto di build fornisce due versioni del runtime Liberty:
+1. La release stabile
+  * È il runtime Liberty predefinito.
+  * Non fornisce alcuna [funzione beta](usingBetaFeatures.html).
+  * Normalmente aggiornato su base trimestrale.
+
+2. L'ultima release beta.
+  * Deve essere abilitata esplicitamente impostando la variabile di ambiente **JBP_CONFIG_LIBERTY** con il valore **"version: +"**.
+  * Fornisce le [funzioni beta](usingBetaFeatures.html).
+  * Normalmente aggiornata su base mensile.
 
 ## Funzioni Liberty
 {: #liberty_features}
@@ -58,7 +73,10 @@ del JRE potrebbe avere un impatto negativo sull'applicazione.
 Per garantire che l'applicazione non sia influenzata dalla modifica della versione principale, imposta la variabile di ambiente con la versione JRE appropriata come descritto in [Customizing the JRE](customizingJRE.html). Per dei risultati
 ottimali, adotta Java 8 per le tue applicazioni.
 
+
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

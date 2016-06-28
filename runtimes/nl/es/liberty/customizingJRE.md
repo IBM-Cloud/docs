@@ -11,7 +11,8 @@ copyright:
 # Personalización del JRE
 {: #customizing_jre}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 Las aplicaciones se ejecutan en entorno de tiempo de ejecución Java (JRE), proporcionado y configurado por el paquete de compilación de Liberty. El paquete de compilación de Liberty también permite configurar la versión o el tipo de JRE, personalizar las opciones de JVM o solapar las funciones de JRE.
 
@@ -23,24 +24,24 @@ Se utiliza IBM JRE versión 8 de forma predeterminada. Utilice la variable de en
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La propiedad de la versión se puede establecer en un rango de versiones. Hay dos rangos de versiones admitidos: 1.7.+ y 1.8.+. Para obtener los mejores resultados, utilice Java 8.
 
 ## OpenJDK
 {: #openjdk}
 
-De forma opcional, las aplicaciones se pueden configurar para ejecutarse con OpenJDK como JRE. Para permitir que una aplicación se ejecute con OpenJDK, establezca la variable de entorno JVM en "openjdk". Por ejemplo, con la herramienta de línea de mandatos cf, ejecute el mandato:
+De forma opcional, las aplicaciones se pueden configurar para ejecutarse con OpenJDK como JRE. Para permitir que una aplicación se ejecute con OpenJDK, establezca la variable de entorno JVM en “openjdk”. Por ejemplo, con la herramienta de línea de mandatos cf, ejecute el mandato:
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
-{: #codeblock}
+{: codeblock}
 
 Si está habilitado, se utiliza OpenJDK versión 8 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_OPENJDK para especificar una versión alternativa de OpenJDK. Por ejemplo, para utilizar la versión más reciente de OpenJDK 7, establezca la siguiente variable de entorno:
 ```
     $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
-{: #codeblock}
+{: codeblock}
 
 La propiedad de la versión se puede establecer en un rango de versiones como 1.7.+ o cualquier versión específica listada en la [lista de versiones de OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obtener los mejores resultados, utilice Java 8.
 
@@ -67,7 +68,7 @@ El paquete de compilación de Liberty configura las opciones predeterminadas de 
   * direccionamiento de la información en los recursos de memoria disponible de la aplicación en el momento de producirse el error en Loggregator.
   * si se ha configurado una aplicación para habilitar los volcados de memoria de JVM, se inhabilitará la interrupción de los procesos Java, y los volcados de memoria de JVM se direccionan a un directorio común "volcados" de la aplicación. Estos volcados pueden visualizarse desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) CF.
 
-A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:
+A continuación se muestra una configuración de JVM predeterminada de ejemplo que se genera con el paquete de compilación para una aplicación desplegada con un límite de memoria de 512 M:   
 ```
     -Xtune:virtualized
     -Xmx384M
@@ -78,7 +79,7 @@ A continuación se muestra una configuración de JVM predeterminada de ejemplo q
     -Xdump:tool:events=systhrow,filter=java/lang/OutOfMemoryError,request=serial+exclusive,exec=../../../../.buildpack-diagnostics/killjava.sh
     -Dcom.ibm.tx.jta.disable2PC=true
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Personalización de la configuración de JVM
 {: #customizing_jvm}
@@ -170,7 +171,7 @@ Las opciones JVM para la aplicación Java autónoma se mantienen como opciones d
 ```
     $ cf files myapp staging_info.yml
 ```
-{: #codeblock}
+{: codeblock}
 
 Las opciones para despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options.
 
@@ -178,42 +179,45 @@ Para ver el archivo jvm.options para WAR, EAR y directorio de servidor, ejecute 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
-{: #codeblock}
+{: codeblock}
 
 Para ver el archivo jvm.options para un servidor empaquetado, sustituya <serverName> por el nombre de su servidor y ejecute el mandato:
 ```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
-{: #codeblock]
+{: codeblock}
 
 #### Uso de ejemplo
 {: #example_usage}
 
 Despliegue de una aplicación con las opciones personalizadas de JVM para habilitar el registro de recogida de basura detallada de JVM de IBM JRE:
 * Las opciones de JVM incluidas en el archivo manifest.yml de una aplicación:
-```
+
+  <pre>
     env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Para visualizar el registro generado de recogida de basura detallada de JVM:
-```
+
+  <pre>
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
-```
-{: #codeblock}    
+  </pre>
+  {: codeblock}    
 
-* Actualización de la opción de JVM de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory:
+* Para actualizar la opción de JVM de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory, establezca la variable de entorno de la aplicación con la opción JVM y reinicie la aplicación:
 
-Defina la variable de entorno de la aplicación con la opción de JVM y reinicie la aplicación:
-```
+
+  <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 * Para visualizar los volcados de JVM generados al desencadenarse la condición de falta de memoria:
-```
+
+  <pre>
     $ cf files myapp dumps
 
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
@@ -222,8 +226,8 @@ Defina la variable de entorno de la aplicación con la opción de JVM y reinicie
     Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 ### Superposición del JRE
 {: #overlaying_jre}
@@ -268,18 +272,20 @@ Por ejemplo, si desea utilizar el cifrado AES de 256 bits, tiene que solapar est
     .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Descargue los archivos de política sin restricciones adecuados y añádalos a su aplicación como:
 ```
     resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Cuando envíe la aplicación, estos archivos jar solaparán los archivos jar de política predeterminados en el tiempo de ejecución de Java. Este proceso habilita el cifrado AES de 256 bits.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

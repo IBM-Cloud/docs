@@ -13,7 +13,22 @@ copyright:
 
 ## Liberty buildpack 中最新更新的列表。
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 17 日*
+{: .last-updated}
+
+### 2016 年 6 月 17 日：更新了 Liberty buildpack V3.0-20160608-1450
+* 该 buildpack 现在包含 WebSphere Liberty 的两个版本，即最新的稳定发行版和最新的 Beta 发行版。具体而言，其提供 [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 稳定发行版和 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) Beta 发行版。缺省情况下，将使用稳定发行版。请参阅 [Liberty 版本](buildpackDefaults.html#liberty_versions)，以获取其他详细信息。 
+
+### 2016 年 5 月 25 日：更新了 Liberty buildpack V2.9-20160519-1249
+* 该 buildpack 包含更新版本的 WebSphere Liberty（基于[五月 Beta](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)）。更新版本的 Liberty 使 *bluemixLogCollector-1.1* 和 *logstashCollector-1.1* Beta 功能在 Bluemix 中可用。
+
+### 2016 年 5 月 5 日：更新了 Liberty buildpack V2.8-20160430-1011
+* 该 buildpack 包含更新版本的 WebSphere Liberty（基于[四月 Beta](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/)）。更新版本的 Liberty 使 *logstashCollector-1.0* GA 功能和 *logmetCollector-1.0* Beta 功能在 Bluemix 中可用。
+* 该 buildpack 还包含更新版本的 IBM JRE：8 SR3 和 7.1 SR3 FP40。 
+* 该 buildpack 添加了对 [AppDynamics](https://www.appdynamics.com/) 应用程序监视代理程序的初始支持。
+* 改进了 [Dynatrace](dynatrace.html) 支持，以简化代理程序的安装。
+* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](../../services/monana/index.html#monana_oview)的更新版本的数据收集器。其中包含对收集最大堆数据时所出现问题的修订。
+* [devconsole 和 shell 应用程序管理实用程序](../../manageapps/app_mng.html#app_management)使用的 Node.js 运行时已更新到最新的 0.12.13 版本。
 
 ### 2016 年 3 月 25 日：更新了 Liberty buildpack V2.7-20160321-1358
 * 该 buildpack 包含更新版本的 WebSphere Liberty（基于[三月 Beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)）。更新版本的 Liberty 使 cloudant-1.0 Beta 功能在 Bluemix 中可用。
@@ -179,7 +194,9 @@ copyright:
 * 这是 IBM SDK for Java 的新版本！
   * 重新推送应用程序时，应用程序将使用 IBM SDK for Java V7.1-1.0。此版本已进行显著的性能升级。应用程序的吞吐量更大，而内存使用量更少。请参阅[此处](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)，以获取有关 IBM Java SDK 的更多信息。
 
-  # 相关链接
-  ## 常规
+# 相关链接
+{: #rellinks}
+## 常规
+{: #general}
   * [Liberty 运行时](index.html)
   * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

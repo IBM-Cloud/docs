@@ -11,7 +11,8 @@ copyright:
 # Limiti di memoria e pacchetto di build Liberty
 {: #memory_limits}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Quando distribuisci un'applicazione con il pacchetto di build Liberty, è necessario specificare
 un limite di memoria.
@@ -52,6 +53,8 @@ che si è verificato un errore. Potresti notare che l'applicazione è instabile.
 * Se il limite di memoria viene superato mentre l'applicazione è in funzione, il processo viene arrestato. Cloud Foundry prova a riavviare l'applicazione. È possibile che l'applicazione venga riavviata, ma non sarà disponibile per un certo lasso di tempo.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

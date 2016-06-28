@@ -12,7 +12,8 @@ copyright:
 # Liberty-Themen
 {: #topics}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 * [Liberty-Laufzeit](index.html)
 * [Erkennung](index.html#detection)
@@ -32,6 +33,8 @@ copyright:
 * [Neueste Aktualisierungen](updates.html)
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

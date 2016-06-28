@@ -11,7 +11,8 @@ copyright:
 # 使用 New Relic
 {: #new_relic}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 New Relic 是第三方服务，其提供应用程序的监视度量值。有关 New Relic 服务提供哪些内容的更多信息，请参阅 [New Relic](http://newrelic.com/java)。
 
@@ -30,18 +31,23 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
     -Dnewrelic.config.app_name=myapp
     -Dnewrelic.config.log_file_path=../../../../../logs
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 添加 New Relic 服务
 {: #add_new_relic}
 
 对于 IBM Bluemix 中要使用 New Relic 监视的现有 Java 应用程序，请执行以下步骤。
-1. 在 IBM Bluemix 中创建 New Relic 服务实例。```
-    $ cf create-service newrelic standard mynewrelic```
-{: #codeblock}
+1. 在 IBM Bluemix 中创建 New Relic 服务实例。
 
-2. 使用 New Relic 服务将应用程序部署到 IBM Bluemix。请参阅以下样本应用程序清单：```
-        ---
+  <pre>
+    $ cf create-service newrelic standard mynewrelic
+  </pre>
+  {: codeblock}
+
+2. 使用 New Relic 服务将应用程序部署到 IBM Bluemix。请参阅以下样本应用程序清单：
+
+  <pre>
+        &dash;&dash;&dash;
         applications:
         - name: myapp
          memory: 1G
@@ -50,8 +56,9 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. 直接从应用程序的 IBM Bluemix 仪表板访问应用程序的 New Relic 仪表板。
 
@@ -60,14 +67,16 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。
 
-1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 CF CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：```
+1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 CF CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
+```
     $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
 ```
-{: #codeblock}
+  {: codeblock}
 
-2. 使用用户提供的 New Relic 服务实例将应用程序部署到 IBM Bluemix。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：```
-        ---
+2. 使用用户提供的 New Relic 服务实例将应用程序部署到 IBM Bluemix。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：
+  <pre>
+        &dash;&dash;&dash;
         applications:
         - name: myapp
          memory: 1G
@@ -76,8 +85,9 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. 访问 New Relic 仪表板来查看应用程序度量值。
 
@@ -87,6 +97,8 @@ New Relic 服务的自动配置与其他服务的自动配置不同，因为该�
 * 配置依赖于 VCAP_SERVICES 和 VCAP_APPLICATION。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -13,7 +13,22 @@ copyright:
 
 ## Liberty ビルドパックの最新更新のリスト。
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日時: 2016 年 6 月 17 日*
+{: .last-updated}
+
+### 2016 年 6 月 17 日: 更新された Liberty ビルドパック v3.0-20160608-1450
+* ビルドパックには、WebSphere Liberty の 2 つのバージョン (最新の安定リリースと最新のベータ版) が含まれるようになりました。具体的には、[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 安定リリースと [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) ベータ版が提供されます。デフォルトでは、安定リリースが使用されます。詳しくは、[『Liberty のバージョン』](buildpackDefaults.html#liberty_versions)を参照してください。 
+
+### 2016 年 5 月 25 日: 更新された Liberty ビルドパック v2.9-20160519-1249
+* このビルドパックには、[May beta](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/) に基づく更新版の WebSphere Liberty が含まれています。この更新版の Liberty により、*bluemixLogCollector-1.1* および *logstashCollector-1.1* の各ベータ・フィーチャーが Bluemix で使用可能になります。
+
+### 2016 年 5 月 5 日: 更新された Liberty ビルドパック v2.8-20160430-1011
+* このビルドパックには、[April beta](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/) に基づく更新版の WebSphere Liberty が含まれています。この更新版の Liberty により、*logstashCollector-1.0* GA フィーチャーおよび *logmetCollector-1.0* ベータ・フィーチャーが Bluemix で使用可能になります。
+* このビルドパックには、IBM JRE: 8 SR3 および 7.1 SR3 FP40 の更新版も含まれています。 
+* このビルドパックは、[AppDynamics](https://www.appdynamics.com/) アプリケーション・モニター・エージェントに対する初期サポートを追加します。
+* [Dynatrace](dynatrace.html) サポートは、エージェントのインストールを簡素化するように改善されました。
+* このビルドパックでは、[Monitoring and Analytics サービス](../../services/monana/index.html#monana_oview)用の更新されたデータ・コレクターが提供されます。これには、最大ヒープ・データの収集に関する問題の修正が含まれています。
+* [アプリケーション管理ユーティリティー devconsole および shell](../../manageapps/app_mng.html#app_management) によって使用される Node.js ランタイムは、最新の 0.12.13 バージョンに更新されました。
 
 ### 2016 年 3 月 25 日: 更新された Liberty ビルドパック v2.7-20160321-1358
 * このビルドパックには、[March beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/) に基づく更新版 WebSphere Liberty が含まれています。
@@ -187,7 +202,9 @@ beta](https://developer.ibm.com/wasdev/blog/2014/11/07/announcing-liberty-profil
 * IBM SDK for Java のバージョンが新しくなりました。
   * アプリケーションは、再プッシュされると IBM SDK for Java バージョン 7.1-1.0 を使用します。これに伴って性能が大幅に向上します。アプリケーションのスループットが改善され、メモリー使用量は減少します。IBM Java SDK について詳しくは、[ここ](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)を参照してください。
 
-  # 関連リンク
-  ## 一般
+# 関連リンク
+{: #rellinks}
+## 一般
+{: #general}
   * [Liberty ランタイム](index.html)
   * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

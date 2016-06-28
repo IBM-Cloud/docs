@@ -11,7 +11,8 @@ copyright:
 # 메모리 제한 및 Liberty 빌드팩
 {: #memory_limits}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 Liberty 빌드팩을 사용하여 애플리케이션을 배치할 때 메모리 제한을 지정해야 합니다.
 
@@ -41,6 +42,8 @@ JVM 메모리 사용에 대한 자세한 정보는 developerWorks 문서 [Thanks
 * 애플리케이션이 제공되고 있는 동안 메모리 제한을 초과하면 프로세스가 중지됩니다. Cloud Foundry에서 애플리케이션을 다시 시작하려고 시도합니다. 애플리케이션이 다시 시작될 수 있지만 일정 시간 동안 사용 불가능합니다.
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
