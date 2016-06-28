@@ -15,7 +15,7 @@ copyright:
 # Getting started with {{site.data.keyword.iot_short_notm}} Starter
 {: #gettingstartedtemplate}
 <!-- Provide and appropriate ID above -->
-*Last updated: 9 June 2016*
+*Last updated: 27 June 2016*
 {: .last-updated}
 
 Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter boilerplate. With the Starter, you can quickly simulate a device, create cards, generate data, and begin analyzing and displaying data in the {{site.data.keyword.iot_short_notm}} dashboard.
@@ -41,14 +41,14 @@ Node-RED is a tool for wiring together hardware devices, APIs, and online servic
 ## Getting Around
 {: #gettingaround}
 As you perform the following steps, you will use three different tabs in your browser:
-  1. Bluemix dashboards - to see the state of your deployment, read documentation and to launch the dashboards.
-  2. {{site.data.keyword.iot_short_notm}} dashboard - Use the dashboard to work with this service. You'll use the dashboard to define device types, register devices, monitor incoming sensor data, create data visualization cards, and see live data visualizations.
-  3. Node-RED - Running as a node.js web application, you'll configure and run the device simulator flow, and work with other flows to process data from {{site.data.keyword.iot_short_notm}}.
+  1. *{{site.data.keyword.Bluemix_notm}} dashboards* - Use the {{site.data.keyword.Bluemix_notm}} dashboard to see the state of your deployment, read documentation and to launch the dashboards.
+  2. *{{site.data.keyword.iot_short_notm}} dashboard* - Use the dashboard to work with this service. You'll use the dashboard to define device types, register devices, monitor incoming sensor data, create data visualization cards, and see live data visualizations.
+  3. *Node-RED* - Running as a node.js web application, you'll configure and run the device simulator flow, and work with other flows to process data from {{site.data.keyword.iot_short_notm}}.
 
 ## Defining a simulated device in {{site.data.keyword.iot_short_notm}}
 {: #definingsimdev}
 Register your device with {{site.data.keyword.iot_short_notm}}:
-  1.	In Bluemix, go to the overview tab for your deployed application.
+  1.	In {{site.data.keyword.Bluemix_notm}}, go to the overview tab for your deployed application.
   2.	Click the {{site.data.keyword.iot_short_notm}} box in the Connections section or tab.
   3.	Click Launch dashboard to open the {{site.data.keyword.iot_short_notm}} dashboard in a new browser window.
   4.	Select Devices
@@ -118,10 +118,10 @@ To create cards, perform the following tasks.
 1. Go to the {{site.data.keyword.iot_short_notm}} dashboard browser tab.
 2. Select BOARDS.
 3. Click Create New Board.
-4. Give it a name like Home Environement.
+4. Give it a name like Home Environment.
 5. Create.
 6. Click Add New Card (for temperature).
-   1.	Under Devices, select Reatime chart.
+   1.	Under Devices, select Realtime chart.
    2.	Card source data, check your Device "LivingRoomThermo1", then click Next.
    3. Connect new data set.
        - Name: Temperature
@@ -139,7 +139,7 @@ To create cards, perform the following tasks.
   5. Card information.
        - Title: Temperature
   6.	Submit.
-  7.	In the Node-RED tab, click **Send Data to**.
+  7.	The temperature card appears on the dashboard and includes a graph of the live temperature data.
 7.	Click Add New Card (for humidity).
   1.	Under Devices, select Show more.
   2.	Select Gauge.
@@ -164,7 +164,7 @@ To create cards, perform the following tasks.
   6.	Card information.
        -	Title: Humidity
   7.	Submit.
-  8.	In the Node-RED tab, click Send Data to.
+  8.	The humidity card appears on the dashboard and includes a gauge that shows the live humidity data.
 8.	Click Add New Card (for location).
   1.	Under Devices, select Show more.
   2.	Select Value.
@@ -211,7 +211,6 @@ Now that your simulated device is sending data to {{site.data.keyword.iot_short_
        -	NODE_RED_USERNAME - the username to secure the editor
        -	NODE_RED_PASSWORD - the password to secure the editor
   3.	Click Save.
-4. [Connecting an IBM Cloudant NoSQL DB](https://www.bluemix.net/docs/services/IoT/cloudant_connector.html) for Bluemix service to your {{site.data.keyword.iot_short_notm}} allows you to store and access your historical device sensor data.
 
 
 # Related Links
