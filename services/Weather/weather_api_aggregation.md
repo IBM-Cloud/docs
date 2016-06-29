@@ -13,10 +13,10 @@ copyright:
 # API aggregation
 {: #api_aggregation}
 
-*Last updated: 31 March 2016*
+*Last updated: 15 June 2016*
 {: .last-updated}
 
-Some Insights for Weather APIs can be aggregated. You can use aggregation to combine two or more atomic API
+Some {{site.data.keyword.weather_short}} APIs can be aggregated. You can use aggregation to combine two or more atomic API
 calls into a single HTTP request.
 {: shortdesc}
 
