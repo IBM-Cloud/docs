@@ -35,9 +35,9 @@ Through use of our Swagger 2.0 compliant REST APIs, clients have access to the s
 
 | **Region name** | **Geographic location** | **Region prefix** | **API Base URL** |       
 |:-------------:|:----------:|:--------------:|:-------------:|
-| US South region | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker |
-| United Kingdom region | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker |
-| Sydney region | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker |
+| US South region | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1  |
+| United Kingdom region | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1  |
+| Sydney region | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1  |
 
 
 
