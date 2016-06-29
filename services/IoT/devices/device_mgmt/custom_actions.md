@@ -11,24 +11,27 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-
 # Extending device management
 {: #custom_actions}
+*Last updated: 24 June 2016*
+{: .last-updated}
 
-**Important:** This feature is currently available as part of a limited beta program only. Future updates might include changes that are  incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
+You can extend the device management capabilities in your {{site.data.keyword.iot_short_full}} to suit your requirements by adding device management extensions through either the REST API or the dashboard that is provided in {{site.data.keyword.Bluemix_notm}}.
 
+By default, the following device management actions are provided and supported by the {{site.data.keyword.iot_short_notm}}:
+- Device reboot
+- Factory reset
+- Firmware download
+- Firmware update
 
-The {{site.data.keyword.iot_full}} provides the ability to extend the device management capabilities. This is done by adding device management extensions by using either the REST APIs or the {{site.data.keyword.iot_short_notm}} dashboard.
-
-Devices that connect to the {{site.data.keyword.iot_short_notm}} can have a wide range of capabilities. The device management actions that are supported by default in the {{site.data.keyword.iot_short_notm}} (*device reboot*, *factory reset*, *firmware download* and *firmware update*) might not be sufficient to manage everything that a device can do.
-
+If the default device actions that are provided by {{site.data.keyword.iot_short_notm}} are not sufficient for your devices and applications, consider developing further device management capabilities by implementing a device management extension package.
 
 ## Device management extension packages
 {: #device_management_ext}
 
-An extension package is a JSON document that defines a set of device management actions. The actions can be initiated against one or more devices which support those actions. The actions are initiated in the same way as the default device management actions by using either the {{site.data.keyword.iot_short_notm}} dashboard or the device management REST APIs.
+A device management extension package is a JSON document that defines a set of device management actions. The actions can be initiated against one or more devices that support those actions. The actions are initiated in the same way as the default device management actions by using either the {{site.data.keyword.iot_short_notm}} dashboard or the device management REST API commands.
 
-Device management extension packages have the following format:
+The following code sample outlines the typical format of a device management extension package:
 
 ```
 
@@ -64,68 +67,66 @@ Device management extension packages have the following format:
 
 ```
 
-### Extension package properties:
+### Extension package properties
 
-- ``bundleId``: Unique identifier for a device management extension. Required.
-- ``version``: Version string for a device management extension. Optional.
-- ``provider``: Provider string for a device management extension. Maximum length of 1024 characters. Optional.
-- ``displayName``: Map of ``locale``: ``String`` key-value pairs used for display in the{{site.data.keyword.iot_short_notm}} dashboard. Required. Must contain at least one entry.
-- ``description``: Map of ``locale``: ``String`` key-value pairs used for display in the {{site.data.keyword.iot_short_notm}} dashboard. Optional. If specified, must contain at least one entry.
-- ``actions``: Map of ``actionId``: ``<action>`` key-value pairs which defines the actions contained within a device management extension. Required. Must contain at least one entry.
+A device management extension package contains the following properties:
+
+|Property|Description|Required
+|:---|:---|:---|
+|``bundleId``|Unique identifier for a device management extension.|Yes|
+|``version``|Version string for a device management extension.|No|
+|``provider``|Provider string for a device management extension that must be no greater than 1024 characters.|No|
+|`displayName``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. You must specify at least one entry.|Yes|
+|``description``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. If defined, you must specify at least one entry.|No|
+|``actions``| Map of ``actionId``: ``<action>`` key-value pairs that define the actions that are contained within a device management extension. You must specify at least one entry.|Yes|
 
 ### Properties per action:
 
-- ``actionDisplayName``: Map of ``locale``: ``String`` key-value pairs used for display in the {{site.data.keyword.iot_short_notm}} dashboard. Required. Must contain at least one entry.
-- ``description``:  Map of ``locale``: ``String`` key-value pairs used for display in the {{site.data.keyword.iot_short_notm}} dashboard. Optional. If specified, must contain at least one entry.
-- ``parameters``: Array of parameters allowed for a particular action. Optional. If specified, must contain at least one entry.
+|Property|Description|Required
+|:---|:---|
+|``actionDisplayName``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. You must specify at least one entry.|Yes|
+|``description``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. Optional. You must specify at least one entry.|No|
+|``parameters``|Array of parameters that are allowed for a particular action. If defined, you must specify at least one entry.|No|
 
 ### Properties per action parameter:
 
-- ``name``: Unique identifier for a parameter within an action. Required.
-- ``value``: Regular expression used for validating parameter values when a request is initiated. Optional. If not specified, value will not be validated.
-- ``required``: Boolean value specifying whether the parameter is required. Optional. Default: False
-- ``defaultValue``: Value to be used if the parameter is not provided when a request is initiated. Optional.
+|Property|Description|Required
+|:---|:---|
+|``name``|Unique identifier for a parameter within an action|Yes|
+|``value``|Regular expression that is used to validate parameter values when a request is initiated. If not specified, validation does not occur.|No|
+|``required``|Boolean value that determines whether the parameter is required. The value is set by default to false. |No|
+|``defaultValue``|Value to be used if the parameter is not provided when a request is initiated|No|
 
-**Note:** The following restrictions apply to the  ``bundleId``, ``version``, ``actionId`` and ``parameterId`` values:  
-- Maximum length of 255 characters
-- Must comprise only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters:
- - dash -
- - underscore _
- - dot .
+**Note:** The ``bundleId``, ``version``, ``actionId``, and ``parameterId`` values can contain no more than  255 characters and can consist of only alpha-numeric characters (a-z, A-Z, 0-9) and the following special characters:
+ - dash (-)
+ - underscore (_)
+ - dot (.)
 
 ## REST APIs
 {: #rest_api}
 
-Extension packages are managed in the {{site.data.keyword.iot_short_notm}} by using the following REST APIs.
+Use the following {{site.data.keyword.iot_short_notm}} REST APIs commands to manage your extension packages:
 
-List all device management extension packages:
+- To get a list of all device management extension packages:
+  `GET https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
+- To create a new device management extension package:
+  `POST https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
+- To get a specific device management extension package:
+  `GET https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
+- To update a device management extension package:
+  `PUT https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
+- To delete a device management extension package:
+  `DELETE https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-`GET https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-
-Create a new device management extension package:
-
-`POST https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-
-Get a specific device management extension package:
-
-`GET https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-
-Update a device management extension package:
-
-`PUT https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-
-Delete a device management extension package:
-
-`DELETE https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-
-For more information on the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) documentation.
+For more information about the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentation.
 
 
-## Supporting custom device management actions
+##Supporting custom device management actions
 {: #supporting_custom_device_management_actions}
 
-Device management actions defined in an extension package may only be initiated against devices which support those actions. A device specifies what types of actions it supports when it publishes a manage request to the {{site.data.keyword.iot_short_notm}}.
-In order to allow a device to receive custom actions defined in a particular extension package, the device must specify that extension's bundle identifier in the supports object when publishing a manage request.
+Device management actions that are defined in your extension packages can be initiated only by devices that support those actions. When a device publishes a manage request to the {{site.data.keyword.iot_short_notm}}, the device specifies the types of actions that it can  support.
+
+To receive custom actions from an extension package, the device must specify the bundle identifier for the extension package in the supports object of the request, as outlined in the following example:
 
 ```
 	Outgoing message from device:
@@ -152,21 +153,20 @@ In order to allow a device to receive custom actions defined in a particular ext
 
 ```
 
-For additional information about device manage requests, see [Device Management Protocol](index.html).
-
+For more information about device manage requests, see [Device Management Protocol](index.html){: new_window}.
 
 ## Initiating custom device management actions
 {: #initiating_custom_dm_actions}
 
-Custom device management actions are initiated by using the same REST API as the default device management actions:
+To initiate custom device management actions, use the following REST API command, which is the default command for initiating device management actions.
 
 `POST https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-The following information must be provided when you initiate a request:
+You must provide the following information when you initiate a request:
 
 - The action ``<bundleId>/<actionId>``
-- A list of devices to initiate the action against, with a maximum of 5000 devices
-- A list of parameters as defined in the custom action definition
+- A list of devices to initiate the action against, up to a maximum of 5000 devices
+- A list of parameters, as defined in the custom action definition
 
 The payload for initiating a request is in the following format:
 
@@ -193,12 +193,12 @@ The payload for initiating a request is in the following format:
 ## Handling custom device management actions
 {: #handling_custom_dm_actions}
 
-When a custom action is initiated against a device, an MQTT message is published to the device. The message contains any parameters that were specified as part of the request. When the device
-receives this message, it is expected to either execute the action or respond with an error code indicating that it cannot complete the action at this time.
+When a custom action is initiated against a device, an MQTT message is published to the device. The MQTT message contains any parameters that were specified as part of the request. When the device
+receives the MQTT message, it either runs the action or responds with an error code that indicates why it cannot currently complete the action.
 
-To indicate that the action was completed successfully, a device should publish a response with ``rc`` set to ``200``.
+When a device action is successfully completed, the device publishes a response whereby the ``rc`` value is set to ``200``.
 
-Below is an example exchange between the server and a device.
+The following extract provides an example of the exchange that occurs between a server and a device.
 
 ```
 	Incoming message from the server:
@@ -231,10 +231,9 @@ Below is an example exchange between the server and a device.
 ## Example
 {: #example}
 
-
 The following example demonstrates how you can define a new device management extension and execute an action defined within that extension.
 
-Some companies manufacture ``exampleDeviceType`` devices. Users of these devices have the ability to manage plug-ins, which run on the devices. To facilitate remote management of plug-ins on ``exampleDeviceType`` devices, the manufacturer provides a device management extension which users can import into their {{site.data.keyword.iot_short_notm}} organization.
+Some companies manufacture ``exampleDeviceType`` devices. You can install and manage plug-ins to run on ``exampleDeviceType`` devices. To facilitate remote management of plug-ins on ``exampleDeviceType`` devices, the manufacturer typically provides a device management extension that you can import into your {{site.data.keyword.iot_short_notm}} organization.
 
 The following extension JSON document is used in this example:
 
@@ -326,16 +325,13 @@ In this device management extension package, the following actions are defined:
 - **disablePlugin**
 - **uninstallPlugin**
 
-The extension is added using the following REST API command:
+To add the extension, use the following REST API command:
 
 `POST https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Devices registered in organization ``<orgId>`` can specify that they support ``exampleDeviceType-actions-v1`` actions when publishing a manage request.
-
-In this example, the manage request sent by a device would look like the following:
+Devices that are registered to the organization ``<orgId>`` can specify that they support ``exampleDeviceType-actions-v1`` actions when they publish a manage request, as outlined in the following example:
 
 ```
-
 	Outgoing message from device:
 
 	Topic: iotdevice-1/mgmt/manage
@@ -349,7 +345,7 @@ In this example, the manage request sent by a device would look like the followi
 	}
 
 ```
-The device should then receive the following response from the {{site.data.keyword.iot_short_notm}}:
+The device in question receives the following response from the {{site.data.keyword.iot_short_notm}}:
 
 ```
 	Incoming message from server:
@@ -361,9 +357,9 @@ The device should then receive the following response from the {{site.data.keywo
 	}
 
 ```
-At this point, an action defined in the ``exampleIoT-exampleDeviceType-v1`` extension can be initiated against some devices.
+At this point, you can initiate the device actions that you defined in the ``exampleIoT-exampleDeviceType-v1`` extension.
 
-The payload for initiating an ``installPlugin`` action will look like the following:
+The payload for initiating an ``installPlugin`` action is as follows:
 
 ```
 	{
@@ -391,11 +387,11 @@ The payload for initiating an ``installPlugin`` action will look like the follow
 	}
 
 ```
-The request is initiated using the REST API:
+Initiate the request by using the following REST API command:
 
 `POST https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Devices ``device0`` and ``device1`` of type ``exampleDeviceType`` will then receive the following MQTT message:
+When the command is submitted, devices ``device0`` and ``device1`` of type ``exampleDeviceType`` receive the following MQTT message:
 
 ```
 	Incoming message from server:
@@ -419,7 +415,7 @@ Devices ``device0`` and ``device1`` of type ``exampleDeviceType`` will then rece
 
 ```
 
-Each device takes an action on the message, installing the new plug-in. Once installation is complete, the devices respond with the following message to indicate that the action completed successfully:
+Each device takes an action on the message and installs the specified plug-in. When the installation is finished, the devices submit a message to indicate that the action was completed successfully.
 
 ```
 	Outgoing message from device:
@@ -431,30 +427,30 @@ Each device takes an action on the message, installing the new plug-in. Once ins
 	}
 
 ```
-At this point, the ``installPlugin`` action is now complete.
 
+At this point, the ``installPlugin`` device management action is completed.
 
 ## API examples
 {: #api_examples}
 
 Use the following API requests to manage your devices:
 
-Create a new device management extension:
+- To create a new device management extension:
 
 `curl -XPOST -d '<insert payload here>' -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-List device management extensions:
+- To list device management extensions:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Initiate a device management request:
+- To initiate a device management request:
 
 `curl -XPOST -d '<insert payload here>' -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-List device management requests that are in progress or completed:
+- To list device management requests that are either in progress or completed:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-View status of a particular device management request:
+- To view the status of a particular device management request:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
