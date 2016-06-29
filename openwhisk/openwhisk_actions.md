@@ -292,8 +292,8 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   ```
     var request = require('request');
     
-    function main(msg) {
-        var location = msg.location || 'Vermont';
+    function main(params) {
+        var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
         request.get(url, function(error, response, body) {
@@ -458,7 +458,7 @@ development, and {{site.data.keyword.openwhisk_short}} usually uses the latest a
 
 With {{site.data.keyword.openwhisk_short}} Docker actions, you can write your actions in any language.
 
-Your code is compiled into a executable binary and embedded into a Docker image. The binary program interacts with the system by taking input from `stdin` and replying through `stdout`.
+Your code is compiled into an executable binary and embedded into a Docker image. The binary program interacts with the system by taking input from `stdin` and replying through `stdout`.
 
 As a prerequisite, you must have a Docker Hub account.  To set up a free Docker ID and account, go to [Docker Hub](https://hub.docker.com){: new_window}.
 
@@ -497,8 +497,8 @@ For the instructions that follow, assume that the user ID is "janesmith" and the
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
-             (argc == 1) ? "anonymous" : argv[1]);
+      printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s, \"argc\": %d }",
+             (argc == 1) ? "undefined" : argv[1]);
   }
   ```
   {: screen}
@@ -534,11 +534,24 @@ For the instructions that follow, assume that the user ID is "janesmith" and the
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+      "args": {
+          "payload": "Rey"
+      },
+      "msg": "Hello from arbitrary C program!"
   }
   ```
   {: screen}
 
+5. To update a Docker action, run `buildAndPush.sh` to refresh the image on Docker Hub, then you have to run `wsk action update` to make the system to fetch the new image. New invocations will start using the new image and not a warm image with the old code.
+
+  ```
+  ./buildAndPush.sh janesmith/blackboxdemo
+  ```
+  {: pre}
+  ```
+  wsk action update --docker example janesmith/blackboxdemo
+  ```
+  {: pre}
 
 You can find more information about creating Docker actions in the [References](./openwhisk_reference.html#openwhisk_ref_docker) section.
 

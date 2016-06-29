@@ -37,7 +37,7 @@ The `/whisk.system/cloudant` package enables you to work with a Cloudant databas
 | `/whisk.system/cloudant` | package | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Work with a Cloudant database |
 | `/whisk.system/cloudant/read` | action | dbname, includeDoc, id | Read a document from a database |
 | `/whisk.system/cloudant/write` | action | dbname, overwrite, doc | Write a document to a database |
-| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc | Fire trigger events on changes to a database |
+| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc, maxTriggers | Fire trigger events on changes to a database |
 
 The following topics walk through setting up a Cloudant database, configuring an associated package, and using the actions and feeds in the `/whisk.system/cloudant` package.
 
@@ -135,7 +135,11 @@ If you're not using {{site.data.keyword.openwhisk_short}} in {{site.data.keyword
 
 ### Listening for changes to a Cloudant database
 
-You can use the `changes` feed to configure a service to fire a trigger on every change to your Cloudant database.
+You can use the `changes` feed to configure a service to fire a trigger on every change to your Cloudant database. The parameters are as follows:
+
+- `dbname`: Name of Cloudant database.
+- `includeDoc`: If set to true, each trigger event that is fired includes the modified Cloudant document. 
+- `maxTriggers`: Stop firing triggers when this limit is reached. Defaults to 1000. You can set it to maximum 10,000. If you try to set more than 10,000, the request is rejected.
 
 1. Create a trigger with the `changes` feed in the package binding that you created previously. Be sure to replace `/myNamespace/myCloudant` with your package name.
 
@@ -159,7 +163,7 @@ You can use the `changes` feed to configure a service to fire a trigger on every
 
 4. Observe new activations for the `myCloudantTrigger` trigger for each document change.
 
-**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the following reading and writing steps will help verify that your Cloudant credentials are correct.
+**Note**: If you are unable to observe new activations, see the subsequent sections on reading from and writing to a Cloudant database. Testing the reading and writing steps below will help verify that your Cloudant credentials are correct.
 
 You can now create rules and associate them to actions to react to the document updates.
 
@@ -268,7 +272,7 @@ The `/whisk.system/alarms/alarm` feed configures the Alarm service to fire a tri
 
 - `trigger_payload`: The value of this parameter becomes the content of the trigger every time the trigger is fired.
 
-- `maxTriggers`: Stop firing triggers when this limit is reached. Defaults to 1000.
+- `maxTriggers`: Stop firing triggers when this limit is reached. Defaults to 1000. You can set it to maximum 10,000. If you try to set more than 10,000, the request is rejected.
 
 Here is an example of creating a trigger that will be fired once every 20 seconds with `name` and `place` values in the trigger event.
 
@@ -490,19 +494,22 @@ Here is an example of creating a package binding and converting speech to text.
 1. Create a package binding with your Watson credentials.
 
   ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
+  {: pre}
 
 2. Invoke the `speechToText` action in your package binding to convert the encoded audio.
 
   ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
+  {: pre}
   ```
   {
     "data": "Hello Watson"
   }
   ```
+  {: screen}
   
  
 ## Using the Slack package
@@ -570,14 +577,13 @@ The `/whisk.system/github/webhook` feed configures a service to fire a trigger w
 - `username`: The username of the GitHub repository.
 - `repository`: The GitHub repository.
 - `accessToken`: Your GitHub personal access token. When you [create your token](https://github.com/settings/tokens), be sure to select the repo:status and public_repo scopes. Also, make sure you don't have any Webhooks already defined for your repository.
-- `events`: The [GitHub activity type](https://developer.github.com/v3/activity/events/types/) of interest.
+- `events`: The [GitHub event type](https://developer.github.com/v3/activity/events/types/) of interest.
 
 The following is an example of creating a trigger that will be fired each time that there is a new commit to a GitHub repository.
 
 1. Generate a GitHub [personal access token](https://github.com/settings/tokens).
 
   The access token will be used in the next step.
-
 
 2. Create a package binding configured for your GitHub respository and with your accesss token.
 
@@ -593,6 +599,9 @@ The following is an example of creating a trigger that will be fired each time t
   ```
   {: pre}
 
+A commit to the Github repository via a `git push` will cause the trigger to be fired by the webhook. If there is a rule that matches the trigger, then the associated action will be invoked.
+The action receives the Github webhook payload as an input parameter. Each Github webhook event has a similar JSON schema, but a unique payload object that is determined by its event type.
+For more information on the payload content see the [Github events and payload](https://developer.github.com/v3/activity/events/types/) API documentation.
 
 
 ## Using the Push package
