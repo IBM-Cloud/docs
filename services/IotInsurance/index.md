@@ -16,9 +16,9 @@ copyright:
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
 
 
-# Getting started with {{site.data.keyword.iotinsurance_short}}
+# Getting started with {{site.data.keyword.iotinsurance_short}} (Experimental)
 {: #iotins_gettingstarted}
-*Last updated: 22 June 2016*
+*Last updated: 29 June 2016*
 {: .last-updated}
 
 
@@ -31,16 +31,19 @@ is an integrated IoT production instance that collects and analyzes full-context
 
 Required:
  - A [{{site.data.keyword.Bluemix}} account](https://console.ng.bluemix.net/). A 30-day trial account is free.
- - The {{site.data.keyword.iotinsurance_short}} service deployed in {{site.data.keyword.Bluemix_notm}}.
- - Git installed on your computer and access to the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples). Alternatively, you can download the [archive with the source code files](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip).
+ - An instance of the [{{site.data.keyword.iotinsurance_short}} service](https://new-console.ng.bluemix.net/catalog/services/iot-for-insurance/) deployed in {{site.data.keyword.Bluemix_notm}}.
+ - Git software installed on your computer and access to the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples).
+ Alternatively, you can download the [archive with the source code files](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip).
  - [Node.js](https://nodejs.org/en/) installed on your computer.  
  - A Node.js-enabled runtime environment such as Eclipse.
 
 ## Obtaining and preparing the source code
 {: #iot4i_sourcecode}
 Perform the following tasks:
-1. Clone or download the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples).
-2. Install the project's open source prerequisites by running `npm install` in the folder containing the source code files.
+1. Clone or download the [Github source code repository](https://github.com/ibm-watson-iot/ioti-samples) to your computer.
+2. Install the project's open source prerequisites, as follows:
+  1. Using a command prompt, navigate to the folder containing the cloned source code files.
+  2. Run the `npm install` command.
 
 ## Getting started
 {: #iot4i_gettingstarted}
