@@ -10,14 +10,16 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Using the Insights for Weather REST APIs
+# Using the {{site.data.keyword.weather_short}} REST APIs
 {: #rest_apis}
 
-*Last updated: 06 April 2016*
+*Last updated: 01 July 2016*
 {: .last-updated}
 
-You can use the [Insights for Weather REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window} 
-to retrieve weather data. You can test API operations and instantly view the results to help you build your applications faster.
+You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window} 
+to retrieve weather data. You can test API operations and instantly view the results
+to help you build your applications faster.
+{: shortdesc}
 
 From the reference documentation, click **List Operations** to view details of each operation.
 When you specify parameters and click **Try it out!**, you might be asked to provide credentials.
@@ -28,21 +30,50 @@ You can find this information by opening your application and clicking **Environ
 that are provisioned to you in one region to authenticate to a service in another region.
 Failure to enter proper credentials results in an "Unauthorized" message in the response body.
 
-With the Insights for Weather APIs, you can retrieve weather data by supplying a geolocation as latitude and longitude coordinates.
+With the REST APIs, you can retrieve weather data by supplying a geolocation as latitude and longitude coordinates.
 You can use the following APIs.
 
 |**API**                                  |**Description**              |
 |-----------------------------------------|-----------------------------|
-|`GET /v2/forecast/daily/10day`           |Returns weather forecasts for the current day and the next nine days for a geolocation. Each daily forecast can contain a daytime forecast and a nighttime forecast. These segments are separate objects in the JSON responses. Daytime forecast data of the daily forecast are no longer available after 3:00 PM local time. At 3:00 pm local time, your application must no longer display the day forecast.|
-|`GET /v2/forecast/hourly/24hour`         |Returns an hourly forecast for the current day and the next 24 hours for a geolocation. The hourly forecast data can contain up to 24 hourly forecasts for each location. You must discard all previous hourly forecasts for a location when new data is received|
-|`GET /v2/observations/current`           |Returns the current weather conditions for a geolocation. These recent observations are retained in the database up to 10 minutes on specific reporting stations and 24 hours of observations per station. The recent observations data is continuously updated and replaced with a first-in / first-out methodology (rotating data with newest observation and moving the oldest observations to the archive storage) based on date/time stamping of the observations.|
-|`GET /v2/observations/timeseries/24hour` |Returns both the current observations and up to 24 hours of past observations, from the current date and time, for a geolocation. Weather observations are gathered from physical devices deployed worldwide, and the current weather observations.|
-*Table 1. Insights for Weather API summary*
+|`GET /v1/{geocode or location ID}/forecast/hourly/48hour.json`  |Returns the hourly weather forecast for the next 48 hours for a geolocation depending on the format that you supply. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. The hourly forecast data can contain up to 48 hourly forecasts for each location. You must discard all previous hourly forecasts for a location when new data is received.|
+|`GET /v1/{geocode or location ID}/forecast/daily/{format}.json`   |Returns daily weather forecasts for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days returned is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a daytime forecast, a nighttime forecast, and a 24-hour forecast. These segments are separate objects in the JSON responses. Daytime forecast data of the daily forecast are no longer available after 3:00 PM local time. At 3:00 pm local time, your application must no longer display the day forecast.|
+|`GET /v1/{geocode or location ID}/forecast/intraday/{format}.json`|Returns daily weather forecasts in 6-hour periods for 3, 5, 7, or 10 days for a geolocation depending on the format that you supply. The number of days returned is specified in the format as `3day`, `5day`, `7day`, or `10day`. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Each daily forecast can contain a morning, afternoon, evening, and overnight forecast. These segments are separate objects in the JSON responses.|
+|`GET /v1/{geocode or location ID}/observations.json`              |Returns the current weather conditions for a geolocation. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`.  These recent observations are retained in the database up to 10 minutes on specific reporting stations and 24 hours of observations per station. The recent observations data is continuously updated and replaced with a first-in / first-out methodology (rotating data with newest observation and moving the oldest observations to the archive storage) based on date/time stamping of the observations.|
+|`GET /v1/{geocode or location ID}/observations/timeseries.json`   |Returns both the current observations and up to 24 hours of past observations, from the current date and time, for a geolocation. You can supply a `geocode/{latitude}/{longitude}` or a `location/{locationId}`. Weather observations are gathered from physical devices deployed worldwide, and the current weather observations.|
+|`GET /v1/{geocode, country code, state, or area}/alerts.json`      |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe) and include the translation of the event description, country name, and alert headlines in 49 languages. You can supply a `geocode/{latitude}/{longitude}`, `country/{countrycode}`, `country/{countrycode}/state/{statecode}`/, or `country/{countrycode}/area/{areaid}`.|
+|`GET /v1/alert/{detail_key}/details.json`                         |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe). The details include in-depth information about the alert issued by the government weather authority for the specified area and include the translation of the event description, country name, and alert headlines in 49 languages.|
+|`GET /v1/{geocode or postal code}/almanac/daily.json`             |Returns daily almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
+|`GET /v1/{geocode or postal code}/almanac/monthly.json`           |Returns monthly almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
+|`GET /v3/location/{search or point}`                                  |Provides the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match the request. The Location Service supports search by city name, geocode (latitude and longitude), postal code, and ICAO code.|
+*Table 1. {{site.data.keyword.weather_short}} API summary*
 
-## Time-series observations
+## Daily and and intraday forecasts
+{: #daily_intraday}
+The daily forecast API can contain multiple days of daily forecasts for each location. 
+Each day of a forecast can contain up to three separate forecasts. For any given 
+forecast day the API can return day, night, and 24-hour forecasts.
+
+The intraday forecast API breaks down the next 360 hours of forecasts into 
+6-hour segments for each of the next 10 days.  The intraday forecast is 
+very similar in structure to the daily forecast.
+
+Each segment has a day part number, day of the week name, and day part name. For example, 
+the following example shows the data field order and data values for 
+`num`, `dow`, and the `daypart_name`, for a forecast that is generated 
+by the APIs on a Thursday morning:
+* 1, Thursday, Morning
+* 2, Thursday, Afternoon
+* 3, Thursday, Evening
+* 4, Thursday, Overnight
+* 5, Friday, Morning
+* 6, Friday, Afternoon
+* 7, Friday, Evening
+* 8, Friday, Overnight
+
+## Current and time-series observations
 {: #time_series}
 
-The time-series weather observations data provides information about temperature,
+The current oonditions and time-series weather observations data provides information about temperature,
 precipitation, wind, barometric pressure, visibility, ultraviolet (UV) radiation,
 and other related observation elements, including observation station,
 observation date/time, weather icon codes and phrases. The difference between
@@ -63,31 +94,95 @@ retained and available from any station can be more than 24 individual
 observation reports. The number of observations is
 determined by the type of observation it is.
 
+## Alert headlines and details
+{: #alerts_levels}
+The alert APIs return active weather alert headlines that are related to severe 
+thunderstorms, tornadoes, earthquakes, and floods. 
+These APIs also return non-weather alerts such as child abduction alerts and 
+law enforcement warnings. 
+
+**Note**: This API is available only for the United States, Canada, and Europe. 
+
+The Alert Headlines API provides a key value in the `detail_key` attribute 
+to access the alert details in the Alert Details API.
+Query the Alert Headlines API to get the `detail_key` value, and then retrieve the 
+Alert Details API response with the `detail_key`.
+
+**Note**: You must display the data source attribution for any alert data that is displayed in your application. 
+
+The attribution phrase must display the following information: 
+
+*Issued by <Office Name> - &lt;Office Admin District Code&gt;, &lt;Office Country Code&gt;, &lt;Source&gt;, &lt;Disclaimer&gt;*
+
+For example:
+* Issued by National Weather Service - Bismarck, US
+* Issued by Central Institute for Meteorology and Geodynamics - Austria, EMETNET-Meteoalarm
+
+## Almanac information
+{: #almanac_details}
+The Almanac API requires a location ID and location type (city or postal code) 
+or a latitude and longitude pair to retrieve the information for a specific location. 
+
+When you use `location` in the URL, the location must include a location ID 
+(postal code) with a location type and a
+country code. When you use `geocode` in the URL, the search location must be a valid 
+latitude and longitude combination. 
+
+The Almanac API uses parameters to specify either daily or monthly data, 
+a specific date or date range of information, and the units of measure to return the data in. 
+
+The date parameters are `start` and `end`. The `start` parameter is a required parameter
+but the `end` parameter is optional. When the parameters are used together, the combination returns a 
+range of data instead of a specific month or day of data. 
+
+The date format for retrieving Daily Almanac results is a four-digit numeric value that represents 
+the month and day for the data required, that is, MMDD. Any single digit 
+day **must** have a preceding zero (0), for example, 01.
+
+The date format for retrieving Monthly Almanac results is month, that is, MM. Any single digit 
+month **must** have a preceding zero (0), for example, 01.  Any other format results in 
+an API error and no data will be returned.
+
+**Note**: If you don't provide the date value in the request, the system returns a 
+status of 404 (Bad Request). The API does not provide a default value.
+
 ## URL construction
 {: #url_construction}
 
-The Insights for Weather APIs use a common URL structure and query parameters to request and filter weather data.
-The URLs that are passed to the Insights for Weather APIs are constructed as follows:
+The REST APIs use a common URL structure and query parameters to request and filter weather data.
+The URLs that are passed to the APIs are constructed as follows:
 
 ```
-https://twcservice.mybluemix.net/api/weather/v2/<product group>/&format={format type}&geocode={latitude,longitude}&language={language code}&units={units code}
+https://twcservice.mybluemix.net/api/weather/v1/&geocode={latitude,longitude}/<product group>/<date>/<format>&units={units code}&language={language code}
+```
 
+For example:
+
+```
+https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/daily/3day.json?units=m&language=en-US
 ```
 
 |**Attribute**     |**Description**                                    |
 |------------------|---------------------------------------------------|
-|`hostname`        |The hosted URL path (for example, `https://twcservice.mybluemix.net:443/api/weather`)|
-|`version`         |The current iteration (for example, "v2")|
-|`product group`   |The product (for example, "observations" or "forecast")|
-|`geocode`         |The optional latitude and longitude, for example, "45.4214,75.6919" represents Ottawa, Canada. If you supply a geocode coordinate, the API returns data for the closest location available. Periods are used as decimal separators and commas are used to separate latitude and longitude values. If you supply a geocode, the actual latitude and longitude values that are used are returned in the metadata of the response.|
-|`language`        |The language to return the response in. The default is en-US. The default or requested translation language is returned in the language parameter in the metadata of the response.|
+|`hostname`        |The hosted URL path. For example, `https://twcservice.mybluemix.net:443/api/weather`.|
+|`version`         |The current iteration. For example, "v1".|
+|`location`        |The geocode or location ID. The location group can be "geocode" or "location". For example, "geocode/45.4214/75.6919" represents Ottawa, Canada. If you supply a geocode coordinate, the API returns data for the closest location available. Periods are used as decimal separators and commas are used to separate latitude and longitude values. If you supply a geocode, the actual latitude and longitude values that are used are returned in the metadata of the response.|
+|`product group`   |The product. For example, "observations" or "forecast". A product subgroup, for example, "historical", is optional.|
+|`date`            |The date type. For example, "daily" or "monthly".|
+|`format`          |The format. For example, "3day", "5day", "7day", or "10day".|
 |`units`           |The optional units to return the response in. The API supports English (e), Metric (m), and UK-Hybrid (h) units of measure. If you supply the units of measure but don't supply a value, the API returns the data in the unit of measure that corresponds to the language code. The default or requested unit of measure is returned in the units parameter in the metadata of the response.|
+|`language`        |The language to return the response in. The default is en-US. The default or requested translation language is returned in the language parameter in the metadata of the response.|
 *Table 2. URL details*
+
+**Note**: The REST APIs use the ISO 3166 standard for country codes. For more information, see the
+[ISO Standard Online Browsing Platform](https://www.iso.org/obp/ui/#search/code/){:new_window}.
+The APIs use the WGS84 geocode coordinate reference system. For more information, see 
+[Basic Geo Vocabulary](https://www.w3.org/2003/01/geo/){:new_window}.
 
 ## Units of measure
 {: #units_measure}
 
-When you use the Insights for Weather APIs, you don't need to explicitly pass a unit of measure. The Insights for Weather APIs default to the unit of measure that is associated with the language code in the URL. However, if you want to provide a unit of measure that is different from the default, you can pass in a unit of measure that overrides the default.
+When you use the REST APIs, you don't need to explicitly pass a unit of measure. The APIs default to the unit of measure that is associated with the language code in the URL. However, if you want to provide a unit of measure that is different from the default, you can pass in a unit of measure that overrides the default.
 
 * For en-US or en, the default unit of measure code is English/Imperial. The unit code is "e".
 * For en-GB, the default unit of measure is Hybrid-UK. The unit code is "h".
@@ -96,7 +191,7 @@ When you use the Insights for Weather APIs, you don't need to explicitly pass a 
 ## Language translation
 {: #language_translation}
 
-The Insights for Weather APIs translate the phrases and unit of measure. When you format a request URL, you must provide a valid language.
+The REST APIs translate the phrases and unit of measure. When you format a request URL, you must provide a valid language.
 The following fields are translated:
 
 |**Field**           |**Description**                                    |
@@ -113,14 +208,17 @@ The following fields are translated:
 |`phrase_nnchar`     |Daytime sensible weather phrase|
 |`lunar_phrase`      |Three-character short code for lunar phases|
 |`uv_desc`           |The UV index description, which complements the UV index value by providing an associated level of risk of skin damage due to exposure|
-|`sky_cover`         | Descriptive sky cover that is based on percentage of cloud cover|
-|`ptend_desc`        | Descriptive text of pressure tendency over the past 3 hours|
+|`wx_phrase`         |A text description of the observed weather conditions at the reporting station.|
+|`pressure_desc`     |A phrase that describes the change in the barometric pressure reading over the last hour.|
+|`headline_text`     |The text of the headline of an event for the location.| 
+|`event_desc`        |A description of an event.|
+|`cntry_name`        |The country name where an event occurred, given in mixed case letters.|    
 *Table 3. Translated response fields*
 
 ## Handling null or missing data fields in the API response
 {: #handling_null_or_missing}
 
-If a data field is null because the data is not available, the Insights for Weather APIs either return the appropriate field tags with the word "null" or don't return the field at all.
+If a data field is null because the data is not available, the REST APIs either return the appropriate field tags with the word "null" or don't return the field at all.
 
 ## Handling errors
 {: #handling_errors}
@@ -133,11 +231,7 @@ The following error codes are common to all APIs:
 |401       |Unauthorized. The request requires authentication.|
 |403       |Forbidden. The server understood the request but is refusing to fulfill it.|
 |404       |Not found. If a required parameter is not present in the API request, a MissingParameterException error with a 404 error code is returned.|
-|405       |Method Not Allowed. For example, sending a POST instead of a GET.|
-|406       |Not Acceptable. For example, not accepting gzip compressed responses.|
-|408       |Request Timeout. Client did not produce request within time server was willing to wait.|
 |500       |Internal server error. The server encountered an unexpected condition that prevented it from fulfilling the request.|
-|502-504   |Service Unavailable or Gateway issue. These error codes are returned if the service is temporarily unavailable.|
 *Table 4. Error response code*
 
 The response on error is always the same. Multiple error codes can be returned in one response.
