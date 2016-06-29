@@ -62,7 +62,10 @@ You must then add OpenWhisk.framework to the embedded frameworks in your Xcode p
 
 ### Installing from source code
 
-Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git. Open project using the OpenWhisk.xcodeproj file in Xcode. The project contains two schemes "OpenWhisk" and "OpenWhiskWatch" targetted for iOS and watchOS 2, respectively. Build the project for the targets you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
+Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git.
+Open the project using the `OpenWhisk.xcodeproj` using Xcode.
+The project contains two schemes "OpenWhisk" and "OpenWhiskWatch" targetted for iOS and watchOS 2, respectively.
+Build the project for the targets you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
 
 ## Installing the starter app example
 {: #openwhisk_install_sdkstart}

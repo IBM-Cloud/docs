@@ -317,6 +317,7 @@ You can also include any compilation steps or dependencies by modifying the `doc
 
 
 ## REST API
+{: #openwhisk_ref_restapi}
 
 All the capabilites in the system are available through a REST API. There are collection and entity endpoints for actions, triggers, rules, packages, activations, and namespaces.
 
