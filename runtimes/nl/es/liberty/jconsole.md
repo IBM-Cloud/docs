@@ -11,7 +11,8 @@ copyright:
 # Supervisión de Liberty en Bluemix con JConsole
 {: #jconsole}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 ## A continuación se muestran los pasos para supervisar el tiempo de ejecución de Bluemix Liberty con JConsole:
 {: #steps_to_monitor}
@@ -39,27 +40,27 @@ Envíe el paquete de servidor que contiene la aplicación, limitándolo a una so
            <user>jconuser</user>
        </administrator-role>
 ```
-{: #codeblock}
+{: codeblock}
 
    * Nota: La contraseña se debe codificar con la herramienta securityUtility que suministra Liberty.
 
 ### Inicie la app de JConsole
-{: #start_jconsole_app}
+{: start_jconsole_app}
 
-JConsole se incluye con la instalación de Java. Para iniciar la app de JConsole, vaya a &lt;java-home&gt;/bin y ejecute el siguiente mandato:
+JConsole se incluye con la instalación de Java.  Para iniciar la app de JConsole, vaya a &lt;java-home&gt;/bin y ejecute el siguiente mandato:
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Puede que tenga que pasar parámetros adicionales para configurar Java trustStore. Los parámetros siguientes deberían funcionar en la mayoría de los casos:
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Completar la conexión
-{: #start_jconsole_app}
+{: start_jconsole_app}
   * Rellene el campo Proceso remoto con el siguiente url:
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
   *  En los campos Nombre de usuario y Contraseña especifique un usuario y contraseña con el rol de administrador desde el archivo server.xml.
@@ -79,7 +80,7 @@ A continuación se muestra un ejemplo de archivo de propiedades de registro:
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
 ```
-{: #codeblock}
+{: codeblock}
 
 También puede añadir <b>&dash;J&dash;Djavax.net.debug=ssl</b> al mandato jconsole. Este genera el rastreo de diagnóstico de SSL en otra ventana de salida de JConsole.  Por último, puede habilitar el rastreo en el lado del servidor añadiendo lo siguiente a su archivo server.xml:
 ```
@@ -88,6 +89,8 @@ También puede añadir <b>&dash;J&dash;Djavax.net.debug=ssl</b> al mandato jcons
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

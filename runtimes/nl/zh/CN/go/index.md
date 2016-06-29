@@ -42,7 +42,9 @@ copyright:
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window} 内提供了以下 Go 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的
+[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.6.2){: new_window} 内
+提供了以下 Go 版本：
 
 * 1.2.1
 * 1.2.2
@@ -56,6 +58,9 @@ copyright:
 如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} 来部署应用程序。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [用于 Go 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/go-buildpack){: new_window}

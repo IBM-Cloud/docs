@@ -11,9 +11,10 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*마지막 업데이트 날짜: 2016년 3월 16일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
-{{site.data.keyword.Bluemix}}의 PHP 런타임은 php_buildpack을 통해 제공됩니다.
+{{site.data.keyword.Bluemix}}의 PHP 런타임은 php_buildpack을 통해 제공됩니다. 
 php_buildpack은 PHP 앱을 위한 완전한 런타임 환경을
 제공합니다.
 {: shortdesc}
@@ -36,13 +37,13 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-자세한 정보는 [작성기 플랫폼 패키지](https://getcomposer.org/doc/02-libraries.md#platform-packages)를 참조하십시오.
-
-버전이 지정되지 않은 경우 기본적으로 버전 5.5.30이 선택됩니다. 
+자세한 정보는 [작성기 패키지 링크](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오. 버전이 지정되지 않은 경우 기본적으로 버전 5.5.30이 선택됩니다. 
 
 ### 사용 가능한 버전: 
 {: #available_versions}
@@ -65,7 +66,9 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 사용하여 애플리케이션을 배치할 수 있습니다. 
 
 # 관련 링크
-## 샘플
+{: #rellinks}
+## 학습서 및 샘플
+{: #samples}
 * [REST API 빌드 및 배치](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [모바일 친화 칼로리 카운터 빌드 및 배치](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 일반

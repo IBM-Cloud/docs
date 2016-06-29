@@ -61,6 +61,9 @@ il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: n
 esterno per distribuire l'applicazione.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

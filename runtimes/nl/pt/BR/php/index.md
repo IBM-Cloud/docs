@@ -11,7 +11,8 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Última atualização: 16 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 O tempo de execução PHP no {{site.data.keyword.Bluemix}} foi desenvolvido com o php_buildpack.
 O php_buildpack fornece um ambiente de tempo de execução completo para apps em PHP.
@@ -39,12 +40,13 @@ obter ajuda sobre o uso do app iniciador.
 
 ```
 {
-    "versão": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-Para obter mais informações, consulte [Pacotes do Composer Platform](https://getcomposer.org/doc/02-libraries.md#platform-packages).
-
+Para obter mais informações, consulte [Links do pacote do Composer](https://getcomposer.org/doc/04-schema.md#package-links).
 Quando uma versão não estiver especificada, a versão 5.5.30 será escolhida, por padrão.
 
 ### Versões disponíveis:
@@ -65,7 +67,9 @@ Se seu app requer uma versão do PHP não listada, é possível usar o [buildpac
 PHP](https://github.com/cloudfoundry/php-buildpack.git) externo para implementar o app.
 
 # rellinks
-## amostras
+{: #rellinks}
+## Tutoriais e amostras
+{: #samples}
 * [Compilar e implementar uma API REST](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Compilar e implementar um contador de calorias fácil de usar em dispositivos móveis ](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## geral

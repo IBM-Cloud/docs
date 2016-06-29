@@ -12,7 +12,8 @@ copyright:
 # 바인드된 서비스의 자동 구성
 {: #auto_config}
 
-*마지막 업데이트 날짜: 2016년 3월 31일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 다양한 서비스를 Liberty 애플리케이션에 바인드할 수 있습니다. 개발자에게 필요한 기능에 따라 서비스는 컨테이너 관리형, 애플리케이션 관리형 또는 두 형태 모두로 제공됩니다.
 
@@ -92,7 +93,7 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **중요**: 사용자가 지정한 서비스 유형이 VCAP_SERVICES 환경 변수에 표시된 서비스 레이블과 일치해야 합니다. 공백은 허용되지 않습니다.
 **중요**: <service_type_specification>에 공백을 사용할 수 없습니다. 단, 여러 개의 <service_type_specification> 인스턴스를 구분하는 목적으로만 유일하게 공백을 사용할 수 있습니다.
@@ -103,15 +104,11 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
-
-    env:
-      services_autoconfig_excludes: sqldb=config
-
-    env:
+      services_autoconfig_excludes: mongodb-2.2=allenv:
+      services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 다음은 명령 인터페이스를 사용하여 애플리케이션 myapp에 services_autoconfig_excludes 환경 변수를 설정하는 방법의 예입니다. 
 
@@ -119,9 +116,11 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

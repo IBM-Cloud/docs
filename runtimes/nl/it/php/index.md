@@ -11,7 +11,8 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*Ultimo aggiornamento: 16 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Il runtime PHP su {{site.data.keyword.Bluemix}} si avvale del php_buildpack.
 Il php_buildpack fornisce un ambiente di runtime completo per le applicazioni PHP.
@@ -35,11 +36,13 @@ Puoi specificare la versione di PHP che deve essere utilizzata dalla tua applica
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-Per ulteriori informazioni, vedi [Pacchetti piattaforma compositore](https://getcomposer.org/doc/02-libraries.md#platform-packages).
+Per ulteriori informazioni, consulta [Composer Package links](https://getcomposer.org/doc/04-schema.md#package-links).
 
 Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 5.5.30.
 
@@ -63,7 +66,9 @@ puoi utilizzare il [pacchetto
 di build PHP](https://github.com/cloudfoundry/php-buildpack.git) esterno per distribuire l'applicazione.
 
 # rellinks
-## esempi
+{: #rellinks}
+## Esercitazioni ed esempi
+{: #samples}
 * [Crea e distribuisci un'API REST](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Crea e distribuisci un conta-calorie compatibile con i dispositivi mobili](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## general

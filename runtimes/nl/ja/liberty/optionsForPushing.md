@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -12,7 +12,8 @@ copyright:
 # Liberty アプリケーションのプッシュのオプション
 {: #options_for_pushing}
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 Bluemix における Liberty サーバーの動作は、Liberty ビルドパックによって制御されます。 ビルドパックは、特定のクラスのアプリケーションに対して、完全なランタイム環境を提供することができます。また、
 クラウド間の移植性を可能にし、また、オープンなクラウド・アーキテクチャーに寄与する上で要となります。Liberty ビルドパックは、
@@ -38,7 +39,7 @@ WAR または EAR ファイルなどのスタンドアロン・アプリケー�
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 スタンドアロン・アプリケーションがデプロイされるとき、デフォルト Liberty 構成がアプリケーションに提供されます。デフォルト構成では、以下の Liberty フィーチャーが使用可能です。
 
@@ -65,7 +66,7 @@ jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 注: 最高の結果を得るには、JBP_CONFIG_LIBERTY 環境変数で Liberty フィーチャーを設定するか、または、カスタム server.xml ファイルを使用して、アプリケーションを[サーバー・ディレクトリー](optionsForPushing.html#server_directory)または r [パッケージされたサーバー](optionsForPushing.html#packaged_server)としてデプロイします。この環境変数を設定すると、アプリケーションは必要なフィーチャーのみを使用して、ビルドパックのデフォルト Liberty フィーチャー・セットの変更による影響を受けないことが確実になります。フィーチャー・セット以外にさらに Liberty 構成が必要な場合、
 [サーバー・ディレクトリー](optionsForPushing.html#server_directory)または[パッケージされたサーバー](optionsForPushing.html#packaged_server)のオプションを使用してアプリケーションをデプロイします。
@@ -76,7 +77,7 @@ WAR ファイルをデプロイした場合、Web アプリケーションは組
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 EAR ファイルをデプロイした場合、組み込み Web アプリケーションは EAR デプロイメント記述子で定義されたコンテキスト・ルートでアクセス可能です。
 以下に例を示します。
@@ -85,9 +86,10 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 デフォルト Liberty server.xml 構成ファイル全体は以下のようになります。
+
 ```
     <server>
        <featureManager>
@@ -121,7 +123,7 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -132,14 +134,14 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 重要: 環境変数の変更を有効にするには、次のようにアプリケーションの再ステージングを実行する必要があります。
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## サーバー・ディレクトリー
 {: #server_directory}
@@ -152,7 +154,7 @@ Liberty プロファイルをワークステーションにインストールし
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 ワークステーションに Liberty プロファイルがインストールされていない場合、以下の手順を使用して、アプリケーションのサーバー・ディレクトリーを作成できます。
 
@@ -170,25 +172,24 @@ Liberty プロファイルをワークステーションにインストールし
         </featureManager>
 
         <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
-
-        <application name="myapp" context-root="/" type="war" location="myapp.war"/>
+<application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 サーバー・ディレクトリーの準備ができたら、それを Bluemix にデプロイできます。
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 注: サーバー・ディレクトリーの一部としてデプロイされた Web アプリケーションは、[Liberty プロファイルで決定されたコンテキスト・ルート](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)からアクセス可能です。例えば、次のとおりです。
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## パッケージされたサーバー
 {: #packaged_server}
@@ -200,14 +201,14 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 このコマンドはサーバーのディレクトリーに serverName.zip ファイルを生成します。その後 cf push コマンドで圧縮ファイルを Bluemix にプッシュできます。例えば、次のとおりです。
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 注: パッケージされたサーバーの一部としてデプロイされた Web アプリケーションは、 Liberty プロファイルで決定されたコンテキスト・ルートからアクセス可能です。
 
@@ -259,6 +260,8 @@ Liberty ビルドパックが server.xml ファイル内のサービス・バイ
 バインドされたサービスが Liberty ビルドパックによって自動構成されないサービスの場合、アプリケーション自体がバックエンド・リソースのアクセスを管理する必要があります。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

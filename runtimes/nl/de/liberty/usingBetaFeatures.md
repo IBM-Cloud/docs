@@ -11,7 +11,8 @@ copyright:
 # Beta-Features verwenden
 {: #using_beta_features}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in Bluemix implementiert sind.
 
@@ -28,14 +29,23 @@ In Bluemix verfügbare Liberty-Beta-Features
 </tr>
 
 <tr>
+<td>bluemixLogCollector-1.1</td>
 <td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
+<td>logstashCollector-1.1</td>
+</tr>
+
+<tr>
 <td>osgiBundle-1.0</td>
 <td>passwordUtilities-1.0</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
+
 </table>
 
-Führen Sie einen der folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix verwenden zu können:
+Führen Sie die folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix verwenden zu können:
 
 1. [Implementieren Sie ein Serververzeichnis oder einen paketierten Server](optionsForPushing.html) mit mindestens einem in der Datei 'server.xml' aktivierten Beta-Feature, wie im folgenden Beispiel gezeigt:
 ```
@@ -48,8 +58,8 @@ Führen Sie einen der folgenden Schritte aus, um die Liberty-Beta-Features in Bl
 ```
 {: #codeblock}
 
-2.  Setzen Sie die Umgebungsvariable IBM_LIBERTY_BETA auf **true**. Diese Variable weist das
-Liberty-Buildpack an, die Beta-Features zu installieren und für Ihre Anwendung zu aktivieren.  Lesen Sie folgende Beispiele:
+2.  Setzen Sie die Umgebungsvariable **IBM_LIBERTY_BETA** auf **true**. Diese Variable weist das
+Liberty-Buildpack an, die Beta-Features zu installieren und für Ihre Anwendung zu aktivieren.  Beispiel:
   * Verwendung des Befehlszeilentools 'cf':
 ```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
@@ -61,9 +71,27 @@ Liberty-Buildpack an, die Beta-Features zu installieren und für Ihre Anwendung 
       env:
           IBM_LIBERTY_BETA: "true"
 ```
+
+3. Setzen Sie die Umgebungsvariable **JBP_CONFIG_LIBERTY** auf **"version: +"**. Diese Variable aktiviert die [Liberty-Beta-Laufzeit](buildpackDefaults.html#liberty_versions), die Beta-Features unterstützt. Beispiel:
+  * Verwendung des Befehlszeilentools 'cf':
+```
+       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+```
+{: #codeblock}
+
+  * Alternativ Verwendung der Datei 'manifest.yml':
+```
+      env:
+          JBP_CONFIG_LIBERTY: "version: +"
+```
+
+Wenn Sie die Beta-Features für eine bestehende Anwendung aktivieren, müssen Sie für Ihre Anwendung nach dem Einstellen der Umgebungsvariablen ein erneutes Staging durchführen.
+
 {: #codeblock}
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

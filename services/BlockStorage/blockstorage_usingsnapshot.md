@@ -3,6 +3,9 @@
 
 # Using {{site.data.keyword.blockstorageshort}} snapshot {: #using-block-storage-snapshot} 
 
+*Last updated: 20 June 2016*
+{: .last-updated}
+
 ## Creating a snapshot {: #creating-snapshot} 
 
 1.	Select the **Volumes** tab to get a list of volumes.

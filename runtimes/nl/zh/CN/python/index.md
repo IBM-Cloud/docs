@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*上次更新时间：2016 年 3 月 16 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Python 运行时由 python_buildpack 提供支持。python_buildpack 为 Python 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
@@ -51,5 +52,7 @@ python-3.4.3
 如果您应用程序所需的 Python 版本没有列在上述列表中，那么可以使用外部 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) 来部署应用程序。
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [用于 Python 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/python-buildpack)

@@ -12,22 +12,24 @@ copyright:
 # Getting started with IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-*Last updated: 13 June 2016*
+*Last updated: 24 June 2016*
 {: .last-updated}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} is a service that facilitates quick setup on a pre-configured WebSphere Application Server Liberty, Network Deployment, or Traditional instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} is a service that facilitates quick setup on a pre-configured WebSphere Application Server Liberty, Traditional Network Deployment, or Traditional WebSphere instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
 ## Overview of WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} provides consumers with pre-configured Traditional WebSphere and Liberty Profile servers. It is hosted on virtual machine guests with root access to the guest operating system. When you are creating your service, choose between _Liberty_, _ND_, or _Traditional WebSphere_.
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} provides consumers with pre-configured Traditional WebSphere and Liberty Profile servers. It is hosted on virtual machine guests with root access to the guest operating system. When you are creating your service, choose between _Liberty_, _Traditional ND_, or _Traditional WebSphere_.
+
+**Note:** Consumers are now able to choose between V8.5 and V9.0 when you create a new _Traditional ND_ or _Traditional WebSphere_ instance.
 
 You are given a familiar WebSphere administration experience and have full access to the underlying operating system. You can reuse your existing scripts and make the little system tweaks that you need to make to work with your own, or third party, frameworks. The Admin Center and Admin Consoles are provided to administer your WebSphere Application Server Liberty, ND or Traditional service, just like your on-premises WebSphere configurations.
 
-**Note**: The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Plan now has more capabilities. The plan consists of a WebSphere Application Server Network Deployment cell environment with two or more virtual machines. The first virtual machine contains the deployment manager and IBM HTTP Server and the remaining virtual machines contain custom nodes (node agents) federated to the deployment manager. Use your existing wsadmin scripts to create your WebSphere configuration or use the WebSphere Admin Console to manually configure the environment. These new capabilities allow users to set up a clustered environment for high availability, failover, and scalability. Clustering is a critical aspect of any middleware enterprise application, and clients can now elect to cluster a topology to load balance requests across two or more Instances.
+The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Plan consists of a WebSphere Application Server Network Deployment cell environment with two or more virtual machines. The first virtual machine contains the Deployment Manager and IBM HTTP Server and the remaining virtual machines contain custom nodes (node agents) federated to the Deployment Manager. Use your existing wsadmin scripts to create your WebSphere configuration or use the WebSphere Admin Console to manually configure the environment. These new capabilities allow users to set up a clustered environment for high availability, failover, and scalability. Clustering is a critical aspect of any middleware enterprise application, and clients can now elect to cluster a topology to load balance requests across two or more Instances.
 
-The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan also has more capabilities. The plan includes the use of a Liberty Collective, which is an administrative domain for a group of Liberty profiles (servers) and consists of two or more virtual machines. The first virtual machine contains the Collective Controller liberty server, which is a control point for the Liberty Collective. In addition to the liberty collective, this virtual machine also contains the IBM HTTP Server, which allows access to your applications from a web browser. The remaining virtual machines are the collective hosts where the collective members reside (liberty profile servers). The Liberty Admin Center feature is also enabled on the liberty controller server.
+The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan includes the use of a Liberty Collective. The Liberty Collective is an administrative domain for a group of Liberty profiles (servers) and consists of two or more virtual machines. The first virtual machine contains the Collective Controller liberty server, which is a control point for the Liberty Collective. In addition to the liberty collective, this virtual machine also contains the IBM HTTP Server, which allows access to your applications from a web browser. The remaining virtual machines are the collective hosts where the collective members reside (liberty profile servers). The Liberty Admin Center feature is also enabled on the liberty controller server.
 
 The following figure shows the architecture of the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Cell and Liberty Collective environments.
 
@@ -89,10 +91,11 @@ For example, if you use the ND Plan, one Instance equates to 1vCPU with 2 GB RAM
 
 **Note**: Minimum billing is set at 0.25 instance hour per Custom node or Liberty host. In the example above, one Control node and one Custom node that is configured for at least 15 minutes would equate to a minimum charge of (.25 * # of Instances).
 
-**Note**: Due to a specific amount of compute, memory, and I/O resources, clients are charged for accumulated instances in the STOPPED state at a reduced rate of 5%.  Clients are managed to a fixed number of STOPPED instances with no more than 10 IP addresses or 64 GB of memory.
+**Note**: Due to a specific amount of compute, memory, and I/O resources, clients are charged for accumulated instances in the STOPPED state at a reduced rate of 5%. Clients are managed to a fixed number of STOPPED instances with no more than 10 IP addresses or 64 GB of memory.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [WASdev](https://developer.ibm.com/wasdev/){: new_window}
-* [WebSphere Application Server Documentation](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/as_ditamaps/was855_welcome_ndmp.html){: new_window}
-* [WebSphere Application Server Traditional v9 Beta Documentation](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}
+* [WebSphere Application Server V9 Documentation](http://www.ibm.com/support/knowledgecenter/SSEQTP_9.0.0/as_ditamaps/was900_welcome_base.html){: new_window}

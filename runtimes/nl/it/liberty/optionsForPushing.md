@@ -12,7 +12,8 @@ copyright:
 # Opzioni per eseguire il push di applicazioni Liberty
 {: #options_for_pushing}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 La modalità di funzionamento del server Liberty in Bluemix è controllata dal pacchetto di build Liberty. I pacchetti di build possono fornire un ambiente di runtime completo per
 una specifica classe di applicazioni. Sono fondamentali per fornire la portabilità tra i cloud e contribuire a
@@ -39,7 +40,7 @@ Ad esempio:
 ```
     $ cf push <nomedellatuaapplicazione> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 Quando viene distribuita un'applicazione autonoma, per l'applicazione viene fornita una configurazione Liberty predefinita. La configurazione predefinita abilita le seguenti funzioni Liberty:
 
@@ -67,7 +68,7 @@ nuovo l'applicazione:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: per dei risultati ottimali, imposta le funzioni Liberty con la variabile di ambiente JBP_CONFIG_LIBERTY oppure distribuisci la tua applicazione come una [directory server](optionsForPushing.html#server_directory) o un [server in pacchetto](optionsForPushing.html#packaged_server) con un file server.xml personalizzato. L'impostazione di questa
 				variabile di ambiente garantisce che la tua applicazione utilizzi solo la funzione di cui
@@ -81,14 +82,14 @@ Se hai distribuito un file WAR, l'applicazione web è accessibile sotto il root 
 ```
     http://<nomedellatuaapplicazione>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 Se hai distribuito un file EAR, l'applicazione web integrata è accessibile sotto il root di contesto come definito nel descrittore di distribuzione EAR. Ad esempio,
 
 ```
     http://<nomedellatuaapplicazione>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 L'intero file di configurazione server.xml Liberty predefinito si presenta come segue:
 ```
@@ -124,7 +125,7 @@ L'intero file di configurazione server.xml Liberty predefinito si presenta come
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -135,14 +136,14 @@ Ad esempio:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 Importante: per rendere effettive le tue modifiche alle variabili di ambiente è necessario ripreparare la tua applicazione:
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Directory server
 {: #server_directory}
@@ -155,7 +156,7 @@ Ad esempio, se il server Liberty è denominato defaultServer, esegui il comando:
 ```
     $ cf push <nomedellatuaapplicazione> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Se sulla workstation non è installato un profilo Liberty, puoi utilizzare la seguente procedura
 				per creare una directory server con la tua applicazione:
@@ -173,26 +174,26 @@ Se sulla workstation non è installato un profilo Liberty, puoi utilizzare la se
             <feature>jsp-2.3</feature>
         </featureManager>
 
-        <httpEndpoint id=>
+        <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 Dopo che la directory server è pronta, puoi distribuirla a Bluemix.
 
 ```
     $ cf push <nomedellatuaapplicazione> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: le applicazioni web distribuite come parte della directory server sono accessibili sotto la [root di contesto, come determinato dal profilo Liberty](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). Ad esempio:
 
 ```
     http://<nomedellatuaapplicazione>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Server in pacchetto
 {: #packaged_server}
@@ -205,7 +206,7 @@ Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 Questo comando genera un file serverName.zip nella directory del server. Puoi quindi eseguire il push di tale file compresso a Bluemix con il comando cf push.
 Ad esempio:
@@ -213,7 +214,7 @@ Ad esempio:
 ```
     $ cf push <nomedellatuaapplicazione> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 Nota: le applicazioni web distribuite come parte del server in pacchetto sono accessibili sotto la root di contesto, come determinato dal profilo Liberty.
 
@@ -270,6 +271,8 @@ connection.name: un identificativo univoco per la connessione, che assume la for
 Per i servizi di cui è stato eseguito il bind che non sono configurati automaticamente dal pacchetto di build Liberty, l'applicazione deve gestire direttamente l'accesso della risorsa di backend.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

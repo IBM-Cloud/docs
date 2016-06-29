@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*最終更新日時: 2016 年 3 月 16 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Ruby ランタイムには ruby_buildpack が採用されています。
 ruby_buildpack は、Ruby アプリケーションのための完全なランタイム環境を提供します。
@@ -55,6 +56,8 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 アプリケーションが、リストされていないバージョンの Ruby を必要とする場合は、外部の [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack)を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Ruby on Rails の資料](http://rubyonrails.org/documentation/)

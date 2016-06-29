@@ -12,7 +12,8 @@ copyright:
 # Configurazione automatica dei servizi di cui è stato eseguito il bind
 {: #auto_config}
 
-*Ultimo aggiornamento: 31 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Puoi eseguire il bind di diversi servizi alla tua applicazione Liberty. I servizi possono essere gestiti dal contenitore, gestiti dall'applicazione o entrambe le cose, a seconda delle scelte
 dello sviluppatore.
@@ -109,13 +110,13 @@ le singole specifiche di opzione di esclusione devono essere separate da un sing
 In modo più formale, la grammatica della stringa è la seguente.
 
 ```
-    Opt_out_string :: <service_type_specification[<delimitatore>service_type_specification]*
+    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: il tipo di servizio (etichetta del servizio come si presenta in VCAP_SERVICES)
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **Importante**: il tipo di servizio da te specificato deve corrispondere all'etichetta services come si presenta nella variabile di ambiente VCAP_SERVICES. Lo spazio vuoto non è consentito.
 **Importante**: non è consentito alcuno spazio vuoto in una <specifica_tipo_di_servizio>. Il solo
@@ -135,7 +136,7 @@ Di seguito sono riportate delle specifiche di opzione di esclusione di esempio i
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 Sono qui di seguito
 riportati degli esempi di come impostare la variabile di ambiente services_autoconfig_excludes per l'applicazione
@@ -145,9 +146,11 @@ myapp utilizzando l'interfaccia riga di comando.
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

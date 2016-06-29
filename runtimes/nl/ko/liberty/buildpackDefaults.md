@@ -12,11 +12,26 @@ copyright:
 # 빌드팩 기본값
 {: #buildpack_defauts}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 Liberty 빌드팩은 Bluemix에서 자주 업데이트됩니다. 각 릴리스에는 보안 수정사항 또는 기능 개선사항이 포함될 수 있습니다. 
 
 빌드팩에는 WAR 또는 EAR 애플리케이션에 대한 Java 버전 또는 Liberty 기능 설정과 같은 설정에 대한 기본값이 있습니다. 일부 기본값은 빌드팩 릴리스 간에 변경될 수 있으며, 이는 애플리케이션에 부정적인 영향을 줄 수 있습니다. 애플리케이션이 빌드팩 기본값의 변경으로 인한 영향을 받지 않도록 하려면, 빌드팩 기본값의 의존을 피하도록 애플리케이션을 구성하는 단계를 수행하십시오. 
+
+## Liberty 버전
+{: #liberty_versions}
+
+이 빌드팩에서는 두 버전의 Liberty 런타임을 제공합니다. 
+1. 안정적 릴리스
+  * 기본 Liberty 런타임입니다.
+  * [베타 기능](usingBetaFeatures.html)을 제공하지 않습니다.
+  * 일반적으로 분기별로 업데이트됩니다. 
+
+2. 최신 베타 릴리스
+  * **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"** 값으로 설정하여 명시적으로 사용으로 설정해야 합니다. 
+  * [베타 기능](usingBetaFeatures.html)을 제공합니다.
+  * 일반적으로 월별로 업데이트됩니다. 
 
 ## Liberty 기능
 {: #liberty_features}
@@ -35,7 +50,10 @@ WAR 또는 EAR 파일을 배치하는 경우, 빌드팩은 Liberty 기능의 기
 
 주 버전 변경사항에 의해 애플리케이션이 영향을 받지 않도록 보장하려면, [JRE 사용자 정의](customizingJRE.html)에 설명된 대로 적합한 JRE 버전으로 환경 변수를 설정하십시오. 최상의 결과를 얻으려면 애플리케이션에 대해 Java 8을 채택하십시오. 
 
+
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

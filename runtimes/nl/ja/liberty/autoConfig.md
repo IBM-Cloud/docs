@@ -12,7 +12,8 @@ copyright:
 # バインドされたサービスの自動構成
 {: #auto_config}
 
-*最終更新日時: 2016 年 3 月 31 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 さまざまなサービスを Liberty アプリケーションにバインドすることができます。
 サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
@@ -99,13 +100,12 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 
 ```
     Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
-
     <service_type_specification> :: <service_type>=<option>
     <service_type> :: service type (service label as it appears in VCAP_SERVICES)
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。空白文字は使用できません。**重要**: <service_type_specification> 内に空白文字を含めることはできません。空白文字の使用が許可されるのは、
 複数の <service_type_specification> インスタンスを区切る場合のみです。
@@ -116,15 +116,11 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
-
-    env:
-      services_autoconfig_excludes: sqldb=config
-
-    env:
+      services_autoconfig_excludes: mongodb-2.2=allenv:
+      services_autoconfig_excludes: sqldb=configenv:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 以下の例は、
 コマンド・ライン・インターフェースを使用して、アプリケーションの myapp の services_autoconfig_excludes 環境変数を設定する方法を示します。
@@ -133,9 +129,11 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*마지막 업데이트 날짜: 2016년 3월 16일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Python 런타임은 python_buildpack을 통해 제공됩니다.
 python_buildpack은 Python 앱을 위한 완전한 런타임 환경을
@@ -59,5 +60,7 @@ python-3.4.3
 있습니다. 
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Python에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/python-buildpack)

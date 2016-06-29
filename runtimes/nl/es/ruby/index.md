@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Última actualización: 16 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 El tiempo de ejecución de Ruby en {{site.data.keyword.Bluemix}} está basado en el ruby_buildpack.
 El ruby_buildpack proporciona un entorno de ejecución completo para apps Ruby.
@@ -60,6 +61,8 @@ puede utilizar el
 desplegar la app.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Paquete de compilación de Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Documentación de Ruby on Rails](http://rubyonrails.org/documentation/)

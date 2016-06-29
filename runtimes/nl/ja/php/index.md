@@ -11,7 +11,8 @@ copyright:
 
 # PHP
 {: #php_runtime}
-*最終更新日時: 2016 年 3 月 16 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の PHP ランタイムには php_buildpack が採用されています。
 php_buildpack は、PHP アプリケーションのための完全なランタイム環境を提供します。
@@ -34,13 +35,13 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 
 ```
 {
-    "version": "1.5"
+    "require": {
+        "php": "5.6.*"
+    }
 }
 ```
 {: codeblock}
-詳しくは、[『Composer Platform packages』](https://getcomposer.org/doc/02-libraries.md#platform-packages)を参照してください。
-
-バージョンを指定しない場合は、デフォルトでバージョン 5.5.30 が選択されます。
+詳しくは、[『Composer Package links』](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。バージョンを指定しない場合は、デフォルトでバージョン 5.5.30 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
@@ -58,7 +59,9 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 アプリケーションが、リストされていないバージョンの PHP を必要とする場合は、外部の [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack.git)を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
-## サンプル
+{: #rellinks}
+## チュートリアルおよびサンプル
+{: #samples}
 * [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## 一般

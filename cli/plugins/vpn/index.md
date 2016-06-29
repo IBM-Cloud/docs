@@ -11,7 +11,7 @@ copyright:
 
 
 # IBM VPN CLI
-*Last updated: 30 May 2016*
+*Last updated: 23 June 2016*
 {: .last-updated}
 
 You can use the command line interface (CLI) to configure and manage your IBM® Virtual Private Network (VPN) service. The IBM VPN CLI is a plug-in that is used with the Cloud Foundry CLI plug-in. The plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
@@ -25,32 +25,32 @@ Before you begin, install the Cloud Foundry CLI. See [Cloud Foundry command line
 cf uninstall-plugin vpn
 ```  
 
-**Install Locally**
+### Install Locally
 
 1. Download the IBM VPN plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net).
 2. Install the IBM VPN plug-in by using the following command:  
 **Note:** Either switch to the location of the VPN plug-in or specify the path to the plug-in location.  
 
-	**For MS Windows OS:**
+	* For MS Windows OS:
 
 	```
 	cf install-plugin vpn_windows64.exe
 	```  
 
-	**For Apple MAC OS:**
+	* For Apple MAC OS:
 
 	```
 	cf install-plugin vpn_mac_os_amd64
 	```  
 
-	**For Linux OS:**
+	* For Linux OS:
 
 	```
 	cf install-plugin vpn_linuxamd64
 	```  
 
 
-**Install from Bluemix Repository**  
+### Install from Bluemix Repository  
 
 1. Add the Bluemix repository into the Cloud Foundry CLI repositories. Use the following command:
 

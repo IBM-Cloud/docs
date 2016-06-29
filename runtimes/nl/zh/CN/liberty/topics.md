@@ -12,14 +12,15 @@ copyright:
 # Liberty 主题
 {: #topics}
 
-*上次更新时间：2016 年 3 月 23 日*
+*上次更新时间：2016 年 6 月 10 日*
+{: .last-updated}
 
 * [Liberty 运行时](index.html)
 * [检测](index.html#detection)
 * [入门模板应用程序](index.html#starter_application)
 * [用于推送 Liberty 应用程序的选项](optionsForPushing.html)
 * [自动配置绑定服务](autoConfig.html)
-* [Bluemmix 中支持的 Liberty 功能](libertyFeatures.html)
+* [Bluemix 中支持的 Liberty 功能](libertyFeatures.html)
 * [使用 Beta 功能](usingBetaFeatures.html)
 * [内存限制和 Liberty buildpack](memoryLimits.html)
 * [使用 JConsole 监视 Bluemix 中的 Liberty](jconsole.html)
@@ -32,6 +33,8 @@ copyright:
 * [最新更新](updates.html)
 
 # 相关链接
+{: #rellinks}
 ## 常规
+{: #general}
 * [Liberty 运行时](index.html)
 * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

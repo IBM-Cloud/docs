@@ -41,11 +41,6 @@
 		"description": "Delivered as-a-service across public, dedicated, and on-premises deployment models.",
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
-	}, {
-		"title": "Developer's Guide",
-		"description": "Documentation for developers to create a service for Bluemix, or build content modules and microservices.",
-		"img": "homepage/images/WhatIsBluemix-icon.svg",
-		"href": "developing/index.html"
 	}]
 
 }

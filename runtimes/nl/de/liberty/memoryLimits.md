@@ -11,7 +11,8 @@ copyright:
 # Speicherbegrenzungen und das Liberty-Buildpack
 {: #memory_limits}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Bei der Implementierung einer Anwendung mit dem Liberty-Buildpack muss eine
 Speicherbegrenzung angegeben werden.
@@ -61,6 +62,8 @@ fehlgeschlagen ist.
 gestoppt. Cloud Foundry versucht einen Neustart der Anwendung. Der Neustart der Anwendung kann erfolgen, die Anwendung ist aber für eine gewisse Zeit nicht verfügbar.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

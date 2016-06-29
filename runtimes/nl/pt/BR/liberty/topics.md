@@ -12,7 +12,8 @@ copyright:
 # Tópicos do Liberty
 {: #topics}
 
-*Última atualização: 23 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 * [Tempo de execução do Liberty](index.html)
 * [Obstrução de Papel
@@ -33,6 +34,8 @@ copyright:
 * [Atualizações mais recentes](updates.html)
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Tempo de execução do Liberty](index.html)
 * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

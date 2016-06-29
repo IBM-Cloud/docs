@@ -8,10 +8,11 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Bluemmix에서 지원되는 Liberty 기능
+# Bluemix에서 지원되는 Liberty 기능
 {: #liberty_features}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 다음 표는 Bluemmix에서 지원되는 Liberty 기능을 표시합니다. 
 
@@ -123,73 +124,79 @@ copyright:
 </tr>
 
 <tr>
+<td>logstashCollector-1.0</td>
 <td>managedBeans-1.0</td>
 <td>mdb-3.1</td>
 <td>mdb-3.2 </td>
-<td>mediaServerControl-1.0</td>
 </tr>
 
 <tr>
+<td>mediaServerControl-1.0</td>
 <td>mongodb-2.0</td>
 <td>monitor-1.0</td>
 <td>oauth-2.0</td>
-<td>openid-2.0</td>
 </tr>
 
 <tr>
+<td>openid-2.0</td>
 <td>openidConnectClient-1.0</td>
 <td>openidConnectServer-1.0</td>
 <td>osgiAppIntegration-1.0</td>
-<td>osgiConsole-1.0</td>
 </tr>
 
 <tr>
+<td>osgiConsole-1.0</td>
 <td>osgi.jpa-1.0</td>
 <td>restConnector-1.0</td>
 <td>requestTiming-1.0</td>
-<td>rtcomm-1.0</td>
 </tr>
 
 <tr>
+<td>rtcomm-1.0</td>
 <td>rtcommGateway-1.0</td>
 <td>samlWeb-2.0</td>
 <td>scim-1.0</td>
-<td>servlet-3.0</td>
 </tr>
 
 <tr>
+<td>servlet-3.0</td>
 <td>servlet-3.1</td>
 <td>sessionDatabase-1.0</td>
 <td>sipServlet-1.1</td>
-<td>spnego-1.0</td>
 </tr>
 
 <tr>
+<td>spnego-1.0</td>
 <td>ssl-1.0</td>
 <td>timedOperations-1.0</td>
 <td>wab-1.0</td>
-<td>wasJmsClient-1.1</td>
 </tr>
 
 <tr>
+<td>wasJmsClient-1.1</td>
 <td>wasJmsClient-2.0</td>
 <td>wasJmsSecurity-1.0</td>
 <td>wasJmsServer-1.0</td>
-<td>webCache-1.0</td>
 </tr>
 
 <tr>
+<td>webCache-1.0</td>
 <td>webProfile-6.0</td>
 <td>webProfile-7.0</td>
 <td>websocket-1.0</td>
-<td>websocket-1.1</td>
 </tr>
 
 <tr>
+<td>websocket-1.1</td>
 <td>wmqJmsClient-1.1</td>
 <td>wmqJmsClient-2.0</td>
 <td>wsSecurity-1.1</td>
+</tr>
+
+<tr>
 <td>wsSecuritySaml-1.1</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </table>
@@ -199,6 +206,8 @@ copyright:
 CORBA/IIOP 프로토콜을 사용하여 원격 액세스할 수 없습니다. 
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

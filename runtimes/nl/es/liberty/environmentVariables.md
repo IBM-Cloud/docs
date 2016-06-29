@@ -13,7 +13,8 @@ copyright:
 # Variables de entorno
 {: #environment_variables}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 Variables de entorno admitidas por Liberty para Java.
 
@@ -100,6 +101,8 @@ Variables de entorno admitidas por Liberty para Java.
 </table>
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

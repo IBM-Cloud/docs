@@ -12,7 +12,8 @@ copyright:
 # Automatische Konfiguration gebundener Services
 {: #auto_config}
 
-*Letzte Aktualisierung: 31. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 An die Liberty-Anwendung können verschiedene Services gebunden werden. Abhängig von den Vorgaben des Entwicklers können Services containerverwaltet und/oder anwendungsverwaltet sein.
 
@@ -86,13 +87,13 @@ Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. 
 Formal sieht die Syntax der Zeichenfolge wie folgt aus.
 
 ```
-    Opt-out-Zeichenfolge :: <Spezifikation_des_Servicetyps<Begrenzer>Spezifikation_des_Servicetyps]*
+    Opt-out-Zeichenfolge :: <Spezifikation_des_Servicetyps[<Begrenzer>Spezifikation_des_Servicetyps]*
     <Spezifikation_des_Servicetyps> :: <Servicetyp>=<option>
     <Servicetyp> :: Servicetyp (Servicebezeichnung gemäß VCAP_SERVICES)
     <option> :: all | config
     <Begrenzer> :: ein Leerzeichen
 ```
-{: #codeblock}
+{: codeblock}
 
 **Wichtig**: Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
 **Wichtig**: Innerhalb von <Spezifikation_des_Servicetyps> ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Vorkommen von <Spezifikation_des_Servicetyps> voneinander zu trennen.
@@ -111,7 +112,7 @@ Beispiele für Opt-out-Spezifikationen in der Datei 'manifest.yml' für das Mong
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 Beispiele für die Konfiguration der Umgebungsvariablen 'services_autoconfig_excludes' für die Anwendung 'myapp' über die Befehlszeilenschnittstelle:
 
@@ -119,9 +120,11 @@ Beispiele für die Konfiguration der Umgebungsvariablen 'services_autoconfig_exc
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

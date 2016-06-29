@@ -60,6 +60,9 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
+
 * [GoLang](http://golang.org/){: new_window}
 * [Go에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/go-buildpack){: new_window}

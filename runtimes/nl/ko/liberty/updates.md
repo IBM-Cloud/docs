@@ -13,7 +13,24 @@ copyright:
 
 ## Liberty 빌드팩의 최신 업데이트 목록
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 17일*
+{: .last-updated}
+
+### 2016년 6월 17일: 업데이트된 Liberty 빌드팩 v3.0-20160608-1450
+* 이 빌드팩은 이제 WebSphere Liberty의 두 버전 즉, 최신의 안정적 릴리스와 최신 베타 릴리스를 포함합니다. 특히, [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 안정적 릴리스와 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 베타 릴리스를 제공합니다. 기본적으로 안정적 릴리스가 사용됩니다. 자세한 내용은 [Liberty 버전](buildpackDefaults.html#liberty_versions)을 참조하십시오.  
+
+### 2016년 5월 25일: 업데이트된 Liberty 빌드팩 v2.9-20160519-1249
+* 이 빌드팩에는 [5월 베타](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. 
+Liberty의 업데이트된 버전을 이용하면 *bluemixLogCollector-1.1* 및 *logstashCollector-1.1* 베타 기능을 Bluemix에서 사용할 수 있습니다. 
+
+### 2016년 5월 5일: 업데이트된 Liberty 빌드팩 v2.8-20160430-1011
+* 이 빌드팩에는 [4월 베타](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. 
+Liberty의 업데이트된 버전을 이용하면 *logstashCollector-1.0* GA 기능 및 *logmetCollector-1.0* 베타 기능을 Bluemix에서 사용할 수 있습니다. 
+* 또한 이 빌드팩에는 IBM JRE: 8 SR3 및 7.1 SR3 FP40의 업데이트된 버전이 포함되어 있습니다. 
+* 빌드팩에는 [AppDynamics](https://www.appdynamics.com/) 애플리케이션 모니터링 에이전트를 위한 초기 지원이 추가되었습니다.
+* [Dynatrace](dynatrace.html) 지원은 에이전트의 설치를 간소화하도록 개선되었습니다.
+* 빌드팩은 [Monitoring and Analytics 서비스](../../services/monana/index.html#monana_oview)에 대한 업데이트된 데이터 콜렉터를 제공합니다.최대 힙 데이터의 콜렉션과 관련된 문제점의 수정사항을 포함합니다. 
+* [devconsole 및 shell 앱 관리 유틸리티](../../manageapps/app_mng.html#app_management)에서 사용하는Node.js 런타임이 최신 0.12.13 버전으로 업데이트되었습니다. 
 
 ### 2016년 3월 25일: 업데이트된 Liberty 빌드팩 v2.7-20160321-1358
 * 이 빌드팩에는 [3월 베타](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. Liberty의 업데이트된 버전을 이용하면 cloudant-1.0 베타 기능을 Bluemix에서 사용할 수 있습니다. 
@@ -178,7 +195,9 @@ copyright:
 * IBM SDK for Java의 새 버전이 출시되었습니다! 
   * 애플리케이션이 다시 푸시되는 경우, 이는 IBM SDK for Java 버전7.1-1.0을 사용합니다. 이는 중요한 성능 업그레이드와 함께 제공합니다. 애플리케이션은 보다 뛰어난 처리량과 감소된 메모리 사용량을 보여줍니다. [여기](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)에서 IBM Java SDK에 대해 자세히 알아보십시오.
 
-  # 관련 링크
-  ## 일반
+# 관련 링크
+{: #rellinks}
+## 일반
+{: #general}
   * [Liberty 런타임](index.html)
   * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

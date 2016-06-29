@@ -10,10 +10,11 @@ copyright:
 {:codeblock: .codeblock}
 
 
-# Variabili d'ambiente
+# Variabili di ambiente
 {: #environment_variables}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Variabili di ambiente supportate da Liberty for Java.
 
@@ -100,6 +101,8 @@ Variabili di ambiente supportate da Liberty for Java.
 </table>
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Letzte Aktualisierung: 16. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Die Laufzeit von Python in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'python_buildpack'.
 Das Buildpack 'python_buildpack' bietet eine vollständige Laufzeitumgebung für Python-Apps.
@@ -52,5 +53,7 @@ Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudf
 Wenn für Ihre Anwendung eine Python-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack) implementieren.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Cloud Foundry-Buildpack für Python](https://github.com/cloudfoundry/python-buildpack)

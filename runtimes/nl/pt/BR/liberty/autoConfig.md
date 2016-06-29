@@ -12,7 +12,8 @@ copyright:
 # Configuração automática de serviços ligados
 {: #auto_config}
 
-*Última atualização: 31 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 É possível ligar vários serviços ao seu aplicativo Liberty. Os serviços podem ser gerenciados por contêiner, por aplicativo ou por ambos, dependendo do que o desenvolvedor
 deseja.
@@ -22,7 +23,7 @@ sem qualquer assistência do Liberty. O aplicativo geralmente lê VCAP_SERVICES 
 e acessa o serviço diretamente. O aplicativo fornece todo o código necessário de acesso ao cliente. Não há nenhuma dependência dos recursos do Liberty ou da configuração do arquivo server.xml. A configuração automática do buildpack
 do Liberty não se aplica aos serviços deste tipo.
 
-Um serviço gerenciado por contêiner é um serviço que é gerenciado pelo tempo de execução do Liberty. Em alguns casos, o aplicativo pode consultar o serviço ligado em JNDI, enquanto em outros o serviço é usado diretamente pelo próprio  Liberty. O buildpack do Liberty lerá VCAP_SERVICES para obter informações sobre os serviços ligados. Para cada serviço gerenciado por contêiner, o buildpack executa três funções.
+Um serviço gerenciado por contêiner é um serviço que é gerenciado pelo tempo de execução do Liberty. Em alguns casos, o aplicativo pode consultar o serviço ligado em JNDI, enquanto em outros o serviço é usado diretamente pelo próprio Liberty. O buildpack do Liberty lerá VCAP_SERVICES para obter informações sobre os serviços ligados. Para cada serviço gerenciado por contêiner, o buildpack executa três funções.
 
 * Gera [variáveis de nuvem](optionsForPushing.html#accessing_info_of_bound_services) para o serviço limite.
 * Instala os recursos do Liberty e o código de acesso ao cliente necessário para
@@ -56,7 +57,7 @@ contêiner e os configura automaticamente. Se desejar que o aplicativo gerencie 
 ## Instalação do código de acesso do cliente e dos recursos do Liberty
 {: #installation_of_liberty_features}
 
-Ao ligar a um serviço gerenciado por contêiner, o serviço pode requerer que os recursos do Liberty sejam configurados na sub-rotina featureManager no arquivo server.xml. O buildpack do  Liberty atualiza a sub-rotina featureManager e instala os binários de apoio necessários. Se o serviço precisar de jars do driver cliente, os jars serão transferidos por download para um local bem conhecido
+Ao ligar a um serviço gerenciado por contêiner, o serviço pode requerer que os recursos do Liberty sejam configurados na sub-rotina featureManager no arquivo server.xml. O buildpack do Liberty atualiza a sub-rotina featureManager e instala os binários de apoio necessários. Se o serviço precisar de jars do driver cliente, os jars serão transferidos por download para um local bem conhecido
 na instalação do Liberty.
 
 Consulte a documentação para o tipo de serviço ligado para obter
@@ -82,7 +83,7 @@ Em alguns
 casos, talvez você não queira que o buildpack do Liberty configure automaticamente os serviços que foram
 ligados. Considere os cenários a seguir:
 
-* Meu aplicativo usa MongoDB, mas desejo que o aplicativo gerencie diretamente a conexão ao banco de dados. O  aplicativo contém o jar do driver cliente necessário. Eu não deseja que o buildpack do Liberty configure
+* Meu aplicativo usa MongoDB, mas desejo que o aplicativo gerencie diretamente a conexão ao banco de dados. O aplicativo contém o jar do driver cliente necessário. Eu não deseja que o buildpack do Liberty configure
 automaticamente o serviço Mongo.
 * Estou fornecendo um arquivo server.xml e forneci as sub-rotinas de configuração para a instância SQLDB porque preciso de uma configuração de origem de dados não padrão. Eu não desejo que o buildpack do Liberty atualize meu arquivo server.xml, mas ainda preciso que o buildpack do Liberty assegure que o software de apoio apropriado esteja instalado.
 
@@ -109,7 +110,7 @@ Mais formalmente, a gramática da Sequência é conforme a seguir.
     <option> :: all | config
     <delimiter> :: one white space character
 ```
-{: #codeblock}
+{: codeblock}
 
 **Importante**: O tipo de serviço que você especifica deve corresponder ao rótulo de serviços como ele aparece na variável de ambiente VCAP_SERVICES. O espaço em branco não é permitido.
 **Importante**: Nenhum espaço em branco é permitido em um <service_type_specification>. O único uso permitido de espaço em branco é
@@ -129,7 +130,7 @@ Aqui estão especificações de opt-out de amostra em um arquivo manifest.yml pa
     env:
       services_autoconfig_excludes: sqldb=config mongodb-2.2=all
 ```
-{: #codeblock}
+{: codeblock}
 
 Aqui estão exemplos de como
 configurar a variável de ambiente services_autoconfig_excludes para o aplicativo myapp usando a interface de linha de comandos.
@@ -138,9 +139,11 @@ configurar a variável de ambiente services_autoconfig_excludes para o aplicativ
     $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
-{: #codeblock}
+{: codeblock}
 
 # rellinks
+{: #rellinks}
 ## geral
+{: #general}
 * [Tempo de execução do Liberty](index.html)
 * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

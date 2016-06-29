@@ -2,7 +2,8 @@
 
 # Using {{site.data.keyword.blockstorageshort}} volume {: #using-block-storage-volume} 
 
-
+*Last updated: 20 June 2016*
+{: .last-updated}
 
 ## Creating a volume {: #creating-volume} 
 

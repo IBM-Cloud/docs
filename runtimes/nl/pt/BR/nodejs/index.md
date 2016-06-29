@@ -12,7 +12,8 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Última atualização: 16 de março de 2016*
+*Última atualização: 10 de junho de 2016*
+{: .last-updated}
 
 O tempo de execução Node.js no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack sdk-for-nodejs.
 O buildpack sdk-for-nodejs fornece um ambiente de tempo de execução completo para apps Node.js.
@@ -141,7 +142,8 @@ Observe que os node_modules que estão incluídos em seu aplicativo não são ar
 ### FIPS MODE
 {: #fips_mode}
 
-O buildpack Nodejs versões v3.2-20160315-1257 e mais recentes suporta [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards). Para ativar o FIPS, configure a variável de ambiente FIPS_MODE como true.
+O buildpack Nodejs versões v3.2-20160315-1257 e mais recentes suporta [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Para
+usar um mecanismo ativado para FIPS, configure a variável de ambiente FIPS_MODE como true.
 Por exemplo:
 
 ```
@@ -149,9 +151,12 @@ Por exemplo:
 ```
 {: codeblock}
 
-É importante entender que quando FIPS_MODE for true **os módulos do nó que usam [MD5](https://en.wikipedia.org/wiki/MD5) irão falhar**. Por exemplo,
-os módulos [Express](http://expressjs.com/) falharão. Configurar [etag](http://expressjs.com/en/api.html) como false em seu app
-Express pode ajudar como solução alternativa. Por exemplo, é possível fazer o seguinte em seu código:
+É importante entender que quando FIPS_MODE é true, alguns módulos de nó podem não
+funcionar. Por exemplo, **módulos de nó que usam
+[MD5](https://en.wikipedia.org/wiki/MD5) falharão**, como
+[Express](http://expressjs.com/). Para Express, a configuração de
+[etag](http://expressjs.com/en/api.html) como false no app Expess pode
+ajudar a contornar isso. Por exemplo, é possível fazer o seguinte em seu código:
 ```
     app.set('etag', false);
 ```
@@ -159,13 +164,107 @@ Express pode ajudar como solução alternativa. Por exemplo, é possível fazer 
 Veja este [post de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obter mais informações.
 
-Para verificar se FIPS_MODE for true em seu app, verifique o valor de **process.versions.openssl**. Por exemplo:
-```
-    console.log('ssl version is [' +process.versions.openssl +']');
-```
-{: codeblockd}
+**NOTA**
+[Gerenciamento de app](../../manageapps/app_mng.html) e FIPS_MODE
+*NÃO* são suportados simultaneamente. Se a variável de ambiente
+BLUEMIX_APP_MGMT_ENABLE for configurada e a variável de ambiente FIPS_MODE for
+configurada como true, o app falhará no estágio.
 
-Se a versão SSl contiver "fips", então o app estará executando no modo FIPS.    
+Há vários métodos de verificar o estado de FIPS_MODE:
+<ul>
+<li> É possível verificar o staging_task.log do aplicativo para obter uma mensagem
+semelhante à seguinte:    
+
+  <pre>
+  Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
+  </pre>
+  {: codeblock}
+
+Essa mensagem indica que o mecanismo node.js ativado para FIPS está em execução, mas não necessariamente que o FIPS está em execução
+</li>
+
+<li> É possível verificar o valor de **process.versions.openssl**. Por exemplo:
+
+  <pre>
+  console.log('ssl version is [' +process.versions.openssl +']');
+  </pre>
+  {: codeblock}
+
+Se a versão do SSL contiver "fips", a versão do SSL que está em uso suportará FIPS.  
+</li>
+
+<li> Para node.js versão 6 e acima, é possível verificar o valor retornado por crypto.fips em código conforme o seguinte:
+  <pre>
+  console.log('crypto.fips== [' +crypto.fips +']');
+  </pre>
+  {: codeblock}
+
+Se o valor retornado for 1, o FIPS estará em uso. Observe que crypto.fips retornará
+*undefined* para as versões do node.js anteriores a 6.
+</li>
+</ul>
+
+#### Nodejs v4
+{: #nodejs_v4_fips}
+
+A tabela a seguir explica o comportamento do node.js v4 com FIPS:
+
+|                 | Resultado        |
+| :-------------- | :------------ |
+|FIPS_MODE=true   |success (1)    |
+|FIPS_MODE !=true |success (2)    |
+
+* success (1)
+  * FIPS está em uso.
+  * O staging_task.log incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * O valor retornado por process.versions.openssl conterá "fips".
+* success (2)
+  * FIPS *NÃO* está em uso.
+  * O staging_task.log *NÃO* incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * O valor retornado por process.versions.openssl *NÃO* conterá "fips".
+
+#### Nodejs v6
+{: #nodejs_v6_fips}
+
+Para executar no modo FIPS com o Node.js versão 6, além da configuração
+**FIPS_MODE=true**, deve-se também incluir
+**--enable-fips** no comando inicial conforme no exemplo a seguir:
+```
+{
+    ...   
+    "scripts": {
+      "start": "node --enable-fips app.js"
+    }
+}
+```
+{: codeblock}
+
+A tabela a seguir explica o comportamento do node.js v6 com FIPS.
+
+|                 |--enable-fips  |NO --enable-fips |
+| :-------------- | :------------ | :-------------- |
+|FIPS_MODE=true   |success (1)    |success (2)      |
+|FIPS_MODE !=true |failure (3)    |success (4)      |
+
+* success (1)
+  * FIPS está em uso.
+  * O staging_task.log incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * O valor retornado por process.versions.openssl conterá "fips"
+  * crypto.fips retornará 1, indicando que FIPS está em uso
+* success (2)
+  * FIPS *NÃO* está em uso.
+  * O staging_task.log incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * O valor retornado por process.versions.openssl conterá "fips"
+  * crypto.fips retornará 0, indicando que FIPS *NÃO* está em uso
+* failure (3)
+  * FIPS *NÃO* está em uso.
+  * O staging_task.log *NÃO* incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * A preparação falhará com a mensagem "ERR node: bad option: --enable-fips"
+* success (4)
+  * FIPS *NÃO* está em uso.
+  * O staging_task.log *NÃO* incluirá a mensagem *Installing FIPS-enabled IBM SDK for Node.js*.
+  * O valor retornado por process.versions.openssl *NÃO* conterá "fips"
+  * crypto.fips retornará 0, indicando que FIPS *NÃO* está em uso
 
 
 ## Buildpacks Node.js
@@ -190,8 +289,10 @@ Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão d
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## geral
-* [Atualizações mais recentes para o buildpack Node.js](../../runtimes/nodejs/updates.html)
+{: #general}
+* [Atualizações mais recentes para o buildpack Node.js](updates.html)
 * [Gerenciamento de Aplicativos
 ](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)

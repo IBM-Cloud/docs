@@ -29,10 +29,16 @@ Through use of our Swagger 2.0 compliant REST APIs, clients have access to the s
 
 **Note:** After creating a service instance, depending on the Tee-Shirt size that is created, your service might not be immediately ready for use. It is recommended that you query the **Status** field of the JSON returned to determine the current state of the service instance.
 
-**Note:** By default, the API BASE URL points to an endpoint in the [US South Region](https://wasaas-broker.ng.bluemix.net/wasaas-broker){: new_window}.  If you are using the UK or Sydney Region, then ensure that your application uses one of the following endpoints:
+**Note:** The API BASE URL referenced in the sample code of the [REST API Documentation](https://new-console.{DomainName}/apidocs/212){: new_window} points to the US South Region.  If you are using other regions, ensure that your application references the appropriate API BASE URL.
 
-* [UK Region](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker){: new_window}
-* [Sydney Region](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker){: new_window}
+*Table 1. API Base URLs for Rest API Implementation*
+
+| **Region name** | **Geographic location** | **Region prefix** | **API Base URL** |       
+|:-------------:|:----------:|:--------------:|:-------------:|
+| US South region | Dallas, TX, US | ng | wasaas-broker.ng.bluemix.net/wasaas-broker |
+| United Kingdom region | London, England | eu-gb | wasaas-broker.eu-gb.bluemix.net/wasaas-broker |
+| Sydney region | Sydney, Australia | au-syd | wasaas-broker.au-syd.bluemix.net/wasaas-broker |
+
 
 
 ## Service Dashboard

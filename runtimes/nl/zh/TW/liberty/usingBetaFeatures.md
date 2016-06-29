@@ -11,7 +11,8 @@ copyright:
 # 使用測試版特性
 {: #using_beta_features}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含的新功能及程式設計模型。大部分的測試版特性也可以用於已部署至 Bluemix 的應用程式。
 
@@ -27,16 +28,26 @@ Bluemix 中可用的 Liberty 測試版特性
 </tr>
 
 <tr>
+<td>bluemixLogCollector-1.1</td>
 <td>cloudant-1.0</td>
 <td>httpWhiteboard-1.0</td>
+<td>logstashCollector-1.1</td>
+</tr>
+
+<tr>
 <td>osgiBundle-1.0</td>
 <td>passwordUtilities-1.0</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
+
 </table>
 
-若要在 Bluemix 中使用 Liberty 測試版特性，您必須執行下列其中一項：
+若要在 Bluemix 中使用 Liberty 測試版特性，您需要執行下列動作：
 
 1. 在 server.xml 檔案中啟用一個以上的測試版特性，以[部署伺服器目錄或包裝伺服器](optionsForPushing.html)，如下列範例所示：
+
 ```
     <server>
         <featureManager>
@@ -47,7 +58,7 @@ Bluemix 中可用的 Liberty 測試版特性
 ```
 {: #codeblock}
 
-2.  將 IBM_LIBERTY_BETA 環境變數設為 **true**。此變數會指示 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。請參閱下列範例：
+2.  將 **IBM_LIBERTY_BETA** 環境變數設為 **true**。此變數會指示 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。例如：
   * 使用 cf 指令行工具：
 ```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
@@ -59,9 +70,27 @@ Bluemix 中可用的 Liberty 測試版特性
       env:
           IBM_LIBERTY_BETA: "true"
 ```
+
+3. 將 **JBP_CONFIG_LIBERTY** 環境變數設為 **"version: +"**。此變數會啟用支援測試版特性的 [Liberty 測試版運行環境](buildpackDefaults.html#liberty_versions)。例如：
+  * 使用 cf 指令行工具：
+```
+       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+```
+{: #codeblock}
+
+  * 或者，使用 manifest.yml 檔案：
+```
+      env:
+          JBP_CONFIG_LIBERTY: "version: +"
+```
+
+如果您要在現有應用程式上啟用測試版特性，請記得在設定環境變數之後重新編譯打包應用程式。
+
 {: #codeblock}
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

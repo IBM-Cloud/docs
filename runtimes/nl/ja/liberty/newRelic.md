@@ -11,7 +11,8 @@ copyright:
 # New Relic の使用
 {: #new_relic}
 
-*最終更新日時: 2016 年 3 月 23 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 New Relic は、アプリケーションのモニタリング・メトリックを提供するサード・パーティーのサービスです。New Relic サービスが提供する内容について詳しくは、[New
 Relic](http://newrelic.com/java)を参照してください。
@@ -31,20 +32,23 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
     -Dnewrelic.config.app_name=myapp
     -Dnewrelic.config.log_file_path=../../../../../logs
 ```
-{: #codeblock}
+{: codeblock}
 
 ## New Relic サービスの追加
 {: #add_new_relic}
 
 IBM Bluemix 内で既存の Java アプリケーションを New Relic でモニターするには、以下のステップに従ってください。
-1. IBM Bluemix に New Relic サービス・インスタンスを作成します。```
-    $ cf create-service newrelic standard mynewrelic```
-{: #codeblock}
+1. IBM Bluemix に New Relic サービス・インスタンスを作成します。
 
-2. New Relic サービスを使用してアプリケーションを IBM Bluemix にデプロイします。以下のサンプル・アプリケーション・マニフェストを参照してください。```
-        ---
-        applications:
+  <pre>
+$ cf create-service newrelic standard mynewrelic  </pre>
+  {: codeblock}
 
+2. New Relic サービスを使用してアプリケーションを IBM Bluemix にデプロイします。以下のサンプル・アプリケーション・マニフェストを参照してください。
+
+  <pre>
+        &dash;&dash;&dash;
+applications:
         - name: myapp
          memory: 1G
          instances: 1
@@ -52,8 +56,9 @@ IBM Bluemix 内で既存の Java アプリケーションを New Relic でモニ
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. アプリケーションの IBM Bluemix ダッシュボードからアプリケーションの New Relic ダッシュボードに直接アクセスします。
 
@@ -67,12 +72,12 @@ IBM Bluemix 内で既存の Java アプリケーションを New Relic でモニ
     $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
 ```
-{: #codeblock}
+  {: codeblock}
 
-2. ユーザー提供の New Relic サービス・インスタンスを使用してアプリケーションを IBM Bluemix にデプロイします。ユーザー提供の New Relic サービス・インスタンスを使用するサンプル・アプリケーション・マニフェストは以下のようになります。```
-        ---
-        applications:
-
+2. ユーザー提供の New Relic サービス・インスタンスを使用してアプリケーションを IBM Bluemix にデプロイします。ユーザー提供の New Relic サービス・インスタンスを使用するサンプル・アプリケーション・マニフェストは以下のようになります。
+  <pre>
+        &dash;&dash;&dash;
+applications:
         - name: myapp
          memory: 1G
          instances: 1
@@ -80,8 +85,9 @@ IBM Bluemix 内で既存の Java アプリケーションを New Relic でモニ
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. New Relic ダッシュボードにアクセスしてアプリケーション・メトリックを表示します。
 
@@ -91,6 +97,8 @@ New Relic サービスの自動構成は、ビルドバックのフレームワ�
 * 構成は VCAP_SERVICES および VCAP_APPLICATION の両方に依存します。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

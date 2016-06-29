@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-*Last updated: 17 June 2016*
+*Last updated: 28 June 2016*
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -153,7 +153,7 @@ Configure GitHub and GitHub Issues to manage your source code on the cloud:
 
 To learn more, see [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.    
 
-##Using Dedicated {{site.data.keyword.ghe_short}}
+##Using Bluemix Dedicated for {{site.data.keyword.ghe_short}}
 {: #ghe}
 
 {{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of {{site.data.keyword.ghe_short}}, available for Dedicated Bluemix environments. GitHub provides the social coding experience that developers love. [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html#dedicated){: new_window} provides a cloud computing environment on physically isolated hardware that is integrated into your network.

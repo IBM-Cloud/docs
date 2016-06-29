@@ -1,6 +1,9 @@
 {:new_window: target="_blank"} 
 
-# Getting started with {{site.data.keyword.blockstorageshort}} (BETA)
+# Getting started with {{site.data.keyword.blockstorageshort}} (Beta)
+
+*Last updated: 20 June 2016*
+{: .last-updated}
 
 {{site.data.keyword.blockstoragefull}} provides access to block level storage for transaction intensive workloads and runtimes in need of persistent storage.
 

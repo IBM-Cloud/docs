@@ -14,7 +14,7 @@ copyright:
 # Getting started with {{site.data.keyword.iot4auto_short}} (Experimental)
 {: #getting_started_iotautomotive}
 
-*Last updated: 16 June 2016*
+*Last updated: 23 June 2016*
 {: .last-updated}
 
 {{site.data.keyword.iot4auto_full}} is a {{site.data.keyword.Bluemix_notm}} service that you can use to retrieve, manage, and analyze big data from connected vehicles. The analytics of {{site.data.keyword.iot4auto_short}} provide powerful and actionable insights into driving behavior, vehicle location, and other automotive-related activities and events of interest.
@@ -43,7 +43,7 @@ Before you begin integrating your automotive devices and applications with the s
 2. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.stage1.ng.bluemix.net/catalog/services/iot-automotive/), ensure that it is not bound to an app, and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service through the {{site.data.keyword.iot4auto_short}} API.
 3. Using the console on the dashboard, configure the ports, target host names, and other settings for your {{site.data.keyword.iot4auto_short}}. For more information, see [Administering](iotautomotive_admin.html).
 
-You can integrate your automotive devices and applications with this service by using REST API commands.
+You can integrate your automotive devices and applications with this service by using {{site.data.keyword.iot4auto_short}} REST API commands.
 
 To get up and running quickly, complete the following steps:
 

@@ -13,7 +13,8 @@ copyright:
 # 환경 변수 
 {: #environment_variables}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 Java용 Liberty에서 지원하는 환경 변수
 
@@ -100,6 +101,8 @@ Java용 Liberty에서 지원하는 환경 변수
 </table>
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

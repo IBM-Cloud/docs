@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,7 +11,8 @@ Copyright :
 # Surveillance de Liberty dans Bluemix à l'aide de JConsole
 {: #jconsole}
 
-*Dernière mise à jour : 23 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
 ## La procédure de surveillance de l'environnement d'exécution Bluemix Liberty à l'aide de JConsole est la suivante :
 {: #steps_to_monitor}
@@ -39,27 +40,27 @@ Envoyez par commande push le package serveur contenant votre application en la l
            <user>jconuser</user>
        </administrator-role>
 ```
-{: #codeblock}
+{: codeblock}
 
    * Remarque : Le mot de passe doit être codé avec l'outil securityUtility fourni par Liberty.
 
 ### Démarrage de l'application JConsole
-{: #start_jconsole_app}
+{: start_jconsole_app}
 
-JConsole est inclus avec votre installation Java. Pour démarrer l'application JConsole, accédez à &lt;java-home&gt;/bin et exécutez la commande suivante :
+JConsole est inclus avec votre installation Java.   Pour démarrer l'application JConsole, accédez à &lt;java-home&gt;/bin et exécutez la commande suivante :
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
-{: #codeblock}
+{: codeblock}
 
 Il pourra être nécessaire de passer des paramètres supplémentaires pour configurer le magasin de clés Java. Les paramètres suivants devraient convenir dans la plupart des cas :
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
-{: #codeblock}
+{: codeblock}
 
 ### Achèvement de la connexion
-{: #start_jconsole_app}
+{: start_jconsole_app}
   * Entrez l'URL suivante dans la zone relative au processus distant :
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
   *  Renseignez également les zones Nom d'utilisateur et Mot de passe en spécifiant un nom d'utilisateur affecté au rôle administrateur et son mot de passe, issus du fichier server.xml.
@@ -79,7 +80,7 @@ Voici un exemple de fichier de propriétés de consignation :
     javax.management.remote.level=FINER
     com.ibm.level=FINEST
 ```
-{: #codeblock}
+{: codeblock}
 
 Vous pouvez également ajouter <b>&dash;J&dash;Djavax.net.debug=ssl</b> à la commande jconsole. Cela génère une trace de diagnostic SSL dans une fenêtre de sortie JConsole distincte.   Enfin, vous pouvez activer la fonction de trace côté serveur en ajoutant ce qui suit à votre fichier server.xml :
 ```
@@ -88,6 +89,8 @@ Vous pouvez également ajouter <b>&dash;J&dash;Djavax.net.debug=ssl</b> à la co
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

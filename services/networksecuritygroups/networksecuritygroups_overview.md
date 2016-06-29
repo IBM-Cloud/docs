@@ -19,7 +19,7 @@ A security group is a set of IP filter rules. Each IP rule represents a network 
 
 **Note:** All instances in a virtual server group must be associated with the same security groups. 
 
-For more information about IBM Virtual Servers and security groups, see: [Security Groups](https://www.{DomainName}/docs/virtualmachines/vm_index.html#vm_security_groups).
+For more information about IBM Virtual Servers and security groups, see: [Security Groups](https://www.{DomainName}/docs/virtualmachines/vm_create.html#vm_security_groups).
 
 The following security groups are provided in Bluemix for IBM Virtual Servers:
 

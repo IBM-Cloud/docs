@@ -11,7 +11,8 @@ copyright:
 
 # Python
 {: #python_runtime}
-*最終更新日時: 2016 年 3 月 16 日*
+*最終更新日時: 2016 年 6 月 10 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Python ランタイムには python_buildpack が採用されています。
 python_buildpack は、Python アプリケーションのための完全なランタイム環境を提供します。
@@ -52,5 +53,7 @@ python-3.4.3
 アプリケーションが、リストされていない Python バージョンを必要とする場合は、外部の [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack)を使用してアプリケーションをデプロイできます。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

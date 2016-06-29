@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -12,9 +12,10 @@ Copyright :
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-*Dernière mise à jour : 16 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
-Le contexte d'exécution Node.js sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction sdk-for-nodejs.
+L'environnement d'exécution Node.js sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction sdk-for-nodejs.
 Le pack de construction sdk-for-nodejs fournit un environnement d'exécution complet pour les applis Node.js.
 {: shortdesc}
 
@@ -85,11 +86,11 @@ les variables d'environnement VCAP_APP_HOST et VCAP_APP_PORT contiennent des val
 {{site.data.keyword.Bluemix}} fournit tous les
 [contextes d'exécution Node.js disponibles actuellement](http://nodejs.org/dist/). Pour ceux-ci, IBM propose des versions comportant des améliorations et des correctifs. Pour plus d'informations, voir [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html).
 
-Le pack de construction IBM Node.js met en cache toutes les versions du contexte d'exécution IBM. Par conséquent, si vous utilisez le contexte d'exécution IBM SDK for Node.js dans votre
+Le pack de construction IBM Node.js met en cache toutes les versions de l'environnement d'exécution IBM. Par conséquent, si vous utilisez l'environnement d'exécution IBM SDK for Node.js dans votre
 application, vous obtenez de meilleures performances pour l'application lorsque celle-ci est envoyée dans Bluemix.
 
 Utilisez le paramètre **node** de la section **engines** du fichier **package.json** pour définir la version
-du contexte d'exécution Node.js à exécuter.
+de l'environnement d'exécution Node.js à exécuter.
 
 Utilisez le paramètre **npm** de la section **engines** du fichier **package.json** pour définir une version de npm différente de celle qui est intégrée à Node.js.  
 
@@ -120,7 +121,7 @@ NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les s
 
 ### Comportement du cache
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'app.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **expess** est téléchargé.  Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
+{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'app.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé.  Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
 
 Utilisez la variable NODE_MODULES_CACHE pour déterminer si le pack de construction Node utilise ou ignore le cache des générations précédentes. La valeur par défaut est true.  Pour désactiver la mise en cache, définissez NODE_MODULES_CACHE sur false, par exemple par la ligne de commande cf :
 ```
@@ -142,7 +143,7 @@ Vous pouvez utiliser un tableau **cacheDirectories** dans votre fichier **packag
 ### MODE FIPS
 {: #fips_mode}
 
-Les packs de construction Nodejs versions v3.2-20160315-1257 et ultérieur prennent en charge [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards). Pour activer FIPS, définissez la variable d'environnement FIPS_MODE à true.
+Les packs de construction Nodejs versions v3.2-20160315-1257 et ultérieur prennent en charge [FIPS](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  Pour utiliser un moteur de noeud activé par FIPS, affectez la valeur true à la variable d'environnement FIPS_MODE.
 Par exemple :
 
 ```
@@ -150,20 +151,109 @@ Par exemple :
 ```
 {: codeblock}
 
-Il est important de comprendre que lorsque FIPS_MODE est à true, **les modules Node qui utilisent [MD5](https://en.wikipedia.org/wiki/MD5) échoueront**, ce qui sera le cas par exemple des modules [Express](http://expressjs.com/). La définition d'[etag](http://expressjs.com/en/api.html) à false dans votre application Express peut permettre de contourner ce problème. Ainsi, vous pouvez introduire la commande suivante dans votre code :
+Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE a pour valeur true, certains modules de noeud peuvent ne pas fonctionner. Par exemple, les **modules de noeud qui utilisent [MD5](https://en.wikipedia.org/wiki/MD5) échoueront**, par exemple, [Express](http://expressjs.com/). Pour Express, le fait d'affecter la valeur false à [etag](http://expressjs.com/en/api.html) dans votre application Express peut vous permettre de contourner ce problème.
+Ainsi, vous pouvez introduire la commande suivante dans votre code :
 ```
     app.set('etag', false);
 ```
 {: codeblock}
 Voir cet [article stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js) pour plus d'informations.
 
-Pour voir si FIPS_MODE est à true dans votre application, vérifiez la valeur de **process.versions.openssl**. Par exemple :
-```
-    console.log('ssl version is [' +process.versions.openssl +']');
-```
-{: codeblockd}
+**REMARQUE** : les variables d'environnement [App Management](../../manageapps/app_mng.html) et FIPS_MODE ne peuvent *PAS* être utilisées en même temps. Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
 
-Si la version SSl contient "fips", l'application s'exécute en mode FIPS.    
+Il existe diverses méthodes permettant de vérifier l'état de FIPS_MODE :
+<ul>
+<li> Vous pouvez rechercher dans le fichier staging_task.log de votre application un message semblable à celui présenté ci-dessous :
+    
+
+  <pre>
+  Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
+  </pre>
+  {: codeblock}
+
+Ce message indique qu'un moteur node.js activé par FIPS est en cours d'exécution, ce qui ne signifie pas nécessairement que FIPS est actif.
+</li>
+
+<li> Vous pouvez vérifier la valeur de **process.versions.openssl**. Par exemple :
+
+  <pre>
+  console.log('ssl version is [' +process.versions.openssl +']');
+  </pre>
+  {: codeblock}
+
+Si la version de SSL contient "fips", la version de SSL utilisée prend en charge FIPS.  
+</li>
+
+<li> Pour node.js version 6 ou ultérieure, vous pouvez vérifier la valeur renvoyée par crypto.fips dans du code tel que le suivant :
+
+  <pre>
+  console.log('crypto.fips== [' +crypto.fips +']');
+  </pre>
+  {: codeblock}
+
+Si la valeur renvoyée est 1, cela signifie que FIPS est utilisé. Notez que crypto.fips renverra *undefined* pour les versions de node.js antérieures à la version 6.
+</li>
+</ul>
+
+#### Nodejs v4
+{: #nodejs_v4_fips}
+
+Le tableau suivant explique le comportement de node.js V4 avec FIPS :
+
+|                 | Résultat        |
+| :-------------- | :------------ |
+|FIPS_MODE=true   |success (1)    |
+|FIPS_MODE !=true |success (2)    |
+
+* success (1)
+  * FIPS est utilisé. 
+  * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La valeur renvoyée par process.versions.openssl contiendra "fips".
+* success (2)
+  * FIPS n'est *PAS* utilisé. 
+  * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
+
+#### Nodejs v6
+{: #nodejs_v6_fips}
+
+Pour exécuter le mode FIPS avec Node.js version 6 en plus de définir **FIPS_MODE=true**, vous devez également inclure **--enable-fips** dans votre commande start, comme dans l'exemple suivant : 
+```
+{
+    ...   
+    "scripts": {
+      "start": "node --enable-fips app.js"
+    }
+}
+```
+{: codeblock}
+
+Le tableau suivant explique le comportement de node.js V6 avec FIPS :
+
+|                 |--enable-fips  |NO --enable-fips |
+| :-------------- | :------------ | :-------------- |
+|FIPS_MODE=true   |success (1)    |success (2)      |
+|FIPS_MODE !=true |failure (3)    |success (4)      |
+
+* success (1)
+  * FIPS est utilisé. 
+  * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La valeur renvoyée par process.versions.openssl contiendra "fips".
+  * crypto.fips renverra 1 pour indiquer que FIPS est utilisé.
+* success (2)
+  * FIPS n'est *PAS* utilisé. 
+  * Le fichier staging_task.log contiendra le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La valeur renvoyée par process.versions.openssl contiendra "fips".
+  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé. 
+* failure (3)
+  * FIPS n'est *PAS* utilisé. 
+  * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La reconstitution échouera avec le message "ERR node: bad option: --enable-fips".
+* success (4)
+  * FIPS n'est *PAS* utilisé. 
+  * Le fichier staging_task.log ne contiendra *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
+  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé. 
 
 
 ## Packs de construction Node.js
@@ -191,8 +281,10 @@ Généralement, le pack de construction **sdk-for-nodejs** en cours et une versi
 {: codeblock}
 
 # rellinks
+{: #rellinks}
 ## general
-* [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html)
+{: #general}
+* [Mises à jour les plus récentes du pack de construction Node.js](updates.html)
 * [App Management](../../manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [StrongLoop](https://strongloop.com)

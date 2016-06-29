@@ -12,7 +12,8 @@ copyright:
 # Argomenti Liberty
 {: #topics}
 
-*Ultimo aggiornamento: 23 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 * [Runtime Liberty](index.html)
 * [Rilevamento](index.html#detection)
@@ -27,11 +28,13 @@ copyright:
 * [Utilizzo di New Relic](newRelic.html)
 * [Personalizzazione del JRE](customizingJRE.html)
 * [Registrazione e traccia ](loggingAndTracing.html)
-* [Variabili d'ambiente](environmentVariables.html)
+* [Variabili di ambiente](environmentVariables.html)
 * [Valori predefiniti dei pacchetti di build](buildpackDefaults.html)
 * [Ultimi aggiornamenti](updates.html)
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Runtime Liberty](index.html)
 * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

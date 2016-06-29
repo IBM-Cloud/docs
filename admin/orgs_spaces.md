@@ -17,7 +17,7 @@ copyright:
 
 # Managing organizations and spaces
 {: #orgsspacesusers}
-*Last updated: 16 May 2016*
+Last updated: 16 May 2016
 {: .last-updated}
 
 As an account owner, you can manage your organizations by going to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.

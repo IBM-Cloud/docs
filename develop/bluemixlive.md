@@ -17,7 +17,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Last Updated: 07 April 2016*
+*Last Updated: 24 June 2016*
 {: .last-updated}  
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
@@ -70,8 +70,10 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 
 <strong>Important:</strong> The bl command line tool is available only for Windows 7 and 8 and Mac OS X version 10.9 or later. </li>
 
-<li>On a command line, log in using the following command. You will be prompted for your IBM id and password.  
+<li>On a command line, log in using the following command. You will be prompted for your user ID and password.  
 <pre class="codeblock">bl login</pre>
+
+<strong>Note:</strong> Your user ID for DevOps Services can be either an IBM id or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBM id and password work with all clients. For more information about creating a personal access token, see <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a> 
 </li>
 
 <li>See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering the following command:
@@ -171,7 +173,9 @@ The app must use the IBM SDK for Node.js buildpack. Custom buildpacks are not su
 
 After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can use the debug tools.
 
-Push the app then browse to `https://app-host.mybluemix.net/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted, enter your IBM ID and password to authenticate.
+Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your user ID and personal access token or IBM id password.    
+
+   **Note**: Your user ID for DevOps Services can be either an IBM id or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBM id and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
 
@@ -288,11 +292,13 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 **Options**
 
--u *username*: Your IBM id to use to log in to {{site.data.keyword.Bluemix_notm}}.
+-u *username*: Your user ID to log in to {{site.data.keyword.Bluemix_notm}}.
 
--p *password*: Your IBM id password.
+-p *password*: Your personal access token or IBM id password.
 
--s *server*: Server Name or IP Address of the {{site.data.keyword.jazzhub_short}} server.
+-s *server*: The server name or IP address of the {{site.data.keyword.jazzhub_short}} server.    
+
+   **Note**: Your user ID for DevOps Services can be either an IBM id or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBM id and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Examples**
 

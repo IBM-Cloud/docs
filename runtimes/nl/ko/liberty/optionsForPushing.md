@@ -12,7 +12,8 @@ copyright:
 # Liberty 앱 푸시 옵션
 {: #options_for_pushing}
 
-*마지막 업데이트 날짜: 2016년 3월 23일*
+*마지막 업데이트 날짜: 2016년 6월 10일*
+{: .last-updated}
 
 Bluemix에서 Liberty 서버의 동작은 Liberty 빌드팩을 통해 제어됩니다. 빌드팩은 애플리케이션의 특정 클래스에 맞는 완전한 런타임 환경을 제공할 수 있습니다. 클라우드 이식성을 높이고 개방형 클라우드 아키텍처를 향상시키는 데 있어 핵심 요소입니다. Liberty 빌드팩은 Java EE 7 및 OSGi 애플리케이션의 실행이 가능한 WebSphere Liberty 컨테이너를 제공합니다. 이는 Spring과 같은 유명한 프레임워크를 지원하며 IBM JRE를 포함합니다. WebSphere Liberty를 통해 클라우드에 적합한 애플리케이션을 신속하게 개발할 수 있습니다. Liberty 빌드팩은 하나의 Liberty 서버에 배치되는 여러 개의 애플리케이션을 지원합니다. Liberty 빌드팩이 Bluemix에 통합되는 과정에서 서비스 바인딩을 위한 환경 변수가 Liberty 서버에서 구성 변수로 표시되는지 확인합니다. 
 
@@ -35,7 +36,7 @@ Bluemix에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Li
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 독립형 애플리케이션을 배치할 때 애플리케이션을 위한 기본 Liberty 구성이 제공됩니다. 기본 구성은 다음과 같은 Liberty 기능을 지원해 줍니다.
 
@@ -61,7 +62,7 @@ Bluemix에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Li
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오. 
 
@@ -70,16 +71,17 @@ WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-e
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스트 루트에서 임베디드 웹 애플리케이션에 액세스할 수 있습니다. 예를 들면, 다음과 같습니다. 
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 전체 기본 Liberty server.xml 구성 파일은 다음과 같습니다.
+
 ```
     <server>
        <featureManager>
@@ -113,7 +115,7 @@ EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스�
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -124,14 +126,14 @@ EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스�
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 중요: 환경 변수 변경사항을 적용하려면 다음과 같이 애플리케이션을 다시 스테이징해야 합니다.
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 서버 디렉토리
 {: #server_directory}
@@ -144,7 +146,7 @@ Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리�
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다음 단계에 따라 애플리케이션에 서버 디렉토리를 작성할 수 있습니다.
 
@@ -166,21 +168,21 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 서버 디렉토리가 준비되면, Bluemix에 배치할 수 있습니다. 
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 참고: 서버 디렉토리의 일부로 배치되는 웹 애플리케이션은 [Liberty 프로파일에서 판별되는 컨텍스트 루트](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)에서 액세스할 수 있습니다. 예: 
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## 패키지된 서버
 {: #packaged_server}
@@ -193,7 +195,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/ser
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 그러면 사용자가 cf push 명령을 사용하여 해당 압축 파일을 Bluemix에 푸시할 수 있습니다.
 예: 
@@ -201,7 +203,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 ./bin/ser
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 참고: 패키지된 서버의 일부로 배치되는 웹 애플리케이션은 Liberty 프로파일에 따라 지정되는 컨텍스트 루트에서 액세스할 수 있습니다.
 
@@ -253,6 +255,8 @@ connection.name: 연결의 고유 ID이며, UUID 형식을 사용합니다. 예:
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 자원의 액세스를 관리해야 합니다.
 
 # 관련 링크
+{: #rellinks}
 ## 일반
+{: #general}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

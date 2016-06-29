@@ -13,7 +13,38 @@ copyright:
 
 ## Uma lista das atualizações mais recentes no buildpack do Liberty.
 
-*Última atualização: 23 de março de 2016*
+*Última atualização: 17 de junho de 2016*
+{: .last-updated}
+
+### 17 de junho de 2016: atualizado o buildpack do Liberty v3.0-20160608-1450
+* O buildpack agora contém duas versões do WebSphere Liberty, a liberação estável
+mais recente e a liberação beta mais recente. Especificamente, ele fornece a liberação estável
+[16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) e
+a liberação beta [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/). A
+liberação estável será usada por padrão. Consulte
+[versões do Liberty](buildpackDefaults.html#liberty_versions) para obter
+detalhes adicionais. 
+
+### 25 de maio de 2016: atualizado o buildpack do Liberty v2.9-20160519-1249
+* O buildpack contém uma versão atualizada do WebSphere Liberty com base na
+[beta
+de maio](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). A versão atualizada do Liberty torna os recursos beta
+*bluemixLogCollector-1.1* e *logstashCollector-1.1* disponíveis
+no Bluemix.
+
+### 5 de maio de 2016: atualizado o buildpack do Liberty v2.8-20160430-1011
+* O buildpack contém uma versão atualizada do WebSphere Liberty com base na
+[beta
+de abril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). A versão atualizada do Liberty disponibiliza no Bluemix os recursos
+beta *logstashCollector-1.0* GA e *logmetCollector-1.0*.
+* O buildpack contém também versões atualizadas do IBM JRE: 8 SR3 e 7.1 SR3 FP40. 
+* O buildpack inclui suporte inicial para o agente de monitoramento de aplicativo [AppDynamics](https://www.appdynamics.com/).
+* O suporte do [Dynatrace](dynatrace.html) foi melhorado para simplificar a instalação do agente.
+* O buildpack fornece um coletor de dados atualizado para o
+[serviço de
+Monitoramento e Analítica](../../services/monana/index.html#monana_oview). Ele contém uma correção para um problema com a coleta
+dos dados de heap máximo.
+* O tempo de execução Node.js que é usado pelos [utilitários de gerenciamento de app devconsole e shell](../../manageapps/app_mng.html#app_management) foi atualizado para a versão mais recente 0.12.13.
 
 ### 25 de março de 2016: Atualizado o buildpack do Liberty v2.7-20160321-1358
 * O buildpack contém uma versão atualizada do WebSphere Liberty com base no [beta de março](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). A versão atualizada do Liberty disponibiliza o recurso beta cloudant-1.0 no Bluemix.
@@ -139,7 +170,7 @@ MongoDB que em certos casos gerou uma configuração **server.xml** inválida.
 * O buildpack contém correções de segurança para as [vulnerabilidades do Apache HttpComponents e do recurso de sobreposição Java](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us).
 * O buildpack contém uma versão atualizada do perfil Liberty
 com base no [beta de fevereiro](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). A versão atualizada do perfil Liberty fornece uma versão atualizada do recurso WebSocket GA websocket-1.1. Ela também disponibiliza os recursos beta do Java EE 7 a seguir no Bluemix:
-  * cdi-1.2, el-3.0, jsp-2.3,  jca-1.7, jacc-1.5 e jaspic-1.1
+  * cdi-1.2, el-3.0, jsp-2.3, jca-1.7, jacc-1.5 e jaspic-1.1
 * O buildpack fornece integração com a [ferramenta JRebel do ZeroTrunaround](http://zeroturnaround.com/software/jrebel/). A integração facilita usar o JRebel com aplicativos Bluemix e executar atualizações instantâneas do aplicativo sem reimplementar ou remontar o aplicativo. Somente os aplicativos da web independentes são suportados.
 
 ### 6 de fevereiro de 2015: Buildpack do Liberty v1.12-20150130-1016 atualizado
@@ -229,7 +260,9 @@ os jars de cliente ektorp.
   * Quando seus aplicativos forem enviados por push novamente, eles usarão o IBM SDK for Java Versão 7.1-1.0. Isso é fornecido com um upgrade de desempenho substancial. Seu
 aplicativo mostra melhor rendimento e uso de memória reduzido. Saiba mais sobre o IBM Java SDK [aqui](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
 
-  # rellinks
-  ## geral
+# rellinks
+{: #rellinks}
+## geral
+{: #general}
   * [Tempo de execução do Liberty](index.html)
   * [Visão geral do perfil do Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

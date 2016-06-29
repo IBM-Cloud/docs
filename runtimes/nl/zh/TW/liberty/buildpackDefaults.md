@@ -12,13 +12,28 @@ copyright:
 # 建置套件預設值
 {: #buildpack_defauts}
 
-*前次更新：2016 年 3 月 23 日*
+*前次更新：2016 年 6 月 10 日*
+{: .last-updated}
 
 Liberty 建置套件在 Bluemix 中經常更新。
 每個版本都可能包含安全修正程式或特性加強功能。
 
 建置套件針對 WAR 或 EAR 應用程式的 Java 版本或 Liberty 特性集等設定具有預設值。部分預設值可能視建置套件版本不同而變更，這可能會對應用程式有不利的影響。為了避免應用程式受到建置套件預設值變更的影響，請採取步驟來配置您的應用程式，避免依賴建置套件預設值。
 
+
+## Liberty 版本
+{: #liberty_versions}
+
+建置套件提供 Liberty 運行環境的兩個版本：
+1. 穩定版本
+  * 它是預設的 Liberty 運行環境。
+  * 它未提供任何[測試版特性](usingBetaFeatures.html)。
+  * 一般會每季進行更新。
+
+2. 最新的測試版
+  * 必須設定具有 **"version: +"** 值的 **JBP_CONFIG_LIBERTY** 環境變數，明確予以啟用。
+  * 它會提供[測試版特性](usingBetaFeatures.html)。
+  * 一般會每月進行更新。
 
 ## Liberty 特性
 {: #liberty_features}
@@ -44,7 +59,10 @@ JRE。JRE 的主要或次要版本可能會視建置套件版本不同而變更�
 
 為確保應用程式不受主要版本變更的影響，請以適當的 JRE 版本來設定環境變數，如[自訂 JRE](customizingJRE.html) 中所述。為求最佳結果，請針對您的應用程式採用 Java 8。
 
+
 # 相關鏈結
+{: #rellinks}
 ## 一般
-* [Liberty 執行時期](index.html)
+{: #general}
+* [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

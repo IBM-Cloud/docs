@@ -11,7 +11,8 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Ultimo aggiornamento: 16 marzo 2016*
+*Ultimo aggiornamento: 10 giugno 2016*
+{: .last-updated}
 
 Il runtime Ruby su {{site.data.keyword.Bluemix}} si avvale del ruby_buildpack.
 Il ruby_buildpack fornisce un ambiente di runtime completo per le applicazioni Ruby.
@@ -60,6 +61,8 @@ puoi utilizzare il [pacchetto
 di build Ruby](https://github.com/cloudfoundry/ruby-buildpack) esterno per distribuire l'applicazione.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Pacchetto di build Cloud Foundry per Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * [Documentazione di Ruby on Rails](http://rubyonrails.org/documentation/)

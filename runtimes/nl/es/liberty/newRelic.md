@@ -11,7 +11,8 @@ copyright:
 # Utilización de New Relic
 {: #new_relic}
 
-*Última actualización: 23 de marzo de 2016*
+*Última actualización: 10 de junio de 2016*
+{: .last-updated}
 
 New Relic es un servicio de otro proveedor que proporciona métricas de supervisión de la aplicación. Para obtener más información sobre lo que ofrece el servicio New Relic, consulte [New
 Relic](http://newrelic.com/java).
@@ -35,21 +36,23 @@ Liberty para la aplicación:
     -Dnewrelic.config.app_name=myapp
     -Dnewrelic.config.log_file_path=../../../../../logs
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Añada un servicio New Relic
 {: #add_new_relic}
 
 En el caso de una aplicación Java existente que se vaya a supervisar con New Relic en IBM Bluemix, siga estos pasos:
 1. Cree una instancia de servicio New Relic en IBM Bluemix.
-```
+
+  <pre>
     $ cf create-service newrelic standard mynewrelic
-```
-{: #codeblock}
+  </pre>
+  {: codeblock}
 
 2. Despliegue la aplicación en IBM Bluemix con el servicio New Relic.  Consulte el siguiente manifiesto de aplicación de ejemplo:
-```
-        ---
+
+  <pre>
+        &dash;&dash;&dash;
         applications:
         - name: myapp
          memory: 1G
@@ -58,9 +61,9 @@ En el caso de una aplicación Java existente que se vaya a supervisar con New Re
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic
-```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. Acceda al panel de control de New Relic correspondiente a la aplicación directamente desde el panel de control de IBM Bluemix de la aplicación.
 
@@ -71,15 +74,15 @@ Si ya dispone de una clave de licencia y de una cuenta de New Relic, debe enlaza
 New Relic existente a la aplicación mediante un "servicio proporcionado por el usuario".
 
 1. Cree una instancia de servicio proporcionada por el usuario utilización su clave de licencia existente.  Por ejemplo, si su clave de licencia existente es 1234567, puede utilizar la CF CLI para crear el servicio proporcionado por el usuario ("create-user-provided-service") y proporcionar la clave de licencia 1234567 en el indicador como se muestra a continuación:
-```
+  ```
     $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
-```
-{: #codeblock}
+  ```
+  {: codeblock}
 
 2. Despliegue la aplicación en IBM Bluemix con la instancia de servicio New Relic proporcionada por el usuario.  A continuación encontrará un manifiesto de ejemplo que utiliza una instancia de servicio New Relic proporcionada por el usuario:
-```
-        ---
+  <pre>
+        &dash;&dash;&dash;
         applications:
         - name: myapp
          memory: 1G
@@ -88,9 +91,9 @@ New Relic existente a la aplicación mediante un "servicio proporcionado por el 
          domain: mybluemix.net
          path: myapp.war
          services:
-          - mynewrelic
-```
-{: #codeblock}
+         - mynewrelic
+  </pre>
+  {: codeblock}
 
 3. Acceda al panel de control de New Relic para ver las métricas de aplicaciones.
 
@@ -100,6 +103,8 @@ La configuración automática del servicio New Relic es distinta de la configura
 * La configuración se basa tanto en VCAP_SERVICES como en VCAP_APPLICATION.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Tiempo de ejecución de Liberty](index.html)
 * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -11,9 +11,10 @@ Copyright :
 
 # Ruby
 {: #ruby_runtime}
-*Dernière mise à jour : 16 mars 2016*
+*Dernière mise à jour : 10 juin 2016*
+{: .last-updated}
 
-Le contexte d'exécution Ruby dans {{site.data.keyword.Bluemix}} repose sur le pack ruby_buildpack.
+L'environnement d'exécution Ruby dans {{site.data.keyword.Bluemix}} repose sur le pack ruby_buildpack.
 Le pack ruby_buildpack fournit un environnement d'exécution complet pour les applis Ruby.
 {: shortdesc}
 
@@ -24,7 +25,7 @@ Le pack ruby_buildpack est utilisé si votre appli comporte un fichier Gemfile d
 
 {{site.data.keyword.Bluemix}} propose une application de démarrage Ruby.  L'application de démarrage Ruby est une appli Ruby simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
-## Versions de contexte d'exécution
+## Versions d'environnement d'exécution
 {: #runtime_versions}
 
 Vous pouvez spécifier la version de Ruby à utiliser par votre application dans le fichier Gemfile de votre application. Exemple :
@@ -56,6 +57,8 @@ Si votre application requiert une version de Ruby qui n'est pas répertoriée, v
 utiliser le [pack de construction Ruby](https://github.com/cloudfoundry/ruby-buildpack) externe pour la déployer.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
 * Documentation [Ruby on Rails](http://rubyonrails.org/documentation/)

@@ -12,7 +12,8 @@ copyright:
 # Optionen zur Durchführung von Push-Operationen für Liberty-Apps
 {: #options_for_pushing}
 
-*Letzte Aktualisierung: 23. März 2016*
+*Letzte Aktualisierung: 10. Juni 2016*
+{: .last-updated}
 
 Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
 
@@ -35,7 +36,7 @@ Beispiel:
 ```
     $ cf push <yourappname> -p myapp.war
 ```
-{: #codeblock}
+{: codeblock}
 
 Wenn eine eigenständige Anwendung implementiert wird, dann wird für diese Anwendung eine Liberty-Standardkonfiguration bereitgestellt. Die Standardkonfiguration ermöglicht die
 Nutzung der folgenden Liberty-Features:
@@ -63,7 +64,7 @@ Diese Features entsprechen den Java EE 7 Web Profile-Features. Sie können eine 
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
-{: #codeblock}
+{: codeblock}
 
 Hinweis: Die besten Ergebnisse erzielen Sie, wenn Sie die Liberty-Features mit der Umgebungsvariablen JBP_CONFIG_LIBERTY festlegen oder Ihre Anwendung als [Serververzeichnis](optionsForPushing.html#server_directory) oder [paketierten Server](optionsForPushing.html#packaged_server) mit einer angepassten server.xml-Datei bereitstellen. Indem Sie diese Umgebungsvariable festlegen, stellen Sie sicher, dass Ihre Anwendung nur das Feature verwendet, das auch
 benötigt wird, und dass sie nicht von den Änderungen am Liberty-Standard-Feature-Set des Buildpacks beeinträchtigt wird. Wenn die benötigte
@@ -76,14 +77,14 @@ Wenn Sie eine WAR-Datei bereitgestellt haben, können Sie über das Kontextstamm
 ```
     http://<yourappname>.mybluemix.net/
 ```
-{: #codeblock}
+{: codeblock}
 
 Wenn Sie eine EAR-Datei implementiert haben, dann kann auf die eingebettete Webanwendung unter dem Kontextstammverzeichnis zugegriffen werden, das im EAR-Implementierungsdeskriptor definiert ist. Beispiel:
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 Die vollständige Standardkonfigurationsdatei 'server.xml' für Liberty lautet wie folgt:
 ```
@@ -119,7 +120,7 @@ Die vollständige Standardkonfigurationsdatei 'server.xml' für Liberty lautet w
        <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 ### CDI 1.2
 {: #cdi12}
@@ -131,14 +132,14 @@ Beispiel:
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
-{: #codeblock}
+{: codeblock}
 
 Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müssen Sie ein erneutes Staging für Ihre Anwendung durchführen:
 
 ```
     $ cf restage myapp
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Serververzeichnis
 {: #server_directory}
@@ -151,7 +152,7 @@ Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Si
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Wenn auf Ihrer Workstation kein Liberty-Profil installiert ist,
 können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer Anwendung zu erstellen:
@@ -168,26 +169,27 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
         <featureManager>
             <feature>jsp-2.3</feature>
         </featureManager>
- <httpEndpoint id=>
+
+        <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
 
         <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
-{: #codeblock}
+{: codeblock}
 
 Nach Vorbereitung des Serververzeichnisses können Sie es in Bluemix implementieren.
 
 ```
     $ cf push <yourappname> -p defaultServer
 ```
-{: #codeblock}
+{: codeblock}
 
 Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implementiert werden, kann unter dem [Kontextstammverzeichnis gemäß Liberty-Profil](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6) zugegriffen werden. Beispiel:
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Paketierter Server
 {: #packaged_server}
@@ -200,7 +202,7 @@ Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Si
 ```
     $ wlp/bin/server package defaultServer --include=usr
 ```
-{: #codeblock}
+{: codeblock}
 
 Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Anschließend können Sie die komprimierte Datei mithilfe des Befehls 'cf push' mit einer Push-Operation an Bluemix übertragen.
 Beispiel:
@@ -208,7 +210,7 @@ Beispiel:
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
-{: #codeblock}
+{: codeblock}
 
 Hinweis: Auf die Webanwendungen, die als Teil des paketierten Servers implementiert werden, kann unter dem Kontextstammverzeichnis gemäß Liberty-Profil zugegriffen werden.
 
@@ -265,6 +267,8 @@ connection.name: Eine eindeutige ID für die Verbindung in Form einer UUID. Beis
 Bei gebundenen Services, die nicht automatisch vom Liberty-Buildpack konfiguriert werden, muss die Anwendung den Zugriff der Back-End-Ressource selbst verwalten.
 
 # Zugehörige Links
+{: #rellinks}
 ## Allgemein
+{: #general}
 * [Liberty-Laufzeit](index.html)
 * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
