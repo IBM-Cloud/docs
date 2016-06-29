@@ -145,7 +145,7 @@ To create cards, perform the following tasks.
   2.	Select Gauge.
   3.	Card source data, check your Device, then click Next.
   4.	Connect new data set.
-       -	Name: Humidity
+       -	Name: Temperature
        -	Event: update
        -	Property: humidity
        -	Type: Float
