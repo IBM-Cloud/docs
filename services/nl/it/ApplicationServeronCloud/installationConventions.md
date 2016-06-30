@@ -15,7 +15,7 @@ copyright:
 ## Convenzioni di installazione della cella
 {: cell_installation_conventions}
 
-Una cella WebSphere Application Server for Bluemix cell iiene installata e configurata rispettando una struttura di directory standardizzata. Il seguente elenco annota alcune importanti impostazioni.  Consulta /etc/virtualimage.properties per un elenco completo di impostazioni.
+Una cella WebSphere Application Server for Bluemix viene installata e configurata rispettando una struttura di directory standardizzata. Il seguente elenco annota alcune importanti impostazioni.  Consulta /etc/virtualimage.properties per un elenco completo di impostazioni.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer

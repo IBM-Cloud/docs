@@ -11,8 +11,29 @@ copyright:
 
 #系统访问
 {: #system_access}
-以下主题包含如何访问系统以及如何设置访问的多种方法。
+以下主题包含如何创建和管理服务实例的方法以及如何访问系统并设置访问权的多种方法。
 {: shortdesc}
+
+*上次更新时间：2016 年 6 月 8 日*
+{: .last-updated}
+
+## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的 REST API 用法
+{: #restapi_usage}
+
+您可以使用以下其中一种方法创建、供应、管理和删除 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的实例：
+
+* 通过 {{site.data.keyword.Bluemix_notm}} UI 中的 {{site.data.keyword.Bluemix_notm}} 目录和服务仪表板。
+* 通过创建使用了我们提供的 RESTful API 的应用程序或脚本。
+
+使用我们提供的符合 Swagger 2.0 的 REST API，客户可访问通过门户网站和仪表板提供的相同功能。有关支持的 REST API 和资源的更多信息，请参阅 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文档](https://new-console.{DomainName}/apidocs/212){: new_window}。
+
+**注：**创建服务实例之后，根据创建的 T 恤型号，可能无法立即使用您的服务。建议您查询 JSON 返回的**状态**字段，以确定服务实例的当前状态。
+
+**注：**缺省情况下，API BASE URL 指向[美国南部区域](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api/v1){: new_window}中的端点。如果您使用英国或悉尼区域，请确保应用程序使用以下某个端点：
+
+* [英国区域](https://wasaas-broker.eu-gb.bluemix.net/wasaas-broker/api/v1){: new_window}
+* [悉尼区域](https://wasaas-broker.au-syd.bluemix.net/wasaas-broker/api/v1){: new_window}
+
 
 ## 服务仪表板
 {: #service_dashboard}
@@ -27,6 +48,8 @@ copyright:
 *  私有 SSH 密钥。
 *  WebSphere® 管理用户和管理密码。
 *  管理中心和管理控制台 URL。
+
+**注**：根据特定的计算、内存和 I/O 资源量，对于处于“已停止”状态的累计 VM，我们会向客户减免 5%。客户的固定“已停止”实例数将会控制为 10 个 IP 地址或 64 GB 内存以内。
 
 
 ## 为 WebSphere Application Server for Bluemix 实例设置 openVPN
@@ -43,21 +66,19 @@ copyright:
 3. 在服务仪表板中，使用 WebSphere Application Server for Bluemix 实例的 OpenVPN 下载链接下载 VPN 配置文件。将压缩文件中的全部 4 个文件解压缩到 **{OpenVPN home}\config** 目录。例如：
 
   <pre>  
-    C:\Program Files\OpenVPN\Config
-  </pre>
+C:\Program Files\OpenVPN\Config  </pre>
   {: codeblock}
-  
+
 4. 启动 openVPN 客户端程序“OpenVPN GUI”。确保选择[以 Windows 管理员身份运行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}来启动程序。如果不以管理员身份运行，您可能无法连接。
 
 ### 使用以下指示信息，在 Linux 中设置 openVPN：
 1. 要安装 openVPN，请遵循以下[指示信息](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}。
   * 如果需要手动下载并安装 RPM 软件包管理器，请转至 [openVPN unix/linux 下载](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}。您可能需要 Linux 管理员的帮助。
-3. 在服务仪表板中，使用 WebSphere Application Server for Bluemix 实例的 OpenVPN 下载链接下载 VPN 配置文件。将文件解压缩到要从中启动 openVPN 客户端的目录。需要全部 4 个文件位于相同目录。
+3. 在服务仪表板中，使用 WebSphere Application Server for Bluemix 实例的 OpenVPN 下载链接下载 VPN 配置文件。将文件解压缩到您计划要从中启动 openVPN 客户端的目录。需要全部 4 个文件位于相同目录。
 3. 启动 openVPN 客户端程序。打开终端窗口，并转至包含配置文件的目录。以 root 用户身份运行以下命令：
-  
+
   <pre>
-      $ openvpn --config vt-wasaas-wasaas.ovpn
-  </pre>
+$ openvpn --config vt-wasaas-wasaas.ovpn  </pre>
   {: codeblock}  
 
 ### 使用以下指示信息，在 Mac 中设置 openVPN：
@@ -73,13 +94,13 @@ copyright:
 
 要验证 OpenSSH 的安装信息，请输入命令：
   ```
-      $ ssh -V
+$ ssh -V
   ```
   {: codeblock}
 
 您将收到以下类似响应：
   ```
-      OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
+OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
   {: codeblock}
 
@@ -91,22 +112,19 @@ copyright:
 4. 运行命令：
 
   <pre>
-    $ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName
-  </pre>
+$ ssh virtuser@169.53.246.xxx -i /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 5. 使用以下命令，将 virtuser 切换为 root 用户，以获取完整的 sysadmin 权限：
 
   <pre>
-    $ sudo su root
-  </pre>
+$ sudo su root  </pre>
   {: codeblock}
-  
+
 6. 如果您在使用专用 SSH 密钥访问系统时遇到问题，请使用提供的 root 密码。运行以下命令，以 root 用户身份登录，并提供密码。
- 
+
  <pre>
-    $ ssh root@169.53.246.x
-  </pre>
+$ ssh root@169.53.246.x  </pre>
   {: codeblock}
 
 7. 无论是使用专用 SSH 密钥还是 root 密码访问系统，请立即更改 root 密码。
@@ -114,12 +132,11 @@ copyright:
 
   <pre>
 Host VM1
-      Hostname 169.53.246.xxx
-      User virtuser
-      IdentityFile /path/privateKeyFileName
-  </pre>
+Hostname 169.53.246.xxx
+User virtuser
+IdentityFile /path/privateKeyFileName  </pre>
   {: codeblock}
-  
+
 9. 运行“ssh VM1”，并以 virtuser 进行连接。
 
 ## 系统路径
@@ -148,8 +165,9 @@ Host VM1
   * 在每个 WebSphere Application Server for Bluemix 节点上，您会在 WAS_HOME/virtual/bin 目录中找到脚本 openFirewallPorts.sh。
   * 在每个 Liberty 集合主机上，您会在 WAS_HOME/virtual/bin 目录中找到脚本 openFirewallPorts.sh。
 
-用法：```
-      $ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
+用法：
+  ```
+$ openFirewallPorts.sh -ports <PORT>:<PROTOCOL>,... -persist true|false
   ```
   {: codeblock}
 

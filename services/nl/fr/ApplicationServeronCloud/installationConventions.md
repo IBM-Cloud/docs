@@ -16,8 +16,7 @@ copyright:
 {: cell_installation_conventions}
 
 Une cellule WebSphere Application Server for Bluemix doit être installée et configurée conformément à une structure de répertoire normalisée. La liste suivante
-répertorie quelques-uns des paramètres importants.
-Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
+répertorie quelques-uns des paramètres importants.  Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
@@ -30,8 +29,7 @@ Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
 ## Conventions d'installation de la collectivité Liberty
 
 Une collectivité Liberty est installée et configurée conformément à une structure de répertoire normalisée. La liste suivante répertorie quelques-uns des
-paramètres importants.
-Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
+paramètres importants.  Pour la liste complète des paramètres, voir /etc/virtualimage.properties.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
