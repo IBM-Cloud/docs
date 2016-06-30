@@ -19,6 +19,7 @@ copyright:
 # 使用已啟用 {{site.data.keyword.openwhisk_short}} 功能的服務 
 {: #openwhisk_ecosystem}
 *前次更新：2016 年 3 月 28 日*
+{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
 {: shortdesc}
@@ -139,7 +140,7 @@ copyright:
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -158,15 +159,15 @@ copyright:
 
 4. 觀察每一個文件變更的 `myCloudantTrigger` 觸發程式的新啟動。
 
-**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下面的讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
+**附註**：如果您無法觀察到新啟動，請參閱有關在 Cloudant 資料庫中讀取及寫入的後續各節。測試下列讀取及寫入步驟，有助於驗證 Cloudant 認證正確無誤。
 
 您現在可以建立規則，並將它們關聯至可反應文件更新的動作。
 
-所產生事件的內容取決於建立觸發程式時的 `includeDocs` 參數值。如果設為 true，發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
+所產生事件的內容取決於建立觸發程式時的 `includeDoc` 值。如果設為 true，發動的每一個觸發程式事件都會包括已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
 
   ```
   {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
+"_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -175,7 +176,7 @@ copyright:
 
 此範例中的程式碼會使用對應的 `_id`、`_rev` 及 `name` 參數來產生觸發程式事件。事實上，觸發程式事件的 JSON 表示法與文件相同。
 
-否則，如果 `includeDocs` 是 false，則事件包括下列參數：
+否則，如果 `includeDoc` 是 false，則事件包含下列參數：
 
 - `id`：文件 ID。
 - `seq`：Cloudant 所產生的序列 ID。
@@ -185,7 +186,7 @@ copyright:
 
   ```
   {
-      "id": "6ca436c44074c4c2aa6a40c9a188b348",
+"id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -208,9 +209,8 @@ copyright:
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
-    "id": "heisenberg",
+"id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -234,7 +234,7 @@ copyright:
   {: pre}
   ```
   {
-    "_id": "heisenberg",
+"_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -259,7 +259,12 @@ copyright:
 
 `/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
 
-- `cron`：指出何時發動觸發程式的字串（根據 Unix crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。
+- `cron`：指出何時發動觸發程式的字串（根據 Unix crontab 語法）（世界標準時間 (UTC)）。字串是六個連串的欄位，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。以下是該字串指出的部分頻率範例：
+
+  - `* * * * * *`：每秒。
+  - `0 * * * * *`：每分鐘整分。
+  - `* 0 * * * *`：每小時整點。
+  - `0 0 9 8 * *`：每月 8 日上午 9:00:00（世界標準時間）
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
@@ -268,34 +273,36 @@ copyright:
 以下範例使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
-每一個產生的事件都會併入為參數，即 `trigger_payload` 值所指定的內容。在此情況下，每一個觸發程式事件都會有參數 `name=Odin` 及 `place=Asgard`。
+每一個產生的事件都會包含為參數，即 `trigger_payload` 值所指定的內容。在此情況下，每一個觸發程式事件都會有參數 `name=Odin` 及 `place=Asgard`。
 
 
 ## 使用 Weather 套件
 {: #openwhisk_catalog_weather}
 
-`/whisk.system/weather` 套件提供一種簡便的方式來呼叫 The Weather Company API。
+`/whisk.system/weather` 套件提供一種簡便的方式來呼叫 IBM Weather Insights API。
 
 該套件包括下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | 套件 | apiKey | The Weather Company 的服務 |
-| `/whisk.system/weather/forecast` | 動作 | apiKey、latitude、longitude | Weather.com 10 天預報 |
+| `/whisk.system/weather` | 套件 | apiKey | IBM Weather Insights API 的服務  |
+| `/whisk.system/weather/forecast` | 動作 | apiKey、latitude、longitude、timePeriod | 指定時段的預報|
 
 儘管不是必要的，但是建議您使用 `apiKey` 值建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定金鑰。
 
 ### 取得某個位置的天氣預報
 
-`/whisk.system/weather/forecast` 動作會從 The Weather Company 呼叫 API，以傳回某個位置的 10 天天氣預報。參數如下所示：
+`/whisk.system/weather/forecast` 動作會從 The Weather Company 呼叫 API，以傳回某個位置的天氣預報。參數如下所示：
 
-- `apiKey`：獲授權呼叫 10 天預報 API 的 The Weather Company 的 API 金鑰。
+- `apiKey`：獲授權呼叫預報 API 的 The Weather Company 的 API 金鑰。
 - `latitude`：位置的緯度座標。
 - `longitude`：位置的經度座標。
+- `timeperiod`：預報的時段。有效選項為 '10day' -（預設值）傳回 10 天的每日預報、'24hour' - 傳回 2 天的每小時預報、'current' - 傳回目前的天氣狀況、'timeseries' - 傳回目前的觀察，以及從目前日期和時間起，過去最多 24 小時的觀察。 
+
 
 以下範例說明如何建立套件連結，然後取得 10 天預報。
 
@@ -315,7 +322,7 @@ copyright:
 
   ```
   {
-      "forecasts": [
+"forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -350,6 +357,8 @@ copyright:
 | `/whisk.system/watson` | 套件 | username、password | Watson 分析 API 的動作 |
 | `/whisk.system/watson/translate` | 動作 | translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
 | `/whisk.system/watson/languageId` | 動作 | payload、username、password | 識別語言 |
+| `/whisk.system/watson/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換成文字 |
+| `/whisk.system/watson/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換成音訊 |
 
 儘管不是必要的，但是建議您使用 `username` 及 `password` 值建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
 
@@ -381,7 +390,7 @@ copyright:
 
   ```
   {
-      "payload": "Ciel bleu a venir"
+"payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
@@ -412,7 +421,7 @@ copyright:
   {: pre}
   ```
   {
-    "payload": "Ciel bleu a venir",
+"payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -420,6 +429,82 @@ copyright:
   {: screen}
 
 
+### 將部分文字轉換成語音
+
+`/whisk.system/watson/textToSpeech` 動作會將部分文字轉換成音訊語音。參數如下所示：
+
+- `username`：Watson API 使用者名稱。
+- `password`：Watson API 密碼。
+- `payload`：要轉換成語音的文字。
+- `voice`：說話者的聲音。
+- `accept`：語音檔的格式。
+- `encoding`：語音二進位資料的編碼。
+
+下列範例說明如何建立套件連結，以及將部分文字轉換成語音。
+
+1. 使用 Watson 認證建立套件連結。
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. 在套件連結中呼叫 `textToSpeech` 動作，以轉換文字。
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
+
+
+### 將語音轉換成文字
+
+`/whisk.system/watson/speechToText` 動作會將音訊語音轉換成文字。參數如下所示：
+
+- `username`：Watson API 使用者名稱。
+- `password`：Watson API 密碼。
+- `payload`：要轉換成文字的已編碼語音二進位資料。
+- `content_type`：音訊的 MIME 類型。
+- `encoding`：語音二進位資料的編碼。
+- `continuous`：指出是否傳回代表連續詞組（以長時間暫停分隔）的多個最終結果。
+- `inactivity_timeout`：時間（秒），如果在所提交的音訊中只偵測到靜音，將在此期限之後結束連線。
+- `interim_results`：指出服務是否要傳回臨時結果。
+- `keywords`：要在音訊中標示的關鍵字清單。
+- `keywords_threshold`：信任值，其為標示關鍵字的下限。
+- `max_alternatives`：要傳回之替代記錄的數目上限。
+- `model`：要用於識別要求的模型 ID。
+- `timestamps`：指出是否要為每個單字傳回時間校準。
+- `watson-token`：提供服務的鑑別記號，以作為提供服務認證的替代方案。
+- `word_alternatives_threshold`：信任值，其為將假設識別為可能替代字的下限。
+- `word_confidence`：指出是否要為每個單字傳回範圍從 0 到 1 之間的信任測量值。
+- `X-Watson-Learning-Opt-Out`：指出是否要拒絕呼叫的資料收集。
+ 
+下列範例說明如何建立套件連結，以及將語音轉換成文字。
+
+1. 使用 Watson 認證建立套件連結。
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+
+2. 在套件連結中呼叫 `speechToText` 動作，以轉換已編碼的音訊。
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## 使用 Slack 套件
 {: #openwhisk_catalog_slack}
 

@@ -15,6 +15,7 @@ copyright:
 
 # Compute
 *Última actualización: 19 de febrero de 2016*
+{: .last-updated}
 
 Cálculo (Compute) abarca la infraestructura y los recursos que puede elegir para crear apps de {{site.data.keyword.Bluemix}}. Los
 recursos de cálculo incluyen {{site.data.keyword.openwhisk_short}}, apps Cloud Foundry, Contenedores {{site.data.keyword.IBM_notm}} y {{site.data.keyword.IBM_notm}}  {{site.data.keyword.virtualmachinesshort}}.

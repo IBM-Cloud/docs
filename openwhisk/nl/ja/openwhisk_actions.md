@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *最終更新日: 2016 年 3 月 22 日*
+{: .last-updated}
 
 アクションとは、{{site.data.keyword.openwhisk}} プラットフォームで実行されるステートレスなコード・スニペットです。JavaScript 関数、Swift 関数、または、Docker コンテナーにパッケージした実行可能なカスタム・プログラムをアクションにできます。例えば、アクションを使用して、イメージ内の顔を検出したり、一連の API 呼び出しを集約したり、ツイートを投稿したりできます。
 {:shortdesc}
@@ -43,7 +44,7 @@ copyright:
   
   ```
   function main() {
-      return {payload: 'Hello world'};
+return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -75,7 +76,8 @@ copyright:
 
   作成したばかりの `hello` アクションが表示されているのを確認できます。
 
-4. アクションを作成した後、invoke コマンドを使用して、そのアクションを {{site.data.keyword.openwhisk_short}} においてクラウド内で実行できます。コマンドにフラグを指定することによって、アクションを*ブロッキング*起動または*非ブロッキング*起動のいずれかで起動できます。ブロッキング起動は、アクションの実行が完了するのを待ってから結果を返します。次の例では、ブロッキングを示す `-blocking` パラメーターが使用されています。
+4. アクションを作成した後、invoke コマンドを使用して、そのアクションを {{site.data.keyword.openwhisk_short}} においてクラウド内で実行できます。コマンドにフラグを指定することによって、アクションを*ブロッキング*起動または*非ブロッキング*起動のいずれかで起動できます。ブロッキング起動は、アクションの実行が完了するのを待ってから結果を返します。
+次の例では、ブロッキングを示す `--blocking` パラメーターが使用されています。
 
   ```
   wsk action invoke --blocking hello
@@ -83,9 +85,8 @@ copyright:
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
-      "result": {
+"result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -117,7 +118,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello world"
+"payload": "Hello world"
   }
   ```
   {: screen}
@@ -144,7 +145,7 @@ copyright:
   
   ```
   function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -163,7 +164,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+"payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -192,7 +193,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+"payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -314,7 +315,7 @@ copyright:
   この例は、非同期アクションの必要性も示しています。アクションは `whisk.async()` を戻して、関数が戻ったときにこのアクションの結果はまだ使用可能になっていないことを示します。代わりに、結果は、HTTP 呼び出しが完了した後に `request` コールバックで使用可能になり、引数として `whisk.done()` 関数に渡されます。
 
 2. 以下のコマンドを実行して、アクションを作成して起動します。
-  ```
+   ```
   wsk action create weather weather.js
   ```
   {: pre}
@@ -344,19 +345,20 @@ copyright:
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
+   action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
    action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  この例では、`cat` アクションと `sort` アクションを使用します。
+  この例では、`split` アクションと `sort` アクションを使用します。
 
 2. アクション・シーケンスを作成して、1 つのアクションの結果が次のアクションに引数として渡されるようにします。
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -379,7 +381,7 @@ copyright:
   {: pre}
   ```
   {
-      "length": 3,
+"length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -391,7 +393,9 @@ copyright:
 
   結果では行がソートされていることが分かります。
 
-**注**: 複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./openwhisk_actions.html##openwhisk_binding_actions)』を参照してください。
+**注**: 複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./actions.md#setting-default-parameters)』を参照してください。
+
+
 
 ## Swift アクションの作成
 {: #openwhisk_actions_swift}
@@ -406,8 +410,7 @@ Swift アクションの作成プロセスは、JavaScript アクションの場
 アクションは、単にトップレベルの Swift 関数です。例えば、以下の内容で `hello.swift` という名前のファイルを作成します。
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
-      if let name = args["name"] as? String {
+  func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -416,7 +419,7 @@ return [ "greeting" : "Hello stranger!" ]
 ```
 {: codeblock}
 
-JavaScript アクションと同様に、Swift アクションは常にディクショナリーを取り込み、ディクショナリーを生成することに注意してください。
+Swift アクションは常にディクショナリーを取り込み、ディクショナリーを生成します。
 
 次のように、この関数から `helloSwift` という名前の {{site.data.keyword.openwhisk_short}} アクションを作成できます。
 
@@ -443,6 +446,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
 {{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
+
+
 
 ## Docker アクションの作成
 {: #openwhisk_actions_docker}
@@ -488,7 +493,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
+printf("Hello %s from arbitrary C program!\n",
              (argc == 1) ? "anonymous" : argv[1]);
   }
   ```
@@ -525,7 +530,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+"msg": "Hello Rey from arbitrary C program!\n"
   }
   ```
   {: screen}
@@ -564,7 +569,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
-    2016-02-11T16:46:56.842065025Z stdout: hello bob!
+2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}
 

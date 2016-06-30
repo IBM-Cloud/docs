@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # 使用 Git 开始编码
-*上次更新时间：2016 年 3 月 2 日*  
+*上次更新时间：2016 年 3 月 2 日*
+{: .last-updated}  
 
 您可以创建托管的 Git 存储库，该存储库将自动部署到 {{site.data.keyword.Bluemix}}。然后，可以通过将更改推送到 Git 存储库来修改应用程序中运行的代码。
 {:shortdesc}
@@ -51,12 +52,16 @@ copyright:
 
 **重要信息：**bl 命令行工具仅适用于 Windows 7 和 8 以及 Mac OS X V10.9 或更高版本。 
 
-2. 在命令行上，使用以下命令登录。系统将提示您输入 IBM® 标识和密码。```
-bl login```
+2. 在命令行上，使用以下命令登录。系统将提示您输入 IBM® 标识和密码。 
+```
+bl login
+```
 
-3. 通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表：```
-bl projects```
-在列表中找到匹配您应用程序的项目名称。项目名称的格式为 *alias* | *your application name*。 
+3. 通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表： 
+```
+bl projects
+```
+在列表中找到匹配您应用程序的项目名称。项目名称的格式为 *alias* | *your application name*。
 
 4. 通过输入以下命令，将本地环境与 {{site.data.keyword.Bluemix_notm}} 上的项目同步。如果您是项目所有者，那么只需为 projectName 指定 your-application-name 即可。 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
@@ -65,9 +70,12 @@ bl sync projectName -d localDirectory --verbose
 ```
 此命令继续运行（同步也将继续），直到您输入“q”。--verbose 选项用于显示日志记录和状态信息。如果任何自变量中包含空格，那么需要为该名称加引号。
 
-5. 在另一个命令行窗口中，在本地目录下，通过输入以下命令，以“实时编辑”方式将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。```
-bl start```  
+5. 在另一个命令行窗口中，在本地目录下，通过输入以下命令，以“实时编辑”方式将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
+```
+bl start
+```  
 
-更改本地目录中的文件时，系统会自动将更改传播到正在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序以及项目云工作空间中。如果需要重新启动 Node 应用程序，那么可以使用以下命令：```
+更改本地目录中的文件时，系统会自动将更改传播到正在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序以及项目云工作空间中。如果需要重新启动 Node 应用程序，那么可以使用以下命令：
+```
 bl start --restart
 ```

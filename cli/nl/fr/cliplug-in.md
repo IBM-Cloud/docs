@@ -18,6 +18,7 @@ copyright :
 # Plug-in de l'interface de ligne de commande Cloud Foundry
 
 *Dernière mise à jour : 2 février 2016*
+{: .last-updated}
 
 Vous pouvez installer et utiliser les plug-in de l'interface de ligne de commande Cloud Foundry (cf cli) qui sont disponibles dans le
 [référentiel de plug-in de l'interface de ligne de commande](http://plugins.{DomainName}/){: new_window}. Chaque plug-in est

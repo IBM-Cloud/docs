@@ -18,6 +18,7 @@ copyright:
 
 # コミュニティー・ビルドパックの使用
 *最終更新日: 2016 年 3 月 15 日*
+{: .last-updated}
 
 使用したいランタイムを提供するスターターが {{site.data.keyword.Bluemix}} カタログにない場合、外部ビルドパックを {{site.data.keyword.Bluemix_notm}} に持ち込むことができます。cf push コマンドを使用してアプリをデプロイするときに、Cloud Foundry と互換のカスタム・ビルドパックを指定することができます。
 {:shortdesc}

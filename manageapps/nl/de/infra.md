@@ -15,6 +15,7 @@ copyright:
 #  Bluemix-Infrastrukturebenen
 
 *Letzte Aktualisierung: 15. März 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix_notm}} abstrahiert und verdeckt Betriebssystem- und Infrastrukturebenen, damit diese von Ihnen nicht verwaltet werden müssen. Manchmal kann es jedoch wünschenswert sein, mehr über das Betriebssystem und die Middleware für Ihre App zu wissen.
 {:shortdesc}

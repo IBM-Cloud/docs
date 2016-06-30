@@ -18,6 +18,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}}“仪表板”监视 {{site.data.keyword.openwhisk_short}} 活动
 *上次更新时间：2016 年 2 月 9 日*
+{: .last-updated}
 
 [{{site.data.keyword.openwhisk}}“仪表板”](https://{DomainName}/whisk/dashboard/)提供了对您活动的图形化摘要。使用该仪表板可确定您的 {{site.data.keyword.openwhisk_short}} 操作的性能和运行状况。
 {:shortdesc}

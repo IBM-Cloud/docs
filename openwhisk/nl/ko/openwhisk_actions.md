@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *마지막 업데이트 날짜: 2016년 3월 22일*
+{: .last-updated}
 
 조치는 {{site.data.keyword.openwhisk}} 플랫폼에서 실행되는 Stateless 코드 스니펫입니다. 조치는 JavaScript 함수, Swift 함수 또는 Docker 컨테이너에 패키지화된 사용자 정의 실행 가능 프로그램일 수 있습니다. 예를 들어, 이미지에서 얼굴을 발견하거나 일련의 API 호출을 집계하거나 트윗을 게시하기 위해 조치를 사용할 수 있습니다.
 {:shortdesc}
@@ -75,7 +76,7 @@ copyright:
 
   방금 작성한 `hello` 조치를 볼 수 있습니다.
 
-4. 조치를 작성한 후에 'invoke' 명령을 사용하여 {{site.data.keyword.openwhisk_short}}의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출 또는 *비블로킹* 호출을 사용하여 조치를 호출할 수 있습니다. 블로킹 호출은 조치가 실행을 완료하고 결과를 리턴할 때까지 대기합니다. 이 예에서는 블로킹 매개변수인 `-blocking`을 사용합니다.
+4. 조치를 작성한 후에 'invoke' 명령을 사용하여 {{site.data.keyword.openwhisk_short}}의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출 또는 *비블로킹* 호출을 사용하여 조치를 호출할 수 있습니다. 블로킹 호출은 조치가 실행을 완료하고 결과를 리턴할 때까지 대기합니다. 이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
 
   ```
   wsk action invoke --blocking hello
@@ -83,7 +84,6 @@ copyright:
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
       "result": {
           "payload": "Hello world"
@@ -344,19 +344,20 @@ copyright:
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
+   action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
    action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  이 예에서는 `cat` 및 `sort` 조치를 사용할 것입니다.
+  이 예에서는 `split` 및 `sort` 조치를 사용합니다. 
 
 2. 한 조치의 결과가 다음 조치에 인수로 전달되도록 조치 시퀀스를 작성하십시오.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -379,7 +380,7 @@ copyright:
   {: pre}
   ```
   {
-      "length": 3,
+"length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -391,7 +392,9 @@ copyright:
 
   결과에서 행이 정렬된 것을 볼 수 있습니다.
 
-**참고**: 다중으로 이름 지정된 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 정보는 [기본 매개변수 설정](./openwhisk_actions.html##openwhisk_binding_actions)을 참조하십시오.
+**참고**: 다중으로 이름 지정된 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오.
+
+
 
 ## Swift 조치 작성
 {: #openwhisk_actions_swift}
@@ -406,8 +409,7 @@ Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유
 조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음 컨텐츠를 사용하여 `hello.swift`라는 파일을 작성하십시오.
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
-      if let name = args["name"] as? String {
+  func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -416,7 +418,7 @@ return [ "greeting" : "Hello stranger!" ]
 ```
 {: codeblock}
 
-JavaScript 조치와 같이 Swift 조치도 항상 사전을 이용하여 사전을 생성합니다.
+Swift 조치는 항상 사전을 이용하며 사전을 생성합니다. 
 
 다음과 같이 이 함수에서 `helloSwift`라는 {{site.data.keyword.openwhisk_short}} 조치를 작성할 수 있습니다.
 
@@ -445,6 +447,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를
 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
+
+
 
 ## Docker 조치 작성
 {: #openwhisk_actions_docker}
@@ -490,7 +494,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
+printf("Hello %s from arbitrary C program!\n",
              (argc == 1) ? "anonymous" : argv[1]);
   }
   ```
@@ -527,7 +531,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+"msg": "Hello Rey from arbitrary C program!\n"
   }
   ```
   {: screen}
@@ -566,7 +570,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
-    2016-02-11T16:46:56.842065025Z stdout: hello bob!
+2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}
 

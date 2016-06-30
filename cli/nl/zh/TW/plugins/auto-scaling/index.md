@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *前次更新：2016 年 2 月 25 日*
+{: .last-updated}
 
 您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供類似於自動擴充 RESTful API 所提供的功能。
 {: shortdesc}
@@ -30,10 +31,12 @@ copyright:
 
 完成下列步驟以新增儲存庫並安裝外掛程式：
 1. 若要新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式儲存庫，請執行下列指令：
+
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. 若要安裝 {{site.data.keyword.autoscaling}} CLI 外掛程式，請執行下列指令：
+
 ```
 bluemix plugin install auto-scaling -r bluemix-plugin-repo
 ```
@@ -55,9 +58,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## 產生自動擴充原則
 
-您可以透過回答指令行介面上的問題來產生自動擴充原則。根據您的輸入，包含自動擴充原則之定義的 JSON 檔案會以您輸入的名稱儲存。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：
-
-```bx as policy-create```
+您可以透過回答指令行介面上的問題來產生自動擴充原則。根據您的輸入，包含自動擴充原則之定義的 JSON 檔案會以您輸入的名稱儲存。如果您未輸入檔名，原則內容會直接列印至指令行，而不會將它儲存至檔案。請執行下列指令：```bx as policy-create```
 {: codeblock}
 
 
@@ -75,12 +76,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 **提示：**您也可以使用 **--json** 選項，來進行原始 JSON 回應的細緻列印。
 
-
 ## 分割自動擴充原則
 
-您可以從應用程式中移除自動擴充原則。請執行下列指令：
-
-```bx as policy-detach <APP_NAME>```
+您可以從應用程式中移除自動擴充原則。請執行下列指令：```bx as policy-detach <APP_NAME>```
 {: codeblock}
 
 <dl class="parml">
@@ -121,7 +119,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 **提示：**您也可以使用 **--json** 選項，來進行原始 JSON 回應的細緻列印。
 
 # 相關鏈結
+{: #rellinks}
 ## 一般
+{: #general}
 * [{{site.data.keyword.autoscaling}} 服務](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}

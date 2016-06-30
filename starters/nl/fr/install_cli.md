@@ -29,14 +29,18 @@ copyright:
 
 # Déploiement de votre application avec l'interface de ligne de commande
 *Dernière mise à jour : 24 février 2016*
+{: .last-updated}
 
 Vous pouvez utiliser l'interface de ligne de commande pour déployer et modifier des applications et des instances de service.
 {:shortdesc}
 
-Avant de commencer, installez les interfaces de ligne de commande {{site.data.keyword.Bluemix}} et Cloud Foundry.
+Avant de commencer, installez les interfaces de ligne de commande de Cloud Foundry et de {{site.data.keyword.Bluemix}}.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> 
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle
+fenêtre)"> <img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a>
+<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle
+fenêtre)"> <img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a>
 </p>
 
 **Restriction :** les outils de ligne de commande ne sont pas pris en charge par Cygwin. Utilisez-les dans une fenêtre de ligne

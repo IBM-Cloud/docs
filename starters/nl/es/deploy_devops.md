@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # Empezar a escribir código con Git
-*Última actualización: 2 de marzo de 2016*  
+*Última actualización: 2 de marzo de 2016*
+{: .last-updated}  
 
 Puede crear un repositorio
 Git alojado que se desplegará automáticamente en {{site.data.keyword.Bluemix}}. A continuación, puede modificar el código que se ejecuta en la app enviando los cambios al repositorio Git. 

@@ -14,7 +14,8 @@ copyright:
 #Surveillance et journalisation
 {: #monitoringandlogging}
 
-*Dernière mise à jour : 11 mai 2016*
+*Dernière mise à jour : 24 mai 2016*
+{: .last-updated}
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
 comprendre votre déploiement. De plus, vous pouvez réduire le temps et l'effort qui sont requis pour identifier les problèmes et les résoudre.
@@ -24,10 +25,13 @@ Les applications {{site.data.keyword.Bluemix}} peuvent être des applications à
 l'exécution de votre application et de ses données peut être partagée entre plusieurs services. Dans cet environnement complexe, la surveillance de vos
 applications et la consultation des journaux sont essentielles pour la gestion de vos applications.
 
+##Surveillance et journalisation d'applications
+{: #monitoring_logging_bluemix_apps}
+
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
 leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. De plus,
-vous pouvez également configurer votre application pour qu'elle écrive des messages de journal dans le fichier journal. Pour plus d'informations sur les
-formats de journal et l'affichage des journaux, voir [Journalisation pour les applications {{site.data.keyword.Bluemix_notm}}](#logging_for_bluemix_apps).
+vous pouvez également configurer votre application pour qu'elle écrive des messages de journal dans le fichier journal. Pour plus d'informations sur les formats des
+journaux et sur leur affichage, voir [Journalisation pour les applications qui s'exécutent dans Cloud Foundry](#logging_for_bluemix_apps).
 
 La surveillance de votre application vous permet d'afficher et de contrôler son déploiement. Elle permet d'effectuer les tâches
 suivantes :
@@ -41,7 +45,7 @@ Pour un fonctionnement stable de vos déploiements sur la plateforme {{site.data
 rapidement et identifier les causes efficacement. Pour ce faire, gardez l'aspect traitement des incidents à l'esprit lorsque vous concevez vos applications
 et utilisez des services ou des outils de surveillance et de journalisation lorsque votre application est déployée dans {{site.data.keyword.Bluemix_notm}}.
 
-##Surveillance des applications qui s'exécutent dans Cloud Foundry
+###Surveillance des applications qui s'exécutent dans Cloud Foundry
 {: #monitoring_bluemix_apps}
 
 Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}, il est
@@ -54,7 +58,7 @@ Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l
 performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. Pour plus d'informations, voir [Monitoring and Analytics](../services/monana/index.html).
 * Options de tiers. Exemple : [New Relic](http://newrelic.com/){:new_window}.
 
-##Journalisation pour les applications qui s'exécutent dans Cloud Foundry
+###Journalisation pour les applications qui s'exécutent dans Cloud Foundry
 {: #logging_for_bluemix_apps}
 
 Des fichiers journaux sont créés automatiquement lorsque vous utilisez l'infrastructure Cloud
@@ -325,5 +329,120 @@ de panne et après un déploiement.
 
 **Remarque :** les journaux que vous affichez dans l'interface de ligne de commande ne sont pas au format syslog et il se peut
 qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe. 
+
+### Exemple : transmission des journaux d'application Cloud Foundry à Splunk 
+{: #splunk}
+
+Dans cet exemple, un développeur nommé Jane crée un serveur virtuel à l'aide d'IBM Virtual Servers Beta et de l'image Ubuntu. Jane tente de transmettre
+les journaux d'application Cloud Foundry de {{site.data.keyword.Bluemix_notm}} à Splunk. 
+
+  1. Pour commencer, Jane configure Splunk.
+
+     a. Jane télécharge Splunk Light depuis le site [Download Splunk
+Light](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, puis l'installe via la commande suivante. Le logiciel est installé sous /opt/splunk. 
+       
+	    ```
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        ```
+	   
+     b. Jane installe et adjoint le module complémentaire RFC5424 de la technologie syslog pour son intégration avec
+{{site.data.keyword.Bluemix_notm}}. Pour les instructions d'installation du module complémentaire, reportez-vous au document
+[Cloud Foundry guideline](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
+
+	    Jane installe le module complémentaire via les commandes suivantes :
+        
+	    ```
+        cd /opt/splunk/etc/apps
+        tar xvfz ~/rfc5424-syslog_11.tgz
+        ```
+	   
+        Jane associe le module complémentaire en remplaçant */opt/splunk/etc/apps/rfc5424/default/transforms.conf* par un nouveau
+fichier *transforms.conf* contenant le texte suivant :
+	   
+	    ```
+        [rfc5424_host]
+        DEST_KEY = MetaData:Host
+        REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
+        FORMAT = host::$1
+
+        [rfc5424_header]
+        REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
+        FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
+        MV_ADD = true
+        ```
+        {:screen}	   
+
+     c. Une fois Splunk configuré, Jane doit ouvrir certains ports sur la machine Ubuntu pour accepter le flux syslog entrant
+(port 5140) et l'interface utilisateur Web de Splunk (port
+8000) vu que, par défaut, le pare-feu est en place sur le serveur virtuel {{site.data.keyword.Bluemix_notm}}.
+	   
+	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jane et n'est que temporaire. Pour configurer le
+paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, reportez-vous au document
+[Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus
+d'informations.
+	 
+	   ```
+	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
+	   ```
+	   {:screen}	
+	  
+	   Jane lance ensuite Splunk à l'aide de la commande suivante :
+
+       ```
+	   /opt/splunk/bin/splunk start --accept-license
+       ```
+		
+  2. Jane configure les paramètres Splunk afin d'accepter le flux syslog de {{site.data.keyword.Bluemix_notm}}. Elle doit créer une entrée de données
+pour le flux syslog.
+
+     a. Dans la partie gauche de l'interface Web de Splunk, Jane clique sur **Data > Data inputs**. Une liste des types d'entrées pris en
+charge par Splunk s'affiche. 
+	 
+     b. Elle sélectionne **TCP** vu que le flux syslog utilise ce protocole.
+	 
+     c. Dans le panneau **TCP**, elle entre **5140** dans la zone **Port**, en laissant vides
+les autres zones, puis clique sur **Next**.
+	 
+     d. Dans la liste **Source Type**, elle sélectionne **Uncategorized > rfc5424_syslog**.
+	 
+     e. Pour le type **Method**, elle sélectionne **IP**.
+	 
+     f. Dans la zone **Index**, Jane clique sur **Create a new index**. Elle nomme le nouvel index
+"bluemix", puis clique sur **Save**.
+	 
+     g. Enfin, dans la fenêtre **Review**, Jane confirme que le paramètre est correct, puis clique sur
+**Submit** pour activer cette entrée de données.
+
+  3. Dans {{site.data.keyword.Bluemix_notm}}, Jane crée un service de flux syslog et le lie à une application.
+
+     a. Jane crée un service de flux à l'aide de la commande suivante dans l'interface CLI cf :
+	 
+     ```
+     cf cups splunk -l syslog://dummyhost:5140
+     ```
+        
+     **Remarque :** *dummyhost* n'est pas le nom réel. Il est utilisé pour masquer le nom d'hôte véritable. 
+
+     b. Jane lie le service de flux syslog à une application dans son espace, puis retransfère l'application.
+	 
+	 ```
+     cf bind-service myapp splunk
+     cf restage myapp
+     ```
+		
+
+Jane teste son application, puis entre la chaîne de requête suivante dans l'interface Web de Splunk :
+
+```
+source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
+```
+
+Jane observe un flux de journaux dans son interface Web Splunk. Bien qu'elle ait installé la version Splunk Light, Jane dispose toujours d'une capacité
+de 500 Mo par jour pour ses journaux. 
+
+
 
 

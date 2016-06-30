@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 개발 모드 CLI
+# (더 이상 사용되지 않는) 개발 모드 CLI
 {: #devmodecli}
 
-*마지막 업데이트 날짜: 2016년 4월 11일*
+*마지막 업데이트 날짜: 2016년 5월 12일*
+{: .last-updated}
+
+**이 CLI는 더 이상 사용되지 않음:** 개발 모드(dev_mode) CLI를 사용하는 대신, IBM Eclipse Tools for Bluemix 또는 DevOps 웹 IDE를 사용하십시오. 2016년 6월 30일까지는 dev_mode CLI 사용을 계속할 수 있습니다. 
 
 Bluemix 개발 모드 명령행 인터페이스(dev_mode CLI)에서는 앱이 클라우드에서 실행 중인 동안 앱을 업데이트할 수 있습니다. dev_mode CLI는 cf CLI 플러그인으로 빌드되며 Liberty 앱과 IBM Node.js 앱을 모두 지원합니다.
 {: shortdesc}
@@ -35,10 +38,10 @@ dev_mode CLI로 다음 태스크를 수행할 수 있습니다.
 dev_mode 명령행 도구를 설치하려면 다음 방법 중 하나를 사용하십시오.
 - 로컬로 설치합니다.
   1. [IBM Bluemix CLI 플러그인 저장소](http://plugins.{DomainName})에서 플랫폼에 맞는 dev_mode 플러그인을 다운로드하십시오.
-  2. cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오.
+  2. dev_mode 플러그인이 저장된 폴더로 이동하고, cf install-plugin 명령을 사용하여 dev_mode 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다.  
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Bluemix CLI 저장소에서 설치합니다.
@@ -125,6 +128,7 @@ cf mode <appName> <dev|normal>
 {: #status}
 
 앱 모드와 런타임 상태를 표시합니다.
+
 ```
 cf status <appName>
 ```
@@ -141,7 +145,9 @@ cf update-file <remotePath> <localPath> [command_options]
 ```
 
 
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+   <dl>
    <dt>expand</dt>
    <dd>업로드된 파일을 zip 파일에서 압축을 풀어야 하는지 여부를 표시합니다.</dd>
    <dt>restart</dt>
@@ -160,7 +166,8 @@ cf delete-file <remotePath> [command_options]
 ```
 
 
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+ <dl>
    <dt>restart</dt>
    <dd>파일이 업데이트된 후 앱 런타임을 다시 시작합니다.</dd>
   </dl>
@@ -202,10 +209,8 @@ cf restart-inplace <appName>
 
 ## 관련 링크
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI 및 개발 도구](../../index.html#cli){:new_window}
+* [개발 모드 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps 웹 IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

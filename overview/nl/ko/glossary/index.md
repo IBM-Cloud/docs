@@ -17,6 +17,7 @@ copyright:
 {: #glossary}
 
 *마지막 업데이트 날짜: 2016년 4월 19일*
+{: .last-updated}
 
 이 용어집은 {{site.data.keyword.Bluemix}}에 대한 용어 및 정의를 제공합니다.
 {:shortdesc}

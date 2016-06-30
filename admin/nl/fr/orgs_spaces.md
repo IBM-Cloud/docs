@@ -15,29 +15,29 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Gestion des organisations et des espaces 
+# Gestion des organisations et des espaces
 {: #orgsspacesusers}
 *Dernière mise à jour : 16 mai 2016*
+{: .last-updated}
 
 En tant que propriétaire de compte, vous pouvez gérer vos organisations en cliquant sur l'icône **Compte et support**
 ![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**. Un
 responsable de l'organisation peut également utiliser la page Gérer les organisations afin de gérer les organisations dont il est responsable.
 {:shortdesc}
 
-Les tâches de gestion sont les suivantes : 
+Les tâches de gestion sont les suivantes :
 
-* Création d'une organisation ou d'un espace 
+* Création d'une organisation ou d'un espace
 * Changement de nom d'une organisation
-* Suppression d'une organisation ou d'un espace existant 
-* Affichage de la liste des membres d'équipe ajoutés à votre compte ou organisation 
-* Gestion ou affichage du quota 
-* Gestion des domaines personnalisés 
+* Suppression d'une organisation ou d'un espace existant
+* Affichage de la liste des membres d'équipe ajoutés à votre compte ou organisation
+* Gestion ou affichage du quota
+* Gestion des domaines personnalisés
 
 ## Organisations
 {: #orginfo}
 
 Les organisations peuvent couvrir plusieurs régions et sont définies par les éléments suivants :
-
 
 <dl>
 <dt>Les membres d'équipe</dt>
@@ -71,8 +71,7 @@ organisations.</li>
 
 Lorsque vous créez une organisation, le nom de l'organisation doit être unique dans {{site.data.keyword.Bluemix_notm}}. Si le nom
 d'organisation est déjà utilisé par un autre utilisateur d'environnement {{site.data.keyword.Bluemix_notm}} public, dédié ou local, vous devez
-spécifier un autre nom.
-Une fois que vous avez créé l'organisation, le droit *Responsable de l'organisation*, qui vous permet d'éditer le nom de l'organisation,
+spécifier un autre nom. Une fois que vous avez créé l'organisation, le droit *Responsable de l'organisation*, qui vous permet d'éditer le nom de l'organisation,
 d'ajouter des membres d'équipe et de créer ou de supprimer des espaces dans l'organisation, vous est attribué automatiquement.
 
 Vous devez prendre contact avec le [support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} pour
@@ -81,7 +80,6 @@ services dans l'organisation
 sont supprimés.
 
 Les [rôles utilisateur](users_roles.html#userrolesinfo) suivants peuvent être affectés aux membres d'équipe dans une organisation :
-
 
 <ul>
 <li>Responsable de l'organisation</li>
@@ -101,7 +99,6 @@ Une fois que vous avez ajouté des membres d'équipe à une organisation, vous p
 organisations, les espaces possèdent également un ensemble de [rôles utilisateur](users_roles.html#userrolesinfo) associés à des droits
 spécifiques pouvant être attribués aux membres d'équipe :
 
-
 <ul>
 <li>Responsable de l'espace</li>
 <li>Développeur de l'espace</li>
@@ -110,28 +107,27 @@ spécifiques pouvant être attribués aux membres d'équipe :
 
 **Remarque** : un membre d'équipe doit disposer d'au moins l'un des droits dans l'espace.
 
-## Création d'organisations et d'espaces 
+## Création d'organisations et d'espaces
 {: #createorg}
 
 Seuls les propriétaires de compte de type Paiement à la carte peuvent créer une organisation. Vous pouvez créer une organisation comme suit :
 
-
 1. Cliquez sur l'icône **Compte et support**
-![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**. 
+![Icône Compte et support](../admin/images/account_support.svg) &gt; page **Gérer les organisations**.
 2. Cliquez sur **Ajouter une nouvelle organisation**.
-3. Entrez le nom de l'organisation. 
+3. Entrez le nom de l'organisation.
 4. Cliquez sur **Ajouter**.
 
 Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace
 *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez
-associer vos applications à des espaces. Procédez comme suit pour créer un espace : 
+associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
+&gt; page **Gérer les organisations**.
 2. Identifiez l'organisation à laquelle ajouter un espace, puis sélectionnez **Afficher les détails**.
 3. Cliquez sur **Editer**.
 4. Cliquez sur **Ajouter un espace**.
-5. Entrez le nom de l'espace. 
+5. Entrez le nom de l'espace.
 6. Cliquez sur **Ajouter**.
 
 
@@ -141,26 +137,26 @@ associer vos applications à des espaces. Procédez comme suit pour créer un es
 Procédez comme suit pour renommer votre organisation :
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
+&gt; page **Gérer les organisations**.
 2. Identifiez l'organisation à éditer, puis sélectionnez **Afficher les détails**.
 3. Sélectionnez **Editer**.
-4. Sélectionnez **Editer** pour le titre de l'organisation. 
-5. Entrez le nouveau nom d'organisation. 
+4. Sélectionnez **Editer** pour le titre de l'organisation.
+5. Entrez le nouveau nom d'organisation.
 6. Cliquez sur **Sauvegarder**.
 
-## Suppression d'une organisation ou d'un espace existant 
+## Suppression d'une organisation ou d'un espace existant
 {: #deleteorgs}
 
 En tant que propriétaire de compte, vous pouvez prendre contact avec le
-[support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} pour supprimer une organisation.  
+[support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} pour supprimer une organisation. 
 
 **Remarque** : les opérations de suppression sont irréversibles. Vous perdez toutes vos applications et tous les services qui sont
 associés à l'organisation.
 
-Vous pouvez supprimer un espace depuis la page **Gérer les organisations** : 
+Vous pouvez supprimer un espace depuis la page **Gérer les organisations** :
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
+&gt; page **Gérer les organisations**.
 2. Identifiez l'organisation à éditer, puis sélectionnez **Afficher les détails**.
 3. Identifiez l'espace à supprimer, puis sélectionnez **Editer**.
 4. Cliquez sur **Supprimer un espace**.
@@ -170,9 +166,8 @@ Vous pouvez supprimer un espace depuis la page **Gérer les organisations** :
 
 Procédez comme suit pour répertorier les membres d'une organisation spécifique :
 
-
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; **Gérer les organisations**. 
+&gt; **Gérer les organisations**.
 2. Identifiez l'organisation dont vous voulez afficher les membres, puis cliquez sur **Afficher les détails**.
 3. Cliquez sur **Editer**.
 4. Vous pouvez afficher les membres de votre organisation et leurs rôles dans l'onglet
@@ -180,44 +175,40 @@ Procédez comme suit pour répertorier les membres d'une organisation spécifiqu
 
 Procédez comme suit pour répertorier les membres d'un espace spécifique :
 
-
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
+&gt; page **Gérer les organisations**.
 2. Identifiez l'organisation dont vous voulez afficher les membres, puis cliquez sur **Afficher les détails**.
 3. Identifiez l'espace dont vous voulez afficher les membres, puis cliquez sur **Editer**.
-4. Les membres de votre espace et leurs rôles s'affichent dans l'onglet **Utilisateurs**. 
+4. Les membres de votre espace et leurs rôles s'affichent dans l'onglet **Utilisateurs**.
 
-## Gestion du quota 
+## Gestion du quota
 {: #managequota}
 
-En tant que propriétaire de compte ou responsable de l'organisation, vous pouvez afficher le quota alloué et le quota utilisé pour votre organisation.
-Le quota représente les limites de ressources pour l'organisation et est affecté lorsque l'organisation est créée. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota.
+En tant que propriétaire de compte ou responsable de l'organisation, vous pouvez afficher le quota alloué et le quota utilisé pour votre organisation. Le quota représente les limites de ressources pour l'organisation et est affecté lorsque l'organisation est créée. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota.
 
-Pour afficher le quota de votre organisation, procédez comme suit : 
+Pour afficher le quota de votre organisation, procédez comme suit :
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
+&gt; page **Gérer les organisations**.
 2. Identifiez l'organisation pour laquelle afficher le quota, puis cliquez sur **Afficher les détails**.
 3. Cliquez sur **Editer**.
-4. Sélectionnez l'onglet **Quota**. 
+4. Sélectionnez l'onglet **Quota**.
 
-Afin de mettre à jour le quota pour votre organisation, vous devez ouvrir un ticket de demande de service.
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service, voir [Support
+Afin de mettre à jour le quota pour votre organisation, vous devez ouvrir un ticket de demande de service. Pour plus d'informations sur l'ouverture d'un ticket de demande de service, voir [Support
 client](../support/index.html#contacting-support). Pour plus d'informations sur le quota pour les conteneurs, voir
-[Quota](../containers/container_creating_ov.html#container_quota) dans la documentation relative aux conteneurs. 
+[Quota](../containers/container_creating_ov.html#container_quota) dans la documentation relative aux conteneurs.
 
-## Gestion des domaines 
+## Gestion des domaines
 {: #managedomains}
 
 En tant que propriétaire de compte ou responsable de l'organisation, vous pouvez afficher le domaine de système et ajouter des
 données personnalisés pour les applications construites dans une organisation et ses espaces. Si vous êtes responsable de l'espace, l'onglet
-**Domaines** d'un espace est une liste en lecture seule des domaines affectés à l'espace.
- 
+**Domaines** d'un espace est une liste en lecture seule des domaines affectés à l'espace. 
 
 1. Cliquez sur l'icône **Compte et support** ![Icône Compte et support](../admin/images/account_support.svg)
-&gt; page **Gérer les organisations**. 
-2. Identifiez l'organisation pour laquelle afficher ou éditer les domaines. 
-3. Sélectionnez **Afficher les détails** pour cette organisation. 
+&gt; page **Gérer les organisations**.
+2. Identifiez l'organisation pour laquelle afficher ou éditer les domaines.
+3. Sélectionnez **Afficher les détails** pour cette organisation.
 4. Cliquez sur **Editer**.
 5. Cliquez sur **Domaines**.
 

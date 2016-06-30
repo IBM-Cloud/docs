@@ -18,7 +18,8 @@ copyright:
 # Szenario: End-to-End-Entwicklung
 {: #ee}
 
-*Letzte Aktualisierung: 18. April 2016*
+*Letzte Aktualisierung: 15. Juni 2016*
+{: .last-updated}
 
 Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform und eine Auswahl von Tools verwenden, wenn Sie Ihre Apps erstellen, ausführen und bereitstellen. Befolgen Sie dieses umfassende Entwicklungsszenario, um zu beginnen.
 {:shortdesc}
@@ -35,11 +36,12 @@ Nachdem Sie sich registriert haben, beginnen Sie in der {{site.data.keyword.Blue
 
 In {{site.data.keyword.Bluemix_notm}} werden Apps Organisationen und Bereichen zugeordnet. Eine Organisation wird von mehreren Mitarbeitern verwendet, die ihr Eigner sind. Zunächst erhalten Sie eine Standardorganisation, die nach Ihrem Benutzernamen benannt ist, und Sie sind der einzige Mitarbeiter. Sie erhalten auch einen Bereich innerhalb dieser Organisation. Der Bereich ist eine Umgebung, in der Ihre Apps ausgeführt werden. Beispiel: Sie können einen Entwicklungsbereich als Entwicklungsumgebung verwenden, einen Testbereich als Testumgebung und einen Produktionsbereich als Produktionsumgebung. Darüber hinaus gehört jede Umgebung zu einer Region. Mit {{site.data.keyword.Bluemix_notm}} können Sie Ihre Anwendungen in einer bestimmten geografischen Region bereitstellen, um die Netzlatenz zu verringern und den Datenschutz und die Verfügbarkeit zu verbessern. Details finden Sie unter 'Regionen'.
 
-In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach dem Anmelden bei {{site.data.keyword.Bluemix_notm}} in der oberen, rechten Ecke auf Ihren Kontonamen und wählen Sie die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
+In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach der Anmeldung an {{site.data.keyword.Bluemix_notm}} auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und wählen Sie die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
 
-  1. Klicken Sie auf die Schaltfläche mit dem Pluszeichen.
-  2. Wählen Sie **Compute**>**CF-Anwendungen**>**SDK for Node.js** aus.
-  3. Geben Sie einen eindeutigen Namen für Ihre App ein. Zum Beispiel: TestNode. Klicken Sie anschließend auf **Erstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
+  1. Wählen Sie **Compute** aus.
+  2. Klicken Sie auf das Plussymbol.
+  3. Wählen Sie **SDK for Node.js** aus.
+  4. Geben Sie einen eindeutigen Namen für Ihre App ein. Zum Beispiel: TestNode. Klicken Sie anschließend auf **Erstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
   
 Jetzt werden die **Coding beginnen**-Anweisungen angezeigt. Sie können die Anweisungen befolgen, um den Startercode von TestNode herunterzuladen, zu ändern und bereitzustellen.
 

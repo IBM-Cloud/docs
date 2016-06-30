@@ -19,6 +19,7 @@ copyright:
 # 创建触发器和规则
 {: #openwhisk_triggers}
 *上次更新时间：2016 年 2 月 22 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} 触发器和规则为平台带来了事件驱动型功能。来自外部和内部事件源的事件将通过触发器进行传递，并且规则允许操作对这些事件做出反应。
 {: shortdesc}
@@ -114,14 +115,16 @@ copyright:
 
 例如，创建一个规则，用于在每次发布位置更新时都调用 hello 操作。 
 
-1. 通过我们将使用的操作码来创建“hello.js”文件：```
+1. 通过我们将使用的操作码来创建“hello.js”文件：
+  ```
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
 
-2. 确保该触发器和操作存在。```
+2. 确保该触发器和操作存在。
+  ```
   wsk trigger update locationUpdate
   ```
   {: pre}
@@ -131,12 +134,14 @@ copyright:
   ```
   {: pre}
 
-3. 创建并启用规则。三个参数分别是规则名称、触发器和操作。```
+3. 创建并启用规则。三个参数分别是规则名称、触发器和操作。
+  ```
   wsk rule create --enable myRule locationUpdate hello
   ```
   {: pre}
 
-4. 触发 locationUpdate 触发器。每次触发事件时，都会通过事件参数来调用 hello 操作。```
+4. 触发 locationUpdate 触发器。每次触发事件时，都会通过事件参数来调用 hello 操作。
+  ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
   {: pre}
@@ -146,7 +151,8 @@ copyright:
   ```
   {: screen}
 
-5. 通过检查最新的激活来验证是否调用了该操作。```
+5. 通过检查最新的激活来验证是否调用了该操作。
+  ```
   wsk activation list --limit 1 hello
   ```
   {: pre}

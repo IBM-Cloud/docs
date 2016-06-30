@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
@@ -15,7 +16,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-*前次更新：2016 年 5 月 16 日*
+*前次更新：2015 年 5 月 16 日*
+{: .last-updated}*
+{: .last-updated}
 
 一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
@@ -60,11 +63,11 @@ copyright:
 `您在頁面 app_name 中有未儲存的變更。請儲存或取消這些變更。`
 
 
-在執行時期窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。這是有意這樣設計的；但是，當您要離開該頁面時，會有錯誤訊息提示您儲存記憶體或實例設定。
+在運行環境窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。這是有意這樣設計的；但是，當您要離開該頁面時，會有錯誤訊息提示您儲存記憶體或實例設定。
 {: tsCauses}
 
 
-關閉訊息視窗，然後按一下執行時期窗格中的**重設**按鈕。
+關閉訊息視窗，然後按一下運行環境窗格中的**重設**按鈕。
 {: tsResolve} 
 
 
@@ -90,6 +93,7 @@ copyright:
 {: tsResolve}
 
 當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令：
+
 ```
 nslookup mybluemix.net
 ```
@@ -213,10 +217,10 @@ nslookup mybluemix.net
 ## {{site.data.keyword.Bluemix_notm}} 頂端功能表列消失
 {: #ts_topmenubar}
 
-調整瀏覽器視窗大小或使用行動式裝置時，您可能無法看到 {{site.data.keyword.Bluemix_notm}} 頂端功能表列。
+調整瀏覽器視窗大小或使用行動裝置時，您可能無法看到 {{site.data.keyword.Bluemix_notm}} 頂端功能表列。
 
 
-縮小瀏覽器視窗大小或使用行動式裝置時，{{site.data.keyword.Bluemix_notm}} 頂端功能表列會消失。當頂端功能表列消失時，顯示為堆疊行圖示的側邊欄功能表會出現在左上角。
+縮小瀏覽器視窗大小或使用行動裝置時，{{site.data.keyword.Bluemix_notm}} 頂端功能表列會消失。當頂端功能表列消失時，顯示為堆疊行圖示的側邊欄功能表會出現在左上角。
 {: tsSymptoms}
 
  
@@ -275,7 +279,8 @@ at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(Async
 at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+[2015*
+{: .last-updated}-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
 com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
@@ -375,11 +380,11 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 ```
 process.env.VCAP_SERVICES
 ```
-如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 及 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。 
- 
+如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 及 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
 
- 
- 
+
+
+
 
 
 
@@ -396,11 +401,11 @@ process.env.VCAP_SERVICES
 
  
 
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類型將專案對映至 {{site.data.keyword.Bluemix_notm}} 執行時期。資料類型可定義 Eclipse 中 Java EE 專案的需求，並作為執行時期配置的一部分，以便不同的執行時期與不同的專案相關聯。如果 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 不支援套用至專案的資料類型，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類型將專案對映至 {{site.data.keyword.Bluemix_notm}} 運行環境。資料類型可定義 Eclipse 中 Java EE 專案的需求，並作為運行環境配置的一部分，以便不同的運行環境與不同的專案相關聯。如果 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 不支援套用至專案的資料類型，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
 {: tsCauses}
 
 
-您必須從 Eclipse 專案中移除資料類型，才能使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
+您必須從 Eclipse 專案移除資料類型，才能使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式。
 {: tsResolve} 
 
 若要移除資料類型，請在 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 中，針對專案按一下**專案 > 內容 > 專案資料類型**。然後，清除不受支援之資料類型的勾選框。 
@@ -512,7 +517,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 {: tsSymptoms}
 
  
-IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 平台上開發的行動式應用程式。若要讓 Android 應用程式收到通知，行動式應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即無法接收推送通知。
+IBM Push 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 平台上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即無法接收推送通知。
 {: tsCauses}
 
  
@@ -607,7 +612,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
   * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../pricing/index.html#pay-accounts){: new_window}。 
   * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面。如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面，請完成下列步驟：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，選取您的應用程式。即會開啟應用程式詳細資料頁面。
-	  2. 在「執行時期」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。如果您使用 cf 指令行介面，請完成下列步驟：
+	  2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。如果您使用 cf 指令行介面，請完成下列步驟：
 	  1. 檢查有多少記憶體用於應用程式：
 ```
 	  cf apps
@@ -646,9 +651,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 ```
 cf push <appname> -p <app_path>
 ```
-此外，您可以將應用程式編碼成可識別運作中斷、異常狀況和連線失敗之類的問題，並從其中回復。 
-
-	  
+此外，您可以將應用程式編碼成可識別運作中斷、異常狀況和連線失敗之類的問題，並從其中回復。  
 
 ## 推送應用程式時遺失使用者定義變數
 {: #ts_varsnotretained}
@@ -808,7 +811,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-如需 `cf push` 指令的相關資訊，請輸入 `cf push -h`。 	
+如需 `cf push` 指令的相關資訊，請輸入 `cf push -h`。
 
 
 
@@ -1254,10 +1257,10 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 
 
-# 執行時期疑難排解
+# 運行環境疑難排解
 {: #runtimes}
 
-您在使用 IBM® Bluemix™ 執行時期時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
+您在使用 IBM® Bluemix™ 運行環境時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
 
 
@@ -1504,7 +1507,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 此問題是下列其中一個原因所導致：
 {: tsCauses} 
 
-  * 傾出檔案是與執行中應用程式實例一起產生，而且檔案會耗盡配置的磁碟限額。一個應用程式實例的磁碟限額預設為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式執行時期**，來檢查您的磁碟使用情形。下列範例顯示兩個應用程式實例的執行時期資訊（包括磁碟使用情形）：
+  * 傾出檔案是與執行中應用程式實例一起產生，而且檔案會耗盡配置的磁碟限額。一個應用程式實例的磁碟限額預設為 1 GB。您可以按一下**儀表板 > 應用程式 > 應用程式運行環境**，來檢查您的磁碟使用情形。下列範例顯示兩個應用程式實例的運行環境資訊（包括磁碟使用情形）：
 ```
     Instance	State	CPU	Memory Usage	Disk Usage
 

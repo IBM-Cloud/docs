@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1613px"
+   height="831px"
+   viewBox="0 0 1613 831"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="bluemixsoftlayerbill-CN.svg">
+  <metadata
+     id="metadata139">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="847"
+     id="namedview137"
+     showgrid="false"
+     inkscape:zoom="0.56799037"
+     inkscape:cx="960.5495"
+     inkscape:cy="371.20457"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title4">Desktop HD</title>
+  <desc
+     id="desc6">Created with Sketch.</desc>
+  <defs
+     id="defs8">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 415.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1613 : 415.5 : 1"
+       inkscape:persp3d-origin="806.5 : 277 : 1"
+       id="perspective141" />
+    <polygon
+       id="path-1"
+       points="89.9997 0 0 0 0 89.9997 89.9997 89.9997 89.9997 0" />
+  </defs>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <g
+       id="Desktop-HD">
+      <polyline
+         id="Stroke-36"
+         stroke="#FF2F2F"
+         stroke-width="6"
+         stroke-linecap="square"
+         points="182 589 434.6837 588 446.5038 548" />
+      <polyline
+         id="Stroke-38"
+         stroke="#5596E6"
+         stroke-width="6"
+         stroke-linecap="square"
+         points="182 297 434.6837 298 446.5038 338" />
+      <text
+         id="Bluemix-bill"
+         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
+         font-size="32"
+         font-weight="bold"
+         fill="#3C3232">
+        <tspan
+           x="49.424"
+           y="351"
+           id="tspan16">Bluemix 帐单</tspan>
+      </text>
+      <text
+         id="SoftLayer-bill"
+         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
+         font-size="32"
+         font-weight="bold"
+         fill="#3C3232">
+        <tspan
+           x="35.952"
+           y="641"
+           id="tspan19">SoftLayer 帐单</tspan>
+      </text>
+      <g
+         id="g21"
+         transform="translate(94.000000, 488.000000)"
+         fill="#FF2F2F">
+        <path
+           d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z"
+           id="Fill-1" />
+        <polygon
+           id="Fill-2"
+           points="16 53 64 53 64 49 16 49" />
+        <polygon
+           id="Fill-3"
+           points="16 61 64 61 64 57 16 57" />
+        <polygon
+           id="Fill-4"
+           points="16 69 40 69 40 65 16 65" />
+      </g>
+      <text
+         id="text27"
+         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
+         font-size="32"
+         font-weight="bold"
+         fill="#3C3232">
+        <tspan
+           x="883.952"
+           y="638"
+           id="tspan29">SoftLayer 帐单</tspan>
+      </text>
+      <g
+         id="g31"
+         transform="translate(942.000000, 477.000000)"
+         fill="#FF2F2F">
+        <path
+           d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z"
+           id="path33" />
+        <polygon
+           id="polygon35"
+           points="16 53 64 53 64 49 16 49" />
+        <polygon
+           id="polygon37"
+           points="16 61 64 61 64 57 16 57" />
+        <polygon
+           id="polygon39"
+           points="16 69 40 69 40 65 16 65" />
+      </g>
+      <g
+         id="g41"
+         transform="translate(94.000000, 200.000000)"
+         fill="#5596E6">
+        <path
+           d="M0,0.142262857 L0,118.999406 L80,118.999406 L80,31.837501 L48,0.142262857 L0,0.142262857 Z M4,4.10614857 L44,4.10614857 L44,35.7994057 L76,35.7994057 L76,115.039482 L4,115.039482 L4,4.10614857 Z"
+           id="path43" />
+        <polygon
+           id="polygon45"
+           points="16 51.647619 64 51.647619 64 47.6857143 16 47.6857143" />
+        <polygon
+           id="polygon47"
+           points="16 59.5714286 64 59.5714286 64 55.6095238 16 55.6095238" />
+        <polygon
+           id="polygon49"
+           points="16 67.4952381 40 67.4952381 40 63.5333333 16 63.5333333" />
+      </g>
+      <text
+         id="text51"
+         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
+         font-size="32"
+         font-weight="bold"
+         fill="#3C3232">
+        <tspan
+           x="644.924"
+           y="205"
+           id="tspan53">Bluemix 帐单</tspan>
+      </text>
+      <g
+         id="g55"
+         transform="translate(689.000000, 44.000000)"
+         fill="#5596E6">
+        <path
+           d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z"
+           id="path57" />
+        <polygon
+           id="polygon59"
+           points="16 53 64 53 64 49 16 49" />
+        <polygon
+           id="polygon61"
+           points="16 61 64 61 64 57 16 57" />
+        <polygon
+           id="polygon63"
+           points="16 69 40 69 40 65 16 65" />
+      </g>
+      <g
+         id="g65"
+         transform="translate(402.000000, 361.000000)">
+        <mask
+           id="mask-2"
+           fill="white">
+          <use
+             xlink:href="#path-1"
+             id="use68" />
+        </mask>
+        <g
+           id="Clip-2" />
+        <path
+           d="M79.6062,31.6062 L70.6062,40.6062 C67.7727,43.4397 64.0062,44.9997 59.9997,44.9997 C58.0722,44.9997 56.1972,44.6517 54.4647,44.0202 L67.2432,31.2432 L58.7577,22.7577 L45.9792,35.5347 C45.3477,33.8037 44.9997,31.9287 44.9997,29.9997 C44.9997,25.9932 46.5597,22.2267 49.3932,19.3932 L58.3932,10.3932 C61.2267,7.5597 64.9932,5.9997 68.9997,5.9997 C73.0062,5.9997 76.7727,7.5597 79.6062,10.3932 C82.4397,13.2267 83.9997,16.9932 83.9997,20.9997 C83.9997,25.0062 82.4397,28.7727 79.6062,31.6062 M44.9997,59.9997 C44.9997,64.0062 43.4397,67.7727 40.6062,70.6062 L31.6062,79.6062 C28.7727,82.4397 25.0062,83.9997 20.9997,83.9997 C16.9932,83.9997 13.2267,82.4397 10.3932,79.6062 C7.5597,76.7727 5.9997,73.0062 5.9997,68.9997 C5.9997,64.9932 7.5597,61.2267 10.3932,58.3932 L19.3932,49.3932 C22.2267,46.5597 25.9932,44.9997 29.9997,44.9997 C31.9287,44.9997 33.8037,45.3477 35.5347,45.9792 L22.7577,58.7577 L31.2432,67.2432 L44.0202,54.4647 C44.6517,56.1972 44.9997,58.0722 44.9997,59.9997 M83.8497,6.1512 C80.0487,2.3517 74.7987,-0.0003 68.9997,-0.0003 C63.2007,-0.0003 57.9507,2.3517 54.1512,6.1512 L45.1512,15.1512 C41.3517,18.9507 38.9997,24.2007 38.9997,29.9997 C38.9997,33.6162 39.8577,37.0767 41.4222,40.0917 L40.0917,41.4222 C37.0782,39.8577 33.6162,38.9997 29.9997,38.9997 C24.2007,38.9997 18.9507,41.3517 15.1512,45.1512 L6.1512,54.1512 C2.3517,57.9507 -0.0003,63.2007 -0.0003,68.9997 C-0.0003,74.7987 2.3517,80.0487 6.1512,83.8497 C9.9507,87.6492 15.2007,89.9997 20.9997,89.9997 C26.7987,89.9997 32.0487,87.6492 35.8497,83.8497 L44.8497,74.8497 C48.6492,71.0487 50.9997,65.7987 50.9997,59.9997 C50.9997,56.3832 50.1432,52.9227 48.5772,49.9077 L49.9077,48.5772 C52.9227,50.1432 56.3832,50.9997 59.9997,50.9997 C65.7987,50.9997 71.0487,48.6492 74.8497,44.8497 L83.8497,35.8497 C87.6492,32.0487 89.9997,26.7987 89.9997,20.9997 C89.9997,15.2007 87.6492,9.9507 83.8497,6.1512"
+           id="path71"
+           fill="#000000"
+           mask="url(#mask-2)" />
+      </g>
+      <text
+         id="Link-Bluemix-and--So"
+         font-size="32"
+         font-weight="bold"
+         x="28"
+         style="font-size:32px;font-weight:bold;fill:#3c3232;font-family:'HelvNeueBoldforIBM, HelvNeue Bold for IBM'">
+        <tspan
+           x="347.95599"
+           y="485"
+           id="tspan74">链接 Bluemix 和</tspan>
+        <tspan
+           x="328.91599"
+           y="524"
+           id="tspan76">SoftLayer 帐户</tspan>
+      </text>
+      <text
+         id="For-the-next-billing"
+         font-size="30"
+         font-weight="normal"
+         line-spacing="32"
+         x="62"
+         style="font-size:30px;font-weight:normal;fill:#3c3232;font-family:'HelveticaNeue, Helvetica Neue'">
+        <tspan
+           x="1267.005"
+           y="573"
+           id="tspan85" />
+      </text>
+      <text
+         id="Bluemix-and--SoftLay"
+         font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM"
+         font-size="32"
+         font-weight="bold"
+         fill="#3C3232">
+        <tspan
+           x="1257.864"
+           y="391"
+           id="tspan88">Bluemix 和 </tspan>
+        <tspan
+           x="1250.952"
+           y="430"
+           id="tspan90">SoftLayer 帐单</tspan>
+      </text>
+      <g
+         id="g92"
+         transform="translate(1309.000000, 221.000000)"
+         fill="#000000">
+        <path
+           d="M0,0.0003 L0,120.0003 L80,120.0003 L80,32.0003 L48,0.0003 L0,0.0003 Z M4,4.0003 L44,4.0003 L44,36.0003 L76,36.0003 L76,116.0003 L4,116.0003 L4,4.0003 Z"
+           id="path94" />
+        <polygon
+           id="polygon96"
+           points="16 52 64 52 64 48 16 48" />
+        <polygon
+           id="polygon98"
+           points="16 60 64 60 64 56 16 56" />
+        <polygon
+           id="polygon100"
+           points="16 68 40 68 40 64 16 64" />
+      </g>
+      <g
+         id="Group"
+         transform="translate(857.500000, 412.500000) scale(1, -1) translate(-857.500000, -412.500000) translate(492.000000, 391.000000)"
+         stroke="#AF6EE8"
+         stroke-width="6"
+         stroke-linecap="square">
+        <path
+           d="M1.26034483,21.5 L731,21.5"
+           id="Line" />
+        <path
+           id="Line-decoration-1"
+           d="M731,18.5 L731,24.5" />
+      </g>
+      <text
+         id="After-you-link-accou"
+         font-size="30"
+         font-weight="normal"
+         line-spacing="32"
+         x="50"
+         style="font-size:30px;font-weight:normal;fill:#1a1314;font-family:'HelveticaNeue, Helvetica Neue'" />
+      <text
+         id="You-might-receive-a-"
+         font-size="30"
+         font-weight="normal"
+         line-spacing="32"
+         letter-spacing="0.25000003"
+         x="68"
+         style="font-size:30px;font-weight:normal;letter-spacing:0.25000003;fill:#3c3232;font-family:'HelveticaNeue, Helvetica Neue'" />
+      <g
+         id="Group-2"
+         transform="translate(613.000000, 367.000000)"
+         stroke-width="6">
+        <path
+           d="M5.62030075,3 L223.515038,3"
+           id="path124"
+           stroke="#5596E6"
+           stroke-dasharray="15,5"
+           transform="translate(114.567669, 3.000000) scale(1, -1) translate(-114.567669, -3.000000) " />
+        <path
+           d="M3,2 L3,43"
+           id="path126"
+           stroke="#AF6EE8"
+           transform="translate(3.000000, 22.500000) scale(1, -1) translate(-3.000000, -22.500000) " />
+        <path
+           d="M229,2 L229,43"
+           id="Line-Copy"
+           stroke="#AF6EE8"
+           transform="translate(229.000000, 22.500000) scale(1, -1) translate(-229.000000, -22.500000) " />
+      </g>
+      <g
+         id="g129"
+         transform="translate(982.000000, 433.500000) rotate(-180.000000) translate(-982.000000, -433.500000) translate(877.000000, 412.000000)"
+         stroke-width="6">
+        <path
+           d="M5.05827068,3 L201.163534,3"
+           id="path131"
+           stroke="#FF2F2F"
+           stroke-dasharray="15,5"
+           transform="translate(103.110902, 3.000000) scale(1, -1) translate(-103.110902, -3.000000) " />
+        <path
+           d="M3,2.77419355 L3,43"
+           id="path133"
+           stroke="#AF6EE8"
+           transform="translate(3.000000, 22.887097) scale(1, -1) translate(-3.000000, -22.887097) " />
+        <path
+           d="M207,2.77419355 L207,43"
+           id="path135"
+           stroke="#AF6EE8"
+           transform="translate(207.000000, 22.887097) scale(1, -1) translate(-207.000000, -22.887097) " />
+      </g>
+    </g>
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2959"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+       id="flowRegion2961"><rect
+         id="rect2963"
+         width="181.34109"
+         height="119.72034"
+         x="242.96187"
+         y="135.56567" /></flowRegion><flowPara
+       id="flowPara2965"></flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="330.99152"
+     y="169.01695"
+     id="text2967"><tspan
+       sodipodi:role="line"
+       id="tspan2969"
+       x="330.99152"
+       y="169.01695" /></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot2978"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+       id="flowRegion2980"><rect
+         id="rect2982"
+         width="371.48517"
+         height="98.593224"
+         x="591.55933"
+         y="232.3983" /></flowRegion><flowPara
+       id="flowPara2984"></flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="514.87079"
+     y="253.68008"
+     id="text2986"><tspan
+       sodipodi:role="line"
+       x="514.87079"
+       y="333.68008"
+       id="tspan3002"
+       style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun" /></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3012"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+       id="flowRegion3014"><rect
+         id="rect3016"
+         width="299.30084"
+         height="149.65042"
+         x="852.12714"
+         y="658.46185" /></flowRegion><flowPara
+       id="flowPara3018"></flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3022"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     transform="translate(52,0)"><flowRegion
+       id="flowRegion3024"><rect
+         id="rect3026"
+         width="801.06989"
+         height="151.41101"
+         x="744.73096"
+         y="660.22247" /></flowRegion><flowPara
+       id="flowPara3028"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimSun;-inkscape-font-specification:SimSun">您可能会接收当前记帐周期 </flowPara><flowPara
+       id="flowPara3050"><flowSpan
+         style="font-size:32px"
+         id="flowSpan3052">SoftLayer</flowSpan><flowSpan
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="flowSpan3032"> 使用情况的个别帐单，</flowSpan></flowPara><flowPara
+       id="flowPara3055"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimSun;-inkscape-font-specification:SimSun">具体取决于您何时链接的帐户。</flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3061"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+       id="flowRegion3063"><rect
+         id="rect3065"
+         width="403.17584"
+         height="345.07626"
+         x="1181.358"
+         y="452.47244" /></flowRegion><flowPara
+       id="flowPara3067"></flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="1135.9513"
+     y="480.72668"
+     id="text3069"><tspan
+       sodipodi:role="line"
+       id="tspan3071"
+       x="1135.9513"
+       y="480.72668"
+       style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun">对于下一个记帐周期，您将接收</tspan><tspan
+       sodipodi:role="line"
+       x="1135.9513"
+       y="520.72668"
+       id="tspan3073"><tspan
+         id="tspan3101"
+         style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun">单个 </tspan><tspan
+         style="font-size:32px"
+         id="tspan3087">SoftLayer</tspan><tspan
+         style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan3077"> 帐单，其中包括</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="1135.9513"
+       y="564.12531"
+       id="tspan3075"><tspan
+         style="font-size:32px"
+         id="tspan3111">SoftLayer </tspan><tspan
+         style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan3081">和</tspan><tspan
+         style="font-size:32px"
+         id="tspan3095"> Bluemix</tspan><tspan
+         style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan3085"> 费用</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="1582.7733"
+     y="519.375"
+     id="text3103"><tspan
+       sodipodi:role="line"
+       id="tspan3105"
+       x="1582.7733"
+       y="519.375"></tspan><tspan
+       sodipodi:role="line"
+       id="tspan3107" /></text>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3122"
+     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+       id="flowRegion3124"><rect
+         id="rect3126"
+         width="489.44492"
+         height="133.80508"
+         x="558.10803"
+         y="228.87712" /></flowRegion><flowPara
+       id="flowPara3128"></flowPara></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="521.8432"
+     y="264.7373"
+     id="text3130"><tspan
+       sodipodi:role="line"
+       id="tspan3132"
+       x="521.8432"
+       y="264.7373"
+       style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun">在您链接帐户之后，您将会接收</tspan><tspan
+       sodipodi:role="line"
+       x="521.8432"
+       y="304.7373"
+       id="tspan3136"
+       style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"><tspan
+   id="tspan3150"
+   style="font-size:40px;font-family:Bitstream Vera Sans"><tspan
+     style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"
+     id="tspan3138">当前月份记帐周期</tspan><tspan
+     style="font-size:32px"
+     id="tspan3142"> Bluemix </tspan></tspan>使用</tspan><tspan
+       sodipodi:role="line"
+       x="521.8432"
+       y="348.13593"
+       style="font-size:32px;font-family:SimSun;-inkscape-font-specification:SimSun"
+       id="tspan3154">情况的个别帐单。</tspan></text>
+</svg>

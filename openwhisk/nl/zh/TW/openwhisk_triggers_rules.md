@@ -19,6 +19,7 @@ copyright:
 # 建立觸發程式及規則
 {: #openwhisk_triggers}
 *前次更新：2016 年 2 月 22 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} 觸發程式及規則將事件驅動功能帶給平台。來自外部及內部事件來源的事件是透過觸發程式進行傳送，而規則容許您的動作反應這些事件。
 {: shortdesc}
@@ -168,7 +169,7 @@ copyright:
   {: pre}
   ```
   {
-     "payload": "Hello, Donald from Washington, D.C."
+"payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}

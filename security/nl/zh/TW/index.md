@@ -16,8 +16,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
 *前次更新：2016 年 5 月 9 日*
+{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動式及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
+{{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
@@ -63,7 +64,7 @@ IBM 透過「轉遞」來安裝、遠端監視及管理資料中心中的「{{si
 <dd>{{site.data.keyword.Bluemix_notm}} 使用 Cloud Foundry 機制來確保每一個應用程式開發人員都只能存取其所建立的應用程式及服務實例。對 {{site.data.keyword.Bluemix_notm}} 服務的授權是根據 OAuth。外部使用者在存取所有「{{site.data.keyword.Bluemix_notm}} 平台」內部端點時會受到限制。</dd>
 
 <dt>審核</dt>
-<dd>對應用程式開發人員的所有鑑別嘗試，不論成功或失敗，都會建立審核日誌。對於管理 {{site.data.keyword.Bluemix_notm}} 應用程式執行所在儲存器的 Linux 系統，其特許存取也會建立審核日誌。</dd>
+<dd>對應用程式開發人員的所有鑑別嘗試，不論成功或失敗，都會建立審核日誌。對於管理 {{site.data.keyword.Bluemix_notm}} 應用程式執行所在容器的 Linux 系統，其特許存取也會建立審核日誌。</dd>
 
 <dt>資料保護</dt>
 <dd> 所有 {{site.data.keyword.Bluemix_notm}} 資料流量都會通過 IBM WebSphere® DataPower® SOA Appliance，它們提供反向 Proxy、SSL 終止及負載平衡功能。以下是允許使用的 HTTP 方法：
@@ -112,8 +113,8 @@ HTTP 閒置逾時為 2 分鐘。
 <dt>侵入防禦</dt>
 <dd>「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」能促成侵入防禦，以便發現威脅，進而解決這些威脅。防火牆上已啟用侵入防禦原則。</dd>
 
-<dt>安全應用程式儲存器管理</dt>
-<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在自己的儲存器中隔離和執行，而儲存器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
+<dt>安全應用程式容器管理</dt>
+<dd>每一個 {{site.data.keyword.Bluemix_notm}} 應用程式都會在自己的容器中隔離和執行，而容器對於處理器、記憶體及磁碟具有特定的資源限制。</dd>
 
 <dt>強化作業系統安全</dt>
 <dd>IBM 管理者會利用 IBM Endpoint Manager 等工具，定期執行網路及作業系統的強化作業。</dd>
@@ -200,7 +201,7 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 
 ### Application Security on Cloud
 
-此服務提供行動式及 Web 應用程式的安全分析，並可讓您掃描原始碼是否有安全漏洞。如需相關資訊，請參閱[開始使用 Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html)。
+此服務提供行動及 Web 應用程式的安全分析，並可讓您掃描原始碼是否有安全漏洞。如需相關資訊，請參閱[開始使用 Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html)。
 
 ### 用於應用程式安全測試的 IBM UrbanCode 外掛程式
 
@@ -257,7 +258,7 @@ SQL Database 服務為您的應用程式增加了完整佈建的關聯式資料�
  1. 透過防火牆，並實施侵入防禦及網路安全。
  2. 透過 IBM DataPower Gateway，並具有反向 Proxy 及 SSL 終止 Proxy。
  3. 透過網路路由器。
- 4. 在 Droplet Execution Agent (DEA) 中呼叫應用程式執行時期。
+ 4. 在 Droplet Execution Agent (DEA) 中呼叫應用程式運行環境。
 
 {{site.data.keyword.Bluemix_notm}} *開發人員* 遵循兩個主要流程：一個適用於登入，一個適用於開發及部署。
  * **開發人員登入流程**包括下列項目：

@@ -18,6 +18,7 @@ copyright:
 #在 {{site.data.keyword.Bluemix_notm}} 中管理應用程式
 
 *前次更新：2016 年 5 月 9 日*
+{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -32,7 +33,7 @@ copyright:
 如果在應用程式中觀察到下列所有原則，則應用程式具有雲端功能，而且可以移轉至 {{site.data.keyword.Bluemix_notm}}。
 如果應用程式中違反原則，則通常可以修改應用程式以遵守原則。
 
-* 不要直接根據特定拓蹼來撰寫應用程式。
+* 不要直接將應用程式撰寫為特定拓蹼。
 
   在非雲端環境中，應用程式可能會使用特定部署拓蹼。不過，雲端應用程式中的應用程式拓蹼可能會變更，因為具有雲端功能的應用程式及服務容許立即的可擴充性變更。可擴充性變更包括動態擴充及手動重新調整應用程式的實例數量。
 
@@ -46,7 +47,7 @@ copyright:
 
 * 不要在應用程式中儲存階段作業狀態。
 
-  系統狀態是由資料庫及共用儲存體所定義，而非由每一個個別執行中應用程式實例所定義。任何種類的狀態性都會限制應用程式的可擴充性。請嘗試將階段作業狀態儲存在伺服器上的集中位置，讓階段作業狀態的影響降到最低。
+  系統狀態是由資料庫及共用儲存空間所定義，而非由每一個個別執行中應用程式實例所定義。任何種類的有狀態性都會限制應用程式的可擴充性。請嘗試將階段作業狀態儲存在伺服器上的集中位置，讓階段作業狀態的影響降到最低。
 
   如果您無法完全刪除階段作業狀態，請將它推送到應用程式伺服器以外的高可用儲存庫。儲存庫包括 IBM WebSphere Extreme Scale、Redis 或 Memcached，或是外部資料庫。
 
@@ -89,7 +90,7 @@ copyright:
 
 在您的雲端應用程式中，您可能需要存取後端資料或服務（例如，記錄系統）。在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Secure Gateway 服務以在 {{site.data.keyword.Bluemix_notm}} 組織與企業後端網路之間建立安全通道。服務可讓 {{site.data.keyword.Bluemix_notm}} 上的應用程式存取後端網路的資料及服務。如需詳細資料，請參閱 [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}。
 
-若要將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 以作為 Cloud Foundry 應用程式，請從 {{site.data.keyword.Bluemix_notm}}「型錄」中選取執行時期。此執行時期包含入門範本 Hello World 應用程式，您可以將它取代為自己的應用程式。如果您找不到提供您想要之執行時期的入門範本，則可以使用 -b 選項與 cf push 指令搭配，將自訂 Cloud Foundry 相容建置套件帶到 {{site.data.keyword.Bluemix_notm}}。如需詳細資料，請參閱[使用社群建置套件](../cfapps/byob.html)。
+若要將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 以作為 Cloud Foundry 應用程式，請從 {{site.data.keyword.Bluemix_notm}}「型錄」中選取運行環境。此運行環境包含入門範本 Hello World 應用程式，您可以將它取代為自己的應用程式。如果您找不到提供您想要之運行環境的入門範本，則可以使用 -b 選項與 cf push 指令搭配，將自訂 Cloud Foundry 相容建置套件帶到 {{site.data.keyword.Bluemix_notm}}。如需詳細資料，請參閱[使用社群建置套件](../cfapps/byob.html)。
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 所提供的下列工具及服務：
 
@@ -103,7 +104,7 @@ copyright:
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|在 DevOps GitHub 儲存庫上管理您的程式碼，以及使用 DevOps Delivery Pipeline 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。|
 
 
-如果 Cloud Foundry 平台不支援您的應用程式需求，您可以使用其他自訂的選項來使用已設定、配置及維護執行時期的儲存器或 VM。
+如果 Cloud Foundry 平台不支援您的應用程式需求，您可以使用容器或 VM，其中已利用其他自訂的選項來設定、配置及維護運行環境。
 
 ##使用 cf cli 上傳應用程式
 {: #ht_cfcli}
@@ -164,7 +165,6 @@ copyright:
 
 ```
 services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
-
         url = services.values.map do |srvs|
           srvs.map do |srv|
             if srv[:credentials][:uri] =~ /^postgres/

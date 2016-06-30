@@ -12,7 +12,8 @@ copyright:
 # Obtención de soporte al cliente
 {: #getting-customer-support}
 
-*Última actualización: 11 de mayo de 2016*
+*Última actualización: 17 de junio de 2016*
+{: .last-updated}
 
 
 Si tiene problemas con {{site.data.keyword.Bluemix}},
@@ -21,7 +22,7 @@ tiene varias opciones de soporte, como obtener ayuda a través de un foro o abri
 
 ## Obtención de ayuda
 {: #getting-help}
-Para abrir una incidencia de soporte, o encontrar otras opciones de ayuda puede ir a Cuenta y soporte. También puede ir directamente a los foros Stack Overflow o  developerWorks (dW) Answers para buscar información o enviar preguntas.
+Para abrir una incidencia de soporte, o encontrar otras opciones de ayuda puede ir a Cuenta y soporte. También puede ir directamente a los foros Stack Overflow o developerWorks (dW) Answers para buscar información o enviar preguntas.
 {:shortdesc}
 
 ### Uso de Cuenta y soporte
@@ -36,12 +37,13 @@ en **Póngase en contacto**.
 ### Cómo formular una pregunta
 {: #asking-a-question}
 
-Los foros Stack Overflow y dW Answers proporcionan una gran variedad de respuestas en las que se pueden realizar búsquedas para las preguntas de Bluemix. Si no encuentra una respuesta existente, haga una nueva pregunta.  
+Los foros Stack Overflow y dW Answers proporcionan una gran variedad de respuestas en las que se pueden realizar búsquedas para las preguntas de Bluemix. Si no encuentra una respuesta existente, haga una nueva pregunta. 
 
-  * Vaya a [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} para hacer preguntas técnicas sobre el desarrollo de apps con los servicios y la plataforma Bluemix.
+  * Vaya a [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} para hacer preguntas técnicas sobre el desarrollo de apps con los servicios y la plataforma Bluemix.
   * Vaya a [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} para formular preguntas sobre la oferta de {{site.data.keyword.Bluemix_notm}} y sobre cómo obtener instrucciones para empezar.
+  * En China, vaya a [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} para formular preguntas. 
 
-También puede formular una pregunta en Stack Overflow directamente desde Cuenta y soporte llevando a cabo los pasos siguientes: 
+También puede formular una pregunta en Stack Overflow directamente desde Cuenta y soporte llevando a cabo los pasos siguientes:
   1. Desde Cuenta y soporte, pulse **Obtener ayuda**. 
   2. En la página que se muestra, escriba su pregunta en el campo de búsqueda para encontrar respuestas. 
   3. Si no obtiene la respuesta esperada, pulse **Publicar en Stack Overflow** para publicar su pregunta.
@@ -76,7 +78,7 @@ Para ver la página Estado, seleccione una de las dos opciones siguientes:
 
 ### Suscripción a un hilo RSS
 
-Puede recibir alertas de notificaciones suscribiéndose al hilo RSS de la página Estado de {{site.data.keyword.Bluemix_notm}}. Este enfoque  proporciona una forma de recibir las actualizaciones sin tener que consultar la página de estado.
+Puede recibir alertas de notificaciones suscribiéndose al hilo RSS de la página Estado de {{site.data.keyword.Bluemix_notm}}. Este enfoque proporciona una forma de recibir las actualizaciones sin tener que consultar la página de estado.
 
 Para suscribirse, siga estos pasos:
 
@@ -153,11 +155,11 @@ Si no ha podido resolver el problema técnico con las opciones de resolución de
 antes de ponerse en contacto con soporte para un problema técnico, asegúrese de que el problema no sea debido a una parada del
 servicio, comprobando el estado de {{site.data.keyword.Bluemix_notm}}.
 
-Si el problema no es debido a una parada, abra una incidencia de soporte mediante una de las opciones siguientes:
+Si el problema no es debido a una parada, y es cliente en un país o región que no sea China, puede abrir una incidencia de soporte mediante una de las opciones siguientes: 
 
   * Desde Cuenta y soporte, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**. Rellene el formulario para indicar qué soporte técnico necesita.
   * Desde [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Después de iniciar la sesión en el portal, pulse **Open Ticket** y, a continuación, rellene el formulario de soporte. 
-  * Utilice la página de ayuda de [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias para ventas, facturación, ID e inicio de sesión y problemas de soporte técnico. Para problemas
+  * Utilice la página de ayuda de [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias para ventas, facturación, ID de IBM y credenciales de inicio de sesión, y problemas de soporte técnico. Para problemas
 de soporte técnico, puede seleccionar un grupo técnico tras pulsar en el icono
 **Soporte técnico**. Por ejemplo,, si necesita ayuda con apps Cloud Foundry, OpenWhisk, contenedores, servidores virtuales o servidores nativos, puede elegir **Application Services**. Si necesita ayuda con un servicio específico, seleccione
 la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte las categorías
@@ -168,12 +170,13 @@ en [Servicios](../services/index.html){: new_window} en el panel de navegación 
 Cuando abra una incidencia de soporte, asegúrese de indicar una gravedad adecuada a su incidencia. La gravedad determina cómo se maneja
 la incidencia. Consulte [Gravedad de la incidencia de soporte y tiempo de respuesta](index.html#support-ticket-severity){: new_window} para obtener información sobre las distintas gravedades. Si su solicitud es urgente, pero únicamente tiene soporte gratuito o básico, puede actualizar la cuenta para someter incidencias de alta gravedad (nivel 1, 2 y 3). Para actualizar la cuenta a un nivel de soporte más alto, póngase en contacto con el representante de ventas de IBM por correo electrónico a la dirección sales@bluemix.net.
 
+Si es cliente en China, puede obtener soporte de pago para su cuenta desde la página de [UNISYS Service Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
+
 #### Comprobar el estado de la incidencia de soporte
 {: #check-ticket-status}
 
-Cada incidencia de soporte está asignada a un número de incidencia exclusivo para su consulta. Puede utilizar el número de incidencia para revisar el progreso de la incidencia de soporte y actualizar la incidencia de soporte en
-[IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Las actualizaciones y respuestas se envían por correo electrónico y se registran en las notas de incidencia.  
-
+Cada incidencia de soporte está asignada a un número de incidencia exclusivo para su consulta. En países o regiones que no sean China, puede utilizar el número de incidencia para revisar el progreso de la incidencia de soporte y actualizar la incidencia de soporte en
+[IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Las actualizaciones y respuestas se envían por correo electrónico y se registran en las notas de incidencia. 
 
 
 ### Cómo ponerse en contacto para {{site.data.keyword.Bluemix_notm}}
@@ -186,15 +189,17 @@ Si es cliente dedicado de {{site.data.keyword.Bluemix_notm}}, el soporte lo prop
 
 <ul>
 <li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda
-<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} dedicado** para el campo Región.
+<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario.
+Seleccione la opción **{{site.data.keyword.Bluemix_notm}} dedicado** para el campo Región.
 <p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes.</p>
 </li>
 <li>Si tiene un ID de IBM y tiene acceso al entorno {{site.data.keyword.Bluemix_notm}} público, pulse el icon
 **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> en la barra de menús de la
 parte superior y pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**.</li>
-<li>Si no dispone de un ID de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.
-<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que puede servir como contactos para dar incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Dedicado.</p></li>
+<li>Si no dispone de un id de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que puede servir como contactos para dar incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Dedicado.</p></li>
 </ul>
+
+Si es un cliente de {{site.data.keyword.Bluemix_notm}} Dedicated en China, puede solicitar soporte desde la página de [UNISYS Service Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Además, los clientes de China pueden obtener soporte gratuito en [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 
 ### Cómo ponerse en contacto para {{site.data.keyword.Bluemix_notm}}
@@ -207,14 +212,14 @@ Si es cliente local de {{site.data.keyword.Bluemix_notm}}, el soporte lo proporc
 
 <ul>
 <li>Póngase en contacto con soporte abriendo una nueva incidencia a través de la página de ayuda
-<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario. Seleccione la opción **{{site.data.keyword.Bluemix_notm}} local** para el campo Región.
+<a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support</a>. Puede utilizar una dirección de correo electrónico o un ID de IBM para este formulario.
+Seleccione la opción **{{site.data.keyword.Bluemix_notm}} local** para el campo Región.
 <p>Los envíos de formularios se supervisan desde las 22:00 horas (UTC) del domingo hasta las 23:59 horas (UTC) del viernes.</p>
 </li>
 <li>Si tiene un ID de IBM y tiene acceso al entorno {{site.data.keyword.Bluemix_notm}} público, pulse el icon
 **Cuenta y soporte** <img src="images/account_support.svg" alt="Cuenta y soporte" /> en la barra de menús de la
 parte superior y pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**.</li>
-<li>Si no dispone de un ID de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.
-<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que pueden servir como contactos para las incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Local.</p></li>
+<li>Si no dispone de un id de IBM, puede ponerse en contacto con alguien de la organización que lo tenga o puede trabajar con el representante de IBM.<p>**Nota**: En la solicitud, se puede mostrar una lista de usuarios de su organización que pueden servir como contactos para las incidencias de soporte en la página **Soporte** de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} en el entorno Local.</p></li>
 </ul>
 
 
@@ -258,7 +263,7 @@ Para notificar una vulnerabilidad de seguridad potencial, realice los siguientes
 ### Escalada de una incidencia de soporte
 {: #escalation}
 
-Con soporte estándar o premium, si no ha recibido una respuesta a tiempo para una incidencia de soporte, o piensa que la incidencia no se está resolviendo adecuadamente, puede escalarla. Gracias al proceso de escalada de incidencias de soporte, los gestores de IBM revisan sus preocupaciones y trabajan
+Con soporte estándar o premium, en un país o región que no sea China, si no ha recibido una respuesta a tiempo para una incidencia de soporte, o piensa que la incidencia no se está resolviendo adecuadamente, puede escalarla. Gracias al proceso de escalada de incidencias de soporte, los gestores de IBM revisan sus preocupaciones y trabajan
 conjuntamente con usted para mejorar su experiencia de soporte.
 
 Para enviar una solicitud de escalado, realice los pasos siguientes:
@@ -338,5 +343,5 @@ IBM envía periódicamente encuestas a clientes de Bluemix para obtener sus come
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [Instalación de la herramienta de mandatos cf](../starters/install_cli.html){: new_window} 
   * [Handbook de soporte de SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

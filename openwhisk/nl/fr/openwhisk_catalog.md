@@ -19,6 +19,7 @@ copyright:
 # Utilisation de services compatibles avec {{site.data.keyword.openwhisk_short}} 
 {: #openwhisk_ecosystem}
 *Dernière mise à jour : 28 mars 2016*
+{: .last-updated}
 
 Dans {{site.data.keyword.openwhisk}}, un catalogue de packages permet d'améliorer facilement votre application en ajoutant des fonctions
 utiles, ainsi que d'accéder à des services externes dans l'écosystème. Cloudant, The Weather Company,
@@ -162,10 +163,11 @@ Cloudant. Vous avez besoin du nom d'hôte, du nom d'utilisateur et du mot de pas
 Vous pouvez utiliser le flux `changes` pour configurer un service afin d'exécuter un déclencheur à chaque fois qu'une modification
 est apportée dans votre base de données Cloudant.
 
-1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Veillez à remplacer `/monEspaceNom/monCloudant` par votre nom de package.
+1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer
+`/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
-  wsk trigger create monDéclencheurCloudant --feed /monEspaceNom/monCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create monDéclencheurCloudant --feed /monEspaceNom/monCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -185,12 +187,12 @@ est apportée dans votre base de données Cloudant.
 4. Observez les nouvelles activations pour le déclencheur `monDéclencheurCloudant` pour chaque modification de document.
 
 **Remarque** : si vous ne parvenez pas à observer de nouvelles activations, reportez-vous aux sections suivantes relatives à la
-lecture et à l'écriture dans une base de données Cloudant. Testez les étapes de lecture et d'écriture ci-après pour vérifier que vos données
-d'identification Cloudant sont correctes.
+lecture et à l'écriture dans une base de données Cloudant. Les tests de lecture et d'écriture ci-après vous aideront à vérifier que vos données d'identification
+Cloudant sont correctes.
 
 A présent, vous pouvez créer des règles et les associer à des actions afin de réagir aux mises à jour de document.
 
-Le contenu des événements générés dépend de la valeur du paramètre `includeDocs` lors de la création du déclencheur. Si la valeur
+Le contenu des événements générés dépend de la valeur du paramètre `includeDoc` lors de la création du déclencheur. Si la valeur
 est true, chaque événement déclencheur qui est exécuté inclut le document Cloudant modifié. Par exemple, imaginez le document modifié suivant :
 
   ```
@@ -205,7 +207,7 @@ est true, chaque événement déclencheur qui est exécuté inclut le document C
 Le code dans cet exemple génère un événement déclencheur avec les paramètres `_id`, `_rev` et
 `name` correspondants. En fait, la représentation JSON de l'événement déclencheur est identique au document.
 
-Sinon, si `includeDocs` a pour valeur false, les événements incluent les paramètres suivants :
+Sinon, si `includeDoc` a pour valeur false, les événements incluent les paramètres suivants :
 
 - `id` : l'ID de document.
 - `seq` : l'identificateur de séquence généré par Cloudant.
@@ -228,11 +230,11 @@ La représentation JSON de l'événement déclencheur est la suivante :
 
 ### Ecriture dans une base de données Cloudant
 
-Vous pouvez utiliser une action pour stocker un document dans une base de données Cloudant appelée `testdb`. Assurez-vous que cette
-base de données existe sur votre compte Cloudant.
+Vous pouvez utiliser une action pour stocker un document dans une base de données Cloudant appelée `testdb`. Assurez-vous que
+cette base de données existe sur votre compte Cloudant.
 
-1. Stockez un document en utilisant l'action `write` dans la liaison de package que vous avez créée précédemment. Veillez à
-remplacer `/monEspaceNom/monCloudant` par le nom de votre package.
+1. Stockez un document en utilisant l'action `write` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer
+`/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
   wsk action invoke /monEspaceNom/monCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
@@ -240,7 +242,6 @@ remplacer `/monEspaceNom/monCloudant` par le nom de votre package.
   {: pre}
   ```
   ok: invoked /monEspaceNom/monCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
     "id": "heisenberg",
     "ok": true,
@@ -260,7 +261,8 @@ remplacer `/monEspaceNom/monCloudant` par le nom de votre package.
 Vous pouvez utiliser une action pour extraire un document depuis une base de données Cloudant appelée `testdb`. Assurez-vous que
 cette base de données existe sur votre compte Cloudant.
 
-1. Procédez à l'extraction d'un document en utilisant l'action `read` dans la liaison de package que vous avez créée précédemment. Veillez à remplacer `/monEspaceNom/monCloudant` par le nom de votre package.
+1. Procédez à l'extraction d'un document en utilisant l'action `read` dans la liaison de package que vous avez créée précédemment. Prenez
+soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
   wsk action invoke /monEspaceNom/monCloudant/read --blocking --result --param dbname testdb --param id heisenberg
@@ -297,7 +299,12 @@ spécifiée. Les paramètres sont les suivants :
 
 - `cron` : chaîne basée sur la syntaxe crontab Unix, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une
 séquence de six zones séparées par un espace : `X X X X X X `. Pour plus d'informations sur l'utilisation de la syntaxe cron, voir :
-https://github.com/ncb000gt/node-cron.
+https://github.com/ncb000gt/node-cron. Voici quelques exemples de la fréquence indiquée par la chaîne :
+
+  - `* * * * * *` : chaque seconde.
+  - `0 * * * * *` : au début de chaque minute.
+  - `* 0 * * * *` : au début de chaque heure.
+  - `0 0 9 8 * *` à 9:00:00 du matin (UTC) le huitième jour de chaque mois. 
 
 - `trigger_payload` : la valeur de ce paramètre devient le contenu du déclencheur à chaque fois que le déclencheur est exécuté.
 
@@ -307,7 +314,7 @@ Voici un exemple de création de déclencheur qui sera exécuté toutes les 20 s
 `place` dans l'événement déclencheur.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
@@ -318,26 +325,31 @@ chaque événement déclencheur possède les paramètres `name=Odin` et `place=A
 ## Utilisation du package Weather
 {: #openwhisk_catalog_weather}
 
-Le package `/whisk.system/weather` permet d'appeler l'API The Weather Company.
+Le package `/whisk.system/weather` offre une méthode pratique d'appel de l'API IBM Weather Insights.
 
 Le package inclut l'action ci-dessous.
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | package | apiKey | Services de The Weather Company |
-| `/whisk.system/weather/forecast` | action | apiKey, latitude, longitude | Prévisions à 10 jours de Weather.com |
+| `/whisk.system/weather` | package | apiKey | Services de l'API IBM Weather Insights  |
+| `/whisk.system/weather/forecast` | action | apiKey, latitude, longitude, période | prévision pour la période spécifiée|
 
 Bien que ce ne soit pas obligatoire, il est recommandé de créer une liaison de package avec la valeur `apiKey`. Ainsi, il n'est pas
 nécessaire de spécifier la clé à chaque fois que vous appelez les actions du package.
 
 ### Obtention d'une prévision météorologique pour un lieu
 
-L'action `/whisk.system/weather/forecast` renvoie une prévision météorologique à 10 jours pour un lieu en appelant l'API de The Weather
-Company. Les paramètres sont les suivants :
+L'action `/whisk.system/weather/forecast` renvoie une prévision météorologique pour un emplacement en appelant une API de
+The Weather Company. Les paramètres sont les suivants :
 
-- `apiKey` : clé d'API pour The Weather Company autorisée à appeler l'API de prévision à 10 jours.
+- `apiKey` : clé d'API pour The Weather Company habilitée à appeler l'API de prévision.
 - `latitude` : coordonnée de latitude du lieu.
 - `longitude` : coordonnée de longitude du lieu.
+- `timeperiod` : période sur laquelle porte la prévision. Les options valides sont '10day' - (valeur par défaut) Renvoie une prévision
+quotidienne sur 10 jours, '24hour' -
+Renvoie une prévision horaire sur 2 jours, , 'current' - Renvoie les conditions météorologiques actuelles, 'timeseries' - Renvoie les observations actuelles et
+jusqu'à 24 heures d'observations antérieures à partir de la date et heure actuelle. 
+
 
 Voici un exemple de création d'une liaison de package, puis d'obtention d'une prévision à 10 jours.
 
@@ -392,6 +404,10 @@ Le package inclut les actions ci-dessous.
 | `/whisk.system/watson` | package | username, password | Actions pour les API d'analyse Watson |
 | `/whisk.system/watson/translate` | action | translateFrom, translateTo, translateParam, username, password | Traduire le texte |
 | `/whisk.system/watson/languageId` | action | payload, username, password | Identifier la langue |
+| `/whisk.system/watson/speechToText` | action | payload, content_type, encoding, username, password, continuous, inactivity_timeout,
+interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence,
+X-Watson-Learning-Opt-Out | Convertir le contenu audio en texte |
+| `/whisk.system/watson/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convertir le texte en contenu audio |
 
 Bien que ce ne soit pas obligatoire, il est recommandé de créer un package de liaison avec les valeurs `username` et
 `password`. Ainsi, il n'est pas nécessaire de spécifier ces données d'identification à chaque fois que vous appelez les actions du package.
@@ -464,6 +480,87 @@ Voici un exemple de création de liaison de package et d'identification de la la
   {: screen}
 
 
+### Conversion de texte en paroles
+
+L'action `/whisk.system/watson/textToSpeech` convertit du texte en contenu audio. Les paramètres sont les suivants :
+
+- `username` : nom d'utilisateur de l'API Watson.
+- `password` : mot de passe de l'API Watson.
+- `payload` : texte à convertir en paroles.
+- `voice` : voix du conférencier.
+- `accept` : format du fichier vocal.
+- `encoding` : codage du fichier binaire vocal.
+
+Ci-dessous figure un exemple de création de liaison de package et de conversion d'un texte en paroles.
+
+1. Créez une liaison de package avec vos données d'identification Watson.
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MON_NOM_UTILISATEUR_WATSON' -p password 'MON_MOT_DE_PASSE_WATSON'
+  ```
+  {: pre}
+
+2. Appelez l'action `textToSpeech` dans votre liaison de package pour convertir le texte.
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding
+'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<Codage en base 64 d'un fichier .wav>"
+  }
+  ```
+  {: screen}
+
+
+### Conversion de paroles en texte
+
+L'action `/whisk.system/watson/speechToText` convertit un contenu audio en texte. Les paramètres sont les suivants :
+
+- `username` : nom d'utilisateur de l'API Watson.
+- `password` : mot de passe de l'API Watson.
+- `payload` : données binaires des paroles à convertir en texte.
+- `content_type` : type MIME du contenu audio.
+- `encoding` : codage des données binaires des paroles.
+- `continuous` : indique si plusieurs résultats finaux représentant des phrases consécutives séparées par de longues pauses doivent être
+renvoyés.
+- `inactivity_timeout` : nombre de secondes après lequel, si seul un silence est détecté dans le contenu audio soumis,
+la connexion est fermée.
+- `interim_results` : indique si le service doit renvoyer des résultats intermédiaires.
+- `keywords` : liste de mots clés à rechercher dans le contenu audio.
+- `keywords_threshold` : niveau de fiabilité plancher pour l'identification d'un mot clé.
+- `max_alternatives` : nombre maximal de transcriptions alternatives à renvoyer.
+- `model` : identificateur du modèle à utiliser pour la demande de reconnaissance.
+- `timestamps`: indique si l'horodatage doit être renvoyé pour chaque mot.
+- `watson-token` : fournit un jeton d'authentification pour le service au lieu des données d'identification au service.
+- `word_alternatives_threshold` : niveau de fiabilité plancher pour l'identification d'une hypothèse
+comme alternative possible d'un mot.
+- `word_confidence` : indique si un niveau de fiabilité sur la plage 0 à 1 doit être renvoyé pour chaque mot.
+- `X-Watson-Learning-Opt-Out` : indique si la collecte de données doit être ignorée pour l'appel.
+ 
+Ci-dessous figure un exemple de création de liaison de package et de conversion de paroles en texte.
+
+1. Créez une liaison de package avec vos données d'identification Watson.
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'NOM_UTILISATEUR_WATSON' -p password 'MOT_DE_PASSE_WATSON'
+  ```
+
+2. Appelez l'action `speechToText` dans votre liaison de package pour convertir le contenu audio codé.
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <codage en base 64 d'un fichier .wav> --param
+content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## Utilisation du package Slack
 {: #openwhisk_catalog_slack}
 

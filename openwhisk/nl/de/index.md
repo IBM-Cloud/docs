@@ -17,7 +17,8 @@ copyright:
 {:pre: .pre}
 
 # Einführung in {{site.data.keyword.openwhisk_short}}
-*Letzte Aktualisierung: 17. Februar 2016*
+*Letzte Aktualisierung: 6. Juni 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice. {{site.data.keyword.openwhisk_short}} führt Anwendungslogik in Reaktion auf Ereignisse oder direkte Aufrufe durch Web-Apps oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
 {: shortdesc}
@@ -49,7 +50,7 @@ Für den Einstieg in {{site.data.keyword.openwhisk_short}} können Sie das folge
 
 ```
 /**
- * Hello World als OpenWhisk-Aktion.
+ * Hello world as an OpenWhisk action.
  */
 function main(params) {
     var name = params.name || 'World';

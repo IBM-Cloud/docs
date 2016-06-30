@@ -17,6 +17,7 @@ copyright:
 # Commandes Cloud Foundry (cf)
 
 *Dernière mise à jour : 29 janvier 2016*
+{: .last-updated}
 
 Vous pouvez utiliser des commandes Cloud Foundry (cf) pour gérer vos applications.
 {:shortdesc}
@@ -224,8 +225,7 @@ cf push nom_app
 <dd>Nom de l'application.</dd>
 <dt>*-b*nom_pack_construction</dt>
 <dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un pack de construction personnalisé ou une adresse URL Git, par exemple
-`mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.
-</dd>
+`mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*commande_démarrage</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. Par exemple :</dd>
 <dd>```
@@ -335,6 +335,6 @@ cf -v
 
 # rellinks
 {: #rellinks}
-## general 
+## Général
 {: #general}
 * [Fiche de référence rapide - Commandes cf](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

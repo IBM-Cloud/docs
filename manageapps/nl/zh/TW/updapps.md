@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *前次更新：2016 年 5 月 9 日*
+{: .last-updated}
 
 
 您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
@@ -41,7 +42,7 @@ copyright:
   
     1. 在 {{site.data.keyword.Bluemix_notm}} **儀表板**的功能表列上，按一下您要新增路徑的應用程式磚。即會顯示**概觀**頁面。
 	
-	2. 從「**概觀**」頁面上的應用程式功能表，按一下**編輯路徑及應用程式存取**。
+	2. 從**概觀**頁面上的應用程式功能表，按一下**編輯路徑及應用程式存取**。
 	
 	3. 按一下**新增路徑**，然後指定您要用於應用程式的路徑。
 	
@@ -127,7 +128,7 @@ cf delete-route domain -n hostname -f
   
   **結果：** *Blue* 應用程式執行中，且正在回應 URL `Blue.mybluemix.net`。
   
-2. 使用 **cf rename** 指令，將 *Blue* 應用程式實例重新命名為 *Green*：
+2. 使用 **cf rename** 指令，將 *Blue* 應用程式重新命名為 *Green*：
   
   ```
   cf rename Blue Green
@@ -235,7 +236,7 @@ cf delete-route domain -n hostname -f
     * 「CF 路由器」現在會將 Blue.mybluemix.net 的資料流量同時傳送給 Blue 應用程式及 Green 應用程式。
 	* 「CF 路由器」會繼續將 Green.mybluemix.net 的資料流量傳送給 Green 應用程式。
 	
-4. 驗證 *Green* 如預期執行時，請從 *Blue* 應用程式中移除 `Blue.mybluemix.net` 路徑：
+4. 驗證 *Green* 如預期執行時，請從 *Blue* 應用程式移除 `Blue.mybluemix.net` 路徑：
   
   ```
   cf unmap-route Blue mybluemix.net -n Blue

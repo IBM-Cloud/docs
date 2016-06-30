@@ -14,14 +14,18 @@ copyright:
 #Supervisión y registro
 {: #monitoringandlogging}
 
-*Última actualización: 11 de mayo de 2016*
+*Última actualización: 24 de mayo de 2016*
+{: .last-updated}
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
 {:shortdesc}
 
 Las app {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente (app de varias instancias) y la ejecución de la aplicación y sus datos se puede compartir en varios servicios. En este entorno complejo, la supervisión de las apps y la revisión de los registros es importante para gestionar las app.
 
-{{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las app a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y sobre cómo ver los registros, consulte [Registro para apps {{site.data.keyword.Bluemix_notm}}](#logging_for_bluemix_apps).
+##Supervisión y registro de apps
+{: #monitoring_logging_bluemix_apps}
+
+{{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las app a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y cómo ver registros, consulte [Registro de apps que se ejecutan en on Cloud Foundry](#logging_for_bluemix_apps).
 
 La supervisión de la app le permite ver y controlar el despliegue de la aplicación. Con la supervisión puede llevar a cabo las siguientes tareas:
 
@@ -31,7 +35,7 @@ La supervisión de la app le permite ver y controlar el despliegue de la aplicac
 
 Para las operaciones estables de sus despliegues en la plataforma {{site.data.keyword.Bluemix_notm}}, desea detectar problemas de inmediato y determinar las causas de forma eficiente. Para llevar a cabo este objetivo, tenga en cuenta la resolución de problemas a la hora de diseñar las app y utilice servicios o herramientas para la supervisión y el registro al desplegar la app en {{site.data.keyword.Bluemix_notm}}.
 
-##Apps de supervisión en ejecución en Cloud Foundry
+###Apps de supervisión en ejecución en Cloud Foundry
 {: #monitoring_bluemix_apps}
 
 Cuando utiliza la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}, desea mantenerse al día con la información del rendimiento (como, por ejemplo, el estado, el uso de recursos y las métricas de tráfico). Con esta información de rendimiento puede tomar decisiones o llevar a cabo acciones según convenga.
@@ -41,7 +45,7 @@ Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los s
 * Servicios de {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics ofrece un servicio que puede utilizar para supervisar el rendimiento de sus app. Además, este servicio también proporciona características como, por ejemplo, análisis de registros. Para obtener más información, consulte [Supervisión y análisis](../services/monana/index.html).
 * Opciones de terceros. Por ejemplo, [New Relic](http://newrelic.com/){:new_window}.
 
-##Registro para apps en ejecución en Cloud Foundry
+###Registro para apps en ejecución en Cloud Foundry
 {: #logging_for_bluemix_apps}
 
 Los archivos de registro se crean automáticamente al utilizar la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en cualquier etapa del despliegue al tiempo de ejecución, puede
@@ -120,7 +124,7 @@ Cada entrada de registro contiene cuatro campos. Consulte la siguiente lista par
 ###Visualización de registros
 {: #viewing_logs}
 
-Puede ver los registros para sus app Cloud Foundry  en tres lugares:
+Puede ver los registros para sus app Cloud Foundry en tres lugares:
 
   * [Panel de control de {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
   * [Interfaz de línea de mandatos](#viewing_logs_cli){:new_window}
@@ -293,5 +297,104 @@ instancias de su app, los registros se agregan y puede ver todos los registros d
 después de una detención anómala de la app, o tras su redespliegue.
 
 **Nota:** Los registros que ve en la interfaz de línea de mandatos no tienen el formato de syslog y es posible que no coincidan exactamente con los mensajes que se muestran en su host de registro externo. 
+
+### Ejemplo: Transmisión de registros de aplicación de Cloud Foundry a Splunk 
+{: #splunk}
+
+En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante IBM Virtual Servers Beta y la imagen de Ubuntu. Jane intenta transmitir los registros de la app Cloud Foundry de {{site.data.keyword.Bluemix_notm}} a Splunk. 
+
+  1. Para empezar, Jane configura Splunk.
+
+     a. Jane descarga Splunk Light desde el [sitio de descargas de Splunk Light](https://www.splunk.com/en_us/download/splunk-light.html){:new_window} y luego instala la aplicación desde la línea de mandatos. El software se instala en */opt/splunk*. 
+       
+	    ```
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        ```
+	   
+     b. Jane instala y aplica los parches del complemento de tecnología syslog RFC5424 para integrarlos con {{site.data.keyword.Bluemix_notm}}. Para obtener más información e instrucciones para instalar el complemento, consulte las [directrices de Cloud Foundry](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
+
+	    Jane instala el complemento utilizando estos mandatos: 
+        
+	    ```
+        cd /opt/splunk/etc/apps
+        tar xvfz ~/rfc5424-syslog_11.tgz
+        ```
+	   
+        Luego aplica los parches en el complemento sustituyendo */opt/splunk/etc/apps/rfc5424/default/transforms.conf* por un nuevo archivo *transforms.conf* que contiene el texto siguiente: 
+	   
+	    ```
+        [rfc5424_host]
+        DEST_KEY = MetaData:Host
+        REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
+        FORMAT = host::$1
+
+        [rfc5424_header]
+        REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
+        FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
+        MV_ADD = true
+        ```
+        {:screen}	   
+
+     c. Una vez que Splunk ya está configurado, Jane debe abrir algunos puertos de la máquina Ubuntu para aceptar el drenaje de syslog entrante (puerto 5140) y la interfaz de usuario web de Splunk (puerto 8000) porque el servidor virtual de {{site.data.keyword.Bluemix_notm}} tiene el cortafuegos configurado de forma predeterminada. 
+	   
+	    **Nota:** Aquí se realiza la confirmación del objetivo de evaluación de Jane y es temporal. Para configurar los parámetros del cortafuegos en el servidor virtual Bluemix en producción, consulte la documentación de [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} para obtener información detallada. 
+	 
+	   ```
+	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
+	   ```
+	   {:screen}	
+	  
+	   Luego Jane ejecuta Splunk mediante este mandato: 
+
+       ```
+	   /opt/splunk/bin/splunk start --accept-license
+       ```
+		
+  2. Jane configura los ajustes de Splunk para aceptar el drenaje de syslog de {{site.data.keyword.Bluemix_notm}}. Debe crear una entrada de datos para el drenaje de syslog. 
+
+     a. Desde el lado izquierdo dela interfaz web de Splunk, Jane pulsa **Data > Data inputs**. Se visualiza una lista de los tipos de entrada admitidos por Splunk.  
+	 
+     b. Jane selecciona **TCP**, porque el drenaje de syslog utiliza el protocolo TCP.
+	 
+     c. En el panel **TCP**, Jane introduce **5140** en el campo **Port**, deja los demás campos en blanco y pulsa **Next**.
+	 
+     d. En la lista **Source Type**, selecciona **Uncategorized > rfc5424_syslog**.
+	 
+     e. Para el tipo **Method**, selecciona **IP**.
+	 
+     f. En el campo **Index**, Jane pulsa **Create a new index**. Especifica "bluemix" como nombre del nuevo índice y pulsa **Save**.
+	 
+     g. Por último, en la ventana **Review**, Jane confirma que el ajuste es correcto y pulsa **Submit** para habilitar esta entrada de datos. 
+
+  3. En {{site.data.keyword.Bluemix_notm}}, Jane crea un servicio de drenaje syslog y lo vincula con una app. 
+
+     a. Jane crea un servicio de drenaje syslog utilizando el mandato siguiente desde la interfaz de línea de mandatos de cf. 
+	 
+     ```
+     cf cups splunk -l syslog://dummyhost:5140
+     ```
+        
+     **Nota:** *dummyhost* no es el nombre real. Se utiliza para ocultar el nombre de host real.  
+
+     b. Jane enlaza el servicio de drenaje syslog con una app de su espacio y luego vuelve a transferir la app. 
+	 
+	 ```
+     cf bind-service myapp splunk
+     cf restage myapp
+     ```
+		
+
+Jane prueba la app y luego escribe la siguiente serie de consulta en la interfaz web de Splunk: 
+
+```
+source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
+```
+
+Jane ve una secuencia de registros en su interfaz web de Splunk. Aunque la versión de Splunk que Jane instala es Splunk Light, puede mantener 500 MB de registros al día.  
+
+
 
 

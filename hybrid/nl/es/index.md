@@ -16,6 +16,9 @@ copyright:
 # Híbrido
 {: #hybrid}
 
+*Última actualización: 8 de junio de 2016*
+{: .last-updated}
+
 Con modelos de despliegue públicos, dedicados o integrados en local, {{site.data.keyword.Bluemix_notm}} representa una forma nueva
 de experiencia de la nube. {{site.data.keyword.Bluemix_notm}} tiene despliegues de nube que se ajustan a sus necesidades tanto si se trata de un pequeño negocio
 con planes de crecimiento, como si es una empresa de gran tamaño que precisa de aislamiento adicional. Puede desarrollar
@@ -36,6 +39,8 @@ centro de datos IBM SoftLayer. Como arrendatario único, y provisto de un conjun
 de {{site.data.keyword.Bluemix_notm}} se crea a su medida. Y, con el catálogo sindicado, puede potenciar sus apps con
 una combinación de recursos y servicios de cálculo dedicados así como prestaciones de las que puede disponer por medio de
 la sindicación de catálogo. Más información sobre [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html).
+
+**Nota:** La información relacionada con SoftLayer para {{site.data.keyword.Bluemix}} Dedicated no es válid para China. 
 
 ## Local
 

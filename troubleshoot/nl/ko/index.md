@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
@@ -15,40 +16,33 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-*마지막 업데이트 날짜: 2016년 5월 16일*
+*마지막 업데이트 날짜: 2015년 5월 16일*
+{: .last-updated}*
+{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 액세스와 관련한
-일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
-로그인할 수 없거나, 계정이 보류 상태로 남아 있는 경우 등이 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
+{{site.data.keyword.Bluemix}} 액세스와 관련한 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없거나, 계정이 보류 상태로 남아 있는 경우 등이 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없음
 {: #ts_logintobm}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인하려면
-유효한 IBM ID와 비밀번호가 필요합니다.
+{{site.data.keyword.Bluemix_notm}}에 로그인하려면 유효한 IBM ID와 비밀번호가 필요합니다.
 
 
-{{site.data.keyword.Bluemix_notm}}에
-로그인하려고 할 때 다음과 같은 오류 메시지가 표시됩니다. 
+{{site.data.keyword.Bluemix_notm}}에 로그인하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms} 
 
-`아래에 입력한
-IBM ID 및/또는 비밀번호가 올바르지 않습니다. 다시 시도하십시오.`
+`아래에 입력한 IBM ID 및/또는 비밀번호가 올바르지 않습니다. 다시 시도하십시오.`
 
 
-{{site.data.keyword.Bluemix_notm}}
-로그인에 사용한 IBM ID와 비밀번호가 올바르지 않습니다.
+{{site.data.keyword.Bluemix_notm}} 로그인에 사용한 IBM ID와 비밀번호가 올바르지 않습니다.
 {: tsCauses} 
  
 
 올바른 IBM ID와 비밀번호를 얻으려면 내 IBM 프로파일 페이지로 이동하여 다음 단계 중 하나를 완료하십시오.
 {: tsResolve}
-  * IBM ID를 이미 등록했으며 이 ID와 비밀번호가 올바른지 확인하려는 경우, **로그인**을 클릭하고 로그인 페이지에 IBM ID와 비밀번호를 입력하십시오. 비밀번호를 잊어버린 경우 로그인 페이지의 오른쪽에 있는
-**비밀번호를 잊으셨습니까?**를 클릭하여 비밀번호를 재설정하십시오. IBM ID를 잊어버렸거나 비밀번호에 계속 문제가 있는 경우 전 세계 IBM 등록 헬프 데스크에 지원을 요청하십시오. 
-  * IBM ID가 없는 경우, **등록**을 클릭하여 IBM ID와 비밀번호를
-등록하십시오. 
+  * IBM ID를 이미 등록했으며 이 ID와 비밀번호가 올바른지 확인하려는 경우, **로그인**을 클릭하고 로그인 페이지에 IBM ID와 비밀번호를 입력하십시오. 비밀번호를 잊어버린 경우 로그인 페이지의 오른쪽에 있는 **비밀번호를 잊으셨습니까?**를 클릭하여 비밀번호를 재설정하십시오. IBM ID를 잊어버렸거나 비밀번호에 계속 문제가 있는 경우 전 세계 IBM 등록 헬프 데스크에 지원을 요청하십시오. 
+  * IBM ID가 없는 경우, **등록**을 클릭하여 IBM ID와 비밀번호를 등록하십시오. 
   
 **참고:** IBM 직원의 경우 IBM ID와 인트라넷 로그인 ID가 다를 수 있습니다. 
 
@@ -98,7 +92,7 @@ IBM ID 및/또는 비밀번호가 올바르지 않습니다. 다시 시도하십
 여러 IP 주소 간의 지능형 장애 복구를 지원하는 DNS 제공자를 사용하여 {{site.data.keyword.Bluemix_notm}} 지역 간의 자동 장애 복구를 지원하도록 DNS 설정을 수동으로 구성할 수 있습니다. 이 기능이 있는 DNS 제공자에는 NSONE, Akamai, Dyn이 포함됩니다.
 {: tsResolve}
 
-DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다.
+DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의 공용 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다. 
 ```
 nslookup mybluemix.net
 ```
@@ -108,27 +102,19 @@ nslookup mybluemix.net
 ## 계정이 보류 중임
 {: #ts_accntpding}
 
-계정이 보류 중인 경우 {{site.data.keyword.Bluemix_notm}}에
-로그인할 수 없습니다.
+계정이 보류 중인 경우 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없습니다.
 
  
-{{site.data.keyword.Bluemix_notm}}
-평가판 계정에 등록하면 {{site.data.keyword.Bluemix_notm}}에
-로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
+{{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 {{site.data.keyword.Bluemix_notm}}에 로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
 {: tsSymptoms}
 
-<code>사용자 계정이 보류 중입니다. 여러분 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다.
-스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원</a>에 문의하십시오.</code>
+<code>사용자 계정이 보류 중입니다. 여러분 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원</a>에 문의하십시오.</code>
 
 
-{{site.data.keyword.Bluemix_notm}}
-평가판 계정에 등록하면 확인 이메일을 받습니다. 확인 이메일에 있는 링크를 클릭하여
-등록 프로세스를 완료해야 합니다.
+{{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 확인 이메일을 받습니다. 확인 이메일에 있는 링크를 클릭하여 등록 프로세스를 완료해야 합니다.
 {: tsCauses} 
 
-확인 이메일이
-사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를
-확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} 지원](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
+확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} 지원](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
 {: tsResolve}
 
 
@@ -136,59 +122,44 @@ nslookup mybluemix.net
 ## 조직에 사용자를 추가할 수 없음
 {: #ts_adduser}
 
-동일한 조직에서 작업할 사용자를 두 명 이상 초대할 수 있습니다. 계정 소유자이거나
-조직의 관리자이자 구성원인 경우에만 조직에 사용자를 추가할 수 있습니다.
+동일한 조직에서 작업할 사용자를 두 명 이상 초대할 수 있습니다. 계정 소유자이거나 조직의 관리자이자 구성원인 경우에만 조직에 사용자를 추가할 수 있습니다.
  
 
-**조직 관리**
-섹션에 **새 사용자 초대** 링크가 보이지 않습니다. 
+**조직 관리** 섹션에 **새 사용자 초대** 링크가 보이지 않습니다.
 {: tsSymptoms}
 
  
 
-다음 {{site.data.keyword.Bluemix_notm}}
-사용자만 사용자를 조직에 초대할 수 있습니다.
+다음 {{site.data.keyword.Bluemix_notm}} 사용자만 사용자를 조직에 초대할 수 있습니다.
 {: tsCauses}
   * 조직의 계정 소유자
   * 조직의 협업자가 아니라 구성원인 조직 관리자
   
-{{site.data.keyword.Bluemix_notm}}에서
-사용자는 조직의 구성원이거나 협업자일 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서 사용자는 조직의 구성원이거나 협업자일 수 있습니다.
 
 <dl><dt>협업자</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 계정이 이미
-있으며 다른 사용자가 자신을 조직으로 초대한 경우, 조직의 협업자입니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 계정이 이미 있으며 다른 사용자가 자신을 조직으로 초대한 경우, 조직의 협업자입니다.</dd>
 <dt>구성원</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 계정이 없지만
-다른 사용자가 자신을 초대하여 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에
-등록한 경우, 조직의 구성원입니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 계정이 없지만 다른 사용자가 자신을 초대하여 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에 등록한 경우, 조직의 구성원입니다.</dd>
 </dl>
 
 
-조직의 협업자인 경우에는
-조직 관리자로 지정되었더라도 조직에 사용자를 초대할 수 없습니다.
+조직의 협업자인 경우에는 조직 관리자로 지정되었더라도 조직에 사용자를 초대할 수 없습니다.
 
 **참고:** 조직의 협업자를 비롯한 모든 조직 관리자는 조직에 이미 있는 사용자를 추가, 수정 및 제거할 수 있습니다.
 
  
 
-사용자를 조직에 초대할 수 없으며 초대를 위해 다른 역할이 필요한 경우
-조직 관리자에게 역할 변경을 요청하십시오. 조직 관리자를 확인하려면 다음 단계를 수행하십시오.
+사용자를 조직에 초대할 수 없으며 초대를 위해 다른 역할이 필요한 경우 조직 관리자에게 역할 변경을 요청하십시오. 조직 관리자를 확인하려면 다음 단계를 수행하십시오.
 {: tsResolve}
 
   1. {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하여 상단 메뉴 표시줄에서 **계정 및 지원** 아이콘 ![계정 및 지원](images/account_support.svg)을 클릭하고 **조직 관리**를 선택하십시오.
-  2. 자신의 조직으로 이동하여 **사용자** 탭에서 조직 관리자에
-대한 정보를 확인하십시오.  
+  2. 자신의 조직으로 이동하여 **사용자** 탭에서 조직 관리자에 대한 정보를 확인하십시오.  
   
-구성원이 아니라 협업자이기 때문에
-사용자를 초대할 수 없는 경우 이전 {{site.data.keyword.Bluemix_notm}}
-계정을 삭제한 다음 조직의 구성원으로 참여할 수 있도록 초대를 받아야 합니다. 이전 계정을 삭제하고 구성원으로 계정에 참여하려면 다음 단계를 수행하십시오. 
+구성원이 아니라 협업자이기 때문에 사용자를 초대할 수 없는 경우 이전 {{site.data.keyword.Bluemix_notm}} 계정을 삭제한 다음 조직의 구성원으로 참여할 수 있도록 초대를 받아야 합니다. 이전 계정을 삭제하고 구성원으로 계정에 참여하려면 다음 단계를 수행하십시오. 
 
-  1. [{{site.data.keyword.Bluemix_notm}} 지원 부서에 연락](http://ibm.biz/bluemixsupport){: new_window}하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어
-이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
-  2. 계정이 삭제되면 조직 관리자 역할을 보유한 사용자가 자신을 조직 관리자로 조직에
-초대하도록 하십시오. 그런 다음 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에
-등록하십시오. 
+  1. [{{site.data.keyword.Bluemix_notm}} 지원 부서에 연락](http://ibm.biz/bluemixsupport){: new_window}하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
+  2. 계정이 삭제되면 조직 관리자 역할을 보유한 사용자가 자신을 조직 관리자로 조직에 초대하도록 하십시오. 그런 다음 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에 등록하십시오. 
 
 
 
@@ -196,27 +167,21 @@ nslookup mybluemix.net
 ## 사용자 일괄 등록이 지원되지 않음
 {: #ts_batchregistration}
 
-{{site.data.keyword.Bluemix_notm}}에 사용자를
-등록할 경우 각 사용자를 개별적으로 등록해야 합니다.
+{{site.data.keyword.Bluemix_notm}}에 사용자를 등록할 경우 각 사용자를 개별적으로 등록해야 합니다.
  
 
-{{site.data.keyword.Bluemix_notm}}에서는
-여러 사용자를 한 번에 등록하는 기능을 제공하지 않습니다.
+{{site.data.keyword.Bluemix_notm}}에서는 여러 사용자를 한 번에 등록하는 기능을 제공하지 않습니다.
 {: tsSymptoms}
  
 
-{{site.data.keyword.Bluemix_notm}}에서는
-사용자 일괄 등록을 지원하지 않습니다. {{site.data.keyword.Bluemix_notm}}에
-사용자를 등록하려면 각 사용자를 개별적으로 등록해야 합니다.
+{{site.data.keyword.Bluemix_notm}}에서는 사용자 일괄 등록을 지원하지 않습니다. {{site.data.keyword.Bluemix_notm}}에 사용자를 등록하려면 각 사용자를 개별적으로 등록해야 합니다.
 {: tsCauses}
  
 
-{{site.data.keyword.Bluemix_notm}}에
-여러 사용자를 등록하려면 사용자마다 다음 단계를 수행해야 합니다.
+{{site.data.keyword.Bluemix_notm}}에 여러 사용자를 등록하려면 사용자마다 다음 단계를 수행해야 합니다.
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의
-오른쪽 위에 있는 **등록**을 클릭하십시오.
+  1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 오른쪽 위에 있는 **등록**을 클릭하십시오.
   2. 마법사의 안내에 따라 단계를 완료하십시오.
 
     
@@ -227,8 +192,7 @@ nslookup mybluemix.net
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를 로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
  
 
-{{site.data.keyword.Bluemix_notm}}
-사용자 인터페이스를 사용할 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용할 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.
 {: tsSymptoms}
 
 `BXNUI0001E: Bluemix에서 세션이 존재하는지 여부를 발견하지 않았기 때문에 페이지가 로드되지 않았습니다.`
@@ -280,9 +244,7 @@ nslookup mybluemix.net
 # 앱 관리 문제점 해결
 {: #managingapps}
 
-애플리케이션 관리와 관련된 일반적인 문제점으로는 애플리케이션을
-업데이트할 수 없거나 2바이트 문자가 표시되지 않는 경우가 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
+애플리케이션 관리와 관련된 일반적인 문제점으로는 애플리케이션을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 경우가 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 
@@ -298,8 +260,7 @@ JVM(Java Virtual Machine)이 버전 8 이하인 경우에는 디버그 모드를
 **애플리케이션 디버그 사용**을 선택한 이후, 도구는 해당 애플리케이션을 디버그 모드로 전환하려고 시도합니다. 그리고 Eclipse 워크벤치는 디버그 세션을 시작합니다. 도구에서 디버그 모드를 정상적으로 사용하는 경우, 웹 애플리케이션 상태는 `업데이트 모드`, `개발` 및 `디버깅`을 표시합니다.
 {: tsSymptoms}
 
-그러나 도구에서 디버그 모드를 사용할 수 없는 경우, 웹 애플리케이션 상태는
-`업데이트 모드` 및 `개발`만 표시하며 `디버깅`은 표시하지 않습니다. 도구가 콘솔 보기에서 다음 오류 메시지를 표시할 수도 있습니다.
+그러나 도구에서 디버그 모드를 사용할 수 없는 경우, 웹 애플리케이션 상태는 `업데이트 모드` 및 `개발`만 표시하며 `디버깅`은 표시하지 않습니다. 도구가 콘솔 보기에서 다음 오류 메시지를 표시할 수도 있습니다.
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
@@ -320,7 +281,8 @@ at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(Async
 at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+[2015*
+{: .last-updated}-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
 com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
@@ -420,12 +382,11 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 ```
 process.env.VCAP_SERVICES
 ```
-다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및
-[Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오. 
- 
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
 
- 
- 
+
+
+
 
 
 
@@ -507,8 +468,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
     ```
 	disk_quota: <disk_quota>
 	```
-  * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때
-**-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
+  * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때 **-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
@@ -522,8 +482,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
 
 
-**Git 추가**를 클릭하면
-창이 열리고 다음 문제 중 하나가 발생합니다.
+**Git 추가**를 클릭하면 이 열리고 다음 문제 중 하나가 발생합니다.
 {: tsSymptoms} 
 
   * 창이 빈 화면 상태로 정지합니다.
@@ -531,8 +490,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
 
 
-쿠키가 설정되지 않도록 브라우저를
-구성할 수 있습니다. 해당 쿠키는 {{site.data.keyword.Bluemix_notm}} 콘솔 컨텍스트 내 hub.jazz.net 인터넷 도메인에 있는 IBM® Bluemix DevOps Services 사이트에서 설정해야 합니다.
+쿠키가 설정되지 않도록 브라우저를 구성할 수 있습니다. 해당 쿠키는 {{site.data.keyword.Bluemix_notm}} 콘솔 컨텍스트 내 hub.jazz.net 인터넷 도메인에 있는 IBM® Bluemix DevOps Services 사이트에서 설정해야 합니다.
 {: tsCauses}  
 
  
@@ -542,11 +500,9 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
   * {{site.data.keyword.Bluemix_notm}} 콘솔에서 열리는 창에 나와 있는 지시사항을 따르십시오. 단추를 클릭하십시오. 다른 브라우저 창이 일시적으로 열립니다. 해당 창에서 DevOps Services는 인증 쿠키를 설정합니다.
   * 다른 브라우저 탭에서 https://hub.jazz.net으로 이동하여 로그인하십시오. {{site.data.keyword.Bluemix_notm}} 콘솔로 돌아가서 페이지를 새로 고치십시오. **Git 추가**를 다시 클릭하십시오.
-  * 써드파티 쿠키를 지원하도록 브라우저 설정을 변경하고 Git 추가를 다시 클릭하십시오. 설정을 구성하는 방법에 대한 자세한 정보는
-브라우저 관련 문서를 참조하십시오.
+  * 써드파티 쿠키를 지원하도록 브라우저 설정을 변경하고 Git 추가를 다시 클릭하십시오. 설정을 구성하는 방법에 대한 자세한 정보는 브라우저 관련 문서를 참조하십시오.
     * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google
-Chrome](https://support.google.com/chrome/answer/95647){: new_window}
+	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
 	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
 	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
 이러한 임시 해결책으로 문제점을 해결하지 못한 경우 idslogin@jazz.net으로 이메일을 보내십시오.
@@ -631,7 +587,7 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책�
 cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
 ```
 예:
-```
+    ```
 cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
@@ -702,9 +658,9 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 ```
 cf push <appname> -p <app_path>
 ```
-또한 가동 중단, 예외, 연결 실패 등의 문제점을 식별하고 이러한 문제점에서 복구하도록 앱을 코딩할 수 있습니다. 
+또한 가동 중단, 예외, 연결 실패 등의 문제점을 식별하고 이러한 문제점에서 복구하도록 앱을 코딩할 수 있습니다.
 
-	  
+  
 
 ## 애플리케이션이 푸시될 때 사용자 정의 변수가 손실됨
 {: #ts_varsnotretained}
@@ -855,8 +811,7 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
 
  	
 	
-**-p** 옵션을
-사용하여 WAR 파일을 지정하거나 WAR 파일의 경로를 추가하십시오. 예:
+**-p** 옵션을 사용하여 WAR 파일을 지정하거나 WAR 파일의 경로를 추가하십시오. 예:
 {: tsResolve}
 
 ```
@@ -866,8 +821,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` 명령에
-대한 자세한 정보를 보려면 `cf push -h`를 입력하십시오. 	
+`cf push` 명령에 대한 자세한 정보를 보려면 `cf push -h`를 입력하십시오.
 
 
 
@@ -1422,7 +1376,7 @@ error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
 기본 로깅 구성을 변경하는 방법에 대한 자세한 정보는 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}를 참조하십시오.
-	
+
 
 ## 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 없음
 {: #ts_importpylib}

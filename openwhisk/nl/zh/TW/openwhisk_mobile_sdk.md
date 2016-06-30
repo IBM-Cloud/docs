@@ -11,22 +11,23 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 使用 {{site.data.keyword.openwhisk_short}} 行動式 SDK
+# 使用 {{site.data.keyword.openwhisk_short}} 行動 SDK
 {: #openwhisk_mobile_sdk}
 *前次更新：2016 年 3 月 28 日*
+{: .last-updated}
 
-{{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動式 SDK，讓行動式應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
+{{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動 SDK，讓行動應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
 {: shortdesc}
 
-行動式 SDK 是以 Swift 2.2 撰寫，並且支援 iOS 9 及更新版次。
+行動 SDK 是以 Swift 2.2 撰寫，並且支援 iOS 9 及更新版次。
 
 ## 將 SDK 新增至應用程式
 {: #openwhisk_add_sdk}
-您可以使用 CocoaPods 或 Carthage 或者從來源目錄中安裝行動式 SDK。
+您可以使用 CocoaPods 或 Carthage 或者從來源目錄中安裝行動 SDK。
 
 ### 使用 CocoaPods 安裝 
 
-適用於行動式的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 Cocoapods，請將下列這幾行放入入門範本應用程式專案目錄內稱為 'Podfile' 的檔案中。 
+適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -45,21 +46,23 @@ end
 ```
 {: codeblock}
 
-從指令行中，鍵入 "pod install"。這會安裝適用於具有 watchOS 2 延伸的 iOS 應用程式的 SDK。使用 Cocoapods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
+從指令行鍵入 `pod install`。這會安裝適用於具有 watchOS 2 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
 
 ### 使用 Carthage 安裝
 
-在應用程式的專案目錄中建立稱為 'Cartfile' 的檔案。在 Cartfile 中放入下列這幾行：
+在應用程式的專案目錄中建立稱為 'Cartfile' 的檔案。將下一行放入 Cartfile 中：
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-從指令行中，鍵入 'carthage update --platform ios'。Carthage 會下載並建置 SDK，並在應用程式的專案目錄中建立稱為 Carthage 的目錄，然後將 OpenWhisk.framework 檔案放入 Carthage/build/iOS 中。將 OpenWhisk.framework 新增至 Xcode 專案中的內嵌架構。
+從指令行鍵入 `carthage update --platform ios`。Carthage 會下載並建置 SDK，並在應用程式的專案目錄中建立稱為 Carthage 的目錄，然後將 OpenWhisk.framework 檔案放入 Carthage/build/iOS 中。
+
+然後，您必須將 OpenWhisk.framework 新增至 Xcode 專案中的內嵌架構
 
 ### 從原始碼安裝
 
-https://github.com/openwhisk//openwhisk-client-swift.git 中會提供原始碼。在 Xcode 中，使用 OpenWhisk.xcodeproj 檔案來開啟專案。專案包含目標分別設為 iOS 及 WathOS2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
+原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。在 Xcode 中，使用 OpenWhisk.xcodeproj 檔案來開啟專案。專案包含目標分別為 iOS 及 watchOS 2 的兩個方法："OpenWhisk" 及 "OpenWhiskWatch"。建置所需目標的專案，以及將產生的架構新增至應用程式（通常是在 ~/Library/Developer/Xcode/DerivedData/your app name 中）。
 
 ## 安裝入門範本應用程式範例
 {: #openwhisk_install_sdkstart}
@@ -67,6 +70,7 @@ https://github.com/openwhisk//openwhisk-client-swift.git 中會提供原始碼�
 您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來下載內嵌 {{site.data.keyword.openwhisk_short}} SDK 架構的範例程式碼。  
 
 若要安裝入門範本應用程式範例，請輸入下列指令：
+
 ```
 wsk sdk install iOS
 ```
@@ -81,9 +85,7 @@ wsk sdk install iOS
 例如，在 Swift 2.1 中，使用下列範例程式碼來建立 credentials 物件：
 
 ```
-let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
-
-let whisk = Whisk(credentials: credentialsConfiguration!)
+let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
 {: codeblock}
 
@@ -137,15 +139,8 @@ do {
 若要發動遠端觸發程式，您可以呼叫 `fireTrigger` 方法。使用定義檔，視需要傳入參數。
 
 ```
-// In this example we are firing a trigger when our location has changed by a certain amount
-
-var locationParams = Dictionary<String, String>()
-locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"
-
-do {
-    try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void in
-
-        if let error = error {
+// In this example we are firing a trigger when our location has changed by a certain amountvar locationParams = Dictionary<String, String>()
+locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"do {try whisk.fireTrigger(name: "locationChanged", package: "mypackage", namespace: "mynamespace", parameters: locationParams, callback: {(reply, error) -> Void inif let error = error {
             print("Error firing trigger \(error.localizedDescription)")
         } else {
             print("Trigger fired!")
@@ -165,14 +160,9 @@ do {
 如果動作傳回結果，請在 invokeAction 呼叫中將 hasResult 設定為 true。回覆定義檔中會傳回動作的結果，例如：
 
 ```
-do {
-    try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
-
-        if let error = error {
+do {try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void inif let error = error {
             //do something
-            print("Error invoking action \(error.localizedDescription)")
-
-        } else {
+            print("Error invoking action \(error.localizedDescription)")} else {
 var result = reply["result"]
             print("Got result \(result)")
         }
@@ -202,22 +192,19 @@ whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
 
-在此範例中，您使用在 localhost:8080 執行的安裝。如果您未指定 baseUrl，行動式 SDK 會使用在 https://openwhisk.ng.bluemix.net 執行的實例。
+在此範例中，您使用在 localhost:8080 執行的安裝。如果您未指定 baseUrl，行動 SDK 會使用在 https://openwhisk.ng.bluemix.net 執行的實例。
 
-如果您需要特殊網路處理，則可以傳入自訂 NSURLSession。例如，您可能有使用自簽憑證的專屬 {{site.data.keyword.openwhisk_short}} 安裝：
+如果您需要特殊網路處理，則可以傳入自訂 NSURLSession。例如，您可能自己有使用自簽憑證的 {{site.data.keyword.openwhisk_short}} 安裝：
 
 ```
 // create a network delegate that trusts everything
-class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
-    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
+class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
     }
 }
 
 // create an NSURLSession that uses the trusting delegate
-let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())
-
-// set the SDK to use this urlSession instead of the default shared one
+let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: NetworkUtilsDelegate(), delegateQueue:NSOperationQueue.mainQueue())// set the SDK to use this urlSession instead of the default shared one
 whisk.urlSession = session
 ```
 {: codeblock}
@@ -253,17 +240,11 @@ whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     }
 })
 
-// or alternatively you can set up a "self contained" button that listens for press events on itself and invokes an action
-
-var whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
+// or alternatively you can set up a "self contained" button that listens for press events on itself and invokes an actionvar whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
 whiskButtonSelfContained.listenForPressEvents = true
-do {
-
-   // use qualified name API which requires do/try/catch
+do {// use qualified name API which requires do/try/catch
    try whiskButtonSelfContained.setupWhiskAction("mypackage/helloConsole", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
-   whiskButtonSelfContained.actionButtonCallback = { reply, error in
-
-       if let error = error {
+   whiskButtonSelfContained.actionButtonCallback = { reply, error inif let error = error {
            print("Oh no, error: \(error)")
        } else {
            print("Success: \(reply)")

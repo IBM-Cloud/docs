@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *Dernière mise à jour : 22 mars 2016*
+{: .last-updated}
 
 Les actions sont des fragments de code sans état qui s'exécutent sur la plateforme {{site.data.keyword.openwhisk}}. Il peut s'agir d'une
 fonction JavaScript, d'une fonction Swift ou d'un programme exécutable personnalisé conditionné dans un conteneur Docker. Par exemple, une action peut
@@ -84,7 +85,7 @@ exister pour fournir le point d'entrée de l'action.
 
 4. Une fois l'action créée, vous pouvez l'exécuter dans le cloud dans {{site.data.keyword.openwhisk_short}} avec la commande 'invoke'. Vous
 pouvez appeler des actions avec un appel *bloquant* ou *non bloquant* en spécifiant un indicateur dans la commande. Un appel
-bloquant attend la fin de l'exécution de l'action avant de renvoyer un résultat. Cet exemple utilise le paramètre de blocage `-blocking` :
+bloquant attend la fin de l'exécution de l'action avant de renvoyer un résultat. Cet exemple utilise le paramètre de blocage, `--blocking`:
 
   ```
   wsk action invoke --blocking hello
@@ -92,7 +93,6 @@ bloquant attend la fin de l'exécution de l'action avant de renvoyer un résulta
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
       "result": {
           "payload": "Hello world"
@@ -372,23 +372,24 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/cat: Concaténation du tableau de chaînes
+   action /whisk.system/util/head: Filtrage des K premiers éléments du tableau en ignorant les autres
+   action /whisk.system/util/date: Obtention de la date et heure actuelle
+   action /whisk.system/util/sort: Tri du tableau
+   action /whisk.system/util/split: Fractionnement d'une chaîne en tableau
   ```
   {: screen}
 
-  Dans cet exemple, vous allez utiliser les actions `cat` et `sort`.
+  Vous utiliserez dans cet exemple les actions `split` et `sort`.
 
 2. Créez une séquence d'actions pour que le résultat d'une action soit transmis sous forme d'argument à l'action suivante.
   
   ```
-  wsk action create monAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create monAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
-  Cette séquence d'action convertit des lignes de texte en tableau et trie les lignes.
+  Cette séquence d'actions convertit des lignes de texte en tableau et trie les lignes.
 
 3. Avant d'appeler la séquence d'actions, créez un fichier texte appelé 'haiku.txt' contenant quelques lignes de texte :
 
@@ -420,7 +421,9 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
   Vous constatez que les lignes sont triées dans le résultat.
 
 **Remarque** : pour plus d'informations sur l'appel de séquences d'actions avec plusieurs paramètres nommés, voir
-[Définition de paramètres par défaut](./openwhisk_actions.html##openwhisk_binding_actions).
+[Définition de paramètres par défaut](./actions.md#setting-default-parameters).
+
+
 
 ## Création d'actions Swift
 {: #openwhisk_actions_swift}
@@ -448,7 +451,7 @@ suivant :
 ```
 {: codeblock}
 
-Notez qu'à l'instar des actions JavaScript, les actions Swift consomment et produisent toujours un dictionnaire.
+Les actions Swift consomment et produisent toujours un dictionnaire.
 
 Vous pouvez créer une action {{site.data.keyword.openwhisk_short}} appelée `helloSwift` depuis cette fonction comme suit :
 
@@ -477,6 +480,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 **Attention :** les actions Swift s'exécutent dans un environnement Linux. Swift on Linux est en cours de développement et
 {{site.data.keyword.openwhisk_short}} utilise généralement l'édition disponible la plus récente, qui n'est pas nécessairement stable. De plus, il se peut que la version de Swift qui est utilisée avec {{site.data.keyword.openwhisk_short}} ne corresponde pas aux versions de Swift
 provenant d'éditions stables de Xcode sous MacOS.
+
+
 
 ## Création d'actions Docker
 {: #openwhisk_actions_docker}

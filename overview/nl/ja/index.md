@@ -17,6 +17,7 @@ copyright:
 {: #overview}
 
 *最終更新日: 2016 年 5 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} は {{site.data.keyword.IBM}} のオープン・クラウド・プラットフォームであり、モバイルおよび Web の開発者はこれにより、統合、セキュリティー、トランザクション、およびその他の主要な機能のために {{site.data.keyword.IBM_notm}} ソフトウェアにアクセスするほか、ビジネス・パートナーのソフトウェアにもアクセスすることができます。
 {:shortdesc}
@@ -77,7 +78,9 @@ copyright:
 {: #dedicated}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated は、パブリック {{site.data.keyword.Bluemix_notm}} およびユーザー独自のネットワークの両方に対してセキュアに接続された、ユーザー専用の SoftLayer 環境です。{{site.data.keyword.Bluemix_notm}} Dedicated は、VPN または直接のネットワーク接続によってご使用のネットワーク上に置かれます。
-単一テナントのハードウェアは、世界中のどの SoftLayer データ・センターでもセットアップできます。専用プラットフォームと専用サービスの管理は {{site.data.keyword.IBM_notm}} が行うので、ユーザーはカスタム・アプリの作成に集中することができます。また、{{site.data.keyword.IBM_notm}} は、ユーザーが選択したメンテナンス期間中に専用インスタンスのすべてのメンテナンスを実行します。
+単一テナントのハードウェアは、世界中のどの SoftLayer データ・センターでもセットアップできます。専用プラットフォームと専用サービスの管理は {{site.data.keyword.IBM_notm}} が行うので、ユーザーはカスタム・アプリの作成に集中することができます。
+また、{{site.data.keyword.IBM_notm}} は、ユーザーが選択した保
+守期間中に専用インスタンスのすべての保守を実行します。
 
 {{site.data.keyword.IBM_notm}} はご使用の専用環境で使用可能なサービスをいくつか用意していますが、ユーザーはすべてのパブリック・サービスに接続することができます。すべてのランタイムは専用環境で使用できます。{{site.data.keyword.Bluemix_notm}} のすべての専用デプロイメントには、追加コストなしで次の利点およびフィーチャーが含まれています。VPN、プライベート VLAN、ファイアウォール、ご使用の LDAP との接続性、既存のオンプレミス・データベースおよびアプリを利用する機能、 週 7 日 24 時間体制のオンサイト・セキュリティー、専用ハードウェア、および標準サポート。 
 
@@ -208,7 +211,7 @@ Eclipse ツールの使用について詳しくは、「[Deploying apps with IBM
     <dd>{{site.data.keyword.IBM_notm}} Containers インフラストラクチャーを使用すれば、コンテナー・デプロイメントがサポートされている所ならどこでも Web アプリを実行することができます。*コンテナー* は、アプリを実行するために必要なすべてのものを保持するオブジェクトです。このインフラストラクチャーには、信頼できるイメージの専用レジストリーが含まれており、それらのイメージをアップロード、保管、および取得できるようになっています。その後、それらのイメージを {{site.data.keyword.Bluemix_notm}} で使用できるようにして、このプラットフォームでコンテナーを管理することができます。{{site.data.keyword.IBM_notm}} Containers インフラストラクチャーは、水平方向にも垂直方向にもスケーリングします。パブリック Docker ハブで提供されているすべてのイメージを使用することができ、Docker API およびコマンド・ライン・インターフェースを使用して、{{site.data.keyword.Bluemix_notm}} 上のコンテナーを管理できます。{{site.data.keyword.IBM_notm}} は、Containers レジストリーに、使用したり拡張したりできるパブリック・イメージも用意しています。
     {{site.data.keyword.IBM_notm}} Containers は、ホストされたクラウド環境で Docker コンテナーを実行するために使用されます。Docker は、コンテナーを実行するために使用する仮想環境にアプリをデプロイするエンジンを追加します。Docker は、コードの実行に使用できる環境も提供します。また、ユーザーの準備が整ったときに、コードを開発環境からテスト環境へ転送し、次に実稼働環境へ転送するための手段を提供します。
 
-    {{site.data.keyword.IBM_notm}} Containers について詳しくは、『[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)』を参照してください。</dd>
+{{site.data.keyword.IBM_notm}} Containers について詳しくは、『[{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)』を参照してください。</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} (ベータ版)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}} は {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} に含まれるホストされたクラウド環境で、アプリケーションやそれらが実行されるミドルウェアを最大限に制御しながら、アプリケーションをビルド、実行、管理、およびモニターすることができます。{{site.data.keyword.virtualmachinesshort}} を使用すると、特にパブリック・クラウドにアプリケーションをデプロイした場合に、お客様のビジネス・ソリューションが他から分離されます。</p>
 <p>    

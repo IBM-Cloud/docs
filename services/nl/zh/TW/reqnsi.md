@@ -18,7 +18,7 @@ copyright:
 {:shortdesc}
 
 
-{{site.data.keyword.Bluemix_notm}} 中為行動式應用程式提供了預先定義的服務。{{site.data.keyword.Bluemix_notm}} 讓您能輕鬆地為您的行動式應用程式實作、管理及擴充這些行動式服務。您可以將焦點放在應用程式邏輯和應用程式設計。
+{{site.data.keyword.Bluemix_notm}} 中為行動應用程式提供了預先定義的服務。{{site.data.keyword.Bluemix_notm}} 讓您能輕鬆地為您的行動應用程式實作、管理及擴充這些行動服務。您可以將焦點放在應用程式邏輯和應用程式設計。
 
 {{site.data.keyword.Bluemix_notm}} 會管理 Web 應用程式的中介軟體服務。應用程式開發人員可以指定他們需要的中介軟體服務。{{site.data.keyword.Bluemix_notm}} 接著會自動佈建指定中介軟體服務的新實例，並將服務實例連結至應用程式。
 
@@ -47,7 +47,7 @@ copyright:
 
 
 
-{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及執行時期，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至「型錄」底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
+{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至「型錄」底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
 
 實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
@@ -156,7 +156,7 @@ copyright:
 
 在開發應用程式時，您可以選取需要的服務。
 當您選取時，{{site.data.keyword.Bluemix_notm}} 會與服務互動，並採取必要的步驟以佈建服務資源。不同服務類型的佈建處理程序可能不同。
-例如，資料庫服務會建立資料庫，而行動式應用程式的推送通知服務則會產生配置資訊。
+例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
 
 {{site.data.keyword.Bluemix_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
@@ -214,10 +214,10 @@ copyright:
 
 
 * 若要與資料庫服務互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，使用者 ID、密碼，以及應用程式的存取 URI）。
-* 若要與行動式後端服務互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動式服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
-* 若要與 Web 應用程式或是行動式應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的執行時期認證）。*VCAP_SERVICES*
+* 若要與行動後端服務互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
+* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES*
 環境變數的值是 JSON 物件的序列化。
-變數包含與應用程式所連結之服務互動時所需要的執行時期資料。
+變數包含與應用程式所連結之服務互動時所需要的運行環境資料。
 不同服務會有不同的資料格式。
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
@@ -251,7 +251,8 @@ copyright:
 若要建立使用者提供的服務實例，並將它連結至應用程式，請完成下列步驟：
 
 1. 使用 **cf create-user-provided-service** 或 **cf cups** 指令，以建立使用者提供的服務實例：
-    * 若要建立一般使用者提供的服務實例，請使用 **-p** 選項，並使用逗點區隔參數名稱。cf 指令行介面接著會提示您依次輸入每一個參數。例如：```
+    * 若要建立一般使用者提供的服務實例，請使用 **-p** 選項，並使用逗點區隔參數名稱。cf 指令行介面接著會提示您依次輸入每一個參數。例如：
+        ```
         cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234

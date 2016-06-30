@@ -18,6 +18,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} でのアプリのホスティング
 
 *最終更新日: 2016 年 5 月 9 日*
+{: .last-updated}
 
 <!--The whole topic is staging only -->
 

@@ -17,7 +17,8 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 계정 관리
 {: #mngacct}
-*마지막 업데이트 날짜: 2016년 5월 16일*
+*마지막 업데이트 날짜: 2016년 6월 1일*
+{: .last-updated}
 
 계정에 대한 알림을 설정하거나 계정 사용량을 보거나 청구서를 보려면 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정**으로 이동하십시오.
 {:shortdesc}
@@ -62,3 +63,4 @@ copyright:
 
 계정 소유자는 {{site.data.keyword.Bluemix_notm}} 계정과 연관되어 있는 저장된 신용카드 정보를 편집, 추가 또는 제거할 수 있습니다. **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; *your_account_name* &gt; **청구**로 이동하십시오.
 
+SoftLayer 계정이 {{site.data.keyword.Bluemix_notm}} 계정과 링크된 경우, 청구 방법에 대한 자세한 정보는 [계정 링크 시에 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구](../admin/softlayerlink.html#bill_usage)를 참조하십시오. 

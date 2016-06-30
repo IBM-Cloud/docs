@@ -14,14 +14,18 @@ copyright:
 #监视和日志记录
 {: #monitoringandlogging}
 
-*上次更新时间：2016 年 5 月 11 日*
+*上次更新时间：2016 年 5 月 24 日*
+{: .last-updated}
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
 {:shortdesc}
 
 {{site.data.keyword.Bluemix}} 应用程序可以是广泛分布的多实例应用程序，并且应用程序的执行及其数据可以在许多服务中共享。在这种复杂的环境中，监视应用程序和复查日志对您管理应用程序非常重要。
 
-{{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 应用程序的日志记录](#logging_for_bluemix_apps)。
+##对应用程序进行监视和日志记录
+{: #monitoring_logging_bluemix_apps}
+
+{{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅[对 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。
 
 通过监视应用程序，您可以查看和控制应用程序部署。通过监视，您可以完成以下任务：
 
@@ -31,7 +35,7 @@ copyright:
 
 为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。为了实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
 
-##监视在 Cloud Foundry 上运行的应用程序
+###监视在 Cloud Foundry 上运行的应用程序
 {: #monitoring_bluemix_apps}
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您会希望实时了解性能信息，例如运行状态、资源使用情况和流量度量值。通过这些性能信息，您可以相应地进行决策或执行操作。
@@ -41,7 +45,7 @@ copyright:
 * {{site.data.keyword.Bluemix_notm}} 服务。Monitoring and Analytics 提供了可用于监视应用程序性能的服务。此外，此服务还提供了分析功能，例如日志分析。有关更多信息，请参阅 [Monitoring and Analytics](../services/monana/index.html)。
 * 第三方选项。例如，[New Relic](http://newrelic.com/){:new_window}。
 
-##在 Cloud Foundry 上运行的应用程序的日志记录
+###在 Cloud Foundry 上运行的应用程序的日志记录
 {: #logging_for_bluemix_apps}
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，会自动创建日志文件。在从部署到运行时的任何阶段遇到错误时，都可以检查日志，以获取可能有助于解决问题的线索。
@@ -144,31 +148,44 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 要通过命令行界面查看日志，请从以下选项中进行选择：
 
 <ul>
-<li>部署应用程序时跟踪日志。<p>将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，可使用 **cf logs** 命令来显示应用程序日志以及与应用程序进行交互的系统组件的日志。在 cf 命令行界面中，可以键入以下命令。有关 cf 日志的更多信息，请参阅 <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Cloud Foundry 中的日志类型及其消息</a></p>
+<li>部署应用程序时跟踪日志。
+<p>将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，可使用 **cf logs** 命令来显示应用程序日志以及与应用程序进行交互的系统组件的日志。在 cf 命令行界面中，可以键入以下命令。有关 cf 日志的更多信息，请参阅 <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Cloud Foundry 中的日志类型及其消息</a></p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>显示最近一段时间的日志。</dd>
 
 <dt><strong>cf logs <var class="keyword varname">appname</var></strong></dt>
-<dd>显示自运行此命令以来生成的日志。</dd>
+<dd>显示自运行此命令以来生成的日志。
+</dd>
 </dl>
-<div class="note tip"><span class="tiptitle">提示：</span>在一个命令行窗口中运行 <span class="keyword cmdname">cf push</span> 或 <span class="keyword cmdname">cf start</span> 命令时，可以在另一个命令行窗口中输入 <samp class="ph codeph">cf logs appname --recent</samp> 来实时查看日志。</div>
+<div class="note tip"><span class="tiptitle">提示：</span>在一个命令行窗口中运行
+<span class="keyword cmdname">cf push</span> 或 <span class="keyword cmdname">cf
+start</span> 命令时，可以在另一个命令行窗口中输入 <samp class="ph codeph">cf
+logs appname --recent</samp> 来实时查看日志。</div>
 </li>
 
-<li>部署应用程序后查看日志。<p>如果启用了应用程序日志记录，那么在运行时遇到应用程序问题时，可以查看以下应用程序日志。应用程序日志有助于确定错误的原因。</p>
+<li>部署应用程序后查看日志。
+
+<p>如果启用了应用程序日志记录，那么在运行时遇到应用程序问题时，可以查看以下应用程序日志。应用程序日志有助于确定错误的原因。</p>
 
 <dl><strong>buildpack.log</strong></dt>
 <dd>
-<p>此日志文件会记录细颗粒度的参考事件，用于调试目的。您可以使用此日志来对 buildpack 执行问题进行故障诊断。</p>
-<p>要将数据生成到 <span class="ph filepath">buildpack.log</span> 文件中，必须使用以下命令来启用 buildpack 跟踪：<pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+<p>此日志文件会记录细颗粒度的参考事件，用于调试目的。
+您可以使用此日志来对 buildpack 执行问题进行故障诊断。
+</p>
+<p>要将数据生成到 <span class="ph filepath">buildpack.log</span> 文件中，必须使用以下命令来启用 buildpack 跟踪：
+   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
 <p>
-<p>要查看此日志，请输入以下命令：<pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
+<p>要查看此日志，请输入以下命令：
+<pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
 </dd>
 
 <dt><strong>staging_task.log</strong></dt>
-<dd><p>此日志文件会在编译打包任务的主要步骤之后记录消息。您可以使用此日志来对编译打包问题进行故障诊断。</p>
-<p>要查看此日志，请输入以下命令：<pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
+<dd><p>此日志文件会在编译打包任务的主要步骤之后记录消息。
+您可以使用此日志来对编译打包问题进行故障诊断。</p>
+<p>要查看此日志，请输入以下命令：
+<pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
 </p>
 </dd>
 </dl>
@@ -185,12 +202,14 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 要查看感兴趣的日志或排除不想查看的内容，可以在 cf 命令行界面中将 **cf logs** 命令与过滤选项（例如，**cut** 和 **grep**）一起使用。
 
-* 要查看部分而不是完整的详细日志，请使用 **cut** 选项。例如，要显示组件和消息信息，请使用以下命令：```
+* 要查看部分而不是完整的详细日志，请使用 **cut** 选项。例如，要显示组件和消息信息，请使用以下命令：
+```
 cf logs appname --recent | cut -c 29-40,46- 
 ```
 
 有关 **grep** 选项的更多信息，请键入 cut --help。
-* 要显示包含特定关键字的日志条目，请使用 **grep** 选项。例如，要显示包含关键字 [APP 的日志条目，可以使用以下命令：```
+* 要显示包含特定关键字的日志条目，请使用 **grep** 选项。例如，要显示包含关键字 [APP 的日志条目，可以使用以下命令：
+```
 cf logs appname --recent | grep '\[App'
 ```
 有关 **grep** 选项的更多信息，请键入 `grep --help`。
@@ -211,7 +230,7 @@ cf logs appname --recent | grep '\[App'
   2. 创建用户提供的服务实例。
      
 	 使用 ```cf create-user-provided-service``` 命令（或此命令的简短版本 ```cups``）来创建用户提供的服务实例：
-```
+	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
 	 **service_name**
@@ -254,7 +273,7 @@ cf logs appname --recent | grep '\[App'
 	
 	 ```
 	 cf bind-service appname <service_name>
-	```
+	 ```
 	 **appname**
 	 
 	 应用程序的名称。
@@ -263,7 +282,8 @@ cf logs appname --recent | grep '\[App'
 	 
 	 用户提供的服务实例的名称。
 	 
-  4. 重新编译打包应用程序。输入 ```cf restage appname``` 以使更改生效。 
+  4. 重新编译打包应用程序。
+     输入 ```cf restage appname``` 以使更改生效。 
 
 #### 查看外部主机中的日志
 {: #viewing_logs_external}
@@ -272,5 +292,104 @@ cf logs appname --recent | grep '\[App'
 生成日志后，经过短暂延迟即可查看外部日志主机中的消息，这些消息类似于在 {{site.data.keyword.Bluemix_notm}} 用户界面中或通过 cf 命令行界面查看的消息。如果您有应用程序的多个实例，那么会聚集日志，这样就可以查看该应用程序的所有日志。此外，在两次应用程序崩溃和部署之间，不会持久存储日志。
 
 **注：**您在命令行界面中查看的日志并不是 syslog 格式，并且可能与外部日志主机中显示的消息不完全一致。 
+
+### 示例：将 Cloud Foundry 应用程序日志以流方式传送到 Splunk 
+{: #splunk}
+
+在本示例中，名为 Jane 的开发人员使用 IBM Virtual Servers Beta 和 Ubuntu 映像，创建了一个虚拟服务器。Jane 尝试以流方式，将 Cloud Foundry 应用程序日志从 {{site.data.keyword.Bluemix_notm}} 传送到 Splunk。 
+
+  1. 要开始该操作，Jane 设置了 Splunk。
+
+     a. Jane 从[下载 Splunk Light 站点](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}下载了 Splunk Light，然后使用以下命令，对其进行安装。该软件安装在 */opt/splunk*。 
+       
+	    ```
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        ```
+	   
+     b. Jane 安装并修补 RFC5424 syslog 技术附加组件，以与 {{site.data.keyword.Bluemix_notm}} 集成。有关安装附加组件的指示的更多信息，请参阅 [Cloud Foundry 准则](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}。  
+
+	    Jane 使用以下命令安装附加组件：
+        
+	    ```
+        cd /opt/splunk/etc/apps
+        tar xvfz ~/rfc5424-syslog_11.tgz
+        ```
+	   
+        然后，Jane 通过将 */opt/splunk/etc/apps/rfc5424/default/transforms.conf* 替换为包含以下文本的 *transforms.conf* 文件，对附加组件进行修补：
+	   
+	    ```
+        [rfc5424_host]
+        DEST_KEY = MetaData:Host
+        REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
+        FORMAT = host::$1
+
+        [rfc5424_header]
+        REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
+        FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
+        MV_ADD = true
+        ```
+        {:screen}	   
+
+     c. 设置完 Splunk 之后，Jane 必须在 Ubuntu 机器上打开一些端口，以接受传入的 syslog 漏出（端口 5140）和 Splunk Web UI（端口 8000），因为缺省情况下，{{site.data.keyword.Bluemix_notm}} 虚拟服务器已设置防火墙。
+	   
+	    **注：**这里已完成 iptable 配置，以供 Jane 进行评估，且这只是暂时的。要在生产环境中于 Bluemix 虚拟服务器中配置防火墙设置，请参阅[网络安全组](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}文档，以获取详细信息。
+	 
+	   ```
+	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
+       iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+       iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
+	   ```
+	   {:screen}	
+	  
+	   然后，Jane 使用以下命令来运行 Splunk：
+
+       ```
+	   /opt/splunk/bin/splunk start --accept-license
+       ```
+		
+  2. Jane 配置 Splunk 设置，以从 {{site.data.keyword.Bluemix_notm}} 接受 syslog 漏出。她必须针对 syslog 漏出创建数据输入。
+
+     a. 在 Splunk Web 界面的左侧，Jane 单击**数据 > 数据输入**。此时将显示 Splunk 支持的输入类型列表。 
+	 
+     b. 她选择 **TCP**，因为 syslog 漏出使用 TCP 协议。
+	 
+     c. 在 **TCP** 窗格的**端口**字段中，她输入 **5140**，将其他字段保留空白，然后单击**下一步**。
+	 
+     d. 从**源类型**列表中，她选择**未分类 > rfc5424_syslog**。
+	 
+     e. 对于**方法**类型，她选择 **IP**。
+	 
+     f. 在**索引**字段中，Jane 单击**创建新索引**。她将新索引命名为“bluemix”，然后单击**保存**。
+	 
+     g. 最后，在**复查**窗口中，Jane 确认设置正确，然后单击**提交**，以启用此数据输入。
+
+  3. 在 {{site.data.keyword.Bluemix_notm}} 中，Jane 创建了 syslog 漏出服务，并将该服务绑定到某个应用程序。
+
+     a. Jane 通过 cf CLI，使用以下命令，创建 syslog 漏出服务：
+	 
+     ```
+     cf cups splunk -l syslog://dummyhost:5140
+     ```
+        
+     **注：** *dummyhost* 不是实名。它用于隐藏实际主机名。 
+
+     b. Jane 将 syslog 漏出服务绑定到其空间内的某个应用程序，然后重新编译打包该应用程序。
+	 
+	 ```
+     cf bind-service myapp splunk
+     cf restage myapp
+     ```
+		
+
+Jane 尝试使用该应用程序，然后在 Splunk Web 界面输入以下查询字符串：
+
+```
+source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
+```
+
+Jane 在其 Splunk Web 界面中看到日志流。虽然 Jane 安装的 Splunk 是 Splunk Light，但是她仍可以每天保留 500MB 日志。 
+
+
 
 

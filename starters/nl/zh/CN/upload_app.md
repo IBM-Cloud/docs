@@ -15,6 +15,7 @@ copyright:
 
 # 上传应用程序
 *上次更新时间：2016 年 2 月 17 日*
+{: .last-updated}
 
 登录到 {{site.data.keyword.Bluemix}} 后，可以使用 cf push 命令来上传应用程序。
 {:shortdesc}
@@ -23,6 +24,8 @@ copyright:
   1. 安装 {{site.data.keyword.Bluemix}} 和 Cloud Foundry 命令行界面。
 
   <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_cf_commandline.svg" alt="下载 Cloud Foundry 命令行界面" /> </a>
+ 
+
   2. 连接到 {{site.data.keyword.Bluemix}}。
 
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>

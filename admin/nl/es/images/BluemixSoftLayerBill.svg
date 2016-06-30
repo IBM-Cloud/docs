@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1613px" height="831px" viewBox="0 0 1613 831" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="89.9997 0 0 0 0 89.9997 89.9997 89.9997 89.9997 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD">
+            <polyline id="Stroke-36" stroke="#FF2F2F" stroke-width="6" stroke-linecap="square" points="182 589 434.6837 588 446.5038 548"></polyline>
+            <polyline id="Stroke-38" stroke="#5596E6" stroke-width="6" stroke-linecap="square" points="182 297 434.6837 298 446.5038 338"></polyline>
+            <text id="Bluemix-bill" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="49.424" y="351">Bluemix bill</tspan>
+            </text>
+            <text id="SoftLayer-bill" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="35.952" y="641">SoftLayer bill</tspan>
+            </text>
+            <g id="Page-1" transform="translate(94.000000, 488.000000)" fill="#FF2F2F">
+                <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="16 53 64 53 64 49 16 49"></polygon>
+                <polygon id="Fill-3" points="16 61 64 61 64 57 16 57"></polygon>
+                <polygon id="Fill-4" points="16 69 40 69 40 65 16 65"></polygon>
+            </g>
+            <text id="SoftLayer-bill" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="883.952" y="638">SoftLayer bill</tspan>
+            </text>
+            <g id="Page-1" transform="translate(942.000000, 477.000000)" fill="#FF2F2F">
+                <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="16 53 64 53 64 49 16 49"></polygon>
+                <polygon id="Fill-3" points="16 61 64 61 64 57 16 57"></polygon>
+                <polygon id="Fill-4" points="16 69 40 69 40 65 16 65"></polygon>
+            </g>
+            <g id="Page-1" transform="translate(94.000000, 200.000000)" fill="#5596E6">
+                <path d="M0,0.142262857 L0,118.999406 L80,118.999406 L80,31.837501 L48,0.142262857 L0,0.142262857 Z M4,4.10614857 L44,4.10614857 L44,35.7994057 L76,35.7994057 L76,115.039482 L4,115.039482 L4,4.10614857 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="16 51.647619 64 51.647619 64 47.6857143 16 47.6857143"></polygon>
+                <polygon id="Fill-3" points="16 59.5714286 64 59.5714286 64 55.6095238 16 55.6095238"></polygon>
+                <polygon id="Fill-4" points="16 67.4952381 40 67.4952381 40 63.5333333 16 63.5333333"></polygon>
+            </g>
+            <text id="Bluemix-bill" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="644.924" y="205">Bluemix bill</tspan>
+            </text>
+            <g id="Page-1" transform="translate(689.000000, 44.000000)" fill="#5596E6">
+                <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="16 53 64 53 64 49 16 49"></polygon>
+                <polygon id="Fill-3" points="16 61 64 61 64 57 16 57"></polygon>
+                <polygon id="Fill-4" points="16 69 40 69 40 65 16 65"></polygon>
+            </g>
+            <g id="Page-1" transform="translate(402.000000, 361.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M79.6062,31.6062 L70.6062,40.6062 C67.7727,43.4397 64.0062,44.9997 59.9997,44.9997 C58.0722,44.9997 56.1972,44.6517 54.4647,44.0202 L67.2432,31.2432 L58.7577,22.7577 L45.9792,35.5347 C45.3477,33.8037 44.9997,31.9287 44.9997,29.9997 C44.9997,25.9932 46.5597,22.2267 49.3932,19.3932 L58.3932,10.3932 C61.2267,7.5597 64.9932,5.9997 68.9997,5.9997 C73.0062,5.9997 76.7727,7.5597 79.6062,10.3932 C82.4397,13.2267 83.9997,16.9932 83.9997,20.9997 C83.9997,25.0062 82.4397,28.7727 79.6062,31.6062 M44.9997,59.9997 C44.9997,64.0062 43.4397,67.7727 40.6062,70.6062 L31.6062,79.6062 C28.7727,82.4397 25.0062,83.9997 20.9997,83.9997 C16.9932,83.9997 13.2267,82.4397 10.3932,79.6062 C7.5597,76.7727 5.9997,73.0062 5.9997,68.9997 C5.9997,64.9932 7.5597,61.2267 10.3932,58.3932 L19.3932,49.3932 C22.2267,46.5597 25.9932,44.9997 29.9997,44.9997 C31.9287,44.9997 33.8037,45.3477 35.5347,45.9792 L22.7577,58.7577 L31.2432,67.2432 L44.0202,54.4647 C44.6517,56.1972 44.9997,58.0722 44.9997,59.9997 M83.8497,6.1512 C80.0487,2.3517 74.7987,-0.0003 68.9997,-0.0003 C63.2007,-0.0003 57.9507,2.3517 54.1512,6.1512 L45.1512,15.1512 C41.3517,18.9507 38.9997,24.2007 38.9997,29.9997 C38.9997,33.6162 39.8577,37.0767 41.4222,40.0917 L40.0917,41.4222 C37.0782,39.8577 33.6162,38.9997 29.9997,38.9997 C24.2007,38.9997 18.9507,41.3517 15.1512,45.1512 L6.1512,54.1512 C2.3517,57.9507 -0.0003,63.2007 -0.0003,68.9997 C-0.0003,74.7987 2.3517,80.0487 6.1512,83.8497 C9.9507,87.6492 15.2007,89.9997 20.9997,89.9997 C26.7987,89.9997 32.0487,87.6492 35.8497,83.8497 L44.8497,74.8497 C48.6492,71.0487 50.9997,65.7987 50.9997,59.9997 C50.9997,56.3832 50.1432,52.9227 48.5772,49.9077 L49.9077,48.5772 C52.9227,50.1432 56.3832,50.9997 59.9997,50.9997 C65.7987,50.9997 71.0487,48.6492 74.8497,44.8497 L83.8497,35.8497 C87.6492,32.0487 89.9997,26.7987 89.9997,20.9997 C89.9997,15.2007 87.6492,9.9507 83.8497,6.1512" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
+            </g>
+            <text id="Link-Bluemix-and--So" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="319.956" y="485">Link Bluemix and </tspan>
+                <tspan x="300.916" y="524">SoftLayer accounts</tspan>
+            </text>
+            <text id="For-the-next-billing" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal" line-spacing="32" fill="#3C3232">
+                <tspan x="1150.285" y="477">For the next billing cycle, you </tspan>
+                <tspan x="1148.395" y="509">will receive a single SoftLayer </tspan>
+                <tspan x="1135" y="541">bill that includes your SoftLayer </tspan>
+                <tspan x="1205.005" y="573">and Bluemix charges</tspan>
+            </text>
+            <text id="Bluemix-and--SoftLay" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold" fill="#3C3232">
+                <tspan x="1257.864" y="391">Bluemix and </tspan>
+                <tspan x="1250.952" y="430">SoftLayer bill</tspan>
+            </text>
+            <g id="Page-1" transform="translate(1309.000000, 221.000000)" fill="#000000">
+                <path d="M0,0.0003 L0,120.0003 L80,120.0003 L80,32.0003 L48,0.0003 L0,0.0003 Z M4,4.0003 L44,4.0003 L44,36.0003 L76,36.0003 L76,116.0003 L4,116.0003 L4,4.0003 Z" id="Fill-1"></path>
+                <polygon id="Fill-2" points="16 52 64 52 64 48 16 48"></polygon>
+                <polygon id="Fill-3" points="16 60 64 60 64 56 16 56"></polygon>
+                <polygon id="Fill-4" points="16 68 40 68 40 64 16 64"></polygon>
+            </g>
+            <g id="Group" transform="translate(857.500000, 412.500000) scale(1, -1) translate(-857.500000, -412.500000) translate(492.000000, 391.000000)" stroke="#AF6EE8" stroke-width="6" stroke-linecap="square">
+                <path d="M1.26034483,21.5 L731,21.5" id="Line"></path>
+                <path id="Line-decoration-1" d="M731,18.5 L731,24.5"></path>
+            </g>
+            <text id="After-you-link-accou" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal" line-spacing="32" fill="#1A1314">
+                <tspan x="515.04" y="247">After you link accounts, you </tspan>
+                <tspan x="474" y="279">will receive a separate bill for your </tspan>
+                <tspan x="503.385" y="311">Bluemix usage for the current </tspan>
+                <tspan x="560.04" y="343">month’s billing cycle.</tspan>
+            </text>
+            <text id="You-might-receive-a-" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal" line-spacing="32" letter-spacing="0.25000003" fill="#3C3232">
+                <tspan x="758.77" y="683">You might receive a separate bill </tspan>
+                <tspan x="744.93" y="715">for SoftLayer usage for the current </tspan>
+                <tspan x="727" y="747">billing cycle, depending on when you </tspan>
+                <tspan x="833.73" y="779">linked your accounts.</tspan>
+            </text>
+            <g id="Group-2" transform="translate(613.000000, 367.000000)" stroke-width="6">
+                <path d="M5.62030075,3 L223.515038,3" id="Line" stroke="#5596E6" stroke-dasharray="15,5" transform="translate(114.567669, 3.000000) scale(1, -1) translate(-114.567669, -3.000000) "></path>
+                <path d="M3,2 L3,43" id="Line" stroke="#AF6EE8" transform="translate(3.000000, 22.500000) scale(1, -1) translate(-3.000000, -22.500000) "></path>
+                <path d="M229,2 L229,43" id="Line-Copy" stroke="#AF6EE8" transform="translate(229.000000, 22.500000) scale(1, -1) translate(-229.000000, -22.500000) "></path>
+            </g>
+            <g id="Group-2" transform="translate(982.000000, 433.500000) rotate(-180.000000) translate(-982.000000, -433.500000) translate(877.000000, 412.000000)" stroke-width="6">
+                <path d="M5.05827068,3 L201.163534,3" id="Line" stroke="#FF2F2F" stroke-dasharray="15,5" transform="translate(103.110902, 3.000000) scale(1, -1) translate(-103.110902, -3.000000) "></path>
+                <path d="M3,2.77419355 L3,43" id="Line" stroke="#AF6EE8" transform="translate(3.000000, 22.887097) scale(1, -1) translate(-3.000000, -22.887097) "></path>
+                <path d="M207,2.77419355 L207,43" id="Line-Copy" stroke="#AF6EE8" transform="translate(207.000000, 22.887097) scale(1, -1) translate(-207.000000, -22.887097) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

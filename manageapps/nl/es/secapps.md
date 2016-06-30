@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *Última actualización: 9 de mayo de 2016*
+{: .last-updated}
 
 Puede proteger las app subiendo certificados SSL y limitando el acceso a las app.
 {:shortdesc}
@@ -102,7 +103,6 @@ Para cargar un certificado para la aplicación:
 del certificado, permitiendo de este modo autenticar al propietario de este certificado. Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente.
     
     Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
-
     
     En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
 

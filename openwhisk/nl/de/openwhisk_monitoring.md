@@ -18,6 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Aktivität mit dem {{site.data.keyword.openwhisk_short}}-Dashboard überwachen
 *Letzte Aktualisierung: 9. Februar 2016*
+{: .last-updated}
 
 Das [{{site.data.keyword.openwhisk}}-Dashboard](https://{DomainName}/whisk/dashboard/) stellt eine grafische Zusammenfassung Ihrer Aktivität bereit. Verwenden Sie das Dashboard, um die Leistung und den Status Ihrer {{site.data.keyword.openwhisk_short}}-Aktionen zu ermitteln. 
 {:shortdesc}

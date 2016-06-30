@@ -1,4 +1,4 @@
-﻿---
+---
 
  
 
@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *Dernière mise à jour : 25 février 2016*
+{: .last-updated}
 
 Vous pouvez configurer le service {{site.data.keyword.autoscaling}} à l'aide de l'interface de ligne de commande {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}. L'interface de ligne de commande {{site.data.keyword.autoscaling}} prend en charge Linux64, Win64 et OSX, et fournit des fonctionnalités semblables à celles de l'API RESTful de mise à l'échelle automatique.
 {: shortdesc}
@@ -106,7 +107,7 @@ Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d
 
 Vous pouvez afficher l'historique d'une activité de mise à l'échelle automatique d'une application spécifique. Un tableau d'enregistrements d'historique de mise à l'échelle automatique s'affiche dans l'interface de ligne de commande.
 
-```bx as history-show <NOM_APP>  [--start-date=<horodatage_début>]  [--end-date=<horodatage_fin>]  [--json]```
+```bx as history-show <NOM_APP>  [--start-date=<horodatage_début>][--end-date=<horodatage_fin>]  [--json]```
 {: codeblock}
 
 <dl class="parml">
@@ -121,7 +122,9 @@ Vous pouvez afficher l'historique d'une activité de mise à l'échelle automati
 **Astuce :** vous pouvez également utiliser l'option **--json** pour formater automatiquement la réponse JSON originale.
 
 # rellinks
+{: #rellinks}
 ## general
+{: #general}
 * [Service {{site.data.keyword.autoscaling}}](../../../services/Auto-Scaling/index.html)
 * [Interface de ligne de commande
 de {{site.data.keyword.Bluemix_notm}}](http://plugins.{DomainName}/ui/home.html){: new_window}

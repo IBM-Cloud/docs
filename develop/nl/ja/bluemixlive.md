@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*最終更新日: 2016 年 4 月 07 日*  
+*最終更新日: 2016 年 4 月 07 日*
+{: .last-updated}  
 
 Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix}} Live Sync を使用すると、{{site.data.keyword.Bluemix_notm}} にあるアプリケーション・インスタンスを迅速に更新して、デスクトップにある場合と同じように再デプロイせずに開発することができます。   
 {: shortdesc}
@@ -28,13 +29,13 @@ Node.js アプリケーションを作成する場合、{{site.data.keyword.Blue
 {{site.data.keyword.Bluemix_notm}} Live Sync は、3 つのフィーチャーで構成されています。
 
 **Desktop Sync**  
-    Dropbox の動作と同じように、デスクトップの任意のディレクトリー・ツリーをクラウド・ベースのプロジェクト・ワークスペースと同期させることができます。Web IDE は、同じクラウド・ベース・ワークスペースを直接編集するので、両者は常に同期が取れた状態にあります。Desktop Sync は、どのような種類のアプリケーションに対しても機能します。Desktop Sync を使用するには、BL コマンド・ライン・インターフェースをダウンロードしてインストールする必要があります。  
+Dropbox の動作と同じように、デスクトップの任意のディレクトリー・ツリーをクラウド・ベースのプロジェクト・ワークスペースと同期させることができます。Web IDE は、同じクラウド・ベース・ワークスペースを直接編集するので、両者は常に同期が取れた状態にあります。Desktop Sync は、どのような種類のアプリケーションに対しても機能します。Desktop Sync を使用するには、BL コマンド・ライン・インターフェースをダウンロードしてインストールする必要があります。  
 
 **Live Edit**
-    {{site.data.keyword.Bluemix_notm}} で実行中の Node.js アプリケーションに変更を加え、その変更をブラウザーで直ちにテストすることができます。同期されているデスクトップ・ディレクトリー内または Web IDE 内で加えた変更はすべて、直ちに当該アプリケーションのファイル・システムに伝搬されます。  
+{{site.data.keyword.Bluemix_notm}} で実行中の Node.js アプリケーションに変更を加え、その変更をブラウザーで直ちにテストすることができます。同期されているデスクトップ・ディレクトリー内または Web IDE 内で加えた変更はすべて、直ちに当該アプリケーションのファイル・システムに伝搬されます。  
 
 **Debug**  
-    Node.js アプリケーションが Live Edit モードになっている間は、そのアプリケーションにシェルを作成してデバッグできます。Node Inspector というデバッガーを使用して、コードの動的な編集、ブレークポイントの挿入、コードのステップスルー、ランタイムの再始動などを行うことができます。  
+Node.js アプリケーションが Live Edit モードになっている間は、そのアプリケーションにシェルを作成してデバッグできます。Node Inspector というデバッガーを使用して、コードの動的な編集、ブレークポイントの挿入、コードのステップスルー、ランタイムの再始動などを行うことができます。  
 
 Desktop Sync を使用すれば、デスクトップのワークスペースを、Web IDE を使用して直接編集するクラウド・ベースのプロジェクト・ワークスペースと同期が取れた状態で維持することができます。Live Edit を使用すれば、クラウド・ベースのプロジェクト・ワークスペース内の変更内容を、実行中のアプリケーションに伝搬させることができます。この 2 つのフィーチャーは、いずれか 1 つを使用することも、両方使用することもできます。そして、Desktop Sync または Live Edit を使用してアプリケーションを Live Edit モードにすると、実行中のアプリケーションをデバッグできます。
 
@@ -87,6 +88,7 @@ Desktop Sync では以下の点を考慮してください。
 
 ローカル・ディレクトリーにあるファイルを変更すると、その変更内容は、{{site.data.keyword.Bluemix_notm}} で稼動しているアプリケーションとプロジェクト・クラウド・ワークスペースの両方に自動的に伝搬します。
 Node アプリケーションの再始動が必要な場合は、以下のコマンドを使用できます。
+
 ```
 bl start --restart 
 ```
@@ -107,7 +109,7 @@ Live Edit を使用すれば、{{site.data.keyword.Bluemix_notm}} で実行中�
 
 Web IDE 内でファイルを変更すると、それらのファイルは {{site.data.keyword.Bluemix_notm}} で実行中のアプリケーションに自動的に再デプロイされます。Node アプリケーションの再始動が必要な場合、実行バーにある **「再始動」**ボタンを使用できます。
 
-**注:** {{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、内容がより整合したものになるには、256 MB の追加メモリーが必要であり、メモリーが追加されます。
+**注:** {{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、より一貫性のある動作をさせるためには、256MB の追加メモリーが必要であり、メモリーが追加されます。
 
 ##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
@@ -215,17 +217,18 @@ l *login*: {{site.data.keyword.Bluemix_notm}} にログインします。
 
 lo *logout*: {{site.data.keyword.Bluemix_notm}} からログアウトします。
 
-s *sync*: デスクトップとサーバー間の同期化処理を開始します。
+s *sync*: デスクトップとサーバー間の同期処理を開始します。
 
-c *create*: プライベート・プロジェクトを作成し、それをこのディレクトリー内の Git リポジトリーにリンクして、コンテンツを {{site.data.keyword.Bluemix_notm}} にデプロイします。
+c *create*: プライベート・プロジェクトを作成し、それをこのディレクトリー内の Git リポジトリーにリンクして、コンテンツを
+{{site.data.keyword.Bluemix_notm}} にデプロイします。 
 
 p *projects*: 同期に使用可能なすべてのプロジェクトをリストします。
 
-st *start*: {{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを開始します。
+st *start*: {{site.data.keyword.Bluemix_notm}} 内のアプリケーション・インスタンスを開始します。
 
-sp *stop*: {{site.data.keyword.Bluemix_notm}} のアプリケーション・インスタンスを停止します。
+sp *stop*: {{site.data.keyword.Bluemix_notm}} 内のアプリケーション・インスタンスを停止します。
 
-ss *status*: {{site.data.keyword.Bluemix_notm}} の実行中のアプリケーション・インスタンスの状況をリストします。
+ss *status*: {{site.data.keyword.Bluemix_notm}} 内の実行中のアプリケーション・インスタンスの状況をリストします。
 
 
 **arguments**
@@ -245,7 +248,7 @@ ss *status*: {{site.data.keyword.Bluemix_notm}} の実行中のアプリケー�
 
 **注:** 引数またはオプションにスペースが含まれる場合、値を二重引用符で囲んでください。
 
-## help
+## ヘルプ
 {: bl_help}
 
 ```
@@ -292,11 +295,13 @@ bl login | l [ -u username ][-p password ][ -s server ]
 
 **options**
 
--u *username*: {{site.data.keyword.Bluemix_notm}} へのログインに使用する IBM ID。
+-u *ユーザー名*:
+{{site.data.keyword.Bluemix_notm}} へのログインに使用する IBM ID。
 
--p *password*: IBM ID のパスワード。
+-p *パスワード*: IBM ID のパスワード。
 
--s *server*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名または IP アドレス。
+-s *サーバー*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名
+または IP アドレス。
 
 **例**
 
@@ -307,13 +312,13 @@ bl login | l [ -u username ][-p password ][ -s server ]
 bl login```
 {: pre}
 
-ユーザー `name@company.com` でログインします。
+ユーザー `name@company.com:` でログインします。
 
 ```
 bl login –u name@company.com –p pa55w0rd```
 {: pre}
 
-ユーザー `name@company.com`、パスワード *pa55 w0rd* でログインします。このパスワードはスペースを含むため、引用符で囲む必要があります。
+ユーザー `name@company.com` をパスワード *pa55 w0rd* でログインします。パスワードにスペースが含まれているため、引用符で囲む必要があります。
 
 ```
 bl login –u name@company.com –p “pa55 w0rd”```
@@ -344,7 +349,7 @@ bl projects | p
 このコマンドを使用して、ログイン・ユーザーが同期の対象として選択できるすべてのプロジェクトをリストします。
 
 
-## sync
+## Sync
 {: bl_sync}
 
 ```
@@ -361,15 +366,19 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremot
 
 **引数**
 
-*projectName*: *“alias | mproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *myproject* のみのプロジェクト名。
+*projectName*:*“alias | mproject”* という形式のプロジェクト名、
+あるいは該当プロジェクトをログイン・ユーザーが所有している場合には単に *myproject* のみの形式のプロジェクト名。
 
 **options**
 
--d *localDirectory*: ローカル・ディレクトリー・パス。デフォルトでは、現行フォルダー "." です。
+-d *localDirectory*: ローカル・ディレクトリー・
+パス。デフォルトでは、現行フォルダー "." です。
 
-*--overwritelocal*: プロジェクト・ワークスペースの内容でローカル・ディレクトリーを上書きします。
+*--overwritelocal*: プロジェクト・ワークスペースの
+内容でローカル・ディレクトリーを上書きします。
 
-*--overwriteremote*: ローカル・ディレクトリーの内容でプロジェクト・ワークスペースを上書きします。
+*--overwriteremote*: ローカル・ディレクトリーの内
+容でプロジェクト・ワークスペースを上書きします。
 
 *--verbose*: 詳細ロギングを表示します。
 
@@ -425,23 +434,25 @@ bl create | c [ -n PROJECT_NAME ][ -r REGION ] [ -o ORG ][ -s SPACE ] [ -g GIT_R
 
 -n *PROJECT_NAME*: プロジェクトの名前。デフォルト: 現行ディレクトリー名。
 
--r *REGION*: {{site.data.keyword.Bluemix_notm}} 地域。デフォルト: 米国南部。
+-r *REGION*:
+{{site.data.keyword.Bluemix_notm}} 地域。デフォルト: 米国南部。
 
 -o *ORG*: {{site.data.keyword.Bluemix_notm}} 組織。デフォルト: 検出された最初の組織。
 
 -s *SPACE*: {{site.data.keyword.Bluemix_notm}} スペース。デフォルト: 検出された最初のスペース。
 
--g *GIT_REPO*: 既存の Git リポジトリーで使用するリモート・リポジトリーの名前。デフォルト: 発信元。
+-g *GIT_REPO*: 既存の Git リポジトリーで使用するリ
+モート・リポジトリーの名前。デフォルト: 発信元。
 
 -e *GIT_EXE*: Git 実行可能ファイルの絶対パス。デフォルト: detected。
 
-*--creds*: Git 資格情報を求めるプロンプトを出します。
+*--creds*: Git 資格情報を求めるプロンプト。
 
 *--fork*: このディレクトリーをフォークしてプロジェクトおよびリポジトリーを作成します。
 
-*--public*: 新規プロジェクトをパブリックにします。
+*--public*: 新規プロジェクトを公開します。
 
-*--prompt*: すべての必須指定のオプションを求めるプロンプトを出し、有効な選択項目を示します。
+*--prompt*: すべての必須指定のオプションと有効な選択を求めるプロンプト。
 
 **例**
 
@@ -471,7 +482,10 @@ bl status | ss [ projectName ]
 
 **引数**
 
-*projectName*: `“alias | myproject”` という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に `myproject` のみのプロジェクト名。
+*projectName*:`“alias | myproject”
+` という形式のプロジェクト名、 あるいは該当プロジェクトをロ
+グイン・ユーザーが所有している場合には単に
+`myproject` のみの形式のプロジェクト名。
 
 **例**
 
@@ -515,15 +529,21 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 **引数**
 
-*projectName*: *“alias | myproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *myproject* のみのプロジェクト名。
+*projectName*:*“alias | myproject”
+* という形式のプロジェクト名、 あるいは該当プロジェクトをログ
+イン・ユーザーが所有している場合には単に *myproject* のみ
+の形式のプロジェクト名。
 
 **options**
 
--l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
+-l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル
+名 (例えば `mylaunchconfig.launch`)、または起動構成フ
+ァイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
 -m *manifestPath*: マニフェスト・ファイルのプロジェクト相対パス (例えば `manifest.yml`)。
 
-*--liveedit*: 関連付けられたアプリケーションをライブ編集モードで開始します。ビルドパックがライブ編集モードをサポートしない場合は、エラーで終了します。
+*--liveedit*: 関連付けられたアプリケーションをライ
+ブ編集モードで開始します。ビルドパックがライブ編集モードをサポートしない場合は、エラーで終了します。
 
 *--noliveedit*: 関連付けられたアプリケーションを通常モードで開始します。
 
@@ -560,8 +580,7 @@ bl start –l “launchConfigurations/my.launch” ```
 bl start –m “mymanifest.yml” ```
 {: pre}
 
-次のコマンドは、マニフェスト・ファイル `manifest.yml` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始します。これは、` bl start –m manifest.yml` と同等です。
-
+このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、```bl start –m manifest.yml`` と同等です。
 
 ```
 bl start```
@@ -581,11 +600,17 @@ bl stop | sp projectName [ -l launchConfiguration ]
 
 **引数**
 
-*projectName*: *“alias | mproject”* という形式のプロジェクト名、または、ログイン・ユーザーが所有しているプロジェクトの場合は単に *mproject* のみのプロジェクト名。
+*projectName*:*“alias | mproject”*
+という形式のプロジェクト名、 あるいは該当プロジェクトをログイン・ユー
+ザーが所有している場合には単に *mproject* のみの形式のプ
+ロジェクト名。
 
 **options**
 
--l *launchConfiguration*: 起動構成名 (例えば `mylaunchconfig`)、ファイル名 (例えば `mylaunchconfig.launch`)、または起動構成ファイルのプロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
+-l *launchConfiguration*: 起動構成名 (例えば
+`mylaunchconfig`)、ファイル名 (例えば
+`mylaunchconfig.launch`)、または起動構成ファイルの
+プロジェクト相対パス (例えば `launchConfigurations/mylaunchconf.launch`)。
 
 **例**
 

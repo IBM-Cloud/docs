@@ -51,7 +51,8 @@ copyright:
 # Tarifas
 {: #pricing}
 
-*Última actualización: 16 de mayo de 2016*
+*Última actualización: 1 de juno de 2016*
+{: .last-updated}
 
 Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista Panel de control de uso para comprobar el coste real después de crear las apps.
 {:shortdesc}
@@ -119,6 +120,8 @@ Puede convertir la cuenta gratuita en una cuenta facturable en cualquier momento
 Tras crear una cuenta facturable, puede editar la información que ha proporcionado. Pulse el **icono Configuración de perfil** en la esquina superior derecha de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Cuenta &gt; Tipo de cuenta** para editar la información.
 
 Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utilizar una cuenta de Pago según uso o una Suscripción, consulte [Obtención de ayuda en línea](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obtener más información.
+
+**Nota:** Si enlaza su cuenta de facturación de {{site.data.keyword.Bluemix_notm}} con una cuenta de SoftLayer, a partir del día 1 del próximo mes, los cargos de {{site.data.keyword.Bluemix_notm}} aparecerán en su factura de SoftLayer. Para obtener más detalles, consulte [Visualización de créditos](../admin//softlayerlink.html#bill_usage).
 
 ###Cuenta Pago según uso
 {: #pay-as-you-go}
@@ -300,18 +303,16 @@ total es $5000 USD. |	$5000 USD|
 ### Concesiones gratuitas para servidores virtuales
 {: #vms}
 
-Puede utilizar servidores virtuales de {{site.data.keyword.Bluemix_notm}} en la nube pública de IBM como características beta gratuitas. Se proporcionan concesiones gratuitas para el número de imágenes de servidor virtual que puede crear, el número de direcciones IP que tiene asignadas y la cantidad de memoria que se utiliza.
+Puede utilizar {{site.data.keyword.virtualmachineslong}} en la nube pública de IBM como función beta y de forma gratuita. Se proporcionan concesiones gratuitas para el número de imágenes de servidor virtual que puede crear, el número de direcciones IP que tiene asignadas y la cantidad de memoria que se utiliza.
 
 Las siguientes elementos son las concesiones gratuitas
-para los servidores virtuales de {{site.data.keyword.Bluemix_notm}} beta:
+para {{site.data.keyword.virtualmachineslong}} beta:
 
-* 8 instancias
-* 8 CPU virtuales
-* 12 GB de memoria
+* 2 instancias
+* 2 CPU virtuales
+* 8 GB de memoria
 * 200 GB de almacenamiento en bloque
-* 4 direcciones IP públicas
-
-Además, puede utilizar la infraestructura de servidores virtuales para suministrar servidores virtuales en sus nubes privadas de {{site.data.keyword.Bluemix_notm}}, siempre de acuerdo con los límites y cuotas de sus nubes privadas.
+* 5 direcciones IP públicas
 
 
 ##Cómo estimar sus costes
@@ -374,8 +375,7 @@ El precio de la app se puede calcular de la forma siguiente:
 <dt>Cuatro instancias de tiempo de ejecución de 256 MB de Node.js.</dt>
 <dd>Cargos de Bluemix para un tiempo de ejecución por GB por hora. El número de GB utilizados al mes es de <code>4 x 256 = 1024 MB o 1 GB al mes</code>. Suponga que hay <code>24 x 30 = 720 horas en un mes</code>, por consiguiente la app ha facturado <code>1 x 720 = 720 GB por hora</code>.
 <p>
-375 GB por hora están incluidos en la concesión gratuita al mes, compartidos en todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Por consiguiente, el coste total para el tiempo de ejecución es de
-                     <code>0,07 dólares x (720-375) = 24,15 dólares</code>.</p></dd>
+375 GB por hora están incluidos en la concesión gratuita al mes, compartidos en todos los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Por consiguiente, el coste total para el tiempo de ejecución es de <code>0,07 dólares x (720-375) = 24,15 dólares</code>.</p></dd>
 
 <dt>Dos políticas de Auto-Scaling (procesador y memoria)</dt>
 <dd>Las políticas de Auto-Scaling no tienen ningún coste.</dd>
@@ -420,6 +420,13 @@ La cuenta se factura al propietario por el uso total en el que han incurrido tod
 Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Si usted es el propietario de una cuenta, establezca **Organización** como **Todas las organizaciones** para ver el uso en toda la cuenta para un período de 12 meses. Pulse un mes concreto para ver el uso para ese mes. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
 
 Si selecciona una organización específica para la **Organización**, puede ver la utilización total para esa organización, incluido cualquier uso como parte de un nivel libre. Los cargos que se muestran para la organización no son los cargos que se le facturan. El uso de la capa libre se muestra como gratuita en el nivel de cuenta, pero no a nivel organizativo. Por lo tanto, cuando se ve el uso de la organización, verá el uso real para esa organización incluido el uso gratuito y de pago. Todo el uso organizativo se despliega en el uso de la cuenta una vez que se haya eliminado la capa libre.
+
+##Visualización de créditos
+{: #credits}
+
+Como propietario de una cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los créditos de su cuenta. Es posible que tenga créditos, por ejemplo, si ha vinculado una cuenta de SoftLayer con una cuenta de {{site.data.keyword.Bluemix_notm}}.
+
+Para abrir la vista Panel de control de uso, pulse el icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) y seleccione **Cuenta**. En la página que se muestra, pulse **Panel de control de uso**. En la vista puede ver los créditos, si existen, y la fecha de vencimiento. 
 
 ##Notificaciones
 {: #notifications}

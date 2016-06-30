@@ -80,6 +80,7 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 **예제**:
 
 이름이 `my_connection`인 새 vpn 연결을 작성합니다.
+
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
@@ -111,6 +112,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 **예제**:
 
 이름이 `my_ike`인 새 IKE 정책을 작성합니다.
+
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
@@ -142,6 +144,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 **예제**:
 
 이름이 `my_policy`인 IPSec 정책을 작성합니다.
+
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -169,6 +172,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 **예제**:
 
 이름이 `my_gateway`이고 유형이 `allContainerGroups`인 게이트웨이를 작성합니다.
+
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```

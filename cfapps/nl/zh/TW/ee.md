@@ -18,7 +18,8 @@ copyright:
 # 情境：端對端開發
 {: #ee}
 
-*前次更新：2016 年 4 月 18 日*
+*前次更新：2016 年 6 月 15 日*
+{: .last-updated}
 
 您可以使用 {{site.data.keyword.Bluemix}} 使用者介面、平台及工具選擇來建置、執行及部署應用程式。請遵循這份端對端開發情境以便開始使用。
 {:shortdesc}
@@ -26,7 +27,7 @@ copyright:
 ## 註冊
 {: #ee_start}
 
-開始之前，您必須先從 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) 註冊 IBM ID。然後就可以登入 {{site.data.keyword.Bluemix_notm}}，並開始免費試用 30 天。{{site.data.keyword.Bluemix_notm}} 提供 2 GB 執行時期記憶體和 10 個服務實例的額度供您免費試用。
+開始之前，您必須先從 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) 註冊 IBM ID。然後就可以登入 {{site.data.keyword.Bluemix_notm}}，並開始免費試用 30 天。{{site.data.keyword.Bluemix_notm}} 提供 2 GB 運行環境記憶體和 10 個服務實例的額度供您免費試用。
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面建立 Web 應用程式
 {: #ee_appui}
@@ -35,11 +36,12 @@ copyright:
 
 在 {{site.data.keyword.Bluemix_notm}} 中，應用程式與組織及空間相關聯。組織是由多個合作人員所擁有及使用。一開始，您會得到預設組織，它是以您的使用者名稱來命名，且您是唯一的合作人員。您也會在這個組織內得到一個空間。該空間是用來執行您應用程式的環境；例如，您可以有 dev 空間作為開發環境、test 空間作為測試環境，以及 production 空間作為正式作業環境。此外，每一個環境都屬於一個地區。使用 {{site.data.keyword.Bluemix_notm}}，您可以將應用程式部署至特定的地理區域，以獲得較低的網路延遲、資料隱私及更好的可用性。如需詳細資料，請參閱「地區」。
 
-針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下您位於右上方的帳戶名稱，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
+針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下**帳戶和支援**圖示 ![「帳戶和支援」圖示](../admin/images/account_support.svg)，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
 
-  1. 按一下加號按鈕。
-  2. 選取**計算**>**CF 應用程式**>**SDK for Node.js**。
-  3. 為您的應用程式鍵入唯一名稱（例如，TestNode），然後按一下**建立**。應用程式名稱在整個 {{site.data.keyword.Bluemix_notm}} 環境中必須是唯一的。
+  1. 選取**運算**。
+  2. 按一下加號圖示。
+  3. 選取 **SDK for Node.js**。
+  4. 為您的應用程式鍵入唯一名稱（例如，TestNode），然後按一下**建立**。應用程式名稱在整個 {{site.data.keyword.Bluemix_notm}} 環境中必須是唯一的。
   
 現在您會看到**開始撰寫程式碼**指示。您可以遵循指示來下載 TestNode 的入門範本程式碼，然後加以修改及部署。
 
@@ -59,6 +61,7 @@ copyright:
 現在您的應用程式已連結至 {{site.data.keyword.cloudant}} 服務。您可以在 VCAP_SERVICES 環境變數中，找到應用程式與服務實例通訊所需的全部資料。例如，因為 {{site.data.keyword.Bluemix_notm}} 在相同虛擬機器上管理數個應用程式，因此應用程式不能使用相同的 HTTP 埠號來接收送入的要求。為了避免衝突，會針對每個應用程式提供一個唯一的埠號。此埠號可在 VCAP_APP_PORT 變數下取得。
 
 按一下應用程式「概觀」頁面上的**環境變數**，查看 VCAP_SERVICES 的整份清單以取得相關資訊：
+
 ```
 {
    "cloudantNoSQLDB": [
@@ -181,7 +184,7 @@ copyright:
   例如，您的 Node.js 應用程式可能會存取此資訊，如下所示：
 ```
   if (process.env.VCAP_SERVICES) {
-        var env = JSON.parse(process.env.VCAP_SERVICES);
+var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -201,9 +204,7 @@ copyright:
   // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
-    var collection = conn.collection('messages');
-
-    // create message record
+var collection = conn.collection('messages');// create message record
     var parsedUrl = require('url').parse(req.url, true);
     var queryObject = parsedUrl.query;
     var name = (queryObject["name"] || 'Bluemix');
@@ -230,15 +231,15 @@ var create_message = function(req, res) {
 ## 計算應用程式成本
 {: #ee_billing}
 
-您的 30 天免費試用已過期，但還想要繼續使用 {{site.data.keyword.Bluemix_notm}}。您必須新增信用卡資訊，以成為「隨收隨付制」帳戶或「訂閱」帳戶，才能繼續使用 {{site.data.keyword.Bluemix_notm}}。不過，即使您轉換成付費帳戶，{{site.data.keyword.Bluemix_notm}} 還是會針對大部分的執行時期架構和服務提供免費額度。除非用量超過免費額度，否則 {{site.data.keyword.Bluemix_notm}} 不會向您收費。
+您的 30 天免費試用已過期，但還想要繼續使用 {{site.data.keyword.Bluemix_notm}}。您必須新增信用卡資訊，以成為「隨收隨付制」帳戶或「訂閱」帳戶，才能繼續使用 {{site.data.keyword.Bluemix_notm}}。不過，即使您轉換成付費帳戶，{{site.data.keyword.Bluemix_notm}} 還是會針對大部分的運行環境架構和服務提供免費額度。除非用量超過免費額度，否則 {{site.data.keyword.Bluemix_notm}} 不會向您收費。
 
 {{site.data.keyword.Bluemix_notm}} 提供預估器和計算機，可讓您查看應用程式成本。您可以使用下列方式查看 TestNode 的成本：
 
-  * 在儀表板中，按一下 TestNode。然後在「概觀」頁面中，按一下**預估此應用程式的成本**，以查看 **SDK for Node.js** 執行時期和支援的價格，並查看應用程式每月價格總計。
+  * 在儀表板中，按一下 TestNode。然後在「概觀」頁面中，按一下**預估此應用程式的成本**，以查看 **SDK for Node.js** 運行環境和支援的價格，並查看應用程式每月價格總計。
   
-  * 或者，在「定價單」頁面中，鍵入應用程式的執行時期和服務的每月用量。例如，3 個 **SDK for Node.js** 實例且每個實例有 1 GB 的記憶體。即會計算並顯示每月價格。
+  * 或者，在「定價單」頁面中，鍵入應用程式的運行環境和服務的每月用量。例如，3 個 **SDK for Node.js** 實例且每個實例有 1 GB 的記憶體。即會計算並顯示每月價格。
 
-您也可以手動計算應用程式成本，方法是將執行時期和服務的價格相加，再減掉免費額度。如需相關資訊，請參閱「手動計算您的成本」。
+您也可以手動計算應用程式成本，方法是將運行環境和服務的價格相加，再減掉免費額度。如需相關資訊，請參閱「手動計算您的成本」。
 
 ## 移除應用程式
 {: #ee_removing}

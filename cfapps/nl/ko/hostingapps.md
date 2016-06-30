@@ -18,6 +18,7 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}}에서 앱 호스팅
 
 *마지막 업데이트 날짜: 2016년 5월 9일*
+{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -165,7 +166,6 @@ Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않�
 
 ```
 services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
-
         url = services.values.map do |srvs|
           srvs.map do |srv|
             if srv[:credentials][:uri] =~ /^postgres/

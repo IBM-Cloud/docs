@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *Letzte Aktualisierung: 22. März 2016*
+{: .last-updated}
 
 Aktionen sind statusunabhängige Code-Snippets, die auf der {{site.data.keyword.openwhisk}}-Plattform ausgeführt werden. Bei einer Aktion kann es sich um eine JavaScript-Funktion, eine Swift-Funktion oder ein angepasstes ausführbares Programm, das in einem Docker-Container enthalten ist, handeln. Eine Aktion kann zum Beispiel zum Erkennen der Gesichter auf einem Bild, zum Aggregieren einer Gruppe von API-Aufrufen oder zum Senden eines Tweets verwendet werden.
 {:shortdesc}
@@ -75,7 +76,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 
   Die soeben erstellte Aktion `hello` wird angezeigt.
 
-4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in {{site.data.keyword.openwhisk_short}} mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf ausführen. Ein blockierender Aufruf wartet solange, bis die Aktion abgeschlossen ist, und gibt ein Ergebnis zurück. Im folgenden Beispiel wird der Blockierungsparameter `-blocking` verwendet:
+4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in {{site.data.keyword.openwhisk_short}} mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf ausführen. Ein blockierender Aufruf wartet solange, bis die Aktion abgeschlossen ist, und gibt ein Ergebnis zurück. Im folgenden Beispiel wird der Blockierungsparameter `--blocking` verwendet:
 
   ```
   wsk action invoke --blocking hello
@@ -83,7 +84,6 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
       "result": {
           "payload": "Hello world"
@@ -344,19 +344,20 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
-   action /whisk.system/util/head: Filter first K array elements and discard rest
-   action /whisk.system/util/date: Get current date and time
-   action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/cat: Array von Zeichenfolgen verknüpfen
+   action /whisk.system/util/head: Erstes K Array-Elemente filtern und Rest verwerfen
+   action /whisk.system/util/date: Aktuelles Datum und aktuelle Uhrzeit abrufen
+   action /whisk.system/util/sort: Array sortieren
+   action /whisk.system/util/split: Zeichenfolge in Array von Zeichenfolgen aufteilen
   ```
   {: screen}
 
-  Sie werden die Aktionen `cat` (Verketten) und `sort` (Sortieren) in diesem Beispiel verwenden.
+  Sie werden die Aktionen `split` (Aufteilen) und `sort` (Sortieren) in diesem Beispiel verwenden.
 
 2. Erstellen Sie eine Aktionsfolge, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -391,7 +392,9 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
 
   Wie leicht zu erkennen ist, sind die Zeilen im Ergebnis sortiert.
 
-**Hinweis:** Weitere Informationen zum Aufrufen von Aktionsfolgen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./openwhisk_actions.html##openwhisk_binding_actions)
+**Hinweis:** Weitere Informationen zum Aufrufen von Aktionsfolgen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./actions.md#setting-default-parameters)
+
+
 
 ## Swift-Aktionen erstellen
 {: #openwhisk_actions_swift}
@@ -416,7 +419,7 @@ Eine Aktion ist eine einfache Swift-Funktion der höchsten Ebene. Erstellen Sie 
 ```
 {: codeblock}
 
-Beachten Sie, dass Swift-Aktionen ebenso wie JavaScript-Aktionen ein Wörterverzeichnis (Dictionary) lesen und ein Wörterverzeichns generieren.
+Swift-Aktionen lesen stets ein Wörterverzeichnis (Dictionary) und generieren ein Wörterverzeichns.
 
 Sie können eine {{site.data.keyword.openwhisk_short}}-Aktion mit dem Namen `helloSwift` wie folgt aus dieser Funktion erstellen:
 
@@ -444,6 +447,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **Achtung:** Swift-Aktionen werden in einer Linux-Umgebung ausgeführt. Swift unter Linux befindet sich noch in Entwicklung und {{site.data.keyword.openwhisk_short}} arbeitet in der Regel mit dem neuesten verfügbaren Release, das jedoch nicht unbedingt stabil ist. Darüber hinaus ist es möglich, dass die mit {{site.data.keyword.openwhisk_short}} verwendete Version von Swift nicht mit den Versionen von Swift aus stabilen Releases von XCode on MacOS konsistent ist.
+
+
 
 ## Docker-Aktionen erstellen
 {: #openwhisk_actions_docker}

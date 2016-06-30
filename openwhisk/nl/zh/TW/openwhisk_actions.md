@@ -20,8 +20,9 @@ copyright:
 {: #openwhisk_actions}
 
 *前次更新：2016 年 3 月 22 日*
+{: .last-updated}
 
-動作是在 {{site.data.keyword.openwhisk}} 平台上執行的無狀態程式碼 Snippet。動作可以是 JavaScript 函數、Swift 函數，或包裝在 Docker 儲存器中的自訂可執行程式。例如，動作可以用來偵測映像檔中的樣式、聚集一組 API 呼叫，或張貼推文。
+動作是在 {{site.data.keyword.openwhisk}} 平台上執行的無狀態程式碼 Snippet。動作可以是 JavaScript 函數、Swift 函數，或包裝在 Docker 容器中的自訂可執行程式。例如，動作可以用來偵測映像檔中的樣式、聚集一組 API 呼叫，或張貼推文。
 {:shortdesc}
 
 可以明確地呼叫動作，或為回應某事件而執行動作。在任一情況下，執行動作都會根據唯一啟動 ID 來識別啟動記錄。動作的輸入及動作的結果是鍵值組的定義檔，其中索引鍵是字串，而值是有效的 JSON 值。
@@ -43,7 +44,7 @@ copyright:
   
   ```
   function main() {
-      return {payload: 'Hello world'};
+return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -75,7 +76,7 @@ copyright:
 
   您可以看到剛剛建立的 `hello` 動作。
 
-4. 建立動作之後，即可使用 'invoke' 指令透過 {{site.data.keyword.openwhisk_short}} 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫或*非封鎖* 呼叫來呼叫動作。封鎖呼叫會等待動作執行完成並傳回結果。這個範例使用封鎖參數 `-blocking`：
+4. 建立動作之後，即可使用 'invoke' 指令透過 {{site.data.keyword.openwhisk_short}} 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫或*非封鎖* 呼叫來呼叫動作。封鎖呼叫會等待動作執行完成並傳回結果。這個範例使用封鎖參數 `--blocking`：
 
   ```
   wsk action invoke --blocking hello
@@ -83,9 +84,8 @@ copyright:
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
-      "result": {
+"result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -117,7 +117,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello world"
+"payload": "Hello world"
   }
   ```
   {: screen}
@@ -144,7 +144,7 @@ copyright:
   
   ```
   function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -163,7 +163,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+"payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -192,7 +192,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Bernie from Vermont"
+"payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -207,7 +207,7 @@ copyright:
   {: pre}
   ```
   {  
-      "payload": "Hello, Bernie from Washington, DC"
+"payload": "Hello, Bernie from Washington, DC"
   }
   ```
   {: screen}
@@ -221,7 +221,7 @@ copyright:
 
   ```
   function main() {
-      setTimeout(function() {
+setTimeout(function() {
           return whisk.done({done: true});
       }, 20000);
       return whisk.async();
@@ -245,7 +245,7 @@ copyright:
   {: pre}
   ```
   {
-      "done": true
+"done": true
   }
   ```
   {: screen}
@@ -271,7 +271,7 @@ copyright:
   {: pre}
  ```
   {
-      "start": 1455881628103,
+"start": 1455881628103,
       "end":   1455881648126,
       ...
   }
@@ -304,7 +304,7 @@ copyright:
             whisk.done({msg: output});
         });
     
-        return whisk.async();
+return whisk.async();
     }
   ```
   {: codeblock}
@@ -344,19 +344,20 @@ copyright:
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenate array of strings, and split lines into an array
+   action /whisk.system/util/cat: Concatenate array of strings
    action /whisk.system/util/head: Filter first K array elements and discard rest
    action /whisk.system/util/date: Get current date and time
    action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  在此範例中，您將使用 `cat` 及 `sort` 動作。
+  在此範例中，您將使用 `split` 及 `sort` 動作。
 
 2. 建立動作序列，以將某個動作的結果當作下一個動作的引數來傳遞。
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -379,7 +380,7 @@ copyright:
   {: pre}
   ```
   {
-      "length": 3,
+"length": 3,
       "lines": [
           "Is full of regret.",
           "Over-ripe sushi,",
@@ -391,7 +392,9 @@ copyright:
 
   在結果中，會排序這些行。
 
-**附註**：如需使用多個具名參數來呼叫動作序列的相關資訊，請參閱[設定預設參數](./openwhisk_actions.html##openwhisk_binding_actions)。
+**附註**：如需使用多個具名參數來呼叫動作序列的相關資訊，請參閱[設定預設參數](./actions.md#setting-default-parameters)。
+
+
 
 ## 建立 Swift 動作
 {: #openwhisk_actions_swift}
@@ -406,8 +409,7 @@ copyright:
 動作只是最上層 Swift 函數。例如，建立稱為 `hello.swift` 且含有下列內容的檔案：
 
 ```
-  func main(args: [String:Any]) -> [String:Any] {
-      if let name = args["name"] as? String {
+  func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
       } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -416,7 +418,7 @@ return [ "greeting" : "Hello stranger!" ]
 ```
 {: codeblock}
 
-請注意，Swift 動作就像 JavaScript 動作一樣，一律會使用定義檔，並產生定義檔。
+Swift 動作一律會使用某個定義檔，並產生一個定義檔。
 
 您可以從此函數建立稱為 `helloSwift` 的 {{site.data.keyword.openwhisk_short}} 動作，如下所示：
 
@@ -443,6 +445,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
 
+
+
 ## 建立 Docker 動作
 {: #openwhisk_actions_docker}
 
@@ -450,7 +454,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 您的程式碼會編譯成可執行二進位檔，並內嵌至 Docker 映像檔。二進位程式與系統互動的方式是從 `stdin` 取得輸入，並透過 `stdout` 回覆。
 
-先決條件是您必須具備「Docker 中心」帳戶。若要設定免費 Docker ID 及帳戶，請移至 [Docker 中心](https://hub.docker.com){: new_window}。
+先決條件是您必須具備 Docker Hub 帳戶。若要設定免費 Docker ID 及帳戶，請移至 [Docker Hub](https://hub.docker.com){: new_window}。
 
 對於下面的指示，假設使用者 ID 是 "janesmith"，而密碼是 "janes_password"。假設已設定 CLI，則需要三個步驟才能設定供 {{site.data.keyword.openwhisk_short}} 使用的自訂二進位檔。之後，上傳的 Docker 映像檔可以當作動作使用。
 
@@ -474,7 +478,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   ```
   {: screen}
 
-  架構是一個 Docker 儲存器範本，您可以在其中以自訂二進位檔形式來注入程式碼。
+  架構是一個 Docker 容器範本，您可以在其中以自訂二進位檔形式來注入程式碼。
 
 2. 在 blackbox 架構中，設定您的自訂二進位檔。此架構已包括您可以使用的 C 程式。
 
@@ -487,7 +491,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   #include <stdio.h>
   
   int main(int argc, char *argv[]) {
-      printf("Hello %s from arbitrary C program!\n",
+printf("Hello %s from arbitrary C program!\n",
              (argc == 1) ? "anonymous" : argv[1]);
   }
   ```
@@ -524,7 +528,7 @@ wsk action invoke --blocking --result helloSwift --param name World
   {: pre}
   ```
   {
-      "msg": "Hello Rey from arbitrary C program!\n"
+"msg": "Hello Rey from arbitrary C program!\n"
   }
   ```
   {: screen}
@@ -563,7 +567,7 @@ wsk action invoke --blocking --result helloSwift --param name World
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
-    2016-02-11T16:46:56.842065025Z stdout: hello bob!
+2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
   {: screen}
 

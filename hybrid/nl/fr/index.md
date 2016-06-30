@@ -16,6 +16,9 @@ copyright:
 # Hybride
 {: #hybrid}
 
+*Dernière mise à jour : 8 juin 2016*
+{: .last-updated}
+
 Grâce aux modèles de déploiement intégrés public, dédié et local, {{site.data.keyword.Bluemix_notm}} vous permet d'expérimenter le
 cloud d'une toute autre façon. {{site.data.keyword.Bluemix_notm}} propose des déploiements de cloud adaptés à vos besoins, que vous soyez une
 petite entreprise qui prévoit d'évoluer ou une grande entreprise qui requiert un isolement supplémentaire. Vous pouvez procéder au développement dans un
@@ -39,6 +42,8 @@ données IBM SoftLayer. A service exclusif et mis à disposition sur une combina
 environnement {{site.data.keyword.Bluemix_notm}} est créé en fonction de vos besoins. De plus, avec le catalogue mixte, vous pouvez améliorer vos
 applications avec une combinaison de ressources de calcul et de services dédiés, ainsi que des capacités mises à disposition via la syndication du
 catalogue. En savoir plus sur l'[environnement {{site.data.keyword.Bluemix_notm}} dédié](../dedicated/index.html).
+
+**Remarque :** les informations concernant SoftLayer for {{site.data.keyword.Bluemix}} Dedicated ne s'appliquent pas à la Chine. 
 
 ## Local
 

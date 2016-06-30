@@ -33,5 +33,6 @@ copyright:
 
 {{site.data.keyword.jazzhub_short}} 还提供用于源代码控制的 Git Hosting 以及用于编辑、管理和部署代码的 Web IDE。在应用程序中，可以单击**添加 GIT** 链接来启用 Git Hosting，该链接位于应用程序“概述”页面的右上角。然后，可以单击**编辑代码**，在 Web IDE 中编辑应用程序的代码。使用 Web IDE shell 时，可以利用内容辅助来运行 cf 命令。例如，您可以通过输入以下命令来获取所有 Cloud Foundry 命令的列表：  
 ```
-help cfo```
+help cfo
+```
 {:pre}

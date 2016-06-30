@@ -18,6 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 대시보드를 사용하여 {{site.data.keyword.openwhisk_short}} 활동 모니터링
 *마지막 업데이트 날짜: 2016년 2월 9일*
+{: .last-updated}
 
 [{{site.data.keyword.openwhisk}} 대시보드](https://{DomainName}/whisk/dashboard/)는 활동에 대한 그래픽 요약을 제공합니다. 대시보드를 사용하여 {{site.data.keyword.openwhisk_short}} 조치의 성능 및 상태를 판별하십시오.
 {:shortdesc}

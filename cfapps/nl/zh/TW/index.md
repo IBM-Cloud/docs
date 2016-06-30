@@ -15,15 +15,16 @@ copyright:
 
 # 建立 Cloud Foundry 應用程式
 *前次更新：2016 年 4 月 18 日*
+{: .last-updated}
 
 使用 {{site.data.keyword.Bluemix}}，即可在 {{site.data.keyword.Bluemix_notm}} 使用者介面中建立您的應用程式。建立之後，您可以決定要繼續使用使用者介面、使用 cf 指令行介面，還是使用 {{site.data.keyword.jazzhub_title}} 來開發、追蹤、計劃及部署您的應用程式。
 {:shortdesc}
 
-在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，請從入門範本開始。*入門範本* 是一種範本，包括預先定義的服務，以及使用特定建置套件進行配置的應用程式碼。入門範本有兩種類型：樣板及執行時期。
+在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，請從入門範本開始。*入門範本* 是一種範本，包括預先定義的服務，以及使用特定建置套件進行配置的應用程式碼。入門範本有兩種類型：樣板及運行環境。
 
-*樣板* 是一種儲存器，它是針對應用程式及其相關聯執行時期環境，以及特定網域的預先定義服務。例如，Mobile Cloud 樣板包括 Node.js 執行時期，以及 Mobile Data、Mobile Application Security 和 Push 服務。此外，也包括 SDK 及範例應用程式，以便開始開發用來存取這些服務的行動式應用程式。
+*樣板* 是一種容器，它適用於應用程式及其相關聯運行環境，以及特定網域的預先定義服務。例如，Mobile Cloud 樣板包括 Node.js 運行環境，以及 Mobile Data、Mobile Application Security 和 Push 服務。此外，也包括 SDK 及範例應用程式，以便開始開發用來存取這些服務的行動應用程式。
 
-*執行時期* 是用來執行應用程式的資源集。{{site.data.keyword.Bluemix_notm}} 提供執行時期環境作為不同類型之應用程式的儲存器。執行時期環境會以建置套件的方式，整合到 {{site.data.keyword.Bluemix_notm}}，並會自動配置以供使用，且幾乎不需要維護。
+*運行環境* 是用來執行應用程式的資源集。{{site.data.keyword.Bluemix_notm}} 提供運行環境作為不同類型之應用程式的容器。運行環境會以建置套件的方式，整合到 {{site.data.keyword.Bluemix_notm}}，並會自動配置以供使用，且幾乎不需要維護。
 
 若要開始建立您的應用程式，請採取下列步驟：
   1. 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，移至「儀表板」。
@@ -41,18 +42,18 @@ copyright:
 
 <dl><dt>cf 指令行介面</dt>
 <dd>使用 cf 指令行介面來更新應用程式、建立服務實例，或將服務連結至應用程式。您也可以使用 cloud-cli 指令行介面來建立、更新及刪除服務供應項目。</dd>
-<dt>{{site.data.keyword.Bluemix_notm}} user interface</dt>
-<dd>使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來建置應用程式，包括挑選要結合的服務和執行時期，以解決您的商業問題。</dd>
+<dt>{{site.data.keyword.Bluemix_notm}} 使用者介面</dt>
+<dd>使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來建置應用程式，包括挑選要結合的服務和運行環境，以解決您的商業問題。</dd>
 <dt>{{site.data.keyword.jazzhub_title}}</dt>
 <dd>使用 {{site.data.keyword.jazzhub_title}} 在雲端中建立應用程式，並將其部署至 {{site.data.keyword.Bluemix_notm}}。{{site.data.keyword.jazzhub_title}} 所提供的服務包括 Track & Plan 和 Delivery Pipeline（列在 {{site.data.keyword.Bluemix_notm}}「型錄」的 DevOps 下），以及 Web IDE 和 Git Hosting。</dd>
 </dl>
 
 ## 提示
 
-開發 Web 應用程式請使用下列提示：
+開發 Web 應用程式時，請使用下列提示：
 
 <dl><dt>持續性</dt>
-<dd>請不要為您的應用程式指定任何本端儲存體。應用程式的每一個實例（即使只有一個實例在執行中）都可以隨時重新啟動，或移至不同的虛擬機器，這麼做一般是為了達到負載平衡。當移動或刪除該應用程式時，會一併消除儲存在本端儲存體中的所有內容。
+<dd>請不要為您的應用程式指定任何本端儲存空間。應用程式的每一個實例（即使只有一個實例在執行中）都可以隨時重新啟動，或移至不同的虛擬機器，這麼做一般是為了達到負載平衡。當移動或刪除該應用程式時，會一併消除儲存在本端儲存空間中的所有內容。
 請使用其中一個 Bluemix 資料儲存庫服務來持續保存。</dd>
 <dt>資源限制</dt>
 <dd>請注意試用帳戶可使用的資源數量限制。限制如下所示：<table style="width:100%">

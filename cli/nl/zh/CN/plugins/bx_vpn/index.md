@@ -28,11 +28,11 @@ copyright:
 
 **注：***先决条件*列出使用命令前必须执行的操作。先决条件可能会包含以下一个或多个操作：
 <dl>
-<dt>**Endpoint**</dt>
+<dt>**端点**</dt>
 <dd>使用此命令之前，必须通过 `bluemix api` 设置 API 端点。</dd>
-<dt>**Login**</dt>
+<dt>**登录**</dt>
 <dd>使用此命令之前，必须使用 `bluemix login` 命令登录。</dd>
-<dt>**Target**</dt>
+<dt>**目标**</dt>
 <dd>使用此命令之前，必须使用 `bluemix target` 命令来设置组织和空间。</dd>
 </dl>
 
@@ -81,6 +81,7 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 **示例**：
 
 创建名为 `my_connection` 的新 VPN 连接：
+
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
@@ -112,6 +113,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 **示例**：
 
 创建名为 `my_ike` 的新 IKE 策略：
+
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
@@ -143,6 +145,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 **示例**：
 
 创建名为 `my_policy` 的 IPSec 策略：
+
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -170,6 +173,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 **示例**：
 
 创建名为 `my_gateway` 且类型为 `allContainerGroups` 的网关：
+
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```

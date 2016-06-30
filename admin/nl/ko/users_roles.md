@@ -17,7 +17,8 @@ copyright:
 
 # 팀 구성원 및 역할 관리
 {: #userroles}
-*마지막 업데이트 날짜: 2016년 5월 16일*
+*마지막 업데이트 날짜: 2016년 6월 1일*
+{: .last-updated}
 
 계정의 **팀 디렉토리** 페이지에서 조직 및 영역에 있는 기존 팀 구성원 및 구성원의 역할을 관리하고 새 팀 구성원을 초대할 수 있습니다. 계정의 팀 디렉토리에 액세스하려면 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; *your_account_name* &gt; **팀 디렉토리**로 이동하십시오.
 {:shortdesc}
@@ -81,6 +82,8 @@ copyright:
 </ol>
 
 **보류 중인 보기**를 클릭하여 보류 중이거나 승인된 초대가 있는지 확인하십시오. 언제든지 보류 중인 초대에 대해 초대 이메일을 다시 보내거나 초대를 취소하도록 선택할 수 있습니다.
+
+SoftLayer 계정이 {{site.data.keyword.Bluemix_notm}} 계정과 링크되어 있으면, SoftLayer 팀 구성원을 추가할 수 있습니다. **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; *your_account_name* &gt; **팀 구성원 초대** 페이지로 이동하십시오. 그리고 **SoftLayer 팀 구성원 추가** 섹션에서 **추가**를 클릭하여 SoftLayer 계정으로 인증하고 SoftLayer 계정에서 팀 구성원의 목록을 보십시오. SoftLayer 계정에서 팀 구성원 추가에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 SoftLayer 팀 구성원 초대 ](../admin/softlayerlink.html#invite_users)를 참조하십시오. 
 
 ## 역할 편집
 {: #editinguserroles}

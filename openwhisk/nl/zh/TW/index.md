@@ -17,9 +17,10 @@ copyright:
 {:pre: .pre}
 
 # 開始使用 {{site.data.keyword.openwhisk_short}}
-*前次更新：2016 年 2 月 17 日*
+*前次更新：2016 年 6 月 6 日*
+{: .last-updated}
 
-{{site.data.keyword.openwhisk}} 是分散式事件驅動運算服務。{{site.data.keyword.openwhisk_short}} 會執行應用程式邏輯，以回應來自 Web 或透過 HTTP 的行動式應用程式的事件或直接呼叫。事件可以從 Bluemix 服務（如 Cloudant）以及外部來源提供。開發人員可以關注撰寫應用程式邏輯，以及建立依需求執行的動作。執行動作的比率一律會符合事件比率，導致固有擴充及備援以及最佳使用率。只需為您的使用量付費，而且不需要管理伺服器。您也可以取得[原始碼](https://github.com/openwhisk/openwhisk)，以及自行執行系統。
+{{site.data.keyword.openwhisk}} 是分散式事件驅動運算服務。{{site.data.keyword.openwhisk_short}} 會執行應用程式邏輯，以回應來自 Web 或透過 HTTP 的行動應用程式的事件或直接呼叫。事件可以從 Bluemix 服務（如 Cloudant）以及外部來源提供。開發人員可以關注撰寫應用程式邏輯，以及建立依需求執行的動作。執行動作的比率一律會符合事件比率，導致固有擴充及備援以及最佳使用率。只需為您的使用量付費，而且不需要管理伺服器。您也可以取得[原始碼](https://github.com/openwhisk/openwhisk)，以及自行執行系統。
 {: shortdesc}
 
 如需 {{site.data.keyword.openwhisk_short}} 運作方式的詳細資料，請參閱[關於 {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html)。
@@ -39,10 +40,10 @@ copyright:
 
 
 ## 從 iOS 應用程式使用 {{site.data.keyword.openwhisk_short}}
-使用 {{site.data.keyword.openwhisk_short}} iOS SDK，即可從 iOS 行動式應用程式或 Apple Watch 使用 {{site.data.keyword.openwhisk_short}}。如需詳細資料，請參閱 [iOS 文件](./openwhisk_mobile_sdk.html)。
+使用 {{site.data.keyword.openwhisk_short}} iOS SDK，即可從 iOS 行動應用程式或 Apple Watch 使用 {{site.data.keyword.openwhisk_short}}。如需詳細資料，請參閱 [iOS 文件](./openwhisk_mobile_sdk.html)。
 
 ## 使用 REST API 與 {{site.data.keyword.openwhisk_short}} 搭配
-啟用 {{site.data.keyword.openwhisk_short}} 環境之後，您可以使用 REST API 呼叫來搭配使用 {{site.data.keyword.openwhisk_short}} 與 Web 應用程式或行動式應用程式。如需動作、啟動、套件、規則及觸發程式的 API 的詳細資料，請參閱 [{{site.data.keyword.openwhisk_short}} API 文件](https://new-console.{DomainName}/apidocs/98)。
+啟用 {{site.data.keyword.openwhisk_short}} 環境之後，您可以使用 REST API 呼叫來搭配使用 {{site.data.keyword.openwhisk_short}} 與 Web 應用程式或行動應用程式。如需動作、啟動、套件、規則及觸發程式的 API 的詳細資料，請參閱 [{{site.data.keyword.openwhisk_short}} API 文件](https://new-console.{DomainName}/apidocs/98)。
 
 ## {{site.data.keyword.openwhisk_short}} Hello World 範例
 若要開始使用 {{site.data.keyword.openwhisk_short}}，請嘗試下列 JavaScript 程式碼範例。

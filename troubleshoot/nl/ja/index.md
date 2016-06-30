@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
@@ -15,7 +16,9 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-*最終更新日: 2016 年 5 月 16 日*
+*最終更新日: 2015 年 5 月 16 日*
+{: .last-updated}*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
@@ -278,7 +281,8 @@ at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(Async
 at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+[2015*
+{: .last-updated}-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
 com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
@@ -378,16 +382,7 @@ IBM Eclipse Tools for Bluemix が稼働している Java のバージョンを�
 ```
 process.env.VCAP_SERVICES
 ```
-他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。 
- 
-
- 
- 
-
-
-
-
-## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
+他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} を参照してください。## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
 
 サポートされないファセットが Eclipse プロジェクトに適用された場合、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない可能性があります。 
@@ -653,9 +648,7 @@ cf コマンド・ライン・インターフェースを使用する場合は�
 ```
 cf push <appname> -p <app_path>
 ```
-さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。 
-
-	  
+さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。  
 
 ## アプリケーションがプッシュされたときにユーザー定義変数が失われる
 {: #ts_varsnotretained}
@@ -805,8 +798,7 @@ push`` コマンドを **-n** オプションで使用します。```
 
  	
 	
-**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。
-{: tsResolve}
+**-p** オプションを使用して、WAR ファイルを指定するか、WAR ファイルへのパスを追加してください。以下に例を示します。{: tsResolve}
 
 ```
 cf push MyUniqueAppName01 -p app.war
@@ -815,13 +807,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。 	
-
-
-
-
-
-## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
+`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。## Liberty アプリケーションが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
@@ -949,7 +935,9 @@ Liberty アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる
 
  
 
-server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。詳しくは、『[Liberty for Java](../runtimes/liberty/index.html){: new_window}』を参照してください。
+server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。
+詳しくは、[『Liberty for
+Java』](../runtimes/liberty/index.html){: new_window}を参照してください。
 {: tsResolve}
 	
 	
@@ -1018,7 +1006,8 @@ DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプ�
 Meteor アプリにカスタム・ビルドパックを使用するには、以下のいずれかの方法を使用します。
 {: tsResolve}
 
-  * `manifest.yml` ファイルを使用してアプリをデプロイする場合は、buildpack オプションを使用して、カスタム・ビルドパックの URL または名前を指定します。以下に例を示します。
+  * `manifest.yml` ファイルを使用してアプリをデプロイする場合は、buildpack オプションを使用して、カスタム・ビルドパックの URL または名前を指定します。
+以下に例を示します。
 ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
@@ -1220,7 +1209,10 @@ Git リポジトリーが複製されない場合は、リポジトリーまた�
 この問題は、同じスペース内の異なるアプリケーションに対して同一の URL 経路を指定した場合に発生する可能性があります。
 {: tsCauses}
 
-例えば、myApp1 アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメインを「mynewapp.mybluemix.net」と設定します。次に、別の myApp2 アプリケーションを同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
+例えば、myApp1 アプリケーションを
+{{site.data.keyword.Bluemix_notm}} にプッシュし、そのドメイ
+ンを「mynewapp.mybluemix.net」に設定します。次に、別の myApp2 アプリケーションを
+同じスペースにプッシュし、その URL 経路の 1 つを「mynewapp.mybluemix.net」に設定します。この経路は、この時点で両方のアプリケーションにマップされています。
 
  
 
@@ -1351,10 +1343,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。
-	
-
-## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
+デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}
 
 サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない場合があります。この問題は、構成ファイルを Python アプリケーションのルート・ディレクトリーに追加することで解決できます。

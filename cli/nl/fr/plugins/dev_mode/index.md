@@ -14,10 +14,15 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Interface de ligne de commande en mode développement
+# (Obsolète) Interface de ligne de commande en mode développement
 {: #devmodecli}
 
-*Dernière mise à jour : 11 avril 2016*
+*Dernière mise à jour : 12 mai 2016*
+{: .last-updated}
+
+**Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement
+(dev_mode), utilisez IBM Eclipse Tools for Bluemix ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface CLI dev_mode
+jusqu'au 30 juin 2016.
 
 Via l'interface de ligne de commande en mode développement (CLI dev_mode), vous pouvez mettre à jour vos applications alors qu'elles s'exécutent dans le
 cloud. Celle-ci est construite comme un plug-in d'interface de ligne de commande cf et prend en
@@ -32,17 +37,17 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface CLI dev_mod
 - Démarrage, arrêt ou redémarrage de votre application dans le conteneur existant.
 
 ## Installation du plug-in dev_mode
-**Conditions préalables :** avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Pour plus de détails, voir [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli). 
+**Prérequis :** avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Pour plus de détails, voir [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli). 
 
 
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
 de l'interface de ligne de commande IBM Bluemix](http://plugins.{DomainName}).
-  2. Installez le plug-in dev_mode à l'aide de la commande cf install-plugin :
+  2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple : 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Installez le plug-in depuis le référentiel CLI de Bluemix
@@ -76,7 +81,7 @@ cf plugins
 
 Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode fréquemment utilisées :
 
-<table summary="Index des commandes dev_mode">
+<table summary="Index des commandes dev_mode"> 
  <thead>
  <th colspan="4">Commandes dev_mode</th>
  </thead>
@@ -177,7 +182,7 @@ cf delete-file <chemin_distant> [options_commande]
 
 ## start-inplace
 {: #start_inplace}
-Démarrez l'application dans le conteneur existant.
+Démarrez l'application dans le conteneur existant. 
 
 ```
 cf start-inplace <nom_app>
@@ -187,7 +192,7 @@ cf start-inplace <nom_app>
 
 ## stop-inplace
 {: #stop_inplace}
-Arrêtez l'application dans le conteneur existant.
+Arrêtez l'application dans le conteneur existant. 
 
 ```
 cf stop-inplace <nom_app>
@@ -198,7 +203,7 @@ cf stop-inplace <nom_app>
 ## restart-inplace
 {: #restart_inplace}
 
-Redémarrez l'application dans le conteneur existant.
+Redémarrez l'application dans le conteneur existant. 
 
 ```
 cf restart-inplace <nom_app>
@@ -211,10 +216,8 @@ cf restart-inplace <nom_app>
 
 ## Liens connexes
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [Interface de ligne de commande et outils de développement](../../index.html#cli){:new_window}
+* [Interface de ligne de commande en mode développement](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

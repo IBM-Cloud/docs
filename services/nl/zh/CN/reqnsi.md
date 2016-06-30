@@ -30,7 +30,9 @@ copyright:
 <dt><strong>类别</strong></dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 服务按不同的类别进行组织。在每个服务类别中，IBM 创建的服务最先列出，然后是第三方服务，最后是社区服务。</dd>
 <dt><strong>支持</strong></dt>
-<dd>系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：</dd>
+<dd>系统为 {{site.data.keyword.Bluemix_notm}} 服务提供了多个级别的支持。下表描述了 {{site.data.keyword.Bluemix_notm}} 服务的一般支持信息：
+
+</dd>
 </dl>
 
 
@@ -188,7 +190,8 @@ copyright:
 3. 使用以下命令将服务实例绑定到应用程序，其中 appname 是应用程序的名称；service_instance 是服务实例的名称。
 
     ```
-    cf bind-service appname service_instance```
+    cf bind-service appname service_instance
+    ```
 
 只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
 
@@ -232,7 +235,8 @@ copyright:
 要创建用户提供的服务实例并将其绑定到应用程序，请完成以下步骤：
 
 1. 创建用户提供的服务实例，方法是使用 **cf create-user-provided-service** 或 **cf cups** 命令：
-    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，cf 命令行界面会依次提示您提供每个参数的值。例如：```
+    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，cf 命令行界面会依次提示您提供每个参数的值。例如：
+        ```
         cf cups testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
@@ -304,7 +308,7 @@ copyright:
 
 	     ```
 	     cf bind-service myapp user-provided_service_instance
-	```
+	     ```
 
 
 

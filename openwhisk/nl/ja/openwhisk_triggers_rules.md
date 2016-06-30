@@ -18,7 +18,7 @@ copyright:
 
 # トリガーとルールの作成
 {: #openwhisk_triggers}
-*最終更新日: 2016 年 2 月 22 日*
+*最終更新日: 2016 年 2 月 22 日*{: .last-updated}
 
 {{site.data.keyword.openwhisk}} のトリガーとルールにより、プラットフォームにイベント・ドリブン機能がもたらされます。外部および内部のイベント・ソースからのイベントは、トリガーを通じてチャネル設定され、ルールによって許可されたアクションがこれらのイベントに対応します。
 {: shortdesc}
@@ -170,7 +170,7 @@ copyright:
   {: pre}
   ```
   {
-     "payload": "Hello, Donald from Washington, D.C."
+"payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}

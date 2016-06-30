@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *前次更新：2016 年 5 月 9 日*
+{: .last-updated}
 
 若要將應用程式部署至 {{site.data.keyword.Bluemix}}，您可以使用各種方式，例如，指令行介面及整合開發環境 (IDE)。還可以使用應用程式資訊清單來部署應用程式。使用應用程式資訊清單，可讓您減少每次將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，所必須指定的部署詳細資料數量。
 {:shortdesc}
@@ -28,11 +29,11 @@ copyright:
 
 在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構：{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
 
-在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 執行時期，或 .js 檔的 Node.js 執行時期。然後，DEA 會建立隔離的儲存器，其中包含建置套件及應用程式碼。儲存器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
+在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 運行環境，或 .js 檔的 Node.js 運行環境。然後，DEA 會建立隔離的容器，其中包含建置套件及應用程式碼。容器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
 ###啟動應用程式
 
-啟動應用程式時，即會建立 Warden 儲存器實例。您可以使用 **cf files** 指令來查看儲存在 Warden 儲存器檔案系統中的檔案，例如日誌。如果應用程式無法啟動，則 DEA 會停止該應用程式並移除 Warden 儲存器的所有內容。因此，如果應用程式停止或應用程式的編譯打包處理程序失敗，您將無法使用日誌檔。
+啟動應用程式時，即會建立 Warden 容器實例。您可以使用 **cf files** 指令來查看儲存在 Warden 容器檔案系統中的檔案，例如日誌。如果應用程式無法啟動，則 DEA 會停止該應用程式並移除 Warden 容器的所有內容。因此，如果應用程式停止或應用程式的編譯打包處理程序失敗，您將無法使用日誌檔。
 
 如果無法再使用應用程式的日誌，也就無法再使用 **cf files** 指令來查看編譯打包錯誤的原因，您可以改用 **cf logs** 指令。**cf logs** 指令使用 Cloud Foundry 日誌聚集器來收集應用程式日誌及系統日誌的詳細資料，而且您可以看見在日誌聚集器中緩衝的項目。如需日誌聚集器的相關資訊，請參閱 [Application Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
 
@@ -43,7 +44,7 @@ copyright:
 ##使用 cf 指令來部署應用程式
 {: #dep_apps}
 
-從指令行介面將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，必須依據您的應用程式語言及架構，提供建置套件作為執行時期環境。您也可以使用 Delivery Pipeline 服務，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
+從指令行介面將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，必須依據您的應用程式語言及架構，提供建置套件作為運行環境。您也可以使用 Delivery Pipeline 服務，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
 {{site.data.keyword.Bluemix_notm}} 提供支援 Java 及 Node.js 的內建建置套件。如果您是使用這些語言及架構，則在使用指令行介面來部署應用程式時，不需要指定建置套件。因為 {{site.data.keyword.Bluemix_notm}} 是建置在 Cloud Foundry 上，所以指令預設為這些建置套件。
 
@@ -84,7 +85,7 @@ copyright:
 
   ```
   {
-        "name": "MyUniqueNodejs01",
+"name": "MyUniqueNodejs01",
         "version": "0.0.1",
         "description": "A sample package.json file",
         "dependencies": {
@@ -111,7 +112,7 @@ copyright:
 
 ###在多個空間中部署應用程式
 
-應用程式專屬於它部署到的空間。您無法在 {{site.data.keyword.Bluemix_notm}} 中，將應用程式從一個空間移動或複製到另一個空間。若要在多個空間中部署應用程式，您必須在要使用應用程式的每個空間部署應用程式，步驟如下：
+應用程式專屬於它部署到的空間。您無法在 {{site.data.keyword.Bluemix_notm}} 中，將應用程式從一個空間移動或複製到另一個空間。若要在多個空間中部署應用程式，您必須在每個要在其中使用應用程式的空間裡部署應用程式，步驟如下：
 
   1. 使用 **cf target** 指令與 **-s** 選項，切換至您要部署應用程式的空間：
   
@@ -156,7 +157,7 @@ cf push -f appManifest.yml
 |**instances**	|要為應用程式建立的實例數。	|`instances: 2`|
 |**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值為 60 秒。	|`timeout: 80`|
 |**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值為 **false**。	|`no-route: true`|
-|**random-route**	|布林值，指派隨機路徑給應用程式。預設值為 **false**。	|`random-route: true`|
+|**random-route**	|布林值，將隨機路徑指派給應用程式。預設值為 **false**。	|`random-route: true`|
 |**services**	|要連結至應用程式的服務。	|`services:   - mysql_maptest`|
 |**env**	|應用程式的自訂環境變數。|`env: DEV_ENV: production`|
 *表 1. manifest.yml 檔案中支援的選項*
@@ -197,7 +198,7 @@ cf push -f appManifest.yml
   ```
   {
    "VCAP_SERVICES": {
-    "AppScan Dynamic Analyzer": [
+"AppScan Dynamic Analyzer": [
      {
       "credentials": {
        "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
@@ -345,11 +346,11 @@ cf push -f appManifest.yml
 <li>下列變數透過「Node.js 建置套件」定義：
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
-	<dd>Node.js 執行時期環境的目錄。</dd>
+	<dd>Node.js 運行環境的目錄。</dd>
 	<dt><strong>CACHE_DIR</strong></dt>
-	<dd>Node.js 執行時期環境用於快取的目錄。</dd>
+	<dd>Node.js 運行環境用於快取的目錄。</dd>
 	<dt><strong>PATH</strong></dt>
-	<dd>Node.js 執行時期環境所使用的系統路徑。</dd>
+	<dd>Node.js 運行環境所使用的系統路徑。</dd>
 	</dl>
 </li>
 </li>

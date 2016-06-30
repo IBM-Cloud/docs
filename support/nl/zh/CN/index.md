@@ -12,7 +12,8 @@ copyright:
 # 获取客户支持
 {: #getting-customer-support}
 
-*上次更新时间：2016 年 6 月 8 日*
+*上次更新时间：2016 年 6 月 17 日*
+{: .last-updated}
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可以使用多个支持选项，例如，通过论坛获取帮助或开具支持凭单。
@@ -36,8 +37,9 @@ copyright:
 
 Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了丰富的可供搜索的答案。如果找不到现有答案，请提出新问题。 
 
-  * 转至 [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}，以提出有关使用 Bluemix 平台和服务开发应用程序的技术问题。
+  * 转至 [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}，以提出有关使用 Bluemix 平台和服务开发应用程序的技术问题。
   * 转至 [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}，以提出有关 {{site.data.keyword.Bluemix_notm}} 产品以及入门指示信息的问题。
+  * 在中国，转至 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 来提出问题。
 
 您还可以通过完成以下步骤，在 Stack Overflow 中直接从“帐户和支持”提出问题：
   1. 在“帐户和支持”中，单击**获取帮助**。 
@@ -147,21 +149,22 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 
 如果通过故障诊断和帮助选项无法解决您的技术问题，您可以请求支持。但是，在就技术问题联系支持人员之前，请通过检查 {{site.data.keyword.Bluemix_notm}} 状态以确保问题不是因中断而引起的。
 
-如果问题不是因中断而引起的，请使用以下某个选项来开具支持凭单：
+如果问题不是因中断而引起的，且您是某个国家或地区（中国除外）的客户，请使用以下某个选项来开具支持凭单：
 
   * 在“帐户和支持”中，单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
-  * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**开具凭单**，然后填写支持表单。 
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**磁贴后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看左侧导航窗格中的[服务](../services/index.html){: new_window}下的类别。  
+  * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**提交凭单**，然后填写支持表单。 
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**磁贴后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看左侧导航窗格中的[服务](../services/index.html){: new_window}下的类别。  
   
 
 
 开具支持凭单时，确保为您的凭单指示了适当的严重性。严重性将决定凭单的处理方式。请参阅[支持凭单严重性和响应时间](index.html#support-ticket-severity){: new_window}，以获取有关不同严重性的信息。如果请求非常紧急，但您只具有免费或基本支持，那么可以升级您的帐户以提交高严重性（1 级、2 级和 3 级）凭单。要将帐户升级到更高支持级别，请通过电子邮件 sales@bluemix.net 联系 IBM 销售代表。
 
+如果您是中国的客户，那么您可以从 [UNISYS Service Management IBM Bluemix 页面](https://chinabluemix.itsm.unisysedge.cn){: new_window}，获取您帐户的支付支持。
+
 #### 检查支持凭单状态
 {: #check-ticket-status}
 
-每张支持凭单都会分配有唯一的凭单编号以方便查询。可以在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中使用凭单号来查看支持凭单的进度以及更新支持凭单。更新和响应会通过电子邮件发送给您并记录在凭单说明中。  
-
+每张支持凭单都会分配有唯一的凭单编号以方便查询。在中国之外的国家或地区，可以在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中使用凭单号来查看支持凭单的进度以及更新支持凭单。更新和响应会通过电子邮件发送给您并记录在凭单说明中。 
 
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Dedicated 支持
@@ -178,7 +181,8 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 <li>如果您没有 IBM 标识，那么可以联系您组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Dedicated 环境中 {{site.data.keyword.Bluemix_notm}} 用户界面的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p></li>
 </ul>
 
-对于在中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，您可以通过[UNISYS 服务管理页面](https://chinabluemix.itsm.unisysedge.cn){: new_window} 要求提供支持服务。此外，在中国的用户还可以在 [IBM 中国开发者论坛](https://developer.ibm.com/cn_answers/bluemix/){: new_window}获得免费支持。
+如果您是中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，那么您可以从 [UNISYS Service Management IBM Bluemix 页面](https://chinabluemix.itsm.unisysedge.cn){: new_window}，请求支持。此外，中国的客户还可以在 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 上获取免费支持。
+
 
 ### 联系 {{site.data.keyword.Bluemix_notm}} Local 支持
 {: #contacting-bluemix-support-local}
@@ -233,7 +237,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 ### 上报支持凭单
 {: #escalation}
 
-对于标准或高级支持，如果您未收到对支持凭单的及时响应，或者如果您认为支持凭单未得到恰当处理，那么可以上报支持凭单。通过支持凭单上报过程，IBM 管理人员将复查您的问题，并与您合作来改进支持体验。
+对于标准或高级支持，在中国之外的国家或地区，如果您未收到对支持凭单的及时响应，或者如果您认为支持凭单未得到恰当处理，那么可以上报支持凭单。通过支持凭单上报过程，IBM 管理人员将复查您的问题，并与您合作来改进支持体验。
 
 要提交上报请求，请完成以下步骤：
   1. 使用摘要**上报请求**来开具新的支持凭单。
@@ -309,5 +313,5 @@ IBM 会定期向 Bluemix 客户发送调查，以获取客户对最近使用客�
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [安装 cf 命令工具](../starters/install_cli.html){: new_window} 
   * [SaaS 支持手册](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

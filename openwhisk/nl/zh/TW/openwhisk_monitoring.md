@@ -18,6 +18,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 儀表板監視 {{site.data.keyword.openwhisk_short}} 活動
 *前次更新：2016 年 2 月 9 日*
+{: .last-updated}
 
 [{{site.data.keyword.openwhisk}} 儀表板](https://{DomainName}/whisk/dashboard/)提供活動的圖形摘要。使用儀表板，以判定 {{site.data.keyword.openwhisk_short}} 動作的效能及性能。
 {:shortdesc}

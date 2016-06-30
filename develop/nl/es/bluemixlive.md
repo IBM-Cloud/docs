@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Última actualización: 07 de abril de 2016*  
+*Última actualización: 07 de abril de 2016*
+{: .last-updated}  
 
 Si está creando una app Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla.   
 {: shortdesc}
@@ -126,7 +127,7 @@ Al cambiar los archivos de Web IDE, se volverán a desplegar
 automáticamente en la app que se ejecuta en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, puede utilizar el botón **Reiniciar**
 de la barra de ejecución.
 
-**NOTA:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Edit, son necesarios 256 MB de memoria adicional y se añadirán. 
+**NOTA:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Edit, son necesarios 256 MB de memoria adicional y se añadirán.
 
 ##{{site.data.keyword.Bluemix_notm}} Live
 Debug {: #live-debug}
@@ -323,7 +324,7 @@ Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_not
 
 -p *contraseña*: La contraseña de su ID de IBM.
 
--s *servidor*: El nombre de servidor o la dirección IP del servidor de  {{site.data.keyword.jazzhub_short}}.
+-s *servidor*: El nombre de servidor o la dirección IP del servidor de {{site.data.keyword.jazzhub_short}}.
 
 **Ejemplos**
 
@@ -392,9 +393,9 @@ Utilice este mandato para iniciar la sincronización del contenido de un proyect
 
 -d *directorioLocal*: La vía de acceso al directorio local. El valor predeterminado es la carpeta actual ".".
 
-*--overwritelocal*: Sobrescribe el directorio local con el contenido del espacio de trabajo del proyecto. 
+*--overwritelocal*: Sobrescribe el directorio local con el contenido del espacio de trabajo del proyecto.
 
-*--overwriteremote*: Sobrescribe el espacio de trabajo del proyecto con el contenido del directorio local. 
+*--overwriteremote*: Sobrescribe el espacio de trabajo del proyecto con el contenido del directorio local.
 
 *--verbose*: Muestra el registro detallado.
 
@@ -407,7 +408,7 @@ bl sync
 ```
 {: pre}
 
-Este mandato empieza la sincronización y es equivalente a `bl sync “alias | myproject”` si el propietario del proyecto es el usuario que ha iniciado sesión. 
+Este mandato empieza la sincronización y es equivalente a `bl sync “alias | myproject”` si el propietario del proyecto es el usuario que ha iniciado sesión.
 
 ```
 bl sync  myproject
@@ -454,13 +455,13 @@ Utilice este mandato desde un directorio que contenga código para crear un proy
 
 -e *GIT_EXE*: Vía de acceso completo de un ejecutable de Git. Valor predeterminado: detectado.
 
-*--creds*: Solicita las credenciales de Git. 
+*--creds*: Solicita las credenciales de Git.
 
-*--fork*: Usar Fork para este directorio y crear un proyecto y repositorio. 
+*--fork*: Usar Fork para este directorio y crear un proyecto y repositorio.
 
-*--public*: Hace que el proyecto nuevo sea público. 
+*--public*: Hace que el proyecto nuevo sea público.
 
-*--prompt*: Solicita todas las opciones necesarias con las elecciones disponibles. 
+*--prompt*: Solicita todas las opciones necesarias con las elecciones disponibles.
 
 **Ejemplos**
 
@@ -504,7 +505,6 @@ bl status
 {: pre}
 
 Este ejemplo muestra el estado del proyecto *myproject* que es equivalente a `bl status “alias | myproject”` si el propietario del proyecto es el usuario que ha iniciado sesión.
-
 
 ```
 bl status myproject

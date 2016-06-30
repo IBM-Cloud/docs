@@ -16,11 +16,18 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} dédié
 {: #dedicated}
 
-*Dernière mise à jour : 16 mai 2016*
+*Dernière mise à jour : 13 juin 2016*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} est une plateforme à normes ouvertes reposant sur le cloud qui permet de construire, d'exécuter et de gérer des applications. Avec l'environnement {{site.data.keyword.Bluemix_notm}} dédié, vous bénéficiez de la puissance et de la simplicité de {{site.data.keyword.Bluemix_notm}}&mdash;et ce, dans votre propre environnement SoftLayer dédié, connecté de façon sécurisée à l'environnement {{site.data.keyword.Bluemix_notm}} public et à votre propre réseau.
 {:shortdesc}
+
+**Remarque :** toutes les informations concernant SoftLayer, les services inclus, le support et les ventes pour
+{{site.data.keyword.Bluemix}} Dedicated ne s'appliquent pas à la Chine. Les clients {{site.data.keyword.Bluemix}} Dedicated en Chine
+peuvent demander une assistance depuis le site [UNISYS Service Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. 
+Par ailleurs, les clients situés en Chine peuvent bénéficier d'un support gratuit sur les sites [IBM
+developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
 
 Tous les déploiements dédiés de {{site.data.keyword.Bluemix_notm}} incluent les fonctions et les avantages suivants gratuitement : réseau
 privé virtuel (VPN), réseau local virtuel (VLAN) privé, connectivité avec votre protocole LDAP, possibilité d'optimiser des applications et des bases de
@@ -43,22 +50,23 @@ contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{
 |Inclus | {{site.data.keyword.autoscaling}} | Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix_notm}} dédié. |
 |Facultatif | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}}
 et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de
-microservices.  |
+microservices. |
 |Facultatif | {{site.data.keyword.APIM}} | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
 |Facultatif | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL
 entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles
 d'application mobile et Web. |
 |Facultatif | {{site.data.keyword.dashdbshort}} | Utilisez dashDB pour stocker les données relationnelles, notamment les types spéciaux tels que les données géospatiales. Ensuite, analysez ces données avec l'analyse intégrée avancée ou SQL, comme l'analyse prédictive et l'exploration de données, l'analyse avec R et l'analyse géospatiale. |
 |Facultatif | {{site.data.keyword.datacshort}} | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
+| Facultatif (bêta) | Logging | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur
+{{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
 |Facultatif | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour
 envoyer des notifications à un périphérique iOS ou Android. Les notifications peuvent être ciblées pour tous les utilisateurs d'application ou pour un
 ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquettes. Vous pouvez administrer des périphériques, des étiquettes et des abonnements. Vous
 pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational
 State
-Transfer) pour développer plus en détail vos applications client.  |
+Transfer) pour développer plus en détail vos applications client. |
 |Facultatif | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} est un bus de messages évolutif, distribué et à haut
-débit permettant de combiner vos technologies sur site et hors site.
-{{site.data.keyword.messagehub}} s'appuie sur Apache Kafka, qui est un moteur de messagerie en temps réel rapide, évolutif et durable.  |
+débit permettant de combiner vos technologies sur site et hors site. {{site.data.keyword.messagehub}} s'appuie sur Apache Kafka, qui est un moteur de messagerie en temps réel rapide, évolutif et durable. |
 |Facultatif | {{site.data.keyword.SecureGateway}} | Le service {{site.data.keyword.SecureGateway}} fournit un moyen sécurisé pour connecter des applications {{site.data.keyword.Bluemix_notm}} à des emplacements distants sur site ou dans le cloud.  |
 |Facultatif | {{site.data.keyword.sescashort}} | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session
 qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client
@@ -80,16 +88,26 @@ depuis la vignette Service dans votre catalogue.
 |-------------------|-------------------|
 |Dedicated runtimes 16 GB capacity increase  | Extension de l'environnement d'exécution en lui ajoutant une capacité de
 16 Go. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | Environnement permettant l'exécution d'une version privée de
+{{site.data.keyword.apiconnect_short}} dans l'environnement dédié avec une capacité de 5 millions d'appels d'API par mois ciblant des projets d'API
+au niveau des départements de l'entreprise. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase | Extension de l'environnement
+{{site.data.keyword.apiconnect_short}} Professional offrant une capacité supplémentaire de 100000 appels d'API par mois. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | Environnement permettant l'exécution d'une version privée de
+{{site.data.keyword.apiconnect_short}} dans l'environnement dédié avec une capacité de 25 millions d'appels d'API par mois ciblant des projets d'API au
+niveau de l'entreprise. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | Extension de l'environnement
+{{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
+|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | Environnement permettant l'exécution d'une version privée de
+{{site.data.keyword.APIM}} dans l'environnement dédié avec une capacité de 1000 appels d'API par seconde. |
+|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | Environnement permettant l'exécution d'une version privée d'IBM API Management for
+Bluemix dans l'environnement privé avec une capacité de 500 appels d'API par seconde.  |
 |Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Inclut l'exécution d'une version privée de
 {{site.data.keyword.cloudantfull}} dans l'environnement dédié avec une capacité de conception de
 1,6 téraoctets  |
 |Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | Environnement permettant le déploiement et
 l'exécution d'instances {{site.data.keyword.datacshort}} et {{site.data.keyword.sescashort}} jusqu'à une capacité cumulée de
 50 Go. |
-|Dedicated Direct Link 1 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau
-SoftLayer approprié, conçu pour des transferts de données jusqu'à 1 Gbit/s. |
-|Dedicated Direct Link 10 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau SoftLayer approprié, conçu pour des transferts de
-données jusqu'à 10 Gbit/s. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | Une base de données par instance de service sur un serveur dédié avec
 64 Go de mémoire RAM, 16 UC virtuelles. Recommandé pour jusqu'à 1 To de pré-chargement de données, en fonction du type de compression.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | Une base de données par instance de service sur un serveur dédié sans système
@@ -98,18 +116,18 @@ d'exploitation avec 256 Go de mémoire RAM, 32 coeurs. Recommandé pour jusqu'à
 d'exploitation avec 256 Go de mémoire RAM, 32 coeurs. Recommandé pour jusqu'à 12 To de pré-chargement de données, en fonction du type de compression. Il s'agit
 d'un plan de stockage dense pour les environnements où les volumes de données sont plus importants et où les requêtes n'ont pas besoin de s'exécuter à la vitesse de
 la mémoire. |
-|Dedicated {{site.data.keyword.APIM}} 1000 API calls capacity  | Environnement permettant l'exécution d'une version privée de
-{{site.data.keyword.APIM}} dans l'environnement dédié avec une capacité de 1000 appels d'API par seconde. |
-|Dedicated {{site.data.keyword.APIM}} 500 API calls capacity increase  | Environnement permettant l'exécution d'une version privée d'IBM API Management for
-Bluemix dans l'environnement privé avec une capacité de 500 appels d'API par seconde.  |
+|Dedicated Direct Link 1 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau
+SoftLayer approprié, conçu pour des transferts de données jusqu'à 1 Gbit/s. |
+|Dedicated Direct Link 10 Gbps capacity | Lien réseau dédié se connectant directement au point de présence réseau SoftLayer approprié, conçu pour des transferts de
+données jusqu'à 10 Gbit/s. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated community services  | Environnement permettant le déploiement et l'exécution de services de communauté pouvant
 comprendre chacun jusqu'à 50 instances.  |
-|IBM Bluemix Dedicated Hardware Firewall - High Availability | Pare-feu matériel d'1 Gbit/s configuré pour la protection d'un serveur unique, de plusieurs serveurs
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated Hardware Firewall - High Availability | Pare-feu matériel d'1 Gbit/s configuré pour la protection d'un serveur unique, de plusieurs serveurs
 ou de tous les serveurs sur le même réseau local virtuel dans l'environnement Bluemix Dedicated. |
 |Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité  | Réseau privé virtuel Vyatta dédié d'1 Gbit/s configuré pour haute disponibilité
 et son utilisation par l'environnement dédié. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | Environnement permettant le
-déploiement et l'exécution d'instances {{site.data.keyword.mobilepushshort}} pouvant accepter 300 demandes par seconde.  |
+déploiement et l'exécution d'instances {{site.data.keyword.mobilepushshort}} pouvant accepter 300 demandes par seconde. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | Elargissement de l'environnement permettant l'exécution d'une
 version privée de
 {{site.data.keyword.iot_short}} dans l'environnement dédié avec une capacité de 100000 périphériques ou applications connectés simultanément
@@ -133,7 +151,6 @@ services publics et privés. Vous pouvez choisir les services publics qui satisf
 sécurité et de confidentialité des données. S'il s'agit d'une instance privée du service pour votre environnement dédié, l'étiquette "Dédié" est associée
 à la vignette de service dans votre catalogue. De même, s'il s'agit d'un service personnalisé, l'étiquette "Personnalisé" est associée à la
 vignette du service.
-
 
 *Tableau 3. Services disponibles pour syndication depuis {{site.data.keyword.Bluemix_notm}} Public par région*
 
@@ -289,7 +306,6 @@ pouvez procéder à la mise à niveau vers le niveau de support Premium afin d'u
 d'informations sur les différents niveaux de support, voir [Contacter le service de support](../support/index.html#contacting-support).
 Le responsable Client Success (CSM) effectue les types de tâche suivants :
 
-
 <ul>
 <li>Il permet l'adoption rapide de votre environnement {{site.data.keyword.Bluemix_notm}} dédié.</li>
 <li>Il distribue des ressources d'activation et de formation utiles permettant d'améliorer votre autonomie.</li>
@@ -299,7 +315,6 @@ vous utilisez.</li>
 
 L'équipe en charge des opérations et du support {{site.data.keyword.Bluemix_notm}} qui travaille avec vous sur votre instance
 {{site.data.keyword.Bluemix_notm}} peut accéder à votre environnement dédié, mais n'utilise cette possibilité que :
-
 
 <ul>
 <li>Pour répondre à des alertes et effectuer une maintenance opérationnelle</li>
@@ -351,7 +366,7 @@ surveillance. | IBM |
 pour l'environnement. Signer l'abonnement au support. | Client |
 |Procurer l'environnement | Procurer les ressources de traitement, le réseau et le stockage, notamment le réseau local virtuel des services et de base
 pour héberger {{site.data.keyword.Bluemix_notm}}, des services non virtualisés pour héberger Data Power, et le pare-feu SoftLayer. Fournir
-l'infrastructure pour autoriser un tunnel de réseau privé virtuel. | Client |
+l'infrastructure pour autoriser un tunnel de réseau privé virtuel. | IBM |
 |Installer les composants de plateforme, d'application, de surveillance et de gestion | Installer, configurer et vérifier les composants de plateforme,
 comme BOSH Director, le contrôleur de cloud, le gestionnaire de santé, la messagerie, les routeurs, les agents DEA et les fournisseurs de services, ainsi
 que les composants de surveillance qui sont définis dans le plan d'escalade et de détection des problèmes. | IBM |
@@ -401,7 +416,7 @@ responsabilité |
 |Ajuster la capacité |  Ajouter ou retirer de la capacité au fur et à mesure que vos besoins changent. | IBM |
 |Publier la maintenance et les mises à jour entrantes | Créer une documentation pour la maintenance requise des composants IBM. | IBM |
 |Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise au cours d'une fenêtre de 21 jours. Vous pouvez fournir les dates qui ne vous
-conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence.  | IBM et le client partagent la
+conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la
 responsabilité |
 |Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont
 déployés dans le catalogue. | IBM |
@@ -441,7 +456,7 @@ responsabilité |
 
 IBM gère et installe les mises à jour et les correctifs qu'elle juge nécessaires pour les contextes d'exécution et les services
 {{site.data.keyword.Bluemix_notm}}. Il se peut que les services ne soient pas disponibles pendant les fenêtres de maintenance. De plus, IBM
-collabore avec vous afin de planifier des mises à jour de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}. 
+collabore avec vous afin de planifier des mises à jour de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}.
 
 Les types suivants de maintenance sont requis pour l'environnement {{site.data.keyword.Bluemix_notm}}
 dédié :
@@ -450,14 +465,14 @@ dédié :
 <dd>Les services utilisent des fenêtres de maintenance standard prédéfinies qui peuvent entraîner leur indisponibilité. IBM n'exige pas l'approbation du
 client avant de procéder à la maintenance des services, mais tente de réduire l'impact sur vos services.<br />
 <br />
-IBM envoie des messages de diffusion concernant les changements qui sont planifiés pour chaque fenêtre de maintenance dans la page Statut.
-<br />
+IBM envoie des messages de diffusion concernant les changements qui sont planifiés pour chaque fenêtre de maintenance dans la page Statut.<br />
 <br />
 **Important** : certains services peuvent ne pas être disponibles au cours de la période de maintenance.</dd>
 
 <dt>**Maintenance standard de la plateforme {{site.data.keyword.Bluemix_notm}}**</dt>
 <dd>Les mises à jour de maintenance sont appliquées après accord entre le client et IBM au cours d'une fenêtre de 21 jours. Vous indiquez à IBM des
-fenêtres de maintenance pré-approuvées et des dates ou heures spécifiques qui ne vous conviennent pas ; IBM s'arrange pour planifier les mises à jour aux dates ou autour des dates que vous avez sélectionnées. <p>
+fenêtres de maintenance pré-approuvées et des dates ou heures spécifiques qui ne vous conviennent pas ; IBM s'arrange pour planifier les mises à jour aux dates ou autour des dates que vous avez sélectionnées.
+<p>
 <p>Accédez à **ADMINISTRATION > INFORMATIONS SYSTEME** pour afficher les mises à jour de maintenance planifiées et en attente. Pour plus
 d'informations sur la définition de fenêtres pré-approuvées et de dates d'indisponibilité, ainsi que sur l'affichage ou l'approbation des mises à jour de
 maintenance, voir <a href="../admin/index.html#oc_schedulemaintenance">Mises à jour de maintenance</a></p>.</dd>
@@ -550,7 +565,7 @@ vous connecter séparément pour accéder à chaque environnement. Chaque zone p
 200 kilomètres de la zone d'origine pour que la disponibilité soit assurée.
 2. Procurez-vous le nom de domaine unique dans lequel votre nouvelle application déployée va être hébergée. Par exemple, si votre domaine d'origine
 est *masociété.est.bluemix.net*, vous pouvez créer un environnement dédié avec un nouveau domaine tel que
-*masociété.ouest.bluemix.net* et procéder au déploiement dans le nouveau domaine. 
+*masociété.ouest.bluemix.net* et procéder au déploiement dans le nouveau domaine.
 3. A chaque fois que vous déployez votre application d'origine, déployez-la également dans la nouvelle zone. Pour plus d'informations sur le déploiement, voir [Téléchargement de votre application](../starters/upload_app.html).
 
 
@@ -577,7 +592,7 @@ plus d'informations sur l'utilisation de Dyn comme équilibreur de charge global
 En plus de permettre une disponibilité en continu, {{site.data.keyword.Bluemix_notm}} permet également une haute disponibilité
 à travers la plateforme en utilisant des technologies intégrées dans Cloud Foundry et d'autres composants.
 
-Ces technologies présentent les caractéristiques suivantes : 
+Ces technologies présentent les caractéristiques suivantes :
 
 <dl>
 <dt>Evolutivité DEA dans Cloud Foundry</dt>

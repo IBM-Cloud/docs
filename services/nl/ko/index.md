@@ -96,7 +96,7 @@ copyright:
 |{{site.data.keyword.retrieveandrankshort}}	|예 		|예 		|예|
 |{{site.data.keyword.SecureGateway}}		|예		|예		|예|
 |{{site.data.keyword.servicediscoveryshort}}		|예		|예		|아니오|
-|{{site.data.keyword.serviceproxyshort}}		|예		|아니오		|아니오|
+|{{site.data.keyword.serviceproxyshort}}		|예		|예		|아니오|
 |{{site.data.keyword.sescashort}}		|예		|예		|예|
 |{{site.data.keyword.ssofull}}			|예		|아니오		|아니오|
 |{{site.data.keyword.speechtotextshort}}	|예 		|예	 	|예|
@@ -117,9 +117,9 @@ copyright:
 
 
 ## 지속적 서비스 가용성
-{{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1으로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다. 
+{{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다. 
 
-계층 1으로 분류되는 서비스는 다음과 같습니다.
+계층 1로 분류되는 서비스는 다음과 같습니다.
   * {{site.data.keyword.apiconnect_short}}
   * {{site.data.keyword.cloudant}}
   * {{site.data.keyword.dashdbshort}}

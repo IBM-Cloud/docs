@@ -17,7 +17,8 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 入门
-*上次更新时间：2016 年 2 月 17 日*
+*上次更新时间：2016 年 6 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} 是一种分布式事件驱动型计算服务。{{site.data.keyword.openwhisk_short}} 执行应用程序逻辑以响应通过 HTTP 从 Web 或移动应用程序发出的事件或直接调用。事件可以通过 Bluemix 服务（如 Cloudant）提供，也可以从外部源提供。开发者可以专注于编写应用程序逻辑，以及创建按需执行的操作。执行操作的速率始终与事件速率相匹配，从而产生固有的扩展和弹性以及最佳利用率。您只需为您使用的内容付费，而且不必管理服务器。您也可以获取[源代码](https://github.com/openwhisk/openwhisk)，然后自行运行系统。
 {: shortdesc}

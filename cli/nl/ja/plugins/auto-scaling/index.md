@@ -18,6 +18,7 @@ copyright:
 {: #autoscalingcli}
 
 *最終更新日: 2016 年 2 月 25 日*
+{: .last-updated}
 
 {{site.data.keyword.autoscaling}} サービスは、{{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} を使用して構成することができます。{{site.data.keyword.autoscaling}} CLI は Linux64、Win64、および OSX をサポートしており、Auto-Scaling RESTful API が提供する機能と同様の機能を提供します。
 {: shortdesc}
@@ -31,10 +32,12 @@ copyright:
 以下のステップを実行して、リポジトリーを追加し、プラグインをインストールします。
 
 1. {{site.data.keyword.Bluemix_notm}} CLI プラグインのリポジトリーを追加するため、以下のコマンドを実行します。
+
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
 ```
 2. {{site.data.keyword.autoscaling}} CLI プラグインをインストールするため、以下のコマンドを実行します。
+
 ```
 bluemix plugin install auto-scaling -r bluemix-plugin-repo
 ```
@@ -56,9 +59,7 @@ Auto-Scaling ポリシーを特定のアプリに添付することができま�
 
 ## Auto-Scaling ポリシーの生成
 
-Auto-Scaling ポリシーは、コマンド・ライン・インターフェースで質問に答えていけば生成できます。入力内容によっては、Auto-Scaling ポリシーの定義が含まれた JSON ファイルは、ユーザーが入力する名前を付けて保存されます。ファイル名を入力しなければ、ポリシーのコンテンツは直接コマンド・ラインに表示され、ファイルには保存されません。次のコマンドを実行します。
-
-```bx as policy-create```
+Auto-Scaling ポリシーは、コマンド・ライン・インターフェースで質問に答えていけば生成できます。入力内容によっては、Auto-Scaling ポリシーの定義が含まれた JSON ファイルは、ユーザーが入力する名前を付けて保存されます。ファイル名を入力しなければ、ポリシーのコンテンツは直接コマンド・ラインに表示され、ファイルには保存されません。次のコマンドを実行します。```bx as policy-create```
 {: codeblock}
 
 
@@ -74,14 +75,9 @@ Auto-Scaling ポリシーは、コマンド・ライン・インターフェー�
 <dd class="pd">Auto-Scaling ポリシーを表示したいアプリの名前。デフォルトでは、JSON 構造は人間が読める一連の出力に変換されます。</dd>
 </dl>
 
-**ヒント:** 元の JSON 応答を人間が読めるように整形して表示するには、**--json** オプションを使用することもできます。
+**ヒント:** 元の JSON 応答を人間が読めるように整形して表示するには、**--json** オプションを使用することもできます。## Auto-Scaling ポリシーの切り離し
 
-
-## Auto-Scaling ポリシーの切り離し
-
-Auto-Scaling ポリシーをアプリから削除することができます。次のコマンドを実行します。
-
-```bx as policy-detach <APP_NAME>```
+Auto-Scaling ポリシーをアプリから削除することができます。次のコマンドを実行します。```bx as policy-detach <APP_NAME>```
 {: codeblock}
 
 <dl class="parml">
@@ -105,9 +101,7 @@ Auto-Scaling ポリシーをアプリから削除することができます。�
 
 ## アプリの Auto-Scaling 履歴の表示
 
-特定のアプリの Auto-Scaling アクティビティー履歴を表示することができます。Auto-Scaling 履歴レコードの表がコマンド・ライン・インターフェースに表示されます。
-
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>][--end-date=<end_timestamp>]  [--json]```
+特定のアプリの Auto-Scaling アクティビティー履歴を表示することができます。Auto-Scaling 履歴レコードの表がコマンド・ライン・インターフェースに表示されます。```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>][--end-date=<end_timestamp>]  [--json]```
 {: codeblock}
 
 <dl class="parml">
@@ -122,7 +116,9 @@ Auto-Scaling ポリシーをアプリから削除することができます。�
 **ヒント:** 元の JSON 応答を人間が読めるように整形して表示するには、**--json** オプションを使用することもできます。
 
 # 関連リンク
+{: #rellinks}
 ## 一般
+{: #general}
 * [{{site.data.keyword.autoscaling}} サービス](../../../services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}

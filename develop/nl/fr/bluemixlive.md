@@ -17,7 +17,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*Dernière mise à jour : 7 avril 2016*  
+*Dernière mise à jour : 7 avril 2016*
+{: .last-updated}  
 
 Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix}} Live Sync pour mettre rapidement à jour
 l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement sans redéploiement, comme vous le feriez sur le bureau.   
@@ -90,7 +91,7 @@ Pour plus de détails sur les commandes, voir [Commandes Bluemix Live Sync (bl)]
 :
 <pre class="codeblock">bl projects</pre>
 <p>Recherchez le nom de projet dans
-la liste qui correspond à votre application. Le nom de projet est au format <i>votre alias</i> | <i>nom de-votre-application</i>. </p>
+la liste qui correspond à votre application. Le nom de projet suit le format de votre <i>alias</i> | <i>nom d'application</i>. </p>
 </li>
 <li>Synchronisez votre environnement local avec votre projet dans {{site.data.keyword.Bluemix_notm}} à l'aide de la
 commande ci-après. Si vous êtes le propriétaire du projet, il suffit de spécifier nom-de-votre-application pour nom_projet.
@@ -301,14 +302,14 @@ Utilisez cette commande pour afficher l'aide sur une commande ou sur la liste de
 
 **Exemples**
 
-Affichez la liste des commandes : 
+Affichez la liste des commandes :
 
 ```
 bl --help
 ```
 {: pre}
 
-Affichez des informations détaillées sur la commande sync : 
+Affichez des informations détaillées sur la commande sync :
 
 ```
 bl sync --help
@@ -335,9 +336,9 @@ Utilisez cette commande pour vous connecter à {{site.data.keyword.Bluemix_notm}
 
 -u *nom_utilisateur* : votre ID IBM à utiliser pour la connexion à  {{site.data.keyword.Bluemix_notm}}.
 
--p *mot_de_passe* : le mot de passe associé à votre ID IBM. 
+-p *mot_de_passe* : le mot de passe associé à votre ID IBM.
 
--s *serveur* : nom ou adresse IP du serveur {{site.data.keyword.jazzhub_short}}. 
+-s *serveur* : nom ou adresse IP du serveur {{site.data.keyword.jazzhub_short}}.
 
 **Exemples**
 
@@ -416,7 +417,7 @@ l'utilisateur connecté.
 
 *--overwriteremote* : remplace l'espace de travail de projet par le contenu du répertoire local.
 
-*--verbose* : affiche la journalisation prolixe. 
+*--verbose* : affiche la journalisation prolixe.
 
 **Exemples**
 
@@ -455,7 +456,8 @@ bl sync monprojet –d  mondossier
 {: bl_create}
 
 ```
-bl create | c [ -n NOM_PROJET ][ -r REGION ] [ -o ORG ][ -s ESPACE ] [ -g REFERENTIEL_GIT ][-e EXE_GIT ] [ --creds ][ --fork ] [ --public ][ --prompt ] ```
+bl create | c [ -n NOM_PROJET ][ -r REGION ] [ -o ORG ][ -s ESPACE ] [ -g REFERENTIEL_GIT ][-e EXE_GIT ] [ --creds ][ --fork ] [ --public ][ --prompt ]
+```
 {: pre}
 
 **Objet**
@@ -467,7 +469,7 @@ du référentiel dans {{site.data.keyword.Bluemix_notm}}.
 
 -n *NOM_PROJET* : nom de votre projet. Par défaut : nom du répertoire de travail.
 
--r *REGION* : une région {{site.data.keyword.Bluemix_notm}}. Par défaut : Sud des Etats-Unis. 
+-r *REGION* : une région {{site.data.keyword.Bluemix_notm}}. Par défaut : Sud des Etats-Unis.
 
 -o *ORG* : une organisation {{site.data.keyword.Bluemix_notm}}. Par défaut : première organisation trouvée.
 
@@ -477,7 +479,7 @@ du référentiel dans {{site.data.keyword.Bluemix_notm}}.
 
 -e *EXE_GIT* : chemin d'accès complet à un exécutable Git. Par défaut : détecté.
 
-*--creds* : invite de saisie de vos données d'identification Git. 
+*--creds* : invite de saisie de vos données d'identification Git.
 
 *--fork* : dévie ce répertoire et crée un projet, ainsi qu'un référentiel.
 
@@ -566,8 +568,7 @@ l'utilisateur connecté.
 
 **Options**
 
--l *chemin_config_lancement* : nom de la configuration de lancement (par exemple `maconfiglancement`),
-nom de fichier
+-l *chemin_config_lancement* : nom de la configuration de lancement (par exemple `maconfiglancement`), nom de fichier
 (par exemple `maconfiglancement.launch` ou chemin relatif au projet d'accès au fichier de configuration de lancement (par exemple
 `launchConfigurations/maconfiglancement.launch`).
 
@@ -614,7 +615,6 @@ bl start –m “monmanifeste.yml”
 
 Cette commande démarre une instance d'application du projet qui est associé au répertoire de travail avec le fichier manifeste
 `manifest.yml` et équivaut à `bl start –m manifest.yml`.
-
 
 ```
 bl start

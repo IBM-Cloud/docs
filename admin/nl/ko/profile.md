@@ -18,23 +18,29 @@ copyright:
 # 프로파일 설정
 {: #usersettings}
 *마지막 업데이트 날짜: 2016년 5월 16일*
+{: .last-updated}
 
 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; **프로파일**로 이동하여 프로파일 설정을 업데이트하십시오.
 {:shortdesc}
 
  **프로파일** 페이지에서는 다음 정보를 설정하거나 업데이트할 수 있습니다.
 
- * 다른 {{site.data.keyword.Bluemix_notm}} 사용자가 볼 수 있는 프로파일 사진
+<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
+
  * 이름, 이메일, 전화번호, 비밀번호, 회사 및 역할을 포함한 IBM ID 정보
  * 분석 추적 설정
 
-## 프로파일 사진 변경
+<!-- pulled back, so removing content for now
+
+## Changing your profile photo
 {: #photo}
 
-1. **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; **프로파일**로 이동하십시오.
+1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
 
-* 새 사진을 업로드하려면 **사진 변경**을 클릭하십시오.
-* 사진을 제거하려면 **사진 제거**를 클릭하십시오.
+* Click **Change Photo** to upload a new photo.
+* Click **Remove Photo** to remove your photo.
+
+-->
 
 ## IBM ID 정보 편집
 {: #ibmid}
