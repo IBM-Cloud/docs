@@ -83,7 +83,7 @@ Failure to enter proper credentials results in an "Unauthorized" message in the 
 {: #samples}
 * [{{site.data.keyword.weather_short}} demo](http://weather-company-data-demo.mybluemix.net){: new_window}
 * [Places Insights hands-on lab](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
-* [What's the weather like in Bluemix?](https://developer.ibm.com/bluemix/2015/12/08/insights-weather-sample-overview){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} + Weather sample app](https://github.com/IBM-Bluemix/insights-weather){: new_window}
 * [IBM Cloud - Bare Metal, NYC Taxi Data, and Insights for Weather (YouTube tutorial)](https://www.youtube.com/watch?v=Uwmzpx9DZ5c){: new_window}
 
 ## api
