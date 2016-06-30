@@ -15,7 +15,7 @@ copyright:
 ## Convenções de instalação da célula
 {: cell_installation_conventions}
 
-Uma célula do WebSphere Application Server for Bluemix é instalada e configurada seguindo uma estrutura de diretório padronizada. A lista a seguir indica algumas das configurações importantes. Veja /etc/virtualimage.properties para obter uma lista completa das configurações.
+Uma célula do WebSphere Application Server for Bluemix é instalada e configurada seguindo uma estrutura de diretório padronizada. A lista a seguir indica algumas das configurações importantes.  Veja /etc/virtualimage.properties para obter uma lista completa das configurações.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
@@ -27,7 +27,7 @@ Uma célula do WebSphere Application Server for Bluemix é instalada e configura
 
 ## Convenções de instalação do Liberty Collective
 
-Um Liberty collective é instalado e configurado seguindo uma estrutura de diretório padronizada. A lista a seguir indica algumas das configurações importantes. Veja /etc/virtualimage.properties para obter uma lista completa das configurações.
+Um Liberty collective é instalado e configurado seguindo uma estrutura de diretório padronizada. A lista a seguir indica algumas das configurações importantes.  Veja /etc/virtualimage.properties para obter uma lista completa das configurações.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
