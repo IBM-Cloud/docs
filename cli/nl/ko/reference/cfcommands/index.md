@@ -17,6 +17,7 @@ copyright:
 # Cloud Foundry(cf) 명령
 
 *마지막 업데이트 날짜: 2016년 1월 29일*
+{: .last-updated}
 
 Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다.
 {:shortdesc}
@@ -28,6 +29,7 @@ Cloud Foundry(cf) 명령을 사용하여 앱을 관리할 수 있습니다.
 ## cf api
 
 {{site.data.keyword.Bluemix_notm}}API 엔드포인트의 URL을 지정하거나 표시합니다.
+
 ```
 cf api BluemixServerURL
 ```
@@ -50,6 +52,7 @@ cf api BluemixServerURL
 ## cf bind-service
 
 기존 서비스 인스턴스를 애플리케이션에 바인딩합니다.
+
 ```
 cf bind-service appname service_instance
 ```
@@ -66,12 +69,11 @@ cf bind-service appname service_instance
 ## cf create-service
 
 서비스 인스턴스를 작성합니다.
+
 ```
 cf create-service service_name service_plan service_instance
 ```
-예를 들어 `cf create-service DataWorks free my_dataworks`를 사용하여 무료 사용제가 있는 {{site.data.keyword.dataworks_short}} 서비스의 인스턴스를 작성할 수 있습니다. 
-
-<dl>
+예를 들어 `cf create-service DataWorks free my_dataworks`를 사용하여 무료 사용제가 있는 {{site.data.keyword.dataworks_short}} 서비스의 인스턴스를 작성할 수 있습니다. <dl>
 <dt>service_name</dt>
 <dd>서비스 이름입니다. </dd>
 <dt>service_plan</dt>
@@ -83,6 +85,7 @@ cf create-service service_name service_plan service_instance
 ## cf create-space
 
 영역을 작성합니다.
+
 ```
 cf create-space space_name
 ```
@@ -98,6 +101,7 @@ cf create-space space_name
 ## cf delete
 
 기존 애플리케이션을 삭제합니다.
+
 ```
 cf delete appname
 ```
@@ -113,6 +117,7 @@ cf delete appname
 ## cf delete-space
 
 영역을 삭제합니다.
+
 ```
 cf delete-space space_name
 ```
@@ -127,6 +132,7 @@ cf delete-space space_name
 ## cf events
 
 애플리케이션과 관련된 런타임 이벤트를 표시합니다.
+
 ```
 cf events appname
 ```
@@ -138,6 +144,7 @@ cf events appname
 ## cf help
 
 모든 cf 명령 또는 특정 cf 명령(command_name 매개변수가 사용된 경우)에 대한 도움말 정보를 표시합니다.
+
 ```
 cf help command_name
 ```
@@ -151,11 +158,11 @@ cf help command_name
 ## cf login
 
 {{site.data.keyword.Bluemix_notm}}에 로그인됩니다.
+
 ```
 cf login
 ```
-cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용할 수 있습니다.
-<dl>
+cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용할 수 있습니다.<dl>
 <dt>*-a* https://api.{DomainName}</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} API 엔드포인트의 URL입니다. 이 매개변수는 선택적 매개변수입니다. </dd>
 <dt>*-u* user_name</dt>
@@ -177,6 +184,7 @@ cf login 명령을 실행할 때 다음 매개변수 중 하나 이상을 사용
 ## cf logs
 
 애플리케이션의 STDOUT 및 STDERR 로그 스트림을 표시합니다.
+
 ```
 cf logs appname
 ```
@@ -190,6 +198,7 @@ cf logs appname
 ## cf marketplace
 
 Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
+
 ```
 cf marketplace
 ```
@@ -197,6 +206,7 @@ cf marketplace
 ## cf push
 
 새 애플리케이션을 Bluemix에 배치하거나, Bluemix에서 기존 애플리케이션을 업데이트합니다.
+
 ```
 cf push appname 
 ```
@@ -308,8 +318,8 @@ cf stop appname
 cf -v
 ```
 
-# 관련 링크
+# rellinks
 {: #rellinks}
-## 일반 
+## general 
 {: #general}
 * [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

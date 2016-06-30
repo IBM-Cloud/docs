@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
@@ -15,7 +16,9 @@ copyright:
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-*上次更新时间：2016 年 5 月 16 日*
+*上次更新时间：2015 年 5 月 16 日*
+{: .last-updated}*
+{: .last-updated}
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
@@ -278,7 +281,8 @@ at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(Async
 at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+[2015*
+{: .last-updated}-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
 com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
@@ -378,11 +382,11 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 ```
 process.env.VCAP_SERVICES
 ```
-有关可在其他程序语言中使用的命令的更多信息，请参阅 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。 
- 
+有关可在其他程序语言中使用的命令的更多信息，请参阅 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
 
- 
- 
+
+
+
 
 
 
@@ -654,7 +658,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 ```
 cf push <appname> -p <app_path>
 ```
-此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。 
+此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。
 
 	  
 
@@ -816,7 +820,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-有关 `cf push` 命令的更多信息，请输入 `cf push -h`。 	
+有关 `cf push` 命令的更多信息，请输入 `cf push -h`。
 
 
 
@@ -1021,8 +1025,8 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
-```
-  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
+  ```
+  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```

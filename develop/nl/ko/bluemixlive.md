@@ -17,42 +17,26 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
 
-*마지막 업데이트 날짜: 2016년 4월 7일*  
+*마지막 업데이트 날짜: 2016년 4월 7일*
+{: .last-updated}  
 
 Node.js 애플리케이션을 빌드하고 있는 경우, {{site.data.keyword.Bluemix}} Live Sync를 사용하여 재배치 없이 데스크탑에서처럼 {{site.data.keyword.Bluemix_notm}} 에서 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다.   
 {: shortdesc}
 
-변경할 경우 실행 중인
-{{site.data.keyword.Bluemix_notm}} 애플리케이션에서 변경사항을
-즉시 확인할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Live Sync는 명령행과 Web IDE에서
-모두 작동합니다. {{site.data.keyword.Bluemix_notm}} Live Sync를 사용하여
-Node.js로 작성된 애플리케이션을 디버그할 수 있습니다.  
+변경할 경우 실행 중인 {{site.data.keyword.Bluemix_notm}} 애플리케이션에서 변경사항을 즉시 확인할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Live Sync는 명령행과 Web IDE에서 모두 작동합니다. {{site.data.keyword.Bluemix_notm}} Live Sync를 사용하여 Node.js로 작성된 애플리케이션을 디버그할 수 있습니다.  
 
 {{site.data.keyword.Bluemix_notm}} Live Sync는 다음 세 가지 기능으로 구성됩니다.
 
 **Desktop Sync**  
-    Dropbox의 작동 방식과 유사하게, 데스크탑 디렉토리 트리를 클라우드 기반 프로젝트 작업공간과
-동기화할 수 있습니다. Web IDE의 경우 동일한 클라우드 기반 작업공간을 직접 편집하므로
-둘 다 동기화 상태로 유지됩니다. Desktop Sync는
-모든 종류의 애플리케이션에서 작동합니다. Desktop Sync를 사용하려면 BL 명령행 인터페이스를
-다운로드하여 설치해야 합니다.  
+Dropbox의 작동 방식과 유사하게, 데스크탑 디렉토리 트리를 클라우드 기반 프로젝트 작업공간과 동기화할 수 있습니다. Web IDE의 경우 동일한 클라우드 기반 작업공간을 직접 편집하므로 둘 다 동기화 상태로 유지됩니다. Desktop Sync는 모든 종류의 애플리케이션에서 작동합니다. Desktop Sync를 사용하려면 BL 명령행 인터페이스를 다운로드하여 설치해야 합니다.  
 
 **Live Edit**
-    {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션을 변경하고
-브라우저에서 즉시 테스트할 수 있습니다. 동기화된 데스크탑 디렉토리 또는 Web IDE 에서 변경한 사항은
-애플리케이션의 파일 시스템으로 즉시 전파됩니다.  
+{{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 동기화된 데스크탑 디렉토리 또는 Web IDE 에서 변경한 사항은 애플리케이션의 파일 시스템으로 즉시 전파됩니다.  
 
 **Debug**  
-    Node.js 애플리케이션이 Live Edit 모드일 경우 이를 쉘로 전환하여
-디버그할 수 있습니다. 노드 검사기 디버거를 사용하여 동적으로 코드 편집,
-중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다.  
+Node.js 애플리케이션이 Live Edit 모드일 경우 이를 쉘로 전환하여 디버그할 수 있습니다. 노드 검사기 디버거를 사용하여 동적으로 코드 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다.  
 
-Desktop Sync를 사용하면 Web IDE에서 직접 편집할 수 있는 클라우드 기반 프로젝트 작업공간과 데스크탑 작업공간을
-동기화할 수 있습니다. Live Edit을 사용하면 클라우드 기반 프로젝트 작업공간의
-변경사항을 실행 중인 애플리케이션으로 전파할 수 있습니다. 이러한 기능 중 하나를
-사용하거나 두 가지 기능을 모두 사용할 수 있습니다. 또한 Desktop Sync 또는
-Live Edit을 사용하여 애플리케이션을 Live Edit 모드로 전환할 경우
-실행 중인 애플리케이션을 디버그할 수 있습니다.
+Desktop Sync를 사용하면 Web IDE에서 직접 편집할 수 있는 클라우드 기반 프로젝트 작업공간과 데스크탑 작업공간을 동기화할 수 있습니다. Live Edit을 사용하면 클라우드 기반 프로젝트 작업공간의 변경사항을 실행 중인 애플리케이션으로 전파할 수 있습니다. 이러한 기능 중 하나를 사용하거나 두 가지 기능을 모두 사용할 수 있습니다. 또한 Desktop Sync 또는 Live Edit을 사용하여 애플리케이션을 Live Edit 모드로 전환할 경우 실행 중인 애플리케이션을 디버그할 수 있습니다.
 
 Bluemix Live Sync 프로세스는 다음 그림에 표시되어 있습니다.
 
@@ -69,8 +53,7 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 * Desktop Sync는 다음 운영 체제에서 실행됩니다.
   * Windows 7 또는 8
   * Mac OS X 버전 10.9 이상
-      **참고:** Windows의 경우 .NET Framework 버전 4.5가 필요합니다. .NET이 설치되어 있지 않은 경우,
-{{site.data.keyword.Bluemix_notm}} Live Sync 명령행 인터페이스(CLI)를 설치할 때 이를 설치하라는 메시지가 표시됩니다.  
+      **참고:** Windows의 경우 .NET Framework 버전 4.5가 필요합니다. .NET이 설치되어 있지 않은 경우, {{site.data.keyword.Bluemix_notm}} Live Sync 명령행 인터페이스(CLI)를 설치할 때 이를 설치하라는 메시지가 표시됩니다.  
 * Git 저장소를 복제할 필요는 없습니다.
 * 개발하고 있는 애플리케이션의 유형에 관계없이 데스크탑 프로젝트를 클라우드 작업공간과 동기화할 수 있습니다.
 * 애플리케이션이 Node.js로 작성된 경우, 변경사항을 실행 중인 애플리케이션으로 전파할 수 있습니다.
@@ -103,7 +86,7 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 </li>
 </ol>
 
-로컬 디렉토리에서 파일을 변경하면 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션 및 프로젝트 클라우드 작업공간 둘 다에 변경사항이 자동으로 전파됩니다. Node 애플리케이션을 다시 시작해야 하는 경우에는 다음 명령을 사용할 수 있습니다.
+로컬 디렉토리에서 파일을 변경하면 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션 및 프로젝트 클라우드 작업공간 둘 다에 변경사항이 자동으로 전파됩니다. Node 애플리케이션을 다시 시작해야 하는 경우에는 다음 명령을 사용할 수 있습니다. 
 ```
 bl start --restart
 ```
@@ -120,8 +103,7 @@ Web IDE의 실행 표시줄에서 **Live Edit**를 클릭하십시오.
 
 Live Edit을 사용하면 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션에 대한 변경사항을 신속하게 미리 볼 수 있습니다. Live Edit을 켠 상태에서 코드를 업데이트할 경우 웹 애플리케이션의 브라우저 창을 새로 고치면 변경한 지 몇 초 만에 변경사항이 적용되어 표시됩니다.
 
-{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능 사용에 대한 학습서는
-[Bluemix Live Sync로 Node.js 앱 테스트 및 디버그](https://hub.jazz.net/tutorials/livesync) 학습서를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능 사용에 대한 학습서는 [Bluemix Live Sync로 Node.js 앱 테스트 및 디버그](https://hub.jazz.net/tutorials/livesync) 학습서를 참조하십시오.
 
 Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션에 자동으로 재배치됩니다. 노드 애플리케이션을 다시 시작해야 하는 경우 실행 표시줄에 있는 **다시 시작** 단추를 사용하면 됩니다.
 
@@ -129,8 +111,7 @@ Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}에서 실�
 
 ##{{site.data.keyword.Bluemix_notm}} Live Debug {: #live-debug}
 
-{{site.data.keyword.Bluemix_notm}} Live Sync가 Node.js 앱에서 사용으로 설정된 경우,
-{{site.data.keyword.Bluemix_notm}} Live Sync Debug 기능에 액세스할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} Live Sync가 Node.js 앱에서 사용으로 설정된 경우, {{site.data.keyword.Bluemix_notm}} Live Sync Debug 기능에 액세스할 수 있습니다.
 
 debug 기능을 사용할 경우, {{site.data.keyword.Bluemix_notm}}에서 앱을 제공하는 동안 코드 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 모두 동적으로 수행할 수 있습니다. 또한 Agile 방식으로 앱을 증분식으로 개발하면서 대형 {{site.data.keyword.Bluemix_notm}} 서비스 목록에서 서비스를 선택할 수 있습니다.
 
@@ -200,7 +181,7 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
 
 3. 앱을 푸시하십시오.
 
-## {{site.data.keyword.Bluemix_notm}} Live Sync(bl) 명령{: #bl-commands}
+## {{site.data.keyword.Bluemix_notm}} Live Sync(bl) 명령 {: #bl-commands}
 
 Node.js 애플리케이션을 빌드하고 있는 경우 {{site.data.keyword.Bluemix_live}}를 사용하여 재배치 없이 데스크탑에서처럼 {{site.data.keyword.Bluemix_notm}}에서 실행되는 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다. 변경할 경우 실행 중인 {{site.data.keyword.Bluemix_notm}} 애플리케이션에서 변경사항을 즉시 확인할 수 있습니다. {{site.data.keyword.Bluemix_live}} 명령행 인터페이스를 *bl*이라고 합니다.
 {:shortdesc}
@@ -318,7 +299,8 @@ bl login | l [ -u username ][-p password ][ -s server ]
 다음 명령은 *username*과 *password*를 묻는 메시지를 표시합니다. 
 
 ```
-bl login```
+bl login
+```
 {: pre}
 
 `name@company.com` 사용자가 로그인합니다.
@@ -387,8 +369,7 @@ bl sync | s projectName -d localDirectory [ --overwritelocal ][ --overwriteremot
 
 **예**
 
-현재 디렉토리가 기존 동기화 대상인 경우 다음 명령은 연관된 프로젝트와의 동기화를 시작합니다. 현재 디렉토리가 비어 있으며 기존 동기화 대상이 아닌 경우 이 명령은 *projectName*을 프롬프트합니다. 현재 디렉토리가 비어 있지 않으며 기존 동기화 대상도 아닌 경우 overwrite 옵션이 필요합니다.
-
+현재 디렉토리가 기존 동기화 대상인 경우 다음 명령은 연관된 프로젝트와의 동기화를 시작합니다. 현재 디렉토리가 비어 있으며 기존 동기화 대상이 아닌 경우 이 명령은 *projectName*을 프롬프트합니다. 현재 디렉토리가 비어 있지 않으며 기존 동기화 대상도 아닌 경우 overwrite 옵션이 필요합니다. 
 
 ```
 bl sync
@@ -486,7 +467,7 @@ bl status | ss [ projectName ]
 
 다음 예는 실행 중인 애플리케이션의 상태를 표시합니다. 현재 디렉토리가 기존 동기화 대상인 경우 연관된 프로젝트가 사용됩니다. 현재 디렉토리가 기존 동기화 대상이 아닌 경우 이 명령은 `projectName`을 묻는 메시지를 표시합니다. 
 
-``
+````
 bl status
 ```
 {: pre}

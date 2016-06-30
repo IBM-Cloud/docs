@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *最終更新日: 2016 年 5 月 9 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
 {:shortdesc}
@@ -84,7 +85,7 @@ copyright:
 
   ```
   {
-        "name": "MyUniqueNodejs01",
+"name": "MyUniqueNodejs01",
         "version": "0.0.1",
         "description": "A sample package.json file",
         "dependencies": {
@@ -197,7 +198,7 @@ cf push -f appManifest.yml
   ```
   {
    "VCAP_SERVICES": {
-    "AppScan Dynamic Analyzer": [
+"AppScan Dynamic Analyzer": [
      {
       "credentials"   :
   {"bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
@@ -263,59 +264,59 @@ DEA によって定義された変数を以下に示します。
   <dd>デプロイ済みアプリケーションについての情報が含まれた JSON ストリング。この情報にはアプリケーション名、URI、メモリー制限、アプリケーションが現在の状態になった時点のタイム・スタンプなどが含まれます。以下に例を示します。
 <pre class="pre codeblock"><code>
   {
-    "limits": {
+"limits": {
         "mem": 512,
-        "disk": 1024,
-        "fds": 16384
+"disk": 1024,
+"fds": 16384
     },
-    "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
-    "application_name": "testapp",
-    "application_uris": [
+"application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
+"application_name": "testapp",
+"application_uris": [
         "testapp.AppDomainNameng.mybluemix.net"
     ],
-    "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
-    "name": "testapp",
-    "space_name": "dev",
-    "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
-    "uris": [
+"version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
+"name": "testapp",
+"space_name": "dev",
+"space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
+"uris": [
         "testapp.AppDomainNameng.mybluemix.net"
     ],
-    "users": null,
-    "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
-    "instance_id": "09f50e22848d4ec0b943e9e487c23569",
-    "instance_index": 0,
-    "host": "0.0.0.0",
-    "port": 61399,
-    "started_at": "2015-01-16 06:50:51 +0000",
-    "started_at_timestamp": 1421391051,
-    "start": "2015-01-16 06:50:51 +0000",
-    "state_timestamp": 1421391051
+"users": null,
+"application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
+"instance_id": "09f50e22848d4ec0b943e9e487c23569",
+"instance_index": 0,
+"host": "0.0.0.0",
+"port": 61399,
+"started_at": "2015-01-16 06:50:51 +0000",
+"started_at_timestamp": 1421391051,
+"start": "2015-01-16 06:50:51 +0000",
+"state_timestamp": 1421391051
 }
 </code></pre></dd>
   <dt><strong>VCAP_SERVICES</strong></dt>
   <dd>デプロイ済みアプリケーションにバインドされたサービスの情報が含まれた JSON ストリング。以下に例を示します。
 <pre class="pre codeblock"><code>
   {
-    "mysql-5.5": [
+"mysql-5.5": [
         {
-            "name": "mysql-ix",
-            "label": "mysql-5.5",
-            "tags": [
-                "mysql",
-                "relational",
-                "data_management",
-                "ibm_experimental"
+"name": "mysql-ix",
+"label": "mysql-5.5",
+"tags": [
+"mysql",
+"relational",
+"data_management",
+"ibm_experimental"
             ],
-            "plan": "300",
-            "credentials": {
-                "name": "d296abcc06c9e418b94abcaafdf547620",
-                "hostname": "23.246.200.38",
-                "host": "23.246.200.38",
-                "port": 3307,
-                "user": "uzpGf7eGJ7mtB",
-                "username": "uzpGf7eGJ7mtB",
-                "password": "peRiYCG4ZYqu3",
-                "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
+"plan": "300",
+"credentials"   :
+  {"name": "d296abcc06c9e418b94abcaafdf547620",
+"hostname": "23.246.200.38",
+"host": "23.246.200.38",
+"port": 3307,
+"user": "uzpGf7eGJ7mtB",
+"username": "uzpGf7eGJ7mtB",
+"password": "peRiYCG4ZYqu3",
+"uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
         }
     ]
@@ -361,7 +362,7 @@ DEA によって定義された変数を以下に示します。
 
 ```
 if (process.env.VCAP_SERVICES) {
-    var env = JSON.parse (process.env.VCAP_SERVICES);
+var env = JSON.parse (process.env.VCAP_SERVICES);
     myvar = env.foo[bar].foo;
 }
 ```

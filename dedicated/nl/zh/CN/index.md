@@ -16,13 +16,15 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*上次更新时间：2016 年 6 月 21 日*
+*上次更新时间：2016 年 6 月 13 日*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} 是一种基于云的开放标准平台，用于构建、运行和管理应用程序。通过 {{site.data.keyword.Bluemix_notm}} Dedicated，您可以在您自己的专用 SoftLayer 环境中享受到 {{site.data.keyword.Bluemix_notm}} 为您提供的强大功能和简便性。该专用 SoftLayer 环境是以安全方式连接到 {{site.data.keyword.Bluemix_notm}} Public 环境和您自己的网络。
 {:shortdesc}
 
-**Note:** 所有与 SoftLayer 相关的信息包括服务、支持信息、以及销售渠道对于在中国的 {{site.data.keyword.Bluemix}} dedicated 客户均不适用。在中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 环境适用了基于 OpenStack 的私有基础架构，又称为 IBM Bluebox 技术。 同时，在中国的 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，您可以通过[UNISYS 服务管理页面](https://chinabluemix.itsm.unisysedge.cn){: new_window} 要求提供支持服务。此外，在中国的用户还可以在 [IBM 中国开发者论坛](https://developer.ibm.com/cn_answers/bluemix/){: new_window}获得免费支持。
+**注：**与 SoftLayer 有关的所有信息（包括 {{site.data.keyword.Bluemix}} Dedicated 的服务、支持和销售）在中国都不适用。
+中国的 {{site.data.keyword.Bluemix}} Dedicated 客户可以通过 [UNISYS Service Management IBM Bluemix 页面](https://chinabluemix.itsm.unisysedge.cn){: new_window}请求支持。此外，中国的客户还可以在 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 上获取免费支持。
 
 无需额外付费，{{site.data.keyword.Bluemix_notm}} 的所有专用部署中都包含以下优势和功能：VPN、专用虚拟局域网 (VLAN)、防火墙、与 LDAP 的连接、利用现有内部部署数据库和应用程序的能力、全天候现场安全防护、专用硬件以及标准支持。
 
@@ -41,6 +43,7 @@ copyright:
 |可选 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
 |可选 | {{site.data.keyword.dashdbshort}} | 使用 dashDB 可存储关系数据，包括特殊类型的数据（例如地理空间数据）。然后，使用 SQL 或高级内置分析（例如预测性分析和数据挖掘、使用 R 的分析以及地理空间分析）来分析该数据。 |
 |可选 | {{site.data.keyword.datacshort}} | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
+| 可选 (Beta) | 日志记录 | 为 {{site.data.keyword.Bluemix_notm}} 用户界面中的 Cloud Foundry 应用程序和 Kibana 中的可搜索日志和仪表板提供日志。 |
 |可选 | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
 |可选 | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}} 是一种可扩展的分布式消息传递总线，吞吐量高，可将内部部署和外部部署技术合并在一起。{{site.data.keyword.messagehub}} 基于 Apache Kafka，这是一种高速、耐用的可扩展实时消息传递引擎。 |
 |可选 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 服务使您能够以安全方式将 {{site.data.keyword.Bluemix_notm}} 应用程序连接到内部部署或云中的远程位置。  |
@@ -54,17 +57,21 @@ copyright:
 | **名称**            | **描述** |      
 |-------------------|-------------------|
 |Dedicated Runtimes 增加 16 GB 容量  | 扩展运行时环境，以额外提供 16 GB 运行时容量。 |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 500 万个 API 调用 | 此环境允许在专用环境中运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 500 万个 API 调用，目标为部门 API 项目。 |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 增加 10 万个 API 调用 | {{site.data.keyword.apiconnect_short}} Professional 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 2500 万个 API 调用 | 此环境允许在专用环境中运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 2500 万个 API 调用，目标为企业范围 API 项目。 |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 增加 10 万个 API 调用 | {{site.data.keyword.apiconnect_short}} Enterprise 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
+|Dedicated {{site.data.keyword.APIM}} 1000 个 API 调用容量  | 此环境允许在专用环境中运行 {{site.data.keyword.APIM}} 的专用版本，容量为每秒 1000 个 API 调用。 |
+|Dedicated {{site.data.keyword.APIM}} 增加 500 个 API 调用容量  | 此环境允许在专用环境中运行 IBM API Management for Bluemix 的专用版本，容量为每秒 500 个 API 调用。  |
 |Dedicated {{site.data.keyword.cloudant}} 增加 1.6 TB 容量 | 包含在专用环境中运行 {{site.data.keyword.cloudantfull}} 的专用版本，设计容量为 1.6 TB。  |
 |Dedicated {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 增加 50 GB 容量 | 此环境允许部署和运行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 实例，最高累计容量为 50 GB。 |
-|Dedicated Direct Link 1 Gbps 容量 | 此专用网络链接直接连接到相应的现有 SoftLayer 网络点，设计数据传输量最高 1 Gbps。 |
-|Dedicated Direct Link 10 Gbps 容量 | 此专用网络链接直接连接到相应的现有 SoftLayer 网络点，设计数据传输量最高 10 Gbps。 |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | 专用服务器上每个服务实例一个数据库，RAM 为 64 GB，16 个 vCPU。根据典型压缩率，建议预装入数据最多为 1 TB。  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | 专用裸机服务器上每个服务实例一个数据库，RAM 为 256 GB，32 个内核。根据典型压缩率，建议预装入数据最多为 4 TB。 |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | 专用裸机服务器上每个服务实例一个数据库，RAM 为 256 GB，32 个内核。根据典型压缩率，建议预装入数据最多为 12 TB。这是高密度存储套餐，适用于数据量较高且查询无需以内存中速度运行的环境。 |
-|Dedicated {{site.data.keyword.APIM}} 1000 个 API 调用容量  | 此环境允许在专用环境中运行 {{site.data.keyword.APIM}} 的专用版本，容量为每秒 1000 个 API 调用。 |
-|Dedicated {{site.data.keyword.APIM}} 增加 500 个 API 调用容量  | 此环境允许在专用环境中运行 IBM API Management for Bluemix 的专用版本，容量为每秒 500 个 API 调用。  |
+|Dedicated Direct Link 1 Gbps 容量 | 此专用网络链接直接连接到相应的现有 SoftLayer 网络点，设计数据传输量最高 1 Gbps。 |
+|Dedicated Direct Link 10 Gbps 容量 | 此专用网络链接直接连接到相应的现有 SoftLayer 网络点，设计数据传输量最高 10 Gbps。 |
 |{{site.data.keyword.Bluemix_notm}} Dedicated 社区服务  | 此环境允许部署和运行社区服务，每个社区服务最多共 50 个实例。  |
-|IBM Bluemix Dedicated 硬件防火墙 - 高可用性 | 冗余 1 Gbps 硬件防火墙，配置用于保护专用环境中同一 VLAN 中的单台服务器、多台服务器或所有服务器。 |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated 硬件防火墙 - 高可用性 | 冗余 1 Gbps 硬件防火墙，配置用于保护专用环境中同一 VLAN 中的单台服务器、多台服务器或所有服务器。 |
 |配置用于高可用性的专用 1 Gbps Vyatta VPN  | 1 Gbps Vyatta VPN，配置用于高可用性，供专用环境使用。 |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | 此环境允许部署和执行 {{site.data.keyword.mobilepushshort}} 实例，每秒能接受 300 个请求。 |
 |{{site.data.keyword.iot_short}} Dedicated 递增增加 | 此环境允许在专用环境中运行 {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
@@ -258,7 +265,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |确定用于事件检测和问题确定的工具 | 确定用于在 {{site.data.keyword.Bluemix_notm}} 平台级别进行事件检测和问题确定的 IBM 和第三方工具。 | IBM |
 |定义上报计划 | 定义上报计划以分类和解决从监视组件检测到的事件。 | IBM |
 |签署基础架构、平台和支持协议 | 签署预订协议，包括环境的财务条款和条件。签署支持预订。 | 客户 |
-|采购环境 | 采购计算资源、网络和存储，包括用于托管 {{site.data.keyword.Bluemix_notm}} 的核心和服务 VLAN、用于托管 DataPower 的裸机服务以及 SoftLayer 防火墙。提供基础架构以允许使用 VPN 隧道。 | 客户 |
+|采购环境 | 采购计算资源、网络和存储，包括用于托管 {{site.data.keyword.Bluemix_notm}} 的核心和服务 VLAN、用于托管 DataPower 的裸机服务以及 SoftLayer 防火墙。提供基础架构以允许使用 VPN 隧道。 | IBM |
 |安装平台、应用程序以及监视和管理组件 | 安装、配置和验证平台组件（例如，BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
 |安装和配置安全组件 | 安装和配置与监视和上报计划绑定的安全组件，包括 IBM QRadar、凭证保险库、入侵防御系统、IBM BigFix 和 IBM Security Privileged Identity Management。 | IBM |
 |安装和配置定制组件 |  	安装和配置位于 {{site.data.keyword.Bluemix_notm}} 产品和服务范围之外的定制组件。 | 客户 |

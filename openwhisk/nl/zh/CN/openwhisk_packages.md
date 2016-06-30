@@ -19,6 +19,7 @@ copyright:
 # 使用和创建 {{site.data.keyword.openwhisk_short}} 包
 {: #openwhisk_packages}
 *上次更新时间：2016 年 3 月 28 日*
+{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，可以使用包将一组相关操作捆绑在一起，然后与其他人共享。
 
@@ -62,7 +63,7 @@ copyright:
   {: pre}
   ```
   package /whisk.system/cloudant: Cloudant database service
-     (params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
+(params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
    action /whisk.system/cloudant/read: Read document from database
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
@@ -81,7 +82,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/cloudant/read: Read document from database
-     (params: dbname includeDoc id)
+(params: dbname includeDoc id)
   ```
   {: screen}
 
@@ -101,7 +102,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/samples/greeting: Print a friendly greeting
-     (params: name place)
+(params: name place)
   ```
   {: screen}
 
@@ -115,7 +116,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, stranger from somewhere!"
+"payload": "Hello, stranger from somewhere!"
   }
   ```
   {: screen}
@@ -130,7 +131,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Mork from Ork!"
+"payload": "Hello, Mork from Ork!"
   }
   ```
   {: screen}
@@ -183,7 +184,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Valhalla!"
+"payload": "Hello, Odin from Valhalla!"
   }
   ```
   {: screen}
@@ -198,7 +199,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Asgard!"
+"payload": "Hello, Odin from Asgard!"
   }
   ```
   {: screen}
@@ -229,7 +230,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
-     (params: cron trigger_payload)
+(params: cron trigger_payload)
   ```
   {: screen}
 
@@ -252,7 +253,7 @@ copyright:
 
   ```
   function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -425,7 +426,7 @@ copyright:
   {: pre}
   ```
   {
-      "city": "Austin",
+"city": "Austin",
       "country": "USA"
   }
   ```
@@ -439,7 +440,7 @@ copyright:
   {: pre}
   ```
   {
-      "city": "Dallas",
+"city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }

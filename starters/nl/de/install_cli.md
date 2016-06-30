@@ -29,14 +29,15 @@ copyright:
 
 # App mit der Befehlszeilenschnittstelle bereitstellen
 *Letzte Aktualisierung: 24. Februar 2016*
+{: .last-updated}
 
 Mithilfe der Befehlszeilenschnittstelle können Sie Anwendungen und Serviceinstanzen bereitstellen und ändern.
 {:shortdesc}
 
-Installieren Sie vor Beginn die {{site.data.keyword.Bluemix}}- und Cloud Foundry-Befehlszeilenschnittstellen.
+Installieren Sie vor Beginn die Cloud Foundry- und {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstellen.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle herunterladen" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry-Befehlszeilenschnittstelle herunterladen" /> </a> 
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry-Befehlszeilenschnittstelle herunterladen" /> </a> <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle herunterladen" /> </a>
 </p>
 
 **Einschränkung:** Die Befehlszeilentools werden von Cygwin nicht unterstützt. Verwenden Sie die Tools in einem anderen Befehlszeilenfenster als dem Cygwin-Befehlszeilenfenster.

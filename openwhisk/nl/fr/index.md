@@ -17,7 +17,8 @@ copyright:
 {:pre: .pre}
 
 # Initiation à {{site.data.keyword.openwhisk_short}}
-*Dernière mise à jour : 17 février 2016*
+*Dernière mise à jour : 6 juin 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} est un service de calcul géré par des événements. {{site.data.keyword.openwhisk_short}} exécute une
 logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles sur HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à

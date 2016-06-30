@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 対応サービスの使用 
 {: #openwhisk_ecosystem}
 *最終更新日: 2016 年 3 月 28 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} で、パッケージ・カタログは、便利な機能でアプリを強化して、エコシステム内の外部サービスにアクセスするための簡単な方法を提供します。{{site.data.keyword.openwhisk_short}} 対応の外部サービスの例として、Cloudant、The Weather Company、Slack、GitHub などがあります。
 {: shortdesc}
@@ -147,7 +148,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 1. 前に作成したパッケージ・バインディングの `changes` フィードを使用してトリガーを作成します。`/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -166,15 +167,18 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 
 4. 文書を変更するたびに、`myCloudantTrigger` トリガーの新規アクティベーションを監視します。
 
-**注**: 新規アクティベーションを監視できない場合は、Cloudant データベースからの読み取りと Cloudant データベースへの書き込みに関する後続のセクションを参照してください。以下の読み取りおよび書き込みの検証ステップは、Cloudant 資格情報が正しいことを確認するために役立ちます。
+**注**: 新規アクティベーションを監視できない場合は、Cloudant データベースからの読み取りと Cloudant データベースへの書き込みに関する後続のセクションを参照してください。
+以下の読み取りおよび書き込みのステップを試すと、Cloudant 資格情報が正し
+いことを確認するのに役立ちます。
 
 これで、ルールを作成してアクションに関連付け、文書の更新に対応することができるようになります。
 
-生成されたイベントのコンテンツは、トリガーを作成するときの `includeDocs` パラメーターの値によって異なります。true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。たとえば、次の変更された文書を考えてみます。 
+生成されたイベントのコンテンツは、トリガーを作成するときの
+`includeDoc` パラメーターの値によって異なります。true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。たとえば、次の変更された文書を考えてみます。 
 
   ```
   {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
+"_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -183,7 +187,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 
 この例のコードは、対応する `_id`、`_rev`、および `name` の各パラメーターを使用してトリガー・イベントを生成します。実際には、トリガー・イベントの JSON 表記は文書に一致します。
 
-`includeDocs` が false の場合は、イベントに以下のパラメーターが含まれます。
+`includeDoc` が false の場合は、イベントに以下のパラメーターが含まれます。
 
 - `id`: 文書 ID。
 - `seq`: Cloudant によって生成されるシーケンス ID。
@@ -193,7 +197,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 
   ```
   {
-      "id": "6ca436c44074c4c2aa6a40c9a188b348",
+"id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -217,9 +221,8 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
-    "id": "heisenberg",
+"id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -245,7 +248,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
   {: pre}
   ```
   {
-    "_id": "heisenberg",
+"_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -275,6 +278,12 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 
 
 - `cron`: トリガーを発生させるタイミングを協定世界時 (UTC) で示す、UNIX crontab 構文に基づいたストリング。このストリングは、`X X X X X X ` のようにスペースで区切られた 6 個のフィールドのシーケンスです。cron 構文の使用について詳しくは、https://github.com/ncb000gt/node-cron を参照してください。
+ストリングで示される頻度のいくつかの例を以下に示しま す。
+
+  - `* * * * * *`: 毎秒。
+  - `0 * * * * *`: 毎分の先頭。
+  - `* 0 * * * *`: 毎時の先頭。
+  - `0 0 9 8 * *`: 毎月 8 日目の午前 9:00:00 (UTC)
 
 - `trigger_payload`: このパラメーターの値は、
 トリガーが発生するたびにトリガーのコンテンツになります。
@@ -284,7 +293,7 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 以下は、トリガー・イベントに `name` と `place` の値を指定して、20 秒ごとに 1 回発生するトリガーを作成する例です。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
@@ -295,28 +304,33 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 ## Weather パッケージの使用
 {: #openwhisk_catalog_weather}
 
-`/whisk.system/weather` パッケージは、The Weather Company API を呼び出すために便利な方法を提供します。
+`/whisk.system/weather` パッケージは、IBM
+Weather Insights API を呼び出すのに便利な方法を提供します。
 
 このパッケージには、以下のアクションが含まれています。
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | パッケージ | apiKey | The Weather Company からのサービス |
-| `/whisk.system/weather/forecast` | アクション | apiKey、latitude、longitude | 
-Weather.com の 10 日間の予報 |
+| `/whisk.system/weather` | パッケージ | apiKey | IBM Weather Insights API からのサービス  |
+| `/whisk.system/weather/forecast` | アクション | apiKey、latitude、longitude、timePeriod | 指定された時間枠の予測|
 
 必須ではありませんが、`apiKey` 値を使用してパッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにキーを指定する必要はありません。
 
 ### 場所を指定した天気予報の取得
 
-`/whisk.system/weather/forecast` アクションは、
-The Weather Company から API を呼び出して、場所を指定した 10 日間の天気予報を返します。パラメーターは次のとおりです。
+`/whisk.system/weather/forecast` アクション
+は、The Weather Company から API を呼び出して、場所を指定した天気予報を返します。パラメーターは次のとおりです。
 
 
-- `apiKey`: 10 日間の予測 API を起動する権限を与えられた The Weather Company の API キー。
-
+- `apiKey`: 予測 API を起動する権
+限を与えられた The Weather Company の API キー。
 - `latitude`: 場所の経度の座標。
 - `longitude`: 場所の緯度の座標。
+- `timeperiod`: 予測の時間枠。有効なオプションは
+、デフォルトの「10 日間」(毎日の予測を 10 日間返す)、「24 時間」(毎時
+の予測を 2 日間返す)、「現在」(現在の天気状況を返す)、「時系列」
+(現在の日時から、現在の観測と過去 24 時間までの観測の両方を返す) です。 
+
 
 以下は、パッケージ・バインディングを作成してから 10 日間の予測を取得する例です。
 
@@ -336,7 +350,7 @@ The Weather Company から API を呼び出して、場所を指定した 10 日
 
   ```
   {
-      "forecasts": [
+"forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -371,6 +385,8 @@ The Weather Company から API を呼び出して、場所を指定した 10 日
 | `/whisk.system/watson` | パッケージ | username、password | Watson 分析 API のアクション |
 | `/whisk.system/watson/translate` | アクション | translateFrom、translateTo、translateParam、username、password | テキストの変換 |
 | `/whisk.system/watson/languageId` | アクション | payload、username、password | 言語の識別 |
+| `/whisk.system/watson/speechToText` | アクション | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 音声のテキストへの変換 |
+| `/whisk.system/watson/textToSpeech` | アクション | payload、voice、accept、encoding、username、password | テキストの音声への変換 |
 
 必須ではありませんが、`username` と `password` の値を使用して、パッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにこれらの資格情報を指定する必要はありません。
 
@@ -404,7 +420,7 @@ The Weather Company から API を呼び出して、場所を指定した 10 日
 
   ```
   {
-      "payload": "Ciel bleu a venir"
+"payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
@@ -436,7 +452,7 @@ The Weather Company から API を呼び出して、場所を指定した 10 日
   {: pre}
   ```
   {
-    "payload": "Ciel bleu a venir",
+"payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -444,6 +460,96 @@ The Weather Company から API を呼び出して、場所を指定した 10 日
   {: screen}
 
 
+### テキストをスピーチに変換
+
+`/whisk.system/watson/textToSpeech` アクショ
+ンはテキストを音声スピーチに変換します。パラメーターは次のとおりです。
+
+
+- `username`: Watson API ユーザー名。
+- `password`: Watson API パスワード。
+- `payload`: スピーチに変換するテキスト。
+- `voice`: スピーカーの音声。
+- `accept`: スピーチ・ファイルの形式。
+- `encoding`: スピーチ・バイナリー・データの
+エンコード。
+
+以下は、パッケージ・バインディングを作成してテキストをスピーチ
+に変換する例です。
+
+1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. パッケージ・バインディングで
+`textToSpeech` アクションを起動して、テキストを変換
+します。
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
+
+
+### スピーチのテキストへの変換
+
+`/whisk.system/watson/speechToText` アクショ
+ンは 音声スピーチをテキストに変換します。パラメーターは次のとおりです。
+
+
+- `username`: Watson API ユーザー名。
+- `password`: Watson API パスワード。
+- `payload`: テキストに変換するエンコード・ス
+ピーチ・バイナリー・データ。
+- `content_type`: 音声の MIME タイプ。
+- `encoding`: スピーチ・バイナリー・データの
+エンコード。
+- `continuous`: 長い休止で区切られた連続する
+句を示す複数の最終結果が返されるかどうかを示します。
+- `inactivity_timeout`: 送信された音声に音声が検出されない場合に、この時間 (秒数) が経過すると、接続がクローズされます。
+- `interim_results`: サービスが暫定の結果を返すかどうかを示します。
+- `keywords`: 音声で特定するキーワードのリスト。
+- `keywords_threshold`: キーワードを特定するための下限である信頼値。
+- `max_alternatives`: 返される代替トランスクリプトの最大数。
+- `model`: 認識要求のために使用されるモデルの識別子。
+- `timestamps`: 単語ごとにタイム・アライメントが返されるかどうかを示します。
+- `watson-token`: サービス資格情報を指定する代わりとして、サービスに認証トークンを指定します。
+- `word_alternatives_threshold`: 可能な単語の代替として仮説を識別するための下限である信頼値。
+- `word_confidence`: 単語ごとに信頼度の指標を 0 から 1 の範囲で返すかどうかを示します。
+- `X-Watson-Learning-Opt-Out`: 呼び出しのデータ収集をオプトアウトするかどうかを示します。
+ 
+以下は、パッケージ・バインディングを作成してスピーチ
+をテキストに変換する例です。
+
+1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+
+2. パッケージ・バインディングで
+`speechToText` アクションを起動して、エンコードされ
+た音声を変換します。
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## Slack パッケージの使用
 {: #openwhisk_catalog_slack}
 

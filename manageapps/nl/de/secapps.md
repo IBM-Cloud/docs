@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *Letzte Aktualisierung: 9. Mai 2016*
+{: .last-updated}
 
 Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und den Zugriff auf die Anwendungen beschränken.
 {:shortdesc}
@@ -85,7 +86,7 @@ Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, dürfen Sie
 Bevor Sie Zertifikate hochladen können,
 müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
 
-^Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist. 
+^Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in Bluemix zugeordnet ist.
 
   * US-South: secure.us-south.bluemix.net 
   * EU-GB: secure.eu-gb.bluemix.net
@@ -106,7 +107,7 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
     
     Ein digitales Dokument, das einen öffentlichen Schlüssel an die Identität des Zertifikatsinhabers bindet, sodass der Zertifikatsinhaber authentifiziert werden kann. Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert.
     
-    Ein Zertifikat wird in der Regel ausgegeben und von einer Zertifizierungsstelle signiert. Für Test- und Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden. 
+    Ein Zertifikat wird in der Regel ausgegeben und von einer Zertifizierungsstelle signiert. Für Test- und Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden.
     
     Die folgenden Zertifikatstypen werden in {{site.data.keyword.Bluemix_notm}} unterstützt:
 

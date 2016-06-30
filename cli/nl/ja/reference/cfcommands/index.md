@@ -16,7 +16,7 @@ copyright:
 
 # Cloud Foundry (cf) コマンド
 
-*最終更新日: 2016 年 1 月 29 日*
+*最終更新日: 2016 年 1 月 29 日*{: .last-updated}
 
 Cloud Foundry (cf) コマンドを使用してアプリを管理できます。
 {:shortdesc}
@@ -27,13 +27,16 @@ Cloud Foundry (cf) コマンドを使用してアプリを管理できます。
 
 ## cf api
 
-{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL を表示または指定します。```
+{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL を表示または指定します。
+```
 cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。通常、この URL は https://api.{DomainName} です。
-現在使用している API エンドポイントの URL を表示したい場合、cf api コマンドにこのパラメーターを指定する必要はありません。</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} に接続するときに指定する必要のある Bluemix API エンドポイントの URL。
+通常、この URL は https://api.{DomainName} です。
+現在使用している API エンドポイントの URL を表示したい場合、cf api
+コマンドにこのパラメーターを指定する必要はありません。</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>SSL 検証プロセスを使用不可にします。このパラメーターを使用すると、セキュリティーの問題が起きる可能性があります。</dd>
 <dt>*--unset*</dt>
@@ -48,7 +51,8 @@ cf api BluemixServerURL
 
 ## cf bind-service
 
-既存のサービス・インスタンスをアプリケーションにバインドします。```
+既存のサービス・インスタンスをアプリケーションにバインドします。
+```
 cf bind-service appname service_instance
 ```
 
@@ -65,12 +69,11 @@ my_dataworks` を使用してこのサービス・インスタンスをアプリ
 
 ## cf create-service
 
-サービス・インスタンスを作成します。```
+サービス・インスタンスを作成します。
+```
 cf create-service service_name service_plan service_instance
 ```
-例えば、`cf create-service DataWorks free my_dataworks` を使用して、{{site.data.keyword.dataworks_short}} サービスのインスタンスを無料プランで作成できます。
-
-<dl>
+例えば、`cf create-service DataWorks free my_dataworks` を使用して、{{site.data.keyword.dataworks_short}} サービスのインスタンスを無料プランで作成できます。<dl>
 <dt>service_name</dt>
 <dd>サービスの名前。</dd>
 <dt>service_plan</dt>
@@ -82,6 +85,7 @@ cf create-service service_name service_plan service_instance
 ## cf create-space
 
 スペースを作成します。
+
 ```
 cf create-space space_name
 ```
@@ -96,7 +100,8 @@ cf create-space space_name
 
 ## cf delete
 
-既存のアプリケーションを削除します。```
+既存のアプリケーションを削除します。
+```
 cf delete appname
 ```
 <dl>
@@ -112,6 +117,7 @@ cf delete appname
 ## cf delete-space
 
 スペースを削除します。
+
 ```
 cf delete-space space_name
 ```
@@ -125,7 +131,8 @@ cf delete-space space_name
 
 ## cf events
 
-アプリケーションに関連するランタイム・イベントを表示します。```
+アプリケーションに関連するランタイム・イベントを表示します。
+```
 cf events appname
 ```
 <dl>
@@ -136,6 +143,7 @@ cf events appname
 ## cf help
 
 すべての cf コマンドのヘルプ情報を表示するか、または、command_name パラメーターが使用されている場合は特定の cf コマンドのヘルプ情報を表示します。
+
 ```
 cf help command_name
 ```
@@ -149,10 +157,10 @@ cf help command_name
 ## cf login
 
 
-{{site.data.keyword.Bluemix_notm}} にログインします。```
+{{site.data.keyword.Bluemix_notm}} にログインします。
+```
 cf login```
-cf login コマンドを実行するときには、以下のパラメーターの 1 つ以上を使用できます。
-<dl>
+cf login コマンドを実行するときには、以下のパラメーターの 1 つ以上を使用できます。<dl>
 <dt>*-a* https://api.{DomainName}
 	 </dt>
 <dd>{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL。このパラメーターはオプションです。</dd>
@@ -175,7 +183,8 @@ cf login コマンドを実行するときには、以下のパラメーター�
 ## cf logs
 
 アプリケーションの
-STDOUT および STDERR ログ・ストリームを表示します。```
+STDOUT および STDERR ログ・ストリームを表示します。
+```
 cf logs appname
 ```
 <dl>
@@ -188,19 +197,25 @@ cf logs appname
 ## cf marketplace
 
 マーケットプレイスで提供されているすべてのサービスをリストします。このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
+
 ```
 cf marketplace```
 
 ## cf push
 
 新規アプリケーションを Bluemix にデプロイするか、または、Bluemix にある既存のアプリケーションを更新します。
+
 ```
 cf push appname 
 ```
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
-<dt>*-b*buildpack_name</dt> <dd>ビルドパックの名前。buildpack_name には、カスタム・ビルドパックの名前または Git URL を指定できます。例えば、`my-buildpack` または `https://github.com/heroku/heroku-buildpack-play.git` とします。</dd>
+<dt>*-b*buildpack_name</dt> <dd>ビルドパックの名前。buildpack_name
+には、カスタム・ビルドパックの名前または Git URL を指定できます。例え
+ば、`my-buildpack` または
+`https://github.com/heroku/heroku-buildpack-play.git`
+とします。</dd>
 <dt>*-c*start_command</dt> <dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。例えば次のようにします。</dd>
 <dd>```
 cf push appname -c null
@@ -228,7 +243,8 @@ cf push appname -c “bash ./<run.sh>"
 
 ## cf scale
 
-アプリケーションのインスタンス番号、ディスク・スペース制限、およびメモリー制限を表示または変更します。```
+アプリケーションのインスタンス番号、ディスク・スペース制限、およびメモリー制限を表示または変更します。
+```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
 <dl>
@@ -244,12 +260,14 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 
 ## cf services
 
-現在のスペースで使用可能なすべてのサービスをリストします。```
+現在のスペースで使用可能なすべてのサービスをリストします。
+```
 cf services```
 
 ## cf set-env
 
-アプリケーションの環境変数を設定します。```
+アプリケーションの環境変数を設定します。
+```
 cf set-env appname var_name var_value
 ```
 <dl>
@@ -263,12 +281,14 @@ cf set-env appname var_name var_value
 
 ## cf stacks
 
-すべてのスタックがリストされます。スタックは、アプリを実行可能なオペレーティング・システムを含むビルド前のファイル・システムです。```
+すべてのスタックがリストされます。スタックは、アプリを実行可能なオペレーティング・システムを含むビルド前のファイル・システムです。
+```
 cf stacks```
 
 ## cf stop
 
-アプリケーションを停止します。```
+アプリケーションを停止します。
+```
 cf stop appname
 ```
 <dl>
@@ -278,12 +298,15 @@ cf stop appname
 
 ## cf -v
 
-cf コマンド・ライン・インターフェースのバージョンを表示します。```
+cf コマンド・ライン・インターフェースのバージョンを表示します。
+```
 cf -v
 ```
 
-# 関連リンク
+# rellinks
 {: #rellinks}
-## 一般 
+## general 
 {: #general}
-* [クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+*
+[
+クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

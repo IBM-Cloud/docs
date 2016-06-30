@@ -18,6 +18,7 @@ copyright:
 #Apps in {{site.data.keyword.Bluemix_notm}} hosten
 
 *Letzte Aktualisierung: 9. Mai 2016*
+{: .last-updated}
 
 <!--The whole topic is staging only -->
 

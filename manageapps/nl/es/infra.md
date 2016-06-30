@@ -15,6 +15,7 @@ copyright:
 #  Capas de la infraestructura de Bluemix
 
 *Última actualización: 15 de marzo de 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix_notm}} abstrae y oculta las capas de sistema operativo y de infraestructura para que el usuario no tenga que gestionarlas. Sin embargo, es posible que en alguna ocasión desee obtener más información sobre el sistema operativo y el middleware de la app.
 {:shortdesc}

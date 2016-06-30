@@ -14,6 +14,7 @@ copyright:
 {: #services}
 *最終更新日: 2016 年 5 月 10 日*
 
+
 {{site.data.keyword.Bluemix_notm}} によって、サービスとアプリの実装、ホスト、および拡大を簡単に行うことができます。それにより、
 アプリケーション・ロジックとアプリケーション設計に集中することができます。
 {:shortdesc}
@@ -103,7 +104,7 @@ copyright:
 |{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
 |{{site.data.keyword.SecureGateway}}		|はい		|はい		|はい|
 |{{site.data.keyword.servicediscoveryshort}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.serviceproxyshort}}		|はい		|いいえ		|いいえ|
+|{{site.data.keyword.serviceproxyshort}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
 |{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.speechtotextshort}}	|はい 		|はい	 	|はい|
@@ -123,11 +124,14 @@ copyright:
 *表 2. サービスの利用可能性*
 
 
-## サービスの継続提供について
-{{site.data.keyword.Bluemix_notm}} は、いくつかのサービスを Tier 1 であると認定しました。
-IBM は、Tier 1 サービスを終了する場合は必ず、機能的に同等のものを用意するか、または、終了についての通知を最低限 5 年は行います。 
+## サービスに対する継続した可用性
+{{site.data.keyword.Bluemix_notm}} は、一連のサービスを
+Tier 1 として識別済みです。IBM は、同等な機能を使用可能にするこ
+となしに、または少なくとも 5 年の営業活動中止通知なしで、Tier 1
+サービスの営業活動を中止しません。
+ 
 
-以下のサービスが Tier 1 と分類されています。
+以下のサービスは Tier 1 として分類されます。
   * {{site.data.keyword.apiconnect_short}}
   * {{site.data.keyword.cloudant}}
   * {{site.data.keyword.dashdbshort}}
@@ -139,7 +143,9 @@ IBM は、Tier 1 サービスを終了する場合は必ず、機能的に同等
   * PostgresSQL by Compose
   * {{site.data.keyword.ssofull}}
 
-サービスの利用条件についての詳細を読むには、『[{{site.data.keyword.Bluemix_notm}} 利用条件](../navigation/notices.html#terms)』を参照してください。
+サービスのご利用条件について詳しくは、
+[『{{site.data.keyword.Bluemix_notm}}
+条件』](../navigation/notices.html#terms)を参照してください。
 
 ## サービスの非推奨化
 

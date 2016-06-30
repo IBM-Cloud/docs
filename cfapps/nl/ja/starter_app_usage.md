@@ -14,6 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 *最終更新日: 2016 年 1 月 12 日*
+{: .last-updated}
 
 # スターター・アプリケーションの使用
 {: #using_starter_applications}

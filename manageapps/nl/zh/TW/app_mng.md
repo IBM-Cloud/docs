@@ -15,6 +15,7 @@ copyright:
 {: #app_management}
 
 *前次更新：2016 年 3 月 17 日*
+{: .last-updated}
 
 「應用程式管理」是一組開發及除錯公用程式，可以針對您在 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 應用程式啟用。
 {:shortdesc}
@@ -26,7 +27,7 @@ copyright:
 
   1. *proxy*：作為應用程式與 {{site.data.keyword.Bluemix_notm}} 間之 Proxy 的最小應用程式管理。
 
-    若已啟用，建置套件會啟動位在應用程式執行時期與儲存器之間的 Proxy 代理程式。*proxy* 公用程式會處理應用程式接收的所有要求。根據要求類型，它會執行「應用程式管理」動作，或將要求轉遞給應用程式。*proxy* 容許啟用大部分其他「應用程式管理」公用程式。透過啟用 *proxy*，即使應用程式損毀，您的應用程式儲存器還是會繼續運作。Proxy 代理程式也容許進行漸進式檔案更新，以啟用 Node.js 應用程式的「即時編輯」模式。
+    若已啟用，建置套件會啟動位在應用程式運行環境與容器之間的 Proxy 代理程式。*proxy* 公用程式會處理應用程式接收的所有要求。根據要求類型，它會執行「應用程式管理」動作，或將要求轉遞給應用程式。*proxy* 容許啟用大部分其他「應用程式管理」公用程式。透過啟用 *proxy*，即使應用程式損毀，您的應用程式容器還是會繼續運作。Proxy 代理程式也容許進行漸進式檔案更新，以啟用 Node.js 應用程式的「即時編輯」模式。
 	
   2. *devconsole*：啟用可在下列 URL 存取的開發主控台公用程式：
     ```
@@ -68,7 +69,7 @@ copyright:
 
   1. *inspector*：啟用可從 *devconsole* 公用程式或 *https://myApp.mybluemix.net/bluemix-debug/inspector* 存取的 Node Inspector 除錯器介面。
   
-  inspector 處理程序是在應用程式儲存器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
+  inspector 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 公用程式也會啟動 *proxy*。
   
@@ -154,7 +155,7 @@ cf restage myApp
 ##Eclipse Tools 的開發模式
 {: #devmode}
 
-開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在應用程式於雲端執行的同時，處理他們的應用程式。
+開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在他們的應用程式於雲端執行的同時，處理這些應用程式。
 
 在 {{site.data.keyword.Bluemix_notm}} 上處理應用程式時，開發人員可能感覺他們無法像在本端環境中那樣地執行正常的開發活動。為了處理此問題，Eclipse Tools
 的開發模式讓您能夠在暫時性的安全工作區裡，在雲端工作。

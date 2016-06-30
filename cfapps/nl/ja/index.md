@@ -15,6 +15,7 @@ copyright:
 
 # Cloud Foundry アプリの作成
 *最終更新日: 2016 年 4 月 18 日*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} では、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースでアプリを作成することができます。アプリが作成された後、アプリの開発、トラッキング、計画、およびデプロイのために、その UI を引き続き使用するか、cf コマンド・ライン・インターフェースを使用するか、もしくは {{site.data.keyword.jazzhub_title}} を使用するよう選択できます。
 {:shortdesc}

@@ -15,7 +15,8 @@ copyright:
 {:download: .download}
 
 # 開始使用 Git 撰寫程式碼
-*前次更新：2016 年 3 月 2 日*  
+*前次更新：2016 年 3 月 2 日*
+{: .last-updated}  
 
 您可以建立自動部署至 {{site.data.keyword.Bluemix}} 的受管理 Git 儲存庫。然後，您可以將變更推送至 Git 儲存庫，以修改在應用程式中執行的程式碼。
 {:shortdesc}
@@ -52,15 +53,17 @@ copyright:
 **重要事項：**bl 指令行工具僅適用於 Windows 7 和 8，以及 Mac OS X 10.9 版或更新版本。 
 
 2. 在指令行上，使用下列指令登入。系統會提示您輸入 IBM® ID 及密碼。
+ 
 ```
 bl login
 ```
 
 3. 輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
+ 
 ```
 bl projects
 ```
-在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 *your alias* | *your application name*。 
+在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 *your alias* | *your application name*。
 
 4. 輸入下列指令，將您的本端環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
@@ -70,11 +73,13 @@ bl sync projectName -d localDirectory --verbose
 此指令會繼續執行（而且同步化也會繼續進行），直到您輸入 "q" 為止。--verbose 選項會顯示記載及狀態資訊。如果有任何引數包含空格，則必須將名稱含括在引號中。
 
 5. 使用另一個指令行視窗，在本端目錄中輸入下列指令，以在「即時編輯」模式下，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}：
+
 ```
 bl start
 ```  
 
 當您變更本端目錄中的檔案時，變更會自動延伸到 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式，以及專案雲端工作區。如果您需要重新啟動 Node 應用程式，可以使用下列指令：
+
 ```
 bl start --restart 
 ```

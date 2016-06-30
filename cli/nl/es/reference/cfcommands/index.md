@@ -17,6 +17,7 @@ copyright:
 # Mandatos de Cloud Foundry (cf)
 
 *Última actualización: 29 de enero de 2016*
+{: .last-updated}
 
 Puede utilizar mandatos de Cloud Foundry (cf) para gestionar apps.
 {:shortdesc}
@@ -35,7 +36,7 @@ cf api BluemixServerURL
 ```
 <dl>
 <dt>BluemixServerURL</dt>
-<dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es https://api.{DomainName}.
+<dd>El URL del punto final API de Bluemix que debe especificar al conectarse a {{site.data.keyword.Bluemix_notm}}. Normalmente, este URL es https://api.{DomainName}. 
 Si desea visualizar el URL del punto final API que está utilizando actualmente
 no tiene que especificar este parámetro para el mandato cf api.</dd>
 <dt>*--skip-ssl-validation*</dt>
@@ -95,16 +96,16 @@ cf create-space nombre_espacio
 ```
 <dl>
 <dt>nombre_espacio</dt>
-<dd>El nombre del espacio.</dd>
+<dd>Nombre del espacio.</dd>
 <dt>*-o*</dt>
-<dd>El nombre de la organización en la que desea crear un espacio.</dd>
+<dd>Nombre de la organización en la que desea crear un espacio.</dd>
 <dt>*-q*</dt>
-<dd>La cuota para asignar al espacio recién creado. Si no se especifica, se asignará automáticamente una cuota predeterminada.</dd>
+<dd>Cuota para asignar al espacio recién creado. Si no se especifica, se asignará automáticamente una cuota predeterminada.</dd>
 </dl>
 
 ## cf delete
 
-Suprima una app existente.
+Suprima una aplicación existente.
 ```
 cf delete nombre_app
 ```
@@ -127,7 +128,7 @@ cf delete-space nombre_espacio
 ```
 <dl>
 <dt>nombre_espacio</dt>
-<dd>El nombre del espacio.</dd>
+<dd>Nombre del espacio.</dd>
 <dt>*-f*</dt>
 <dd>Fuerza la supresión del espacio sin ninguna confirmación. Este
 parámetro es opcional.</dd>

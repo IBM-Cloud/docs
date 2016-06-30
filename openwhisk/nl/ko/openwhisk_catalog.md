@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 사용 가능 서비스 사용 
 {: #openwhisk_ecosystem}
 *마지막 업데이트 날짜: 2016년 3월 28일*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서 패키지 카탈로그는 유용한 기능으로 앱을 강화하고 에코시스템 내에서 외부 서비스에 액세스할 수 있는 쉬운 방법을 제공합니다. {{site.data.keyword.openwhisk_short}} 사용 가능 외부 서비스의 예로는 Cloudant, The Weather Company, Slack 및 GitHub 등이 있습니다.
 {: shortdesc}
@@ -139,7 +140,7 @@ copyright:
 1. 앞에서 작성한 패키지 바인딩의 `changes`를 사용하여 트리거를 작성하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -158,11 +159,11 @@ copyright:
 
 4. 각 문서 변경에 대한 `myCloudantTrigger` 트리거의 새 활성화를 관찰하십시오.
 
-**참고**: 새 활성화를 관찰할 수 없으면 Cloudant 데이터베이스에 대한 읽기 및 쓰기에 관한 후속 절을 참조하십시오. 아래의 읽기 및 쓰기 테스트 단계는 Cloudant 신임 정보가 올바른지 확인하는 데 도움을 줍니다.
+**참고**: 새 활성화를 관찰할 수 없으면 Cloudant 데이터베이스에 대한 읽기 및 쓰기에 관한 후속 절을 참조하십시오. 다음의 읽기 및 쓰기 단계를 테스트하면 Cloudant 신임 정보가 올바른지 확인하는 데 도움이 됩니다. 
 
 이제 규칙을 작성하고 규칙을 조치에 연관시켜 문서 업데이트에 반응할 수 있습니다.
 
-생성된 이벤트의 컨텐츠는 트리거를 생성할 때의 `includeDocs` 매개변수값에 따라 다릅니다. true로 설정하면 실행되는 각 트리거 이벤트에 수정된 Cloudant 문서가 포함됩니다. 예를 들어, 다음과 같이 수정된 문서를 고려해 보십시오.
+생성된 이벤트의 컨텐츠는 트리거를 생성할 때 `includeDoc` 매개변수값에 따라 다릅니다. true로 설정하면 실행되는 각 트리거 이벤트에 수정된 Cloudant 문서가 포함됩니다. 예를 들어, 다음과 같이 수정된 문서를 고려해 보십시오.
 
   ```
   {
@@ -175,7 +176,7 @@ copyright:
 
 이 예의 코드는 해당되는 `_id`, `_rev` 및 `name` 매개변수가 있는 트리거 이벤트를 생성합니다. 실제로 트리거 이벤트의 JSON 표시는 문서와 동일합니다.
 
-그렇지 않은 경우, `includeDocs`가 false이면 이벤트에 다음 매개변수가 포함됩니다.
+그렇지 않으면, `includeDoc`이 false인 경우 이벤트에 다음 매개변수가 포함됩니다. 
 
 - `id`: 문서 ID입니다.
 - `seq`: Cloudant에 의해 생성된 시퀀스 ID입니다.
@@ -208,7 +209,6 @@ copyright:
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
     "id": "heisenberg",
     "ok": true,
@@ -259,7 +259,12 @@ copyright:
 
 `/whisk.system/alarms/alarm` 피드는 지정된 빈도로 트리거 이벤트를 실행하기 위해 알람 서비스를 구성합니다. 매개변수는 다음과 같습니다.
 
-- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 Unix crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. cron 구문 사용에 대한 세부사항은 https://github.com/ncb000gt/node-cron을 참조하십시오. 
+- `cron`: 협정 세계시(UTC)로 트리거를 실행할 시점을 표시하는 Unix crontab 구문 기반의 문자열입니다. 문자열은 공백으로 구분되는 여섯 개 필드의 시퀀스입니다. `X X X X X X `. cron 구문 사용에 대한 세부사항은 https://github.com/ncb000gt/node-cron을 참조하십시오. 다음은 문자열에서 표시하는 빈도의 일부 예입니다. 
+
+  - `* * * * * *`: 매초. 
+  - `0 * * * * *`: 매분의 처음. 
+  - `* 0 * * * *`: 매시간의 처음. 
+  - `0 0 9 8 * *`: 매월 8번째 날의 9:00:00AM(UTC). 
 
 - `trigger_payload`: 이 매개변수의 값은 트리거가 실행될 때마다 트리거의 컨텐츠가 됩니다.
 
@@ -268,7 +273,7 @@ copyright:
 다음은 트리거 이벤트에서 `name` 및 `place` 값을 사용하여 매 20초마다 한 번 실행될 트리거를 작성하는 예입니다.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
@@ -278,24 +283,26 @@ copyright:
 ## Weather 패키지 사용
 {: #openwhisk_catalog_weather}
 
-`/whisk.system/weather` 패키지는 The Weather Company API를 호출하는 편리한 방법을 제공합니다.
+`/whisk.system/weather` 패키지는 IBM Weather Insights API를 호출하는 편리한 방법을 제공합니다.
 
 패키지에는 다음 조치가 포함됩니다.
 
 | 엔티티 | 유형 | 매개변수 | 설명 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | 패키지 | apiKey | The Weather Company의 서비스 |
-| `/whisk.system/weather/forecast` | 조치 | apiKey, latitude, longitude | Weather.com 10일 예보 |
+| `/whisk.system/weather` | 패키지 | apiKey | IBM Weather Insights API의 서비스  |
+| `/whisk.system/weather/forecast` | 조치 | apiKey, latitude, longitude, timePeriod | 지정된 기간에 대한 예보|
 
 필수는 아니지만 `apiKey` 값을 사용하여 패키지 바인딩을 작성하도록 권장합니다. 이 방법의 경우, 패키지에서 조치를 호출할 때마다 키를 지정할 필요가 없습니다.
 
 ### 위치에 대한 날씨 예보 가져오기
 
-`/whisk.system/weather/forecast` 조치는 The Weather Company에서 API를 호출하여 위치에 대한 10일 날씨 예보를 리턴합니다. 매개변수는 다음과 같습니다.
+`/whisk.system/weather/forecast` 조치는 The Weather Company에서 API를 호출하여 위치에 대한 날씨 예보를 리턴합니다. 매개변수는 다음과 같습니다.
 
-- `apiKey`: 10일 예보 API를 호출할 자격이 있는 The Weather Company에 대한 API 키입니다.
+- `apiKey`: 예보 API를 호출할 자격이 있는 The Weather Company에 대한 API 키입니다. 
 - `latitude`: 위치의 위도 좌표입니다.
 - `longitude`: 위치의 경도 좌표입니다.
+- `timeperiod`: 예보에 대한 기간입니다. 유효한 옵션은 '10day' - (기본값) 일별로 10일 예보를 리턴함, '24hour' - 시별로 2일 예보를 리턴함, 'current' - 현재 날씨 상태를 리턴함, 'timeseries' - 현재 관측 및 현재 날짜 및 시간으로부터 최대 24시간의 지난 관측을 모두 리턴함.  
+
 
 다음은 패키지 바인딩을 작성한 다음 10일 예보를 가져오는 예입니다.
 
@@ -350,6 +357,8 @@ copyright:
 | `/whisk.system/watson` | 패키지 | username, password | Watson 분석 API에 대한 조치 |
 | `/whisk.system/watson/translate` | 조치 | translateFrom, translateTo, translateParam, username, password | 텍스트 변환 |
 | `/whisk.system/watson/languageId` | 조치 | payload, username, password | 언어 식별 |
+| `/whisk.system/watson/speechToText` | 조치 | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | 오디오를 텍스트로 변환 |
+| `/whisk.system/watson/textToSpeech` | 조치 | payload, voice, accept, encoding, username, password | 텍스트를 오디오로 변환 |
 
 필수는 아니지만 `username` 및 `password` 값을 사용하여 패키지 바인딩을 작성하도록 권장합니다. 이 방법의 경우, 패키지에서 조치를 호출할 때마다 신임 정보를 지정할 필요가 없습니다.
 
@@ -412,7 +421,7 @@ copyright:
   {: pre}
   ```
   {
-    "payload": "Ciel bleu a venir",
+"payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -420,6 +429,82 @@ copyright:
   {: screen}
 
 
+### 일부 문자-음성 변환
+
+`/whisk.system/watson/textToSpeech` 조치는 일부 텍스트를 오디오 음성으로 변환합니다. 매개변수는 다음과 같습니다.
+
+- `username`: Watson API 사용자 이름입니다.
+- `password`: Watson API 비밀번호입니다.
+- `payload`: 음성으로 변환할 텍스트입니다. 
+- `voice`: 발표자의 음성입니다. 
+- `accept`: 음성 파일의 형식입니다. 
+- `encoding`: 음성 2진 데이터의 인코딩입니다. 
+
+다음은 패키지 바인딩 작성 및 일부 문자-음성 변환의 예입니다. 
+
+1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. 패키지 바인딩에서 `textToSpeech` 조치를 호출하여 텍스트를 변환하십시오. 
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
+
+
+### 음성-문자 변환
+
+`/whisk.system/watson/speechToText` 조치는 오디오 음성을 텍스트로 변환합니다. 매개변수는 다음과 같습니다.
+
+- `username`: Watson API 사용자 이름입니다.
+- `password`: Watson API 비밀번호입니다.
+- `payload`: 텍스트로 변환할 인코딩된 음성 2진 데이터입니다. 
+- `content_type`: 오디오의 MIME 유형입니다. 
+- `encoding`: 음성 2진 데이터의 인코딩입니다. 
+- `continuous`: 장기 일시정지로 구분되는 연속 구문을 표시하는 다중 최종 결과가 리턴되는지 여부를 표시합니다. 
+- `inactivity_timeout`: 제출된 오디오에서 묵음만 감지되는 경우 해당 시간이 지나면 연결이 닫히는 시간(초)입니다. 
+- `interim_results`: 서비스가 중간 결과를 리턴하는지 여부를 표시합니다. 
+- `keywords`: 오디오에서 찾을 키워드의 목록입니다. 
+- `keywords_threshold`: 키워드를 찾기 위한 하한인 신뢰 값입니다. 
+- `max_alternatives`: 리턴되는 대체 문서의 최대 수입니다. 
+- `model`: 인식 요청에 사용되는 모델의 ID입니다. 
+- `timestamps`: 각 단어마다 시간 맞추기가 리턴되는지 여부를 표시합니다. 
+- `watson-token`: 서비스 신임 정보 제공의 대안으로서 서비스에 대한 인증 토큰을 제공합니다. 
+- `word_alternatives_threshold`: 가능한 단어 대체로서 가설을 식별하기 위한 하한인 신뢰 값입니다. 
+- `word_confidence`: 0 - 1 범위의 신뢰 측정치가 각 단어마다 리턴되는지 여부를 표시합니다. 
+- `X-Watson-Learning-Opt-Out`: 호출에 대한 데이터 콜렉션을 사용하지 않는지 여부를 표시합니다. 
+ 
+다음은 패키지 바인딩 작성 및 음성-문자 변환의 예입니다. 
+
+1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+
+2. 패키지 바인딩에서 `speechToText` 조치를 호출하여 인코딩된 오디오를 변환하십시오. 
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## Slack 패키지 사용
 {: #openwhisk_catalog_slack}
 

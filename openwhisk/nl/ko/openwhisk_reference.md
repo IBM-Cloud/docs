@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 시스템 세부사항
 {: #openwhisk_reference}
 *마지막 업데이트 날짜: 2016년 4월 14일*
+{: .last-updated}
 
 다음 절에서는 {{site.data.keyword.openwhisk}}에 대한 세부사항을 제공합니다.
 {: shortdesc}
@@ -86,7 +87,7 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 
 조치의 호출은 순서가 지정되어 있지 않습니다. 사용자가 명령행 또는 REST API에서 조치를 두 번 호출하면 두 번째 호출이 첫 번째 호출보다 먼저 실행될 수 있습니다. 조치에 부작용이 있으면 어떤 순서도로 관찰될 수 있습니다.
 
-또한 조치가 원자적으로 실행된다는 보장이 없습니다. 두 조치가 동시에 실행되어 부작용이 인터리브될 수 있습니다. 모든 동시성 부작용은 구현에 따라 다릅니다.
+또한 조치가 원자적으로 실행된다는 보장이 없습니다. 두 조치가 동시에 실행되어 부작용이 인터리브될 수 있습니다. OpenWhisk는 부작용과 관련하여 특정 동시 일관성 모델을 보장하지 않습니다. 모든 동시성 부작용은 구현에 따라 다릅니다.
 
 ### 최대 한 번 시맨틱
 {: #openwhisk_atmostonce}
@@ -134,8 +135,7 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 JavaScript로 작성된 조치는 단일 파일로 구성되어야 합니다. 파일에는 다중 함수가 포함될 수 있으나 편의상 `main`이라 불리는 함수가 반드시 존재해야 하며 조치가 호출될 때 호출되는 함수여야 합니다. 예를 들어, 다음은 다중 함수가 있는 조치의 예입니다.
 
 ```
-function main() {
-    return { payload: helper() }
+function main() {return { payload: helper() }
 }
 
 function helper() {
@@ -169,8 +169,7 @@ function main() {
 ```
 // an action in which each path results in a synchronous activation
 function main(params) {
-  if (params.payload == 0) {
-     return;
+  if (params.payload == 0) {return;
   } else if (params.payload == 1) {
      return whisk.done();    // indicates normal completion
   } else if (params.payload == 2) {
@@ -187,8 +186,7 @@ function main(params) {
 다음은 비동기적으로 실행되는 조치의 예입니다.
 
 ```
-function main() {
-    setTimeout(function() {
+function main() {setTimeout(function() {
         return whisk.done({done: true});
     }, 100);
     return whisk.async();
@@ -200,7 +198,7 @@ function main() {
 
 ```
   function main(params) {
-      if (params.payload) {
+     if (params.payload) {
          setTimeout(function() {
             return whisk.done({done: true});
          }, 100);
@@ -259,6 +257,7 @@ JavaScript 조치는 조치에 의해 사용 가능한 다음 패키지와 함�
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -267,6 +266,7 @@ JavaScript 조치는 조치에 의해 사용 가능한 다음 패키지와 함�
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - merge
@@ -281,11 +281,13 @@ JavaScript 조치는 조치에 의해 사용 가능한 다음 패키지와 함�
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -303,6 +305,61 @@ Docker 스켈레톤은 {{site.data.keyword.openwhisk_short}}-호환 가능 Docke
 기본 2진 프로그램은 `dockerSkeleton/client/clientApp` 파일에 복사되어야 합니다. 모든 동반 파일 또는 라이브러리는 `dockerSkeleton/client` 디렉토리에 상주할 수 있습니다.
 
 또한 `dockerSkeleton/Dockerfile`을 수정하여 모든 컴파일 단계 또는 종속 항목을 포함시킬 수 있습니다. 예를 들어, 조치가 Python 스크립트이면 Python을 설치할 수 있습니다.
+
+
+## REST API
+
+시스템의 모든 기능은 REST API를 통해 사용 가능합니다. 조치, 트리거, 규칙, 패키지, 활성화 및 네임스페이스에 대해 콜렉션 및 엔티티 엔드포인트가 있습니다. 
+
+다음은 콜렉션 엔드포인트입니다. 
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations`
+
+콜렉션 엔드포인트에서 GET 요청을 수행하여 콜렉션에서 엔티티의 목록을 페치할 수 있습니다. 
+
+각 엔티티 유형마다 엔티티 엔드포인트가 있습니다. 
+
+- `https://$BASEURL/api/v1/namespaces/{namespace}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://$BASEURL/api/v1/namespaces/{namespace}/activations/{activationName}`
+
+네임스페이스 및 활성화 엔드포인트는 GET 요청만 지원합니다. 조치, 트리거, 규칙 및 패키지 엔드포인트는 GET, PUT 및 DELETE 요청을 지원합니다. 조치, 트리거 및 규칙의 엔드포인트는 POST 요청도 지원하며, 이는 조치 및 트리거를 호출하고 규칙을 사용 또는 사용 안하는 데 사용됩니다. 세부사항은 [API 참조](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json)를 참조하십시오. 
+
+모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 콜론으로 구분되어 `~/.wskprops` 파일의 `AUTH` 특성에 있습니다. [CLI 구성 단계](../README.md#setup-cli)에서 이 신임 정보를 검색할 수도 있습니다. 
+
+다음은 cURL 명령을 사용하여 `whisk.system` 네임스페이스에서 모든 패키지의 목록을 가져오는 예제입니다. 
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## 시스템 한계

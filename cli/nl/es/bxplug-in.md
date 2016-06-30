@@ -18,6 +18,7 @@ copyright:
 # Plugins de la Interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} (bx cli)
 
 *Última actualización: 24 de febrero de 2016*
+{: .last-updated}
 
 Amplíe su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} (bx cli) mediante
 plugins. Puede instalar y usar los plugins disponibles en

@@ -19,6 +19,7 @@ copyright:
 # Création de déclencheurs et de règles
 {: #openwhisk_triggers}
 *Dernière mise à jour : 22 février 2016*
+{: .last-updated}
 
 Les déclencheurs et les règles {{site.data.keyword.openwhisk}} apportent des capacités gérées par des événements sur la
 plateforme. Les événements provenant de sources d'événements externes et internes sont canalisés via un déclencheur, et des règles autorisent vos actions

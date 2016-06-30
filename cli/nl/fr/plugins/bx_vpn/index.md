@@ -120,8 +120,7 @@ ALGORITHME_CHIFFREMENT][-lv VALEUR_DUREE_VIE]
 -e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`. La valeur par défaut est `aes-128`.
 
--lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à
-86400 secondes. La valeur par défaut est `86400` secondes.
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes. La valeur par défaut est `86400` secondes.
 
 **Exemples** :
 
@@ -378,7 +377,7 @@ NOM][-ipsec NOM]
 -admin_state *ETAT_ADMIN* (facultatif) : statut de la connexion de réseau privé virtuel. Les valeurs admises sont `UP`
 et `DOWN`.
 
--dpd-action *ACTION* (facultatif) : action à effectuer lorsque l'homologue est identifié comme mort. Les valeurs admises sont
+-dpd-action *ACTION*  (facultatif) :  action à effectuer lorsque l'homologue est identifié comme non opérationnel. Les valeurs admises sont
 `hold`, `clear`, `disabled`, `restart` et `restart-by-peer`.
 
 -gateway_ip *ADRESSE_IP* (facultatif) : adresse IP du noeud final de tunnel VPN local.
@@ -419,8 +418,7 @@ GROUPE][-e ALGORITHME_CHIFFREMENT] [-lv VALEUR_DUREE_VIE]
 -e *ALGORITHME_CHIFFREMENT* (facultatif) : algorithme de chiffrement. Les valeurs admises sont `aes-128`,
 `aes-192`, `aes-256` et `3des`.
 
--lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à
-86400 secondes.
+-lv *VALEUR_DUREE_VIE* (facultatif) : valeur de durée de vie de l'association de sécurité IKE (Internet Key Exchange). Plage : 60 à 86400 secondes.
 
 
 ## bluemix vpn ipsec-update

@@ -18,6 +18,7 @@ copyright:
 # 조직 및 영역 관리
 {: #orgsspacesusers}
 *마지막 업데이트 날짜: 2016년 5월 16일*
+{: .last-updated}
 
 계정 소유자는 **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **조직 관리** 페이지로 이동하여 조직을 관리할 수 있습니다. 또한 조직 관리자는 조직 관리 페이지를 사용하여 자신이 관리자로 설정된 조직을 관리할 수 있습니다.
 {:shortdesc}

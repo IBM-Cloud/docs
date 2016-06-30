@@ -20,6 +20,7 @@ copyright:
 # Administration
 {: #administer}
 *Dernière mise à jour : 16 mai 2016*
+{: .last-updated}
 
 Pour votre compte {{site.data.keyword.Bluemix_notm}}, vous pouvez mettre à jour les paramètres de votre profil, définir des notifications
 relatives aux dépenses, inviter des membres d'équipe et gérer les organisations et les espaces dont vous êtes propriétaire ou que vous gérez en cliquant
@@ -32,5 +33,4 @@ organisations dont vous êtes propriétaire ou que vous gérez pour chaque compt
 Si vous êtes l'administrateur d'un environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié, consultez la rubrique [Gestion
 de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié](index.html#mng)
 pour des détails sur la gestion de votre compte depuis la page Administration.
-
 

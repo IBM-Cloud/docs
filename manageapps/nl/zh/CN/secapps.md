@@ -15,6 +15,7 @@ copyright:
 {: #securingapps}
 
 *上次更新时间：2016 年 5 月 9 日*
+{: .last-updated}
 
 您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。
 {:shortdesc}
@@ -56,8 +57,8 @@ CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签�
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
-
-    privatekey.key```
+    privatekey.key
+```
 
 **注：**OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可以将 SHA-1 选项用于与 SHA-256 证书具有兼容性问题的应用程序。
 

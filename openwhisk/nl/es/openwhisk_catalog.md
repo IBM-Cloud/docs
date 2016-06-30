@@ -19,6 +19,7 @@ copyright:
 # Uso de servicios habilitados para {{site.data.keyword.openwhisk_short}} 
 {: #openwhisk_ecosystem}
 *Última actualización: 28 de marzo de 2016*
+{: .last-updated}
 
 En {{site.data.keyword.openwhisk}}, un catálogo de paquetes le ofrece una forma rápida de mejorar sus apps con prestaciones útiles, y para acceder a servicios externos en el ecosistema. Algunos de los servicios externos que están habilitados para {{site.data.keyword.openwhisk_short}} son Cloudant, The Weather Company, Slack y GitHub.
 {: shortdesc}
@@ -149,10 +150,11 @@ Puede utilizar la información de entrada `changes` para configurar un servicio 
 para cada cambio de su base de datos Cloudant.
 
 1. Crear un desencadenante con la información de entrada `changes` en el enlace de paquete que ha
-creado anteriormente. Asegúrese de sustituir `/myNamespace/myCloudant` por su nombre de paquete.
+creado anteriormente. Asegúrese de sustituir
+`/myNamespace/myCloudant` por el nombre de paquete.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -172,11 +174,11 @@ creado anteriormente. Asegúrese de sustituir `/myNamespace/myCloudant` por su n
 4. Observe las nuevas activaciones para el desencadenante `myCloudantTrigger` en busca de los cambios de documento.
 
 **Nota**: si no detecta nuevas activaciones, consulte las secciones siguientes sobre la lectura y escritura
-en una base de datos Cloudant. La prueba de los pasos de lectura y escritura más abajo ayudarán a comprobar que sus credenciales de Cloudant son correctas.
+en una base de datos Cloudant. Probar los siguientes pasos de lectura y escritura le ayudará a comprobar si sus credenciales de Cloudant son correctas.
 
 Ahora puede crear reglas y asociarlas a acciones para reaccionar a actualizaciones de documento.
 
-El contenido de los sucesos generados depende del valor del parámetro `includeDocs` al crear el desencadenante. Si se
+El contenido de los eventos generados depende del valor del parámetro `includeDoc` al crear el activador. Si se
 establece en true, cada suceso desencadenante que se activa incluye el documento Cloudant modificado. Por ejemplo, pensemos en el
 documento modificado siguiente:
 
@@ -191,7 +193,7 @@ documento modificado siguiente:
 
 El código en este ejemplo genera un suceso desencadenante con los parámetros `_id`, `_rev` y `name` correspondientes. De hecho, la representación JSON del suceso desencadenante es idéntica al documento.
 
-De lo contrario, si `includeDocs` es falso, los sucesos incluyen los parámetros siguientes:
+De lo contrario, si `includeDoc` es falso, los sucesos incluyen los parámetros siguientes:
 
 - `id`: el id. del documento
 - `seq`: el identificador de secuencia generado por Cloudant.
@@ -227,7 +229,6 @@ esta base de datos exista en su cuenta Cloudant.
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
     "id": "heisenberg",
     "ok": true,
@@ -280,10 +281,15 @@ El paquete incluye la información de entrada siguiente.
 ### Activación periódica de un suceso desencadenante
 
 La información de entrada `/whisk.system/alarms/alarm` configura un servicio de alarma para activar un suceso desencadenante
-con una frecuencia especificada. Los parámetros son como se indica a continuación:
+con una frecuencia especificada. Los parámetros son según se indica a continuación:
 
 - `cron`: una serie, basada en la sintaxis crontab de UNIX, que indica cuándo activar el desencadenante en Hora Universal Coordinada (UTC). La serie es una
-secuencia de seis campos separados por espacios: `X X X X X X `. Para obtener más detalles sobre cómo utilizar sintaxis cron, consulte: https://github.com/ncb000gt/node-cron.
+secuencia de seis campos separados por espacios: `X X X X X X `. Para obtener más detalles sobre cómo utilizar sintaxis cron, consulte: https://github.com/ncb000gt/node-cron. A continuación se muestran algunos ejemplos de la frecuencia indicada por la serie:
+
+  - `* * * * * *`: cada segundo.
+  - `0 * * * * *`: cada minuto en punto.
+  - `* 0 * * * *`: a cada hora en punto.
+  - `0 0 9 8 * *`: at 9:00:00AM (UTC) en el octavo día de cada mes
 
 - `trigger_payload`: el valor de este parámetro pasa a ser el contenido del desencadenante cada vez que se activa
 el desencadenante.
@@ -294,7 +300,7 @@ A continuación se muestra un ejemplo de la creación de un desencadenante que s
 los valores `name` y `place` en el suceso desencadenante.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
@@ -305,26 +311,28 @@ cada suceso desencadenante tendrá los parámetros `name=Odin` y `place=Asgard`.
 ## Uso del paquete Weather
 {: #openwhisk_catalog_weather}
 
-El paquete `/whisk.system/weather` ofrece una forma cómoda de invocar la API de The Weather Company.
+El paquete `/whisk.system/weather` ofrece un método muy práctico para invocar la API de IBM Weather Insights. 
 
 El paquete incluye la acción siguiente.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | paquete | apiKey | Servicios de The Weather Company |
-| `/whisk.system/weather/forecast` | acción | apiKey, latitude, longitude | Previsión a 10 días de Weather.com |
+| `/whisk.system/weather` | paquete | apiKey | Servicios de la API de IBM Weather Insights  |
+| `/whisk.system/weather/forecast` | acción | apiKey, latitude, longitude, timePeriod | Previsión para el periodo de tiempo indicado|
 
 Aunque no es obligatorio, se recomienda crear un enlace de paquete con el valor `apiKey`. Así, no necesita especificar
 la clave cada vez que invoque las acciones del paquete.
 
 ### Obtención de la previsión meteorológica para una ubicación
 
-La acción `/whisk.system/weather/forecast` devuelve una previsión meteorológica de 10 días para un lugar,
+La acción `/whisk.system/weather/forecast` devuelve una previsión meteorológica para un lugar,
 invocando la API de The Weather Company. Los parámetros son según se indica a continuación:
 
-- `apiKey`: una clave de API para The Weather Company que tiene autorización para invocar la API de previsión meteorológica a 10 días vista
+- `apiKey`: una clave de API para The Weather Company que tiene autorización para invocar la API de previsión meteorológica 
 - `latitude`: la coordenada de latitud de la ubicación
 - `longitude`: la coordenada de longitud de la ubicación
+- `timeperiod`: periodo de tiempo de la previsión. Las opciones válidas son '10day'(valor predeterminado)devuelve una previsión por días para 10 días; '24hour' devuelve una previsión por horas para dos días; 'current' devuelve las condiciones meteorológicas actuales; 'timeseries' devuelve las observaciones actuales y hasta 24 horas de desviaciones de las últimas observaciones, desde la fecha y hora actuales.  
+
 
 A continuación se muestra un ejemplo de la creación de un enlace de paquete y luego la obtención de una previsión a 10 días.
 
@@ -379,6 +387,8 @@ El paquete incluye las acciones siguientes.
 | `/whisk.system/watson` | paquete | usuario, contraseña | Acciones para las API de analíticas de Watson |
 | `/whisk.system/watson/translate` | acción | translateFrom, translateTo, translateParam, username, password | Traducir texto |
 | `/whisk.system/watson/languageId` | acción | payload, username, password | Identificar idioma |
+| `/whisk.system/watson/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audi en texto |
+| `/whisk.system/watson/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
 
 Aunque no es obligatorio, se recomienda crear un enlace de paquete con los valores `username` and `password`. Así, no necesita especificar
 estas credenciales cada vez que invoque las acciones del paquete.
@@ -389,7 +399,7 @@ La acción `/whisk.system/watson/translate` traduce texto de un idioma a otro. L
 
 - `username`: nombre de usuario de la API de Watson
 - `password`: contraseña de la API de Watson
-- `translateParam`: el  parámetro de entrada a traducir. Por ejemplo, si es `translateParam=payload`, el valor del parámetro `payload` que se pasa a la acción, se traduce
+- `translateParam`: el parámetro de entrada a traducir. Por ejemplo, si es `translateParam=payload`, el valor del parámetro `payload` que se pasa a la acción, se traduce
 - `translateFrom`: un código de dos dígitos del lenguaje origen
 - `translateTo`: un código de dos dígitos del idioma de destino.
 
@@ -450,6 +460,82 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
   {: screen}
 
 
+### Conversión de texto a habla
+
+La acción `/whisk.system/watson/textToSpeech` convierte texto en un texto hablado. Los parámetros son según se indica a continuación:
+
+- `username`: nombre de usuario de la API de Watson
+- `password`: contraseña de la API de Watson
+- `payload`: texto que se debe convertir en habla. 
+- `voice`: voz de la persona que habla. 
+- `accept`: formato del archivo de audio. 
+- `encoding`: codificación de los datos binarios del habla. 
+
+A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir texto en habla. 
+
+1. Crear un enlace de paquete con sus credenciales de Watson.
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto. 
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
+
+
+### Conversión de habla a texto
+
+La acción `/whisk.system/watson/speechToText` conivierte el audio en texto. Los parámetros son según se indica a continuación:
+
+- `username`: nombre de usuario de la API de Watson
+- `password`: contraseña de la API de Watson
+- `payload`: datos binarios codificados del habla para convertir en texto. 
+- `content_type`: tipo MIME del audio. 
+- `encoding`: codificación de los datos binarios del habla. 
+- `continuous`: indica si se devuelven varios resultados finales que representan frases consecutivas separadas por pausas prolongadas. 
+- `inactivity_timeout`: tiempo, en segundos, después del cual, si solo se detecta silencio en el audio enviado, la conexión se cierra. 
+- `interim_results`: indica si el servicio debe devolver resultados temporales. 
+- `keywords`: lista de palabras clave para detectar en el audio. 
+- `keywords_threshold`: valor de confianza que se encuentra en el límite inferior para detectar una palabra clave. 
+- `max_alternatives`: número máximo de transcripciones alternativas que deben devolverse. 
+- `model`: identificador del modelo que debe utilizarse para la solicitud de reconocimiento. 
+- `timestamps`: indica si se devuelve la alineación de tiempo para cada palabra. 
+- `watson-token`: proporciona un elemento de autenticación para el servicio como alternativa para proporcionar credenciales del servicio. 
+- `word_alternatives_threshold`: valor de confianza que se encuentra en el límite inferior para identificar una hipótesis cmo posible alternativa de palabra. 
+- `word_confidence`: indica si se devuelve para cada palabra una medida de confianza entre 0 y 1.
+- `X-Watson-Learning-Opt-Out`: indica si se debe renunciar a la recopilación de datos para la llamada. 
+ 
+A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir habla en texto. 
+
+1. Crear un enlace de paquete con sus credenciales de Watson.
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+
+2. Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado. 
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## Uso del paquete Slack
 {: #openwhisk_catalog_slack}
 

@@ -16,6 +16,7 @@ copyright:
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
 *Letzte Aktualisierung: 9. Mai 2016*
+{: .last-updated}
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet eine Gruppe von Sicherheitsservices zur Verwendung durch Anwendungsentwickler zum Sichern ihrer mobilen Apps und Web-Apps. Kombiniert machen diese Elemente {{site.data.keyword.Bluemix_notm}} zu einer Plattform mit klaren Auswahlmöglichkeiten für eine sichere Anwendungsentwicklung.
 {:shortdesc}

@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 開発モード CLI
+# (非推奨) 開発モード CLI
 {: #devmodecli}
 
-*最終更新日: 2016 年 4 月 11 日*
+*最終更新日: 2016 年 5 月 12 日*
+{: .last-updated}
+
+**この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for Bluemix または DevOps Web IDE を使用してください。dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
 
 Bluemix 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
 {: shortdesc}
@@ -35,10 +38,10 @@ Bluemix 開発モード・コマンド・ライン・インターフェース (d
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
   1. [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName})から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
-  2. cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。
+  2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Bluemix CLI リポジトリーからインストールする。
@@ -124,7 +127,8 @@ cf mode <appName> <dev|normal>
 ## status
 {: #status}
 
-アプリのモードとランタイム状況を表示します。```
+アプリのモードとランタイム状況を表示します。
+```
 cf status <appName>
 ```
 
@@ -140,7 +144,9 @@ cf update-file <remotePath> <localPath> [command_options]
 ```
 
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+
+   <dl>
    <dt>expand</dt>
    <dd>zip ファイルを解凍して、アップロードしたファイルを抜き出す必要があるかどうかを示します。</dd>
    <dt>restart</dt>
@@ -159,7 +165,8 @@ cf delete-file <remotePath> [command_options]
 ```
 
 
-<strong>コマンド・オプション</strong>:<dl>
+<strong>コマンド・オプション</strong>:
+ <dl>
    <dt>restart</dt>
    <dd>ファイルの更新後にアプリ・ランタイムを再始動します。</dd>
   </dl>
@@ -201,10 +208,8 @@ cf restart-inplace <appName>
 
 ## 関連リンク
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI と開発ツール](../../index.html#cli){:new_window}
+* [開発モード CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

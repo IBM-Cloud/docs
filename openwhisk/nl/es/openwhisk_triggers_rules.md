@@ -19,6 +19,7 @@ copyright:
 # Creación de desencadenantes y reglas
 {: #openwhisk_triggers}
 *Última actualización: 22 de febrero de 2016*
+{: .last-updated}
 
 Los desencadenantes y reglas de {{site.data.keyword.openwhisk}} aportan prestaciones dirigidas por sucesos a la plataforma. Los sucesos de orígenes de sucesos externos e internos se ponen en el canal por medio de un desencadenante, y las reglas permiten sus acciones de respuesta para dichos sucesos.
 {: shortdesc}

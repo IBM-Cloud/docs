@@ -18,7 +18,8 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*最終更新日: 2016 年 3 月 3 日*
+*最終更新日: 2016 年 6 月 2 日*
+{: .last-updated}
 
 Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境のユーザーを管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](../../../admin/adminpublic.html#administer)』を参照してください。
 
@@ -218,7 +219,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/adminpublic.html#orgsandspaces)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html#userrolesinfo)を参照してください。
 </dd>
 </dl>
 
@@ -240,7 +241,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/adminpublic.html#orgsandspaces)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html#userrolesinfo)を参照してください。
 </dd>
 </dl>
 
@@ -291,6 +292,8 @@ cf ba set-quota <organization> <plan>
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**注**: レポートの書き込みアクセス許可がある場合は、新規カテゴリーを作成し、ユーザー用に受け入れられるフォーマットのいずれかでレポートを追加できます。`category` パラメーターに新規カテゴリー名を入力するか、既存のカテゴリーに新規レポートを追加します。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -354,7 +357,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">有効化するサービスの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
 </dl>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
@@ -368,7 +371,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">無効化するサービスの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
 </dl>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
@@ -386,7 +389,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">表示可能性を追加するサービスの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストに追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -402,7 +405,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">表示可能性を削除するサービスの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">サービスの表示可能性リストから削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
@@ -420,7 +423,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">表示されるようにするサービスの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。</dd>
+<dd class="pd">有効化するサービス・プランの名前または GUID。非固有のサービス名を入力すると、サービス・プランを選択するように求められます。サービス・プラン名を識別するには、ホーム・ページのサービス・カテゴリーを選択してから、**「追加」**を選択してそのカテゴリーのサービスを表示します。サービス名をクリックして詳細ビューを開き、そのサービスで使用可能な料金プランを表示できます。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">表示可能性を追加する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。コマンドに追加の組織名または GUID を入力することで、複数の組織に対してサービスの表示可能性を有効化できます。</dd>
 </dl>
@@ -438,7 +441,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**注**: すべてのサービス・ブローカーをリストするには、`broker_name` パラメーターを指定せずにコマンドを入力します。 
+**注**: すべてのサービス・ブローカーをリストするには、`broker_name` パラメーターを指定せずにコマンドを入力します。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>

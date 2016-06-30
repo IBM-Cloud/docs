@@ -17,6 +17,7 @@ copyright:
 {: #overview}
 
 *마지막 업데이트 날짜: 2016년 5월 9일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}}는 모바일 및 웹 개발자에게 통합, 보안, 트랜잭션 및 기타 핵심 기능을 지원하는 {{site.data.keyword.IBM_notm}} 소프트웨어 및 비즈니스 파트너의 소프트웨어에 대한 액세스를 제공하는 {{site.data.keyword.IBM}}의 개방형 클라우드 플랫폼입니다.
 {:shortdesc}
@@ -243,7 +244,7 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 |-----------------|-------------------------|-------------------|---------------------|----------------|
 | 미국 남부 지역 | 달라스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| 시드니 지역 | 시드니, 오스트레일리아 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 
 *표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록*
@@ -274,7 +275,7 @@ Docker 컨테이너를 실행하는 데 사용됩니다. Docker는
 환경을 제공합니다. 준비가 완료되면 개발 환경에서 테스트 환경 및 프로덕션 환경으로
 코드를 전송할 수 있는 방법을 제공합니다.
 
-    {{site.data.keyword.IBM_notm}} Containers에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)를 참조하십시오.</dd>
+{{site.data.keyword.IBM_notm}} Containers에 대한 자세한 정보는 [{{site.data.keyword.IBM_notm}} Containers](../containers/container_index.html)를 참조하십시오.</dd>
 <dt>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}(베타)</dt>
     <dd><p>{{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}은 호스트되는 클라우드 환경이며 앱 및 앱이 실행되는 미들웨어에 대한 제어를 유지하면서 사용자의 애플리케이션을 빌드, 실행, 관리 및 모니터할 수 있는 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}의 일부입니다. 비즈니스 솔루션을 격리할 때, 특히 앱을 퍼블릭 클라우드에 배치할 때 {{site.data.keyword.virtualmachinesshort}}을 사용하십시오.</p>
 <p>    
@@ -460,7 +461,7 @@ Twitter API를 사용하여 작성된 경우 비즈니스 파트너 서비스도
 {: #lang}
 
 {{site.data.keyword.Bluemix_notm}}는
-영어 이외의 자국어를 지원합니다. 하지만 {{site.data.keyword.Bluemix_notm}}를 통해 제공되는 일부 컨텐츠는 번역되지 않습니다.다음 표에는
+영어 이외의 자국어를 지원합니다. 하지만 {{site.data.keyword.Bluemix_notm}}를 통해 제공되는 일부 컨텐츠는 번역되지 않습니다. 다음 표에는
 {{site.data.keyword.Bluemix_notm}}에 대해 지원되는 자국어 및 언어 코드가 나와 있습니다.
 
 | **자국어** | **언어 코드** |

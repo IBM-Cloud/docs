@@ -18,7 +18,8 @@ copyright:
 # Scénario : Développement de bout en bout
 {: #ee}
 
-*Dernière mise à jour : 18 avril 2016*
+*Dernière mise à jour : 15 juin 2016*
+{: .last-updated}
 
 La plateforme et l'interface utilisateur {{site.data.keyword.Bluemix}}, ainsi qu'une sélection d'outils associés,
 vous permettent de construire, exécuter et déployer vos applications. Suivez ce scénario de développement de bout en bout pour
@@ -48,12 +49,14 @@ disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
-utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Une fois connecté à {{site.data.keyword.Bluemix_notm}}, cliquez
-sur le nom de votre compte dans le coin supérieur droit et sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
+utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous être connecté à
+{{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Compte et support**
+![Icône Compte et support](../admin/images/account_support.svg), puis sélectionnez la région **US South**. Ensuite, procédez comme suit pour créer une application :
 
-  1. Cliquez sur le bouton plus. 
-  2. Sélectionnez **Calcul**>**Applications CF**>**SDK for Node.js**.
-  3. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Créer**. Le nom de
+  1. Sélectionnez **Traitement**.
+  2. Cliquez sur l'icône en forme de signe plus.
+  3. Sélectionnez **SDK for Node.js**.
+  4. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Créer**. Le nom de
 l'application doit être unique dans l'ensemble de l'environnement {{site.data.keyword.Bluemix_notm}}.
   
 A présent, vous pouvez lire les instructions **Commencer le codage**. Vous pouvez suivre les instructions de téléchargement, de

@@ -16,12 +16,15 @@ copyright:
 #{{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicated}
 
-*마지막 업데이트 날짜: 2016년 5월 16일*
+*마지막 업데이트 날짜: 2016년 6월 13일*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}}는
 애플리케이션을 빌드, 실행 및 관리하기 위한 개방형 표준, 클라우드 기반 플랫폼입니다. {{site.data.keyword.Bluemix_notm}} Dedicated를 사용하면 {{site.data.keyword.Bluemix_notm}} Public 환경과 고유 네트워크 모두에 안전하게 연결되어 있는 자체 전용 SoftLayer 환경에서 {{site.data.keyword.Bluemix_notm}}의 강력한 성능과 단순함을 이용할 수 있습니다.
 {:shortdesc}
+
+**참고:** {{site.data.keyword.Bluemix}} Dedicated에 대한 서비스, 지원 및 판매를 포함하여 SoftLayer와 관련된 모든 정보는 중국에서는 적용되지 않습니다. 중국의 {{site.data.keyword.Bluemix}} Dedicated 고객은 [UNISYS 서비스 관리 IBM Bluemix 페이지](https://chinabluemix.itsm.unisysedge.cn){: new_window}의 지원을 요청할 수 있습니다. 또한 중국의 고객은 [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}에서 무상 지원을 받을 수 있습니다. 
 
 모든 {{site.data.keyword.Bluemix_notm}} 전용 배치에는 추가 비용 없이 VPN, 사설 VLAN(Virtual Local Area Network), 방화벽, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 전용 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.
 
@@ -40,6 +43,7 @@ copyright:
 |선택사항 | {{site.data.keyword.cloudant}} | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
 |선택사항 | {{site.data.keyword.dashdbshort}} | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석, R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
 |선택사항 | {{site.data.keyword.datacshort}} | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
+| 선택사항(베타) | 로깅 | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
 |선택사항 | {{site.data.keyword.mobilepushshort}} | {{site.data.keyword.mobilepushshort}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
 |선택사항 | {{site.data.keyword.messagehub}} | {{site.data.keyword.messagehub}}는 사내 구축 환경 기술과 사외 구축 환경 기술을 통합하는 확장 가능하고 처리량이 많은 분산 메시지 버스입니다. {{site.data.keyword.messagehub}}는 빠르고 확장 가능하고 내구성 강한 실시간 메시징 엔진인 Apache Kafka를 기반으로 합니다. |
 |선택사항 | {{site.data.keyword.SecureGateway}} | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
@@ -53,17 +57,21 @@ copyright:
 | **이름**            | **설명** |      
 |-------------------|-------------------|
 |Dedicated 런타임 16GB 용량 증가  | 추가 16GB 런타임 용량을 제공하는 런타임 환경의 확장입니다. |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 500만 API 호출 | 부서별 API 프로젝트 방향으로 대상 지정된 월간 500만 API 호출의 용량을 지닌 전용 환경 내의 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
+|Dedicated {{site.data.keyword.apiconnect_short}} Professional 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Professional 환경의 확장입니다.  |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 2,500만 API 호출 | 엔터프라이즈 전체 API 프로젝트 방향으로 대상 지정된 월간 2,500만 API 호출의 용량을 지닌 전용 환경 내의 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
+|Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Enterprise 환경의 확장입니다.  |
+|Dedicated {{site.data.keyword.APIM}} 1000 API 호출 용량  | 초당 1,000개 API 호출의 용량을 지닌 전용 환경 내에서 {{site.data.keyword.APIM}}의 개인용 버전 실행을 허용하는 환경입니다. |
+|Dedicated {{site.data.keyword.APIM}} 500 API 호출 용량 증가  | 초당 500개 API 호출의 용량을 지닌 전용 환경 내에서 IBM API Management for Bluemix의 개인용 버전 실행을 허용하는 환경입니다.  |
 |Dedicated {{site.data.keyword.cloudant}} 1.6TB 용량 증가 | 1.6TB 디자인 용량의 전용 환경 내에서 {{site.data.keyword.cloudantfull}}의 개인용 버전 실행을 포함합니다.  |
 |Dedicated {{site.data.keyword.datacshort}} 및 {{site.data.keyword.sescashort}} 50GB 용량 증가 | 최대 50GB 누적 용량까지 {{site.data.keyword.datacshort}} 및 {{site.data.keyword.sescashort}} 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
-|Dedicated Direct Link 1Gbps 용량 | 최대 1Gbps의 데이터 전송을 위해 디자인된 해당 SoftLayer 네트워크 PoP(Point of Presence)에 직접 연결된 전용 네트워크 링크입니다. |
-|Dedicated Direct Link 10Gbps 용량 | 최대 10Gbps의 데이터 전송을 위해 디자인된 해당 SoftLayer 네트워크 PoP(Point of Presence)에 직접 연결된 전용 네트워크 링크입니다. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | 64GB RAM, 16 vCPU의 전용 서버에서 서비스 인스턴스당 하나의 데이터베이스. 일반 압축을 기반으로 최대 1TB의 사전 로드 데이터에 권장됩니다.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | 256GB RAM, 32 코어의 전용 베어메탈 서버에서 서비스 인스턴스당 하나의 데이터베이스. 일반 압축을 기반으로 최대 4TB의 사전 로드 데이터에 권장됩니다. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | 256GB RAM, 32 코어의 전용 베어메탈 서버에서 서비스 인스턴스당 하나의 데이터베이스. 일반 압축을 기반으로 최대 12TB의 사전 로드 데이터에 권장됩니다. 이는 데이터 볼륨이 크며 인메모리 속도로 조회를 실행할 필요가 없는 환경에 적합한 스토리지 고밀도 플랜입니다. |
-|Dedicated {{site.data.keyword.APIM}} 1000 API 호출 용량  | 초당 1,000개 API 호출의 용량을 지닌 전용 환경 내에서 {{site.data.keyword.APIM}}의 개인용 버전 실행을 허용하는 환경입니다. |
-|Dedicated {{site.data.keyword.APIM}} 500 API 호출 용량 증가  | 초당 500개 API 호출의 용량을 지닌 전용 환경 내에서 IBM API Management for Bluemix의 개인용 버전 실행을 허용하는 환경입니다.  |
+|Dedicated Direct Link 1Gbps 용량 | 최대 1Gbps의 데이터 전송을 위해 디자인된 해당 SoftLayer 네트워크 PoP(Point of Presence)에 직접 연결된 전용 네트워크 링크입니다. |
+|Dedicated Direct Link 10Gbps 용량 | 최대 10Gbps의 데이터 전송을 위해 디자인된 해당 SoftLayer 네트워크 PoP(Point of Presence)에 직접 연결된 전용 네트워크 링크입니다. |
 |{{site.data.keyword.Bluemix_notm}} Dedicated 커뮤니티 서비스  | 각 커뮤니티 서비스마다 총 50개 인스턴스까지 커뮤니티 서비스의 배치 및 실행을 허용하는 환경입니다.  |
-|IBM Bluemix Dedicated 하드웨어 방화벽 - 고가용성 | Dedicated 환경 내의 동일한 VLAN에서 단일, 다중 또는 모든 서버를 보호하기 위해 구성된 중복 1Gbps 하드웨어 방화벽입니다. |
+|IBM {{site.data.keyword.Bluemix_notm}} Dedicated 하드웨어 방화벽 - 고가용성 | Dedicated 환경 내의 동일한 VLAN에서 단일, 다중 또는 모든 서버를 보호하기 위해 구성된 중복 1Gbps 하드웨어 방화벽입니다. |
 |고가용성을 위해 구성된 Dedicated 1Gbps Vyatta VPN  | 전용 환경에서 사용할 수 있도록 고가용성을 위해 구성된 1Gbps Vyatta VPN.  |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.mobilepushshort}} | 초당 300개의 요청을 승인하는 기능으로 {{site.data.keyword.mobilepushshort}} 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.iot_short}} Dedicated 증분 증가 | 0.5TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 환경 증가입니다. |
@@ -277,7 +285,7 @@ IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 �
 |이벤트 발견 및 문제점 판별을 위한 식별 도구 | {{site.data.keyword.Bluemix_notm}} 플랫폼 레벨에서 이벤트 발견 및 문제점 판별에 사용되는 IBM 및 써드파티 도구를 식별합니다. | IBM |
 |확대 플랜 정의 | 모니터링 컴포넌트를 통해 발견된 이벤트를 선별하고 해결하는 단계적 확대 플랜을 정의합니다. | IBM |
 |인프라, 플랫폼 및 지원 계약에 서명 | 환경에 대한 재무 조건을 포함하여 구독 계약에 서명합니다. 지원 구독에 서명합니다. | 고객 |
-|환경 조달 | {{site.data.keyword.Bluemix_notm}}을 호스팅하는 코어 및 서비스 VLAN과, Data Power 및 SoftLayer Firewall을 호스팅하는 베어 메탈 서비스 등 계산 자원, 네트워크 및 스토리지를 조달합니다. VPN 터널을 허용하는 인프라를 제공합니다. | 고객 |
+|환경 조달 | {{site.data.keyword.Bluemix_notm}}을 호스팅하는 코어 및 서비스 VLAN과, Data Power 및 SoftLayer Firewall을 호스팅하는 베어 메탈 서비스 등 계산 자원, 네트워크 및 스토리지를 조달합니다. VPN 터널을 허용하는 인프라를 제공합니다. | IBM |
 |플랫폼, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 플랫폼 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | IBM |
 |보안 컴포넌트 설치 및 구성 | 모니터링 및 단계적 확대 플랜에 연결된 보안 컴포넌트(예: IBM QRadar, 신임 정보 저장소, 침입 방지 시스템, IBM BigFix, IBM Security Privileged Identity Management)를 설치하고 구성합니다. | IBM |
 |사용자 정의 컴포넌트 설치 및 구성 |  	{{site.data.keyword.Bluemix_notm}} 제품 및 서비스 범위의 외부에 상주하는 사용자 정의 컴포넌트를 설치하고 구성합니다. | 고객 |

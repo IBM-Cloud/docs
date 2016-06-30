@@ -28,4 +28,6 @@ copyright:
   3. {: download} 下載入門範本程式碼，並前往 **File > Import Existing Projects into Workspace > Archive File**，將它匯入到 Eclipse 中。
   
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_starter-code.svg" alt="下載入門範本程式碼" /> </a>
-  如需部署應用程式的逐步指示，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。
+   
+
+如需部署應用程式的逐步指示，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。

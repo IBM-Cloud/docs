@@ -14,7 +14,7 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 適用於 VPN 的 Bluemix CLI 外掛程式
+# Bluemix CLI VPN 外掛程式
 
 *前次更新：*2016 年 1 月 18 日
 
@@ -69,9 +69,9 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 -i *INITIATOR_STATE*（選用）：起始器的狀態。預設值為 `bi-directional`。
 
--dpd-timeout *VALUE*（選用）：逾時值（以秒為單位），在此期間之後會終止階段作業。範圍：6 - 86400 秒。預設值為 `120` 秒。
+-dpd-timeout *VALUE*（選用）：逾時值（秒），在此期間之後會終止階段作業。範圍：6 - 86400 秒。預設值為 `120` 秒。
 
--dpd-interval *VALUE*（選用）：保留作用中間隔（以秒為單位）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。預設值為 `15` 秒。
+-dpd-interval *VALUE*（選用）：保留作用中間隔（秒）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。預設值為 `15` 秒。
 
 -ike *NAME*（選用）：IKE 原則的名稱。
 
@@ -80,6 +80,7 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 **範例**：
 
 建立名稱為 `my_connection` 的新 VPN 連線：
+
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
@@ -111,6 +112,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 **範例**：
 
 建立名稱為 `my_ike` 的新 IKE 原則：
+
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
@@ -142,6 +144,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 **範例**：
 
 建立名稱為 `my_policy` 的 IPSec 原則：
+
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -160,7 +163,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 
 *GATEWAY_NAME*（必要）：閘道的名稱。
 
--t *TYPE*（必要）：您要啟用服務的儲存器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。無預設值；您必須指定類型。
+-t *TYPE*（必要）：您要啟用服務的容器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。無預設值；您必須指定類型。
 
 -gateway_ip *IP_ADDRESS*（選用）：閘道的 IP 位址。
 
@@ -169,6 +172,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 **範例**：
 
 建立名稱為 `my_gateway` 且類型為 `allContainerGroups` 的閘道：
+
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```
@@ -359,9 +363,9 @@ bluemix vpn connection-update CONNECTION_NAME [-g GATEWAY_NAME][-k PRESHARED_KEY
 
 -i *INITIATOR_STATE*（選用）：起始器的狀態。
 
--dpd-timeout *VALUE*（選用）：逾時值（以秒為單位），在此期間之後會終止階段作業。範圍：6 - 86400 秒。
+-dpd-timeout *VALUE*（選用）：逾時值（秒），在此期間之後會終止階段作業。範圍：6 - 86400 秒。
 
--dpd-interval *VALUE*（選用）：保留作用中間隔（以秒為單位）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。
+-dpd-interval *VALUE*（選用）：保留作用中間隔（秒）。依配置的間隔傳送保留作用中訊息，以檢查對等節點是否活躍。範圍：5-86399 秒。
 
 -ike *NAME*（選用）：IKE 原則的名稱。
 
@@ -429,7 +433,7 @@ bluemix vpn gateway-update GATEWAY_NAME [-t TYPE][-gateway_ip IP_ADDRESS] [-subn
 
 *GATEWAY_NAME*（必要）：閘道的名稱。
 
--t *TYPE*（選用）：您要啟用服務的儲存器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。
+-t *TYPE*（選用）：您要啟用服務的容器。有效值為 `allSingleContainers`、`allContainerGroups` 或 `allContainers`。
 
 -gateway_ip *IP_ADDRESS*（選用）：閘道的 IP 位址。
 

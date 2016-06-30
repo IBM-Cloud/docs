@@ -15,6 +15,7 @@ copyright:
 
 # Carga de una aplicación
 *Última actualización: 17 de febrero de 2016*
+{: .last-updated}
 
 Después de iniciar sesión en {{site.data.keyword.Bluemix}}, puede cargar su aplicación con el mandato cf push.
 {:shortdesc}

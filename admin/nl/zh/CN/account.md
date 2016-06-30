@@ -17,7 +17,8 @@ copyright:
 
 # 管理您的 {{site.data.keyword.Bluemix_notm}} 帐户
 {: #mngacct}
-*上次更新时间：2016 年 5 月 16 日*
+*上次更新时间：2016 年 6 月 1 日*
+{: .last-updated}
 
 转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户**，以便为您的帐户设置通知、查看您帐户的使用情况或查看您的帐单。
 {:shortdesc}
@@ -50,7 +51,7 @@ copyright:
 ## 查看使用情况
 {: #acctusage}
 
-作为组织的帐户所有者或记帐管理员，您可使用“使用情况仪表板”视图来查看组织中每月使用的运行时、容器、服务和支持的实时费用。您可以查看所有区域中的运行时 GB-小时数和服务使用量，也可选择查看特定区域的情况。
+作为组织的帐户所有者或记帐管理员，您可使用“使用情况仪表板”视图来查看组织中每月使用的运行时、容器、服务和支持的实时费用。您可以查看所有区域中的运行时 GB-小时数和服务使用情况，也可选择查看特定区域的情况。
 
 要打开“使用情况仪表板”视图，请单击**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
 
@@ -62,3 +63,4 @@ copyright:
 
 作为帐户所有者，您可以编辑、添加或除去与您的 {{site.data.keyword.Bluemix_notm}} 帐户关联的已保存信用卡信息。转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; *your_account_name* &gt; **记帐**。
 
+如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，请参阅[链接帐户时 {{site.data.keyword.Bluemix_notm}} 使用情况的帐单](../admin/softlayerlink.html#bill_usage)，以获取计费方式的更多信息。

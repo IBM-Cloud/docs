@@ -29,7 +29,7 @@ copyright:
 
 ##實驗性服務
 
-{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及執行時期，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
+{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
 
 實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
@@ -96,7 +96,7 @@ copyright:
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|是|
 |{{site.data.keyword.servicediscoveryshort}}		|是		|是		|否|
-|{{site.data.keyword.serviceproxyshort}}		|是		|否		|否|
+|{{site.data.keyword.serviceproxyshort}}		|是		|是		|否|
 |{{site.data.keyword.sescashort}}		|是		|是		|是|
 |{{site.data.keyword.ssofull}}			|是		|否		|否|
 |{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|

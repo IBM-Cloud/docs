@@ -18,6 +18,7 @@ copyright:
 
 # Utilisation des packs de construction intégrés de la communauté
 *Dernière mise à jour : 15 mars 2016*
+{: .last-updated}
 
 Si vous ne trouvez pas de module de démarrage qui offre le contexte d'exécution dont vous avez besoin dans le catalogue {{site.data.keyword.Bluemix}}, vous pouvez fournir un
 pack de construction externe dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez spécifier un pack de construction personnalisé et compatible avec Cloud Foundry lorsque vous déployez votre application avec la commande cf
@@ -38,14 +39,8 @@ intégrés fournis par la communauté Cloud Foundry. Pour afficher la liste des 
 buildpacks :
 
 ```
-cf buildpacks
-Getting buildpacks...
-
-buildpack      position   enabled   locked   filename
-...
-java_buildpack     7      true      false    buildpack_java_v2.0.2.zip
-ruby_buildpack     8      true      false    buildpack_ruby_v46-245-g2fc4ad8.zip
-nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zip
+cf buildpacks Getting buildpacks... buildpack      position   enabled   locked   filename ... java_buildpack     7      true      false    buildpack_java_v2.0.2.zip
+ruby_buildpack     8      true      false    buildpack_ruby_v46-245-g2fc4ad8.zip nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zip
 ```
 {:screen}
 

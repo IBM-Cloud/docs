@@ -5,10 +5,9 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc} 
 
-# Data and Analytics
+# データ & 分析
 {: #data_analytics}
 
 *最終更新日: 2016 年 3 月 9 日*

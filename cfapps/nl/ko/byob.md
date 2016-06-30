@@ -18,6 +18,7 @@ copyright:
 
 # 커뮤니티 빌드팩 사용
 *마지막 업데이트 날짜: 2016년 3월 15일*
+{: .last-updated}
 
 원하는 런타임을 제공하는 스타터가 {{site.data.keyword.Bluemix}} 카탈로그에 없는 경우, 외부 빌드팩을 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다. cf push 명령을 사용하여 앱을 배치하는 경우, 사용자 정의 Cloud Foundry 호환 가능 빌드팩을 지정할 수 있습니다.
 {:shortdesc}

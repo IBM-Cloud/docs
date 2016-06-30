@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} Local
 {: #local}
-*Letzte Aktualisierung: 16. Mai 2016*
+*Letzte Aktualisierung: 6. Juni 2016*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Local bringt das Leistungsstärke und Beweglichkeit (der Geschäftsabläufe) der cloudbasierten {{site.data.keyword.Bluemix_notm}}-Plattform in Ihr Rechenzentrum. Mit {{site.data.keyword.Bluemix_notm}} Local können Sie die hochsensiblen Verarbeitungsprozesse hinter der Firewall des Unternehmens schützen und gleichzeitig eine sichere Verbindung und Synchronisation mit {{site.data.keyword.Bluemix_notm}} Public gewährleisten.
 {:shortdesc}
@@ -33,6 +34,7 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_notm
 | **Typ** | **Name** | **Beschreibung** |
 |----------|----------|-----------------|
 |Inbegriffen | {{site.data.keyword.Bluemix_notm}}-Laufzeiten | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Local-Instanz zur Verfügung.|
+|Optional | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
 |Optional | {{site.data.keyword.APIM}} | Verwenden Sie den {{site.data.keyword.APIMfull}}-Service zum Erstellen, Verwalten und Mitteilen von APIs. Sie können mit einer Proxy-URL oder durch Zusammenstellen von Daten aus HTTP-Datenquellen neue APIs mit Ressourcen importieren. Die Verwendung des {{site.data.keyword.APIM}}-Service bietet den Vorteil, dass Sie steuern können, wie Ihre APIs genutzt werden. |
 |Inbegriffen | {{site.data.keyword.autoscaling}}| Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix}} Local-Umgebung unbegrenzt nutzen.|
 |Optional | {{site.data.keyword.datacshort}} | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
@@ -49,6 +51,10 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 |Einmalkonfiguration für {{site.data.keyword.Bluemix_notm}} Local | Eine einmalige Einrichtungsgebühr zum Bereitstellen und Konfigurieren der lokalen Umgebung. |
 |{{site.data.keyword.Bluemix_notm}} Local - Kapazitätserweiterung der Rechenressourcen um 16 GB | Diese Erweiterung der IBM {{site.data.keyword.Bluemix_notm}} Local-Rechenressourcen stellt zusätzlich 16 GB Hauptspeicherkapazität bereit. |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache - Kapazitätserweiterung um 50 GB | Diese Umgebung ermöglicht die Bereitstellung und Ausführung von Data Cache- und Session Cache-Instanzen bis zu einer kumulativen Kapazität von 50 GB. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional - 5 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} mit einer Kapazität von 5 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Abteilungsebene. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional - Kapazitätserweiterung auf 100.000 API-Aufrufe| Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Professional-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - 25 Millionen API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.apiconnect_short}} mit einer Kapazität von 25 Millionen API-Aufrufen pro Monat. Richtet sich an API-Projekte auf Unternehmensebene. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise - Kapazitätserweiterung auf 100.000 API-Aufrufe | Diese Erweiterung der {{site.data.keyword.apiconnect_short}} Enterprise-Umgebung bietet eine zusätzliche Kapazität von 100.000 API-Aufrufen pro Monat. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} - Kapazitätserweiterung auf 500 API-Aufrufe | Diese Umgebung ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.APIM}} for {{site.data.keyword.Bluemix_notm}} mit einer Kapazität von 500 API-Aufrufen pro Sekunde. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local - inkrementelle Erhöhung | Diese zusätzliche Umgebung zum {{site.data.keyword.iot_full}} Local-Basisserviceangebot ermöglicht die Ausführung einer privaten Version von {{site.data.keyword.iot_full}} in der lokalen Umgebung mit einer Kapazität für 100.000 gleichzeitig verbundene Geräte oder Anwendungen und 0,5 TB für den Datenaustausch. |
 
@@ -59,7 +65,7 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 
 {{site.data.keyword.Bluemix_notm}} Local umfasst einen privaten syndizierten Katalog, in dem die lokalen Services angezeigt werden, die ausschließlich Ihnen zur Verfügung stehen. Er umfasst außerdem zusätzliche Services, die zu Ihrer Verwendung aus {{site.data.keyword.Bluemix_notm}} Public verfügbar gemacht werden.
 
-Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen, die aus öffentlichen und privaten Services bestehen. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen. Wenn es sich um eine private Serviceinstanz für Ihre lokale Umgebung handelt, wird bei den Servicekacheln in Ihrem Katalog das Tag "Lokal" angezeigt. Entsprechend sehen Sie "Angepasst" bei den Servicekacheln, wenn es sich um einen benutzerdefinierten Service handelt.  
+Der syndizierte Katalog bietet die Funktion zum Erstellen von Hybridanwendungen, die aus öffentlichen und privaten Services bestehen. Sie können auf der Basis Ihrer Kriterien für Datenschutz und Sicherheit entscheiden, welche öffentlichen Services die Anforderungen Ihres Unternehmens erfüllen. Wenn es sich um eine private Serviceinstanz für Ihre lokale Umgebung handelt, wird bei den Servicekacheln in Ihrem Katalog das Tag "Lokal" angezeigt. Entsprechend sehen Sie "Angepasst" bei den Servicekacheln, wenn es sich um einen benutzerdefinierten Service handelt. 
 
 *Tabelle 3. Für die Syndikation verfügbare Services aus {{site.data.keyword.Bluemix_notm}} Public nach Region*
 
@@ -244,7 +250,7 @@ IBM Ansprechpartner an der Konfiguration Ihrer {{site.data.keyword.Bluemix_notm}
 <dd>Arbeitet mit den IBM Ansprechpartnern an dem Bereitstellungsplan für VMware. Typischerweise handelt es sich hierbei um einen VMware-Administrator im Rechenzentrum. Die Person, die dieser Rolle zugewiesen ist, überprüft die <a href="../local/index.html#localinfra">Infrastrukturanforderungen für {{site.data.keyword.Bluemix_notm}} Local</a> und arbeitet gemeinsam mit IBM an einem Implementierungsplan. Am Ende der Installationsphase prüft die Person, die dieser Rolle zugewiesen ist, dass die Implementierung im Einklang mit den Unternehmensstandards auf der IaaS-Ebene ist.</dd>
 </dl>
 
-Ihre Ansprechpartner beim Kunden arbeiten mit IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Sie können ein Upgrade auf die Stufe Premium Support durchführen, um für Ihr Konto mit einem dedizierten Cluster Systems Manager (CSM) zu arbeiten. Weitere Informationen zu den unterschiedlichen Unterstützungskategorien finden Sie unter [Support kontaktieren](../support/index.html#contacting-support). Der CSM führt folgende Typen von Tasks aus: 
+Ihre Ansprechpartner beim Kunden arbeiten mit IBM Spezialisten zusammen, um sicherzustellen, dass Sie immer die benötigte Unterstützung erhalten. Sie können ein Upgrade auf die Stufe Premium Support durchführen, um für Ihr Konto mit einem dedizierten Cluster Systems Manager (CSM) zu arbeiten. Weitere Informationen zu den unterschiedlichen Unterstützungskategorien finden Sie unter [Support kontaktieren](../support/index.html#contacting-support). Der CSM führt folgende Typen von Tasks aus:
 
 <ul>
 <li>Technische Koordination zwischen Ihnen und IBM.</li>
@@ -478,17 +484,19 @@ vCPUs und 300 GB Speicher konfiguriert ist.
 
 IBM wartet und installiert Aktualisierungen und Fixes für die {{site.data.keyword.Bluemix_notm}}-Laufzeiten und -Services, sofern IBM dies für angemessen hält. Es kann vorkommen, dass Services während Wartungszeiten nicht verfügbar sind. Zusätzlich arbeitet IBM mit Ihnen bei der Terminierung von Wartungszeiten für die {{site.data.keyword.Bluemix_notm}}-Plattform zusammen.
 
+### Wartung für {{site.data.keyword.Bluemix_notm}}
+
 Die folgenden Wartungsarten sind für {{site.data.keyword.Bluemix_notm}} Local erforderlich:
 <dl>
 <dt>**Standardwartung für Services**</dt>
-<dd>Die Services verwenden vordefinierte Standardwartungsfenster, die dazu führen können, dass die Services nicht verfügbar sind. IBM benötigt nicht die Genehmigung des Kunden, um Servicewartungsarbeiten durchzuführen, versucht jedoch, die Auswirkungen auf Ihre Services so gering wie möglich zu halten. <br />
+<dd>Die Services verwenden vordefinierte Standardwartungsfenster, die dazu führen können, dass die Services nicht verfügbar sind. IBM benötigt nicht die Genehmigung des Kunden, um Servicewartungsarbeiten durchzuführen, versucht jedoch, die Auswirkungen auf Ihre Services so gering wie möglich zu halten.<br />
 <br />
-IBM sendet Broadcastnachrichten mit den Details zu den geplanten Änderungen für jeden Wartungszeitraum auf der Statusseite. <br />
+IBM sendet Broadcastnachrichten mit den Details zu den geplanten Änderungen für jeden Wartungszeitraum auf der Statusseite.<br />
 <br />
 **Wichtig**: Einige Services stehen Ihnen während des Wartungszeitraums möglicherweise nicht zur Verfügung.</dd>
 
 <dt>**Standardwartung für die {{site.data.keyword.Bluemix_notm}}-Plattform**</dt>
-<dd>Wartungsaktualisierungen werden basierend auf der Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Zeitfensters angewendet. Sie geben IBM vorab genehmigte Wartungszeiten und bestimmte Daten oder Uhrzeiten an, zu denen eine Wartung nicht möglich ist. IBM plant die Aktualisierungen dann entsprechend der von Ihnen ausgewählten Wartungs- und Ausschlusszeiten. <br />
+<dd>Wartungsaktualisierungen werden basierend auf der Koordination zwischen Ihnen und IBM innerhalb eines 21-tägigen Zeitfensters angewendet. Sie geben IBM vorab genehmigte Wartungszeiten und bestimmte Daten oder Uhrzeiten an, zu denen eine Wartung nicht möglich ist. IBM plant die Aktualisierungen dann entsprechend der von Ihnen ausgewählten Wartungs- und Ausschlusszeiten.<br />
 <p>Wechseln Sie zu **Verwaltung > Systeminformationen**, um anstehende und ausstehende Wartungsaktualisierungen anzuzeigen. Weitere Informationen zu Einstellungen Ihrer vorab genehmigten Zeiten, zu nicht verfügbaren Daten und zur Anzeige oder Prüfung der Wartungsaktualisierungen finden Sie unter <a href="../admin/index.html#oc_schedulemaintenance">Wartungsaktualisierung</a></p>.</dd>
 </dl>
 
@@ -498,6 +506,17 @@ kann die geplanten Wartungszeiten ändern, wird Sie aber über solche Änderunge
 Notfallwartungen benachrichtigen.
 
 Falls nach einer Wartungsaktualisierung ein Problem berichtet wird, entscheiden Sie gemeinsam mit dem {{site.data.keyword.Bluemix_notm}} Support , ob es sinnvoll wäre, dass IBM die Aktualisierung rückgängig macht. Nachdem Sie sich geeinigt haben, macht IBM die Aktualisierung rückgängig und stellt die Umgebung in ihrem ursprünglichen Zustand wieder her.
+
+### Wartung der Kundeninfrastruktur
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} Local wird auf dem ESXi-Hypervisor bereitgestellt. Die vCenter-Anwendung ermöglicht die zentrale Verwaltung virtueller Maschinen und ESXi-Hosts. {{site.data.keyword.Bluemix_notm}} unterstützt die drei letzten Versionen von ESXi und vCenter, einschließlich aller temporären Updates und Patches. Die neuesten unterstützten Versionen finden Sie immer in der Dokumentation zu den [Anforderungen an die lokale Infrastruktur](../local/index.html#localinfra).
+
+**Wichtig**: Wenn {{site.data.keyword.Bluemix_notm}} Local auf dem ESXi-Hypervisor bereitgestellt wird, können Upgrades und Patches für ESXi die Verfügbarkeit der lokalen Umgebung unterbrechen, einschließlich aller in der Umgebung ausgeführten Anwendungen und Services. Vor der Durchführung von Upgrades oder der Anwendung von Patches müssen Sie {{site.data.keyword.Bluemix_notm}} unter Verwendung eines Support-Tickets kontaktieren, um sicherzustellen, dass die Unterbrechung das Operationsteam nicht irrtümlich benachrichtigt. Wenn ein CSM (Client Success Manager) zugeordnet ist, können Sie mithilfe des CSM den Zeitplan für das Upgrade kommunizieren.
+
+Das {{site.data.keyword.Bluemix_notm}}-Operationsteam überwacht die Umgebung auf nicht unterstützte Versionen, die möglicherweise nicht mit den neuesten Aktualisierungen der {{site.data.keyword.Bluemix_notm}} Local-Umgebung übereinstimmen, um sicherzustellen, dass die lokale Instanz mit den neuesten unterstützten Versionen kompatibel ist. Für einige {{site.data.keyword.Bluemix_notm}}-Aktualisierungen, wie beispielsweise Cloud Foundry-Versionsaktualisierungen, muss die ESXi- oder vCenter-Software aktualisiert werden. Der {{site.data.keyword.Bluemix_notm}}-Support informiert Sie darüber, was zu welchem Zeitpunkt aktualisiert werden muss. Diese Aktualisierung muss in einem bestimmten Zeitfenster durchgeführt werden.
+
+{{site.data.keyword.Bluemix_notm}} bemüht sich darum, die Kompatibilität der lokalen Umgebungen mit den neuesten ESXi- und vCenter-Versionen zu gewährleisten. Es kann jedoch vorkommen, dass die neuesten ESXi- und vCenter-Versionen für kurze Zeit nicht unterstützt werden. Vor der Anwendung von Aktualisierungen können Sie die neuesten kompatiblen Versionen der Dokumentation zu den [Anforderungen an die lokale Infrastruktur](../local/index.html#localinfra) entnehmen.
 
 ## Intervention und Unterstützung bei Vorfällen
 {: #incidentresponse}

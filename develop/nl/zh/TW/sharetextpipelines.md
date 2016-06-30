@@ -27,6 +27,7 @@ copyright:
 使用「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕複製專案時，{{site.data.keyword.jazzhub_short}} 會建立以 `pipeline.yml` 檔案為基礎的管線。 
 
 範例：
+ 
 ``` 
 <sample root>
 	.bluemix
@@ -87,6 +88,7 @@ stages:
 任何管線都可以使用下列語法以文字方式代表。
 
 管線：
+
 ```
 ---
 stages:
@@ -95,13 +97,14 @@ stages:
 {: codeblock} 
 
 階段：
+ 
 ```
 ---
 name: <name>
-[inputs: 
-	<sequence of inputs>] 
+[inputs:
+	<sequence of inputs>]
 [triggers:   
-	<sequence of triggers>] 
+	<sequence of triggers>]
 [properties:   
 	<sequence of properties>] 
 [jobs:   
@@ -110,6 +113,7 @@ name: <name>
 {: codeblock} 
 
 輸入：
+
 ```
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
@@ -119,6 +123,7 @@ job: <job name>			   	;only for job inputs
 {: codeblock} 
 
 觸發程式：
+
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
@@ -126,6 +131,7 @@ type: 'commit' | 'stage'
 {: codeblock} 	
 	
 內容：
+
 ```
 name: <property name>
 value: <property value>
@@ -134,6 +140,7 @@ value: <property value>
 {: codeblock} 
 
 工作：
+
 ```
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
@@ -151,6 +158,7 @@ fail_stage: 'true' | 'false'
 {: codeblock} 
 
 目標：
+
 ```
 url: <target url>
 organization: <org name>
@@ -173,8 +181,7 @@ space: <space name>
 ```
 {
   "project_id": "_ljkahfliasdlk",
-  "env": {
-     "CF_ORGANIZATION" : "user@se.ibm.com"
+  "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
   },
   "config": {
     "format" : "yaml",

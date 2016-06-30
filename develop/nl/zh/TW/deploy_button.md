@@ -18,7 +18,8 @@ copyright:
 
 #建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
 
-*前次更新：2016 年 3 月 2 日* 
+*前次更新：2016 年 3 月 2 日*
+{: .last-updated} 
 
 「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要的配置最少，而且您可以將其插入到任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
@@ -37,7 +38,7 @@ copyright:
 
 5. 如果配置管線進行建置及部署程序，則會使用 `pipeline.yml` 檔來部署應用程式。
 
-6. 如果應用程式需要儲存器，則會使用 `pipeline.yml`（它會定義 **IBM Containers** 服務）及 Dockerfile（它定義映像檔）在 {{site.data.keyword.Bluemix_notm}} 儲存器中部署應用程式。 
+6. 如果應用程式需要容器，則會使用 `pipeline.yml`（它會定義 **IBM Containers** 服務）及 Dockerfile（它定義映像檔）在 {{site.data.keyword.Bluemix_notm}} 容器中部署應用程式。 
 
 7. 應用程式會部署至那個人的 {{site.data.keyword.Bluemix_notm}} 組織。 
 
@@ -55,7 +56,7 @@ copyright:
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/deploy_buttonx2.png" alt="部署至 Bluemix" /></a>
 </p> 
 
-請參閱在 {{site.data.keyword.Bluemix_notm}} 儲存器中部署之應用程式的按鈕範例： 
+請參閱在 {{site.data.keyword.Bluemix_notm}} 容器中部署之應用程式的按鈕範例： 
 
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/deploy_buttonx2.png" alt="部署至 Bluemix" /></a>
@@ -115,7 +116,7 @@ copyright:
 	
 	* 如果您希望在本端儲存影像，則可以下載影像，並將它儲存在 Git 儲存庫中。請調整路徑來使用影像的相對位置。 
 	
-	* 如果您想要使用翻譯的按鈕版本，可以從遠端參照，或是從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) 下載。 
+	* 如果您想要使用翻譯版本按鈕，可以從遠端參照，或是從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) 下載。 
 	
 ##按鈕的儲存庫考量 {: #button-repo} 
 
@@ -127,8 +128,10 @@ copyright:
 您可以利用資訊清單檔指定： 
     <ul>
     <li>唯一應用程式名稱。</li>  
-    <li>宣告的服務：資訊清單延伸規格，可建立或尋找預期要在部署應用程式之前設定的必要或選用服務，例如資料快取服務。您可以使用 <a href="https://github.com/cloudfoundry/cli/releases">CF 指令行介面</a>來執行 <code>cf marketplace</code> 指令，或是瀏覽 <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} 型錄</a>，以尋找合格的 {{site.data.keyword.Bluemix_notm}} 服務、標籤和方案清單。    
-    <strong>附註：</strong>宣告的服務是標準 Cloud Foundry 資訊清單格式的 IBM 延伸規格。此延伸規格可能會隨著該特性的發展與改進，在未來的版本中修訂。<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">瞭解如何建立 <code>manifest.yml</code> 檔案。</a>  
+    <li>宣告的服務：資訊清單延伸規格，可建立或尋找預期要在部署應用程式之前設定的必要或選用服務，例如資料快取服務。您可以使用 <a href="https://github.com/cloudfoundry/cli/releases">CF 指令行介面</a>來執行 <code>cf marketplace</code> 指令，或是瀏覽 <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} 型錄</a>，以尋找合格的 {{site.data.keyword.Bluemix_notm}} 服務、標籤和方案清單。    
+    <strong>附註：</strong>宣告的服務是標準 Cloud Foundry 資訊清單格式的 IBM 延伸規格。此延伸規格可能會隨著該特性的發展與改進，在未來的版本中修訂。
+	
+	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">瞭解如何建立 <code>manifest.yml</code> 檔案。</a>  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -149,9 +152,9 @@ copyright:
     #Example manifest.yml
 
   declared-services: 
-      sample-java-cloudant-cloudantNoSQLDB: 
-        label: cloudantNoSQLDB 
-        plan: Shared 
+      sample-java-cloudant-cloudantNoSQLDB:
+        label: cloudantNoSQLDB
+        plan: Shared
   applications:
   - services
     - sample-java-cloudant-cloudantNoSQLDB
@@ -162,15 +165,14 @@ copyright:
    </ul>
 	<li> 如果在部署應用程式之前必須建置儲存庫，則在部署之前會觸發自動建置儲存庫中的程式碼。在儲存庫的根目錄中偵測到建置 Script 檔時，即會進行自動建置。
 	
-	支援的建置器： 
-	    <ul>
+支援的建置器：<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant：</a>/<code>build.xml</code>，會將輸出建置到 <code>./output/</code> 資料夾</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>. </code> 資料夾 </i>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt：</a><code>/Gruntfile.js</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
 	   </ul>
 	</li>	
-	<li>若要配置專案的管線，請在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要從 {{site.data.keyword.jazzhub_short}} 專案中建立 pipeline.yml 檔案並將它新增至儲存庫中，請完成下列步驟。
+	<li>若要配置專案的管線，請在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要從 {{site.data.keyword.jazzhub_short}} 專案中建立 pipeline.yml 檔案並將它新增至儲存庫中，請完成下列步驟。
 <ol>
 <li>在瀏覽器中開啟您的 DevOps Services 專案，然後按一下<b>建置並部署</b>。</li>
 <li>使用建置及部署工作配置您的管線。</li>
@@ -180,10 +182,10 @@ copyright:
 <li>在專案的根目錄中，建立 <code>.bluemix</code> 目錄。</li>
 <li>將 <code>pipeline.yml</code> 檔案上傳至 <code>.bluemix</code> 儲存庫。</li>
 </ol> </li>
-	<li>如果您利用 <stong>IBM Containers</strong> 在儲存器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
+	<li>如果您利用 <stong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中包含 Dockerfile，以及在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。
 	<ul>
 	    <li> 若要進一步瞭解如何建立 Dockerfile，<a href="https://docs.docker.com/reference/builder/" target="_blank">請參閱 Docker 文件</a>。</li>
-	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於儲存器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>
+	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>
         </ul>
 
  </li>

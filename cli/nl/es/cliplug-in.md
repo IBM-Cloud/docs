@@ -18,6 +18,7 @@ copyright:
 # Plugins de la interfaz de línea de mandatos de Cloud Foundry
 
 *Última actualización: 2 de febrero de 2016*
+{: .last-updated}
 
 Puede instalar y usar los plugins de la interfaz de línea de mandatos de Cloud Foundry (cf cli) disponibles en
 [CLI Plug-in Repository](http://plugins.{DomainName}/){: new_window}. Cada plugin se identifica mediante su nombre de

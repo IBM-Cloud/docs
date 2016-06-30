@@ -15,7 +15,8 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有{: #share-pipeline}
+#{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有
+{: #share-pipeline}
 
 *最終更新日: 2015 年 12 月 7 日* 
 
@@ -26,7 +27,7 @@ copyright:
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用してプロジェクトが複製されると、{{site.data.keyword.jazzhub_short}} は `pipeline.yml` ファイルに基づいたパイプラインを作成します。 
 
-例:
+例: 
 ``` 
 <sample root>
 	.bluemix
@@ -82,11 +83,13 @@ stages:
 ```
 {: codeblock} 
 
-##YAML ファイルの構文{: #yaml-syntax}
+##YAML ファイルの構文
+{: #yaml-syntax}
 
 どのようなパイプラインも、以下の構文を使用してテキストで表現することができます。
 
 パイプライン:
+
 ```
 ---
 stages:
@@ -95,6 +98,7 @@ stages:
 {: codeblock} 
 
 ステージ:
+ 
 ```
 ---
 name: <name>
@@ -110,6 +114,7 @@ name: <name>
 {: codeblock} 
 
 入力:
+
 ```
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
@@ -119,6 +124,7 @@ job: <job name>			   	;only for job inputs
 {: codeblock} 
 
 トリガー:
+
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
@@ -126,6 +132,7 @@ type: 'commit' | 'stage'
 {: codeblock} 	
 	
 プロパティー:
+
 ```
 name: <property name>
 value: <property value>
@@ -134,6 +141,7 @@ value: <property value>
 {: codeblock} 
 
 ジョブ:
+
 ```
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
@@ -151,6 +159,7 @@ fail_stage: 'true' | 'false'
 {: codeblock} 
 
 ターゲット:
+
 ```
 url: <target url>
 organization: <org name>
@@ -173,8 +182,7 @@ space: <space name>
 ```
 {
   "project_id": "_ljkahfliasdlk",
-  "env": {
-     "CF_ORGANIZATION" : "user@se.ibm.com"
+  "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
   },
   "config": {
     "format" : "yaml",

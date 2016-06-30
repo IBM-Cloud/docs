@@ -15,6 +15,7 @@ copyright:
 
 # 创建 Cloud Foundry 应用程序
 *上次更新时间：2016 年 4 月 18 日*
+{: .last-updated}
 
 通过 {{site.data.keyword.Bluemix}}，您可以在 {{site.data.keyword.Bluemix_notm}} 用户界面中创建应用程序。创建应用程序后，可以决定是否要继续使用 UI、cf 命令行界面或 {{site.data.keyword.jazzhub_title}} 来开发、跟踪、规划和部署应用程序。
 {:shortdesc}

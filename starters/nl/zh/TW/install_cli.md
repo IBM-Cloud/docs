@@ -29,14 +29,15 @@ copyright:
 
 # 使用指令行介面部署應用程式
 *前次更新：2016 年 2 月 24 日*
+{: .last-updated}
 
 您可以使用指令行介面來部署及修改應用程式和服務實例。
 {:shortdesc}
 
-開始之前，請先安裝 {{site.data.keyword.Bluemix}} 及 Cloud Foundry 指令行介面。
+開始之前，請先安裝 Cloud Foundry 及 {{site.data.keyword.Bluemix}} 指令行介面。
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 {{site.data.keyword.Bluemix}} 指令行介面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_cf_commandline.svg" alt="下載 Cloud Foundry 指令行介面" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_cf_commandline.svg" alt="下載 Cloud Foundry 指令行介面" /></a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 {{site.data.keyword.Bluemix}} 指令行介面" /></a>
 </p>
 
 **限制：**Cygwin 不支援指令行工具。在指令行視窗（而非 Cygwin 指令行視窗）中，使用這些工具。
@@ -47,6 +48,7 @@ copyright:
   1. {: download} 下載入門範本程式碼。 
       
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_starter-code.svg" alt="下載入門範本程式碼" /> </a>
+
   
   2. 將套件擷取至新的目錄，以設定開發環境。
   3. 切換至您的新目錄。

@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  2015, 2016
+  years: 2015, 2015*
+{: .last-updated}
 
 ---
 
@@ -15,7 +16,9 @@ copyright:
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Dernière mise à jour : 16 mai 2016*
+*Dernière mise à jour : 16 mai 2015*
+{: .last-updated}*
+{: .last-updated}
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
 : par exemple, un utilisateur ne parvient pas à établir une connexion dans
@@ -336,7 +339,8 @@ Provoquée par : java.util.concurrent.TimeoutException
 à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
 à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 autres
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour
+[2015*
+{: .last-updated}-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour
 MyWebProj com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la
 connexion WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
@@ -1451,10 +1455,8 @@ Ce problème peut se produire lorsque vous affectez la même route d'adresse URL
 {: tsCauses}
 
 Par exemple, vous envoyez par commande push l'application mon_App1 dans {{site.data.keyword.Bluemix_notm}} et définissez le nom de domaine
-"manouvelleapp.mybluemix.net". 
-Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez l'une de ses routes d'URL sur
-"manouvelleapp.mybluemix.net".
-La route est désormais mappée aux deux applications.
+"manouvelleapp.mybluemix.net". Puis, vous envoyez par commande push une autre application mon_App2 dans le même espace et définissez l'une de ses routes d'URL sur
+"manouvelleapp.mybluemix.net". La route est désormais mappée aux deux applications.
 
  
 

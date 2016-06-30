@@ -18,6 +18,7 @@ copyright:
 #Alojamiento de apps en {{site.data.keyword.Bluemix_notm}}
 
 *Última actualización: 9 de mayo de 2016*
+{: .last-updated}
 
 <!--The whole topic is staging only -->
 

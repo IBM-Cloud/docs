@@ -17,6 +17,7 @@ copyright:
 {: #glossary}
 
 *Última actualización: 19 de abril de 2016*
+{: .last-updated}
 
 Este glosario contiene términos y definiciones correspondientes a {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -109,7 +110,7 @@ Véase [Estándar de cifrado avanzado](#x2897510).
 ### enlace de agencia
 {: #x2214318}
 
-Persona que facilita la relación de IBM con sus agencias interactivas mundiales y es responsable de gestionar la cartera de proyectos interactivos mundiales, incluido la predicción del gasto interactivo de IBM y la supervisión de compromisos de órdenes de compra en comparación con la previsión; aprovechando el conocimiento de asignaciones de agencias, carga de trabajo y rendimiento en toda la empresa. 
+Persona que facilita la relación de IBM con sus agencias interactivas mundiales y es responsable de gestionar la cartera de proyectos interactivos mundiales, incluido la predicción del gasto interactivo de IBM y la supervisión de compromisos de órdenes de compra en comparación con la previsión; aprovechando el conocimiento de asignaciones de agencias, carga de trabajo y rendimiento en toda la empresa.
 
 ### desarrollo ágil de software
 {: #x2907651}
@@ -174,7 +175,7 @@ Interfaz que permite que un programa de app que está escrito en un lenguaje de 
 ### comité de arquitectura (AB)
 {: #x2214349}
 
-Un comité de toma de decisiones sobre arquitectura entre funciones que establece las direcciones de la arquitectura y los patrocinadores en las entregas de arquitecturas funcionales, incluido el blueprint de arquitectura de e-business, los estándares de arquitectura de aplicaciones/datos y los equipos de soluciones comunes que abordan los problemas de alta prioridad de la arquitectura. 
+Un comité de toma de decisiones sobre arquitectura entre funciones que establece las direcciones de la arquitectura y los patrocinadores en las entregas de arquitecturas funcionales, incluido el blueprint de arquitectura de e-business, los estándares de arquitectura de aplicaciones/datos y los equipos de soluciones comunes que abordan los problemas de alta prioridad de la arquitectura.
 
 ### artefacto
 {: #x2262995}
@@ -189,7 +190,7 @@ Véase [auditabilidad y control de sistemas de aplicaciones](#x2214361).
 ### rol de propietario de activo
 {: #x2214339}
 
-El propietario de activo (AO) es el BIE, BPE, BTE o ejecutivo de colaboración responsable de garantizar que se llevan a cabo todas las tareas asociadas con la propiedad de activos desplegados. 
+El propietario de activo (AO) es el BIE, BPE, BTE o ejecutivo de colaboración responsable de garantizar que se llevan a cabo todas las tareas asociadas con la propiedad de activos desplegados.
 
 ### autenticación (AuthN)
 {: #x2014567}
@@ -235,7 +236,7 @@ En desarrollo agile, lista de características o tareas técnicas necesarias par
 ### plan de copia de seguridad/recuperación
 {: #x2214370}
 
-Plan que identifica el enfoque, los procedimientos y las acciones que se deben llevar a cabo en el caso de una operación o ejecución no satisfactoria. No implica el intento de revertir al entorno original, sino que el plan de copia de seguridad/recuperación identifica el plan alternativo que se debe seguir. Crea la información (vuelcos, conjuntos de datos de copia de seguridad, registros, etc.) necesarios para recuperarse de un error grave o de una excepción del proceso y seguir con el proceso. 
+Plan que identifica el enfoque, los procedimientos y las acciones que se deben llevar a cabo en el caso de una operación o ejecución no satisfactoria. No implica el intento de revertir al entorno original, sino que el plan de copia de seguridad/recuperación identifica el plan alternativo que se debe seguir. Crea la información (vuelcos, conjuntos de datos de copia de seguridad, registros, etc.) necesarios para recuperarse de un error grave o de una excepción del proceso y seguir con el proceso.
 
 ### imagen base
 {: #x5366487}
@@ -349,7 +350,7 @@ Colección de scripts que preparan el código para se ejecute en Bluemix. Los pa
 ### caso de negocio
 {: #x2214436}
 
-Plantilla utilizada en Business Transformation Management System (BTMS) para proporcionar información sobre el caso de negocio para un programa (durante la gestión de cartera BT) o proyecto (durante las fases de proceso de operaciones BT). Incluye información sobre las áreas de valor (evitar costes, reducción de costes, ingresos incrementales, desplazamiento de ingresos a base web, etc.) y la cuantificación del valor sobre la duración de la inversión. 
+Plantilla utilizada en Business Transformation Management System (BTMS) para proporcionar información sobre el caso de negocio para un programa (durante la gestión de cartera BT) o proyecto (durante las fases de proceso de operaciones BT). Incluye información sobre las áreas de valor (evitar costes, reducción de costes, ingresos incrementales, desplazamiento de ingresos a base web, etc.) y la cuantificación del valor sobre la duración de la inversión.
 
 ### garantía de diseño empresarial (BDA)
 {: #x2214441}
@@ -364,22 +365,22 @@ Proceso que proporciona un método estructurado para enlazar y validar diseños 
 ### planificación empresarial
 {: #x2214448}
 
-Una serie de procesos que analizan el portfolio de IBM, lo comparan con el entorno competitivo, utilizan la estrategia para derivar dirección y finalmente deciden las mejores oportunidades de transformación para asegurarse de que IBM permanezca competitivo en el mercado. 
+Una serie de procesos que analizan el portfolio de IBM, lo comparan con el entorno competitivo, utilizan la estrategia para derivar dirección y finalmente deciden las mejores oportunidades de transformación para asegurarse de que IBM permanezca competitivo en el mercado.
 
 ### ejecutivo de proceso empresarial (BPE)
 {: #x2214384}
 
-Rol clave en Business Transformation Management System que trabaja para alinear procesos y aplicaciones con la estrategia corporativa y la infraestructura de TI. 
+Rol clave en Business Transformation Management System que trabaja para alinear procesos y aplicaciones con la estrategia corporativa y la infraestructura de TI.
 
 ### regla empresarial
 {: #x2266457}
 
-Representación de cómo se aplican las políticas o prácticas empresariales una actividad empresarial. 
+Representación de cómo se aplican las políticas o prácticas empresariales una actividad empresarial.
 
 ### escenario empresarial
 {: #x2214458}
 
-Cuenta o sinopsis de un curso de acción proyectado o sucesos. El escenario define y documenta una transacción empresarial completa importante, habla de cómo interactuan las personas y las organizaciones para ejecutar el proceso definido, la transacción empresarial y cómo utilizan en última instancia los sistemas y aplicaciones que dan soporte al diseño del proceso completo. Se utiliza en el proceso de garantía de diseño empresarial para definir las interacciones de los usuarios con los sistemas. 
+Cuenta o sinopsis de un curso de acción proyectado o sucesos. El escenario define y documenta una transacción empresarial completa importante, habla de cómo interactuan las personas y las organizaciones para ejecutar el proceso definido, la transacción empresarial y cómo utilizan en última instancia los sistemas y aplicaciones que dan soporte al diseño del proceso completo. Se utiliza en el proceso de garantía de diseño empresarial para definir las interacciones de los usuarios con los sistemas.
 
 ### transformación empresarial (BT)
 {: #x2214398}
@@ -399,7 +400,7 @@ Conjunto de programas y proyectos (proceso e IT) para alcanzar un objetivo empre
 ### Business Transformation Management System (BTMS)
 {: #x2205904}
 
-Una infraestructura de sistemas de gestión integrados para gestionar el portfolio de IBM para satisfacer las necesidades de IBM y el mercado. El portfolio de IBM consta de soluciones planificadas, soluciones en curso, soluciones desplegadas y soluciones que son obsoletas. 
+Una infraestructura de sistemas de gestión integrados para gestionar el portfolio de IBM para satisfacer las necesidades de IBM y el mercado. El portfolio de IBM consta de soluciones planificadas, soluciones en curso, soluciones desplegadas y soluciones que son obsoletas.
 
 ### Business Transformation Management Tool (BTMT)
 {: #x2214418}
@@ -548,7 +549,7 @@ trabajo de repositorio. Un componente puede contener tantas carpetas o archivos 
 ### proyecto de componente
 {: #x2214495}
 
-Uno de los proyectos individuales de un programa; consta de varios proyectos dentro de la misma organización. 
+Uno de los proyectos individuales de un programa; consta de varios proyectos dentro de la misma organización.
 
 ### compute
 {: #x3723424}
@@ -573,12 +574,12 @@ Práctica del desarrollo de software que emplea técnicas como las pruebas conti
 ### mejora continua
 {: #x8635788}
 
-La práctica de evaluar un producto, servicio o proceso de forma continuada para asegurarse de que es eficaz y efectivo, y realizar los cambios de forma incremental o todos a la vez, según sea necesario. 
+La práctica de evaluar un producto, servicio o proceso de forma continuada para asegurarse de que es eficaz y efectivo, y realizar los cambios de forma incremental o todos a la vez, según sea necesario.
 
 ### integración continua (CI)
 {: #x6009572}
 
-Una práctica de desarrollo de software donde los miembros de un equipo integran su trabajo de forma frecuente de modo que haya varias integraciones cada día. Las integraciones se verifican mediante una compilación automatizada para detectar errores de integración tan rápido como sea posible. 
+Una práctica de desarrollo de software donde los miembros de un equipo integran su trabajo de forma frecuente de modo que haya varias integraciones cada día. Las integraciones se verifican mediante una compilación automatizada para detectar errores de integración tan rápido como sea posible.
 
 ### credencial
 {: #x2018813}
@@ -601,7 +602,7 @@ NOTES y WEB identificadas que se van a desplegar en plataformas IBM.
 ### transformación entre organizaciones
 {: #x2214505}
 
-Un programa o proyecto que se aprovecha de la entrada proporcionada por otras unidades de negocio incluidas y que les proporciona información de retorno. Los componentes del programa/proyecto pueden desarrollarse y gestionarse por una o más organizaciones. 
+Un programa o proyecto que se aprovecha de la entrada proporcionada por otras unidades de negocio incluidas y que les proporciona información de retorno. Los componentes del programa/proyecto pueden desarrollarse y gestionarse por una o más organizaciones.
 
 ### CSR
 {: #x2140147}
@@ -625,7 +626,7 @@ Un programa que se ejecuta de forma desatendida para efectuar funciones continua
 ### panel de control
 {: #x2363941}
 
-Componente de interfaz de usuario que proporciona al usuario un resumen coherente de la información pertinente que proceden de diversas fuentes. 
+Componente de interfaz de usuario que proporciona al usuario un resumen coherente de la información pertinente que proceden de diversas fuentes.
 
 ### fuente de datos
 {: #x2176124}
@@ -650,7 +651,7 @@ Véase [Droplet Execution Agent](#x7470348).
 ### punto de decisión (DCP)
 {: #x2214510}
 
-Un proceso de operaciones de transformación empresarial (BTOP) que consta de tres fases: concepto, plan y capacitación. 
+Un proceso de operaciones de transformación empresarial (BTOP) que consta de tres fases: concepto, plan y capacitación.
 
 ### nube dedicada
 {: #x8439199}
@@ -665,7 +666,7 @@ Elemento de proyecto que permite que las partes interesadas realicen un seguimie
 ### producto final
 {: #x2214520}
 
-Cualquier resultado o elemento medible, tangible y verificable que debe producirse para completar un proyecto o una parte de un proyecto. Suele utilizarse más concretamente en referencia a un producto final suministrable externo, que es un producto que está sujeto a la aprobación del cliente o patrocinador del proyecto. 
+Cualquier resultado o elemento medible, tangible y verificable que debe producirse para completar un proyecto o una parte de un proyecto. Suele utilizarse más concretamente en referencia a un producto final suministrable externo, que es un producto que está sujeto a la aprobación del cliente o patrocinador del proyecto.
 
 ### certificado de aceptación de producto final
 {: #x2214515}
@@ -675,7 +676,7 @@ Este certificado es una entrada para la revisión de salida de fase para el clie
 ### ejecutivo de proyectos de delivery (DPE)
 {: #x2214525}
 
-Un representante de entrega principal que es responsable de todos los aspectos de la entrega de un contrato incluido la satisfacción del cliente, la excelencia en la entrega, el crecimiento de cuentas y el logro de beneficios, con la entrega de servicios como responsabilidad primaria. 
+Un representante de entrega principal que es responsable de todos los aspectos de la entrega de un contrato incluido la satisfacción del cliente, la excelencia en la entrega, el crecimiento de cuentas y el logro de beneficios, con la entrega de servicios como responsabilidad primaria.
 
 ### despliegue
 {: #x2104544}
@@ -701,7 +702,7 @@ Metodología de software que integra el desarrollo de apps y las operaciones de 
 ### document of understanding (DOU)
 {: #x2214542}
 
-Documento formal que define los términos de una relación entre un consumidor de un servicio y el proveedor de dicho servicio. 
+Documento formal que define los términos de una relación entre un consumidor de un servicio y el proveedor de dicho servicio.
 
 ### dominio
 {: #x2021210}
@@ -753,7 +754,7 @@ conectores.
 ### finalización del ciclo de vida (EOL)
 {: #x2214573}
 
-Hace referencia al fin de la vida útil de una aplicación. El equipo de gestión de operaciones coordina las actividades para dejar de mantener una aplicación en la finalización del ciclo de vida. 
+Hace referencia al fin de la vida útil de una aplicación. El equipo de gestión de operaciones coordina las actividades para dejar de mantener una aplicación en la finalización del ciclo de vida.
 
 ### punto final
 {: #x2026820}
@@ -764,12 +765,12 @@ y al mismo tiempo invoca los puntos finales de otros servicios.
 ### extremo a extremo
 {: #x2214553}
 
-Un principio de diseño de transformación empresarial basado en un método de bucle cerrado para definir procesos, políticas/reglas, estructuras de datos, sistemas de TI y sistemas de gestión. 
+Un principio de diseño de transformación empresarial basado en un método de bucle cerrado para definir procesos, políticas/reglas, estructuras de datos, sistemas de TI y sistemas de gestión.
 
 ### diseño empresarial de empresa
 {: #x2214563}
 
-La misión del diseño empresarial de empresa es crear y hacer operativo el blueprint de proceso de e-business de IBM, conducir la comunidad de proceso empresarial de IBM al liderazgo de clase mundial, enlazar el rendimiento de IBM con objetivos de proceso y alinearse con las prioridades más importantes de CIO y darles soporte. 
+La misión del diseño empresarial de empresa es crear y hacer operativo el blueprint de proceso de e-business de IBM, conducir la comunidad de proceso empresarial de IBM al liderazgo de clase mundial, enlazar el rendimiento de IBM con objetivos de proceso y alinearse con las prioridades más importantes de CIO y darles soporte.
 
 ### punto de control de empresa
 {: #x2214568}
@@ -809,7 +810,7 @@ La desarrolla el PDT en la fase de planificación y es la base para el contrato 
 ### rol de responsable de finanzas
 {: #x2214580}
 
-El responsable de finanzas que es el punto final para el soporte financiero necesario para la solución, y consolida planes individuales y lleva a cabo evaluaciones financieras del plan integrado. 
+El responsable de finanzas que es el punto final para el soporte financiero necesario para la solución, y consolida planes individuales y lleva a cabo evaluaciones financieras del plan integrado.
 
 ### bifurcación/bifurcar
 {: #x2023301}
@@ -854,7 +855,7 @@ Cantidad acumulada de memoria (en gigabytes) que se está ejecutando para todas 
 ### GCP
 {: #x2193525}
 
-Proceso que utiliza el equipo de asignación y capacidad de Global Services para reservar y asignar la capacidad de servidor y red para proyectos. 
+Proceso que utiliza el equipo de asignación y capacidad de Global Services para reservar y asignar la capacidad de servidor y red para proyectos.
 
 ### Git
 {: #x7494416}
@@ -968,7 +969,6 @@ Véase [entorno de desarrollo integrado](#x2116934).
 
 El equipo de gestión de la capacidad de IGA es el responsable de garantizar que los problemas de disponibilidad se comuniquen con OMTL mediante la fase de gestión de operaciones para la cartera desplegada. El equipo de gestión de la capacidad de IGA es el responsable de proporcionar informes de capacidad.
 
-
 ### IM
 {: #x2141735}
 
@@ -997,22 +997,22 @@ Distribución de una infraestructura de sistemas, que incluye funcionalidad de s
 ### iniciativa de infraestructura
 {: #x2214657}
 
-Conjunto de programas o proyectos de infraestructura para conseguir un cambio en la infraestructura para apoyar a una iniciativa de transformación/empresarial o a un objetivo de tecnología. 
+Conjunto de programas o proyectos de infraestructura para conseguir un cambio en la infraestructura para apoyar a una iniciativa de transformación/empresarial o a un objetivo de tecnología.
 
 ### plan maestro de infraestructura (IMP)
 {: #x2214645}
 
-Una agrupación de planes de proyecto formado por dos tipos de proyectos, estado estable y agente de cambios, implementados en una infraestructura común. El IMP visualiza todos los planes de proyecto desarrollados y ejecutados por gestores de proyectos individuales del equipo como un solo plan con la finalidad de gestionar la infraestructura. 
+Una agrupación de planes de proyecto formado por dos tipos de proyectos, estado estable y agente de cambios, implementados en una infraestructura común. El IMP visualiza todos los planes de proyecto desarrollados y ejecutados por gestores de proyectos individuales del equipo como un solo plan con la finalidad de gestionar la infraestructura.
 
 ### propuesta de proyecto inicial (IPP)
 {: #x2214662}
 
-La desarrolla PDT durante la fase de concepto. Consta de la siguiente documentación: plantilla de documento funcional de PDT, hoja superior del proceso de operaciones de transformación empresarial (BTOP), plantilla de empresa de BTOP (elementos de fase de concepto), documento de propuesta de solución de arquitectura (APD) y plan de proyecto integrado inicial (este plan normalmente lo lleva a cabo un gestor de proyecto de solución o un gestor de proyecto técnico). El IPP puede contener documentación adicional de otras fuentes según considere PDTL. 
+La desarrolla PDT durante la fase de concepto. Consta de la siguiente documentación: plantilla de documento funcional de PDT, hoja superior del proceso de operaciones de transformación empresarial (BTOP), plantilla de empresa de BTOP (elementos de fase de concepto), documento de propuesta de solución de arquitectura (APD) y plan de proyecto integrado inicial (este plan normalmente lo lleva a cabo un gestor de proyecto de solución o un gestor de proyecto técnico). El IPP puede contener documentación adicional de otras fuentes según considere PDTL.
 
 ### iniciativa
 {: #x2214669}
 
-Grupo de soluciones, proyectos y activos relacionados que, cuando se desarrollan y despliegan, tiene un efecto transformador en la empresa. Las iniciativas se desarrollan en la planificación de la transformación empresarial. 
+Grupo de soluciones, proyectos y activos relacionados que, cuando se desarrollan y despliegan, tiene un efecto transformador en la empresa. Las iniciativas se desarrollan en la planificación de la transformación empresarial.
 
 ### instancia
 {: #x2002531}
@@ -1028,13 +1028,12 @@ compiladores y los depuradores, a las que se puede acceder desde una sola interf
 ### Equipo de gestión de carteras integrado (IPMT)
 {: #x2118026}
 
-Grupo responsable del rendimiento empresarial mundial de una cartera de ofertas de productos a nivel global.
-Equipo multifuncional que consta de ejecutivos de rango superior desde BPE, BIE, WWPL y GS responsables de tomar decisiones de inversiones en la empresa de forma constante. Véase también [equipo de desarrollo del proyecto](#x2422165).
+Grupo responsable del rendimiento empresarial mundial de una cartera de ofertas de productos a nivel global. Equipo multifuncional que consta de ejecutivos de rango superior desde BPE, BIE, WWPL y GS responsables de tomar decisiones de inversiones en la empresa de forma constante. Véase también [equipo de desarrollo del proyecto](#x2422165).
 
 ### Integrated Product Development (IPD)
 {: #x2213501}
 
-Uno de los dos procesos empresariales corporativos principales (con gestión de relaciones con los clientes) dentro de IBM. IPD define cómo se desarrollan y entregan las ofertas. 
+Uno de los dos procesos empresariales corporativos principales (con gestión de relaciones con los clientes) dentro de IBM. IPD define cómo se desarrollan y entregan las ofertas.
 
 ### integración
 {: #x2267187}
@@ -1045,8 +1044,7 @@ ejecutable.
 ### agencia interactiva
 {: #x2214674}
 
-Un proveedor preferido por IBM para ayudar en la organización del diseño, desarrollo de contenido y generación  de banners del sitio web.
-
+Un proveedor preferido por IBM para ayudar en la organización del diseño, desarrollo de contenido y generación de banners del sitio web.
 
 ### certificado intermedio
 {: #x3753781}
@@ -1066,12 +1064,12 @@ Red de objetos interconectados que simulan una "internet" de dispositivos conect
 ### gestor de intranet (IM)
 {: #x2214679}
 
-El IM es responsable de evaluar y aprobar todas las solicitudes de aplicaciones y planificar los recursos para ofrecer ayuda en el diseño y navegación del sitio web, el desarrollo de aplicaciones y el alojamiento. 
+El IM es responsable de evaluar y aprobar todas las solicitudes de aplicaciones y planificar los recursos para ofrecer ayuda en el diseño y navegación del sitio web, el desarrollo de aplicaciones y el alojamiento.
 
 ### Investment Review Board (IRB)
 {: #x2205860}
 
-Partes interesadas de la directiva responsables de configurar la dirección estratégica de la transformación empresarial y la visión de la organización o unidad de negocio. 
+Partes interesadas de la directiva responsables de configurar la dirección estratégica de la transformación empresarial y la visión de la organización o unidad de negocio.
 
 ### IoT
 {: #x6714346}
@@ -1107,7 +1105,7 @@ Véase [sprint](#x6248609).
 ### iniciativa de TI
 {: #x2214694}
 
-Conjunto de proyectos o programas de IT para conseguir un cambio/transformación de TI para apoyar a una iniciativa de transformación/empresarial o a un objetivo de tecnología. 
+Conjunto de proyectos o programas de IT para conseguir un cambio/transformación de TI para apoyar a una iniciativa de transformación/empresarial o a un objetivo de tecnología.
 
 
 ## J
@@ -1193,7 +1191,7 @@ Véase [programa de fondo móvil como servicio](#x7044858).
 ### microservicio
 {: #x8379238}
 
-Un conjunto de pequeños componentes de arquitectura independientes, cada uno con un solo objetivo, que se comunican mediante una API ligera común. 
+Un conjunto de pequeños componentes de arquitectura independientes, cada uno con un solo objetivo, que se comunican mediante una API ligera común.
 
 ### hito
 {: #x2118203}
@@ -1276,7 +1274,7 @@ Perteneciente al software cuyo código fuente se ha hecho público para su uso o
 ### equipo de gestión de operaciones (OMT)
 {: #x2214710}
 
-El equipo de gestión de operaciones es responsable de una cartera de aplicaciones que trata de un segmento específico del negocio. El equipo gestiona y supervisa el rendimiento de soluciones y recomienda las acciones correctivas. Identifica nuevos requisitos, ejecuta planes de gestión de gestión de operaciones y actividades de finalización del ciclo de vida. 
+El equipo de gestión de operaciones es responsable de una cartera de aplicaciones que trata de un segmento específico del negocio. El equipo gestiona y supervisa el rendimiento de soluciones y recomienda las acciones correctivas. Identifica nuevos requisitos, ejecuta planes de gestión de gestión de operaciones y actividades de finalización del ciclo de vida.
 
 ### org
 {: #x7470494}
@@ -1330,17 +1328,17 @@ Medidas que proporcionan una sola fuente de información sobre las iniciativas d
 ### prueba piloto
 {: #x2214751}
 
-Una prueba previa al despliegue de nuevas funciones con uso limitado, datos limitados y ámbito limitado, para determinar que las funciones y sus procesos y procedimientos relacionados funcionan correctamente. 
+Una prueba previa al despliegue de nuevas funciones con uso limitado, datos limitados y ámbito limitado, para determinar que las funciones y sus procesos y procedimientos relacionados funcionan correctamente.
 
 ### conducto
 {: #x2063222}
 
-Un servicio de compilación y despliegue repetible que divide la entrega de software en etapas. Las ejecuciones secuenciales dan soporte a la entrega continua y la integración continua, incluida la prueba automatizada. 
+Un servicio de compilación y despliegue repetible que divide la entrega de software en etapas. Las ejecuciones secuenciales dan soporte a la entrega continua y la integración continua, incluida la prueba automatizada.
 
 ### fase de planificación
 {: #x2214756}
 
-Fase del proceso de operaciones de transformación empresarial (BTOP) que desarrolla el plan de proyecto, confirma las planificaciones y los recursos (propuesta de proyecto final, IPMT y contrato de PDT), y libera fondos para las dos fases siguientes. 
+Fase del proceso de operaciones de transformación empresarial (BTOP) que desarrolla el plan de proyecto, confirma las planificaciones y los recursos (propuesta de proyecto final, IPMT y contrato de PDT), y libera fondos para las dos fases siguientes.
 
 ### plataforma como servicio (PaaS)
 {: #x2029786}
@@ -1402,7 +1400,7 @@ Servicio que solo está visible para los miembros de una organización de Bluemi
 ### iniciativa de proceso
 {: #x2214769}
 
-Conjunto de programas o proyectos de proceso para conseguir una transformación o un cambio de proceso para apoyar a una iniciativa de transformación/empresarial. 
+Conjunto de programas o proyectos de proceso para conseguir una transformación o un cambio de proceso para apoyar a una iniciativa de transformación/empresarial.
 
 ### biblioteca de producción
 {: #x2034919}
@@ -1447,7 +1445,7 @@ Un equipo técnico y empresarial encargado del patrocinio de IPMT para ejecutar 
 ### creación de prototipos
 {: #x2214782}
 
-Uno de los métodos de desarrollo del sistema que permite a los usuarios y desarrolladores estudiar y confirmar requisitos del sistema y diseñar en una fase de desarrollo anterior produciendo maquetas, demostraciones o software que se parece de forma significativa al sistema propuesto pero que todavía no está completamente desarrollado. 
+Uno de los métodos de desarrollo del sistema que permite a los usuarios y desarrolladores estudiar y confirmar requisitos del sistema y diseñar en una fase de desarrollo anterior produciendo maquetas, demostraciones o software que se parece de forma significativa al sistema propuesto pero que todavía no está completamente desarrollado.
 
 ### PRR
 {: #x2214789}
@@ -1584,13 +1582,12 @@ Programa de toma de decisiones que puede se procesado por un motor de reglas par
 
 Compilación de procedimientos y operaciones que un operador o administrador del sistema utiliza como referencia para ejecutar y mantener un sistema o red.
 
-
 ### tiempo de ejecución
 {: #x2391929}
 
 Conjunto de recursos utilizados para ejecutar la app. Véase también [iniciador](#x7470511).
 
-### entorno de ejecución
+### Entorno de ejecución
 {: #x2037566}
 
 Conjunto de recursos que se utilizan para ejecutar un programa o proceso.
@@ -1643,8 +1640,7 @@ falsificación. Véase también [entidad emisora de certificados](#x2016383).
 ### responsable de seguridad y privacidad
 {: #x2214812}
 
-Persona con responsabilidad para asegurarse de que la solución de todas sus fases cumpla con todos los estándares de seguridad y privacidad de IBM, requisitos de ASCA, requisitos legales y obligaciones morales.
-Es la persona responsable de la dirección de PDT y OMT para garantizar que la seguridad, privacidad, ASCA y requisitos relacionados se hayan identificado y gestionado por los planes de solución a través de la finalización del ciclo de vida.
+Persona con responsabilidad para asegurarse de que la solución de todas sus fases cumpla con todos los estándares de seguridad y privacidad de IBM, requisitos de ASCA, requisitos legales y obligaciones morales. Es la persona responsable de la dirección de PDT y OMT para garantizar que la seguridad, privacidad, ASCA y requisitos relacionados se hayan identificado y gestionado por los planes de solución a través de la finalización del ciclo de vida.
 
 ### servicio
 {: #x2038343}
@@ -1691,7 +1687,7 @@ Modelo de despliegue de software mediante el cual el software, incluidos los pro
 ### gestor de proyecto de solución (SPM)
 {: #x2214907}
 
-El punto focal para el desarrollo y el despliegue de la solución de IT. El SPM es responsable del rendimiento de la tarea IGS, incluida la propuesta técnica, desarrollo de solución, entrega de solución y despliegue. 
+El punto focal para el desarrollo y el despliegue de la solución de IT. El SPM es responsable del rendimiento de la tarea IGS, incluida la propuesta técnica, desarrollo de solución, entrega de solución y despliegue.
 
 ### SOR
 {: #x2214822}
@@ -1777,7 +1773,7 @@ Plantilla que incluye servicios predefinidos y código de app configurado con un
 ### descripción del servicio (SOW)
 {: #x2214901}
 
-Documento preparado por un gestor de proyectos (PM) como respuesta a una solicitud de servicio de un cliente. La descripción del servicio del proyecto es la propuesta de solución técnica y debe describir los productos finales e identificar todos los riesgos e impactos de Global Services, inversiones de infraestructura, capacidad, elementos de coste, asunciones y dependencias. 
+Documento preparado por un gestor de proyectos (PM) como respuesta a una solicitud de servicio de un cliente. La descripción del servicio del proyecto es la propuesta de solución técnica y debe describir los productos finales e identificar todos los riesgos e impactos de Global Services, inversiones de infraestructura, capacidad, elementos de coste, asunciones y dependencias.
 
 ### historia
 {: #x5027530}
@@ -1827,7 +1823,7 @@ Revisión realizada por el ingeniero de sistemas (SE) en la fase de concepto.
 ### ingeniero de sistemas
 {: #x2214941}
 
-La persona responsable para las soluciones de TI integradas completas para satisfacer requisitos empresariales, garantizando los planes de prueba completos y comprobando las soluciones integradas, tales como el rendimiento y la disponibilidad, y garantizando la integración de la solución en el entorno de producción. 
+La persona responsable para las soluciones de TI integradas completas para satisfacer requisitos empresariales, garantizando los planes de prueba completos y comprobando las soluciones integradas, tales como el rendimiento y la disponibilidad, y garantizando la integración de la solución en el entorno de producción.
 
 
 ## T
@@ -1876,7 +1872,7 @@ Colección de programas o herramientas utilizadas para desarrollar un producto.
 ### gasto total
 {: #x2214948}
 
-Costes totales del programa, incluido el gasto de desarrollo de aplicaciones y los costes "desplazados" o recurrentes que cubren los gastos de mantenimiento y ejecución durante la vida útil prevista del programa. 
+Costes totales del programa, incluido el gasto de desarrollo de aplicaciones y los costes "desplazados" o recurrentes que cubren los gastos de mantenimiento y ejecución durante la vida útil prevista del programa.
 
 ### elemento de compilación de seguimiento
 {: #x7494456}
@@ -1935,7 +1931,7 @@ Véase [localizador uniforme de recursos](#x2042491).
 ### Diseño centrado en el usuario (UCD)
 {: #x2214960}
 
-Un método de desarrollo que ayuda a garantizar que los diseños de la aplicación se ajustarán a las necesidades del usuario y proporcionarán aplicaciones que se pueden utilizar. 
+Un método de desarrollo que ayuda a garantizar que los diseños de la aplicación se ajustarán a las necesidades del usuario y proporcionarán aplicaciones que se pueden utilizar.
 
 ### sentimiento de usuario
 {: #x7290116}
@@ -1949,28 +1945,27 @@ Sistema de puntuación de evaluación de usuarios que se obtiene recopilando eva
 ### cadena de valor
 {: #x2118588}
 
-La secuencia de todas las actividades necesarias para prever, crear, organizar, producir, distribuir, comercializar y vender un conjunto de productos o servicios relacionados. El valor percibido por el consumidor final del producto o servicio se obtiene en parte de cada paso de la cadena, aunque no todos los pasos crear la misma cantidad de valor o entregan el mismo potencial de beneficios. Cada paso en la cadena requiere activos y prestaciones diferentes. 
+La secuencia de todas las actividades necesarias para prever, crear, organizar, producir, distribuir, comercializar y vender un conjunto de productos o servicios relacionados. El valor percibido por el consumidor final del producto o servicio se obtiene en parte de cada paso de la cadena, aunque no todos los pasos crear la misma cantidad de valor o entregan el mismo potencial de beneficios. Cada paso en la cadena requiere activos y prestaciones diferentes.
 
 ### diseño de cadena de valor
 {: #x2214970}
 
-Los componentes del diseño de cadena de valor son: ámbito, partes interesadas, enlaces clave, procesos de nivel 1 a 3, fuentes de valor, atributos y una representación gráfica de los procesos. 
+Los componentes del diseño de cadena de valor son: ámbito, partes interesadas, enlaces clave, procesos de nivel 1 a 3, fuentes de valor, atributos y una representación gráfica de los procesos.
 
 ### infraestructura de implementación de cadena de valor
 {: #x2214975}
 
-Infraestructura que proporciona un método común para una implementación coherente de las cadenas de valor en toda la organización de IBM, aunque también permite los requisitos exclusivos de cada cadena de valor. 
+Infraestructura que proporciona un método común para una implementación coherente de las cadenas de valor en toda la organización de IBM, aunque también permite los requisitos exclusivos de cada cadena de valor.
 
 ### sistema de gestión de cadena de valor
 {: #x2214980}
 
 Sistema incorporado en estructuras BTMS (Business Transformation Management System) existentes (IRB, IPMT, PDT) y trata de nuevos enlaces de organización, habilitando la toma de decisiones entre organizaciones y la financiación de inversiones de cadena de valor. Incluye todas las partes interesadas de cadena de valor. Las unidades del sistema de gestión, la integración de la estrategia de cadena de valor y planes con los planes y estrategia de unidades de negocio de partes interesadas, el establecimiento de políticas empresariales específicas de la cadena de valor, la priorización de inversiones específicas de cadena de valor y la resolución de problemas específicos de cadena de valor.
 
-
 ### fuentes de valor de la cadena de valor
 {: #x2214985}
 
-Las calidades o las características de la cadena de valor que añaden valor al cliente y/o a la empresa, y que son controladores directos o indirectos de la rentabilidad de la cadena de valor. Las fuentes de valor pueden ser internas respecto a la empresa (por ejemplo, herramientas de ventas fáciles de usar), o externas (por ejemplo, velocidad competitiva para mercado). Una fuente de valor puede abarcar varios procesos dentro de la cadena de valor. La fuente de valor proporciona la base para priorizar y dirigir inversiones de transformación para producir el valor más grande para la empresa y para sus clientes. 
+Las calidades o las características de la cadena de valor que añaden valor al cliente y/o a la empresa, y que son controladores directos o indirectos de la rentabilidad de la cadena de valor. Las fuentes de valor pueden ser internas respecto a la empresa (por ejemplo, herramientas de ventas fáciles de usar), o externas (por ejemplo, velocidad competitiva para mercado). Una fuente de valor puede abarcar varios procesos dentro de la cadena de valor. La fuente de valor proporciona la base para priorizar y dirigir inversiones de transformación para producir el valor más grande para la empresa y para sus clientes.
 
 ### virtual
 {: #x2043123}
@@ -2040,7 +2035,7 @@ Formato de archivo comprimido, definido por el estándar Java EE, para almacenar
 ### webhook
 {: #x8558303}
 
-Una devolución de llamada personalizada HTTP que altera el comportamiento de una página web o una aplicación web. 
+Una devolución de llamada personalizada HTTP que altera el comportamiento de una página web o una aplicación web.
 
 ### Web IDE
 {: #x7494461}
