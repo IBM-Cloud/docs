@@ -47,15 +47,16 @@ You can use the following APIs.
 |`GET /v3/location/{search or point}`                                  |Provides the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match the request. The Location Service supports search by city name, geocode (latitude and longitude), postal code, and ICAO code.|
 *Table 1. {{site.data.keyword.weather_short}} API summary*
 
-## Daily and and intraday forecasts
+## Daily and intraday forecasts
 {: #daily_intraday}
 The daily forecast API can contain multiple days of daily forecasts for each location. 
 Each day of a forecast can contain up to three separate forecasts. For any given 
 forecast day the API can return day, night, and 24-hour forecasts.
 
-The intraday forecast API breaks down the next 360 hours of forecasts into 
-6-hour segments for each of the next 10 days.  The intraday forecast is 
-very similar in structure to the daily forecast.
+The intraday forecast API can contain multiple days of daily forecasts for each location.
+Each day of a forecast contains four separate 6-hour forecasts for morning (7 AM to 1 PM),
+afternoon (1 PM to 7 PM), evening (7 PM to 1 AM), and overnight (1 AM to 7 AM). The
+intraday forecast is similar in structure to the daily forecast.
 
 Each segment has a day part number, day of the week name, and day part name. For example, 
 the following example shows the data field order and data values for 
