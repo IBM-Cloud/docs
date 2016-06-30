@@ -19,6 +19,7 @@ copyright:
 # 트리거 및 규칙 작성
 {: #openwhisk_triggers}
 *마지막 업데이트 날짜: 2016년 2월 22일*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} 트리거 및 규칙은 플랫폼에 이벤트 주도적인 기능을 제공합니다. 외부 및 내부 이벤트 소스의 이벤트는 트리거를 채널로 사용하며 규칙은 조치가 이러한 이벤트에 대해 반응하도록 허용합니다.
 {: shortdesc}
@@ -171,7 +172,7 @@ copyright:
   {: pre}
   ```
   {
-     "payload": "Hello, Donald from Washington, D.C."
+"payload": "Hello, Donald from Washington, D.C."
   }
   ```
   {: screen}

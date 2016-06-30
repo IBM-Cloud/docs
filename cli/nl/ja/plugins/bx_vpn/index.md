@@ -80,6 +80,7 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 **例**:
 
 `my_connection` という名前の新しい VPN 接続を作成します:
+
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
@@ -111,6 +112,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP] 
 **例**:
 
 `my_ike` という名前の新しい IKE ポリシーを作成します:
+
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
@@ -142,6 +144,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION][-pfs GROUP
 **例**:
 
 `my_policy` という名前で IPSec ポリシーを作成します。
+
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -169,6 +172,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS][-subnet
 **例**:
 
 名前が `my_gateway` で、タイプが `allContainerGroups` のゲートウェイを作成します。
+
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```

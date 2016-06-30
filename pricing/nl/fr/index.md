@@ -51,12 +51,12 @@ copyright:
 # Tarification
 {: #pricing}
 
-*Dernière mise à jour : 16 mai 2016*
+*Dernière mise à jour : 1er juin 2016*
+{: .last-updated}
 
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
 {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
-30 jours offrant des franchises supplémentaires, notamment un support gratuit. Au bout de 30 jours, vous pouvez choisir un type de compte et ne payer que ce que vous utilisez au-delà des franchises. 
-Bluemix met à disposition une calculatrice des coûts pour que vous puissiez estimer le coût à l'avance, ainsi que la vue Tableau de bord de l'utilisation pour que
+30 jours offrant des franchises supplémentaires, notamment un support gratuit. Au bout de 30 jours, vous pouvez choisir un type de compte et ne payer que ce que vous utilisez au-delà des franchises. Bluemix met à disposition une calculatrice des coûts pour que vous puissiez estimer le coût à l'avance, ainsi que la vue Tableau de bord de l'utilisation pour que
 vous puissiez vérifier le coût réel après avoir construit vos applications.
 {:shortdesc}
 
@@ -96,8 +96,7 @@ ne sont plus illimitées comme celles proposées par de nombreux services IBM au
 {: #what_it_costs}
 
 Le prix varie selon les ressources utilisées par un service, un contexte d'exécution, un conteneur, un serveur virtuel ou une option de support
-spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. 
-Vous pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Tableau de bord de l'utilisation*. Pour des informations
+spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Tableau de bord de l'utilisation*. Pour des informations
 plus détaillées sur les frais, voir [Paiement](index.html#charges).
  
 
@@ -143,6 +142,10 @@ vos informations.
 Si vous rencontrez des problèmes liés à {{site.data.keyword.Bluemix_notm}} lorsque vous utilisez un compte de type Paiement à la carte ou
 Abonnement, lisez la page [Comment obtenir de
 l'aide](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) pour plus d'informations.
+
+**Remarque :** si vous liez votre compte de facturation {{site.data.keyword.Bluemix_notm}} à un compte SoftLayer, à compter du
+premier jour du mois suivant, vos frais {{site.data.keyword.Bluemix_notm}} figureront sur votre facture SoftLayer. Pour plus d'informations, voir
+[Affichage des crédits](../admin//softlayerlink.html#bill_usage).
 
 ###Compte Paiement à la carte
 {: #pay-as-you-go}
@@ -370,23 +373,19 @@ sur un modèle de tarification à tranches fixes :
 |5200 |	Le nombre d'éléments correspond à la tranche 5 ; par conséquent, le prix total est 5000 $. |	5000 $|
 *Tableau 6. Calcul du prix avec le modèle de tarification à tranches fixes*
 
-### Franchises pour les serveurs virtuels 
+### Franchises pour les serveurs virtuels
 {: #vms}
 
-Vous pouvez utiliser des serveurs virtuels {{site.data.keyword.Bluemix_notm}} dans le cloud public IBM sous forme de fonctions bêta
-gratuites. Des franchises sont proposées pour le nombre d'images de serveur virtuel que vous pouvez créer, le nombre d'adresses IP qui sont affectées,
+Vous pouvez utiliser {{site.data.keyword.virtualmachineslong}} dans le cloud IBM public sous forme de fonction bêta gratuite. Des franchises sont proposées pour le nombre d'images de serveur virtuel que vous pouvez créer, le nombre d'adresses IP qui sont affectées,
 ainsi que la quantité de mémoire pouvant être utilisée.
 
-Voici les franchises dont vous bénéficiez avec les serveurs virtuels {{site.data.keyword.Bluemix_notm}} bêta :
+Les franchises suivantes sont accordées avec {{site.data.keyword.virtualmachineslong}} bêta :
 
-* 8 instances
-* 8 unités centrales virtuelles
-* 12 Go de mémoire
+* 2 instances
+* 2 UC virtuelles
+* 8 Go de mémoire
 * 200 Go de stockage de bloc
-* 4 adresses IP publiques
-
-De plus, vous pouvez utiliser l'infrastructure des serveurs virtuels pour mettre à disposition des serveurs virtuels dans vos clouds privés
-{{site.data.keyword.Bluemix_notm}}, conformément aux limites et aux quotas de vos clouds privés.
+* 5 adresses IP publiques
 
 
 ##Estimation des coûts
@@ -511,7 +510,7 @@ Le prix total est de 148 + 13,5 + 13,5 = 175 $.</p></dd>
 
 Une fois tous les éléments additionnés, le prix total de l'application est 384,15 $.
 
-##Tableau de bord de l'utilisation 
+##Tableau de bord de l'utilisation
 {: #usage}
 
 En tant que propriétaire de compte ou responsable de la facturation, vous pouvez vous servir de la vue Tableau de bord de l'utilisation afin d'afficher
@@ -539,6 +538,18 @@ organisation, y compris l'utilisation dans le cadre d'une tranche gratuite. Le p
 vous affichez l'utilisation au niveau de l'organisation, vous consultez l'utilisation réelle pour cette organisation, incluant l'utilisation
 gratuite et l'utilisation facturée. L'utilisation au niveau de l'organisation correspond à l'utilisation au niveau de compte une fois la
 tranche gratuite retirée.
+
+##Affichage des crédits
+{: #credits}
+
+En tant que propriétaire de compte ou responsable de la facturation, vous pouvez utiliser la vue Tableau
+de bord de l'utilisation afin de visualiser les crédits éventuels dont bénéficie votre compte. Vous pouvez disposer de crédits si, par exemple, vous avez lié un
+compte
+SoftLayer avec un compte {{site.data.keyword.Bluemix_notm}}.
+
+Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **Compte et support**
+![Icône Compte et support](../admin/images/account_support.svg), puis sélectionnez **Compte**. Sur la page qui s'affiche,
+cliquez sur **Tableau de bord de l'utilisation**. La vue présente vos crédits éventuels, ainsi que leur date d'expiration.
 
 ##Notifications
 {: #notifications}

@@ -14,6 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 *마지막 업데이트 날짜: 2016년 1월 12일*
+{: .last-updated}
 
 # 스타터 애플리케이션 사용
 {: #using_starter_applications}

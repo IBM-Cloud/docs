@@ -16,6 +16,9 @@ copyright:
 # 混合
 {: #hybrid}
 
+*前次更新：2016 年 6 月 8 日*
+{: .last-updated}
+
 {{site.data.keyword.Bluemix_notm}} 運用公用、專用及本端整合部署模型，來呈現體驗雲端的新方式。不論您是計劃擴充的小型企業，還是需要額外隔離的大型企業，{{site.data.keyword.Bluemix_notm}} 都有符合您需求的雲端部署。您可以自由地在雲端中進行開發，在雲端中，您可以將專用服務連接至 IBM 所提供的公用 {{site.data.keyword.Bluemix_notm}} 服務。而且，您及您的團隊可以使用現有資料、系統和程序，以及 {{site.data.keyword.Bluemix_notm}} 中提供的 SaaS 工具。
 {:shortdesc}
 
@@ -26,6 +29,8 @@ copyright:
 ## 專用
 
 「{{site.data.keyword.Bluemix_notm}} 專用」是一個專用雲端，在 IBM SoftLayer 資料中心內具有實際分隔的硬體。建立的 {{site.data.keyword.Bluemix_notm}} 環境是單一承租戶且佈建在裸機及虛擬伺服器的組合上，以符合您的需求。而且，運用聯合型錄，您可以使用專用運算資源及服務的組合以及可透過型錄聯合設為可用的功能，來強化應用程式。進一步瞭解 [{{site.data.keyword.Bluemix_notm}} 專用](../dedicated/index.html)。
+
+**附註：**「{{site.data.keyword.Bluemix}} 專用」的 SoftLayer 相關資訊不適用於中國。 
 
 ## 本端
 

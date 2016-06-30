@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus
+# (Veraltet) Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus
 {: #devmodecli}
 
-*Letzte Aktualisierung: 11. April 2016*
+*Letzte Aktualisierung: 12. Mai 2016*
+{: .last-updated}
+
+**Diese Befehlszeilenschnittstelle wird nicht mehr verwendet.** Verwenden Sie anstelle der Befehlszeilenschnittstelle für den Entwicklungsmodus (dev_mode) IBM Eclipse Tools for Bluemix oder die DevOps-Web-IDE. Die dev_mode-CLI kann bis 30. Juni 2016 verwendet werden.
 
 Die Bluemix-Befehlszeile für den Entwicklungsmodus (CLI 'dev_mode') ermöglicht das Aktualisieren Ihrer Apps, während sie in der Cloud ausgeführt werden. Die CLI 'dev_mode' wurde als cf-CLI-Plug-in aufgebaut und unterstützt sowohl Liberty- als auch IBM Node.js-Apps.
 {: shortdesc}
@@ -35,10 +38,10 @@ Mit der CLI 'dev_mode' können Sie die folgenden Tasks ausführen:
 Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Methoden:
 - Lokale Installation.
   1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.{DomainName}) herunter.
-  2. Installieren Sie das dev_mode-Plug-in mithilfe des Befehls 'cf install-plugin':
+  2. Wechseln Sie zu dem Ordner mit dem dev_mode-Plug-in und installieren Sie das Plug-in mithilfe des Befehls 'cf install-plugin'. Beispiel: 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Installation aus dem Bluemix-CLI-Repository
@@ -72,7 +75,7 @@ cf plugins
 
 Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig verwendeten Befehle der CLI 'dev_mode':
 
-<table summary="Index der Befehle für dev_mode">
+<table summary="Index der Befehle für dev_mode"> 
  <thead>
  <th colspan="4">Befehle für dev_mode</th>
  </thead>
@@ -207,10 +210,8 @@ cf restart-inplace <App-Name>
 
 ## Zugehörige Links
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI- und Dev-Tools](../../index.html#cli){:new_window}
+* [Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps-Web-IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

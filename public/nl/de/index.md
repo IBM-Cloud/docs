@@ -15,7 +15,8 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*Letzte Aktualisierung: 22. Februar 2016*
+*Letzte Aktualisierung: 19. Mai 2016*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} abstrahiert und verbirgt den weitaus größten Teil der Komplexität, die mit dem Hosten und Verwalten von cloudbasierten Apps verbunden ist. Als Anwendungsentwickler können Sie sich auf die Entwicklung Ihrer App konzentrieren und müssen sich nicht um die Verwaltung der Infrastruktur kümmern, die für den Betrieb der App erforderlich ist.
@@ -171,7 +172,7 @@ sind für jede verwendete Region gleich.
 
 Wenn Sie mit der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle
 arbeiten, können Sie in eine andere Region wechseln, um mit den Bereichen
-in dieser Region zu arbeiten.
+in dieser Region zu arbeiten. Klicken Sie auf das Symbol **Konto und Unterstützung** ![Symbol 'Konto und Unterstützung'](../admin/images/account_support.svg) und erweitern Sie den Selektor **Region**. Anschließend können Sie in der Liste eine andere Region auswählen.
 
 Wenn Sie mit der Befehlszeilenschnittstelle cf
 arbeiten, müssen Sie eine Verbindung zu der {{site.data.keyword.Bluemix_notm}}-Region

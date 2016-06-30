@@ -19,6 +19,7 @@ copyright:
 # Auslöser und Regeln erstellen
 {: #openwhisk_triggers}
 *Letzte Aktualisierung: 22. Februar 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}}-Auslöser und -Regeln statten die Plattform mit ereignisgesteuerten Funktionen aus. Ereignisse aus externen und internen Ereignisquellen werden durch einen Auslöser kanalisiert. Regeln ermöglichen es Ihren Aktionen, auf diese Ereignisse zu reagieren.
 {: shortdesc}

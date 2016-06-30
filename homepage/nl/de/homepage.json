@@ -105,9 +105,6 @@
 			}, {
 				"name": "Streaming Analytics",
 				"href": "services/StreamingAnalytics/index.html"
-			}, {
-				"name": "Time Series Database",
-				"href": "services/TimeSeries/index.html"
 			}]
 		}, {
 			"title": "Watson",
@@ -125,6 +122,9 @@
 			}, {
 				"name": "Dialog",
 				"href": "services/Dialog/index.html"
+			}, {
+				"name": "Document Conversion",
+				"href": "services/DocumentConversion/index.html"
 			}, {
 				"name": "Language Translation",
 				"href": "services/WatsonLanguageTranslation/index.html"
@@ -154,7 +154,7 @@
 				"href": "services/TradeoffAnalytics/index.html"
 			}, {
 				"name": "Visual Recognition",
-				"href": "services/VisualRecognition/index.html"
+				"href": "services/VisualRecognition/VisualRecognition.html"
 			}]
 		}, {
 			"title": "Integrate",

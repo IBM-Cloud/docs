@@ -51,7 +51,8 @@ copyright:
 # 定价
 {: #pricing}
 
-*上次更新时间：2016 年 5 月 16 日*
+*上次更新时间：2016 年 6 月 1 日*
+{: .last-updated}
 
 您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况仪表板”视图，可用于在构建应用程序后检查实际成本。
 {:shortdesc}
@@ -98,7 +99,8 @@ copyright:
 * 上传促销码所指定的额外数量的 SSL 证书
 * 使用高级服务套餐
 
-**注：**可以将多个促销码应用到您的帐户。在促销码的到期日期之前，每个促销码只能兑换一次。要使用促销码，请在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**概要文件设置**图标，选择**帐户**，然后单击**帐户类型**。
+**注：**可以将多个促销码应用到您的帐户。在促销码的到期日期之前，每个促销码只能兑换一次。
+要使用促销码，请在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**概要文件设置**图标，选择**帐户**，然后单击**帐户类型**。
 
 ##计费方式
 {: #pay-accounts}
@@ -116,6 +118,8 @@ copyright:
 创建计费帐户后，您可以编辑所提供的信息。单击 {{site.data.keyword.Bluemix_notm}} 用户界面右上角的**概要文件设置**图标，然后单击**帐户 &gt; 帐户类型**来编辑您的信息。
 
 如果在使用现买现付或预订帐户时遇到任何 {{site.data.keyword.Bluemix_notm}} 问题，请参阅[获取联机帮助](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)来了解更多信息。
+
+**注：**如果您将 {{site.data.keyword.Bluemix_notm}} 缴费帐户与 SoftLayer 帐户相链接，那么从下个月的第一天开始，您的 {{site.data.keyword.Bluemix_notm}} 费用将会列在 SoftLayer 发票上。有关详细信息，请参阅[查看信用值](../admin//softlayerlink.html#bill_usage)。
 
 ###现买现付帐户
 {: #pay-as-you-go}
@@ -183,7 +187,9 @@ copyright:
 例如，假设一个运行时在两个 512 MB 实例中运行 30 天（720 个小时），每 GB-小时的开销为 0.07 美元。这些资源的成本为 24.15 美元，包括 375 GB-小时的免费限额，计算方式如下： 
 
 ```
-2 个实例 x 0.5 GB x 720 小时 = 720 GB-小时。(720 - 375) GB-小时 x 每 GB-小时 0.07 美元 = 24.15 美元```
+2 个实例 x 0.5 GB x 720 小时 = 720 GB-小时。
+(720 - 375) GB-小时 x 每 GB-小时 0.07 美元 = 24.15 美元
+```
 
 ###服务的费用
 {: #services}
@@ -280,17 +286,15 @@ copyright:
 ### 虚拟服务器的免费限额
 {: #vms}
 
-您可以免费使用 IBM 公共云中的 {{site.data.keyword.Bluemix_notm}} 虚拟服务器作为 beta 功能部件。为以下项提供了免费限额：您可创建的虚拟服务器映像数、分配的 IP 地址数以及可使用的内存量。
+您可以免费使用 IBM 公共云中的 {{site.data.keyword.virtualmachineslong}} 作为 beta 功能部件。为以下项提供了免费限额：您可创建的虚拟服务器映像数、分配的 IP 地址数以及可使用的内存量。
 
-以下项是 {{site.data.keyword.Bluemix_notm}} 虚拟服务器 beta 的免费限额：
+以下项是 {{site.data.keyword.virtualmachineslong}} beta 的免费限额：
 
-* 8 个实例
-* 8 个虚拟 CPU
-* 12 GB 内存
+* 2 次
+* 2 个虚拟 CPU
+* 8 GB 内存
 * 200 GB 块存储器
-* 4 个公共 IP 地址
-
-此外，还可以使用虚拟服务器基础架构在您的 {{site.data.keyword.Bluemix_notm}} 私有云中供应虚拟服务器，具体仅受您私有云的限制和配额影响。
+* 5 个公共 IP 地址
 
 
 ##成本估算方法
@@ -351,7 +355,8 @@ copyright:
 
 <dl>
 <dt>四个 256 MB Node.js 运行时实例</dt>
-<dd>Bluemix 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。<p>
+<dd>Bluemix 对运行时按 GB-小时收费。每月使用的 GB 数是 <code>4 x 256 = 1024 MB 或 1 GB/月</code>。假设<code>一个月有 24 x 30 = 720 小时</code>，那么应用程序按 <code>1 x 720 = 720 GB-小时</code>收费。
+<p>
 375 GB-小时包括在每月免费限额中，在所有 {{site.data.keyword.Bluemix_notm}} 运行时共享。因此，运行时的总成本为 <code>0.07 美元 x (720-375) = 24.15 美元</code>。</p></dd>
 
 <dt>两个 Auto-Scaling 策略（处理器和内存）</dt>
@@ -361,7 +366,8 @@ copyright:
 <dd>Data Cache 服务提供的 50 MB 套餐免费。然而，免费套餐可能难以满足您每月计划使用的 2 GB。Data Cache 的 3 个付费套餐都是以固定金额购买特定的空间量，而不管您实际使用的空间量是多少。因此，您希望选择符合您计划使用量（标准套餐为 5 GB）的最低限度套餐。每月总开销为 155 美元。</dd>
 
 <dt>NoSQL 数据库每月 150 GB</dt>
-<dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} 服务费用基于数据存储和按不同 API 方法访问该数据的能力。<strong>PUT</strong> 和 <strong>POST</strong> 命令被视为频繁 API 调用，但 <strong>GET</strong> 命令被视为稀少 API 调用。<p>
+<dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} 服务费用基于数据存储和按不同 API 方法访问该数据的能力。<strong>PUT</strong> 和 <strong>POST</strong> 命令被视为频繁 API 调用，但 <strong>GET</strong> 命令被视为稀少 API 调用。
+<p>
 加总 GB 数并减去 2 GB 免费限额。每月对 148 GB 收费。减去 50,000 稀少 API 调用和 10,000 频繁 API 调用的免费限额。存储价格总计包括以下部分：</p>
 <pre class="codeblock">
 <codeblock>
@@ -396,6 +402,13 @@ copyright:
 
 如果在**组织**中选择了特定组织，那么会看到该组织的总使用量，包括免费层中的任何使用量。所显示的该组织的费用不是对您记帐的费用。免费层使用量在帐户级别显示为免费，但在组织级别不会显示为免费。因此，查看组织使用量时，会看到该组织的实际使用量，包括免费使用量和收费使用量。除去免费层后，所有组织使用量都会累积到帐户使用量上。
 
+##查看信用值
+{: #credits}
+
+作为帐户所有者或记帐管理员，您可通过“使用情况仪表板”视图来查看您帐户的任何信用值。例如，如果您已将 SoftLayer 帐户与 {{site.data.keyword.Bluemix_notm}} 帐户相链接，那么您可能已经具有信用值。
+
+要打开“使用情况仪表板”视图，请单击**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg)，然后选择**帐户**。在显示的页面上，单击**使用情况仪表板**。在此视图中，您可以查看任何信用值（如果存在的话）以及它们何时到期。
+
 ##通知
 {: #notifications}
 
@@ -420,8 +433,11 @@ copyright:
 
 ###通过命令行界面更改套餐
 
-（可选）您可以通过命令行界面来更改服务套餐。要更新服务套餐，请输入以下命令：```
-cf update-service <service_name> [-p <new_plan>]```
+（可选）您可以通过命令行界面来更改服务套餐。
+要更新服务套餐，请输入以下命令：
+```
+cf update-service <service_name> [-p <new_plan>]
+```
 # 相关链接
 ## 常规 
 * [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{DomainName}/pricing/)

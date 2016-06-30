@@ -12,7 +12,8 @@ copyright:
 # Kundenunterstützung abrufen
 {: #getting-customer-support}
 
-*Letzte Aktualisierung: 11. Mai 2016*
+*Letzte Aktualisierung: 17. Juni 2016*
+{: .last-updated}
 
 
 Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, stehen Ihnen unterschiedliche Unterstützungsoptionen zur Verfügung, z. B. das Anfordern von Hilfe über ein Forum oder das Öffnen eines Support-Tickets.
@@ -34,17 +35,18 @@ Klicken Sie auf **Hilfe anfordern**, um nach Antworten auf Ihre Fragen zu suchen
 ### Fragen stellen
 {: #asking-a-question}
 
-Die Foren Stack Overflow und dW Answers bieten beide eine breite Palette durchsuchbarer Antworten für Ihre Fragen zu Bluemix. Wenn Sie keine Antwort vorfinden, stellen Sie eine neue Frage.  
+Die Foren Stack Overflow und dW Answers bieten beide eine breite Palette durchsuchbarer Antworten für Ihre Fragen zu Bluemix. Wenn Sie keine Antwort vorfinden, stellen Sie eine neue Frage. 
 
-  * Wechseln Sie zu [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window}, um technische Fragen zu Entwicklungs-Apps auf der Bluemix-Plattform und zu Services zu stellen.
-  * Wechseln Sie zu [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}, um Fragen zu {{site.data.keyword.Bluemix_notm}}-Angeboten zu stellen und um einführende Anweisungen zu erhalten. 
+  * Wechseln Sie zu [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}, um technische Fragen zu Entwicklungs-Apps auf der Bluemix-Plattform und zu Services zu stellen.
+  * Wechseln Sie zu [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}, um Fragen zu {{site.data.keyword.Bluemix_notm}}-Angeboten zu stellen und um einführende Anweisungen zu erhalten.
+  * Wechseln Sie in China zu den [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}, um Fragen zu stellen.
 
-Sie können eine Frage in Stack Overflow auch direkt von 'Konto und Unterstützung' aus stellen, indem Sie die folgenden Schritte ausführen: 
+Sie können eine Frage in Stack Overflow auch direkt von 'Konto und Unterstützung' aus stellen, indem Sie die folgenden Schritte ausführen:
   1. Klicken Sie in der Anzeige 'Konto und Unterstützung' auf die Option **Hilfe anfordern**. 
   2. Geben Sie auf der angezeigten Seite im Suchfeld Ihre Frage ein, um nach Antworten darauf zu suchen. 
-  3. Wird die erwartete Antwort nicht zurückgegeben, klicken Sie auf **An Stack Overflow posten**, um Ihr Problem zu posten. 
+  3. Wird die erwartete Antwort nicht zurückgegeben, klicken Sie auf **An Stack Overflow posten**, um Ihr Problem zu posten.
 
-Die {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams überwachen Stack Overflow und dW Answers aktiv und verfolgen die Fragen, die mit der Kennung **bluemix** versehen sind. Wenn Sie eine Frage in einem der Foren stellen, fügen Sie die Kennung **bluemix** zu Ihrer Frage hinzu, um sicherzustellen, dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams wahrgenommen wird. 
+Die {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams überwachen Stack Overflow und dW Answers aktiv und verfolgen die Fragen, die mit der Kennung **bluemix** versehen sind. Wenn Sie eine Frage in einem der Foren stellen, fügen Sie die Kennung **bluemix** zu Ihrer Frage hinzu, um sicherzustellen, dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungs- und Support-Teams wahrgenommen wird.
  
 
 
@@ -146,21 +148,22 @@ Zugeordneter Client Success Manager (CSM) | Nicht inbegriffen | Nicht inbegriffe
 
 Wenn Sie Ihr technisches Problem nicht mithilfe der Fehlerbehebungs- und Hilfeoptionen lösen können, können Sie Unterstützung anfordern. Stellen Sie vor der Anforderung von Unterstützung für ein technisches Problem jedoch durch Prüfen des {{site.data.keyword.Bluemix_notm}}-Status sicher, dass das Problem nicht auf einen Ausfall zurückzuführen ist.
 
-Wenn das Problem nicht auf einen Ausfall zurückzuführen ist, öffnen Sie ein Support-Ticket mit einer der folgenden Optionen:
+Wenn das Problem nicht auf einen Ausfall zurückzuführen ist und Sie Kunde in einem Land oder einer Region außerhalb von China sind, öffnen Sie ein Support-Ticket mit einer der folgenden Optionen:
 
   * Klicken Sie in der Anzeige 'Konto und Unterstützung' auf die Option **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**. Füllen Sie das Formular aus und geben Sie an, wofür genau Sie Unterstützung benötigen.
   * Gehen Sie in [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} wie folgt vor: Klicken Sie nach der Anmeldung bei dem Portal auf **Ticket öffnen** und füllen Sie das Support-Formular aus. 
-  * Verwenden Sie die Hilfetextseite [IBM {{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, ID und Anmeldung sowie für technische Unterstützung einreichen. Für technische Unterstützung können Sie außerdem nach dem Klicken auf die Kachel **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, OpenWhisk, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](../services/index.html){: new_window} im linken Navigationsbereich.  
+  * Verwenden Sie die Hilfetextseite [IBM {{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, IBM ID und Anmeldung sowie für technische Unterstützung einreichen. Für technische Unterstützung können Sie außerdem nach dem Klicken auf die Kachel **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, OpenWhisk, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](../services/index.html){: new_window} im linken Navigationsbereich.  
   
 
 
 Stellen Sie beim Öffnen eines Support-Tickets sicher, dass Sie eine geeignete Priorität für das Ticket angeben. Die Priorität bestimmt, wie Ihr Ticket bearbeitet wird. Informationen zu den verschiedenen Prioritätsstufen finden Sie unter [Support-Ticket - Priorität und Reaktionszeit](index.html#support-ticket-severity){: new_window}. Wenn Ihre Anforderung dringend ist, Sie jedoch nur für die Supportstufe 'Free' oder 'Basic' berechtigt sind, können Sie Ihr Konto aktualisieren, um Tickets mit hoher Priorität (Stufe 1, 2 oder 3) einzureichen. Zum Aktualisieren Ihres Kontos auf eine höhere Supportstufe wenden Sie sich per E-Mail an Ihren IBM Vertriebsbeauftragten (sales@bluemix.net).
 
+Als Kunde in China können Sie gebührenpflichtigen Support für Ihr Konto über die [IBM Bluemix-Seite von UNISYS-Service-Management](https://chinabluemix.itsm.unisysedge.cn){: new_window} anfordern.
+
 #### Status des Support-Tickets prüfen
 {: #check-ticket-status}
 
-Jedem Support-Ticket wird zu Referenzzwecken eine eindeutige Ticketnummer zugewiesen. Sie können diese Ticketnummer im [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} verwenden, um den Bearbeitungsfortschritt Ihres Support-Tickets zu überprüfen und das Support-Ticket zu aktualisieren. Aktualisierungen und Antworten werden per E-Mail an Sie übermittelt und in den Ticket-Benachrichtigungen aufgezeichnet.  
-
+Jedem Support-Ticket wird zu Referenzzwecken eine eindeutige Ticketnummer zugewiesen. In Ländern oder Regionen außerhalb von China können Sie diese Ticketnummer im [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} verwenden, um den Bearbeitungsfortschritt Ihres Support-Tickets zu überprüfen und das Support-Ticket zu aktualisieren. Aktualisierungen und Antworten werden per E-Mail an Sie übermittelt und in den Ticket-Benachrichtigungen aufgezeichnet. 
 
 
 ### Kontaktaufnahme mit dem Support für {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -174,10 +177,12 @@ Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Dedicated sind, erhalte
 <li>Kontaktieren Sie den Support, indem Sie ein neues Ticket über die Hilfetextseite <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}}-Support</a> öffnen. Sie können eine E-Mail-Adresse oder Ihre IBM ID für dieses Formular verwenden. Wählen Sie die Option **{{site.data.keyword.Bluemix_notm}} Dedicated** (Dediziert) für das Feld 'Region' aus.
 <p>Formularübergaben werden von Sonntag 22:00 (UTC) bis Freitag 23:59 Uhr (UTC) überwacht.</p>
 </li>
-<li>Wenn Sie eine IBM ID haben und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Symbol **Konto und Unterstützung** <img src="images/account_support.svg" alt="Konto und Unterstützung" /> in der oberen Menüleiste und anschließend auf **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**.</li>
+<li>Wenn Sie über eine IBM ID verfügen und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Symbol **Konto und Unterstützung** <img src="images/account_support.svg" alt="Konto und Unterstützung" /> in der oberen Menüleiste und anschließend auf **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**.</li>
 <li>Wenn Sie keine IBM ID haben, können Sie sich an eine Person in Ihrer Organisation mit einer solchen ID wenden oder mit Ihrem IBM Ansprechpartner zusammenarbeiten.
 <p>**Hinweis:** Wenn Sie dies anfordern, kann eine Liste der Benutzer in Ihrer Organisation, die als Kontaktpersonen für Support-Tickets fungieren, auf der Seite **Support** in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle in Ihrer Dedicated-Umgebung angezeigt werden.</p></li>
 </ul>
+
+Als Kunde von {{site.data.keyword.Bluemix_notm}} Dedicated in China können Sie über die [IBM Bluemix-Seite von UNISYS Service Management](https://chinabluemix.itsm.unisysedge.cn){: new_window} Support anfordern. Darüber hinaus können Kunden in China über die [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} kostenlosen Support in Anspruch nehmen.
 
 
 ### Kontaktaufnahme mit dem Support für {{site.data.keyword.Bluemix_notm}} Local
@@ -191,7 +196,7 @@ Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Local sind, erhalten Si
 <li>Kontaktieren Sie den Support, indem Sie ein neues Ticket über die Hilfetextseite <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}}-Support</a> öffnen. Sie können eine E-Mail-Adresse oder Ihre IBM ID für dieses Formular verwenden. Wählen Sie die Option **{{site.data.keyword.Bluemix_notm}} Local** (Lokal) für das Feld 'Region' aus.
 <p>Formularübergaben werden von Sonntag 22:00 (UTC) bis Freitag 23:59 Uhr (UTC) überwacht.</p>
 </li>
-<li>Wenn Sie eine IBM ID haben und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Symbol **Konto und Unterstützung** <img src="images/account_support.svg" alt="Konto und Unterstützung" /> in der oberen Menüleiste und anschließend auf **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**.</li>
+<li>Wenn Sie über eine IBM ID verfügen und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie auf das Symbol **Konto und Unterstützung** <img src="images/account_support.svg" alt="Konto und Unterstützung" /> in der oberen Menüleiste und anschließend auf **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**.</li>
 <li>Wenn Sie keine IBM ID haben, können Sie sich an eine Person in Ihrer Organisation mit einer solchen ID wenden oder mit Ihrem IBM Ansprechpartner zusammenarbeiten.
 <p>**Hinweis:** Wenn Sie dies anfordern, kann eine Liste der Benutzer in Ihrer Organisation, die als Kontaktpersonen für Support-Tickets fungieren, auf der Seite **Support** in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle in Ihrer lokalen Umgebung angezeigt werden.</p></li>
 </ul>
@@ -212,8 +217,8 @@ In der folgenden Tabelle sind einige allgemeine Beispiele für Supportfälle mit
 Priorität | Prioritätsdefinition | Angestrebte Reaktionszeiten | Abgedeckte Reaktionszeiten
 ------|-------- | --- | --- |
 Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Serviceausfall.</strong> <br> Geschäftskritische Funktionen nicht betriebsbereit oder kritische Schnittstelle ausgefallen. Diese Prioritätsstufe gilt in der Regel für eine Produktionsumgebung und zeigt an, dass nicht erreichbare Services kritische Auswirkungen für Betriebsabläufe haben.  Für diesen Zustand ist eine sofortige Lösung erforderlich. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb einer Stunde</li><li><strong>Premium:</strong> Innerhalb einer Stunde</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
-Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten </li><li><strong>Basic:</strong> Betriebszeiten </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 *Tabelle 2. Prioritätsdefinition und Reaktionszeit*
 
@@ -236,7 +241,7 @@ Führen Sie die folgenden Schritte aus, um eine potenzielle Sicherheitslücke zu
 ### Support-Ticket eskalieren
 {: #escalation}
 
-Falls Sie keine zeitgerechte Reaktion auf ein Support-Ticket der Prioritätsstufe 'Standard' oder 'Premium' empfangen oder wenn Sie den Eindruck haben, dass Ihr Support-Ticket nicht angemessen bearbeitet wird, können Sie das Support-Ticket eskalieren. Durch den Eskalationsprozess für das Support-Ticket prüft das IBM Management Ihre Problematik erneut und arbeitet mit Ihnen zusammen, um die Supporterfahrung zu verbessern.
+Falls Sie in einem Land oder einer Region außerhalb von China keine zeitgerechte Reaktion auf ein Support-Ticket der Prioritätsstufe 'Standard' oder 'Premium' empfangen oder wenn Sie den Eindruck haben, dass Ihr Support-Ticket nicht angemessen bearbeitet wird, können Sie das Support-Ticket eskalieren. Durch den Eskalationsprozess für das Support-Ticket prüft das IBM Management Ihre Problematik erneut und arbeitet mit Ihnen zusammen, um die Supporterfahrung zu verbessern.
 
 Führen Sie die folgenden Schritte aus, um einen Eskalationsprozess anzufordern:
   1. Öffnen Sie ein neues Support-Ticket mit dem Stichwort **Escalation Request** (Eskalationsanforderung).
@@ -316,5 +321,5 @@ IBM sendet regelmäßig Umfragen an Bluemix-Kunden, um Feedback zu ihren jüngst
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
   * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window} 
   * [Handbuch für SaaS-Support](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/bluemix){: new_window} 
+  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

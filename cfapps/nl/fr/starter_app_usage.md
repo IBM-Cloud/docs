@@ -14,6 +14,7 @@ copyright:
 {:new_window: target="_blank"}
 
 *Dernière mise à jour : 12 janvier 2016*
+{: .last-updated}
 
 # Utilisation des applications de démarrage
 {: #using_starter_applications}

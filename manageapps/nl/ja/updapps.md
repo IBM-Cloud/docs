@@ -15,6 +15,7 @@ copyright:
 {: #updatingapps}
 
 *最終更新日: 2016 年 5 月 9 日*
+{: .last-updated}
 
 
 cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。

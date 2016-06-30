@@ -18,7 +18,8 @@ copyright:
 
 #Creación del botón Desplegar en {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Última actualización: 2 de marzo de 2016* 
+*Última actualización: 2 de marzo de 2016*
+{: .last-updated} 
 
 El botón Desplegar en {{site.data.keyword.Bluemix}} es una manera fácil de compartir la app de origen Git público con otras personas para que puedan experimentar con el código
 y desplegarla en IBM {{site.data.keyword.Bluemix_notm}}. Este botón requiere una configuración mínima y puede insertarse en cualquier lugar que admita la marcación. El usuario que pulse el botón creará una copia del código en un nuevo repositorio Git, de manera que la app original no se verá afectada. 

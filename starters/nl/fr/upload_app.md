@@ -15,6 +15,7 @@ copyright:
 
 # Téléchargement de votre application
 *Dernière mise à jour : 17 février 2016*
+{: .last-updated}
 
 Une fois que vous êtes connecté à {{site.data.keyword.Bluemix}}, vous pouvez télécharger votre application avec la commande cf push.
 {:shortdesc}

@@ -16,6 +16,9 @@ copyright:
 # Hybrid
 {: #hybrid}
 
+*Letzte Aktualisierung: 8. Juni 2016*
+{: .last-updated}
+
 Mit dem öffentlichen, dedizierten und lokalen Modell für integrierte Bereitstellung bietet {{site.data.keyword.Bluemix_notm}} eine neue Möglichkeit zur Nutzung von Cloudfunktionalität. {{site.data.keyword.Bluemix_notm}} verfügt über Cloudbereitstellungen, die Ihre Anforderungen erfüllen, unabhängig davon, ob Sie eine Skalierung für Ihr Kleinunternehmen planen oder ob Sie für Ihr großes Unternehmen eine zusätzliche Schutzisolierung benötigen. Sie können in einer Cloud praktisch grenzenlos entwickeln und Ihre privaten Services mit den öffentlichen {{site.data.keyword.Bluemix_notm}}-Services von IBM verbinden. Und Sie können mit Ihrem Team vorhandene Daten, Systeme und Prozesse zusammen mit den in {{site.data.keyword.Bluemix_notm}} verfügbaren SaaS-Tools verwenden.
 {:shortdesc}
 
@@ -26,6 +29,8 @@ Im Wesentlichen ist {{site.data.keyword.Bluemix_notm}} eine Umgebung, in der Sie
 ## Dedicated (Dediziert)
 
 {{site.data.keyword.Bluemix_notm}} Dedicated ist eine private Cloud mit physisch isolierter Hardware in einem IBM SoftLayer-Rechenzentrum. Als Single-Tenant-Umgebung, bereitgestellt durch eine Kombination aus Bare-Metal-Servern und virtuellen Servern, wird die {{site.data.keyword.Bluemix_notm}}-Umgebung Ihren Anforderungen entsprechend erstellt. Und mit dem syndizierten Katalog können Sie Ihre Apps mit einer Kombination aus dedizierten Rechenressourcen und Services sowie mit Funktionen, die durch die Katalogsyndikation verfügbar sind, ausstatten. Weitere Informationen zu [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html).
+
+**Hinweis:** Die Informationen zu SoftLayer für {{site.data.keyword.Bluemix}} Dedicated sind für China nicht gültig. 
 
 ## Local (Lokal)
 

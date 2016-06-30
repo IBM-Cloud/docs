@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk}} の概要
 
-*最終更新日: 2016 年 2 月 22 日*
+*最終更新日: 2016 年 2 月 22 日*{: .last-updated}
 
 以下のセクションでは、{{site.data.keyword.openwhisk}} について詳しく説明します。
 {: shortdesc}

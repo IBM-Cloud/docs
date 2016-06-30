@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 패키지 사용 및 작성
 {: #openwhisk_packages}
 *마지막 업데이트 날짜: 2016년 3월 28일*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
 
@@ -62,7 +63,7 @@ copyright:
   {: pre}
   ```
   package /whisk.system/cloudant: Cloudant database service
-     (params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
+(params: {{site.data.keyword.Bluemix_notm}}ServiceName host username password dbname includeDoc overwrite)
    action /whisk.system/cloudant/read: Read document from database
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
@@ -81,7 +82,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/cloudant/read: Read document from database
-     (params: dbname includeDoc id)
+(params: dbname includeDoc id)
   ```
   {: screen}
 
@@ -101,7 +102,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/samples/greeting: Print a friendly greeting
-     (params: name place)
+(params: name place)
   ```
   {: screen}
 
@@ -115,7 +116,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, stranger from somewhere!"
+"payload": "Hello, stranger from somewhere!"
   }
   ```
   {: screen}
@@ -130,7 +131,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Mork from Ork!"
+"payload": "Hello, Mork from Ork!"
   }
   ```
   {: screen}
@@ -183,7 +184,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Valhalla!"
+"payload": "Hello, Odin from Valhalla!"
   }
   ```
   {: screen}
@@ -199,7 +200,7 @@ copyright:
   {: pre}
   ```
   {
-      "payload": "Hello, Odin from Asgard!"
+"payload": "Hello, Odin from Asgard!"
   }
   ```
   {: screen}
@@ -230,7 +231,7 @@ copyright:
   {: pre}
   ```
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
-     (params: cron trigger_payload)
+(params: cron trigger_payload)
   ```
   {: screen}
 
@@ -253,7 +254,7 @@ copyright:
 
   ```
   function main(params) {
-      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -426,7 +427,7 @@ copyright:
   {: pre}
   ```
   {
-      "city": "Austin",
+"city": "Austin",
       "country": "USA"
   }
   ```
@@ -440,7 +441,7 @@ copyright:
   {: pre}
   ```
   {
-      "city": "Dallas",
+"city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
@@ -491,5 +492,5 @@ copyright:
   ```
   {: screen}
 
-  앞의 예에서 `myNamespace` 네임스페이스를 사용하여 작업하며 이 네임스페이스가 완전한 이름에 표시됩니다.
+  이전 예에서, 사용자는 `myNamespace` 네임스페이스 관련 작업 중이며 이 네임스페이스는 완전한 이름으로 표시됩니다. 
 

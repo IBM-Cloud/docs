@@ -19,6 +19,7 @@ copyright:
 
 
 *마지막 업데이트 날짜: 2016년 2월 17일*
+{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}}에서는
 Cloud Foundry 명령행 인터페이스인 cf를 사용하여 애플리케이션,

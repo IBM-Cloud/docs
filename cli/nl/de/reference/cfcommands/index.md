@@ -17,6 +17,7 @@ copyright:
 # Cloud Foundry-Befehle (cf-Befehle)
 
 *Letzte Aktualisierung: 29. Januar 2016*
+{: .last-updated}
 
 Sie können Cloud Foundry-Befehle ('cf'-Befehle) zur Verwaltung Ihrer Apps verwenden.
 {:shortdesc}
@@ -35,7 +36,7 @@ cf api BluemixServerURL
 <dl>
 <dt>BluemixServerURL</dt>
 <dd>Die URL des Bluemix-API-Endpunkts, die Sie für das Herstellen einer Verbindung zu {{site.data.keyword.Bluemix_notm}} angeben müssen. In der Regel handelt es sich bei dieser URL um: URLhttps://api.{DomainName}. 
-Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben. </dd>
+Wenn Sie die URL des API-Endpunkts anzeigen möchten, den Sie zurzeit verwenden, müssen Sie diesen Parameter für den Befehl 'cf api' nicht angeben.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Inaktiviert den Prozess der SSL-Validierung. Die Verwendung dieses Parameters kann zu Sicherheitsproblemen führen.</dd>
 <dt>*--unset*</dt>
@@ -312,8 +313,8 @@ Zeigt die Version der Befehlszeilenschnittstelle 'cf' an.
 cf -v
 ```
 
-# Zugehörige Links
+# rellinks
 {: #rellinks}
-## Allgemein 
+## general 
 {: #general}
 * [Referenzkarte - 'cf'-Befehle](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

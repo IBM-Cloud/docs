@@ -96,7 +96,7 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 |{{site.data.keyword.retrieveandrankshort}}	|Sí 		|Sí 		|Sí|
 |{{site.data.keyword.SecureGateway}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.servicediscoveryshort}}		|Sí		|Sí		|No|
-|{{site.data.keyword.serviceproxyshort}}		|Sí		|No		|No|
+|{{site.data.keyword.serviceproxyshort}}		|Sí		|Sí		|No|
 |{{site.data.keyword.sescashort}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.ssofull}}			|Sí		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sí 		|Sí	 	|Sí|
@@ -116,7 +116,7 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 *Tabla 2. Disponibilidad del servicio*
 
 ## Disponibilidad continuada para servicios
-{{site.data.keyword.Bluemix_notm}} ha identificado un conjunto de servicios como Nivel 1. IBM no retirará ningún servicio de Nivel 1 sin que haya disponible una función equivalente o sin ofrecer un aviso de la retirada con al menos una anticipación de cinco años.  
+{{site.data.keyword.Bluemix_notm}} ha identificado un conjunto de servicios como Nivel 1. IBM no retirará ningún servicio de Nivel 1 sin que haya disponible una función equivalente o sin ofrecer un aviso de la retirada con al menos una anticipación de cinco años. 
 
 Los siguientes servicios se clasifican como Nivel 1:
   * {{site.data.keyword.apiconnect_short}}

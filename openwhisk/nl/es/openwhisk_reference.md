@@ -19,6 +19,7 @@ copyright:
 # Detalles del sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
 *Última actualización: 14 de abril de 2016*
+{: .last-updated}
 
 En las secciones siguientes se proporcionan más detalles sobre el sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -97,7 +98,7 @@ o la API de REST, la segunda invocación podría ejecutarse antes que la primera
 se podrían observar en cualquier orden.
 
 Además, no existe ninguna garantía de que las acciones se ejecuten de forma atómica. Dos acciones se pueden ejecutar de forma simultánea
-y tener efectos secundarios que se entrelacen. Los efectos secundarios de simultaneidad dependerán de la implementación.
+y tener efectos secundarios que se entrelacen.  OpenWhisk no asegura ningún modelo de coherencia simultáneo concreto en cuanto a efectos secundarios. Los efectos secundarios de simultaneidad dependerán de la implementación.
 
 ### Semánticas Una como máximo
 {: #openwhisk_atmostonce}
@@ -280,7 +281,7 @@ La función `whisk.getAuthKey()` devuelve la clave de autorización bajo la que 
 no necesita invocar esta función directamente, ya que se utiliza implícitamente por parte de las funciones
 `whisk.invoke()` y `whisk.trigger()`.
 
-### Entorno de tiempo de ejecución
+### Entorno de ejecución
 {: #openwhisk_ref_runtime_environment}
 
 Las acciones JavaScript se ejecutan en un entorno Node.js versión 0.12.9 con los paquetes siguientes disponibles para que los use la acción:
@@ -289,6 +290,7 @@ Las acciones JavaScript se ejecutan en un entorno Node.js versión 0.12.9 con lo
 - async
 - body-parser
 - btoa
+- cheerio
 - cloudant
 - commander
 - consul
@@ -297,6 +299,7 @@ Las acciones JavaScript se ejecutan en un entorno Node.js versión 0.12.9 con lo
 - errorhandler
 - express
 - express-session
+- gm
 - jade
 - log4js
 - fusionar/fusión
@@ -311,11 +314,13 @@ Las acciones JavaScript se ejecutan en un entorno Node.js versión 0.12.9 con lo
 - semver
 - serve-favicon
 - socket.io
+- socket.io-client
 - superagent
 - swagger-tools
 - tmp
 - watson-developer-cloud
 - when
+- ws
 - xml2js
 - xmlhttprequest
 - yauzl
@@ -337,6 +342,61 @@ de acompañamiento pueden estar en el directorio `dockerSkeleton/client`.
 
 También puede incluir los pasos de compilación o dependencias, modificando `dockerSkeleton/Dockerfile`. Por ejemplo, puede
 instalar Python si su acción es un script Python.
+
+
+## API de REST
+
+Todas las capacidades del sistema están disponibles a través de la API de REST. Hay una colección y puntos finales de entidad para acciones, activadores, reglas, paquetes, activaciones y espacios de nombres. 
+
+Los puntos finales de colección son: 
+
+- `https://$BASEURL/api/v1/namespaces`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/actions`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/triggers`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/rules`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/packages`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/activations`
+
+Puede realizar una solicitud GET en los puntos finales de colección para obtener una lista de todas las entidades de la colección. 
+
+Hay puntos finales de entidad para cada tipo de entidad: 
+
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/actions/[{nombre_paquete}/]{nombre_acción}`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/triggers/{nombre_activador}`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/rules/{nombre_regla}`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/packages/{nombre_paquete}`
+- `https://$BASEURL/api/v1/namespaces/{espacio_nombres}/activations/{nombre_activación}`
+
+Los puntos finales de espacio de nombres y activación solo admiten solicitudes GET. Los puntos finales de acciones, activadores, reglas y paquetes admiten solicitudes GET, PUT y DELTE. Los puntos finales de acciones, activadores y reglas también admiten solicitudes POST, que se utilizan para invocar acciones y activadores, y para habilitar o inhabilitar reglas. Consulte la [Consulte el apartado](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/resources/whiskswagger.json) para obtener información detallada. 
+
+Todas las API están protegidas con autenticación HTTP básica. Las credenciales de autenticación básica se encuentran en la propiedad `AUTH` del archivo `~/.wskprops`, delimitadas por un punto y coma. También puede recuperar estas credenciales en los [pasos de configuración de la CLI](../README.md#setup-cli).
+
+A continuación se ofrece un ejemplo en el que se utiliza el mandato cURL para obtener la lista de todos los paquetes del espacio de nombres `whisk.system`: 
+
+```
+curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
+```
+{: pre}
+```
+[
+  {
+    "name": "slack",
+    "binding": false,
+    "publish": true,
+    "annotations": [
+      {
+        "key": "description",
+        "value": "Package which contains actions to interact with the Slack messaging service"
+      }
+    ],
+    "version": "0.0.9",
+    "namespace": "whisk.system"
+  },
+  ...
+]
+```
+{: screen}
 
 
 ## Límites del sistema

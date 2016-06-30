@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # 디버깅
 {: #debugging}
 
-*마지막 업데이트 날짜: 2016년 3월 3일*
+*마지막 업데이트 날짜: 2016년 5월 25일*
+{: .last-updated}
 
 {{site.data.keyword.Bluemix}}에서 문제점이
 발견된 경우 로그 파일을 확인하여 문제점을 조사하고 오류를 디버그할 수 있습니다.
@@ -30,11 +32,11 @@ copyright:
 ## 스테이징 오류 디버깅
 {: #debugging-staging-errors}
 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을
-스테이징할 때 문제점이 발견될 수 있습니다. 앱을 스테이징할 수 없는 경우, 로그를 검토하여 오류 원인을 확인하고 문제점을 복구할 수 있습니다.
+스테이징할 때 문제점이 발견될 수 있습니다. 앱이 스테이징에 실패하는 경우, 스테이징(STG) 로그를 검색하고 검토하여 앱 배치 중에 발생한 내용을 판별하고 문제점에서 복구할 수 있습니다. Bluemix 앱에 대한 로그를 보는 방법에 대한 자세한 정보는 [로그 보기](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}를 참조하십시오.   
 
-앱이 {{site.data.keyword.Bluemix_notm}}에서 실패하는 원인을 파악하려면 앱이 {{site.data.keyword.Bluemix_notm}}에
-배치되고 실행되는 방식을 알고 있어야 합니다. 자세한 정보는 [애플리케이션
+{{site.data.keyword.Bluemix_notm}}에서 앱이 실패하는 원인을 파악하려면 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되고 그 위에서 실행되는 방법을 알고 있어야 합니다. 자세한 정보는 [애플리케이션
 배치](../manageapps/depapps.html#appdeploy){: new_window}를 참조하십시오. 
+
 
 다음 프로시저는 `cf logs` 명령을 사용하여 스테이징 오류를
 디버그하는 방법을 보여줍니다. 다음 단계를 수행하기 전에 cf 명령행 인터페이스를 설치했는지
@@ -55,13 +57,14 @@ copyright:
 	```
   4. 로그에 첫 번째로 표시되는 오류를 확인하십시오. 
   
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 플러그인을 사용하여 애플리케이션을 배치하는 경우 Eclipse 도구의 **콘솔** 탭에서 cf logs 출력과 유사한 로그를 확인할 수 있습니다. 별도의 Eclipse 창을 열어 애플리케이션을 배치할 때 `로그`를 추적할 수도 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 플러그인의 IBM Eclipse 도구를 사용하여 애플리케이션을 배치하는 경우, Eclipse 도구의 **콘솔** 탭에서 cf 로그 출력과 유사한 로그를 볼 수 있습니다. 별도의 Eclipse 창을 열어 애플리케이션을 배치할 때 `로그`를 추적할 수도 있습니다. 
 
 `cf logs` 명령 이외에도, {{site.data.keyword.Bluemix_notm}}에서 Monitoring and Analytics 서비스를 사용하여 로그 세부사항을 수집할 수도 있습니다. 또한 Monitoring and Analytics 서비스는 애플리케이션의 성능, 상태 및 가용성을 모니터링하며, Node.js 및 Liberty 런타임 애플리케이션에 대한 로그 분석을 제공합니다.   
 
 ### Node.js 애플리케이션에 대한 스테이징 오류 디버깅
 
 다음 예에서는 `cf logs appname --recent`를 입력하면 표시되는 로그를 보여줍니다. 이 예에서는 Node.js 애플리케이션에서 스테이징 오류가 발생했다고 간주합니다.
+
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -80,6 +83,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 플러그인을 사용�
 
 
 로그의 첫 번째 오류는 스테이징 실패 이유를 보여줍니다. 이 예에서 첫 번째 오류는 스테이징 단계 중 DEA 컴포넌트에서 제공하는 출력입니다.
+
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
@@ -160,6 +164,18 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
 기록하도록 할 수 있습니다. logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Ruby 애플리케이션의 경우, 로거가 로그 디렉토리의 파일에
 기록하도록 할 수 있습니다. 
+ 
+ 
+### 코드 변경 디버깅
+{: #debug_code_changes}
+
+이미 배치되어 작동 중인 앱의 코드를 변경하지만 코드 변경이 {{site.data.keyword.Bluemix_notm}}에 반영되지 않은 경우, 로그를 사용하여 디버깅할 수 있습니다. 앱의 실행 여부와는 무관하게, 앱 배치 또는 런타임 중에 생성된 로그를 확인하여 새 코드가 작동되지 않는 원인을 디버깅할 수 있습니다. 
+
+새 코드가 배치되는 방법에 따라 다음 방법 중 하나를 선택하여 코드 변경을 디버깅하십시오.  
+
+  * cf 명령행에서 배치된 새 코드의 경우, *cf push* 명령의 출력을 확인하십시오. 또한 *cf logs* 명령을 사용하여 문제점 해결을 위한 추가적인 단서를 찾을 수 있습니다. *cf logs* 명령 사용법에 대한 자세한 정보는 [명령 인터페이스에서 로그 보기](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}를 참조하십시오.  
+
+  * {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스, DevOps Delivery Pipeline 또는 Travis-CI 등의 GUI에서 배치된 새 코드의 경우, 인터페이스에서 로그를 확인할 수 있습니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 새 코드를 배치하는 경우에는 대시보드로 이동하고 앱을 찾은 후에 로그에서 단서를 볼 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 로그를 보는 방법에 대한 자세한 정보는 [Bluemix 대시보드에서 로그 보기](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}를 참조하십시오.   
  
 
 # 관련 링크

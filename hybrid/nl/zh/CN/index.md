@@ -16,6 +16,9 @@ copyright:
 # 混合
 {: #hybrid}
 
+*上次更新时间：2016 年 6 月 8 日*
+{: .last-updated}
+
 {{site.data.keyword.Bluemix_notm}} 借助公共、专用和本地集成的部署模型，代表了一种体验云的全新方式。{{site.data.keyword.Bluemix_notm}} 具有多种云部署，无论您是计划扩大规模的小企业，还是需要额外隔离机制的大企业，都能满足您的需求。您可以在云中进行无边界开发，在这里您可以将专用服务连接到 IBM 提供的公共 {{site.data.keyword.Bluemix_notm}} 服务。此外，您和您的团队还可以将现有数据、系统和过程与 {{site.data.keyword.Bluemix_notm}} 中可用的 SaaS 工具一起使用。
 {:shortdesc}
 
@@ -27,13 +30,12 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} Dedicated 是 IBM SoftLayer 数据中心内的一种私有云，具有以物理方式隔离的硬件。您的 {{site.data.keyword.Bluemix_notm}} 环境采用单租户方式，并基于裸机和虚拟服务器的组合进行供应，创建此环境是为了满足您的需求。此外，通过联合目录，您可以为应用程序提供专用计算资源和服务组合能力，以及通过目录联合所带来的能力。了解有关 [{{site.data.keyword.Bluemix_notm}} Dedicated](../dedicated/index.html) 的更多信息。
 
-**声明:** SoftLayer 相关的信息不适用于在中国的 {{site.data.keyword.Bluemix}} Dedicated 环境和客户。 
+**注：**对于 {{site.data.keyword.Bluemix}} Dedicated 而言，与 SoftLayer 有关的所有信息在中国都不适用。
+ 
 
 ## 本地
 
 通过 {{site.data.keyword.Bluemix_notm}} Local，您可以充分发挥数据中心内私有云的真实价值。{{site.data.keyword.Bluemix_notm}} Local 作为服务交付，能与您的 IT 团队持续协作。此外，它还支持您在先进的云平台中利用现有大型机、面向服务的体系结构、过程和数据。了解有关 [{{site.data.keyword.Bluemix_notm}} Local](../local/index.html) 的更多信息。
-
-
 
 # 相关链接
 ## 常规

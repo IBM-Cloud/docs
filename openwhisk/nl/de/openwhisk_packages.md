@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}}-Pakete verwenden und erstellen
 {: #openwhisk_packages}
 *Letzte Aktualisierung: 28. März 2016*
+{: .last-updated}
 
 In {{site.data.keyword.openwhisk}} können Sie Pakete verwenden, um eine Gruppe zusammengehöriger Aktionen zu bündeln und diese zur gemeinsamen Nutzung mit anderen Benutzern bereitzustellen.
 

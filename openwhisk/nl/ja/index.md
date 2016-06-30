@@ -17,7 +17,8 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 入門
-*最終更新日: 2016 年 2 月 17 日*
+*最終更新日: 2016 年 6 月 06 日*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} は、イベント・ドリブンの分散計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
 {: shortdesc}

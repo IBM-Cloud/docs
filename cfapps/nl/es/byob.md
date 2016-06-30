@@ -18,6 +18,7 @@ copyright:
 
 # Utilización de compilación de la comunidad
 *Última actualización: 15 de marzo de 2016*
+{: .last-updated}
 
 Si no encuentra ningún iniciador en el Catálogo de {{site.data.keyword.Bluemix}} que proporcione
 el tiempo de ejecución que desea, puede incorporar un paquete de compilación externo
@@ -40,7 +41,7 @@ puede utilizar paquetes de compilación incorporados que ofrece la comunidad de 
 cf buildpacks
 Getting buildpacks...
 
-paquete de compilación      posición   habilitado   bloqueado   nombre de archivo
+buildpack      position   enabled   locked   filename
 ...
 java_buildpack     7      true      false    buildpack_java_v2.0.2.zip
 ruby_buildpack     8      true      false    buildpack_ruby_v46-245-g2fc4ad8.zip

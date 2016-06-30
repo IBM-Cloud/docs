@@ -15,6 +15,7 @@ copyright:
 {: #deployingapps}
 
 *마지막 업데이트 날짜: 2016년 5월 9일*
+{: .last-updated}
 
 명령행 인터페이스 및 IDE(Integrated Development Environment) 등의 다양한 방법을
 사용하여 {{site.data.keyword.Bluemix}}에
@@ -121,7 +122,7 @@ Node.js 애플리케이션에 있어야 합니다. `app.js` 파일은 애플리�
 
   ```
   {
-        "name": "MyUniqueNodejs01",
+"name": "MyUniqueNodejs01",
         "version": "0.0.1",
         "description": "A sample package.json file",
         "dependencies": {
@@ -255,7 +256,7 @@ cf push -f appManifest.yml
   ```
   {
    "VCAP_SERVICES": {
-    "AppScan Dynamic Analyzer": [
+"AppScan Dynamic Analyzer": [
      {
       "credentials": {
        "bindingid": "0ab3162a-867e-4137-a2e7-39463a89472e",
@@ -326,23 +327,23 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 포함됩니다. 예: 
   <pre class="pre codeblock"><code>
   {
-    "limits": {
+"limits": {
         "mem": 512,
         "disk": 1024,
         "fds": 16384
-    },
+        },
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
-    ],
+"testapp.AppDomainNameng.mybluemix.net"
+        ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
-    ],
+"testapp.AppDomainNameng.mybluemix.net"
+        ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
     "instance_id": "09f50e22848d4ec0b943e9e487c23569",
@@ -359,7 +360,7 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
   <dd>배치된 애플리케이션에 바인딩된 서비스의 정보가 포함된 JSON 문자열입니다. 예:
   <pre class="pre codeblock"><code>
   {
-    "mysql-5.5": [
+"mysql-5.5": [
         {
             "name": "mysql-ix",
             "label": "mysql-5.5",
@@ -368,10 +369,10 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
                 "relational",
                 "data_management",
                 "ibm_experimental"
-            ],
+                        ],
             "plan": "300",
-            "credentials": {
-                "name": "d296abcc06c9e418b94abcaafdf547620",
+"credentials": {
+       "name": "d296abcc06c9e418b94abcaafdf547620",
                 "hostname": "23.246.200.38",
                 "host": "23.246.200.38",
                 "port": 3307,
@@ -380,7 +381,7 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
                 "password": "peRiYCG4ZYqu3",
                 "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
-        }
+                }
     ]
 }
 </code></pre></dd>
@@ -428,8 +429,7 @@ URI, 메모리 한계, 애플리케이션이 현재 상태가 된 시간소인 �
 
 ```
 if (process.env.VCAP_SERVICES) {
-
-    var env = JSON.parse (process.env.VCAP_SERVICES);
+var env = JSON.parse (process.env.VCAP_SERVICES);
     myvar = env.foo[bar].foo;
 }
 ```

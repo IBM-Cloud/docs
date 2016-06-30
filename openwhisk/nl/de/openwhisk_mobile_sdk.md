@@ -14,6 +14,7 @@ copyright:
 # {{site.data.keyword.openwhisk_short}}-Mobil-SDK verwenden
 {: #openwhisk_mobile_sdk}
 *Letzte Aktualisierung: 28. März 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} stellt ein Mobil-SDK für iOS- und watchOS 2-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die {{site.data.keyword.openwhisk}}-REST-API direkt verwenden.
 {: shortdesc}
@@ -26,7 +27,7 @@ Sie können das Mobil-SDK mithilfe von CocoaPods, Carthage oder aus dem Quellenv
 
 ### Mithilfe von CocoaPods installieren 
 
-Das {{site.data.keyword.openwhisk_short}}-SDK für den mobilen Einsatz ist nur über CocoaPods für die öffentliche Verteilung verfügbar. Wenn Cocoapods installiert ist, fügen Sie die folgenden Zeilen in eine Datei mit dem Namen 'Podfile' im Projektverzeichnis der Starter-App ein. 
+Das {{site.data.keyword.openwhisk_short}}-SDK für den mobilen Einsatz ist nur über CocoaPods für die öffentliche Verteilung verfügbar. Wenn CocoaPods installiert ist, fügen Sie die folgenden Zeilen in eine Datei mit dem Namen 'Podfile' im Projektverzeichnis der Starter-App ein. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -45,21 +46,24 @@ end
 ```
 {: codeblock}
 
-Geben Sie über die Befehlszeile den Befehl "pod install" ein. Dadurch wird das SDK für eine iOS-App mit einer watchOS 2-Erweiterung installiert.  Verwenden Sie die Arbeitsbereichsdatei, die Cocoapods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
+Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dadurch wird das SDK für eine iOS-App mit einer watchOS 2-Erweiterung installiert. Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
 
 ### Mithilfe von Carthage installieren
 
-Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgenden Zeilen in die Cartfile ein:
+Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgende Zeile in die Cartfile ein:
+
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
 ```
 {: codeblock}
 
-Geben Sie über die Befehlszeile den Befehl 'carthage update --platform ios' ein. Carthage lädt das SDK herunter und führt einen Build durch, erstellt ein Verzeichnis mit dem Namen 'Carthage' im Projektverzeichnis Ihrer App und fügt eine Datei OpenWhisk.framework in Carthage/build/iOS ein. Fügen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode-Projekt hinzu.
+Geben Sie über die Befehlszeile den Befehl `carthage update --platform ios` ein. Carthage lädt das SDK herunter und führt einen Build durch, erstellt ein Verzeichnis mit dem Namen 'Carthage' im Projektverzeichnis Ihrer App und fügt eine Datei OpenWhisk.framework in Carthage/build/iOS ein.
+
+Dann müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode-Projekt hinzufügen.
 
 ### Aus Quellcode installieren
 
-Der Quellcode wird unter https://github.com/openwhisk//openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie in Xcode ein Projekt unter Verwendung der Datei OpenWhisk.xcodeproj.  Das Projekt enthält die beiden Schemas "OpenWhisk" und "OpenWhiskWatch", die für iOS bzw. WathOS2 vorgesehen sind.  Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu.
+Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie in Xcode ein Projekt unter Verwendung der Datei OpenWhisk.xcodeproj. Das Projekt enthält die beiden Schemas "OpenWhisk" und "OpenWhiskWatch", die für iOS bzw. watchOS 2 vorgesehen sind. Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu.
 
 ## Starter-App-Beispiel installieren
 {: #openwhisk_install_sdkstart}

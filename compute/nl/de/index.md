@@ -15,6 +15,7 @@ copyright:
 
 # Rechenknoten
 *Letzte Aktualisierung: 19. Februar 2016*
+{: .last-updated}
 
 Der Rechenknoten umfasst die Infrastruktur und Ressourcen, die Sie auswählen können, um {{site.data.keyword.Bluemix}}-Apps zu erstellen. Zu Rechenressourcen gehören {{site.data.keyword.openwhisk_short}}, Cloud Foundry-Apps, {{site.data.keyword.IBM_notm}} Containers und {{site.data.keyword.IBM_notm}} {{site.data.keyword.virtualmachinesshort}}.
 {:shortdesc}

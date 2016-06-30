@@ -16,9 +16,11 @@ copyright:
 {:codeblock: .codeblock}
 
 
-#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成{: #deploy-button} 
+#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成
+{: #deploy-button} 
 
-*最終更新日: 2016 年 3 月 2 日* 
+*最終更新日: 2016 年 3 月 2 日*
+{: .last-updated} 
 
 「{{site.data.keyword.Bluemix}} にデプロイ」ボタンを使用すると Git から入手したパブリック・アプリを効率的に共有することができ、それによって、他のユーザーがそのコードを試し、IBM {{site.data.keyword.Bluemix_notm}} にデプロイできるようになります。このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。誰かがこのボタンをクリックすると、オリジナルのアプリには影響しないように、新しい Git リポジトリー内にコードの複製コピーが作成されます。
 {: shortdesc} 
@@ -41,7 +43,8 @@ copyright:
 
 7. アプリがユーザーの {{site.data.keyword.Bluemix_notm}} 組織にデプロイされます。 
 
-##このボタンの例{: #button-examples} 
+##このボタンの例
+{: #button-examples} 
 
 パブリック {{site.data.keyword.jazzhub_short}} リポジトリーのアプリ・ボタンの例を以下に示します。
 
@@ -105,7 +108,8 @@ copyright:
 </li>
 </ol>
 
-##このボタンのスニペットの考慮事項{: #button-snippet}
+##このボタンのスニペットの考慮事項
+{: #button-snippet}
 
 「Bluemix にデプロイ」ボタンのスニペットをカスタマイズする際は、以下の考慮事項を検討してください。 
 
@@ -119,7 +123,8 @@ copyright:
 	
 	* 翻訳版のボタンを使用したい場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) からダウンロードすることができます。 
 	
-##このボタンのリポジトリーの考慮事項{: #button-repo} 
+##このボタンのリポジトリーの考慮事項
+{: #button-repo} 
 
 「Bluemix にデプロイ」ボタンで使用するプロジェクト・リポジトリーについての以下の考慮事項を検討してください。 
 
@@ -131,7 +136,9 @@ copyright:
     <li>固有のアプリ名</li>  
     <li>宣言されたサービス: アプリのデプロイ前にセットアップされていることが求められる必須サービスまたはオプション・サービス (データ・キャッシュ・サービスなど) を作成または検索するマニフェスト拡張。適格な {{site.data.keyword.Bluemix_notm}} サービス、ラベル、およびプランのリストは、<a href="https://github.com/cloudfoundry/cli/releases">CF コマンド・ライン・インターフェース</a>を使用して <code>cf marketplace</code> コマンドを実行するか、<a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} カタログ</a>を参照すれば、見つけることができます。
     
-    <strong>注:</strong> 宣言されたサービスは、標準 Cloud Foundry マニフェスト・フォーマットに対する IBM 拡張です。この拡張は、フィーチャーの発展と改善に伴い、今後のリリースで改訂される可能性があります。
+    <strong>注:</strong> 宣言されたサービスは、標準 Cloud Foundry マニフェスト・フォーマットに対する IBM 拡張です。
+この拡張は、フィーチャーの発展と改善に伴い、今後のリリースで改訂
+される可能性があります。
 	
 	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank"><code>manifest.yml</code> ファイルを作成する方法を学習してください。</a>  
 <pre class="codeblock">
@@ -154,11 +161,10 @@ copyright:
     #Example manifest.yml
 
   declared-services: 
-      sample-java-cloudant-cloudantNoSQLDB: 
+sample-java-cloudant-cloudantNoSQLDB: 
         label: cloudantNoSQLDB 
         plan: Shared 
-  applications:
-  - services
+  applications:  - services
     - sample-java-cloudant-cloudantNoSQLDB
     name: My app
     host: myapp
@@ -167,8 +173,7 @@ copyright:
    </ul>
 	<li> アプリがデプロイされる前にリポジトリーが作成されている必要がある場合、デプロイメントの前にリポジトリー内でコードの自動ビルドがトリガーされます。自動ビルドは、リポジトリーのルート・ディレクトリー内でビルド・スクリプト・ファイルが検出された場合に起こります。
 	
-	サポートされるビルダー: 
-	    <ul>
+サポートされるビルダー:<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> (<code>./output/</code> フォルダーへの出力をビルドする)</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> (<code>. </code> フォルダーへの出力をビルドする)</li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> (<code>. </code> フォルダーへの出力をビルドする)</li>

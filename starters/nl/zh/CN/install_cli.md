@@ -29,14 +29,15 @@ copyright:
 
 # 使用命令行界面部署应用程序
 *上次更新时间：2016 年 2 月 24 日*
+{: .last-updated}
 
 可以使用命令行界面来部署和修改应用程序和服务实例。
 {:shortdesc}
 
-开始之前，请安装 {{site.data.keyword.Bluemix}} 和 Cloud Foundry 命令行界面。
+开始之前，请安装 Cloud Foundry 和 {{site.data.keyword.Bluemix}} 命令行界面。
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_cf_commandline.svg" alt="下载 Cloud Foundry 命令行界面" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_cf_commandline.svg" alt="下载 Cloud Foundry 命令行界面" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 {{site.data.keyword.Bluemix}} 命令行界面" /> </a>
 </p>
 
 **限制：**Cygwin 不支持命令行工具。请在非 Cygwin 命令行窗口中使用命令行工具。
@@ -46,7 +47,8 @@ copyright:
 
   1. {: download} 下载入门模板代码。 
       
-    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a>  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a>
+  
   2. 将软件包解压缩到新目录，以设置开发环境。
   3. 切换到新目录。
   

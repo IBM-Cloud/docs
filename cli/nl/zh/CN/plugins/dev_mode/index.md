@@ -14,10 +14,13 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 开发方式 CLI
+# （不推荐）开发方式 CLI
 {: #devmodecli}
 
-*上次更新时间：2016 年 4 月 11 日*
+*上次更新时间：2016 年 5 月 12 日*
+{: .last-updated}
+
+**不推荐使用此 CLI：**请使用 IBM Eclipse Tools for Bluemix 或 DevOps Web IDE，而不使用开发方式 (dev_mode) CLI。您可以继续使用 dev_mode CLI 直到 2016 年 6 月 30 日。
 
 通过 Bluemix 开发方式命令行界面 (dev_mode CLI)，您可以更新正在云中运行的应用程序。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
 {: shortdesc}
@@ -35,10 +38,10 @@ copyright:
 使用以下其中一种方法来安装 dev_mode 命令行工具：
 - 本地安装。
   1. 从 [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}) 下载适用于您的平台的 dev_mode 插件。
-  2. 通过使用 cf install-plugin 命令来安装 dev_mode 插件：
+  2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如： 
   
         ```
-        cf install-plugin dev_mode-linux_amd64
+        cf install-plugin dev_mode-linux64
         ```
 
 - 从 Bluemix CLI 存储库进行安装。
@@ -125,6 +128,7 @@ cf mode <appName> <dev|normal>
 {: #status}
 
 显示应用程序方式和运行时状态。
+
 ```
 cf status <appName>
 ```
@@ -141,7 +145,9 @@ cf update-file <remotePath> <localPath> [command_options]
 ```
 
 
-<strong>命令选项</strong>：<dl>
+<strong>命令选项</strong>：
+
+   <dl>
    <dt>expand</dt>
    <dd>指示上传的文件是否必须从 zip 文件中截取。</dd>
    <dt>restart</dt>
@@ -160,7 +166,8 @@ cf delete-file <remotePath> [command_options]
 ```
 
 
-<strong>命令选项</strong>：<dl>
+<strong>命令选项</strong>：
+ <dl>
    <dt>restart</dt>
    <dd>文件更新后，重新启动应用程序运行时。</dd>
   </dl>
@@ -202,10 +209,8 @@ cf restart-inplace <appName>
 
 ## 相关链接
 {: #general}
-
-<!-- Include a link to your full product documentation, pricing sheet, IBM Bluemix prerequisites -->
-
-
-* [CLI 和开发工具](../../index.html#cli){:new_window}
+* [开发方式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

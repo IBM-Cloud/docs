@@ -19,6 +19,7 @@ copyright:
 # Supervisión de su actividad de {{site.data.keyword.openwhisk_short}} con el Panel de control de
 {{site.data.keyword.openwhisk_short}}
 *Última actualización: 9 de febrero de 2016*
+{: .last-updated}
 
 El [Panel de control {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) proporciona un resumen gráfico de su actividad. Utilice el panel de control para determinar el rendimiento y estado de sus acciones de
 {{site.data.keyword.openwhisk_short}}. 

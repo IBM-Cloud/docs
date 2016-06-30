@@ -114,7 +114,7 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.servicediscoveryshort}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.serviceproxyshort}}		|Oui		|Non		|Non|
+|{{site.data.keyword.serviceproxyshort}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.sescashort}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
 |{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
@@ -133,12 +133,11 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.xpagesservice_short}}	|Oui		|Oui		|Non|
 *Tableau 2. Disponibilité des services*
 
-## Disponibilité ininterrompue des services 
+## Disponibilité ininterrompue des services
 {{site.data.keyword.Bluemix_notm}} a identifié un ensemble de services de niveau 1. Elle ne retirera aucun service de niveau 1 sans proposer
-de fonction équivalente ou vous aviser de son retrait au moins cinq ans à l'avance.
- 
+de fonction équivalente ou vous aviser de son retrait au moins cinq ans à l'avance. 
 
-Les services suivants ont été classés dans le niveau 1 : 
+Les services suivants ont été classés dans le niveau 1 :
   * {{site.data.keyword.apiconnect_short}}
   * {{site.data.keyword.cloudant}}
   * {{site.data.keyword.dashdbshort}}

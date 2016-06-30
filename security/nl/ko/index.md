@@ -16,6 +16,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
 *마지막 업데이트 날짜: 2016년 5월 9일*
+{: .last-updated}
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는

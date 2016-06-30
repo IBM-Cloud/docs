@@ -17,6 +17,7 @@ copyright:
 # Cloud Foundry (cf) 命令
 
 *上次更新时间：2016 年 1 月 29 日*
+{: .last-updated}
 
 您可以使用 Cloud Foundry (cf) 命令来管理应用程序。
 {:shortdesc}
@@ -54,8 +55,7 @@ cf api BluemixServerURL
 cf bind-service appname service_instance
 ```
 
-例如，如果您在当前组织和空间中有名为 `my_dataworks` 的服务实例，那么可以使用 `cf bind-service my_app
-my_dataworks` 将此服务实例绑定到应用程序。
+例如，如果您在当前组织和空间中有名为 `my_dataworks` 的服务实例，那么可以使用 `cf bind-service my_app my_dataworks` 将此服务实例绑定到应用程序。
 
 <dl>
 <dt>appname</dt>
@@ -70,7 +70,7 @@ my_dataworks` 将此服务实例绑定到应用程序。
 ```
 cf create-service service_name service_plan service_instance
 ```
-例如，您可以使用 `cf create-service DataWorks free my_dataworks` 来创建使用免费计划的 {{site.data.keyword.dataworks_short}} 服务的实例。
+例如，您可以使用 `cf create-service DataWorks free my_dataworks` 来创建使用免费套餐的 {{site.data.keyword.dataworks_short}} 服务的实例。
 
 <dl>
 <dt>service_name</dt>
@@ -122,7 +122,8 @@ cf delete-space space_name
 <dd>空间的名称。</dd>
 <dt>*-f*</dt>
 <dd>在没有任何确认的情况下，强制删除空间。此参数是可选参数。</dd>
-*注：*删除空间的操作不可撤销。</dl>
+*注：*删除空间的操作不可撤销。
+</dl>
 
 ## cf events
 
@@ -156,8 +157,7 @@ cf login
 ```
 发出 cf login 命令时，可以使用以下一个或多个参数：
 <dl>
-<dt>*-a* https://api.{DomainName}
-	 </dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} API 端点的 URL。此参数是可选参数。</dd>
 <dt>*-u* user_name</dt>
 <dd>您的用户名。此参数是可选参数。</dd>
@@ -309,8 +309,8 @@ cf stop appname
 cf -v
 ```
 
-# 相关链接
+# rellinks
 {: #rellinks}
-## 常规 
+## general 
 {: #general}
 * [快速参考卡 - cf 命令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

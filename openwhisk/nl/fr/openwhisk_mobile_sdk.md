@@ -14,6 +14,7 @@ copyright:
 # Utilisation du logiciel SDK pour applications mobiles {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
 *Dernière mise à jour : 28 mars 2016*
+{: .last-updated}
 
 {{site.data.keyword.openwhisk}} met à disposition un logiciel SDK pour périphériques iOS et watchOS 2 qui permet aux applications mobiles
 d'exécuter des déclencheurs distants et d'appeler des actions distantes facilement. Actuellement, il n'existe pas de version pour Android, mais les
@@ -29,8 +30,8 @@ Vous pouvez installer le logiciel SDK pour applications mobiles à l'aide de Coc
 ### Installation à l'aide de CocoaPods 
 
 Le logiciel SDK {{site.data.keyword.openwhisk_short}} pour les applications mobiles est disponible pour sa distribution publique via
-CocoaPods. Si CocoaPods est installé, entrez les lignes suivantes dans un fichier appelé 'Podfile' dans le répertoire de projet de l'application de
-démarrage : 
+CocoaPods. En supposant qu'CocoaPods est installé, placez les lignes suivantes dans un fichier nommé 'Podfile'
+sous le répertoire de projets d'applications de démarrage. 
 
 ```
 source 'https://github.com/openwhisk/openwhisk-podspecs.git'
@@ -49,25 +50,27 @@ end
 ```
 {: codeblock}
 
-Sur la ligne de commande, entrez "pod install" afin d'installer le logiciel SDK pour une application iOS avec une extension watchOS 2.  Utilisez le
-fichier d'espace de travail que CocoaPods crée pour votre application afin d'ouvrir le projet dans Xcode.
+Depuis la ligne de commande, entrez `pod install`. afin d'installer le logiciel SDK pour une application iOS avec une extension watchOS 2.  Utilisez
+le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode.
 
 ### Installation à l'aide de Carthage
 
-Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Entrez les lignes suivantes dans le fichier Cartfile :
+Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Insérez la ligne suivante dans le fichier
+Cartfile :
 ```
-github "openwhisk//openwhisk-client-swift.git" ~> 0.1.0 # Ou version la plus récente
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # (Ou version ultérieure)
 ```
 {: codeblock}
 
-Sur la ligne de commande, entrez 'carthage update --platform ios'. Carthage télécharge et génère le logiciel SDK, crée un répertoire appelé Carthage
-dans le répertoire de projet de votre application, et place un fichier OpenWhisk.framework dans Carthage/build/iOS. Ajoutez OpenWhisk.framework aux
-infrastructures imbriquées dans votre projet Xcode.
+Depuis la ligne de commande, entrez `carthage update --platform ios`. Carthage télécharge et génère le logiciel SDK, crée un répertoire appelé Carthage
+dans le répertoire de projet de votre application, et place un fichier OpenWhisk.framework dans Carthage/build/iOS.
+
+Vous devez ensuite ajouter l'élément OpenWhisk.framework aux structures intégrées dans votre projet Xcode. 
 
 ### Installation depuis le code source
 
-Le code source est disponible sur le site https://github.com/openwhisk//openwhisk-client-swift.git. Ouvrez le projet à l'aide du fichier OpenWhisk.xcodeproj
-dans Xcode.  Il contient deux schémas, "OpenWhisk" et "OpenWhiskWatch", ciblés pour iOS et WatchOS2 respectivement.  Générez le projet pour les cibles dont vous
+Le code source est disponible sur le site https://github.com/openwhisk/openwhisk-client-swift.git. Ouvrez le projet à l'aide du fichier OpenWhisk.xcodeproj
+dans Xcode. Le projet contient deux schémas, "OpenWhisk" et "OpenWhiskWatch", ciblant respectivement iOS et watchOS 2. Générez le projet pour les cibles dont vous
 avez besoin et ajoutez les infrastructures résultantes à votre application (généralement, dans ~/Library/Developer/Xcode/DerivedData/nom de votre
 application).
 
@@ -125,17 +128,17 @@ l'action, en fonction des besoins.
 Par exemple :
 
 ```
-// Dans cet exemple, nous appelons une action qui affiche un message dans la console OpenWhisk
+// Dans cet exemple, nous appelons une action imprimant un message dans la console OpenWhisk
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
 do {
     try whisk.invokeAction(name: "helloConsole", package: "monpackage", namespace: "monEspaceNom", parameters: params, hasResult: false, callback: {(reply, error) -> Void in
         if let error = error {
-            //faire quelque chose
-            print("Error invoking action \(error.localizedDescription)")
+            //Opération
+            print("Erreur lors de l'appel de l'action \(error.localizedDescription)")
         } else {
-            print("Action invoked!")
+            print("Une action a été appelée!")
         }
 
     })
@@ -194,8 +197,6 @@ do {
             var result = reply["result"]
             print("Got result \(result)")
         }
-
-
     })
 } catch {
     print("Error \(error)")
@@ -275,7 +276,7 @@ whiskButton.setupWhiskAction("helloConsole", package: "monpackage", namespace: "
 
 let myParams = ["name":"value"]
 
-// A appeler lorsque vous détectez un événement d'appui, par exemple dans un élément IBAction, pour appeler l'action
+// Appelez cette action lorsque vous détectez un événement d'appui, par ex. une IBAction, pour appeler l'action
 whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
         print("Oh no, error: \(error)")

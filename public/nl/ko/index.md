@@ -15,7 +15,8 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-*마지막 업데이트 날짜: 2016년 2월 22일*
+*마지막 업데이트 날짜: 2016년 5월 19일*
+{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}}는 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다.
@@ -173,7 +174,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}}
 사용자 인터페이스를 사용하고 있는 경우 다른 지역으로 전환하여
-해당 지역의 영역에 대해 작업할 수 있습니다.
+해당 지역의 영역에 대해 작업할 수 있습니다. **계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg)으로 이동하고 **지역** 선택기를 펼치십시오. 그리고 목록에서 다른 지역을 선택할 수 있습니다. 
 
 cf 명령행 인터페이스를 사용하고 있는 경우 cf api 명령을 사용하고 지역의 API 엔드포인트를 지정하여 작업하려는 {{site.data.keyword.Bluemix_notm}} 지역에 연결해야 합니다. 예를 들어,
 {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하려면 다음 명령을 입력하십시오.
@@ -198,7 +199,7 @@ Eclipse 도구를 사용하는 방법에 대한 자세한 정보는 [{{site.data
 |-----------------|-------------------------|-------------------|---------------------|----------------|
 | 미국 남부 지역 | 달라스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| 시드니 지역 | 시드니, 오스트레일리아 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
+| 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
 *표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록*
 

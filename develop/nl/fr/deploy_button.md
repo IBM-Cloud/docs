@@ -18,7 +18,8 @@ copyright:
 
 #Création d'un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Dernière mise à jour : 2 mars 2016* 
+*Dernière mise à jour : 2 mars 2016*
+{: .last-updated} 
 
 Le bouton Déployer dans {{site.data.keyword.Bluemix}} est un moyen efficace de partager votre application publique hébergée par Git de sorte que d'autres personnes puissent tester le code
 et le déployer dans {{site.data.keyword.Bluemix_notm}}. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Un utilisateur qui clique sur le bouton crée une copie clonée du code dans un nouveau référentiel Git pour que votre application d'origine ne soit pas affectée. 

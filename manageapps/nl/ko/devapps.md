@@ -15,6 +15,7 @@ copyright:
 {: #developingapps}
 
 *마지막 업데이트 날짜: 2016년 3월 17일*
+{: .last-updated}
 
 IDE(Integrated Development Environment) 또는 문서 편집기를 사용하여 애플리케이션을 개발하거나 {{site.data.keyword.Bluemix}} DevOps Services를 사용할 수 있습니다.
 {:shortdesc} 

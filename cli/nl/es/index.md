@@ -18,7 +18,8 @@ copyright:
 # Herramientas de CLI y de desarrollo
 {: #cli}
 
-*Última actualización: 30 de marzo de 2016*
+*Última actualización: 27 de mayo de 2016*
+{: .last-updated}
 
 Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas como, por ejemplo, una interfaz de línea de mandatos unificada y plug-ins de CLI. Cada una de estas descargas de CLI están disponibles para dar soporte a su experiencia de {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,10 +28,12 @@ Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas co
 {: #downloads}
 
 Descargue e instale las interfaz de línea de mandatos que dan soporte a su experiencia de
-{{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos cf de Cloud Foundry es un requisito previo para las demás herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
+{{site.data.keyword.Bluemix_notm}}. 
+
+Con la excepción de la [herramienta de CLI de OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} que se utiliza para gestionar servidores virtuales, la herramienta de línea de mandatos cf DeCloud Foundry es un requisito previo para todas las demás herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
 una experiencia ampliada para gestionar su entorno de {{site.data.keyword.Bluemix_notm}} aparte de las aplicaciones de Cloud Foundry.
 
-Las dos herramientas de interfaz de línea de mandatos utiliza ¡n el puerto 433 de forma predeterminada. Si tiene el proxy HTTP entre las herramientas de interfaz de línea de mandatos (CLI) y el entorno de {{site.data.keyword.Bluemix_notm}}, debe configurar la variable de entorno `http-proxy` con el puerto y el URL de proxy HTTP real en el caso de que exista. Consulte [Utilización de la CLI cf con un servidor proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} para obtener más detalles.
+De forma predeterminada, ambas herramientas de CLI utilizan el puerto 443. Si tiene el proxy HTTP entre las herramientas de interfaz de línea de mandatos (CLI) y el entorno de {{site.data.keyword.Bluemix_notm}}, debe configurar la variable de entorno `http-proxy` con el puerto y el URL de proxy HTTP real en el caso de que exista. Consulte [Utilización de la CLI cf con un servidor proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} para obtener más detalles.
 
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
@@ -71,9 +74,9 @@ cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 cf install-plugin plugin_name -r bluemix-cf-staging
 ```
 
-| *Active Deploy* | *Consola de administración* | *Modalidad de desarrollo* |
-|-----------------|-----------------|-----------------|
-| Nombre del plugin: active-deploy <br>  [Ver docs](../services/ActiveDeploy/cli.html#cli) |  Nombre del plugin: bluemix-admin <br> [Ver docs](../cli/plugins/bluemix_admin/index.html) | Nombre del plugin: dev_mode <br> [Ver docs](./plugins/dev_mode/index.html) |
+| *Active Deploy* | *Consola de administración* | 
+|-----------------|-----------------|
+| Nombre del plugin: active-deploy <br>  [Ver docs](../services/ActiveDeploy/cli.html#cli) |  Nombre del plugin: bluemix-admin <br> [Ver docs](../cli/plugins/bluemix_admin/index.html) | 
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|

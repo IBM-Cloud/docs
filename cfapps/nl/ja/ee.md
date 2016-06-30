@@ -18,7 +18,8 @@ copyright:
 # シナリオ: エンドツーエンド開発
 {: #ee}
 
-*最終更新日: 2016 年 4 月 18 日*
+*最終更新日: 2016 年 6 月 15 日*
+{: .last-updated}
 
 アプリを作成、実行、およびデプロイするときに、{{site.data.keyword.Bluemix}} ユーザー・インターフェース、プラットフォーム、および各種ツールを使用できます。このエンドツーエンド開発シナリオに従って作業を開始してください。
 {:shortdesc}
@@ -35,11 +36,12 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} では、アプリは組織およびスペースに関連付けられます。1 つの組織を複数のコラボレーターが所有し、使用します。最初は、ユーザー名を元に名付けられたデフォルトの組織が 1 つ用意され、自身が唯一のコラボレーターになります。この組織内にスペースも 1 つ用意されます。スペースはアプリを実行するための環境です。例えば、開発環境として dev というスペース、テスト環境として test というスペース、実稼働環境として production というスペースを作成できます。さらに、各環境は地域に属します。{{site.data.keyword.Bluemix_notm}} では、少ないネットワーク待ち時間、データ・プライバシー、高い可用性のために、アプリケーションを特定の地域にデプロイできます。詳細については、『地域』を参照してください。
 
-このシナリオでは、Node.js を使用して Web アプリを開発します。開発者は米国にいて、このアプリのユーザーの大部分も米国にいるものとします。ネットワーク待ち時間を少なくできるように、ユーザー・ベースの近くでアプリの作成と実行を行うことに決めます。{{site.data.keyword.Bluemix_notm}} にログインした後、右上のアカウント名をクリックし、**「米国南部」**地域を選択します。次に、以下の手順を実行してアプリを作成します。
+このシナリオでは、Node.js を使用して Web アプリを開発します。開発者は米国にいて、このアプリのユーザーの大部分も米国にいるものとします。ネットワーク待ち時間を少なくできるように、ユーザー・ベースの近くでアプリの作成と実行を行うことに決めます。{{site.data.keyword.Bluemix_notm}} にログインした後に、**「アカウントとサポート」**アイコン ![「アカウントとサポート」アイコン](../admin/images/account_support.svg) をクリックし、次に**「米国南部」**地域を選択します。次に、以下の手順を実行してアプリを作成します。
 
-  1. プラス記号のボタンをクリックします。
-  2. **「計算」**>**「CF アプリケーション」**>**「Node.js 用 SDK」**を選択します。
-  3. アプリ名として固有の名前 (例えば TestNode) を入力し、**「作成」**をクリックします。このアプリ名は {{site.data.keyword.Bluemix_notm}} 環境全体で固有でなければなりません。
+  1. **「計算」**を選択します。
+  2. プラス・アイコンをクリックします。
+  3. **「SDK for Node.js」**を選択します。
+  4. アプリ名として固有の名前 (例えば TestNode) を入力し、**「作成」**をクリックします。このアプリ名は {{site.data.keyword.Bluemix_notm}} 環境全体で固有でなければなりません。
   
 これで、**「コーディングの開始」**の手順を表示できるようになります。この手順に従って、TestNode のスターター・コードをダウンロードし、変更し、デプロイできます。
 
@@ -59,6 +61,7 @@ copyright:
 これで、アプリが {{site.data.keyword.cloudant}} サービスにバインドされました。アプリケーションがサービス・インスタンスと通信するためのすべての必要なデータは VCAP_SERVICES 環境変数に入っています。例えば、{{site.data.keyword.Bluemix_notm}} はいくつかのアプリケーションを同じ仮想マシン上でホストしているため、複数のアプリケーションが同じ HTTP ポート番号を使用して着信要求を受け取ることはできません。競合を避けるため、各アプリケーションに固有のポート番号が与えられます。このポート番号は VCAP_APP_PORT 変数の下にあります。
 
 詳細については、アプリの「概要」ページで**「環境変数」**をクリックして、VCAP_SERVICES の完全なリストを表示してください。
+
 ```
 {
    "cloudantNoSQLDB": [
@@ -101,8 +104,7 @@ copyright:
 	cf -v
 	```
 	
-    **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。
-  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は {{Domain}} です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
+    **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は {{Domain}} です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
   
   ```
   cf api https://api.ng.bluemix.net
@@ -179,7 +181,7 @@ copyright:
   例えば、Node.js アプリはこの情報に次のようにアクセスします。
   ```
   if (process.env.VCAP_SERVICES) {
-        var env = JSON.parse(process.env.VCAP_SERVICES);
+var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['"cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -199,9 +201,8 @@ copyright:
   // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
-    var collection = conn.collection('messages');
-
-    // create message record
+var collection = conn.collection('messages');
+// create message record
     var parsedUrl = require('url').parse(req.url, true);
     var queryObject = parsedUrl.query;
     var name = (queryObject["name"] || 'Bluemix');

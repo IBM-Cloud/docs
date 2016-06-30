@@ -19,6 +19,7 @@ copyright:
 # A propos de {{site.data.keyword.openwhisk}}
 
 *Dernière mise à jour : 22 février 2016*
+{: .last-updated}
 
 Les sections ci-après présentent {{site.data.keyword.openwhisk}} en détail.
 {: shortdesc}

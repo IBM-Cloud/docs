@@ -18,6 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} ダッシュボードを使用した {{site.data.keyword.openwhisk_short}} アクティビティーのモニタリング
 *最終更新日: 2016 年 2 月 9 日*
+{: .last-updated}
 
 
 [{{site.data.keyword.openwhisk}}

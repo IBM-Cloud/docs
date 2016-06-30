@@ -19,6 +19,7 @@ copyright:
 # 使用启用了 {{site.data.keyword.openwhisk_short}} 的服务 
 {: #openwhisk_ecosystem}
 *上次更新时间：2016 年 3 月 28 日*
+{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
 {: shortdesc}
@@ -139,7 +140,7 @@ copyright:
 1. 使用先前创建的包绑定中的 `changes` 订阅源来创建触发器。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDocs true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
   ```
   {: pre}
   ```
@@ -162,11 +163,11 @@ copyright:
 
 现在，可以创建规则并将其关联到操作，以对文档更新做出反应。
 
-生成的事件的内容取决于创建触发器时 `includeDocs` 参数的值。如果设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。例如，假设修改后的文档如下：
+生成的事件的内容取决于创建触发器时 `includeDoc` 参数的值。如果设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。例如，假设修改后的文档如下：
 
   ```
   {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
+"_id": "6ca436c44074c4c2aa6a40c9a188b348",
     "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
     "name": "Heisenberg"
   }
@@ -175,7 +176,7 @@ copyright:
 
 此示例中的代码会使用对应的 `_id`、`_rev` 和 `name` 参数来生成触发器事件。事实上，触发器事件的 JSON 表示与该文档完全相同。
 
-否则，如果 `includeDocs` 为 false，那么事件将包含以下参数：
+否则，如果 `includeDoc` 为 false，那么事件将包含以下参数：
 
 - `id`：文档标识。
 - `seq`：Cloudant 生成的序列标识。
@@ -185,7 +186,7 @@ copyright:
 
   ```
   {
-      "id": "6ca436c44074c4c2aa6a40c9a188b348",
+"id": "6ca436c44074c4c2aa6a40c9a188b348",
       "seq": "2-g1AAAAL9aJyV-GJCaEuqx4-BktQkYp_dmIfC",
       "changes": [
           {
@@ -208,9 +209,8 @@ copyright:
   {: pre}
   ```
   ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
-  response:
   {
-    "id": "heisenberg",
+"id": "heisenberg",
     "ok": true,
     "rev": "1-9a94fb93abc88d8863781a248f63c8c3"
   }
@@ -234,7 +234,7 @@ copyright:
   {: pre}
   ```
   {
-    "_id": "heisenberg",
+"_id": "heisenberg",
     "_rev": "1-9a94fb93abc88d8863781a248f63c8c3"
     "name": "Walter White"
   }
@@ -259,7 +259,12 @@ copyright:
 
 `/whisk.system/alarms/alarm` 订阅源将警报服务配置为按指定的频率触发触发器事件。参数如下所示：
 
-- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器，时间采用全球标准时间 (UTC)。此字符串是 6 个字段组成的序列，字段之间用空格分隔：`X X X X X X `。有关使用 cron 语法的更多详细信息，请参阅 https://github.com/ncb000gt/node-cron。
+- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器，时间采用全球标准时间 (UTC)。此字符串是 6 个字段组成的序列，字段之间用空格分隔：`X X X X X X `。有关使用 cron 语法的更多详细信息，请参阅 https://github.com/ncb000gt/node-cron。以下是该字符串所指示的一些频率示例：
+
+  - `* * * * * *`：每一秒。
+  - `0 * * * * *`：每一分钟的顶部。
+  - `* 0 * * * *`：每一小时的顶部。
+  - `0 0 9 8 * *`：每一个月第八天的上午 9:00:00 (UTC)
 
 - `trigger_payload`：此参数的值成为每次触发器触发时触发器的内容。
 
@@ -268,7 +273,7 @@ copyright:
 下面是通过触发器事件中的 `name` 和 `place` 值创建每 20 秒将触发一次的触发器的示例。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
   ```
   {: pre}
 
@@ -278,24 +283,26 @@ copyright:
 ## 使用 Weather 包
 {: #openwhisk_catalog_weather}
 
-通过 `/whisk.system/weather` 包，可以方便地调用 The Weather Company API。
+通过 `/whisk.system/weather` 包，可以方便地调用 IBM Weather Insights API。
 
 此包中包含以下操作。
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | 包 | apiKey | 来自 The Weather Company 的服务 |
-| `/whisk.system/weather/forecast` | 操作 | apiKey、latitude 和 longitude | Weather.com 10 天天气预报 |
+| `/whisk.system/weather` | 包 | apiKey | 来自 IBM Weather Insights API 的服务  |
+| `/whisk.system/weather/forecast` | 操作 | apiKey、latitude、longitude、timePeriod | 指定时间段的预报|
 
 建议使用 `apiKey` 值创建包绑定，但这并不是必需的。这样就无需在每次调用包中的操作时指定密钥。
 
 ### 获取某个位置的天气预报
 
-`/whisk.system/weather/forecast` 操作通过从 The Weather Company 调用 API，返回某个位置的 10 天天气预报。参数如下所示：
+`/whisk.system/weather/forecast` 操作通过从 The Weather Company 调用 API，返回某个位置的天气预报。参数如下所示：
 
-- `apiKey`：The Weather Company 的 API 密钥，此密钥有权调用 10 天天气预报 API。
+- `apiKey`：The Weather Company 的 API 密钥，此密钥有权调用天气预报 API。
 - `latitude`：位置的纬度坐标。
 - `longitude`：位置的经度坐标。
+- `timeperiod`：预报的时间段。有效选项为 '10day' -（缺省值）返回每日 10 天预报，'24hour' - 返回每小时 2 天预报，'current' - 返回当前天气条件，'timeseries' - 返回当前观察和长达过去 24 小时（从当前日期和时间）的观察。 
+
 
 下面是创建包绑定并获取 10 天天气预报的示例。
 
@@ -315,7 +322,7 @@ copyright:
 
   ```
   {
-      "forecasts": [
+"forecasts": [
           {
               "dow": "Wednesday",
               "max_temp": -1,
@@ -350,6 +357,8 @@ copyright:
 | `/whisk.system/watson` | 包 | username 和 password | Watson Analytics API 的操作 |
 | `/whisk.system/watson/translate` | 操作 | translateFrom、translateTo、translateParam、username 和 password | 翻译文本 |
 | `/whisk.system/watson/languageId` | 操作 | payload、username 和 password | 识别语言 |
+| `/whisk.system/watson/speechToText` | 操作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 将音频转换为文本 |
+| `/whisk.system/watson/textToSpeech` | 操作 | payload、voice、accept、encoding、username、password | 将文本转换为音频 |
 
 建议使用 `username` 和 `password` 值创建包绑定，但这并不是必需的。这样就无需在每次调用包中的操作时指定这些凭证。
 
@@ -381,7 +390,7 @@ copyright:
 
   ```
   {
-      "payload": "Ciel bleu a venir"
+"payload": "Ciel bleu a venir"
   }
   ```
   {: screen}
@@ -412,7 +421,7 @@ copyright:
   {: pre}
   ```
   {
-    "payload": "Ciel bleu a venir",
+"payload": "Ciel bleu a venir",
     "language": "fr",
     "confidence": 0.710906
   }
@@ -420,6 +429,82 @@ copyright:
   {: screen}
 
 
+### 将某些文本转换为语音
+
+`/whisk.system/watson/textToSpeech` 操作可将某些文本转换为音频语音。参数如下所示：
+
+- `username`：Watson API 用户名。
+- `password`：Watson API 密码。
+- `payload`：要转换为语音的文本。
+- `voice`：讲话者的声音。
+- `accept`：语音文件的格式。
+- `encoding`：语音二进制数据的编码。
+
+下面是创建包绑定并将某些文本转换为语音的示例。
+
+1. 使用 Watson 凭证创建包绑定。
+
+  ```
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+  {: pre}
+
+2. 调用包绑定中的 `textToSpeech` 操作来转换文本。
+
+  ```
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  ```
+  {: pre}
+  ```
+  {
+    "payload": "<base64 encoding of a .wav file>"
+  }
+  ```
+  {: screen}
+
+
+### 将语音转换为文本
+
+`/whisk.system/watson/speechToText` 操作可将音频语音转换为文本。参数如下所示：
+
+- `username`：Watson API 用户名。
+- `password`：Watson API 密码。
+- `payload`：要转换为文本的已编码语音二进制数据。
+- `content_type`：音频的 MIME 类型。
+- `encoding`：语音二进制数据的编码。
+- `continuous`：指示是否返回代表长时间停顿所分隔的连续短语的多个最终结果。
+- `inactivity_timeout`：如果在所提交的音频中只检测到沉默，那么在该时间（秒）之后，会关闭连接。
+- `interim_results`：指示服务是否返回中间结果。
+- `keywords`：要在音频中抓住的关键字列表。
+- `keywords_threshold`：抓住关键字的下限置信度值。
+- `max_alternatives`：要返回的替代脚本的最大数目。
+- `model`：要用于辨识请求的模型的标识。
+- `timestamps`：指示是否针对每一个字返回时间校准。
+- `watson-token`：为服务提供认证令牌，作为提供服务凭证的替代方法。
+- `word_alternatives_threshold`：将假设识别为可能的替代文字的下限置信度值。
+- `word_confidence`：指示是否针对每一个字返回 0 到 1 范围内的置信度测量。
+- `X-Watson-Learning-Opt-Out`：指示是否针对调用选择退出数据收集。
+ 
+下面是创建包绑定并将语音转换为文本的示例。
+
+1. 使用 Watson 凭证创建包绑定。
+
+  ```
+  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  ```
+
+2. 调用包绑定中的 `speechToText` 操作来转换已编码的音频。
+
+  ```
+  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  ```
+  ```
+  {
+    "data": "Hello Watson"
+  }
+  ```
+  
+ 
 ## 使用 Slack 包
 {: #openwhisk_catalog_slack}
 

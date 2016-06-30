@@ -1,4 +1,4 @@
----
+﻿---
 
  
 
@@ -17,6 +17,7 @@ copyright:
 {: #glossary}
 
 *Dernière mise à jour : 19 avril 2016*
+{: .last-updated}
 
 Ce glossaire comporte des termes et des définitions pour {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -50,14 +51,12 @@ text between these comment tags.-->
 [N](#glossn)
 [O](#glosso)
 [P](#glossp)
-[Q](#glossq)
 [R](#glossr)
 [S](#glosss)
 [T](#glosst)
 [U](#glossu)
 [V](#glossv)
 [W](#glossw)
-[X](#glossx)
 
 <!--end letter link tags-->
 
@@ -69,32 +68,25 @@ text between these comment tags.-->
 
 Voir [comité d'architecture](#x2214349).
 
-### jeton d'accès
-{: #x2113001}
+### accélération BLU
+{: #x7470463}
 
-Valeur utilisée par le consommateur pour obtenir l'accès aux ressources protégées pour le compte de l'utilisateur, au lieu d'utiliser les données d'identification du fournisseur de services de l'utilisateur.
+Collection de technologies IBM DB2 conçue pour fonctionner en priorité avec un traitement de requête intelligence métier en lecture majoritaire. BLU Acceleration propose quatre avancées majeures dans la conception de bases de données : le traitement dynamique en mémoire et en colonnes, la compression interactive, le traitement vectoriel parallèle et la non prise en compte de données.
 
-### gestionnaire de compte
-{: #x2214301}
+### accord sur les niveaux de service (SLA)
+{: #x2038403}
 
-Personnel avec expérience métier et Internet qui examinent les demandes de site Web en termes d'alignement "OneIBM". Ils collaborent également avec les
-demandeurs de site Web pour s'assurer que le demandeur a réalisé les activités nécessaires pour atteindre les objectifs métier et marketing
-stipulés.
+Contrat entre un client et un fournisseur de services spécifiant les attentes de niveau de service quant à la disponibilité, les
+performances, et d'autres objectifs mesurables.
 
-### rapport actif
-{: #x5074928}
+### adresse URL (Uniform Resource Locator)
+{: #x2042491}
 
-Type de sortie de rapport géré hautement interactif et facile à utiliser, utilisable hors ligne par les utilisateurs. Les rapports actifs sont créés pour des utilisateurs professionnels, afin de leur permettre d'explorer leurs données et de dériver des données approfondies supplémentaires.
-
-### dépense ADM
-{: #x2214308}
-
-Dépense unique et immédiate pour le développement complet et le déploiement de l'application.
-
-### élément d'adoption
-{: #x7494374}
-
-Elément de travail de développement qui indique quand les modifications effectuées par une équipe doivent être adoptées par une autre équipe.
+Adresse unique d'une ressource accessible dans un réseau, tel Internet. L'URL inclut le nom abrégé du protocole utilisé pour accéder à la
+ressource et les données utilisées par le protocole pour localiser la
+ressource. Voir aussi [domaine personnalisé](#x5728384), [domaine](#x2021210),
+[hôte](#x2002243), [route](#x2037338),
+[sous-domaine](#x2040080).
 
 ### Advanced Encryption Standard (AES)
 {: #x2897510}
@@ -106,18 +98,10 @@ Technique de chiffrement des données fondée sur la norme DES (Data Encryption 
 
 Voir [norme de chiffrement avancée (AES)](#x2897510).
 
-### liaison agences
-{: #x2214318}
+### agence interactive
+{: #x2214674}
 
-Personne facilitant les relations d'IBM avec ses agences interactives dans le monde et chargée de gérer le portefeuille de projets interactifs
-au niveau mondial, notamment la prévision des dépenses et le suivi des bons de commande IBM concernés par rapport aux prévisions, l'optimisation
-des affectations des agences, des charges de travail et des performances à travers l'entreprise.
-
-### développement logiciel agile
-{: #x2907651}
-
-Méthodologie de développement logiciel qui met l'accent sur la collaboration
-et la qualité pour produire des incréments de produit complets à des intervalles réguliers, appelés itérations ou sprints.
+Sous-traitant privilégié par IBM pour aider l'organisation dans la conception de site Web, le développement de contenu et la génération d'une bannière.
 
 ### alias
 {: #x2000123}
@@ -132,16 +116,21 @@ IBM entretient des relations au niveau développement et marketing (alliances) a
 de proposer aux clients des solutions complètes en harmonisant les technologies IBM avec les applications des éditeurs de logiciels indépendants et
 de leurs logiciels.
 
-### portefeuille d'alliances
-{: #x2214331}
+### alliance stratégique
+{: #x2214931}
 
-Le portefeuille d'alliances mappe les processus métier internes avec chaque solution des alliances stratégiques (Ariba, i2, SAP, Siebel) pour
-indiquer leur couverture et leur utilisation.
+Alliance clé utilisée pour épauler les processus métier IBM internes.
 
 ### AM
 {: #x2214303}
 
 Voir [responsable de compte](#x2214301).
+
+### amélioration continue
+{: #x8635788}
+
+Pratique d'évaluation en continu d'un produit, service, ou processus, pour garantir son efficacité et pour apporter des modifications incrémentiellement
+ou toutes à la fois, si nécessaire.
 
 ### API
 {: #x2008805}
@@ -154,40 +143,49 @@ Voir [Interface de programme d'application](#x2000186).
 Application Web ou pour périphérique mobile. Voir aussi [application mobile](#x4258535),
 [application Web](#x2116500).
 
-### ID d'application
-{: #x7909906}
+### appels API légers
+{: #x7690463}
 
-Identificateur global unique qui est affecté à une application mobile Bluemix. Voir aussi [identificateur global unique](#x2390455).
+Opération client qui lit des données. Les appels API légers utilisent moins de ressources que les appels API lourds, car ils exécutent une seule fonction. Voir aussi [appel API lourd](#x7690468).
 
-### clé d'application
-{: #x7290111}
+### appels API lourds
+{: #x7690468}
 
-Identificateur unique utilisé par votre application lors du rapport de données à IBM Mobile Quality Assurance. La clé peut être régénérée à l'infini. Toutefois, les versions qui utilisent une ancienne clé d'application ne peuvent plus procéder au rapport dans des sessions IBM Mobile Quality
-Assurance.
+Opération client qui écrit, supprime ou insère des données. Les appels API lourds consomment davantage de ressources que les appels API légers, car ils affectent les données. Voir aussi [appel API léger](#x7690463).
 
-### portefeuille d'applications
-{: #x2214344}
+### application mobile
+{: #x7636517}
 
-Suite d'applications associées qui sont la propriété d'un processus (par exemple, CRM) ou d'une unité commerciale (par exemple, PCD).
+Voir [application mobile](#x4258535).
 
-### interface de programme d'application (API)
-{: #x2000186}
+### application mobile
+{: #x4258535}
 
-Interface qui permet à un programme d'application écrit dans un
-langage de haut niveau d'utiliser des données ou des fonctions spécifiques
-du système d'exploitation ou d'un autre programme.
+Application conçue pour une plateforme mobile. Tout comme les applications Web, les applis mobiles fournissent une fonctionnalité qui va au-delà de l'affichage statique d'informations, par exemple, en autorisant l'utilisateur à filtrer des nouvelles pratiquement en temps réel. Voir aussi [appli](#x4281528).
 
 ### application systems control and auditability (ASCA)
 {: #x2214361}
 
 
 
-### comité d'architecture
-{: #x2214349}
+### application Web
+{: #x2116500}
 
-Groupe de décideurs inter-fonctions qui définit les orientations de l'architecture et pilote les livrables d'une architecture fonctionnelle
-inter-fonctions, notamment le plan directeur de l'architecture e-business, les normes de l'architecture application/données, et guident des équipes de solution
-communes se penchant sur des questions et des problèmes d'architecture à haute priorité.
+Application à laquelle un navigateur Web peut accéder et qui fournit
+une fonctionnalité qui va au-delà de l'affichage statique d'informations,
+par exemple en autorisant l'utilisateur à interroger une base de données. Les composants les plus courants d'une application Web sont les pages
+HTML, les pages JSP et les servlets. Voir aussi [appli](#x4281528).
+
+### application Web
+{: #x7636628}
+
+Voir [application Web](#x2116500).
+
+### architecte responsable PDT
+{: #x2214734}
+
+Chargé de définir l'architecture du projet, en garantissant son intégration avec d'autres systèmes et conformément
+au plan directeur de l'architecture e-business et aux normes et instructions BT-CIO.
 
 ### artefact
 {: #x2262995}
@@ -200,11 +198,10 @@ contexte HTTP, les artefacts possèdent un URI et sont appelés ressources. Voir
 
 Voir [application systems control and auditability](#x2214361).
 
-### rôle de propriétaire d'actif
-{: #x2214339}
+### assurance qualité mondiale (WWQA)
+{: #x2215010}
 
-Le propriétaire de l'actif est l'utilisateur BIE, BPE, BTE ou Collaboration Executive chargé de s'assurer que toutes les tâches
-associées aux actifs déployés dont il est propriétaire sont effectuées.
+
 
 ### authentification (AuthN)
 {: #x2014567}
@@ -216,96 +213,51 @@ Processus de validation de l’identité d'un utilisateur ou d'un serveur.
 
 Voir [authentification](#x2014567).
 
-### autorisation (AuthZ)
-{: #x2014653}
-
-En sécurité informatique, droit accordé à un utilisateur de communiquer avec ou d'utiliser un système informatique.
-
 ### AuthZ
 {: #x7470448}
 
 Voir [autorisation](#x2014653).
 
-### exécution automatique
-{: #x7344035}
+### autorisation (AuthZ)
+{: #x2014653}
 
-Voir [saisie semi-automatique de code](#x7344030).
+En sécurité informatique, droit accordé à un utilisateur de communiquer avec ou d'utiliser un système informatique.
 
+### autorité de certification (CA)
+{: #x2016383}
 
-### déploiement automatique
-{: #x7494379}
-
-- Processus automatisé qui extrait et prépare une sortie de génération, puis transfère celle-ci vers un autre
-emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
-- Extraire et préparer automatiquement une sortie de génération, puis transférer celle-ci vers un autre
-emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
-
+Entreprise ou organisation tierce reconnue qui émet des certificats numériques. L'autorité de certification vérifie généralement l'identité des
+individus qui reçoivent un certificat unique. Voir aussi [certificat intermédiaire](#x3753781),
+[couche Secure Sockets Layer](#x2038004), [certificat racine digne de confiance](#x2042234).
 
 ## B
 {: #glossb}
-
-### reliquat
-{: #x2315215}
-
-Dans le contexte du développement agile, liste de fonctions ou de tâches techniques nécessaires pour un projet ou une édition, que l'équipe de
-développement
-évalue et pour lesquelles il définit les priorités.
-
-### plan de sauvegarde/reprise
-{: #x2214370}
-
-Plan identifiant l'approche, les procédures et les actions à entreprendre en cas d'opération ou d'exécution infructueuse. Ce plan n'indique pas de
-revenir à l'environnement d'origine mais identifie le plan alternatif à suivre. Il génère les informations (clichés, fichiers de sauvegardes, journaux,
-etc.) requis pour une reprise en cas d'erreur grave ou de traitement d'une exception an vue de continuer.
-
-### image de base
-{: #x5366487}
-
-Image qui ne possède pas d'image parent. Voir aussi [image](#x2024928),
-[image parent](#x8439210).
-
-### version de référence
-{: #x2071471}
-
-Instantané du plan de projet validé utilisé pour effectuer des comparaisons au cours de l'exécution du projet.
 
 ### BDA
 {: #x2214443}
 
 Voir [business design assurance](#x2214441).
 
-### service bêta
-{: #x7470455}
+### bibliothèque de préproduction
+{: #x7290106}
 
-Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Voir aussi [service expérimental](#x7470450).
+Collection de fonctionnalités de test qui regroupent des informations détaillées sur les anomalies et les problèmes liés à une appli. Les fonctionnalités de test identifient le périphérique et l'utilisateur à l'origine du bogue, de sorte que les développeurs puissent disposer des journaux et des informations requises pour remédier aux problèmes. Voir aussi [mode pré-production](#x7290124).
+
+### bibliothèque de production
+{: #x2034919}
+
+Sous-ensemble de la bibliothèque de pré-production des fonctionnalités de test d'appli utilisé par les clients. Les périphériques mobiles des clients rapportent les anomalies et les problèmes de manière anonyme. Ces fonctionnalités collectent également des informations moins détaillées dans les journaux, les données de session et les rapports de panne. Voir aussi [mode production](#x6070975).
 
 ### BIE
 {: #x2214380}
 
 Voir [gestionnaire des informations métier](#x2214378).
 
-### lier
-{: #x2000361}
+### bifurcation
+{: #x2023301}
 
-Etablir une connexion entre des composants logiciels à travers un
-réseau au moyen d'un protocole déterminé. Dans des services Web,
-l'opération de liaison se produit lorsque le demandeur de service
-appelle ou lance une interaction avec le service au moment de
-l'exécution, grâce aux détails de liaison dans la description du
-service pour localiser, contacter et appeler ce dernier.
-
-### accélération BLU
-{: #x7470463}
-
-Collection de technologies IBM DB2 conçue pour fonctionner en priorité avec un traitement de requête intelligence métier en lecture majoritaire. BLU Acceleration propose quatre avancées majeures dans la conception de bases de données : le traitement dynamique en mémoire et en colonnes, la compression interactive, le traitement vectoriel parallèle et la non prise en compte de données.
-
-### déploiement bleu-vert
-{: #x7807335}
-
-Technique de déploiement qui permet la distribution continue et réduit le temps d'indisponibilité en exécutant deux environnements de production
-identiques appelés Blue et Green. Alors que l'un des environnements (par exemple Blue) est l'environnement de production actif, l'autre (par exemple Green)
-peut être utilisé pour le test final et le déploiement. Une fois l'application déployée dans Green, Green devient l'environnement de production et Blue
-devient inactif. Voir aussi [déploiement red-black](#x8439181).
+- Dans Git, copie divergente d'un référentiel qui peut être modifié sans affecter ni devoir être synchronisé avec l'original.
+- Créer un projet et un référentiel Git qui contiennent l'intégralité du contenu du référentiel et de l'historique d'un autre projet.
 
 ### Bluemix
 {: #x7301758}
@@ -314,17 +266,11 @@ Plateforme à norme ouverte reposant sur le cloud qui permet de construire, de g
 périphériques Web, mobiles, de mégadonnées et intelligents. Ses capacités incluent Java, développement de back-end mobile, surveillance d'applications, ainsi que des
 fonctions de partenaires écosystème et open source &mdash; tous fournis en tant que service dans le cloud.
 
-### conteneur boilerplate
-{: #x7233930}
+### bout en bout
+{: #x2214553}
 
-Modèle qui inclut une application, son environnement d'exécution et ses services prédéfinis associés, pour un domaine particulier.
-
-### sans bornes
-{: #x8439189}
-
-Qui appartient à une plateforme de développement ouverte, non propriétaire, incluant des modèles de déploiement de cloud public,
-de cloud dédié et de cloud local. Voir aussi [cloud dédié](#x8439199),
-[cloud local](#x8439194), [cloud public](#x4585370).
+Principe de conception de transformation métier basée sur une approche en boucle fermée pour la définition des processus,
+des stratégies/règles, des structures de données, des systèmes informatiques et des systèmes de gestion.
 
 ### BPE
 {: #x2149376}
@@ -368,22 +314,10 @@ Voir [business transformation operations process](#x2214425).
 Version BTOP (Business transformation operations process) allégée destinée à certains projets ne nécessitant pas le processus BTOP
 complet.
 
-### générateur
-{: #x2197543}
-
-Outil pour générer et compiler du code.
-
 ### buildpack
 {: #x7233925}
 
 Collection de scripts permettant de préparer le code à exécuter sur Bluemix. Les packs de construction examinent les applications déployées, puis téléchargent et configurent les applications dépendantes.
-
-### dossier business
-{: #x2214436}
-
-Modèle utilisé dans BTMS (Business Transformation Management System) pour fournir des informations sur le dossier business d'un programme (lors de la
-gestion du portefeuille BT) ou d'un projet (lors des phases d'opérations du processus BT). Inclut des informations sur les zones de valeur (évitement des coûts,
-réduction des coûts, revenu incrémentiel, transfert de revenus à la base Web, etc.) et une quantification de la valeur sur la durée de vie de l'investissement.
 
 ### business design assurance (BDA)
 {: #x2214441}
@@ -392,78 +326,10 @@ Processus fournissant une approche structurée de la liaison et de de la validat
 objectifs métier
 et des architectures d'application associées.
 
-### gestionnaire des informations métier (BIE)
-{: #x2214378}
-
-
-
-### planification commerciale
-{: #x2214448}
-
-Série de processus qui analyse le portefeuille IBM, le compare à l'environnement concurrentiel, utilise une stratégie pour dégager une
-direction, et enfin décide des opportunités de transformation optimales pour garantir qu'IBM reste concurrentielle sur le marché.
-
-### gestionnaire de processus métier (BPE)
-{: #x2214384}
-
-Rôle clé dans le système de gestion de la transformation métier (BTMS) chargé d'aligner les processus et les applications avec le stratégie d'entreprise et
-l'infrastructure informatique.
-
-### règle métier
-{: #x2266457}
-
-Représentation de la manière dont les pratiques et les stratégies métier s'appliquent à une activité métier.
-
-### scénario métier
-{: #x2214458}
-
-Description ou synopsis d'un plan d'action ou d'événements envisagé. Le scénario définit et documente une transaction métier majeure de bout
-en bout, indique comment les personnes et les organisations interagissent pour exécuter le processus défini, la transaction métier, et comment ils utiliseront en fin de
-compte des systèmes et applications compatibles avec la conception du processus de bout en bout. Utilisé dans le processus business design assurance
-pour définir les interactions des utilisateurs avec les systèmes.
-
-### transformation métier
-{: #x2214398}
-
-
-
-### transformation métier/responsable des technologies de l'information (BT CIO)
-{: #x2214404}
-
-
-
-### initiative de transformation métier
-{: #x2214464}
-
-Ensemble de programmes ou de projets (de processus et informatiques) pour atteindre un objectif métier.
-
-### système de gestion de la transformation métier (BTMS)
-{: #x2205904}
-
-Système de gestion intégré du portefeuille IBM visant à répondre aux besoins d'IBM et du marché. Le portefeuille IBM est composé de solutions planifiées, de
-solutions en cours, de solutions déployées et de solutions retirées du service.
-
-### outil de gestion de la transformation métier (BTMT)
-{: #x2214418}
-
-outil de flux de travaux développé par le BT-CIO pour gérer le développement de solutions, de projets et d'actifs au cours des processus de développement
-de solution BTMS. BTMT est utilisé pour réaliser les tâches suivantes : déclenchement de l'activité de marketing Web,
-demande d'un nouveau site Web, lancement d'un nouveau développement d'un actif quelconque
-(application, outil, salle d'équipe, référentiel de données, formulaire, ou service du système d'infrastructure), déploiement d'un type d'actif,
-gestion d'un actif une fois déployé, ou demande de financement informatique (IPP#).
-
 ### business transformation operations process (BTOP)
 {: #x2214425}
 
 
-
-### unité business
-{: #x2117547}
-
-Unité auprès du Responsable des technologies de l'information représentant un domaine métier majeur. Ces unités la transformation de bout en bout dans
-leur domaine métier et sont responsables des résultats et des performances. Elles exécutent leur stratégie et implémentent les modifications de processus
-nécessaires pour induire des performances et une simplification. Exemples : groupe Server and Storage Systems , Sales and Distribution, groupe Software,
-IBM  Research, groupe Technology, Global Services, IBM Global Financing, Corporate Functions et Personal Computer Division.
 
 ### BxE
 {: #x2214388}
@@ -478,6 +344,16 @@ Terme générique pour BIE, BPE ou BTE
 {: #x2015942}
 
 Voir [autorité de certification](#x2016383).
+
+### calendrier
+{: #x2312511}
+
+Zone d'activité dans un projet, qui possède généralement son propre planning et ses propres éléments livrables, équipes et processus.
+
+### cas d'utilisation
+{: #x5027530}
+
+Elément de travail de développement qui définit une partie d'un scénario d'utilisation ou une contribution spécifique à la valeur du produit global.
 
 ### CBC
 {: #x2234719}
@@ -504,28 +380,40 @@ Voir [test de développement commun](#x2214490).
 
 
 
-### autorité de certification (CA)
-{: #x2016383}
+### certificat d'acceptation de livrable
+{: #x2214515}
 
-Entreprise ou organisation tierce reconnue qui émet des certificats numériques. L'autorité de certification vérifie généralement l'identité des
-individus qui reçoivent un certificat unique. Voir aussi [certificat intermédiaire](#x3753781),
-[couche Secure Sockets Layer](#x2038004), [certificat racine digne de confiance](#x2042234).
+Ce certificat est intégré pour la phase de revue d'exit par le client. Une fois signé par le chef de l'équipe de développement de projet
+(PDTL) du client et le responsable du projet de solution (SPM) IGS, il confirme et identifie l'achèvement des livrables comme spécifié dans
+la description du travail (SOW) pour cette phase.
 
-### demande de signature de certificat (CSR)
-{: #x3530521}
+### certificat intermédiaire
+{: #x3753781}
 
-Message électronique qu'une organisation envoie à une autorité de certification pour obtenir un certificat. La demande comprend une clé
-publique et est signée à l'aide d'une clé privée. L'autorité de certification retourne le certificat après l'avoir signé avec sa propre clé privée.
+Certificat subordonné émis par l'autorité de certification racine accréditée spécifiquement pour émettre
+des certificats serveur d'entité de
+fin. Le résultat est une chaîne de certificats qui débute à l'autorité de certification racine accréditée, continue avec le certificat intermédiaire et finit
+avec le certificat SSL émis pour l'organisation. Voir aussi [autorité de certification](#x2016383), [certificat racine digne de confiance](#x2042234).
 
-### ensemble de changements
-{: #x2255031}
+### certificat racine digne de confiance
+{: #x2042234}
 
-Groupe de modifications liées apportées à des artefacts dans un espace de travail ou dans un flux.
-
-### responsable des technologies de l'information (CIO)
-{: #x2214480}
+Certificat signé par une autorité de certification de confiance. Voir aussi [autorité de certification](#x2016383),
+[certificat intermédiaire](#x3753781).
 
 
+### chaîne de valeur
+{: #x2118588}
+
+Séquence de toutes les activités requises pour concevoir, créer, bâtir, produire, distribuer, commercialiser et vendre
+un ensemble de produits ou de services associés. La valeur perçue par le consommateur final du produit ou du service est dérivée en partie
+de chaque étape dans la chaîne, bien que les étapes ne génèrent pas toutes la même valeur ou le même potentiel de profit. Chaque étape de la chaîne requiert des
+actifs et des capacités distincts.
+
+### chaîne d'outils
+{: #x2956335}
+
+Collection de programmes ou outils utilisés pour développer un produit.
 
 ### CI
 {: #x2008855}
@@ -537,11 +425,24 @@ Voir [intégration continue](#x6009572).
 
 Voir [responsable des technologies de l'information](#x2214480).
 
-### enchaînement de blocs de code de chiffrement (CBC)
-{: #x2016783}
+### clé d'application
+{: #x7290111}
 
-Méthode de réduction des patterns répétitifs en texte chiffré par le biais d'une opération OU exclusif sur chaque bloc de données de 8
-octets avec le bloc de 8 octets chiffré précédemment, avant son chiffrement.
+Identificateur unique utilisé par votre application lors du rapport de données à IBM Mobile Quality Assurance. La clé peut être régénérée à l'infini. Toutefois, les versions qui utilisent une ancienne clé d'application ne peuvent plus procéder au rapport dans des sessions IBM Mobile Quality
+Assurance.
+
+### clé de licence
+{: #x2804840}
+
+Autorisation qui réglemente l'utilisation de programmes sous licence logicielle. Les clés d'utilisation de licence logicielle doivent être installées
+sur le
+système lorsqu'un logiciel est mis à niveau ou déplacé, le groupe de processeurs matériels est changé, une utilisation supplémentaire de la licence est
+ajoutée ou un nouveau logiciel requérant des clés de licence est acheté.
+
+### clé privée
+{: #x2034701}
+
+Canevas algorithmique servant à chiffrer des messages que seule la clé publique correspondante pourra déchiffrer. La clé privée sert également à déchiffrer les messages encodés par la clé publique correspondante. Elle est conservée sur le système de l'utilisateur et protégée par un mot de passe.
 
 ### CLI
 {: #x2008863}
@@ -558,38 +459,57 @@ Programme logiciel ou ordinateur qui demande des services à un serveur. Voir au
 
 Plateforme informatique où les utilisateurs peuvent accéder à des ressources applicatives ou informatiques, tels que les services, n'importe où via leurs périphériques connectés. Une interface utilisateur simplifiée et/ou une interface de programme d'application (API) rendent l'infrastructure prenant en charge ces services transparente pour les utilisateurs.
 
-### portabilité cloud
-{: #x4585297}
+### cloud dédié
+{: #x8439199}
 
-Possibilité de déplacer des applications et des services entre des environnements de Cloud Computing publics ou privés ou depuis des
-fournisseurs de cloud différents.
+Environnement de Cloud Computing privé qui fournit l'infrastructure avec un matériel à service exclusif. Voir aussi [sans frontières](#x8439189).
+
+### cloud hybride
+{: #x4585327}
+
+Environnement de Cloud Computing composé de plusieurs ressources publiques et privées.
+
+### cloud local
+{: #x8439194}
+
+Environnement de Cloud Computing dans le centre de données du client. Le cloud local se trouve sur site et fournit une sécurité et un temps
+d'attente améliorés. Voir aussi [sans frontières](#x8439189).
+
+
+### cloud mobile
+{: #x4585344}
+
+Infrastructure dans laquelle le stockage et le traitement des données des applications est déchargé depuis un périphérique mobile dans le cloud. Avec le Cloud Computing mobile, les applications ne sont pas limitées à un transporteur spécifiques mais sont accessibles via le Web.
+
+### cloud privé
+{: #x4585362}
+
+Environnement de Cloud Computing dont l'accès est limité aux membres des réseaux d'une entreprise et de ses partenaires. Voir aussi
+[cloud public](#x4585370).
+
+### cloud public
+{: #x4585370}
+
+Environnement de Cloud Computing dans lequel l'accès aux ressources normalisées, telles que l'infrastructure, le matériel à service partagé
+et les services, est disponible pour les abonnés, avec une facturation à la carte. Voir aussi [sans frontières](#x8439189), [cloud privé](#x4585362).
 
 ### COC
 {: #x2214486}
 
 Voir [centre de compétence](#x2214484).
 
-### exécution de code
-{: #x7344030}
+### comité d'architecture
+{: #x2214349}
 
-Fonction de nombreux environnements de développement et éditeurs de texte qui complètent un contenu de manière prédicative (mots, expressions, balises, etc.) pendant la saisie par l'utilisateur.
+Groupe de décideurs inter-fonctions qui définit les orientations de l'architecture et pilote les livrables d'une architecture fonctionnelle
+inter-fonctions, notamment le plan directeur de l'architecture e-business, les normes de l'architecture application/données, et guident des équipes de solution
+communes se penchant sur des questions et des problèmes d'architecture à haute priorité.
 
-### interface de ligne de commande (CLI)
-{: #x2051424}
+### comité de revue des investissements (IRB)
+{: #x2205860}
 
-Interface informatique dans laquelle les données d'entrée et de sortie sont de type texte.
-
-### validation
-{: #x2000758}
-
-- Image instantanée de l'état en cours d'un projet dans un référentiel. L'historique d'un projet est défini par une série de validations.
-- Stocker une image instantanée de l'état en cours d'un projet.
-
-### test de développement commun (CDT)
-{: #x2214490}
-
-Environnement de développement et de test pour les applications GNA/GWA, conçu et élaboré conformément aux exigences du client et aux normes
-GWA et GNA.
+Cadres chez les parties prenantes chargés de définir l'orientation stratégique de la transformation métier
+et de la vision pour l'organisation ou l'unité commerciale.
 
 ### composant
 {: #x2017871}
@@ -598,21 +518,29 @@ GWA et GNA.
 - Dans le contexte de la gestion des configurations, unité d'organisation pour un ensemble réutilisable d'artefacts d'ingénierie. Les composants
 correspondent souvent à des zones de projet. Les configurations globales existent dans un composant. Voir aussi [artefact](#x2262995).
 
-### projet de composant
-{: #x2214495}
+### conception centrée sur l'utilisateur (UCD)
+{: #x2214960}
 
-L'un des projets individuels dans un programme ; peut être composé de plusieurs projets dans la même organisation.
+Approche du développement permettant de s'assurer que les conceptions de l'application répondent aux besoins de l'utilisateur et génèrent des
+applications utilisables.
 
-### traitement
-{: #x3723424}
+### conception de la chaîne de valeur
+{: #x2214970}
 
-Infrastructure ou ressources servant de base à la construction d'applications dans le cloud.
+Ses composants sont les suivants : portée, parties prenantes, liens clés, processus de niveau 1-3, sources de valeur, attributs
+et représentation graphique des processus.
 
-### phase de concept
-{: #x2214500}
+### connexion unique (SSO)
+{: #x2213318}
 
-Phase BTOP (Business transformation operations process) au cours de laquelle le PDT assimile les exigences et développe des concepts, confirme le besoin
-et la possibilité de développer une solution, élabore une proposition de projet initiale (y-compris des modèles), détermine le budget pour la phase suivante.
+Processus d'authentification par lequel un utilisateur peut accéder à plusieurs systèmes ou applications en saisissant un seul ID utilisateur et mot de passe.
+
+### constituer
+{: #x20671890}
+
+- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
+dans un environnement de production. Voir aussi [déploiement](#x2104544).
+- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
 
 ### conteneur
 {: #x2010901}
@@ -621,83 +549,35 @@ Construction système qui permet aux utilisateurs d'exécuter simultanément des
 [image](#x2024928), [couche](#x2028320),
 [registre](#x2064940).
 
-### distribution continue (CD)
-{: #x7233913}
+### conteneur boilerplate
+{: #x7233930}
 
-Pratique de développement logiciel qui utilise des techniques telles que le test, l'intégration et le déploiement en continu de sorte que les nouvelles
-fonctions et les correctifs sont préparés et déployés rapidement et avec un risque faible dans des environnements de test, puis auprès des clients.
+Modèle qui inclut une application, son environnement d'exécution et ses services prédéfinis associés, pour un domaine particulier.
 
-### amélioration continue
-{: #x8635788}
+### contenu
+{: #x2238121}
 
-Pratique d'évaluation en continu d'un produit, service, ou processus, pour garantir son efficacité et pour apporter des modifications incrémentiellement
-ou toutes à la fois, si nécessaire.
+Corps d'un message qui inclut son contenu.
 
-### intégration continue (CI)
-{: #x6009572}
+### contrôles d'audit interne et métier (IABC)
+{: #x4971252}
 
-Pratique de développement de logiciel où les membres d'une équipe intègrent fréquemment leur travail de sorte que plusieurs intégrations ont lieu chaque jour. Les
-intégrations sont vérifiées par une construction automatisée afin de détecter aussitôt que possible les erreurs d'intégration.
 
-### donnée d'identification
-{: #x2018813}
 
-Informations acquises pendant l'authentification et qui décrivent un utilisateur, des associations de groupe ou d'autres attributs d'identité en rapport avec la sécurité. Elles permettent d'exécuter des services tels que l'autorisation, l'audit ou la délégation. Par exemple, un ID utilisateur et un mot de passe sont des données d'identification qui permettent l'accès aux ressources réseau et système.
+### couche
+{: #x2028320}
 
-### revue critique de la conception (CDR)
-{: #x2214475}
-
-Revue effectuée par l'ingénieur système (SE) au cours de la phase Développement.
-
-### test XPRS (cross-application performance reliability stress)
-{: #x2215016}
-
-Fournit une certification de base des performances et du test de charge pour les applications NOTES et WEB
-identifiées à déployer sur des plateformes IBM.
-
-### transformation inter-organisations
-{: #x2214505}
-
-Programme ou projet bénéficiant de l'apport d'autres unités métier impliquées et qui leur retransmet des informations. Les composants du programme ou du projet
-peuvent être développés et gérés par une ou plusieurs organisations.
+Version modifiée d'une image parent. Les images sont composées de couches, où la version modifiée est placée sur l'image
+parent, afin de créer la nouvelle image. Voir aussi [conteneur](#x2010901),
+[image](#x2024928).
 
 ### CSR
 {: #x2140147}
 
 Voir [demande de signature de certificat](#x3530521).
 
-### domaine personnalisé
-{: #x5728384}
-
-Partie personnalisée de l'adresse URL sélectionnée par l'utilisateur pour diriger les demandes vers l'application. Un domaine personnalisé constitue
-une partie de la route. Il peut s'agir d'un domaine partagé, d'un sous-domaine partagé ou d'un domaine et d'un hôte partagés. Voir aussi
-[domaine](#x2021210), [hôte](#x2002243),
-[route](#x2037338), [sous-domaine](#x2040080),
-[adresse URL](#x2042491).
-
-
 ## D
 {: #glossd}
-
-### démon
-{: #x2019215}
-
-Programme qui s'exécute sans surveillance et qui assure des fonctions continues ou périodiques (par exemple, le contrôle du réseau).
-
-### tableau de bord
-{: #x2363941}
-
-Composant d'interface utilisateur qui fournit à l'utilisateur un récapitulatif détaillé des informations pertinentes provenant de diverses sources.
-
-### source de données
-{: #x2176124}
-
-Source des données (base de données ou fichier XML), ainsi que les informations de connexion nécessaires à l'accès aux données.
-
-### magasin de données
-{: #x2052849}
-
-Emplacement (système de base de données, fichier ou répertoire) où des données sont stockées.
 
 ### DCP
 {: #x2117790}
@@ -709,69 +589,94 @@ Voir [point de contrôle de décision](#x2214510).
 
 Voir [agent DEA (Droplet Execution Agent)](#x7470348).
 
-### point de contrôle de décision (DCP)
-{: #x2214510}
+### demande de signature de certificat (CSR)
+{: #x3530521}
 
-Processus BTOP (business transformation operations) composé de trois phases : concepts, plan et qualification.
+Message électronique qu'une organisation envoie à une autorité de certification pour obtenir un certificat. La demande comprend une clé
+publique et est signée à l'aide d'une clé privée. L'autorité de certification retourne le certificat après l'avoir signé avec sa propre clé privée.
 
-### cloud dédié
-{: #x8439199}
+### démon
+{: #x2019215}
 
-Environnement de Cloud Computing privé qui fournit l'infrastructure avec un matériel à service exclusif. Voir aussi [sans frontières](#x8439189).
+Programme qui s'exécute sans surveillance et qui assure des fonctions continues ou périodiques (par exemple, le contrôle du réseau).
 
-### incident
-{: #x2117804}
+### dépense ADM
+{: #x2214308}
 
-Elément de projet qui permet aux parties prenantes de suivre les erreurs et les correctifs d'erreurs.
+Dépense unique et immédiate pour le développement complet et le déploiement de l'application.
 
-### livrable
-{: #x2214520}
+### dépense totale
+{: #x2214948}
 
-Tout résultat ou élément mesurable et tangible devant être produit pour achever un projet ou une partie d'un projet. Souvent utilisé dans un sens plus
-restreint en référence à un livrable externe sujet à approbation par le parrain du projet ou le client.
-
-### certificat d'acceptation de livrable
-{: #x2214515}
-
-Ce certificat est intégré pour la phase de revue d'exit par le client. Une fois signé par le chef de l'équipe de développement de projet
-(PDTL) du client et le responsable du projet de solution (SPM) IGS, il confirme et identifie l'achèvement des livrables comme spécifié dans
-la description du travail (SOW) pour cette phase.
-
-### responsable de la livraison du projet (DPE)
-{: #x2214525}
-
-Responsable de la livraison du projet en charge de toutes les aspects d'un contrat liés à la livraison,
-notamment la satisfaction du client, la qualité de la prestation, la croissance du compte et la génération de bénéfices, la mise à disposition du service étant sa
-toute première responsabilité.
+Coût global du programme, y compris les coûts AD encourus une seule fois, les coûts de passage au stade suivant ou récurrents couvrant la
+maintenance et les coûts d'exécution pendant la durée de vie prévue du programme.
 
 ### déploiement
 {: #x2104544}
 
 - Processus qui extrait la sortie d'une génération, prépare la sortie avec des propriétés de configuration, et installe le package à un emplacement
-prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x2067189).
+prédéfini pour qu'il puisse être testé ou exécuté. Voir aussi [constituer](#x20671890).
 - Processus consistant à déplacer une application (telle qu'un rapport ou un modèle) vers une instance différente. Par exemple, les rapports sont souvent créés dans un environnement de test, puis déployés dans un environnement de production. Lorsqu'une application est déployée, elle est exportée, transférée, puis importée.
 
-### responsable du déploiement
-{: #x2214532}
+### déploiement automatique
+{: #x7494379}
 
-Personne chargée de garantir la capacité de déploiement et d'exécution des processus métier
-après réingénierie et des solutions de transformation à travers toutes les implantations géographiques, unités métier et lignes fonctionnelles.
+- Processus automatisé qui extrait et prépare une sortie de génération, puis transfère celle-ci vers un autre
+emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
+- Extraire et préparer automatiquement une sortie de génération, puis transférer celle-ci vers un autre
+emplacement pour que des utilisateurs puissent l'exécuter ou la tester.
 
-### phase de développement
-{: #x2214537}
 
-Phase BTOP (business transformation operations process) au cours de laquelle la solution est développée.
+### déploiement bleu-vert
+{: #x7807335}
+
+Technique de déploiement qui permet la distribution continue et réduit le temps d'indisponibilité en exécutant deux environnements de production
+identiques appelés Blue et Green. Alors que l'un des environnements (par exemple Blue) est l'environnement de production actif, l'autre (par exemple Green)
+peut être utilisé pour le test final et le déploiement. Une fois l'application déployée dans Green, Green devient l'environnement de production et Blue
+devient inactif. Voir aussi [déploiement red-black](#x8439181).
+
+### déploiement rouge-noir
+{: #x8439181}
+
+Technique de déploiement qui permet une distribution continue en activant le test, le développement et le déploiement synchronisés. Au
+départ, le développement est effectué dans un environnement inactif (black) alors que l'environnement actif continue d'accepter le trafic (red). Lorsque le
+déploiement commence, les deux environnements sont actifs (red-red) jusqu'à ce que le routage soit désactivé dans l'environnement de version précédent,
+auparavant actif, puis retiré (black) alors que le nouvel environnement est le seul environnement actif. Voir aussi [déploiement Blue-Green](#x7807335).
+
+### description du travail (SOW)
+{: #x2214901}
+
+Document préparé par un gestionnaire de projet (PM) en réponse à une demande de service d'un client. Ce document constitue la proposition de solution
+technique et doit décrire les livrables et identifier tous les risques et impacts sur la division Global Services, les investissements en infrastructure, la
+capacité, les éléments de coût, les hypothèses et les dépendances.
+
+### développement de produits intégrés (IPD)
+{: #x2213501}
+
+L'un des deux processus métier principaux de l'entreprise (avec la gestion de la relation client) chez IBM. IPD définit comment les offres sont
+développées et distribuées.
+
+### développement logiciel agile
+{: #x2907651}
+
+Méthodologie de développement logiciel qui met l'accent sur la collaboration
+et la qualité pour produire des incréments de produit complets à des intervalles réguliers, appelés itérations ou sprints.
 
 ### DevOps
 {: #x5784896}
 
 Méthodologie logicielle qui intègre le développement d'une application et les opérations informatiques.
 
-### protocole d'entente (DOU)
-{: #x2214542}
+### dimensionnement
+{: #x2004442}
 
-Document formel qui définit les modalités d'une relation entre un consommateur d'un service et le fournisseur de ce
-service.
+Augmentation de la capacité de la plateforme ou du système via l'ajout d'instances d'application ou de service.
+
+### distribution continue (CD)
+{: #x7233913}
+
+Pratique de développement logiciel qui utilise des techniques telles que le test, l'intégration et le déploiement en continu de sorte que les nouvelles
+fonctions et les correctifs sont préparés et déployés rapidement et avec un risque faible dans des environnements de test, puis auprès des clients.
 
 ### domaine
 {: #x2021210}
@@ -780,6 +685,34 @@ Partie d'une hiérarchie de dénomination qui spécifie la route. Par exemple, e
 aussi [domaine personnalisé](#x5728384), [hôte](#x2002243),
 [organisation](#x2032585), [route](#x2037338),
 [sous-domaine](#x2040080), [adresse URL](#x2042491).
+
+### domaine personnalisé
+{: #x5728384}
+
+Partie personnalisée de l'adresse URL sélectionnée par l'utilisateur pour diriger les demandes vers l'application. Un domaine personnalisé constitue
+une partie de la route. Il peut s'agir d'un domaine partagé, d'un sous-domaine partagé ou d'un domaine et d'un hôte partagés. Voir aussi
+[domaine](#x2021210), [hôte](#x2002243),
+[route](#x2037338), [sous-domaine](#x2040080),
+[adresse URL](#x2042491).
+
+
+### donnée d'identification
+{: #x2018813}
+
+Informations acquises pendant l'authentification et qui décrivent un utilisateur, des associations de groupe ou d'autres attributs d'identité en rapport avec la sécurité. Elles permettent d'exécuter des services tels que l'autorisation, l'audit ou la délégation. Par exemple, un ID utilisateur et un mot de passe sont des données d'identification qui permettent l'accès aux ressources réseau et système.
+
+### dossier business
+{: #x2214436}
+
+Modèle utilisé dans BTMS (Business Transformation Management System) pour fournir des informations sur le dossier business d'un programme (lors de la
+gestion du portefeuille BT) ou d'un projet (lors des phases d'opérations du processus BT). Inclut des informations sur les zones de valeur (évitement des coûts,
+réduction des coûts, revenu incrémentiel, transfert de revenus à la base Web, etc.) et une quantification de la valeur sur la durée de vie de l'investissement.
+
+### dossier d'exploitation
+{: #x2830619}
+
+Compilation des procédures et opérations utilisées comme référence par un administrateur ou un opérateur système
+pour l'exécution et la maintenance d'un système ou réseau informatique.
 
 ### DOU
 {: #x2214544}
@@ -796,21 +729,10 @@ Voir [responsable de livraison de projet](#x2214525).
 
 Voir [mode de requête dynamique (DQM)](#x5390841).
 
-### gouttelette
-{: #x7470343}
-
-Dans Cloud Foundry, archive contenant une application, avec ses dépendances d'exécution et d'infrastructure, antérieure au déploiement sur le cloud.
-
 ### Droplet Execution Agent (DEA)
 {: #x7470348}
 
 Composant Cloud Foundry permettant le déploiement d'applications.
-
-### mode de requête dynamique (DQM)
-{: #x5390841}
-
-Mode d'exécution de requête Java qui fournit l'accès natif aux sources de données. Ce mode gère la complexité des requêtes et les optimise pour les grands volumes de données. Il dispose de fonctions de requête avancées, comme la mise en mémoire cache, ce qui offre des avantages en termes de planification, d'exécution et de résultat.
-
 
 ## E
 {: #glosse}
@@ -823,22 +745,27 @@ logiciels et autres développeurs d'outils une plateforme standard destinée
 au développement d'outils de développement d'applications compatibles avec
 les plug-in.
 
-### fin de vie (EOL)
-{: #x2214573}
+### élément d'adoption
+{: #x7494374}
 
-Désigne la fin de la vie d'une application. L'équipe de gestion des opérations coordonne les activités visant à retirer une application en fin de vie.
+Elément de travail de développement qui indique quand les modifications effectuées par une équipe doivent être adoptées par une autre équipe.
 
-### noeud final
-{: #x2026820}
+### élément de travail
+{: #x2173032}
 
-Adresse d'une interface de programme d'application ou d'un service dans un environnement. Une interface de programme d'application expose
-un noeud final et appelle en même temps les noeuds finaux pour d'autres services.
+Artefact représentant une notion généralisée
+d'une tâche de développement (par exemple une tâche, un rapport d'anomalie ou une demande d'amélioration).
 
-### bout en bout
-{: #x2214553}
+### enchaînement de blocs de code de chiffrement (CBC)
+{: #x2016783}
 
-Principe de conception de transformation métier basée sur une approche en boucle fermée pour la définition des processus,
-des stratégies/règles, des structures de données, des systèmes informatiques et des systèmes de gestion.
+Méthode de réduction des patterns répétitifs en texte chiffré par le biais d'une opération OU exclusif sur chaque bloc de données de 8
+octets avec le bloc de 8 octets chiffré précédemment, avant son chiffrement.
+
+### ensemble de changements
+{: #x2255031}
+
+Groupe de modifications liées apportées à des artefacts dans un espace de travail ou dans un flux.
 
 ### enterprise business design
 {: #x2214563}
@@ -847,12 +774,27 @@ La mission de cette conception est de créer et de rendre opérationnel le plan 
 processus métier IBM dans le monde, de lier objectifs de performances IBM et processus, et de se conformer et soutenir les priorités majeures du responsable des
 technologies de l'information.
 
-### point de contrôle d'entreprise
-{: #x2214568}
+### entrave
+{: #x4015600}
 
-Contrôle mesurable et auditable des processus, données, applications et infrastructure entre entreprise et chaîne de la valeur
-pour promouvoir les objectifs de l'entreprise ;
-par exemple, normes de données client et financières.
+Elément qui empêche la progression ou élément de travail qui effectue le suivi d'un élément qui empêche la progression.
+
+### environnement de développement intégré (IDE)
+{: #x2116934}
+
+Jeu d'outils de développement, tels qu'éditeurs de code source, compilateur,
+et débogueurs qui sont accessibles à partir d'une même interface utilisateur.
+
+### environnement d'exécution
+{: #x2391929}
+
+Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
+
+### environnement d'exécution
+{: #x2037566}
+
+Ensemble de ressources utilisées pour exécuter un programme ou un processus.
+
 
 ### EOL
 {: #x2214575}
@@ -866,64 +808,121 @@ Dans le contexte du développement agile, élément de travail qui définit un c
 inconnu,
 souvent exécuté en plusieurs sprints. Les épiques peuvent être scindés en cas d'utilisation.
 
-### service expérimental
-{: #x7470450}
+### équipe de développement de projet (PDT)
+{: #x2422165}
 
-Service qui n'est pas prêt pour la production et qui peut être retiré à tout moment. Voir aussi [service bêta](#x7470455).
+Equipe technique et commerciale désignée par l'IPMT sponsor pour exécuter le cycle de développement de solution d'une nouvelle offre. Voir aussi
+[équipe de gestion de portefeuille intégré](#x2118026).
 
+### équipe de gestion de portefeuille intégré (IPMT)
+{: #x2118026}
+
+Groupe responsable au niveau global des performances métier WW d'un portefeuille d'offres de produit. Equipe pluridisciplinaire composée de
+cadres supérieurs BPE, BIE, WWPL et GS chargés de la prise de décisions en matière d'investissements métier. Voir également [équipe de
+développement de projet](#x2422165).
+
+### équipe de gestion des opérations
+{: #x2214710}
+
+Equipe responsable d'un portefeuille d'applications visant un segment spécifique du secteur. L'équipe gère et surveille les performances de la solution et
+recommande des actions correctives. Elle identifie les nouvelles exigences, exécute les plans de gestion des opérations et les activités de fin de vie.
+
+### équipe de stratégie et de plans (SPT)
+{: #x2214912}
+
+Groupe collaborant au développement de la stratégie et des plans pour le segment.
+
+### espace
+{: #x2039442}
+
+- Sous-groupe dans une organisation Bluemix. Les membres d'une organisation ont accès à un ou plusieurs de ses espaces, avec les droits associés à un rôle particulier (par exemple, développeur, gestionnaire ou auditeur). Tout membre d'un espace peut voir les applis, mais seuls les membres disposant des droits de développeur peuvent créer des applis et ajouter des instances de service à l'espace. Les applis et les instances de service sont associées aux espaces. Voir aussi [organisation](#x2032585).
+- Unité organisationnelle qui contient des applications et des services dans l'infrastructure Cloud Foundry et qui peut être utilisée pour stocker et contrôler des ressources d'application.
+
+### espace de nom
+{: #x2031005}
+
+Nom unique qui identifie le référentiel d'images de votre organisation dans le registre Bluemix. Voir aussi
+[image](#x2024928), [référentiel d'images privé](#x8439215).
+
+
+### espace de travail
+{: #x2096037}
+
+- Dans Eclipse, la collection de projets et d'autres ressources en cours
+de développement dans le plan de travail. Les métadonnées de ces
+ressources se trouvent dans un répertoire du système de fichiers ; les
+ressources peuvent se trouver dans le même répertoire. Voir aussi [espace de travail de référentiel](#x3889804).
+- Contexte contenant une collection d'artefacts qu'un utilisateur disposant des droits appropriés peut modifier.
+
+### espace de travail de référentiel
+{: #x3889804}
+
+Objet de référentiel qui inclut un ou plusieurs composants. Les espaces de travail de référentiel sont généralement utilisés par chacun des membres de l'équipe pour y placer leurs modifications en cours. A partir de leur espace de travail de référentiel, les membres de l'équipe transmettent au flux leurs modifications et y acceptent celles émises par d'autres membres de l'équipe via le flux. Chaque espace de travail de référentiel appartient en propre à son propriétaire, et seul ce dernier peut le modifier. Voir aussi [espace de travail](#x2096037).
+
+### étape
+{: #x2067189}
+
+- Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
+d'exécution.
+
+### exécution automatique
+{: #x7344035}
+
+Voir [saisie semi-automatique de code](#x7344030).
+
+
+### exécution de code
+{: #x7344030}
+
+Fonction de nombreux environnements de développement et éditeurs de texte qui complètent un contenu de manière prédicative (mots, expressions, balises, etc.) pendant la saisie par l'utilisateur.
 
 ## F
 {: #glossf}
 
-### partage de fichiers
-{: #x2022902}
+### fichier d'archive Web (WAR)
+{: #x2116506}
 
-Dans Bluemix, zone de stockage de fichiers partagés, basée cloud, et contenant des volumes.
+Format de fichier comprimé, défini par la norme Java EE, servant au
+stockage, dans un même fichier de toutes les ressources nécessaires à
+l'installation et à l'exécution d'une application Web.
 
-### proposition de projet finale (FPP)
-{: #x2214585}
+### Fichier JAR
+{: #x2406009}
 
-Développée par le PDT dans la phase de plan et qui constitue la base du contrat IPMT/PDT convenu dans la phase Plan. Elle est composée de la
-documentation suivante : Fiche principale BTOP (business transformation operations process), modèle métier BTOP (éléments de la phase plan),
-document de définition
-de la solution d'architecture (ADD), contrat IPMT/PDT et plan de projet intégré (ce plan est généralement élaboré par le responsable du projet de solution ou par
-le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
-PDTL. Les modèles (modèle métier BTOP, modèle d'architecture et de technologie BTOP) et le plan de projet intégré continuent à être mis à jour
-par phase au fur et à mesure de l'évolution du projet. Toutefois, si les résultats indiquent que le projet dépasse les limites du contrat
-IPMT/PDT du plan, un DCP avec l'équipe IPMT doit être réalisé.
+Fichier d'archive Java.
 
-### rôle de responsable financier
-{: #x2214580}
+### fichier manifeste
+{: #x2858069}
 
-Responsable financier qui constitue l'interlocuteur pour les aspects financiers de la solution, consolide les plans individuels et effectue une
-évaluation financière du plan intégré.
+- Fichier contenant des informations (par exemple, des paramètres, des instructions ou des métadonnées) relatives à d'autres fichiers ou à des artefacts.
+- Avec les applis Android, le fichier manifeste spécifie les droit et les paramètres de collecte de données de sorte que les périphériques mobile puissent rapporter les informations requises de la part des testeurs et des clients. Des fichiers manifeste distincts sont requis pour les testeurs internes et les clients.
 
-### bifurcation
-{: #x2023301}
+### Fichier WAR
+{: #x2406005}
 
-- Dans Git, copie divergente d'un référentiel qui peut être modifié sans affecter ni devoir être synchronisé avec l'original.
-- Créer un projet et un référentiel Git qui contiennent l'intégralité du contenu du référentiel et de l'historique d'un autre projet.
+Voir [fichier d'archive Web](#x2116506).
+
+
+### fin de vie (EOL)
+{: #x2214573}
+
+Désigne la fin de la vie d'une application. L'équipe de gestion des opérations coordonne les activités visant à retirer une application en fin de vie.
 
 ### FPP
 {: #x2214587}
 
 Voir [proposition de projet finale](#x2214585).
 
-### infrastructure
-{: #x2023472}
-
-Architecture qui fournit une structure standard pour une application et, en général, des fonctionnalités extensibles.  L'infrastructure active et simplifie une implémentation cohérente de technologies complexes destinées au développement d'applications.
-
 ### FRMP
 {: #x2214594}
 
 Voir [plan de gestion de réingénierie d'exécution](#x2214592).
 
-### plan de gestion de réingénierie d'exécution (FRMP)
-{: #x2214592}
+### fusionner/fusion
+{: #x2030107}
 
-
-
+- action d'extraire le contenu d'une branche et de l'appliquer à une autre branche.
+- validation du résultat de l'intégration du contenu d'une branche dans la branche en cours.
 
 ## G
 {: #glossg}
@@ -933,51 +932,79 @@ Voir [plan de gestion de réingénierie d'exécution](#x2214592).
 
 Voir [livraison de services de gestion globale d'application](#x2214603).
 
-### Go-heure
-{: #x7470477}
-
-Quantité de mémoire cumulée, en gigaoctets, utilisée par l'exécution de toutes les instances d'une application pour un pack de construction donné (par heure).
-
 ### GCP
 {: #x2193525}
 
 Processus utilisé par l'équipe de capacité et d'allocation de services globale
 pour allouer aux projets une capacité serveur et réseau.
 
+### générateur
+{: #x2197543}
+
+Outil pour générer et compiler du code.
+
+### gestion de contrôle de source (SCM)
+{: #x3579285}
+
+Aspect de la gestion de configuration de logiciel qui implique la gestion des modifications apportées à des collections de fichiers.
+
+### gestionnaire de processus métier (BPE)
+{: #x2214384}
+
+Rôle clé dans le système de gestion de la transformation métier (BTMS) chargé d'aligner les processus et les applications avec le stratégie d'entreprise et
+l'infrastructure informatique.
+
+### gestionnaire de projet de solution (SPM)
+{: #x2214907}
+
+Point focal pour le développement et le déploiement de la solution informatique. Responsable des performances des activités IGS,
+notamment de la proposition technique, du développement de la solution, de sa livraison et déploiement,
+
+### gestionnaire de projet (PM)
+{: #x2214761}
+
+
+
+### gestionnaire des informations métier (BIE)
+{: #x2214378}
+
+
+
 ### Git
 {: #x7494416}
 
 Programme open source pour la gestion de contrôle de source.
-
-### livraison de services de gestion globale d'application (GAMSD)
-{: #x2214603}
-
-
-
-### identificateur global unique (GUID)
-{: #x2390455}
-
-Nombre déterminé de manière algorithmique identifiant de façon unique une entité dans un système. Voir aussi [ID d'appli](#x7909906).
 
 ### global notes architecture (GNA)
 {: #x2214612}
 
 
 
-### responsable global de projet (GPE)
-{: #x2214622}
-
-rôle IBM Global Services .
-
 ### GNA
 {: #x2214614}
 
 Voir [global notes architecture](#x2214612).
 
+### Go-heure
+{: #x7470477}
+
+Quantité de mémoire cumulée, en gigaoctets, utilisée par l'exécution de toutes les instances d'une application pour un pack de construction donné (par heure).
+
+### gouttelette
+{: #x7470343}
+
+Dans Cloud Foundry, archive contenant une application, avec ses dépendances d'exécution et d'infrastructure, antérieure au déploiement sur le cloud.
+
 ### GPE
 {: #x2214624}
 
 Voir [responsable global de projet](#x2214622).
+
+### gravité
+{: #x2375015}
+
+Dans le contexte du développement de logiciels et de systèmes, mesure de l'importance d'une unité de travail, par exemple, critique, élevée, moyenne ou
+basse.
 
 ### GUID
 {: #x2390457}
@@ -992,11 +1019,6 @@ Voir [identificateur global unique](#x2390455).
 {: #x2404289}
 
 Voir [haute disponibilité](#x2284708).
-
-### appels API lourds
-{: #x7690468}
-
-Opération client qui écrit, supprime ou insère des données. Les appels API lourds consomment davantage de ressources que les appels API légers, car ils affectent les données. Voir aussi [appel API léger](#x7690463).
 
 ### haute disponibilité (HA)
 {: #x2284708}
@@ -1013,20 +1035,10 @@ la fois. Voir aussi [client](#x2000644), [domaine personnalisé](#x5728384),
 [domaine](#x2021210), [route](#x2037338),
 [sous-domaine](#x2040080), [adresse URL](#x2042491).
 
-### méthode HTTP
-{: #x2024674}
-
-Action utilisée par le protocole HTTP. Les méthodes HTTP comprennent les méthodes GET, POST et PUT.
-
 ### HTTPS
 {: #x2193603}
 
 Voir [protocole HTTPS (Hypertext Transfer Protocol Secure)](#x2237225).
-
-### cloud hybride
-{: #x4585327}
-
-Environnement de Cloud Computing composé de plusieurs ressources publiques et privées.
 
 ### Hypertext Transfer Protocol Secure (HTTPS)
 {: #x2237225}
@@ -1047,16 +1059,36 @@ Voir [infrastructure sous forme de service (IaaS)](#x4585332).
 
 Voir [contrôles d'audit interne et métier](#x4971252).
 
+### ID d'application
+{: #x7909906}
+
+Identificateur global unique qui est affecté à une application mobile Bluemix. Voir aussi [identificateur global unique](#x2390455).
+
 ### IDE
 {: #x2115755}
 
 Voir [environnement de développement intégré](#x2116934).
 
-### représentant de l'équipe de gestion de capacité IGA
-{: #x2214640}
+### identificateur global unique (GUID)
+{: #x2390455}
 
-Cette équipe est chargée de s'assurer que les problèmes de disponibilité soient communiqués au OMTL tout au long de la phase de gestion des opérations
-du portefeuille déployé. Cette équipe est responsable de l'émission de rapports de capacité.
+Nombre déterminé de manière algorithmique identifiant de façon unique une entité dans un système. Voir aussi [ID d'appli](#x7909906).
+
+### identificateur URI (URI)
+{: #x2116436}
+
+Adresse unique permettant d'identifier le contenu sur le Web, tel une
+page de texte, un clip vidéo ou audio, une image statique ou animée ou un
+programme. Le type
+d'URI le plus courant est l'adresse de page Web, qui correspond à une forme ou un
+sous-ensemble particulier d'URI appelé URL (Uniform Resource Locator). Un URI décrit
+généralement la manière d'accéder à la ressource, à l'ordinateur contenant la ressource
+et au nom de la ressource (nom de fichier) sur l'ordinateur.
+
+### IDE Web
+{: #x7494461}
+
+Dans IBM DevOps Services, interface IDE basée sur un navigateur pour le développement web et cloud, conçue à partir de la plateforme open source Orion d'Eclipse.
 
 ### IM
 {: #x2141735}
@@ -1072,43 +1104,51 @@ peuvent comporter plusieurs images parent (couches). Voir aussi [image de base](
 [espace de nom](#x2031005), [image parent](#x8439210),
 [référentiel d'images privé](#x8439215), [registre](#x2064940).
 
+### image de base
+{: #x5366487}
+
+Image qui ne possède pas d'image parent. Voir aussi [image](#x2024928),
+[image parent](#x8439210).
+
+### image parent
+{: #x8439210}
+
+Image qui sert de base à une autre image. Par exemple, Ubuntu Linux est l'image parent de l'image IBM Liberty. Voir aussi
+[image de base](#x5366487), [image](#x2024928).
+
 ### IMP
 {: #x2214647}
 
 Voir [plan d'infrastructure principal](#x2214645).
 
-### entrave
-{: #x4015600}
+### incident
+{: #x2117804}
 
-Elément qui empêche la progression ou élément de travail qui effectue le suivi d'un élément qui empêche la progression.
+Elément de projet qui permet aux parties prenantes de suivre les erreurs et les correctifs d'erreurs.
+
+### infrastructure
+{: #x2023472}
+
+Architecture qui fournit une structure standard pour une application et, en général, des fonctionnalités extensibles.  L'infrastructure active et simplifie une implémentation cohérente de technologies complexes destinées au développement d'applications.
+
+### infrastructure d'implémentation de la chaîne de valeur
+{: #x2214975}
+
+Infrastructure permettant une approche commune pour une implémentation cohérente de la chaîne de valeur à travers IBM, mais prenant en compte
+les exigences uniques de chaque chaîne de valeur.
 
 ### infrastructure sous forme de service (IaaS)
 {: #x4585332}
 
 Distribution d'une infrastructure d'ordinateur, incluant les fonctionnalités de serveur, de réseau, de centre de données et de stockage sous forme de service externe.
 
-### initiative d'infrastructure
-{: #x2214657}
+### ingénieur-système
+{: #x2214941}
 
-Ensemble de programmes d'infrastructure ou de projets visant à réaliser une modification de l'infrastructure en soutien d'une initiative
-métier ou de transformation, ou encore d'un objectif technologique.
+Personne chargée de s'assurer que les solutions informatiques de bout en bout intégrées respectent les exigences métier, notamment des plans de test de
+bout en bout et des tests de ces solutions, de l'intégration de disciplines d'ingénierie comme les performances et la disponibilité, et de contrôler
+l'intégration de la solution en environnement de production.
 
-### plan d'infrastructure principal (IMP)
-{: #x2214645}
-
-Regroupement de plans de projet composé de deux types de projets -- état stable et agent de modification --implémentés dans une infrastructure
-commune. L'IMP considère tous les plans de projet développés et exécutés par des responsables de projet
-individuels de l'équipe comme se référant à un plan unique dans le but de gérer l'infrastructure.
-
-### proposition de projet initiale (IPP)
-{: #x2214662}
-
-Développée par le PDT lors de la phase de concepts. Elle est composée de la documentation suivante : modèle de charte PDT, Fiche principale
-BTOP (business transformation operations
-process), modèle métier BTOP (éléments de la phase concepts), document de proposition de solution d'architecture (APD), et plan de projet intégré
-initial (ce plan est généralement élaboré par le responsable du projet de solution ou par
-le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
-PDTL.
 
 ### initiative
 {: #x2214669}
@@ -1116,69 +1156,68 @@ PDTL.
 Groupe de solutions, de projets et d'actifs associés qui, après leur développement et déploiement, induit une transformation de l'activité. Les initiatives
 sont développées dans le cadre de la planification des transformations métier.
 
+### initiative de processus
+{: #x2214769}
+
+Ensemble de programmes de processus ou de projets destiné à réaliser une transformation/modification de processus
+en soutien d'une initiative métier ou de transformation.
+
+### initiative de transformation métier
+{: #x2214464}
+
+Ensemble de programmes ou de projets (de processus et informatiques) pour atteindre un objectif métier.
+
+### initiative d'infrastructure
+{: #x2214657}
+
+Ensemble de programmes d'infrastructure ou de projets visant à réaliser une modification de l'infrastructure en soutien d'une initiative
+métier ou de transformation, ou encore d'un objectif technologique.
+
+### initiative IT
+{: #x2214694}
+
+Ensemble de programmes informatiques ou de projets destinés à réaliser une transformation/modification informatique en soutien d'une initiative
+métier ou de transformation, ou encore d'un objectif technologique.
+
+
 ### instance
 {: #x2002531}
 
 Entité composée de ressources réservées à une application ou à un service en particulier.
-
-### environnement de développement intégré (IDE)
-{: #x2116934}
-
-Jeu d'outils de développement, tels qu'éditeurs de code source, compilateur,
-et débogueurs qui sont accessibles à partir d'une même interface utilisateur.
-
-### équipe de gestion de portefeuille intégré (IPMT)
-{: #x2118026}
-
-Groupe responsable au niveau global des performances métier WW d'un portefeuille d'offres de produit. Equipe pluridisciplinaire composée de
-cadres supérieurs BPE, BIE, WWPL et GS chargés de la prise de décisions en matière d'investissements métier. Voir également [équipe de
-développement de projet](#x2422165).
-
-### développement de produits intégrés (IPD)
-{: #x2213501}
-
-L'un des deux processus métier principaux de l'entreprise (avec la gestion de la relation client) chez IBM. IPD définit comment les offres sont
-développées et distribuées.
 
 ### intégration
 {: #x2267187}
 
 Activité de développement logiciel dans laquelle les composants logiciels distincts sont combinés pour former un seul exécutable .
 
-### agence interactive
-{: #x2214674}
+### intégration continue (CI)
+{: #x6009572}
 
-Sous-traitant privilégié par IBM pour aider l'organisation dans la conception de site Web, le développement de contenu et la génération d'une bannière.
+Pratique de développement de logiciel où les membres d'une équipe intègrent fréquemment leur travail de sorte que plusieurs intégrations ont lieu chaque jour. Les
+intégrations sont vérifiées par une construction automatisée afin de détecter aussitôt que possible les erreurs d'intégration.
 
-### certificat intermédiaire
-{: #x3753781}
+### intercepteur de relations de confiance (TAI)
+{: #x2239009}
 
-Certificat subordonné émis par l'autorité de certification racine accréditée spécifiquement pour émettre
-des certificats serveur d'entité de
-fin. Le résultat est une chaîne de certificats qui débute à l'autorité de certification racine accréditée, continue avec le certificat intermédiaire et finit
-avec le certificat SSL émis pour l'organisation. Voir aussi [autorité de certification](#x2016383), [certificat racine digne de confiance](#x2042234).
+Mécanisme par lequel la confiance est validée dans l'environnement de produit pour chaque demande reçue par le serveur proxy. La méthode de validation
+est convenue par le serveur proxy et l'intercepteur.
 
-### contrôles d'audit interne et métier (IABC)
-{: #x4971252}
+### interface de ligne de commande (CLI)
+{: #x2051424}
 
+Interface informatique dans laquelle les données d'entrée et de sortie sont de type texte.
 
+### interface de programme d'application (API)
+{: #x2000186}
+
+Interface qui permet à un programme d'application écrit dans un
+langage de haut niveau d'utiliser des données ou des fonctions spécifiques
+du système d'exploitation ou d'un autre programme.
 
 ### Internet of Things (IoT)
 {: #x6714341}
 
 Réseau d'objets interconnectés qui simulent un "internet" de périphériques connectables.
-
-### responsable de l'Intranet (IM)
-{: #x2214679}
-
-Personne responsable de l'évaluation et de l'approbation de toutes les demandes d'application, de la planification des ressources
-et du pilotage de la conception et de la navigation de site Web, de développement d'application et de l'hébergement.
-
-### comité de revue des investissements (IRB)
-{: #x2205860}
-
-Cadres chez les parties prenantes chargés de définir l'orientation stratégique de la transformation métier
-et de la vision pour l'organisation ou l'unité commerciale.
 
 ### IoT
 {: #x6714346}
@@ -1211,25 +1250,28 @@ Voir [comité de revue des investissements](#x2205860).
 Voir [sprint](#x6248609).
 
 
-### initiative IT
-{: #x2214694}
-
-Ensemble de programmes informatiques ou de projets destinés à réaliser une transformation/modification informatique en soutien d'une initiative
-métier ou de transformation, ou encore d'un objectif technologique.
-
-
 ## J
 {: #glossj}
 
-### Fichier JAR
-{: #x2406009}
+### jalon
+{: #x2118203}
 
-Fichier d'archive Java.
+Evénement important dans un projet ou un processus, permettant de déterminer la progression vers les objectifs.
 
 ### JavaScript Object Notation (JSON)
 {: #x3292165}
 
 Format léger d'échange de données reposant sur la notation littérale des objets JavaScript. JSON est un format indépendant de tout langage de programmation, mais utilise les conventions de divers langages.
+
+### jeton d'accès
+{: #x2113001}
+
+Valeur utilisée par le consommateur pour obtenir l'accès aux ressources protégées pour le compte de l'utilisateur, au lieu d'utiliser les données d'identification du fournisseur de services de l'utilisateur.
+
+### jeu de règles
+{: #x3721562}
+
+Programme de prise de décision qui peut être traité par un moteur de règles pour fournir une décision, sur la base de paramètres d'entrée et de sortie. La logique de prise de décision est mise en oeuvre sous forme de règles, de tables de décision et de flux d'exécution de règles.
 
 ### JSON
 {: #x4267096}
@@ -1240,31 +1282,28 @@ Voir [JavaScript Object Notation (JSON)](#x3292165).
 ## L
 {: #glossl}
 
-### couche
-{: #x2028320}
-
-Version modifiée d'une image parent. Les images sont composées de couches, où la version modifiée est placée sur l'image
-parent, afin de créer la nouvelle image. Voir aussi [conteneur](#x2010901),
-[image](#x2024928).
-
 ### LDAP
 {: #x2481619}
 
 Voir [LDAP (Lightweight Directory Access
 Protocol)](#x2028538).
 
-### clé de licence
-{: #x2804840}
+### liaison agences
+{: #x2214318}
 
-Autorisation qui réglemente l'utilisation de programmes sous licence logicielle. Les clés d'utilisation de licence logicielle doivent être installées
-sur le
-système lorsqu'un logiciel est mis à niveau ou déplacé, le groupe de processeurs matériels est changé, une utilisation supplémentaire de la licence est
-ajoutée ou un nouveau logiciel requérant des clés de licence est acheté.
+Personne facilitant les relations d'IBM avec ses agences interactives dans le monde et chargée de gérer le portefeuille de projets interactifs
+au niveau mondial, notamment la prévision des dépenses et le suivi des bons de commande IBM concernés par rapport aux prévisions, l'optimisation
+des affectations des agences, des charges de travail et des performances à travers l'entreprise.
 
-### appels API légers
-{: #x7690463}
+### lier
+{: #x2000361}
 
-Opération client qui lit des données. Les appels API légers utilisent moins de ressources que les appels API lourds, car ils exécutent une seule fonction. Voir aussi [appel API lourd](#x7690468).
+Etablir une connexion entre des composants logiciels à travers un
+réseau au moyen d'un protocole déterminé. Dans des services Web,
+l'opération de liaison se produit lorsque le demandeur de service
+appelle ou lance une interaction avec le service au moment de
+l'exécution, grâce aux détails de liaison dans la description du
+service pour localiser, contacter et appeler ce dernier.
 
 ### Lightweight Directory Access Protocol (LDAP)
 {: #x2028538}
@@ -1273,82 +1312,105 @@ Protocole ouvert utilisant TCP/IP pour fournir l'accès aux annuaires qui prenne
 le protocole X.500 DAP (Directory Access Protocol) plus complexe ne sont pas requises. Par exemple, le protocole LDAP peut être utilisé pour localiser des
 personnes, des organisations et d'autres ressources dans un annuaire Internet ou Intranet.
 
-### cloud local
-{: #x8439194}
+### livrable
+{: #x2214520}
 
-Environnement de Cloud Computing dans le centre de données du client. Le cloud local se trouve sur site et fournit une sécurité et un temps
-d'attente améliorés. Voir aussi [sans frontières](#x8439189).
+Tout résultat ou élément mesurable et tangible devant être produit pour achever un projet ou une partie d'un projet. Souvent utilisé dans un sens plus
+restreint en référence à un livrable externe sujet à approbation par le parrain du projet ou le client.
 
+### livraison de services de gestion globale d'application (GAMSD)
+{: #x2214603}
+
+
+
+### logiciel sous forme de services (SaaS)
+{: #x4585386}
+
+Modèle de déploiement selon lequel un logiciel incluant des processus métier, des applications d'entreprise et des outils collaboratifs est fourni aux clients en tant que service via le cloud.
 
 ## M
 {: #glossm}
 
-### fichier manifeste
-{: #x2858069}
+### machine virtuelle
+{: #x2043253}
 
-- Fichier contenant des informations (par exemple, des paramètres, des instructions ou des métadonnées) relatives à d'autres fichiers ou à des artefacts.
-- Avec les applis Android, le fichier manifeste spécifie les droit et les paramètres de collecte de données de sorte que les périphériques mobile puissent rapporter les informations requises de la part des testeurs et des clients. Des fichiers manifeste distincts sont requis pour les testeurs internes et les clients.
+Voir [machine virtuelle](#x2043165).
+
+### machine virtuelle (VM)
+{: #x2043165}
+
+Implémentation logicielle d'une machine qui exécute des programmes comme une machine réelle. Voir aussi [serveur virtuel](#x2455638).
+
+### magasin de données
+{: #x2052849}
+
+Emplacement (système de base de données, fichier ou répertoire) où des données sont stockées.
 
 ### MBaaS
 {: #x7044865}
 
 Voir [système de back end mobile sous forme de services (MBaaS)](#x7044858).
 
-### fusionner/fusion
-{: #x2030107}
+### mesures de performances
+{: #x2214746}
 
-- action d'extraire le contenu d'une branche et de l'appliquer à une autre branche.
-- validation du résultat de l'intégration du contenu d'une branche dans la branche en cours.
+Métriques qui fournissent une source d'information unique sur les initiatives de transformation d'IBM et leur impact sur les résultats métier
+d'IBM.
+
+### méthode HTTP
+{: #x2024674}
+
+Action utilisée par le protocole HTTP. Les méthodes HTTP comprennent les méthodes GET, POST et PUT.
 
 ### microservice
 {: #x8379238}
 
 Ensemble de petits composants d'architecture indépendants, associés chacun à un objectif spécifique et communiquant via une API légère commune.
 
-### jalon
-{: #x2118203}
+### mode de préproduction
+{: #x7290124}
 
-Evénement important dans un projet ou un processus, permettant de déterminer la progression vers les objectifs.
+Etat opérationnel dans lequel les testeurs internes utilisent toutes les fonctionnalités de collecte de données pour fournir des informations détaillées sur le comportement et les performances d'une appli. Voir aussi [bibliothèque de pré-production](#x7290106).
 
-### application mobile
-{: #x7636517}
+### mode de requête dynamique (DQM)
+{: #x5390841}
 
-Voir [application mobile](#x4258535).
+Mode d'exécution de requête Java qui fournit l'accès natif aux sources de données. Ce mode gère la complexité des requêtes et les optimise pour les grands volumes de données. Il dispose de fonctions de requête avancées, comme la mise en mémoire cache, ce qui offre des avantages en termes de planification, d'exécution et de résultat.
 
-### application mobile
-{: #x4258535}
 
-Application conçue pour une plateforme mobile. Tout comme les applications Web, les applis mobiles fournissent une fonctionnalité qui va au-delà de l'affichage statique d'informations, par exemple, en autorisant l'utilisateur à filtrer des nouvelles pratiquement en temps réel. Voir aussi [appli](#x4281528).
+### modèle
+{: #x2041200}
 
-### système de back end mobile sous forme de services (MBaaS)
-{: #x7044858}
-
-Modèle informatique qui permet de connecter des applications mobiles à des services Cloud Computing et de fournir des fonctionnalités telles que la gestion des utilisateurs, les notifications push et l'intégration à des réseaux sociaux via une interface de programme d'application et un kit de développement de logiciels unifiés.
-
-### cloud mobile
-{: #x4585344}
-
-Infrastructure dans laquelle le stockage et le traitement des données des applications est déchargé depuis un périphérique mobile dans le cloud. Avec le Cloud Computing mobile, les applications ne sont pas limitées à un transporteur spécifiques mais sont accessibles via le Web.
+Structure prédéfinie associée à un artefact.
 
 ### modèle
 {: #x2245601}
 
 Représentation physique ou métier de la structure de données provenant d'une ou de plusieurs sources de données. Un modèle décrit des objets de données, la structure, le regroupement ainsi que les relations et la sécurité. Dans Cognos BI, un modèle est créé et mis à jour dans Framework Manager. Le modèle ou un sous-ensemble de celui-ci doit être publié sur le serveur Cognos sous forme de package que les utilisateurs pourront utiliser pour créer et exécuter des rapports.
 
-### surveillance
-{: #x2200930}
+### mode production
+{: #x6070975}
 
-Capture, analyse, et génération de rapports sur les performances du projet, généralement par rapport à un plan.
+Etat opérationnel dans lequel les clients utilisent un ensemble limité de fonctionnalités de collecte de données pour fournir des informations sur le comportement et les performances d'une appli. Voir aussi [bibliothèque de production](#x2034919).
 
+### module de démarrage
+{: #x7470511}
+
+Modèle incluant des services prédéfinis et du code d'application configuré avec un pack de construction particulier.   Un module de démarrage peut se composer d'un code d'application écrit dans un langage de programmation spécifique, ou d'une combinaison de code d'application et d'un ensemble de services. Voir aussi [exécution](#x2391929).
 
 ## N
 {: #glossn}
 
-### espace de nom
-{: #x2031005}
+### noeud final
+{: #x2026820}
 
-Nom unique qui identifie le référentiel d'images de votre organisation dans le registre Bluemix. Voir aussi
-[image](#x2024928), [référentiel d'images privé](#x8439215).
+Adresse d'une interface de programme d'application ou d'un service dans un environnement. Une interface de programme d'application expose
+un noeud final et appelle en même temps les noeuds finaux pour d'autres services.
+
+### notification push
+{: #x5599582}
+
+Alerte signalant une modification ou une mise à jour au niveau d'une icône d'appli mobile.
 
 
 ## O
@@ -1365,31 +1427,16 @@ ressource, en créant une interaction d'approbation entre le propriétaire de la
 
 Voir [équipe de gestion des opérations](#x2214710).
 
-### sur site
-{: #x6969434}
-
-Voir [local](#x4561212).
-
-### sur site
-{: #x4561212}
-
-S'applique à un logiciel installé et exécuté sur les ordinateurs d'un utilisateur ou d'une organisation.
-
 ### open source
 {: #x2062278}
 
 S'applique aux logiciels dont le code source est rendu disponible pour le public qui peut alors l'utiliser ou le modifier. Un logiciel open source est généralement le fruit d'une collaboration publique et mis à disposition gratuitement, bien que son utilisation et sa redistribution puissent être soumises à des restrictions de licence. Linux est un parfait exemple de logiciel open source.
 
-### équipe de gestion des opérations
-{: #x2214710}
+### opinion de l'utilisateur
+{: #x7290116}
 
-Equipe responsable d'un portefeuille d'applications visant un segment spécifique du secteur. L'équipe gère et surveille les performances de la solution et
-recommande des actions correctives. Elle identifie les nouvelles exigences, exécute les plans de gestion des opérations et les activités de fin de vie.
+Score dérivé des évaluations d'application par les utilisateurs à partir des principaux magasins d'applications de détail en ligne. La fonction balaie l'ensemble des évaluations et des avis pour générer un score cumulé d'application mobile qui tient compte de la qualité de l'appli, de la satisfaction utilisateur et de l'ensemble des retours positifs et négatifs.
 
-### organisation
-{: #x7470494}
-
-Voir [organisation](#x2032585).
 
 ### organisation
 {: #x2032585}
@@ -1397,6 +1444,20 @@ Voir [organisation](#x2032585).
 Méthodologie de regroupement pour les utilisateurs dans Bluemix. Les organisations permettent de gérer les quotas. Les utilisateurs d'une
 organisation partagent les quotas d'instances de service et de mémoire. Voir aussi [domaine](#x2021210), [espace](#x2039442).
 
+
+### organisation
+{: #x7470494}
+
+Voir [organisation](#x2032585).
+
+### outil de gestion de la transformation métier (BTMT)
+{: #x2214418}
+
+outil de flux de travaux développé par le BT-CIO pour gérer le développement de solutions, de projets et d'actifs au cours des processus de développement
+de solution BTMS. BTMT est utilisé pour réaliser les tâches suivantes : déclenchement de l'activité de marketing Web,
+demande d'un nouveau site Web, lancement d'un nouveau développement d'un actif quelconque
+(application, outil, salle d'équipe, référentiel de données, formulaire, ou service du système d'infrastructure), déploiement d'un type d'actif,
+gestion d'un actif une fois déployé, ou demande de financement informatique (IPP#).
 
 ## P
 {: #glossp}
@@ -1406,16 +1467,10 @@ organisation partagent les quotas d'instances de service et de mémoire. Voir au
 
 Voir [plateforme sous forme de service](#x2029786).
 
-### image parent
-{: #x8439210}
+### partage de fichiers
+{: #x2022902}
 
-Image qui sert de base à une autre image. Par exemple, Ubuntu Linux est l'image parent de l'image IBM Liberty. Voir aussi
-[image de base](#x5366487), [image](#x2024928).
-
-### contenu
-{: #x2238121}
-
-Corps d'un message qui inclut son contenu.
+Dans Bluemix, zone de stockage de fichiers partagés, basée cloud, et contenant des volumes.
 
 ### PDR
 {: #x2214726}
@@ -1427,23 +1482,30 @@ Voir [revue de conception préliminaire](#x2214724).
 
 Voir [équipe de développement de projet](#x2422165).
 
-### architecte responsable PDT
-{: #x2214734}
+### phase de concept
+{: #x2214500}
 
-Chargé de définir l'architecture du projet, en garantissant son intégration avec d'autres systèmes et conformément
-au plan directeur de l'architecture e-business et aux normes et instructions BT-CIO.
+Phase BTOP (Business transformation operations process) au cours de laquelle le PDT assimile les exigences et développe des concepts, confirme le besoin
+et la possibilité de développer une solution, élabore une proposition de projet initiale (y-compris des modèles), détermine le budget pour la phase suivante.
 
-### mesures de performances
-{: #x2214746}
+### phase de développement
+{: #x2214537}
 
-Métriques qui fournissent une source d'information unique sur les initiatives de transformation d'IBM et leur impact sur les résultats métier
-d'IBM.
+Phase BTOP (business transformation operations process) au cours de laquelle la solution est développée.
 
-### test pilote
-{: #x2214751}
+### phase de plan
+{: #x2214756}
 
-Test pré-déploiement avec utilisation, données et portée limitées de nouvelles fonctions pour s'assurer que ces fonctions et les processus et procédures
-associés fonctionnent correctement.
+Phase BTOP (Business transformation operations process) sous laquelle le plan de projet est développé, les calendriers et ressources sont validés (proposition de
+projet finale, IPMT et contrat PDT), et le budget des deux phases suivantes débloqué.
+
+### phase de qualification
+{: #x2214800}
+
+Phase BTOP (Business transformation operations process) de qualification et certification. Ses activités comprennent : élévation de la solution à
+l'état production et vérification de l'état de préparation de l'infrastructure, déblocage de budget pour la phase suivante ou jusqu'à la fin de vie du
+projet.
+
 
 ### pipeline
 {: #x2063222}
@@ -1451,11 +1513,31 @@ associés fonctionnent correctement.
 Service de génération et de déploiement reproductible qui fractionne en étapes la livraison du logiciel. Les pipelines prennent en charge la livraison et
 l'intégration en continu, y-compris les tests automatisés.
 
-### phase de plan
-{: #x2214756}
+### plan de gestion de réingénierie d'exécution (FRMP)
+{: #x2214592}
 
-Phase BTOP (Business transformation operations process) sous laquelle le plan de projet est développé, les calendriers et ressources sont validés (proposition de
-projet finale, IPMT et contrat PDT), et le budget des deux phases suivantes débloqué.
+
+
+
+### plan de sauvegarde/reprise
+{: #x2214370}
+
+Plan identifiant l'approche, les procédures et les actions à entreprendre en cas d'opération ou d'exécution infructueuse. Ce plan n'indique pas de
+revenir à l'environnement d'origine mais identifie le plan alternatif à suivre. Il génère les informations (clichés, fichiers de sauvegardes, journaux,
+etc.) requis pour une reprise en cas d'erreur grave ou de traitement d'une exception an vue de continuer.
+
+### plan d'infrastructure principal (IMP)
+{: #x2214645}
+
+Regroupement de plans de projet composé de deux types de projets -- état stable et agent de modification --implémentés dans une infrastructure
+commune. L'IMP considère tous les plans de projet développés et exécutés par des responsables de projet
+individuels de l'équipe comme se référant à un plan unique dans le but de gérer l'infrastructure.
+
+### planification commerciale
+{: #x2214448}
+
+Série de processus qui analyse le portefeuille IBM, le compare à l'environnement concurrentiel, utilise une stratégie pour dégager une
+direction, et enfin décide des opportunités de transformation optimales pour garantir qu'IBM reste concurrentielle sur le marché.
 
 ### plateforme sous forme de service (PaaS)
 {: #x2029786}
@@ -1472,20 +1554,41 @@ Voir [gestionnaire de projet](#x2214761).
 
 Voir [project management institute](#x2214765).
 
-### revue de conception préliminaire (PDR)
-{: #x2214724}
+### point de contrôle de décision (DCP)
+{: #x2214510}
 
-Revue réalisée par l'ingénieur système (SE) lors de la phase de plan.
+Processus BTOP (business transformation operations) composé de trois phases : concepts, plan et qualification.
 
-### bibliothèque de préproduction
-{: #x7290106}
+### point de contrôle d'entreprise
+{: #x2214568}
 
-Collection de fonctionnalités de test qui regroupent des informations détaillées sur les anomalies et les problèmes liés à une appli. Les fonctionnalités de test identifient le périphérique et l'utilisateur à l'origine du bogue, de sorte que les développeurs puissent disposer des journaux et des informations requises pour remédier aux problèmes. Voir aussi [mode pré-production](#x7290124).
+Contrôle mesurable et auditable des processus, données, applications et infrastructure entre entreprise et chaîne de la valeur
+pour promouvoir les objectifs de l'entreprise ;
+par exemple, normes de données client et financières.
 
-### mode de préproduction
-{: #x7290124}
+### portabilité cloud
+{: #x4585297}
 
-Etat opérationnel dans lequel les testeurs internes utilisent toutes les fonctionnalités de collecte de données pour fournir des informations détaillées sur le comportement et les performances d'une appli. Voir aussi [bibliothèque de pré-production](#x7290106).
+Possibilité de déplacer des applications et des services entre des environnements de Cloud Computing publics ou privés ou depuis des
+fournisseurs de cloud différents.
+
+### portée
+{: #x2037763}
+
+- Dans le contexte de la gestion des identités, ensemble d'entités pouvant être affectées par une règle ou
+un ICA (informations sur le contrôle d'accès).
+- Somme des produits et services à fournir en tant que projet.
+
+### portefeuille d'alliances
+{: #x2214331}
+
+Le portefeuille d'alliances mappe les processus métier internes avec chaque solution des alliances stratégiques (Ariba, i2, SAP, Siebel) pour
+indiquer leur couverture et leur utilisation.
+
+### portefeuille d'applications
+{: #x2214344}
+
+Suite d'applications associées qui sont la propriété d'un processus (par exemple, CRM) ou d'une unité commerciale (par exemple, PCD).
 
 ### priorité
 {: #x2090430}
@@ -1494,55 +1597,16 @@ En matière de développement de logiciels et de systèmes, classement affecté 
 ceux-ci sont
 traités.
 
-### cloud privé
-{: #x4585362}
-
-Environnement de Cloud Computing dont l'accès est limité aux membres des réseaux d'une entreprise et de ses partenaires. Voir aussi
-[cloud public](#x4585370).
-
-### référentiel d'images privé
-{: #x8439215}
-
-Combinaison du registre Bluemix d'une organisation et de son espace de nom. Le référentiel d'images privé est utilisé lors du référencement
-d'une image dans une commande. Voir aussi [image](#x2024928), [espace
-de nom](#x2031005).
-
-### clé privée
-{: #x2034701}
-
-Canevas algorithmique servant à chiffrer des messages que seule la clé publique correspondante pourra déchiffrer. La clé privée sert également à déchiffrer les messages encodés par la clé publique correspondante. Elle est conservée sur le système de l'utilisateur et protégée par un mot de passe.
-
-### service privé
-{: #x7690456}
-
-Service visible seulement des membres d'une organisation Bluemix spécifique.
-
-### initiative de processus
-{: #x2214769}
-
-Ensemble de programmes de processus ou de projets destiné à réaliser une transformation/modification de processus
-en soutien d'une initiative métier ou de transformation.
-
-### bibliothèque de production
-{: #x2034919}
-
-Sous-ensemble de la bibliothèque de pré-production des fonctionnalités de test d'appli utilisé par les clients. Les périphériques mobiles des clients rapportent les anomalies et les problèmes de manière anonyme. Ces fonctionnalités collectent également des informations moins détaillées dans les journaux, les données de session et les rapports de panne. Voir aussi [mode production](#x6070975).
-
-### mode production
-{: #x6070975}
-
-Etat opérationnel dans lequel les clients utilisent un ensemble limité de fonctionnalités de collecte de données pour fournir des informations sur le comportement et les performances d'une appli. Voir aussi [bibliothèque de production](#x2034919).
-
-### revue de l'état de préparation pour la production (PRR)
-{: #x2214787}
-
-Revue réalisée par l'ingénieur système (SE) lors de la phase de qualification.
-
 ### programme
 {: #x2034977}
 
 Vaste transformation composée de nombreux projets sillonnant toute l'entreprise. Les projets individuels sont gérés par leurs propres
 PDT et IPMT, mais sont entrelacés dans ceux du programme.
+
+### project management institute (PMI)
+{: #x2214765}
+
+
 
 ### projet
 {: #x2035151}
@@ -1550,21 +1614,43 @@ PDT et IPMT, mais sont entrelacés dans ceux du programme.
 Collection organisée permettant de regrouper des dossiers ou des packages. Les projets permettent de générer, de partager
 et d'organiser les ressources d'un seul travail et de gérer leurs versions.
 
-### équipe de développement de projet (PDT)
-{: #x2422165}
+### projet autonome
+{: #x2214926}
 
-Equipe technique et commerciale désignée par l'IPMT sponsor pour exécuter le cycle de développement de solution d'une nouvelle offre. Voir aussi
-[équipe de gestion de portefeuille intégré](#x2118026).
+Projet unique au sein d'une seule organisation . Peut faire partie d'un projet de composant.
 
-### project management institute (PMI)
-{: #x2214765}
+### projet de composant
+{: #x2214495}
 
+L'un des projets individuels dans un programme ; peut être composé de plusieurs projets dans la même organisation.
 
+### proposition de projet finale (FPP)
+{: #x2214585}
 
-### gestionnaire de projet (PM)
-{: #x2214761}
+Développée par le PDT dans la phase de plan et qui constitue la base du contrat IPMT/PDT convenu dans la phase Plan. Elle est composée de la
+documentation suivante : Fiche principale BTOP (business transformation operations process), modèle métier BTOP (éléments de la phase plan),
+document de définition
+de la solution d'architecture (ADD), contrat IPMT/PDT et plan de projet intégré (ce plan est généralement élaboré par le responsable du projet de solution ou par
+le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
+PDTL. Les modèles (modèle métier BTOP, modèle d'architecture et de technologie BTOP) et le plan de projet intégré continuent à être mis à jour
+par phase au fur et à mesure de l'évolution du projet. Toutefois, si les résultats indiquent que le projet dépasse les limites du contrat
+IPMT/PDT du plan, un DCP avec l'équipe IPMT doit être réalisé.
 
+### proposition de projet initiale (IPP)
+{: #x2214662}
 
+Développée par le PDT lors de la phase de concepts. Elle est composée de la documentation suivante : modèle de charte PDT, Fiche principale
+BTOP (business transformation operations
+process), modèle métier BTOP (éléments de la phase concepts), document de proposition de solution d'architecture (APD), et plan de projet intégré
+initial (ce plan est généralement élaboré par le responsable du projet de solution ou par
+le responsable technique du projet). Cette proposition peut contenir une documentation supplémentaire issue d'autres sources, comme le juge utile le
+PDTL.
+
+### protocole d'entente (DOU)
+{: #x2214542}
+
+Document formel qui définit les modalités d'une relation entre un consommateur d'un service et le fournisseur de ce
+service.
 
 ### prototypage
 {: #x2214782}
@@ -1578,50 +1664,41 @@ proche du système proposé, mais non encore complètement développé.
 
 Voir [revue de l'état de préparation pour la production](#x2214787).
 
-### cloud public
-{: #x4585370}
-
-Environnement de Cloud Computing dans lequel l'accès aux ressources normalisées, telles que l'infrastructure, le matériel à service partagé
-et les services, est disponible pour les abonnés, avec une facturation à la carte. Voir aussi [sans frontières](#x8439189), [cloud privé](#x4585362).
-
 ### push
 {: #x2035465}
 
 Envoyer des informations d'un serveur vers un client. Lorsqu'un serveur envoie du contenu, c'est lui qui lance la transaction, et non le
 client qui la demande.
 
-### notification push
-{: #x5599582}
-
-Alerte signalant une modification ou une mise à jour au niveau d'une icône d'appli mobile.
-
-
-## Q
-{: #glossq}
-
-### phase de qualification
-{: #x2214800}
-
-Phase BTOP (Business transformation operations process) de qualification et certification. Ses activités comprennent : élévation de la solution à
-l'état production et vérification de l'état de préparation de l'infrastructure, déblocage de budget pour la phase suivante ou jusqu'à la fin de vie du
-projet.
-
-
 ## R
 {: #glossr}
 
-### semi-fixe
-{: #x7470468}
+### rapport
+{: #x2036830}
 
-S'applique aux données modifiées de manière dynamique.
+Ensemble de données préparé pour communiquer des informations métier.
 
-### déploiement rouge-noir
-{: #x8439181}
+### rapport actif
+{: #x5074928}
 
-Technique de déploiement qui permet une distribution continue en activant le test, le développement et le déploiement synchronisés. Au
-départ, le développement est effectué dans un environnement inactif (black) alors que l'environnement actif continue d'accepter le trafic (red). Lorsque le
-déploiement commence, les deux environnements sont actifs (red-red) jusqu'à ce que le routage soit désactivé dans l'environnement de version précédent,
-auparavant actif, puis retiré (black) alors que le nouvel environnement est le seul environnement actif. Voir aussi [déploiement Blue-Green](#x7807335).
+Type de sortie de rapport géré hautement interactif et facile à utiliser, utilisable hors ligne par les utilisateurs. Les rapports actifs sont créés pour des utilisateurs professionnels, afin de leur permettre d'explorer leurs données et de dériver des données approfondies supplémentaires.
+
+### référentiel
+{: #x7639721}
+
+Voir [référentiel](#x2036865).
+
+### référentiel
+{: #x2036865}
+
+Emplacement de stockage de persistance pour des données et d'autres ressources d'application.
+
+### référentiel d'images privé
+{: #x8439215}
+
+Combinaison du registre Bluemix d'une organisation et de son espace de nom. Le référentiel d'images privé est utilisé lors du référencement
+d'une image dans une commande. Voir aussi [image](#x2024928), [espace
+de nom](#x2031005).
 
 ### région
 {: #x2091391}
@@ -1634,30 +1711,88 @@ Territoire géographique défini. Une région peut être une zone avec un code p
 Référentiel public ou privé contenant des images utilisées pour créer des conteneurs. Voir aussi [conteneur](#x2010901),
 [image](#x2024928).
 
-### référentiel
-{: #x7639721}
+### règle
+{: #x2037526}
 
-Voir [référentiel](#x2036865).
+Ensemble d'instructions conditionnelles permettant à des systèmes informatiques d'identifier des relations et d'exécuter les réponses automatisées correspondantes.
 
-### rapport
-{: #x2036830}
+### règle métier
+{: #x2266457}
 
-Ensemble de données préparé pour communiquer des informations métier.
+Représentation de la manière dont les pratiques et les stratégies métier s'appliquent à une activité métier.
 
-### référentiel
-{: #x2036865}
+### reliquat
+{: #x2315215}
 
-Emplacement de stockage de persistance pour des données et d'autres ressources d'application.
+Dans le contexte du développement agile, liste de fonctions ou de tâches techniques nécessaires pour un projet ou une édition, que l'équipe de
+développement
+évalue et pour lesquelles il définit les priorités.
 
-### espace de travail de référentiel
-{: #x3889804}
+### représentant de l'équipe de gestion de capacité IGA
+{: #x2214640}
 
-Objet de référentiel qui inclut un ou plusieurs composants. Les espaces de travail de référentiel sont généralement utilisés par chacun des membres de l'équipe pour y placer leurs modifications en cours. A partir de leur espace de travail de référentiel, les membres de l'équipe transmettent au flux leurs modifications et y acceptent celles émises par d'autres membres de l'équipe via le flux. Chaque espace de travail de référentiel appartient en propre à son propriétaire, et seul ce dernier peut le modifier. Voir aussi [espace de travail](#x2096037).
+Cette équipe est chargée de s'assurer que les problèmes de disponibilité soient communiqués au OMTL tout au long de la phase de gestion des opérations
+du portefeuille déployé. Cette équipe est responsable de l'émission de rapports de capacité.
 
 ### Representational State Transfer (REST)
 {: #x3220976}
 
 Style architectural de logiciel pour les systèmes hypermédia répartis, comme le World Wide Web. Ce terme fait également référence à une interface simple qui utilise XML (ou YAML, JSON, texte en clair) sur HTTP sans couche de messagerie supplémentaire, telle que SOAP.
+
+### réseau privé virtuel
+{: #x2484351}
+
+Voir [réseau privé virtuel](#x2043188).
+
+
+### réseau privé virtuel (VPN)
+{: #x2043188}
+
+Extension de l'intranet d'une entreprise sur l'infrastructure existante d'un réseau public ou privé. Un réseau privé virtuel assure la sécurisation des
+données qui sont envoyées entre deux noeuds finaux de sa connexion.
+
+### responsable de compte
+{: #x2214301}
+
+Personnes avec expérience métier et Internet qui examinent les demandes de site Web en termes d'alignement "OneIBM". Elles collaborent également avec les
+demandeurs de site Web pour s'assurer que le demandeur a réalisé les activités nécessaires pour atteindre les objectifs métier et marketing
+stipulés.
+
+### responsable de la livraison du projet (DPE)
+{: #x2214525}
+
+Responsable de la livraison du projet en charge de toutes les aspects d'un contrat liés à la livraison,
+notamment la satisfaction du client, la qualité de la prestation, la croissance du compte et la génération de bénéfices, la mise à disposition du service étant sa
+toute première responsabilité.
+
+### responsable de la sécurité et de la confidentialité des données
+{: #x2214812}
+
+Personne chargée de s'assurer que la solution respecte dans toutes ses phases les normes IBM de sécurité et de confidentialité, les exigences ASCA et les
+exigences légales et sociales. Chargé par le responsable PDT et OMT de s'assurer que les exigences de sécurité, de confidentialité,
+ASCA et autres, sont identifiées et respectées par les plans de la solution jusqu'à sa fin de vie.
+
+### responsable de l'Intranet (IM)
+{: #x2214679}
+
+Personne responsable de l'évaluation et de l'approbation de toutes les demandes d'application, de la planification des ressources
+et du pilotage de la conception et de la navigation de site Web, de développement d'application et de l'hébergement.
+
+### responsable des technologies de l'information (CIO)
+{: #x2214480}
+
+
+
+### responsable du déploiement
+{: #x2214532}
+
+Personne chargée de garantir la capacité de déploiement et d'exécution des processus métier
+après réingénierie et des solutions de transformation à travers toutes les implantations géographiques, unités métier et lignes fonctionnelles.
+
+### responsable global de projet (GPE)
+{: #x2214622}
+
+rôle IBM Global Services .
 
 ### ressource
 {: #x2004267}
@@ -1674,6 +1809,43 @@ Voir [Representational State Transfer (REST)](#x3220976).
 
 En développement agile, réunion ou élément de travail qui évalue les succès et les progrès à faire après un sprint.
 
+### revue critique de la conception (CDR)
+{: #x2214475}
+
+Revue effectuée par l'ingénieur système (SE) au cours de la phase Développement.
+
+### revue de conception préliminaire (PDR)
+{: #x2214724}
+
+Revue réalisée par l'ingénieur système (SE) lors de la phase de plan.
+
+### revue de l'état de préparation des tests (TRR)
+{: #x2214953}
+
+Revue réalisée par l'ingénieur système (SE) à l'issue de la phase de développement.
+
+### revue de l'état de préparation pour la production (PRR)
+{: #x2214787}
+
+Revue réalisée par l'ingénieur système (SE) lors de la phase de qualification.
+
+### revue des exigences système (SRR)
+{: #x2214919}
+
+Révision effectuée par un ingénieur système (SE) dans la phase de concepts.
+
+### rôle de propriétaire d'actif
+{: #x2214339}
+
+Le propriétaire de l'actif est l'utilisateur BIE, BPE, BTE ou Collaboration Executive chargé de s'assurer que toutes les tâches
+associées aux actifs déployés dont il est propriétaire sont effectuées.
+
+### rôle de responsable financier
+{: #x2214580}
+
+Responsable financier qui constitue l'interlocuteur pour les aspects financiers de la solution, consolide les plans individuels et effectue une
+évaluation financière du plan intégré.
+
 ### route
 {: #x2037338}
 
@@ -1684,11 +1856,6 @@ moins qu'un domaine personnalisé soit spécifié, Bluemix utilise un domaine pa
 [domaine personnalisé](#x5728384), [domaine](#x2021210),
 [hôte](#x2002243), [sous-domaine](#x2040080),
 [adresse URL](#x2042491).
-
-### règle
-{: #x2037526}
-
-Ensemble d'instructions conditionnelles permettant à des systèmes informatiques d'identifier des relations et d'exécuter les réponses automatisées correspondantes.
 
 ### RuleApp
 {: #x4106478}
@@ -1707,28 +1874,6 @@ d'applications de règles métier.
 Module qui s'intègre à l'environnement Java EE pour proposer les services standard d'une application afin d'exécuter, de contrôler et de surveiller les
 jeux de règles contenus dans RuleApps.
 
-### jeu de règles
-{: #x3721562}
-
-Programme de prise de décision qui peut être traité par un moteur de règles pour fournir une décision, sur la base de paramètres d'entrée et de sortie. La logique de prise de décision est mise en oeuvre sous forme de règles, de tables de décision et de flux d'exécution de règles.
-
-### dossier d'exploitation
-{: #x2830619}
-
-Compilation des procédures et opérations utilisées comme référence par un administrateur ou un opérateur système
-pour l'exécution et la maintenance d'un système ou réseau informatique.
-
-### environnement d'exécution
-{: #x2391929}
-
-Ensemble des ressources utilisées pour exécuter l'application. Voir aussi [module de démarrage](#x7470511).
-
-### environnement d'exécution
-{: #x2037566}
-
-Ensemble de ressources utilisées pour exécuter un programme ou un processus.
-
-
 ## S
 {: #glosss}
 
@@ -1737,22 +1882,25 @@ Ensemble de ressources utilisées pour exécuter un programme ou un processus.
 
 Voir [logiciel sous forme de service (SaaS)](#x4585386).
 
-### dimensionnement
-{: #x2004442}
+### sans bornes
+{: #x8439189}
 
-Augmentation de la capacité de la plateforme ou du système via l'ajout d'instances d'application ou de service.
+Qui appartient à une plateforme de développement ouverte, non propriétaire, incluant des modèles de déploiement de cloud public,
+de cloud dédié et de cloud local. Voir aussi [cloud dédié](#x8439199),
+[cloud local](#x8439194), [cloud public](#x4585370).
+
+### scénario métier
+{: #x2214458}
+
+Description ou synopsis d'un plan d'action ou d'événements envisagé. Le scénario définit et documente une transaction métier majeure de bout
+en bout, indique comment les personnes et les organisations interagissent pour exécuter le processus défini, la transaction métier, et comment ils utiliseront en fin de
+compte des systèmes et applications compatibles avec la conception du processus de bout en bout. Utilisé dans le processus business design assurance
+pour définir les interactions des utilisateurs avec les systèmes.
 
 ### SCM
 {: #x2116206}
 
 Voir [gestion de contrôle de source](#x3579285).
-
-### portée
-{: #x2037763}
-
-- Dans le contexte de la gestion des identités, ensemble d'entités pouvant être affectées par une règle ou
-un ICA (informations sur le contrôle d'accès).
-- Somme des produits et services à fournir en tant que projet.
 
 ### scrum
 {: #x7474016}
@@ -1764,66 +1912,62 @@ Méthode de programmation logicielle agile qui utilise des équipes inter foncti
 
 Réunion informelle quotidienne des parties prenantes dans un projet de développement agile. Les participants doivent comprendre un scrum maître, le propriétaire du produit et l'équipe, et peuvent inclure le directeur de produit et d'autres parties prenantes.
 
+### secousse
+{: #x5905152}
+
+Pour provoquer un mouvement, de sorte que l'accéléromètre d'un périphérique détecte ce mouvement et démarre un événement. Par exemple, les testeurs et les clients peuvent initier un rapport d'incident concernant une application en secouant leur périphérique.
+
+### section
+{: #x2094743}
+
+Section d'un progiciel qui définit une action spécifique à entreprendre sur le progiciel ou un ensemble de conditions dans lesquelles des actions doivent être entreprises sur le progiciel. Le progiciel complet est lui-même une section qui contient une hiérarchie composée de multiples sections différentes.
+
 ### Secure Sockets Layer (SSL)
 {: #x2038004}
 
 Protocole de sécurité garantissant la confidentialité de la communication. SSL permet aux application client/serveur de communiquer
 de manière à éviter l'écoute électronique, la contrefaçon et la falsification de messages. Voir aussi [autorité de certification](#x2016383).
 
-### responsable de la sécurité et de la confidentialité des données
-{: #x2214812}
+### semi-fixe
+{: #x7470468}
 
-Personne chargée de s'assurer que la solution respecte dans toutes ses phases les normes IBM de sécurité et de confidentialité, les exigences ASCA et les
-exigences légales et sociales. Chargé par le responsable PDT et OMT de s'assurer que les exigences de sécurité, de confidentialité,
-ASCA et autres, sont identifiées et respectées par les plans de la solution jusqu'à sa fin de vie.
+S'applique aux données modifiées de manière dynamique.
+
+### serveur virtuel
+{: #x2455638}
+
+Serveur partageant ses ressources avec d'autres serveurs pour épauler des applications. Voir aussi [machine virtuelle](#x2043165).
 
 ### service
 {: #x2038343}
 
 Extension de cloud qui fournit une fonctionnalité prête à l'emploi, telle qu'une base de données, une messagerie ou un logiciel Web pour exécuter du code ou des fonctionnalités de gestion ou de surveillance. Généralement, les services ne requièrent ni installation ni maintenance et peuvent être combinés pour créer des applications.
 
-### accord sur les niveaux de service (SLA)
-{: #x2038403}
+### service bêta
+{: #x7470455}
 
-Contrat entre un client et un fournisseur de services spécifiant les attentes de niveau de service quant à la disponibilité, les
-performances, et d'autres objectifs mesurables.
+Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Voir aussi [service expérimental](#x7470450).
+
+### service expérimental
+{: #x7470450}
+
+Service qui n'est pas prêt pour la production et qui peut être retiré à tout moment. Voir aussi [service bêta](#x7470455).
+
+
+### service privé
+{: #x7690456}
+
+Service visible seulement des membres d'une organisation Bluemix spécifique.
 
 ### session
 {: #x2004539}
 
 Temps entre le démarrage d'une appli sur un périphérique mobile et le moment où le produit d'assurance qualité est notifié pour commencer à collectionner le comportement de l'appli, les incidents et les problèmes.
 
-### gravité
-{: #x2375015}
-
-Dans le contexte du développement de logiciels et de systèmes, mesure de l'importance d'une unité de travail, par exemple, critique, élevée, moyenne ou
-basse.
-
-### secousse
-{: #x5905152}
-
-Pour provoquer un mouvement, de sorte que l'accéléromètre d'un périphérique détecte ce mouvement et démarre un événement. Par exemple, les testeurs et les clients peuvent initier un rapport d'incident concernant une application en secouant leur périphérique.
-
-### connexion unique (SSO)
-{: #x2213318}
-
-Processus d'authentification par lequel un utilisateur peut accéder à plusieurs systèmes ou applications en saisissant un seul ID utilisateur et mot de passe.
-
 ### SLA
 {: #x2094369}
 
 Voir [accord sur les niveaux de service](#x2038403).
-
-### logiciel sous forme de services (SaaS)
-{: #x4585386}
-
-Modèle de déploiement selon lequel un logiciel incluant des processus métier, des applications d'entreprise et des outils collaboratifs est fourni aux clients en tant que service via le cloud.
-
-### gestionnaire de projet de solution (SPM)
-{: #x2214907}
-
-Point focal pour le développement et le déploiement de la solution informatique. Responsable des performances des activités IGS,
-notamment de la proposition technique, du développement de la solution, de sa livraison et déploiement,
 
 ### SOR
 {: #x2214822}
@@ -1831,21 +1975,31 @@ notamment de la proposition technique, du développement de la solution, de sa l
 Voir [système d'enregistrement](#x6735061).
 Voir [stipulation des exigences](#x2214820).
 
-### gestion de contrôle de source (SCM)
-{: #x3579285}
+### source de données
+{: #x2176124}
 
-Aspect de la gestion de configuration de logiciel qui implique la gestion des modifications apportées à des collections de fichiers.
+Source des données (base de données ou fichier XML), ainsi que les informations de connexion nécessaires à l'accès aux données.
+
+### sources de valeur de la chaîne de valeur
+{: #x2214985}
+
+Qualités ou caractéristiques de la chaîne de valeur qui apportent une valeur ajoutée au client et/ou à l'entreprise,
+et qui sont des charnières directes ou indirectes de sa rentabilité. Les sources de valeur peuvent être internes à l'entreprise
+(par exemple, outils de commercialisation faciles à utiliser) ou externes (par exemple, rapidité de mise sur le marché). Une source de valeur peut couvrir plusieurs
+processus dans la chaîne de valeur. La source de valeur constitue la base pour l'attribution de priorités des investissements dans
+la transformation métier et leur pilotage en vue de dégager pour l'entreprise et ses clients la plus haute valeur possible.
+
+### sous-domaine
+{: #x2040080}
+
+Domaine intégré à un domaine de dimension supérieure. Voir aussi [domaine personnalisé](#x5728384),
+[domaine](#x2021210), [hôte](#x2002243),
+[route](#x2037338), [adresse URL](#x2042491).
 
 ### SOW
 {: #x2214903}
 
 Voir [description du travail](#x2214901).
-
-### espace
-{: #x2039442}
-
-- Sous-groupe dans une organisation Bluemix. Les membres d'une organisation ont accès à un ou plusieurs de ses espaces, avec les droits associés à un rôle particulier (par exemple, développeur, gestionnaire ou auditeur). Tout membre d'un espace peut voir les applis, mais seuls les membres disposant des droits de développeur peuvent créer des applis et ajouter des instances de service à l'espace. Les applis et les instances de service sont associées aux espaces. Voir aussi [organisation](#x2032585).
-- Unité organisationnelle qui contient des applications et des services dans l'infrastructure Cloud Foundry et qui peut être utilisée pour stocker et contrôler des ressources d'application.
 
 ### SPM
 {: #x2067055}
@@ -1877,73 +2031,56 @@ Voir [couche Secure Sockets Layer (SSL)](#x2038004).
 
 Voir [connexion unique (SSO)](#x2213318).
 
-### étape
-{: #x2067189}
-
-- Groupe de travaux dans un contexte d'exécution partagé comportant une entrée source, des variables d'environnement et un ordre défini
-d'exécution.
-- Action de déployer une application, un service ou une instance à un emplacement prédéfini en vue de l'exécution ou du test avant le déploiement
-dans un environnement de production. Voir aussi [déploiement](#x2104544).
-- Action de marquer un ensemble de modifications de fichier comme étant prêt pour la validation Git.
-
-### projet autonome
-{: #x2214926}
-
-Projet unique au sein d'une seule organisation . Peut faire partie d'un projet de composant.
-
-### section
-{: #x2094743}
-
-Section d'un progiciel qui définit une action spécifique à entreprendre sur le progiciel ou un ensemble de conditions dans lesquelles des actions doivent être entreprises sur le progiciel. Le progiciel complet est lui-même une section qui contient une hiérarchie composée de multiples sections différentes.
-
-### module de démarrage
-{: #x7470511}
-
-Modèle incluant des services prédéfinis et du code d'application configuré avec un pack de construction particulier.   Un module de démarrage peut se composer d'un code d'application écrit dans un langage de programmation spécifique, ou d'une combinaison de code d'application et d'un ensemble de services. Voir aussi [exécution](#x2391929).
-
 ### stipulation des exigences (SOR)
 {: #x2214820}
 
 
 
-### description du travail (SOW)
-{: #x2214901}
+### suivi d'élément de génération
+{: #x7494456}
 
-Document préparé par un gestionnaire de projet (PM) en réponse à une demande de service d'un client. Ce document constitue la proposition de solution
-technique et doit décrire les livrables et identifier tous les risques et impacts sur la division Global Services, les investissements en infrastructure, la
-capacité, les éléments de coût, les hypothèses et les dépendances.
+Elément de travail de développement qui suit les correctifs requis après une génération qui a échoué.
 
-### cas d'utilisation
-{: #x5027530}
+### sur site
+{: #x6969434}
 
-Elément de travail de développement qui définit une partie d'un scénario d'utilisation ou une contribution spécifique à la valeur du produit global.
+Voir [local](#x4561212).
 
-### alliance stratégique
-{: #x2214931}
+### sur site
+{: #x4561212}
 
-Alliance clé utilisée pour épauler les processus métier IBM internes.
+S'applique à un logiciel installé et exécuté sur les ordinateurs d'un utilisateur ou d'une organisation.
 
-### équipe de stratégie et de plans (SPT)
-{: #x2214912}
+### surveillance
+{: #x2200930}
 
-Groupe collaborant au développement de la stratégie et des plans pour le segment.
+Capture, analyse, et génération de rapports sur les performances du projet, généralement par rapport à un plan.
 
-### sous-domaine
-{: #x2040080}
-
-Domaine intégré à un domaine de dimension supérieure. Voir aussi [domaine personnalisé](#x5728384),
-[domaine](#x2021210), [hôte](#x2002243),
-[route](#x2037338), [adresse URL](#x2042491).
 
 ### symbolication
 {: #x7290136}
 
 Processus selon lequel les symboles exclus au cours de la compilation d'une appli sont insérés dans des traces de pile, afin de rendre les traces lisibles pour les testeurs et les développeurs.
 
-### vérification de la syntaxe
-{: #x7344042}
+### système de back end mobile sous forme de services (MBaaS)
+{: #x7044858}
 
-Fonctionnalité qui analyse le code et tente de l'interpréter avant la compilation de manière à détecter les erreurs de syntaxe pouvant être à l'origine d'une mauvaise compilation de l'appli, puis signale ces erreurs à l'utilisateur.
+Modèle informatique qui permet de connecter des applications mobiles à des services Cloud Computing et de fournir des fonctionnalités telles que la gestion des utilisateurs, les notifications push et l'intégration à des réseaux sociaux via une interface de programme d'application et un kit de développement de logiciels unifiés.
+
+### système de gestion de la chaîne de valeur
+{: #x2214980}
+
+Système bâti sur des structures BTMS (Business Transformation Management System) existantes (IRB, IPMT, PDT) et qui
+se consacre à de nouveaux liens de l'organisation, en permettant une prise de décision à l'échelle de l'organisation et le financement d'investissements
+dans la chaîne de valeur. Implique toutes les parties prenantes dans la chaîne de valeur. Ce système de gestion pilote l'intégration de la stratégie et des plans
+de chaîne de valeur avec ceux des unités business des parties prenantes, l'identification de règles métier spécifiques à la chaîne de valeur, l'établissement de
+priorités pour les investissements dans la chaîne de valeur et la résolution des problèmes qui lui sont spécifiques.
+
+### système de gestion de la transformation métier (BTMS)
+{: #x2205904}
+
+Système de gestion intégré du portefeuille IBM visant à répondre aux besoins d'IBM et du marché. Le portefeuille IBM est composé de solutions planifiées, de
+solutions en cours, de solutions déployées et de solutions retirées du service.
 
 ### système d'engagement
 {: #x6528306}
@@ -1955,90 +2092,76 @@ Système informatique intégrant les technologies qui encouragent l'interaction 
 
 Système de stockage d'informations (tel qu'une base de données ou une application) qui stocke des enregistrements métier et automatise des processus standard. Voir aussi [système d'engagement](#x6528306).
 
-### revue des exigences système (SRR)
-{: #x2214919}
-
-Révision effectuée par un ingénieur système (SE) dans la phase de concepts.
-
-### ingénieur-système
-{: #x2214941}
-
-Personne chargée de s'assurer que les solutions informatiques de bout en bout intégrées respectent les exigences métier, notamment des plans de test de
-bout en bout et des tests de ces solutions, de l'intégration de disciplines d'ingénierie comme les performances et la disponibilité, et de contrôler
-l'intégration de la solution en environnement de production.
-
-
 ## T
 {: #glosst}
 
-### TAI
-{: #x2218705}
+### tableau de bord
+{: #x2363941}
 
-Voir [intercepteur de relations de confiance](#x2239009).
+Composant d'interface utilisateur qui fournit à l'utilisateur un récapitulatif détaillé des informations pertinentes provenant de diverses sources.
 
 ### tâche
 {: #x2007852}
 
 Dans le contexte du développement agile, élément de travail qui définit une partie spécifique du travail.
 
-### modèle
-{: #x2041200}
+### TAI
+{: #x2218705}
 
-Structure prédéfinie associée à un artefact.
+Voir [intercepteur de relations de confiance](#x2239009).
 
-### revue de l'état de préparation des tests (TRR)
-{: #x2214953}
+### test de développement commun (CDT)
+{: #x2214490}
 
-Revue réalisée par l'ingénieur système (SE) à l'issue de la phase de développement.
+Environnement de développement et de test pour les applications GNA/GWA, conçu et élaboré conformément aux exigences du client et aux normes
+GWA et GNA.
+
+### test pilote
+{: #x2214751}
+
+Test pré-déploiement avec utilisation, données et portée limitées de nouvelles fonctions pour s'assurer que ces fonctions et les processus et procédures
+associés fonctionnent correctement.
+
+### test XPRS
+{: #x2215018}
+
+Voir [cross-application performance reliability stress test](#x2215016).
+### test XPRS (cross-application performance reliability stress)
+{: #x2215016}
+
+Fournit une certification de base des performances et du test de charge pour les applications NOTES et WEB
+identifiées à déployer sur des plateformes IBM.
 
 ### tiers
 {: #x2877945}
 
 Qualifie un produit ou un service fourni par une société autre qu'IBM.
 
-### vignette
-{: #x2092493}
+### traitement
+{: #x3723424}
 
-Représentation visuelle d'une application en cours d'exécution qui présente un tableau de bord de statut.
+Infrastructure ou ressources servant de base à la construction d'applications dans le cloud.
 
-### calendrier
-{: #x2312511}
+### transformation inter-organisations
+{: #x2214505}
 
-Zone d'activité dans un projet, qui possède généralement son propre planning et ses propres éléments livrables, équipes et processus.
+Programme ou projet bénéficiant de l'apport d'autres unités métier impliquées et qui leur retransmet des informations. Les composants du programme ou du projet
+peuvent être développés et gérés par une ou plusieurs organisations.
 
-### chaîne d'outils
-{: #x2956335}
+### transformation métier
+{: #x2214398}
 
-Collection de programmes ou outils utilisés pour développer un produit.
 
-### dépense totale
-{: #x2214948}
 
-Coût global du programme, y compris les coûts AD encourus une seule fois, les coûts de passage au stade suivant ou récurrents couvrant la
-maintenance et les coûts d'exécution pendant la durée de vie prévue du programme.
+### transformation métier/responsable des technologies de l'information (BT CIO)
+{: #x2214404}
 
-### suivi d'élément de génération
-{: #x7494456}
 
-Elément de travail de développement qui suit les correctifs requis après une génération qui a échoué.
 
 ### TRR
 {: #x2214955}
 
 Voir [revue de l'état de préparation des tests](#x2214953).
-
-### intercepteur de relations de confiance (TAI)
-{: #x2239009}
-
-Mécanisme par lequel la confiance est validée dans l'environnement de produit pour chaque demande reçue par le serveur proxy. La méthode de validation
-est convenue par le serveur proxy et l'intercepteur.
-
-### certificat racine digne de confiance
-{: #x2042234}
-
-Certificat signé par une autorité de certification de confiance. Voir aussi [autorité de certification](#x2016383),
-[certificat intermédiaire](#x3753781).
-
 
 ## U
 {: #glossu}
@@ -2048,25 +2171,13 @@ Certificat signé par une autorité de certification de confiance. Voir aussi [a
 
 Voir [conception centrée sur l'utilisateur](#x2214960).
 
-### identificateur URI (URI)
-{: #x2116436}
+### unité business
+{: #x2117547}
 
-Adresse unique permettant d'identifier le contenu sur le Web, tel une
-page de texte, un clip vidéo ou audio, une image statique ou animée ou un
-programme. Le type
-d'URI le plus courant est l'adresse de page Web, qui correspond à une forme ou un
-sous-ensemble particulier d'URI appelé URL (Uniform Resource Locator). Un URI décrit
-généralement la manière d'accéder à la ressource, à l'ordinateur contenant la ressource
-et au nom de la ressource (nom de fichier) sur l'ordinateur.
-
-### Uniform Resource Locator (URL)
-{: #x2042491}
-
-Adresse unique d'une ressource accessible dans un réseau, tel Internet. L'URL inclut le nom abrégé du protocole utilisé pour accéder à la
-ressource et les données utilisées par le protocole pour localiser la
-ressource. Voir aussi [domaine personnalisé](#x5728384), [domaine](#x2021210),
-[hôte](#x2002243), [route](#x2037338),
-[sous-domaine](#x2040080).
+Unité auprès du Responsable des technologies de l'information représentant un domaine métier majeur. Ces unités la transformation de bout en bout dans
+leur domaine métier et sont responsables des résultats et des performances. Elles exécutent leur stratégie et implémentent les modifications de processus
+nécessaires pour induire des performances et une simplification. Exemples : groupe Server and Storage Systems , Sales and Distribution, groupe Software,
+IBM  Research, groupe Technology, Global Services, IBM Global Financing, Corporate Functions et Personal Computer Division.
 
 ### URI
 {: #x2116461}
@@ -2078,90 +2189,34 @@ Voir [identificateur URI](#x2116436).
 
 Voir [adresse URL](#x2042491).
 
-### conception centrée sur l'utilisateur (UCD)
-{: #x2214960}
-
-Approche du développement permettant de s'assurer que les conceptions de l'application répondent aux besoins de l'utilisateur et génèrent des
-applications utilisables.
-
-### opinion de l'utilisateur
-{: #x7290116}
-
-Score dérivé des évaluations d'application par les utilisateurs à partir des principaux magasins d'applications de détail en ligne. La fonction balaie l'ensemble des évaluations et des avis pour générer un score cumulé d'application mobile qui tient compte de la qualité de l'appli, de la satisfaction utilisateur et de l'ensemble des retours positifs et négatifs.
-
-
 ## V
 {: #glossv}
 
-### chaîne de valeur
-{: #x2118588}
+### validation
+{: #x2000758}
 
-Séquence de toutes les activités requises pour concevoir, créer, bâtir, produire, distribuer, commercialiser et vendre
-un ensemble de produits ou de services associés. La valeur perçue par le consommateur final du produit ou du service est dérivée en partie
-de chaque étape dans la chaîne, bien que les étapes ne génèrent pas toutes la même valeur ou le même potentiel de profit. Chaque étape de la chaîne requiert des
-actifs et des capacités distincts.
+- Image instantanée de l'état en cours d'un projet dans un référentiel. L'historique d'un projet est défini par une série de validations.
+- Stocker une image instantanée de l'état en cours d'un projet.
 
-### conception de la chaîne de valeur
-{: #x2214970}
+### vérification de la syntaxe
+{: #x7344042}
 
-Ses composants sont les suivants : portée, parties prenantes, liens clés, processus de niveau 1-3, sources de valeur, attributs
-et représentation graphique des processus.
+Fonctionnalité qui analyse le code et tente de l'interpréter avant la compilation de manière à détecter les erreurs de syntaxe pouvant être à l'origine d'une mauvaise compilation de l'appli, puis signale ces erreurs à l'utilisateur.
 
-### infrastructure d'implémentation de la chaîne de valeur
-{: #x2214975}
+### version de référence
+{: #x2071471}
 
-Infrastructure permettant une approche commune pour une implémentation cohérente de la chaîne de valeur à travers IBM, mais prenant en compte
-les exigences uniques de chaque chaîne de valeur.
+Instantané du plan de projet validé utilisé pour effectuer des comparaisons au cours de l'exécution du projet.
 
-### système de gestion de la chaîne de valeur
-{: #x2214980}
+### vignette
+{: #x2092493}
 
-Système bâti sur des structures BTMS (Business Transformation Management System) existantes (IRB, IPMT, PDT) et qui
-se consacre à de nouveaux liens de l'organisation, en permettant une prise de décision à l'échelle de l'organisation et le financement d'investissements
-dans la chaîne de valeur. Implique toutes les parties prenantes dans la chaîne de valeur. Ce système de gestion pilote l'intégration de la stratégie et des plans
-de chaîne de valeur avec ceux des unités business des parties prenantes, l'identification de règles métier spécifiques à la chaîne de valeur, l'établissement de
-priorités pour les investissements dans la chaîne de valeur et la résolution des problèmes qui lui sont spécifiques.
-
-### sources de valeur de la chaîne de valeur
-{: #x2214985}
-
-Qualités ou caractéristiques de la chaîne de valeur qui apportent une valeur ajoutée au client et/ou à l'entreprise,
-et qui sont des charnières directes ou indirectes de sa rentabilité. Les sources de valeur peuvent être internes à l'entreprise
-(par exemple, outils de commercialisation faciles à utiliser) ou externes (par exemple, rapidité de mise sur le marché). Une source de valeur peut couvrir plusieurs
-processus dans la chaîne de valeur. La source de valeur constitue la base pour l'attribution de priorités des investissements dans
-la transformation métier et leur pilotage en vue de dégager pour l'entreprise et ses clients la plus haute valeur possible.
+Représentation visuelle d'une application en cours d'exécution qui présente un tableau de bord de statut.
 
 ### virtuel
 {: #x2043123}
 
 S'applique à un élément qui n'existe pas physiquement mais qui est simulé par l'intermédiaire d'un logiciel.
-
-### machine virtuelle (VM)
-{: #x2043165}
-
-Implémentation logicielle d'une machine qui exécute des programmes comme une machine réelle. Voir aussi [serveur virtuel](#x2455638).
-
-### réseau privé virtuel (VPN)
-{: #x2043188}
-
-Extension de l'intranet d'une entreprise sur l'infrastructure existante d'un réseau public ou privé. Un réseau privé virtuel assure la sécurisation des
-données qui sont envoyées entre deux noeuds finaux de sa connexion.
-
-### serveur virtuel
-{: #x2455638}
-
-Serveur partageant ses ressources avec d'autres serveurs pour épauler des applications. Voir aussi [machine virtuelle](#x2043165).
-
-### machine virtuelle
-{: #x2043253}
-
-Voir [machine virtuelle](#x2043165).
-
-### réseau privé virtuel
-{: #x2484351}
-
-Voir [réseau privé virtuel](#x2043188).
-
 
 ## W
 {: #glossw}
@@ -2171,64 +2226,13 @@ Voir [réseau privé virtuel](#x2043188).
 
 Voir [fichier d'archive Web](#x2116506).
 
-### Fichier WAR
-{: #x2406005}
-
-Voir [fichier d'archive Web](#x2116506).
-
-
-### application Web
-{: #x7636628}
-
-Voir [application Web](#x2116500).
-
-### application Web
-{: #x2116500}
-
-Application à laquelle un navigateur Web peut accéder et qui fournit
-une fonctionnalité qui va au-delà de l'affichage statique d'informations,
-par exemple en autorisant l'utilisateur à interroger une base de données. Les composants les plus courants d'une application Web sont les pages
-HTML, les pages JSP et les servlets. Voir aussi [appli](#x4281528).
-
-### fichier d'archive Web (WAR)
-{: #x2116506}
-
-Format de fichier comprimé, défini par la norme Java EE, servant au
-stockage, dans un même fichier de toutes les ressources nécessaires à
-l'installation et à l'exécution d'une application Web.
-
 ### webhook
 {: #x8558303}
 
 Rappel HTTP personnalisé qui modifie le comportement d'une page ou d'une application Web.
 
-### IDE Web
-{: #x7494461}
-
-Dans IBM DevOps Services, interface IDE basée sur un navigateur pour le développement web et cloud, conçue à partir de la plateforme open source Orion d'Eclipse.
-
-### élément de travail
-{: #x2173032}
-
-Artefact représentant une notion généralisée
-d'une tâche de développement (par exemple une tâche, un rapport d'anomalie ou une demande d'amélioration).
-
-### espace de travail
-{: #x2096037}
-
-- Dans Eclipse, la collection de projets et d'autres ressources en cours
-de développement dans le plan de travail. Les métadonnées de ces
-ressources se trouvent dans un répertoire du système de fichiers ; les
-ressources peuvent se trouver dans le même répertoire. Voir aussi [espace de travail de référentiel](#x3889804).
-- Contexte contenant une collection d'artefacts qu'un utilisateur disposant des droits appropriés peut modifier.
-
 ### Worldwide Project Management Method (WWPMM)
 {: #x2215004}
-
-
-
-### assurance qualité mondiale (WWQA)
-{: #x2215010}
 
 
 
@@ -2243,10 +2247,3 @@ Voir [Worldwide Project Management Method](#x2215004).
 Voir [assurance qualité mondiale](#x2215010).
 
 
-## X
-{: #glossx}
-
-### test XPRS
-{: #x2215018}
-
-Voir [cross-application performance reliability stress test](#x2215016).

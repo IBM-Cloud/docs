@@ -19,6 +19,7 @@ copyright:
 # {{site.data.keyword.openwhisk}} 정보
 
 *마지막 업데이트 날짜: 2016년 2월 22일*
+{: .last-updated}
 
 다음 절에서는 {{site.data.keyword.openwhisk}}에 대한 세부사항을 제공합니다.
 {: shortdesc}

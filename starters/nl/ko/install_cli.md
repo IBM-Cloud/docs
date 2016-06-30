@@ -29,14 +29,15 @@ copyright:
 
 # 명령행 인터페이스로 앱 배치
 *마지막 업데이트 날짜: 2016년 2월 24일*
+{: .last-updated}
 
 명령행 인터페이스를 사용하여 애플리케이션 및 서비스 인스턴스를 배치하고 수정할 수 있습니다.
 {:shortdesc}
 
-시작하기 전에 {{site.data.keyword.Bluemix}} 및 Cloud Foundry 명령행 인터페이스를 설치하십시오.
+시작하기 전에 Cloud Foundry 및 {{site.data.keyword.Bluemix}} 명령 인터페이스를 설치하십시오. 
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령행 인터페이스 다운로드" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령행 인터페이스 다운로드" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry 명령 인터페이스 다운로드" /> </a>  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt=" {{site.data.keyword.Bluemix}} 명령 인터페이스 다운로드" /> </a>
 </p>
 
 **제한사항:** Cygwin에서는 명령행 도구가 지원되지 않습니다. Cygwin 명령행 창 외의 명령행 창에서 도구를 사용하십시오.
@@ -47,6 +48,7 @@ copyright:
   1. {: download} 스타터 코드를 다운로드하십시오. 
       
     <a class="xref" href="http://bluemix.net" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_starter-code.svg" alt="스타터 코드 다운로드" /> </a>
+
   
   2. 패키지를 새 디렉토리로 추출하여 개발 환경을 설정하십시오.
   3. 새 디렉토리로 변경하십시오.

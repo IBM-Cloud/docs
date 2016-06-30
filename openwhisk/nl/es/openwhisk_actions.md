@@ -20,6 +20,7 @@ copyright:
 {: #openwhisk_actions}
 
 *Última actualización: 22 de marzo de 2016*
+{: .last-updated}
 
 Las acciones son fragmentos de código sin estado que se ejecutan en la plataforma {{site.data.keyword.openwhisk}}. Una
 acción puede ser una función JavaScript, una función Swift o un programa ejecutable personalizado
@@ -85,8 +86,7 @@ llamada `main` para proporcionar un punto de entrada para la acción.
 
 4. Tras crear su acción, puede ejecutarla en la nube en {{site.data.keyword.openwhisk_short}} con el mandato 'invoke'. Puede
 invocar acciones con una invocación *blocking* o *non-blocking*, especificando un distintivo en el mandato. Una invocación
-de bloqueo (blocking) espera hasta que la acción se ejecute completamente, y devuelve un resultado. En este ejemplo se utiliza
-el parámetro de bloqueo, `-blocking`:
+de bloqueo (blocking) espera hasta que la acción se ejecute completamente, y devuelve un resultado. Este ejemplo utiliza el parámetro blocking parameter, `--blocking`:
 
   ```
   wsk action invoke --blocking hello
@@ -94,7 +94,6 @@ el parámetro de bloqueo, `-blocking`:
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  response:
   {
       "result": {
           "payload": "Hello world"
@@ -375,19 +374,20 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   {: pre}
   ```
   package /whisk.system/util
-   action /whisk.system/util/cat: Concatenar matrices de series, y dividir líneas en una matriz
-   action /whisk.system/util/head: Filtrar los K primeros elementos de matriz y descartar el resto
-   action /whisk.system/util/date: Obtener la fecha y hora actual
-   action /whisk.system/util/sort: Ordenar matriz
+   action /whisk.system/util/cat: Concatenate array of strings
+   action /whisk.system/util/head: Filter first K array elements and discard rest
+   action /whisk.system/util/date: Get current date and time
+   action /whisk.system/util/sort: Sort array
+   action /whisk.system/util/split: Splits a string into an array of strings
   ```
   {: screen}
 
-  Usaremos las acciones `cat` y `sort` en este ejemplo.
+  You will be using the `split` and `sort` actions in this example.
 
 2. Crear una secuencia de acciones para que el resultado de una acción se pase como argumento a la acción siguiente.
   
   ```
-  wsk action create myAction --sequence /whisk.system/util/cat,/whisk.system/util/sort
+  wsk action create myAction --sequence /whisk.system/util/split,/whisk.system/util/sort
   ```
   {: pre}
 
@@ -423,7 +423,9 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   En el resultado, puede ver que las líneas se ordenan.
 
 **Nota**: Para obtener más información sobre la invocación de secuencias de acciones con varios parámetros con nombre,
-consulte [Establecimiento de parámetros predeterminados](./openwhisk_actions.html##openwhisk_binding_actions)
+consulte [Establecimiento de parámetros predeterminados](./actions.md#setting-default-parameters)
+
+
 
 ## Creación de acciones Swift
 {: #openwhisk_actions_swift}
@@ -451,7 +453,7 @@ Una acción es sencillamente una función Swift de nivel superior. Por ejemplo, 
 ```
 {: codeblock}
 
-Tenga en cuenta que al igual que las acciones JavaScript, las acciones Swift siempre consumen un
+Las acciones Swift siempre consumen un
 diccionario y generan un diccionario.
 
 Puede crear una acción de {{site.data.keyword.openwhisk_short}} llamada `helloSwift` desde esta función, según se indica a continuación:
@@ -483,6 +485,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 {{site.data.keyword.openwhisk_short}} suele utilizar el release disponible más reciente, que no es necesariamente estable. Además, la versión
 de Swift que se utiliza con {{site.data.keyword.openwhisk_short}} podría no ser coherente con versiones de Swift de releases estables
 de XCode en MacOS.
+
+
 
 ## Creación de acciones Docker
 {: #openwhisk_actions_docker}

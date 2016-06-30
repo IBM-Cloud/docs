@@ -18,7 +18,8 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-*上次更新时间：2016 年 3 月 3 日*
+*上次更新时间：2016 年 6 月 2 日*
+{: .last-updated}
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的用户。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](../../../admin/adminpublic.html#administer)。
 
@@ -53,10 +54,11 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、分配或取消分配组织中的用户，以及执行其他管理任务。要查看命令的列表，请运行以下命令：
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。要查看命令的列表，请运行以下命令：
 
 ```
-cf plugins```
+cf plugins
+```
 {: codeblock}
 
 有关命令的其他帮助，请使用 `-help` 选项。
@@ -213,14 +215,14 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/adminpublic.html#orgsandspaces)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 </dl>
 
 **提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
 
-### 取消向组织分配用户
+### 从组织中取消分配用户
 
-您可以取消将 {{site.data.keyword.Bluemix_notm}} 环境中的用户分配给特定组织。输入以下命令：
+您可以从特定组织取消分配 {{site.data.keyword.Bluemix_notm}} 环境中的用户。输入以下命令：
 
 ```
 cf ba unset-org <user_name> <organization> [<role>]
@@ -233,7 +235,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/adminpublic.html#orgsandspaces)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 </dl>
 
 **提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
@@ -281,6 +283,8 @@ cf ba set-quota <organization> <plan>
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
+
+**注**：如果您具有报告许可权的写访问权，那么您可以使用用户接受的任何格式，创建新类别并添加报告。输入 `category` 参数的新类别名称，或者添加新报告到现有类别。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;category&gt;</dt>
@@ -344,7 +348,7 @@ cf ba enable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要启用的服务的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。</dd>
+<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
 </dl>
 
 **提示：****ba enable-service-plan** 命令名较长，您还可以使用 **ba esp** 作为其别名。
@@ -358,7 +362,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要禁用的服务的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。</dd>
+<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
 </dl>
 
 **提示：****ba disable-service-plan** 命令名较长，您还可以使用 **ba dsp** 作为其别名。
@@ -376,7 +380,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要为其添加可视性的服务的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。</dd>
+<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要添加到服务的可视性列表的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 </dl>
@@ -392,9 +396,9 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要除去其可视性的服务的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。</dd>
+<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要从中除去服务的可视性列表的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
+<dd class="pd">要从服务的可视性列表中除去的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 </dl>
 
 **提示：****ba remove-service-plan-visibility** 命令名较长，您还可以使用 **ba rspv** 作为其别名。
@@ -410,7 +414,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">要使其可视的服务的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。</dd>
+<dd class="pd">要启用的服务计划的名称或 GUID。如果输入非唯一的服务名称，系统将提示您选择服务套餐。要识别服务计划名称，请从主页选择服务类别，然后选择**添加**，以查看该类别的服务。单击服务名称以打开详细视图，然后您可以查看可用于该服务的价格套餐。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要为其添加可视性的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。可以通过在命令中输入其他组织名称或 GUID，对多个组织启用服务可视性。</dd>
 </dl>
@@ -428,7 +432,7 @@ cf ba service-brokers <broker_name>
 ```
 {: codeblock}
 
-**注**：要列出所有服务代理程序，请输入不带 `broker_name` 参数的命令。 
+**注**：要列出所有服务代理程序，请输入不带 `broker_name` 参数的命令。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;broker_name&gt;</dt>

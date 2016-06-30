@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # 除錯
 {: #debugging}
 
-*前次更新：2016 年 3 月 3 日*
+*前次更新：2016 年 5 月 25 日*
+{: .last-updated}
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則可以檢視日誌檔來調查問題，並且進行除錯。
 {:shortdesc}
@@ -27,9 +29,10 @@ copyright:
 
 ## 針對編譯打包錯誤進行除錯
 {: #debugging-staging-errors}
-您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包您的應用程式，您可以檢視日誌來查看錯誤原因，以及從問題中回復。
+您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
 
 若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](../manageapps/depapps.html#appdeploy){: new_window}。
+
 
 下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
 
@@ -49,11 +52,12 @@ copyright:
 如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤日誌。``
 
 除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and
-Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 執行時期應用程式的日誌分析。  
+Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 運行環境應用程式的日誌分析。  
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
 下列範例顯示在您輸入 `cf logs appname --recent` 之後所顯示的日誌。此範例假設 Node.js 應用程式發生編譯打包錯誤：
+
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -72,6 +76,7 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 
 
 日誌中的第一個錯誤顯示編譯打包失敗的原因。在此範例中，第一個錯誤是 DEA 元件在編譯打包階段期間的輸出。
+
 ```
 2014-08-11T14:20:52.78+0100 [STG]   ERR parse error: expected another key-value pair at line 18, column 3
 ```
@@ -100,9 +105,9 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 {: screen}
 
 
-## 針對執行時期錯誤進行除錯
+## 針對運行環境錯誤進行除錯
 {: #debugging-runtime-errors}
-如果您的應用程式在執行時期遇到問題，應用程式日誌可以協助您精確找出發生此錯誤的原因，並從該問題中回復。 
+如果您的應用程式在執行時遇到問題，應用程式日誌可以協助您精確找出發生此錯誤的原因，並從該問題中回復。 
 
 具體而言，您可以啟用記載至 stdout 及 stderr。如需如何針對使用 {{site.data.keyword.Bluemix_notm}} 內建建置套件部署的應用程式，配置其日誌檔的相關資訊，請參閱下列清單：
 
@@ -123,13 +128,25 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 <dd>若要使用 Script 來自動收集並匯出日誌到外部檔案，您必須從您的電腦連接至 {{site.data.keyword.Bluemix_notm}} 伺服器，而且您的電腦上必須具有足夠的空間可下載日誌。如需相關資訊，請參閱<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集診斷資訊</a>。</dd>
 </dl>
 
-依預設，之前可透過 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 管理所在的 Cloud Foundry 現行版本無法再使用該應用程式記載。若要持續可以透過 {{site.data.keyword.Bluemix_notm}}「儀表板」在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的執行時期而定）。 
+依預設，之前可透過 {{site.data.keyword.Bluemix_notm}}「儀表板」中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 管理所在的 Cloud Foundry 現行版本無法再使用該應用程式記載。若要持續可以透過 {{site.data.keyword.Bluemix_notm}}「儀表板」在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。 
 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄中的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
   * 若為 PHP 應用程式，您可以使用 error_log 函數來寫入 logs 目錄中的檔案。
   * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * 若為 Ruby 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案。
+ 
+ 
+### 對程式碼變更進行除錯
+{: #debug_code_changes}
+
+如果您正在對已部署且在運作中的應用程式進行程式碼變更，但您的程式碼變更並未反映在 {{site.data.keyword.Bluemix_notm}} 中，則可以使用日誌來進行除錯。無論您的應用程式是否在執行中，您都可以檢查在應用程式部署或運行期間產生的日誌，以針對新程式碼無效的原因進行除錯。
+
+根據新程式碼部署的方式，選擇下列其中一個方法來對程式碼變更進行除錯： 
+
+  * 若為從 cf 指令行部署的新程式碼，請檢查 *cf push* 指令的輸出。此外，您可以使用 *cf logs* 指令來尋找可解決問題的更多線索。如需如何使用 *cf logs* 指令的相關資訊，請參閱[從指令行介面檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}。 
+
+  * 若為從 {{site.data.keyword.Bluemix_notm}} 使用者介面、DevOps Delivery Pipeline 或 Travis-CI 等 GUI 部署的新程式碼，您可以從該介面檢查日誌。例如，如果您是從 {{site.data.keyword.Bluemix_notm}} 使用者介面部署新程式碼，則可以移至「儀表板」、找到您的應用程式，然後檢視日誌中是否有線索。如需如何從 {{site.data.keyword.Bluemix_notm}} 使用者介面檢視日誌的相關資訊，請參閱[從 Bluemix 儀表板檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}。  
  
 
 # 相關鏈結

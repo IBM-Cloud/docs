@@ -15,7 +15,8 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} local
 {: #local}
-*Dernière mise à jour : 16 mai 2016*
+*Dernière mise à jour : 6 juin 2016*
+{: .last-updated}
 
 L'environnement {{site.data.keyword.Bluemix}} local apporte la puissance et l'agilité de la plateforme reposant sur le cloud
 {{site.data.keyword.Bluemix_notm}} à votre centre de données. Avec l'environnement {{site.data.keyword.Bluemix_notm}} local, vous pouvez protéger vos charges de travail les plus sensibles derrière le pare-feu
@@ -43,6 +44,9 @@ déterminer les éléments inclus et ceux dont vous pouvez faire l'acquisition.
 | **Type** | **Nom** | **Description** |
 |----------|----------|-----------------|
 |Inclus | Contextes d'exécution {{site.data.keyword.Bluemix_notm}} | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
+|Facultatif | {{site.data.keyword.apiconnect_short}} | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}}
+et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de
+microservices. |
 |Facultatif | {{site.data.keyword.APIM}} | Utilisez le service {{site.data.keyword.APIMfull}} pour composer des API, les gérer et les diffuser sur les réseaux sociaux. Vous pouvez importer des API avec des ressources en utilisant une adresse URL de proxy ou en assemblant des données à partir de sources de données HTTP. L'avantage avec le service {{site.data.keyword.APIM}} est que vous pouvez gérer la façon dont vos API sont utilisées. |
 |Inclus | {{site.data.keyword.autoscaling}}| Augmente ou diminue dynamiquement la capacité de vos ressources de traitement en fonction de
 règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
@@ -70,6 +74,16 @@ pour plus d'informations sur la manière de contacter un ingénieur commercial. 
 Local pour fournir une capacité mémoire supplémentaire de 16 Go. |
 |{{site.data.keyword.Bluemix_notm}} Data & Session Cache 50 GB capacity increase | Environnement permettant le déploiement et l'exécution
 d'instances Data Cache et Session Cache jusqu'à une capacité cumulée de 50 Go. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 5 Million API Calls | Environnement permettant
+l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 5 millions d'appels d'API par mois
+ciblant des projets d'API au niveau des départements de l'entreprise. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 100 thousand API Calls increase| Extension de
+l'environnement {{site.data.keyword.apiconnect_short}} Professional offrant une capacité supplémentaire de 100000  appels d'API par mois. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | Environnement permettant
+l'exécution d'une version privée de {{site.data.keyword.apiconnect_short}} avec une capacité de 25 millions d'appels d'API par
+mois ciblant des projets d'API au niveau de l'entreprise. |
+|{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | Extension de
+l'environnement {{site.data.keyword.apiconnect_short}} Enterprise offrant une capacité supplémentaire de 100000 appels d'API par mois. |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.APIM}} 500 API calls capacity increase | Environnement permettant l'exécution
 d'une version privée de {{site.data.keyword.APIM}} {{site.data.keyword.Bluemix_notm}}, avec une capacité de 500 appels d'API par seconde. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local incremental increase | Environnement s'ajoutant à l'offre
@@ -91,8 +105,7 @@ Le catalogue mixte fournit la fonction permettant de créer des applications hyb
 services publics et privés. Vous pouvez choisir les services publics qui satisfont les exigences pour votre activité selon vos critères de
 sécurité et de confidentialité des données. S'il s'agit d'une instance privée du service pour votre environnement local, l'étiquette "Local" est associée à
 la vignette de service dans votre catalogue. De même, s'il s'agit d'un service personnalisé, l'étiquette "Personnalisé" est associée à la vignette du
-service.
- 
+service. 
 
 *Tableau 3. Services disponibles par région pour syndication depuis {{site.data.keyword.Bluemix_notm}} Public*
 
@@ -352,7 +365,6 @@ pouvez procéder à la mise à niveau vers le niveau de support Premium afin d'u
 d'informations sur les différents niveaux de support, voir [Contacter le service de support](../support/index.html#contacting-support). Le
 responsable Client Success (CSM) effectue les types de tâche suivants :
 
-
 <ul>
 <li>Il assure la coordination technique entre vous et IBM.</li>
 <li>Il coordonne les mises à jour, les mises à niveau, l'aide des experts d'IBM et l'intégration initiale d'un ingénieur support
@@ -455,7 +467,7 @@ capacité ainsi que sur de nouveaux déploiements anticipés des applications. C
 |Ajuster la capacité |  Ajouter ou retirer de la capacité au fur et à mesure que vos besoins changent. | IBM |
 |Publier la maintenance et les mises à jour entrantes | Créer une documentation pour la maintenance requise des composants IBM. | IBM |
 |Assurer la maintenance | Communiquer avec IBM pour planifier une maintenance requise au cours d'une fenêtre de 21 jours. Vous pouvez fournir les dates qui ne vous
-conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence.  | IBM et le client partagent la responsabilité |
+conviennent pas dans la fenêtre de 30 jours ; IBM s'arrangera pour planifier la maintenance en conséquence. | IBM et le client partagent la responsabilité |
 |Echecs de mise à disposition d'adresse | Corriger les échecs de mise à disposition, le cas échéant, pour les services créés par le client qui sont
 déployés dans le catalogue. | IBM |
 |Effectuer une analyse réseau et IP | Effectuer des analyses réseau et IP quotidiennement et mensuellement. | IBM et le client partagent la responsabilité |
@@ -630,7 +642,9 @@ mémoire RAM, 4x UC virtuelles et 300 Go d'espace de stockage.
 
 IBM gère et installe les mises à jour et les correctifs qu'elle juge nécessaires pour les contextes d'exécution et les services
 {{site.data.keyword.Bluemix_notm}}. Il se peut que les services ne soient pas disponibles pendant les fenêtres de maintenance. De plus, IBM
-collabore avec vous afin de planifier des mises à jour de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}. 
+collabore avec vous afin de planifier des mises à jour de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}.
+
+### Maintenance de {{site.data.keyword.Bluemix_notm}}
 
 Les types suivants de maintenance sont requis pour l'environnement {{site.data.keyword.Bluemix_notm}} local :
 <dl>
@@ -638,15 +652,14 @@ Les types suivants de maintenance sont requis pour l'environnement {{site.data.k
 <dd>Les services utilisent des fenêtres de maintenance standard prédéfinies qui peuvent entraîner leur indisponibilité. IBM n'exige pas l'approbation du
 client avant de procéder à la maintenance des services, mais tente de réduire l'impact sur vos services.<br />
 <br />
-IBM envoie des messages de diffusion détaillant les changements qui sont planifiés pour chaque fenêtre de maintenance dans la page Statut.
-<br />
+IBM envoie des messages de diffusion détaillant les changements qui sont planifiés pour chaque fenêtre de maintenance dans la page Statut.<br />
 <br />
 **Important** : certains services peuvent ne pas être disponibles au cours de la période de maintenance.</dd>
 
 <dt>**Maintenance standard de la plateforme {{site.data.keyword.Bluemix_notm}}**</dt>
 <dd>Les mises à jour de maintenance sont appliquées après accord entre le client et IBM au cours d'une fenêtre de 21 jours. Vous indiquez à IBM des fenêtres de
 maintenance pré-approuvées et des dates ou heures spécifiques qui ne vous conviennent pas ; IBM s'arrange pour planifier les mises à jour aux dates ou
-autour des dates que vous avez sélectionnées. <br />
+autour des dates que vous avez sélectionnées.<br />
 <p>Accédez à **ADMINISTRATION > INFORMATIONS SYSTEME** pour afficher les mises à jour de maintenance planifiées et en attente. Pour plus
 d'informations sur la définition de fenêtres pré-approuvées et de dates d'indisponibilité, ainsi que sur l'affichage ou l'approbation des mises à jour de
 maintenance, voir <a href="../admin/index.html#oc_schedulemaintenance">Mises à jour de maintenance</a></p>.</dd>
@@ -657,6 +670,32 @@ peut changer les heures de maintenance planifiées et vous fera part de tels cha
 
 Si un problème est signalé suite à une mise à jour de maintenance, déterminez avec le support {{site.data.keyword.Bluemix_notm}} s'il
 convient de permettre à IBM d'annuler la mise à jour. Si vous parvenez à un accord, IBM annule la mise à jour afin de restaurer l'état précédent de l'environnement.
+
+### Maintenance de l'infrastructure client
+{: #inframaintenance}
+
+{{site.data.keyword.Bluemix_notm}} Local est déployé sur l'hyperviseur ESXi et l'application vCenter est utilisée pour une gestion
+centralisée des machines virtuelles et des hôtes ESXi. {{site.data.keyword.Bluemix_notm}} prend en charge les trois versions les plus récentes
+d'ESXi et de vCenter, y-compris leurs mises à jour et correctifs intermédiaires. Les versions les plus récentes prises en charge sont toujours indiquées
+dans la section Exigences de l'infrastructure [Local](../local/index.html#localinfra).
+
+**Important **: une fois {{site.data.keyword.Bluemix_notm}} Local déployé sur l'hyperviseur ESXi,
+les mises à jour et les correctifs ESXi peuvent perturber la disponibilité de l'environnement local, notamment de toutes les
+applications et de tous les services opérant dans cet environnement. Vous devez aviser {{site.data.keyword.Bluemix_notm}} via un ticket de support
+avant d'appliquer une mise à niveau ou un correctif afin que l'interruption n'alerte pas par erreur l'équipe chargée des opérations. Si un responsable CSM vous a été
+affecté (CSM), vous pouvez communiquer le planning de mise à niveau via cet intermédiaire. 
+
+Pour garantir que votre instance locale soit compatible avec les dernières versions prises en charge,
+l'équipe chargée des opérations {{site.data.keyword.Bluemix_notm}} surveille l'environnement pour détecter des versions non prises en charge
+qui pourraient ne pas convenir aux dernières mises à jour de l'environnement {{site.data.keyword.Bluemix_notm}} Local. Certaines mises à jour de
+{{site.data.keyword.Bluemix_notm}}, telles que les mises à jour de version Cloud Foundry, nécessitent de mettre à jour le logiciel ESXi ou vCenter. Le
+support {{site.data.keyword.Bluemix_notm}} vous avisera des mises jour requises et de leur calendrier. Un créneau vous sera indiqué pour effectuer cette
+mise à jour.
+
+{{site.data.keyword.Bluemix_notm}} met tout en oeuvre pour préserver la compatibilité des environnements locaux
+avec les versions ESXi et vCenter les plus récentes. Cependant, les versions ESXi et vCenter
+les plus récentes peuvent ne pas être prises en charge pendant de courtes périodes. Avant toute mise à jour, reportez-vous à la section Exigences de l'infrastructure
+[Local](../local/index.html#localinfra) pour connaître les versions les plus récentes compatibles.
 
 ## Réponse aux incidents et support
 {: #incidentresponse}

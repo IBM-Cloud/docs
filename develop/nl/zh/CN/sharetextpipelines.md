@@ -27,6 +27,7 @@ copyright:
 使用“部署到 {{site.data.keyword.Bluemix_notm}}”按钮克隆项目后，{{site.data.keyword.jazzhub_short}} 会创建一个基于 `pipeline.yml` 文件的管道。 
 
 示例：
+ 
 ``` 
 <sample root>
 	.bluemix
@@ -77,7 +78,7 @@ stages:
       application: JavaSampleUnitTest
     script: |
       cf push "${CF_APP}"
-      # 查看日志
+      # View logs
       #cf logs "${CF_APP}" --recent
 ```
 {: codeblock} 
@@ -87,6 +88,7 @@ stages:
 任何管道都可以使用以下语法以文本形式进行表示。
 
 管道：
+
 ```
 ---
 stages:
@@ -95,6 +97,7 @@ stages:
 {: codeblock} 
 
 阶段：
+ 
 ```
 ---
 name: <name>
@@ -110,6 +113,7 @@ name: <name>
 {: codeblock} 
 
 输入：
+
 ```
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
@@ -119,6 +123,7 @@ job: <job name>			   	;only for job inputs
 {: codeblock} 
 
 触发器：
+
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
@@ -126,6 +131,7 @@ type: 'commit' | 'stage'
 {: codeblock} 	
 	
 属性：
+
 ```
 name: <property name>
 value: <property value>
@@ -134,6 +140,7 @@ value: <property value>
 {: codeblock} 
 
 作业：
+
 ```
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
@@ -151,6 +158,7 @@ fail_stage: 'true' | 'false'
 {: codeblock} 
 
 目标：
+
 ```
 url: <target url>
 organization: <org name>
@@ -173,8 +181,7 @@ space: <space name>
 ```
 {
   "project_id": "_ljkahfliasdlk",
-  "env": {
-     "CF_ORGANIZATION" : "user@se.ibm.com"
+  "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
 },
   "config": {
     "format" : "yaml",

@@ -18,7 +18,8 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 30 mars 2016*
+*Dernière mise à jour : 27 mai 2016*
+{: .last-updated}
 
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,12 +28,15 @@ Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissan
 {: #downloads}
 
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
-{{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande cf Cloud Foundry constitue un élément prérequis pour tous les autres outils
-d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
+{{site.data.keyword.Bluemix_notm}}. 
+
+A l'exception de l'outil de ligne de commande [OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} qui est utilisé
+pour gestion des serveurs virtuels, l'outil de ligne de commande Cloud Foundry cf est un prérequis pour tous les autres outils de ligne de commande
+{{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
 {{site.data.keyword.Bluemix_notm}} permet de gérer l'environnement {{site.data.keyword.Bluemix_notm}} en plus des applications Cloud
 Foundry.
 
-Les deux outils CLI utilisent par défaut le port 433. Si un proxy HTTP est interposé entre les outils CLI et l'environnement
+Les deux outils de ligne de commande utilisent par défaut le port 443. Si un proxy HTTP est interposé entre les outils CLI et l'environnement
 {{site.data.keyword.Bluemix_notm}}, vous devez configurer la variable d'environnement `http-proxy` en spécifiant l'URL
 réelle et le port du proxy HTTP s'il est présent. Voir [Using the CLI with an HTTP Proxy
 Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} pour plus d'informations.
@@ -79,9 +83,9 @@ cf add-plugin-repo bluemix-cf-staging http://plugins.ng.bluemix.net
 cf install-plugin nom_plug-in -r bluemix-cf-staging
 ```
 
-| *Active Deploy* | *Console d'administration* | *Mode développement* |
-|-----------------|-----------------|-----------------|
-| Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](../cli/plugins/bluemix_admin/index.html) | Nom du plug-in : dev_mode <br> [Afficher la documentation](./plugins/dev_mode/index.html) |
+| *Active Deploy* | *Console d'administration* | 
+|-----------------|-----------------|
+| Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](../cli/plugins/bluemix_admin/index.html) | 
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *réseau privé virtuel (VPN)* |
 |-----------------|-----------------|

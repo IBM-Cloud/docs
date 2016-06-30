@@ -15,6 +15,7 @@ copyright:
 {: #app_management}
 
 *上次更新时间：2016 年 3 月 17 日*
+{: .last-updated}
 
 应用程序管理实用程序是一组开发和调试实用程序，可以对 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 应用程序启用这些实用程序。
 {:shortdesc}
@@ -28,7 +29,8 @@ copyright:
 
     启用该项时，buildpack 会启动位于应用程序的运行时与容器之间的代理。*proxy* 实用程序会处理应用程序接收到的所有请求。它会执行应用程序管理操作或将请求转发给应用程序，具体取决于请求的类型。通过 *proxy*，可以启用大多数其他应用程序管理实用程序。启用 *proxy* 后，即使应用程序崩溃，应用程序容器也会继续保持活动。此代理还允许增量文件更新，这使您能够使用 Node.js 应用程序的“实时编辑”方式。
 	
-  2. *devconsole*：启用开发控制台实用程序，该实用程序可通过以下 URL 进行访问：```
+  2. *devconsole*：启用开发控制台实用程序，该实用程序可通过以下 URL 进行访问：
+    ```
     http://<yourappname>.mybluemix.net/bluemix-debug/manage
     ```
 	
@@ -40,7 +42,8 @@ copyright:
 
     Health Center 支持使用 IBM Monitoring and Diagnostic Tools 分析 Liberty 和 Node.js 应用程序的性能。有关更多信息，请参阅 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。</p></li>
 	
-  4. *shell*：启用基于 Web 的 shell，该 shell 可通过 devconsole 实用程序或通过访问以下 URL 来进行访问：```
+  4. *shell*：启用基于 Web 的 shell，该 shell 可通过 devconsole 实用程序或通过访问以下 URL 来进行访问：
+    ```
     http://<yourappname>.mybluemix.net/bluemix-debug/shell
     ```
 	
@@ -92,13 +95,15 @@ copyright:
     3. 在本地工作站上，安装 [StrongLoop npm 模块](https://www.npmjs.com/package/strongloop){:new_window}。
     
 	```
-    npm install -g strongloop```
+    npm install -g strongloop
+    ```
 	
     4. 在 [StrongLoop 的 Web 站点](https://strongloop.com/register/){:new_window}上创建帐户。
     5. 在本地工作站上启动 Arc，然后使用创建的帐户登录。
     
 	```
-    slc arc```
+    slc arc
+    ```
 	
     6. 浏览到 Arc 内的 Process Manager 视图。在 Process Manager 中，输入新创建的路径与端口 80。按“激活”按钮。有关更多详细信息，请参阅[有关使用 Arc 的完整文档](https://docs.strongloop.com/display){:new_window}。
 	

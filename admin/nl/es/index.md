@@ -17,7 +17,8 @@ copyright:
 
 # Gestión de {{site.data.keyword.Bluemix_notm}} Local y {{site.data.keyword.Bluemix_notm}} Dedicado
 {: #mng}
-*Última actualización: 16 de mayo de 2016*
+*Última actualización: 13 de junio de 2016*
+{: .last-updated}
 
 Si tiene acceso de administrador para {{site.data.keyword.Bluemix_notm}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](index.html#oc_useradmin); consulte [Gestión de las organizaciones](../admin/orgs_spaces.html).
 {:shortdesc}
@@ -44,187 +45,183 @@ para la aplicación de sus notificaciones en la sección Actualizaciones pendien
 ## Suscripción de notificaciones y sucesos
 {: #oc_eventsubscription}
 
-Siempre pueda saber el estado de su entorno comprobando la página Estado. {{site.data.keyword.Bluemix_notm}} también envía
-notificaciones al área Notificaciones para la página Administración para sucesos como actualizaciones y mantenimiento planificados. Las
-incidencias se informan en la página Estado.
+Siempre pueda saber el estado de su entorno comprobando la página Estado. A medida que se producen, las
+incidencias se informan en la página Estado.{{site.data.keyword.Bluemix_notm}} también envía notificaciones al área de notificaciones de la página de administración para eventos tales como actualizaciones de mantenimiento programadas o pendientes. 
 
 ### Notificaciones
 
-Puede ver notificaciones de IBM para el entorno local o dedicado para supervisar el estado del entorno. Revise la
-tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publican.
+Puede ver notificaciones para el entorno local o dedicado para supervisar el estado del entorno. Revise la
+tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publica cada tipo de notificación.
 
 *Tabla 2. Tipos de sucesos y métodos de notificación*
 
 | **Tipo de suceso** | **Método de notificación** |       
 |-----------------|-------------------|
-| Actualizaciones de mantenimiento | En las notificaciones de la página Administración se avisa de las próximas actualizaciones de mantenimiento. Acceda
+| Actualizaciones de mantenimiento | En las notificaciones del área de Notificaciones de la página Administración se avisa de las próximas actualizaciones de mantenimiento. Acceda
 a la página **Administración** y seleccione el icono **Notificaciones** ![Notificaciones](images/icon_announcement.svg). Para ver un listado completo y el historial de notificaciones pendientes y
-completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones
-pendientes**. Puede ampliar la posibilidad de notificación configurando una suscripción de sucesos que integra alertas de
-actualización de mantenimiento desde la página Administración con el servicio web que elija para direccionar los mensajes
-a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija. |
-| Incidencias críticas | Se aleta sobre incidencias críticas en la página Estado. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**. Puede ampliar la posibilidad de notificación configurando una suscripción de sucesos que integra alertas de incidencias
-desde la página Estado con el servicio web que elija para direccionar los mensajes
-a una dirección de correo electrónico del centro de atención al cliente o un mensaje SMS al número de teléfono que elija. |  
-| Estado | Puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}}. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.  |
+completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **pendientes**. Puede ampliar la capacidad de notificación configurando una suscripción que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.  |
+| Incidencias críticas | Se aleta sobre incidencias críticas en la página Estado. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción a un evento que envíe un mensaje de correo electrónico a los destinatario que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.   |  
+| Estado de {{site.data.keyword.Bluemix_notm}} | Siempre puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}} en la página Estado. Pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg), y seleccione **Estado**.  |
 
 ### Configuración de suscripciones de sucesos
 
-Puede ampliar la funcionalidad de las notificaciones que se envía a las páginas Administración y Estado usando las
-suscripciones de sucesos que implementan los webhooks. Los webhooks direccionan sus notificaciones directamente al destino que elija (por
-correo electrónico) o a un número de teléfono (por mensaje SMS). Puede personalizar el tipo de notificación, específicamente
-actualizaciones de mantenimiento o alertas de incidencias críticas, y la información que se incluye en la notificación.
+Puede ampliar la funcionalidad de las notificaciones que se envían a la página Administración y a la página Estado utilizando las suscripciones del evento para configurar un correo electrónico personalizado o utilizar webhooks para integrar una herramienta de su elección. Si selecciona la opción de webhooks, las notificaciones se redireccionan directamente a un destino de su elección, como un número de teléfono (por mensaje SMS). Puede personalizar el tipo de notificación, específicamente
+actualizaciones de mantenimiento o alertas de incidencias críticas, y la información que se incluye en el cuerpo de cada notificación.
 
-Para usar los webhooks para configurar una suscripción de sucesos específica, realice los pasos siguientes:
+**Nota**: los usuarios con permiso de administrador (`ops.admin`) son los únicos que pueden configurar suscripciones de eventos. 
 
-* Para notificaciones de actualización de mantenimiento, acceda a **INFORMACIÓN DEL SISTEMA** &gt; *Número* **actualizaciones pendientes** y pulse el icono **Suscribir**
-![Suscribir](images/icon_subscribe.svg).
-* Para notificaciones de alerta de incidencias, pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) &gt; **Estado**, y pulse el icono
+Para acceder a la página **Suscripciones de eventos**, siga estos pasos: 
+
+* Para las notificaciones de actualización de mantenimiento, vaya a **INFORMACIÓN DEL SISTEMA &gt; *Número* pendientes &gt; Suscripciones**.
+* Para notificaciones de incidencias, pulse el icono **Cuenta y soporte** ![Cuenta y soporte](../support/images/account_support.svg) &gt; **Estado**, y pulse el icono
 **Suscribir** ![Suscribir](images/icon_subscribe.svg).
 
 **Nota**: Puede acceder a la página de suscripción de sucesos para ambos tipos de notificaciones, utilizando
 cualquiera de los dos métodos descritos.
 
+Para crear una suscripción de correo electrónico o webhook desde la página **Suscripciones de eventos**, siga estos pasos: 
+
 1. Pulse **Añadir suscripción**.
+2. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario y los valores que se deben utilizar en la sección de carga útil y en cuerpo de la plantilla del mensaje de correo electrónico, revise la tabla siguiente. 
+3. Una vez que haya completado el formulario, puede elegir las opciones siguientes: 
 
-2. Rellene el formulario de suscripción de sucesos. Para obtener información sobre los campos del formulario y los valores que se deben utilizar en la sección de carga útil, revise la tabla siguiente: 
+  * Pulse **Guardar** para guardar la suscripción en la lista de suscripciones a eventos.  
+  * Pulse **Guardar y probar** para guardar y probar la notificación.  
+  * Pulse **Guardar y cerrar** para guardar la suscripción en su lista de suscripciones y regresar a la página anterior. 
 
-*Tabla 3. Campos de formulario de suscripción de sucesos*
+*Tabla 3. Suscripción a eventos desde campos para una suscripción de correo electrónico*
 
 | **Campo** | **Descripción** |
 |-----------------|-------------------|
-| Tipo | Seleccionar el Webhook. |
-| Método | Seleccionar GET o POST. |
-| Suceso | Seleccionar la suscripción a notificaciones para actualizaciones o incidencias. |
-| URL | Especificar el URL a la que enganchar su servicio web. |
-| Descripción | Añadir una descripción para la suscripción de sucesos que está creando. |
-| Nombre de usuario | Especificar el nombre de usuario para su servicio web. Si no quiere usar sus credenciales personales, puede configurar
+| Tipo | Seleccione **Correo electrónico**. |
+| Suceso | Seleccionar la suscripción a notificaciones para Actualización o Incidencia.  |
+| Habilitado | Seleccione la opción para habilitar las notificaciones por correo electrónico. Anule la selección para inhabilitar la notificación por correo electrónico. Las suscripciones están habilitadas de forma predeterminada.  |
+| Asunto | Especifique la línea de asunto del correo electrónico. Este campo es necesario.   |
+| Cuerpo | Especifique el texto del cuerpo del mensaje que se debe enviar en el correo electrónico. Puede utilizar los valores de carga útil de IBM para rellenar la notificación por correo electrónico con información pertinente. Consulte la tabla [Valores de la sección de carga útil](index.html#payload) para identificar qué valores puede utilizar. Utilice etiquetas HTML básicas para estructurar el correo electrónico. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional. Este campo es necesario.  |
+| Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario.  |
+| Descripción | Añada una descripción única para la suscripción que está creando.  |
+
+
+*Tabla 4. Suscripción al evento desde campos para una suscripción de webhook*
+
+| **Campo** | **Descripción** |
+|-----------------|-------------------|
+| Tipo | Seleccione **Webhook** |
+| Método | Seleccione **GET** o **POST**. |
+| Suceso | Seleccionar la suscripción a notificaciones para Actualización o Incidencia.  |
+| URL | Especificar el URL al que conectar su servicio web. |
+| Descripción | Añada una descripción única para la suscripción que está creando.  |
+| Nombre de usuario | Especifique el nombre de usuario para su servicio web. Si no quiere usar sus credenciales personales, puede configurar
 un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Especificar la contraseña de su servicio web. |
-| Carga útil | Si ha seleccionado el método POST, especifique las propiedades específicas del servicio web que usa, junto con los valores utilizados para la notificación a IBM. Consulte la siguiente tabla para los valores de IBM que puede utilizar para rellenar la notificación. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional.  |
+| Carga útil | Si ha seleccionado el método POST, especifique las propiedades específicas del servicio web que usa, junto con los valores de carga útil utilizados para la notificación a IBM. Consulte la tabla [Valores de la sección de carga útil](index.html#payload) para identificar qué valores puede utilizar. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional. |
 
-*Tabla 4. Valores de sección de carga útil*
+*Tabla 5. Valores de la sección de carga útil*
+{: #payload}
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
 |----------------|----------------|------------------------|
 | {{content.title}} | Título de mensaje |  Actualización e incidencia  |
-| {{status}} | Estado de la actualización o incidencia. | Actualización e incidencia |
 | {{type}} | Actualización o incidencia | Actualización e incidencia | 
 | {{region}} | Región afectada | Actualización e incidencia |
 | {{content.message}} | Descripción del mensaje |   Actualización e incidencia  |
 | {{content.severity}} | Puntuación de gravedad | Incidencia |
 | {{content.category}} | Servicios afectados | Incidencia |
 | {{content.subCategoryName}} | Componentes afectados | Incidencia |
-| {{content.scheduleWindow}} | La fecha planificada para la actualización | Actualización |
+| {{status}} | Estado de la actualización | Actualización |
+| {{content.scheduleWindow.start}} | Fecha de inicio planificada para la actualización | Actualización |
+| {{content.scheduleWindow.end}} | La fecha de finalización planificada para la actualización | Actualización |
 | {{content.disruption}} | Componentes afectados | Actualización |
 
-Cuando se guarda su suscripción de sucesos, recibe notificaciones a través del método que haya configurado por medio del servicio web. Las
+Cuando se guarda su suscripción de sucesos, recibe notificaciones a través del método que haya configurado. Las
 notificaciones se siguen publicando en la página Estado para las incidencias y en el área Notificaciones de la página Administración para las actualizaciones de mantenimiento.
 
-Puede seleccionar cualquier suscripción de sucesos guardada y ver la actividad reciente. Puede pulsar para expandir cualquier entrada de actividad
-reciente para ver los detalles. Incluidos en los detalles están los valores de IBM para la notificación que puede usar en la sección payload. Para
-ver estos valores, expanda la entrada de actividad reciente, expanda **Suceso** y luego **Objeto**.
+Puede seleccionar cualquier suscripción de sucesos guardada, ver la actividad reciente o realizar cambios según necesite. Pulse para expandir la entrada de una actividad reciente para ver los detalles del historial. 
 
 ## Actualizaciones de mantenimiento
 {: #oc_schedulemaintenance}
 
-Para ver las actualizaciones de mantenimiento planificadas y pendientes, vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA&gt; *Número* de actualizaciones pendientes** para acceder a la página **Actualizaciones del sistema**.  
+Para ver las actualizaciones de mantenimiento planificadas y pendientes, vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA&gt; *Número* de pendientes** para acceder a la página **Actualizaciones del sistema**.  
 
-**Nota**: consulte la siguiente sección para establecer ventanas de mantenimiento con aprobación previa para empezar. Estas ventanas deben establecerse para que IBM planifique el mantenimiento para el entorno. 
+**Nota**: consulte la siguiente sección sobre la [configuración de ventanas de mantenimiento aprobadas con anterioridad](index.html#preapprovedmaintenance) para empezar. Estas ventanas deben establecerse para que IBM planifique el mantenimiento para el entorno.
 
 <dl>
 <dt>Actualizaciones no disruptivas</dt>
-<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará durante las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema. </dd>
+<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará durante las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema.</dd>
 <dt>Actualizaciones disruptivas</dt>
-<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para planificar la actualización. </dd>
+<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización. </dd>
 </dl>
 
 
 ### Configuración de ventanas de mantenimiento con aprobación previa
 {: #preapprovedmaintenance}
 
-Antes de empezar a planificar y aprobar actualizaciones, debe establecer las ventanas de mantenimiento con aprobación previa. Las actualizaciones no disruptivas se planifican durante los tiempos con aprobación previa. Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará en las ventanas de mantenimiento disponibles con aprobación previa que se establezcan en la página Actualizaciones del sistema. 
+Antes de empezar a planificar y aprobar actualizaciones, debe establecer las ventanas de mantenimiento con aprobación previa. Las actualizaciones no disruptivas se planifican durante las ventanas con aprobación previa.  
 
-Es necesario establecer un mínimo de 24 horas disponibles para una semana de como mínimo 3 días durante esa semana. Por ejemplo, puede establecer tres ventanas de 8 horas en tres días distintos, o puede establecer ventanas d 6 horas en cuatro días distintos. Para asegurarse de que las ventanas proporcionan el tiempo suficiente para aplicar una actualización, cada ventana debe tener una duración de 4 horas como mínimo. 
+Es necesario establecer un mínimo de 24 horas disponibles para una semana de como mínimo tres días durante cada semana. Por ejemplo, puede establecer tres ventanas de 8 horas en tres días distintos, o puede establecer ventanas de 6 horas en cuatro días distintos. Para asegurarse de que las ventanas proporcionan el tiempo suficiente para aplicar una actualización, cada ventana debe tener una duración mínima de cuatro horas. 
 
-1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes &gt; Gestionar disponibilidad**.
+**Nota**: los usuarios con permiso de administrador (`ops.admin`) son los únicos que pueden planificar y apboar actualizaciones de mantenimiento. 
+
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de pendientes &gt; Gestionar disponibilidad**.
 2. Expanda la sección **Gestionar ventanas de actualización disponibles**.
 3. Pulse **Añadir nuevo** ![Añadir nuevo](images/add-new.png).
-4. Establezca la primera ventana de disponibilidad seleccionando la frecuencia, duración y hora de inicio para la ventana. 
+4. Establezca la primera ventana de disponibilidad seleccionando la frecuencia, duración y hora de inicio para la ventana.
 5. Pulse **Enviar**.
-6. Repita este proceso hasta que haya satisfecho los requisitos mínimos para ventanas semanales.
+6. Repita este proceso hasta que haya satisfecho los requisitos mínimos para las ventanas semanales.
 
 ### Configuración de ventanas de mantenimiento no disponibles
 
 Después de establecer las ventanas de mantenimiento disponibles con aprobación previa, puede elegir establecer fechas y horas específicas en las que el entorno no está disponible para realizar actualizaciones. Por ejemplo, puede elegir vacaciones o un fin de semana con mucho tráfico cuando no desea que se aplique ningún mantenimiento para garantizar que las aplicaciones están disponibles para los usuarios.
 
-
-1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes &gt; Gestionar disponibilidad**.
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de pendientes &gt; Gestionar disponibilidad**.
 2. Expanda la sección **Gestionar ventanas de actualización no disponibles**.
 3. Pulse **Añadir nuevo** ![Añadir nuevo](images/add-new.png).
-4. Establezca una ventana no disponible seleccionando la frecuencia, duración y hora de inicio para la ventana. 
+4. Establezca una ventana no disponible seleccionando la frecuencia, duración y hora de inicio para la ventana.
 5. Pulse **Enviar**.
 
 ### Planificación y aprobación de actualizaciones
 {: #scheduleandapprove}
 
-Después de establecer las ventanas de mantenimiento con aprobación previa, las actualizaciones no disruptivas se planificarán automáticamente durante estas horas.
-La aprobación explícita para estos tipos de actualizaciones no es necesaria. Sin embargo, puede ver los detalles para cada actualización de mantenimiento incluyendo lo que se está actualizando, el tiempo que tardará la actualización y cuando se ha planificado la actualización.  
+Después de establecer las ventanas de mantenimiento con aprobación previa, las actualizaciones no disruptivas se planificarán automáticamente durante estas horas. La aprobación explícita para estos tipos de actualizaciones no es necesaria. Sin embargo, puede ver los detalles para cada actualización de mantenimiento incluyendo lo que se está actualizando, el tiempo que tardará la actualización y cuando se ha planificado la actualización. 
 
-Para ver los detalles para una actualización no disruptiva, realice los siguientes pasos: 
+Para ver los detalles para una actualización no disruptiva, realice los siguientes pasos:
 
-1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. 
-2. Identifique todas las filas de actualización que tengan **Planificación de cliente necesaria** establecida en **No**.
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de pendientes**. 
+2. Identifique todas las filas que tengan **Planificación de cliente necesaria** establecida en **No**.
 3. Seleccione la fila para esa actualización para ver los detalles.
 
-Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para planificar la actualización. 
+Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización. 
 
-Para las actualizaciones disruptivas que no requieran su aprobación, realice los siguientes pasos: 
+Para las actualizaciones disruptivas que no requieran su aprobación, realice los siguientes pasos:
 
-1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de actualizaciones pendientes**. 
-2. Identifique todas las filas de actualización que tengan **Planificación de cliente necesaria** establecida en **Sí**.
-3. Seleccione la fila para esa actualización para revisar los detalles para la actualización incluida la descripción de la actualización, la fecha y hora sugerida para la actualización, los componentes afectados y la duración para la actualización. 
+1. Vaya a **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* de pendientes**. 
+2. Identifique todas las filas que tengan **Planificación de cliente necesaria** establecida en **Sí**.
+3. Seleccione la fila para esa actualización para revisar los detalles para la actualización incluida la descripción de la actualización, la fecha y hora sugerida para la actualización, los componentes afectados y la duración para la actualización.
 4. Seleccione **Planificar y aprobar**.
-5. Elija una de las opciones siguientes: **Fecha sugerida**, **Fechas alternativas** o **Todas las ventanas con aprobación previa**.
-6. Seleccione **Enviar**. 
+5. Elija entre las siguientes opciones: **Fecha sugerida**, **Fechas específicas** o **Cualquier ventana ya aprobada**. Si selecciona **Fechas específicas**, puede abrir el calendario para seleccionar tres opciones entre las que IBM pueda elegir. 
+6. Seleccione **Enviar** cuando haya finalizado.  
 
-Basándose en la selección, la actualización se aplica durante la fecha sugerida que acepte, durante una de las ventanas con aprobación previa, o una de las fechas y horas alternativas.
-Cuando la fecha de planificación para la actualización se ha completado por IBM, verá la fecha planificada reflejada en los detalles para la actualización en la página **Actualizaciones del sistema**.
+Basándose en la selección, la actualización se planifica para el despliegue durante la fecha sugerida que acepte, durante una de las ventanas con aprobación previa, o en una de las fechas y horas seleccionadas.
+Cuando la actualización ha sido planificada para el despliegue por IBM, verá la fecha planificada reflejada en los detalles para la actualización en la página **Actualizaciones del sistema**.
 
-### Configuración de un canal de información de calendario para actualizaciones planificadas
-
-En la página Actualizaciones del sistema, puede elegir el seguimiento de su planificación de actualizaciones pulsando en el icono
-**Calendario** ![Calendario](images/icon_calendar.svg) y descargar el archivo `.ics` para importar sus actualizaciones
-planificadas en la app de calendario que prefiera: 
-
-<ol>
-<li>Abra la app de calendario.</li>
-<li>Descargue el archivo de calendario pulsando el icono **Calendario** ![Calendario](images/icon_calendar.svg), y luego impórtelo en su app de calendario usando el archivo `.ics`.</li>
-<li>Escriba sus credenciales.</li>
-<li>Visualice las actualizaciones planificadas.</li>
-</ol>
-
-También puede ampliar la funcionalidad de notificación para la página Administración usando las suscripciones de sucesos para
-la integración con el servicio web que quiera. Para configurar una suscripción de notificación de sucesos para una actualización o incidencia,
-consulte [Suscripciones de suceso y notificaciones](index.html#oc_eventsubscription).
 
 ## Visualización de la información del sistema
 {: #oc_system}
 
 Para ver información del sistema, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA**.
 
-Puede expandir y visualizar diversas secciones sobre actualizaciones de mantenimiento pendientes, información del sistema general y detalles de configuración LDAP. 
+Puede expandir y visualizar diversas secciones sobre actualizaciones de mantenimiento pendientes, información del sistema general y detalles de configuración LDAP.
 
 ### Actualizaciones del sistema pendientes
 
 En la sección Actualizaciones, puede ver el número de notificaciones de actualizaciones pendientes
-que requieren acción por su parte. Hay dos tipos de actualizaciones de mantenimiento que se pueden  ver: 
+que requieren acción por su parte. Hay dos tipos de actualizaciones de mantenimiento que se pueden ver:
 
 <dl>
 <dt>Actualizaciones no disruptivas</dt>
-<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso. Estas actualizaciones se aplican en las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema. </dd>
+<dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso. Estas actualizaciones se aplican en las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema.</dd>
 <dt>Actualizaciones disruptivas</dt>
-<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. El usuario tiene la capacidad de planificar y aprobar cada una de estas actualizaciones de mantenimiento con la ventana de mantenimiento de 21 días asignada para asegurarse de que la actualización no se aplica durante las horas empresariales críticas. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para aplicar la actualización. </dd>
+<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. El usuario tiene la capacidad de planificar y aprobar cada una de estas actualizaciones de mantenimiento con la ventana de mantenimiento de 21 días asignada para asegurarse de que la actualización no se aplica durante las horas empresariales críticas. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para aplicar la actualización.</dd>
 </dl>
 
 Para obtener más información sobre cómo establecer ventanas de mantenimiento con aprobación previa, cómo establecer fechas no disponibles específicas para el mantenimiento y cómo establecer un canal información de calendario, consulte [Actualizaciones de mantenimiento](index.html#oc_schedulemaintenance).
@@ -353,7 +350,7 @@ para descargar el informe.
 
 La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado.
 
-*Tabla 5. Lista de informes de seguridad*
+*Tabla 6. Lista de informes de seguridad*
 
 | **Categoría** | **Informe** | **Descripción** |      
 |-----------------|-------------------|---------------------|
@@ -378,7 +375,7 @@ La tabla siguiente muestra la lista de los informes de seguridad generados para 
 ## Visualización del estado
 {: #oc_status}
 
-Puede ver el estado para el entorno {{site.data.keyword.Bluemix_notm}} y para la consola de administración. 
+Puede ver el estado para el entorno {{site.data.keyword.Bluemix_notm}} y para la consola de administración.
 
 ### Estado de entorno de {{site.data.keyword.Bluemix_notm}}
 
@@ -390,7 +387,7 @@ La página Estado es el recurso central para buscar notificaciones y anuncios so
 
 Después del despliegue inicial del entorno {{site.data.keyword.Bluemix_notm}}, se lleva a cabo automáticamente una comprobación de verificación en los componentes que se utilizan para administrar el entorno. Puede ir a la página Comprobación de verificación de consola de administración para comprobar el estado de los componentes después de ejecutar la comprobación de verificación. Para acceder a la página, vaya a <code>https://console.&lt;subdominio&gt;.bluemix.net/check</code>, donde `<subdominio>` es el nombre de la instancia local o dedicada.
 
-Puede ejecutar una verificación en cualquier momento. Debe iniciar la sesión para seleccionar la opción para ejecutar la verificación. Si encuentra errores al añadir un usuario, editar una organización o gestionar los servicios, ejecute esta comprobación para identificar si cualquiera de los componentes está fallando o está desconectado. Puede abrir una incidencia de soporte con la información de la comprobación para resolver el problema rápidamente. 
+Puede ejecutar una verificación en cualquier momento. Debe iniciar la sesión para seleccionar la opción para ejecutar la verificación. Si encuentra errores al añadir un usuario, editar una organización o gestionar los servicios, ejecute esta comprobación para identificar si cualquiera de los componentes está fallando o está desconectado. Puede abrir una incidencia de soporte con la información de la comprobación para resolver el problema rápidamente.
 
 ## Gestión del catálogo
 {: #oc_catalog}
@@ -405,7 +402,13 @@ Catálogo, seleccione **HABILITAR TODOS LOS PLANES**.
 seleccione **INHABILITAR TODOS LOS PLANES**.
 - Para controlar la visibilidad de un plan individual, seleccione el nombre del plan y utilice el menú desplegable para seleccionar **Habilitar para todas las organizaciones**, **Inhabilitar para todas las organizaciones** o **Habilitar plan para organizaciones específicas**.
 
-<!-- staging only start -->
+También puede gestionar el orden de prioridad de los paquetes de compilación que deben elegirse en base a la compatibilidad para los desarrolladores cuando crean apps. 
+
+1. Vaya a **ADMINISTRACIÓN &gt; GESTIÓN DE CATÁLOGOS**.
+2. Vaya a la sección **Compute**.
+3. Seleccione **Prioridad de paquete de compilación**.
+4. Seleccione la opción de paquete de compilación que desee priorizar dentro de la lista. 
+5. Con la opción seleccionada, utilice las flechas para mover la opción dentro de la lista. La prioridad se establece situando el elemento de mayor prioridad en el primer lugar de la lista. 
 
 ### Registro de un intermediario de servicio
 {: #servicebrokerui}
@@ -440,56 +443,54 @@ las definiciones para su servicio y planes de servicio, incluyendo la informaci�
       "description":"Cool Service is a data warehousing and analytics solution.",
       "id":"cool-service-id",
       "name":"coolservice",
-      "tags":[
+      "tags": [
          "customer_dedicated"
       ],
-      "metadata":{
-         "displayName":"Cool Service",
+      "metadata": {
+         "displayName": "Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
          "providerDisplayName":"Cool company",
          "longDescription":"Cool Service is a data warehousing and analytics solution. You can quickly move your data into a next-generation columnar in-memory database and start running complex analytical queries.",
          "bullets":[
             {
                "title":"Fast and Simple",
-               "description":"Cool Service uses dynamic in-memory columnar technology and innovations, such as parallel vector processing and actionable compression to rapidly scan and return relevant data."
+               "description": "Cool Service uses dynamic in-memory columnar technology and innovations, such as parallel vector processing and actionable compression to rapidly scan and return relevant data."
             },
             {
-               "title":"Connectivity",
+               "title": "Connectivity",
                "description":"Cool Service is built to let you connect easily and to all of your services and applications. You can start analyzing your data right away with familiar tools."
             }
          ],
-         "featuredImageUrl":"http://path/to/icon_64x64.png",
-         "imageUrl":"http://path/to/icon_50x50.png",
-         "mediumImageUrl":"http://path/to/icon_32x32.png",
-         "smallImageUrl":"http://path/to/icon_24x24.png",
-         "documentationUrl":"http://path/to/documentation.html",
-         "instructionsUrl":"http://path/to/servicesample.md",
-         "termsUrl":"http://path/to/terms_of_agreement.pdf",
-         "media":[
-            {
-               "type":"youtube",
-               "thumbnailUrl":"http://path/to/thumbnail.png",
-               "url":"http://path/to/youtube/video",
-               "caption":"Using Cool Service in 60 Seconds"
+         "featuredImageUrl": "http://path/to/icon_64x64.png",
+         "imageUrl": "http://path/to/icon_50x50.png",
+         "mediumImageUrl": "http://path/to/icon_32x32.png",
+         "smallImageUrl": "http://path/to/icon_24x24.png",
+         "documentationUrl": "http://path/to/documentation.html",
+         "instructionsUrl": "http://path/to/servicesample.md",
+         "termsUrl": "http://path/to/terms_of_agreement.pdf",
+         "media": [{
+               "type": "youtube",
+               "thumbnailUrl": "http://path/to/thumbnail.png",
+               "url": "http://path/to/youtube/video",
+               "caption": "Using Cool Service in 60 Seconds"
             },
             {
-               "type":"image",
-               "thumbnailUrl":"http://path/to/thumbnail.png",
-               "url":"http://path/to/image_file.png",
-               "caption":"Cool Service connects applications"
+               "type": "image",
+               "thumbnailUrl": "http://path/to/thumbnail.png",
+               "url": "http://path/to/image_file.png",
+               "caption": "Cool Service connects applications"
             },
             {
-               "type":"video",
-               "thumbnailUrl":"http://path/to/thumb.png",
-               "caption":"Cool Service works with tables",
-               "source":[
-                  {
+               "type": "video",
+               "thumbnailUrl": "http://path/to/thumb.png",
+               "caption": "Cool Service works with tables",
+               "source": [{
                      "type":"video/mp4",
-                     "url":"http://path/to/video_file.mp4"
+                     "url": "http://path/to/video_file.mp4"
                   },
                   {
                      "type":"video/ogg",
-                     "url":"http://path/to/video_file.ogg"
+                     "url": "http://path/to/video_file.ogg"
                   }
                ]
             }
@@ -501,7 +502,7 @@ las definiciones para su servicio y planes de servicio, incluyendo la informaci�
             "description":"Dedicated schema and tablespace per service instance on a shared server. 1GB and 10GB of compressed database storage can hold up to 5GB and 50GB of uncompressed data respectively based on typical compression ratios.",
             "free":false,
             "id":"cool-service-plan-id",
-            "metadata":{
+            "metadata": {
                "bullets":[
                   "1 GB Min per instance. 10 GB Max per instance."
                ],
@@ -571,7 +572,7 @@ Para crear una nueva organización y añadir gestores, realice los pasos siguien
 Puede crear espacios en la organización; por ejemplo, un espacio *dev* como entorno de desarrollo, un espacio *test* como entorno de prueba y un espacio *production* como entorno de producción. Luego puede asociar sus apps a los espacios. Complete los siguientes pasos para crear un espacio:
 
 1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
-2. Seleccione la organización a la que desea añadir un espacio. 
+2. Seleccione la organización a la que desea añadir un espacio.
 3. Pulse **Crear un espacio**.
 4. Especifique un nombre de espacio.
 5. Pulse **Crear**.
@@ -589,8 +590,7 @@ En la sección Supervisión de cuotas puede expandir la sección y ver la siguie
 	<dt><strong>Memoria total del sistema</strong></dt>
 	<dd>Memoria física total disponible en el entorno.</dd>
 	<dt><strong>Cuota desplegada</strong></dt>
-	<dd>La suma de la memoria asignada para todas las apps desplegadas en todas las organizaciones. La suma de
-	la cuota desplegada puede superar la memoria física total del sistema de su entorno. Por ejemplo, si tiene una memoria total del sistema de 16 GB y asigna 4 GB de memoria para cinco organizaciones distintas, la cuota total excede la memoria total del sistema que se ha asignado a todas las organizaciones. Sin embargo, en muchos casos las organizaciones no utilizan la cuota total que se ha asignado a cada una de ellas. Además, es posible que las organizaciones no utilicen su asignación de memoria de cuota total al mismo tiempo. </dd>
+	<dd>La suma de la memoria asignada para todas las apps desplegadas en todas las organizaciones. La suma de la cuota desplegada puede superar la memoria física total del sistema de su entorno. Por ejemplo, si tiene una memoria total del sistema de 16 GB y asigna 4 GB de memoria para cinco organizaciones distintas, la cuota total excede la memoria total del sistema que se ha asignado a todas las organizaciones. Sin embargo, en muchos casos las organizaciones no utilizan la cuota total que se ha asignado a cada una de ellas. Además, es posible que las organizaciones no utilicen su asignación de memoria de cuota total al mismo tiempo. </dd>
 	<dt><strong>Cuota total</strong></dt>
 	<dd>La memoria total asignada en todas las organizaciones.</dd>
 	</dl>
@@ -599,8 +599,7 @@ En la sección Supervisión de cuotas puede expandir la sección y ver la siguie
 
 	<dl>
 	<dt><strong>Uso de memoria máximo</strong></dt>
-	<dd>Utilice esta opción para identificar la organización que utiliza la mayor cantidad de memoria. Ordene por uso de memoria más alto
-	para identificar las organizaciones que utilizan la mayor cantidad de memoria. La lista está ordenada por cuota desplegada. </dd>
+	<dd>Utilice esta opción para identificar la organización que utiliza la mayor cantidad de memoria. Ordene por uso de memoria más alto para identificar las organizaciones que utilizan la mayor cantidad de memoria. La lista está ordenada por cuota desplegada. </dd>
 	<dt><strong>Asignación de memoria excesiva</strong></dt>
 	<dd>Utilice esta opción para identificar las organizaciones que tienen un plan de cuotas superior al necesario:
 	ordene por uso de memoria excesivo para identificar las organizaciones que utilizan la cantidad de memoria más pequeña para la cuota que se les ha asignado. </dd>
@@ -657,8 +656,8 @@ Puede buscar usuarios existentes, eliminar usuarios y añadir usuarios individua
 * Añadir un único usuario. Si tiene el permiso `admin` o el permiso `users` con la acceso `write`, puede añadir usuarios.
 
   1. Para añadir un único usuario desde el directorio LDAP, pulse **Añadir usuario**.
-  2. En el campo **Buscar**, escriba la dirección de correo electrónico para el usuario y, a continuación, seleccione el usuario en la lista rellenada. 
-  3. A continuación, en el campo **Organización**, elija la organización a la que desea añadir el usuario especificando el nombre de organización y seleccionándolo en la lista rellenada. 
+  2. En el campo **Buscar**, escriba la dirección de correo electrónico para el usuario y, a continuación, seleccione el usuario en la lista rellenada.
+  3. A continuación, en el campo **Organización**, elija la organización a la que desea añadir el usuario especificando el nombre de organización y seleccionándolo en la lista rellenada.
   4. Para añadir el usuario a la organización seleccionada, pulse **Añadir usuario**.
 
   **Nota**: cuando la operación de adición es satisfactoria, el usuario se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
@@ -666,16 +665,16 @@ Puede buscar usuarios existentes, eliminar usuarios y añadir usuarios individua
 * Añadir un grupo de usuarios desde el directorio LDAP.
 
   1. Pulse **Añadir grupo de usuarios**.
-  2. En el campo **Buscar**, escriba un nombre de grupo en el que buscar y seleccione el nombre de grupo en la lista rellenada. 
-  3. A continuación, desde el campo **Organización**, elija la organización a la que desea añadir el grupo de usuarios entrando el nombre de organización y seleccionándola de la lista rellenada. 
+  2. En el campo **Buscar**, escriba un nombre de grupo en el que buscar y seleccione el nombre de grupo en la lista rellenada.
+  3. A continuación, desde el campo **Organización**, elija la organización a la que desea añadir el grupo de usuarios entrando el nombre de organización y seleccionándola de la lista rellenada.
   4. Para añadir el grupo de usuarios a la organización seleccionada, pulse **Añadir usuarios**.
-**Nota**: los grupos de más de 50 usuarios se añaden mediante un trabajo por lotes en segundo plano. Cuando la operación de añadir finaliza correctamente, el usuario o grupo se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
+  **Nota**: los grupos de más de 50 usuarios se añaden mediante un trabajo por lotes en segundo plano. Cuando la operación de añadir finaliza correctamente, el usuario o grupo se añade a la tabla para que lo pueda ver y buscar. Cuando se añaden usuarios, no tienen ningún permiso asignado.
 
-* Añada un grupo de usuarios importando una hoja de cálculo que incluya ID de usuario, direcciones de correo electrónico de usuario y la organización a la que tiene previsto añadir el usuario. 
+* Añada un grupo de usuarios importando una hoja de cálculo que incluya ID de usuario, direcciones de correo electrónico de usuario y la organización a la que tiene previsto añadir el usuario.
 
   1. Pulse **Importar usuarios**.
-  2. Pulse **Descargar plantilla (.CSV)** para descargar una hoja de cálculo con las columnas necesarias que puede rellenar, o cree una propia con al menos las cabeceras de columna necesarias: **ID de usuario**, **Correo electrónico**, **Organización**.
-  3. Rellene los valores de usuario para las columnas necesarias. Si no está utilizando un directorio LDAP, utilice las cabeceras de columna opcionales y columnas necesarias, **Nombre** y **Apellido**, para la importación de usuario. 
+  2. Pulse **Descargar plantilla (.CSV)** para descargar una hoja de cálculo con las columnas necesarias que puede rellenar, o bien puede crear su propia plantilla utilizando una hoja de cálculo que incluya las cabeceras de columna necesarias: **ID de usuario**, **Correo electrónico**, **Organización**.  Hay dos columnas opcionales que también se incluirán en la plantilla: **Nombre** y **Apellido**.
+  3. Rellene los valores de usuario para las columnas necesarias. Si no utiliza un directorio LDAP, utilice las cabeceras de columnas necesarias y opcionales para importar usuarios. 
   4. Guarde el archivo y pulse **Cargar archivo**.
  
 
@@ -683,7 +682,7 @@ Puede buscar usuarios existentes, eliminar usuarios y añadir usuarios individua
 
 * Eliminar usuarios. Si tiene el permiso `admin` o el permiso `users` con el acceso `write`, puede eliminar usuarios.
 
-    1. Localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg). 
+    1. Localice el usuario y pulse el icono ![Suprimir](images/icon_trash.svg).
     2. Pulse **Eliminar**.
 
 ### Permisos
@@ -691,7 +690,7 @@ Puede buscar usuarios existentes, eliminar usuarios y añadir usuarios individua
 
 Se pueden asignar los siguientes permisos a los usuarios:
 
-*Tabla 6. Permisos*
+*Tabla 7. Permisos*
 
 | **Permiso de usuario** | **Descripción** |       
 |-----------------|-------------------|
@@ -709,16 +708,15 @@ Los permisos se pueden habilitar o bien se puede asignar al usuario acceso `view
 * El icono ![Grabar, representado por un lápiz](images/icon_write.svg) significa que el usuario tiene
 acceso `write` (editar, añadir o eliminar) para dicho permiso.
 
-La edición de permisos y organizaciones para otros usuarios requiere tener el permiso `admin`. Para editar permisos, localice el usuario y pulse el nombre de usuario. En la página **Editar usuario**, puede habilitar o inhabilitar permisos: 
+La edición de permisos y organizaciones para otros usuarios requiere tener el permiso `admin`. Para editar permisos, localice el usuario y pulse el nombre de usuario. En la página **Editar usuario**, puede habilitar o inhabilitar permisos:
 
 * Seleccione **Activado** en la lista para habilitar un permiso.
 * Seleccione **Leer** en la lista para que el usuario tenga el acceso
-`view` (solo lectura) sobre dicho permiso, o seleccione  **Escribir** para asignar el
+`view` (solo lectura) sobre dicho permiso, o seleccione **Escribir** para asignar el
 acceso `write` (editar o añadir y eliminar) para dicho permiso.
 * Seleccione **Desactivado** para inhabilitar el permiso.
 
 Para añadir o eliminar un usuario de una organización, seleccione una de las siguientes opciones:
-
 
 * Para añadir un usuario a una organización, seleccione el nombre de usuario en la tabla para acceder a la pantalla **Editar usuario**. A continuación, utilice el campo de búsqueda para localizar una organización y seleccionar la organización en la lista, y a continuación, pulse **Guardar**.
 * Para eliminar un usuario de una organización, seleccione el nombre de usuario de la tabla para acceder a la pantalla **Editar usuario**. A continuación, pulse ![Eliminar](images/icon_remove.svg) para la organización de la que desea eliminar el usuario y pulse **Guardar**.
@@ -837,8 +835,7 @@ Para listar todos los usuarios, ejecute el mandato siguiente:
 </dl>
 
 Para cada usuario registrado, los resultados incluyen la siguiente información:
-* `"first_name"` (nombre) y
-                                `"last_name"` (apellido)
+* `"first_name"` (nombre) y `"last_name"` (apellido)
 * `"user_id"`, ID de usuario y dirección de correo electrónico
 * `"guid"`, GUID de la organización.
 * `"permissions"` asignados al usuario para la consola de administración.
@@ -996,7 +993,7 @@ El siguiente ejemplo muestra la salida de este mandato:
  ```
 {: screen}
 
-### Eliminación de un usuario
+### Removing a user
 
 Puede utilizar la API REST `Admin` para eliminar usuarios de la instancia de
 {{site.data.keyword.Bluemix_notm}}. Debe tener el permiso `users` con acceso `write` para poder eliminar usuarios.
@@ -1063,7 +1060,7 @@ POST /codi/v1/serviceBrokers
 ### Solicitud
 {: #registerrequest}
 
-*Tabla 7. Campos*
+*Tabla 8. Campos*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1144,7 +1141,7 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 ### Solicitud
 {: #updaterequest}
 
-*Tabla 8. Campos*
+*Tabla 9. Campos*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1216,7 +1213,7 @@ Content-Type: application/json
 
 Utilice la siguiente API y ejemplos de código para suprimir un servicio.
 
-*Tabla 9. Parámetro*
+*Tabla 10. Parámetro*
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|

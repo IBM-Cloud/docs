@@ -17,6 +17,7 @@ copyright:
 # Cloud Foundry (cf) 指令
 
 *前次更新：2016 年 1 月 29 日*
+{: .last-updated}
 
 您可以使用 Cloud Foundry (cf) 指令來管理應用程式。
 {:shortdesc}
@@ -28,6 +29,7 @@ copyright:
 ## cf api
 
 顯示或指定 {{site.data.keyword.Bluemix_notm}} API 端點的 URL。
+
 ```
 cf api BluemixServerURL
 ```
@@ -50,6 +52,7 @@ cf api BluemixServerURL
 ## cf bind-service
 
 將現有服務實例連結至您的應用程式。
+
 ```
 cf bind-service appname service_instance
 ```
@@ -67,12 +70,11 @@ cf bind-service appname service_instance
 ## cf create-service
 
 建立服務實例。
+
 ```
 cf create-service service_name service_plan service_instance
 ```
-例如，您可以使用 `cf create-service DataWorks free my_dataworks`，建立使用免費方案的 {{site.data.keyword.dataworks_short}} 服務實例。
-
-<dl>
+例如，您可以使用 `cf create-service DataWorks free my_dataworks`，建立使用免費方案的 {{site.data.keyword.dataworks_short}} 服務實例。<dl>
 <dt>service_name</dt>
 <dd>服務的名稱。</dd>
 <dt>service_plan</dt>
@@ -84,6 +86,7 @@ cf create-service service_name service_plan service_instance
 ## cf create-space
 
 建立空間。
+
 ```
 cf create-space space_name
 ```
@@ -99,6 +102,7 @@ cf create-space space_name
 ## cf delete
 
 刪除現有應用程式。
+
 ```
 cf delete appname
 ```
@@ -114,6 +118,7 @@ cf delete appname
 ## cf delete-space
 
 刪除空間。
+
 ```
 cf delete-space space_name
 ```
@@ -127,7 +132,7 @@ cf delete-space space_name
 
 ## cf events
 
-顯示與應用程式相關的執行時期事件。
+顯示與應用程式相關的運行環境事件。
 ```
 cf events appname
 ```
@@ -139,6 +144,7 @@ cf events appname
 ## cf help
 
 顯示所有 cf 指令的說明資訊，或是在使用 command_name 參數時顯示特定 cf 指令的說明資訊。
+
 ```
 cf help command_name
 ```
@@ -152,11 +158,11 @@ cf help command_name
 ## cf login
 
 讓您登入 {{site.data.keyword.Bluemix_notm}}。
+
 ```
 cf login
 ```
-您可以在發出 cf login 指令時使用下列一個以上參數：
-<dl>
+您可以在發出 cf login 指令時使用下列一個以上參數：<dl>
 <dt>*-a* https://api.{DomainName}</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} API 端點的 URL。這是選用性的參數。</dd>
 <dt>*-u* user_name</dt>
@@ -178,6 +184,7 @@ cf login
 ## cf logs
 
 顯示應用程式的 STDOUT 及 STDERR 日誌串流。
+
 ```
 cf logs appname
 ```
@@ -191,6 +198,7 @@ cf logs appname
 ## cf marketplace
 
 列出 Marketplace 中可用的所有服務。這個指令所列出的服務也會顯示在 {{site.data.keyword.Bluemix_notm}}「型錄」中。
+
 ```
 cf marketplace
 ```
@@ -198,6 +206,7 @@ cf marketplace
 ## cf push
 
 將新的應用程式部署至 Bluemix，或在 Bluemix 中更新現有的應用程式。
+
 ```
 cf push appname 
 ```
@@ -311,6 +320,6 @@ cf -v
 
 # 相關鏈結
 {: #rellinks}
-## 一般 
+## 一般
 {: #general}
 * [快速參照卡 - cf 指令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

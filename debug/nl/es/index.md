@@ -6,6 +6,7 @@ copyright:
 ---
 
 
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 # Depuración
 {: #debugging}
 
-*Última actualización: 3 de marzo de 2016*
+*Última actualización: 25 de mayo de 2016*
+{: .last-updated}
 
 Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de registro para investigar los problemas y depurar los errores. 
 {:shortdesc}
@@ -27,9 +29,10 @@ Los registros tienen un formato fijo. En registros detallados, puede filtrar reg
 
 ## Depuración de errores de transferencia
 {: #debugging-staging-errors}
-Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si su app no se puede transferir, puede comprobar los registros para ver el motivo del error y evitar el problema.
+Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la aplicación y solucionar el problema. Para obtener más información sobre los métodos para visualizar registros para las apps Bluemix, consulte [Visualización de registros](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
 Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [despliegue de apps](../manageapps/depapps.html#appdeploy){: new_window}.
+
 
 El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores de transferencia. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos cf. Para obtener más información sobre cómo instalar la interfaz de línea de mandatos cf, consulte [Instalación de la interfaz de línea de mandatos cf](../starters/install_cli.html){: new_window}.
 
@@ -131,6 +134,18 @@ SystemErr respectivamente.
   * Para las apps PHP, puede utilizar la función error_log para escribir en un archivo del directorio de logs.
   * Para las apps Python, puede hacer que el registrador escriba en un archivo del directorio logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Para apps Ruby, puede hacer que el registrador escriba en un archivo del directorio logs.
+ 
+ 
+### Depuración de cambios de código
+{: #debug_code_changes}
+
+Si realiza cambios de código en una app que ya está desplegada y en funcionamiento, los cambios no se reflejarán todavía en {{site.data.keyword.Bluemix_notm}} y puede depurar mediante los registros. Independientemente de que su app se esté ejecutando, puede comprobar los registros que se generan durante el despliegue o la ejecución de la app para determinar porqué no se ejecuta el código nuevo. 
+
+En función de la forma de desplegar el nuevo código, elija uno de los métodos siguientes para depurar los cambios de código:  
+
+  * Para el nuevo código desplegado desde la línea de mandatos, compruebe la salida del mandato *cf push*. Además, puede utilizar el mandato *cf logs* para encontrar más pistas para resolver el problema. Para obtener más información sobre cómo utilizar el mandato *cf logs*, consulte [Visualización de registros desde la interfaz de línea de mandatos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+
+  * Para el nuevo código que se despliega desde una interfaz de usuario, como la de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema. Para obtener más información sobre cómo visualizar registros desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks
