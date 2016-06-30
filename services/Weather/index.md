@@ -20,7 +20,7 @@ Use {{site.data.keyword.weatherfull}} to incorporate weather data from
 The Weather Company (TWC) into your {{site.data.keyword.Bluemix}} applications.
 {:shortdesc}
 
-**Warning:** Currently, the {{site.data.keyword.weather_short}} service **may not** be purchased
+**Attention:** Currently, the {{site.data.keyword.weather_short}} service **may not** be purchased
 or used in the following countries or regions: Afghanistan, Armenia, Azerbaijan,
 Bahrain, Bangladesh, Bhutan, Brunei, Cambodia, China, Cyprus, Georgia, India,
 Indonesia, Iran, Iraq, Japan, Jordan, Kazakhstan, Kuwait, Kyrgyzstan, Laos,
