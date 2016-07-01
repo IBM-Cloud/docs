@@ -16,7 +16,7 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-*Last updated: 16 May 2015*
+*Last updated: 1 July 2016*
 {: .last-updated}*
 {: .last-updated}
 
@@ -119,7 +119,7 @@ The confirmation email is sent to the email address that you provided. Check you
 
 
 
-## Unable to add users to an organization
+## Unable to add users to an org
 {: #ts_adduser}
 
 You can invite more than one user to work under the same organization. You can invite users to your organization only if you are the account owner, or if you are both a manager and a member of the organization.
@@ -186,7 +186,7 @@ To register multiple users for {{site.data.keyword.Bluemix_notm}}, you must comp
 
     
 
-## A {{site.data.keyword.Bluemix_notm}} page cannot be loaded
+## {{site.data.keyword.Bluemix_notm}} page can't be loaded
 {: #ts_err}
 
 When you use the {{site.data.keyword.Bluemix_notm}} user interface, you might not be able to load a {{site.data.keyword.Bluemix_notm}} page. Instead, you might see error messages BXNUI0001E or BXNUI0016E.
@@ -328,7 +328,26 @@ If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, 
   3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
 
 
+## Unable to retrieve spaces in the org
+{: #ts_retrieve_space}
 
+You can't create an app or a service if your current organization does not have a space associated with it.
+
+When you try to create an app in Bluemix, you see the following error message:
+{: tsSymptoms}
+
+`BXNUI0515E: The attempt to retrieve the spaces in the org failed because of a network connection problem.`
+
+This error often is received the first time you try to create an app or a service from the Catalog when a space is not created yet. 
+{: tsCauses}
+
+Ensure that you created a space in your current organization.  To create a space, use one of the following methods:
+{: tsResolve}
+
+  * From Account and Support ![Account and Support](images/account_support.svg), select the organization that you want to create the space in, and then click **Create a Space**.
+  * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
+
+Try again. If you see this message again, go to the [Bluemix status](https://status.eu-gb.bluemix.net/){: new_window} page to check whether a service or component has an issue.
 
 
 
@@ -358,7 +377,7 @@ You do not have the appropriate level of authority that is required to perform t
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing your organizations](../admin/orgs_spaces.html) for details.
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](../admin/orgs_spaces.html){: new_window} for details.
  
 
  
@@ -529,7 +548,7 @@ Use third-party services that do not rely on the GCM service as a workaround, fo
 
 
 
-## Organization's services limit is exceeded
+## Org's services limit is exceeded
 {: #ts_servicelimit}
 
 If you are a trial account user, you might be unable to create an application in {{site.data.keyword.Bluemix_notm}} if you have exceeded your organization's services limit.
@@ -592,7 +611,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 ```
 
 
-## Organization's memory limit is exceeded
+## Org's memory limit is exceeded
 {: #ts_outofmemory}
 
 If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. 
@@ -722,7 +741,7 @@ Use one of the following methods to solve the problem:
 
   
   
-## Organizations cannot be found on {{site.data.keyword.Bluemix_notm}}
+## Orgs can't be found on {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
@@ -761,7 +780,7 @@ If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by usi
   
 
 
-## An app route cannot be created
+## App routes can't be created
 {: #ts_hostistaken}
 
 When you deploy an app to {{site.data.keyword.Bluemix_notm}}, the route of the app can't be created if the host name that you specified is already being used.
@@ -793,7 +812,7 @@ The host name that you specify must be unique within the domain that you are usi
     ```
 
 
-## A WAR app cannot be pushed by using the cf push command
+## WAR apps can't be pushed by using the cf push command
 {: #ts_cf_war}
 
 You might not be able to use the cf push command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location is not specified correctly.
@@ -826,7 +845,7 @@ For more information about the `cf push` command, enter `cf push -h`.
 
 
 
-## Double-byte characters are not displayed properly when Liberty applications are pushed to {{site.data.keyword.Bluemix_notm}}
+## Double-byte characters aren't displayed properly when Liberty applications are pushed to {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
 Double-byte characters might not be displayed properly if Unicode support is not configured properly for the servlet or JSP files.
@@ -959,7 +978,7 @@ You can resolve this problem by removing the server.xml file from the project. T
 {: tsResolve}
 	
 	
-## An app cannot be staged by using a custom buildpack
+## Apps can't be staged by using custom buildpacks
 {: #ts_bp_compilation}
 
 You might not be able to deploy an app to {{site.data.keyword.Bluemix_notm}} by using a custom buildpack if the scripts within the buildpack are not executable.
@@ -980,7 +999,7 @@ You can use the [git update](http://git-scm.com/docs/git-update-index){: new_win
 	
 	
 	
-## An app can't be deployed from DevOps Services to {{site.data.keyword.Bluemix_notm}}
+## Unable to deploy an app from DevOps Services to {{site.data.keyword.Bluemix_notm}}
 {: #ts_devops_to_bm}
 
 You might not be able to push your app from IBM Bluemix DevOps Services to {{site.data.keyword.Bluemix_notm}} if the `manifest.yml` file is not present within your app.
@@ -1187,7 +1206,7 @@ To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support]
 
 
 
-## No space is associated with the current organization
+## No space is associated with your current org
 {: #ts_no_space}
 
 You are unable to create an application if no space is associated with your current organization.
@@ -1216,7 +1235,7 @@ To create a space, use one of the following methods:
   
   
   
-## The domain names for different applications are the same
+## Apps share same domain name
 {: #ts_domain_diff}
 
 You might notice that several applications share the same URL in {{site.data.keyword.Bluemix_notm}}.
