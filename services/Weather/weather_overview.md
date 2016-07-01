@@ -38,8 +38,7 @@ You can use the REST APIs to retrieve the following information:
 * Almanac services that provide historical daily or monthly weather data sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more.
 * Location mapping services that provide the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match your request.
 
-For more information about The Weather Company's weather phrases and icons, see [TWC Icon Codes and Icon Images](https://docs.google.com/document/d/1qpc4QN3YDpGDGGNYVINh7tfeulcZ4fxPSC5f4KzpR_U/edit){:new_window}.
-You can also [download a set of icons](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} to use in your app.
+You can [download a set of icons](https://twcdocs.mybluemix.net/download/weatherinsightsicons.zip){:new_window} to use in your app.
 
 ## Pricing model
 {: #pricing_models}
