@@ -1294,7 +1294,7 @@ You might experience problems when you use IBM® Bluemix™ runtimes. However, i
 {:shortdesc}
 
 
-## Obsolete buildpack is loaded from cache when an app is pushed
+## Obsolete buildpack used when an app is pushed
 {: #ts_loading_bp}
 
 
@@ -1302,7 +1302,7 @@ You might not be able to use the latest buildpack components when you push an ap
 
  
 
-When you push or restage an app after the buildpack is updated, the latest buildpack components are not loaded automatically. As a result, your app uses the obsolete buildpack components. Updates that have been applied to the buildpack since the last time you pushed the app are not implemented. 
+When you push or restage an app after the buildpack is updated, the latest buildpack components are not loaded automatically. As a result, your app uses the obsolete buildpack components from the cache. Updates that have been applied to the buildpack since the last time you pushed the app are not implemented. 
 {: tsSymptoms}
 
 
