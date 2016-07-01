@@ -14,7 +14,7 @@ copyright:
 #Monitoring and logging
 {: #monitoringandlogging}
 
-*Last updated: 24 May 2016*
+*Last updated: 1 July 2016*
 {: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
@@ -22,7 +22,7 @@ By monitoring your apps and reviewing logs, you can follow application execution
 
 {{site.data.keyword.Bluemix}} applications can be widely distributed, multi-instance applications, and the execution of your application and its data can be shared across many services. In this complex environment, monitoring your apps and reviewing logs is important for you to manage your apps.
 
-##Monitoring and logging apps
+##Monitoring and logging Cloud Foundry apps
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} has a built-in logging mechanism to produce log files for your apps as they are running. In the logs, you can view the errors, warnings, and informational messages that are produced for your app. In addition, you can also configure your app to write log messages to the log file. For more information about log formats and how to view logs, see [Logging for apps running on Cloud Foundry](#logging_for_bluemix_apps).

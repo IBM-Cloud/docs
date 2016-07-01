@@ -27,8 +27,7 @@ copyright:
 
 ## Liberty Collective 설치 규칙
 
-표준화된 디렉토리 구조를 따라 Liberty Collective가 설치되어 구성됩니다.
-다음 목록은 몇 가지 중요한 설정을 표시합니다. 설정의 전체 목록은 /etc/virtualimage.properties를 참조하십시오.
+표준화된 디렉토리 구조를 따라 Liberty Collective가 설치되어 구성됩니다. 다음 목록은 몇 가지 중요한 설정을 표시합니다. 설정의 전체 목록은 /etc/virtualimage.properties를 참조하십시오.
 
 * IHS_HOME=/opt/IBM/WebSphere/HTTPServer
 * IHS_INSTALL_ROOT=/opt/IBM/WebSphere/HTTPServer
