@@ -666,10 +666,10 @@ field with **Read** or **Write** access for the users permission.
 
 **Note**: Enter user IDs that match the values used in your user registry. 
 
-  1. Click **Import users**.
-  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, and **Organization**.  Two optional columns are also included in the template: **First Name** and **Last Name**.
-  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for the users that you are importing.
-  4. Save your file, and click **Upload file**.
+   1. Click **Import users**.
+   2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, and **Organization**.  Two optional columns are also included in the template: **First Name** and **Last Name**.
+   3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for the users that you are importing.
+   4. Save your file, and click **Upload file**.
 
   **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. If the import was successful, you receive a confirmation message that states that all users were added. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
@@ -700,7 +700,7 @@ Users can be assigned the following permissions with specific access levels that
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
-| Administrator | Users with **Admin** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, the admin can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. |
+| Admin | Users with **Admin** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, the admin can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. |
 | Login | Users with **Login** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. |
 | Catalog | Users with **Catalog** permission can be assigned the access to **Read** or **Write** (modify) which services are available in the local or dedicated instance. Read access allows the user to access the Catalog Management tile to view available services. Write access allows the user to access the [Catalog Management](#oc_catalog) tile to view services, edit the visibility of services, register custom services, and control the buildpack priority list. |  
 | Reports | Users with **Reports** permission can be assigned the access to **Read** or **Write** (modify) security reports. View access allows the user to access the Reports and Logs tile to download reports. Write access allows the user to view the [Reports and Logs](#oc_report) tile as well as use the CLI to upload new reports and create new categories for users to access. |
