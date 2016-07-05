@@ -17,7 +17,7 @@ copyright:
 
 # Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Last updated: 13 June 2016
+Last updated: 5 July 2016
 {: .last-updated}
 
 If you have administrator access for {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](index.html#oc_useradmin); see [Managing your organizations](../admin/orgs_spaces.html).
@@ -630,27 +630,20 @@ In the Organization List section, you can view all organizations in the
 ## Managing users and permissions
 {: #oc_useradmin}
 
-You can add users to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through LDAP. You can add users singly or in
-groups, and view user permissions. If you are assigned `admin` permission, you
-can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
+You can add users singly or in groups, and view user permissions. Commonly, users are added to your {{site.data.keyword.Bluemix_notm}} instance from your company's user registry through Lightweight Directory Access Protocol (LDAP). If you are assigned **Admin** permission, you can also set and manage permissions for other users. Click **ADMINISTRATION &gt; USER ADMINISTRATION**.
 
-The User Administration page displays all users for the local or dedicated instance.
-Permissions for each user are displayed. Permissions can be the following: None,
-`Admin`, `Catalog`, `Login`,
-`Reports`, and `Users`. Permissions can be enabled, or the
-user can be given `view` or `write` access for that
-permission, as represented by icons. See [Permissions](index.html#permissions) for descriptions
-of each type and explanation of the icons.
+The User Administration page displays all users for the local or dedicated instance. Permissions for each user are displayed using icons in the table. Permissions can be the following: None, **Admin**, **Login**, **Catalog**, **Reports**, and **Users**. 
+The **Admin** and **Login**` permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
 
 ### Working with users
 
-You can search for existing users, remove users, and add users individually or by a group. Choose from the following options:
+Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. Note that if you have the **Admin** permission, you have full access to complete any tasks for user management in the environment. The following tasks can be completed to manage users. Review the following list to see if your level of access enables you to complete specific user management tasks:
 
-* Locate users.You can locate users in the table by using the **Search**
-field.
+* Locate users. You can locate users in the table by using the **Search**
+field with **Read** or **Write** access for the users permission.
 
-* Add a single user. If you have `admin` permission or
-`users` permission with `write` access, you can add users.
+* Add a single user. If you have **Admin** permission or
+**Users** permission with **Write** access, you can add users.
 
   1. To add a single user from your LDAP directory, click **Add User**.
   2. In the **Search** field, type the email address for the user, and then select the user from the populated list.
@@ -659,65 +652,67 @@ field.
 
   **Note**: When the add operation is successful, the user is added to the table for you to view and search. When users are added, they have no assigned permissions.
 
-* Add a group of users from your LDAP directory.
+* Add a group of users from your LDAP directory. If you have **Admin** permission or
+**Users** permission with **Write** access, you can add users.
 
   1. Click **Add User Group**.
   2. In the **Search** field, type a group name to search, and select the group name from the populated list.
   3. Next, from the **Org** field, choose the org to which you want to add the user group by entering the org name and selecting it from the populated list.
   4. To add the user group to the selected org, click **Add Users**.
+  
   **Note**: Groups of more than 50 users are added through a background batch job. When the add operation is successful, the user or group is added to the table for you to view and search. When users are added, they have no assigned permissions.
 
-* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user.
+* Add a group of users by importing a spreadsheet that includes user IDs, user email addresses, and the organization to which you plan to add the user. If you have **Admin** permission or **Users** permission with **Write** access, you can add users.
+
+**Note**: Enter user IDs that match the values used in your user registry. 
 
   1. Click **Import users**.
-  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, **Organization**.  There are two optional columns that are also included in the template: **First Name** and **Last Name**.
-  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for your importing users.
+  2. Click **Download Template (.CSV)** to download a spreadsheet with the required columns that you can fill in, or you can create your own by using a spreadsheet that includes the required column headers: **User ID**, **Email**, and **Organization**.  Two optional columns are also included in the template: **First Name** and **Last Name**.
+  3. Fill in the user values for the required columns. If you are not using an LDAP directory, use the required and optional column headers for the users that you are importing.
   4. Save your file, and click **Upload file**.
- 
 
-  **Note**: Enter user IDs that match the values used in your user registry. The columns within your spreadsheet can be in any order as long as you have all of the required columns. You receive a confirmation message stating that all users were added, if the import was successful. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
+  **Note**: The columns within your spreadsheet can be in any order as long as you have all of the required columns. If the import was successful, you receive a confirmation message that states that all users were added. If the import was successful for some users, but not others, review the error message to take action on the users that could not be added.
 
-* Remove users. If you have `admin` permission or `users` permission with `write` access, you can remove users.
+* Remove users. If you have **Admin** permission or **Users** permission with **Write** access, you can remove users from the environment permanently.
 
     1. Locate the user and click the ![Delete](images/icon_trash.svg) icon.
     2. Click **Remove**.
 
+* Editing permissions and organizations to which users belong requires you to have **Admin** permission. To edit permissions for users, locate the user and click the user name. From the **Edit User** page, you can enable or disable permissions:
+
+    * Select **On** from the list to enable the **Admin** or **Login** permission.
+    * Select **Read** from the list to allow the user to have **Read** (read-only) access for that permission, or select **Write** to allow **Write** (edit, or add and remove) access for that permission.
+    * Select **Off** to disable any of the permissions.
+    
+    **Note**: Setting the **Admin** permission to **On** sets all other permissions with **Write** access.
+
+* To add or remove a user from a specific org, you must have **Admin** permission or **Users** permission with **Write** access.
+
+    1. To add a user to an org, select the user name from the table to access the **Edit User** page. Then, use the search field to locate an org, select the org from the list, and click **Save**.
+    2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
+
 ### Permissions
 {: #permissions}
 
-Users can be assigned the following permissions:
+Users can be assigned the following permissions with specific access levels that enable the user to complete specific tasks:
 
 *Table 7. Permissions*
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
-| Admin | Users with `admin` permission are allowed to edit permissions for other users. |
-| Catalog | Users with `catalog` permission can be assigned the access to `view` or `write` (modify) which services are available in the local or dedicated instance. |  
-| Login | Users with `login` permission are allowed to see the Administration page. Without this permission, users cannot see the Administration menu option. |
-| Reports | Users with `reports` permission can be assigned the access to `view` or `write` (modify) security reports. |
-| Users | Users with `users` permission can be assigned the access to `view` the list of users or `write` (add or remove) users. This permission doesn't allow you to set permissions for other users.|
+| Administrator | Users with **Admin** permission set to **On** are allowed to edit permissions for other users. If you have the permission on, it automatically enables full access to all other permissions. In addition to the tasks outlined for each permission in this table, the admin can also set up event subscriptions to get alerted directly about maintenance or incidents, schedule maintenance, run verification checks on console components, and create orgs and spaces for the environment. |
+| Login | Users with **Login** permission set to **On** are allowed to see the Administration page option in the {{site.data.keyword.Bluemix_notm}} user interface. Users with the permission enabled can access the [System Information](#oc_system) and [Resource Usage](#oc_resource) tiles. Without this permission, users cannot see or access the Administration menu option. |
+| Catalog | Users with **Catalog** permission can be assigned the access to **Read** or **Write** (modify) which services are available in the local or dedicated instance. Read access allows the user to access the Catalog Management tile to view available services. Write access allows the user to access the [Catalog Management](#oc_catalog) tile to view services, edit the visibility of services, register custom services, and control the buildpack priority list. |  
+| Reports | Users with **Reports** permission can be assigned the access to **Read** or **Write** (modify) security reports. View access allows the user to access the Reports and Logs tile to download reports. Write access allows the user to view the [Reports and Logs](#oc_report) tile as well as use the CLI to upload new reports and create new categories for users to access. |
+| Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
 
 
-Permissions can be enabled, or the user can be given `view` or
-`write` access for that permission, as represented by the following icons:
+Permissions can be enabled for the user with either **Read** or
+**Write** access for that permission, as represented by the following icons:
 
-* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon with a permission means that it is enabled.
-* The ![View, represented by an eye](images/icon_read.svg) icon means that the user has `view` (read-only) access for that permission.
-* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has `write` (edit, add, or remove) access for that permission.
-
-Editing permissions and organizations for other users requires you to have `admin` permission. To edit permissions, locate the user and
-click the user name. From the **Edit User** page, you can enable or disable permissions:
-
-* Select **On** from the list to enable a permission.
-* Select **Read** from the list to allow the user to have `view` (read-only) access for that permission, or select **Write**
-to allow `write` (edit, or add and remove) access for that permission.
-* Select **Off** to disable the permission.
-
-To add or remove a user from an org, select from the following options:
-
-* To add a user to an org, select the user name from the table to access the **Edit User** screen. Then, use the search field to locate an org, and select the org from the list, and then click **Save**.
-* To remove a user from an org, select the user name from the table to access the **Edit User** screen. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
-
+* The ![Enabled, represented by a check mark](images/icon_enabled.svg) icon associated with a permission means that it is enabled.
+* The ![Read, represented by an eye](images/icon_read.svg) icon means that the user has **Read** (read-only) access for that permission.
+* The ![Write, represented by a pencil](images/icon_write.svg) icon means that the user has **Write** (edit, add, or remove) access for that permission.
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
