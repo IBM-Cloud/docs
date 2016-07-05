@@ -16,7 +16,7 @@ copyright:
 *Last updated: 01 July 2016*
 {: .last-updated}
 
-You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window} 
+You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window}
 to retrieve weather data. You can test API operations and instantly view the results
 to help you build your applications faster.
 {: shortdesc}
@@ -44,13 +44,13 @@ You can use the following APIs.
 |`GET /v1/alert/{detail_key}/details.json`                         |Returns weather watches, warnings, statements, and advisories that are issued by the National Weather Service (NWS), Environment Canada, and MeteoAlarm (Europe). The details include in-depth information about the alert issued by the government weather authority for the specified area and include the translation of the event description, country name, and alert headlines in 49 languages.|
 |`GET /v1/{geocode or postal code}/almanac/daily.json`             |Returns daily almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
 |`GET /v1/{geocode or postal code}/almanac/monthly.json`           |Returns monthly almanac information (US only) that is sourced from National Weather Service observations stations from a time period spanning 10 to 30 years or more. The information is gathered and provided by the National Climatic Data Center (NCDC). You can supply a `geocode/{latitude}/{longitude}`, or `location/{PostalLocationId}`.|
-|`GET /v3/location/{search or point}`                                  |Provides the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match the request. The Location Service supports search by city name, geocode (latitude and longitude), postal code, and ICAO code.|
+|`GET /v3/location/{search or point}`                                  |Provides the ability to look up a location name or geocode (latitude and longitude) to retrieve a set of locations that match the request. The Location Service supports search by city name or postal code.|
 *Table 1. {{site.data.keyword.weather_short}} API summary*
 
 ## Daily and intraday forecasts
 {: #daily_intraday}
-The daily forecast API can contain multiple days of daily forecasts for each location. 
-Each day of a forecast can contain up to three separate forecasts. For any given 
+The daily forecast API can contain multiple days of daily forecasts for each location.
+Each day of a forecast can contain up to three separate forecasts. For any given
 forecast day the API can return day, night, and 24-hour forecasts.
 
 The intraday forecast API can contain multiple days of daily forecasts for each location.
@@ -58,9 +58,9 @@ Each day of a forecast contains four separate 6-hour forecasts for morning (7 AM
 afternoon (1 PM to 7 PM), evening (7 PM to 1 AM), and overnight (1 AM to 7 AM). The
 intraday forecast is similar in structure to the daily forecast.
 
-Each segment has a day part number, day of the week name, and day part name. For example, 
-the following example shows the data field order and data values for 
-`num`, `dow`, and the `daypart_name`, for a forecast that is generated 
+Each segment has a day part number, day of the week name, and day part name. For example,
+the following example shows the data field order and data values for
+`num`, `dow`, and the `daypart_name`, for a forecast that is generated
 by the APIs on a Thursday morning:
 * 1, Thursday, Morning
 * 2, Thursday, Afternoon
@@ -97,21 +97,21 @@ determined by the type of observation it is.
 
 ## Alert headlines and details
 {: #alerts_levels}
-The alert APIs return active weather alert headlines that are related to severe 
-thunderstorms, tornadoes, earthquakes, and floods. 
-These APIs also return non-weather alerts such as child abduction alerts and 
-law enforcement warnings. 
+The alert APIs return active weather alert headlines that are related to severe
+thunderstorms, tornadoes, earthquakes, and floods.
+These APIs also return non-weather alerts such as child abduction alerts and
+law enforcement warnings.
 
-**Note**: This API is available only for the United States, Canada, and Europe. 
+**Note**: This API is available only for the United States, Canada, and Europe.
 
-The Alert Headlines API provides a key value in the `detail_key` attribute 
+The Alert Headlines API provides a key value in the `detail_key` attribute
 to access the alert details in the Alert Details API.
-Query the Alert Headlines API to get the `detail_key` value, and then retrieve the 
+Query the Alert Headlines API to get the `detail_key` value, and then retrieve the
 Alert Details API response with the `detail_key`.
 
-**Note**: You must display the data source attribution for any alert data that is displayed in your application. 
+**Note**: You must display the data source attribution for any alert data that is displayed in your application.
 
-The attribution phrase must display the following information: 
+The attribution phrase must display the following information:
 
 *Issued by <Office Name> - &lt;Office Admin District Code&gt;, &lt;Office Country Code&gt;, &lt;Source&gt;, &lt;Disclaimer&gt;*
 
@@ -121,30 +121,30 @@ For example:
 
 ## Almanac information
 {: #almanac_details}
-The Almanac API requires a location ID and location type (city or postal code) 
-or a latitude and longitude pair to retrieve the information for a specific location. 
+The Almanac API requires a location ID and location type (city or postal code)
+or a latitude and longitude pair to retrieve the information for a specific location.
 
-When you use `location` in the URL, the location must include a location ID 
+When you use `location` in the URL, the location must include a location ID
 (postal code) with a location type and a
-country code. When you use `geocode` in the URL, the search location must be a valid 
-latitude and longitude combination. 
+country code. When you use `geocode` in the URL, the search location must be a valid
+latitude and longitude combination.
 
-The Almanac API uses parameters to specify either daily or monthly data, 
-a specific date or date range of information, and the units of measure to return the data in. 
+The Almanac API uses parameters to specify either daily or monthly data,
+a specific date or date range of information, and the units of measure to return the data in.
 
 The date parameters are `start` and `end`. The `start` parameter is a required parameter
-but the `end` parameter is optional. When the parameters are used together, the combination returns a 
-range of data instead of a specific month or day of data. 
+but the `end` parameter is optional. When the parameters are used together, the combination returns a
+range of data instead of a specific month or day of data.
 
-The date format for retrieving Daily Almanac results is a four-digit numeric value that represents 
-the month and day for the data required, that is, MMDD. Any single digit 
+The date format for retrieving Daily Almanac results is a four-digit numeric value that represents
+the month and day for the data required, that is, MMDD. Any single digit
 day **must** have a preceding zero (0), for example, 01.
 
-The date format for retrieving Monthly Almanac results is month, that is, MM. Any single digit 
-month **must** have a preceding zero (0), for example, 01.  Any other format results in 
+The date format for retrieving Monthly Almanac results is month, that is, MM. Any single digit
+month **must** have a preceding zero (0), for example, 01.  Any other format results in
 an API error and no data will be returned.
 
-**Note**: If you don't provide the date value in the request, the system returns a 
+**Note**: If you don't provide the date value in the request, the system returns a
 status of 404 (Bad Request). The API does not provide a default value.
 
 ## URL construction
@@ -154,7 +154,7 @@ The REST APIs use a common URL structure and query parameters to request and fil
 The URLs that are passed to the APIs are constructed as follows:
 
 ```
-https://twcservice.mybluemix.net/api/weather/v1/&geocode={latitude,longitude}/<product group>/<date>/<format>&units={units code}&language={language code}
+https://twcservice.mybluemix.net/api/weather/v1/geocode/<latitude>/<longitude>/<product group>/<date>/<format>&units={units code}&language={language code}
 ```
 
 For example:
@@ -177,7 +177,7 @@ https://twcservice.mybluemix.net/api/weather/v1/geocode/33.40/83.42/forecast/dai
 
 **Note**: The REST APIs use the ISO 3166 standard for country codes. For more information, see the
 [ISO Standard Online Browsing Platform](https://www.iso.org/obp/ui/#search/code/){:new_window}.
-The APIs use the WGS84 geocode coordinate reference system. For more information, see 
+The APIs use the WGS84 geocode coordinate reference system. For more information, see
 [Basic Geo Vocabulary](https://www.w3.org/2003/01/geo/){:new_window}.
 
 ## Units of measure
@@ -211,9 +211,9 @@ The following fields are translated:
 |`uv_desc`           |The UV index description, which complements the UV index value by providing an associated level of risk of skin damage due to exposure|
 |`wx_phrase`         |A text description of the observed weather conditions at the reporting station.|
 |`pressure_desc`     |A phrase that describes the change in the barometric pressure reading over the last hour.|
-|`headline_text`     |The text of the headline of an event for the location.| 
+|`headline_text`     |The text of the headline of an event for the location.|
 |`event_desc`        |A description of an event.|
-|`cntry_name`        |The country name where an event occurred, given in mixed case letters.|    
+|`cntry_name`        |The country name where an event occurred, given in mixed case letters.|
 *Table 3. Translated response fields*
 
 ## Handling null or missing data fields in the API response
