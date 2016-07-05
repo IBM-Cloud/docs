@@ -128,7 +128,9 @@ You can also use a third-party service to automatically send an email for each R
 ## Contacting support
 {: #contacting-support}
 
-You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account.  
+You can open support tickets if you have a valid {{site.data.keyword.Bluemix_notm}} account. 
+
+If you have a {{site.data.keyword.Bluemix_notm}} account linked with a SoftLayer account, you can open support tickets for {{site.data.keyword.Bluemix_notm}} from the SoftLayer Customer portal or from the {{site.data.keyword.Bluemix_notm}} user interface.
 
 ### Contacting support for {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
