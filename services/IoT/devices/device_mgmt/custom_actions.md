@@ -13,10 +13,10 @@ copyright:
 
 # Extending device management
 {: #custom_actions}
-*Last updated: 24 June 2016*
+*Last updated: 6 July 2016*
 {: .last-updated}
 
-You can extend the device management capabilities in your {{site.data.keyword.iot_short_full}} to suit your requirements by adding device management extensions through either the REST API or the dashboard that is provided in {{site.data.keyword.Bluemix_notm}}.
+You can extend the device management capabilities in your {{site.data.keyword.iot_full}} to suit your requirements by adding device management extensions through either the REST API or the dashboard that is provided in {{site.data.keyword.Bluemix_notm}}.
 
 By default, the following device management actions are provided and supported by the {{site.data.keyword.iot_short_notm}}:
 - Device reboot
@@ -76,7 +76,7 @@ A device management extension package contains the following properties:
 |``bundleId``|Unique identifier for a device management extension.|Yes|
 |``version``|Version string for a device management extension.|No|
 |``provider``|Provider string for a device management extension that must be no greater than 1024 characters.|No|
-|`displayName``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. You must specify at least one entry.|Yes|
+|``displayName``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. You must specify at least one entry.|Yes|
 |``description``|Map of ``locale``: ``String`` key-value pairs that are used for display in the {{site.data.keyword.iot_short_notm}} dashboard. If defined, you must specify at least one entry.|No|
 |``actions``| Map of ``actionId``: ``<action>`` key-value pairs that define the actions that are contained within a device management extension. You must specify at least one entry.|Yes|
 
@@ -105,7 +105,7 @@ A device management extension package contains the following properties:
 ## REST APIs
 {: #rest_api}
 
-Use the following {{site.data.keyword.iot_short_notm}} REST APIs commands to manage your extension packages:
+Use the following {{site.data.keyword.iot_short_notm}} REST API commands to manage your extension packages:
 
 - To get a list of all device management extension packages:
   `GET https://<orgId>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
