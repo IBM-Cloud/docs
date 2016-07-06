@@ -7,7 +7,9 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Sobre {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *Última atualização: 21 de abril de 2016*
+{: .last-updated}
 
 {: shortdesc}
 O serviço {{site.data.keyword.mobileanalytics_full}} fornece insights chave de uso e desempenho de aplicativo para desenvolvedores de aplicativo móvel e proprietários de aplicativo.  Usando o {{site.data.keyword.mobileanalytics_short}}, os proprietários e desenvolvedores de aplicativo podem entender o que está acontecendo no "lado do usuário" e podem usar esse insight para construir aplicativos melhores que são extremamente relevantes para os usuários e que se destacam no verdadeiro mundo de aplicativos móveis. 

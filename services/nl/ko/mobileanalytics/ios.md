@@ -12,7 +12,7 @@
     <li>앱에 대한 이름 및 호스트를 입력하고 **작성**을 클릭하십시오.</li>
     <li>**완료**를 클릭하십시오.</li>
 </ol>
-2. GitHub에서 프로젝트를 가져오십시오. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오.
+2. GitHub에서 프로젝트를 가져오십시오. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오. 
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld
 ```
@@ -40,7 +40,9 @@ Xcode에서 **제품 &gt; 실행**을 클릭하십시오. iOS 시뮬레이터가
 ![Hello World 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 연결됨](images/yayconnected.jpg "그림 1. Hello World 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 연결됨")
 <br/>
 연결되면 디버그 로그인 Xcode에 다음 메시지가 포함됩니다.
-```You have connected to {{site.data.keyword.Bluemix_notm}} successfully```
+```
+성공적으로 {{site.data.keyword.Bluemix_notm}}에 연결했습니다.
+```
 5. 모든 문제를 해결하십시오.
 연결이 실패하면 "문제점이 발생했습니다."라는 메시지가 표시됩니다. 오류에 대한 자세한 정보가 포함됩니다.<br/>
 ![Hello World 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 연결되지 않음](images/bummer_android.jpg "그림 2. Hello World 애플리케이션이 Bluemix에 연결되지 않음")

@@ -7,6 +7,7 @@ copyright:
 # Supervisión de apps con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 *Última actualización: 6 de mayo de 2016*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede efectuar registros de cliente y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar el panel de control de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones móviles, los dispositivos y los registros de cliente.
 {: shortdesc}
@@ -41,7 +42,7 @@ En este ejemplo se utilizan los datos de registro del cliente para crear un diag
 2. En la consola de {{site.data.keyword.mobileanalytics_short}}, pulse el separador **Gráficos personalizados** de la página **Panel de control**. Puede crear un gráfico a partir de los mensajes de analíticas enviados al servidor.
 3. Pulse **Crear gráfico** para crear un gráfico personalizado nuevo e indique los siguientes valores:
   * Título del gráfico: aplicación y niveles de registro
-  * Tipo de suceso: registros de cliente
+  * Tipo de evento: registros de cliente
   * Tipo de gráfico: diagrama de flujo
 5. Pulse el separador **Definición de gráfico** e indique los siguientes valores:
   * Origen: nombre de la aplicación
@@ -84,7 +85,6 @@ También puede exportar e importar definiciones de un gráfico personalizado med
 
 Puede establecer umbrales en las definiciones de alerta en la consola de {{site.data.keyword.mobileanalytics_short}} para supervisar mejor las actividades.
 
-
 Puede configurar umbrales que, si se superan, activan alertas para notificar al monitor de la consola de {{site.data.keyword.mobileanalytics_short}}. Las alertas activadas se pueden visualizar en la consola o bien se pueden gestionar con un webhook personalizado. Gracias a esta función, se pueden detectar de forma proactiva errores en los registros de cliente, errores en los registros de servidor, períodos de latencia de red ampliados y errores de autenticación. Gracias a los umbrales y las alertas reactivos, no hace falta que examine a conciencia los datos y puede establecer umbrales con un espectro de granularidad amplio.
 
 ### Creación de una definición de alerta para los registros de cliente
@@ -100,7 +100,7 @@ En este ejemplo se utilizan los datos de registro del cliente para crear una def
 	* Nombre de la alerta: alerta para registros de cliente
 	* Mensaje: alerta de mensaje de error
 	* Frecuencia de consulta: 5 minutos
-	* Tipo de suceso: registros de cliente
+	* Tipo de evento: registros de cliente
 		* Propiedad: nivel de registro
 			* Valor: error
 			* Umbral

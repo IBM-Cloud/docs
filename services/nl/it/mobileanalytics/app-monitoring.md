@@ -7,6 +7,7 @@ copyright:
 # Monitoraggio delle applicazioni con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 *Ultimo aggiornamento: 6 maggio 2016*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} fornisce il monitoraggio e l'analisi per le tue applicazioni mobili. Puoi registrare i log client e monitorare i dati con
 l'SDK client {{site.data.keyword.mobileanalytics_short}}. Gli sviluppatori possono controllare quando inviare questi dati al
@@ -69,7 +70,7 @@ Puoi importare ed esportare definizioni di grafico personalizzato in modo progra
 Accertati di disporre di almeno un grafico personalizzato nel dashboard {{site.data.keyword.mobileanalytics_short}}.
 In questo esempio, esporti ed importi manualmente delle definizioni di grafico personalizzate.
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic sulla scheda **Grafici personalizzati** nella pagina **Dashboard**. 
+1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic sulla scheda **Grafici personalizzati** nella pagina **Dashboard**.
 2. Per esportare le definizioni di grafico personalizzato, fai clic su **Esporta grafici**. Questa azione visualizza
 una finestra di dialogo per salvare un file `customChartsDefinition.json`.
 3. Scegli un'ubicazione per salvare il file.

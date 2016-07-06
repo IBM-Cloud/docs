@@ -7,13 +7,15 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Acerca de {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *Última actualización: 21 de abril de 2016*
+{: .last-updated}
 
 {: shortdesc}
-El servicio de {{site.data.keyword.mobileanalytics_full}} proporciona información esencial sobre el uso y el rendimiento de apps para los propietarios y los desarrolladores de apps móviles. Gracias a {{site.data.keyword.mobileanalytics_short}}, los propietarios y los desarrolladores de apps pueden ver lo que sucede en el "lado del usuario" y aprovechar este conocimiento para compilar apps mejoradas que sean mucho más relevantes para los usuarios y que destaquen en el inmenso océano de apps móviles. 
+El servicio de {{site.data.keyword.mobileanalytics_full}} proporciona información esencial sobre el uso y el rendimiento de apps para los propietarios y los desarrolladores de apps móviles.  Gracias a {{site.data.keyword.mobileanalytics_short}}, los propietarios y los desarrolladores de apps pueden ver lo que sucede en el "lado del usuario" y aprovechar este conocimiento para compilar apps mejoradas que sean mucho más relevantes para los usuarios y que destaquen en el inmenso océano de apps móviles. 
 
 {: #overview}  
-El servicio incluye la consola de {{site.data.keyword.mobileanalytics_short}}, en la que los desarrolladores y los propietarios de apps pueden supervisar el rendimiento de las aplicaciones móviles, consultar las estadísticas de uso y buscar registros de dispositivo. {{site.data.keyword.mobileanalytics_short}} proporciona SDK de cliente para iOS 8+ (solo Swift) y Android 4+.
+El servicio incluye la consola de {{site.data.keyword.mobileanalytics_short}}, en la que los desarrolladores y los propietarios de apps pueden supervisar el rendimiento de las aplicaciones móviles, consultar las estadísticas de uso y buscar registros de dispositivo.  {{site.data.keyword.mobileanalytics_short}} proporciona SDK de cliente para iOS 8+ (solo Swift) y Android 4+.
 
 <!-- Mobile Analytics Server SDKs - set of server SDKs to protect resources that are-->
 <!--hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are-->
@@ -33,7 +35,7 @@ Con el servicio de {{site.data.keyword.mobileanalytics_short}} puede hacer lo si
 	<dt>Efectuar implementaciones en cuestión de minutos</dt>
 		<dd>Cree una instancia de servicio en {{site.data.keyword.Bluemix}}, añada el SDK al proyecto, pegue dos líneas de código a la app y ya podrá recopilar numerosas métricas predefinidas.</dd>
 	<dt>Recopilar los datos que quiera</dt>
-		<dd>Prepare las apps con sucesos personalizados, descubra cómo interactúan los usuarios con la app, haga un seguimiento de las compras y supervise la actividad de la app.  
+		<dd>Prepare las apps con eventos personalizados, descubra cómo interactúan los usuarios con la app, haga un seguimiento de las compras y supervise la actividad de la app.  
 </dd>
 <dt>Consultar de un vistazo las métricas de todas sus apps</dt>
 	<dd>La consola de {{site.data.keyword.mobileanalytics_short}} ofrece gráficos ya preparados y gráficos personalizados, sin que tenga que escribir consultas.</dd>
@@ -42,11 +44,11 @@ Con el servicio de {{site.data.keyword.mobileanalytics_short}} puede hacer lo si
 <dt>Detectar problemas rápidamente</dt>
 	<dd>Supervise el estado de bloqueo. Establezca activadores de alertas en las métricas esenciales y enrute alertas a cualquier punto final REST. </dd>
 <dt>Identificación de la causa raíz del problema</dt>
-	<dd>Utilice el registro de cliente personalizado en la app y cargue de forma automática los registros para buscarlos desde la consola. Obtenga un mayor detalle de los sucesos de bloqueo para consultar los seguimientos de pila. </dd>
+	<dd>Utilice el registro de cliente personalizado en la app y cargue de forma automática los registros para buscarlos desde la consola. Obtenga un mayor detalle de los eventos de bloqueo para consultar los seguimientos de pila. </dd>
 </dl>
  
 
-## Uso de métricas y sucesos
+## Uso de métricas y eventos
 {: #usingmetrics}
 
 Gracias a las **métricas predefinidas** puede responder a las siguientes preguntas:
@@ -59,7 +61,7 @@ Gracias a las **métricas predefinidas** puede responder a las siguientes pregun
 *¿Cuándo debería anular el soporte para los sistemas operativos existentes?*  
 *¿Qué apps tienen problemas de rendimiento?*  
 
-Al añadir sus propios **sucesos personalizados** puede responder a las siguientes preguntas:  
+Al añadir sus propios **eventos personalizados** puede responder a las siguientes preguntas:  
 
 *¿Qué características se utilizan más y cuáles menos?*  
 *¿Desde dónde entran y salen de la app los usuarios?*  

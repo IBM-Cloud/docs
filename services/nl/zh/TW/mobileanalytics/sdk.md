@@ -8,15 +8,16 @@ copyright:
 # 檢測應用程式以使用 {{site.data.keyword.mobileanalytics_short}} Client SDK
 {: #mobileanalytics_sdk}
 *前次更新：2016 年 4 月 27 日*
+{: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動式應用程式。
+{{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動應用程式。
 {: shortdesc}
 
 {{site.data.keyword.mobileanalytics_short}} 可讓您收集三種種類的資料，而且各需要不同程度的檢測：
 
 1.  預先定義的資料 - 此種類包括適用於所有應用程式的一般用法及裝置資訊。在此種類內，是指出應用程式使用數量、頻率或持續時間的裝置 meta 資料（作業系統及裝置模型）及用法資料（作用中使用者及應用程式階段作業）。在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之後，會自動收集預先定義的資料。
 2. 自訂事件 - 此種類包括您自行定義及應用程式特有的資料。這個資料代表您應用程式內發生的事件，例如頁面檢視、按鈕點選或應用程式內採購。除了在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之外，您還必須為您要追蹤的每一個自訂事件新增一行程式碼。
-3. 用戶端日誌訊息 - 此種類可讓開發人員在應用程式內新增程式碼行，以記載自訂訊息來協助開發和除錯。開發人員會將嚴重性/詳細層次指派給每一個日誌訊息，而且後續可以依指派的層次過濾訊息，或透過配置應用程式忽略低於給定記載層次的訊息來保留儲存體空間。若要收集用戶端日誌資料，您必須在應用程式內起始設定 {{site.data.keyword.mobileanalytics_short}} SDK，以及為每一個日誌訊息新增一行程式碼。
+3. 用戶端日誌訊息 - 此種類可讓開發人員在應用程式內新增程式碼行，以記載自訂訊息來協助開發和除錯。開發人員會將嚴重性/詳細層次指派給每一個日誌訊息，而且後續可以依指派的層次過濾訊息，或透過配置應用程式忽略低於給定記載層次的訊息來保留儲存空間。若要收集用戶端日誌資料，您必須在應用程式內起始設定 {{site.data.keyword.mobileanalytics_short}} SDK，以及為每一個日誌訊息新增一行程式碼。
 
 SDK 目前適用於 Android、iOS 及 WatchOS。
 
@@ -49,8 +50,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-        } 
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+        }
   ```
   {: codeblock}
 
@@ -87,8 +88,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   將起始設定碼放在應用程式委派的 `application(_:didFinishLaunchingWithOptions:)` 方法中或最適合您專案的位置中。
 
     ```Swift
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
-    ```
+    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)
+```
     {: codeblock}
 
     若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
@@ -97,7 +98,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是將行動式應用程式的名稱提供給它。您也需要[**用戶端金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您也需要[**用戶端金鑰**](#analytics-clientkey)值。
 
   應用程式名稱是用來作為過濾器，以在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中搜尋用戶端日誌。跨平台（例如，Android 及 iOS）使用相同的應用程式名稱，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
 
@@ -107,15 +108,15 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
-      ```
+```
 
   ### watchOS
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
@@ -130,7 +131,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   將下列這一行新增至 ExtensionDelegate 類別的 applicationWillResignActive() 方法：
 	```
 	Analytics.recordApplicationWillResignActive()
-	```
+```
   {: codeblock}
 
 ## 收集用法分析
@@ -146,14 +147,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.disable();
-	
-// Enable recording of usage analytics
-Analytics.enable();
-	
-Analytics.log(eventJSONObject);
-	
-// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.disable();// Enable recording of usage analytics
+Analytics.enable();Analytics.log(eventJSONObject);// Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```
 	
@@ -161,9 +156,7 @@ Analytics.send();
 	
 ```
 // Log a custom analytics event for custom charts, which is represented by a JSON object:
-JSONObject eventJSONObject = new JSONObject();
-	
-eventJSONObject.put("customProperty" , "propertyValue");
+JSONObject eventJSONObject = new JSONObject();eventJSONObject.put("customProperty" , "propertyValue");
 ```
 
 #### iOS - Swift
@@ -172,12 +165,8 @@ eventJSONObject.put("customProperty" , "propertyValue");
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.enabled = false
-
-// Enable recording of usage analytics
-Analytics.enabled = true
-
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+Analytics.enabled = false// Enable recording of usage analytics
+Analytics.enabled = true// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
 Analytics.send()
 ```
 
@@ -255,13 +244,9 @@ Analytics.log(eventObject)
 // Configure Logger to save logs to the device so that they 
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.storeLogs(true);
-
-// Change the minimum log level (optional)
+Logger.storeLogs(true);// Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
-Logger.setLogLevel(Logger.LEVEL.INFO);
-
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send();
 ```
 
@@ -271,9 +256,7 @@ Logger.send();
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
-Logger logger2 = Logger.getLogger("logger2");
-
-// Log messages with different levels
+Logger logger2 = Logger.getLogger("logger2");// Log messages with different levels
 // Debug message for feature 1
 // Info message for feature 2
 logger1.debug("debug message"); 
@@ -287,13 +270,9 @@ logger2.info("info message");
 ```
 // Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true
-
-// Change the minimum log level (optional)
+Logger.logStoreEnabled = true// Change the minimum log level (optional)
 // The default setting is LogLevel.Debug
-Logger.logLevelFilter = LogLevel.Info
-
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.logLevelFilter = LogLevel.Info// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send()
 ```
 
@@ -303,9 +282,7 @@ Logger.send()
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 let logger1 = Logger.logger(forName: "feature1Logger")
-let logger2 = Logger.logger(forName: "feature2Logger")
-	
-// Log messages with different levels
+let logger2 = Logger.logger(forName: "feature2Logger")// Log messages with different levels
 logger1.debug("debug message for feature 1") 
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message for feature 2")
@@ -498,3 +475,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# 相關鏈結
+
+## API 參考資料
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

@@ -9,6 +9,7 @@ copyright:
 客户端 SDK
 {: #mobileanalytics_sdk}
 *上次更新时间：2016 年 4 月 21 日*
+{: .last-updated}
 
 目前，Android、iOS 和 WatchOS 可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK。
 {: #shortdesc}
@@ -27,7 +28,7 @@ copyright:
 3. 找到 `build.gradle` 文件的 `Dependencies` 部分，并添加 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 的编译依赖关系，如下所示：
 
   ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
       name:'analytics',
       version: '1.+',
       ext: 'aar',
@@ -62,8 +63,7 @@ copyright:
 ## 安装 Swift SDK
 {: #installing-sdk-ios}
 
-使用 {{site.data.keyword.mobileanalytics_full}} SDK，您可以检测移动应用程序。
-iOS 和 watchOS 可以使用 Swift SDK。
+使用 {{site.data.keyword.mobileanalytics_full}} SDK，您可以检测移动应用程序。iOS 和 watchOS 可以使用 Swift SDK。
 
 ### 开始之前
 {: #before-you-begin-ios}
@@ -91,7 +91,7 @@ iOS 和 watchOS 可以使用 Swift SDK。
   use_frameworks!
 
   target 'MyApp' do
-     platform :ios, '8.0'
+platform :ios, '8.0'
      pod 'BMSAnalytics'
   end
   ```
@@ -117,3 +117,7 @@ iOS 和 watchOS 可以使用 Swift SDK。
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 参考
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

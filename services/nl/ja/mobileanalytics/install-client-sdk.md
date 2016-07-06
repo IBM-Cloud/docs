@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -8,9 +8,11 @@ copyright:
 # {{site.data.keyword.mobileanalytics_short}} のインストール
 クライアント SDK
 {: #mobileanalytics_sdk}
-*最終更新日: 2016 年 4 月 21 日*
+*最終更新日時: 2016 年 4 月 21 日*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_short}} クライアント SDK は、現在 Android、iOS および WatchOS で使用できます。
+
 {: #shortdesc}
 
 ## Android クライアント SDK のインストール
@@ -116,3 +118,7 @@ Xcode が正しくセットアップされていることを確認します。iO
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API リファレンス
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

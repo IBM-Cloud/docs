@@ -12,7 +12,8 @@
     <li>アプリの名前とホストを入力し、**「作成」**をクリックします。</li>
     <li>**「完了」**をクリックします。</li>
 </ol>
-2. プロジェクトを GitHub から取得します。コンピューターから端末を開いてから、以下のコマンドを入力します。
+2. プロジェクトを GitHub から取得します。
+コンピューターから端末を開いてから、以下のコマンドを入力します。
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloworld
 ```
@@ -40,7 +41,9 @@ Xcode で、**「製品」&gt;「実行」**をクリックします。iOS シ�
 ![Hello World アプリケーションは正常に {{site.data.keyword.Bluemix_notm}} に接続されました](images/yayconnected.jpg "図 1. Hello World アプリケーションは正常に {{site.data.keyword.Bluemix_notm}} に接続されました")
 <br/>
 接続に成功すると、デバッグ・ログイン Xcode に以下のメッセージが表示されます:
-`「{{site.data.keyword.Bluemix_notm}} への接続に成功しました (You have connected to {{site.data.keyword.Bluemix_notm}} successfully)」`
+```
+You have connected to {{site.data.keyword.Bluemix_notm}} successfully
+```
 5. 問題があれば解決します。
 接続に失敗すると、「残念ながら、問題が発生しました (Bummer Something went wrong)」というメッセージが表示されます。エラーに関する詳細情報が記載されています。<br/>
 ![Hello World アプリケーションが {{site.data.keyword.Bluemix_notm}} に接続されていません](images/bummer_android.jpg "図 2. Hello World アプリケーションが Bluemix に接続されていません")

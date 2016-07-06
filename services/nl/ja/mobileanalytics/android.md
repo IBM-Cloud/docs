@@ -31,13 +31,15 @@ Android Studio ツールバーから、**「再生」**ボタンをクリック�
 
   **注:** `Node.js` ランタイム・コードが「MobileFirst Services Starter」ボイラープレートに提供されます。バックエンド・アプリケーションが「MobileFirst Services Starter」ボイラープレートに作成されなかった場合、アプリケーションは正常に接続されません。
 
-  Android Studio のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、「おめでとうございます。接続されました。(Yay! You are connected)」というメッセージが表示されます。
-{: screen}
+  Android Studio のモバイル・アプリから {{site.data.keyword.Bluemix_notm}} への接続に成功すると、
+「おめでとうございます。接続されました。(Yay! You are connected)」
+というメッセージが表示されます。{: screen}
 
   ![Hello World アプリケーションは正常に {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "図 1. Hello World アプリケーションは正常に Bluemix に接続されました") に接続されました
 
-  接続が失敗すると、「残念ながら、問題が発生しました (Bummer. Something went wrong)」というメッセージが表示されます。
-{: screen}
+  接続が失敗すると、
+「残念ながら、問題が発生しました (Bummer. Something went wrong)」
+というメッセージが表示されます。{: screen}
 
   ![Hello World アプリケーションは、Bluemix に接続されていません](images/bummer_android.jpg "図 2. Hello World アプリケーションは Bluemix に接続されていません")
 

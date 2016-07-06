@@ -7,6 +7,7 @@ copyright:
 # 使用 {{site.data.keyword.mobileanalytics_short}} 监视应用程序
 {: #monitoringapps}
 *上次更新时间：2016 年 5 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} 可监视和分析移动应用程序。您可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 来记录客户机日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.mobileanalytics_short}} 服务。数据传递到 {{site.data.keyword.mobileanalytics_short}} 后，可以使用 {{site.data.keyword.mobileanalytics_short}} 仪表板，来获取有关移动应用程序、设备和客户机日志的分析洞察。
 {: shortdesc}
@@ -70,10 +71,8 @@ copyright:
 2. 要导出定制图表定义，请单击**导出图表**。此操作会显示一个对话框，供您保存 `customChartsDefinition.json` 文件。
 3. 选择用于保存该文件的位置。
 4. 单击每个定制图表旁的**删除图表**图标，以删除全部定制图表。
-
 5. 要导入定制图表定义，请单击**导入图表**。此操作会显示一个对话框，供您选择文件。
 6. 选择您先前导出的 `customChartsDefinition.json` 文件以将其打开。
-
 
 您还可以使用所选择的 HTTP 客户端（例如 CURL 或 postman），以编程方式导出和导入定制图表定义：
 * 导出的 GET 端点为 `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`。
@@ -86,21 +85,14 @@ copyright:
 
 可以在 {{site.data.keyword.mobileanalytics_short}} 控制台中的警报定义内设置阈值，以更好地监控活动。
 
-您可以配置阈值，当超过阈值时，触发器便会触发警报以向 {{site.data.keyword.mobileanalytics_short}} 控制台监控器通知此情况。
-已触发的警报可以显示在控制台中，或者可以由定制 webhook 进行处理。
-此功能能够主动检测客户机日志错误、服务器日志错误、网络等待时间延长以及认证失败。
-响应式阈值和警报使您不必筛查数据，或者设置大范围的阈值。
-
+您可以配置阈值，当超过阈值时，触发器便会触发警报以向 {{site.data.keyword.mobileanalytics_short}} 控制台监控器通知此情况。已触发的警报可以显示在控制台中，或者可以由定制 webhook 进行处理。此功能能够主动检测客户机日志错误、服务器日志错误、网络等待时间延长以及认证失败。响应式阈值和警报使您不必筛查数据，或者设置大范围的阈值。
 
 ### 为客户机日志创建警报定义
 {: #alert-def-client-logs}
 
 您可以基于客户机日志创建警报定义。
 
-在此示例中，您将使用客户机日志数据来创建警报定义。
-该警报会监控在过去 5 分钟内收到的所有客户机日志，并且每 5 分钟继续检查一次，直到该警报定义被禁用或删除。
-如果设备发送了 3 个或更多个具有相同应用程序名称和版本的客户机错误日志，那么将会触发警报。
-
+在此示例中，您将使用客户机日志数据来创建警报定义。该警报会监控在过去 5 分钟内收到的所有客户机日志，并且每 5 分钟继续检查一次，直到该警报定义被禁用或删除。如果设备发送了 3 个或更多个具有相同应用程序名称和版本的客户机错误日志，那么将会触发警报。
 
 1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击铃图标以转至**警报日志**页面。
 2. 转至**警报管理**页面，并单击**创建警报**。
@@ -122,7 +114,6 @@ copyright:
 	* 方法：仅限分析控制台
 
 		注：如果您想要额外发送具有 JSON 有效内容的 POST 消息到您定制的 URL，请选择“分析控制台和网络 Post”选项。如果选择此选项，那么以下字段可用：
-
 		* 网络 Post URL
         * 标头
         * 认证类型
@@ -139,7 +130,6 @@ copyright:
 
 1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**警报**图标。此操作会打开“警报日志”页面。
 2. 单击**警报管理**选项卡并单击**创建警报**。
-
 3. 提供以下值：
 	* 警报名称：应用程序崩溃的警报
 	* 消息：应用程序崩溃警报
@@ -153,7 +143,6 @@ copyright:
   * 方法：仅限分析控制台
 
     **注**：如果您想要额外发送具有 JSON 有效内容的 POST 消息到您定制的 URL，请选择**分析控制台和网络 Post** 选项。如果选择此选项，那么以下字段可用：
-
       * 网络 Post URL（必需）
       * 标头（可选）
       * 认证类型（必需）
@@ -234,7 +223,6 @@ copyright:
 * 下载：用于下载一直到发生此崩溃时的日志的链接
 
 您可以展开**崩溃详细信息**表中的任何条目，以获取包含堆栈跟踪在内的更多详细信息。
-
 
 **注**：通过查询致命级别客户机日志，可以填充**崩溃摘要**表的数据。如果您的应用程序未收集致命客户机日志，那么没有可用的数据。
 

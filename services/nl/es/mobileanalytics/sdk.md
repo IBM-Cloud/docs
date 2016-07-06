@@ -8,6 +8,7 @@ copyright:
 # Preparación de la aplicación para utilizar los SDK de cliente de {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
 *Última actualización: 27 de abril de 2016*
+{: .last-updated}
 
 Los SDK de {{site.data.keyword.mobileanalytics_full}} le permiten preparar su aplicación móvil.
 {: shortdesc}
@@ -15,7 +16,7 @@ Los SDK de {{site.data.keyword.mobileanalytics_full}} le permiten preparar su ap
 {{site.data.keyword.mobileanalytics_short}} le permite recopilar tres categorías de datos, cada una de las cuales requiere un nivel de instrumentación distinto:
 
 1.  Datos predefinidos: esta categoría incluye información genérica de uso y de los dispositivos que se aplica a todas las apps. En esta categoría se encuentran los metadatos de dispositivo (sistema operativo y modelo de dispositivo) y los datos de uso (usuarios activos y sesiones de app), que indican el volumen, la frecuencia o el tiempo de uso de una app. Los datos predefinidos se recopilan automáticamente una vez inicializado el SDK de {{site.data.keyword.mobileanalytics_short}} en la app.
-2. Sucesos personalizados: esta categoría incluye los datos definidos por el usuario y los específicos de la app. Estos datos representan sucesos que se producen en la app (por ejemplo, visualizaciones de páginas, selección de botones o compras en la app). Además de inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app, debe añadir una línea de código para cada suceso personalizado del que desee hacer un seguimiento.
+2. Eventos personalizados: esta categoría incluye los datos definidos por el usuario y los específicos de la app. Estos datos representan eventos que se producen en la app (por ejemplo, visualizaciones de páginas, selección de botones o compras en la app). Además de inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app, debe añadir una línea de código para cada evento personalizado del que desee hacer un seguimiento.
 3. Mensajes de registro de cliente: esta categoría permite que los desarrolladores añadan líneas de código a la app que registran mensajes personalizados para ayudar al desarrollo y a la depuración. El desarrollador asigna un nivel de gravedad/detalle a todos los mensajes de registro y puede filtrarlos según el nivel asignado o bien conservar el espacio de almacenamiento configurando la app para que ignore los mensajes inferiores a un determinado nivel de registro. Para recopilar los datos de registro del cliente, debe inicializar el SDK de {{site.data.keyword.mobileanalytics_short}} en la app y añadir una línea de código para cada mensaje de registro.
 
 En este momento, los SDK están disponibles para Android, iOS y WatchOS.
@@ -49,7 +50,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -72,7 +73,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ## Inicialización de la app de iOS para recopilar análisis
 {: #init-ma-sdk-ios}
 
-Inicialice la aplicación para habilitar el envío de registros al servicio de {{site.data.keyword.mobileanalytics_short}}.El SDK de Swift está disponible para iOS y watchOS.
+Inicialice la aplicación para habilitar el envío de registros al servicio de {{site.data.keyword.mobileanalytics_short}}. El SDK de Swift está disponible para iOS y watchOS.
 
 1. Importe las infraestructuras `BMSCore` y `BMSAnalytics`; para ello, añada las siguientes sentencias `import` al inicio del archivo del proyecto `AppDelegate.swift`:
 
@@ -101,13 +102,13 @@ Inicialice la aplicación para habilitar el envío de registros al servicio de {
 
   El nombre de la aplicación se utiliza como filtro para buscar registros de cliente en el panel de control de {{site.data.keyword.mobileanalytics_short}}. Si utiliza el mismo nombre de aplicación en varias plataformas (por ejemplo, en Android e iOS), podrá ver todos los registros de esa aplicación con el mismo nombre, independientemente de la plataforma desde la que se han enviado los registros.
 
-  Un parámetro `deviceEvents` opcional recopila de forma automática las analíticas de los sucesos de nivel de dispositivo.
+  Un parámetro `deviceEvents` opcional recopila de forma automática las analíticas de los eventos de nivel de dispositivo.
 
   ### iOS
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -115,7 +116,7 @@ Inicialice la aplicación para habilitar el envío de registros al servicio de {
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("NombreApp", apiKey: "clave_API")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   Puede registrar sucesos de dispositivo en WatchOS utilizando los métodos `Analytics.recordApplicationDidBecomeActive()` y `Analytics.recordApplicationWillResignActive()`.
@@ -157,10 +158,10 @@ Analytics.log(eventJSONObject);
 Analytics.send();
 ```
 	
-Analíticas de uso de ejemplo para registrar un suceso:
+Analíticas de uso de ejemplo para registrar un evento:
 	
 ```
-// Registrar un suceso de analíticas personalizado para gráficos personalizados, representado con un objeto JSON:
+// Registrar un evento de analíticas personalizado para gráficos personalizados, representado con un objeto JSON:
 JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
@@ -181,12 +182,12 @@ Analytics.enabled = true
 Analytics.send()
 ```
 
-Analíticas de uso de ejemplo para registrar un suceso:
+Analíticas de uso de ejemplo para registrar un evento:
 
 ```
-// Registrar un suceso de analíticas personalizado para gráficos personalizados
-let Sucesobject = ["customProperty": "propertyValue"]
-Analytics.log(Sucesobject)
+// Registrar un evento de analíticas personalizado para gráficos personalizados
+let eventObject = ["customProperty": "propertyValue"]
+Analytics.log(eventObject)
 ```
 
   <!--Removing Cordova for experimental-->
@@ -216,13 +217,13 @@ Analytics.log(Sucesobject)
   * `FATAL`: uso para bloqueos irrecuperables. El nivel `FATAL` está reservado para errores de registro irrecuperables que ven los usuarios como un bloqueo de aplicación
   * `ERROR`: uso para excepciones inesperadas o errores de protocolo de red inesperados
   * `WARN`:se utiliza para registrar advertencias de uso que no se consideran errores críticos, como el uso de API en desuso o en caso de una respuesta de red lenta
-  * `INFO`: se utiliza para registrar sucesos de inicialización y otros datos que podrían ser importantes, pero no urgentes
+  * `INFO`: se utiliza para registrar eventos de inicialización y otros datos que podrían ser importantes, pero no urgentes
   * `DEBUG`: se utiliza para registrar sentencias de depuración y permitir que los desarrolladores puedan resolver los defectos de las aplicaciones
 
     #### Caso de ejemplo de nivel de registro
     {: #log-level-scenario}
 
-    Si el nivel de registro está configurado en `FATAL`, el registrador captura las excepciones no capturadas, pero no captura ningún registro que conduzca al suceso de bloqueo. Puede establecer un nivel de registro más detallado para garantizar que también se capturen los registros que puedan conducir a una entrada de registro `FATAL`, como `WARN` y `ERROR`.
+    Si el nivel de registro está configurado en `FATAL`, el registrador captura las excepciones no capturadas, pero no captura ningún registro que conduzca al evento de bloqueo. Puede establecer un nivel de registro más detallado para garantizar que también se capturen los registros que puedan conducir a una entrada de registro `FATAL`, como `WARN` y `ERROR`.
 
   <!--**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the--> <!--{{site.data.keyword.mobileanalytics_short}} Client SDK Core.-->
 
@@ -304,7 +305,7 @@ let logger1 = Logger.logger(forName: "feature1Logger")
 let logger2 = Logger.logger(forName: "feature2Logger")
 	
 // Mensajes de registro con distintos niveles
-logger1.debug("mensaje de depuración para la característica 1")
+logger1.debug("mensaje de depuración para la característica 1") 
 //el mensaje logger1.debug no se registra porque el logLevelFilter está establecido en Info
 logger2.info("mensaje informativo para la característica 2")
 ```
@@ -496,3 +497,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# rellinks
+
+## Referencia de API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

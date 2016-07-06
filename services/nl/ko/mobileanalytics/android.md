@@ -10,14 +10,14 @@
     1. 표준 유형 섹션 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 MobileFirst Services Starter를 클릭하십시오.
     2. 앱에 대한 이름 및 호스트를 입력하고 **작성**을 클릭하십시오.
     3. **완료**를 클릭하십시오.
-2. GitHub에서 프로젝트를 가져오십시오. 필요에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수 있습니다. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오.
+2. GitHub에서 프로젝트를 가져오십시오. 필요에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수 있습니다. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오. 
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
 ```
 {: codeblock}
 
 시작하기 전에 `Gradle.zip` 파일을 다운로드하고 다운로드된 압축 파일을 선택한 디렉토리에 추출하여 Gradle을 설치하십시오. Android Studio에서는 사용자가 처음 샘플을 가져올 때 GRADLE HOME을 요청할 수 있습니다. 추출된 `Gradle.zip` 파일에 있는 `bin` 디렉토리로 해당 경로를 설정하십시오. `build.gradle` 파일은 필수 종속 항목에서 풀링하여 자동으로 프로젝트를 빌드합니다.
-3. `BMSClient.getInstance().initialize()` 함수 내의 try 블록에 있는 사용자의 애플리케이션 라우트 및 GUID로 &lt;APPLICATION_ROUTE&gt; 및 &lt;APPLICATION_ID&gt;를 대체하여 프로젝트를 초기화하십시오.
+3. `BMSClient.getInstance().initialize()` 함수 내의 try 블록에 있는 사용자의 애플리케이션 라우트 및 GUID로 &lt;APPLICATION_ROUTE&gt; 및 &lt;APPLICATION_ID&gt;를 대체하여 프로젝트를 초기화하십시오. 
 ```
 // initialize SDK with IBM Bluemix application ID and route
 BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID>");

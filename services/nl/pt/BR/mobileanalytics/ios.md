@@ -42,7 +42,9 @@ No simulador, clique em **Executar ping no
 ![Aplicativo Hello World conectado com sucesso a {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Aplicativo Hello World conectado com sucesso a {{site.data.keyword.Bluemix_notm}}")
 <br/>
 Se você tiver se conectado com sucesso, o Xcode do login de depuração conterá a seguinte mensagem:
-```Você se conectou ao {{site.data.keyword.Bluemix_notm}} com êxito```
+```
+Você se conectou com sucesso ao {{site.data.keyword.Bluemix_notm}}
+```
 5. Resolva quaisquer problemas.
 Quando a conexão falha, uma mensagem "Puxa, algo deu errado" é exibida. Mais informações sobre o erro são incluídas.<br/>
 ![Aplicativo Hello World não conectado ao {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "Figura 2. Aplicativo Hello World não conectado ao Bluemix")
