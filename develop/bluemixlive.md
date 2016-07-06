@@ -473,7 +473,7 @@ Use this command to list the status of the applications that are associated with
 
 This example displays the status of the running applications. If the current directory is an existing sync target, it uses the associated project. If the current directory is not an existing sync target, the command prompts for the `projectName`.
 
-````
+```
 bl status
 ```
 {: pre}

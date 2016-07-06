@@ -517,7 +517,7 @@ Este exemplo exibe o status dos aplicativos em execução. Se o diretório atual
 existente, ele usará o projeto associado. Se o diretório atual não for um destino de sincronização existente,
 o comando solicitará o `projectName`.
 
-``
+```
 bl status
 ```
 {: pre}

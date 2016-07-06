@@ -469,7 +469,7 @@ In diesem Beispiel wird der Status der aktiven Anwendungen angezeigt. Wenn das a
 Synchronisationsziel ist, wird das zugeordnete Projekt verwendet. Wenn das aktuelle Verzeichnis kein vorhandenes Synchronisationsziel ist,
 fordert der Befehl zur Eingabe von `Projektname` auf.
 
-``
+```
 bl status
 ```
 {: pre}

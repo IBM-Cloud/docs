@@ -499,7 +499,7 @@ Utilice este mandato para listar el estado de las aplicaciones que están asocia
 
 Este ejemplo muestra el estado de las aplicaciones en ejecución. Si el directorio actual es un destino de sincronización existente, se utiliza el proyecto asociado. Si el directorio no es un destino de sincronización existente, el mandato solicita el `nombreProyecto`.
 
-``
+```
 bl status
 ```
 {: pre}

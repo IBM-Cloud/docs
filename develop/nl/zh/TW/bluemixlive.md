@@ -472,7 +472,7 @@ bl status | ss [ projectName ]
 
 此範例顯示執行中應用程式的狀態。如果現行目錄是現有同步目標，則會使用關聯的專案。如果現行目錄不是現有同步目標，則指令會提示輸入 `projectName`。
 
-``
+```
 bl status
 ```
 {: pre}

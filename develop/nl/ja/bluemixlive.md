@@ -493,8 +493,9 @@ bl status | ss [ projectName ]
 現行ディレクトリーが既存の同期ターゲットではない場合にこのコマンドを実行すると、`projectName` の入力を求めるプロンプトが出されます。
 
 
-``
-bl status ```
+```
+bl status 
+```
 {: pre}
 
 該当プロジェクトをログイン・ユーザーが所有する場合、
@@ -503,14 +504,16 @@ myproject”` と同等です。
 
 
 ```
-bl status myproject```
+bl status myproject
+```
 {: pre}
 
 次の例では、プロジェクト `my pro ject` に関連付けられた実行中のアプリケーションの状況を表示します。このプロジェクト名はスペースを含むため、引用符で囲みます。
 
 
 ```
-bl status “my pro ject”```
+bl status “my pro ject”
+```
 {: pre}
 
 ## 開始

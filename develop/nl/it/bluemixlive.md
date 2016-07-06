@@ -524,7 +524,7 @@ Questo esempio visualizza lo stato delle applicazioni in esecuzione. Se la direc
 utilizza il progetto associato. Se la directory corrente non è una destinazione di
 sincronizzazione esistente, il comando richiede il `nomeProgetto`.
 
-``
+```
 bl status
 ```
 {: pre}

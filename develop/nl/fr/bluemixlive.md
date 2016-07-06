@@ -527,7 +527,7 @@ Cet exemple affiche le statut des applications en cours d'exécution. Si le rép
 le projet associé. Si le répertoire de travail ne constitue pas une cible de synchronisation existante, la commande demande le nom de projet
 (`nom_projet`).
 
-``
+```
 bl status
 ```
 {: pre}
