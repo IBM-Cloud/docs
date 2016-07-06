@@ -8,34 +8,34 @@ Copyright :
 # Instrumentation de votre application pour utiliser les logiciels SDK du client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
 *Dernière mise à jour : 27 avril 2016*
+{: .last-updated}
 
 Les logiciels SDK de {{site.data.keyword.mobileanalytics_full}} vous permettent d'instrumenter votre application mobile.
 {: shortdesc}
 
 {{site.data.keyword.mobileanalytics_short}} vous permet de collecter trois catégories de données, et chacune d'elles nécessite un degré d'instrumentation qui lui est propre :
 
-1.  Données prédéfinies - Cette catégorie inclut des informations sur les périphériques et l'utilisation générique qui s'appliquent à toutes les applications. Cette catégorie comprend les métadonnées de périphérique (système d'exploitation et modèle de périphérique) et les données d'utilisation (utilisateurs actifs et sessions d'application) qui indiquent le volume, la fréquence ou la durée d'utilisation d'une application. Les données prédéfinies sont collectées automatiquement après que vous avez initialisé le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application. 
-2. Evénements personnalisés - Cette catégorie inclut des données que vous définissez vous-même et qui sont propres à votre application. Ces données représentent des événements qui se produisent dans votre application, comme le fait de consulter des pages, de cliquer sur des boutons ou d'effectuer un achat dans l'application. En plus d'initialiser le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application, vous devez ajouter une ligne de code pour chaque événement personnalisé que vous souhaitez suivre. 
-3. Messages de journal client - Cette catégorie permet au développeur d'ajouter des lignes de code dans l'application afin de journaliser des messages personnalisés destinés à faciliter le développement et le débogage. Le développeur affecte un niveau de gravité/détail à chaque message de journal et peut ensuite filtrer les messages en fonction du niveau affecté ou économiser de l'espace de stockage en configurant l'application de telle sorte qu'elle ignore les messages dont le niveau de gravité/détail est inférieur au niveau de journalisation spécifié. Pour collecter des données de journal client, vous devez initialiser le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application, mais également ajouter une ligne de code pour chaque message de journal. 
+1.  Données prédéfinies - Cette catégorie inclut des informations sur les périphériques et l'utilisation générique qui s'appliquent à toutes les applications. Cette catégorie comprend les métadonnées de périphérique (système d'exploitation et modèle de périphérique) et les données d'utilisation (utilisateurs actifs et sessions d'application) qui indiquent le volume, la fréquence ou la durée d'utilisation d'une application. Les données prédéfinies sont collectées automatiquement après que vous avez initialisé le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application.
+2. Evénements personnalisés - Cette catégorie inclut des données que vous définissez vous-même et qui sont propres à votre application. Ces données représentent des événements qui se produisent dans votre application, comme le fait de consulter des pages, de cliquer sur des boutons ou d'effectuer un achat dans l'application. En plus d'initialiser le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application, vous devez ajouter une ligne de code pour chaque événement personnalisé que vous souhaitez suivre.
+3. Messages de journal client - Cette catégorie permet au développeur d'ajouter des lignes de code dans l'application afin de journaliser des messages personnalisés destinés à faciliter le développement et le débogage. Le développeur affecte un niveau de gravité/détail à chaque message de journal et peut ensuite filtrer les messages en fonction du niveau affecté ou économiser de l'espace de stockage en configurant l'application de telle sorte qu'elle ignore les messages dont le niveau de gravité/détail est inférieur au niveau de journalisation spécifié. Pour collecter des données de journal client, vous devez initialiser le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application, mais également ajouter une ligne de code pour chaque message de journal.
 
 Actuellement, les logiciels SDK sont disponibles pour Android, iOS et WatchOS.
-
 
 ## Identification de la valeur de clé de votre client
 {: #analytics-clientkey}
 
-Identifiez la valeur de **clé de votre client** avant de configurer le logiciel SDK du client. La clé du client est requise pour initialiser le logiciel SDK du client. 
-1. Ouvrez votre tableau de bord de service {{site.data.keyword.mobileanalytics_short}}. 
-2. Cliquez sur l'icône en forme de clé pour ouvrir l'onglet Clés d'API. 
-3. Dans l'onglet Clés d'API, notez la valeur de clé du client. 
+Identifiez la valeur de **clé de votre client** avant de configurer le logiciel SDK du client. La clé du client est requise pour initialiser le logiciel SDK du client.
+1. Ouvrez votre tableau de bord de service {{site.data.keyword.mobileanalytics_short}}.
+2. Cliquez sur l'icône en forme de clé pour ouvrir l'onglet Clés d'API.
+3. Dans l'onglet Clés d'API, notez la valeur de clé du client.
 
 
 ## Initialisation de votre application Android pour la collecte d'analyses
 {: #initalize-ma-sdk-android}
 
-Initialisez votre application pour qu'elle envoie des journaux au service {{site.data.keyword.mobileanalytics_short}}. 
+Initialisez votre application pour qu'elle envoie des journaux au service {{site.data.keyword.mobileanalytics_short}}.
 
-1. Importez le logiciel SDK du client en ajoutant l'instruction `import` suivante au début de votre fichier de projet : 
+1. Importez le logiciel SDK du client en ajoutant l'instruction `import` suivante au début de votre fichier de projet :
 
   ```
   import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -44,13 +44,13 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   ```
   {: codeblock}
 
-2. Initialisez le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application Android en ajoutant le code d'initialisation dans la méthode `onCreate` de l'activité principale de votre application Android ou à l'emplacement le plus approprié pour votre projet. 
+2. Initialisez le logiciel SDK de {{site.data.keyword.mobileanalytics_short}} dans votre application Android en ajoutant le code d'initialisation dans la méthode `onCreate` de l'activité principale de votre application Android ou à l'emplacement le plus approprié pour votre projet.
 
 	```Java
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Prenez soin de pointer vers votre région
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -60,7 +60,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 
   <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisez Analytics en utilisant votre objet d'application Android et en lui attribuant le nom de votre application. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey). 
+3. Initialisez Analytics en utilisant votre objet d'application Android et en lui attribuant le nom de votre application. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey).
 	
 	```Java
 	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
@@ -68,14 +68,14 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```
   {: codeblock}
 
-	**Astuce :** Le nom d'application est utilisé pour filtrer la recherche de journaux client dans le tableau de bord. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés. 
+	**Astuce :** Le nom d'application est utilisé pour filtrer la recherche de journaux client dans le tableau de bord. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés.
 
 ## Initialisation de votre application iOS pour la collecte d'analyses
 {: #init-ma-sdk-ios}
 
 Initialisez votre application pour qu'elle envoie des journaux au service {{site.data.keyword.mobileanalytics_short}}. Le logiciel SDK de Swift est disponible pour iOS et watchOS.
 
-1. Importez les infrastructures `BMSCore` et `BMSAnalytics` en ajoutant les instructions `import` suivantes au début de votre fichier de projet `AppDelegate.swift` : 
+1. Importez les infrastructures `BMSCore` et `BMSAnalytics` en ajoutant les instructions `import` suivantes au début de votre fichier de projet `AppDelegate.swift` :
 
   ```Swift
   import BMSCore
@@ -85,7 +85,7 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
 
 2. Pour utiliser le logiciel SDK de {{site.data.keyword.mobileanalytics_short}}, vous devez d'abord initialiser la classe `BMSClient` à l'aide du code suivant :
 
-  Placez le code d'initialisation dans la méthode `application(_:didFinishLaunchingWithOptions:)` de votre délégué d'application ou à l'emplacement le plus approprié pour votre projet. 
+  Placez le code d'initialisation dans la méthode `application(_:didFinishLaunchingWithOptions:)` de votre délégué d'application ou à l'emplacement le plus approprié pour votre projet.
 
     ```Swift
     BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
@@ -98,17 +98,17 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. Initialisez Analytics en lui attribuant le nom de votre application mobile. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey). 
+3. Initialisez Analytics en lui attribuant le nom de votre application mobile. Vous avez également besoin de la valeur de [**clé du client**](#analytics-clientkey).
 
-  Le nom d'application est utilisé pour filtrer la recherche de journaux client dans votre tableau de bord {{site.data.keyword.mobileanalytics_short}}. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés. 
+  Le nom d'application est utilisé pour filtrer la recherche de journaux client dans votre tableau de bord {{site.data.keyword.mobileanalytics_short}}. Lorsque vous utilisez le même nom d'application sur plusieurs plateformes (par exemple, Android et iOS), tous les journaux issus de cette application s'affichent sous le même nom, quelle que soit la plateforme à partir de laquelle ils ont été envoyés.
 
-  Un paramètre `deviceEvents` facultatif collecte automatiquement des analyses pour les événements de niveau périphérique. 
+  Un paramètre `deviceEvents` facultatif collecte automatiquement des analyses pour les événements de niveau périphérique.
 
   ### iOS
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -116,10 +116,10 @@ Initialisez votre application pour qu'elle envoie des journaux au service {{site
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
-  Vous pouvez enregistrer des événements de périphérique sur WatchOS à l'aide des méthodes `Analytics.recordApplicationDidBecomeActive()` et `Analytics.recordApplicationWillResignActive()`. 
+  Vous pouvez enregistrer des événements de périphérique sur WatchOS à l'aide des méthodes `Analytics.recordApplicationDidBecomeActive()` et `Analytics.recordApplicationWillResignActive()`.
   
   Ajoutez la ligne suivante à la méthode `applicationDidBecomeActive()` de la classe ExtensionDelegate :
 
@@ -207,24 +207,24 @@ Analytics.log(eventObject)
 {: #app-monitoring-logger}
 
   Le logiciel SDK du client {{site.data.keyword.mobileanalytics_full}} fournit une
-infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend en charge plusieurs instances de journal d'événements par module, différents niveaux de journalisation, la capture de traces de pile pour une panne d'application, etc. 
+infrastructure de journalisation similaire à d'autres infrastructures que vous pouvez connaître, telles que `java.util.logging` ou `log4j`. L'infrastructure de journalisation prend en charge plusieurs instances de journal d'événements par module, différents niveaux de journalisation, la capture de traces de pile pour une panne d'application, etc.
 
-  Vous pouvez également configurer les données journalisées à stocker sur le périphérique sur lequel l'application s'exécute et envoyer ultérieurement ces journaux de périphérique au service {{site.data.keyword.mobileanalytics_short}}. 
+  Vous pouvez également configurer les données journalisées à stocker sur le périphérique sur lequel l'application s'exécute et envoyer ultérieurement ces journaux de périphérique au service {{site.data.keyword.mobileanalytics_short}}.
 
   <!-- Initialization has to happen first to be able to collect logs and send them to the {{site.data.keyword.mobileanalytics_short}} service. -->
 
-  L'infrastructure de journalisation du logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} prend en charge les niveaux de journalisation suivants, répertoriés dumoins prolixe au plus prolixe et accompagnés de recommandations d'utilisation : 
+  L'infrastructure de journalisation du logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} prend en charge les niveaux de journalisation suivants, répertoriés dumoins prolixe au plus prolixe et accompagnés de recommandations d'utilisation :
 
-  * `FATAL` - Pour les pannes ou les blocages irrémédiables. Le niveau `FATAL` est réservé aux erreurs irrémédiables de journalisation, qui se matérialisent pour l'utilisateur sous la forme d'une panne de l'application. 
+  * `FATAL` - Pour les pannes ou les blocages irrémédiables. Le niveau `FATAL` est réservé aux erreurs irrémédiables de journalisation, qui se matérialisent pour l'utilisateur sous la forme d'une panne de l'application.
   * `ERROR` : Pour les exceptions inattendues ou les erreurs de protocole de réseau inattendues.
-  * `WARN` : Pour journaliser des avertissements d'utilisation qui ne sont pas considérés comme des erreurs critiques, par exemple, l'utilisation d'API obsolètes ou un ralentissement des réponses du réseau. 
-  * `INFO` : Pour communiquer des événements d'initialisation et d'autres données qui peuvent être importants, mais non urgents. 
+  * `WARN` : Pour journaliser des avertissements d'utilisation qui ne sont pas considérés comme des erreurs critiques, par exemple, l'utilisation d'API obsolètes ou un ralentissement des réponses du réseau.
+  * `INFO` : Pour communiquer des événements d'initialisation et d'autres données qui peuvent être importants, mais non urgents.
   * `DEBUG` - Pour communiquer des informations de débogage permettant aux développeurs de résoudre les défauts de l'application.
 
     #### Scénario de niveau de journalisation
     {: #log-level-scenario}
 
-    Lorsque le niveau du journal d'événements a pour valeur `FATAL`, ce dernier capture les exceptions non interceptées, mais pas les journaux qui produisent l'événement de panne. Vous pouvez définir un niveau de journal plus prolixe, de sorte que les journaux susceptibles de produire une entrée `FATAL`, telle que `WARN` ou `ERROR`, soient également capturés. 
+    Lorsque le niveau du journal d'événements a pour valeur `FATAL`, ce dernier capture les exceptions non interceptées, mais pas les journaux qui produisent l'événement de panne. Vous pouvez définir un niveau de journal plus prolixe, de sorte que les journaux susceptibles de produire une entrée `FATAL`, telle que `WARN` ou `ERROR`, soient également capturés.
 
   <!--**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the--> <!--{{site.data.keyword.mobileanalytics_short}} Client SDK Core.-->
 
@@ -308,12 +308,12 @@ let logger1 = Logger.logger(forName: "feature1Logger")
 let logger2 = Logger.logger(forName: "feature2Logger")
 	
 // Journalisez les messages avec différents niveaux
-logger1.debug("debug message for feature 1")
+logger1.debug("debug message for feature 1") 
 //Le message logger1.debug n'est pas journalisé car logLevelFilter a pour valeur Info
 logger2.info("info message for feature 2")
 ```
 
-**Astuce** : Pour des raisons de confidentialité, vous pouvez désactiver la génération de la sortie du journal d'événements pour les applications créées en mode édition. Par défaut, la classe du journal d'événements imprime les journaux sur la console Xcode. Dans les paramètres de création de votre cible, ajoutez un indicateur `-D RELEASE_BUILD` à la section **Other Swift Flags** de la configuration de création d'édition. 
+**Astuce** : Pour des raisons de confidentialité, vous pouvez désactiver la génération de la sortie du journal d'événements pour les applications créées en mode édition. Par défaut, la classe du journal d'événements imprime les journaux sur la console Xcode. Dans les paramètres de création de votre cible, ajoutez un indicateur `-D RELEASE_BUILD` à la section **Other Swift Flags** de la configuration de création d'édition.
     
 
   <!-- ### Cordova-->
@@ -500,3 +500,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# rellinks
+
+## Référence pour l'API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

@@ -13,6 +13,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 *Última actualización: 17 de mayo de 2016*
+{: .last-updated}
 
 Utilice el servicio de {{site.data.keyword.mobileanalytics_full}} para medir el estado, el comportamiento y el contexto de sus apps para móvil, los usuarios móviles y los dispositivos móviles.
 {: shortdesc}
@@ -44,7 +45,7 @@ Para empezar a utilizar de inmediato el servicio de {{site.data.keyword.mobilean
 			catch (MalformedURLException e) {
 	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), "your_app_name", "your_client_key", Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
     El parámetro **bluemixRegion** especifica el despliegue de Bluemix utilizado (por ejemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`).
 
@@ -55,10 +56,12 @@ Para empezar a utilizar de inmediato el servicio de {{site.data.keyword.mobilean
     import BMSCore
     import BMSAnalytics
     ```
-  2. Inicialice el SDK de cliente dentro del código de la aplicación para registrar las analíticas de uso y las sesiones de la aplicación mediante el valor [Clave de cliente](sdk.html#analytics-clientkey).```Swift
-  BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-  Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
-  ```
+  2. Inicialice el SDK de cliente dentro del código de la aplicación para registrar las analíticas de uso y las sesiones de la aplicación mediante el valor [Clave de cliente](sdk.html#analytics-clientkey).
+ 
+	```Swift
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	```
   El parámetro **bluemixRegion** especifica el despliegue de Bluemix utilizado (por ejemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`).
 
 4. Envíe las analíticas de uso registradas al servicio de Mobile Analytics. Una manera fácil de probar las analíticas consiste en ejecutar el siguiente código en el momento de iniciar la aplicación:

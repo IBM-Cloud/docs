@@ -29,7 +29,7 @@ Dalla barra degli strumenti di Android Studio, fai clic sul pulsante **Riproduci
 
   Nel simulatore, fai clic su **Esegui ping di {{site.data.keyword.Bluemix_notm}}**. L'applicazione di esempio invia una richiesta Get a una risorsa protetta sul runtime `Node.js` su {{site.data.keyword.Bluemix_notm}}. Se la richiesta ha esito positivo, la connessione è verificata e il testo nel simulatore viene aggiornato.
 
-  **Nota:** il codice di runtime `Node.js` viene fornito nel contenitore tipo MobileFirst Services Starter. Se l'applicazione di backend non è stata creata con il contenitore tipo MobileFirst Services Starter, l'applicazione non stabilirà la connessione correttamente. 
+  **Nota:** il codice di runtime `Node.js` viene fornito nel contenitore tipo MobileFirst Services Starter. Se l'applicazione di backend non è stata creata con il contenitore tipo MobileFirst Services Starter, l'applicazione non stabilirà la connessione correttamente.
 
   Quando stabilisci correttamente una connessione a {{site.data.keyword.Bluemix_notm}} dall'applicazione mobile in Android Studio, viene
 visualizzato un messaggio che indica che la connessione è stata stabilita correttamente (Yay! You are connected)
@@ -45,7 +45,6 @@ visualizzato un messaggio che indica che la connessione è stata stabilita corre
 
   È possibile risolvere i problemi della connessione non riuscita nel seguente modo:
    * Verifica di avere incollato correttamente i valori di rotta e GUID.
-
    * Esamina il log di debug per ulteriori informazioni.
 
 ## Passi successivi:

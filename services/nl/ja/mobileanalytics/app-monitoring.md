@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -6,7 +6,8 @@ copyright:
 ---
 # {{site.data.keyword.mobileanalytics_short}} によるアプリのモニター
 {: #monitoringapps}
-*最終更新日: 2016 年 5 月 6 日*
+*最終更新日時: 2016 年 5 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、クライアント・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されると、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーションや、デバイス、クライアント・ログに関する分析の洞察を得ることができます。
 {: shortdesc}
@@ -107,7 +108,7 @@ copyright:
 
 					**注**:「アプリケーションの平均 (Average for Application)」オプションを選択する場合、クライアント・ログは、デバイス数によって平均化されます。例えば、デバイスが 2 つあり、一方のデバイスが 6 つのクライアント・ログを送信し、もう一方のデバイスが 3 つのクライアント・ログを送信する場合、クライアント・ログの平均は 4.5 になります。
 				* 演算子: 3 以上
-	<!-- insert alert definition tab image? -->
+<!-- insert alert definition tab image? -->
 
 4. **「次へ」**または**「分布方法 (Distribution Method)」**タブをクリックし、次の値を入力します。
 	* 方法: 分析コンソールのみ

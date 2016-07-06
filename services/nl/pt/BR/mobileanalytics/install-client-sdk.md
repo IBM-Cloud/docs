@@ -9,6 +9,7 @@ copyright:
 SDKs Clientes
 {: #mobileanalytics_sdk}
 *Última atualização: 21 de abril de 2016*
+{: .last-updated}
 
 Os SDKs do cliente do {{site.data.keyword.mobileanalytics_short}}
 estão atualmente disponíveis para Android, iOS e WatchOS.
@@ -117,3 +118,7 @@ Inclua estruturas em seu projeto usando [Carthage](https://github.com/Carthage/C
 ## SDK
 * [SDK Android ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [SDK iOS ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## Referência da API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

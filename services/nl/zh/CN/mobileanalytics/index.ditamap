@@ -6,8 +6,9 @@
 
 <map xml:lang="zh-cn">
 <title>Mobile Analytics</title>
-<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Analytics"
-scope="peer">
+<topicref format="html" href="index.html" linking="none" navtitle="Mobile Analytics" scope="peer"
+locktitle="yes">
+<topicref format="html" href="index.html" navtitle="入门" scope="peer" locktitle="yes"> </topicref>
 <topicref format="html" href="mobileanalytics_overview.html" navtitle="关于" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="mobileanalytics_overview.html#usingmetrics" linking="sourceonly"
@@ -23,15 +24,15 @@ navtitle="安装 Swift 客户端 SDK" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="检测应用程序" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="识别客户端密钥值" scope="peer"> </topicref>
+navtitle="识别客户端密钥" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
-navtitle="初始化 Android 应用程序以收集分析" scope="peer"> </topicref>
+navtitle="初始化 Android 应用程序" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
-navtitle="初始化 iOS 应用程序以收集分析" scope="peer"> </topicref>
+navtitle="初始化 iOS 应用程序" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-gathering-analytics" linking="sourceonly"
 navtitle="收集使用情况分析" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-logger" linking="sourceonly"
-navtitle="启用、配置和使用记录器" scope="peer"> </topicref>
+navtitle="使用记录器" scope="peer"> </topicref>
 <!--<topicref format="html" href="sdk.html#enable-logger-sdklogs" linking="sourceonly" navtitle="Enabling the Client SDK internal logs" scope="peer"> </topicref>-->
 <topicref format="html" href="sdk.html#trackingusers" linking="sourceonly" navtitle="跟踪用户"
 scope="peer"> </topicref>
@@ -39,10 +40,10 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="监视应用程序"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts"
-navtitle="使用定制图表直观地显示数据" scope="peer">
+<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="直观显示数据"
+scope="peer">
 <topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="为客户机日志创建定制图表" scope="peer"> </topicref>
+navtitle="创建定制图表" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
 navtitle="导出定制数据" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
@@ -50,9 +51,9 @@ navtitle="导出和导入定制图表定义" scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="设置警报" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
-navtitle="为客户机日志创建警报定义" scope="peer"> </topicref>
+navtitle="创建客户端日志警报" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#alert-def-app-crash" linking="sourceonly"
-scope="peer" navtitle="为应用程序崩溃创建警报定义"> </topicref>
+scope="peer" navtitle="创建应用程序崩溃警报"> </topicref>
 <topicref format="html" href="app-monitoring.html#managing-alert-definitions" linking="sourceonly"
 scope="peer" navtitle="管理警报定义"> </topicref>
 <topicref format="html" href="app-monitoring.html#viewing-alert-details" linking="sourceonly"

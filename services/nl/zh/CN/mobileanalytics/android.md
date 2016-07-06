@@ -24,7 +24,8 @@ BMSClient.getInstance().initialize(this, "<APPLICATION_ROUTE>", "<APPLICATION_ID
 ```
 {: codeblock}
 
-4. 在开发环境中运行样本。从 Android Studio 工具栏，单击**播放**按钮，并选择模拟器。
+4. 在开发环境中运行样本。
+从 Android Studio 工具栏，单击**播放**按钮，并选择模拟器。
 
   在模拟器中，单击**对 {{site.data.keyword.Bluemix_notm}} 执行 Ping 操作**。样本应用程序会将 Get 请求发送到 {{site.data.keyword.Bluemix_notm}} 中 `Node.js` 运行时上的受保护资源。如果请求成功，那么会验证连接，且会更新模拟器中的文本。
 

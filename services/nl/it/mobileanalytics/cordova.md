@@ -10,7 +10,7 @@ Se desideri iniziare a lavorare con una nuova applicazione Cordova, puoi utilizz
 <ol>
 	<li>Nella sezione Contenitori tipo del catalogo Bluemix, fai clic su MobileFirst Services Starter.</li>
     	<li>Immetti un nome e un host per la tua applicazione e fai clic su **Crea**.</li>
-    	<li>Fai clic su **Fine**.</li>
+    	<li>Fai clic su **Fine**. </li>
 </ol>
 2. Ottieni il progetto da GitHub. Per ottenere il progetto puoi, facoltativamente, utilizzare il comando git clone. Dal tuo computer, apri il terminale e immetti quindi il seguente comando:
 ```

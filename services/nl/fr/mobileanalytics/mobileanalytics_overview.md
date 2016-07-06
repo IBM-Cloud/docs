@@ -1,19 +1,21 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 {:shortdesc: .shortdesc}
 
 # A propos de {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *Dernière mise à jour : 21 avril 2016*
+{: .last-updated}
 
 {: shortdesc}
-Le service {{site.data.keyword.mobileanalytics_full}} fournit des connaissances essentielles en matière de performances et d'utilisation d'application pour les développeurs et les propriétaires d'applications mobiles. L'utilisation de {{site.data.keyword.mobileanalytics_short}} permet aux propriétaires et aux développeurs d'applications de mieux comprendre ce qu'il se passe "côté utilisateur", et ils peuvent utiliser les connaissances ainsi acquises pour créer des applications orientées utilisateurs et d'une qualité exceptionnelle sur le marché des applications mobiles.  
+Le service {{site.data.keyword.mobileanalytics_full}} fournit des connaissances essentielles en matière de performances et d'utilisation d'application pour les développeurs et les propriétaires d'applications mobiles.  L'utilisation de {{site.data.keyword.mobileanalytics_short}} permet aux propriétaires et aux développeurs d'applications de mieux comprendre ce qu'il se passe "côté utilisateur", et ils peuvent utiliser les connaissances ainsi acquises pour créer des applications orientées utilisateurs et d'une qualité exceptionnelle sur le marché des applications mobiles. 
 
 {: #overview}  
-Le service inclut la console {{site.data.keyword.mobileanalytics_short}} qui permet aux propriétaires et aux développeurs d'applications de surveiller les performances des applications mobiles, de consulter les statistiques d'utilisateur et d'effectuer des recherches dans les journaux de périphériques. {{site.data.keyword.mobileanalytics_short}} fournit les logiciels SDK client pour iOS 8+ (Swift uniquement) et Android 4+.
+Le service inclut la console {{site.data.keyword.mobileanalytics_short}} qui permet aux propriétaires et aux développeurs d'applications de surveiller les performances des applications mobiles, de consulter les statistiques d'utilisateur et d'effectuer des recherches dans les journaux de périphériques.  {{site.data.keyword.mobileanalytics_short}} fournit les logiciels SDK client pour iOS 8+ (Swift uniquement) et Android 4+.
 
 <!-- Mobile Analytics Server SDKs - set of server SDKs to protect resources that are-->
 <!--hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are-->
@@ -29,16 +31,16 @@ Grâce au service {{site.data.keyword.mobileanalytics_short}}, vous pouvez :
 
 <dl>
 	<dt>Obtenir immédiatement des connaissances</dt>
-		<dd>Vous pouvez afficher des mesures de performances et d'utilisation en temps réel. </dd>
+		<dd>Vous pouvez afficher des mesures de performances et d'utilisation en temps réel.</dd>
 	<dt>Effectuer une implémentation en quelques minutes</dt>
-		<dd>Créez une instance de service dans {{site.data.keyword.Bluemix}}, ajoutez le logiciel SDK à votre projet et collez deux lignes de code dans votre application. Après cela, vous êtes prêt à collecter des douzaines de mesures prédéfinies. </dd>
+		<dd>Créez une instance de service dans {{site.data.keyword.Bluemix}}, ajoutez le logiciel SDK à votre projet et collez deux lignes de code dans votre application. Après cela, vous êtes prêt à collecter des douzaines de mesures prédéfinies.</dd>
 	<dt>Collecter n'importe quelle donnée souhaitée</dt>
-		<dd>Instrumentez des applications avec des événements personnalisés, découvrez de quelle manière les utilisateurs interagissent avec votre application, assurez le suivi des achats et surveillez l'activité de l'application.   
+		<dd>Instrumentez des applications avec des événements personnalisés, découvrez de quelle manière les utilisateurs interagissent avec votre application, assurez le suivi des achats et surveillez l'activité de l'application.  
 </dd>
 <dt>Visualiser d'un seul coup d'oeil des mesures pour toutes vos applications</dt>
-	<dd>La console {{site.data.keyword.mobileanalytics_short}} offre des graphiques personnalisés et des graphiques prêts à l'emploi, et il n'est plus nécessaire d'écrire des requêtes. </dd>
+	<dd>La console {{site.data.keyword.mobileanalytics_short}} offre des graphiques personnalisés et des graphiques prêts à l'emploi, et il n'est plus nécessaire d'écrire des requêtes.</dd>
 <dt>Vous concentrer sur ce qui est important pour vous</dt>
-	<dd>Filtrez les mesures par heure, adaptateur, application, version d'application, système d'exploitation, version de système d'exploitation ou modèle de périphérique. </dd>
+	<dd>Filtrez les mesures par heure, adaptateur, application, version d'application, système d'exploitation, version de système d'exploitation ou modèle de périphérique.</dd>
 <dt>Détecter rapidement des problèmes</dt>
 	<dd>Surveillez l'état des pannes. Définissez des déclencheurs d'alerte sur des mesures critiques et dirigez les alertes vers n'importe quel noeud final REST. </dd>
 <dt>Identifier et résoudre des causes premières</dt>
@@ -49,7 +51,7 @@ Grâce au service {{site.data.keyword.mobileanalytics_short}}, vous pouvez :
 ## Utilisation de mesures et d'événements
 {: #usingmetrics}
 
-Les **mesures prédéfinies** vous permettent de répondre à des questions, telles que les suivantes : 
+Les **mesures prédéfinies** vous permettent de répondre à des questions, telles que les suivantes :
 
 *Quel est le nombre de mes nouveaux utilisateurs ?*  
 *Combien de personnes utilisent-elles mon application de manière active ?*  

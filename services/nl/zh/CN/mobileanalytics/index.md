@@ -13,6 +13,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 *上次更新时间：2016 年 5 月 17 日*
+{: .last-updated}
 
 使用 {{site.data.keyword.mobileanalytics_full}} 服务，可测量移动应用程序、移动用户和移动设备的状态、行为和上下文信息。
 {: shortdesc}
@@ -42,9 +43,9 @@ copyright:
 			     BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
 			}
 			catch (MalformedURLException e) {
-	            //提供的 Bluemix 区域无效
+	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), "your_app_name", "your_client_key", Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
     **bluemixRegion** 参数指定您使用的是哪一个 Bluemix 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
@@ -56,10 +57,11 @@ copyright:
     import BMSAnalytics
     ```
   2. 使用[客户端密钥](sdk.html#analytics-clientkey)值，在应用程序代码中初始化客户端 SDK，以记录使用情况分析和应用程序会话。
-```Swift
-  BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-  Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
-  ```
+ 
+	```Swift
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	```
   **bluemixRegion** 参数指定您使用的是哪一个 Bluemix 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
 4. 将记录的使用情况分析发送到 Mobile Analytics 服务。一个简单的方法可测试您的分析，即在应用程序启动时，运行下列代码：

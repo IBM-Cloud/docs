@@ -8,6 +8,7 @@ copyright:
 # Strumentazione della tua applicazione per utilizzare gli SDK client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
 *Ultimo aggiornamento: 27 aprile 2016*
+{: .last-updated}
 
 Gli SDK {{site.data.keyword.mobileanalytics_full}} consentono di strumentare la tua applicazione mobile.
 {: shortdesc}
@@ -52,7 +53,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Accertati di puntare alla tua regione
         } catch (MalformedURLException e) {
-            Log.e("il_nome_della_tua_applicazione","L'URL non deve avere un formato non corretto:  " + e.getLocalizedMessage());
+            Log.e(il_nome_della_tua_applicazione,"L'URL non deve avere un formato non corretto:  " + e.getLocalizedMessage());
         }
   ```
   {: codeblock}
@@ -78,7 +79,7 @@ il valore [**Chiave client**](#analytics-clientkey).
 ## Inizializzazione della tua applicazione iOS per raccogliere l'analisi
 {: #init-ma-sdk-ios}
 
-Inizializza la tua applicazione per abilitare l'invio di log al servizio {{site.data.keyword.mobileanalytics_short}}.L'SDK Swift è disponibile per iOS e watchOS.
+Inizializza la tua applicazione per abilitare l'invio di log al servizio {{site.data.keyword.mobileanalytics_short}}. L'SDK Swift è disponibile per iOS e watchOS.
 
 1. Importa i framework `BMSCore` e `BMSAnalytics` aggiungendo le seguenti istruzioni `import` all'inizio
 del tuo file di progetto `AppDelegate.swift`:
@@ -116,7 +117,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "la_tua_chiave_client",
+      Analytics.initializeWithAppName("AppName", apiKey: la_tua_chiave_client,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -124,7 +125,7 @@ distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `B
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "la_tua_chiave_api")
+	  Analytics.initializeWithAppName("AppName", apiKey: la_tua_chiave_api)
 	```
 
   Puoi registrare gli eventi dispositivo su WatchOS utilizzando i metodi `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
@@ -318,7 +319,7 @@ let logger1 = Logger.logger(forName: "feature1Logger")
 let logger2 = Logger.logger(forName: "feature2Logger")
 	
 // Registra i messaggi con livelli differenti
-logger1.debug("debug message for feature 1")
+logger1.debug("debug message for feature 1") 
 //il messaggio logger1.debug non viene registrato perché il logLevelFilter è impostato su Info
 logger2.info("info message for feature 2")
 ```
@@ -510,3 +511,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# rellinks
+
+## Riferimento API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

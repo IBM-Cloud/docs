@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -7,9 +7,11 @@ copyright:
 
 # {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するためのアプリケーションの装備
 {: #mobileanalytics_sdk}
-*最終更新日: 2016 年 4 月 27 日*
+*最終更新日時: 2016 年 4 月 27 日*
+{: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} SDK によって、モバイル・アプリケーションを装備できるようになります。{: shortdesc}
+{{site.data.keyword.mobileanalytics_full}} SDK によって、モバイル・アプリケーションを装備できるようになります。
+{: shortdesc}
 
 {{site.data.keyword.mobileanalytics_short}} を使用すると、3 つのカテゴリーのデータを収集できます。それぞれ異なるレベルの装備をする必要があります:
 
@@ -17,7 +19,7 @@ copyright:
 2. カスタム・イベント - このカテゴリーには、自身で定義したデータ、およびアプリに固有のデータが含まれます。このデータは、ページ・ビュー、ボタン・タップ、アプリ内購入など、アプリ内で発生するイベントを表します。アプリでの {{site.data.keyword.mobileanalytics_short}} SDK の初期設定に加えて、追跡対象の各カスタム・イベントに対してコードを 1 行追加する必要があります。
 3. クライアント・ログ・メッセージ - このカテゴリーを使用すると、カスタム・メッセージをログに記録するコード行を開発者がアプリ全体にわたって追加できるようになり、開発およびデバッグに役立ちます。開発者は重大度/詳細レベルを各ログ・メッセージに割り当て、その後、割り当てたレベルによってメッセージをフィルター操作したり、指定したログ・レベルを下回るメッセージを無視するようアプリを構成することでストレージ・スペースを確保したりできます。クライアント・ログ・データを収集するには、アプリ内の {{site.data.keyword.mobileanalytics_short}} SDK を初期設定し、また、各ログ・メッセージのコード行を追加する必要があります。
 
-SDK は、現在 Android、iOS および WatchOS で使用できます。
+SDK は、現在 Android、iOS、および WatchOS で使用できます。
 
 ## クライアント・キー値の識別
 {: #analytics-clientkey}
@@ -48,7 +50,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
         } 
   ```
   {: codeblock}
@@ -106,7 +108,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -114,7 +116,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   `Analytics.recordApplicationDidBecomeActive()` メソッドと `Analytics.recordApplicationWillResignActive()` メソッドを使用すると、WatchOS に関するデバイス・イベントを記録できます。
@@ -251,7 +253,7 @@ Analytics.log(eventObject)
 {: #android-logger-sample}
 
 ```
-// Configure Logger to save logs to the device so that they 
+// Configure Logger to save logs to the device so that they
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
@@ -497,3 +499,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# 関連リンク
+
+## API リファレンス
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

@@ -4,8 +4,7 @@
 # Initiation à l'exemple HelloWorld
 {: #gettingstarted-cordova}
 
-Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end Bluemix depuis une application mobile sans authentification.
-Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
+Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end Bluemix depuis une application mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
 votre application.
 
 1. Créez votre application de back end mobile dans Bluemix.
@@ -64,7 +63,7 @@ Cancel (Annuler).
 		2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin suivant :
 
 		```
-		<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
+		<votre_nom_de_projet>/Plugins/ibm-mfp-core/Bridging-Header.h
 		```
 		3. Accédez à **Build settings > Linking > Runpath Search Paths** et ajoutez le paramètre Frameworks suivant :
 
@@ -76,10 +75,10 @@ Cancel (Annuler).
 6. Configurez l'exemple HelloWorld
 <ol>
 	<li>Accédez au répertoire dans lequel vous avez cloné le projet.</li>
-	<li>Ouvrez le fichier &lt;your_app_dir&gt;/www/js/index.js et remplacez &lt;APPLICATION_ROUTE&gt; et &lt;APPLICATION_ID&gt; par l'ID et la route de votre application Bluemix. </li>
+	<li>Ouvrez le fichier &lt;répertoire_de_votre_application&gt;/www/js/index.js et remplacez &lt;APPLICATION_ROUTE&gt; et &lt;APPLICATION_ID&gt; par la route et l'ID de votre application Bluemix.</li>
 </ol>
 
-Remarque : vérifiez que votre route &lt;APPLICATION_ROUTE&gt; utilise le protocole https. 
+Remarque : vérifiez que votre route &lt;APPLICATION_ROUTE&gt; utilise le protocole https.
 
 ```
 // Bluemix credentials
@@ -106,18 +105,19 @@ GUID: "<APPLICATION_GUID>",
 	 ```
 
 
-Une application avec une vue unique comportant un bouton **PING BLUEMIX** s'affiche. Lorsque vous sélectionnez le bouton, l'application teste la connexion entre le client et l'application de backend Bluemix. La connexion est testée à l'aide de la route d'application que vous spécifié dans le fichier index.js. 
+Une application avec une vue unique comportant un bouton **PING BLUEMIX** s'affiche. Lorsque vous sélectionnez le bouton, l'application teste la connexion entre le client et l'application de backend Bluemix. La connexion est testée à l'aide de la route d'application que vous spécifié dans le fichier index.js.
 
 
 ![Application Hello World
 connectée à Bluemix](images/yayconnected.jpg "Figure 1. Application Hello World connectée à Bluemix")
 
-Lorsque vous parvenez à vous connecter à Bluemix depuis l'application mobile, le message suivant s'affiche : "Yay! You are connected". 
+Lorsque vous parvenez à vous connecter à Bluemix depuis l'application mobile, le message suivant s'affiche : "Yay! You are connected".
 8. Corrigez les problèmes éventuels.
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Si la connexion échoue, le message suivant s'affiche : "Bummer Something went wrong". Des informations supplémentaires sur l'erreur sont incluses. Vérifiez les points suivants :
+Si la connexion échoue, le message suivant s'affiche : "Bummer Something went wrong". Des informations supplémentaires sur l'erreur sont incluses.
+Vérifiez les points suivants :
  * Assurez-vous d'avoir collé correctement les valeurs de route et d'identificateur global unique.
  * Affichez le journal de débogage de Xcode ou Android.
  * Vérifiez l'état de votre application dans Bluemix.
@@ -125,7 +125,6 @@ Si la connexion échoue, le message suivant s'affiche : "Bummer Something went w
 ## Etapes suivantes :
 {: #next}
 Pour obtenir des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir Configuration du logiciel SDK du client Cordova.
-
 
 # rellinks
 

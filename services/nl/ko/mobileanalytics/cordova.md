@@ -12,7 +12,7 @@
     	<li>앱에 대한 이름 및 호스트를 입력하고 **작성**을 클릭하십시오.</li>
     	<li>**완료**를 클릭하십시오.</li>
 </ol>
-2. GitHub에서 프로젝트를 가져오십시오. 필요에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수 있습니다. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오.
+2. GitHub에서 프로젝트를 가져오십시오. 필요에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수 있습니다. 컴퓨터에서 터미널을 열고 다음 명령을 입력하십시오. 
 ```
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld
 ```
@@ -20,16 +20,18 @@ git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hel
 3. 프로젝트 디렉토리에서 다음 명령을 실행하여 Android 및 iOS 플랫폼 환경을 추가하십시오.
 
 Android:
+
 ```
 cordova platform add android
 ```
 
 iOS:
+
 ```
 cordova platform add ios
 ```
 
-4. 다음 명령을 사용하여 Cordova 플러그인을 추가하십시오.
+4. 다음 명령을 사용하여 Cordova 플러그인을 추가하십시오. 
 ```
 cordova plugin add ibm-mfp-core
 ```

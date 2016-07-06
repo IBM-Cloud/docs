@@ -10,7 +10,7 @@ Se desideri iniziare a lavorare con una nuova applicazione iOS, puoi utilizzare 
 <ol>
 	<li>Nella sezione Contenitori tipo del catalogo {{site.data.keyword.Bluemix_notm}}, fare clic su **MobileFirst Services Starter**.</li>
     <li>Immetti un nome e un host per la tua applicazione e fai clic su **Crea**.</li>
-    <li>Fai clic su **Fine**.</li>
+    <li>Fai clic su **Fine**. </li>
 </ol>
 2. Ottieni il progetto da GitHub.
 Dal tuo computer, apri il terminale e immetti il seguente comando:
@@ -41,7 +41,9 @@ Nel simulatore, fai clic su **Esegui ping di {{site.data.keyword.Bluemix_notm}}*
 ![Applicazione Hello World connessa correttamente a {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figura 1. Applicazione Hello World connessa correttamente a {{site.data.keyword.Bluemix_notm}}")
 <br/>
 Se stabilisci correttamente una connessione, l'Xcode di accesso di debug contiene un messaggio che indica che la connessione è stata stabilita correttamente:
-```You have connected to {{site.data.keyword.Bluemix_notm}} successfully```
+```
+Connessione a {{site.data.keyword.Bluemix_notm}} stabilita correttamente
+```
 5. Risolvi gli eventuali problemi.
 Quando la connessione non riesce, viene visualizzato un messaggio che indica che qualcosa è andato storto ("Bummer Something went wrong"). Sono incluse ulteriori informazioni sull'errore.<br/>
 ![Applicazione Hello World non connessa a {{site.data.keyword.Bluemix_notm}}](images/bummer_android.jpg "Figura 2. Applicazione Hello World non connessa a Bluemix")

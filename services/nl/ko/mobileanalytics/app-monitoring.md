@@ -7,6 +7,7 @@ copyright:
 # {{site.data.keyword.mobileanalytics_short}}를 사용하여 앱 모니터링
 {: #monitoringapps}
 *마지막 업데이트 날짜: 2016년 5월 6일*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}}는 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. 클라이언트 로그를 기록하고 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하여 데이터를 모니터링할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.mobileanalytics_short}} 서비스에 전송할 시기를 제어할 수 있습니다. 데이터가 {{site.data.keyword.mobileanalytics_short}}에 전달될 때 {{site.data.keyword.mobileanalytics_short}} 대시보드를 사용하여 모바일 애플리케이션, 디바이스 및 클라이언트 로그에 대한 분석 통찰을 가져올 수 있습니다.
 {: shortdesc}
@@ -107,7 +108,7 @@ copyright:
 
 					**참고**: 애플리케이션 옵션에 대한 평균을 선택하면 클라이언트 로그가 디바이스 수 기준으로 평균이 됩니다. 예를 들어, 두 개의 디바이스가 있으며 한 디바이스가 여섯 개의 클라이언트 로그를 전송하고 다른 디바이스가 세 개의 클라이언트 로그를 전송하는 경우, 평균은 4.5 클라이언트 로그입니다.
 				* 연산자: 3 이상
-	<!-- insert alert definition tab image? -->
+<!-- insert alert definition tab image? -->
 
 4. **다음** 또는 **분산 방법** 탭을 클릭하고 다음 값을 제공하십시오.
 	* 방법: 분석 콘솔 전용

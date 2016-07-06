@@ -6,8 +6,9 @@
 
 <map xml:lang="it-it">
 <title>Mobile Analytics</title>
-<topicref format="html" href="index.html" linking="sourceonly" navtitle="Mobile Analytics"
-scope="peer">
+<topicref format="html" href="index.html" linking="none" navtitle="Mobile Analytics" scope="peer"
+locktitle="yes">
+<topicref format="html" href="index.html" navtitle="Introduzione" scope="peer" locktitle="yes"> </topicref>
 <topicref format="html" href="mobileanalytics_overview.html" navtitle="Informazioni su" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="mobileanalytics_overview.html#usingmetrics" linking="sourceonly"
@@ -23,15 +24,15 @@ navtitle="Installazione dell'SDK client Swift" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html" navtitle="Strumentazione della tua applicazione" scope="peer"
 outputclass="subsection">
 <topicref format="html" href="sdk.html#analytics-clientkey" linking="sourceonly"
-navtitle="Identificazione del tuo valore Chiave client" scope="peer"> </topicref>
+navtitle="Identificazione della chiave client" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#initalize-ma-sdk-android" linking="sourceonly"
-navtitle="Inizializzazione della tua applicazione Android per raccogliere l'analisi" scope="peer"> </topicref>
+navtitle="Inizializzazione dell'applicazione Android" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#init-ma-sdk-ios" linking="sourceonly"
-navtitle="Inizializzazione della tua applicazione iOS per raccogliere l'analisi" scope="peer"> </topicref>
+navtitle="Inizializzazione dell'applicazione iOS" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-gathering-analytics" linking="sourceonly"
 navtitle="Raccolta dell'analisi di utilizzo" scope="peer"> </topicref>
 <topicref format="html" href="sdk.html#app-monitoring-logger" linking="sourceonly"
-navtitle="Abilitazione, configurazione e utilizzo di Logger" scope="peer"> </topicref>
+navtitle="Utilizzo di Logger" scope="peer"> </topicref>
 <!--<topicref format="html" href="sdk.html#enable-logger-sdklogs" linking="sourceonly" navtitle="Enabling the Client SDK internal logs" scope="peer"> </topicref>-->
 <topicref format="html" href="sdk.html#trackingusers" linking="sourceonly" navtitle="Traccia degli utenti"
 scope="peer"> </topicref>
@@ -39,10 +40,10 @@ scope="peer"> </topicref>
 </topicref>
 <topicref format="html" href="app-monitoring.html" linking="sourceonly" navtitle="Monitoraggio delle applicazioni"
 scope="peer" outputclass="subsection">
-<topicref format="html" href="app-monitoring.html#custom-charts"
-navtitle="Visualizzazione dei dati con i grafici personalizzati" scope="peer">
+<topicref format="html" href="app-monitoring.html#custom-charts" navtitle="Visualizzazione dei dati"
+scope="peer">
 <topicref format="html" href="app-monitoring.html#custom-charts-client-logs" linking="sourceonly"
-navtitle="Creazione di grafici personalizzati per i log client" scope="peer"> </topicref>
+navtitle="Creazione di grafici personalizzati" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-custom-data" linking="sourceonly"
 navtitle="Esportazione di dati personalizzati" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#export-import-custom" linking="sourceonly"
@@ -50,9 +51,9 @@ navtitle="Esportazione ed importazione di definizioni di grafico personalizzato"
 </topicref>
 <topicref format="html" href="app-monitoring.html#alerts" navtitle="Impostazione di avvisi" scope="peer">
 <topicref format="html" href="app-monitoring.html#alert-def-client-logs" linking="sourceonly"
-navtitle="Creazione di una definizione di avviso per i log client" scope="peer"> </topicref>
+navtitle="Creazione di avvisi di log del client" scope="peer"> </topicref>
 <topicref format="html" href="app-monitoring.html#alert-def-app-crash" linking="sourceonly"
-scope="peer" navtitle="Creazione di una definizione di avviso per gli arresti anomali delle applicazioni"> </topicref>
+scope="peer" navtitle="Creazione di avvisi di arresti anomali nell'applicazione"> </topicref>
 <topicref format="html" href="app-monitoring.html#managing-alert-definitions" linking="sourceonly"
 scope="peer" navtitle="Gestione delle definizioni di avviso"> </topicref>
 <topicref format="html" href="app-monitoring.html#viewing-alert-details" linking="sourceonly"

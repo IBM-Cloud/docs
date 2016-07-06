@@ -7,7 +7,9 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # 关于 {{site.data.keyword.mobileanalytics_short}}  
+{: aboutmobileanalytics}
 *上次更新时间：2016 年 4 月 21 日*
+{: .last-updated}
 
 {: shortdesc}
 {{site.data.keyword.mobileanalytics_full}} 服务为移动应用程序开发人员和应用程序所有者提供关键应用程序使用情况和性能洞察。通过使用 {{site.data.keyword.mobileanalytics_short}}，应用程序所有者和开发人员能够了解在“用户端”发生的事情，他们可以利用此洞察，构建与用户高度相关的更好的应用程序，从而在众多的移动应用程序中脱颖而出。 
@@ -42,7 +44,7 @@ copyright:
 <dt>快速发现问题</dt>
 	<dd>监视崩溃状态。对于重要度量设置警报触发器，并将警报路由到任何 REST 端点。</dd>
 <dt>对根本原因进行故障诊断</dt>
-	<dd>在应用程序中使用定制客户机日志记录，自动上载日志，并通过控制台对它们进行搜索。向下钻取崩溃事件，以查看堆栈跟踪。</dd>
+	<dd>在应用程序中使用定制客户机日志记录，自动上传日志，并通过控制台对它们进行搜索。向下钻取崩溃事件，以查看堆栈跟踪。</dd>
 </dl>
  
 

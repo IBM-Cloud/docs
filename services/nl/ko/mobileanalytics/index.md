@@ -13,6 +13,7 @@ copyright:
 
 {: #gettingstartedtemplate}
 *마지막 업데이트 날짜: 2016년 5월 17일*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱 및 모바일 디바이스의 상태, 동작, 컨텍스트를 측정하십시오.
 {: shortdesc}
@@ -44,7 +45,7 @@ copyright:
 			catch (MalformedURLException e) {
 	            //The Bluemix region provided is invalid
 	        }
-				Analytics.init(getApplication(), "your_app_name", "your_client_key", Analytics.DeviceEvent.LIFECYCLE);
+				Analytics.init(getApplication(), your_app_name, your_client_key, Analytics.DeviceEvent.LIFECYCLE);
 		```
     **bluemixRegion** 매개변수는 사용자가 사용 중인 Bluemix 배치를 지정합니다. 예를 들어, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`입니다.
 
@@ -56,10 +57,11 @@ copyright:
     import BMSAnalytics
     ```
   2. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하고 [클라이언트 키](sdk.html#analytics-clientkey) 값을 사용하여 사용 분석 및 애플리케이션 세션을 기록하십시오.
-```Swift
-  BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-  Analytics.initializeWithAppName("your_app_name", apiKey: "your_client_key", deviceEvents: DeviceEvent.LIFECYCLE)
-  ```
+ 
+	```Swift
+	BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
+	Analytics.initializeWithAppName(your_app_name, apiKey: your_client_key, deviceEvents: DeviceEvent.LIFECYCLE)
+	```
   **bluemixRegion** 매개변수는 사용자가 사용 중인 Bluemix 배치를 지정합니다. 예를 들어, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`입니다.
 
 4. 기록된 사용 분석을 Mobile Analytics 서비스로 전송하십시오. 분석을 테스트하는 간단한 방법은 애플리케이션이 시작될 때 다음 코드를 실행하는 것입니다.

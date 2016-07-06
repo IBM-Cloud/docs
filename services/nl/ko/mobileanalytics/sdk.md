@@ -8,6 +8,7 @@ copyright:
 # {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하도록 애플리케이션 인스트루먼트
 {: #mobileanalytics_sdk}
 *마지막 업데이트 날짜: 2016년 4월 27일*
+{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK를 사용하면 모바일 애플리케이션을 인스트루먼트할 수 있습니다.
 {: shortdesc}
@@ -50,8 +51,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	try {
             BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
         } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-        }
+            Log.e(your_app_name,"URL should not be malformed:  " + e.getLocalizedMessage());
+        } 
   ```
   {: codeblock}
 
@@ -108,7 +109,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     {: #ios-initialize-analytics}
 
       ```
-      Analytics.initializeWithAppName("AppName", apiKey: "your_client_key",
+      Analytics.initializeWithAppName("AppName", apiKey: your_client_key,
       deviceEvents: DeviceEvent.LIFECYCLE)
       ```
 
@@ -116,7 +117,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   {: #watchos-initialize-analytics}
 
 	```
-	  Analytics.initializeWithAppName("AppName", apiKey: "your_api_key")
+	  Analytics.initializeWithAppName("AppName", apiKey: your_api_key)
 	```
 
   `Analytics.recordApplicationDidBecomeActive()` 및 `Analytics.recordApplicationWillResignActive()` 메소드를 사용하여 WatchOS에 대한 디바이스 이벤트를 기록할 수 있습니다.
@@ -147,14 +148,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.disable();
-	
-// Enable recording of usage analytics
-Analytics.enable();
-	
-Analytics.log(eventJSONObject);
-	
-// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.disable();// Enable recording of usage analytics
+Analytics.enable();Analytics.log(eventJSONObject);// Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```
 	
@@ -162,9 +157,7 @@ Analytics.send();
 	
 ```
 // Log a custom analytics event for custom charts, which is represented by a JSON object:
-JSONObject eventJSONObject = new JSONObject();
-	
-eventJSONObject.put("customProperty" , "propertyValue");
+JSONObject eventJSONObject = new JSONObject();eventJSONObject.put("customProperty" , "propertyValue");
 ```
 
 #### iOS - Swift
@@ -173,12 +166,8 @@ eventJSONObject.put("customProperty" , "propertyValue");
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.enabled = false
-
-// Enable recording of usage analytics
-Analytics.enabled = true
-
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+Analytics.enabled = false// Enable recording of usage analytics
+Analytics.enabled = true// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
 Analytics.send()
 ```
 
@@ -256,13 +245,9 @@ Analytics.log(eventObject)
 // Configure Logger to save logs to the device so that they
 // can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.storeLogs(true);
-
-// Change the minimum log level (optional)
+Logger.storeLogs(true);// Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
-Logger.setLogLevel(Logger.LEVEL.INFO);
-
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send();
 ```
 
@@ -272,9 +257,7 @@ Logger.send();
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
-Logger logger2 = Logger.getLogger("logger2");
-
-// Log messages with different levels
+Logger logger2 = Logger.getLogger("logger2");// Log messages with different levels
 // Debug message for feature 1
 // Info message for feature 2
 logger1.debug("debug message");
@@ -288,13 +271,9 @@ logger2.info("info message");
 ```
 // Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true
-
-// Change the minimum log level (optional)
+Logger.logStoreEnabled = true// Change the minimum log level (optional)
 // The default setting is LogLevel.Debug
-Logger.logLevelFilter = LogLevel.Info
-
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
+Logger.logLevelFilter = LogLevel.Info// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
 Logger.send()
 ```
 
@@ -304,9 +283,7 @@ Logger.send()
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 let logger1 = Logger.logger(forName: "feature1Logger")
-let logger2 = Logger.logger(forName: "feature2Logger")
-	
-// Log messages with different levels
+let logger2 = Logger.logger(forName: "feature2Logger")// Log messages with different levels
 logger1.debug("debug message for feature 1")
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message for feature 2")
@@ -499,3 +476,9 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+# 관련 링크
+
+## API 참조
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.eu-gb.bluemix.net/analytics-service/){:new_window}

@@ -109,7 +109,6 @@ GUID: "<APPLICATION_GUID>",
 モバイル・アプリから Bluemix への接続に成功すると、「おめでとうございます。接続されました。(Yay! You are connected)」というメッセージが表示されます。
 8. 問題があれば解決します。
 
-
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
 接続が失敗すると、「残念ながら、問題が発生しました (Bummer Something went wrong)」というメッセージが表示されます。エラーに関する詳細が含まれています。

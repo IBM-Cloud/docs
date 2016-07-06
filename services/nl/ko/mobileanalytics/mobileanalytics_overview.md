@@ -7,7 +7,9 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.mobileanalytics_short}} 정보  
+{: aboutmobileanalytics}
 *마지막 업데이트 날짜: 2016년 4월 21일*
+{: .last-updated}
 
 {: shortdesc}
 {{site.data.keyword.mobileanalytics_full}} 서비스는 모바일 앱 개발자 및 소유자를 위한 핵심적인 앱 사용 및 성능 통찰을 제공합니다. 앱 소유자 및 개발자는 {{site.data.keyword.mobileanalytics_short}}를 사용하여 "사용자 측"에서 발생한 상황을 이해할 수 있으며 이 통찰을 사용하여 사용자와 밀접하게 관련되었으며 모바일 앱의 세계에서 돋보이는 더 나은 앱을 빌드할 수 있습니다. 
