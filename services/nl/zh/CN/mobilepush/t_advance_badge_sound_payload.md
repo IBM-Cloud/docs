@@ -28,6 +28,8 @@ copyright:
 
 ###Android
 
+将声音文件添加到 Android 应用程序的 `res/raw` 目录中。发送通知时，在推送通知的声音字段中添加声音文件名。
+
 ```
 "settings":{
      "gcm":{
@@ -51,22 +53,21 @@ copyright:
 
 ```
 {"key":"value", "key2":"value2"}
-	```
+```
 
 
 ## 暂停 Android 通知 
 {: #hold-notifications-android}
 
-应用程序转入后台运行时，您可能希望 Push 暂停发送给应用程序的通知。要暂停通知，请调用处理推送通知的活动的 onPause() 方法中的 hold() 方法。
+应用程序转入后台运行时，您可能希望推送通知暂停发送给应用程序的通知。要暂停通知，请调用处理推送通知的活动的 onPause() 方法中的 hold() 方法。
 
 ```
 @Override
 protected void onPause() {
     super.onPause();
 
-
     if (push != null) {
-push.hold();
+        push.hold();
     }
 } 
 ```
@@ -89,7 +90,6 @@ push.hold();
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
 	  
-	  
 	 ```
    Swift
 
@@ -100,7 +100,7 @@ push.hold();
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -167,11 +167,9 @@ push.hold();
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## 处理可操作的 iOS 通知  
@@ -195,8 +193,7 @@ push.hold();
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-
-      //must call completion handler when finished
+//must call completion handler when finished
       completionHandler()
   }
 ```    

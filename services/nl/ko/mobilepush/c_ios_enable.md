@@ -16,7 +16,7 @@ iOS 애플리케이션이 푸시 알림을 수신하고 사용자 디바이스�
 
 기존 Xcode 프로젝트의 경우 CocoaPods 종속 항목 관리 도구를 사용하여 Bluemix Mobile Services Client SDK를 설정할 수 있습니다. 또는 SDK를 수동으로 설치할 수 있습니다. 
 
-**참고**: Swift Push readme 파일을 보려면 https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master 로 이동하십시오. 
+**참고**: Swift 푸시 readme 파일을 보려면 https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master로 이동하십시오. 
 
 
 
@@ -24,13 +24,11 @@ iOS 애플리케이션이 푸시 알림을 수신하고 사용자 디바이스�
 ```
 $ sudo gem install cocoapods
 ```
-2. 터미널에서 다음 명령을 입력하여 CocoaPods를 초기화하십시오.
-이 명령을 실행할 경우 Xcode 프로젝트가 있는 디렉토리에서 실행해야 합니다. `pod init` 명령에서 파일 제목을 작성합니다.
+2. 터미널에서 다음 명령을 입력하여 CocoaPods를 초기화하십시오. 이 명령을 실행할 경우 Xcode 프로젝트가 있는 디렉토리에서 실행해야 합니다. `pod init` 명령에서 파일 제목을 작성합니다.  
 ```
 $ pod init
 ```
-3. 생성된 Podfile에서 필요한 SDK 종속 항목을 추가하십시오.
-다음 Podfile을 복사하십시오.
+3. 생성된 Podfile에서 필요한 SDK 종속 항목을 추가하십시오. 다음 Podfile을 복사하십시오.
 
    Objective-C
 
@@ -52,18 +50,31 @@ $ pod init
 	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
+      pod 'BMSAnalyticsAPI'
 	end
 	```
 3. 터미널에서 프로젝트 폴더로 이동한 후, 다음 명령을 사용하여 종속 항목을 설치하십시오.
 ```
 $ pod update
 ```
-해당 명령은 종속 항목을 설치하고 새 Xcode 작업공간을 작성합니다. **참고**: 원래 Xcode 프로젝트 파일 대신, 반드시 항상 새 Xcode 작업공간을 여십시오. 
+해당 명령은 종속 항목을 설치하고 새 Xcode 작업공간을 작성합니다. **참고**: 원래 Xcode 프로젝트 파일 대신, 반드시 항상 새 Xcode 작업공간을 여십시오.
 
-	```
+ ```
 	$ open App.xcworkspace
 	```
-작업공간에는 원래 프로젝트 및 종속 항목이 포함된 Pods 프로젝트가 있습니다. Bluemix Mobile Services 소스 폴더를 수정하려는 경우, `Pods/yourImportedSourceFolder`아래의 Pods 프로젝트에서 폴더를 찾을 수 있습니다(예: `Pods/IMFGoogleAuthentication`).
+작업공간에는 원래 프로젝트 및 종속 항목이 포함된 Pods 프로젝트가 있습니다. Bluemix Mobile Services 소스 폴더를 수정하려는 경우, `Pods/yourImportedSourceFolder` 아래의 Pods 프로젝트에서 폴더를 찾을 수 있습니다(예: `Pods/BMSPush`).
+
+##Carthage
+{: #carthage}
+
+[Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)를 사용하여 프로젝트에 프레임워크를 추가하십시오. (https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos%29.)
+
+1. `BMSPush` 프레임워크를 Cartfile에 추가하십시오. 
+```
+github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
+```
+2. `carthage update` 명령을 실행하십시오. 빌드가 완료되면 `BMSPush.framework`, `BMSCore.framework`, `BMSAnalyticsAPI.framework`를 Xcode 프로젝트로 끌어오십시오. 
+3. [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 사이트의 지시사항에 따라 통합을 완료하십시오.
 
 ##가져온 프레임워크 및 소스 폴더 사용
 
@@ -76,13 +87,11 @@ $ pod update
 
 ```
 //Objective-C
-
 #import <IMFCore/IMFCore.h>
 #import <IMFPush/IMFPush.h>
 ```
 
-**참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더를 대체할 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에
-해당 버전을 백업해야 합니다. 
+**참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더를 대체할 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에 해당 버전을 백업해야 합니다. 
 
 ###Swift
 
@@ -99,7 +108,7 @@ $ pod update
 import BMSCore
 import BMSPush
 ```
-
+**주의**: Swift 푸시 readme 파일을 보려면 [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)로 이동하십시오.
 
 ##빌드 설정
 
@@ -164,7 +173,7 @@ Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합�
 
 **bluemixRegionSuffix**
 
-앱이 호스트된 위치를 지정합니다. ```bluemixRegion``` 매개변수는 사용 중인 Bluemix 배치를 지정합니다. 이 값을 ```BMSClient.REGION`` 정적 특성으로 설정하고 다음 값 중 하나를 사용할 수 있습니다.
+앱이 호스트된 위치를 지정합니다. `bluemixRegion` 매개변수는 사용 중인 Bluemix 배치를 지정합니다. 이 값을 `BMSClient.REGION` 정적 특성으로 설정하고 세 값 중 하나를 사용할 수 있습니다. 
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK
@@ -177,9 +186,9 @@ Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합�
 {: #enable-push-ios-notifications-register}
 
 
-일반적으로 앱이 디바이스에 설치된 후에 발생하는 원격 알림을 수신하려면 APNs에 애플리케이션(앱)을 등록해야 합니다. APNs에 의해 생성된 디바이스 토큰을 애플리케이션에서 수신한 후에는 푸시 알림 서비스에 이를 되돌려 보내야 합니다. 
+일반적으로 앱이 디바이스에 설치된 후에 발생하는 원격 알림을 수신하려면 APNS에 애플리케이션(앱)을 등록해야 합니다. APNS에 의해 생성된 디바이스 토큰을 앱에서 수신한 후에는 푸시 알림 서비스에 이를 되돌려 보내야 합니다. 
 
-iOs 애플리케이션 및 디바이스를 등록하려면 다음을 수행하십시오. 
+iOS 애플리케이션 및 디바이스를 등록하려면 다음을 수행하십시오. 
 
 1. 백엔드 애플리케이션 작성
 2. 토큰을 푸시 알림에 전달
@@ -193,7 +202,6 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플�
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
      [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -221,7 +229,7 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 푸시 서비스를 이 애플�
 
 ###토큰을 푸시 알림에 전달
 
-APNs로부터 토큰이 수신되면 ```registerDevice:withDeviceToken``` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
+APNS로부터 토큰이 수신되면 `registerDevice:withDeviceToken` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
 
 ####Objective-C
 
@@ -231,15 +239,13 @@ APNs로부터 토큰이 수신되면 ```registerDevice:withDeviceToken``` 메소
 
    IMFClient *client = [IMFClient sharedInstance];
 
-
  [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
-
 
 
  // get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
-   if(error){
+   if (error){
      [ self  updateMessage:error .description];
   }  else {
     [ self updateMessage:response .responseJson .description];
@@ -249,7 +255,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ####Swift
 
-APNS로부터 토큰이 수신되면 ```didRegisterForRemoteNotificationsWithDeviceToken``` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
+APNS로부터 토큰이 수신되면 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 토큰을 전달하십시오. 
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
@@ -294,7 +300,6 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
        //UserInfo dictionary will contain data sent from the server
    }
 
-
 ```
 
 
@@ -316,15 +321,12 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 2. **알림 작성**에서 메시지를 입력하고 **보내기**를 클릭하십시오.
 3. 디바이스가 알림을 수신했는지 확인하십시오. 
 
-	다음 스크린샷은 Android와 iOS 디바이스의 포그라운드에서
-푸시 알림을 처리하는 경보 상자를 보여줍니다. 
+	다음 스크린샷은 iOS 디바이스의 포그라운드 및 백그라운드에서
+푸시 알림을 처리하는 경보 상자를 보여줍니다.
 
 	![Android의 포그라운드 푸시 알림](images/Android_Screenshot.jpg)
 
 	![iOS의 포그라운드 푸시 알림](images/iOS_Screenshot.jpg)
-
-	다음 스크린샷은 Android의 백그라운드에 있는 푸시 알림을 보여줍니다.
-	![Android의 백그라운드 푸시 알림](images/background.jpg)
 
 
 

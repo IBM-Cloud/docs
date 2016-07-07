@@ -18,7 +18,7 @@ Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应
 ## 安装 Cordova 推送插件
 {: #cordova_install}
 
-安装和使用客户机推送插件来进一步开发 Cordova 应用程序。这还会安装 Cordova 核心插件，该插件会初始化与 Bluemix 的连接。
+安装并使用客户机推送插件来进一步开发 Cordova 应用程序。这还会安装 Cordova 核心插件，该插件会初始化与 Bluemix 的连接。
 
 ### 开始之前
 
@@ -29,11 +29,12 @@ Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应
 1. 安装 Node.js 和 Node 软件包管理器 (NPM) 工具。NPM 命令行工具与 Node.js 捆绑在一起。有关如何下载并安装 Node.js 的信息，请参阅 [Node.js](https://nodejs.org/en/download/)。
 1. 在命令行中，使用 **npm install -g cordova** 命令来安装 Cordova 命令行工具。必须有该工具才能使用 Cordova 推送插件。有关如何安装 Cordova 和设置 Cordova 应用程序的信息，请参阅 [Cordova Apache](https://cordova.apache.org/#getstarted)。
 
- **注**：要查看 Cordova 推送插件自述文件，请转至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
+	**注**：要查看 Cordova 推送插件自述文件，请转至 [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
+
 
 1. 切换到要在其中创建 Cordova 应用程序的文件夹，然后运行以下命令来创建 Cordova 应用程序。如果已有 Cordova 应用程序，请转至步骤 3。
 
- ```
+```
 cordova create your_app_name
 	cd your_app_name
 	```
@@ -46,8 +47,7 @@ cordova create your_app_name
 	要解决此问题，请在 Xcode 或 Cordova 应用程序 **config.xml** 文件中指定正确的捆绑软件标识。
 
 1. 将支持的最低版本 API 或部署目标声明添加到 Cordova 应用程序的 config.xml 文件中。minSdkVersion 值必须高于 15。targetSdkVersion 值必须始终反映出 Google 上可用的最新版本 Android SDK。
-	* **Android** - 使用编辑器打开 config.xml 文件，然后使用最低的目标 SDK 版本更新
-```<platform name="android">``` 元素：
+	* **Android** - 使用编辑器，打开 config.xml 文件并使用最低 SDK 版本和目标 SDK 版本更新 `<platform name="android">` 元素：
 
 	```
 	<!-- add deployment target declaration -->
@@ -113,16 +113,16 @@ cordova create your_app_name
 ## 初始化 Cordova 插件
 {: #cordova_initialize}
 
-开始使用 Push Notification Service Cordova 插件之前，需要通过传递应用程序路径和应用程序 GUID 对其进行初始化。 初始化该插件后，可以连接到在 Bluemix“仪表板”中创建的服务器应用程序。 Cordova 插件是 Android 和 iOS 客户机 SDK 的包装程序，可以使 Cordova 应用程序能够与 Bluemix 服务进行通信。
+可以使用推送通知服务 Cordova 插件之前，需要通过传递应用程序路径和应用程序 GUID 对其进行初始化。初始化该插件后，可以连接到在 Bluemix“仪表板”中创建的服务器应用程序。 Cordova 插件是 Android 和 iOS 客户机 SDK 的包装程序，可以使 Cordova 应用程序能够与 Bluemix 服务进行通信。
 
 1. 通过将以下代码片段复制并粘贴到主 JavaScript 文件（通常位于 **www/js** 目录下）中来初始化 BMSClient。
 
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. 修改代码片段以使用 Bluemix 的 Route 和 appGUID 参数。 单击 Bluemix 的“应用程序仪表板”中的**移动选项**链接，以获取应用程序的“路径”和“应用程序 GUID”。 在 ```BMSClient.initialize``` 代码片段中将“路径”和“应用程序 GUID”值作为您的参数。
+1. 修改代码片段以使用 Bluemix 的 Route 和 appGUID 参数。 单击 Bluemix 的“应用程序仪表板”中的**移动选项**链接，以获取应用程序的“路径”和“应用程序 GUID”。 在 `BMSClient.initialize` 代码片段中将“路径”和“应用程序 GUID”值用作您的参数。
 
-	**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 **index.js** 文件内 ```nDeviceReady: function()``` 函数中的 ```app.receivedEvent`` 函数之后，以初始化 BMS 客户机。
+	**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 **index.js** 文件内 `onDeviceReady: function()` 函数中的 `app.receivedEvent` 函数之后，以初始化 BMS 客户机。
 
 ```
 onDeviceReady: function() {
@@ -134,7 +134,7 @@ onDeviceReady: function() {
 ## 注册设备
 {: #cordova_register}
 
-要向 Push Notification Service 注册设备，请调用 register 方法。
+要为设备注册推送通知服务，请调用 register 方法。
 
 将以下代码片段复制并粘贴到 Cordova 应用程序中，以注册设备。
 
@@ -181,9 +181,9 @@ MFPPush.registerDevice({}, success, failure);
 **var token = JSON.parse(response).token**
 
 
-可用键如下所示：```token```、```userId`` 和 ```deviceId``。
+可用密钥如下所示：`token`、`userId` 和 `deviceId`。
 
-以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 推送客户机 SDK，向 Push Notification Service 注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
+以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 客户机 SDK、为设备注册推送通知服务以及侦听推送通知。将此代码放入 JavaScript 文件中。
 
 
 
@@ -211,7 +211,7 @@ onDeviceReady: function() {
      var failure = function(message) { console.log("Error: " + message); };
      var settings = {
          ios: {
-alert: true,
+             alert: true,
              badge: true,
              sound: true
          }   
@@ -378,4 +378,4 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些 Push Notifications Service 功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。
+将这些推送通知服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[高级推送通知](t_advance_notifications.html)。

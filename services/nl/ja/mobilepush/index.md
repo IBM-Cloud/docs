@@ -11,9 +11,9 @@ copyright:
 {:codeblock:.codeblock}
 
 # {{site.data.keyword.mobilepushshort}} 入門
-
 {: #gettingstartedtemplate}
-
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
 {:shortdesc}
 
@@ -34,13 +34,15 @@ Push Notifications Service は、iOS プラットフォームおよび Android �
 {: #samples}
 * [Android helloPush サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [Cordova サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
-* [iOS helloPush サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [iOS helloPush サンプル・アプリケーション (Obj-C)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [iOS helloPush サンプル・アプリケーション (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush){: new_window}
 
 ## SDK
 {: #sdk}
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
 * [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
-* [iOS SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS SDK (Obj-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS SDK (Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master){: new_window}
 
 ## API リファレンス
 {: #api}

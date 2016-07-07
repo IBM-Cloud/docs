@@ -11,9 +11,9 @@ copyright:
 {:codeblock:.codeblock}
 
 # {{site.data.keyword.mobilepushshort}} 시작하기
-
 {: #gettingstartedtemplate}
-
+*마지막 업데이트 날짜: 2016년 6월 14일*
+{: .last-updated}
 
 {:shortdesc}
 
@@ -34,13 +34,15 @@ copyright:
 {: #samples}
 * [Android helloPush 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [Cordova 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
-* [iOS helloPush 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [iOS helloPush 샘플 애플리케이션(Obj-C)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [iOS helloPush 샘플 애플리케이션(Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush){: new_window}
 
 ## SDK
 {: #sdk}
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
 * [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
-* [iOS SDK](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS SDK(Obj-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [iOS SDK(Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master){: new_window}
 
 ## API 참조서
 {: #api}

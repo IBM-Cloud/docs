@@ -20,11 +20,11 @@ Le notifiche basate sulle tag sono messaggi di notifica destinati a tutti i disp
 1. Fai clic sul pulsante + **Crea tag**.   
 
    a. Nel campo **Nome**, immetti il nome della tag. Ad esempio, "coupons".
-   
+
    b. Nel campo **Descrizione**, immetti una descrizione della tag.
-   
+
    c. Fai clic su **Salva**.
-   
+
 1. Nell'area **Frammenti di codice**, seleziona la piattaforma per la tua applicazione mobile.
 1. Modifica i frammenti di codice per gestire gli errori e copiali quindi per ogni tag nella tua applicazione mobile.
 
@@ -64,14 +64,14 @@ Utilizza l'API **getTags** per ottenere un elenco delle tag disponibili a cui pu
 // Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
 push.getTags(new MFPPushResponseListener<List<String>>(){  
    @Override
-    public void onSuccess(List<String> tags) { 
+   public void onSuccess(List<String> tags){
    updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
    subscribeToTag();   
   }    
   @Override    
-  public void onFailure(MFPPushException ex) {
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -126,7 +126,7 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 ```
 //Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
 [push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){ 
+^(IMFResponse *response, NSError *error){
  if(error){    
    [self  updateMessage:error.description];  
  } else {
@@ -137,7 +137,7 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 }
 }];
 ```
-       
+
 Utilizza la API **retrieveSubscriptions** per ottenere un elenco delle tag sottoscritte dal dispositivo.
 
 
@@ -189,7 +189,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
 
-        print( "Response during retrieving subscribed tags : \(response.description)")
+        print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
@@ -212,7 +212,7 @@ Copia e incolla questo frammento di codice nella tua applicazione mobile Android
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -275,7 +275,7 @@ Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error){
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];
@@ -296,12 +296,12 @@ Utilizza la API **subscribeToTags** per sottoscrivere a una
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) { 
+	if (error != nil) {
 		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
-} 
+}
 ```
 
 **Annullare la sottoscrizione alle tag**
@@ -313,7 +313,7 @@ Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
 
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response.description)")
+        print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

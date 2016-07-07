@@ -12,11 +12,8 @@ copyright:
 
 ```
 @Override
-protected void onPause() {
-    super.onPause();
-
-
-    if (push != null) {
+protected void onPause() {super.onPause();
+if (push != null) {
 push.hold();
     }
 } 

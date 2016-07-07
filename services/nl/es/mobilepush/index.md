@@ -11,13 +11,13 @@ copyright:
 {:codeblock:.codeblock}
 
 # Iniciación a {{site.data.keyword.mobilepushshort}}
-
 {: #gettingstartedtemplate}
-
+*Última actualización: 14 de junio de 2016*
+{: .last-updated}
 
 {:shortdesc}
 
-El servicio de Notificaciones push proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles que están pensadas para plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de la aplicación a sus dispositivos, plataforma de dispositivo,
+El servicio de notificaciones push proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles que están pensadas para plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de la aplicación a sus dispositivos, plataforma de dispositivo,
         y maneja el envío de notificaciones push a los mismos. Con este servicio, puede enviar difusiones, unicasts (en función del ID de dispositivo) y también notificaciones push (o temas) de etiquetas a los usuarios de la aplicación móvil. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) y SDK para desarrollar más las aplicaciones de cliente.
 
 En esta sección se describe cómo configurar notificaciones push básicas. Al utilizar
@@ -38,13 +38,15 @@ En esta sección se describe cómo configurar notificaciones push básicas. Al u
 {: #samples}
 * [aplicación de ejemplo helloPush Android](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [aplicación de ejemplo Cordova](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
-* [aplicación de ejemplo helloPush iOS](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [aplicación de ejemplo helloPush iOS (Obj-C)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
+* [aplicación de ejemplo helloPush iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush){: new_window}
 
 ## SDK
 {: #sdk}
 * [SDK de Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
 * [SDK de Cordova](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
-* [SDK de iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [SDK de iOS (Obj-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [SDK de iOS (Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master){: new_window}
 
 ## Referencia de API
 {: #api}

@@ -7,18 +7,19 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# 为 Apple 推送通知服务 (APNs) 配置凭证
+# 为 Apple 推送通知 (APNS) 配置凭证
 
 {: #create-push-credentials-apns}
 
-通过 Apple 推送通知服务 (APNs)，应用程序开发者可以将远程通知从 Bluemix 上的 Push 服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。您需要获取并配置您的 APNs 凭证。APNs 证书由 Push Notification Service 安全管理，在连接到 APNs 服务器（提供者）时需要使用该证书。
+通过 Apple 推送通知服务 (APNS)，应用程序开发者可以将远程通知从 Bluemix 上的推送服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。获取并配置您的 APNS 凭证。APNS 证书由推送通知服务安全管理，作为提供者连接到 APNS 服务器时需要使用该证书。
 
 1. 获取 [Apple Developers](https://developer.apple.com/) 帐户。
 2. [注册应用程序标识](#create-push-credentials-apns-register)
 3. [创建开发和分发 APNs SSL 证书](#create-push-credentials-apns-ssl)
 4. [创建开发供应概要文件](#create-push-credentials-dev-profile)
 5. [创建应用商店分发供应概要文件](#create-push-credentials-apns-distribute_profile)
-6. [在推送仪表板上设置 APNs](#create-push-credentials-apns-dashboard)
+6. [为 Bluemix 推送创建 .p12 推送证书文件](#create-p12-push-certificate-file-for-Bluemix-push)
+7. [在推送仪表板上设置 APNs](#create-push-credentials-apns-dashboard)
 
 
 
@@ -42,23 +43,23 @@ copyright:
 	* 显式标识后缀
 
 	![显式标识](images/appID_bundleID.jpg)
-3. 后续步骤：创建开发和分发 APNs SSL 证书。
+3. 后续步骤：创建开发和分发 APNS SSL 证书。
 
-##创建开发和分发 APNs SSL 证书
+##创建开发和分发 APNS SSL 证书
 {: #create-push-credentials-apns-ssl}
 
-在获取 APNs 证书之前，必须首先生成一个证书签名请求 (CSR)，然后将其提交给 Apple（认证中心 (CA)）。CSR 中包含您公司的标识信息，以及您用于签署 Apple 推送通知的公用密钥和专用密钥信息。然后，在 iOS 开发者门户网站上生成 SSL 证书。该证书与其公用密钥和专用密钥一起存储在“钥匙串访问”中。
+在获取 APNS 证书之前，必须首先生成一个证书签名请求 (CSR)，然后将其提交给 Apple（认证中心 (CA)）。CSR 中包含您公司的标识信息，以及您用于签署 Apple 推送通知的公用密钥和专用密钥信息。然后，在 iOS 开发者门户网站上生成 SSL 证书。该证书与其公用密钥和专用密钥一起存储在“钥匙串访问”中。
 
 **开始之前**
 
 [注册应用程序标识](#create-push-credentials-apns-register)
 
-APNs 可在两种方式下使用：沙箱和生产。
+APNS 可在两种方式下使用：沙箱和生产。
 
 * 沙箱方式在开发和测试期间使用。
 * 生产方式在通过 App Store（或其他企业分发机制）分发应用程序时使用。
 
-必须分别针对开发环境和分发环境获取证书。证书与接收远程通知的应用程序的应用程序标识相关联。对于生产方式，最多可创建两个证书。Bluemix 使用证书与 APNs 建立 SSL 连接。
+必须分别针对开发环境和分发环境获取证书。证书与接收远程通知的应用程序的应用程序标识相关联。对于生产方式，最多可创建两个证书。Bluemix 使用证书与 APNS 建立 SSL 连接。
 
 创建开发和分发 SSL 证书。
 
@@ -68,7 +69,7 @@ APNs 可在两种方式下使用：沙箱和生产。
 3. 在您的应用程序标识列表中，选择您新创建的应用程序标识，然后选择 **Settings**。
 4. 在 **Push Notifications** 区域中，创建开发 SSL 证书，然后创建生产 SSL 证书。
 
- 
+
 	 ![推送通知 SSL 证书](images/certificate_createssl.jpg)
 
 	这将显示 About Creating a Certificate a Signing Request 屏幕。
@@ -98,7 +99,7 @@ APNs 可在两种方式下使用：沙箱和生产。
 
    	![导出证书和密钥](images/certificate_p12v2.jpg)
 
-18. 在**输入密码**字段中，输入用于保护导出项的密码，然后单击**好**。以后在“推送”仪表板上配置 APNs 设置时会用到此密码。
+18. 在**输入密码**字段中，输入用于保护导出项的密码，然后单击**好**。以后在“推送”仪表板上配置 APNS 设置时会用到此密码。
 
 	![导出证书和密钥](images/export_p12.jpg)
 19. **Key Access.app** 会提示您从**密钥串**屏幕导出密钥。输入 Mac 的管理员密码，以允许系统导出这些项，然后选择**总是允许**选项。这将在桌面上生成一个 .p12 证书。
@@ -111,7 +112,7 @@ APNs 可在两种方式下使用：沙箱和生产。
 
 **开始之前**
 
-请确保您已执行以下操作：注册应用程序标识，针对 Push Notification Service 启用该标识，然后将其配置为使用开发和生产 APNs SSL 证书。
+请确保您已执行以下操作：注册应用程序标识、针对 Push Notification Service 启用该标识，然后将其配置为使用开发和生产 APNS SSL 证书。
 
 创建开发供应概要文件。
 
@@ -132,10 +133,26 @@ APNs 可在两种方式下使用：沙箱和生产。
 1. 转至 [Apple Developer](https://developer.apple.com) 门户网站，单击 **Member Center**，然后选择 **Certificates, Identifiers & Profiles**。
 2. 双击所下载的供应概要文件，以将其安装到 Xcode 中。
 
+##为 Bluemix 推送创建 .p12 推送证书文件
+{: #create-p12-push-certificate-file-for-Bluemix-push}
+
+要创建有效的 .p12 推送证书文件，需要使用 APNS .p12 证书以及开发/分发概要文件证书。请完成以下步骤。
+
+```
+//You can choose to pick up either the development or distribution certificate  
+	developer_identity.cer - Development profile downloaded from Apple 
+	apns.p12 - APNS .p12 exported from the keychain
+	openssl x509 -in developer_identity.cer -inform DER -out
+	developer_identity.pem -outform PEM
+	openssl pkcs12 -nocerts -in apns.p12 -out apns.pem
+	openssl pkcs12 -export -inkey apns.pem -in developer_identity.pem -out bluemixPush_dev.p12
+```
+需要将 `bluemixPush_dev.p12` 文件存储到桌面。
+
 ##在推送通知仪表板上设置 APNs
 {: #create-push-credentials-apns-dashboard}
 
-要使用 Push Notification Service 发送通知，请上传 Apple 推送通知服务 (APNs) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNs 证书。
+要使用 Push Notification Service 发送通知，请上传 Apple 推送通知服务 (APNS) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNS 证书。
 
 
 **开始之前**
@@ -147,20 +164,19 @@ APNs 所需的证书为 .p12 证书，其中包含构建和发布应用程序所
 
 **注**：当 **.cer** 出现在钥匙串访问中之后，请将其导出到您的计算机，以创建 .p12 证书。
 
-有关使用 APNs 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
+有关使用 APNS 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
 
-在“推送”仪表板上设置 APNs。
+在“推送”仪表板上设置 APNS。
 
 1. 在 Bluemix“仪表板”中打开后端应用程序，然后单击 **IBM Push Notifications** 服务，以打开“推送”仪表板。
 
 	![IBM Push Notifications](images/bluemixdashboard_push.jpg)
 
 	这将显示“推送”仪表板。
-	
+
 	![设置推送通知](images/wizard.jpg)
-1
-2. 在**配置**选项卡上，转至 **Apple 推送证书**部分，选择**沙箱**（开发）或**生产**（分发），然后将 p.12 证书上传到 Bluemix。
+
+2. 在**配置**选项卡上，转至 **Apple 推送证书**部分，选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#create-p12-push-certificate-file-for-Bluemix-push)中创建的 p.12 证书。
 
 	![设置推送通知](images/credential_screen.jpg)
 3. 在**密码**字段中，输入与 **.p12** 证书文件相关联的密码，然后单击**保存**。使用有效的密码成功上传证书后，即可开始发送通知。
-

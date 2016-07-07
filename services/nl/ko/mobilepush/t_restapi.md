@@ -50,7 +50,7 @@ appSecret 값을 확보하려면 다음을 수행하십시오.
 ```
 {
  "imfpush_Dev": [
-{
+   {
      "name": "testapp1",
      "label": "imfpush_Dev",
      "plan": "Basic",

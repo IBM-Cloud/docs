@@ -15,7 +15,7 @@ Abilita le applicazioni Cordova a ricevere notifiche di push e invia notifiche d
 
 
 
-## Installazione del plugin Cordova
+## Installazione del plugin push Cordova
 {: #cordova_install}
 
 Installa e utilizza il plugin di Push client per sviluppare ulteriormente le tue applicazioni Cordova. Questo installa anche il plugin Cordova Core, che inizializza la tua connessione a Bluemix.
@@ -29,12 +29,13 @@ Installa e utilizza il plugin di Push client per sviluppare ulteriormente le tue
 1. Installa lo strumento Node.js e il gestore pacchetti di nodi (NPM). Lo strumento della riga comandi NPM è integrato con Node.js. Per informazioni su come scaricare e installare Node.js, consulta [Node.js](https://nodejs.org/en/download/).
 1. Dalla riga comandi, installa gli strumenti della riga di comando Cordova utilizzando il comando **npm install -g cordova**. È necessario per utilizzare il plugin Push Cordova. Per informazioni su come installare Cordova e configurare la tua applicazione Cordova, consulta [Cordova Apache](https://cordova.apache.org/#getstarted).
 
- **Nota**: per visualizzare il file readme del plugin Push Cordova, vai a [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+	**Nota**: per visualizzare il file readme del plugin Push Cordova, vai a [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+
 
 1. Passa alla cartella in cui vuoi creare la tua applicazione Cordova ed esegui il seguente comando per
            creare un'applicazione Cordova. Se hai un'applicazione Cordova esistente, vai al passo 3.
 
- ```
+```
 cordova create your_app_name
 	cd your_app_name
 ```
@@ -48,7 +49,7 @@ cordova create your_app_name
 
 1. Aggiungi la API supportata minima o la dichiarazione di destinazione della distribuzione al file config.xml per la tua applicazione Cordova. Il valore minSdkVersion deve essere maggiore di 15. Il valore targetSdkVersion deve sempre riflettere l'SDK Android più recente disponibile da Google.
 	* **Android** - Con il tuo editor, apri il file config.xml e aggiorna l'elemento
-   ```<platform name="android">``` con le versioni SDK minima e di destinazione:
+`<platform name="android">` con le versioni SDK minima e di destinazione:
 
 	```
 	<!-- add deployment target declaration -->
@@ -72,7 +73,7 @@ cordova create your_app_name
 	cordova platform add ios@3.9.0
 	cordova platform add android
 	```
-1. Dalla directory root della tua applicazione Cordova, immetti il seguente comando per installare il plugin Cordova Push: **cordova plugin add ibm-mfp-push**.
+1. Dalla directory root della tua applicazione Cordova, immetti il seguente comando per installare il plugin Cordova push: **cordova plugin add ibm-mfp-push**.
 
 	A seconda delle piattaforme da te aggiunte, vedrai qualcosa di simile a questo:
 
@@ -80,7 +81,7 @@ cordova create your_app_name
 	Installing "ibm-mfp-push" for android
 	Installing "ibm-mfp-push" for ios
 	```
-1. Da *your-app-root-folder*, verifica che i plugin Cordova Core e Push siano stati installati correttamente utilizzando questo comando: **cordova plugin list**.
+1. Da *your-app-root-folder*, verifica che i plugin Cordova Core e push siano stati installati correttamente utilizzando questo comando: **cordova plugin list**.
 
 	A seconda delle piattaforme da te aggiunte, vedrai qualcosa di simile a questo:
 
@@ -114,17 +115,16 @@ cordova create your_app_name
 ## Inizializzazione del plugin Cordova
 {: #cordova_initialize}
 
-Prima di poter utilizzare il plugin Cordova del servizio Push Notification, devi inizializzarlo passando
-la rotta e il GUID dell'applicazione. Dopo che hai inizializzato il plugin, puoi stabilire una connessione all'applicazione server che hai creato nel dashboard Bluemix. Il plugin Cordova è il contenitore per gli SDK client Android e iOS per abilitare un'applicazione Cordova a comunicare con i servizi Bluemix.
+Prima di poter utilizzare il plugin Cordova del servizio push notification, devi inizializzarlo passando la rotta e il GUID dell'applicazione. Dopo che hai inizializzato il plugin, puoi stabilire una connessione all'applicazione server che hai creato nel dashboard Bluemix. Il plugin Cordova è il contenitore per gli SDK client Android e iOS per abilitare un'applicazione Cordova a comunicare con i servizi Bluemix.
 
 1. Inizializza il BMSClient copiando e incollando il seguente frammento di codice nel tuo file JavaScript principale (normalmente ubicato nella directory **www/js**).
 
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modifica il frammento di codice per utilizzare la tua rotta Bluemix e i parametri appGUID. Fai clic sul link **Opzioni mobili** nel tuo dashboard dell'applicazione Bluemix per ottenere rotta e GUID dell'applicazione. Utilizza i valori rotta e GUID dell'applicazione come tuoi parametri nel tuo frammento di codice ```BMSClient.initialize```.
+1. Modifica il frammento di codice per utilizzare la tua rotta Bluemix e i parametri appGUID. Fai clic sul link **Opzioni mobili** nel tuo dashboard dell'applicazione Bluemix per ottenere rotta e GUID dell'applicazione. Utilizza i valori rotta e GUID dell'applicazione come tuoi parametri nel tuo frammento di codice `BMSClient.initialize`.
 
-	**Nota**: se hai creato un'applicazione Cordova utilizzando la CLI di Cordova, ad esempio, con il comando Cordova create app-name, inserisci questo codice Javascript nel file **index.js**, dopo la funzione ```app.receivedEvent``` nella funzione ```nDeviceReady: function()`` per inizializzare il client BMS.
+	**Nota**: se hai creato un'applicazione Cordova utilizzando la CLI di Cordova, ad esempio, con il comando Cordova create app-name, inserisci questo codice Javascript nel file **index.js**, dopo la funzione `app.receivedEvent` nella funzione `onDeviceReady: function()` per inizializzare il client BMS.
 
 ```
 onDeviceReady: function() {
@@ -136,7 +136,7 @@ onDeviceReady: function() {
 ## Registrazione di dispositivi
 {: #cordova_register}
 
-Per registrare un dispositivo con il Push Notification Service, richiama il metodo.
+Per registrare un dispositivo con il push notification service, richiama il metodo di registro.
 
 Copia e incolla il seguente frammento di codice nella tua applicazione Cordova per registrare
                     un dispositivo.
@@ -186,7 +186,7 @@ Puoi accedere ai contenuti del parametro di risposta con esito positivo in Javas
 **var token = JSON.parse(response).token**
 
 
-Le chiavi disponibili sono le seguenti: ```token```, ```userId`` e ```deviceId``.
+Le chiavi disponibili sono le seguenti: `token`, `userId` e `deviceId`.
 
 Il seguente frammento di codice JavaScript mostra come inizializzare il tuo Bluemix Mobile Services client SDK, registra un dispositivo ed è in ascolto per le notifiche push. Inserisci questo codice nel tuo file Javascript.
 
@@ -235,7 +235,7 @@ onDeviceReady: function() {
 Aggiungi il seguente frammento di codice Objective-C alla classe delegato della tua applicazione
 
 ```
-	// Registra il token di dispositivo presso il Bluemix Push Notification Service
+	// Registra il token dispositivo con Bluemix Push Notification Service
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
@@ -283,7 +283,7 @@ Aggiungi il seguente frammento di codice JavaScript alla parte web della tua app
 
 ```
 var notification = function(notification){
-    // notifica in un oggetto JSON .
+    // notification is a JSON object.
     alert(notification.message);
 };
 MFPPush.registerNotificationsCallback(notification);
@@ -390,6 +390,6 @@ in primo piano su un dispositivo Android e iOS.
 Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche
         basate sulle tag e le opzioni avanzate.
 
-Aggiungi queste funzioni del Servizio Push Notifications alla tua applicazione.
+Aggiungi queste funzioni del Servizio push notifications alla tua applicazione.
 Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html).
 Per utilizzare le opzioni di notifica avanzate, vedi [Notifiche di push avanzate](t_advance_notifications.html).

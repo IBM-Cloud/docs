@@ -20,22 +20,21 @@ iOS 배치, 사운드와 추가 JSON 페이로드를 구성하십시오.
 1. 푸시 알림 대시보드에서 **알림** 탭으로 이동하십시오. 
 2. **선택적 필드** 섹션으로 이동하여 다음과 같은 푸시 알림 기능을 구성하십시오.  
 	- **사운드 파일** - 모바일 앱의 사운드 파일을 가리키는 문자열을 입력하십시오. 페이로드에서 사용할 사운드 파일의 문자열 이름을 지정하십시오. 
-	- **iOS 배지** - iOS 디바이스의 경우 앱 아이콘의 배지로 표시할 숫자입니다.
-이 특성을 비워두면 배지가 변경되지 않습니다.
-배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
+	- **iOS 배지** - iOS 디바이스의 경우 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
 	
 	
 
 
 ###Android
 
-```
-"settings": {
+Android 애플리케이션의 `res/raw` 디렉토리에 사운드 파일을 추가하십시오. 알림을 전송하는 동안 푸시 알림의 사운드 필드에 사운드 파일 이름을 추가하십시오. 
 
-     "gcm" : { 
-"sound":"tt.wav",
-	  }
-	 }  
+```
+"settings":{
+     "gcm":{
+     "sound":"tt.wav",
+	 }
+ }  
 ```
 	
 	
@@ -43,14 +42,13 @@ iOS 배치, 사운드와 추가 JSON 페이로드를 구성하십시오.
 
 ```
 "settings": {
-
-     "apns" : { 
-"badge": 10,
-	      "sound": "tt.wav",
-	  }
+     "apns" : {
+      "badge": 10,
+	     "sound": "tt.wav",
+	 }
 	}
 ``` 		
-**추가 페이로드** - 이 페이로드는 키-값 쌍일 수 있고 푸시 알림을 사용하여 전송할 JSON 오브젝트여야 합니다. 
+**추가 페이로드** - 이 페이로드는 키-값 쌍일 수 있고 푸시 알림을 사용하여 전송할 JSON 오브젝트여야 합니다.
 
 ```
 {"key":"value", "key2":"value2"}
@@ -67,9 +65,8 @@ iOS 배치, 사운드와 추가 JSON 페이로드를 구성하십시오.
 protected void onPause() {
     super.onPause();
 
-
     if (push != null) {
-push.hold();
+        push.hold();
     }
 } 
 ```
@@ -92,7 +89,6 @@ push.hold();
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
 	  
-	  
 	 ```
    Swift
 
@@ -103,7 +99,7 @@ push.hold();
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -159,9 +155,7 @@ push.hold();
 	```
 	//For Objective-C
 
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
 
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
 	```
@@ -170,11 +164,9 @@ push.hold();
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## 조치 가능 iOS 알림 처리  
@@ -197,8 +189,7 @@ push.hold();
 ###Swift
  
 ```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
+func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {//must call completion handler when finished
       completionHandler()
   }
 ```    

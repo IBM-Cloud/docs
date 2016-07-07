@@ -34,6 +34,9 @@ configure o valor dessa propriedade para 0.
 
 ###Android
 
+Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar notificação, inclua o nome do arquivo
+de som no campo de som da notificação push.
+
 ```
 "settings": {
      "gcm" : {
@@ -65,8 +68,8 @@ notificação push.
 ## Participação de notificações do Android 
 {: #hold-notifications-android}
 
-Quando seu aplicativo entrar no plano de fundo, você provavelmente desejará que Push
-restrinja as notificações enviadas para ele. Para reter notificações, chame o método
+Quando seu aplicativo entra em segundo plano, você provavelmente deseja que a notificação push retenha as notificações enviadas ao seu
+aplicativo. Para reter notificações, chame o método
 hold() no método onPause() da atividade que está manipulando as notificações push.
 
 ```
@@ -110,7 +113,7 @@ a seguir para ativar notificações push que permitem ações no aplicativo.
 	acceptAction.title = "Accept"
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground*/
+	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	
 	```
@@ -178,11 +181,9 @@ categoria.
 
 	```
 	//For Swift
-	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
-
-	application.registerUserNotificationSettings(notificationSettings)
-	application.registerForRemoteNotifications()
+	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
 	
 ## Manipulando notificações de iOS acionáveis  

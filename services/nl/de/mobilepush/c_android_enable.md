@@ -131,7 +131,7 @@ push.initialize(getApplicationContext());
 ## Android-Geräte registrieren
 {: #android_register}
 
-Verwenden Sie die API ```IMFPush.register()```, um das Gerät beim Service 'Push Notifications' zu registrieren. Für die Registrierung bei Android-Geräten müssen Sie zunächst die GCM-Angaben (Google Cloud Messaging) im Bluemix-Dashboard für die Konfiguration des Push-Service hinzufügen. Weitere Informationen finden Sie im Abschnitt zur [Konfiguration von Berechtigungsnachweisen für Google Cloud Messaging](t_push_provider_android.html).
+Verwenden Sie die API `IMFPush.register()`, um das Gerät beim Push-Benachrichtigungsservice zu registrieren. Für die Registrierung bei Android-Geräten müssen Sie zunächst die GCM-Angaben (Google Cloud Messaging) im Bluemix-Dashboard für die Konfiguration des Push-Service hinzufügen. Weitere Informationen finden Sie im Abschnitt zur [Konfiguration von Berechtigungsnachweisen für Google Cloud Messaging](t_push_provider_android.html).
 
 Kopieren Sie die folgenden Code-Snippets und fügen Sie sie in Ihre mobile Android-Anwendung ein.
 
@@ -163,9 +163,9 @@ Kopieren Sie die folgenden Code-Snippets und fügen Sie sie in Ihre mobile Andro
 ## Push-Benachrichtigungen in Android-Geräten empfangen
 {: #android_receive}
 
-Rufen Sie die Methode **MFPPush.listen()** auf, um das Objekt 'notificationListener' für Push zu registrieren. Diese Methode wird in der Regel über die Methode **onResume()** der Aktivität aufgerufen, die Push-Benachrichtigungen verarbeitet.
+Rufen Sie die Methode **MFPPush.listen()** auf, um das Objekt 'notificationListener' für den Push-Service zu registrieren. Diese Methode wird in der Regel über die Methode **onResume()** der Aktivität aufgerufen, die Push-Benachrichtigungen verarbeitet.
 
-1. Rufen Sie die Methode **listen()** auf, um das Objekt 'notificationListener' für Push zu registrieren. Diese Methode wird in der Regel über die Methode **onResume()** der Aktivität aufgerufen, die Push-Benachrichtigungen verarbeitet.
+1. Rufen Sie die Methode **listen()** auf, um das Objekt 'notificationListener' für den Push-Service zu registrieren. Diese Methode wird in der Regel über die Methode **onResume()** der Aktivität aufgerufen, die Push-Benachrichtigungen verarbeitet.
 
 	```
 	@Override
@@ -176,7 +176,7 @@ Rufen Sie die Methode **MFPPush.listen()** auf, um das Objekt 'notificationListe
 	   }
 	}
 ```
-2. Erstellen Sie einen Build für das Projekt und führen Sie ihn in dem Gerät oder im Emulator aus. Wenn die Methode onSuccess() für den Antwortlistener in der Methode register() aufgerufen wird, wird bestätigt, dass das Gerät erfolgreich für Push Notifications Service registriert wurde. An diesem Punkt können Sie gemäß der in 'Einfache Push-Benachrichtigungen senden' beschriebenen Anleitung eine Nachricht senden.
+2. Erstellen Sie einen Build für das Projekt und führen Sie ihn in dem Gerät oder im Emulator aus. Wenn die Methode onSuccess() für den Antwortlistener in der Methode register() aufgerufen wird, wird bestätigt, dass das Gerät erfolgreich für den Push-Benachrichtigungsservice registriert wurde. An diesem Punkt können Sie gemäß der in 'Einfache Push-Benachrichtigungen senden' beschriebenen Anleitung eine Nachricht senden.
 3. Überprüfen Sie, ob die Geräte Ihre Benachrichtigung empfangen haben. Wenn die Anwendung im Vordergrund ausgeführt wird, wird die Benachrichtigung von **MFPPushNotificationListener** verarbeitet. Wenn die Anwendung im Hintergrund ausgeführt wird, wird eine Nachricht in der Benachrichtigungsleiste angezeigt.
 
 
@@ -188,12 +188,9 @@ Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigung
 
 Senden Sie einfache Push-Benachrichtigungen.
 
-1. Wählen Sie unter **Zielgruppe auswählen** eine der folgenden Zielgruppen aus:
-**Alle Geräte** oder die Plattform **Nur iOS-Geräte** oder
-**Nur Android-Geräte**. 
+1. Wählen Sie unter **Zielgruppe auswählen** eine der folgenden Zielgruppen aus: **Alle Geräte** oder die Plattform **Nur iOS-Geräte** oder **Nur Android-Geräte**.
 
-	**Hinweis**: Wenn Sie die Option **Alle Geräte** auswählen, erhalten alle Geräte, die
-Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
+	**Hinweis**: Wenn Sie die Option **Alle Geräte** auswählen, erhalten alle Geräte, die Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
 
 	![Anzeige 'Benachrichtigungen'](images/tag_notification.jpg)
 
@@ -214,8 +211,9 @@ Push-Benachrichtigungen subskribiert haben, Ihre Benachrichtigung.
 ## Nächste Schritte
 {: #next_steps_tags}
 
-Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
+Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte
+Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie die folgenden Funktionen von Push Notifications Service zu Ihrer App hinzu.
+Fügen Sie die folgenden Funktionen des Push-Benachrichtigungsservice zu Ihrer App hinzu.
 Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungen finden Sie in [Erweiterte Push-Benachrichtigungen](t_advance_notifications.html).

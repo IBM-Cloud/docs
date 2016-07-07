@@ -24,9 +24,7 @@ copyright:
 2. 在**创建通知**中，输入消息，然后单击**发送**。
 3. 验证设备是否收到通知。
 
-	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。
-
-	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
+	以下屏幕快照显示了在 Android 和 iOS 设备上前台处理推送通知的警报框。	![Android 上的前台推送通知](images/Android_Screenshot.jpg)
 
 	![iOS 上的前台推送通知](images/iOS_Screenshot.jpg)
 

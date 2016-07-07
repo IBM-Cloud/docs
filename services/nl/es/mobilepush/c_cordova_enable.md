@@ -16,10 +16,10 @@ Habilite las aplicaciones Cordova para recibir notificaciones push y enviar noti
 
 
 
-## Instalación del plug-in Push de Cordova
+## Instalación del plug-in push de Cordova
 {: #cordova_install}
 
-Instale y utilice el plug-in Push del cliente para seguir desarrollando sus aplicaciones Cordova. Esto también instala el plug-in Core de Cordova, que inicializa
+Instale y utilice el plug-in push del cliente para seguir desarrollando sus aplicaciones Cordova. Esto también instala el plug-in Core de Cordova, que inicializa
           la conexión a Bluemix.
 
 ### Antes de empezar
@@ -29,13 +29,15 @@ Instale y utilice el plug-in Push del cliente para seguir desarrollando sus apli
 1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git](https://git-scm.com/downloads).
 
 1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js](https://nodejs.org/en/download/).
-1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in Push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la aplicación de Cordova, consulte [Cordova Apache](https://cordova.apache.org/#getstarted).
+1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova.
+          Para obtener información sobre cómo instalar Cordova y configurar la aplicación de Cordova, consulte [Cordova Apache](https://cordova.apache.org/#getstarted).
 
- **Nota**: Para ver el archivo readme del plug-in Push de Cordova, vaya a [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+	**Nota**: Para ver el archivo readme del plug-in push de Cordova, vaya a [https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+
 
 1. Vaya a la carpeta en la que desea crear la aplicación de Cordova y ejecute el mandato siguiente para crear una aplicación de Cordova. Si ya tiene una aplicación de Cordova, vaya al paso 3.
 
- ```
+```
 cordova create your_app_name
 	cd your_app_name
 ```
@@ -48,8 +50,8 @@ cordova create your_app_name
 	Para solucionar este problema, especifique el ID de paquete correcto en Xcode o en el archivo **config.xml** de la aplicación de Cordova.
 
 1. Añada la API soportada mínima o la declaración de destino del despliegue al archivo config.xml para la aplicación de Cordova. El valor de minSdkVersion debe ser superior a 15. El valor targetSdkVersion siempre debe reflejar el SDK de Android más reciente disponible desde Google.
-	* **Android**: Con el editor, abra el archivo config.xml y actualice el
-   elemento ```<platform name="android">``` con las versiones SDK de destino y mínimas:
+	* **Android** - Con el editor, abra el archivo config.xml y actualice el elemento
+`<platform name="android">` con  versiones SDK de destino y mínimas:
 
 	```
 	<!-- add deployment target declaration -->
@@ -73,7 +75,7 @@ cordova create your_app_name
 	cordova platform add ios@3.9.0
 	cordova platform add android
 	```
-1. Desde el directorio raíz de la aplicación de Cordova, especifique el mandato siguiente para instalar el plug-in Push de Cordova: **cordova plugin add ibm-mfp-push**.
+1. Desde el directorio raíz de la aplicación de Cordova, especifique el mandato siguiente para instalar el plug-in push de Cordova: **cordova plugin add ibm-mfp-push**.
 
 	En función de las plataformas añadidas, verá algo similar a lo siguiente:
 
@@ -81,7 +83,7 @@ cordova create your_app_name
 	Installing "ibm-mfp-push" for android
 	Installing "ibm-mfp-push" for ios
 	```
-1. Desde *your-app-root-folder*, verifique que los plug-ins Core y Push de Cordova se hayan instalado correctamente, mediante el siguiente mandato: **cordova plugin list**.
+1. Desde *your-app-root-folder*, verifique que los plug-ins Core y push de Cordova se hayan instalado correctamente, mediante el siguiente mandato: **cordova plugin list**.
 
 	En función de las plataformas añadidas, verá algo similar a lo siguiente:
 
@@ -115,7 +117,7 @@ cordova create your_app_name
 ## Inicialización del plug-in de Cordova
 {: #cordova_initialize}
 
-Para poder utilizar el plug-in de Cordova del Servicio de notificaciones Push, debe inicializarlo
+Para poder utilizar el plug-in de Cordova del servicio de notificaciones push, debe inicializarlo
 pasando la ruta de la aplicación y el GUID de aplicaciones. Tras inicializar el plug-in, puede conectarse a la aplicación del servidor que ha creado en el panel de control de Bluemix. El plug-in de Cordova es el continente para los
 SDK de cliente de iOS y Android para habilitar a una aplicación de Cordova a comunicarse con los servicios de Bluemix.
 
@@ -124,9 +126,9 @@ SDK de cliente de iOS y Android para habilitar a una aplicación de Cordova a co
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modifique el fragmento de código para que utilice los parámetros Ruta y appGUID de Bluemix. Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y la GUID de la app. Utilice los valores de Ruta y GUID de la app como parámetros en el fragmento de código ```BMSClient.initialize```.
+1. Modifique el fragmento de código para que utilice los parámetros Ruta y appGUID de Bluemix. Pulse el enlace **Opciones móviles** en el Panel de control de aplicaciones de Bluemix para obtener la ruta de la aplicación y la GUID de la app. Utilice los valores de Ruta y GUID de la app como parámetros en el fragmento de código `BMSClient.initialize`.
 
-	**Nota**: Si ha creado una app de Cordova utilizando el CLI de Cordova, por ejemplo, el mandato Cordova create app-name, coloque este código Javascript en el archivo **index.js**, después de que la función ```app.receivedEvent``` dentro de la función o```nDeviceReady: function()`` inicialice el cliente BMS.
+	**Nota**: Si ha creado una app de Cordova utilizando el CLI de Cordova, por ejemplo, el mandato Cordova create app-name, coloque este código Javascript en el archivo **index.js**, después de que la función `app.receivedEvent` dentro de la función `onDeviceReady: function()` inicialice el cliente BMS.
 
 ```
 onDeviceReady: function() {
@@ -138,7 +140,7 @@ onDeviceReady: function() {
 ## Registro de dispositivos
 {: #cordova_register}
 
-Para registrar un dispositivo con el Servicio de notificaciones Push, invoque el método de registro.
+Para registrar un dispositivo con el servicio de notificaciones push, invoque el método de registro.
 
 Copie y pegue el siguiente fragmento de código en la aplicación de Cordova para
                     registrar un dispositivo.
@@ -188,9 +190,9 @@ Puede acceder al contenido del parámetro de respuesta de éxito en Javascript u
 **var token = JSON.parse(response).token**
 
 
-Las claves disponibles son las siguientes: ```token```, ```userId`` y ```deviceId``.
+Las claves disponibles son las siguientes: `token`, `userId` y `deviceId`.
 
-El siguiente fragmento de código JavaScript muestra cómo inicializar el SDK del cliente de Bluemix Mobile Services, cómo registrar un dispositivo con el servicio de notificaciones Push y cómo escuchar las notificaciones push. Coloque este código en el archivo Javascript.
+El siguiente fragmento de código JavaScript muestra cómo inicializar el SDK del cliente de Bluemix Mobile Services, cómo registrar un dispositivo con el servicio de notificaciones push y cómo escuchar las notificaciones push. Coloque este código en el archivo Javascript.
 
 
 
@@ -287,7 +289,7 @@ Añada el siguiente fragmento de código JavaScript a la parte web de la aplicac
 
 ```
 var notification = function(notification){
-    // notification es un objeto JSON.
+    // notification is a JSON object.
     alert(notification.message);
 };
 MFPPush.registerNotificationsCallback(notification);
@@ -394,6 +396,6 @@ en el primer plano en un dispositivo Android e iOS.
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar
         las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de Servicio de notificaciones push a la aplicación.
+Añada estas funciones del servicio de notificaciones push a la app.
 Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones push avanzadas](t_advance_notifications.html).
