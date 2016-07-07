@@ -29,7 +29,9 @@ You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accoun
 
 After your accounts are linked, you can still monitor the usage of your {{site.data.keyword.Bluemix_notm}} resources in the  {{site.data.keyword.Bluemix_notm}} user interface. However, the billing for these resources will now appear on the SoftLayer invoice.
 
-Although your account billing will be linked and you will be able to switch between accounts easily, you'll still need to have separate IDs for {{site.data.keyword.Bluemix_notm}} and SoftLayer. Continue to use your SoftLayer ID for SoftLayer products and services and use your IBM id for {{site.data.keyword.Bluemix_notm}} products and services. 
+Although your account billing will be linked and you will be able to switch between accounts easily, your login ID varies:
+* For users in SoftLayer accounts that do not use IBM id for authentication, continue to use your SoftLayer ID for SoftLayer products and services, and use your IBM id for {{site.data.keyword.Bluemix_notm}} products and services.
+* For users in SoftLayer accounts that use IBM id for authentication, use your IBM id to access both your SoftLayer and your {{site.data.keyword.Bluemix_notm}} accounts.
 
 **Attention:** After accounts are linked, they cannot be unlinked.  
 
