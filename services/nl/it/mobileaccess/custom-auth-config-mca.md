@@ -11,8 +11,8 @@ Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, d
 
 ## Prima di cominciare
 {: #custom-dash-begin}
-* Leggi [Introduzione](getting-started.html).
-* Proteggi la tua applicazione di backend con l'SDK server {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
+* Leggi [Introduzione](index.html).
+* Proteggi la tua applicazione di back-end con l'SDK server {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
 * Fai in modo che ci sia un'applicazione del provider di identità personalizzato in esecuzione.
 
 ## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.Bluemix}}

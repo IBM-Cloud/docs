@@ -4,10 +4,17 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# Google zur Authentifizierung von Benutzern verwenden
+# Benutzer mit Google-Berechtigungsnachweisen authentifizieren
 {: #google-auth}
-Sie können den {{site.data.keyword.amashort}}-Service zum Schutz von Ressourcen unter Verwendung von Google als Identitätsprovider konfigurieren. Die Benutzer Ihrer mobilen Anwendung können dann ihre Google-Berechtigungsnachweise für die Authentifizierung nutzen.
+
+*Letzte Aktualisierung: 15. Juni 2016*
+
+Sie können den {{site.data.keyword.amashort}}-Service zum Schutz von Ressourcen konfigurieren und Google als Identitätsprovider verwenden. Die Benutzer Ihrer mobilen Anwendung können dann ihre Google-Berechtigungsnachweise für die Authentifizierung nutzen.
+{:shortdesc}
 
 **Wichtig:** Sie müssen das Google-SDK nicht separat installieren. Das Google-SDK wird automatisch durch Abhängigkeitenmanager installiert, wenn Sie das {{site.data.keyword.amashort}}-Client-SDK konfigurieren.
 
@@ -18,7 +25,7 @@ Im folgenden vereinfachten Diagramm wird die Integration von {{site.data.keyword
 
 ![Bild](images/mca-sequence-google.jpg)
 
-1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK, um eine Anforderung an Ihre Back-End-Ressourcen zu senden, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
+1. Verwenden Sie das {{site.data.keyword.amashort}}-SDK zum Senden einer Anforderung an ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt die nicht autorisierte Anforderung und gibt den Code HTTP 401 sowie den Berechtigungsbereich zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt den Code HTTP 401 automatisch und startet den Authentifizierungsprozess.
 * Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert die Ausgabe eines Berechtigungsheaders an.
@@ -31,10 +38,13 @@ Im folgenden vereinfachten Diagramm wird die Integration von {{site.data.keyword
 * Das {{site.data.keyword.amashort}}-Client-SDK wiederholt automatisch das Senden der ursprünglichen Anforderung, die den Berechtigungsablauf ausgelöst hat.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert den Berechtigungsheader aus der Anforderung, validiert ihn mit dem {{site.data.keyword.amashort}}-Service und erteilt den Zugriff auf eine Back-End-Ressource.
 
+
+
 ## Nächste Schritte
 {: #google-auth-nextsteps}
 
-* [Google-Authentifizierung in Android-Apps aktivieren](google-auth-android.html)
-* [Google-Authentifizierung in iOS-Apps aktivieren (Swift-SDK)](google-auth-ios-swift-sdk.html)
-* [Google-Authentifizierung in iOS-Apps aktivieren (Objective-C-SDK)](google-auth-ios.html)
-* [Google-Authentifizierung in Cordova-Apps aktivieren](google-auth-cordova.html)
+* [Google-Authentifizierung für Android-Apps aktivieren](google-auth-android.html)
+* [Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)](google-auth-ios-swift-sdk.html)
+* [Google-Authentifizierung für iOS-Apps aktivieren (Objective-C-SDK)](google-auth-ios.html)
+* [Google-Authentifizierung für Cordova-Apps aktivieren](google-auth-cordova.html)
+

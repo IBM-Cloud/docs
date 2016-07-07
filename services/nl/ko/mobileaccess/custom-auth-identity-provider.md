@@ -217,7 +217,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## 다음 단계
 {: #next-steps}
-* [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
+* [사용자 정의 인증용으로 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html)
 * [Android용 사용자 정의 인증 구성](custom-auth-android.html)
 * [iOS용 사용자 정의 인증 구성](custom-auth-ios.html)
 * [Cordova용 사용자 정의 인증 구성](custom-auth-cordova.html)

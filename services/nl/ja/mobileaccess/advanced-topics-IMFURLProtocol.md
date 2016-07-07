@@ -4,16 +4,18 @@ copyright:
   years: 2015, 2016
   
 ---
-# iOS アプリケーションでの IMFURLProtocol の使用
+# IMFURLProtocol を使用した要求送信
 {: #imfurl}
-高機能のケースでは、保護リソースに要求を送信するために `IMFResourceRequest` クラスを使用できないことがあります (例えば、何らかのサード・パーティー・コードによって保護リソースに要求が送信される場合など)。考えられる解決策の 1 つは、標準 `NSURLRequest (NSMutableURLRequest)` 呼び出しと一緒に `IMFURLProtocol` API を使用することです。
+場合によっては、保護リソースに要求を送信するために `IMFResourceRequest` クラスを使用できないことがあります (例えば、何らかのサード・パーティー・コードによって保護リソースに要求が送信される場合など)。考えられる解決策の 1 つは、標準 `NSURLRequest (NSMutableURLRequest)` 呼び出しと一緒に `IMFURLProtocol` API を使用することです。
+
+`IMFURLProtocol` API は、{{site.data.keyword.amashort}} Objective-C SDK からのみ使用可能です。
 
 ## `IMFURLProtocol` pod のインストール
 {: #imfurl-pod}
 
 CocoaPods を使用して `IMFURLProtocol` pod をインストールできます。そうすると、iOS プロジェクトから `IMFURLProtocol.h` を参照できるようになります。
 
-## IMFURLProtocol API を使用した要求送信
+## `IMFURLProtocol` API を使用した要求送信
 {: #imfurl-send}
 
 1. 要求を送信するために使用するクラスに `IMFURLProtocol.h` ファイルをインポートします。
@@ -36,21 +38,20 @@ import Foundation
 
 class ViewController : UIViewController, NSURLConnectionDataDelegate {
 
-
-	func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse) {
-
+	func connection(connection: NSURLConnection,
+								didReceiveResponse response: NSURLResponse) {
 
 		println("\(response.description)")
-}
+	}
 
 	func connection(connection: NSURLConnection, didReceiveData data: NSData) {
-var text = NSString(data: data, encoding: NSUTF8StringEncoding)
+		var text = NSString(data: data, encoding: NSUTF8StringEncoding)
 		println("\(text)")
 	}
 
 	func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-println("\(error.description)")
-}
+		println("\(error.description)")
+	}
 }
 ```
 
@@ -61,7 +62,6 @@ println("\(error.description)")
 let URL_RESOURCE = "http://myapp.mybluemix.net/protectedResource"
 
 @IBAction func onSendURLProtocol(sender: AnyObject) {
-
 
 	IMFURLProtocol.sharedInstance().registerIMFURLProtocol()
 	IMFURLProtocol.sharedInstance().registerProtectedResourceWithPath(URL_RESOURCE)

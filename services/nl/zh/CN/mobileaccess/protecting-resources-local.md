@@ -8,16 +8,19 @@ copyright:
 # 将 {{site.data.keyword.amashort}} 用于本地开发环境
 {: #protecting-local}
 
+*上次更新时间：2016 年 4 月 15 日*
+{: .last-updated}
+
 您可以配置本地开发环境来使用在 {{site.data.keyword.Bluemix}} 上运行的 {{site.data.keyword.amashort}} 服务。具体而言，在使用本地开发服务器（例如，Node.js）开发服务器端代码时，您可以使用 {{site.data.keyword.amashort}} 服务器 SDK。
 
-{{site.data.keyword.amashort}} 服务器 SDK 需要设置两个环境变量。在 {{site.data.keyword.Bluemix_notm}} 上开发服务器端代码时，{{site.data.keyword.Bluemix_notm}} 基础结构会提供这两个变量。
+{{site.data.keyword.amashort}} 服务器 SDK 需要设置两个环境变量。在 {{site.data.keyword.Bluemix_notm}} 上开发服务器端代码时，{{site.data.keyword.Bluemix_notm}} 基础架构会提供这两个变量。
 
 * `VCAP_SERVICES`：包含有关绑定到移动后端应用程序的服务的信息。
 * `VCAP_APPLICATION`：包含有关移动后端应用程序的信息。
 
 要将 {{site.data.keyword.amashort}} 用于本地开发服务器，必须手动添加这两个环境变量。
 
-1. 打开通过 {{site.data.keyword.amashort}} 服务进行保护的移动后端的 {{site.data.keyword.Bluemix_notm}}“仪表板”。
+1. 打开通过 {{site.data.keyword.amashort}} 服务进行保护的移动后端的 {{site.data.keyword.Bluemix_notm}} 仪表板。
 
 1. 单击**移动选项**，然后复制 **AppGUID** 值。
 
@@ -47,7 +50,7 @@ var vcapServices = {
 	"AdvancedMobileAccess": [
 		{
 			"credentials": {
-"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
+				"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
 				"clientId": "appGUID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
@@ -124,7 +127,8 @@ var failure = function(error){
 var request = new MFPRequest(baseRequestUrl +
 							"/resource/path", MFPRequest.GET);
 
-request.send(success, failure);```
+request.send(success, failure);
+```
 
 ### iOS - Objective C
 
@@ -140,13 +144,11 @@ NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest* request = [IMFResourceRequest
-
+IMFResourceRequest *request =  [IMFResourceRequest
 				requestWithPath:requestPath
 				method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-
 	if (error){
 		NSLog(@"Error :: %@", [error description]);
 	} else {

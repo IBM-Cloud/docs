@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# Configurazione dell'SDK Objective-C iOS
+# Configurazione dell'SDK Objective-C iOS (obsoleto)
 {: #getting-started-ios}
 
-Strumenta la tua applicazione iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
+*Ultimo aggiornamento: 14 giugno 2016*
+{: .last-updated}
 
-**Suggerimento:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Per i dettagli, vedi [Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html)
+Strumenta la tua applicazione iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
+{:shortdesc}
+
+**Importante:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili  {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift (consulta [Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 ## Prima di cominciare
 {: #before-you-begin}
-* Devi disporre di un'istanza di un backend mobile protetto dal servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un backend mobile, consulta [Introduzione](getting-started.html).
-* Assicurati di aver configurato correttamente Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, consulta il [sito web per gli sviluppatori Apple](https://developer.apple.com/support/xcode/).
+È necessario disporre di:
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
+* Un progetto Xcode.  
 
 
 ## Installazione dell'SDK client {{site.data.keyword.amashort}}
@@ -25,6 +31,7 @@ L'SDK {{site.data.keyword.amashort}} è distribuito con CocoaPods, un gestore di
 
 ### Installa CocoaPods
 {: #install-cocoapods}
+
 1. Apri il terminale ed esegui il comando **pod --version**. Se già hai CocoaPods installato, viene visualizzato il numero versione. Puoi passare direttamente alla sezione successiva per l'installare l'SDK.
 
 1. Se non hai CocoaPods installato, esegui:
@@ -67,8 +74,9 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift:**
+	
 	L'SDK client {{site.data.keyword.amashort}} viene implementato con Objective-C. Potresti dover aggiungere un'intestazione di collegamento al tuo progetto Swift:
 
 	1. Fai clic con il pulsante destro del mouse sul tuo progetto in Xcode e seleziona **New File..**.
@@ -79,7 +87,7 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 	1. Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
 
-1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
+1. Utilizza il seguente codice per inizializzare l'SDK client {{site.data.keyword.amashort}}.  Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione. <br/>Sostituisci *applicationRoute* e *applicationGUID* con i valori da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C:**
 
@@ -88,6 +96,7 @@ Per utilizzare l'SDK client {{site.data.keyword.amashort}}, devi inizializzare l
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 
 	**Swift:**
 

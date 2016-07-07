@@ -7,14 +7,24 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# Protegendo recursos em nuvem com o {{site.data.keyword.amashort}}
+# Protegendo recursos de backend com o serviço {{site.data.keyword.amashort}}
 {: #protecting-resources}
+
+*Última atualização: 30 de abril de 2016*
+{: .last-updated}
+
+
 Com o serviço {{site.data.keyword.amashort}}, é possível proteger seus aplicativos backend Node.js e baseados em Java que estão em execução no {{site.data.keyword.Bluemix_notm}} com a segurança e o monitoramento de OAuth ativados pelo dispositivo móvel.
 {:shortdesc}
+
+## Antes de iniciar
+{: #before-you-begin}
+Antes de iniciar, assegure-se de criar o serviço Node.js.
+
+
 ## Filtro de autorização
 {: #auth-filter}
-O {{site.data.keyword.amashort}} server SDK tem filtros de autorização que podem ser usados para proteger seus aplicativos backend. O filtro de autorização intercepta solicitações recebidas e valida se um cabeçalho de autorização estiver presente. Se o cabeçalho de autorização não estiver presente ou for inválido, o filtro retorna uma resposta com HTTP 401. 
-O {{site.data.keyword.amashort}} client SDK sabe como interceptar uma resposta HTTP 401 que é retornada pelo {{site.data.keyword.amashort}} server SDK e aciona o fluxo de autenticação.
+O {{site.data.keyword.amashort}} server SDK tem filtros de autorização que podem ser usados para proteger seus aplicativos backend. O filtro de autorização intercepta solicitações recebidas e valida se um cabeçalho de autorização estiver presente. Se o cabeçalho de autorização não estiver presente ou for inválido, o filtro retorna uma resposta com HTTP 401. O {{site.data.keyword.amashort}} client SDK sabe como interceptar uma resposta HTTP 401 que é retornada pelo {{site.data.keyword.amashort}} server SDK e aciona o fluxo de autenticação.
 ## Cabeçalho de autorização
 {: #auth-header}
 O cabeçalho de autorização na solicitação recebida consiste em três partes: Condutor, Token de acesso e Token do ID, que são separados por espaços em branco. `Token de acesso` é um componente obrigatório, enquanto que `Token do ID` é opcional.

@@ -11,11 +11,11 @@ copyright:
 
 ## 시작하기 전에
 {: #custom-dash-begin}
-* [시작하기](getting-started.html)를 읽으십시오. 
+* [시작하기](index.html)를 읽으십시오. 
 * {{site.data.keyword.amashort}} 서버 SDK를 사용하여 백엔드 애플리케이션을 보호하십시오. 자세한 정보는 [자원 보호](protecting-resources.html)를 참조하십시오. 
 * 사용자 정의 ID 제공자 애플리케이션을 실행하십시오. 
 
-## {{site.data.keyword.Bluemix}} 대시보드에서 사용자 정의 인증을 구성하십시오. 
+## {{site.data.keyword.Bluemix}} 대시보드에서 사용자 정의 인증을 구성
 {: #custom-dash-config}
 사용자 정의 인증을 구성하려면 {{site.data.keyword.amashort}} 대시보드를 사용하십시오. 
 

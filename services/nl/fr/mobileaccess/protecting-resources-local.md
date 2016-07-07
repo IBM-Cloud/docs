@@ -1,18 +1,22 @@
----
+﻿---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 # Utilisation de {{site.data.keyword.amashort}} avec un environnement de développement local
 {: #protecting-local}
 
+*Dernière mise à jour : 15 avril 2016*
+{: .last-updated}
+
 Vous pouvez configurer votre environnement de développement local pour qu'il utilise le service {{site.data.keyword.amashort}} qui s'exécute sur {{site.data.keyword.Bluemix}}. En particulier, vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} lorsque vous développez du code côté serveur avec un serveur de développement local, comme Node.js.
 
 Le SDK serveur de {{site.data.keyword.amashort}} requiert la définition de deux variables. Lorsque vous développez du code côté serveur sur {{site.data.keyword.Bluemix_notm}}, ces variables sont fournies par l'infrastructure {{site.data.keyword.Bluemix_notm}}.
 
-* `VCAP_SERVICES` : Contient des informations sur les services liés à l'application de back end mobile.
-* `VCAP_APPLICATION` : Contient des informations sur l'application de back end mobile.
+* `VCAP_SERVICES` : contient des informations sur les services liés à l'application de back end mobile.
+* `VCAP_APPLICATION` : contient des informations sur l'application de back end mobile.
 
 Pour utiliser {{site.data.keyword.amashort}} avec un serveur de développement local, vous devez ajouter manuellement ces variables d'environnement.
 
@@ -73,7 +77,7 @@ Remplacez les occurrences de la valeur *appGUID* dans le code par celle de la va
 
 Initialisez les SDK client de {{site.data.keyword.amashort}} avec l'URL réelle de votre application {{site.data.keyword.Bluemix_notm}} et utilisez localhost (ou l'adresse IP) dans vos demandes. Voir l'exemple suivant.
 
-Dans les exemples suivants, il peut être nécessaire de replacer `localhost` par l'adresse IP réelle de votre serveur de développement.
+Dans les exemples suivants, il peut être nécessaire de remplacer `localhost` par l'adresse IP réelle de votre serveur de développement.
 
 ### Android
 
@@ -141,7 +145,7 @@ NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest* request = [IMFResourceRequest
+IMFResourceRequest *request =  [IMFResourceRequest
 				requestWithPath:requestPath
 				method:@"GET"];
 

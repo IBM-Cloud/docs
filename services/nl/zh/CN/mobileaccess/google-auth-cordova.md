@@ -5,14 +5,15 @@ copyright:
 
 ---
 
-# 在 Cordova 应用程序中启用 Google 认证
+# 启用 Cordova 应用程序的 Google 认证
 {: #google-auth-cordova}
 为了配置 Cordova 应用程序进行 Google 认证集成，必须使用 Cordova 应用程序的本机代码（例如，Java、Objective-C 或 Swift）进行更改。每个平台必须分别进行配置。在本机开发环境中使用本机代码进行更改，例如在 Android Studio 或 Xcode 中更改。
 
 ## 开始之前
 {: #before-you-begin}
-* 您必须具有受 {{site.data.keyword.amashort}} 保护的资源，并且具有安装了 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目。有关更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)和[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。  
-* 使用 {{site.data.keyword.amashort}} 服务器 SDK 手动保护后端应用程序。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须具有：
+* 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目。有关更多信息，请参阅[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。  
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
 * （可选）请熟悉以下部分：
    * [在 Android 应用程序中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [在 iOS 应用程序中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -39,7 +40,7 @@ copyright:
 
 ### 手动安装用于 Google 认证的 {{site.data.keyword.amashort}} SDK 以及 Google SDK
 {: #google-auth-cordova-ios-sdk}
-1. 下载包含 [{{site.data.keyword.Bluemix}} Mobile Services SDK for iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master) 的归档
+1. 下载包含 [{{site.data.keyword.Bluemix}} Mobile Services SDK for iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master) 的归档。
 
 1. 转至 `Sources/Authenticators/IMFGoogleAuthentication` 目录，并将所有文件复制（拖放）到 Xcode 中的 iOS 项目。需要复制的文件为：
 
@@ -53,15 +54,15 @@ copyright:
 
 1. 下载并安装 [Google+ iOS SDK](http://goo.gl/9cTqyZ)。
 
-1. 执行 [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) 教程中的步骤 2，以将 Google+ iOS SDK 集成到 Xcode 项目中
+1. 执行 [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) 教程中的步骤 2，以将 Google+ iOS SDK 集成到 Xcode 项目中。
 
 继续执行[配置 iOS 平台进行 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)的**配置 iOS 项目进行 Google 认证**部分。使用本机代码注册 `IMFGoogleAuthenticationHandler`，如“`初始化 {{site.data.keyword.amashort}} 客户端 SDK`”部分中所述。无需使用本机代码初始化 `IMFClient`，这将在稍后使用 JavaScript 代码完成。
 
 将以下行添加到应用程序代表的 `application:openURL:sourceApplication:annotation` 方法。此行将确保向所有 Cordova 插件通知相应事件。
 
 ```
-[[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+      
 ```
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -84,11 +85,11 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求。
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求
 
 1. 使用 MobileFirst Services 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
-1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码
+1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码。
 
 	```JavaScript
 	var success = function(data){

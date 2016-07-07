@@ -4,10 +4,17 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# 사용자 인증을 위해 Google 사용
+# Google 신임 정보로 사용자 인증
 {: #google-auth}
-ID 제공자로 Google을 사용하여 자원을 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 그러면 모바일 애플리케이션 사용자가 인증을 위해 Google 신임 정보를 사용할 수 있습니다. 
+
+*마지막 업데이트 날짜: 2016년 6월 15일*
+
+ID 제공자로 Google을 사용하여 자원을 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 그러면 모바일 애플리케이션 사용자가 인증을 위해 Google 신임 정보를 사용할 수 있습니다.
+{:shortdesc}
 
 **중요:** Google SDK를 별도로 설치할 필요가 없습니다. {{site.data.keyword.amashort}} 클라이언트 SDK를 구성할 때 종속성 관리자가 Google SDK를 자동으로 설치합니다.
 
@@ -20,7 +27,7 @@ ID 제공자로 Google을 사용하여 자원을 보호하도록 {{site.data.key
 
 1. {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 자원을 요청합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 코드 및 권한 범위를 리턴합니다.
-* {{site.data.keyword.amashort}} 클라이언트 SDK가 HTTP 401 코드를 자동으로 발견하고 인증 프로세스를 시작합니다.
+* {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 HTTP 401 코드를 자동으로 발견하고 인증 프로세스를 시작합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 {{site.data.keyword.amashort}} 서비스에 연결하여 권한 헤더를 발행하도록 요청합니다.
 * {{site.data.keyword.amashort}} 서비스는 인증 확인 방식을 제공함으로써 Google을 사용하여 먼저 인증하도록 클라이언트에 요청합니다. 
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 Google SDK를 사용하여 인증 프로세스를 시작합니다. 인증에 성공하면 Google SDK는 Google 액세스 토큰을 리턴합니다. 
@@ -31,10 +38,13 @@ ID 제공자로 Google을 사용하여 자원을 보호하도록 {{site.data.key
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 권한 플로우를 트리거한 원래 요청을 자동으로 재전송합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 요청에서 권한 헤더를 추출하고 {{site.data.keyword.amashort}} 서비스를 사용하여 해당 권한 헤더의 유효성을 검증하고 백엔드 자원에 대한 액세스를 부여합니다.
 
+
+
 ## 다음 단계
 {: #google-auth-nextsteps}
 
 * [Android 앱에서 Google 인증 사용](google-auth-android.html)
-* [iOS 앱(Swift SDK)에서 Google 인증 사용](google-auth-ios-swift-sdk.html)
-* [iOS 앱(Objective-C SDK)에서 Google 인증 사용](google-auth-ios.html)
+* [iOS 앱에서 Google 인증 사용(Swift SDK)](google-auth-ios-swift-sdk.html)
+* [iOS 앱에서 Google 인증 사용(Objective-C SDK)](google-auth-ios.html)
 * [Cordova 앱에서 Google 인증 사용](google-auth-cordova.html)
+

@@ -67,13 +67,11 @@ onAuthenticationSuccess: function(info){...}
 
 认证成功后会调用此方法。自变量包括可选的 JSONObject（用于包含有关认证成功的扩展信息）。
 
-
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
 认证失败后会调用此方法。自变量包括可选的 JSONObject（用于包含有关认证失败的扩展信息）。
-
 
 ## authenticationContext
 {: #custom-cordova-authcontext}
@@ -89,7 +87,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 定制认证侦听器的样本实现
 {: #custom-cordova-authlisten-sample}
 
-此认证侦听器样本旨在处理定制身份提供者。可以从[此 Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载定制身份提供者。
+此认证侦听器样本设计用于处理定制身份提供者。可以从[此 Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载定制身份提供者。
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -110,7 +108,7 @@ var customAuthenticationListener = {
 
 		// In case there was a failure collecting credentials you need to report
 		// it back to the authenticationContext. Otherwise Mobile Client
-		// Access Client SDK will remain in a waiting-for-credentials state
+		// Access client SDK will remain in a waiting-for-credentials state
 		// forever
 
 	},
@@ -138,14 +136,15 @@ BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener
 
 ## 测试认证
 {: #custom-cordova-test}
-初始化客户端 SDK 并注册定制 AuthenticationListener 后，可以开始对移动后端发起请求。
+初始化客户端 SDK 并注册定制 AuthenticationListener 后，可以开始对移动后端应用程序发起请求。
 
 ### 开始之前
 {: #custom-cordova-testing-before}
 必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
 
-1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端的受保护端点发送请求。使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
+1. 通过在浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。
+ 使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 
 1. 使用 Cordova 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册定制 AuthenticationListener 后，添加以下代码。
 

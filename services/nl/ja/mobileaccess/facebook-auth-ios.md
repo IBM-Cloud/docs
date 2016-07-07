@@ -4,19 +4,30 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# iOS アプリで Facebook 認証を使用可能にする (Objective-C SDK)
+# iOS アプリ用の Facebook 認証の使用可能化 (Objective-C SDK)
 {: #facebook-auth-ios}
 
-iOS アプリケーションで Facebook をID プロバイダーとして使用するには、iOS プラットフォームを追加して Facebook アプリケーション用に構成する必要があります。
 
-**ヒント:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。Swift SDK を使用する手順については、 [iOS アプリで Facebook 認証を使用可能にする (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html) を参照してください。
+*最終更新日: 2016 年 6 月 15 日*
+{: .last-updated}
+
+
+iOS アプリケーションで Facebook をID プロバイダーとして使用するには、iOS プラットフォームを追加して Facebook アプリケーション用に構成する必要があります。
+{:shortdesc}
+
+**注:** Objective-C SDK は現在も現在も完全にサポートされており、{{site.data.keyword.Bluemix}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、新しい Swift SDK が後継になる予定です ([iOS Swift SDK のセットアップ](facebook-auth-ios-swift-sdk.html)を参照してください)。
 
 ## 開始する前に
 {: #facebook-auth-ios-before}
-* {{site.data.keyword.amashort}} により保護されたリソース、および {{site.data.keyword.amashort}} Client SDK が装備された iOS プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [iOS Objective-C SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)を参照してください。  
-* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
-* Facebook Application ID を作成します。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
+以下が必要です。
+* CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)の **CocoaPods のインストール**を参照してください。
+   **注:** 先に進む前にコア {{site.data.keyword.amashort}} Client SDK をインストールする必要はありません。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* Facebook Application ID。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 ## iOS プラットフォーム用の Facebook アプリケーションの構成
 {: #facebook-auth-ios-config}
@@ -129,18 +140,13 @@ Facebook Application ID および Facebook アプリケーションを iOS ク�
 	    </dict>
 	</dict>
 ```
-Facebook Application ID を使用して URL スキームおよび FacebookappID プロパティーを更新します。 **重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトの構成 (Configure Xcode Project) ](https://developers.facebook.com/docs/ios/getting-started/)および [iOS9 用のアプリの準備 (Preparing Your Apps for iOS9) ](https://developers.facebook.com/docs/ios/ios9)を参照してください。
-
+Facebook Application ID を使用して URL スキームおよび FacebookappID プロパティーを更新します。**重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトの構成 (Configure Xcode Project) ](https://developers.facebook.com/docs/ios/getting-started/)および [iOS9 用のアプリの準備 (Preparing Your Apps for iOS9) ](https://developers.facebook.com/docs/ios/ios9)を参照してください。
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #facebook-auth-ios-initalize}
 
-アプリの経路 (`applicationRoute`) および GUID (`applicationGUID`) を渡すことによって、Client SDK を初期化します。
-
-初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページを開いて、アプリをクリックします。**「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。
-
-1. 以下のヘッダーを追加することで、{{site.data.keyword.amashort}} Client SDK を使用するクラスで必要なフレームワークをインポートします。
+アプリの経路 (`applicationRoute`) および GUID (`applicationGUID`) を渡すことによって、Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
+1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページを開き、アプリをクリックします。**「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。
+1. 以下のヘッダーを追加することによって、{{site.data.keyword.amashort}} Client SDK を使用したいクラスに、必要なフレームワークをインポートします。
 
 	**Objective-C**
 
@@ -159,19 +165,16 @@ Facebook Application ID を使用して URL スキームおよび FacebookappID 
 	* それに「`BridgingHeader.h`」という名前を付けます。
 	* ブリッジング・ヘッダーにインポートを追加します。
 
-	```Objective-C
-	#import <IMFCore/IMFCore.h>
+	```Objective-C	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
-	* Xcode でプロジェクトをクリックし、**「ビルド設定 (Build Settings)」**タブを選択します。
-	* **Objective-C ブリッジング・ヘッダー**を検索します。
-	* `BridgingHeader.h` ファイルの場所に値を設定します。例: `$(SRCROOT)/MyApp/BridgingHeader.h`
-	* プロジェクトをビルドすることで、Xcode によってご使用のブリッジング・ヘッダーが選択されることを確認してください。失敗メッセージは無いはずです。
-
+	* Xcode でプロジェクトをクリックし、**「ビルド設定 (Build Settings)」** タブを選択します。
+	* **Objective-C Bridging Header** を探します。
+	* 値を `BridgingHeader.h` ファイルの場所に設定します (例: `$(SRCROOT)/MyApp/BridgingHeader.h`)。
+	* プロジェクトをビルドすることによって、Xcode によってブリッジング・ヘッダーが選出されることを確認します。失敗メッセージは無いはずです。
 3. Client SDK を初期化します。*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
-
-	**Objective-C**
+**Objective-C**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -186,9 +189,8 @@ Facebook Application ID を使用して URL スキームおよび FacebookappID 
 	 							backendGUID: "applicationGUID")
 	```
 
-1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することで、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。このコードは IMFClient インスタンスを初期化した直後に追加してください。
-
-	**Objective-C**
+1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することによって、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。このコードは IMFClient インスタンスを初期化した直後に追加してください。
+**Objective-C**
 
 	```Objective-C
 		[FBAppEvents activateApp];
@@ -211,9 +213,7 @@ Facebook Application ID を使用して URL スキームおよび FacebookappID 
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
 		return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
-
-
-	}
+}
 ```
 
 	**Swift**
@@ -230,15 +230,13 @@ Facebook Application ID を使用して URL スキームおよび FacebookappID 
 ## 認証のテスト
 {: #facebook-auth-ios-testing}
 Client SDK が初期化され、Facebook 認証マネージャーの登録が完了すると、モバイル・バックエンドに要求を出すことができるようになります。
-
 ### 開始する前に
 {: #facebook-auth-ios-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (例: `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
 
-1. ブラウザーで、新しく作成されたモバイル・バックエンドの保護エンドポイントに要求を送信してみてください。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能であるため、このメッセージが戻されます。
-
-1. iOS アプリケーションを使用して同じエンドポイントに対する要求を作成します。
+1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。
 
 	**Objective-C**
 
@@ -247,10 +245,11 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 								[[IMFClient sharedInstance] backendRoute]];
 
 	IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
+
 																method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-if (error){
+		if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
@@ -275,20 +274,17 @@ if (error){
 	};
  ```
 
-1. アプリケーションを実行します。Facebook のログイン画面が表示されます。
+1. アプリケーションを実行します。Facebook のログイン画面が表示されます。![image](images/ios-facebook-login.png)
 
-	![image](images/ios-facebook-login.png)
+	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。
 
-	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかも知れません。 
-
-1. 「**OK**」をクリックし、{{site.data.keyword.amashort}} が認証を目的として Facebook のユーザー ID を使用することを承認します。
+1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Facebook のユーザー ID を認証目的に使用することを許可します。
 
 1. 	要求が成功すると、以下の出力が Xcode コンソールに表示されます。
 	![image](images/ios-facebook-login-success.png)
 
 	次のコードを追加してログアウト機能を追加することもできます。
-
-	**Objective-C**
+**Objective-C**
 
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
@@ -300,8 +296,4 @@ if (error){
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
 
-	ユーザーが Facebook にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Facebook を使用することについての許可を求めるプロンプトが出されます。
-
-	ユーザーを切り替えるには、このコードを呼び出す必要があり、ユーザーはブラウザーで Facebook からログアウトしなければなりません。
-
-  ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。
+	ユーザーが Facebook にログインした後でこのコードを呼び出し、そのユーザーが再度ログインしようとする場合、{{site.data.keyword.amashort}} が認証を目的として Facebook を使用することについての許可を求めるプロンプトが出されます。ユーザーを切り替えるには、このコードを呼び出す必要があり、ユーザーはブラウザーで Facebook からログアウトしなければなりません。ログアウト機能へ `callBack` を渡すことは、オプションです。`nil` を渡すこともできます。

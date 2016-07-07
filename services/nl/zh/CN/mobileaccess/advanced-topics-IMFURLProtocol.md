@@ -1,17 +1,21 @@
 ---
+
 copyright:
   years: 2015, 2016
+  
 ---
-# 在 iOS 应用程序中使用 IMFURLProtocol
+# 使用 IMFURLProtocol 发送请求
 {: #imfurl}
-在高级用例中，您可能无法使用 `IMFResourceRequest` 类向受保护资源发送请求；例如，对受保护资源的请求是通过一些第三方代码发送时。可能的解决方案是使用 `IMFURLProtocol` API 以及标准 `NSURLRequest (NSMutableURLRequest)` 调用。
+在某些用例中，您可能无法使用 `IMFResourceRequest` 类向受保护资源发送请求；例如，对受保护资源的请求是通过一些第三方代码发送时。可能的解决方案是使用 `IMFURLProtocol` API 以及标准 `NSURLRequest (NSMutableURLRequest)` 调用。
+
+只有通过 {{site.data.keyword.amashort}} Objective-C SDK，才能使用 `IMFURLProtocol` API。
 
 ## 安装 `IMFURLProtocol` pod
 {: #imfurl-pod}
 
 可以使用 CocoaPods 来安装 `IMFURLProtocol` pod。然后可以从 iOS 项目中引用 `IMFURLProtocol.h`。
 
-## 使用 IMFURLProtocol API 发送请求
+## 使用 `IMFURLProtocol` API 发送请求
 {: #imfurl-send}
 
 1. 将 `IMFURLProtocol.h` 文件导入要用于发送请求的类中。
@@ -30,14 +34,8 @@ copyright:
 ### 步骤 1：添加协议实施并处理响应
 {: #imfurl-sample1}
 ```Swift
-import Foundation
-
-class ViewController : UIViewController, NSURLConnectionDataDelegate {
-
-	func connection(connection: NSURLConnection,
-								didReceiveResponse response: NSURLResponse) {
-
-		println("\(response.description)")
+import Foundationclass ViewController : UIViewController, NSURLConnectionDataDelegate {func connection(connection: NSURLConnection,
+								didReceiveResponse response: NSURLResponse) {println("\(response.description)")
 	}
 
 	func connection(connection: NSURLConnection, didReceiveData data: NSData) {
@@ -60,9 +58,7 @@ let URL_RESOURCE = "http://myapp.mybluemix.net/protectedResource"
 @IBAction func onSendURLProtocol(sender: AnyObject) {
 
 	IMFURLProtocol.sharedInstance().registerIMFURLProtocol()
-	IMFURLProtocol.sharedInstance().registerProtectedResourceWithPath(URL_RESOURCE)
-
-	// Send a standard request
+	IMFURLProtocol.sharedInstance().registerProtectedResourceWithPath(URL_RESOURCE)// Send a standard request
 	var postRequest: NSMutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URL_RESOURCE)!)
 	postRequest.HTTPMethod = "GET"
 	var theConnection: NSURLConnection = NSURLConnection(request: postRequest, delegate: self)!

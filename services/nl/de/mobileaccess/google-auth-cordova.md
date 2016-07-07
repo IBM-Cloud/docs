@@ -5,15 +5,16 @@ copyright:
 
 ---
 
-# Google-Authentifizierung in Cordova-Apps aktivieren
+# Google-Authentifizierung für Cordova-Apps aktivieren
 {: #google-auth-cordova}
 Zur Konfiguration von Cordova-Anwendungen für die Integration in die Google-Authentifizierung müssen Sie Änderungen am nativen Code der Cordova-Anwendung zum Beispiel in Java, Objective-C oder Swift durchführen. Jede Plattform muss separat konfiguriert werden. Verwenden Sie die native Entwicklungsumgebung, um Änderungen an nativem Code vorzunehmen, wie zum Beispiel Android Studio oder Xcode.
 
 ## Vorbereitungen
 {: #before-you-begin}
-* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein Cordova-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
-* Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-* (optional) Machen Sie sich mit den folgenden Abschnitten vertraut:
+Voraussetzungen:
+* Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* (Optional) Machen Sie sich mit den folgenden Abschnitten vertraut:
    * [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Google-Authentifizierung in iOS-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
 
@@ -53,7 +54,7 @@ Wählen Sie das Kontrollkästchen **Copy files....** aus.
 
 1. Laden Sie das [Google+ iOS SDK](http://goo.gl/9cTqyZ) herunter und installieren Sie es.
 
-1. Führen Sie Schritt 2 des Lernprogramms [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) aus, um das Google+ iOS SDK in Ihr Xcode-Projekt zu integrieren.
+1. Führen Sie Schritt 2 des Lernprogramms [Start integrating Google+ into your iOS app](https://developers.google.com/+/mobile/ios/getting-started) aus, um das Google+-iOS-SDK in Ihr Xcode-Projekt zu integrieren.
 
 Fahren Sie mit dem Abschnitt **iOS-Projekt für die Google-Authentifizierung konfigurieren** in [iOS-Plattform für die Google-Authentifizierung konfigurieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html) fort. Registrieren Sie `IMFGoogleAuthenticationHandler` im nativen Code, wie im Abschnitt `{{site.data.keyword.amashort}}-Client-SDK initialisieren` beschrieben. Sie müssen `IMFClient` nicht in Ihrem nativen Code initialisieren, da dies gleich im JavaScript-Code erfolgt.
 
@@ -86,9 +87,9 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
 
 1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihres mobilen Back-Ends zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
 
-1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der MobileFirst Services-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Deshalb kann auf ihn nur mit mobilen Anwendungen zugegriffen werden, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert wurden. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
+1. Der Endpunkt `/protected` eines mobilen Back-Ends, das mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
-1. Senden Sie eine Anforderung über Ihre Cordova-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben.
+1. Senden Sie eine Anforderung über Ihre Cordova-Anwendung an denselben Endpunkt. Fügen Sie nach dem Initialisieren von `BMSClient` den folgenden Code hinzu:
 
 	```JavaScript
 	var success = function(data){

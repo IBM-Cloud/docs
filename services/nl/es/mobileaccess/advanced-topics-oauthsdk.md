@@ -1,16 +1,16 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
   
 ---
 
-# Comunicaciones entre programas de fondo
+# Configuración de las comunicaciones de programa de fondo
 {: #backend-comm}
 
-En algunas situaciones avanzadas, es posible que tenga que enviar solicitudes desde la aplicación de fondo que se esté ejecutando en {{site.data.keyword.Bluemix}} a otro servicio de fondo que esté protegido por el servicio de {{site.data.keyword.amashort}}; por ejemplo, el servicio de {{site.data.keyword.cloudant}}. En estos casos, debe añadir una señal OAuth a la solicitud.
+En algunas situaciones, es posible que tenga que enviar solicitudes desde la aplicación de fondo que se esté ejecutando en {{site.data.keyword.Bluemix}} a otro servicio de fondo que esté protegido por el servicio de {{site.data.keyword.amashort}} (por ejemplo, el servicio de {{site.data.keyword.cloudant}}). En estos casos, debe añadir una señal OAuth a la solicitud.
 
-Utilice el módulo npmjs `bms-mca-oauth-sdk` para obtener e inyectar señales OAuth a solicitudes.
+Utilice el módulo `bms-mca-oauth-sdk npmjs` para obtener e inyectar elementos OAuth en las solicitudes. 
 
 ## Instalación del módulo bms-mca-oauth-sdk
 {: #sdk}

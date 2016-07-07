@@ -1,18 +1,36 @@
 ---
 
-Copyright : 2016
+copyright:
+  years: 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
 
-Instrumentez votre application iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
+
+Mobile Client Access a sorti un nouveau SDK Swift qui améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant et en ajoute de nouvelles, facilitant l'authentification de votre application et fournissant une meilleure protection à vos ressources de back end. Instrumentez votre application iOS Swift avec le SDK de {{site.data.keyword.amashort}} SDK, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+{:shortdesc}
+
+**Remarque :** le SDK Objective-C rapporte les données de surveillance à la console de surveillance du service Mobile Client Access. Si vous dépendez des fonctions de surveillance du service Mobile Client Access, vous devez continuer à utiliser le SDK Objective-C.
+
+**Remarque :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. 
+
+
+
+
+
 
 ## Avant de commencer
 {: #before-you-begin}
-* Vous devez disposer d'une instance d'une application de back end mobile protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end mobile, voir [Initiation](getting-started.html).
-* Vérifiez que Xcode est correctement configuré. Pour plus d'informations sur la configuration de votre environnement de développement iOS, consultez le [site Web Apple Developer](https://developer.apple.com/support/xcode/).
+Vous devez disposer des éléments suivants :
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Un projet Xcode. Pour plus d'informations sur la configuration de votre environnement de développement iOS, consultez le [site Web Apple Developer](https://developer.apple.com/support/xcode/).
 
 
 ## Installation du SDK client de {{site.data.keyword.amashort}}
@@ -33,7 +51,7 @@ Pour plus d'informations, reportez-vous au [site Web CocoaPods](https://cocoapod
 ### Installation du SDK client de {{site.data.keyword.amashort}} avec CocoaPods
 {: #install-sdk-cocoapods}
 
-1. Dans Terminal, naviguez jusqu'au répertoire racine de votre projet iOS.
+1. Dans une fenêtre de terminal, naviguez jusqu'au répertoire racine de votre projet iOS.
 
 1. Si vous n'avez pas encore initialisé votre espace de travail pour CocoaPods, exécutez la commande `pod init`.<br/>
 CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définirez les dépendances de votre projet iOS.
@@ -42,12 +60,12 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 
 	```
   use_frameworks!
-	pod 'BMSSecurity'
+  pod 'BMSSecurity'
 	```
   **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
-1. Sauvegardez le fichier `Podfile` et exécutez `pod install` à partir de la ligne de commande. <br/>Cocoapods installe les dépendances qui ont été ajoutées. La progression et les composants ajoutés s'affichent.<br/>
-**Important** : CocoaPods génère un fichier `xcworkspace`.  A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
+1. Sauvegardez le fichier `Podfile` et exécutez `pod install` à partir de la ligne de commande. <br/>Cocoapods installe les dépendances appropriées et affiche les dépendances et pods ajoutés.<br/>
+**Important** : CocoaPods génère un fichier `xcworkspace`. A partir de ce moment, vous devrez toujours ouvrir ce fichier pour travailler sur votre projet.
 
 1. Ouvrez l'espace de travail de votre projet iOS. Ouvrez le fichier `xcworkspace` qui a été généré par CocoaPods. Par exemple : `{your-project-name}.xcworkspace`. Exécutez `open {your-project-name}.xcworkspace`.
 
@@ -67,8 +85,9 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
  ```  
 
 1. Initialisez le SDK client {{site.data.keyword.amashort}}. Remplacez `<applicationRoute>` et
-`<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application** de
-la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+`<applicationGUID>` par les valeurs de **Route** et **Identificateur global unique de l'application**
+de la section **Options pour application mobile** dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône face (![Face](/face.png "Face")) dans l'angle supérieur gauche du tableau de bord. 
+
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -77,7 +96,7 @@ la section **Options pour application mobile** dans le tableau de bord {{site.da
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
  // Initialisez le SDK client.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<application Bluemix region>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -88,17 +107,18 @@ la section **Options pour application mobile** dans le tableau de bord {{site.da
 ## Envoi d'une demande au système de back end mobile
 {: #request}
 
-Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
+Une fois que le SDK client de {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des demandes à votre système de back end mobile.
 
-1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre système de back end mobile. Ouvrez l'URL suivante :
+1. Tentez d'envoyer une demande à un noeud final protégé sur votre système de back end mobile dans votre navigateur. Ouvrez l'URL suivante :
 `http://{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
+
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
  ```Swift
  let customResourceURL = "<chemin de votre ressource protégée>"
  let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:MfpCompletionHandler = {(response: Response?, error: NSError?) in
+ let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
      if error == nil {
          print ("réponse :\(response?.responseText), aucune erreur")
      } else {
@@ -114,7 +134,8 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
  ```
  response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
  ```
-
+{: screen}
+ 
 ## Etapes suivantes
 {: #next-steps}
 Lorsque vous vous êtes connecté au noeud final protégé, les données d'identification n'ont pas été nécessaires. Pour obliger les utilisateurs à utiliser des données d'identification pour se connecter à votre application, vous devez configurer Facebook, Google ou l'authentification personnalisée.

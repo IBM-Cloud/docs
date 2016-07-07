@@ -4,12 +4,21 @@ copyright:
   years: 2015, 2016
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Facebook 資格情報を使用したユーザーの認証
 {: #facebook-auth-overview}
-Facebook を ID プロバイダーとして使用してリソースを保護するように、{{site.data.keyword.amashort}} サービスを構成できます。モバイル・アプリケーション・ユーザーは、自身の Facebook 資格情報を認証に使用できます。
 
-**重要**: Facebook SDK を別途インストールする必要はありません。Facebook SDK は、{{site.data.keyword.amashort}} Client SDK を構成する際に依存関係マネージャーによって自動的にインストールされます。
+*最終更新日: 2016 年 6 月 15 日*
+{: .last-updated}
+
+Facebook を ID プロバイダーとして使用してリソースを保護するように、{{site.data.keyword.amashort}} サービスを構成できます。モバイル・アプリケーション・ユーザーは、自身の Facebook 資格情報を認証に使用できます。
+{:shortdesc}
+
+**重要**: Facebook が提供する SDK を別個にインストールする必要はありません。Facebook SDK は、{{site.data.keyword.amashort}} Client SDK を構成する際に依存関係マネージャーによって自動的にインストールされます。
 
 ## {{site.data.keyword.amashort}} の要求フロー
 {: #mca-facebook-sequence}
@@ -31,7 +40,7 @@ Facebook を ID プロバイダーとして使用してリソースを保護す�
 * {{site.data.keyword.amashort}} Client SDK は、認証フローをトリガーしたオリジナルの要求を自動的に再送します。
 * {{site.data.keyword.amashort}} Server SDK は要求から認証ヘッダーを抽出し、{{site.data.keyword.amashort}} サービスを使用してそれを検証してから、バックエンド・リソースに対するアクセスを認可します。
 
-## Facebook Application ID を Facebook Developer Portal から取得する
+## Facebook Developer Portal からの Facebook Application ID の取得
 {: #facebook-appID}
 
 Facebook を ID プロバイダーとして使用し始めるには、Facebook Developer Portal でアプリケーションを作成する必要があります。このプロセスにおいて、ユーザーは Facebook Application ID を取得します。この ID は、どのアプリケーションが接続しようとしているのかを Facebook に知らせるための固有 ID です。
@@ -48,7 +57,7 @@ iOS アプリケーションと Android アプリケーションの選択肢が�
 ## 次のステップ
 {: #next-steps}
 
-* [Android アプリで Facebook 認証を使用可能にする](facebook-auth-android.html)
-* [iOS アプリで Facebook 認証を使用可能にする (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [iOS アプリで Facebook 認証を使用可能にする (Objective-C SDK)](facebook-auth-ios.html)
-* [Cordova アプリで Facebook 認証を使用可能にする](facebook-auth-cordova.html)
+* [Android アプリ用の Facebook 認証の使用可能化](facebook-auth-android.html)
+* [iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)](facebook-auth-ios-swift-sdk.html)
+* [iOS アプリ用の Facebook 認証の使用可能化 (Objective-C SDK - 非推奨)](facebook-auth-ios.html)
+* [Cordova アプリ用の Facebook 認証の使用可能化](facebook-auth-cordova.html)

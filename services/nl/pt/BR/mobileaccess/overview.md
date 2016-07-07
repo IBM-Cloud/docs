@@ -7,6 +7,8 @@ copyright:
 
 # Sobre {{site.data.keyword.amashort}}
 {: #mca-overview}
+*Última atualização: 15 de maio de 2016*
+{: .last-updated}
 
 O serviço {{site.data.keyword.amafull}} fornece serviços de autenticação e monitoramento para aplicativos móveis que acessam recursos em nuvem hospedados no {{site.data.keyword.Bluemix_notm}}.
 
@@ -47,7 +49,7 @@ do {{site.data.keyword.amashort}}
 
 ## Fluxo de solicitação do {{site.data.keyword.amashort}}
 {: #flow}
-O diagrama a seguir descreve como uma solicitação flui do SDK para seu backend móvel e para os provedores de identidade.
+O diagrama a seguir descreve como uma solicitação flui do SDK para seu aplicativo backend móvel e para os provedores de identidade.
 
 ![image](images/mca-sequence-overview.jpg)
 

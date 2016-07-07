@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# iOS Objective-C SDK のセットアップ
+# iOS Objective-C SDK のセットアップ (非推奨)
 {: #getting-started-ios}
 
-iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+*最終更新日: 2016 年 6 月 14 日*
+{: .last-updated}
 
-**ヒント:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。詳細については、[iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)を参照してください。
+iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+{:shortdesc}
+
+**重要:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を使用することを強くお勧めします ([iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)を参照してください)。
 
 ## 開始する前に
 {: #before-you-begin}
-* {{site.data.keyword.amashort}} サービスによって保護されたモバイル・バックエンドのインスタンスが存在している必要があります。モバイル・バックエンドの作成方法について詳しくは、[入門](getting-started.html)を参照してください。
-* Xcode が正しくセットアップされていることを確認してください。iOS 開発環境のセットアップ方法について詳しくは、[Apple 開発者の Web サイト](https://developer.apple.com/support/xcode/)を参照してください。
+以下が必要です。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* Xcode プロジェクト。  
 
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -25,14 +31,14 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 
 ### CocoaPods のインストール
 {: #install-cocoapods}
+
 1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
 
 1. CocoaPods をインストールしていない場合は、以下を実行します。
+
 ```
 sudo gem install cocoapods```
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
-
-### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
+詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
 
 1. 端末で、iOS プロジェクトのルート・ディレクトリーにナビゲートします。
@@ -65,8 +71,9 @@ sudo gem install cocoapods```
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift:**
+	
 	{{site.data.keyword.amashort}} Client SDK は Objective-C によって実装されます。以下の手順に従って、Swift プロジェクトにブリッジング・ヘッダーを追加する必要がある場合があります。
 
 	1. Xcode 内のプロジェクトを右クリックし、「**New File..**」を選択します。
@@ -80,9 +87,7 @@ sudo gem install cocoapods```
 1. 以下のコードを使用して、{{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。<br/>
 *applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
 
-	**Objective-C:
-                    
-**
+	**Objective-C:**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -90,11 +95,11 @@ sudo gem install cocoapods```
 			backendGUID:@"applicationGUID"];
 	```
 
+
 	**Swift:**
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
 ## モバイル・バックエンドへの要求の実行
@@ -105,11 +110,9 @@ sudo gem install cocoapods```
 1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
-1. iOS アプリケーションを使用して同じエンドポイントに対する要求を作成します。`IMFClient` を初期化した後に、以下のコードを追加します。
+1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。`IMFClient` を初期化した後に、以下のコードを追加します。
 
-	**Objective-C:
-                    
-**
+	**Objective-C:**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -119,12 +122,12 @@ sudo gem install cocoapods```
 																method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-if (error){
+		if (error){
 			NSLog(@"Error :: %@", [error description]);
 		} else {
 			NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
+		}
+	}];
 	```
 
 	**Swift:**

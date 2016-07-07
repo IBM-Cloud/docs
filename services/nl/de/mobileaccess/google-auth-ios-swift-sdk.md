@@ -1,33 +1,57 @@
----
+ ---
 
 copyright:
   years: 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# Google-Authentifizierung in iOS-Apps aktivieren (Swift-SDK)
+# Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)
 {: #google-auth-ios}
+Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre {{site.data.keyword.amashort}}-iOS-Swift-App zu authentifizieren. Das neu freigegebene {{site.data.keyword.amashort}}-Swift-SDK ergänzt und verbessert die vom vorhandenen Objective-C-SDK Mobile Client Access bereitgestellte Funktionalität.
+
+**Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
+
+
 
 ## Vorbereitungen
 {: #google-auth-ios-before}
+Voraussetzungen:
 
-* Sie müssen über eine durch {{site.data.keyword.amashort}} geschützte Ressource verfügen und ein iOS-Projekt haben, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) und [iOS-Swift-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
-* Schützen Sie Ihre Back-End-Anwendung manuell mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+* iOS-Projekt in Xcode. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
+* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 
-## Apps für Google-Anmeldung vorbereiten
+
+## App für Google-Anmeldung vorbereiten
 {: #google-sign-in-ios}
 
-Befolgen Sie die von Google in [Goolge Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) bereitgestellten Anweisungen, um Ihre App für die Google-Anmeldung vorzubereiten. Die folgenden Schritte enthalten eine Kurzfassung der erforderlichen Tasks zum Vorbereiten Ihrer App.
+Befolgen Sie die von Google unter [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) bereitgestellten Anweisungen, um Ihre App für die Google-Anmeldung vorzubereiten. 
 
-1. Aktivieren Sie Google Sign-In for iOS für Ihre App. Weitere Informationen finden Sie in [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start?ver=swift).
+Dieser Prozess beinhaltet Folgendes:
+* Vorbereitung eines neuen Projekts auf der Google-Site für Entwickler (Google Developers), 
+* Erstellung der Datei `GoogleService-Info.plist` und des Werts `REVERSE_CLIENT_ID` zum Hinzufügen zu Ihrem Xcode-Projekt und
+* Erstellung der **Google-Client-ID** zum Hinzufügen zu Ihrer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung.
 
-1. Rufen Sie eine Konfigurationsdatei (`GoogleService-Info.plist`) für Ihr Projekt ab. Informationen zum Abrufen der Datei finden Sie in [Enable Google services for your app](https://developers.google.com/mobile/add?platform=ios).
+Die folgenden Schritte stellen eine Kurzfassung der Aufgaben dar, die zum Vorbereiten Ihrer App notwendig sind. 
 
- **Wichtig:** Sobald die Datei `GoogleService-Info.plist` vorliegt, öffnen Sie sie und notieren Sie den Wert für `CLIENT_ID`. Sie benötigen diesen Wert später zum Konfigurieren von {{site.data.keyword.amashort}}.
+**Hinweis:** Der `Google/SignIn`-CocoaPod muss nicht hinzugefügt werden. Das notwendige SDK wird vom unten beschriebenen CocoaPod `BMSGoogleAuthentication` hinzugefügt.
 
-1. Fügen Sie die Datei `GoogleService-Info.plist` zu Ihrem Xcode-Projekt hinzu. Weitere Informationen finden Sie in [Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
+1. Notieren Sie die Bundle-ID **Bundle Identifier** in Ihrem Xcode-Projekt aus dem Abschnitt **Identity** der Registerkarte **General** des Hauptziels. Sie benötigen Sie zum Erstellen Ihres Projekts zur Google-Anmeldung.
 
-1. Aktualisieren Sie die URL-Schemas in Ihrem Xcode-Projekt mit Ihrer `REVERSE_CLIENT_ID` und mit der Bundle-ID. Weitere Informationen finden Sie in [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_url_schemes_to_your_project).
+1. Erstellen Sie in Google Developer ein Projekt für die Google-Anmeldung für iOS unter https://developers.google.com/mobile/add?platform=ios. 
+
+2. Fügen Sie den Service für die Google-Anmeldung (Google Sign-In) Ihrem Projekt hinzu.
+
+3. Rufen Sie die Datei `GoogleService-Info.plist` ab.
+
+  **Wichtig:** Sobald die Datei `GoogleService-Info.plist` vorliegt, öffnen Sie sie und notieren Sie den Wert für `CLIENT_ID`. Sie benötigen diesen Wert später zum Konfigurieren der {{site.data.keyword.amashort}}-Back-End-Anwendung.
+
+1. Fügen Sie die Datei `GoogleService-Info.plist` zu Ihrem Xcode-Projekt hinzu. Weitere Informationen finden Sie im Abschnitt [Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
+
+1. Aktualisieren Sie die URL-Schemas in Ihrem Xcode-Projekt mit Ihrer `REVERSE_CLIENT_ID` und mit der Bundle-ID. Weitere Informationen finden Sie in [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
+
 
 1. Aktualisieren Sie die Datei 'project-Bridging-Header.h' für Ihre App mit dem folgenden Code:
 
@@ -56,31 +80,30 @@ Jetzt, da Sie eine iOS-Client-ID haben, können Sie die Google-Authentifizierung
 {: #google-auth-ios-sdk}
 
 ### CocoaPods installieren
-{: #google-auth-cocoapods}
+{: #install-cocoapods}
 
-Das {{site.data.keyword.amashort}}-Client-SDK wird mit CocoaPods, einem Abhängigkeitenmanager für iOS-Projekte, verteilt. CocoaPods lädt automatisch Artefakte aus Repositorys herunter und stellt sie für Ihre iOS-Anwendung zur Verfügung.
+1. Öffnen Sie das Terminal und führen Sie den Befehl **pod --version** aus. Wenn CocoaPods bereits installiert ist, wird die Versionsnummer angezeigt. Sie können mit dem nächsten Abschnitt fortfahren, um das SDK zu installieren.
 
-1. Öffnen Sie das Terminal und führen Sie den Befehl `pod --version` aus. Wenn CocoaPods bereits installiert ist, wird die Versionsnummer angezeigt. Sie können mit dem nächsten Abschnitt dieses Lernprogramms fortfahren.
-
-1. Installieren Sie CocoaPods, indem Sie den Befehl `sudo gem install cocoapods` ausführen. Weitere Anweisungen finden Sie bei Bedarf auf der [CocoaPods-Website](https://cocoapods.org/).
-
-1. Schließen Sie XCode.
-
-1. Öffnen Sie das Terminal und wechseln Sie mit dem Befehl `cd` in Ihr Projektverzeichnis.
-
-1.  Führen Sie den Befehl `pod init` aus.
+1. Wenn CocoaPods nicht installiert ist, führen Sie den folgenden Befehl aus:
+```
+sudo gem install cocoapods
+```
+Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.org/).
 
 ### {{site.data.keyword.amashort}}-Client-Swift-SDK mit CocoaPods installieren
-{: #google-auth-ios-sdk-cocoapods}
+{: #facebook-auth-install-swift-cocoapods}
 
-1. Navigieren Sie zu Ihrem iOS-Projekt.
+1. Wenn Ihr iOS-Projekt keine `Podfile` enthält, führen Sie den Befehl `pod init` aus, um die Datei zu erstellen.
 
-1. Bearbeiten Sie die `Podfile`-Datei und fügen Sie die folgenden Zeilen hinzu:
+1. Bearbeiten Sie die `Podfile` und fügen Sie die folgenden Zeilen zum relevanten Ziel hinzu:
 
  ```
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ 
+ **Hinweis:** Falls Sie das {{site.data.keyword.amashort}}-Kern-SDK bereits installiert haben, können Sie die folgende Zeile entfernen: `pod 'BMSSecurity'`. Der Pod `BMSGoogleAuthentication` installiert alle erforderlichen Frameworks.
+	
  **Tipp:** Sie können `use_frameworks!` in Ihrem Xcode-Ziel hinzufügen anstatt in der Podfile-Datei.
 
 1. Speichern Sie die `Podfile`-Datei und führen Sie den Befehl `pod install` über die Befehlszeile aus. CocoaPods installiert die Abhängigkeiten. Der Fortschritt und die hinzugefügten Komponenten werden angezeigt.
@@ -108,7 +131,8 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
  import BMSSecurity
  ```
 
-1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben.
+1. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen Sie `<applicationRoute>` und `<applicationGUID>` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** des {{site.data.keyword.Bluemix_notm}}-Dashboards ermittelt haben. Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol mit dem Gesicht (![Gesicht](/face.png "Gesicht")) in der linken oberen Ecke des Dashboards.
+ 
 
  ```Swift
  let backendURL = "<applicationRoute>"
@@ -116,14 +140,14 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- // Initialize the Client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<application Bluemix region>)
+ // Client-SDK initialisieren.  
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUId, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
  GoogleAuthenticationManager.sharedInstance.register()
       return true
-      }
+ }
 
  // [START openurl]
       func application(application: UIApplication,
@@ -185,6 +209,7 @@ Sie müssen die {{site.data.keyword.mobilefirstbp}}-Boilerplate verwenden und be
  })
  response:Optional("Hello, this is a protected resource!"), no error
  ```
+{: screen}
 
 1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 

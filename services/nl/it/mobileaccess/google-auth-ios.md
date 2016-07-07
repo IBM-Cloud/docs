@@ -5,16 +5,18 @@ copyright:
 
 ---
 
-# Abilitazione dell'autenticazione Google nelle applicazioni iOS
+# Abilitazione dell'autenticazione Google per le applicazioni Objective C iOS
 {: #google-auth-ios}
 
-**Suggerimento:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo dell'SDK Swift, vedi [Abilitazione dell'autenticazione Google nelle applicazioni iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
+Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione iOS Mobile Client Access.
+
+**Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo dell'SDK Swift, vedi [Abilitazione dell'autenticazione Google nelle applicazioni iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Prima di cominciare
 {: #google-auth-ios-before}
-* Devi disporre di una risorsa protetta da {{site.data.keyword.amashort}} e di un progetto iOS strumentato con l'SDK client {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurazione dell'SDK Objective-C iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
-* Proteggi manualmente la tua applicazione di backend con l'SDK server {{site.data.keyword.amashort}}. Per ulteriori informazioni, vedi [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
-
+È necessario disporre di:
+* Un progetto iOS in Xcode. Non deve essere instrumentato con l'SDK client {{site.data.keyword.amashort}}.
+* Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 
 ## Configurazione di un progetto Google per la piattaforma iOS
 {: #google-auth-ios-project}
@@ -53,7 +55,7 @@ Se già hai un progetto, puoi tralasciare i passi che descrivono la creazione de
 
 1. Fornisci un nome significativo per il tuo client iOS. Specifica l'ID bundle della tua applicazione iOS. Per trovare l'ID bundle della tua applicazione iOS, cerca il **Bundle Identifier** nel file `info.plist` o nella scheda **General** del progetto Xcode.
 
-1. Annota il tuo nuovo ID client iOS. Questo valore ti servirà quando configuri l'applicazione in {{site.data.keyword.Bluemix}}.
+1. Annota il tuo nuovo ID client iOS Google iOS. Questo valore ti servirà quando configuri l'applicazione in {{site.data.keyword.Bluemix}}.
 
 
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
@@ -69,12 +71,12 @@ Ora che hai un ID client iOS, puoi abilitare l'autenticazione Google nel dashboa
 
 1. Fai clic sul tile **Google**.
 
-1. In **Application ID for iOS**, specifica il tuo ID client iOS per Android e fai clic su **Save**.
+1. In **Application ID for iOS**, specifica il tuo ID client Google per iOS e fai clic su **Save**.
 
 	Nota: oltre all'ID client Google, è necessario anche il valore invertito per la tua configurazione client (vedi di seguito). Per accedere a entrambi i valori, scarica il plist di esempio utilizzando l'icona di matita:
 		![scarica file info.plist](images/download_plist.png)
 
-## Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS
+## Configurazione dell'SDK client Google {{site.data.keyword.amashort}} per iOS
 {: #google-auth-ios-sdk}
 
 ### Installazione dell'SDK client {{site.data.keyword.amashort}} utilizzando CocoaPods
@@ -170,7 +172,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	7. Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	8. Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto.
 
-3. Utilizza il seguente codice per inizializzare l'SDK client. Sostituisci i valori *applicationRoute* e *applicationGUID* con
+
+3. Utilizza il seguente codice per inizializzare l'SDK client.  Sostituisci i valori *applicationRoute* e *applicationGUID* con
 i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili**.
 
 	Objective-C:
@@ -187,8 +190,6 @@ i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili*
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
-
-
 
 1. Registra il gestore autenticazione Google aggiungendo il seguente codice al metodo `application:didFinishLaunchingWithOptions` nel tuo delegato
 dell'applicazione. Aggiungi questo codice subito dopo che hai inizializzato IMFClient.

@@ -49,7 +49,7 @@ var customAuthenticationListener = {
 
 ### onAuthenticationChallengeReceived 메소드
 {: #onAuthenticationChallengeReceived}
-이 메소드는 {{site.data.keyword.amashort}} 서비스에서 사용자 정의 인증 확인이 수신된 경우에 호출됩니다.
+이 메소드는 {{site.data.keyword.amashort}} 서비스에서 사용자 정의 인증 확인이 수신된 경우에 호출됩니다. 
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
@@ -131,21 +131,20 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
 ```
- {{site.data.keyword.amashort}} 대시보드에서 지정한 *realmName*을 사용하십시오. 
+{{site.data.keyword.amashort}} 대시보드에서 지정한 *realmName*을 사용하십시오.
 
 
 ## 인증 테스트
 {: #custom-cordova-test}
-클라이언트 SDK가 초기화되고 사용자 정의 AuthenticationListener가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
+클라이언트 SDK가 초기화되고 사용자 정의 AuthenticationListener가 등록되면 모바일 백엔드 애플리케이션 요청을 시작할 수 있습니다.
 
 ### 시작하기 전에
 {: #custom-cordova-testing-before}
 {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
 
 
-1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
- {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다.
-이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.
+ {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 
 1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
 

@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# 使用定制身份提供者来认证用户
+# 使用定制身份提供者认证用户
 {: #custom-id}
 您可以创建定制身份提供者，并实现自己的逻辑来收集和验证凭证。定制身份提供者是一种用于公开 RESTful 接口的 Web 应用程序。可以在内部部署或 {{site.data.keyword.Bluemix}} 上托管定制身份提供者。唯一的要求是定制身份提供者必须可从公共因特网进行访问，以便其能与 {{site.data.keyword.amashort}} 服务进行通信。
 
@@ -33,13 +33,13 @@ copyright:
 ## 了解定制身份提供者
 {: #custom-id-about}
 
-通过定制身份提供者，可以提供要发送给客户端的定制认证质询。通过定制身份提供者，还可以全面定制认证流程。
+通过定制身份提供者，可以提供要发送给客户端的定制认证质询。您可以全面定制认证流程。
 
 在创建定制身份提供者时，您可以执行以下操作：
 
 1. 定制要由 {{site.data.keyword.amashort}} 服务发送给移动客户端应用程序的认证质询。认证质询是包含任何定制数据的 JSON 对象。移动客户端可以使用此定制数据来定制认证流程。
 
-定制认证质询示例：
+  定制认证质询示例：
 
 	```JavaScript
 	{
@@ -54,7 +54,7 @@ copyright:
 
 1. 在移动客户端上实施任何定制凭证收集流程，包括多步认证和多形式认证。与定制认证质询类似，您必须设计定制认证质询回复的结构。
 
-移动客户端发送的定制认证质询回复的示例：
+  移动客户端发送的定制认证质询回复的示例：
 
 	```JavaScript
 	{
@@ -85,7 +85,7 @@ copyright:
 
  * [简单样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [高级样本](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
- 
+
 ## {{site.data.keyword.amashort}} 服务器与定制身份提供者之间的典型通信
 {: #custom-id-comm}
 1. {{site.data.keyword.amashort}} 服务向定制身份提供者发送 `startAuthorization` 请求。
@@ -102,12 +102,14 @@ copyright:
 ## 定制域
 {: #custom-id-custom}
 
-一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在移动客户端应用程序中创建并注册 AuthenticationDelegate/AuthenticationListener 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。此域名可用于确定请求是从特定 {{site.data.keyword.amashort}} 服务实例传入的。
+一个定制身份提供者支持一个定制认证域。要处理传入认证质询，请在移动客户端应用程序中创建并注册 `AuthenticationDelegate` / 	`AuthenticationListener` 的一个实例。在 {{site.data.keyword.amashort}}“仪表板”中配置定制身份提供者时，定义定制认证域名。此域名可用于确定请求是从特定 {{site.data.keyword.amashort}} 服务实例传入的。
 
 ## 后续步骤
 {: #next-steps}
 * [创建定制身份提供者](custom-auth-identity-provider.html)
 * [配置 {{site.data.keyword.amashort}} 进行定制认证](custom-auth-config-mca.html)
 * [针对 Android 配置定制认证](custom-auth-android.html)
-* [针对 iOS 配置定制认证](custom-auth-ios.html)
+* [针对 iOS (Swift SDK) 配置定制认证](custom-auth-ios-swift-sdk.html)
+* [针对 iOS (Objective-C SDK) 配置定制认证](custom-auth-ios.html)
 * [针对 Cordova 配置定制认证](custom-auth-cordova.html)
+

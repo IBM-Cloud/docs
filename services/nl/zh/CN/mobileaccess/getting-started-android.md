@@ -4,16 +4,24 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 设置 Android SDK
 {: #getting-started-android}
 
+*上次更新时间：2016 年 5 月 25 日*
+{: .last-updated}
+
 在 Android 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+{:shortdesc}
 
 ## 开始之前
 {: #before-you-begin}
-* 必须具有受 {{site.data.keyword.amashort}} 服务保护的移动后端的实例。有关如何创建移动后端的更多信息，请参阅[入门](getting-started.html)。
-* 设置 Android Studio 和 Android Studio SDK。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
+您必须具有：
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* Android Studio 项目，包括 Gradle 和 Android Studio SDK。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
 
 
 ## 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -50,7 +58,7 @@ copyright:
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #initalize-mca-sdk}
 
-通过将 context、applicationGUID 和 applicationRoute 参数传递到 `initialize` 方法来初始化 SDK。
+通过将 `context`、`applicationGUID` 和 `applicationRoute` 参数传递到 `initialize` 方法来初始化 SDK。
 
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”的主页中，单击您的应用程序。单击**移动选项**。您需要**应用程序路径**和**应用程序 GUID** 值来初始化 SDK。
@@ -58,7 +66,7 @@ copyright:
 2. 初始化 Android 应用程序中的 {{site.data.keyword.amashort}} 客户端 SDK。在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 `onCreate` 方法中，但这不是强制性的。
 <br/>将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}}“仪表板”中**移动选项**中的值。
 
-	```Java
+```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID");

@@ -4,16 +4,24 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Android SDK のセットアップ
 {: #getting-started-android}
 
+*最終更新日: 2016 年 5 月 25 日*
+{: .last-updated}
+
 Android アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+{:shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
-* {{site.data.keyword.amashort}} サービスによって保護されたモバイル・バックエンドのインスタンスが存在している必要があります。モバイル・バックエンドの作成方法について詳しくは、[入門](getting-started.html)を参照してください。
-* Android Studio および Android Studio SDK をセットアップします。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
+以下が必要です。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* Gradle および Android Studio SDK を含む Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
 
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -40,24 +48,23 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 ```
 
 1. プロジェクトを Gradle と同期化します。**「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
-
 1. Android プロジェクトの `AndroidManifest.xml` ファイルを開きます。以下のようにして、`<manifest>` エレメントにインターネット・アクセス許可を追加します。
 
-	```XML
+ ```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #initalize-mca-sdk}
 
-context、applicationGUID、および applicationRoute の各パラメーターを `initialize` メソッドに渡して SDK を初期化します。
+`context` パラメーター、`applicationGUID` パラメーター、および `applicationRoute` パラメーターを `initialize` メソッドに渡すことによって、SDK を初期化します。
 
 
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「アプリケーション経路 (Application route)」**と**アプリケーション GUID (Application GUID)」**の値が必要です。
 
 2. Android アプリケーションで {{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 <br/>*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
-	```Java
+```Java
 	BMSClient.getInstance().initialize(getApplicationContext(),
 					"applicationRoute",
 					"applicationGUID");```
@@ -68,12 +75,12 @@ context、applicationGUID、および applicationRoute の各パラメーター�
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンドの保護されているエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+1. 新しいモバイル・バックエンドの保護エンドポイントへの要求の送信を試行します。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例: `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
-1. Android アプリケーションを使用して、同じエンドポイントへの要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
+1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
-	```Java
+ ```Java
 	Request request = new Request("/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
@@ -93,7 +100,7 @@ context、applicationGUID、および applicationRoute の各パラメーター�
 	});
 	```
 
-1. 要求が正常に実行されると、LogCat ユーティリティーに以下の出力が表示されます。
+1. 要求が正常に実行されると、LogCat ユーティリティーで以下の出力が表示されます。
 
 	![image](images/getting-started-android-success.png)
 
@@ -103,4 +110,4 @@ context、applicationGUID、および applicationRoute の各パラメーター�
 保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
-* [カスタム](custom-auth-android.html)
+* [Custom](custom-auth-android.html)

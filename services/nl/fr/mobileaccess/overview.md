@@ -1,11 +1,14 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 # À propos de {{site.data.keyword.amashort}}
 {: #mca-overview}
+*Dernière mise à jour : 15 mai 2016*
+{: .last-updated}
 
 Le service {{site.data.keyword.amafull}} fournit des services d'authentification et de surveillance pour les applications mobiles qui accèdent à des ressources de cloud hébergées dans {{site.data.keyword.Bluemix_notm}}.
 
@@ -44,7 +47,7 @@ Vous pouvez utiliser les types d'authentification suivants dans votre appli mobi
 
 ## Flux des demandes {{site.data.keyword.amashort}}
 {: #flow}
-Le diagramme suivant montre le trajet d'une demande du logiciel SDK au système de back end mobile et aux fournisseurs d'identité.
+Le diagramme suivant montre le trajet d'une demande du SDK à votre application de back end mobile et aux fournisseurs d'identité.
 
 ![image](images/mca-sequence-overview.jpg)
 

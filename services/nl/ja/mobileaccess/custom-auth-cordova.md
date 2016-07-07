@@ -51,6 +51,7 @@ var customAuthenticationListener = {
 ### onAuthenticationChallengeReceived メソッド
 {: #onAuthenticationChallengeReceived}
 このメソッドは、{{site.data.keyword.amashort}} サービスからカスタム認証チャレンジを受け取ったときに呼び出されます。
+
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
@@ -133,21 +134,18 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
 ```
- *realmName* には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
-
-
-## 認証のテスト
+*realmName* には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。## 認証のテスト
 {: #custom-cordova-test}
-Client SDK が初期化され、カスタム AuthenticationListener が登録されたら、モバイル・バックエンドに要求を出すことを開始できます。
+Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #custom-cordova-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開いて、モバイル・バックエンドの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
+1. ブラウザーで `{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントに要求を送信します。{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
-1. Cordova アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
+1. Cordova アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
 
 	```JavaScript
 	var success = function(data){

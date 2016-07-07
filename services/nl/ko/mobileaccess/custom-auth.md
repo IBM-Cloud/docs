@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# 사용자 정의 ID 제공자를 사용하여 사용자 인증
+# 사용자 정의 ID 제공자로 사용자 인증
 {: #custom-id}
 사용자 정의 ID 제공자를 작성하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현할 수 있습니다. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 사용자 정의 ID 제공자를 사내 구축형으로 또는 {{site.data.keyword.Bluemix}}에서 호스트할 수 있습니다. 유일한 요구사항은 사용자 정의 ID 제공자가 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 공용 인터넷에서 액세스 가능해야 한다는 것입니다. 
 
@@ -17,7 +17,7 @@ copyright:
 
 1. {{site.data.keyword.amashort}} SDK를 사용하여 {{site.data.keyword.amashort}} 서버 SDK로 보호되는 백엔드 자원을 요청합니다.
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 및 권한 범위를 리턴합니다.
-* {{site.data.keyword.amashort}} 클라이언트 SDK가 위의 HTTP 401을 자동으로 발견하고 인증 프로세스를 시작합니다.
+* {{site.data.keyword.amashort}} 클라이언트 SDK가 자동으로 위의 HTTP 401을 발견하고 인증 프로세스를 시작합니다.
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 {{site.data.keyword.amashort}} 서비스에 연결하여 권한 헤더를 발행하도록 요청합니다.
 * {{site.data.keyword.amashort}} 서비스가 인증 프로세스를 시작하기 위해 사용자 정의 ID 제공자와 통신합니다. 
 * 사용자 정의 ID 제공자가 인증 확인을 {{site.data.keyword.amashort}} 서비스로 리턴합니다. 
@@ -33,13 +33,13 @@ copyright:
 ## 사용자 정의 ID 제공자 이해
 {: #custom-id-about}
 
-사용자 정의 ID 제공자를 사용하여 클라이언트로 전송할 사용자 정의 인증 확인을 제공하고, 인증 플로우를 완전히 사용자 정의할 수 있습니다. 
+사용자 정의 ID 제공자를 사용하여 클라이언트로 전송할 사용자 정의 인증 확인을 제공하고, 인증 플로우를 완전히 사용자 정의할 수 있습니다.
 
 사용자 정의 ID 제공자를 작성하는 경우 다음을 수행할 수 있습니다. 
 
 1. {{site.data.keyword.amashort}} 서비스가 인증 확인을 모바일 클라이언트 애플리케이션으로 전송하도록 사용자 정의하십시오. 인증 확인은 사용자 정의 데이터가 포함된 JSON 오브젝트입니다. 모바일 클라이언트는 이 사용자 정의 데이터를 사용하여 인증 플로우를 사용자 정의할 수 있습니다. 
 
-사용자 정의 인증 확인의 예
+  사용자 정의 인증 확인의 예
 
 	```JavaScript
 	{
@@ -54,7 +54,7 @@ copyright:
 
 1. 모바일 클라이언트에서 여러 단계 및 여러 양식 인증을 비롯한 사용자 정의 신임 정보 콜렉션을 구현하십시오. 사용자 정의 인증 확인과 마찬가지로, 사용자 정의 인증 확인 응답의 구조를 디자인해야 합니다. 
 
-모바일 클라이언트에서 전송한 사용자 정의 인증 확인 응답의 예
+  모바일 클라이언트에서 전송한 사용자 정의 인증 확인 응답의 예
 
 	```JavaScript
 	{
@@ -81,8 +81,7 @@ copyright:
 
 ### 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}
-사용자 정의 ID 제공자를 개발할 때는 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용할 수 있습니다. 
-GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
+사용자 정의 ID 제공자를 개발할 때는 사용자 정의 ID 제공자의 다음 Node.js 샘플 구현을 참조로 사용할 수 있습니다. GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시오. 
 
  * [단순 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
  * [고급 샘플](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
@@ -103,7 +102,7 @@ GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시
 ## 사용자 정의 영역
 {: #custom-id-custom}
 
-사용자 정의 ID 제공자는 하나의 사용자 정의 인증 영역을 지원합니다. 수신 인증 확인을 처리하려면 모바일 클라이언트 애플리케이션에서 AuthenticationDelegate/AuthenticationListener의 인스턴스를 작성하고 등록하십시오. {{site.data.keyword.amashort}} 대시보드에서 사용자 정의 ID 제공자를 구성할 때 사용자 정의 인증 영역 이름을 정의하십시오. 이 이름으로 요청이 특정 {{site.data.keyword.amashort}} 서비스 인스턴스에서 제공됨을 식별할 수 있습니다. 
+사용자 정의 ID 제공자는 하나의 사용자 정의 인증 영역을 지원합니다. 수신되는 인증 확인을 처리하려면 모바일 클라이언트 애플리케이션에서 `AuthenticationDelegate` / 	`AuthenticationListener`의 인스턴스를 작성하고 등록하십시오. {{site.data.keyword.amashort}} 대시보드에서 사용자 정의 ID 제공자를 구성할 때 사용자 정의 인증 영역 이름을 정의하십시오. 이 이름으로 요청이 특정 {{site.data.keyword.amashort}} 서비스 인스턴스에서 제공됨을 식별할 수 있습니다. 
 
 ## 다음 단계
 {: #next-steps}
@@ -113,3 +112,4 @@ GitHub 저장소에서 전체 애플리케이션 코드를 다운로드하십시
 * [iOS(Swift SDK)용 사용자 정의 인증 구성](custom-auth-ios-swift-sdk.html)
 * [iOS(Objective-C SDK)용 사용자 정의 인증 구성](custom-auth-ios.html)
 * [Cordova용 사용자 정의 인증 구성](custom-auth-cordova.html)
+

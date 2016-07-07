@@ -5,12 +5,12 @@ copyright:
   
 ---
 
-# バックエンド間の通信
+# バックエンドからバックエンドへの通信のセットアップ
 {: #backend-comm}
 
-高機能シナリオでは、{{site.data.keyword.Bluemix}} 上で実行しているバックエンド・アプリケーションから、{{site.data.keyword.amashort}} サービスで保護されている別のバックエンド・サービス (例えば {{site.data.keyword.cloudant}} サービス) に要求を送信する必要がある場合があります。そういったケースでは、要求に OAuth トークンを追加する必要があります。
+場合によっては、{{site.data.keyword.Bluemix}} 上で実行しているバックエンド・アプリケーションから、{{site.data.keyword.amashort}} サービスで保護されている別のバックエンド・サービス (例えば {{site.data.keyword.cloudant}} サービス) に要求を送信する必要があります。そういったケースでは、要求に OAuth トークンを追加する必要があります。
 
-OAuth トークンを取得して要求に注入するには、`bms-mca-oauth-sdk` npmjs モジュールを使用します。
+OAuth トークンを取得して要求に注入するには、`bms-mca-oauth-sdk npmjs` モジュールを使用します。
 
 ## bms-mca-oauth-sdk モジュールのインストール
 {: #sdk}
@@ -50,7 +50,7 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// In the request that you want to send to the protected resource, 
+	// In the request that you want to send to the protected resource,
 	// add the authHeader value.
 
 	request.headers.Authorization = authHeader;

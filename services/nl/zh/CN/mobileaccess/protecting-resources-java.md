@@ -7,18 +7,24 @@ copyright:
 
 # 通过 {{site.data.keyword.amashort}} 保护 Liberty for Java 资源
 {: #protecting-liberty}
+
+*上次更新时间：2016 年 4 月 15 日*
+{: .last-updated}
+
+
 {{site.data.keyword.amashort}} 服务器 SDK 为部署在 {{site.data.keyword.Bluemix}} 上的 Liberty for Java&trade; 应用程序提供了 OAuthTAI 模块。必须在 Liberty 服务器中安装 OAuthTAI 模块，以保护其不受未经授权的访问，并获取监视信息。
 
 ## 开始之前
 {: #before-you-begin}
-* 您必须熟悉如何在 {{site.data.keyword.Bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/starters/liberty/index.html)。
+* 您必须熟悉如何在 {{site.data.keyword.Bluemix}} 上开发 Liberty for Java 应用程序。有关更多信息，请参阅 [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html)。
 
 ## 安装 {{site.data.keyword.amashort}} 服务器 SDK
 {: #installing-server-sdk}
 
 1. 下载并抽取 [OAuthTAI 工件](https://imf-tai.{DomainName}/public/TAI.zip)。
 
-1. 将 `com.ibm.worklight.oauth.tai_1.0.0.jar` 文件复制到 `${wlp.user.dir}/extensions/lib` 目录。**提示：**`$<wlp.user.dir>` 是 Liberty for Java 运行时的用户目录。缺省目录名称为 `usr`。
+1. 将 `com.ibm.worklight.oauth.tai_1.0.0.jar` 文件复制到 `${wlp.user.dir}/extensions/lib` 目录。
+	**提示：**`$<wlp.user.dir>` 是 Liberty for Java 运行时的用户目录。缺省目录名称为 `usr`。
 
 1. 将 `OAuthTai-1.0.mf` 目录复制到 `$<wlp.user.dir>/extension/lib/features` 目录。
 
@@ -106,11 +112,11 @@ copyright:
 
 `WSCredential` 接口会定义一个凭证来代表 Liberty for Java 运行时的认证主体。例如：
 
-
 ```Java
 Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
-    callerSubject.getPublicCredentials(WSCredential.class).iterator().next();```
+    callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
+```
 有关更多信息，请参阅 [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)。
 
 #### com.worklight.oauth.tai.WLCredential 属性

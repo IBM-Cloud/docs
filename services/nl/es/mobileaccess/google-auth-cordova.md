@@ -1,18 +1,19 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
-# Habilitación de la autenticación de Google en apps de Cordova
+# Habilitación de la autenticación de Google para apps de Cordova
 {: #google-auth-cordova}
 Para configurar aplicaciones de Cordova para la integración de la autenticación de Google, debe realizar cambios en el código nativo de la aplicación de Cordova; por ejemplo, en Java, Objective-C o Swift. Debe configurar cada plataforma por separado. Utilice el entorno de desarrollo nativo para realizar cambios en el código nativo; por ejemplo, en Android Studio o Xcode.
 
 ## Antes de empezar
 {: #before-you-begin}
-* Debe tener un recurso que esté protegido por {{site.data.keyword.amashort}} y un proyecto de Cordova instrumentado con el SDK del cliente de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) y [Configuración del plug-in de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
-* Proteja manualmente la aplicación de fondo con el SDK del servidor de {{site.data.keyword.amashort}}. Para obtener más información, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Debe tener lo siguiente: 
+* Un proyecto Cordova que esté instrumentado con el SDK de cliente {{site.data.keyword.amashort}}.  Para obtener más información, consulte [Configuración del plugin de Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
 * (opcional) Familiarícese con las secciones siguientes:
    * [Habilitación de la autenticación de Google en apps de Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Habilitación de la autenticación de Google en apps de iOS](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
@@ -39,7 +40,7 @@ Los pasos necesarios para configurar la plataforma iOS de una aplicación de Cor
 
 ### Instalación manual del SDK de {{site.data.keyword.amashort}} para la autenticación de Google y el SDK de Google
 {: #google-auth-cordova-ios-sdk}
-1. Descargue el archivo que contiene el [SDK de {{site.data.keyword.Bluemix}} Mobile Services para iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)
+1. Descargue el archivo que contiene el SDK de [{{site.data.keyword.Bluemix}} Mobile Services para iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 1. Vaya al directorio `Sources/Authenticators/IMFGoogleAuthentication` y copie (arrastre y suelte) todos los archivos al proyecto de iOS en Xcode. Los archivos que debe copiar son:
 
@@ -60,14 +61,13 @@ Continúe en la sección **Configuración del proyecto de iOS para la autenticac
 Añada la línea siguiente al método `application:openURL:sourceApplication:annotation` del delegado de la aplicación. Esta línea garantiza que todos los plug-ins de Cordova reciban notificación de los sucesos correspondientes.
 
 ```
-[[ NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
+[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
 
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #google-auth-cordova-initialize}
 
-Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. 
+Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el SDK del cliente de {{site.data.keyword.amashort}}.
 
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
@@ -77,18 +77,19 @@ Sustituya los valores *applicationRoute* y *applicationGUID* por los valores de 
 
 ## Prueba de autenticación
 {: #google-auth-cordova-test}
-Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil. 
+Después de inicializar el SDK del cliente, puede empezar a realizar solicitudes al programa de fondo móvil.
 
 ### Antes de empezar
 {: #google-auth-cordova-testing-before}
 Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://mi-programa-fondo-móvil.mybluemix.net/protected`.
+1. Intente enviar una solicitud al punto final protegido del programa de fondo móvil en su navegador de escritorio; para ello, abra `{applicationRoute}/protected`. Por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`.
+
 
 1. El punto final `/protected` de un programa de fondo móvil creado con el contenedor modelo de MobileFirst Services está protegido con {{site.data.keyword.amashort}}; por tanto, solo se puede acceder al mismo mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Como resultado, verá `Unauthorized` en el navegador de escritorio.
 
-1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
+1. Utilice la aplicación de Cordova para realizar solicitudes al mismo punto final. Añada el siguiente código después de inicializar `BMSClient`.
 
 	```JavaScript
 	var success = function(data){

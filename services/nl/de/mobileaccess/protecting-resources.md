@@ -7,13 +7,24 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# Cloudressourcen mit {{site.data.keyword.amashort}} schützen
+# Back-End-Ressourcen mit dem {{site.data.keyword.amashort}}-Service schützen
 {: #protecting-resources}
+
+*Letzte Aktualisierung: 30. April 2016*
+{: .last-updated}
+
+
 Mit dem {{site.data.keyword.amashort}}-Service können Sie Ihre Node.js- und Java-basierten Back-End-Anwendungen, die in {{site.data.keyword.Bluemix_notm}} ausgeführt werden, mit mobilgerätefähiger OAuth-Sicherheit und Überwachungsfunktionen schützen.
 {:shortdesc}
+
+## Vorbereitungen
+{: #before-you-begin}
+Bevor Sie beginnen, müssen Sie zuerst den Node.js-Service erstellen.
+
+
 ## Berechtigungsfilter
 {: #auth-filter}
-Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können.  Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
+Das {{site.data.keyword.amashort}}-Server-SDK verfügt über Berechtigungsfilter, mit deren Hilfe Sie Ihre Back-End-Anwendungen schützen können. Der Berechtigungsfilter fängt eingehende Anforderungen ab und prüft, ob ein Berechtigungsheader vorhanden ist. Wenn der Berechtigungsheader nicht vorhanden oder ungültig ist, gibt der Filter eine Antwort mit dem Code HTTP 401 zurück. Das {{site.data.keyword.amashort}}-Client-SDK weiß, wie eine Antwort mit dem Code HTTP 401 abzufangen ist, die vom {{site.data.keyword.amashort}}-Server-SDK zurückgegeben wird, und löst den Authentifizierungsablauf aus.
 ## Berechtigungsheader
 {: #auth-header}
 Der Berechtigungsheader in der eingehenden Anforderung besteht aus drei Teilen: Träger (Bearer), Zugriffstoken und ID-Token, die durch Leerzeichen voneinander getrennt sind. Das `Zugriffstoken` ist eine verbindliche Komponente, während das `ID-Token` optional ist.

@@ -7,6 +7,11 @@ copyright:
 
 # {{site.data.keyword.amashort}}로 Liberty for Java 자원 보호
 {: #protecting-liberty}
+
+*마지막 업데이트 날짜: 2016년 4월 15일*
+{: .last-updated}
+
+
 {{site.data.keyword.amashort}} 서버 SDK는 {{site.data.keyword.Bluemix}}에 배치된 Liberty for Java&trade; 애플리케이션에 대해 OAuthTAI 모듈을 제공합니다. 권한이 없는 액세스에서 Liberty 서버를 보호하고 모니터링 정보를 가져오려면 OAuthTAI 모듈을 사용하여 Liberty 서버를 계측해야 합니다. 
 
 ## 시작하기 전에
@@ -82,7 +87,7 @@ Liberty for Java 애플리케이션에서 호스팅하는 자원을 보호하려
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-		<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+  <description>MFP OAuthTAI에서 자원을 보호하는 데 사용하는 역할이며, Liberty의 'ALL_AUTHENTICATED_USERS'에 맵핑해야 합니다.</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
@@ -112,7 +117,7 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
-자세한 정보는 [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)을 참조하십시오. 
+자세한 정보는 [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)을 참조하십시오.
 
 #### com.worklight.oauth.tai.WLCredential property
 {: #WLCredential}

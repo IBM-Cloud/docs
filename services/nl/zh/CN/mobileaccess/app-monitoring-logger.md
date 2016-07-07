@@ -7,6 +7,8 @@ copyright:
 
 # 启用、配置和使用记录器
 {: #enable-logger}
+*上次更新时间：2016 年 5 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.amashort}} 客户端 SDK 提供了一种日志记录框架，与您可能熟悉的其他日志框架（如 `java.util.logging` 或 `log4j`）类似。此日志记录框架支持每个数据包多个记录器实例，支持不同的日志级别，支持捕获对应用程序崩溃的堆栈跟踪，等等。
 
@@ -21,6 +23,8 @@ copyright:
 * `DEBUG` - 用于报告调试语句，以帮助开发者解决应用程序缺陷。
 
 在使用此日志记录框架之前，确保已初始化 {{site.data.keyword.amashort}} 客户端 SDK。以下样本演示了 {{site.data.keyword.amashort}} 客户端 SDK 日志记录框架的基本用法。
+
+**重要信息**：{{site.data.keyword.amashort}} 服务的监视功能计划迁移到新的 [{{site.data.keyword.mobileanalytics_short}} 服务](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新 Swift SDK 将使用新的 {{site.data.keyword.mobileanalytics_short}} 服务，该服务提供了更加丰富的分析体验。{{site.data.keyword.mobileanalytics_short}} 服务目前在试验阶段，计划在今年晚些时候正式发布。我们建议您着手对迁移应用程序以使用新的 {{site.data.keyword.mobileanalytics_short}} 服务和 Swift SDK 进行调查，因为我们计划在 {{site.data.keyword.mobileanalytics_short}} 正式发布时，停止使用 {{site.data.keyword.amashort}} 服务的监视功能。
 
 ### Android
 {: #enable-logger-android}
@@ -39,6 +43,10 @@ logger.fatal("fatal message");
 
 ### iOS - Objective-C
 {: #enable-logger-objectc}
+
+**重要信息：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。
+
+Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服务的监视控制台。如果您依赖于 {{site.data.keyword.amashort}} 服务的监视功能，请继续使用 Objective-C SDK。
 
 ```Objective-C
 [[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];
@@ -68,7 +76,7 @@ logger.logErrorWithMessages("error");
 logger.logFatalWithMessages("fatal");
 ```
 
-**注：**{{site.data.keyword.amashort}} 客户端 SDK 是使用 Objective-C 实现的，因此您可能需要向 Swift 项目添加 `IMFLoggerExtension.swift` 文件，以使用先前的记录器 API。可以在 [Mobile Client Access Client SDK 归档](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)中找到此文件。
+**注：**{{site.data.keyword.amashort}} 客户端 SDK 是使用 Objective-C 实现的，因此您可能需要向 Swift 项目添加 `IMFLoggerExtension.swift` 文件，以使用先前的记录器 API。可以在 [{{site.data.keyword.amashort}} 客户端 SDK 归档](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)中找到此文件。
 
 
 ### Cordova
@@ -78,7 +86,6 @@ logger.logFatalWithMessages("fatal");
 BMSClient.initialize(appRoute , appGUID);
 
 var logger = MFPLogger.getInstance("myLogger");
-
 
 logger.debug("debug info");
 logger.info("info message");

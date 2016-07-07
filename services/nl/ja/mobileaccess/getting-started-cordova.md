@@ -4,18 +4,23 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
 
+*最終更新日: 2016 年 5 月 25 日*
+{: .last-updated}
+
 Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+{:shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
+以下が必要です。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
 
-- {{site.data.keyword.amashort}} サービスによって保護されたモバイル・バックエンドのインスタンスが存在している必要があります。モバイル・バックエンドの作成方法について詳しくは、[入門](getting-started.html)を参照してください。
-
-- Cordova アプリケーションを作成するか、既存のプロジェクトを使用します。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova の Web サイト](https://cordova.apache.org/)を参照してください。
+* Cordova アプリケーション (または、既存のプロジェクトを使用します)。Cordova アプリケーションのセットアップ方法について詳しくは、[Cordova の Web サイト](https://cordova.apache.org/)を参照してください。
 
 ## {{site.data.keyword.amashort}} Cordova プラグインのインストール
 {: #getting-started-cordova-plugin}
@@ -35,10 +40,10 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 1. Android プラットフォームを追加した場合は、Cordova アプリケーションの `config.xml` ファイルに、サポートされる最小 API レベルを追加する必要があります。`config.xml` ファイルを開き、以下の行を `<platform name="android">` エレメントに追加します。
 
 	```XML
-	<platform name="android">    
+	<platform name="android">  
 		<preference name="android-minSdkVersion" value="15"/>
-  	<preference name="android-targetSdkVersion" value="23"/>
-  	<!-- add minimum and target Android API level declaration -->
+		<preference name="android-targetSdkVersion" value="23"/>
+		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
 
@@ -50,15 +55,16 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
-     <!-- add deployment target declaration -->
+		<preference name="deployment-target" value="8.0"/>
+		<!-- add deployment target declaration -->
 	</platform>
 	```
 
 1. 以下のようにして、{{site.data.keyword.amashort}} Cordova プラグインをインストールします。
 
  	```Bash
-	cordova plugin add ibm-mfp-core```
+	cordova plugin add ibm-mfp-core
+	```
 
 1. Android、iOS、またはその両方に対応するようにプラットフォームを構成します。
 
@@ -93,7 +99,6 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 		4. Xcode で、アプリケーションをビルドして実行します。
 
 1. 次のコマンドを実行して、プラグインが正常にインストールされたことを確認します。
-    
 
 	```Bash
 	cordova plugin list

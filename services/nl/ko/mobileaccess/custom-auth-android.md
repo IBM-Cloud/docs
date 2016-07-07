@@ -79,14 +79,14 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 
 ### onAuthenticationSuccess 메소드
 {: #custom-android-authlistener-onsuccess}
-이 메소드는 인증 성공 후에 호출하십시오. 인수로는 Android 컨텍스트 및 인증 성공에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다.
+이 메소드는 인증 성공 후에 호출하십시오. 인수로는 Android 컨텍스트 및 인증 성공에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다. 
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
 
 ### onAuthenticationFailure 메소드
 {: #custom-android-authlistener-onfail}
-이 메소드는 인증 실패 후에 호출하십시오. 인수로는 Android 컨텍스트 및 인증 실패에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다.
+이 메소드는 인증 실패 후에 호출하십시오. 인수로는 Android 컨텍스트 및 인증 실패에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다. 
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -184,9 +184,9 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 자원이 있어야 합니다. 
 
 
-1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드의 보호 엔드포인트로 요청을 전송하십시오.
+1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오. 
 
-1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
+1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
 
@@ -211,16 +211,16 @@ BMSClient.getInstance().registerAuthenticationListener(realmName,
 	});
 ```
 
-1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
+1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다.
 
-	![이미지](images/android-custom-login-success.png)
+ ![이미지](images/android-custom-login-success.png)
 
- 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다.
 
  ```Java
  AuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
 
- 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 
+ 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다.
 
  로그아웃 기능에 전달된 `listener` 값은 `null`일 수 있습니다.

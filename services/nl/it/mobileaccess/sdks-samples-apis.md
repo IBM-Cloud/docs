@@ -8,7 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # SDK {{site.data.keyword.amashort}}, esempi e guida di riferimento API
+*Ultimo aggiornamento: 30 aprile 2016*
+{: .last-updated}
+
 Per aggiungere degli SDK {{site.data.keyword.amashort}} alla tua applicazione, scegli quelli che vuoi utilizzare e configura quindi il tuo gestore dipendenze per inserire gli SDK nella tua applicazione.
+{:shortdesc}
 
 ## SDK Core
 {: #coresdk}
@@ -33,18 +37,20 @@ L'SDK Core include le API per abilitare l'autenticazione personalizzata, il moni
 ### iOS (SDK Swift)
 {: #coresdk-ios-swift}
 
-[Repository Git](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+[Repository Git](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### Installa l'SDK Core con CocoaPods
 {: #coresdk-ios-siwft-cocoapods}
 
 ```
 use_frameworks!
-pod 'BMSCore'
+pod 'BMSSecurity'
 ```
 
 ### iOS (SDK Objective-C)
 {: #coresdk-ios}
+
+Mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift (consulta [Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 [Repository Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
 [Guida di riferimento API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
@@ -107,6 +113,7 @@ pod 'BMSFacebookAuthentication'
 [Repository Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [Guida di riferimento API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
+*Nota:* mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift (consulta Configurazione dell'SDK Swift iOS).
 #### Installa l'SDK Facebook con CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
@@ -159,7 +166,7 @@ use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
 
-### iOS (SDK Objective-C)
+### iOS (SDK Objective-C - obsoleto)
 {: #googlesdk-ios}
 
 [Repository Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
@@ -224,7 +231,7 @@ npm install -save bms-mca-oauth-sdk
 
 [Guida di riferimento API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
 
-#### Installa l'IMFURLProtocol con CocoaPods
+#### Installa IMFURLProtocol con CocoaPods
 {: #IMFURLProtocol-cocoapods}
 
 ```Bash

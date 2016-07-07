@@ -8,7 +8,11 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} SDK、样本和 API 参考
+*上次更新时间：2016 年 4 月 30 日*
+{: .last-updated}
+
 要将 {{site.data.keyword.amashort}} SDK 添加到应用程序，请选择要使用的 SDK，然后将依赖关系管理器配置为将这些 SDK 拉入到应用程序中。
+{:shortdesc}
 
 ## 核心 SDK
 {: #coresdk}
@@ -16,7 +20,8 @@ copyright:
 
 ### Android
 {: #coresdk-android}
-[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
 
 #### 使用 Gradle 安装核心 SDK
 {: #coresdk-android-gradle}
@@ -32,20 +37,23 @@ copyright:
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
 
-[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
 
 #### 使用 CocoaPods 安装核心 SDK
 {: #coresdk-ios-siwft-cocoapods}
 
 ```
 use_frameworks!
-pod 'BMSCore'
+pod 'BMSSecurity'
 ```
 
 ### iOS (Objective-C SDK)
 {: #coresdk-ios}
 
-[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
+虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK（请参阅[设置 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
+
+[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
 
 #### 使用 CocoaPods 安装核心 SDK
 {: #coresdk-ios-cocoapods}
@@ -72,7 +80,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #facebooksdk-android}
 
-[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[Git 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
 
 #### 使用 Gradle 安装 Facebook SDK
 {: #facebooksdk-android-gradle}
@@ -101,8 +110,10 @@ pod 'BMSFacebookAuthentication'
 ### iOS (Objective-C SDK)
 {: #facebooksdk-ios}
 
-[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
+[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
+*注：*虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序的信息，请参阅“设置 iOS Swift SDK”。
 #### 使用 CocoaPods 安装 Facebook SDK
 {: #facebooksdk-ios-cocoapods}
 
@@ -128,7 +139,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication)，[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
 
 #### 使用 Gradle 安装 Google+ SDK
 {: #googlesdk-android-gradle}
@@ -154,10 +166,11 @@ use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
 
-### iOS (Objective-C SDK)
+### iOS（Objective-C SDK - 不推荐）
 {: #googlesdk-ios}
 
-[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
+[Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)和
+[API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
 
 #### 使用 CocoaPods 安装 Google+ SDK
 {: #googlesdk-ios-cocoapods}

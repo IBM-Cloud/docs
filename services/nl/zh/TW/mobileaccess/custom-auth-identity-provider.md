@@ -18,7 +18,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 * `realm_name`：指定 {{site.data.keyword.amashort}} 儀表板中所定義的自訂領域名稱。
 * `request_type`：指定下列其中一項：
 	* `startAuthorization`：指定鑑別處理程序的首要步驟。自訂身分提供者必須使用 "challenge"、"success" 或 "failure" 狀態進行回應。
-	* `handleChallengeAnswer`：處理來自行動式用戶端的鑑別盤查回應。
+	* `handleChallengeAnswer`：處理來自行動用戶端的鑑別盤查回應。
 
 ## `startAuthorization` API
 {: #custom-startauthorization}
@@ -27,11 +27,10 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 `startAuthorization` API 是用來作為鑑別處理程序的首要步驟。自訂身分提供者必須使用 "challenge"、"success" 或 "failure" 狀態進行回應。
 
-為了容許鑑別處理程序的最大彈性，自訂身分提供者可以存取要求內文中行動式用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
+為了容許鑑別處理程序的最大彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
 
 ```JavaScript
-{
-    "headers" : {
+{"headers" : {
     	"header1": "value1",  
     	"header2" : "value2"
     }
@@ -41,9 +40,9 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 自訂身分提供者可能會使用鑑別盤查進行回應，或直接使用 success 或 failure 進行回應。回應 HTTP 狀態必須是 `HTTP 200`，而且回應 JSON 必須包含下列內容：
 
 * `status`：指定要求的 `success`、`challenge` 或 `failure`。
-* `stateId`（選用）：指定隨機產生的字串 ID，以向行動式用戶端識別鑑別階段作業。如果自訂身分提供者未儲存任何狀態，則可以省略此屬性。
-* `challenge`：指定 JSON 物件，這個 JSON 物件代表要傳回給行動式用戶端的鑑別盤查。只有在狀態設為 `challenge` 時才會將此屬性傳送至用戶端。
-* `userIdentity`：指定 JSON 物件，這個 JSON 物件代表使用者身分。使用者身分是由 `userName`、`displayName` 及 `attributes` 這類內容所組成。如需相關資訊，請參閱[使用者身分物件](#custom-user-identity)。只有在狀態設為 `success` 時才會將此內容傳送至行動式用戶端。
+* `stateId`（選用）：指定隨機產生的字串 ID，以向行動用戶端識別鑑別階段作業。如果自訂身分提供者未儲存任何狀態，則可以省略此屬性。
+* `challenge`：指定 JSON 物件，這個 JSON 物件代表要傳回給行動用戶端的鑑別盤查。只有在狀態設為 `challenge` 時才會將此屬性傳送至用戶端。
+* `userIdentity`：指定 JSON 物件，這個 JSON 物件代表使用者身分。使用者身分是由 `userName`、`displayName` 及 `attributes` 這類內容所組成。如需相關資訊，請參閱[使用者身分物件](#custom-user-identity)。只有在狀態設為 `success` 時才會將此內容傳送至行動用戶端。
 
 例如：
 
@@ -63,9 +62,9 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
 
-`handleChallengeAnswer` API 處理來自行動式用戶端的鑑別盤查回應。與 `startAuthorization` API 相同，`handleChallengeAnswer` API 會使用 `challenge`、`success` 或 `failure` 狀態進行回應。
+`handleChallengeAnswer` API 處理來自行動用戶端的鑑別盤查回應。與 `startAuthorization` API 相同，`handleChallengeAnswer` API 會使用 `challenge`、`success` 或 `failure` 狀態進行回應。
 
-與 `startAuthorization` 要求類似，自訂身分提供者可以存取要求內文中行動式用戶端所傳送的所有 HTTP 標頭。除了行動式用戶端要求標頭之外，`handleChallengeAnswer` 要求的內文也會包括 `stateId` 及 `challengeAnswer` 內容。
+與 `startAuthorization` 要求類似，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。除了行動用戶端要求標頭之外，`handleChallengeAnswer` 要求的內文也會包括 `stateId` 及 `challengeAnswer` 內容。
 
 ### `handleChallengeAnswer` 要求內文範例
 {: #custom-handleChallengeAnswer-example}
@@ -106,20 +105,20 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 }
 ```
 
-{{site.data.keyword.amashort}} 服務利用使用者身分物件來產生 ID 記號，並作為授權標頭的一部分傳送給行動式用戶端。成功鑑別之後，行動式用戶端即具有使用者身分物件的完整存取權。
+{{site.data.keyword.amashort}} 服務利用使用者身分物件來產生 ID 記號，並作為授權標頭的一部分傳送給行動用戶端。成功鑑別之後，行動用戶端即具有使用者身分物件的完整存取權。
 
 ## 安全考量
 {: #custom-security}
 
-從 {{site.data.keyword.amashort}} 服務到自訂身分提供者的每一個要求都會包含授權標頭，讓自訂身分提供者可以驗證要求是來自授權來源。雖然未嚴格強制要求，但是請考慮使用 {{site.data.keyword.amashort}} Server SDK 檢測您的自訂身分提供者，來驗證授權標頭。若要使用此 SDK，自訂身分提供者應用程式必須使用 Node.js 或 Liberty for Java&trade;&trade; 進行實作，並在 {{site.data.keyword.Bluemix_notm}} 上執行。
+從 {{site.data.keyword.amashort}} 服務到自訂身分提供者的每一個要求都會包含授權標頭，讓自訂身分提供者可以驗證要求是來自授權來源。雖然未嚴格強制要求，但是請考慮使用 {{site.data.keyword.amashort}} 伺服器 SDK 檢測您的自訂身分提供者，來驗證授權標頭。若要使用此 SDK，自訂身分提供者應用程式必須使用 Node.js 或 Liberty for Java&trade;&trade; 進行實作，並在 {{site.data.keyword.Bluemix_notm}} 上執行。
 
-授權標頭包含已觸發鑑別處理程序的行動式用戶端及行動式應用程式的相關資訊。您可以使用安全環境定義來擷取此資料。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
+授權標頭包含已觸發鑑別處理程序的行動用戶端及行動應用程式的相關資訊。您可以使用安全環境定義來擷取此資料。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
 
 ## 自訂身分提供者範例實作
 {: #custom-sample}
 在您開發自訂身分提供者時，可以使用自訂身分提供者的下列任何 Node.js 範例實作作為參照。請從 GitHub 儲存庫下載完整應用程式碼。
 
-* [簡式範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+* [簡單範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
 * [進階範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
 <!---
@@ -218,6 +217,6 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ## 後續步驟
 {: #next-steps}
 * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](custom-auth-config-mca.html)
-* [配置適用於 Android 的自訂鑑別](custom-auth-android.html)
-* [配置適用於 iOS 的自訂鑑別](custom-auth-ios.html)
-* [配置適用於 Cordova 的自訂鑑別](custom-auth-cordova.html)
+* [配置 Android 的自訂鑑別](custom-auth-android.html)
+* [配置 iOS 的自訂鑑別](custom-auth-ios.html)
+* [配置 Cordova 的自訂鑑別](custom-auth-cordova.html)

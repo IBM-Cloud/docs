@@ -4,10 +4,17 @@ copyright:
   years: 2015, 2016
 
 ---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
-# Usando o Google para autenticar usuários
+# Autenticando usuários com as credenciais do Google
 {: #google-auth}
-É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos, usando o Google como provedor de identidade. Seu aplicativo móvel pode então usar suas credenciais do Google para autenticação.
+
+*Última atualização: 15 de junho de 2016*
+
+É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Google como provedor de identidade. Seu aplicativo móvel pode então usar suas credenciais do Google para autenticação.
+{:shortdesc}
 
 **Importante:** não é necessário instalar separadamente o SDK do Google. O Google SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
 
@@ -31,10 +38,13 @@ Veja o diagrama simplificado a seguir para entender como o {{site.data.keyword.a
 * O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
 * O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
+
+
 ## Próximas Etapas
 {: #google-auth-nextsteps}
 
-* [Ativando a autenticação do Google em apps Android](google-auth-android.html)
-* [Ativando a autenticação do Google em apps iOS (Swift SDK)](google-auth-ios-swift-sdk.html)
-* [Ativando a autenticação do Google em apps iOS (Objective-C SDK)](google-auth-ios.html)
-* [Ativando a autenticação do Google em apps Cordova](google-auth-cordova.html)
+* [Ativando a autenticação do Google para apps Android](google-auth-android.html)
+* [Ativando a autenticação do Google para apps iOS (Swift SDK)](google-auth-ios-swift-sdk.html)
+* [Ativando a autenticação do Google para apps iOS (Objective-C SDK)](google-auth-ios.html)
+* [Ativando a autenticação do Google para apps Cordova](google-auth-cordova.html)
+

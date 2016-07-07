@@ -1,19 +1,22 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
 
 ---
 
 # Uso de {{site.data.keyword.amashort}} con un entorno de desarrollo local
 {: #protecting-local}
 
+*Última actualización: 15 de abril de 2016*
+{: .last-updated}
+
 Puede configurar su entorno de desarrollo local para que utilice el servicio de {{site.data.keyword.amashort}} que se ejecuta en {{site.data.keyword.Bluemix}}. Específicamente, puede utilizar el SDK del servidor de {{site.data.keyword.amashort}} cuando desarrolle código del lado del servidor con un servidor de desarrollo local, como Node.js.
 
 El SDK del servidor de {{site.data.keyword.amashort}} necesita que se definan dos variables de entorno. Cuando desarrolle código del lado del servidor en {{site.data.keyword.Bluemix_notm}}, la infraestructura de {{site.data.keyword.Bluemix_notm}} proporciona estas variables.
 
-* `VCAP_SERVICES`: contiene información sobre servicios que están enlazados a la aplicación de fondo móvil.
-* `VCAP_APPLICATION`: contiene información sobre la aplicación de fondo móvil.
+* `VCAP_SERVICES`: contiene información sobre servicios que están enlazados a la aplicación de fondo móvil. 
+* `VCAP_APPLICATION`: contiene información sobre la aplicación de fondo móvil. 
 
 Para utilizar {{site.data.keyword.amashort}} con un servidor de desarrollo local, debe añadir estas variables manualmente.
 
@@ -141,7 +144,7 @@ NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest* request = [IMFResourceRequest
+IMFResourceRequest *request =  [IMFResourceRequest
 				requestWithPath:requestPath
 				method:@"GET"];
 

@@ -4,23 +4,28 @@ copyright:
   years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # 设置 Cordova 插件
 {: #getting-started-cordova}
 
+*上次更新时间：2016 年 5 月 25 日*
+{: .last-updated}
+
 在 Cordova 应用程序中安装 {{site.data.keyword.amashort}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+{:shortdesc}
 
 ## 开始之前
 {: #before-you-begin}
+您必须具有：
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
 
-- 必须具有受 {{site.data.keyword.amashort}} 服务保护的移动后端的实例。有关如何创建移动后端的更多信息，请参阅[入门](getting-started.html)。
-
-- 创建 Cordova 应用程序或使用现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
+* Cordova 应用程序或使用现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
 
 ## 安装 {{site.data.keyword.amashort}} Cordova 插件
 {: #getting-started-cordova-plugin}
 
-{{site.data.keyword.amashort}} Client SDK for Cordova 是一种 Cordova 插件，用于打包本机 {{site.data.keyword.amashort}} 客户端 SDK。它使用 Cordova 命令行界面 (CLI) 和 `npmjs`（Cordova 项目的插件存储库）进行分发。Cordova CLI 会从存储库自动下载插件，并将其提供给 Cordova 应用程序。
+针对 Cordova 的 {{site.data.keyword.amashort}} 客户端 SDK 是一种 Cordova 插件，用于打包本机 {{site.data.keyword.amashort}} 客户端 SDK。它使用 Cordova 命令行界面 (CLI) 和 `npmjs`（Cordova 项目的插件存储库）进行分发。Cordova CLI 会从存储库自动下载插件，并将其提供给 Cordova 应用程序。
 
 1. 将 Android 和 iOS 平台添加到 Cordova 应用程序。在命令行中运行以下一个或两个命令：
 
@@ -50,8 +55,8 @@ copyright:
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
-     <!-- add deployment target declaration -->
+		<preference name="deployment-target" value="8.0"/>
+		<!-- add deployment target declaration -->
 	</platform>
 	```
 

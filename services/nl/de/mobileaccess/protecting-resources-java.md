@@ -7,6 +7,11 @@ copyright:
 
 # Liberty for Java-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-liberty}
+
+*Letzte Aktualisierung: 15. April 2016*
+{: .last-updated}
+
+
 Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Liberty for Java&trade;-Anwendungen zur Verfügung, die in {{site.data.keyword.Bluemix}} bereitgestellt werden. Sie müssen Ihren Liberty-Server mit dem OAuthTAI-Modul instrumentieren, um den Server gegen unbefugten Zugriff zu schützen und Überwachungsdaten zu erfassen.
 
 ## Vorbereitungen
@@ -56,7 +61,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK stellt ein OAuthTAI-Modul für Lib
 	</application>
 	```
 
-1. Fügen Sie die folgende Eigenschaft, die die {{site.data.keyword.amashort}}-Service-URL enthält, in den Umgebungsvariablen Ihrer Back-End-Anwendung hinzu. Sie können die URL der Datei `manifest.yml` oder `server.env` hinzufügen.
+1. Fügen Sie die folgende Eigenschaft, die die {{site.data.keyword.amashort}}-Service-URL enthält, den Umgebungsvariablen Ihrer Back-End-Anwendung hinzu. Sie können die URL der Datei `manifest.yml` oder `server.env` hinzufügen.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver

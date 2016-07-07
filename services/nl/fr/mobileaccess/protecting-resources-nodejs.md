@@ -1,11 +1,15 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
 # Protection des ressources Node.js à l'aide de {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
+
+*Dernière mise à jour : 15 avril 2016*
+{: .last-updated}
 
 Vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} pour protéger les ressources dans votre appli Node.js.
 
@@ -19,11 +23,11 @@ voir [Expressjs.com](http://expressjs.com/).
 ### A propos du SDK serveur de {{site.data.keyword.amashort}}
 {: #about}
 
-Le SDK serveur de {{site.data.keyword.amashort}} fournit une stratégie de passeport `MCABackendStrategy` destinée aux applications de back end déployées sur IBM {{site.data.keyword.Bluemix_notm}}. Pour protéger votre appli des accès non autorisés et obtenir des informations de surveillance, vous devez instrumenter votre serveur Node.js avec `MCABackendStrategy`. Le
+Le SDK serveur de {{site.data.keyword.amashort}} fournit une stratégie de passeport `MCABackendStrategy` à utiliser dans les applications de back end déployées sur IBM {{site.data.keyword.Bluemix_notm}}. Pour protéger votre appli des accès non autorisés et obtenir des informations de surveillance, vous devez instrumenter votre serveur Node.js avec `MCABackendStrategy`. Le
 module npm `bms-mca-token-validation-strategy` fournit la stratégie de passeport `MCABackendStrategy` et la méthode de
 vérification pour valider le jeton d'accès et le jeton d'ID émis par {{site.data.keyword.amashort}}. Ce module fournit aussi automatiquement les informations de surveillance relatives aux événements de sécurité.
 
-Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastructure `Passport` pour mettre en oeuvre l'autorisation. Pour plus d'informations, voir [Passportjs.org](http://passportjs.org/).
+Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastructure `Passport` pour mettre en oeuvre l'autorisation.  Pour plus d'informations, voir [Passportjs.org](http://passportjs.org/).
 
 ### Installation du SDK serveur de {{site.data.keyword.amashort}}
 {: #protecting-resources-serversdk}

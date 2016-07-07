@@ -7,10 +7,21 @@ copyright:
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} を使用したクラウド・リソースの保護
+# {{site.data.keyword.amashort}} サービスを使用したバックエンド・リソースの保護
 {: #protecting-resources}
+
+*最終更新日: 2016 年 4 月 30 日*
+{: .last-updated}
+
+
 {{site.data.keyword.amashort}} サービスでは、モバイル対応の OAuth セキュリティーおよびモニタリングにより、{{site.data.keyword.Bluemix_notm}} 上で稼働している、Node.js および Java ベースのバックエンド・アプリケーションを保護することができます。
 {:shortdesc}
+
+## 開始する前に
+{: #before-you-begin}
+開始する前に、Node.js サービスを作成してください。
+
+
 ## 許可フィルター
 {: #auth-filter}
 {{site.data.keyword.amashort}} Server SDK には、バックエンド・アプリケーションを保護するために使用できる許可フィルターがあります。許可フィルターは着信要求を代行受信し、許可ヘッダーがあるかどうか確認します。許可ヘッダーがないか無効な場合、フィルターは HTTP 401 で応答を返します。{{site.data.keyword.amashort}} Client SDK は、{{site.data.keyword.amashort}} Server SDK によって返される HTTP 401 応答の代行受信方法を知っており、認証フローをトリガーします。
@@ -20,9 +31,9 @@ copyright:
 
 着信許可ヘッダーは、それぞれの許可フィルターによって処理されます。フィルターは、アクセス・トークンと ID トークンの署名、有効期限、および構造保全性を検証します。検証にパスすると、セキュリティー・コンテキスト・オブジェクトが要求オブジェクトに追加されます。セキュリティー・コンテキストの参照は、それぞれの API を使用して取得できます。
 
-セキュリティー・コンテキストには、以下の構造で保管されたサブジェクト、ユーザー、デバイス、およびアプリケーション情報が含まれています。```JSON
-{
-    "imf.sub":"myclientid",
+セキュリティー・コンテキストには、以下の構造で保管されたサブジェクト、ユーザー、デバイス、およびアプリケーション情報が含まれています。
+```JSON
+{"imf.sub":"myclientid",
     "imf.user": {
         "id":"user-name",
         "authBy":"myrealm",

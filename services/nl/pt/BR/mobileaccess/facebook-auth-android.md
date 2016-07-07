@@ -4,17 +4,28 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
-# Ativando a autenticação do Facebook em apps Android
+# Ativando a autenticação do Facebook para apps Android
 {: #facebook-auth-android}
+
+*Última atualização: 15 de junho de 2016*
+{: .last-updated}
+
+
 Para usar o Facebook como provedor de identidade nos aplicativos Android, inclua e configure a plataforma Android do aplicativo Facebook.
+{:shortdesc}
 
 ## Antes de Começar
 {: #facebook-auth-android-before}
- * Deve-se ter um recurso que seja protegido pelo {{site.data.keyword.amashort}} e um projeto do Android que seja instrumentado com o {{site.data.keyword.amashort}} client SDK. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html) e [Configurando o Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html).  
- * Proteja manualmente seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
- * Crie um ID do aplicativo Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+Você deve ter:
+* Um projeto do Android que esteja configurado para trabalhar com Gradle. O projeto não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Um ID de aplicativo do Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
+**Importante:** não é necessário instalar separadamente o Facebook SDK (`com.facebook.FacebookSdk`). O Facebook SDK é instalado automaticamente pelo Gradle quando você inclui o {{site.data.keyword.amashort}} Facebook client SDK. É possível ignorar a etapa **Incluir o Facebook SDK em seu projeto** no Portal do Desenvolvedor do Facebook.
 
 ## Configurando um aplicativo Facebook para a plataforma Android
 {: #facebook-auth-android-config}
@@ -96,14 +107,12 @@ Seu projeto Android pode ter dois arquivos `build.gradle`: para o projeto e para
 	}
 ```
 
-	É possível remover a dependência no módulo `core` do grupo `com.ibm.mobilefirstplatform.clientsdk.android`, se estiver em seu arquivo. O módulo `facebookauthentication` faz download do módulo `core` automaticamente.
-
-  Após o salvamento de suas atualizações, o módulo `facebookauthentication` faz download e instala o Facebook SDK no projeto do Android.
+	**Nota:** é possível remover a dependência no módulo `core` do grupo `com.ibm.mobilefirstplatform.clientsdk.android`, se estiver em seu arquivo. O módulo `facebookauthentication` faz download do módulo `core`, assim como do próprio SDK do Facebook, automaticamente. Depois que você salva as atualizações, o módulo `facebookauthentication` faz download e instala todos os SDKs necessários no projeto do Android.
 
 
 1. Sincronize seu projeto com o Gradle. Clique em **Ferramentas > Android > Sincronizar projeto com arquivos do Gradle**.
 
-1. Abra o arquivo `res/values/strings.xml` e inclua uma sequência `facebook_app_id` que contenha seu ID do aplicativo Facebook:
+1. Abra o arquivo `res/values/strings.xml` e inclua uma sequência `facebook_app_id` que contenha o ID de aplicativo do Facebook:
 
 	```XML
 	<resources>
@@ -124,7 +133,9 @@ Seu projeto Android pode ter dois arquivos `build.gradle`: para o projeto e para
 	```XML
 	<application .......>
 
-		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+		<meta-data
+			android:name="com.facebook.sdk.ApplicationId"
+			android:value="@string/facebook_app_id"/>
 
 		<activity ...../>
 		<activity ...../>
@@ -173,16 +184,16 @@ rota (`applicationRoute`).<br/>
 	}
 ```
 
-## Testando a Autenticação
-Após a inicialização do client SDK e o registro do Gerenciador de autenticação do Facebook, será possível começar a fazer solicitações para seu backend móvel.
+## Testando a autenticação
+Após a inicialização do client SDK e o registro do Gerenciador de autenticação do Facebook, é possível começar a fazer solicitações para seu backend móvel.
 
-### Antes de Começar
+### Antes de iniciar
 {: #facebook-auth-android-testing-before}
 Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra
 a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel criado com o Modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo Android para fazer solicitação para o mesmo terminal. Inclua
 o código a seguir depois de inicializar `BMSClient` e registrar

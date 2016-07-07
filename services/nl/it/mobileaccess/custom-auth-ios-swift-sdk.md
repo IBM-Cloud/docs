@@ -8,13 +8,15 @@ copyright:
 # Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)
 {: #custom-ios}
 
-Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
+Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.  La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
+
+**Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore di questa nuova SDK Swift.
 
 ## Prima di cominciare
 {: #before-you-begin}
 
 Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
- * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configurazione dell'SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -38,46 +40,8 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 
  1. Fai clic su **Save**.
 
-## Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS
- {: #custom-auth-ios-sdk}
 
-### Installazione di CocoaPods
- {: #custom-auth-cocoapods}
 
- L'SDK client {{site.data.keyword.amashort}} è distribuito con CocoaPods, un gestore dipendenze per i progetti iOS. CocoaPods scarica automaticamente le risorse utente dai repository e le rende disponibili alla tua applicazione iOS.
-
- 1. Apri il terminale ed esegui il comando `pod --version`. Se già hai CocoaPods installato, viene visualizzato il numero versione. Puoi passare direttamente alla sezione successiva di questa esercitazione.
-
- 1. Installa CocoaPods eseguendo `sudo gem install cocoapods`. Fai riferimento al [sito web CocoaPods](https://cocoapods.org/) nel caso ti occorrano ulteriori indicazioni.
-
- 1. Chiudi XCode.
-
- 1. Apri il terminale e vai (con `cd`) alla directory del tuo progetto.
-
- 1.  Esegui `pod init`.
-
-### Installazione dell'SDK client con CocoaPods
-{: #custom-ios-sdk-cocoapods}
-
-Utilizza il gestore dipendenze CocoaPods per installare l'SDK client {{site.data.keyword.amashort}}.
-
-1. Apri il terminale e passa alla directory root del tuo progetto iOS.
-
-1. Modifica `Podfile` e aggiungi le seguenti righe.
-
- ```
- use_frameworks!
- pod 'BMSSecurity'
- ```
- **Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
-
-1. Dalla riga di comando, esegui `pod install`.
-CocoaPods installa le dipendenze aggiunte. Vengono visualizzati lo stato di avanzamento e quali componenti sono stati aggiunti.
-
- **Importante**: devi ora aprire il tuo progetto utilizzando un file xcworkspace che è stato generato da CocoaPods. Di norma, il
-nome è `{il-tuo-nome-progetto}.xcworkspace`.  
-
-1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
 
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
@@ -95,16 +59,20 @@ Inizializza l'SDK passando i parametri `applicationRoute` e `applicationGUID`. U
 ```
 
 1. Inizializza l'SDK client {{site.data.keyword.amashort}}, modifica il gestore autorizzazione in modo che sia MCAAuthorizationManager e definisci un delegato di autenticazione e registralo. Sostituisci `<applicationRoute>` e `<applicationGUID>` con
-i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
+i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. 
+
+  Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona viso (![Viso](/face.png "Viso")) nell'angolo in alto a sinistra del dashboard.
+
+  Per `<yourProtectedRealm>`, utilizza il **Realm name** che hai definito nel tile **Custom** del dashboard {{site.data.keyword.amashort}}.
 
  ```Swift
  let backendURL = "<applicationRoute>"
  let backendGUID = "<applicationGUID>"
- let customRealm = "<area di autenticazione della tua risorsa protetta>"
+ let customRealm = "<yourProtectedRealm>"
 
  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<regione Bluemix applicazione>)
+ BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
 
  BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
 
@@ -112,7 +80,7 @@ i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mob
  class MyAuthDelegate : AuthenticationDelegate {
       func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
           print("onAuthenticationChallengeReceived")
-              let answer = <Una risposta alla richiesta di verifica inviata dal backend (dovrebbe essere di tipo [String:AnyObject])>
+              let answer = <An answer to the challenge sent by the backend (Should be of type [String:AnyObject])>
               authContext.submitAuthenticationChallengeAnswer(answer)
       }
 

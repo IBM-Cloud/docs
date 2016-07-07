@@ -8,6 +8,9 @@ copyright:
 # {{site.data.keyword.amashort}} mit einer lokalen Entwicklungsumgebung verwenden
 {: #protecting-local}
 
+*Letzte Aktualisierung: 15. April 2016*
+{: .last-updated}
+
 Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{site.data.keyword.amashort}}-Service verwendet, der in {{site.data.keyword.Bluemix}} ausgeführt wird. Insbesondere können Sie das {{site.data.keyword.amashort}}-Server-SDK verwenden, wenn Sie serverseitigen Code mit einem lokalen Entwicklungsserver wie Node.js entwickeln.
 
 Das {{site.data.keyword.amashort}}-Server-SDK setzt voraus, dass zwei Umgebungsvariablen festgelegt werden. Wenn Sie serverseitigen Code in {{site.data.keyword.Bluemix_notm}} entwickeln, werden diese Variablen von der {{site.data.keyword.Bluemix_notm}}-Infrastruktur bereitgestellt.
@@ -15,7 +18,7 @@ Das {{site.data.keyword.amashort}}-Server-SDK setzt voraus, dass zwei Umgebungsv
 * `VCAP_SERVICES`: Enthält Informationen zu Services, die an die mobile Back-End-Anwendung gebunden sind.
 * `VCAP_APPLICATION`: Enthält Informationen zur mobilen Back-End-Anwendung.
 
-Zur Verwenden von {{site.data.keyword.amashort}} mit einem lokalen Entwicklungsserver müssen Sie diese Umgebungsvariablen manuell hinzufügen.
+Zur Verwendung von {{site.data.keyword.amashort}} mit einem lokalen Entwicklungsserver müssen Sie diese Umgebungsvariablen manuell hinzufügen.
 
 1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard Ihres mobilen Back-Ends, das mit dem {{site.data.keyword.amashort}}-Service geschützt wird.
 
@@ -141,9 +144,8 @@ NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
 
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
+IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
+																method:@"GET"];
 
 [request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
 	if (error){

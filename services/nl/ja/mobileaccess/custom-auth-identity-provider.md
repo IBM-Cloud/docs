@@ -217,7 +217,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 
 ## 次のステップ
 {: #next-steps}
-* [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
-* [Android 用のカスタム認証の構成 ](custom-auth-android.html)
-* [iOS 用のカスタム認証の構成 ](custom-auth-ios.html)
-* [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)
+* [カスタム認証用の {{site.data.keyword.amashort}} の構成](custom-auth-config-mca.html)
+* [Android 用のカスタム認証の構成](custom-auth-android.html)
+* [iOS 用のカスタム認証の構成](custom-auth-ios.html)
+* [Cordova 用のカスタム認証の構成](custom-auth-cordova.html)

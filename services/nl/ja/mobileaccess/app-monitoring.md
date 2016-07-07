@@ -7,10 +7,16 @@ copyright:
 
 # アプリケーションのモニター
 {: #app-monitoring}
+*最終更新日: 2016 年 5 月 6 日*
+{: .last-updated}
 
 {{site.data.keyword.amafull}} は、セキュリティー機能に加えて、モバイル・アプリケーション向けのモニターおよび分析も提供します。{{site.data.keyword.amashort}} Client SDK を使用して、クライアント・ログおよびモニター・データを記録することができます。開発者は、このデータをいつ {{site.data.keyword.amashort}} サービスに送信するのかを制御できます。{{site.data.keyword.amashort}} サービスで発生するすべてのセキュリティー・イベント (認証の成功または失敗など) が自動的にログに記録されます。
 
 データが {{site.data.keyword.amashort}} に送信されたら、{{site.data.keyword.amashort}} モニタリング・ダッシュボードを使用して、モバイル・アプリケーション、デバイス、およびクライアント・ログの分析についての洞察を得ることができます。{{site.data.keyword.amashort}} によって保護されているリソースに対してアプリケーションが行った要求についての情報は、デフォルトで記録されます。
+
+
+**注**: {{site.data.keyword.amashort}} サービスのモニター機能は、新しい [{{site.data.keyword.mobileanalytics_short}} サービス](https://console.ng.bluemix.net/catalog/services/mobile-analytics)に移行される予定です。新しい Swift SDK は、豊富な分析機能を提供するこの新しい {{site.data.keyword.mobileanalytics_short}} サービスを利用します。{{site.data.keyword.mobileanalytics_short}} サービスは現在は試験段階であり、今年後半に一般出荷可能になる予定です。{{site.data.keyword.mobileanalytics_short}} が一般出荷可能になると {{site.data.keyword.amashort}} サービスのモニター機能は廃止される予定であるため、新しい {{site.data.keyword.mobileanalytics_short}} サービスおよび Swift SDK を使用するようにアプリケーションを移行するための調査を行うことをお勧めします。
+
 
 自動的に記録されるデータには、認証の数、新規デバイス数、および新規ユーザー数などの情報があります。それに加えて、以下の情報を報告するように {{site.data.keyword.amashort}} Client SDK を構成できます。
 

@@ -4,12 +4,21 @@ copyright:
   years: 2015, 2016
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 
 # Autenticazione degli utenti con le credenziali Facebook
 {: #facebook-auth-overview}
-Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile possono utilizzare le loro credenziali Facebook per l'autenticazione.
 
-**Importante**: non devi necessariamente installare separatamente l'SDK Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}.
+*Ultimo aggiornamento: 15 giugno 2016*
+{: .last-updated}
+
+Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile possono utilizzare le loro credenziali Facebook per l'autenticazione.
+{:shortdesc}
+
+**Importante**: non devi necessariamente installare separatamente l'SDK fornita da Facebook. L'SDK Facebook viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}.
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #mca-facebook-sequence}
@@ -48,7 +57,7 @@ Se ti viene presentata una scelta di selezione di un'applicazione iOS o Android,
 ## Fasi successive
 {: #next-steps}
 
-* [Abilitazione dell'autenticazione Facebook nelle applicazioni Android](facebook-auth-android.html)
-* [Abilitazione dell'autenticazione Facebook nelle applicazioni iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
-* [Abilitazione dell'autenticazione Facebook nelle applicazioni iOS (SDK Objective-C)](facebook-auth-ios.html)
-* [Abilitazione dell'autenticazione Facebook nelle applicazioni Cordova](facebook-auth-cordova.html)
+* [Abilitazione dell'autenticazione Facebook per le applicazioni Android](facebook-auth-android.html)
+* [Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
+* [Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Objective-C - Obsoleto)](facebook-auth-ios.html)
+* [Abilitazione dell'autenticazione Facebook per le applicazioni Cordova](facebook-auth-cordova.html)

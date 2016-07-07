@@ -5,71 +5,68 @@ copyright:
 
 ---
 
-# Android アプリでの Google 認証の使用可能化
+# Android アプリ用の Google 認証の使用可能化
 {: #google-auth-android}
 
 ## 開始する前に
 {: #before-you-begin}
+以下が必要です。
 
-* {{site.data.keyword.amashort}} によって保護されているリソース、および {{site.data.keyword.amashort}} Client SDK が装備された Android プロジェクトが必要です。詳しくは、[{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)および [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)を参照してください。  
-* {{site.data.keyword.amashort}} Server SDK を使用して手作業でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+* Gradle と連動して機能するように構成された、Android Studio 内の Android プロジェクト。{{site.data.keyword.amashort}} Client SDK が装備されている必要はありません。  
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
 
-## Android プラットフォーム用の Google プロジェクトの構成
-{: #google-auth-android-project}
-Google を ID プロバイダーとして使用することを開始するには、Google Developer Console 内にプロジェクトを作成します。プロジェクト作成の一部は、Google のクライアント ID を取得することです。Google クライアント ID は、Google の認証で使用される、アプリケーションの固有 ID です。
+{{site.data.keyword.amashort}} Android アプリ用に Google 認証をセットアップするには、以下をさらに構成する必要があります。
+* {{site.data.keyword.Bluemix_notm}} アプリケーション
+* Android Studio プロジェクト
 
-1. [Google Developer Console](https://console.developers.google.com)にプロジェクトを作成します。既にプロジェクトがある場合は、プロジェクト作成について説明している手順をスキップし、資格情報の追加を開始してください。
-   1.    新規プロジェクトのメニューを開きます。
+## Google Developer Console でのプロジェクトの作成
+{: #create-google-project}
 
-         ![image](images/FindProject.jpg)
+Google を ID プロバイダーとして使用し始めるには、[Google Developer Console](https://console.developers.google.com) にプロジェクトを作成します。
+プロジェクト作成の一環として、Google Client ID を取得します。Google Client ID は、Google 認証によって使用される、アプリケーション用の固有 ID であり、{{site.data.keyword.Bluemix_notm}} アプリケーションのセットアップに必要です。
 
-   2.    **「プロジェクトの作成 (Create a project)」**をクリックします。
+コンソールから以下を実行します。
 
-         ![image](images/CreateAProject.jpg)
-
-
-   1. **「Social API」**リストから、**「Google+ API」**を選択します。
-
-     ![image](images/chooseGooglePlus.jpg)
-
-   1. 次の画面から、**「使用可能 (Enable)」**をクリックします。
-
-1. **「同意取得」**タブを選択し、ユーザーに表示する製品名を指定します。その他の値はオプションです。**「保存」**をクリックします。
-
-    ![image](images/consentScreen.png)
-
-1. **「資格情報」**リストから、「OAuth クライアント ID」を選択します。
-
-     ![image](images/chooseCredentials.png)
+1. **Google+** API を使用してプロジェクトを作成します。
+2. **OAuth** ユーザー・アクセス権限を追加します。
+3. 資格情報を追加する前に、プラットフォーム (Android) を選択する必要があります。
+4. 資格情報を追加します。資格情報の作成を完了するには、**署名証明書のフィンガープリント**を追加する必要があります。
 
 
 
-1. アプリケーション・タイプを選択します。**「Android」**をクリックします。Android クライアントに、意味のある名前を指定します。
+### 署名証明書のセットアップ
+Google がユーザーのアプリケーションの認証性を検証するためには、署名証明書の指紋を指定する必要があります。
 
-1. Google がユーザーのアプリケーションの認証性を検証するためには、署名証明書の指紋を指定する必要があります。
+Android OS では、Android デバイスにインストールされたすべてのアプリケーションがデベロッパー証明書によって署名されている必要があります。Android アプリケーションは、デバッグおよびリリースという 2 つのモードで構築できます。通常は、デバッグ・モード用とリリース・モード用に別々の証明書を用意することが推奨されます。デバッグ・モードでの Android アプリケーションの署名に使用される証明書は、Android SDK にバンドルされています。Android SDK は、通常、Android Studio によって自動的にインストールされます。アプリケーションを Google Play にリリースする場合は、通常ユーザー自身で生成する、別の証明書を使用してアプリに署名する必要があります。詳しくは、[signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html) を参照してください。
 
-	 **Android セキュリティーの追加情報:** Android OS では、Android デバイス上にインストールされているすべてのアプリケーションがデベロッパー証明書によって署名されていることが要求されます。Android アプリケーションは、デバッグおよびリリースという 2 つのモードで構築できます。通常は、デバッグ・モード用とリリース・モード用に別々の証明書を用意することが推奨されます。デバッグ・モードでの Android アプリケーションの署名に使用される証明書は、Android SDK にバンドルされています。Android SDK は、通常、Android Studio によって自動的にインストールされます。アプリケーションを Google Play にリリースする場合は、通常ユーザー自身で生成する、別の証明書を使用してアプリに署名する必要があります。詳しくは、[signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html) を参照してください。
+開発環境用の証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイル内に保管されています。鍵ストアのデフォルト・パスワードは、`android` です。この証明書は、デバッグ・モードでのアプリケーションの構築に使用されます。
 
-1. 開発環境用の証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイル内に保管されています。鍵ストアのデフォルト・パスワードは、`android` です。この証明書は、デバッグ・モードでのアプリケーションの構築に使用されます。
-
-     1. 署名証明書の指紋を取得するには、以下のように指定します。
+1. 署名証明書のフィンガープリントをクライアント開発環境から取得します。
 
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
 	リリース・モードの証明書の鍵ハッシュも同じ構文を使用して取得できます。コマンド内の別名と鍵ストアのパスを置換してください。
 
-1. **「Certificate Fingerprints」**の下で `SHA1` で始まる行を見つけます。**keytool** コマンドを実行して取得した指紋を Google Developer Console にコピーします。
+1. Google Console の「Credential」ダイアログで、**「Certificate Fingerprints」**の下で `SHA1` で始まる行を見つけます。**keytool** コマンドを実行して取得したフィンガープリント値をテキスト・ボックスにコピーします。
 
-1. Android アプリケーションのパッケージ名を指定します。Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、`<manifest package="{your-package-name}">` を探してください。完了したら、**「Create (作成)」**をクリックします。
+###パッケージ名
 
-Google クライアント ID を示すダイアログが表示されます。この値のメモを取ります。この値を {{site.data.keyword.Bluemix}} に登録する必要があります。
+1. 「Credentials」ダイアログで、Android アプリケーションのパッケージ名を入力します。 
+
+  Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、`<manifest package="{your-package-name}">` を探してください。 
+
+1. 完了したら、**「Create (作成)」**をクリックします。**これで資格情報の作成は完了します。**
+
+###Google Client ID
+
+資格情報が正常に作成されると、資格情報ページに Google Client ID が表示されます。この値のメモを取ります。{{site.data.keyword.Bluemix}} アプリケーション内でこの値を登録する必要があります。
 
 
 ## Google 認証用の {{site.data.keyword.amashort}} の構成
 {: #google-auth-android-config}
 
-Android の Google クライアント ID を取得したので、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を有効にすることができます。
+これで Android 用の Google Client ID を取得したので、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を使用可能にすることができます。
 
 1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
 
@@ -79,7 +76,7 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 
 1. **「Google」**タイルをクリックします。
 
-1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Google クライアント ID を指定し、**「保存」**をクリックします。
+1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Google Client ID を指定し、**「保存」**をクリックします。
 
 ## Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #google-auth-android-sdk}
@@ -87,7 +84,6 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 1. Android Studio に戻ります。
 
 1. アプリケーション・モジュールの `build.gradle` ファイルを開きます。
-
 
 	Android プロジェクトは、2 つの `build.gradle` ファイル (1 つはプロジェクト用で、もう 1 つはアプリケーション・モジュール用) を持っている場合があります。アプリケーション・モジュール用を使用します。
 
@@ -104,7 +100,7 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 	}
 	```
 
-	`com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がある場合は削除することができます。`googleauthentication` モジュールは、ユーザーの代わりに自動的にそれをダウンロードします。`googleauthentication` モジュールは、Google SDK をダウンロードし、Android プロジェクトにインストールします。
+	**注:** `com.ibm.mobilefirstplatform.clientsdk.android` グループの `core` モジュールへの依存関係がある場合は削除することができます。`googleauthentication` モジュールは、ユーザーの代わりに自動的にそれをダウンロードします。`googleauthentication` モジュールは、Google SDK をダウンロードし、Android プロジェクトにインストールします。
 
 1. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして Gradle とプロジェクトを同期します。
 
@@ -115,7 +111,7 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
@@ -145,15 +141,16 @@ Android の Google クライアント ID を取得したので、{{site.data.key
 
 ## 認証のテスト
 {: #google-auth-android-test}
-Client SDK が初期化され、Google 認証マネージャーが登録されたら、モバイル・バックエンドへの要求の実行を開始できます。
+Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
 ### 開始する前に
 {: #google-auth-android-testing-before}
-MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがあり、`/protected` エンドポイントに {{site.data.keyword.amashort}} によって保護されたリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
-1. `{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`) を開いて、デスクトップ・ブラウザーで、モバイル・バックエンドの保護エンドポイントに要求を送信してみてください。MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンドの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
+ MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
-1. Android アプリケーションを使用して同じエンドポイントに対する要求を作成します。`BMSClient` インスタンスを初期化し、`GoogleAuthenticationManager` を登録した後、以下のコードを追加します。
+1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` インスタンスを初期化し、`GoogleAuthenticationManager` を登録した後、以下のコードを追加します。
 
 	```Java
 	Request request = new Request("/protected", Request.GET);
@@ -176,24 +173,11 @@ MobileFirst Services Starter ボイラープレートを使用して作成され
 	});
 ```
 
-1. アプリケーションを実行します。Google のログイン画面が表示されます。ログイン後、アプリは、リソースへのアクセス許可を要求します。
+1. アプリケーションを実行します。Google のログイン画面が表示されます。ログイン後、アプリは、リソースへのアクセス許可を要求します。![image](images/android-google-login.png)
 
-	![image](images/android-google-login.png)
+	ご使用の Android デバイスと、現在 Google にログインしているかどうかによって、UI が異なる可能性があります。**「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
+1. 	要求が正常に実行されると、LogCat ツールに以下の出力が表示されます。![image](images/android-google-login-success.png)
 
-	ご使用の Android デバイスと、現在 Google にログインしているかどうかによって、UI が異なる可能性があります。
-
-  **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
-
-1. 	要求が正常に実行されると、LogCat ツールに以下の出力が表示されます。
-
-	![image](images/android-google-login-success.png)
-
- 次のコードを追加してログアウト機能を追加することもできます。
-
- ```Java
+ 次のコードを追加してログアウト機能を追加することもできます。```Java
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
-
- ユーザーが Google にログインした後で、このコードを呼び出すと、そのユーザーは Google からログアウトされます。そのユーザーが再度ログインしようとする場合は、再度のログイン先での、Google アカウントを選択する必要があります。以前にログインした Google ID を使用してログインしようとする場合は、資格情報を求めるプロンプトが再度ユーザーに出されることはありません。ログインの資格情報を求めるプロンプトが再度出されるようにするには、ユーザーは、Android デバイスから Google アカウントを削除する必要があります。
-
- ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。
+ ```ユーザーが Google にログインした後で、このコードを呼び出すと、そのユーザーは Google からログアウトされます。そのユーザーが再度ログインしようとする場合は、再度のログイン先での、Google アカウントを選択する必要があります。以前にログインした Google ID を使用してログインしようとする場合は、資格情報を求めるプロンプトが再度ユーザーに出されることはありません。ログインの資格情報を求めるプロンプトが再度出されるようにするには、ユーザーは、Android デバイスから Google アカウントを削除する必要があります。ログアウト機能に渡される `listener` の値は、`ヌル`にすることができます。

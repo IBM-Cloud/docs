@@ -4,16 +4,18 @@ copyright:
   years: 2015, 2016
   
 ---
-# Utilizzo di IMFURLProtocol nelle applicazioni iOS
+# Invio di richieste con IMFURLProtocol
 {: #imfurl}
-Nei casi avanzati, potresti non essere in grado di utilizzare la classe `IMFResourceRequest` per inviare richieste alle risorse protette, come ad esempio quando una richiesta a una risorsa protetta viene inviata da codice di terze parti. Una possibile soluzione consiste nell'utilizzare l'API `IMFURLProtocol`, insieme alla chiamata `NSURLRequest (NSMutableURLRequest)` standard.
+In alcuni casi, potresti non essere in grado di utilizzare la classe `IMFResourceRequest` per inviare richieste alle risorse protette, come ad esempio quando una richiesta a una risorsa protetta viene inviata da codice di terze parti. Una possibile soluzione consiste nell'utilizzare l'API `IMFURLProtocol`, insieme alla chiamata `NSURLRequest (NSMutableURLRequest)` standard.
+
+L'API  `IMFURLProtocol` è disponibile solo dall'SDK Objective-C {{site.data.keyword.amashort}}.
 
 ## Installazione del pod `IMFURLProtocol`
 {: #imfurl-pod}
 
 Puoi utilizzare CocoaPods per installare il pod `IMFURLProtocol`. Puoi quindi fare riferimento a `IMFURLProtocol.h` dal tuo progetto iOS.
 
-## Invio di richieste con l'API IMFURLProtocol
+## Invio di richieste con l'API `IMFURLProtocol`
 {: #imfurl-send}
 
 1. Importa il file `IMFURLProtocol.h` nella classe che stai utilizzando per inviare la richiesta.

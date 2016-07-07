@@ -30,8 +30,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 为了使认证过程实现最大的灵活性，定制身份提供者有权访问请求主体中移动客户端发送的所有 HTTP 头。提供的头的格式如下：
 
 ```JavaScript
-{
-    "headers" : {
+{"headers" : {
     	"header1": "value1",  
     	"header2" : "value2"
     }
@@ -72,8 +71,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 {: #custom-handleChallengeAnswer-example}
 
 ```JavaScript
-{
-    "headers" : {
+{"headers" : {
     	"header1": "value1",  
     	"header2" : "value2"
 	},
@@ -97,8 +95,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ### 用户身份对象示例
 {: #custom-user-identity-example}
 ```JavaScript
-{
-    "userName" : "janesmith",
+{"userName" : "janesmith",
     "displayName" : "Jane Smith",
     "attributes" : {
         "Language" : "French",

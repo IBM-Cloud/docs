@@ -1,20 +1,26 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
   
 ---
+{:shortdesc: .shortdesc}
 
 # Configuration du plug-in Cordova
 {: #getting-started-cordova}
 
+*Dernière mise à jour : 25 mai 2016*
+{: .last-updated}
+
 Instrumentez votre application Cordova avec le SDK client de {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+{:shortdesc}
 
 ## Avant de commencer
 {: #before-you-begin}
+Vous devez disposer des éléments suivants :
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 
-- Vous devez disposer d'une instance d'une application de back end mobile protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end mobile, voir [Initiation](getting-started.html).
-
-- Créez une application Cordova ou utilisez un projet existant. Pour plus d'informations sur la configuration de votre application Cordova, consultez le [site Web Cordova](https://cordova.apache.org/).
+* Créez une application Cordova ou utilisez un projet existant. Pour plus d'informations sur la configuration de votre application Cordova, consultez le [site Web Cordova](https://cordova.apache.org/).
 
 ## Installation du plug-in Cordova de {{site.data.keyword.amashort}}
 {: #getting-started-cordova-plugin}
@@ -47,7 +53,7 @@ Le SDK client de {{site.data.keyword.amashort}} pour Cordova est un plug-in Cord
 
 	```XML
 	<platform name="ios">
-    <preference name="deployment-target" value="8.0"/>
+		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
 	</platform>
 	```
@@ -83,7 +89,7 @@ Cancel (Annuler).
 Bridging Header (En-tête de pontage Objective-C) ** et ajoutez le chemin suivant :
 
 			```
-			<nom_de_votre_projet>/Plugins/ibm-mfp-core/Bridging-Header.h
+			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
 			```
 
 		3. Accédez à **Build settings (Paramètres de génération) > Linking (Liaison) > Runpath Search Paths (Chemins de recherche de chemins

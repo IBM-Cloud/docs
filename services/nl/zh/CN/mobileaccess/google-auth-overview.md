@@ -2,12 +2,19 @@
 
 copyright:
   years: 2015, 2016
-  
----
 
-# 使用 Google 认证用户
+---
+{:screen:  .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+
+# 使用 Google 凭证认证用户
 {: #google-auth}
+
+*上次更新时间：2016 年 6 月 15 日*
+
 您可以将 {{site.data.keyword.amashort}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动应用程序用户可以使用自己的 Google 凭证进行认证。
+{:shortdesc}
 
 **重要信息**：您无需单独安装 Google SDK。配置 {{site.data.keyword.amashort}} 客户端 SDK 时，依赖关系管理器会自动安装 Google SDK。
 
@@ -31,9 +38,13 @@ copyright:
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对其进行验证，然后授予对后端资源的访问权。
 
+
+
 ## 后续步骤
 {: #google-auth-nextsteps}
 
-* [在 Android 应用程序中启用 Google 认证](google-auth-android.html)
-* [在 iOS 应用程序中启用 Google 认证](google-auth-ios.html)
-* [在 Cordova 应用程序中启用 Google 认证](google-auth-cordova.html)
+* [启用 Android 应用程序的 Google 认证](google-auth-android.html)
+* [启用 iOS 应用程序 (Swift SDK) 的 Google 认证](google-auth-ios-swift-sdk.html)
+* [启用 iOS 应用程序 (Objective-C SDK) 的 Google 认证](google-auth-ios.html)
+* [启用 Cordova 应用程序的 Google 认证](google-auth-cordova.html)
+

@@ -1,21 +1,27 @@
 ---
 
-Copyright : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# Configuration du SDK Objective-C pour iOS
+# Configuration du SDK Objective-C pour iOS (Déprécié)
 {: #getting-started-ios}
 
-Instrumentez votre application iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+*Dernière mise à jour : 14 juin 2016*
+{: .last-updated}
 
-**Astuce :** Si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Configuration du SDK Swift pour
-iOS](getting-started-ios-swift-sdk.html)
+Instrumentez votre application iOS avec le SDK {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
+{:shortdesc}
+
+**Important :** alors que le SDK Objective-C reste complètement pris en charge et est toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est prévu qu'il soit interrompu plus tard dans l'année et remplacé par le nouveau SDK Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 ## Avant de commencer
 {: #before-you-begin}
-* Vous devez disposer d'une instance d'une application de back end mobile protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end mobile, voir [Initiation](getting-started.html).
-* Vérifiez que Xcode est correctement configuré. Pour plus d'informations sur la configuration de votre environnement de développement iOS, consultez le [site Web Apple Developer](https://developer.apple.com/support/xcode/).
+Vous devez disposer des éléments suivants :
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Un projet Xcode.  
 
 
 ## Installation du SDK client de {{site.data.keyword.amashort}}
@@ -25,6 +31,7 @@ Le SDK {{site.data.keyword.amashort}} est distribué avec CocoaPods, un gestionn
 
 ### Installation de CocoaPods
 {: #install-cocoapods}
+
 1. Ouvrez Terminal et lancez la commande **pod --version**. Si CocoaPods est déjà installé, le numéro de version est affiché. Vous pouvez passer à la section suivante pour installer le SDK.
 
 1. Si CocoaPods n'est pas installé, exécutez la commande :
@@ -68,8 +75,9 @@ aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift :**
 
+	**Swift :**
+	
 	Le SDK client de {{site.data.keyword.amashort}} est implémenté avec Objective-C. Il peut être nécessaire d'ajouter un en-tête de pontage à votre projet Swift :
 
 	1. Cliquez avec le bouton droit sur votre projet dans Xcode, puis sélectionnez **New File... (Nouveau fichier...)**.
@@ -80,7 +88,7 @@ aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'
 	1. Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
-1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}. En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
+1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.  En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 	**Objective-C :**
 
@@ -89,6 +97,7 @@ aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 
 	**Swift :**
 
@@ -104,6 +113,7 @@ Lorsque le SDK client de {{site.data.keyword.amashort}} est initialisé, vous po
 1. Depuis votre navigateur, tentez d'envoyer une demande à un noeud final protégé de votre système de back end mobile. Ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
 <br/>Le noeud final `/protected` d'un système de back end mobile qui a été créé avec le conteneur boilerplate MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Unauthorized` est renvoyé à votre navigateur car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
+
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `IMFClient` :
 
 	**Objective-C :**

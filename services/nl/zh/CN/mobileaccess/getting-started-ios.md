@@ -4,18 +4,24 @@ copyright:
   years: 2015, 2016
 
 ---
+{:shortdesc: .shortdesc}
 
-# 设置 iOS Objective-C SDK
+# 设置 iOS Objective-C SDK（不推荐）
 {: #getting-started-ios}
 
-在 iOS 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+*上次更新时间：2016 年 6 月 14 日*
+{: .last-updated}
 
-**提示：**如果要使用 Swift 开发 iOS 应用程序，请考虑使用 {{site.data.keyword.amashort}} 客户端 Swift SDK。有关详细信息，请参阅[设置 iOS Swift SDK](getting-started-ios-swift-sdk.html)
+在 iOS 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+{:shortdesc}
+
+**重要信息：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序的信息，请参阅[设置 iOS Swift SDK](getting-started-ios-swift-sdk.html)。
 
 ## 开始之前
 {: #before-you-begin}
-* 必须具有受 {{site.data.keyword.amashort}} 服务保护的移动后端的实例。有关如何创建移动后端的更多信息，请参阅[入门](getting-started.html)。
-* 确保正确设置 Xcode。有关如何设置 iOS 开发环境的更多信息，请参阅 [Apple Developer Web 站点](https://developer.apple.com/support/xcode/)。
+您必须具有：
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* Xcode 项目。  
 
 
 ## 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -25,11 +31,13 @@ copyright:
 
 ### 安装 CocoaPods
 {: #install-cocoapods}
+
 1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至下一部分来安装 SDK。
 
 1. 如果未安装 CocoaPods，请运行：
 ```
-sudo gem install cocoapods```
+sudo gem install cocoapods
+```
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -66,8 +74,9 @@ sudo gem install cocoapods```
 	#import <IMFCore/IMFCore.h>
 	```
 
-	**Swift:**
 
+	**Swift：**
+	
 	{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目：
 
 	1. 在 Xcode 中右键单击项目，并选择**新建文件...**。
@@ -81,7 +90,7 @@ sudo gem install cocoapods```
 1. 使用以下代码来初始化 {{site.data.keyword.amashort}} 客户端 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。<br/>
 将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}}“仪表板”中**移动选项**中的值。
 
-	**Objective-C:**
+	**Objective-C：**
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -89,7 +98,8 @@ sudo gem install cocoapods```
 			backendGUID:@"applicationGUID"];
 	```
 
-	**Swift:**
+
+	**Swift：**
 
 	```Swift
 IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
@@ -105,7 +115,7 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 
 1. 使用 iOS 应用程序对同一端点发起请求。初始化 `IMFClient` 后，添加以下代码：
 
-	**Objective-C:**
+	**Objective-C：**
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -123,7 +133,7 @@ IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backend
 	}];
 	```
 
-	**Swift:**
+	**Swift：**
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"

@@ -5,7 +5,7 @@ copyright:
 
 ---
 
-# Usando um provedor de identidade customizado para autenticar usuários
+# Autenticando usuários usando um provedor de identidade customizado
 {: #custom-id}
 É possível criar um provedor de identidade customizado e implementar sua própria lógica para coletar e validar credenciais. Um provedor de identidade customizado é um aplicativo da web que expõe uma interface RESTful. É possível hospedar o provedor de identidade customizado no local ou no {{site.data.keyword.Bluemix}}. O único requisito é que o provedor de identidade customizado deve ser acessível na Internet pública para que possa se comunicar com o serviço {{site.data.keyword.amashort}}.
 
@@ -16,16 +16,16 @@ copyright:
 ![image](images/mca-sequence-custom.jpg)
 
 1. Use o {{site.data.keyword.amashort}} SDK para fazer uma solicitação para seus recursos de backend que são protegidos com o {{site.data.keyword.amashort}} server SDK.
-* O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna HTTP 401 e escopo de autorização.
+* O {{site.data.keyword.amashort}} server SDK detecta uma solicitação não autorizada e retorna HTTP 401 e o escopo de autorização.
 * O {{site.data.keyword.amashort}} client SDK detecta automaticamente o HTTP 401 acima e inicia o processo de autenticação.
-* O {{site.data.keyword.amashort}} client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e solicita a emissão de um cabeçalho de autorização.
+* O {{site.data.keyword.amashort}} client SDK entra em contato com o serviço {{site.data.keyword.amashort}} e pede para emitir um cabeçalho de autorização.
 * O serviço {{site.data.keyword.amashort}} se comunica com o provedor de identidade customizado para iniciar o processo de autenticação.
 * O provedor de identidade customizado retorna um desafio de autenticação para o serviço {{site.data.keyword.amashort}}.
 * O serviço {{site.data.keyword.amashort}} retorna o desafio de autenticação para o {{site.data.keyword.amashort}} client SDK.
 * O {{site.data.keyword.amashort}} client SDK delega a autenticação a uma classe customizada que você criou. Você é responsável por coletar credenciais e fornecê-las de volta para o {{site.data.keyword.amashort}} client SDK.
-* Depois que o desenvolvedor fornecer credenciais para o {{site.data.keyword.amashort}} SDK, elas serão enviadas ao serviço {{site.data.keyword.amashort}} como uma resposta do desafio de autenticação.
+* Depois que o desenvolvedor fornece credenciais para o {{site.data.keyword.amashort}} SDK, elas são enviadas ao serviço {{site.data.keyword.amashort}} como uma resposta de segurança de autenticação.
 * O serviço {{site.data.keyword.amashort}} valida a resposta do desafio de autenticação com o provedor de identidade customizado.
-* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário atual, o dispositivo e o aplicativo.
+* Se a validação for bem-sucedida, o serviço {{site.data.keyword.amashort}} irá gerar um cabeçalho de autorização e o retornará para o {{site.data.keyword.amashort}} client SDK. O cabeçalho de autorização contém dois tokens: um token de acesso contendo informações de permissões de acesso e um token de ID contendo informações sobre o usuário, o dispositivo e o aplicativo atuais.
 * Desse ponto em diante, todas as solicitações feitas com o {{site.data.keyword.amashort}} client SDK terão um cabeçalho de autorização recém-obtido.
 * O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
 * O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
@@ -33,13 +33,13 @@ copyright:
 ## Entendendo os provedores de identidade customizados
 {: #custom-id-about}
 
-Com um provedor de identidade customizado, é possível fornecer desafios de autenticação customizados para serem enviados para o cliente. Com o provedor de identidade customizado, é possível customizar totalmente o fluxo de autenticação.
+Com um provedor de identidade customizado, é possível fornecer desafios de autenticação customizados para serem enviados para o cliente. É possível customizar totalmente o fluxo de autenticação.
 
-Quando você estiver criando um provedor de identidade customizado, será possível:
+Ao criar um provedor de identidade customizado, será possível:
 
 1. Customize um desafio de autenticação para ser enviado pelo serviço {{site.data.keyword.amashort}} para o aplicativo cliente móvel. Um desafio de autenticação é um objeto JSON que contém dados customizados. O cliente móvel pode usar esses dados customizados para customizar fluxos de autenticação.
 
-Exemplo de um desafio de autenticação customizado:
+  Exemplo de um desafio de autenticação customizado:
 
 	```JavaScript
 	{
@@ -54,7 +54,7 @@ Exemplo de um desafio de autenticação customizado:
 
 1. Implemente qualquer fluxo de coleção de credenciais customizado no cliente móvel, incluindo a autenticação em várias etapas e em vários formulários. Da mesma forma que para o desafio de autenticação customizado, deve-se projetar a estrutura de uma resposta de desafio de autenticação customizada.
 
-Exemplo de uma resposta de desafio de autenticação customizada enviada pelo cliente móvel:
+  Exemplo de uma resposta de desafio de autenticação customizada enviada pelo cliente móvel:
 
 	```JavaScript
 	{
@@ -103,7 +103,7 @@ Por padrão, o provedor de identidade customizado é considerado um aplicativo s
 ## Domínio customizado
 {: #custom-id-custom}
 
-Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para lidar com os desafios de autenticação recebidos, crie e registre uma instância de AuthenticationDelegate/AuthenticationListener em seu aplicativo de cliente móvel. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. Ele pode ser usado para identificar que a solicitação está sendo recebida de uma instância de serviço específica do {{site.data.keyword.amashort}}.
+Um provedor de identidade customizado suporta um domínio de autenticação customizado. Para manipular desafios de autenticação recebidos, crie e registre uma instância de `AuthenticationDelegate`/`AuthenticationListener` em seu aplicativo de cliente móvel. Defina o nome do domínio de autenticação customizado ao configurar um provedor de identidade customizado no painel do {{site.data.keyword.amashort}}. Ele pode ser usado para identificar que a solicitação está sendo recebida de uma instância de serviço específica do {{site.data.keyword.amashort}}.
 
 ## Próximas Etapas
 {: #next-steps}
@@ -113,3 +113,4 @@ Um provedor de identidade customizado suporta um domínio de autenticação cust
 * [Configurando a autenticação customizada para iOS (Swift SDK)](custom-auth-ios-swift-sdk.html)
 * [Configurando a autenticação customizada para iOS (Objective-C SDK)](custom-auth-ios.html)
 * [Configurando a autenticação customizada para Cordova](custom-auth-cordova.html)
+

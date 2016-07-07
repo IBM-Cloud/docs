@@ -1,12 +1,17 @@
 ---
 
 copyright:
-  años: 2015, 2016
+  years: 2015, 2016
   
 ---
 
 # Protección de los recursos Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
+
+*Última actualización: 15 de abril de 2016*
+{: .last-updated}
+
+
 El SDK del servidor de {{site.data.keyword.amashort}} proporciona un módulo OAuthTAI para aplicaciones Liberty for Java&trade; que se desplieguen en {{site.data.keyword.Bluemix}}. Debe instrumentar el servidor de Liberty con el módulo OAuthTAI para protegerlo en caso de acceso no autorizado y para obtener información de supervisión.
 
 ## Antes de empezar
@@ -45,7 +50,7 @@ OAuthTAI. El rol de seguridad `TAIUserRole` está correlacionado con un asunto e
 		<securityConstraint httpMethods="GET" securedURLs="/protected/*"/>
 	</usr_OAuthTAI>
 
-	<basicRegistry id="basic" realm="BasicRealm" />
+	<basicRegistry id="basic" realm="BasicRealm"/>
 
 	<application type="war" id="myapp" name="myapp"
 					location="${server.config.dir}/apps/myapp.war">
@@ -122,8 +127,7 @@ La interfaz `WLCredential` proporciona las API para obtener los detalles princip
 
 ```Java
 
-WLCredential callerWLCredential =
-				callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
+WLCredential callerWLCredential = callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
 
 JSONObject securityContext = callerWLCredential.getSecurityContext();
 String userIdentity = securityContext.get("imf.sub");
