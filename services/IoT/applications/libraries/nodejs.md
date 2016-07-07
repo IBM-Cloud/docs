@@ -17,7 +17,7 @@ copyright:
 {: #nodejs}
 
 
-For more information, see:
+For more information, see the following resources:
 - [Client libraries and samples](https://github.com/ibm-messaging/iot-nodejs) in GitHub.
 - [Device samples](https://github.com/ibm-messaging/iot-nodejs/tree/master/samples) in GitHub.
 - [ibmiotf](https://www.npmjs.com/package/ibmiotf) on NPM.
@@ -31,7 +31,7 @@ For more information, see:
 ## Constructor
 {: #constructor}
 
-The constructor builds the application client instance, and accepts a JSON configuration file that contains the following properties:
+The constructor builds the application client instance and accepts a JSON configuration file that contains the following properties:
 
 | Definition     |Description     |
 |----------------|----------------|
@@ -41,7 +41,7 @@ The constructor builds the application client instance, and accepts a JSON confi
 |`auth-token``|API key token|
 |`type``|Specify `shared` to enable shared subscription|
 
-To use Quickstart, the first two properties are required only.
+To use Quickstart, only the first two properties are required.
 
 
 ```
@@ -60,7 +60,7 @@ To use Quickstart, the first two properties are required only.
 ### Using a configuration file
 
 
-Instead of passing the JSON properties directly, you can also use a configuration file, as outlined in the following code sample:
+Instead of passing the JSON properties directly, you can also use a configuration file, which is outlined in the following code sample:
 
 ```
 
@@ -97,18 +97,18 @@ To connect to {{site.data.keyword.iot_short_notm}}, submit a *connect* request, 
 	});
 ```
 
-After successfully connecting to the {{site.data.keyword.iot_short_notm}} service, the application client sends a *connect* event. So all the logic can be implemented inside this callback function.
+After successfully connecting to the {{site.data.keyword.iot_short_notm}} service, the application client sends a *connect* event, so all the logic can be implemented inside this callback function.
 
 
 
-The application client automatically tries to reconnect when it loses connection. When the reconnection is successful, the client emits a *reconnect* event.
+The application client automatically tries to reconnect when it loses connection. When the reconnection is successful, the client sends a *reconnect* event.
 
 
 
 ## Logging
 {: #logging}
 
-By default, only log events of type ```warn``` are recorded. If you want to increase or decrease the  logging level, use the *log.setLevel* function. The supported log levels are:
+By default, only log events of type ```warn``` are recorded. If you want to increase or decrease the  logging level, use the *log.setLevel* function. The following log levels are supported:
 - *trace
 - debug
 - info
@@ -131,7 +131,7 @@ By default, only log events of type ```warn``` are recorded. If you want to incr
 ## Shared subscriptions
 {: #shared_subscriptions}
 
-Use the shared subscription feature to build scalable applications that balance the load of messages across multiple instances of the application. To enable load balancing, set the 'type' field to 'shared', as outlined in the following example:
+Use the shared subscription feature to build scalable applications that balance the load of messages across multiple instances of the application. To enable load balancing, set the 'type' field to 'shared', which is shown in the following example:
 
 ```
 
@@ -179,12 +179,12 @@ When the application client encounters an error, an *error* event is generated.
 
 Events are the mechanism by which devices publish data to the {{site.data.keyword.iot_short_notm}} instance. The device controls the content of the event and assigns a name for each event that it sends.
 
-When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, making it impossible for a device to impersonate another device.
+When an event is received by the {{site.data.keyword.iot_short_notm}} instance, the credentials of the received event identify the sending device, which makes it impossible for a device to impersonate another device.
 
 
 
 
-By default, applications subscribe to all events from all connected devices. Use the type, ID, event, and msgFormat parameters to control the scope of the subscription. A single client can support multiple subscriptions. The following code samples provide examples of how to subscribe to devices that are dependent on device type, ID, event, and msgFormat parameters.
+By default, applications subscribe to all events from all connected devices. Use the type, ID, event, and msgFormat parameters to control the scope of the subscription. A single client can support multiple subscriptions. The following code samples provide examples of how to subscribe to devices that are dependent on device type, ID, event, and msgFormat parameters:
 
 ### Subscribing to all events from all devices
 
@@ -245,7 +245,7 @@ By default, applications subscribe to all events from all connected devices. Use
 	});
 ```
 
-### Subscribing to all events published by a device in JSON format
+### Subscribing to all events that are published in JSON format
 
 
 ```
@@ -264,7 +264,7 @@ By default, applications subscribe to all events from all connected devices. Use
 ### Handling events from devices
 
 
-To process the events that are received by your subscriptions, implement a device event callback method. The {{site.data.keyword.iot_short_notm}} application client emits the event *deviceEvent*. This function has the following properties:
+To process the events that are received by your subscriptions, implement a device event callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event *deviceEvent*. This function has the following properties:
 
 - deviceType
 - deviceId
@@ -346,7 +346,7 @@ By default, when you subscribe to device status, status updates are received for
 
 ### Handling status updates from devices
 
-To process the status updates received by your subscriptions, implement a device status callback method. The {{site.data.keyword.iot_short_notm}} application client emits the event *deviceStatus*. This function has the following properties:
+To process the status updates that are received by your subscriptions, implement a device status callback method. The {{site.data.keyword.iot_short_notm}} application client sends the event *deviceStatus*. This function has the following properties:
 
 -   deviceType
 -   deviceId
@@ -377,7 +377,7 @@ To process the status updates received by your subscriptions, implement a device
 {: #publishing_device_events}
 
 
-Applications can publish events as if they originated from a device. The function requires:
+Applications can publish events as if they originated from a device. The function requires the following properties:
 
 -   DeviceType
 -   Device ID
@@ -404,7 +404,7 @@ Applications can publish events as if they originated from a device. The functio
 ## Publishing commands to devices
 {: #publishing_commands_devices}
 
-Applications can publish commands to connected devices. The function requires:
+Applications can publish commands to connected devices. The function requires the following properties:
 
 
 
